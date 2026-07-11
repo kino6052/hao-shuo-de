@@ -1,0 +1,189 @@
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  height: 100vh;
+}
+#app { height: 100vh; }
+::selection { background: #FFD9A0; }
+
+:root {
+  --bg-page: #FBF5E9;
+  --bg-card: #FFFDF7;
+  --bg-practice: #F4EEDF;
+  --bg-callout: #FFF3E0;
+  --bg-accent-light: #FFE9CE;
+
+  --border-card: #EADFC5;
+  --border-sidebar: #E7D9BE;
+  --border-callout: #F0B87A;
+  --border-progress: #EFE3CC;
+
+  --accent: #FF5A36;
+  --accent-shadow: #D8431F;
+  --accent-text: #B85A1E;
+
+  --text-primary: #2B241D;
+  --text-body: #3B3226;
+  --text-tertiary: #5A4E3E;
+  --text-muted: #8A7B65;
+  --text-label: #B79B6E;
+  --text-handwritten: #B7885B;
+
+  --green: #4E9A6D;
+  --green-bg: #CDEBD8;
+  --blue: #5B7FD1;
+  --blue-bg: #D8E3FA;
+  --amber-bg: #FFD9A0;
+
+  --font-heading: 'Baloo 2', cursive;
+  --font-handwritten: 'Caveat', cursive;
+  --font-body: 'Nunito', sans-serif;
+
+  --sidebar-w: 264px;
+  --content-max: 760px;
+}
+
+html.font-rounded { --font-body: 'Nunito', sans-serif; }
+html.font-warm    { --font-body: 'Lora', Georgia, serif; }
+html.font-classic { --font-body: 'Source Serif 4', Georgia, serif; }
+
+:root[data-theme="dark"] {
+  --bg-page: #1C1916;
+  --bg-card: #262220;
+  --bg-practice: #2A2622;
+  --bg-callout: #302818;
+  --bg-accent-light: #3D2C1C;
+  --border-card: #3E3630;
+  --border-sidebar: #3E3630;
+  --border-callout: #6B4A2A;
+  --border-progress: #3E3630;
+  --accent: #FF6B4A;
+  --accent-shadow: #B83D1A;
+  --accent-text: #F0A070;
+  --text-primary: #EDE4D4;
+  --text-body: #D4C8B8;
+  --text-tertiary: #A89888;
+  --text-muted: #807060;
+  --text-label: #807060;
+  --text-handwritten: #C0A878;
+  --green: #6ABF8A;
+  --green-bg: #1E3328;
+  --blue: #7B9FE1;
+  --blue-bg: #1E2838;
+  --amber-bg: #3D2C1C;
+}
+[data-theme="dark"] ::selection { background: #5A3A1A; color: #F0E8D8; }
+
+a { color: inherit; }
+
+.app-shell {
+  display: flex;
+  height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  margin-left: var(--sidebar-w);
+  height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.page-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 48px 48px 40px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.prose-body {
+  font-size: 16.5px;
+  line-height: 1.75;
+  color: var(--text-body);
+}
+.prose-body p { margin: 0 0 1em; }
+.prose-body p:last-child { margin-bottom: 0; }
+.prose-body ul { padding-left: 22px; line-height: 1.9; }
+.prose-body b, .prose-body strong { font-weight: 700; }
+.prose-body code {
+  background: var(--bg-accent-light);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-family: inherit;
+  font-size: 0.95em;
+}
+.prose-body blockquote {
+  margin: 18px 0;
+  padding: 18px 22px;
+  background: var(--bg-callout);
+  border: 2px dashed var(--border-callout);
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--accent-text);
+}
+.prose-body blockquote p { margin: 0; }
+.prose-body table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 18px 0;
+}
+.prose-body th, .prose-body td {
+  border: 1px solid var(--border-card);
+  padding: 8px 12px;
+  text-align: left;
+}
+.prose-body th {
+  background: var(--bg-practice);
+  font-weight: 700;
+  font-size: 13px;
+}
+.prose-body h3 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  margin: 32px 0 12px;
+}
+.prose-body h4 {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 24px 0 8px;
+}
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes wiggle {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-4px); }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .main-content {
+    margin-left: 0;
+  }
+  .page-inner {
+    padding: 72px 28px 32px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .page-inner {
+    padding: 68px 18px 24px;
+  }
+  :root {
+    --content-max: 100%;
+  }
+}
