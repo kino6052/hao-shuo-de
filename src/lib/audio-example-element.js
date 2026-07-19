@@ -7,6 +7,7 @@ class AudioExampleElement extends HTMLElement {
 
     const text = this.textContent.trim();
     const file = this.getAttribute('file') || undefined;
+    const zh = this.getAttribute('zh') || undefined;
 
     this.style.cssText = 'cursor:pointer;border-bottom:1px dashed var(--text-muted);';
 
@@ -22,7 +23,7 @@ class AudioExampleElement extends HTMLElement {
     btn.addEventListener('mouseenter', () => { btn.style.color = 'var(--accent)'; });
     btn.addEventListener('mouseleave', () => { btn.style.color = 'var(--text-muted)'; });
 
-    const play = (e) => { e.stopPropagation(); playAudio(text, file); };
+    const play = (e) => { e.stopPropagation(); playAudio(text, file, zh); };
     btn.addEventListener('click', play);
     this.addEventListener('click', play);
 

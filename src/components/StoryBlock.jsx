@@ -10,7 +10,7 @@ export function StoryBlock({ items }) {
         <div key={i} class={styles.line}>
           <div class={styles.pinyin}>
             {line.pinyin}
-            <AudioButton pinyin={line.pinyin} audioFile={line.audioFile} />
+            <AudioButton pinyin={line.pinyin} audioFile={line.audioFile} ttsText={line.ttsText} />
           </div>
           <div class={styles.translation}>({line.translation})</div>
         </div>

@@ -1,11 +1,11 @@
 import { playAudio } from '../lib/audio.js';
 import styles from './AudioButton.module.css';
 
-export function AudioButton({ pinyin, audioFile }) {
+export function AudioButton({ pinyin, audioFile, ttsText }) {
   return (
     <button
       class={styles.btn}
-      onClick={(e) => { e.stopPropagation(); playAudio(pinyin, audioFile); }}
+      onClick={(e) => { e.stopPropagation(); playAudio(pinyin, audioFile, ttsText); }}
       aria-label={`Play ${pinyin}`}
       title={`Play ${pinyin}`}
     >

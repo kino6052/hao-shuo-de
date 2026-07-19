@@ -11,7 +11,7 @@ export function VocabGrid({ items }) {
           <div key={i} class={styles.card}>
             <div class={styles.pinyin}>
               {v.pinyin}
-              <AudioButton pinyin={v.pinyin} audioFile={v.audioFile} />
+              <AudioButton pinyin={v.pinyin} audioFile={v.audioFile} ttsText={v.ttsText} />
             </div>
             <div class={styles.def}>{v.definition}</div>
           </div>

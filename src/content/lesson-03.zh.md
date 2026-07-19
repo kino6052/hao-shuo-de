@@ -7,9 +7,9 @@ order: 3
 language: zh
 ---
 
-在 Hǎo-shuō-de 中构建一个基本的描述句，使用标准普通话的 **“是”** 结构。你不需要根据说话者改变动词：
+在 Hǎo-shuō-de 中构建一个基本的描述句，使用标准普通话的 **”是”** 结构。你不需要根据说话者改变动词：
 
-`主语 + shì + 名词`
+主语 + <audio-example zh=”是”>shì</audio-example> + 名词
 
 ```examples
 Zhè-ge shì rén. | 这是一个人。

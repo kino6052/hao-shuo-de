@@ -11,12 +11,13 @@ export function slugify(pinyin) {
 
 let currentAudio = null;
 
-export function playAudio(pinyin, audioFile) {
+export function playAudio(pinyin, audioFile, ttsText) {
   if (currentAudio) {
     currentAudio.pause();
     currentAudio = null;
   }
 
+  const fallback = ttsText || pinyin;
   const slug = audioFile || slugify(pinyin);
   const src = `${import.meta.env.BASE_URL}audio/${slug}.mp3`;
 
@@ -25,7 +26,7 @@ export function playAudio(pinyin, audioFile) {
 
   audio.play().catch(() => {
     currentAudio = null;
-    speakTTS(pinyin);
+    speakTTS(fallback);
   });
 
   audio.addEventListener('ended', () => {
@@ -33,7 +34,7 @@ export function playAudio(pinyin, audioFile) {
   });
   audio.addEventListener('error', () => {
     if (currentAudio === audio) currentAudio = null;
-    speakTTS(pinyin);
+    speakTTS(fallback);
   });
 }
 

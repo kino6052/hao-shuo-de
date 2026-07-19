@@ -8,6 +8,7 @@ function parseVocab(raw) {
     const parts = line.split('|').map(s => s.trim());
     const item = { pinyin: parts[0] || '', definition: parts[1] || '' };
     if (parts[2]) item.audioFile = parts[2];
+    if (parts[3]) item.ttsText = parts[3];
     return item;
   });
 }
@@ -17,6 +18,7 @@ function parseExamples(raw) {
     const parts = line.split('|').map(s => s.trim());
     const item = { pinyin: parts[0] || '', translation: parts[1] || '' };
     if (parts[2]) item.audioFile = parts[2];
+    if (parts[3]) item.ttsText = parts[3];
     return item;
   });
 }

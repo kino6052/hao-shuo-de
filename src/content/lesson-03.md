@@ -9,7 +9,7 @@ language: eng
 
 To build a basic descriptive sentence in Hao-shuo-de, use the standard Mandarin **is/am/are** structure. You do not need to change the verb based on who is speaking:
 
-`Subject + shì + Noun`
+Subject + <audio-example zh="是">shì</audio-example> + Noun
 
 ```examples
 Zhè-ge shì rén. | This is a person.
