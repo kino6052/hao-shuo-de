@@ -104,26 +104,26 @@ a { color: inherit; }
   }
 
   body {
-    overflow: visible;
-    height: auto;
+    overflow: visible !important;
+    height: auto !important;
   }
-  #app { height: auto; }
+  #app { height: auto !important; }
 
   .app-shell {
-    display: block;
-    height: auto;
+    display: block !important;
+    height: auto !important;
   }
 
   .main-content {
-    margin-left: 0;
-    height: auto;
-    overflow: visible;
+    margin-left: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
   }
 
   .page-inner {
-    min-height: 0;
-    display: block;
-    padding: 0;
+    min-height: 0 !important;
+    display: block !important;
+    padding: 0 !important;
   }
 }
 
