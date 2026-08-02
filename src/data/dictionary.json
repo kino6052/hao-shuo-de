@@ -1,6 +1,6 @@
 {
   "words": {
-    "i": {
+    "wo3": {
       "term": "wǒ",
       "pos": {
         "eng": "pronoun",
@@ -14,7 +14,7 @@
       },
       "maps": "mi"
     },
-    "you": {
+    "ni3": {
       "term": "nǐ",
       "pos": {
         "eng": "pronoun",
@@ -28,7 +28,7 @@
       },
       "maps": "sina"
     },
-    "he": {
+    "ta1": {
       "term": "tā",
       "pos": {
         "eng": "pronoun",
@@ -42,7 +42,7 @@
       },
       "maps": "ona"
     },
-    "what-which": {
+    "shen2me": {
       "term": "shénme",
       "pos": {
         "eng": "pronoun/particle",
@@ -56,7 +56,7 @@
       },
       "maps": "seme"
     },
-    "market": {
+    "shi4chang3": {
       "term": "shìchǎng",
       "pos": {
         "eng": "noun",
@@ -70,7 +70,7 @@
       },
       "maps": "esun"
     },
-    "home": {
+    "jia1": {
       "term": "jiā",
       "pos": {
         "eng": "noun",
@@ -84,7 +84,7 @@
       },
       "maps": "tomo"
     },
-    "sun": {
+    "ri4": {
       "term": "rì",
       "pos": {
         "eng": "noun",
@@ -98,7 +98,7 @@
       },
       "maps": "suno"
     },
-    "moon": {
+    "yue4": {
       "term": "yuè",
       "pos": {
         "eng": "noun",
@@ -112,7 +112,7 @@
       },
       "maps": "mun"
     },
-    "plant": {
+    "zhi2wu4": {
       "term": "zhíwù",
       "pos": {
         "eng": "noun",
@@ -126,7 +126,7 @@
       },
       "maps": "kasi"
     },
-    "fire": {
+    "huo3": {
       "term": "huǒ",
       "pos": {
         "eng": "noun",
@@ -140,7 +140,7 @@
       },
       "maps": "seli"
     },
-    "air": {
+    "kong1qi4": {
       "term": "kōngqì",
       "pos": {
         "eng": "noun",
@@ -154,7 +154,7 @@
       },
       "maps": "kon"
     },
-    "nose": {
+    "bi2zi": {
       "term": "bízi",
       "pos": {
         "eng": "noun",
@@ -168,7 +168,7 @@
       },
       "maps": "nena"
     },
-    "foot": {
+    "jiao3": {
       "term": "jiǎo",
       "pos": {
         "eng": "noun",
@@ -182,7 +182,7 @@
       },
       "maps": "noka"
     },
-    "hole": {
+    "kou3": {
       "term": "kǒu",
       "pos": {
         "eng": "noun",
@@ -196,7 +196,7 @@
       },
       "maps": "lupa"
     },
-    "skin": {
+    "pi2fu1": {
       "term": "pífū",
       "pos": {
         "eng": "noun",
@@ -210,7 +210,7 @@
       },
       "maps": "selo"
     },
-    "body": {
+    "shen1ti3": {
       "term": "shēntǐ",
       "pos": {
         "eng": "noun",
@@ -224,7 +224,7 @@
       },
       "maps": "sijelo"
     },
-    "hand": {
+    "shou3": {
       "term": "shǒu",
       "pos": {
         "eng": "noun",
@@ -238,7 +238,7 @@
       },
       "maps": "luka"
     },
-    "head": {
+    "tou2": {
       "term": "tóu",
       "pos": {
         "eng": "noun",
@@ -252,7 +252,7 @@
       },
       "maps": "lawa"
     },
-    "human-being": {
+    "ren2": {
       "term": "rén",
       "pos": {
         "eng": "noun",
@@ -266,7 +266,7 @@
       },
       "maps": "jan"
     },
-    "parent": {
+    "fu4mu3": {
       "term": "fùmǔ",
       "pos": {
         "eng": "noun",
@@ -280,7 +280,7 @@
       },
       "maps": "mama"
     },
-    "man": {
+    "nan2ren2": {
       "term": "nánrén",
       "pos": {
         "eng": "noun",
@@ -294,7 +294,7 @@
       },
       "maps": "mije"
     },
-    "woman": {
+    "nv3ren2": {
       "term": "nǚrén",
       "pos": {
         "eng": "noun",
@@ -308,7 +308,7 @@
       },
       "maps": "meli"
     },
-    "group": {
+    "qun2": {
       "term": "qún",
       "pos": {
         "eng": "noun",
@@ -322,7 +322,7 @@
       },
       "maps": "kulupu"
     },
-    "grain": {
+    "mi3fan4": {
       "term": "mǐfàn",
       "pos": {
         "eng": "noun",
@@ -336,7 +336,7 @@
       },
       "maps": "pan"
     },
-    "fruit": {
+    "shui3guo3": {
       "term": "shuǐguǒ",
       "pos": {
         "eng": "noun",
@@ -350,7 +350,7 @@
       },
       "maps": "kili"
     },
-    "salt": {
+    "yan2": {
       "term": "yán",
       "pos": {
         "eng": "noun",
@@ -364,7 +364,7 @@
       },
       "maps": "namako"
     },
-    "water": {
+    "shui3": {
       "term": "shuǐ",
       "pos": {
         "eng": "noun",
@@ -378,7 +378,7 @@
       },
       "maps": "telo"
     },
-    "animal": {
+    "dong4wu4": {
       "term": "dòngwù",
       "pos": {
         "eng": "noun",
@@ -392,7 +392,7 @@
       },
       "maps": "soweli"
     },
-    "insect": {
+    "chong2zi": {
       "term": "chóngzi",
       "pos": {
         "eng": "noun",
@@ -406,7 +406,7 @@
       },
       "maps": "pipi"
     },
-    "bird": {
+    "niao3": {
       "term": "niǎo",
       "pos": {
         "eng": "noun",
@@ -420,7 +420,7 @@
       },
       "maps": "waso"
     },
-    "reptile": {
+    "pa2xing2dong4wu4": {
       "term": "páxíngdòngwù",
       "pos": {
         "eng": "noun",
@@ -434,7 +434,7 @@
       },
       "maps": "akesi"
     },
-    "fish": {
+    "yu2": {
       "term": "yú",
       "pos": {
         "eng": "noun",
@@ -448,7 +448,7 @@
       },
       "maps": "kala"
     },
-    "thing": {
+    "dong1xi": {
       "term": "dōngxi",
       "pos": {
         "eng": "noun",
@@ -462,7 +462,7 @@
       },
       "maps": "ijo"
     },
-    "tool": {
+    "gong1ju4": {
       "term": "gōngjù",
       "pos": {
         "eng": "noun",
@@ -476,7 +476,7 @@
       },
       "maps": "ilo"
     },
-    "stick": {
+    "gun4zi": {
       "term": "gùnzi",
       "pos": {
         "eng": "noun",
@@ -490,7 +490,7 @@
       },
       "maps": "palisa"
     },
-    "container": {
+    "he2zi": {
       "term": "hézi",
       "pos": {
         "eng": "noun",
@@ -504,7 +504,7 @@
       },
       "maps": "poki"
     },
-    "paste": {
+    "ni2": {
       "term": "ní",
       "pos": {
         "eng": "noun",
@@ -518,7 +518,7 @@
       },
       "maps": "ko"
     },
-    "money": {
+    "qian2": {
       "term": "qián",
       "pos": {
         "eng": "noun",
@@ -532,7 +532,7 @@
       },
       "maps": "mani"
     },
-    "line": {
+    "xian4": {
       "term": "xiàn",
       "pos": {
         "eng": "noun",
@@ -546,7 +546,7 @@
       },
       "maps": "linja"
     },
-    "clothing": {
+    "yi1fu": {
       "term": "yīfu",
       "pos": {
         "eng": "noun",
@@ -560,7 +560,7 @@
       },
       "maps": "len"
     },
-    "word": {
+    "ci2": {
       "term": "cí",
       "pos": {
         "eng": "noun",
@@ -574,7 +574,7 @@
       },
       "maps": ""
     },
-    "energy": {
+    "li4liang4": {
       "term": "lìliàng",
       "pos": {
         "eng": "noun/adjective",
@@ -588,7 +588,7 @@
       },
       "maps": "wawa"
     },
-    "sex": {
+    "xing4": {
       "term": "xìng",
       "pos": {
         "eng": "noun",
@@ -602,7 +602,7 @@
       },
       "maps": "unpa"
     },
-    "that": {
+    "na4": {
       "term": "nà",
       "pos": {
         "eng": "pronoun/adjective",
@@ -616,7 +616,7 @@
       },
       "maps": "ni"
     },
-    "this": {
+    "zhe4": {
       "term": "zhè",
       "pos": {
         "eng": "pronoun/adjective",
@@ -630,7 +630,7 @@
       },
       "maps": "ni"
     },
-    "different": {
+    "bu4tong2": {
       "term": "bùtóng",
       "pos": {
         "eng": "adjective/noun",
@@ -644,7 +644,7 @@
       },
       "maps": "ante"
     },
-    "same": {
+    "yi1yang4": {
       "term": "yīyàng",
       "pos": {
         "eng": "adjective",
@@ -658,7 +658,7 @@
       },
       "maps": "sama"
     },
-    "universal-classifier": {
+    "ge4": {
       "term": "gè",
       "pos": {
         "eng": "measure word",
@@ -672,7 +672,7 @@
       },
       "maps": ""
     },
-    "one": {
+    "yi1": {
       "term": "yī",
       "pos": {
         "eng": "number",
@@ -686,7 +686,7 @@
       },
       "maps": "wan"
     },
-    "two": {
+    "liang3": {
       "term": "liǎng",
       "pos": {
         "eng": "number",
@@ -700,7 +700,7 @@
       },
       "maps": "tu"
     },
-    "sequence-marker": {
+    "hao4": {
       "term": "hào",
       "pos": {
         "eng": "particle",
@@ -714,7 +714,7 @@
       },
       "maps": "nanpa"
     },
-    "many": {
+    "duo1": {
       "term": "duō",
       "pos": {
         "eng": "adjective",
@@ -728,7 +728,7 @@
       },
       "maps": "mute"
     },
-    "all": {
+    "quan2bu4": {
       "term": "quánbù",
       "pos": {
         "eng": "adjective",
@@ -742,7 +742,7 @@
       },
       "maps": ""
     },
-    "good": {
+    "hao3": {
       "term": "hǎo",
       "pos": {
         "eng": "adjective",
@@ -756,7 +756,7 @@
       },
       "maps": "pona"
     },
-    "bad": {
+    "huai4": {
       "term": "huài",
       "pos": {
         "eng": "adjective/verb",
@@ -770,7 +770,7 @@
       },
       "maps": "ike, pakala"
     },
-    "white": {
+    "bai2se4": {
       "term": "báisè",
       "pos": {
         "eng": "adjective/noun",
@@ -784,7 +784,7 @@
       },
       "maps": "walo"
     },
-    "black": {
+    "hei1se4": {
       "term": "hēisè",
       "pos": {
         "eng": "adjective/noun",
@@ -798,7 +798,7 @@
       },
       "maps": "pimeja"
     },
-    "red": {
+    "hong2se4": {
       "term": "hóngsè",
       "pos": {
         "eng": "adjective/noun",
@@ -812,7 +812,7 @@
       },
       "maps": "loje"
     },
-    "yellow": {
+    "huang2se4": {
       "term": "huángsè",
       "pos": {
         "eng": "adjective/noun",
@@ -826,7 +826,7 @@
       },
       "maps": "jelo"
     },
-    "blue": {
+    "lan2se4": {
       "term": "lánsè",
       "pos": {
         "eng": "adjective/noun",
@@ -840,7 +840,7 @@
       },
       "maps": "laso"
     },
-    "color": {
+    "yan2se4": {
       "term": "yánsè",
       "pos": {
         "eng": "noun",
@@ -854,7 +854,7 @@
       },
       "maps": "kule"
     },
-    "strange": {
+    "qi2guai4": {
       "term": "qíguài",
       "pos": {
         "eng": "adjective",
@@ -868,7 +868,7 @@
       },
       "maps": "nasa"
     },
-    "new": {
+    "xin1": {
       "term": "xīn",
       "pos": {
         "eng": "adjective",
@@ -882,7 +882,7 @@
       },
       "maps": "sin"
     },
-    "hot": {
+    "re4": {
       "term": "rè",
       "pos": {
         "eng": "adjective",
@@ -896,7 +896,7 @@
       },
       "maps": "seli"
     },
-    "cold": {
+    "leng3": {
       "term": "lěng",
       "pos": {
         "eng": "adjective",
@@ -910,7 +910,7 @@
       },
       "maps": "lete"
     },
-    "sweet": {
+    "tian2": {
       "term": "tián",
       "pos": {
         "eng": "adjective",
@@ -924,7 +924,7 @@
       },
       "maps": "suwi"
     },
-    "hard": {
+    "ying4": {
       "term": "yìng",
       "pos": {
         "eng": "adjective/noun",
@@ -938,7 +938,7 @@
       },
       "maps": "kiwen"
     },
-    "round": {
+    "yuan2": {
       "term": "yuán",
       "pos": {
         "eng": "adjective/noun",
@@ -952,7 +952,7 @@
       },
       "maps": "sike"
     },
-    "little": {
+    "xiao3": {
       "term": "xiǎo",
       "pos": {
         "eng": "adjective",
@@ -966,7 +966,7 @@
       },
       "maps": "lili"
     },
-    "big": {
+    "da4": {
       "term": "dà",
       "pos": {
         "eng": "adjective",
@@ -980,7 +980,7 @@
       },
       "maps": "suli"
     },
-    "want": {
+    "yao4": {
       "term": "yào",
       "pos": {
         "eng": "auxiliary/verb",
@@ -994,7 +994,7 @@
       },
       "maps": "wile"
     },
-    "love": {
+    "ai4": {
       "term": "ài",
       "pos": {
         "eng": "verb",
@@ -1008,7 +1008,7 @@
       },
       "maps": "olin"
     },
-    "feeling": {
+    "jue2de": {
       "term": "juéde",
       "pos": {
         "eng": "noun/adjective/verb",
@@ -1022,7 +1022,7 @@
       },
       "maps": "pilin"
     },
-    "know": {
+    "zhi1dao4": {
       "term": "zhīdào",
       "pos": {
         "eng": "verb/auxiliary",
@@ -1036,7 +1036,7 @@
       },
       "maps": "sona"
     },
-    "look-at": {
+    "kan4": {
       "term": "kàn",
       "pos": {
         "eng": "verb",
@@ -1050,7 +1050,7 @@
       },
       "maps": "lukin"
     },
-    "hear": {
+    "ting1": {
       "term": "tīng",
       "pos": {
         "eng": "verb",
@@ -1064,7 +1064,7 @@
       },
       "maps": "kute"
     },
-    "communicate": {
+    "shuo1": {
       "term": "shuō",
       "pos": {
         "eng": "verb/noun",
@@ -1078,7 +1078,7 @@
       },
       "maps": "toki"
     },
-    "write": {
+    "xie3": {
       "term": "xiě",
       "pos": {
         "eng": "verb",
@@ -1092,7 +1092,7 @@
       },
       "maps": "sitelen"
     },
-    "use": {
+    "yong4": {
       "term": "yòng",
       "pos": {
         "eng": "verb/coverb",
@@ -1106,7 +1106,7 @@
       },
       "maps": "kepeken"
     },
-    "call": {
+    "jiao4": {
       "term": "jiào",
       "pos": {
         "eng": "verb",
@@ -1120,7 +1120,7 @@
       },
       "maps": "nimi, mu"
     },
-    "begin": {
+    "kai1shi3": {
       "term": "kāishǐ",
       "pos": {
         "eng": "verb/auxiliary",
@@ -1134,7 +1134,7 @@
       },
       "maps": "open, kama"
     },
-    "finish": {
+    "wan2cheng2": {
       "term": "wánchéng",
       "pos": {
         "eng": "verb complement",
@@ -1148,7 +1148,7 @@
       },
       "maps": "pini"
     },
-    "sleep": {
+    "shui4jiao4": {
       "term": "shuìjiào",
       "pos": {
         "eng": "verb/adjective",
@@ -1162,7 +1162,7 @@
       },
       "maps": "lape"
     },
-    "wait": {
+    "deng3": {
       "term": "děng",
       "pos": {
         "eng": "verb",
@@ -1176,7 +1176,7 @@
       },
       "maps": ""
     },
-    "eat": {
+    "chi1": {
       "term": "chī",
       "pos": {
         "eng": "verb/noun",
@@ -1190,7 +1190,7 @@
       },
       "maps": "moku"
     },
-    "play": {
+    "wan2": {
       "term": "wán",
       "pos": {
         "eng": "verb/adjective",
@@ -1204,7 +1204,7 @@
       },
       "maps": "musi"
     },
-    "come": {
+    "lai2": {
       "term": "lái",
       "pos": {
         "eng": "verb",
@@ -1218,7 +1218,7 @@
       },
       "maps": "kama"
     },
-    "go": {
+    "qu4": {
       "term": "qù",
       "pos": {
         "eng": "verb",
@@ -1232,7 +1232,7 @@
       },
       "maps": "tawa"
     },
-    "become": {
+    "bian4": {
       "term": "biàn",
       "pos": {
         "eng": "verb",
@@ -1246,7 +1246,7 @@
       },
       "maps": "kama"
     },
-    "do": {
+    "zuo4": {
       "term": "zuò",
       "pos": {
         "eng": "verb",
@@ -1260,7 +1260,7 @@
       },
       "maps": "pali"
     },
-    "hit": {
+    "da3": {
       "term": "dǎ",
       "pos": {
         "eng": "verb",
@@ -1274,7 +1274,7 @@
       },
       "maps": "utala"
     },
-    "give": {
+    "gei3": {
       "term": "gěi",
       "pos": {
         "eng": "verb/coverb",
@@ -1288,7 +1288,7 @@
       },
       "maps": "pana, tawa"
     },
-    "touch": {
+    "mo1": {
       "term": "mō",
       "pos": {
         "eng": "verb",
@@ -1302,7 +1302,7 @@
       },
       "maps": "pilin"
     },
-    "hunt": {
+    "zhao3": {
       "term": "zhǎo",
       "pos": {
         "eng": "verb",
@@ -1316,7 +1316,7 @@
       },
       "maps": "alasa"
     },
-    "exist-at": {
+    "zai4": {
       "term": "zài",
       "pos": {
         "eng": "verb/coverb",
@@ -1330,7 +1330,7 @@
       },
       "maps": "lon"
     },
-    "be": {
+    "shi4": {
       "term": "shì",
       "pos": {
         "eng": "verb",
@@ -1344,7 +1344,7 @@
       },
       "maps": ""
     },
-    "stay": {
+    "liu2": {
       "term": "liú",
       "pos": {
         "eng": "verb",
@@ -1358,7 +1358,7 @@
       },
       "maps": "awen"
     },
-    "get": {
+    "de2": {
       "term": "dé",
       "pos": {
         "eng": "verb",
@@ -1372,7 +1372,7 @@
       },
       "maps": "kama"
     },
-    "have": {
+    "you3": {
       "term": "yǒu",
       "pos": {
         "eng": "verb",
@@ -1386,7 +1386,7 @@
       },
       "maps": "jo, lon"
     },
-    "die": {
+    "si3": {
       "term": "sǐ",
       "pos": {
         "eng": "verb/adjective",
@@ -1400,7 +1400,7 @@
       },
       "maps": "moli"
     },
-    "time": {
+    "shi2jian1": {
       "term": "shíjiān",
       "pos": {
         "eng": "noun",
@@ -1414,7 +1414,7 @@
       },
       "maps": "tenpo"
     },
-    "from": {
+    "cong2": {
       "term": "cóng",
       "pos": {
         "eng": "preposition",
@@ -1428,7 +1428,7 @@
       },
       "maps": ""
     },
-    "facing": {
+    "dui4": {
       "term": "duì",
       "pos": {
         "eng": "preposition/coverb",
@@ -1442,7 +1442,7 @@
       },
       "maps": "tawa"
     },
-    "place": {
+    "di4fang1": {
       "term": "dìfāng",
       "pos": {
         "eng": "noun",
@@ -1456,7 +1456,7 @@
       },
       "maps": ""
     },
-    "floor": {
+    "di4ban3": {
       "term": "dìbǎn",
       "pos": {
         "eng": "noun",
@@ -1470,7 +1470,7 @@
       },
       "maps": "supa"
     },
-    "back": {
+    "hou4mian4": {
       "term": "hòumiàn",
       "pos": {
         "eng": "noun",
@@ -1484,7 +1484,7 @@
       },
       "maps": "monsi"
     },
-    "inside": {
+    "li3mian4": {
       "term": "lǐmiàn",
       "pos": {
         "eng": "noun",
@@ -1498,7 +1498,7 @@
       },
       "maps": "insa"
     },
-    "side": {
+    "pang2bian1": {
       "term": "pángbiān",
       "pos": {
         "eng": "noun",
@@ -1512,7 +1512,7 @@
       },
       "maps": "poka"
     },
-    "front": {
+    "qian2mian4": {
       "term": "qiánmiàn",
       "pos": {
         "eng": "noun",
@@ -1526,7 +1526,7 @@
       },
       "maps": "sinpin"
     },
-    "above": {
+    "shang4mian4": {
       "term": "shàngmiàn",
       "pos": {
         "eng": "noun",
@@ -1540,7 +1540,7 @@
       },
       "maps": "sewi"
     },
-    "below": {
+    "xia4mian4": {
       "term": "xiàmiàn",
       "pos": {
         "eng": "noun",
@@ -1554,7 +1554,7 @@
       },
       "maps": "noka, anpa"
     },
-    "away": {
+    "wai4": {
       "term": "wài",
       "pos": {
         "eng": "verb/adjective",
@@ -1568,7 +1568,7 @@
       },
       "maps": "weka"
     },
-    "grammatical-object-introducing-particle": {
+    "ba3": {
       "term": "bǎ",
       "pos": {
         "eng": "particle",
@@ -1582,7 +1582,7 @@
       },
       "maps": ""
     },
-    "possessive-marker": {
+    "de": {
       "term": "de",
       "pos": {
         "eng": "particle",
@@ -1596,7 +1596,7 @@
       },
       "maps": "pi"
     },
-    "perfective-aspect-marker": {
+    "le": {
       "term": "le",
       "pos": {
         "eng": "particle",
@@ -1610,7 +1610,7 @@
       },
       "maps": "pini"
     },
-    "final-interrogative-yes-or-no": {
+    "ma": {
       "term": "ma",
       "pos": {
         "eng": "particle",
@@ -1624,7 +1624,7 @@
       },
       "maps": ""
     },
-    "not": {
+    "bu4": {
       "term": "bù",
       "pos": {
         "eng": "particle",
@@ -1638,7 +1638,7 @@
       },
       "maps": "ala"
     },
-    "negative-particle-used": {
+    "mei2": {
       "term": "méi",
       "pos": {
         "eng": "particle",
@@ -1652,7 +1652,7 @@
       },
       "maps": ""
     },
-    "but": {
+    "dan4shi4": {
       "term": "dànshì",
       "pos": {
         "eng": "conjunction",
@@ -1666,7 +1666,7 @@
       },
       "maps": "taso"
     },
-    "and": {
+    "he2": {
       "term": "hé",
       "pos": {
         "eng": "conjunction",
@@ -1680,7 +1680,7 @@
       },
       "maps": "en"
     },
-    "or": {
+    "huo4zhe3": {
       "term": "huòzhě",
       "pos": {
         "eng": "conjunction",
@@ -1694,7 +1694,7 @@
       },
       "maps": "anu"
     },
-    "also": {
+    "ye3": {
       "term": "yě",
       "pos": {
         "eng": "adverb",
@@ -1708,7 +1708,7 @@
       },
       "maps": ""
     },
-    "because": {
+    "yin1wei4": {
       "term": "yīnwèi",
       "pos": {
         "eng": "conjunction/coverb",
@@ -1722,7 +1722,7 @@
       },
       "maps": ""
     },
-    "why": {
+    "wei4shen2me": {
       "term": "wèishénme",
       "pos": {
         "eng": "pronoun",
@@ -1736,7 +1736,7 @@
       },
       "maps": ""
     },
-    "how": {
+    "zen3me": {
       "term": "zěnme",
       "pos": {
         "eng": "pronoun",
@@ -1750,7 +1750,7 @@
       },
       "maps": ""
     },
-    "be-able-to": {
+    "neng2": {
       "term": "néng",
       "pos": {
         "eng": "auxiliary",
@@ -1764,7 +1764,7 @@
       },
       "maps": "ken"
     },
-    "very": {
+    "hen3": {
       "term": "hěn",
       "pos": {
         "eng": "adverb",
@@ -1778,7 +1778,7 @@
       },
       "maps": "mute"
     },
-    "way": {
+    "fang1fa3": {
       "term": "fāngfǎ",
       "pos": {
         "eng": "noun",
@@ -1809,7 +1809,12 @@
             "rus": "Местоимения и вопросительные слова",
             "zh": "代词与疑问词"
           },
-          "wordIds": ["i", "you", "he", "what-which"]
+          "wordIds": [
+            "wo3",
+            "ni3",
+            "ta1",
+            "shen2me"
+          ]
         },
         {
           "key": "places-as-things",
@@ -1818,7 +1823,10 @@
             "rus": "Места (как вещи)",
             "zh": "地方（作为事物）"
           },
-          "wordIds": ["market", "home"]
+          "wordIds": [
+            "shi4chang3",
+            "jia1"
+          ]
         },
         {
           "key": "plants-natural-elements",
@@ -1827,7 +1835,13 @@
             "rus": "Растения и природные стихии",
             "zh": "植物与自然元素"
           },
-          "wordIds": ["sun", "moon", "plant", "fire", "air"]
+          "wordIds": [
+            "ri4",
+            "yue4",
+            "zhi2wu4",
+            "huo3",
+            "kong1qi4"
+          ]
         },
         {
           "key": "body",
@@ -1836,7 +1850,15 @@
             "rus": "Тело",
             "zh": "身体"
           },
-          "wordIds": ["nose", "foot", "hole", "skin", "body", "hand", "head"]
+          "wordIds": [
+            "bi2zi",
+            "jiao3",
+            "kou3",
+            "pi2fu1",
+            "shen1ti3",
+            "shou3",
+            "tou2"
+          ]
         },
         {
           "key": "people-kinship",
@@ -1845,7 +1867,13 @@
             "rus": "Люди и родство",
             "zh": "人与亲属"
           },
-          "wordIds": ["human-being", "parent", "man", "woman", "group"]
+          "wordIds": [
+            "ren2",
+            "fu4mu3",
+            "nan2ren2",
+            "nv3ren2",
+            "qun2"
+          ]
         },
         {
           "key": "food-drink",
@@ -1854,7 +1882,12 @@
             "rus": "Еда и питьё",
             "zh": "食物与饮品"
           },
-          "wordIds": ["grain", "fruit", "salt", "water"]
+          "wordIds": [
+            "mi3fan4",
+            "shui3guo3",
+            "yan2",
+            "shui3"
+          ]
         },
         {
           "key": "animals",
@@ -1863,7 +1896,13 @@
             "rus": "Животные",
             "zh": "动物"
           },
-          "wordIds": ["animal", "insect", "bird", "reptile", "fish"]
+          "wordIds": [
+            "dong4wu4",
+            "chong2zi",
+            "niao3",
+            "pa2xing2dong4wu4",
+            "yu2"
+          ]
         },
         {
           "key": "tools-objects",
@@ -1880,7 +1919,10 @@
                 "rus": "Орудия",
                 "zh": "器具"
               },
-              "wordIds": ["tool", "stick"]
+              "wordIds": [
+                "gong1ju4",
+                "gun4zi"
+              ]
             },
             {
               "key": "containers-materials",
@@ -1889,7 +1931,11 @@
                 "rus": "Контейнеры и материалы",
                 "zh": "容器与材料"
               },
-              "wordIds": ["container", "paste", "line"]
+              "wordIds": [
+                "he2zi",
+                "ni2",
+                "xian4"
+              ]
             },
             {
               "key": "valuables-wearables",
@@ -1898,12 +1944,17 @@
                 "rus": "Ценности и одежда",
                 "zh": "财物与穿戴"
               },
-              "wordIds": ["money", "clothing"]
+              "wordIds": [
+                "qian2",
+                "yi1fu"
+              ]
             },
             {
               "key": "general",
               "title": null,
-              "wordIds": ["thing"]
+              "wordIds": [
+                "dong1xi"
+              ]
             }
           ]
         },
@@ -1914,7 +1965,11 @@
             "rus": "Абстрактные субстантивы",
             "zh": "抽象实体词"
           },
-          "wordIds": ["word", "energy", "sex"]
+          "wordIds": [
+            "ci2",
+            "li4liang4",
+            "xing4"
+          ]
         }
       ]
     },
@@ -1933,7 +1988,10 @@
             "rus": "Указательные слова",
             "zh": "指示词"
           },
-          "wordIds": ["that", "this"]
+          "wordIds": [
+            "na4",
+            "zhe4"
+          ]
         },
         {
           "key": "sameness-difference",
@@ -1942,7 +2000,10 @@
             "rus": "Тождество и различие",
             "zh": "相同与差异"
           },
-          "wordIds": ["different", "same"]
+          "wordIds": [
+            "bu4tong2",
+            "yi1yang4"
+          ]
         }
       ]
     },
@@ -1961,7 +2022,9 @@
             "rus": "Счётное слово",
             "zh": "量词"
           },
-          "wordIds": ["universal-classifier"]
+          "wordIds": [
+            "ge4"
+          ]
         },
         {
           "key": "numbers-ordinals",
@@ -1970,7 +2033,11 @@
             "rus": "Числа и порядковые числительные",
             "zh": "数字与序数"
           },
-          "wordIds": ["one", "two", "sequence-marker"]
+          "wordIds": [
+            "yi1",
+            "liang3",
+            "hao4"
+          ]
         },
         {
           "key": "amount",
@@ -1979,7 +2046,10 @@
             "rus": "Количество",
             "zh": "数量"
           },
-          "wordIds": ["many", "all"]
+          "wordIds": [
+            "duo1",
+            "quan2bu4"
+          ]
         }
       ]
     },
@@ -1990,7 +2060,10 @@
         "rus": "Оценочные слова",
         "zh": "评价词d"
       },
-      "wordIds": ["good", "bad"]
+      "wordIds": [
+        "hao3",
+        "huai4"
+      ]
     },
     {
       "key": "descriptors",
@@ -2007,7 +2080,14 @@
             "rus": "Цвет",
             "zh": "颜色"
           },
-          "wordIds": ["white", "black", "red", "yellow", "blue", "color"]
+          "wordIds": [
+            "bai2se4",
+            "hei1se4",
+            "hong2se4",
+            "huang2se4",
+            "lan2se4",
+            "yan2se4"
+          ]
         },
         {
           "key": "other-quality",
@@ -2016,7 +2096,10 @@
             "rus": "Прочие качества",
             "zh": "其他性质"
           },
-          "wordIds": ["strange", "new"]
+          "wordIds": [
+            "qi2guai4",
+            "xin1"
+          ]
         },
         {
           "key": "temperature-taste",
@@ -2025,7 +2108,11 @@
             "rus": "Температура и вкус",
             "zh": "温度与味道"
           },
-          "wordIds": ["hot", "cold", "sweet"]
+          "wordIds": [
+            "re4",
+            "leng3",
+            "tian2"
+          ]
         },
         {
           "key": "physical-property",
@@ -2034,7 +2121,10 @@
             "rus": "Физическое свойство",
             "zh": "物理属性"
           },
-          "wordIds": ["hard", "round"]
+          "wordIds": [
+            "ying4",
+            "yuan2"
+          ]
         },
         {
           "key": "size",
@@ -2043,7 +2133,10 @@
             "rus": "Размер",
             "zh": "大小"
           },
-          "wordIds": ["little", "big"]
+          "wordIds": [
+            "xiao3",
+            "da4"
+          ]
         }
       ]
     },
@@ -2062,7 +2155,10 @@
             "rus": "Воля и чувства",
             "zh": "意愿与情感"
           },
-          "wordIds": ["want", "love"]
+          "wordIds": [
+            "yao4",
+            "ai4"
+          ]
         },
         {
           "key": "cognition",
@@ -2071,7 +2167,10 @@
             "rus": "Познание",
             "zh": "认知"
           },
-          "wordIds": ["feeling", "know"]
+          "wordIds": [
+            "jue2de",
+            "zhi1dao4"
+          ]
         },
         {
           "key": "perception",
@@ -2080,7 +2179,10 @@
             "rus": "Восприятие",
             "zh": "感知"
           },
-          "wordIds": ["look-at", "hear"]
+          "wordIds": [
+            "kan4",
+            "ting1"
+          ]
         }
       ]
     },
@@ -2091,7 +2193,10 @@
         "rus": "Речь",
         "zh": "言语"
       },
-      "wordIds": ["communicate", "write"]
+      "wordIds": [
+        "shuo1",
+        "xie3"
+      ]
     },
     {
       "key": "actions",
@@ -2108,7 +2213,10 @@
             "rus": "Называние и использование",
             "zh": "命名与使用"
           },
-          "wordIds": ["use", "call"]
+          "wordIds": [
+            "yong4",
+            "jiao4"
+          ]
         },
         {
           "key": "daily-activities",
@@ -2125,7 +2233,11 @@
                 "rus": "Фаза и длительность",
                 "zh": "阶段与持续"
               },
-              "wordIds": ["begin", "finish", "wait"]
+              "wordIds": [
+                "kai1shi3",
+                "wan2cheng2",
+                "deng3"
+              ]
             },
             {
               "key": "eating-resting-play",
@@ -2134,7 +2246,11 @@
                 "rus": "Еда, отдых и игра",
                 "zh": "饮食、休息与玩乐"
               },
-              "wordIds": ["sleep", "eat", "play"]
+              "wordIds": [
+                "shui4jiao4",
+                "chi1",
+                "wan2"
+              ]
             }
           ]
         },
@@ -2145,7 +2261,10 @@
             "rus": "Движение",
             "zh": "运动"
           },
-          "wordIds": ["come", "go"]
+          "wordIds": [
+            "lai2",
+            "qu4"
+          ]
         },
         {
           "key": "state-change-general",
@@ -2154,7 +2273,10 @@
             "rus": "Изменение состояния и общее действие",
             "zh": "状态变化与一般动作"
           },
-          "wordIds": ["become", "do"]
+          "wordIds": [
+            "bian4",
+            "zuo4"
+          ]
         },
         {
           "key": "manipulation-contact",
@@ -2163,7 +2285,12 @@
             "rus": "Манипуляция и контакт",
             "zh": "操作与接触"
           },
-          "wordIds": ["hit", "give", "touch", "hunt"]
+          "wordIds": [
+            "da3",
+            "gei3",
+            "mo1",
+            "zhao3"
+          ]
         }
       ]
     },
@@ -2182,7 +2309,11 @@
             "rus": "Существование и местоположение",
             "zh": "存在与位置"
           },
-          "wordIds": ["exist-at", "be", "stay"]
+          "wordIds": [
+            "zai4",
+            "shi4",
+            "liu2"
+          ]
         },
         {
           "key": "possession-acquisition",
@@ -2191,7 +2322,10 @@
             "rus": "Обладание и приобретение",
             "zh": "拥有与获得"
           },
-          "wordIds": ["get", "have"]
+          "wordIds": [
+            "de2",
+            "you3"
+          ]
         }
       ]
     },
@@ -2202,7 +2336,9 @@
         "rus": "Жизнь и смерть",
         "zh": "生与死"
       },
-      "wordIds": ["die"]
+      "wordIds": [
+        "si3"
+      ]
     },
     {
       "key": "time",
@@ -2211,7 +2347,9 @@
         "rus": "Время",
         "zh": "时间"
       },
-      "wordIds": ["time"]
+      "wordIds": [
+        "shi2jian1"
+      ]
     },
     {
       "key": "space",
@@ -2228,7 +2366,12 @@
             "rus": "Существительные места и предлоги",
             "zh": "地点名词与介词"
           },
-          "wordIds": ["from", "facing", "place", "floor"]
+          "wordIds": [
+            "cong2",
+            "dui4",
+            "di4fang1",
+            "di4ban3"
+          ]
         },
         {
           "key": "relative-position",
@@ -2238,13 +2381,13 @@
             "zh": "相对位置"
           },
           "wordIds": [
-            "back",
-            "inside",
-            "side",
-            "front",
-            "above",
-            "below",
-            "away"
+            "hou4mian4",
+            "li3mian4",
+            "pang2bian1",
+            "qian2mian4",
+            "shang4mian4",
+            "xia4mian4",
+            "wai4"
           ]
         }
       ]
@@ -2265,10 +2408,10 @@
             "zh": "语法助词"
           },
           "wordIds": [
-            "grammatical-object-introducing-particle",
-            "possessive-marker",
-            "perfective-aspect-marker",
-            "final-interrogative-yes-or-no"
+            "ba3",
+            "de",
+            "le",
+            "ma"
           ]
         },
         {
@@ -2278,7 +2421,10 @@
             "rus": "Отрицание",
             "zh": "否定"
           },
-          "wordIds": ["not", "negative-particle-used"]
+          "wordIds": [
+            "bu4",
+            "mei2"
+          ]
         },
         {
           "key": "conjunction",
@@ -2287,7 +2433,13 @@
             "rus": "Союзы",
             "zh": "连接"
           },
-          "wordIds": ["but", "and", "or", "also", "because"]
+          "wordIds": [
+            "dan4shi4",
+            "he2",
+            "huo4zhe3",
+            "ye3",
+            "yin1wei4"
+          ]
         },
         {
           "key": "interrogatives",
@@ -2296,7 +2448,10 @@
             "rus": "Вопросительные слова",
             "zh": "疑问词"
           },
-          "wordIds": ["why", "how"]
+          "wordIds": [
+            "wei4shen2me",
+            "zen3me"
+          ]
         },
         {
           "key": "modality",
@@ -2305,7 +2460,9 @@
             "rus": "Модальность",
             "zh": "情态"
           },
-          "wordIds": ["be-able-to"]
+          "wordIds": [
+            "neng2"
+          ]
         }
       ]
     },
@@ -2316,7 +2473,9 @@
         "rus": "Интенсификатор",
         "zh": "程度词"
       },
-      "wordIds": ["very"]
+      "wordIds": [
+        "hen3"
+      ]
     },
     {
       "key": "similarity",
@@ -2325,7 +2484,9 @@
         "rus": "Подобие",
         "zh": "相似"
       },
-      "wordIds": ["way"]
+      "wordIds": [
+        "fang1fa3"
+      ]
     }
   ]
 }

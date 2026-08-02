@@ -4,11 +4,12 @@
 // next to each word -- and, just as importantly, flag words that appear in
 // NO chapter at all, so unused vocabulary is easy to spot.
 //
-// Matching is exact, tone-marked, word-boundary-aware (a term only counts as
-// "used" where it appears as its own token, not as a substring of a longer
-// word -- so "yī" doesn't false-match inside "yīfu"). This requires every
-// chapter's pinyin to actually carry correct tone marks; lessons 6-20 didn't
-// used to, which is why this script wasn't viable before that pass.
+// Chapters reference dictionary words by id via {{word:ID}} / {{Word:ID}}
+// (see scripts/word-refs.js) rather than hardcoding pinyin, so dictionary.json
+// stays the single source of truth for spelling. That makes usage detection
+// exact: this script just collects every {{word:ID}}/{{Word:ID}} reference in
+// each chapter's raw source, before word-refs.js substitutes it -- no fuzzy
+// text matching, no tone/homophone ambiguity.
 //
 // Output: src/data/word-usage.json, structured as:
 //   { chapters: { <chapterId>: { label, order } }, words: { <wordId>: [chapterId, ...] } }
@@ -32,59 +33,44 @@ const OUT_PATH = resolve(ROOT, 'src/data/word-usage.json');
 // and including the dictionary would make every word trivially self-referential.
 const EXCLUDE_PREFIXES = ['intro-', 'dictionary'];
 
+const WORD_REF_RE = /\{\{(?:word|Word):([a-z0-9-]+)\}\}/g;
+
 function isTrackedFile(filename) {
   if (!filename.endsWith('.md') && !filename.endsWith('.yaml') && !filename.endsWith('.yml')) return false;
   return !EXCLUDE_PREFIXES.some((prefix) => filename.startsWith(prefix));
-}
-
-// Flattens every string value in a parsed YAML chapter object into one blob,
-// so vocab terms, prose text, example/story pinyin, and answer text are all
-// searched without hand-enumerating the block schema (and this stays correct
-// if the schema grows new block types).
-function flattenStrings(value, out) {
-  if (typeof value === 'string') { out.push(value); return; }
-  if (Array.isArray(value)) { for (const v of value) flattenStrings(v, out); return; }
-  if (value && typeof value === 'object') { for (const v of Object.values(value)) flattenStrings(v, out); }
 }
 
 function loadChapter(filename) {
   const raw = readFileSync(resolve(CONTENT_DIR, filename), 'utf-8');
 
   if (filename.endsWith('.yaml') || filename.endsWith('.yml')) {
+    // Reading id/lessonNumber/title back out of the parsed doc (rather than
+    // regexing the raw text) keeps this in sync with the real chapter schema;
+    // reference IDs themselves are still collected from the raw source below.
     const chapter = parseYaml(raw);
-    const strings = [];
-    flattenStrings(chapter.blocks, strings);
-    flattenStrings(chapter.summary, strings);
     return {
       id: chapter.id,
       lessonNumber: chapter.lessonNumber,
       order: chapter.order ?? 999,
       title: chapter.title?.eng ?? chapter.id,
-      text: strings.join('\n'),
+      raw,
     };
   }
 
-  const { data, content } = matter(raw);
+  const { data } = matter(raw);
   return {
     id: data.id,
     lessonNumber: data.lessonNumber,
     order: data.order ?? 999,
     title: data.title ?? data.id,
-    text: content,
+    raw,
   };
 }
 
-function escapeRegex(s) {
-  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
-// A term counts as "used" only as its own token: flanked by start/end of
-// string or a non-letter (space, hyphen, quote, punctuation) on both sides.
-// Matching is case-insensitive on the lowercased term/text so sentence-initial
-// capitals (e.g. "Hǎo" for dictionary term "hǎo") still count.
-function makeMatcher(term) {
-  const pattern = new RegExp(`(?<![\\p{L}])${escapeRegex(term.toLowerCase())}(?![\\p{L}])`, 'u');
-  return (text) => pattern.test(text.toLowerCase());
+function collectWordRefs(text) {
+  const ids = new Set();
+  for (const match of text.matchAll(WORD_REF_RE)) ids.add(match[1]);
+  return ids;
 }
 
 function main() {
@@ -101,18 +87,27 @@ function main() {
   }
 
   const words = {};
-  let usedCount = 0;
-  for (const [id, word] of Object.entries(dictionary.words)) {
-    const matches = makeMatcher(word.term);
-    const usedIn = chaptersRaw.filter((c) => matches(c.text)).map((c) => c.id);
-    usedIn.sort((a, b) => chapters[a].order - chapters[b].order);
-    words[id] = usedIn;
-    if (usedIn.length > 0) usedCount += 1;
+  for (const id of Object.keys(dictionary.words)) words[id] = [];
+
+  const unknownRefs = new Set();
+  for (const c of chaptersRaw) {
+    for (const id of collectWordRefs(c.raw)) {
+      if (!dictionary.words[id]) { unknownRefs.add(`${id} (in ${c.id})`); continue; }
+      words[id].push(c.id);
+    }
+  }
+  for (const id of Object.keys(words)) {
+    words[id].sort((a, b) => chapters[a].order - chapters[b].order);
+  }
+
+  if (unknownRefs.size > 0) {
+    throw new Error(`{{word:..}} refs with no matching dictionary id: ${[...unknownRefs].join(', ')}`);
   }
 
   writeFileSync(OUT_PATH, JSON.stringify({ chapters, words }, null, 2) + '\n', 'utf-8');
 
   const total = Object.keys(dictionary.words).length;
+  const usedCount = Object.values(words).filter((chs) => chs.length > 0).length;
   console.log(`Scanned ${chaptersRaw.length} chapters for ${total} dictionary words.`);
   console.log(`${usedCount} words used somewhere; ${total - usedCount} words not used anywhere.`);
 }

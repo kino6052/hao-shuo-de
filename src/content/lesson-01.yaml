@@ -207,26 +207,26 @@ blocks:
     ordered: true
     items:
       - text:
-          eng: "**Words are written solid**. When several syllables form one dictionary word, they are never split apart, no matter how long the word is — dòngwù, shuìjiào, dànshì. Read the whole solid block as a single unit."
-          rus: "**Слова пишутся слитно**. Когда несколько слогов образуют одно словарное слово, они никогда не разделяются, какой бы длинной ни была лексема, — dòngwù, shuìjiào, dànshì. Читайте весь слитный блок как единое целое."
-          zh: "**词连写**。当若干音节组成一个词典词时，无论这个词有多长，它们都绝不会被拆开——dòngwù、shuìjiào、dànshì。把整个连写的部分当作一个整体来读。"
+          eng: "**Words are written solid**. When several syllables form one dictionary word, they are never split apart, no matter how long the word is — {{word:dong4wu4}}, {{word:shui4jiao4}}, {{word:dan4shi4}}. Read the whole solid block as a single unit."
+          rus: "**Слова пишутся слитно**. Когда несколько слогов образуют одно словарное слово, они никогда не разделяются, какой бы длинной ни была лексема, — {{word:dong4wu4}}, {{word:shui4jiao4}}, {{word:dan4shi4}}. Читайте весь слитный блок как единое целое."
+          zh: "**词连写**。当若干音节组成一个词典词时，无论这个词有多长，它们都绝不会被拆开——{{word:dong4wu4}}、{{word:shui4jiao4}}、{{word:dan4shi4}}。把整个连写的部分当作一个整体来读。"
       - text:
           eng: "**A hyphen transforms a word**. A hyphen attaches a grammar particle, a measure word, or a modifier to a word and turns it into a different part of speech (for example, from a noun into an adjective, or from a verb into an adjective)."
           rus: "**Дефис трансформирует слово**. Дефис прикрепляет к слову грамматическую частицу, счетное слово или определение и трансформирует его в другую часть речи (к примеру, из существительного в прилагательное или из глагола в прилагательное)."
           zh: "**连字符转换词性**。连字符把一个语法成分、量词或修饰语附加到词上，并把它转换成另一种词性（例如，从名词变成形容词，或从动词变成形容词）。"
         items:
           - text:
-              eng: "zhè-**ge** — this"
-              rus: "zhè-**ge** — этот"
-              zh: "zhè-**ge** — 这个"
+              eng: "{{word:zhe4}}-**ge** — this"
+              rus: "{{word:zhe4}}-**ge** — этот"
+              zh: "{{word:zhe4}}-**ge** — 这个"
           - text:
-              eng: "yī-**ge** — one thing"
-              rus: "yī-**ge** — одна вещь"
-              zh: "yī-**ge** — 一个（东西）"
+              eng: "{{word:yi1}}-**ge** — one thing"
+              rus: "{{word:yi1}}-**ge** — одна вещь"
+              zh: "{{word:yi1}}-**ge** — 一个（东西）"
           - text:
-              eng: "hěn-**dà-de** — very big"
-              rus: "hěn-**dà-de** — очень большой"
-              zh: "hěn-**dà-de** — 很大的"
+              eng: "{{word:hen3}}-**{{word:da4}}-de** — very big"
+              rus: "{{word:hen3}}-**{{word:da4}}-de** — очень большой"
+              zh: "{{word:hen3}}-**{{word:da4}}-de** — 很大的"
           - text:
               eng: "A hyphen always shows that the parts it joins work together as a single word."
               rus: "Дефис всегда указывает на то что связываемые им части работают как одно слово."
@@ -241,9 +241,9 @@ blocks:
               rus: "“Beijing“ — Пекин"
               zh: "“Beijing“ — 北京"
           - text:
-              eng: 'jiào "wāng-wāng" — barks "woof-woof"'
-              rus: 'jiào "wāng-wāng" — лает «гав-гав»'
-              zh: 'jiào "wāng-wāng" — 叫“汪汪”'
+              eng: '{{word:jiao4}} "wāng-wāng" — barks "woof-woof"'
+              rus: '{{word:jiao4}} "wāng-wāng" — лает «гав-гав»'
+              zh: '{{word:jiao4}} "wāng-wāng" — 叫“汪汪”'
           - text:
               eng: "If you see quotes, don't look the word up in the dictionary — it isn't a dictionary word."
               rus: "Если видите кавычки, не ищите это слово в словаре; оно не словарное."
@@ -257,12 +257,12 @@ blocks:
       - eng: "Which tone is this: à (fourth tone mark)? Describe it in one word."
         rus: "Какой это тон: à (знак четвёртого тона)? Опишите его одним словом."
         zh: "这是什么声调：à（四声符号）？用一个词描述它。"
-      - eng: "Rewrite Wǒ hǎo using tone-number notation instead of tone marks."
-        rus: "Перепишите Wǒ hǎo в тоново-цифровой записи вместо знаков тонов."
-        zh: "把 Wǒ hǎo 用声调数字标注法改写（不用声调符号）。"
-      - eng: "Is hěn-dà-de one dictionary word, or a word plus a bound grammar piece? How do you know from the punctuation alone?"
-        rus: "Является ли hěn-dà-de одним словарным словом или словом плюс привязанной грамматической частью? Как вы это определяете только по знакам препинания?"
-        zh: "hěn-dà-de 是一个词典词，还是一个词加一个粘着的语法成分？仅凭标点你如何判断？"
+      - eng: "Rewrite {{Word:wo3}} {{word:hao3}} using tone-number notation instead of tone marks."
+        rus: "Перепишите {{Word:wo3}} {{word:hao3}} в тоново-цифровой записи вместо знаков тонов."
+        zh: "把 {{Word:wo3}} {{word:hao3}} 用声调数字标注法改写（不用声调符号）。"
+      - eng: "Is {{word:hen3}}-{{word:da4}}-de one dictionary word, or a word plus a bound grammar piece? How do you know from the punctuation alone?"
+        rus: "Является ли {{word:hen3}}-{{word:da4}}-de одним словарным словом или словом плюс привязанной грамматической частью? Как вы это определяете только по знакам препинания?"
+        zh: "{{word:hen3}}-{{word:da4}}-de 是一个词典词，还是一个词加一个粘着的语法成分？仅凭标点你如何判断？"
 
   - type: answers
     items:
@@ -279,6 +279,6 @@ blocks:
           rus: "Wo3 hao3."
           zh: "Wo3 hao3。"
       - text:
-          eng: "A word (dà, big) plus a bound grammar piece (-de) — the hyphen shows they're glued together, not a single solid dictionary word."
-          rus: "Слово (dà, большой) плюс привязанная грамматическая часть (-de) — дефис показывает, что они скреплены вместе, а не являются единым слитным словарным словом."
-          zh: "一个词（dà，大）加上一个粘着的语法成分（-de）—— 连字符表明它们是粘在一起的，而不是一个固实的词典词。"
+          eng: "A word ({{word:da4}}, big) plus a bound grammar piece (-de) — the hyphen shows they're glued together, not a single solid dictionary word."
+          rus: "Слово ({{word:da4}}, большой) плюс привязанная грамматическая часть (-de) — дефис показывает, что они скреплены вместе, а не являются единым слитным словарным словом."
+          zh: "一个词（{{word:da4}}，大）加上一个粘着的语法成分（-de）—— 连字符表明它们是粘在一起的，而不是一个固实的词典词。"

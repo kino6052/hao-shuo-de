@@ -94,7 +94,7 @@
     }
   },
   "words": {
-    "i": [
+    "wo3": [
       "lesson-01",
       "lesson-04",
       "lesson-05",
@@ -103,13 +103,9 @@
       "lesson-09",
       "lesson-10",
       "lesson-11",
-      "lesson-13",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17"
+      "lesson-13"
     ],
-    "you": [
+    "ni3": [
       "lesson-05",
       "lesson-06",
       "lesson-07",
@@ -117,73 +113,43 @@
       "lesson-09",
       "lesson-10",
       "lesson-11",
-      "lesson-13",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17",
-      "lesson-19",
-      "lesson-20"
+      "lesson-13"
     ],
-    "he": [
+    "ta1": [
       "lesson-05",
       "lesson-08",
       "lesson-09",
-      "lesson-13",
-      "lesson-15",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20"
+      "lesson-13"
     ],
-    "what-which": [
+    "shen2me": [
       "lesson-08",
       "lesson-10",
-      "lesson-13",
-      "lesson-15",
-      "lesson-16",
-      "lesson-19"
+      "lesson-13"
     ],
-    "market": [
-      "appendix-minimality"
-    ],
-    "home": [
-      "appendix-minimality"
-    ],
-    "sun": [
+    "shi4chang3": [],
+    "jia1": [],
+    "ri4": [
       "lesson-11",
       "lesson-12",
-      "lesson-13",
-      "lesson-15"
+      "lesson-13"
     ],
-    "moon": [],
-    "plant": [
+    "yue4": [],
+    "zhi2wu4": [
       "lesson-12",
-      "lesson-13",
-      "lesson-14",
-      "lesson-18"
+      "lesson-13"
     ],
-    "fire": [
-      "lesson-19"
+    "huo3": [],
+    "kong1qi4": [],
+    "bi2zi": [],
+    "jiao3": [],
+    "kou3": [],
+    "pi2fu1": [],
+    "shen1ti3": [
+      "lesson-12"
     ],
-    "air": [],
-    "nose": [],
-    "foot": [],
-    "hole": [
-      "lesson-19"
-    ],
-    "skin": [],
-    "body": [
-      "lesson-12",
-      "lesson-15"
-    ],
-    "hand": [],
-    "head": [
-      "lesson-18",
-      "lesson-19"
-    ],
-    "human-being": [
-      "lesson-01",
-      "appendix-minimality",
+    "shou3": [],
+    "tou2": [],
+    "ren2": [
       "lesson-02",
       "lesson-03",
       "lesson-04",
@@ -193,99 +159,68 @@
       "lesson-08",
       "lesson-09",
       "lesson-10",
-      "lesson-13",
-      "lesson-15"
+      "lesson-13"
     ],
-    "parent": [
+    "fu4mu3": [
       "lesson-07",
       "lesson-08",
-      "lesson-09",
-      "lesson-14",
-      "lesson-15",
-      "lesson-17"
+      "lesson-09"
     ],
-    "man": [
+    "nan2ren2": [
       "lesson-05",
       "lesson-06",
       "lesson-07",
       "lesson-10",
       "lesson-12",
-      "lesson-13",
-      "lesson-17",
-      "lesson-18",
-      "lesson-19"
+      "lesson-13"
     ],
-    "woman": [
+    "nv3ren2": [
       "lesson-02",
       "lesson-03",
       "lesson-04",
       "lesson-06",
       "lesson-07",
       "lesson-10",
-      "lesson-12",
-      "lesson-16",
-      "lesson-17",
-      "lesson-19"
+      "lesson-12"
     ],
-    "group": [
+    "qun2": [
       "lesson-05",
       "lesson-06",
       "lesson-12"
     ],
-    "grain": [
-      "lesson-19"
-    ],
-    "fruit": [
+    "mi3fan4": [],
+    "shui3guo3": [
       "lesson-02",
       "lesson-03",
       "lesson-04",
       "lesson-05",
       "lesson-07",
-      "lesson-08",
-      "lesson-14",
-      "lesson-15"
+      "lesson-08"
     ],
-    "salt": [
-      "lesson-16"
-    ],
-    "water": [
+    "yan2": [],
+    "shui3": [
       "lesson-04",
       "lesson-07",
       "lesson-09",
-      "lesson-12",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-19"
+      "lesson-12"
     ],
-    "animal": [
+    "dong4wu4": [
       "lesson-01",
-      "appendix-minimality",
       "lesson-02",
       "lesson-03",
       "lesson-04",
       "lesson-05",
       "lesson-06",
-      "lesson-11",
-      "lesson-15",
-      "lesson-16",
-      "lesson-18",
-      "lesson-19"
+      "lesson-11"
     ],
-    "insect": [
-      "lesson-18"
-    ],
-    "bird": [
-      "lesson-18"
-    ],
-    "reptile": [],
-    "fish": [
+    "chong2zi": [],
+    "niao3": [],
+    "pa2xing2dong4wu4": [],
+    "yu2": [
       "lesson-08",
-      "lesson-09",
-      "lesson-14"
+      "lesson-09"
     ],
-    "thing": [
-      "appendix-minimality",
+    "dong1xi": [
       "lesson-02",
       "lesson-03",
       "lesson-05",
@@ -294,60 +229,36 @@
       "lesson-09",
       "lesson-11",
       "lesson-12",
-      "lesson-13",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20"
+      "lesson-13"
     ],
-    "tool": [
-      "appendix-minimality",
+    "gong1ju4": [
       "lesson-08",
       "lesson-09",
       "lesson-11",
-      "lesson-12",
-      "lesson-15",
-      "lesson-16",
-      "lesson-18"
+      "lesson-12"
     ],
-    "stick": [
-      "lesson-18"
+    "gun4zi": [],
+    "he2zi": [],
+    "ni2": [],
+    "qian2": [],
+    "xian4": [],
+    "yi1fu": [],
+    "ci2": [
+      "lesson-10"
     ],
-    "container": [],
-    "paste": [],
-    "money": [],
-    "line": [
-      "lesson-18"
-    ],
-    "clothing": [
-      "lesson-18",
-      "lesson-19"
-    ],
-    "word": [
-      "lesson-10",
-      "lesson-14",
-      "lesson-19",
-      "lesson-20"
-    ],
-    "energy": [
+    "li4liang4": [
       "lesson-07",
-      "lesson-12",
-      "lesson-15",
-      "lesson-16"
+      "lesson-12"
     ],
-    "sex": [],
-    "that": [
-      "appendix-minimality",
+    "xing4": [],
+    "na4": [
       "lesson-02",
       "lesson-06",
       "lesson-10",
       "lesson-11"
     ],
-    "this": [
+    "zhe4": [
       "lesson-01",
-      "appendix-minimality",
       "lesson-02",
       "lesson-03",
       "lesson-04",
@@ -355,43 +266,29 @@
       "lesson-09",
       "lesson-10",
       "lesson-12",
-      "lesson-13",
-      "lesson-15",
-      "lesson-19",
-      "lesson-20"
+      "lesson-13"
     ],
-    "different": [
-      "lesson-17",
-      "lesson-18"
-    ],
-    "same": [
-      "lesson-17"
-    ],
-    "universal-classifier": [
-      "appendix-minimality",
+    "bu4tong2": [],
+    "yi1yang4": [],
+    "ge4": [
       "lesson-02",
       "lesson-03",
       "lesson-13"
     ],
-    "one": [
+    "yi1": [
       "lesson-01",
       "lesson-03",
       "lesson-04",
       "lesson-07",
-      "lesson-13",
-      "lesson-18",
-      "lesson-19"
+      "lesson-13"
     ],
-    "two": [
-      "lesson-13",
-      "lesson-17",
-      "lesson-19"
+    "liang3": [
+      "lesson-13"
     ],
-    "sequence-marker": [
-      "lesson-13",
-      "lesson-17"
+    "hao4": [
+      "lesson-13"
     ],
-    "many": [
+    "duo1": [
       "lesson-03",
       "lesson-05",
       "lesson-07",
@@ -399,286 +296,160 @@
       "lesson-09",
       "lesson-10",
       "lesson-12",
-      "lesson-13",
-      "lesson-15",
-      "lesson-18",
-      "lesson-20"
+      "lesson-13"
     ],
-    "all": [
-      "lesson-13",
-      "lesson-17",
-      "lesson-20"
+    "quan2bu4": [
+      "lesson-13"
     ],
-    "good": [
+    "hao3": [
       "lesson-01",
-      "appendix-minimality",
-      "lesson-02",
-      "lesson-03",
       "lesson-04",
       "lesson-05",
       "lesson-06",
       "lesson-07",
-      "lesson-08",
-      "lesson-09",
       "lesson-11",
-      "lesson-12",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17",
-      "lesson-19",
-      "lesson-20"
-    ],
-    "bad": [
-      "lesson-07",
-      "lesson-10",
-      "lesson-11",
-      "lesson-12",
-      "lesson-14",
-      "lesson-15",
-      "lesson-18"
-    ],
-    "white": [
-      "lesson-15"
-    ],
-    "black": [
-      "lesson-15",
-      "lesson-16",
-      "lesson-17"
-    ],
-    "red": [
-      "lesson-15",
-      "lesson-16",
-      "lesson-18"
-    ],
-    "yellow": [
-      "lesson-15"
-    ],
-    "blue": [
-      "lesson-15",
-      "lesson-18"
-    ],
-    "color": [],
-    "strange": [],
-    "new": [
-      "lesson-05",
-      "lesson-06",
-      "lesson-08",
-      "lesson-19"
-    ],
-    "hot": [
-      "lesson-19"
-    ],
-    "cold": [
-      "lesson-17"
-    ],
-    "sweet": [
-      "lesson-17"
-    ],
-    "hard": [],
-    "round": [],
-    "little": [
-      "lesson-04",
-      "lesson-05",
-      "lesson-07",
-      "lesson-08",
-      "lesson-12",
-      "lesson-13",
-      "lesson-14",
-      "lesson-17",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20"
-    ],
-    "big": [
-      "lesson-01",
-      "appendix-minimality",
-      "lesson-04",
-      "lesson-05",
-      "lesson-06",
-      "lesson-07",
-      "lesson-09",
-      "lesson-10",
-      "lesson-11",
-      "lesson-12",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-18"
-    ],
-    "want": [
-      "lesson-14",
-      "lesson-18"
-    ],
-    "love": [
-      "lesson-17",
-      "lesson-19"
-    ],
-    "feeling": [
-      "lesson-11",
-      "lesson-15",
-      "lesson-17",
-      "lesson-19"
-    ],
-    "know": [
-      "appendix-minimality",
-      "lesson-06",
-      "lesson-07",
-      "lesson-08",
-      "lesson-10",
-      "lesson-13",
-      "lesson-14",
-      "lesson-20"
-    ],
-    "look-at": [
-      "lesson-07",
-      "lesson-09",
-      "lesson-15",
-      "lesson-16",
-      "lesson-18",
-      "lesson-20"
-    ],
-    "hear": [
-      "lesson-06",
-      "lesson-07",
-      "lesson-08",
-      "lesson-13",
-      "lesson-18"
-    ],
-    "communicate": [
-      "lesson-01",
-      "lesson-02",
-      "lesson-03",
-      "lesson-06",
-      "lesson-07",
-      "lesson-08",
-      "lesson-09",
-      "lesson-11",
-      "lesson-12",
-      "lesson-13",
-      "lesson-14",
-      "lesson-17",
-      "lesson-20"
-    ],
-    "write": [
-      "lesson-02",
-      "lesson-03",
-      "lesson-05",
-      "lesson-06",
-      "lesson-07",
-      "lesson-16",
-      "lesson-20"
-    ],
-    "use": [
-      "appendix-minimality",
-      "lesson-09",
-      "lesson-12",
-      "lesson-18",
-      "lesson-19"
-    ],
-    "call": [
-      "lesson-01",
-      "lesson-10",
-      "lesson-11",
-      "lesson-14",
-      "lesson-19",
-      "lesson-20"
-    ],
-    "begin": [
-      "lesson-14",
-      "lesson-17"
-    ],
-    "finish": [],
-    "sleep": [
-      "lesson-01",
-      "lesson-19"
-    ],
-    "wait": [
       "lesson-12"
     ],
-    "eat": [
-      "lesson-06",
+    "huai4": [
       "lesson-07",
-      "lesson-08",
-      "lesson-14",
-      "lesson-15",
-      "lesson-18",
-      "lesson-19"
-    ],
-    "play": [
-      "lesson-19",
-      "lesson-20"
-    ],
-    "come": [
-      "appendix-minimality",
-      "lesson-09",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17"
-    ],
-    "go": [
-      "appendix-minimality",
-      "lesson-09",
       "lesson-10",
       "lesson-11",
-      "lesson-16",
-      "lesson-20"
+      "lesson-12"
     ],
-    "become": [
-      "appendix-minimality",
+    "bai2se4": [],
+    "hei1se4": [],
+    "hong2se4": [],
+    "huang2se4": [],
+    "lan2se4": [],
+    "yan2se4": [],
+    "qi2guai4": [],
+    "xin1": [
+      "lesson-05",
+      "lesson-06",
+      "lesson-08"
+    ],
+    "re4": [],
+    "leng3": [],
+    "tian2": [],
+    "ying4": [],
+    "yuan2": [],
+    "xiao3": [
+      "lesson-04",
+      "lesson-05",
       "lesson-07",
       "lesson-08",
       "lesson-12",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-19",
-      "lesson-20"
+      "lesson-13"
     ],
-    "do": [
-      "appendix-minimality",
+    "da4": [
+      "lesson-01",
+      "lesson-04",
+      "lesson-05",
       "lesson-06",
       "lesson-07",
       "lesson-09",
-      "lesson-11",
-      "lesson-17",
-      "lesson-20"
-    ],
-    "hit": [
       "lesson-10",
-      "lesson-15"
+      "lesson-11",
+      "lesson-12"
     ],
-    "give": [
+    "yao4": [],
+    "ai4": [],
+    "jue2de": [
+      "lesson-11"
+    ],
+    "zhi1dao4": [
+      "lesson-06",
+      "lesson-07",
+      "lesson-08",
+      "lesson-10",
+      "lesson-13"
+    ],
+    "kan4": [
+      "lesson-07",
+      "lesson-09"
+    ],
+    "ting1": [
+      "lesson-06",
+      "lesson-07",
+      "lesson-08",
+      "lesson-13"
+    ],
+    "shuo1": [
+      "lesson-06",
+      "lesson-08",
+      "lesson-09",
+      "lesson-11",
+      "lesson-13"
+    ],
+    "xie3": [
+      "lesson-02",
+      "lesson-03",
+      "lesson-05",
+      "lesson-06",
+      "lesson-07"
+    ],
+    "yong4": [
+      "lesson-09",
+      "lesson-12"
+    ],
+    "jiao4": [
+      "lesson-01",
+      "lesson-10",
+      "lesson-11"
+    ],
+    "kai1shi3": [],
+    "wan2cheng2": [],
+    "shui4jiao4": [
+      "lesson-01"
+    ],
+    "deng3": [
+      "lesson-12"
+    ],
+    "chi1": [
+      "lesson-06",
+      "lesson-07",
+      "lesson-08"
+    ],
+    "wan2": [],
+    "lai2": [
+      "lesson-09"
+    ],
+    "qu4": [
+      "lesson-09",
+      "lesson-10",
+      "lesson-11"
+    ],
+    "bian4": [
+      "lesson-07",
+      "lesson-08",
+      "lesson-12"
+    ],
+    "zuo4": [
+      "lesson-06",
+      "lesson-07",
+      "lesson-09",
+      "lesson-11"
+    ],
+    "da3": [
+      "lesson-10"
+    ],
+    "gei3": [
       "lesson-07",
       "lesson-08",
       "lesson-09",
       "lesson-11",
-      "lesson-12",
-      "lesson-17",
-      "lesson-20"
+      "lesson-12"
     ],
-    "touch": [
-      "lesson-19"
-    ],
-    "hunt": [
-      "lesson-18"
-    ],
-    "exist-at": [
+    "mo1": [],
+    "zhao3": [],
+    "zai4": [
       "lesson-06",
       "lesson-08",
       "lesson-09",
       "lesson-10",
-      "lesson-12",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20"
+      "lesson-12"
     ],
-    "be": [
+    "shi4": [
       "lesson-03",
       "lesson-04",
       "lesson-05",
@@ -686,105 +457,51 @@
       "lesson-07",
       "lesson-08",
       "lesson-10",
-      "lesson-13",
-      "lesson-15",
-      "lesson-17",
-      "lesson-19"
+      "lesson-13"
     ],
-    "stay": [
-      "lesson-13",
-      "lesson-14",
-      "lesson-18"
+    "liu2": [
+      "lesson-13"
     ],
-    "get": [
-      "appendix-minimality"
-    ],
-    "have": [
-      "appendix-minimality",
+    "de2": [],
+    "you3": [
       "lesson-06",
       "lesson-07",
       "lesson-08",
       "lesson-10",
+      "lesson-12"
+    ],
+    "si3": [],
+    "shi2jian1": [
       "lesson-12",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20"
+      "lesson-13"
     ],
-    "die": [],
-    "time": [
-      "lesson-12",
-      "lesson-13",
-      "lesson-15",
-      "lesson-16",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20"
-    ],
-    "from": [
-      "lesson-16"
-    ],
-    "facing": [
-      "lesson-17"
-    ],
-    "place": [
+    "cong2": [],
+    "dui4": [],
+    "di4fang1": [
       "lesson-04",
       "lesson-05",
       "lesson-06",
       "lesson-09",
       "lesson-10",
       "lesson-11",
-      "lesson-12",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17",
-      "lesson-18",
-      "lesson-19"
+      "lesson-12"
     ],
-    "floor": [
-      "lesson-19"
+    "di4ban3": [],
+    "hou4mian4": [],
+    "li3mian4": [],
+    "pang2bian1": [
+      "lesson-09"
     ],
-    "back": [
-      "lesson-16",
-      "lesson-20"
-    ],
-    "inside": [
-      "lesson-16",
-      "lesson-20"
-    ],
-    "side": [
-      "lesson-09",
-      "lesson-16",
-      "lesson-19"
-    ],
-    "front": [
-      "lesson-16"
-    ],
-    "above": [
-      "lesson-15",
-      "lesson-16",
-      "lesson-17"
-    ],
-    "below": [
-      "lesson-16",
-      "lesson-17"
-    ],
-    "away": [],
-    "grammatical-object-introducing-particle": [
+    "qian2mian4": [],
+    "shang4mian4": [],
+    "xia4mian4": [],
+    "wai4": [],
+    "ba3": [
       "lesson-07",
       "lesson-08",
-      "lesson-12",
-      "lesson-16",
-      "lesson-19",
-      "lesson-20"
+      "lesson-12"
     ],
-    "possessive-marker": [
-      "lesson-01",
-      "proverbs",
-      "appendix-minimality",
+    "de": [
       "lesson-02",
       "lesson-03",
       "lesson-04",
@@ -795,82 +512,53 @@
       "lesson-09",
       "lesson-10",
       "lesson-11",
-      "lesson-12",
-      "lesson-13",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20"
+      "lesson-12"
     ],
-    "perfective-aspect-marker": [
+    "le": [
       "lesson-06",
       "lesson-09",
       "lesson-11",
-      "lesson-13",
-      "lesson-14",
-      "lesson-17",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20"
+      "lesson-13"
     ],
-    "final-interrogative-yes-or-no": [
+    "ma": [
       "lesson-08",
       "lesson-11"
     ],
-    "not": [
+    "bu4": [
       "lesson-04",
       "lesson-07",
       "lesson-08",
       "lesson-10",
       "lesson-11",
-      "lesson-12",
-      "lesson-14",
-      "lesson-15",
-      "lesson-17"
+      "lesson-12"
     ],
-    "negative-particle-used": [
-      "lesson-08",
-      "lesson-15"
-    ],
-    "but": [
-      "lesson-01",
-      "lesson-17",
-      "lesson-18"
-    ],
-    "and": [
-      "lesson-05",
-      "lesson-15",
-      "lesson-17",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20"
-    ],
-    "or": [
+    "mei2": [
       "lesson-08"
     ],
-    "also": [
-      "lesson-17",
-      "lesson-19",
-      "lesson-20"
+    "dan4shi4": [
+      "lesson-01"
     ],
-    "because": [
+    "he2": [
+      "lesson-05"
+    ],
+    "huo4zhe3": [
+      "lesson-08"
+    ],
+    "ye3": [],
+    "yin1wei4": [
       "lesson-09"
     ],
-    "why": [
+    "wei4shen2me": [
       "lesson-08",
       "lesson-09",
       "lesson-11"
     ],
-    "how": [
+    "zen3me": [
       "lesson-08"
     ],
-    "be-able-to": [],
-    "very": [
+    "neng2": [],
+    "hen3": [
       "lesson-01",
-      "appendix-minimality",
       "lesson-04",
       "lesson-05",
       "lesson-06",
@@ -880,18 +568,10 @@
       "lesson-10",
       "lesson-11",
       "lesson-12",
-      "lesson-13",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20"
+      "lesson-13"
     ],
-    "way": [
-      "lesson-10",
-      "lesson-14",
-      "lesson-20"
+    "fang1fa3": [
+      "lesson-10"
     ]
   }
 }
