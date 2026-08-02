@@ -31,13 +31,8 @@ function loadDictionary(dataPath = DEFAULT_DATA_PATH) {
 export function loadWordIndex(dataPath = DEFAULT_DATA_PATH) {
   const dictionary = loadDictionary(dataPath);
   const index = new Map();
-  for (const category of dictionary.categories) {
-    const words = category.subcategories
-      ? category.subcategories.flatMap((s) => s.words)
-      : category.words;
-    for (const word of words) {
-      if (word.id) index.set(word.id, word.term);
-    }
+  for (const [id, word] of Object.entries(dictionary.words)) {
+    index.set(id, word.term);
   }
   return index;
 }
@@ -51,7 +46,7 @@ export function resolveWordRefs(text, index, wordCount) {
     .replace(WORD_REF_RE, (full, id) => {
       if (!index.has(id)) {
         throw new Error(
-          `Unknown word id "${id}" referenced as ${full}. Check src/data/dictionary.json (run scripts/assign-word-ids.js if it's a newly added word).`,
+          `Unknown word id "${id}" referenced as ${full}. Check src/data/dictionary.json -- it must have a "${id}" key under "words".`,
         );
       }
       return index.get(id);

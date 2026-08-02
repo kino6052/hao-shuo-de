@@ -4,11 +4,9 @@ import styles from './DictionarySection.module.css';
 export function DictionarySection({ items }) {
   if (!items || items.length === 0) return null;
 
-  const hasCategories = items.some(e => e.category);
-
   const grouped = {};
   for (const entry of items) {
-    const key = hasCategories ? (entry.category || 'Other') : (entry.term[0] || '?').toUpperCase();
+    const key = (entry.term[0] || '?').toUpperCase();
     if (!grouped[key]) grouped[key] = [];
     grouped[key].push(entry);
   }
