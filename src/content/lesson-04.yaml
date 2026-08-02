@@ -1,0 +1,130 @@
+# Converted from the old lesson-04.md/.rus.md/.zh.md frontmatter+fenced-markdown
+# format to the YAML block schema. Addresses CONTENT_CHECKLIST.md §5.3 item
+# "Migrate lessons 3-20 to the YAML schema" (marked off for this lesson only --
+# lessons 7-20 are still on the old markdown format).
+id: lesson-04
+type: lesson
+lessonNumber: 4
+order: 4
+title:
+  eng: "Nouns and Adjectives"
+  rus: "Существительные и прилагательные"
+  zh: "名词与形容词"
+
+summary:
+  eng: "Adjectives connect to a subject with hěn instead of shì (Shuǐ hěn hǎo — \"Water is good\"), and bind onto a noun with -de instead when describing it as a unit (hěn-xiǎo-de dìfāng — \"a small place\")."
+  rus: "Прилагательные соединяются с подлежащим через hěn, а не через shì (Shuǐ hěn hǎo — «Вода хорошая»), а когда описывают существительное как единое целое, присоединяются к нему через -de (hěn-xiǎo-de dìfāng — «маленькое место»)."
+  zh: "形容词用 hěn 而不是 shì 来连接主语（Shuǐ hěn hǎo——\"水很好\"），而当把名词描述成一个整体时，则用 -de 连接到名词上（hěn-xiǎo-de dìfāng——\"一个小地方\"）。"
+
+blocks:
+  - type: vocab
+    items:
+      - term: "shuǐ"
+        ttsText: "水"
+        definition:
+          eng: "water, liquid"
+          rus: "вода, жидкость"
+          zh: "水，液体"
+      - term: "dìfāng"
+        ttsText: "地方"
+        definition:
+          eng: "a place (both in space or metaphorical to mean part of something)"
+          rus: "место (как в пространстве, так и в переносном смысле — часть чего-либо)"
+          zh: "地方，场所（也指某事物的部分）"
+      - term: "xiǎo"
+        ttsText: "小"
+        definition:
+          eng: "little, small"
+          rus: "маленький, небольшой"
+          zh: "小的，少量的"
+      - term: "hǎo"
+        ttsText: "好"
+        definition:
+          eng: "good, simple, friendly"
+          rus: "хороший, простой, дружелюбный"
+          zh: "好的，简单的，友好的"
+      - term: "dà"
+        ttsText: "大"
+        definition:
+          eng: "big, important, tall"
+          rus: "большой, важный, высокий (о росте)"
+          zh: "大的，重要的，高大的"
+
+  - type: prose
+    text:
+      eng: "Lesson 3 gave you <audio-example zh=\"是\">shì</audio-example>, the word that connects a subject to a noun (<audio-example zh=\"人是女人\">Rén shì nǚrén</audio-example> — \"the person is a woman\"). Adjectives need a connector too, but Mandarin doesn't reuse <audio-example zh=\"是\">shì</audio-example> for the job — it uses a different word instead: <audio-example zh=\"很\">hěn</audio-example>.\n\nSubject + <audio-example zh=\"很\">hěn</audio-example> + Adjective\n\nSay <audio-example zh=\"水好\">shuǐ hǎo</audio-example> on its own, and it doesn't read as a plain, complete statement — it sounds like half of a comparison, as though something's left unsaid. <audio-example zh=\"很\">hěn</audio-example> is what finishes the sentence. In this spot <audio-example zh=\"很\">hěn</audio-example> technically means \"very,\" but its real job here is just to be the connector — don't read \"very\" into every sentence that uses it."
+      rus: "Урок 3 дал вам <audio-example zh=\"是\">shì</audio-example> — слово, которое связывает подлежащее с существительным (<audio-example zh=\"人是女人\">Rén shì nǚrén</audio-example> — «человек — женщина»). Прилагательным тоже нужен связующий элемент, но мандаринский не использует для этого <audio-example zh=\"是\">shì</audio-example> повторно — вместо этого используется другое слово: <audio-example zh=\"很\">hěn</audio-example>.\n\nПодлежащее + <audio-example zh=\"很\">hěn</audio-example> + Прилагательное\n\nСкажите <audio-example zh=\"水好\">shuǐ hǎo</audio-example> само по себе — и это не прозвучит как простое, законченное высказывание: оно звучит как половина сравнения, будто что-то осталось несказанным. <audio-example zh=\"很\">hěn</audio-example> — это то, что завершает предложение. В этой позиции <audio-example zh=\"很\">hěn</audio-example> формально означает «очень», но его настоящая работа здесь — просто быть связкой: не стоит читать «очень» в каждое предложение, где оно встречается."
+      zh: "第三课教了你 <audio-example zh=\"是\">shì</audio-example>，它是把主语和名词连接起来的词（<audio-example zh=\"人是女人\">Rén shì nǚrén</audio-example>——\"那个人是女人\"）。形容词也需要一个连接词，但普通话不会再用 <audio-example zh=\"是\">shì</audio-example> 来干这个活——它用的是另一个词：<audio-example zh=\"很\">hěn</audio-example>。\n\n主语 + <audio-example zh=\"很\">hěn</audio-example> + 形容词\n\n单独说 <audio-example zh=\"水好\">shuǐ hǎo</audio-example>，听起来并不像一句完整、中性的陈述——它更像半句比较，仿佛还有一半话没说完。<audio-example zh=\"很\">hěn</audio-example> 的作用就是把这句话补完整。在这个位置上，<audio-example zh=\"很\">hěn</audio-example> 字面意思是\"很\"，但它真正的工作只是当连接词——不要把每一句带 <audio-example zh=\"很\">hěn</audio-example> 的句子都理解成\"非常\"。"
+    tldr:
+      eng: "Adjectives connect to a subject with hěn instead of shì; in this role hěn is a required connector, not an emphatic \"very.\""
+      rus: "Прилагательные соединяются с подлежащим через hěn, а не через shì; в этой роли hěn — обязательная связка, а не усилительное «очень»."
+      zh: "形容词用 hěn 而不是 shì 来连接主语；在这个位置上，hěn 是必需的连接词，而不是加强语气的\"很\"。"
+    necessity:
+      eng: "Prevents the reader from either omitting hěn (an incomplete sentence) or over-translating it as \"very\" every time."
+      rus: "Не даёт читателю ни пропускать hěn (незаконченное предложение), ни каждый раз переводить его как «очень»."
+      zh: "避免读者要么漏掉 hěn（句子不完整），要么每次都把它翻译成\"非常\"。"
+
+  - type: prose
+    text:
+      eng: "When an adjective sits right next to a noun instead of making its own statement — describing it as a single unit, the way <audio-example zh=\"很小的地方\">hěn-xiǎo-de dìfāng</audio-example> describes \"a small place\" — it binds on with `-de`, the same connecting particle from Lesson 2."
+      rus: "Когда прилагательное стоит прямо рядом с существительным, а не образует отдельное высказывание, — описывая его как единое целое, так же как <audio-example zh=\"很小的地方\">hěn-xiǎo-de dìfāng</audio-example> описывает «маленькое место», — оно присоединяется через `-de`, ту же связующую частицу из Урока 2."
+      zh: "当一个形容词直接贴在名词旁边，而不是单独成句——把名词描述成一个整体，就像 <audio-example zh=\"很小的地方\">hěn-xiǎo-de dìfāng</audio-example> 描述\"一个小地方\"那样——它就要靠 `-de` 连接上去，也就是第二课里那个连接用的助词。"
+    tldr:
+      eng: "An adjective describing a noun as one unit binds onto it with -de instead, e.g. hěn-xiǎo-de dìfāng, \"a small place.\""
+      rus: "Прилагательное, описывающее существительное как единое целое, присоединяется к нему через -de, например hěn-xiǎo-de dìfāng, «маленькое место»."
+      zh: "把名词描述成一个整体的形容词，则用 -de 连接到名词上，例如 hěn-xiǎo-de dìfāng，\"一个小地方\"。"
+    necessity:
+      eng: "Distinguishes the predicative hěn-pattern (a full statement) from the attributive -de-pattern (a descriptive phrase), reusing Lesson 2's particle rather than a new one."
+      rus: "Различает предикативную модель с hěn (законченное утверждение) и атрибутивную модель с -de (описательное словосочетание), используя частицу из Урока 2 вместо новой."
+      zh: "区分谓语用法的 hěn 模式（一个完整的陈述）与定语用法的 -de 模式（一个描述性短语），沿用第二课的助词而不是引入新的。"
+
+  - type: examples
+    items:
+      - pinyin: "Shuǐ hěn hǎo."
+        ttsText: "水很好。"
+        translation:
+          eng: "Water is good."
+          rus: "Вода хорошая."
+          zh: "水很好。"
+      - pinyin: "Zhè-ge shì hěn-xiǎo-de dìfāng."
+        ttsText: "这个是很小的地方。"
+        translation:
+          eng: "This is a small place."
+          rus: "Это маленькое место."
+          zh: "这是一个小地方。"
+      - pinyin: "Zhè-ge shì yī-ge hěn-dà-de dòngwù."
+        ttsText: "这个是一个很大的动物。"
+        translation:
+          eng: "This is a very big animal."
+          rus: "Это очень большое животное."
+          zh: "这是一个很大的动物。"
+
+  - type: exercise
+    items:
+      - eng: "The place is small."
+        rus: "Место маленькое."
+        zh: "这个地方很小。"
+      - eng: "This is a good animal."
+        rus: "Это хорошее животное."
+        zh: "这是一个好动物。"
+      - eng: "This is a big fruit."
+        rus: "Это большой фрукт."
+        zh: "这是一个大水果。"
+
+  - type: answers
+    items:
+      - text:
+          eng: "Dìfāng hěn xiǎo."
+          rus: "Dìfāng hěn xiǎo."
+          zh: "Dìfāng hěn xiǎo."
+        ttsText: "地方很小。"
+      - text:
+          eng: "Zhè-ge shì hǎo-de dòngwù."
+          rus: "Zhè-ge shì hǎo-de dòngwù."
+          zh: "Zhè-ge shì hǎo-de dòngwù."
+        ttsText: "这个是好的动物。"
+      - text:
+          eng: "Zhè-ge shì yī-ge hěn-dà-de shuǐguǒ."
+          rus: "Zhè-ge shì yī-ge hěn-dà-de shuǐguǒ."
+          zh: "Zhè-ge shì yī-ge hěn-dà-de shuǐguǒ."
+        ttsText: "这个是一个很大的水果。"

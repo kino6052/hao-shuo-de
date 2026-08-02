@@ -1,0 +1,96 @@
+# Converted from the old lesson-06.md frontmatter+fenced-markdown format to
+# the YAML block schema. Addresses CONTENT_CHECKLIST.md §5.3 item "Migrate
+# lessons 3-20 to the YAML schema" (marked off for this lesson only --
+# lessons 7-20 are still on the old markdown format).
+#
+# Content carried over verbatim: still English-only, still missing tone
+# diacritics and <audio-example> tags. Restoring those is a separate,
+# still-open checklist item (§5.3/§9 "restore diacritics/audio across
+# lessons 6-20") and intentionally NOT done here -- this conversion only
+# changes the file's schema, not its content.
+id: lesson-06
+type: lesson
+lessonNumber: 6
+order: 6
+title:
+  eng: "Dongzuo (Verbs)"
+
+summary:
+  eng: "Verbs carry no tense; the particle le marks a completed action, and words shift category by context alone (chi as verb \"eat\" vs. noun \"food\")."
+
+blocks:
+  - type: vocab
+    items:
+      - term: "you"
+        definition:
+          eng: "to have, contain, carry"
+      - term: "ting"
+        definition:
+          eng: "to listen to, hear, obey"
+      - term: "chi"
+        definition:
+          eng: "to eat, drink, consume; food"
+      - term: "zuo"
+        definition:
+          eng: "to make, do, work on"
+      - term: "zhidao"
+        definition:
+          eng: "to know"
+      - term: "shuo"
+        definition:
+          eng: "to talk, speak, communicate"
+
+  - type: prose
+    text:
+      eng: "Hao-shuo-de eliminates Toki Pona's direct object marker _e_ entirely by relying on standard Mandarin Subject-Verb-Object (SVO) word order."
+    tldr:
+      eng: "No direct-object marker is needed; SVO word order alone shows what the object is."
+    necessity:
+      eng: "Confirms Lesson 3's SVO order is doing double duty here, replacing a marker particle other minimal languages (like Toki Pona) rely on."
+
+  - type: prose
+    text:
+      eng: "Verbs do not change their forms to reflect past, present, or future tenses. Instead, aspect markers like the perfective particle `le` can be appended to show completed actions. Words fluidly shift roles depending on context -- for instance, `chi` represents the action \"to eat\" or the noun \"food,\" while `zhidao-de ren` acts as \"a knowledgeable person\"."
+    tldr:
+      eng: "Verbs carry no tense; `le` marks a completed action, and a word's category (verb vs. noun) shifts with context alone."
+    necessity:
+      eng: "Introduces the two mechanisms that stand in for tense and for separate word classes elsewhere in the grammar."
+
+  - type: examples
+    items:
+      - pinyin: "Wo zhidao hao shuo-de."
+        translation:
+          eng: "I know a simple language / good speech."
+      - pinyin: "Na-ge nanren shi shuo-de ren."
+        translation:
+          eng: "That man is a messenger / speaking person."
+      - pinyin: "Da-de dongwu zai chi ni."
+        translation:
+          eng: "A large animal is eating you."
+      - pinyin: "Qun-de xie-de dongxi hen hao."
+        translation:
+          eng: "The community's book is reliable."
+      - pinyin: "Ni zuo le xin-de chi."
+        translation:
+          eng: "You made new food."
+      - pinyin: "Zhidao-de ren ting."
+        translation:
+          eng: "A person of knowledge listens."
+      - pinyin: "Zhidao-de difang you xie-de dongxi."
+        translation:
+          eng: "The school / house of knowledge has books."
+
+  - type: exercise
+    items:
+      - eng: "I will listen to you."
+      - eng: "The woman obeyed the man."
+      - eng: "The friends ate meat."
+
+  - type: answers
+    items:
+      - text:
+          eng: "Wo ting ni."
+      - text:
+          eng: "Nuren ting le nanren."
+      - text:
+          eng: "Hao-de ren chi le dongwu."

@@ -1,0 +1,148 @@
+# Converted from the old lesson-05.md/.rus.md/.zh.md frontmatter+fenced-markdown
+# format to the YAML block schema. Addresses CONTENT_CHECKLIST.md §5.3 item
+# "Migrate lessons 3-20 to the YAML schema" (marked off for this lesson only --
+# lessons 7-20 are still on the old markdown format).
+id: lesson-05
+type: lesson
+lessonNumber: 5
+order: 5
+title:
+  eng: "You and I"
+  rus: "Ты и я"
+  zh: "你和我"
+
+summary:
+  eng: "Pronouns like wǒ (\"I/we\") and nǐ (\"you\") behave exactly like ordinary number-neutral nouns and take the Subject spot; possession is shown by binding a pronoun to a noun with -de, the same particle from Lessons 2 and 4."
+  rus: "Местоимения вроде wǒ («я/мы») и nǐ («ты») ведут себя точно как обычные, нейтральные к числу существительные, и занимают место Подлежащего; принадлежность показывается присоединением местоимения к существительному через -de — ту же частицу из Уроков 2 и 4."
+  zh: "像 wǒ（\"我/我们\"）和 nǐ（\"你\"）这样的代词，表现得跟普通的、不分单复数的名词完全一样，占据主语的位置；所属关系通过把代词用 -de 连接到名词上来表示，这是第二课和第四课里同一个助词。"
+
+blocks:
+  - type: vocab
+    items:
+      - term: "wǒ"
+        ttsText: "我"
+        definition:
+          eng: "I, me, we"
+          rus: "я, меня, мы"
+          zh: "我，我们"
+      - term: "nánrén"
+        ttsText: "男人"
+        definition:
+          eng: "man, male"
+          rus: "мужчина, мужского пола"
+          zh: "男人，男性"
+      - term: "nǐ"
+        ttsText: "你"
+        definition:
+          eng: "you"
+          rus: "ты, вы"
+          zh: "你，你们"
+      - term: "qún"
+        ttsText: "群"
+        definition:
+          eng: "community, group"
+          rus: "сообщество, группа"
+          zh: "群体，社区"
+      - term: "xīn"
+        ttsText: "新"
+        definition:
+          eng: "new, another, fresh"
+          rus: "новый, другой, свежий"
+          zh: "新的，另一，新鲜的"
+
+  - type: prose
+    text:
+      eng: "Hao-shuo-de pronouns behave like any other noun you've already met — <audio-example zh=\"我\">wǒ</audio-example> (\"I\") and <audio-example zh=\"你\">nǐ</audio-example> (\"you\") simply take the Subject spot from Lesson 3, no special treatment required.\n\nAnd like every Hao-shuo-de noun, they carry no number of their own. <audio-example zh=\"我\">wǒ</audio-example> means \"I\" or \"we\" depending on what's already clear from the situation — recall Lesson 2: nothing in the word marks the difference, only the context around it does."
+      rus: "Местоимения Hǎo-shuō-de ведут себя как любое другое существительное, которое вы уже знаете — <audio-example zh=\"我\">wǒ</audio-example> («я») и <audio-example zh=\"你\">nǐ</audio-example> («ты») просто занимают место Подлежащего из Урока 3, без какого-либо особого обращения.\n\nИ, как и любое существительное Hǎo-shuō-de, они не несут собственного числа. <audio-example zh=\"我\">wǒ</audio-example> означает «я» или «мы» в зависимости от того, что уже ясно из ситуации — вспомните Урок 2: ничто в самом слове не отмечает разницу, это делает только контекст вокруг него."
+      zh: "Hǎo-shuō-de 的代词表现得跟你已经认识的其他名词一模一样——<audio-example zh=\"我\">wǒ</audio-example>（\"我\"）和 <audio-example zh=\"你\">nǐ</audio-example>（\"你\"）直接站到第三课里\"主语\"的位置上，不需要任何特殊处理。\n\n而且，跟 Hǎo-shuō-de 的每一个名词一样，它们本身不带数量。<audio-example zh=\"我\">wǒ</audio-example> 是\"我\"还是\"我们\"，取决于情境本身已经说明的东西——回想第二课：词本身不标记这种区别，只有周围的语境才能说明。"
+    tldr:
+      eng: "Pronouns are ordinary, number-neutral nouns that simply fill the Subject spot; context decides \"I\" vs. \"we.\""
+      rus: "Местоимения — это обычные, нейтральные к числу существительные, которые просто занимают место Подлежащего; контекст решает «я» это или «мы»."
+      zh: "代词是普通的、不分单复数的名词，只是填入主语的位置；\"我\"还是\"我们\"由语境决定。"
+    necessity:
+      eng: "Confirms pronouns don't need a separate grammar rule — everything already learned about nouns (Subject slot, no number) already applies."
+      rus: "Подтверждает, что местоимениям не нужно отдельное грамматическое правило — всё, что уже изучено о существительных (место Подлежащего, отсутствие числа), уже применимо."
+      zh: "确认代词不需要单独的语法规则——已经学过的关于名词的一切（主语位置、不分数量）都直接适用。"
+
+  - type: prose
+    text:
+      eng: "To show possession, bind the pronoun to a noun with `-de`, the same connecting particle from Lessons 2 and 4: <audio-example zh=\"我的\">wǒ-de</audio-example> (\"my\"), <audio-example zh=\"你的\">nǐ-de</audio-example> (\"your\"). Same hyphen, same job — gluing one word onto another to form a single descriptive unit — whether what's doing the describing is an adjective, a verb turned into a noun, or now, a pronoun."
+      rus: "Чтобы показать принадлежность, присоедините местоимение к существительному через `-de` — ту же связующую частицу из Уроков 2 и 4: <audio-example zh=\"我的\">wǒ-de</audio-example> («мой»), <audio-example zh=\"你的\">nǐ-de</audio-example> («твой»). Тот же дефис, та же работа — склеить одно слово с другим в единую описательную единицу — независимо от того, что именно описывает: прилагательное, превращённый в существительное глагол или, как теперь, местоимение."
+      zh: "要表示所属关系，把代词用 `-de` 连接到一个名词上——也就是第二课和第四课里那个连接用的助词：<audio-example zh=\"我的\">wǒ-de</audio-example>（\"我的\"）、<audio-example zh=\"你的\">nǐ-de</audio-example>（\"你的\"）。同一个连字符，同一种工作——把一个词粘到另一个词上，组成一个单一的描述单位——不管在描述的是形容词、由动词变来的名词，还是现在的代词。"
+    tldr:
+      eng: "Possession is shown by binding a pronoun to a noun with -de: wǒ-de (\"my\"), nǐ-de (\"your\")."
+      rus: "Принадлежность показывается присоединением местоимения к существительному через -de: wǒ-de («мой»), nǐ-de («твой»)."
+      zh: "所属关系通过把代词用 -de 连接到名词上来表示：wǒ-de（\"我的\"）、nǐ-de（\"你的\"）。"
+    necessity:
+      eng: "Shows -de doing the same job a third time (after adjectives and verb-to-noun), confirming it's one general binding rule, not three separate ones."
+      rus: "Показывает, что -de выполняет ту же работу уже в третий раз (после прилагательных и превращения глагола в существительное), подтверждая, что это одно общее правило связывания, а не три разных."
+      zh: "展示 -de 第三次执行同样的工作（继形容词和动词变名词之后），确认这是一条通用的连接规则，而不是三条各自独立的规则。"
+
+  - type: examples
+    items:
+      - pinyin: "Wǒ shì rén."
+        ttsText: "我是人。"
+        translation:
+          eng: "I am a person / We are people."
+          rus: "Я человек. / Мы люди."
+          zh: "我是人。"
+      - pinyin: "Nǐ shì hǎo-de rén."
+        ttsText: "你是好的人。"
+        translation:
+          eng: "You are a good person."
+          rus: "Ты хороший человек."
+          zh: "你是好人。"
+      - pinyin: "Zhè-ge shì wǒ-de xiě-de dōngxi."
+        ttsText: "这个是我的写的东西。"
+        translation:
+          eng: "This is my document."
+          rus: "Это мой документ."
+          zh: "这是我的文件。"
+      - pinyin: "Nǐ-de dìfāng hěn xīn."
+        ttsText: "你的地方很新。"
+        translation:
+          eng: "Your place is new."
+          rus: "Твоё место новое."
+          zh: "你的地方很新。"
+      - pinyin: "Wǒ-de qún hěn dà."
+        ttsText: "我的群很大。"
+        translation:
+          eng: "My community is large."
+          rus: "Моё сообщество большое."
+          zh: "我的群体很大。"
+      - pinyin: "Nánrén-de dòngwù hěn xiǎo."
+        ttsText: "男人的动物很小。"
+        translation:
+          eng: "The man's animal is small."
+          rus: "Животное этого мужчины маленькое."
+          zh: "那个男人的动物很小。"
+
+  - type: exercise
+    items:
+      - eng: "Your fruit is good."
+        rus: "Твой фрукт хороший."
+        zh: "你的水果很好。"
+      - eng: "This is a new community."
+        rus: "Это новое сообщество."
+        zh: "这是一个新的群体。"
+      - eng: "I am a good person."
+        rus: "Я хороший человек."
+        zh: "我是一个好人。"
+
+  - type: answers
+    items:
+      - text:
+          eng: "Nǐ-de shuǐguǒ hěn hǎo."
+          rus: "Nǐ-de shuǐguǒ hěn hǎo."
+          zh: "Nǐ-de shuǐguǒ hěn hǎo."
+        ttsText: "你的水果很好。"
+      - text:
+          eng: "Zhè-ge shì xīn-de qún."
+          rus: "Zhè-ge shì xīn-de qún."
+          zh: "Zhè-ge shì xīn-de qún."
+        ttsText: "这个是新的群。"
+      - text:
+          eng: "Wǒ shì hǎo-de rén."
+          rus: "Wǒ shì hǎo-de rén."
+          zh: "Wǒ shì hǎo-de rén."
+        ttsText: "我是好的人。"

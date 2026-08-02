@@ -45,7 +45,7 @@ Check items off (`[x]`) as they land. Re-run the dictionary/lesson cross-referen
 ### 3.1 Structural completeness
 
 - [x] Generated alphabetical listing — `dictionary.md` (128 words, eng/rus/zh parallel)
-- [x] Generated categorical listing, 15 top-level categories with subcategories — `dictionary-categorical.md`
+- [x] Categorical listing, 15 top-level categories with subcategories (and subsubcategories where warranted) rendered as a real collapsible nested tree straight from `dictionary.json` — `CategoricalDictionarySection.jsx`
 - [x] Toki Pona gloss column on every entry
 - [x] Stable `id` per word for `{{word:ID}}` referencing (build fails loudly on an unknown id)
 
@@ -155,7 +155,7 @@ Audited against the dictionary's 15 categories and the core grammar machinery ac
 - [ ] Lessons 6–20 dropped tone diacritics (plain "wo" instead of "wǒ") and `<audio-example>` tags entirely — inconsistent with lessons 1–5's polish level
 - [ ] `lesson-02.yaml` has no exercise/answers block (every neighboring lesson has one)
 - [ ] `lesson-17.md` has no exercise/answers block
-- [ ] Two incompatible content schemas coexist: lesson-01/02 + appendix-minimality use the new YAML block-schema (with `tldr`/`necessity`, `info` blocks); lesson-03–20 use the old frontmatter + fenced-code-block markdown. **Migrate lessons 3–20 to the YAML schema** (also unlocks `info`/`warning` blocks for those lessons' worked examples, which currently render as plain prose)
+- [ ] Two incompatible content schemas coexist: lesson-01/02 + appendix-minimality use the new YAML block-schema (with `tldr`/`necessity`, `info` blocks); lesson-07–20 still use the old frontmatter + fenced-code-block markdown. **Migrate lessons 3–20 to the YAML schema** (also unlocks `info`/`warning` blocks for those lessons' worked examples, which currently render as plain prose) — **lessons 3–6 done** (`lesson-03.yaml`–`lesson-06.yaml`); 7–20 remain
 - [ ] lesson-09 answer #2 and lesson-13/15 answer keys contain typos/ungrammatical filler ("ta gei lai-ta-de-difang-de dongxi", "di-sang-ge") — proofread all lesson-06–20 answer keys
 - [ ] lesson-11 inconsistently mixes toned and untoned pinyin within a single file — internal consistency pass needed
 - [ ] lessons 18–20 switch format again (vocab+story only, no exercise/answers) — decide if this is the intended "Part 2" format per lesson-20's own framing, and if so, document that format shift explicitly rather than leaving it implicit
@@ -272,7 +272,7 @@ Every file currently in `src/content/`. These are **content/pedagogy checklists*
 - [ ] Shows the lesson-01 punctuation conventions working together in one live sentence, so the reader sees the system as a whole for the first time
 - [x] Introduces enough vocabulary via the vocab block to support the exercises
 
-### lesson-03.md — "Sentences"
+### lesson-03.yaml — "Sentences"
 
 - [x] States the fixed Subject-Verb-Object order as an explicit rule
 - [ ] States there is no grammatical case marking, contrasted explicitly with a case system the reader may know (e.g. Russian noun cases)
@@ -287,7 +287,7 @@ Every file currently in `src/content/`. These are **content/pedagogy checklists*
 - [x] Gives enough example sentences (5-6) to show SVO holds across different verb/object types
 - [x] Exercises specifically test sentence construction, not just vocabulary recall
 
-### lesson-04.md — "Nouns and Adjectives"
+### lesson-04.yaml — "Nouns and Adjectives"
 
 - [ ] States explicitly that adjectives function as stative verbs, not a separate class needing "to be"
 - [x] Introduces `hěn` as grammatically required even when "very" isn't the intended meaning
@@ -301,7 +301,7 @@ Every file currently in `src/content/`. These are **content/pedagogy checklists*
 - [ ] Notes adjective negation (bù + adjective) at least briefly, so it isn't a silent gap
 - [ ] Exercises require producing both predicative and attributive adjective sentences, not just one pattern
 
-### lesson-05.md — "You and I"
+### lesson-05.yaml — "You and I"
 
 - [x] States pronouns behave exactly like ordinary nouns grammatically
 - [x] Confirms pronouns are number-neutral like other nouns
@@ -316,7 +316,7 @@ Every file currently in `src/content/`. These are **content/pedagogy checklists*
 - [ ] Notes explicitly whether any formal/informal "you" distinction exists (or its deliberate absence), since Russian speakers expect one
 - [ ] Exercises test both pronoun use and possessive construction, not just one
 
-### lesson-06.md — "Dongzuo (Verbs)"
+### lesson-06.yaml — "Dongzuo (Verbs)"
 
 - [x] States explicitly that verbs carry no tense marking
 - [ ] Explains how time is understood without tense (context/time words) — flags the dependency on a time-expression lesson that doesn't yet exist (§5.2)
@@ -598,7 +598,7 @@ Every file currently in `src/content/`. These are **content/pedagogy checklists*
 - [ ] Every category has at least one word explicitly illustrated in a lesson or the theory chapter, so no category feels abstract/unillustrated (Life-and-Death and Time categories currently at risk, §3.3)
 - [x] Part-of-speech labeling present and consistent for every entry
 - [x] Pinyin tone marks correct and consistent (single source-of-truth spelling per word)
-- [x] New words get their `id` auto-assigned without disturbing existing ids (`assign-word-ids.js`)
+- [x] Every word's `id` is stable by construction — it's the word's own key in `dictionary.json`'s `words` map, so adding a new word can never disturb an existing id
 - [x] Dictionary is never hand-edited directly; generation process is documented in README
 
 ---
@@ -606,7 +606,7 @@ Every file currently in `src/content/`. These are **content/pedagogy checklists*
 ## 9. Cross-Cutting Process Checklist
 
 - [ ] Resolve all §3.2 vocabulary/dictionary mismatches before doing large-scale translation work on lessons 6–20 (no point translating words that might get renamed/removed)
-- [ ] Pick one content schema (YAML block schema, per lesson-01/02/appendix-minimality) and migrate everything else to it — unblocks `info`/`warning` blocks project-wide and unifies `tldr`/`necessity` metadata
+- [ ] Pick one content schema (YAML block schema, per lesson-01/02/appendix-minimality) and migrate everything else to it — unblocks `info`/`warning` blocks project-wide and unifies `tldr`/`necessity` metadata (lessons 3–6 migrated; 7–20, appendix-pinyin, and proverbs still pending)
 - [ ] Restore tone diacritics and `<audio-example>` tags across lessons 6–20
 - [ ] Translate lessons 6–20, appendix-pinyin, and proverbs into Russian and Chinese
 - [ ] Add exercise/answers blocks to lesson-02 and lesson-17
