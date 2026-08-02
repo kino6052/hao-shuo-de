@@ -43,7 +43,7 @@ function renderContent(s, lang) {
         </>
       );
     }
-    return <DictionarySection items={s.dict} />;
+    return <DictionarySection items={s.dict} lang={lang} />;
   }
   return (
     <>
