@@ -7,11 +7,11 @@ order: 15
 ---
 
 ```vocab
-huangse | yellow
-lanse | blue, green
-hongse | red
-heise | black, dark
-baise | white, pale
+huángsè | yellow
+lánsè | blue, green
+hóngsè | red
+hēisè | black, dark
+báisè | white, pale
 ```
 
 In Toki Pona, the contextual particle _la_ establishes a frame of reference or an "if/when" conditional premise for the main clause. Hao-shuo-de replaces this abstract rule entirely by utilizing standard Mandarin topic-comment structures and fronted adverbial clauses.
@@ -23,12 +23,12 @@ To set a temporal, situational, or environmental background, place the context b
 Colors function as two-syllable adjectives in Hao-shuo-de. When they modify a target noun, they follow standard syntax by binding to the modifier particle `-de` via a hyphen.
 
 ```examples
-Zhe-ge heise-de shijian, ta lai. | Tonight / during this dark time, he is coming.
-Ni kan-jian huangse-de shui, bu chi ta. | If you see yellow water, don't drink it.
-lanse-de gongju zai baise-de difang. | The blue/green tool is in the white place.
-Shenme shijian ni fumu lai? | What time are your parents coming?
-Wo-de shenti bian lanse, zhe-ge hen huai. | If my body turns blue, this is very bad.
-hen-duo-ren-de difang, wo he ni he ta hen you liliang. | In a group, we are strong.
+Zhè-ge hēisè-de shíjiān, tā lái. | Tonight / during this dark time, he is coming.
+Nǐ kàn-jiàn huángsè-de shuǐ, bù chī tā. | If you see yellow water, don't drink it.
+Lánsè-de gōngjù zài báisè-de dìfāng. | The blue/green tool is in the white place.
+Shénme shíjiān nǐ fùmǔ lái? | What time are your parents coming?
+Wǒ-de shēntǐ biàn lánsè, zhè-ge hěn huài. | If my body turns blue, this is very bad.
+Hěn-duō-rén-de dìfāng, wǒ hé nǐ hé tā hěn yǒu lìliàng. | In a group, we are strong.
 ```
 
 ```exercise
@@ -38,7 +38,7 @@ I feel bad because of the large battle.
 ```
 
 ```answers
-shangmian-de-ri hongse-de shijian, shi hao-de shijian.
-wo he ni he ta mei-you dongwu dongxi, wo he ni he ta chi shuiguo.
-You da-de da, wo juede huai.
+Shàngmiàn-de-rì hóngsè-de shíjiān, shì hǎo-de shíjiān.
+Wǒ hé nǐ hé tā méi-yǒu dòngwù dōngxi, wǒ hé nǐ hé tā chī shuǐguǒ.
+Yǒu dà-de dǎ, wǒ juéde huài.
 ```

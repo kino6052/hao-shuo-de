@@ -3,11 +3,10 @@
 # lessons 3-20 to the YAML schema" (marked off for this lesson only --
 # lessons 7-20 are still on the old markdown format).
 #
-# Content carried over verbatim: still English-only, still missing tone
-# diacritics and <audio-example> tags. Restoring those is a separate,
-# still-open checklist item (§5.3/§9 "restore diacritics/audio across
-# lessons 6-20") and intentionally NOT done here -- this conversion only
-# changes the file's schema, not its content.
+# Tone diacritics restored throughout (per dictionary.json spellings), partially
+# addressing §5.3/§9 "restore diacritics/audio across lessons 6-20" -- pinyin
+# tone marks only. <audio-example> tags and Russian/Chinese translation are
+# still not done here (separate, still-open part of that same checklist item).
 id: lesson-06
 type: lesson
 lessonNumber: 6
@@ -16,27 +15,27 @@ title:
   eng: "Dongzuo (Verbs)"
 
 summary:
-  eng: "Verbs carry no tense; the particle le marks a completed action, and words shift category by context alone (chi as verb \"eat\" vs. noun \"food\")."
+  eng: 'Verbs carry no tense; the particle le marks a completed action, and words shift category by context alone (chī as verb "eat" vs. noun "food").'
 
 blocks:
   - type: vocab
     items:
-      - term: "you"
+      - term: "yǒu"
         definition:
           eng: "to have, contain, carry"
-      - term: "ting"
+      - term: "tīng"
         definition:
           eng: "to listen to, hear, obey"
-      - term: "chi"
+      - term: "chī"
         definition:
           eng: "to eat, drink, consume; food"
-      - term: "zuo"
+      - term: "zuò"
         definition:
           eng: "to make, do, work on"
-      - term: "zhidao"
+      - term: "zhīdào"
         definition:
           eng: "to know"
-      - term: "shuo"
+      - term: "shuō"
         definition:
           eng: "to talk, speak, communicate"
 
@@ -50,7 +49,7 @@ blocks:
 
   - type: prose
     text:
-      eng: "Verbs do not change their forms to reflect past, present, or future tenses. Instead, aspect markers like the perfective particle `le` can be appended to show completed actions. Words fluidly shift roles depending on context -- for instance, `chi` represents the action \"to eat\" or the noun \"food,\" while `zhidao-de ren` acts as \"a knowledgeable person\"."
+      eng: 'Verbs do not change their forms to reflect past, present, or future tenses. Instead, aspect markers like the perfective particle `le` can be appended to show completed actions. Words fluidly shift roles depending on context -- for instance, `chī` represents the action "to eat" or the noun "food," while `zhīdào-de rén` acts as "a knowledgeable person".'
     tldr:
       eng: "Verbs carry no tense; `le` marks a completed action, and a word's category (verb vs. noun) shifts with context alone."
     necessity:
@@ -58,25 +57,25 @@ blocks:
 
   - type: examples
     items:
-      - pinyin: "Wo zhidao hao shuo-de."
+      - pinyin: "Wǒ zhīdào hǎo shuō-de."
         translation:
           eng: "I know a simple language / good speech."
-      - pinyin: "Na-ge nanren shi shuo-de ren."
+      - pinyin: "Nà-ge nánrén shì shuō-de rén."
         translation:
           eng: "That man is a messenger / speaking person."
-      - pinyin: "Da-de dongwu zai chi ni."
+      - pinyin: "Dà-de dòngwù zài chī nǐ."
         translation:
           eng: "A large animal is eating you."
-      - pinyin: "Qun-de xie-de dongxi hen hao."
+      - pinyin: "Qún-de xiě-de dōngxi hěn hǎo."
         translation:
           eng: "The community's book is reliable."
-      - pinyin: "Ni zuo le xin-de chi."
+      - pinyin: "Nǐ zuò le xīn-de chī."
         translation:
           eng: "You made new food."
-      - pinyin: "Zhidao-de ren ting."
+      - pinyin: "Zhīdào-de rén tīng."
         translation:
           eng: "A person of knowledge listens."
-      - pinyin: "Zhidao-de difang you xie-de dongxi."
+      - pinyin: "Zhīdào-de dìfāng yǒu xiě-de dōngxi."
         translation:
           eng: "The school / house of knowledge has books."
 
@@ -89,8 +88,8 @@ blocks:
   - type: answers
     items:
       - text:
-          eng: "Wo ting ni."
+          eng: "Wǒ tīng nǐ."
       - text:
-          eng: "Nuren ting le nanren."
+          eng: "Nǚrén tīng le nánrén."
       - text:
-          eng: "Hao-de ren chi le dongwu."
+          eng: "Hǎo-de rén chī le dòngwù."

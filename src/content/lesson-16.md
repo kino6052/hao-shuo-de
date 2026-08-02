@@ -7,33 +7,33 @@ order: 16
 ---
 
 ```vocab
-limian | inside, between, internal organ
-houmian | area behind, back
-xiamian | area below, under, lower part, leg
-pangbian | side, area beside, vicinity
-shangmian | area above, highest part, sky
-qianmian | area in front, face, chest
-dao | to go to, arrive at, move towards
+lǐmiàn | inside, between, internal organ
+hòumiàn | area behind, back
+xiàmiàn | area below, under, lower part, leg
+pángbiān | side, area beside, vicinity
+shàngmiàn | area above, highest part, sky
+qiánmiàn | area in front, face, chest
+dào | to go to, arrive at, move towards
 qù | to walk, move, travel
 ```
 
-Hao-shuo-de builds locational settings by treating spatial concepts as absolute noun destinations rather than abstract markers. To express static location, use the coverb **zai**. To express movement or direction toward a destination, use the universal movement root **dao**.
+Hao-shuo-de builds locational settings by treating spatial concepts as absolute noun destinations rather than abstract markers. To express static location, use the coverb **zài**. To express movement or direction toward a destination, use the universal movement root **dào**.
 
 Both roots follow standard Mandarin spatial syntax:
 
-`Subject + zai / dao + Target Object + Spatial Noun`
+`Subject + zài / dào + Target Object + Spatial Noun`
 
-To explicitly express movement currently in progress toward a location (active traveling), combine the progressive aspect marker **zai-** with the kinetic verb **qù** and the destination marker **dao** to form the compound unit **zai-qù-dao**.
+To explicitly express movement currently in progress toward a location (active traveling), combine the progressive aspect marker **zài-** with the kinetic verb **qù** and the destination marker **dào** to form the compound unit **zài-qù-dào**.
 
 When a spatial noun stands alone without a target object modifying it, it functions as a regular baseline noun block.
 
 ```examples
-wo zai ni-de pangbian. | I am at your side.
-xiamian-de difang hen you liliang. | The foundation / lower part of the place is strong.
-da-de gongju zai-qù-dao shangmian-de difang. | A large machine is moving in progress toward the sky.
-xie-de dongxi zai dongwu-de xiamian. | The document / word-thing is under the animal.
-wo kan-jian heise-de nuren zai difang-de qianmian. | I see a dark lady in front of the place.
-yan-se dongxi zai heise-de pangbian. | Color-things are next to the darkness.
+Wǒ zài nǐ-de pángbiān. | I am at your side.
+Xiàmiàn-de dìfāng hěn yǒu lìliàng. | The foundation / lower part of the place is strong.
+Dà-de gōngjù zài-qù-dào shàngmiàn-de dìfāng. | A large machine is moving in progress toward the sky.
+Xiě-de dōngxi zài dòngwù-de xiàmiàn. | The document / word-thing is under the animal.
+Wǒ kàn-jiàn hēisè-de nǚrén zài dìfāng-de qiánmiàn. | I see a dark lady in front of the place.
+Yán-sè dōngxi zài hēisè-de pángbiān. | Color-things are next to the darkness.
 ```
 
 ```exercise
@@ -43,7 +43,7 @@ What did you put the red clock next to?
 ```
 
 ```answers
-shui cong shangmian-de difang lai.
-ba ni-de houmian bian hao.
-ni ba hongse-de shijian gongju dao shenme dongxi-de pangbian?
+Shuǐ cóng shàngmiàn-de dìfāng lái.
+Bǎ nǐ-de hòumiàn biàn hǎo.
+Nǐ bǎ hóngsè-de shíjiān gōngjù dào shénme dōngxi-de pángbiān?
 ```

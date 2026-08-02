@@ -1,0 +1,897 @@
+{
+  "chapters": {
+    "appendix-minimality": {
+      "label": "Why Minimality Works",
+      "order": 2
+    },
+    "appendix-pinyin": {
+      "label": "The Pinyin System",
+      "order": 1
+    },
+    "lesson-01": {
+      "label": "Lesson 1 · Sounds and Symbols",
+      "order": 1
+    },
+    "lesson-02": {
+      "label": "Lesson 2 · Words",
+      "order": 2
+    },
+    "lesson-03": {
+      "label": "Lesson 3 · Sentences",
+      "order": 3
+    },
+    "lesson-04": {
+      "label": "Lesson 4 · Nouns and Adjectives",
+      "order": 4
+    },
+    "lesson-05": {
+      "label": "Lesson 5 · You and I",
+      "order": 5
+    },
+    "lesson-06": {
+      "label": "Lesson 6 · Dongzuo (Verbs)",
+      "order": 6
+    },
+    "lesson-07": {
+      "label": "Lesson 7 · More Adjectives & State Changes",
+      "order": 7
+    },
+    "lesson-08": {
+      "label": "Lesson 8 · Questions and Answers",
+      "order": 8
+    },
+    "lesson-09": {
+      "label": "Lesson 9 · Prepositions & Coverbs",
+      "order": 9
+    },
+    "lesson-10": {
+      "label": "Lesson 10 · Proper Names & Geography",
+      "order": 10
+    },
+    "lesson-11": {
+      "label": "Lesson 11 · Greetings and Feelings",
+      "order": 11
+    },
+    "lesson-12": {
+      "label": "Lesson 12 · Modification Stacking",
+      "order": 12
+    },
+    "lesson-13": {
+      "label": "Lesson 13 · Shùzì (Numbers and Order)",
+      "order": 13
+    },
+    "lesson-14": {
+      "label": "Lesson 14 · Pre-Verbs & Auxiliaries",
+      "order": 14
+    },
+    "lesson-15": {
+      "label": "Lesson 15 · Colors and la",
+      "order": 15
+    },
+    "lesson-16": {
+      "label": "Lesson 16 · Spatial Nouns",
+      "order": 16
+    },
+    "lesson-17": {
+      "label": "Lesson 17 · Particles and Perspective",
+      "order": 17
+    },
+    "lesson-18": {
+      "label": "Lesson 18 · Hunting Adventure",
+      "order": 18
+    },
+    "lesson-19": {
+      "label": "Lesson 19 · Cooking Adventure",
+      "order": 19
+    },
+    "lesson-20": {
+      "label": "Lesson 20 · The Frontier",
+      "order": 20
+    },
+    "proverbs": {
+      "label": "Hao-shuo-de Proverbs",
+      "order": 1
+    }
+  },
+  "words": {
+    "i": [
+      "lesson-01",
+      "lesson-04",
+      "lesson-05",
+      "lesson-06",
+      "lesson-07",
+      "lesson-09",
+      "lesson-10",
+      "lesson-11",
+      "lesson-13",
+      "lesson-14",
+      "lesson-15",
+      "lesson-16",
+      "lesson-17"
+    ],
+    "you": [
+      "lesson-05",
+      "lesson-06",
+      "lesson-07",
+      "lesson-08",
+      "lesson-09",
+      "lesson-10",
+      "lesson-11",
+      "lesson-13",
+      "lesson-14",
+      "lesson-15",
+      "lesson-16",
+      "lesson-17",
+      "lesson-19",
+      "lesson-20"
+    ],
+    "he": [
+      "lesson-05",
+      "lesson-08",
+      "lesson-09",
+      "lesson-13",
+      "lesson-15",
+      "lesson-18",
+      "lesson-19",
+      "lesson-20"
+    ],
+    "what-which": [
+      "lesson-08",
+      "lesson-10",
+      "lesson-13",
+      "lesson-15",
+      "lesson-16",
+      "lesson-19"
+    ],
+    "market": [
+      "appendix-minimality"
+    ],
+    "home": [
+      "appendix-minimality"
+    ],
+    "sun": [
+      "lesson-11",
+      "lesson-12",
+      "lesson-13",
+      "lesson-15"
+    ],
+    "moon": [],
+    "plant": [
+      "lesson-12",
+      "lesson-13",
+      "lesson-14",
+      "lesson-18"
+    ],
+    "fire": [
+      "lesson-19"
+    ],
+    "air": [],
+    "nose": [],
+    "foot": [],
+    "hole": [
+      "lesson-19"
+    ],
+    "skin": [],
+    "body": [
+      "lesson-12",
+      "lesson-15"
+    ],
+    "hand": [],
+    "head": [
+      "lesson-18",
+      "lesson-19"
+    ],
+    "human-being": [
+      "lesson-01",
+      "appendix-minimality",
+      "lesson-02",
+      "lesson-03",
+      "lesson-04",
+      "lesson-05",
+      "lesson-06",
+      "lesson-07",
+      "lesson-08",
+      "lesson-09",
+      "lesson-10",
+      "lesson-13",
+      "lesson-15"
+    ],
+    "parent": [
+      "lesson-07",
+      "lesson-08",
+      "lesson-09",
+      "lesson-14",
+      "lesson-15",
+      "lesson-17"
+    ],
+    "man": [
+      "lesson-05",
+      "lesson-06",
+      "lesson-07",
+      "lesson-10",
+      "lesson-12",
+      "lesson-13",
+      "lesson-17",
+      "lesson-18",
+      "lesson-19"
+    ],
+    "woman": [
+      "lesson-02",
+      "lesson-03",
+      "lesson-04",
+      "lesson-06",
+      "lesson-07",
+      "lesson-10",
+      "lesson-12",
+      "lesson-16",
+      "lesson-17",
+      "lesson-19"
+    ],
+    "group": [
+      "lesson-05",
+      "lesson-06",
+      "lesson-12"
+    ],
+    "grain": [
+      "lesson-19"
+    ],
+    "fruit": [
+      "lesson-02",
+      "lesson-03",
+      "lesson-04",
+      "lesson-05",
+      "lesson-07",
+      "lesson-08",
+      "lesson-14",
+      "lesson-15"
+    ],
+    "salt": [
+      "lesson-16"
+    ],
+    "water": [
+      "lesson-04",
+      "lesson-07",
+      "lesson-09",
+      "lesson-12",
+      "lesson-14",
+      "lesson-15",
+      "lesson-16",
+      "lesson-19"
+    ],
+    "animal": [
+      "lesson-01",
+      "appendix-minimality",
+      "lesson-02",
+      "lesson-03",
+      "lesson-04",
+      "lesson-05",
+      "lesson-06",
+      "lesson-11",
+      "lesson-15",
+      "lesson-16",
+      "lesson-18",
+      "lesson-19"
+    ],
+    "insect": [
+      "lesson-18"
+    ],
+    "bird": [
+      "lesson-18"
+    ],
+    "reptile": [],
+    "fish": [
+      "lesson-08",
+      "lesson-09",
+      "lesson-14"
+    ],
+    "thing": [
+      "appendix-minimality",
+      "lesson-02",
+      "lesson-03",
+      "lesson-05",
+      "lesson-06",
+      "lesson-07",
+      "lesson-09",
+      "lesson-11",
+      "lesson-12",
+      "lesson-13",
+      "lesson-15",
+      "lesson-16",
+      "lesson-17",
+      "lesson-18",
+      "lesson-19",
+      "lesson-20"
+    ],
+    "tool": [
+      "appendix-minimality",
+      "lesson-08",
+      "lesson-09",
+      "lesson-11",
+      "lesson-12",
+      "lesson-15",
+      "lesson-16",
+      "lesson-18"
+    ],
+    "stick": [
+      "lesson-18"
+    ],
+    "container": [],
+    "paste": [],
+    "money": [],
+    "line": [
+      "lesson-18"
+    ],
+    "clothing": [
+      "lesson-18",
+      "lesson-19"
+    ],
+    "word": [
+      "lesson-10",
+      "lesson-14",
+      "lesson-19",
+      "lesson-20"
+    ],
+    "energy": [
+      "lesson-07",
+      "lesson-12",
+      "lesson-15",
+      "lesson-16"
+    ],
+    "sex": [],
+    "that": [
+      "appendix-minimality",
+      "lesson-02",
+      "lesson-06",
+      "lesson-10",
+      "lesson-11"
+    ],
+    "this": [
+      "lesson-01",
+      "appendix-minimality",
+      "lesson-02",
+      "lesson-03",
+      "lesson-04",
+      "lesson-05",
+      "lesson-09",
+      "lesson-10",
+      "lesson-12",
+      "lesson-13",
+      "lesson-15",
+      "lesson-19",
+      "lesson-20"
+    ],
+    "different": [
+      "lesson-17",
+      "lesson-18"
+    ],
+    "same": [
+      "lesson-17"
+    ],
+    "universal-classifier": [
+      "appendix-minimality",
+      "lesson-02",
+      "lesson-03",
+      "lesson-13"
+    ],
+    "one": [
+      "lesson-01",
+      "lesson-03",
+      "lesson-04",
+      "lesson-07",
+      "lesson-13",
+      "lesson-18",
+      "lesson-19"
+    ],
+    "two": [
+      "lesson-13",
+      "lesson-17",
+      "lesson-19"
+    ],
+    "sequence-marker": [
+      "lesson-13",
+      "lesson-17"
+    ],
+    "many": [
+      "lesson-03",
+      "lesson-05",
+      "lesson-07",
+      "lesson-08",
+      "lesson-09",
+      "lesson-10",
+      "lesson-12",
+      "lesson-13",
+      "lesson-15",
+      "lesson-18",
+      "lesson-20"
+    ],
+    "all": [
+      "lesson-13",
+      "lesson-17",
+      "lesson-20"
+    ],
+    "good": [
+      "lesson-01",
+      "appendix-minimality",
+      "lesson-02",
+      "lesson-03",
+      "lesson-04",
+      "lesson-05",
+      "lesson-06",
+      "lesson-07",
+      "lesson-08",
+      "lesson-09",
+      "lesson-11",
+      "lesson-12",
+      "lesson-14",
+      "lesson-15",
+      "lesson-16",
+      "lesson-17",
+      "lesson-19",
+      "lesson-20"
+    ],
+    "bad": [
+      "lesson-07",
+      "lesson-10",
+      "lesson-11",
+      "lesson-12",
+      "lesson-14",
+      "lesson-15",
+      "lesson-18"
+    ],
+    "white": [
+      "lesson-15"
+    ],
+    "black": [
+      "lesson-15",
+      "lesson-16",
+      "lesson-17"
+    ],
+    "red": [
+      "lesson-15",
+      "lesson-16",
+      "lesson-18"
+    ],
+    "yellow": [
+      "lesson-15"
+    ],
+    "blue": [
+      "lesson-15",
+      "lesson-18"
+    ],
+    "color": [],
+    "strange": [],
+    "new": [
+      "lesson-05",
+      "lesson-06",
+      "lesson-08",
+      "lesson-19"
+    ],
+    "hot": [
+      "lesson-19"
+    ],
+    "cold": [
+      "lesson-17"
+    ],
+    "sweet": [
+      "lesson-17"
+    ],
+    "hard": [],
+    "round": [],
+    "little": [
+      "lesson-04",
+      "lesson-05",
+      "lesson-07",
+      "lesson-08",
+      "lesson-12",
+      "lesson-13",
+      "lesson-14",
+      "lesson-17",
+      "lesson-18",
+      "lesson-19",
+      "lesson-20"
+    ],
+    "big": [
+      "lesson-01",
+      "appendix-minimality",
+      "lesson-04",
+      "lesson-05",
+      "lesson-06",
+      "lesson-07",
+      "lesson-09",
+      "lesson-10",
+      "lesson-11",
+      "lesson-12",
+      "lesson-14",
+      "lesson-15",
+      "lesson-16",
+      "lesson-18"
+    ],
+    "want": [
+      "lesson-14",
+      "lesson-18"
+    ],
+    "love": [
+      "lesson-17",
+      "lesson-19"
+    ],
+    "feeling": [
+      "lesson-11",
+      "lesson-15",
+      "lesson-17",
+      "lesson-19"
+    ],
+    "know": [
+      "appendix-minimality",
+      "lesson-06",
+      "lesson-07",
+      "lesson-08",
+      "lesson-10",
+      "lesson-13",
+      "lesson-14",
+      "lesson-20"
+    ],
+    "look-at": [
+      "lesson-07",
+      "lesson-09",
+      "lesson-15",
+      "lesson-16",
+      "lesson-18",
+      "lesson-20"
+    ],
+    "hear": [
+      "lesson-06",
+      "lesson-07",
+      "lesson-08",
+      "lesson-13",
+      "lesson-18"
+    ],
+    "communicate": [
+      "lesson-01",
+      "lesson-02",
+      "lesson-03",
+      "lesson-06",
+      "lesson-07",
+      "lesson-08",
+      "lesson-09",
+      "lesson-11",
+      "lesson-12",
+      "lesson-13",
+      "lesson-14",
+      "lesson-17",
+      "lesson-20"
+    ],
+    "write": [
+      "lesson-02",
+      "lesson-03",
+      "lesson-05",
+      "lesson-06",
+      "lesson-07",
+      "lesson-16",
+      "lesson-20"
+    ],
+    "use": [
+      "appendix-minimality",
+      "lesson-09",
+      "lesson-12",
+      "lesson-18",
+      "lesson-19"
+    ],
+    "call": [
+      "lesson-01",
+      "lesson-10",
+      "lesson-11",
+      "lesson-14",
+      "lesson-19",
+      "lesson-20"
+    ],
+    "begin": [
+      "lesson-14",
+      "lesson-17"
+    ],
+    "finish": [],
+    "sleep": [
+      "lesson-01",
+      "lesson-19"
+    ],
+    "wait": [
+      "lesson-12"
+    ],
+    "eat": [
+      "lesson-06",
+      "lesson-07",
+      "lesson-08",
+      "lesson-14",
+      "lesson-15",
+      "lesson-18",
+      "lesson-19"
+    ],
+    "play": [
+      "lesson-19",
+      "lesson-20"
+    ],
+    "come": [
+      "appendix-minimality",
+      "lesson-09",
+      "lesson-14",
+      "lesson-15",
+      "lesson-16",
+      "lesson-17"
+    ],
+    "go": [
+      "appendix-minimality",
+      "lesson-09",
+      "lesson-10",
+      "lesson-11",
+      "lesson-16",
+      "lesson-20"
+    ],
+    "become": [
+      "appendix-minimality",
+      "lesson-07",
+      "lesson-08",
+      "lesson-12",
+      "lesson-14",
+      "lesson-15",
+      "lesson-16",
+      "lesson-19",
+      "lesson-20"
+    ],
+    "do": [
+      "appendix-minimality",
+      "lesson-06",
+      "lesson-07",
+      "lesson-09",
+      "lesson-11",
+      "lesson-17",
+      "lesson-20"
+    ],
+    "hit": [
+      "lesson-10",
+      "lesson-15"
+    ],
+    "give": [
+      "lesson-07",
+      "lesson-08",
+      "lesson-09",
+      "lesson-11",
+      "lesson-12",
+      "lesson-17",
+      "lesson-20"
+    ],
+    "touch": [
+      "lesson-19"
+    ],
+    "hunt": [
+      "lesson-18"
+    ],
+    "exist-at": [
+      "lesson-06",
+      "lesson-08",
+      "lesson-09",
+      "lesson-10",
+      "lesson-12",
+      "lesson-14",
+      "lesson-15",
+      "lesson-16",
+      "lesson-17",
+      "lesson-18",
+      "lesson-19",
+      "lesson-20"
+    ],
+    "be": [
+      "lesson-03",
+      "lesson-04",
+      "lesson-05",
+      "lesson-06",
+      "lesson-07",
+      "lesson-08",
+      "lesson-10",
+      "lesson-13",
+      "lesson-15",
+      "lesson-17",
+      "lesson-19"
+    ],
+    "stay": [
+      "lesson-13",
+      "lesson-14",
+      "lesson-18"
+    ],
+    "get": [
+      "appendix-minimality"
+    ],
+    "have": [
+      "appendix-minimality",
+      "lesson-06",
+      "lesson-07",
+      "lesson-08",
+      "lesson-10",
+      "lesson-12",
+      "lesson-14",
+      "lesson-15",
+      "lesson-16",
+      "lesson-18",
+      "lesson-19",
+      "lesson-20"
+    ],
+    "die": [],
+    "time": [
+      "lesson-12",
+      "lesson-13",
+      "lesson-15",
+      "lesson-16",
+      "lesson-18",
+      "lesson-19",
+      "lesson-20"
+    ],
+    "from": [
+      "lesson-16"
+    ],
+    "facing": [
+      "lesson-17"
+    ],
+    "place": [
+      "lesson-04",
+      "lesson-05",
+      "lesson-06",
+      "lesson-09",
+      "lesson-10",
+      "lesson-11",
+      "lesson-12",
+      "lesson-14",
+      "lesson-15",
+      "lesson-16",
+      "lesson-17",
+      "lesson-18",
+      "lesson-19"
+    ],
+    "floor": [
+      "lesson-19"
+    ],
+    "back": [
+      "lesson-16",
+      "lesson-20"
+    ],
+    "inside": [
+      "lesson-16",
+      "lesson-20"
+    ],
+    "side": [
+      "lesson-09",
+      "lesson-16",
+      "lesson-19"
+    ],
+    "front": [
+      "lesson-16"
+    ],
+    "above": [
+      "lesson-15",
+      "lesson-16",
+      "lesson-17"
+    ],
+    "below": [
+      "lesson-16",
+      "lesson-17"
+    ],
+    "away": [],
+    "grammatical-object-introducing-particle": [
+      "lesson-07",
+      "lesson-08",
+      "lesson-12",
+      "lesson-16",
+      "lesson-19",
+      "lesson-20"
+    ],
+    "possessive-marker": [
+      "lesson-01",
+      "proverbs",
+      "appendix-minimality",
+      "lesson-02",
+      "lesson-03",
+      "lesson-04",
+      "lesson-05",
+      "lesson-06",
+      "lesson-07",
+      "lesson-08",
+      "lesson-09",
+      "lesson-10",
+      "lesson-11",
+      "lesson-12",
+      "lesson-13",
+      "lesson-14",
+      "lesson-15",
+      "lesson-16",
+      "lesson-17",
+      "lesson-18",
+      "lesson-19",
+      "lesson-20"
+    ],
+    "perfective-aspect-marker": [
+      "lesson-06",
+      "lesson-09",
+      "lesson-11",
+      "lesson-13",
+      "lesson-14",
+      "lesson-17",
+      "lesson-18",
+      "lesson-19",
+      "lesson-20"
+    ],
+    "final-interrogative-yes-or-no": [
+      "lesson-08",
+      "lesson-11"
+    ],
+    "not": [
+      "lesson-04",
+      "lesson-07",
+      "lesson-08",
+      "lesson-10",
+      "lesson-11",
+      "lesson-12",
+      "lesson-14",
+      "lesson-15",
+      "lesson-17"
+    ],
+    "negative-particle-used": [
+      "lesson-08",
+      "lesson-15"
+    ],
+    "but": [
+      "lesson-01",
+      "lesson-17",
+      "lesson-18"
+    ],
+    "and": [
+      "lesson-05",
+      "lesson-15",
+      "lesson-17",
+      "lesson-18",
+      "lesson-19",
+      "lesson-20"
+    ],
+    "or": [
+      "lesson-08"
+    ],
+    "also": [
+      "lesson-17",
+      "lesson-19",
+      "lesson-20"
+    ],
+    "because": [
+      "lesson-09"
+    ],
+    "why": [
+      "lesson-08",
+      "lesson-09",
+      "lesson-11"
+    ],
+    "how": [
+      "lesson-08"
+    ],
+    "be-able-to": [],
+    "very": [
+      "lesson-01",
+      "appendix-minimality",
+      "lesson-04",
+      "lesson-05",
+      "lesson-06",
+      "lesson-07",
+      "lesson-08",
+      "lesson-09",
+      "lesson-10",
+      "lesson-11",
+      "lesson-12",
+      "lesson-13",
+      "lesson-15",
+      "lesson-16",
+      "lesson-17",
+      "lesson-18",
+      "lesson-19",
+      "lesson-20"
+    ],
+    "way": [
+      "lesson-10",
+      "lesson-14",
+      "lesson-20"
+    ]
+  }
+}

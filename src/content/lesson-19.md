@@ -7,24 +7,24 @@ order: 19
 ---
 
 ```vocab
-shuijiao | to sleep, nap
-ai | to love
-mifan | cereal, grain, rice
-wan | finished, past, end
-huo | fire, heat source, cooking heat
-diban | horizontal surface, floor, sofa
-kou | mouth, lips, door, opening
+shuìjiào | to sleep, nap
+ài | to love
+mǐfàn | cereal, grain, rice
+wán | finished, past, end
+huǒ | fire, heat source, cooking heat
+dìbǎn | horizontal surface, floor, sofa
+kǒu | mouth, lips, door, opening
 ```
 
 ```story
-"Maweijiu" nanren you yi-ge ta ai-de nuren. | Mawijo has a beloved woman/wife.
-Ta-de ni-jiao-de ci shi "Sili". | Her name/the word you call her is Sili.
-"Sili" zai diban-shang shuijiao. | Sili is sleeping on the sofa.
-Wan-shijian, "Sili" ba difang bian hao-le, ye yong shui ba yifu bian xin-le. | In the past-time/yesterday, Sili tidied up the place and washed the clothing.
-"Maweijiu" zai shenme shijian dao? | At what time will Mawijo arrive?
-You shengyin! | There is a noise!
-Zhe shijian, "Maweijiu" dao-le kou-de pangbian, ta na-le liang-ge xiao dongwu. | At this time, Mawijo arrives next to the door, carrying two small animals.
-"Sili" juede hen hao, yong kou mo "Maweijiu"-de tou. | Sili feels very good and touches Mawijo's head using her mouth/kisses him.
-Ta yong huo ba dongwu he mifan bian re-le. | She uses fire to make the animals and rice hot/cooks them.
-Chi-de dongxi hen hao! | The food is wonderful! / Bon appetit!
+"Maweijiu" nánrén yǒu yī-ge tā ài-de nǚrén. | Mawijo has a beloved woman/wife.
+Tā-de nǐ-jiào-de cí shì "Sili". | Her name/the word you call her is Sili.
+"Sili" zài dìbǎn-shàng shuìjiào. | Sili is sleeping on the sofa.
+Wán-shíjiān, "Sili" bǎ dìfāng biàn hǎo-le, yě yòng shuǐ bǎ yīfu biàn xīn-le. | In the past-time/yesterday, Sili tidied up the place and washed the clothing.
+"Maweijiu" zài shénme shíjiān dào? | At what time will Mawijo arrive?
+Yǒu shēngyīn! | There is a noise!
+Zhè shíjiān, "Maweijiu" dào-le kǒu-de pángbiān, tā ná-le liǎng-ge xiǎo dòngwù. | At this time, Mawijo arrives next to the door, carrying two small animals.
+"Sili" juéde hěn hǎo, yòng kǒu mō "Maweijiu"-de tóu. | Sili feels very good and touches Mawijo's head using her mouth/kisses him.
+Tā yòng huǒ bǎ dòngwù hé mǐfàn biàn rè-le. | She uses fire to make the animals and rice hot/cooks them.
+Chī-de dōngxi hěn hǎo! | The food is wonderful! / Bon appetit!
 ```

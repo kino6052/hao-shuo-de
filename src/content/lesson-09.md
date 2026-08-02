@@ -7,26 +7,26 @@ order: 9
 ---
 
 ```vocab
-gei | to, for, give
-zai | at, in, present, existing
-yong | using, with, by means of
-yinwei | from, because of
+gěi | to, for, give
+zài | at, in, present, existing
+yòng | using, with, by means of
+yīnwèi | from, because of
 ```
 
 In Hao-shuo-de, prepositions function exactly like standard Mandarin coverbs. They typically introduce a noun phrase and sit right before the main action of the sentence:
 
 `Subject + Coverb Phrase + Main Verb + Object`
 
-If no other action verb is present in the clause, the coverb itself steps up to serve as the main predicate of the sentence (e.g., `Wo zai difang` -- I am in the house).
+If no other action verb is present in the clause, the coverb itself steps up to serve as the main predicate of the sentence (e.g., `Wǒ zài dìfāng` -- I am in the house).
 
 ```examples
-Wo gei ta yu. | I give fish to her.
-Wo zai difang gei ta yu. | I give fish to her in the house.
-Wo zai difang. | I am in the house.
-Wo qù ni-de pangbian. | I am moving towards you / going to your side.
-Wo-de fumu qù kan hen-da-de shui. | My parent is going to the sea / big water.
-Yinwei zhe-ge, wo zuo le hen duo. | Because of this, I worked a lot.
-Wo yong Hao-shuo-de shuo. | I speak in Hao-shuo-de / use Hao-shuo-de to speak.
+Wǒ gěi tā yú. | I give fish to her.
+Wǒ zài dìfāng gěi tā yú. | I give fish to her in the house.
+Wǒ zài dìfāng. | I am in the house.
+Wǒ qù nǐ-de pángbiān. | I am moving towards you / going to your side.
+Wǒ-de fùmǔ qù kàn hěn-dà-de shuǐ. | My parent is going to the sea / big water.
+Yīnwèi zhè-ge, wǒ zuò le hěn duō. | Because of this, I worked a lot.
+Wǒ yòng Hǎo-shuō-de shuō. | I speak in Hao-shuo-de / use Hao-shuo-de to speak.
 ```
 
 ```exercise
@@ -36,7 +36,7 @@ Why did you do it?
 ```
 
 ```answers
-Zhe-ge gongju-de ren yong gongju. (or Jie-ge ren yong gongju.)
-ta gei lai-ta-de-difang-de dongxi.
-Weishenme ni zuo le zhe-ge?
+Zhè-ge gōngjù-de rén yòng gōngjù. (or Zhè-ge rén yòng gōngjù.)
+Tā gěi lái-tā-de-dìfāng-de dōngxi.
+Wèishénme nǐ zuò le zhè-ge?
 ```
