@@ -2,11 +2,14 @@ import { useState } from "preact/hooks";
 import dictionary from "../data/dictionary.json";
 import { categoryWordCount } from "../lib/dictionary-stats.js";
 import { AudioButton } from "./AudioButton.jsx";
+import { getUsageLabels } from "../lib/word-usage.js";
+import { t } from "../lib/i18n.js";
 import styles from "./CategoricalDictionarySection.module.css";
 
 function WordEntry({ id, lang }) {
   const word = dictionary.words[id];
   if (!word) return null;
+  const usage = getUsageLabels(id);
   return (
     <div class={styles.entry}>
       <span class={styles.term}>
@@ -24,6 +27,13 @@ function WordEntry({ id, lang }) {
           {" "}
           (Maps to: <i>{word.maps}</i>)
         </span>
+      )}
+      {usage.length > 0 ? (
+        <div class={styles.usage}>
+          {t(lang, "usedIn")} {usage.join(", ")}
+        </div>
+      ) : (
+        <div class={styles.usageEmpty}>{t(lang, "notUsedYet")}</div>
       )}
     </div>
   );

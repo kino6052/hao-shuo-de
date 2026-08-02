@@ -152,12 +152,13 @@ Audited against the dictionary's 15 categories and the core grammar machinery ac
 ### 5.3 Structural/production gaps across lessons 1–20
 
 - [ ] Lessons 6–20 (18 of 20 lessons) have **no Russian or Chinese translation** — English only
-- [ ] Lessons 6–20 dropped tone diacritics (plain "wo" instead of "wǒ") and `<audio-example>` tags entirely — inconsistent with lessons 1–5's polish level
+- [x] ~~Lessons 6–20 dropped tone diacritics (plain "wo" instead of "wǒ")~~ — **tone diacritics restored across lessons 6–20 and proverbs.md**, cross-checked against `dictionary.json`
+- [ ] Lessons 6–20 still have no `<audio-example>` tags — inconsistent with lessons 1–5's polish level (diacritics alone don't unlock read-aloud audio)
 - [ ] `lesson-02.yaml` has no exercise/answers block (every neighboring lesson has one)
 - [ ] `lesson-17.md` has no exercise/answers block
 - [ ] Two incompatible content schemas coexist: lesson-01/02 + appendix-minimality use the new YAML block-schema (with `tldr`/`necessity`, `info` blocks); lesson-07–20 still use the old frontmatter + fenced-code-block markdown. **Migrate lessons 3–20 to the YAML schema** (also unlocks `info`/`warning` blocks for those lessons' worked examples, which currently render as plain prose) — **lessons 3–6 done** (`lesson-03.yaml`–`lesson-06.yaml`); 7–20 remain
-- [ ] lesson-09 answer #2 and lesson-13/15 answer keys contain typos/ungrammatical filler ("ta gei lai-ta-de-difang-de dongxi", "di-sang-ge") — proofread all lesson-06–20 answer keys
-- [ ] lesson-11 inconsistently mixes toned and untoned pinyin within a single file — internal consistency pass needed
+- [ ] lesson-09 answer #2 ("ta gei lai-ta-de-difang-de dongxi") is still ungrammatical filler; lesson-15's rougher answer-key sentences are also still unproofread — **lesson-13's "di-sang-ge" typo is now fixed** (→ "dì-sān-ge", matching its own vocab list and the "third thing" prompt) as part of the diacritics pass
+- [x] ~~lesson-11 inconsistently mixes toned and untoned pinyin within a single file~~ — resolved by the diacritics-restoration pass; the whole file is now consistently toned
 - [ ] lessons 18–20 switch format again (vocab+story only, no exercise/answers) — decide if this is the intended "Part 2" format per lesson-20's own framing, and if so, document that format shift explicitly rather than leaving it implicit
 
 ---
@@ -591,11 +592,12 @@ Every file currently in `src/content/`. These are **content/pedagogy checklists*
 - [x] Every one of the 128 words has a complete eng/rus/zh definition
 - [x] Every word carries a Toki Pona gloss for comparison
 - [ ] **Every word used across all 20 lessons + stories + proverbs actually has a dictionary entry** — the master check that §3.2's specific gaps roll up into; currently fails for at least 7 known words
+- [x] **The reverse check — every dictionary word's usage across lessons/proverbs/appendix — is now automated and mechanically verified**, not just spot-audited: lessons reference words by id (`{{word:ID}}`/`{{Word:ID}}`, see `scripts/word-refs.js`) instead of hardcoding pinyin, and `scripts/generate-word-usage.js` scans every chapter's raw source for those references, producing `src/data/word-usage.json` (word id → chapter list). The dictionary UI (`CategoricalDictionarySection.jsx`, `DictionarySection.jsx`) shows "Used in: ..." per word, or a flagged "not used in any chapter yet" — as of this pass, **111/128 words are used somewhere; 17 are not** (moon/yuè, air/kōngqì, nose/bízi, foot/jiǎo, skin/pífū, hand/shǒu, reptile/páxíngdòngwù, container/hézi, paste/ní, sex/xìng, color/yánsè, hard/yìng, round/yuán, finish/wánchéng, die/sǐ, away/wài, be-able-to/néng)
 - [x] The 15-category/subcategory grouping is internally consistent
 - [ ] Confirms the categorical grouping's category names match the Aristotelian framing used in appendix-minimality (not yet explicitly cross-checked)
 - [x] Alphabetical and categorical listings stay in sync (both generated from the same source)
-- [x] Stable `id`s exist for every word so `{{word:ID}}` references never break
-- [ ] Every category has at least one word explicitly illustrated in a lesson or the theory chapter, so no category feels abstract/unillustrated (Life-and-Death and Time categories currently at risk, §3.3)
+- [x] Stable `id`s exist for every word so `{{word:ID}}` references never break — **word ids were renamed from English-gloss slugs (e.g. `good`) to numbered-pinyin slugs (e.g. `hao3`; multi-syllable words get one digit per syllable, e.g. `dong4wu4`; neutral-tone words stay bare, e.g. `de`/`le`/`ma`)**, which also makes tone-differing homophones (dà "big" `da4` vs. dǎ "hit" `da3`) naturally distinct ids instead of colliding
+- [x] Every category has at least one word explicitly illustrated in a lesson or the theory chapter, so no category feels abstract/unillustrated — **now mechanically checked via word-usage.json: every category clears this except Life-and-Death** (its only word, sǐ/die, is confirmed unused anywhere — Time's only word, shíjiān, is actually fine, contrary to the earlier §3.3 suspicion)
 - [x] Part-of-speech labeling present and consistent for every entry
 - [x] Pinyin tone marks correct and consistent (single source-of-truth spelling per word)
 - [x] Every word's `id` is stable by construction — it's the word's own key in `dictionary.json`'s `words` map, so adding a new word can never disturb an existing id
@@ -607,10 +609,11 @@ Every file currently in `src/content/`. These are **content/pedagogy checklists*
 
 - [ ] Resolve all §3.2 vocabulary/dictionary mismatches before doing large-scale translation work on lessons 6–20 (no point translating words that might get renamed/removed)
 - [ ] Pick one content schema (YAML block schema, per lesson-01/02/appendix-minimality) and migrate everything else to it — unblocks `info`/`warning` blocks project-wide and unifies `tldr`/`necessity` metadata (lessons 3–6 migrated; 7–20, appendix-pinyin, and proverbs still pending)
-- [ ] Restore tone diacritics and `<audio-example>` tags across lessons 6–20
+- [x] ~~Restore tone diacritics~~ across lessons 6–20 and proverbs.md — done; `<audio-example>` tags across those same files are still not added (separate, still-open half of this item)
 - [ ] Translate lessons 6–20, appendix-pinyin, and proverbs into Russian and Chinese
 - [ ] Add exercise/answers blocks to lesson-02 and lesson-17
 - [ ] Add comprehension exercises to lessons 18–20
 - [ ] Proofread all answer keys for lessons 6–20 (typos/ungrammatical filler found in at least three files)
 - [ ] Build the phrase book (§6) — entirely new content
 - [ ] Decide and document the numbers design (§3.2/§5.2) — this single decision unblocks lesson-13, the dictionary, and the phrase book simultaneously
+- [x] **Every chapter now references dictionary vocabulary by id (`{{word:ID}}`/`{{Word:ID}}`) instead of hardcoding pinyin** — `dictionary.json` is the single source of truth for spelling; a word's spelling can change in one place and every chapter picks it up automatically, and usage is exactly, mechanically trackable (`scripts/generate-word-usage.js` → `src/data/word-usage.json`, surfaced in the dictionary UI). Gap words not yet in the dictionary (kěyǐ, dào, líkāi, shēngyīn, the numbers, etc., §3.2) are still hardcoded literal text since they have no id to reference — resolving §3.2 also brings them into this system

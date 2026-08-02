@@ -1977,7 +1977,7 @@
       "key": "determiners",
       "title": {
         "eng": "Determiners",
-        "rus": "Детерминативыd",
+        "rus": "Детерминативы",
         "zh": "限定词——这、那、同、异"
       },
       "children": [
@@ -2012,7 +2012,7 @@
       "title": {
         "eng": "Quantifiers",
         "rus": "Квантификаторы",
-        "zh": "量词d"
+        "zh": "量词"
       },
       "children": [
         {
@@ -2058,7 +2058,7 @@
       "title": {
         "eng": "Evaluators",
         "rus": "Оценочные слова",
-        "zh": "评价词d"
+        "zh": "评价词"
       },
       "wordIds": [
         "hao3",
