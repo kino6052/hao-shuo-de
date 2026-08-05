@@ -49,7 +49,6 @@ Numbering is strictly hierarchical: `5.1.17.1` is section 5, subsection 1, item 
 - **3.2 Known vocabulary/dictionary mismatches — must resolve**
 
   Confirmed by cross-checking every lesson's vocab against `src/data/dictionary.json` (128 words, checked programmatically). These pinyin syllables are used as if they were dictionary words in lessons, but have **no entry** in `dictionary.json`:
-
   - [ ] 3.2.1 `kěyǐ` ("can/may," lesson-14) — not in dictionary. Either add it, or replace with an existing modality word (dictionary already has `néng`)
   - [ ] 3.2.2 `dǒng` ("understand," lesson-17) — not in dictionary. Nearest existing word is `zhīdào` ("know") — decide whether "understand" is a distinct primitive or should be expressed via `zhīdào`
   - [ ] 3.2.3 `dào` ("to, toward," lesson-16) — not in dictionary; only `lái`/`qù` exist under Motion. Lesson-16's "zài-qù-dào" construction depends on a word the dictionary doesn't define
@@ -58,6 +57,7 @@ Numbering is strictly hierarchical: `5.1.17.1` is section 5, subsection 1, item 
   - [ ] 3.2.6 `shēngyīn` ("sound/voice," lesson-11) — not in dictionary (lesson also independently covers animal sounds via `jiào`, so check whether this word is even needed)
   - [ ] 3.2.7 Numbers 3–9, 10, 100, 1000 (`èr`\*, `sān`...`jiǔ`, `shí`, `bǎi`, `qiān`) used throughout lesson-13 — dictionary's Quantifiers category only defines `yī` and `liǎng`. Decide the actual design: are all numbers meant to be dictionary primitives, or should 3+ be built compositionally from a smaller base (Toki-Pona-style)? Whichever answer, the dictionary and lesson-13 currently disagree.
     - [ ] 3.2.7.1 `èr` (math/serial "two") vs. `liǎng` (counting "two") is explicitly taught in lesson-13 as a real distinction — `èr` should very likely be a dictionary entry regardless of how the rest of the numbers are resolved.
+
 - **3.3 Coverage/design questions worth deciding explicitly**
   - [ ] 3.3.1 Is 128 words the intended final size, or a target ceiling still being approached? (`appendix-minimality.yaml` argues for sufficiency in principle but doesn't commit to an exact final count)
   - [ ] 3.3.2 Category 9 (Life and Death) and Category 10 (Time) each have exactly **one** word (`sǐ`, `shíjiān`). Confirm this is intentional minimalism and not an oversight — e.g. no word for "to live/be alive" (only "to die"), no words for relative time (before/after/now/soon)
@@ -650,3 +650,8 @@ Every file currently in `src/content/`. Each chapter nests up to three grouped s
 - [ ] 9.8 Build the phrase book (§6) — entirely new content
 - [ ] 9.9 Decide and document the numbers design (§3.2/§5.2) — this single decision unblocks lesson-13, the dictionary, and the phrase book simultaneously
 - [x] 9.10 **Every chapter now references dictionary vocabulary by id (`{{word:ID}}`/`{{Word:ID}}`) instead of hardcoding pinyin** — `dictionary.json` is the single source of truth for spelling; a word's spelling can change in one place and every chapter picks it up automatically, and usage is exactly, mechanically trackable (`scripts/generate-word-usage.js` → `src/data/word-usage.json`, surfaced in the dictionary UI). Gap words not yet in the dictionary (kěyǐ, dào, líkāi, shēngyīn, the numbers, etc., §3.2) are still hardcoded literal text since they have no id to reference — resolving §3.2 also brings them into this system
+
+## 10 Misc
+
+- [ ] Add search across the site
+- [ ] Add video chapter
