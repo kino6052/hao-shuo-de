@@ -1,0 +1,1217 @@
+id: appendix-stories
+type: appendix
+order: 3
+title:
+  eng: "Ten Short Stories"
+  rus: "Десять коротких историй"
+  zh: "十个小故事"
+
+summary:
+  eng: "Ten classic, public-domain tales, each drafted first in Toki Pona (reusing the exact word this dictionary already maps every Hao-shuo-de word to) and then rewritten in Hao-shuo-de -- a concrete demonstration of appendix-minimality's claim that both languages fill the same essential slots with different sound."
+  rus: "Десять классических историй из общественного достояния, каждая сначала написана на Токипоне (используя те самые слова, к которым этот словарь уже привязывает каждое слово Hao-shuo-de), а затем переписана на Hao-shuo-de — наглядная демонстрация утверждения из приложения о минимализме, что оба языка заполняют одни и те же смысловые места разными звуками."
+  zh: "十个经典的公共领域故事，每一个都先用道本语（Toki Pona）起草——沿用本词典早已为每个 Hao-shuo-de 词标注好的那个道本语对应词——然后再改写成 Hao-shuo-de。这是对《为什么极简是可行的》一文中那个说法的具体演示：两种语言用不同的声音填满同一组必要的位置。"
+
+blocks:
+  - type: prose
+    text:
+      eng: 'Every Hao-shuo-de word in this dictionary already carries its Toki Pona equivalent (see the "Maps to" line on any dictionary entry). That makes the two languages a natural pair for this exercise: draft a story in Toki Pona using only words that have a Hao-shuo-de counterpart, then rewrite it in Hao-shuo-de using exactly those counterparts and real Mandarin grammar instead. Where a concept genuinely has no word in either language, the story routes around it compositionally -- the same discipline lesson 2 already asked of you ("a written thing" instead of a dedicated word for book).'
+      rus: "Каждое слово Hao-shuo-de в этом словаре уже несёт свой эквивалент на Токипоне (см. строку «Maps to» в любой словарной статье). Это делает два языка естественной парой для такого упражнения: сначала набросать историю на Токипоне, используя только слова, у которых есть соответствие в Hao-shuo-de, а затем переписать её на Hao-shuo-de, используя именно эти соответствия и настоящую мандаринскую грамматику. Там, где понятию действительно не находится слова ни в одном из языков, история обходит это композиционно — та же дисциплина, которую урок 2 уже требовал от вас («написанная вещь» вместо отдельного слова для книги)."
+      zh: '本词典里的每一个 Hao-shuo-de 词，都已经标注了它对应的道本语词（见任意词条的 "Maps to" 一行）。这让这两种语言天然适合做这样一个练习：先只用那些在 Hao-shuo-de 里也有对应词的词汇，把故事用道本语起草出来，然后再用这些对应词和真正的普通话语法把它改写成 Hao-shuo-de。当某个概念在两种语言里确实都没有对应词时，故事就会像第二课已经要求你做的那样，用组合的方式绕过去（用"写的东西"代替专门表示"书"的词）。'
+
+  - type: info
+    title:
+      eng: "New Words Added for This Appendix"
+      rus: "Новые слова, добавленные для этого приложения"
+      zh: "为本附录新增的词"
+    items:
+      - text:
+          eng: '**{{word:sheng1yin1}}** (maps to *kalama*) -- sound, noise, voice. Already flagged as a gap in `CONTENT_CHECKLIST.md` (lesson-11 used the undictionaried "shengyin"); a dictionary word for sound is used constantly across storytelling (a strange sound, a cry, a call).'
+          rus: "**{{word:sheng1yin1}}** (соответствует *kalama*) — звук, шум, голос. Уже отмечено как пробел в `CONTENT_CHECKLIST.md` (в уроке 11 использовалось несловарное «shengyin»); слово для звука постоянно нужно при рассказывании историй (странный звук, крик, зов)."
+          zh: '**{{word:sheng1yin1}}**（对应道本语 *kalama*）——声音，噪音，嗓音。`CONTENT_CHECKLIST.md` 中已经标记过这个空缺（第11课使用了词典里没有的 "shengyin"）；讲故事时几乎离不开表示声音的词（奇怪的声音、叫喊、呼唤）。'
+      - text:
+          eng: "**{{word:zhen1}}** (maps to *lon*, the same word `zài`/`yǒu` already use for exist/have) -- true, real. TRUE is one of the ~65 NSM semantic primes `appendix-minimality.yaml` argues every language needs; the dictionary had no word for it at all."
+          rus: "**{{word:zhen1}}** (соответствует *lon* — тому же слову, что уже используют `zài`/`yǒu` для существования/обладания) — истинный, настоящий. ИСТИННЫЙ — один из ~65 семантических примитивов NSM, которые, как утверждает `appendix-minimality.yaml`, нужны любому языку; в словаре для него вообще не было слова."
+          zh: '**{{word:zhen1}}**（对应道本语 *lon*——`zài`/`yǒu` 已经用来表示存在/拥有的那个词）——真的，真实的。"真"（TRUE）是《为什么极简是可行的》一文所主张的、任何语言都需要的约65个NSM语义基元之一；词典里此前完全没有对应的词。'
+      - text:
+          eng: '**{{word:wen4}}** (to ask) and **{{word:na3li3}}** (where) -- neither is a Toki Pona primitive (Toki Pona composes both: "wile sona"/want-know for ask, reusing "seme"/what for where), but both are basic, one-syllable, one-word verbs in real Mandarin -- meeting this dictionary''s own stated bar for inclusion ("real Mandarin already lexicalizes it as one word"). Dialogue is the backbone of a fairy tale, and nominalizing every question ("the place you go to") reads stiffly next to the real thing.'
+          rus: "**{{word:wen4}}** (спрашивать) и **{{word:na3li3}}** (где) — ни то, ни другое не является примитивом Токипоны (Токипона составляет оба значения: «wile sona» / хотеть-знать для «спрашивать», повторное использование «seme» / что для «где»), но оба — базовые, однослоговые, однословные глаголы в настоящем мандаринском — что отвечает собственному заявленному критерию этого словаря («настоящий мандаринский уже лексикализует это одним словом»). Диалог — это костяк сказки, а номинализация каждого вопроса («место, куда ты идёшь») звучит натянуто рядом с настоящей репликой."
+          zh: '**{{word:wen4}}**（问）和 **{{word:na3li3}}**（哪里）都不是道本语的语义基元（道本语用组合方式表达二者："wile sona"/想知道 表示"问"，重复使用"seme"/什么 表示"哪里"），但二者在真正的普通话里都是基本的、单音节、单个词的说法——符合本词典自己设定的收词标准（"真正的普通话已经把它词化为一个词"）。对话是童话故事的骨架，而把每个疑问都名词化（"你要去的地方"）读起来会比真实的说法生硬得多。'
+      - text:
+          eng: '**{{word:pa4}}** (to fear, be afraid) -- like ask/where, not a Toki Pona primitive (composed there as "pilin ike"/feel-bad), but real Mandarin lexicalizes it as one common syllable, and fear is a distinct, recurring beat across danger-driven fairy tales that `juéde` + `huài` alone flattens into generic "feels bad".'
+          rus: "**{{word:pa4}}** (бояться, страшиться) — как и «спрашивать»/«где», не примитив Токипоны (там составляется как «pilin ike» / чувствовать-плохо), но настоящий мандаринский лексикализует это одним обычным слогом, а страх — отдельный, повторяющийся мотив в сказках, построенных на опасности, который одни только `juéde` + `huài` сводят к обобщённому «чувствует себя плохо»."
+          zh: '**{{word:pa4}}**（害怕，恐惧）——和"问"/"哪里"一样，也不是道本语的基元（在那里组合为"pilin ike"/感觉不好），但真正的普通话把它词化成了一个常见的单音节词；而在以危险为核心的童话故事里，恐惧是一个独立的、反复出现的情节点，仅靠 `juéde` 加 `huài` 只能把它压扁成笼统的"感觉不好"。'
+
+  - type: heading
+    text:
+      eng: "1. Little Red Riding Hood"
+      rus: "1. Красная Шапочка"
+      zh: "1. 小红帽"
+
+  - type: info
+    title:
+      eng: "First, in Toki Pona"
+      rus: "Сначала на Токипоне"
+      zh: "先用道本语"
+    items:
+      - text:
+          {
+            eng: "meli lili li tawa tomo mama, li jo e moku.",
+            rus: "meli lili li tawa tomo mama, li jo e moku.",
+            zh: "meli lili li tawa tomo mama, li jo e moku.",
+          }
+      - text:
+          {
+            eng: "soweli ike li kama, li toki e ni: sina tawa seme?",
+            rus: "soweli ike li kama, li toki e ni: sina tawa seme?",
+            zh: "soweli ike li kama, li toki e ni: sina tawa seme?",
+          }
+      - text:
+          {
+            eng: "soweli li tawa, li moku e mama.",
+            rus: "soweli li tawa, li moku e mama.",
+            zh: "soweli li tawa, li moku e mama.",
+          }
+      - text:
+          {
+            eng: "soweli li jo e len pi mama.",
+            rus: "soweli li jo e len pi mama.",
+            zh: "soweli li jo e len pi mama.",
+          }
+      - text:
+          {
+            eng: "meli lili li kama, li kute e kalama, li pilin nasa.",
+            rus: "meli lili li kama, li kute e kalama, li pilin nasa.",
+            zh: "meli lili li kama, li kute e kalama, li pilin nasa.",
+          }
+      - text:
+          {
+            eng: "soweli li moku e meli lili.",
+            rus: "soweli li moku e meli lili.",
+            zh: "soweli li moku e meli lili.",
+          }
+      - text:
+          {
+            eng: "jan li kama, li utala e soweli.",
+            rus: "jan li kama, li utala e soweli.",
+            zh: "jan li kama, li utala e soweli.",
+          }
+      - text:
+          {
+            eng: "mama en meli lili li pona.",
+            rus: "mama en meli lili li pona.",
+            zh: "mama en meli lili li pona.",
+          }
+
+  - type: story
+    items:
+      - pinyin: "{{Word:nv3ren2}} {{word:qu4}} {{word:fu4mu3}}-{{word:de}} {{word:jia1}}, {{word:you3}} {{word:chi1}}-{{word:de}}-{{word:dong1xi}}."
+        translation:
+          {
+            eng: "A woman goes to her grandmother's home, carrying food.",
+            rus: "Женщина идёт в дом бабушки, неся еду.",
+            zh: "一个女人去祖母家，带着食物。",
+          }
+      - pinyin: "{{Word:da4}} {{word:huai4}} {{word:dong4wu4}} {{word:lai2}}, {{word:wen4}}: {{word:ni3}} {{word:qu4}} {{word:na3li3}}?"
+        translation:
+          {
+            eng: "A big bad animal comes and asks: where are you going?",
+            rus: "Приходит большое злое животное и спрашивает: куда ты идёшь?",
+            zh: "一只大坏动物过来，问：你去哪里？",
+          }
+      - pinyin: "{{Word:dong4wu4}} {{word:qu4}}, {{word:chi1}} {{word:le}} {{word:fu4mu3}}."
+        translation:
+          {
+            eng: "The animal goes ahead and eats the grandmother.",
+            rus: "Животное идёт вперёд и съедает бабушку.",
+            zh: "动物先赶过去，吃掉了祖母。",
+          }
+      - pinyin: "{{Word:dong4wu4}} {{word:you3}} {{word:fu4mu3}}-{{word:de}} {{word:yi1fu}}."
+        translation:
+          {
+            eng: "The animal wears the grandmother's clothes.",
+            rus: "Животное надевает одежду бабушки.",
+            zh: "动物穿上了祖母的衣服。",
+          }
+      - pinyin: "{{Word:nv3ren2}} {{word:lai2}}, {{word:ting1}} dào {{word:sheng1yin1}}, {{word:jue2de}} {{word:hen3}} {{word:qi2guai4}}."
+        translation:
+          {
+            eng: "The woman arrives, hears the voice, and feels something is strange.",
+            rus: "Женщина приходит, слышит голос и чувствует что-то странное.",
+            zh: "女人到了，听到声音，觉得很奇怪。",
+          }
+      - pinyin: "{{Word:dong4wu4}} {{word:ye3}} {{word:chi1}} {{word:le}} {{word:nv3ren2}}."
+        translation:
+          {
+            eng: "The animal eats the woman too.",
+            rus: "Животное съедает и женщину тоже.",
+            zh: "动物也把女人吃掉了。",
+          }
+      - pinyin: "{{Word:yi1}}-ge {{word:ren2}} {{word:lai2}}, {{word:da3}} {{word:le}} {{word:dong4wu4}}."
+        translation:
+          {
+            eng: "A person comes and hits the animal.",
+            rus: "Приходит человек и бьёт животное.",
+            zh: "一个人过来，打了那只动物。",
+          }
+      - pinyin: "{{Word:fu4mu3}} {{word:he2}} {{word:nv3ren2}} {{word:hen3}} {{word:hao3}}."
+        translation:
+          {
+            eng: "The grandmother and the woman are well again.",
+            rus: "Бабушка и женщина снова целы и невредимы.",
+            zh: "祖母和女人都平安无事了。",
+          }
+
+  - type: heading
+    text:
+      eng: "2. The Two Little Animals and Their Houses"
+      rus: "2. Два маленьких животных и их дома"
+      zh: "2. 两只小动物和它们的房子"
+
+  - type: prose
+    text:
+      eng: '(Told here with two houses instead of three -- the dictionary has a word for "stick" and a word for "hard," but not for straw.)'
+      rus: "(Здесь рассказано с двумя домами вместо трёх — в словаре есть слово для «палки» и слово для «твёрдого», но нет слова для соломы.)"
+      zh: '（这里讲的是两座房子而不是三座——词典里有表示"棍子"和"硬"的词，但没有表示"稻草"的词。）'
+
+  - type: info
+    title:
+      eng: "First, in Toki Pona"
+      rus: "Сначала на Токипоне"
+      zh: "先用道本语"
+    items:
+      - text:
+          {
+            eng: "soweli lili tu li pali e tomo.",
+            rus: "soweli lili tu li pali e tomo.",
+            zh: "soweli lili tu li pali e tomo.",
+          }
+      - text:
+          {
+            eng: "soweli wan li pali e tomo kepeken palisa.",
+            rus: "soweli wan li pali e tomo kepeken palisa.",
+            zh: "soweli wan li pali e tomo kepeken palisa.",
+          }
+      - text:
+          {
+            eng: "soweli ante li pali e tomo kepeken kiwen.",
+            rus: "soweli ante li pali e tomo kepeken kiwen.",
+            zh: "soweli ante li pali e tomo kepeken kiwen.",
+          }
+      - text:
+          {
+            eng: "soweli ike suli li kama, li wile pakala e tomo palisa.",
+            rus: "soweli ike suli li kama, li wile pakala e tomo palisa.",
+            zh: "soweli ike suli li kama, li wile pakala e tomo palisa.",
+          }
+      - text:
+          {
+            eng: "ona li pakala e tomo palisa.",
+            rus: "ona li pakala e tomo palisa.",
+            zh: "ona li pakala e tomo palisa.",
+          }
+      - text:
+          {
+            eng: "soweli lili li tawa tomo kiwen.",
+            rus: "soweli lili li tawa tomo kiwen.",
+            zh: "soweli lili li tawa tomo kiwen.",
+          }
+      - text:
+          {
+            eng: "soweli ike li ken ala pakala e tomo kiwen.",
+            rus: "soweli ike li ken ala pakala e tomo kiwen.",
+            zh: "soweli ike li ken ala pakala e tomo kiwen.",
+          }
+      - text:
+          {
+            eng: "soweli ike li tawa weka.",
+            rus: "soweli ike li tawa weka.",
+            zh: "soweli ike li tawa weka.",
+          }
+
+  - type: story
+    items:
+      - pinyin: "{{Word:liang3}}-ge {{word:xiao3}} {{word:dong4wu4}} {{word:zuo4}} {{word:jia1}}."
+        translation:
+          {
+            eng: "Two small animals build houses.",
+            rus: "Два маленьких животных строят дома.",
+            zh: "两只小动物盖房子。",
+          }
+      - pinyin: "{{Word:yi1}}-ge {{word:dong4wu4}} {{word:yong4}} {{word:gun4zi}} {{word:zuo4}} {{word:jia1}}."
+        translation:
+          {
+            eng: "One animal builds its house with sticks.",
+            rus: "Одно животное строит дом из палок.",
+            zh: "一只动物用棍子盖房子。",
+          }
+      - pinyin: "{{Word:bu4tong2}}-{{word:de}} {{word:dong4wu4}} {{word:yong4}} {{word:ying4}} {{word:dong1xi}} {{word:zuo4}} {{word:jia1}}."
+        translation:
+          {
+            eng: "The other animal builds its house with hard things.",
+            rus: "Другое животное строит дом из твёрдых вещей.",
+            zh: "另一只动物用硬的东西盖房子。",
+          }
+      - pinyin: "{{Word:da4}} {{word:huai4}} {{word:dong4wu4}} {{word:lai2}}, {{word:yao4}} {{word:ba3}} {{word:gun4zi}}-{{word:de}} {{word:jia1}} {{word:bian4}} {{word:huai4}}."
+        translation:
+          {
+            eng: "A big bad animal comes, wanting to break the stick house.",
+            rus: "Приходит большое злое животное, желая сломать дом из палок.",
+            zh: "一只大坏动物来了，想把棍子房子弄坏。",
+          }
+      - pinyin: "{{Word:ta1}} {{word:ba3}} {{word:gun4zi}}-{{word:de}} {{word:jia1}} {{word:bian4}} {{word:huai4}} {{word:le}}."
+        translation:
+          {
+            eng: "It breaks the stick house.",
+            rus: "Оно ломает дом из палок.",
+            zh: "它把棍子房子弄坏了。",
+          }
+      - pinyin: "{{Word:xiao3}} {{word:dong4wu4}} {{word:qu4}} {{word:ying4}} {{word:dong1xi}}-{{word:de}} {{word:jia1}}."
+        translation:
+          {
+            eng: "The small animal goes to the hard house.",
+            rus: "Маленькое животное идёт к твёрдому дому.",
+            zh: "小动物跑去硬房子那里。",
+          }
+      - pinyin: "{{Word:da4}} {{word:dong4wu4}} {{word:bu4}} {{word:neng2}} {{word:ba3}} {{word:ying4}} {{word:dong1xi}}-{{word:de}} {{word:jia1}} {{word:bian4}} {{word:huai4}}."
+        translation:
+          {
+            eng: "The big animal cannot break the hard house.",
+            rus: "Большое животное не может сломать твёрдый дом.",
+            zh: "大动物没办法把硬房子弄坏。",
+          }
+      - pinyin: "{{Word:da4}} {{word:dong4wu4}} {{word:wai4}} {{word:le}}."
+        translation:
+          {
+            eng: "The big animal goes away.",
+            rus: "Большое животное уходит прочь.",
+            zh: "大动物走开了。",
+          }
+
+  - type: heading
+    text:
+      eng: "3. Goldilocks and the Animal Family"
+      rus: "3. Златовласка и семья животных"
+      zh: "3. 金发姑娘和动物一家"
+
+  - type: info
+    title:
+      eng: "First, in Toki Pona"
+      rus: "Сначала на Токипоне"
+      zh: "先用道本语"
+    items:
+      - text:
+          {
+            eng: "tomo pi soweli mute li lon poka kasi.",
+            rus: "tomo pi soweli mute li lon poka kasi.",
+            zh: "tomo pi soweli mute li lon poka kasi.",
+          }
+      - text:
+          {
+            eng: "soweli mute li tawa weka.",
+            rus: "soweli mute li tawa weka.",
+            zh: "soweli mute li tawa weka.",
+          }
+      - text:
+          {
+            eng: "meli lili li kama tawa tomo.",
+            rus: "meli lili li kama tawa tomo.",
+            zh: "meli lili li kama tawa tomo.",
+          }
+      - text:
+          {
+            eng: "ona li moku e moku pi soweli.",
+            rus: "ona li moku e moku pi soweli.",
+            zh: "ona li moku e moku pi soweli.",
+          }
+      - text:
+          {
+            eng: "ona li lape lon supa.",
+            rus: "ona li lape lon supa.",
+            zh: "ona li lape lon supa.",
+          }
+      - text:
+          {
+            eng: "soweli mute li kama, li pilin nasa.",
+            rus: "soweli mute li kama, li pilin nasa.",
+            zh: "soweli mute li kama, li pilin nasa.",
+          }
+      - text:
+          {
+            eng: "meli lili li pilin ike mute, li tawa weka.",
+            rus: "meli lili li pilin ike mute, li tawa weka.",
+            zh: "meli lili li pilin ike mute, li tawa weka.",
+          }
+
+  - type: story
+    items:
+      - pinyin: "{{word:hen3}} {{word:duo1}} {{word:dong4wu4}}-{{word:de}} {{word:jia1}} {{word:zai4}} {{word:zhi2wu4}} {{word:pang2bian1}}."
+        translation:
+          {
+            eng: "A family of animals' home is beside the plants.",
+            rus: "Дом семьи животных находится рядом с растениями.",
+            zh: "一群动物的家在树木旁边。",
+          }
+      - pinyin: "{{word:dong4wu4}} {{word:qu4}} {{word:wai4}} {{word:le}}."
+        translation:
+          {
+            eng: "The animals go out.",
+            rus: "Животные уходят из дома.",
+            zh: "动物们出门了。",
+          }
+      - pinyin: "{{Word:nv3ren2}} {{word:lai2}} {{word:zhe4}}-ge {{word:jia1}}."
+        translation:
+          {
+            eng: "A woman comes to this home.",
+            rus: "Женщина приходит в этот дом.",
+            zh: "一个女人来到这个家。",
+          }
+      - pinyin: "{{Word:ta1}} {{word:chi1}} {{word:le}} {{word:dong4wu4}}-{{word:de}} {{word:chi1}}-{{word:de}}-{{word:dong1xi}}."
+        translation:
+          {
+            eng: "She eats the animals' food.",
+            rus: "Она ест еду животных.",
+            zh: "她吃了动物们的食物。",
+          }
+      - pinyin: "{{Word:ta1}} {{word:zai4}} {{word:di4ban3}}-shàng {{word:shui4jiao4}}."
+        translation:
+          {
+            eng: "She sleeps on their couch.",
+            rus: "Она спит на их лежанке.",
+            zh: "她在他们的坐卧台上睡觉。",
+          }
+      - pinyin: "{{Word:dong4wu4}} {{word:lai2}}, {{word:jue2de}} {{word:hen3}} {{word:qi2guai4}}."
+        translation:
+          {
+            eng: "The animals come home and feel something is very strange.",
+            rus: "Животные возвращаются домой и чувствуют что-то очень странное.",
+            zh: "动物们回家了，觉得非常奇怪。",
+          }
+      - pinyin: "{{Word:nv3ren2}} {{word:hen3}} {{word:pa4}}, {{word:qu4}} {{word:wai4}} {{word:le}}."
+        translation:
+          {
+            eng: "The woman is very afraid and runs off.",
+            rus: "Женщина очень напугана и убегает прочь.",
+            zh: "女人非常害怕，跑出去了。",
+          }
+
+  - type: heading
+    text:
+      eng: "4. The Small Animal and the Reptile"
+      rus: "4. Маленькое животное и рептилия"
+      zh: "4. 小动物和爬行动物"
+
+  - type: info
+    title:
+      eng: "First, in Toki Pona"
+      rus: "Сначала на Токипоне"
+      zh: "先用道本语"
+    items:
+      - text:
+          {
+            eng: "soweli lili en akesi li wile tawa nanpa wan.",
+            rus: "soweli lili en akesi li wile tawa nanpa wan.",
+            zh: "soweli lili en akesi li wile tawa nanpa wan.",
+          }
+      - text:
+          {
+            eng: "soweli lili li pilin wawa mute, li toki e ni: mi wawa mute!",
+            rus: "soweli lili li pilin wawa mute, li toki e ni: mi wawa mute!",
+            zh: "soweli lili li pilin wawa mute, li toki e ni: mi wawa mute!",
+          }
+      - text: { eng: "tu li tawa.", rus: "tu li tawa.", zh: "tu li tawa." }
+      - text:
+          {
+            eng: "soweli lili li lape lon nasin.",
+            rus: "soweli lili li lape lon nasin.",
+            zh: "soweli lili li lape lon nasin.",
+          }
+      - text:
+          {
+            eng: "akesi li tawa, li tawa, li ala lape.",
+            rus: "akesi li tawa, li tawa, li ala lape.",
+            zh: "akesi li tawa, li tawa, li ala lape.",
+          }
+      - text:
+          {
+            eng: "akesi li kama nanpa wan.",
+            rus: "akesi li kama nanpa wan.",
+            zh: "akesi li kama nanpa wan.",
+          }
+      - text:
+          {
+            eng: "soweli lili li pilin ike.",
+            rus: "soweli lili li pilin ike.",
+            zh: "soweli lili li pilin ike.",
+          }
+
+  - type: story
+    items:
+      - pinyin: "{{Word:xiao3}} {{word:dong4wu4}} {{word:he2}} {{word:pa2xing2dong4wu4}} {{word:yao4}} {{word:qu4}} {{word:yi1}}-ge {{word:di4fang1}}."
+        translation:
+          {
+            eng: "The small animal and the reptile both want to reach the same place.",
+            rus: "Маленькое животное и рептилия оба хотят добраться до одного и того же места.",
+            zh: "小动物和爬行动物都想到达同一个地方。",
+          }
+      - pinyin: "{{Word:xiao3}} {{word:dong4wu4}} {{word:jue2de}} {{word:hen3}} {{word:you3}} {{word:li4liang4}}, {{word:shuo1}}: {{word:wo3}} {{word:hen3}} {{word:hao3}}!"
+        translation:
+          {
+            eng: "The small animal feels very energetic and says: I am the best!",
+            rus: "Маленькое животное чувствует себя очень энергичным и говорит: я лучше всех!",
+            zh: "小动物觉得自己充满活力，说：我最厉害！",
+          }
+      - pinyin: "{{Word:liang3}}-ge {{word:dong4wu4}} {{word:qu4}}."
+        translation:
+          {
+            eng: "The two animals set off.",
+            rus: "Два животных отправляются в путь.",
+            zh: "两只动物出发了。",
+          }
+      - pinyin: "{{Word:xiao3}} {{word:dong4wu4}} {{word:zai4}} {{word:fang1fa3}}-shàng {{word:shui4jiao4}}."
+        translation:
+          {
+            eng: "The small animal falls asleep on the way.",
+            rus: "Маленькое животное засыпает по дороге.",
+            zh: "小动物在路上睡着了。",
+          }
+      - pinyin: "{{word:pa2xing2dong4wu4}} {{word:qu4}}, {{word:qu4}}, {{word:bu4}} {{word:shui4jiao4}}."
+        translation:
+          {
+            eng: "The reptile goes and goes, without sleeping.",
+            rus: "Рептилия идёт и идёт, не засыпая.",
+            zh: "爬行动物一直走一直走，不睡觉。",
+          }
+      - pinyin: "{{word:pa2xing2dong4wu4}} dào {{word:le}}."
+        translation:
+          {
+            eng: "The reptile arrives.",
+            rus: "Рептилия приходит первой.",
+            zh: "爬行动物到了。",
+          }
+      - pinyin: "{{word:xiao3}} {{word:dong4wu4}} {{word:jue2de}} {{word:hen3}} {{word:huai4}}."
+        translation:
+          {
+            eng: "The small animal feels very embarrassed.",
+            rus: "Маленькое животное чувствует себя очень плохо.",
+            zh: "小动物觉得非常难堪。",
+          }
+
+  - type: heading
+    text:
+      eng: "5. The Child Who Called Out a Lie"
+      rus: "5. Мальчик, который звал понарошку"
+      zh: "5. 喊了假话的孩子"
+
+  - type: info
+    title:
+      eng: "First, in Toki Pona"
+      rus: "Сначала на Токипоне"
+      zh: "先用道本语"
+    items:
+      - text:
+          {
+            eng: "jan lili li lukin e soweli mute.",
+            rus: "jan lili li lukin e soweli mute.",
+            zh: "jan lili li lukin e soweli mute.",
+          }
+      - text:
+          {
+            eng: "ona li toki e ni: soweli ike li kama! taso ni li lon ala.",
+            rus: "ona li toki e ni: soweli ike li kama! taso ni li lon ala.",
+            zh: "ona li toki e ni: soweli ike li kama! taso ni li lon ala.",
+          }
+      - text:
+          {
+            eng: "jan mute li kama, li lukin, li jo ala e soweli ike.",
+            rus: "jan mute li kama, li lukin, li jo ala e soweli ike.",
+            zh: "jan mute li kama, li lukin, li jo ala e soweli ike.",
+          }
+      - text:
+          {
+            eng: "jan mute li pilin ike tawa jan lili.",
+            rus: "jan mute li pilin ike tawa jan lili.",
+            zh: "jan mute li pilin ike tawa jan lili.",
+          }
+      - text:
+          {
+            eng: "tenpo sin, soweli ike li kama lon nasin ni.",
+            rus: "tenpo sin, soweli ike li kama lon nasin ni.",
+            zh: "tenpo sin, soweli ike li kama lon nasin ni.",
+          }
+      - text:
+          {
+            eng: "jan lili li toki sama, taso jan ala li kama.",
+            rus: "jan lili li toki sama, taso jan ala li kama.",
+            zh: "jan lili li toki sama, taso jan ala li kama.",
+          }
+      - text:
+          {
+            eng: "soweli ike li pakala e soweli mute.",
+            rus: "soweli ike li pakala e soweli mute.",
+            zh: "soweli ike li pakala e soweli mute.",
+          }
+
+  - type: story
+    items:
+      - pinyin: "{{Word:xiao3}} {{word:ren2}} {{word:kan4}} {{word:hen3}} {{word:duo1}} {{word:dong4wu4}}."
+        translation:
+          {
+            eng: "A child watches over many animals.",
+            rus: "Ребёнок присматривает за многими животными.",
+            zh: "一个孩子看着很多动物。",
+          }
+      - pinyin: "{{Word:ta1}} {{word:shuo1}}: {{word:da4}} {{word:huai4}} {{word:dong4wu4}} {{word:lai2}} {{word:le}}! {{Word:dan4shi4}} {{word:zhe4}} {{word:bu4}} {{word:zhen1}}."
+        translation:
+          {
+            eng: "He shouts: a big bad animal is coming! But this isn't true.",
+            rus: "Он кричит: идёт большое злое животное! Но это неправда.",
+            zh: "他喊：大坏动物来了！但这不是真的。",
+          }
+      - pinyin: "{{word:hen3}} {{word:duo1}} {{word:ren2}} {{word:lai2}}, {{word:kan4}}, {{word:mei2}} {{word:you3}} {{word:da4}} {{word:huai4}} {{word:dong4wu4}}."
+        translation:
+          {
+            eng: "Many people come and look, and there is no big bad animal.",
+            rus: "Много людей приходит и смотрит, но большого злого животного нет.",
+            zh: "很多人跑来看，却没有大坏动物。",
+          }
+      - pinyin: "{{word:ren2}} {{word:dui4}} {{word:xiao3}} {{word:ren2}} {{word:jue2de}} {{word:hen3}} {{word:huai4}}."
+        translation:
+          {
+            eng: "The people feel very annoyed with the child.",
+            rus: "Люди очень раздражены на ребёнка.",
+            zh: "人们对这个孩子感到很生气。",
+          }
+      - pinyin: "{{Word:xin1}}-{{word:de}} {{word:shi2jian1}}, {{word:zhen1}}-{{word:de}} {{word:da4}} {{word:huai4}} {{word:dong4wu4}} {{word:lai2}} {{word:le}}."
+        translation:
+          {
+            eng: "Some time later, a truly big bad animal comes.",
+            rus: "Некоторое время спустя приходит по-настоящему большое злое животное.",
+            zh: "过了一段新的时间，真正的大坏动物来了。",
+          }
+      - pinyin: "{{Word:xiao3}} {{word:ren2}} {{word:shuo1}}, {{word:dan4shi4}} {{word:mei2}} {{word:you3}} {{word:ren2}} {{word:lai2}}."
+        translation:
+          {
+            eng: "The child shouts, but no one comes.",
+            rus: "Ребёнок кричит, но никто не приходит.",
+            zh: "孩子喊了，可是没有人来。",
+          }
+      - pinyin: "{{Word:da4}} {{word:huai4}} {{word:dong4wu4}} {{word:ba3}} {{word:hen3}} {{word:duo1}} {{word:dong4wu4}} {{word:bian4}} {{word:huai4}}."
+        translation:
+          {
+            eng: "The big bad animal harms many of the other animals.",
+            rus: "Большое злое животное вредит многим другим животным.",
+            zh: "大坏动物把很多动物都弄伤了。",
+          }
+
+  - type: heading
+    text:
+      eng: "6. The Different Bird"
+      rus: "6. Непохожая птица"
+      zh: "6. 不一样的鸟"
+
+  - type: info
+    title:
+      eng: "First, in Toki Pona"
+      rus: "Сначала на Токипоне"
+      zh: "先用道本语"
+    items:
+      - text:
+          {
+            eng: "waso lili li lon kulupu waso.",
+            rus: "waso lili li lon kulupu waso.",
+            zh: "waso lili li lon kulupu waso.",
+          }
+      - text:
+          {
+            eng: "ona li ante tan waso ante.",
+            rus: "ona li ante tan waso ante.",
+            zh: "ona li ante tan waso ante.",
+          }
+      - text:
+          {
+            eng: "waso ante li toki e ni: sina nasa! ona li wile ala e waso lili.",
+            rus: "waso ante li toki e ni: sina nasa! ona li wile ala e waso lili.",
+            zh: "waso ante li toki e ni: sina nasa! ona li wile ala e waso lili.",
+          }
+      - text:
+          {
+            eng: "waso lili li pilin ike, li tawa weka.",
+            rus: "waso lili li pilin ike, li tawa weka.",
+            zh: "waso lili li pilin ike, li tawa weka.",
+          }
+      - text:
+          {
+            eng: "tenpo sin, waso lili li kama suli.",
+            rus: "tenpo sin, waso lili li kama suli.",
+            zh: "tenpo sin, waso lili li kama suli.",
+          }
+      - text:
+          {
+            eng: "ona li lukin e sinpin ona lon telo.",
+            rus: "ona li lukin e sinpin ona lon telo.",
+            zh: "ona li lukin e sinpin ona lon telo.",
+          }
+      - text:
+          {
+            eng: "ona li kama waso walo suli pona.",
+            rus: "ona li kama waso walo suli pona.",
+            zh: "ona li kama waso walo suli pona.",
+          }
+      - text:
+          {
+            eng: "waso ante li wile ona.",
+            rus: "waso ante li wile ona.",
+            zh: "waso ante li wile ona.",
+          }
+
+  - type: story
+    items:
+      - pinyin: "{{Word:xiao3}} {{word:niao3}} {{word:zai4}} {{word:niao3}} {{word:qun2}} {{word:li3mian4}}."
+        translation:
+          {
+            eng: "A small bird lives within a group of birds.",
+            rus: "Маленькая птица живёт среди стаи птиц.",
+            zh: "一只小鸟生活在一群鸟当中。",
+          }
+      - pinyin: "{{Word:ta1}} {{word:he2}} {{word:bu4tong2}}-{{word:de}} {{word:niao3}} {{word:bu4tong2}}."
+        translation:
+          {
+            eng: "It is different from the other birds.",
+            rus: "Она отличается от других птиц.",
+            zh: "它跟别的鸟不一样。",
+          }
+      - pinyin: "{{Word:bu4tong2}}-{{word:de}} {{word:niao3}} {{word:shuo1}}: {{word:ni3}} {{word:hen3}} {{word:qi2guai4}}! {{word:ta1}} {{word:bu4}} {{word:yao4}} {{word:xiao3}} {{word:niao3}}."
+        translation:
+          {
+            eng: "The other birds say: you're strange! They don't want the small bird around.",
+            rus: "Другие птицы говорят: ты странная! Они не хотят маленькую птицу рядом.",
+            zh: "别的鸟说：你好奇怪！它们不想要这只小鸟。",
+          }
+      - pinyin: "{{Word:xiao3}} {{word:niao3}} {{word:jue2de}} {{word:hen3}} {{word:huai4}}, {{word:qu4}} {{word:wai4}} {{word:le}}."
+        translation:
+          {
+            eng: "The small bird feels very bad and leaves.",
+            rus: "Маленькая птица чувствует себя очень плохо и улетает прочь.",
+            zh: "小鸟觉得很难过，飞走了。",
+          }
+      - pinyin: "{{Word:xin1}}-{{word:de}} {{word:shi2jian1}}, {{word:xiao3}} {{word:niao3}} {{word:bian4}} {{word:da4}} {{word:le}}."
+        translation:
+          {
+            eng: "In a new season, the small bird has become big.",
+            rus: "В новую пору маленькая птица становится большой.",
+            zh: "在新的一段时光里，小鸟长大了。",
+          }
+      - pinyin: "{{Word:ta1}} {{word:zai4}} {{word:shui3}} {{word:li3mian4}} {{word:kan4}} {{word:ta1}}-{{word:de}} {{word:qian2mian4}}."
+        translation:
+          {
+            eng: "It looks at its own face in the water.",
+            rus: "Она смотрит на своё лицо в воде.",
+            zh: "它在水中看自己的脸。",
+          }
+      - pinyin: "{{word:ta1}} {{word:bian4}} {{word:le}}: {{word:ta1}} {{word:shi4}} {{word:da4}}-{{word:de}} {{word:bai2se4}} {{word:niao3}}, {{word:hen3}} {{word:hao3}}."
+        translation:
+          {
+            eng: "It has changed: it is now a big white bird, and beautiful.",
+            rus: "Она изменилась: теперь это большая белая птица, и прекрасная.",
+            zh: "它变了：它是一只大大的白鸟，很美。",
+          }
+      - pinyin: "{{Word:bu4tong2}}-{{word:de}} {{word:niao3}} {{word:yao4}} {{word:ta1}}."
+        translation:
+          {
+            eng: "The other birds want it now.",
+            rus: "Теперь другие птицы хотят её общества.",
+            zh: "别的鸟现在想要它了。",
+          }
+
+  - type: heading
+    text:
+      eng: "7. The Person and the Plant in the Sky"
+      rus: "7. Человек и растение до небес"
+      zh: "7. 那个人和通天的植物"
+
+  - type: info
+    title:
+      eng: "First, in Toki Pona"
+      rus: "Сначала на Токипоне"
+      zh: "先用道本语"
+    items:
+      - text:
+          {
+            eng: "jan li jo ala e mani, li jo e soweli wan.",
+            rus: "jan li jo ala e mani, li jo e soweli wan.",
+            zh: "jan li jo ala e mani, li jo e soweli wan.",
+          }
+      - text:
+          {
+            eng: "ona li pana e soweli, li kama jo e ijo lili mute.",
+            rus: "ona li pana e soweli, li kama jo e ijo lili mute.",
+            zh: "ona li pana e soweli, li kama jo e ijo lili mute.",
+          }
+      - text:
+          {
+            eng: "mama li pilin ike, li weka e ijo lili.",
+            rus: "mama li pilin ike, li weka e ijo lili.",
+            zh: "mama li pilin ike, li weka e ijo lili.",
+          }
+      - text:
+          {
+            eng: "lon tenpo pimeja, kasi suli li kama, li tawa sewi.",
+            rus: "lon tenpo pimeja, kasi suli li kama, li tawa sewi.",
+            zh: "lon tenpo pimeja, kasi suli li kama, li tawa sewi.",
+          }
+      - text:
+          {
+            eng: "jan li tawa sewi lon kasi.",
+            rus: "jan li tawa sewi lon kasi.",
+            zh: "jan li tawa sewi lon kasi.",
+          }
+      - text:
+          {
+            eng: "ona li lukin e tomo pi jan suli.",
+            rus: "ona li lukin e tomo pi jan suli.",
+            zh: "ona li lukin e tomo pi jan suli.",
+          }
+      - text:
+          {
+            eng: "jan suli li jo e mani mute.",
+            rus: "jan suli li jo e mani mute.",
+            zh: "jan suli li jo e mani mute.",
+          }
+      - text:
+          {
+            eng: "jan li jo e mani, li tawa anpa.",
+            rus: "jan li jo e mani, li tawa anpa.",
+            zh: "jan li jo e mani, li tawa anpa.",
+          }
+      - text:
+          {
+            eng: "jan li pakala e kasi. jan suli li ken ala kama anpa.",
+            rus: "jan li pakala e kasi. jan suli li ken ala kama anpa.",
+            zh: "jan li pakala e kasi. jan suli li ken ala kama anpa.",
+          }
+      - text:
+          {
+            eng: "jan en mama li jo e mani mute, li pona.",
+            rus: "jan en mama li jo e mani mute, li pona.",
+            zh: "jan en mama li jo e mani mute, li pona.",
+          }
+
+  - type: story
+    items:
+      - pinyin: "{{word:ren2}} {{word:mei2}} {{word:you3}} {{word:qian2}}, {{word:you3}} {{word:yi1}}-ge {{word:dong4wu4}}."
+        translation:
+          {
+            eng: "A person has no money, only one animal.",
+            rus: "У человека нет денег, только одно животное.",
+            zh: "一个人没有钱，只有一只动物。",
+          }
+      - pinyin: "{{word:ta1}} {{word:gei3}} {{word:le}} {{word:dong4wu4}}, {{word:de2}} {{word:le}} {{word:hen3}} {{word:duo1}} {{word:xiao3}} {{word:dong1xi}}."
+        translation:
+          {
+            eng: "He gives away the animal and gets many small things instead.",
+            rus: "Он отдаёт животное и получает взамен много маленьких вещей.",
+            zh: "他把动物给了别人，得到了很多小东西。",
+          }
+      - pinyin: "{{word:fu4mu3}} {{word:jue2de}} {{word:hen3}} {{word:huai4}}, {{word:bu4}} {{word:yao4}} {{word:xiao3}} {{word:dong1xi}}."
+        translation:
+          {
+            eng: "His mother feels very upset and doesn't want the small things.",
+            rus: "Его мать очень расстроена и не хочет эти маленькие вещи.",
+            zh: "母亲很生气，不想要这些小东西。",
+          }
+      - pinyin: "{{word:hei1se4}}-{{word:de}} {{word:shi2jian1}}, {{word:da4}} {{word:zhi2wu4}} {{word:kai1shi3}} {{word:you3}} {{word:le}}, {{word:qu4}} {{word:shang4mian4}}."
+        translation:
+          {
+            eng: "In the dark hours, a big plant begins to exist and grows upward.",
+            rus: "В тёмное время суток начинает существовать большое растение и тянется вверх.",
+            zh: "在黑暗的时刻，一株大植物开始出现，一直往上长。",
+          }
+      - pinyin: "{{word:ren2}} {{word:qu4}} {{word:shang4mian4}}, {{word:zai4}} {{word:zhi2wu4}}-shàng."
+        translation:
+          {
+            eng: "The person climbs up, on the plant.",
+            rus: "Человек поднимается наверх по растению.",
+            zh: "那个人顺着植物爬到了上面。",
+          }
+      - pinyin: "{{word:ta1}} kàn-jiàn {{word:da4}} {{word:ren2}}-{{word:de}} {{word:jia1}}."
+        translation:
+          {
+            eng: "He sees a giant's home.",
+            rus: "Он видит дом великана.",
+            zh: "他看见了一个巨人的家。",
+          }
+      - pinyin: "{{word:da4}} {{word:ren2}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:qian2}}."
+        translation:
+          {
+            eng: "The giant has a lot of money.",
+            rus: "У великана очень много денег.",
+            zh: "巨人有很多钱。",
+          }
+      - pinyin: "{{word:ren2}} {{word:de2}} {{word:le}} {{word:qian2}}, {{word:qu4}} {{word:xia4mian4}}."
+        translation:
+          {
+            eng: "The person gets the money and climbs back down.",
+            rus: "Человек берёт деньги и спускается вниз.",
+            zh: "那个人拿到了钱，爬到下面去。",
+          }
+      - pinyin: "{{word:ren2}} {{word:ba3}} {{word:zhi2wu4}} {{word:bian4}} {{word:huai4}}. {{word:da4}} {{word:ren2}} {{word:bu4}} {{word:neng2}} {{word:qu4}} {{word:xia4mian4}}."
+        translation:
+          {
+            eng: "The person breaks the plant. The giant cannot come down.",
+            rus: "Человек ломает растение. Великан не может спуститься вниз.",
+            zh: "那个人把植物弄断了。巨人没办法下来。",
+          }
+      - pinyin: "{{word:ren2}} {{word:he2}} {{word:fu4mu3}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:qian2}}, {{word:hen3}} {{word:hao3}}."
+        translation:
+          {
+            eng: "The person and his mother have plenty of money now, and life is good.",
+            rus: "Теперь у человека и его матери много денег, и жизнь хороша.",
+            zh: "那个人和母亲有了很多钱，生活很好。",
+          }
+
+  - type: heading
+    text:
+      eng: "8. The Important Person's New Clothes"
+      rus: "8. Новая одежда важного человека"
+      zh: "8. 大人物的新衣"
+
+  - type: info
+    title:
+      eng: "First, in Toki Pona"
+      rus: "Сначала на Токипоне"
+      zh: "先用道本语"
+    items:
+      - text:
+          {
+            eng: "jan suli li olin e len mute.",
+            rus: "jan suli li olin e len mute.",
+            zh: "jan suli li olin e len mute.",
+          }
+      - text:
+          {
+            eng: "jan tu li kama, li toki e ni: mi pali e len pona mute. jan ike li ken ala lukin e ni.",
+            rus: "jan tu li kama, li toki e ni: mi pali e len pona mute. jan ike li ken ala lukin e ni.",
+            zh: "jan tu li kama, li toki e ni: mi pali e len pona mute. jan ike li ken ala lukin e ni.",
+          }
+      - text:
+          {
+            eng: "ona tu li kepeken linja, taso li pali e ijo ala.",
+            rus: "ona tu li kepeken linja, taso li pali e ijo ala.",
+            zh: "ona tu li kepeken linja, taso li pali e ijo ala.",
+          }
+      - text:
+          {
+            eng: "jan suli li jo ala e len, li tawa.",
+            rus: "jan suli li jo ala e len, li tawa.",
+            zh: "jan suli li jo ala e len, li tawa.",
+          }
+      - text:
+          {
+            eng: "jan mute li toki e ni: len ni li pona mute!",
+            rus: "jan mute li toki e ni: len ni li pona mute!",
+            zh: "jan mute li toki e ni: len ni li pona mute!",
+          }
+      - text:
+          {
+            eng: "jan lili wan li toki e ni: jan suli li jo ala e len!",
+            rus: "jan lili wan li toki e ni: jan suli li jo ala e len!",
+            zh: "jan lili wan li toki e ni: jan suli li jo ala e len!",
+          }
+      - text:
+          {
+            eng: "ni li lon. jan mute li sona.",
+            rus: "ni li lon. jan mute li sona.",
+            zh: "ni li lon. jan mute li sona.",
+          }
+
+  - type: story
+    items:
+      - pinyin: "{{word:da4}} {{word:ren2}} {{word:hen3}} {{word:ai4}} {{word:yi1fu}}."
+        translation:
+          {
+            eng: "The important person loves clothes very much.",
+            rus: "Важный человек очень любит одежду.",
+            zh: "这位大人物非常喜爱衣服。",
+          }
+      - pinyin: "{{word:liang3}}-ge {{word:ren2}} {{word:lai2}}, {{word:shuo1}}: {{word:wo3}} {{word:zuo4}} {{word:hen3}} {{word:hao3}}-{{word:de}} {{word:yi1fu}}. {{word:huai4}} {{word:ren2}} {{word:bu4}} {{word:neng2}} kàn-jiàn {{word:zhe4}}-ge."
+        translation:
+          {
+            eng: "Two people arrive and say: we make very fine clothes. Bad people cannot see this cloth.",
+            rus: "Приходят двое и говорят: мы делаем очень тонкую одежду. Плохие люди не могут увидеть эту ткань.",
+            zh: "两个人来了，说：我们做非常好的衣服。坏人是看不见这种布料的。",
+          }
+      - pinyin: "{{word:ta1}} {{word:yong4}} {{word:xian4}}, {{word:dan4shi4}} {{word:mei2}} {{word:zuo4}} {{word:shen2me}}."
+        translation:
+          {
+            eng: "They use thread, but they don't actually make anything.",
+            rus: "Они используют нити, но на самом деле ничего не делают.",
+            zh: "他们用了线，但其实什么都没做出来。",
+          }
+      - pinyin: "{{word:da4}} {{word:ren2}} {{word:mei2}} {{word:you3}} {{word:yi1fu}}, {{word:ta1}} {{word:qu4}}."
+        translation:
+          {
+            eng: "The important person, wearing nothing, walks out.",
+            rus: "Важный человек, ничего не надев, выходит на люди.",
+            zh: "这位大人物什么也没穿，走了出去。",
+          }
+      - pinyin: "{{word:hen3}} {{word:duo1}} {{word:ren2}} {{word:shuo1}}: {{word:zhe4}}-ge {{word:yi1fu}} {{word:hen3}} {{word:hao3}}!"
+        translation:
+          {
+            eng: "Many people say: these clothes are wonderful!",
+            rus: "Многие люди говорят: эта одежда прекрасна!",
+            zh: "很多人说：这件衣服真好看！",
+          }
+      - pinyin: "{{word:yi1}}-ge {{word:xiao3}} {{word:ren2}} {{word:shuo1}}: {{word:da4}} {{word:ren2}} {{word:mei2}} {{word:you3}} {{word:yi1fu}}!"
+        translation:
+          {
+            eng: "One child says: the important person has no clothes on!",
+            rus: "Один ребёнок говорит: на важном человеке нет одежды!",
+            zh: "一个小孩说：大人物根本没穿衣服！",
+          }
+      - pinyin: "{{word:zhe4}} {{word:hen3}} {{word:zhen1}}. {{word:ren2}} {{word:zhi1dao4}} {{word:le}}."
+        translation:
+          {
+            eng: "This is true. Now everyone knows it.",
+            rus: "Это правда. Теперь все это знают.",
+            zh: "这是真的。大家都知道了。",
+          }
+
+  - type: heading
+    text:
+      eng: "9. The Working Insect and the Playing Insect"
+      rus: "9. Работящее насекомое и игривое насекомое"
+      zh: "9. 干活的虫子和玩耍的虫子"
+
+  - type: info
+    title:
+      eng: "First, in Toki Pona"
+      rus: "Сначала на Токипоне"
+      zh: "先用道本语"
+    items:
+      - text:
+          {
+            eng: "pipi wan li pali, li alasa e moku lon tenpo mute.",
+            rus: "pipi wan li pali, li alasa e moku lon tenpo mute.",
+            zh: "pipi wan li pali, li alasa e moku lon tenpo mute.",
+          }
+      - text:
+          {
+            eng: "pipi ante li musi, li pali ala.",
+            rus: "pipi ante li musi, li pali ala.",
+            zh: "pipi ante li musi, li pali ala.",
+          }
+      - text:
+          {
+            eng: "ona li pilin pona lon tenpo suno.",
+            rus: "ona li pilin pona lon tenpo suno.",
+            zh: "ona li pilin pona lon tenpo suno.",
+          }
+      - text:
+          {
+            eng: "tenpo lete li kama.",
+            rus: "tenpo lete li kama.",
+            zh: "tenpo lete li kama.",
+          }
+      - text:
+          {
+            eng: "pipi pali li jo e moku, li pona.",
+            rus: "pipi pali li jo e moku, li pona.",
+            zh: "pipi pali li jo e moku, li pona.",
+          }
+      - text:
+          {
+            eng: "pipi musi li jo ala e moku, li pilin ike.",
+            rus: "pipi musi li jo ala e moku, li pilin ike.",
+            zh: "pipi musi li jo ala e moku, li pilin ike.",
+          }
+      - text:
+          {
+            eng: "ona li toki e ni: o pana e moku tawa mi.",
+            rus: "ona li toki e ni: o pana e moku tawa mi.",
+            zh: "ona li toki e ni: o pana e moku tawa mi.",
+          }
+      - text:
+          {
+            eng: "pipi pali li pana e moku lili.",
+            rus: "pipi pali li pana e moku lili.",
+            zh: "pipi pali li pana e moku lili.",
+          }
+
+  - type: story
+    items:
+      - pinyin: "{{word:yi1}}-ge {{word:chong2zi}} {{word:zuo4}}, {{word:zhao3}} {{word:hen3}} {{word:duo1}} {{word:chi1}}-{{word:de}}-{{word:dong1xi}}."
+        translation:
+          {
+            eng: "One insect works, gathering plenty of food.",
+            rus: "Одно насекомое трудится, собирая много еды.",
+            zh: "一只虫子干活，寻找很多食物。",
+          }
+      - pinyin: "{{word:bu4tong2}}-{{word:de}} {{word:chong2zi}} {{word:wan2}}, {{word:bu4}} {{word:zuo4}}."
+        translation:
+          {
+            eng: "A different insect plays instead, and doesn't work.",
+            rus: "Другое насекомое, наоборот, играет и не работает.",
+            zh: "另一只虫子在玩，不干活。",
+          }
+      - pinyin: "{{word:ta1}} {{word:zai4}} {{word:ri4}}-{{word:de}} {{word:shi2jian1}} {{word:jue2de}} {{word:hen3}} {{word:hao3}}."
+        translation:
+          {
+            eng: "It feels great in the sunny weather.",
+            rus: "В солнечную погоду оно чувствует себя прекрасно.",
+            zh: "在阳光的日子里，它觉得很惬意。",
+          }
+      - pinyin: "{{word:leng3}}-{{word:de}} {{word:shi2jian1}} {{word:lai2}} {{word:le}}."
+        translation:
+          {
+            eng: "Then the cold season arrives.",
+            rus: "Затем приходит холодное время года.",
+            zh: "寒冷的时节到了。",
+          }
+      - pinyin: "{{word:zuo4}}-{{word:de}} {{word:chong2zi}} {{word:you3}} {{word:chi1}}-{{word:de}}-{{word:dong1xi}}, {{word:hen3}} {{word:hao3}}."
+        translation:
+          {
+            eng: "The working insect has food, and is fine.",
+            rus: "У работящего насекомого есть еда, и оно в порядке.",
+            zh: "干活的虫子有食物，一切都好。",
+          }
+      - pinyin: "{{word:wan2}}-{{word:de}} {{word:chong2zi}} {{word:mei2}} {{word:you3}} {{word:chi1}}-{{word:de}}-{{word:dong1xi}}, {{word:jue2de}} {{word:hen3}} {{word:huai4}}."
+        translation:
+          {
+            eng: "The playing insect has no food, and feels terrible.",
+            rus: "У игривого насекомого нет еды, и оно чувствует себя ужасно.",
+            zh: "玩耍的虫子没有食物，觉得很难受。",
+          }
+      - pinyin: "{{word:ta1}} {{word:wen4}}: {{word:gei3}} {{word:wo3}} {{word:chi1}}-{{word:de}}-{{word:dong1xi}}."
+        translation:
+          {
+            eng: "It asks: give me some food.",
+            rus: "Оно спрашивает: дай мне немного еды.",
+            zh: "它问：给我一点食物吧。",
+          }
+      - pinyin: "{{word:zuo4}}-{{word:de}} {{word:chong2zi}} {{word:gei3}} {{word:le}} {{word:xiao3}}-{{word:de}} {{word:chi1}}-{{word:de}}-{{word:dong1xi}}."
+        translation:
+          {
+            eng: "The working insect gives it a little food.",
+            rus: "Работящее насекомое даёт ему немного еды.",
+            zh: "干活的虫子给了它一点点食物。",
+          }
+
+  - type: heading
+    text:
+      eng: "10. The Fisherman and the Strange Fish"
+      rus: "10. Рыбак и странная рыба"
+      zh: "10. 渔夫和奇怪的鱼"
+
+  - type: info
+    title:
+      eng: "First, in Toki Pona"
+      rus: "Сначала на Токипоне"
+      zh: "先用道本语"
+    items:
+      - text:
+          {
+            eng: "jan li alasa e kala lon telo.",
+            rus: "jan li alasa e kala lon telo.",
+            zh: "jan li alasa e kala lon telo.",
+          }
+      - text:
+          {
+            eng: "kala li toki: mi kala nasa. o pana e mi tawa telo, mi pana e ijo pona tawa sina.",
+            rus: "kala li toki: mi kala nasa. o pana e mi tawa telo, mi pana e ijo pona tawa sina.",
+            zh: "kala li toki: mi kala nasa. o pana e mi tawa telo, mi pana e ijo pona tawa sina.",
+          }
+      - text:
+          {
+            eng: "jan li pana e kala tawa telo.",
+            rus: "jan li pana e kala tawa telo.",
+            zh: "jan li pana e kala tawa telo.",
+          }
+      - text:
+          {
+            eng: "meli pi jan ni li wile mani mute.",
+            rus: "meli pi jan ni li wile mani mute.",
+            zh: "meli pi jan ni li wile mani mute.",
+          }
+      - text:
+          {
+            eng: "kala li pana e mani tawa ona.",
+            rus: "kala li pana e mani tawa ona.",
+            zh: "kala li pana e mani tawa ona.",
+          }
+      - text:
+          {
+            eng: "meli li wile kama jan suli mute.",
+            rus: "meli li wile kama jan suli mute.",
+            zh: "meli li wile kama jan suli mute.",
+          }
+      - text:
+          {
+            eng: "kala li pilin ike, li kama jo e ijo ala.",
+            rus: "kala li pilin ike, li kama jo e ijo ala.",
+            zh: "kala li pilin ike, li kama jo e ijo ala.",
+          }
+      - text:
+          {
+            eng: "jan en meli li jo ala e ijo.",
+            rus: "jan en meli li jo ala e ijo.",
+            zh: "jan en meli li jo ala e ijo.",
+          }
+
+  - type: story
+    items:
+      - pinyin: "{{word:ren2}} {{word:zai4}} {{word:shui3}} {{word:li3mian4}} {{word:zhao3}} dào {{word:yu2}}."
+        translation:
+          {
+            eng: "A person, in the water, finds a fish.",
+            rus: "Человек находит в воде рыбу.",
+            zh: "一个人在水里捉到了一条鱼。",
+          }
+      - pinyin: "{{word:yu2}} {{word:shuo1}}: {{word:wo3}} {{word:shi4}} {{word:qi2guai4}}-{{word:de}} {{word:yu2}}. {{word:gei3}} {{word:wo3}} {{word:shui3}}, {{word:wo3}} {{word:gei3}} {{word:ni3}} {{word:hao3}}-{{word:de}} {{word:dong1xi}}."
+        translation:
+          {
+            eng: "The fish speaks: I am a strange fish. Give me the water, and I'll give you good things.",
+            rus: "Рыба говорит: я необычная рыба. Отпусти меня в воду, и я дам тебе хорошие вещи.",
+            zh: "鱼说话了：我是一条奇怪的鱼。把水还给我，我就给你好东西。",
+          }
+      - pinyin: "{{word:ren2}} {{word:ba3}} {{word:yu2}} {{word:gei3}} {{word:shui3}}."
+        translation:
+          {
+            eng: "The person returns the fish to the water.",
+            rus: "Человек отпускает рыбу обратно в воду.",
+            zh: "那人把鱼放回了水里。",
+          }
+      - pinyin: "{{word:ren2}}-{{word:de}} {{word:nv3ren2}} {{word:yao4}} {{word:hen3}} {{word:duo1}} {{word:qian2}}."
+        translation:
+          {
+            eng: "The person's wife wants a lot of money.",
+            rus: "Жена этого человека хочет много денег.",
+            zh: "那人的妻子想要很多钱。",
+          }
+      - pinyin: "{{word:yu2}} {{word:gei3}} {{word:ta1}} {{word:qian2}}."
+        translation:
+          {
+            eng: "The fish gives her money.",
+            rus: "Рыба даёт ей денег.",
+            zh: "鱼给了她钱。",
+          }
+      - pinyin: "{{word:nv3ren2}} {{word:yao4}} {{word:bian4}} {{word:hen3}} {{word:da4}}-{{word:de}} {{word:ren2}}."
+        translation:
+          {
+            eng: "The wife wants to become a very important person.",
+            rus: "Жена хочет стать очень важной персоной.",
+            zh: "妻子想要变成一个非常重要的人物。",
+          }
+      - pinyin: "{{word:yu2}} {{word:hen3}} {{word:huai4}}. {{word:qian2}} {{word:mei2}} {{word:you3}} {{word:le}}."
+        translation:
+          {
+            eng: "The fish is very displeased. The money is gone.",
+            rus: "Рыба очень недовольна. Денег больше нет.",
+            zh: "鱼很生气。钱一下子就没了。",
+          }
+      - pinyin: "{{word:ren2}} {{word:he2}} {{word:nv3ren2}} {{word:mei2}} {{word:you3}} {{word:qian2}}."
+        translation:
+          {
+            eng: "The person and his wife have no money at all.",
+            rus: "У человека и его жены совсем нет денег.",
+            zh: "那人和妻子什么钱都没有了。",
+          }

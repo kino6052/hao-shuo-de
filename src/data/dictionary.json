@@ -1791,6 +1791,76 @@
         "zh": "方式，习俗，道路，方法，学说"
       },
       "maps": "nasin"
+    },
+    "sheng1yin1": {
+      "term": "shēngyīn",
+      "pos": {
+        "eng": "noun",
+        "rus": "существительное",
+        "zh": "名词"
+      },
+      "definition": {
+        "eng": "sound, noise, voice",
+        "rus": "звук, шум, голос",
+        "zh": "声音，噪音，嗓音"
+      },
+      "maps": "kalama"
+    },
+    "zhen1": {
+      "term": "zhēn",
+      "pos": {
+        "eng": "adjective",
+        "rus": "прилагательное",
+        "zh": "形容词"
+      },
+      "definition": {
+        "eng": "true, real, genuine, actual",
+        "rus": "истинный, настоящий, подлинный",
+        "zh": "真的，真实的，真正的"
+      },
+      "maps": "lon"
+    },
+    "wen4": {
+      "term": "wèn",
+      "pos": {
+        "eng": "verb",
+        "rus": "глагол",
+        "zh": "动词"
+      },
+      "definition": {
+        "eng": "to ask, inquire, question",
+        "rus": "спрашивать, задавать вопрос",
+        "zh": "问，询问，提问"
+      },
+      "maps": ""
+    },
+    "na3li3": {
+      "term": "nǎlǐ",
+      "pos": {
+        "eng": "pronoun",
+        "rus": "местоимение",
+        "zh": "代词"
+      },
+      "definition": {
+        "eng": "where; which place",
+        "rus": "где; какое место",
+        "zh": "哪里，什么地方"
+      },
+      "maps": ""
+    },
+    "pa4": {
+      "term": "pà",
+      "pos": {
+        "eng": "verb/adjective",
+        "rus": "глагол/прилагательное",
+        "zh": "动词/形容词"
+      },
+      "definition": {
+        "eng": "to fear, be afraid of; scared, frightened",
+        "rus": "бояться, пугаться; испуганный",
+        "zh": "害怕，恐惧；害怕的"
+      },
+      "maps": ""
     }
   },
   "categories": [
@@ -1968,7 +2038,8 @@
           "wordIds": [
             "ci2",
             "li4liang4",
-            "xing4"
+            "xing4",
+            "sheng1yin1"
           ]
         }
       ]
@@ -2157,7 +2228,8 @@
           },
           "wordIds": [
             "yao4",
-            "ai4"
+            "ai4",
+            "pa4"
           ]
         },
         {
@@ -2195,7 +2267,8 @@
       },
       "wordIds": [
         "shuo1",
-        "xie3"
+        "xie3",
+        "wen4"
       ]
     },
     {
@@ -2450,7 +2523,8 @@
           },
           "wordIds": [
             "wei4shen2me",
-            "zen3me"
+            "zen3me",
+            "na3li3"
           ]
         },
         {
@@ -2462,6 +2536,17 @@
           },
           "wordIds": [
             "neng2"
+          ]
+        },
+        {
+          "key": "truth-value",
+          "title": {
+            "eng": "Truth Value",
+            "rus": "Истинностное значение",
+            "zh": "真值"
+          },
+          "wordIds": [
+            "zhen1"
           ]
         }
       ]
