@@ -71,12 +71,14 @@ méi | particle | negative particle used exclusively to negate the verb you (to 
 mǐfàn | noun | grain, rice, cereal, bread, pasta, staple food | pan
 mō | verb | to touch, feel, pet, perceive by contact | pilin
 nà | pronoun/adjective | that, those; syntactically binds as na-ge | ni
+nǎlǐ | pronoun | where; which place |
 nánrén | noun | man, male, masculine human, husband | mije
 néng | auxiliary | to be able to, be allowed to, can, may, possible | ken
 nǐ | pronoun | you | sina
 ní | noun | paste, mud, dough, clay, semi-solid substance, powder | ko
 niǎo | noun | bird, flying creature, winged animal | waso
 nǚrén | noun | woman, female, feminine human, wife | meli
+pà | verb/adjective | to fear, be afraid of; scared, frightened |
 pángbiān | noun | side, vicinity, area beside, hip | poka
 páxíngdòngwù | noun | reptile, amphibian, non-cute crawling animal | akesi
 pífū | noun | skin, outer layer, bark, peel, shell, boundary | selo
@@ -90,6 +92,7 @@ rè | adjective | hot, warm, cooked, chemically energetic | seli
 rén | noun | human being, person, somebody | jan
 rì | noun | sun, radiant light source, brightness, glow | suno
 shàngmiàn | noun | above, highest part, sky, elevated location, supernatural area | sewi
+shēngyīn | noun | sound, noise, voice | kalama
 shénme | pronoun/particle | what? which?; retains position without altering Chinese SVO statement geometry | seme
 shēntǐ | noun | body, physical torso, physical state | sijelo
 shì | verb | to be, copula link between subjects and identity predicates |
@@ -109,6 +112,7 @@ wài | verb/adjective | away, outside | weka
 wán | verb/adjective | to play, have fun, engage in recreation; playful, artistic, frivolous | musi
 wánchéng | verb complement | finish, end, achieve completion; syntactically binds behind action verbs to express resultative closure | pini
 wèishénme | pronoun | why |
+wèn | verb | to ask, inquire, question |
 wǒ | pronoun | I, me, we, us | mi
 xiàmiàn | noun | below, underneath, under, lower part | noka, anpa
 xiàn | noun | line, rope, hair, thread, cord, flexible long thing | linja
@@ -134,6 +138,7 @@ zài | verb/coverb | to exist at, be located at, present in a room | lon
 zěnme | pronoun | how |
 zhǎo | verb | to hunt, forage, search for, look for | alasa
 zhè | pronoun/adjective | this, these; syntactically binds as zhe-ge | ni
+zhēn | adjective | true, real, genuine, actual | lon
 zhīdào | verb/auxiliary | to know, be wise about, possess information; know how to | sona
 zhíwù | noun | plant, vegetation, herb, leaf | kasi
 zuò | verb | to do, take action on, work on, build, make, prepare | pali
