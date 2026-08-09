@@ -8,7 +8,6 @@ order: 8
 
 ```vocab
 {{word:gong1ju4}} | tool, machine, device
-{{word:yu2}} | fish, sea creature
 {{word:ta1}} | he, she, it, they
 {{word:huo4zhe3}} | or
 {{word:shen2me}} | what, which
@@ -34,8 +33,8 @@ To answer "yes," simply repeat the main verb. To answer "no," repeat the verb al
 {{Word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}} {{word:fu4mu3}}? | Do you obey your parents?
 {{Word:bu4}} {{word:ting1}}. | No. / I don't obey.
 {{Word:ta1}} {{word:zai4}} {{word:chi1}} {{word:shen2me}}? | What is it eating?
-{{Word:ni3}} {{word:gei3}} {{word:ta1}} {{word:yu2}} {{word:ma}}? | Are you giving her a fish?
-{{Word:wei4shen2me}} {{word:ni3}} {{word:gei3}} {{word:ta1}} {{word:yu2}}? | Why you are giving her a fish?
+{{Word:ni3}} {{word:gei3}} {{word:ta1}} {{word:zai4}}-{{word:shui3}}-lǐ-{{word:de}} {{word:dong4wu4}} {{word:ma}}? | Are you giving her a swimming animal?
+{{Word:wei4shen2me}} {{word:ni3}} {{word:gei3}} {{word:ta1}} {{word:zai4}}-{{word:shui3}}-lǐ-{{word:de}} {{word:dong4wu4}}? | Why are you giving her a swimming animal?
 {{Word:ni3}} {{word:zen3me}} {{word:ba3}} Hǎo-shuō-de {{word:bian4}} {{word:zhi1dao4}}? | How do you learn Hao-shuo-de?
 ```
 

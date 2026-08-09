@@ -26,7 +26,6 @@ dànshì | conjunction | but, however, only | taso
 dé | verb | to get, obtain, acquire, come to have; combines with a de-nominalized verb phrase to express acquiring an abstract result (e.g. de zhidao-de, "to learn", literally "to obtain the known-thing") | kama
 de | particle | possessive marker, structural adjectival particle; used to bind modifiers and multi-word description structures onto target nouns | pi
 děng | verb | to wait |
-dìbǎn | noun | floor, horizontal surface, platform, couch, flat resting area | supa
 dìfāng | noun | a place (both in space or metaphorical to mean part of something) |
 dòngwù | noun | animal, land mammal, beast | soweli
 dōngxi | noun | thing, phenomenon, object, physical being, matter | ijo
@@ -76,11 +75,9 @@ nánrén | noun | man, male, masculine human, husband | mije
 néng | auxiliary | to be able to, be allowed to, can, may, possible | ken
 nǐ | pronoun | you | sina
 ní | noun | paste, mud, dough, clay, semi-solid substance, powder | ko
-niǎo | noun | bird, flying creature, winged animal | waso
 nǚrén | noun | woman, female, feminine human, wife | meli
 pà | verb/adjective | to fear, be afraid of; scared, frightened |
 pángbiān | noun | side, vicinity, area beside, hip | poka
-páxíngdòngwù | noun | reptile, amphibian, non-cute crawling animal | akesi
 pífū | noun | skin, outer layer, bark, peel, shell, boundary | selo
 qián | noun | money, cash, savings, wealth | mani
 qiánmiàn | noun | front, face, foremost area, chest | sinpin
@@ -105,6 +102,7 @@ shuìjiào | verb/adjective | to sleep, rest, be inactive; sleeping, asleep | la
 shuō | verb/noun | to communicate, say, speak, talk, use language; language, speech | toki
 sǐ | verb/adjective | to die; dead, dying | moli
 tā | pronoun | he, she, it, they, them; syntactically genderless and number-fluid | ona
+tái | noun | floor, horizontal surface, platform, couch, flat resting area | supa
 tián | adjective | sweet, fragrant, cute, innocent, adorable | suwi
 tīng | verb | to hear, listen, pay attention to, obey | kute
 tóu | noun | head, mind, internal regulatory director | lawa
@@ -131,7 +129,6 @@ yīnwèi | conjunction/coverb | because, because of |
 yīyàng | adjective | same, similar, peer, fellow, each other | sama
 yòng | verb/coverb | to use, utilize; with, by means of | kepeken
 yǒu | verb | to have, contain, carry, hold, exist, there is; must be negated with mei, never bu | jo, lon
-yú | noun | fish, marine animal, sea creature | kala
 yuán | adjective/noun | round, circular, spherical; ball, circle, wheel, cycle | sike
 yuè | noun | moon, night sky object, star | mun
 zài | verb/coverb | to exist at, be located at, present in a room | lon

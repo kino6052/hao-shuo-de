@@ -406,48 +406,6 @@
       },
       "maps": "pipi"
     },
-    "niao3": {
-      "term": "niǎo",
-      "pos": {
-        "eng": "noun",
-        "rus": "существительное",
-        "zh": "名词"
-      },
-      "definition": {
-        "eng": "bird, flying creature, winged animal",
-        "rus": "птица, летающее существо, крылатое животное",
-        "zh": "鸟，飞行生物，有翼动物"
-      },
-      "maps": "waso"
-    },
-    "pa2xing2dong4wu4": {
-      "term": "páxíngdòngwù",
-      "pos": {
-        "eng": "noun",
-        "rus": "существительное",
-        "zh": "名词"
-      },
-      "definition": {
-        "eng": "reptile, amphibian, non-cute crawling animal",
-        "rus": "рептилия, земноводное, неприятное на вид ползающее животное",
-        "zh": "爬行动物，两栖动物，不可爱的爬行生物"
-      },
-      "maps": "akesi"
-    },
-    "yu2": {
-      "term": "yú",
-      "pos": {
-        "eng": "noun",
-        "rus": "существительное",
-        "zh": "名词"
-      },
-      "definition": {
-        "eng": "fish, marine animal, sea creature",
-        "rus": "рыба, морское животное, морское существо",
-        "zh": "鱼，海洋动物，海洋生物"
-      },
-      "maps": "kala"
-    },
     "dong1xi": {
       "term": "dōngxi",
       "pos": {
@@ -1457,7 +1415,7 @@
       "maps": ""
     },
     "di4ban3": {
-      "term": "dìbǎn",
+      "term": "tái",
       "pos": {
         "eng": "noun",
         "rus": "существительное",
@@ -1968,10 +1926,7 @@
           },
           "wordIds": [
             "dong4wu4",
-            "chong2zi",
-            "niao3",
-            "pa2xing2dong4wu4",
-            "yu2"
+            "chong2zi"
           ]
         },
         {
