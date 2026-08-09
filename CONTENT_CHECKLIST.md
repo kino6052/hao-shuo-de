@@ -682,3 +682,6 @@ Every file currently in `src/content/`. Each chapter nests up to three grouped s
 - [ ] Add search across the site
 - [ ] Add video chapter
 - [ ] Add online translator
+- [ ] Chapter 5 should list all prepositions
+- [] remove tamen
+- [] reorganize checklist theory / practice / implementation details
