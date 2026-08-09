@@ -143,6 +143,7 @@
       "appendix-stories",
       "appendix-grammar",
       "lesson-05",
+      "lesson-06",
       "lesson-08",
       "lesson-09",
       "lesson-13",
@@ -259,6 +260,7 @@
       "appendix-stories",
       "lesson-05",
       "lesson-06",
+      "lesson-07",
       "lesson-12"
     ],
     "mi3fan4": [
@@ -415,7 +417,6 @@
     ],
     "ge4": [
       "appendix-minimality",
-      "lesson-02",
       "lesson-03",
       "appendix-grammar",
       "lesson-13"
@@ -707,6 +708,7 @@
       "appendix-minimality",
       "appendix-stories",
       "appendix-grammar",
+      "lesson-06",
       "lesson-09",
       "lesson-14",
       "lesson-15",
@@ -927,7 +929,6 @@
     "de": [
       "proverbs",
       "appendix-minimality",
-      "lesson-02",
       "appendix-stories",
       "lesson-03",
       "appendix-grammar",
@@ -952,6 +953,7 @@
       "appendix-stories",
       "appendix-grammar",
       "lesson-06",
+      "lesson-07",
       "lesson-09",
       "lesson-11",
       "lesson-13",
@@ -1074,6 +1076,20 @@
     ],
     "pa4": [
       "appendix-stories"
-    ]
+    ],
+    "xia4": [
+      "lesson-06"
+    ],
+    "shang4": [
+      "lesson-06"
+    ],
+    "qi3": [
+      "lesson-06"
+    ],
+    "hou4": [],
+    "li3": [],
+    "mian4": [],
+    "bian1": [],
+    "pang2": []
   }
 }

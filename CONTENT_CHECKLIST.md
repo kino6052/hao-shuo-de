@@ -656,7 +656,7 @@ Every file currently in `src/content/`. Each chapter nests up to three grouped s
     - [x] 8.29.1.1 Directly resolves §5.2.34: all 29 confirmed grammar patterns from §5.2.1-5.2.29 are pulled into one page, grouped by function (word formation, sentence core, modification, verbs/aspect, causative, questions, coverbs, numbers, topic/connectors, speech acts) instead of by lesson number
     - [x] 8.29.1.2 Every entry gives a formula, a short trilingual explanation, a worked `{{word:ID}}`-referenced example, and the lesson it was first taught in, so the reader can always go back to the fuller original explanation
     - [x] 8.29.1.3 Closes with an explicit "not yet covered" note naming the four still-open grammar gaps (§5.2.30-33: negated existence, comparison, time/frequency, plurals beyond gè) rather than silently omitting them, matching the project's practice of naming gaps instead of papering over them
-    - [ ] 8.29.1.4 Doesn't cross-link back to the *specific* lesson section each pattern elaborates (only names the lesson number), mirroring the same bidirectional-navigation gap already flagged for appendix-pinyin at §2.9/§8.24.1.10
+    - [ ] 8.29.1.4 Doesn't cross-link back to the _specific_ lesson section each pattern elaborates (only names the lesson number), mirroring the same bidirectional-navigation gap already flagged for appendix-pinyin at §2.9/§8.24.1.10
   - **8.29.2 Production Quality**
     - [x] 8.29.2.1 Fully trilingual (eng/rus/zh) from day one, YAML block schema throughout (heading + info blocks per pattern, matching the "New Words" info-block style already established in `appendix-stories.yaml`)
     - [x] 8.29.2.2 Every `{{word:ID}}` reference verified to resolve against `dictionary.json` (build-throws-on-unknown-id check, same mechanism as §8.28.1.2)
@@ -675,9 +675,10 @@ Every file currently in `src/content/`. Each chapter nests up to three grouped s
 - [ ] 9.8 Build the phrase book (§6) — entirely new content
 - [ ] 9.9 Decide and document the numbers design (§3.2/§5.2) — this single decision unblocks lesson-13, the dictionary, and the phrase book simultaneously
 - [x] 9.10 **Every chapter now references dictionary vocabulary by id (`{{word:ID}}`/`{{Word:ID}}`) instead of hardcoding pinyin** — `dictionary.json` is the single source of truth for spelling; a word's spelling can change in one place and every chapter picks it up automatically, and usage is exactly, mechanically trackable (`scripts/generate-word-usage.js` → `src/data/word-usage.json`, surfaced in the dictionary UI). Gap words not yet in the dictionary (kěyǐ, dào, líkāi, the numbers, etc., §3.2) are still hardcoded literal text since they have no id to reference — resolving §3.2 also brings them into this system. (`shēngyīn` used to be one of these examples; it's now a real dictionary entry, added for §8.28)
-- [x] 9.11 A worked example of this book's own minimality claim now exists outside the theory chapter: `appendix-stories.yaml` retells ten well-known tales using only dictionary vocabulary, functioning as an informal, larger-scale version of the "stress test" §4.6/§8.25.1.7 still asks for (though a single hard *concept* decomposed live is still missing — these are narratives, not a decomposition walkthrough)
+- [x] 9.11 A worked example of this book's own minimality claim now exists outside the theory chapter: `appendix-stories.yaml` retells ten well-known tales using only dictionary vocabulary, functioning as an informal, larger-scale version of the "stress test" §4.6/§8.25.1.7 still asks for (though a single hard _concept_ decomposed live is still missing — these are narratives, not a decomposition walkthrough)
 
 ## 10 Misc
 
 - [ ] Add search across the site
 - [ ] Add video chapter
+- [ ] Add online translator
