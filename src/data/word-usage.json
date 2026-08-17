@@ -12,6 +12,10 @@
       "label": "The Pinyin System",
       "order": 1
     },
+    "appendix-sandhi": {
+      "label": "Tone Sandhi Reference",
+      "order": 1.5
+    },
     "appendix-stories": {
       "label": "Ten Short Stories",
       "order": 3
@@ -98,6 +102,10 @@
     },
     "proverbs": {
       "label": "Hao-shuo-de Proverbs",
+      "order": 1
+    },
+    "sentence-builder": {
+      "label": "Sentence Builder",
       "order": 1
     }
   },

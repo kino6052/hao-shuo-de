@@ -1,7 +1,7 @@
 const mdModules = import.meta.glob('../content/*.md', { eager: true });
 const chapterModules = import.meta.glob('../content/*.{yaml,yml}', { eager: true });
 
-const TYPE_ORDER = { intro: 0, lesson: 1, proverbs: 2, dictionary: 3, appendix: 4 };
+const TYPE_ORDER = { intro: 0, lesson: 1, proverbs: 2, dictionary: 3, "sentence-builder": 3.5, appendix: 4 };
 const LANGS = ['eng', 'rus', 'zh'];
 
 // Markdown sections are already language-specific (one file per language).

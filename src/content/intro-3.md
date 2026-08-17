@@ -1,11 +1,20 @@
 ---
 id: intro-3
-title: "How this book works"
+title: "How small can a language be?"
 type: intro
 order: 3
 language: eng
 ---
 
-One hundred and twenty words is not much to memorize, but even a small pile of syllables can look like a wall if it's written without any signposts. So this book marks a few of them for you: words that belong together are written as one solid block, like **<audio-example zh="动物">dòngwù</audio-example>** for animal, and hyphens show you exactly where a piece of grammar has attached itself to a word, like **<audio-example zh="这个">zhè-ge</audio-example>** for "this one."
+Here's a question worth sitting with: what is the smallest number of words you would need to say almost anything, and still be understood?
 
-You don't need to know any Chinese to begin. Just take the lessons in the order they come — each one rests on the one before it, and builds only what you're ready for.
+In 2001, a linguist named Sonja Lang decided to find out. She built a language called Toki Pona, and gave herself just about 120 words to work with — no more. It sounds impossibly restrictive. How do you say "car" without the word for car? You don't invent one. Instead you combine what you already have: a car becomes a "moving box." Hunger becomes "wanting to eat." Teaching becomes "giving knowledge." With only 120 well-chosen concepts, combined freely, people could think clearly and say almost anything they needed to.
+
+<audio-example zh="好说的">Hǎo-shuō-de</audio-example> borrows the result of that experiment, but not the language itself. Every word you'll learn here, and every rule of grammar, is ordinary, real, standard Mandarin — nothing invented, nothing to unlearn later. What <audio-example zh="好说的">Hǎo-shuō-de</audio-example> borrows from Toki Pona is only the discipline: freeze the vocabulary at around {{dictionaryCount}} words, and suddenly there's nothing left to distract you from the grammar.
+
+And because the grammar is entirely real, a native speaker understands you from your very first sentence. Don't expect to sound fluent — with {{dictionaryCount}} words, you'll speak the way a very honest, very literal person speaks. But every sentence will be correct Mandarin, not a simplified stand-in for it.
+
+```examples
+Nǐ hǎo ma? | Hello, how are you? (literally: "you good?")
+Wǒ zhīdào Hǎo-shuō-de. | I know Hǎo-shuō-de.
+```

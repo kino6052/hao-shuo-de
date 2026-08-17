@@ -9,6 +9,7 @@ import { PracticeExercise } from './components/PracticeExercise.jsx';
 import { StoryBlock } from './components/StoryBlock.jsx';
 import { DictionarySection } from './components/DictionarySection.jsx';
 import { CategoricalDictionarySection } from './components/CategoricalDictionarySection.jsx';
+import { SentenceBuilder } from './components/SentenceBuilder.jsx';
 import { ProverbList } from './components/ProverbList.jsx';
 import { PageNav } from './components/PageNav.jsx';
 import { TldrSummary } from './components/TldrSummary.jsx';
@@ -44,6 +45,14 @@ function renderContent(s, lang) {
       );
     }
     return <DictionarySection items={s.dict} lang={lang} />;
+  }
+  if (type === 'sentence-builder') {
+    return (
+      <>
+        {s.bodyHtml && <div class="prose-body" dangerouslySetInnerHTML={{ __html: s.bodyHtml }} />}
+        <SentenceBuilder lang={lang} />
+      </>
+    );
   }
   return (
     <>

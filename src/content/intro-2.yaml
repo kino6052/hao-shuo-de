@@ -1,0 +1,20 @@
+id: intro-2
+type: intro
+lessonNumber: 2
+order: 1
+title:
+  eng: "Why is Chinese so hard?"
+  rus: ""
+  zh: ""
+
+summary:
+  eng: "Chinese is hard because it is a very complex and hardly-entangled system. Hao-shuo-de, on the other hand, focuses only on the vital parts of the language that makes it incredibly easy to master."
+  rus: "..."
+  zh: ""
+
+blocks:
+  - type: prose
+    text:
+      eng: ""
+      rus: ""
+      zh: ""

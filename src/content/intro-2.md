@@ -1,20 +1,17 @@
----
+<!-- ---
 id: intro-2
-title: "How small can a language be?"
+title: "Why is Chinese so hard?"
 type: intro
 order: 2
 language: eng
 ---
 
-Here's a question worth sitting with: what is the smallest number of words you would need to say almost anything, and still be understood?
+Ask any beginner why Chinese is difficult, and you'll hear the same answer: too many characters. That's true, but it's only part of the story — and not even the most important part.
 
-In 2001, a linguist named Sonja Lang decided to find out. She built a language called Toki Pona, and gave herself just about 120 words to work with — no more. It sounds impossibly restrictive. How do you say "car" without the word for car? You don't invent one. Instead you combine what you already have: a car becomes a "moving box." Hunger becomes "wanting to eat." Teaching becomes "giving knowledge." With only 120 well-chosen concepts, combined freely, people could think clearly and say almost anything they needed to.
+Here is what really happens. Open a Chinese textbook, and on page one you are asked to do four things at once. Learn a character that looks nothing like any letter you've ever seen. Learn to pronounce it with a tone that can turn "mother" into "horse" if you get it slightly wrong. Learn where it belongs in a sentence, according to rules that owe nothing to English. And remember it, among the thousands of others waiting on the following pages. Try to do all four at once, and your attention doesn't focus — it scatters. No wonder progress feels so slow: you're not learning one hard thing, you're juggling four of them.
 
-<audio-example zh="好说的">Hǎo-shuō-de</audio-example> borrows the result of that experiment, but not the language itself. Every word you'll learn here, and every rule of grammar, is ordinary, real, standard Mandarin — nothing invented, nothing to unlearn later. What <audio-example zh="好说的">Hǎo-shuō-de</audio-example> borrows from Toki Pona is only the discipline: freeze the vocabulary at around {{dictionaryCount}} words, and suddenly there's nothing left to distract you from the grammar.
+There's a name for this kind of problem, and it comes from an unexpected place — not linguistics, but software engineering. When every part of a system depends on every other part, so that touching one thing forces you to think about ten others, engineers call the system "tightly coupled." Their answer was "separation of concerns": pull the tangled system apart into independent pieces, each of which can be learned, tested, or improved on its own.
 
-And because the grammar is entirely real, a native speaker understands you from your very first sentence. Don't expect to sound fluent — with {{dictionaryCount}} words, you'll speak the way a very honest, very literal person speaks. But every sentence will be correct Mandarin, not a simplified stand-in for it.
+<audio-example zh="好说的">Hǎo-shuō-de</audio-example> is that idea applied to Chinese. It takes the four tangled problems — characters, tones, grammar, vocabulary — and pulls one of them loose: vocabulary. What's left is small enough to hold in your head all at once, and real enough that you're speaking actual Mandarin from the very first sentence.
 
-```examples
-Nǐ hǎo ma? | Hello, how are you? (literally: "you good?")
-Wǒ zhīdào Hǎo-shuō-de. | I know Hǎo-shuō-de.
-```
+> **<audio-example zh="好说的">Hǎo-shuō-de</audio-example> changes the rules of the game.** -->
