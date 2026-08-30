@@ -4,7 +4,9 @@ import { buildTsChapterView } from './chapter-content.js';
 
 const mdModules = import.meta.glob('../content/*.md', { eager: true });
 const chapterModules = import.meta.glob('../content/*.{yaml,yml}', { eager: true });
-const tsChapterModules = import.meta.glob('../content/*.ts', { eager: true });
+// Recursive: lessons now live one per folder (../content/lesson-01/index.ts),
+// while other *.ts chapters (intro-*) still sit flat directly in content/.
+const tsChapterModules = import.meta.glob('../content/**/*.ts', { eager: true });
 
 const TYPE_ORDER = { intro: 0, lesson: 1, proverbs: 2, dictionary: 3, "sentence-builder": 3.5, appendix: 4 };
 const LANGS = ['eng', 'rus', 'zh'];

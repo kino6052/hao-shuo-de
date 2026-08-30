@@ -16,11 +16,12 @@
 // Regenerate after editing any lesson/proverbs/appendix content or the
 // dictionary itself: `node scripts/generate-word-usage.js`.
 
-import { readFileSync, writeFileSync, readdirSync } from 'fs';
+import { readFileSync, writeFileSync } from 'fs';
 import { resolve } from 'path';
-import { fileURLToPath } from 'url';
+import { fileURLToPath, pathToFileURL } from 'url';
 import matter from 'gray-matter';
 import { parse as parseYaml } from 'yaml';
+import { listContentFiles } from './list-content-files.js';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -36,11 +37,11 @@ const EXCLUDE_PREFIXES = ['intro-', 'dictionary'];
 const WORD_REF_RE = /\{\{(?:word|Word):([a-z0-9-]+)\}\}/g;
 
 function isTrackedFile(filename) {
-  if (!filename.endsWith('.md') && !filename.endsWith('.yaml') && !filename.endsWith('.yml')) return false;
+  if (!filename.endsWith('.md') && !filename.endsWith('.yaml') && !filename.endsWith('.yml') && !filename.endsWith('.ts')) return false;
   return !EXCLUDE_PREFIXES.some((prefix) => filename.startsWith(prefix));
 }
 
-function loadChapter(filename) {
+async function loadChapter(filename) {
   const raw = readFileSync(resolve(CONTENT_DIR, filename), 'utf-8');
 
   if (filename.endsWith('.yaml') || filename.endsWith('.yml')) {
@@ -53,6 +54,20 @@ function loadChapter(filename) {
       lessonNumber: chapter.lessonNumber,
       order: chapter.order ?? 999,
       title: chapter.title?.eng ?? chapter.id,
+      raw,
+    };
+  }
+
+  if (filename.endsWith('.ts')) {
+    // See src/lib/chapter-content.js: meta.title lives in the entries array
+    // (a `type: 'title'` entry), not on `meta` itself.
+    const { meta, default: entries } = await import(pathToFileURL(resolve(CONTENT_DIR, filename)));
+    const titleEntry = entries.find((e) => e.type === 'title');
+    return {
+      id: meta.id,
+      lessonNumber: meta.lessonNumber,
+      order: meta.order ?? 999,
+      title: titleEntry?.en?.join(' ') || meta.id,
       raw,
     };
   }
@@ -73,10 +88,10 @@ function collectWordRefs(text) {
   return ids;
 }
 
-function main() {
+async function main() {
   const dictionary = JSON.parse(readFileSync(DICTIONARY_PATH, 'utf-8'));
-  const files = readdirSync(CONTENT_DIR).filter(isTrackedFile);
-  const chaptersRaw = files.map(loadChapter);
+  const files = listContentFiles(CONTENT_DIR).filter(isTrackedFile);
+  const chaptersRaw = await Promise.all(files.map(loadChapter));
 
   const chapters = {};
   for (const c of chaptersRaw) {
@@ -112,4 +127,4 @@ function main() {
   console.log(`${usedCount} words used somewhere; ${total - usedCount} words not used anywhere.`);
 }
 
-main();
+await main();

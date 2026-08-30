@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/generate-word-usage.js && vite build && node scripts/generate-pages.js && vite build && node scripts/generate-dictionary.js",
+    "build": "node scripts/generate-word-usage.js && node scripts/generate-dictionary.js && vite build && node scripts/generate-pages.js",
     "preview": "vite preview",
     "test": "bun test",
     "word-usage": "node scripts/generate-word-usage.js"

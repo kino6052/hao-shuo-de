@@ -687,3 +687,4 @@ Every file currently in `src/content/`. Each chapter nests up to three grouped s
 - [] reorganize checklist theory / practice / implementation details
 - [] how toki-pona is different from hao-shuo-de
 - [] pronounciation course - phonetic notation exercises to capture pinyin
+- https://resources.allsetlearning.com/chinese/pronunciation/IPA

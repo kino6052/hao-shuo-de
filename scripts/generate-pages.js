@@ -1,8 +1,9 @@
-import { readFileSync, readdirSync, mkdirSync, writeFileSync } from "fs";
+import { readFileSync, mkdirSync, writeFileSync } from "fs";
 import { resolve, join } from "path";
 import { fileURLToPath, pathToFileURL } from "url";
 import matter from "gray-matter";
 import { parse as parseYaml } from "yaml";
+import { listContentFiles } from "./list-content-files.js";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const ROOT = resolve(__dirname, "..");
@@ -21,7 +22,8 @@ const LANG_MAP = { eng: "en", rus: "ru", zh: "zh" };
 const rootHtml = readFileSync(join(DIST_DIR, "index.html"), "utf-8");
 
 const routes = new Set();
-const allFiles = readdirSync(CONTENT_DIR);
+// Recursive: lessons now live one per folder (src/content/lesson-01/index.ts).
+const allFiles = listContentFiles(CONTENT_DIR);
 
 // Markdown: one file per language, language given in frontmatter.
 for (const file of allFiles.filter((f) => f.endsWith(".md"))) {
