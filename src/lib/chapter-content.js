@@ -49,6 +49,8 @@ export function buildTsChapterView(meta, entries, lang, refs = {}) {
   const proseHtmlParts = [];
   const tldrSummary = [];
   const missingBlocks = [];
+  const story = [];
+  const examples = [];
 
   let title = meta.id;
 
@@ -70,6 +72,14 @@ export function buildTsChapterView(meta, entries, lang, refs = {}) {
         proseHtmlParts.push(marked.parse(text));
         break;
       }
+      case 'example':
+      case 'story': {
+        const translation = pick(entry, lang, refs);
+        if (translation === undefined) { missingBlocks.push(index); break; }
+        const bucket = entry.type === 'story' ? story : examples;
+        bucket.push({ pinyin: entry.pinyin, translation, audioFile: entry.audioFile, ttsText: entry.ttsText });
+        break;
+      }
       default:
         throw new Error(
           `Chapter entry type "${entry.type}" (in ${meta.id}) isn't supported by the TS chapter transform yet.`,
@@ -81,8 +91,8 @@ export function buildTsChapterView(meta, entries, lang, refs = {}) {
     meta: { ...meta, title, language: lang },
     vocab: [],
     bodyHtml: proseHtmlParts.join('\n'),
-    story: [],
-    examples: [],
+    story,
+    examples,
     exercise: [],
     answers: [],
     tldrSummary,

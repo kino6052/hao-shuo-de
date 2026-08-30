@@ -53,6 +53,26 @@ describe('buildTsChapterView: prose', () => {
   });
 });
 
+describe('buildTsChapterView: example/story', () => {
+  test('example rows land in examples, story rows in story, keyed by pinyin + audio fields', () => {
+    const entries = [
+      { type: 'example', pinyin: 'Nǐ hǎo.', en: ['Hello.'], zh: [], ru: [], audioFile: 'a.mp3' },
+      { type: 'story', pinyin: 'Wǒ hǎo.', en: ['I am good.'], zh: [], ru: [] },
+    ];
+    const out = buildTsChapterView(meta, entries, 'eng');
+    expect(out.examples).toEqual([{ pinyin: 'Nǐ hǎo.', translation: 'Hello.', audioFile: 'a.mp3', ttsText: undefined }]);
+    expect(out.story).toEqual([{ pinyin: 'Wǒ hǎo.', translation: 'I am good.', audioFile: undefined, ttsText: undefined }]);
+    expect(out.missingBlocks).toEqual([]);
+  });
+
+  test('missing translation for the language is flagged and dropped, not pushed with undefined text', () => {
+    const entries = [{ type: 'example', pinyin: 'Nǐ hǎo.', en: ['Hello.'], zh: [], ru: [] }];
+    const out = buildTsChapterView(meta, entries, 'zh');
+    expect(out.examples).toEqual([]);
+    expect(out.missingBlocks).toEqual([0]);
+  });
+});
+
 describe('buildTsChapterView: unsupported entry type', () => {
   test('throws, naming the chapter id and the bad type', () => {
     const entries = [{ type: 'vocab', en: ['x'], zh: [], ru: [] }];
