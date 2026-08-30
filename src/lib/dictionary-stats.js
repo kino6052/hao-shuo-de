@@ -14,3 +14,14 @@ export function categoryWordCount(node) {
 export function countDictionaryWords(dictionary) {
   return Object.keys(dictionary.words).length;
 }
+
+// id -> current pinyin term, for resolving {{word:ID}}/{{Word:ID}} refs in
+// content (see src/lib/word-refs.js). Kept here so both the Node build
+// scripts and the browser bundle build it the same way from the same data.
+export function buildWordIndex(dictionary) {
+  const index = new Map();
+  for (const [id, word] of Object.entries(dictionary.words)) {
+    index.set(id, word.term);
+  }
+  return index;
+}

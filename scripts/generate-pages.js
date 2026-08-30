@@ -1,6 +1,6 @@
 import { readFileSync, readdirSync, mkdirSync, writeFileSync } from "fs";
 import { resolve, join } from "path";
-import { fileURLToPath } from "url";
+import { fileURLToPath, pathToFileURL } from "url";
 import matter from "gray-matter";
 import { parse as parseYaml } from "yaml";
 
@@ -41,6 +41,16 @@ for (const file of allFiles.filter(
   for (const lang of Object.values(LANG_MAP)) {
     routes.add(lang);
     if (chapter.id) routes.add(`${lang}/${chapter.id}`);
+  }
+}
+
+// Chapter TS: same idea, one file covers all languages, just a plain ESM
+// module (with a `meta` export) instead of YAML -- see src/lib/chapter-content.js.
+for (const file of allFiles.filter((f) => f.endsWith(".ts"))) {
+  const { meta } = await import(pathToFileURL(join(CONTENT_DIR, file)));
+  for (const lang of Object.values(LANG_MAP)) {
+    routes.add(lang);
+    if (meta?.id) routes.add(`${lang}/${meta.id}`);
   }
 }
 

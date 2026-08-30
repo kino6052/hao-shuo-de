@@ -1,14 +1,27 @@
+import dictionaryData from '../data/dictionary.json';
+import { countDictionaryWords, buildWordIndex } from './dictionary-stats.js';
+import { buildTsChapterView } from './chapter-content.js';
+
 const mdModules = import.meta.glob('../content/*.md', { eager: true });
 const chapterModules = import.meta.glob('../content/*.{yaml,yml}', { eager: true });
+const tsChapterModules = import.meta.glob('../content/*.ts', { eager: true });
 
 const TYPE_ORDER = { intro: 0, lesson: 1, proverbs: 2, dictionary: 3, "sentence-builder": 3.5, appendix: 4 };
 const LANGS = ['eng', 'rus', 'zh'];
 
+const wordRefs = { wordIndex: buildWordIndex(dictionaryData), wordCount: countDictionaryWords(dictionaryData) };
+
 // Markdown sections are already language-specific (one file per language).
 // Chapter (YAML) modules instead export one view per language from a single
-// source file -- same `id`, present in every language's section list.
+// source file -- same `id`, present in every language's section list. New-
+// style TS chapters (see src/lib/chapter-content.js) export raw `{ meta,
+// default: entries }` and are transformed into that same per-language shape
+// here rather than by a Vite transform plugin, since plain *.ts needs none.
 const singleLangSections = Object.values(mdModules).map(m => m.default);
 const multiLangSections = Object.values(chapterModules).map(m => m.default);
+const tsSections = Object.values(tsChapterModules).map(m => ({
+  byLang: Object.fromEntries(LANGS.map(lang => [lang, buildTsChapterView(m.meta, m.default, lang, wordRefs)])),
+}));
 
 const byLang = {};
 for (const lang of LANGS) byLang[lang] = [];
@@ -19,7 +32,7 @@ for (const s of singleLangSections) {
   byLang[lang].push(s);
 }
 
-for (const chapter of multiLangSections) {
+for (const chapter of [...multiLangSections, ...tsSections]) {
   for (const lang of LANGS) {
     byLang[lang].push(chapter.byLang[lang]);
   }
