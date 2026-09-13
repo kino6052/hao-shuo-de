@@ -51,6 +51,14 @@ function pick(obj, lang, { wordIndex, wordCount } = {}) {
   return wordIndex ? resolveWordRefs(text, wordIndex, wordCount) : text;
 }
 
+// Non-i18n fields (a vocab entry's `term`, an example/story's `pinyin`) can
+// still contain {{word:..}} refs -- e.g. a hyphenated example built from
+// several dictionary words -- so they need the same resolution `pick()`
+// gives translated text, just without the per-language lookup.
+function resolveField(text, { wordIndex, wordCount } = {}) {
+  return wordIndex ? resolveWordRefs(text, wordIndex, wordCount) : text;
+}
+
 // Renders one level of an info/warning entry's nested items, recursing into
 // child `items` arrays -- ported as-is from vite-plugin-chapter.js's
 // renderInfoItems/renderInfoBlock, just swapped to this module's pick().
@@ -130,7 +138,7 @@ export function buildTsChapterView(meta, entries, lang, refs = {}) {
       case 'vocab': {
         const definition = pick(entry, lang, refs);
         if (definition === undefined) { missingBlocks.push(index); break; }
-        vocab.push({ pinyin: entry.term, definition, audioFile: entry.audioFile, ttsText: entry.ttsText });
+        vocab.push({ pinyin: resolveField(entry.term, refs), definition, audioFile: entry.audioFile, ttsText: entry.ttsText });
         break;
       }
       case 'example':
@@ -138,7 +146,7 @@ export function buildTsChapterView(meta, entries, lang, refs = {}) {
         const translation = pick(entry, lang, refs);
         if (translation === undefined) { missingBlocks.push(index); break; }
         const bucket = entry.type === 'story' ? story : examples;
-        bucket.push({ pinyin: entry.pinyin, translation, audioFile: entry.audioFile, ttsText: entry.ttsText });
+        bucket.push({ pinyin: resolveField(entry.pinyin, refs), translation, audioFile: entry.audioFile, ttsText: entry.ttsText });
         break;
       }
       case 'exercise': {

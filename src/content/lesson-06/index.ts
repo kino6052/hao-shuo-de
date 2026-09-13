@@ -15,7 +15,7 @@ const content: Entry[] = [
     type: 'title',
     en: ['Dongzuo (Verbs)'],
     zh: [],
-    ru: [],
+    ru: ['Дунцзо (Глаголы)'],
   },
   {
     type: 'summary',
@@ -23,7 +23,9 @@ const content: Entry[] = [
       'Verbs carry no tense; `{{word:le}}` marks completion (not simply "the past"), words shift category by context alone, and directional complements like `{{word:qi3}}`, `{{word:xia4}}`, and `{{word:shang4}}` bind onto verbs via a hyphen to add direction and completion nuance.',
     ],
     zh: [],
-    ru: [],
+    ru: [
+      'Глаголы не имеют временных форм; `{{word:le}}` отмечает завершённость (а не просто «прошедшее время»), слова меняют категорию исключительно по контексту, а направленческие комплементы вроде `{{word:qi3}}`, `{{word:xia4}}` и `{{word:shang4}}` присоединяются к глаголам через дефис, добавляя оттенок направления и завершённости.',
+    ],
   },
   {
     type: 'vocab',
@@ -31,7 +33,7 @@ const content: Entry[] = [
     ttsText: '有',
     en: ['to have, contain, carry'],
     zh: [],
-    ru: [],
+    ru: ['иметь, содержать, носить'],
   },
   {
     type: 'vocab',
@@ -39,7 +41,7 @@ const content: Entry[] = [
     ttsText: '听',
     en: ['to listen to, hear, obey'],
     zh: [],
-    ru: [],
+    ru: ['слушать, слышать, повиноваться'],
   },
   {
     type: 'vocab',
@@ -47,7 +49,7 @@ const content: Entry[] = [
     ttsText: '吃',
     en: ['to eat, drink, consume; food'],
     zh: [],
-    ru: [],
+    ru: ['есть, пить, потреблять; еда'],
   },
   {
     type: 'vocab',
@@ -55,7 +57,7 @@ const content: Entry[] = [
     ttsText: '做',
     en: ['to make, do, work on'],
     zh: [],
-    ru: [],
+    ru: ['делать, работать над'],
   },
   {
     type: 'vocab',
@@ -63,7 +65,7 @@ const content: Entry[] = [
     ttsText: '知道',
     en: ['to know'],
     zh: [],
-    ru: [],
+    ru: ['знать'],
   },
   {
     type: 'vocab',
@@ -71,7 +73,7 @@ const content: Entry[] = [
     ttsText: '说',
     en: ['to talk, speak, communicate'],
     zh: [],
-    ru: [],
+    ru: ['говорить, разговаривать, общаться'],
   },
   {
     type: 'vocab',
@@ -79,7 +81,7 @@ const content: Entry[] = [
     ttsText: '起',
     en: ['to rise, get up; begin'],
     zh: [],
-    ru: [],
+    ru: ['подниматься, вставать; начинать'],
   },
   {
     type: 'vocab',
@@ -87,7 +89,7 @@ const content: Entry[] = [
     ttsText: '下',
     en: ['down, below, under'],
     zh: [],
-    ru: [],
+    ru: ['вниз, ниже, под'],
   },
   {
     type: 'vocab',
@@ -95,7 +97,7 @@ const content: Entry[] = [
     ttsText: '上',
     en: ['up, above, on'],
     zh: [],
-    ru: [],
+    ru: ['вверх, наверху, на'],
   },
   {
     type: 'vocab',
@@ -103,7 +105,7 @@ const content: Entry[] = [
     ttsText: '来',
     en: ['to come, arrive, happen'],
     zh: [],
-    ru: [],
+    ru: ['приходить, прибывать, происходить'],
   },
   {
     type: 'prose',
@@ -114,29 +116,34 @@ const content: Entry[] = [
       "If a word shows up right after the verb, it's the object -- that's the whole rule, and it doesn't need any more machinery than that.",
     ],
     zh: [],
-    ru: [],
+    ru: [
+      'Каждое предложение, которое вы построили до сих пор — с `{{word:shi4}}`, с `{{word:hen3}}`, с `-{{word:de}}` — опиралось на одну неизменную привычку: слова всегда стоят в одном и том же порядке — сначала подлежащее, затем действие, затем то, на что это действие направлено.',
+      'Глаголы не нарушают эту привычку; они полностью на неё опираются.',
+      'Поскольку сам по себе порядок слов уже показывает, кто совершает действие, а на что оно направлено, Hao-shuo-de никогда не нуждается в специальном маркере перед дополнением, чтобы его обозначить.',
+      'Если слово стоит сразу после глагола — это дополнение; вот и всё правило, и никакого дополнительного механизма для этого не нужно.',
+    ],
     tldr: {
       en: ["Word order alone marks the object -- nothing comes after the verb by accident."],
       zh: [],
-      ru: [],
+      ru: ['Порядок слов сам по себе отмечает дополнение — ничто не оказывается после глагола случайно.'],
     },
     necessity: {
       en: ["Confirms Lesson 3's fixed word order carries real grammatical weight -- it's not just a style choice, it's replacing work a marker particle would otherwise have to do."],
       zh: [],
-      ru: [],
+      ru: ['Подтверждает, что фиксированный порядок слов из Урока 3 несёт настоящую грамматическую нагрузку — это не просто стилистический выбор, а замена работы, которую иначе выполняла бы маркерная частица.'],
     },
   },
   {
     type: 'info',
     subtype: 'grammar',
     tag: 'verbs/word-order',
-    title: { en: ['No Object Marker Needed'], zh: [], ru: [] },
+    title: { en: ['No Object Marker Needed'], zh: [], ru: ['Маркер дополнения не нужен'] },
     items: [
       {
         text: {
           en: ["Subject + Verb + Object. Whatever sits directly after the verb is what's being acted on -- word order alone marks it, so no extra particle is required."],
           zh: [],
-          ru: [],
+          ru: ['Подлежащее + Глагол + Дополнение. То, что стоит непосредственно после глагола, и есть объект действия — порядок слов сам по себе это отмечает, поэтому дополнительная частица не требуется.'],
         },
       },
     ],
@@ -156,29 +163,40 @@ const content: Entry[] = [
       'What `{{word:le}}` never does is turn a verb into a "past-tense form" the way English `-ed` does -- it simply marks the point where a change became real.',
     ],
     zh: [],
-    ru: [],
+    ru: [
+      'Глаголы Hao-shuo-de никогда не меняют форму, чтобы показать, когда что-то произошло.',
+      'Нет отдельной формы для «сделал», нет отдельной формы для «сделает» — глагол `{{word:chi1}}` означает «есть» независимо от того, произошло ли это вчера, происходит сейчас или ещё не произошло.',
+      'Вместо этого эту нагрузку несёт контекст и небольшой набор маркеров.',
+      '',
+      'Самый важный из этих маркеров — `{{word:le}}`.',
+      'Легко ошибочно принять `{{word:le}}` за простой аналог английского прошедшего времени, но это не совсем то, что он делает.',
+      '`{{word:le}}` отмечает, что изменение действительно произошло — действие достигло завершения, или состояние сменилось с одного на другое.',
+      'Чаще всего это совпадает с «прошедшим», поскольку завершённое действие обычно уже произошло раньше.',
+      'Но `{{word:le}}` — это про завершённость, а не про время: в предложении `{{word:le}}` может описывать то, что только что закончилось секунду назад, или то, что должно завершиться к завтрашнему дню.',
+      'Чего `{{word:le}}` никогда не делает — так это не превращает глагол в «форму прошедшего времени», как это делает английское `-ed`; он просто отмечает момент, когда изменение стало реальностью.',
+    ],
     tldr: {
       en: ['`{{word:le}}` marks that a change or action reached completion -- not simply "the past."'],
       zh: [],
-      ru: [],
+      ru: ['`{{word:le}}` отмечает, что изменение или действие достигло завершения — а не просто «прошедшее время».'],
     },
     necessity: {
       en: ["This distinction avoids a very common early mistake: treating `{{word:le}}` as English `-ed`. It marks completion, and completion usually happens in the past, but they aren't the same thing."],
       zh: [],
-      ru: [],
+      ru: ['Это различие помогает избежать очень распространённой ранней ошибки: восприятия `{{word:le}}` как английского `-ed`. Он отмечает завершённость, а завершённость обычно происходит в прошлом, но это не одно и то же.'],
     },
   },
   {
     type: 'info',
     subtype: 'grammar',
     tag: 'verbs/aspect',
-    title: { en: ['The Completion Marker `{{word:le}}`'], zh: [], ru: [] },
+    title: { en: ['The Completion Marker `{{word:le}}`'], zh: [], ru: ['Показатель завершённости `{{word:le}}`'] },
     items: [
       {
         text: {
           en: ['Attach `{{word:le}}` after a verb to mark that an action or change has reached completion. `{{word:le}}` marks completion, not tense -- it can describe something finished a moment ago or something expected to be finished by a future point.'],
           zh: [],
-          ru: [],
+          ru: ['Присоедините `{{word:le}}` после глагола, чтобы отметить, что действие или изменение достигло завершения. `{{word:le}}` отмечает завершённость, а не время — он может описывать что-то, только что закончившееся, или что-то, что должно завершиться в будущем.'],
         },
       },
     ],
@@ -193,29 +211,35 @@ const content: Entry[] = [
       'The same thing happens with `-{{word:de}}`: `{{word:zhi1dao4}}-{{word:de}} {{word:ren2}}` does not build a new word for "someone who knows things" -- it just takes the verb `{{word:zhi1dao4}}` ("to know") and, bound to `{{word:ren2}}` ("person") with `-{{word:de}}`, lets it describe a noun directly, the same way `{{word:xie3}}-{{word:de}} {{word:dong1xi}}` ("a written thing") worked back in Lesson 2.',
     ],
     zh: [],
-    ru: [],
+    ru: [
+      'Ещё одна привычка, на которую стоит обратить внимание: слова Hao-shuo-de не помечены заранее как «это всегда только глагол» или «это всегда только существительное».',
+      'Одно и то же слово скользит между ролями в зависимости от того, где оно стоит в предложении.',
+      '`{{word:chi1}}`, например, — это действие «есть», когда оно что-то делает в предложении, — но то же самое слово, стоящее там, где должно быть существительное, означает «еда».',
+      'Написание никак не меняется — меняется только та работа, которую слово выполняет.',
+      'То же самое происходит с `-{{word:de}}`: `{{word:zhi1dao4}}-{{word:de}} {{word:ren2}}` не создаёт нового слова для «того, кто знает вещи» — оно просто берёт глагол `{{word:zhi1dao4}}` («знать») и, присоединённый к `{{word:ren2}}` («человек») через `-{{word:de}}`, позволяет ему напрямую описывать существительное — точно так же, как `{{word:xie3}}-{{word:de}} {{word:dong1xi}}` («написанная вещь») работало ещё в Уроке 2.',
+    ],
     tldr: {
       en: ["The same word shifts between verb and noun roles depending on its position in the sentence -- no separate forms needed."],
       zh: [],
-      ru: [],
+      ru: ['Одно и то же слово меняет роль между глаголом и существительным в зависимости от своей позиции в предложении — отдельные формы не нужны.'],
     },
     necessity: {
       en: ["This is why Hao-shuo-de's small dictionary goes further than its word count suggests -- every verb is already a potential noun, for free."],
       zh: [],
-      ru: [],
+      ru: ['Именно поэтому небольшой словарь Hao-shuo-de даёт больше, чем говорит его количество слов, — каждый глагол уже потенциально является существительным, причём бесплатно.'],
     },
   },
   {
     type: 'info',
     subtype: 'grammar',
     tag: 'words/category-flexibility',
-    title: { en: ['One Word, Several Jobs'], zh: [], ru: [] },
+    title: { en: ['One Word, Several Jobs'], zh: [], ru: ['Одно слово, несколько ролей'] },
     items: [
       {
         text: {
           en: ["A Hao-shuo-de word's category (verb, noun, etc.) is not fixed -- it's determined by where the word sits in the sentence. The same spelling can act as a verb in one sentence and a noun-describing phrase (via `-{{word:de}}`) in another."],
           zh: [],
-          ru: [],
+          ru: ['Категория слова в Hao-shuo-de (глагол, существительное и т.д.) не фиксирована — она определяется тем, где слово стоит в предложении. Одно и то же написание может работать как глагол в одном предложении и как описывающая существительное фраза (через `-{{word:de}}`) в другом.'],
         },
       },
     ],
@@ -234,43 +258,53 @@ const content: Entry[] = [
       'It is the same hyphen-composition rule from Lesson 1 -- gluing two known pieces into one working unit -- just pointed at direction instead of description.',
     ],
     zh: [],
-    ru: [],
+    ru: [
+      'Глаголы могут приобретать дополнительный слой значения, присоединяя к себе через дефис небольшое направленческое слово — тот же самый дефис, который выполняет грамматическую работу начиная с Урока 1.',
+      'Стоит рано познакомиться с тремя такими словами, все они строятся на `{{word:lai2}}` («приходить»):',
+      '',
+      '- `{{word:qi3}}-{{word:lai2}}` («подняться-прийти») отмечает начало чего-либо. Присоединённый таким же образом к другому глаголу, `{{word:qi3}}` сам по себе отмечает начало: `{{word:shuo1}}-{{word:qi3}}` означает не просто «говорить» — это значит «завести речь о чём-то», момент, когда тема начинает существовать в разговоре.',
+      '- `{{word:xia4}}-{{word:lai2}}` («вниз-прийти») отмечает, что нечто устанавливается на месте или стабильно продолжается с того момента, в котором уже находилось.',
+      '- `{{word:shang4}}-{{word:lai2}}` («вверх-прийти») отмечает, что нечто приближается к вам или наконец успешно достигает какой-то точки.',
+      '',
+      'Для всего этого не потребовалось ни нового класса слов, ни новой частицы.',
+      'Это то же самое правило соединения через дефис из Урока 1 — склеивание двух известных частей в одну рабочую единицу, — только направленное на направление, а не на описание.',
+    ],
     tldr: {
       en: ['`{{word:qi3}}`, `{{word:xia4}}`, and `{{word:shang4}}` bind onto `{{word:lai2}}` (or other verbs) via a hyphen to add direction/completion nuance -- rise, settle, or arrive.'],
       zh: [],
-      ru: [],
+      ru: ['`{{word:qi3}}`, `{{word:xia4}}` и `{{word:shang4}}` присоединяются к `{{word:lai2}}` (или другим глаголам) через дефис, добавляя оттенок направления/завершённости — подняться, устояться или прибыть.'],
     },
     necessity: {
       en: ["Extends the hyphen-composition principle from Lesson 1 into a new domain (verb direction), without adding new grammar machinery."],
       zh: [],
-      ru: [],
+      ru: ['Расширяет принцип соединения через дефис из Урока 1 на новую область (направление глагола), не добавляя новых грамматических механизмов.'],
     },
   },
   {
     type: 'info',
     subtype: 'grammar',
     tag: 'verbs/directional-complements',
-    title: { en: ['Directional Complements'], zh: [], ru: [] },
+    title: { en: ['Directional Complements'], zh: [], ru: ['Направленческие комплементы'] },
     items: [
       {
         text: {
           en: ['`{{word:qi3}}-{{word:lai2}}` -- marks the beginning of an action or state (e.g. `{{word:shuo1}}-{{word:qi3}}`, "bring up/mention")'],
           zh: [],
-          ru: [],
+          ru: ['`{{word:qi3}}-{{word:lai2}}` — отмечает начало действия или состояния (например, `{{word:shuo1}}-{{word:qi3}}`, «завести речь о чём-то»)'],
         },
       },
       {
         text: {
           en: ['`{{word:xia4}}-{{word:lai2}}` -- marks a state settling into place or continuing on'],
           zh: [],
-          ru: [],
+          ru: ['`{{word:xia4}}-{{word:lai2}}` — отмечает, что состояние устанавливается на месте или продолжается'],
         },
       },
       {
         text: {
           en: ['`{{word:shang4}}-{{word:lai2}}` -- marks something arriving toward the speaker, or succeeding at reaching a point'],
           zh: [],
-          ru: [],
+          ru: ['`{{word:shang4}}-{{word:lai2}}` — отмечает, что нечто приближается к говорящему или успешно достигает какой-то точки'],
         },
       },
     ],
@@ -281,7 +315,7 @@ const content: Entry[] = [
     ttsText: '我知道好说的。',
     en: ['I know a simple language / good speech.'],
     zh: [],
-    ru: [],
+    ru: ['Я знаю простой язык / хорошую речь.'],
   },
   {
     type: 'example',
@@ -289,7 +323,7 @@ const content: Entry[] = [
     ttsText: '那个男人是说的人。',
     en: ['That man is a messenger / speaking person.'],
     zh: [],
-    ru: [],
+    ru: ['Тот человек — посланник / говорящий человек.'],
   },
   {
     type: 'example',
@@ -297,7 +331,7 @@ const content: Entry[] = [
     ttsText: '大的动物在吃你。',
     en: ['A large animal is eating you.'],
     zh: [],
-    ru: [],
+    ru: ['Большое животное ест вас.'],
   },
   {
     type: 'example',
@@ -305,7 +339,7 @@ const content: Entry[] = [
     ttsText: '群的写的东西很好。',
     en: ["The community's book is reliable."],
     zh: [],
-    ru: [],
+    ru: ['Книга сообщества надёжна.'],
   },
   {
     type: 'example',
@@ -313,7 +347,7 @@ const content: Entry[] = [
     ttsText: '你做了新的吃。',
     en: ['You made new food.'],
     zh: [],
-    ru: [],
+    ru: ['Вы приготовили новую еду.'],
   },
   {
     type: 'example',
@@ -321,7 +355,7 @@ const content: Entry[] = [
     ttsText: '知道的人听。',
     en: ['A person of knowledge listens.'],
     zh: [],
-    ru: [],
+    ru: ['Знающий человек слушает.'],
   },
   {
     type: 'example',
@@ -329,7 +363,7 @@ const content: Entry[] = [
     ttsText: '知道的地方有写的东西。',
     en: ['The school / house of knowledge has books.'],
     zh: [],
-    ru: [],
+    ru: ['Школа / дом знаний имеет книги.'],
   },
   {
     type: 'example',
@@ -337,58 +371,58 @@ const content: Entry[] = [
     ttsText: '他说起好说的。',
     en: ['He brings up Hao-shuo-de / mentions Hao-shuo-de.'],
     zh: [],
-    ru: [],
+    ru: ['Он заводит речь о Hao-shuo-de / упоминает Hao-shuo-de.'],
   },
   {
     type: 'exercise',
     en: ['I will listen to you.'],
     zh: [],
-    ru: [],
+    ru: ['Я буду слушать вас.'],
   },
   {
     type: 'exercise',
     en: ['The woman obeyed the man.'],
     zh: [],
-    ru: [],
+    ru: ['Женщина послушалась мужчину.'],
   },
   {
     type: 'exercise',
     en: ['The friends ate meat.'],
     zh: [],
-    ru: [],
+    ru: ['Друзья съели мясо.'],
   },
   {
     type: 'exercise',
     en: ['She mentions the community.'],
     zh: [],
-    ru: [],
+    ru: ['Она упоминает сообщество.'],
   },
   {
     type: 'answer',
     en: ['{{Word:wo3}} {{word:ting1}} {{word:ni3}}.'],
     zh: [],
-    ru: [],
+    ru: ['{{Word:wo3}} {{word:ting1}} {{word:ni3}}.'],
     ttsText: '我听你。',
   },
   {
     type: 'answer',
     en: ['{{Word:nv3ren2}} {{word:ting1}} {{word:le}} {{word:nan2ren2}}.'],
     zh: [],
-    ru: [],
+    ru: ['{{Word:nv3ren2}} {{word:ting1}} {{word:le}} {{word:nan2ren2}}.'],
     ttsText: '女人听了男人。',
   },
   {
     type: 'answer',
     en: ['{{Word:hao3}}-{{word:de}} {{word:ren2}} {{word:chi1}} {{word:le}} {{word:dong4wu4}}.'],
     zh: [],
-    ru: [],
+    ru: ['{{Word:hao3}}-{{word:de}} {{word:ren2}} {{word:chi1}} {{word:le}} {{word:dong4wu4}}.'],
     ttsText: '好的人吃了动物。',
   },
   {
     type: 'answer',
     en: ['{{Word:ta1}} {{word:shuo1}}-{{word:qi3}} {{word:qun2}}.'],
     zh: [],
-    ru: [],
+    ru: ['{{Word:ta1}} {{word:shuo1}}-{{word:qi3}} {{word:qun2}}.'],
     ttsText: '她说起群。',
   },
 ];

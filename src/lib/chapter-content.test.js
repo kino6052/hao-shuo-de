@@ -97,6 +97,13 @@ describe('buildTsChapterView: vocab', () => {
     expect(out.vocab).toEqual([]);
     expect(out.missingBlocks).toEqual([0]);
   });
+
+  test('resolves {{word:..}} refs in `term` itself, not just in the definition', () => {
+    const entries = [{ type: 'vocab', term: '{{word:zhe4}}-ge', en: ['this one'], zh: [], ru: [] }];
+    const wordIndex = new Map([['zhe4', 'zhè']]);
+    const out = buildTsChapterView(meta, entries, 'eng', { wordIndex, wordCount: 1 });
+    expect(out.vocab).toEqual([{ pinyin: 'zhè-ge', definition: 'this one', audioFile: undefined, ttsText: undefined }]);
+  });
 });
 
 describe('buildTsChapterView: example/story', () => {
@@ -116,6 +123,13 @@ describe('buildTsChapterView: example/story', () => {
     const out = buildTsChapterView(meta, entries, 'zh');
     expect(out.examples).toEqual([]);
     expect(out.missingBlocks).toEqual([0]);
+  });
+
+  test('resolves {{word:..}} refs in `pinyin` itself, not just in the translation', () => {
+    const entries = [{ type: 'example', pinyin: '{{Word:zhe4}}-ge {{word:shi4}} {{word:ren2}}.', en: ['This is a person.'], zh: [], ru: [] }];
+    const wordIndex = new Map([['zhe4', 'zhè'], ['shi4', 'shì'], ['ren2', 'rén']]);
+    const out = buildTsChapterView(meta, entries, 'eng', { wordIndex, wordCount: 3 });
+    expect(out.examples).toEqual([{ pinyin: 'Zhè-ge shì rén.', translation: 'This is a person.', audioFile: undefined, ttsText: undefined }]);
   });
 });
 

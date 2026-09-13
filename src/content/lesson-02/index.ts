@@ -38,15 +38,19 @@ const content: Entry[] = [
       "Hao-shuo-de has {{dictionaryCount}} words. Words outside of this list are created by combining these {{dictionaryCount}} words. Some words are independent, others serve various functions.",
     ],
     zh: [],
-    ru: [],
+    ru: [
+      "В Hao-shuo-de {{dictionaryCount}} слов.",
+      "Слова вне этого списка создаются путём комбинирования этих {{dictionaryCount}} слов.",
+      "Некоторые слова самостоятельны, другие выполняют различные функции.",
+    ],
   },
   {
     type: "vocab",
     term: "{{word:dong1xi}}",
     ttsText: "东西",
-    en: ["thing, something, being"],
-    zh: ["东西，事物，存在物"],
-    ru: ["вещь, нечто, существо"],
+    en: ["thing, something"],
+    zh: ["东西，事物"],
+    ru: ["вещь, что-то"],
   },
   {
     type: "vocab",
@@ -54,7 +58,7 @@ const content: Entry[] = [
     ttsText: "人",
     en: ["person, human"],
     zh: ["人，人类"],
-    ru: ["человек, человеческое существо"],
+    ru: ["человек"],
   },
   {
     type: "vocab",
@@ -78,7 +82,7 @@ const content: Entry[] = [
     ttsText: "女人",
     en: ["woman, female"],
     zh: ["女人，女性"],
-    ru: ["женщина, женского пола"],
+    ru: ["женщина"],
   },
   {
     type: "vocab",
@@ -86,15 +90,15 @@ const content: Entry[] = [
     ttsText: "这",
     en: ["this"],
     zh: ["这"],
-    ru: ["этот"],
+    ru: ["это"],
   },
   {
     type: "vocab",
     term: "{{word:dong4wu4}}",
     ttsText: "动物",
-    en: ["animal, land mammal"],
-    zh: ["动物，陆地哺乳动物"],
-    ru: ["животное, наземное млекопитающее"],
+    en: ["animal"],
+    zh: ["动物"],
+    ru: ["животное"],
   },
   {
     type: "prose",
@@ -103,11 +107,15 @@ const content: Entry[] = [
       '<audio-example zh="东西">{{word:dong1xi}}</audio-example> is built from <audio-example zh="东">dōng</audio-example> (east) and <audio-example zh="西">xi</audio-example> (west) — yet it means "thing," with no geography left in it.',
       '<audio-example zh="女人">{{word:nv3ren2}}</audio-example> is more transparent: <audio-example zh="女">nǚ</audio-example> (female) plus <audio-example zh="人">{{word:ren2}}</audio-example> (person) gives you "woman" plainly.',
       "Chinese words are built from roots the same way English words are — `understand` is `under` plus `stand`, `telephone` is `far` plus `sound` — but a fluent speaker doesn't reassemble the parts to get the meaning.",
-      "A word is learned whole; its roots are history, not a formula you run each time you use it.",
+      "It is useful to know the origin of the word to better understand the logic behind it, but it is important to know that we can't use the components freely to create new words because the words are fixed and we can only use them to construct new words.",
     ],
     zh: [],
     ru: [
-      'Обратите внимание на слова <audio-example zh="">{{word:dong1xi}}</audio-example> и <audio-example zh="">{{word:nv3ren2}}</audio-example>.',
+      'Взгляните ещё раз на <audio-example zh="东西">{{word:dong1xi}}</audio-example> и <audio-example zh="女人">{{word:nv3ren2}}</audio-example> выше.',
+      '<audio-example zh="东西">{{word:dong1xi}}</audio-example> состоит из <audio-example zh="东">dōng</audio-example> (восток) и <audio-example zh="西">xi</audio-example> (запад) — но означает "вещь", не имея больше никакого отношения к географии.',
+      '<audio-example zh="女人">{{word:nv3ren2}}</audio-example> устроено прозрачнее: <audio-example zh="女">nǚ</audio-example> (женский) плюс <audio-example zh="人">{{word:ren2}}</audio-example> (человек) прямо даёт вам "женщину".',
+      "Китайские слова строятся из корней точно так же, как и английские — `understand` — это `under` плюс `stand`, `telephone` — это `far` плюс `sound` — но свободно владеющий языком человек не собирает смысл заново из частей каждый раз.",
+      "Полезно знать происхождение слова, чтобы лучше понимать заложенную в нём логику, но важно помнить, что мы не можем свободно использовать эти составные части для создания новых слов — слова фиксированы, и мы можем лишь использовать сами эти слова для построения новых.",
     ],
   },
   {
@@ -154,7 +162,7 @@ const content: Entry[] = [
             text: {
               en: ["Syllables: <b>nǚ</b> (female) + <b>rén</b> (person)"],
               zh: [],
-              ru: ["*Слоги:* <b>nǚ</b> (женский) + <b>rén</b> (человек)"],
+              ru: ["*Слоги:* <b>nǚ</b> (женщина) + <b>rén</b> (человек)"],
             },
             items: [
               {
