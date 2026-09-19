@@ -16,8 +16,8 @@
 // Regenerate after editing any lesson/proverbs/appendix content or the
 // dictionary itself: `node scripts/generate-word-usage.js`.
 
-import { readFileSync, writeFileSync } from 'fs';
-import { resolve } from 'path';
+import { readFileSync, writeFileSync, readdirSync } from 'fs';
+import { resolve, dirname } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import matter from 'gray-matter';
 import { parse as parseYaml } from 'yaml';
@@ -38,11 +38,24 @@ const WORD_REF_RE = /\{\{(?:word|Word):([a-z0-9-]+)\}\}/g;
 
 function isTrackedFile(filename) {
   if (!filename.endsWith('.md') && !filename.endsWith('.yaml') && !filename.endsWith('.yml') && !filename.endsWith('.ts')) return false;
+  // A lesson folder's shape.ts/en.ts/ru.ts/zh.ts (see chapter-shape-types.ts)
+  // are internal building blocks, not separate chapters -- only index.ts
+  // (or a flat file like intro-1.ts) is one.
+  if (filename.endsWith('.ts') && filename.includes('/') && !filename.endsWith('/index.ts')) return false;
   return !EXCLUDE_PREFIXES.some((prefix) => filename.startsWith(prefix));
 }
 
 async function loadChapter(filename) {
-  const raw = readFileSync(resolve(CONTENT_DIR, filename), 'utf-8');
+  // For a folder-based chapter (lesson-01/index.ts), {{word:..}} refs live
+  // scattered across shape.ts/en.ts/ru.ts/zh.ts too (see
+  // chapter-shape-types.ts) -- concatenate the whole folder's *.ts files so
+  // the regex scan below still sees every reference, not just index.ts's.
+  const raw = filename.endsWith('/index.ts')
+    ? readdirSync(dirname(resolve(CONTENT_DIR, filename)))
+        .filter((f) => f.endsWith('.ts'))
+        .map((f) => readFileSync(resolve(CONTENT_DIR, dirname(filename), f), 'utf-8'))
+        .join('\n')
+    : readFileSync(resolve(CONTENT_DIR, filename), 'utf-8');
 
   if (filename.endsWith('.yaml') || filename.endsWith('.yml')) {
     // Reading id/lessonNumber/title back out of the parsed doc (rather than

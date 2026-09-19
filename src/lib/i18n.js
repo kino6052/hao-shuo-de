@@ -13,6 +13,10 @@ const UI = {
   eng: {
     introduction: "Introduction",
     lessons: "Lessons",
+    sectionFoundations: "Sounds, Words, and Simple Sentences",
+    sectionModifying: "Modifying Words and Meaning",
+    sectionSpecial: "Special Words and Concepts",
+    moreLessons: "More Lessons",
     reference: "Reference",
     back: "Back",
     next: "Next",
@@ -50,6 +54,10 @@ const UI = {
   rus: {
     introduction: "Введение",
     lessons: "Уроки",
+    sectionFoundations: "Звуки, слова и простые предложения",
+    sectionModifying: "Изменение слов и смысла",
+    sectionSpecial: "Особые слова и понятия",
+    moreLessons: "Другие уроки",
     reference: "Справочник",
     back: "Назад",
     next: "Далее",
@@ -87,6 +95,10 @@ const UI = {
   zh: {
     introduction: "导言",
     lessons: "课程",
+    sectionFoundations: "声音、词语与简单句子",
+    sectionModifying: "修饰词语与意义",
+    sectionSpecial: "特殊词语与概念",
+    moreLessons: "其他课程",
     reference: "参考",
     back: "上一页",
     next: "下一页",

@@ -2,6 +2,7 @@ import { useState } from "preact/hooks";
 import { ProgressBar } from "./ProgressBar.jsx";
 import { FontSelector } from "./FontSelector.jsx";
 import { LANG_CONFIG, t } from "../lib/i18n.js";
+import { LESSON_SECTIONS, sectionKeyForLesson } from "../lib/lesson-sections.js";
 import styles from "./Sidebar.module.css";
 
 export function Sidebar({
@@ -23,6 +24,16 @@ export function Sidebar({
   const intros = sections.filter((s) => s.type === "intro");
   const lessons = sections.filter((s) => s.type === "lesson");
   const others = sections.filter((s) => !["intro", "lesson"].includes(s.type));
+
+  // Group lessons the same way intro-3's table of contents does. Lessons
+  // not yet reconciled with that plan (see lesson-sections.js) fall through
+  // to a generic "More Lessons" group instead of a named section.
+  const lessonGroups = LESSON_SECTIONS.map((section) => ({
+    key: section.key,
+    label: t(lang, section.key),
+    items: lessons.filter((l) => sectionKeyForLesson(l.id) === section.key),
+  })).filter((g) => g.items.length > 0);
+  const unsectionedLessons = lessons.filter((l) => sectionKeyForLesson(l.id) === null);
 
   function go(id) {
     onNavigate(id);
@@ -78,10 +89,20 @@ export function Sidebar({
             onGo={go}
           />
         )}
-        {lessons.length > 0 && (
+        {lessonGroups.map((g) => (
           <TocGroup
-            label={t(lang, "lessons")}
-            items={lessons}
+            key={g.key}
+            label={g.label}
+            items={g.items}
+            completed={completed}
+            currentId={currentId}
+            onGo={go}
+          />
+        ))}
+        {unsectionedLessons.length > 0 && (
+          <TocGroup
+            label={t(lang, "moreLessons")}
+            items={unsectionedLessons}
             completed={completed}
             currentId={currentId}
             onGo={go}

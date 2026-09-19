@@ -1,0 +1,41 @@
+id: appendix-toki-pona
+type: appendix
+order: 2
+title:
+  eng: "Hao-shuo-de is not toki pona"
+  rus: ""
+  zh: ""
+
+summary:
+  eng: "Toki pona - is a small invented language, hao-shuo-de is a real Chinese reduced to the minimum."
+  rus: ""
+  zh: ""
+
+blocks:
+  - type: prose
+    text:
+      eng: |-
+        We mentioned Toki Pona many times in this book. Toki Pona is an invented language. It is very small yet fully functional. So why not just use it as the engine of hao-shuo-de?
+      rus: ""
+      zh: ""
+    necessity:
+      eng: ""
+      rus: ""
+      zh: ""
+
+  - type: prose
+    text:
+      eng: |-
+        We don't use toki pona as the grammar engine because it is completely different from Chinese grammar and rules. If we were to just use Chinese words with the toki pona grammar, it would sound nonsensical to the Chinese speakers. For example: tomo li pona (house is good) turning it in fangzi shi hao may be forgivable, but "mi wile kama sona e toki lon tomo mi." (I want to learn a language at home) will be "wo yao lai zhidao e shuo  li fangzi wo", it won't be a bridge language - it would be a toki pona with replaced words understood only by those who know toki pona and some Chinese.
+      rus: ""
+      zh: ""
+    necessity:
+      eng: ""
+      rus: ""
+      zh: ""
+
+  - type: exercise
+    items:
+      - eng: "Think of an everyday sentence you believe Hao-shuo-de cannot express. Try to build it by composing existing words and grammar. If it works, what did that teach you about the category system? If it genuinely doesn't, what new root would it need, and which category would that root belong to?"
+        rus: "Придумайте повседневное предложение, которое, как вам кажется, Hao-shuo-de не может выразить. Попробуйте построить его, составляя существующие слова и грамматику. Если получилось — чему это вас научило о системе категорий? Если действительно не получилось — какой новый корень для этого понадобился бы и к какой категории он принадлежал бы?"
+        zh: "想一个你认为 Hao-shuo-de 无法表达的日常句子。尝试用现有的词和语法把它组合出来。如果成功了，这教会了你关于类别系统的什么？如果真的做不到，需要一个怎样的新词根，它又该属于哪个类别？"
