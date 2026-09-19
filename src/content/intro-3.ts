@@ -69,7 +69,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Modifying Nouns** —describing a noun, and what else can modify it. giving a noun number and concreteness: this one, that one, many.",
+            "**Modifying Nouns** —describing a noun, and what else can modify it. giving a noun number and concreteness: mesaure word ge. this one, that one, many.",
           ],
           zh: [],
           ru: [],
@@ -150,13 +150,6 @@ const content: Entry[] = [
     title: { en: ["Section 3 — Special Words and Concepts"], zh: [], ru: [] },
     ordered: true,
     items: [
-      {
-        text: {
-          en: ["**Measure word ge** — another type of sentence."],
-          zh: [],
-          ru: [],
-        },
-      },
       {
         text: {
           en: ["**Greetings and Feelings** — another type of sentence."],
