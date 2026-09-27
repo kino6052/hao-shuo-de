@@ -3,10 +3,9 @@
 // LessonShape is this lesson's exact, hand-written type -- see lesson-01's
 // shape.ts for the full explanation of the pattern.
 //
-// Phase 1 skeleton (BOOK_PLAN.md): the vocab list follows BOOK_PLAN §4b, and
-// the other blocks were moved here unchanged from the old 16-lesson layout
-// ([from old LNN] says where; the old lessons are archived in
-// src/content/legacy/v2-16-lessons/). They get rewritten in Phase 2.
+// Rewritten in Phase 2 (BOOK_PLAN.md): color-de + noun, thing + shì + color-de, and asking shénme yánsè.
+// Only words from this lesson and earlier ones; passes every gate
+// (npm run check -- lesson-17).
 import type {
   TTitle,
   TSummary,
@@ -15,18 +14,19 @@ import type {
   TExample,
   TExercise,
   TAnswer,
+  TInfo,
 } from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
   /** Colors */
   title: TTitle;
-  /** Chapter summary. [from old L14] */
+  /** Chapter summary: why you'd want this, then what you'll be able to say. */
   summary: TSummary;
   /** Vocabulary: "color". */
   vocabYanse: TVocab;
-  /** Vocabulary: "white, pale". */
+  /** Vocabulary: "white". */
   vocabBaise: TVocab;
-  /** Vocabulary: "black, dark". */
+  /** Vocabulary: "black". */
   vocabHeise: TVocab;
   /** Vocabulary: "red". */
   vocabHongse: TVocab;
@@ -34,28 +34,66 @@ export type LessonShape = {
   vocabHuangse: TVocab;
   /** Vocabulary: "blue, green". */
   vocabLanse: TVocab;
-  /** Grammar: colors are two-syllable adjectives, binding to their noun with -de like any other. [from old L14] */
-  proseColorsAreAdjectives: TProse;
-  /** Example: zhè-ge hēisè-de shíjiān, tā lái. [from old L14] */
-  example1: TExample;
-  /** Example: nǐ kàn-jiàn huángsè-de shuǐ, bù chī tā. [from old L14] */
-  example2: TExample;
-  /** Example: lánsè-de gōngjù zài báisè-de dìfāng. [from old L14] */
-  example3: TExample;
-  /** Example: wǒ-de shēntǐ biàn lánsè, zhè-ge hěn huài. [from old L14] */
-  example4: TExample;
-  /** Exercise 1: The tool is red. [from old L14] */
+  /** Say: To say a thing's color, put the color and -de before it. Pattern: color-de + noun */
+  proseColorThing: TProse;
+  /** Example: hóngsè-de hézi. */
+  exampleColorThing1: TExample;
+  /** Example: báisè-de yīfu. */
+  exampleColorThing2: TExample;
+  /** Example: hēisè-de dòngwù. */
+  exampleColorThing3: TExample;
+  /** Example: huángsè-de shuǐguǒ. */
+  exampleColorThing4: TExample;
+  /** Say: To say what color something is, put shì before the color, and -de after it. Pattern: Thing + shì + color-de */
+  proseIsColor: TProse;
+  /** Example: hézi shì hóngsè-de. */
+  exampleIsColor1: TExample;
+  /** Example: shuǐ shì lánsè-de. */
+  exampleIsColor2: TExample;
+  /** Example: wǒ-de yīfu shì báisè-de. */
+  exampleIsColor3: TExample;
+  /** Example: yuè shì huángsè-de. */
+  exampleIsColor4: TExample;
+  /** Example: di-shàng-de ní shì hēisè-de. */
+  exampleIsColor5: TExample;
+  /** Example: huǒ shì hóngsè-de. */
+  exampleIsColor6: TExample;
+  /** Say: To ask "what color?", say shénme yánsè where the color would go. Pattern: Thing + shì shénme yánsè? */
+  proseWhatColor: TProse;
+  /** Example: nǐ-de yīfu shì shénme yánsè? */
+  exampleWhatColor1: TExample;
+  /** Example: zhè-ge shuǐguǒ shì shénme yánsè? */
+  exampleWhatColor2: TExample;
+  /** Example: wǒ ài lánsè. */
+  exampleWhatColor3: TExample;
+  /** Example: zhè-ge yánsè hěn hǎo. */
+  exampleWhatColor4: TExample;
+  /** Grammar box: color-de + noun, shì + color-de, shénme yánsè. */
+  infoColors: TInfo;
+  /** Exercise 1: a white box */
   exercise1: TExercise;
-  /** Exercise 2: This is a black place. [from old L14] */
+  /** Exercise 2: The fruit is yellow. */
   exercise2: TExercise;
-  /** Exercise 3: Is the fruit yellow? [from old L14] */
+  /** Exercise 3: What color is the plant? */
   exercise3: TExercise;
-  /** Answer 1. [from old L14] */
+  /** Exercise 4: I want red clothes. */
+  exercise4: TExercise;
+  /** Exercise 5: The animal is black. */
+  exercise5: TExercise;
+  /** Exercise 6: The box is blue. */
+  exercise6: TExercise;
+  /** Answer 1: báisè-de hézi. */
   answer1: TAnswer;
-  /** Answer 2. [from old L14] */
+  /** Answer 2: shuǐguǒ shì huángsè-de. */
   answer2: TAnswer;
-  /** Answer 3. [from old L14] */
+  /** Answer 3: zhíwù shì shénme yánsè? */
   answer3: TAnswer;
+  /** Answer 4: wǒ yào hóngsè-de yīfu. */
+  answer4: TAnswer;
+  /** Answer 5: dòngwù shì hēisè-de. */
+  answer5: TAnswer;
+  /** Answer 6: hézi shì lánsè-de. */
+  answer6: TAnswer;
 };
 
 const shape: LessonShape = {
@@ -75,29 +113,97 @@ const shape: LessonShape = {
     ttsText: "黄色",
   },
   vocabLanse: { type: "vocab", term: "{{word:lan2se4}}", ttsText: "蓝色" },
-  proseColorsAreAdjectives: { type: "prose" },
-  example1: {
+  proseColorThing: { type: "prose" },
+  exampleColorThing1: {
     type: "example",
-    pinyin: "{{Word:zhe4}}-ge {{word:hei1se4}}-{{word:de}} {{word:shi2jian1}}, {{word:ta1}} {{word:lai2}}.",
+    pinyin: "{{Word:hong2se4}}-{{word:de}} {{word:he2zi}}.",
+    ttsText: "红色的盒子。",
   },
-  example2: {
+  exampleColorThing2: {
     type: "example",
-    pinyin: "{{Word:ni3}} {{word:kan4}}-jiàn {{word:huang2se4}}-{{word:de}} {{word:shui3}}, {{word:bu4}} {{word:chi1}} {{word:ta1}}.",
+    pinyin: "{{Word:bai2se4}}-{{word:de}} {{word:yi1fu}}.",
+    ttsText: "白色的衣服。",
   },
-  example3: {
+  exampleColorThing3: {
     type: "example",
-    pinyin: "{{Word:lan2se4}}-{{word:de}} {{word:gong1ju4}} {{word:zai4}} {{word:bai2se4}}-{{word:de}} {{word:di4fang1}}.",
+    pinyin: "{{Word:hei1se4}}-{{word:de}} {{word:dong4wu4}}.",
+    ttsText: "黑色的动物。",
   },
-  example4: {
+  exampleColorThing4: {
     type: "example",
-    pinyin: "{{Word:wo3}}-{{word:de}} {{word:shen1ti3}} {{word:bian4}} {{word:lan2se4}}, {{word:zhe4}}-ge {{word:hen3}} {{word:huai4}}.",
+    pinyin: "{{Word:huang2se4}}-{{word:de}} {{word:shui3guo3}}.",
+    ttsText: "黄色的水果。",
+  },
+  proseIsColor: { type: "prose" },
+  exampleIsColor1: {
+    type: "example",
+    pinyin: "{{Word:he2zi}} {{word:shi4}} {{word:hong2se4}}-{{word:de}}.",
+    ttsText: "盒子是红色的。",
+  },
+  exampleIsColor2: {
+    type: "example",
+    pinyin: "{{Word:shui3}} {{word:shi4}} {{word:lan2se4}}-{{word:de}}.",
+    ttsText: "水是蓝色的。",
+  },
+  exampleIsColor3: {
+    type: "example",
+    pinyin: "{{Word:wo3}}-{{word:de}} {{word:yi1fu}} {{word:shi4}} {{word:bai2se4}}-{{word:de}}.",
+    ttsText: "我的衣服是白色的。",
+  },
+  exampleIsColor4: {
+    type: "example",
+    pinyin: "{{Word:yue4}} {{word:shi4}} {{word:huang2se4}}-{{word:de}}.",
+    ttsText: "月是黄色的。",
+  },
+  exampleIsColor5: {
+    type: "example",
+    pinyin: "{{Word:di4}}-{{word:shang4}}-{{word:de}} {{word:ni2}} {{word:shi4}} {{word:hei1se4}}-{{word:de}}.",
+    ttsText: "地上的泥是黑色的。",
+  },
+  exampleIsColor6: {
+    type: "example",
+    pinyin: "{{Word:huo3}} {{word:shi4}} {{word:hong2se4}}-{{word:de}}.",
+    ttsText: "火是红色的。",
+  },
+  proseWhatColor: { type: "prose" },
+  exampleWhatColor1: {
+    type: "example",
+    pinyin: "{{Word:ni3}}-{{word:de}} {{word:yi1fu}} {{word:shi4}} {{word:shen2me}} {{word:yan2se4}}?",
+    ttsText: "你的衣服是什么颜色？",
+  },
+  exampleWhatColor2: {
+    type: "example",
+    pinyin: "{{Word:zhe4}}-ge {{word:shui3guo3}} {{word:shi4}} {{word:shen2me}} {{word:yan2se4}}?",
+    ttsText: "这个水果是什么颜色？",
+  },
+  exampleWhatColor3: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:ai4}} {{word:lan2se4}}.",
+    ttsText: "我爱蓝色。",
+  },
+  exampleWhatColor4: {
+    type: "example",
+    pinyin: "{{Word:zhe4}}-ge {{word:yan2se4}} {{word:hen3}} {{word:hao3}}.",
+    ttsText: "这个颜色很好。",
+  },
+  infoColors: {
+    type: "info",
+    subtype: "grammar",
+    tag: "describing/colors",
+    items: [{}, {}, {}],
   },
   exercise1: { type: "exercise" },
   exercise2: { type: "exercise" },
   exercise3: { type: "exercise" },
-  answer1: { type: "answer", ttsText: "工具很红色。" },
-  answer2: { type: "answer", ttsText: "这个是黑色的地方。" },
-  answer3: { type: "answer", ttsText: "水果很黄色吗？" },
+  exercise4: { type: "exercise" },
+  exercise5: { type: "exercise" },
+  exercise6: { type: "exercise" },
+  answer1: { type: "answer", ttsText: "白色的盒子。" },
+  answer2: { type: "answer", ttsText: "水果是黄色的。" },
+  answer3: { type: "answer", ttsText: "植物是什么颜色？" },
+  answer4: { type: "answer", ttsText: "我要红色的衣服。" },
+  answer5: { type: "answer", ttsText: "动物是黑色的。" },
+  answer6: { type: "answer", ttsText: "盒子是蓝色的。" },
 };
 
 export default shape;

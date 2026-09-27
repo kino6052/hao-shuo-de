@@ -129,7 +129,7 @@ answers
 | New | Title                               | You'll be able to say…                                                            | Source                            |
 | --- | ----------------------------------- | --------------------------------------------------------------------------------- | --------------------------------- |
 | 16  | Numbers                             | "one person" / "two animals" / "number three"                                       | L13                               |
-| 17  | Colors                              | "a red box" / "The sky is blue."                                                  | L14                               |
+| 17  | Colors                              | "a red box" / "The water is blue." / "What color is it?"                                                  | L14                               |
 | 18  | Changing the Role of a Word         | "food (eat-de)" / "the one who writes" / "speak well" — every job of -de together | new (gathers de from L3–L4, L12)  |
 | 19  | Relationships 1 — Inside a sentence | "give it to me" / "write with a tool" / "you and me" / "this or that" / "for me…" | L07 gěi/yòng, L16 hé/duì          |
 | 20  | Relationships 2 — Linking sentences | "because…" / "but…" / "if…"                                                       | L07 yīnwèi, L08 conditions        |
@@ -398,7 +398,7 @@ Q1–Q4 were answered on 2026-09-27. New questions go here.
 
 `npm run build` starts with **`npm run check`** (`scripts/check-all.js`), which runs every gate below. It shows every report, then fails the build if any gate failed.
 
-**Strict for finished lessons.** The lessons in `scripts/finished-lessons.js` (L1–L16 so far) must pass every gate. Problems in other chapters are reported but don't fail the build. Add a lesson to that list once its Phase 2 rewrite passes every gate; from then on every build keeps it that way. Run a gate with chapter ids (`npm run check-jargon -- lesson-07`) to make it strict for just those, or with `--strict` for everything.
+**Strict for finished lessons.** The lessons in `scripts/finished-lessons.js` (L1–L17 so far) must pass every gate. Problems in other chapters are reported but don't fail the build. Add a lesson to that list once its Phase 2 rewrite passes every gate; from then on every build keeps it that way. Run a gate with chapter ids (`npm run check-jargon -- lesson-07`) to make it strict for just those, or with `--strict` for everything.
 
 | Command                        | What it checks                                                                                                                                                                            | Fails the build for |
 | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
@@ -470,7 +470,7 @@ For each lesson: ☐ written to template ☐ `npm run check -- lesson-NN` passes
 - [ ] L14 Modifiers 3 — Also and all — rewritten, passes every gate, on the finished list; **waiting for your review**
 - [ ] L15 Modifiers 4 — Becoming and making — rewritten, passes every gate, on the finished list; **waiting for your review**
 - [ ] L16 Numbers — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L17 Colors
+- [ ] L17 Colors — rewritten, passes every gate, on the finished list; **waiting for your review**
 - [ ] L18 Changing the Role of a Word
 - [ ] L19 Relationships 1 — Inside a sentence
 - [ ] L20 Relationships 2 — Linking sentences
