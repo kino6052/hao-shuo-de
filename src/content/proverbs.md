@@ -5,7 +5,7 @@ type: proverbs
 order: 1
 ---
 
-These philosophical standard expressions illustrate how complex human values are stated via fronted conditional frames and standard native syntax:
+Short sayings that show how much you can say with the words in this book:
 
 ```examples
 {{Word:quan2bu4}} {{word:dong1xi}} dōu {{word:you3}} {{word:shi2jian1}}. | Everything has a time.

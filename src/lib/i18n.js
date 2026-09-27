@@ -37,7 +37,7 @@ const UI = {
     usedIn: "Used in:",
     notUsedYet: "Not used in any chapter yet",
     sbSubject: "Subject",
-    sbPredicate: "Predicate",
+    sbPredicate: "Verb",
     sbObject: "Object",
     sbChoose: "Choose a word",
     sbAddModifier: "Add a modifier",

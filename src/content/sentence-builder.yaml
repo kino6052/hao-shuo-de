@@ -7,18 +7,18 @@ title:
   zh: "造句工具"
 
 summary:
-  eng: "A fractal sentence composer: build Subject-Predicate-Object sentences by clicking words from the dictionary, then click any word to nest a modifier onto it -- adjectives and possessives via -de, adverbs via hen3 -- stacking to any depth."
+  eng: "Build your own sentences: tap the Subject, Verb, and Object slots to pick words from the dictionary, then tap any word to describe it with another word."
   rus: "Фрактальный конструктор предложений: стройте предложения Подлежащее-Сказуемое-Дополнение, выбирая слова из словаря, а затем добавляйте вложенные определения к любому слову — прилагательные и притяжательные через -de, наречия через hen3 — с любой глубиной вложенности."
   zh: "一个分形造句工具：通过从词典中选词来构建主语-谓语-宾语句子，然后点击任意词为其添加嵌套修饰语——形容词和所属关系通过 -de，副词通过 hen3——可以叠加到任意深度。"
 
 blocks:
   - type: prose
     text:
-      eng: "This is the sentence builder. Build any sentence you want in Hǎo-shuō-de by clicking through the Subject, Predicate, and Object slots below -- a search box lets you find any word by pinyin or by its English, Russian, or Chinese meaning. Click any word already in a slot to nest a modifier onto it: modifiers can have modifiers of their own, all the way down. The assembled pinyin, a rough gloss, and audio playback update live above the slots."
+      eng: "This is the sentence builder. Build any sentence you want in Hǎo-shuō-de by clicking through the Subject, Verb, and Object slots below -- a search box lets you find any word by pinyin or by its English, Russian, or Chinese meaning. Click any word already in a slot to nest a modifier onto it: modifiers can have modifiers of their own, all the way down. The assembled pinyin, a rough gloss, and audio playback update live above the slots."
       rus: "Это конструктор предложений. Соберите любое предложение на Hǎo-shuō-de, нажимая на поля Подлежащее, Сказуемое и Дополнение ниже — строка поиска позволяет найти любое слово по пиньинь или по значению на английском, русском или китайском. Нажмите на любое слово, уже стоящее в поле, чтобы добавить к нему вложенное определение: у определений тоже могут быть свои определения, сколь угодно глубоко. Собранный пиньинь, приблизительный перевод и озвучка обновляются сразу над полями."
       zh: "这是造句工具。通过点击下面的主语、谓语和宾语插槽，组合出你想说的任何 Hǎo-shuō-de 句子——搜索框可以按拼音或按英语、俄语、中文释义查找任意词。点击插槽中已选好的词，即可为它添加嵌套修饰语：修饰语本身也可以再有修饰语，可以无限嵌套下去。拼好的拼音、大致的译义和语音朗读会在插槽上方实时更新。"
     tldr:
-      eng: "Compose any sentence by clicking Subject/Predicate/Object slots and stacking nested modifiers."
+      eng: "Build any sentence by tapping the Subject, Verb, and Object slots, then describe any word with another."
       rus: "Составляйте любое предложение, нажимая на поля Подлежащее/Сказуемое/Дополнение и добавляя вложенные определения."
       zh: "通过点击主语/谓语/宾语插槽并叠加嵌套修饰语来组合任意句子。"
     necessity:
