@@ -3,10 +3,9 @@
 // LessonShape is this lesson's exact, hand-written type -- see lesson-01's
 // shape.ts for the full explanation of the pattern.
 //
-// Phase 1 skeleton (BOOK_PLAN.md): the vocab list follows BOOK_PLAN §4b, and
-// the other blocks were moved here unchanged from the old 16-lesson layout
-// ([from old LNN] says where; the old lessons are archived in
-// src/content/legacy/v2-16-lessons/). They get rewritten in Phase 2.
+// Rewritten in Phase 2 (BOOK_PLAN.md): because (yīnwèi), but (dànshì), and if (X-de huà), with yán and sǐ.
+// Only words from this lesson and earlier ones; passes every gate
+// (npm run check -- lesson-20).
 import type {
   TTitle,
   TSummary,
@@ -21,34 +20,72 @@ import type {
 export type LessonShape = {
   /** Relationships 2 — Linking sentences */
   title: TTitle;
-  /** Chapter summary: what you'll be able to say (stub until the Phase 2 rewrite). */
+  /** Chapter summary: why you'd want this, then what you'll be able to say. */
   summary: TSummary;
-  /** Vocabulary: "from, because of". */
+  /** Vocabulary: "because". */
   vocabYinwei: TVocab;
-  /** Vocabulary: "but, however". */
+  /** Vocabulary: "but". */
   vocabDanshi: TVocab;
   /** Vocabulary: "salt". */
   vocabYan: TVocab;
-  /** Vocabulary: "die, dead". */
+  /** Vocabulary: "die; dead". */
   vocabSi: TVocab;
-  /** Vocabulary: "(X-de huà, "if X")". */
+  /** Vocabulary: "X-de huà: "if X"". */
   vocabHua: TVocab;
-  /** Grammar: no dedicated "if" word -- context/condition is a fronted clause followed by a comma. [from old L08] */
-  proseFrontedContext: TProse;
-  /** Grammar rule box: Fronted Context Clause. [from old L08] */
-  infoFrontedContext: TInfo;
-  /** Example: hěn-duō-rén-de dìfāng, wǒ hěn hǎo. [from old L08] */
-  example2: TExample;
-  /** Example: méi-yǒu shuǐ, dòngwù bù hǎo. [from old L08] */
-  example4: TExample;
-  /** Example: yīnwèi zhè-ge, wǒ zuò le hěn duō. [from old L07] */
-  example6L07: TExample;
-  /** Example: dànshì nánrén hé nǚrén zài zuò dōngxi, yě juéde hěn hǎo. [from old L16] */
-  example4L16: TExample;
-  /** Exercise 3: Say "If the tool isn't good, don't use it." [from old L08] */
+  /** Say: To say why, put yīnwèi (because) before the reason. Pattern: yīnwèi + reason, result */
+  proseBecause: TProse;
+  /** Example: yīnwèi wǒ hěn lěng, wǒ bù qù wài-miàn. */
+  exampleBecause1: TExample;
+  /** Example: wǒ bù chī, yīnwèi wǒ chī-wán le. */
+  exampleBecause2: TExample;
+  /** Example: yīnwèi méi-yǒu shuǐ, zhíwù sǐ le. */
+  exampleBecause3: TExample;
+  /** Say: To say but, put dànshì at the start of the second part. Pattern: sentence, dànshì + sentence */
+  proseBut: TProse;
+  /** Example: zhè-ge hěn hǎo, dànshì méi-yǒu yán. */
+  exampleBut1: TExample;
+  /** Example: wǒ yào qù, dànshì wǒ méi-yǒu jīn. */
+  exampleBut2: TExample;
+  /** Example: tā hěn xiǎo, dànshì hěn yǒu lìliàng. */
+  exampleBut3: TExample;
+  /** Example: mǐfàn-lǐ yǒu yán. */
+  exampleBut4: TExample;
+  /** Say: To say "if", put -de huà after the if-part, then a comma. Pattern: X-de huà, the rest */
+  proseIf: TProse;
+  /** Example: nǐ lái-de huà, wǒ děng nǐ. */
+  exampleIf1: TExample;
+  /** Example: nǐ lěng-de huà, wǒ gěi nǐ yīfu. */
+  exampleIf2: TExample;
+  /** Example: zhíwù méi-yǒu shuǐ-de huà, tā huì sǐ. */
+  exampleIf3: TExample;
+  /** Example: méi-yǒu shuǐ, zhíwù huì sǐ. */
+  exampleIf4: TExample;
+  /** Grammar box: yīnwèi, dànshì, X-de huà. */
+  infoLinkingSentences: TInfo;
+  /** Exercise 1: Because I'm cold, I want clothes. */
+  exercise1: TExercise;
+  /** Exercise 2: I want to eat, but I have no money. */
+  exercise2: TExercise;
+  /** Exercise 3: If you want it, I'll give it to you. */
   exercise3: TExercise;
-  /** Answer 3. [from old L08] */
+  /** Exercise 4: The plant died. */
+  exercise4: TExercise;
+  /** Exercise 5: I want salt. */
+  exercise5: TExercise;
+  /** Exercise 6: If you're cold, come inside. */
+  exercise6: TExercise;
+  /** Answer 1: yīnwèi wǒ hěn lěng, wǒ yào yīfu. */
+  answer1: TAnswer;
+  /** Answer 2: wǒ yào chī, dànshì wǒ méi-yǒu jīn. */
+  answer2: TAnswer;
+  /** Answer 3: nǐ yào-de huà, wǒ gěi nǐ. */
   answer3: TAnswer;
+  /** Answer 4: zhíwù sǐ le. */
+  answer4: TAnswer;
+  /** Answer 5: wǒ yào yán. */
+  answer5: TAnswer;
+  /** Answer 6: nǐ lěng-de huà, lái lǐ-miàn. */
+  answer6: TAnswer;
 };
 
 const shape: LessonShape = {
@@ -67,33 +104,82 @@ const shape: LessonShape = {
   vocabYan: { type: "vocab", term: "{{word:yan2}}", ttsText: "盐" },
   vocabSi: { type: "vocab", term: "{{word:si3}}", ttsText: "死" },
   vocabHua: { type: "vocab", term: "{{word:hua4}}", ttsText: "话" },
-  proseFrontedContext: { type: "prose" },
-  infoFrontedContext: {
+  proseBecause: { type: "prose" },
+  exampleBecause1: {
+    type: "example",
+    pinyin: "{{Word:yin1wei4}} {{word:wo3}} {{word:hen3}} {{word:leng3}}, {{word:wo3}} {{word:bu4}} {{word:qu4}} {{word:wai4}}-{{word:mian4}}.",
+    ttsText: "因为我很冷，我不去外面。",
+  },
+  exampleBecause2: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:bu4}} {{word:chi1}}, {{word:yin1wei4}} {{word:wo3}} {{word:chi1}}-{{word:wan2}} {{word:le}}.",
+    ttsText: "我不吃，因为我吃完了。",
+  },
+  exampleBecause3: {
+    type: "example",
+    pinyin: "{{Word:yin1wei4}} {{word:mei2}}-{{word:you3}} {{word:shui3}}, {{word:zhi2wu4}} {{word:si3}} {{word:le}}.",
+    ttsText: "因为没有水，植物死了。",
+  },
+  proseBut: { type: "prose" },
+  exampleBut1: {
+    type: "example",
+    pinyin: "{{Word:zhe4}}-ge {{word:hen3}} {{word:hao3}}, {{word:dan4shi4}} {{word:mei2}}-{{word:you3}} {{word:yan2}}.",
+    ttsText: "这个很好，但是没有盐。",
+  },
+  exampleBut2: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:yao4}} {{word:qu4}}, {{word:dan4shi4}} {{word:wo3}} {{word:mei2}}-{{word:you3}} {{word:jin1}}.",
+    ttsText: "我要去，但是我没有金。",
+  },
+  exampleBut3: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:hen3}} {{word:xiao3}}, {{word:dan4shi4}} {{word:hen3}} {{word:you3}} {{word:li4liang4}}.",
+    ttsText: "他很小，但是很有力量。",
+  },
+  exampleBut4: {
+    type: "example",
+    pinyin: "{{Word:mi3fan4}}-{{word:li3}} {{word:you3}} {{word:yan2}}.",
+    ttsText: "米饭里有盐。",
+  },
+  proseIf: { type: "prose" },
+  exampleIf1: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:lai2}}-{{word:de}} {{word:hua4}}, {{word:wo3}} {{word:deng3}} {{word:ni3}}.",
+    ttsText: "你来的话，我等你。",
+  },
+  exampleIf2: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:leng3}}-{{word:de}} {{word:hua4}}, {{word:wo3}} {{word:gei3}} {{word:ni3}} {{word:yi1fu}}.",
+    ttsText: "你冷的话，我给你衣服。",
+  },
+  exampleIf3: {
+    type: "example",
+    pinyin: "{{Word:zhi2wu4}} {{word:mei2}}-{{word:you3}} {{word:shui3}}-{{word:de}} {{word:hua4}}, {{word:ta1}} {{word:hui4}} {{word:si3}}.",
+    ttsText: "植物没有水的话，它会死。",
+  },
+  exampleIf4: {
+    type: "example",
+    pinyin: "{{Word:mei2}}-{{word:you3}} {{word:shui3}}, {{word:zhi2wu4}} {{word:hui4}} {{word:si3}}.",
+    ttsText: "没有水，植物会死。",
+  },
+  infoLinkingSentences: {
     type: "info",
     subtype: "grammar",
-    tag: "sentences/fronted-context",
-    items: [{}],
+    tag: "relationships/linking-sentences",
+    items: [{}, {}, {}],
   },
-  example2: {
-    type: "example",
-    pinyin: "{{Word:hen3}}-{{word:duo1}}-{{word:ren2}}-{{word:de}} {{word:di4fang1}}, {{word:wo3}} {{word:hen3}} {{word:hao3}}.",
-    ttsText: "很多人的地方，我很好。",
-  },
-  example4: {
-    type: "example",
-    pinyin: "{{Word:mei2}}-{{word:you3}} {{word:shui3}}, {{word:dong4wu4}} {{word:bu4}} {{word:hao3}}.",
-    ttsText: "没有水，动物不好。",
-  },
-  example6L07: {
-    type: "example",
-    pinyin: "{{Word:yin1wei4}} {{word:zhe4}}-ge, {{word:wo3}} {{word:nong4}} {{word:le}} {{word:hen3}} {{word:duo1}}.",
-  },
-  example4L16: {
-    type: "example",
-    pinyin: "{{Word:dan4shi4}} {{word:nan2ren2}} {{word:he2}} {{word:nv3ren2}} {{word:zai4}} {{word:nong4}} {{word:dong1xi}}, {{word:ye3}} {{word:jue2de}} {{word:hen3}} {{word:hao3}}.",
-  },
+  exercise1: { type: "exercise" },
+  exercise2: { type: "exercise" },
   exercise3: { type: "exercise" },
-  answer3: { type: "answer", ttsText: "工具不好，不用它。" },
+  exercise4: { type: "exercise" },
+  exercise5: { type: "exercise" },
+  exercise6: { type: "exercise" },
+  answer1: { type: "answer", ttsText: "因为我很冷，我要衣服。" },
+  answer2: { type: "answer", ttsText: "我要吃，但是我没有金。" },
+  answer3: { type: "answer", ttsText: "你要的话，我给你。" },
+  answer4: { type: "answer", ttsText: "植物死了。" },
+  answer5: { type: "answer", ttsText: "我要盐。" },
+  answer6: { type: "answer", ttsText: "你冷的话，来里面。" },
 };
 
 export default shape;

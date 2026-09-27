@@ -8,47 +8,118 @@ const en: PartialByKey<LessonShape> = {
   summary: {
     en: [
       "We often join two ideas: one thing happens because of another, or only if something else is true.",
-      "In this lesson, you'll be able to say \"because…\", \"but…\", and \"if…\".",
+      "In this lesson, you'll be able to say \"Because I'm cold, I'm not going.\", \"It's good, but there's no salt.\", and \"If you come, I'll wait for you.\"",
     ],
   },
-  vocabYinwei: { en: ["from, because of"] },
-  vocabDanshi: { en: ["but, however"] },
+  vocabYinwei: { en: ["because"] },
+  vocabDanshi: { en: ["but"] },
   vocabYan: { en: ["salt"] },
-  vocabSi: { en: ["die, dead"] },
-  vocabHua: { en: ['(X-de huà, "if X")'] },
-  proseFrontedContext: {
+  vocabSi: { en: ["die; dead"] },
+  vocabHua: { en: ['X-de huà: "if X"'] },
+  proseBecause: {
     en: [
-      'Hao-shuo-de has no dedicated word for "if," and no separate particle to mark a time or place clause ahead of the main sentence either.',
-      "Instead, the sentence itself already tells you what's context and what's the main statement, purely from where things sit.",
-      "Put the context or condition phrase at the very start of the sentence, immediately followed by a pause -- a comma -- and everything after that comma is the main statement it applies to.",
+      "**To say why**, put {{word:yin1wei4}} (because) before the reason.",
+      "",
+      "**{{word:yin1wei4}} + reason, result**",
+      "",
+      "The reason can also come second: {{Word:wo3}} {{word:bu4}} {{word:chi1}}, {{word:yin1wei4}} {{word:wo3}} {{word:chi1}}-{{word:wan2}} {{word:le}}.",
     ],
     tldr: {
       en: [
-        "Put the when, where, or if part first, then a comma, then the rest.",
+        "{{word:yin1wei4}} + reason: {{Word:yin1wei4}} {{word:wo3}} {{word:hen3}} {{word:leng3}}, {{word:wo3}} {{word:bu4}} {{word:qu4}}.",
+      ],
+    },
+    necessity: { en: ["Now you can give reasons."] },
+  },
+  exampleBecause1: { en: ["Because I'm cold, I'm not going outside."] },
+  exampleBecause2: { en: ["I'm not eating, because I've finished."] },
+  exampleBecause3: { en: ["Because there was no water, the plant died."] },
+  proseBut: {
+    en: [
+      "**To say but**, put {{word:dan4shi4}} at the start of the second part.",
+      "",
+      "**sentence, {{word:dan4shi4}} + sentence**",
+    ],
+    tldr: {
+      en: [
+        "{{word:dan4shi4}} means but: {{Word:zhe4}}-ge {{word:hen3}} {{word:hao3}}, {{word:dan4shi4}} {{word:mei2}}-{{word:you3}} {{word:yan2}}.",
       ],
     },
     necessity: {
-      en: ["Often you don't need a word for \"if\" at all."],
+      en: [
+        "Now you can say two things that pull against each other.",
+      ],
     },
   },
-  infoFrontedContext: {
-    title: { en: ["Fronted Context Clause"] },
+  exampleBut1: { en: ["It's good, but there's no salt."] },
+  exampleBut2: { en: ["I want to go, but I have no money."] },
+  exampleBut3: { en: ["He's small, but very strong."] },
+  exampleBut4: { en: ["There's salt in the rice."] },
+  proseIf: {
+    en: [
+      '**To say "if"**, put -{{word:de}} {{word:hua4}} after the if-part, then a comma.',
+      "",
+      "**X-{{word:de}} {{word:hua4}}, the rest**",
+      "",
+      "You can also just put the if-part first and leave out -{{word:de}} {{word:hua4}}: {{Word:mei2}}-{{word:you3}} {{word:shui3}}, {{word:zhi2wu4}} {{word:hui4}} {{word:si3}}.",
+    ],
+    tldr: {
+      en: [
+        "X-{{word:de}} {{word:hua4}} means if X: {{Word:ni3}} {{word:lai2}}-{{word:de}} {{word:hua4}}, {{word:wo3}} {{word:deng3}} {{word:ni3}}.",
+      ],
+    },
+    necessity: { en: ["Now you can talk about what might happen."] },
+  },
+  exampleIf1: { en: ["If you come, I'll wait for you."] },
+  exampleIf2: { en: ["If you're cold, I'll give you clothes."] },
+  exampleIf3: { en: ["If a plant has no water, it will die."] },
+  exampleIf4: { en: ["Without water, plants die."] },
+  infoLinkingSentences: {
+    title: { en: ["Linking Sentences"] },
     items: [
       {
         en: [
-          "[Context / Condition Phrase], [Main Statement] -- the context phrase always comes first, set off by a comma.",
+          "{{word:yin1wei4}} + reason, result: {{Word:yin1wei4}} {{word:wo3}} {{word:hen3}} {{word:leng3}}, {{word:wo3}} {{word:bu4}} {{word:qu4}}. (Because I'm cold, I'm not going.)",
+        ],
+      },
+      {
+        en: [
+          "…, {{word:dan4shi4}} …, but: {{Word:zhe4}}-ge {{word:hen3}} {{word:hao3}}, {{word:dan4shi4}} {{word:mei2}}-{{word:you3}} {{word:yan2}}. (It's good, but there's no salt.)",
+        ],
+      },
+      {
+        en: [
+          "X-{{word:de}} {{word:hua4}}, …, if: {{Word:ni3}} {{word:lai2}}-{{word:de}} {{word:hua4}}, {{word:wo3}} {{word:deng3}} {{word:ni3}}. (If you come, I'll wait for you.)",
         ],
       },
     ],
   },
-  example2: { en: ["In a crowded place, I'm fine."] },
-  example4: { en: ["Without water, the animal isn't well."] },
-  example6L07: { en: ["Because of this, I worked a lot."] },
-  example4L16: { en: ["But men and women are working and are happy."] },
-  exercise3: { en: ["Say: \"If the tool isn't good, don't use it.\""] },
+  exercise1: { en: ["Because I'm cold, I want clothes."] },
+  exercise2: { en: ["I want to eat, but I have no money."] },
+  exercise3: { en: ["If you want it, I'll give it to you."] },
+  exercise4: { en: ["The plant died."] },
+  exercise5: { en: ["I want salt."] },
+  exercise6: { en: ["If you're cold, come inside."] },
+  answer1: {
+    en: [
+      "{{Word:yin1wei4}} {{word:wo3}} {{word:hen3}} {{word:leng3}}, {{word:wo3}} {{word:yao4}} {{word:yi1fu}}.",
+    ],
+  },
+  answer2: {
+    en: [
+      "{{Word:wo3}} {{word:yao4}} {{word:chi1}}, {{word:dan4shi4}} {{word:wo3}} {{word:mei2}}-{{word:you3}} {{word:jin1}}.",
+    ],
+  },
   answer3: {
     en: [
-      "{{Word:gong1ju4}} {{word:bu4}} {{word:hao3}}, {{word:bu4}} {{word:yong4}} {{word:ta1}}.",
+      "{{Word:ni3}} {{word:yao4}}-{{word:de}} {{word:hua4}}, {{word:wo3}} {{word:gei3}} {{word:ni3}}.",
+    ],
+  },
+  answer4: { en: ["{{Word:zhi2wu4}} {{word:si3}} {{word:le}}."] },
+  answer5: { en: ["{{Word:wo3}} {{word:yao4}} {{word:yan2}}."] },
+  answer6: {
+    en: [
+      "{{Word:ni3}} {{word:leng3}}-{{word:de}} {{word:hua4}}, {{word:lai2}} {{word:li3}}-{{word:mian4}}.",
     ],
   },
 };
