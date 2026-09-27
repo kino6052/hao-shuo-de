@@ -3,10 +3,9 @@
 // LessonShape is this lesson's exact, hand-written type -- see lesson-01's
 // shape.ts for the full explanation of the pattern.
 //
-// Phase 1 skeleton (BOOK_PLAN.md): the vocab list follows BOOK_PLAN §4b, and
-// the other blocks were moved here unchanged from the old 16-lesson layout
-// ([from old LNN] says where; the old lessons are archived in
-// src/content/legacy/v2-16-lessons/). They get rewritten in Phase 2.
+// Rewritten in Phase 2 (BOOK_PLAN.md): when (X-de shíjiān), finished (verb-wán), after (verb-wán hòu), start (kāishǐ), and stay or keep (liú).
+// Only words from this lesson and earlier ones; passes every gate
+// (npm run check -- lesson-09).
 import type {
   TTitle,
   TSummary,
@@ -23,38 +22,82 @@ export type LessonShape = {
   title: TTitle;
   /** Chapter summary: what you'll be able to say (stub until the Phase 2 rewrite). */
   summary: TSummary;
-  /** Vocabulary: "finish". */
+  /** Vocabulary: "finish; after a verb: finished". */
   vocabWan: TVocab;
-  /** Vocabulary: "to begin to, start to, manage to". */
+  /** Vocabulary: "start". */
   vocabKaishi: TVocab;
-  /** Vocabulary: "after, behind". */
+  /** Vocabulary: "after; behind". */
   vocabHou: TVocab;
   /** Vocabulary: "play". */
   vocabWanr: TVocab;
   /** Vocabulary: "stay, keep". */
   vocabLiu: TVocab;
-  /** Grammar: "when X" is built compositionally as X-de + shíjiān ("the time of X"), reusing -de. [from old L08] */
-  proseDeShijian: TProse;
-  /** Example: wǒ chī-de shíjiān, wǒ hěn hǎo. [from old L08] */
-  example3: TExample;
-  /** Grammar: 完，到，好 [from old L05] */
-  completionMarkers: TProse;
-  /** info: … [from old L05] */
-  infoCompletionMarkers: TInfo;
-  /** Example: wǒ chī-wán le. [from old L05] */
-  exampleCompletionMarker1: TExample;
-  /** Example: wǒ tīng-dào le. [from old L05] */
-  exampleCompletionMarker2: TExample;
-  /** Example: wǒ nòng-hǎo le. [from old L05] */
-  exampleCompletionMarker3: TExample;
-  /** Example: wǒ kāishǐ zhīdào Hǎo-shuō-de. [from old L09] */
-  example2L09: TExample;
-  /** Example: zhíwù kāishǐ yǒu shuǐ. [from old L09] */
-  example6L09: TExample;
-  /** Exercise 2: Say "When you speak, I listen." [from old L08] */
+  /** Say: To say "when", say "the time of" it: put -de shíjiān after the action, then a comma. Pattern: Who + verb-de shíjiān, the rest */
+  proseWhen: TProse;
+  /** Example: wǒ chī-de shíjiān, wǒ bù shuō. */
+  exampleWhen1: TExample;
+  /** Example: nǐ shuō-de shíjiān, wǒ tīng. */
+  exampleWhen2: TExample;
+  /** Example: tā shuìjiào-de shíjiān, wǒ wánr. */
+  exampleWhen3: TExample;
+  /** Say: To say you finished doing something, join wán to the verb, and add le. Pattern: Who + verb-wán le */
+  proseFinished: TProse;
+  /** Example: wǒ chī-wán le. */
+  exampleFinished1: TExample;
+  /** Example: nǐ xiě-wán le ma? */
+  exampleFinished2: TExample;
+  /** Example: tā kàn-wán le. */
+  exampleFinished3: TExample;
+  /** Say: To say "after doing something", put hòu after the finished action, then a comma. Pattern: verb-wán hòu, the rest */
+  proseAfter: TProse;
+  /** Example: chī-wán hòu, wǒ shuìjiào. */
+  exampleAfter1: TExample;
+  /** Example: xiě-wán hòu, wǒ wánr. */
+  exampleAfter2: TExample;
+  /** Example: kàn-wán hòu, nǐ shuō. */
+  exampleAfter3: TExample;
+  /** Say: To say something starts, put kāishǐ before the verb. Pattern: Who + kāishǐ + verb */
+  proseStart: TProse;
+  /** Example: wǒ kāishǐ wánr le. */
+  exampleStart1: TExample;
+  /** Example: tā kāishǐ chī. */
+  exampleStart2: TExample;
+  /** Example: nǐ kāishǐ xiě le ma? */
+  exampleStart3: TExample;
+  /** Say: To say you stay, or keep something, use liú. Pattern: Who + liú (+ thing) */
+  proseStay: TProse;
+  /** Example: wǒ liú zhè-ge. */
+  exampleStay1: TExample;
+  /** Example: nǐ yào liú ma? */
+  exampleStay2: TExample;
+  /** Example: chī-wán hòu, tā liú. */
+  exampleStay3: TExample;
+  /** Grammar box: X-de shíjiān (when), verb-wán le (finished), verb-wán hòu (after), kāishǐ + verb (start). */
+  infoAroundAnAction: TInfo;
+  /** Exercise 1: When I write, I don't eat. */
+  exercise1: TExercise;
+  /** Exercise 2: I finished writing. */
   exercise2: TExercise;
-  /** Answer 2. [from old L08] */
+  /** Exercise 3: After reading, I sleep. */
+  exercise3: TExercise;
+  /** Exercise 4: She started to eat. */
+  exercise4: TExercise;
+  /** Exercise 5: Do you want to play? */
+  exercise5: TExercise;
+  /** Exercise 6: I will stay. */
+  exercise6: TExercise;
+  /** Answer 1: wǒ xiě-de shíjiān, wǒ bù chī. */
+  answer1: TAnswer;
+  /** Answer 2: wǒ xiě-wán le. */
   answer2: TAnswer;
+  /** Answer 3: kàn-wán hòu, wǒ shuìjiào. */
+  answer3: TAnswer;
+  /** Answer 4: tā kāishǐ chī le. */
+  answer4: TAnswer;
+  /** Answer 5: nǐ yào wánr ma? */
+  answer5: TAnswer;
+  /** Answer 6: wǒ huì liú. */
+  answer6: TAnswer;
 };
 
 const shape: LessonShape = {
@@ -69,44 +112,104 @@ const shape: LessonShape = {
   vocabHou: { type: "vocab", term: "{{word:hou4}}", ttsText: "后" },
   vocabWanr: { type: "vocab", term: "{{word:wan2r}}", ttsText: "玩儿" },
   vocabLiu: { type: "vocab", term: "{{word:liu2}}", ttsText: "留" },
-  proseDeShijian: { type: "prose" },
-  example3: {
+  proseWhen: { type: "prose" },
+  exampleWhen1: {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:chi1}}-{{word:de}} {{word:shi2jian1}}, {{word:wo3}} {{word:hen3}} {{word:hao3}}.",
-    ttsText: "我吃的时间，我很好。",
+    pinyin: "{{Word:wo3}} {{word:chi1}}-{{word:de}} {{word:shi2jian1}}, {{word:wo3}} {{word:bu4}} {{word:shuo1}}.",
+    ttsText: "我吃的时间，我不说。",
   },
-  completionMarkers: { type: "prose" },
-  infoCompletionMarkers: {
-    type: "info",
-    subtype: "grammar",
-    tag: "verbs/resultative-complements",
-    items: [{}, {}, {}],
+  exampleWhen2: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:shuo1}}-{{word:de}} {{word:shi2jian1}}, {{word:wo3}} {{word:ting1}}.",
+    ttsText: "你说的时间，我听。",
   },
-  exampleCompletionMarker1: {
+  exampleWhen3: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:shui4jiao4}}-{{word:de}} {{word:shi2jian1}}, {{word:wo3}} {{word:wan2r}}.",
+    ttsText: "他睡觉的时间，我玩儿。",
+  },
+  proseFinished: { type: "prose" },
+  exampleFinished1: {
     type: "example",
     pinyin: "{{Word:wo3}} {{word:chi1}}-{{word:wan2}} {{word:le}}.",
     ttsText: "我吃完了。",
   },
-  exampleCompletionMarker2: {
+  exampleFinished2: {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:ting1}}-dào {{word:le}}.",
-    ttsText: "我听到了。",
+    pinyin: "{{Word:ni3}} {{word:xie3}}-{{word:wan2}} {{word:le}} {{word:ma}}?",
+    ttsText: "你写完了吗？",
   },
-  exampleCompletionMarker3: {
+  exampleFinished3: {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:nong4}}-{{word:hao3}} {{word:le}}.",
-    ttsText: "我弄好了。",
+    pinyin: "{{Word:ta1}} {{word:kan4}}-{{word:wan2}} {{word:le}}.",
+    ttsText: "她看完了。",
   },
-  example2L09: {
+  proseAfter: { type: "prose" },
+  exampleAfter1: {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:kai1shi3}} {{word:zhi1dao4}} Hǎo-shuō-de.",
+    pinyin: "{{Word:chi1}}-{{word:wan2}} {{word:hou4}}, {{word:wo3}} {{word:shui4jiao4}}.",
+    ttsText: "吃完后，我睡觉。",
   },
-  example6L09: {
+  exampleAfter2: {
     type: "example",
-    pinyin: "{{Word:zhi2wu4}} {{word:kai1shi3}} {{word:you3}} {{word:shui3}}.",
+    pinyin: "{{Word:xie3}}-{{word:wan2}} {{word:hou4}}, {{word:wo3}} {{word:wan2r}}.",
+    ttsText: "写完后，我玩儿。",
   },
+  exampleAfter3: {
+    type: "example",
+    pinyin: "{{Word:kan4}}-{{word:wan2}} {{word:hou4}}, {{word:ni3}} {{word:shuo1}}.",
+    ttsText: "看完后，你说。",
+  },
+  proseStart: { type: "prose" },
+  exampleStart1: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:kai1shi3}} {{word:wan2r}} {{word:le}}.",
+    ttsText: "我开始玩儿了。",
+  },
+  exampleStart2: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:kai1shi3}} {{word:chi1}}.",
+    ttsText: "他开始吃。",
+  },
+  exampleStart3: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:kai1shi3}} {{word:xie3}} {{word:le}} {{word:ma}}?",
+    ttsText: "你开始写了吗？",
+  },
+  proseStay: { type: "prose" },
+  exampleStay1: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:liu2}} {{word:zhe4}}-ge.",
+    ttsText: "我留这个。",
+  },
+  exampleStay2: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:yao4}} {{word:liu2}} {{word:ma}}?",
+    ttsText: "你要留吗？",
+  },
+  exampleStay3: {
+    type: "example",
+    pinyin: "{{Word:chi1}}-{{word:wan2}} {{word:hou4}}, {{word:ta1}} {{word:liu2}}.",
+    ttsText: "吃完后，她留。",
+  },
+  infoAroundAnAction: {
+    type: "info",
+    subtype: "grammar",
+    tag: "time/when-finish-after-start",
+    items: [{}, {}, {}, {}],
+  },
+  exercise1: { type: "exercise" },
   exercise2: { type: "exercise" },
-  answer2: { type: "answer", ttsText: "你说的时间，我听。" },
+  exercise3: { type: "exercise" },
+  exercise4: { type: "exercise" },
+  exercise5: { type: "exercise" },
+  exercise6: { type: "exercise" },
+  answer1: { type: "answer", ttsText: "我写的时间，我不吃。" },
+  answer2: { type: "answer", ttsText: "我写完了。" },
+  answer3: { type: "answer", ttsText: "看完后，我睡觉。" },
+  answer4: { type: "answer", ttsText: "她开始吃了。" },
+  answer5: { type: "answer", ttsText: "你要玩儿吗？" },
+  answer6: { type: "answer", ttsText: "我会留。" },
 };
 
 export default shape;

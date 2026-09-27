@@ -90,6 +90,8 @@ answers
 | D26 | **Pronouns are pointers.** L4 is renamed from "You and I" to **"Pointing at People and Things"**. It teaches pointers for things, including the counting word gè (zhè-ge "this one", nà-ge "that one"), then pointers for people (wǒ, nǐ, tā), then whose it is (wǒ-de). nà and gè move from L3 to L4, and fùmǔ moves from L4 to L3 to keep the load even. intro-3 says the same. |
 | D28 | **men is added** (Q5), introduced in L4 for wǒ-men / nǐ-men / tā-men. The vocabulary becomes **148 words**. shēntǐ moves from L4 to L12 to keep L4 at 10 new words.                                                                                                                                                                                                               |
 | D27 | **Core terms are allowed, sparingly:** noun, verb, subject, object, only where really needed (rule 4). Everything else is banned. **`npm run check-jargon`** is the whole-book jargon gate. It isn't part of `npm run build` yet, because the lessons not yet rewritten, the appendices, and the dictionary's part-of-speech labels still fail it.                                |
+| D29 | **qián moves from L9 to L10.** It is a place root like lǐ, shàng, xià, and hòu: it joins miàn to make qián-miàn, "in front". L9 teaches when, finished, after, start, and stay. |
+| D30 | **New spellings (your edit, 2026-09-27):** qian2 is **qián** (was qiánmiàn), and di4 is **di** (was tái). The lessons show whatever the dictionary says; this plan uses the same spellings. See Q6. |
 
 ---
 
@@ -180,7 +182,7 @@ Approved (D23). It can still be adjusted as each lesson is written, but the rule
 | 7   | Pre-Verbs                         | yào, néng, zhīdào, ài                                      | děng, yīfu                                  | —                                  |   **6** |     51 / 148 |  34% |
 | 8   | Time 1                            | shíjiān, le, huì, zài                                      | rì, yuè, shuìjiào                           | guò                                |   **8** |     59 / 148 |  40% |
 | 9   | Time 2                            | wán, kāishǐ, hòu                                           | wánr, liú                                   | —                                  |   **5** |     64 / 148 |  43% |
-| 10  | Space 1                           | lǐ, shàng, xià, qiánmiàn, páng, biān, pángbiān, miàn, nǎlǐ | tái                                         | —                                  |  **10** |     74 / 148 |  50% |
+| 10  | Space 1                           | lǐ, shàng, xià, qián, páng, biān, pángbiān, miàn, nǎlǐ | di                                         | —                                  |  **10** |     74 / 148 |  50% |
 | 11  | Space 2                           | cóng, lái, qù, qǐ, wài                                     | shìchǎng, kǒu                               | dào                                |   **8** |     82 / 148 |  55% |
 | 12  | Modifiers 1 — How much            | zhēn                                                       | rè, lěng, tián, qíguài, xīn, shēntǐ         | —                                  |   **7** |     89 / 148 |  60% |
 | 13  | Modifiers 2 — Comparing           | bǐ, yīyàng, bùtóng                                         | yìng, yuán, gùnzi, xiàn                     | —                                  |   **7** |     96 / 148 |  65% |
@@ -221,7 +223,7 @@ Validated: 148/148 words assigned (136 original + 12 added), no duplicates, and 
 | yán _salt_                      | L15 | L20 | "It's good, but there's no salt." It fills L20.                                         |
 | sǐ _die_                        | L15 | L20 | "If a plant has no water, it dies." It fills L20.                                       |
 
-Two words are now spelled the way the dictionary spells them: **tái** (dictionary id `di4`) and **qiánmiàn** (id `qian2`).
+Two words have new spellings in the dictionary: **di** (id `di4`, was tái) and **qián** (id `qian2`, was qiánmiàn). See D30.
 
 ### 4c. Lesson by lesson
 
@@ -279,12 +281,12 @@ What each lesson introduces, and why those words are there. **†** marks a dict
 
 - Core: wán _finish_, kāishǐ _start_, hòu _after, behind_
 - Theme: wánr † _play_, liú _stay, keep_
-- Why: "When I eat, …" (X-de shíjiān) / "I finished eating." / "after eating" / "I started to play." hòu comes back as a place word ("behind") in L10. qiánmiàn moved to L10 (D29).
+- Why: "When I eat, …" (X-de shíjiān) / "I finished eating." / "after eating" / "I started to play." hòu comes back as a place word ("behind") in L10. qián moved to L10 (D29).
 
 **L10 Space 1 — Where it is** · 10 new · 74 / 148
 
-- Core: lǐ _inside_, shàng _on, up_, xià _under, down_, qiánmiàn _in front_, páng † _beside_, biān † _side_, pángbiān _beside, next to_, miàn † _side, face (as in lǐ-miàn, shàng-miàn)_, nǎlǐ † _where_
-- Theme: tái † _table top, floor_
+- Core: lǐ _inside_, shàng _on, up_, xià _under, down_, qián _front; qián-miàn "in front"_, páng † _beside_, biān † _side_, pángbiān _beside, next to_, miàn † _side, face (as in lǐ-miàn, shàng-miàn)_, nǎlǐ † _where_
+- Theme: di † _floor, ground_
 - Why: "The box is on the table." / "inside the house" / "in front of me" / "Where is it?" The side-words (páng, biān, pángbiān, miàn) are one idea, so 10 words is fine.
 
 **L11 Space 2 — Moving** · 8 new · 82 / 148
@@ -387,6 +389,7 @@ Q1–Q4 were answered on 2026-09-27. New questions go here.
 - **Q3 — L8 zài.** → **Time stays before Space** (D20).
 - **Q4 — xiě-de dōngxi in L2.** → **Dropped.** L3 is the first -de (D21).
 - **Q5 — men (wǒ-men "we") isn't in the dictionary.** → **Added** (D28). L4 teaches wǒ-men, nǐ-men, and tā-men, so L4 fails `check-early-words`. The dictionary already defines wǒ as "I, me, we, us" and tā as "he, she, it, they".
+- **Q6 — di has no tone mark.** The id `di4` suggests **dì** (地, "ground, floor"). If so, the dictionary term (and this plan) should say dì. **Open.**
 
 ---
 
@@ -394,7 +397,7 @@ Q1–Q4 were answered on 2026-09-27. New questions go here.
 
 `npm run build` starts with **`npm run check`** (`scripts/check-all.js`), which runs every gate below. It shows every report, then fails the build if any gate failed.
 
-**Strict for finished lessons.** The lessons in `scripts/finished-lessons.js` (L1–L8 so far) must pass every gate. Problems in other chapters are reported but don't fail the build. Add a lesson to that list once its Phase 2 rewrite passes every gate; from then on every build keeps it that way. Run a gate with chapter ids (`npm run check-jargon -- lesson-07`) to make it strict for just those, or with `--strict` for everything.
+**Strict for finished lessons.** The lessons in `scripts/finished-lessons.js` (L1–L9 so far) must pass every gate. Problems in other chapters are reported but don't fail the build. Add a lesson to that list once its Phase 2 rewrite passes every gate; from then on every build keeps it that way. Run a gate with chapter ids (`npm run check-jargon -- lesson-07`) to make it strict for just those, or with `--strict` for everything.
 
 | Command                        | What it checks                                                                                                                                                                            | Fails the build for |
 | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
@@ -458,7 +461,7 @@ For each lesson: ☐ written to template ☐ `npm run check -- lesson-NN` passes
 - [ ] L6 Questions and Answers
 - [ ] L7 Pre-Verbs — rewritten, passes every gate, on the finished list; **waiting for your review**
 - [ ] L8 Time 1 — When it happens — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L9 Time 2 — Around an action
+- [ ] L9 Time 2 — Around an action — rewritten, passes every gate, on the finished list; **waiting for your review**
 - [ ] L10 Space 1 — Where it is
 - [ ] L11 Space 2 — Moving
 - [ ] L12 Modifiers 1 — How much

@@ -30,6 +30,7 @@ dào | verb/directional | to arrive, reach, go to; to (a place); after a verb, m
 dé | verb | to get, obtain, acquire, come to have; combines with a de-nominalized verb phrase to express acquiring an abstract result (e.g. de zhidao-de, "to learn", literally "to obtain the known-thing") | kama
 de | particle | possessive marker, structural adjectival particle; used to bind modifiers and multi-word description structures onto target nouns | pi
 děng | verb | to wait |
+di | noun | floor, horizontal surface, platform | supa
 dìfāng | noun | a place (both in space or metaphorical to mean part of something) |
 dòngwù | noun | animal, land mammal, beast | soweli
 dōngxi | noun | thing, phenomenon, object, physical being, matter | ijo
@@ -95,7 +96,7 @@ pángbiān | noun | side, vicinity, area beside, hip | poka
 pífū | noun | skin, outer layer, bark, peel, shell, boundary | selo
 qǐ | verb/directional | to rise, get up; begin; composes with a verb via a hyphen to mark the start of an action (e.g. {{word:shuo1}}-{{word:qi3}}, "to bring up/mention") |
 qī | number | seven |
-qiánmiàn | noun | front, face, foremost area, chest | sinpin
+qián | noun | front, face, foremost area, chest | sinpin
 qíguài | adjective | strange, unusual, foolish, crazy, intoxicated | nasa
 qù | verb | to go, move toward, travel away | tawa
 quánbù | adjective | all |
@@ -120,7 +121,6 @@ shuō | verb/noun | to communicate, say, speak, talk, use language; language, sp
 sǐ | verb/adjective | to die; dead, dying | moli
 sì | number | four |
 tā | pronoun | he, she, it, they, them; syntactically genderless and number-fluid | ona
-tái | noun | floor, horizontal surface, platform | supa
 tián | adjective | sweet, fragrant, cute, innocent, adorable | suwi
 tīng | verb | to hear, listen, pay attention to, obey | kute
 tóu | noun | head, mind, internal regulatory director | lawa

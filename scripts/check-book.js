@@ -118,7 +118,8 @@ if (neverIntroduced.length) errors.push(`words no lesson introduces: ${neverIntr
 if (existsSync(PLAN_PATH)) {
   const plan = readFileSync(PLAN_PATH, 'utf-8');
   const table = plan.split('### 4b.')[1]?.split('\n###')[0] ?? '';
-  const rows = table.split('\n').filter((line) => /^\| \d+ \|/.test(line));
+  // Any column padding (a markdown formatter may align the table).
+  const rows = table.split(/\r?\n/).filter((line) => /^\|\s*\d+\s*\|/.test(line));
   if (!rows.length) errors.push('BOOK_PLAN.md: no §4b table found');
   for (const row of rows) {
     const cells = row.split('|').map((c) => c.trim());
