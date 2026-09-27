@@ -11,105 +11,171 @@ const en: PartialByKey<LessonShape> = {
       "In this lesson, you'll be able to say \"give it to me\", \"write with a tool\", \"you and me\", \"this or that\", and \"for me\".",
     ],
   },
-  vocabGei: { en: ["to, for, give"] },
-  vocabYong: { en: ["using, with, by means of"] },
-  vocabHe: { en: ["and"] },
+  vocabGei: { en: ["give; to, for"] },
+  vocabYong: { en: ["use; with"] },
+  vocabHe: { en: ["and (between nouns)"] },
   vocabHuozhe: { en: ["or"] },
   vocabDui: { en: ["toward, for"] },
   vocabQun: { en: ["group"] },
   vocabMo: { en: ["touch"] },
   vocabDa: { en: ["hit"] },
-  proseRelationshipWords: {
+  proseGive: {
     en: [
-      "A handful of Hao-shuo-de words specify a relationship -- to/for, at/in, using, because of -- and sit right before the main verb, the way a preposition would in English.",
-      '`{{word:gei3}}` ("give, to, for"), `{{word:zai4}}` ("at, in"), `{{word:yong4}}` ("using, by means of"), and `{{word:yin1wei4}}` ("because of") all work this way.',
-      "A relationship phrase always sits between the subject and the main verb, never after it:",
+      "**To say you give something to someone**, use {{word:gei3}}: the person first, then the thing.",
+      "",
+      "**Who + {{word:gei3}} + person + thing**",
+      "",
+      "{{word:gei3}} before a verb means for or to: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:xie3}}, I write to you.",
     ],
     tldr: {
       en: [
-        "Words like {{word:gei3}} (to) and {{word:yong4}} (with) go right before the main verb.",
+        "{{word:gei3}} + person + thing: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:shui3}}, I give you water.",
       ],
     },
-    necessity: {
-      en: ["They say who it is for, or what it is done with."],
-    },
+    necessity: { en: ["Now you can say who gets what."] },
   },
-  infoRelationshipWordOrder: {
-    title: { en: ["Specifying a Relationship"] },
-    items: [
-      {
-        en: [
-          "Subject + Relationship Phrase + Main Verb + Object -- the relationship phrase always comes between the subject and the main action, never after it.",
-        ],
-      },
-    ],
-  },
-  example1L07: { en: ["I give a swimming animal to her."] },
-  example7L07: {
-    en: ["I speak in Hao-shuo-de / use Hao-shuo-de to speak."],
-  },
-  proseDuiHeYe: {
+  exampleGive1: { en: ["Give it to me."] },
+  exampleGive2: { en: ["I give you water."] },
+  exampleGive3: { en: ["She gives me clothes."] },
+  exampleGive4: { en: ["I write to you."] },
+  proseWith: {
     en: [
-      "Hao-shuo-de handles subjective perspective the same way it handles everything else -- by reusing an existing construction instead of inventing a particle.",
-      "`{{word:dui4}} ... {{word:lai2}} {{word:shuo1}}` (\"regarding ... to say,\" i.e. \"from the perspective of\") frames a whole clause as one person's point of view.",
-      'To connect multiple subjects within one clause, use `{{word:he2}}` ("and").',
-      "But when a single subject does or is more than one thing in a row, Hao-shuo-de doesn't reach for a conjunction at all -- it just adds `{{word:ye3}}` (\"also\") in front of the second verb or adjective, the same adverbial slot other single-word adverbs already occupy.",
+      "**To say what you do something with**, put {{word:yong4}} and the thing before the verb.",
+      "",
+      "**Who + {{word:yong4}} + thing + verb**",
     ],
     tldr: {
       en: [
-        '{{word:he2}} joins nouns ("you and me"). {{word:dui4}} {{word:wo3}} {{word:lai2}} {{word:shuo1}} means "for me".',
+        "{{word:yong4}} + thing + verb: {{Word:wo3}} {{word:yong4}} {{word:gong1ju4}} {{word:xie3}}, I write with a tool.",
       ],
     },
-    necessity: {
-      en: ["Now you can join people and say whose view it is."],
-    },
+    necessity: { en: ["Now you can say how you do things."] },
   },
-  infoPerspectiveConnection: {
-    title: { en: ["Perspective and Connection"] },
+  exampleWith1: { en: ["I write with a tool."] },
+  exampleWith2: { en: ["He eats with his hands."] },
+  exampleWith3: { en: ["Touch it with your hand."] },
+  exampleWith4: { en: ["He hits it with a stick."] },
+  exampleWith5: { en: ["I touch the animal with my hand."] },
+  exampleWith6: { en: ["Don't hit the animal with a stick."] },
+  proseAndOr: {
+    en: [
+      "**To join two nouns**, put {{word:he2}} (and) or {{word:huo4zhe3}} (or) between them.",
+      "",
+      "**A + {{word:he2}} / {{word:huo4zhe3}} + B**",
+      "",
+      "{{word:he2}} joins nouns only, not whole sentences.",
+    ],
+    tldr: {
+      en: [
+        "{{word:he2}} is and, {{word:huo4zhe3}} is or: {{word:ni3}} {{word:he2}} {{word:wo3}}, you and me.",
+      ],
+    },
+    necessity: { en: ["Now you can talk about two things at once."] },
+  },
+  exampleAndOr1: { en: ["You and me."] },
+  exampleAndOr2: { en: ["He and I go to the market."] },
+  exampleAndOr3: { en: ["I want this one or that one."] },
+  exampleAndOr4: { en: ["Eat fruit or rice."] },
+  proseToward: {
+    en: [
+      "**To say how someone is toward someone**, put {{word:dui4}} and the person before the describing word.",
+      "",
+      "**A + {{word:dui4}} + B + describing word**",
+      "",
+      '{{word:dui4}} X {{word:lai2}} {{word:shuo1}} means "for X": {{word:dui4}} {{word:wo3}} {{word:lai2}} {{word:shuo1}}, for me.',
+    ],
+    tldr: {
+      en: [
+        "{{word:dui4}} + person + describing word: {{Word:ta1}} {{word:dui4}} {{word:wo3}} {{word:hen3}} {{word:hao3}}, he's good to me.",
+      ],
+    },
+    necessity: { en: ["Now you can say how things are for someone."] },
+  },
+  exampleToward1: { en: ["He's good to me."] },
+  exampleToward2: { en: ["Water is good for plants."] },
+  exampleToward3: { en: ["For me, this is good."] },
+  proseGroup: {
+    en: [
+      "**To talk about a group**, use {{word:qun2}} (group) in place of {{word:ge4}}.",
+      "",
+      "**{{word:yi1}} / {{word:zhe4}} / {{word:na4}} + {{word:qun2}} + noun**",
+    ],
+    tldr: {
+      en: [
+        "{{word:yi1}}-{{word:qun2}} {{word:ren2}} is a group of people.",
+      ],
+    },
+    necessity: { en: ["Now you can talk about many at once."] },
+  },
+  exampleGroup1: { en: ["A group of people is outside."] },
+  exampleGroup2: { en: ["That group of animals is big."] },
+  exampleGroup3: { en: ["I give that group of people water."] },
+  infoInsideASentence: {
+    title: { en: ["Joining Words in a Sentence"] },
     items: [
       {
         en: [
-          "**Perspective:** `{{word:dui4}} [person] {{word:lai2}} {{word:shuo1}}` frames the whole clause that follows as that person's point of view.",
+          "{{word:gei3}} + person + thing, give: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:shui3}}. (I give you water.)",
         ],
       },
       {
         en: [
-          '**Multiple subjects:** join them with `{{word:he2}}` ("and"): `[Subject A] {{word:he2}} [Subject B] ...`.',
+          "{{word:yong4}} + thing + verb, with: {{Word:wo3}} {{word:yong4}} {{word:gong1ju4}} {{word:xie3}}. (I write with a tool.)",
         ],
       },
       {
         en: [
-          '**Multiple actions/states on one subject:** skip the conjunction and place `{{word:ye3}}` ("also") directly before the second verb or adjective instead.',
+          "A {{word:he2}} B, and (nouns only): {{word:ni3}} {{word:he2}} {{word:wo3}} (you and me)",
+        ],
+      },
+      {
+        en: [
+          "A {{word:huo4zhe3}} B, or: {{word:zhe4}}-ge {{word:huo4zhe3}} {{word:na4}}-ge (this one or that one)",
+        ],
+      },
+      {
+        en: [
+          "A {{word:dui4}} B + describing word, toward / for: {{Word:ta1}} {{word:dui4}} {{word:wo3}} {{word:hen3}} {{word:hao3}}. (He's good to me.)",
         ],
       },
     ],
   },
-  example1L16: {
+  exercise1: { en: ["Give me the box."] },
+  exercise2: { en: ["She writes with a stick."] },
+  exercise3: { en: ["I want fruit and rice."] },
+  exercise4: { en: ["this one or that one"] },
+  exercise5: { en: ["The sun is good for plants."] },
+  exercise6: { en: ["a group of animals"] },
+  exercise7: { en: ["Don't hit him."] },
+  exercise8: { en: ["Can I touch it?"] },
+  answer1: { en: ["{{Word:gei3}} {{word:wo3}} {{word:he2zi}}."] },
+  answer2: {
     en: [
-      "I like sweets. / From my perspective, sweet things are good.",
+      "{{Word:ta1}} {{word:yong4}} {{word:gun4zi}} {{word:xie3}}.",
     ],
   },
-  example2L16: {
+  answer3: {
     en: [
-      "The universe is beautiful from the perspective of God.",
+      "{{Word:wo3}} {{word:yao4}} {{word:shui3guo3}} {{word:he2}} {{word:mi3fan4}}.",
     ],
   },
-  exercise1L07: { en: ["The worker uses tools."] },
-  exercise2L07: { en: ["He gives things from his house."] },
-  exercise3L07: { en: ["Why did you do it?"] },
-  answer1L07: {
+  answer4: {
+    en: ["{{Word:zhe4}}-ge {{word:huo4zhe3}} {{word:na4}}-ge."],
+  },
+  answer5: {
     en: [
-      "{{Word:zhe4}}-ge {{word:gong1ju4}}-{{word:de}} {{word:ren2}} {{word:yong4}} {{word:gong1ju4}}. (or {{Word:zhe4}}-ge {{word:ren2}} {{word:yong4}} {{word:gong1ju4}}.)",
+      "{{Word:ri4}} {{word:dui4}} {{word:zhi2wu4}} {{word:hen3}} {{word:hao3}}.",
     ],
   },
-  answer2L07: {
+  answer6: { en: ["{{Word:yi1}}-{{word:qun2}} {{word:dong4wu4}}."] },
+  answer7: {
     en: [
-      "{{Word:ta1}} {{word:gei3}} {{word:lai2}}-{{word:ta1}}-{{word:de}}-{{word:di4fang1}}-{{word:de}} {{word:dong1xi}}.",
+      "{{Word:bu4}} {{word:yao4}} {{word:da3}} {{word:ta1}}.",
     ],
   },
-  answer3L07: {
+  answer8: {
     en: [
-      "{{Word:wei4shen2me}} {{word:ni3}} {{word:nong4}} {{word:le}} {{word:zhe4}}-ge?",
+      "{{Word:wo3}} {{word:neng2}} {{word:mo1}} {{word:ma}}?",
     ],
   },
 };

@@ -398,7 +398,7 @@ Q1–Q4 were answered on 2026-09-27. New questions go here.
 
 `npm run build` starts with **`npm run check`** (`scripts/check-all.js`), which runs every gate below. It shows every report, then fails the build if any gate failed.
 
-**Strict for finished lessons.** The lessons in `scripts/finished-lessons.js` (L1–L18 so far) must pass every gate. Problems in other chapters are reported but don't fail the build. Add a lesson to that list once its Phase 2 rewrite passes every gate; from then on every build keeps it that way. Run a gate with chapter ids (`npm run check-jargon -- lesson-07`) to make it strict for just those, or with `--strict` for everything.
+**Strict for finished lessons.** The lessons in `scripts/finished-lessons.js` (L1–L19 so far) must pass every gate. Problems in other chapters are reported but don't fail the build. Add a lesson to that list once its Phase 2 rewrite passes every gate; from then on every build keeps it that way. Run a gate with chapter ids (`npm run check-jargon -- lesson-07`) to make it strict for just those, or with `--strict` for everything.
 
 | Command                        | What it checks                                                                                                                                                                            | Fails the build for |
 | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
@@ -472,7 +472,7 @@ For each lesson: ☐ written to template ☐ `npm run check -- lesson-NN` passes
 - [ ] L16 Numbers — rewritten, passes every gate, on the finished list; **waiting for your review**
 - [ ] L17 Colors — rewritten, passes every gate, on the finished list; **waiting for your review**
 - [ ] L18 Changing the Role of a Word — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L19 Relationships 1 — Inside a sentence
+- [ ] L19 Relationships 1 — Inside a sentence — rewritten, passes every gate, on the finished list; **waiting for your review**
 - [ ] L20 Relationships 2 — Linking sentences
 - [ ] L21 Greetings and Feelings (takes in the old L22)
 
