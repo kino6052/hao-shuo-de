@@ -128,7 +128,7 @@ answers
 
 | New | Title                               | You'll be able to say…                                                            | Source                            |
 | --- | ----------------------------------- | --------------------------------------------------------------------------------- | --------------------------------- |
-| 16  | Numbers                             | "one person" / "two animals" / "number two"                                       | L13                               |
+| 16  | Numbers                             | "one person" / "two animals" / "number three"                                       | L13                               |
 | 17  | Colors                              | "a red box" / "The sky is blue."                                                  | L14                               |
 | 18  | Changing the Role of a Word         | "food (eat-de)" / "the one who writes" / "speak well" — every job of -de together | new (gathers de from L3–L4, L12)  |
 | 19  | Relationships 1 — Inside a sentence | "give it to me" / "write with a tool" / "you and me" / "this or that" / "for me…" | L07 gěi/yòng, L16 hé/duì          |
@@ -390,6 +390,7 @@ Q1–Q4 were answered on 2026-09-27. New questions go here.
 - **Q4 — xiě-de dōngxi in L2.** → **Dropped.** L3 is the first -de (D21).
 - **Q5 — men (wǒ-men "we") isn't in the dictionary.** → **Added** (D28). L4 teaches wǒ-men, nǐ-men, and tā-men, so L4 fails `check-early-words`. The dictionary already defines wǒ as "I, me, we, us" and tā as "he, she, it, they".
 - **Q6 — di has no tone mark.** The id `di4` suggests **dì** (地, "ground, floor"). If so, the dictionary term (and this plan) should say dì. **Open.**
+- **Q7 — èr (二, "two").** Real Mandarin counts aloud with èr (一、二、三), and "number two" is 二号. liǎng is only right before gè (两个). The dictionary has only liǎng, so L16 counts things (number + gè) and says "number three" instead of "number two". Add èr as an approved word in L16? **Open.**
 
 ---
 
@@ -397,7 +398,7 @@ Q1–Q4 were answered on 2026-09-27. New questions go here.
 
 `npm run build` starts with **`npm run check`** (`scripts/check-all.js`), which runs every gate below. It shows every report, then fails the build if any gate failed.
 
-**Strict for finished lessons.** The lessons in `scripts/finished-lessons.js` (L1–L15 so far) must pass every gate. Problems in other chapters are reported but don't fail the build. Add a lesson to that list once its Phase 2 rewrite passes every gate; from then on every build keeps it that way. Run a gate with chapter ids (`npm run check-jargon -- lesson-07`) to make it strict for just those, or with `--strict` for everything.
+**Strict for finished lessons.** The lessons in `scripts/finished-lessons.js` (L1–L16 so far) must pass every gate. Problems in other chapters are reported but don't fail the build. Add a lesson to that list once its Phase 2 rewrite passes every gate; from then on every build keeps it that way. Run a gate with chapter ids (`npm run check-jargon -- lesson-07`) to make it strict for just those, or with `--strict` for everything.
 
 | Command                        | What it checks                                                                                                                                                                            | Fails the build for |
 | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
@@ -468,7 +469,7 @@ For each lesson: ☐ written to template ☐ `npm run check -- lesson-NN` passes
 - [ ] L13 Modifiers 2 — Comparing — rewritten, passes every gate, on the finished list; **waiting for your review**
 - [ ] L14 Modifiers 3 — Also and all — rewritten, passes every gate, on the finished list; **waiting for your review**
 - [ ] L15 Modifiers 4 — Becoming and making — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L16 Numbers
+- [ ] L16 Numbers — rewritten, passes every gate, on the finished list; **waiting for your review**
 - [ ] L17 Colors
 - [ ] L18 Changing the Role of a Word
 - [ ] L19 Relationships 1 — Inside a sentence

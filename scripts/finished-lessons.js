@@ -10,7 +10,7 @@
 // A lesson goes on this list once its Phase 2 rewrite passes every gate.
 // From then on, every build keeps it that way.
 
-export const FINISHED_LESSONS = ['lesson-01', 'lesson-02', 'lesson-03', 'lesson-04', 'lesson-05', 'lesson-06', 'lesson-07', 'lesson-08', 'lesson-09', 'lesson-10', 'lesson-11', 'lesson-12', 'lesson-13', 'lesson-14', 'lesson-15'];
+export const FINISHED_LESSONS = ['lesson-01', 'lesson-02', 'lesson-03', 'lesson-04', 'lesson-05', 'lesson-06', 'lesson-07', 'lesson-08', 'lesson-09', 'lesson-10', 'lesson-11', 'lesson-12', 'lesson-13', 'lesson-14', 'lesson-15', 'lesson-16'];
 
 export function gatePolicy(argv = process.argv) {
   const args = argv.slice(2);
