@@ -826,7 +826,7 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "1 {{word:yi1}}, 2 {{word:liang3}}, 3 {{word:san1}}, 4 {{word:si4}}, 5 {{word:wu3}}, 6 {{word:liu4}}, 7 {{word:qi1}}, 8 {{word:ba1}}, 9 {{word:jiu3}}, 10 {{word:shi2}}"
+            "1 {{word:yi1}}, 2 {{word:er4}}, 3 {{word:san1}}, 4 {{word:si4}}, 5 {{word:wu3}}, 6 {{word:liu4}}, 7 {{word:qi1}}, 8 {{word:ba1}}, 9 {{word:jiu3}}, 10 {{word:shi2}}"
           ],
           "ru": [],
           "zh": []
@@ -835,7 +835,7 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "number + {{word:ge4}} + noun: {{Word:san1}}-ge {{word:ren2}} (three people). For two, {{word:liang3}}-ge."
+            "number + {{word:ge4}} + noun: {{Word:san1}}-ge {{word:ren2}} (three people). For two things, {{word:liang3}}-ge."
           ],
           "ru": [],
           "zh": []
@@ -844,7 +844,7 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "11 to 19, {{word:shi2}} + number: {{word:shi2}}-{{word:yi1}} (11)"
+            "Above ten: {{word:shi2}}-{{word:er4}} (12), {{word:er4}}-{{word:shi2}} (20)"
           ],
           "ru": [],
           "zh": []
@@ -853,7 +853,7 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "number + {{word:hao4}}, number …: {{Word:san1}}-{{word:hao4}} (number three)"
+            "number + {{word:hao4}}, number …: {{Word:er4}}-{{word:hao4}} (number two)"
           ],
           "ru": [],
           "zh": []

@@ -1428,7 +1428,7 @@
       "maps": ""
     },
     "di4": {
-      "term": "di",
+      "term": "dì",
       "pos": {
         "eng": "noun",
         "rus": "существительное",
@@ -2058,6 +2058,19 @@
         "rus": "больше одного человека: после указательного слова или слова о людях, как в {{word:wo3}}-{{word:men}} («мы»)",
         "zh": "表示不止一个人：用在指人的词后面，如 {{word:wo3}}-{{word:men}}（“我们”）"
       }
+    },
+    "er4": {
+      "term": "èr",
+      "pos": {
+        "eng": "number",
+        "rus": "числительное",
+        "zh": "数词"
+      },
+      "definition": {
+        "eng": "two, when counting aloud or naming a number (yī, èr, sān; èr-hào, \"number two\"; shí-èr, 12); before gè, two is liǎng",
+        "rus": "два при счёте вслух и в номерах (yī, èr, sān; èr-hào, «номер два»; shí-èr, 12); перед gè «два» — это liǎng",
+        "zh": "二，用于数数和编号（yī, èr, sān；èr-hào，“二号”；shí-èr，十二）；在 gè 前面用 liǎng"
+      }
     }
   },
   "categories": [
@@ -2256,7 +2269,8 @@
             "qi1",
             "ba1",
             "jiu3",
-            "shi2"
+            "shi2",
+            "er4"
           ]
         },
         {

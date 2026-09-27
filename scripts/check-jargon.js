@@ -10,10 +10,14 @@
 // never fail, but their counts are printed per chapter as a reminder to use
 // them only where they're needed.
 //
-//   npm run check-jargon                              # whole book; fails for finished lessons
-//   npm run check-jargon -- lesson-05 lesson-06       # only these chapters; fails for them
+//   npm run check-jargon                              # the lessons; fails for finished ones
+//   npm run check-jargon -- lesson-05 appendix-stories  # only these chapters; fails for them
 //   npm run check-jargon -- --summary                 # hit counts only
-//   npm run check-jargon -- --strict                  # fails for any hit
+//   npm run check-jargon -- --strict                  # fails for any hit in a lesson
+//   npm run check-jargon -- --all                     # also report every other chapter
+//
+// The rule is for the lessons (BOOK_PLAN.md D32): without --all or chapter
+// ids, only lessons are scanned.
 //
 // Chapter ids: lesson-NN, intro-N, appendix-*, proverbs, sentence-builder,
 // dictionary, categorical-dictionary.
@@ -29,9 +33,12 @@ const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const ROOT = resolve(__dirname, '..');
 const CONTENT_DIR = resolve(ROOT, 'src/content');
 
-const { named, blocking, scopeLabel, summary: summaryOnly } = gatePolicy();
+const { args, named, blocking, scopeLabel, summary: summaryOnly } = gatePolicy();
 const only = new Set(named);
-const wanted = (id) => only.size === 0 || only.has(id);
+// The no-jargon rule is for the lessons (BOOK_PLAN.md D32). --all also scans
+// the intros, appendices, proverbs, sentence builder, and dictionary.
+const includeAll = args.includes('--all');
+const wanted = (id) => (only.size ? only.has(id) : /^lesson-\d+$/.test(id) || includeAll);
 
 // chapter id -> [{ where, term, snippet }]
 const hits = new Map();

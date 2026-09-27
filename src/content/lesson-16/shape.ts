@@ -3,7 +3,7 @@
 // LessonShape is this lesson's exact, hand-written type -- see lesson-01's
 // shape.ts for the full explanation of the pattern.
 //
-// Rewritten in Phase 2 (BOOK_PLAN.md): number + gè + noun, liǎng for two things, 11-19 (shí + number), and number labels (hào).
+// Rewritten in Phase 2 (BOOK_PLAN.md): counting aloud (yī, èr, sān), number + gè + noun (liǎng for two things), above ten (shí-èr, èr-shí), and number labels (hào).
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- lesson-16).
 import type {
@@ -26,7 +26,9 @@ export type LessonShape = {
   vocabYi: TVocab;
   /** Vocabulary: "two (before gè)". */
   vocabLiang: TVocab;
-  /** Vocabulary: "number (as in number three)". */
+  /** Vocabulary: "two (counting, number two, 12, 20)". */
+  vocabEr: TVocab;
+  /** Vocabulary: "number (as in number two)". */
   vocabHao: TVocab;
   /** Vocabulary: "three". */
   vocabSan: TVocab;
@@ -44,6 +46,14 @@ export type LessonShape = {
   vocabJiu: TVocab;
   /** Vocabulary: "ten". */
   vocabShi: TVocab;
+  /** Say: To count out loud, say the numbers in order. Pattern: yī, èr, sān, sì, wǔ … */
+  proseAloud: TProse;
+  /** Example: yī, èr, sān! */
+  exampleAloud1: TExample;
+  /** Example: sì, wǔ, liù. */
+  exampleAloud2: TExample;
+  /** Example: qī, bā, jiǔ, shí. */
+  exampleAloud3: TExample;
   /** Say: To count things, put the number, then gè, then the thing. Pattern: number + gè + noun */
   proseCount: TProse;
   /** Example: yī-ge rén. */
@@ -58,7 +68,7 @@ export type LessonShape = {
   exampleCount5: TExample;
   /** Example: tā yào liù-ge. */
   exampleCount6: TExample;
-  /** Example: qī-ge gùnzi zài di-shàng. */
+  /** Example: qī-ge gùnzi zài dì-shàng. */
   exampleCount7: TExample;
   /** Example: wǒ-men bā-ge rén qù shìchǎng. */
   exampleCount8: TExample;
@@ -78,7 +88,7 @@ export type LessonShape = {
   exampleCount15: TExample;
   /** Example: bā-ge hézi hěn dà. */
   exampleCount16: TExample;
-  /** Say: To say 11 to 19, say shí (ten), then the number. Pattern: shí + number */
+  /** Say: To say numbers above ten, put shí (ten) before or after the other number. Pattern: shí + number (11-19) / number + shí (20, 30 …) */
   proseTeens: TProse;
   /** Example: shí-yī-ge rén. */
   exampleTeens1: TExample;
@@ -86,15 +96,23 @@ export type LessonShape = {
   exampleTeens2: TExample;
   /** Example: shí-wǔ-ge dòngwù zài zhè-lǐ. */
   exampleTeens3: TExample;
-  /** Say: To say number one, number three, put hào after the number. Pattern: number + hào */
+  /** Example: shí-èr-ge shuǐguǒ. */
+  exampleTeens4: TExample;
+  /** Example: èr-shí-ge rén. */
+  exampleTeens5: TExample;
+  /** Example: sān-shí-ge hézi. */
+  exampleTeens6: TExample;
+  /** Say: To say number one, number two, put hào after the number. Pattern: number + hào */
   proseLabel: TProse;
   /** Example: wǒ-de jiā shì wǔ-hào. */
   exampleLabel1: TExample;
-  /** Example: sān-hào zài nǎlǐ? */
+  /** Example: èr-hào zài nǎlǐ? */
   exampleLabel2: TExample;
-  /** Example: nǐ shì yī-hào! */
+  /** Example: sān-hào zài nǎlǐ? */
   exampleLabel3: TExample;
-  /** Grammar box: the numbers 1-10, number + gè + noun, shí + number, number + hào. */
+  /** Example: nǐ shì yī-hào! */
+  exampleLabel4: TExample;
+  /** Grammar box: 1-10 with èr, number + gè + noun (liǎng for two), shí-èr / èr-shí, number + hào. */
   infoCounting: TInfo;
   /** Exercise 1: one box */
   exercise1: TExercise;
@@ -118,6 +136,10 @@ export type LessonShape = {
   exercise10: TExercise;
   /** Exercise 11: Where is number four? */
   exercise11: TExercise;
+  /** Exercise 12: twelve people */
+  exercise12: TExercise;
+  /** Exercise 13: Count from one to three. */
+  exercise13: TExercise;
   /** Answer 1: yī-ge hézi. */
   answer1: TAnswer;
   /** Answer 2: liǎng-ge rén. */
@@ -140,6 +162,10 @@ export type LessonShape = {
   answer10: TAnswer;
   /** Answer 11: sì-hào zài nǎlǐ? */
   answer11: TAnswer;
+  /** Answer 12: shí-èr-ge rén. */
+  answer12: TAnswer;
+  /** Answer 13: yī, èr, sān. */
+  answer13: TAnswer;
 };
 
 const shape: LessonShape = {
@@ -147,6 +173,7 @@ const shape: LessonShape = {
   summary: { type: "summary" },
   vocabYi: { type: "vocab", term: "{{word:yi1}}", ttsText: "一" },
   vocabLiang: { type: "vocab", term: "{{word:liang3}}", ttsText: "两" },
+  vocabEr: { type: "vocab", term: "{{word:er4}}", ttsText: "二" },
   vocabHao: { type: "vocab", term: "{{word:hao4}}", ttsText: "号" },
   vocabSan: { type: "vocab", term: "{{word:san1}}", ttsText: "三" },
   vocabSi: { type: "vocab", term: "{{word:si4}}", ttsText: "四" },
@@ -156,6 +183,22 @@ const shape: LessonShape = {
   vocabBa: { type: "vocab", term: "{{word:ba1}}", ttsText: "八" },
   vocabJiu: { type: "vocab", term: "{{word:jiu3}}", ttsText: "九" },
   vocabShi: { type: "vocab", term: "{{word:shi2}}", ttsText: "十" },
+  proseAloud: { type: "prose" },
+  exampleAloud1: {
+    type: "example",
+    pinyin: "{{Word:yi1}}, {{word:er4}}, {{word:san1}}!",
+    ttsText: "一，二，三！",
+  },
+  exampleAloud2: {
+    type: "example",
+    pinyin: "{{Word:si4}}, {{word:wu3}}, {{word:liu4}}.",
+    ttsText: "四，五，六。",
+  },
+  exampleAloud3: {
+    type: "example",
+    pinyin: "{{Word:qi1}}, {{word:ba1}}, {{word:jiu3}}, {{word:shi2}}.",
+    ttsText: "七，八，九，十。",
+  },
   proseCount: { type: "prose" },
   exampleCount1: {
     type: "example",
@@ -253,6 +296,21 @@ const shape: LessonShape = {
     pinyin: "{{Word:shi2}}-{{word:wu3}}-ge {{word:dong4wu4}} {{word:zai4}} {{word:zhe4}}-{{word:li3}}.",
     ttsText: "十五个动物在这里。",
   },
+  exampleTeens4: {
+    type: "example",
+    pinyin: "{{Word:shi2}}-{{word:er4}}-ge {{word:shui3guo3}}.",
+    ttsText: "十二个水果。",
+  },
+  exampleTeens5: {
+    type: "example",
+    pinyin: "{{Word:er4}}-{{word:shi2}}-ge {{word:ren2}}.",
+    ttsText: "二十个人。",
+  },
+  exampleTeens6: {
+    type: "example",
+    pinyin: "{{Word:san1}}-{{word:shi2}}-ge {{word:he2zi}}.",
+    ttsText: "三十个盒子。",
+  },
   proseLabel: { type: "prose" },
   exampleLabel1: {
     type: "example",
@@ -261,10 +319,15 @@ const shape: LessonShape = {
   },
   exampleLabel2: {
     type: "example",
+    pinyin: "{{Word:er4}}-{{word:hao4}} {{word:zai4}} {{word:na3li3}}?",
+    ttsText: "二号在哪里？",
+  },
+  exampleLabel3: {
+    type: "example",
     pinyin: "{{Word:san1}}-{{word:hao4}} {{word:zai4}} {{word:na3li3}}?",
     ttsText: "三号在哪里？",
   },
-  exampleLabel3: {
+  exampleLabel4: {
     type: "example",
     pinyin: "{{Word:ni3}} {{word:shi4}} {{word:yi1}}-{{word:hao4}}!",
     ttsText: "你是一号！",
@@ -286,6 +349,8 @@ const shape: LessonShape = {
   exercise9: { type: "exercise" },
   exercise10: { type: "exercise" },
   exercise11: { type: "exercise" },
+  exercise12: { type: "exercise" },
+  exercise13: { type: "exercise" },
   answer1: { type: "answer", ttsText: "一个盒子。" },
   answer2: { type: "answer", ttsText: "两个人。" },
   answer3: { type: "answer", ttsText: "我有三个工具。" },
@@ -297,6 +362,8 @@ const shape: LessonShape = {
   answer9: { type: "answer", ttsText: "九个水果。" },
   answer10: { type: "answer", ttsText: "十个人。" },
   answer11: { type: "answer", ttsText: "四号在哪里？" },
+  answer12: { type: "answer", ttsText: "十二个人。" },
+  answer13: { type: "answer", ttsText: "一，二，三。" },
 };
 
 export default shape;

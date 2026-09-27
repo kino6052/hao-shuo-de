@@ -30,12 +30,13 @@ dào | verb/directional | to arrive, reach, go to; to (a place); after a verb, m
 dé | verb | to get, obtain, acquire, come to have; combines with a de-nominalized verb phrase to express acquiring an abstract result (e.g. de zhidao-de, "to learn", literally "to obtain the known-thing") | kama
 de | particle | possessive marker, structural adjectival particle; used to bind modifiers and multi-word description structures onto target nouns | pi
 děng | verb | to wait |
-di | noun | floor, horizontal surface, platform | supa
+dì | noun | floor, horizontal surface, platform | supa
 dìfāng | noun | a place (both in space or metaphorical to mean part of something) |
 dòngwù | noun | animal, land mammal, beast | soweli
 dōngxi | noun | thing, phenomenon, object, physical being, matter | ijo
 duì | preposition/coverb | facing, towards, regarding, beneficial to; correct | tawa
 duō | adjective | many, a lot, much, several, very, abundant; used contextually to signify quantities greater than two | mute
+èr | number | two, when counting aloud or naming a number (yī, èr, sān; èr-hào, "number two"; shí-èr, 12); before gè, two is liǎng |
 fāngfǎ | noun | way, custom, method, doctrine | nasin
 fùmǔ | noun | parent, ancestor, creator, caretaker | mama
 gè | measure word | universal classifier; mandatory interface between numbers/demonstratives and nouns |
