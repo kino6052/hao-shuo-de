@@ -7,9 +7,9 @@ title:
   zh: "十个小故事"
 
 summary:
-  eng: "Ten classic, public-domain tales retold using only this dictionary's ~133 words -- a concrete demonstration of how much a minimal vocabulary can actually carry once real Mandarin grammar does the rest of the work."
-  rus: "Десять классических историй из общественного достояния, пересказанных с использованием лишь ~133 слов этого словаря — наглядная демонстрация того, как много может выразить минимальный словарь, если всю остальную работу берёт на себя настоящая мандаринская грамматика."
-  zh: "十个经典的公共领域故事，只用本词典约133个词重新讲述——具体演示了当真正的普通话语法承担起其余的工作时，一套极简的词汇量究竟能表达多少内容。"
+  eng: "Ten classic, public-domain tales retold using only this dictionary's {{dictionaryCount}} words -- a concrete demonstration of how much a minimal vocabulary can actually carry once real Mandarin grammar does the rest of the work."
+  rus: "Десять классических историй из общественного достояния, пересказанных с использованием лишь {{dictionaryCount}} слов этого словаря — наглядная демонстрация того, как много может выразить минимальный словарь, если всю остальную работу берёт на себя настоящая мандаринская грамматика."
+  zh: "十个经典的公共领域故事，只用本词典的{{dictionaryCount}}个词重新讲述——具体演示了当真正的普通话语法承担起其余的工作时，一套极简的词汇量究竟能表达多少内容。"
 
 blocks:
   - type: prose
@@ -18,9 +18,9 @@ blocks:
       rus: "Каждая история ниже строго остаётся в пределах уже изученного словаря. Там, где понятию действительно не находится слова (волк, кровать, «спрашивать», «где»), история либо обходит это композиционно — та же дисциплина, которую Урок 18 уже требовал от вас («написанная вещь» вместо отдельного слова для книги), — либо, для небольшого числа очень частотных пробелов, было добавлено новое слово. Точный список слов и обоснование — в примечании ниже."
       zh: '下面的每一个故事都严格只使用你已经学过的词典词汇。当某个概念确实没有对应的词时（狼、床、"问"、"哪里"），故事要么用组合的方式绕过去——这正是第18课已经要求你做的那种纪律（用"写的东西"代替专门表示"书"的词）——要么，对于少数几个使用频率非常高的空缺，添加了一个新词。具体添加了哪些词、为什么添加，见下面的说明。'
     tldr:
-      eng: "Every story below stays strictly inside the ~133-word dictionary."
-      rus: "Каждая история ниже строго остаётся в пределах словаря из ~133 слов."
-      zh: "下面的每个故事都严格只使用这约133个词典词汇。"
+      eng: "Every story below stays strictly inside the {{dictionaryCount}}-word dictionary."
+      rus: "Каждая история ниже строго остаётся в пределах словаря из {{dictionaryCount}} слов."
+      zh: "下面的每个故事都严格只使用这{{dictionaryCount}}个词典词汇。"
     necessity:
       eng: "Sets the ground rule before the reader meets any of the ten tales."
       rus: "Задаёт основное правило прежде, чем читатель встретится с любой из десяти историй."
@@ -193,35 +193,35 @@ blocks:
   - type: prose
     text:
       eng: |-
-        _(No dedicated words for "bird" or "cat" -- both are built compositionally: huì-fēi-de dòngwù, "the animal that can fly," and jiào "miāo-miāo" de dòngwù, "the animal that calls 'meow-meow,'" reusing Lesson 21's animal-sound pattern.)_
+        _(No dedicated words for "bird" or "cat" -- both are built from words you know: zài-kōngqì-lǐ-de dòngwù, "the animal in the air," and jiào "miao-miao" de dòngwù, "the animal that calls 'meow-meow,'" reusing Lesson 21's animal-sound pattern.)_
 
-        1. **huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:he2}} {{word:jiao4}} "miāo-miāo" {{word:de}} {{word:dong4wu4}} {{word:yao4}} {{word:qu4}} {{word:yi1}}-ge {{word:di4fang1}}.** — The flying animal and the meowing animal both want to reach the same place.
-        2. **Huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:jue2de}} {{word:hen3}} {{word:you3}} {{word:li4liang4}}, {{word:shuo1}}: {{word:wo3}} {{word:hen3}} {{word:hao3}}!** — The flying animal feels very energetic and says: I am the best!
+        1. **{{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:he2}} {{word:jiao4}} "miao-miao" {{word:de}} {{word:dong4wu4}} {{word:yao4}} {{word:qu4}} {{word:yi1}}-ge {{word:di4fang1}}.** — The flying animal and the meowing animal both want to reach the same place.
+        2. **{{Word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:jue2de}} {{word:hen3}} {{word:you3}} {{word:li4liang4}}, {{word:shuo1}}: {{word:wo3}} {{word:hen3}} {{word:hao3}}!** — The flying animal feels very energetic and says: I am the best!
         3. **{{Word:liang3}}-ge {{word:dong4wu4}} {{word:qu4}}.** — The two animals set off.
-        4. **Huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:zai4}} {{word:fang1fa3}}-shàng {{word:shui4jiao4}}.** — The flying animal falls asleep on the way.
-        5. **{{word:jiao4}} "miāo-miāo" {{word:de}} {{word:dong4wu4}} {{word:qu4}}, {{word:qu4}}, {{word:bu4}} {{word:shui4jiao4}}.** — The meowing animal goes and goes, without sleeping.
-        6. **{{word:jiao4}} "miāo-miāo" {{word:de}} {{word:dong4wu4}} dào {{word:le}}.** — The meowing animal arrives.
-        7. **Huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:jue2de}} {{word:hen3}} {{word:huai4}}.** — The flying animal feels very embarrassed.
+        4. **{{Word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:zai4}} {{word:di4}}-{{word:shang4}} {{word:shui4jiao4}}.** — The bird falls asleep on the ground.
+        5. **{{word:jiao4}} "miao-miao" {{word:de}} {{word:dong4wu4}} {{word:qu4}}, {{word:qu4}}, {{word:bu4}} {{word:shui4jiao4}}.** — The meowing animal goes and goes, without sleeping.
+        6. **{{word:jiao4}} "miao-miao" {{word:de}} {{word:dong4wu4}} {{word:dao4}} {{word:le}}.** — The meowing animal arrives.
+        7. **{{Word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:jue2de}} {{word:hen3}} {{word:huai4}}.** — The flying animal feels very embarrassed.
       rus: |-
-        _(Отдельных слов для «птицы» или «кошки» нет — оба образованы составным способом: huì-fēi-de dòngwù, «животное, которое умеет летать», и jiào «miāo-miāo» de dòngwù, «животное, которое издаёт звук "мяу-мяу"», по той же модели звуков животных, что и в Уроке 21.)_
+        _(Отдельных слов для «птицы» или «кошки» нет — оба образованы составным способом: zài-kōngqì-lǐ-de dòngwù, «животное в воздухе», и jiào «miāo-miāo» de dòngwù, «животное, которое издаёт звук "мяу-мяу"», по той же модели звуков животных, что и в Уроке 21.)_
 
-        1. **huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:he2}} {{word:jiao4}} "miāo-miāo" {{word:de}} {{word:dong4wu4}} {{word:yao4}} {{word:qu4}} {{word:yi1}}-ge {{word:di4fang1}}.** — Летающее животное и мяукающее животное оба хотят добраться до одного и того же места.
-        2. **Huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:jue2de}} {{word:hen3}} {{word:you3}} {{word:li4liang4}}, {{word:shuo1}}: {{word:wo3}} {{word:hen3}} {{word:hao3}}!** — Летающее животное чувствует себя очень энергичным и говорит: я лучше всех!
+        1. **{{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:he2}} {{word:jiao4}} "miao-miao" {{word:de}} {{word:dong4wu4}} {{word:yao4}} {{word:qu4}} {{word:yi1}}-ge {{word:di4fang1}}.** — Летающее животное и мяукающее животное оба хотят добраться до одного и того же места.
+        2. **{{Word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:jue2de}} {{word:hen3}} {{word:you3}} {{word:li4liang4}}, {{word:shuo1}}: {{word:wo3}} {{word:hen3}} {{word:hao3}}!** — Летающее животное чувствует себя очень энергичным и говорит: я лучше всех!
         3. **{{Word:liang3}}-ge {{word:dong4wu4}} {{word:qu4}}.** — Два животных отправляются в путь.
-        4. **Huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:zai4}} {{word:fang1fa3}}-shàng {{word:shui4jiao4}}.** — Летающее животное засыпает по дороге.
-        5. **{{word:jiao4}} "miāo-miāo" {{word:de}} {{word:dong4wu4}} {{word:qu4}}, {{word:qu4}}, {{word:bu4}} {{word:shui4jiao4}}.** — Мяукающее животное идёт и идёт, не засыпая.
-        6. **{{word:jiao4}} "miāo-miāo" {{word:de}} {{word:dong4wu4}} dào {{word:le}}.** — Мяукающее животное приходит первым.
-        7. **Huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:jue2de}} {{word:hen3}} {{word:huai4}}.** — Летающее животное чувствует себя очень плохо.
+        4. **{{Word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:zai4}} {{word:di4}}-{{word:shang4}} {{word:shui4jiao4}}.** — Летающее животное засыпает по дороге.
+        5. **{{word:jiao4}} "miao-miao" {{word:de}} {{word:dong4wu4}} {{word:qu4}}, {{word:qu4}}, {{word:bu4}} {{word:shui4jiao4}}.** — Мяукающее животное идёт и идёт, не засыпая.
+        6. **{{word:jiao4}} "miao-miao" {{word:de}} {{word:dong4wu4}} {{word:dao4}} {{word:le}}.** — Мяукающее животное приходит первым.
+        7. **{{Word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:jue2de}} {{word:hen3}} {{word:huai4}}.** — Летающее животное чувствует себя очень плохо.
       zh: |-
-        _（没有专门表示"鸟"或"猫"的词——两者都是组合而成的：huì-fēi-de dòngwù，"会飞的动物"；jiào "miāo-miāo" de dòngwù，"叫'喵喵'的动物"，沿用第21课的动物叫声句式。）_
+        _（没有专门表示"鸟"或"猫"的词——两者都是组合而成的：zài-kōngqì-lǐ-de dòngwù，"在空气里的动物"；jiào "miao-miao" de dòngwù，"叫'喵喵'的动物"，沿用第21课的动物叫声句式。）_
 
-        1. **huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:he2}} {{word:jiao4}} "miāo-miāo" {{word:de}} {{word:dong4wu4}} {{word:yao4}} {{word:qu4}} {{word:yi1}}-ge {{word:di4fang1}}.** — 会飞的动物和喵喵叫的动物都想到达同一个地方。
-        2. **Huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:jue2de}} {{word:hen3}} {{word:you3}} {{word:li4liang4}}, {{word:shuo1}}: {{word:wo3}} {{word:hen3}} {{word:hao3}}!** — 会飞的动物觉得自己充满活力，说：我最厉害！
+        1. **{{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:he2}} {{word:jiao4}} "miao-miao" {{word:de}} {{word:dong4wu4}} {{word:yao4}} {{word:qu4}} {{word:yi1}}-ge {{word:di4fang1}}.** — 会飞的动物和喵喵叫的动物都想到达同一个地方。
+        2. **{{Word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:jue2de}} {{word:hen3}} {{word:you3}} {{word:li4liang4}}, {{word:shuo1}}: {{word:wo3}} {{word:hen3}} {{word:hao3}}!** — 会飞的动物觉得自己充满活力，说：我最厉害！
         3. **{{Word:liang3}}-ge {{word:dong4wu4}} {{word:qu4}}.** — 两只动物出发了。
-        4. **Huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:zai4}} {{word:fang1fa3}}-shàng {{word:shui4jiao4}}.** — 会飞的动物在路上睡着了。
-        5. **{{word:jiao4}} "miāo-miāo" {{word:de}} {{word:dong4wu4}} {{word:qu4}}, {{word:qu4}}, {{word:bu4}} {{word:shui4jiao4}}.** — 喵喵叫的动物一直走一直走，不睡觉。
-        6. **{{word:jiao4}} "miāo-miāo" {{word:de}} {{word:dong4wu4}} dào {{word:le}}.** — 喵喵叫的动物到了。
-        7. **Huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:jue2de}} {{word:hen3}} {{word:huai4}}.** — 会飞的动物觉得非常难堪。
+        4. **{{Word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:zai4}} {{word:di4}}-{{word:shang4}} {{word:shui4jiao4}}.** — 会飞的动物在路上睡着了。
+        5. **{{word:jiao4}} "miao-miao" {{word:de}} {{word:dong4wu4}} {{word:qu4}}, {{word:qu4}}, {{word:bu4}} {{word:shui4jiao4}}.** — 喵喵叫的动物一直走一直走，不睡觉。
+        6. **{{word:jiao4}} "miao-miao" {{word:de}} {{word:dong4wu4}} {{word:dao4}} {{word:le}}.** — 喵喵叫的动物到了。
+        7. **{{Word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:jue2de}} {{word:hen3}} {{word:huai4}}.** — 会飞的动物觉得非常难堪。
     tldr:
       eng: "A confident flying animal loses a race to a steady, persistent meowing animal."
       rus: "Самоуверенное летающее животное проигрывает гонку упорному мяукающему животному."
@@ -281,46 +281,46 @@ blocks:
   - type: prose
     text:
       eng: |-
-        _(No dedicated word for "bird" -- built compositionally as huì-fēi-de dòngwù, "the animal that can fly," the same pattern Story 4 uses.)_
+        _(No dedicated word for "bird" -- built from words you know as zài-kōngqì-lǐ-de dòngwù, "the animal in the air," the same pattern Story 4 uses.)_
 
-        1. **{{Word:xiao3}} huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:zai4}} huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:qun2}} {{word:li3}}.** — A small flying animal lives within a group of flying animals.
-        2. **{{Word:ta1}} {{word:he2}} {{word:bu4tong2}}-{{word:de}} huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:bu4tong2}}.** — It is different from the other flying animals.
-        3. **{{Word:bu4tong2}}-{{word:de}} huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:shuo1}}: {{word:ni3}} {{word:hen3}} {{word:qi2guai4}}! {{word:ta1}} {{word:bu4}} {{word:yao4}} {{word:xiao3}} huì-fēi-{{word:de}} {{word:dong4wu4}}.** — The other flying animals say: you're strange! They don't want the small flying animal around.
-        4. **{{Word:xiao3}} huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:jue2de}} {{word:hen3}} {{word:huai4}}, {{word:qu4}} {{word:wai4}} {{word:le}}.** — The small flying animal feels very bad and leaves.
-        5. **{{Word:xin1}}-{{word:de}} {{word:shi2jian1}}, {{word:xiao3}} huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:bian4}} {{word:da4}} {{word:le}}.** — In a new season, the small flying animal has become big.
-        6. **{{Word:ta1}} {{word:zai4}} {{word:shui3}} {{word:li3}} {{word:kan4}} {{word:ta1}}-{{word:de}} {{word:qian2}}.** — It looks at its own face in the water.
-        7. **{{word:ta1}} {{word:bian4}} {{word:le}}: {{word:ta1}} {{word:shi4}} {{word:da4}}-{{word:de}} {{word:bai2se4}} huì-fēi-{{word:de}} {{word:dong4wu4}}, {{word:hen3}} {{word:hao3}}.** — It has changed: it is now a big white flying animal, and beautiful.
-        8. **{{Word:bu4tong2}}-{{word:de}} huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:yao4}} {{word:ta1}}.** — The other flying animals want it now.
+        1. **{{Word:xiao3}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:zai4}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:qun2}} {{word:li3}}.** — A small flying animal lives within a group of flying animals.
+        2. **{{Word:ta1}} {{word:he2}} {{word:bu4tong2}}-{{word:de}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:bu4tong2}}.** — It is different from the other flying animals.
+        3. **{{Word:bu4tong2}}-{{word:de}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:shuo1}}: {{word:ni3}} {{word:hen3}} {{word:qi2guai4}}! {{word:ta1}} {{word:bu4}} {{word:yao4}} {{word:xiao3}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}}.** — The other flying animals say: you're strange! They don't want the small flying animal around.
+        4. **{{Word:xiao3}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:jue2de}} {{word:hen3}} {{word:huai4}}, {{word:qu4}} {{word:wai4}} {{word:le}}.** — The small flying animal feels very bad and leaves.
+        5. **{{Word:xin1}}-{{word:de}} {{word:shi2jian1}}, {{word:xiao3}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:bian4}} {{word:da4}} {{word:le}}.** — In a new season, the small flying animal has become big.
+        6. **{{Word:ta1}} {{word:zai4}} {{word:shui3}} {{word:li3}} {{word:kan4}} {{word:ta1}}-{{word:de}} {{word:tou2}}.** — It looks at its own head in the water.
+        7. **{{word:ta1}} {{word:bian4}} {{word:le}}: {{word:ta1}} {{word:shi4}} {{word:da4}}-{{word:de}} {{word:bai2se4}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}}, {{word:hen3}} {{word:hao3}}.** — It has changed: it is now a big white flying animal, and beautiful.
+        8. **{{Word:bu4tong2}}-{{word:de}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:yao4}} {{word:ta1}}.** — The other flying animals want it now.
       rus: |-
-        _(Отдельного слова для «птицы» нет — оно образовано составным способом: huì-fēi-de dòngwù, «животное, которое умеет летать», по той же модели, что и в Истории 4.)_
+        _(Отдельного слова для «птицы» нет — оно образовано составным способом: zài-kōngqì-lǐ-de dòngwù, «животное в воздухе», по той же модели, что и в Истории 4.)_
 
-        1. **{{Word:xiao3}} huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:zai4}} huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:qun2}} {{word:li3}}.** — Маленькое летающее животное живёт среди стаи летающих животных.
-        2. **{{Word:ta1}} {{word:he2}} {{word:bu4tong2}}-{{word:de}} huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:bu4tong2}}.** — Оно отличается от других летающих животных.
-        3. **{{Word:bu4tong2}}-{{word:de}} huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:shuo1}}: {{word:ni3}} {{word:hen3}} {{word:qi2guai4}}! {{word:ta1}} {{word:bu4}} {{word:yao4}} {{word:xiao3}} huì-fēi-{{word:de}} {{word:dong4wu4}}.** — Другие летающие животные говорят: ты странное! Они не хотят маленькое летающее животное рядом.
-        4. **{{Word:xiao3}} huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:jue2de}} {{word:hen3}} {{word:huai4}}, {{word:qu4}} {{word:wai4}} {{word:le}}.** — Маленькое летающее животное чувствует себя очень плохо и улетает прочь.
-        5. **{{Word:xin1}}-{{word:de}} {{word:shi2jian1}}, {{word:xiao3}} huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:bian4}} {{word:da4}} {{word:le}}.** — В новую пору маленькое летающее животное становится большим.
-        6. **{{Word:ta1}} {{word:zai4}} {{word:shui3}} {{word:li3}} {{word:kan4}} {{word:ta1}}-{{word:de}} {{word:qian2}}.** — Оно смотрит на своё лицо в воде.
-        7. **{{word:ta1}} {{word:bian4}} {{word:le}}: {{word:ta1}} {{word:shi4}} {{word:da4}}-{{word:de}} {{word:bai2se4}} huì-fēi-{{word:de}} {{word:dong4wu4}}, {{word:hen3}} {{word:hao3}}.** — Оно изменилось: теперь это большое белое летающее животное, и прекрасное.
-        8. **{{Word:bu4tong2}}-{{word:de}} huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:yao4}} {{word:ta1}}.** — Теперь другие летающие животные хотят его общества.
+        1. **{{Word:xiao3}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:zai4}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:qun2}} {{word:li3}}.** — Маленькое летающее животное живёт среди стаи летающих животных.
+        2. **{{Word:ta1}} {{word:he2}} {{word:bu4tong2}}-{{word:de}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:bu4tong2}}.** — Оно отличается от других летающих животных.
+        3. **{{Word:bu4tong2}}-{{word:de}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:shuo1}}: {{word:ni3}} {{word:hen3}} {{word:qi2guai4}}! {{word:ta1}} {{word:bu4}} {{word:yao4}} {{word:xiao3}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}}.** — Другие летающие животные говорят: ты странное! Они не хотят маленькое летающее животное рядом.
+        4. **{{Word:xiao3}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:jue2de}} {{word:hen3}} {{word:huai4}}, {{word:qu4}} {{word:wai4}} {{word:le}}.** — Маленькое летающее животное чувствует себя очень плохо и улетает прочь.
+        5. **{{Word:xin1}}-{{word:de}} {{word:shi2jian1}}, {{word:xiao3}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:bian4}} {{word:da4}} {{word:le}}.** — В новую пору маленькое летающее животное становится большим.
+        6. **{{Word:ta1}} {{word:zai4}} {{word:shui3}} {{word:li3}} {{word:kan4}} {{word:ta1}}-{{word:de}} {{word:tou2}}.** — Оно смотрит на своё лицо в воде.
+        7. **{{word:ta1}} {{word:bian4}} {{word:le}}: {{word:ta1}} {{word:shi4}} {{word:da4}}-{{word:de}} {{word:bai2se4}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}}, {{word:hen3}} {{word:hao3}}.** — Оно изменилось: теперь это большое белое летающее животное, и прекрасное.
+        8. **{{Word:bu4tong2}}-{{word:de}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:yao4}} {{word:ta1}}.** — Теперь другие летающие животные хотят его общества.
       zh: |-
-        _（没有专门表示"鸟"的词——组合而成：huì-fēi-de dòngwù，"会飞的动物"，与第4个故事同样的构造方式。）_
+        _（没有专门表示"鸟"的词——组合而成：zài-kōngqì-lǐ-de dòngwù，"在空气里的动物"，与第4个故事同样的构造方式。）_
 
-        1. **{{Word:xiao3}} huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:zai4}} huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:qun2}} {{word:li3}}.** — 一只小小的会飞的动物生活在一群会飞的动物当中。
-        2. **{{Word:ta1}} {{word:he2}} {{word:bu4tong2}}-{{word:de}} huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:bu4tong2}}.** — 它跟别的会飞的动物不一样。
-        3. **{{Word:bu4tong2}}-{{word:de}} huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:shuo1}}: {{word:ni3}} {{word:hen3}} {{word:qi2guai4}}! {{word:ta1}} {{word:bu4}} {{word:yao4}} {{word:xiao3}} huì-fēi-{{word:de}} {{word:dong4wu4}}.** — 别的会飞的动物说：你好奇怪！它们不想要这只小小的会飞的动物。
-        4. **{{Word:xiao3}} huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:jue2de}} {{word:hen3}} {{word:huai4}}, {{word:qu4}} {{word:wai4}} {{word:le}}.** — 小小的会飞的动物觉得很难过，飞走了。
-        5. **{{Word:xin1}}-{{word:de}} {{word:shi2jian1}}, {{word:xiao3}} huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:bian4}} {{word:da4}} {{word:le}}.** — 在新的一段时光里，小小的会飞的动物长大了。
-        6. **{{Word:ta1}} {{word:zai4}} {{word:shui3}} {{word:li3}} {{word:kan4}} {{word:ta1}}-{{word:de}} {{word:qian2}}.** — 它在水中看自己的脸。
-        7. **{{word:ta1}} {{word:bian4}} {{word:le}}: {{word:ta1}} {{word:shi4}} {{word:da4}}-{{word:de}} {{word:bai2se4}} huì-fēi-{{word:de}} {{word:dong4wu4}}, {{word:hen3}} {{word:hao3}}.** — 它变了：它是一只大大的白色会飞的动物，很美。
-        8. **{{Word:bu4tong2}}-{{word:de}} huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:yao4}} {{word:ta1}}.** — 别的会飞的动物现在想要它了。
+        1. **{{Word:xiao3}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:zai4}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:qun2}} {{word:li3}}.** — 一只小小的会飞的动物生活在一群会飞的动物当中。
+        2. **{{Word:ta1}} {{word:he2}} {{word:bu4tong2}}-{{word:de}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:bu4tong2}}.** — 它跟别的会飞的动物不一样。
+        3. **{{Word:bu4tong2}}-{{word:de}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:shuo1}}: {{word:ni3}} {{word:hen3}} {{word:qi2guai4}}! {{word:ta1}} {{word:bu4}} {{word:yao4}} {{word:xiao3}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}}.** — 别的会飞的动物说：你好奇怪！它们不想要这只小小的会飞的动物。
+        4. **{{Word:xiao3}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:jue2de}} {{word:hen3}} {{word:huai4}}, {{word:qu4}} {{word:wai4}} {{word:le}}.** — 小小的会飞的动物觉得很难过，飞走了。
+        5. **{{Word:xin1}}-{{word:de}} {{word:shi2jian1}}, {{word:xiao3}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:bian4}} {{word:da4}} {{word:le}}.** — 在新的一段时光里，小小的会飞的动物长大了。
+        6. **{{Word:ta1}} {{word:zai4}} {{word:shui3}} {{word:li3}} {{word:kan4}} {{word:ta1}}-{{word:de}} {{word:tou2}}.** — 它在水中看自己的脸。
+        7. **{{word:ta1}} {{word:bian4}} {{word:le}}: {{word:ta1}} {{word:shi4}} {{word:da4}}-{{word:de}} {{word:bai2se4}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}}, {{word:hen3}} {{word:hao3}}.** — 它变了：它是一只大大的白色会飞的动物，很美。
+        8. **{{Word:bu4tong2}}-{{word:de}} {{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} {{word:yao4}} {{word:ta1}}.** — 别的会飞的动物现在想要它了。
     tldr:
       eng: "A flying animal different from its flock is rejected, then returns beautiful and wanted."
       rus: "Летающее животное, не похожее на стаю, отвергают, а затем оно возвращается прекрасным и желанным."
       zh: "一只跟同类不一样的会飞的动物被排斥，后来变得美丽，又重新被大家想要了。"
     necessity:
-      eng: "Shows bùtóng (different) carrying the entire plot's tension from rejection to acceptance, and huì-fēi-de dòngwù reused consistently enough that repetition itself becomes part of the reading experience."
-      rus: "Показывает, как bùtóng (другой) несёт на себе всё напряжение сюжета — от отвержения до принятия, а huì-fēi-de dòngwù повторяется настолько последовательно, что само повторение становится частью чтения."
-      zh: "展示 bùtóng（不同）如何承载了整个情节从排斥到接纳的张力，而 huì-fēi-de dòngwù 反复出现的一致性，也让这种重复本身成了阅读体验的一部分。"
+      eng: "Shows bùtóng (different) carrying the entire plot's tension from rejection to acceptance, and zài-kōngqì-lǐ-de dòngwù reused consistently enough that repetition itself becomes part of the reading experience."
+      rus: "Показывает, как bùtóng (другой) несёт на себе всё напряжение сюжета — от отвержения до принятия, а zài-kōngqì-lǐ-de dòngwù повторяется настолько последовательно, что само повторение становится частью чтения."
+      zh: "展示 bùtóng（不同）如何承载了整个情节从排斥到接纳的张力，而 zài-kōngqì-lǐ-de dòngwù 反复出现的一致性，也让这种重复本身成了阅读体验的一部分。"
 
   - type: heading
     text:
@@ -331,38 +331,38 @@ blocks:
   - type: prose
     text:
       eng: |-
-        1. **{{word:ren2}} {{word:mei2}} {{word:you3}} {{word:qian2}}, {{word:you3}} {{word:yi1}}-ge {{word:dong4wu4}}.** — A person has no money, only one animal.
+        1. **{{word:ren2}} {{word:mei2}}-{{word:you3}} {{word:jin1}}, {{word:you3}} {{word:yi1}}-ge {{word:dong4wu4}}.** — A person has no money, only one animal.
         2. **{{word:ta1}} {{word:gei3}} {{word:le}} {{word:dong4wu4}}, {{word:de2}} {{word:le}} {{word:hen3}} {{word:duo1}} {{word:xiao3}} {{word:dong1xi}}.** — He gives away the animal and gets many small things instead.
         3. **{{word:fu4mu3}} {{word:jue2de}} {{word:hen3}} {{word:huai4}}, {{word:bu4}} {{word:yao4}} {{word:xiao3}} {{word:dong1xi}}.** — His mother feels very upset and doesn't want the small things.
         4. **{{word:hei1se4}}-{{word:de}} {{word:shi2jian1}}, {{word:da4}} {{word:zhi2wu4}} {{word:kai1shi3}} {{word:you3}} {{word:le}}, {{word:qu4}} {{word:shang4}}.** — In the dark hours, a big plant begins to exist and grows upward.
         5. **{{word:ren2}} {{word:qu4}} {{word:shang4}}, {{word:zai4}} {{word:zhi2wu4}}-shàng.** — The person climbs up, on the plant.
-        6. **{{word:ta1}} kàn-jiàn {{word:da4}} {{word:ren2}}-{{word:de}} {{word:jia1}}.** — He sees a giant's home.
-        7. **{{word:da4}} {{word:ren2}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:qian2}}.** — The giant has a lot of money.
-        8. **{{word:ren2}} {{word:de2}} {{word:le}} {{word:qian2}}, {{word:qu4}} {{word:xia4}}.** — The person gets the money and climbs back down.
+        6. **{{word:ta1}} {{word:kan4}}-{{word:dao4}} {{word:da4}} {{word:ren2}}-{{word:de}} {{word:jia1}}.** — He sees a giant's home.
+        7. **{{word:da4}} {{word:ren2}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:jin1}}.** — The giant has a lot of money.
+        8. **{{word:ren2}} {{word:de2}} {{word:le}} {{word:jin1}}, {{word:qu4}} {{word:xia4}}.** — The person gets the money and climbs back down.
         9. **{{word:ren2}} {{word:ba3}} {{word:zhi2wu4}} {{word:bian4}} {{word:huai4}}. {{word:da4}} {{word:ren2}} {{word:bu4}} {{word:neng2}} {{word:qu4}} {{word:xia4}}.** — The person breaks the plant. The giant cannot come down.
-        10. **{{word:ren2}} {{word:he2}} {{word:fu4mu3}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:qian2}}, {{word:hen3}} {{word:hao3}}.** — The person and his mother have plenty of money now, and life is good.
+        10. **{{word:ren2}} {{word:he2}} {{word:fu4mu3}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:jin1}}, {{word:hen3}} {{word:hao3}}.** — The person and his mother have plenty of money now, and life is good.
       rus: |-
-        1. **{{word:ren2}} {{word:mei2}} {{word:you3}} {{word:qian2}}, {{word:you3}} {{word:yi1}}-ge {{word:dong4wu4}}.** — У человека нет денег, только одно животное.
+        1. **{{word:ren2}} {{word:mei2}}-{{word:you3}} {{word:jin1}}, {{word:you3}} {{word:yi1}}-ge {{word:dong4wu4}}.** — У человека нет денег, только одно животное.
         2. **{{word:ta1}} {{word:gei3}} {{word:le}} {{word:dong4wu4}}, {{word:de2}} {{word:le}} {{word:hen3}} {{word:duo1}} {{word:xiao3}} {{word:dong1xi}}.** — Он отдаёт животное и получает взамен много маленьких вещей.
         3. **{{word:fu4mu3}} {{word:jue2de}} {{word:hen3}} {{word:huai4}}, {{word:bu4}} {{word:yao4}} {{word:xiao3}} {{word:dong1xi}}.** — Его мать очень расстроена и не хочет эти маленькие вещи.
         4. **{{word:hei1se4}}-{{word:de}} {{word:shi2jian1}}, {{word:da4}} {{word:zhi2wu4}} {{word:kai1shi3}} {{word:you3}} {{word:le}}, {{word:qu4}} {{word:shang4}}.** — В тёмное время суток начинает существовать большое растение и тянется вверх.
         5. **{{word:ren2}} {{word:qu4}} {{word:shang4}}, {{word:zai4}} {{word:zhi2wu4}}-shàng.** — Человек поднимается наверх по растению.
-        6. **{{word:ta1}} kàn-jiàn {{word:da4}} {{word:ren2}}-{{word:de}} {{word:jia1}}.** — Он видит дом великана.
-        7. **{{word:da4}} {{word:ren2}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:qian2}}.** — У великана очень много денег.
-        8. **{{word:ren2}} {{word:de2}} {{word:le}} {{word:qian2}}, {{word:qu4}} {{word:xia4}}.** — Человек берёт деньги и спускается вниз.
+        6. **{{word:ta1}} {{word:kan4}}-{{word:dao4}} {{word:da4}} {{word:ren2}}-{{word:de}} {{word:jia1}}.** — Он видит дом великана.
+        7. **{{word:da4}} {{word:ren2}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:jin1}}.** — У великана очень много денег.
+        8. **{{word:ren2}} {{word:de2}} {{word:le}} {{word:jin1}}, {{word:qu4}} {{word:xia4}}.** — Человек берёт деньги и спускается вниз.
         9. **{{word:ren2}} {{word:ba3}} {{word:zhi2wu4}} {{word:bian4}} {{word:huai4}}. {{word:da4}} {{word:ren2}} {{word:bu4}} {{word:neng2}} {{word:qu4}} {{word:xia4}}.** — Человек ломает растение. Великан не может спуститься вниз.
-        10. **{{word:ren2}} {{word:he2}} {{word:fu4mu3}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:qian2}}, {{word:hen3}} {{word:hao3}}.** — Теперь у человека и его матери много денег, и жизнь хороша.
+        10. **{{word:ren2}} {{word:he2}} {{word:fu4mu3}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:jin1}}, {{word:hen3}} {{word:hao3}}.** — Теперь у человека и его матери много денег, и жизнь хороша.
       zh: |-
-        1. **{{word:ren2}} {{word:mei2}} {{word:you3}} {{word:qian2}}, {{word:you3}} {{word:yi1}}-ge {{word:dong4wu4}}.** — 一个人没有钱，只有一只动物。
+        1. **{{word:ren2}} {{word:mei2}}-{{word:you3}} {{word:jin1}}, {{word:you3}} {{word:yi1}}-ge {{word:dong4wu4}}.** — 一个人没有钱，只有一只动物。
         2. **{{word:ta1}} {{word:gei3}} {{word:le}} {{word:dong4wu4}}, {{word:de2}} {{word:le}} {{word:hen3}} {{word:duo1}} {{word:xiao3}} {{word:dong1xi}}.** — 他把动物给了别人，得到了很多小东西。
         3. **{{word:fu4mu3}} {{word:jue2de}} {{word:hen3}} {{word:huai4}}, {{word:bu4}} {{word:yao4}} {{word:xiao3}} {{word:dong1xi}}.** — 母亲很生气，不想要这些小东西。
         4. **{{word:hei1se4}}-{{word:de}} {{word:shi2jian1}}, {{word:da4}} {{word:zhi2wu4}} {{word:kai1shi3}} {{word:you3}} {{word:le}}, {{word:qu4}} {{word:shang4}}.** — 在黑暗的时刻，一株大植物开始出现，一直往上长。
         5. **{{word:ren2}} {{word:qu4}} {{word:shang4}}, {{word:zai4}} {{word:zhi2wu4}}-shàng.** — 那个人顺着植物爬到了上面。
-        6. **{{word:ta1}} kàn-jiàn {{word:da4}} {{word:ren2}}-{{word:de}} {{word:jia1}}.** — 他看见了一个巨人的家。
-        7. **{{word:da4}} {{word:ren2}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:qian2}}.** — 巨人有很多钱。
-        8. **{{word:ren2}} {{word:de2}} {{word:le}} {{word:qian2}}, {{word:qu4}} {{word:xia4}}.** — 那个人拿到了钱，爬到下面去。
+        6. **{{word:ta1}} {{word:kan4}}-{{word:dao4}} {{word:da4}} {{word:ren2}}-{{word:de}} {{word:jia1}}.** — 他看见了一个巨人的家。
+        7. **{{word:da4}} {{word:ren2}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:jin1}}.** — 巨人有很多钱。
+        8. **{{word:ren2}} {{word:de2}} {{word:le}} {{word:jin1}}, {{word:qu4}} {{word:xia4}}.** — 那个人拿到了钱，爬到下面去。
         9. **{{word:ren2}} {{word:ba3}} {{word:zhi2wu4}} {{word:bian4}} {{word:huai4}}. {{word:da4}} {{word:ren2}} {{word:bu4}} {{word:neng2}} {{word:qu4}} {{word:xia4}}.** — 那个人把植物弄断了。巨人没办法下来。
-        10. **{{word:ren2}} {{word:he2}} {{word:fu4mu3}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:qian2}}, {{word:hen3}} {{word:hao3}}.** — 那个人和母亲有了很多钱，生活很好。
+        10. **{{word:ren2}} {{word:he2}} {{word:fu4mu3}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:jin1}}, {{word:hen3}} {{word:hao3}}.** — 那个人和母亲有了很多钱，生活很好。
     tldr:
       eng: "A poor person trades an animal for seeds, grows a plant to the sky, and returns rich."
       rus: "Бедный человек меняет животное на семена, выращивает растение до небес и возвращается богатым."
@@ -382,7 +382,7 @@ blocks:
     text:
       eng: |-
         1. **{{word:da4}} {{word:ren2}} {{word:hen3}} {{word:ai4}} {{word:yi1fu}}.** — The important person loves clothes very much.
-        2. **{{word:liang3}}-ge {{word:ren2}} {{word:lai2}}, {{word:shuo1}}: {{word:wo3}} {{word:nong4}} {{word:hen3}} {{word:hao3}}-{{word:de}} {{word:yi1fu}}. {{word:huai4}} {{word:ren2}} {{word:bu4}} {{word:neng2}} kàn-jiàn {{word:zhe4}}-ge.** — Two people arrive and say: we make very fine clothes. Bad people cannot see this cloth.
+        2. **{{word:liang3}}-ge {{word:ren2}} {{word:lai2}}, {{word:shuo1}}: {{word:wo3}} {{word:nong4}} {{word:hen3}} {{word:hao3}}-{{word:de}} {{word:yi1fu}}. {{word:huai4}} {{word:ren2}} {{word:bu4}} {{word:neng2}} {{word:kan4}}-{{word:dao4}} {{word:zhe4}}-ge.** — Two people arrive and say: we make very fine clothes. Bad people cannot see this cloth.
         3. **{{word:ta1}} {{word:yong4}} {{word:xian4}}, {{word:dan4shi4}} {{word:mei2}} {{word:nong4}} {{word:shen2me}}.** — They use thread, but they don't actually make anything.
         4. **{{word:da4}} {{word:ren2}} {{word:mei2}} {{word:you3}} {{word:yi1fu}}, {{word:ta1}} {{word:qu4}}.** — The important person, wearing nothing, walks out.
         5. **{{word:hen3}} {{word:duo1}} {{word:ren2}} {{word:shuo1}}: {{word:zhe4}}-ge {{word:yi1fu}} {{word:hen3}} {{word:hao3}}!** — Many people say: these clothes are wonderful!
@@ -390,7 +390,7 @@ blocks:
         7. **{{word:zhe4}} {{word:hen3}} {{word:zhen1}}. {{word:ren2}} {{word:zhi1dao4}} {{word:le}}.** — This is true. Now everyone knows it.
       rus: |-
         1. **{{word:da4}} {{word:ren2}} {{word:hen3}} {{word:ai4}} {{word:yi1fu}}.** — Важный человек очень любит одежду.
-        2. **{{word:liang3}}-ge {{word:ren2}} {{word:lai2}}, {{word:shuo1}}: {{word:wo3}} {{word:nong4}} {{word:hen3}} {{word:hao3}}-{{word:de}} {{word:yi1fu}}. {{word:huai4}} {{word:ren2}} {{word:bu4}} {{word:neng2}} kàn-jiàn {{word:zhe4}}-ge.** — Приходят двое и говорят: мы делаем очень тонкую одежду. Плохие люди не могут увидеть эту ткань.
+        2. **{{word:liang3}}-ge {{word:ren2}} {{word:lai2}}, {{word:shuo1}}: {{word:wo3}} {{word:nong4}} {{word:hen3}} {{word:hao3}}-{{word:de}} {{word:yi1fu}}. {{word:huai4}} {{word:ren2}} {{word:bu4}} {{word:neng2}} {{word:kan4}}-{{word:dao4}} {{word:zhe4}}-ge.** — Приходят двое и говорят: мы делаем очень тонкую одежду. Плохие люди не могут увидеть эту ткань.
         3. **{{word:ta1}} {{word:yong4}} {{word:xian4}}, {{word:dan4shi4}} {{word:mei2}} {{word:nong4}} {{word:shen2me}}.** — Они используют нити, но на самом деле ничего не делают.
         4. **{{word:da4}} {{word:ren2}} {{word:mei2}} {{word:you3}} {{word:yi1fu}}, {{word:ta1}} {{word:qu4}}.** — Важный человек, ничего не надев, выходит на люди.
         5. **{{word:hen3}} {{word:duo1}} {{word:ren2}} {{word:shuo1}}: {{word:zhe4}}-ge {{word:yi1fu}} {{word:hen3}} {{word:hao3}}!** — Многие люди говорят: эта одежда прекрасна!
@@ -398,7 +398,7 @@ blocks:
         7. **{{word:zhe4}} {{word:hen3}} {{word:zhen1}}. {{word:ren2}} {{word:zhi1dao4}} {{word:le}}.** — Это правда. Теперь все это знают.
       zh: |-
         1. **{{word:da4}} {{word:ren2}} {{word:hen3}} {{word:ai4}} {{word:yi1fu}}.** — 这位大人物非常喜爱衣服。
-        2. **{{word:liang3}}-ge {{word:ren2}} {{word:lai2}}, {{word:shuo1}}: {{word:wo3}} {{word:nong4}} {{word:hen3}} {{word:hao3}}-{{word:de}} {{word:yi1fu}}. {{word:huai4}} {{word:ren2}} {{word:bu4}} {{word:neng2}} kàn-jiàn {{word:zhe4}}-ge.** — 两个人来了，说：我们做非常好的衣服。坏人是看不见这种布料的。
+        2. **{{word:liang3}}-ge {{word:ren2}} {{word:lai2}}, {{word:shuo1}}: {{word:wo3}} {{word:nong4}} {{word:hen3}} {{word:hao3}}-{{word:de}} {{word:yi1fu}}. {{word:huai4}} {{word:ren2}} {{word:bu4}} {{word:neng2}} {{word:kan4}}-{{word:dao4}} {{word:zhe4}}-ge.** — 两个人来了，说：我们做非常好的衣服。坏人是看不见这种布料的。
         3. **{{word:ta1}} {{word:yong4}} {{word:xian4}}, {{word:dan4shi4}} {{word:mei2}} {{word:nong4}} {{word:shen2me}}.** — 他们用了线，但其实什么都没做出来。
         4. **{{word:da4}} {{word:ren2}} {{word:mei2}} {{word:you3}} {{word:yi1fu}}, {{word:ta1}} {{word:qu4}}.** — 这位大人物什么也没穿，走了出去。
         5. **{{word:hen3}} {{word:duo1}} {{word:ren2}} {{word:shuo1}}: {{word:zhe4}}-ge {{word:yi1fu}} {{word:hen3}} {{word:hao3}}!** — 很多人说：这件衣服真好看！
