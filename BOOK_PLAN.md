@@ -479,11 +479,11 @@ For each lesson: ☐ written to template ☐ `npm run check -- lesson-NN` passes
 ### Phase 3 — Intros and reference
 
 - [ ] Tone pass on intro-1, intro-2, intro-3
-- [ ] Appendix: Grammar Patterns Reference aligned with the new lessons
+- [x] Appendix: Grammar Patterns Reference aligned with the new lessons — it is now generated from the lessons (below)
 - [ ] Appendix: Ten Short Stories use only words taught by the lessons they cite
 - [ ] Sentence Builder and Proverbs checked against the dictionary
 - [ ] `npm run check -- --strict` passes for the whole book, including the appendices and the dictionary's part-of-speech labels
-- [ ] Grammar overview chapter built automatically from every lesson's grammar boxes (`grammarRules` in `src/lib/chapter-content.js` already collects them), replacing the hand-written `appendix-grammar.yaml`
+- [x] Grammar overview chapter built automatically from every lesson's grammar boxes (`grammarRules` in `src/lib/chapter-content.js` already collects them), replacing the hand-written `appendix-grammar.yaml` Done: `scripts/generate-grammar-overview.js` writes `src/content/appendix-grammar.ts` on every build; the old YAML is in `src/content/legacy/`.
 
 ### Phase 4 — Translation (after all English is approved)
 

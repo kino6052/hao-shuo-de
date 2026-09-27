@@ -26,7 +26,7 @@ const wanted = (id) => only.size === 0 || only.has(id);
 // [{ id, summary: string | null, required }]
 const chapters = [];
 
-for (const file of readdirSync(CONTENT_DIR).filter((f) => /^intro-\d+\.ts$/.test(f)).sort()) {
+for (const file of readdirSync(CONTENT_DIR).filter((f) => /^(intro-\d+|appendix-[a-z-]+)\.ts$/.test(f)).sort()) {
   const id = file.replace(/\.ts$/, '');
   if (!wanted(id)) continue;
   const entries = (await import(pathToFileURL(resolve(CONTENT_DIR, file)))).default;

@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/check-all.js && node scripts/generate-word-usage.js && node scripts/generate-dictionary.js && vite build && node scripts/generate-pages.js",
+    "build": "node scripts/generate-grammar-overview.js && node scripts/check-all.js && node scripts/generate-word-usage.js && node scripts/generate-dictionary.js && vite build && node scripts/generate-pages.js",
     "preview": "vite preview",
     "test": "bun test",
     "typecheck": "tsc --noEmit",
     "word-usage": "node scripts/generate-word-usage.js",
+    "grammar-overview": "node scripts/generate-grammar-overview.js",
     "check": "node scripts/check-all.js",
     "check-book": "node scripts/check-book.js",
     "check-jargon": "node scripts/check-jargon.js",

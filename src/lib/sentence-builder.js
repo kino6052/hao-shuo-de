@@ -12,7 +12,7 @@
 //              | { shape: 'noun', phrase: NounPhrase, negated }
 //   State      = { subject: NounPhrase|null, predicate: Predicate|null, object: NounPhrase|null }
 //
-// Grammar rules encoded here (see src/content/appendix-grammar.yaml §4-5):
+// Grammar rules encoded here (see src/content/legacy/appendix-grammar.yaml §4-5):
 //   4.1 Subject + Verb + Object (fixed order)
 //   4.2 Subject + shi4 + Noun (copula)
 //   5.1 Subject + hen3 + Adjective (predicate adjective)

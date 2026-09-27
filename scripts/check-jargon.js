@@ -81,7 +81,7 @@ for (const dir of readdirSync(CONTENT_DIR).filter((d) => /^lesson-\d+$/.test(d))
 }
 
 // ---------- intros ----------
-for (const file of readdirSync(CONTENT_DIR).filter((f) => /^intro-\d+\.ts$/.test(f)).sort()) {
+for (const file of readdirSync(CONTENT_DIR).filter((f) => /^(intro-\d+|appendix-[a-z-]+)\.ts$/.test(f)).sort()) {
   const id = file.replace(/\.ts$/, '');
   if (!wanted(id)) continue;
   checked.push(id);
