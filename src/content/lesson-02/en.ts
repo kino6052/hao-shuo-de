@@ -82,6 +82,7 @@ const en: PartialByKey<LessonShape> = {
   exercise5: { en: ["The animal is female."] },
   exercise6: { en: ["Fruits are things."] },
   exercise7: { en: ["This is a man."] },
+  exercise8: { en: ["This is not a fruit."] },
   answer1: {
     en: ["{{Word:dong1xi}} {{word:shi4}} {{word:dong1xi}}."],
   },
@@ -95,6 +96,11 @@ const en: PartialByKey<LessonShape> = {
     en: ["{{Word:shui3guo3}} {{word:shi4}} {{word:dong1xi}}."],
   },
   answer7: { en: ["{{Word:zhe4}} {{word:shi4}} {{word:nan2ren2}}."] },
+  answer8: {
+    en: [
+      "{{Word:zhe4}} {{word:bu4}} {{word:shi4}} {{word:shui3guo3}}.",
+    ],
+  },
 };
 
 export default en;

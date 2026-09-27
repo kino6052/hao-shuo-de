@@ -51,6 +51,8 @@ export type LessonShape = {
   verbsExample3: TExample;
   /** Example: wǒ chī mǐfàn. */
   verbsExample4: TExample;
+  /** Example: wǒ tīng nǐ. */
+  verbsExample5: TExample;
   /** Verbs need a special word to be negated, not bu [from old L05] */
   proseVerbNegation: TProse;
   /** Example: wo3 mei2-you3 shui3guo3. [from old L05] */
@@ -73,8 +75,28 @@ export type LessonShape = {
   wordOrderExample2: TExample;
   /** Exercise 1: I will listen to you. [from old L05] */
   exercise1: TExercise;
+  /** Exercise 2: She eats rice. */
+  exercise2: TExercise;
+  /** Exercise 3: He doesn't have money. */
+  exercise3: TExercise;
+  /** Exercise 4: You look at me. */
+  exercise4: TExercise;
+  /** Exercise 5: I don't write. */
+  exercise5: TExercise;
+  /** Exercise 6: They speak. */
+  exercise6: TExercise;
   /** Answer 1. [from old L05] */
   answer1: TAnswer;
+  /** Answer 2. */
+  answer2: TAnswer;
+  /** Answer 3. */
+  answer3: TAnswer;
+  /** Answer 4. */
+  answer4: TAnswer;
+  /** Answer 5. */
+  answer5: TAnswer;
+  /** Answer 6. */
+  answer6: TAnswer;
 };
 
 const shape: LessonShape = {
@@ -110,6 +132,11 @@ const shape: LessonShape = {
     pinyin: "{{Word:wo3}} {{word:chi1}} {{word:mi3fan4}}.",
     ttsText: "我吃米饭。",
   },
+  verbsExample5: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:ting1}} {{word:ni3}}.",
+    ttsText: "我听你。",
+  },
   proseVerbNegation: { type: "prose" },
   negationExample1: {
     type: "example",
@@ -134,7 +161,7 @@ const shape: LessonShape = {
   negationExample5: {
     type: "example",
     pinyin: "{{Word:wo3}} {{word:mei2}}-{{word:you3}} {{word:jin1}}.",
-    ttsText: "我没有钱。",
+    ttsText: "我没有金。",
   },
   proseWordOrderObject: { type: "prose" },
   infoWhoDoesWhat: {
@@ -154,7 +181,17 @@ const shape: LessonShape = {
     ttsText: "他看我。",
   },
   exercise1: { type: "exercise" },
+  exercise2: { type: "exercise" },
+  exercise3: { type: "exercise" },
+  exercise4: { type: "exercise" },
+  exercise5: { type: "exercise" },
+  exercise6: { type: "exercise" },
   answer1: { type: "answer", ttsText: "我听你。" },
+  answer2: { type: "answer", ttsText: "她吃米饭。" },
+  answer3: { type: "answer", ttsText: "他没有金。" },
+  answer4: { type: "answer", ttsText: "你看我。" },
+  answer5: { type: "answer", ttsText: "我不写。" },
+  answer6: { type: "answer", ttsText: "他们说。" },
 };
 
 export default shape;

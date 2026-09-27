@@ -1,7 +1,7 @@
 // Which chapters' problems fail a gate (BOOK_PLAN.md §6).
 //
 // Every gate (check-jargon, check-early-words, check-word-use,
-// check-grammar-blocks) reports problems in the whole book, but only fails
+// check-grammar-blocks, check-practice) reports problems in the whole book, but only fails
 // for "blocking" chapters:
 //   - chapter ids given on the command line -> exactly those chapters
 //   - --strict -> every chapter
@@ -10,7 +10,7 @@
 // A lesson goes on this list once its Phase 2 rewrite passes every gate.
 // From then on, every build keeps it that way.
 
-export const FINISHED_LESSONS = ['lesson-01', 'lesson-02', 'lesson-03', 'lesson-04', 'lesson-05', 'lesson-06'];
+export const FINISHED_LESSONS = ['lesson-01', 'lesson-02', 'lesson-03', 'lesson-04', 'lesson-05', 'lesson-06', 'lesson-07'];
 
 export function gatePolicy(argv = process.argv) {
   const args = argv.slice(2);

@@ -81,12 +81,28 @@ export type LessonShape = {
   exercise2: TExercise;
   /** Exercise 3: Is the tool small? [from old L06] */
   exercise3: TExercise;
+  /** Exercise 4: Is that your box? */
+  exercise4: TExercise;
+  /** Exercise 5: Why is he looking for water? */
+  exercise5: TExercise;
+  /** Exercise 6: How do you write this? */
+  exercise6: TExercise;
+  /** Exercise 7: Who is asking? */
+  exercise7: TExercise;
   /** Answer 1. [from old L06] */
   answer1: TAnswer;
   /** Answer 2. [from old L06] */
   answer2: TAnswer;
   /** Answer 3. [from old L06] */
   answer3: TAnswer;
+  /** Answer 4. */
+  answer4: TAnswer;
+  /** Answer 5. */
+  answer5: TAnswer;
+  /** Answer 6. */
+  answer6: TAnswer;
+  /** Answer 7. */
+  answer7: TAnswer;
 };
 
 const shape: LessonShape = {
@@ -194,9 +210,17 @@ const shape: LessonShape = {
   exercise1: { type: "exercise" },
   exercise2: { type: "exercise" },
   exercise3: { type: "exercise" },
+  exercise4: { type: "exercise" },
+  exercise5: { type: "exercise" },
+  exercise6: { type: "exercise" },
+  exercise7: { type: "exercise" },
   answer1: { type: "answer", ttsText: "你有什么工具？" },
   answer2: { type: "answer", ttsText: "他听不听？（或：他听吗？）" },
   answer3: { type: "answer", ttsText: "工具小不小？（或：工具小吗？）" },
+  answer4: { type: "answer", ttsText: "那是你的盒子吗？" },
+  answer5: { type: "answer", ttsText: "为什么他找水？" },
+  answer6: { type: "answer", ttsText: "这个怎么写？" },
+  answer7: { type: "answer", ttsText: "什么人问？" },
 };
 
 export default shape;

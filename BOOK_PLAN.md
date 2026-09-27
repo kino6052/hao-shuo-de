@@ -54,7 +54,7 @@ answers
 - A teaching point's prose is **at most 1–2 plain sentences** beyond Say + Pattern.
 - Every prose block has a `tldr` and a `necessity`, written to rule 7.
 - Every lesson has at least one **grammar box**: the lesson's patterns in a few plain lines, each with an example. The grammar overview chapter will be built from these boxes, so the title and tag must make sense on their own.
-- Every word a lesson introduces appears in at least one of its example sentences or answers, and ideally in 3 (§4a rule 7).
+- Every word a lesson introduces appears in at least one of its examples **and** at least one of its exercises, and ideally in 3 sentences (§4a rule 7).
 
 ---
 
@@ -372,7 +372,7 @@ Q1–Q4 were answered on 2026-09-27. New questions go here.
 
 `npm run build` starts with **`npm run check`** (`scripts/check-all.js`), which runs every gate below. It shows every report, then fails the build if any gate failed.
 
-**Strict for finished lessons.** The lessons in `scripts/finished-lessons.js` (L1–L6 so far) must pass every gate. Problems in other chapters are reported but don't fail the build. Add a lesson to that list once its Phase 2 rewrite passes every gate; from then on every build keeps it that way. Run a gate with chapter ids (`npm run check-jargon -- lesson-07`) to make it strict for just those, or with `--strict` for everything.
+**Strict for finished lessons.** The lessons in `scripts/finished-lessons.js` (L1–L7 so far) must pass every gate. Problems in other chapters are reported but don't fail the build. Add a lesson to that list once its Phase 2 rewrite passes every gate; from then on every build keeps it that way. Run a gate with chapter ids (`npm run check-jargon -- lesson-07`) to make it strict for just those, or with `--strict` for everything.
 
 | Command | What it checks | Fails the build for |
 |---------|----------------|---------------------|
@@ -382,7 +382,8 @@ Q1–Q4 were answered on 2026-09-27. New questions go here.
 | `npm run check-early-words` | No word used before its lesson, and no pinyin word missing from the dictionary (§4a rule 2). Lists each use. | finished lessons |
 | `npm run check-word-use` | Every word a lesson introduces appears in one of its example sentences or answers. Also reports rule 7's targets (3 sentences at home, reuse in 2 later lessons); `--targets` lists them. | finished lessons |
 | `npm run check-grammar-blocks` | Every lesson has a grammar box with a title and a unique tag. | finished lessons |
-| `npm test` | Includes `scripts/early-words.test.js` and `scripts/word-use.test.js`, which test those rules on small made-up lessons. | — |
+| `npm run check-practice` | Every word a lesson introduces is in at least one of its examples and in at least one of its exercises (answers). A lesson with new words has examples and exercises at all. | finished lessons |
+| `npm test` | Includes `scripts/early-words.test.js` and `scripts/word-use.test.js`, which test the early-words, word-use, and practice rules on small made-up lessons. | — |
 
 The word lists and limits live in `scripts/jargon.js` and `scripts/limits.js`.
 
@@ -414,6 +415,7 @@ The word lists and limits live in `scripts/jargon.js` and `scripts/limits.js`.
 - [x] Add the word-use gate (`check-word-use`) and the grammar-box gate (`check-grammar-blocks`) (§6)
 - [x] Run every gate on every build (`npm run check`), strict for finished lessons (§6)
 - [x] Every summary uses the two-part pattern (rule 7)
+- [x] Add the practice gate (`check-practice`): every lesson's words are in its examples and exercises (§6)
 - [x] Rewrite every summary and TL;DR line in plain words (rule 7)
 - [x] L4 becomes "Pointing at People and Things", with gè, zhè-ge, and nà-ge (D26)
 - [x] Section 1 (L1–L6) passes every gate, and is on the finished list (`scripts/finished-lessons.js`)
@@ -430,7 +432,7 @@ For each lesson: ☐ written to template ☐ `npm run check -- lesson-NN` passes
 - [ ] L4 Pointing at People and Things
 - [ ] L5 Verbs
 - [ ] L6 Questions and Answers
-- [ ] L7 Pre-Verbs
+- [ ] L7 Pre-Verbs — rewritten, passes every gate, on the finished list; **waiting for your review**
 - [ ] L8 Time 1 — When it happens
 - [ ] L9 Time 2 — Around an action
 - [ ] L10 Space 1 — Where it is

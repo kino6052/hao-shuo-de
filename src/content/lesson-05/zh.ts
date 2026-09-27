@@ -21,6 +21,7 @@ const zh: PartialByKey<LessonShape> = {
   verbsExample2: { zh: [] },
   verbsExample3: { zh: [] },
   verbsExample4: { zh: [] },
+  verbsExample5: { zh: [] },
   proseVerbNegation: { zh: [] },
   negationExample1: { zh: [] },
   negationExample2: { zh: [] },
@@ -35,7 +36,17 @@ const zh: PartialByKey<LessonShape> = {
   wordOrderExample1: { zh: [] },
   wordOrderExample2: { zh: [] },
   exercise1: { zh: [] },
+  exercise2: { zh: [] },
+  exercise3: { zh: [] },
+  exercise4: { zh: [] },
+  exercise5: { zh: [] },
+  exercise6: { zh: [] },
   answer1: { zh: [] },
+  answer2: { zh: [] },
+  answer3: { zh: [] },
+  answer4: { zh: [] },
+  answer5: { zh: [] },
+  answer6: { zh: [] },
 };
 
 export default zh;

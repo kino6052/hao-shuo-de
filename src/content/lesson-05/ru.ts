@@ -21,6 +21,7 @@ const ru: PartialByKey<LessonShape> = {
   verbsExample2: { ru: [] },
   verbsExample3: { ru: [] },
   verbsExample4: { ru: [] },
+  verbsExample5: { ru: [] },
   proseVerbNegation: { ru: [] },
   negationExample1: { ru: [] },
   negationExample2: { ru: [] },
@@ -35,7 +36,17 @@ const ru: PartialByKey<LessonShape> = {
   wordOrderExample1: { ru: [] },
   wordOrderExample2: { ru: [] },
   exercise1: { ru: [] },
+  exercise2: { ru: [] },
+  exercise3: { ru: [] },
+  exercise4: { ru: [] },
+  exercise5: { ru: [] },
+  exercise6: { ru: [] },
   answer1: { ru: [] },
+  answer2: { ru: [] },
+  answer3: { ru: [] },
+  answer4: { ru: [] },
+  answer5: { ru: [] },
+  answer6: { ru: [] },
 };
 
 export default ru;

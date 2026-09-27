@@ -59,8 +59,28 @@ export type LessonShape = {
   exampleManyPeople: TExample;
   /** Exercise 5: The place is small. [from old L03] */
   exercise5: TExercise;
+  /** Exercise 6: The water is good. */
+  exercise6: TExercise;
+  /** Exercise 7: a big place */
+  exercise7: TExercise;
+  /** Exercise 8: good parents */
+  exercise8: TExercise;
+  /** Exercise 9: many people */
+  exercise9: TExercise;
+  /** Exercise 10: The animal is small. */
+  exercise10: TExercise;
   /** Answer 5. [from old L03] */
   answer5: TAnswer;
+  /** Answer 6. */
+  answer6: TAnswer;
+  /** Answer 7. */
+  answer7: TAnswer;
+  /** Answer 8. */
+  answer8: TAnswer;
+  /** Answer 9. */
+  answer9: TAnswer;
+  /** Answer 10. */
+  answer10: TAnswer;
 };
 
 const shape: LessonShape = {
@@ -113,7 +133,17 @@ const shape: LessonShape = {
     ttsText: "很多的人。",
   },
   exercise5: { type: "exercise" },
+  exercise6: { type: "exercise" },
+  exercise7: { type: "exercise" },
+  exercise8: { type: "exercise" },
+  exercise9: { type: "exercise" },
+  exercise10: { type: "exercise" },
   answer5: { type: "answer", ttsText: "地方很小。" },
+  answer6: { type: "answer", ttsText: "水很好。" },
+  answer7: { type: "answer", ttsText: "大的地方" },
+  answer8: { type: "answer", ttsText: "好的父母" },
+  answer9: { type: "answer", ttsText: "很多的人" },
+  answer10: { type: "answer", ttsText: "动物很小。" },
 };
 
 export default shape;

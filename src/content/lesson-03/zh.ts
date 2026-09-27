@@ -25,7 +25,17 @@ const zh: PartialByKey<LessonShape> = {
   exampleGoodParents: { zh: [] },
   exampleManyPeople: { zh: [] },
   exercise5: { zh: [] },
+  exercise6: { zh: [] },
+  exercise7: { zh: [] },
+  exercise8: { zh: [] },
+  exercise9: { zh: [] },
+  exercise10: { zh: [] },
   answer5: { zh: [] },
+  answer6: { zh: [] },
+  answer7: { zh: [] },
+  answer8: { zh: [] },
+  answer9: { zh: [] },
+  answer10: { zh: [] },
 };
 
 export default zh;

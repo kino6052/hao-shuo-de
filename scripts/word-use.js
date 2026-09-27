@@ -67,6 +67,41 @@ export function wordUse(lessons, dictionary, storyTexts = []) {
   });
 }
 
+// Practice check: in each lesson, every word the lesson introduces appears in
+// at least one of its examples AND in at least one exercise's answer.
+// -> [{ lesson, number, examples, exercises, missingExample: [terms], missingExercise: [terms] }]
+export function practiceGaps(lessons, dictionary) {
+  const terms = termIndex(dictionary);
+  const idsIn = (text) => new Set(wordsIn(text, terms, { pinyinField: true }).map((w) => w.id).filter(Boolean));
+  return lessons.map((lesson) => {
+    const introduced = lesson.entries
+      .filter((e) => e.type === 'vocab')
+      .map((e) => e.term.match(/^\{\{word:([a-z0-9-]+)\}\}$/)?.[1])
+      .filter((id) => id && dictionary[id]);
+    const inExamples = new Set();
+    const inAnswers = new Set();
+    let examples = 0;
+    let exercises = 0;
+    for (const entry of lesson.entries) {
+      if ((entry.type === 'example' || entry.type === 'story') && entry.pinyin) {
+        examples += 1;
+        idsIn(entry.pinyin).forEach((id) => inExamples.add(id));
+      }
+      if (entry.type === 'exercise') exercises += 1;
+      if (entry.type === 'answer') (entry.en ?? []).forEach((t) => idsIn(t).forEach((id) => inAnswers.add(id)));
+    }
+    return {
+      lesson: lesson.id,
+      number: lesson.number,
+      introduced: introduced.length,
+      examples,
+      exercises,
+      missingExample: introduced.filter((id) => !inExamples.has(id)).map((id) => dictionary[id].term),
+      missingExercise: introduced.filter((id) => !inAnswers.has(id)).map((id) => dictionary[id].term),
+    };
+  });
+}
+
 // -> { unused, fewHomeUses, notReused } lists of word-use rows.
 export function wordUseProblems(rows) {
   return {

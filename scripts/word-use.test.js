@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'bun:test';
-import { wordUse, wordUseProblems } from './word-use.js';
+import { wordUse, wordUseProblems, practiceGaps } from './word-use.js';
 
 const dictionary = { ren2: { term: 'rén' }, shi4: { term: 'shì' }, hao3: { term: 'hǎo' }, ge4: { term: 'gè' }, zhe4: { term: 'zhè' } };
 const vocab = (id) => ({ type: 'vocab', term: `{{word:${id}}}`, en: ['gloss'] });
@@ -44,5 +44,31 @@ describe('wordUse', () => {
     expect(problems.notReused.map((r) => r.id).sort()).toEqual(['ge4', 'hao3', 'shi4', 'zhe4']);
     const withStories = wordUseProblems(wordUse(lessons, dictionary, ['{{Word:shi4}} …']));
     expect(withStories.notReused.map((r) => r.id).sort()).toEqual(['ge4', 'hao3', 'zhe4']);
+  });
+});
+
+describe('practiceGaps', () => {
+  const answer = (text) => ({ type: 'answer', en: [text] });
+  const lesson = (entries) => [{ id: 'lesson-02', number: 2, entries }];
+
+  test('every introduced word in an example and in an answer passes', () => {
+    const [gap] = practiceGaps(lesson([vocab('ren2'), vocab('shi4'), ex('{{Word:ren2}} {{word:shi4}}.'), { type: 'exercise', en: ['x'] }, answer('{{Word:ren2}} {{word:shi4}}.')]), dictionary);
+    expect(gap).toMatchObject({ examples: 1, exercises: 1, missingExample: [], missingExercise: [] });
+  });
+
+  test('lists words missing from the examples and from the answers', () => {
+    const [gap] = practiceGaps(lesson([vocab('ren2'), vocab('hao3'), ex('{{Word:ren2}}.'), answer('{{Word:hao3}}.')]), dictionary);
+    expect(gap.missingExample).toEqual(['hǎo']);
+    expect(gap.missingExercise).toEqual(['rén']);
+  });
+
+  test('exercise prompts are English, so only answers count', () => {
+    const [gap] = practiceGaps(lesson([vocab('ren2'), ex('{{Word:ren2}}.'), { type: 'exercise', en: ['Say {{word:ren2}}.'] }]), dictionary);
+    expect(gap.missingExercise).toEqual(['rén']);
+  });
+
+  test('a lesson with no new words has nothing to miss', () => {
+    const [gap] = practiceGaps(lesson([{ type: 'prose', en: ['Sounds.'] }]), dictionary);
+    expect(gap).toMatchObject({ introduced: 0, missingExample: [], missingExercise: [] });
   });
 });

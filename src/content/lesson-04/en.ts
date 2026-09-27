@@ -145,6 +145,10 @@ const en: PartialByKey<LessonShape> = {
   exercise1: { en: ["Your fruit is good."] },
   exercise2: { en: ["That is your family."] },
   exercise3: { en: ["I am a good person."] },
+  exercise4: { en: ["They are people."] },
+  exercise5: { en: ["Your hand is big."] },
+  exercise6: { en: ["Her head is big."] },
+  exercise7: { en: ["My feet are small."] },
   answer1L03: {
     en: ["{{Word:zhe4}}-ge {{word:shi4}} {{word:dong4wu4}}."],
   },
@@ -171,6 +175,26 @@ const en: PartialByKey<LessonShape> = {
   answer3: {
     en: [
       "{{Word:wo3}} {{word:shi4}} {{word:hao3}}-{{word:de}} {{word:ren2}}.",
+    ],
+  },
+  answer4: {
+    en: [
+      "{{Word:ta1}}-{{word:men}} {{word:shi4}} {{word:ren2}}.",
+    ],
+  },
+  answer5: {
+    en: [
+      "{{Word:ni3}}-{{word:de}} {{word:shou3}} {{word:hen3}} {{word:da4}}.",
+    ],
+  },
+  answer6: {
+    en: [
+      "{{Word:ta1}}-{{word:de}} {{word:tou2}} {{word:hen3}} {{word:da4}}.",
+    ],
+  },
+  answer7: {
+    en: [
+      "{{Word:wo3}}-{{word:de}} {{word:jiao3}} {{word:hen3}} {{word:xiao3}}.",
     ],
   },
 };

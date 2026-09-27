@@ -25,7 +25,17 @@ const ru: PartialByKey<LessonShape> = {
   exampleGoodParents: { ru: [] },
   exampleManyPeople: { ru: [] },
   exercise5: { ru: [] },
+  exercise6: { ru: [] },
+  exercise7: { ru: [] },
+  exercise8: { ru: [] },
+  exercise9: { ru: [] },
+  exercise10: { ru: [] },
   answer5: { ru: [] },
+  answer6: { ru: [] },
+  answer7: { ru: [] },
+  answer8: { ru: [] },
+  answer9: { ru: [] },
+  answer10: { ru: [] },
 };
 
 export default ru;

@@ -28,7 +28,9 @@ const en: PartialByKey<LessonShape> = {
     en: [
       'A verb is an action word. It tells you what someone does. `{{word:chi1}}` ("eat"), `{{word:shuo1}}` ("speak"), and `{{word:kan4}}` ("look") are verbs.',
       "A sentence goes in this order: who does it, then the verb, then what it is done to.",
-      "Who + verb + what.",
+      "",
+      "**Who + verb + what**",
+      "",
     ],
     tldr: {
       en: [
@@ -43,6 +45,7 @@ const en: PartialByKey<LessonShape> = {
   verbsExample2: { en: ["He/She speaks Hao-shuo-de."] },
   verbsExample3: { en: ["I have fruit."] },
   verbsExample4: { en: ["I eat rice."] },
+  verbsExample5: { en: ["I listen to you."] },
   proseVerbNegation: {
     en: [
       'To say "not", put `{{word:bu4}}` (from Lesson 2) right before the verb.',
@@ -96,7 +99,21 @@ const en: PartialByKey<LessonShape> = {
   wordOrderExample1: { en: ["I look at him/her."] },
   wordOrderExample2: { en: ["He/She looks at me."] },
   exercise1: { en: ["I listen to you."] },
+  exercise2: { en: ["She eats rice."] },
+  exercise3: { en: ["He doesn't have money."] },
+  exercise4: { en: ["You look at me."] },
+  exercise5: { en: ["I don't write."] },
+  exercise6: { en: ["They speak."] },
   answer1: { en: ["{{Word:wo3}} {{word:ting1}} {{word:ni3}}."] },
+  answer2: { en: ["{{Word:ta1}} {{word:chi1}} {{word:mi3fan4}}."] },
+  answer3: {
+    en: [
+      "{{Word:ta1}} {{word:mei2}}-{{word:you3}} {{word:jin1}}.",
+    ],
+  },
+  answer4: { en: ["{{Word:ni3}} {{word:kan4}} {{word:wo3}}."] },
+  answer5: { en: ["{{Word:wo3}} {{word:bu4}} {{word:xie3}}."] },
+  answer6: { en: ["{{Word:ta1}}-{{word:men}} {{word:shuo1}}."] },
 };
 
 export default en;

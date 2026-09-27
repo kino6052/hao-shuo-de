@@ -79,6 +79,8 @@ export type LessonShape = {
   exercise6: TExercise;
   /** Exercise 7: This is a man. [from old L02] */
   exercise7: TExercise;
+  /** Exercise 8: This is not a fruit. */
+  exercise8: TExercise;
   /** Answer 1. [from old L02] */
   answer1: TAnswer;
   /** Answer 2. [from old L02] */
@@ -93,6 +95,8 @@ export type LessonShape = {
   answer6: TAnswer;
   /** Answer 7. [from old L02] */
   answer7: TAnswer;
+  /** Answer 8. */
+  answer8: TAnswer;
 };
 
 const shape: LessonShape = {
@@ -178,6 +182,7 @@ const shape: LessonShape = {
   exercise5: { type: "exercise" },
   exercise6: { type: "exercise" },
   exercise7: { type: "exercise" },
+  exercise8: { type: "exercise" },
   answer1: { type: "answer", ttsText: "东西是东西。" },
   answer2: { type: "answer", ttsText: "这是动物。" },
   answer3: { type: "answer", ttsText: "女人是人。" },
@@ -185,6 +190,7 @@ const shape: LessonShape = {
   answer5: { type: "answer", ttsText: "动物是女人。" },
   answer6: { type: "answer", ttsText: "水果是东西。" },
   answer7: { type: "answer", ttsText: "这是男人。" },
+  answer8: { type: "answer", ttsText: "这不是水果。" },
 };
 
 export default shape;

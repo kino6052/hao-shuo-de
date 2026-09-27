@@ -35,6 +35,7 @@ const zh: PartialByKey<LessonShape> = {
   exercise5: { zh: [] },
   exercise6: { zh: [] },
   exercise7: { zh: [] },
+  exercise8: { zh: [] },
   answer1: { zh: [] },
   answer2: { zh: [] },
   answer3: { zh: [] },
@@ -42,6 +43,7 @@ const zh: PartialByKey<LessonShape> = {
   answer5: { zh: [] },
   answer6: { zh: [] },
   answer7: { zh: [] },
+  answer8: { zh: [] },
 };
 
 export default zh;

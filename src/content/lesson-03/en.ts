@@ -78,8 +78,24 @@ const en: PartialByKey<LessonShape> = {
   exampleGoodParents: { en: ["Good parents."] },
   exampleManyPeople: { en: ["Many people."] },
   exercise5: { en: ["The place is small."] },
+  exercise6: { en: ["The water is good."] },
+  exercise7: { en: ["a big place"] },
+  exercise8: { en: ["good parents"] },
+  exercise9: { en: ["many people"] },
+  exercise10: { en: ["The animal is small."] },
   answer5: {
     en: ["{{Word:di4fang1}} {{word:hen3}} {{word:xiao3}}."],
+  },
+  answer6: { en: ["{{Word:shui3}} {{word:hen3}} {{word:hao3}}."] },
+  answer7: { en: ["{{Word:da4}}-{{word:de}} {{word:di4fang1}}"] },
+  answer8: { en: ["{{Word:hao3}}-{{word:de}} {{word:fu4mu3}}"] },
+  answer9: {
+    en: [
+      "{{Word:hen3}}-{{word:duo1}}-{{word:de}} {{word:ren2}}",
+    ],
+  },
+  answer10: {
+    en: ["{{Word:dong4wu4}} {{word:hen3}} {{word:xiao3}}."],
   },
 };
 

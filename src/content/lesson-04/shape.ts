@@ -123,6 +123,14 @@ export type LessonShape = {
   exercise2: TExercise;
   /** Exercise 3: I am a good person. [from old L04] */
   exercise3: TExercise;
+  /** Exercise 4: They are people. */
+  exercise4: TExercise;
+  /** Exercise 5: Your hand is big. */
+  exercise5: TExercise;
+  /** Exercise 6: Her head is big. */
+  exercise6: TExercise;
+  /** Exercise 7: My feet are small. */
+  exercise7: TExercise;
   /** Answer 1. [from old L03] */
   answer1L03: TAnswer;
   /** Answer 2. [from old L03] */
@@ -139,6 +147,14 @@ export type LessonShape = {
   answer2: TAnswer;
   /** Answer 3. [from old L04] */
   answer3: TAnswer;
+  /** Answer 4. */
+  answer4: TAnswer;
+  /** Answer 5. */
+  answer5: TAnswer;
+  /** Answer 6. */
+  answer6: TAnswer;
+  /** Answer 7. */
+  answer7: TAnswer;
 };
 
 const shape: LessonShape = {
@@ -283,6 +299,10 @@ const shape: LessonShape = {
   exercise1: { type: "exercise" },
   exercise2: { type: "exercise" },
   exercise3: { type: "exercise" },
+  exercise4: { type: "exercise" },
+  exercise5: { type: "exercise" },
+  exercise6: { type: "exercise" },
+  exercise7: { type: "exercise" },
   answer1L03: { type: "answer", ttsText: "这个是动物。" },
   answer2L03: { type: "answer", ttsText: "那个是女人。" },
   answer1L11: { type: "answer", ttsText: "这个人。" },
@@ -291,6 +311,10 @@ const shape: LessonShape = {
   answer1: { type: "answer", ttsText: "你的水果很好。" },
   answer2: { type: "answer", ttsText: "那是你的家。" },
   answer3: { type: "answer", ttsText: "我是好的人。" },
+  answer4: { type: "answer", ttsText: "他们是人。" },
+  answer5: { type: "answer", ttsText: "你的手很大。" },
+  answer6: { type: "answer", ttsText: "她的头很大。" },
+  answer7: { type: "answer", ttsText: "我的脚很小。" },
 };
 
 export default shape;

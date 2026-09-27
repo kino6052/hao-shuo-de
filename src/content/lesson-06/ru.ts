@@ -36,9 +36,17 @@ const ru: PartialByKey<LessonShape> = {
   exercise1: { ru: [] },
   exercise2: { ru: [] },
   exercise3: { ru: [] },
+  exercise4: { ru: [] },
+  exercise5: { ru: [] },
+  exercise6: { ru: [] },
+  exercise7: { ru: [] },
   answer1: { ru: [] },
   answer2: { ru: [] },
   answer3: { ru: [] },
+  answer4: { ru: [] },
+  answer5: { ru: [] },
+  answer6: { ru: [] },
+  answer7: { ru: [] },
 };
 
 export default ru;

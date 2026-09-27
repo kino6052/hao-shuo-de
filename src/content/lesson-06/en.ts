@@ -97,6 +97,10 @@ const en: PartialByKey<LessonShape> = {
       'Ask "Is the tool small?" Use `{{word:ma}}`, or say "small, not small".',
     ],
   },
+  exercise4: { en: ["Is that your box?"] },
+  exercise5: { en: ["Why is he looking for water?"] },
+  exercise6: { en: ["How do you write this?"] },
+  exercise7: { en: ["Who is asking?"] },
   answer1: {
     en: [
       "{{Word:ni3}} {{word:you3}} {{word:shen2me}} {{word:gong1ju4}}?",
@@ -112,6 +116,20 @@ const en: PartialByKey<LessonShape> = {
       "{{Word:gong1ju4}} {{word:xiao3}}-{{word:bu4}}-{{word:xiao3}}?",
     ],
   },
+  answer4: {
+    en: [
+      "{{Word:na4}} {{word:shi4}} {{word:ni3}}-{{word:de}} {{word:he2zi}} {{word:ma}}?",
+    ],
+  },
+  answer5: {
+    en: [
+      "{{Word:wei4shen2me}} {{word:ta1}} {{word:zhao3}} {{word:shui3}}?",
+    ],
+  },
+  answer6: {
+    en: ["{{Word:zhe4}}-ge {{word:zen3me}} {{word:xie3}}?"],
+  },
+  answer7: { en: ["{{Word:shen2me}} {{word:ren2}} {{word:wen4}}?"] },
 };
 
 export default en;
