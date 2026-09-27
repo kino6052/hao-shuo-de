@@ -406,7 +406,7 @@ Q1–Q4 were answered on 2026-09-27. New questions go here.
 
 | Command                        | What it checks                                                                                                                                                                            | Fails the build for |
 | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
-| `npm run check-book`           | Lessons match intro-3 (titles, order, sections); every word introduced once, matching §4b; summaries and TL;DR lines short and jargon-free. Prints New / Total so far per lesson.         | any lesson          |
+| `npm run check-book`           | Lessons match intro-3 (titles, order, sections); every word introduced once, matching §4b; summaries and TL;DR lines short and jargon-free; the proverbs and the stories use only dictionary words. Prints New / Total so far per lesson.         | any lesson          |
 | `npm run check-summaries`      | Every chapter's summary is 50 words or fewer.                                                                                                                                             | any chapter         |
 | `npm run check-jargon`         | No banned grammar words in the book's English text (rule 4). Lists each hit, and counts the allowed core terms.                                                                           | finished lessons    |
 | `npm run check-early-words`    | No word used before its lesson, and no pinyin word missing from the dictionary (§4a rule 2). Lists each use.                                                                              | finished lessons    |
@@ -486,7 +486,7 @@ For each lesson: ☐ written to template ☐ `npm run check -- lesson-NN` passes
 - [ ] "Why Minimality Works": the author rewrites it (D32)
 - [x] Appendix: Grammar Patterns Reference aligned with the new lessons — it is now generated from the lessons (below)
 - [x] Appendix: Ten Short Stories use only words taught by the lessons they cite — every Chinese line uses dictionary words (bird is zài-kōngqì-lǐ-de dòngwù, see is kàn-dào, money is jīn), and the notes point at the current lessons
-- [ ] Sentence Builder and Proverbs checked against the dictionary
+- [x] Sentence Builder and Proverbs checked against the dictionary — the proverbs drop dōu and zìjǐ and say jīn for money; the builder picks words from the dictionary; check-book now guards the proverbs and the stories
 - [x] `npm run check -- --strict` passes (jargon: lessons only, D32; reuse capped near the end, D33)
 - [x] Grammar overview chapter built automatically from every lesson's grammar boxes (`grammarRules` in `src/lib/chapter-content.js` already collects them), replacing the hand-written `appendix-grammar.yaml` Done: `scripts/generate-grammar-overview.js` writes `src/content/appendix-grammar.ts` on every build; the old YAML is in `src/content/legacy/`.
 
