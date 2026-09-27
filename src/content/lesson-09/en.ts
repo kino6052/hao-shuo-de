@@ -14,7 +14,6 @@ const en: PartialByKey<LessonShape> = {
   vocabWan: { en: ["finish"] },
   vocabKaishi: { en: ["to begin to, start to, manage to"] },
   vocabHou: { en: ["after, behind"] },
-  vocabQianmian: { en: ["before, in front"] },
   vocabWanr: { en: ["play"] },
   vocabLiu: { en: ["stay, keep"] },
   proseDeShijian: {

@@ -29,6 +29,8 @@ export type LessonShape = {
   vocabShang: TVocab;
   /** Vocabulary: "area below, under, lower part, leg". */
   vocabXia: TVocab;
+  /** Vocabulary: "in front, ahead". */
+  vocabQianmian: TVocab;
   /** Vocabulary: "beside". */
   vocabPang: TVocab;
   /** Vocabulary: "side". */
@@ -73,6 +75,7 @@ const shape: LessonShape = {
   vocabLi: { type: "vocab", term: "{{word:li3}}", ttsText: "里面" },
   vocabShang: { type: "vocab", term: "{{word:shang4}}", ttsText: "上面" },
   vocabXia: { type: "vocab", term: "{{word:xia4}}", ttsText: "下面" },
+  vocabQianmian: { type: "vocab", term: "{{word:qian2}}", ttsText: "前面" },
   vocabPang: { type: "vocab", term: "{{word:pang2}}", ttsText: "旁" },
   vocabBian: { type: "vocab", term: "{{word:bian1}}", ttsText: "边" },
   vocabPangbian: {

@@ -10,7 +10,6 @@ const zh: PartialByKey<LessonShape> = {
   vocabWan: { zh: [] },
   vocabKaishi: { zh: [] },
   vocabHou: { zh: [] },
-  vocabQianmian: { zh: [] },
   vocabWanr: { zh: [] },
   vocabLiu: { zh: [] },
   proseDeShijian: { zh: [] },

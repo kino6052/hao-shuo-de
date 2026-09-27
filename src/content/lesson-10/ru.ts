@@ -10,6 +10,7 @@ const ru: PartialByKey<LessonShape> = {
   vocabLi: { ru: [] },
   vocabShang: { ru: [] },
   vocabXia: { ru: [] },
+  vocabQianmian: { ru: [] },
   vocabPang: { ru: [] },
   vocabBian: { ru: [] },
   vocabPangbian: { ru: [] },

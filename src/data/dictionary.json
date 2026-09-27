@@ -1428,7 +1428,7 @@
       "maps": ""
     },
     "di4": {
-      "term": "tái",
+      "term": "di",
       "pos": {
         "eng": "noun",
         "rus": "существительное",
@@ -1456,7 +1456,7 @@
       "maps": "poka"
     },
     "qian2": {
-      "term": "qiánmiàn",
+      "term": "qián",
       "pos": {
         "eng": "noun",
         "rus": "существительное",
@@ -2245,7 +2245,19 @@
             "rus": "Числа и порядковые числительные",
             "zh": "数字与序数"
           },
-          "wordIds": ["yi1", "liang3", "hao4", "san1", "si4", "wu3", "liu4", "qi1", "ba1", "jiu3", "shi2"]
+          "wordIds": [
+            "yi1",
+            "liang3",
+            "hao4",
+            "san1",
+            "si4",
+            "wu3",
+            "liu4",
+            "qi1",
+            "ba1",
+            "jiu3",
+            "shi2"
+          ]
         },
         {
           "key": "amount",

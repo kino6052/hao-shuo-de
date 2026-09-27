@@ -14,6 +14,7 @@ const en: PartialByKey<LessonShape> = {
   vocabLi: { en: ["inside, between, internal organ"] },
   vocabShang: { en: ["area above, highest part, sky"] },
   vocabXia: { en: ["area below, under, lower part, leg"] },
+  vocabQianmian: { en: ["in front, ahead"] },
   vocabPang: { en: ["beside"] },
   vocabBian: { en: ["side"] },
   vocabPangbian: { en: ["side, area beside, vicinity"] },

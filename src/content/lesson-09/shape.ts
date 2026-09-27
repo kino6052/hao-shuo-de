@@ -29,8 +29,6 @@ export type LessonShape = {
   vocabKaishi: TVocab;
   /** Vocabulary: "after, behind". */
   vocabHou: TVocab;
-  /** Vocabulary: "before, in front". */
-  vocabQianmian: TVocab;
   /** Vocabulary: "play". */
   vocabWanr: TVocab;
   /** Vocabulary: "stay, keep". */
@@ -69,7 +67,6 @@ const shape: LessonShape = {
     ttsText: "开始",
   },
   vocabHou: { type: "vocab", term: "{{word:hou4}}", ttsText: "后" },
-  vocabQianmian: { type: "vocab", term: "{{word:qian2}}", ttsText: "前面" },
   vocabWanr: { type: "vocab", term: "{{word:wan2r}}", ttsText: "玩儿" },
   vocabLiu: { type: "vocab", term: "{{word:liu2}}", ttsText: "留" },
   proseDeShijian: { type: "prose" },
