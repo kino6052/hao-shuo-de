@@ -173,6 +173,7 @@
       "lesson-10",
       "lesson-11",
       "lesson-12",
+      "lesson-13",
       "lesson-14",
       "lesson-17",
       "lesson-19",
@@ -185,6 +186,7 @@
       "lesson-07",
       "lesson-08",
       "lesson-11",
+      "lesson-13",
       "lesson-16"
     ],
     "shi4chang3": [
@@ -196,7 +198,8 @@
       "appendix-stories",
       "lesson-04",
       "lesson-10",
-      "lesson-11"
+      "lesson-11",
+      "lesson-13"
     ],
     "ri4": [
       "appendix-stories",
@@ -206,7 +209,8 @@
       "lesson-21"
     ],
     "yue4": [
-      "lesson-08"
+      "lesson-08",
+      "lesson-13"
     ],
     "zhi2wu4": [
       "appendix-stories",
@@ -284,7 +288,6 @@
       "lesson-03",
       "appendix-grammar",
       "lesson-04",
-      "lesson-13",
       "lesson-20"
     ],
     "qun2": [
@@ -306,6 +309,7 @@
       "lesson-07",
       "lesson-10",
       "lesson-12",
+      "lesson-13",
       "lesson-15",
       "lesson-17"
     ],
@@ -375,7 +379,8 @@
       "lesson-06",
       "lesson-10",
       "lesson-11",
-      "lesson-12"
+      "lesson-12",
+      "lesson-13"
     ],
     "ni2": [
       "lesson-15"
@@ -393,7 +398,8 @@
       "appendix-stories",
       "lesson-07",
       "lesson-10",
-      "lesson-12"
+      "lesson-12",
+      "lesson-13"
     ],
     "ci2": [
       "lesson-18"
@@ -413,6 +419,7 @@
       "lesson-06",
       "lesson-10",
       "lesson-12",
+      "lesson-13",
       "lesson-18",
       "lesson-21"
     ],
@@ -430,6 +437,7 @@
       "lesson-10",
       "lesson-11",
       "lesson-12",
+      "lesson-13",
       "lesson-16",
       "lesson-17",
       "lesson-19",
@@ -457,11 +465,9 @@
     "liang3": [
       "appendix-stories",
       "appendix-grammar",
-      "lesson-13",
       "lesson-16"
     ],
     "hao4": [
-      "lesson-13",
       "lesson-16"
     ],
     "duo1": [
@@ -509,7 +515,6 @@
     "hei1se4": [
       "appendix-stories",
       "appendix-grammar",
-      "lesson-13",
       "lesson-17"
     ],
     "hong2se4": [
@@ -543,6 +548,7 @@
     ],
     "tian2": [
       "lesson-12",
+      "lesson-13",
       "lesson-19"
     ],
     "ying4": [
@@ -575,6 +581,7 @@
       "lesson-04",
       "lesson-08",
       "lesson-11",
+      "lesson-13",
       "lesson-15",
       "lesson-17",
       "lesson-21"
@@ -585,7 +592,8 @@
       "appendix-grammar",
       "lesson-07",
       "lesson-09",
-      "lesson-12"
+      "lesson-12",
+      "lesson-13"
     ],
     "ai4": [
       "proverbs",
@@ -668,7 +676,6 @@
       "appendix-stories",
       "appendix-grammar",
       "lesson-09",
-      "lesson-13",
       "lesson-15"
     ],
     "wan2": [
@@ -762,6 +769,7 @@
       "lesson-08",
       "lesson-10",
       "lesson-11",
+      "lesson-13",
       "lesson-17",
       "lesson-19",
       "lesson-20"
@@ -775,7 +783,6 @@
       "lesson-04",
       "lesson-06",
       "lesson-07",
-      "lesson-13",
       "lesson-15",
       "lesson-16",
       "lesson-17",
@@ -800,6 +807,7 @@
       "lesson-06",
       "lesson-07",
       "lesson-10",
+      "lesson-13",
       "lesson-15",
       "lesson-18",
       "lesson-20"
@@ -895,7 +903,6 @@
       "lesson-08",
       "lesson-09",
       "lesson-11",
-      "lesson-13",
       "lesson-15",
       "lesson-16",
       "lesson-19",
@@ -911,6 +918,7 @@
       "lesson-10",
       "lesson-11",
       "lesson-12",
+      "lesson-13",
       "lesson-17",
       "lesson-21"
     ],
@@ -923,7 +931,6 @@
       "lesson-07",
       "lesson-09",
       "lesson-12",
-      "lesson-13",
       "lesson-15",
       "lesson-17",
       "lesson-20",
@@ -946,7 +953,6 @@
       "proverbs",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-13",
       "lesson-19",
       "lesson-20"
     ],
@@ -995,6 +1001,7 @@
       "lesson-08",
       "lesson-11",
       "lesson-12",
+      "lesson-13",
       "lesson-14",
       "lesson-16",
       "lesson-17",
@@ -1025,7 +1032,8 @@
       "appendix-stories",
       "appendix-grammar",
       "lesson-10",
-      "lesson-11"
+      "lesson-11",
+      "lesson-13"
     ],
     "pa4": [
       "appendix-stories",
@@ -1052,7 +1060,8 @@
     "li3": [
       "proverbs",
       "appendix-stories",
-      "lesson-10"
+      "lesson-10",
+      "lesson-13"
     ],
     "mian4": [
       "lesson-10",
@@ -1100,7 +1109,8 @@
     "men": [
       "lesson-04",
       "lesson-05",
-      "lesson-11"
+      "lesson-11",
+      "lesson-13"
     ]
   }
 }
