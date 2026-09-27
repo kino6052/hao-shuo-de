@@ -8,7 +8,7 @@ const en: PartialByKey<LessonShape> = {
   summary: {
     en: [
       "We often want to say how much: a little, or a lot.",
-      "In this lesson, you'll be able to say \"really hot\", \"very cold\", and \"a bit strange\".",
+      "In this lesson, you'll be able to say \"really hot\", \"very cold\", \"not very strange\", and \"Are you cold?\"",
     ],
   },
   vocabZhen: { en: ["really"] },
@@ -17,44 +17,132 @@ const en: PartialByKey<LessonShape> = {
   vocabTian: { en: ["sweet"] },
   vocabQiguai: { en: ["strange"] },
   vocabXin: { en: ["new"] },
-  vocabShenti: { en: ["body"] },
-  proseAdjectivesAsAdverbs: {
+  vocabShenti: { en: ["body; health"] },
+  proseVery: {
     en: [
-      "Adjectives have one more job available to them: standing directly in front of another adjective or a verb, they act as adverbs, describing how much or how that other word applies.",
-      'You have actually already been doing this without naming it -- `{{word:hen3}}` itself, from Lesson 3, is just an adjective ("very") pressed into adverb duty in front of another adjective.',
-      '`{{word:hen3}} {{word:duo1}}` works the same way: `{{word:duo1}}` ("many") on its own is already an adjective, and stacking `{{word:hen3}}` in front of it gives you "very many," no separate adverb form required.',
+      "**To say very**, put {{word:hen3}} before the describing word.",
+      "",
+      "**Thing + {{word:hen3}} + describing word**",
+    ],
+    tldr: {
+      en: ["{{word:hen3}} before a describing word means very."],
+    },
+    necessity: { en: ["Now you can say how something is."] },
+  },
+  exampleVery1: { en: ["The water is very hot."] },
+  exampleVery2: { en: ["I'm very cold."] },
+  exampleVery3: { en: ["The fruit is very sweet."] },
+  exampleVery4: { en: ["He is in good health."] },
+  proseReally: {
+    en: [
+      "**To say really**, put {{word:zhen1}} before the describing word.",
+      "",
+      "**Thing + {{word:zhen1}} + describing word**",
+      "",
+      "On its own, it's a whole sentence: {{Word:zhen1}} {{word:re4}}! (It's really hot!)",
     ],
     tldr: {
       en: [
-        "Put a describing word before another word to say how much or how.",
+        "{{word:zhen1}} before a describing word means really.",
       ],
     },
     necessity: {
-      en: ["You already do this with {{word:hen3}} (very)."],
+      en: [
+        "Now you can say how strongly you feel about something.",
+      ],
     },
   },
-  infoAdjectivesAsAdverbs: {
-    title: { en: ["Adjectives as Adverbs"] },
+  exampleReally1: { en: ["It's really hot!"] },
+  exampleReally2: { en: ["She's really strange."] },
+  exampleReally3: { en: ["This fruit is really sweet!"] },
+  proseNot: {
+    en: [
+      "**To say not, or not very**, put {{word:bu4}} or {{word:bu4}} {{word:hen3}} before the describing word.",
+      "",
+      "**Thing + {{word:bu4}} (+ {{word:hen3}}) + describing word**",
+    ],
+    tldr: {
+      en: [
+        "{{word:bu4}} before a describing word means not. {{word:bu4}} {{word:hen3}} means not very.",
+      ],
+    },
+    necessity: { en: ["Now you can say how something isn't."] },
+  },
+  exampleNot1: { en: ["The water isn't cold."] },
+  exampleNot2: { en: ["This isn't very strange."] },
+  exampleNot3: { en: ["The rice isn't hot."] },
+  proseAsk: {
+    en: [
+      "**To ask how something is**, put {{word:ma}} after the describing word.",
+      "",
+      "**Thing + describing word + {{word:ma}}?**",
+      "",
+      '{{word:xin1}} means new: {{word:xin1}}-{{word:de}} {{word:yi1fu}} is "new clothes".',
+    ],
+    tldr: {
+      en: [
+        "Put {{word:ma}} after a describing word to ask about it: {{Word:ni3}} {{word:leng3}} {{word:ma}}?",
+      ],
+    },
+    necessity: { en: ["Now you can ask how someone is."] },
+  },
+  exampleAsk1: { en: ["Is the water hot?"] },
+  exampleAsk2: { en: ["Are you cold?"] },
+  exampleAsk3: { en: ["Are you in good health?"] },
+  exampleAsk4: { en: ["Is this box new?"] },
+  exampleAsk5: { en: ["I want new clothes."] },
+  exampleAsk6: { en: ["My body is really hot."] },
+  infoHowMuch: {
+    title: { en: ["How Much"] },
     items: [
       {
         en: [
-          "Place an adjective directly before another adjective or a verb to use it as an adverb -- no separate adverb form exists.",
+          "{{word:hen3}} + describing word, very: {{Word:shui3}} {{word:hen3}} {{word:re4}}. (The water is very hot.)",
+        ],
+      },
+      {
+        en: [
+          "{{word:zhen1}} + describing word, really: {{Word:zhen1}} {{word:re4}}! (It's really hot!)",
+        ],
+      },
+      {
+        en: [
+          "{{word:bu4}} / {{word:bu4}} {{word:hen3}} + describing word, not / not very: {{Word:shui3}} {{word:bu4}} {{word:leng3}}. (The water isn't cold.)",
+        ],
+      },
+      {
+        en: [
+          "describing word + {{word:ma}}?, asking: {{Word:ni3}} {{word:leng3}} {{word:ma}}? (Are you cold?)",
         ],
       },
     ],
   },
-  example5: {
+  exercise1: { en: ["The rice is really hot."] },
+  exercise2: { en: ["I'm very cold."] },
+  exercise3: { en: ["Is the fruit sweet?"] },
+  exercise4: { en: ["That person is really strange."] },
+  exercise5: { en: ["I want new clothes."] },
+  exercise6: { en: ["She is in good health."] },
+  exercise7: { en: ["The water isn't cold."] },
+  answer1: { en: ["{{Word:mi3fan4}} {{word:zhen1}} {{word:re4}}."] },
+  answer2: { en: ["{{Word:wo3}} {{word:hen3}} {{word:leng3}}."] },
+  answer3: { en: ["{{Word:shui3guo3}} {{word:tian2}} {{word:ma}}?"] },
+  answer4: {
     en: [
-      "The girls misheard / didn't listen well to the parent.",
+      "{{Word:na4}}-ge {{word:ren2}} {{word:zhen1}} {{word:qi2guai4}}.",
     ],
   },
-  example8: { en: ["Fathers use/read the book a lot."] },
-  exercise3: { en: ["I know Hao-shuo-de a bit."] },
-  answer3: {
+  answer5: {
     en: [
-      "Hǎo-shuō-de, {{word:wo3}} {{word:zhi1dao4}}-{{word:de}} {{word:bu4}} {{word:duo1}}.",
+      "{{Word:wo3}} {{word:yao4}} {{word:xin1}}-{{word:de}} {{word:yi1fu}}.",
     ],
   },
+  answer6: {
+    en: [
+      "{{Word:ta1}}-{{word:de}} {{word:shen1ti3}} {{word:hen3}} {{word:hao3}}.",
+    ],
+  },
+  answer7: { en: ["{{Word:shui3}} {{word:bu4}} {{word:leng3}}."] },
 };
 
 export default en;
