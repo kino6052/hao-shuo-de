@@ -18,6 +18,10 @@ export type LessonShape = {
   /** Chapter summary. */
   summary: TSummary;
 
+  /** Vocabulary: "is, are, am". */
+  vocabShi: TVocab;
+  /** Vocabulary: "not". */
+  vocabBu: TVocab;
   /** Vocabulary: "thing, something, being". */
   vocabDongxi: TVocab;
   /** Vocabulary: "person, human". */
@@ -48,6 +52,13 @@ export type LessonShape = {
   example5: TExample;
   /** Example: nǚrén shì rén. */
   example6: TExample;
+
+  /** Grammar: negation */
+  proseNounBuShiNoun: TProse;
+
+  example7: TExample;
+  example8: TExample;
+  example9: TExample;
 
   /** Exercise 1: Something is something. */
   exercise1: TExercise;
@@ -84,6 +95,8 @@ const shape: LessonShape = {
   title: { type: "title" },
   summary: { type: "summary" },
 
+  vocabShi: { type: "vocab", term: "{{word:bu4}}", ttsText: "是" },
+  vocabBu: { type: "vocab", term: "{{word:bu4}}", ttsText: "不" },
   vocabDongxi: { type: "vocab", term: "{{word:dong1xi}}", ttsText: "东西" },
   vocabRen: { type: "vocab", term: "{{word:ren2}}", ttsText: "人" },
   vocabShuiguo: { type: "vocab", term: "{{word:shui3guo3}}", ttsText: "水果" },
@@ -94,6 +107,7 @@ const shape: LessonShape = {
   },
   vocabNvren: { type: "vocab", term: "{{word:nv3ren2}}", ttsText: "女人" },
   vocabZhe: { type: "vocab", term: "{{word:zhe4}}", ttsText: "这" },
+
   vocabDongwu: { type: "vocab", term: "{{word:dong4wu4}}", ttsText: "动物" },
 
   proseNounShiNoun: { type: "prose" },
@@ -128,6 +142,24 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:nv3ren2}} {{word:shi4}} {{word:ren2}}.",
     ttsText: "女人是人。",
+  },
+
+  proseNounBuShiNoun: { type: "prose" },
+
+  example7: {
+    type: "example",
+    pinyin:
+      "{{Word:zhe4}} {{word:bu4}} {{word:shi4}} {{word:xie3}}-{{word:de}} {{word:dong1xi}}.",
+    ttsText: "这不是写的东西。",
+  },
+  example8: {
+    type: "example",
+    pinyin: "{{Word:zhe4}} {{word:bu4}} {{word:shi4}} {{word:shui3guo3}}.",
+  },
+  example9: {
+    type: "example",
+    pinyin: "{{Word:nv3ren2}} {{word:bu4}} {{word:shi4}} {{word:nan2ren2}}.",
+    ttsText: "女人不是男人。",
   },
 
   exercise1: { type: "exercise" },

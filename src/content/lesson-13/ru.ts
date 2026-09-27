@@ -23,7 +23,7 @@ const ru: PartialByKey<LessonShape> = {
   vocabQian: { ru: [] },
   vocabHao: { ru: [] },
   vocabQuanbu: { ru: [] },
-  proseCountingCapsAtTwo: { ru: [] },
+  vocabMany: { ru: [] },
   infoCountingAndOrdering: { items: [{ru:[]},{ru:[]},{ru:[]}] },
   example1: { ru: [] },
   example2: { ru: [] },

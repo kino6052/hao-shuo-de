@@ -15,8 +15,6 @@ const zh: PartialByKey<LessonShape> = {
   proseFourTonesIntro: { zh: [] },
   infoFiveTones: { items: [{zh:[]},{zh:[]},{zh:[]},{zh:[]},{zh:[]}] },
   proseNeutralTone: { zh: [] },
-  proseToneSandhiIntro: { zh: [] },
-  proseBaselineTone: { zh: [] },
   proseNoWordBoundaries: { zh: [] },
   infoPunctuationHelpers: { items: [{zh:[]},{zh:[],items:[{zh:[]},{zh:[]},{zh:[]},{zh:[]}]},{zh:[],items:[{zh:[]},{zh:[]},{zh:[]}]}] },
   exercise1: { zh: [] },

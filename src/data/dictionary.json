@@ -280,6 +280,14 @@
       },
       "maps": "mama"
     },
+    "bi3": {
+      "term": "bǐ",
+
+      "definition": {
+        "eng": "comparison",
+        "rus": "сравнение"
+      }
+    },
     "nan2ren2": {
       "term": "nánrén",
       "pos": {
@@ -1092,17 +1100,17 @@
       },
       "maps": "open, kama"
     },
-    "wan2cheng2": {
-      "term": "wánchéng",
+    "wan2": {
+      "term": "wán",
       "pos": {
         "eng": "verb complement",
         "rus": "глагольный комплемент",
         "zh": "动词补语"
       },
       "definition": {
-        "eng": "finish, end, achieve completion; syntactically binds behind action verbs to express resultative closure",
-        "rus": "закончить, завершить, довести до конца; синтаксически присоединяется после глаголов действия для выражения результативного завершения",
-        "zh": "完成，结束，达成；在语法上附着于动作动词之后，表示动作的结果性完成"
+        "eng": "finish, be done, run out; binds directly after a verb via a hyphen to mark a resultative completion (chī-wán, \"finish eating\")",
+        "rus": "закончить, быть готовым, закончиться; присоединяется через дефис прямо после глагола, обозначая результативное завершение (chī-wán, «доесть»)",
+        "zh": "完，完毕，用尽；通过连字符直接附着在动词之后，表示动作的结果性完成（chī-wán，「吃完」）"
       },
       "maps": "pini"
     },
@@ -1148,8 +1156,8 @@
       },
       "maps": "moku"
     },
-    "wan2": {
-      "term": "wán",
+    "wan2r": {
+      "term": "wánr",
       "pos": {
         "eng": "verb/adjective",
         "rus": "глагол/прилагательное",
@@ -1158,7 +1166,7 @@
       "definition": {
         "eng": "to play, have fun, engage in recreation; playful, artistic, frivolous",
         "rus": "играть, веселиться, отдыхать; игривый, творческий, легкомысленный",
-        "zh": "玩，玩乐，娱乐；爱玩的，艺术性的，轻浮的"
+        "zh": "玩儿，玩乐，娱乐；爱玩的，艺术性的，轻浮的"
       },
       "maps": "musi"
     },
@@ -1722,6 +1730,20 @@
       },
       "maps": "ken"
     },
+    "hui4": {
+      "term": "huì",
+      "pos": {
+        "eng": "auxiliary",
+        "rus": "вспомогательный глагол",
+        "zh": "助动词"
+      },
+      "definition": {
+        "eng": "will, going to (marks a predicted or future action); placed before a verb the same way {{word:neng2}} is",
+        "rus": "будет, собирается (обозначает предсказанное или будущее действие); ставится перед глаголом так же, как {{word:neng2}}",
+        "zh": "将，会（表示预测或未来的动作）；放在动词前，与 {{word:neng2}} 用法相同"
+      },
+      "maps": ""
+    },
     "hen3": {
       "term": "hěn",
       "pos": {
@@ -2280,7 +2302,7 @@
                 "rus": "Фаза и длительность",
                 "zh": "阶段与持续"
               },
-              "wordIds": ["kai1shi3", "wan2cheng2", "deng3"]
+              "wordIds": ["kai1shi3", "wan2", "deng3"]
             },
             {
               "key": "eating-resting-play",
@@ -2289,7 +2311,7 @@
                 "rus": "Еда, отдых и игра",
                 "zh": "饮食、休息与玩乐"
               },
-              "wordIds": ["shui4jiao4", "chi1", "wan2"]
+              "wordIds": ["shui4jiao4", "chi1", "wan2r"]
             }
           ]
         },
@@ -2455,7 +2477,7 @@
             "rus": "Модальность",
             "zh": "情态"
           },
-          "wordIds": ["neng2"]
+          "wordIds": ["neng2", "hui4"]
         },
         {
           "key": "truth-value",

@@ -46,7 +46,6 @@ hěn | adverb | very, highly, intensely; syntactic structural anchor required be
 hézi | noun | container, bag, bowl, box, cup, vessel | poki
 hóngsè | adjective/noun | red, reddish | loje
 hòu | noun/directional | behind, after, back; composes with other roots via a hyphen (e.g. {{word:hou4}}-{{word:mian4}}) |
-hòumiàn | noun | back, behind, area rearward | monsi
 huài | adjective/verb | bad, negative, broken, damaged, non-essential | ike, pakala
 huángsè | adjective/noun | yellow, yellowish | jelo
 huǒ | noun | fire, cooking element, chemical heat source | seli
@@ -54,6 +53,7 @@ huòzhě | conjunction | or; links choices or alternative clauses | anu
 jiā | noun | home, house, family, household | tomo
 jiǎo | noun | foot, leg, organ of locomotion, bottom part | noka
 jiào | verb | to call, be named; to produce an animal vocalization under the Quote Partition | nimi, mu
+jīn | noun | money, cash, savings, wealth | mani
 juéde | noun/adjective/verb | feeling, emotion, direct experience; to feel, think | pilin
 kāishǐ | verb/auxiliary | to begin, start, open; turn on; manage to | open, kama
 kàn | verb | to look at, see, examine, observe, read, watch | lukin
@@ -66,7 +66,6 @@ lěng | adjective | cold, cool, uncooked, raw | lete
 lǐ | noun/directional | inside, within; composes with other roots via a hyphen (e.g. {{word:li3}}-{{word:mian4}}) |
 liǎng | number | two; quantifies dual entities when coupled to the measure word (liang-ge) | tu
 lìliàng | noun/adjective | energy, power, intensity, physical strength; confident, sure, intense | wawa
-lǐmiàn | noun | inside, center, content, between, internal organ | insa
 liú | verb | to stay, remain, keep, endure, protect | awen
 ma | particle | final interrogative yes-or-no question marker |
 méi | particle | negative particle used exclusively to negate the verb you (to form meiyou) |
@@ -79,13 +78,13 @@ nánrén | noun | man, male, masculine human, husband | mije
 néng | auxiliary | to be able to, be allowed to, can, may, possible | ken
 nǐ | pronoun | you | sina
 ní | noun | paste, mud, dough, clay, semi-solid substance, powder | ko
+nòng | verb | to do, take action on, work on, build, make, prepare | pali
 nǚrén | noun | woman, female, feminine human, wife | meli
 pà | verb/adjective | to fear, be afraid of; scared, frightened |
 páng | noun/directional | beside, alongside; composes with {{word:bian1}} via a hyphen (e.g. {{word:pang2}}-{{word:bian1}}) |
 pángbiān | noun | side, vicinity, area beside, hip | poka
 pífū | noun | skin, outer layer, bark, peel, shell, boundary | selo
 qǐ | verb/directional | to rise, get up; begin; composes with a verb via a hyphen to mark the start of an action (e.g. {{word:shuo1}}-{{word:qi3}}, "to bring up/mention") |
-qián | noun | money, cash, savings, wealth | mani
 qiánmiàn | noun | front, face, foremost area, chest | sinpin
 qíguài | adjective | strange, unusual, foolish, crazy, intoxicated | nasa
 qù | verb | to go, move toward, travel away | tawa
@@ -95,7 +94,6 @@ rè | adjective | hot, warm, cooked, chemically energetic | seli
 rén | noun | human being, person, somebody | jan
 rì | noun | sun, radiant light source, brightness, glow | suno
 shàng | noun/directional | up, above, on; composes with other roots via a hyphen (e.g. {{word:shang4}}-{{word:lai2}}, {{word:shang4}}-{{word:mian4}}) |
-shàngmiàn | noun | above, highest part, sky, elevated location, supernatural area | sewi
 shēngyīn | noun | sound, noise, voice | kalama
 shénme | pronoun/particle | what? which?; retains position without altering Chinese SVO statement geometry | seme
 shēntǐ | noun | body, physical torso, physical state | sijelo
@@ -109,18 +107,17 @@ shuìjiào | verb/adjective | to sleep, rest, be inactive; sleeping, asleep | la
 shuō | verb/noun | to communicate, say, speak, talk, use language; language, speech | toki
 sǐ | verb/adjective | to die; dead, dying | moli
 tā | pronoun | he, she, it, they, them; syntactically genderless and number-fluid | ona
-tái | noun | floor, horizontal surface, platform, couch, flat resting area | supa
+tái | noun | floor, horizontal surface, platform | supa
 tián | adjective | sweet, fragrant, cute, innocent, adorable | suwi
 tīng | verb | to hear, listen, pay attention to, obey | kute
 tóu | noun | head, mind, internal regulatory director | lawa
 wài | verb/adjective | away, outside | weka
-wán | verb/adjective | to play, have fun, engage in recreation; playful, artistic, frivolous | musi
-wánchéng | verb complement | finish, end, achieve completion; syntactically binds behind action verbs to express resultative closure | pini
+wán | verb complement | finish, be done, run out; binds directly after a verb via a hyphen to mark a resultative completion (chī-wán, "finish eating") | pini
+wánr | verb/adjective | to play, have fun, engage in recreation; playful, artistic, frivolous | musi
 wèishénme | pronoun | why |
 wèn | verb | to ask, inquire, question |
 wǒ | pronoun | I, me, we, us | mi
 xià | noun/directional | down, below, under; composes with other roots via a hyphen (e.g. {{word:xia4}}-{{word:lai2}}, {{word:xia4}}-{{word:mian4}}) |
-xiàmiàn | noun | below, underneath, under, lower part | noka, anpa
 xiàn | noun | line, rope, hair, thread, cord, flexible long thing | linja
 xiǎo | adjective | little, small, short, few, young, a bit | lili
 xiě | verb | to write, draw, represent with marks | sitelen
@@ -146,5 +143,4 @@ zhè | pronoun/adjective | this, these; syntactically binds as zhe-ge | ni
 zhēn | adjective | true, real, genuine, actual | lon
 zhīdào | verb/auxiliary | to know, be wise about, possess information; know how to | sona
 zhíwù | noun | plant, vegetation, herb, leaf | kasi
-zuò | verb | to do, take action on, work on, build, make, prepare | pali
 ```

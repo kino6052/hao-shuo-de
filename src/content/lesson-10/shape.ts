@@ -1,5 +1,10 @@
 // Language-independent block sequence for lesson-10 ("More Modifiers").
 // See src/lib/chapter-shape-types.ts / assemble-chapter.js.
+// Absorbs the old standalone "Prepositions" lesson (gěi/zài/yòng/yīnwèi) --
+// see BOOK_STRUCTURE.md. Framed here as "words that specify a relationship"
+// rather than "coverbs"/"prepositions", since Hao-shuo-de doesn't want to
+// lean on that grammatical terminology to explain what these words let you
+// say.
 import type {
   TTitle,
   TSummary,
@@ -82,6 +87,53 @@ export type LessonShape = {
   answer3: TAnswer;
   /** Answer 4. */
   answer4: TAnswer;
+
+  // ---- absorbed from the old "Prepositions" lesson --------------------
+
+  /** Vocabulary: "to, for, give". */
+  vocabGei: TVocab;
+  /** Vocabulary: "at, in, present, existing". */
+  vocabZai: TVocab;
+  /** Vocabulary: "using, with, by means of". */
+  vocabYong: TVocab;
+  /** Vocabulary: "from, because of". */
+  vocabYinwei: TVocab;
+
+  /** Grammar: some words specify a relationship (to/for, at/in, using, because of) and sit right before the main verb. */
+  proseRelationshipWords: TProse;
+  /** Grammar rule box: Relationship Word Order. */
+  infoRelationshipWordOrder: TInfo & { items: [TInfoItem] };
+  /** Grammar: with no other action verb, the relationship word itself becomes the main predicate. */
+  proseWordAsPredicate: TProse;
+
+  /** Example: wǒ gěi tā zài-shuǐ-lǐ-de dòngwù. */
+  example9: TExample;
+  /** Example: wǒ zài dìfāng gěi tā zài-shuǐ-lǐ-de dòngwù. */
+  example10: TExample;
+  /** Example: wǒ zài dìfāng. */
+  example11: TExample;
+  /** Example: wǒ qù nǐ-de pángbiān. */
+  example12: TExample;
+  /** Example: wǒ-de fùmǔ qù kàn hěn-dà-de shuǐ. */
+  example13: TExample;
+  /** Example: yīnwèi zhè-ge, wǒ nòng le hěn duō. */
+  example14: TExample;
+  /** Example: wǒ yòng Hǎo-shuō-de shuō. */
+  example15: TExample;
+
+  /** Exercise 5: The worker uses tools. */
+  exercise5: TExercise;
+  /** Exercise 6: He gives things from his house. */
+  exercise6: TExercise;
+  /** Exercise 7: Why did you do it? */
+  exercise7: TExercise;
+
+  /** Answer 5. */
+  answer5: TAnswer;
+  /** Answer 6. */
+  answer6: TAnswer;
+  /** Answer 7. */
+  answer7: TAnswer;
 };
 
 const shape: LessonShape = {
@@ -127,8 +179,7 @@ const shape: LessonShape = {
 
   example1: {
     type: "example",
-    pinyin:
-      "{{Word:ni3}}-{{word:de}} {{word:nong4}}-{{word:de}} {{word:hen3}} {{word:hao3}}.",
+    pinyin: "{{Word:ni3}}-{{word:de}} {{word:nong4}}-{{word:de}} {{word:hen3}} {{word:hao3}}.",
     ttsText: "你的做的很好。",
   },
   example2: {
@@ -138,20 +189,17 @@ const shape: LessonShape = {
   },
   example3: {
     type: "example",
-    pinyin:
-      "{{Word:ni3}} {{word:shi4}} {{word:you3}}-{{word:li4liang4}}-{{word:de}} {{word:nan2ren2}}.",
+    pinyin: "{{Word:ni3}} {{word:shi4}} {{word:you3}}-{{word:li4liang4}}-{{word:de}} {{word:nan2ren2}}.",
     ttsText: "你是有力量的男人。",
   },
   example4: {
     type: "example",
-    pinyin:
-      "{{Word:zhi1dao4}}-{{word:de}} {{word:ren2}} {{word:kan4}} {{word:xie3}}-{{word:de}} {{word:dong1xi}}.",
+    pinyin: "{{Word:zhi1dao4}}-{{word:de}} {{word:ren2}} {{word:kan4}} {{word:xie3}}-{{word:de}} {{word:dong1xi}}.",
     ttsText: "知道的人看写的东西。",
   },
   example5: {
     type: "example",
-    pinyin:
-      "{{Word:xiao3}}-{{word:de}} {{word:nv3ren2}} méiyǒu {{word:hao3}}-{{word:de}} {{word:ting1}} {{word:fu4mu3}}.",
+    pinyin: "{{Word:xiao3}}-{{word:de}} {{word:nv3ren2}} méiyǒu {{word:hao3}}-{{word:de}} {{word:ting1}} {{word:fu4mu3}}.",
     ttsText: "小的女人没有好的听父母。",
   },
   example6: {
@@ -166,8 +214,7 @@ const shape: LessonShape = {
   },
   example8: {
     type: "example",
-    pinyin:
-      "{{Word:nan2ren2}}-{{word:de}} {{word:fu4mu3}} {{word:duo1}}-{{word:de}} {{word:kan4}} {{word:xie3}}-{{word:de}} {{word:dong1xi}}.",
+    pinyin: "{{Word:nan2ren2}}-{{word:de}} {{word:fu4mu3}} {{word:duo1}}-{{word:de}} {{word:kan4}} {{word:xie3}}-{{word:de}} {{word:dong1xi}}.",
     ttsText: "男人的父母多的看写的东西。",
   },
 
@@ -180,6 +227,57 @@ const shape: LessonShape = {
   answer2: { type: "answer", ttsText: "吃把我变大。" },
   answer3: { type: "answer", ttsText: "好说的，我知道的不多。" },
   answer4: { type: "answer", ttsText: "群有力量了。" },
+
+  vocabGei: { type: "vocab", term: "{{word:gei3}}", ttsText: "给" },
+  vocabZai: { type: "vocab", term: "{{word:zai4}}", ttsText: "在" },
+  vocabYong: { type: "vocab", term: "{{word:yong4}}", ttsText: "用" },
+  vocabYinwei: { type: "vocab", term: "{{word:yin1wei4}}", ttsText: "因为" },
+
+  proseRelationshipWords: { type: "prose" },
+  infoRelationshipWordOrder: {
+    type: "info",
+    subtype: "grammar",
+    tag: "relationships/word-order",
+    items: [{}],
+  },
+  proseWordAsPredicate: { type: "prose" },
+
+  example9: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:gei3}} {{word:ta1}} {{word:zai4}}-{{word:shui3}}-lǐ-{{word:de}} {{word:dong4wu4}}.",
+  },
+  example10: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:zai4}} {{word:di4fang1}} {{word:gei3}} {{word:ta1}} {{word:zai4}}-{{word:shui3}}-lǐ-{{word:de}} {{word:dong4wu4}}.",
+  },
+  example11: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:zai4}} {{word:di4fang1}}.",
+  },
+  example12: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:qu4}} {{word:ni3}}-{{word:de}} {{word:pang2bian1}}.",
+  },
+  example13: {
+    type: "example",
+    pinyin: "{{Word:wo3}}-{{word:de}} {{word:fu4mu3}} {{word:qu4}} {{word:kan4}} {{word:hen3}}-{{word:da4}}-{{word:de}} {{word:shui3}}.",
+  },
+  example14: {
+    type: "example",
+    pinyin: "{{Word:yin1wei4}} {{word:zhe4}}-ge, {{word:wo3}} {{word:nong4}} {{word:le}} {{word:hen3}} {{word:duo1}}.",
+  },
+  example15: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:yong4}} Hǎo-shuō-de {{word:shuo1}}.",
+  },
+
+  exercise5: { type: "exercise" },
+  exercise6: { type: "exercise" },
+  exercise7: { type: "exercise" },
+
+  answer5: { type: "answer" },
+  answer6: { type: "answer" },
+  answer7: { type: "answer" },
 };
 
 export default shape;

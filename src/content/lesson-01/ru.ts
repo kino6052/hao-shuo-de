@@ -15,8 +15,6 @@ const ru: PartialByKey<LessonShape> = {
   proseFourTonesIntro: { ru: [] },
   infoFiveTones: { items: [{ru:[]},{ru:[]},{ru:[]},{ru:[]},{ru:[]}] },
   proseNeutralTone: { ru: [] },
-  proseToneSandhiIntro: { ru: [] },
-  proseBaselineTone: { ru: [] },
   proseNoWordBoundaries: { ru: [] },
   infoPunctuationHelpers: { items: [{ru:[]},{ru:[],items:[{ru:[]},{ru:[]},{ru:[]},{ru:[]}]},{ru:[],items:[{ru:[]},{ru:[]},{ru:[]}]}] },
   exercise1: { ru: [] },

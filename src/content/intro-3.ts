@@ -93,6 +93,7 @@ const content: Entry[] = [
           ru: [],
         },
       },
+
       {
         text: {
           en: ["**Questions and Answers** — a new type of sentence."],
@@ -110,7 +111,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Prepositions** — another way to modify words, giving them relationships in space, time, and more.",
+            "**Pre-Verbs** — modal tools that modify verbs to express ability, desire, obligation, attempt, learning, or continuation.",
           ],
           zh: [],
           ru: [],
@@ -125,15 +126,7 @@ const content: Entry[] = [
           ru: [],
         },
       },
-      {
-        text: {
-          en: [
-            "**Pre-Verbs** — modal tools that modify verbs to express ability, desire, obligation, attempt, learning, or continuation.",
-          ],
-          zh: [],
-          ru: [],
-        },
-      },
+
       {
         text: {
           en: [
@@ -167,7 +160,16 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Chaning the role of a word** - how to make nouns from other words, and otherwise. How to make nouns that carry meaning of space etc.",
+            "**Changing the role of a word** - how to make nouns from other words, and otherwise. How to make nouns that carry meaning of space etc.",
+          ],
+          zh: [],
+          ru: [],
+        },
+      },
+      {
+        text: {
+          en: [
+            "**Expressing Various Relationships** — causality, condition, and other ways to connect clauses and sentences.",
           ],
           zh: [],
           ru: [],

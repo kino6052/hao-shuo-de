@@ -1,9 +1,19 @@
 // Language-independent block sequence for lesson-06 ("Questions and Answers").
 // See src/lib/chapter-shape-types.ts / assemble-chapter.js.
-import type { TTitle, TSummary, TVocab, TProse, TInfo, TInfoItem, TExample, TExercise, TAnswer } from "../../lib/chapter-shape-types.ts";
+import type {
+  TTitle,
+  TSummary,
+  TVocab,
+  TProse,
+  TInfo,
+  TInfoItem,
+  TExample,
+  TExercise,
+  TAnswer,
+} from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
-  /** Chapter title. */
+  /** Chapter title. Questions and Answers */
   title: TTitle;
   /** Chapter summary. */
   summary: TSummary;
@@ -24,7 +34,9 @@ export type LessonShape = {
   /** Grammar: question words sit in-situ, exactly where the answer would go. */
   proseQuestionWordsInSitu: TProse;
   /** Callout: Yes-or-No Questions -- the ma particle and A-not-A reduplication. */
-  infoYesNoQuestions: TInfo & { items: [TInfoItem & { items: [TInfoItem, TInfoItem] }] };
+  infoYesNoQuestions: TInfo & {
+    items: [TInfoItem & { items: [TInfoItem, TInfoItem] }];
+  };
   /** Grammar: answering yes/no by repeating (or negating) the verb. */
   proseAnsweringYesNo: TProse;
 
@@ -48,6 +60,10 @@ export type LessonShape = {
   example9: TExample;
   /** Example: nǐ zěnme bǎ Hǎo-shuō-de biàn zhīdào? */
   example10: TExample;
+  /** Example: ni xihuan shuiguo ma? shi */
+  example11: TExample;
+  /** Example: zhe shi ni-de difang? bu shi */
+  example12: TExample;
 
   /** Exercise 1: What tools do you have? */
   exercise1: TExercise;
@@ -72,23 +88,79 @@ const shape: LessonShape = {
   vocabTa: { type: "vocab", term: "{{word:ta1}}", ttsText: "他" },
   vocabHuozhe: { type: "vocab", term: "{{word:huo4zhe3}}", ttsText: "或者" },
   vocabShenme: { type: "vocab", term: "{{word:shen2me}}", ttsText: "什么" },
-  vocabWeishenme: { type: "vocab", term: "{{word:wei4shen2me}}", ttsText: "为什么" },
+  vocabWeishenme: {
+    type: "vocab",
+    term: "{{word:wei4shen2me}}",
+    ttsText: "为什么",
+  },
   vocabZenme: { type: "vocab", term: "{{word:zen3me}}", ttsText: "怎么" },
 
   proseQuestionWordsInSitu: { type: "prose" },
   infoYesNoQuestions: { type: "info", items: [{ items: [{}, {}] }] },
   proseAnsweringYesNo: { type: "prose" },
 
-  example1: { type: "example", pinyin: "{{Word:shen2me}} {{word:shi4}} {{word:xin1}}-{{word:de}}?", ttsText: "什么是新的？" },
-  example2: { type: "example", pinyin: "{{Word:shen2me}} {{word:ren2}} {{word:zai4}} {{word:shuo1}}?", ttsText: "什么人在说？" },
-  example3: { type: "example", pinyin: "{{Word:ta1}} {{word:you3}}-méi-{{word:you3}} {{word:hen3}}-{{word:duo1}}-{{word:de}} {{word:shui3guo3}}?", ttsText: "他有没有很多的水果？" },
+  example1: {
+    type: "example",
+    pinyin: "{{Word:shen2me}} {{word:shi4}} {{word:xin1}}-{{word:de}}?",
+    ttsText: "什么是新的？",
+  },
+  example2: {
+    type: "example",
+    pinyin: "{{Word:shen2me}} {{word:ren2}} {{word:zai4}} {{word:shuo1}}?",
+    ttsText: "什么人在说？",
+  },
+  example3: {
+    type: "example",
+    pinyin:
+      "{{Word:ta1}} {{word:you3}}-méi-{{word:you3}} {{word:hen3}}-{{word:duo1}}-{{word:de}} {{word:shui3guo3}}?",
+    ttsText: "他有没有很多的水果？",
+  },
   example4: { type: "example", pinyin: "{{Word:you3}}.", ttsText: "有。" },
-  example5: { type: "example", pinyin: "{{Word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}} {{word:fu4mu3}}?", ttsText: "你听不听父母？" },
-  example6: { type: "example", pinyin: "{{Word:bu4}} {{word:ting1}}.", ttsText: "不听。" },
-  example7: { type: "example", pinyin: "{{Word:ta1}} {{word:zai4}} {{word:chi1}} {{word:shen2me}}?", ttsText: "它在吃什么？" },
-  example8: { type: "example", pinyin: "{{Word:ni3}} {{word:gei3}} {{word:ta1}} {{word:zai4}}-{{word:shui3}}-lǐ-{{word:de}} {{word:dong4wu4}} {{word:ma}}?", ttsText: "你给她在水里的动物吗？" },
-  example9: { type: "example", pinyin: "{{Word:wei4shen2me}} {{word:ni3}} {{word:gei3}} {{word:ta1}} {{word:zai4}}-{{word:shui3}}-lǐ-{{word:de}} {{word:dong4wu4}}?", ttsText: "为什么你给她在水里的动物？" },
-  example10: { type: "example", pinyin: "{{Word:ni3}} {{word:zen3me}} {{word:ba3}} Hǎo-shuō-de {{word:bian4}} {{word:zhi1dao4}}?", ttsText: "你怎么把好说的变知道？" },
+  example5: {
+    type: "example",
+    pinyin:
+      "{{Word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}} {{word:fu4mu3}}?",
+    ttsText: "你听不听父母？",
+  },
+  example6: {
+    type: "example",
+    pinyin: "{{Word:bu4}} {{word:ting1}}.",
+    ttsText: "不听。",
+  },
+  example7: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:zai4}} {{word:chi1}} {{word:shen2me}}?",
+    ttsText: "它在吃什么？",
+  },
+  example8: {
+    type: "example",
+    pinyin:
+      "{{Word:ni3}} {{word:gei3}} {{word:ta1}} {{word:zai4}}-{{word:shui3}}-lǐ-{{word:de}} {{word:dong4wu4}} {{word:ma}}?",
+    ttsText: "你给她在水里的动物吗？",
+  },
+  example9: {
+    type: "example",
+    pinyin:
+      "{{Word:wei4shen2me}} {{word:ni3}} {{word:gei3}} {{word:ta1}} {{word:zai4}}-{{word:shui3}}-lǐ-{{word:de}} {{word:dong4wu4}}?",
+    ttsText: "为什么你给她在水里的动物？",
+  },
+  example10: {
+    type: "example",
+    pinyin:
+      "{{Word:ni3}} {{word:zen3me}} {{word:ba3}} Hǎo-shuō-de {{word:bian4}} {{word:zhi1dao4}}?",
+    ttsText: "你怎么把好说的变知道？",
+  },
+  example11: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:xi3huan1}} {{word:shui3guo3}} {{word:ma}}?",
+    ttsText: "你喜欢水果吗？",
+  },
+  example12: {
+    type: "example",
+    pinyin:
+      "{{Word:zhe4}} {{word:shi4}} {{word:ni3}}-{{word:de}} {{word:di4fang1}} {{word:bu4}}-{{word:shi4}}?",
+    ttsText: "这是你的地方不是？",
+  },
 
   exercise1: { type: "exercise" },
   exercise2: { type: "exercise" },

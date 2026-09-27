@@ -13,7 +13,7 @@ import type {
 } from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
-  /** Chapter title. */
+  /** Chapter title. Pre-verbs*/
   title: TTitle;
   /** Chapter summary. */
   summary: TSummary;

@@ -11,6 +11,8 @@ const en: PartialByKey<LessonShape> = {
     ],
   },
 
+  vocabShi: { en: ["is, are, am"] },
+  vocabBu: { en: ["not"] },
   vocabDongxi: { en: ["thing, something"] },
   vocabRen: { en: ["person, human"] },
   vocabShuiguo: { en: ["fruit, vegetable"] },
@@ -45,6 +47,15 @@ const en: PartialByKey<LessonShape> = {
   exercise5: { en: ["The animal is female."] },
   exercise6: { en: ["Fruits are things."] },
   exercise7: { en: ["This is a piece of paper."] },
+
+  proseNounBuShiNoun: {
+    en: [
+      "To negate a simple sentence, insert {{word:bu4}} before  {{word:shi4}}.",
+      "NOUN + bu4 + shì + NOUN.",
+      "{{word:dong1xi}} {{word:bu4}} {{word:shi4}} {{word:dong1xi}}.",
+      "Something is not something.",
+    ],
+  },
 
   answer1: { en: ["{{Word:dong1xi}} {{word:shi4}} {{word:dong1xi}}."] },
   answer2: {

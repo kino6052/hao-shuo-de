@@ -7,7 +7,7 @@ const en: PartialByKey<LessonShape> = {
   title: { en: ["Modifying Nouns"] },
   summary: {
     en: [
-      'zhè/nà + ge points at one specific thing (zhè-ge, nà-ge); duō points at many instead, and ge drops out. Adjectives connect to a subject with {{word:hen3}} instead of {{word:shi4}} ({{Word:shui3}} {{word:hen3}} {{word:hao3}} — "Water is good"), and bind onto a noun with -{{word:de}} instead when describing it as a unit ({{word:hen3}}-{{word:xiao3}}-{{word:de}} {{word:di4fang1}} — "a small place").',
+      "Often we want to describe objects that we are talking about, for example we want to say that house is big or beautify etc. We use adjectives for that. Adjectives are words that modify nouns.",
     ],
   },
 
@@ -26,24 +26,23 @@ const en: PartialByKey<LessonShape> = {
 
   proseHenConnector: {
     en: [
+      "Often we want to describe objects that we are talking about, for example we want to say that house is big or beautiful etc.",
+      "Adjectives are words that modify nouns. For example if house is a noun, big is the word that tells us about it.",
+      "Adjectives can connect to a subject like Subject - {{word:hen3}} - Adjective (conveying the sense that house is big).",
       'Lesson 2 gave you <audio-example zh="是">{{word:shi4}}</audio-example>, the word that connects a subject to a noun (<audio-example zh="人是女人">{{Word:ren2}} {{word:shi4}} {{word:nv3ren2}}</audio-example> — "the person is a woman").',
       'Adjectives need a connector too, but Mandarin doesn\'t reuse <audio-example zh="是">{{word:shi4}}</audio-example> for the job — it uses a different word instead: <audio-example zh="很">{{word:hen3}}</audio-example>.',
       "",
       'Subject + <audio-example zh="很">{{word:hen3}}</audio-example> + Adjective',
       "",
-      'A bare adjective predicate like <audio-example zh="水好">{{word:shui3}} {{word:hao3}}</audio-example> isn\'t a neutral statement.',
-      'In natural Mandarin, it sounds like a contrast ("Water is good, but…") or a subordinate clause ("If the water is good…").',
-      'To make a plain, complete statement, <audio-example zh="很">{{word:hen3}}</audio-example> fills the predicate slot instead — its literal translation is "very," but in this position it\'s semantically bleached and doesn\'t add emphasis.',
-      'So <audio-example zh="水很好">{{Word:shui3}} {{word:hen3}} {{word:hao3}}</audio-example> is simply "Water is good," not "Water is very good."',
     ],
-    tldr: {
-      en: [
-        "Adjectives use {{word:hen3}} as a neutral predicate connector to avoid sounding like a contrast or condition; in this role {{word:hen3}} is required and not emphatic.",
-      ],
-    },
     necessity: {
       en: [
-        "Explains that {{word:hen3}} is a neutral predicate filler, not an intensifier, and that omitting it creates a contrastive or conditional reading rather than a plain statement.",
+        "Explains how we modify nouns with adjectives, and introduces the special word {{word:hen3}}.",
+      ],
+    },
+    tldr: {
+      en: [
+        "Adjectives can connect to a subject via special word {{word:hen3}}.",
       ],
     },
   },
@@ -51,20 +50,17 @@ const en: PartialByKey<LessonShape> = {
 
   proseDeRequired: {
     en: [
+      "Adjectives can modify nouns directly. For example: we want to say not that house is big but directly say: big house. In this case we use the word {{word:de}} to bind the adjective to the noun.",
       'When an adjective sits right next to a noun instead of making its own statement — describing it as a single unit, the way <audio-example zh="很小的地方">{{word:hen3}}-{{word:xiao3}}-{{word:de}} {{word:di4fang1}}</audio-example> describes "a small place" — it binds on with <code>-{{word:de}}</code>, the same hyphen you already saw gluing <audio-example zh="写的东西">{{word:xie3}}-{{word:de}} {{word:dong1xi}}</audio-example> ("document") together back in Lesson 2.',
       "",
       'Once the adjective is modified by a degree word like <audio-example zh="很">{{word:hen3}}</audio-example>, <code>-{{word:de}}</code> becomes mandatory — you can\'t attach it directly.',
       '<audio-example zh="很小地方">{{word:hen3}}-{{word:xiao3}} {{word:di4fang1}}</audio-example> is ungrammatical; you need <audio-example zh="很小的地方">{{word:hen3}}-{{word:xiao3}}-{{word:de}} {{word:di4fang1}}</audio-example>.',
     ],
     tldr: {
-      en: [
-        "-{{word:de}} is required when the adjective has modifiers like {{word:hen3}}; without it, phrases like 很小地方 are ungrammatical.",
-      ],
+      en: ["Adjectives can also modify nouns directly with word {{word:de}}"],
     },
     necessity: {
-      en: [
-        "Clarifies that -{{word:de}} is grammatically required, not optional decoration, once an adjective carries its own modifier.",
-      ],
+      en: ["Direct modification of the noun"],
     },
   },
   example4: { en: ["This is a small place."] },

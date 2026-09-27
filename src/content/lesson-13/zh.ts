@@ -23,7 +23,7 @@ const zh: PartialByKey<LessonShape> = {
   vocabQian: { zh: [] },
   vocabHao: { zh: [] },
   vocabQuanbu: { zh: [] },
-  proseCountingCapsAtTwo: { zh: [] },
+  vocabMany: { zh: [] },
   infoCountingAndOrdering: { items: [{zh:[]},{zh:[]},{zh:[]}] },
   example1: { zh: [] },
   example2: { zh: [] },
