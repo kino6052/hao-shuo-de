@@ -95,7 +95,7 @@ const shape: LessonShape = {
   title: { type: "title" },
   summary: { type: "summary" },
 
-  vocabShi: { type: "vocab", term: "{{word:bu4}}", ttsText: "是" },
+  vocabShi: { type: "vocab", term: "{{word:shi4}}", ttsText: "是" },
   vocabBu: { type: "vocab", term: "{{word:bu4}}", ttsText: "不" },
   vocabDongxi: { type: "vocab", term: "{{word:dong1xi}}", ttsText: "东西" },
   vocabRen: { type: "vocab", term: "{{word:ren2}}", ttsText: "人" },

@@ -86,6 +86,8 @@ const en: PartialByKey<LessonShape> = {
   example8: { en: ["Do you give her the animal that's in the water?"] },
   example9: { en: ["Why do you give her the animal that's in the water?"] },
   example10: { en: ["How do you turn Hao-shuo-de into something known?"] },
+  example11: { en: ["Do you like fruit?"] },
+  example12: { en: ["Is this your place?"] },
 
   exercise1: { en: ['Ask: "What tools do you have?"'] },
   exercise2: { en: ['Ask: "Does he listen?" -- using A-not-A.'] },

@@ -57,6 +57,10 @@ const en: PartialByKey<LessonShape> = {
     ],
   },
 
+  example7: { en: ["This is not a document."] },
+  example8: { en: ["This is not a fruit."] },
+  example9: { en: ["A woman is not a man."] },
+
   answer1: { en: ["{{Word:dong1xi}} {{word:shi4}} {{word:dong1xi}}."] },
   answer2: {
     en: [
