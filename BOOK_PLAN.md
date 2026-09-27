@@ -482,7 +482,7 @@ For each lesson: ☐ written to template ☐ `npm run check -- lesson-NN` passes
 
 ### Phase 3 — Intros and reference
 
-- [ ] Tone pass on intro-1, intro-2, intro-3
+- [x] Tone pass on intro-1, intro-2, intro-3 — shorter sentences and plainer words, same claims; intro-2 gets a summary; intro-3's lesson lines now match what each lesson teaches
 - [ ] "Why Minimality Works": the author rewrites it (D32)
 - [x] Appendix: Grammar Patterns Reference aligned with the new lessons — it is now generated from the lessons (below)
 - [x] Appendix: Ten Short Stories use only words taught by the lessons they cite — every Chinese line uses dictionary words (bird is zài-kōngqì-lǐ-de dòngwù, see is kàn-dào, money is jīn), and the notes point at the current lessons

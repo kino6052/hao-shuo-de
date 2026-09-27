@@ -32,6 +32,14 @@ const content: (TextEntry | ExampleEntry)[] = [
     ru: [],
   },
   {
+    type: 'summary',
+    en: [
+      'How few words do you need to say almost anything? Toki Pona showed that about 120 can be enough. Hao-shuo-de uses the same idea with real Mandarin.',
+    ],
+    zh: [],
+    ru: [],
+  },
+  {
     type: 'prose',
     en: [
       "Here's a question worth sitting with: what is the smallest number of words you would need to say almost anything, and still be understood?",
@@ -44,13 +52,13 @@ const content: (TextEntry | ExampleEntry)[] = [
     en: [
       'In 2001, a linguist named Sonja Lang decided to find out.',
       'She built a language called Toki Pona, and gave herself just about 120 words to work with — no more.',
-      'It sounds impossibly restrictive.',
+      'That sounds like far too few.',
       'How do you say "car" without the word for car?',
       "You don't invent one.",
       'Instead you combine what you already have: a car becomes a "moving box."',
       'Hunger becomes "wanting to eat."',
       'Teaching becomes "giving knowledge."',
-      'With only 120 well-chosen concepts, combined freely, people could think clearly and say almost anything they needed to.',
+      'With about 120 well-chosen words, combined freely, people could think clearly and say almost anything they needed.',
     ],
     zh: [],
     ru: [],
@@ -59,8 +67,10 @@ const content: (TextEntry | ExampleEntry)[] = [
     type: 'prose',
     en: [
       '<audio-example zh="好说的">Hǎo-shuō-de</audio-example> borrows the result of that experiment, but not the language itself.',
-      "Every word you'll learn here, and every rule of grammar, is ordinary, real, standard Mandarin — nothing invented, nothing to unlearn later.",
-      'What <audio-example zh="好说的">Hǎo-shuō-de</audio-example> borrows from Toki Pona is only the discipline: freeze the vocabulary at around {{dictionaryCount}} words, and suddenly there\'s nothing left to distract you from the grammar.',
+      "Every word you'll learn here, and every rule of grammar, is ordinary, real, standard Mandarin.",
+      'Nothing is invented, and there is nothing to unlearn later.',
+      'What <audio-example zh="好说的">Hǎo-shuō-de</audio-example> borrows from Toki Pona is only the discipline.',
+      "Keep the words to {{dictionaryCount}}, and there's nothing left to distract you from the grammar.",
     ],
     zh: [],
     ru: [],
@@ -69,7 +79,8 @@ const content: (TextEntry | ExampleEntry)[] = [
     type: 'prose',
     en: [
       'And because the grammar is entirely real, a native speaker understands you from your very first sentence.',
-      "Don't expect to sound fluent — with {{dictionaryCount}} words, you'll speak the way a very honest, very literal person speaks.",
+      "Don't expect to sound fluent.",
+      "With {{dictionaryCount}} words, you'll speak the way a very honest, very literal person speaks.",
       'But every sentence will be correct Mandarin, not a simplified stand-in for it.',
     ],
     zh: [],

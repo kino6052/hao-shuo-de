@@ -27,14 +27,15 @@ const content: Entry[] = [
   {
     type: "prose",
     en: [
-      "Toki Pona showed that a tiny, fixed vocabulary can still let you say almost anything.",
-      "Hao-shuo-de borrows that discipline — but not the language itself.",
+      "Toki Pona showed that a small, fixed set of words can still let you say almost anything.",
+      "Hao-shuo-de borrows that idea, but not the language itself.",
       "Toki Pona invents its own grammar from scratch.",
       "Hao-shuo-de does the opposite: every rule of grammar you'll learn here is ordinary, real Mandarin.",
       "We are not building a Chinese-flavored Toki Pona.",
-      "We are taking real Chinese and simplifying it down to the bare minimum — the smallest vocabulary and grammar that still lets a native speaker understand you, and that you can later grow seamlessly into full Mandarin.",
+      "We are taking real Chinese and making it as small as it can be: the fewest words and rules that a native speaker still understands.",
+      "Later, you can grow it into full Mandarin without starting over.",
       "",
-      "The lessons ahead fall into three sections, each building on the last, plus a fourth section holding everything that isn't a lesson:",
+      "The lessons are in three sections, and each one builds on the last. A fourth section holds everything that isn't a lesson:",
     ],
     zh: [],
     ru: [],
@@ -51,7 +52,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Sounds and Symbols** — the prerequisite to the whole language: how pinyin and tones work.",
+            "**Sounds and Symbols** — where everything starts: how pinyin and tones work.",
           ],
           zh: [],
           ru: [],
@@ -60,7 +61,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Words and Sentences** — the building blocks, and the simplest structure built from them: NOUN + shì + NOUN.",
+            "**Words and Sentences** — your first words, and the simplest sentence you can build with them: NOUN + shì + NOUN.",
           ],
           zh: [],
           ru: [],
@@ -69,7 +70,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Modifying Nouns** — describing a noun: big, small, good, and many.",
+            "**Modifying Nouns** — describing things: big, small, good, and many.",
           ],
           zh: [],
           ru: [],
@@ -78,7 +79,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Pointing at People and Things** — pointers: words that point at things and people. This one, that one (with the counting word ge), I, you, and he or she.",
+            "**Pointing at People and Things** — pointers: words that point at things and people. This one, that one (with the counting word gè), I, you, and he or she.",
           ],
           zh: [],
           ru: [],
@@ -96,7 +97,9 @@ const content: Entry[] = [
 
       {
         text: {
-          en: ["**Questions and Answers** — a new type of sentence."],
+          en: [
+            "**Questions and Answers** — a new type of sentence: yes-or-no questions, \"what?\", \"why?\", and \"how?\", and how to answer them.",
+          ],
           zh: [],
           ru: [],
         },
@@ -129,7 +132,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Time 2 — Around an action** — \"when X\" with `X-de shíjiān`, finishing an action, before and after, and starting.",
+            "**Time 2 — Around an action** — \"when X\" with `X-de shíjiān`, finishing an action, what comes after it, starting, and staying.",
           ],
           zh: [],
           ru: [],
@@ -138,7 +141,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Space 1 — Where it is** — place words like inside, on, under, and beside, and saying where something is.",
+            "**Space 1 — Where it is** — saying where something is: inside, on, under, in front, behind, and beside.",
           ],
           zh: [],
           ru: [],
@@ -147,7 +150,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Space 2 — Moving** — coming and going, from and to, and direction words like up and out.",
+            "**Space 2 — Moving** — coming and going, where you come from, arriving, and direction words like up and down.",
           ],
           zh: [],
           ru: [],
@@ -156,7 +159,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Modifiers 1 — How much** — words that say how much, for both verbs and describing words: really, very, a bit.",
+            "**Modifiers 1 — How much** — words that say how much: very, really, and not very.",
           ],
           zh: [],
           ru: [],
@@ -196,22 +199,8 @@ const content: Entry[] = [
     items: [
       {
         text: {
-          en: ["**Numbers** — another type of noun."],
-          zh: [],
-          ru: [],
-        },
-      },
-      {
-        text: {
-          en: ["**Colors** — special nouns."],
-          zh: [],
-          ru: [],
-        },
-      },
-      {
-        text: {
           en: [
-            "**Changing the Role of a Word** — how to make nouns from other words, and otherwise. How to make nouns that carry meaning of space etc.",
+            "**Numbers** — another type of noun: counting, saying how many, and number one, number two.",
           ],
           zh: [],
           ru: [],
@@ -220,7 +209,25 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Relationships 1 — Inside a sentence** — giving to, using, and, or, and for: ways to connect words inside one sentence.",
+            "**Colors** — special nouns: red, yellow, blue, black, and white, and asking what color something is.",
+          ],
+          zh: [],
+          ru: [],
+        },
+      },
+      {
+        text: {
+          en: [
+            "**Changing the Role of a Word** — how -de turns a verb into a thing (\"what you eat\") or a person (\"the one who writes\"), and how to say how well someone does something.",
+          ],
+          zh: [],
+          ru: [],
+        },
+      },
+      {
+        text: {
+          en: [
+            "**Relationships 1 — Inside a sentence** — giving to, using, and, or, toward, and groups: ways to connect words inside one sentence.",
           ],
           zh: [],
           ru: [],
@@ -237,7 +244,9 @@ const content: Entry[] = [
       },
       {
         text: {
-          en: ["**Greetings and Feelings** — another type of sentence."],
+          en: [
+            "**Greetings and Feelings** — another type of sentence: saying hello, saying your name, telling someone what to do, and saying how you feel.",
+          ],
           zh: [],
           ru: [],
         },
@@ -271,7 +280,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Sentence Builder** — an interactive tool for composing your own sentences from the dictionary.",
+            "**Sentence Builder** — a tool for building your own sentences from the dictionary.",
           ],
           zh: [],
           ru: [],
@@ -280,7 +289,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Appendices** — pinyin, tone sandhi, why minimality works, short stories, and a grammar-patterns reference.",
+            "**Appendices** — pinyin, tone changes, why a small language works, Toki Pona, short stories, and a grammar reference gathered from the lessons.",
           ],
           zh: [],
           ru: [],
