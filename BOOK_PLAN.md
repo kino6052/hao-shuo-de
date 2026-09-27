@@ -118,7 +118,7 @@ answers
 | 8   | Time 1 — When it happens          | "I ate." / "I'm eating right now." / "I will eat." / "I've eaten rice before." / "At night, I sleep." | L05 time markers, L08                |
 | 9   | Time 2 — Around an action         | "When I eat, …" / "I finished eating." / "after eating" / "I started to play."                        | L08, L05 endings, L09 kāishǐ         |
 | 10  | Space 1 — Where it is             | "The box is on the floor." / "inside the house" / "in front of me" / "Where is it?"                                      | L15, L07 zài                         |
-| 11  | Space 2 — Moving                  | "I come from the market." / "Go!" / "stand up" / "go out the door"                                    | L15, L07 cóng, L05 direction endings |
+| 11  | Space 2 — Moving                  | "I come from the market." / "Go!" / "Get up!" / "I've arrived home." / "I'm going outside."                                    | L15, L07 cóng, L05 direction endings |
 | 12  | Modifiers 1 — How much            | "really hot" / "very cold" / "a bit strange"                                                          | L10                                  |
 | 13  | Modifiers 2 — Comparing           | "A is bigger than B." / "the same" / "different"                                                      | new                                  |
 | 14  | Modifiers 3 — Also and all        | "I also eat." / "All the plants are good."                                                            | L16 yě, new                          |
@@ -294,7 +294,7 @@ What each lesson introduces, and why those words are there. **†** marks a dict
 - Core: cóng _from_, lái _come_, qù _go_, qǐ _rise, up_, wài † _out, outside_
 - Theme: shìchǎng † _market_, kǒu † _opening, door_
 - Added: dào _arrive, to_
-- Why: "I come from the market." / "I go to the market." / "Go!" / "stand up" / "go out the door".
+- Why: "I come from the market." / "I go to the market." / "Go!" / "Get up!" / "I'm going outside." There's no word for "stand" or "out" (出), so "stand up" is "get up" (qǐ-lái) and "go out" is "go outside" (qù wài-miàn).
 
 **L12 Modifiers 1 — How much** · 7 new · 89 / 148
 
@@ -397,7 +397,7 @@ Q1–Q4 were answered on 2026-09-27. New questions go here.
 
 `npm run build` starts with **`npm run check`** (`scripts/check-all.js`), which runs every gate below. It shows every report, then fails the build if any gate failed.
 
-**Strict for finished lessons.** The lessons in `scripts/finished-lessons.js` (L1–L10 so far) must pass every gate. Problems in other chapters are reported but don't fail the build. Add a lesson to that list once its Phase 2 rewrite passes every gate; from then on every build keeps it that way. Run a gate with chapter ids (`npm run check-jargon -- lesson-07`) to make it strict for just those, or with `--strict` for everything.
+**Strict for finished lessons.** The lessons in `scripts/finished-lessons.js` (L1–L11 so far) must pass every gate. Problems in other chapters are reported but don't fail the build. Add a lesson to that list once its Phase 2 rewrite passes every gate; from then on every build keeps it that way. Run a gate with chapter ids (`npm run check-jargon -- lesson-07`) to make it strict for just those, or with `--strict` for everything.
 
 | Command                        | What it checks                                                                                                                                                                            | Fails the build for |
 | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
@@ -463,7 +463,7 @@ For each lesson: ☐ written to template ☐ `npm run check -- lesson-NN` passes
 - [ ] L8 Time 1 — When it happens — rewritten, passes every gate, on the finished list; **waiting for your review**
 - [ ] L9 Time 2 — Around an action — rewritten, passes every gate, on the finished list; **waiting for your review**
 - [ ] L10 Space 1 — Where it is — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L11 Space 2 — Moving
+- [ ] L11 Space 2 — Moving — rewritten, passes every gate, on the finished list; **waiting for your review**
 - [ ] L12 Modifiers 1 — How much
 - [ ] L13 Modifiers 2 — Comparing
 - [ ] L14 Modifiers 3 — Also and all
