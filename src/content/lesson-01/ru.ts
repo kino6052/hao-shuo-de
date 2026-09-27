@@ -1,52 +1,32 @@
-// Russian text for lesson-01, positionally matching shape.ts.
-// Not translated yet -- every slot is the empty-array placeholder.
-import type { LangContent } from "../../lib/chapter-shape-types.ts";
+// Russian text for lesson-01, matching shape.ts's keys. Typed as
+// `PartialByKey<LessonShape>`. Not translated yet -- every `ru` is the
+// empty-array placeholder.
+import type { PartialByKey } from "../../lib/chapter-shape-types.ts";
+import type { LessonShape } from "./shape.ts";
 
-const ru: LangContent = [
-  /** title */
-  [],
-  /** summary */
-  [],
-  /** prose: smallest piece is a syllable */
-  { text: [] },
-  /** info: "Important!" -- read pinyin syllable by syllable */
-  { items: [] },
-  /** prose: pinyin doesn't capture pronunciation fully */
-  { text: [] },
-  /** prose: <h2>Tones</h2> -- tone is part of the word */
-  { text: [] },
-  /** info: "Example" -- mā/má/mǎ/mà */
-  { items: [] },
-  /** prose: those four words differ only by tone */
-  { text: [] },
-  /** info: "Tones" -- ā/á/ǎ/à/a */
-  { items: [] },
-  /** prose: all syllables are toned except the neutral tone */
-  { text: [] },
-  /** prose: intro to tone sandhi */
-  { text: [] },
-  /** prose: this book prints the dictionary's baseline tone */
-  { text: [] },
-  /** prose: no word boundaries in Chinese -- Hao-shuo-de adds punctuation */
-  { text: [] },
-  /** info: "Hao-shuo-de pinyin helpers" -- solid/hyphen/quotes */
-  { items: [] },
-  /** exercise 1 */
-  [],
-  /** exercise 2 */
-  [],
-  /** exercise 3 */
-  [],
-  /** exercise 4 */
-  [],
-  /** answer 1 */
-  [],
-  /** answer 2 */
-  [],
-  /** answer 3 */
-  [],
-  /** answer 4 */
-  [],
-];
+const ru: PartialByKey<LessonShape> = {
+  title: { ru: [] },
+  summary: { ru: [] },
+  proseSyllableUnit: { ru: [] },
+  infoReadBySyllable: { items: [{ru:[],items:[{ru:[]}]}] },
+  prosePinyinLimits: { ru: [] },
+  proseTonesHeading: { ru: [] },
+  infoToneExample: { items: [{ru:[]},{ru:[]},{ru:[]},{ru:[]}] },
+  proseFourTonesIntro: { ru: [] },
+  infoFiveTones: { items: [{ru:[]},{ru:[]},{ru:[]},{ru:[]},{ru:[]}] },
+  proseNeutralTone: { ru: [] },
+  proseToneSandhiIntro: { ru: [] },
+  proseBaselineTone: { ru: [] },
+  proseNoWordBoundaries: { ru: [] },
+  infoPunctuationHelpers: { items: [{ru:[]},{ru:[],items:[{ru:[]},{ru:[]},{ru:[]},{ru:[]}]},{ru:[],items:[{ru:[]},{ru:[]},{ru:[]}]}] },
+  exercise1: { ru: [] },
+  exercise2: { ru: [] },
+  exercise3: { ru: [] },
+  exercise4: { ru: [] },
+  answer1: { ru: [] },
+  answer2: { ru: [] },
+  answer3: { ru: [] },
+  answer4: { ru: [] },
+};
 
 export default ru;

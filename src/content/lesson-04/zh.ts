@@ -1,52 +1,32 @@
-// Chinese text, positionally matching shape.ts.
-// Not translated yet -- every slot is the empty-array placeholder.
-import type { LangContent } from "../../lib/chapter-shape-types.ts";
+// Chinese text for lesson-04, matching shape.ts's keys. Typed as
+// `PartialByKey<LessonShape>`. Not translated yet -- every `zh` is the
+// empty-array placeholder.
+import type { PartialByKey } from "../../lib/chapter-shape-types.ts";
+import type { LessonShape } from "./shape.ts";
 
-const zh: LangContent = [
-  /** title */
-  [],
-  /** summary */
-  [],
-  /** vocab: {{word:wo3}} */
-  [],
-  /** vocab: {{word:nan2ren2}} */
-  [],
-  /** vocab: {{word:ni3}} */
-  [],
-  /** vocab: {{word:qun2}} */
-  [],
-  /** vocab: {{word:xin1}} */
-  [],
-  /** prose */
-  { text: [] },
-  /** prose */
-  { text: [] },
-  /** example: {{Word:wo3}} {{word:shi4}} {{word:ren2}}. */
-  [],
-  /** example: {{Word:wo3}} {{word:shi4}} {{word:nan2ren2}}. */
-  [],
-  /** example: {{Word:ni3}} {{word:shi4}} {{word:hao3}}-{{word:de}} {{word:ren2}}. */
-  [],
-  /** example: {{Word:zhe4}}-ge {{word:shi4}} {{word:wo3}}-{{word:de}} {{word:xie3}}-{{word:de}} {{word:dong1xi}}. */
-  [],
-  /** example: {{Word:ni3}}-{{word:de}} {{word:di4fang1}} {{word:hen3}} {{word:xin1}}. */
-  [],
-  /** example: {{Word:wo3}}-{{word:de}} {{word:qun2}} {{word:hen3}} {{word:da4}}. */
-  [],
-  /** example: {{Word:nan2ren2}}-{{word:de}} {{word:dong4wu4}} {{word:hen3}} {{word:xiao3}}. */
-  [],
-  /** exercise */
-  [],
-  /** exercise */
-  [],
-  /** exercise */
-  [],
-  /** answer */
-  [],
-  /** answer */
-  [],
-  /** answer */
-  [],
-];
+const zh: PartialByKey<LessonShape> = {
+  title: { zh: [] },
+  summary: { zh: [] },
+  vocabWo: { zh: [] },
+  vocabNanren: { zh: [] },
+  vocabNi: { zh: [] },
+  vocabQun: { zh: [] },
+  vocabXin: { zh: [] },
+  prosePronounsAreNouns: { zh: [] },
+  prosePossessionDe: { zh: [] },
+  example1: { zh: [] },
+  example2: { zh: [] },
+  example3: { zh: [] },
+  example4: { zh: [] },
+  example5: { zh: [] },
+  example6: { zh: [] },
+  example7: { zh: [] },
+  exercise1: { zh: [] },
+  exercise2: { zh: [] },
+  exercise3: { zh: [] },
+  answer1: { zh: [] },
+  answer2: { zh: [] },
+  answer3: { zh: [] },
+};
 
 export default zh;

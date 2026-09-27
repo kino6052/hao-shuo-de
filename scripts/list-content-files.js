@@ -6,10 +6,12 @@ import { join, relative } from 'path';
 // them consistently). Content used to be flat, but lessons now live one per
 // folder (src/content/lesson-01/index.ts, ...), so a plain readdirSync no
 // longer sees everything -- this is the recursive equivalent both build
-// scripts need.
+// scripts need. Skips src/content/legacy/ -- archived, superseded lessons
+// kept for reference, never part of the built book.
 export function listContentFiles(dir, base = dir) {
   const out = [];
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    if (entry.isDirectory() && entry.name === 'legacy' && dir === base) continue;
     const full = join(dir, entry.name);
     if (entry.isDirectory()) {
       out.push(...listContentFiles(full, base));

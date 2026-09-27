@@ -1,77 +1,128 @@
-// Language-independent block sequence for lesson-07 ("More Modifiers").
+// Language-independent block sequence for lesson-07 ("Prepositions").
 // See src/lib/chapter-shape-types.ts / assemble-chapter.js.
-import type { Shape } from "../../lib/chapter-shape-types.ts";
+import type {
+  TTitle,
+  TSummary,
+  TVocab,
+  TProse,
+  TInfo,
+  TInfoItem,
+  TExample,
+  TExercise,
+  TAnswer,
+} from "../../lib/chapter-shape-types.ts";
 
-const shape: Shape = [
+export type LessonShape = {
   /** Chapter title. */
-  { type: "title" },
+  title: TTitle;
   /** Chapter summary. */
-  { type: "summary" },
+  summary: TSummary;
 
-  /** Vocabulary: "not, no". */
-  { type: "vocab", term: "{{word:bu4}}", ttsText: "不" },
-  /** Vocabulary: "bad, negative, broken". */
-  { type: "vocab", term: "{{word:huai4}}", ttsText: "坏" },
-  /** Vocabulary: "many, a lot, very". */
-  { type: "vocab", term: "{{word:duo1}}", ttsText: "多" },
-  /** Vocabulary: "parent, ancestor". */
-  { type: "vocab", term: "{{word:fu4mu3}}", ttsText: "父母" },
-  /** Vocabulary: "one, united". */
-  { type: "vocab", term: "{{word:yi1}}", ttsText: "一" },
-  /** Vocabulary: "power, energy". */
-  { type: "vocab", term: "{{word:li4liang4}}", ttsText: "力量" },
+  /** Vocabulary: "to, for, give". */
+  vocabGei: TVocab;
+  /** Vocabulary: "at, in, present, existing". */
+  vocabZai: TVocab;
+  /** Vocabulary: "using, with, by means of". */
+  vocabYong: TVocab;
+  /** Vocabulary: "from, because of". */
+  vocabYinwei: TVocab;
 
-  /** Grammar: "strong" is built by composing you3 + li4liang4, bound with -de. */
-  { type: "prose", hasTldr: true, hasNecessity: true },
-  /** Grammar rule box: Building an Adjective (word composition when the dictionary lacks one). */
-  { type: "info", hasTitle: true, subtype: "grammar", tag: "adjectives/composition", items: [{}] },
+  /** Grammar: coverbs introduce a noun phrase and sit right before the main verb. */
+  proseCoverbWordOrder: TProse;
+  /** Grammar rule box: Coverb Word Order. */
+  infoCoverbWordOrder: TInfo & { items: [TInfoItem] };
+  /** Grammar: with no other action verb, the coverb itself becomes the main predicate. */
+  proseCoverbAsPredicate: TProse;
 
-  /** Grammar: an adjective placed before another adjective or verb acts as an adverb. */
-  { type: "prose", hasTldr: true, hasNecessity: true },
-  /** Grammar rule box: Adjectives as Adverbs. */
-  { type: "info", hasTitle: true, subtype: "grammar", tag: "adjectives/adverbial-use", items: [{}] },
+  /** Example: wǒ gěi tā zài-shuǐ-lǐ-de dòngwù. */
+  example1: TExample;
+  /** Example: wǒ zài dìfāng gěi tā zài-shuǐ-lǐ-de dòngwù. */
+  example2: TExample;
+  /** Example: wǒ zài dìfāng. */
+  example3: TExample;
+  /** Example: wǒ qù nǐ-de pángbiān. */
+  example4: TExample;
+  /** Example: wǒ-de fùmǔ qù kàn hěn-dà-de shuǐ. */
+  example5: TExample;
+  /** Example: yīnwèi zhè-ge, wǒ zuò le hěn duō. */
+  example6: TExample;
+  /** Example: wǒ yòng Hǎo-shuō-de shuō. */
+  example7: TExample;
 
-  /** Grammar: le attached to an adjective marks a change of state (not simply "it is"). */
-  { type: "prose", hasTldr: true, hasNecessity: true },
-  /** Grammar rule box: State Change with le. */
-  { type: "info", hasTitle: true, subtype: "grammar", tag: "adjectives/state-change", items: [{}] },
-  /** Grammar rule box: The Causative Rule -- ba3...bian4 turns an adjective into a caused action. */
-  { type: "info", hasTitle: true, subtype: "grammar", tag: "adjectives/causative", items: [{ items: [{}] }] },
-
-  /** Example: nǐ-de zuò-de hěn hǎo. */
-  { type: "example", pinyin: "{{Word:ni3}}-{{word:de}} {{word:zuo4}}-{{word:de}} {{word:hen3}} {{word:hao3}}.", ttsText: "你的做的很好。" },
-  /** Example: shuǐ gěi wǒ lìliàng. */
-  { type: "example", pinyin: "{{Word:shui3}} {{word:gei3}} {{word:wo3}} {{word:li4liang4}}.", ttsText: "水给我力量。" },
-  /** Example: nǐ shì yǒu-lìliàng-de nánrén. */
-  { type: "example", pinyin: "{{Word:ni3}} {{word:shi4}} {{word:you3}}-{{word:li4liang4}}-{{word:de}} {{word:nan2ren2}}.", ttsText: "你是有力量的男人。" },
-  /** Example: zhīdào-de rén kàn xiě-de dōngxi. */
-  { type: "example", pinyin: "{{Word:zhi1dao4}}-{{word:de}} {{word:ren2}} {{word:kan4}} {{word:xie3}}-{{word:de}} {{word:dong1xi}}.", ttsText: "知道的人看写的东西。" },
-  /** Example: xiǎo-de nǚrén méiyǒu hǎo-de tīng fùmǔ. */
-  { type: "example", pinyin: "{{Word:xiao3}}-{{word:de}} {{word:nv3ren2}} méiyǒu {{word:hao3}}-{{word:de}} {{word:ting1}} {{word:fu4mu3}}.", ttsText: "小的女人没有好的听父母。" },
-  /** Example: shuǐ hǎo le. */
-  { type: "example", pinyin: "{{Word:shui3}} {{word:hao3}} {{word:le}}.", ttsText: "水好了。" },
-  /** Example: méiyǒu rén shì huài-de. */
-  { type: "example", pinyin: "Méiyǒu {{word:ren2}} {{word:shi4}} {{word:huai4}}-{{word:de}}.", ttsText: "没有人是坏的。" },
-  /** Example: nánrén-de fùmǔ duō-de kàn xiě-de dōngxi. */
-  { type: "example", pinyin: "{{Word:nan2ren2}}-{{word:de}} {{word:fu4mu3}} {{word:duo1}}-{{word:de}} {{word:kan4}} {{word:xie3}}-{{word:de}} {{word:dong1xi}}.", ttsText: "男人的父母多的看写的东西。" },
-
-  /** Exercise 1: The man doesn't eat bad fruit. */
-  { type: "exercise" },
-  /** Exercise 2: Eating makes me tall. */
-  { type: "exercise" },
-  /** Exercise 3: I know Hao-shuo-de a bit. */
-  { type: "exercise" },
-  /** Exercise 4: The community has become strong. */
-  { type: "exercise" },
+  /** Exercise 1: The worker uses tools. */
+  exercise1: TExercise;
+  /** Exercise 2: He gives things from his house. */
+  exercise2: TExercise;
+  /** Exercise 3: Why did you do it? */
+  exercise3: TExercise;
 
   /** Answer 1. */
-  { type: "answer", ttsText: "男人不吃坏的水果。" },
+  answer1: TAnswer;
   /** Answer 2. */
-  { type: "answer", ttsText: "吃把我变大。" },
+  answer2: TAnswer;
   /** Answer 3. */
-  { type: "answer", ttsText: "好说的，我知道的不多。" },
-  /** Answer 4. */
-  { type: "answer", ttsText: "群有力量了。" },
-];
+  answer3: TAnswer;
+};
+
+const shape: LessonShape = {
+  title: { type: "title" },
+  summary: { type: "summary" },
+
+  vocabGei: { type: "vocab", term: "{{word:gei3}}", ttsText: "给" },
+  vocabZai: { type: "vocab", term: "{{word:zai4}}", ttsText: "在" },
+  vocabYong: { type: "vocab", term: "{{word:yong4}}", ttsText: "用" },
+  vocabYinwei: { type: "vocab", term: "{{word:yin1wei4}}", ttsText: "因为" },
+
+  proseCoverbWordOrder: { type: "prose" },
+  infoCoverbWordOrder: {
+    type: "info",
+    subtype: "grammar",
+    tag: "coverbs/word-order",
+    items: [{}],
+  },
+  proseCoverbAsPredicate: { type: "prose" },
+
+  example1: {
+    type: "example",
+    pinyin:
+      "{{Word:wo3}} {{word:gei3}} {{word:ta1}} {{word:zai4}}-{{word:shui3}}-lǐ-{{word:de}} {{word:dong4wu4}}.",
+  },
+  example2: {
+    type: "example",
+    pinyin:
+      "{{Word:wo3}} {{word:zai4}} {{word:di4fang1}} {{word:gei3}} {{word:ta1}} {{word:zai4}}-{{word:shui3}}-lǐ-{{word:de}} {{word:dong4wu4}}.",
+  },
+  example3: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:zai4}} {{word:di4fang1}}.",
+  },
+  example4: {
+    type: "example",
+    pinyin:
+      "{{Word:wo3}} {{word:qu4}} {{word:ni3}}-{{word:de}} {{word:pang2bian1}}.",
+  },
+  example5: {
+    type: "example",
+    pinyin:
+      "{{Word:wo3}}-{{word:de}} {{word:fu4mu3}} {{word:qu4}} {{word:kan4}} {{word:hen3}}-{{word:da4}}-{{word:de}} {{word:shui3}}.",
+  },
+  example6: {
+    type: "example",
+    pinyin:
+      "{{Word:yin1wei4}} {{word:zhe4}}-ge, {{word:wo3}} {{word:nong4}} {{word:le}} {{word:hen3}} {{word:duo1}}.",
+  },
+  example7: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:yong4}} Hǎo-shuō-de {{word:shuo1}}.",
+  },
+
+  exercise1: { type: "exercise" },
+  exercise2: { type: "exercise" },
+  exercise3: { type: "exercise" },
+
+  answer1: { type: "answer" },
+  answer2: { type: "answer" },
+  answer3: { type: "answer" },
+};
 
 export default shape;

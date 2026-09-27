@@ -14,4 +14,4 @@ export const meta = {
   order: 15,
 };
 
-export default assembleChapter(shape, { en, ru, zh });
+export default assembleChapter(shape, { en, ru, zh }, meta.id);

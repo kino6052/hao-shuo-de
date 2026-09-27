@@ -8,6 +8,7 @@
     "build": "node scripts/generate-word-usage.js && node scripts/generate-dictionary.js && vite build && node scripts/generate-pages.js",
     "preview": "vite preview",
     "test": "bun test",
+    "typecheck": "tsc --noEmit",
     "word-usage": "node scripts/generate-word-usage.js"
   },
   "dependencies": {
@@ -17,6 +18,7 @@
     "@preact/preset-vite": "^2.9.0",
     "gray-matter": "^4.0.3",
     "marked": "^15.0.0",
+    "typescript": "^7.0.2",
     "vite": "^6.0.0",
     "yaml": "^2.9.0"
   }

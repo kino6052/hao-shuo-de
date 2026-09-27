@@ -152,13 +152,6 @@ const content: Entry[] = [
     items: [
       {
         text: {
-          en: ["**Greetings and Feelings** — another type of sentence."],
-          zh: [],
-          ru: [],
-        },
-      },
-      {
-        text: {
           en: ["**Numbers** — another type of noun."],
           zh: [],
           ru: [],
@@ -174,8 +167,15 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Spatial Nouns** — a way to describe location, and how they differ from prepositions.",
+            "**Chaning the role of a word** - how to make nouns from other words, and otherwise. How to make nouns that carry meaning of space etc.",
           ],
+          zh: [],
+          ru: [],
+        },
+      },
+      {
+        text: {
+          en: ["**Greetings and Feelings** — another type of sentence."],
           zh: [],
           ru: [],
         },

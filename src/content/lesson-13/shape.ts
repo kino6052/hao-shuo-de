@@ -1,61 +1,156 @@
-// Language-independent block sequence for lesson-13 ("Spatial Nouns").
+// Language-independent block sequence for lesson-13 ("Numbers").
 // See src/lib/chapter-shape-types.ts / assemble-chapter.js.
-import type { Shape } from "../../lib/chapter-shape-types.ts";
+// Note: the original content listed "dì" as a vocab item twice (once as
+// "sequence marker", once as "ordinal marker prefix") -- consolidated here
+// into the single ordinal-prefix sense, since that's the sense every example
+// actually uses.
+import type {
+  TTitle,
+  TSummary,
+  TVocab,
+  TProse,
+  TInfo,
+  TInfoItem,
+  TExample,
+  TExercise,
+  TAnswer,
+} from "../../lib/chapter-shape-types.ts";
 
-const shape: Shape = [
-  /** Chapter title. */
-  { type: "title" },
+export type LessonShape = {
+  /** Chapter title. Numbers */
+  title: TTitle;
   /** Chapter summary. */
-  { type: "summary" },
+  summary: TSummary;
 
-  /** Vocabulary: "inside, between, internal organ". */
-  { type: "vocab", term: "{{word:li3mian4}}", ttsText: "里面" },
-  /** Vocabulary: "area behind, back". */
-  { type: "vocab", term: "{{word:hou4mian4}}", ttsText: "后面" },
-  /** Vocabulary: "area below, under, lower part, leg". */
-  { type: "vocab", term: "{{word:xia4mian4}}", ttsText: "下面" },
-  /** Vocabulary: "side, area beside, vicinity". */
-  { type: "vocab", term: "{{word:pang2bian1}}", ttsText: "旁边" },
-  /** Vocabulary: "area above, highest part, sky". */
-  { type: "vocab", term: "{{word:shang4mian4}}", ttsText: "上面" },
-  /** Vocabulary: "area in front, face, chest". */
-  { type: "vocab", term: "{{word:qian2mian4}}", ttsText: "前面" },
-  /** Vocabulary: "to go to, arrive at, move towards" (bare pinyin -- not yet in the dictionary). */
-  { type: "vocab", term: "dào" },
-  /** Vocabulary: "to walk, move, travel". */
-  { type: "vocab", term: "{{word:qu4}}", ttsText: "去" },
+  /** Vocabulary: "all, completely, everything". */
+  vocabQuanbu: TVocab;
 
-  /** Grammar: zai4 marks static location, dào marks movement toward a destination. */
-  { type: "prose", hasTldr: true, hasNecessity: true },
-  /** Grammar rule box: Spatial Location -- Subject + zai4/dào + Target + Spatial Noun, plus the zai4-qu4-dào compound and standalone spatial nouns. */
-  { type: "info", hasTitle: true, subtype: "grammar", tag: "nouns/spatial", items: [{}, {}, {}] },
+  /** Vocabulary: "many". */
+  vocabMany: TVocab;
 
-  /** Example: wǒ zài nǐ-de pángbiān. */
-  { type: "example", pinyin: "{{Word:wo3}} {{word:zai4}} {{word:ni3}}-{{word:de}} {{word:pang2bian1}}." },
-  /** Example: xiàmiàn-de dìfāng hěn yǒu lìliàng. */
-  { type: "example", pinyin: "{{Word:xia4mian4}}-{{word:de}} {{word:di4fang1}} {{word:hen3}} {{word:you3}} {{word:li4liang4}}." },
-  /** Example: dà-de gōngjù zài-qù-dào shàngmiàn-de dìfāng. */
-  { type: "example", pinyin: "{{Word:da4}}-{{word:de}} {{word:gong1ju4}} {{word:zai4}}-{{word:qu4}}-dào {{word:shang4mian4}}-{{word:de}} {{word:di4fang1}}." },
-  /** Example: xiě-de dōngxi zài dòngwù-de xiàmiàn. */
-  { type: "example", pinyin: "{{Word:xie3}}-{{word:de}} {{word:dong1xi}} {{word:zai4}} {{word:dong4wu4}}-{{word:de}} {{word:xia4mian4}}." },
-  /** Example: wǒ kàn-jiàn hēisè-de nǚrén zài dìfāng-de qiánmiàn. */
-  { type: "example", pinyin: "{{Word:wo3}} {{word:kan4}}-jiàn {{word:hei1se4}}-{{word:de}} {{word:nv3ren2}} {{word:zai4}} {{word:di4fang1}}-{{word:de}} {{word:qian2mian4}}." },
-  /** Example: yánsè dōngxi zài hēisè-de pángbiān. */
-  { type: "example", pinyin: "{{Word:yan2}}-sè {{word:dong1xi}} {{word:zai4}} {{word:hei1se4}}-{{word:de}} {{word:pang2bian1}}." },
+  /** Vocabulary: "ordinal marker prefix (placed before a number to turn it into first, second, third...)" (bare pinyin -- not yet in the dictionary). */
+  vocabDi: TVocab;
+  /** Vocabulary: "one". */
+  vocabYi: TVocab;
+  /** Vocabulary: "two (used exclusively before measure words for counting objects/quantities)". */
+  vocabLiang: TVocab;
+  /** Vocabulary: "two (used exclusively for mathematics, digit lists, serial numbers, and ordinal rankings)" (bare pinyin). */
+  vocabEr: TVocab;
+  /** Vocabulary: "three" (bare pinyin). */
+  vocabSan: TVocab;
+  /** Vocabulary: "four" (bare pinyin). */
+  vocabSi: TVocab;
+  /** Vocabulary: "five" (bare pinyin). */
+  vocabWu: TVocab;
+  /** Vocabulary: "six" (bare pinyin). */
+  vocabLiu: TVocab;
+  /** Vocabulary: "seven" (bare pinyin). */
+  vocabQi: TVocab;
+  /** Vocabulary: "eight" (bare pinyin). */
+  vocabBa: TVocab;
+  /** Vocabulary: "nine" (bare pinyin). */
+  vocabJiu: TVocab;
+  /** Vocabulary: "ten" (bare pinyin). */
+  vocabShi: TVocab;
+  /** Vocabulary: "hundred" (bare pinyin). */
+  vocabBai: TVocab;
+  /** Vocabulary: "thousand" (bare pinyin). */
+  vocabQian: TVocab;
+  /** Vocabulary: "number identity, name of a number, day of the month". */
+  vocabHao: TVocab;
 
-  /** Exercise 1: Water is coming from the sky. */
-  { type: "exercise" },
-  /** Exercise 2: Protect your back. */
-  { type: "exercise" },
-  /** Exercise 3: What did you put the red clock next to? */
-  { type: "exercise" },
+  /** Grammar rule box: Counting and Ordering -- 1/2 via gè, duō beyond two, dì- for ordinals. */
+  infoCountingAndOrdering: TInfo & { items: [TInfoItem, TInfoItem, TInfoItem] };
+
+  /** Example: nǐ shì dì-yī-hào! */
+  example1: TExample;
+  /** Example: zhè-ge shì dì-èr-ge shíjiān. */
+  example2: TExample;
+  /** Example: liǎng-ge xiǎo nánrén liú-le hěn-duō zhíwù. */
+  example3: TExample;
+  /** Example: wǒ zhīdào hěn-duō shuō. */
+  example4: TExample;
+  /** Example: quánbù rén tīng tā. */
+  example5: TExample;
+
+  /** Exercise 1: What is the third thing? */
+  exercise1: TExercise;
+  /** Exercise 2: I know two languages. */
+  exercise2: TExercise;
+  /** Exercise 3: This is the first day. */
+  exercise3: TExercise;
 
   /** Answer 1. */
-  { type: "answer" },
+  answer1: TAnswer;
   /** Answer 2. */
-  { type: "answer" },
+  answer2: TAnswer;
   /** Answer 3. */
-  { type: "answer" },
-];
+  answer3: TAnswer;
+};
+
+const shape: LessonShape = {
+  title: { type: "title" },
+  summary: { type: "summary" },
+
+  vocabDi: { type: "vocab", term: "dì" },
+  vocabYi: { type: "vocab", term: "{{word:yi1}}", ttsText: "一" },
+  vocabLiang: { type: "vocab", term: "{{word:liang3}}", ttsText: "两" },
+  vocabEr: { type: "vocab", term: "èr" },
+  vocabSan: { type: "vocab", term: "sān" },
+  vocabSi: { type: "vocab", term: "sì" },
+  vocabWu: { type: "vocab", term: "wǔ" },
+  vocabLiu: { type: "vocab", term: "liù" },
+  vocabQi: { type: "vocab", term: "qī" },
+  vocabBa: { type: "vocab", term: "bā" },
+  vocabJiu: { type: "vocab", term: "jiǔ" },
+  vocabShi: { type: "vocab", term: "shí" },
+  vocabBai: { type: "vocab", term: "bǎi" },
+  vocabQian: { type: "vocab", term: "qiān" },
+  vocabHao: { type: "vocab", term: "{{word:hao4}}", ttsText: "号" },
+  vocabQuanbu: { type: "vocab", term: "{{word:quan2bu4}}", ttsText: "全部" },
+  vocabMany: {
+    type: "vocab",
+    term: "{{word:hen3}}-{{word:duo1}}",
+    ttsText: "很多",
+  },
+
+  infoCountingAndOrdering: {
+    type: "info",
+    subtype: "grammar",
+    tag: "numbers/counting-and-ordering",
+    items: [{}, {}, {}],
+  },
+
+  example1: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:shi4}} dì-{{word:yi1}}-{{word:hao4}}!",
+  },
+  example2: {
+    type: "example",
+    pinyin: "{{Word:zhe4}}-ge {{word:shi4}} dì-èr-ge {{word:shi2jian1}}.",
+  },
+  example3: {
+    type: "example",
+    pinyin:
+      "{{Word:liang3}}-ge {{word:xiao3}} {{word:nan2ren2}} {{word:liu2}}-{{word:le}} {{word:hen3}}-{{word:duo1}} {{word:zhi2wu4}}.",
+  },
+  example4: {
+    type: "example",
+    pinyin:
+      "{{Word:wo3}} {{word:zhi1dao4}} {{word:hen3}}-{{word:duo1}} {{word:shuo1}}.",
+  },
+  example5: {
+    type: "example",
+    pinyin: "{{Word:quan2bu4}} {{word:ren2}} {{word:ting1}} {{word:ta1}}.",
+  },
+
+  exercise1: { type: "exercise" },
+  exercise2: { type: "exercise" },
+  exercise3: { type: "exercise" },
+
+  answer1: { type: "answer" },
+  answer2: { type: "answer" },
+  answer3: { type: "answer" },
+};
 
 export default shape;

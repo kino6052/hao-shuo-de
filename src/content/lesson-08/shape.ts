@@ -1,57 +1,76 @@
-// Language-independent block sequence for lesson-08 ("Prepositions & Coverbs").
+// Language-independent block sequence for lesson-08 ("Expressing Time and Space").
 // See src/lib/chapter-shape-types.ts / assemble-chapter.js.
-import type { Shape } from "../../lib/chapter-shape-types.ts";
+// New lesson (not a direct port): covers intro-3's "placing time and space
+// up front in a sentence, and the de-huà / de-shíhou constructions."
+// Hao-shuo-de collapses both of those into things it already has: a
+// fronted clause needs no dedicated "if" word (reusing the general
+// fronted-context-clause pattern, salvaged from the legacy "Colors and la"
+// lesson), and "when X" is just X-de + {{word:shi2jian1}} ("the time of
+// X"), reusing -de (Lesson 3) rather than a dedicated "when" word.
+import type { TTitle, TSummary, TVocab, TProse, TInfo, TInfoItem, TExample, TExercise, TAnswer } from "../../lib/chapter-shape-types.ts";
 
-const shape: Shape = [
+export type LessonShape = {
   /** Chapter title. */
-  { type: "title" },
+  title: TTitle;
   /** Chapter summary. */
-  { type: "summary" },
+  summary: TSummary;
 
-  /** Vocabulary: "to, for, give". */
-  { type: "vocab", term: "{{word:gei3}}", ttsText: "给" },
-  /** Vocabulary: "at, in, present, existing". */
-  { type: "vocab", term: "{{word:zai4}}", ttsText: "在" },
-  /** Vocabulary: "using, with, by means of". */
-  { type: "vocab", term: "{{word:yong4}}", ttsText: "用" },
-  /** Vocabulary: "from, because of". */
-  { type: "vocab", term: "{{word:yin1wei4}}", ttsText: "因为" },
+  /** Vocabulary: "time, moment, occasion". */
+  vocabShijian: TVocab;
 
-  /** Grammar: coverbs introduce a noun phrase and sit right before the main verb. */
-  { type: "prose", hasTldr: true, hasNecessity: true },
-  /** Grammar rule box: Coverb Word Order. */
-  { type: "info", hasTitle: true, subtype: "grammar", tag: "coverbs/word-order", items: [{}] },
-  /** Grammar: with no other action verb, the coverb itself becomes the main predicate. */
-  { type: "prose", hasTldr: true, hasNecessity: true },
+  /** Grammar: no dedicated "if" word -- context/condition is a fronted clause followed by a comma. */
+  proseFrontedContext: TProse;
+  /** Grammar rule box: Fronted Context Clause. */
+  infoFrontedContext: TInfo & { items: [TInfoItem] };
+  /** Grammar: "when X" is built compositionally as X-de + shíjiān ("the time of X"), reusing -de. */
+  proseDeShijian: TProse;
 
-  /** Example: wǒ gěi tā zài-shuǐ-lǐ-de dòngwù. */
-  { type: "example", pinyin: "{{Word:wo3}} {{word:gei3}} {{word:ta1}} {{word:zai4}}-{{word:shui3}}-lǐ-{{word:de}} {{word:dong4wu4}}." },
-  /** Example: wǒ zài dìfāng gěi tā zài-shuǐ-lǐ-de dòngwù. */
-  { type: "example", pinyin: "{{Word:wo3}} {{word:zai4}} {{word:di4fang1}} {{word:gei3}} {{word:ta1}} {{word:zai4}}-{{word:shui3}}-lǐ-{{word:de}} {{word:dong4wu4}}." },
-  /** Example: wǒ zài dìfāng. */
-  { type: "example", pinyin: "{{Word:wo3}} {{word:zai4}} {{word:di4fang1}}." },
-  /** Example: wǒ qù nǐ-de pángbiān. */
-  { type: "example", pinyin: "{{Word:wo3}} {{word:qu4}} {{word:ni3}}-{{word:de}} {{word:pang2bian1}}." },
-  /** Example: wǒ-de fùmǔ qù kàn hěn-dà-de shuǐ. */
-  { type: "example", pinyin: "{{Word:wo3}}-{{word:de}} {{word:fu4mu3}} {{word:qu4}} {{word:kan4}} {{word:hen3}}-{{word:da4}}-{{word:de}} {{word:shui3}}." },
-  /** Example: yīnwèi zhè-ge, wǒ zuò le hěn duō. */
-  { type: "example", pinyin: "{{Word:yin1wei4}} {{word:zhe4}}-ge, {{word:wo3}} {{word:zuo4}} {{word:le}} {{word:hen3}} {{word:duo1}}." },
-  /** Example: wǒ yòng Hǎo-shuō-de shuō. */
-  { type: "example", pinyin: "{{Word:wo3}} {{word:yong4}} Hǎo-shuō-de {{word:shuo1}}." },
+  /** Example: shénme shíjiān tā lái? */
+  example1: TExample;
+  /** Example: hěn-duō-rén-de dìfāng, wǒ hěn hǎo. */
+  example2: TExample;
+  /** Example: wǒ chī-de shíjiān, wǒ hěn hǎo. */
+  example3: TExample;
+  /** Example: méi-yǒu shuǐ, dòngwù bù hǎo. */
+  example4: TExample;
 
-  /** Exercise 1: The worker uses tools. */
-  { type: "exercise" },
-  /** Exercise 2: He gives things from his house. */
-  { type: "exercise" },
-  /** Exercise 3: Why did you do it? */
-  { type: "exercise" },
+  /** Exercise 1: Ask "What time are you coming?" */
+  exercise1: TExercise;
+  /** Exercise 2: Say "When you speak, I listen." */
+  exercise2: TExercise;
+  /** Exercise 3: Say "If the tool isn't good, don't use it." */
+  exercise3: TExercise;
 
   /** Answer 1. */
-  { type: "answer" },
+  answer1: TAnswer;
   /** Answer 2. */
-  { type: "answer" },
+  answer2: TAnswer;
   /** Answer 3. */
-  { type: "answer" },
-];
+  answer3: TAnswer;
+};
+
+const shape: LessonShape = {
+  title: { type: "title" },
+  summary: { type: "summary" },
+
+  vocabShijian: { type: "vocab", term: "{{word:shi2jian1}}", ttsText: "时间" },
+
+  proseFrontedContext: { type: "prose" },
+  infoFrontedContext: { type: "info", subtype: "grammar", tag: "sentences/fronted-context", items: [{}] },
+  proseDeShijian: { type: "prose" },
+
+  example1: { type: "example", pinyin: "{{Word:shen2me}} {{word:shi2jian1}} {{word:ta1}} {{word:lai2}}?", ttsText: "什么时间他来？" },
+  example2: { type: "example", pinyin: "{{Word:hen3}}-{{word:duo1}}-{{word:ren2}}-{{word:de}} {{word:di4fang1}}, {{word:wo3}} {{word:hen3}} {{word:hao3}}.", ttsText: "很多人的地方，我很好。" },
+  example3: { type: "example", pinyin: "{{Word:wo3}} {{word:chi1}}-{{word:de}} {{word:shi2jian1}}, {{word:wo3}} {{word:hen3}} {{word:hao3}}.", ttsText: "我吃的时间，我很好。" },
+  example4: { type: "example", pinyin: "{{Word:mei2}}-{{word:you3}} {{word:shui3}}, {{word:dong4wu4}} {{word:bu4}} {{word:hao3}}.", ttsText: "没有水，动物不好。" },
+
+  exercise1: { type: "exercise" },
+  exercise2: { type: "exercise" },
+  exercise3: { type: "exercise" },
+
+  answer1: { type: "answer", ttsText: "什么时间你来？" },
+  answer2: { type: "answer", ttsText: "你说的时间，我听。" },
+  answer3: { type: "answer", ttsText: "工具不好，不用它。" },
+};
 
 export default shape;

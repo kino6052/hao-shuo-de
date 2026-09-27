@@ -1,78 +1,55 @@
-// English text for lesson-08, positionally matching shape.ts.
-import type { LangContent } from "../../lib/chapter-shape-types.ts";
+// English text for lesson-08, matching shape.ts's keys. Typed as
+// `PartialByKey<LessonShape>`. No comments repeated in this file.
+import type { PartialByKey } from "../../lib/chapter-shape-types.ts";
+import type { LessonShape } from "./shape.ts";
 
-const en: LangContent = [
-  /** title */
-  ["Prepositions & Coverbs"],
-  /** summary */
-  [
-    "Words like `{{word:gei3}}`, `{{word:zai4}}`, `{{word:yong4}}`, and `{{word:yin1wei4}}` work as coverbs: they introduce a noun phrase and sit before the main verb, and if no other verb is present, the coverb itself becomes the main predicate.",
-  ],
-
-  /** vocab: gěi */
-  ["to, for, give"],
-  /** vocab: zài */
-  ["at, in, present, existing"],
-  /** vocab: yòng */
-  ["using, with, by means of"],
-  /** vocab: yīnwèi */
-  ["from, because of"],
-
-  /** prose: coverbs introduce a noun phrase and sit before the main verb */
-  {
-    text: [
-      "A handful of Hao-shuo-de words work double duty as both a verb on their own and a coverb -- a word that introduces a noun phrase and sits in front of the main action, the way a preposition would in English.",
-      "`{{word:gei3}}` (\"give, to, for\"), `{{word:zai4}}` (\"at, in\"), `{{word:yong4}}` (\"using, by means of\"), and `{{word:yin1wei4}}` (\"because of\") all work this way.",
-      "A coverb phrase always sits between the subject and the main verb, never after it:",
+const en: PartialByKey<LessonShape> = {
+  title: { en: ["Expressing Time and Space"] },
+  summary: {
+    en: [
+      "A time, place, or condition clause fronts the main sentence and is set off by a comma -- no dedicated \"if\" word needed -- and \"when X\" is built compositionally as X-de + `{{word:shi2jian1}}` (\"the time of X\"), reusing `-{{word:de}}` rather than a dedicated \"when\" word.",
     ],
-    tldr: ["Coverbs like `{{word:gei3}}`, `{{word:zai4}}`, `{{word:yong4}}`, and `{{word:yin1wei4}}` introduce a noun phrase and sit right before the main verb."],
-    necessity: ["Establishes the coverb word-order slot before any example sentence uses more than one verb-like word in a row."],
   },
-  /** info: Coverb Word Order */
-  {
-    title: ["Coverb Word Order"],
+
+  vocabShijian: { en: ["time, moment, occasion"] },
+
+  proseFrontedContext: {
+    en: [
+      "Hao-shuo-de has no dedicated word for \"if,\" and no separate particle to mark a time or place clause ahead of the main sentence either.",
+      "Instead, the sentence itself already tells you what's context and what's the main statement, purely from where things sit.",
+      "Put the context or condition phrase at the very start of the sentence, immediately followed by a pause -- a comma -- and everything after that comma is the main statement it applies to.",
+    ],
+    tldr: { en: ["A fronted phrase followed by a comma marks time, place, or condition -- no dedicated word like \"if\" is needed."] },
+    necessity: { en: ["Explains sentences that open with a time/place/condition clause before any dedicated marker word ever appears for it."] },
+  },
+  infoFrontedContext: {
+    title: { en: ["Fronted Context Clause"] },
     items: [
-      { text: ["Subject + Coverb Phrase + Main Verb + Object -- the coverb phrase always comes between the subject and the main action, never after it."] },
+      { en: ["[Context / Condition Phrase], [Main Statement] -- the context phrase always comes first, set off by a comma."] },
     ],
   },
-  /** prose: with no other verb, the coverb itself becomes the main predicate */
-  {
-    text: [
-      "If a clause has no separate action verb, the coverb doesn't leave an empty slot behind -- it simply steps up and serves as the main predicate by itself.",
-      '`{{word:wo3}} {{word:zai4}} {{word:di4fang1}}` (\"I am in the house\") has no other verb at all; `{{word:zai4}}` alone is doing the whole job of the sentence.',
+  proseDeShijian: {
+    en: [
+      'Hao-shuo-de also has no dedicated word for "when." Instead, "when X" is built the same way any other description is: bind X onto `{{word:shi2jian1}}` ("time, moment") with `-{{word:de}}`, the same particle from Lesson 3.',
+      '`{{word:chi1}}-{{word:de}} {{word:shi2jian1}}` is literally "the eating\'s time" -- fronted as a context clause, it means "when [I] eat."',
+      "No new grammar is needed: it's just -de binding a description onto a noun (here, {{word:shi2jian1}}), and that whole phrase then fronted like any other context clause.",
     ],
-    tldr: ["With no other verb in the clause, the coverb itself becomes the main predicate."],
-    necessity: ["Explains sentences like `{{word:wo3}} {{word:zai4}} {{word:di4fang1}}` that would otherwise look like they're missing a verb."],
+    tldr: { en: ["\"When X\" is X-de + `{{word:shi2jian1}}` (\"the time of X\"), fronted as a context clause -- reusing `-{{word:de}}`, not a new word."] },
+    necessity: { en: ["Shows that \"when\" doesn't need its own particle either -- it's `-{{word:de}}` and the fronted-clause pattern working together."] },
   },
 
-  /** example 1 */
-  ["I give a swimming animal to her."],
-  /** example 2 */
-  ["I give a swimming animal to her in the house."],
-  /** example 3 */
-  ["I am in the house."],
-  /** example 4 */
-  ["I am moving towards you / going to your side."],
-  /** example 5 */
-  ["My parent is going to the sea / big water."],
-  /** example 6 */
-  ["Because of this, I worked a lot."],
-  /** example 7 */
-  ["I speak in Hao-shuo-de / use Hao-shuo-de to speak."],
+  example1: { en: ["What time is he coming?"] },
+  example2: { en: ["In a crowded place, I'm fine."] },
+  example3: { en: ["When I eat, I'm content."] },
+  example4: { en: ["Without water, the animal isn't well."] },
 
-  /** exercise 1 */
-  ["The worker uses tools."],
-  /** exercise 2 */
-  ["He gives things from his house."],
-  /** exercise 3 */
-  ["Why did you do it?"],
+  exercise1: { en: ["Ask: \"What time are you coming?\""] },
+  exercise2: { en: ["Say: \"When you speak, I listen.\""] },
+  exercise3: { en: ["Say: \"If the tool isn't good, don't use it.\""] },
 
-  /** answer 1 */
-  ["{{Word:zhe4}}-ge {{word:gong1ju4}}-{{word:de}} {{word:ren2}} {{word:yong4}} {{word:gong1ju4}}. (or {{Word:zhe4}}-ge {{word:ren2}} {{word:yong4}} {{word:gong1ju4}}.)"],
-  /** answer 2 */
-  ["{{Word:ta1}} {{word:gei3}} {{word:lai2}}-{{word:ta1}}-{{word:de}}-{{word:di4fang1}}-{{word:de}} {{word:dong1xi}}."],
-  /** answer 3 */
-  ["{{Word:wei4shen2me}} {{word:ni3}} {{word:zuo4}} {{word:le}} {{word:zhe4}}-ge?"],
-];
+  answer1: { en: ["{{Word:shen2me}} {{word:shi2jian1}} {{word:ni3}} {{word:lai2}}?"] },
+  answer2: { en: ["{{Word:ni3}} {{word:shuo1}}-{{word:de}} {{word:shi2jian1}}, {{word:wo3}} {{word:ting1}}."] },
+  answer3: { en: ["{{Word:gong1ju4}} {{word:bu4}} {{word:hao3}}, {{word:bu4}} {{word:yong4}} {{word:ta1}}."] },
+};
 
 export default en;

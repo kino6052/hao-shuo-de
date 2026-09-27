@@ -476,8 +476,8 @@
       },
       "maps": "ko"
     },
-    "qian2": {
-      "term": "qián",
+    "jin1": {
+      "term": "jīn",
       "pos": {
         "eng": "noun",
         "rus": "существительное",
@@ -1204,8 +1204,8 @@
       },
       "maps": "kama"
     },
-    "zuo4": {
-      "term": "zuò",
+    "nong4": {
+      "term": "nòng",
       "pos": {
         "eng": "verb",
         "rus": "глагол",
@@ -1414,7 +1414,7 @@
       },
       "maps": ""
     },
-    "di4ban3": {
+    "di4": {
       "term": "tái",
       "pos": {
         "eng": "noun",
@@ -1422,13 +1422,13 @@
         "zh": "名词"
       },
       "definition": {
-        "eng": "floor, horizontal surface, platform, couch, flat resting area",
-        "rus": "пол, горизонтальная поверхность, платформа, диван, плоское место для отдыха",
-        "zh": "地板，水平表面，平台，沙发，平坦的休息面"
+        "eng": "floor, horizontal surface, platform",
+        "rus": "пол, горизонтальная поверхность",
+        "zh": "地板，水平表面，平台"
       },
       "maps": "supa"
     },
-    "hou4mian4": {
+    "hou4": {
       "term": "hòumiàn",
       "pos": {
         "eng": "noun",
@@ -1442,7 +1442,7 @@
       },
       "maps": "monsi"
     },
-    "li3mian4": {
+    "li3": {
       "term": "lǐmiàn",
       "pos": {
         "eng": "noun",
@@ -1470,7 +1470,7 @@
       },
       "maps": "poka"
     },
-    "qian2mian4": {
+    "qian2": {
       "term": "qiánmiàn",
       "pos": {
         "eng": "noun",
@@ -1484,8 +1484,8 @@
       },
       "maps": "sinpin"
     },
-    "shang4mian4": {
-      "term": "shàngmiàn",
+    "shang4": {
+      "term": "shàng",
       "pos": {
         "eng": "noun",
         "rus": "существительное",
@@ -1498,7 +1498,7 @@
       },
       "maps": "sewi"
     },
-    "xia4mian4": {
+    "xia4": {
       "term": "xiàmiàn",
       "pos": {
         "eng": "noun",
@@ -1949,12 +1949,7 @@
             "rus": "Местоимения и вопросительные слова",
             "zh": "代词与疑问词"
           },
-          "wordIds": [
-            "wo3",
-            "ni3",
-            "ta1",
-            "shen2me"
-          ]
+          "wordIds": ["wo3", "ni3", "ta1", "shen2me"]
         },
         {
           "key": "places-as-things",
@@ -1963,10 +1958,7 @@
             "rus": "Места (как вещи)",
             "zh": "地方（作为事物）"
           },
-          "wordIds": [
-            "shi4chang3",
-            "jia1"
-          ]
+          "wordIds": ["shi4chang3", "jia1"]
         },
         {
           "key": "plants-natural-elements",
@@ -1975,13 +1967,7 @@
             "rus": "Растения и природные стихии",
             "zh": "植物与自然元素"
           },
-          "wordIds": [
-            "ri4",
-            "yue4",
-            "zhi2wu4",
-            "huo3",
-            "kong1qi4"
-          ]
+          "wordIds": ["ri4", "yue4", "zhi2wu4", "huo3", "kong1qi4"]
         },
         {
           "key": "body",
@@ -2007,13 +1993,7 @@
             "rus": "Люди и родство",
             "zh": "人与亲属"
           },
-          "wordIds": [
-            "ren2",
-            "fu4mu3",
-            "nan2ren2",
-            "nv3ren2",
-            "qun2"
-          ]
+          "wordIds": ["ren2", "fu4mu3", "nan2ren2", "nv3ren2", "qun2"]
         },
         {
           "key": "food-drink",
@@ -2022,12 +2002,7 @@
             "rus": "Еда и питьё",
             "zh": "食物与饮品"
           },
-          "wordIds": [
-            "mi3fan4",
-            "shui3guo3",
-            "yan2",
-            "shui3"
-          ]
+          "wordIds": ["mi3fan4", "shui3guo3", "yan2", "shui3"]
         },
         {
           "key": "animals",
@@ -2036,10 +2011,7 @@
             "rus": "Животные",
             "zh": "动物"
           },
-          "wordIds": [
-            "dong4wu4",
-            "chong2zi"
-          ]
+          "wordIds": ["dong4wu4", "chong2zi"]
         },
         {
           "key": "tools-objects",
@@ -2056,10 +2028,7 @@
                 "rus": "Орудия",
                 "zh": "器具"
               },
-              "wordIds": [
-                "gong1ju4",
-                "gun4zi"
-              ]
+              "wordIds": ["gong1ju4", "gun4zi"]
             },
             {
               "key": "containers-materials",
@@ -2068,11 +2037,7 @@
                 "rus": "Контейнеры и материалы",
                 "zh": "容器与材料"
               },
-              "wordIds": [
-                "he2zi",
-                "ni2",
-                "xian4"
-              ]
+              "wordIds": ["he2zi", "ni2", "xian4"]
             },
             {
               "key": "valuables-wearables",
@@ -2081,17 +2046,12 @@
                 "rus": "Ценности и одежда",
                 "zh": "财物与穿戴"
               },
-              "wordIds": [
-                "qian2",
-                "yi1fu"
-              ]
+              "wordIds": ["jin1", "yi1fu"]
             },
             {
               "key": "general",
               "title": null,
-              "wordIds": [
-                "dong1xi"
-              ]
+              "wordIds": ["dong1xi"]
             }
           ]
         },
@@ -2102,12 +2062,7 @@
             "rus": "Абстрактные субстантивы",
             "zh": "抽象实体词"
           },
-          "wordIds": [
-            "ci2",
-            "li4liang4",
-            "xing4",
-            "sheng1yin1"
-          ]
+          "wordIds": ["ci2", "li4liang4", "xing4", "sheng1yin1"]
         }
       ]
     },
@@ -2126,10 +2081,7 @@
             "rus": "Указательные слова",
             "zh": "指示词"
           },
-          "wordIds": [
-            "na4",
-            "zhe4"
-          ]
+          "wordIds": ["na4", "zhe4"]
         },
         {
           "key": "sameness-difference",
@@ -2138,10 +2090,7 @@
             "rus": "Тождество и различие",
             "zh": "相同与差异"
           },
-          "wordIds": [
-            "bu4tong2",
-            "yi1yang4"
-          ]
+          "wordIds": ["bu4tong2", "yi1yang4"]
         }
       ]
     },
@@ -2160,9 +2109,7 @@
             "rus": "Счётное слово",
             "zh": "量词"
           },
-          "wordIds": [
-            "ge4"
-          ]
+          "wordIds": ["ge4"]
         },
         {
           "key": "numbers-ordinals",
@@ -2171,11 +2118,7 @@
             "rus": "Числа и порядковые числительные",
             "zh": "数字与序数"
           },
-          "wordIds": [
-            "yi1",
-            "liang3",
-            "hao4"
-          ]
+          "wordIds": ["yi1", "liang3", "hao4"]
         },
         {
           "key": "amount",
@@ -2184,10 +2127,7 @@
             "rus": "Количество",
             "zh": "数量"
           },
-          "wordIds": [
-            "duo1",
-            "quan2bu4"
-          ]
+          "wordIds": ["duo1", "quan2bu4"]
         }
       ]
     },
@@ -2198,10 +2138,7 @@
         "rus": "Оценочные слова",
         "zh": "评价词"
       },
-      "wordIds": [
-        "hao3",
-        "huai4"
-      ]
+      "wordIds": ["hao3", "huai4"]
     },
     {
       "key": "descriptors",
@@ -2234,10 +2171,7 @@
             "rus": "Прочие качества",
             "zh": "其他性质"
           },
-          "wordIds": [
-            "qi2guai4",
-            "xin1"
-          ]
+          "wordIds": ["qi2guai4", "xin1"]
         },
         {
           "key": "temperature-taste",
@@ -2246,11 +2180,7 @@
             "rus": "Температура и вкус",
             "zh": "温度与味道"
           },
-          "wordIds": [
-            "re4",
-            "leng3",
-            "tian2"
-          ]
+          "wordIds": ["re4", "leng3", "tian2"]
         },
         {
           "key": "physical-property",
@@ -2259,10 +2189,7 @@
             "rus": "Физическое свойство",
             "zh": "物理属性"
           },
-          "wordIds": [
-            "ying4",
-            "yuan2"
-          ]
+          "wordIds": ["ying4", "yuan2"]
         },
         {
           "key": "size",
@@ -2271,10 +2198,7 @@
             "rus": "Размер",
             "zh": "大小"
           },
-          "wordIds": [
-            "xiao3",
-            "da4"
-          ]
+          "wordIds": ["xiao3", "da4"]
         }
       ]
     },
@@ -2293,11 +2217,7 @@
             "rus": "Воля и чувства",
             "zh": "意愿与情感"
           },
-          "wordIds": [
-            "yao4",
-            "ai4",
-            "pa4"
-          ]
+          "wordIds": ["yao4", "ai4", "pa4"]
         },
         {
           "key": "cognition",
@@ -2306,10 +2226,7 @@
             "rus": "Познание",
             "zh": "认知"
           },
-          "wordIds": [
-            "jue2de",
-            "zhi1dao4"
-          ]
+          "wordIds": ["jue2de", "zhi1dao4"]
         },
         {
           "key": "perception",
@@ -2318,10 +2235,7 @@
             "rus": "Восприятие",
             "zh": "感知"
           },
-          "wordIds": [
-            "kan4",
-            "ting1"
-          ]
+          "wordIds": ["kan4", "ting1"]
         }
       ]
     },
@@ -2332,11 +2246,7 @@
         "rus": "Речь",
         "zh": "言语"
       },
-      "wordIds": [
-        "shuo1",
-        "xie3",
-        "wen4"
-      ]
+      "wordIds": ["shuo1", "xie3", "wen4"]
     },
     {
       "key": "actions",
@@ -2353,10 +2263,7 @@
             "rus": "Называние и использование",
             "zh": "命名与使用"
           },
-          "wordIds": [
-            "yong4",
-            "jiao4"
-          ]
+          "wordIds": ["yong4", "jiao4"]
         },
         {
           "key": "daily-activities",
@@ -2373,11 +2280,7 @@
                 "rus": "Фаза и длительность",
                 "zh": "阶段与持续"
               },
-              "wordIds": [
-                "kai1shi3",
-                "wan2cheng2",
-                "deng3"
-              ]
+              "wordIds": ["kai1shi3", "wan2cheng2", "deng3"]
             },
             {
               "key": "eating-resting-play",
@@ -2386,11 +2289,7 @@
                 "rus": "Еда, отдых и игра",
                 "zh": "饮食、休息与玩乐"
               },
-              "wordIds": [
-                "shui4jiao4",
-                "chi1",
-                "wan2"
-              ]
+              "wordIds": ["shui4jiao4", "chi1", "wan2"]
             }
           ]
         },
@@ -2401,10 +2300,7 @@
             "rus": "Движение",
             "zh": "运动"
           },
-          "wordIds": [
-            "lai2",
-            "qu4"
-          ]
+          "wordIds": ["lai2", "qu4"]
         },
         {
           "key": "state-change-general",
@@ -2413,10 +2309,7 @@
             "rus": "Изменение состояния и общее действие",
             "zh": "状态变化与一般动作"
           },
-          "wordIds": [
-            "bian4",
-            "zuo4"
-          ]
+          "wordIds": ["bian4", "nong4"]
         },
         {
           "key": "manipulation-contact",
@@ -2425,12 +2318,7 @@
             "rus": "Манипуляция и контакт",
             "zh": "操作与接触"
           },
-          "wordIds": [
-            "da3",
-            "gei3",
-            "mo1",
-            "zhao3"
-          ]
+          "wordIds": ["da3", "gei3", "mo1", "zhao3"]
         }
       ]
     },
@@ -2449,11 +2337,7 @@
             "rus": "Существование и местоположение",
             "zh": "存在与位置"
           },
-          "wordIds": [
-            "zai4",
-            "shi4",
-            "liu2"
-          ]
+          "wordIds": ["zai4", "shi4", "liu2"]
         },
         {
           "key": "possession-acquisition",
@@ -2462,10 +2346,7 @@
             "rus": "Обладание и приобретение",
             "zh": "拥有与获得"
           },
-          "wordIds": [
-            "de2",
-            "you3"
-          ]
+          "wordIds": ["de2", "you3"]
         }
       ]
     },
@@ -2476,9 +2357,7 @@
         "rus": "Жизнь и смерть",
         "zh": "生与死"
       },
-      "wordIds": [
-        "si3"
-      ]
+      "wordIds": ["si3"]
     },
     {
       "key": "time",
@@ -2487,9 +2366,7 @@
         "rus": "Время",
         "zh": "时间"
       },
-      "wordIds": [
-        "shi2jian1"
-      ]
+      "wordIds": ["shi2jian1"]
     },
     {
       "key": "space",
@@ -2506,12 +2383,7 @@
             "rus": "Существительные места и предлоги",
             "zh": "地点名词与介词"
           },
-          "wordIds": [
-            "cong2",
-            "dui4",
-            "di4fang1",
-            "di4ban3"
-          ]
+          "wordIds": ["cong2", "dui4", "di4fang1", "di4"]
         },
         {
           "key": "relative-position",
@@ -2521,12 +2393,12 @@
             "zh": "相对位置"
           },
           "wordIds": [
-            "hou4mian4",
-            "li3mian4",
+            "hou4",
+            "li3",
             "pang2bian1",
-            "qian2mian4",
-            "shang4mian4",
-            "xia4mian4",
+            "qian2",
+            "shang4",
+            "xia4",
             "wai4"
           ]
         }
@@ -2547,12 +2419,7 @@
             "rus": "Грамматические частицы",
             "zh": "语法助词"
           },
-          "wordIds": [
-            "ba3",
-            "de",
-            "le",
-            "ma"
-          ]
+          "wordIds": ["ba3", "de", "le", "ma"]
         },
         {
           "key": "negation",
@@ -2561,10 +2428,7 @@
             "rus": "Отрицание",
             "zh": "否定"
           },
-          "wordIds": [
-            "bu4",
-            "mei2"
-          ]
+          "wordIds": ["bu4", "mei2"]
         },
         {
           "key": "conjunction",
@@ -2573,13 +2437,7 @@
             "rus": "Союзы",
             "zh": "连接"
           },
-          "wordIds": [
-            "dan4shi4",
-            "he2",
-            "huo4zhe3",
-            "ye3",
-            "yin1wei4"
-          ]
+          "wordIds": ["dan4shi4", "he2", "huo4zhe3", "ye3", "yin1wei4"]
         },
         {
           "key": "interrogatives",
@@ -2588,11 +2446,7 @@
             "rus": "Вопросительные слова",
             "zh": "疑问词"
           },
-          "wordIds": [
-            "wei4shen2me",
-            "zen3me",
-            "na3li3"
-          ]
+          "wordIds": ["wei4shen2me", "zen3me", "na3li3"]
         },
         {
           "key": "modality",
@@ -2601,9 +2455,7 @@
             "rus": "Модальность",
             "zh": "情态"
           },
-          "wordIds": [
-            "neng2"
-          ]
+          "wordIds": ["neng2"]
         },
         {
           "key": "truth-value",
@@ -2612,9 +2464,7 @@
             "rus": "Истинностное значение",
             "zh": "真值"
           },
-          "wordIds": [
-            "zhen1"
-          ]
+          "wordIds": ["zhen1"]
         }
       ]
     },
@@ -2625,9 +2475,7 @@
         "rus": "Интенсификатор",
         "zh": "程度词"
       },
-      "wordIds": [
-        "hen3"
-      ]
+      "wordIds": ["hen3"]
     },
     {
       "key": "similarity",
@@ -2636,9 +2484,7 @@
         "rus": "Подобие",
         "zh": "相似"
       },
-      "wordIds": [
-        "fang1fa3"
-      ]
+      "wordIds": ["fang1fa3"]
     }
   ]
 }

@@ -1,56 +1,41 @@
-// Chinese text, positionally matching shape.ts.
-// Not translated yet -- every slot is the empty-array placeholder.
-import type { LangContent } from "../../lib/chapter-shape-types.ts";
+// Chinese text for lesson-13, matching shape.ts's keys. Typed as
+// `PartialByKey<LessonShape>`. Not translated yet -- every `zh` is the
+// empty-array placeholder.
+import type { PartialByKey } from "../../lib/chapter-shape-types.ts";
+import type { LessonShape } from "./shape.ts";
 
-const zh: LangContent = [
-  /** title */
-  [],
-  /** summary */
-  [],
-  /** vocab: {{word:li3mian4}} */
-  [],
-  /** vocab: {{word:hou4mian4}} */
-  [],
-  /** vocab: {{word:xia4mian4}} */
-  [],
-  /** vocab: {{word:pang2bian1}} */
-  [],
-  /** vocab: {{word:shang4mian4}} */
-  [],
-  /** vocab: {{word:qian2mian4}} */
-  [],
-  /** vocab: dào */
-  [],
-  /** vocab: {{word:qu4}} */
-  [],
-  /** prose */
-  { text: [] },
-  /** info */
-  { items: [] },
-  /** example: {{Word:wo3}} {{word:zai4}} {{word:ni3}}-{{word:de}} {{word:pang2bian1}}. */
-  [],
-  /** example: {{Word:xia4mian4}}-{{word:de}} {{word:di4fang1}} {{word:hen3}} {{word:you3}} {{word:li4liang4}}. */
-  [],
-  /** example: {{Word:da4}}-{{word:de}} {{word:gong1ju4}} {{word:zai4}}-{{word:qu4}}-dào {{word:shang4mian4}}-{{word:de}} {{word:di4fang1}}. */
-  [],
-  /** example: {{Word:xie3}}-{{word:de}} {{word:dong1xi}} {{word:zai4}} {{word:dong4wu4}}-{{word:de}} {{word:xia4mian4}}. */
-  [],
-  /** example: {{Word:wo3}} {{word:kan4}}-jiàn {{word:hei1se4}}-{{word:de}} {{word:nv3ren2}} {{word:zai4}} {{word:di4fang1}}-{{word:de}} {{word:qian2mian4}}. */
-  [],
-  /** example: {{Word:yan2}}-sè {{word:dong1xi}} {{word:zai4}} {{word:hei1se4}}-{{word:de}} {{word:pang2bian1}}. */
-  [],
-  /** exercise */
-  [],
-  /** exercise */
-  [],
-  /** exercise */
-  [],
-  /** answer */
-  [],
-  /** answer */
-  [],
-  /** answer */
-  [],
-];
+const zh: PartialByKey<LessonShape> = {
+  title: { zh: [] },
+  summary: { zh: [] },
+  vocabDi: { zh: [] },
+  vocabYi: { zh: [] },
+  vocabLiang: { zh: [] },
+  vocabEr: { zh: [] },
+  vocabSan: { zh: [] },
+  vocabSi: { zh: [] },
+  vocabWu: { zh: [] },
+  vocabLiu: { zh: [] },
+  vocabQi: { zh: [] },
+  vocabBa: { zh: [] },
+  vocabJiu: { zh: [] },
+  vocabShi: { zh: [] },
+  vocabBai: { zh: [] },
+  vocabQian: { zh: [] },
+  vocabHao: { zh: [] },
+  vocabQuanbu: { zh: [] },
+  proseCountingCapsAtTwo: { zh: [] },
+  infoCountingAndOrdering: { items: [{zh:[]},{zh:[]},{zh:[]}] },
+  example1: { zh: [] },
+  example2: { zh: [] },
+  example3: { zh: [] },
+  example4: { zh: [] },
+  example5: { zh: [] },
+  exercise1: { zh: [] },
+  exercise2: { zh: [] },
+  exercise3: { zh: [] },
+  answer1: { zh: [] },
+  answer2: { zh: [] },
+  answer3: { zh: [] },
+};
 
 export default zh;

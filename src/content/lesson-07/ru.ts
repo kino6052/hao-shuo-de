@@ -1,70 +1,32 @@
-// Russian text, positionally matching shape.ts.
-// Not translated yet -- every slot is the empty-array placeholder.
-import type { LangContent } from "../../lib/chapter-shape-types.ts";
+// Russian text for lesson-07, matching shape.ts's keys. Typed as
+// `PartialByKey<LessonShape>`. Not translated yet -- every `ru` is the
+// empty-array placeholder.
+import type { PartialByKey } from "../../lib/chapter-shape-types.ts";
+import type { LessonShape } from "./shape.ts";
 
-const ru: LangContent = [
-  /** title */
-  [],
-  /** summary */
-  [],
-  /** vocab: {{word:bu4}} */
-  [],
-  /** vocab: {{word:huai4}} */
-  [],
-  /** vocab: {{word:duo1}} */
-  [],
-  /** vocab: {{word:fu4mu3}} */
-  [],
-  /** vocab: {{word:yi1}} */
-  [],
-  /** vocab: {{word:li4liang4}} */
-  [],
-  /** prose */
-  { text: [] },
-  /** info */
-  { items: [] },
-  /** prose */
-  { text: [] },
-  /** info */
-  { items: [] },
-  /** prose */
-  { text: [] },
-  /** info */
-  { items: [] },
-  /** info */
-  { items: [] },
-  /** example: {{Word:ni3}}-{{word:de}} {{word:zuo4}}-{{word:de}} {{word:hen3}} {{word:hao3}}. */
-  [],
-  /** example: {{Word:shui3}} {{word:gei3}} {{word:wo3}} {{word:li4liang4}}. */
-  [],
-  /** example: {{Word:ni3}} {{word:shi4}} {{word:you3}}-{{word:li4liang4}}-{{word:de}} {{word:nan2ren2}}. */
-  [],
-  /** example: {{Word:zhi1dao4}}-{{word:de}} {{word:ren2}} {{word:kan4}} {{word:xie3}}-{{word:de}} {{word:dong1xi}}. */
-  [],
-  /** example: {{Word:xiao3}}-{{word:de}} {{word:nv3ren2}} méiyǒu {{word:hao3}}-{{word:de}} {{word:ting1}} {{word:fu4mu3}}. */
-  [],
-  /** example: {{Word:shui3}} {{word:hao3}} {{word:le}}. */
-  [],
-  /** example: Méiyǒu {{word:ren2}} {{word:shi4}} {{word:huai4}}-{{word:de}}. */
-  [],
-  /** example: {{Word:nan2ren2}}-{{word:de}} {{word:fu4mu3}} {{word:duo1}}-{{word:de}} {{word:kan4}} {{word:xie3}}-{{word:de}} {{word:dong1xi}}. */
-  [],
-  /** exercise */
-  [],
-  /** exercise */
-  [],
-  /** exercise */
-  [],
-  /** exercise */
-  [],
-  /** answer */
-  [],
-  /** answer */
-  [],
-  /** answer */
-  [],
-  /** answer */
-  [],
-];
+const ru: PartialByKey<LessonShape> = {
+  title: { ru: [] },
+  summary: { ru: [] },
+  vocabGei: { ru: [] },
+  vocabZai: { ru: [] },
+  vocabYong: { ru: [] },
+  vocabYinwei: { ru: [] },
+  proseCoverbWordOrder: { ru: [] },
+  infoCoverbWordOrder: { items: [{ru:[]}] },
+  proseCoverbAsPredicate: { ru: [] },
+  example1: { ru: [] },
+  example2: { ru: [] },
+  example3: { ru: [] },
+  example4: { ru: [] },
+  example5: { ru: [] },
+  example6: { ru: [] },
+  example7: { ru: [] },
+  exercise1: { ru: [] },
+  exercise2: { ru: [] },
+  exercise3: { ru: [] },
+  answer1: { ru: [] },
+  answer2: { ru: [] },
+  answer3: { ru: [] },
+};
 
 export default ru;

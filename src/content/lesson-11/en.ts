@@ -1,90 +1,54 @@
-// English text for lesson-11, positionally matching shape.ts.
-import type { LangContent } from "../../lib/chapter-shape-types.ts";
+// English text for lesson-11, matching shape.ts's keys. Typed as
+// `PartialByKey<LessonShape>`. No comments repeated in this file.
+import type { PartialByKey } from "../../lib/chapter-shape-types.ts";
+import type { LessonShape } from "./shape.ts";
 
-const en: LangContent = [
-  /** title */
-  ["Numbers and Order"],
-  /** summary */
-  [
-    "Hao-shuo-de caps precise counting at two (`{{word:yi1}}-ge`, `{{word:liang3}}-ge`), uses `{{word:duo1}}` (\"many\") for anything beyond that, and marks ordinals like \"first\" or \"second\" by placing `dì-` before the number root.",
-  ],
-
-  /** vocab: dì */
-  ["ordinal marker prefix (placed before a number to turn it into \"first, second, third...\")"],
-  /** vocab: yī */
-  ["one"],
-  /** vocab: liǎng */
-  ["two (used exclusively before measure words for counting objects/quantities)"],
-  /** vocab: èr */
-  ["two (used exclusively for mathematics, digit lists, serial numbers, and ordinal rankings)"],
-  /** vocab: sān */
-  ["three"],
-  /** vocab: sì */
-  ["four"],
-  /** vocab: wǔ */
-  ["five"],
-  /** vocab: liù */
-  ["six"],
-  /** vocab: qī */
-  ["seven"],
-  /** vocab: bā */
-  ["eight"],
-  /** vocab: jiǔ */
-  ["nine"],
-  /** vocab: shí */
-  ["ten"],
-  /** vocab: bǎi */
-  ["hundred"],
-  /** vocab: qiān */
-  ["thousand"],
-  /** vocab: hào */
-  ["number identity, name of a number, day of the month"],
-  /** vocab: quánbù */
-  ["all, completely, everything"],
-
-  /** prose: counting maps onto Mandarin number rules, capping precise numbers at two */
-  {
-    text: [
-      "Hao-shuo-de borrows Mandarin's number words wholesale, but keeps precise counting deliberately small: past two, a sentence stops naming an exact quantity and just says \"many\" instead.",
-      "Two also splits into two different words depending on the job: `{{word:liang3}}` counts physical things, `èr` is reserved for math, digit lists, and ordinal counting -- they are never interchangeable.",
+const en: PartialByKey<LessonShape> = {
+  title: { en: ["Measure word ge"] },
+  summary: {
+    en: [
+      "Real Mandarin ties a specific measure word to each noun's shape or class -- Hao-shuo-de collapses all of them into one universal classifier, `{{word:ge4}}`, used to count anything.",
     ],
-    tldr: ["Precise counting stops at two (`{{word:yi1}}`/`{{word:liang3}}`); `{{word:duo1}}` covers anything beyond that. `{{word:liang3}}` counts objects, `èr` is for math/ordinals only."],
-    necessity: ["Prevents the common mistake of using `èr` to count objects, and explains why the book doesn't bother teaching precise numbers past two."],
   },
-  /** info: Counting and Ordering */
-  {
-    title: ["Counting and Ordering"],
+
+  proseMandarinMeasureWords: {
+    en: [
+      "Standard Mandarin doesn't just count things with a number -- it also requires a measure word chosen to match the shape or category of whatever's being counted.",
+      "A flat sheet gets one measure word, a long thin thing gets another, an animal gets a different one again, and so on.",
+      "Native speakers memorize dozens of these pairings over years, and getting the wrong one is one of the most common mistakes a Mandarin learner makes.",
+    ],
+    tldr: { en: ["Standard Mandarin requires a different measure word for each noun's shape or class."] },
+    necessity: { en: ["Sets up the contrast: Hao-shuo-de is about to throw this entire memorization burden away."] },
+  },
+  proseGeIsUniversal: {
+    en: [
+      "Hao-shuo-de keeps only one of them: `{{word:ge4}}`.",
+      "You've already been using it since Lesson 3 to count one specific thing (`{{word:zhe4}}-ge`, `{{word:na4}}-ge`) -- what's new here is the scope: `{{word:ge4}}` isn't the measure word for one category of noun, it's the ONLY measure word, full stop.",
+      "A person, an animal, a tool, a fruit, an abstract thing -- none of it matters. Number or {{word:zhe4}}/{{word:na4}} + `{{word:ge4}}` + Noun works every time.",
+    ],
+    tldr: { en: ["`{{word:ge4}}` is the one and only measure word in Hao-shuo-de, regardless of what kind of noun it's counting."] },
+    necessity: { en: ["Without this, a learner might expect Hao-shuo-de to still require different measure words per noun class, the way real Mandarin does."] },
+  },
+  infoUniversalClassifier: {
+    title: { en: ["One Classifier for Everything"] },
     items: [
-      { text: ["**Quantities of One or Two:** bind the number root directly to the universal measure word `{{word:ge4}}` via a hyphen -- `{{word:yi1}}-ge` (\"one thing\"), `{{word:liang3}}-ge` (\"two things\"). Never use `èr` when counting physical objects."] },
-      { text: ["**Indefinite Plurals:** for quantities beyond two, use `{{word:duo1}}` (\"many, a lot\") to convey generalized abundance instead of a precise count."] },
-      { text: ["**Ordinal Numbers:** to mark strict sequencing (\"first,\" \"second\"), place the ordinal prefix `dì-` directly before the number root: `dì-{{word:yi1}}`, `dì-èr`."] },
+      { en: ["Number (or {{word:zhe4}}/{{word:na4}}) + `{{word:ge4}}` + Noun -- the same classifier works for any countable noun, no matter what shape or category it belongs to in standard Mandarin."] },
     ],
   },
 
-  /** example 1 */
-  ["You are number one!"],
-  /** example 2 */
-  ["This is the second time / the second day."],
-  /** example 3 */
-  ["The two boys kept many plants."],
-  /** example 4 */
-  ["I know many languages."],
-  /** example 5 */
-  ["Everybody listens to her."],
+  example1: { en: ["One person."] },
+  example2: { en: ["One animal."] },
+  example3: { en: ["One tool."] },
+  example4: { en: ["This fruit is good."] },
+  example5: { en: ["What is that thing?"] },
 
-  /** exercise 1 */
-  ["What is the third thing?"],
-  /** exercise 2 */
-  ["I know two languages."],
-  /** exercise 3 */
-  ["This is the first day."],
+  exercise1: { en: ["Say \"one tool\", using ge."] },
+  exercise2: { en: ["Say \"this animal\", using ge."] },
+  exercise3: { en: ["Ask \"What is that fruit?\", using ge."] },
 
-  /** answer 1 */
-  ["Dì-sān-ge {{word:dong1xi}} {{word:shi4}} {{word:shen2me}}?"],
-  /** answer 2 */
-  ["{{Word:wo3}} {{word:zhi1dao4}} {{word:liang3}}-ge {{word:shuo1}}."],
-  /** answer 3 */
-  ["{{Word:zhe4}}-ge {{word:ri4}} {{word:shi4}} dì-{{word:yi1}}-ge."],
-];
+  answer1: { en: ["{{Word:yi1}}-ge {{word:gong1ju4}}."] },
+  answer2: { en: ["{{Word:zhe4}}-ge {{word:dong4wu4}}."] },
+  answer3: { en: ["{{Word:na4}}-ge {{word:shui3guo3}} {{word:shi4}} {{word:shen2me}}?"] },
+};
 
 export default en;

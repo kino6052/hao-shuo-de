@@ -1,65 +1,54 @@
-// English text for lesson-16, positionally matching shape.ts.
-import type { LangContent } from "../../lib/chapter-shape-types.ts";
+// English text for lesson-16, matching shape.ts's keys. Typed as
+// `PartialByKey<LessonShape>`. No comments repeated in this file.
+import type { PartialByKey } from "../../lib/chapter-shape-types.ts";
+import type { LessonShape } from "./shape.ts";
 
-const en: LangContent = [
-  /** title */
-  ["Modification Stacking"],
-  /** summary */
-  [
-    "Where Toki Pona needs a dedicated particle (_pi_) to re-group a chain of modifiers, Hao-shuo-de just stacks them with `-{{word:de}}`, reading the whole qualifying phrase left to right as one block before it resolves onto the head noun.",
-  ],
-
-  /** vocab: zhíwù */
-  ["plant, vegetation"],
-  /** vocab: shēntǐ */
-  ["body, physical state"],
-  /** vocab: shíjiān */
-  ["time, duration"],
-  /** vocab: děng */
-  ["to wait"],
-
-  /** prose: -de stacks a chain of modifiers before the noun, no separate re-grouping particle needed */
-  {
-    text: [
-      "Toki Pona needs a special particle, _pi_, whenever more than one modifier has to be re-grouped around a noun, to keep the phrase from being misread.",
-      "Hao-shuo-de never runs into that problem, because `-{{word:de}}` (from Lesson 4) already does all the grouping work on its own.",
-      "A whole descriptive phrase -- however many pieces it's built from -- precedes the noun it modifies as a single unit, bound together with `-{{word:de}}`, and is read left to right before resolving onto the head noun at the end.",
+const en: PartialByKey<LessonShape> = {
+  title: { en: ["Particles and Other Special Words"] },
+  summary: {
+    en: [
+      "Hao-shuo-de marks a speaker's perspective with `{{word:dui4}} ... {{word:lai2}} {{word:shuo1}}` (\"from the perspective of\"), connects multiple subjects with `{{word:he2}}` (\"and\"), and sequences a second action or state on the same subject with `{{word:ye3}}` (\"also\") instead of a conjunction.",
     ],
-    tldr: ["`-{{word:de}}` stacks any number of modifiers before a noun as one left-to-right block -- no separate re-grouping particle is needed."],
-    necessity: ["Confirms that long modifier chains don't require new grammar -- they're just Lesson 4's `-{{word:de}}` rule applied repeatedly."],
   },
-  /** info: Modifier Stacking */
-  {
-    title: ["Modifier Stacking"],
+
+  vocabXiamian: { en: ["lowly, below, downward"] },
+  vocabButong: { en: ["different, altered"] },
+  vocabHe: { en: ["and"] },
+  vocabLeng: { en: ["cold, cool"] },
+  vocabDong: { en: ["door, hole, opening"] },
+  vocabKaishi: { en: ["to open, begin"] },
+  vocabYiyang: { en: ["same, similar, sibling"] },
+  vocabTian: { en: ["sweet, fragrant"] },
+  vocabDanshi: { en: ["but, however"] },
+  vocabGei: { en: ["to, for, from the perspective of"] },
+  vocabYe: { en: ["also"] },
+  vocabShangdeAi: { en: ["God (literally \"love from above\")"] },
+
+  proseDuiHeYe: {
+    en: [
+      "Hao-shuo-de handles subjective perspective the same way it handles everything else -- by reusing an existing construction instead of inventing a particle.",
+      "`{{word:dui4}} ... {{word:lai2}} {{word:shuo1}}` (\"regarding ... to say,\" i.e. \"from the perspective of\") frames a whole clause as one person's point of view.",
+      "To connect multiple subjects within one clause, use `{{word:he2}}` (\"and\").",
+      "But when a single subject does or is more than one thing in a row, Hao-shuo-de doesn't reach for a conjunction at all -- it just adds `{{word:ye3}}` (\"also\") in front of the second verb or adjective, the same adverbial slot other single-word adverbs already occupy.",
+    ],
+    tldr: { en: ["`{{word:dui4}} ... {{word:lai2}} {{word:shuo1}}` marks perspective, `{{word:he2}}` connects multiple subjects, and `{{word:ye3}}` sequences a second state onto the same subject."] },
+    necessity: { en: ["Distinguishes three constructions that can look similar in translation (\"and\", \"also\", \"from X's view\") but occupy different grammatical slots in Hao-shuo-de."] },
+  },
+  infoPerspectiveConnection: {
+    title: { en: ["Perspective and Connection"] },
     items: [
-      { text: ["A chain of modifiers stacks directly before its noun, each piece bound by `-{{word:de}}`, and reads left to right as one unified block resolving onto the final head noun -- no separate grouping particle is needed."] },
+      { en: ["**Perspective:** `{{word:dui4}} [person] {{word:lai2}} {{word:shuo1}}` frames the whole clause that follows as that person's point of view."] },
+      { en: ["**Multiple subjects:** join them with `{{word:he2}}` (\"and\"): `[Subject A] {{word:he2}} [Subject B] ...`."] },
+      { en: ["**Multiple actions/states on one subject:** skip the conjunction and place `{{word:ye3}}` (\"also\") directly before the second verb or adjective instead."] },
     ],
   },
 
-  /** example 1 */
-  ["Today is good."],
-  /** example 2 */
-  ["The healthy woman waters the plants."],
-  /** example 3 */
-  ["The Hao-shuo-de community gives many things."],
-  /** example 4 */
-  ["Wait a very long time."],
-  /** example 5 */
-  ["Don't use bad tools."],
-
-  /** exercise 1 */
-  ["This battlefield is small."],
-  /** exercise 2 */
-  ["Men with strong bodies were waiting."],
-  /** exercise 3 */
-  ["The sun gives benefit to the plants."],
-
-  /** answer 1 */
-  ["{{Word:zhe4}}-ge {{word:da4}}-{{word:de}} {{word:di4fang1}} {{word:hen3}} {{word:xiao3}}."],
-  /** answer 2 */
-  ["{{Word:you3}}-{{word:li4liang4}}-{{word:de}} {{word:shen1ti3}}-{{word:de}} {{word:nan2ren2}} {{word:zai4}} {{word:deng3}}."],
-  /** answer 3 */
-  ["{{Word:ri4}} {{word:ba3}} {{word:zhi2wu4}} {{word:bian4}} {{word:hao3}}."],
-];
+  example1: { en: ["I like sweets. / From my perspective, sweet things are good."] },
+  example2: { en: ["The universe is beautiful from the perspective of God."] },
+  example3: { en: ["The fatherland is small and cold."] },
+  example4: { en: ["But men and women are working and are happy."] },
+  example5: { en: ["My sister opened the first door and the second door."] },
+  example6: { en: ["Only your house is black. / Your house is black, not other houses."] },
+};
 
 export default en;

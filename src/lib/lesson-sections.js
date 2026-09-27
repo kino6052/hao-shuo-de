@@ -2,13 +2,12 @@
 // table of contents, so the sidebar TOC can group lessons the same way.
 // Keep this in sync with intro-3.ts if the curriculum changes.
 //
-// The book was resequenced so each section is a consecutive lesson-number
-// range (see BOOK_STRUCTURE.md) -- lesson-01..07, lesson-08..10, lesson-11..15.
-// lesson-16 through lesson-20 still hold their pre-intro-3 topics (Proper
-// Names & Geography, Modification Stacking, the three story lessons) and
-// aren't yet accounted for by any of the three sections, so they're left
-// out rather than force-fit somewhere misleading; the sidebar falls them
-// through to a generic "More Lessons" bucket instead.
+// The book is now exactly the 16 lessons intro-3 names, in three
+// consecutive-numbered sections (see BOOK_STRUCTURE.md): lesson-01..06,
+// lesson-07..10, lesson-11..16. Everything from the pre-intro-3 curriculum
+// that isn't one of these 16 topics (Proper Names & Geography, Modification
+// Stacking, the three story lessons, ...) was archived to
+// src/content/legacy/ instead of being renumbered into the book.
 export const LESSON_SECTIONS = [
   {
     key: "sectionFoundations",
@@ -33,6 +32,7 @@ export const LESSON_SECTIONS = [
       "lesson-13",
       "lesson-14",
       "lesson-15",
+      "lesson-16",
     ],
   },
 ];

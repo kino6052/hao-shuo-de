@@ -1,54 +1,41 @@
-// Chinese text, positionally matching shape.ts.
-// Not translated yet -- every slot is the empty-array placeholder.
-import type { LangContent } from "../../lib/chapter-shape-types.ts";
+// Chinese text for lesson-10, matching shape.ts's keys. Typed as
+// `PartialByKey<LessonShape>`. Not translated yet -- every `zh` is the
+// empty-array placeholder.
+import type { PartialByKey } from "../../lib/chapter-shape-types.ts";
+import type { LessonShape } from "./shape.ts";
 
-const zh: LangContent = [
-  /** title */
-  [],
-  /** summary */
-  [],
-  /** vocab: {{word:jue2de}} */
-  [],
-  /** vocab: shēngyīn */
-  [],
-  /** vocab: {{word:jiao4}} */
-  [],
-  /** vocab: {{word:ri4}} */
-  [],
-  /** prose */
-  { text: [] },
-  /** info */
-  { items: [] },
-  /** example: {{Word:ni3}} {{word:hao3}} {{word:ma}}? */
-  [],
-  /** example: {{Word:qu4}} {{word:ni3}}-{{word:de}} {{word:di4fang1}}! */
-  [],
-  /** example: {{Word:bu4}} {{word:shuo1}}. {{Word:zuo4}} {{word:dong1xi}}. */
-  [],
-  /** example: {{Word:wo3}} {{word:qu4}} {{word:le}}. */
-  [],
-  /** example: {{Word:na4}}-ge {{word:dong4wu4}} {{word:jiao4}} "wang-wang". */
-  [],
-  /** example: {{Word:wei4shen2me}} {{word:ni3}} {{word:jue2de}} {{word:huai4}}? */
-  [],
-  /** example: {{Word:ni3}} {{word:hen3}} {{word:da4}}! */
-  [],
-  /** example: {{Word:hao3}}-{{word:hao3}}-{{word:de}} {{word:ri4}}! */
-  [],
-  /** example: {{Word:hao3}}-{{word:hao3}} {{word:jue2de}}! */
-  [],
-  /** exercise */
-  [],
-  /** exercise */
-  [],
-  /** exercise */
-  [],
-  /** answer */
-  [],
-  /** answer */
-  [],
-  /** answer */
-  [],
-];
+const zh: PartialByKey<LessonShape> = {
+  title: { zh: [] },
+  summary: { zh: [] },
+  vocabBu: { zh: [] },
+  vocabHuai: { zh: [] },
+  vocabDuo: { zh: [] },
+  vocabFumu: { zh: [] },
+  vocabYi: { zh: [] },
+  vocabLiliang: { zh: [] },
+  proseBuildingAdjective: { zh: [] },
+  infoBuildingAdjective: { items: [{zh:[]}] },
+  proseAdjectivesAsAdverbs: { zh: [] },
+  infoAdjectivesAsAdverbs: { items: [{zh:[]}] },
+  proseStateChange: { zh: [] },
+  infoStateChange: { items: [{zh:[]}] },
+  infoCausative: { items: [{zh:[],items:[{zh:[]}]}] },
+  example1: { zh: [] },
+  example2: { zh: [] },
+  example3: { zh: [] },
+  example4: { zh: [] },
+  example5: { zh: [] },
+  example6: { zh: [] },
+  example7: { zh: [] },
+  example8: { zh: [] },
+  exercise1: { zh: [] },
+  exercise2: { zh: [] },
+  exercise3: { zh: [] },
+  exercise4: { zh: [] },
+  answer1: { zh: [] },
+  answer2: { zh: [] },
+  answer3: { zh: [] },
+  answer4: { zh: [] },
+};
 
 export default zh;

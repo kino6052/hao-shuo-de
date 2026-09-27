@@ -1,78 +1,45 @@
-// Russian text, positionally matching shape.ts.
-// Not translated yet -- every slot is the empty-array placeholder.
-import type { LangContent } from "../../lib/chapter-shape-types.ts";
+// Russian text for lesson-03, matching shape.ts's keys. Typed as
+// `PartialByKey<LessonShape>`. Not translated yet -- every `ru` is the
+// empty-array placeholder.
+import type { PartialByKey } from "../../lib/chapter-shape-types.ts";
+import type { LessonShape } from "./shape.ts";
 
-const ru: LangContent = [
-  /** title */
-  [],
-  /** summary */
-  [],
-  /** vocab: {{word:hen3}} */
-  [],
-  /** vocab: {{word:na4}} */
-  [],
-  /** vocab: {{word:ge4}} */
-  [],
-  /** vocab: {{word:duo1}} */
-  [],
-  /** vocab: {{word:shui3}} */
-  [],
-  /** vocab: {{word:di4fang1}} */
-  [],
-  /** vocab: {{word:xiao3}} */
-  [],
-  /** vocab: {{word:hao3}} */
-  [],
-  /** vocab: {{word:da4}} */
-  [],
-  /** prose */
-  { text: [] },
-  /** example: {{Word:zhe4}}-ge {{word:shi4}} {{word:ren2}}. */
-  [],
-  /** example: {{Word:na4}}-ge {{word:shi4}} {{word:shui3guo3}}. */
-  [],
-  /** prose */
-  { text: [] },
-  /** example: {{Word:shui3}} {{word:hen3}} {{word:hao3}}. */
-  [],
-  /** prose */
-  { text: [] },
-  /** example: {{Word:zhe4}}-ge {{word:shi4}} {{word:hen3}}-{{word:xiao3}}-{{word:de}} {{word:di4fang1}}. */
-  [],
-  /** example: {{Word:zhe4}}-ge {{word:shi4}} {{word:yi1}}-ge {{word:hen3}}-{{word:da4}}-{{word:de}} {{word:dong4wu4}}. */
-  [],
-  /** prose */
-  { text: [] },
-  /** example: {{Word:duo1}}-{{word:de}} {{word:dong1xi}} {{word:shi4}} {{word:xie3}}-{{word:de}} {{word:dong1xi}}. */
-  [],
-  /** exercise */
-  [],
-  /** exercise */
-  [],
-  /** exercise */
-  [],
-  /** exercise */
-  [],
-  /** exercise */
-  [],
-  /** exercise */
-  [],
-  /** exercise */
-  [],
-  /** answer */
-  [],
-  /** answer */
-  [],
-  /** answer */
-  [],
-  /** answer */
-  [],
-  /** answer */
-  [],
-  /** answer */
-  [],
-  /** answer */
-  [],
-];
+const ru: PartialByKey<LessonShape> = {
+  title: { ru: [] },
+  summary: { ru: [] },
+  vocabHen: { ru: [] },
+  vocabNa: { ru: [] },
+  vocabGe: { ru: [] },
+  vocabDuo: { ru: [] },
+  vocabShui: { ru: [] },
+  vocabDifang: { ru: [] },
+  vocabXiao: { ru: [] },
+  vocabHao: { ru: [] },
+  vocabDa: { ru: [] },
+  proseZheGeNaGe: { ru: [] },
+  example1: { ru: [] },
+  example2: { ru: [] },
+  proseHenConnector: { ru: [] },
+  example3: { ru: [] },
+  proseDeRequired: { ru: [] },
+  example4: { ru: [] },
+  example5: { ru: [] },
+  proseDuoGeDropsOut: { ru: [] },
+  example6: { ru: [] },
+  exercise1: { ru: [] },
+  exercise2: { ru: [] },
+  exercise3: { ru: [] },
+  exercise4: { ru: [] },
+  exercise5: { ru: [] },
+  exercise6: { ru: [] },
+  exercise7: { ru: [] },
+  answer1: { ru: [] },
+  answer2: { ru: [] },
+  answer3: { ru: [] },
+  answer4: { ru: [] },
+  answer5: { ru: [] },
+  answer6: { ru: [] },
+  answer7: { ru: [] },
+};
 
 export default ru;

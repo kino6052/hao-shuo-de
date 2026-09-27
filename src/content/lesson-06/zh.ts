@@ -1,62 +1,37 @@
-// Chinese text, positionally matching shape.ts.
-// Not translated yet -- every slot is the empty-array placeholder.
-import type { LangContent } from "../../lib/chapter-shape-types.ts";
+// Chinese text for lesson-06, matching shape.ts's keys. Typed as
+// `PartialByKey<LessonShape>`. Not translated yet -- every `zh` is the
+// empty-array placeholder.
+import type { PartialByKey } from "../../lib/chapter-shape-types.ts";
+import type { LessonShape } from "./shape.ts";
 
-const zh: LangContent = [
-  /** title */
-  [],
-  /** summary */
-  [],
-  /** vocab: {{word:gong1ju4}} */
-  [],
-  /** vocab: {{word:ta1}} */
-  [],
-  /** vocab: {{word:huo4zhe3}} */
-  [],
-  /** vocab: {{word:shen2me}} */
-  [],
-  /** vocab: {{word:wei4shen2me}} */
-  [],
-  /** vocab: {{word:zen3me}} */
-  [],
-  /** prose */
-  { text: [] },
-  /** info */
-  { items: [] },
-  /** prose */
-  { text: [] },
-  /** example: {{Word:shen2me}} {{word:shi4}} {{word:xin1}}-{{word:de}}? */
-  [],
-  /** example: {{Word:shen2me}} {{word:ren2}} {{word:zai4}} {{word:shuo1}}? */
-  [],
-  /** example: {{Word:ta1}} {{word:you3}}-méi-{{word:you3}} {{word:hen3}}-{{word:duo1}}-{{word:de}} {{word:shui3guo3}}? */
-  [],
-  /** example: {{Word:you3}}. */
-  [],
-  /** example: {{Word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}} {{word:fu4mu3}}? */
-  [],
-  /** example: {{Word:bu4}} {{word:ting1}}. */
-  [],
-  /** example: {{Word:ta1}} {{word:zai4}} {{word:chi1}} {{word:shen2me}}? */
-  [],
-  /** example: {{Word:ni3}} {{word:gei3}} {{word:ta1}} {{word:zai4}}-{{word:shui3}}-lǐ-{{word:de}} {{word:dong4wu4}} {{word:ma}}? */
-  [],
-  /** example: {{Word:wei4shen2me}} {{word:ni3}} {{word:gei3}} {{word:ta1}} {{word:zai4}}-{{word:shui3}}-lǐ-{{word:de}} {{word:dong4wu4}}? */
-  [],
-  /** example: {{Word:ni3}} {{word:zen3me}} {{word:ba3}} Hǎo-shuō-de {{word:bian4}} {{word:zhi1dao4}}? */
-  [],
-  /** exercise */
-  [],
-  /** exercise */
-  [],
-  /** exercise */
-  [],
-  /** answer */
-  [],
-  /** answer */
-  [],
-  /** answer */
-  [],
-];
+const zh: PartialByKey<LessonShape> = {
+  title: { zh: [] },
+  summary: { zh: [] },
+  vocabGongju: { zh: [] },
+  vocabTa: { zh: [] },
+  vocabHuozhe: { zh: [] },
+  vocabShenme: { zh: [] },
+  vocabWeishenme: { zh: [] },
+  vocabZenme: { zh: [] },
+  proseQuestionWordsInSitu: { zh: [] },
+  infoYesNoQuestions: { items: [{zh:[],items:[{zh:[]},{zh:[]}]}] },
+  proseAnsweringYesNo: { zh: [] },
+  example1: { zh: [] },
+  example2: { zh: [] },
+  example3: { zh: [] },
+  example4: { zh: [] },
+  example5: { zh: [] },
+  example6: { zh: [] },
+  example7: { zh: [] },
+  example8: { zh: [] },
+  example9: { zh: [] },
+  example10: { zh: [] },
+  exercise1: { zh: [] },
+  exercise2: { zh: [] },
+  exercise3: { zh: [] },
+  answer1: { zh: [] },
+  answer2: { zh: [] },
+  answer3: { zh: [] },
+};
 
 export default zh;

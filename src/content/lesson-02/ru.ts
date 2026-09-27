@@ -1,68 +1,40 @@
-// Russian text, positionally matching shape.ts.
-// Not translated yet -- every slot is the empty-array placeholder.
-import type { LangContent } from "../../lib/chapter-shape-types.ts";
+// Russian text for lesson-02, matching shape.ts's keys. Typed as
+// `PartialByKey<LessonShape>`. Not translated yet -- every `ru` is the
+// empty-array placeholder.
+import type { PartialByKey } from "../../lib/chapter-shape-types.ts";
+import type { LessonShape } from "./shape.ts";
 
-const ru: LangContent = [
-  /** title */
-  [],
-  /** summary */
-  [],
-  /** vocab: {{word:dong1xi}} */
-  [],
-  /** vocab: {{word:ren2}} */
-  [],
-  /** vocab: {{word:shui3guo3}} */
-  [],
-  /** vocab: {{word:xie3}}-{{word:de}} {{word:dong1xi}} */
-  [],
-  /** vocab: {{word:nv3ren2}} */
-  [],
-  /** vocab: {{word:zhe4}} */
-  [],
-  /** vocab: {{word:dong4wu4}} */
-  [],
-  /** prose */
-  { text: [] },
-  /** example: {{Word:zhe4}} {{word:shi4}} {{word:ren2}}. */
-  [],
-  /** example: {{Word:zhe4}} {{word:shi4}} {{word:shui3guo3}}. */
-  [],
-  /** example: {{Word:xie3}}-{{word:de}} {{word:dong1xi}} {{word:shi4}} {{word:dong1xi}}. */
-  [],
-  /** example: {{Word:ren2}} {{word:shi4}} {{word:nv3ren2}}. */
-  [],
-  /** example: {{Word:dong4wu4}} {{word:shi4}} {{word:dong1xi}}. */
-  [],
-  /** example: {{Word:nv3ren2}} {{word:shi4}} {{word:ren2}}. */
-  [],
-  /** exercise */
-  [],
-  /** exercise */
-  [],
-  /** exercise */
-  [],
-  /** exercise */
-  [],
-  /** exercise */
-  [],
-  /** exercise */
-  [],
-  /** exercise */
-  [],
-  /** answer */
-  [],
-  /** answer */
-  [],
-  /** answer */
-  [],
-  /** answer */
-  [],
-  /** answer */
-  [],
-  /** answer */
-  [],
-  /** answer */
-  [],
-];
+const ru: PartialByKey<LessonShape> = {
+  title: { ru: [] },
+  summary: { ru: [] },
+  vocabDongxi: { ru: [] },
+  vocabRen: { ru: [] },
+  vocabShuiguo: { ru: [] },
+  vocabXiedeDongxi: { ru: [] },
+  vocabNvren: { ru: [] },
+  vocabZhe: { ru: [] },
+  vocabDongwu: { ru: [] },
+  proseNounShiNoun: { ru: [] },
+  example1: { ru: [] },
+  example2: { ru: [] },
+  example3: { ru: [] },
+  example4: { ru: [] },
+  example5: { ru: [] },
+  example6: { ru: [] },
+  exercise1: { ru: [] },
+  exercise2: { ru: [] },
+  exercise3: { ru: [] },
+  exercise4: { ru: [] },
+  exercise5: { ru: [] },
+  exercise6: { ru: [] },
+  exercise7: { ru: [] },
+  answer1: { ru: [] },
+  answer2: { ru: [] },
+  answer3: { ru: [] },
+  answer4: { ru: [] },
+  answer5: { ru: [] },
+  answer6: { ru: [] },
+  answer7: { ru: [] },
+};
 
 export default ru;

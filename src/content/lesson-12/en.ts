@@ -1,78 +1,57 @@
-// English text for lesson-12, positionally matching shape.ts.
-import type { LangContent } from "../../lib/chapter-shape-types.ts";
+// English text for lesson-12, matching shape.ts's keys. Typed as
+// `PartialByKey<LessonShape>`. No comments repeated in this file.
+import type { PartialByKey } from "../../lib/chapter-shape-types.ts";
+import type { LessonShape } from "./shape.ts";
 
-const en: LangContent = [
-  /** title */
-  ["Colors and la"],
-  /** summary */
-  [
-    "Where Toki Pona would use the particle _la_ to frame a condition or context, Hao-shuo-de just fronts the context phrase and follows it with a comma, and colors behave like any other two-syllable adjective, binding to their noun with `-{{word:de}}`.",
-  ],
-
-  /** vocab: huángsè */
-  ["yellow"],
-  /** vocab: lánsè */
-  ["blue, green"],
-  /** vocab: hóngsè */
-  ["red"],
-  /** vocab: hēisè */
-  ["black, dark"],
-  /** vocab: báisè */
-  ["white, pale"],
-
-  /** prose: no la particle -- context/condition is a fronted clause followed by a comma */
-  {
-    text: [
-      "Toki Pona sets aside a whole particle, _la_, just to mark a frame of reference or an \"if/when\" condition ahead of the main clause.",
-      "Hao-shuo-de doesn't need one: the sentence itself already tells you what's context and what's the main statement, purely from where things sit.",
-      "Put the context or condition phrase at the very start of the sentence, immediately followed by a pause -- a comma -- and everything after that comma is the main statement it applies to.",
+const en: PartialByKey<LessonShape> = {
+  title: { en: ["Greetings and Feelings"] },
+  summary: {
+    en: [
+      "Greetings, commands, animal sounds, and blessings all reuse ordinary Hao-shuo-de sentence patterns rather than dedicated particles: a bare verb opens a command, `{{word:jiao4}}` plus a quoted sound reports an animal noise, and doubling an adjective and binding it with `-{{word:de}}` turns a description into a wish.",
     ],
-    tldr: ["A fronted phrase followed by a comma marks context or condition -- no separate particle like Toki Pona's _la_ is needed."],
-    necessity: ["Explains sentences that open with a time/condition clause before any dedicated marker word ever appears for it."],
   },
-  /** info: Fronted Context Clause */
-  {
-    title: ["Fronted Context Clause"],
+
+  vocabJuede: { en: ["to feel, think"] },
+  vocabShengyin: { en: ["sound, noise"] },
+  vocabJiao: { en: ["to call, make an animal sound (used alongside the Quote Partition)"] },
+  vocabRi: { en: ["sun, light"] },
+
+  proseReusedPatterns: {
+    en: [
+      "Hao-shuo-de doesn't set aside a special particle for greetings or commands the way some invented languages do -- it reuses patterns you already know.",
+      'A greeting is just a `{{word:ma}}`-question ("Are you well?"), a command is just a bare verb statement with the subject dropped, an animal sound is just the verb `{{word:jiao4}}` ("to call") followed by the sound in quotes, and a blessing is just a doubled adjective bound with `-{{word:de}}`.',
+      "None of these needs new grammar -- only a new habit for how to use grammar you already have.",
+    ],
+    tldr: { en: ["Greetings, commands, animal sounds, and blessings all reuse existing sentence patterns -- no dedicated particles."] },
+    necessity: { en: ["Sets expectations before the examples: nothing below is a new grammatical category, just a familiar pattern used for a new purpose."] },
+  },
+  infoGreetingsCommandsBlessings: {
+    title: { en: ["Greetings, Commands, and Blessings"] },
     items: [
-      { text: ["[Context / Condition Phrase], [Main Statement] -- the context phrase always comes first, set off by a comma."] },
+      { en: ["**Greetings:** expressed using foundational semantic combinations like `{{word:ni3}} {{word:hao3}} {{word:ma}}?` (\"Are you well?\") or descriptive movements."] },
+      { en: ["**Imperatives:** commands or requests are formed simply by using a bare verb statement at the start of a clause, with the subject dropped."] },
+      { en: ["**Animal Sounds:** handled via the verb `{{word:jiao4}}` paired with the Quote Partition, which isolates onomatopoeia inside quotation marks rather than treating them as new dictionary words."] },
+      { en: ["**Wishing Someone Something:** reduplicating an adjective and binding the repeated pair with `-{{word:de}}` turns a plain description into a blessing rather than just a fact -- `{{word:hao3}}-{{word:hao3}}-{{word:de}} {{word:ri4}}` doesn't only describe a good day, it wishes one on whoever you're speaking to. The hyphen keeps the doubling explicit, the same way `{{word:hen3}}-{{word:da4}}-{{word:de}}` explicitly marks intensification, instead of letting it blur into the unmarked doubling spoken Mandarin does on its own."] },
     ],
   },
-  /** prose: colors are two-syllable adjectives, binding to their noun with -de */
-  {
-    text: [
-      "Colors don't need any special grammar of their own -- each one is just a two-syllable adjective, and adjectives already have a job description from Lesson 4.",
-      "When a color modifies a target noun, it binds to it with `-{{word:de}}` via a hyphen, exactly the way any other adjective does.",
-    ],
-    tldr: ["Colors are ordinary two-syllable adjectives -- they bind to their noun with `-{{word:de}}` like any other."],
-    necessity: ["Confirms colors don't introduce a new grammatical category -- Lesson 4's adjective rule already covers them."],
-  },
 
-  /** example 1 */
-  ["Tonight / during this dark time, he is coming."],
-  /** example 2 */
-  ["If you see yellow water, don't drink it."],
-  /** example 3 */
-  ["The blue/green tool is in the white place."],
-  /** example 4 */
-  ["What time are your parents coming?"],
-  /** example 5 */
-  ["If my body turns blue, this is very bad."],
-  /** example 6 */
-  ["In a group, we are strong."],
+  example1: { en: ["Hello! / Are you well?"] },
+  example2: { en: ["Go to your room!"] },
+  example3: { en: ["Don't speak. Take action."] },
+  example4: { en: ["I am going. / Goodbye."] },
+  example5: { en: ["That animal goes \"woof woof\"."] },
+  example6: { en: ["Why are you sad / feeling bad?"] },
+  example7: { en: ["You're so big!"] },
+  example8: { en: ["Have a nice day!"] },
+  example9: { en: ["Thank you! (Literally, may you feel good)"] },
 
-  /** exercise 1 */
-  ["When the sun is red, it is the right time."],
-  /** exercise 2 */
-  ["If we don't have any meat, we will eat fruit."],
-  /** exercise 3 */
-  ["I feel bad because of the large battle."],
+  exercise1: { en: ["Give the tool to me."] },
+  exercise2: { en: ["\"Lisa\" is happy."] },
+  exercise3: { en: ["Meow!"] },
 
-  /** answer 1 */
-  ["{{Word:shang4mian4}}-{{word:de}}-{{word:ri4}} {{word:hong2se4}}-{{word:de}} {{word:shi2jian1}}, {{word:shi4}} {{word:hao3}}-{{word:de}} {{word:shi2jian1}}."],
-  /** answer 2 */
-  ["{{Word:wo3}} {{word:he2}} {{word:ni3}} {{word:he2}} {{word:ta1}} {{word:mei2}}-{{word:you3}} {{word:dong4wu4}} {{word:dong1xi}}, {{word:wo3}} {{word:he2}} {{word:ni3}} {{word:he2}} {{word:ta1}} {{word:chi1}} {{word:shui3guo3}}."],
-  /** answer 3 */
-  ["{{Word:you3}} {{word:da4}}-{{word:de}} {{word:da3}}, {{word:wo3}} {{word:jue2de}} {{word:huai4}}."],
-];
+  answer1: { en: ["{{Word:gei3}} {{word:wo3}} {{word:gong1ju4}}."] },
+  answer2: { en: ['"Lisa" {{word:jue2de}} {{word:hao3}}.'] },
+  answer3: { en: ['{{Word:jiao4}} "miao-miao"!'] },
+};
 
 export default en;

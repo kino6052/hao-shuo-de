@@ -1,59 +1,185 @@
-// Language-independent block sequence for lesson-10 ("Greetings and Feelings").
+// Language-independent block sequence for lesson-10 ("More Modifiers").
 // See src/lib/chapter-shape-types.ts / assemble-chapter.js.
-import type { Shape } from "../../lib/chapter-shape-types.ts";
+import type {
+  TTitle,
+  TSummary,
+  TVocab,
+  TProse,
+  TInfo,
+  TInfoItem,
+  TExample,
+  TExercise,
+  TAnswer,
+} from "../../lib/chapter-shape-types.ts";
 
-const shape: Shape = [
+export type LessonShape = {
   /** Chapter title. */
-  { type: "title" },
+  title: TTitle;
   /** Chapter summary. */
-  { type: "summary" },
+  summary: TSummary;
 
-  /** Vocabulary: "to feel, think". */
-  { type: "vocab", term: "{{word:jue2de}}", ttsText: "觉得" },
-  /** Vocabulary: "sound, noise" (bare pinyin -- not yet in the dictionary). */
-  { type: "vocab", term: "shēngyīn" },
-  /** Vocabulary: "to call, make an animal sound (used alongside the Quote Partition)". */
-  { type: "vocab", term: "{{word:jiao4}}", ttsText: "叫" },
-  /** Vocabulary: "sun, light". */
-  { type: "vocab", term: "{{word:ri4}}", ttsText: "日" },
+  /** Vocabulary: "not, no". */
+  vocabBu: TVocab;
+  /** Vocabulary: "bad, negative, broken". */
+  vocabHuai: TVocab;
+  /** Vocabulary: "many, a lot, very". */
+  vocabDuo: TVocab;
+  /** Vocabulary: "parent, ancestor". */
+  vocabFumu: TVocab;
+  /** Vocabulary: "one, united". */
+  vocabYi: TVocab;
+  /** Vocabulary: "power, energy". */
+  vocabLiliang: TVocab;
 
-  /** Grammar: greetings/imperatives/blessings reuse ordinary sentence patterns instead of dedicated particles. */
-  { type: "prose", hasTldr: true, hasNecessity: true },
-  /** Grammar rule box: Greetings, Commands, and Blessings -- 4 patterns (greetings, imperatives, animal sounds, wishes). */
-  { type: "info", hasTitle: true, subtype: "grammar", tag: "expressions/greetings-and-wishes", items: [{}, {}, {}, {}] },
+  /** Grammar: "strong" is built by composing you3 + li4liang4, bound with -de. */
+  proseBuildingAdjective: TProse;
+  /** Grammar rule box: Building an Adjective (word composition when the dictionary lacks one). */
+  infoBuildingAdjective: TInfo & { items: [TInfoItem] };
 
-  /** Example: nǐ hǎo ma? */
-  { type: "example", pinyin: "{{Word:ni3}} {{word:hao3}} {{word:ma}}?" },
-  /** Example: qù nǐ-de dìfāng! */
-  { type: "example", pinyin: "{{Word:qu4}} {{word:ni3}}-{{word:de}} {{word:di4fang1}}!" },
-  /** Example: bù shuō. Zuò dōngxi. */
-  { type: "example", pinyin: "{{Word:bu4}} {{word:shuo1}}. {{Word:zuo4}} {{word:dong1xi}}." },
-  /** Example: wǒ qù le. */
-  { type: "example", pinyin: "{{Word:wo3}} {{word:qu4}} {{word:le}}." },
-  /** Example: nà-ge dòngwù jiào "wang-wang". */
-  { type: "example", pinyin: '{{Word:na4}}-ge {{word:dong4wu4}} {{word:jiao4}} "wang-wang".' },
-  /** Example: wèishénme nǐ juéde huài? */
-  { type: "example", pinyin: "{{Word:wei4shen2me}} {{word:ni3}} {{word:jue2de}} {{word:huai4}}?" },
-  /** Example: nǐ hěn dà! */
-  { type: "example", pinyin: "{{Word:ni3}} {{word:hen3}} {{word:da4}}!" },
-  /** Example: hǎo-hǎo-de rì! */
-  { type: "example", pinyin: "{{Word:hao3}}-{{word:hao3}}-{{word:de}} {{word:ri4}}!" },
-  /** Example: hǎo-hǎo juéde! */
-  { type: "example", pinyin: "{{Word:hao3}}-{{word:hao3}} {{word:jue2de}}!" },
+  /** Grammar: an adjective placed before another adjective or verb acts as an adverb. */
+  proseAdjectivesAsAdverbs: TProse;
+  /** Grammar rule box: Adjectives as Adverbs. */
+  infoAdjectivesAsAdverbs: TInfo & { items: [TInfoItem] };
 
-  /** Exercise 1: Give the tool to me. */
-  { type: "exercise" },
-  /** Exercise 2: "Lisa" is happy. */
-  { type: "exercise" },
-  /** Exercise 3: Meow! */
-  { type: "exercise" },
+  /** Grammar: le attached to an adjective marks a change of state (not simply "it is"). */
+  proseStateChange: TProse;
+  /** Grammar rule box: State Change with le. */
+  infoStateChange: TInfo & { items: [TInfoItem] };
+  /** Grammar rule box: The Causative Rule -- ba3...bian4 turns an adjective into a caused action. */
+  infoCausative: TInfo & { items: [TInfoItem & { items: [TInfoItem] }] };
+
+  /** Example: nǐ-de zuò-de hěn hǎo. */
+  example1: TExample;
+  /** Example: shuǐ gěi wǒ lìliàng. */
+  example2: TExample;
+  /** Example: nǐ shì yǒu-lìliàng-de nánrén. */
+  example3: TExample;
+  /** Example: zhīdào-de rén kàn xiě-de dōngxi. */
+  example4: TExample;
+  /** Example: xiǎo-de nǚrén méiyǒu hǎo-de tīng fùmǔ. */
+  example5: TExample;
+  /** Example: shuǐ hǎo le. */
+  example6: TExample;
+  /** Example: méiyǒu rén shì huài-de. */
+  example7: TExample;
+  /** Example: nánrén-de fùmǔ duō-de kàn xiě-de dōngxi. */
+  example8: TExample;
+
+  /** Exercise 1: The man doesn't eat bad fruit. */
+  exercise1: TExercise;
+  /** Exercise 2: Eating makes me tall. */
+  exercise2: TExercise;
+  /** Exercise 3: I know Hao-shuo-de a bit. */
+  exercise3: TExercise;
+  /** Exercise 4: The community has become strong. */
+  exercise4: TExercise;
 
   /** Answer 1. */
-  { type: "answer" },
+  answer1: TAnswer;
   /** Answer 2. */
-  { type: "answer" },
+  answer2: TAnswer;
   /** Answer 3. */
-  { type: "answer" },
-];
+  answer3: TAnswer;
+  /** Answer 4. */
+  answer4: TAnswer;
+};
+
+const shape: LessonShape = {
+  title: { type: "title" },
+  summary: { type: "summary" },
+
+  vocabBu: { type: "vocab", term: "{{word:bu4}}", ttsText: "不" },
+  vocabHuai: { type: "vocab", term: "{{word:huai4}}", ttsText: "坏" },
+  vocabDuo: { type: "vocab", term: "{{word:duo1}}", ttsText: "多" },
+  vocabFumu: { type: "vocab", term: "{{word:fu4mu3}}", ttsText: "父母" },
+  vocabYi: { type: "vocab", term: "{{word:yi1}}", ttsText: "一" },
+  vocabLiliang: { type: "vocab", term: "{{word:li4liang4}}", ttsText: "力量" },
+
+  proseBuildingAdjective: { type: "prose" },
+  infoBuildingAdjective: {
+    type: "info",
+    subtype: "grammar",
+    tag: "adjectives/composition",
+    items: [{}],
+  },
+
+  proseAdjectivesAsAdverbs: { type: "prose" },
+  infoAdjectivesAsAdverbs: {
+    type: "info",
+    subtype: "grammar",
+    tag: "adjectives/adverbial-use",
+    items: [{}],
+  },
+
+  proseStateChange: { type: "prose" },
+  infoStateChange: {
+    type: "info",
+    subtype: "grammar",
+    tag: "adjectives/state-change",
+    items: [{}],
+  },
+  infoCausative: {
+    type: "info",
+    subtype: "grammar",
+    tag: "adjectives/causative",
+    items: [{ items: [{}] }],
+  },
+
+  example1: {
+    type: "example",
+    pinyin:
+      "{{Word:ni3}}-{{word:de}} {{word:nong4}}-{{word:de}} {{word:hen3}} {{word:hao3}}.",
+    ttsText: "你的做的很好。",
+  },
+  example2: {
+    type: "example",
+    pinyin: "{{Word:shui3}} {{word:gei3}} {{word:wo3}} {{word:li4liang4}}.",
+    ttsText: "水给我力量。",
+  },
+  example3: {
+    type: "example",
+    pinyin:
+      "{{Word:ni3}} {{word:shi4}} {{word:you3}}-{{word:li4liang4}}-{{word:de}} {{word:nan2ren2}}.",
+    ttsText: "你是有力量的男人。",
+  },
+  example4: {
+    type: "example",
+    pinyin:
+      "{{Word:zhi1dao4}}-{{word:de}} {{word:ren2}} {{word:kan4}} {{word:xie3}}-{{word:de}} {{word:dong1xi}}.",
+    ttsText: "知道的人看写的东西。",
+  },
+  example5: {
+    type: "example",
+    pinyin:
+      "{{Word:xiao3}}-{{word:de}} {{word:nv3ren2}} méiyǒu {{word:hao3}}-{{word:de}} {{word:ting1}} {{word:fu4mu3}}.",
+    ttsText: "小的女人没有好的听父母。",
+  },
+  example6: {
+    type: "example",
+    pinyin: "{{Word:shui3}} {{word:hao3}} {{word:le}}.",
+    ttsText: "水好了。",
+  },
+  example7: {
+    type: "example",
+    pinyin: "Méiyǒu {{word:ren2}} {{word:shi4}} {{word:huai4}}-{{word:de}}.",
+    ttsText: "没有人是坏的。",
+  },
+  example8: {
+    type: "example",
+    pinyin:
+      "{{Word:nan2ren2}}-{{word:de}} {{word:fu4mu3}} {{word:duo1}}-{{word:de}} {{word:kan4}} {{word:xie3}}-{{word:de}} {{word:dong1xi}}.",
+    ttsText: "男人的父母多的看写的东西。",
+  },
+
+  exercise1: { type: "exercise" },
+  exercise2: { type: "exercise" },
+  exercise3: { type: "exercise" },
+  exercise4: { type: "exercise" },
+
+  answer1: { type: "answer", ttsText: "男人不吃坏的水果。" },
+  answer2: { type: "answer", ttsText: "吃把我变大。" },
+  answer3: { type: "answer", ttsText: "好说的，我知道的不多。" },
+  answer4: { type: "answer", ttsText: "群有力量了。" },
+};
 
 export default shape;

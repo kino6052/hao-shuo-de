@@ -1,57 +1,134 @@
-// Language-independent block sequence for lesson-12 ("Colors and la").
+// Language-independent block sequence for lesson-12 ("Greetings and Feelings").
 // See src/lib/chapter-shape-types.ts / assemble-chapter.js.
-import type { Shape } from "../../lib/chapter-shape-types.ts";
+import type {
+  TTitle,
+  TSummary,
+  TVocab,
+  TProse,
+  TInfo,
+  TInfoItem,
+  TExample,
+  TExercise,
+  TAnswer,
+} from "../../lib/chapter-shape-types.ts";
 
-const shape: Shape = [
+export type LessonShape = {
   /** Chapter title. */
-  { type: "title" },
+  title: TTitle;
   /** Chapter summary. */
-  { type: "summary" },
+  summary: TSummary;
 
-  /** Vocabulary: "yellow". */
-  { type: "vocab", term: "{{word:huang2se4}}", ttsText: "黄色" },
-  /** Vocabulary: "blue, green". */
-  { type: "vocab", term: "{{word:lan2se4}}", ttsText: "蓝色" },
-  /** Vocabulary: "red". */
-  { type: "vocab", term: "{{word:hong2se4}}", ttsText: "红色" },
-  /** Vocabulary: "black, dark". */
-  { type: "vocab", term: "{{word:hei1se4}}", ttsText: "黑色" },
-  /** Vocabulary: "white, pale". */
-  { type: "vocab", term: "{{word:bai2se4}}", ttsText: "白色" },
+  /** Vocabulary: "to feel, think". */
+  vocabJuede: TVocab;
+  /** Vocabulary: "sound, noise" (bare pinyin -- not yet in the dictionary). */
+  vocabShengyin: TVocab;
+  /** Vocabulary: "to call, make an animal sound (used alongside the Quote Partition)". */
+  vocabJiao: TVocab;
+  /** Vocabulary: "sun, light". */
+  vocabRi: TVocab;
 
-  /** Grammar: no la particle -- context/condition is a fronted clause followed by a comma. */
-  { type: "prose", hasTldr: true, hasNecessity: true },
-  /** Grammar rule box: Fronted Context Clause. */
-  { type: "info", hasTitle: true, subtype: "grammar", tag: "sentences/fronted-context", items: [{}] },
-  /** Grammar: colors are two-syllable adjectives, binding to their noun with -de like any other. */
-  { type: "prose", hasTldr: true, hasNecessity: true },
+  /** Grammar: greetings/imperatives/blessings reuse ordinary sentence patterns instead of dedicated particles. */
+  proseReusedPatterns: TProse;
+  /** Grammar rule box: Greetings, Commands, and Blessings -- 4 patterns (greetings, imperatives, animal sounds, wishes). */
+  infoGreetingsCommandsBlessings: TInfo & {
+    items: [TInfoItem, TInfoItem, TInfoItem, TInfoItem];
+  };
 
-  /** Example: zhè-ge hēisè-de shíjiān, tā lái. */
-  { type: "example", pinyin: "{{Word:zhe4}}-ge {{word:hei1se4}}-{{word:de}} {{word:shi2jian1}}, {{word:ta1}} {{word:lai2}}." },
-  /** Example: nǐ kàn-jiàn huángsè-de shuǐ, bù chī tā. */
-  { type: "example", pinyin: "{{Word:ni3}} {{word:kan4}}-jiàn {{word:huang2se4}}-{{word:de}} {{word:shui3}}, {{word:bu4}} {{word:chi1}} {{word:ta1}}." },
-  /** Example: lánsè-de gōngjù zài báisè-de dìfāng. */
-  { type: "example", pinyin: "{{Word:lan2se4}}-{{word:de}} {{word:gong1ju4}} {{word:zai4}} {{word:bai2se4}}-{{word:de}} {{word:di4fang1}}." },
-  /** Example: shénme shíjiān nǐ fùmǔ lái? */
-  { type: "example", pinyin: "{{Word:shen2me}} {{word:shi2jian1}} {{word:ni3}} {{word:fu4mu3}} {{word:lai2}}?" },
-  /** Example: wǒ-de shēntǐ biàn lánsè, zhè-ge hěn huài. */
-  { type: "example", pinyin: "{{Word:wo3}}-{{word:de}} {{word:shen1ti3}} {{word:bian4}} {{word:lan2se4}}, {{word:zhe4}}-ge {{word:hen3}} {{word:huai4}}." },
-  /** Example: hěn-duō-rén-de dìfāng, wǒ hé nǐ hé tā hěn yǒu lìliàng. */
-  { type: "example", pinyin: "{{Word:hen3}}-{{word:duo1}}-{{word:ren2}}-{{word:de}} {{word:di4fang1}}, {{word:wo3}} {{word:he2}} {{word:ni3}} {{word:he2}} {{word:ta1}} {{word:hen3}} {{word:you3}} {{word:li4liang4}}." },
+  /** Example: nǐ hǎo ma? */
+  example1: TExample;
+  /** Example: qù nǐ-de dìfāng! */
+  example2: TExample;
+  /** Example: bù shuō. Zuò dōngxi. */
+  example3: TExample;
+  /** Example: wǒ qù le. */
+  example4: TExample;
+  /** Example: nà-ge dòngwù jiào "wang-wang". */
+  example5: TExample;
+  /** Example: wèishénme nǐ juéde huài? */
+  example6: TExample;
+  /** Example: nǐ hěn dà! */
+  example7: TExample;
+  /** Example: hǎo-hǎo-de rì! */
+  example8: TExample;
+  /** Example: hǎo-hǎo juéde! */
+  example9: TExample;
 
-  /** Exercise 1: When the sun is red, it is the right time. */
-  { type: "exercise" },
-  /** Exercise 2: If we don't have any meat, we will eat fruit. */
-  { type: "exercise" },
-  /** Exercise 3: I feel bad because of the large battle. */
-  { type: "exercise" },
+  /** Exercise 1: Give the tool to me. */
+  exercise1: TExercise;
+  /** Exercise 2: "Lisa" is happy. */
+  exercise2: TExercise;
+  /** Exercise 3: Meow! */
+  exercise3: TExercise;
 
   /** Answer 1. */
-  { type: "answer" },
+  answer1: TAnswer;
   /** Answer 2. */
-  { type: "answer" },
+  answer2: TAnswer;
   /** Answer 3. */
-  { type: "answer" },
-];
+  answer3: TAnswer;
+};
+
+const shape: LessonShape = {
+  title: { type: "title" },
+  summary: { type: "summary" },
+
+  vocabJuede: { type: "vocab", term: "{{word:jue2de}}", ttsText: "觉得" },
+  vocabShengyin: { type: "vocab", term: "shēngyīn" },
+  vocabJiao: { type: "vocab", term: "{{word:jiao4}}", ttsText: "叫" },
+  vocabRi: { type: "vocab", term: "{{word:ri4}}", ttsText: "日" },
+
+  proseReusedPatterns: { type: "prose" },
+  infoGreetingsCommandsBlessings: {
+    type: "info",
+    subtype: "grammar",
+    tag: "expressions/greetings-and-wishes",
+    items: [{}, {}, {}, {}],
+  },
+
+  example1: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:hao3}} {{word:ma}}?",
+  },
+  example2: {
+    type: "example",
+    pinyin: "{{Word:qu4}} {{word:ni3}}-{{word:de}} {{word:di4fang1}}!",
+  },
+  example3: {
+    type: "example",
+    pinyin: "{{Word:bu4}} {{word:shuo1}}. {{Word:nong4}} {{word:dong1xi}}.",
+  },
+  example4: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:qu4}} {{word:le}}.",
+  },
+  example5: {
+    type: "example",
+    pinyin: '{{Word:na4}}-ge {{word:dong4wu4}} {{word:jiao4}} "wang-wang".',
+  },
+  example6: {
+    type: "example",
+    pinyin: "{{Word:wei4shen2me}} {{word:ni3}} {{word:jue2de}} {{word:huai4}}?",
+  },
+  example7: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:hen3}} {{word:da4}}!",
+  },
+  example8: {
+    type: "example",
+    pinyin: "{{Word:hao3}}-{{word:hao3}}-{{word:de}} {{word:ri4}}!",
+  },
+  example9: {
+    type: "example",
+    pinyin: "{{Word:hao3}}-{{word:hao3}} {{word:jue2de}}!",
+  },
+
+  exercise1: { type: "exercise" },
+  exercise2: { type: "exercise" },
+  exercise3: { type: "exercise" },
+
+  answer1: { type: "answer" },
+  answer2: { type: "answer" },
+  answer3: { type: "answer" },
+};
 
 export default shape;

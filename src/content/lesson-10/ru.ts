@@ -1,54 +1,41 @@
-// Russian text, positionally matching shape.ts.
-// Not translated yet -- every slot is the empty-array placeholder.
-import type { LangContent } from "../../lib/chapter-shape-types.ts";
+// Russian text for lesson-10, matching shape.ts's keys. Typed as
+// `PartialByKey<LessonShape>`. Not translated yet -- every `ru` is the
+// empty-array placeholder.
+import type { PartialByKey } from "../../lib/chapter-shape-types.ts";
+import type { LessonShape } from "./shape.ts";
 
-const ru: LangContent = [
-  /** title */
-  [],
-  /** summary */
-  [],
-  /** vocab: {{word:jue2de}} */
-  [],
-  /** vocab: shēngyīn */
-  [],
-  /** vocab: {{word:jiao4}} */
-  [],
-  /** vocab: {{word:ri4}} */
-  [],
-  /** prose */
-  { text: [] },
-  /** info */
-  { items: [] },
-  /** example: {{Word:ni3}} {{word:hao3}} {{word:ma}}? */
-  [],
-  /** example: {{Word:qu4}} {{word:ni3}}-{{word:de}} {{word:di4fang1}}! */
-  [],
-  /** example: {{Word:bu4}} {{word:shuo1}}. {{Word:zuo4}} {{word:dong1xi}}. */
-  [],
-  /** example: {{Word:wo3}} {{word:qu4}} {{word:le}}. */
-  [],
-  /** example: {{Word:na4}}-ge {{word:dong4wu4}} {{word:jiao4}} "wang-wang". */
-  [],
-  /** example: {{Word:wei4shen2me}} {{word:ni3}} {{word:jue2de}} {{word:huai4}}? */
-  [],
-  /** example: {{Word:ni3}} {{word:hen3}} {{word:da4}}! */
-  [],
-  /** example: {{Word:hao3}}-{{word:hao3}}-{{word:de}} {{word:ri4}}! */
-  [],
-  /** example: {{Word:hao3}}-{{word:hao3}} {{word:jue2de}}! */
-  [],
-  /** exercise */
-  [],
-  /** exercise */
-  [],
-  /** exercise */
-  [],
-  /** answer */
-  [],
-  /** answer */
-  [],
-  /** answer */
-  [],
-];
+const ru: PartialByKey<LessonShape> = {
+  title: { ru: [] },
+  summary: { ru: [] },
+  vocabBu: { ru: [] },
+  vocabHuai: { ru: [] },
+  vocabDuo: { ru: [] },
+  vocabFumu: { ru: [] },
+  vocabYi: { ru: [] },
+  vocabLiliang: { ru: [] },
+  proseBuildingAdjective: { ru: [] },
+  infoBuildingAdjective: { items: [{ru:[]}] },
+  proseAdjectivesAsAdverbs: { ru: [] },
+  infoAdjectivesAsAdverbs: { items: [{ru:[]}] },
+  proseStateChange: { ru: [] },
+  infoStateChange: { items: [{ru:[]}] },
+  infoCausative: { items: [{ru:[],items:[{ru:[]}]}] },
+  example1: { ru: [] },
+  example2: { ru: [] },
+  example3: { ru: [] },
+  example4: { ru: [] },
+  example5: { ru: [] },
+  example6: { ru: [] },
+  example7: { ru: [] },
+  example8: { ru: [] },
+  exercise1: { ru: [] },
+  exercise2: { ru: [] },
+  exercise3: { ru: [] },
+  exercise4: { ru: [] },
+  answer1: { ru: [] },
+  answer2: { ru: [] },
+  answer3: { ru: [] },
+  answer4: { ru: [] },
+};
 
 export default ru;
