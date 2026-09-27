@@ -3,10 +3,9 @@
 // LessonShape is this lesson's exact, hand-written type -- see lesson-01's
 // shape.ts for the full explanation of the pattern.
 //
-// Phase 1 skeleton (BOOK_PLAN.md): the vocab list follows BOOK_PLAN §4b, and
-// the other blocks were moved here unchanged from the old 16-lesson layout
-// ([from old LNN] says where; the old lessons are archived in
-// src/content/legacy/v2-16-lessons/). They get rewritten in Phase 2.
+// Rewritten in Phase 2 (BOOK_PLAN.md): done (le), right now (zài), will (huì), done before (guò), and saying the time first.
+// Only words from this lesson and earlier ones; passes every gate
+// (npm run check -- lesson-08).
 import type {
   TTitle,
   TSummary,
@@ -21,60 +20,102 @@ import type {
 export type LessonShape = {
   /** Time 1 — When it happens */
   title: TTitle;
-  /** Chapter summary: what you'll be able to say (stub until the Phase 2 rewrite). */
+  /** Chapter summary: why you'd want this, then what you'll be able to say. */
   summary: TSummary;
-  /** Vocabulary: "time, moment, occasion". */
+  /** Vocabulary: "time". */
   vocabShijian: TVocab;
-  /** Vocabulary: "a small word placed right after a verb to mark that the action is finished". */
+  /** Vocabulary: "after a verb: it's done". */
   vocabLe: TVocab;
-  /** Vocabulary: "placed right before a verb to mark the action as something that will happen". */
+  /** Vocabulary: "will". */
   vocabHui: TVocab;
-  /** Vocabulary: "to be at/in a place; placed right before a verb instead, it marks the action as happening right now". */
+  /** Vocabulary: "before a verb: right now". */
   vocabZai: TVocab;
-  /** Vocabulary: "sun". */
+  /** Vocabulary: "sun, day". */
   vocabRi: TVocab;
-  /** Vocabulary: "moon". */
+  /** Vocabulary: "moon, night". */
   vocabYue: TVocab;
   /** Vocabulary: "sleep". */
   vocabShuijiao: TVocab;
-  /** Vocabulary: "have ever done". */
+  /** Vocabulary: "after a verb: have done before". */
   vocabGuo: TVocab;
-  /** Grammar: verbs carry no tense themselves, need other words; le is equivalent to simple past in English [from old L05] */
-  proseLeCompletion: TProse;
-  /** Grammar rule box: le. [from old L05] */
-  infoCompletionMarker: TInfo;
-  /** Example: wo3 chi1 le. [from old L05] */
-  leExample1: TExample;
-  /** prose: `guò` attaches right after a verb the same way `{{word:le}}` does, but… [from old L05] */
-  proseGuo: TProse;
-  /** Example: wo3 ting1-guo Hao3-shuo1-de. [from old L05] */
-  guoExample1: TExample;
-  /** prose: `{{word:zai4}}` works differently from `{{word:le}}` and `guò`: instea… [from old L05] */
-  proseZai: TProse;
-  /** Example: ta1 zai4 chi1 dong1xi. [from old L05] */
-  zaiExample1: TExample;
-  /** prose: `{{word:hui4}}` also goes right in front of a verb, and marks that the… [from old L05] */
-  proseHui: TProse;
-  /** Example: wo3 hui4 chi1 dong1xi. [from old L05] */
-  huiExample1: TExample;
-  /** Example: dà-de dòngwù zài chī nǐ. [from old L05] */
-  example3: TExample;
-  /** Example: nǐ zuò le xīn-de chī. [from old L05] */
-  example5: TExample;
-  /** Example: shénme shíjiān tā lái? [from old L08] */
-  example1L08: TExample;
-  /** Exercise 2: The woman obeyed the man. [from old L05] */
+  /** Say: To say something is done, put le after the verb. Pattern: Who + verb + le */
+  proseDone: TProse;
+  /** Example: wǒ chī le. */
+  exampleDone1: TExample;
+  /** Example: tā shuìjiào le. */
+  exampleDone2: TExample;
+  /** Example: nǐ kàn le ma? */
+  exampleDone3: TExample;
+  /** Say: To say something is happening right now, put zài before the verb. Pattern: Who + zài + verb */
+  proseNow: TProse;
+  /** Example: wǒ zài chī. */
+  exampleNow1: TExample;
+  /** Example: tā zài shuìjiào. */
+  exampleNow2: TExample;
+  /** Example: nǐ zài kàn shénme? */
+  exampleNow3: TExample;
+  /** Say: To say something will happen, put huì before the verb. Pattern: Who + huì + verb */
+  proseWill: TProse;
+  /** Example: wǒ huì chī. */
+  exampleWill1: TExample;
+  /** Example: tā huì děng. */
+  exampleWill2: TExample;
+  /** Example: nǐ huì shuìjiào ma? */
+  exampleWill3: TExample;
+  /** Say: To say you have done something before, put guò after the verb. Pattern: Who + verb-guò */
+  proseBefore: TProse;
+  /** Example: wǒ chī-guò mǐfàn. */
+  exampleBefore1: TExample;
+  /** Example: nǐ kàn-guò yuè ma? */
+  exampleBefore2: TExample;
+  /** Example: tā shuō-guò. */
+  exampleBefore3: TExample;
+  /** Say: To say when, put the time first, then a comma, then the rest. Pattern: Time, who + verb */
+  proseTime: TProse;
+  /** Example: yuè-de shíjiān, wǒ shuìjiào. */
+  exampleTime1: TExample;
+  /** Example: rì-de shíjiān, wǒ chī. */
+  exampleTime2: TExample;
+  /** Example: shénme shíjiān nǐ chī? */
+  exampleTime3: TExample;
+  /** Example: wǒ kàn rì. */
+  exampleTime4: TExample;
+  /** Example: wǒ kàn yuè. */
+  exampleTime5: TExample;
+  /** Grammar box: le, zài, huì, guò, and putting the time first. */
+  infoWhenItHappens: TInfo;
+  /** Exercise 1: I slept. */
+  exercise1: TExercise;
+  /** Exercise 2: He is waiting right now. */
   exercise2: TExercise;
-  /** Exercise 3: The friends ate meat. [from old L05] */
+  /** Exercise 3: Will you write? */
   exercise3: TExercise;
-  /** Exercise 1: Ask "What time are you coming?" [from old L08] */
-  exercise1L08: TExercise;
-  /** Answer 2. [from old L05] */
+  /** Exercise 4: I've heard it before. */
+  exercise4: TExercise;
+  /** Exercise 5: What are you eating? */
+  exercise5: TExercise;
+  /** Exercise 6: When do you sleep? */
+  exercise6: TExercise;
+  /** Exercise 7: The sun is big. */
+  exercise7: TExercise;
+  /** Exercise 8: The moon is small. */
+  exercise8: TExercise;
+  /** Answer 1: wǒ shuìjiào le. */
+  answer1: TAnswer;
+  /** Answer 2: tā zài děng. */
   answer2: TAnswer;
-  /** Answer 3. [from old L05] */
+  /** Answer 3: nǐ huì xiě ma? */
   answer3: TAnswer;
-  /** Answer 1. [from old L08] */
-  answer1L08: TAnswer;
+  /** Answer 4: wǒ tīng-guò. */
+  answer4: TAnswer;
+  /** Answer 5: nǐ zài chī shénme? */
+  answer5: TAnswer;
+  /** Answer 6: shénme shíjiān nǐ shuìjiào? */
+  answer6: TAnswer;
+  /** Answer 7: rì hěn dà. */
+  answer7: TAnswer;
+  /** Answer 8: yuè hěn xiǎo. */
+  answer8: TAnswer;
 };
 
 const shape: LessonShape = {
@@ -96,57 +137,118 @@ const shape: LessonShape = {
     ttsText: "睡觉",
   },
   vocabGuo: { type: "vocab", term: "{{word:guo4}}", ttsText: "过" },
-  proseLeCompletion: { type: "prose" },
-  infoCompletionMarker: {
-    type: "info",
-    subtype: "grammar",
-    tag: "verbs/aspect",
-    items: [{}],
-  },
-  leExample1: {
+  proseDone: { type: "prose" },
+  exampleDone1: {
     type: "example",
     pinyin: "{{Word:wo3}} {{word:chi1}} {{word:le}}.",
     ttsText: "我吃了。",
   },
-  proseGuo: { type: "prose" },
-  guoExample1: {
+  exampleDone2: {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:ting1}}-guò Hǎo-shuō-de.",
-    ttsText: "我听过好说的。",
+    pinyin: "{{Word:ta1}} {{word:shui4jiao4}} {{word:le}}.",
+    ttsText: "他睡觉了。",
   },
-  proseZai: { type: "prose" },
-  zaiExample1: {
+  exampleDone3: {
     type: "example",
-    pinyin: "{{Word:ta1}} {{word:zai4}} {{word:chi1}} {{word:dong1xi}}.",
-    ttsText: "他在吃东西。",
+    pinyin: "{{Word:ni3}} {{word:kan4}} {{word:le}} {{word:ma}}?",
+    ttsText: "你看了吗？",
   },
-  proseHui: { type: "prose" },
-  huiExample1: {
+  proseNow: { type: "prose" },
+  exampleNow1: {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:hui4}} {{word:chi1}} {{word:dong1xi}}.",
-    ttsText: "我会吃东西。",
+    pinyin: "{{Word:wo3}} {{word:zai4}} {{word:chi1}}.",
+    ttsText: "我在吃。",
   },
-  example3: {
+  exampleNow2: {
     type: "example",
-    pinyin: "{{Word:da4}}-{{word:de}} {{word:dong4wu4}} {{word:zai4}} {{word:chi1}} {{word:ni3}}.",
-    ttsText: "大的动物在吃你。",
+    pinyin: "{{Word:ta1}} {{word:zai4}} {{word:shui4jiao4}}.",
+    ttsText: "她在睡觉。",
   },
-  example5: {
+  exampleNow3: {
     type: "example",
-    pinyin: "{{Word:ni3}} {{word:nong4}} {{word:le}} {{word:xin1}}-{{word:de}} {{word:chi1}}.",
-    ttsText: "你做了新的吃。",
+    pinyin: "{{Word:ni3}} {{word:zai4}} {{word:kan4}} {{word:shen2me}}?",
+    ttsText: "你在看什么？",
   },
-  example1L08: {
+  proseWill: { type: "prose" },
+  exampleWill1: {
     type: "example",
-    pinyin: "{{Word:shen2me}} {{word:shi2jian1}} {{word:ta1}} {{word:lai2}}?",
-    ttsText: "什么时间他来？",
+    pinyin: "{{Word:wo3}} {{word:hui4}} {{word:chi1}}.",
+    ttsText: "我会吃。",
   },
+  exampleWill2: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:hui4}} {{word:deng3}}.",
+    ttsText: "他会等。",
+  },
+  exampleWill3: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:hui4}} {{word:shui4jiao4}} {{word:ma}}?",
+    ttsText: "你会睡觉吗？",
+  },
+  proseBefore: { type: "prose" },
+  exampleBefore1: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:chi1}}-{{word:guo4}} {{word:mi3fan4}}.",
+    ttsText: "我吃过米饭。",
+  },
+  exampleBefore2: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:kan4}}-{{word:guo4}} {{word:yue4}} {{word:ma}}?",
+    ttsText: "你看过月吗？",
+  },
+  exampleBefore3: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:shuo1}}-{{word:guo4}}.",
+    ttsText: "他说过。",
+  },
+  proseTime: { type: "prose" },
+  exampleTime1: {
+    type: "example",
+    pinyin: "{{Word:yue4}}-{{word:de}} {{word:shi2jian1}}, {{word:wo3}} {{word:shui4jiao4}}.",
+    ttsText: "月的时间，我睡觉。",
+  },
+  exampleTime2: {
+    type: "example",
+    pinyin: "{{Word:ri4}}-{{word:de}} {{word:shi2jian1}}, {{word:wo3}} {{word:chi1}}.",
+    ttsText: "日的时间，我吃。",
+  },
+  exampleTime3: {
+    type: "example",
+    pinyin: "{{Word:shen2me}} {{word:shi2jian1}} {{word:ni3}} {{word:chi1}}?",
+    ttsText: "什么时间你吃？",
+  },
+  exampleTime4: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:kan4}} {{word:ri4}}.",
+    ttsText: "我看日。",
+  },
+  exampleTime5: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:kan4}} {{word:yue4}}.",
+    ttsText: "我看月。",
+  },
+  infoWhenItHappens: {
+    type: "info",
+    subtype: "grammar",
+    tag: "time/done-now-will-before",
+    items: [{}, {}, {}, {}, {}],
+  },
+  exercise1: { type: "exercise" },
   exercise2: { type: "exercise" },
   exercise3: { type: "exercise" },
-  exercise1L08: { type: "exercise" },
-  answer2: { type: "answer", ttsText: "女人听了男人。" },
-  answer3: { type: "answer", ttsText: "好的人吃了动物。" },
-  answer1L08: { type: "answer", ttsText: "什么时间你来？" },
+  exercise4: { type: "exercise" },
+  exercise5: { type: "exercise" },
+  exercise6: { type: "exercise" },
+  exercise7: { type: "exercise" },
+  exercise8: { type: "exercise" },
+  answer1: { type: "answer", ttsText: "我睡觉了。" },
+  answer2: { type: "answer", ttsText: "他在等。" },
+  answer3: { type: "answer", ttsText: "你会写吗？" },
+  answer4: { type: "answer", ttsText: "我听过。" },
+  answer5: { type: "answer", ttsText: "你在吃什么？" },
+  answer6: { type: "answer", ttsText: "什么时间你睡觉？" },
+  answer7: { type: "answer", ttsText: "日很大。" },
+  answer8: { type: "answer", ttsText: "月很小。" },
 };
 
 export default shape;

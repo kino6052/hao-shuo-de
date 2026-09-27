@@ -113,7 +113,7 @@ answers
 | New | Title | You'll be able to say… | Source |
 |----|-------|------------------------|--------|
 | 7 | Pre-Verbs | "I want to eat." / "I can hear." / "I know how to write." / "I love to eat." | L09 (kāishǐ → L9, biàn → L15) |
-| 8 | Time 1 — When it happens | "I ate." / "I'm eating right now." / "I will eat." / "Today, I sleep." | L05 time markers, L08 |
+| 8 | Time 1 — When it happens | "I ate." / "I'm eating right now." / "I will eat." / "I've eaten rice before." / "At night, I sleep." | L05 time markers, L08 |
 | 9 | Time 2 — Around an action | "When I eat, …" / "I finished eating." / "after eating" / "I started to play." | L08, L05 endings, L09 kāishǐ |
 | 10 | Space 1 — Where it is | "The box is on the table." / "inside the house" / "Where is it?" | L15, L07 zài |
 | 11 | Space 2 — Moving | "I come from the market." / "Go!" / "stand up" / "go out the door" | L15, L07 cóng, L05 direction endings |
@@ -264,7 +264,7 @@ What each lesson introduces, and why those words are there. **†** marks a dict
 - Core: shíjiān *time*, le *(it happened / it changed)*, huì *will*, zài *(right now, in the middle of)*
 - Theme: rì *sun*, yuè † *moon*, shuìjiào *sleep*
 - Added: guò *have ever done*
-- Why: "I ate." / "I'm eating right now." / "I will eat." / "I've been there." The sun and moon give day-and-night examples.
+- Why: "I ate." / "I'm eating right now." / "I will eat." / "I've eaten rice before." / "At night, I sleep." The sun and moon give day-and-night examples. There is no word for "today", so the time examples use the day and the night.
 
 **L9 Time 2 — Around an action** · 6 new · 65 / 148
 - Core: wán *finish*, kāishǐ *start*, hòu *after, behind*, qiánmiàn *before, in front*
@@ -372,7 +372,7 @@ Q1–Q4 were answered on 2026-09-27. New questions go here.
 
 `npm run build` starts with **`npm run check`** (`scripts/check-all.js`), which runs every gate below. It shows every report, then fails the build if any gate failed.
 
-**Strict for finished lessons.** The lessons in `scripts/finished-lessons.js` (L1–L7 so far) must pass every gate. Problems in other chapters are reported but don't fail the build. Add a lesson to that list once its Phase 2 rewrite passes every gate; from then on every build keeps it that way. Run a gate with chapter ids (`npm run check-jargon -- lesson-07`) to make it strict for just those, or with `--strict` for everything.
+**Strict for finished lessons.** The lessons in `scripts/finished-lessons.js` (L1–L8 so far) must pass every gate. Problems in other chapters are reported but don't fail the build. Add a lesson to that list once its Phase 2 rewrite passes every gate; from then on every build keeps it that way. Run a gate with chapter ids (`npm run check-jargon -- lesson-07`) to make it strict for just those, or with `--strict` for everything.
 
 | Command | What it checks | Fails the build for |
 |---------|----------------|---------------------|
@@ -433,7 +433,7 @@ For each lesson: ☐ written to template ☐ `npm run check -- lesson-NN` passes
 - [ ] L5 Verbs
 - [ ] L6 Questions and Answers
 - [ ] L7 Pre-Verbs — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L8 Time 1 — When it happens
+- [ ] L8 Time 1 — When it happens — rewritten, passes every gate, on the finished list; **waiting for your review**
 - [ ] L9 Time 2 — Around an action
 - [ ] L10 Space 1 — Where it is
 - [ ] L11 Space 2 — Moving

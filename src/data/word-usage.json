@@ -248,7 +248,6 @@
       "appendix-grammar",
       "lesson-04",
       "lesson-06",
-      "lesson-08",
       "lesson-14",
       "lesson-15",
       "lesson-18",
@@ -269,7 +268,6 @@
     "nan2ren2": [
       "lesson-02",
       "lesson-04",
-      "lesson-08",
       "lesson-12",
       "lesson-15",
       "lesson-16",
@@ -282,7 +280,6 @@
       "lesson-03",
       "appendix-grammar",
       "lesson-04",
-      "lesson-08",
       "lesson-10",
       "lesson-12",
       "lesson-13",
@@ -296,7 +293,8 @@
       "lesson-19"
     ],
     "mi3fan4": [
-      "lesson-05"
+      "lesson-05",
+      "lesson-08"
     ],
     "shui3guo3": [
       "lesson-02",
@@ -334,7 +332,6 @@
       "lesson-03",
       "appendix-grammar",
       "lesson-04",
-      "lesson-08",
       "lesson-10",
       "lesson-19",
       "lesson-20",
@@ -352,7 +349,6 @@
       "appendix-grammar",
       "lesson-04",
       "lesson-05",
-      "lesson-08",
       "lesson-10",
       "lesson-11",
       "lesson-12",
@@ -482,7 +478,6 @@
       "appendix-grammar",
       "lesson-04",
       "lesson-06",
-      "lesson-08",
       "lesson-09",
       "lesson-10",
       "lesson-12",
@@ -531,7 +526,6 @@
     ],
     "xin1": [
       "appendix-stories",
-      "lesson-08",
       "lesson-12"
     ],
     "re4": [
@@ -560,6 +554,7 @@
       "appendix-grammar",
       "lesson-04",
       "lesson-06",
+      "lesson-08",
       "lesson-12",
       "lesson-14",
       "lesson-15",
@@ -613,6 +608,7 @@
       "appendix-stories",
       "lesson-05",
       "lesson-07",
+      "lesson-08",
       "lesson-10",
       "lesson-11",
       "lesson-12",
@@ -638,6 +634,7 @@
       "lesson-05",
       "lesson-06",
       "lesson-07",
+      "lesson-08",
       "lesson-09",
       "lesson-11",
       "lesson-16",
@@ -649,6 +646,7 @@
       "lesson-05",
       "lesson-06",
       "lesson-07",
+      "lesson-08",
       "lesson-10",
       "lesson-12",
       "lesson-18"
@@ -683,7 +681,8 @@
       "lesson-08"
     ],
     "deng3": [
-      "lesson-07"
+      "lesson-07",
+      "lesson-08"
     ],
     "chi1": [
       "appendix-stories",
@@ -706,7 +705,6 @@
       "appendix-minimality",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-08",
       "lesson-11",
       "lesson-17",
       "lesson-19"
@@ -732,7 +730,6 @@
       "proverbs",
       "appendix-minimality",
       "appendix-stories",
-      "lesson-08",
       "lesson-09",
       "lesson-15",
       "lesson-18",
@@ -919,6 +916,7 @@
       "appendix-grammar",
       "lesson-06",
       "lesson-07",
+      "lesson-08",
       "lesson-17",
       "lesson-21"
     ],
@@ -998,6 +996,7 @@
       "appendix-grammar",
       "lesson-04",
       "lesson-06",
+      "lesson-08",
       "lesson-09",
       "lesson-10",
       "lesson-11",
