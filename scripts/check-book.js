@@ -10,6 +10,9 @@
 //   3. Every summary and tldr/necessity line (lessons and intros) is
 //      jargon-free (scripts/jargon.js) and within the limits in
 //      scripts/limits.js -- for every lesson, finished or not.
+//   4. src/data/dictionary.json has no duplicate word ids. JSON.parse keeps
+//      only the last copy of a repeated key, so an earlier copy would be
+//      silently ignored.
 //
 // The other gates (jargon in the rest of the text, early words, word use,
 // grammar boxes) are separate scripts; scripts/check-all.js runs them all on
@@ -33,8 +36,23 @@ const PLAN_PATH = resolve(ROOT, 'BOOK_PLAN.md');
 
 const errors = [];
 
-const dictionary = JSON.parse(readFileSync(resolve(ROOT, 'src/data/dictionary.json'), 'utf-8')).words;
+const dictionaryRaw = readFileSync(resolve(ROOT, 'src/data/dictionary.json'), 'utf-8');
+const dictionary = JSON.parse(dictionaryRaw).words;
 const termToId = new Map(Object.entries(dictionary).map(([id, w]) => [w.term.normalize('NFC'), id]));
+
+// ---------- 4. no duplicate word ids ----------
+// JSON.parse can't see duplicates, so scan the raw text: each word under
+// "words" starts with a line `    "<id>": {` (4-space indent).
+{
+  const wordsSection = dictionaryRaw.slice(dictionaryRaw.indexOf('"words": {'), dictionaryRaw.indexOf('"categories"'));
+  const seen = new Set();
+  for (const line of wordsSection.split(/\r?\n/)) {
+    const id = line.match(/^ {4}"([^"]+)": \{/)?.[1];
+    if (!id) continue;
+    if (seen.has(id)) errors.push(`dictionary.json: word id "${id}" appears more than once -- only the last copy is used`);
+    seen.add(id);
+  }
+}
 
 // ---------- load lessons ----------
 const lessonIds = readdirSync(CONTENT_DIR).filter((d) => /^lesson-\d+$/.test(d)).sort();

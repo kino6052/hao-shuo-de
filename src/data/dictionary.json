@@ -1441,34 +1441,6 @@
       },
       "maps": "supa"
     },
-    "hou4": {
-      "term": "hòumiàn",
-      "pos": {
-        "eng": "noun",
-        "rus": "существительное",
-        "zh": "名词"
-      },
-      "definition": {
-        "eng": "back, behind, area rearward",
-        "rus": "зад, позади, задняя область",
-        "zh": "后面，背后，后方区域"
-      },
-      "maps": "monsi"
-    },
-    "li3": {
-      "term": "lǐmiàn",
-      "pos": {
-        "eng": "noun",
-        "rus": "существительное",
-        "zh": "名词"
-      },
-      "definition": {
-        "eng": "inside, center, content, between, internal organ",
-        "rus": "внутри, центр, содержимое, между, внутренний орган",
-        "zh": "里面，中心，内容，之间，内脏"
-      },
-      "maps": "insa"
-    },
     "pang2bian1": {
       "term": "pángbiān",
       "pos": {
@@ -1496,34 +1468,6 @@
         "zh": "前面，脸，最前方区域，胸部"
       },
       "maps": "sinpin"
-    },
-    "shang4": {
-      "term": "shàng",
-      "pos": {
-        "eng": "noun",
-        "rus": "существительное",
-        "zh": "名词"
-      },
-      "definition": {
-        "eng": "above, highest part, sky, elevated location, supernatural area",
-        "rus": "сверху, самая высокая часть, небо, возвышенное место, сверхъестественная область",
-        "zh": "上面，最高处，天空，高处，超自然的领域"
-      },
-      "maps": "sewi"
-    },
-    "xia4": {
-      "term": "xiàmiàn",
-      "pos": {
-        "eng": "noun",
-        "rus": "существительное",
-        "zh": "名词"
-      },
-      "definition": {
-        "eng": "below, underneath, under, lower part",
-        "rus": "снизу, под, ниже, нижняя часть",
-        "zh": "下面，底下，下方，下部"
-      },
-      "maps": "noka, anpa"
     },
     "wai4": {
       "term": "wài",
