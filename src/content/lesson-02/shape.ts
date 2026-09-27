@@ -3,10 +3,9 @@
 // LessonShape is this lesson's exact, hand-written type -- see lesson-01's
 // shape.ts for the full explanation of the pattern.
 //
-// Phase 1 skeleton (BOOK_PLAN.md): the vocab list follows BOOK_PLAN §4b, and
-// the other blocks were moved here unchanged from the old 16-lesson layout
-// ([from old LNN] says where; the old lessons are archived in
-// src/content/legacy/v2-16-lessons/). They get rewritten in Phase 2.
+// Rewritten in Phase 2 (BOOK_PLAN.md): NOUN + shì + NOUN, pointing with zhè, and NOUN + bù shì + NOUN.
+// Only words from this lesson and earlier ones; passes every gate
+// (npm run check -- lesson-02).
 import type {
   TTitle,
   TSummary,
@@ -23,79 +22,87 @@ export type LessonShape = {
   title: TTitle;
   /** Chapter summary. [from old L02] */
   summary: TSummary;
-  /** Vocabulary: "is, are, am". */
+  /** Vocabulary: "be, is". */
   vocabShi: TVocab;
   /** Vocabulary: "not". */
   vocabBu: TVocab;
   /** Vocabulary: "this". */
   vocabZhe: TVocab;
-  /** Vocabulary: "thing, something". */
+  /** Vocabulary: "thing". */
   vocabDongxi: TVocab;
-  /** Vocabulary: "person, human". */
+  /** Vocabulary: "person". */
   vocabRen: TVocab;
-  /** Vocabulary: "woman, female". */
+  /** Vocabulary: "woman". */
   vocabNuren: TVocab;
   /** Vocabulary: "man". */
   vocabNanren: TVocab;
   /** Vocabulary: "animal". */
   vocabDongwu: TVocab;
-  /** Vocabulary: "fruit, vegetable". */
+  /** Vocabulary: "fruit". */
   vocabShuiguo: TVocab;
-  /** Grammar: what a noun is; NOUN + shì + NOUN; nouns carry no number by themselves. [from old L02] */
-  proseNounShiNoun: TProse;
-  /** Example: zhè shì rén. [from old L02] */
-  example1: TExample;
-  /** Example: zhè shì shuǐguǒ. [from old L02] */
-  example2: TExample;
-  /** Example: nánrén shì rén. [from old L02] */
-  example3: TExample;
-  /** Example: rén shì nǚrén. [from old L02] */
-  example4: TExample;
-  /** Example: dòngwù shì dōngxi. [from old L02] */
-  example5: TExample;
-  /** Example: nǚrén shì rén. [from old L02] */
-  example6: TExample;
-  /** Grammar: negation [from old L02] */
-  proseNounBuShiNoun: TProse;
+  /** Say: To say what something is, put shì between two nouns. Pattern: NOUN + shì + NOUN */
+  proseIs: TProse;
+  /** Example: nǚrén shì rén. */
+  exampleIs1: TExample;
+  /** Example: nánrén shì rén. */
+  exampleIs2: TExample;
+  /** Example: shuǐguǒ shì dōngxi. */
+  exampleIs3: TExample;
+  /** Example: dòngwù shì dōngxi. */
+  exampleIs4: TExample;
+  /** Say: To point at something, say zhè (this). Pattern: zhè shì + NOUN */
+  proseThis: TProse;
+  /** Example: zhè shì rén. */
+  exampleThis1: TExample;
+  /** Example: zhè shì shuǐguǒ. */
+  exampleThis2: TExample;
+  /** Example: zhè shì dòngwù. */
+  exampleThis3: TExample;
+  /** Example: zhè shì nánrén. */
+  exampleThis4: TExample;
+  /** Say: To say something is not something, put bù before shì. Pattern: NOUN + bù shì + NOUN */
+  proseNot: TProse;
+  /** Example: dòngwù bù shì shuǐguǒ. */
+  exampleNot1: TExample;
+  /** Example: zhè bù shì dòngwù. */
+  exampleNot2: TExample;
+  /** Example: nǚrén bù shì nánrén. */
+  exampleNot3: TExample;
+  /** Example: shuǐguǒ bù shì rén. */
+  exampleNot4: TExample;
   /** Grammar box: NOUN + shì + NOUN, and NOUN + bù shì + NOUN. */
   infoIsAndIsNot: TInfo;
-  /** Example: zhè bù shì dòngwù. [from old L02] */
-  example7: TExample;
-  /** Example: zhè bù shì shuǐguǒ. [from old L02] */
-  example8: TExample;
-  /** Example: nǚrén bù shì nánrén. [from old L02] */
-  example9: TExample;
-  /** Exercise 1: Something is something. [from old L02] */
+  /** Exercise 1: Something is something. */
   exercise1: TExercise;
-  /** Exercise 2: This is an animal. [from old L02] */
+  /** Exercise 2: This is an animal. */
   exercise2: TExercise;
-  /** Exercise 3: The woman is a person. [from old L02] */
+  /** Exercise 3: The woman is a person. */
   exercise3: TExercise;
-  /** Exercise 4: Humans are beings. [from old L02] */
+  /** Exercise 4: This is a woman. */
   exercise4: TExercise;
-  /** Exercise 5: The animal is female. [from old L02] */
+  /** Exercise 5: Fruits are things. */
   exercise5: TExercise;
-  /** Exercise 6: Fruits are things. [from old L02] */
+  /** Exercise 6: This is a man. */
   exercise6: TExercise;
-  /** Exercise 7: This is a man. [from old L02] */
+  /** Exercise 7: This is not a fruit. */
   exercise7: TExercise;
-  /** Exercise 8: This is not a fruit. */
+  /** Exercise 8: An animal is not a person. */
   exercise8: TExercise;
-  /** Answer 1. [from old L02] */
+  /** Answer 1: dōngxi shì dōngxi. */
   answer1: TAnswer;
-  /** Answer 2. [from old L02] */
+  /** Answer 2: zhè shì dòngwù. */
   answer2: TAnswer;
-  /** Answer 3. [from old L02] */
+  /** Answer 3: nǚrén shì rén. */
   answer3: TAnswer;
-  /** Answer 4. [from old L02] */
+  /** Answer 4: zhè shì nǚrén. */
   answer4: TAnswer;
-  /** Answer 5. [from old L02] */
+  /** Answer 5: shuǐguǒ shì dōngxi. */
   answer5: TAnswer;
-  /** Answer 6. [from old L02] */
+  /** Answer 6: zhè shì nánrén. */
   answer6: TAnswer;
-  /** Answer 7. [from old L02] */
+  /** Answer 7: zhè bù shì shuǐguǒ. */
   answer7: TAnswer;
-  /** Answer 8. */
+  /** Answer 8: dòngwù bù shì rén. */
   answer8: TAnswer;
 };
 
@@ -123,57 +130,74 @@ const shape: LessonShape = {
     term: "{{word:shui3guo3}}",
     ttsText: "水果",
   },
-  proseNounShiNoun: { type: "prose" },
-  example1: {
-    type: "example",
-    pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:ren2}}.",
-    ttsText: "这是人。",
-  },
-  example2: {
-    type: "example",
-    pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:shui3guo3}}.",
-    ttsText: "这是水果。",
-  },
-  example3: {
-    type: "example",
-    pinyin: "{{Word:nan2ren2}} {{word:shi4}} {{word:ren2}}.",
-    ttsText: "男人是人。",
-  },
-  example4: {
-    type: "example",
-    pinyin: "{{Word:ren2}} {{word:shi4}} {{word:nv3ren2}}.",
-    ttsText: "人是女人。",
-  },
-  example5: {
-    type: "example",
-    pinyin: "{{Word:dong4wu4}} {{word:shi4}} {{word:dong1xi}}.",
-    ttsText: "动物是东西。",
-  },
-  example6: {
+  proseIs: { type: "prose" },
+  exampleIs1: {
     type: "example",
     pinyin: "{{Word:nv3ren2}} {{word:shi4}} {{word:ren2}}.",
     ttsText: "女人是人。",
   },
-  proseNounBuShiNoun: { type: "prose" },
+  exampleIs2: {
+    type: "example",
+    pinyin: "{{Word:nan2ren2}} {{word:shi4}} {{word:ren2}}.",
+    ttsText: "男人是人。",
+  },
+  exampleIs3: {
+    type: "example",
+    pinyin: "{{Word:shui3guo3}} {{word:shi4}} {{word:dong1xi}}.",
+    ttsText: "水果是东西。",
+  },
+  exampleIs4: {
+    type: "example",
+    pinyin: "{{Word:dong4wu4}} {{word:shi4}} {{word:dong1xi}}.",
+    ttsText: "动物是东西。",
+  },
+  proseThis: { type: "prose" },
+  exampleThis1: {
+    type: "example",
+    pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:ren2}}.",
+    ttsText: "这是人。",
+  },
+  exampleThis2: {
+    type: "example",
+    pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:shui3guo3}}.",
+    ttsText: "这是水果。",
+  },
+  exampleThis3: {
+    type: "example",
+    pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:dong4wu4}}.",
+    ttsText: "这是动物。",
+  },
+  exampleThis4: {
+    type: "example",
+    pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:nan2ren2}}.",
+    ttsText: "这是男人。",
+  },
+  proseNot: { type: "prose" },
+  exampleNot1: {
+    type: "example",
+    pinyin: "{{Word:dong4wu4}} {{word:bu4}} {{word:shi4}} {{word:shui3guo3}}.",
+    ttsText: "动物不是水果。",
+  },
+  exampleNot2: {
+    type: "example",
+    pinyin: "{{Word:zhe4}} {{word:bu4}} {{word:shi4}} {{word:dong4wu4}}.",
+    ttsText: "这不是动物。",
+  },
+  exampleNot3: {
+    type: "example",
+    pinyin: "{{Word:nv3ren2}} {{word:bu4}} {{word:shi4}} {{word:nan2ren2}}.",
+    ttsText: "女人不是男人。",
+  },
+  exampleNot4: {
+    type: "example",
+    pinyin: "{{Word:shui3guo3}} {{word:bu4}} {{word:shi4}} {{word:ren2}}.",
+    ttsText: "水果不是人。",
+  },
   infoIsAndIsNot: {
     type: "info",
     subtype: "grammar",
     tag: "sentences/is-and-is-not",
     items: [{}, {}],
-  },
-  example7: {
-    type: "example",
-    pinyin: "{{Word:zhe4}} {{word:bu4}} {{word:shi4}} {{word:dong4wu4}}.",
-    ttsText: "这不是动物。",
-  },
-  example8: {
-    type: "example",
-    pinyin: "{{Word:zhe4}} {{word:bu4}} {{word:shi4}} {{word:shui3guo3}}.",
-  },
-  example9: {
-    type: "example",
-    pinyin: "{{Word:nv3ren2}} {{word:bu4}} {{word:shi4}} {{word:nan2ren2}}.",
-    ttsText: "女人不是男人。",
   },
   exercise1: { type: "exercise" },
   exercise2: { type: "exercise" },
@@ -186,11 +210,11 @@ const shape: LessonShape = {
   answer1: { type: "answer", ttsText: "东西是东西。" },
   answer2: { type: "answer", ttsText: "这是动物。" },
   answer3: { type: "answer", ttsText: "女人是人。" },
-  answer4: { type: "answer", ttsText: "人是东西。" },
-  answer5: { type: "answer", ttsText: "动物是女人。" },
-  answer6: { type: "answer", ttsText: "水果是东西。" },
-  answer7: { type: "answer", ttsText: "这是男人。" },
-  answer8: { type: "answer", ttsText: "这不是水果。" },
+  answer4: { type: "answer", ttsText: "这是女人。" },
+  answer5: { type: "answer", ttsText: "水果是东西。" },
+  answer6: { type: "answer", ttsText: "这是男人。" },
+  answer7: { type: "answer", ttsText: "这不是水果。" },
+  answer8: { type: "answer", ttsText: "动物不是人。" },
 };
 
 export default shape;

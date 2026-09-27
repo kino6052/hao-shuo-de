@@ -11,26 +11,27 @@ const en: PartialByKey<LessonShape> = {
       "In this lesson, you'll be able to say \"I eat rice.\", \"She doesn't write.\", and \"I don't have money.\"",
     ],
   },
-  vocabYou: { en: ["to have, contain, carry"] },
+  vocabYou: { en: ["have; there is"] },
   vocabMei: {
     en: [
       "not, but only with {{word:you3}}: {{word:mei2}}-{{word:you3}} means \"don't have\"",
     ],
   },
-  vocabChi: { en: ["to eat, drink, consume; food"] },
+  vocabChi: { en: ["eat, drink"] },
   vocabKan: { en: ["look, read"] },
-  vocabTing: { en: ["to listen to, hear, obey"] },
-  vocabShuo: { en: ["to talk, speak, communicate"] },
+  vocabTing: { en: ["listen, hear"] },
+  vocabShuo: { en: ["say, speak"] },
   vocabXie: { en: ["write"] },
   vocabJin: { en: ["money"] },
-  vocabMifan: { en: ["rice, staple food"] },
-  proseVerbs: {
+  vocabMifan: { en: ["rice"] },
+  proseDo: {
     en: [
-      'A verb is an action word. It tells you what someone does. `{{word:chi1}}` ("eat"), `{{word:shuo1}}` ("speak"), and `{{word:kan4}}` ("look") are verbs.',
-      "A sentence goes in this order: who does it, then the verb, then what it is done to.",
+      "**To say what someone does**, put the verb after the who, and the what after the verb.",
       "",
       "**Who + verb + what**",
       "",
+      "A verb is an action word: {{word:chi1}} (eat), {{word:kan4}} (look), {{word:shuo1}} (speak).",
+      "The order shows who does what. Swap them, and the meaning swaps: {{Word:wo3}} {{word:kan4}} {{word:ta1}} / {{Word:ta1}} {{word:kan4}} {{word:wo3}}.",
     ],
     tldr: {
       en: [
@@ -41,41 +42,47 @@ const en: PartialByKey<LessonShape> = {
       en: ["Almost every sentence you make uses this order."],
     },
   },
-  verbsExample1: { en: ["I eat things."] },
-  verbsExample2: { en: ["He/She speaks Hao-shuo-de."] },
-  verbsExample3: { en: ["I have fruit."] },
-  verbsExample4: { en: ["I eat rice."] },
-  verbsExample5: { en: ["I listen to you."] },
-  proseVerbNegation: {
+  exampleDo1: { en: ["I eat rice."] },
+  exampleDo2: { en: ["I look at him."] },
+  exampleDo3: { en: ["He looks at me."] },
+  exampleDo4: { en: ["I listen to you."] },
+  exampleDo5: { en: ["She speaks."] },
+  exampleDo6: { en: ["I write."] },
+  proseNot: {
     en: [
-      'To say "not", put `{{word:bu4}}` (from Lesson 2) right before the verb.',
-      "`{{word:you3}}` (\"have\") is the one verb that is different. It uses `{{word:mei2}}` instead: `{{word:mei2}}-{{word:you3}}` means \"don't have\".",
+      '**To say "not"**, put {{word:bu4}} right before the verb.',
+      "",
+      "**Who + {{word:bu4}} + verb**",
+    ],
+    tldr: { en: ['Put {{word:bu4}} before a verb to say "not".'] },
+    necessity: { en: ["Now you can say what someone doesn't do."] },
+  },
+  exampleNot1: { en: ["She doesn't write."] },
+  exampleNot2: { en: ["I don't eat."] },
+  exampleNot3: { en: ["You don't listen."] },
+  exampleNot4: { en: ["I don't speak."] },
+  proseHave: {
+    en: [
+      "**To say you have something**, use {{word:you3}}. For \"don't have\", say {{word:mei2}}-{{word:you3}}.",
+      "",
+      "**Who + {{word:you3}} / {{word:mei2}}-{{word:you3}} + thing**",
+      "",
+      "{{word:you3}} is the one verb that doesn't use {{word:bu4}}.",
     ],
     tldr: {
       en: [
-        "Put {{word:bu4}} before a verb to say \"not\". For \"don't have\", say {{word:mei2}}-{{word:you3}}.",
+        "{{word:you3}} is have. For \"don't have\", say {{word:mei2}}-{{word:you3}}, never {{word:bu4}} {{word:you3}}.",
       ],
     },
     necessity: {
-      en: [
-        "{{word:you3}} is the only verb that doesn't use {{word:bu4}}.",
-      ],
+      en: ["Now you can say what you have and don't have."],
     },
   },
-  negationExample1: { en: ["I don't have fruit."] },
-  negationExample2: { en: ["I don't eat things."] },
-  negationExample3: { en: ["He/She doesn't have anything."] },
-  negationExample4: { en: ["She doesn't write."] },
-  negationExample5: { en: ["I don't have money."] },
-  proseWordOrderObject: {
-    en: [
-      "The order of the words tells you who does what.",
-      "The word before the verb is the one doing it. The word after the verb is the one it is done to.",
-      "Swap them, and the meaning swaps too.",
-    ],
-    tldr: { en: ["The order of the words shows who does what."] },
-    necessity: { en: ["Swap the words and the meaning changes."] },
-  },
+  exampleHave1: { en: ["I have fruit."] },
+  exampleHave2: { en: ["I don't have money."] },
+  exampleHave3: { en: ["He has rice."] },
+  exampleHave4: { en: ["She has money."] },
+  exampleHave5: { en: ["He doesn't have anything."] },
   infoWhoDoesWhat: {
     title: { en: ["Who Does What"] },
     items: [
@@ -96,8 +103,6 @@ const en: PartialByKey<LessonShape> = {
       },
     ],
   },
-  wordOrderExample1: { en: ["I look at him/her."] },
-  wordOrderExample2: { en: ["He/She looks at me."] },
   exercise1: { en: ["I listen to you."] },
   exercise2: { en: ["She eats rice."] },
   exercise3: { en: ["He doesn't have money."] },

@@ -454,12 +454,12 @@ The word lists and limits live in `scripts/jargon.js` and `scripts/limits.js`.
 
 For each lesson: ☐ written to template ☐ `npm run check -- lesson-NN` passes (every gate) ☐ exercises + answers ☐ **user approved** ☐ added to `scripts/finished-lessons.js`
 
-- [ ] L1 Sounds and Symbols
-- [ ] L2 Words and Sentences
-- [ ] L3 Modifying Nouns
-- [ ] L4 Pointing at People and Things
-- [ ] L5 Verbs
-- [ ] L6 Questions and Answers
+- [ ] L1 Sounds and Symbols — rewritten, passes every gate, on the finished list; **waiting for your review**
+- [ ] L2 Words and Sentences — rewritten, passes every gate, on the finished list; **waiting for your review**
+- [ ] L3 Modifying Nouns — rewritten, passes every gate, on the finished list; **waiting for your review**
+- [ ] L4 Pointing at People and Things — rewritten, passes every gate, on the finished list; **waiting for your review**
+- [ ] L5 Verbs — rewritten, passes every gate, on the finished list; **waiting for your review**
+- [ ] L6 Questions and Answers — rewritten, passes every gate, on the finished list; **waiting for your review**
 - [ ] L7 Pre-Verbs — rewritten, passes every gate, on the finished list; **waiting for your review**
 - [ ] L8 Time 1 — When it happens — rewritten, passes every gate, on the finished list; **waiting for your review**
 - [ ] L9 Time 2 — Around an action — rewritten, passes every gate, on the finished list; **waiting for your review**

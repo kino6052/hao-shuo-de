@@ -17,15 +17,35 @@ const en: PartialByKey<LessonShape> = {
   vocabZenme: { en: ["how"] },
   vocabWen: { en: ["ask"] },
   vocabZhao: { en: ["look for"] },
-  vocabGongju: { en: ["tool, machine, device"] },
+  vocabGongju: { en: ["tool"] },
   vocabHezi: { en: ["box"] },
-  proseQuestionWordsInSitu: {
+  proseYesNo: {
     en: [
-      "There are a few ways to ask a question.",
-      'To ask "what?", put `{{word:shen2me}}` right where the answer would go.',
-      '`{{word:ta1}} {{word:chi1}} {{word:shen2me}}?` means "What does he eat?" `{{word:shen2me}}` sits where the food would be.',
-      '`{{word:shen2me}} {{word:ren2}} {{word:chi1}} {{word:shui3guo3}}?` means "Who eats fruit?" `{{word:shen2me}} {{word:ren2}}` sits where the person would be.',
-      "The rest of the sentence stays the same.",
+      "**To ask a yes-or-no question**, put {{word:ma}} at the end.",
+      "",
+      "**sentence + {{word:ma}}?**",
+      "",
+      "Or say the verb, then {{word:bu4}}, then the verb again: {{Word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}}? For {{word:you3}}: {{word:you3}}-{{word:mei2}}-{{word:you3}}.",
+    ],
+    tldr: {
+      en: [
+        "Put {{word:ma}} at the end to ask a yes-or-no question.",
+      ],
+    },
+    necessity: { en: ["Now you can check if something is true."] },
+  },
+  exampleYesNo1: { en: ["Do you have a tool?"] },
+  exampleYesNo2: { en: ["Is this a box?"] },
+  exampleYesNo3: { en: ["Does he eat fruit?"] },
+  exampleYesNo4: { en: ["Do you listen to your parents?"] },
+  exampleYesNo5: { en: ["Does she have money?"] },
+  proseWhat: {
+    en: [
+      '**To ask "what?"**, put {{word:shen2me}} right where the answer would go.',
+      "",
+      "**Who + verb + {{word:shen2me}}?**",
+      "",
+      "The rest of the sentence stays the same. {{word:shen2me}} {{word:ren2}} means who.",
     ],
     tldr: {
       en: [
@@ -38,33 +58,37 @@ const en: PartialByKey<LessonShape> = {
       ],
     },
   },
-  infoYesNoQuestions: {
-    title: { en: ["Yes-or-No Questions"] },
-    items: [
-      {
-        en: ["There are two ways to ask a yes-or-no question:"],
-        items: [
-          {
-            en: [
-              'Add `{{word:ma}}` to the end. `{{word:ta1}} {{word:you3}} {{word:shui3guo3}}.` ("He has fruit.") becomes `{{word:ta1}} {{word:you3}} {{word:shui3guo3}} {{word:ma}}?` ("Does he have fruit?").',
-            ],
-          },
-          {
-            en: [
-              'Or say the verb, then "not", then the verb again. `{{word:you3}}-{{word:mei2}}-{{word:you3}}` ("have, not have") means the same as `{{word:you3}} ... {{word:ma}}`.',
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  proseAnsweringYesNo: {
+  exampleWhat1: { en: ["What are you looking for?"] },
+  exampleWhat2: { en: ["What is this?"] },
+  exampleWhat3: { en: ["What does he ask?"] },
+  exampleWhat4: { en: ["Who eats fruit?"] },
+  exampleWhat5: { en: ["I'm looking for a box."] },
+  proseWhyHow: {
     en: [
-      'Chinese has no single word for "yes" or "no".',
-      'To answer, repeat the verb from the question. Say it alone for "yes". Put `{{word:bu4}}` in front of it for "no".',
-      "`{{word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}} {{word:fu4mu3}}?` (\"Do you listen to your parents?\") → `{{word:ting1}}.` (\"Yes, I do.\") or `{{word:bu4}} {{word:ting1}}.` (\"No, I don't.\")",
-      "This works for `{{word:ma}}` questions too.",
-      "You can also answer with `{{word:shi4}}` (\"yes, it is\") or `{{word:bu4}} {{word:shi4}}` (\"no, it isn't\").",
+      '**To ask "why?" or "how?"**, put {{word:wei4shen2me}} (why) at the start, or {{word:zen3me}} (how) before the verb.',
+      "",
+      "**{{word:wei4shen2me}} + sentence? / {{word:zen3me}} + verb?**",
+    ],
+    tldr: {
+      en: [
+        "{{word:wei4shen2me}} asks why. {{word:zen3me}} before a verb asks how.",
+      ],
+    },
+    necessity: { en: ["Now you can ask for reasons and ways."] },
+  },
+  exampleWhyHow1: { en: ["Why don't you eat?"] },
+  exampleWhyHow2: { en: ["Why is he looking for a box?"] },
+  exampleWhyHow3: { en: ["Why are you asking?"] },
+  exampleWhyHow4: { en: ["How do you say this?"] },
+  exampleWhyHow5: { en: ["How do you write this?"] },
+  exampleWhyHow6: { en: ["How do you find him?"] },
+  proseAnswer: {
+    en: [
+      '**To answer yes or no**, repeat the verb for "yes", or put {{word:bu4}} before it for "no".',
+      "",
+      "**verb. / {{word:bu4}} + verb.**",
+      "",
+      "Chinese has no single word for \"yes\" or \"no\". You can also answer {{word:shi4}} (\"yes, it is\") or {{word:bu4}} {{word:shi4}} (\"no, it isn't\").",
     ],
     tldr: {
       en: [
@@ -75,28 +99,43 @@ const en: PartialByKey<LessonShape> = {
       en: ['Chinese has no single word for "yes" or "no".'],
     },
   },
-  example1: { en: ["What is good?"] },
-  example2: { en: ["Who eats fruit?"] },
-  example3: { en: ["Does he have a lot of fruit?"] },
-  example4: { en: ["[He] has [some]."] },
-  example5: { en: ["Do you listen to your parents?"] },
-  example6: { en: ["[I] don't listen."] },
-  example7: { en: ["What does he eat?"] },
-  example8: { en: ["Do you have a tool?"] },
-  example9: { en: ["Why don't you eat?"] },
-  example10: { en: ["How do you say this?"] },
-  example11: { en: ["Do you eat fruit?"] },
-  example12: { en: ["Is this your place?"] },
-  example13: { en: ["What are you looking for?"] },
-  example14: { en: ["Is this a box?"] },
-  example15: { en: ["What does he ask?"] },
-  exercise1: { en: ['Ask: "What tools do you have?"'] },
-  exercise2: { en: ['Ask "Does he listen?" without `{{word:ma}}`.'] },
-  exercise3: {
-    en: [
-      'Ask "Is the tool small?" Use `{{word:ma}}`, or say "small, not small".',
+  exampleAnswer1: { en: ["Yes, I do. (I listen.)"] },
+  exampleAnswer2: { en: ["No, I don't."] },
+  exampleAnswer3: { en: ["Yes, I have some."] },
+  exampleAnswer4: { en: ["I'm asking you."] },
+  infoAskingQuestions: {
+    title: { en: ["Asking Questions"] },
+    items: [
+      {
+        en: [
+          "sentence + {{word:ma}}?, yes or no: {{Word:ni3}} {{word:you3}} {{word:gong1ju4}} {{word:ma}}? (Do you have a tool?)",
+        ],
+      },
+      {
+        en: [
+          "verb-{{word:bu4}}-verb?, yes or no: {{Word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}}? (Do you listen?)",
+        ],
+      },
+      {
+        en: [
+          "{{word:shen2me}} where the answer goes: {{Word:ni3}} {{word:zhao3}} {{word:shen2me}}? (What are you looking for?)",
+        ],
+      },
+      {
+        en: [
+          "{{word:wei4shen2me}}, why: {{Word:wei4shen2me}} {{word:ni3}} {{word:bu4}} {{word:chi1}}? (Why don't you eat?)",
+        ],
+      },
+      {
+        en: [
+          "{{word:zen3me}} + verb, how: {{Word:zhe4}}-ge {{word:zen3me}} {{word:shuo1}}? (How do you say this?)",
+        ],
+      },
     ],
   },
+  exercise1: { en: ["What tools do you have?"] },
+  exercise2: { en: ['Ask "Does he listen?" without {{word:ma}}.'] },
+  exercise3: { en: ["Is the tool small?"] },
   exercise4: { en: ["Is that your box?"] },
   exercise5: { en: ["Why is he looking for water?"] },
   exercise6: { en: ["How do you write this?"] },
@@ -111,11 +150,7 @@ const en: PartialByKey<LessonShape> = {
       "{{Word:ta1}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}}?",
     ],
   },
-  answer3: {
-    en: [
-      "{{Word:gong1ju4}} {{word:xiao3}}-{{word:bu4}}-{{word:xiao3}}?",
-    ],
-  },
+  answer3: { en: ["{{Word:gong1ju4}} {{word:xiao3}} {{word:ma}}?"] },
   answer4: {
     en: [
       "{{Word:na4}} {{word:shi4}} {{word:ni3}}-{{word:de}} {{word:he2zi}} {{word:ma}}?",

@@ -3,10 +3,9 @@
 // LessonShape is this lesson's exact, hand-written type -- see lesson-01's
 // shape.ts for the full explanation of the pattern.
 //
-// Phase 1 skeleton (BOOK_PLAN.md): the vocab list follows BOOK_PLAN §4b, and
-// the other blocks were moved here unchanged from the old 16-lesson layout
-// ([from old LNN] says where; the old lessons are archived in
-// src/content/legacy/v2-16-lessons/). They get rewritten in Phase 2.
+// Phase 2 (BOOK_PLAN.md): pinyin, tones, and the Hao-shuo-de pinyin helpers.
+// No new words -- lesson 1 may show words as sound examples (§4a rule 2).
+// Plain words; passes every gate (npm run check -- lesson-01).
 import type {
   TTitle,
   TSummary,

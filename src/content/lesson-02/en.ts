@@ -11,24 +11,22 @@ const en: PartialByKey<LessonShape> = {
       "In this lesson, you'll be able to say \"This is a person.\" and \"An animal is not a fruit.\"",
     ],
   },
-  vocabShi: { en: ["is, are, am"] },
+  vocabShi: { en: ["be, is"] },
   vocabBu: { en: ["not"] },
   vocabZhe: { en: ["this"] },
-  vocabDongxi: { en: ["thing, something"] },
-  vocabRen: { en: ["person, human"] },
-  vocabNuren: { en: ["woman, female"] },
+  vocabDongxi: { en: ["thing"] },
+  vocabRen: { en: ["person"] },
+  vocabNuren: { en: ["woman"] },
   vocabNanren: { en: ["man"] },
   vocabDongwu: { en: ["animal"] },
-  vocabShuiguo: { en: ["fruit, vegetable"] },
-  proseNounShiNoun: {
+  vocabShuiguo: { en: ["fruit"] },
+  proseIs: {
     en: [
-      "A noun is a word for a person, place, or thing.",
-      "To make a simple sentence, follow this model:",
-      "NOUN + shì + NOUN.",
-      "{{word:dong1xi}} {{word:shi4}} {{word:dong1xi}}.",
-      "Something is something.",
+      "**To say what something is**, put {{word:shi4}} between two nouns.",
       "",
-      'A noun can mean one thing or many: {{word:dong1xi}} means "thing" or "things". Later lessons show how to say which.',
+      "**NOUN + {{word:shi4}} + NOUN**",
+      "",
+      'A noun is a word for a person, place, or thing. It can mean one or many: {{word:dong1xi}} is "thing" or "things".',
     ],
     tldr: {
       en: [
@@ -37,18 +35,30 @@ const en: PartialByKey<LessonShape> = {
     },
     necessity: { en: ["This is the simplest sentence you can make."] },
   },
-  example1: { en: ["This is a person."] },
-  example2: { en: ["This is a fruit."] },
-  example3: { en: ["A man is a person."] },
-  example4: { en: ["The person is a woman."] },
-  example5: { en: ["Animals are things."] },
-  example6: { en: ["Women are people."] },
-  proseNounBuShiNoun: {
+  exampleIs1: { en: ["A woman is a person."] },
+  exampleIs2: { en: ["A man is a person."] },
+  exampleIs3: { en: ["Fruit is a thing."] },
+  exampleIs4: { en: ["Animals are things."] },
+  proseThis: {
     en: [
-      "To say it is not, put {{word:bu4}} before {{word:shi4}}.",
-      "NOUN + bù + shì + NOUN.",
-      "{{word:dong1xi}} {{word:bu4}} {{word:shi4}} {{word:dong1xi}}.",
-      "Something is not something.",
+      "**To point at something**, say {{word:zhe4}} (this).",
+      "",
+      "**{{Word:zhe4}} {{word:shi4}} + NOUN**",
+    ],
+    tldr: {
+      en: ["{{Word:zhe4}} {{word:shi4}} + noun: this is …"],
+    },
+    necessity: { en: ["Now you can name what's in front of you."] },
+  },
+  exampleThis1: { en: ["This is a person."] },
+  exampleThis2: { en: ["This is a fruit."] },
+  exampleThis3: { en: ["This is an animal."] },
+  exampleThis4: { en: ["This is a man."] },
+  proseNot: {
+    en: [
+      "**To say something is not something**, put {{word:bu4}} before {{word:shi4}}.",
+      "",
+      "**NOUN + {{word:bu4}} {{word:shi4}} + NOUN**",
     ],
     tldr: {
       en: [
@@ -57,6 +67,10 @@ const en: PartialByKey<LessonShape> = {
     },
     necessity: { en: ["Now you can say what something is not."] },
   },
+  exampleNot1: { en: ["An animal is not a fruit."] },
+  exampleNot2: { en: ["This is not an animal."] },
+  exampleNot3: { en: ["A woman is not a man."] },
+  exampleNot4: { en: ["Fruit is not a person."] },
   infoIsAndIsNot: {
     title: { en: ["Saying What Something Is"] },
     items: [
@@ -72,33 +86,32 @@ const en: PartialByKey<LessonShape> = {
       },
     ],
   },
-  example7: { en: ["This is not an animal."] },
-  example8: { en: ["This is not a fruit."] },
-  example9: { en: ["A woman is not a man."] },
   exercise1: { en: ["Something is something."] },
   exercise2: { en: ["This is an animal."] },
   exercise3: { en: ["The woman is a person."] },
-  exercise4: { en: ["Humans are beings."] },
-  exercise5: { en: ["The animal is female."] },
-  exercise6: { en: ["Fruits are things."] },
-  exercise7: { en: ["This is a man."] },
-  exercise8: { en: ["This is not a fruit."] },
+  exercise4: { en: ["This is a woman."] },
+  exercise5: { en: ["Fruits are things."] },
+  exercise6: { en: ["This is a man."] },
+  exercise7: { en: ["This is not a fruit."] },
+  exercise8: { en: ["An animal is not a person."] },
   answer1: {
     en: ["{{Word:dong1xi}} {{word:shi4}} {{word:dong1xi}}."],
   },
   answer2: { en: ["{{Word:zhe4}} {{word:shi4}} {{word:dong4wu4}}."] },
   answer3: { en: ["{{Word:nv3ren2}} {{word:shi4}} {{word:ren2}}."] },
-  answer4: { en: ["{{Word:ren2}} {{word:shi4}} {{word:dong1xi}}."] },
+  answer4: { en: ["{{Word:zhe4}} {{word:shi4}} {{word:nv3ren2}}."] },
   answer5: {
-    en: ["{{Word:dong4wu4}} {{word:shi4}} {{word:nv3ren2}}."],
-  },
-  answer6: {
     en: ["{{Word:shui3guo3}} {{word:shi4}} {{word:dong1xi}}."],
   },
-  answer7: { en: ["{{Word:zhe4}} {{word:shi4}} {{word:nan2ren2}}."] },
-  answer8: {
+  answer6: { en: ["{{Word:zhe4}} {{word:shi4}} {{word:nan2ren2}}."] },
+  answer7: {
     en: [
       "{{Word:zhe4}} {{word:bu4}} {{word:shi4}} {{word:shui3guo3}}.",
+    ],
+  },
+  answer8: {
+    en: [
+      "{{Word:dong4wu4}} {{word:bu4}} {{word:shi4}} {{word:ren2}}.",
     ],
   },
 };

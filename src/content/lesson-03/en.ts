@@ -13,39 +13,44 @@ const en: PartialByKey<LessonShape> = {
   },
   vocabHen: { en: ["very"] },
   vocabDe: { en: ["joins a describing word to a noun"] },
-  vocabDuo: { en: ["many"] },
-  vocabHao: { en: ["good, simple, friendly"] },
-  vocabDa: { en: ["big, important, tall"] },
-  vocabXiao: { en: ["little, small"] },
-  vocabShui: { en: ["water, liquid"] },
+  vocabDuo: { en: ["many, much"] },
+  vocabHao: { en: ["good"] },
+  vocabDa: { en: ["big"] },
+  vocabXiao: { en: ["small"] },
+  vocabShui: { en: ["water"] },
   vocabDifang: { en: ["place"] },
   vocabFumu: { en: ["parents"] },
-  proseHenConnector: {
+  proseLike: {
     en: [
-      'To say what something is like, you need a describing word, like "big" or "good".',
-      'Lesson 2 gave you <audio-example zh="是">{{word:shi4}}</audio-example> to say what something is: <audio-example zh="人是女人">{{Word:ren2}} {{word:shi4}} {{word:nv3ren2}}</audio-example> ("the person is a woman").',
-      'To say what something is like, use <audio-example zh="很">{{word:hen3}}</audio-example> instead.',
+      "**To say what something is like**, put {{word:hen3}} before the describing word.",
       "",
-      'Noun + <audio-example zh="很">{{word:hen3}}</audio-example> + describing word',
+      "**NOUN + {{word:hen3}} + describing word**",
       "",
+      '{{word:shi4}} (Lesson 2) says what something is. {{word:hen3}} says what it is like. {{word:hen3}} also means "very".',
     ],
-    necessity: {
-      en: [
-        "This is how you describe things in a full sentence.",
-      ],
-    },
     tldr: {
       en: [
         "To say what something is like, put {{word:hen3}} before the describing word.",
       ],
     },
+    necessity: {
+      en: [
+        "This is how you describe things in a full sentence.",
+      ],
+    },
   },
-  example3: { en: ["Water is good."] },
-  proseDeRequired: {
+  exampleLike1: { en: ["The water is good."] },
+  exampleLike2: { en: ["The place is big."] },
+  exampleLike3: { en: ["The animal is small."] },
+  exampleLike4: { en: ["The parents are good."] },
+  exampleLike5: { en: ["The fruit is big."] },
+  proseBefore: {
     en: [
-      'You can also put a describing word right before a noun: "a big place" instead of "the place is big".',
-      'Join them with <code>-{{word:de}}</code>: <audio-example zh="很小的地方">{{word:hen3}}-{{word:xiao3}}-{{word:de}} {{word:di4fang1}}</audio-example> means "a very small place".',
-      "Don't leave out <code>-{{word:de}}</code>: <audio-example zh=\"很小地方\">{{word:hen3}}-{{word:xiao3}} {{word:di4fang1}}</audio-example> sounds wrong.",
+      "**To put a describing word before a noun**, join them with -{{word:de}}.",
+      "",
+      "**describing word-{{word:de}} + NOUN**",
+      "",
+      "Don't leave out -{{word:de}}: {{word:hen3}}-{{word:xiao3}} {{word:di4fang1}} sounds wrong.",
     ],
     tldr: {
       en: [
@@ -58,6 +63,29 @@ const en: PartialByKey<LessonShape> = {
       ],
     },
   },
+  exampleBefore1: { en: ["A big place."] },
+  exampleBefore2: { en: ["Good parents."] },
+  exampleBefore3: { en: ["This is a very small place."] },
+  exampleBefore4: { en: ["This is good water."] },
+  exampleBefore5: { en: ["This is a very big animal."] },
+  proseMany: {
+    en: [
+      "**To say many**, put {{word:hen3}}-{{word:duo1}}-{{word:de}} before the noun.",
+      "",
+      "**{{word:hen3}}-{{word:duo1}}-{{word:de}} + NOUN**",
+      "",
+      "After a noun, {{word:hen3}} {{word:duo1}} means there is a lot: {{Word:shui3}} {{word:hen3}} {{word:duo1}}.",
+    ],
+    tldr: {
+      en: [
+        "{{word:hen3}}-{{word:duo1}}-{{word:de}} + noun means many.",
+      ],
+    },
+    necessity: { en: ["Now you can talk about more than one."] },
+  },
+  exampleMany1: { en: ["Many people."] },
+  exampleMany2: { en: ["A lot of fruit."] },
+  exampleMany3: { en: ["There is a lot of water."] },
   infoDescribing: {
     title: { en: ["Describing a Noun"] },
     items: [
@@ -71,31 +99,36 @@ const en: PartialByKey<LessonShape> = {
           "describing word + -{{word:de}} + NOUN: {{word:da4}}-{{word:de}} {{word:di4fang1}} (a big place)",
         ],
       },
+      {
+        en: [
+          "{{word:hen3}}-{{word:duo1}}-{{word:de}} + NOUN: {{word:hen3}}-{{word:duo1}}-{{word:de}} {{word:ren2}} (many people)",
+        ],
+      },
     ],
   },
-  example4: { en: ["This is a small place."] },
-  example5: { en: ["This is a very big animal."] },
-  exampleGoodParents: { en: ["Good parents."] },
-  exampleManyPeople: { en: ["Many people."] },
-  exercise5: { en: ["The place is small."] },
-  exercise6: { en: ["The water is good."] },
-  exercise7: { en: ["a big place"] },
-  exercise8: { en: ["good parents"] },
-  exercise9: { en: ["many people"] },
-  exercise10: { en: ["The animal is small."] },
-  answer5: {
+  exercise1: { en: ["The place is small."] },
+  exercise2: { en: ["The water is good."] },
+  exercise3: { en: ["a big place"] },
+  exercise4: { en: ["good parents"] },
+  exercise5: { en: ["many people"] },
+  exercise6: { en: ["The animal is small."] },
+  exercise7: { en: ["There is a lot of fruit."] },
+  answer1: {
     en: ["{{Word:di4fang1}} {{word:hen3}} {{word:xiao3}}."],
   },
-  answer6: { en: ["{{Word:shui3}} {{word:hen3}} {{word:hao3}}."] },
-  answer7: { en: ["{{Word:da4}}-{{word:de}} {{word:di4fang1}}"] },
-  answer8: { en: ["{{Word:hao3}}-{{word:de}} {{word:fu4mu3}}"] },
-  answer9: {
+  answer2: { en: ["{{Word:shui3}} {{word:hen3}} {{word:hao3}}."] },
+  answer3: { en: ["{{Word:da4}}-{{word:de}} {{word:di4fang1}}"] },
+  answer4: { en: ["{{Word:hao3}}-{{word:de}} {{word:fu4mu3}}"] },
+  answer5: {
     en: [
       "{{Word:hen3}}-{{word:duo1}}-{{word:de}} {{word:ren2}}",
     ],
   },
-  answer10: {
+  answer6: {
     en: ["{{Word:dong4wu4}} {{word:hen3}} {{word:xiao3}}."],
+  },
+  answer7: {
+    en: ["{{Word:shui3guo3}} {{word:hen3}} {{word:duo1}}."],
   },
 };
 

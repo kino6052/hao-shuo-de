@@ -3,10 +3,9 @@
 // LessonShape is this lesson's exact, hand-written type -- see lesson-01's
 // shape.ts for the full explanation of the pattern.
 //
-// Phase 1 skeleton (BOOK_PLAN.md): the vocab list follows BOOK_PLAN §4b, and
-// the other blocks were moved here unchanged from the old 16-lesson layout
-// ([from old LNN] says where; the old lessons are archived in
-// src/content/legacy/v2-16-lessons/). They get rewritten in Phase 2.
+// Rewritten in Phase 2 (BOOK_PLAN.md): who + verb + what (and why the order matters), bù + verb, and yǒu / méi-yǒu.
+// Only words from this lesson and earlier ones; passes every gate
+// (npm run check -- lesson-05).
 import type {
   TTitle,
   TSummary,
@@ -23,57 +22,63 @@ export type LessonShape = {
   title: TTitle;
   /** Chapter summary. [from old L05] */
   summary: TSummary;
-  /** Vocabulary: "to have, contain, carry". */
+  /** Vocabulary: "have; there is". */
   vocabYou: TVocab;
-  /** Vocabulary: "negation word used only with {{word:you3}} -- together they make {{word:mei2}}-{{word:you3}} ("to not have")". */
+  /** Vocabulary: "not, but only with {{word:you3}}: {{word:mei2}}-{{word:you3}} means "don't have"". */
   vocabMei: TVocab;
-  /** Vocabulary: "to eat, drink, consume; food". */
+  /** Vocabulary: "eat, drink". */
   vocabChi: TVocab;
   /** Vocabulary: "look, read". */
   vocabKan: TVocab;
-  /** Vocabulary: "to listen to, hear, obey". */
+  /** Vocabulary: "listen, hear". */
   vocabTing: TVocab;
-  /** Vocabulary: "to talk, speak, communicate". */
+  /** Vocabulary: "say, speak". */
   vocabShuo: TVocab;
   /** Vocabulary: "write". */
   vocabXie: TVocab;
   /** Vocabulary: "money". */
   vocabJin: TVocab;
-  /** Vocabulary: "rice, staple food". */
+  /** Vocabulary: "rice". */
   vocabMifan: TVocab;
-  /** Verbs are a way to say what someone does or what happens. [from old L05] */
-  proseVerbs: TProse;
-  /** Example: wo3 chi1 dong1xi. [from old L05] */
-  verbsExample1: TExample;
-  /** Example: ta1 shuo1 Hao3-shuo1-de. [from old L05] */
-  verbsExample2: TExample;
-  /** Example: wo3 you3 shui3guo3. [from old L05] */
-  verbsExample3: TExample;
+  /** Say: To say what someone does, put the verb after the who, and the what after the verb. Pattern: Who + verb + what */
+  proseDo: TProse;
   /** Example: wǒ chī mǐfàn. */
-  verbsExample4: TExample;
+  exampleDo1: TExample;
+  /** Example: wǒ kàn tā. */
+  exampleDo2: TExample;
+  /** Example: tā kàn wǒ. */
+  exampleDo3: TExample;
   /** Example: wǒ tīng nǐ. */
-  verbsExample5: TExample;
-  /** Verbs need a special word to be negated, not bu [from old L05] */
-  proseVerbNegation: TProse;
-  /** Example: wo3 mei2-you3 shui3guo3. [from old L05] */
-  negationExample1: TExample;
-  /** Example: wo3 bu4 chi1 dong1xi. [from old L05] */
-  negationExample2: TExample;
-  /** Example: ta1 mei2-you3 dong1xi. [from old L05] */
-  negationExample3: TExample;
+  exampleDo4: TExample;
+  /** Example: tā shuō. */
+  exampleDo5: TExample;
+  /** Example: wǒ xiě. */
+  exampleDo6: TExample;
+  /** Say: To say "not", put bù right before the verb. Pattern: Who + bù + verb */
+  proseNot: TProse;
   /** Example: tā bù xiě. */
-  negationExample4: TExample;
+  exampleNot1: TExample;
+  /** Example: wǒ bù chī. */
+  exampleNot2: TExample;
+  /** Example: nǐ bù tīng. */
+  exampleNot3: TExample;
+  /** Example: wǒ bù shuō. */
+  exampleNot4: TExample;
+  /** Say: To say you have something, use yǒu. For "don't have", say méi-yǒu. Pattern: Who + yǒu / méi-yǒu + thing */
+  proseHave: TProse;
+  /** Example: wǒ yǒu shuǐguǒ. */
+  exampleHave1: TExample;
   /** Example: wǒ méi-yǒu jīn. */
-  negationExample5: TExample;
-  /** Grammar: verb is put after subject, the word next to it is the object or nothing. [from old L05] */
-  proseWordOrderObject: TProse;
+  exampleHave2: TExample;
+  /** Example: tā yǒu mǐfàn. */
+  exampleHave3: TExample;
+  /** Example: tā yǒu jīn. */
+  exampleHave4: TExample;
+  /** Example: tā méi-yǒu dōngxi. */
+  exampleHave5: TExample;
   /** Grammar box: who + verb + what; bù before a verb; méi-yǒu for "don't have". */
   infoWhoDoesWhat: TInfo;
-  /** Example: wǒ kàn tā. [from old L05] */
-  wordOrderExample1: TExample;
-  /** Example: tā kàn wǒ. [from old L05] */
-  wordOrderExample2: TExample;
-  /** Exercise 1: I will listen to you. [from old L05] */
+  /** Exercise 1: I listen to you. */
   exercise1: TExercise;
   /** Exercise 2: She eats rice. */
   exercise2: TExercise;
@@ -85,17 +90,17 @@ export type LessonShape = {
   exercise5: TExercise;
   /** Exercise 6: They speak. */
   exercise6: TExercise;
-  /** Answer 1. [from old L05] */
+  /** Answer 1: wǒ tīng nǐ. */
   answer1: TAnswer;
-  /** Answer 2. */
+  /** Answer 2: tā chī mǐfàn. */
   answer2: TAnswer;
-  /** Answer 3. */
+  /** Answer 3: tā méi-yǒu jīn. */
   answer3: TAnswer;
-  /** Answer 4. */
+  /** Answer 4: nǐ kàn wǒ. */
   answer4: TAnswer;
-  /** Answer 5. */
+  /** Answer 5: wǒ bù xiě. */
   answer5: TAnswer;
-  /** Answer 6. */
+  /** Answer 6: tā-men shuō. */
   answer6: TAnswer;
 };
 
@@ -111,74 +116,89 @@ const shape: LessonShape = {
   vocabXie: { type: "vocab", term: "{{word:xie3}}", ttsText: "写" },
   vocabJin: { type: "vocab", term: "{{word:jin1}}", ttsText: "金" },
   vocabMifan: { type: "vocab", term: "{{word:mi3fan4}}", ttsText: "米饭" },
-  proseVerbs: { type: "prose" },
-  verbsExample1: {
-    type: "example",
-    pinyin: "{{Word:wo3}} {{word:chi1}} {{word:dong1xi}}.",
-    ttsText: "我吃东西。",
-  },
-  verbsExample2: {
-    type: "example",
-    pinyin: "{{Word:ta1}} {{word:shuo1}} Hǎo-shuō-de.",
-    ttsText: "他说好说的。",
-  },
-  verbsExample3: {
-    type: "example",
-    pinyin: "{{Word:wo3}} {{word:you3}} {{word:shui3guo3}}.",
-    ttsText: "我有水果。",
-  },
-  verbsExample4: {
+  proseDo: { type: "prose" },
+  exampleDo1: {
     type: "example",
     pinyin: "{{Word:wo3}} {{word:chi1}} {{word:mi3fan4}}.",
     ttsText: "我吃米饭。",
   },
-  verbsExample5: {
+  exampleDo2: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:kan4}} {{word:ta1}}.",
+    ttsText: "我看他。",
+  },
+  exampleDo3: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:kan4}} {{word:wo3}}.",
+    ttsText: "他看我。",
+  },
+  exampleDo4: {
     type: "example",
     pinyin: "{{Word:wo3}} {{word:ting1}} {{word:ni3}}.",
     ttsText: "我听你。",
   },
-  proseVerbNegation: { type: "prose" },
-  negationExample1: {
+  exampleDo5: {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:mei2}}-{{word:you3}} {{word:shui3guo3}}.",
-    ttsText: "我没有水果。",
+    pinyin: "{{Word:ta1}} {{word:shuo1}}.",
+    ttsText: "她说。",
   },
-  negationExample2: {
+  exampleDo6: {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:bu4}} {{word:chi1}} {{word:dong1xi}}.",
-    ttsText: "我不吃东西。",
+    pinyin: "{{Word:wo3}} {{word:xie3}}.",
+    ttsText: "我写。",
   },
-  negationExample3: {
-    type: "example",
-    pinyin: "{{Word:ta1}} {{word:mei2}}-{{word:you3}} {{word:dong1xi}}.",
-    ttsText: "他没有东西。",
-  },
-  negationExample4: {
+  proseNot: { type: "prose" },
+  exampleNot1: {
     type: "example",
     pinyin: "{{Word:ta1}} {{word:bu4}} {{word:xie3}}.",
     ttsText: "她不写。",
   },
-  negationExample5: {
+  exampleNot2: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:bu4}} {{word:chi1}}.",
+    ttsText: "我不吃。",
+  },
+  exampleNot3: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:bu4}} {{word:ting1}}.",
+    ttsText: "你不听。",
+  },
+  exampleNot4: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:bu4}} {{word:shuo1}}.",
+    ttsText: "我不说。",
+  },
+  proseHave: { type: "prose" },
+  exampleHave1: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:you3}} {{word:shui3guo3}}.",
+    ttsText: "我有水果。",
+  },
+  exampleHave2: {
     type: "example",
     pinyin: "{{Word:wo3}} {{word:mei2}}-{{word:you3}} {{word:jin1}}.",
     ttsText: "我没有金。",
   },
-  proseWordOrderObject: { type: "prose" },
+  exampleHave3: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:you3}} {{word:mi3fan4}}.",
+    ttsText: "他有米饭。",
+  },
+  exampleHave4: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:you3}} {{word:jin1}}.",
+    ttsText: "她有金。",
+  },
+  exampleHave5: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:mei2}}-{{word:you3}} {{word:dong1xi}}.",
+    ttsText: "他没有东西。",
+  },
   infoWhoDoesWhat: {
     type: "info",
     subtype: "grammar",
     tag: "verbs/who-does-what",
     items: [{}, {}, {}],
-  },
-  wordOrderExample1: {
-    type: "example",
-    pinyin: "{{Word:wo3}} {{word:kan4}} {{word:ta1}}.",
-    ttsText: "我看他。",
-  },
-  wordOrderExample2: {
-    type: "example",
-    pinyin: "{{Word:ta1}} {{word:kan4}} {{word:wo3}}.",
-    ttsText: "他看我。",
   },
   exercise1: { type: "exercise" },
   exercise2: { type: "exercise" },

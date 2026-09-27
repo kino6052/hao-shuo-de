@@ -3,10 +3,9 @@
 // LessonShape is this lesson's exact, hand-written type -- see lesson-01's
 // shape.ts for the full explanation of the pattern.
 //
-// Phase 1 skeleton (BOOK_PLAN.md): the vocab list follows BOOK_PLAN §4b, and
-// the other blocks were moved here unchanged from the old 16-lesson layout
-// ([from old LNN] says where; the old lessons are archived in
-// src/content/legacy/v2-16-lessons/). They get rewritten in Phase 2.
+// Phase 2 (BOOK_PLAN.md D26): pointers for things (zhè, nà, zhè-ge / nà-ge
+// with the counting word gè), pointers for people (wǒ, nǐ, tā, -men), and
+// whose it is (wǒ-de). Plain words; passes every gate (npm run check -- lesson-04).
 import type {
   TTitle,
   TSummary,
@@ -93,6 +92,12 @@ export type LessonShape = {
   posessionDeExample04: TExample;
   /** Example: nǐ-de jiǎo hěn dà. */
   posessionDeExample05: TExample;
+  /** Example: wǒ-de shǒu hěn dà. */
+  posessionDeExample06: TExample;
+  /** Example: tā-de tóu hěn xiǎo. */
+  posessionDeExample07: TExample;
+  /** Example: tā-de jiǎo hěn xiǎo. */
+  posessionDeExample08: TExample;
   /** Example: wǒ shì rén. [from old L04] */
   example1: TExample;
   /** Example: wǒ shì nánrén. [from old L04] */
@@ -255,6 +260,21 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ni3}}-{{word:de}} {{word:jiao3}} {{word:hen3}} {{word:da4}}.",
     ttsText: "你的脚很大。",
+  },
+  posessionDeExample06: {
+    type: "example",
+    pinyin: "{{Word:wo3}}-{{word:de}} {{word:shou3}} {{word:hen3}} {{word:da4}}.",
+    ttsText: "我的手很大。",
+  },
+  posessionDeExample07: {
+    type: "example",
+    pinyin: "{{Word:ta1}}-{{word:de}} {{word:tou2}} {{word:hen3}} {{word:xiao3}}.",
+    ttsText: "他的头很小。",
+  },
+  posessionDeExample08: {
+    type: "example",
+    pinyin: "{{Word:ta1}}-{{word:de}} {{word:jiao3}} {{word:hen3}} {{word:xiao3}}.",
+    ttsText: "她的脚很小。",
   },
   example1: {
     type: "example",

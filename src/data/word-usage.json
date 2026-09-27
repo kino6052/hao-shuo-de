@@ -125,6 +125,7 @@
       "appendix-grammar",
       "lesson-04",
       "lesson-05",
+      "lesson-06",
       "lesson-07",
       "lesson-08",
       "lesson-09",
@@ -300,7 +301,6 @@
     "nv3ren2": [
       "lesson-02",
       "appendix-stories",
-      "lesson-03",
       "appendix-grammar",
       "lesson-04"
     ],
@@ -319,6 +319,7 @@
     ],
     "shui3guo3": [
       "lesson-02",
+      "lesson-03",
       "lesson-04",
       "lesson-05",
       "lesson-06",
@@ -413,6 +414,7 @@
       "appendix-stories",
       "appendix-grammar",
       "lesson-05",
+      "lesson-06",
       "lesson-20"
     ],
     "xian4": [
@@ -513,7 +515,6 @@
       "appendix-stories",
       "lesson-03",
       "appendix-grammar",
-      "lesson-06",
       "lesson-18"
     ],
     "quan2bu4": [
@@ -528,7 +529,6 @@
       "lesson-03",
       "appendix-grammar",
       "lesson-04",
-      "lesson-06",
       "lesson-12",
       "lesson-14",
       "lesson-15",
@@ -892,7 +892,6 @@
       "appendix-stories",
       "lesson-03",
       "appendix-grammar",
-      "lesson-06",
       "lesson-13"
     ],
     "di4": [
@@ -1053,7 +1052,6 @@
       "lesson-03",
       "appendix-grammar",
       "lesson-04",
-      "lesson-06",
       "lesson-08",
       "lesson-11",
       "lesson-12",
