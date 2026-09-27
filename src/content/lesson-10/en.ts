@@ -8,79 +8,173 @@ const en: PartialByKey<LessonShape> = {
   summary: {
     en: [
       "We often need to say where things are.",
-      "In this lesson, you'll be able to say \"The box is on the table.\", \"inside the house\", and \"Where is it?\"",
+      "In this lesson, you'll be able to say \"The box is on the floor.\", \"inside the house\", \"in front of me\", and \"Where is it?\"",
     ],
   },
-  vocabLi: { en: ["inside, between, internal organ"] },
-  vocabShang: { en: ["area above, highest part, sky"] },
-  vocabXia: { en: ["area below, under, lower part, leg"] },
-  vocabQianmian: { en: ["in front, ahead"] },
-  vocabPang: { en: ["beside"] },
+  vocabLi: { en: ["in, inside"] },
+  vocabShang: { en: ["on, up"] },
+  vocabXia: { en: ["under, down"] },
+  vocabQian: { en: ["front; qián-miàn: in front"] },
+  vocabPang: { en: ["beside (in pángbiān)"] },
   vocabBian: { en: ["side"] },
-  vocabPangbian: { en: ["side, area beside, vicinity"] },
-  vocabMian: { en: ["side, face (as in lǐ-miàn, shàng-miàn)"] },
+  vocabPangbian: { en: ["beside, next to"] },
+  vocabMian: { en: ["side; joins a place word: lǐ-miàn, qián-miàn"] },
   vocabNali: { en: ["where"] },
-  vocabTai: { en: ["table top, floor"] },
-  proseZaiVsDao: {
+  vocabDi: { en: ["floor, ground"] },
+  proseWhere: {
     en: [
-      'Hao-shuo-de treats spatial concepts as ordinary noun destinations rather than abstract markers -- `{{word:shang4}}` ("above, sky"), `{{word:xia4}}` ("below"), and the rest are all just nouns that happen to name a location.',
-      "To place something at a fixed location, use the coverb `{{word:zai4}}` (from Lesson 8) in front of it.",
-      "To describe movement toward a destination instead, use `dào` in that same slot.",
+      "**To say where someone or something is**, put {{word:zai4}} (be at) before the place.",
+      "",
+      "**Who + {{word:zai4}} + place**",
+      "",
+      'In Lesson 8, {{word:zai4}} before a verb meant "right now". Before a place, it means "is at".',
     ],
     tldr: {
       en: [
-        "To say where something is, use {{word:zai4}} and a place word.",
+        "Put {{word:zai4}} before a place to say where someone is.",
       ],
     },
-    necessity: { en: ["Now you can say where things are."] },
+    necessity: { en: ["Now you can say where people and things are."] },
   },
-  infoSpatialLocation: {
-    title: { en: ["Spatial Location"] },
-    items: [
-      {
-        en: [
-          "Subject + `{{word:zai4}}` / `dào` + Target Object + Spatial Noun -- the same coverb slot from Lesson 8, filled with either the static or the directional root.",
-        ],
-      },
-      {
-        en: [
-          "To mark movement currently in progress toward a destination, combine the progressive marker `{{word:zai4}}-` with the kinetic verb `{{word:qu4}}` and the destination marker `dào` into the compound `{{word:zai4}}-{{word:qu4}}-dào`.",
-        ],
-      },
-      {
-        en: [
-          "A spatial noun standing alone, with no target object modifying it, functions as an ordinary baseline noun.",
-        ],
-      },
-    ],
-  },
-  example1: { en: ["I am at your side."] },
-  example2: {
-    en: ["The foundation / lower part of the place is strong."],
-  },
-  example4: { en: ["The document / word-thing is under the animal."] },
-  example5: { en: ["I see a dark lady in front of the place."] },
-  example6: { en: ["Color-things are next to the darkness."] },
-  proseWordAsPredicate: {
+  exampleWhere1: { en: ["I'm at home."] },
+  exampleWhere2: { en: ["Are your parents at home?"] },
+  exampleWhere3: { en: ["He's here."] },
+  proseWhereQuestion: {
     en: [
-      "If a clause has no separate action verb, this kind of word doesn't leave an empty slot behind -- it simply steps up and serves as the main predicate by itself.",
-      '`{{word:wo3}} {{word:zai4}} {{word:di4fang1}}` ("I am in the house") has no other verb at all; `{{word:zai4}}` alone is doing the whole job of the sentence.',
+      '**To ask "where?"**, put {{word:na3li3}} where the place would go.',
+      "",
+      "**Who + {{word:zai4}} {{word:na3li3}}?**",
+      "",
+      'Answer with {{word:zhe4}}-{{word:li3}} ("here") or {{word:na4}}-{{word:li3}} ("there").',
     ],
     tldr: {
       en: [
-        "{{word:zai4}} can be the only verb: {{word:wo3}} {{word:zai4}} {{word:jia1}} means \"I'm at home\".",
+        '{{word:na3li3}} means "where". Answer with {{word:zhe4}}-{{word:li3}} (here) or {{word:na4}}-{{word:li3}} (there).',
+      ],
+    },
+    necessity: { en: ["Now you can ask where things are."] },
+  },
+  exampleWhereQuestion1: { en: ["Where are you?"] },
+  exampleWhereQuestion2: { en: ["Where is the box?"] },
+  exampleWhereQuestion3: { en: ["It's over there."] },
+  proseInOnUnder: {
+    en: [
+      "**To say in or on something**, join {{word:li3}} (in) or {{word:shang4}} (on) to the place.",
+      "",
+      "**Thing + {{word:zai4}} + place-{{word:li3}} / place-{{word:shang4}}**",
+      "",
+      "For under, say {{word:xia4}}-{{word:mian4}} (the bottom side): {{word:he2zi}}-{{word:de}} {{word:xia4}}-{{word:mian4}}.",
+    ],
+    tldr: {
+      en: [
+        "Join {{word:li3}} (in) or {{word:shang4}} (on) to the place: {{word:he2zi}}-{{word:li3}}, in the box.",
+      ],
+    },
+    necessity: { en: ["Now you can say exactly where something is."] },
+  },
+  exampleInOnUnder1: { en: ["The water is in the box."] },
+  exampleInOnUnder2: { en: ["The tool is on the floor."] },
+  exampleInOnUnder3: { en: ["The fruit is under the box."] },
+  exampleInOnUnder4: { en: ["The clothes are in the house."] },
+  exampleInOnUnder5: { en: ["My clothes are on the floor."] },
+  exampleInOnUnder6: { en: ["There is water under the box."] },
+  proseSides: {
+    en: [
+      "**To say in front, behind, or beside**, join {{word:mian4}} (side) to {{word:qian2}} (front) or {{word:hou4}} (back), or use {{word:pang2bian1}} (beside).",
+      "",
+      "**Thing + {{word:zai4}} + X-{{word:de}} {{word:qian2}}-{{word:mian4}} / {{word:hou4}}-{{word:mian4}} / {{word:pang2bian1}}**",
+      "",
+      "{{word:mian4}} joins the others too: {{word:li3}}-{{word:mian4}} (inside), {{word:shang4}}-{{word:mian4}} (on top), {{word:xia4}}-{{word:mian4}} (below).",
+      "{{word:pang2bian1}} is {{word:pang2}} (beside) + {{word:bian1}} (side). {{word:zhe4}}-{{word:bian1}} is this side, {{word:na4}}-{{word:bian1}} is that side.",
+    ],
+    tldr: {
+      en: [
+        "Join {{word:mian4}} to {{word:qian2}} or {{word:hou4}} for in front or behind. {{word:pang2bian1}} means beside.",
       ],
     },
     necessity: {
-      en: ["You don't need another verb to say where you are."],
+      en: ["Now you can place things around other things."],
     },
   },
-  example2L07: { en: ["I give a swimming animal to her in the house."] },
-  example3L07: { en: ["I am in the house."] },
-  exercise2: { en: ["Protect your back."] },
+  exampleSides1: { en: ["Someone is in front of me."] },
+  exampleSides2: { en: ["The animal is behind the house."] },
+  exampleSides3: { en: ["I'm beside you."] },
+  exampleSides4: { en: ["She's inside."] },
+  exampleSides5: { en: ["There is an animal in front of the house."] },
+  exampleSides6: { en: ["My parents are beside me."] },
+  exampleSides7: { en: ["The box is on that side."] },
+  exampleSides8: { en: ["He's beside me."] },
+  infoWhereThingsAre: {
+    title: { en: ["Where Things Are"] },
+    items: [
+      {
+        en: [
+          "{{word:zai4}} + place: {{Word:wo3}} {{word:zai4}} {{word:jia1}}. (I'm at home.)",
+        ],
+      },
+      {
+        en: [
+          "{{word:na3li3}}, where: {{Word:ni3}} {{word:zai4}} {{word:na3li3}}? (Where are you?)",
+        ],
+      },
+      {
+        en: [
+          "place-{{word:li3}} (in), place-{{word:shang4}} (on): {{Word:shui3}} {{word:zai4}} {{word:he2zi}}-{{word:li3}}. (The water is in the box.)",
+        ],
+      },
+      {
+        en: [
+          "X-{{word:de}} {{word:qian2}}-{{word:mian4}} / {{word:hou4}}-{{word:mian4}} / {{word:xia4}}-{{word:mian4}} / {{word:pang2bian1}}: {{Word:wo3}} {{word:zai4}} {{word:ni3}}-{{word:de}} {{word:pang2bian1}}. (I'm beside you.)",
+        ],
+      },
+    ],
+  },
+  exercise1: { en: ["Where is my tool?"] },
+  exercise2: { en: ["The fruit is in the box."] },
+  exercise3: { en: ["The box is on the floor."] },
+  exercise4: { en: ["The animal is under the box."] },
+  exercise5: { en: ["I'm in front of you."] },
+  exercise6: { en: ["She is beside me."] },
+  exercise7: { en: ["He is on this side."] },
+  exercise8: { en: ["The man is beside the house."] },
+  answer1: {
+    en: [
+      "{{Word:wo3}}-{{word:de}} {{word:gong1ju4}} {{word:zai4}} {{word:na3li3}}?",
+    ],
+  },
   answer2: {
     en: [
-      "{{Word:ba3}} {{word:ni3}}-{{word:de}} {{word:hou4}} {{word:bian4}} {{word:hao3}}.",
+      "{{Word:shui3guo3}} {{word:zai4}} {{word:he2zi}}-{{word:li3}}.",
+    ],
+  },
+  answer3: {
+    en: [
+      "{{Word:he2zi}} {{word:zai4}} {{word:di4}}-{{word:shang4}}.",
+    ],
+  },
+  answer4: {
+    en: [
+      "{{Word:dong4wu4}} {{word:zai4}} {{word:he2zi}}-{{word:de}} {{word:xia4}}-{{word:mian4}}.",
+    ],
+  },
+  answer5: {
+    en: [
+      "{{Word:wo3}} {{word:zai4}} {{word:ni3}}-{{word:de}} {{word:qian2}}-{{word:mian4}}.",
+    ],
+  },
+  answer6: {
+    en: [
+      "{{Word:ta1}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:pang2bian1}}.",
+    ],
+  },
+  answer7: {
+    en: [
+      "{{Word:ta1}} {{word:zai4}} {{word:zhe4}}-{{word:bian1}}.",
+    ],
+  },
+  answer8: {
+    en: [
+      "{{Word:nan2ren2}} {{word:zai4}} {{word:jia1}}-{{word:de}} {{word:pang2}}-{{word:bian1}}.",
     ],
   },
 };

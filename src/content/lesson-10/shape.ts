@@ -3,10 +3,9 @@
 // LessonShape is this lesson's exact, hand-written type -- see lesson-01's
 // shape.ts for the full explanation of the pattern.
 //
-// Phase 1 skeleton (BOOK_PLAN.md): the vocab list follows BOOK_PLAN §4b, and
-// the other blocks were moved here unchanged from the old 16-lesson layout
-// ([from old LNN] says where; the old lessons are archived in
-// src/content/legacy/v2-16-lessons/). They get rewritten in Phase 2.
+// Rewritten in Phase 2 (BOOK_PLAN.md): zài + place, asking where (nǎlǐ), in / on / under, and the side words (qián-miàn, hòu-miàn, pángbiān).
+// Only words from this lesson and earlier ones; passes every gate
+// (npm run check -- lesson-10).
 import type {
   TTitle,
   TSummary,
@@ -21,52 +20,110 @@ import type {
 export type LessonShape = {
   /** Space 1 — Where it is */
   title: TTitle;
-  /** Chapter summary: what you'll be able to say (stub until the Phase 2 rewrite). */
+  /** Chapter summary: why you'd want this, then what you'll be able to say. */
   summary: TSummary;
-  /** Vocabulary: "inside, between, internal organ". */
+  /** Vocabulary: "in, inside". */
   vocabLi: TVocab;
-  /** Vocabulary: "area above, highest part, sky". */
+  /** Vocabulary: "on, up". */
   vocabShang: TVocab;
-  /** Vocabulary: "area below, under, lower part, leg". */
+  /** Vocabulary: "under, down". */
   vocabXia: TVocab;
-  /** Vocabulary: "in front, ahead". */
-  vocabQianmian: TVocab;
-  /** Vocabulary: "beside". */
+  /** Vocabulary: "front; qián-miàn: in front". */
+  vocabQian: TVocab;
+  /** Vocabulary: "beside (in pángbiān)". */
   vocabPang: TVocab;
   /** Vocabulary: "side". */
   vocabBian: TVocab;
-  /** Vocabulary: "side, area beside, vicinity". */
+  /** Vocabulary: "beside, next to". */
   vocabPangbian: TVocab;
-  /** Vocabulary: "side, face (as in lǐ-miàn, shàng-miàn)". */
+  /** Vocabulary: "side; joins a place word: lǐ-miàn, qián-miàn". */
   vocabMian: TVocab;
   /** Vocabulary: "where". */
   vocabNali: TVocab;
-  /** Vocabulary: "table top, floor". */
-  vocabTai: TVocab;
-  /** Grammar: zai4 marks static location, dào marks movement toward a destination. [from old L15] */
-  proseZaiVsDao: TProse;
-  /** Grammar rule box: Spatial Location -- Subject + zai4/dào + Target + Spatial Noun, plus the zai4-qu4-dào compound and standalone spatial nouns. [from old L15] */
-  infoSpatialLocation: TInfo;
-  /** Example: wǒ zài nǐ-de pángbiān. [from old L15] */
-  example1: TExample;
-  /** Example: xiàmiàn-de dìfāng hěn yǒu lìliàng. [from old L15] */
-  example2: TExample;
-  /** Example: xiě-de dōngxi zài dòngwù-de xiàmiàn. [from old L15] */
-  example4: TExample;
-  /** Example: wǒ kàn-jiàn hēisè-de nǚrén zài dìfāng-de qiánmiàn. [from old L15] */
-  example5: TExample;
-  /** Example: yánsè dōngxi zài hēisè-de pángbiān. [from old L15] */
-  example6: TExample;
-  /** Grammar: with no other action verb, the relationship word itself becomes the main predicate. [from old L10] */
-  proseWordAsPredicate: TProse;
-  /** Example: wǒ zài dìfāng gěi tā zài-shuǐ-lǐ-de dòngwù. [from old L07] */
-  example2L07: TExample;
-  /** Example: wǒ zài dìfāng. [from old L07] */
-  example3L07: TExample;
-  /** Exercise 2: Protect your back. [from old L15] */
+  /** Vocabulary: "floor, ground". */
+  vocabDi: TVocab;
+  /** Say: To say where someone or something is, put zài (be at) before the place. Pattern: Who + zài + place */
+  proseWhere: TProse;
+  /** Example: wǒ zài jiā. */
+  exampleWhere1: TExample;
+  /** Example: nǐ-de fùmǔ zài jiā ma? */
+  exampleWhere2: TExample;
+  /** Example: tā zài zhè-lǐ. */
+  exampleWhere3: TExample;
+  /** Say: To ask "where?", put nǎlǐ where the place would go. Pattern: Who + zài nǎlǐ? */
+  proseWhereQuestion: TProse;
+  /** Example: nǐ zài nǎlǐ? */
+  exampleWhereQuestion1: TExample;
+  /** Example: hézi zài nǎlǐ? */
+  exampleWhereQuestion2: TExample;
+  /** Example: zài nà-lǐ. */
+  exampleWhereQuestion3: TExample;
+  /** Say: To say in or on something, join lǐ (in) or shàng (on) to the place. Pattern: Thing + zài + place-lǐ / place-shàng */
+  proseInOnUnder: TProse;
+  /** Example: shuǐ zài hézi-lǐ. */
+  exampleInOnUnder1: TExample;
+  /** Example: gōngjù zài di-shàng. */
+  exampleInOnUnder2: TExample;
+  /** Example: shuǐguǒ zài hézi-de xià-miàn. */
+  exampleInOnUnder3: TExample;
+  /** Example: yīfu zài jiā-lǐ. */
+  exampleInOnUnder4: TExample;
+  /** Example: wǒ-de yīfu zài di-shàng. */
+  exampleInOnUnder5: TExample;
+  /** Example: hézi-de xià-miàn yǒu shuǐ. */
+  exampleInOnUnder6: TExample;
+  /** Say: To say in front, behind, or beside, join miàn (side) to qián (front) or hòu (back), or use pángbiān (beside). Pattern: Thing + zài + X-de qián-miàn / hòu-miàn / pángbiān */
+  proseSides: TProse;
+  /** Example: rén zài wǒ-de qián-miàn. */
+  exampleSides1: TExample;
+  /** Example: dòngwù zài jiā-de hòu-miàn. */
+  exampleSides2: TExample;
+  /** Example: wǒ zài nǐ-de pángbiān. */
+  exampleSides3: TExample;
+  /** Example: tā zài lǐ-miàn. */
+  exampleSides4: TExample;
+  /** Example: jiā-de qián-miàn yǒu dòngwù. */
+  exampleSides5: TExample;
+  /** Example: fùmǔ zài wǒ-de pángbiān. */
+  exampleSides6: TExample;
+  /** Example: hézi zài nà-biān. */
+  exampleSides7: TExample;
+  /** Example: tā zài wǒ-de páng-biān. */
+  exampleSides8: TExample;
+  /** Grammar box: zài + place, nǎlǐ, place-lǐ / place-shàng, and the -miàn side words. */
+  infoWhereThingsAre: TInfo;
+  /** Exercise 1: Where is my tool? */
+  exercise1: TExercise;
+  /** Exercise 2: The fruit is in the box. */
   exercise2: TExercise;
-  /** Answer 2. [from old L15] */
+  /** Exercise 3: The box is on the floor. */
+  exercise3: TExercise;
+  /** Exercise 4: The animal is under the box. */
+  exercise4: TExercise;
+  /** Exercise 5: I'm in front of you. */
+  exercise5: TExercise;
+  /** Exercise 6: She is beside me. */
+  exercise6: TExercise;
+  /** Exercise 7: He is on this side. */
+  exercise7: TExercise;
+  /** Exercise 8: The man is beside the house. */
+  exercise8: TExercise;
+  /** Answer 1: wǒ-de gōngjù zài nǎlǐ? */
+  answer1: TAnswer;
+  /** Answer 2: shuǐguǒ zài hézi-lǐ. */
   answer2: TAnswer;
+  /** Answer 3: hézi zài di-shàng. */
+  answer3: TAnswer;
+  /** Answer 4: dòngwù zài hézi-de xià-miàn. */
+  answer4: TAnswer;
+  /** Answer 5: wǒ zài nǐ-de qián-miàn. */
+  answer5: TAnswer;
+  /** Answer 6: tā zài wǒ-de pángbiān. */
+  answer6: TAnswer;
+  /** Answer 7: tā zài zhè-biān. */
+  answer7: TAnswer;
+  /** Answer 8: nánrén zài jiā-de páng-biān. */
+  answer8: TAnswer;
 };
 
 const shape: LessonShape = {
@@ -75,7 +132,7 @@ const shape: LessonShape = {
   vocabLi: { type: "vocab", term: "{{word:li3}}", ttsText: "里面" },
   vocabShang: { type: "vocab", term: "{{word:shang4}}", ttsText: "上面" },
   vocabXia: { type: "vocab", term: "{{word:xia4}}", ttsText: "下面" },
-  vocabQianmian: { type: "vocab", term: "{{word:qian2}}", ttsText: "前面" },
+  vocabQian: { type: "vocab", term: "{{word:qian2}}", ttsText: "前" },
   vocabPang: { type: "vocab", term: "{{word:pang2}}", ttsText: "旁" },
   vocabBian: { type: "vocab", term: "{{word:bian1}}", ttsText: "边" },
   vocabPangbian: {
@@ -85,45 +142,133 @@ const shape: LessonShape = {
   },
   vocabMian: { type: "vocab", term: "{{word:mian4}}", ttsText: "面" },
   vocabNali: { type: "vocab", term: "{{word:na3li3}}", ttsText: "哪里" },
-  vocabTai: { type: "vocab", term: "{{word:di4}}", ttsText: "台" },
-  proseZaiVsDao: { type: "prose" },
-  infoSpatialLocation: {
-    type: "info",
-    subtype: "grammar",
-    tag: "nouns/spatial",
-    items: [{}, {}, {}],
+  vocabDi: { type: "vocab", term: "{{word:di4}}", ttsText: "地" },
+  proseWhere: { type: "prose" },
+  exampleWhere1: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:zai4}} {{word:jia1}}.",
+    ttsText: "我在家。",
   },
-  example1: {
+  exampleWhere2: {
+    type: "example",
+    pinyin: "{{Word:ni3}}-{{word:de}} {{word:fu4mu3}} {{word:zai4}} {{word:jia1}} {{word:ma}}?",
+    ttsText: "你的父母在家吗？",
+  },
+  exampleWhere3: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:zai4}} {{word:zhe4}}-{{word:li3}}.",
+    ttsText: "他在这里。",
+  },
+  proseWhereQuestion: { type: "prose" },
+  exampleWhereQuestion1: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:zai4}} {{word:na3li3}}?",
+    ttsText: "你在哪里？",
+  },
+  exampleWhereQuestion2: {
+    type: "example",
+    pinyin: "{{Word:he2zi}} {{word:zai4}} {{word:na3li3}}?",
+    ttsText: "盒子在哪里？",
+  },
+  exampleWhereQuestion3: {
+    type: "example",
+    pinyin: "{{Word:zai4}} {{word:na4}}-{{word:li3}}.",
+    ttsText: "在那里。",
+  },
+  proseInOnUnder: { type: "prose" },
+  exampleInOnUnder1: {
+    type: "example",
+    pinyin: "{{Word:shui3}} {{word:zai4}} {{word:he2zi}}-{{word:li3}}.",
+    ttsText: "水在盒子里。",
+  },
+  exampleInOnUnder2: {
+    type: "example",
+    pinyin: "{{Word:gong1ju4}} {{word:zai4}} {{word:di4}}-{{word:shang4}}.",
+    ttsText: "工具在地上。",
+  },
+  exampleInOnUnder3: {
+    type: "example",
+    pinyin: "{{Word:shui3guo3}} {{word:zai4}} {{word:he2zi}}-{{word:de}} {{word:xia4}}-{{word:mian4}}.",
+    ttsText: "水果在盒子的下面。",
+  },
+  exampleInOnUnder4: {
+    type: "example",
+    pinyin: "{{Word:yi1fu}} {{word:zai4}} {{word:jia1}}-{{word:li3}}.",
+    ttsText: "衣服在家里。",
+  },
+  exampleInOnUnder5: {
+    type: "example",
+    pinyin: "{{Word:wo3}}-{{word:de}} {{word:yi1fu}} {{word:zai4}} {{word:di4}}-{{word:shang4}}.",
+    ttsText: "我的衣服在地上。",
+  },
+  exampleInOnUnder6: {
+    type: "example",
+    pinyin: "{{Word:he2zi}}-{{word:de}} {{word:xia4}}-{{word:mian4}} {{word:you3}} {{word:shui3}}.",
+    ttsText: "盒子的下面有水。",
+  },
+  proseSides: { type: "prose" },
+  exampleSides1: {
+    type: "example",
+    pinyin: "{{Word:ren2}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:qian2}}-{{word:mian4}}.",
+    ttsText: "人在我的前面。",
+  },
+  exampleSides2: {
+    type: "example",
+    pinyin: "{{Word:dong4wu4}} {{word:zai4}} {{word:jia1}}-{{word:de}} {{word:hou4}}-{{word:mian4}}.",
+    ttsText: "动物在家的后面。",
+  },
+  exampleSides3: {
     type: "example",
     pinyin: "{{Word:wo3}} {{word:zai4}} {{word:ni3}}-{{word:de}} {{word:pang2bian1}}.",
+    ttsText: "我在你的旁边。",
   },
-  example2: {
+  exampleSides4: {
     type: "example",
-    pinyin: "{{Word:xia4}}-{{word:de}} {{word:di4fang1}} {{word:hen3}} {{word:you3}} {{word:li4liang4}}.",
+    pinyin: "{{Word:ta1}} {{word:zai4}} {{word:li3}}-{{word:mian4}}.",
+    ttsText: "她在里面。",
   },
-  example4: {
+  exampleSides5: {
     type: "example",
-    pinyin: "{{Word:xie3}}-{{word:de}} {{word:dong1xi}} {{word:zai4}} {{word:dong4wu4}}-{{word:de}} {{word:xia4}}.",
+    pinyin: "{{Word:jia1}}-{{word:de}} {{word:qian2}}-{{word:mian4}} {{word:you3}} {{word:dong4wu4}}.",
+    ttsText: "家的前面有动物。",
   },
-  example5: {
+  exampleSides6: {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:kan4}}-jiàn {{word:hei1se4}}-{{word:de}} {{word:nv3ren2}} {{word:zai4}} {{word:di4fang1}}-{{word:de}} {{word:qian2}}.",
+    pinyin: "{{Word:fu4mu3}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:pang2bian1}}.",
+    ttsText: "父母在我的旁边。",
   },
-  example6: {
+  exampleSides7: {
     type: "example",
-    pinyin: "{{Word:yan2}}-sè {{word:dong1xi}} {{word:zai4}} {{word:hei1se4}}-{{word:de}} {{word:pang2bian1}}.",
+    pinyin: "{{Word:he2zi}} {{word:zai4}} {{word:na4}}-{{word:bian1}}.",
+    ttsText: "盒子在那边。",
   },
-  proseWordAsPredicate: { type: "prose" },
-  example2L07: {
+  exampleSides8: {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:zai4}} {{word:di4fang1}} {{word:gei3}} {{word:ta1}} {{word:zai4}}-{{word:shui3}}-lǐ-{{word:de}} {{word:dong4wu4}}.",
+    pinyin: "{{Word:ta1}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:pang2}}-{{word:bian1}}.",
+    ttsText: "他在我的旁边。",
   },
-  example3L07: {
-    type: "example",
-    pinyin: "{{Word:wo3}} {{word:zai4}} {{word:di4fang1}}.",
+  infoWhereThingsAre: {
+    type: "info",
+    subtype: "grammar",
+    tag: "place/where-and-sides",
+    items: [{}, {}, {}, {}],
   },
+  exercise1: { type: "exercise" },
   exercise2: { type: "exercise" },
-  answer2: { type: "answer" },
+  exercise3: { type: "exercise" },
+  exercise4: { type: "exercise" },
+  exercise5: { type: "exercise" },
+  exercise6: { type: "exercise" },
+  exercise7: { type: "exercise" },
+  exercise8: { type: "exercise" },
+  answer1: { type: "answer", ttsText: "我的工具在哪里？" },
+  answer2: { type: "answer", ttsText: "水果在盒子里。" },
+  answer3: { type: "answer", ttsText: "盒子在地上。" },
+  answer4: { type: "answer", ttsText: "动物在盒子的下面。" },
+  answer5: { type: "answer", ttsText: "我在你的前面。" },
+  answer6: { type: "answer", ttsText: "她在我的旁边。" },
+  answer7: { type: "answer", ttsText: "他在这边。" },
+  answer8: { type: "answer", ttsText: "男人在家的旁边。" },
 };
 
 export default shape;
