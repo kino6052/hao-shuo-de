@@ -8,146 +8,175 @@ const en: PartialByKey<LessonShape> = {
   summary: {
     en: [
       "Things change, and we often make them change.",
-      "In this lesson, you'll be able to say \"It got better.\", \"It became bad.\", \"fix it (make it good)\", and \"strong\".",
+      "In this lesson, you'll be able to say \"It got better.\", \"The fruit went bad.\", \"I fixed it.\", and \"He's very strong.\"",
     ],
   },
-  vocabBian: { en: ["to become, change into"] },
-  vocabBa: { en: ['puts the thing first ("bǎ it make good")'] },
+  vocabBian: { en: ["become, change"] },
+  vocabBa: { en: ["puts the thing first: bǎ + thing + action"] },
   vocabNong: { en: ["do, make"] },
   vocabDe: { en: ["get"] },
-  vocabLiliang: { en: ["power, energy"] },
-  vocabHuai: { en: ["bad, negative, broken"] },
+  vocabLiliang: { en: ["strength; yǒu lìliàng: strong"] },
+  vocabHuai: { en: ["bad, broken"] },
   vocabNi: { en: ["mud, paste"] },
-  proseChangeOnset: {
+  proseChanged: {
     en: [
-      'To describe something changing from one state to another -- "becoming big" or "turning bad" -- `{{word:bian4}}` ("to become, change into") steps directly into the main verb slot itself, rather than sitting in front of another verb.',
-      "To describe a change that's gradual, or just getting underway, `{{word:kai1shi3}}` (\"to begin to\") sits in front of the verb or adjective it's introducing instead.",
-    ],
-    tldr: {
-      en: [
-        "Use {{word:bian4}} to say something changes into something else.",
-      ],
-    },
-    necessity: {
-      en: [
-        "{{word:kai1shi3}} is different: it says a change is only starting.",
-      ],
-    },
-  },
-  infoChangeVsOnset: {
-    title: { en: ["`{{word:bian4}}` vs. `{{word:kai1shi3}}`"] },
-    items: [
-      {
-        en: [
-          '`{{word:bian4}}` ("to become") fills the main verb slot directly for a state transition: X `{{word:bian4}}` Y.',
-        ],
-      },
-      {
-        en: [
-          '`{{word:kai1shi3}}` ("to begin to") sits right before the verb or adjective to mark a gradual change, or the start of an action.',
-        ],
-      },
-    ],
-  },
-  example1: { en: ["The city / room is becoming big."] },
-  example4: { en: ["The fruit became bad."] },
-  proseBuildingAdjective: {
-    en: [
-      "Not every idea gets its own dedicated word in Hao-shuo-de -- and \"strong\" is a good example of why that's fine.",
-      'Rather than adding a 121st word to the dictionary just for this one concept, Hao-shuo-de builds it out of two words you already know: {{word:you3}} ("to have," from Lesson 5) plus {{word:li4liang4}} ("power, energy").',
-      'Put them side by side and you get {{word:you3}} {{word:li4liang4}}, literally "to have power" -- which is really just describing what being strong actually means, one plain idea at a time, instead of packaging it into a single opaque label.',
+      "**To say something changed**, put {{word:le}} after the describing word.",
       "",
-      "To use that description the way you'd use any other adjective, bind it onto the noun it's describing with `-{{word:de}}`, the same connecting particle from Lesson 3: {{word:you3}}-{{word:li4liang4}}-{{word:de}} {{word:nan2ren2}}, \"a strong man.\"",
-      "Once it's bound this way, the whole three-word phrase behaves exactly like a single adjective would -- it just happens to be built rather than memorized.",
+      "**Thing + describing word + {{word:le}}**",
     ],
     tldr: {
       en: [
-        '"Strong" is {{word:you3}}-{{word:li4liang4}}: "having strength".',
+        "{{word:le}} after a describing word means it changed: {{Word:shui3}} {{word:re4}} {{word:le}}, the water got hot.",
       ],
     },
-    necessity: {
-      en: [
-        "When there is no word for something, build it from words you know.",
-      ],
-    },
+    necessity: { en: ["Now you can say how things turned out."] },
   },
-  infoBuildingAdjective: {
-    title: { en: ["Building an Adjective"] },
-    items: [
-      {
-        en: [
-          "When the dictionary has no word for a description you need, combine an existing verb and noun (e.g. {{word:you3}} + {{word:li4liang4}}) and bind the pair onto its target noun with `-{{word:de}}`, the same way any adjective phrase attaches.",
-        ],
-      },
-    ],
-  },
-  proseStateChange: {
+  exampleChanged1: { en: ["The water got hot."] },
+  exampleChanged2: { en: ["It's better now."] },
+  exampleChanged3: { en: ["The fruit went bad."] },
+  exampleChanged4: { en: ["The tool is broken."] },
+  proseBecame: {
     en: [
-      "There's a second way `{{word:le}}` shows up beyond marking a finished action on a verb (Lesson 8): attached directly to an adjective, `{{word:le}}` marks that a state has changed -- that something wasn't true a moment ago, and now it is.",
-      "`{{word:hao3}} {{word:le}}` doesn't just restate \"good\"; it means something has become good, or gotten better than it was.",
-      "This is the same `{{word:le}}`, doing the same underlying job -- marking the moment a change became real -- just applied to a description instead of an action.",
-      "Between this and the causative construction below, Hao-shuo-de actually has two distinct ways to talk about something changing: `{{word:le}}` reports that a change already happened, while `{{word:ba3}}`...`{{word:bian4}}` (next) is how you make one happen yourself.",
+      "**To say something became different**, put {{word:bian4}} (become) before the describing word, and {{word:le}} after.",
+      "",
+      "**Thing + {{word:bian4}} + describing word + {{word:le}}**",
     ],
     tldr: {
       en: [
-        'Put {{word:le}} after a describing word to say it changed: {{word:hao3}} {{word:le}} means "it got good".',
+        "{{word:bian4}} + describing word + {{word:le}} means it became that.",
+      ],
+    },
+    necessity: { en: ["Now you can describe a change."] },
+  },
+  exampleBecame1: { en: ["The water turned cold."] },
+  exampleBecame2: { en: ["He got better."] },
+  exampleBecame3: { en: ["The air turned hot."] },
+  exampleBecame4: { en: ["The water turned into mud."] },
+  exampleBecame5: { en: ["There's mud on the floor."] },
+  proseMake: {
+    en: [
+      "**To say you make something so**, put {{word:nong4}} (do, make) before the result.",
+      "",
+      "**Who + {{word:nong4}} + result**",
+      "",
+      '{{word:nong4}} {{word:hao3}} is "fix it", and {{word:nong4}} {{word:huai4}} is "break it". {{word:de2}} means get: {{Word:ni3}} {{word:de2}} {{word:le}} {{word:shen2me}}? (What did you get?)',
+    ],
+    tldr: {
+      en: [
+        "{{word:nong4}} + result: {{word:nong4}} {{word:hao3}} means fix it.",
+      ],
+    },
+    necessity: { en: ["Now you can say what you did to something."] },
+  },
+  exampleMake1: { en: ["I fixed it."] },
+  exampleMake2: { en: ["You broke it."] },
+  exampleMake3: { en: ["Can you fix it?"] },
+  exampleMake4: { en: ["What did you get?"] },
+  exampleMake5: { en: ["I got new clothes."] },
+  proseBa: {
+    en: [
+      "**To say what you do to a thing**, put {{word:ba3}} and the thing before the action.",
+      "",
+      "**Who + {{word:ba3}} + thing + {{word:nong4}} + result**",
+    ],
+    tldr: {
+      en: [
+        "{{word:ba3}} + thing comes before the action: {{Word:wo3}} {{word:ba3}} {{word:gong1ju4}} {{word:nong4}} {{word:hao3}} {{word:le}}.",
       ],
     },
     necessity: {
-      en: ["Now you can say that things got better or worse."],
+      en: ["Now you can say exactly which thing you changed."],
     },
   },
-  infoStateChange: {
-    title: { en: ["State Change with `{{word:le}}`"] },
+  exampleBa1: { en: ["I fixed the tool."] },
+  exampleBa2: { en: ["He broke the box."] },
+  exampleBa3: { en: ["Heat up the water."] },
+  proseStrong: {
+    en: [
+      '**To say strong**, say {{word:you3}} {{word:li4liang4}}, "have strength".',
+      "",
+      "**Who + {{word:hen3}} {{word:you3}} {{word:li4liang4}}**",
+    ],
+    tldr: {
+      en: [
+        "{{word:you3}} {{word:li4liang4}}, have strength, means strong.",
+      ],
+    },
+    necessity: {
+      en: [
+        "When there's no word for something, you can build it from words you know.",
+      ],
+    },
+  },
+  exampleStrong1: { en: ["He's very strong."] },
+  exampleStrong2: { en: ["I have no strength."] },
+  exampleStrong3: { en: ["Your hands are very strong."] },
+  infoBecomingAndMaking: {
+    title: { en: ["Becoming and Making"] },
     items: [
       {
         en: [
-          '`{{word:le}}` attaches directly after an adjective to mark that a state has changed. `{{word:hao3}} {{word:le}}` means "it has become good," not simply "it is good."',
+          "describing word + {{word:le}}, it changed: {{Word:shui3}} {{word:re4}} {{word:le}}. (The water got hot.)",
+        ],
+      },
+      {
+        en: [
+          "{{word:bian4}} + describing word + {{word:le}}, became: {{Word:shui3}} {{word:bian4}} {{word:leng3}} {{word:le}}. (The water turned cold.)",
+        ],
+      },
+      {
+        en: [
+          "{{word:nong4}} + result, make it so: {{Word:wo3}} {{word:nong4}} {{word:hao3}} {{word:le}}. (I fixed it.)",
+        ],
+      },
+      {
+        en: [
+          "{{word:ba3}} + thing + {{word:nong4}} + result: {{Word:wo3}} {{word:ba3}} {{word:gong1ju4}} {{word:nong4}} {{word:hao3}} {{word:le}}. (I fixed the tool.)",
+        ],
+      },
+      {
+        en: [
+          "{{word:you3}} {{word:li4liang4}}, strong: {{Word:ta1}} {{word:hen3}} {{word:you3}} {{word:li4liang4}}. (He's very strong.)",
         ],
       },
     ],
   },
-  infoCausative: {
-    title: { en: ["The Causative Rule"] },
-    items: [
-      {
-        en: [
-          'To turn an adjective into a transitive action (such as transforming "good" into "to fix/improve" or "bad" into "to break"), use `{{word:ba3}}` paired with `{{word:bian4}}` ("to become/change"):',
-        ],
-        items: [
-          {
-            en: [
-              "Subject + `{{word:ba3}}` + Object + `{{word:bian4}}` + Adjective",
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  example2L10: { en: ["Water strengthens me / gives me energy."] },
-  example3L10: { en: ["You're a strong man."] },
-  example6L10: { en: ["The water has gotten good now."] },
-  example7L10: { en: ["Nobody is bad."] },
-  exercise2: { en: ["The path becomes narrow."] },
-  exercise1L10: { en: ["The man doesn't eat bad fruit."] },
-  exercise2L10: { en: ["Eating makes me tall."] },
-  exercise4L10: { en: ["The community has become strong."] },
+  exercise1: { en: ["The rice got cold."] },
+  exercise2: { en: ["My tool is broken."] },
+  exercise3: { en: ["The water became hot."] },
+  exercise4: { en: ["I fixed the box."] },
+  exercise5: { en: ["She is very strong."] },
+  exercise6: { en: ["What did he get?"] },
+  exercise7: { en: ["There's mud on my clothes."] },
+  answer1: { en: ["{{Word:mi3fan4}} {{word:leng3}} {{word:le}}."] },
   answer2: {
-    en: ["{{Word:fang1fa3}} {{word:bian4}} {{word:xiao3}}."],
-  },
-  answer1L10: {
     en: [
-      "{{Word:nan2ren2}} {{word:bu4}} {{word:chi1}} {{word:huai4}}-{{word:de}} {{word:shui3guo3}}.",
+      "{{Word:wo3}}-{{word:de}} {{word:gong1ju4}} {{word:huai4}} {{word:le}}.",
     ],
   },
-  answer2L10: {
+  answer3: {
     en: [
-      "{{Word:chi1}} {{word:ba3}} {{word:wo3}} {{word:bian4}} {{word:da4}}.",
+      "{{Word:shui3}} {{word:bian4}} {{word:re4}} {{word:le}}.",
     ],
   },
-  answer4L10: {
+  answer4: {
     en: [
-      "{{Word:qun2}} {{word:you3}}-{{word:li4liang4}} {{word:le}}.",
+      "{{Word:wo3}} {{word:ba3}} {{word:he2zi}} {{word:nong4}} {{word:hao3}} {{word:le}}.",
+    ],
+  },
+  answer5: {
+    en: [
+      "{{Word:ta1}} {{word:hen3}} {{word:you3}} {{word:li4liang4}}.",
+    ],
+  },
+  answer6: {
+    en: [
+      "{{Word:ta1}} {{word:de2}} {{word:le}} {{word:shen2me}}?",
+    ],
+  },
+  answer7: {
+    en: [
+      "{{Word:wo3}}-{{word:de}} {{word:yi1fu}}-{{word:shang4}} {{word:you3}} {{word:ni2}}.",
     ],
   },
 };
