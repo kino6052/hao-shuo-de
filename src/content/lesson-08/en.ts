@@ -55,6 +55,7 @@ const en: PartialByKey<LessonShape> = {
   exampleNow1: { en: ["I'm eating right now."] },
   exampleNow2: { en: ["She's sleeping."] },
   exampleNow3: { en: ["What are you looking at?"] },
+  exampleNow4: { en: ["Why are you sleeping?"] },
   proseWill: {
     en: [
       "**To say something will happen**, put {{word:hui4}} before the verb.",

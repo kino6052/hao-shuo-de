@@ -37,6 +37,8 @@ const en: PartialByKey<LessonShape> = {
   exampleThing3: { en: ["What is this word?"] },
   exampleThing4: { en: ["How do you say this word?"] },
   exampleThing5: { en: ["I know this word."] },
+  exampleThing6: { en: ["All ten pieces of food went bad."] },
+  exampleThing7: { en: ["What he's eating is yellow fruit."] },
   prosePerson: {
     en: [
       "**To name the one who does something**, put -{{word:de}} {{word:ren2}} after the verb.",
@@ -69,6 +71,7 @@ const en: PartialByKey<LessonShape> = {
   exampleHow1: { en: ["She speaks well."] },
   exampleHow2: { en: ["You write very well."] },
   exampleHow3: { en: ["He eats a lot."] },
+  exampleHow4: { en: ["He speaks better than me."] },
   proseName: {
     en: [
       "**To name something there's no word for**, describe it, then add -{{word:de}} and the noun.",
@@ -99,6 +102,7 @@ const en: PartialByKey<LessonShape> = {
   exampleName9: { en: ["The animal's skin is hard."] },
   exampleName10: { en: ["My skin is hot."] },
   exampleName11: { en: ["Her skin is healthy."] },
+  exampleName12: { en: ["The color I love is blue."] },
   infoJobsOfDe: {
     title: { en: ["The Jobs of -de"] },
     items: [

@@ -23,6 +23,7 @@ const ru: PartialByKey<LessonShape> = {
   exampleNow1: { ru: [] },
   exampleNow2: { ru: [] },
   exampleNow3: { ru: [] },
+  exampleNow4: { ru: [] },
   proseWill: { ru: [], tldr: { ru: [] }, necessity: { ru: [] } },
   exampleWill1: { ru: [] },
   exampleWill2: { ru: [] },

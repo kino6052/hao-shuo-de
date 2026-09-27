@@ -87,6 +87,7 @@ const en: PartialByKey<LessonShape> = {
   exampleShapeFeel2: { en: ["The moon is round."] },
   exampleShapeFeel3: { en: ["The thread is in the box."] },
   exampleShapeFeel4: { en: ["I have a stick."] },
+  exampleShapeFeel5: { en: ["This opening is round."] },
   infoComparing: {
     title: { en: ["Comparing"] },
     items: [

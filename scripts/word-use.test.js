@@ -45,6 +45,20 @@ describe('wordUse', () => {
     const withStories = wordUseProblems(wordUse(lessons, dictionary, ['{{Word:shi4}} …']));
     expect(withStories.notReused.map((r) => r.id).sort()).toEqual(['ge4', 'hao3', 'zhe4']);
   });
+
+  test('near the end, the reuse target is capped at the lessons that are left', () => {
+    const late = [
+      { id: 'lesson-20', number: 20, entries: [vocab('shi4'), ex('{{Word:shi4}}.')] },
+      { id: 'lesson-21', number: 21, entries: [vocab('ren2'), vocab('hao3'), ex('{{Word:ren2}} {{word:hao3}} {{word:shi4}}.')] },
+    ];
+    const lateRows = byId(wordUse(late, dictionary));
+    expect(lateRows.shi4.lessonsAfterHome).toBe(1);
+    expect(lateRows.ren2.lessonsAfterHome).toBe(0);
+    // shì is reused in the one lesson after it; rén and hǎo have none after them.
+    expect(wordUseProblems(Object.values(lateRows)).notReused).toEqual([]);
+    const unused = wordUseProblems(wordUse([late[0], { ...late[1], entries: late[1].entries.slice(0, 2) }], dictionary));
+    expect(unused.notReused.map((r) => r.id)).toEqual(['shi4']);
+  });
 });
 
 describe('practiceGaps', () => {

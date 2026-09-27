@@ -39,6 +39,7 @@ const en: PartialByKey<LessonShape> = {
   exampleWhere1: { en: ["I'm at home."] },
   exampleWhere2: { en: ["Are your parents at home?"] },
   exampleWhere3: { en: ["He's here."] },
+  exampleWhere4: { en: ["He stays at home."] },
   proseWhereQuestion: {
     en: [
       '**To ask "where?"**, put {{word:na3li3}} where the place would go.',
@@ -78,6 +79,7 @@ const en: PartialByKey<LessonShape> = {
   exampleInOnUnder4: { en: ["The clothes are in the house."] },
   exampleInOnUnder5: { en: ["My clothes are on the floor."] },
   exampleInOnUnder6: { en: ["There is water under the box."] },
+  exampleInOnUnder7: { en: ["My feet are in the water."] },
   proseSides: {
     en: [
       "**To say in front, behind, or beside**, join {{word:mian4}} (side) to {{word:qian2}} (front) or {{word:hou4}} (back), or use {{word:pang2bian1}} (beside).",
@@ -104,6 +106,7 @@ const en: PartialByKey<LessonShape> = {
   exampleSides6: { en: ["My parents are beside me."] },
   exampleSides7: { en: ["The box is on that side."] },
   exampleSides8: { en: ["He's beside me."] },
+  exampleSides9: { en: ["The fruit is beside the box."] },
   infoWhereThingsAre: {
     title: { en: ["Where Things Are"] },
     items: [

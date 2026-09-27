@@ -33,6 +33,8 @@ const en: PartialByKey<LessonShape> = {
   exampleVery2: { en: ["I'm very cold."] },
   exampleVery3: { en: ["The fruit is very sweet."] },
   exampleVery4: { en: ["He is in good health."] },
+  exampleVery5: { en: ["My feet are cold."] },
+  exampleVery6: { en: ["I've seen a very strange animal."] },
   proseReally: {
     en: [
       "**To say really**, put {{word:zhen1}} before the describing word.",

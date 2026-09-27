@@ -17,6 +17,8 @@ const zh: PartialByKey<LessonShape> = {
   exampleThing3: { zh: [] },
   exampleThing4: { zh: [] },
   exampleThing5: { zh: [] },
+  exampleThing6: { zh: [] },
+  exampleThing7: { zh: [] },
   prosePerson: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
   examplePerson1: { zh: [] },
   examplePerson2: { zh: [] },
@@ -25,6 +27,7 @@ const zh: PartialByKey<LessonShape> = {
   exampleHow1: { zh: [] },
   exampleHow2: { zh: [] },
   exampleHow3: { zh: [] },
+  exampleHow4: { zh: [] },
   proseName: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
   exampleName1: { zh: [] },
   exampleName2: { zh: [] },
@@ -37,6 +40,7 @@ const zh: PartialByKey<LessonShape> = {
   exampleName9: { zh: [] },
   exampleName10: { zh: [] },
   exampleName11: { zh: [] },
+  exampleName12: { zh: [] },
   infoJobsOfDe: {
     title: { zh: [] },
     items: [

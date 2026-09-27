@@ -9,7 +9,9 @@
 //
 // Rule 7 targets: at least HOME_LESSON_MIN sentences in the word's own
 // lesson, and reuse in at least LATER_LESSONS_MIN later lessons (a use in the
-// stories appendix also counts as reuse).
+// stories appendix also counts as reuse). Near the end of the book there are
+// fewer later lessons than that, so the target is capped at how many there
+// are: a word from the last lesson has nothing later to be reused in.
 
 import { wordsIn, termIndex } from './early-words.js';
 
@@ -27,7 +29,8 @@ function sentencesOf(entry) {
 
 // lessons: [{ id, number, entries }] (assembled entries); storyTexts: strings
 // from the stories appendix.
-// -> [{ id, term, home (lesson number or null), homeUses, laterLessons: [numbers], inStories }]
+// -> [{ id, term, home (lesson number or null), homeUses, laterLessons: [numbers],
+//       lessonsAfterHome (how many lessons come after home), inStories }]
 export function wordUse(lessons, dictionary, storyTexts = []) {
   const terms = termIndex(dictionary);
   const home = new Map();
@@ -61,6 +64,7 @@ export function wordUse(lessons, dictionary, storyTexts = []) {
       home: h,
       homeUses: s.homeUses,
       laterLessons: [...s.lessons].filter((n) => h !== null && n > h).sort((a, b) => a - b),
+      lessonsAfterHome: h === null ? 0 : lessons.filter((l) => l.number > h).length,
       usedAnywhere: s.lessons.size > 0,
       inStories: s.inStories,
     };
@@ -107,6 +111,6 @@ export function wordUseProblems(rows) {
   return {
     unused: rows.filter((r) => !r.usedAnywhere),
     fewHomeUses: rows.filter((r) => r.home !== null && r.homeUses < HOME_LESSON_MIN),
-    notReused: rows.filter((r) => r.home !== null && r.laterLessons.length < LATER_LESSONS_MIN && !r.inStories),
+    notReused: rows.filter((r) => r.home !== null && r.laterLessons.length < Math.min(LATER_LESSONS_MIN, r.lessonsAfterHome) && !r.inStories),
   };
 }

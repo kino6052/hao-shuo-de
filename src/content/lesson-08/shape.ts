@@ -54,6 +54,8 @@ export type LessonShape = {
   exampleNow2: TExample;
   /** Example: nǐ zài kàn shénme? */
   exampleNow3: TExample;
+  /** Example: nǐ wèishénme zài shuìjiào? */
+  exampleNow4: TExample;
   /** Say: To say something will happen, put huì before the verb. Pattern: Who + huì + verb */
   proseWill: TProse;
   /** Example: wǒ huì chī. */
@@ -168,6 +170,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ni3}} {{word:zai4}} {{word:kan4}} {{word:shen2me}}?",
     ttsText: "你在看什么？",
+  },
+  exampleNow4: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:wei4shen2me}} {{word:zai4}} {{word:shui4jiao4}}?",
+    ttsText: "你为什么在睡觉？",
   },
   proseWill: { type: "prose" },
   exampleWill1: {

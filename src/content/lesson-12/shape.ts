@@ -46,6 +46,10 @@ export type LessonShape = {
   exampleVery3: TExample;
   /** Example: tā-de shēntǐ hěn hǎo. */
   exampleVery4: TExample;
+  /** Example: wǒ-de jiǎo hěn lěng. */
+  exampleVery5: TExample;
+  /** Example: wǒ kàn-guò hěn qíguài-de dòngwù. */
+  exampleVery6: TExample;
   /** Say: To say really, put zhēn before the describing word. Pattern: Thing + zhēn + describing word */
   proseReally: TProse;
   /** Example: zhēn rè! */
@@ -146,6 +150,16 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ta1}}-{{word:de}} {{word:shen1ti3}} {{word:hen3}} {{word:hao3}}.",
     ttsText: "他的身体很好。",
+  },
+  exampleVery5: {
+    type: "example",
+    pinyin: "{{Word:wo3}}-{{word:de}} {{word:jiao3}} {{word:hen3}} {{word:leng3}}.",
+    ttsText: "我的脚很冷。",
+  },
+  exampleVery6: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:hen3}} {{word:qi2guai4}}-{{word:de}} {{word:dong4wu4}}.",
+    ttsText: "我看过很奇怪的动物。",
   },
   proseReally: { type: "prose" },
   exampleReally1: {

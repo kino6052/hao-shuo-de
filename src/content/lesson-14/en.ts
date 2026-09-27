@@ -35,6 +35,8 @@ const en: PartialByKey<LessonShape> = {
   exampleAlsoDo2: { en: ["Do you want some too?"] },
   exampleAlsoDo3: { en: ["Plants need air too."] },
   exampleAlsoDo4: { en: ["He's looking at the fire too."] },
+  exampleAlsoDo5: { en: ["I got up too."] },
+  exampleAlsoDo6: { en: ["I'm beside him too."] },
   proseAlsoIs: {
     en: [
       "**To say something is also like that**, put {{word:ye3}} before {{word:hen3}} and the describing word.",
@@ -51,6 +53,7 @@ const en: PartialByKey<LessonShape> = {
   exampleAlsoIs1: { en: ["I'm cold, and he's cold too."] },
   exampleAlsoIs2: { en: ["The air is cold too."] },
   exampleAlsoIs3: { en: ["The fire is hot, and the sun is hot too."] },
+  exampleAlsoIs4: { en: ["The sun is round, and the moon is round too."] },
   proseAll: {
     en: [
       "**To say all**, use {{word:quan2bu4}}.",

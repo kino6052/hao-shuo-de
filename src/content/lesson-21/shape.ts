@@ -44,6 +44,8 @@ export type LessonShape = {
   exampleHello3: TExample;
   /** Example: wǒ qù le. */
   exampleHello4: TExample;
+  /** Example: nǐ cóng nǎlǐ lái? */
+  exampleHello5: TExample;
   /** Say: To say your name, use jiào (be called), with the name in quotes. Pattern: Who + jiào + "name" */
   proseName: TProse;
   /** Example: wǒ jiào "Lisa". */
@@ -52,6 +54,8 @@ export type LessonShape = {
   exampleName2: TExample;
   /** Example: nà-ge dòngwù jiào "wang-wang". */
   exampleName3: TExample;
+  /** Example: tā jiào "Tom" huòzhě "Tim". */
+  exampleName4: TExample;
   /** Say: To tell someone to do something, just say the verb. For don't, put bù yào first. Pattern: Verb! / bù yào + verb! */
   proseOrder: TProse;
   /** Example: chī! */
@@ -62,6 +66,16 @@ export type LessonShape = {
   exampleOrder3: TExample;
   /** Example: bù yào pà. */
   exampleOrder4: TExample;
+  /** Example: liú zài zhè-lǐ! */
+  exampleOrder5: TExample;
+  /** Example: bù yào mō wǒ-de bízi! */
+  exampleOrder6: TExample;
+  /** Example: gěi wǒ yán! */
+  exampleOrder7: TExample;
+  /** Example: nǐ lěng-de huà, lái jiā-lǐ! */
+  exampleOrder8: TExample;
+  /** Example: yī, èr, sān, kāishǐ! */
+  exampleOrder9: TExample;
   /** Say: To say how you feel, put juéde (feel) before the describing word. Pattern: Who + juéde + describing word */
   proseFeel: TProse;
   /** Example: wǒ juéde hěn hǎo. */
@@ -78,6 +92,12 @@ export type LessonShape = {
   exampleFeel6: TExample;
   /** Example: tā-men bù shuō xìng. */
   exampleFeel7: TExample;
+  /** Example: wǒ juéde hěn hǎo, yīnwèi nǐ lái le. */
+  exampleFeel8: TExample;
+  /** Example: tā-de dòngwù sǐ le, tā juéde hěn huài. */
+  exampleFeel9: TExample;
+  /** Example: wǒ juéde zhè-ge yánsè hěn hǎo. */
+  exampleFeel10: TExample;
   /** Say: To say you hear a sound, say tīng-dào (hear) and shēngyīn (sound). Pattern: Who + tīng-dào + shēngyīn */
   proseHear: TProse;
   /** Example: wǒ tīng-dào qíguài-de shēngyīn. */
@@ -88,6 +108,8 @@ export type LessonShape = {
   exampleHear3: TExample;
   /** Example: yǒu chóngzi! */
   exampleHear4: TExample;
+  /** Example: wǒ tīng-dào le yī-ge xīn cí. */
+  exampleHear5: TExample;
   /** Grammar box: nǐ hǎo, jiào + name, bare-verb orders and bù yào, juéde, pà. */
   infoGreetingsAndFeelings: TInfo;
   /** Exercise 1: His name is "Tom". */
@@ -162,6 +184,11 @@ const shape: LessonShape = {
     pinyin: "{{Word:wo3}} {{word:qu4}} {{word:le}}.",
     ttsText: "我去了。",
   },
+  exampleHello5: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:cong2}} {{word:na3li3}} {{word:lai2}}?",
+    ttsText: "你从哪里来？",
+  },
   proseName: { type: "prose" },
   exampleName1: {
     type: "example",
@@ -177,6 +204,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: '{{Word:na4}}-ge {{word:dong4wu4}} {{word:jiao4}} "wang-wang".',
     ttsText: "那个动物叫汪汪。",
+  },
+  exampleName4: {
+    type: "example",
+    pinyin: '{{Word:ta1}} {{word:jiao4}} "Tom" {{word:huo4zhe3}} "Tim".',
+    ttsText: '他叫"Tom"或者"Tim"。',
   },
   proseOrder: { type: "prose" },
   exampleOrder1: {
@@ -198,6 +230,31 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:bu4}} {{word:yao4}} {{word:pa4}}.",
     ttsText: "不要怕。",
+  },
+  exampleOrder5: {
+    type: "example",
+    pinyin: "{{Word:liu2}} {{word:zai4}} {{word:zhe4}}-{{word:li3}}!",
+    ttsText: "留在这里！",
+  },
+  exampleOrder6: {
+    type: "example",
+    pinyin: "{{Word:bu4}} {{word:yao4}} {{word:mo1}} {{word:wo3}}-{{word:de}} {{word:bi2zi}}!",
+    ttsText: "不要摸我的鼻子！",
+  },
+  exampleOrder7: {
+    type: "example",
+    pinyin: "{{Word:gei3}} {{word:wo3}} {{word:yan2}}!",
+    ttsText: "给我盐！",
+  },
+  exampleOrder8: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:leng3}}-{{word:de}} {{word:hua4}}, {{word:lai2}} {{word:jia1}}-{{word:li3}}!",
+    ttsText: "你冷的话，来家里！",
+  },
+  exampleOrder9: {
+    type: "example",
+    pinyin: "{{Word:yi1}}, {{word:er4}}, {{word:san1}}, {{word:kai1shi3}}!",
+    ttsText: "一，二，三，开始！",
   },
   proseFeel: { type: "prose" },
   exampleFeel1: {
@@ -235,6 +292,21 @@ const shape: LessonShape = {
     pinyin: "{{Word:ta1}}-{{word:men}} {{word:bu4}} {{word:shuo1}} {{word:xing4}}.",
     ttsText: "他们不说性。",
   },
+  exampleFeel8: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:jue2de}} {{word:hen3}} {{word:hao3}}, {{word:yin1wei4}} {{word:ni3}} {{word:lai2}} {{word:le}}.",
+    ttsText: "我觉得很好，因为你来了。",
+  },
+  exampleFeel9: {
+    type: "example",
+    pinyin: "{{Word:ta1}}-{{word:de}} {{word:dong4wu4}} {{word:si3}} {{word:le}}, {{word:ta1}} {{word:jue2de}} {{word:hen3}} {{word:huai4}}.",
+    ttsText: "她的动物死了，她觉得很坏。",
+  },
+  exampleFeel10: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:jue2de}} {{word:zhe4}}-ge {{word:yan2se4}} {{word:hen3}} {{word:hao3}}.",
+    ttsText: "我觉得这个颜色很好。",
+  },
   proseHear: { type: "prose" },
   exampleHear1: {
     type: "example",
@@ -255,6 +327,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:you3}} {{word:chong2zi}}!",
     ttsText: "有虫子！",
+  },
+  exampleHear5: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:ting1}}-{{word:dao4}} {{word:le}} {{word:yi1}}-ge {{word:xin1}} {{word:ci2}}.",
+    ttsText: "我听到了一个新词。",
   },
   infoGreetingsAndFeelings: {
     type: "info",

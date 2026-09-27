@@ -50,6 +50,8 @@ export type LessonShape = {
   exampleWhere2: TExample;
   /** Example: tā zài zhè-lǐ. */
   exampleWhere3: TExample;
+  /** Example: tā liú zài jiā-lǐ. */
+  exampleWhere4: TExample;
   /** Say: To ask "where?", put nǎlǐ where the place would go. Pattern: Who + zài nǎlǐ? */
   proseWhereQuestion: TProse;
   /** Example: nǐ zài nǎlǐ? */
@@ -62,16 +64,18 @@ export type LessonShape = {
   proseInOnUnder: TProse;
   /** Example: shuǐ zài hézi-lǐ. */
   exampleInOnUnder1: TExample;
-  /** Example: gōngjù zài di-shàng. */
+  /** Example: gōngjù zài dì-shàng. */
   exampleInOnUnder2: TExample;
   /** Example: shuǐguǒ zài hézi-de xià-miàn. */
   exampleInOnUnder3: TExample;
   /** Example: yīfu zài jiā-lǐ. */
   exampleInOnUnder4: TExample;
-  /** Example: wǒ-de yīfu zài di-shàng. */
+  /** Example: wǒ-de yīfu zài dì-shàng. */
   exampleInOnUnder5: TExample;
   /** Example: hézi-de xià-miàn yǒu shuǐ. */
   exampleInOnUnder6: TExample;
+  /** Example: wǒ-de jiǎo zài shuǐ-lǐ. */
+  exampleInOnUnder7: TExample;
   /** Say: To say in front, behind, or beside, join miàn (side) to qián (front) or hòu (back), or use pángbiān (beside). Pattern: Thing + zài + X-de qián-miàn / hòu-miàn / pángbiān */
   proseSides: TProse;
   /** Example: rén zài wǒ-de qián-miàn. */
@@ -90,6 +94,8 @@ export type LessonShape = {
   exampleSides7: TExample;
   /** Example: tā zài wǒ-de páng-biān. */
   exampleSides8: TExample;
+  /** Example: shuǐguǒ zài hézi-de páng-biān. */
+  exampleSides9: TExample;
   /** Grammar box: zài + place, nǎlǐ, place-lǐ / place-shàng, and the -miàn side words. */
   infoWhereThingsAre: TInfo;
   /** Exercise 1: Where is my tool? */
@@ -112,7 +118,7 @@ export type LessonShape = {
   answer1: TAnswer;
   /** Answer 2: shuǐguǒ zài hézi-lǐ. */
   answer2: TAnswer;
-  /** Answer 3: hézi zài di-shàng. */
+  /** Answer 3: hézi zài dì-shàng. */
   answer3: TAnswer;
   /** Answer 4: dòngwù zài hézi-de xià-miàn. */
   answer4: TAnswer;
@@ -158,6 +164,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ta1}} {{word:zai4}} {{word:zhe4}}-{{word:li3}}.",
     ttsText: "他在这里。",
+  },
+  exampleWhere4: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:liu2}} {{word:zai4}} {{word:jia1}}-{{word:li3}}.",
+    ttsText: "他留在家里。",
   },
   proseWhereQuestion: { type: "prose" },
   exampleWhereQuestion1: {
@@ -206,6 +217,11 @@ const shape: LessonShape = {
     pinyin: "{{Word:he2zi}}-{{word:de}} {{word:xia4}}-{{word:mian4}} {{word:you3}} {{word:shui3}}.",
     ttsText: "盒子的下面有水。",
   },
+  exampleInOnUnder7: {
+    type: "example",
+    pinyin: "{{Word:wo3}}-{{word:de}} {{word:jiao3}} {{word:zai4}} {{word:shui3}}-{{word:li3}}.",
+    ttsText: "我的脚在水里。",
+  },
   proseSides: { type: "prose" },
   exampleSides1: {
     type: "example",
@@ -246,6 +262,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ta1}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:pang2}}-{{word:bian1}}.",
     ttsText: "他在我的旁边。",
+  },
+  exampleSides9: {
+    type: "example",
+    pinyin: "{{Word:shui3guo3}} {{word:zai4}} {{word:he2zi}}-{{word:de}} {{word:pang2}}-{{word:bian1}}.",
+    ttsText: "水果在盒子的旁边。",
   },
   infoWhereThingsAre: {
     type: "info",

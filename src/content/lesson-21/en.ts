@@ -36,6 +36,7 @@ const en: PartialByKey<LessonShape> = {
   exampleHello2: { en: ["How are you?"] },
   exampleHello3: { en: ["I'm fine."] },
   exampleHello4: { en: ["I'm off. / Bye."] },
+  exampleHello5: { en: ["Where are you from?"] },
   proseName: {
     en: [
       "**To say your name**, use {{word:jiao4}} (be called), with the name in quotes.",
@@ -56,6 +57,7 @@ const en: PartialByKey<LessonShape> = {
   exampleName1: { en: ["My name is Lisa."] },
   exampleName2: { en: ["What's your name?"] },
   exampleName3: { en: ["That animal goes woof woof."] },
+  exampleName4: { en: ["He's called Tom or Tim."] },
   proseOrder: {
     en: [
       "**To tell someone to do something**, just say the verb. For don't, put {{word:bu4}} {{word:yao4}} first.",
@@ -73,6 +75,11 @@ const en: PartialByKey<LessonShape> = {
   exampleOrder2: { en: ["Wait!"] },
   exampleOrder3: { en: ["Don't talk!"] },
   exampleOrder4: { en: ["Don't be scared."] },
+  exampleOrder5: { en: ["Stay here!"] },
+  exampleOrder6: { en: ["Don't touch my nose!"] },
+  exampleOrder7: { en: ["Give me the salt!"] },
+  exampleOrder8: { en: ["If you're cold, come inside!"] },
+  exampleOrder9: { en: ["One, two, three, go!"] },
   proseFeel: {
     en: [
       "**To say how you feel**, put {{word:jue2de}} (feel) before the describing word.",
@@ -95,6 +102,9 @@ const en: PartialByKey<LessonShape> = {
   exampleFeel5: { en: ["She's scared of fire."] },
   exampleFeel6: { en: ["Sex and love are different."] },
   exampleFeel7: { en: ["They don't talk about sex."] },
+  exampleFeel8: { en: ["I feel good, because you've come."] },
+  exampleFeel9: { en: ["Her animal died, and she feels bad."] },
+  exampleFeel10: { en: ["I think this color is nice."] },
   proseHear: {
     en: [
       "**To say you hear a sound**, say {{word:ting1}}-{{word:dao4}} (hear) and {{word:sheng1yin1}} (sound).",
@@ -112,6 +122,7 @@ const en: PartialByKey<LessonShape> = {
   exampleHear2: { en: ["Your voice is nice."] },
   exampleHear3: { en: ["The bug's sound is quiet."] },
   exampleHear4: { en: ["There's a bug!"] },
+  exampleHear5: { en: ["I heard a new word."] },
   infoGreetingsAndFeelings: {
     title: { en: ["Greetings and Feelings"] },
     items: [

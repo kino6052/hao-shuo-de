@@ -21,6 +21,7 @@ const ru: PartialByKey<LessonShape> = {
   exampleWhere1: { ru: [] },
   exampleWhere2: { ru: [] },
   exampleWhere3: { ru: [] },
+  exampleWhere4: { ru: [] },
   proseWhereQuestion: { ru: [], tldr: { ru: [] }, necessity: { ru: [] } },
   exampleWhereQuestion1: { ru: [] },
   exampleWhereQuestion2: { ru: [] },
@@ -32,6 +33,7 @@ const ru: PartialByKey<LessonShape> = {
   exampleInOnUnder4: { ru: [] },
   exampleInOnUnder5: { ru: [] },
   exampleInOnUnder6: { ru: [] },
+  exampleInOnUnder7: { ru: [] },
   proseSides: { ru: [], tldr: { ru: [] }, necessity: { ru: [] } },
   exampleSides1: { ru: [] },
   exampleSides2: { ru: [] },
@@ -41,6 +43,7 @@ const ru: PartialByKey<LessonShape> = {
   exampleSides6: { ru: [] },
   exampleSides7: { ru: [] },
   exampleSides8: { ru: [] },
+  exampleSides9: { ru: [] },
   infoWhereThingsAre: {
     title: { ru: [] },
     items: [{ ru: [] }, { ru: [] }, { ru: [] }, { ru: [] }],

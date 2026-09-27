@@ -74,6 +74,8 @@ export type LessonShape = {
   exampleShapeFeel3: TExample;
   /** Example: wǒ yǒu gùnzi. */
   exampleShapeFeel4: TExample;
+  /** Example: zhè-ge kǒu hěn yuán. */
+  exampleShapeFeel5: TExample;
   /** Grammar box: A bǐ B + describing word (no hěn), yīyàng, bùtóng. */
   infoComparing: TInfo;
   /** Exercise 1: This stick is harder than that one. */
@@ -202,6 +204,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:wo3}} {{word:you3}} {{word:gun4zi}}.",
     ttsText: "我有棍子。",
+  },
+  exampleShapeFeel5: {
+    type: "example",
+    pinyin: "{{Word:zhe4}}-ge {{word:kou3}} {{word:hen3}} {{word:yuan2}}.",
+    ttsText: "这个口很圆。",
   },
   infoComparing: {
     type: "info",

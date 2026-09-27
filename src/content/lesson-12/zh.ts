@@ -19,6 +19,8 @@ const zh: PartialByKey<LessonShape> = {
   exampleVery2: { zh: [] },
   exampleVery3: { zh: [] },
   exampleVery4: { zh: [] },
+  exampleVery5: { zh: [] },
+  exampleVery6: { zh: [] },
   proseReally: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
   exampleReally1: { zh: [] },
   exampleReally2: { zh: [] },

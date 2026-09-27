@@ -42,6 +42,10 @@ export type LessonShape = {
   exampleAlsoDo3: TExample;
   /** Example: tā yě kàn huǒ. */
   exampleAlsoDo4: TExample;
+  /** Example: wǒ yě qǐ-lái le. */
+  exampleAlsoDo5: TExample;
+  /** Example: wǒ yě zài tā-de páng-biān. */
+  exampleAlsoDo6: TExample;
   /** Say: To say something is also like that, put yě before hěn and the describing word. Pattern: Thing + yě + hěn + describing word */
   proseAlsoIs: TProse;
   /** Example: wǒ hěn lěng, tā yě hěn lěng. */
@@ -50,6 +54,8 @@ export type LessonShape = {
   exampleAlsoIs2: TExample;
   /** Example: huǒ hěn rè, rì yě hěn rè. */
   exampleAlsoIs3: TExample;
+  /** Example: rì hěn yuán, yuè yě hěn yuán. */
+  exampleAlsoIs4: TExample;
   /** Say: To say all, use quánbù. Pattern: quánbù-de + noun / verb + quánbù */
   proseAll: TProse;
   /** Example: wǒ yào quánbù. */
@@ -129,6 +135,16 @@ const shape: LessonShape = {
     pinyin: "{{Word:ta1}} {{word:ye3}} {{word:kan4}} {{word:huo3}}.",
     ttsText: "他也看火。",
   },
+  exampleAlsoDo5: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:ye3}} {{word:qi3}}-{{word:lai2}} {{word:le}}.",
+    ttsText: "我也起来了。",
+  },
+  exampleAlsoDo6: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:ye3}} {{word:zai4}} {{word:ta1}}-{{word:de}} {{word:pang2}}-{{word:bian1}}.",
+    ttsText: "我也在他的旁边。",
+  },
   proseAlsoIs: { type: "prose" },
   exampleAlsoIs1: {
     type: "example",
@@ -144,6 +160,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:huo3}} {{word:hen3}} {{word:re4}}, {{word:ri4}} {{word:ye3}} {{word:hen3}} {{word:re4}}.",
     ttsText: "火很热，日也很热。",
+  },
+  exampleAlsoIs4: {
+    type: "example",
+    pinyin: "{{Word:ri4}} {{word:hen3}} {{word:yuan2}}, {{word:yue4}} {{word:ye3}} {{word:hen3}} {{word:yuan2}}.",
+    ttsText: "日很圆，月也很圆。",
   },
   proseAll: { type: "prose" },
   exampleAll1: {

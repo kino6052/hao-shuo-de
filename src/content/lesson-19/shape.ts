@@ -48,6 +48,8 @@ export type LessonShape = {
   exampleGive3: TExample;
   /** Example: wǒ gěi nǐ xiě. */
   exampleGive4: TExample;
+  /** Example: tā gěi wǒ sān-ge, wǒ gěi tā sì-ge. */
+  exampleGive5: TExample;
   /** Say: To say what you do something with, put yòng and the thing before the verb. Pattern: Who + yòng + thing + verb */
   proseWith: TProse;
   /** Example: wǒ yòng gōngjù xiě. */
@@ -62,6 +64,12 @@ export type LessonShape = {
   exampleWith5: TExample;
   /** Example: bù yào yòng gùnzi dǎ dòngwù. */
   exampleWith6: TExample;
+  /** Example: tā yòng ní nòng le yī-ge hézi. */
+  exampleWith7: TExample;
+  /** Example: dòngwù yòng bízi mō wǒ-de shǒu. */
+  exampleWith8: TExample;
+  /** Example: tā yòng xīn-de fāngfǎ. */
+  exampleWith9: TExample;
   /** Say: To join two nouns, put hé (and) or huòzhě (or) between them. Pattern: A + hé / huòzhě + B */
   proseAndOr: TProse;
   /** Example: nǐ hé wǒ. */
@@ -72,6 +80,12 @@ export type LessonShape = {
   exampleAndOr3: TExample;
   /** Example: chī shuǐguǒ huòzhě mǐfàn. */
   exampleAndOr4: TExample;
+  /** Example: wǒ yào hóngsè-de huòzhě lánsè-de. */
+  exampleAndOr5: TExample;
+  /** Example: liù-ge nánrén hé qī-ge nǚrén. */
+  exampleAndOr6: TExample;
+  /** Example: wǒ yào bā-ge huòzhě jiǔ-ge. */
+  exampleAndOr7: TExample;
   /** Say: To say how someone is toward someone, put duì and the person before the describing word. Pattern: A + duì + B + describing word */
   proseToward: TProse;
   /** Example: tā duì wǒ hěn hǎo. */
@@ -80,6 +94,8 @@ export type LessonShape = {
   exampleToward2: TExample;
   /** Example: duì wǒ lái shuō, zhè-ge hěn hǎo. */
   exampleToward3: TExample;
+  /** Example: rì duì pífū bù hǎo. */
+  exampleToward4: TExample;
   /** Say: To talk about a group, use qún (group) in place of gè. Pattern: yī / zhè / nà + qún + noun */
   proseGroup: TProse;
   /** Example: yī-qún rén zài wài-miàn. */
@@ -160,6 +176,11 @@ const shape: LessonShape = {
     pinyin: "{{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:xie3}}.",
     ttsText: "我给你写。",
   },
+  exampleGive5: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:gei3}} {{word:wo3}} {{word:san1}}-ge, {{word:wo3}} {{word:gei3}} {{word:ta1}} {{word:si4}}-ge.",
+    ttsText: "他给我三个，我给他四个。",
+  },
   proseWith: { type: "prose" },
   exampleWith1: {
     type: "example",
@@ -191,6 +212,21 @@ const shape: LessonShape = {
     pinyin: "{{Word:bu4}} {{word:yao4}} {{word:yong4}} {{word:gun4zi}} {{word:da3}} {{word:dong4wu4}}.",
     ttsText: "不要用棍子打动物。",
   },
+  exampleWith7: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:yong4}} {{word:ni2}} {{word:nong4}} {{word:le}} {{word:yi1}}-ge {{word:he2zi}}.",
+    ttsText: "他用泥弄了一个盒子。",
+  },
+  exampleWith8: {
+    type: "example",
+    pinyin: "{{Word:dong4wu4}} {{word:yong4}} {{word:bi2zi}} {{word:mo1}} {{word:wo3}}-{{word:de}} {{word:shou3}}.",
+    ttsText: "动物用鼻子摸我的手。",
+  },
+  exampleWith9: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:yong4}} {{word:xin1}}-{{word:de}} {{word:fang1fa3}}.",
+    ttsText: "他用新的方法。",
+  },
   proseAndOr: { type: "prose" },
   exampleAndOr1: {
     type: "example",
@@ -212,6 +248,21 @@ const shape: LessonShape = {
     pinyin: "{{Word:chi1}} {{word:shui3guo3}} {{word:huo4zhe3}} {{word:mi3fan4}}.",
     ttsText: "吃水果或者米饭。",
   },
+  exampleAndOr5: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:yao4}} {{word:hong2se4}}-{{word:de}} {{word:huo4zhe3}} {{word:lan2se4}}-{{word:de}}.",
+    ttsText: "我要红色的或者蓝色的。",
+  },
+  exampleAndOr6: {
+    type: "example",
+    pinyin: "{{Word:liu4}}-ge {{word:nan2ren2}} {{word:he2}} {{word:qi1}}-ge {{word:nv3ren2}}.",
+    ttsText: "六个男人和七个女人。",
+  },
+  exampleAndOr7: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:yao4}} {{word:ba1}}-ge {{word:huo4zhe3}} {{word:jiu3}}-ge.",
+    ttsText: "我要八个或者九个。",
+  },
   proseToward: { type: "prose" },
   exampleToward1: {
     type: "example",
@@ -227,6 +278,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:dui4}} {{word:wo3}} {{word:lai2}} {{word:shuo1}}, {{word:zhe4}}-ge {{word:hen3}} {{word:hao3}}.",
     ttsText: "对我来说，这个很好。",
+  },
+  exampleToward4: {
+    type: "example",
+    pinyin: "{{Word:ri4}} {{word:dui4}} {{word:pi2fu1}} {{word:bu4}} {{word:hao3}}.",
+    ttsText: "日对皮肤不好。",
   },
   proseGroup: { type: "prose" },
   exampleGroup1: {

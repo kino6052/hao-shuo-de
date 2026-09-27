@@ -38,6 +38,9 @@ const en: PartialByKey<LessonShape> = {
   exampleComeGo2: { en: ["Are you coming to my home?"] },
   exampleComeGo3: { en: ["Go!"] },
   exampleComeGo4: { en: ["Come!"] },
+  exampleComeGo5: { en: ["I've been to the market."] },
+  exampleComeGo6: { en: ["After eating, we go to the market."] },
+  exampleComeGo7: { en: ["He comes over beside me."] },
   proseFrom: {
     en: [
       "**To say where you come from**, put {{word:cong2}} (from) before the place, then {{word:lai2}}.",
@@ -52,6 +55,7 @@ const en: PartialByKey<LessonShape> = {
   exampleFrom1: { en: ["I come from the market."] },
   exampleFrom2: { en: ["He comes from home."] },
   exampleFrom3: { en: ["Where do you come from?"] },
+  exampleFrom4: { en: ["He comes from the front."] },
   proseArrive: {
     en: [
       "**To say you arrive somewhere**, put {{word:dao4}} (arrive) before the place.",

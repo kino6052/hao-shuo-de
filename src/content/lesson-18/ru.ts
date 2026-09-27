@@ -17,6 +17,8 @@ const ru: PartialByKey<LessonShape> = {
   exampleThing3: { ru: [] },
   exampleThing4: { ru: [] },
   exampleThing5: { ru: [] },
+  exampleThing6: { ru: [] },
+  exampleThing7: { ru: [] },
   prosePerson: { ru: [], tldr: { ru: [] }, necessity: { ru: [] } },
   examplePerson1: { ru: [] },
   examplePerson2: { ru: [] },
@@ -25,6 +27,7 @@ const ru: PartialByKey<LessonShape> = {
   exampleHow1: { ru: [] },
   exampleHow2: { ru: [] },
   exampleHow3: { ru: [] },
+  exampleHow4: { ru: [] },
   proseName: { ru: [], tldr: { ru: [] }, necessity: { ru: [] } },
   exampleName1: { ru: [] },
   exampleName2: { ru: [] },
@@ -37,6 +40,7 @@ const ru: PartialByKey<LessonShape> = {
   exampleName9: { ru: [] },
   exampleName10: { ru: [] },
   exampleName11: { ru: [] },
+  exampleName12: { ru: [] },
   infoJobsOfDe: {
     title: { ru: [] },
     items: [

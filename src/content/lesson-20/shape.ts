@@ -40,6 +40,12 @@ export type LessonShape = {
   exampleBecause2: TExample;
   /** Example: yīnwèi méi-yǒu shuǐ, zhíwù sǐ le. */
   exampleBecause3: TExample;
+  /** Example: nǐ wèishénme bù chī? yīnwèi hěn rè. */
+  exampleBecause4: TExample;
+  /** Example: yīnwèi hěn rè, wǒ-de pífū biàn hóngsè le. */
+  exampleBecause5: TExample;
+  /** Example: yīnwèi tā mō le ní, tā-de shǒu shì hēisè-de. */
+  exampleBecause6: TExample;
   /** Say: To say but, put dànshì at the start of the second part. Pattern: sentence, dànshì + sentence */
   proseBut: TProse;
   /** Example: zhè-ge hěn hǎo, dànshì méi-yǒu yán. */
@@ -50,6 +56,12 @@ export type LessonShape = {
   exampleBut3: TExample;
   /** Example: mǐfàn-lǐ yǒu yán. */
   exampleBut4: TExample;
+  /** Example: zhè-ge shuǐguǒ shì huángsè-de, dànshì bù tián. */
+  exampleBut5: TExample;
+  /** Example: zhè-ge fāngfǎ hěn qíguài, dànshì hěn hǎo. */
+  exampleBut6: TExample;
+  /** Example: wǒ yǒu jiǔ-ge, dànshì tā yǒu èr-shí-ge. */
+  exampleBut7: TExample;
   /** Say: To say "if", put -de huà after the if-part, then a comma. Pattern: X-de huà, the rest */
   proseIf: TProse;
   /** Example: nǐ lái-de huà, wǒ děng nǐ. */
@@ -60,6 +72,12 @@ export type LessonShape = {
   exampleIf3: TExample;
   /** Example: méi-yǒu shuǐ, zhíwù huì sǐ. */
   exampleIf4: TExample;
+  /** Example: wǔ-hào bù zài-de huà, wǒ-men děng. */
+  exampleIf5: TExample;
+  /** Example: nǐ bù zhīdào zhè-ge cí-de huà, wèn wǒ. */
+  exampleIf6: TExample;
+  /** Example: nǐ yào-de huà, chī mǐfàn huòzhě shuǐguǒ. */
+  exampleIf7: TExample;
   /** Grammar box: yīnwèi, dànshì, X-de huà. */
   infoLinkingSentences: TInfo;
   /** Exercise 1: Because I'm cold, I want clothes. */
@@ -120,6 +138,21 @@ const shape: LessonShape = {
     pinyin: "{{Word:yin1wei4}} {{word:mei2}}-{{word:you3}} {{word:shui3}}, {{word:zhi2wu4}} {{word:si3}} {{word:le}}.",
     ttsText: "因为没有水，植物死了。",
   },
+  exampleBecause4: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:wei4shen2me}} {{word:bu4}} {{word:chi1}}? {{Word:yin1wei4}} {{word:hen3}} {{word:re4}}.",
+    ttsText: "你为什么不吃？因为很热。",
+  },
+  exampleBecause5: {
+    type: "example",
+    pinyin: "{{Word:yin1wei4}} {{word:hen3}} {{word:re4}}, {{word:wo3}}-{{word:de}} {{word:pi2fu1}} {{word:bian4}} {{word:hong2se4}} {{word:le}}.",
+    ttsText: "因为很热，我的皮肤变红色了。",
+  },
+  exampleBecause6: {
+    type: "example",
+    pinyin: "{{Word:yin1wei4}} {{word:ta1}} {{word:mo1}} {{word:le}} {{word:ni2}}, {{word:ta1}}-{{word:de}} {{word:shou3}} {{word:shi4}} {{word:hei1se4}}-{{word:de}}.",
+    ttsText: "因为他摸了泥，他的手是黑色的。",
+  },
   proseBut: { type: "prose" },
   exampleBut1: {
     type: "example",
@@ -141,6 +174,21 @@ const shape: LessonShape = {
     pinyin: "{{Word:mi3fan4}}-{{word:li3}} {{word:you3}} {{word:yan2}}.",
     ttsText: "米饭里有盐。",
   },
+  exampleBut5: {
+    type: "example",
+    pinyin: "{{Word:zhe4}}-ge {{word:shui3guo3}} {{word:shi4}} {{word:huang2se4}}-{{word:de}}, {{word:dan4shi4}} {{word:bu4}} {{word:tian2}}.",
+    ttsText: "这个水果是黄色的，但是不甜。",
+  },
+  exampleBut6: {
+    type: "example",
+    pinyin: "{{Word:zhe4}}-ge {{word:fang1fa3}} {{word:hen3}} {{word:qi2guai4}}, {{word:dan4shi4}} {{word:hen3}} {{word:hao3}}.",
+    ttsText: "这个方法很奇怪，但是很好。",
+  },
+  exampleBut7: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:you3}} {{word:jiu3}}-ge, {{word:dan4shi4}} {{word:ta1}} {{word:you3}} {{word:er4}}-{{word:shi2}}-ge.",
+    ttsText: "我有九个，但是他有二十个。",
+  },
   proseIf: { type: "prose" },
   exampleIf1: {
     type: "example",
@@ -161,6 +209,21 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:mei2}}-{{word:you3}} {{word:shui3}}, {{word:zhi2wu4}} {{word:hui4}} {{word:si3}}.",
     ttsText: "没有水，植物会死。",
+  },
+  exampleIf5: {
+    type: "example",
+    pinyin: "{{Word:wu3}}-{{word:hao4}} {{word:bu4}} {{word:zai4}}-{{word:de}} {{word:hua4}}, {{word:wo3}}-{{word:men}} {{word:deng3}}.",
+    ttsText: "五号不在的话，我们等。",
+  },
+  exampleIf6: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:bu4}} {{word:zhi1dao4}} {{word:zhe4}}-ge {{word:ci2}}-{{word:de}} {{word:hua4}}, {{word:wen4}} {{word:wo3}}.",
+    ttsText: "你不知道这个词的话，问我。",
+  },
+  exampleIf7: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:yao4}}-{{word:de}} {{word:hua4}}, {{word:chi1}} {{word:mi3fan4}} {{word:huo4zhe3}} {{word:shui3guo3}}.",
+    ttsText: "你要的话，吃米饭或者水果。",
   },
   infoLinkingSentences: {
     type: "info",

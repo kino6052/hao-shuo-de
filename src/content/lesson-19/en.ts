@@ -38,6 +38,7 @@ const en: PartialByKey<LessonShape> = {
   exampleGive2: { en: ["I give you water."] },
   exampleGive3: { en: ["She gives me clothes."] },
   exampleGive4: { en: ["I write to you."] },
+  exampleGive5: { en: ["He gives me three, and I give him four."] },
   proseWith: {
     en: [
       "**To say what you do something with**, put {{word:yong4}} and the thing before the verb.",
@@ -57,6 +58,9 @@ const en: PartialByKey<LessonShape> = {
   exampleWith4: { en: ["He hits it with a stick."] },
   exampleWith5: { en: ["I touch the animal with my hand."] },
   exampleWith6: { en: ["Don't hit the animal with a stick."] },
+  exampleWith7: { en: ["He made a box out of clay."] },
+  exampleWith8: { en: ["The animal touches my hand with its nose."] },
+  exampleWith9: { en: ["He uses a new way."] },
   proseAndOr: {
     en: [
       "**To join two nouns**, put {{word:he2}} (and) or {{word:huo4zhe3}} (or) between them.",
@@ -76,6 +80,9 @@ const en: PartialByKey<LessonShape> = {
   exampleAndOr2: { en: ["He and I go to the market."] },
   exampleAndOr3: { en: ["I want this one or that one."] },
   exampleAndOr4: { en: ["Eat fruit or rice."] },
+  exampleAndOr5: { en: ["I want a red one or a blue one."] },
+  exampleAndOr6: { en: ["Six men and seven women."] },
+  exampleAndOr7: { en: ["I want eight or nine."] },
   proseToward: {
     en: [
       "**To say how someone is toward someone**, put {{word:dui4}} and the person before the describing word.",
@@ -94,6 +101,7 @@ const en: PartialByKey<LessonShape> = {
   exampleToward1: { en: ["He's good to me."] },
   exampleToward2: { en: ["Water is good for plants."] },
   exampleToward3: { en: ["For me, this is good."] },
+  exampleToward4: { en: ["The sun is bad for your skin."] },
   proseGroup: {
     en: [
       "**To talk about a group**, use {{word:qun2}} (group) in place of {{word:ge4}}.",

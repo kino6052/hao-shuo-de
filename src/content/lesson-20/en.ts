@@ -34,6 +34,11 @@ const en: PartialByKey<LessonShape> = {
   exampleBecause1: { en: ["Because I'm cold, I'm not going outside."] },
   exampleBecause2: { en: ["I'm not eating, because I've finished."] },
   exampleBecause3: { en: ["Because there was no water, the plant died."] },
+  exampleBecause4: { en: ["Why aren't you eating? Because it's hot."] },
+  exampleBecause5: { en: ["Because it was hot, my skin turned red."] },
+  exampleBecause6: {
+    en: ["Because he touched the mud, his hands are black."],
+  },
   proseBut: {
     en: [
       "**To say but**, put {{word:dan4shi4}} at the start of the second part.",
@@ -55,6 +60,9 @@ const en: PartialByKey<LessonShape> = {
   exampleBut2: { en: ["I want to go, but I have no money."] },
   exampleBut3: { en: ["He's small, but very strong."] },
   exampleBut4: { en: ["There's salt in the rice."] },
+  exampleBut5: { en: ["This fruit is yellow, but it isn't sweet."] },
+  exampleBut6: { en: ["This way is strange, but it's good."] },
+  exampleBut7: { en: ["I have nine, but he has twenty."] },
   proseIf: {
     en: [
       '**To say "if"**, put -{{word:de}} {{word:hua4}} after the if-part, then a comma.',
@@ -74,6 +82,9 @@ const en: PartialByKey<LessonShape> = {
   exampleIf2: { en: ["If you're cold, I'll give you clothes."] },
   exampleIf3: { en: ["If a plant has no water, it will die."] },
   exampleIf4: { en: ["Without water, plants die."] },
+  exampleIf5: { en: ["If number five isn't here, we wait."] },
+  exampleIf6: { en: ["If you don't know this word, ask me."] },
+  exampleIf7: { en: ["If you want, eat rice or fruit."] },
   infoLinkingSentences: {
     title: { en: ["Linking Sentences"] },
     items: [

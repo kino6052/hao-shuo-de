@@ -21,6 +21,7 @@ const zh: PartialByKey<LessonShape> = {
   exampleWhere1: { zh: [] },
   exampleWhere2: { zh: [] },
   exampleWhere3: { zh: [] },
+  exampleWhere4: { zh: [] },
   proseWhereQuestion: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
   exampleWhereQuestion1: { zh: [] },
   exampleWhereQuestion2: { zh: [] },
@@ -32,6 +33,7 @@ const zh: PartialByKey<LessonShape> = {
   exampleInOnUnder4: { zh: [] },
   exampleInOnUnder5: { zh: [] },
   exampleInOnUnder6: { zh: [] },
+  exampleInOnUnder7: { zh: [] },
   proseSides: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
   exampleSides1: { zh: [] },
   exampleSides2: { zh: [] },
@@ -41,6 +43,7 @@ const zh: PartialByKey<LessonShape> = {
   exampleSides6: { zh: [] },
   exampleSides7: { zh: [] },
   exampleSides8: { zh: [] },
+  exampleSides9: { zh: [] },
   infoWhereThingsAre: {
     title: { zh: [] },
     items: [{ zh: [] }, { zh: [] }, { zh: [] }, { zh: [] }],

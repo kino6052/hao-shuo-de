@@ -56,7 +56,7 @@ export type LessonShape = {
   exampleBecame3: TExample;
   /** Example: shuǐ biàn ní le. */
   exampleBecame4: TExample;
-  /** Example: di-shàng yǒu ní. */
+  /** Example: dì-shàng yǒu ní. */
   exampleBecame5: TExample;
   /** Say: To say you make something so, put nòng (do, make) before the result. Pattern: Who + nòng + result */
   proseMake: TProse;
@@ -78,6 +78,10 @@ export type LessonShape = {
   exampleBa2: TExample;
   /** Example: bǎ shuǐ nòng rè. */
   exampleBa3: TExample;
+  /** Example: tā bǎ kǒu nòng dà le. */
+  exampleBa4: TExample;
+  /** Example: tā bǎ quánbù-de shuǐ nòng rè le. */
+  exampleBa5: TExample;
   /** Say: To say strong, say yǒu lìliàng, "have strength". Pattern: Who + hěn yǒu lìliàng */
   proseStrong: TProse;
   /** Example: tā hěn yǒu lìliàng. */
@@ -86,6 +90,8 @@ export type LessonShape = {
   exampleStrong2: TExample;
   /** Example: nǐ-de shǒu hěn yǒu lìliàng. */
   exampleStrong3: TExample;
+  /** Example: tā-de shēntǐ hěn yǒu lìliàng. */
+  exampleStrong4: TExample;
   /** Grammar box: describing word + le, biàn, nòng + result, bǎ + thing, yǒu lìliàng. */
   infoBecomingAndMaking: TInfo;
   /** Exercise 1: The rice got cold. */
@@ -221,6 +227,16 @@ const shape: LessonShape = {
     pinyin: "{{Word:ba3}} {{word:shui3}} {{word:nong4}} {{word:re4}}.",
     ttsText: "把水弄热。",
   },
+  exampleBa4: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:ba3}} {{word:kou3}} {{word:nong4}} {{word:da4}} {{word:le}}.",
+    ttsText: "他把口弄大了。",
+  },
+  exampleBa5: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:ba3}} {{word:quan2bu4}}-{{word:de}} {{word:shui3}} {{word:nong4}} {{word:re4}} {{word:le}}.",
+    ttsText: "他把全部的水弄热了。",
+  },
   proseStrong: { type: "prose" },
   exampleStrong1: {
     type: "example",
@@ -236,6 +252,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ni3}}-{{word:de}} {{word:shou3}} {{word:hen3}} {{word:you3}} {{word:li4liang4}}.",
     ttsText: "你的手很有力量。",
+  },
+  exampleStrong4: {
+    type: "example",
+    pinyin: "{{Word:ta1}}-{{word:de}} {{word:shen1ti3}} {{word:hen3}} {{word:you3}} {{word:li4liang4}}.",
+    ttsText: "他的身体很有力量。",
   },
   infoBecomingAndMaking: {
     type: "info",

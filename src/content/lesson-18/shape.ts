@@ -42,6 +42,10 @@ export type LessonShape = {
   exampleThing4: TExample;
   /** Example: wǒ zhīdào zhè-ge cí. */
   exampleThing5: TExample;
+  /** Example: shí-ge chī-de dōngxi quánbù huài le. */
+  exampleThing6: TExample;
+  /** Example: tā chī-de shì huángsè-de shuǐguǒ. */
+  exampleThing7: TExample;
   /** Say: To name the one who does something, put -de rén after the verb. Pattern: verb-de rén */
   prosePerson: TProse;
   /** Example: xiě-de rén. */
@@ -58,6 +62,8 @@ export type LessonShape = {
   exampleHow2: TExample;
   /** Example: tā chī-de hěn duō. */
   exampleHow3: TExample;
+  /** Example: tā shuō-de bǐ wǒ hǎo. */
+  exampleHow4: TExample;
   /** Say: To name something there's no word for, describe it, then add -de and the noun. Pattern: description-de + noun */
   proseName: TProse;
   /** Example: zài-shuǐ-lǐ-de dòngwù. */
@@ -82,6 +88,8 @@ export type LessonShape = {
   exampleName10: TExample;
   /** Example: tā-de pífū hěn hǎo. */
   exampleName11: TExample;
+  /** Example: wǒ ài-de yánsè shì lánsè. */
+  exampleName12: TExample;
   /** Grammar box: every job of -de -- the thing, the one who, how, describing, whose, and longer descriptions. */
   infoJobsOfDe: TInfo;
   /** Exercise 1: Do you have anything to eat? */
@@ -151,6 +159,16 @@ const shape: LessonShape = {
     pinyin: "{{Word:wo3}} {{word:zhi1dao4}} {{word:zhe4}}-ge {{word:ci2}}.",
     ttsText: "我知道这个词。",
   },
+  exampleThing6: {
+    type: "example",
+    pinyin: "{{Word:shi2}}-ge {{word:chi1}}-{{word:de}} {{word:dong1xi}} {{word:quan2bu4}} {{word:huai4}} {{word:le}}.",
+    ttsText: "十个吃的东西全部坏了。",
+  },
+  exampleThing7: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:chi1}}-{{word:de}} {{word:shi4}} {{word:huang2se4}}-{{word:de}} {{word:shui3guo3}}.",
+    ttsText: "他吃的是黄色的水果。",
+  },
   prosePerson: { type: "prose" },
   examplePerson1: {
     type: "example",
@@ -182,6 +200,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ta1}} {{word:chi1}}-{{word:de}} {{word:hen3}} {{word:duo1}}.",
     ttsText: "他吃得很多。",
+  },
+  exampleHow4: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:shuo1}}-{{word:de}} {{word:bi3}} {{word:wo3}} {{word:hao3}}.",
+    ttsText: "他说得比我好。",
   },
   proseName: { type: "prose" },
   exampleName1: {
@@ -238,6 +261,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ta1}}-{{word:de}} {{word:pi2fu1}} {{word:hen3}} {{word:hao3}}.",
     ttsText: "她的皮肤很好。",
+  },
+  exampleName12: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:ai4}}-{{word:de}} {{word:yan2se4}} {{word:shi4}} {{word:lan2se4}}.",
+    ttsText: "我爱的颜色是蓝色。",
   },
   infoJobsOfDe: {
     type: "info",

@@ -35,10 +35,13 @@ const ru: PartialByKey<LessonShape> = {
   exampleBa1: { ru: [] },
   exampleBa2: { ru: [] },
   exampleBa3: { ru: [] },
+  exampleBa4: { ru: [] },
+  exampleBa5: { ru: [] },
   proseStrong: { ru: [], tldr: { ru: [] }, necessity: { ru: [] } },
   exampleStrong1: { ru: [] },
   exampleStrong2: { ru: [] },
   exampleStrong3: { ru: [] },
+  exampleStrong4: { ru: [] },
   infoBecomingAndMaking: {
     title: { ru: [] },
     items: [

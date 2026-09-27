@@ -48,6 +48,12 @@ export type LessonShape = {
   exampleComeGo3: TExample;
   /** Example: lái! */
   exampleComeGo4: TExample;
+  /** Example: wǒ qù-guò shìchǎng. */
+  exampleComeGo5: TExample;
+  /** Example: chī-wán hòu, wǒ-men qù shìchǎng. */
+  exampleComeGo6: TExample;
+  /** Example: tā lái wǒ-de páng-biān. */
+  exampleComeGo7: TExample;
   /** Say: To say where you come from, put cóng (from) before the place, then lái. Pattern: Who + cóng + place + lái */
   proseFrom: TProse;
   /** Example: wǒ cóng shìchǎng lái. */
@@ -56,6 +62,8 @@ export type LessonShape = {
   exampleFrom2: TExample;
   /** Example: nǐ cóng nǎlǐ lái? */
   exampleFrom3: TExample;
+  /** Example: tā cóng qián-miàn lái. */
+  exampleFrom4: TExample;
   /** Say: To say you arrive somewhere, put dào (arrive) before the place. Pattern: Who + dào + place + le */
   proseArrive: TProse;
   /** Example: wǒ dào jiā le. */
@@ -152,6 +160,21 @@ const shape: LessonShape = {
     pinyin: "{{Word:lai2}}!",
     ttsText: "来！",
   },
+  exampleComeGo5: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:qu4}}-{{word:guo4}} {{word:shi4chang3}}.",
+    ttsText: "我去过市场。",
+  },
+  exampleComeGo6: {
+    type: "example",
+    pinyin: "{{Word:chi1}}-{{word:wan2}} {{word:hou4}}, {{word:wo3}}-{{word:men}} {{word:qu4}} {{word:shi4chang3}}.",
+    ttsText: "吃完后，我们去市场。",
+  },
+  exampleComeGo7: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:lai2}} {{word:wo3}}-{{word:de}} {{word:pang2}}-{{word:bian1}}.",
+    ttsText: "他来我的旁边。",
+  },
   proseFrom: { type: "prose" },
   exampleFrom1: {
     type: "example",
@@ -167,6 +190,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ni3}} {{word:cong2}} {{word:na3li3}} {{word:lai2}}?",
     ttsText: "你从哪里来？",
+  },
+  exampleFrom4: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:cong2}} {{word:qian2}}-{{word:mian4}} {{word:lai2}}.",
+    ttsText: "他从前面来。",
   },
   proseArrive: { type: "prose" },
   exampleArrive1: {

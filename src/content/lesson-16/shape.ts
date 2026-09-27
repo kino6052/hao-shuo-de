@@ -54,6 +54,8 @@ export type LessonShape = {
   exampleAloud2: TExample;
   /** Example: qī, bā, jiǔ, shí. */
   exampleAloud3: TExample;
+  /** Example: sān bǐ èr duō. */
+  exampleAloud4: TExample;
   /** Say: To count things, put the number, then gè, then the thing. Pattern: number + gè + noun */
   proseCount: TProse;
   /** Example: yī-ge rén. */
@@ -88,6 +90,12 @@ export type LessonShape = {
   exampleCount15: TExample;
   /** Example: bā-ge hézi hěn dà. */
   exampleCount16: TExample;
+  /** Example: sì-ge rén cóng shìchǎng lái. */
+  exampleCount17: TExample;
+  /** Example: wǒ yǒu wǔ-ge hěn tián-de shuǐguǒ. */
+  exampleCount18: TExample;
+  /** Example: sān-ge rén qǐ-lái le. */
+  exampleCount19: TExample;
   /** Say: To say numbers above ten, put shí (ten) before or after the other number. Pattern: shí + number (11-19) / number + shí (20, 30 …) */
   proseTeens: TProse;
   /** Example: shí-yī-ge rén. */
@@ -112,6 +120,8 @@ export type LessonShape = {
   exampleLabel3: TExample;
   /** Example: nǐ shì yī-hào! */
   exampleLabel4: TExample;
+  /** Example: wǔ-hào zài wǒ-de qián-miàn. */
+  exampleLabel5: TExample;
   /** Grammar box: 1-10 with èr, number + gè + noun (liǎng for two), shí-èr / èr-shí, number + hào. */
   infoCounting: TInfo;
   /** Exercise 1: one box */
@@ -199,6 +209,11 @@ const shape: LessonShape = {
     pinyin: "{{Word:qi1}}, {{word:ba1}}, {{word:jiu3}}, {{word:shi2}}.",
     ttsText: "七，八，九，十。",
   },
+  exampleAloud4: {
+    type: "example",
+    pinyin: "{{Word:san1}} {{word:bi3}} {{word:er4}} {{word:duo1}}.",
+    ttsText: "三比二多。",
+  },
   proseCount: { type: "prose" },
   exampleCount1: {
     type: "example",
@@ -280,6 +295,21 @@ const shape: LessonShape = {
     pinyin: "{{Word:ba1}}-ge {{word:he2zi}} {{word:hen3}} {{word:da4}}.",
     ttsText: "八个盒子很大。",
   },
+  exampleCount17: {
+    type: "example",
+    pinyin: "{{Word:si4}}-ge {{word:ren2}} {{word:cong2}} {{word:shi4chang3}} {{word:lai2}}.",
+    ttsText: "四个人从市场来。",
+  },
+  exampleCount18: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:you3}} {{word:wu3}}-ge {{word:hen3}} {{word:tian2}}-{{word:de}} {{word:shui3guo3}}.",
+    ttsText: "我有五个很甜的水果。",
+  },
+  exampleCount19: {
+    type: "example",
+    pinyin: "{{Word:san1}}-ge {{word:ren2}} {{word:qi3}}-{{word:lai2}} {{word:le}}.",
+    ttsText: "三个人起来了。",
+  },
   proseTeens: { type: "prose" },
   exampleTeens1: {
     type: "example",
@@ -331,6 +361,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ni3}} {{word:shi4}} {{word:yi1}}-{{word:hao4}}!",
     ttsText: "你是一号！",
+  },
+  exampleLabel5: {
+    type: "example",
+    pinyin: "{{Word:wu3}}-{{word:hao4}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:qian2}}-{{word:mian4}}.",
+    ttsText: "五号在我的前面。",
   },
   infoCounting: {
     type: "info",

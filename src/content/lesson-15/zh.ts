@@ -35,10 +35,13 @@ const zh: PartialByKey<LessonShape> = {
   exampleBa1: { zh: [] },
   exampleBa2: { zh: [] },
   exampleBa3: { zh: [] },
+  exampleBa4: { zh: [] },
+  exampleBa5: { zh: [] },
   proseStrong: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
   exampleStrong1: { zh: [] },
   exampleStrong2: { zh: [] },
   exampleStrong3: { zh: [] },
+  exampleStrong4: { zh: [] },
   infoBecomingAndMaking: {
     title: { zh: [] },
     items: [

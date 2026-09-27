@@ -23,6 +23,7 @@ const zh: PartialByKey<LessonShape> = {
   exampleNow1: { zh: [] },
   exampleNow2: { zh: [] },
   exampleNow3: { zh: [] },
+  exampleNow4: { zh: [] },
   proseWill: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
   exampleWill1: { zh: [] },
   exampleWill2: { zh: [] },

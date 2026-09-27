@@ -33,6 +33,7 @@ const zh: PartialByKey<LessonShape> = {
   exampleShapeFeel2: { zh: [] },
   exampleShapeFeel3: { zh: [] },
   exampleShapeFeel4: { zh: [] },
+  exampleShapeFeel5: { zh: [] },
   infoComparing: {
     title: { zh: [] },
     items: [{ zh: [] }, { zh: [] }, { zh: [] }],

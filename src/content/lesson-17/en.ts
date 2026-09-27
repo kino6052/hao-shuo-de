@@ -53,6 +53,10 @@ const en: PartialByKey<LessonShape> = {
   exampleIsColor4: { en: ["The moon is yellow."] },
   exampleIsColor5: { en: ["The mud on the floor is black."] },
   exampleIsColor6: { en: ["The fire is red."] },
+  exampleIsColor7: { en: ["This animal's body is yellow."] },
+  exampleIsColor8: { en: ["The moon is round, and it's white too."] },
+  exampleIsColor9: { en: ["Four animals are white, and five are black."] },
+  exampleIsColor10: { en: ["Seven boxes are red, and eight are blue."] },
   proseWhatColor: {
     en: [
       '**To ask "what color?"**, say {{word:shen2me}} {{word:yan2se4}} where the color would go.',
@@ -70,6 +74,8 @@ const en: PartialByKey<LessonShape> = {
   exampleWhatColor2: { en: ["What color is this fruit?"] },
   exampleWhatColor3: { en: ["I love blue."] },
   exampleWhatColor4: { en: ["This color is nice."] },
+  exampleWhatColor5: { en: ["These two boxes are the same color."] },
+  exampleWhatColor6: { en: ["What color is number six?"] },
   infoColors: {
     title: { en: ["Colors"] },
     items: [

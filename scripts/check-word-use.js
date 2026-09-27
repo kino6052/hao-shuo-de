@@ -72,7 +72,7 @@ if (showTargets) {
     for (const r of fewHomeUses) console.log(`  ${r.term}  ${where(r)}: ${r.homeUses}`);
   }
   if (notReused.length) {
-    console.log(`\nReused in fewer than ${LATER_LESSONS_MIN} later lessons, and not in the stories (${notReused.length}):`);
+    console.log(`\nReused in fewer than ${LATER_LESSONS_MIN} later lessons (or all the lessons left), and not in the stories (${notReused.length}):`);
     for (const r of notReused) console.log(`  ${r.term}  ${where(r)} -> ${r.laterLessons.length ? r.laterLessons.map((n) => `L${n}`).join(', ') : 'none'}`);
   }
 } else if (fewHomeUses.length || notReused.length) {

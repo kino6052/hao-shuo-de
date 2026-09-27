@@ -41,6 +41,7 @@ const en: PartialByKey<LessonShape> = {
   exampleAloud1: { en: ["One, two, three!"] },
   exampleAloud2: { en: ["Four, five, six."] },
   exampleAloud3: { en: ["Seven, eight, nine, ten."] },
+  exampleAloud4: { en: ["Three is more than two."] },
   proseCount: {
     en: [
       "**To count things**, put the number, then {{word:ge4}}, then the thing.",
@@ -72,6 +73,9 @@ const en: PartialByKey<LessonShape> = {
   exampleCount14: { en: ["Four people are outside."] },
   exampleCount15: { en: ["Six pieces of fruit went bad."] },
   exampleCount16: { en: ["Eight boxes are big."] },
+  exampleCount17: { en: ["Four people come from the market."] },
+  exampleCount18: { en: ["I have five very sweet pieces of fruit."] },
+  exampleCount19: { en: ["Three people got up."] },
   proseTeens: {
     en: [
       "**To say numbers above ten**, put {{word:shi2}} (ten) before or after the other number.",
@@ -110,6 +114,7 @@ const en: PartialByKey<LessonShape> = {
   exampleLabel2: { en: ["Where is number two?"] },
   exampleLabel3: { en: ["Where is number three?"] },
   exampleLabel4: { en: ["You're number one!"] },
+  exampleLabel5: { en: ["Number five is in front of me."] },
   infoCounting: {
     title: { en: ["Counting"] },
     items: [

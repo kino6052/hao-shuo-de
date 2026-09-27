@@ -33,6 +33,7 @@ const ru: PartialByKey<LessonShape> = {
   exampleShapeFeel2: { ru: [] },
   exampleShapeFeel3: { ru: [] },
   exampleShapeFeel4: { ru: [] },
+  exampleShapeFeel5: { ru: [] },
   infoComparing: {
     title: { ru: [] },
     items: [{ ru: [] }, { ru: [] }, { ru: [] }],

@@ -94,6 +94,7 @@ answers
 | D30 | **New spellings (your edits, 2026-09-27):** qian2 is **qián** (was qiánmiàn), and di4 is **dì** (was tái). |
 | D31 | **èr is added** (Q7), introduced in L16: counting aloud (yī, èr, sān), "number two" (èr-hào), and 12 / 20 (shí-èr, èr-shí). liǎng stays for two things (liǎng-ge). The vocabulary becomes **149 words**. |
 | D32 | **The no-jargon rule is for the lessons.** The dictionary and the appendices keep their own wording; `check-jargon` checks the lessons (add `--all` to see the rest). The author will rewrite "Why Minimality Works" personally. |
+| D33 | **Every word is reused (rule 7).** Each word comes back in 2 later lessons, in examples that fit what that lesson teaches (for example, the numbers return in the color lesson and in "and / or"). The target is capped at the lessons that are left, so L20 words need only L21 and L21 words need nothing. `npm run check -- --strict` passes. |
 
 ---
 
@@ -160,7 +161,7 @@ No structural change. Only lesson-number citations get updated.
    - A word family taught as one idea (páng / biān / pángbiān / miàn, the six colors, the numbers) still counts one per word, but feels like one step to the learner.
 5. **Balance with theme words only.** If a lesson is too heavy or too light, move a theme word, never a core word. Move it to a lesson whose examples would naturally use it.
 6. **Group by topic.** Theme words join the lesson whose examples need them. Body parts go with "my hand" (L4). Food and money go with "eat" and "have" (L5). The box and the tool go with "What is this?" (L6). The market and the door go with "come from / go out" (L11).
-7. **Use it, then reuse it.** A new word appears in at least 3 examples or exercises in its own lesson. It then appears again in at least 2 later lessons, or in the stories appendix. Words from the last lessons (L18–L21) get their reuse in the Texts section.
+7. **Use it, then reuse it.** A new word appears in at least 3 examples or exercises in its own lesson. It then appears again in at least 2 later lessons, or in the stories appendix. Near the end there are fewer later lessons than that, so the target is what is left: a word from L20 comes back in L21, and a word from L21 has nothing after it (D33).
 8. **Finish by L21.** Section 4 (texts, appendices) introduces nothing new.
 9. **Keep it checkable.** §4b is the source of truth. If a word moves, update §4b and §4c, then run `npm run check-book` (149/149, no duplicates, vocab matches §4b) and `npm run check-early-words` (no early use). See §6.
 
@@ -409,7 +410,7 @@ Q1–Q4 were answered on 2026-09-27. New questions go here.
 | `npm run check-summaries`      | Every chapter's summary is 50 words or fewer.                                                                                                                                             | any chapter         |
 | `npm run check-jargon`         | No banned grammar words in the book's English text (rule 4). Lists each hit, and counts the allowed core terms.                                                                           | finished lessons    |
 | `npm run check-early-words`    | No word used before its lesson, and no pinyin word missing from the dictionary (§4a rule 2). Lists each use.                                                                              | finished lessons    |
-| `npm run check-word-use`       | Every word a lesson introduces appears in one of its example sentences or answers. Also reports rule 7's targets (3 sentences at home, reuse in 2 later lessons); `--targets` lists them. | finished lessons    |
+| `npm run check-word-use`       | Every word a lesson introduces appears in one of its example sentences or answers. Also reports rule 7's targets (3 sentences at home, reuse in 2 later lessons, or all that are left); `--targets` lists them. | finished lessons    |
 | `npm run check-grammar-blocks` | Every lesson has a grammar box with a title and a unique tag.                                                                                                                             | finished lessons    |
 | `npm run check-practice`       | Every word a lesson introduces is in at least one of its examples and in at least one of its exercises (answers). A lesson with new words has examples and exercises at all.              | finished lessons    |
 | `npm test`                     | Includes `scripts/early-words.test.js` and `scripts/word-use.test.js`, which test the early-words, word-use, and practice rules on small made-up lessons.                                 | —                   |
@@ -484,9 +485,9 @@ For each lesson: ☐ written to template ☐ `npm run check -- lesson-NN` passes
 - [ ] Tone pass on intro-1, intro-2, intro-3
 - [ ] "Why Minimality Works": the author rewrites it (D32)
 - [x] Appendix: Grammar Patterns Reference aligned with the new lessons — it is now generated from the lessons (below)
-- [ ] Appendix: Ten Short Stories use only words taught by the lessons they cite
+- [x] Appendix: Ten Short Stories use only words taught by the lessons they cite — every Chinese line uses dictionary words (bird is zài-kōngqì-lǐ-de dòngwù, see is kàn-dào, money is jīn), and the notes point at the current lessons
 - [ ] Sentence Builder and Proverbs checked against the dictionary
-- [ ] `npm run check -- --strict` passes (jargon: lessons only, D32)
+- [x] `npm run check -- --strict` passes (jargon: lessons only, D32; reuse capped near the end, D33)
 - [x] Grammar overview chapter built automatically from every lesson's grammar boxes (`grammarRules` in `src/lib/chapter-content.js` already collects them), replacing the hand-written `appendix-grammar.yaml` Done: `scripts/generate-grammar-overview.js` writes `src/content/appendix-grammar.ts` on every build; the old YAML is in `src/content/legacy/`.
 
 ### Phase 4 — Translation (after all English is approved)

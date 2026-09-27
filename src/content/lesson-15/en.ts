@@ -91,6 +91,8 @@ const en: PartialByKey<LessonShape> = {
   exampleBa1: { en: ["I fixed the tool."] },
   exampleBa2: { en: ["He broke the box."] },
   exampleBa3: { en: ["Heat up the water."] },
+  exampleBa4: { en: ["He made the opening bigger."] },
+  exampleBa5: { en: ["He made all the water hot."] },
   proseStrong: {
     en: [
       '**To say strong**, say {{word:you3}} {{word:li4liang4}}, "have strength".',
@@ -111,6 +113,7 @@ const en: PartialByKey<LessonShape> = {
   exampleStrong1: { en: ["He's very strong."] },
   exampleStrong2: { en: ["I have no strength."] },
   exampleStrong3: { en: ["Your hands are very strong."] },
+  exampleStrong4: { en: ["His body is strong."] },
   infoBecomingAndMaking: {
     title: { en: ["Becoming and Making"] },
     items: [
