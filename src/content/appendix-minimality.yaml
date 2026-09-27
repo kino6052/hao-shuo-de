@@ -7,9 +7,9 @@ title:
   zh: "为什么极简是可行的"
 
 summary:
-  eng: "Aristotle's ten categories close the logical space of anything sayable; NSM's cross-linguistic research empirically fills that space with about 65 universal words. Together they guarantee every word has some category to belong to, splitting necessity into true primitives and practically-lexicalized composites -- and real Mandarin grammar, unlike Toki Pona's invented grammar, narrows which composites are actually available. What the internal machinery still can't do alone, context has to finish -- exactly as in Toki Pona, meaning here is produced jointly by the words and by what the conversation has already established."
-  rus: "Десять категорий Аристотеля замыкают логическое пространство всего, что можно сказать; межъязыковые исследования NSM эмпирически заполняют это пространство примерно шестьюдесятью пятью универсальными словами. Вместе они гарантируют, что у каждого слова есть своя категория, разделяя необходимость на настоящие примитивы и практически лексикализованные составные слова — а реальная мандаринская грамматика, в отличие от изобретённой грамматики Токипоны, сужает то, какие составные слова вообще доступны. То, что внутренний механизм сам по себе всё ещё не может сделать, обязан доделать контекст — точно как в Токипоне, смысл здесь порождается совместно словами и тем, что уже установлено разговором."
-  zh: "亚里士多德的十个范畴封闭了一切可言说之事的逻辑空间；NSM 的跨语言研究用大约65个普遍存在的词，在经验上填满了这个空间。二者共同保证了每个词都归属于某个类别，并把必要性分为真正的基元和出于实际而词化的复合词——而真实的普通话语法，不同于道本语发明出来的语法，限制了实际可用的复合方式。内部机制本身仍无法独自完成的部分，必须由语境来补足——正如道本语一样，这里的意义是由词语和对话已经确立的一切共同产生的。"
+  eng: "Why can so few words say so much? A small set of basic ideas covers almost everything people talk about. Real Chinese lets you build the rest from them, and the conversation fills in what the words leave out."
+  rus: "Почему так мало слов позволяет сказать так много? Небольшой набор основных понятий покрывает почти всё, о чём говорят люди. Настоящий китайский позволяет строить из них всё остальное, а разговор дополняет то, что не сказано словами."
+  zh: "为什么这么少的词就能表达这么多？一小组基本概念几乎涵盖了人们谈论的一切。真正的汉语让你用它们组合出其余的意思，而对话会补上词语没有说出的部分。"
 
 blocks:
   - type: prose

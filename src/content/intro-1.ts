@@ -23,7 +23,7 @@ const content: TextEntry[] = [
   {
     type: 'summary',
     en: [
-      'Hao-shuo-de is a constructed language that lets Chinese learners focus on what truly matters — and master Chinese in a fraction of the time.',
+      'Hao-shuo-de is Chinese with only the words you need most. It helps you learn Chinese much faster.',
     ],
     zh: [],
     ru: [],

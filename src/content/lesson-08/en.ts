@@ -4,52 +4,124 @@ import type { PartialByKey } from "../../lib/chapter-shape-types.ts";
 import type { LessonShape } from "./shape.ts";
 
 const en: PartialByKey<LessonShape> = {
-  title: { en: ["Expressing Time and Space"] },
+  title: { en: ["Time 1 — When it happens"] },
   summary: {
     en: [
-      "A time, place, or condition clause fronts the main sentence and is set off by a comma -- no dedicated \"if\" word needed -- and \"when X\" is built compositionally as X-de + `{{word:shi2jian1}}` (\"the time of X\"), reusing `-{{word:de}}` rather than a dedicated \"when\" word.",
+      "We often need to say when something happens.",
+      "In this lesson, you'll be able to say \"I ate.\", \"I'm eating right now.\", \"I will eat.\", and \"Today, I sleep.\"",
     ],
   },
-
   vocabShijian: { en: ["time, moment, occasion"] },
-
-  proseFrontedContext: {
+  vocabLe: {
     en: [
-      "Hao-shuo-de has no dedicated word for \"if,\" and no separate particle to mark a time or place clause ahead of the main sentence either.",
-      "Instead, the sentence itself already tells you what's context and what's the main statement, purely from where things sit.",
-      "Put the context or condition phrase at the very start of the sentence, immediately followed by a pause -- a comma -- and everything after that comma is the main statement it applies to.",
+      "a small word placed right after a verb to mark that the action is finished",
     ],
-    tldr: { en: ["A fronted phrase followed by a comma marks time, place, or condition -- no dedicated word like \"if\" is needed."] },
-    necessity: { en: ["Explains sentences that open with a time/place/condition clause before any dedicated marker word ever appears for it."] },
   },
-  infoFrontedContext: {
-    title: { en: ["Fronted Context Clause"] },
+  vocabHui: {
+    en: [
+      "placed right before a verb to mark the action as something that will happen",
+    ],
+  },
+  vocabZai: {
+    en: [
+      "to be at/in a place; placed right before a verb instead, it marks the action as happening right now",
+    ],
+  },
+  vocabRi: { en: ["sun"] },
+  vocabYue: { en: ["moon"] },
+  vocabShuijiao: { en: ["sleep"] },
+  vocabGuo: { en: ["have ever done"] },
+  proseLeCompletion: {
+    en: [
+      "Hao-shuo-de verbs never change shape to show when something happened -- there's no separate word for \"eat\" versus \"ate\" versus \"will eat\". Instead, a small set of words placed right next to the verb do that job.",
+      "The first and most useful of these is `{{word:le}}`. Placed right after a verb, it marks that the action is finished -- close to English \"did\" or \"have done\", though it's really about the action being DONE, not about time itself.",
+      'Most of the time that lines up with "the past", since a finished action usually did happen earlier. But a sentence can use `{{word:le}}` for something that just finished a second ago, or something expected to be finished by a later point.',
+    ],
+    tldr: {
+      en: ["Put {{word:le}} after a verb to say it is done."],
+    },
+    necessity: {
+      en: [
+        "Verbs never change, so small words like {{word:le}} show when.",
+      ],
+    },
+  },
+  infoCompletionMarker: {
+    title: { en: ["Marking a Finished Action: `{{word:le}}`"] },
     items: [
-      { en: ["[Context / Condition Phrase], [Main Statement] -- the context phrase always comes first, set off by a comma."] },
+      {
+        en: [
+          "Put `{{word:le}}` right after a verb to say that action is finished. It's about being DONE, not about time -- it can describe something that just finished, or something that will be finished by a later point.",
+        ],
+      },
     ],
   },
-  proseDeShijian: {
+  leExample1: { en: ["I've eaten. / I ate."] },
+  proseGuo: {
     en: [
-      'Hao-shuo-de also has no dedicated word for "when." Instead, "when X" is built the same way any other description is: bind X onto `{{word:shi2jian1}}` ("time, moment") with `-{{word:de}}`, the same particle from Lesson 3.',
-      '`{{word:chi1}}-{{word:de}} {{word:shi2jian1}}` is literally "the eating\'s time" -- fronted as a context clause, it means "when [I] eat."',
-      "No new grammar is needed: it's just -de binding a description onto a noun (here, {{word:shi2jian1}}), and that whole phrase then fronted like any other context clause.",
+      "`guò` attaches right after a verb the same way `{{word:le}}` does, but it says something different: not that the action just finished, but that you've done it before, at some point -- close to English \"have done\" (as in \"I have eaten that before\").",
+      "`{{word:ting1}}-guò` means \"have heard it before\" -- you're describing past experience, not one single finished action.",
     ],
-    tldr: { en: ["\"When X\" is X-de + `{{word:shi2jian1}}` (\"the time of X\"), fronted as a context clause -- reusing `-{{word:de}}`, not a new word."] },
-    necessity: { en: ["Shows that \"when\" doesn't need its own particle either -- it's `-{{word:de}}` and the fronted-clause pattern working together."] },
+    tldr: {
+      en: [
+        "Put {{word:guo4}} after a verb to say you have done it before.",
+      ],
+    },
+    necessity: {
+      en: [
+        "Now you can say \"I've been there\" or \"I've eaten that\".",
+      ],
+    },
   },
-
-  example1: { en: ["What time is he coming?"] },
-  example2: { en: ["In a crowded place, I'm fine."] },
-  example3: { en: ["When I eat, I'm content."] },
-  example4: { en: ["Without water, the animal isn't well."] },
-
-  exercise1: { en: ["Ask: \"What time are you coming?\""] },
-  exercise2: { en: ["Say: \"When you speak, I listen.\""] },
-  exercise3: { en: ["Say: \"If the tool isn't good, don't use it.\""] },
-
-  answer1: { en: ["{{Word:shen2me}} {{word:shi2jian1}} {{word:ni3}} {{word:lai2}}?"] },
-  answer2: { en: ["{{Word:ni3}} {{word:shuo1}}-{{word:de}} {{word:shi2jian1}}, {{word:wo3}} {{word:ting1}}."] },
-  answer3: { en: ["{{Word:gong1ju4}} {{word:bu4}} {{word:hao3}}, {{word:bu4}} {{word:yong4}} {{word:ta1}}."] },
+  guoExample1: { en: ["I've heard Hao-shuo-de before."] },
+  proseZai: {
+    en: [
+      '`{{word:zai4}}` works differently from `{{word:le}}` and `guò`: instead of attaching after the verb, it goes right in front of it, and marks the action as happening right now -- close to English "-ing".',
+      '`{{word:zai4}} {{word:chi1}}` means "is eating", happening at this very moment.',
+      "You already know `{{word:zai4}}` as \"to be at, to be in\" a place; used this way, in front of a verb, it's the same idea stretched to cover an action instead of just a location -- you're \"in the middle of\" doing something.",
+    ],
+    tldr: {
+      en: [
+        "Put {{word:zai4}} before a verb to say it is happening right now.",
+      ],
+    },
+    necessity: { en: ['It works like "-ing" in English.'] },
+  },
+  zaiExample1: { en: ["He/She is eating."] },
+  proseHui: {
+    en: [
+      "`{{word:hui4}}` also goes right in front of a verb, and marks that the action hasn't happened yet but will -- close to English \"will\" or \"going to\".",
+      '`{{word:hui4}} {{word:chi1}}` means "will eat", something expected to happen later.',
+    ],
+    tldr: {
+      en: [
+        "Put {{word:hui4}} before a verb to say it will happen.",
+      ],
+    },
+    necessity: { en: ["Now you can talk about what comes next."] },
+  },
+  huiExample1: { en: ["I will eat."] },
+  example3: { en: ["A large animal is eating you."] },
+  example5: { en: ["You made new food."] },
+  example1L08: { en: ["What time is he coming?"] },
+  exercise2: { en: ["The woman obeyed the man."] },
+  exercise3: { en: ["The friends ate meat."] },
+  exercise1L08: { en: ['Ask: "What time are you coming?"'] },
+  answer2: {
+    en: [
+      "{{Word:nv3ren2}} {{word:ting1}} {{word:le}} {{word:nan2ren2}}.",
+    ],
+  },
+  answer3: {
+    en: [
+      "{{Word:hao3}}-{{word:de}} {{word:ren2}} {{word:chi1}} {{word:le}} {{word:dong4wu4}}.",
+    ],
+  },
+  answer1L08: {
+    en: [
+      "{{Word:shen2me}} {{word:shi2jian1}} {{word:ni3}} {{word:lai2}}?",
+    ],
+  },
 };
 
 export default en;

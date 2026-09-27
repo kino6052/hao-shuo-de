@@ -1,18 +1,20 @@
 // Russian text for lesson-06, matching shape.ts's keys. Typed as
-// `PartialByKey<LessonShape>`. Not translated yet -- every `ru` is the
-// empty-array placeholder.
+// `PartialByKey<LessonShape>`.
+// Not translated yet -- every `ru` is the empty-array placeholder.
 import type { PartialByKey } from "../../lib/chapter-shape-types.ts";
 import type { LessonShape } from "./shape.ts";
 
 const ru: PartialByKey<LessonShape> = {
   title: { ru: [] },
   summary: { ru: [] },
-  vocabGongju: { ru: [] },
-  vocabTa: { ru: [] },
-  vocabHuozhe: { ru: [] },
   vocabShenme: { ru: [] },
+  vocabMa: { ru: [] },
   vocabWeishenme: { ru: [] },
   vocabZenme: { ru: [] },
+  vocabWen: { ru: [] },
+  vocabZhao: { ru: [] },
+  vocabGongju: { ru: [] },
+  vocabHezi: { ru: [] },
   proseQuestionWordsInSitu: { ru: [] },
   infoYesNoQuestions: { items: [{ ru: [], items: [{ ru: [] }, { ru: [] }] }] },
   proseAnsweringYesNo: { ru: [] },
@@ -28,6 +30,9 @@ const ru: PartialByKey<LessonShape> = {
   example10: { ru: [] },
   example11: { ru: [] },
   example12: { ru: [] },
+  example13: { ru: [] },
+  example14: { ru: [] },
+  example15: { ru: [] },
   exercise1: { ru: [] },
   exercise2: { ru: [] },
   exercise3: { ru: [] },

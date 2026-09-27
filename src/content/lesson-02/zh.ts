@@ -1,6 +1,6 @@
 // Chinese text for lesson-02, matching shape.ts's keys. Typed as
-// `PartialByKey<LessonShape>`. Not translated yet -- every `zh` is the
-// empty-array placeholder.
+// `PartialByKey<LessonShape>`.
+// Not translated yet -- every `zh` is the empty-array placeholder.
 import type { PartialByKey } from "../../lib/chapter-shape-types.ts";
 import type { LessonShape } from "./shape.ts";
 
@@ -9,13 +9,13 @@ const zh: PartialByKey<LessonShape> = {
   summary: { zh: [] },
   vocabShi: { zh: [] },
   vocabBu: { zh: [] },
+  vocabZhe: { zh: [] },
   vocabDongxi: { zh: [] },
   vocabRen: { zh: [] },
-  vocabShuiguo: { zh: [] },
-  vocabXiedeDongxi: { zh: [] },
-  vocabNvren: { zh: [] },
-  vocabZhe: { zh: [] },
+  vocabNuren: { zh: [] },
+  vocabNanren: { zh: [] },
   vocabDongwu: { zh: [] },
+  vocabShuiguo: { zh: [] },
   proseNounShiNoun: { zh: [] },
   example1: { zh: [] },
   example2: { zh: [] },
@@ -24,6 +24,7 @@ const zh: PartialByKey<LessonShape> = {
   example5: { zh: [] },
   example6: { zh: [] },
   proseNounBuShiNoun: { zh: [] },
+  infoIsAndIsNot: { title: { zh: [] }, items: [{ zh: [] }, { zh: [] }] },
   example7: { zh: [] },
   example8: { zh: [] },
   example9: { zh: [] },

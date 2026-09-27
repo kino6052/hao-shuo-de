@@ -1,6 +1,6 @@
 # Book Structure
 
-Table of contents for Hǎo-shuō-de, in reading order. Source files live under `src/content/`. The 16 lessons are exactly the 16 topics `intro-3.ts` names, in the same three sections (the sidebar groups them the same way — see `src/lib/lesson-sections.js`).
+Table of contents for Hǎo-shuō-de, in reading order. Source files live under `src/content/`. The 21 lessons are exactly the 21 lessons `intro-3.ts` lists, with the same titles, in the same three sections (the sidebar groups them the same way — see `src/lib/lesson-sections.js`). `npm run check-book` fails the build if they drift apart. `BOOK_PLAN.md` holds the plan, the tone guide, and the checklist for the restructure.
 
 ```
 Hǎo-shuō-de
@@ -13,23 +13,28 @@ Hǎo-shuō-de
 │   ├── 1. Sounds and Symbols                          lesson-01/
 │   ├── 2. Words and Sentences                         lesson-02/
 │   ├── 3. Modifying Nouns                             lesson-03/
-│   ├── 4. You and I                                   lesson-04/
+│   ├── 4. Pointing at People and Things               lesson-04/
 │   ├── 5. Verbs                                       lesson-05/
 │   └── 6. Questions and Answers                       lesson-06/
 │
 ├── Section 2 — Modifying Words and Meaning
-│   ├── 7.  Prepositions                               lesson-07/
-│   ├── 8.  Expressing Time and Space                  lesson-08/
-│   ├── 9.  Pre-Verbs                                  lesson-09/
-│   └── 10. More Modifiers                             lesson-10/
+│   ├── 7.  Pre-Verbs                                  lesson-07/
+│   ├── 8.  Time 1 — When it happens                   lesson-08/
+│   ├── 9.  Time 2 — Around an action                  lesson-09/
+│   ├── 10. Space 1 — Where it is                      lesson-10/
+│   ├── 11. Space 2 — Moving                           lesson-11/
+│   ├── 12. Modifiers 1 — How much                     lesson-12/
+│   ├── 13. Modifiers 2 — Comparing                    lesson-13/
+│   ├── 14. Modifiers 3 — Also and all                 lesson-14/
+│   └── 15. Modifiers 4 — Becoming and making          lesson-15/
 │
 ├── Section 3 — Special Words and Concepts
-│   ├── 11. Measure word ge                            lesson-11/
-│   ├── 12. Greetings and Feelings                     lesson-12/
-│   ├── 13. Numbers                                    lesson-13/
-│   ├── 14. Colors                                     lesson-14/
-│   ├── 15. Spatial Nouns                              lesson-15/
-│   └── 16. Particles and Other Special Words          lesson-16/
+│   ├── 16. Numbers                                    lesson-16/
+│   ├── 17. Colors                                     lesson-17/
+│   ├── 18. Changing the Role of a Word                lesson-18/
+│   ├── 19. Relationships 1 — Inside a sentence        lesson-19/
+│   ├── 20. Relationships 2 — Linking sentences        lesson-20/
+│   └── 21. Greetings and Feelings                     lesson-21/
 │
 └── Section 4 — Texts, Vocabulary, and Reference
     ├── Proverbs                                       proverbs.md
@@ -57,8 +62,9 @@ Every file types its object directly against `Shape`/`LessonShape` — there is 
 
 ## Notes
 
-- **This is a from-scratch rebuild (September 2026).** The previous 19-lesson curriculum (which had drifted from `intro-3.ts`'s plan, and predates the split-authoring pattern) was archived to `src/content/legacy/` rather than migrated in place. `src/content/legacy/` is excluded from the build, from `npm run typecheck`, and from the sidebar — it's reference material only.
-- **Lessons 8, 11, and 14** (Expressing Time and Space; Measure word ge; Colors) are new or substantially reworked content, not straight ports: `legacy/lesson-12` ("Colors and la") was split into the fronted-context-clause material (now in lesson-08) and the color-adjective material (now in lesson-14); "Measure word ge" is new, formalizing the `-ge` classifier lesson-03 already introduced.
-- Five lessons from the old curriculum aren't among intro-3's 16 named topics (Proper Names & Geography, Modification Stacking, and three story lessons) and were **not** carried forward into the new numbering; they remain in `src/content/legacy/` only.
+- **The 21-lesson restructure (September 2026).** The book went from 16 lessons to the 21 that intro-3 lists: Time and Space, More Modifiers, and Relationships were split into several lessons, and Particles merged into Greetings and Feelings. See `BOOK_PLAN.md` for every decision. Phase 1 moved the old lessons' blocks into the new layout without rewriting them. Each block's JSDoc in `shape.ts` says `[from old LNN]`. Phase 2 rewrites the lessons one by one. Section 1 (lessons 1–6) is already in plain words.
+- **Archives.** The 16-lesson layout is in `src/content/legacy/v2-16-lessons/`, and the 19-lesson curriculum before it is in `src/content/legacy/`. Both are excluded from the build, from `npm run typecheck`, and from the sidebar. They're reference material only.
+- **Vocabulary.** Every one of the 148 words (the 136 original dictionary words plus 12 approved additions) is introduced in exactly one lesson, as that lesson's `vocab` blocks. `BOOK_PLAN.md` §4b lists which lesson introduces which word.
+- **Checks.** `npm run build` starts with `npm run check`, which runs every gate: lessons match intro-3, vocabulary, summaries, jargon, words used too early, every word used, and a grammar box in every lesson. The gates are strict for the finished lessons in `scripts/finished-lessons.js` and report the rest. See `BOOK_PLAN.md` §6.
 - **Dictionary and Categorical Dictionary** each have English/Russian/Chinese as separate `.md` files (`dictionary.md`, `dictionary.rus.md`, `dictionary.zh.md`, and the `-categorical` equivalents); the alphabetical one is regenerated from `src/data/dictionary.json` by `scripts/generate-dictionary.js`.
-- **Appendix: Sandhi, Minimality, Stories, Grammar** and **Sentence Builder** are still on the older multi-language `.yaml` block schema (pre-`.ts` migration). Their `— Lesson N` citations were updated to match the new numbering.
+- **Appendix: Sandhi, Minimality, Stories, Grammar** and **Sentence Builder** are still on the older multi-language `.yaml` block schema (pre-`.ts` migration). Their `— Lesson N` citations point to the 21-lesson numbering.

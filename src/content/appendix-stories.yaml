@@ -14,9 +14,9 @@ summary:
 blocks:
   - type: prose
     text:
-      eng: 'Each story below stays strictly inside the dictionary you''ve already learned. Where a concept genuinely has no word (a wolf, a bed, "to ask," "where") the story either routes around it compositionally -- the same discipline Lesson 2 already asked of you ("a written thing" instead of a dedicated word for book) -- or, for a small number of very high-frequency gaps, a new word was added. See the note below for exactly which words and why.'
-      rus: "Каждая история ниже строго остаётся в пределах уже изученного словаря. Там, где понятию действительно не находится слова (волк, кровать, «спрашивать», «где»), история либо обходит это композиционно — та же дисциплина, которую Урок 2 уже требовал от вас («написанная вещь» вместо отдельного слова для книги), — либо, для небольшого числа очень частотных пробелов, было добавлено новое слово. Точный список слов и обоснование — в примечании ниже."
-      zh: '下面的每一个故事都严格只使用你已经学过的词典词汇。当某个概念确实没有对应的词时（狼、床、"问"、"哪里"），故事要么用组合的方式绕过去——这正是第二课已经要求你做的那种纪律（用"写的东西"代替专门表示"书"的词）——要么，对于少数几个使用频率非常高的空缺，添加了一个新词。具体添加了哪些词、为什么添加，见下面的说明。'
+      eng: 'Each story below stays strictly inside the dictionary you''ve already learned. Where a concept genuinely has no word (a wolf, a bed, "to ask," "where") the story either routes around it compositionally -- the same discipline Lesson 18 already asked of you ("a written thing" instead of a dedicated word for book) -- or, for a small number of very high-frequency gaps, a new word was added. See the note below for exactly which words and why.'
+      rus: "Каждая история ниже строго остаётся в пределах уже изученного словаря. Там, где понятию действительно не находится слова (волк, кровать, «спрашивать», «где»), история либо обходит это композиционно — та же дисциплина, которую Урок 18 уже требовал от вас («написанная вещь» вместо отдельного слова для книги), — либо, для небольшого числа очень частотных пробелов, было добавлено новое слово. Точный список слов и обоснование — в примечании ниже."
+      zh: '下面的每一个故事都严格只使用你已经学过的词典词汇。当某个概念确实没有对应的词时（狼、床、"问"、"哪里"），故事要么用组合的方式绕过去——这正是第18课已经要求你做的那种纪律（用"写的东西"代替专门表示"书"的词）——要么，对于少数几个使用频率非常高的空缺，添加了一个新词。具体添加了哪些词、为什么添加，见下面的说明。'
     tldr:
       eng: "Every story below stays strictly inside the ~133-word dictionary."
       rus: "Каждая история ниже строго остаётся в пределах словаря из ~133 слов."
@@ -193,7 +193,7 @@ blocks:
   - type: prose
     text:
       eng: |-
-        _(No dedicated words for "bird" or "cat" -- both are built compositionally: huì-fēi-de dòngwù, "the animal that can fly," and jiào "miāo-miāo" de dòngwù, "the animal that calls 'meow-meow,'" reusing Lesson 12's animal-sound pattern.)_
+        _(No dedicated words for "bird" or "cat" -- both are built compositionally: huì-fēi-de dòngwù, "the animal that can fly," and jiào "miāo-miāo" de dòngwù, "the animal that calls 'meow-meow,'" reusing Lesson 21's animal-sound pattern.)_
 
         1. **huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:he2}} {{word:jiao4}} "miāo-miāo" {{word:de}} {{word:dong4wu4}} {{word:yao4}} {{word:qu4}} {{word:yi1}}-ge {{word:di4fang1}}.** — The flying animal and the meowing animal both want to reach the same place.
         2. **Huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:jue2de}} {{word:hen3}} {{word:you3}} {{word:li4liang4}}, {{word:shuo1}}: {{word:wo3}} {{word:hen3}} {{word:hao3}}!** — The flying animal feels very energetic and says: I am the best!
@@ -203,7 +203,7 @@ blocks:
         6. **{{word:jiao4}} "miāo-miāo" {{word:de}} {{word:dong4wu4}} dào {{word:le}}.** — The meowing animal arrives.
         7. **Huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:jue2de}} {{word:hen3}} {{word:huai4}}.** — The flying animal feels very embarrassed.
       rus: |-
-        _(Отдельных слов для «птицы» или «кошки» нет — оба образованы составным способом: huì-fēi-de dòngwù, «животное, которое умеет летать», и jiào «miāo-miāo» de dòngwù, «животное, которое издаёт звук "мяу-мяу"», по той же модели звуков животных, что и в Уроке 11.)_
+        _(Отдельных слов для «птицы» или «кошки» нет — оба образованы составным способом: huì-fēi-de dòngwù, «животное, которое умеет летать», и jiào «miāo-miāo» de dòngwù, «животное, которое издаёт звук "мяу-мяу"», по той же модели звуков животных, что и в Уроке 21.)_
 
         1. **huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:he2}} {{word:jiao4}} "miāo-miāo" {{word:de}} {{word:dong4wu4}} {{word:yao4}} {{word:qu4}} {{word:yi1}}-ge {{word:di4fang1}}.** — Летающее животное и мяукающее животное оба хотят добраться до одного и того же места.
         2. **Huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:jue2de}} {{word:hen3}} {{word:you3}} {{word:li4liang4}}, {{word:shuo1}}: {{word:wo3}} {{word:hen3}} {{word:hao3}}!** — Летающее животное чувствует себя очень энергичным и говорит: я лучше всех!
@@ -213,7 +213,7 @@ blocks:
         6. **{{word:jiao4}} "miāo-miāo" {{word:de}} {{word:dong4wu4}} dào {{word:le}}.** — Мяукающее животное приходит первым.
         7. **Huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:jue2de}} {{word:hen3}} {{word:huai4}}.** — Летающее животное чувствует себя очень плохо.
       zh: |-
-        _（没有专门表示"鸟"或"猫"的词——两者都是组合而成的：huì-fēi-de dòngwù，"会飞的动物"；jiào "miāo-miāo" de dòngwù，"叫'喵喵'的动物"，沿用第12课的动物叫声句式。）_
+        _（没有专门表示"鸟"或"猫"的词——两者都是组合而成的：huì-fēi-de dòngwù，"会飞的动物"；jiào "miāo-miāo" de dòngwù，"叫'喵喵'的动物"，沿用第21课的动物叫声句式。）_
 
         1. **huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:he2}} {{word:jiao4}} "miāo-miāo" {{word:de}} {{word:dong4wu4}} {{word:yao4}} {{word:qu4}} {{word:yi1}}-ge {{word:di4fang1}}.** — 会飞的动物和喵喵叫的动物都想到达同一个地方。
         2. **Huì-fēi-{{word:de}} {{word:dong4wu4}} {{word:jue2de}} {{word:hen3}} {{word:you3}} {{word:li4liang4}}, {{word:shuo1}}: {{word:wo3}} {{word:hen3}} {{word:hao3}}!** — 会飞的动物觉得自己充满活力，说：我最厉害！
@@ -227,9 +227,9 @@ blocks:
       rus: "Самоуверенное летающее животное проигрывает гонку упорному мяукающему животному."
       zh: "一只自信满满的会飞的动物，输给了一只坚持不懈的喵喵叫的动物。"
     necessity:
-      eng: 'Contrasts hěn yǒu lìliàng ("energetic") with juéde hěn huài ("embarrassed"), while showing jiào plus a quoted sound working as a full noun phrase ("the animal that calls X") rather than just a verb (see Lesson 12).'
-      rus: "Противопоставляет hěn yǒu lìliàng («полный энергии») и juéde hěn huài («смущённый»), одновременно показывая, как jiào со звукоподражанием в кавычках работает как целая именная группа («животное, которое издаёт звук X»), а не просто как глагол (см. Урок 12)."
-      zh: '把 hěn yǒu lìliàng（"充满活力"）和 juéde hěn huài（"难堪"）加以对照，同时展示 jiào 加上引号里的拟声词如何构成一个完整的名词短语（"叫X的动物"），而不只是一个动词（见第12课）。'
+      eng: 'Contrasts hěn yǒu lìliàng ("energetic") with juéde hěn huài ("embarrassed"), while showing jiào plus a quoted sound working as a full noun phrase ("the animal that calls X") rather than just a verb (see Lesson 21).'
+      rus: "Противопоставляет hěn yǒu lìliàng («полный энергии») и juéde hěn huài («смущённый»), одновременно показывая, как jiào со звукоподражанием в кавычках работает как целая именная группа («животное, которое издаёт звук X»), а не просто как глагол (см. Урок 21)."
+      zh: '把 hěn yǒu lìliàng（"充满活力"）和 juéde hěn huài（"难堪"）加以对照，同时展示 jiào 加上引号里的拟声词如何构成一个完整的名词短语（"叫X的动物"），而不只是一个动词（见第21课）。'
 
   - type: heading
     text:

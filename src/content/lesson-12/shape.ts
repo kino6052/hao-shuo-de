@@ -1,134 +1,93 @@
-// Language-independent block sequence for lesson-12 ("Greetings and Feelings").
+// Language-independent block sequence for lesson-12 ("Modifiers 1 — How much").
 // See src/lib/chapter-shape-types.ts / assemble-chapter.js.
+// LessonShape is this lesson's exact, hand-written type -- see lesson-01's
+// shape.ts for the full explanation of the pattern.
+//
+// Phase 1 skeleton (BOOK_PLAN.md): the vocab list follows BOOK_PLAN §4b, and
+// the other blocks were moved here unchanged from the old 16-lesson layout
+// ([from old LNN] says where; the old lessons are archived in
+// src/content/legacy/v2-16-lessons/). They get rewritten in Phase 2.
 import type {
   TTitle,
   TSummary,
   TVocab,
   TProse,
-  TInfo,
-  TInfoItem,
   TExample,
   TExercise,
   TAnswer,
+  TInfo,
 } from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
-  /** Chapter title. */
+  /** Modifiers 1 — How much */
   title: TTitle;
-  /** Chapter summary. */
+  /** Chapter summary: what you'll be able to say (stub until the Phase 2 rewrite). */
   summary: TSummary;
-
-  /** Vocabulary: "to feel, think". */
-  vocabJuede: TVocab;
-  /** Vocabulary: "sound, noise" (bare pinyin -- not yet in the dictionary). */
-  vocabShengyin: TVocab;
-  /** Vocabulary: "to call, make an animal sound (used alongside the Quote Partition)". */
-  vocabJiao: TVocab;
-  /** Vocabulary: "sun, light". */
-  vocabRi: TVocab;
-
-  /** Grammar: greetings/imperatives/blessings reuse ordinary sentence patterns instead of dedicated particles. */
-  proseReusedPatterns: TProse;
-  /** Grammar rule box: Greetings, Commands, and Blessings -- 4 patterns (greetings, imperatives, animal sounds, wishes). */
-  infoGreetingsCommandsBlessings: TInfo & {
-    items: [TInfoItem, TInfoItem, TInfoItem, TInfoItem];
-  };
-
-  /** Example: nǐ hǎo ma? */
-  example1: TExample;
-  /** Example: qù nǐ-de dìfāng! */
-  example2: TExample;
-  /** Example: bù shuō. Zuò dōngxi. */
-  example3: TExample;
-  /** Example: wǒ qù le. */
-  example4: TExample;
-  /** Example: nà-ge dòngwù jiào "wang-wang". */
+  /** Vocabulary: "really". */
+  vocabZhen: TVocab;
+  /** Vocabulary: "hot". */
+  vocabRe: TVocab;
+  /** Vocabulary: "cold". */
+  vocabLeng: TVocab;
+  /** Vocabulary: "sweet". */
+  vocabTian: TVocab;
+  /** Vocabulary: "strange". */
+  vocabQiguai: TVocab;
+  /** Vocabulary: "new". */
+  vocabXin: TVocab;
+  /** Vocabulary: "body". */
+  vocabShenti: TVocab;
+  /** Grammar: an adjective placed before another adjective or verb acts as an adverb. [from old L10] */
+  proseAdjectivesAsAdverbs: TProse;
+  /** Grammar rule box: Adjectives as Adverbs. [from old L10] */
+  infoAdjectivesAsAdverbs: TInfo;
+  /** Example: xiǎo-de nǚrén méiyǒu hǎo-de tīng fùmǔ. [from old L10] */
   example5: TExample;
-  /** Example: wèishénme nǐ juéde huài? */
-  example6: TExample;
-  /** Example: nǐ hěn dà! */
-  example7: TExample;
-  /** Example: hǎo-hǎo-de rì! */
+  /** Example: nánrén-de fùmǔ duō-de kàn xiě-de dōngxi. [from old L10] */
   example8: TExample;
-  /** Example: hǎo-hǎo juéde! */
-  example9: TExample;
-
-  /** Exercise 1: Give the tool to me. */
-  exercise1: TExercise;
-  /** Exercise 2: "Lisa" is happy. */
-  exercise2: TExercise;
-  /** Exercise 3: Meow! */
+  /** Exercise 3: I know Hao-shuo-de a bit. [from old L10] */
   exercise3: TExercise;
-
-  /** Answer 1. */
-  answer1: TAnswer;
-  /** Answer 2. */
-  answer2: TAnswer;
-  /** Answer 3. */
+  /** Answer 3. [from old L10] */
   answer3: TAnswer;
 };
 
 const shape: LessonShape = {
   title: { type: "title" },
   summary: { type: "summary" },
-
-  vocabJuede: { type: "vocab", term: "{{word:jue2de}}", ttsText: "觉得" },
-  vocabShengyin: { type: "vocab", term: "shēngyīn" },
-  vocabJiao: { type: "vocab", term: "{{word:jiao4}}", ttsText: "叫" },
-  vocabRi: { type: "vocab", term: "{{word:ri4}}", ttsText: "日" },
-
-  proseReusedPatterns: { type: "prose" },
-  infoGreetingsCommandsBlessings: {
+  vocabZhen: { type: "vocab", term: "{{word:zhen1}}", ttsText: "真" },
+  vocabRe: { type: "vocab", term: "{{word:re4}}", ttsText: "热" },
+  vocabLeng: { type: "vocab", term: "{{word:leng3}}", ttsText: "冷" },
+  vocabTian: { type: "vocab", term: "{{word:tian2}}", ttsText: "甜" },
+  vocabQiguai: {
+    type: "vocab",
+    term: "{{word:qi2guai4}}",
+    ttsText: "奇怪",
+  },
+  vocabXin: { type: "vocab", term: "{{word:xin1}}", ttsText: "新" },
+  vocabShenti: {
+    type: "vocab",
+    term: "{{word:shen1ti3}}",
+    ttsText: "身体",
+  },
+  proseAdjectivesAsAdverbs: { type: "prose" },
+  infoAdjectivesAsAdverbs: {
     type: "info",
     subtype: "grammar",
-    tag: "expressions/greetings-and-wishes",
-    items: [{}, {}, {}, {}],
-  },
-
-  example1: {
-    type: "example",
-    pinyin: "{{Word:ni3}} {{word:hao3}} {{word:ma}}?",
-  },
-  example2: {
-    type: "example",
-    pinyin: "{{Word:qu4}} {{word:ni3}}-{{word:de}} {{word:di4fang1}}!",
-  },
-  example3: {
-    type: "example",
-    pinyin: "{{Word:bu4}} {{word:shuo1}}. {{Word:nong4}} {{word:dong1xi}}.",
-  },
-  example4: {
-    type: "example",
-    pinyin: "{{Word:wo3}} {{word:qu4}} {{word:le}}.",
+    tag: "adjectives/adverbial-use",
+    items: [{}],
   },
   example5: {
     type: "example",
-    pinyin: '{{Word:na4}}-ge {{word:dong4wu4}} {{word:jiao4}} "wang-wang".',
-  },
-  example6: {
-    type: "example",
-    pinyin: "{{Word:wei4shen2me}} {{word:ni3}} {{word:jue2de}} {{word:huai4}}?",
-  },
-  example7: {
-    type: "example",
-    pinyin: "{{Word:ni3}} {{word:hen3}} {{word:da4}}!",
+    pinyin: "{{Word:xiao3}}-{{word:de}} {{word:nv3ren2}} méiyǒu {{word:hao3}}-{{word:de}} {{word:ting1}} {{word:fu4mu3}}.",
+    ttsText: "小的女人没有好的听父母。",
   },
   example8: {
     type: "example",
-    pinyin: "{{Word:hao3}}-{{word:hao3}}-{{word:de}} {{word:ri4}}!",
+    pinyin: "{{Word:nan2ren2}}-{{word:de}} {{word:fu4mu3}} {{word:duo1}}-{{word:de}} {{word:kan4}} {{word:xie3}}-{{word:de}} {{word:dong1xi}}.",
+    ttsText: "男人的父母多的看写的东西。",
   },
-  example9: {
-    type: "example",
-    pinyin: "{{Word:hao3}}-{{word:hao3}} {{word:jue2de}}!",
-  },
-
-  exercise1: { type: "exercise" },
-  exercise2: { type: "exercise" },
   exercise3: { type: "exercise" },
-
-  answer1: { type: "answer" },
-  answer2: { type: "answer" },
-  answer3: { type: "answer" },
+  answer3: { type: "answer", ttsText: "好说的，我知道的不多。" },
 };
 
 export default shape;

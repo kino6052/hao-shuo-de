@@ -1,6 +1,5 @@
 // English text for lesson-01, matching shape.ts's keys. Typed as
-// `PartialByKey<LessonShape>` -- hover a key here to see the same JSDoc
-// hint shape.ts declared for it. No comments repeated in this file.
+// `PartialByKey<LessonShape>`. No comments repeated in this file.
 import type { PartialByKey } from "../../lib/chapter-shape-types.ts";
 import type { LessonShape } from "./shape.ts";
 
@@ -8,14 +7,10 @@ const en: PartialByKey<LessonShape> = {
   title: { en: ["Sounds and Symbols"] },
   summary: {
     en: [
-      "Pinyin is how we write Chinese using the Roman alphabet.",
-      "It is written syllable by syllable.",
-      "It has marks indicating tones.",
-      "In hao-shuo-de we write pinyin with spaces, hyphens and quotation marks to make it more readable and understandable.",
-      "Mastering pinyin is one of the most fundamental skills in learning Chinese.",
+      "Before you can speak, you need to read the sounds.",
+      "In this lesson, you'll learn to read pinyin: Chinese sounds written with letters you know, and tone marks that show how each sound rises or falls.",
     ],
   },
-
   proseSyllableUnit: {
     en: [
       "Chinese is very different from the western languages on many levels.",
@@ -25,10 +20,10 @@ const en: PartialByKey<LessonShape> = {
     ],
     tldr: {
       en: [
-        "There are no letters in Chinese because the smallest written piece is a syllable.",
+        "Chinese is written one syllable at a time, not letter by letter.",
       ],
     },
-    necessity: { en: ["Required to understand how to read pinyin"] },
+    necessity: { en: ["You read pinyin one syllable at a time."] },
   },
   infoReadBySyllable: {
     title: { en: ["Important!"] },
@@ -37,11 +32,16 @@ const en: PartialByKey<LessonShape> = {
         en: [
           "Get in the habit of reading pinyin words syllable by syllable, not as one whole word (the way we do in our alphabetic languages).",
         ],
-        items: [{ en: ["<i>Syllables</i>: <b>Zhōng</b> and <b>guó</b>"] }],
+        items: [
+          {
+            en: [
+              "<i>Syllables</i>: <b>Zhōng</b> and <b>guó</b>",
+            ],
+          },
+        ],
       },
     ],
   },
-
   prosePinyinLimits: {
     en: [
       "Even though pinyin attempts to capture how the words sound it is still not detailed enough to capture the details of the pronunciation, so it is important to learn exactly how each syllable is pronounced.",
@@ -50,16 +50,23 @@ const en: PartialByKey<LessonShape> = {
       "So don't overlook this.",
       "Here is the [LINK]",
     ],
+    tldr: {
+      en: [
+        "Pinyin can't show every detail of how a word sounds.",
+      ],
+    },
+    necessity: {
+      en: ["Listen to the audio to learn the real sounds."],
+    },
   },
-
   proseTonesHeading: {
     en: [
       "<h2>Tones</h2>",
       "In pinyin, tone isn't decoration — it's part of the word.",
     ],
-    tldr: { en: ["Tone is part of the word, not decoration"] },
+    tldr: { en: ["The tone is part of the word."] },
     necessity: {
-      en: ["Tones are a fundamental and necessary part of Chinese and pinyin"],
+      en: ["Change the tone and you get a different word."],
     },
   },
   infoToneExample: {
@@ -71,24 +78,25 @@ const en: PartialByKey<LessonShape> = {
       { en: ["**mà** — to scold"] },
     ],
   },
-
   proseFourTonesIntro: {
     en: [
       "All the words above are different, and are pronounced differently, because they use different tones.",
       "Chinese has the following tones:",
     ],
+    tldr: { en: ["Chinese has four tones, plus one light tone."] },
+    necessity: { en: ["You need all of them to say words right."] },
   },
   infoFiveTones: {
     title: { en: ["Tones"] },
     items: [
       {
         en: [
-          '**ā** — First tone. Level and sustained, as if you\'re humming a single unchanging note (like "om").',
+          "**ā** — First tone. Level and sustained, as if you're humming a single unchanging note (like \"om\").",
         ],
       },
       {
         en: [
-          '**á** — Second tone. Rising, like the "huh?" you say when you didn\'t quite hear something.',
+          "**á** — Second tone. Rising, like the \"huh?\" you say when you didn't quite hear something.",
         ],
       },
       {
@@ -110,30 +118,32 @@ const en: PartialByKey<LessonShape> = {
       },
     ],
   },
-
   proseNeutralTone: {
     en: [
       "All of Chinese is read in tones, syllable by syllable.",
       "The one exception is the neutral tone.",
       "When it appears in a word, the syllable before it gets the stress, and the neutral tone itself is just a short, unstressed sound.",
       "The word Hǎo-shuō-de isn't three equal beats.",
-      'It\'s pronounced hao-shuò-de — the final syllable "de" fades out.',
+      "It's pronounced hao-shuò-de — the final syllable \"de\" fades out.",
       "Without the neutral tone, spoken Chinese wouldn't sound spoken.",
       "In fact the literary Chinese is often spoken like that - it has its charm but it is very unnatural for daily speaking.",
       "It's the neutral tone that keeps the rhythm from falling apart.",
     ],
+    tldr: { en: ["The light tone is short and quiet."] },
+    necessity: { en: ["It tells you which syllable to say louder."] },
   },
-
   proseNoWordBoundaries: {
     en: [
       "In regular Chinese, sentences are built from syllables, with no spaces or extra notation that will help us to understand where words start and end.",
       "To make the structure of Chinese clearer to us, Hao-shuo-de adds a few extra grammar rules on top.",
     ],
-    tldr: { en: ["Hao-shuo-de adds punctuation on top of syllabic writing"] },
-    necessity: {
+    tldr: {
       en: [
-        "Without these rules, you can't see where words and grammar particles begin and end in Chinese text.",
+        "Hao-shuo-de adds spaces, hyphens, and quotes to show where words start and end.",
       ],
+    },
+    necessity: {
+      en: ["Chinese has no spaces, so these help you read."],
     },
   },
   infoPunctuationHelpers: {
@@ -147,12 +157,14 @@ const en: PartialByKey<LessonShape> = {
       },
       {
         en: [
-          "**A hyphen transforms a word**. A hyphen attaches a grammar particle, a measure word, or a modifier to a word and turns it into a different part of speech (for example, from a noun into an adjective, or from a verb into an adjective).",
+          "**A hyphen joins words into one**. A hyphen glues a small word onto another word, so the two work as one word. Sometimes that gives the word a new job, like turning a verb into a describing word.",
         ],
         items: [
           { en: ["{{word:zhe4}}-**ge** — this"] },
           { en: ["{{word:yi1}}-**ge** — one thing"] },
-          { en: ["{{word:hen3}}-**{{word:da4}}-de** — very big"] },
+          {
+            en: ["{{word:hen3}}-**{{word:da4}}-de** — very big"],
+          },
           {
             en: [
               "A hyphen always shows that the parts it joins work together as a single word.",
@@ -166,7 +178,11 @@ const en: PartialByKey<LessonShape> = {
         ],
         items: [
           { en: ['"Beijing" — Beijing'] },
-          { en: ['{{word:jiao4}} "wāng-wāng" — barks "woof-woof"'] },
+          {
+            en: [
+              '{{word:jiao4}} "wāng-wāng" — barks "woof-woof"',
+            ],
+          },
           {
             en: [
               "If you see quotes, don't look the word up in the dictionary — it isn't a dictionary word.",
@@ -176,10 +192,11 @@ const en: PartialByKey<LessonShape> = {
       },
     ],
   },
-
   exercise1: { en: ["Break Zhōngguórén into its syllables."] },
   exercise2: {
-    en: ["Which tone is this: à (fourth tone mark)? Describe it in one word."],
+    en: [
+      "Which tone is this: à (fourth tone mark)? Describe it in one word.",
+    ],
   },
   exercise3: {
     en: [
@@ -191,8 +208,9 @@ const en: PartialByKey<LessonShape> = {
       "Is {{word:hen3}}-{{word:da4}}-de one dictionary word, or a word plus a bound grammar piece? How do you know from the punctuation alone?",
     ],
   },
-
-  answer1: { en: ["Zhōng-guó-rén (three syllables: Zhōng, guó, rén)."] },
+  answer1: {
+    en: ["Zhōng-guó-rén (three syllables: Zhōng, guó, rén)."],
+  },
   answer2: { en: ["Fourth tone — sharp and falling."] },
   answer3: { en: ["Wo3 hao3."] },
   answer4: {

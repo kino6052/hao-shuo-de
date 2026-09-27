@@ -4,54 +4,57 @@ import type { PartialByKey } from "../../lib/chapter-shape-types.ts";
 import type { LessonShape } from "./shape.ts";
 
 const en: PartialByKey<LessonShape> = {
-  title: { en: ["Greetings and Feelings"] },
+  title: { en: ["Modifiers 1 — How much"] },
   summary: {
     en: [
-      "Greetings, commands, animal sounds, and blessings all reuse ordinary Hao-shuo-de sentence patterns rather than dedicated particles: a bare verb opens a command, `{{word:jiao4}}` plus a quoted sound reports an animal noise, and doubling an adjective and binding it with `-{{word:de}}` turns a description into a wish.",
+      "We often want to say how much: a little, or a lot.",
+      "In this lesson, you'll be able to say \"really hot\", \"very cold\", and \"a bit strange\".",
     ],
   },
-
-  vocabJuede: { en: ["to feel, think"] },
-  vocabShengyin: { en: ["sound, noise"] },
-  vocabJiao: { en: ["to call, make an animal sound (used alongside the Quote Partition)"] },
-  vocabRi: { en: ["sun, light"] },
-
-  proseReusedPatterns: {
+  vocabZhen: { en: ["really"] },
+  vocabRe: { en: ["hot"] },
+  vocabLeng: { en: ["cold"] },
+  vocabTian: { en: ["sweet"] },
+  vocabQiguai: { en: ["strange"] },
+  vocabXin: { en: ["new"] },
+  vocabShenti: { en: ["body"] },
+  proseAdjectivesAsAdverbs: {
     en: [
-      "Hao-shuo-de doesn't set aside a special particle for greetings or commands the way some invented languages do -- it reuses patterns you already know.",
-      'A greeting is just a `{{word:ma}}`-question ("Are you well?"), a command is just a bare verb statement with the subject dropped, an animal sound is just the verb `{{word:jiao4}}` ("to call") followed by the sound in quotes, and a blessing is just a doubled adjective bound with `-{{word:de}}`.',
-      "None of these needs new grammar -- only a new habit for how to use grammar you already have.",
+      "Adjectives have one more job available to them: standing directly in front of another adjective or a verb, they act as adverbs, describing how much or how that other word applies.",
+      'You have actually already been doing this without naming it -- `{{word:hen3}}` itself, from Lesson 3, is just an adjective ("very") pressed into adverb duty in front of another adjective.',
+      '`{{word:hen3}} {{word:duo1}}` works the same way: `{{word:duo1}}` ("many") on its own is already an adjective, and stacking `{{word:hen3}}` in front of it gives you "very many," no separate adverb form required.',
     ],
-    tldr: { en: ["Greetings, commands, animal sounds, and blessings all reuse existing sentence patterns -- no dedicated particles."] },
-    necessity: { en: ["Sets expectations before the examples: nothing below is a new grammatical category, just a familiar pattern used for a new purpose."] },
+    tldr: {
+      en: [
+        "Put a describing word before another word to say how much or how.",
+      ],
+    },
+    necessity: {
+      en: ["You already do this with {{word:hen3}} (very)."],
+    },
   },
-  infoGreetingsCommandsBlessings: {
-    title: { en: ["Greetings, Commands, and Blessings"] },
+  infoAdjectivesAsAdverbs: {
+    title: { en: ["Adjectives as Adverbs"] },
     items: [
-      { en: ["**Greetings:** expressed using foundational semantic combinations like `{{word:ni3}} {{word:hao3}} {{word:ma}}?` (\"Are you well?\") or descriptive movements."] },
-      { en: ["**Imperatives:** commands or requests are formed simply by using a bare verb statement at the start of a clause, with the subject dropped."] },
-      { en: ["**Animal Sounds:** handled via the verb `{{word:jiao4}}` paired with the Quote Partition, which isolates onomatopoeia inside quotation marks rather than treating them as new dictionary words."] },
-      { en: ["**Wishing Someone Something:** reduplicating an adjective and binding the repeated pair with `-{{word:de}}` turns a plain description into a blessing rather than just a fact -- `{{word:hao3}}-{{word:hao3}}-{{word:de}} {{word:ri4}}` doesn't only describe a good day, it wishes one on whoever you're speaking to. The hyphen keeps the doubling explicit, the same way `{{word:hen3}}-{{word:da4}}-{{word:de}}` explicitly marks intensification, instead of letting it blur into the unmarked doubling spoken Mandarin does on its own."] },
+      {
+        en: [
+          "Place an adjective directly before another adjective or a verb to use it as an adverb -- no separate adverb form exists.",
+        ],
+      },
     ],
   },
-
-  example1: { en: ["Hello! / Are you well?"] },
-  example2: { en: ["Go to your room!"] },
-  example3: { en: ["Don't speak. Take action."] },
-  example4: { en: ["I am going. / Goodbye."] },
-  example5: { en: ["That animal goes \"woof woof\"."] },
-  example6: { en: ["Why are you sad / feeling bad?"] },
-  example7: { en: ["You're so big!"] },
-  example8: { en: ["Have a nice day!"] },
-  example9: { en: ["Thank you! (Literally, may you feel good)"] },
-
-  exercise1: { en: ["Give the tool to me."] },
-  exercise2: { en: ["\"Lisa\" is happy."] },
-  exercise3: { en: ["Meow!"] },
-
-  answer1: { en: ["{{Word:gei3}} {{word:wo3}} {{word:gong1ju4}}."] },
-  answer2: { en: ['"Lisa" {{word:jue2de}} {{word:hao3}}.'] },
-  answer3: { en: ['{{Word:jiao4}} "miao-miao"!'] },
+  example5: {
+    en: [
+      "The girls misheard / didn't listen well to the parent.",
+    ],
+  },
+  example8: { en: ["Fathers use/read the book a lot."] },
+  exercise3: { en: ["I know Hao-shuo-de a bit."] },
+  answer3: {
+    en: [
+      "Hǎo-shuō-de, {{word:wo3}} {{word:zhi1dao4}}-{{word:de}} {{word:bu4}} {{word:duo1}}.",
+    ],
+  },
 };
 
 export default en;

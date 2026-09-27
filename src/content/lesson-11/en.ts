@@ -4,51 +4,87 @@ import type { PartialByKey } from "../../lib/chapter-shape-types.ts";
 import type { LessonShape } from "./shape.ts";
 
 const en: PartialByKey<LessonShape> = {
-  title: { en: ["Measure word ge"] },
+  title: { en: ["Space 2 — Moving"] },
   summary: {
     en: [
-      "Real Mandarin ties a specific measure word to each noun's shape or class -- Hao-shuo-de collapses all of them into one universal classifier, `{{word:ge4}}`, used to count anything.",
+      "We often talk about coming and going.",
+      "In this lesson, you'll be able to say \"I come from the market.\", \"Go!\", \"stand up\", and \"go out the door\".",
     ],
   },
-
-  proseMandarinMeasureWords: {
+  vocabCong: { en: ["from"] },
+  vocabLai: { en: ["to come, arrive"] },
+  vocabQu: { en: ["to walk, move, travel"] },
+  vocabQi: { en: ["to rise, get up; begin"] },
+  vocabWai: { en: ["out, outside"] },
+  vocabShichang: { en: ["market"] },
+  vocabKou: { en: ["opening, door"] },
+  vocabDao: { en: ["arrive, to"] },
+  proseDirectionalComplements: {
     en: [
-      "Standard Mandarin doesn't just count things with a number -- it also requires a measure word chosen to match the shape or category of whatever's being counted.",
-      "A flat sheet gets one measure word, a long thin thing gets another, an animal gets a different one again, and so on.",
-      "Native speakers memorize dozens of these pairings over years, and getting the wrong one is one of the most common mistakes a Mandarin learner makes.",
+      'The same hyphen trick works one more way: gluing a direction word onto a verb (often together with `{{word:lai2}}`, "to come") to add a sense of direction or progress to the action.',
+      "`{{word:qi3}}-{{word:lai2}}` (\"rise-come\") marks something starting. Glued onto another verb by itself, `{{word:qi3}}` marks a beginning too: `{{word:shuo1}}-{{word:qi3}}` doesn't just mean \"talk\" -- it means \"bring something up\", the moment a topic starts getting mentioned.",
+      '`{{word:xia4}}-{{word:lai2}}` ("down-come") marks something settling into place, or carrying on steadily.',
+      '`{{word:shang4}}-{{word:lai2}}` ("up-come") marks something arriving toward you, or finally succeeding at reaching a point.',
     ],
-    tldr: { en: ["Standard Mandarin requires a different measure word for each noun's shape or class."] },
-    necessity: { en: ["Sets up the contrast: Hao-shuo-de is about to throw this entire memorization burden away."] },
+    tldr: {
+      en: [
+        "Join {{word:qi3}}, {{word:xia4}}, or {{word:shang4}} to a verb to show which way it goes.",
+      ],
+    },
+    necessity: { en: ['Now you can say "stand up" or "come down".'] },
   },
-  proseGeIsUniversal: {
-    en: [
-      "Hao-shuo-de keeps only one of them: `{{word:ge4}}`.",
-      "You've already been using it since Lesson 3 to count one specific thing (`{{word:zhe4}}-ge`, `{{word:na4}}-ge`) -- what's new here is the scope: `{{word:ge4}}` isn't the measure word for one category of noun, it's the ONLY measure word, full stop.",
-      "A person, an animal, a tool, a fruit, an abstract thing -- none of it matters. Number or {{word:zhe4}}/{{word:na4}} + `{{word:ge4}}` + Noun works every time.",
-    ],
-    tldr: { en: ["`{{word:ge4}}` is the one and only measure word in Hao-shuo-de, regardless of what kind of noun it's counting."] },
-    necessity: { en: ["Without this, a learner might expect Hao-shuo-de to still require different measure words per noun class, the way real Mandarin does."] },
-  },
-  infoUniversalClassifier: {
-    title: { en: ["One Classifier for Everything"] },
+  infoDirectionalComplements: {
+    title: { en: ["Adding a Sense of Direction"] },
     items: [
-      { en: ["Number (or {{word:zhe4}}/{{word:na4}}) + `{{word:ge4}}` + Noun -- the same classifier works for any countable noun, no matter what shape or category it belongs to in standard Mandarin."] },
+      {
+        en: [
+          '`{{word:qi3}}-{{word:lai2}}` -- marks something starting (e.g. `{{word:shuo1}}-{{word:qi3}}`, "bring up/mention")',
+        ],
+      },
+      {
+        en: [
+          "`{{word:xia4}}-{{word:lai2}}` -- marks something settling into place or continuing steadily",
+        ],
+      },
+      {
+        en: [
+          "`{{word:shang4}}-{{word:lai2}}` -- marks something arriving toward you, or finally getting there",
+        ],
+      },
     ],
   },
-
-  example1: { en: ["One person."] },
-  example2: { en: ["One animal."] },
-  example3: { en: ["One tool."] },
-  example4: { en: ["This fruit is good."] },
-  example5: { en: ["What is that thing?"] },
-
-  exercise1: { en: ["Say \"one tool\", using ge."] },
-  exercise2: { en: ["Say \"this animal\", using ge."] },
-  exercise3: { en: ["Ask \"What is that fruit?\", using ge."] },
-
-  answer1: { en: ["{{Word:yi1}}-ge {{word:gong1ju4}}."] },
-  answer2: { en: ["{{Word:zhe4}}-ge {{word:dong4wu4}}."] },
-  answer3: { en: ["{{Word:na4}}-ge {{word:shui3guo3}} {{word:shi4}} {{word:shen2me}}?"] },
+  directionalExample1: {
+    en: [
+      "He/She brings up Hao-shuo-de. / He/She mentions Hao-shuo-de.",
+    ],
+  },
+  directionalExample2: { en: ["I've settled down."] },
+  directionalExample3: { en: ["He/She has come up (arrived)."] },
+  example3L15: {
+    en: [
+      "A large machine is moving in progress toward the sky.",
+    ],
+  },
+  example4L07: { en: ["I am moving towards you / going to your side."] },
+  example5L07: { en: ["My parent is going to the sea / big water."] },
+  exercise4: { en: ["She mentions the community."] },
+  exercise1L15: { en: ["Water is coming from the sky."] },
+  exercise3L15: { en: ["What did you put the red clock next to?"] },
+  answer4: {
+    en: [
+      "{{Word:ta1}} {{word:shuo1}}-{{word:qi3}} {{word:qun2}}.",
+    ],
+  },
+  answer1L15: {
+    en: [
+      "{{Word:shui3}} {{word:cong2}} {{word:shang4}}-{{word:de}} {{word:di4fang1}} {{word:lai2}}.",
+    ],
+  },
+  answer3L15: {
+    en: [
+      "{{Word:ni3}} {{word:ba3}} {{word:hong2se4}}-{{word:de}} {{word:shi2jian1}} {{word:gong1ju4}} dào {{word:shen2me}} {{word:dong1xi}}-{{word:de}} {{word:pang2bian1}}?",
+    ],
+  },
 };
 
 export default en;

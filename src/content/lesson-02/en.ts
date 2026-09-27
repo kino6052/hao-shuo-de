@@ -7,75 +7,94 @@ const en: PartialByKey<LessonShape> = {
   title: { en: ["Words and Sentences"] },
   summary: {
     en: [
-      "A noun names a person, place, or thing; the simplest sentence is NOUN + shì + NOUN.",
+      "Every language needs a way to say what something is.",
+      "In this lesson, you'll be able to say \"This is a person.\" and \"An animal is not a fruit.\"",
     ],
   },
-
   vocabShi: { en: ["is, are, am"] },
   vocabBu: { en: ["not"] },
+  vocabZhe: { en: ["this"] },
   vocabDongxi: { en: ["thing, something"] },
   vocabRen: { en: ["person, human"] },
-  vocabShuiguo: { en: ["fruit, vegetable"] },
-  vocabXiedeDongxi: { en: ["document, written thing"] },
-  vocabNvren: { en: ["woman, female"] },
-  vocabZhe: { en: ["this"] },
+  vocabNuren: { en: ["woman, female"] },
+  vocabNanren: { en: ["man"] },
   vocabDongwu: { en: ["animal"] },
-
+  vocabShuiguo: { en: ["fruit, vegetable"] },
   proseNounShiNoun: {
     en: [
       "A noun is a word for a person, place, or thing.",
-      "To build a simple sentence, follow this model:",
+      "To make a simple sentence, follow this model:",
       "NOUN + shì + NOUN.",
       "{{word:dong1xi}} {{word:shi4}} {{word:dong1xi}}.",
       "Something is something.",
       "",
-      'By themselves, nouns are not singular or plural. The word {{word:dong1xi}} can mean either "thing" or "things." We will explain in future chapters how to specify such meanings.',
+      'A noun can mean one thing or many: {{word:dong1xi}} means "thing" or "things". Later lessons show how to say which.',
     ],
+    tldr: {
+      en: [
+        "To say one thing is another, put {{word:shi4}} between them.",
+      ],
+    },
+    necessity: { en: ["This is the simplest sentence you can make."] },
   },
-
   example1: { en: ["This is a person."] },
   example2: { en: ["This is a fruit."] },
-  example3: { en: ["A document is a thing."] },
+  example3: { en: ["A man is a person."] },
   example4: { en: ["The person is a woman."] },
   example5: { en: ["Animals are things."] },
   example6: { en: ["Women are people."] },
-
+  proseNounBuShiNoun: {
+    en: [
+      "To say it is not, put {{word:bu4}} before {{word:shi4}}.",
+      "NOUN + bù + shì + NOUN.",
+      "{{word:dong1xi}} {{word:bu4}} {{word:shi4}} {{word:dong1xi}}.",
+      "Something is not something.",
+    ],
+    tldr: {
+      en: [
+        "To say it is not, put {{word:bu4}} before {{word:shi4}}.",
+      ],
+    },
+    necessity: { en: ["Now you can say what something is not."] },
+  },
+  infoIsAndIsNot: {
+    title: { en: ["Saying What Something Is"] },
+    items: [
+      {
+        en: [
+          "NOUN + {{word:shi4}} + NOUN: {{Word:zhe4}} {{word:shi4}} {{word:ren2}}. (This is a person.)",
+        ],
+      },
+      {
+        en: [
+          "NOUN + {{word:bu4}} {{word:shi4}} + NOUN: {{Word:dong4wu4}} {{word:bu4}} {{word:shi4}} {{word:shui3guo3}}. (An animal is not a fruit.)",
+        ],
+      },
+    ],
+  },
+  example7: { en: ["This is not an animal."] },
+  example8: { en: ["This is not a fruit."] },
+  example9: { en: ["A woman is not a man."] },
   exercise1: { en: ["Something is something."] },
-  exercise2: { en: ["This is a document."] },
+  exercise2: { en: ["This is an animal."] },
   exercise3: { en: ["The woman is a person."] },
   exercise4: { en: ["Humans are beings."] },
   exercise5: { en: ["The animal is female."] },
   exercise6: { en: ["Fruits are things."] },
-  exercise7: { en: ["This is a piece of paper."] },
-
-  proseNounBuShiNoun: {
-    en: [
-      "To negate a simple sentence, insert {{word:bu4}} before  {{word:shi4}}.",
-      "NOUN + bu4 + shì + NOUN.",
-      "{{word:dong1xi}} {{word:bu4}} {{word:shi4}} {{word:dong1xi}}.",
-      "Something is not something.",
-    ],
+  exercise7: { en: ["This is a man."] },
+  answer1: {
+    en: ["{{Word:dong1xi}} {{word:shi4}} {{word:dong1xi}}."],
   },
-
-  example7: { en: ["This is not a document."] },
-  example8: { en: ["This is not a fruit."] },
-  example9: { en: ["A woman is not a man."] },
-
-  answer1: { en: ["{{Word:dong1xi}} {{word:shi4}} {{word:dong1xi}}."] },
-  answer2: {
-    en: [
-      "{{Word:zhe4}} {{word:shi4}} {{word:xie3}}-{{word:de}} {{word:dong1xi}}.",
-    ],
-  },
+  answer2: { en: ["{{Word:zhe4}} {{word:shi4}} {{word:dong4wu4}}."] },
   answer3: { en: ["{{Word:nv3ren2}} {{word:shi4}} {{word:ren2}}."] },
   answer4: { en: ["{{Word:ren2}} {{word:shi4}} {{word:dong1xi}}."] },
-  answer5: { en: ["{{Word:dong4wu4}} {{word:shi4}} {{word:nv3ren2}}."] },
-  answer6: { en: ["{{Word:shui3guo3}} {{word:shi4}} {{word:dong1xi}}."] },
-  answer7: {
-    en: [
-      "{{Word:zhe4}} {{word:shi4}} {{word:xie3}}-{{word:de}} {{word:dong1xi}}.",
-    ],
+  answer5: {
+    en: ["{{Word:dong4wu4}} {{word:shi4}} {{word:nv3ren2}}."],
   },
+  answer6: {
+    en: ["{{Word:shui3guo3}} {{word:shi4}} {{word:dong1xi}}."],
+  },
+  answer7: { en: ["{{Word:zhe4}} {{word:shi4}} {{word:nan2ren2}}."] },
 };
 
 export default en;

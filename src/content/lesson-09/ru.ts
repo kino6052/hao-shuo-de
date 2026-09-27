@@ -1,38 +1,29 @@
 // Russian text for lesson-09, matching shape.ts's keys. Typed as
-// `PartialByKey<LessonShape>`. Not translated yet -- every `ru` is the
-// empty-array placeholder.
+// `PartialByKey<LessonShape>`.
+// Not translated yet -- every `ru` is the empty-array placeholder.
 import type { PartialByKey } from "../../lib/chapter-shape-types.ts";
 import type { LessonShape } from "./shape.ts";
 
 const ru: PartialByKey<LessonShape> = {
   title: { ru: [] },
   summary: { ru: [] },
-
-  vocabYao: { ru: [] },
-  vocabKeyi: { ru: [] },
-  vocabZhidao: { ru: [] },
+  vocabWan: { ru: [] },
   vocabKaishi: { ru: [] },
-  vocabBian: { ru: [] },
-
-  proseAuxiliaries: { ru: [] },
-  infoAuxiliaryOrder: { title: { ru: [] }, items: [{ ru: [] }] },
-  proseChangeOnset: { ru: [] },
-  infoChangeVsOnset: { title: { ru: [] }, items: [{ ru: [] }, { ru: [] }] },
-
-  example1: { ru: [] },
-  example2: { ru: [] },
+  vocabHou: { ru: [] },
+  vocabQianmian: { ru: [] },
+  vocabWanr: { ru: [] },
+  vocabLiu: { ru: [] },
+  proseDeShijian: { ru: [] },
   example3: { ru: [] },
-  example4: { ru: [] },
-  example5: { ru: [] },
-  example6: { ru: [] },
-
-  exercise1: { ru: [] },
+  completionMarkers: { ru: [] },
+  infoCompletionMarkers: { items: [{ ru: [] }, { ru: [] }, { ru: [] }] },
+  exampleCompletionMarker1: { ru: [] },
+  exampleCompletionMarker2: { ru: [] },
+  exampleCompletionMarker3: { ru: [] },
+  example2L09: { ru: [] },
+  example6L09: { ru: [] },
   exercise2: { ru: [] },
-  exercise3: { ru: [] },
-
-  answer1: { ru: [] },
   answer2: { ru: [] },
-  answer3: { ru: [] },
 };
 
 export default ru;

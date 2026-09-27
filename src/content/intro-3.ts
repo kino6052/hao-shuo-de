@@ -19,7 +19,7 @@ const content: Entry[] = [
   {
     type: "summary",
     en: [
-      "Hao-shuo-de is not a Chinese-flavored Toki Pona; it's real Mandarin, simplified down to the bare minimum of vocabulary and grammar. This chapter maps out the book: three sections of lessons, plus a fourth section covering everything else -- texts, dictionary, and reference material.",
+      "Hao-shuo-de is real Chinese, made as simple as it can be. This chapter shows how the book is laid out.",
     ],
     zh: [],
     ru: [],
@@ -69,7 +69,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Modifying Nouns** —describing a noun, and what else can modify it. giving a noun number and concreteness: mesaure word ge. this one, that one, many.",
+            "**Modifying Nouns** — describing a noun: big, small, good, and many.",
           ],
           zh: [],
           ru: [],
@@ -78,7 +78,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**You and I** — pronouns: special nouns that describe the speaker and their relation to others.",
+            "**Pointing at People and Things** — pointers: words that point at things and people. This one, that one (with the counting word ge), I, you, and he or she.",
           ],
           zh: [],
           ru: [],
@@ -87,7 +87,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Verbs** — the second most important type of word, for building Subject-Verb-Object sentences.",
+            "**Verbs** — the second most important type of word, for sentences like \"I eat rice.\"",
           ],
           zh: [],
           ru: [],
@@ -111,7 +111,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Pre-Verbs** — modal tools that modify verbs to express ability, desire, obligation, attempt, learning, or continuation.",
+            "**Pre-Verbs** — words that go before a verb to say you want to, can, know how to, or love to.",
           ],
           zh: [],
           ru: [],
@@ -120,17 +120,68 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Expressing Time and Space** — placing time and space up front in a sentence, and the `de-huà` / `de-shíhou` constructions, to modify meaning.",
+            "**Time 1 — When it happens** — saying that something happened, is happening right now, will happen, or has happened before, and placing a time up front in a sentence.",
           ],
           zh: [],
           ru: [],
         },
       },
-
       {
         text: {
           en: [
-            "**More Modifiers** — modifiers that work on both verbs and adjectives.",
+            "**Time 2 — Around an action** — \"when X\" with `X-de shíjiān`, finishing an action, before and after, and starting.",
+          ],
+          zh: [],
+          ru: [],
+        },
+      },
+      {
+        text: {
+          en: [
+            "**Space 1 — Where it is** — place words like inside, on, under, and beside, and saying where something is.",
+          ],
+          zh: [],
+          ru: [],
+        },
+      },
+      {
+        text: {
+          en: [
+            "**Space 2 — Moving** — coming and going, from and to, and direction words like up and out.",
+          ],
+          zh: [],
+          ru: [],
+        },
+      },
+      {
+        text: {
+          en: [
+            "**Modifiers 1 — How much** — words that say how much, for both verbs and describing words: really, very, a bit.",
+          ],
+          zh: [],
+          ru: [],
+        },
+      },
+      {
+        text: {
+          en: [
+            "**Modifiers 2 — Comparing** — bigger than, the same, different.",
+          ],
+          zh: [],
+          ru: [],
+        },
+      },
+      {
+        text: {
+          en: ["**Modifiers 3 — Also and all** — also, and all of them."],
+          zh: [],
+          ru: [],
+        },
+      },
+      {
+        text: {
+          en: [
+            "**Modifiers 4 — Becoming and making** — how things change (\"it got better\"), and how to make them change (\"fix it\").",
           ],
           zh: [],
           ru: [],
@@ -160,7 +211,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Changing the role of a word** - how to make nouns from other words, and otherwise. How to make nouns that carry meaning of space etc.",
+            "**Changing the Role of a Word** — how to make nouns from other words, and otherwise. How to make nouns that carry meaning of space etc.",
           ],
           zh: [],
           ru: [],
@@ -169,7 +220,16 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Expressing Various Relationships** — causality, condition, and other ways to connect clauses and sentences.",
+            "**Relationships 1 — Inside a sentence** — giving to, using, and, or, and for: ways to connect words inside one sentence.",
+          ],
+          zh: [],
+          ru: [],
+        },
+      },
+      {
+        text: {
+          en: [
+            "**Relationships 2 — Linking sentences** — because, but, and if (`X-de huà`): ways to link one sentence to another.",
           ],
           zh: [],
           ru: [],
@@ -178,13 +238,6 @@ const content: Entry[] = [
       {
         text: {
           en: ["**Greetings and Feelings** — another type of sentence."],
-          zh: [],
-          ru: [],
-        },
-      },
-      {
-        text: {
-          en: ["**Particles and Other Special Words**."],
           zh: [],
           ru: [],
         },

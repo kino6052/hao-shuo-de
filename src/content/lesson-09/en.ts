@@ -1,67 +1,89 @@
 // English text for lesson-09, matching shape.ts's keys. Typed as
-// `PartialByKey<LessonShape>` -- hover a key here to see the same JSDoc
-// hint shape.ts declared for it. No comments repeated in this file.
+// `PartialByKey<LessonShape>`. No comments repeated in this file.
 import type { PartialByKey } from "../../lib/chapter-shape-types.ts";
 import type { LessonShape } from "./shape.ts";
 
 const en: PartialByKey<LessonShape> = {
-  title: { en: ["Pre-Verbs"] },
+  title: { en: ["Time 2 — Around an action"] },
   summary: {
     en: [
-      "Auxiliary verbs like `{{word:yao4}}` (\"want, must\"), `kěyǐ` (\"can, may\"), and `{{word:zhi1dao4}}` (\"know how to\") sit right before the main predicate, `{{word:bian4}}` steps into the main verb slot for a state change, and `{{word:kai1shi3}}` marks a gradual or starting change.",
+      "We often talk about what happens around an action: before it, after it, or while it goes on.",
+      "In this lesson, you'll be able to say \"When I eat, …\", \"I finished eating.\", \"after eating\", and \"I started to play.\"",
     ],
   },
-
-  vocabYao: { en: ["to want, need, must, should"] },
-  vocabKeyi: { en: ["can, may, be able to"] },
-  vocabZhidao: { en: ["to know, know how to"] },
+  vocabWan: { en: ["finish"] },
   vocabKaishi: { en: ["to begin to, start to, manage to"] },
-  vocabBian: { en: ["to become, change into"] },
-
-  proseAuxiliaries: {
+  vocabHou: { en: ["after, behind"] },
+  vocabQianmian: { en: ["before, in front"] },
+  vocabWanr: { en: ["play"] },
+  vocabLiu: { en: ["stay, keep"] },
+  proseDeShijian: {
     en: [
-      "A small set of Hao-shuo-de words express intent, ability, or an unfolding change without being the main action themselves -- words like `{{word:yao4}}` (\"want, must\"), `kěyǐ` (\"can, may\"), and `{{word:zhi1dao4}}` used in the sense of \"know how to.\"",
-      "These auxiliary words always sit immediately in front of the main predicate they're modifying, never after it.",
+      'Hao-shuo-de also has no dedicated word for "when." Instead, "when X" is built the same way any other description is: bind X onto `{{word:shi2jian1}}` ("time, moment") with `-{{word:de}}`, the same particle from Lesson 3.',
+      "`{{word:chi1}}-{{word:de}} {{word:shi2jian1}}` is literally \"the eating's time\" -- fronted as a context clause, it means \"when [I] eat.\"",
+      "No new grammar is needed: it's just -de binding a description onto a noun (here, {{word:shi2jian1}}), and that whole phrase then fronted like any other context clause.",
     ],
-    tldr: { en: ["Auxiliary verbs (intent/ability, e.g. `{{word:yao4}}`, `kěyǐ`) sit right before the main predicate."] },
-    necessity: { en: ["Establishes where intent/ability words go before any sentence stacks one in front of a full verb phrase."] },
+    tldr: {
+      en: [
+        'To say "when I eat", say "my eating time": {{word:wo3}} {{word:chi1}}-{{word:de}} {{word:shi2jian1}}.',
+      ],
+    },
+    necessity: { en: ['There is no separate word for "when".'] },
   },
-  infoAuxiliaryOrder: {
-    title: { en: ["Auxiliary Verb Word Order"] },
-    items: [
-      { en: ["Subject + Auxiliary Verb + Main Predicate -- the auxiliary always comes directly before the predicate it modifies."] },
-    ],
-  },
-  proseChangeOnset: {
+  example3: { en: ["When I eat, I'm content."] },
+  completionMarkers: {
     en: [
-      "To describe something changing from one state to another -- \"becoming big\" or \"turning bad\" -- `{{word:bian4}}` (\"to become, change into\") steps directly into the main verb slot itself, rather than sitting in front of another verb.",
-      "To describe a change that's gradual, or just getting underway, `{{word:kai1shi3}}` (\"to begin to\") sits in front of the verb or adjective it's introducing instead.",
+      "`{{word:le}}` only tells you an action is DONE -- it doesn't say anything about how it went. Three more small words fill in that gap, glued straight onto the verb with a hyphen instead of standing in front of or after it on their own.",
+      '`{{word:wan2}}` ("finish") says the action ran all the way to the end: `{{word:chi1}}-{{word:wan2}}`, "finish eating".',
+      '`dào` ("reach, arrive") says the action successfully hit its target: `{{word:ting1}}-dào`, "hear" (listen-reach).',
+      '`{{word:hao3}}` ("well, good") says the action came out well: `{{word:nong4}}-{{word:hao3}}`, "get it done right".',
     ],
-    tldr: { en: ["`{{word:bian4}}` is the main verb for a direct state change; `{{word:kai1shi3}}` sits before a verb/adjective for a gradual or starting change."] },
-    necessity: { en: ["Distinguishes two different-looking \"change\" constructions so they aren't mistaken for interchangeable synonyms."] },
+    tldr: {
+      en: [
+        "Join {{word:wan2}} to a verb to say you finished it.",
+      ],
+    },
+    necessity: {
+      en: [
+        "{{word:le}} only says it's done, but {{word:wan2}} says it's done all the way.",
+      ],
+    },
   },
-  infoChangeVsOnset: {
-    title: { en: ["`{{word:bian4}}` vs. `{{word:kai1shi3}}`"] },
+  infoCompletionMarkers: {
+    title: { en: ["Saying How an Action Finished"] },
     items: [
-      { en: ["`{{word:bian4}}` (\"to become\") fills the main verb slot directly for a state transition: X `{{word:bian4}}` Y."] },
-      { en: ["`{{word:kai1shi3}}` (\"to begin to\") sits right before the verb or adjective to mark a gradual change, or the start of an action."] },
+      {
+        en: [
+          '`{{word:wan2}}` ("finish") -- the action went all the way to the end: `{{word:chi1}}-{{word:wan2}}`, "finish eating."',
+        ],
+      },
+      {
+        en: [
+          '`dào` ("reach") -- the action hit its target: `{{word:ting1}}-dào`, "hear" (listen-reach).',
+        ],
+      },
+      {
+        en: [
+          '`{{word:hao3}}` ("well") -- the action came out well: `{{word:nong4}}-{{word:hao3}}`, "get it done right."',
+        ],
+      },
     ],
   },
-
-  example1: { en: ["The city / room is becoming big."] },
-  example2: { en: ["I am learning Hao-shuo-de / beginning to know Hao-shuo-de."] },
-  example3: { en: ["Are you able to come?"] },
-  example4: { en: ["The fruit became bad."] },
-  example5: { en: ["I want to stay in my parents' place."] },
-  example6: { en: ["The plants started to have water."] },
-
-  exercise1: { en: ["You may keep your name."] },
-  exercise2: { en: ["The path becomes narrow."] },
-  exercise3: { en: ["Do you want to eat some fish?"] },
-
-  answer1: { en: ["{{Word:ni3}} kěyǐ {{word:liu2}} {{word:ni3}}-{{word:de}} {{word:ni3}}-{{word:jiao4}}-{{word:de}} {{word:ci2}}."] },
-  answer2: { en: ["{{Word:fang1fa3}} {{word:bian4}} {{word:xiao3}}."] },
-  answer3: { en: ["{{Word:ni3}} {{word:yao4}}-{{word:bu4}}-{{word:yao4}} {{word:chi1}} {{word:zai4}}-{{word:shui3}}-lǐ-{{word:de}} {{word:dong4wu4}}?"] },
+  exampleCompletionMarker1: { en: ["I finished eating."] },
+  exampleCompletionMarker2: { en: ["I heard it."] },
+  exampleCompletionMarker3: { en: ["I got it done."] },
+  example2L09: {
+    en: [
+      "I am learning Hao-shuo-de / beginning to know Hao-shuo-de.",
+    ],
+  },
+  example6L09: { en: ["The plants started to have water."] },
+  exercise2: { en: ['Say: "When you speak, I listen."'] },
+  answer2: {
+    en: [
+      "{{Word:ni3}} {{word:shuo1}}-{{word:de}} {{word:shi2jian1}}, {{word:wo3}} {{word:ting1}}.",
+    ],
+  },
 };
 
 export default en;

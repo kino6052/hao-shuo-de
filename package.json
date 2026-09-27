@@ -5,11 +5,18 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/generate-word-usage.js && node scripts/generate-dictionary.js && vite build && node scripts/generate-pages.js",
+    "build": "node scripts/check-all.js && node scripts/generate-word-usage.js && node scripts/generate-dictionary.js && vite build && node scripts/generate-pages.js",
     "preview": "vite preview",
     "test": "bun test",
     "typecheck": "tsc --noEmit",
-    "word-usage": "node scripts/generate-word-usage.js"
+    "word-usage": "node scripts/generate-word-usage.js",
+    "check": "node scripts/check-all.js",
+    "check-book": "node scripts/check-book.js",
+    "check-jargon": "node scripts/check-jargon.js",
+    "check-early-words": "node scripts/check-early-words.js",
+    "check-summaries": "node scripts/check-summaries.js",
+    "check-word-use": "node scripts/check-word-use.js",
+    "check-grammar-blocks": "node scripts/check-grammar-blocks.js"
   },
   "dependencies": {
     "preact": "^10.25.0"

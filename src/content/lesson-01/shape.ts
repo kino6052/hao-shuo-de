@@ -1,117 +1,91 @@
 // Language-independent block sequence for lesson-01 ("Sounds and Symbols").
 // See src/lib/chapter-shape-types.ts / assemble-chapter.js.
+// LessonShape is this lesson's exact, hand-written type -- see lesson-01's
+// shape.ts for the full explanation of the pattern.
 //
-// LessonShape is this lesson's exact, hand-written type -- one property per
-// block, in render order. Every JSDoc comment lives here, and ONLY here:
-// en.ts/ru.ts/zh.ts type their object as `PartialByKey<LessonShape>`, which
-// carries these same keys and comments over to them without repeating the
-// comment text in each file. `shape` itself only ever needs the structural
-// fields (type, term, pinyin, tag, items, ...) -- never `en`/`ru`/`zh`.
+// Phase 1 skeleton (BOOK_PLAN.md): the vocab list follows BOOK_PLAN §4b, and
+// the other blocks were moved here unchanged from the old 16-lesson layout
+// ([from old LNN] says where; the old lessons are archived in
+// src/content/legacy/v2-16-lessons/). They get rewritten in Phase 2.
 import type {
   TTitle,
   TSummary,
-  TVocab,
   TProse,
-  TInfo,
-  TInfoItem,
   TExercise,
   TAnswer,
+  TInfo,
 } from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
   /** Sounds and Symbols */
   title: TTitle;
-  /** Chapter summary: what pinyin is and why it matters. */
+  /** Chapter summary. [from old L01] */
   summary: TSummary;
-
-  /** Chinese's smallest written unit is the syllable, not the letter. */
+  /** Chinese's smallest written unit is the syllable, not the letter. [from old L01] */
   proseSyllableUnit: TProse;
-  /** Callout: read pinyin syllable by syllable, e.g. Zhōng + guó. */
-  infoReadBySyllable: TInfo & { items: [TInfoItem & { items: [TInfoItem] }] };
-
-  /** Pinyin alone doesn't capture pronunciation fully -- take the pronunciation course. */
+  /** Callout: read pinyin syllable by syllable, e.g. Zhōng + guó. [from old L01] */
+  infoReadBySyllable: TInfo;
+  /** Pinyin alone doesn't capture pronunciation fully -- take the pronunciation course. [from old L01] */
   prosePinyinLimits: TProse;
-
-  /** <h2>Tones</h2> -- tone is part of the word, not decoration. */
+  /** <h2>Tones</h2> -- tone is part of the word, not decoration. [from old L01] */
   proseTonesHeading: TProse;
-  /** Example callout: mā/má/mǎ/mà are four different words. */
-  infoToneExample: TInfo & {
-    items: [TInfoItem, TInfoItem, TInfoItem, TInfoItem];
-  };
-
-  /** Those four words differ only by tone; here are Chinese's tones. */
+  /** Example callout: mā/má/mǎ/mà are four different words. [from old L01] */
+  infoToneExample: TInfo;
+  /** Those four words differ only by tone; here are Chinese's tones. [from old L01] */
   proseFourTonesIntro: TProse;
-  /** Callout listing the five tones (ā/á/ǎ/à/a) with a mnemonic each. */
-  infoFiveTones: TInfo & {
-    items: [TInfoItem, TInfoItem, TInfoItem, TInfoItem, TInfoItem];
-  };
-
-  /** All syllables are toned except the neutral tone, which is unstressed. */
+  /** Callout listing the five tones (ā/á/ǎ/à/a) with a mnemonic each. [from old L01] */
+  infoFiveTones: TInfo;
+  /** All syllables are toned except the neutral tone, which is unstressed. [from old L01] */
   proseNeutralTone: TProse;
-
-  /** Chinese syllables run together with no word boundaries -- Hao-shuo-de adds punctuation for that. */
+  /** Chinese syllables run together with no word boundaries -- Hao-shuo-de adds punctuation for that. [from old L01] */
   proseNoWordBoundaries: TProse;
-  /** Ordered callout: the three pinyin punctuation helpers (solid/hyphen/quotes), with worked examples nested under helpers 2 and 3. */
-  infoPunctuationHelpers: TInfo & {
-    ordered: true;
-    items: [
-      TInfoItem,
-      TInfoItem & { items: [TInfoItem, TInfoItem, TInfoItem, TInfoItem] },
-      TInfoItem & { items: [TInfoItem, TInfoItem, TInfoItem] },
-    ];
-  };
-
-  /** Exercise: break Zhōngguórén into syllables. */
+  /** Grammar box: the three Hao-shuo-de pinyin helpers (solid words, hyphens, quotes), with examples. */
+  infoPunctuationHelpers: TInfo;
+  /** Exercise: break Zhōngguórén into syllables. [from old L01] */
   exercise1: TExercise;
-  /** Exercise: identify the tone of à. */
+  /** Exercise: identify the tone of à. [from old L01] */
   exercise2: TExercise;
-  /** Exercise: rewrite wǒ hǎo in tone-number notation. */
+  /** Exercise: rewrite wǒ hǎo in tone-number notation. [from old L01] */
   exercise3: TExercise;
-  /** Exercise: is hěn-dà-de one word or word+particle? */
+  /** Exercise: is hěn-dà-de one word or word+particle? [from old L01] */
   exercise4: TExercise;
-
-  /** Answer to exercise 1. */
+  /** Answer to exercise 1. [from old L01] */
   answer1: TAnswer;
-  /** Answer to exercise 2. */
+  /** Answer to exercise 2. [from old L01] */
   answer2: TAnswer;
-  /** Answer to exercise 3. */
+  /** Answer to exercise 3. [from old L01] */
   answer3: TAnswer;
-  /** Answer to exercise 4. */
+  /** Answer to exercise 4. [from old L01] */
   answer4: TAnswer;
 };
 
 const shape: LessonShape = {
   title: { type: "title" },
   summary: { type: "summary" },
-
   proseSyllableUnit: { type: "prose" },
-  infoReadBySyllable: {
-    type: "info",
-    items: [{ items: [{}] }],
-  },
-
+  infoReadBySyllable: { type: "info", items: [{ items: [{}] }] },
   prosePinyinLimits: { type: "prose" },
-
   proseTonesHeading: { type: "prose" },
   infoToneExample: { type: "info", items: [{}, {}, {}, {}] },
-
   proseFourTonesIntro: { type: "prose" },
   infoFiveTones: { type: "info", items: [{}, {}, {}, {}, {}] },
-
   proseNeutralTone: { type: "prose" },
-
   proseNoWordBoundaries: { type: "prose" },
   infoPunctuationHelpers: {
     type: "info",
+    subtype: "grammar",
+    tag: "pinyin/helpers",
     ordered: true,
-    items: [{}, { items: [{}, {}, {}, {}] }, { items: [{}, {}, {}] }],
+    items: [
+      {},
+      { items: [{}, {}, {}, {}] },
+      { items: [{}, {}, {}] },
+    ],
   },
-
   exercise1: { type: "exercise" },
   exercise2: { type: "exercise" },
   exercise3: { type: "exercise" },
   exercise4: { type: "exercise" },
-
   answer1: { type: "answer" },
   answer2: { type: "answer" },
   answer3: { type: "answer" },

@@ -11,7 +11,9 @@ This section presents the complete core vocabulary of Hao-shuo-de sorted alphabe
 ```dict
 ài | verb | to love, have compassion for, show deep affection to | olin
 bǎ | particle | grammatical object-introducing particle; used to implement the transitive state-change framework |
+bā | number | eight |
 báisè | adjective/noun | white, pale, light-colored | walo
+bǐ | preposition | comparison |
 biàn | verb | to become, change into, transform; combined with ba to act as a causative verbal engine | kama
 biān | noun/suffix | side, edge; binds to a directional root via a hyphen to form a location noun (e.g. {{word:pang2}}-{{word:bian1}}, "beside") |
 bízi | noun | nose, snout, protuberance | nena
@@ -24,6 +26,7 @@ cóng | preposition | from |
 dà | adjective | big, heavy, large, long, tall, important, adult | suli
 dǎ | verb | to hit, fight, battle, challenge, compete against | utala
 dànshì | conjunction | but, however, only | taso
+dào | verb/directional | to arrive, reach, go to; to (a place); after a verb, marks reaching the goal (e.g. {{word:ting1}}-{{word:dao4}}, "hear") |
 dé | verb | to get, obtain, acquire, come to have; combines with a de-nominalized verb phrase to express acquiring an abstract result (e.g. de zhidao-de, "to learn", literally "to obtain the known-thing") | kama
 de | particle | possessive marker, structural adjectival particle; used to bind modifiers and multi-word description structures onto target nouns | pi
 děng | verb | to wait |
@@ -38,6 +41,7 @@ gè | measure word | universal classifier; mandatory interface between numbers/d
 gěi | verb/coverb | to give, send, emit, provide; to, for, from the perspective of | pana, tawa
 gōngjù | noun | tool, implement, machine, device | ilo
 gùnzi | noun | stick, rod, branch, long hard thing | palisa
+guò | particle | placed right after a verb to say you have done it at least once before (e.g. {{word:chi1}}-{{word:guo4}}, "have eaten before") |
 hào | particle | sequence marker, number identity, ordinal number prefix | nanpa
 hǎo | adjective | good, positive, useful, friendly, peaceful, simple | pona
 hé | conjunction | and; used strictly to join multiple nouns or subjects | en
@@ -46,14 +50,17 @@ hěn | adverb | very, highly, intensely; syntactic structural anchor required be
 hézi | noun | container, bag, bowl, box, cup, vessel | poki
 hóngsè | adjective/noun | red, reddish | loje
 hòu | noun/directional | behind, after, back; composes with other roots via a hyphen (e.g. {{word:hou4}}-{{word:mian4}}) |
+huà | noun | speech, words; in X-{{word:de}} {{word:hua4}}, "if X" (literally "the words of X") |
 huài | adjective/verb | bad, negative, broken, damaged, non-essential | ike, pakala
 huángsè | adjective/noun | yellow, yellowish | jelo
+huì | auxiliary | will, going to (marks a predicted or future action); placed before a verb the same way {{word:neng2}} is |
 huǒ | noun | fire, cooking element, chemical heat source | seli
 huòzhě | conjunction | or; links choices or alternative clauses | anu
 jiā | noun | home, house, family, household | tomo
 jiǎo | noun | foot, leg, organ of locomotion, bottom part | noka
 jiào | verb | to call, be named; to produce an animal vocalization under the Quote Partition | nimi, mu
 jīn | noun | money, cash, savings, wealth | mani
+jiǔ | number | nine |
 juéde | noun/adjective/verb | feeling, emotion, direct experience; to feel, think | pilin
 kāishǐ | verb/auxiliary | to begin, start, open; turn on; manage to | open, kama
 kàn | verb | to look at, see, examine, observe, read, watch | lukin
@@ -67,8 +74,10 @@ lǐ | noun/directional | inside, within; composes with other roots via a hyphen 
 liǎng | number | two; quantifies dual entities when coupled to the measure word (liang-ge) | tu
 lìliàng | noun/adjective | energy, power, intensity, physical strength; confident, sure, intense | wawa
 liú | verb | to stay, remain, keep, endure, protect | awen
+liù | number | six |
 ma | particle | final interrogative yes-or-no question marker |
 méi | particle | negative particle used exclusively to negate the verb you (to form meiyou) |
+men | particle | more than one person: after a pointer or a word for people, as in {{word:wo3}}-{{word:men}} ("we") |
 miàn | noun/suffix | side, face, surface; binds to a directional root via a hyphen to form a location noun (e.g. {{word:xia4}}-{{word:mian4}}, "below") |
 mǐfàn | noun | grain, rice, cereal, bread, pasta, staple food | pan
 mō | verb | to touch, feel, pet, perceive by contact | pilin
@@ -85,6 +94,7 @@ páng | noun/directional | beside, alongside; composes with {{word:bian1}} via a
 pángbiān | noun | side, vicinity, area beside, hip | poka
 pífū | noun | skin, outer layer, bark, peel, shell, boundary | selo
 qǐ | verb/directional | to rise, get up; begin; composes with a verb via a hyphen to mark the start of an action (e.g. {{word:shuo1}}-{{word:qi3}}, "to bring up/mention") |
+qī | number | seven |
 qiánmiàn | noun | front, face, foremost area, chest | sinpin
 qíguài | adjective | strange, unusual, foolish, crazy, intoxicated | nasa
 qù | verb | to go, move toward, travel away | tawa
@@ -93,11 +103,13 @@ qún | noun | group, community, company, nation, society, tribe | kulupu
 rè | adjective | hot, warm, cooked, chemically energetic | seli
 rén | noun | human being, person, somebody | jan
 rì | noun | sun, radiant light source, brightness, glow | suno
+sān | number | three |
 shàng | noun/directional | up, above, on; composes with other roots via a hyphen (e.g. {{word:shang4}}-{{word:lai2}}, {{word:shang4}}-{{word:mian4}}) |
 shēngyīn | noun | sound, noise, voice | kalama
 shénme | pronoun/particle | what? which?; retains position without altering Chinese SVO statement geometry | seme
 shēntǐ | noun | body, physical torso, physical state | sijelo
 shì | verb | to be, copula link between subjects and identity predicates |
+shí | number | ten |
 shìchǎng | noun | market, shop, fair, business location, transaction hub | esun
 shíjiān | noun | time, duration, moment, occasion, period, situation | tenpo
 shǒu | noun | hand, arm, tactile organ | luka
@@ -106,6 +118,7 @@ shuǐguǒ | noun | fruit, vegetable, mushroom, plant food crop | kili
 shuìjiào | verb/adjective | to sleep, rest, be inactive; sleeping, asleep | lape
 shuō | verb/noun | to communicate, say, speak, talk, use language; language, speech | toki
 sǐ | verb/adjective | to die; dead, dying | moli
+sì | number | four |
 tā | pronoun | he, she, it, they, them; syntactically genderless and number-fluid | ona
 tái | noun | floor, horizontal surface, platform | supa
 tián | adjective | sweet, fragrant, cute, innocent, adorable | suwi
@@ -117,6 +130,7 @@ wánr | verb/adjective | to play, have fun, engage in recreation; playful, artis
 wèishénme | pronoun | why |
 wèn | verb | to ask, inquire, question |
 wǒ | pronoun | I, me, we, us | mi
+wǔ | number | five |
 xià | noun/directional | down, below, under; composes with other roots via a hyphen (e.g. {{word:xia4}}-{{word:lai2}}, {{word:xia4}}-{{word:mian4}}) |
 xiàn | noun | line, rope, hair, thread, cord, flexible long thing | linja
 xiǎo | adjective | little, small, short, few, young, a bit | lili

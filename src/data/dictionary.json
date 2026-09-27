@@ -282,10 +282,15 @@
     },
     "bi3": {
       "term": "bǐ",
-
+      "pos": {
+        "eng": "preposition",
+        "rus": "предлог",
+        "zh": "介词"
+      },
       "definition": {
         "eng": "comparison",
-        "rus": "сравнение"
+        "rus": "сравнение",
+        "zh": "比较"
       }
     },
     "nan2ren2": {
@@ -1953,6 +1958,162 @@
         "zh": "旁，旁边；通过连字符与 {{word:bian1}} 组合（例如 {{word:pang2}}-{{word:bian1}}）"
       },
       "maps": ""
+    },
+    "dao4": {
+      "term": "dào",
+      "pos": {
+        "eng": "verb/directional",
+        "rus": "глагол/направление",
+        "zh": "动词/趋向词"
+      },
+      "definition": {
+        "eng": "to arrive, reach, go to; to (a place); after a verb, marks reaching the goal (e.g. {{word:ting1}}-{{word:dao4}}, \"hear\")",
+        "rus": "прибывать, достигать, доходить до; до (какого-то места); после глагола отмечает достижение цели (например, {{word:ting1}}-{{word:dao4}}, «услышать»)",
+        "zh": "到达，到；到（某地）；用在动词后表示达到目标（如 {{word:ting1}}-{{word:dao4}}，“听到”）"
+      }
+    },
+    "guo4": {
+      "term": "guò",
+      "pos": {
+        "eng": "particle",
+        "rus": "частица",
+        "zh": "助词"
+      },
+      "definition": {
+        "eng": "placed right after a verb to say you have done it at least once before (e.g. {{word:chi1}}-{{word:guo4}}, \"have eaten before\")",
+        "rus": "ставится сразу после глагола и означает, что действие уже когда-то совершалось (например, {{word:chi1}}-{{word:guo4}}, «когда-то ел»)",
+        "zh": "用在动词后，表示曾经做过（如 {{word:chi1}}-{{word:guo4}}，“吃过”）"
+      }
+    },
+    "hua4": {
+      "term": "huà",
+      "pos": {
+        "eng": "noun",
+        "rus": "существительное",
+        "zh": "名词"
+      },
+      "definition": {
+        "eng": "speech, words; in X-{{word:de}} {{word:hua4}}, \"if X\" (literally \"the words of X\")",
+        "rus": "речь, слова; в X-{{word:de}} {{word:hua4}} значит «если X» (букв. «слова об X»)",
+        "zh": "话；X-{{word:de}} {{word:hua4}} 表示“如果 X”（字面意思“X 的话”）"
+      }
+    },
+    "san1": {
+      "term": "sān",
+      "pos": {
+        "eng": "number",
+        "rus": "числительное",
+        "zh": "数词"
+      },
+      "definition": {
+        "eng": "three",
+        "rus": "три",
+        "zh": "三"
+      }
+    },
+    "si4": {
+      "term": "sì",
+      "pos": {
+        "eng": "number",
+        "rus": "числительное",
+        "zh": "数词"
+      },
+      "definition": {
+        "eng": "four",
+        "rus": "четыре",
+        "zh": "四"
+      }
+    },
+    "wu3": {
+      "term": "wǔ",
+      "pos": {
+        "eng": "number",
+        "rus": "числительное",
+        "zh": "数词"
+      },
+      "definition": {
+        "eng": "five",
+        "rus": "пять",
+        "zh": "五"
+      }
+    },
+    "liu4": {
+      "term": "liù",
+      "pos": {
+        "eng": "number",
+        "rus": "числительное",
+        "zh": "数词"
+      },
+      "definition": {
+        "eng": "six",
+        "rus": "шесть",
+        "zh": "六"
+      }
+    },
+    "qi1": {
+      "term": "qī",
+      "pos": {
+        "eng": "number",
+        "rus": "числительное",
+        "zh": "数词"
+      },
+      "definition": {
+        "eng": "seven",
+        "rus": "семь",
+        "zh": "七"
+      }
+    },
+    "ba1": {
+      "term": "bā",
+      "pos": {
+        "eng": "number",
+        "rus": "числительное",
+        "zh": "数词"
+      },
+      "definition": {
+        "eng": "eight",
+        "rus": "восемь",
+        "zh": "八"
+      }
+    },
+    "jiu3": {
+      "term": "jiǔ",
+      "pos": {
+        "eng": "number",
+        "rus": "числительное",
+        "zh": "数词"
+      },
+      "definition": {
+        "eng": "nine",
+        "rus": "девять",
+        "zh": "九"
+      }
+    },
+    "shi2": {
+      "term": "shí",
+      "pos": {
+        "eng": "number",
+        "rus": "числительное",
+        "zh": "数词"
+      },
+      "definition": {
+        "eng": "ten",
+        "rus": "десять",
+        "zh": "十"
+      }
+    },
+    "men": {
+      "term": "men",
+      "pos": {
+        "eng": "particle",
+        "rus": "частица",
+        "zh": "助词"
+      },
+      "definition": {
+        "eng": "more than one person: after a pointer or a word for people, as in {{word:wo3}}-{{word:men}} (\"we\")",
+        "rus": "больше одного человека: после указательного слова или слова о людях, как в {{word:wo3}}-{{word:men}} («мы»)",
+        "zh": "表示不止一个人：用在指人的词后面，如 {{word:wo3}}-{{word:men}}（“我们”）"
+      }
     }
   },
   "categories": [
@@ -1971,7 +2132,7 @@
             "rus": "Местоимения и вопросительные слова",
             "zh": "代词与疑问词"
           },
-          "wordIds": ["wo3", "ni3", "ta1", "shen2me"]
+          "wordIds": ["wo3", "ni3", "ta1", "shen2me", "men"]
         },
         {
           "key": "places-as-things",
@@ -2140,7 +2301,7 @@
             "rus": "Числа и порядковые числительные",
             "zh": "数字与序数"
           },
-          "wordIds": ["yi1", "liang3", "hao4"]
+          "wordIds": ["yi1", "liang3", "hao4", "san1", "si4", "wu3", "liu4", "qi1", "ba1", "jiu3", "shi2"]
         },
         {
           "key": "amount",
@@ -2322,7 +2483,7 @@
             "rus": "Движение",
             "zh": "运动"
           },
-          "wordIds": ["lai2", "qu4"]
+          "wordIds": ["lai2", "qu4", "dao4"]
         },
         {
           "key": "state-change-general",
@@ -2441,7 +2602,7 @@
             "rus": "Грамматические частицы",
             "zh": "语法助词"
           },
-          "wordIds": ["ba3", "de", "le", "ma"]
+          "wordIds": ["ba3", "de", "le", "ma", "guo4"]
         },
         {
           "key": "negation",
@@ -2459,7 +2620,7 @@
             "rus": "Союзы",
             "zh": "连接"
           },
-          "wordIds": ["dan4shi4", "he2", "huo4zhe3", "ye3", "yin1wei4"]
+          "wordIds": ["dan4shi4", "he2", "huo4zhe3", "ye3", "yin1wei4", "hua4"]
         },
         {
           "key": "interrogatives",

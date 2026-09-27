@@ -1,8 +1,12 @@
 // Language-independent block sequence for lesson-03 ("Modifying Nouns").
 // See src/lib/chapter-shape-types.ts / assemble-chapter.js.
-// Covers count/concreteness (zhè-ge/nà-ge/duō) and description (hěn/-de) --
-// both are "modifying a noun", so this lesson combines what used to be two
-// separate lessons.
+// LessonShape is this lesson's exact, hand-written type -- see lesson-01's
+// shape.ts for the full explanation of the pattern.
+//
+// Phase 1 skeleton (BOOK_PLAN.md): the vocab list follows BOOK_PLAN §4b, and
+// the other blocks were moved here unchanged from the old 16-lesson layout
+// ([from old LNN] says where; the old lessons are archived in
+// src/content/legacy/v2-16-lessons/). They get rewritten in Phase 2.
 import type {
   TTitle,
   TSummary,
@@ -11,92 +15,104 @@ import type {
   TExample,
   TExercise,
   TAnswer,
+  TInfo,
 } from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
-  /** Chapter title. Modifying Nouns*/
+  /** Modifying Nouns */
   title: TTitle;
-  /** Chapter summary. This chapter explains how to modify nouns to get more meaning across different contexts. The most important is hen3, but there are other ways*/
+  /** Chapter summary. [from old L03] */
   summary: TSummary;
-
-  /** Vocabulary: "special word hen3" -- neutral connector between a subject and an adjective. */
+  /** Vocabulary: "very (in this role, a required neutral connector, not an intensifier)". */
   vocabHen: TVocab;
-  /** Vocabulary: "water, liquid". */
-  vocabShui: TVocab;
-  /** Vocabulary: "a place". */
-  vocabDifang: TVocab;
-  /** Vocabulary: "little, small". */
-  vocabXiao: TVocab;
+  /** Vocabulary: "joins a describing word to a noun". */
+  vocabDe: TVocab;
+  /** Vocabulary: "many". */
+  vocabDuo: TVocab;
   /** Vocabulary: "good, simple, friendly". */
   vocabHao: TVocab;
   /** Vocabulary: "big, important, tall". */
   vocabDa: TVocab;
-
-  /** Grammar: hěn as the neutral predicate connector for adjectives (Subject + hěn + Adjective). */
+  /** Vocabulary: "little, small". */
+  vocabXiao: TVocab;
+  /** Vocabulary: "water, liquid". */
+  vocabShui: TVocab;
+  /** Vocabulary: "a place (both in space or metaphorical to mean part of something)". */
+  vocabDifang: TVocab;
+  /** Vocabulary: "parents". */
+  vocabFumu: TVocab;
+  /** Grammar: hěn as the neutral predicate connector for adjectives (Subject + hěn + Adjective). [from old L03] */
   proseHenConnector: TProse;
-  /** Example: shuǐ hěn hǎo. */
+  /** Example: shuǐ hěn hǎo. [from old L03] */
   example3: TExample;
-
-  /** Grammar: -de required to bind an adjective onto a noun when it has a modifier or is multi-character. */
+  /** Grammar: -de required to bind an adjective onto a noun when it has a modifier or is multi-character. [from old L03] */
   proseDeRequired: TProse;
-  /** Example: zhè-ge shì hěn-xiǎo-de dìfāng. */
+  /** Grammar box: NOUN + hěn + describing word, and describing word + -de + NOUN. */
+  infoDescribing: TInfo;
+  /** Example: zhè shì hěn-xiǎo-de dìfāng. [from old L03] */
   example4: TExample;
-  /** Example: zhè-ge shì yī-ge hěn-dà-de dòngwù. */
+  /** Example: zhè shì hěn-dà-de dòngwù. [from old L03] */
   example5: TExample;
-
-  /** Exercise 1: This one is an animal. */
-  exercise1: TExercise;
-  /** Exercise 2: That one is a woman. */
-  exercise2: TExercise;
-  /** Exercise 5: The place is small. */
+  /** Example: hǎo-de fùmǔ. */
+  exampleGoodParents: TExample;
+  /** Example: hěn-duō-de rén. */
+  exampleManyPeople: TExample;
+  /** Exercise 5: The place is small. [from old L03] */
   exercise5: TExercise;
-
-  /** Answer 1. */
-  answer1: TAnswer;
-  /** Answer 2. */
-  answer2: TAnswer;
-  /** Answer 5. */
+  /** Answer 5. [from old L03] */
   answer5: TAnswer;
 };
 
 const shape: LessonShape = {
   title: { type: "title" },
   summary: { type: "summary" },
-
   vocabHen: { type: "vocab", term: "{{word:hen3}}", ttsText: "很" },
-  vocabShui: { type: "vocab", term: "{{word:shui3}}", ttsText: "水" },
-  vocabDifang: { type: "vocab", term: "{{word:di4fang1}}", ttsText: "地方" },
-  vocabXiao: { type: "vocab", term: "{{word:xiao3}}", ttsText: "小" },
+  vocabDe: { type: "vocab", term: "{{word:de}}", ttsText: "的" },
+  vocabDuo: { type: "vocab", term: "{{word:duo1}}", ttsText: "多" },
   vocabHao: { type: "vocab", term: "{{word:hao3}}", ttsText: "好" },
   vocabDa: { type: "vocab", term: "{{word:da4}}", ttsText: "大" },
-
+  vocabXiao: { type: "vocab", term: "{{word:xiao3}}", ttsText: "小" },
+  vocabShui: { type: "vocab", term: "{{word:shui3}}", ttsText: "水" },
+  vocabDifang: {
+    type: "vocab",
+    term: "{{word:di4fang1}}",
+    ttsText: "地方",
+  },
+  vocabFumu: { type: "vocab", term: "{{word:fu4mu3}}", ttsText: "父母" },
   proseHenConnector: { type: "prose" },
   example3: {
     type: "example",
     pinyin: "{{Word:shui3}} {{word:hen3}} {{word:hao3}}.",
     ttsText: "水很好。",
   },
-
   proseDeRequired: { type: "prose" },
+  infoDescribing: {
+    type: "info",
+    subtype: "grammar",
+    tag: "describing/hen-and-de",
+    items: [{}, {}],
+  },
   example4: {
     type: "example",
-    pinyin:
-      "{{Word:zhe4}}-ge {{word:shi4}} {{word:hen3}}-{{word:xiao3}}-{{word:de}} {{word:di4fang1}}.",
-    ttsText: "这个是很小的地方。",
+    pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:hen3}}-{{word:xiao3}}-{{word:de}} {{word:di4fang1}}.",
+    ttsText: "这是很小的地方。",
   },
   example5: {
     type: "example",
-    pinyin:
-      "{{Word:zhe4}}-ge {{word:shi4}} {{word:yi1}}-ge {{word:hen3}}-{{word:da4}}-{{word:de}} {{word:dong4wu4}}.",
-    ttsText: "这个是一个很大的动物。",
+    pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:hen3}}-{{word:da4}}-{{word:de}} {{word:dong4wu4}}.",
+    ttsText: "这是很大的动物。",
   },
-
-  exercise1: { type: "exercise" },
-  exercise2: { type: "exercise" },
+  exampleGoodParents: {
+    type: "example",
+    pinyin: "{{Word:hao3}}-{{word:de}} {{word:fu4mu3}}.",
+    ttsText: "好的父母。",
+  },
+  exampleManyPeople: {
+    type: "example",
+    pinyin: "{{Word:hen3}}-{{word:duo1}}-{{word:de}} {{word:ren2}}.",
+    ttsText: "很多的人。",
+  },
   exercise5: { type: "exercise" },
-
-  answer1: { type: "answer", ttsText: "这个是动物。" },
-  answer2: { type: "answer", ttsText: "那个是女人。" },
   answer5: { type: "answer", ttsText: "地方很小。" },
 };
 
