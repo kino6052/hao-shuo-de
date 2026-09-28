@@ -12,11 +12,8 @@ const en: PartialByKey<LessonShape> = {
     ],
   },
   vocabYinwei: { en: ["because"] },
-  vocabDanshi: { en: ["but"] },
-  vocabYan: { en: ["salt"] },
   vocabSi: { en: ["die; dead"] },
   vocabHuo: { en: ["live; alive"] },
-  vocabHua: { en: ['X-de huà: "if X"'] },
   proseBecause: {
     en: [
       "**To say why**, put {{word:yin1wei4}} (because) before the reason.",
@@ -41,6 +38,8 @@ const en: PartialByKey<LessonShape> = {
     en: ["Because he touched the mud, his hands are black."],
   },
   exampleBecause7: { en: ["Because there's air, we can live."] },
+  vocabDanshi: { en: ["but"] },
+  vocabYan: { en: ["salt"] },
   proseBut: {
     en: [
       "**To say but**, put {{word:dan4shi4}} at the start of the second part.",
@@ -66,6 +65,7 @@ const en: PartialByKey<LessonShape> = {
   exampleBut6: { en: ["This way is strange, but it's good."] },
   exampleBut7: { en: ["I have nine, but he has twenty."] },
   exampleBut8: { en: ["The plant is small, but it lived."] },
+  vocabHua: { en: ['X-de huà: "if X"'] },
   proseIf: {
     en: [
       '**To say "if"**, put -{{word:de}} {{word:hua4}} after the if-part, then a comma.',

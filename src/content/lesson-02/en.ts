@@ -12,8 +12,6 @@ const en: PartialByKey<LessonShape> = {
     ],
   },
   vocabShi: { en: ["be, is"] },
-  vocabBu: { en: ["not"] },
-  vocabZhe: { en: ["this"] },
   vocabDongxi: { en: ["thing"] },
   vocabRen: { en: ["person"] },
   vocabNuren: { en: ["woman"] },
@@ -39,6 +37,7 @@ const en: PartialByKey<LessonShape> = {
   exampleIs2: { en: ["A man is a person."] },
   exampleIs3: { en: ["Fruit is a thing."] },
   exampleIs4: { en: ["Animals are things."] },
+  vocabZhe: { en: ["this"] },
   proseThis: {
     en: [
       "**To point at something**, say {{word:zhe4}} (this).",
@@ -54,6 +53,7 @@ const en: PartialByKey<LessonShape> = {
   exampleThis2: { en: ["This is a fruit."] },
   exampleThis3: { en: ["This is an animal."] },
   exampleThis4: { en: ["This is a man."] },
+  vocabBu: { en: ["not"] },
   proseNot: {
     en: [
       "**To say something is not something**, put {{word:bu4}} before {{word:shi4}}.",

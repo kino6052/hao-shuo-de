@@ -12,9 +12,6 @@ const en: PartialByKey<LessonShape> = {
     ],
   },
   vocabHen: { en: ["very"] },
-  vocabDe: { en: ["joins an adjective to a noun"] },
-  vocabDuo: { en: ["many, much"] },
-  vocabShao: { en: ["few, little"] },
   vocabHao: { en: ["good"] },
   vocabDa: { en: ["big"] },
   vocabXiao: { en: ["small"] },
@@ -45,6 +42,7 @@ const en: PartialByKey<LessonShape> = {
   exampleLike3: { en: ["The animal is small."] },
   exampleLike4: { en: ["The parents are good."] },
   exampleLike5: { en: ["The fruit is big."] },
+  vocabDe: { en: ["joins an adjective to a noun"] },
   proseBefore: {
     en: [
       "**To put an adjective before a noun**, join them with -{{word:de}}.",
@@ -69,6 +67,8 @@ const en: PartialByKey<LessonShape> = {
   exampleBefore3: { en: ["This is a very small place."] },
   exampleBefore4: { en: ["This is good water."] },
   exampleBefore5: { en: ["This is a very big animal."] },
+  vocabDuo: { en: ["many, much"] },
+  vocabShao: { en: ["few, little"] },
   proseMany: {
     en: [
       "**To say many**, put {{word:hen3}}-{{word:duo1}}-{{word:de}} before the noun.",

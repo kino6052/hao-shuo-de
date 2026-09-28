@@ -11,12 +11,7 @@ const en: PartialByKey<LessonShape> = {
       "In this lesson, you'll be able to say \"When I eat, …\", \"I finished eating.\", \"after eating\", and \"I started to play.\"",
     ],
   },
-  vocabWan: { en: ["finish; after a verb: finished"] },
-  vocabKaishi: { en: ["start"] },
-  vocabHou: { en: ["after; behind"] },
   vocabWanr: { en: ["play"] },
-  vocabLiu: { en: ["stay, keep"] },
-  vocabYixia: { en: ["a moment; after a verb: for a moment"] },
   proseWhen: {
     en: [
       '**To say "when"**, say "the time of" it: put -{{word:de}} {{word:shi2jian1}} after the action, then a comma.',
@@ -39,6 +34,7 @@ const en: PartialByKey<LessonShape> = {
   exampleWhen1: { en: ["When I eat, I don't talk."] },
   exampleWhen2: { en: ["When you speak, I listen."] },
   exampleWhen3: { en: ["When he sleeps, I play."] },
+  vocabWan: { en: ["finish; after a verb: finished"] },
   proseFinished: {
     en: [
       "**To say you finished doing something**, join {{word:wan2}} to the verb, and add {{word:le}}.",
@@ -57,6 +53,7 @@ const en: PartialByKey<LessonShape> = {
   exampleFinished1: { en: ["I finished eating."] },
   exampleFinished2: { en: ["Did you finish writing?"] },
   exampleFinished3: { en: ["She finished reading."] },
+  vocabHou: { en: ["after; behind"] },
   proseAfter: {
     en: [
       '**To say "after doing something"**, put {{word:hou4}} after the finished action, then a comma.',
@@ -74,6 +71,7 @@ const en: PartialByKey<LessonShape> = {
   exampleAfter2: { en: ["After writing, I play."] },
   exampleAfter3: { en: ["After reading, you speak."] },
   exampleAfter4: { en: ["After eating, what happened?"] },
+  vocabKaishi: { en: ["start"] },
   proseStart: {
     en: [
       "**To say something starts**, put {{word:kai1shi3}} before the verb.",
@@ -91,6 +89,7 @@ const en: PartialByKey<LessonShape> = {
   exampleStart2: { en: ["He starts to eat."] },
   exampleStart3: { en: ["Have you started writing?"] },
   exampleStart4: { en: ["I'm starting to write now."] },
+  vocabLiu: { en: ["stay, keep"] },
   proseStay: {
     en: [
       "**To say you stay, or keep something**, use {{word:liu2}}.",
@@ -103,6 +102,7 @@ const en: PartialByKey<LessonShape> = {
   exampleStay1: { en: ["I'll keep this one."] },
   exampleStay2: { en: ["Do you want to stay?"] },
   exampleStay3: { en: ["After eating, she stays."] },
+  vocabYixia: { en: ["a moment; after a verb: for a moment"] },
   proseMoment: {
     en: [
       "**To do something just for a moment**, put {{word:yi1xia4}} (a moment) after the verb.",

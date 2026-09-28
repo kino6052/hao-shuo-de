@@ -12,10 +12,6 @@ const en: PartialByKey<LessonShape> = {
     ],
   },
   vocabYao: { en: ["want; want to"] },
-  vocabNeng: { en: ["can"] },
-  vocabZhidao: { en: ["know; know how to (with zěnme)"] },
-  vocabAi: { en: ["love; love to"] },
-  vocabKeneng: { en: ["maybe, might"] },
   vocabDeng: { en: ["wait"] },
   vocabYifu: { en: ["clothes"] },
   proseWant: {
@@ -38,6 +34,7 @@ const en: PartialByKey<LessonShape> = {
   exampleWant3: { en: ["What do you want?"] },
   exampleWant4: { en: ["She wants clothes."] },
   exampleWant5: { en: ["Do you want to wait?"] },
+  vocabNeng: { en: ["can"] },
   proseCan: {
     en: [
       "**To say you can do something**, put {{word:neng2}} (can) before the verb.",
@@ -57,6 +54,7 @@ const en: PartialByKey<LessonShape> = {
   exampleCan2: { en: ["I can wait."] },
   exampleCan3: { en: ["He can't eat."] },
   exampleCan4: { en: ["Can you see?"] },
+  vocabZhidao: { en: ["know; know how to (with zěnme)"] },
   proseKnowHow: {
     en: [
       "**To say you know how to do something**, put {{word:zhi1dao4}} {{word:zen3me}} (know how) before the verb.",
@@ -76,6 +74,7 @@ const en: PartialByKey<LessonShape> = {
   exampleKnowHow2: { en: ["Do you know how to say it?"] },
   exampleKnowHow3: { en: ["I know."] },
   exampleKnowHow4: { en: ["He doesn't know."] },
+  vocabAi: { en: ["love; love to"] },
   proseLove: {
     en: [
       "**To say you love to do something**, put {{word:ai4}} (love) before the verb.",
@@ -96,6 +95,7 @@ const en: PartialByKey<LessonShape> = {
   exampleLove3: { en: ["She loves to read."] },
   exampleLove4: { en: ["I love your clothes."] },
   exampleLove5: { en: ["Are these your clothes?"] },
+  vocabKeneng: { en: ["maybe, might"] },
   proseMaybe: {
     en: [
       "**To say maybe**, put {{word:ke3neng2}} (maybe) before the verb.",

@@ -1,11 +1,12 @@
 import { t } from '../lib/i18n.js';
 import styles from './GrammarBlock.module.css';
 
-export function GrammarBlock({ html, lang }) {
+// `label` defaults to "Grammar" in the page's language; pass null to leave it out.
+export function GrammarBlock({ html, lang, label = t(lang, 'grammar') }) {
   if (!html) return null;
   return (
     <div>
-      <div class={styles.label}>{t(lang, 'grammar')}</div>
+      {label && <div class={styles.label}>{label}</div>}
       <div class={styles.prose} dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   );

@@ -11,12 +11,7 @@ const en: PartialByKey<LessonShape> = {
       "In this lesson, you'll be able to ask \"What is this?\", \"Are you a person?\", \"Why?\", and \"How?\", and answer yes or no.",
     ],
   },
-  vocabShenme: { en: ["what, which"] },
   vocabMa: { en: ["turns a sentence into a yes-or-no question"] },
-  vocabWeishenme: { en: ["why"] },
-  vocabZenme: { en: ["how"] },
-  vocabWen: { en: ["ask"] },
-  vocabZhao: { en: ["look for"] },
   vocabGongju: { en: ["tool"] },
   vocabHezi: { en: ["box"] },
   proseYesNo: {
@@ -39,6 +34,9 @@ const en: PartialByKey<LessonShape> = {
   exampleYesNo3: { en: ["Does he eat fruit?"] },
   exampleYesNo4: { en: ["Do you listen to your parents?"] },
   exampleYesNo5: { en: ["Does she have money?"] },
+  vocabShenme: { en: ["what, which"] },
+  vocabWen: { en: ["ask"] },
+  vocabZhao: { en: ["look for"] },
   proseWhat: {
     en: [
       '**To ask "what?"**, put {{word:shen2me}} right where the answer would go.',
@@ -63,6 +61,8 @@ const en: PartialByKey<LessonShape> = {
   exampleWhat3: { en: ["What does he ask?"] },
   exampleWhat4: { en: ["Who eats fruit?"] },
   exampleWhat5: { en: ["I'm looking for a box."] },
+  vocabWeishenme: { en: ["why"] },
+  vocabZenme: { en: ["how"] },
   proseWhyHow: {
     en: [
       '**To ask "why?" or "how?"**, put {{word:wei4shen2me}} (why) at the start, or {{word:zen3me}} (how) before the verb.',

@@ -24,10 +24,6 @@ export type LessonShape = {
   summary: TSummary;
   /** Vocabulary: "be, is". */
   vocabShi: TVocab;
-  /** Vocabulary: "not". */
-  vocabBu: TVocab;
-  /** Vocabulary: "this". */
-  vocabZhe: TVocab;
   /** Vocabulary: "thing". */
   vocabDongxi: TVocab;
   /** Vocabulary: "person". */
@@ -50,6 +46,8 @@ export type LessonShape = {
   exampleIs3: TExample;
   /** Example: dòngwù shì dōngxi. */
   exampleIs4: TExample;
+  /** Vocabulary: "this". */
+  vocabZhe: TVocab;
   /** Say: To point at something, say zhè (this). Pattern: zhè shì + NOUN */
   proseThis: TProse;
   /** Example: zhè shì rén. */
@@ -60,6 +58,8 @@ export type LessonShape = {
   exampleThis3: TExample;
   /** Example: zhè shì nánrén. */
   exampleThis4: TExample;
+  /** Vocabulary: "not". */
+  vocabBu: TVocab;
   /** Say: To say something is not something, put bù before shì. Pattern: NOUN + bù shì + NOUN */
   proseNot: TProse;
   /** Example: dòngwù bù shì shuǐguǒ. */
@@ -110,8 +110,6 @@ const shape: LessonShape = {
   title: { type: "title" },
   summary: { type: "summary" },
   vocabShi: { type: "vocab", term: "{{word:shi4}}", ttsText: "是" },
-  vocabBu: { type: "vocab", term: "{{word:bu4}}", ttsText: "不" },
-  vocabZhe: { type: "vocab", term: "{{word:zhe4}}", ttsText: "这" },
   vocabDongxi: { type: "vocab", term: "{{word:dong1xi}}", ttsText: "东西" },
   vocabRen: { type: "vocab", term: "{{word:ren2}}", ttsText: "人" },
   vocabNuren: { type: "vocab", term: "{{word:nv3ren2}}", ttsText: "女人" },
@@ -151,6 +149,7 @@ const shape: LessonShape = {
     pinyin: "{{Word:dong4wu4}} {{word:shi4}} {{word:dong1xi}}.",
     ttsText: "动物是东西。",
   },
+  vocabZhe: { type: "vocab", term: "{{word:zhe4}}", ttsText: "这" },
   proseThis: { type: "prose" },
   exampleThis1: {
     type: "example",
@@ -172,6 +171,7 @@ const shape: LessonShape = {
     pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:nan2ren2}}.",
     ttsText: "这是男人。",
   },
+  vocabBu: { type: "vocab", term: "{{word:bu4}}", ttsText: "不" },
   proseNot: { type: "prose" },
   exampleNot1: {
     type: "example",

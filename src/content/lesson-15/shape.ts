@@ -22,20 +22,8 @@ export type LessonShape = {
   title: TTitle;
   /** Chapter summary: why you'd want this, then what you'll be able to say. */
   summary: TSummary;
-  /** Vocabulary: "become, change". */
-  vocabBian: TVocab;
-  /** Vocabulary: "puts the thing first: bǎ + thing + action". */
-  vocabBa: TVocab;
-  /** Vocabulary: "do, make". */
-  vocabNong: TVocab;
-  /** Vocabulary: "get". */
-  vocabDe: TVocab;
-  /** Vocabulary: "strength; yǒu lìliàng: strong". */
-  vocabLiliang: TVocab;
   /** Vocabulary: "bad, broken". */
   vocabHuai: TVocab;
-  /** Vocabulary: "mud, paste". */
-  vocabNi: TVocab;
   /** Say: To say something changed, put le after the adjective. Pattern: Thing + adjective + le */
   proseChanged: TProse;
   /** Example: shuǐ rè le. */
@@ -46,6 +34,10 @@ export type LessonShape = {
   exampleChanged3: TExample;
   /** Example: gōngjù huài le. */
   exampleChanged4: TExample;
+  /** Vocabulary: "become, change". */
+  vocabBian: TVocab;
+  /** Vocabulary: "mud, paste". */
+  vocabNi: TVocab;
   /** Say: To say something became different, put biàn (become) before the adjective, and le after. Pattern: Thing + biàn + adjective + le */
   proseBecame: TProse;
   /** Example: shuǐ biàn lěng le. */
@@ -58,6 +50,10 @@ export type LessonShape = {
   exampleBecame4: TExample;
   /** Example: dì-shàng yǒu ní. */
   exampleBecame5: TExample;
+  /** Vocabulary: "do, make". */
+  vocabNong: TVocab;
+  /** Vocabulary: "get". */
+  vocabDe: TVocab;
   /** Say: To say you make something so, put nòng (do, make) before the result. Pattern: Who + nòng + result */
   proseMake: TProse;
   /** Example: wǒ nòng hǎo le. */
@@ -70,6 +66,8 @@ export type LessonShape = {
   exampleMake4: TExample;
   /** Example: wǒ dé le xīn-de yīfu. */
   exampleMake5: TExample;
+  /** Vocabulary: "puts the thing first: bǎ + thing + action". */
+  vocabBa: TVocab;
   /** Say: To say what you do to a thing, put bǎ and the thing before the action. Pattern: Who + bǎ + thing + nòng + result */
   proseBa: TProse;
   /** Example: wǒ bǎ gōngjù nòng hǎo le. */
@@ -82,6 +80,8 @@ export type LessonShape = {
   exampleBa4: TExample;
   /** Example: tā bǎ shuǐ dōu nòng rè le. */
   exampleBa5: TExample;
+  /** Vocabulary: "strength; yǒu lìliàng: strong". */
+  vocabLiliang: TVocab;
   /** Say: To say strong, say yǒu lìliàng, "have strength". Pattern: Who + hěn yǒu lìliàng */
   proseStrong: TProse;
   /** Example: tā hěn yǒu lìliàng. */
@@ -127,17 +127,7 @@ export type LessonShape = {
 const shape: LessonShape = {
   title: { type: "title" },
   summary: { type: "summary" },
-  vocabBian: { type: "vocab", term: "{{word:bian4}}", ttsText: "变" },
-  vocabBa: { type: "vocab", term: "{{word:ba3}}", ttsText: "把" },
-  vocabNong: { type: "vocab", term: "{{word:nong4}}", ttsText: "弄" },
-  vocabDe: { type: "vocab", term: "{{word:de2}}", ttsText: "得" },
-  vocabLiliang: {
-    type: "vocab",
-    term: "{{word:li4liang4}}",
-    ttsText: "力量",
-  },
   vocabHuai: { type: "vocab", term: "{{word:huai4}}", ttsText: "坏" },
-  vocabNi: { type: "vocab", term: "{{word:ni2}}", ttsText: "泥" },
   proseChanged: { type: "prose" },
   exampleChanged1: {
     type: "example",
@@ -159,6 +149,8 @@ const shape: LessonShape = {
     pinyin: "{{Word:gong1ju4}} {{word:huai4}} {{word:le}}.",
     ttsText: "工具坏了。",
   },
+  vocabBian: { type: "vocab", term: "{{word:bian4}}", ttsText: "变" },
+  vocabNi: { type: "vocab", term: "{{word:ni2}}", ttsText: "泥" },
   proseBecame: { type: "prose" },
   exampleBecame1: {
     type: "example",
@@ -185,6 +177,8 @@ const shape: LessonShape = {
     pinyin: "{{Word:di4}}-{{word:shang4}} {{word:you3}} {{word:ni2}}.",
     ttsText: "地上有泥。",
   },
+  vocabNong: { type: "vocab", term: "{{word:nong4}}", ttsText: "弄" },
+  vocabDe: { type: "vocab", term: "{{word:de2}}", ttsText: "得" },
   proseMake: { type: "prose" },
   exampleMake1: {
     type: "example",
@@ -211,6 +205,7 @@ const shape: LessonShape = {
     pinyin: "{{Word:wo3}} {{word:de2}} {{word:le}} {{word:xin1}}-{{word:de}} {{word:yi1fu}}.",
     ttsText: "我得了新的衣服。",
   },
+  vocabBa: { type: "vocab", term: "{{word:ba3}}", ttsText: "把" },
   proseBa: { type: "prose" },
   exampleBa1: {
     type: "example",
@@ -236,6 +231,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ta1}} {{word:ba3}} {{word:shui3}} {{word:dou1}} {{word:nong4}} {{word:re4}} {{word:le}}.",
     ttsText: "他把水都弄热了。",
+  },
+  vocabLiliang: {
+    type: "vocab",
+    term: "{{word:li4liang4}}",
+    ttsText: "力量",
   },
   proseStrong: { type: "prose" },
   exampleStrong1: {

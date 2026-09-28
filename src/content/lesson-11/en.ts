@@ -11,17 +11,9 @@ const en: PartialByKey<LessonShape> = {
       "In this lesson, you'll be able to say \"I come from the market.\", \"Go!\", \"Get up!\", \"I've arrived home.\", and \"I'm going outside.\"",
     ],
   },
-  vocabCong: { en: ["from"] },
   vocabLai: { en: ["come"] },
   vocabQu: { en: ["go"] },
-  vocabQi: { en: ["rise; qǐ-lái: get up"] },
-  vocabWai: { en: ["out; wài-miàn: outside"] },
   vocabShichang: { en: ["market"] },
-  vocabKou: { en: ["opening, door"] },
-  vocabDao: { en: ["arrive, to"] },
-  vocabDong: { en: ["move"] },
-  vocabYuan: { en: ["far"] },
-  vocabJin: { en: ["near"] },
   proseComeGo: {
     en: [
       "**To say you come or go somewhere**, put {{word:lai2}} (come) or {{word:qu4}} (go) before the place.",
@@ -46,6 +38,7 @@ const en: PartialByKey<LessonShape> = {
   exampleComeGo7: { en: ["He comes over beside me."] },
   exampleComeGo8: { en: ["We're going to the market now."] },
   exampleComeGo9: { en: ["Come here a moment."] },
+  vocabCong: { en: ["from"] },
   proseFrom: {
     en: [
       "**To say where you come from**, put {{word:cong2}} (from) before the place, then {{word:lai2}}.",
@@ -61,6 +54,7 @@ const en: PartialByKey<LessonShape> = {
   exampleFrom2: { en: ["He comes from home."] },
   exampleFrom3: { en: ["Where do you come from?"] },
   exampleFrom4: { en: ["He comes from the front."] },
+  vocabDao: { en: ["arrive, to"] },
   proseArrive: {
     en: [
       "**To say you arrive somewhere**, put {{word:dao4}} (arrive) before the place.",
@@ -77,6 +71,9 @@ const en: PartialByKey<LessonShape> = {
   exampleArrive1: { en: ["I've arrived home."] },
   exampleArrive2: { en: ["She got to the market."] },
   exampleArrive3: { en: ["When do you arrive?"] },
+  vocabQi: { en: ["rise; qǐ-lái: get up"] },
+  vocabWai: { en: ["out; wài-miàn: outside"] },
+  vocabKou: { en: ["opening, door"] },
   proseDirection: {
     en: [
       "**To say which way you move**, join {{word:qi3}} (up), {{word:shang4}} (up), or {{word:xia4}} (down) to {{word:lai2}} or {{word:qu4}}.",
@@ -102,6 +99,7 @@ const en: PartialByKey<LessonShape> = {
   exampleDirection7: { en: ["Go outside through this opening."] },
   exampleDirection8: { en: ["The box's opening is small."] },
   exampleDirection9: { en: ["Where is the door?"] },
+  vocabDong: { en: ["move"] },
   proseMove: {
     en: [
       "**To say something moves**, use {{word:dong4}} (move).",
@@ -125,6 +123,8 @@ const en: PartialByKey<LessonShape> = {
   exampleMove2: { en: ["Don't move!"] },
   exampleMove3: { en: ["The animal is moving."] },
   exampleMove4: { en: ["Can you move?"] },
+  vocabYuan: { en: ["far"] },
+  vocabJin: { en: ["near"] },
   proseFar: {
     en: [
       "**To say a place is far or near**, use {{word:yuan3}} (far) or {{word:jin4}} (near).",

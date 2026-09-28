@@ -24,24 +24,6 @@ export type LessonShape = {
   summary: TSummary;
   /** Vocabulary: "in, inside". */
   vocabLi: TVocab;
-  /** Vocabulary: "on, up". */
-  vocabShang: TVocab;
-  /** Vocabulary: "under, down". */
-  vocabXia: TVocab;
-  /** Vocabulary: "front; qián-miàn: in front". */
-  vocabQian: TVocab;
-  /** Vocabulary: "beside (in pángbiān)". */
-  vocabPang: TVocab;
-  /** Vocabulary: "side". */
-  vocabBian: TVocab;
-  /** Vocabulary: "beside, next to". */
-  vocabPangbian: TVocab;
-  /** Vocabulary: "side; joins a place word: lǐ-miàn, qián-miàn". */
-  vocabMian: TVocab;
-  /** Vocabulary: "where". */
-  vocabNali: TVocab;
-  /** Vocabulary: "floor, ground". */
-  vocabDi: TVocab;
   /** Say: To say where someone or something is, put zài (be at) before the place. Pattern: Who + zài + place */
   proseWhere: TProse;
   /** Example: wǒ zài jiā. */
@@ -54,6 +36,8 @@ export type LessonShape = {
   exampleWhere4: TExample;
   /** Example: tā kěnéng zài jiā-lǐ. */
   exampleWhere5: TExample;
+  /** Vocabulary: "where". */
+  vocabNali: TVocab;
   /** Say: To ask "where?", put nǎlǐ where the place would go. Pattern: Who + zài nǎlǐ? */
   proseWhereQuestion: TProse;
   /** Example: nǐ zài nǎlǐ? */
@@ -62,6 +46,14 @@ export type LessonShape = {
   exampleWhereQuestion2: TExample;
   /** Example: zài nà-lǐ. */
   exampleWhereQuestion3: TExample;
+  /** Vocabulary: "on, up". */
+  vocabShang: TVocab;
+  /** Vocabulary: "under, down". */
+  vocabXia: TVocab;
+  /** Vocabulary: "side; joins a place word: lǐ-miàn, qián-miàn". */
+  vocabMian: TVocab;
+  /** Vocabulary: "floor, ground". */
+  vocabDi: TVocab;
   /** Say: To say in or on something, join lǐ (in) or shàng (on) to the place. Pattern: Thing + zài + place-lǐ / place-shàng */
   proseInOnUnder: TProse;
   /** Example: shuǐ zài hézi-lǐ. */
@@ -78,6 +70,14 @@ export type LessonShape = {
   exampleInOnUnder6: TExample;
   /** Example: wǒ-de jiǎo zài shuǐ-lǐ. */
   exampleInOnUnder7: TExample;
+  /** Vocabulary: "front; qián-miàn: in front". */
+  vocabQian: TVocab;
+  /** Vocabulary: "beside (in pángbiān)". */
+  vocabPang: TVocab;
+  /** Vocabulary: "side". */
+  vocabBian: TVocab;
+  /** Vocabulary: "beside, next to". */
+  vocabPangbian: TVocab;
   /** Say: To say in front, behind, or beside, join miàn (side) to qián (front) or hòu (back), or use pángbiān (beside). Pattern: Thing + zài + X-de qián-miàn / hòu-miàn / pángbiān */
   proseSides: TProse;
   /** Example: rén zài wǒ-de qián-miàn. */
@@ -138,19 +138,6 @@ const shape: LessonShape = {
   title: { type: "title" },
   summary: { type: "summary" },
   vocabLi: { type: "vocab", term: "{{word:li3}}", ttsText: "里面" },
-  vocabShang: { type: "vocab", term: "{{word:shang4}}", ttsText: "上面" },
-  vocabXia: { type: "vocab", term: "{{word:xia4}}", ttsText: "下面" },
-  vocabQian: { type: "vocab", term: "{{word:qian2}}", ttsText: "前" },
-  vocabPang: { type: "vocab", term: "{{word:pang2}}", ttsText: "旁" },
-  vocabBian: { type: "vocab", term: "{{word:bian1}}", ttsText: "边" },
-  vocabPangbian: {
-    type: "vocab",
-    term: "{{word:pang2bian1}}",
-    ttsText: "旁边",
-  },
-  vocabMian: { type: "vocab", term: "{{word:mian4}}", ttsText: "面" },
-  vocabNali: { type: "vocab", term: "{{word:na3li3}}", ttsText: "哪里" },
-  vocabDi: { type: "vocab", term: "{{word:di4}}", ttsText: "地" },
   proseWhere: { type: "prose" },
   exampleWhere1: {
     type: "example",
@@ -177,6 +164,7 @@ const shape: LessonShape = {
     pinyin: "{{Word:ta1}} {{word:ke3neng2}} {{word:zai4}} {{word:jia1}}-{{word:li3}}.",
     ttsText: "她可能在家里。",
   },
+  vocabNali: { type: "vocab", term: "{{word:na3li3}}", ttsText: "哪里" },
   proseWhereQuestion: { type: "prose" },
   exampleWhereQuestion1: {
     type: "example",
@@ -193,6 +181,10 @@ const shape: LessonShape = {
     pinyin: "{{Word:zai4}} {{word:na4}}-{{word:li3}}.",
     ttsText: "在那里。",
   },
+  vocabShang: { type: "vocab", term: "{{word:shang4}}", ttsText: "上面" },
+  vocabXia: { type: "vocab", term: "{{word:xia4}}", ttsText: "下面" },
+  vocabMian: { type: "vocab", term: "{{word:mian4}}", ttsText: "面" },
+  vocabDi: { type: "vocab", term: "{{word:di4}}", ttsText: "地" },
   proseInOnUnder: { type: "prose" },
   exampleInOnUnder1: {
     type: "example",
@@ -228,6 +220,14 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:wo3}}-{{word:de}} {{word:jiao3}} {{word:zai4}} {{word:shui3}}-{{word:li3}}.",
     ttsText: "我的脚在水里。",
+  },
+  vocabQian: { type: "vocab", term: "{{word:qian2}}", ttsText: "前" },
+  vocabPang: { type: "vocab", term: "{{word:pang2}}", ttsText: "旁" },
+  vocabBian: { type: "vocab", term: "{{word:bian1}}", ttsText: "边" },
+  vocabPangbian: {
+    type: "vocab",
+    term: "{{word:pang2bian1}}",
+    ttsText: "旁边",
   },
   proseSides: { type: "prose" },
   exampleSides1: {

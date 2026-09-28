@@ -11,15 +11,8 @@ const en: PartialByKey<LessonShape> = {
       "In this lesson, you'll be able to say \"I ate.\", \"I'm eating right now.\", \"I will eat.\", \"I've eaten rice before.\", and \"At night, I sleep.\"",
     ],
   },
-  vocabShijian: { en: ["time"] },
   vocabLe: { en: ["after a verb: it's done"] },
-  vocabHui: { en: ["will"] },
-  vocabZai: { en: ["before a verb: right now"] },
-  vocabRi: { en: ["sun, day"] },
-  vocabYue: { en: ["moon, night"] },
   vocabShuijiao: { en: ["sleep"] },
-  vocabGuo: { en: ["after a verb: have done before"] },
-  vocabXianzai: { en: ["now"] },
   vocabFasheng: { en: ["happen"] },
   proseDone: {
     en: [
@@ -42,6 +35,8 @@ const en: PartialByKey<LessonShape> = {
   exampleDone3: { en: ["Did you see it?"] },
   exampleDone4: { en: ["What happened?"] },
   exampleDone5: { en: ["Do you know what happened?"] },
+  vocabZai: { en: ["before a verb: right now"] },
+  vocabXianzai: { en: ["now"] },
   proseNow: {
     en: [
       "**To say something is happening right now**, put {{word:zai4}} before the verb.",
@@ -63,6 +58,7 @@ const en: PartialByKey<LessonShape> = {
   exampleNow4: { en: ["Why are you sleeping?"] },
   exampleNow5: { en: ["He's sleeping now."] },
   exampleNow6: { en: ["He might be sleeping."] },
+  vocabHui: { en: ["will"] },
   proseWill: {
     en: [
       "**To say something will happen**, put {{word:hui4}} before the verb.",
@@ -79,6 +75,8 @@ const en: PartialByKey<LessonShape> = {
   exampleWill1: { en: ["I will eat."] },
   exampleWill2: { en: ["He will wait."] },
   exampleWill3: { en: ["Will you sleep?"] },
+  vocabYue: { en: ["moon, night"] },
+  vocabGuo: { en: ["after a verb: have done before"] },
   proseBefore: {
     en: [
       "**To say you have done something before**, put {{word:guo4}} after the verb.",
@@ -100,6 +98,8 @@ const en: PartialByKey<LessonShape> = {
   exampleBefore2: { en: ["Have you ever looked at the moon?"] },
   exampleBefore3: { en: ["He has said it before."] },
   exampleBefore4: { en: ["This has happened before."] },
+  vocabShijian: { en: ["time"] },
+  vocabRi: { en: ["sun, day"] },
   proseTime: {
     en: [
       "**To say when**, put the time first, then a comma, then the rest.",

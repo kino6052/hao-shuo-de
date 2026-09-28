@@ -24,10 +24,6 @@ export type LessonShape = {
   summary: TSummary;
   /** Vocabulary: "than". */
   vocabBi: TVocab;
-  /** Vocabulary: "the same". */
-  vocabYiyang: TVocab;
-  /** Vocabulary: "different". */
-  vocabButong: TVocab;
   /** Vocabulary: "hard". */
   vocabYing: TVocab;
   /** Vocabulary: "round". */
@@ -36,10 +32,6 @@ export type LessonShape = {
   vocabGunzi: TVocab;
   /** Vocabulary: "line, rope, thread". */
   vocabXian: TVocab;
-  /** Vocabulary: "other, else". */
-  vocabBiede: TVocab;
-  /** Vocabulary: "kind, type". */
-  vocabZhong: TVocab;
   /** Say: To say one thing is more than another, put bǐ (than) between them, then the adjective. Pattern: A + bǐ + B + adjective */
   proseThan: TProse;
   /** Example: wǒ bǐ nǐ dà. */
@@ -60,6 +52,8 @@ export type LessonShape = {
   exampleThan8: TExample;
   /** Example: rén bǐ jīn yǒu jiàzhí. */
   exampleThan9: TExample;
+  /** Vocabulary: "the same". */
+  vocabYiyang: TVocab;
   /** Say: To say things are the same, use yīyàng. Pattern: Things + yīyàng / yīyàng-de + noun */
   proseSame: TProse;
   /** Example: tā-men yīyàng. */
@@ -68,6 +62,10 @@ export type LessonShape = {
   exampleSame2: TExample;
   /** Example: wǒ yào yīyàng-de xiàn. */
   exampleSame3: TExample;
+  /** Vocabulary: "different". */
+  vocabButong: TVocab;
+  /** Vocabulary: "other, else". */
+  vocabBiede: TVocab;
   /** Say: To say things are different, use bùtóng. Pattern: Things + bùtóng / bùtóng-de + noun */
   proseDifferent: TProse;
   /** Example: tā-men bùtóng. */
@@ -82,6 +80,8 @@ export type LessonShape = {
   exampleDifferent5: TExample;
   /** Example: biéde rén bǐ wǒ dà. */
   exampleDifferent6: TExample;
+  /** Vocabulary: "kind, type". */
+  vocabZhong: TVocab;
   /** Say: To say what kind, use zhǒng (kind). It goes after zhè or nà, like gè. Pattern: zhè-zhǒng / nà-zhǒng + noun */
   proseKind: TProse;
   /** Example: zhè-zhǒng shuǐguǒ hěn tián. */
@@ -146,22 +146,10 @@ const shape: LessonShape = {
   title: { type: "title" },
   summary: { type: "summary" },
   vocabBi: { type: "vocab", term: "{{word:bi3}}", ttsText: "比" },
-  vocabYiyang: {
-    type: "vocab",
-    term: "{{word:yi1yang4}}",
-    ttsText: "一样",
-  },
-  vocabButong: {
-    type: "vocab",
-    term: "{{word:bu4tong2}}",
-    ttsText: "不同",
-  },
   vocabYing: { type: "vocab", term: "{{word:ying4}}", ttsText: "硬" },
   vocabYuan: { type: "vocab", term: "{{word:yuan2}}", ttsText: "圆" },
   vocabGunzi: { type: "vocab", term: "{{word:gun4zi}}", ttsText: "棍子" },
   vocabXian: { type: "vocab", term: "{{word:xian4}}", ttsText: "线" },
-  vocabBiede: { type: "vocab", term: "{{word:bie2de}}", ttsText: "别的" },
-  vocabZhong: { type: "vocab", term: "{{word:zhong3}}", ttsText: "种" },
   proseThan: { type: "prose" },
   exampleThan1: {
     type: "example",
@@ -208,6 +196,11 @@ const shape: LessonShape = {
     pinyin: "{{Word:ren2}} {{word:bi3}} {{word:jin1}} {{word:you3}} {{word:jia4zhi2}}.",
     ttsText: "人比金有价值。",
   },
+  vocabYiyang: {
+    type: "vocab",
+    term: "{{word:yi1yang4}}",
+    ttsText: "一样",
+  },
   proseSame: { type: "prose" },
   exampleSame1: {
     type: "example",
@@ -224,6 +217,12 @@ const shape: LessonShape = {
     pinyin: "{{Word:wo3}} {{word:yao4}} {{word:yi1yang4}}-{{word:de}} {{word:xian4}}.",
     ttsText: "我要一样的线。",
   },
+  vocabButong: {
+    type: "vocab",
+    term: "{{word:bu4tong2}}",
+    ttsText: "不同",
+  },
+  vocabBiede: { type: "vocab", term: "{{word:bie2de}}", ttsText: "别的" },
   proseDifferent: { type: "prose" },
   exampleDifferent1: {
     type: "example",
@@ -255,6 +254,7 @@ const shape: LessonShape = {
     pinyin: "{{Word:bie2de}} {{word:ren2}} {{word:bi3}} {{word:wo3}} {{word:da4}}.",
     ttsText: "别的人比我大。",
   },
+  vocabZhong: { type: "vocab", term: "{{word:zhong3}}", ttsText: "种" },
   proseKind: { type: "prose" },
   exampleKind1: {
     type: "example",

@@ -12,15 +12,6 @@ const en: PartialByKey<LessonShape> = {
     ],
   },
   vocabLi: { en: ["in, inside"] },
-  vocabShang: { en: ["on, up"] },
-  vocabXia: { en: ["under, down"] },
-  vocabQian: { en: ["front; qián-miàn: in front"] },
-  vocabPang: { en: ["beside (in pángbiān)"] },
-  vocabBian: { en: ["side"] },
-  vocabPangbian: { en: ["beside, next to"] },
-  vocabMian: { en: ["side; joins a place word: lǐ-miàn, qián-miàn"] },
-  vocabNali: { en: ["where"] },
-  vocabDi: { en: ["floor, ground"] },
   proseWhere: {
     en: [
       "**To say where someone or something is**, put {{word:zai4}} (be at) before the place.",
@@ -41,6 +32,7 @@ const en: PartialByKey<LessonShape> = {
   exampleWhere3: { en: ["He's here."] },
   exampleWhere4: { en: ["He stays at home."] },
   exampleWhere5: { en: ["She might be at home."] },
+  vocabNali: { en: ["where"] },
   proseWhereQuestion: {
     en: [
       '**To ask "where?"**, put {{word:na3li3}} where the place would go.',
@@ -59,6 +51,10 @@ const en: PartialByKey<LessonShape> = {
   exampleWhereQuestion1: { en: ["Where are you?"] },
   exampleWhereQuestion2: { en: ["Where is the box?"] },
   exampleWhereQuestion3: { en: ["It's over there."] },
+  vocabShang: { en: ["on, up"] },
+  vocabXia: { en: ["under, down"] },
+  vocabMian: { en: ["side; joins a place word: lǐ-miàn, qián-miàn"] },
+  vocabDi: { en: ["floor, ground"] },
   proseInOnUnder: {
     en: [
       "**To say in or on something**, join {{word:li3}} (in) or {{word:shang4}} (on) to the place.",
@@ -81,6 +77,10 @@ const en: PartialByKey<LessonShape> = {
   exampleInOnUnder5: { en: ["My clothes are on the floor."] },
   exampleInOnUnder6: { en: ["There is water under the box."] },
   exampleInOnUnder7: { en: ["My feet are in the water."] },
+  vocabQian: { en: ["front; qián-miàn: in front"] },
+  vocabPang: { en: ["beside (in pángbiān)"] },
+  vocabBian: { en: ["side"] },
+  vocabPangbian: { en: ["beside, next to"] },
   proseSides: {
     en: [
       "**To say in front, behind, or beside**, join {{word:mian4}} (side) to {{word:qian2}} (front) or {{word:hou4}} (back), or use {{word:pang2bian1}} (beside).",

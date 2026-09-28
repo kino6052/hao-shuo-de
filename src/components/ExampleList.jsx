@@ -1,11 +1,12 @@
 import { AudioButton } from './AudioButton.jsx';
 import styles from './ExampleList.module.css';
 
-export function ExampleList({ items }) {
+// `label` defaults to "Examples"; pass null to leave it out.
+export function ExampleList({ items, label = 'Examples' }) {
   if (!items || items.length === 0) return null;
   return (
     <div>
-      <div class={styles.label}>Examples</div>
+      {label && <div class={styles.label}>{label}</div>}
       <div class={styles.list}>
         {items.map((ex, i) => (
           <div key={i} class={styles.card}>

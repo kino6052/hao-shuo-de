@@ -217,6 +217,54 @@ describe('buildTsChapterView: info/warning', () => {
   });
 });
 
+describe('buildTsChapterView: flow', () => {
+  const prose = (text) => ({ type: 'prose', en: [text], zh: [], ru: [], tldr: { en: ['t'], zh: [], ru: [] }, necessity: { en: ['n'], zh: [], ru: [] } });
+  const vocab = (term) => ({ type: 'vocab', term, en: ['gloss'], zh: [], ru: [] });
+  const example = (pinyin) => ({ type: 'example', pinyin, en: ['x'], zh: [], ru: [] });
+  const exercise = (text) => ({ type: 'exercise', en: [text], zh: [], ru: [] });
+  const answer = (text) => ({ type: 'answer', en: [text], zh: [], ru: [] });
+
+  test('keeps the chapter order, one group per run of the same kind', () => {
+    const entries = [
+      { type: 'title', en: ['T'], zh: [], ru: [] },
+      vocab('a'),
+      prose('Point one.'),
+      example('ex 1'),
+      example('ex 2'),
+      vocab('b'),
+      prose('Point two.'),
+      example('ex 3'),
+      { type: 'info', items: [{ text: { en: ['Box'], zh: [], ru: [] } }] },
+    ];
+    const kinds = buildTsChapterView(meta, entries, 'eng').flow.map((g) => [g.kind, g.items.length]);
+    expect(kinds).toEqual([['vocab', 1], ['html', 1], ['examples', 2], ['vocab', 1], ['html', 1], ['examples', 1], ['html', 1]]);
+  });
+
+  test('exercises can sit anywhere, and each group gets the answers with its numbers', () => {
+    const entries = [
+      prose('Point one.'),
+      exercise('Q1'),
+      prose('Point two.'),
+      exercise('Q2'),
+      exercise('Q3'),
+      answer('A1'),
+      answer('A2'),
+      answer('A3'),
+    ];
+    const groups = buildTsChapterView(meta, entries, 'eng').flow.filter((g) => g.kind === 'exercise');
+    expect(groups.map((g) => [g.start, g.questions, g.answers.map((a) => a.text)])).toEqual([
+      [0, ['Q1'], ['A1']],
+      [1, ['Q2', 'Q3'], ['A2', 'A3']],
+    ]);
+  });
+
+  test('an exercise group with no answers in this language gets none', () => {
+    const entries = [exercise('Q1'), { type: 'answer', en: [], zh: [], ru: [] }];
+    const [group] = buildTsChapterView(meta, entries, 'eng').flow;
+    expect(group.answers).toEqual([]);
+  });
+});
+
 describe('buildTsChapterView: unsupported entry type', () => {
   test('throws, naming the chapter id and the bad type', () => {
     const entries = [{ type: 'heading', en: ['x'], zh: [], ru: [] }];

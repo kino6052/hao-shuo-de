@@ -24,12 +24,8 @@ export type LessonShape = {
   summary: TSummary;
   /** Vocabulary: "one". */
   vocabYi: TVocab;
-  /** Vocabulary: "two (before gè)". */
-  vocabLiang: TVocab;
   /** Vocabulary: "two (counting, number two, 12, 20)". */
   vocabEr: TVocab;
-  /** Vocabulary: "number (as in number two)". */
-  vocabHao: TVocab;
   /** Vocabulary: "three". */
   vocabSan: TVocab;
   /** Vocabulary: "four". */
@@ -56,6 +52,8 @@ export type LessonShape = {
   exampleAloud3: TExample;
   /** Example: sān bǐ èr duō. */
   exampleAloud4: TExample;
+  /** Vocabulary: "two (before gè)". */
+  vocabLiang: TVocab;
   /** Say: To count things, put the number, then gè, then the thing. Pattern: number + gè + noun */
   proseCount: TProse;
   /** Example: yī-ge rén. */
@@ -114,6 +112,8 @@ export type LessonShape = {
   exampleTeens5: TExample;
   /** Example: sān-shí-ge hézi. */
   exampleTeens6: TExample;
+  /** Vocabulary: "number (as in number two)". */
+  vocabHao: TVocab;
   /** Say: To say number one, number two, put hào after the number. Pattern: number + hào */
   proseLabel: TProse;
   /** Example: wǒ-de jiā shì wǔ-hào. */
@@ -186,9 +186,7 @@ const shape: LessonShape = {
   title: { type: "title" },
   summary: { type: "summary" },
   vocabYi: { type: "vocab", term: "{{word:yi1}}", ttsText: "一" },
-  vocabLiang: { type: "vocab", term: "{{word:liang3}}", ttsText: "两" },
   vocabEr: { type: "vocab", term: "{{word:er4}}", ttsText: "二" },
-  vocabHao: { type: "vocab", term: "{{word:hao4}}", ttsText: "号" },
   vocabSan: { type: "vocab", term: "{{word:san1}}", ttsText: "三" },
   vocabSi: { type: "vocab", term: "{{word:si4}}", ttsText: "四" },
   vocabWu: { type: "vocab", term: "{{word:wu3}}", ttsText: "五" },
@@ -218,6 +216,7 @@ const shape: LessonShape = {
     pinyin: "{{Word:san1}} {{word:bi3}} {{word:er4}} {{word:duo1}}.",
     ttsText: "三比二多。",
   },
+  vocabLiang: { type: "vocab", term: "{{word:liang3}}", ttsText: "两" },
   proseCount: { type: "prose" },
   exampleCount1: {
     type: "example",
@@ -355,6 +354,7 @@ const shape: LessonShape = {
     pinyin: "{{Word:san1}}-{{word:shi2}}-ge {{word:he2zi}}.",
     ttsText: "三十个盒子。",
   },
+  vocabHao: { type: "vocab", term: "{{word:hao4}}", ttsText: "号" },
   proseLabel: { type: "prose" },
   exampleLabel1: {
     type: "example",

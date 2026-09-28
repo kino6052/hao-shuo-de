@@ -12,14 +12,10 @@ const en: PartialByKey<LessonShape> = {
     ],
   },
   vocabBi: { en: ["than"] },
-  vocabYiyang: { en: ["the same"] },
-  vocabButong: { en: ["different"] },
   vocabYing: { en: ["hard"] },
   vocabYuan: { en: ["round"] },
   vocabGunzi: { en: ["stick"] },
   vocabXian: { en: ["line, rope, thread"] },
-  vocabBiede: { en: ["other, else"] },
-  vocabZhong: { en: ["kind, type"] },
   proseThan: {
     en: [
       "**To say one thing is more than another**, put {{word:bi3}} (than) between them, then the adjective.",
@@ -44,6 +40,7 @@ const en: PartialByKey<LessonShape> = {
   exampleThan7: { en: ["The market is farther than home."] },
   exampleThan8: { en: ["My home is nearer than yours."] },
   exampleThan9: { en: ["People are worth more than money."] },
+  vocabYiyang: { en: ["the same"] },
   proseSame: {
     en: [
       "**To say things are the same**, use {{word:yi1yang4}}.",
@@ -60,6 +57,8 @@ const en: PartialByKey<LessonShape> = {
   exampleSame1: { en: ["They're the same."] },
   exampleSame2: { en: ["Our clothes are the same."] },
   exampleSame3: { en: ["I want the same thread."] },
+  vocabButong: { en: ["different"] },
+  vocabBiede: { en: ["other, else"] },
   proseDifferent: {
     en: [
       "**To say things are different**, use {{word:bu4tong2}}.",
@@ -85,6 +84,7 @@ const en: PartialByKey<LessonShape> = {
   exampleDifferent4: { en: ["I want something else."] },
   exampleDifferent5: { en: ["Do you have other clothes?"] },
   exampleDifferent6: { en: ["The other people are bigger than me."] },
+  vocabZhong: { en: ["kind, type"] },
   proseKind: {
     en: [
       "**To say what kind**, use {{word:zhong3}} (kind). It goes after {{word:zhe4}} or {{word:na4}}, like {{word:ge4}}.",

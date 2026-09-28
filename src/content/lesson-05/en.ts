@@ -11,18 +11,11 @@ const en: PartialByKey<LessonShape> = {
       "In this lesson, you'll be able to say \"I eat rice.\", \"She doesn't write.\", and \"I don't have money.\"",
     ],
   },
-  vocabYou: { en: ["have; there is"] },
-  vocabMei: {
-    en: [
-      "not, but only with {{word:you3}}: {{word:mei2}}-{{word:you3}} means \"don't have\"",
-    ],
-  },
   vocabChi: { en: ["eat, drink"] },
   vocabKan: { en: ["look, read"] },
   vocabTing: { en: ["listen, hear"] },
   vocabShuo: { en: ["say, speak"] },
   vocabXie: { en: ["write"] },
-  vocabJin: { en: ["money"] },
   vocabMifan: { en: ["rice"] },
   proseDo: {
     en: [
@@ -61,6 +54,13 @@ const en: PartialByKey<LessonShape> = {
   exampleNot2: { en: ["I don't eat."] },
   exampleNot3: { en: ["You don't listen."] },
   exampleNot4: { en: ["I don't speak."] },
+  vocabYou: { en: ["have; there is"] },
+  vocabMei: {
+    en: [
+      "not, but only with {{word:you3}}: {{word:mei2}}-{{word:you3}} means \"don't have\"",
+    ],
+  },
+  vocabJin: { en: ["money"] },
   proseHave: {
     en: [
       "**To say you have something**, use {{word:you3}}. For \"don't have\", say {{word:mei2}}-{{word:you3}}.",

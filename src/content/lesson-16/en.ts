@@ -12,9 +12,7 @@ const en: PartialByKey<LessonShape> = {
     ],
   },
   vocabYi: { en: ["one"] },
-  vocabLiang: { en: ["two (before gè)"] },
   vocabEr: { en: ["two (counting, number two, 12, 20)"] },
-  vocabHao: { en: ["number (as in number two)"] },
   vocabSan: { en: ["three"] },
   vocabSi: { en: ["four"] },
   vocabWu: { en: ["five"] },
@@ -42,6 +40,7 @@ const en: PartialByKey<LessonShape> = {
   exampleAloud2: { en: ["Four, five, six."] },
   exampleAloud3: { en: ["Seven, eight, nine, ten."] },
   exampleAloud4: { en: ["Three is more than two."] },
+  vocabLiang: { en: ["two (before gè)"] },
   proseCount: {
     en: [
       "**To count things**, put the number, then {{word:ge4}}, then the thing.",
@@ -99,6 +98,7 @@ const en: PartialByKey<LessonShape> = {
   exampleTeens4: { en: ["Twelve pieces of fruit."] },
   exampleTeens5: { en: ["Twenty people."] },
   exampleTeens6: { en: ["Thirty boxes."] },
+  vocabHao: { en: ["number (as in number two)"] },
   proseLabel: {
     en: [
       "**To say number one, number two**, put {{word:hao4}} after the number.",

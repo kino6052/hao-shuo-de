@@ -24,12 +24,6 @@ export type LessonShape = {
   summary: TSummary;
   /** Vocabulary: "very". */
   vocabHen: TVocab;
-  /** Vocabulary: "joins an adjective to a noun". */
-  vocabDe: TVocab;
-  /** Vocabulary: "many, much". */
-  vocabDuo: TVocab;
-  /** Vocabulary: "few, little". */
-  vocabShao: TVocab;
   /** Vocabulary: "good". */
   vocabHao: TVocab;
   /** Vocabulary: "big". */
@@ -54,6 +48,8 @@ export type LessonShape = {
   exampleLike4: TExample;
   /** Example: shuǐguǒ hěn dà. */
   exampleLike5: TExample;
+  /** Vocabulary: "joins an adjective to a noun". */
+  vocabDe: TVocab;
   /** Say: To put an adjective before a noun, join them with -de. Pattern: adjective-de + NOUN */
   proseBefore: TProse;
   /** Example: dà-de dìfāng. */
@@ -66,6 +62,10 @@ export type LessonShape = {
   exampleBefore4: TExample;
   /** Example: zhè shì hěn-dà-de dòngwù. */
   exampleBefore5: TExample;
+  /** Vocabulary: "many, much". */
+  vocabDuo: TVocab;
+  /** Vocabulary: "few, little". */
+  vocabShao: TVocab;
   /** Say: To say many, put hěn-duō-de before the noun. Pattern: hěn-duō-de + NOUN */
   proseMany: TProse;
   /** Example: hěn-duō-de rén. */
@@ -120,9 +120,6 @@ const shape: LessonShape = {
   title: { type: "title" },
   summary: { type: "summary" },
   vocabHen: { type: "vocab", term: "{{word:hen3}}", ttsText: "很" },
-  vocabDe: { type: "vocab", term: "{{word:de}}", ttsText: "的" },
-  vocabDuo: { type: "vocab", term: "{{word:duo1}}", ttsText: "多" },
-  vocabShao: { type: "vocab", term: "{{word:shao3}}", ttsText: "少" },
   vocabHao: { type: "vocab", term: "{{word:hao3}}", ttsText: "好" },
   vocabDa: { type: "vocab", term: "{{word:da4}}", ttsText: "大" },
   vocabXiao: { type: "vocab", term: "{{word:xiao3}}", ttsText: "小" },
@@ -159,6 +156,7 @@ const shape: LessonShape = {
     pinyin: "{{Word:shui3guo3}} {{word:hen3}} {{word:da4}}.",
     ttsText: "水果很大。",
   },
+  vocabDe: { type: "vocab", term: "{{word:de}}", ttsText: "的" },
   proseBefore: { type: "prose" },
   exampleBefore1: {
     type: "example",
@@ -185,6 +183,8 @@ const shape: LessonShape = {
     pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:hen3}}-{{word:da4}}-{{word:de}} {{word:dong4wu4}}.",
     ttsText: "这是很大的动物。",
   },
+  vocabDuo: { type: "vocab", term: "{{word:duo1}}", ttsText: "多" },
+  vocabShao: { type: "vocab", term: "{{word:shao3}}", ttsText: "少" },
   proseMany: { type: "prose" },
   exampleMany1: {
     type: "example",

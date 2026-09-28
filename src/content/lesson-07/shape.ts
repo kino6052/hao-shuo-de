@@ -5,6 +5,7 @@
 //
 // Rewritten in Phase 2 (BOOK_PLAN.md): want, can, know how, love to, and
 // maybe (kěnéng, D36). Only words from lessons 2-7; passes every gate.
+// Word cards sit next to the points that use them.
 import type {
   TTitle,
   TSummary,
@@ -23,14 +24,6 @@ export type LessonShape = {
   summary: TSummary;
   /** Vocabulary: "want; want to". */
   vocabYao: TVocab;
-  /** Vocabulary: "can". */
-  vocabNeng: TVocab;
-  /** Vocabulary: "know; know how to (with zěnme)". */
-  vocabZhidao: TVocab;
-  /** Vocabulary: "love; love to". */
-  vocabAi: TVocab;
-  /** Vocabulary: "maybe, might". */
-  vocabKeneng: TVocab;
   /** Vocabulary: "wait". */
   vocabDeng: TVocab;
   /** Vocabulary: "clothes". */
@@ -47,6 +40,8 @@ export type LessonShape = {
   exampleWant4: TExample;
   /** Example: nǐ yào děng ma? */
   exampleWant5: TExample;
+  /** Vocabulary: "can". */
+  vocabNeng: TVocab;
   /** Say: I can do something. Who + néng + verb; bù néng for can't. */
   proseCan: TProse;
   /** Example: wǒ néng tīng. */
@@ -57,6 +52,8 @@ export type LessonShape = {
   exampleCan3: TExample;
   /** Example: nǐ néng kàn ma? */
   exampleCan4: TExample;
+  /** Vocabulary: "know; know how to (with zěnme)". */
+  vocabZhidao: TVocab;
   /** Say: I know how to do something. Who + zhīdào zěnme + verb. */
   proseKnowHow: TProse;
   /** Example: wǒ zhīdào zěnme xiě. */
@@ -67,6 +64,8 @@ export type LessonShape = {
   exampleKnowHow3: TExample;
   /** Example: tā bù zhīdào. */
   exampleKnowHow4: TExample;
+  /** Vocabulary: "love; love to". */
+  vocabAi: TVocab;
   /** Say: I love to do something. Who + ài + verb. */
   proseLove: TProse;
   /** Example: wǒ ài chī. */
@@ -79,6 +78,8 @@ export type LessonShape = {
   exampleLove4: TExample;
   /** Example: zhè shì nǐ-de yīfu ma? */
   exampleLove5: TExample;
+  /** Vocabulary: "maybe, might". */
+  vocabKeneng: TVocab;
   /** Say: To say maybe, put kěnéng (maybe) before the verb. Pattern: Who + kěnéng + verb */
   proseMaybe: TProse;
   /** Example: tā kěnéng zhīdào. */
@@ -129,18 +130,6 @@ const shape: LessonShape = {
   title: { type: "title" },
   summary: { type: "summary" },
   vocabYao: { type: "vocab", term: "{{word:yao4}}", ttsText: "要" },
-  vocabNeng: { type: "vocab", term: "{{word:neng2}}", ttsText: "能" },
-  vocabZhidao: {
-    type: "vocab",
-    term: "{{word:zhi1dao4}}",
-    ttsText: "知道",
-  },
-  vocabAi: { type: "vocab", term: "{{word:ai4}}", ttsText: "爱" },
-  vocabKeneng: {
-    type: "vocab",
-    term: "{{word:ke3neng2}}",
-    ttsText: "可能",
-  },
   vocabDeng: { type: "vocab", term: "{{word:deng3}}", ttsText: "等" },
   vocabYifu: { type: "vocab", term: "{{word:yi1fu}}", ttsText: "衣服" },
   proseWant: { type: "prose" },
@@ -169,6 +158,7 @@ const shape: LessonShape = {
     pinyin: "{{Word:ni3}} {{word:yao4}} {{word:deng3}} {{word:ma}}?",
     ttsText: "你要等吗？",
   },
+  vocabNeng: { type: "vocab", term: "{{word:neng2}}", ttsText: "能" },
   proseCan: { type: "prose" },
   exampleCan1: {
     type: "example",
@@ -189,6 +179,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ni3}} {{word:neng2}} {{word:kan4}} {{word:ma}}?",
     ttsText: "你能看吗？",
+  },
+  vocabZhidao: {
+    type: "vocab",
+    term: "{{word:zhi1dao4}}",
+    ttsText: "知道",
   },
   proseKnowHow: { type: "prose" },
   exampleKnowHow1: {
@@ -211,6 +206,7 @@ const shape: LessonShape = {
     pinyin: "{{Word:ta1}} {{word:bu4}} {{word:zhi1dao4}}.",
     ttsText: "他不知道。",
   },
+  vocabAi: { type: "vocab", term: "{{word:ai4}}", ttsText: "爱" },
   proseLove: { type: "prose" },
   exampleLove1: {
     type: "example",
@@ -236,6 +232,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:ni3}}-{{word:de}} {{word:yi1fu}} {{word:ma}}?",
     ttsText: "这是你的衣服吗？",
+  },
+  vocabKeneng: {
+    type: "vocab",
+    term: "{{word:ke3neng2}}",
+    ttsText: "可能",
   },
   proseMaybe: { type: "prose" },
   exampleMaybe1: {

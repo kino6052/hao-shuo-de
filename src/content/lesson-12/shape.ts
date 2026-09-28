@@ -32,8 +32,6 @@ export type LessonShape = {
   vocabTian: TVocab;
   /** Vocabulary: "strange". */
   vocabQiguai: TVocab;
-  /** Vocabulary: "new". */
-  vocabXin: TVocab;
   /** Vocabulary: "body; health". */
   vocabShenti: TVocab;
   /** Vocabulary: "value, worth". */
@@ -72,6 +70,8 @@ export type LessonShape = {
   exampleNot2: TExample;
   /** Example: mǐfàn bù rè. */
   exampleNot3: TExample;
+  /** Vocabulary: "new". */
+  vocabXin: TVocab;
   /** Say: To ask how something is, put ma after the adjective. Pattern: Thing + adjective + ma? */
   proseAsk: TProse;
   /** Example: shuǐ rè ma? */
@@ -136,7 +136,6 @@ const shape: LessonShape = {
     term: "{{word:qi2guai4}}",
     ttsText: "奇怪",
   },
-  vocabXin: { type: "vocab", term: "{{word:xin1}}", ttsText: "新" },
   vocabShenti: {
     type: "vocab",
     term: "{{word:shen1ti3}}",
@@ -220,6 +219,7 @@ const shape: LessonShape = {
     pinyin: "{{Word:mi3fan4}} {{word:bu4}} {{word:re4}}.",
     ttsText: "米饭不热。",
   },
+  vocabXin: { type: "vocab", term: "{{word:xin1}}", ttsText: "新" },
   proseAsk: { type: "prose" },
   exampleAsk1: {
     type: "example",

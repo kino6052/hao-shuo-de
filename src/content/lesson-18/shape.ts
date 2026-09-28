@@ -24,12 +24,6 @@ export type LessonShape = {
   summary: TSummary;
   /** Vocabulary: "word". */
   vocabCi: TVocab;
-  /** Vocabulary: "way, method". */
-  vocabFangfa: TVocab;
-  /** Vocabulary: "nose". */
-  vocabBizi: TVocab;
-  /** Vocabulary: "skin". */
-  vocabPifu: TVocab;
   /** Say: To name the thing an action is about, put -de after the verb. Pattern: verb-de */
   proseThing: TProse;
   /** Example: wǒ yào chī-de. */
@@ -64,6 +58,12 @@ export type LessonShape = {
   exampleHow3: TExample;
   /** Example: tā shuō-de bǐ wǒ hǎo. */
   exampleHow4: TExample;
+  /** Vocabulary: "way, method". */
+  vocabFangfa: TVocab;
+  /** Vocabulary: "nose". */
+  vocabBizi: TVocab;
+  /** Vocabulary: "skin". */
+  vocabPifu: TVocab;
   /** Say: To name something there's no word for, describe it, then add -de and the noun. Pattern: description-de + noun */
   proseName: TProse;
   /** Example: zài-shuǐ-lǐ-de dòngwù. */
@@ -128,13 +128,6 @@ const shape: LessonShape = {
   title: { type: "title" },
   summary: { type: "summary" },
   vocabCi: { type: "vocab", term: "{{word:ci2}}", ttsText: "词" },
-  vocabFangfa: {
-    type: "vocab",
-    term: "{{word:fang1fa3}}",
-    ttsText: "方法",
-  },
-  vocabBizi: { type: "vocab", term: "{{word:bi2zi}}", ttsText: "鼻子" },
-  vocabPifu: { type: "vocab", term: "{{word:pi2fu1}}", ttsText: "皮肤" },
   proseThing: { type: "prose" },
   exampleThing1: {
     type: "example",
@@ -208,6 +201,13 @@ const shape: LessonShape = {
     pinyin: "{{Word:ta1}} {{word:shuo1}}-{{word:de}} {{word:bi3}} {{word:wo3}} {{word:hao3}}.",
     ttsText: "他说得比我好。",
   },
+  vocabFangfa: {
+    type: "vocab",
+    term: "{{word:fang1fa3}}",
+    ttsText: "方法",
+  },
+  vocabBizi: { type: "vocab", term: "{{word:bi2zi}}", ttsText: "鼻子" },
+  vocabPifu: { type: "vocab", term: "{{word:pi2fu1}}", ttsText: "皮肤" },
   proseName: { type: "prose" },
   exampleName1: {
     type: "example",

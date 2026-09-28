@@ -24,16 +24,10 @@ export type LessonShape = {
   summary: TSummary;
   /** Vocabulary: "because". */
   vocabYinwei: TVocab;
-  /** Vocabulary: "but". */
-  vocabDanshi: TVocab;
-  /** Vocabulary: "salt". */
-  vocabYan: TVocab;
   /** Vocabulary: "die; dead". */
   vocabSi: TVocab;
   /** Vocabulary: "live; alive". */
   vocabHuo: TVocab;
-  /** Vocabulary: "X-de huà: "if X"". */
-  vocabHua: TVocab;
   /** Say: To say why, put yīnwèi (because) before the reason. Pattern: yīnwèi + reason, result */
   proseBecause: TProse;
   /** Example: yīnwèi wǒ hěn lěng, wǒ bù qù wài-miàn. */
@@ -50,6 +44,10 @@ export type LessonShape = {
   exampleBecause6: TExample;
   /** Example: yīnwèi yǒu kōngqì, wǒ-men néng huó. */
   exampleBecause7: TExample;
+  /** Vocabulary: "but". */
+  vocabDanshi: TVocab;
+  /** Vocabulary: "salt". */
+  vocabYan: TVocab;
   /** Say: To say but, put dànshì at the start of the second part. Pattern: sentence, dànshì + sentence */
   proseBut: TProse;
   /** Example: zhè-ge hěn hǎo, dànshì méi-yǒu yán. */
@@ -68,6 +66,8 @@ export type LessonShape = {
   exampleBut7: TExample;
   /** Example: zhíwù hěn xiǎo, dànshì huó le. */
   exampleBut8: TExample;
+  /** Vocabulary: "X-de huà: "if X"". */
+  vocabHua: TVocab;
   /** Say: To say "if", put -de huà after the if-part, then a comma. Pattern: X-de huà, the rest */
   proseIf: TProse;
   /** Example: nǐ lái-de huà, wǒ děng nǐ. */
@@ -128,15 +128,8 @@ const shape: LessonShape = {
     term: "{{word:yin1wei4}}",
     ttsText: "因为",
   },
-  vocabDanshi: {
-    type: "vocab",
-    term: "{{word:dan4shi4}}",
-    ttsText: "但是",
-  },
-  vocabYan: { type: "vocab", term: "{{word:yan2}}", ttsText: "盐" },
   vocabSi: { type: "vocab", term: "{{word:si3}}", ttsText: "死" },
   vocabHuo: { type: "vocab", term: "{{word:huo2}}", ttsText: "活" },
-  vocabHua: { type: "vocab", term: "{{word:hua4}}", ttsText: "话" },
   proseBecause: { type: "prose" },
   exampleBecause1: {
     type: "example",
@@ -173,6 +166,12 @@ const shape: LessonShape = {
     pinyin: "{{Word:yin1wei4}} {{word:you3}} {{word:kong1qi4}}, {{word:wo3}}-{{word:men}} {{word:neng2}} {{word:huo2}}.",
     ttsText: "因为有空气，我们能活。",
   },
+  vocabDanshi: {
+    type: "vocab",
+    term: "{{word:dan4shi4}}",
+    ttsText: "但是",
+  },
+  vocabYan: { type: "vocab", term: "{{word:yan2}}", ttsText: "盐" },
   proseBut: { type: "prose" },
   exampleBut1: {
     type: "example",
@@ -214,6 +213,7 @@ const shape: LessonShape = {
     pinyin: "{{Word:zhi2wu4}} {{word:hen3}} {{word:xiao3}}, {{word:dan4shi4}} {{word:huo2}} {{word:le}}.",
     ttsText: "植物很小，但是活了。",
   },
+  vocabHua: { type: "vocab", term: "{{word:hua4}}", ttsText: "话" },
   proseIf: { type: "prose" },
   exampleIf1: {
     type: "example",

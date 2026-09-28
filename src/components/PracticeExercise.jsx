@@ -3,7 +3,9 @@ import { t } from '../lib/i18n.js';
 import { AudioButton } from './AudioButton.jsx';
 import styles from './PracticeExercise.module.css';
 
-export function PracticeExercise({ questions, answers, lang }) {
+// `start` is the index of the first question, so numbering carries on when a
+// chapter splits its exercises into several groups.
+export function PracticeExercise({ questions, answers, lang, start = 0 }) {
   if (!questions || questions.length === 0) return null;
   const [showAnswers, setShowAnswers] = useState(false);
 
@@ -19,7 +21,7 @@ export function PracticeExercise({ questions, answers, lang }) {
       </div>
       {questions.map((q, i) => (
         <div key={i} class={styles.item}>
-          <div class={styles.question}><b>{i + 1}.</b> {q}</div>
+          <div class={styles.question}><b>{start + i + 1}.</b> {q}</div>
           {showAnswers && answers && answers[i] && (
             <div class={styles.answer}>
               → {answers[i].text}

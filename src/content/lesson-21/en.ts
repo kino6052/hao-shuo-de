@@ -11,12 +11,6 @@ const en: PartialByKey<LessonShape> = {
       "In this lesson, you'll be able to say \"Hello!\", \"What's your name?\", \"Eat!\", \"I feel cold.\", and \"I'm scared of bugs.\"",
     ],
   },
-  vocabJuede: { en: ["feel, think"] },
-  vocabPa: { en: ["be scared (of)"] },
-  vocabJiao: { en: ["be called; call, make an animal sound"] },
-  vocabShengyin: { en: ["sound, voice"] },
-  vocabChongzi: { en: ["bug"] },
-  vocabXing: { en: ["sex"] },
   proseHello: {
     en: [
       "**To say hello**, say {{word:ni3}} {{word:hao3}}.",
@@ -37,6 +31,7 @@ const en: PartialByKey<LessonShape> = {
   exampleHello3: { en: ["I'm fine."] },
   exampleHello4: { en: ["I'm off. / Bye."] },
   exampleHello5: { en: ["Where are you from?"] },
+  vocabJiao: { en: ["be called; call, make an animal sound"] },
   proseName: {
     en: [
       "**To say your name**, use {{word:jiao4}} (be called), with the name in quotes.",
@@ -58,6 +53,7 @@ const en: PartialByKey<LessonShape> = {
   exampleName2: { en: ["What's your name?"] },
   exampleName3: { en: ["That animal goes woof woof."] },
   exampleName4: { en: ["He's called Tom or Tim."] },
+  vocabPa: { en: ["be scared (of)"] },
   proseOrder: {
     en: [
       "**To tell someone to do something**, just say the verb. For don't, put {{word:bu4}} {{word:yao4}} first.",
@@ -81,6 +77,9 @@ const en: PartialByKey<LessonShape> = {
   exampleOrder8: { en: ["If you're cold, come inside!"] },
   exampleOrder9: { en: ["One, two, three, go!"] },
   exampleOrder10: { en: ["Don't touch my things!"] },
+  vocabJuede: { en: ["feel, think"] },
+  vocabChongzi: { en: ["bug"] },
+  vocabXing: { en: ["sex"] },
   proseFeel: {
     en: [
       "**To say how you feel**, put {{word:jue2de}} (feel) before the adjective.",
@@ -108,6 +107,7 @@ const en: PartialByKey<LessonShape> = {
   exampleFeel10: { en: ["I think this color is nice."] },
   exampleFeel11: { en: ["I'm not afraid of anything."] },
   exampleFeel12: { en: ["The animal lived, and I feel good."] },
+  vocabShengyin: { en: ["sound, voice"] },
   proseHear: {
     en: [
       "**To say you hear a sound**, say {{word:ting1}}-{{word:dao4}} (hear) and {{word:sheng1yin1}} (sound).",

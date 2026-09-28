@@ -24,20 +24,6 @@ export type LessonShape = {
   summary: TSummary;
   /** Vocabulary: "give; to, for". */
   vocabGei: TVocab;
-  /** Vocabulary: "use; with". */
-  vocabYong: TVocab;
-  /** Vocabulary: "and (between nouns)". */
-  vocabHe: TVocab;
-  /** Vocabulary: "or". */
-  vocabHuozhe: TVocab;
-  /** Vocabulary: "toward, for". */
-  vocabDui: TVocab;
-  /** Vocabulary: "group". */
-  vocabQun: TVocab;
-  /** Vocabulary: "touch". */
-  vocabMo: TVocab;
-  /** Vocabulary: "hit". */
-  vocabDa: TVocab;
   /** Say: To say you give something to someone, use gěi: the person first, then the thing. Pattern: Who + gěi + person + thing */
   proseGive: TProse;
   /** Example: gěi wǒ. */
@@ -52,6 +38,12 @@ export type LessonShape = {
   exampleGive5: TExample;
   /** Example: tā gěi wǒ yī-bùfen. */
   exampleGive6: TExample;
+  /** Vocabulary: "use; with". */
+  vocabYong: TVocab;
+  /** Vocabulary: "touch". */
+  vocabMo: TVocab;
+  /** Vocabulary: "hit". */
+  vocabDa: TVocab;
   /** Say: To say what you do something with, put yòng and the thing before the verb. Pattern: Who + yòng + thing + verb */
   proseWith: TProse;
   /** Example: wǒ yòng gōngjù xiě. */
@@ -74,6 +66,10 @@ export type LessonShape = {
   exampleWith9: TExample;
   /** Example: wǒ yòng yīxià nǐ-de gōngjù. */
   exampleWith10: TExample;
+  /** Vocabulary: "and (between nouns)". */
+  vocabHe: TVocab;
+  /** Vocabulary: "or". */
+  vocabHuozhe: TVocab;
   /** Say: To join two nouns, put hé (and) or huòzhě (or) between them. Pattern: A + hé / huòzhě + B */
   proseAndOr: TProse;
   /** Example: nǐ hé wǒ. */
@@ -90,6 +86,8 @@ export type LessonShape = {
   exampleAndOr6: TExample;
   /** Example: wǒ yào bā-ge huòzhě jiǔ-ge. */
   exampleAndOr7: TExample;
+  /** Vocabulary: "toward, for". */
+  vocabDui: TVocab;
   /** Say: To say how someone is toward someone, put duì and the person before the adjective. Pattern: A + duì + B + adjective */
   proseToward: TProse;
   /** Example: tā duì wǒ hěn hǎo. */
@@ -100,6 +98,8 @@ export type LessonShape = {
   exampleToward3: TExample;
   /** Example: rì duì pífū bù hǎo. */
   exampleToward4: TExample;
+  /** Vocabulary: "group". */
+  vocabQun: TVocab;
   /** Say: To talk about a group, use qún (group) in place of gè. Pattern: yī / zhè / nà + qún + noun */
   proseGroup: TProse;
   /** Example: yī-qún rén zài wài-miàn. */
@@ -148,17 +148,6 @@ const shape: LessonShape = {
   title: { type: "title" },
   summary: { type: "summary" },
   vocabGei: { type: "vocab", term: "{{word:gei3}}", ttsText: "给" },
-  vocabYong: { type: "vocab", term: "{{word:yong4}}", ttsText: "用" },
-  vocabHe: { type: "vocab", term: "{{word:he2}}", ttsText: "和" },
-  vocabHuozhe: {
-    type: "vocab",
-    term: "{{word:huo4zhe3}}",
-    ttsText: "或者",
-  },
-  vocabDui: { type: "vocab", term: "{{word:dui4}}", ttsText: "对" },
-  vocabQun: { type: "vocab", term: "{{word:qun2}}", ttsText: "群" },
-  vocabMo: { type: "vocab", term: "{{word:mo1}}", ttsText: "摸" },
-  vocabDa: { type: "vocab", term: "{{word:da3}}", ttsText: "打" },
   proseGive: { type: "prose" },
   exampleGive1: {
     type: "example",
@@ -190,6 +179,9 @@ const shape: LessonShape = {
     pinyin: "{{Word:ta1}} {{word:gei3}} {{word:wo3}} {{word:yi1}}-{{word:bu4fen}}.",
     ttsText: "他给我一部分。",
   },
+  vocabYong: { type: "vocab", term: "{{word:yong4}}", ttsText: "用" },
+  vocabMo: { type: "vocab", term: "{{word:mo1}}", ttsText: "摸" },
+  vocabDa: { type: "vocab", term: "{{word:da3}}", ttsText: "打" },
   proseWith: { type: "prose" },
   exampleWith1: {
     type: "example",
@@ -241,6 +233,12 @@ const shape: LessonShape = {
     pinyin: "{{Word:wo3}} {{word:yong4}} {{word:yi1xia4}} {{word:ni3}}-{{word:de}} {{word:gong1ju4}}.",
     ttsText: "我用一下你的工具。",
   },
+  vocabHe: { type: "vocab", term: "{{word:he2}}", ttsText: "和" },
+  vocabHuozhe: {
+    type: "vocab",
+    term: "{{word:huo4zhe3}}",
+    ttsText: "或者",
+  },
   proseAndOr: { type: "prose" },
   exampleAndOr1: {
     type: "example",
@@ -277,6 +275,7 @@ const shape: LessonShape = {
     pinyin: "{{Word:wo3}} {{word:yao4}} {{word:ba1}}-ge {{word:huo4zhe3}} {{word:jiu3}}-ge.",
     ttsText: "我要八个或者九个。",
   },
+  vocabDui: { type: "vocab", term: "{{word:dui4}}", ttsText: "对" },
   proseToward: { type: "prose" },
   exampleToward1: {
     type: "example",
@@ -298,6 +297,7 @@ const shape: LessonShape = {
     pinyin: "{{Word:ri4}} {{word:dui4}} {{word:pi2fu1}} {{word:bu4}} {{word:hao3}}.",
     ttsText: "日对皮肤不好。",
   },
+  vocabQun: { type: "vocab", term: "{{word:qun2}}", ttsText: "群" },
   proseGroup: { type: "prose" },
   exampleGroup1: {
     type: "example",

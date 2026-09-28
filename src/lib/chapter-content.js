@@ -97,6 +97,19 @@ function renderInfoBlock(entry, lang, refs, onMissing) {
   return { html, title };
 }
 
+// Besides the per-type buckets (vocab, bodyHtml, examples, ...), the view has
+// a `flow`: the same blocks in the order the chapter lists them, so a lesson
+// page can show a point's examples right after the point, a word card right
+// before the point that teaches it, and an info box or a few exercises
+// anywhere. Neighbouring blocks of one kind share a group:
+//   { kind: 'vocab', items }       word cards
+//   { kind: 'html', items }        prose and info/warning blocks (HTML strings)
+//   { kind: 'examples', items }    example sentences
+//   { kind: 'story', items }       story lines
+//   { kind: 'exercise', start, questions, answers }
+// Answers pair with exercises by position across the whole chapter, so an
+// exercise group gets the answers with the same numbers; `start` is the
+// index of its first question.
 export function buildTsChapterView(meta, entries, lang, refs = {}) {
   const proseHtmlParts = [];
   const tldrSummary = [];
@@ -107,6 +120,12 @@ export function buildTsChapterView(meta, entries, lang, refs = {}) {
   const exercise = [];
   const answers = [];
   const grammarRules = [];
+  const flow = [];
+  const addToFlow = (kind, item) => {
+    const last = flow[flow.length - 1];
+    if (last && last.kind === kind) last.items.push(item);
+    else flow.push({ kind, items: [item] });
+  };
 
   let title = meta.id;
 
@@ -131,28 +150,37 @@ export function buildTsChapterView(meta, entries, lang, refs = {}) {
         const tldr = pick(entry.tldr, lang, refs);
         const necessity = pick(entry.necessity, lang, refs);
         if (text === undefined || tldr === undefined || necessity === undefined) missingBlocks.push(index);
-        if (text !== undefined) proseHtmlParts.push(marked.parse(text));
+        if (text !== undefined) {
+          const html = marked.parse(text);
+          proseHtmlParts.push(html);
+          addToFlow('html', html);
+        }
         if (tldr !== undefined || necessity !== undefined) tldrSummary.push({ tldr, necessity });
         break;
       }
       case 'vocab': {
         const definition = pick(entry, lang, refs);
         if (definition === undefined) { missingBlocks.push(index); break; }
-        vocab.push({ pinyin: resolveField(entry.term, refs), definition, audioFile: entry.audioFile, ttsText: entry.ttsText });
+        const card = { pinyin: resolveField(entry.term, refs), definition, audioFile: entry.audioFile, ttsText: entry.ttsText };
+        vocab.push(card);
+        addToFlow('vocab', card);
         break;
       }
       case 'example':
       case 'story': {
         const translation = pick(entry, lang, refs);
         if (translation === undefined) { missingBlocks.push(index); break; }
-        const bucket = entry.type === 'story' ? story : examples;
-        bucket.push({ pinyin: resolveField(entry.pinyin, refs), translation, audioFile: entry.audioFile, ttsText: entry.ttsText });
+        const line = { pinyin: resolveField(entry.pinyin, refs), translation, audioFile: entry.audioFile, ttsText: entry.ttsText };
+        if (entry.type === 'story') story.push(line);
+        else examples.push(line);
+        addToFlow(entry.type === 'story' ? 'story' : 'examples', line);
         break;
       }
       case 'exercise': {
         const text = pick(entry, lang, refs);
         if (text === undefined) { missingBlocks.push(index); break; }
         exercise.push(text);
+        addToFlow('exercise', exercise.length - 1);
         break;
       }
       case 'answer': {
@@ -166,7 +194,10 @@ export function buildTsChapterView(meta, entries, lang, refs = {}) {
         let complete = true;
         const { html, title: blockTitle } = renderInfoBlock(entry, lang, refs, () => { complete = false; });
         if (!complete) missingBlocks.push(index);
-        if (html) proseHtmlParts.push(html);
+        if (html) {
+          proseHtmlParts.push(html);
+          addToFlow('html', html);
+        }
         if (entry.type === 'info' && entry.subtype === 'grammar' && html) {
           grammarRules.push({ tag: entry.tag, title: blockTitle, html });
         }
@@ -179,6 +210,16 @@ export function buildTsChapterView(meta, entries, lang, refs = {}) {
     }
   });
 
+  for (const group of flow) {
+    if (group.kind !== 'exercise') continue;
+    const numbers = group.items;
+    delete group.items;
+    group.start = numbers[0];
+    group.questions = numbers.map((n) => exercise[n]);
+    const groupAnswers = numbers.map((n) => answers[n]);
+    group.answers = groupAnswers.some(Boolean) ? groupAnswers : [];
+  }
+
   return {
     meta: { ...meta, title, language: lang },
     vocab,
@@ -190,5 +231,6 @@ export function buildTsChapterView(meta, entries, lang, refs = {}) {
     tldrSummary,
     missingBlocks,
     grammarRules,
+    flow,
   };
 }

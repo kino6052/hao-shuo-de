@@ -22,24 +22,10 @@ export type LessonShape = {
   title: TTitle;
   /** Chapter summary: why you'd want this, then what you'll be able to say. */
   summary: TSummary;
-  /** Vocabulary: "time". */
-  vocabShijian: TVocab;
   /** Vocabulary: "after a verb: it's done". */
   vocabLe: TVocab;
-  /** Vocabulary: "will". */
-  vocabHui: TVocab;
-  /** Vocabulary: "before a verb: right now". */
-  vocabZai: TVocab;
-  /** Vocabulary: "sun, day". */
-  vocabRi: TVocab;
-  /** Vocabulary: "moon, night". */
-  vocabYue: TVocab;
   /** Vocabulary: "sleep". */
   vocabShuijiao: TVocab;
-  /** Vocabulary: "after a verb: have done before". */
-  vocabGuo: TVocab;
-  /** Vocabulary: "now". */
-  vocabXianzai: TVocab;
   /** Vocabulary: "happen". */
   vocabFasheng: TVocab;
   /** Say: To say something is done, put le after the verb. Pattern: Who + verb + le */
@@ -54,6 +40,10 @@ export type LessonShape = {
   exampleDone4: TExample;
   /** Example: nǐ zhīdào fāshēng le shénme ma? */
   exampleDone5: TExample;
+  /** Vocabulary: "before a verb: right now". */
+  vocabZai: TVocab;
+  /** Vocabulary: "now". */
+  vocabXianzai: TVocab;
   /** Say: To say something is happening right now, put zài before the verb. Pattern: Who + zài + verb */
   proseNow: TProse;
   /** Example: wǒ zài chī. */
@@ -68,6 +58,8 @@ export type LessonShape = {
   exampleNow5: TExample;
   /** Example: tā kěnéng zài shuìjiào. */
   exampleNow6: TExample;
+  /** Vocabulary: "will". */
+  vocabHui: TVocab;
   /** Say: To say something will happen, put huì before the verb. Pattern: Who + huì + verb */
   proseWill: TProse;
   /** Example: wǒ huì chī. */
@@ -76,6 +68,10 @@ export type LessonShape = {
   exampleWill2: TExample;
   /** Example: nǐ huì shuìjiào ma? */
   exampleWill3: TExample;
+  /** Vocabulary: "moon, night". */
+  vocabYue: TVocab;
+  /** Vocabulary: "after a verb: have done before". */
+  vocabGuo: TVocab;
   /** Say: To say you have done something before, put guò after the verb. Pattern: Who + verb-guò */
   proseBefore: TProse;
   /** Example: wǒ chī-guò mǐfàn. */
@@ -86,6 +82,10 @@ export type LessonShape = {
   exampleBefore3: TExample;
   /** Example: zhè fāshēng-guò. */
   exampleBefore4: TExample;
+  /** Vocabulary: "time". */
+  vocabShijian: TVocab;
+  /** Vocabulary: "sun, day". */
+  vocabRi: TVocab;
   /** Say: To say when, put the time first, then a comma, then the rest. Pattern: Time, who + verb */
   proseTime: TProse;
   /** Example: yuè-de shíjiān, wǒ shuìjiào. */
@@ -149,26 +149,11 @@ export type LessonShape = {
 const shape: LessonShape = {
   title: { type: "title" },
   summary: { type: "summary" },
-  vocabShijian: {
-    type: "vocab",
-    term: "{{word:shi2jian1}}",
-    ttsText: "时间",
-  },
   vocabLe: { type: "vocab", term: "{{word:le}}", ttsText: "了" },
-  vocabHui: { type: "vocab", term: "{{word:hui4}}", ttsText: "会" },
-  vocabZai: { type: "vocab", term: "{{word:zai4}}", ttsText: "在" },
-  vocabRi: { type: "vocab", term: "{{word:ri4}}", ttsText: "日" },
-  vocabYue: { type: "vocab", term: "{{word:yue4}}", ttsText: "月" },
   vocabShuijiao: {
     type: "vocab",
     term: "{{word:shui4jiao4}}",
     ttsText: "睡觉",
-  },
-  vocabGuo: { type: "vocab", term: "{{word:guo4}}", ttsText: "过" },
-  vocabXianzai: {
-    type: "vocab",
-    term: "{{word:xian4zai4}}",
-    ttsText: "现在",
   },
   vocabFasheng: {
     type: "vocab",
@@ -201,6 +186,12 @@ const shape: LessonShape = {
     pinyin: "{{Word:ni3}} {{word:zhi1dao4}} {{word:fa1sheng1}} {{word:le}} {{word:shen2me}} {{word:ma}}?",
     ttsText: "你知道发生了什么吗？",
   },
+  vocabZai: { type: "vocab", term: "{{word:zai4}}", ttsText: "在" },
+  vocabXianzai: {
+    type: "vocab",
+    term: "{{word:xian4zai4}}",
+    ttsText: "现在",
+  },
   proseNow: { type: "prose" },
   exampleNow1: {
     type: "example",
@@ -232,6 +223,7 @@ const shape: LessonShape = {
     pinyin: "{{Word:ta1}} {{word:ke3neng2}} {{word:zai4}} {{word:shui4jiao4}}.",
     ttsText: "他可能在睡觉。",
   },
+  vocabHui: { type: "vocab", term: "{{word:hui4}}", ttsText: "会" },
   proseWill: { type: "prose" },
   exampleWill1: {
     type: "example",
@@ -248,6 +240,8 @@ const shape: LessonShape = {
     pinyin: "{{Word:ni3}} {{word:hui4}} {{word:shui4jiao4}} {{word:ma}}?",
     ttsText: "你会睡觉吗？",
   },
+  vocabYue: { type: "vocab", term: "{{word:yue4}}", ttsText: "月" },
+  vocabGuo: { type: "vocab", term: "{{word:guo4}}", ttsText: "过" },
   proseBefore: { type: "prose" },
   exampleBefore1: {
     type: "example",
@@ -269,6 +263,12 @@ const shape: LessonShape = {
     pinyin: "{{Word:zhe4}} {{word:fa1sheng1}}-{{word:guo4}}.",
     ttsText: "这发生过。",
   },
+  vocabShijian: {
+    type: "vocab",
+    term: "{{word:shi2jian1}}",
+    ttsText: "时间",
+  },
+  vocabRi: { type: "vocab", term: "{{word:ri4}}", ttsText: "日" },
   proseTime: { type: "prose" },
   exampleTime1: {
     type: "example",

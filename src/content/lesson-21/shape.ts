@@ -22,18 +22,6 @@ export type LessonShape = {
   title: TTitle;
   /** Chapter summary: why you'd want this, then what you'll be able to say. */
   summary: TSummary;
-  /** Vocabulary: "feel, think". */
-  vocabJuede: TVocab;
-  /** Vocabulary: "be scared (of)". */
-  vocabPa: TVocab;
-  /** Vocabulary: "be called; call, make an animal sound". */
-  vocabJiao: TVocab;
-  /** Vocabulary: "sound, voice". */
-  vocabShengyin: TVocab;
-  /** Vocabulary: "bug". */
-  vocabChongzi: TVocab;
-  /** Vocabulary: "sex". */
-  vocabXing: TVocab;
   /** Say: To say hello, say nǐ hǎo. Pattern: nǐ hǎo! / nǐ hǎo ma? */
   proseHello: TProse;
   /** Example: nǐ hǎo! */
@@ -46,6 +34,8 @@ export type LessonShape = {
   exampleHello4: TExample;
   /** Example: nǐ cóng nǎlǐ lái? */
   exampleHello5: TExample;
+  /** Vocabulary: "be called; call, make an animal sound". */
+  vocabJiao: TVocab;
   /** Say: To say your name, use jiào (be called), with the name in quotes. Pattern: Who + jiào + "name" */
   proseName: TProse;
   /** Example: wǒ jiào "Lisa". */
@@ -56,6 +46,8 @@ export type LessonShape = {
   exampleName3: TExample;
   /** Example: tā jiào "Tom" huòzhě "Tim". */
   exampleName4: TExample;
+  /** Vocabulary: "be scared (of)". */
+  vocabPa: TVocab;
   /** Say: To tell someone to do something, just say the verb. For don't, put bù yào first. Pattern: Verb! / bù yào + verb! */
   proseOrder: TProse;
   /** Example: chī! */
@@ -78,6 +70,12 @@ export type LessonShape = {
   exampleOrder9: TExample;
   /** Example: bù yào dòng wǒ-de dōngxi! */
   exampleOrder10: TExample;
+  /** Vocabulary: "feel, think". */
+  vocabJuede: TVocab;
+  /** Vocabulary: "bug". */
+  vocabChongzi: TVocab;
+  /** Vocabulary: "sex". */
+  vocabXing: TVocab;
   /** Say: To say how you feel, put juéde (feel) before the adjective. Pattern: Who + juéde + adjective */
   proseFeel: TProse;
   /** Example: wǒ juéde hěn hǎo. */
@@ -104,6 +102,8 @@ export type LessonShape = {
   exampleFeel11: TExample;
   /** Example: dòngwù huó le, wǒ juéde hěn hǎo. */
   exampleFeel12: TExample;
+  /** Vocabulary: "sound, voice". */
+  vocabShengyin: TVocab;
   /** Say: To say you hear a sound, say tīng-dào (hear) and shēngyīn (sound). Pattern: Who + tīng-dào + shēngyīn */
   proseHear: TProse;
   /** Example: wǒ tīng-dào qíguài-de shēngyīn. */
@@ -157,20 +157,6 @@ export type LessonShape = {
 const shape: LessonShape = {
   title: { type: "title" },
   summary: { type: "summary" },
-  vocabJuede: { type: "vocab", term: "{{word:jue2de}}", ttsText: "觉得" },
-  vocabPa: { type: "vocab", term: "{{word:pa4}}", ttsText: "怕" },
-  vocabJiao: { type: "vocab", term: "{{word:jiao4}}", ttsText: "叫" },
-  vocabShengyin: {
-    type: "vocab",
-    term: "{{word:sheng1yin1}}",
-    ttsText: "声音",
-  },
-  vocabChongzi: {
-    type: "vocab",
-    term: "{{word:chong2zi}}",
-    ttsText: "虫子",
-  },
-  vocabXing: { type: "vocab", term: "{{word:xing4}}", ttsText: "性" },
   proseHello: { type: "prose" },
   exampleHello1: {
     type: "example",
@@ -197,6 +183,7 @@ const shape: LessonShape = {
     pinyin: "{{Word:ni3}} {{word:cong2}} {{word:na3li3}} {{word:lai2}}?",
     ttsText: "你从哪里来？",
   },
+  vocabJiao: { type: "vocab", term: "{{word:jiao4}}", ttsText: "叫" },
   proseName: { type: "prose" },
   exampleName1: {
     type: "example",
@@ -218,6 +205,7 @@ const shape: LessonShape = {
     pinyin: '{{Word:ta1}} {{word:jiao4}} "Tom" {{word:huo4zhe3}} "Tim".',
     ttsText: '他叫"Tom"或者"Tim"。',
   },
+  vocabPa: { type: "vocab", term: "{{word:pa4}}", ttsText: "怕" },
   proseOrder: { type: "prose" },
   exampleOrder1: {
     type: "example",
@@ -269,6 +257,13 @@ const shape: LessonShape = {
     pinyin: "{{Word:bu4}} {{word:yao4}} {{word:dong4}} {{word:wo3}}-{{word:de}} {{word:dong1xi}}!",
     ttsText: "不要动我的东西！",
   },
+  vocabJuede: { type: "vocab", term: "{{word:jue2de}}", ttsText: "觉得" },
+  vocabChongzi: {
+    type: "vocab",
+    term: "{{word:chong2zi}}",
+    ttsText: "虫子",
+  },
+  vocabXing: { type: "vocab", term: "{{word:xing4}}", ttsText: "性" },
   proseFeel: { type: "prose" },
   exampleFeel1: {
     type: "example",
@@ -329,6 +324,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:dong4wu4}} {{word:huo2}} {{word:le}}, {{word:wo3}} {{word:jue2de}} {{word:hen3}} {{word:hao3}}.",
     ttsText: "动物活了，我觉得很好。",
+  },
+  vocabShengyin: {
+    type: "vocab",
+    term: "{{word:sheng1yin1}}",
+    ttsText: "声音",
   },
   proseHear: { type: "prose" },
   exampleHear1: {

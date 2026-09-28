@@ -6,6 +6,7 @@ import { VocabGrid } from './components/VocabGrid.jsx';
 import { GrammarBlock } from './components/GrammarBlock.jsx';
 import { ExampleList } from './components/ExampleList.jsx';
 import { PracticeExercise } from './components/PracticeExercise.jsx';
+import { LessonFlow } from './components/LessonFlow.jsx';
 import { StoryBlock } from './components/StoryBlock.jsx';
 import { DictionarySection } from './components/DictionarySection.jsx';
 import { CategoricalDictionarySection } from './components/CategoricalDictionarySection.jsx';
@@ -51,6 +52,17 @@ function renderContent(s, lang) {
       <>
         {s.bodyHtml && <div class="prose-body" dangerouslySetInnerHTML={{ __html: s.bodyHtml }} />}
         <SentenceBuilder lang={lang} />
+      </>
+    );
+  }
+  // .ts chapters carry a `flow` (blocks in file order); the older .yaml
+  // chapters don't, and keep the fixed layout below.
+  if (s.flow) {
+    return (
+      <>
+        {s.missingBlocks && <MissingTranslationBanner blocks={s.missingBlocks} lang={lang} />}
+        {s.tldrSummary && <TldrSummary key={s.meta.id} items={s.tldrSummary} lang={lang} />}
+        <LessonFlow flow={s.flow} lang={lang} />
       </>
     );
   }

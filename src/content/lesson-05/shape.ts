@@ -22,10 +22,6 @@ export type LessonShape = {
   title: TTitle;
   /** Chapter summary. [from old L05] */
   summary: TSummary;
-  /** Vocabulary: "have; there is". */
-  vocabYou: TVocab;
-  /** Vocabulary: "not, but only with {{word:you3}}: {{word:mei2}}-{{word:you3}} means "don't have"". */
-  vocabMei: TVocab;
   /** Vocabulary: "eat, drink". */
   vocabChi: TVocab;
   /** Vocabulary: "look, read". */
@@ -36,8 +32,6 @@ export type LessonShape = {
   vocabShuo: TVocab;
   /** Vocabulary: "write". */
   vocabXie: TVocab;
-  /** Vocabulary: "money". */
-  vocabJin: TVocab;
   /** Vocabulary: "rice". */
   vocabMifan: TVocab;
   /** Say: To say what someone does, put the verb after the who, and the what after the verb. Pattern: Who + verb + what */
@@ -64,6 +58,12 @@ export type LessonShape = {
   exampleNot3: TExample;
   /** Example: wǒ bù shuō. */
   exampleNot4: TExample;
+  /** Vocabulary: "have; there is". */
+  vocabYou: TVocab;
+  /** Vocabulary: "not, but only with {{word:you3}}: {{word:mei2}}-{{word:you3}} means "don't have"". */
+  vocabMei: TVocab;
+  /** Vocabulary: "money". */
+  vocabJin: TVocab;
   /** Say: To say you have something, use yǒu. For "don't have", say méi-yǒu. Pattern: Who + yǒu / méi-yǒu + thing */
   proseHave: TProse;
   /** Example: wǒ yǒu shuǐguǒ. */
@@ -109,14 +109,11 @@ export type LessonShape = {
 const shape: LessonShape = {
   title: { type: "title" },
   summary: { type: "summary" },
-  vocabYou: { type: "vocab", term: "{{word:you3}}", ttsText: "有" },
-  vocabMei: { type: "vocab", term: "{{word:mei2}}", ttsText: "没" },
   vocabChi: { type: "vocab", term: "{{word:chi1}}", ttsText: "吃" },
   vocabKan: { type: "vocab", term: "{{word:kan4}}", ttsText: "看" },
   vocabTing: { type: "vocab", term: "{{word:ting1}}", ttsText: "听" },
   vocabShuo: { type: "vocab", term: "{{word:shuo1}}", ttsText: "说" },
   vocabXie: { type: "vocab", term: "{{word:xie3}}", ttsText: "写" },
-  vocabJin: { type: "vocab", term: "{{word:jin1}}", ttsText: "金" },
   vocabMifan: { type: "vocab", term: "{{word:mi3fan4}}", ttsText: "米饭" },
   proseDo: { type: "prose" },
   exampleDo1: {
@@ -170,6 +167,9 @@ const shape: LessonShape = {
     pinyin: "{{Word:wo3}} {{word:bu4}} {{word:shuo1}}.",
     ttsText: "我不说。",
   },
+  vocabYou: { type: "vocab", term: "{{word:you3}}", ttsText: "有" },
+  vocabMei: { type: "vocab", term: "{{word:mei2}}", ttsText: "没" },
+  vocabJin: { type: "vocab", term: "{{word:jin1}}", ttsText: "金" },
   proseHave: { type: "prose" },
   exampleHave1: {
     type: "example",

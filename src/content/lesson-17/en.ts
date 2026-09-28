@@ -11,12 +11,10 @@ const en: PartialByKey<LessonShape> = {
       "In this lesson, you'll be able to say \"a red box\", \"The water is blue.\", and \"What color is it?\"",
     ],
   },
-  vocabYanse: { en: ["color"] },
   vocabBaise: { en: ["white"] },
   vocabHeise: { en: ["black"] },
   vocabHongse: { en: ["red"] },
   vocabHuangse: { en: ["yellow"] },
-  vocabLanse: { en: ["blue, green"] },
   proseColorThing: {
     en: [
       "**To say a thing's color**, put the color and -{{word:de}} before it.",
@@ -34,6 +32,7 @@ const en: PartialByKey<LessonShape> = {
   exampleColorThing2: { en: ["White clothes."] },
   exampleColorThing3: { en: ["A black animal."] },
   exampleColorThing4: { en: ["Yellow fruit."] },
+  vocabLanse: { en: ["blue, green"] },
   proseIsColor: {
     en: [
       "**To say what color something is**, put {{word:shi4}} before the color, and -{{word:de}} after it.",
@@ -58,6 +57,7 @@ const en: PartialByKey<LessonShape> = {
   exampleIsColor9: { en: ["Four animals are white, and five are black."] },
   exampleIsColor10: { en: ["Seven boxes are red, and eight are blue."] },
   exampleIsColor11: { en: ["Her clothes are all black."] },
+  vocabYanse: { en: ["color"] },
   proseWhatColor: {
     en: [
       '**To ask "what color?"**, say {{word:shen2me}} {{word:yan2se4}} where the color would go.',

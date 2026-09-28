@@ -12,13 +12,6 @@ const en: PartialByKey<LessonShape> = {
     ],
   },
   vocabGei: { en: ["give; to, for"] },
-  vocabYong: { en: ["use; with"] },
-  vocabHe: { en: ["and (between nouns)"] },
-  vocabHuozhe: { en: ["or"] },
-  vocabDui: { en: ["toward, for"] },
-  vocabQun: { en: ["group"] },
-  vocabMo: { en: ["touch"] },
-  vocabDa: { en: ["hit"] },
   proseGive: {
     en: [
       "**To say you give something to someone**, use {{word:gei3}}: the person first, then the thing.",
@@ -40,6 +33,9 @@ const en: PartialByKey<LessonShape> = {
   exampleGive4: { en: ["I write to you."] },
   exampleGive5: { en: ["He gives me three, and I give him four."] },
   exampleGive6: { en: ["He gives me part of it."] },
+  vocabYong: { en: ["use; with"] },
+  vocabMo: { en: ["touch"] },
+  vocabDa: { en: ["hit"] },
   proseWith: {
     en: [
       "**To say what you do something with**, put {{word:yong4}} and the thing before the verb.",
@@ -63,6 +59,8 @@ const en: PartialByKey<LessonShape> = {
   exampleWith8: { en: ["The animal touches my hand with its nose."] },
   exampleWith9: { en: ["He uses a new way."] },
   exampleWith10: { en: ["Let me use your tool for a moment."] },
+  vocabHe: { en: ["and (between nouns)"] },
+  vocabHuozhe: { en: ["or"] },
   proseAndOr: {
     en: [
       "**To join two nouns**, put {{word:he2}} (and) or {{word:huo4zhe3}} (or) between them.",
@@ -85,6 +83,7 @@ const en: PartialByKey<LessonShape> = {
   exampleAndOr5: { en: ["I want a red one or a blue one."] },
   exampleAndOr6: { en: ["Six men and seven women."] },
   exampleAndOr7: { en: ["I want eight or nine."] },
+  vocabDui: { en: ["toward, for"] },
   proseToward: {
     en: [
       "**To say how someone is toward someone**, put {{word:dui4}} and the person before the adjective.",
@@ -104,6 +103,7 @@ const en: PartialByKey<LessonShape> = {
   exampleToward2: { en: ["Water is good for plants."] },
   exampleToward3: { en: ["For me, this is good."] },
   exampleToward4: { en: ["The sun is bad for your skin."] },
+  vocabQun: { en: ["group"] },
   proseGroup: {
     en: [
       "**To talk about a group**, use {{word:qun2}} (group) in place of {{word:ge4}}.",

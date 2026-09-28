@@ -1,0 +1,10 @@
+.flow {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Examples and word cards bring their own bottom margin; this is the gap
+   between a point and the examples right after it. */
+.group + .group {
+  margin-top: 14px;
+}

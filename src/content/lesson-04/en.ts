@@ -11,20 +11,7 @@ const en: PartialByKey<LessonShape> = {
       "In this lesson, you'll be able to say \"this one\", \"that one\", \"I am a person.\", \"we\", \"my hand\", and \"your family\".",
     ],
   },
-  vocabWo: { en: ["I, me"] },
-  vocabNi: { en: ["you"] },
-  vocabTa: { en: ["he, she, it, they"] },
-  vocabMen: {
-    en: [
-      'more than one person: {{word:wo3}}-{{word:men}} means "we"',
-    ],
-  },
   vocabNa: { en: ["that, those"] },
-  vocabGe: { en: ["goes between this / that / a number and a noun"] },
-  vocabJia: { en: ["home, family"] },
-  vocabTou: { en: ["head"] },
-  vocabShou: { en: ["hand"] },
-  vocabJiao: { en: ["foot"] },
   prosePointersAreNouns: {
     en: [
       'We often point at people and things. In English we use words like "this", "that", "I", and "you". We call them pointers (pronouns).',
@@ -55,6 +42,7 @@ const en: PartialByKey<LessonShape> = {
       en: ["It shows how much work Hao-shuo-de saves you."],
     },
   },
+  vocabGe: { en: ["goes between this / that / a number and a noun"] },
   proseGeIsUniversal: {
     en: [
       "Hao-shuo-de keeps only one of them: `{{word:ge4}}`.",
@@ -82,6 +70,9 @@ const en: PartialByKey<LessonShape> = {
   example3L11: { en: ["That woman."] },
   example4L11: { en: ["This fruit is good."] },
   example5L11: { en: ["That thing is a fruit."] },
+  vocabWo: { en: ["I, me"] },
+  vocabNi: { en: ["you"] },
+  vocabTa: { en: ["he, she, it, they"] },
   prosePointingToPeople: {
     en: [
       "You can also point at people: the one speaking, the one listening, and anyone else.",
@@ -98,6 +89,11 @@ const en: PartialByKey<LessonShape> = {
   pointToPeopleExample01: { en: ["I. / Me."] },
   pointToPeopleExample02: { en: ["You."] },
   pointToPeopleExample03: { en: ["He, she."] },
+  vocabMen: {
+    en: [
+      'more than one person: {{word:wo3}}-{{word:men}} means "we"',
+    ],
+  },
   prosePluralPointers: {
     en: [
       'To point at more than one person, add {{word:men}}: {{word:wo3}}-{{word:men}} ("we, us"), {{word:ni3}}-{{word:men}} ("you all"), {{word:ta1}}-{{word:men}} ("they, them").',
@@ -113,6 +109,10 @@ const en: PartialByKey<LessonShape> = {
   pluralPointersExample01: { en: ["We, us."] },
   pluralPointersExample02: { en: ["You all."] },
   pluralPointersExample03: { en: ["They, them."] },
+  vocabJia: { en: ["home, family"] },
+  vocabTou: { en: ["head"] },
+  vocabShou: { en: ["hand"] },
+  vocabJiao: { en: ["foot"] },
   prosePossessionDe: {
     en: [
       'To say whose something is, add <code>-{{word:de}}</code> (from Lesson 3): <audio-example zh="我的">{{word:wo3}}-{{word:de}}</audio-example> ("my"), <audio-example zh="你的">{{word:ni3}}-{{word:de}}</audio-example> ("your").',

@@ -22,18 +22,8 @@ export type LessonShape = {
   title: TTitle;
   /** Chapter summary. [from old L06] */
   summary: TSummary;
-  /** Vocabulary: "what, which". */
-  vocabShenme: TVocab;
   /** Vocabulary: "turns a sentence into a yes-or-no question". */
   vocabMa: TVocab;
-  /** Vocabulary: "why". */
-  vocabWeishenme: TVocab;
-  /** Vocabulary: "how". */
-  vocabZenme: TVocab;
-  /** Vocabulary: "ask". */
-  vocabWen: TVocab;
-  /** Vocabulary: "look for". */
-  vocabZhao: TVocab;
   /** Vocabulary: "tool". */
   vocabGongju: TVocab;
   /** Vocabulary: "box". */
@@ -50,6 +40,12 @@ export type LessonShape = {
   exampleYesNo4: TExample;
   /** Example: tā yǒu-méi-yǒu jīn? */
   exampleYesNo5: TExample;
+  /** Vocabulary: "what, which". */
+  vocabShenme: TVocab;
+  /** Vocabulary: "ask". */
+  vocabWen: TVocab;
+  /** Vocabulary: "look for". */
+  vocabZhao: TVocab;
   /** Say: To ask "what?", put shénme right where the answer would go. Pattern: Who + verb + shénme? */
   proseWhat: TProse;
   /** Example: nǐ zhǎo shénme? */
@@ -62,6 +58,10 @@ export type LessonShape = {
   exampleWhat4: TExample;
   /** Example: wǒ zhǎo hézi. */
   exampleWhat5: TExample;
+  /** Vocabulary: "why". */
+  vocabWeishenme: TVocab;
+  /** Vocabulary: "how". */
+  vocabZenme: TVocab;
   /** Say: To ask "why?" or "how?", put wèishénme (why) at the start, or zěnme (how) before the verb. Pattern: wèishénme + sentence? / zěnme + verb? */
   proseWhyHow: TProse;
   /** Example: wèishénme nǐ bù chī? */
@@ -121,16 +121,7 @@ export type LessonShape = {
 const shape: LessonShape = {
   title: { type: "title" },
   summary: { type: "summary" },
-  vocabShenme: { type: "vocab", term: "{{word:shen2me}}", ttsText: "什么" },
   vocabMa: { type: "vocab", term: "{{word:ma}}", ttsText: "吗" },
-  vocabWeishenme: {
-    type: "vocab",
-    term: "{{word:wei4shen2me}}",
-    ttsText: "为什么",
-  },
-  vocabZenme: { type: "vocab", term: "{{word:zen3me}}", ttsText: "怎么" },
-  vocabWen: { type: "vocab", term: "{{word:wen4}}", ttsText: "问" },
-  vocabZhao: { type: "vocab", term: "{{word:zhao3}}", ttsText: "找" },
   vocabGongju: {
     type: "vocab",
     term: "{{word:gong1ju4}}",
@@ -163,6 +154,9 @@ const shape: LessonShape = {
     pinyin: "{{Word:ta1}} {{word:you3}}-{{word:mei2}}-{{word:you3}} {{word:jin1}}?",
     ttsText: "她有没有金？",
   },
+  vocabShenme: { type: "vocab", term: "{{word:shen2me}}", ttsText: "什么" },
+  vocabWen: { type: "vocab", term: "{{word:wen4}}", ttsText: "问" },
+  vocabZhao: { type: "vocab", term: "{{word:zhao3}}", ttsText: "找" },
   proseWhat: { type: "prose" },
   exampleWhat1: {
     type: "example",
@@ -189,6 +183,12 @@ const shape: LessonShape = {
     pinyin: "{{Word:wo3}} {{word:zhao3}} {{word:he2zi}}.",
     ttsText: "我找盒子。",
   },
+  vocabWeishenme: {
+    type: "vocab",
+    term: "{{word:wei4shen2me}}",
+    ttsText: "为什么",
+  },
+  vocabZenme: { type: "vocab", term: "{{word:zen3me}}", ttsText: "怎么" },
   proseWhyHow: { type: "prose" },
   exampleWhyHow1: {
     type: "example",

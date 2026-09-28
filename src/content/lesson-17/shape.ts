@@ -22,8 +22,6 @@ export type LessonShape = {
   title: TTitle;
   /** Chapter summary: why you'd want this, then what you'll be able to say. */
   summary: TSummary;
-  /** Vocabulary: "color". */
-  vocabYanse: TVocab;
   /** Vocabulary: "white". */
   vocabBaise: TVocab;
   /** Vocabulary: "black". */
@@ -32,8 +30,6 @@ export type LessonShape = {
   vocabHongse: TVocab;
   /** Vocabulary: "yellow". */
   vocabHuangse: TVocab;
-  /** Vocabulary: "blue, green". */
-  vocabLanse: TVocab;
   /** Say: To say a thing's color, put the color and -de before it. Pattern: color-de + noun */
   proseColorThing: TProse;
   /** Example: hóngsè-de hézi. */
@@ -44,6 +40,8 @@ export type LessonShape = {
   exampleColorThing3: TExample;
   /** Example: huángsè-de shuǐguǒ. */
   exampleColorThing4: TExample;
+  /** Vocabulary: "blue, green". */
+  vocabLanse: TVocab;
   /** Say: To say what color something is, put shì before the color, and -de after it. Pattern: Thing + shì + color-de */
   proseIsColor: TProse;
   /** Example: hézi shì hóngsè-de. */
@@ -68,6 +66,8 @@ export type LessonShape = {
   exampleIsColor10: TExample;
   /** Example: tā-de yīfu dōu shì hēisè-de. */
   exampleIsColor11: TExample;
+  /** Vocabulary: "color". */
+  vocabYanse: TVocab;
   /** Say: To ask "what color?", say shénme yánsè where the color would go. Pattern: Thing + shì shénme yánsè? */
   proseWhatColor: TProse;
   /** Example: nǐ-de yīfu shì shénme yánsè? */
@@ -117,7 +117,6 @@ export type LessonShape = {
 const shape: LessonShape = {
   title: { type: "title" },
   summary: { type: "summary" },
-  vocabYanse: { type: "vocab", term: "{{word:yan2se4}}", ttsText: "颜色" },
   vocabBaise: { type: "vocab", term: "{{word:bai2se4}}", ttsText: "白色" },
   vocabHeise: { type: "vocab", term: "{{word:hei1se4}}", ttsText: "黑色" },
   vocabHongse: {
@@ -130,7 +129,6 @@ const shape: LessonShape = {
     term: "{{word:huang2se4}}",
     ttsText: "黄色",
   },
-  vocabLanse: { type: "vocab", term: "{{word:lan2se4}}", ttsText: "蓝色" },
   proseColorThing: { type: "prose" },
   exampleColorThing1: {
     type: "example",
@@ -152,6 +150,7 @@ const shape: LessonShape = {
     pinyin: "{{Word:huang2se4}}-{{word:de}} {{word:shui3guo3}}.",
     ttsText: "黄色的水果。",
   },
+  vocabLanse: { type: "vocab", term: "{{word:lan2se4}}", ttsText: "蓝色" },
   proseIsColor: { type: "prose" },
   exampleIsColor1: {
     type: "example",
@@ -208,6 +207,7 @@ const shape: LessonShape = {
     pinyin: "{{Word:ta1}}-{{word:de}} {{word:yi1fu}} {{word:dou1}} {{word:shi4}} {{word:hei1se4}}-{{word:de}}.",
     ttsText: "她的衣服都是黑色的。",
   },
+  vocabYanse: { type: "vocab", term: "{{word:yan2se4}}", ttsText: "颜色" },
   proseWhatColor: { type: "prose" },
   exampleWhatColor1: {
     type: "example",

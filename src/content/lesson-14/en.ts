@@ -12,8 +12,6 @@ const en: PartialByKey<LessonShape> = {
     ],
   },
   vocabYe: { en: ["also, too"] },
-  vocabDou: { en: ["all; shénme-dōu: everything"] },
-  vocabBufen: { en: ["part"] },
   vocabZhiwu: { en: ["plant"] },
   vocabHuo: { en: ["fire"] },
   vocabKongqi: { en: ["air"] },
@@ -58,6 +56,7 @@ const en: PartialByKey<LessonShape> = {
   exampleAlsoIs3: { en: ["The fire is hot, and the sun is hot too."] },
   exampleAlsoIs4: { en: ["The sun is round, and the moon is round too."] },
   exampleAlsoIs5: { en: ["The market is near too."] },
+  vocabDou: { en: ["all; shénme-dōu: everything"] },
   proseAll: {
     en: [
       "**To say they all do something**, put {{word:dou1}} (all) right before the verb, after the people or things.",
@@ -100,6 +99,7 @@ const en: PartialByKey<LessonShape> = {
   exampleEverything3: { en: ["I don't want anything."] },
   exampleEverything4: { en: ["He didn't see anything."] },
   exampleEverything5: { en: ["There's air everywhere."] },
+  vocabBufen: { en: ["part"] },
   prosePart: {
     en: [
       "**To say part of something**, use {{word:bu4fen}} (part).",

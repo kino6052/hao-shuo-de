@@ -12,9 +12,6 @@ const en: PartialByKey<LessonShape> = {
     ],
   },
   vocabCi: { en: ["word"] },
-  vocabFangfa: { en: ["way, method"] },
-  vocabBizi: { en: ["nose"] },
-  vocabPifu: { en: ["skin"] },
   proseThing: {
     en: [
       "**To name the thing an action is about**, put -{{word:de}} after the verb.",
@@ -72,6 +69,9 @@ const en: PartialByKey<LessonShape> = {
   exampleHow2: { en: ["You write very well."] },
   exampleHow3: { en: ["He eats a lot."] },
   exampleHow4: { en: ["He speaks better than me."] },
+  vocabFangfa: { en: ["way, method"] },
+  vocabBizi: { en: ["nose"] },
+  vocabPifu: { en: ["skin"] },
   proseName: {
     en: [
       "**To name something there's no word for**, describe it, then add -{{word:de}} and the noun.",

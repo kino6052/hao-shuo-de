@@ -38,12 +38,12 @@ Living plan and checklist for rebuilding the lessons to match `src/content/intro
 ```
 title
 summary            why you'd want this + "In this lesson, you'll be able to say …" (rule 7)
-vocab              ~6 new words (word families may run a little over)
 
 For each teaching point (2–4 per lesson):
+  New words the word cards this point is the first to use (~6 per lesson in all)
   Say       one line: the thing you want to express
   Pattern   one line: e.g.  NOUN + bù shì + NOUN
-  Examples  3–6, each with translation + audio
+  Examples  3–6, each with translation + audio, right after the point
   Try it    4–6 exercises (answers collected at the end)
 
 grammar box        at least one per lesson: an info block with subtype "grammar",
@@ -51,6 +51,7 @@ grammar box        at least one per lesson: an info block with subtype "grammar"
 answers
 ```
 
+- **The page shows blocks in the order the lesson lists them.** A point's examples come right after it, and each word card sits just before the first point that uses the word, so the reader meets a few words at a time. Info boxes and exercises can go anywhere. The lesson specs place word cards automatically.
 - A teaching point's prose is **at most 1–2 plain sentences** beyond Say + Pattern.
 - Every prose block has a `tldr` and a `necessity`, written to rule 7.
 - Every lesson has at least one **grammar box**: the lesson's patterns in a few plain lines, each with an example. The grammar overview chapter will be built from these boxes, so the title and tag must make sense on their own.

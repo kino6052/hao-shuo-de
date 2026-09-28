@@ -22,28 +22,12 @@ export type LessonShape = {
   title: TTitle;
   /** Chapter summary: why you'd want this, then what you'll be able to say. */
   summary: TSummary;
-  /** Vocabulary: "from". */
-  vocabCong: TVocab;
   /** Vocabulary: "come". */
   vocabLai: TVocab;
   /** Vocabulary: "go". */
   vocabQu: TVocab;
-  /** Vocabulary: "rise; qǐ-lái: get up". */
-  vocabQi: TVocab;
-  /** Vocabulary: "out; wài-miàn: outside". */
-  vocabWai: TVocab;
   /** Vocabulary: "market". */
   vocabShichang: TVocab;
-  /** Vocabulary: "opening, door". */
-  vocabKou: TVocab;
-  /** Vocabulary: "arrive, to". */
-  vocabDao: TVocab;
-  /** Vocabulary: "move". */
-  vocabDong: TVocab;
-  /** Vocabulary: "far". */
-  vocabYuan: TVocab;
-  /** Vocabulary: "near". */
-  vocabJin: TVocab;
   /** Say: To say you come or go somewhere, put lái (come) or qù (go) before the place. Pattern: Who + lái / qù + place */
   proseComeGo: TProse;
   /** Example: wǒ qù shìchǎng. */
@@ -64,6 +48,8 @@ export type LessonShape = {
   exampleComeGo8: TExample;
   /** Example: nǐ lái yīxià. */
   exampleComeGo9: TExample;
+  /** Vocabulary: "from". */
+  vocabCong: TVocab;
   /** Say: To say where you come from, put cóng (from) before the place, then lái. Pattern: Who + cóng + place + lái */
   proseFrom: TProse;
   /** Example: wǒ cóng shìchǎng lái. */
@@ -74,6 +60,8 @@ export type LessonShape = {
   exampleFrom3: TExample;
   /** Example: tā cóng qián-miàn lái. */
   exampleFrom4: TExample;
+  /** Vocabulary: "arrive, to". */
+  vocabDao: TVocab;
   /** Say: To say you arrive somewhere, put dào (arrive) before the place. Pattern: Who + dào + place + le */
   proseArrive: TProse;
   /** Example: wǒ dào jiā le. */
@@ -82,6 +70,12 @@ export type LessonShape = {
   exampleArrive2: TExample;
   /** Example: shénme shíjiān nǐ dào? */
   exampleArrive3: TExample;
+  /** Vocabulary: "rise; qǐ-lái: get up". */
+  vocabQi: TVocab;
+  /** Vocabulary: "out; wài-miàn: outside". */
+  vocabWai: TVocab;
+  /** Vocabulary: "opening, door". */
+  vocabKou: TVocab;
   /** Say: To say which way you move, join qǐ (up), shàng (up), or xià (down) to lái or qù. Pattern: qǐ-lái / shàng-lái / xià-lái */
   proseDirection: TProse;
   /** Example: qǐ-lái! */
@@ -102,6 +96,8 @@ export type LessonShape = {
   exampleDirection8: TExample;
   /** Example: kǒu zài nǎlǐ? */
   exampleDirection9: TExample;
+  /** Vocabulary: "move". */
+  vocabDong: TVocab;
   /** Say: To say something moves, use dòng (move). Pattern: Who + dòng */
   proseMove: TProse;
   /** Example: tā dòng le. */
@@ -112,6 +108,10 @@ export type LessonShape = {
   exampleMove3: TExample;
   /** Example: nǐ néng dòng ma? */
   exampleMove4: TExample;
+  /** Vocabulary: "far". */
+  vocabYuan: TVocab;
+  /** Vocabulary: "near". */
+  vocabJin: TVocab;
   /** Say: To say a place is far or near, use yuǎn (far) or jìn (near). Pattern: Place + hěn + yuǎn / jìn */
   proseFar: TProse;
   /** Example: shìchǎng hěn yuǎn. */
@@ -171,21 +171,13 @@ export type LessonShape = {
 const shape: LessonShape = {
   title: { type: "title" },
   summary: { type: "summary" },
-  vocabCong: { type: "vocab", term: "{{word:cong2}}", ttsText: "从" },
   vocabLai: { type: "vocab", term: "{{word:lai2}}", ttsText: "来" },
   vocabQu: { type: "vocab", term: "{{word:qu4}}", ttsText: "去" },
-  vocabQi: { type: "vocab", term: "{{word:qi3}}", ttsText: "起" },
-  vocabWai: { type: "vocab", term: "{{word:wai4}}", ttsText: "外" },
   vocabShichang: {
     type: "vocab",
     term: "{{word:shi4chang3}}",
     ttsText: "市场",
   },
-  vocabKou: { type: "vocab", term: "{{word:kou3}}", ttsText: "口" },
-  vocabDao: { type: "vocab", term: "{{word:dao4}}", ttsText: "到" },
-  vocabDong: { type: "vocab", term: "{{word:dong4}}", ttsText: "动" },
-  vocabYuan: { type: "vocab", term: "{{word:yuan3}}", ttsText: "远" },
-  vocabJin: { type: "vocab", term: "{{word:jin4}}", ttsText: "近" },
   proseComeGo: { type: "prose" },
   exampleComeGo1: {
     type: "example",
@@ -232,6 +224,7 @@ const shape: LessonShape = {
     pinyin: "{{Word:ni3}} {{word:lai2}} {{word:yi1xia4}}.",
     ttsText: "你来一下。",
   },
+  vocabCong: { type: "vocab", term: "{{word:cong2}}", ttsText: "从" },
   proseFrom: { type: "prose" },
   exampleFrom1: {
     type: "example",
@@ -253,6 +246,7 @@ const shape: LessonShape = {
     pinyin: "{{Word:ta1}} {{word:cong2}} {{word:qian2}}-{{word:mian4}} {{word:lai2}}.",
     ttsText: "他从前面来。",
   },
+  vocabDao: { type: "vocab", term: "{{word:dao4}}", ttsText: "到" },
   proseArrive: { type: "prose" },
   exampleArrive1: {
     type: "example",
@@ -269,6 +263,9 @@ const shape: LessonShape = {
     pinyin: "{{Word:shen2me}} {{word:shi2jian1}} {{word:ni3}} {{word:dao4}}?",
     ttsText: "什么时间你到？",
   },
+  vocabQi: { type: "vocab", term: "{{word:qi3}}", ttsText: "起" },
+  vocabWai: { type: "vocab", term: "{{word:wai4}}", ttsText: "外" },
+  vocabKou: { type: "vocab", term: "{{word:kou3}}", ttsText: "口" },
   proseDirection: { type: "prose" },
   exampleDirection1: {
     type: "example",
@@ -315,6 +312,7 @@ const shape: LessonShape = {
     pinyin: "{{Word:kou3}} {{word:zai4}} {{word:na3li3}}?",
     ttsText: "口在哪里？",
   },
+  vocabDong: { type: "vocab", term: "{{word:dong4}}", ttsText: "动" },
   proseMove: { type: "prose" },
   exampleMove1: {
     type: "example",
@@ -336,6 +334,8 @@ const shape: LessonShape = {
     pinyin: "{{Word:ni3}} {{word:neng2}} {{word:dong4}} {{word:ma}}?",
     ttsText: "你能动吗？",
   },
+  vocabYuan: { type: "vocab", term: "{{word:yuan3}}", ttsText: "远" },
+  vocabJin: { type: "vocab", term: "{{word:jin4}}", ttsText: "近" },
   proseFar: { type: "prose" },
   exampleFar1: {
     type: "example",

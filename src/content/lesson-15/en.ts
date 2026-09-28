@@ -11,13 +11,7 @@ const en: PartialByKey<LessonShape> = {
       "In this lesson, you'll be able to say \"It got better.\", \"The fruit went bad.\", \"I fixed it.\", and \"He's very strong.\"",
     ],
   },
-  vocabBian: { en: ["become, change"] },
-  vocabBa: { en: ["puts the thing first: bǎ + thing + action"] },
-  vocabNong: { en: ["do, make"] },
-  vocabDe: { en: ["get"] },
-  vocabLiliang: { en: ["strength; yǒu lìliàng: strong"] },
   vocabHuai: { en: ["bad, broken"] },
-  vocabNi: { en: ["mud, paste"] },
   proseChanged: {
     en: [
       "**To say something changed**, put {{word:le}} after the adjective.",
@@ -35,6 +29,8 @@ const en: PartialByKey<LessonShape> = {
   exampleChanged2: { en: ["It's better now."] },
   exampleChanged3: { en: ["The fruit went bad."] },
   exampleChanged4: { en: ["The tool is broken."] },
+  vocabBian: { en: ["become, change"] },
+  vocabNi: { en: ["mud, paste"] },
   proseBecame: {
     en: [
       "**To say something became different**, put {{word:bian4}} (become) before the adjective, and {{word:le}} after.",
@@ -53,6 +49,8 @@ const en: PartialByKey<LessonShape> = {
   exampleBecame3: { en: ["The air turned hot."] },
   exampleBecame4: { en: ["The water turned into mud."] },
   exampleBecame5: { en: ["There's mud on the floor."] },
+  vocabNong: { en: ["do, make"] },
+  vocabDe: { en: ["get"] },
   proseMake: {
     en: [
       "**To say you make something so**, put {{word:nong4}} (do, make) before the result.",
@@ -73,6 +71,7 @@ const en: PartialByKey<LessonShape> = {
   exampleMake3: { en: ["Can you fix it?"] },
   exampleMake4: { en: ["What did you get?"] },
   exampleMake5: { en: ["I got new clothes."] },
+  vocabBa: { en: ["puts the thing first: bǎ + thing + action"] },
   proseBa: {
     en: [
       "**To say what you do to a thing**, put {{word:ba3}} and the thing before the action.",
@@ -93,6 +92,7 @@ const en: PartialByKey<LessonShape> = {
   exampleBa3: { en: ["Heat up the water."] },
   exampleBa4: { en: ["He made the opening bigger."] },
   exampleBa5: { en: ["He made all the water hot."] },
+  vocabLiliang: { en: ["strength; yǒu lìliàng: strong"] },
   proseStrong: {
     en: [
       '**To say strong**, say {{word:you3}} {{word:li4liang4}}, "have strength".',

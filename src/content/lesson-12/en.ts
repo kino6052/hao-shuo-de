@@ -16,7 +16,6 @@ const en: PartialByKey<LessonShape> = {
   vocabLeng: { en: ["cold"] },
   vocabTian: { en: ["sweet"] },
   vocabQiguai: { en: ["strange"] },
-  vocabXin: { en: ["new"] },
   vocabShenti: { en: ["body; health"] },
   vocabJiazhi: { en: ["value, worth"] },
   proseVery: {
@@ -77,6 +76,7 @@ const en: PartialByKey<LessonShape> = {
   exampleNot1: { en: ["The water isn't cold."] },
   exampleNot2: { en: ["This isn't very strange."] },
   exampleNot3: { en: ["The rice isn't hot."] },
+  vocabXin: { en: ["new"] },
   proseAsk: {
     en: [
       "**To ask how something is**, put {{word:ma}} after the adjective.",

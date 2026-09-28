@@ -24,10 +24,6 @@ export type LessonShape = {
   summary: TSummary;
   /** Vocabulary: "also, too". */
   vocabYe: TVocab;
-  /** Vocabulary: "all; shénme-dōu: everything". */
-  vocabDou: TVocab;
-  /** Vocabulary: "part". */
-  vocabBufen: TVocab;
   /** Vocabulary: "plant". */
   vocabZhiwu: TVocab;
   /** Vocabulary: "fire". */
@@ -64,6 +60,8 @@ export type LessonShape = {
   exampleAlsoIs4: TExample;
   /** Example: shìchǎng yě hěn jìn. */
   exampleAlsoIs5: TExample;
+  /** Vocabulary: "all; shénme-dōu: everything". */
+  vocabDou: TVocab;
   /** Say: To say they all do something, put dōu (all) right before the verb, after the people or things. Pattern: People or things + dōu + verb */
   proseAll: TProse;
   /** Example: wǒ-men dōu chī. */
@@ -90,6 +88,8 @@ export type LessonShape = {
   exampleEverything4: TExample;
   /** Example: nǎlǐ-dōu yǒu kōngqì. */
   exampleEverything5: TExample;
+  /** Vocabulary: "part". */
+  vocabBufen: TVocab;
   /** Say: To say part of something, use bùfen (part). Pattern: zhè / nà / dà + bùfen */
   prosePart: TProse;
   /** Example: zhè bùfen hěn hǎo. */
@@ -140,8 +140,6 @@ const shape: LessonShape = {
   title: { type: "title" },
   summary: { type: "summary" },
   vocabYe: { type: "vocab", term: "{{word:ye3}}", ttsText: "也" },
-  vocabDou: { type: "vocab", term: "{{word:dou1}}", ttsText: "都" },
-  vocabBufen: { type: "vocab", term: "{{word:bu4fen}}", ttsText: "部分" },
   vocabZhiwu: { type: "vocab", term: "{{word:zhi2wu4}}", ttsText: "植物" },
   vocabHuo: { type: "vocab", term: "{{word:huo3}}", ttsText: "火" },
   vocabKongqi: {
@@ -216,6 +214,7 @@ const shape: LessonShape = {
     pinyin: "{{Word:shi4chang3}} {{word:ye3}} {{word:hen3}} {{word:jin4}}.",
     ttsText: "市场也很近。",
   },
+  vocabDou: { type: "vocab", term: "{{word:dou1}}", ttsText: "都" },
   proseAll: { type: "prose" },
   exampleAll1: {
     type: "example",
@@ -273,6 +272,7 @@ const shape: LessonShape = {
     pinyin: "{{Word:na3li3}}-{{word:dou1}} {{word:you3}} {{word:kong1qi4}}.",
     ttsText: "哪里都有空气。",
   },
+  vocabBufen: { type: "vocab", term: "{{word:bu4fen}}", ttsText: "部分" },
   prosePart: { type: "prose" },
   examplePart1: {
     type: "example",
