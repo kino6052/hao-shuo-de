@@ -10,6 +10,7 @@ const zh: PartialByKey<LessonShape> = {
   vocabHen: { zh: [] },
   vocabDe: { zh: [] },
   vocabDuo: { zh: [] },
+  vocabShao: { zh: [] },
   vocabHao: { zh: [] },
   vocabDa: { zh: [] },
   vocabXiao: { zh: [] },
@@ -32,9 +33,12 @@ const zh: PartialByKey<LessonShape> = {
   exampleMany1: { zh: [] },
   exampleMany2: { zh: [] },
   exampleMany3: { zh: [] },
+  exampleMany4: { zh: [] },
+  exampleMany5: { zh: [] },
+  exampleMany6: { zh: [] },
   infoDescribing: {
     title: { zh: [] },
-    items: [{ zh: [] }, { zh: [] }, { zh: [] }],
+    items: [{ zh: [] }, { zh: [] }, { zh: [] }, { zh: [] }],
   },
   exercise1: { zh: [] },
   exercise2: { zh: [] },
@@ -43,6 +47,7 @@ const zh: PartialByKey<LessonShape> = {
   exercise5: { zh: [] },
   exercise6: { zh: [] },
   exercise7: { zh: [] },
+  exercise8: { zh: [] },
   answer1: { zh: [] },
   answer2: { zh: [] },
   answer3: { zh: [] },
@@ -50,6 +55,7 @@ const zh: PartialByKey<LessonShape> = {
   answer5: { zh: [] },
   answer6: { zh: [] },
   answer7: { zh: [] },
+  answer8: { zh: [] },
 };
 
 export default zh;

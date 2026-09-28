@@ -3,7 +3,7 @@
 // LessonShape is this lesson's exact, hand-written type -- see lesson-01's
 // shape.ts for the full explanation of the pattern.
 //
-// Rewritten in Phase 2 (BOOK_PLAN.md): also (yě) with verbs and with describing words, and all (quánbù).
+// Rewritten in Phase 2 (BOOK_PLAN.md): also (yě) with verbs and with adjectives, all (dōu), everything (shénme-dōu), and part (bùfen).
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- lesson-14).
 import type {
@@ -20,12 +20,14 @@ import type {
 export type LessonShape = {
   /** Modifiers 3 — Also and all */
   title: TTitle;
-  /** Chapter summary: what you'll be able to say (stub until the Phase 2 rewrite). */
+  /** Chapter summary: why you'd want this, then what you'll be able to say. */
   summary: TSummary;
   /** Vocabulary: "also, too". */
   vocabYe: TVocab;
-  /** Vocabulary: "all". */
-  vocabQuanbu: TVocab;
+  /** Vocabulary: "all; shénme-dōu: everything". */
+  vocabDou: TVocab;
+  /** Vocabulary: "part". */
+  vocabBufen: TVocab;
   /** Vocabulary: "plant". */
   vocabZhiwu: TVocab;
   /** Vocabulary: "fire". */
@@ -46,7 +48,11 @@ export type LessonShape = {
   exampleAlsoDo5: TExample;
   /** Example: wǒ yě zài tā-de páng-biān. */
   exampleAlsoDo6: TExample;
-  /** Say: To say something is also like that, put yě before hěn and the describing word. Pattern: Thing + yě + hěn + describing word */
+  /** Example: tā yě bù dòng. */
+  exampleAlsoDo7: TExample;
+  /** Example: biéde rén yě lái le. */
+  exampleAlsoDo8: TExample;
+  /** Say: To say something is also like that, put yě before hěn and the adjective. Pattern: Thing + yě + hěn + adjective */
   proseAlsoIs: TProse;
   /** Example: wǒ hěn lěng, tā yě hěn lěng. */
   exampleAlsoIs1: TExample;
@@ -56,57 +62,86 @@ export type LessonShape = {
   exampleAlsoIs3: TExample;
   /** Example: rì hěn yuán, yuè yě hěn yuán. */
   exampleAlsoIs4: TExample;
-  /** Say: To say all, use quánbù. Pattern: quánbù-de + noun / verb + quánbù */
+  /** Example: shìchǎng yě hěn jìn. */
+  exampleAlsoIs5: TExample;
+  /** Say: To say they all do something, put dōu (all) right before the verb, after the people or things. Pattern: People or things + dōu + verb */
   proseAll: TProse;
-  /** Example: wǒ yào quánbù. */
+  /** Example: wǒ-men dōu chī. */
   exampleAll1: TExample;
-  /** Example: quánbù-de zhíwù hěn hǎo. */
+  /** Example: zhíwù dōu yào shuǐ. */
   exampleAll2: TExample;
-  /** Example: quánbù chī-wán le. */
+  /** Example: tā-men dōu hěn hǎo. */
   exampleAll3: TExample;
-  /** Example: zhíwù yào shuǐ. */
+  /** Example: shuǐguǒ dōu chī-wán le. */
   exampleAll4: TExample;
   /** Example: wài-miàn-de kōngqì hěn hǎo. */
   exampleAll5: TExample;
   /** Example: huǒ zài nǎlǐ? */
   exampleAll6: TExample;
-  /** Grammar box: yě + verb, yě hěn + describing word, quánbù. */
+  /** Say: To say everything, put shénme-dōu before the verb. Pattern: Who + shénme-dōu + verb */
+  proseEverything: TProse;
+  /** Example: wǒ shénme-dōu chī. */
+  exampleEverything1: TExample;
+  /** Example: tā shénme-dōu zhīdào. */
+  exampleEverything2: TExample;
+  /** Example: wǒ shénme-dōu bù yào. */
+  exampleEverything3: TExample;
+  /** Example: tā shénme-dōu méi kàn-dào. */
+  exampleEverything4: TExample;
+  /** Example: nǎlǐ-dōu yǒu kōngqì. */
+  exampleEverything5: TExample;
+  /** Say: To say part of something, use bùfen (part). Pattern: zhè / nà / dà + bùfen */
+  prosePart: TProse;
+  /** Example: zhè bùfen hěn hǎo. */
+  examplePart1: TExample;
+  /** Example: nà bùfen hěn rè. */
+  examplePart2: TExample;
+  /** Example: dà bùfen rén chī mǐfàn. */
+  examplePart3: TExample;
+  /** Example: dà bùfen zhíwù hěn xiǎo. */
+  examplePart4: TExample;
+  /** Grammar box: yě + verb, yě hěn + adjective, dōu, shénme-dōu, bùfen. */
   infoAlsoAndAll: TInfo;
   /** Exercise 1: I want some too. */
   exercise1: TExercise;
   /** Exercise 2: The water is hot too. */
   exercise2: TExercise;
-  /** Exercise 3: I want all the fruit. */
+  /** Exercise 3: We all want fruit. */
   exercise3: TExercise;
-  /** Exercise 4: The plant is small. */
+  /** Exercise 4: I eat everything. */
   exercise4: TExercise;
-  /** Exercise 5: The fire is really hot. */
+  /** Exercise 5: Most people eat rice. */
   exercise5: TExercise;
-  /** Exercise 6: The air here is cold. */
+  /** Exercise 6: The plant is small. */
   exercise6: TExercise;
+  /** Exercise 7: The fire is really hot. */
+  exercise7: TExercise;
+  /** Exercise 8: The air here is cold. */
+  exercise8: TExercise;
   /** Answer 1: wǒ yě yào. */
   answer1: TAnswer;
   /** Answer 2: shuǐ yě hěn rè. */
   answer2: TAnswer;
-  /** Answer 3: wǒ yào quánbù-de shuǐguǒ. */
+  /** Answer 3: wǒ-men dōu yào shuǐguǒ. */
   answer3: TAnswer;
-  /** Answer 4: zhíwù hěn xiǎo. */
+  /** Answer 4: wǒ shénme-dōu chī. */
   answer4: TAnswer;
-  /** Answer 5: huǒ zhēn rè. */
+  /** Answer 5: dà bùfen rén chī mǐfàn. */
   answer5: TAnswer;
-  /** Answer 6: zhè-lǐ-de kōngqì hěn lěng. */
+  /** Answer 6: zhíwù hěn xiǎo. */
   answer6: TAnswer;
+  /** Answer 7: huǒ zhēn rè. */
+  answer7: TAnswer;
+  /** Answer 8: zhè-lǐ-de kōngqì hěn lěng. */
+  answer8: TAnswer;
 };
 
 const shape: LessonShape = {
   title: { type: "title" },
   summary: { type: "summary" },
   vocabYe: { type: "vocab", term: "{{word:ye3}}", ttsText: "也" },
-  vocabQuanbu: {
-    type: "vocab",
-    term: "{{word:quan2bu4}}",
-    ttsText: "全部",
-  },
+  vocabDou: { type: "vocab", term: "{{word:dou1}}", ttsText: "都" },
+  vocabBufen: { type: "vocab", term: "{{word:bu4fen}}", ttsText: "部分" },
   vocabZhiwu: { type: "vocab", term: "{{word:zhi2wu4}}", ttsText: "植物" },
   vocabHuo: { type: "vocab", term: "{{word:huo3}}", ttsText: "火" },
   vocabKongqi: {
@@ -145,6 +180,16 @@ const shape: LessonShape = {
     pinyin: "{{Word:wo3}} {{word:ye3}} {{word:zai4}} {{word:ta1}}-{{word:de}} {{word:pang2}}-{{word:bian1}}.",
     ttsText: "我也在他的旁边。",
   },
+  exampleAlsoDo7: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:ye3}} {{word:bu4}} {{word:dong4}}.",
+    ttsText: "他也不动。",
+  },
+  exampleAlsoDo8: {
+    type: "example",
+    pinyin: "{{Word:bie2de}} {{word:ren2}} {{word:ye3}} {{word:lai2}} {{word:le}}.",
+    ttsText: "别的人也来了。",
+  },
   proseAlsoIs: { type: "prose" },
   exampleAlsoIs1: {
     type: "example",
@@ -166,26 +211,31 @@ const shape: LessonShape = {
     pinyin: "{{Word:ri4}} {{word:hen3}} {{word:yuan2}}, {{word:yue4}} {{word:ye3}} {{word:hen3}} {{word:yuan2}}.",
     ttsText: "日很圆，月也很圆。",
   },
+  exampleAlsoIs5: {
+    type: "example",
+    pinyin: "{{Word:shi4chang3}} {{word:ye3}} {{word:hen3}} {{word:jin4}}.",
+    ttsText: "市场也很近。",
+  },
   proseAll: { type: "prose" },
   exampleAll1: {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:yao4}} {{word:quan2bu4}}.",
-    ttsText: "我要全部。",
+    pinyin: "{{Word:wo3}}-{{word:men}} {{word:dou1}} {{word:chi1}}.",
+    ttsText: "我们都吃。",
   },
   exampleAll2: {
     type: "example",
-    pinyin: "{{Word:quan2bu4}}-{{word:de}} {{word:zhi2wu4}} {{word:hen3}} {{word:hao3}}.",
-    ttsText: "全部的植物很好。",
+    pinyin: "{{Word:zhi2wu4}} {{word:dou1}} {{word:yao4}} {{word:shui3}}.",
+    ttsText: "植物都要水。",
   },
   exampleAll3: {
     type: "example",
-    pinyin: "{{Word:quan2bu4}} {{word:chi1}}-{{word:wan2}} {{word:le}}.",
-    ttsText: "全部吃完了。",
+    pinyin: "{{Word:ta1}}-{{word:men}} {{word:dou1}} {{word:hen3}} {{word:hao3}}.",
+    ttsText: "他们都很好。",
   },
   exampleAll4: {
     type: "example",
-    pinyin: "{{Word:zhi2wu4}} {{word:yao4}} {{word:shui3}}.",
-    ttsText: "植物要水。",
+    pinyin: "{{Word:shui3guo3}} {{word:dou1}} {{word:chi1}}-{{word:wan2}} {{word:le}}.",
+    ttsText: "水果都吃完了。",
   },
   exampleAll5: {
     type: "example",
@@ -197,11 +247,58 @@ const shape: LessonShape = {
     pinyin: "{{Word:huo3}} {{word:zai4}} {{word:na3li3}}?",
     ttsText: "火在哪里？",
   },
+  proseEverything: { type: "prose" },
+  exampleEverything1: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:shen2me}}-{{word:dou1}} {{word:chi1}}.",
+    ttsText: "我什么都吃。",
+  },
+  exampleEverything2: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:shen2me}}-{{word:dou1}} {{word:zhi1dao4}}.",
+    ttsText: "他什么都知道。",
+  },
+  exampleEverything3: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:shen2me}}-{{word:dou1}} {{word:bu4}} {{word:yao4}}.",
+    ttsText: "我什么都不要。",
+  },
+  exampleEverything4: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:shen2me}}-{{word:dou1}} {{word:mei2}} {{word:kan4}}-{{word:dao4}}.",
+    ttsText: "他什么都没看到。",
+  },
+  exampleEverything5: {
+    type: "example",
+    pinyin: "{{Word:na3li3}}-{{word:dou1}} {{word:you3}} {{word:kong1qi4}}.",
+    ttsText: "哪里都有空气。",
+  },
+  prosePart: { type: "prose" },
+  examplePart1: {
+    type: "example",
+    pinyin: "{{Word:zhe4}} {{word:bu4fen}} {{word:hen3}} {{word:hao3}}.",
+    ttsText: "这部分很好。",
+  },
+  examplePart2: {
+    type: "example",
+    pinyin: "{{Word:na4}} {{word:bu4fen}} {{word:hen3}} {{word:re4}}.",
+    ttsText: "那部分很热。",
+  },
+  examplePart3: {
+    type: "example",
+    pinyin: "{{Word:da4}} {{word:bu4fen}} {{word:ren2}} {{word:chi1}} {{word:mi3fan4}}.",
+    ttsText: "大部分人吃米饭。",
+  },
+  examplePart4: {
+    type: "example",
+    pinyin: "{{Word:da4}} {{word:bu4fen}} {{word:zhi2wu4}} {{word:hen3}} {{word:xiao3}}.",
+    ttsText: "大部分植物很小。",
+  },
   infoAlsoAndAll: {
     type: "info",
     subtype: "grammar",
     tag: "describing/also-and-all",
-    items: [{}, {}, {}],
+    items: [{}, {}, {}, {}, {}],
   },
   exercise1: { type: "exercise" },
   exercise2: { type: "exercise" },
@@ -209,12 +306,16 @@ const shape: LessonShape = {
   exercise4: { type: "exercise" },
   exercise5: { type: "exercise" },
   exercise6: { type: "exercise" },
+  exercise7: { type: "exercise" },
+  exercise8: { type: "exercise" },
   answer1: { type: "answer", ttsText: "我也要。" },
   answer2: { type: "answer", ttsText: "水也很热。" },
-  answer3: { type: "answer", ttsText: "我要全部的水果。" },
-  answer4: { type: "answer", ttsText: "植物很小。" },
-  answer5: { type: "answer", ttsText: "火真热。" },
-  answer6: { type: "answer", ttsText: "这里的空气很冷。" },
+  answer3: { type: "answer", ttsText: "我们都要水果。" },
+  answer4: { type: "answer", ttsText: "我什么都吃。" },
+  answer5: { type: "answer", ttsText: "大部分人吃米饭。" },
+  answer6: { type: "answer", ttsText: "植物很小。" },
+  answer7: { type: "answer", ttsText: "火真热。" },
+  answer8: { type: "answer", ttsText: "这里的空气很冷。" },
 };
 
 export default shape;

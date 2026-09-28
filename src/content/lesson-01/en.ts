@@ -157,7 +157,7 @@ const en: PartialByKey<LessonShape> = {
       },
       {
         en: [
-          "**A hyphen joins words into one**. A hyphen glues a small word onto another word, so the two work as one word. Sometimes that gives the word a new job, like turning a verb into a describing word.",
+          "**A hyphen joins words into one**. A hyphen glues a small word onto another word, so the two work as one word. Sometimes that gives the word a new job, like turning a verb into a describing word (an adjective).",
         ],
         items: [
           { en: ["{{word:zhe4}}-**ge** — this"] },

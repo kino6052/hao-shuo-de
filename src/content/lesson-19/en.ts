@@ -39,6 +39,7 @@ const en: PartialByKey<LessonShape> = {
   exampleGive3: { en: ["She gives me clothes."] },
   exampleGive4: { en: ["I write to you."] },
   exampleGive5: { en: ["He gives me three, and I give him four."] },
+  exampleGive6: { en: ["He gives me part of it."] },
   proseWith: {
     en: [
       "**To say what you do something with**, put {{word:yong4}} and the thing before the verb.",
@@ -61,6 +62,7 @@ const en: PartialByKey<LessonShape> = {
   exampleWith7: { en: ["He made a box out of clay."] },
   exampleWith8: { en: ["The animal touches my hand with its nose."] },
   exampleWith9: { en: ["He uses a new way."] },
+  exampleWith10: { en: ["Let me use your tool for a moment."] },
   proseAndOr: {
     en: [
       "**To join two nouns**, put {{word:he2}} (and) or {{word:huo4zhe3}} (or) between them.",
@@ -85,15 +87,15 @@ const en: PartialByKey<LessonShape> = {
   exampleAndOr7: { en: ["I want eight or nine."] },
   proseToward: {
     en: [
-      "**To say how someone is toward someone**, put {{word:dui4}} and the person before the describing word.",
+      "**To say how someone is toward someone**, put {{word:dui4}} and the person before the adjective.",
       "",
-      "**A + {{word:dui4}} + B + describing word**",
+      "**A + {{word:dui4}} + B + adjective**",
       "",
       '{{word:dui4}} X {{word:lai2}} {{word:shuo1}} means "for X": {{word:dui4}} {{word:wo3}} {{word:lai2}} {{word:shuo1}}, for me.',
     ],
     tldr: {
       en: [
-        "{{word:dui4}} + person + describing word: {{Word:ta1}} {{word:dui4}} {{word:wo3}} {{word:hen3}} {{word:hao3}}, he's good to me.",
+        "{{word:dui4}} + person + adjective: {{Word:ta1}} {{word:dui4}} {{word:wo3}} {{word:hen3}} {{word:hao3}}, he's good to me.",
       ],
     },
     necessity: { en: ["Now you can say how things are for someone."] },
@@ -143,7 +145,7 @@ const en: PartialByKey<LessonShape> = {
       },
       {
         en: [
-          "A {{word:dui4}} B + describing word, toward / for: {{Word:ta1}} {{word:dui4}} {{word:wo3}} {{word:hen3}} {{word:hao3}}. (He's good to me.)",
+          "A {{word:dui4}} B + adjective, toward / for: {{Word:ta1}} {{word:dui4}} {{word:wo3}} {{word:hen3}} {{word:hao3}}. (He's good to me.)",
         ],
       },
     ],

@@ -3,10 +3,8 @@
 // LessonShape is this lesson's exact, hand-written type -- see lesson-01's
 // shape.ts for the full explanation of the pattern.
 //
-// Phase 1 skeleton (BOOK_PLAN.md): the vocab list follows BOOK_PLAN §4b, and
-// the other blocks were moved here unchanged from the old 16-lesson layout
-// ([from old LNN] says where; the old lessons are archived in
-// src/content/legacy/v2-16-lessons/). They get rewritten in Phase 2.
+// Rewritten in Phase 2 (BOOK_PLAN.md): want, can, know how, love to, and
+// maybe (kěnéng, D36). Only words from lessons 2-7; passes every gate.
 import type {
   TTitle,
   TSummary,
@@ -31,6 +29,8 @@ export type LessonShape = {
   vocabZhidao: TVocab;
   /** Vocabulary: "love; love to". */
   vocabAi: TVocab;
+  /** Vocabulary: "maybe, might". */
+  vocabKeneng: TVocab;
   /** Vocabulary: "wait". */
   vocabDeng: TVocab;
   /** Vocabulary: "clothes". */
@@ -79,7 +79,17 @@ export type LessonShape = {
   exampleLove4: TExample;
   /** Example: zhè shì nǐ-de yīfu ma? */
   exampleLove5: TExample;
-  /** Grammar box: yào / néng / zhīdào zěnme / ài + verb, and bù before them. */
+  /** Say: To say maybe, put kěnéng (maybe) before the verb. Pattern: Who + kěnéng + verb */
+  proseMaybe: TProse;
+  /** Example: tā kěnéng zhīdào. */
+  exampleMaybe1: TExample;
+  /** Example: tā kěnéng yào chī. */
+  exampleMaybe2: TExample;
+  /** Example: wǒ kěnéng bù néng děng. */
+  exampleMaybe3: TExample;
+  /** Example: kěnéng. */
+  exampleMaybe4: TExample;
+  /** Grammar box: yào / néng / zhīdào zěnme / ài + verb, and bù before them. Adds kěnéng (maybe). */
   infoPreVerbs: TInfo;
   /** Exercise 1: I want to wait. */
   exercise1: TExercise;
@@ -95,6 +105,8 @@ export type LessonShape = {
   exercise6: TExercise;
   /** Exercise 7: Do you have clothes? */
   exercise7: TExercise;
+  /** Exercise 8: Maybe she knows. */
+  exercise8: TExercise;
   /** Answer 1. */
   answer1: TAnswer;
   /** Answer 2. */
@@ -109,6 +121,8 @@ export type LessonShape = {
   answer6: TAnswer;
   /** Answer 7. */
   answer7: TAnswer;
+  /** Answer 8: tā kěnéng zhīdào. */
+  answer8: TAnswer;
 };
 
 const shape: LessonShape = {
@@ -122,6 +136,11 @@ const shape: LessonShape = {
     ttsText: "知道",
   },
   vocabAi: { type: "vocab", term: "{{word:ai4}}", ttsText: "爱" },
+  vocabKeneng: {
+    type: "vocab",
+    term: "{{word:ke3neng2}}",
+    ttsText: "可能",
+  },
   vocabDeng: { type: "vocab", term: "{{word:deng3}}", ttsText: "等" },
   vocabYifu: { type: "vocab", term: "{{word:yi1fu}}", ttsText: "衣服" },
   proseWant: { type: "prose" },
@@ -218,11 +237,32 @@ const shape: LessonShape = {
     pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:ni3}}-{{word:de}} {{word:yi1fu}} {{word:ma}}?",
     ttsText: "这是你的衣服吗？",
   },
+  proseMaybe: { type: "prose" },
+  exampleMaybe1: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:ke3neng2}} {{word:zhi1dao4}}.",
+    ttsText: "他可能知道。",
+  },
+  exampleMaybe2: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:ke3neng2}} {{word:yao4}} {{word:chi1}}.",
+    ttsText: "她可能要吃。",
+  },
+  exampleMaybe3: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:ke3neng2}} {{word:bu4}} {{word:neng2}} {{word:deng3}}.",
+    ttsText: "我可能不能等。",
+  },
+  exampleMaybe4: {
+    type: "example",
+    pinyin: "{{Word:ke3neng2}}.",
+    ttsText: "可能。",
+  },
   infoPreVerbs: {
     type: "info",
     subtype: "grammar",
     tag: "pre-verbs/want-can-know-love",
-    items: [{}, {}, {}, {}, {}],
+    items: [{}, {}, {}, {}, {}, {}],
   },
   exercise1: { type: "exercise" },
   exercise2: { type: "exercise" },
@@ -231,6 +271,7 @@ const shape: LessonShape = {
   exercise5: { type: "exercise" },
   exercise6: { type: "exercise" },
   exercise7: { type: "exercise" },
+  exercise8: { type: "exercise" },
   answer1: { type: "answer", ttsText: "我要等。" },
   answer2: { type: "answer", ttsText: "你能写吗？" },
   answer3: { type: "answer", ttsText: "她爱吃水果。" },
@@ -238,6 +279,7 @@ const shape: LessonShape = {
   answer5: { type: "answer", ttsText: "你要吃什么？" },
   answer6: { type: "answer", ttsText: "他不能等。" },
   answer7: { type: "answer", ttsText: "你有衣服吗？" },
+  answer8: { type: "answer", ttsText: "她可能知道。" },
 };
 
 export default shape;

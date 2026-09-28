@@ -34,6 +34,7 @@ const ru: PartialByKey<LessonShape> = {
   exampleHave3: { ru: [] },
   exampleHave4: { ru: [] },
   exampleHave5: { ru: [] },
+  exampleHave6: { ru: [] },
   infoWhoDoesWhat: {
     title: { ru: [] },
     items: [{ ru: [] }, { ru: [] }, { ru: [] }],

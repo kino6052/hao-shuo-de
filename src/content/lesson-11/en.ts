@@ -19,6 +19,9 @@ const en: PartialByKey<LessonShape> = {
   vocabShichang: { en: ["market"] },
   vocabKou: { en: ["opening, door"] },
   vocabDao: { en: ["arrive, to"] },
+  vocabDong: { en: ["move"] },
+  vocabYuan: { en: ["far"] },
+  vocabJin: { en: ["near"] },
   proseComeGo: {
     en: [
       "**To say you come or go somewhere**, put {{word:lai2}} (come) or {{word:qu4}} (go) before the place.",
@@ -41,6 +44,8 @@ const en: PartialByKey<LessonShape> = {
   exampleComeGo5: { en: ["I've been to the market."] },
   exampleComeGo6: { en: ["After eating, we go to the market."] },
   exampleComeGo7: { en: ["He comes over beside me."] },
+  exampleComeGo8: { en: ["We're going to the market now."] },
+  exampleComeGo9: { en: ["Come here a moment."] },
   proseFrom: {
     en: [
       "**To say where you come from**, put {{word:cong2}} (from) before the place, then {{word:lai2}}.",
@@ -97,6 +102,47 @@ const en: PartialByKey<LessonShape> = {
   exampleDirection7: { en: ["Go outside through this opening."] },
   exampleDirection8: { en: ["The box's opening is small."] },
   exampleDirection9: { en: ["Where is the door?"] },
+  proseMove: {
+    en: [
+      "**To say something moves**, use {{word:dong4}} (move).",
+      "",
+      "**Who + {{word:dong4}}**",
+      "",
+      "{{Word:bu4}} {{word:yao4}} {{word:dong4}}! means \"Don't move!\" And {{word:dong4wu4}} (animal) is a \"moving thing\".",
+    ],
+    tldr: {
+      en: [
+        "{{word:dong4}} means move: {{Word:ta1}} {{word:dong4}} {{word:le}}, it moved.",
+      ],
+    },
+    necessity: {
+      en: [
+        "Now you can say something is moving, or tell it to stop.",
+      ],
+    },
+  },
+  exampleMove1: { en: ["It moved."] },
+  exampleMove2: { en: ["Don't move!"] },
+  exampleMove3: { en: ["The animal is moving."] },
+  exampleMove4: { en: ["Can you move?"] },
+  proseFar: {
+    en: [
+      "**To say a place is far or near**, use {{word:yuan3}} (far) or {{word:jin4}} (near).",
+      "",
+      "**Place + {{word:hen3}} + {{word:yuan3}} / {{word:jin4}}**",
+    ],
+    tldr: {
+      en: [
+        "{{word:yuan3}} is far, {{word:jin4}} is near: {{Word:shi4chang3}} {{word:hen3}} {{word:yuan3}}.",
+      ],
+    },
+    necessity: { en: ["Now you can say how far you have to go."] },
+  },
+  exampleFar1: { en: ["The market is far."] },
+  exampleFar2: { en: ["My home is near."] },
+  exampleFar3: { en: ["Is your home far?"] },
+  exampleFar4: { en: ["We go to the nearby market."] },
+  exampleFar5: { en: ["He comes from far away."] },
   infoComingAndGoing: {
     title: { en: ["Coming and Going"] },
     items: [
@@ -120,6 +166,16 @@ const en: PartialByKey<LessonShape> = {
           "{{word:qi3}}-{{word:lai2}} (get up), {{word:shang4}}-{{word:lai2}} (come up), {{word:xia4}}-{{word:lai2}} (come down); with {{word:qu4}} for going away.",
         ],
       },
+      {
+        en: [
+          "{{word:dong4}}, move: {{Word:bu4}} {{word:yao4}} {{word:dong4}}! (Don't move!)",
+        ],
+      },
+      {
+        en: [
+          "{{word:yuan3}} / {{word:jin4}}, far / near: {{Word:shi4chang3}} {{word:hen3}} {{word:yuan3}}. (The market is far.)",
+        ],
+      },
     ],
   },
   exercise1: { en: ["Where are you going?"] },
@@ -129,6 +185,9 @@ const en: PartialByKey<LessonShape> = {
   exercise5: { en: ["The animal is outside."] },
   exercise6: { en: ["The box's opening is big."] },
   exercise7: { en: ["Come down!"] },
+  exercise8: { en: ["Don't move!"] },
+  exercise9: { en: ["The market is far."] },
+  exercise10: { en: ["My home is near."] },
   answer1: { en: ["{{Word:ni3}} {{word:qu4}} {{word:na3li3}}?"] },
   answer2: {
     en: [
@@ -152,6 +211,15 @@ const en: PartialByKey<LessonShape> = {
     ],
   },
   answer7: { en: ["{{Word:xia4}}-{{word:lai2}}!"] },
+  answer8: { en: ["{{Word:bu4}} {{word:yao4}} {{word:dong4}}!"] },
+  answer9: {
+    en: ["{{Word:shi4chang3}} {{word:hen3}} {{word:yuan3}}."],
+  },
+  answer10: {
+    en: [
+      "{{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:hen3}} {{word:jin4}}.",
+    ],
+  },
 };
 
 export default en;

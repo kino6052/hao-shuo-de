@@ -38,6 +38,10 @@ export type LessonShape = {
   vocabShuijiao: TVocab;
   /** Vocabulary: "after a verb: have done before". */
   vocabGuo: TVocab;
+  /** Vocabulary: "now". */
+  vocabXianzai: TVocab;
+  /** Vocabulary: "happen". */
+  vocabFasheng: TVocab;
   /** Say: To say something is done, put le after the verb. Pattern: Who + verb + le */
   proseDone: TProse;
   /** Example: wǒ chī le. */
@@ -46,6 +50,10 @@ export type LessonShape = {
   exampleDone2: TExample;
   /** Example: nǐ kàn le ma? */
   exampleDone3: TExample;
+  /** Example: fāshēng le shénme? */
+  exampleDone4: TExample;
+  /** Example: nǐ zhīdào fāshēng le shénme ma? */
+  exampleDone5: TExample;
   /** Say: To say something is happening right now, put zài before the verb. Pattern: Who + zài + verb */
   proseNow: TProse;
   /** Example: wǒ zài chī. */
@@ -56,6 +64,10 @@ export type LessonShape = {
   exampleNow3: TExample;
   /** Example: nǐ wèishénme zài shuìjiào? */
   exampleNow4: TExample;
+  /** Example: tā xiànzài zài shuìjiào. */
+  exampleNow5: TExample;
+  /** Example: tā kěnéng zài shuìjiào. */
+  exampleNow6: TExample;
   /** Say: To say something will happen, put huì before the verb. Pattern: Who + huì + verb */
   proseWill: TProse;
   /** Example: wǒ huì chī. */
@@ -72,6 +84,8 @@ export type LessonShape = {
   exampleBefore2: TExample;
   /** Example: tā shuō-guò. */
   exampleBefore3: TExample;
+  /** Example: zhè fāshēng-guò. */
+  exampleBefore4: TExample;
   /** Say: To say when, put the time first, then a comma, then the rest. Pattern: Time, who + verb */
   proseTime: TProse;
   /** Example: yuè-de shíjiān, wǒ shuìjiào. */
@@ -84,40 +98,52 @@ export type LessonShape = {
   exampleTime4: TExample;
   /** Example: wǒ kàn yuè. */
   exampleTime5: TExample;
-  /** Grammar box: le, zài, huì, guò, and putting the time first. */
+  /** Example: xiànzài, wǒ yào shuìjiào. */
+  exampleTime6: TExample;
+  /** Example: xiànzài shì shénme shíjiān? */
+  exampleTime7: TExample;
+  /** Grammar box: le, zài, huì, guò, putting the time first (xiànzài), and fāshēng. */
   infoWhenItHappens: TInfo;
-  /** Exercise 1: I slept. */
+  /** Exercise 1: What happened? */
   exercise1: TExercise;
-  /** Exercise 2: He is waiting right now. */
+  /** Exercise 2: Now I'm eating. */
   exercise2: TExercise;
-  /** Exercise 3: Will you write? */
+  /** Exercise 3: I slept. */
   exercise3: TExercise;
-  /** Exercise 4: I've heard it before. */
+  /** Exercise 4: He is waiting right now. */
   exercise4: TExercise;
-  /** Exercise 5: What are you eating? */
+  /** Exercise 5: Will you write? */
   exercise5: TExercise;
-  /** Exercise 6: When do you sleep? */
+  /** Exercise 6: I've heard it before. */
   exercise6: TExercise;
-  /** Exercise 7: The sun is big. */
+  /** Exercise 7: What are you eating? */
   exercise7: TExercise;
-  /** Exercise 8: The moon is small. */
+  /** Exercise 8: When do you sleep? */
   exercise8: TExercise;
-  /** Answer 1: wǒ shuìjiào le. */
+  /** Exercise 9: The sun is big. */
+  exercise9: TExercise;
+  /** Exercise 10: The moon is small. */
+  exercise10: TExercise;
+  /** Answer 1: fāshēng le shénme? */
   answer1: TAnswer;
-  /** Answer 2: tā zài děng. */
+  /** Answer 2: xiànzài, wǒ zài chī. */
   answer2: TAnswer;
-  /** Answer 3: nǐ huì xiě ma? */
+  /** Answer 3: wǒ shuìjiào le. */
   answer3: TAnswer;
-  /** Answer 4: wǒ tīng-guò. */
+  /** Answer 4: tā zài děng. */
   answer4: TAnswer;
-  /** Answer 5: nǐ zài chī shénme? */
+  /** Answer 5: nǐ huì xiě ma? */
   answer5: TAnswer;
-  /** Answer 6: shénme shíjiān nǐ shuìjiào? */
+  /** Answer 6: wǒ tīng-guò. */
   answer6: TAnswer;
-  /** Answer 7: rì hěn dà. */
+  /** Answer 7: nǐ zài chī shénme? */
   answer7: TAnswer;
-  /** Answer 8: yuè hěn xiǎo. */
+  /** Answer 8: shénme shíjiān nǐ shuìjiào? */
   answer8: TAnswer;
+  /** Answer 9: rì hěn dà. */
+  answer9: TAnswer;
+  /** Answer 10: yuè hěn xiǎo. */
+  answer10: TAnswer;
 };
 
 const shape: LessonShape = {
@@ -139,6 +165,16 @@ const shape: LessonShape = {
     ttsText: "睡觉",
   },
   vocabGuo: { type: "vocab", term: "{{word:guo4}}", ttsText: "过" },
+  vocabXianzai: {
+    type: "vocab",
+    term: "{{word:xian4zai4}}",
+    ttsText: "现在",
+  },
+  vocabFasheng: {
+    type: "vocab",
+    term: "{{word:fa1sheng1}}",
+    ttsText: "发生",
+  },
   proseDone: { type: "prose" },
   exampleDone1: {
     type: "example",
@@ -154,6 +190,16 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ni3}} {{word:kan4}} {{word:le}} {{word:ma}}?",
     ttsText: "你看了吗？",
+  },
+  exampleDone4: {
+    type: "example",
+    pinyin: "{{Word:fa1sheng1}} {{word:le}} {{word:shen2me}}?",
+    ttsText: "发生了什么？",
+  },
+  exampleDone5: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:zhi1dao4}} {{word:fa1sheng1}} {{word:le}} {{word:shen2me}} {{word:ma}}?",
+    ttsText: "你知道发生了什么吗？",
   },
   proseNow: { type: "prose" },
   exampleNow1: {
@@ -175,6 +221,16 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ni3}} {{word:wei4shen2me}} {{word:zai4}} {{word:shui4jiao4}}?",
     ttsText: "你为什么在睡觉？",
+  },
+  exampleNow5: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:xian4zai4}} {{word:zai4}} {{word:shui4jiao4}}.",
+    ttsText: "他现在在睡觉。",
+  },
+  exampleNow6: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:ke3neng2}} {{word:zai4}} {{word:shui4jiao4}}.",
+    ttsText: "他可能在睡觉。",
   },
   proseWill: { type: "prose" },
   exampleWill1: {
@@ -208,6 +264,11 @@ const shape: LessonShape = {
     pinyin: "{{Word:ta1}} {{word:shuo1}}-{{word:guo4}}.",
     ttsText: "他说过。",
   },
+  exampleBefore4: {
+    type: "example",
+    pinyin: "{{Word:zhe4}} {{word:fa1sheng1}}-{{word:guo4}}.",
+    ttsText: "这发生过。",
+  },
   proseTime: { type: "prose" },
   exampleTime1: {
     type: "example",
@@ -234,11 +295,21 @@ const shape: LessonShape = {
     pinyin: "{{Word:wo3}} {{word:kan4}} {{word:yue4}}.",
     ttsText: "我看月。",
   },
+  exampleTime6: {
+    type: "example",
+    pinyin: "{{Word:xian4zai4}}, {{word:wo3}} {{word:yao4}} {{word:shui4jiao4}}.",
+    ttsText: "现在，我要睡觉。",
+  },
+  exampleTime7: {
+    type: "example",
+    pinyin: "{{Word:xian4zai4}} {{word:shi4}} {{word:shen2me}} {{word:shi2jian1}}?",
+    ttsText: "现在是什么时间？",
+  },
   infoWhenItHappens: {
     type: "info",
     subtype: "grammar",
     tag: "time/done-now-will-before",
-    items: [{}, {}, {}, {}, {}],
+    items: [{}, {}, {}, {}, {}, {}],
   },
   exercise1: { type: "exercise" },
   exercise2: { type: "exercise" },
@@ -248,14 +319,18 @@ const shape: LessonShape = {
   exercise6: { type: "exercise" },
   exercise7: { type: "exercise" },
   exercise8: { type: "exercise" },
-  answer1: { type: "answer", ttsText: "我睡觉了。" },
-  answer2: { type: "answer", ttsText: "他在等。" },
-  answer3: { type: "answer", ttsText: "你会写吗？" },
-  answer4: { type: "answer", ttsText: "我听过。" },
-  answer5: { type: "answer", ttsText: "你在吃什么？" },
-  answer6: { type: "answer", ttsText: "什么时间你睡觉？" },
-  answer7: { type: "answer", ttsText: "日很大。" },
-  answer8: { type: "answer", ttsText: "月很小。" },
+  exercise9: { type: "exercise" },
+  exercise10: { type: "exercise" },
+  answer1: { type: "answer", ttsText: "发生了什么？" },
+  answer2: { type: "answer", ttsText: "现在，我在吃。" },
+  answer3: { type: "answer", ttsText: "我睡觉了。" },
+  answer4: { type: "answer", ttsText: "他在等。" },
+  answer5: { type: "answer", ttsText: "你会写吗？" },
+  answer6: { type: "answer", ttsText: "我听过。" },
+  answer7: { type: "answer", ttsText: "你在吃什么？" },
+  answer8: { type: "answer", ttsText: "什么时间你睡觉？" },
+  answer9: { type: "answer", ttsText: "日很大。" },
+  answer10: { type: "answer", ttsText: "月很小。" },
 };
 
 export default shape;

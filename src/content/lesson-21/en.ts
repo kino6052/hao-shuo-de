@@ -80,17 +80,18 @@ const en: PartialByKey<LessonShape> = {
   exampleOrder7: { en: ["Give me the salt!"] },
   exampleOrder8: { en: ["If you're cold, come inside!"] },
   exampleOrder9: { en: ["One, two, three, go!"] },
+  exampleOrder10: { en: ["Don't touch my things!"] },
   proseFeel: {
     en: [
-      "**To say how you feel**, put {{word:jue2de}} (feel) before the describing word.",
+      "**To say how you feel**, put {{word:jue2de}} (feel) before the adjective.",
       "",
-      "**Who + {{word:jue2de}} + describing word**",
+      "**Who + {{word:jue2de}} + adjective**",
       "",
       "{{word:pa4}} means be scared of: {{Word:wo3}} {{word:pa4}} {{word:chong2zi}}, I'm scared of bugs.",
     ],
     tldr: {
       en: [
-        "{{word:jue2de}} + describing word says how you feel: {{Word:wo3}} {{word:jue2de}} {{word:leng3}}.",
+        "{{word:jue2de}} + adjective says how you feel: {{Word:wo3}} {{word:jue2de}} {{word:leng3}}.",
       ],
     },
     necessity: { en: ["Now you can say how you feel."] },
@@ -105,6 +106,8 @@ const en: PartialByKey<LessonShape> = {
   exampleFeel8: { en: ["I feel good, because you've come."] },
   exampleFeel9: { en: ["Her animal died, and she feels bad."] },
   exampleFeel10: { en: ["I think this color is nice."] },
+  exampleFeel11: { en: ["I'm not afraid of anything."] },
+  exampleFeel12: { en: ["The animal lived, and I feel good."] },
   proseHear: {
     en: [
       "**To say you hear a sound**, say {{word:ting1}}-{{word:dao4}} (hear) and {{word:sheng1yin1}} (sound).",
@@ -123,6 +126,7 @@ const en: PartialByKey<LessonShape> = {
   exampleHear3: { en: ["The bug's sound is quiet."] },
   exampleHear4: { en: ["There's a bug!"] },
   exampleHear5: { en: ["I heard a new word."] },
+  exampleHear6: { en: ["I hear a sound. What happened?"] },
   infoGreetingsAndFeelings: {
     title: { en: ["Greetings and Feelings"] },
     items: [
@@ -143,7 +147,7 @@ const en: PartialByKey<LessonShape> = {
       },
       {
         en: [
-          "{{word:jue2de}} + describing word, feel: {{Word:wo3}} {{word:jue2de}} {{word:leng3}}. (I feel cold.)",
+          "{{word:jue2de}} + adjective, feel: {{Word:wo3}} {{word:jue2de}} {{word:leng3}}. (I feel cold.)",
         ],
       },
       {

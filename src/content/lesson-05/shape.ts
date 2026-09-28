@@ -76,6 +76,8 @@ export type LessonShape = {
   exampleHave4: TExample;
   /** Example: tā méi-yǒu dōngxi. */
   exampleHave5: TExample;
+  /** Example: wǒ-de jīn hěn shǎo. */
+  exampleHave6: TExample;
   /** Grammar box: who + verb + what; bù before a verb; méi-yǒu for "don't have". */
   infoWhoDoesWhat: TInfo;
   /** Exercise 1: I listen to you. */
@@ -193,6 +195,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ta1}} {{word:mei2}}-{{word:you3}} {{word:dong1xi}}.",
     ttsText: "他没有东西。",
+  },
+  exampleHave6: {
+    type: "example",
+    pinyin: "{{Word:wo3}}-{{word:de}} {{word:jin1}} {{word:hen3}} {{word:shao3}}.",
+    ttsText: "我的金很少。",
   },
   infoWhoDoesWhat: {
     type: "info",

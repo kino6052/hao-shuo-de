@@ -11,6 +11,7 @@ const zh: PartialByKey<LessonShape> = {
   vocabDanshi: { zh: [] },
   vocabYan: { zh: [] },
   vocabSi: { zh: [] },
+  vocabHuo: { zh: [] },
   vocabHua: { zh: [] },
   proseBecause: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
   exampleBecause1: { zh: [] },
@@ -19,6 +20,7 @@ const zh: PartialByKey<LessonShape> = {
   exampleBecause4: { zh: [] },
   exampleBecause5: { zh: [] },
   exampleBecause6: { zh: [] },
+  exampleBecause7: { zh: [] },
   proseBut: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
   exampleBut1: { zh: [] },
   exampleBut2: { zh: [] },
@@ -27,6 +29,7 @@ const zh: PartialByKey<LessonShape> = {
   exampleBut5: { zh: [] },
   exampleBut6: { zh: [] },
   exampleBut7: { zh: [] },
+  exampleBut8: { zh: [] },
   proseIf: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
   exampleIf1: { zh: [] },
   exampleIf2: { zh: [] },
@@ -35,6 +38,8 @@ const zh: PartialByKey<LessonShape> = {
   exampleIf5: { zh: [] },
   exampleIf6: { zh: [] },
   exampleIf7: { zh: [] },
+  exampleIf8: { zh: [] },
+  exampleIf9: { zh: [] },
   infoLinkingSentences: {
     title: { zh: [] },
     items: [{ zh: [] }, { zh: [] }, { zh: [] }],
@@ -45,12 +50,14 @@ const zh: PartialByKey<LessonShape> = {
   exercise4: { zh: [] },
   exercise5: { zh: [] },
   exercise6: { zh: [] },
+  exercise7: { zh: [] },
   answer1: { zh: [] },
   answer2: { zh: [] },
   answer3: { zh: [] },
   answer4: { zh: [] },
   answer5: { zh: [] },
   answer6: { zh: [] },
+  answer7: { zh: [] },
 };
 
 export default zh;

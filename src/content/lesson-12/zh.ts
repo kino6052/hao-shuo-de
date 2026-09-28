@@ -14,6 +14,7 @@ const zh: PartialByKey<LessonShape> = {
   vocabQiguai: { zh: [] },
   vocabXin: { zh: [] },
   vocabShenti: { zh: [] },
+  vocabJiazhi: { zh: [] },
   proseVery: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
   exampleVery1: { zh: [] },
   exampleVery2: { zh: [] },
@@ -21,6 +22,8 @@ const zh: PartialByKey<LessonShape> = {
   exampleVery4: { zh: [] },
   exampleVery5: { zh: [] },
   exampleVery6: { zh: [] },
+  exampleVery7: { zh: [] },
+  exampleVery8: { zh: [] },
   proseReally: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
   exampleReally1: { zh: [] },
   exampleReally2: { zh: [] },
@@ -36,9 +39,16 @@ const zh: PartialByKey<LessonShape> = {
   exampleAsk4: { zh: [] },
   exampleAsk5: { zh: [] },
   exampleAsk6: { zh: [] },
+  exampleAsk7: { zh: [] },
   infoHowMuch: {
     title: { zh: [] },
-    items: [{ zh: [] }, { zh: [] }, { zh: [] }, { zh: [] }],
+    items: [
+      { zh: [] },
+      { zh: [] },
+      { zh: [] },
+      { zh: [] },
+      { zh: [] },
+    ],
   },
   exercise1: { zh: [] },
   exercise2: { zh: [] },
@@ -47,6 +57,7 @@ const zh: PartialByKey<LessonShape> = {
   exercise5: { zh: [] },
   exercise6: { zh: [] },
   exercise7: { zh: [] },
+  exercise8: { zh: [] },
   answer1: { zh: [] },
   answer2: { zh: [] },
   answer3: { zh: [] },
@@ -54,6 +65,7 @@ const zh: PartialByKey<LessonShape> = {
   answer5: { zh: [] },
   answer6: { zh: [] },
   answer7: { zh: [] },
+  answer8: { zh: [] },
 };
 
 export default zh;

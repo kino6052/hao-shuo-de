@@ -11,6 +11,7 @@ const ru: PartialByKey<LessonShape> = {
   vocabNeng: { ru: [] },
   vocabZhidao: { ru: [] },
   vocabAi: { ru: [] },
+  vocabKeneng: { ru: [] },
   vocabDeng: { ru: [] },
   vocabYifu: { ru: [] },
   proseWant: { ru: [], tldr: { ru: [] }, necessity: { ru: [] } },
@@ -35,9 +36,15 @@ const ru: PartialByKey<LessonShape> = {
   exampleLove3: { ru: [] },
   exampleLove4: { ru: [] },
   exampleLove5: { ru: [] },
+  proseMaybe: { ru: [], tldr: { ru: [] }, necessity: { ru: [] } },
+  exampleMaybe1: { ru: [] },
+  exampleMaybe2: { ru: [] },
+  exampleMaybe3: { ru: [] },
+  exampleMaybe4: { ru: [] },
   infoPreVerbs: {
     title: { ru: [] },
     items: [
+      { ru: [] },
       { ru: [] },
       { ru: [] },
       { ru: [] },
@@ -52,6 +59,7 @@ const ru: PartialByKey<LessonShape> = {
   exercise5: { ru: [] },
   exercise6: { ru: [] },
   exercise7: { ru: [] },
+  exercise8: { ru: [] },
   answer1: { ru: [] },
   answer2: { ru: [] },
   answer3: { ru: [] },
@@ -59,6 +67,7 @@ const ru: PartialByKey<LessonShape> = {
   answer5: { ru: [] },
   answer6: { ru: [] },
   answer7: { ru: [] },
+  answer8: { ru: [] },
 };
 
 export default ru;

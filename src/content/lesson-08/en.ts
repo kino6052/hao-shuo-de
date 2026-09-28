@@ -19,13 +19,16 @@ const en: PartialByKey<LessonShape> = {
   vocabYue: { en: ["moon, night"] },
   vocabShuijiao: { en: ["sleep"] },
   vocabGuo: { en: ["after a verb: have done before"] },
+  vocabXianzai: { en: ["now"] },
+  vocabFasheng: { en: ["happen"] },
   proseDone: {
     en: [
       "**To say something is done**, put {{word:le}} after the verb.",
       "",
       "**Who + verb + {{word:le}}**",
       "",
-      "Verbs never change. Small words like {{word:le}} show when.",
+      "Verbs never change. Small words (particles) like {{word:le}} show when.",
+      '{{Word:fa1sheng1}} {{word:le}} {{word:shen2me}}? means "What happened?" ({{word:fa1sheng1}} is happen).',
     ],
     tldr: {
       en: ["Put {{word:le}} after a verb to say it is done."],
@@ -37,6 +40,8 @@ const en: PartialByKey<LessonShape> = {
   exampleDone1: { en: ["I ate. / I've eaten."] },
   exampleDone2: { en: ["He went to sleep."] },
   exampleDone3: { en: ["Did you see it?"] },
+  exampleDone4: { en: ["What happened?"] },
+  exampleDone5: { en: ["Do you know what happened?"] },
   proseNow: {
     en: [
       "**To say something is happening right now**, put {{word:zai4}} before the verb.",
@@ -56,6 +61,8 @@ const en: PartialByKey<LessonShape> = {
   exampleNow2: { en: ["She's sleeping."] },
   exampleNow3: { en: ["What are you looking at?"] },
   exampleNow4: { en: ["Why are you sleeping?"] },
+  exampleNow5: { en: ["He's sleeping now."] },
+  exampleNow6: { en: ["He might be sleeping."] },
   proseWill: {
     en: [
       "**To say something will happen**, put {{word:hui4}} before the verb.",
@@ -92,6 +99,7 @@ const en: PartialByKey<LessonShape> = {
   exampleBefore1: { en: ["I've eaten rice before."] },
   exampleBefore2: { en: ["Have you ever looked at the moon?"] },
   exampleBefore3: { en: ["He has said it before."] },
+  exampleBefore4: { en: ["This has happened before."] },
   proseTime: {
     en: [
       "**To say when**, put the time first, then a comma, then the rest.",
@@ -100,6 +108,7 @@ const en: PartialByKey<LessonShape> = {
       "",
       '{{word:shi2jian1}} means "time". {{word:ri4}} is the sun, or the day. {{word:yue4}} is the moon, or the night.',
       '{{word:yue4}}-{{word:de}} {{word:shi2jian1}} ("moon time") means "at night".',
+      "{{word:xian4zai4}} means now: {{Word:xian4zai4}}, {{word:wo3}} {{word:yao4}} {{word:shui4jiao4}}.",
     ],
     tldr: {
       en: [
@@ -113,6 +122,8 @@ const en: PartialByKey<LessonShape> = {
   exampleTime3: { en: ["When do you eat?"] },
   exampleTime4: { en: ["I look at the sun."] },
   exampleTime5: { en: ["I look at the moon."] },
+  exampleTime6: { en: ["Now I want to sleep."] },
+  exampleTime7: { en: ["What time is it now?"] },
   infoWhenItHappens: {
     title: { en: ["When It Happens"] },
     items: [
@@ -138,39 +149,54 @@ const en: PartialByKey<LessonShape> = {
       },
       {
         en: [
-          "Time first: {{Word:yue4}}-{{word:de}} {{word:shi2jian1}}, {{word:wo3}} {{word:shui4jiao4}}. (At night, I sleep.)",
+          "Time first: {{Word:yue4}}-{{word:de}} {{word:shi2jian1}}, {{word:wo3}} {{word:shui4jiao4}}. (At night, I sleep.) {{Word:xian4zai4}}, … (Now, …)",
+        ],
+      },
+      {
+        en: [
+          "{{Word:fa1sheng1}} {{word:le}} {{word:shen2me}}? (What happened?)",
         ],
       },
     ],
   },
-  exercise1: { en: ["I slept."] },
-  exercise2: { en: ["He is waiting right now."] },
-  exercise3: { en: ["Will you write?"] },
-  exercise4: { en: ["I've heard it before."] },
-  exercise5: { en: ["What are you eating?"] },
-  exercise6: { en: ["When do you sleep?"] },
-  exercise7: { en: ["The sun is big."] },
-  exercise8: { en: ["The moon is small."] },
-  answer1: { en: ["{{Word:wo3}} {{word:shui4jiao4}} {{word:le}}."] },
-  answer2: { en: ["{{Word:ta1}} {{word:zai4}} {{word:deng3}}."] },
-  answer3: {
+  exercise1: { en: ["What happened?"] },
+  exercise2: { en: ["Now I'm eating."] },
+  exercise3: { en: ["I slept."] },
+  exercise4: { en: ["He is waiting right now."] },
+  exercise5: { en: ["Will you write?"] },
+  exercise6: { en: ["I've heard it before."] },
+  exercise7: { en: ["What are you eating?"] },
+  exercise8: { en: ["When do you sleep?"] },
+  exercise9: { en: ["The sun is big."] },
+  exercise10: { en: ["The moon is small."] },
+  answer1: {
+    en: ["{{Word:fa1sheng1}} {{word:le}} {{word:shen2me}}?"],
+  },
+  answer2: {
+    en: [
+      "{{Word:xian4zai4}}, {{word:wo3}} {{word:zai4}} {{word:chi1}}.",
+    ],
+  },
+  answer3: { en: ["{{Word:wo3}} {{word:shui4jiao4}} {{word:le}}."] },
+  answer4: { en: ["{{Word:ta1}} {{word:zai4}} {{word:deng3}}."] },
+  answer5: {
     en: [
       "{{Word:ni3}} {{word:hui4}} {{word:xie3}} {{word:ma}}?",
     ],
   },
-  answer4: { en: ["{{Word:wo3}} {{word:ting1}}-{{word:guo4}}."] },
-  answer5: {
+  answer6: { en: ["{{Word:wo3}} {{word:ting1}}-{{word:guo4}}."] },
+  answer7: {
     en: [
       "{{Word:ni3}} {{word:zai4}} {{word:chi1}} {{word:shen2me}}?",
     ],
   },
-  answer6: {
+  answer8: {
     en: [
       "{{Word:shen2me}} {{word:shi2jian1}} {{word:ni3}} {{word:shui4jiao4}}?",
     ],
   },
-  answer7: { en: ["{{Word:ri4}} {{word:hen3}} {{word:da4}}."] },
-  answer8: { en: ["{{Word:yue4}} {{word:hen3}} {{word:xiao3}}."] },
+  answer9: { en: ["{{Word:ri4}} {{word:hen3}} {{word:da4}}."] },
+  answer10: { en: ["{{Word:yue4}} {{word:hen3}} {{word:xiao3}}."] },
 };
 
 export default en;

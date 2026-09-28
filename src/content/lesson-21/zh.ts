@@ -34,6 +34,7 @@ const zh: PartialByKey<LessonShape> = {
   exampleOrder7: { zh: [] },
   exampleOrder8: { zh: [] },
   exampleOrder9: { zh: [] },
+  exampleOrder10: { zh: [] },
   proseFeel: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
   exampleFeel1: { zh: [] },
   exampleFeel2: { zh: [] },
@@ -45,12 +46,15 @@ const zh: PartialByKey<LessonShape> = {
   exampleFeel8: { zh: [] },
   exampleFeel9: { zh: [] },
   exampleFeel10: { zh: [] },
+  exampleFeel11: { zh: [] },
+  exampleFeel12: { zh: [] },
   proseHear: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
   exampleHear1: { zh: [] },
   exampleHear2: { zh: [] },
   exampleHear3: { zh: [] },
   exampleHear4: { zh: [] },
   exampleHear5: { zh: [] },
+  exampleHear6: { zh: [] },
   infoGreetingsAndFeelings: {
     title: { zh: [] },
     items: [

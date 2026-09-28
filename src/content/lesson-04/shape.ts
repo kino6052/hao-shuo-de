@@ -48,11 +48,11 @@ export type LessonShape = {
   pointersExample01: TExample;
   /** Example: nà. [from old L04] */
   pointersExample02: TExample;
-  /** Full Chinese has a different counting word for each kind of thing. [from old L11] */
+  /** Full Chinese has a different measure word for each kind of thing. [from old L11] */
   proseMandarinMeasureWords: TProse;
-  /** Hao-shuo-de keeps one counting word, gè: zhè-ge, nà-ge. [from old L11] */
+  /** Hao-shuo-de keeps one measure word, gè: zhè-ge, nà-ge. [from old L11] */
   proseGeIsUniversal: TProse;
-  /** Callout: one counting word for everything -- zhè / nà / a number + ge + noun. [from old L11] */
+  /** Callout: one measure word for everything -- zhè / nà / a number + ge + noun. [from old L11] */
   infoUniversalClassifier: TInfo;
   /** Example: zhè-ge rén. [from old L11] */
   example1L11: TExample;
@@ -80,7 +80,7 @@ export type LessonShape = {
   pluralPointersExample02: TExample;
   /** Example: tā-men. [from old L04] */
   pluralPointersExample03: TExample;
-  /** Grammar: whose it is, with -de (the same -de as Lesson 3's describing words). [from old L04] */
+  /** Grammar: whose it is, with -de (the same -de as Lesson 3's adjectives). [from old L04] */
   prosePossessionDe: TProse;
   /** Example: wǒ-de shuǐguǒ. [from old L04] */
   posessionDeExample01: TExample;

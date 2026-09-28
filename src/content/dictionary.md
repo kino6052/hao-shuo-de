@@ -16,8 +16,10 @@ báisè | adjective/noun | white, pale, light-colored | walo
 bǐ | preposition | comparison |
 biàn | verb | to become, change into, transform; combined with ba to act as a causative verbal engine | kama
 biān | noun/suffix | side, edge; binds to a directional root via a hyphen to form a location noun (e.g. {{word:pang2}}-{{word:bian1}}, "beside") |
+biéde | adjective | other, another, else (e.g. {{word:bie2de}} {{word:ren2}}, "other people") |
 bízi | noun | nose, snout, protuberance | nena
 bù | particle | not, no; used for standard negation of verbs and adjectives, except for you | ala
+bùfen | noun | part, portion (e.g. {{word:yi1}}-{{word:bu4fen}}, "a part, some of it") |
 bùtóng | adjective/noun | different, altered, changed, other | ante
 chī | verb/noun | to eat, drink, consume, ingest; food, meal, edible substance | moku
 chóngzi | noun | insect, bug, beetle, spider | pipi
@@ -32,12 +34,15 @@ de | particle | possessive marker, structural adjectival particle; used to bind 
 děng | verb | to wait |
 dì | noun | floor, horizontal surface, platform | supa
 dìfāng | noun | a place (both in space or metaphorical to mean part of something) |
+dòng | verb | to move; to stir, to budge |
 dòngwù | noun | animal, land mammal, beast | soweli
 dōngxi | noun | thing, phenomenon, object, physical being, matter | ijo
+dōu | adverb | all, both, every one of them; goes before the verb, after the people or things it covers (e.g. {{word:wo3}}-{{word:men}} {{word:dou1}} {{word:chi1}}, "we all eat"). {{word:shen2me}}-{{word:dou1}} means everything |
 duì | preposition/coverb | facing, towards, regarding, beneficial to; correct | tawa
 duō | adjective | many, a lot, much, several, very, abundant; used contextually to signify quantities greater than two | mute
 èr | number | two, when counting aloud or naming a number (yī, èr, sān; èr-hào, "number two"; shí-èr, 12); before gè, two is liǎng |
 fāngfǎ | noun | way, custom, method, doctrine | nasin
+fāshēng | verb | to happen, take place, occur (e.g. {{word:fa1sheng1}} {{word:le}} {{word:shen2me}}?, "what happened?") |
 fùmǔ | noun | parent, ancestor, creator, caretaker | mama
 gè | measure word | universal classifier; mandatory interface between numbers/demonstratives and nouns |
 gěi | verb/coverb | to give, send, emit, provide; to, for, from the perspective of | pana, tawa
@@ -57,15 +62,19 @@ huài | adjective/verb | bad, negative, broken, damaged, non-essential | ike, pa
 huángsè | adjective/noun | yellow, yellowish | jelo
 huì | auxiliary | will, going to (marks a predicted or future action); placed before a verb the same way {{word:neng2}} is |
 huǒ | noun | fire, cooking element, chemical heat source | seli
+huó | verb/adjective | to live, be alive; alive, living; life. The opposite of {{word:si3}} |
 huòzhě | conjunction | or; links choices or alternative clauses | anu
 jiā | noun | home, house, family, household | tomo
 jiǎo | noun | foot, leg, organ of locomotion, bottom part | noka
 jiào | verb | to call, be named; to produce an animal vocalization under the Quote Partition | nimi, mu
+jiàzhí | noun | value, worth; how much something is worth |
 jīn | noun | money, cash, savings, wealth | mani
+jìn | adjective | near, close |
 jiǔ | number | nine |
 juéde | noun/adjective/verb | feeling, emotion, direct experience; to feel, think | pilin
 kāishǐ | verb/auxiliary | to begin, start, open; turn on; manage to | open, kama
 kàn | verb | to look at, see, examine, observe, read, watch | lukin
+kěnéng | adverb | maybe, perhaps, might; goes before the verb (e.g. {{word:ta1}} {{word:ke3neng2}} {{word:lai2}}, "he might come") |
 kōngqì | noun | air, wind, breath, spirit, hidden reality | kon
 kǒu | noun | hole, opening, door, window, orifice | lupa
 lái | verb | to come, arrive, happen | kama
@@ -100,13 +109,13 @@ qī | number | seven |
 qián | noun | front, face, foremost area, chest | sinpin
 qíguài | adjective | strange, unusual, foolish, crazy, intoxicated | nasa
 qù | verb | to go, move toward, travel away | tawa
-quánbù | adjective | all |
 qún | noun | group, community, company, nation, society, tribe | kulupu
 rè | adjective | hot, warm, cooked, chemically energetic | seli
 rén | noun | human being, person, somebody | jan
 rì | noun | sun, radiant light source, brightness, glow | suno
 sān | number | three |
 shàng | noun/directional | up, above, on; composes with other roots via a hyphen (e.g. {{word:shang4}}-{{word:lai2}}, {{word:shang4}}-{{word:mian4}}) |
+shǎo | adjective | few, little, not much; the opposite of {{word:duo1}} |
 shēngyīn | noun | sound, noise, voice | kalama
 shénme | pronoun/particle | what? which?; retains position without altering Chinese SVO statement geometry | seme
 shēntǐ | noun | body, physical torso, physical state | sijelo
@@ -134,6 +143,7 @@ wǒ | pronoun | I, me, we, us | mi
 wǔ | number | five |
 xià | noun/directional | down, below, under; composes with other roots via a hyphen (e.g. {{word:xia4}}-{{word:lai2}}, {{word:xia4}}-{{word:mian4}}) |
 xiàn | noun | line, rope, hair, thread, cord, flexible long thing | linja
+xiànzài | noun/adverb | now, at present, these days |
 xiǎo | adjective | little, small, short, few, young, a bit | lili
 xiě | verb | to write, draw, represent with marks | sitelen
 xīn | adjective | new, fresh, additional, another, extra | sin
@@ -146,10 +156,12 @@ yī | number | one, unique, united | wan
 yīfu | noun | clothing, cloth, fabric, textile, privacy layer | len
 yìng | adjective/noun | hard, stone-like; rock, stone, metal | kiwen
 yīnwèi | conjunction/coverb | because, because of |
+yīxià | measure word (for actions) | a moment, a short time; after a verb, do it briefly or just a little (e.g. {{word:deng3}} {{word:yi1xia4}}, "wait a moment") |
 yīyàng | adjective | same, similar, peer, fellow, each other | sama
 yòng | verb/coverb | to use, utilize; with, by means of | kepeken
 yǒu | verb | to have, contain, carry, hold, exist, there is; must be negated with mei, never bu | jo, lon
 yuán | adjective/noun | round, circular, spherical; ball, circle, wheel, cycle | sike
+yuǎn | adjective | far, distant |
 yuè | noun | moon, night sky object, star | mun
 zài | verb/coverb | to exist at, be located at, present in a room | lon
 zěnme | pronoun | how |
@@ -158,4 +170,5 @@ zhè | pronoun/adjective | this, these; syntactically binds as zhe-ge | ni
 zhēn | adjective | true, real, genuine, actual | lon
 zhīdào | verb/auxiliary | to know, be wise about, possess information; know how to | sona
 zhíwù | noun | plant, vegetation, herb, leaf | kasi
+zhǒng | noun/measure word | kind, type, sort; after {{word:zhe4}} or {{word:na4}}, like {{word:ge4}} (e.g. {{word:zhe4}}-{{word:zhong3}} {{word:shui3guo3}}, "this kind of fruit") |
 ```

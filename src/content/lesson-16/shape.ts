@@ -96,6 +96,10 @@ export type LessonShape = {
   exampleCount18: TExample;
   /** Example: sān-ge rén qǐ-lái le. */
   exampleCount19: TExample;
+  /** Example: wǒ yǒu sān-zhǒng shuǐguǒ. */
+  exampleCount20: TExample;
+  /** Example: yī-bùfen rén qù le. */
+  exampleCount21: TExample;
   /** Say: To say numbers above ten, put shí (ten) before or after the other number. Pattern: shí + number (11-19) / number + shí (20, 30 …) */
   proseTeens: TProse;
   /** Example: shí-yī-ge rén. */
@@ -309,6 +313,16 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:san1}}-ge {{word:ren2}} {{word:qi3}}-{{word:lai2}} {{word:le}}.",
     ttsText: "三个人起来了。",
+  },
+  exampleCount20: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:you3}} {{word:san1}}-{{word:zhong3}} {{word:shui3guo3}}.",
+    ttsText: "我有三种水果。",
+  },
+  exampleCount21: {
+    type: "example",
+    pinyin: "{{Word:yi1}}-{{word:bu4fen}} {{word:ren2}} {{word:qu4}} {{word:le}}.",
+    ttsText: "一部分人去了。",
   },
   proseTeens: { type: "prose" },
   exampleTeens1: {

@@ -16,9 +16,9 @@ Living plan and checklist for rebuilding the lessons to match `src/content/intro
 2. **Start from what you want to say.** Open each point with the learner's goal ("To say something is _not_ something…"), not with the grammar ("Negation is formed by…").
 3. **One idea per sentence.** Short sentences. No semicolons chaining three rules together.
 4. **No jargon.**
-   - **Core terms, only where really needed:** _noun, verb, subject, object_. Use them when a lesson can't do without them, and prefer plain wording ("who does it", "what it's done to") when that's just as clear.
-   - **Plain names instead of grammar names:** _describing word_ (not adjective), _pointer_ (not pronoun: this, that, I, you, he, she), _counting word_ (not measure word). _Question, sentence, word_, and _grammar_ are everyday words.
-   - **Everything else from grammar books is banned**, with no exceptions and not even in brackets. That includes _adjective, adverb, pronoun, particle, preposition, clause, phrase, tense, marker, measure word, plural, negation, coverb, classifier, predicate, auxiliary, construction, causative_.
+   - **Grammar terms, only where really needed (D34):** _noun, verb, subject, object, adjective, adverb, particle, pronoun, preposition, measure word_. Use them when a lesson can't do without them, and prefer plain wording ("who does it", "what it's done to") when that's just as clear.
+   - **Plain name first, then the term:** the first time a lesson needs one of these, give the plain name with the term in brackets, and use the term after that: _describing word (adjective)_, _pointer (pronoun)_, _counting word (measure word)_. _Question, sentence, word_, and _grammar_ are everyday words.
+   - **Everything else from grammar books is banned**, with no exceptions and not even in brackets. That includes _clause, phrase, tense, marker, plural, negation, coverb, classifier, predicate, auxiliary, construction, causative_.
    - The lists live in `scripts/jargon.js`. **`npm run check-jargon`** is the gate: it lists every banned word in the lessons and fails if it finds any. The rule is for the lessons only (D32); `--all` also reports the intros, appendices, and dictionary. Add chapter ids to check just those (`npm run check-jargon -- lesson-05`). It also counts the core terms per chapter, so heavy use stands out.
 5. **No "Hao-shuo-de collapses / simplifies X" meta-talk inside lessons.** That belongs in the intros and appendices. Lessons just teach the thing.
 6. **Use only dictionary words.** The approved additions (§4d) join the dictionary in Phase 1. If a lesson needs a missing word, stop and flag it.
@@ -80,7 +80,7 @@ answers
 | D16 | Size: 2–4 teaching points, about 6 new words, 15–20 minutes per lesson.                                                                                                                                                                                                                                                                                                           |
 | D17 | L22 (Particles and Other Special Words) **merges into L21**. The book has **21 lessons**, split 6 / 9 / 6 across the three sections. (Q1)                                                                                                                                                                                                                                         |
 | D18 | **Approved additions:** dào (L11), guò (L8), huà (L20), and sān, sì, wǔ, liù, qī, bā, jiǔ, shí (L16). The vocabulary becomes **147 words**: 136 + 11. (§4d)                                                                                                                                                                                                                       |
-| D19 | **Not added:** dōu, kěyǐ, shíhou, tài / zuì / gèng, zhǐ, suǒyǐ, gēn, and ne / ba / a. "All" is always quánbù, even where dōu would sound more natural.                                                                                                                                                                                                                            |
+| D19 | **Not added:** ~~dōu~~ (added later, D35), kěyǐ, shíhou, tài / zuì / gèng, zhǐ, suǒyǐ, gēn, and ne / ba / a. "All" was quánbù until D35.                                                                                                                                                                                                                            |
 | D20 | zài: **Time comes before Space.** L8 teaches zài as "right now", and L10 adds "be at a place". (Q3)                                                                                                                                                                                                                                                                               |
 | D21 | **xiě-de dōngxi is dropped from L2.** L3 is the first -de (see D8). (Q4)                                                                                                                                                                                                                                                                                                          |
 | D22 | intro-3's Pre-Verbs wording changes from "attempt, learning, continuation" to **"wanting, being able to, knowing how, and loving to"**. No words move. (Q2)                                                                                                                                                                                                                       |
@@ -95,6 +95,9 @@ answers
 | D31 | **èr is added** (Q7), introduced in L16: counting aloud (yī, èr, sān), "number two" (èr-hào), and 12 / 20 (shí-èr, èr-shí). liǎng stays for two things (liǎng-ge). The vocabulary becomes **149 words**. |
 | D32 | **The no-jargon rule is for the lessons.** The dictionary and the appendices keep their own wording; `check-jargon` checks the lessons (add `--all` to see the rest). The author will rewrite "Why Minimality Works" personally. |
 | D33 | **Every word is reused (rule 7).** Each word comes back in 2 later lessons, in examples that fit what that lesson teaches (for example, the numbers return in the color lesson and in "and / or"). The target is capped at the lessons that are left, so L20 words need only L21 and L21 words need nothing. `npm run check -- --strict` passes. |
+| D34 | **Grammar terms are allowed (2026-09-27):** adjective, adverb, particle, pronoun, preposition, and measure word join noun, verb, subject, and object. A lesson gives the plain name first with the term once in brackets, then uses the term: "describing word (an adjective)" in L1 and L3, "pointers (pronouns)" and "counting word (measure word)" in L4, "adverbs" in L12, "particles" in L8. Everything else in `scripts/jargon.js` stays banned. |
+| D35 | **dōu replaces quánbù.** "All" is dōu (wǒ-men dōu chī), "everything" is shénme-dōu, "nothing" is shénme-dōu bù / méi, and "everywhere" is nǎlǐ-dōu. quánbù leaves the dictionary. |
+| D36 | **The missing NSM atoms join the dictionary**, plus a word for value: shǎo (L3), kěnéng (L7), xiànzài and fāshēng (L8), yīxià (L9), dòng, yuǎn, and jìn (L11), jiàzhí (L12), biéde and zhǒng (L13), bùfen (L14), and huó (L20). Atoms already covered by dictionary words stay as they are: think is juéde, before is qián, some is yǒu-de, more is bǐ or duō, and like / the same is yīyàng. The vocabulary becomes **162 words**. |
 
 ---
 
@@ -148,7 +151,7 @@ No structural change. Only lesson-number citations get updated.
 
 ### 4a. How words are placed
 
-**Goal:** each of the 149 words is **introduced once**, in the lesson that needs it most, and is then **reused** until it sticks. The 149 are the 136 original dictionary words plus the 13 approved additions (§4d). By the end of L21, the learner has met every word.
+**Goal:** each of the 162 words is **introduced once**, in the lesson that needs it most, and is then **reused** until it sticks. The 162 are 135 of the original dictionary words (quánbù left, D35) plus the 27 approved additions (§4d). By the end of L21, the learner has met every word.
 
 1. **One home per word.** Each word is introduced in exactly one lesson and appears in that lesson's `vocab` list. After that, any lesson can use it.
 2. **No early use.** Everything in a lesson (examples, exercises, answers, explanations, TL;DR lines) uses only words from that lesson or earlier ones, and only dictionary words. That includes pinyin typed straight into the text, like kěyǐ or the "ge" in zhè-ge. L1 is the one exception: it may show words as sound examples. That doesn't count as introducing them. **`npm run check-early-words`** is the gate.
@@ -163,54 +166,54 @@ No structural change. Only lesson-number citations get updated.
 6. **Group by topic.** Theme words join the lesson whose examples need them. Body parts go with "my hand" (L4). Food and money go with "eat" and "have" (L5). The box and the tool go with "What is this?" (L6). The market and the door go with "come from / go out" (L11).
 7. **Use it, then reuse it.** A new word appears in at least 3 examples or exercises in its own lesson. It then appears again in at least 2 later lessons, or in the stories appendix. Near the end there are fewer later lessons than that, so the target is what is left: a word from L20 comes back in L21, and a word from L21 has nothing after it (D33).
 8. **Finish by L21.** Section 4 (texts, appendices) introduces nothing new.
-9. **Keep it checkable.** §4b is the source of truth. If a word moves, update §4b and §4c, then run `npm run check-book` (149/149, no duplicates, vocab matches §4b) and `npm run check-early-words` (no early use). See §6.
+9. **Keep it checkable.** §4b is the source of truth. If a word moves, update §4b and §4c, then run `npm run check-book` (162/162, no duplicates, vocab matches §4b) and `npm run check-early-words` (no early use). See §6.
 
-### 4b. Spread of the 149 words (first introduction)
+### 4b. Spread of the 162 words (first introduction)
 
 Approved (D23). It can still be adjusted as each lesson is written, but the rules in §4a must always hold.
 
 - **Added words:** approved additions (§4d). They join `dictionary.json` in Phase 1.
 - **New:** words introduced for the first time in this lesson, added words included.
-- **Total so far:** words introduced by the end of this lesson, out of the whole vocabulary (149).
+- **Total so far:** words introduced by the end of this lesson, out of the whole vocabulary (162).
 - **%:** how much of the vocabulary the learner has met.
 
 | L   | Lesson                            | Core words                                                 | Theme words                                 | Added words                        |     New | Total so far |    % |
 | --- | --------------------------------- | ---------------------------------------------------------- | ------------------------------------------- | ---------------------------------- | ------: | -----------: | ---: |
-| 1 | Sounds and Symbols | — | — | — | **0** | 0 / 149 | 0% |
-| 2 | Words and Sentences | shì, bù, zhè | dōngxi, rén, nǚrén, nánrén, dòngwù, shuǐguǒ | — | **9** | 9 / 149 | 6% |
-| 3 | Modifying Nouns | hěn, de, duō, hǎo, dà, xiǎo | shuǐ, dìfāng, fùmǔ | — | **9** | 18 / 149 | 12% |
-| 4 | Pointing at People and Things | wǒ, nǐ, tā, nà, gè | jiā, tóu, shǒu, jiǎo | men | **10** | 28 / 149 | 19% |
-| 5 | Verbs | yǒu, méi, chī, kàn, tīng, shuō, xiě | jīn, mǐfàn | — | **9** | 37 / 149 | 25% |
-| 6 | Questions and Answers | shénme, ma, wèishénme, zěnme, wèn | zhǎo, gōngjù, hézi | — | **8** | 45 / 149 | 30% |
-| 7 | Pre-Verbs | yào, néng, zhīdào, ài | děng, yīfu | — | **6** | 51 / 149 | 34% |
-| 8 | Time 1 | shíjiān, le, huì, zài | rì, yuè, shuìjiào | guò | **8** | 59 / 149 | 40% |
-| 9 | Time 2 | wán, kāishǐ, hòu | wánr, liú | — | **5** | 64 / 149 | 43% |
-| 10 | Space 1 | lǐ, shàng, xià, qián, páng, biān, pángbiān, miàn, nǎlǐ | dì | — | **10** | 74 / 149 | 50% |
-| 11 | Space 2 | cóng, lái, qù, qǐ, wài | shìchǎng, kǒu | dào | **8** | 82 / 149 | 55% |
-| 12 | Modifiers 1 — How much | zhēn | rè, lěng, tián, qíguài, xīn, shēntǐ | — | **7** | 89 / 149 | 60% |
-| 13 | Modifiers 2 — Comparing | bǐ, yīyàng, bùtóng | yìng, yuán, gùnzi, xiàn | — | **7** | 96 / 149 | 64% |
-| 14 | Modifiers 3 — Also and all | yě, quánbù | zhíwù, huǒ, kōngqì | — | **5** | 101 / 149 | 68% |
-| 15 | Modifiers 4 — Becoming and making | biàn, bǎ, nòng, dé | lìliàng, huài, ní | — | **7** | 108 / 149 | 72% |
-| 16 | Numbers | yī, liǎng, hào | — | èr, sān, sì, wǔ, liù, qī, bā, jiǔ, shí | **12** | 120 / 149 | 81% |
-| 17 | Colors | yánsè, báisè, hēisè, hóngsè, huángsè, lánsè | — | — | **6** | 126 / 149 | 85% |
-| 18 | Changing the Role of a Word | cí, fāngfǎ | bízi, pífū | — | **4** | 130 / 149 | 87% |
-| 19 | Relationships 1 | gěi, yòng, hé, huòzhě, duì | qún, mō, dǎ | — | **8** | 138 / 149 | 93% |
-| 20 | Relationships 2 | yīnwèi, dànshì | yán, sǐ | huà | **5** | 143 / 149 | 96% |
-| 21 | Greetings and Feelings | juéde, pà, jiào | shēngyīn, chóngzi, xìng | — | **6** | 149 / 149 | 100% |
-| | **Total** | **82** | **54** | **13** | **149** | | |
+| 1 | Sounds and Symbols | — | — | — | **0** | 0 / 162 | 0% |
+| 2 | Words and Sentences | shì, bù, zhè | dōngxi, rén, nǚrén, nánrén, dòngwù, shuǐguǒ | — | **9** | 9 / 162 | 6% |
+| 3 | Modifying Nouns | hěn, de, duō, hǎo, dà, xiǎo | shuǐ, dìfāng, fùmǔ | shǎo | **10** | 19 / 162 | 12% |
+| 4 | Pointing at People and Things | wǒ, nǐ, tā, nà, gè | jiā, tóu, shǒu, jiǎo | men | **10** | 29 / 162 | 18% |
+| 5 | Verbs | yǒu, méi, chī, kàn, tīng, shuō, xiě | jīn, mǐfàn | — | **9** | 38 / 162 | 23% |
+| 6 | Questions and Answers | shénme, ma, wèishénme, zěnme, wèn | zhǎo, gōngjù, hézi | — | **8** | 46 / 162 | 28% |
+| 7 | Pre-Verbs | yào, néng, zhīdào, ài | děng, yīfu | kěnéng | **7** | 53 / 162 | 33% |
+| 8 | Time 1 | shíjiān, le, huì, zài | rì, yuè, shuìjiào | guò, xiànzài, fāshēng | **10** | 63 / 162 | 39% |
+| 9 | Time 2 | wán, kāishǐ, hòu | wánr, liú | yīxià | **6** | 69 / 162 | 43% |
+| 10 | Space 1 | lǐ, shàng, xià, qián, páng, biān, pángbiān, miàn, nǎlǐ | dì | — | **10** | 79 / 162 | 49% |
+| 11 | Space 2 | cóng, lái, qù, qǐ, wài | shìchǎng, kǒu | dào, dòng, yuǎn, jìn | **11** | 90 / 162 | 56% |
+| 12 | Modifiers 1 — How much | zhēn | rè, lěng, tián, qíguài, xīn, shēntǐ | jiàzhí | **8** | 98 / 162 | 60% |
+| 13 | Modifiers 2 — Comparing | bǐ, yīyàng, bùtóng | yìng, yuán, gùnzi, xiàn | biéde, zhǒng | **9** | 107 / 162 | 66% |
+| 14 | Modifiers 3 — Also and all | yě | zhíwù, huǒ, kōngqì | dōu, bùfen | **6** | 113 / 162 | 70% |
+| 15 | Modifiers 4 — Becoming and making | biàn, bǎ, nòng, dé | lìliàng, huài, ní | — | **7** | 120 / 162 | 74% |
+| 16 | Numbers | yī, liǎng, hào | — | èr, sān, sì, wǔ, liù, qī, bā, jiǔ, shí | **12** | 132 / 162 | 81% |
+| 17 | Colors | yánsè, báisè, hēisè, hóngsè, huángsè, lánsè | — | — | **6** | 138 / 162 | 85% |
+| 18 | Changing the Role of a Word | cí, fāngfǎ | bízi, pífū | — | **4** | 142 / 162 | 88% |
+| 19 | Relationships 1 | gěi, yòng, hé, huòzhě, duì | qún, mō, dǎ | — | **8** | 150 / 162 | 93% |
+| 20 | Relationships 2 | yīnwèi, dànshì | yán, sǐ | huà, huó | **6** | 156 / 162 | 96% |
+| 21 | Greetings and Feelings | juéde, pà, jiào | shēngyīn, chóngzi, xìng | — | **6** | 162 / 162 | 100% |
+| | **Total** | **81** | **54** | **27** | **162** | | |
 
 **By section:**
 
 | Section                                 | Lessons | New | Total at the end |
 | --------------------------------------- | ------- | --: | ---------------: |
-| 1 — Sounds, Words, and Simple Sentences | L1–L6 | 45 | 45 / 149 (30%) |
-| 2 — Modifying Words and Meaning | L7–L15 | 63 | 108 / 149 (72%) |
-| 3 — Special Words and Concepts | L16–L21 | 41 | 149 / 149 (100%) |
-| 4 — Texts, Vocabulary, and Reference | — | 0 | 149 / 149 |
+| 1 — Sounds, Words, and Simple Sentences | L1–L6 | 46 | 46 / 162 (28%) |
+| 2 — Modifying Words and Meaning | L7–L15 | 74 | 120 / 162 (74%) |
+| 3 — Special Words and Concepts | L16–L21 | 42 | 162 / 162 (100%) |
+| 4 — Texts, Vocabulary, and Reference | — | 0 | 162 / 162 |
 
-**Load:** 149 words across the 20 lessons that introduce words, which is **about 7 per lesson** on average. The heaviest lesson is L16 (12), but 9 of those are the numbers 2–10 (èr, sān … shí), which are one family. Next is L4 (10). The lightest is L18 (4).
+**Load:** 162 words across the 20 lessons that introduce words, which is **about 8 per lesson** on average. The heaviest lesson is L16 (12), but 9 of those are the numbers 2–10 (èr, sān … shí), which are one family. Next is L4 (10). The lightest is L18 (4).
 
-Validated: 149/149 words assigned (136 original + 13 added), no duplicates, and the running total ends at 149. `npm run check-book` checks this table against the lessons on every build.
+Validated: 162/162 words assigned (135 original + 27 added), no duplicates, and the running total ends at 162. `npm run check-book` checks this table against the lessons on every build.
 
 **Changes from the first draft (approved).** Eight theme words moved to even out the load. Two core words, nà and gè, moved with the pointers decision (D26).
 
@@ -232,130 +235,136 @@ Two words have new spellings in the dictionary: **dì** (id `di4`, was tái) and
 
 What each lesson introduces, and why those words are there. **†** marks a dictionary word that no current lesson uses. Its examples will be new writing (44 of the 136 dictionary words). **Added** marks an approved addition (§4d).
 
-**L1 Sounds and Symbols** · 0 new · 0 / 149
+**L1 Sounds and Symbols** · 0 new · 0 / 162
 
 - No new words. Words may appear as sound examples only (rule 2).
 
-**L2 Words and Sentences** · 9 new · 9 / 149
+**L2 Words and Sentences** · 9 new · 9 / 162
 
 - Core: shì _be_, bù _not_, zhè _this_
 - Theme: dōngxi _thing_, rén _person_, nǚrén _woman_, nánrén _man_, dòngwù _animal_, shuǐguǒ _fruit_
 - Why: the smallest set that makes "This is a person." and "An animal is not a fruit." There's no -de yet: xiě-de dōngxi is dropped (D21).
 
-**L3 Modifying Nouns** · 9 new · 18 / 149
+**L3 Modifying Nouns** · 10 new · 19 / 162
 
 - Core: hěn _very_, de _(joins a describing word to a noun)_, duō _many_, hǎo _good_, dà _big_, xiǎo _small_
 - Theme: shuǐ _water_, dìfāng _place_, fùmǔ _parents_
+- Added: shǎo _few, little_ (D36)
 - Why: "The water is good." / "a big place" / "good parents" / "many people". It holds the describing words that everything else leans on.
 
-**L4 Pointing at People and Things** · 10 new · 28 / 149
+**L4 Pointing at People and Things** · 10 new · 29 / 162
 
 - Core: wǒ _I, me_, nǐ _you_, tā _he, she, it, they_, nà _that_, gè _(counting word: zhè-ge "this one", nà-ge "that one")_
 - Theme: jiā † _home, family_, tóu † _head_, shǒu † _hand_, jiǎo † _foot_
 - Added: men _more than one person (wǒ-men "we")_
 - Why: pointers first point at things ("this one, that one"), then at people ("I", "you", "we"), then say whose it is ("my hand", "your family"). Body and family are the first things people call "mine". zhè comes from L2.
 
-**L5 Verbs** · 9 new · 37 / 149
+**L5 Verbs** · 9 new · 38 / 162
 
 - Core: yǒu _have_, méi _not (only with yǒu)_, chī _eat, drink_, kàn _look, read_, tīng _listen_, shuō _say, speak_, xiě _write_
 - Theme: jīn † _money_, mǐfàn † _rice, staple food_
 - Why: "I eat rice." / "She doesn't write." / "I don't have money."
 
-**L6 Questions and Answers** · 8 new · 45 / 149
+**L6 Questions and Answers** · 8 new · 46 / 162
 
 - Core: shénme _what_, ma _(turns a sentence into a yes-or-no question)_, wèishénme _why_, zěnme _how_, wèn † _ask_
 - Theme: zhǎo † _look for_, gōngjù _tool_, hézi † _box_
 - Why: "What is this?" needs things to point at, like a box or a tool. "What are you looking for?" gives zhǎo a natural home.
 
-**L7 Pre-Verbs** · 6 new · 51 / 149
+**L7 Pre-Verbs** · 7 new · 53 / 162
 
 - Core: yào _want, need_, néng † _can_, zhīdào _know, know how_, ài _love_
 - Theme: děng † _wait_, yīfu † _clothes_
+- Added: kěnéng _maybe_ (D36)
 - Why: "I want to eat." / "I can wait." / "I want clothes." These are two easy things to want or wait for. "can / may" is always néng (D19).
 
-**L8 Time 1 — When it happens** · 8 new · 59 / 149
+**L8 Time 1 — When it happens** · 10 new · 63 / 162
 
 - Core: shíjiān _time_, le _(it happened / it changed)_, huì _will_, zài _(right now, in the middle of)_
 - Theme: rì _sun_, yuè † _moon_, shuìjiào _sleep_
-- Added: guò _have ever done_
+- Added: guò _have ever done_, xiànzài _now_, fāshēng _happen_ (D36)
 - Why: "I ate." / "I'm eating right now." / "I will eat." / "I've eaten rice before." / "At night, I sleep." The sun and moon give day-and-night examples. There is no word for "today", so the time examples use the day and the night.
 
-**L9 Time 2 — Around an action** · 5 new · 64 / 149
+**L9 Time 2 — Around an action** · 6 new · 69 / 162
 
 - Core: wán _finish_, kāishǐ _start_, hòu _after, behind_
 - Theme: wánr † _play_, liú _stay, keep_
+- Added: yīxià _a moment_ (D36)
 - Why: "When I eat, …" (X-de shíjiān) / "I finished eating." / "after eating" / "I started to play." hòu comes back as a place word ("behind") in L10. qián moved to L10 (D29).
 
-**L10 Space 1 — Where it is** · 10 new · 74 / 149
+**L10 Space 1 — Where it is** · 10 new · 79 / 162
 
 - Core: lǐ _inside_, shàng _on, up_, xià _under, down_, qián _front; qián-miàn "in front"_, páng † _beside_, biān † _side_, pángbiān _beside, next to_, miàn † _side, face (as in lǐ-miàn, shàng-miàn)_, nǎlǐ † _where_
 - Theme: dì † _floor, ground_
 - Why: "The box is on the floor." / "inside the house" / "in front of me" / "Where is it?" The side-words (páng, biān, pángbiān, miàn) are one idea, so 10 words is fine.
 
-**L11 Space 2 — Moving** · 8 new · 82 / 149
+**L11 Space 2 — Moving** · 11 new · 90 / 162
 
 - Core: cóng _from_, lái _come_, qù _go_, qǐ _rise, up_, wài † _out, outside_
 - Theme: shìchǎng † _market_, kǒu † _opening, door_
-- Added: dào _arrive, to_
+- Added: dào _arrive, to_, dòng _move_, yuǎn _far_, jìn _near_ (D36)
 - Why: "I come from the market." / "I go to the market." / "Go!" / "Get up!" / "I'm going outside." There's no word for "stand" or "out" (出), so "stand up" is "get up" (qǐ-lái) and "go out" is "go outside" (qù wài-miàn).
 
-**L12 Modifiers 1 — How much** · 7 new · 89 / 149
+**L12 Modifiers 1 — How much** · 8 new · 98 / 162
 
 - Core: zhēn † _really_
 - Theme: rè † _hot_, lěng _cold_, tián _sweet_, qíguài † _strange_, xīn _new_, shēntǐ _body_
+- Added: jiàzhí _value_ (D36)
 - Why: "really hot" / "very cold" / "not very strange" / "Are you cold?" The lesson needs describing words to turn up and down. There's no word for "a bit" (有点), so it says "not very" instead.
 
-**L13 Modifiers 2 — Comparing** · 7 new · 96 / 149
+**L13 Modifiers 2 — Comparing** · 9 new · 107 / 162
 
 - Core: bǐ † _than_, yīyàng _same_, bùtóng _different_
 - Theme: yìng † _hard_, yuán † _round_, gùnzi † _stick_, xiàn † _line, rope_
+- Added: biéde _other_, zhǒng _kind_ (D36)
 - Why: "A stick is harder than a rope." Things with a clear shape and feel are easy to compare.
 
-**L14 Modifiers 3 — Also and all** · 5 new · 101 / 149
+**L14 Modifiers 3 — Also and all** · 6 new · 113 / 162
 
-- Core: yě _also_, quánbù _all_
+- Core: yě _also_
 - Theme: zhíwù _plant_, huǒ † _fire_, kōngqì † _air_
-- Why: "I also eat." / "All the plants are good." Nature words give "all of them" something to point at. "All" is always quánbù. There's no dōu (D19).
+- Added: dōu _all_ (D35), bùfen _part_ (D36)
+- Why: "I also eat." / "We all eat." / "I eat everything." / "Most people eat rice." Nature words give "all of them" something to point at. "All" is dōu, and "everything" is shénme-dōu (D35).
 
-**L15 Modifiers 4 — Becoming and making** · 7 new · 108 / 149
+**L15 Modifiers 4 — Becoming and making** · 7 new · 120 / 162
 
 - Core: biàn _become_, bǎ _(puts the thing first: "bǎ it make good")_, nòng _do, make_, dé † _get_
 - Theme: lìliàng _strength, strong_, huài _bad, broken_, ní † _mud, paste_
 - Why: "It became bad." / "fix it (make it good)" / "strong". "The water became mud" shows a change you can see.
 
-**L16 Numbers** · 12 new · 120 / 149
+**L16 Numbers** · 12 new · 132 / 162
 
 - Core: yī _one_, liǎng _two_, hào _number (as in "number two")_
 - Theme: none. Counting reuses every noun so far.
 - Added: èr _two (counting, number two)_, sān _three_, sì _four_, wǔ _five_, liù _six_, qī _seven_, bā _eight_, jiǔ _nine_, shí _ten_
 - Why: "one person" / "two animals" / "ten sticks" / "number two". There are 11 new words, but 3–10 are one family.
 
-**L17 Colors** · 6 new · 126 / 149
+**L17 Colors** · 6 new · 138 / 162
 
 - Core: yánsè † _color_, báisè _white_, hēisè _black_, hóngsè _red_, huángsè _yellow_, lánsè _blue, green_
 - Theme: none. Every noun so far becomes something to color ("a red box").
 - Why: one family, one idea.
 
-**L18 Changing the Role of a Word** · 4 new · 130 / 149
+**L18 Changing the Role of a Word** · 4 new · 142 / 162
 
 - Core: cí _word_, fāngfǎ _way, method_
 - Theme: bízi † _nose_, pífū † _skin, bark, peel_
 - Why: the lesson is about the jobs a word can do, so cí belongs here. "the way of writing" (xiě-de fāngfǎ) is a -de example. pífū shows one word covering several things. bízi and pífū also finish the body words from L4.
 
-**L19 Relationships 1 — Inside a sentence** · 8 new · 138 / 149
+**L19 Relationships 1 — Inside a sentence** · 8 new · 150 / 162
 
 - Core: gěi _give, to, for_, yòng _use, with_, hé _and_, huòzhě _or_, duì _toward, for_
 - Theme: qún _group_, mō † _touch_, dǎ † _hit_
 - Why: "give it to me" / "you and me" / "this or that" / "for the group". "Touch it with your hand" and "hit it with a stick" give yòng its examples.
 
-**L20 Relationships 2 — Linking sentences** · 5 new · 143 / 149
+**L20 Relationships 2 — Linking sentences** · 6 new · 156 / 162
 
 - Core: yīnwèi _because_, dànshì _but_
 - Theme: yán _salt_, sǐ † _die, dead_
-- Added: huà _(X-de huà, "if X")_
+- Added: huà _(X-de huà, "if X")_, huó _live, alive_ (D36)
 - Why: "It's good, but there's no salt." / "If a plant has no water, it dies." Linking sentences needs a cause and a result.
 
-**L21 Greetings and Feelings** · 6 new · 149 / 149
+**L21 Greetings and Feelings** · 6 new · 162 / 162
 
 - Core: juéde _feel, think_, pà † _be scared_, jiào _call, make an animal sound_
 - Theme: shēngyīn † _sound, voice_, chóngzi † _bug_, xìng † _sex_
@@ -371,7 +380,7 @@ Approved words get added to `src/data/dictionary.json` (en/ru/zh) in Phase 1.
 | guò                                | have ever done            | L8     | **Added**           | There's no other way to say "I've been there". Current L05 already uses it. |
 | huà                                | (X-de huà) "if"           | L20    | **Added**           | Named in intro-3.                                                           |
 | sān, sì, wǔ, liù, qī, bā, jiǔ, shí | 3–10                      | L16    | **Added** (8 words) | Without them, Numbers stops at two.                                         |
-| dōu                                | all, both (before a verb) | —      | Not added           | "All" is always quánbù, even where dōu would sound more natural.            |
+| dōu | all, both (before a verb) | L14 | **Added** (D35) | Replaces quánbù. "Everything" is shénme-dōu. |
 | kěyǐ                               | can, may                  | —      | Not added           | The current L09 material gets rewritten with néng.                          |
 | shíhou                             | time, when                | —      | Not added           | Use X-de shíjiān, and fix the wording in intro-3.                           |
 | tài / zuì / gèng                   | too / most / even more    | —      | Not added           | zhēn, hěn, and bǐ cover most needs.                                         |
@@ -380,6 +389,18 @@ Approved words get added to `src/data/dictionary.json` (en/ru/zh) in Phase 1.
 | gēn                                | with                      | —      | Not added           | hé covers it.                                                               |
 | men                                | more than one person      | L4     | **Added** (D28)     | wǒ-men "we", nǐ-men "you all", tā-men "they".                               |
 | èr | two (counting, number two) | L16 | **Added** (D31) | Counting aloud (一、二、三), 二号, 十二, 二十. liǎng is still right before gè. |
+| shǎo | few, little | L3 | **Added** (D36) | NSM atom LITTLE~FEW. The opposite of duō. |
+| kěnéng | maybe | L7 | **Added** (D36) | NSM atom MAYBE. A fifth pre-verb. |
+| xiànzài | now | L8 | **Added** (D36) | NSM atom NOW. |
+| fāshēng | happen | L8 | **Added** (D36) | NSM atom HAPPEN. "What happened?" |
+| yīxià | a moment | L9 | **Added** (D36) | NSM atoms MOMENT / A SHORT TIME. děng yīxià, "wait a moment". |
+| dòng | move | L11 | **Added** (D36) | NSM atom MOVE. |
+| yuǎn, jìn | far, near | L11 | **Added** (D36, 2 words) | NSM atoms FAR and NEAR. |
+| jiàzhí | value | L12 | **Added** (D36) | Not an NSM atom; added on request. hěn yǒu jiàzhí, "valuable". |
+| biéde | other | L13 | **Added** (D36) | NSM atom OTHER~ELSE. |
+| zhǒng | kind, type | L13 | **Added** (D36) | NSM atom KIND. zhè-zhǒng, like zhè-ge. |
+| bùfen | part | L14 | **Added** (D36) | NSM atom PART. dà bùfen, "most". |
+| huó | live, alive | L20 | **Added** (D36) | NSM atom LIVE, the pair to sǐ. |
 | ne / ba / a                        | sentence-end particles    | —      | Not added           | L22 merged into L21, so no particle lesson needs them (D17).                |
 
 ---
@@ -442,7 +463,7 @@ The word lists and limits live in `scripts/jargon.js` and `scripts/limits.js`.
 - [x] Update sidebar labels / i18n (`word-usage.json` chapter labels via `npm run word-usage`)
 - [x] Update `BOOK_STRUCTURE.md`
 - [x] Update "Lesson N" citations in `appendix-grammar.yaml`, `appendix-stories.yaml`, `appendix-pinyin.md`, and inside lessons
-- [x] Add a check script for the §4a rules: every one of the 149 words is introduced exactly once, matching §4b; no lesson uses a word before its home lesson; lessons use only dictionary words. It prints the New / Total so far counts per lesson (`check-book`, `check-early-words`)
+- [x] Add a check script for the §4a rules: every one of the 162 words is introduced exactly once, matching §4b; no lesson uses a word before its home lesson; lessons use only dictionary words. It prints the New / Total so far counts per lesson (`check-book`, `check-early-words`)
 - [x] Add the jargon gate (`check-jargon`) and the summary gate (`check-summaries`) (§6)
 - [x] Add the word-use gate (`check-word-use`) and the grammar-box gate (`check-grammar-blocks`) (§6)
 - [x] Run every gate on every build (`npm run check`), strict for finished lessons (§6)
@@ -489,6 +510,13 @@ For each lesson: ☐ written to template ☐ `npm run check -- lesson-NN` passes
 - [x] Sentence Builder and Proverbs checked against the dictionary — the proverbs drop dōu and zìjǐ and say jīn for money; the builder picks words from the dictionary; check-book now guards the proverbs and the stories
 - [x] `npm run check -- --strict` passes (jargon: lessons only, D32; reuse capped near the end, D33)
 - [x] Grammar overview chapter built automatically from every lesson's grammar boxes (`grammarRules` in `src/lib/chapter-content.js` already collects them), replacing the hand-written `appendix-grammar.yaml` Done: `scripts/generate-grammar-overview.js` writes `src/content/appendix-grammar.ts` on every build; the old YAML is in `src/content/legacy/`.
+
+### Phase 3b — Atoms, dōu, and grammar terms (2026-09-27)
+
+- [x] Grammar terms allowed in the lessons, plain name first (D34); `scripts/jargon.js` updated
+- [x] dōu replaces quánbù everywhere, with shénme-dōu for "everything" (D35)
+- [x] 13 new words (NSM atoms + value) in the dictionary, each taught in its lesson and reused in two later ones (D36)
+- [ ] Your review of the new points: L3 few, L7 maybe, L8 now / happen, L9 a moment, L11 move / far / near, L12 value, L13 other / kind, L14 all / everything / part, L20 live
 
 ### Phase 4 — Translation (after all English is approved)
 

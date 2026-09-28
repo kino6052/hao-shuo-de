@@ -15,6 +15,7 @@ const en: PartialByKey<LessonShape> = {
   vocabDanshi: { en: ["but"] },
   vocabYan: { en: ["salt"] },
   vocabSi: { en: ["die; dead"] },
+  vocabHuo: { en: ["live; alive"] },
   vocabHua: { en: ['X-de huà: "if X"'] },
   proseBecause: {
     en: [
@@ -39,6 +40,7 @@ const en: PartialByKey<LessonShape> = {
   exampleBecause6: {
     en: ["Because he touched the mud, his hands are black."],
   },
+  exampleBecause7: { en: ["Because there's air, we can live."] },
   proseBut: {
     en: [
       "**To say but**, put {{word:dan4shi4}} at the start of the second part.",
@@ -63,6 +65,7 @@ const en: PartialByKey<LessonShape> = {
   exampleBut5: { en: ["This fruit is yellow, but it isn't sweet."] },
   exampleBut6: { en: ["This way is strange, but it's good."] },
   exampleBut7: { en: ["I have nine, but he has twenty."] },
+  exampleBut8: { en: ["The plant is small, but it lived."] },
   proseIf: {
     en: [
       '**To say "if"**, put -{{word:de}} {{word:hua4}} after the if-part, then a comma.',
@@ -70,6 +73,7 @@ const en: PartialByKey<LessonShape> = {
       "**X-{{word:de}} {{word:hua4}}, the rest**",
       "",
       "You can also just put the if-part first and leave out -{{word:de}} {{word:hua4}}: {{Word:mei2}}-{{word:you3}} {{word:shui3}}, {{word:zhi2wu4}} {{word:hui4}} {{word:si3}}.",
+      "{{word:huo2}} (live) is the opposite of {{word:si3}} (die): {{Word:you3}} {{word:shui3}}-{{word:de}} {{word:hua4}}, {{word:zhi2wu4}} {{word:neng2}} {{word:huo2}}.",
     ],
     tldr: {
       en: [
@@ -85,6 +89,8 @@ const en: PartialByKey<LessonShape> = {
   exampleIf5: { en: ["If number five isn't here, we wait."] },
   exampleIf6: { en: ["If you don't know this word, ask me."] },
   exampleIf7: { en: ["If you want, eat rice or fruit."] },
+  exampleIf8: { en: ["If there's water, the plant can live."] },
+  exampleIf9: { en: ["If the market is far, I won't go."] },
   infoLinkingSentences: {
     title: { en: ["Linking Sentences"] },
     items: [
@@ -111,6 +117,7 @@ const en: PartialByKey<LessonShape> = {
   exercise4: { en: ["The plant died."] },
   exercise5: { en: ["I want salt."] },
   exercise6: { en: ["If you're cold, come inside."] },
+  exercise7: { en: ["If there's air, we can live."] },
   answer1: {
     en: [
       "{{Word:yin1wei4}} {{word:wo3}} {{word:hen3}} {{word:leng3}}, {{word:wo3}} {{word:yao4}} {{word:yi1fu}}.",
@@ -131,6 +138,11 @@ const en: PartialByKey<LessonShape> = {
   answer6: {
     en: [
       "{{Word:ni3}} {{word:leng3}}-{{word:de}} {{word:hua4}}, {{word:lai2}} {{word:li3}}-{{word:mian4}}.",
+    ],
+  },
+  answer7: {
+    en: [
+      "{{Word:you3}} {{word:kong1qi4}}-{{word:de}} {{word:hua4}}, {{word:wo3}}-{{word:men}} {{word:neng2}} {{word:huo2}}.",
     ],
   },
 };

@@ -3,7 +3,7 @@
 // LessonShape is this lesson's exact, hand-written type -- see lesson-01's
 // shape.ts for the full explanation of the pattern.
 //
-// Rewritten in Phase 2 (BOOK_PLAN.md): when (X-de shíjiān), finished (verb-wán), after (verb-wán hòu), start (kāishǐ), and stay or keep (liú).
+// Rewritten in Phase 2 (BOOK_PLAN.md): when (X-de shíjiān), finished (verb-wán), after (verb-wán hòu), start (kāishǐ), stay or keep (liú), and for a moment (yīxià).
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- lesson-09).
 import type {
@@ -32,6 +32,8 @@ export type LessonShape = {
   vocabWanr: TVocab;
   /** Vocabulary: "stay, keep". */
   vocabLiu: TVocab;
+  /** Vocabulary: "a moment; after a verb: for a moment". */
+  vocabYixia: TVocab;
   /** Say: To say "when", say "the time of" it: put -de shíjiān after the action, then a comma. Pattern: Who + verb-de shíjiān, the rest */
   proseWhen: TProse;
   /** Example: wǒ chī-de shíjiān, wǒ bù shuō. */
@@ -56,6 +58,8 @@ export type LessonShape = {
   exampleAfter2: TExample;
   /** Example: kàn-wán hòu, nǐ shuō. */
   exampleAfter3: TExample;
+  /** Example: chī-wán hòu, fāshēng le shénme? */
+  exampleAfter4: TExample;
   /** Say: To say something starts, put kāishǐ before the verb. Pattern: Who + kāishǐ + verb */
   proseStart: TProse;
   /** Example: wǒ kāishǐ wánr le. */
@@ -64,6 +68,8 @@ export type LessonShape = {
   exampleStart2: TExample;
   /** Example: nǐ kāishǐ xiě le ma? */
   exampleStart3: TExample;
+  /** Example: wǒ xiànzài kāishǐ xiě. */
+  exampleStart4: TExample;
   /** Say: To say you stay, or keep something, use liú. Pattern: Who + liú (+ thing) */
   proseStay: TProse;
   /** Example: wǒ liú zhè-ge. */
@@ -72,7 +78,17 @@ export type LessonShape = {
   exampleStay2: TExample;
   /** Example: chī-wán hòu, tā liú. */
   exampleStay3: TExample;
-  /** Grammar box: X-de shíjiān (when), verb-wán le (finished), verb-wán hòu (after), kāishǐ + verb (start). */
+  /** Say: To do something just for a moment, put yīxià (a moment) after the verb. Pattern: Who + verb + yīxià */
+  proseMoment: TProse;
+  /** Example: děng yīxià! */
+  exampleMoment1: TExample;
+  /** Example: wǒ kàn yīxià. */
+  exampleMoment2: TExample;
+  /** Example: nǐ liú yīxià. */
+  exampleMoment3: TExample;
+  /** Example: wǒ-men wánr yīxià. */
+  exampleMoment4: TExample;
+  /** Grammar box: X-de shíjiān (when), verb-wán le (finished), verb-wán hòu (after), kāishǐ + verb (start), verb + yīxià (a moment). */
   infoAroundAnAction: TInfo;
   /** Exercise 1: When I write, I don't eat. */
   exercise1: TExercise;
@@ -86,6 +102,8 @@ export type LessonShape = {
   exercise5: TExercise;
   /** Exercise 6: I will stay. */
   exercise6: TExercise;
+  /** Exercise 7: Wait a moment! */
+  exercise7: TExercise;
   /** Answer 1: wǒ xiě-de shíjiān, wǒ bù chī. */
   answer1: TAnswer;
   /** Answer 2: wǒ xiě-wán le. */
@@ -98,6 +116,8 @@ export type LessonShape = {
   answer5: TAnswer;
   /** Answer 6: wǒ huì liú. */
   answer6: TAnswer;
+  /** Answer 7: děng yīxià! */
+  answer7: TAnswer;
 };
 
 const shape: LessonShape = {
@@ -112,6 +132,7 @@ const shape: LessonShape = {
   vocabHou: { type: "vocab", term: "{{word:hou4}}", ttsText: "后" },
   vocabWanr: { type: "vocab", term: "{{word:wan2r}}", ttsText: "玩儿" },
   vocabLiu: { type: "vocab", term: "{{word:liu2}}", ttsText: "留" },
+  vocabYixia: { type: "vocab", term: "{{word:yi1xia4}}", ttsText: "一下" },
   proseWhen: { type: "prose" },
   exampleWhen1: {
     type: "example",
@@ -160,6 +181,11 @@ const shape: LessonShape = {
     pinyin: "{{Word:kan4}}-{{word:wan2}} {{word:hou4}}, {{word:ni3}} {{word:shuo1}}.",
     ttsText: "看完后，你说。",
   },
+  exampleAfter4: {
+    type: "example",
+    pinyin: "{{Word:chi1}}-{{word:wan2}} {{word:hou4}}, {{word:fa1sheng1}} {{word:le}} {{word:shen2me}}?",
+    ttsText: "吃完后，发生了什么？",
+  },
   proseStart: { type: "prose" },
   exampleStart1: {
     type: "example",
@@ -175,6 +201,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ni3}} {{word:kai1shi3}} {{word:xie3}} {{word:le}} {{word:ma}}?",
     ttsText: "你开始写了吗？",
+  },
+  exampleStart4: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:xian4zai4}} {{word:kai1shi3}} {{word:xie3}}.",
+    ttsText: "我现在开始写。",
   },
   proseStay: { type: "prose" },
   exampleStay1: {
@@ -192,11 +223,32 @@ const shape: LessonShape = {
     pinyin: "{{Word:chi1}}-{{word:wan2}} {{word:hou4}}, {{word:ta1}} {{word:liu2}}.",
     ttsText: "吃完后，她留。",
   },
+  proseMoment: { type: "prose" },
+  exampleMoment1: {
+    type: "example",
+    pinyin: "{{Word:deng3}} {{word:yi1xia4}}!",
+    ttsText: "等一下！",
+  },
+  exampleMoment2: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:kan4}} {{word:yi1xia4}}.",
+    ttsText: "我看一下。",
+  },
+  exampleMoment3: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:liu2}} {{word:yi1xia4}}.",
+    ttsText: "你留一下。",
+  },
+  exampleMoment4: {
+    type: "example",
+    pinyin: "{{Word:wo3}}-{{word:men}} {{word:wan2r}} {{word:yi1xia4}}.",
+    ttsText: "我们玩儿一下。",
+  },
   infoAroundAnAction: {
     type: "info",
     subtype: "grammar",
     tag: "time/when-finish-after-start",
-    items: [{}, {}, {}, {}],
+    items: [{}, {}, {}, {}, {}],
   },
   exercise1: { type: "exercise" },
   exercise2: { type: "exercise" },
@@ -204,12 +256,14 @@ const shape: LessonShape = {
   exercise4: { type: "exercise" },
   exercise5: { type: "exercise" },
   exercise6: { type: "exercise" },
+  exercise7: { type: "exercise" },
   answer1: { type: "answer", ttsText: "我写的时间，我不吃。" },
   answer2: { type: "answer", ttsText: "我写完了。" },
   answer3: { type: "answer", ttsText: "看完后，我睡觉。" },
   answer4: { type: "answer", ttsText: "她开始吃了。" },
   answer5: { type: "answer", ttsText: "你要玩儿吗？" },
   answer6: { type: "answer", ttsText: "我会留。" },
+  answer7: { type: "answer", ttsText: "等一下！" },
 };
 
 export default shape;

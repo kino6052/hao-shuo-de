@@ -34,6 +34,7 @@ const ru: PartialByKey<LessonShape> = {
   exampleOrder7: { ru: [] },
   exampleOrder8: { ru: [] },
   exampleOrder9: { ru: [] },
+  exampleOrder10: { ru: [] },
   proseFeel: { ru: [], tldr: { ru: [] }, necessity: { ru: [] } },
   exampleFeel1: { ru: [] },
   exampleFeel2: { ru: [] },
@@ -45,12 +46,15 @@ const ru: PartialByKey<LessonShape> = {
   exampleFeel8: { ru: [] },
   exampleFeel9: { ru: [] },
   exampleFeel10: { ru: [] },
+  exampleFeel11: { ru: [] },
+  exampleFeel12: { ru: [] },
   proseHear: { ru: [], tldr: { ru: [] }, necessity: { ru: [] } },
   exampleHear1: { ru: [] },
   exampleHear2: { ru: [] },
   exampleHear3: { ru: [] },
   exampleHear4: { ru: [] },
   exampleHear5: { ru: [] },
+  exampleHear6: { ru: [] },
   infoGreetingsAndFeelings: {
     title: { ru: [] },
     items: [

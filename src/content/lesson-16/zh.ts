@@ -44,6 +44,8 @@ const zh: PartialByKey<LessonShape> = {
   exampleCount17: { zh: [] },
   exampleCount18: { zh: [] },
   exampleCount19: { zh: [] },
+  exampleCount20: { zh: [] },
+  exampleCount21: { zh: [] },
   proseTeens: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
   exampleTeens1: { zh: [] },
   exampleTeens2: { zh: [] },

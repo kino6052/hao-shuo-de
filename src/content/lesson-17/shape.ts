@@ -66,6 +66,8 @@ export type LessonShape = {
   exampleIsColor9: TExample;
   /** Example: qī-ge hézi shì hóngsè-de, bā-ge shì lánsè-de. */
   exampleIsColor10: TExample;
+  /** Example: tā-de yīfu dōu shì hēisè-de. */
+  exampleIsColor11: TExample;
   /** Say: To ask "what color?", say shénme yánsè where the color would go. Pattern: Thing + shì shénme yánsè? */
   proseWhatColor: TProse;
   /** Example: nǐ-de yīfu shì shénme yánsè? */
@@ -80,6 +82,10 @@ export type LessonShape = {
   exampleWhatColor5: TExample;
   /** Example: liù-hào shì shénme yánsè? */
   exampleWhatColor6: TExample;
+  /** Example: nǐ yǒu biéde yánsè ma? */
+  exampleWhatColor7: TExample;
+  /** Example: zhè-zhǒng yánsè hěn hǎo. */
+  exampleWhatColor8: TExample;
   /** Grammar box: color-de + noun, shì + color-de, shénme yánsè. */
   infoColors: TInfo;
   /** Exercise 1: a white box */
@@ -197,6 +203,11 @@ const shape: LessonShape = {
     pinyin: "{{Word:qi1}}-ge {{word:he2zi}} {{word:shi4}} {{word:hong2se4}}-{{word:de}}, {{word:ba1}}-ge {{word:shi4}} {{word:lan2se4}}-{{word:de}}.",
     ttsText: "七个盒子是红色的，八个是蓝色的。",
   },
+  exampleIsColor11: {
+    type: "example",
+    pinyin: "{{Word:ta1}}-{{word:de}} {{word:yi1fu}} {{word:dou1}} {{word:shi4}} {{word:hei1se4}}-{{word:de}}.",
+    ttsText: "她的衣服都是黑色的。",
+  },
   proseWhatColor: { type: "prose" },
   exampleWhatColor1: {
     type: "example",
@@ -227,6 +238,16 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:liu4}}-{{word:hao4}} {{word:shi4}} {{word:shen2me}} {{word:yan2se4}}?",
     ttsText: "六号是什么颜色？",
+  },
+  exampleWhatColor7: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:you3}} {{word:bie2de}} {{word:yan2se4}} {{word:ma}}?",
+    ttsText: "你有别的颜色吗？",
+  },
+  exampleWhatColor8: {
+    type: "example",
+    pinyin: "{{Word:zhe4}}-{{word:zhong3}} {{word:yan2se4}} {{word:hen3}} {{word:hao3}}.",
+    ttsText: "这种颜色很好。",
   },
   infoColors: {
     type: "info",

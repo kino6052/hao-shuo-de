@@ -20,13 +20,13 @@ const en: PartialByKey<LessonShape> = {
   vocabNi: { en: ["mud, paste"] },
   proseChanged: {
     en: [
-      "**To say something changed**, put {{word:le}} after the describing word.",
+      "**To say something changed**, put {{word:le}} after the adjective.",
       "",
-      "**Thing + describing word + {{word:le}}**",
+      "**Thing + adjective + {{word:le}}**",
     ],
     tldr: {
       en: [
-        "{{word:le}} after a describing word means it changed: {{Word:shui3}} {{word:re4}} {{word:le}}, the water got hot.",
+        "{{word:le}} after an adjective means it changed: {{Word:shui3}} {{word:re4}} {{word:le}}, the water got hot.",
       ],
     },
     necessity: { en: ["Now you can say how things turned out."] },
@@ -37,13 +37,13 @@ const en: PartialByKey<LessonShape> = {
   exampleChanged4: { en: ["The tool is broken."] },
   proseBecame: {
     en: [
-      "**To say something became different**, put {{word:bian4}} (become) before the describing word, and {{word:le}} after.",
+      "**To say something became different**, put {{word:bian4}} (become) before the adjective, and {{word:le}} after.",
       "",
-      "**Thing + {{word:bian4}} + describing word + {{word:le}}**",
+      "**Thing + {{word:bian4}} + adjective + {{word:le}}**",
     ],
     tldr: {
       en: [
-        "{{word:bian4}} + describing word + {{word:le}} means it became that.",
+        "{{word:bian4}} + adjective + {{word:le}} means it became that.",
       ],
     },
     necessity: { en: ["Now you can describe a change."] },
@@ -119,12 +119,12 @@ const en: PartialByKey<LessonShape> = {
     items: [
       {
         en: [
-          "describing word + {{word:le}}, it changed: {{Word:shui3}} {{word:re4}} {{word:le}}. (The water got hot.)",
+          "adjective + {{word:le}}, it changed: {{Word:shui3}} {{word:re4}} {{word:le}}. (The water got hot.)",
         ],
       },
       {
         en: [
-          "{{word:bian4}} + describing word + {{word:le}}, became: {{Word:shui3}} {{word:bian4}} {{word:leng3}} {{word:le}}. (The water turned cold.)",
+          "{{word:bian4}} + adjective + {{word:le}}, became: {{Word:shui3}} {{word:bian4}} {{word:leng3}} {{word:le}}. (The water turned cold.)",
         ],
       },
       {

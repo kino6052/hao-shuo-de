@@ -8,11 +8,12 @@ const en: PartialByKey<LessonShape> = {
   summary: {
     en: [
       "We often want to add one more thing, or talk about all of them.",
-      "In this lesson, you'll be able to say \"I also eat.\" and \"All the plants are good.\"",
+      "In this lesson, you'll be able to say \"I also eat.\", \"We all eat.\", \"I eat everything.\", and \"Most people eat rice.\"",
     ],
   },
   vocabYe: { en: ["also, too"] },
-  vocabQuanbu: { en: ["all"] },
+  vocabDou: { en: ["all; shénme-dōu: everything"] },
+  vocabBufen: { en: ["part"] },
   vocabZhiwu: { en: ["plant"] },
   vocabHuo: { en: ["fire"] },
   vocabKongqi: { en: ["air"] },
@@ -37,15 +38,17 @@ const en: PartialByKey<LessonShape> = {
   exampleAlsoDo4: { en: ["He's looking at the fire too."] },
   exampleAlsoDo5: { en: ["I got up too."] },
   exampleAlsoDo6: { en: ["I'm beside him too."] },
+  exampleAlsoDo7: { en: ["He doesn't move either."] },
+  exampleAlsoDo8: { en: ["The other people came too."] },
   proseAlsoIs: {
     en: [
-      "**To say something is also like that**, put {{word:ye3}} before {{word:hen3}} and the describing word.",
+      "**To say something is also like that**, put {{word:ye3}} before {{word:hen3}} and the adjective.",
       "",
-      "**Thing + {{word:ye3}} + {{word:hen3}} + describing word**",
+      "**Thing + {{word:ye3}} + {{word:hen3}} + adjective**",
     ],
     tldr: {
       en: [
-        "{{word:ye3}} {{word:hen3}} + describing word: {{Word:ta1}} {{word:ye3}} {{word:hen3}} {{word:leng3}}, she's cold too.",
+        "{{word:ye3}} {{word:hen3}} + adjective: {{Word:ta1}} {{word:ye3}} {{word:hen3}} {{word:leng3}}, she's cold too.",
       ],
     },
     necessity: { en: ["Now you can say two things are alike."] },
@@ -54,25 +57,70 @@ const en: PartialByKey<LessonShape> = {
   exampleAlsoIs2: { en: ["The air is cold too."] },
   exampleAlsoIs3: { en: ["The fire is hot, and the sun is hot too."] },
   exampleAlsoIs4: { en: ["The sun is round, and the moon is round too."] },
+  exampleAlsoIs5: { en: ["The market is near too."] },
   proseAll: {
     en: [
-      "**To say all**, use {{word:quan2bu4}}.",
+      "**To say they all do something**, put {{word:dou1}} (all) right before the verb, after the people or things.",
       "",
-      "**{{word:quan2bu4}}-{{word:de}} + noun / verb + {{word:quan2bu4}}**",
+      "**People or things + {{word:dou1}} + verb**",
+      "",
+      "{{word:dou1}} comes after the who, like {{word:ye3}}. It never goes before a noun.",
     ],
     tldr: {
       en: [
-        "{{word:quan2bu4}} means all: {{Word:wo3}} {{word:yao4}} {{word:quan2bu4}}, I want all of it.",
+        "Put {{word:dou1}} before the verb: {{Word:wo3}}-{{word:men}} {{word:dou1}} {{word:chi1}}, we all eat.",
       ],
     },
     necessity: { en: ["Now you can talk about every one of them."] },
   },
-  exampleAll1: { en: ["I want all of it."] },
-  exampleAll2: { en: ["All the plants are good."] },
-  exampleAll3: { en: ["It's all eaten."] },
-  exampleAll4: { en: ["Plants need water."] },
+  exampleAll1: { en: ["We all eat."] },
+  exampleAll2: { en: ["All plants need water."] },
+  exampleAll3: { en: ["They're all well."] },
+  exampleAll4: { en: ["The fruit is all eaten."] },
   exampleAll5: { en: ["The air outside is good."] },
   exampleAll6: { en: ["Where is the fire?"] },
+  proseEverything: {
+    en: [
+      "**To say everything**, put {{word:shen2me}}-{{word:dou1}} before the verb.",
+      "",
+      "**Who + {{word:shen2me}}-{{word:dou1}} + verb**",
+      "",
+      "With {{word:bu4}} or {{word:mei2}}, it means nothing: {{Word:wo3}} {{word:shen2me}}-{{word:dou1}} {{word:bu4}} {{word:yao4}}, I don't want anything.",
+      "{{word:na3li3}}-{{word:dou1}} means everywhere.",
+    ],
+    tldr: {
+      en: [
+        "{{word:shen2me}}-{{word:dou1}} + verb: {{Word:wo3}} {{word:shen2me}}-{{word:dou1}} {{word:chi1}}, I eat everything.",
+      ],
+    },
+    necessity: { en: ["Now you can say everything, and nothing."] },
+  },
+  exampleEverything1: { en: ["I eat everything."] },
+  exampleEverything2: { en: ["He knows everything."] },
+  exampleEverything3: { en: ["I don't want anything."] },
+  exampleEverything4: { en: ["He didn't see anything."] },
+  exampleEverything5: { en: ["There's air everywhere."] },
+  prosePart: {
+    en: [
+      "**To say part of something**, use {{word:bu4fen}} (part).",
+      "",
+      "**{{word:zhe4}} / {{word:na4}} / {{word:da4}} + {{word:bu4fen}}**",
+      "",
+      "{{word:da4}} {{word:bu4fen}} (the big part) means most: {{Word:da4}} {{word:bu4fen}} {{word:ren2}}, most people.",
+    ],
+    tldr: {
+      en: [
+        "{{word:bu4fen}} means part. {{word:da4}} {{word:bu4fen}} means most.",
+      ],
+    },
+    necessity: {
+      en: ["Now you can talk about some of it, not all of it."],
+    },
+  },
+  examplePart1: { en: ["This part is good."] },
+  examplePart2: { en: ["That part is hot."] },
+  examplePart3: { en: ["Most people eat rice."] },
+  examplePart4: { en: ["Most plants are small."] },
   infoAlsoAndAll: {
     title: { en: ["Also and All"] },
     items: [
@@ -83,22 +131,34 @@ const en: PartialByKey<LessonShape> = {
       },
       {
         en: [
-          "{{word:ye3}} {{word:hen3}} + describing word: {{Word:ta1}} {{word:ye3}} {{word:hen3}} {{word:leng3}}. (She's cold too.)",
+          "{{word:ye3}} {{word:hen3}} + adjective: {{Word:ta1}} {{word:ye3}} {{word:hen3}} {{word:leng3}}. (She's cold too.)",
         ],
       },
       {
         en: [
-          "{{word:quan2bu4}}, all: {{Word:wo3}} {{word:yao4}} {{word:quan2bu4}}. (I want all of it.) {{word:quan2bu4}}-{{word:de}} + noun means all the …",
+          "{{word:dou1}} + verb, all: {{Word:wo3}}-{{word:men}} {{word:dou1}} {{word:chi1}}. (We all eat.)",
+        ],
+      },
+      {
+        en: [
+          "{{word:shen2me}}-{{word:dou1}} + verb, everything: {{Word:wo3}} {{word:shen2me}}-{{word:dou1}} {{word:chi1}}. (I eat everything.) With {{word:bu4}}: nothing. {{word:na3li3}}-{{word:dou1}}: everywhere.",
+        ],
+      },
+      {
+        en: [
+          "{{word:bu4fen}}, part: {{Word:zhe4}} {{word:bu4fen}} {{word:hen3}} {{word:hao3}}. (This part is good.) {{word:da4}} {{word:bu4fen}}: most.",
         ],
       },
     ],
   },
   exercise1: { en: ["I want some too."] },
   exercise2: { en: ["The water is hot too."] },
-  exercise3: { en: ["I want all the fruit."] },
-  exercise4: { en: ["The plant is small."] },
-  exercise5: { en: ["The fire is really hot."] },
-  exercise6: { en: ["The air here is cold."] },
+  exercise3: { en: ["We all want fruit."] },
+  exercise4: { en: ["I eat everything."] },
+  exercise5: { en: ["Most people eat rice."] },
+  exercise6: { en: ["The plant is small."] },
+  exercise7: { en: ["The fire is really hot."] },
+  exercise8: { en: ["The air here is cold."] },
   answer1: { en: ["{{Word:wo3}} {{word:ye3}} {{word:yao4}}."] },
   answer2: {
     en: [
@@ -107,12 +167,22 @@ const en: PartialByKey<LessonShape> = {
   },
   answer3: {
     en: [
-      "{{Word:wo3}} {{word:yao4}} {{word:quan2bu4}}-{{word:de}} {{word:shui3guo3}}.",
+      "{{Word:wo3}}-{{word:men}} {{word:dou1}} {{word:yao4}} {{word:shui3guo3}}.",
     ],
   },
-  answer4: { en: ["{{Word:zhi2wu4}} {{word:hen3}} {{word:xiao3}}."] },
-  answer5: { en: ["{{Word:huo3}} {{word:zhen1}} {{word:re4}}."] },
-  answer6: {
+  answer4: {
+    en: [
+      "{{Word:wo3}} {{word:shen2me}}-{{word:dou1}} {{word:chi1}}.",
+    ],
+  },
+  answer5: {
+    en: [
+      "{{Word:da4}} {{word:bu4fen}} {{word:ren2}} {{word:chi1}} {{word:mi3fan4}}.",
+    ],
+  },
+  answer6: { en: ["{{Word:zhi2wu4}} {{word:hen3}} {{word:xiao3}}."] },
+  answer7: { en: ["{{Word:huo3}} {{word:zhen1}} {{word:re4}}."] },
+  answer8: {
     en: [
       "{{Word:zhe4}}-{{word:li3}}-{{word:de}} {{word:kong1qi4}} {{word:hen3}} {{word:leng3}}.",
     ],

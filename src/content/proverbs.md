@@ -8,13 +8,13 @@ order: 1
 Short sayings that show how much you can say with the words in this book:
 
 ```examples
-{{Word:quan2bu4}} {{word:dong1xi}} {{word:you3}} {{word:shi2jian1}}. | Everything has a time.
-{{Word:quan2bu4}} {{word:ni3}}-{{word:he2}}-{{word:wo3}}-{{word:de}}-{{word:liu2}}-{{word:de}}-{{word:shi2jian1}} {{word:shi4}} {{word:hao3}}-{{word:de}}. | All is good / Life is beautiful.
+{{Word:shen2me}}-{{word:dou1}} {{word:you3}} {{word:shi2jian1}}. | Everything has a time.
+{{Word:ni3}}-{{word:he2}}-{{word:wo3}}-{{word:de}}-{{word:liu2}}-{{word:de}}-{{word:shi2jian1}} {{word:dou1}} {{word:shi4}} {{word:hao3}}-{{word:de}}. | All is good / Life is beautiful.
 {{Word:shi2jian1}} {{word:bian4}}. | Change comes / Times change.
 {{Word:huai4}}-{{word:de}} {{word:dong1xi}} {{word:yao4}} {{word:lai2}}. | Bad things will happen / are coming.
 {{Word:ren2}} {{word:hen3}} {{word:da4}}. {{Word:jin1}} {{word:hen3}} {{word:xiao3}}. | People are more important than money / People are big, money is small.
 {{Word:zhi1dao4}}-{{word:de}} {{word:ren2}} {{word:shi4}} {{word:qi2guai4}}-{{word:de}} {{word:ren2}}. | A sage is unconventional / A fool.
-{{Word:wo3}} {{word:ba3}} {{word:quan2bu4}} {{word:dong1xi}} {{word:nong4}} {{word:hao3}}, {{word:wo3}} {{word:ye3}} {{word:bian4}} {{word:hao3}} {{word:le}}. | When I make everything better, I become better too.
+{{Word:wo3}} {{word:ba3}} {{word:dong1xi}} {{word:dou1}} {{word:nong4}} {{word:hao3}}, {{word:wo3}} {{word:ye3}} {{word:bian4}} {{word:hao3}} {{word:le}}. | When I make everything better, I become better too.
 {{Word:hao3}}-{{word:de}} {{word:fang1fa3}} {{word:hen3}} {{word:duo1}}. | The good ways are many.
 {{Word:ai4}} {{word:ni3}} {{word:pang2bian1}}-{{word:de}} {{word:ren2}}. | Love thy neighbor / Love the person beside you.
 {{Word:zhi1dao4}} {{word:ni3}} {{word:shi4}} {{word:shen2me}} {{word:ren2}}! | Know thyself! / Know what kind of person you are!

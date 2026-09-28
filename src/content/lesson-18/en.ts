@@ -57,13 +57,13 @@ const en: PartialByKey<LessonShape> = {
   examplePerson3: { en: ["The one who knows doesn't talk."] },
   proseHow: {
     en: [
-      "**To say how someone does something**, put -{{word:de}} after the verb, then the describing word.",
+      "**To say how someone does something**, put -{{word:de}} after the verb, then the adjective.",
       "",
-      "**Who + verb-{{word:de}} + describing word**",
+      "**Who + verb-{{word:de}} + adjective**",
     ],
     tldr: {
       en: [
-        "verb-{{word:de}} + describing word says how: {{Word:ta1}} {{word:shuo1}}-{{word:de}} {{word:hao3}}, she speaks well.",
+        "verb-{{word:de}} + adjective says how: {{Word:ta1}} {{word:shuo1}}-{{word:de}} {{word:hao3}}, she speaks well.",
       ],
     },
     necessity: { en: ["Now you can say how well something is done."] },
@@ -103,6 +103,7 @@ const en: PartialByKey<LessonShape> = {
   exampleName10: { en: ["My skin is hot."] },
   exampleName11: { en: ["Her skin is healthy."] },
   exampleName12: { en: ["The color I love is blue."] },
+  exampleName13: { en: ["This is a valuable thing."] },
   infoJobsOfDe: {
     title: { en: ["The Jobs of -de"] },
     items: [
@@ -118,12 +119,12 @@ const en: PartialByKey<LessonShape> = {
       },
       {
         en: [
-          "verb-{{word:de}} + describing word, how: {{Word:ta1}} {{word:shuo1}}-{{word:de}} {{word:hao3}}. (She speaks well.)",
+          "verb-{{word:de}} + adjective, how: {{Word:ta1}} {{word:shuo1}}-{{word:de}} {{word:hao3}}. (She speaks well.)",
         ],
       },
       {
         en: [
-          "describing word-{{word:de}} + noun: {{word:hao3}}-{{word:de}} {{word:ren2}} (a good person). Whose: {{word:wo3}}-{{word:de}} {{word:bi2zi}} (my nose).",
+          "adjective-{{word:de}} + noun: {{word:hao3}}-{{word:de}} {{word:ren2}} (a good person). Whose: {{word:wo3}}-{{word:de}} {{word:bi2zi}} (my nose).",
         ],
       },
       {

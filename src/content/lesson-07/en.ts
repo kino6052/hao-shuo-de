@@ -15,6 +15,7 @@ const en: PartialByKey<LessonShape> = {
   vocabNeng: { en: ["can"] },
   vocabZhidao: { en: ["know; know how to (with zěnme)"] },
   vocabAi: { en: ["love; love to"] },
+  vocabKeneng: { en: ["maybe, might"] },
   vocabDeng: { en: ["wait"] },
   vocabYifu: { en: ["clothes"] },
   proseWant: {
@@ -95,6 +96,25 @@ const en: PartialByKey<LessonShape> = {
   exampleLove3: { en: ["She loves to read."] },
   exampleLove4: { en: ["I love your clothes."] },
   exampleLove5: { en: ["Are these your clothes?"] },
+  proseMaybe: {
+    en: [
+      "**To say maybe**, put {{word:ke3neng2}} (maybe) before the verb.",
+      "",
+      "**Who + {{word:ke3neng2}} + verb**",
+      "",
+      'On its own, {{Word:ke3neng2}}. means "Maybe."',
+    ],
+    tldr: {
+      en: [
+        "Put {{word:ke3neng2}} before a verb to say it might be so.",
+      ],
+    },
+    necessity: { en: ["Now you can say you're not sure."] },
+  },
+  exampleMaybe1: { en: ["He might know."] },
+  exampleMaybe2: { en: ["She might want to eat."] },
+  exampleMaybe3: { en: ["I might not be able to wait."] },
+  exampleMaybe4: { en: ["Maybe."] },
   infoPreVerbs: {
     title: { en: ["Words Before a Verb"] },
     items: [
@@ -120,6 +140,11 @@ const en: PartialByKey<LessonShape> = {
       },
       {
         en: [
+          "{{word:ke3neng2}} + verb, maybe: {{Word:ta1}} {{word:ke3neng2}} {{word:zhi1dao4}}. (He might know.)",
+        ],
+      },
+      {
+        en: [
           "For \"not\", put {{word:bu4}} first: {{Word:ta1}} {{word:bu4}} {{word:neng2}} {{word:chi1}}. (He can't eat.)",
         ],
       },
@@ -132,6 +157,7 @@ const en: PartialByKey<LessonShape> = {
   exercise5: { en: ["What do you want to eat?"] },
   exercise6: { en: ["He can't wait."] },
   exercise7: { en: ["Do you have clothes?"] },
+  exercise8: { en: ["Maybe she knows."] },
   answer1: { en: ["{{Word:wo3}} {{word:yao4}} {{word:deng3}}."] },
   answer2: {
     en: [
@@ -162,6 +188,9 @@ const en: PartialByKey<LessonShape> = {
     en: [
       "{{Word:ni3}} {{word:you3}} {{word:yi1fu}} {{word:ma}}?",
     ],
+  },
+  answer8: {
+    en: ["{{Word:ta1}} {{word:ke3neng2}} {{word:zhi1dao4}}."],
   },
 };
 

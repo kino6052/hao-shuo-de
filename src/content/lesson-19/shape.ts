@@ -50,6 +50,8 @@ export type LessonShape = {
   exampleGive4: TExample;
   /** Example: tā gěi wǒ sān-ge, wǒ gěi tā sì-ge. */
   exampleGive5: TExample;
+  /** Example: tā gěi wǒ yī-bùfen. */
+  exampleGive6: TExample;
   /** Say: To say what you do something with, put yòng and the thing before the verb. Pattern: Who + yòng + thing + verb */
   proseWith: TProse;
   /** Example: wǒ yòng gōngjù xiě. */
@@ -70,6 +72,8 @@ export type LessonShape = {
   exampleWith8: TExample;
   /** Example: tā yòng xīn-de fāngfǎ. */
   exampleWith9: TExample;
+  /** Example: wǒ yòng yīxià nǐ-de gōngjù. */
+  exampleWith10: TExample;
   /** Say: To join two nouns, put hé (and) or huòzhě (or) between them. Pattern: A + hé / huòzhě + B */
   proseAndOr: TProse;
   /** Example: nǐ hé wǒ. */
@@ -86,7 +90,7 @@ export type LessonShape = {
   exampleAndOr6: TExample;
   /** Example: wǒ yào bā-ge huòzhě jiǔ-ge. */
   exampleAndOr7: TExample;
-  /** Say: To say how someone is toward someone, put duì and the person before the describing word. Pattern: A + duì + B + describing word */
+  /** Say: To say how someone is toward someone, put duì and the person before the adjective. Pattern: A + duì + B + adjective */
   proseToward: TProse;
   /** Example: tā duì wǒ hěn hǎo. */
   exampleToward1: TExample;
@@ -181,6 +185,11 @@ const shape: LessonShape = {
     pinyin: "{{Word:ta1}} {{word:gei3}} {{word:wo3}} {{word:san1}}-ge, {{word:wo3}} {{word:gei3}} {{word:ta1}} {{word:si4}}-ge.",
     ttsText: "他给我三个，我给他四个。",
   },
+  exampleGive6: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:gei3}} {{word:wo3}} {{word:yi1}}-{{word:bu4fen}}.",
+    ttsText: "他给我一部分。",
+  },
   proseWith: { type: "prose" },
   exampleWith1: {
     type: "example",
@@ -226,6 +235,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ta1}} {{word:yong4}} {{word:xin1}}-{{word:de}} {{word:fang1fa3}}.",
     ttsText: "他用新的方法。",
+  },
+  exampleWith10: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:yong4}} {{word:yi1xia4}} {{word:ni3}}-{{word:de}} {{word:gong1ju4}}.",
+    ttsText: "我用一下你的工具。",
   },
   proseAndOr: { type: "prose" },
   exampleAndOr1: {

@@ -699,19 +699,18 @@
       },
       "maps": "mute"
     },
-    "quan2bu4": {
-      "term": "quánbù",
+    "dou1": {
+      "term": "dōu",
       "pos": {
-        "eng": "adjective",
-        "rus": "прилагательное",
-        "zh": "形容词"
+        "eng": "adverb",
+        "rus": "наречие",
+        "zh": "副词"
       },
       "definition": {
-        "eng": "all",
-        "rus": "весь, все, целиком",
-        "zh": "全部，所有"
-      },
-      "maps": ""
+        "eng": "all, both, every one of them; goes before the verb, after the people or things it covers (e.g. {{word:wo3}}-{{word:men}} {{word:dou1}} {{word:chi1}}, \"we all eat\"). {{word:shen2me}}-{{word:dou1}} means everything",
+        "rus": "все, оба, каждый из них; ставится перед глаголом, после тех, о ком идёт речь (например, {{word:wo3}}-{{word:men}} {{word:dou1}} {{word:chi1}}, «мы все едим»). {{word:shen2me}}-{{word:dou1}} значит «всё»",
+        "zh": "都，全都；放在动词前、所说的人或事物后面（如 {{word:wo3}}-{{word:men}} {{word:dou1}} {{word:chi1}}，“我们都吃”）。{{word:shen2me}}-{{word:dou1}} 表示“什么都，一切”"
+      }
     },
     "hao3": {
       "term": "hǎo",
@@ -2071,6 +2070,175 @@
         "rus": "два при счёте вслух и в номерах (yī, èr, sān; èr-hào, «номер два»; shí-èr, 12); перед gè «два» — это liǎng",
         "zh": "二，用于数数和编号（yī, èr, sān；èr-hào，“二号”；shí-èr，十二）；在 gè 前面用 liǎng"
       }
+    },
+    "shao3": {
+      "term": "shǎo",
+      "pos": {
+        "eng": "adjective",
+        "rus": "прилагательное",
+        "zh": "形容词"
+      },
+      "definition": {
+        "eng": "few, little, not much; the opposite of {{word:duo1}}",
+        "rus": "мало, немного; противоположность {{word:duo1}}",
+        "zh": "少；与 {{word:duo1}} 相对"
+      }
+    },
+    "ke3neng2": {
+      "term": "kěnéng",
+      "pos": {
+        "eng": "adverb",
+        "rus": "наречие",
+        "zh": "副词"
+      },
+      "definition": {
+        "eng": "maybe, perhaps, might; goes before the verb (e.g. {{word:ta1}} {{word:ke3neng2}} {{word:lai2}}, \"he might come\")",
+        "rus": "может быть, возможно; ставится перед глаголом (например, {{word:ta1}} {{word:ke3neng2}} {{word:lai2}}, «он, может быть, придёт»)",
+        "zh": "可能，也许；放在动词前（如 {{word:ta1}} {{word:ke3neng2}} {{word:lai2}}，“他可能来”）"
+      }
+    },
+    "xian4zai4": {
+      "term": "xiànzài",
+      "pos": {
+        "eng": "noun/adverb",
+        "rus": "существительное/наречие",
+        "zh": "名词/副词"
+      },
+      "definition": {
+        "eng": "now, at present, these days",
+        "rus": "сейчас, теперь, в настоящее время",
+        "zh": "现在，目前"
+      }
+    },
+    "fa1sheng1": {
+      "term": "fāshēng",
+      "pos": {
+        "eng": "verb",
+        "rus": "глагол",
+        "zh": "动词"
+      },
+      "definition": {
+        "eng": "to happen, take place, occur (e.g. {{word:fa1sheng1}} {{word:le}} {{word:shen2me}}?, \"what happened?\")",
+        "rus": "происходить, случаться (например, {{word:fa1sheng1}} {{word:le}} {{word:shen2me}}?, «что случилось?»)",
+        "zh": "发生（如 {{word:fa1sheng1}} {{word:le}} {{word:shen2me}}？，“发生了什么？”）"
+      }
+    },
+    "yi1xia4": {
+      "term": "yīxià",
+      "pos": {
+        "eng": "measure word (for actions)",
+        "rus": "счётное слово (для действий)",
+        "zh": "动量词"
+      },
+      "definition": {
+        "eng": "a moment, a short time; after a verb, do it briefly or just a little (e.g. {{word:deng3}} {{word:yi1xia4}}, \"wait a moment\")",
+        "rus": "мгновение, недолго; после глагола — сделать что-то быстро или чуть-чуть (например, {{word:deng3}} {{word:yi1xia4}}, «подожди минутку»)",
+        "zh": "一下，一会儿；用在动词后表示动作短暂或轻微（如 {{word:deng3}} {{word:yi1xia4}}，“等一下”）"
+      }
+    },
+    "yuan3": {
+      "term": "yuǎn",
+      "pos": {
+        "eng": "adjective",
+        "rus": "прилагательное",
+        "zh": "形容词"
+      },
+      "definition": {
+        "eng": "far, distant",
+        "rus": "далёкий, далеко",
+        "zh": "远"
+      }
+    },
+    "jin4": {
+      "term": "jìn",
+      "pos": {
+        "eng": "adjective",
+        "rus": "прилагательное",
+        "zh": "形容词"
+      },
+      "definition": {
+        "eng": "near, close",
+        "rus": "близкий, близко",
+        "zh": "近"
+      }
+    },
+    "dong4": {
+      "term": "dòng",
+      "pos": {
+        "eng": "verb",
+        "rus": "глагол",
+        "zh": "动词"
+      },
+      "definition": {
+        "eng": "to move; to stir, to budge",
+        "rus": "двигаться, шевелиться; двигать",
+        "zh": "动，移动"
+      }
+    },
+    "jia4zhi2": {
+      "term": "jiàzhí",
+      "pos": {
+        "eng": "noun",
+        "rus": "существительное",
+        "zh": "名词"
+      },
+      "definition": {
+        "eng": "value, worth; how much something is worth",
+        "rus": "ценность, стоимость; то, сколько что-то стоит",
+        "zh": "价值；某物值多少"
+      }
+    },
+    "bie2de": {
+      "term": "biéde",
+      "pos": {
+        "eng": "adjective",
+        "rus": "прилагательное",
+        "zh": "形容词"
+      },
+      "definition": {
+        "eng": "other, another, else (e.g. {{word:bie2de}} {{word:ren2}}, \"other people\")",
+        "rus": "другой, иной (например, {{word:bie2de}} {{word:ren2}}, «другие люди»)",
+        "zh": "别的，其他的（如 {{word:bie2de}} {{word:ren2}}，“别的人”）"
+      }
+    },
+    "zhong3": {
+      "term": "zhǒng",
+      "pos": {
+        "eng": "noun/measure word",
+        "rus": "существительное/счётное слово",
+        "zh": "名词/量词"
+      },
+      "definition": {
+        "eng": "kind, type, sort; after {{word:zhe4}} or {{word:na4}}, like {{word:ge4}} (e.g. {{word:zhe4}}-{{word:zhong3}} {{word:shui3guo3}}, \"this kind of fruit\")",
+        "rus": "вид, род, сорт; после {{word:zhe4}} или {{word:na4}}, как {{word:ge4}} (например, {{word:zhe4}}-{{word:zhong3}} {{word:shui3guo3}}, «этот вид фруктов»)",
+        "zh": "种，种类；像 {{word:ge4}} 一样用在 {{word:zhe4}}、{{word:na4}} 后（如 {{word:zhe4}}-{{word:zhong3}} {{word:shui3guo3}}，“这种水果”）"
+      }
+    },
+    "bu4fen": {
+      "term": "bùfen",
+      "pos": {
+        "eng": "noun",
+        "rus": "существительное",
+        "zh": "名词"
+      },
+      "definition": {
+        "eng": "part, portion (e.g. {{word:yi1}}-{{word:bu4fen}}, \"a part, some of it\")",
+        "rus": "часть, доля (например, {{word:yi1}}-{{word:bu4fen}}, «часть, некоторые»)",
+        "zh": "部分（如 {{word:yi1}}-{{word:bu4fen}}，“一部分”）"
+      }
+    },
+    "huo2": {
+      "term": "huó",
+      "pos": {
+        "eng": "verb/adjective",
+        "rus": "глагол/прилагательное",
+        "zh": "动词/形容词"
+      },
+      "definition": {
+        "eng": "to live, be alive; alive, living; life. The opposite of {{word:si3}}",
+        "rus": "жить, быть живым; живой; жизнь. Противоположность {{word:si3}}",
+        "zh": "活，生存；活的；生命。与 {{word:si3}} 相对"
+      }
     }
   },
   "categories": [
@@ -2202,7 +2370,16 @@
             "rus": "Абстрактные субстантивы",
             "zh": "抽象实体词"
           },
-          "wordIds": ["ci2", "li4liang4", "xing4", "sheng1yin1"]
+          "wordIds": ["ci2", "li4liang4", "xing4", "sheng1yin1", "jia4zhi2"]
+        },
+        {
+          "key": "kind-part",
+          "title": {
+            "eng": "Kind & Part",
+            "rus": "Вид и часть",
+            "zh": "种类与部分"
+          },
+          "wordIds": ["zhong3", "bu4fen"]
         }
       ]
     },
@@ -2230,7 +2407,7 @@
             "rus": "Тождество и различие",
             "zh": "相同与差异"
           },
-          "wordIds": ["bu4tong2", "yi1yang4"]
+          "wordIds": ["bu4tong2", "yi1yang4", "bie2de"]
         }
       ]
     },
@@ -2280,7 +2457,7 @@
             "rus": "Количество",
             "zh": "数量"
           },
-          "wordIds": ["duo1", "quan2bu4"]
+          "wordIds": ["duo1", "dou1", "shao3"]
         }
       ]
     },
@@ -2453,7 +2630,7 @@
             "rus": "Движение",
             "zh": "运动"
           },
-          "wordIds": ["lai2", "qu4", "dao4"]
+          "wordIds": ["lai2", "qu4", "dao4", "dong4"]
         },
         {
           "key": "state-change-general",
@@ -2462,7 +2639,7 @@
             "rus": "Изменение состояния и общее действие",
             "zh": "状态变化与一般动作"
           },
-          "wordIds": ["bian4", "nong4"]
+          "wordIds": ["bian4", "nong4", "fa1sheng1"]
         },
         {
           "key": "manipulation-contact",
@@ -2510,7 +2687,7 @@
         "rus": "Жизнь и смерть",
         "zh": "生与死"
       },
-      "wordIds": ["si3"]
+      "wordIds": ["si3", "huo2"]
     },
     {
       "key": "time",
@@ -2519,7 +2696,7 @@
         "rus": "Время",
         "zh": "时间"
       },
-      "wordIds": ["shi2jian1"]
+      "wordIds": ["shi2jian1", "xian4zai4", "yi1xia4"]
     },
     {
       "key": "space",
@@ -2552,7 +2729,9 @@
             "qian2",
             "shang4",
             "xia4",
-            "wai4"
+            "wai4",
+            "yuan3",
+            "jin4"
           ]
         }
       ]
@@ -2608,7 +2787,7 @@
             "rus": "Модальность",
             "zh": "情态"
           },
-          "wordIds": ["neng2", "hui4"]
+          "wordIds": ["neng2", "hui4", "ke3neng2"]
         },
         {
           "key": "truth-value",

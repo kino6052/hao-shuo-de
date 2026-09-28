@@ -18,17 +18,19 @@ const en: PartialByKey<LessonShape> = {
   vocabYuan: { en: ["round"] },
   vocabGunzi: { en: ["stick"] },
   vocabXian: { en: ["line, rope, thread"] },
+  vocabBiede: { en: ["other, else"] },
+  vocabZhong: { en: ["kind, type"] },
   proseThan: {
     en: [
-      "**To say one thing is more than another**, put {{word:bi3}} (than) between them, then the describing word.",
+      "**To say one thing is more than another**, put {{word:bi3}} (than) between them, then the adjective.",
       "",
-      "**A + {{word:bi3}} + B + describing word**",
+      "**A + {{word:bi3}} + B + adjective**",
       "",
       "Don't put {{word:hen3}} in these sentences: {{Word:wo3}} {{word:bi3}} {{word:ni3}} {{word:da4}}, not {{word:hen3}} {{word:da4}}.",
     ],
     tldr: {
       en: [
-        "A {{word:bi3}} B + describing word: {{Word:wo3}} {{word:bi3}} {{word:ni3}} {{word:da4}}, I'm bigger than you.",
+        "A {{word:bi3}} B + adjective: {{Word:wo3}} {{word:bi3}} {{word:ni3}} {{word:da4}}, I'm bigger than you.",
       ],
     },
     necessity: { en: ["Now you can compare two things."] },
@@ -38,6 +40,10 @@ const en: PartialByKey<LessonShape> = {
   exampleThan3: { en: ["This fruit is sweeter than that one."] },
   exampleThan4: { en: ["This box is rounder than that one."] },
   exampleThan5: { en: ["What is harder than a stick?"] },
+  exampleThan6: { en: ["I have less money than you."] },
+  exampleThan7: { en: ["The market is farther than home."] },
+  exampleThan8: { en: ["My home is nearer than yours."] },
+  exampleThan9: { en: ["People are worth more than money."] },
   proseSame: {
     en: [
       "**To say things are the same**, use {{word:yi1yang4}}.",
@@ -59,26 +65,55 @@ const en: PartialByKey<LessonShape> = {
       "**To say things are different**, use {{word:bu4tong2}}.",
       "",
       "**Things + {{word:bu4tong2}} / {{word:bu4tong2}}-{{word:de}} + noun**",
+      "",
+      "For another one, or something else, use {{word:bie2de}} (other): {{Word:wo3}} {{word:yao4}} {{word:bie2de}}, I want something else.",
     ],
     tldr: {
       en: [
-        "{{word:bu4tong2}} means different. {{word:bu4tong2}}-{{word:de}} {{word:yi1fu}} is different clothes.",
+        "{{word:bu4tong2}} means different. {{word:bie2de}} means other: {{word:bie2de}} {{word:ren2}}, other people.",
       ],
     },
-    necessity: { en: ["Now you can say two things don't match."] },
+    necessity: {
+      en: [
+        "Now you can say two things don't match, and ask for another.",
+      ],
+    },
   },
   exampleDifferent1: { en: ["They're different."] },
   exampleDifferent2: { en: ["I want different clothes."] },
   exampleDifferent3: { en: ["This place is very different."] },
+  exampleDifferent4: { en: ["I want something else."] },
+  exampleDifferent5: { en: ["Do you have other clothes?"] },
+  exampleDifferent6: { en: ["The other people are bigger than me."] },
+  proseKind: {
+    en: [
+      "**To say what kind**, use {{word:zhong3}} (kind). It goes after {{word:zhe4}} or {{word:na4}}, like {{word:ge4}}.",
+      "",
+      "**{{word:zhe4}}-{{word:zhong3}} / {{word:na4}}-{{word:zhong3}} + noun**",
+    ],
+    tldr: {
+      en: [
+        "{{word:zhe4}}-{{word:zhong3}} + noun means this kind of: {{word:zhe4}}-{{word:zhong3}} {{word:shui3guo3}}, this kind of fruit.",
+      ],
+    },
+    necessity: {
+      en: [
+        "Now you can talk about kinds of things, and compare them.",
+      ],
+    },
+  },
+  exampleKind1: { en: ["This kind of fruit is sweet."] },
+  exampleKind2: { en: ["This kind is better than that kind."] },
+  exampleKind3: { en: ["I want that kind of stick."] },
   proseShapeFeel: {
     en: [
-      "**To say how something looks or feels**, use describing words like {{word:ying4}} (hard) and {{word:yuan2}} (round).",
+      "**To say how something looks or feels**, use adjectives like {{word:ying4}} (hard) and {{word:yuan2}} (round).",
       "",
       "**Thing + {{word:hen3}} + {{word:ying4}} / {{word:yuan2}}**",
     ],
     tldr: {
       en: [
-        "{{word:ying4}} is hard, {{word:yuan2}} is round. They work like any describing word.",
+        "{{word:ying4}} is hard, {{word:yuan2}} is round. They work like any adjective.",
       ],
     },
     necessity: { en: ["Now you have more to compare."] },
@@ -93,7 +128,7 @@ const en: PartialByKey<LessonShape> = {
     items: [
       {
         en: [
-          "A {{word:bi3}} B + describing word: {{Word:wo3}} {{word:bi3}} {{word:ni3}} {{word:da4}}. (I'm bigger than you.) No {{word:hen3}} here.",
+          "A {{word:bi3}} B + adjective: {{Word:wo3}} {{word:bi3}} {{word:ni3}} {{word:da4}}. (I'm bigger than you.) No {{word:hen3}} here.",
         ],
       },
       {
@@ -106,6 +141,16 @@ const en: PartialByKey<LessonShape> = {
           "{{word:bu4tong2}}, different: {{Word:wo3}} {{word:yao4}} {{word:bu4tong2}}-{{word:de}} {{word:yi1fu}}. (I want different clothes.)",
         ],
       },
+      {
+        en: [
+          "{{word:bie2de}}, other: {{Word:wo3}} {{word:yao4}} {{word:bie2de}}. (I want something else.)",
+        ],
+      },
+      {
+        en: [
+          "{{word:zhe4}}-{{word:zhong3}} + noun, this kind of: {{word:zhe4}}-{{word:zhong3}} {{word:shui3guo3}} (this kind of fruit)",
+        ],
+      },
     ],
   },
   exercise1: { en: ["This stick is harder than that one."] },
@@ -115,6 +160,8 @@ const en: PartialByKey<LessonShape> = {
   exercise5: { en: ["The moon is round."] },
   exercise6: { en: ["Where is the rope?"] },
   exercise7: { en: ["Is the stick hard?"] },
+  exercise8: { en: ["I want something else."] },
+  exercise9: { en: ["This kind of fruit is sweet."] },
   answer1: {
     en: [
       "{{Word:zhe4}}-ge {{word:gun4zi}} {{word:bi3}} {{word:na4}}-ge {{word:ying4}}.",
@@ -136,6 +183,12 @@ const en: PartialByKey<LessonShape> = {
   answer5: { en: ["{{Word:yue4}} {{word:hen3}} {{word:yuan2}}."] },
   answer6: { en: ["{{Word:xian4}} {{word:zai4}} {{word:na3li3}}?"] },
   answer7: { en: ["{{Word:gun4zi}} {{word:ying4}} {{word:ma}}?"] },
+  answer8: { en: ["{{Word:wo3}} {{word:yao4}} {{word:bie2de}}."] },
+  answer9: {
+    en: [
+      "{{Word:zhe4}}-{{word:zhong3}} {{word:shui3guo3}} {{word:hen3}} {{word:tian2}}.",
+    ],
+  },
 };
 
 export default en;

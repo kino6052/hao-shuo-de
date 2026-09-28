@@ -11,6 +11,7 @@ const ru: PartialByKey<LessonShape> = {
   vocabDanshi: { ru: [] },
   vocabYan: { ru: [] },
   vocabSi: { ru: [] },
+  vocabHuo: { ru: [] },
   vocabHua: { ru: [] },
   proseBecause: { ru: [], tldr: { ru: [] }, necessity: { ru: [] } },
   exampleBecause1: { ru: [] },
@@ -19,6 +20,7 @@ const ru: PartialByKey<LessonShape> = {
   exampleBecause4: { ru: [] },
   exampleBecause5: { ru: [] },
   exampleBecause6: { ru: [] },
+  exampleBecause7: { ru: [] },
   proseBut: { ru: [], tldr: { ru: [] }, necessity: { ru: [] } },
   exampleBut1: { ru: [] },
   exampleBut2: { ru: [] },
@@ -27,6 +29,7 @@ const ru: PartialByKey<LessonShape> = {
   exampleBut5: { ru: [] },
   exampleBut6: { ru: [] },
   exampleBut7: { ru: [] },
+  exampleBut8: { ru: [] },
   proseIf: { ru: [], tldr: { ru: [] }, necessity: { ru: [] } },
   exampleIf1: { ru: [] },
   exampleIf2: { ru: [] },
@@ -35,6 +38,8 @@ const ru: PartialByKey<LessonShape> = {
   exampleIf5: { ru: [] },
   exampleIf6: { ru: [] },
   exampleIf7: { ru: [] },
+  exampleIf8: { ru: [] },
+  exampleIf9: { ru: [] },
   infoLinkingSentences: {
     title: { ru: [] },
     items: [{ ru: [] }, { ru: [] }, { ru: [] }],
@@ -45,12 +50,14 @@ const ru: PartialByKey<LessonShape> = {
   exercise4: { ru: [] },
   exercise5: { ru: [] },
   exercise6: { ru: [] },
+  exercise7: { ru: [] },
   answer1: { ru: [] },
   answer2: { ru: [] },
   answer3: { ru: [] },
   answer4: { ru: [] },
   answer5: { ru: [] },
   answer6: { ru: [] },
+  answer7: { ru: [] },
 };
 
 export default ru;

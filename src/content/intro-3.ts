@@ -70,7 +70,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Modifying Nouns** — describing things: big, small, good, and many.",
+            "**Modifying Nouns** — describing things: big, small, good, many, and few.",
           ],
           zh: [],
           ru: [],
@@ -114,7 +114,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Pre-Verbs** — words that go before a verb to say you want to, can, know how to, or love to.",
+            "**Pre-Verbs** — words that go before a verb to say you want to, can, know how to, love to, or might.",
           ],
           zh: [],
           ru: [],
@@ -123,7 +123,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Time 1 — When it happens** — saying that something happened, is happening right now, will happen, or has happened before, and placing a time up front in a sentence.",
+            "**Time 1 — When it happens** — saying that something happened, is happening right now, will happen, or has happened before, placing a time up front in a sentence, and asking what happened.",
           ],
           zh: [],
           ru: [],
@@ -132,7 +132,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Time 2 — Around an action** — \"when X\" with `X-de shíjiān`, finishing an action, what comes after it, starting, and staying.",
+            "**Time 2 — Around an action** — \"when X\" with `X-de shíjiān`, finishing an action, what comes after it, starting, staying, and doing something for a moment.",
           ],
           zh: [],
           ru: [],
@@ -150,7 +150,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Space 2 — Moving** — coming and going, where you come from, arriving, and direction words like up and down.",
+            "**Space 2 — Moving** — coming and going, where you come from, arriving, direction words like up and down, moving, and far and near.",
           ],
           zh: [],
           ru: [],
@@ -159,7 +159,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Modifiers 1 — How much** — words that say how much: very, really, and not very.",
+            "**Modifiers 1 — How much** — words that say how much: very, really, and not very, and what something is worth.",
           ],
           zh: [],
           ru: [],
@@ -168,7 +168,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Modifiers 2 — Comparing** — bigger than, the same, different.",
+            "**Modifiers 2 — Comparing** — bigger than, the same, different, other, and kinds of things.",
           ],
           zh: [],
           ru: [],
@@ -176,7 +176,7 @@ const content: Entry[] = [
       },
       {
         text: {
-          en: ["**Modifiers 3 — Also and all** — also, and all of them."],
+          en: ["**Modifiers 3 — Also and all** — also, all of them, everything, and part of it."],
           zh: [],
           ru: [],
         },

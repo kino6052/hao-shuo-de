@@ -72,7 +72,7 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "**A hyphen joins words into one**. A hyphen glues a small word onto another word, so the two work as one word. Sometimes that gives the word a new job, like turning a verb into a describing word."
+            "**A hyphen joins words into one**. A hyphen glues a small word onto another word, so the two work as one word. Sometimes that gives the word a new job, like turning a verb into a describing word (an adjective)."
           ],
           "ru": [],
           "zh": []
@@ -203,7 +203,7 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "NOUN + {{word:hen3}} + describing word: {{Word:shui3}} {{word:hen3}} {{word:hao3}}. (The water is good.)"
+            "NOUN + {{word:hen3}} + adjective: {{Word:shui3}} {{word:hen3}} {{word:hao3}}. (The water is good.)"
           ],
           "ru": [],
           "zh": []
@@ -212,7 +212,7 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "describing word + -{{word:de}} + NOUN: {{word:da4}}-{{word:de}} {{word:di4fang1}} (a big place)"
+            "adjective + -{{word:de}} + NOUN: {{word:da4}}-{{word:de}} {{word:di4fang1}} (a big place)"
           ],
           "ru": [],
           "zh": []
@@ -222,6 +222,15 @@ const content: Entry[] = [
         "text": {
           "en": [
             "{{word:hen3}}-{{word:duo1}}-{{word:de}} + NOUN: {{word:hen3}}-{{word:duo1}}-{{word:de}} {{word:ren2}} (many people)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "NOUN + {{word:hen3}} {{word:shao3}}: {{Word:ren2}} {{word:hen3}} {{word:shao3}}. (There are very few people.)"
           ],
           "ru": [],
           "zh": []
@@ -403,6 +412,15 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
+            "{{word:ke3neng2}} + verb, maybe: {{Word:ta1}} {{word:ke3neng2}} {{word:zhi1dao4}}. (He might know.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
             "For \"not\", put {{word:bu4}} first: {{Word:ta1}} {{word:bu4}} {{word:neng2}} {{word:chi1}}. (He can't eat.)"
           ],
           "ru": [],
@@ -462,7 +480,16 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "Time first: {{Word:yue4}}-{{word:de}} {{word:shi2jian1}}, {{word:wo3}} {{word:shui4jiao4}}. (At night, I sleep.)"
+            "Time first: {{Word:yue4}}-{{word:de}} {{word:shi2jian1}}, {{word:wo3}} {{word:shui4jiao4}}. (At night, I sleep.) {{Word:xian4zai4}}, … (Now, …)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{Word:fa1sheng1}} {{word:le}} {{word:shen2me}}? (What happened?)"
           ],
           "ru": [],
           "zh": []
@@ -513,6 +540,15 @@ const content: Entry[] = [
         "text": {
           "en": [
             "{{word:kai1shi3}} + verb, start: {{Word:wo3}} {{word:kai1shi3}} {{word:wan2r}} {{word:le}}. (I started to play.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "verb + {{word:yi1xia4}}, for a moment: {{Word:deng3}} {{word:yi1xia4}}! (Wait a moment!)"
           ],
           "ru": [],
           "zh": []
@@ -617,6 +653,24 @@ const content: Entry[] = [
           "ru": [],
           "zh": []
         }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:dong4}}, move: {{Word:bu4}} {{word:yao4}} {{word:dong4}}! (Don't move!)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:yuan3}} / {{word:jin4}}, far / near: {{Word:shi4chang3}} {{word:hen3}} {{word:yuan3}}. (The market is far.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
       }
     ],
     "title": {
@@ -635,7 +689,7 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:hen3}} + describing word, very: {{Word:shui3}} {{word:hen3}} {{word:re4}}. (The water is very hot.)"
+            "{{word:hen3}} + adjective, very: {{Word:shui3}} {{word:hen3}} {{word:re4}}. (The water is very hot.)"
           ],
           "ru": [],
           "zh": []
@@ -644,7 +698,7 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:zhen1}} + describing word, really: {{Word:zhen1}} {{word:re4}}! (It's really hot!)"
+            "{{word:zhen1}} + adjective, really: {{Word:zhen1}} {{word:re4}}! (It's really hot!)"
           ],
           "ru": [],
           "zh": []
@@ -653,7 +707,7 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:bu4}} / {{word:bu4}} {{word:hen3}} + describing word, not / not very: {{Word:shui3}} {{word:bu4}} {{word:leng3}}. (The water isn't cold.)"
+            "{{word:bu4}} / {{word:bu4}} {{word:hen3}} + adjective, not / not very: {{Word:shui3}} {{word:bu4}} {{word:leng3}}. (The water isn't cold.)"
           ],
           "ru": [],
           "zh": []
@@ -662,7 +716,16 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "describing word + {{word:ma}}?, asking: {{Word:ni3}} {{word:leng3}} {{word:ma}}? (Are you cold?)"
+            "adjective + {{word:ma}}?, asking: {{Word:ni3}} {{word:leng3}} {{word:ma}}? (Are you cold?)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:hen3}} {{word:you3}} {{word:jia4zhi2}}, valuable: {{Word:zhe4}}-ge {{word:gong1ju4}} {{word:hen3}} {{word:you3}} {{word:jia4zhi2}}. (This tool is very valuable.)"
           ],
           "ru": [],
           "zh": []
@@ -685,7 +748,7 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "A {{word:bi3}} B + describing word: {{Word:wo3}} {{word:bi3}} {{word:ni3}} {{word:da4}}. (I'm bigger than you.) No {{word:hen3}} here."
+            "A {{word:bi3}} B + adjective: {{Word:wo3}} {{word:bi3}} {{word:ni3}} {{word:da4}}. (I'm bigger than you.) No {{word:hen3}} here."
           ],
           "ru": [],
           "zh": []
@@ -704,6 +767,24 @@ const content: Entry[] = [
         "text": {
           "en": [
             "{{word:bu4tong2}}, different: {{Word:wo3}} {{word:yao4}} {{word:bu4tong2}}-{{word:de}} {{word:yi1fu}}. (I want different clothes.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:bie2de}}, other: {{Word:wo3}} {{word:yao4}} {{word:bie2de}}. (I want something else.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:zhe4}}-{{word:zhong3}} + noun, this kind of: {{word:zhe4}}-{{word:zhong3}} {{word:shui3guo3}} (this kind of fruit)"
           ],
           "ru": [],
           "zh": []
@@ -735,7 +816,7 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:ye3}} {{word:hen3}} + describing word: {{Word:ta1}} {{word:ye3}} {{word:hen3}} {{word:leng3}}. (She's cold too.)"
+            "{{word:ye3}} {{word:hen3}} + adjective: {{Word:ta1}} {{word:ye3}} {{word:hen3}} {{word:leng3}}. (She's cold too.)"
           ],
           "ru": [],
           "zh": []
@@ -744,7 +825,25 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:quan2bu4}}, all: {{Word:wo3}} {{word:yao4}} {{word:quan2bu4}}. (I want all of it.) {{word:quan2bu4}}-{{word:de}} + noun means all the …"
+            "{{word:dou1}} + verb, all: {{Word:wo3}}-{{word:men}} {{word:dou1}} {{word:chi1}}. (We all eat.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:shen2me}}-{{word:dou1}} + verb, everything: {{Word:wo3}} {{word:shen2me}}-{{word:dou1}} {{word:chi1}}. (I eat everything.) With {{word:bu4}}: nothing. {{word:na3li3}}-{{word:dou1}}: everywhere."
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:bu4fen}}, part: {{Word:zhe4}} {{word:bu4fen}} {{word:hen3}} {{word:hao3}}. (This part is good.) {{word:da4}} {{word:bu4fen}}: most."
           ],
           "ru": [],
           "zh": []
@@ -767,7 +866,7 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "describing word + {{word:le}}, it changed: {{Word:shui3}} {{word:re4}} {{word:le}}. (The water got hot.)"
+            "adjective + {{word:le}}, it changed: {{Word:shui3}} {{word:re4}} {{word:le}}. (The water got hot.)"
           ],
           "ru": [],
           "zh": []
@@ -776,7 +875,7 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:bian4}} + describing word + {{word:le}}, became: {{Word:shui3}} {{word:bian4}} {{word:leng3}} {{word:le}}. (The water turned cold.)"
+            "{{word:bian4}} + adjective + {{word:le}}, became: {{Word:shui3}} {{word:bian4}} {{word:leng3}} {{word:le}}. (The water turned cold.)"
           ],
           "ru": [],
           "zh": []
@@ -935,7 +1034,7 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "verb-{{word:de}} + describing word, how: {{Word:ta1}} {{word:shuo1}}-{{word:de}} {{word:hao3}}. (She speaks well.)"
+            "verb-{{word:de}} + adjective, how: {{Word:ta1}} {{word:shuo1}}-{{word:de}} {{word:hao3}}. (She speaks well.)"
           ],
           "ru": [],
           "zh": []
@@ -944,7 +1043,7 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "describing word-{{word:de}} + noun: {{word:hao3}}-{{word:de}} {{word:ren2}} (a good person). Whose: {{word:wo3}}-{{word:de}} {{word:bi2zi}} (my nose)."
+            "adjective-{{word:de}} + noun: {{word:hao3}}-{{word:de}} {{word:ren2}} (a good person). Whose: {{word:wo3}}-{{word:de}} {{word:bi2zi}} (my nose)."
           ],
           "ru": [],
           "zh": []
@@ -1012,7 +1111,7 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "A {{word:dui4}} B + describing word, toward / for: {{Word:ta1}} {{word:dui4}} {{word:wo3}} {{word:hen3}} {{word:hao3}}. (He's good to me.)"
+            "A {{word:dui4}} B + adjective, toward / for: {{Word:ta1}} {{word:dui4}} {{word:wo3}} {{word:hen3}} {{word:hao3}}. (He's good to me.)"
           ],
           "ru": [],
           "zh": []
@@ -1103,7 +1202,7 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:jue2de}} + describing word, feel: {{Word:wo3}} {{word:jue2de}} {{word:leng3}}. (I feel cold.)"
+            "{{word:jue2de}} + adjective, feel: {{Word:wo3}} {{word:jue2de}} {{word:leng3}}. (I feel cold.)"
           ],
           "ru": [],
           "zh": []

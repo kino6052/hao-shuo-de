@@ -27,9 +27,9 @@ const en: PartialByKey<LessonShape> = {
   vocabJiao: { en: ["foot"] },
   prosePointersAreNouns: {
     en: [
-      'We often point at people and things. In English we use words like "this", "that", "I", and "you". We call them pointers.',
+      'We often point at people and things. In English we use words like "this", "that", "I", and "you". We call them pointers (pronouns).',
       '<audio-example zh="这">{{word:zhe4}}</audio-example> means "this" and <audio-example zh="那">{{word:na4}}</audio-example> means "that".',
-      "A pointer works just like a noun. It can even be a whole sentence by itself.",
+      "A pronoun works just like a noun. It can even be a whole sentence by itself.",
     ],
     necessity: { en: ["Now you can point at things."] },
     tldr: {
@@ -42,13 +42,13 @@ const en: PartialByKey<LessonShape> = {
   pointersExample02: { en: ["That."] },
   proseMandarinMeasureWords: {
     en: [
-      "In full Chinese, you can't put a number or a pointer right before a noun. A small counting word goes in between.",
-      "Full Chinese has dozens of these counting words, one for each kind of thing: flat things, long things, animals, and so on.",
+      "In full Chinese, you can't put a number or a pronoun right before a noun. A small counting word (measure word) goes in between.",
+      "Full Chinese has dozens of these measure words, one for each kind of thing: flat things, long things, animals, and so on.",
       "Learners spend years getting them right.",
     ],
     tldr: {
       en: [
-        "Full Chinese uses a different counting word for each kind of thing.",
+        "Full Chinese uses a different measure word for each kind of thing.",
       ],
     },
     necessity: {
@@ -59,13 +59,13 @@ const en: PartialByKey<LessonShape> = {
     en: [
       "Hao-shuo-de keeps only one of them: `{{word:ge4}}`.",
       "It works for everything: a person, an animal, a tool, a fruit, or an idea.",
-      'Put it after a pointer: `{{word:zhe4}}-ge` means "this one", and `{{word:na4}}-ge` means "that one".',
+      'Put it after a pronoun: `{{word:zhe4}}-ge` means "this one", and `{{word:na4}}-ge` means "that one".',
       'Add a noun to say which thing: `{{word:zhe4}}-ge {{word:shui3guo3}}` means "this fruit".',
     ],
     tldr: {
       en: ["Hao-shuo-de uses {{word:ge4}} for everything."],
     },
-    necessity: { en: ["You only need to learn one counting word."] },
+    necessity: { en: ["You only need to learn one measure word."] },
   },
   infoUniversalClassifier: {
     title: { en: ["One Counting Word for Everything"] },
@@ -101,7 +101,7 @@ const en: PartialByKey<LessonShape> = {
   prosePluralPointers: {
     en: [
       'To point at more than one person, add {{word:men}}: {{word:wo3}}-{{word:men}} ("we, us"), {{word:ni3}}-{{word:men}} ("you all"), {{word:ta1}}-{{word:men}} ("they, them").',
-      "{{word:men}} only goes after pointers and other words for people. It doesn't go after other nouns.",
+      "{{word:men}} only goes after pronouns and other words for people. It doesn't go after other nouns.",
     ],
     tldr: {
       en: [
@@ -116,7 +116,7 @@ const en: PartialByKey<LessonShape> = {
   prosePossessionDe: {
     en: [
       'To say whose something is, add <code>-{{word:de}}</code> (from Lesson 3): <audio-example zh="我的">{{word:wo3}}-{{word:de}}</audio-example> ("my"), <audio-example zh="你的">{{word:ni3}}-{{word:de}}</audio-example> ("your").',
-      "It's the same <code>-{{word:de}}</code> that joins a describing word to a noun.",
+      "It's the same <code>-{{word:de}}</code> that joins an adjective to a noun.",
     ],
     tldr: {
       en: [

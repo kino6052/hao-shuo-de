@@ -76,6 +76,8 @@ const en: PartialByKey<LessonShape> = {
   exampleCount17: { en: ["Four people come from the market."] },
   exampleCount18: { en: ["I have five very sweet pieces of fruit."] },
   exampleCount19: { en: ["Three people got up."] },
+  exampleCount20: { en: ["I have three kinds of fruit."] },
+  exampleCount21: { en: ["Some of the people went."] },
   proseTeens: {
     en: [
       "**To say numbers above ten**, put {{word:shi2}} (ten) before or after the other number.",

@@ -22,6 +22,7 @@ const zh: PartialByKey<LessonShape> = {
   exampleWhere2: { zh: [] },
   exampleWhere3: { zh: [] },
   exampleWhere4: { zh: [] },
+  exampleWhere5: { zh: [] },
   proseWhereQuestion: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
   exampleWhereQuestion1: { zh: [] },
   exampleWhereQuestion2: { zh: [] },

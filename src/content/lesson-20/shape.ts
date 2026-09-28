@@ -3,7 +3,7 @@
 // LessonShape is this lesson's exact, hand-written type -- see lesson-01's
 // shape.ts for the full explanation of the pattern.
 //
-// Rewritten in Phase 2 (BOOK_PLAN.md): because (yīnwèi), but (dànshì), and if (X-de huà), with yán and sǐ.
+// Rewritten in Phase 2 (BOOK_PLAN.md): because (yīnwèi), but (dànshì), and if (X-de huà), with yán, sǐ, and huó.
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- lesson-20).
 import type {
@@ -30,6 +30,8 @@ export type LessonShape = {
   vocabYan: TVocab;
   /** Vocabulary: "die; dead". */
   vocabSi: TVocab;
+  /** Vocabulary: "live; alive". */
+  vocabHuo: TVocab;
   /** Vocabulary: "X-de huà: "if X"". */
   vocabHua: TVocab;
   /** Say: To say why, put yīnwèi (because) before the reason. Pattern: yīnwèi + reason, result */
@@ -46,6 +48,8 @@ export type LessonShape = {
   exampleBecause5: TExample;
   /** Example: yīnwèi tā mō le ní, tā-de shǒu shì hēisè-de. */
   exampleBecause6: TExample;
+  /** Example: yīnwèi yǒu kōngqì, wǒ-men néng huó. */
+  exampleBecause7: TExample;
   /** Say: To say but, put dànshì at the start of the second part. Pattern: sentence, dànshì + sentence */
   proseBut: TProse;
   /** Example: zhè-ge hěn hǎo, dànshì méi-yǒu yán. */
@@ -62,6 +66,8 @@ export type LessonShape = {
   exampleBut6: TExample;
   /** Example: wǒ yǒu jiǔ-ge, dànshì tā yǒu èr-shí-ge. */
   exampleBut7: TExample;
+  /** Example: zhíwù hěn xiǎo, dànshì huó le. */
+  exampleBut8: TExample;
   /** Say: To say "if", put -de huà after the if-part, then a comma. Pattern: X-de huà, the rest */
   proseIf: TProse;
   /** Example: nǐ lái-de huà, wǒ děng nǐ. */
@@ -78,7 +84,11 @@ export type LessonShape = {
   exampleIf6: TExample;
   /** Example: nǐ yào-de huà, chī mǐfàn huòzhě shuǐguǒ. */
   exampleIf7: TExample;
-  /** Grammar box: yīnwèi, dànshì, X-de huà. */
+  /** Example: yǒu shuǐ-de huà, zhíwù néng huó. */
+  exampleIf8: TExample;
+  /** Example: shìchǎng yuǎn-de huà, wǒ bù qù. */
+  exampleIf9: TExample;
+  /** Grammar box: yīnwèi, dànshì, X-de huà (with huó). */
   infoLinkingSentences: TInfo;
   /** Exercise 1: Because I'm cold, I want clothes. */
   exercise1: TExercise;
@@ -92,6 +102,8 @@ export type LessonShape = {
   exercise5: TExercise;
   /** Exercise 6: If you're cold, come inside. */
   exercise6: TExercise;
+  /** Exercise 7: If there's air, we can live. */
+  exercise7: TExercise;
   /** Answer 1: yīnwèi wǒ hěn lěng, wǒ yào yīfu. */
   answer1: TAnswer;
   /** Answer 2: wǒ yào chī, dànshì wǒ méi-yǒu jīn. */
@@ -104,6 +116,8 @@ export type LessonShape = {
   answer5: TAnswer;
   /** Answer 6: nǐ lěng-de huà, lái lǐ-miàn. */
   answer6: TAnswer;
+  /** Answer 7: yǒu kōngqì-de huà, wǒ-men néng huó. */
+  answer7: TAnswer;
 };
 
 const shape: LessonShape = {
@@ -121,6 +135,7 @@ const shape: LessonShape = {
   },
   vocabYan: { type: "vocab", term: "{{word:yan2}}", ttsText: "盐" },
   vocabSi: { type: "vocab", term: "{{word:si3}}", ttsText: "死" },
+  vocabHuo: { type: "vocab", term: "{{word:huo2}}", ttsText: "活" },
   vocabHua: { type: "vocab", term: "{{word:hua4}}", ttsText: "话" },
   proseBecause: { type: "prose" },
   exampleBecause1: {
@@ -152,6 +167,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:yin1wei4}} {{word:ta1}} {{word:mo1}} {{word:le}} {{word:ni2}}, {{word:ta1}}-{{word:de}} {{word:shou3}} {{word:shi4}} {{word:hei1se4}}-{{word:de}}.",
     ttsText: "因为他摸了泥，他的手是黑色的。",
+  },
+  exampleBecause7: {
+    type: "example",
+    pinyin: "{{Word:yin1wei4}} {{word:you3}} {{word:kong1qi4}}, {{word:wo3}}-{{word:men}} {{word:neng2}} {{word:huo2}}.",
+    ttsText: "因为有空气，我们能活。",
   },
   proseBut: { type: "prose" },
   exampleBut1: {
@@ -189,6 +209,11 @@ const shape: LessonShape = {
     pinyin: "{{Word:wo3}} {{word:you3}} {{word:jiu3}}-ge, {{word:dan4shi4}} {{word:ta1}} {{word:you3}} {{word:er4}}-{{word:shi2}}-ge.",
     ttsText: "我有九个，但是他有二十个。",
   },
+  exampleBut8: {
+    type: "example",
+    pinyin: "{{Word:zhi2wu4}} {{word:hen3}} {{word:xiao3}}, {{word:dan4shi4}} {{word:huo2}} {{word:le}}.",
+    ttsText: "植物很小，但是活了。",
+  },
   proseIf: { type: "prose" },
   exampleIf1: {
     type: "example",
@@ -225,6 +250,16 @@ const shape: LessonShape = {
     pinyin: "{{Word:ni3}} {{word:yao4}}-{{word:de}} {{word:hua4}}, {{word:chi1}} {{word:mi3fan4}} {{word:huo4zhe3}} {{word:shui3guo3}}.",
     ttsText: "你要的话，吃米饭或者水果。",
   },
+  exampleIf8: {
+    type: "example",
+    pinyin: "{{Word:you3}} {{word:shui3}}-{{word:de}} {{word:hua4}}, {{word:zhi2wu4}} {{word:neng2}} {{word:huo2}}.",
+    ttsText: "有水的话，植物能活。",
+  },
+  exampleIf9: {
+    type: "example",
+    pinyin: "{{Word:shi4chang3}} {{word:yuan3}}-{{word:de}} {{word:hua4}}, {{word:wo3}} {{word:bu4}} {{word:qu4}}.",
+    ttsText: "市场远的话，我不去。",
+  },
   infoLinkingSentences: {
     type: "info",
     subtype: "grammar",
@@ -237,12 +272,14 @@ const shape: LessonShape = {
   exercise4: { type: "exercise" },
   exercise5: { type: "exercise" },
   exercise6: { type: "exercise" },
+  exercise7: { type: "exercise" },
   answer1: { type: "answer", ttsText: "因为我很冷，我要衣服。" },
   answer2: { type: "answer", ttsText: "我要吃，但是我没有金。" },
   answer3: { type: "answer", ttsText: "你要的话，我给你。" },
   answer4: { type: "answer", ttsText: "植物死了。" },
   answer5: { type: "answer", ttsText: "我要盐。" },
   answer6: { type: "answer", ttsText: "你冷的话，来里面。" },
+  answer7: { type: "answer", ttsText: "有空气的话，我们能活。" },
 };
 
 export default shape;

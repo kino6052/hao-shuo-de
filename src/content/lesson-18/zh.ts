@@ -41,6 +41,7 @@ const zh: PartialByKey<LessonShape> = {
   exampleName10: { zh: [] },
   exampleName11: { zh: [] },
   exampleName12: { zh: [] },
+  exampleName13: { zh: [] },
   infoJobsOfDe: {
     title: { zh: [] },
     items: [

@@ -12,8 +12,9 @@ const en: PartialByKey<LessonShape> = {
     ],
   },
   vocabHen: { en: ["very"] },
-  vocabDe: { en: ["joins a describing word to a noun"] },
+  vocabDe: { en: ["joins an adjective to a noun"] },
   vocabDuo: { en: ["many, much"] },
+  vocabShao: { en: ["few, little"] },
   vocabHao: { en: ["good"] },
   vocabDa: { en: ["big"] },
   vocabXiao: { en: ["small"] },
@@ -22,15 +23,15 @@ const en: PartialByKey<LessonShape> = {
   vocabFumu: { en: ["parents"] },
   proseLike: {
     en: [
-      "**To say what something is like**, put {{word:hen3}} before the describing word.",
+      "**To say what something is like**, put {{word:hen3}} before the adjective (a describing word, like {{word:da4}} or {{word:hao3}}).",
       "",
-      "**NOUN + {{word:hen3}} + describing word**",
+      "**NOUN + {{word:hen3}} + adjective**",
       "",
       '{{word:shi4}} (Lesson 2) says what something is. {{word:hen3}} says what it is like. {{word:hen3}} also means "very".',
     ],
     tldr: {
       en: [
-        "To say what something is like, put {{word:hen3}} before the describing word.",
+        "To say what something is like, put {{word:hen3}} before the adjective.",
       ],
     },
     necessity: {
@@ -46,15 +47,15 @@ const en: PartialByKey<LessonShape> = {
   exampleLike5: { en: ["The fruit is big."] },
   proseBefore: {
     en: [
-      "**To put a describing word before a noun**, join them with -{{word:de}}.",
+      "**To put an adjective before a noun**, join them with -{{word:de}}.",
       "",
-      "**describing word-{{word:de}} + NOUN**",
+      "**adjective-{{word:de}} + NOUN**",
       "",
       "Don't leave out -{{word:de}}: {{word:hen3}}-{{word:xiao3}} {{word:di4fang1}} sounds wrong.",
     ],
     tldr: {
       en: [
-        "To put a describing word before a noun, join them with {{word:de}}.",
+        "To put an adjective before a noun, join them with {{word:de}}.",
       ],
     },
     necessity: {
@@ -75,33 +76,44 @@ const en: PartialByKey<LessonShape> = {
       "**{{word:hen3}}-{{word:duo1}}-{{word:de}} + NOUN**",
       "",
       "After a noun, {{word:hen3}} {{word:duo1}} means there is a lot: {{Word:shui3}} {{word:hen3}} {{word:duo1}}.",
+      "{{word:shao3}} (few, little) is the opposite: {{Word:shui3}} {{word:hen3}} {{word:shao3}}, there is very little water.",
     ],
     tldr: {
       en: [
-        "{{word:hen3}}-{{word:duo1}}-{{word:de}} + noun means many.",
+        "{{word:hen3}}-{{word:duo1}}-{{word:de}} + noun means many. {{word:hen3}} {{word:shao3}} means very few.",
       ],
     },
-    necessity: { en: ["Now you can talk about more than one."] },
+    necessity: {
+      en: ["Now you can say how many: a lot, or very few."],
+    },
   },
   exampleMany1: { en: ["Many people."] },
   exampleMany2: { en: ["A lot of fruit."] },
   exampleMany3: { en: ["There is a lot of water."] },
+  exampleMany4: { en: ["There is very little water."] },
+  exampleMany5: { en: ["There are very few people."] },
+  exampleMany6: { en: ["There's very little fruit."] },
   infoDescribing: {
     title: { en: ["Describing a Noun"] },
     items: [
       {
         en: [
-          "NOUN + {{word:hen3}} + describing word: {{Word:shui3}} {{word:hen3}} {{word:hao3}}. (The water is good.)",
+          "NOUN + {{word:hen3}} + adjective: {{Word:shui3}} {{word:hen3}} {{word:hao3}}. (The water is good.)",
         ],
       },
       {
         en: [
-          "describing word + -{{word:de}} + NOUN: {{word:da4}}-{{word:de}} {{word:di4fang1}} (a big place)",
+          "adjective + -{{word:de}} + NOUN: {{word:da4}}-{{word:de}} {{word:di4fang1}} (a big place)",
         ],
       },
       {
         en: [
           "{{word:hen3}}-{{word:duo1}}-{{word:de}} + NOUN: {{word:hen3}}-{{word:duo1}}-{{word:de}} {{word:ren2}} (many people)",
+        ],
+      },
+      {
+        en: [
+          "NOUN + {{word:hen3}} {{word:shao3}}: {{Word:ren2}} {{word:hen3}} {{word:shao3}}. (There are very few people.)",
         ],
       },
     ],
@@ -113,6 +125,7 @@ const en: PartialByKey<LessonShape> = {
   exercise5: { en: ["many people"] },
   exercise6: { en: ["The animal is small."] },
   exercise7: { en: ["There is a lot of fruit."] },
+  exercise8: { en: ["There are very few people."] },
   answer1: {
     en: ["{{Word:di4fang1}} {{word:hen3}} {{word:xiao3}}."],
   },
@@ -130,6 +143,7 @@ const en: PartialByKey<LessonShape> = {
   answer7: {
     en: ["{{Word:shui3guo3}} {{word:hen3}} {{word:duo1}}."],
   },
+  answer8: { en: ["{{Word:ren2}} {{word:hen3}} {{word:shao3}}."] },
 };
 
 export default en;

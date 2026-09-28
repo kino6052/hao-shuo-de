@@ -3,7 +3,7 @@
 // LessonShape is this lesson's exact, hand-written type -- see lesson-01's
 // shape.ts for the full explanation of the pattern.
 //
-// Rewritten in Phase 2 (BOOK_PLAN.md): it changed (describing word + le), became (biàn), making it so (nòng), putting the thing first (bǎ), and strong (yǒu lìliàng).
+// Rewritten in Phase 2 (BOOK_PLAN.md): it changed (adjective + le), became (biàn), making it so (nòng), putting the thing first (bǎ), and strong (yǒu lìliàng).
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- lesson-15).
 import type {
@@ -36,7 +36,7 @@ export type LessonShape = {
   vocabHuai: TVocab;
   /** Vocabulary: "mud, paste". */
   vocabNi: TVocab;
-  /** Say: To say something changed, put le after the describing word. Pattern: Thing + describing word + le */
+  /** Say: To say something changed, put le after the adjective. Pattern: Thing + adjective + le */
   proseChanged: TProse;
   /** Example: shuǐ rè le. */
   exampleChanged1: TExample;
@@ -46,7 +46,7 @@ export type LessonShape = {
   exampleChanged3: TExample;
   /** Example: gōngjù huài le. */
   exampleChanged4: TExample;
-  /** Say: To say something became different, put biàn (become) before the describing word, and le after. Pattern: Thing + biàn + describing word + le */
+  /** Say: To say something became different, put biàn (become) before the adjective, and le after. Pattern: Thing + biàn + adjective + le */
   proseBecame: TProse;
   /** Example: shuǐ biàn lěng le. */
   exampleBecame1: TExample;
@@ -80,7 +80,7 @@ export type LessonShape = {
   exampleBa3: TExample;
   /** Example: tā bǎ kǒu nòng dà le. */
   exampleBa4: TExample;
-  /** Example: tā bǎ quánbù-de shuǐ nòng rè le. */
+  /** Example: tā bǎ shuǐ dōu nòng rè le. */
   exampleBa5: TExample;
   /** Say: To say strong, say yǒu lìliàng, "have strength". Pattern: Who + hěn yǒu lìliàng */
   proseStrong: TProse;
@@ -92,7 +92,7 @@ export type LessonShape = {
   exampleStrong3: TExample;
   /** Example: tā-de shēntǐ hěn yǒu lìliàng. */
   exampleStrong4: TExample;
-  /** Grammar box: describing word + le, biàn, nòng + result, bǎ + thing, yǒu lìliàng. */
+  /** Grammar box: adjective + le, biàn, nòng + result, bǎ + thing, yǒu lìliàng. */
   infoBecomingAndMaking: TInfo;
   /** Exercise 1: The rice got cold. */
   exercise1: TExercise;
@@ -234,8 +234,8 @@ const shape: LessonShape = {
   },
   exampleBa5: {
     type: "example",
-    pinyin: "{{Word:ta1}} {{word:ba3}} {{word:quan2bu4}}-{{word:de}} {{word:shui3}} {{word:nong4}} {{word:re4}} {{word:le}}.",
-    ttsText: "他把全部的水弄热了。",
+    pinyin: "{{Word:ta1}} {{word:ba3}} {{word:shui3}} {{word:dou1}} {{word:nong4}} {{word:re4}} {{word:le}}.",
+    ttsText: "他把水都弄热了。",
   },
   proseStrong: { type: "prose" },
   exampleStrong1: {

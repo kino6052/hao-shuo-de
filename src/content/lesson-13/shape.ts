@@ -3,7 +3,7 @@
 // LessonShape is this lesson's exact, hand-written type -- see lesson-01's
 // shape.ts for the full explanation of the pattern.
 //
-// Rewritten in Phase 2 (BOOK_PLAN.md): A bǐ B + describing word (bigger than), yīyàng (the same), and bùtóng (different).
+// Rewritten in Phase 2 (BOOK_PLAN.md): A bǐ B + adjective (bigger than), yīyàng (the same), bùtóng (different), biéde (other), and zhǒng (kind).
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- lesson-13).
 import type {
@@ -36,7 +36,11 @@ export type LessonShape = {
   vocabGunzi: TVocab;
   /** Vocabulary: "line, rope, thread". */
   vocabXian: TVocab;
-  /** Say: To say one thing is more than another, put bǐ (than) between them, then the describing word. Pattern: A + bǐ + B + describing word */
+  /** Vocabulary: "other, else". */
+  vocabBiede: TVocab;
+  /** Vocabulary: "kind, type". */
+  vocabZhong: TVocab;
+  /** Say: To say one thing is more than another, put bǐ (than) between them, then the adjective. Pattern: A + bǐ + B + adjective */
   proseThan: TProse;
   /** Example: wǒ bǐ nǐ dà. */
   exampleThan1: TExample;
@@ -48,6 +52,14 @@ export type LessonShape = {
   exampleThan4: TExample;
   /** Example: shénme bǐ gùnzi yìng? */
   exampleThan5: TExample;
+  /** Example: wǒ-de jīn bǐ nǐ-de shǎo. */
+  exampleThan6: TExample;
+  /** Example: shìchǎng bǐ jiā yuǎn. */
+  exampleThan7: TExample;
+  /** Example: wǒ-de jiā bǐ nǐ-de jìn. */
+  exampleThan8: TExample;
+  /** Example: rén bǐ jīn yǒu jiàzhí. */
+  exampleThan9: TExample;
   /** Say: To say things are the same, use yīyàng. Pattern: Things + yīyàng / yīyàng-de + noun */
   proseSame: TProse;
   /** Example: tā-men yīyàng. */
@@ -64,7 +76,21 @@ export type LessonShape = {
   exampleDifferent2: TExample;
   /** Example: zhè-ge dìfāng hěn bùtóng. */
   exampleDifferent3: TExample;
-  /** Say: To say how something looks or feels, use describing words like yìng (hard) and yuán (round). Pattern: Thing + hěn + yìng / yuán */
+  /** Example: wǒ yào biéde. */
+  exampleDifferent4: TExample;
+  /** Example: nǐ yǒu biéde yīfu ma? */
+  exampleDifferent5: TExample;
+  /** Example: biéde rén bǐ wǒ dà. */
+  exampleDifferent6: TExample;
+  /** Say: To say what kind, use zhǒng (kind). It goes after zhè or nà, like gè. Pattern: zhè-zhǒng / nà-zhǒng + noun */
+  proseKind: TProse;
+  /** Example: zhè-zhǒng shuǐguǒ hěn tián. */
+  exampleKind1: TExample;
+  /** Example: zhè-zhǒng bǐ nà-zhǒng hǎo. */
+  exampleKind2: TExample;
+  /** Example: wǒ yào nà-zhǒng gùnzi. */
+  exampleKind3: TExample;
+  /** Say: To say how something looks or feels, use adjectives like yìng (hard) and yuán (round). Pattern: Thing + hěn + yìng / yuán */
   proseShapeFeel: TProse;
   /** Example: gùnzi hěn yìng. */
   exampleShapeFeel1: TExample;
@@ -76,7 +102,7 @@ export type LessonShape = {
   exampleShapeFeel4: TExample;
   /** Example: zhè-ge kǒu hěn yuán. */
   exampleShapeFeel5: TExample;
-  /** Grammar box: A bǐ B + describing word (no hěn), yīyàng, bùtóng. */
+  /** Grammar box: A bǐ B + adjective (no hěn), yīyàng, bùtóng, biéde, zhè-zhǒng. */
   infoComparing: TInfo;
   /** Exercise 1: This stick is harder than that one. */
   exercise1: TExercise;
@@ -92,6 +118,10 @@ export type LessonShape = {
   exercise6: TExercise;
   /** Exercise 7: Is the stick hard? */
   exercise7: TExercise;
+  /** Exercise 8: I want something else. */
+  exercise8: TExercise;
+  /** Exercise 9: This kind of fruit is sweet. */
+  exercise9: TExercise;
   /** Answer 1: zhè-ge gùnzi bǐ nà-ge yìng. */
   answer1: TAnswer;
   /** Answer 2: nǐ bǐ wǒ dà. */
@@ -106,6 +136,10 @@ export type LessonShape = {
   answer6: TAnswer;
   /** Answer 7: gùnzi yìng ma? */
   answer7: TAnswer;
+  /** Answer 8: wǒ yào biéde. */
+  answer8: TAnswer;
+  /** Answer 9: zhè-zhǒng shuǐguǒ hěn tián. */
+  answer9: TAnswer;
 };
 
 const shape: LessonShape = {
@@ -126,6 +160,8 @@ const shape: LessonShape = {
   vocabYuan: { type: "vocab", term: "{{word:yuan2}}", ttsText: "圆" },
   vocabGunzi: { type: "vocab", term: "{{word:gun4zi}}", ttsText: "棍子" },
   vocabXian: { type: "vocab", term: "{{word:xian4}}", ttsText: "线" },
+  vocabBiede: { type: "vocab", term: "{{word:bie2de}}", ttsText: "别的" },
+  vocabZhong: { type: "vocab", term: "{{word:zhong3}}", ttsText: "种" },
   proseThan: { type: "prose" },
   exampleThan1: {
     type: "example",
@@ -151,6 +187,26 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:shen2me}} {{word:bi3}} {{word:gun4zi}} {{word:ying4}}?",
     ttsText: "什么比棍子硬？",
+  },
+  exampleThan6: {
+    type: "example",
+    pinyin: "{{Word:wo3}}-{{word:de}} {{word:jin1}} {{word:bi3}} {{word:ni3}}-{{word:de}} {{word:shao3}}.",
+    ttsText: "我的金比你的少。",
+  },
+  exampleThan7: {
+    type: "example",
+    pinyin: "{{Word:shi4chang3}} {{word:bi3}} {{word:jia1}} {{word:yuan3}}.",
+    ttsText: "市场比家远。",
+  },
+  exampleThan8: {
+    type: "example",
+    pinyin: "{{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:bi3}} {{word:ni3}}-{{word:de}} {{word:jin4}}.",
+    ttsText: "我的家比你的近。",
+  },
+  exampleThan9: {
+    type: "example",
+    pinyin: "{{Word:ren2}} {{word:bi3}} {{word:jin1}} {{word:you3}} {{word:jia4zhi2}}.",
+    ttsText: "人比金有价值。",
   },
   proseSame: { type: "prose" },
   exampleSame1: {
@@ -184,6 +240,37 @@ const shape: LessonShape = {
     pinyin: "{{Word:zhe4}}-ge {{word:di4fang1}} {{word:hen3}} {{word:bu4tong2}}.",
     ttsText: "这个地方很不同。",
   },
+  exampleDifferent4: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:yao4}} {{word:bie2de}}.",
+    ttsText: "我要别的。",
+  },
+  exampleDifferent5: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:you3}} {{word:bie2de}} {{word:yi1fu}} {{word:ma}}?",
+    ttsText: "你有别的衣服吗？",
+  },
+  exampleDifferent6: {
+    type: "example",
+    pinyin: "{{Word:bie2de}} {{word:ren2}} {{word:bi3}} {{word:wo3}} {{word:da4}}.",
+    ttsText: "别的人比我大。",
+  },
+  proseKind: { type: "prose" },
+  exampleKind1: {
+    type: "example",
+    pinyin: "{{Word:zhe4}}-{{word:zhong3}} {{word:shui3guo3}} {{word:hen3}} {{word:tian2}}.",
+    ttsText: "这种水果很甜。",
+  },
+  exampleKind2: {
+    type: "example",
+    pinyin: "{{Word:zhe4}}-{{word:zhong3}} {{word:bi3}} {{word:na4}}-{{word:zhong3}} {{word:hao3}}.",
+    ttsText: "这种比那种好。",
+  },
+  exampleKind3: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:yao4}} {{word:na4}}-{{word:zhong3}} {{word:gun4zi}}.",
+    ttsText: "我要那种棍子。",
+  },
   proseShapeFeel: { type: "prose" },
   exampleShapeFeel1: {
     type: "example",
@@ -214,7 +301,7 @@ const shape: LessonShape = {
     type: "info",
     subtype: "grammar",
     tag: "describing/comparing",
-    items: [{}, {}, {}],
+    items: [{}, {}, {}, {}, {}],
   },
   exercise1: { type: "exercise" },
   exercise2: { type: "exercise" },
@@ -223,6 +310,8 @@ const shape: LessonShape = {
   exercise5: { type: "exercise" },
   exercise6: { type: "exercise" },
   exercise7: { type: "exercise" },
+  exercise8: { type: "exercise" },
+  exercise9: { type: "exercise" },
   answer1: { type: "answer", ttsText: "这个棍子比那个硬。" },
   answer2: { type: "answer", ttsText: "你比我大。" },
   answer3: { type: "answer", ttsText: "他们的家一样。" },
@@ -230,6 +319,8 @@ const shape: LessonShape = {
   answer5: { type: "answer", ttsText: "月很圆。" },
   answer6: { type: "answer", ttsText: "线在哪里？" },
   answer7: { type: "answer", ttsText: "棍子硬吗？" },
+  answer8: { type: "answer", ttsText: "我要别的。" },
+  answer9: { type: "answer", ttsText: "这种水果很甜。" },
 };
 
 export default shape;

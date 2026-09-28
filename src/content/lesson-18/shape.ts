@@ -3,7 +3,7 @@
 // LessonShape is this lesson's exact, hand-written type -- see lesson-01's
 // shape.ts for the full explanation of the pattern.
 //
-// Rewritten in Phase 2 (BOOK_PLAN.md): the jobs of -de: verb-de (the thing), verb-de rén (the one who), verb-de + describing word (how), and naming things with a description.
+// Rewritten in Phase 2 (BOOK_PLAN.md): the jobs of -de: verb-de (the thing), verb-de rén (the one who), verb-de + adjective (how), and naming things with a description.
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- lesson-18).
 import type {
@@ -42,7 +42,7 @@ export type LessonShape = {
   exampleThing4: TExample;
   /** Example: wǒ zhīdào zhè-ge cí. */
   exampleThing5: TExample;
-  /** Example: shí-ge chī-de dōngxi quánbù huài le. */
+  /** Example: shí-ge chī-de dōngxi dōu huài le. */
   exampleThing6: TExample;
   /** Example: tā chī-de shì huángsè-de shuǐguǒ. */
   exampleThing7: TExample;
@@ -54,7 +54,7 @@ export type LessonShape = {
   examplePerson2: TExample;
   /** Example: zhīdào-de rén bù shuō. */
   examplePerson3: TExample;
-  /** Say: To say how someone does something, put -de after the verb, then the describing word. Pattern: Who + verb-de + describing word */
+  /** Say: To say how someone does something, put -de after the verb, then the adjective. Pattern: Who + verb-de + adjective */
   proseHow: TProse;
   /** Example: tā shuō-de hǎo. */
   exampleHow1: TExample;
@@ -90,6 +90,8 @@ export type LessonShape = {
   exampleName11: TExample;
   /** Example: wǒ ài-de yánsè shì lánsè. */
   exampleName12: TExample;
+  /** Example: zhè shì yǒu jiàzhí-de dōngxi. */
+  exampleName13: TExample;
   /** Grammar box: every job of -de -- the thing, the one who, how, describing, whose, and longer descriptions. */
   infoJobsOfDe: TInfo;
   /** Exercise 1: Do you have anything to eat? */
@@ -161,8 +163,8 @@ const shape: LessonShape = {
   },
   exampleThing6: {
     type: "example",
-    pinyin: "{{Word:shi2}}-ge {{word:chi1}}-{{word:de}} {{word:dong1xi}} {{word:quan2bu4}} {{word:huai4}} {{word:le}}.",
-    ttsText: "十个吃的东西全部坏了。",
+    pinyin: "{{Word:shi2}}-ge {{word:chi1}}-{{word:de}} {{word:dong1xi}} {{word:dou1}} {{word:huai4}} {{word:le}}.",
+    ttsText: "十个吃的东西都坏了。",
   },
   exampleThing7: {
     type: "example",
@@ -266,6 +268,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:wo3}} {{word:ai4}}-{{word:de}} {{word:yan2se4}} {{word:shi4}} {{word:lan2se4}}.",
     ttsText: "我爱的颜色是蓝色。",
+  },
+  exampleName13: {
+    type: "example",
+    pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:you3}} {{word:jia4zhi2}}-{{word:de}} {{word:dong1xi}}.",
+    ttsText: "这是有价值的东西。",
   },
   infoJobsOfDe: {
     type: "info",

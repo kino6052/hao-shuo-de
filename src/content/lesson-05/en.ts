@@ -83,6 +83,7 @@ const en: PartialByKey<LessonShape> = {
   exampleHave3: { en: ["He has rice."] },
   exampleHave4: { en: ["She has money."] },
   exampleHave5: { en: ["He doesn't have anything."] },
+  exampleHave6: { en: ["I have very little money."] },
   infoWhoDoesWhat: {
     title: { en: ["Who Does What"] },
     items: [
