@@ -99,6 +99,7 @@ answers
 | D34 | **Grammar terms are allowed (2026-09-27):** adjective, adverb, particle, pronoun, preposition, and measure word join noun, verb, subject, and object. A lesson gives the plain name first with the term once in brackets, then uses the term: "describing word (an adjective)" in L1 and L3, "pointers (pronouns)" and "counting word (measure word)" in L4, "adverbs" in L12, "particles" in L8. Everything else in `scripts/jargon.js` stays banned. |
 | D35 | **dōu replaces quánbù.** "All" is dōu (wǒ-men dōu chī), "everything" is shénme-dōu, "nothing" is shénme-dōu bù / méi, and "everywhere" is nǎlǐ-dōu. quánbù leaves the dictionary. |
 | D36 | **The missing NSM atoms join the dictionary**, plus a word for value: shǎo (L3), kěnéng (L7), xiànzài and fāshēng (L8), yīxià (L9), dòng, yuǎn, and jìn (L11), jiàzhí (L12), biéde and zhǒng (L13), bùfen (L14), and huó (L20). Atoms already covered by dictionary words stay as they are: think is juéde, before is qián, some is yǒu-de, more is bǐ or duō, and like / the same is yīyàng. The vocabulary becomes **162 words**. |
+| D37 | **One rule for describing a noun: adjective-de + NOUN.** Mandarin often drops de after a short adjective (dà dìfang), but Hao-shuo-de always keeps it (dà-de dìfang), because with de it's always correct Mandarin. The exception is duō and shǎo, which need hěn in front (hěn-duō-de rén, never duō-de rén). Taught in L3. |
 
 ---
 
@@ -428,6 +429,7 @@ Q1–Q4 were answered on 2026-09-27. New questions go here.
 
 | Command                        | What it checks                                                                                                                                                                            | Fails the build for |
 | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| `npm run typecheck`            | The TypeScript types: every chapter's text files use the keys its `shape.ts` defines (run as the `check-types` gate). `npm run dev` also shows type errors in the terminal and the browser overlay. | any file            |
 | `npm run check-book`           | Lessons match intro-3 (titles, order, sections); every word introduced once, matching §4b; summaries and TL;DR lines short and jargon-free; the proverbs and the stories use only dictionary words. Prints New / Total so far per lesson.         | any lesson          |
 | `npm run check-summaries`      | Every chapter's summary is 50 words or fewer.                                                                                                                                             | any chapter         |
 | `npm run check-jargon`         | No banned grammar words in the book's English text (rule 4). Lists each hit, and counts the allowed core terms.                                                                           | finished lessons    |

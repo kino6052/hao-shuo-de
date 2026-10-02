@@ -16,6 +16,7 @@ const extra = process.argv.slice(2);
 
 // [script, default arguments]
 const GATES = [
+  ['check-types', []],
   ['check-book', []],
   ['check-summaries', ['--over']],
   ['check-jargon', ['--summary']],

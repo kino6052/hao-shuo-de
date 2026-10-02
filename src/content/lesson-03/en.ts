@@ -8,7 +8,7 @@ const en: PartialByKey<LessonShape> = {
   summary: {
     en: [
       "We often want to say what something is like.",
-      "In this lesson, you'll be able to say \"The water is good.\", \"a big place\", \"good parents\", and \"many people\".",
+      'In this lesson, you\'ll be able to say "The water is good.", "a big place", "good parents", and "many people".',
     ],
   },
   vocabHen: { en: ["very"] },
@@ -20,7 +20,7 @@ const en: PartialByKey<LessonShape> = {
   vocabFumu: { en: ["parents"] },
   proseLike: {
     en: [
-      "**To say what something is like**, put {{word:hen3}} before the adjective (a describing word, like {{word:da4}} or {{word:hao3}}).",
+      '**To say what something is like**, put {{word:hen3}} before the adjective (like "big" or "good").',
       "",
       "**NOUN + {{word:hen3}} + adjective**",
       "",
@@ -32,9 +32,7 @@ const en: PartialByKey<LessonShape> = {
       ],
     },
     necessity: {
-      en: [
-        "This is how you describe things in a full sentence.",
-      ],
+      en: ["This is how you describe things in a full sentence."],
     },
   },
   exampleLike1: { en: ["The water is good."] },
@@ -45,21 +43,17 @@ const en: PartialByKey<LessonShape> = {
   vocabDe: { en: ["joins an adjective to a noun"] },
   proseBefore: {
     en: [
-      "**To put an adjective before a noun**, join them with -{{word:de}}.",
+      '**To put an adjective before a noun**, join them with -{{word:de}} (like "{{word:da4}}-{{word:de}} {{word:di4fang1}}").',
       "",
       "**adjective-{{word:de}} + NOUN**",
       "",
-      "Don't leave out -{{word:de}}: {{word:hen3}}-{{word:xiao3}} {{word:di4fang1}} sounds wrong.",
+      "Mandarin speakers often drop -{{word:de}} after a short adjective: {{word:da4}} {{word:di4fang1}}. Hao-shuo-de always keeps it. With -{{word:de}}, it's always correct Mandarin, so it's the only rule you need.",
     ],
     tldr: {
-      en: [
-        "To put an adjective before a noun, join them with {{word:de}}.",
-      ],
+      en: ["To put an adjective before a noun, join them with {{word:de}}."],
     },
     necessity: {
-      en: [
-        'Now you can say "a big place", not only "the place is big".',
-      ],
+      en: ['Now you can say "a big place", not only "the place is big".'],
     },
   },
   exampleBefore1: { en: ["A big place."] },
@@ -74,6 +68,8 @@ const en: PartialByKey<LessonShape> = {
       "**To say many**, put {{word:hen3}}-{{word:duo1}}-{{word:de}} before the noun.",
       "",
       "**{{word:hen3}}-{{word:duo1}}-{{word:de}} + NOUN**",
+      "",
+      "{{word:duo1}} and {{word:shao3}} are special. Other adjectives can go before -{{word:de}} on their own ({{word:da4}}-{{word:de}} {{word:di4fang1}}), but these two need {{word:hen3}} in front: {{word:duo1}}-{{word:de}} {{word:ren2}} sounds wrong.",
       "",
       "After a noun, {{word:hen3}} {{word:duo1}} means there is a lot: {{Word:shui3}} {{word:hen3}} {{word:duo1}}.",
       "{{word:shao3}} (few, little) is the opposite: {{Word:shui3}} {{word:hen3}} {{word:shao3}}, there is very little water.",
@@ -133,9 +129,7 @@ const en: PartialByKey<LessonShape> = {
   answer3: { en: ["{{Word:da4}}-{{word:de}} {{word:di4fang1}}"] },
   answer4: { en: ["{{Word:hao3}}-{{word:de}} {{word:fu4mu3}}"] },
   answer5: {
-    en: [
-      "{{Word:hen3}}-{{word:duo1}}-{{word:de}} {{word:ren2}}",
-    ],
+    en: ["{{Word:hen3}}-{{word:duo1}}-{{word:de}} {{word:ren2}}"],
   },
   answer6: {
     en: ["{{Word:dong4wu4}} {{word:hen3}} {{word:xiao3}}."],
