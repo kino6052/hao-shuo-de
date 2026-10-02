@@ -47,12 +47,14 @@ export type LessonShape = {
   exampleThan5: TExample;
   /** Example: wǒ-de jīn bǐ nǐ-de shǎo. */
   exampleThan6: TExample;
-  /** Example: shìchǎng bǐ jiā yuǎn. */
+  /** Example: nà-ge dìfāng bǐ jiā yuǎn. */
   exampleThan7: TExample;
   /** Example: wǒ-de jiā bǐ nǐ-de jìn. */
   exampleThan8: TExample;
   /** Example: rén bǐ jīn yǒu jiàzhí. */
   exampleThan9: TExample;
+  /** Example: zhè-cì bǐ nà-cì hǎo. */
+  exampleThan10: TExample;
   /** Vocabulary: "the same". */
   vocabYiyang: TVocab;
   /** Say: To say things are the same, use yīyàng. Pattern: Things + yīyàng / yīyàng-de + noun */
@@ -190,8 +192,8 @@ const shape: LessonShape = {
   },
   exampleThan7: {
     type: "example",
-    pinyin: "{{Word:shi4chang3}} {{word:bi3}} {{word:jia1}} {{word:yuan3}}.",
-    ttsText: "市场比家远。",
+    pinyin: "{{Word:na4}}-ge {{word:di4fang1}} {{word:bi3}} {{word:jia1}} {{word:yuan3}}.",
+    ttsText: "那个地方比家远。",
   },
   exampleThan8: {
     type: "example",
@@ -202,6 +204,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ren2}} {{word:bi3}} {{word:jin1}} {{word:you3}} {{word:jia4zhi2}}.",
     ttsText: "人比金有价值。",
+  },
+  exampleThan10: {
+    type: "example",
+    pinyin: "{{Word:zhe4}}-{{word:ci4}} {{word:bi3}} {{word:na4}}-{{word:ci4}} {{word:hao3}}.",
+    ttsText: "这次比那次好。",
   },
   vocabYiyang: {
     type: "vocab",

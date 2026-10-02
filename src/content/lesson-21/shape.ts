@@ -3,7 +3,7 @@
 // LessonShape is this lesson's exact, hand-written type -- see lesson-01's
 // shape.ts for the full explanation of the pattern.
 //
-// Rewritten in Phase 2 (BOOK_PLAN.md): hello (nǐ hǎo), names (jiào), orders (a bare verb, bù yào), feelings (juéde, pà), and hearing sounds (shēngyīn).
+// Rewritten in Phase 2 (BOOK_PLAN.md): hello (nǐ hǎo), thank you (xiè-xie, D43), names (jiào), orders (a bare verb, bù yào), feelings (juéde, pà, xiào, D41), and hearing sounds (shēngyīn).
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- lesson-21).
 import type {
@@ -35,6 +35,18 @@ export type LessonShape = {
   exampleHello4: TExample;
   /** Example: nǐ cóng nǎlǐ lái? */
   exampleHello5: TExample;
+  /** Vocabulary: "thank; xiè-xie: thank you". */
+  vocabXie: TVocab;
+  /** Say: To say thank you, say xiè-xie. To answer, say bù yòng xiè. Pattern: xiè-xie (nǐ)! / bù yòng xiè. */
+  proseThanks: TProse;
+  /** Example: xiè-xie! */
+  exampleThanks1: TExample;
+  /** Example: xiè-xie nǐ! */
+  exampleThanks2: TExample;
+  /** Example: bù yòng xiè. */
+  exampleThanks3: TExample;
+  /** Example: xiè-xie nǐ gěi wǒ shuǐ. */
+  exampleThanks4: TExample;
   /** Vocabulary: "be called; call, make an animal sound". */
   vocabJiao: TVocab;
   /** Say: To say your name, use jiào (be called), with the name in quotes. Pattern: Who + jiào + "name" */
@@ -49,6 +61,8 @@ export type LessonShape = {
   exampleName4: TExample;
   /** Vocabulary: "be scared (of)". */
   vocabPa: TVocab;
+  /** Vocabulary: "laugh, smile". */
+  vocabXiao: TVocab;
   /** Say: To tell someone to do something, just say the verb. For don't, put bù yào first. Pattern: Verb! / bù yào + verb! */
   proseOrder: TProse;
   /** Example: chī! */
@@ -71,6 +85,10 @@ export type LessonShape = {
   exampleOrder9: TExample;
   /** Example: bù yào dòng wǒ-de dōngxi! */
   exampleOrder10: TExample;
+  /** Example: bù yào xiào! */
+  exampleOrder11: TExample;
+  /** Example: bù yào ná wǒ-de dōngxi! */
+  exampleOrder12: TExample;
   /** Vocabulary: "feel, think". */
   vocabJuede: TVocab;
   /** Vocabulary: "bug". */
@@ -103,6 +121,14 @@ export type LessonShape = {
   exampleFeel11: TExample;
   /** Example: dòngwù huó le, wǒ juéde hěn hǎo. */
   exampleFeel12: TExample;
+  /** Example: tā xiào le. */
+  exampleFeel13: TExample;
+  /** Example: nǐ wèishénme xiào? */
+  exampleFeel14: TExample;
+  /** Example: wǒ juéde yǒu yī-diǎn lěng. */
+  exampleFeel15: TExample;
+  /** Example: wǒ yǒu yī-diǎn pà. */
+  exampleFeel16: TExample;
   /** Vocabulary: "sound, voice". */
   vocabShengyin: TVocab;
   /** Say: To say you hear a sound, say tīng-dào (hear) and shēngyīn (sound). Pattern: Who + tīng-dào + shēngyīn */
@@ -137,6 +163,12 @@ export type LessonShape = {
   exercise7: TExercise;
   /** Exercise 8: Sex is not love. */
   exercise8: TExercise;
+  /** Exercise 9: Don't laugh at me! */
+  exercise9: TExercise;
+  /** Exercise 10: Thank you for giving me fruit. */
+  exercise10: TExercise;
+  /** Exercise 11: You're welcome. */
+  exercise11: TExercise;
   /** Answer 1: tā jiào "Tom". */
   answer1: TAnswer;
   /** Answer 2: nǐ-men hǎo! */
@@ -153,6 +185,12 @@ export type LessonShape = {
   answer7: TAnswer;
   /** Answer 8: xìng bù shì ài. */
   answer8: TAnswer;
+  /** Answer 9: bù yào xiào wǒ! */
+  answer9: TAnswer;
+  /** Answer 10: xiè-xie nǐ gěi wǒ shuǐguǒ. */
+  answer10: TAnswer;
+  /** Answer 11: bù yòng xiè. */
+  answer11: TAnswer;
   /** FAQ: is nǐ hǎo ma like "How are you?" */
   faqNihaoma: TFaq;
   /** FAQ: can juéde mean "I think"? (yes) */
@@ -188,6 +226,28 @@ const shape: LessonShape = {
     pinyin: "{{Word:ni3}} {{word:cong2}} {{word:na3li3}} {{word:lai2}}?",
     ttsText: "你从哪里来？",
   },
+  vocabXie: { type: "vocab", term: "{{word:xie4}}", ttsText: "谢" },
+  proseThanks: { type: "prose" },
+  exampleThanks1: {
+    type: "example",
+    pinyin: "{{Word:xie4}}-xie!",
+    ttsText: "谢谢！",
+  },
+  exampleThanks2: {
+    type: "example",
+    pinyin: "{{Word:xie4}}-xie {{word:ni3}}!",
+    ttsText: "谢谢你！",
+  },
+  exampleThanks3: {
+    type: "example",
+    pinyin: "{{Word:bu4}} {{word:yong4}} {{word:xie4}}.",
+    ttsText: "不用谢。",
+  },
+  exampleThanks4: {
+    type: "example",
+    pinyin: "{{Word:xie4}}-xie {{word:ni3}} {{word:gei3}} {{word:wo3}} {{word:shui3}}.",
+    ttsText: "谢谢你给我水。",
+  },
   vocabJiao: { type: "vocab", term: "{{word:jiao4}}", ttsText: "叫" },
   proseName: { type: "prose" },
   exampleName1: {
@@ -211,6 +271,7 @@ const shape: LessonShape = {
     ttsText: '他叫"Tom"或者"Tim"。',
   },
   vocabPa: { type: "vocab", term: "{{word:pa4}}", ttsText: "怕" },
+  vocabXiao: { type: "vocab", term: "{{word:xiao4}}", ttsText: "笑" },
   proseOrder: { type: "prose" },
   exampleOrder1: {
     type: "example",
@@ -261,6 +322,16 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:bu4}} {{word:yao4}} {{word:dong4}} {{word:wo3}}-{{word:de}} {{word:dong1xi}}!",
     ttsText: "不要动我的东西！",
+  },
+  exampleOrder11: {
+    type: "example",
+    pinyin: "{{Word:bu4}} {{word:yao4}} {{word:xiao4}}!",
+    ttsText: "不要笑！",
+  },
+  exampleOrder12: {
+    type: "example",
+    pinyin: "{{Word:bu4}} {{word:yao4}} {{word:na2}} {{word:wo3}}-{{word:de}} {{word:dong1xi}}!",
+    ttsText: "不要拿我的东西！",
   },
   vocabJuede: { type: "vocab", term: "{{word:jue2de}}", ttsText: "觉得" },
   vocabChongzi: {
@@ -330,6 +401,26 @@ const shape: LessonShape = {
     pinyin: "{{Word:dong4wu4}} {{word:huo2}} {{word:le}}, {{word:wo3}} {{word:jue2de}} {{word:hen3}} {{word:hao3}}.",
     ttsText: "动物活了，我觉得很好。",
   },
+  exampleFeel13: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:xiao4}} {{word:le}}.",
+    ttsText: "她笑了。",
+  },
+  exampleFeel14: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:wei4shen2me}} {{word:xiao4}}?",
+    ttsText: "你为什么笑？",
+  },
+  exampleFeel15: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:jue2de}} {{word:you3}} {{word:yi1}}-{{word:dian3}} {{word:leng3}}.",
+    ttsText: "我觉得有一点冷。",
+  },
+  exampleFeel16: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:you3}} {{word:yi1}}-{{word:dian3}} {{word:pa4}}.",
+    ttsText: "我有一点怕。",
+  },
   vocabShengyin: {
     type: "vocab",
     term: "{{word:sheng1yin1}}",
@@ -370,7 +461,7 @@ const shape: LessonShape = {
     type: "info",
     subtype: "grammar",
     tag: "expressions/greetings-and-feelings",
-    items: [{}, {}, {}, {}, {}],
+    items: [{}, {}, {}, {}, {}, {}],
   },
   exercise1: { type: "exercise" },
   exercise2: { type: "exercise" },
@@ -380,6 +471,9 @@ const shape: LessonShape = {
   exercise6: { type: "exercise" },
   exercise7: { type: "exercise" },
   exercise8: { type: "exercise" },
+  exercise9: { type: "exercise" },
+  exercise10: { type: "exercise" },
+  exercise11: { type: "exercise" },
   answer1: { type: "answer", ttsText: "他叫汤姆。" },
   answer2: { type: "answer", ttsText: "你们好！" },
   answer3: { type: "answer", ttsText: "不要等！" },
@@ -388,6 +482,9 @@ const shape: LessonShape = {
   answer6: { type: "answer", ttsText: "我听到声音。" },
   answer7: { type: "answer", ttsText: "我的手上有虫子。" },
   answer8: { type: "answer", ttsText: "性不是爱。" },
+  answer9: { type: "answer", ttsText: "不要笑我！" },
+  answer10: { type: "answer", ttsText: "谢谢你给我水果。" },
+  answer11: { type: "answer", ttsText: "不用谢。" },
   faqNihaoma: { type: "faq" },
   faqJuedeThink: { type: "faq" },
 };

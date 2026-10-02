@@ -8,12 +8,11 @@ const en: PartialByKey<LessonShape> = {
   summary: {
     en: [
       "We often talk about coming and going.",
-      "In this lesson, you'll be able to say \"I come from the market.\", \"Go!\", \"Get up!\", \"I've arrived home.\", and \"I'm going outside.\"",
+      "In this lesson, you'll be able to say \"Where do you come from?\", \"Go!\", \"Get up!\", \"I've arrived home.\", and \"I'm going outside.\"",
     ],
   },
   vocabLai: { en: ["come"] },
   vocabQu: { en: ["go"] },
-  vocabShichang: { en: ["market"] },
   proseComeGo: {
     en: [
       "**To say you come or go somewhere**, put {{word:lai2}} (come) or {{word:qu4}} (go) before the place.",
@@ -29,15 +28,16 @@ const en: PartialByKey<LessonShape> = {
     },
     necessity: { en: ["Now you can say where you're going."] },
   },
-  exampleComeGo1: { en: ["I'm going to the market."] },
+  exampleComeGo1: { en: ["I'm going to my parents' home."] },
   exampleComeGo2: { en: ["Are you coming to my home?"] },
   exampleComeGo3: { en: ["Go!"] },
   exampleComeGo4: { en: ["Come!"] },
-  exampleComeGo5: { en: ["I've been to the market."] },
-  exampleComeGo6: { en: ["After eating, we go to the market."] },
+  exampleComeGo5: { en: ["I've been to that place."] },
+  exampleComeGo6: { en: ["After eating, we go to your home."] },
   exampleComeGo7: { en: ["He comes over beside me."] },
-  exampleComeGo8: { en: ["We're going to the market now."] },
+  exampleComeGo8: { en: ["We're going to his home now."] },
   exampleComeGo9: { en: ["Come here a moment."] },
+  exampleComeGo10: { en: ["You're here again!"] },
   vocabCong: { en: ["from"] },
   proseFrom: {
     en: [
@@ -50,7 +50,7 @@ const en: PartialByKey<LessonShape> = {
     },
     necessity: { en: ["Now you can say where someone comes from."] },
   },
-  exampleFrom1: { en: ["I come from the market."] },
+  exampleFrom1: { en: ["I come from my parents' home."] },
   exampleFrom2: { en: ["He comes from home."] },
   exampleFrom3: { en: ["Where do you come from?"] },
   exampleFrom4: { en: ["He comes from the front."] },
@@ -69,7 +69,7 @@ const en: PartialByKey<LessonShape> = {
     necessity: { en: ["Now you can say you got there."] },
   },
   exampleArrive1: { en: ["I've arrived home."] },
-  exampleArrive2: { en: ["She got to the market."] },
+  exampleArrive2: { en: ["She got to that place."] },
   exampleArrive3: { en: ["When do you arrive?"] },
   vocabQi: { en: ["rise; qǐ-lái: get up"] },
   vocabWai: { en: ["out; wài-miàn: outside"] },
@@ -133,27 +133,27 @@ const en: PartialByKey<LessonShape> = {
     ],
     tldr: {
       en: [
-        "{{word:yuan3}} is far, {{word:jin4}} is near: {{Word:shi4chang3}} {{word:hen3}} {{word:yuan3}}.",
+        "{{word:yuan3}} is far, {{word:jin4}} is near: {{Word:na4}}-ge {{word:di4fang1}} {{word:hen3}} {{word:yuan3}}.",
       ],
     },
     necessity: { en: ["Now you can say how far you have to go."] },
   },
-  exampleFar1: { en: ["The market is far."] },
+  exampleFar1: { en: ["That place is far."] },
   exampleFar2: { en: ["My home is near."] },
   exampleFar3: { en: ["Is your home far?"] },
-  exampleFar4: { en: ["We go to the nearby market."] },
+  exampleFar4: { en: ["We go somewhere near."] },
   exampleFar5: { en: ["He comes from far away."] },
   infoComingAndGoing: {
     title: { en: ["Coming and Going"] },
     items: [
       {
         en: [
-          "{{word:lai2}} / {{word:qu4}} + place: {{Word:wo3}} {{word:qu4}} {{word:shi4chang3}}. (I'm going to the market.)",
+          "{{word:lai2}} / {{word:qu4}} + place: {{Word:wo3}} {{word:qu4}} {{word:fu4mu3}}-{{word:de}} {{word:jia1}}. (I'm going to my parents' home.)",
         ],
       },
       {
         en: [
-          "{{word:cong2}} + place + {{word:lai2}}: {{Word:wo3}} {{word:cong2}} {{word:shi4chang3}} {{word:lai2}}. (I come from the market.)",
+          "{{word:cong2}} + place + {{word:lai2}}: {{Word:wo3}} {{word:cong2}} {{word:jia1}} {{word:lai2}}. (I come from home.)",
         ],
       },
       {
@@ -173,20 +173,20 @@ const en: PartialByKey<LessonShape> = {
       },
       {
         en: [
-          "{{word:yuan3}} / {{word:jin4}}, far / near: {{Word:shi4chang3}} {{word:hen3}} {{word:yuan3}}. (The market is far.)",
+          "{{word:yuan3}} / {{word:jin4}}, far / near: {{Word:na4}}-ge {{word:di4fang1}} {{word:hen3}} {{word:yuan3}}. (That place is far.)",
         ],
       },
     ],
   },
   exercise1: { en: ["Where are you going?"] },
   exercise2: { en: ["She comes from home."] },
-  exercise3: { en: ["We arrived at the market."] },
+  exercise3: { en: ["We arrived home."] },
   exercise4: { en: ["Get up!"] },
   exercise5: { en: ["The animal is outside."] },
   exercise6: { en: ["The box's opening is big."] },
   exercise7: { en: ["Come down!"] },
   exercise8: { en: ["Don't move!"] },
-  exercise9: { en: ["The market is far."] },
+  exercise9: { en: ["My parents' home is far."] },
   exercise10: { en: ["My home is near."] },
   answer1: { en: ["{{Word:ni3}} {{word:qu4}} {{word:na3li3}}?"] },
   answer2: {
@@ -194,11 +194,7 @@ const en: PartialByKey<LessonShape> = {
       "{{Word:ta1}} {{word:cong2}} {{word:jia1}} {{word:lai2}}.",
     ],
   },
-  answer3: {
-    en: [
-      "{{Word:wo3}}-{{word:men}} {{word:dao4}} {{word:shi4chang3}} {{word:le}}.",
-    ],
-  },
+  answer3: { en: ["{{Word:wo3}}-{{word:men}} {{word:dao4}} {{word:jia1}} {{word:le}}."] },
   answer4: { en: ["{{Word:qi3}}-{{word:lai2}}!"] },
   answer5: {
     en: [
@@ -212,9 +208,7 @@ const en: PartialByKey<LessonShape> = {
   },
   answer7: { en: ["{{Word:xia4}}-{{word:lai2}}!"] },
   answer8: { en: ["{{Word:bu4}} {{word:yao4}} {{word:dong4}}!"] },
-  answer9: {
-    en: ["{{Word:shi4chang3}} {{word:hen3}} {{word:yuan3}}."],
-  },
+  answer9: { en: ["{{Word:fu4mu3}}-{{word:de}} {{word:jia1}} {{word:hen3}} {{word:yuan3}}."] },
   answer10: {
     en: [
       "{{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:hen3}} {{word:jin4}}.",
@@ -223,13 +217,13 @@ const en: PartialByKey<LessonShape> = {
   faqDaoOrQu: {
     question: { en: ["What's the difference between {{word:qu4}} and {{word:dao4}}?"] },
     en: [
-      "{{word:qu4}} is going toward a place. {{word:dao4}} is getting there: {{Word:wo3}} {{word:qu4}} {{word:shi4chang3}} (I'm on my way), {{Word:wo3}} {{word:dao4}} {{word:shi4chang3}} {{word:le}} (I'm there now).",
+      "{{word:qu4}} is going toward a place. {{word:dao4}} is getting there: {{Word:wo3}} {{word:qu4}} {{word:fu4mu3}}-{{word:de}} {{word:jia1}} (I'm on my way), {{Word:wo3}} {{word:dao4}} {{word:fu4mu3}}-{{word:de}} {{word:jia1}} {{word:le}} (I'm there now).",
     ],
   },
   faqCongOrder: {
     question: { en: ["Why does the place go in the middle of {{word:cong2}} … {{word:lai2}}?"] },
     en: [
-      "In Chinese, \"from where\" comes before the verb, like most details about an action. {{Word:wo3}} {{word:cong2}} {{word:shi4chang3}} {{word:lai2}} is \"I from the market come\".",
+      "In Chinese, \"from where\" comes before the verb, like most details about an action. {{Word:wo3}} {{word:cong2}} {{word:jia1}} {{word:lai2}} is \"I from home come\".",
     ],
   },
   faqLaiOrQu: {

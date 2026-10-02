@@ -10,6 +10,7 @@ import { LessonFlow } from './components/LessonFlow.jsx';
 import { StoryBlock } from './components/StoryBlock.jsx';
 import { DictionarySection } from './components/DictionarySection.jsx';
 import { CategoricalDictionarySection } from './components/CategoricalDictionarySection.jsx';
+import { CompositeDictionarySection } from './components/CompositeDictionarySection.jsx';
 import { SentenceBuilder } from './components/SentenceBuilder.jsx';
 import { ProverbList } from './components/ProverbList.jsx';
 import { PageNav } from './components/PageNav.jsx';
@@ -42,6 +43,14 @@ function renderContent(s, lang) {
         <>
           {s.bodyHtml && <div class="prose-body" dangerouslySetInnerHTML={{ __html: s.bodyHtml }} />}
           <CategoricalDictionarySection lang={lang} />
+        </>
+      );
+    }
+    if (s.meta.layout === 'composites') {
+      return (
+        <>
+          {s.bodyHtml && <div class="prose-body" dangerouslySetInnerHTML={{ __html: s.bodyHtml }} />}
+          <CompositeDictionarySection lang={lang} />
         </>
       );
     }

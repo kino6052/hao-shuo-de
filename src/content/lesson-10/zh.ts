@@ -14,6 +14,7 @@ const zh: PartialByKey<LessonShape> = {
   exampleWhere3: { zh: [] },
   exampleWhere4: { zh: [] },
   exampleWhere5: { zh: [] },
+  exampleWhere6: { zh: [] },
   vocabNali: { zh: [] },
   proseWhereQuestion: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
   exampleWhereQuestion1: { zh: [] },

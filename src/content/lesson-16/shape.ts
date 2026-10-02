@@ -3,7 +3,7 @@
 // LessonShape is this lesson's exact, hand-written type -- see lesson-01's
 // shape.ts for the full explanation of the pattern.
 //
-// Rewritten in Phase 2 (BOOK_PLAN.md): counting aloud (yī, èr, sān), number + gè + noun (liǎng for two things), above ten (shí-èr, èr-shí), and number labels (hào).
+// Rewritten in Phase 2 (BOOK_PLAN.md): counting aloud (yī, èr, sān), number + gè + noun (liǎng for two things), above ten (shí-èr, èr-shí), number labels (hào), o'clock (diǎn), a little (yī-diǎn, D41), and sums: add with fàng zài yī-qǐ, take away with ná, multiply and divide with cì (D42).
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- lesson-16).
 import type {
@@ -71,7 +71,7 @@ export type LessonShape = {
   exampleCount6: TExample;
   /** Example: qī-ge gùnzi zài dì-shàng. */
   exampleCount7: TExample;
-  /** Example: wǒ-men bā-ge rén qù shìchǎng. */
+  /** Example: wǒ-men bā-ge rén qù wài-miàn. */
   exampleCount8: TExample;
   /** Example: jiǔ-ge rén chī mǐfàn. */
   exampleCount9: TExample;
@@ -89,7 +89,7 @@ export type LessonShape = {
   exampleCount15: TExample;
   /** Example: bā-ge hézi hěn dà. */
   exampleCount16: TExample;
-  /** Example: sì-ge rén cóng shìchǎng lái. */
+  /** Example: sì-ge rén cóng wài-miàn lái. */
   exampleCount17: TExample;
   /** Example: wǒ yǒu wǔ-ge hěn tián-de shuǐguǒ. */
   exampleCount18: TExample;
@@ -101,6 +101,8 @@ export type LessonShape = {
   exampleCount21: TExample;
   /** Example: tā bǎ liǎng-ge hézi fàng zài dì-shàng le. */
   exampleCount22: TExample;
+  /** Example: wǒ qù-guò sān-cì. */
+  exampleCount23: TExample;
   /** Say: To say numbers above ten, put shí (ten) before or after the other number. Pattern: shí + number (11-19) / number + shí (20, 30 …) */
   proseTeens: TProse;
   /** Example: shí-yī-ge rén. */
@@ -129,6 +131,52 @@ export type LessonShape = {
   exampleLabel4: TExample;
   /** Example: wǔ-hào zài wǒ-de qián-miàn. */
   exampleLabel5: TExample;
+  /** Vocabulary: "o'clock; yī-diǎn: a little". */
+  vocabDian: TVocab;
+  /** Say: To say what time it is, put diǎn after the number. Pattern: number + diǎn */
+  proseClock: TProse;
+  /** Example: xiànzài shì sān-diǎn. */
+  exampleClock1: TExample;
+  /** Example: wǒ shí-èr-diǎn chī mǐfàn. */
+  exampleClock2: TExample;
+  /** Example: tā shí-diǎn shuìjiào. */
+  exampleClock3: TExample;
+  /** Say: To say a little, say yī-diǎn: before a noun, or after an adjective for a bit more. Pattern: yī-diǎn + noun / adjective + yī-diǎn */
+  proseLittle: TProse;
+  /** Example: wǒ yào yī-diǎn shuǐ. */
+  exampleLittle1: TExample;
+  /** Example: wǒ yǒu yī-diǎn jīn. */
+  exampleLittle2: TExample;
+  /** Example: zhè-ge dà yī-diǎn. */
+  exampleLittle3: TExample;
+  /** Example: shuǐ yǒu yī-diǎn lěng. */
+  exampleLittle4: TExample;
+  /** Example: duō chī yī-diǎn! */
+  exampleLittle5: TExample;
+  /** Vocabulary: "take; take away". */
+  vocabNa: TVocab;
+  /** Say: To add, put the numbers together (fàng zài yī-qǐ). To take away, use ná. Pattern: A, B fàng zài yī-qǐ, shì C / cóng A lǐ-miàn ná B, shì C */
+  proseAddTake: TProse;
+  /** Example: sān, sì fàng zài yī-qǐ, shì qī. */
+  exampleAddTake1: TExample;
+  /** Example: wǔ, wǔ fàng zài yī-qǐ, shì shí. */
+  exampleAddTake2: TExample;
+  /** Example: cóng qī lǐ-miàn ná sān, shì sì. */
+  exampleAddTake3: TExample;
+  /** Example: cóng shí lǐ-miàn ná liù, shì duō-shǎo? */
+  exampleAddTake4: TExample;
+  /** Example: ná yī-ge! */
+  exampleAddTake5: TExample;
+  /** Say: To multiply, put a number together many times. To divide, see how many times you can take it away. Pattern: bǎ A fàng zài yī-qǐ B-cì / cóng C lǐ-miàn ná A, néng ná B-cì */
+  proseTimesShare: TProse;
+  /** Example: bǎ sì fàng zài yī-qǐ sān-cì, shì shí-èr. */
+  exampleTimesShare1: TExample;
+  /** Example: bǎ wǔ fàng zài yī-qǐ liǎng-cì, shì shí. */
+  exampleTimesShare2: TExample;
+  /** Example: cóng shí-èr lǐ-miàn ná sì, néng ná sān-cì. */
+  exampleTimesShare3: TExample;
+  /** Example: cóng shí lǐ-miàn ná wǔ, néng ná duō-shǎo cì? */
+  exampleTimesShare4: TExample;
   /** Grammar box: 1-10 with èr, number + gè + noun (liǎng for two), shí-èr / èr-shí, number + hào. */
   infoCounting: TInfo;
   /** Exercise 1: one box */
@@ -157,6 +205,18 @@ export type LessonShape = {
   exercise12: TExercise;
   /** Exercise 13: Count from one to three. */
   exercise13: TExercise;
+  /** Exercise 14: It's five o'clock now. */
+  exercise14: TExercise;
+  /** Exercise 15: This one is a bit smaller. */
+  exercise15: TExercise;
+  /** Exercise 16: Two and six together is eight. */
+  exercise16: TExercise;
+  /** Exercise 17: Take two from nine: it's seven. */
+  exercise17: TExercise;
+  /** Exercise 18: Three put together three times is nine. */
+  exercise18: TExercise;
+  /** Exercise 19: Take a little! */
+  exercise19: TExercise;
   /** Answer 1: yī-ge hézi. */
   answer1: TAnswer;
   /** Answer 2: liǎng-ge rén. */
@@ -183,12 +243,26 @@ export type LessonShape = {
   answer12: TAnswer;
   /** Answer 13: yī, èr, sān. */
   answer13: TAnswer;
+  /** Answer 14: xiànzài shì wǔ-diǎn. */
+  answer14: TAnswer;
+  /** Answer 15: zhè-ge xiǎo yī-diǎn. */
+  answer15: TAnswer;
+  /** Answer 16: èr, liù fàng zài yī-qǐ, shì bā. */
+  answer16: TAnswer;
+  /** Answer 17: cóng jiǔ lǐ-miàn ná èr, shì qī. */
+  answer17: TAnswer;
+  /** Answer 18: bǎ sān fàng zài yī-qǐ sān-cì, shì jiǔ. */
+  answer18: TAnswer;
+  /** Answer 19: ná yī-diǎn! */
+  answer19: TAnswer;
   /** FAQ: èr in 12 and 20, even with things */
   faqErInBigNumbers: TFaq;
   /** FAQ: hào also numbers days of the month */
   faqHaoDays: TFaq;
   /** FAQ: yī changes tone before gè */
   faqYiTone: TFaq;
+  /** FAQ: is there a word for "plus"? (no -- fàng zài yī-qǐ and ná) */
+  faqPlusWords: TFaq;
 };
 
 const shape: LessonShape = {
@@ -264,8 +338,8 @@ const shape: LessonShape = {
   },
   exampleCount8: {
     type: "example",
-    pinyin: "{{Word:wo3}}-{{word:men}} {{word:ba1}}-ge {{word:ren2}} {{word:qu4}} {{word:shi4chang3}}.",
-    ttsText: "我们八个人去市场。",
+    pinyin: "{{Word:wo3}}-{{word:men}} {{word:ba1}}-ge {{word:ren2}} {{word:qu4}} {{word:wai4}}-{{word:mian4}}.",
+    ttsText: "我们八个人去外面。",
   },
   exampleCount9: {
     type: "example",
@@ -309,8 +383,8 @@ const shape: LessonShape = {
   },
   exampleCount17: {
     type: "example",
-    pinyin: "{{Word:si4}}-ge {{word:ren2}} {{word:cong2}} {{word:shi4chang3}} {{word:lai2}}.",
-    ttsText: "四个人从市场来。",
+    pinyin: "{{Word:si4}}-ge {{word:ren2}} {{word:cong2}} {{word:wai4}}-{{word:mian4}} {{word:lai2}}.",
+    ttsText: "四个人从外面来。",
   },
   exampleCount18: {
     type: "example",
@@ -336,6 +410,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ta1}} {{word:ba3}} {{word:liang3}}-ge {{word:he2zi}} {{word:fang4}} {{word:zai4}} {{word:di4}}-{{word:shang4}} {{word:le}}.",
     ttsText: "他把两个盒子放在地上了。",
+  },
+  exampleCount23: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:qu4}}-{{word:guo4}} {{word:san1}}-{{word:ci4}}.",
+    ttsText: "我去过三次。",
   },
   proseTeens: { type: "prose" },
   exampleTeens1: {
@@ -395,11 +474,102 @@ const shape: LessonShape = {
     pinyin: "{{Word:wu3}}-{{word:hao4}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:qian2}}-{{word:mian4}}.",
     ttsText: "五号在我的前面。",
   },
+  vocabDian: { type: "vocab", term: "{{word:dian3}}", ttsText: "点" },
+  proseClock: { type: "prose" },
+  exampleClock1: {
+    type: "example",
+    pinyin: "{{Word:xian4zai4}} {{word:shi4}} {{word:san1}}-{{word:dian3}}.",
+    ttsText: "现在是三点。",
+  },
+  exampleClock2: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:shi2}}-{{word:er4}}-{{word:dian3}} {{word:chi1}} {{word:mi3fan4}}.",
+    ttsText: "我十二点吃米饭。",
+  },
+  exampleClock3: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:shi2}}-{{word:dian3}} {{word:shui4jiao4}}.",
+    ttsText: "他十点睡觉。",
+  },
+  proseLittle: { type: "prose" },
+  exampleLittle1: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:yao4}} {{word:yi1}}-{{word:dian3}} {{word:shui3}}.",
+    ttsText: "我要一点水。",
+  },
+  exampleLittle2: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:you3}} {{word:yi1}}-{{word:dian3}} {{word:jin1}}.",
+    ttsText: "我有一点金。",
+  },
+  exampleLittle3: {
+    type: "example",
+    pinyin: "{{Word:zhe4}}-ge {{word:da4}} {{word:yi1}}-{{word:dian3}}.",
+    ttsText: "这个大一点。",
+  },
+  exampleLittle4: {
+    type: "example",
+    pinyin: "{{Word:shui3}} {{word:you3}} {{word:yi1}}-{{word:dian3}} {{word:leng3}}.",
+    ttsText: "水有一点冷。",
+  },
+  exampleLittle5: {
+    type: "example",
+    pinyin: "{{Word:duo1}} {{word:chi1}} {{word:yi1}}-{{word:dian3}}!",
+    ttsText: "多吃一点！",
+  },
+  vocabNa: { type: "vocab", term: "{{word:na2}}", ttsText: "拿" },
+  proseAddTake: { type: "prose" },
+  exampleAddTake1: {
+    type: "example",
+    pinyin: "{{Word:san1}}, {{word:si4}} {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}, {{word:shi4}} {{word:qi1}}.",
+    ttsText: "三、四放在一起，是七。",
+  },
+  exampleAddTake2: {
+    type: "example",
+    pinyin: "{{Word:wu3}}, {{word:wu3}} {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}, {{word:shi4}} {{word:shi2}}.",
+    ttsText: "五、五放在一起，是十。",
+  },
+  exampleAddTake3: {
+    type: "example",
+    pinyin: "{{Word:cong2}} {{word:qi1}} {{word:li3}}-{{word:mian4}} {{word:na2}} {{word:san1}}, {{word:shi4}} {{word:si4}}.",
+    ttsText: "从七里面拿三，是四。",
+  },
+  exampleAddTake4: {
+    type: "example",
+    pinyin: "{{Word:cong2}} {{word:shi2}} {{word:li3}}-{{word:mian4}} {{word:na2}} {{word:liu4}}, {{word:shi4}} {{word:duo1}}-{{word:shao3}}?",
+    ttsText: "从十里面拿六，是多少？",
+  },
+  exampleAddTake5: {
+    type: "example",
+    pinyin: "{{Word:na2}} {{word:yi1}}-ge!",
+    ttsText: "拿一个！",
+  },
+  proseTimesShare: { type: "prose" },
+  exampleTimesShare1: {
+    type: "example",
+    pinyin: "{{Word:ba3}} {{word:si4}} {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}} {{word:san1}}-{{word:ci4}}, {{word:shi4}} {{word:shi2}}-{{word:er4}}.",
+    ttsText: "把四放在一起三次，是十二。",
+  },
+  exampleTimesShare2: {
+    type: "example",
+    pinyin: "{{Word:ba3}} {{word:wu3}} {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}} {{word:liang3}}-{{word:ci4}}, {{word:shi4}} {{word:shi2}}.",
+    ttsText: "把五放在一起两次，是十。",
+  },
+  exampleTimesShare3: {
+    type: "example",
+    pinyin: "{{Word:cong2}} {{word:shi2}}-{{word:er4}} {{word:li3}}-{{word:mian4}} {{word:na2}} {{word:si4}}, {{word:neng2}} {{word:na2}} {{word:san1}}-{{word:ci4}}.",
+    ttsText: "从十二里面拿四，能拿三次。",
+  },
+  exampleTimesShare4: {
+    type: "example",
+    pinyin: "{{Word:cong2}} {{word:shi2}} {{word:li3}}-{{word:mian4}} {{word:na2}} {{word:wu3}}, {{word:neng2}} {{word:na2}} {{word:duo1}}-{{word:shao3}} {{word:ci4}}?",
+    ttsText: "从十里面拿五，能拿多少次？",
+  },
   infoCounting: {
     type: "info",
     subtype: "grammar",
     tag: "numbers/counting",
-    items: [{}, {}, {}, {}],
+    items: [{}, {}, {}, {}, {}, {}, {}, {}],
   },
   exercise1: { type: "exercise" },
   exercise2: { type: "exercise" },
@@ -414,6 +584,12 @@ const shape: LessonShape = {
   exercise11: { type: "exercise" },
   exercise12: { type: "exercise" },
   exercise13: { type: "exercise" },
+  exercise14: { type: "exercise" },
+  exercise15: { type: "exercise" },
+  exercise16: { type: "exercise" },
+  exercise17: { type: "exercise" },
+  exercise18: { type: "exercise" },
+  exercise19: { type: "exercise" },
   answer1: { type: "answer", ttsText: "一个盒子。" },
   answer2: { type: "answer", ttsText: "两个人。" },
   answer3: { type: "answer", ttsText: "我有三个工具。" },
@@ -427,9 +603,16 @@ const shape: LessonShape = {
   answer11: { type: "answer", ttsText: "四号在哪里？" },
   answer12: { type: "answer", ttsText: "十二个人。" },
   answer13: { type: "answer", ttsText: "一，二，三。" },
+  answer14: { type: "answer", ttsText: "现在是五点。" },
+  answer15: { type: "answer", ttsText: "这个小一点。" },
+  answer16: { type: "answer", ttsText: "二、六放在一起，是八。" },
+  answer17: { type: "answer", ttsText: "从九里面拿二，是七。" },
+  answer18: { type: "answer", ttsText: "把三放在一起三次，是九。" },
+  answer19: { type: "answer", ttsText: "拿一点！" },
   faqErInBigNumbers: { type: "faq" },
   faqHaoDays: { type: "faq" },
   faqYiTone: { type: "faq" },
+  faqPlusWords: { type: "faq" },
 };
 
 export default shape;

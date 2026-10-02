@@ -3,7 +3,7 @@
 // LessonShape is this lesson's exact, hand-written type -- see lesson-01's
 // shape.ts for the full explanation of the pattern.
 //
-// Rewritten in Phase 2 (BOOK_PLAN.md): when (X-de shíjiān), finished (verb-wán), after (verb-wán hòu), start (kāishǐ), and for a moment (yīxià). liú (stay, keep) is only used in their examples.
+// Rewritten in Phase 2 (BOOK_PLAN.md): when (X-de shíjiān), finished (verb-wán), after (verb-wán hòu), start (kāishǐ), for a moment (yīxià), again (yòu), and how many times (cì, D41). liú (stay, keep) is only used in their examples.
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- lesson-09).
 import type {
@@ -73,6 +73,8 @@ export type LessonShape = {
   exampleStart3: TExample;
   /** Example: wǒ xiànzài kāishǐ xiě. */
   exampleStart4: TExample;
+  /** Example: wǒ kāishǐ xué shuō le. */
+  exampleStart5: TExample;
   /** Vocabulary: "a moment; after a verb: for a moment". */
   vocabYixia: TVocab;
   /** Say: To do something just for a moment, put yīxià (a moment) after the verb. Pattern: Who + verb + yīxià */
@@ -85,6 +87,30 @@ export type LessonShape = {
   exampleMoment3: TExample;
   /** Example: wǒ-men wánr yīxià. */
   exampleMoment4: TExample;
+  /** Vocabulary: "again". */
+  vocabYou: TVocab;
+  /** Say: To say something happens again, put yòu before the verb and le after it. Pattern: Who + yòu + verb + le */
+  proseAgain: TProse;
+  /** Example: tā yòu chī le. */
+  exampleAgain1: TExample;
+  /** Example: nǐ yòu shuìjiào le! */
+  exampleAgain2: TExample;
+  /** Example: wǒ yòu kàn le yīxià. */
+  exampleAgain3: TExample;
+  /** Example: wǒ yòu yào chī le. */
+  exampleAgain4: TExample;
+  /** Vocabulary: "time (how often)". */
+  vocabCi: TVocab;
+  /** Say: To say how many times, put cì after hěn duō or duō-shǎo. Pattern: verb + hěn duō cì */
+  proseTimes: TProse;
+  /** Example: wǒ kàn-guò hěn duō cì. */
+  exampleTimes1: TExample;
+  /** Example: nǐ chī-guò duō-shǎo cì? */
+  exampleTimes2: TExample;
+  /** Example: zhè-cì wǒ děng nǐ. */
+  exampleTimes3: TExample;
+  /** Example: tā shuō-guò hěn duō cì. */
+  exampleTimes4: TExample;
   /** Grammar box: X-de shíjiān (when), verb-wán le (finished), verb-wán hòu (after), kāishǐ + verb (start), verb + yīxià (a moment). */
   infoAroundAnAction: TInfo;
   /** Exercise 1: When I write, I don't eat. */
@@ -101,6 +127,10 @@ export type LessonShape = {
   exercise6: TExercise;
   /** Exercise 7: Wait a moment! */
   exercise7: TExercise;
+  /** Exercise 8: She fell asleep again. */
+  exercise8: TExercise;
+  /** Exercise 9: I've eaten it many times. */
+  exercise9: TExercise;
   /** Answer 1: wǒ xiě-de shíjiān, wǒ bù chī. */
   answer1: TAnswer;
   /** Answer 2: wǒ xiě-wán le. */
@@ -115,6 +145,10 @@ export type LessonShape = {
   answer6: TAnswer;
   /** Answer 7: děng yīxià! */
   answer7: TAnswer;
+  /** Answer 8: tā yòu shuìjiào le. */
+  answer8: TAnswer;
+  /** Answer 9: wǒ chī-guò hěn duō cì. */
+  answer9: TAnswer;
   /** FAQ: wán (finish) vs wánr (play) */
   faqWanOrWanr: TFaq;
   /** FAQ: do I need both wán and le? */
@@ -217,6 +251,11 @@ const shape: LessonShape = {
     pinyin: "{{Word:wo3}} {{word:xian4zai4}} {{word:kai1shi3}} {{word:xie3}}.",
     ttsText: "我现在开始写。",
   },
+  exampleStart5: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:kai1shi3}} {{word:xue2}} {{word:shuo1}} {{word:le}}.",
+    ttsText: "我开始学说了。",
+  },
   vocabYixia: { type: "vocab", term: "{{word:yi1xia4}}", ttsText: "一下" },
   proseMoment: { type: "prose" },
   exampleMoment1: {
@@ -239,11 +278,55 @@ const shape: LessonShape = {
     pinyin: "{{Word:wo3}}-{{word:men}} {{word:wan2r}} {{word:yi1xia4}}.",
     ttsText: "我们玩儿一下。",
   },
+  vocabYou: { type: "vocab", term: "{{word:you4}}", ttsText: "又" },
+  proseAgain: { type: "prose" },
+  exampleAgain1: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:you4}} {{word:chi1}} {{word:le}}.",
+    ttsText: "他又吃了。",
+  },
+  exampleAgain2: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:you4}} {{word:shui4jiao4}} {{word:le}}!",
+    ttsText: "你又睡觉了！",
+  },
+  exampleAgain3: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:you4}} {{word:kan4}} {{word:le}} {{word:yi1xia4}}.",
+    ttsText: "我又看了一下。",
+  },
+  exampleAgain4: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:you4}} {{word:yao4}} {{word:chi1}} {{word:le}}.",
+    ttsText: "我又要吃了。",
+  },
+  vocabCi: { type: "vocab", term: "{{word:ci4}}", ttsText: "次" },
+  proseTimes: { type: "prose" },
+  exampleTimes1: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:hen3}} {{word:duo1}} {{word:ci4}}.",
+    ttsText: "我看过很多次。",
+  },
+  exampleTimes2: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:chi1}}-{{word:guo4}} {{word:duo1}}-{{word:shao3}} {{word:ci4}}?",
+    ttsText: "你吃过多少次？",
+  },
+  exampleTimes3: {
+    type: "example",
+    pinyin: "{{Word:zhe4}}-{{word:ci4}} {{word:wo3}} {{word:deng3}} {{word:ni3}}.",
+    ttsText: "这次我等你。",
+  },
+  exampleTimes4: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:shuo1}}-{{word:guo4}} {{word:hen3}} {{word:duo1}} {{word:ci4}}.",
+    ttsText: "他说过很多次。",
+  },
   infoAroundAnAction: {
     type: "info",
     subtype: "grammar",
     tag: "time/when-finish-after-start",
-    items: [{}, {}, {}, {}, {}],
+    items: [{}, {}, {}, {}, {}, {}, {}],
   },
   exercise1: { type: "exercise" },
   exercise2: { type: "exercise" },
@@ -252,6 +335,8 @@ const shape: LessonShape = {
   exercise5: { type: "exercise" },
   exercise6: { type: "exercise" },
   exercise7: { type: "exercise" },
+  exercise8: { type: "exercise" },
+  exercise9: { type: "exercise" },
   answer1: { type: "answer", ttsText: "我写的时间，我不吃。" },
   answer2: { type: "answer", ttsText: "我写完了。" },
   answer3: { type: "answer", ttsText: "看完后，我睡觉。" },
@@ -259,6 +344,8 @@ const shape: LessonShape = {
   answer5: { type: "answer", ttsText: "你要玩儿吗？" },
   answer6: { type: "answer", ttsText: "吃完后，我会留。" },
   answer7: { type: "answer", ttsText: "等一下！" },
+  answer8: { type: "answer", ttsText: "她又睡觉了。" },
+  answer9: { type: "answer", ttsText: "我吃过很多次。" },
   faqWanOrWanr: { type: "faq" },
   faqWanAndLe: { type: "faq" },
 };

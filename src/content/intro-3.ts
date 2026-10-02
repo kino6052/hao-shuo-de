@@ -132,7 +132,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Time 2 — Around an action** — \"when X\" with `X-de shíjiān`, finishing an action, what comes after it, starting, and doing something for a moment.",
+            "**Time 2 — Around an action** — \"when X\" with `X-de shíjiān`, finishing an action, what comes after it, starting, doing it again, how many times, and doing something for a moment.",
           ],
           zh: [],
           ru: [],
@@ -200,7 +200,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Numbers** — another type of noun: counting, saying how many, and number one, number two.",
+            "**Numbers** — another type of noun: counting, saying how many, number one, number two, the time, a little, and simple sums.",
           ],
           zh: [],
           ru: [],
@@ -245,7 +245,16 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Greetings and Feelings** — another type of sentence: saying hello, saying your name, telling someone what to do, and saying how you feel.",
+            "**Greetings and Feelings** — another type of sentence: saying hello and thank you, saying your name, telling someone what to do, and saying how you feel.",
+          ],
+          zh: [],
+          ru: [],
+        },
+      },
+      {
+        text: {
+          en: [
+            "**Doubling Words** — saying a word twice: to do something just a little, to make a describing word stronger, and to say every one.",
           ],
           zh: [],
           ru: [],

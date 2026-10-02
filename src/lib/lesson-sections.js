@@ -3,9 +3,9 @@
 // Keep this in sync with intro-3.ts if the curriculum changes --
 // scripts/check-book.js fails the build when the two drift apart.
 //
-// The book is the 21 lessons intro-3 lists, in three consecutive-numbered
+// The book is the 22 lessons intro-3 lists, in three consecutive-numbered
 // sections (see BOOK_STRUCTURE.md and BOOK_PLAN.md): lesson-01..06,
-// lesson-07..15, lesson-16..21. The previous 16-lesson layout is archived in
+// lesson-07..15, lesson-16..22. The previous 16-lesson layout is archived in
 // src/content/legacy/v2-16-lessons/, and the curriculum before that in
 // src/content/legacy/.
 export const LESSON_SECTIONS = [
@@ -43,6 +43,7 @@ export const LESSON_SECTIONS = [
       "lesson-19",
       "lesson-20",
       "lesson-21",
+      "lesson-22",
     ],
   },
 ];

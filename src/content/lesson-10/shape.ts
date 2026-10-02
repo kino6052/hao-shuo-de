@@ -37,6 +37,8 @@ export type LessonShape = {
   exampleWhere4: TExample;
   /** Example: tā kěnéng zài jiā-lǐ. */
   exampleWhere5: TExample;
+  /** Example: tā yòu zài jiā le. */
+  exampleWhere6: TExample;
   /** Vocabulary: "where". */
   vocabNali: TVocab;
   /** Say: To ask "where?", put nǎlǐ where the place would go. Pattern: Who + zài nǎlǐ? */
@@ -170,6 +172,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ta1}} {{word:ke3neng2}} {{word:zai4}} {{word:jia1}}-{{word:li3}}.",
     ttsText: "她可能在家里。",
+  },
+  exampleWhere6: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:you4}} {{word:zai4}} {{word:jia1}} {{word:le}}.",
+    ttsText: "他又在家了。",
   },
   vocabNali: { type: "vocab", term: "{{word:na3li3}}", ttsText: "哪里" },
   proseWhereQuestion: { type: "prose" },

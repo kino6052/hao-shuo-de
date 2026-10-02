@@ -15,6 +15,8 @@ const en: PartialByKey<LessonShape> = {
   vocabZhiwu: { en: ["plant"] },
   vocabHuo: { en: ["fire"] },
   vocabKongqi: { en: ["air"] },
+  vocabKai: { en: ["open; turn on"] },
+  vocabGuan: { en: ["close; turn off"] },
   proseAlsoDo: {
     en: [
       "**To say someone also does something**, put {{word:ye3}} (also) right before the verb.",
@@ -38,6 +40,8 @@ const en: PartialByKey<LessonShape> = {
   exampleAlsoDo6: { en: ["I'm beside him too."] },
   exampleAlsoDo7: { en: ["He doesn't move either."] },
   exampleAlsoDo8: { en: ["The other people came too."] },
+  exampleAlsoDo9: { en: ["The box is open, and the door is open too."] },
+  exampleAlsoDo10: { en: ["I turned off the fire, and so did he."] },
   proseAlsoIs: {
     en: [
       "**To say something is also like that**, put {{word:ye3}} before {{word:hen3}} and the adjective.",
@@ -55,7 +59,7 @@ const en: PartialByKey<LessonShape> = {
   exampleAlsoIs2: { en: ["The air is cold too."] },
   exampleAlsoIs3: { en: ["The fire is hot, and the sun is hot too."] },
   exampleAlsoIs4: { en: ["The sun is round, and the moon is round too."] },
-  exampleAlsoIs5: { en: ["The market is near too."] },
+  exampleAlsoIs5: { en: ["Your home is near too."] },
   vocabDou: { en: ["all; shénme-dōu: everything"] },
   proseAll: {
     en: [
@@ -78,6 +82,8 @@ const en: PartialByKey<LessonShape> = {
   exampleAll4: { en: ["The fruit is all eaten."] },
   exampleAll5: { en: ["The air outside is good."] },
   exampleAll6: { en: ["Where is the fire?"] },
+  exampleAll7: { en: ["The doors are all open."] },
+  exampleAll8: { en: ["The fires are all off."] },
   proseEverything: {
     en: [
       "**To say everything**, put {{word:shen2me}}-{{word:dou1}} before the verb.",
@@ -159,6 +165,8 @@ const en: PartialByKey<LessonShape> = {
   exercise6: { en: ["The plant is small."] },
   exercise7: { en: ["The fire is really hot."] },
   exercise8: { en: ["The air here is cold."] },
+  exercise9: { en: ["Is the box open?"] },
+  exercise10: { en: ["Turn off the fire!"] },
   answer1: { en: ["{{Word:wo3}} {{word:ye3}} {{word:yao4}}."] },
   answer2: {
     en: [
@@ -187,6 +195,8 @@ const en: PartialByKey<LessonShape> = {
       "{{Word:zhe4}}-{{word:li3}}-{{word:de}} {{word:kong1qi4}} {{word:hen3}} {{word:leng3}}.",
     ],
   },
+  answer9: { en: ["{{Word:he2zi}} {{word:kai1}} {{word:le}} {{word:ma}}?"] },
+  answer10: { en: ["{{Word:guan1}} {{word:huo3}}!"] },
   faqMeToo: {
     question: { en: ["How do I say \"me too\"?"] },
     en: [

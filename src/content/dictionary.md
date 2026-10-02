@@ -24,6 +24,7 @@ bùtóng | adjective/noun | different, altered, changed, other | ante
 chī | verb/noun | to eat, drink, consume, ingest; food, meal, edible substance | moku
 chóngzi | noun | insect, bug, beetle, spider | pipi
 cí | noun | word |
+cì | measure word | time, occurrence: counts how often something happens (e.g. {{word:liang3}}-{{word:ci4}}, "twice"; {{word:hen3}} {{word:duo1}} {{word:ci4}}, "many times") |
 cóng | preposition | from |
 dà | adjective | big, heavy, large, long, tall, important, adult | suli
 dǎ | verb | to hit, fight, battle, challenge, compete against | utala
@@ -33,6 +34,7 @@ dé | verb | to get, obtain, acquire, come to have; combines with a de-nominaliz
 de | particle | possessive marker, structural adjectival particle; used to bind modifiers and multi-word description structures onto target nouns | pi
 děng | verb | to wait |
 dì | noun | floor, horizontal surface, platform | supa
+diǎn | noun/measure word | o'clock, after a number ({{word:san1}}-{{word:dian3}}, "three o'clock"); a little: {{word:yi1}}-{{word:dian3}} ("a bit"), as in {{word:da4}} {{word:yi1}}-{{word:dian3}}, "a bit bigger" |
 dìfāng | noun | a place (both in space or metaphorical to mean part of something) |
 dòng | verb | to move; to stir, to budge |
 dòngwù | noun | animal, land mammal, beast | soweli
@@ -48,6 +50,7 @@ fùmǔ | noun | parent, ancestor, creator, caretaker | mama
 gè | measure word | universal classifier; mandatory interface between numbers/demonstratives and nouns |
 gěi | verb/coverb | to give, send, emit, provide; to, for, from the perspective of | pana, tawa
 gōngjù | noun | tool, implement, machine, device | ilo
+guān | verb | to close, shut; to turn off (e.g. {{word:guan1}} {{word:huo3}}, "turn off the fire") |
 gùnzi | noun | stick, rod, branch, long hard thing | palisa
 guò | particle | placed right after a verb to say you have done it at least once before (e.g. {{word:chi1}}-{{word:guo4}}, "have eaten before") |
 hào | particle | sequence marker, number identity, ordinal number prefix | nanpa
@@ -73,6 +76,7 @@ jīn | noun | money, cash, savings, wealth | mani
 jìn | adjective | near, close |
 jiǔ | number | nine |
 juéde | noun/adjective/verb | feeling, emotion, direct experience; to feel, think | pilin
+kāi | verb | to open; to turn on (e.g. {{word:he2zi}} {{word:kai1}} {{word:le}}, "the box is open") |
 kāishǐ | verb/auxiliary | to begin, start, open; turn on; manage to | open, kama
 kàn | verb | to look at, see, examine, observe, read, watch | lukin
 kěnéng | adverb | maybe, perhaps, might; goes before the verb (e.g. {{word:ta1}} {{word:ke3neng2}} {{word:lai2}}, "he might come") |
@@ -94,6 +98,7 @@ miàn | noun/suffix | side, face, surface; binds to a directional root via a hyp
 mǐfàn | noun | grain, rice, cereal, bread, pasta, staple food | pan
 mō | verb | to touch, feel, pet, perceive by contact | pilin
 nà | pronoun/adjective | that, those; syntactically binds as na-ge | ni
+ná | verb | to take, pick up, hold; take away (e.g. {{word:cong2}} {{word:qi1}} {{word:li3}}-{{word:mian4}} {{word:na2}} {{word:san1}}, "take three from seven") |
 nǎlǐ | pronoun | where; which place |
 nánrén | noun | man, male, masculine human, husband | mije
 néng | auxiliary | to be able to, be allowed to, can, may, possible | ken
@@ -122,7 +127,6 @@ shénme | pronoun/particle | what? which?; retains position without altering Chi
 shēntǐ | noun | body, physical torso, physical state | sijelo
 shì | verb | to be, copula link between subjects and identity predicates |
 shí | number | ten |
-shìchǎng | noun | market, shop, fair, business location, transaction hub | esun
 shíjiān | noun | time, duration, moment, occasion, period, situation | tenpo
 shǒu | noun | hand, arm, tactile organ | luka
 shuǐ | noun | water, liquid, fluid, wet substance, beverage | telo
@@ -146,9 +150,12 @@ xià | noun/directional | down, below, under; composes with other roots via a hy
 xiàn | noun | line, rope, hair, thread, cord, flexible long thing | linja
 xiànzài | noun/adverb | now, at present, these days |
 xiǎo | adjective | little, small, short, few, young, a bit | lili
+xiào | verb | to laugh, to smile |
 xiě | verb | to write, draw, represent with marks | sitelen
+xiè | verb | to thank; doubled, {{word:xie4}}-xie is "thank you", and {{word:bu4}} {{word:yong4}} {{word:xie4}} is "you are welcome" |
 xīn | adjective | new, fresh, additional, another, extra | sin
 xìng | noun | sex, sexuality, marital relations | unpa
+xué | verb | to learn, study; before a verb: learn to do it (e.g. {{word:wo3}} {{word:xue2}} {{word:xie3}}, "I'm learning to write") |
 yán | noun | salt, spice, flavor enhancer, extra context | namako
 yánsè | noun | color, pigment, tint frame | kule
 yào | auxiliary/verb | to want, need, require, must, should | wile
@@ -161,6 +168,7 @@ yīxià | measure word (for actions) | a moment, a short time; after a verb, do 
 yīyàng | adjective | same, similar, peer, fellow, each other | sama
 yòng | verb/coverb | to use, utilize; with, by means of | kepeken
 yǒu | verb | to have, contain, carry, hold, exist, there is; must be negated with mei, never bu | jo, lon
+yòu | adverb | again: it happens once more; goes before the verb (e.g. {{word:ta1}} {{word:you4}} {{word:chi1}} {{word:le}}, "he ate again") |
 yuán | adjective/noun | round, circular, spherical; ball, circle, wheel, cycle | sike
 yuǎn | adjective | far, distant |
 yuè | noun | moon, night sky object, star | mun

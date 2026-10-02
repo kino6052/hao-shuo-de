@@ -3,7 +3,7 @@
 // LessonShape is this lesson's exact, hand-written type -- see lesson-01's
 // shape.ts for the full explanation of the pattern.
 //
-// Rewritten in Phase 2 (BOOK_PLAN.md): also (yě) with verbs and with adjectives, all (dōu), everything (shénme-dōu), and part (bùfen).
+// Rewritten in Phase 2 (BOOK_PLAN.md): also (yě) with verbs and with adjectives, all (dōu), everything (shénme-dōu), and part (bùfen). kāi and guān (open, close, D41) are theme words in the examples.
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- lesson-14).
 import type {
@@ -31,6 +31,10 @@ export type LessonShape = {
   vocabHuo: TVocab;
   /** Vocabulary: "air". */
   vocabKongqi: TVocab;
+  /** Vocabulary: "open; turn on". */
+  vocabKai: TVocab;
+  /** Vocabulary: "close; turn off". */
+  vocabGuan: TVocab;
   /** Say: To say someone also does something, put yě (also) right before the verb. Pattern: Who + yě + verb */
   proseAlsoDo: TProse;
   /** Example: wǒ yě chī. */
@@ -49,6 +53,10 @@ export type LessonShape = {
   exampleAlsoDo7: TExample;
   /** Example: biéde rén yě lái le. */
   exampleAlsoDo8: TExample;
+  /** Example: hézi kāi le, kǒu yě kāi le. */
+  exampleAlsoDo9: TExample;
+  /** Example: wǒ guān le huǒ, tā yě guān le. */
+  exampleAlsoDo10: TExample;
   /** Say: To say something is also like that, put yě before hěn and the adjective. Pattern: Thing + yě + hěn + adjective */
   proseAlsoIs: TProse;
   /** Example: wǒ hěn lěng, tā yě hěn lěng. */
@@ -59,7 +67,7 @@ export type LessonShape = {
   exampleAlsoIs3: TExample;
   /** Example: rì hěn yuán, yuè yě hěn yuán. */
   exampleAlsoIs4: TExample;
-  /** Example: shìchǎng yě hěn jìn. */
+  /** Example: nǐ-de jiā yě hěn jìn. */
   exampleAlsoIs5: TExample;
   /** Vocabulary: "all; shénme-dōu: everything". */
   vocabDou: TVocab;
@@ -77,6 +85,10 @@ export type LessonShape = {
   exampleAll5: TExample;
   /** Example: huǒ zài nǎlǐ? */
   exampleAll6: TExample;
+  /** Example: kǒu dōu kāi le. */
+  exampleAll7: TExample;
+  /** Example: huǒ dōu guān le. */
+  exampleAll8: TExample;
   /** Say: To say everything, put shénme-dōu before the verb. Pattern: Who + shénme-dōu + verb */
   proseEverything: TProse;
   /** Example: wǒ shénme-dōu chī. */
@@ -119,6 +131,10 @@ export type LessonShape = {
   exercise7: TExercise;
   /** Exercise 8: The air here is cold. */
   exercise8: TExercise;
+  /** Exercise 9: Is the box open? */
+  exercise9: TExercise;
+  /** Exercise 10: Turn off the fire! */
+  exercise10: TExercise;
   /** Answer 1: wǒ yě yào. */
   answer1: TAnswer;
   /** Answer 2: shuǐ yě hěn rè. */
@@ -135,6 +151,10 @@ export type LessonShape = {
   answer7: TAnswer;
   /** Answer 8: zhè-lǐ-de kōngqì hěn lěng. */
   answer8: TAnswer;
+  /** Answer 9: hézi kāi le ma? */
+  answer9: TAnswer;
+  /** Answer 10: guān huǒ! */
+  answer10: TAnswer;
   /** FAQ: how do I say "me too"? (wǒ yě shì, or repeat the verb) */
   faqMeToo: TFaq;
   /** FAQ: méi before a verb means "didn't" */
@@ -154,6 +174,8 @@ const shape: LessonShape = {
     term: "{{word:kong1qi4}}",
     ttsText: "空气",
   },
+  vocabKai: { type: "vocab", term: "{{word:kai1}}", ttsText: "开" },
+  vocabGuan: { type: "vocab", term: "{{word:guan1}}", ttsText: "关" },
   proseAlsoDo: { type: "prose" },
   exampleAlsoDo1: {
     type: "example",
@@ -195,6 +217,16 @@ const shape: LessonShape = {
     pinyin: "{{Word:bie2de}} {{word:ren2}} {{word:ye3}} {{word:lai2}} {{word:le}}.",
     ttsText: "别的人也来了。",
   },
+  exampleAlsoDo9: {
+    type: "example",
+    pinyin: "{{Word:he2zi}} {{word:kai1}} {{word:le}}, {{word:kou3}} {{word:ye3}} {{word:kai1}} {{word:le}}.",
+    ttsText: "盒子开了，口也开了。",
+  },
+  exampleAlsoDo10: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:guan1}} {{word:le}} {{word:huo3}}, {{word:ta1}} {{word:ye3}} {{word:guan1}} {{word:le}}.",
+    ttsText: "我关了火，他也关了。",
+  },
   proseAlsoIs: { type: "prose" },
   exampleAlsoIs1: {
     type: "example",
@@ -218,8 +250,8 @@ const shape: LessonShape = {
   },
   exampleAlsoIs5: {
     type: "example",
-    pinyin: "{{Word:shi4chang3}} {{word:ye3}} {{word:hen3}} {{word:jin4}}.",
-    ttsText: "市场也很近。",
+    pinyin: "{{Word:ni3}}-{{word:de}} {{word:jia1}} {{word:ye3}} {{word:hen3}} {{word:jin4}}.",
+    ttsText: "你的家也很近。",
   },
   vocabDou: { type: "vocab", term: "{{word:dou1}}", ttsText: "都" },
   proseAll: { type: "prose" },
@@ -252,6 +284,16 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:huo3}} {{word:zai4}} {{word:na3li3}}?",
     ttsText: "火在哪里？",
+  },
+  exampleAll7: {
+    type: "example",
+    pinyin: "{{Word:kou3}} {{word:dou1}} {{word:kai1}} {{word:le}}.",
+    ttsText: "口都开了。",
+  },
+  exampleAll8: {
+    type: "example",
+    pinyin: "{{Word:huo3}} {{word:dou1}} {{word:guan1}} {{word:le}}.",
+    ttsText: "火都关了。",
   },
   proseEverything: { type: "prose" },
   exampleEverything1: {
@@ -315,6 +357,8 @@ const shape: LessonShape = {
   exercise6: { type: "exercise" },
   exercise7: { type: "exercise" },
   exercise8: { type: "exercise" },
+  exercise9: { type: "exercise" },
+  exercise10: { type: "exercise" },
   answer1: { type: "answer", ttsText: "我也要。" },
   answer2: { type: "answer", ttsText: "水也很热。" },
   answer3: { type: "answer", ttsText: "我们都要水果。" },
@@ -323,6 +367,8 @@ const shape: LessonShape = {
   answer6: { type: "answer", ttsText: "植物很小。" },
   answer7: { type: "answer", ttsText: "火真热。" },
   answer8: { type: "answer", ttsText: "这里的空气很冷。" },
+  answer9: { type: "answer", ttsText: "盒子开了吗？" },
+  answer10: { type: "answer", ttsText: "关火！" },
   faqMeToo: { type: "faq" },
   faqMeiDidnt: { type: "faq" },
   faqAllPeople: { type: "faq" },

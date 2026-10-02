@@ -1,0 +1,53 @@
+// Russian text for lesson-22, matching shape.ts's keys. Typed as
+// `PartialByKey<LessonShape>`.
+// Not translated yet -- every `ru` is the empty-array placeholder.
+import type { PartialByKey } from "../../lib/chapter-shape-types.ts";
+import type { LessonShape } from "./shape.ts";
+
+const ru: PartialByKey<LessonShape> = {
+  title: { ru: [] },
+  summary: { ru: [] },
+  proseVerbs: { ru: [], tldr: { ru: [] }, necessity: { ru: [] } },
+  exampleVerbs1: { ru: [] },
+  exampleVerbs2: { ru: [] },
+  exampleVerbs3: { ru: [] },
+  exampleVerbs4: { ru: [] },
+  exampleVerbs5: { ru: [] },
+  exampleVerbs6: { ru: [] },
+  exampleVerbs7: { ru: [] },
+  exampleVerbs8: { ru: [] },
+  exampleVerbs9: { ru: [] },
+  proseDescribe: { ru: [], tldr: { ru: [] }, necessity: { ru: [] } },
+  exampleDescribe1: { ru: [] },
+  exampleDescribe2: { ru: [] },
+  exampleDescribe3: { ru: [] },
+  exampleDescribe4: { ru: [] },
+  exampleDescribe5: { ru: [] },
+  exampleDescribe6: { ru: [] },
+  exampleDescribe7: { ru: [] },
+  proseEvery: { ru: [], tldr: { ru: [] }, necessity: { ru: [] } },
+  exampleEvery1: { ru: [] },
+  exampleEvery2: { ru: [] },
+  exampleEvery3: { ru: [] },
+  exampleEvery4: { ru: [] },
+  exampleEvery5: { ru: [] },
+  exampleEvery6: { ru: [] },
+  infoDoubling: { title: { ru: [] }, items: [{ ru: [] }, { ru: [] }, { ru: [] }] },
+  exercise1: { ru: [] },
+  exercise2: { ru: [] },
+  exercise3: { ru: [] },
+  exercise4: { ru: [] },
+  exercise5: { ru: [] },
+  exercise6: { ru: [] },
+  answer1: { ru: [] },
+  answer2: { ru: [] },
+  answer3: { ru: [] },
+  answer4: { ru: [] },
+  answer5: { ru: [] },
+  answer6: { ru: [] },
+  faqLight: { question: { ru: [] }, ru: [] },
+  faqWhichVerbs: { question: { ru: [] }, ru: [] },
+  faqHaoHaoKan: { question: { ru: [] }, ru: [] },
+};
+
+export default ru;

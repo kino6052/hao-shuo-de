@@ -17,6 +17,7 @@ const zh: PartialByKey<LessonShape> = {
   exampleColorThing3: { zh: [] },
   exampleColorThing4: { zh: [] },
   exampleColorThing5: { zh: [] },
+  exampleColorThing6: { zh: [] },
   vocabLanse: { zh: [] },
   proseIsColor: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
   exampleIsColor1: { zh: [] },
@@ -40,6 +41,7 @@ const zh: PartialByKey<LessonShape> = {
   exampleWhatColor6: { zh: [] },
   exampleWhatColor7: { zh: [] },
   exampleWhatColor8: { zh: [] },
+  exampleWhatColor9: { zh: [] },
   infoColors: {
     title: { zh: [] },
     items: [{ zh: [] }, { zh: [] }, { zh: [] }],

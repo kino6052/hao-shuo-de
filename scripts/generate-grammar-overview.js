@@ -31,7 +31,7 @@ export async function buildOverview() {
 
   const entries = [
     { type: 'title', ...text(['Grammar Patterns Reference'], ['Справочник грамматических конструкций'], ['语法结构参考']) },
-    { type: 'summary', ...text(['Every grammar box from the 21 lessons, in one place, in lesson order.']) },
+    { type: 'summary', ...text(['Every grammar box from the 22 lessons, in one place, in lesson order.']) },
     {
       type: 'prose',
       ...text([

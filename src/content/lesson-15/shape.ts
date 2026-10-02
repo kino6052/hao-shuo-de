@@ -81,6 +81,10 @@ export type LessonShape = {
   exampleBa4: TExample;
   /** Example: tā bǎ shuǐ dōu nòng rè le. */
   exampleBa5: TExample;
+  /** Example: wǒ bǎ hézi nòng-kāi le. */
+  exampleBa6: TExample;
+  /** Example: tā bǎ huǒ guān le. */
+  exampleBa7: TExample;
   /** Vocabulary: "put". */
   vocabFang: TVocab;
   /** Say: To say where you put a thing, put bǎ and the thing first, then fàng zài and the place. Pattern: Who + bǎ + thing + fàng zài + place */
@@ -254,6 +258,16 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ta1}} {{word:ba3}} {{word:shui3}} {{word:dou1}} {{word:nong4}} {{word:re4}} {{word:le}}.",
     ttsText: "他把水都弄热了。",
+  },
+  exampleBa6: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:ba3}} {{word:he2zi}} {{word:nong4}}-{{word:kai1}} {{word:le}}.",
+    ttsText: "我把盒子弄开了。",
+  },
+  exampleBa7: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:ba3}} {{word:huo3}} {{word:guan1}} {{word:le}}.",
+    ttsText: "他把火关了。",
   },
   vocabFang: { type: "vocab", term: "{{word:fang4}}", ttsText: "放" },
   proseFang: { type: "prose" },

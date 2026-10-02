@@ -92,6 +92,8 @@ const en: PartialByKey<LessonShape> = {
   exampleBa3: { en: ["Heat up the water."] },
   exampleBa4: { en: ["He made the opening bigger."] },
   exampleBa5: { en: ["He made all the water hot."] },
+  exampleBa6: { en: ["I got the box open."] },
+  exampleBa7: { en: ["He turned off the fire."] },
   vocabFang: { en: ["put"] },
   proseFang: {
     en: [

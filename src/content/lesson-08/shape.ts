@@ -59,6 +59,8 @@ export type LessonShape = {
   exampleNow5: TExample;
   /** Example: tā kěnéng zài shuìjiào. */
   exampleNow6: TExample;
+  /** Example: wǒ zài xué xiě. */
+  exampleNow7: TExample;
   /** Vocabulary: "will". */
   vocabHui: TVocab;
   /** Say: To say something will happen, put huì before the verb. Pattern: Who + huì + verb */
@@ -229,6 +231,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ta1}} {{word:ke3neng2}} {{word:zai4}} {{word:shui4jiao4}}.",
     ttsText: "他可能在睡觉。",
+  },
+  exampleNow7: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:zai4}} {{word:xue2}} {{word:xie3}}.",
+    ttsText: "我在学写。",
   },
   vocabHui: { type: "vocab", term: "{{word:hui4}}", ttsText: "会" },
   proseWill: { type: "prose" },

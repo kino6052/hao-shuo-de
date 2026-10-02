@@ -14,6 +14,7 @@ const ru: PartialByKey<LessonShape> = {
   exampleWhere3: { ru: [] },
   exampleWhere4: { ru: [] },
   exampleWhere5: { ru: [] },
+  exampleWhere6: { ru: [] },
   vocabNali: { ru: [] },
   proseWhereQuestion: { ru: [], tldr: { ru: [] }, necessity: { ru: [] } },
   exampleWhereQuestion1: { ru: [] },

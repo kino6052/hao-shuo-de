@@ -33,6 +33,7 @@ const en: PartialByKey<LessonShape> = {
   exampleColorThing3: { en: ["A black animal."] },
   exampleColorThing4: { en: ["Yellow fruit."] },
   exampleColorThing5: { en: ["Put the red clothes here."] },
+  exampleColorThing6: { en: ["Take the red one."] },
   vocabLanse: { en: ["blue, green"] },
   proseIsColor: {
     en: [
@@ -80,6 +81,7 @@ const en: PartialByKey<LessonShape> = {
   exampleWhatColor6: { en: ["What color is number six?"] },
   exampleWhatColor7: { en: ["Do you have other colors?"] },
   exampleWhatColor8: { en: ["This color is nice."] },
+  exampleWhatColor9: { en: ["This color is a bit better."] },
   infoColors: {
     title: { en: ["Colors"] },
     items: [

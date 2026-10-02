@@ -45,6 +45,8 @@ export type LessonShape = {
   exampleBecause6: TExample;
   /** Example: yīnwèi yǒu kōngqì, wǒ-men néng huó. */
   exampleBecause7: TExample;
+  /** Example: yīnwèi hěn rè, wǒ guān le huǒ. */
+  exampleBecause8: TExample;
   /** Vocabulary: "but". */
   vocabDanshi: TVocab;
   /** Vocabulary: "salt". */
@@ -67,6 +69,8 @@ export type LessonShape = {
   exampleBut7: TExample;
   /** Example: zhíwù hěn xiǎo, dànshì huó le. */
   exampleBut8: TExample;
+  /** Example: zhè-ge hěn hǎo, dànshì yǒu yī-diǎn dà. */
+  exampleBut9: TExample;
   /** Vocabulary: "X-de huà: "if X"". */
   vocabHua: TVocab;
   /** Say: To say "if", put -de huà after the if-part, then a comma. Pattern: X-de huà, the rest */
@@ -87,7 +91,7 @@ export type LessonShape = {
   exampleIf7: TExample;
   /** Example: yǒu shuǐ-de huà, zhíwù néng huó. */
   exampleIf8: TExample;
-  /** Example: shìchǎng yuǎn-de huà, wǒ bù qù. */
+  /** Example: nà-ge dìfāng yuǎn-de huà, wǒ bù qù. */
   exampleIf9: TExample;
   /** Grammar box: yīnwèi, dànshì, X-de huà (with huó). */
   infoLinkingSentences: TInfo;
@@ -171,6 +175,11 @@ const shape: LessonShape = {
     pinyin: "{{Word:yin1wei4}} {{word:you3}} {{word:kong1qi4}}, {{word:wo3}}-{{word:men}} {{word:neng2}} {{word:huo2}}.",
     ttsText: "因为有空气，我们能活。",
   },
+  exampleBecause8: {
+    type: "example",
+    pinyin: "{{Word:yin1wei4}} {{word:hen3}} {{word:re4}}, {{word:wo3}} {{word:guan1}} {{word:le}} {{word:huo3}}.",
+    ttsText: "因为很热，我关了火。",
+  },
   vocabDanshi: {
     type: "vocab",
     term: "{{word:dan4shi4}}",
@@ -218,6 +227,11 @@ const shape: LessonShape = {
     pinyin: "{{Word:zhi2wu4}} {{word:hen3}} {{word:xiao3}}, {{word:dan4shi4}} {{word:huo2}} {{word:le}}.",
     ttsText: "植物很小，但是活了。",
   },
+  exampleBut9: {
+    type: "example",
+    pinyin: "{{Word:zhe4}}-ge {{word:hen3}} {{word:hao3}}, {{word:dan4shi4}} {{word:you3}} {{word:yi1}}-{{word:dian3}} {{word:da4}}.",
+    ttsText: "这个很好，但是有一点大。",
+  },
   vocabHua: { type: "vocab", term: "{{word:hua4}}", ttsText: "话" },
   proseIf: { type: "prose" },
   exampleIf1: {
@@ -262,8 +276,8 @@ const shape: LessonShape = {
   },
   exampleIf9: {
     type: "example",
-    pinyin: "{{Word:shi4chang3}} {{word:yuan3}}-{{word:de}} {{word:hua4}}, {{word:wo3}} {{word:bu4}} {{word:qu4}}.",
-    ttsText: "市场远的话，我不去。",
+    pinyin: "{{Word:na4}}-ge {{word:di4fang1}} {{word:yuan3}}-{{word:de}} {{word:hua4}}, {{word:wo3}} {{word:bu4}} {{word:qu4}}.",
+    ttsText: "那个地方远的话，我不去。",
   },
   infoLinkingSentences: {
     type: "info",

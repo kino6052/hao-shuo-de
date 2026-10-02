@@ -36,6 +36,8 @@ const ru: PartialByKey<LessonShape> = {
   exampleBa3: { ru: [] },
   exampleBa4: { ru: [] },
   exampleBa5: { ru: [] },
+  exampleBa6: { ru: [] },
+  exampleBa7: { ru: [] },
   vocabFang: { ru: [] },
   proseFang: { ru: [], tldr: { ru: [] }, necessity: { ru: [] } },
   exampleFang1: { ru: [] },

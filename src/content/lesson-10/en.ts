@@ -32,6 +32,7 @@ const en: PartialByKey<LessonShape> = {
   exampleWhere3: { en: ["He's here."] },
   exampleWhere4: { en: ["He stays at home."] },
   exampleWhere5: { en: ["She might be at home."] },
+  exampleWhere6: { en: ["He's at home again."] },
   vocabNali: { en: ["where"] },
   proseWhereQuestion: {
     en: [

@@ -43,6 +43,8 @@ export type LessonShape = {
   exampleColorThing4: TExample;
   /** Example: bǎ hóngsè-de yīfu fàng zài zhè-lǐ. */
   exampleColorThing5: TExample;
+  /** Example: ná hóngsè-de. */
+  exampleColorThing6: TExample;
   /** Vocabulary: "blue, green". */
   vocabLanse: TVocab;
   /** Say: To say what color something is, put shì before the color, and -de after it. Pattern: Thing + shì + color-de */
@@ -89,6 +91,8 @@ export type LessonShape = {
   exampleWhatColor7: TExample;
   /** Example: zhè-zhǒng yánsè hěn hǎo. */
   exampleWhatColor8: TExample;
+  /** Example: zhè-ge yánsè hǎo yī-diǎn. */
+  exampleWhatColor9: TExample;
   /** Grammar box: color-de + noun, shì + color-de, shénme yánsè. */
   infoColors: TInfo;
   /** Exercise 1: a white box */
@@ -161,6 +165,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ba3}} {{word:hong2se4}}-{{word:de}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:zhe4}}-{{word:li3}}.",
     ttsText: "把红色的衣服放在这里。",
+  },
+  exampleColorThing6: {
+    type: "example",
+    pinyin: "{{Word:na2}} {{word:hong2se4}}-{{word:de}}.",
+    ttsText: "拿红色的。",
   },
   vocabLanse: { type: "vocab", term: "{{word:lan2se4}}", ttsText: "蓝色" },
   proseIsColor: { type: "prose" },
@@ -260,6 +269,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:zhe4}}-{{word:zhong3}} {{word:yan2se4}} {{word:hen3}} {{word:hao3}}.",
     ttsText: "这种颜色很好。",
+  },
+  exampleWhatColor9: {
+    type: "example",
+    pinyin: "{{Word:zhe4}}-ge {{word:yan2se4}} {{word:hao3}} {{word:yi1}}-{{word:dian3}}.",
+    ttsText: "这个颜色好一点。",
   },
   infoColors: {
     type: "info",

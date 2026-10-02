@@ -58,6 +58,7 @@ const en: PartialByKey<LessonShape> = {
   exampleNow4: { en: ["Why are you sleeping?"] },
   exampleNow5: { en: ["He's sleeping now."] },
   exampleNow6: { en: ["He might be sleeping."] },
+  exampleNow7: { en: ["I'm learning to write right now."] },
   vocabHui: { en: ["will"] },
   proseWill: {
     en: [

@@ -18,6 +18,9 @@
 //      scripts/generate-grammar-overview.js.
 //   6. The Chinese in the proverbs and in the stories appendix (its **bold**
 //      lines) uses only dictionary words.
+//   7. The composite dictionary (src/data/composites.json) uses only
+//      dictionary words, lists each word once, and gives a Hao-shuo-de form
+//      for every entry that isn't a gap or a skip.
 //
 // The other gates (jargon in the rest of the text, early words, word use,
 // grammar boxes) are separate scripts; scripts/check-all.js runs them all on
@@ -198,6 +201,25 @@ for (const n of [1, 2, 3]) {
   readFileSync(resolve(CONTENT_DIR, 'appendix-stories.yaml'), 'utf-8').split(/\r?\n/).forEach((line, i) => {
     for (const [, chinese] of line.matchAll(/\*\*([^*]+)\*\*/g)) if (chinese.includes('{{')) check(`appendix-stories.yaml:${i + 1}`, chinese);
   });
+}
+
+// ---------- 7. the composite dictionary uses only dictionary words ----------
+{
+  const terms = termIndex(dictionary);
+  const { entries } = JSON.parse(readFileSync(resolve(ROOT, 'src/data/composites.json'), 'utf-8'));
+  const seen = new Set();
+  for (const e of entries) {
+    const where = `composites.json "${e.zh}"`;
+    if (seen.has(e.zh)) errors.push(`${where}: listed twice`);
+    seen.add(e.zh);
+    if (!e.hsd) {
+      if (e.fit !== 'gap' && e.fit !== 'skip') errors.push(`${where}: no Hao-shuo-de form, but fit is "${e.fit}"`);
+      continue;
+    }
+    // Names go in quotes (Lesson 1), so they don't count as words.
+    const unknown = wordsIn(e.hsd.replace(/"[^"]*"/g, ' '), terms, { pinyinField: true }).filter((w) => !w.id || !dictionary[w.id]);
+    if (unknown.length) errors.push(`${where}: ${unknown.map((w) => w.token).join(', ')} not in the dictionary: "${e.hsd}"`);
+  }
 }
 
 // ---------- report ----------

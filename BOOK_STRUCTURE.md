@@ -1,6 +1,6 @@
 # Book Structure
 
-Table of contents for Hǎo-shuō-de, in reading order. Source files live under `src/content/`. The 21 lessons are exactly the 21 lessons `intro-3.ts` lists, with the same titles, in the same three sections (the sidebar groups them the same way — see `src/lib/lesson-sections.js`). `npm run check-book` fails the build if they drift apart. `BOOK_PLAN.md` holds the plan, the tone guide, and the checklist for the restructure.
+Table of contents for Hǎo-shuō-de, in reading order. Source files live under `src/content/`. The 22 lessons are exactly the 22 lessons `intro-3.ts` lists, with the same titles, in the same three sections (the sidebar groups them the same way — see `src/lib/lesson-sections.js`). `npm run check-book` fails the build if they drift apart. `BOOK_PLAN.md` holds the plan, the tone guide, and the checklist for the restructure.
 
 ```
 Hǎo-shuō-de
@@ -34,7 +34,8 @@ Hǎo-shuō-de
 │   ├── 18. Changing the Role of a Word                lesson-18/
 │   ├── 19. Relationships 1 — Inside a sentence        lesson-19/
 │   ├── 20. Relationships 2 — Linking sentences        lesson-20/
-│   └── 21. Greetings and Feelings                     lesson-21/
+│   ├── 21. Greetings and Feelings                     lesson-21/
+│   └── 22. Doubling Words                             lesson-22/
 │
 └── Section 4 — Texts, Vocabulary, and Reference
     ├── Proverbs                                       proverbs.md
@@ -65,7 +66,7 @@ Every file types its object directly against `Shape`/`LessonShape` — there is 
 - **The 21-lesson restructure (September 2026).** The book went from 16 lessons to the 21 that intro-3 lists: Time and Space, More Modifiers, and Relationships were split into several lessons, and Particles merged into Greetings and Feelings. See `BOOK_PLAN.md` for every decision. Phase 1 moved the old lessons' blocks into the new layout without rewriting them. Each block's JSDoc in `shape.ts` says `[from old LNN]`. Phase 2 rewrites the lessons one by one. Section 1 (lessons 1–6) is already in plain words.
 - **Archives.** The 16-lesson layout is in `src/content/legacy/v2-16-lessons/`, and the 19-lesson curriculum before it is in `src/content/legacy/`. Both are excluded from the build, from `npm run typecheck`, and from the sidebar. They're reference material only.
 - **Reading order.** A lesson page shows its blocks in the order `shape.ts` lists them (the view's `flow`, built in `src/lib/chapter-content.js`): each point, then its examples, with word cards just before the first point that uses them. Info boxes and exercises can sit anywhere; exercise numbers carry on across groups.
-- **Vocabulary.** Every one of the 163 words (135 of the original dictionary words plus 28 approved additions; see BOOK_PLAN.md §4d) is introduced in exactly one lesson, as that lesson's `vocab` blocks. `BOOK_PLAN.md` §4b lists which lesson introduces which word.
+- **Vocabulary.** Every one of the 171 words (134 of the original dictionary words plus 37 approved additions; see BOOK_PLAN.md §4d) is introduced in exactly one lesson, as that lesson's `vocab` blocks. `BOOK_PLAN.md` §4b lists which lesson introduces which word.
 - **Checks.** `npm run build` starts with `npm run check`, which runs every gate: lessons match intro-3, vocabulary, summaries, jargon, words used too early, every word used, and a grammar box in every lesson. The gates are strict for the finished lessons in `scripts/finished-lessons.js` and report the rest. See `BOOK_PLAN.md` §6.
 - **Dictionary and Categorical Dictionary** each have English/Russian/Chinese as separate `.md` files (`dictionary.md`, `dictionary.rus.md`, `dictionary.zh.md`, and the `-categorical` equivalents); the alphabetical one is regenerated from `src/data/dictionary.json` by `scripts/generate-dictionary.js`.
 - **Appendix: Sandhi, Minimality, Stories** and **Sentence Builder** are still on the older multi-language `.yaml` block schema (pre-`.ts` migration). Their `— Lesson N` citations point to the 21-lesson numbering.

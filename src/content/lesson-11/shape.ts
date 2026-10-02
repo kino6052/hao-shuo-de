@@ -27,11 +27,9 @@ export type LessonShape = {
   vocabLai: TVocab;
   /** Vocabulary: "go". */
   vocabQu: TVocab;
-  /** Vocabulary: "market". */
-  vocabShichang: TVocab;
   /** Say: To say you come or go somewhere, put lái (come) or qù (go) before the place. Pattern: Who + lái / qù + place */
   proseComeGo: TProse;
-  /** Example: wǒ qù shìchǎng. */
+  /** Example: wǒ qù fùmǔ-de jiā. */
   exampleComeGo1: TExample;
   /** Example: nǐ lái wǒ-de jiā ma? */
   exampleComeGo2: TExample;
@@ -39,21 +37,23 @@ export type LessonShape = {
   exampleComeGo3: TExample;
   /** Example: lái! */
   exampleComeGo4: TExample;
-  /** Example: wǒ qù-guò shìchǎng. */
+  /** Example: wǒ qù-guò nà-ge dìfāng. */
   exampleComeGo5: TExample;
-  /** Example: chī-wán hòu, wǒ-men qù shìchǎng. */
+  /** Example: chī-wán hòu, wǒ-men qù nǐ-de jiā. */
   exampleComeGo6: TExample;
   /** Example: tā lái wǒ-de páng-biān. */
   exampleComeGo7: TExample;
-  /** Example: wǒ-men xiànzài qù shìchǎng. */
+  /** Example: wǒ-men xiànzài qù tā-de jiā. */
   exampleComeGo8: TExample;
   /** Example: nǐ lái yīxià. */
   exampleComeGo9: TExample;
+  /** Example: nǐ yòu lái le! */
+  exampleComeGo10: TExample;
   /** Vocabulary: "from". */
   vocabCong: TVocab;
   /** Say: To say where you come from, put cóng (from) before the place, then lái. Pattern: Who + cóng + place + lái */
   proseFrom: TProse;
-  /** Example: wǒ cóng shìchǎng lái. */
+  /** Example: wǒ cóng fùmǔ-de jiā lái. */
   exampleFrom1: TExample;
   /** Example: tā cóng jiā lái. */
   exampleFrom2: TExample;
@@ -67,7 +67,7 @@ export type LessonShape = {
   proseArrive: TProse;
   /** Example: wǒ dào jiā le. */
   exampleArrive1: TExample;
-  /** Example: tā dào shìchǎng le. */
+  /** Example: tā dào nà-ge dìfāng le. */
   exampleArrive2: TExample;
   /** Example: shénme shíjiān nǐ dào? */
   exampleArrive3: TExample;
@@ -115,13 +115,13 @@ export type LessonShape = {
   vocabJin: TVocab;
   /** Say: To say a place is far or near, use yuǎn (far) or jìn (near). Pattern: Place + hěn + yuǎn / jìn */
   proseFar: TProse;
-  /** Example: shìchǎng hěn yuǎn. */
+  /** Example: nà-ge dìfāng hěn yuǎn. */
   exampleFar1: TExample;
   /** Example: wǒ-de jiā hěn jìn. */
   exampleFar2: TExample;
   /** Example: nǐ-de jiā yuǎn ma? */
   exampleFar3: TExample;
-  /** Example: wǒ-men qù jìn-de shìchǎng. */
+  /** Example: wǒ-men qù jìn-de dìfāng. */
   exampleFar4: TExample;
   /** Example: tā cóng hěn yuǎn-de dìfāng lái. */
   exampleFar5: TExample;
@@ -131,7 +131,7 @@ export type LessonShape = {
   exercise1: TExercise;
   /** Exercise 2: She comes from home. */
   exercise2: TExercise;
-  /** Exercise 3: We arrived at the market. */
+  /** Exercise 3: We arrived home. */
   exercise3: TExercise;
   /** Exercise 4: Get up! */
   exercise4: TExercise;
@@ -143,7 +143,7 @@ export type LessonShape = {
   exercise7: TExercise;
   /** Exercise 8: Don't move! */
   exercise8: TExercise;
-  /** Exercise 9: The market is far. */
+  /** Exercise 9: My parents' home is far. */
   exercise9: TExercise;
   /** Exercise 10: My home is near. */
   exercise10: TExercise;
@@ -151,7 +151,7 @@ export type LessonShape = {
   answer1: TAnswer;
   /** Answer 2: tā cóng jiā lái. */
   answer2: TAnswer;
-  /** Answer 3: wǒ-men dào shìchǎng le. */
+  /** Answer 3: wǒ-men dào jiā le. */
   answer3: TAnswer;
   /** Answer 4: qǐ-lái! */
   answer4: TAnswer;
@@ -163,7 +163,7 @@ export type LessonShape = {
   answer7: TAnswer;
   /** Answer 8: bù yào dòng! */
   answer8: TAnswer;
-  /** Answer 9: shìchǎng hěn yuǎn. */
+  /** Answer 9: fùmǔ-de jiā hěn yuǎn. */
   answer9: TAnswer;
   /** Answer 10: wǒ-de jiā hěn jìn. */
   answer10: TAnswer;
@@ -180,16 +180,11 @@ const shape: LessonShape = {
   summary: { type: "summary" },
   vocabLai: { type: "vocab", term: "{{word:lai2}}", ttsText: "来" },
   vocabQu: { type: "vocab", term: "{{word:qu4}}", ttsText: "去" },
-  vocabShichang: {
-    type: "vocab",
-    term: "{{word:shi4chang3}}",
-    ttsText: "市场",
-  },
   proseComeGo: { type: "prose" },
   exampleComeGo1: {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:qu4}} {{word:shi4chang3}}.",
-    ttsText: "我去市场。",
+    pinyin: "{{Word:wo3}} {{word:qu4}} {{word:fu4mu3}}-{{word:de}} {{word:jia1}}.",
+    ttsText: "我去父母的家。",
   },
   exampleComeGo2: {
     type: "example",
@@ -208,13 +203,13 @@ const shape: LessonShape = {
   },
   exampleComeGo5: {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:qu4}}-{{word:guo4}} {{word:shi4chang3}}.",
-    ttsText: "我去过市场。",
+    pinyin: "{{Word:wo3}} {{word:qu4}}-{{word:guo4}} {{word:na4}}-ge {{word:di4fang1}}.",
+    ttsText: "我去过那个地方。",
   },
   exampleComeGo6: {
     type: "example",
-    pinyin: "{{Word:chi1}}-{{word:wan2}} {{word:hou4}}, {{word:wo3}}-{{word:men}} {{word:qu4}} {{word:shi4chang3}}.",
-    ttsText: "吃完后，我们去市场。",
+    pinyin: "{{Word:chi1}}-{{word:wan2}} {{word:hou4}}, {{word:wo3}}-{{word:men}} {{word:qu4}} {{word:ni3}}-{{word:de}} {{word:jia1}}.",
+    ttsText: "吃完后，我们去你的家。",
   },
   exampleComeGo7: {
     type: "example",
@@ -223,20 +218,25 @@ const shape: LessonShape = {
   },
   exampleComeGo8: {
     type: "example",
-    pinyin: "{{Word:wo3}}-{{word:men}} {{word:xian4zai4}} {{word:qu4}} {{word:shi4chang3}}.",
-    ttsText: "我们现在去市场。",
+    pinyin: "{{Word:wo3}}-{{word:men}} {{word:xian4zai4}} {{word:qu4}} {{word:ta1}}-{{word:de}} {{word:jia1}}.",
+    ttsText: "我们现在去他的家。",
   },
   exampleComeGo9: {
     type: "example",
     pinyin: "{{Word:ni3}} {{word:lai2}} {{word:yi1xia4}}.",
     ttsText: "你来一下。",
   },
+  exampleComeGo10: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:you4}} {{word:lai2}} {{word:le}}!",
+    ttsText: "你又来了！",
+  },
   vocabCong: { type: "vocab", term: "{{word:cong2}}", ttsText: "从" },
   proseFrom: { type: "prose" },
   exampleFrom1: {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:cong2}} {{word:shi4chang3}} {{word:lai2}}.",
-    ttsText: "我从市场来。",
+    pinyin: "{{Word:wo3}} {{word:cong2}} {{word:fu4mu3}}-{{word:de}} {{word:jia1}} {{word:lai2}}.",
+    ttsText: "我从父母的家来。",
   },
   exampleFrom2: {
     type: "example",
@@ -262,8 +262,8 @@ const shape: LessonShape = {
   },
   exampleArrive2: {
     type: "example",
-    pinyin: "{{Word:ta1}} {{word:dao4}} {{word:shi4chang3}} {{word:le}}.",
-    ttsText: "她到市场了。",
+    pinyin: "{{Word:ta1}} {{word:dao4}} {{word:na4}}-ge {{word:di4fang1}} {{word:le}}.",
+    ttsText: "她到那个地方了。",
   },
   exampleArrive3: {
     type: "example",
@@ -346,8 +346,8 @@ const shape: LessonShape = {
   proseFar: { type: "prose" },
   exampleFar1: {
     type: "example",
-    pinyin: "{{Word:shi4chang3}} {{word:hen3}} {{word:yuan3}}.",
-    ttsText: "市场很远。",
+    pinyin: "{{Word:na4}}-ge {{word:di4fang1}} {{word:hen3}} {{word:yuan3}}.",
+    ttsText: "那个地方很远。",
   },
   exampleFar2: {
     type: "example",
@@ -361,8 +361,8 @@ const shape: LessonShape = {
   },
   exampleFar4: {
     type: "example",
-    pinyin: "{{Word:wo3}}-{{word:men}} {{word:qu4}} {{word:jin4}}-{{word:de}} {{word:shi4chang3}}.",
-    ttsText: "我们去近的市场。",
+    pinyin: "{{Word:wo3}}-{{word:men}} {{word:qu4}} {{word:jin4}}-{{word:de}} {{word:di4fang1}}.",
+    ttsText: "我们去近的地方。",
   },
   exampleFar5: {
     type: "example",
@@ -387,13 +387,13 @@ const shape: LessonShape = {
   exercise10: { type: "exercise" },
   answer1: { type: "answer", ttsText: "你去哪里？" },
   answer2: { type: "answer", ttsText: "她从家来。" },
-  answer3: { type: "answer", ttsText: "我们到市场了。" },
+  answer3: { type: "answer", ttsText: "我们到家了。" },
   answer4: { type: "answer", ttsText: "起来！" },
   answer5: { type: "answer", ttsText: "动物在外面。" },
   answer6: { type: "answer", ttsText: "盒子的口很大。" },
   answer7: { type: "answer", ttsText: "下来！" },
   answer8: { type: "answer", ttsText: "不要动！" },
-  answer9: { type: "answer", ttsText: "市场很远。" },
+  answer9: { type: "answer", ttsText: "父母的家很远。" },
   answer10: { type: "answer", ttsText: "我的家很近。" },
   faqDaoOrQu: { type: "faq" },
   faqCongOrder: { type: "faq" },

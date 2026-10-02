@@ -8,7 +8,7 @@ const en: PartialByKey<LessonShape> = {
   summary: {
     en: [
       "Every day, we greet people and say how we feel.",
-      "In this lesson, you'll be able to say \"Hello!\", \"What's your name?\", \"Eat!\", \"I feel cold.\", and \"I'm scared of bugs.\"",
+      "In this lesson, you'll be able to say \"Hello!\", \"Thank you!\", \"What's your name?\", \"Eat!\", \"Don't laugh!\", \"I feel cold.\", and \"I'm scared of bugs.\"",
     ],
   },
   proseHello: {
@@ -31,6 +31,26 @@ const en: PartialByKey<LessonShape> = {
   exampleHello3: { en: ["I'm fine."] },
   exampleHello4: { en: ["I'm off. / Bye."] },
   exampleHello5: { en: ["Where are you from?"] },
+  vocabXie: { en: ["thank; xiè-xie: thank you"] },
+  proseThanks: {
+    en: [
+      "**To say thank you**, say {{word:xie4}}-xie: {{word:xie4}} (thank) said twice, with the second one short and light.",
+      "",
+      "**{{word:xie4}}-xie! / {{word:xie4}}-xie {{word:ni3}}!**",
+      "",
+      "To answer, say {{word:bu4}} {{word:yong4}} {{word:xie4}}: \"no need to thank me\". Lesson 22 shows more words you can say twice.",
+    ],
+    tldr: {
+      en: [
+        "{{word:xie4}}-xie is thank you. {{word:bu4}} {{word:yong4}} {{word:xie4}} is you're welcome.",
+      ],
+    },
+    necessity: { en: ["Now you can thank people."] },
+  },
+  exampleThanks1: { en: ["Thank you!"] },
+  exampleThanks2: { en: ["Thank you!"] },
+  exampleThanks3: { en: ["You're welcome."] },
+  exampleThanks4: { en: ["Thank you for giving me water."] },
   vocabJiao: { en: ["be called; call, make an animal sound"] },
   proseName: {
     en: [
@@ -54,6 +74,7 @@ const en: PartialByKey<LessonShape> = {
   exampleName3: { en: ["That animal goes woof woof."] },
   exampleName4: { en: ["He's called Tom or Tim."] },
   vocabPa: { en: ["be scared (of)"] },
+  vocabXiao: { en: ["laugh, smile"] },
   proseOrder: {
     en: [
       "**To tell someone to do something**, just say the verb. For don't, put {{word:bu4}} {{word:yao4}} first.",
@@ -77,6 +98,8 @@ const en: PartialByKey<LessonShape> = {
   exampleOrder8: { en: ["If you're cold, come inside!"] },
   exampleOrder9: { en: ["One, two, three, go!"] },
   exampleOrder10: { en: ["Don't touch my things!"] },
+  exampleOrder11: { en: ["Don't laugh!"] },
+  exampleOrder12: { en: ["Don't take my things!"] },
   vocabJuede: { en: ["feel, think"] },
   vocabChongzi: { en: ["bug"] },
   vocabXing: { en: ["sex"] },
@@ -107,6 +130,10 @@ const en: PartialByKey<LessonShape> = {
   exampleFeel10: { en: ["I think this color is nice."] },
   exampleFeel11: { en: ["I'm not afraid of anything."] },
   exampleFeel12: { en: ["The animal lived, and I feel good."] },
+  exampleFeel13: { en: ["She smiled."] },
+  exampleFeel14: { en: ["Why are you laughing?"] },
+  exampleFeel15: { en: ["I feel a bit cold."] },
+  exampleFeel16: { en: ["I'm a little scared."] },
   vocabShengyin: { en: ["sound, voice"] },
   proseHear: {
     en: [
@@ -155,6 +182,11 @@ const en: PartialByKey<LessonShape> = {
           "{{word:pa4}} + thing, scared of: {{Word:wo3}} {{word:pa4}} {{word:chong2zi}}. (I'm scared of bugs.)",
         ],
       },
+      {
+        en: [
+          "{{word:xie4}}-xie, thank you: {{Word:xie4}}-xie {{word:ni3}}! (Thank you!) {{Word:bu4}} {{word:yong4}} {{word:xie4}}. (You're welcome.)",
+        ],
+      },
     ],
   },
   exercise1: { en: ['His name is "Tom".'] },
@@ -165,6 +197,9 @@ const en: PartialByKey<LessonShape> = {
   exercise6: { en: ["I hear a sound."] },
   exercise7: { en: ["There's a bug on my hand."] },
   exercise8: { en: ["Sex is not love."] },
+  exercise9: { en: ["Don't laugh at me!"] },
+  exercise10: { en: ["Thank you for giving me fruit."] },
+  exercise11: { en: ["You're welcome."] },
   answer1: { en: ['{{Word:ta1}} {{word:jiao4}} "Tom".'] },
   answer2: { en: ["{{Word:ni3}}-{{word:men}} {{word:hao3}}!"] },
   answer3: { en: ["{{Word:bu4}} {{word:yao4}} {{word:deng3}}!"] },
@@ -189,6 +224,9 @@ const en: PartialByKey<LessonShape> = {
       "{{Word:xing4}} {{word:bu4}} {{word:shi4}} {{word:ai4}}.",
     ],
   },
+  answer9: { en: ["{{Word:bu4}} {{word:yao4}} {{word:xiao4}} {{word:wo3}}!"] },
+  answer10: { en: ["{{Word:xie4}}-xie {{word:ni3}} {{word:gei3}} {{word:wo3}} {{word:shui3guo3}}."] },
+  answer11: { en: ["{{Word:bu4}} {{word:yong4}} {{word:xie4}}."] },
   faqNihaoma: {
     question: { en: ["Is {{word:ni3}} {{word:hao3}} {{word:ma}} like \"How are you?\""] },
     en: [

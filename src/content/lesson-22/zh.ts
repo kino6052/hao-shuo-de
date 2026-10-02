@@ -1,0 +1,53 @@
+// Chinese text for lesson-22, matching shape.ts's keys. Typed as
+// `PartialByKey<LessonShape>`.
+// Not translated yet -- every `zh` is the empty-array placeholder.
+import type { PartialByKey } from "../../lib/chapter-shape-types.ts";
+import type { LessonShape } from "./shape.ts";
+
+const zh: PartialByKey<LessonShape> = {
+  title: { zh: [] },
+  summary: { zh: [] },
+  proseVerbs: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
+  exampleVerbs1: { zh: [] },
+  exampleVerbs2: { zh: [] },
+  exampleVerbs3: { zh: [] },
+  exampleVerbs4: { zh: [] },
+  exampleVerbs5: { zh: [] },
+  exampleVerbs6: { zh: [] },
+  exampleVerbs7: { zh: [] },
+  exampleVerbs8: { zh: [] },
+  exampleVerbs9: { zh: [] },
+  proseDescribe: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
+  exampleDescribe1: { zh: [] },
+  exampleDescribe2: { zh: [] },
+  exampleDescribe3: { zh: [] },
+  exampleDescribe4: { zh: [] },
+  exampleDescribe5: { zh: [] },
+  exampleDescribe6: { zh: [] },
+  exampleDescribe7: { zh: [] },
+  proseEvery: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
+  exampleEvery1: { zh: [] },
+  exampleEvery2: { zh: [] },
+  exampleEvery3: { zh: [] },
+  exampleEvery4: { zh: [] },
+  exampleEvery5: { zh: [] },
+  exampleEvery6: { zh: [] },
+  infoDoubling: { title: { zh: [] }, items: [{ zh: [] }, { zh: [] }, { zh: [] }] },
+  exercise1: { zh: [] },
+  exercise2: { zh: [] },
+  exercise3: { zh: [] },
+  exercise4: { zh: [] },
+  exercise5: { zh: [] },
+  exercise6: { zh: [] },
+  answer1: { zh: [] },
+  answer2: { zh: [] },
+  answer3: { zh: [] },
+  answer4: { zh: [] },
+  answer5: { zh: [] },
+  answer6: { zh: [] },
+  faqLight: { question: { zh: [] }, zh: [] },
+  faqWhichVerbs: { question: { zh: [] }, zh: [] },
+  faqHaoHaoKan: { question: { zh: [] }, zh: [] },
+};
+
+export default zh;

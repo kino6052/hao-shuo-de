@@ -39,6 +39,12 @@ export type LessonShape = {
   exampleGive5: TExample;
   /** Example: tā gěi wǒ yī-bùfen. */
   exampleGive6: TExample;
+  /** Example: wǒ qù gěi-jīn-dé-dōngxi. */
+  exampleGive7: TExample;
+  /** Example: gěi-jīn-dé-dōngxi-de dìfāng hěn jìn. */
+  exampleGive8: TExample;
+  /** Example: gěi wǒ yī-diǎn shuǐ. */
+  exampleGive9: TExample;
   /** Vocabulary: "use; with". */
   vocabYong: TVocab;
   /** Vocabulary: "touch". */
@@ -67,6 +73,10 @@ export type LessonShape = {
   exampleWith9: TExample;
   /** Example: wǒ yòng yīxià nǐ-de gōngjù. */
   exampleWith10: TExample;
+  /** Example: wǒ yòng gōngjù bǎ hézi nòng-kāi. */
+  exampleWith11: TExample;
+  /** Example: tā yòng shǒu ná shuǐguǒ. */
+  exampleWith12: TExample;
   /** Vocabulary: "and (between nouns)". */
   vocabHe: TVocab;
   /** Vocabulary: "or". */
@@ -75,7 +85,7 @@ export type LessonShape = {
   proseAndOr: TProse;
   /** Example: nǐ hé wǒ. */
   exampleAndOr1: TExample;
-  /** Example: wǒ hé tā qù shìchǎng. */
+  /** Example: wǒ hé tā qù wài-miàn. */
   exampleAndOr2: TExample;
   /** Example: wǒ yào zhè-ge huòzhě nà-ge. */
   exampleAndOr3: TExample;
@@ -186,6 +196,21 @@ const shape: LessonShape = {
     pinyin: "{{Word:ta1}} {{word:gei3}} {{word:wo3}} {{word:yi1}}-{{word:bu4fen}}.",
     ttsText: "他给我一部分。",
   },
+  exampleGive7: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:qu4}} {{word:gei3}}-{{word:jin1}}-{{word:de2}}-{{word:dong1xi}}.",
+    ttsText: "我去给金得东西。",
+  },
+  exampleGive8: {
+    type: "example",
+    pinyin: "{{Word:gei3}}-{{word:jin1}}-{{word:de2}}-{{word:dong1xi}}-{{word:de}} {{word:di4fang1}} {{word:hen3}} {{word:jin4}}.",
+    ttsText: "给金得东西的地方很近。",
+  },
+  exampleGive9: {
+    type: "example",
+    pinyin: "{{Word:gei3}} {{word:wo3}} {{word:yi1}}-{{word:dian3}} {{word:shui3}}.",
+    ttsText: "给我一点水。",
+  },
   vocabYong: { type: "vocab", term: "{{word:yong4}}", ttsText: "用" },
   vocabMo: { type: "vocab", term: "{{word:mo1}}", ttsText: "摸" },
   vocabDa: { type: "vocab", term: "{{word:da3}}", ttsText: "打" },
@@ -240,6 +265,16 @@ const shape: LessonShape = {
     pinyin: "{{Word:wo3}} {{word:yong4}} {{word:yi1xia4}} {{word:ni3}}-{{word:de}} {{word:gong1ju4}}.",
     ttsText: "我用一下你的工具。",
   },
+  exampleWith11: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:yong4}} {{word:gong1ju4}} {{word:ba3}} {{word:he2zi}} {{word:nong4}}-{{word:kai1}}.",
+    ttsText: "我用工具把盒子弄开。",
+  },
+  exampleWith12: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:yong4}} {{word:shou3}} {{word:na2}} {{word:shui3guo3}}.",
+    ttsText: "他用手拿水果。",
+  },
   vocabHe: { type: "vocab", term: "{{word:he2}}", ttsText: "和" },
   vocabHuozhe: {
     type: "vocab",
@@ -254,8 +289,8 @@ const shape: LessonShape = {
   },
   exampleAndOr2: {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:he2}} {{word:ta1}} {{word:qu4}} {{word:shi4chang3}}.",
-    ttsText: "我和他去市场。",
+    pinyin: "{{Word:wo3}} {{word:he2}} {{word:ta1}} {{word:qu4}} {{word:wai4}}-{{word:mian4}}.",
+    ttsText: "我和他去外面。",
   },
   exampleAndOr3: {
     type: "example",

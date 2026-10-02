@@ -629,6 +629,19 @@
       },
       "maps": ""
     },
+    "ci4": {
+      "term": "cì",
+      "pos": {
+        "eng": "measure word",
+        "rus": "счётное слово",
+        "zh": "量词"
+      },
+      "definition": {
+        "eng": "time, occurrence: counts how often something happens (e.g. {{word:liang3}}-{{word:ci4}}, \"twice\"; {{word:hen3}} {{word:duo1}} {{word:ci4}}, \"many times\")",
+        "rus": "раз: счётное слово для того, сколько раз что-то происходит (напр. {{word:liang3}}-{{word:ci4}}, «дважды»)",
+        "zh": "次，量词，表示事情发生的次数（如：两次，很多次）"
+      }
+    },
     "yi1": {
       "term": "yī",
       "pos": {
@@ -670,6 +683,19 @@
         "zh": "序号标记，数字身份，序数前缀"
       },
       "maps": "nanpa"
+    },
+    "dian3": {
+      "term": "diǎn",
+      "pos": {
+        "eng": "noun/measure word",
+        "rus": "существительное/счётное слово",
+        "zh": "名词/量词"
+      },
+      "definition": {
+        "eng": "o'clock, after a number ({{word:san1}}-{{word:dian3}}, \"three o'clock\"); a little: {{word:yi1}}-{{word:dian3}} (\"a bit\"), as in {{word:da4}} {{word:yi1}}-{{word:dian3}}, \"a bit bigger\"",
+        "rus": "час, после числа ({{word:san1}}-{{word:dian3}}, «три часа»); немного: {{word:yi1}}-{{word:dian3}} («чуть-чуть»), как в {{word:da4}} {{word:yi1}}-{{word:dian3}}, «чуть больше»",
+        "zh": "点：几点钟（三点）；一点：一点儿，少量（如：大一点）"
+      }
     },
     "duo1": {
       "term": "duō",
@@ -1103,6 +1129,32 @@
       },
       "maps": "open, kama"
     },
+    "guan1": {
+      "term": "guān",
+      "pos": {
+        "eng": "verb",
+        "rus": "глагол",
+        "zh": "动词"
+      },
+      "definition": {
+        "eng": "to close, shut; to turn off (e.g. {{word:guan1}} {{word:huo3}}, \"turn off the fire\")",
+        "rus": "закрывать; выключать (напр. {{word:guan1}} {{word:huo3}}, «выключить огонь»)",
+        "zh": "关，关上，关掉（如：关火）"
+      }
+    },
+    "kai1": {
+      "term": "kāi",
+      "pos": {
+        "eng": "verb",
+        "rus": "глагол",
+        "zh": "动词"
+      },
+      "definition": {
+        "eng": "to open; to turn on (e.g. {{word:he2zi}} {{word:kai1}} {{word:le}}, \"the box is open\")",
+        "rus": "открывать, открываться; включать (напр. {{word:he2zi}} {{word:kai1}} {{word:le}}, «коробка открыта»)",
+        "zh": "开，打开（如：盒子开了）"
+      }
+    },
     "wan2": {
       "term": "wán",
       "pos": {
@@ -1240,6 +1292,19 @@
         "eng": "to put, place, set down; with bǎ, says where a thing goes (e.g. {{word:ba3}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:di4}}-{{word:shang4}}, \"put the clothes on the floor\")",
         "rus": "класть, ставить, помещать; с bǎ говорит, куда кладут вещь (напр. {{word:ba3}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:di4}}-{{word:shang4}}, «положить одежду на пол»)",
         "zh": "放，放置，搁；常和“把”一起说东西放在哪里（如：把衣服放在地上）"
+      }
+    },
+    "na2": {
+      "term": "ná",
+      "pos": {
+        "eng": "verb",
+        "rus": "глагол",
+        "zh": "动词"
+      },
+      "definition": {
+        "eng": "to take, pick up, hold; take away (e.g. {{word:cong2}} {{word:qi1}} {{word:li3}}-{{word:mian4}} {{word:na2}} {{word:san1}}, \"take three from seven\")",
+        "rus": "брать, взять, держать; отнимать (напр. {{word:cong2}} {{word:qi1}} {{word:li3}}-{{word:mian4}} {{word:na2}} {{word:san1}}, «отнять три от семи»)",
+        "zh": "拿，拿走；（如：从七里面拿三）"
       }
     },
     "da3": {
@@ -1634,6 +1699,19 @@
       },
       "maps": ""
     },
+    "you4": {
+      "term": "yòu",
+      "pos": {
+        "eng": "adverb",
+        "rus": "наречие",
+        "zh": "副词"
+      },
+      "definition": {
+        "eng": "again: it happens once more; goes before the verb (e.g. {{word:ta1}} {{word:you4}} {{word:chi1}} {{word:le}}, \"he ate again\")",
+        "rus": "снова, опять; ставится перед глаголом (напр. {{word:ta1}} {{word:you4}} {{word:chi1}} {{word:le}}, «он снова поел»)",
+        "zh": "又，再一次；放在动词前（如：他又吃了）"
+      }
+    },
     "yin1wei4": {
       "term": "yīnwèi",
       "pos": {
@@ -1774,6 +1852,19 @@
       },
       "maps": ""
     },
+    "xie4": {
+      "term": "xiè",
+      "pos": {
+        "eng": "verb",
+        "rus": "глагол",
+        "zh": "动词"
+      },
+      "definition": {
+        "eng": "to thank; doubled, {{word:xie4}}-xie is \"thank you\", and {{word:bu4}} {{word:yong4}} {{word:xie4}} is \"you are welcome\"",
+        "rus": "благодарить; удвоенное {{word:xie4}}-xie — «спасибо», {{word:bu4}} {{word:yong4}} {{word:xie4}} — «не за что»",
+        "zh": "谢，感谢；谢谢；不用谢"
+      }
+    },
     "na3li3": {
       "term": "nǎlǐ",
       "pos": {
@@ -1801,6 +1892,19 @@
         "zh": "害怕，恐惧；害怕的"
       },
       "maps": ""
+    },
+    "xiao4": {
+      "term": "xiào",
+      "pos": {
+        "eng": "verb",
+        "rus": "глагол",
+        "zh": "动词"
+      },
+      "definition": {
+        "eng": "to laugh, to smile",
+        "rus": "смеяться, улыбаться",
+        "zh": "笑"
+      }
     },
     "xia4": {
       "term": "xià",
@@ -2438,7 +2542,7 @@
             "rus": "Счётное слово",
             "zh": "量词"
           },
-          "wordIds": ["ge4"]
+          "wordIds": ["ge4", "ci4"]
         },
         {
           "key": "numbers-ordinals",
@@ -2559,7 +2663,7 @@
             "rus": "Воля и чувства",
             "zh": "意愿与情感"
           },
-          "wordIds": ["yao4", "ai4", "pa4"]
+          "wordIds": ["yao4", "ai4", "pa4", "xiao4"]
         },
         {
           "key": "cognition",
@@ -2588,7 +2692,7 @@
         "rus": "Речь",
         "zh": "言语"
       },
-      "wordIds": ["shuo1", "xie3", "wen4"]
+      "wordIds": ["shuo1", "xie3", "wen4", "xie4"]
     },
     {
       "key": "actions",
@@ -2660,7 +2764,7 @@
             "rus": "Манипуляция и контакт",
             "zh": "操作与接触"
           },
-          "wordIds": ["da3", "gei3", "mo1", "zhao3", "fang4"]
+          "wordIds": ["da3", "gei3", "mo1", "zhao3", "fang4", "na2", "kai1", "guan1"]
         }
       ]
     },
@@ -2708,7 +2812,7 @@
         "rus": "Время",
         "zh": "时间"
       },
-      "wordIds": ["shi2jian1", "xian4zai4", "yi1xia4"]
+      "wordIds": ["shi2jian1", "xian4zai4", "yi1xia4", "dian3"]
     },
     {
       "key": "space",
@@ -2781,7 +2885,7 @@
             "rus": "Союзы",
             "zh": "连接"
           },
-          "wordIds": ["dan4shi4", "he2", "huo4zhe3", "ye3", "yin1wei4", "hua4"]
+          "wordIds": ["dan4shi4", "he2", "huo4zhe3", "ye3", "you4", "yin1wei4", "hua4"]
         },
         {
           "key": "interrogatives",

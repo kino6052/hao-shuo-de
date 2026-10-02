@@ -8,7 +8,7 @@ const en: PartialByKey<LessonShape> = {
   summary: {
     en: [
       "We often talk about what happens around an action: before it, after it, or while it goes on.",
-      "In this lesson, you'll be able to say \"When I eat, …\", \"I finished eating.\", \"after eating\", and \"I started to play.\"",
+      "In this lesson, you'll be able to say \"When I eat, …\", \"I finished eating.\", \"after eating\", \"I started to play.\", and \"He ate again.\"",
     ],
   },
   vocabWanr: { en: ["play"] },
@@ -92,6 +92,7 @@ const en: PartialByKey<LessonShape> = {
   exampleStart2: { en: ["He starts to eat."] },
   exampleStart3: { en: ["Have you started writing?"] },
   exampleStart4: { en: ["I'm starting to write now."] },
+  exampleStart5: { en: ["I've started learning to speak."] },
   vocabYixia: { en: ["a moment; after a verb: for a moment"] },
   proseMoment: {
     en: [
@@ -116,6 +117,46 @@ const en: PartialByKey<LessonShape> = {
   exampleMoment2: { en: ["Let me have a look."] },
   exampleMoment3: { en: ["Stay a moment."] },
   exampleMoment4: { en: ["Let's play for a bit."] },
+  vocabYou: { en: ["again"] },
+  proseAgain: {
+    en: [
+      "**To say something happens again**, put {{word:you4}} (again) before the verb, and {{word:le}} after it.",
+      "",
+      "**Who + {{word:you4}} + verb + {{word:le}}**",
+      "",
+      "To say you're about to do it again, add {{word:yao4}}: {{Word:wo3}} {{word:you4}} {{word:yao4}} {{word:chi1}} {{word:le}}.",
+    ],
+    tldr: {
+      en: [
+        "Put {{word:you4}} before the verb to say it happened again.",
+      ],
+    },
+    necessity: { en: ["Now you can say something happened again."] },
+  },
+  exampleAgain1: { en: ["He ate again."] },
+  exampleAgain2: { en: ["You fell asleep again!"] },
+  exampleAgain3: { en: ["I had another look."] },
+  exampleAgain4: { en: ["I'm going to eat again."] },
+  vocabCi: { en: ["time, as in \"many times\""] },
+  proseTimes: {
+    en: [
+      "**To say how many times**, put {{word:ci4}} (time) after {{word:hen3}} {{word:duo1}} or {{word:duo1}}-{{word:shao3}}.",
+      "",
+      "**verb + {{word:hen3}} {{word:duo1}} {{word:ci4}} / {{word:duo1}}-{{word:shao3}} {{word:ci4}}?**",
+      "",
+      "{{word:zhe4}}-{{word:ci4}} is \"this time\". With numbers (Lesson 16), {{word:ci4}} counts: two times, three times.",
+    ],
+    tldr: {
+      en: [
+        "{{word:hen3}} {{word:duo1}} {{word:ci4}} is many times. {{word:zhe4}}-{{word:ci4}} is this time.",
+      ],
+    },
+    necessity: { en: ["Now you can say how often something happens."] },
+  },
+  exampleTimes1: { en: ["I've seen it many times."] },
+  exampleTimes2: { en: ["How many times have you eaten it?"] },
+  exampleTimes3: { en: ["This time I'll wait for you."] },
+  exampleTimes4: { en: ["He's said it many times."] },
   infoAroundAnAction: {
     title: { en: ["Around an Action"] },
     items: [
@@ -144,6 +185,16 @@ const en: PartialByKey<LessonShape> = {
           "verb + {{word:yi1xia4}}, for a moment: {{Word:deng3}} {{word:yi1xia4}}! (Wait a moment!)",
         ],
       },
+      {
+        en: [
+          "{{word:you4}} + verb + {{word:le}}, again: {{Word:ta1}} {{word:you4}} {{word:chi1}} {{word:le}}. (He ate again.)",
+        ],
+      },
+      {
+        en: [
+          "{{word:hen3}} {{word:duo1}} {{word:ci4}}, many times: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:hen3}} {{word:duo1}} {{word:ci4}}. (I've seen it many times.)",
+        ],
+      },
     ],
   },
   exercise1: { en: ["When I write, I don't eat."] },
@@ -153,6 +204,8 @@ const en: PartialByKey<LessonShape> = {
   exercise5: { en: ["Do you want to play?"] },
   exercise6: { en: ["After eating, I'll stay."] },
   exercise7: { en: ["Wait a moment!"] },
+  exercise8: { en: ["She fell asleep again."] },
+  exercise9: { en: ["I've eaten it many times."] },
   answer1: {
     en: [
       "{{Word:wo3}} {{word:xie3}}-{{word:de}} {{word:shi2jian1}}, {{word:wo3}} {{word:bu4}} {{word:chi1}}.",
@@ -180,6 +233,8 @@ const en: PartialByKey<LessonShape> = {
   },
   answer6: { en: ["{{Word:chi1}}-{{word:wan2}} {{word:hou4}}, {{word:wo3}} {{word:hui4}} {{word:liu2}}."] },
   answer7: { en: ["{{Word:deng3}} {{word:yi1xia4}}!"] },
+  answer8: { en: ["{{Word:ta1}} {{word:you4}} {{word:shui4jiao4}} {{word:le}}."] },
+  answer9: { en: ["{{Word:wo3}} {{word:chi1}}-{{word:guo4}} {{word:hen3}} {{word:duo1}} {{word:ci4}}."] },
   faqWanOrWanr: {
     question: { en: ["Are {{word:wan2}} and {{word:wan2r}} the same word?"] },
     en: [

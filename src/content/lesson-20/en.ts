@@ -38,6 +38,7 @@ const en: PartialByKey<LessonShape> = {
     en: ["Because he touched the mud, his hands are black."],
   },
   exampleBecause7: { en: ["Because there's air, we can live."] },
+  exampleBecause8: { en: ["Because it was hot, I turned off the fire."] },
   vocabDanshi: { en: ["but"] },
   vocabYan: { en: ["salt"] },
   proseBut: {
@@ -65,6 +66,7 @@ const en: PartialByKey<LessonShape> = {
   exampleBut6: { en: ["This way is strange, but it's good."] },
   exampleBut7: { en: ["I have nine, but he has twenty."] },
   exampleBut8: { en: ["The plant is small, but it lived."] },
+  exampleBut9: { en: ["This one is good, but a bit big."] },
   vocabHua: { en: ['X-de huà: "if X"'] },
   proseIf: {
     en: [
@@ -90,7 +92,7 @@ const en: PartialByKey<LessonShape> = {
   exampleIf6: { en: ["If you don't know this word, ask me."] },
   exampleIf7: { en: ["If you want, eat rice or fruit."] },
   exampleIf8: { en: ["If there's water, the plant can live."] },
-  exampleIf9: { en: ["If the market is far, I won't go."] },
+  exampleIf9: { en: ["If that place is far, I won't go."] },
   infoLinkingSentences: {
     title: { en: ["Linking Sentences"] },
     items: [

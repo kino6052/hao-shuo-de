@@ -19,6 +19,8 @@ const en: PartialByKey<LessonShape> = {
       "**Who + {{word:gei3}} + person + thing**",
       "",
       "{{word:gei3}} before a verb means for or to: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:xie3}}, I write to you.",
+      "",
+      "There's no word for \"buy\". Say {{word:gei3}}-{{word:jin1}}-{{word:de2}}-{{word:dong1xi}}: \"give money, get things\". A market is {{word:gei3}}-{{word:jin1}}-{{word:de2}}-{{word:dong1xi}}-{{word:de}} {{word:di4fang1}}, the place where you do that.",
     ],
     tldr: {
       en: [
@@ -33,6 +35,9 @@ const en: PartialByKey<LessonShape> = {
   exampleGive4: { en: ["I write to you."] },
   exampleGive5: { en: ["He gives me three, and I give him four."] },
   exampleGive6: { en: ["He gives me part of it."] },
+  exampleGive7: { en: ["I'm going shopping."] },
+  exampleGive8: { en: ["The market is near."] },
+  exampleGive9: { en: ["Give me a little water."] },
   vocabYong: { en: ["use; with"] },
   vocabMo: { en: ["touch"] },
   vocabDa: { en: ["hit"] },
@@ -59,6 +64,8 @@ const en: PartialByKey<LessonShape> = {
   exampleWith8: { en: ["The animal touches my hand with its nose."] },
   exampleWith9: { en: ["He uses a new way."] },
   exampleWith10: { en: ["Let me use your tool for a moment."] },
+  exampleWith11: { en: ["I open the box with a tool."] },
+  exampleWith12: { en: ["He takes the fruit with his hand."] },
   vocabHe: { en: ["and (between nouns)"] },
   vocabHuozhe: { en: ["or"] },
   proseAndOr: {
@@ -77,7 +84,7 @@ const en: PartialByKey<LessonShape> = {
     necessity: { en: ["Now you can talk about two things at once."] },
   },
   exampleAndOr1: { en: ["You and me."] },
-  exampleAndOr2: { en: ["He and I go to the market."] },
+  exampleAndOr2: { en: ["He and I go outside."] },
   exampleAndOr3: { en: ["I want this one or that one."] },
   exampleAndOr4: { en: ["Eat fruit or rice."] },
   exampleAndOr5: { en: ["I want a red one or a blue one."] },

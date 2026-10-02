@@ -37,9 +37,10 @@ const en: PartialByKey<LessonShape> = {
   exampleThan4: { en: ["This box is rounder than that one."] },
   exampleThan5: { en: ["What is harder than a stick?"] },
   exampleThan6: { en: ["I have less money than you."] },
-  exampleThan7: { en: ["The market is farther than home."] },
+  exampleThan7: { en: ["That place is farther than home."] },
   exampleThan8: { en: ["My home is nearer than yours."] },
   exampleThan9: { en: ["People are worth more than money."] },
+  exampleThan10: { en: ["This time is better than that time."] },
   vocabYiyang: { en: ["the same"] },
   proseSame: {
     en: [

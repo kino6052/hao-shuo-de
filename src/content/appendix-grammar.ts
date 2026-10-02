@@ -25,7 +25,7 @@ const content: Entry[] = [
   {
     "type": "summary",
     "en": [
-      "Every grammar box from the 21 lessons, in one place, in lesson order."
+      "Every grammar box from the 22 lessons, in one place, in lesson order."
     ],
     "zh": [],
     "ru": []
@@ -394,6 +394,15 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
+            "{{word:xue2}} + verb, learn to: {{Word:wo3}} {{word:xue2}} {{word:xie3}}. (I'm learning to write.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
             "{{word:zhi1dao4}} {{word:zen3me}} + verb, know how to: {{Word:wo3}} {{word:zhi1dao4}} {{word:zen3me}} {{word:xie3}}. (I know how to write.)"
           ],
           "ru": [],
@@ -553,6 +562,24 @@ const content: Entry[] = [
           "ru": [],
           "zh": []
         }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:you4}} + verb + {{word:le}}, again: {{Word:ta1}} {{word:you4}} {{word:chi1}} {{word:le}}. (He ate again.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:hen3}} {{word:duo1}} {{word:ci4}}, many times: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:hen3}} {{word:duo1}} {{word:ci4}}. (I've seen it many times.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
       }
     ],
     "title": {
@@ -621,7 +648,7 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:lai2}} / {{word:qu4}} + place: {{Word:wo3}} {{word:qu4}} {{word:shi4chang3}}. (I'm going to the market.)"
+            "{{word:lai2}} / {{word:qu4}} + place: {{Word:wo3}} {{word:qu4}} {{word:fu4mu3}}-{{word:de}} {{word:jia1}}. (I'm going to my parents' home.)"
           ],
           "ru": [],
           "zh": []
@@ -630,7 +657,7 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:cong2}} + place + {{word:lai2}}: {{Word:wo3}} {{word:cong2}} {{word:shi4chang3}} {{word:lai2}}. (I come from the market.)"
+            "{{word:cong2}} + place + {{word:lai2}}: {{Word:wo3}} {{word:cong2}} {{word:jia1}} {{word:lai2}}. (I come from home.)"
           ],
           "ru": [],
           "zh": []
@@ -666,7 +693,7 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:yuan3}} / {{word:jin4}}, far / near: {{Word:shi4chang3}} {{word:hen3}} {{word:yuan3}}. (The market is far.)"
+            "{{word:yuan3}} / {{word:jin4}}, far / near: {{Word:na4}}-ge {{word:di4fang1}} {{word:hen3}} {{word:yuan3}}. (That place is far.)"
           ],
           "ru": [],
           "zh": []
@@ -966,6 +993,42 @@ const content: Entry[] = [
           "ru": [],
           "zh": []
         }
+      },
+      {
+        "text": {
+          "en": [
+            "number + {{word:dian3}}, o'clock: {{Word:xian4zai4}} {{word:shi4}} {{word:san1}}-{{word:dian3}}. (It's three o'clock now.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:yi1}}-{{word:dian3}}, a little: {{Word:wo3}} {{word:yao4}} {{word:yi1}}-{{word:dian3}} {{word:shui3}}. (I want a little water.) {{Word:zhe4}}-ge {{word:da4}} {{word:yi1}}-{{word:dian3}}. (This one is a bit bigger.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "A, B {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}, add: {{Word:san1}}, {{word:si4}} {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}, {{word:shi4}} {{word:qi1}}. (3 + 4 = 7) {{word:cong2}} A {{word:li3}}-{{word:mian4}} {{word:na2}} B, take away: {{Word:cong2}} {{word:qi1}} {{word:li3}}-{{word:mian4}} {{word:na2}} {{word:san1}}, {{word:shi4}} {{word:si4}}. (7 − 3 = 4)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}} B-{{word:ci4}}, multiply: {{Word:ba3}} {{word:si4}} {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}} {{word:san1}}-{{word:ci4}}, {{word:shi4}} {{word:shi2}}-{{word:er4}}. (3 × 4 = 12) {{word:na2}} A, {{word:neng2}} {{word:na2}} B-{{word:ci4}}, divide: {{Word:cong2}} {{word:shi2}}-{{word:er4}} {{word:li3}}-{{word:mian4}} {{word:na2}} {{word:si4}}, {{word:neng2}} {{word:na2}} {{word:san1}}-{{word:ci4}}. (12 ÷ 4 = 3)"
+          ],
+          "ru": [],
+          "zh": []
+        }
       }
     ],
     "title": {
@@ -1225,11 +1288,61 @@ const content: Entry[] = [
           "ru": [],
           "zh": []
         }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:xie4}}-xie, thank you: {{Word:xie4}}-xie {{word:ni3}}! (Thank you!) {{Word:bu4}} {{word:yong4}} {{word:xie4}}. (You're welcome.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
       }
     ],
     "title": {
       "en": [
         "Lesson 21 · Greetings and Feelings"
+      ],
+      "ru": [],
+      "zh": []
+    }
+  },
+  {
+    "type": "info",
+    "subtype": "grammar",
+    "tag": "words/doubling",
+    "items": [
+      {
+        "text": {
+          "en": [
+            "verb-verb, a little: {{Word:wo3}} {{word:kan4}}-kan. (Let me have a look.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "adjective-adjective-{{word:de}}, stronger: {{Word:yue4}} {{word:yuan2}}-{{word:yuan2}}-{{word:de}}. (The moon is nice and round.) {{word:hao3}}-{{word:hao3}} + verb, well: {{Word:hao3}}-{{word:hao3}} {{word:xue2}}! (Study hard!)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:ren2}}-{{word:ren2}} / {{word:ge4}}-{{word:ge4}} + {{word:dou1}}, every: {{Word:ren2}}-{{word:ren2}} {{word:dou1}} {{word:yao4}} {{word:shui3}}. (Everyone needs water.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      }
+    ],
+    "title": {
+      "en": [
+        "Lesson 22 · Doubling Words"
       ],
       "ru": [],
       "zh": []

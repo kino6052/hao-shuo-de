@@ -36,6 +36,8 @@ const zh: PartialByKey<LessonShape> = {
   exampleBa3: { zh: [] },
   exampleBa4: { zh: [] },
   exampleBa5: { zh: [] },
+  exampleBa6: { zh: [] },
+  exampleBa7: { zh: [] },
   vocabFang: { zh: [] },
   proseFang: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
   exampleFang1: { zh: [] },
