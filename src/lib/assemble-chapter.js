@@ -99,6 +99,9 @@ export function assembleChapter(shape, { en, ru, zh }, chapterId = "?") {
         return entry;
       }
 
+      case "faq":
+        return { type: "faq", question: pickLocalized(e.question?.en, r.question?.ru, z.question?.zh), ...pickLocalized(e.en, r.ru, z.zh) };
+
       default:
         throw new Error(`assembleChapter: unknown shape slot type "${s.type}" at key "${key}"`);
     }

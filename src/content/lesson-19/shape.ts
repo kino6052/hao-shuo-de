@@ -15,6 +15,7 @@ import type {
   TExercise,
   TAnswer,
   TInfo,
+  TFaq,
 } from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
@@ -142,6 +143,12 @@ export type LessonShape = {
   answer7: TAnswer;
   /** Answer 8: wǒ néng mō ma? */
   answer8: TAnswer;
+  /** FAQ: how do I say "and" between two sentences? (a comma; yě) */
+  faqAndSentences: TFaq;
+  /** FAQ: does gěi nǐ xiě mean "write to you" or "write for you"? (either) */
+  faqGeiForOrTo: TFaq;
+  /** FAQ: huòzhě in a question asks yes or no */
+  faqHuozheQuestion: TFaq;
 };
 
 const shape: LessonShape = {
@@ -336,6 +343,9 @@ const shape: LessonShape = {
   answer6: { type: "answer", ttsText: "一群动物。" },
   answer7: { type: "answer", ttsText: "不要打他。" },
   answer8: { type: "answer", ttsText: "我能摸吗？" },
+  faqAndSentences: { type: "faq" },
+  faqGeiForOrTo: { type: "faq" },
+  faqHuozheQuestion: { type: "faq" },
 };
 
 export default shape;

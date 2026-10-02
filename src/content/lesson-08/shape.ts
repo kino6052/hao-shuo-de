@@ -15,6 +15,7 @@ import type {
   TExercise,
   TAnswer,
   TInfo,
+  TFaq,
 } from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
@@ -144,6 +145,12 @@ export type LessonShape = {
   answer9: TAnswer;
   /** Answer 10: yuè hěn xiǎo. */
   answer10: TAnswer;
+  /** FAQ: does le mean the past? (no -- it says the action is done) */
+  faqLePast: TFaq;
+  /** FAQ: le vs guò */
+  faqLeOrGuo: TFaq;
+  /** FAQ: huì also means "know how to" in full Mandarin */
+  faqHuiKnowHow: TFaq;
 };
 
 const shape: LessonShape = {
@@ -331,6 +338,9 @@ const shape: LessonShape = {
   answer8: { type: "answer", ttsText: "什么时间你睡觉？" },
   answer9: { type: "answer", ttsText: "日很大。" },
   answer10: { type: "answer", ttsText: "月很小。" },
+  faqLePast: { type: "faq" },
+  faqLeOrGuo: { type: "faq" },
+  faqHuiKnowHow: { type: "faq" },
 };
 
 export default shape;

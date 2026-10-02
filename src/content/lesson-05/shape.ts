@@ -15,6 +15,7 @@ import type {
   TExercise,
   TAnswer,
   TInfo,
+  TFaq,
 } from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
@@ -104,6 +105,10 @@ export type LessonShape = {
   answer5: TAnswer;
   /** Answer 6: tā-men shuō. */
   answer6: TAnswer;
+  /** FAQ: how do I say "ate" or "will eat"? (the verb never changes; Lesson 8) */
+  faqPastFuture: TFaq;
+  /** FAQ: can chī mean drink? (in Hao-shuo-de yes; everyday Mandarin has a separate word) */
+  faqChiDrink: TFaq;
 };
 
 const shape: LessonShape = {
@@ -219,6 +224,8 @@ const shape: LessonShape = {
   answer4: { type: "answer", ttsText: "你看我。" },
   answer5: { type: "answer", ttsText: "我不写。" },
   answer6: { type: "answer", ttsText: "他们说。" },
+  faqPastFuture: { type: "faq" },
+  faqChiDrink: { type: "faq" },
 };
 
 export default shape;

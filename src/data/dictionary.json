@@ -56,20 +56,6 @@
       },
       "maps": "seme"
     },
-    "shi4chang3": {
-      "term": "shìchǎng",
-      "pos": {
-        "eng": "noun",
-        "rus": "существительное",
-        "zh": "名词"
-      },
-      "definition": {
-        "eng": "market, shop, fair, business location, transaction hub",
-        "rus": "рынок, магазин, ярмарка, торговое место, центр сделок",
-        "zh": "市场，商店，集市，营业场所，交易中心"
-      },
-      "maps": "esun"
-    },
     "jia1": {
       "term": "jiā",
       "pos": {
@@ -1006,6 +992,19 @@
       },
       "maps": "sona"
     },
+    "xue2": {
+      "term": "xué",
+      "pos": {
+        "eng": "verb",
+        "rus": "глагол",
+        "zh": "动词"
+      },
+      "definition": {
+        "eng": "to learn, study; before a verb: learn to do it (e.g. {{word:wo3}} {{word:xue2}} {{word:xie3}}, \"I'm learning to write\")",
+        "rus": "учиться, изучать; перед глаголом: учиться что-то делать (напр. {{word:wo3}} {{word:xue2}} {{word:xie3}}, «я учусь писать»)",
+        "zh": "学，学习；放在动词前：学做某事（如：我学写）"
+      }
+    },
     "kan4": {
       "term": "kàn",
       "pos": {
@@ -1229,6 +1228,19 @@
         "zh": "做，采取行动，从事，建造，制作，准备"
       },
       "maps": "pali"
+    },
+    "fang4": {
+      "term": "fàng",
+      "pos": {
+        "eng": "verb",
+        "rus": "глагол",
+        "zh": "动词"
+      },
+      "definition": {
+        "eng": "to put, place, set down; with bǎ, says where a thing goes (e.g. {{word:ba3}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:di4}}-{{word:shang4}}, \"put the clothes on the floor\")",
+        "rus": "класть, ставить, помещать; с bǎ говорит, куда кладут вещь (напр. {{word:ba3}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:di4}}-{{word:shang4}}, «положить одежду на пол»)",
+        "zh": "放，放置，搁；常和“把”一起说东西放在哪里（如：把衣服放在地上）"
+      }
     },
     "da3": {
       "term": "dǎ",
@@ -2266,7 +2278,7 @@
             "rus": "Места (как вещи)",
             "zh": "地方（作为事物）"
           },
-          "wordIds": ["shi4chang3", "jia1"]
+          "wordIds": ["jia1"]
         },
         {
           "key": "plants-natural-elements",
@@ -2556,7 +2568,7 @@
             "rus": "Познание",
             "zh": "认知"
           },
-          "wordIds": ["jue2de", "zhi1dao4"]
+          "wordIds": ["jue2de", "zhi1dao4", "xue2"]
         },
         {
           "key": "perception",
@@ -2648,7 +2660,7 @@
             "rus": "Манипуляция и контакт",
             "zh": "操作与接触"
           },
-          "wordIds": ["da3", "gei3", "mo1", "zhao3"]
+          "wordIds": ["da3", "gei3", "mo1", "zhao3", "fang4"]
         }
       ]
     },

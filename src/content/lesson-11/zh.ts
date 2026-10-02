@@ -89,6 +89,9 @@ const zh: PartialByKey<LessonShape> = {
   answer8: { zh: [] },
   answer9: { zh: [] },
   answer10: { zh: [] },
+  faqDaoOrQu: { question: { zh: [] }, zh: [] },
+  faqCongOrder: { question: { zh: [] }, zh: [] },
+  faqLaiOrQu: { question: { zh: [] }, zh: [] },
 };
 
 export default zh;

@@ -218,6 +218,24 @@ const en: PartialByKey<LessonShape> = {
       "A word ({{word:da4}}, big) plus a bound grammar piece (-de) — the hyphen shows they're glued together, not a single solid dictionary word.",
     ],
   },
+  faqWrongTone: {
+    question: { en: ["What if I get a tone wrong?"] },
+    en: [
+      "People may hear a different word: **mǎ** (horse) instead of **mā** (mother). The situation often helps them, but learn every word with its tone from the start.",
+    ],
+  },
+  faqToneChanges: {
+    question: { en: ["Why do some tones sound different from how they're written?"] },
+    en: [
+      "Some tones change when they meet. The most common case: when two third tones meet, the first one is said as a second tone. **nǐ hǎo** sounds like **ní hǎo**, but the pinyin still shows the original tones. The appendix on tone changes lists the rest.",
+    ],
+  },
+  faqPinyinWriting: {
+    question: { en: ["Do Chinese people write in pinyin?"] },
+    en: [
+      "Not usually. Chinese is written in characters. Pinyin writes the sounds with Latin letters: children learn it at school, and most people use it to type characters on phones and computers.",
+    ],
+  },
 };
 
 export default en;

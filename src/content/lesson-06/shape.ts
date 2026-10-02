@@ -15,6 +15,7 @@ import type {
   TExercise,
   TAnswer,
   TInfo,
+  TFaq,
 } from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
@@ -62,13 +63,13 @@ export type LessonShape = {
   vocabWeishenme: TVocab;
   /** Vocabulary: "how". */
   vocabZenme: TVocab;
-  /** Say: To ask "why?" or "how?", put wèishénme (why) at the start, or zěnme (how) before the verb. Pattern: wèishénme + sentence? / zěnme + verb? */
+  /** Say: To ask "why?" or "how?", put wèishénme (why) or zěnme (how) before the verb. Pattern: who + wèishénme / zěnme + verb? */
   proseWhyHow: TProse;
-  /** Example: wèishénme nǐ bù chī? */
+  /** Example: nǐ wèishénme bù chī? */
   exampleWhyHow1: TExample;
-  /** Example: wèishénme tā zhǎo hézi? */
+  /** Example: tā wèishénme zhǎo hézi? */
   exampleWhyHow2: TExample;
-  /** Example: wèishénme nǐ wèn? */
+  /** Example: nǐ wèishénme wèn? */
   exampleWhyHow3: TExample;
   /** Example: zhè-ge zěnme shuō? */
   exampleWhyHow4: TExample;
@@ -78,14 +79,12 @@ export type LessonShape = {
   exampleWhyHow6: TExample;
   /** Say: To answer yes or no, repeat the verb for "yes", or put bù before it for "no". Pattern: verb. / bù + verb. */
   proseAnswer: TProse;
-  /** Example: tīng. */
+  /** Example: nǐ tīng-bù-tīng? tīng. */
   exampleAnswer1: TExample;
-  /** Example: bù tīng. */
+  /** Example: nǐ tīng-bù-tīng? bù tīng. */
   exampleAnswer2: TExample;
-  /** Example: yǒu. */
+  /** Example: nǐ yǒu-méi-yǒu shuǐguǒ? yǒu. */
   exampleAnswer3: TExample;
-  /** Example: wǒ wèn nǐ. */
-  exampleAnswer4: TExample;
   /** Grammar box: ma, verb-bù-verb, shénme, wèishénme, zěnme. */
   infoAskingQuestions: TInfo;
   /** Exercise 1: What tools do you have? */
@@ -110,12 +109,18 @@ export type LessonShape = {
   answer3: TAnswer;
   /** Answer 4: nà shì nǐ-de hézi ma? */
   answer4: TAnswer;
-  /** Answer 5: wèishénme tā zhǎo shuǐ? */
+  /** Answer 5: tā wèishénme zhǎo shuǐ? */
   answer5: TAnswer;
   /** Answer 6: zhè-ge zěnme xiě? */
   answer6: TAnswer;
   /** Answer 7: shénme rén wèn? */
   answer7: TAnswer;
+  /** FAQ: can ma and verb-bù-verb go together? (no -- pick one) */
+  faqMaAndVerbBuVerb: TFaq;
+  /** FAQ: why yǒu-méi-yǒu, not yǒu-bù-yǒu? (yǒu's "not" is méi) */
+  faqYouMeiYou: TFaq;
+  /** FAQ: can wèishénme go at the start? (yes, but before the verb is the usual place) */
+  faqWeishenmeFirst: TFaq;
 };
 
 const shape: LessonShape = {
@@ -146,12 +151,14 @@ const shape: LessonShape = {
   },
   exampleYesNo4: {
     type: "example",
-    pinyin: "{{Word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}} {{word:fu4mu3}}?",
+    pinyin:
+      "{{Word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}} {{word:fu4mu3}}?",
     ttsText: "你听不听父母？",
   },
   exampleYesNo5: {
     type: "example",
-    pinyin: "{{Word:ta1}} {{word:you3}}-{{word:mei2}}-{{word:you3}} {{word:jin1}}?",
+    pinyin:
+      "{{Word:ta1}} {{word:you3}}-{{word:mei2}}-{{word:you3}} {{word:jin1}}?",
     ttsText: "她有没有金？",
   },
   vocabShenme: { type: "vocab", term: "{{word:shen2me}}", ttsText: "什么" },
@@ -192,18 +199,18 @@ const shape: LessonShape = {
   proseWhyHow: { type: "prose" },
   exampleWhyHow1: {
     type: "example",
-    pinyin: "{{Word:wei4shen2me}} {{word:ni3}} {{word:bu4}} {{word:chi1}}?",
-    ttsText: "为什么你不吃？",
+    pinyin: "{{Word:ni3}} {{word:wei4shen2me}} {{word:bu4}} {{word:chi1}}?",
+    ttsText: "你为什么不吃？",
   },
   exampleWhyHow2: {
     type: "example",
-    pinyin: "{{Word:wei4shen2me}} {{word:ta1}} {{word:zhao3}} {{word:he2zi}}?",
-    ttsText: "为什么他找盒子？",
+    pinyin: "{{Word:ta1}} {{word:wei4shen2me}} {{word:zhao3}} {{word:he2zi}}?",
+    ttsText: "他为什么找盒子？",
   },
   exampleWhyHow3: {
     type: "example",
-    pinyin: "{{Word:wei4shen2me}} {{word:ni3}} {{word:wen4}}?",
-    ttsText: "为什么你问？",
+    pinyin: "{{Word:ni3}} {{word:wei4shen2me}} {{word:wen4}}?",
+    ttsText: "你为什么问？",
   },
   exampleWhyHow4: {
     type: "example",
@@ -223,23 +230,21 @@ const shape: LessonShape = {
   proseAnswer: { type: "prose" },
   exampleAnswer1: {
     type: "example",
-    pinyin: "{{Word:ting1}}.",
-    ttsText: "听。",
+    pinyin:
+      "{{Word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}}? {{Word:ting1}}.",
+    ttsText: "你听不听？听。",
   },
   exampleAnswer2: {
     type: "example",
-    pinyin: "{{Word:bu4}} {{word:ting1}}.",
-    ttsText: "不听。",
+    pinyin:
+      "{{Word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}}? {{Word:bu4}} {{word:ting1}}.",
+    ttsText: "你听不听？不听。",
   },
   exampleAnswer3: {
     type: "example",
-    pinyin: "{{Word:you3}}.",
-    ttsText: "有。",
-  },
-  exampleAnswer4: {
-    type: "example",
-    pinyin: "{{Word:wo3}} {{word:wen4}} {{word:ni3}}.",
-    ttsText: "我问你。",
+    pinyin:
+      "{{Word:ni3}} {{word:you3}}-{{word:mei2}}-{{word:you3}} {{word:shui3guo3}}? {{Word:you3}}.",
+    ttsText: "你有没有水果？有。",
   },
   infoAskingQuestions: {
     type: "info",
@@ -258,9 +263,12 @@ const shape: LessonShape = {
   answer2: { type: "answer", ttsText: "他听不听？" },
   answer3: { type: "answer", ttsText: "工具小吗？" },
   answer4: { type: "answer", ttsText: "那是你的盒子吗？" },
-  answer5: { type: "answer", ttsText: "为什么他找水？" },
+  answer5: { type: "answer", ttsText: "他为什么找水？" },
   answer6: { type: "answer", ttsText: "这个怎么写？" },
   answer7: { type: "answer", ttsText: "什么人问？" },
+  faqMaAndVerbBuVerb: { type: "faq" },
+  faqYouMeiYou: { type: "faq" },
+  faqWeishenmeFirst: { type: "faq" },
 };
 
 export default shape;

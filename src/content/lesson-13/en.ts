@@ -189,6 +189,24 @@ const en: PartialByKey<LessonShape> = {
       "{{Word:zhe4}}-{{word:zhong3}} {{word:shui3guo3}} {{word:hen3}} {{word:tian2}}.",
     ],
   },
+  faqMuchBigger: {
+    question: { en: ["How do I say \"much bigger\"?"] },
+    en: [
+      "Put {{word:hen3}} {{word:duo1}} after the adjective: {{Word:wo3}} {{word:bi3}} {{word:ni3}} {{word:da4}} {{word:hen3}} {{word:duo1}} (I'm much bigger than you).",
+    ],
+  },
+  faqNotAsBig: {
+    question: { en: ["How do I say \"not as big as\"?"] },
+    en: [
+      "Use {{word:mei2}}-{{word:you3}} in place of {{word:bi3}}: {{Word:wo3}} {{word:mei2}}-{{word:you3}} {{word:ni3}} {{word:da4}} (I'm not as big as you).",
+    ],
+  },
+  faqButongOrBiede: {
+    question: { en: ["What's the difference between {{word:bu4tong2}} and {{word:bie2de}}?"] },
+    en: [
+      "{{word:bu4tong2}} compares: these aren't the same. {{word:bie2de}} picks another one: {{Word:wo3}} {{word:yao4}} {{word:bie2de}} (I want something else).",
+    ],
+  },
 };
 
 export default en;

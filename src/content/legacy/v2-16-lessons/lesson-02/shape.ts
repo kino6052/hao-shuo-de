@@ -48,7 +48,7 @@ export type LessonShape = {
   example3: TExample;
   /** Example: rén shì nǚrén. */
   example4: TExample;
-  /** Example: dòngwù shì dōngxi. */
+  /** Example: dòngwù bu shì dōngxi. */
   example5: TExample;
   /** Example: nǚrén shì rén. */
   example6: TExample;

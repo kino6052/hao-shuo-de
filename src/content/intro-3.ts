@@ -114,7 +114,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Pre-Verbs** — words that go before a verb to say you want to, can, know how to, love to, or might.",
+            "**Pre-Verbs** — words that go before a verb to say you want to, can, learn to, know how to, love to, or might.",
           ],
           zh: [],
           ru: [],
@@ -132,7 +132,7 @@ const content: Entry[] = [
       {
         text: {
           en: [
-            "**Time 2 — Around an action** — \"when X\" with `X-de shíjiān`, finishing an action, what comes after it, starting, staying, and doing something for a moment.",
+            "**Time 2 — Around an action** — \"when X\" with `X-de shíjiān`, finishing an action, what comes after it, starting, and doing something for a moment.",
           ],
           zh: [],
           ru: [],

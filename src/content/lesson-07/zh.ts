@@ -22,6 +22,11 @@ const zh: PartialByKey<LessonShape> = {
   exampleCan2: { zh: [] },
   exampleCan3: { zh: [] },
   exampleCan4: { zh: [] },
+  vocabXue: { zh: [] },
+  proseLearn: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
+  exampleLearn1: { zh: [] },
+  exampleLearn2: { zh: [] },
+  exampleLearn3: { zh: [] },
   vocabZhidao: { zh: [] },
   proseKnowHow: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
   exampleKnowHow1: { zh: [] },
@@ -50,6 +55,7 @@ const zh: PartialByKey<LessonShape> = {
       { zh: [] },
       { zh: [] },
       { zh: [] },
+      { zh: [] },
     ],
   },
   exercise1: { zh: [] },
@@ -60,6 +66,7 @@ const zh: PartialByKey<LessonShape> = {
   exercise6: { zh: [] },
   exercise7: { zh: [] },
   exercise8: { zh: [] },
+  exercise9: { zh: [] },
   answer1: { zh: [] },
   answer2: { zh: [] },
   answer3: { zh: [] },
@@ -68,6 +75,10 @@ const zh: PartialByKey<LessonShape> = {
   answer6: { zh: [] },
   answer7: { zh: [] },
   answer8: { zh: [] },
+  answer9: { zh: [] },
+  faqYaoGoingTo: { question: { zh: [] }, zh: [] },
+  faqBuYao: { question: { zh: [] }, zh: [] },
+  faqNengOrZhidao: { question: { zh: [] }, zh: [] },
 };
 
 export default zh;

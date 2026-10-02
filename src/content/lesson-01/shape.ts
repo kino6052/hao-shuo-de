@@ -13,6 +13,7 @@ import type {
   TExercise,
   TAnswer,
   TInfo,
+  TFaq,
 } from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
@@ -56,6 +57,12 @@ export type LessonShape = {
   answer3: TAnswer;
   /** Answer to exercise 4. [from old L01] */
   answer4: TAnswer;
+  /** FAQ: what if I get a tone wrong? (you may say a different word) */
+  faqWrongTone: TFaq;
+  /** FAQ: why do some tones sound different from how they're written? (two third tones) */
+  faqToneChanges: TFaq;
+  /** FAQ: do Chinese people write in pinyin? (no -- characters; pinyin for learning and typing) */
+  faqPinyinWriting: TFaq;
 };
 
 const shape: LessonShape = {
@@ -89,6 +96,9 @@ const shape: LessonShape = {
   answer2: { type: "answer" },
   answer3: { type: "answer" },
   answer4: { type: "answer" },
+  faqWrongTone: { type: "faq" },
+  faqToneChanges: { type: "faq" },
+  faqPinyinWriting: { type: "faq" },
 };
 
 export default shape;

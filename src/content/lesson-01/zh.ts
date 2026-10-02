@@ -47,6 +47,9 @@ const zh: PartialByKey<LessonShape> = {
   answer2: { zh: [] },
   answer3: { zh: [] },
   answer4: { zh: [] },
+  faqWrongTone: { question: { zh: [] }, zh: [] },
+  faqToneChanges: { question: { zh: [] }, zh: [] },
+  faqPinyinWriting: { question: { zh: [] }, zh: [] },
 };
 
 export default zh;

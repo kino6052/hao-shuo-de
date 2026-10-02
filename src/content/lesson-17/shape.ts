@@ -15,6 +15,7 @@ import type {
   TExercise,
   TAnswer,
   TInfo,
+  TFaq,
 } from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
@@ -40,6 +41,8 @@ export type LessonShape = {
   exampleColorThing3: TExample;
   /** Example: huángsè-de shuǐguǒ. */
   exampleColorThing4: TExample;
+  /** Example: bǎ hóngsè-de yīfu fàng zài zhè-lǐ. */
+  exampleColorThing5: TExample;
   /** Vocabulary: "blue, green". */
   vocabLanse: TVocab;
   /** Say: To say what color something is, put shì before the color, and -de after it. Pattern: Thing + shì + color-de */
@@ -112,6 +115,10 @@ export type LessonShape = {
   answer5: TAnswer;
   /** Answer 6: hézi shì lánsè-de. */
   answer6: TAnswer;
+  /** FAQ: why does lánsè mean blue and green? (Hao-shuo-de choice; describe green) */
+  faqLanBlueGreen: TFaq;
+  /** FAQ: why shì hóngsè-de and not hěn hóngsè? */
+  faqColorNoHen: TFaq;
 };
 
 const shape: LessonShape = {
@@ -149,6 +156,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:huang2se4}}-{{word:de}} {{word:shui3guo3}}.",
     ttsText: "黄色的水果。",
+  },
+  exampleColorThing5: {
+    type: "example",
+    pinyin: "{{Word:ba3}} {{word:hong2se4}}-{{word:de}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:zhe4}}-{{word:li3}}.",
+    ttsText: "把红色的衣服放在这里。",
   },
   vocabLanse: { type: "vocab", term: "{{word:lan2se4}}", ttsText: "蓝色" },
   proseIsColor: { type: "prose" },
@@ -267,6 +279,8 @@ const shape: LessonShape = {
   answer4: { type: "answer", ttsText: "我要红色的衣服。" },
   answer5: { type: "answer", ttsText: "动物是黑色的。" },
   answer6: { type: "answer", ttsText: "盒子是蓝色的。" },
+  faqLanBlueGreen: { type: "faq" },
+  faqColorNoHen: { type: "faq" },
 };
 
 export default shape;

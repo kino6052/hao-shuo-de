@@ -32,6 +32,7 @@ const en: PartialByKey<LessonShape> = {
   exampleColorThing2: { en: ["White clothes."] },
   exampleColorThing3: { en: ["A black animal."] },
   exampleColorThing4: { en: ["Yellow fruit."] },
+  exampleColorThing5: { en: ["Put the red clothes here."] },
   vocabLanse: { en: ["blue, green"] },
   proseIsColor: {
     en: [
@@ -129,6 +130,18 @@ const en: PartialByKey<LessonShape> = {
   answer6: {
     en: [
       "{{Word:he2zi}} {{word:shi4}} {{word:lan2se4}}-{{word:de}}.",
+    ],
+  },
+  faqLanBlueGreen: {
+    question: { en: ["Why does {{word:lan2se4}} mean blue and green?"] },
+    en: [
+      "In full Mandarin, {{word:lan2se4}} is blue, and green has its own word. Hao-shuo-de keeps the list short, so it uses {{word:lan2se4}} for both. To make green clear, describe it: {{word:zhi2wu4}}-{{word:de}} {{word:yan2se4}} (the color of plants).",
+    ],
+  },
+  faqColorNoHen: {
+    question: { en: ["Why is it {{word:shi4}} {{word:hong2se4}}-{{word:de}}, not {{word:hen3}} {{word:hong2se4}}?"] },
+    en: [
+      "Color words like {{word:hong2se4}} work like nouns (\"the color red\"), so they don't take {{word:hen3}}. {{Word:he2zi}} {{word:shi4}} {{word:hong2se4}}-{{word:de}} is \"The box is a red one\".",
     ],
   },
 };

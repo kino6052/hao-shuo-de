@@ -65,13 +65,15 @@ const en: PartialByKey<LessonShape> = {
   vocabZenme: { en: ["how"] },
   proseWhyHow: {
     en: [
-      '**To ask "why?" or "how?"**, put {{word:wei4shen2me}} (why) at the start, or {{word:zen3me}} (how) before the verb.',
+      '**To ask "why?" or "how?"**, put {{word:wei4shen2me}} (why) or {{word:zen3me}} (how) before the verb.',
       "",
-      "**{{word:wei4shen2me}} + sentence? / {{word:zen3me}} + verb?**",
+      "**Who + {{word:wei4shen2me}} / {{word:zen3me}} + verb?**",
+      "",
+      "{{word:wei4shen2me}} also goes before {{word:bu4}}: {{Word:ni3}} {{word:wei4shen2me}} {{word:bu4}} {{word:chi1}}?",
     ],
     tldr: {
       en: [
-        "{{word:wei4shen2me}} asks why. {{word:zen3me}} before a verb asks how.",
+        "Put {{word:wei4shen2me}} (why) or {{word:zen3me}} (how) before the verb.",
       ],
     },
     necessity: { en: ["Now you can ask for reasons and ways."] },
@@ -99,10 +101,9 @@ const en: PartialByKey<LessonShape> = {
       en: ['Chinese has no single word for "yes" or "no".'],
     },
   },
-  exampleAnswer1: { en: ["Yes, I do. (I listen.)"] },
-  exampleAnswer2: { en: ["No, I don't."] },
-  exampleAnswer3: { en: ["Yes, I have some."] },
-  exampleAnswer4: { en: ["I'm asking you."] },
+  exampleAnswer1: { en: ["Do you listen? Yes, I do."] },
+  exampleAnswer2: { en: ["Do you listen? No, I don't."] },
+  exampleAnswer3: { en: ["Do you have fruit? Yes, I do."] },
   infoAskingQuestions: {
     title: { en: ["Asking Questions"] },
     items: [
@@ -123,7 +124,7 @@ const en: PartialByKey<LessonShape> = {
       },
       {
         en: [
-          "{{word:wei4shen2me}}, why: {{Word:wei4shen2me}} {{word:ni3}} {{word:bu4}} {{word:chi1}}? (Why don't you eat?)",
+          "{{word:wei4shen2me}} + verb, why: {{Word:ni3}} {{word:wei4shen2me}} {{word:bu4}} {{word:chi1}}? (Why don't you eat?)",
         ],
       },
       {
@@ -158,13 +159,32 @@ const en: PartialByKey<LessonShape> = {
   },
   answer5: {
     en: [
-      "{{Word:wei4shen2me}} {{word:ta1}} {{word:zhao3}} {{word:shui3}}?",
+      "{{Word:ta1}} {{word:wei4shen2me}} {{word:zhao3}} {{word:shui3}}?",
     ],
   },
   answer6: {
     en: ["{{Word:zhe4}}-ge {{word:zen3me}} {{word:xie3}}?"],
   },
   answer7: { en: ["{{Word:shen2me}} {{word:ren2}} {{word:wen4}}?"] },
+  faqMaAndVerbBuVerb: {
+    question: { en: ["Can I use {{word:ma}} and verb-{{word:bu4}}-verb together?"] },
+    en: [
+      "No, pick one. {{Word:ni3}} {{word:ting1}} {{word:ma}}? and {{Word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}}? both work, but {{word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}} {{word:ma}}? is wrong.",
+      "Both ask the same thing. {{word:ma}} works with any sentence, so it's the easy one to start with.",
+    ],
+  },
+  faqYouMeiYou: {
+    question: { en: ["Why is it {{word:you3}}-{{word:mei2}}-{{word:you3}}, not {{word:you3}}-{{word:bu4}}-{{word:you3}}?"] },
+    en: [
+      "{{word:you3}} never takes {{word:bu4}}. Its \"not\" is {{word:mei2}}: {{word:mei2}}-{{word:you3}}. So the question uses {{word:mei2}} too.",
+    ],
+  },
+  faqWeishenmeFirst: {
+    question: { en: ["Can {{word:wei4shen2me}} go at the start of the sentence?"] },
+    en: [
+      "Yes, {{Word:wei4shen2me}} {{word:ni3}} {{word:bu4}} {{word:chi1}}? is also correct Mandarin. Before the verb is the usual place, and it's the same place as {{word:zen3me}}, so Hao-shuo-de always puts it there.",
+    ],
+  },
 };
 
 export default en;

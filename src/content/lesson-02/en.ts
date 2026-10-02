@@ -8,7 +8,7 @@ const en: PartialByKey<LessonShape> = {
   summary: {
     en: [
       "Every language needs a way to say what something is.",
-      "In this lesson, you'll be able to say \"This is a person.\" and \"An animal is not a fruit.\"",
+      'In this lesson, you\'ll be able to say "This is a person." and "An animal is not a fruit."',
     ],
   },
   vocabShi: { en: ["be, is"] },
@@ -27,16 +27,14 @@ const en: PartialByKey<LessonShape> = {
       'A noun is a word for a person, place, or thing. It can mean one or many: {{word:dong1xi}} is "thing" or "things".',
     ],
     tldr: {
-      en: [
-        "To say one thing is another, put {{word:shi4}} between them.",
-      ],
+      en: ["To say one thing is another, put {{word:shi4}} between them."],
     },
     necessity: { en: ["This is the simplest sentence you can make."] },
   },
   exampleIs1: { en: ["A woman is a person."] },
   exampleIs2: { en: ["A man is a person."] },
   exampleIs3: { en: ["Fruit is a thing."] },
-  exampleIs4: { en: ["Animals are things."] },
+  exampleIs4: { en: ["Animals are not things."] },
   vocabZhe: { en: ["this"] },
   proseThis: {
     en: [
@@ -61,9 +59,7 @@ const en: PartialByKey<LessonShape> = {
       "**NOUN + {{word:bu4}} {{word:shi4}} + NOUN**",
     ],
     tldr: {
-      en: [
-        "To say it is not, put {{word:bu4}} before {{word:shi4}}.",
-      ],
+      en: ["To say it is not, put {{word:bu4}} before {{word:shi4}}."],
     },
     necessity: { en: ["Now you can say what something is not."] },
   },
@@ -105,13 +101,21 @@ const en: PartialByKey<LessonShape> = {
   },
   answer6: { en: ["{{Word:zhe4}} {{word:shi4}} {{word:nan2ren2}}."] },
   answer7: {
-    en: [
-      "{{Word:zhe4}} {{word:bu4}} {{word:shi4}} {{word:shui3guo3}}.",
-    ],
+    en: ["{{Word:zhe4}} {{word:bu4}} {{word:shi4}} {{word:shui3guo3}}."],
   },
   answer8: {
+    en: ["{{Word:dong4wu4}} {{word:bu4}} {{word:shi4}} {{word:ren2}}."],
+  },
+  faqAOrThe: {
+    question: { en: ["Why is there no word for \"a\" or \"the\"?"] },
     en: [
-      "{{Word:dong4wu4}} {{word:bu4}} {{word:shi4}} {{word:ren2}}.",
+      "Chinese doesn't have them. {{Word:zhe4}} {{word:shi4}} {{word:ren2}} can be \"This is a person\" or \"This is the person\". The situation tells you which.",
+    ],
+  },
+  faqShiNeverChanges: {
+    question: { en: ["Does {{word:shi4}} change like \"am\", \"is\", and \"are\"?"] },
+    en: [
+      "No. {{word:shi4}} never changes, and neither do the nouns: {{Word:nv3ren2}} {{word:shi4}} {{word:ren2}} can be \"A woman is a person\" or \"Women are people\". Chinese words don't change their form at all.",
     ],
   },
 };

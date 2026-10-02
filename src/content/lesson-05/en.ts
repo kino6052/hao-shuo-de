@@ -120,6 +120,18 @@ const en: PartialByKey<LessonShape> = {
   answer4: { en: ["{{Word:ni3}} {{word:kan4}} {{word:wo3}}."] },
   answer5: { en: ["{{Word:wo3}} {{word:bu4}} {{word:xie3}}."] },
   answer6: { en: ["{{Word:ta1}}-{{word:men}} {{word:shuo1}}."] },
+  faqPastFuture: {
+    question: { en: ["How do I say \"ate\" or \"will eat\"?"] },
+    en: [
+      "The verb never changes. {{Word:wo3}} {{word:chi1}} {{word:mi3fan4}} can mean \"I eat rice\", \"I ate rice\", or \"I'll eat rice\". The situation tells you when, and Lesson 8 adds small words for it.",
+    ],
+  },
+  faqChiDrink: {
+    question: { en: ["Can I use {{word:chi1}} for drinking?"] },
+    en: [
+      "In Hao-shuo-de, yes: {{word:chi1}} {{word:shui3}}. Everyday Mandarin usually has a separate word for \"drink\", but {{word:chi1}} is understood.",
+    ],
+  },
 };
 
 export default en;

@@ -64,6 +64,7 @@ function textsOf(entry) {
   addAll(entry.tldr?.en);
   addAll(entry.necessity?.en);
   addAll(entry.title?.en);
+  addAll(entry.question?.en);
   const walkItems = (items) => (items ?? []).forEach((it) => { addAll(it.text?.en ?? it.en); walkItems(it.items); });
   walkItems(entry.items);
   return out;

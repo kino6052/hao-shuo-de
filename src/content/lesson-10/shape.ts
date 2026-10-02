@@ -15,6 +15,7 @@ import type {
   TExercise,
   TAnswer,
   TInfo,
+  TFaq,
 } from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
@@ -132,6 +133,12 @@ export type LessonShape = {
   answer7: TAnswer;
   /** Answer 8: nánrén zài jiā-de páng-biān. */
   answer8: TAnswer;
+  /** FAQ: is zài (at) the same word as zài (right now)? (yes) */
+  faqZaiSameWord: TFaq;
+  /** FAQ: why zài jiā but zài hézi-lǐ? (a thing needs -lǐ / -shàng to be a place) */
+  faqThingNeedsLi: TFaq;
+  /** FAQ: -lǐ vs lǐ-miàn */
+  faqLiOrLimian: TFaq;
 };
 
 const shape: LessonShape = {
@@ -297,6 +304,9 @@ const shape: LessonShape = {
   answer6: { type: "answer", ttsText: "她在我的旁边。" },
   answer7: { type: "answer", ttsText: "他在这边。" },
   answer8: { type: "answer", ttsText: "男人在家的旁边。" },
+  faqZaiSameWord: { type: "faq" },
+  faqThingNeedsLi: { type: "faq" },
+  faqLiOrLimian: { type: "faq" },
 };
 
 export default shape;

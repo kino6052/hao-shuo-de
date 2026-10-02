@@ -15,6 +15,7 @@ import type {
   TExercise,
   TAnswer,
   TInfo,
+  TFaq,
 } from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
@@ -98,6 +99,8 @@ export type LessonShape = {
   exampleCount20: TExample;
   /** Example: yī-bùfen rén qù le. */
   exampleCount21: TExample;
+  /** Example: tā bǎ liǎng-ge hézi fàng zài dì-shàng le. */
+  exampleCount22: TExample;
   /** Say: To say numbers above ten, put shí (ten) before or after the other number. Pattern: shí + number (11-19) / number + shí (20, 30 …) */
   proseTeens: TProse;
   /** Example: shí-yī-ge rén. */
@@ -180,6 +183,12 @@ export type LessonShape = {
   answer12: TAnswer;
   /** Answer 13: yī, èr, sān. */
   answer13: TAnswer;
+  /** FAQ: èr in 12 and 20, even with things */
+  faqErInBigNumbers: TFaq;
+  /** FAQ: hào also numbers days of the month */
+  faqHaoDays: TFaq;
+  /** FAQ: yī changes tone before gè */
+  faqYiTone: TFaq;
 };
 
 const shape: LessonShape = {
@@ -323,6 +332,11 @@ const shape: LessonShape = {
     pinyin: "{{Word:yi1}}-{{word:bu4fen}} {{word:ren2}} {{word:qu4}} {{word:le}}.",
     ttsText: "一部分人去了。",
   },
+  exampleCount22: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:ba3}} {{word:liang3}}-ge {{word:he2zi}} {{word:fang4}} {{word:zai4}} {{word:di4}}-{{word:shang4}} {{word:le}}.",
+    ttsText: "他把两个盒子放在地上了。",
+  },
   proseTeens: { type: "prose" },
   exampleTeens1: {
     type: "example",
@@ -413,6 +427,9 @@ const shape: LessonShape = {
   answer11: { type: "answer", ttsText: "四号在哪里？" },
   answer12: { type: "answer", ttsText: "十二个人。" },
   answer13: { type: "answer", ttsText: "一，二，三。" },
+  faqErInBigNumbers: { type: "faq" },
+  faqHaoDays: { type: "faq" },
+  faqYiTone: { type: "faq" },
 };
 
 export default shape;

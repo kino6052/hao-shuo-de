@@ -22,6 +22,11 @@ const ru: PartialByKey<LessonShape> = {
   exampleCan2: { ru: [] },
   exampleCan3: { ru: [] },
   exampleCan4: { ru: [] },
+  vocabXue: { ru: [] },
+  proseLearn: { ru: [], tldr: { ru: [] }, necessity: { ru: [] } },
+  exampleLearn1: { ru: [] },
+  exampleLearn2: { ru: [] },
+  exampleLearn3: { ru: [] },
   vocabZhidao: { ru: [] },
   proseKnowHow: { ru: [], tldr: { ru: [] }, necessity: { ru: [] } },
   exampleKnowHow1: { ru: [] },
@@ -50,6 +55,7 @@ const ru: PartialByKey<LessonShape> = {
       { ru: [] },
       { ru: [] },
       { ru: [] },
+      { ru: [] },
     ],
   },
   exercise1: { ru: [] },
@@ -60,6 +66,7 @@ const ru: PartialByKey<LessonShape> = {
   exercise6: { ru: [] },
   exercise7: { ru: [] },
   exercise8: { ru: [] },
+  exercise9: { ru: [] },
   answer1: { ru: [] },
   answer2: { ru: [] },
   answer3: { ru: [] },
@@ -68,6 +75,10 @@ const ru: PartialByKey<LessonShape> = {
   answer6: { ru: [] },
   answer7: { ru: [] },
   answer8: { ru: [] },
+  answer9: { ru: [] },
+  faqYaoGoingTo: { question: { ru: [] }, ru: [] },
+  faqBuYao: { question: { ru: [] }, ru: [] },
+  faqNengOrZhidao: { question: { ru: [] }, ru: [] },
 };
 
 export default ru;

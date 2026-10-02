@@ -48,6 +48,8 @@ const zh: PartialByKey<LessonShape> = {
   answer6: { zh: [] },
   answer7: { zh: [] },
   answer8: { zh: [] },
+  faqAOrThe: { question: { zh: [] }, zh: [] },
+  faqShiNeverChanges: { question: { zh: [] }, zh: [] },
 };
 
 export default zh;

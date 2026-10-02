@@ -15,6 +15,7 @@ import type {
   TExercise,
   TAnswer,
   TInfo,
+  TFaq,
 } from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
@@ -114,6 +115,12 @@ export type LessonShape = {
   answer7: TAnswer;
   /** Answer 8: rén hěn shǎo. */
   answer8: TAnswer;
+  /** FAQ: does hěn-duō-de rén mean "very many people"? (no -- duō always takes hěn) */
+  faqHenDuo: TFaq;
+  /** FAQ: does hěn always mean "very"? (no -- NOUN + hěn + adjective needs it) */
+  faqHen: TFaq;
+  /** FAQ: why not shuǐ shì hǎo? (shì joins two nouns, not a noun and an adjective) */
+  faqShi: TFaq;
 };
 
 const shape: LessonShape = {
@@ -238,6 +245,9 @@ const shape: LessonShape = {
   answer6: { type: "answer", ttsText: "动物很小。" },
   answer7: { type: "answer", ttsText: "水果很多。" },
   answer8: { type: "answer", ttsText: "人很少。" },
+  faqHenDuo: { type: "faq" },
+  faqHen: { type: "faq" },
+  faqShi: { type: "faq" },
 };
 
 export default shape;

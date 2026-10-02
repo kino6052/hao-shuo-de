@@ -7,8 +7,8 @@ const en: PartialByKey<LessonShape> = {
   title: { en: ["Pre-Verbs"] },
   summary: {
     en: [
-      "We often want to say what we want, can, or know how to do.",
-      "In this lesson, you'll be able to say \"I want to eat.\", \"I can hear.\", \"I know how to write.\", and \"I love to eat.\"",
+      "We often want to say what we want, can, learn, or know how to do.",
+      "In this lesson, you'll be able to say \"I want to eat.\", \"I can hear.\", \"I'm learning to write.\", \"I know how to write.\", and \"I love to eat.\"",
     ],
   },
   vocabYao: { en: ["want; want to"] },
@@ -30,9 +30,9 @@ const en: PartialByKey<LessonShape> = {
     necessity: { en: ["Now you can say what you want."] },
   },
   exampleWant1: { en: ["I want to eat."] },
-  exampleWant2: { en: ["I want water."] },
-  exampleWant3: { en: ["What do you want?"] },
-  exampleWant4: { en: ["She wants clothes."] },
+  exampleWant2: { en: ["I want to ask you."] },
+  exampleWant3: { en: ["What do you want to say?"] },
+  exampleWant4: { en: ["She wants to look for clothes."] },
   exampleWant5: { en: ["Do you want to wait?"] },
   vocabNeng: { en: ["can"] },
   proseCan: {
@@ -54,6 +54,21 @@ const en: PartialByKey<LessonShape> = {
   exampleCan2: { en: ["I can wait."] },
   exampleCan3: { en: ["He can't eat."] },
   exampleCan4: { en: ["Can you see?"] },
+  vocabXue: { en: ["learn; before a verb: learn to"] },
+  proseLearn: {
+    en: [
+      "**To say you learn to do something**, put {{word:xue2}} (learn) before the verb.",
+      "",
+      "**Who + {{word:xue2}} + verb**",
+    ],
+    tldr: {
+      en: ["Put {{word:xue2}} before the verb to say you learn to do it."],
+    },
+    necessity: { en: ["Now you can say what you're learning to do."] },
+  },
+  exampleLearn1: { en: ["I'm learning to write."] },
+  exampleLearn2: { en: ["She's learning to speak."] },
+  exampleLearn3: { en: ["Do you want to learn to write?"] },
   vocabZhidao: { en: ["know; know how to (with zěnme)"] },
   proseKnowHow: {
     en: [
@@ -72,8 +87,8 @@ const en: PartialByKey<LessonShape> = {
   },
   exampleKnowHow1: { en: ["I know how to write."] },
   exampleKnowHow2: { en: ["Do you know how to say it?"] },
-  exampleKnowHow3: { en: ["I know."] },
-  exampleKnowHow4: { en: ["He doesn't know."] },
+  exampleKnowHow3: { en: ["She knows how to ask."] },
+  exampleKnowHow4: { en: ["He doesn't know how to write it."] },
   vocabAi: { en: ["love; love to"] },
   proseLove: {
     en: [
@@ -91,10 +106,10 @@ const en: PartialByKey<LessonShape> = {
     necessity: { en: ["Now you can talk about what you like."] },
   },
   exampleLove1: { en: ["I love to eat."] },
-  exampleLove2: { en: ["I love you."] },
+  exampleLove2: { en: ["I love listening to you talk."] },
   exampleLove3: { en: ["She loves to read."] },
-  exampleLove4: { en: ["I love your clothes."] },
-  exampleLove5: { en: ["Are these your clothes?"] },
+  exampleLove4: { en: ["I love looking at your clothes."] },
+  exampleLove5: { en: ["Do you love to write?"] },
   vocabKeneng: { en: ["maybe, might"] },
   proseMaybe: {
     en: [
@@ -114,7 +129,7 @@ const en: PartialByKey<LessonShape> = {
   exampleMaybe1: { en: ["He might know."] },
   exampleMaybe2: { en: ["She might want to eat."] },
   exampleMaybe3: { en: ["I might not be able to wait."] },
-  exampleMaybe4: { en: ["Maybe."] },
+  exampleMaybe4: { en: ["I might not eat."] },
   infoPreVerbs: {
     title: { en: ["Words Before a Verb"] },
     items: [
@@ -126,6 +141,11 @@ const en: PartialByKey<LessonShape> = {
       {
         en: [
           "{{word:neng2}} + verb, can: {{Word:wo3}} {{word:neng2}} {{word:ting1}}. (I can hear.)",
+        ],
+      },
+      {
+        en: [
+          "{{word:xue2}} + verb, learn to: {{Word:wo3}} {{word:xue2}} {{word:xie3}}. (I'm learning to write.)",
         ],
       },
       {
@@ -156,8 +176,9 @@ const en: PartialByKey<LessonShape> = {
   exercise4: { en: ["I don't know how to say it."] },
   exercise5: { en: ["What do you want to eat?"] },
   exercise6: { en: ["He can't wait."] },
-  exercise7: { en: ["Do you have clothes?"] },
+  exercise7: { en: ["Do you want to look at my clothes?"] },
   exercise8: { en: ["Maybe she knows."] },
+  exercise9: { en: ["He's learning to write."] },
   answer1: { en: ["{{Word:wo3}} {{word:yao4}} {{word:deng3}}."] },
   answer2: {
     en: [
@@ -186,11 +207,30 @@ const en: PartialByKey<LessonShape> = {
   },
   answer7: {
     en: [
-      "{{Word:ni3}} {{word:you3}} {{word:yi1fu}} {{word:ma}}?",
+      "{{Word:ni3}} {{word:yao4}} {{word:kan4}} {{word:wo3}}-{{word:de}} {{word:yi1fu}} {{word:ma}}?",
     ],
   },
   answer8: {
     en: ["{{Word:ta1}} {{word:ke3neng2}} {{word:zhi1dao4}}."],
+  },
+  answer9: { en: ["{{Word:ta1}} {{word:xue2}} {{word:xie3}}."] },
+  faqYaoGoingTo: {
+    question: { en: ["Does {{word:yao4}} only mean \"want\"?"] },
+    en: [
+      "It also means \"going to\". {{Word:wo3}} {{word:yao4}} {{word:chi1}} can be \"I want to eat\" or \"I'm going to eat\". The situation tells you which.",
+    ],
+  },
+  faqBuYao: {
+    question: { en: ["How do I say \"don't want\"?"] },
+    en: [
+      "Put {{word:bu4}} before {{word:yao4}}: {{Word:wo3}} {{word:bu4}} {{word:yao4}} {{word:chi1}} (I don't want to eat). Careful: with no who, {{Word:bu4}} {{word:yao4}} + verb means \"Don't …!\". Lesson 21 shows this.",
+    ],
+  },
+  faqNengOrZhidao: {
+    question: { en: ["When do I use {{word:neng2}}, and when {{word:zhi1dao4}} {{word:zen3me}}?"] },
+    en: [
+      "{{word:neng2}} is being able to: {{Word:wo3}} {{word:neng2}} {{word:deng3}} (I can wait). {{word:zhi1dao4}} {{word:zen3me}} is knowing how, something you learned: {{Word:wo3}} {{word:zhi1dao4}} {{word:zen3me}} {{word:xie3}} (I know how to write).",
+    ],
   },
 };
 

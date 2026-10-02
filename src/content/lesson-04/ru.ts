@@ -45,13 +45,6 @@ const ru: PartialByKey<LessonShape> = {
   posessionDeExample06: { ru: [] },
   posessionDeExample07: { ru: [] },
   posessionDeExample08: { ru: [] },
-  example1: { ru: [] },
-  example2: { ru: [] },
-  example3: { ru: [] },
-  example4: { ru: [] },
-  example5: { ru: [] },
-  example6: { ru: [] },
-  example7: { ru: [] },
   exercise1L03: { ru: [] },
   exercise2L03: { ru: [] },
   exercise1L11: { ru: [] },
@@ -76,6 +69,9 @@ const ru: PartialByKey<LessonShape> = {
   answer5: { ru: [] },
   answer6: { ru: [] },
   answer7: { ru: [] },
+  faqGeForEverything: { question: { ru: [] }, ru: [] },
+  faqTaHeOrShe: { question: { ru: [] }, ru: [] },
+  faqDropDe: { question: { ru: [] }, ru: [] },
 };
 
 export default ru;

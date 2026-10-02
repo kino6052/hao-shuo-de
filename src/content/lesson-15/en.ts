@@ -92,6 +92,26 @@ const en: PartialByKey<LessonShape> = {
   exampleBa3: { en: ["Heat up the water."] },
   exampleBa4: { en: ["He made the opening bigger."] },
   exampleBa5: { en: ["He made all the water hot."] },
+  vocabFang: { en: ["put"] },
+  proseFang: {
+    en: [
+      "**To say where you put a thing**, put {{word:ba3}} and the thing first, then {{word:fang4}} {{word:zai4}} (put at) and the place.",
+      "",
+      "**Who + {{word:ba3}} + thing + {{word:fang4}} {{word:zai4}} + place**",
+    ],
+    tldr: {
+      en: [
+        "{{word:ba3}} + thing + {{word:fang4}} {{word:zai4}} + place says where you put it.",
+      ],
+    },
+    necessity: {
+      en: ["Now you can say where things go."],
+    },
+  },
+  exampleFang1: { en: ["I put the clothes on the floor."] },
+  exampleFang2: { en: ["He put the tool in the box."] },
+  exampleFang3: { en: ["Put the fruit here."] },
+  exampleFang4: { en: ["Where did you put my money?"] },
   vocabLiliang: { en: ["strength; yǒu lìliàng: strong"] },
   proseStrong: {
     en: [
@@ -139,6 +159,11 @@ const en: PartialByKey<LessonShape> = {
       },
       {
         en: [
+          "{{word:ba3}} + thing + {{word:fang4}} {{word:zai4}} + place, put: {{Word:wo3}} {{word:ba3}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:di4}}-{{word:shang4}} {{word:le}}. (I put the clothes on the floor.)",
+        ],
+      },
+      {
+        en: [
           "{{word:you3}} {{word:li4liang4}}, strong: {{Word:ta1}} {{word:hen3}} {{word:you3}} {{word:li4liang4}}. (He's very strong.)",
         ],
       },
@@ -151,6 +176,7 @@ const en: PartialByKey<LessonShape> = {
   exercise5: { en: ["She is very strong."] },
   exercise6: { en: ["What did he get?"] },
   exercise7: { en: ["There's mud on my clothes."] },
+  exercise8: { en: ["Put the box here."] },
   answer1: { en: ["{{Word:mi3fan4}} {{word:leng3}} {{word:le}}."] },
   answer2: {
     en: [
@@ -180,6 +206,27 @@ const en: PartialByKey<LessonShape> = {
   answer7: {
     en: [
       "{{Word:wo3}}-{{word:de}} {{word:yi1fu}}-{{word:shang4}} {{word:you3}} {{word:ni2}}.",
+    ],
+  },
+  answer8: {
+    en: ["{{Word:ba3}} {{word:he2zi}} {{word:fang4}} {{word:zai4}} {{word:zhe4}}-{{word:li3}}."],
+  },
+  faqLeSameWord: {
+    question: { en: ["Is this {{word:le}} the same as in Lesson 8?"] },
+    en: [
+      "It's the same word, with a slightly different job. After a verb, it says the action is done. After an adjective, it says something changed: {{Word:shui3}} {{word:re4}} {{word:le}} (The water got hot).",
+    ],
+  },
+  faqWhenBa: {
+    question: { en: ["When do I use {{word:ba3}}?"] },
+    en: [
+      "When you do something to a thing, and it ends up a certain way: fixed, broken, finished. {{Word:wo3}} {{word:ba3}} {{word:gong1ju4}} {{word:nong4}} {{word:huai4}} {{word:le}} (I broke the tool). Just looking at a thing doesn't change it, so {{Word:wo3}} {{word:kan4}} {{word:gong1ju4}} has no {{word:ba3}}.",
+    ],
+  },
+  faqBianOrLe: {
+    question: { en: ["Is there a difference between {{word:leng3}} {{word:le}} and {{word:bian4}} {{word:leng3}} {{word:le}}?"] },
+    en: [
+      "Both say it got cold. {{word:bian4}} makes the change itself the point: it turned cold.",
     ],
   },
 };

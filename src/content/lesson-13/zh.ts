@@ -75,6 +75,9 @@ const zh: PartialByKey<LessonShape> = {
   answer7: { zh: [] },
   answer8: { zh: [] },
   answer9: { zh: [] },
+  faqMuchBigger: { question: { zh: [] }, zh: [] },
+  faqNotAsBig: { question: { zh: [] }, zh: [] },
+  faqButongOrBiede: { question: { zh: [] }, zh: [] },
 };
 
 export default zh;

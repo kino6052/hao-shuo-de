@@ -189,6 +189,18 @@ const en: PartialByKey<LessonShape> = {
       "{{Word:xing4}} {{word:bu4}} {{word:shi4}} {{word:ai4}}.",
     ],
   },
+  faqNihaoma: {
+    question: { en: ["Is {{word:ni3}} {{word:hao3}} {{word:ma}} like \"How are you?\""] },
+    en: [
+      "It is, but people don't say it as often as English speakers say \"How are you?\". It's a real question, mostly for someone you haven't seen in a while. {{Word:ni3}} {{word:hao3}}! is the everyday hello.",
+    ],
+  },
+  faqJuedeThink: {
+    question: { en: ["Can I use {{word:jue2de}} for \"I think\"?"] },
+    en: [
+      "Yes. {{word:jue2de}} works for opinions too: {{Word:wo3}} {{word:jue2de}} {{word:zhe4}}-ge {{word:hen3}} {{word:hao3}} (I think this is good).",
+    ],
+  },
 };
 
 export default en;

@@ -41,6 +41,7 @@ dōu | adverb | all, both, every one of them; goes before the verb, after the pe
 duì | preposition/coverb | facing, towards, regarding, beneficial to; correct | tawa
 duō | adjective | many, a lot, much, several, very, abundant; used contextually to signify quantities greater than two | mute
 èr | number | two, when counting aloud or naming a number (yī, èr, sān; èr-hào, "number two"; shí-èr, 12); before gè, two is liǎng |
+fàng | verb | to put, place, set down; with bǎ, says where a thing goes (e.g. {{word:ba3}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:di4}}-{{word:shang4}}, "put the clothes on the floor") |
 fāngfǎ | noun | way, custom, method, doctrine | nasin
 fāshēng | verb | to happen, take place, occur (e.g. {{word:fa1sheng1}} {{word:le}} {{word:shen2me}}?, "what happened?") |
 fùmǔ | noun | parent, ancestor, creator, caretaker | mama

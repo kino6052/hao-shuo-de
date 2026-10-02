@@ -161,6 +161,24 @@ const en: PartialByKey<LessonShape> = {
     ],
   },
   answer8: { en: ["{{Word:shui3}} {{word:bu4}} {{word:leng3}}."] },
+  faqHenStress: {
+    question: { en: ["Is this {{word:hen3}} the same as in Lesson 3?"] },
+    en: [
+      "Yes. Said lightly, {{word:hen3}} mostly joins the thing to the adjective. To really mean \"very\", say it a little louder, or use {{word:zhen1}} (really).",
+    ],
+  },
+  faqBuHenOrder: {
+    question: { en: ["Is {{word:bu4}} {{word:hen3}} the same as {{word:hen3}} {{word:bu4}}?"] },
+    en: [
+      "No, the order matters. {{word:bu4}} {{word:hen3}} {{word:hao3}} is \"not very good\". {{word:hen3}} {{word:bu4}} {{word:hao3}} is \"very not good\": really bad.",
+    ],
+  },
+  faqNoHenInQuestion: {
+    question: { en: ["Why is there no {{word:hen3}} in {{word:shui3}} {{word:re4}} {{word:ma}}?"] },
+    en: [
+      "A question doesn't need it: {{Word:shui3}} {{word:re4}} {{word:ma}}? asks \"Is the water hot?\". With {{word:hen3}}, it asks \"Is the water very hot?\".",
+    ],
+  },
 };
 
 export default en;

@@ -138,6 +138,25 @@ const en: PartialByKey<LessonShape> = {
     en: ["{{Word:shui3guo3}} {{word:hen3}} {{word:duo1}}."],
   },
   answer8: { en: ["{{Word:ren2}} {{word:hen3}} {{word:shao3}}."] },
+  faqHenDuo: {
+    question: { en: ["Does {{word:hen3}}-{{word:duo1}}-{{word:de}} {{word:ren2}} mean \"very many people\"?"] },
+    en: [
+      "No, just \"many people\". {{word:duo1}} can't go before a noun on its own, so it always takes {{word:hen3}}, and here {{word:hen3}} adds almost nothing.",
+    ],
+  },
+  faqHen: {
+    question: { en: ["Does {{word:hen3}} always mean \"very\"?"] },
+    en: [
+      "No. In NOUN + {{word:hen3}} + adjective, {{word:hen3}} is mostly there because the sentence needs it: {{Word:shui3}} {{word:hen3}} {{word:hao3}} is just \"The water is good.\"",
+      "Without {{word:hen3}}, it sounds like you're comparing: the water is good, but something else isn't. To really mean \"very\", say {{word:hen3}} a little louder.",
+    ],
+  },
+  faqShi: {
+    question: { en: ["Why isn't it {{word:shui3}} {{word:shi4}} {{word:hao3}}?"] },
+    en: [
+      "{{word:shi4}} joins two nouns: {{Word:zhe4}} {{word:shi4}} {{word:ren2}}. An adjective doesn't take {{word:shi4}}, so use {{word:hen3}} instead: {{Word:shui3}} {{word:hen3}} {{word:hao3}}.",
+    ],
+  },
 };
 
 export default en;

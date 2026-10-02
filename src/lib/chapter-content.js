@@ -107,6 +107,7 @@ function renderInfoBlock(entry, lang, refs, onMissing) {
 //   { kind: 'examples', items }    example sentences
 //   { kind: 'story', items }       story lines
 //   { kind: 'exercise', start, questions, answers }
+//   { kind: 'faq', items }         questions and answers ({ question, answerHtml })
 // Answers pair with exercises by position across the whole chapter, so an
 // exercise group gets the answers with the same numbers; `start` is the
 // index of its first question.
@@ -201,6 +202,13 @@ export function buildTsChapterView(meta, entries, lang, refs = {}) {
         if (entry.type === 'info' && entry.subtype === 'grammar' && html) {
           grammarRules.push({ tag: entry.tag, title: blockTitle, html });
         }
+        break;
+      }
+      case 'faq': {
+        const question = pick(entry.question, lang, refs);
+        const answer = pick(entry, lang, refs);
+        if (question === undefined || answer === undefined) { missingBlocks.push(index); break; }
+        addToFlow('faq', { question: marked.parseInline(question), answerHtml: marked.parse(answer) });
         break;
       }
       default:

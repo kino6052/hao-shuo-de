@@ -187,6 +187,24 @@ const en: PartialByKey<LessonShape> = {
       "{{Word:zhe4}}-{{word:li3}}-{{word:de}} {{word:kong1qi4}} {{word:hen3}} {{word:leng3}}.",
     ],
   },
+  faqMeToo: {
+    question: { en: ["How do I say \"me too\"?"] },
+    en: [
+      "Say {{Word:wo3}} {{word:ye3}} {{word:shi4}}, or repeat the verb: {{Word:wo3}} {{word:ye3}} {{word:chi1}}. {{word:ye3}} needs something after it, so {{word:wo3}} {{word:ye3}} alone isn't a sentence.",
+    ],
+  },
+  faqMeiDidnt: {
+    question: { en: ["Why is {{word:mei2}} used without {{word:you3}} here?"] },
+    en: [
+      "Before a verb, {{word:mei2}} means \"didn't\": {{Word:wo3}} {{word:mei2}} {{word:chi1}} (I didn't eat). That's why {{word:shen2me}}-{{word:dou1}} {{word:mei2}} is \"nothing\" for something that didn't happen, and {{word:shen2me}}-{{word:dou1}} {{word:bu4}} is for now or in general.",
+    ],
+  },
+  faqAllPeople: {
+    question: { en: ["How do I say \"all people\" if {{word:dou1}} can't go before a noun?"] },
+    en: [
+      "Put {{word:dou1}} after them, before the verb: {{Word:ren2}} {{word:dou1}} {{word:yao4}} {{word:shui3}} (Everyone needs water).",
+    ],
+  },
 };
 
 export default en;

@@ -15,6 +15,7 @@ import type {
   TExercise,
   TAnswer,
   TInfo,
+  TFaq,
 } from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
@@ -122,6 +123,10 @@ export type LessonShape = {
   answer6: TAnswer;
   /** Answer 7: tā-de pífū shì báisè-de. */
   answer7: TAnswer;
+  /** FAQ: how do I know which job -de is doing? */
+  faqWhichDe: TFaq;
+  /** FAQ: are all these -de the same word? (same sound; the "how" one is a different character) */
+  faqDeSameWord: TFaq;
 };
 
 const shape: LessonShape = {
@@ -294,6 +299,8 @@ const shape: LessonShape = {
   answer5: { type: "answer", ttsText: "我有方法。" },
   answer6: { type: "answer", ttsText: "我的鼻子很小。" },
   answer7: { type: "answer", ttsText: "她的皮肤是白色的。" },
+  faqWhichDe: { type: "faq" },
+  faqDeSameWord: { type: "faq" },
 };
 
 export default shape;

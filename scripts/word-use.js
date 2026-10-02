@@ -72,8 +72,11 @@ export function wordUse(lessons, dictionary, storyTexts = []) {
 }
 
 // Practice check: in each lesson, every word the lesson introduces appears in
-// at least one of its examples AND in at least one exercise's answer.
-// -> [{ lesson, number, examples, exercises, missingExample: [terms], missingExercise: [terms] }]
+// at least one of its examples AND in at least one exercise's answer. Also
+// counts the lesson's FAQ ("Some questions you may have"): `faqIncomplete`
+// questions lack a question or an answer, and `faqOutOfPlace` is true unless
+// the faq blocks come together, after the last exercise and answer.
+// -> [{ lesson, number, examples, exercises, missingExample: [terms], missingExercise: [terms], faq, faqIncomplete, faqOutOfPlace }]
 export function practiceGaps(lessons, dictionary) {
   const terms = termIndex(dictionary);
   const idsIn = (text) => new Set(wordsIn(text, terms, { pinyinField: true }).map((w) => w.id).filter(Boolean));
@@ -86,14 +89,22 @@ export function practiceGaps(lessons, dictionary) {
     const inAnswers = new Set();
     let examples = 0;
     let exercises = 0;
-    for (const entry of lesson.entries) {
+    let lastPractice = -1;
+    const faqAt = [];
+    let faqIncomplete = 0;
+    lesson.entries.forEach((entry, i) => {
       if ((entry.type === 'example' || entry.type === 'story') && entry.pinyin) {
         examples += 1;
         idsIn(entry.pinyin).forEach((id) => inExamples.add(id));
       }
       if (entry.type === 'exercise') exercises += 1;
       if (entry.type === 'answer') (entry.en ?? []).forEach((t) => idsIn(t).forEach((id) => inAnswers.add(id)));
-    }
+      if (entry.type === 'exercise' || entry.type === 'answer') lastPractice = i;
+      if (entry.type === 'faq') {
+        faqAt.push(i);
+        if (!entry.question?.en?.length || !entry.en?.length) faqIncomplete += 1;
+      }
+    });
     return {
       lesson: lesson.id,
       number: lesson.number,
@@ -102,6 +113,9 @@ export function practiceGaps(lessons, dictionary) {
       exercises,
       missingExample: introduced.filter((id) => !inExamples.has(id)).map((id) => dictionary[id].term),
       missingExercise: introduced.filter((id) => !inAnswers.has(id)).map((id) => dictionary[id].term),
+      faq: faqAt.length,
+      faqIncomplete,
+      faqOutOfPlace: faqAt.some((at, k) => at < lastPractice || (k > 0 && at !== faqAt[k - 1] + 1)),
     };
   });
 }

@@ -3,7 +3,7 @@
 // LessonShape is this lesson's exact, hand-written type -- see lesson-01's
 // shape.ts for the full explanation of the pattern.
 //
-// Rewritten in Phase 2 (BOOK_PLAN.md): it changed (adjective + le), became (biàn), making it so (nòng), putting the thing first (bǎ), and strong (yǒu lìliàng).
+// Rewritten in Phase 2 (BOOK_PLAN.md): it changed (adjective + le), became (biàn), making it so (nòng), putting the thing first (bǎ), where you put it (fàng), and strong (yǒu lìliàng).
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- lesson-15).
 import type {
@@ -15,6 +15,7 @@ import type {
   TExercise,
   TAnswer,
   TInfo,
+  TFaq,
 } from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
@@ -80,6 +81,18 @@ export type LessonShape = {
   exampleBa4: TExample;
   /** Example: tā bǎ shuǐ dōu nòng rè le. */
   exampleBa5: TExample;
+  /** Vocabulary: "put". */
+  vocabFang: TVocab;
+  /** Say: To say where you put a thing, put bǎ and the thing first, then fàng zài and the place. Pattern: Who + bǎ + thing + fàng zài + place */
+  proseFang: TProse;
+  /** Example: wǒ bǎ yīfu fàng zài dì-shàng le. */
+  exampleFang1: TExample;
+  /** Example: tā bǎ gōngjù fàng zài hézi-lǐ le. */
+  exampleFang2: TExample;
+  /** Example: bǎ shuǐguǒ fàng zài zhè-lǐ. */
+  exampleFang3: TExample;
+  /** Example: nǐ bǎ wǒ-de jīn fàng zài nǎlǐ le? */
+  exampleFang4: TExample;
   /** Vocabulary: "strength; yǒu lìliàng: strong". */
   vocabLiliang: TVocab;
   /** Say: To say strong, say yǒu lìliàng, "have strength". Pattern: Who + hěn yǒu lìliàng */
@@ -108,6 +121,8 @@ export type LessonShape = {
   exercise6: TExercise;
   /** Exercise 7: There's mud on my clothes. */
   exercise7: TExercise;
+  /** Exercise 8: Put the box here. */
+  exercise8: TExercise;
   /** Answer 1: mǐfàn lěng le. */
   answer1: TAnswer;
   /** Answer 2: wǒ-de gōngjù huài le. */
@@ -122,6 +137,14 @@ export type LessonShape = {
   answer6: TAnswer;
   /** Answer 7: wǒ-de yīfu-shàng yǒu ní. */
   answer7: TAnswer;
+  /** Answer 8: bǎ hézi fàng zài zhè-lǐ. */
+  answer8: TAnswer;
+  /** FAQ: is this le the same as in Lesson 8? */
+  faqLeSameWord: TFaq;
+  /** FAQ: when do I use bǎ? (doing something to a thing, with a result) */
+  faqWhenBa: TFaq;
+  /** FAQ: biàn lěng le vs lěng le */
+  faqBianOrLe: TFaq;
 };
 
 const shape: LessonShape = {
@@ -232,6 +255,28 @@ const shape: LessonShape = {
     pinyin: "{{Word:ta1}} {{word:ba3}} {{word:shui3}} {{word:dou1}} {{word:nong4}} {{word:re4}} {{word:le}}.",
     ttsText: "他把水都弄热了。",
   },
+  vocabFang: { type: "vocab", term: "{{word:fang4}}", ttsText: "放" },
+  proseFang: { type: "prose" },
+  exampleFang1: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:ba3}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:di4}}-{{word:shang4}} {{word:le}}.",
+    ttsText: "我把衣服放在地上了。",
+  },
+  exampleFang2: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:ba3}} {{word:gong1ju4}} {{word:fang4}} {{word:zai4}} {{word:he2zi}}-{{word:li3}} {{word:le}}.",
+    ttsText: "他把工具放在盒子里了。",
+  },
+  exampleFang3: {
+    type: "example",
+    pinyin: "{{Word:ba3}} {{word:shui3guo3}} {{word:fang4}} {{word:zai4}} {{word:zhe4}}-{{word:li3}}.",
+    ttsText: "把水果放在这里。",
+  },
+  exampleFang4: {
+    type: "example",
+    pinyin: "{{Word:ni3}} {{word:ba3}} {{word:wo3}}-{{word:de}} {{word:jin1}} {{word:fang4}} {{word:zai4}} {{word:na3li3}} {{word:le}}?",
+    ttsText: "你把我的金放在哪里了？",
+  },
   vocabLiliang: {
     type: "vocab",
     term: "{{word:li4liang4}}",
@@ -262,7 +307,7 @@ const shape: LessonShape = {
     type: "info",
     subtype: "grammar",
     tag: "describing/becoming-and-making",
-    items: [{}, {}, {}, {}, {}],
+    items: [{}, {}, {}, {}, {}, {}],
   },
   exercise1: { type: "exercise" },
   exercise2: { type: "exercise" },
@@ -271,6 +316,7 @@ const shape: LessonShape = {
   exercise5: { type: "exercise" },
   exercise6: { type: "exercise" },
   exercise7: { type: "exercise" },
+  exercise8: { type: "exercise" },
   answer1: { type: "answer", ttsText: "米饭冷了。" },
   answer2: { type: "answer", ttsText: "我的工具坏了。" },
   answer3: { type: "answer", ttsText: "水变热了。" },
@@ -278,6 +324,10 @@ const shape: LessonShape = {
   answer5: { type: "answer", ttsText: "她很有力量。" },
   answer6: { type: "answer", ttsText: "他得了什么？" },
   answer7: { type: "answer", ttsText: "我的衣服上有泥。" },
+  answer8: { type: "answer", ttsText: "把盒子放在这里。" },
+  faqLeSameWord: { type: "faq" },
+  faqWhenBa: { type: "faq" },
+  faqBianOrLe: { type: "faq" },
 };
 
 export default shape;

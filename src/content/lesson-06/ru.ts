@@ -38,7 +38,6 @@ const ru: PartialByKey<LessonShape> = {
   exampleAnswer1: { ru: [] },
   exampleAnswer2: { ru: [] },
   exampleAnswer3: { ru: [] },
-  exampleAnswer4: { ru: [] },
   infoAskingQuestions: {
     title: { ru: [] },
     items: [
@@ -63,6 +62,9 @@ const ru: PartialByKey<LessonShape> = {
   answer5: { ru: [] },
   answer6: { ru: [] },
   answer7: { ru: [] },
+  faqMaAndVerbBuVerb: { question: { ru: [] }, ru: [] },
+  faqYouMeiYou: { question: { ru: [] }, ru: [] },
+  faqWeishenmeFirst: { question: { ru: [] }, ru: [] },
 };
 
 export default ru;

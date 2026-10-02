@@ -4,6 +4,7 @@ import { GrammarBlock } from './GrammarBlock.jsx';
 import { ExampleList } from './ExampleList.jsx';
 import { StoryBlock } from './StoryBlock.jsx';
 import { PracticeExercise } from './PracticeExercise.jsx';
+import { FaqSection } from './FaqSection.jsx';
 import styles from './LessonFlow.module.css';
 
 // A lesson in the order its file lists the blocks (the view's `flow`, see
@@ -22,6 +23,7 @@ export function LessonFlow({ flow, lang }) {
           {group.kind === 'exercise' && (
             <PracticeExercise questions={group.questions} answers={group.answers} start={group.start} lang={lang} />
           )}
+          {group.kind === 'faq' && <FaqSection items={group.items} lang={lang} />}
         </div>
       ))}
     </div>

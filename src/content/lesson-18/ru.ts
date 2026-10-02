@@ -66,6 +66,8 @@ const ru: PartialByKey<LessonShape> = {
   answer5: { ru: [] },
   answer6: { ru: [] },
   answer7: { ru: [] },
+  faqWhichDe: { question: { ru: [] }, ru: [] },
+  faqDeSameWord: { question: { ru: [] }, ru: [] },
 };
 
 export default ru;

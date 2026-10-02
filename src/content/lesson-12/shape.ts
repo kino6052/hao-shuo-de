@@ -15,6 +15,7 @@ import type {
   TExercise,
   TAnswer,
   TInfo,
+  TFaq,
 } from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
@@ -122,6 +123,12 @@ export type LessonShape = {
   answer7: TAnswer;
   /** Answer 8: shuǐ bù lěng. */
   answer8: TAnswer;
+  /** FAQ: is this hěn the same as in Lesson 3? (yes; stress it, or use zhēn) */
+  faqHenStress: TFaq;
+  /** FAQ: bù hěn vs hěn bù (order matters) */
+  faqBuHenOrder: TFaq;
+  /** FAQ: why no hěn in shuǐ rè ma? */
+  faqNoHenInQuestion: TFaq;
 };
 
 const shape: LessonShape = {
@@ -278,6 +285,9 @@ const shape: LessonShape = {
   answer6: { type: "answer", ttsText: "我要新的衣服。" },
   answer7: { type: "answer", ttsText: "她的身体很好。" },
   answer8: { type: "answer", ttsText: "水不冷。" },
+  faqHenStress: { type: "faq" },
+  faqBuHenOrder: { type: "faq" },
+  faqNoHenInQuestion: { type: "faq" },
 };
 
 export default shape;

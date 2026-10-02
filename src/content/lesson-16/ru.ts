@@ -45,6 +45,7 @@ const ru: PartialByKey<LessonShape> = {
   exampleCount19: { ru: [] },
   exampleCount20: { ru: [] },
   exampleCount21: { ru: [] },
+  exampleCount22: { ru: [] },
   proseTeens: { ru: [], tldr: { ru: [] }, necessity: { ru: [] } },
   exampleTeens1: { ru: [] },
   exampleTeens2: { ru: [] },
@@ -89,6 +90,9 @@ const ru: PartialByKey<LessonShape> = {
   answer11: { ru: [] },
   answer12: { ru: [] },
   answer13: { ru: [] },
+  faqErInBigNumbers: { question: { ru: [] }, ru: [] },
+  faqHaoDays: { question: { ru: [] }, ru: [] },
+  faqYiTone: { question: { ru: [] }, ru: [] },
 };
 
 export default ru;

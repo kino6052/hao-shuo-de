@@ -77,6 +77,7 @@ const en: PartialByKey<LessonShape> = {
   exampleCount19: { en: ["Three people got up."] },
   exampleCount20: { en: ["I have three kinds of fruit."] },
   exampleCount21: { en: ["Some of the people went."] },
+  exampleCount22: { en: ["He put two boxes on the floor."] },
   proseTeens: {
     en: [
       "**To say numbers above ten**, put {{word:shi2}} (ten) before or after the other number.",
@@ -176,6 +177,24 @@ const en: PartialByKey<LessonShape> = {
   },
   answer12: { en: ["{{Word:shi2}}-{{word:er4}}-ge {{word:ren2}}."] },
   answer13: { en: ["{{Word:yi1}}, {{word:er4}}, {{word:san1}}."] },
+  faqErInBigNumbers: {
+    question: { en: ["Do I say {{word:liang3}} in 12 or 20 too?"] },
+    en: [
+      "No. Inside a bigger number, use {{word:er4}}, even with things: {{word:shi2}}-{{word:er4}}-ge {{word:ren2}} (12 people). {{word:liang3}} is only for two on its own.",
+    ],
+  },
+  faqHaoDays: {
+    question: { en: ["Is {{word:hao4}} only for things like \"number two\"?"] },
+    en: [
+      "It also numbers the days of the month: {{word:wu3}}-{{word:hao4}} is the 5th.",
+    ],
+  },
+  faqYiTone: {
+    question: { en: ["Why does {{word:yi1}}-ge sound like it has a different tone?"] },
+    en: [
+      "Before {{word:ge4}}, {{word:yi1}} is said with a rising tone (the second tone). The book still writes {{word:yi1}}. The appendix on tone changes lists when this happens.",
+    ],
+  },
 };
 
 export default en;

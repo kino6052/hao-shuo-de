@@ -145,6 +145,18 @@ const en: PartialByKey<LessonShape> = {
       "{{Word:you3}} {{word:kong1qi4}}-{{word:de}} {{word:hua4}}, {{word:wo3}}-{{word:men}} {{word:neng2}} {{word:huo2}}.",
     ],
   },
+  faqSo: {
+    question: { en: ["Do I need a word for \"so\" after {{word:yin1wei4}}?"] },
+    en: [
+      "Full Mandarin often adds one before the result. Hao-shuo-de leaves it out, and the comma is enough: {{Word:yin1wei4}} {{word:wo3}} {{word:hen3}} {{word:leng3}}, {{word:wo3}} {{word:bu4}} {{word:qu4}}.",
+    ],
+  },
+  faqIfWord: {
+    question: { en: ["Is there a word for \"if\" on its own?"] },
+    en: [
+      "Full Mandarin has one, but X-{{word:de}} {{word:hua4}} alone is enough, and it's very common in speech.",
+    ],
+  },
 };
 
 export default en;

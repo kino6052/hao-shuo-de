@@ -65,6 +65,9 @@ const zh: PartialByKey<LessonShape> = {
   answer6: { zh: [] },
   answer7: { zh: [] },
   answer8: { zh: [] },
+  faqZaiSameWord: { question: { zh: [] }, zh: [] },
+  faqThingNeedsLi: { question: { zh: [] }, zh: [] },
+  faqLiOrLimian: { question: { zh: [] }, zh: [] },
 };
 
 export default zh;

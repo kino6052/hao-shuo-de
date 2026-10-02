@@ -15,6 +15,7 @@ import type {
   TExercise,
   TAnswer,
   TInfo,
+  TFaq,
 } from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
@@ -118,6 +119,10 @@ export type LessonShape = {
   answer6: TAnswer;
   /** Answer 7: yǒu kōngqì-de huà, wǒ-men néng huó. */
   answer7: TAnswer;
+  /** FAQ: do I need a word for "so" after yīnwèi? */
+  faqSo: TFaq;
+  /** FAQ: is there a word for "if" on its own? */
+  faqIfWord: TFaq;
 };
 
 const shape: LessonShape = {
@@ -280,6 +285,8 @@ const shape: LessonShape = {
   answer5: { type: "answer", ttsText: "我要盐。" },
   answer6: { type: "answer", ttsText: "你冷的话，来里面。" },
   answer7: { type: "answer", ttsText: "有空气的话，我们能活。" },
+  faqSo: { type: "faq" },
+  faqIfWord: { type: "faq" },
 };
 
 export default shape;

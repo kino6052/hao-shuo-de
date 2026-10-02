@@ -15,6 +15,7 @@ import type {
   TExercise,
   TAnswer,
   TInfo,
+  TFaq,
 } from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
@@ -98,20 +99,6 @@ export type LessonShape = {
   posessionDeExample07: TExample;
   /** Example: tā-de jiǎo hěn xiǎo. */
   posessionDeExample08: TExample;
-  /** Example: wǒ shì rén. [from old L04] */
-  example1: TExample;
-  /** Example: wǒ shì nánrén. [from old L04] */
-  example2: TExample;
-  /** Example: nǐ shì hǎo-de rén. [from old L04] */
-  example3: TExample;
-  /** Example: zhè-ge shì wǒ-de shǒu. [from old L04] */
-  example4: TExample;
-  /** Example: nà-ge shì nǐ-de dōngxi. [from old L04] */
-  example5: TExample;
-  /** Example: wǒ-de jiā hěn dà. [from old L04] */
-  example6: TExample;
-  /** Example: nánrén-de dòngwù hěn xiǎo. [from old L04] */
-  example7: TExample;
   /** Exercise 1: This one is an animal. [from old L03] */
   exercise1L03: TExercise;
   /** Exercise 2: That one is a woman. [from old L03] */
@@ -160,6 +147,12 @@ export type LessonShape = {
   answer6: TAnswer;
   /** Answer 7. */
   answer7: TAnswer;
+  /** FAQ: is gè really right for everything? (other counting words exist; gè is understood) */
+  faqGeForEverything: TFaq;
+  /** FAQ: does tā mean he or she? (both, and it) */
+  faqTaHeOrShe: TFaq;
+  /** FAQ: can I drop -de in wǒ-de jiā? (often, for family and home; -de is always correct) */
+  faqDropDe: TFaq;
 };
 
 const shape: LessonShape = {
@@ -172,7 +165,11 @@ const shape: LessonShape = {
     pinyin: "{{Word:zhe4}}.",
     ttsText: "这",
   },
-  pointersExample02: { type: "example", pinyin: "{{Word:na4}}.", ttsText: "那" },
+  pointersExample02: {
+    type: "example",
+    pinyin: "{{Word:na4}}.",
+    ttsText: "那",
+  },
   proseMandarinMeasureWords: { type: "prose" },
   vocabGe: { type: "vocab", term: "{{word:ge4}}", ttsText: "个" },
   proseGeIsUniversal: { type: "prose" },
@@ -204,16 +201,29 @@ const shape: LessonShape = {
   },
   example5L11: {
     type: "example",
-    pinyin: "{{Word:na4}}-ge {{word:dong1xi}} {{word:shi4}} {{word:shui3guo3}}.",
+    pinyin:
+      "{{Word:na4}}-ge {{word:dong1xi}} {{word:shi4}} {{word:shui3guo3}}.",
     ttsText: "那个东西是水果。",
   },
   vocabWo: { type: "vocab", term: "{{word:wo3}}", ttsText: "我" },
   vocabNi: { type: "vocab", term: "{{word:ni3}}", ttsText: "你" },
   vocabTa: { type: "vocab", term: "{{word:ta1}}", ttsText: "他" },
   prosePointingToPeople: { type: "prose" },
-  pointToPeopleExample01: { type: "example", pinyin: "{{Word:wo3}}.", ttsText: "我" },
-  pointToPeopleExample02: { type: "example", pinyin: "{{Word:ni3}}.", ttsText: "你" },
-  pointToPeopleExample03: { type: "example", pinyin: "{{Word:ta1}}.", ttsText: "他" },
+  pointToPeopleExample01: {
+    type: "example",
+    pinyin: "{{Word:wo3}}.",
+    ttsText: "我",
+  },
+  pointToPeopleExample02: {
+    type: "example",
+    pinyin: "{{Word:ni3}}.",
+    ttsText: "你",
+  },
+  pointToPeopleExample03: {
+    type: "example",
+    pinyin: "{{Word:ta1}}.",
+    ttsText: "他",
+  },
   vocabMen: { type: "vocab", term: "{{word:men}}", ttsText: "们" },
   prosePluralPointers: { type: "prose" },
   pluralPointersExample01: {
@@ -258,59 +268,29 @@ const shape: LessonShape = {
   },
   posessionDeExample05: {
     type: "example",
-    pinyin: "{{Word:ni3}}-{{word:de}} {{word:jiao3}} {{word:hen3}} {{word:da4}}.",
+    pinyin:
+      "{{Word:ni3}}-{{word:de}} {{word:jiao3}} {{word:hen3}} {{word:da4}}.",
     ttsText: "你的脚很大。",
   },
   posessionDeExample06: {
     type: "example",
-    pinyin: "{{Word:wo3}}-{{word:de}} {{word:shou3}} {{word:hen3}} {{word:da4}}.",
+    pinyin:
+      "{{Word:wo3}}-{{word:de}} {{word:shou3}} {{word:hen3}} {{word:da4}}.",
     ttsText: "我的手很大。",
   },
   posessionDeExample07: {
     type: "example",
-    pinyin: "{{Word:ta1}}-{{word:de}} {{word:tou2}} {{word:hen3}} {{word:xiao3}}.",
+    pinyin:
+      "{{Word:ta1}}-{{word:de}} {{word:tou2}} {{word:hen3}} {{word:xiao3}}.",
     ttsText: "他的头很小。",
   },
   posessionDeExample08: {
     type: "example",
-    pinyin: "{{Word:ta1}}-{{word:de}} {{word:jiao3}} {{word:hen3}} {{word:xiao3}}.",
+    pinyin:
+      "{{Word:ta1}}-{{word:de}} {{word:jiao3}} {{word:hen3}} {{word:xiao3}}.",
     ttsText: "她的脚很小。",
   },
-  example1: {
-    type: "example",
-    pinyin: "{{Word:wo3}} {{word:shi4}} {{word:ren2}}.",
-    ttsText: "我是人。",
-  },
-  example2: {
-    type: "example",
-    pinyin: "{{Word:wo3}} {{word:shi4}} {{word:nan2ren2}}.",
-    ttsText: "我是男人。",
-  },
-  example3: {
-    type: "example",
-    pinyin: "{{Word:ni3}} {{word:shi4}} {{word:hao3}}-{{word:de}} {{word:ren2}}.",
-    ttsText: "你是好的人。",
-  },
-  example4: {
-    type: "example",
-    pinyin: "{{Word:zhe4}}-ge {{word:shi4}} {{word:wo3}}-{{word:de}} {{word:shou3}}.",
-    ttsText: "这个是我的手。",
-  },
-  example5: {
-    type: "example",
-    pinyin: "{{Word:na4}}-ge {{word:shi4}} {{word:ni3}}-{{word:de}} {{word:dong1xi}}.",
-    ttsText: "那个是你的东西。",
-  },
-  example6: {
-    type: "example",
-    pinyin: "{{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:hen3}} {{word:da4}}.",
-    ttsText: "我的家很大。",
-  },
-  example7: {
-    type: "example",
-    pinyin: "{{Word:nan2ren2}}-{{word:de}} {{word:dong4wu4}} {{word:hen3}} {{word:xiao3}}.",
-    ttsText: "男人的动物很小。",
-  },
+
   exercise1L03: { type: "exercise" },
   exercise2L03: { type: "exercise" },
   exercise1L11: { type: "exercise" },
@@ -335,6 +315,9 @@ const shape: LessonShape = {
   answer5: { type: "answer", ttsText: "你的手很大。" },
   answer6: { type: "answer", ttsText: "她的头很大。" },
   answer7: { type: "answer", ttsText: "我的脚很小。" },
+  faqGeForEverything: { type: "faq" },
+  faqTaHeOrShe: { type: "faq" },
+  faqDropDe: { type: "faq" },
 };
 
 export default shape;

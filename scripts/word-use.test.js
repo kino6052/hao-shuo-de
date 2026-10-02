@@ -81,6 +81,19 @@ describe('practiceGaps', () => {
     expect(gap.missingExercise).toEqual(['rén']);
   });
 
+  test('counts the FAQ and checks it comes together after the exercises', () => {
+    const faq = (q = ['Why?'], en = ['Because.']) => ({ type: 'faq', question: { en: q }, en });
+    const exercise = { type: 'exercise', en: ['x'] };
+    const [after] = practiceGaps(lesson([exercise, answer('x'), faq(), faq()]), dictionary);
+    expect(after).toMatchObject({ faq: 2, faqIncomplete: 0, faqOutOfPlace: false });
+    const [before] = practiceGaps(lesson([faq(), exercise, answer('x')]), dictionary);
+    expect(before.faqOutOfPlace).toBe(true);
+    const [split] = practiceGaps(lesson([exercise, faq(), answer('x'), faq()]), dictionary);
+    expect(split.faqOutOfPlace).toBe(true);
+    const [blank] = practiceGaps(lesson([exercise, faq([]), faq(['Why?'], [])]), dictionary);
+    expect(blank.faqIncomplete).toBe(2);
+  });
+
   test('a lesson with no new words has nothing to miss', () => {
     const [gap] = practiceGaps(lesson([{ type: 'prose', en: ['Sounds.'] }]), dictionary);
     expect(gap).toMatchObject({ introduced: 0, missingExample: [], missingExercise: [] });

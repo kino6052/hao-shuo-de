@@ -344,7 +344,7 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:wei4shen2me}}, why: {{Word:wei4shen2me}} {{word:ni3}} {{word:bu4}} {{word:chi1}}? (Why don't you eat?)"
+            "{{word:wei4shen2me}} + verb, why: {{Word:ni3}} {{word:wei4shen2me}} {{word:bu4}} {{word:chi1}}? (Why don't you eat?)"
           ],
           "ru": [],
           "zh": []
@@ -894,6 +894,15 @@ const content: Entry[] = [
         "text": {
           "en": [
             "{{word:ba3}} + thing + {{word:nong4}} + result: {{Word:wo3}} {{word:ba3}} {{word:gong1ju4}} {{word:nong4}} {{word:hao3}} {{word:le}}. (I fixed the tool.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:ba3}} + thing + {{word:fang4}} {{word:zai4}} + place, put: {{Word:wo3}} {{word:ba3}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:di4}}-{{word:shang4}} {{word:le}}. (I put the clothes on the floor.)"
           ],
           "ru": [],
           "zh": []

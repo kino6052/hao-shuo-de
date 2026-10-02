@@ -15,6 +15,7 @@ import type {
   TExercise,
   TAnswer,
   TInfo,
+  TFaq,
 } from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
@@ -44,7 +45,7 @@ export type LessonShape = {
   exampleIs2: TExample;
   /** Example: shuǐguǒ shì dōngxi. */
   exampleIs3: TExample;
-  /** Example: dòngwù shì dōngxi. */
+  /** Example: dòngwù bu shì dōngxi. */
   exampleIs4: TExample;
   /** Vocabulary: "this". */
   vocabZhe: TVocab;
@@ -104,6 +105,10 @@ export type LessonShape = {
   answer7: TAnswer;
   /** Answer 8: dòngwù bù shì rén. */
   answer8: TAnswer;
+  /** FAQ: why is there no word for "a" or "the"? */
+  faqAOrThe: TFaq;
+  /** FAQ: does shì change like am / is / are? (no) */
+  faqShiNeverChanges: TFaq;
 };
 
 const shape: LessonShape = {
@@ -146,8 +151,8 @@ const shape: LessonShape = {
   },
   exampleIs4: {
     type: "example",
-    pinyin: "{{Word:dong4wu4}} {{word:shi4}} {{word:dong1xi}}.",
-    ttsText: "动物是东西。",
+    pinyin: "{{Word:dong4wu4}} {{word:bu4}} {{word:shi4}} {{word:dong1xi}}.",
+    ttsText: "动物不是东西。",
   },
   vocabZhe: { type: "vocab", term: "{{word:zhe4}}", ttsText: "这" },
   proseThis: { type: "prose" },
@@ -215,6 +220,8 @@ const shape: LessonShape = {
   answer6: { type: "answer", ttsText: "这是男人。" },
   answer7: { type: "answer", ttsText: "这不是水果。" },
   answer8: { type: "answer", ttsText: "动物不是人。" },
+  faqAOrThe: { type: "faq" },
+  faqShiNeverChanges: { type: "faq" },
 };
 
 export default shape;

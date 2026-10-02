@@ -45,13 +45,6 @@ const zh: PartialByKey<LessonShape> = {
   posessionDeExample06: { zh: [] },
   posessionDeExample07: { zh: [] },
   posessionDeExample08: { zh: [] },
-  example1: { zh: [] },
-  example2: { zh: [] },
-  example3: { zh: [] },
-  example4: { zh: [] },
-  example5: { zh: [] },
-  example6: { zh: [] },
-  example7: { zh: [] },
   exercise1L03: { zh: [] },
   exercise2L03: { zh: [] },
   exercise1L11: { zh: [] },
@@ -76,6 +69,9 @@ const zh: PartialByKey<LessonShape> = {
   answer5: { zh: [] },
   answer6: { zh: [] },
   answer7: { zh: [] },
+  faqGeForEverything: { question: { zh: [] }, zh: [] },
+  faqTaHeOrShe: { question: { zh: [] }, zh: [] },
+  faqDropDe: { question: { zh: [] }, zh: [] },
 };
 
 export default zh;

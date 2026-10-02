@@ -48,6 +48,8 @@ const ru: PartialByKey<LessonShape> = {
   answer6: { ru: [] },
   answer7: { ru: [] },
   answer8: { ru: [] },
+  faqAOrThe: { question: { ru: [] }, ru: [] },
+  faqShiNeverChanges: { question: { ru: [] }, ru: [] },
 };
 
 export default ru;

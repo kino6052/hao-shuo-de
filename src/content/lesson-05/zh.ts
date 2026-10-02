@@ -51,6 +51,8 @@ const zh: PartialByKey<LessonShape> = {
   answer4: { zh: [] },
   answer5: { zh: [] },
   answer6: { zh: [] },
+  faqPastFuture: { question: { zh: [] }, zh: [] },
+  faqChiDrink: { question: { zh: [] }, zh: [] },
 };
 
 export default zh;

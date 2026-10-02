@@ -3,7 +3,7 @@
 // LessonShape is this lesson's exact, hand-written type -- see lesson-01's
 // shape.ts for the full explanation of the pattern.
 //
-// Rewritten in Phase 2 (BOOK_PLAN.md): when (X-de shíjiān), finished (verb-wán), after (verb-wán hòu), start (kāishǐ), stay or keep (liú), and for a moment (yīxià).
+// Rewritten in Phase 2 (BOOK_PLAN.md): when (X-de shíjiān), finished (verb-wán), after (verb-wán hòu), start (kāishǐ), and for a moment (yīxià). liú (stay, keep) is only used in their examples.
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- lesson-09).
 import type {
@@ -15,6 +15,7 @@ import type {
   TExercise,
   TAnswer,
   TInfo,
+  TFaq,
 } from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
@@ -44,6 +45,8 @@ export type LessonShape = {
   exampleFinished3: TExample;
   /** Vocabulary: "after; behind". */
   vocabHou: TVocab;
+  /** Vocabulary: "stay, keep". */
+  vocabLiu: TVocab;
   /** Say: To say "after doing something", put hòu after the finished action, then a comma. Pattern: verb-wán hòu, the rest */
   proseAfter: TProse;
   /** Example: chī-wán hòu, wǒ shuìjiào. */
@@ -54,6 +57,10 @@ export type LessonShape = {
   exampleAfter3: TExample;
   /** Example: chī-wán hòu, fāshēng le shénme? */
   exampleAfter4: TExample;
+  /** Example: chī-wán hòu, tā liú. */
+  exampleAfter5: TExample;
+  /** Example: kàn-wán hòu, wǒ liú zhè-ge. */
+  exampleAfter6: TExample;
   /** Vocabulary: "start". */
   vocabKaishi: TVocab;
   /** Say: To say something starts, put kāishǐ before the verb. Pattern: Who + kāishǐ + verb */
@@ -66,16 +73,6 @@ export type LessonShape = {
   exampleStart3: TExample;
   /** Example: wǒ xiànzài kāishǐ xiě. */
   exampleStart4: TExample;
-  /** Vocabulary: "stay, keep". */
-  vocabLiu: TVocab;
-  /** Say: To say you stay, or keep something, use liú. Pattern: Who + liú (+ thing) */
-  proseStay: TProse;
-  /** Example: wǒ liú zhè-ge. */
-  exampleStay1: TExample;
-  /** Example: nǐ yào liú ma? */
-  exampleStay2: TExample;
-  /** Example: chī-wán hòu, tā liú. */
-  exampleStay3: TExample;
   /** Vocabulary: "a moment; after a verb: for a moment". */
   vocabYixia: TVocab;
   /** Say: To do something just for a moment, put yīxià (a moment) after the verb. Pattern: Who + verb + yīxià */
@@ -100,7 +97,7 @@ export type LessonShape = {
   exercise4: TExercise;
   /** Exercise 5: Do you want to play? */
   exercise5: TExercise;
-  /** Exercise 6: I will stay. */
+  /** Exercise 6: After eating, I'll stay. */
   exercise6: TExercise;
   /** Exercise 7: Wait a moment! */
   exercise7: TExercise;
@@ -114,10 +111,14 @@ export type LessonShape = {
   answer4: TAnswer;
   /** Answer 5: nǐ yào wánr ma? */
   answer5: TAnswer;
-  /** Answer 6: wǒ huì liú. */
+  /** Answer 6: chī-wán hòu, wǒ huì liú. */
   answer6: TAnswer;
   /** Answer 7: děng yīxià! */
   answer7: TAnswer;
+  /** FAQ: wán (finish) vs wánr (play) */
+  faqWanOrWanr: TFaq;
+  /** FAQ: do I need both wán and le? */
+  faqWanAndLe: TFaq;
 };
 
 const shape: LessonShape = {
@@ -158,6 +159,7 @@ const shape: LessonShape = {
     ttsText: "她看完了。",
   },
   vocabHou: { type: "vocab", term: "{{word:hou4}}", ttsText: "后" },
+  vocabLiu: { type: "vocab", term: "{{word:liu2}}", ttsText: "留" },
   proseAfter: { type: "prose" },
   exampleAfter1: {
     type: "example",
@@ -178,6 +180,16 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:chi1}}-{{word:wan2}} {{word:hou4}}, {{word:fa1sheng1}} {{word:le}} {{word:shen2me}}?",
     ttsText: "吃完后，发生了什么？",
+  },
+  exampleAfter5: {
+    type: "example",
+    pinyin: "{{Word:chi1}}-{{word:wan2}} {{word:hou4}}, {{word:ta1}} {{word:liu2}}.",
+    ttsText: "吃完后，她留。",
+  },
+  exampleAfter6: {
+    type: "example",
+    pinyin: "{{Word:kan4}}-{{word:wan2}} {{word:hou4}}, {{word:wo3}} {{word:liu2}} {{word:zhe4}}-ge.",
+    ttsText: "看完后，我留这个。",
   },
   vocabKaishi: {
     type: "vocab",
@@ -204,23 +216,6 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:wo3}} {{word:xian4zai4}} {{word:kai1shi3}} {{word:xie3}}.",
     ttsText: "我现在开始写。",
-  },
-  vocabLiu: { type: "vocab", term: "{{word:liu2}}", ttsText: "留" },
-  proseStay: { type: "prose" },
-  exampleStay1: {
-    type: "example",
-    pinyin: "{{Word:wo3}} {{word:liu2}} {{word:zhe4}}-ge.",
-    ttsText: "我留这个。",
-  },
-  exampleStay2: {
-    type: "example",
-    pinyin: "{{Word:ni3}} {{word:yao4}} {{word:liu2}} {{word:ma}}?",
-    ttsText: "你要留吗？",
-  },
-  exampleStay3: {
-    type: "example",
-    pinyin: "{{Word:chi1}}-{{word:wan2}} {{word:hou4}}, {{word:ta1}} {{word:liu2}}.",
-    ttsText: "吃完后，她留。",
   },
   vocabYixia: { type: "vocab", term: "{{word:yi1xia4}}", ttsText: "一下" },
   proseMoment: { type: "prose" },
@@ -262,8 +257,10 @@ const shape: LessonShape = {
   answer3: { type: "answer", ttsText: "看完后，我睡觉。" },
   answer4: { type: "answer", ttsText: "她开始吃了。" },
   answer5: { type: "answer", ttsText: "你要玩儿吗？" },
-  answer6: { type: "answer", ttsText: "我会留。" },
+  answer6: { type: "answer", ttsText: "吃完后，我会留。" },
   answer7: { type: "answer", ttsText: "等一下！" },
+  faqWanOrWanr: { type: "faq" },
+  faqWanAndLe: { type: "faq" },
 };
 
 export default shape;

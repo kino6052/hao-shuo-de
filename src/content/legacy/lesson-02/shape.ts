@@ -15,7 +15,11 @@ const shape = [
   /** Vocabulary: "fruit, vegetable". */
   { type: "vocab", term: "{{word:shui3guo3}}", ttsText: "水果" },
   /** Vocabulary: "document, written thing". */
-  { type: "vocab", term: "{{word:xie3}}-{{word:de}} {{word:dong1xi}}", ttsText: "写的东西" },
+  {
+    type: "vocab",
+    term: "{{word:xie3}}-{{word:de}} {{word:dong1xi}}",
+    ttsText: "写的东西",
+  },
   /** Vocabulary: "woman, female". */
   { type: "vocab", term: "{{word:nv3ren2}}", ttsText: "女人" },
   /** Vocabulary: "this". */
@@ -27,17 +31,42 @@ const shape = [
   { type: "prose" },
 
   /** Example: zhè shì rén. */
-  { type: "example", pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:ren2}}.", ttsText: "这是人。" },
+  {
+    type: "example",
+    pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:ren2}}.",
+    ttsText: "这是人。",
+  },
   /** Example: zhè shì shuǐguǒ. */
-  { type: "example", pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:shui3guo3}}.", ttsText: "这是水果。" },
+  {
+    type: "example",
+    pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:shui3guo3}}.",
+    ttsText: "这是水果。",
+  },
   /** Example: xiě-de dōngxi shì dōngxi. */
-  { type: "example", pinyin: "{{Word:xie3}}-{{word:de}} {{word:dong1xi}} {{word:shi4}} {{word:dong1xi}}.", ttsText: "写的东西是东西。" },
+  {
+    type: "example",
+    pinyin:
+      "{{Word:xie3}}-{{word:de}} {{word:dong1xi}} {{word:shi4}} {{word:dong1xi}}.",
+    ttsText: "写的东西是东西。",
+  },
   /** Example: rén shì nǚrén. */
-  { type: "example", pinyin: "{{Word:ren2}} {{word:shi4}} {{word:nv3ren2}}.", ttsText: "人是女人。" },
-  /** Example: dòngwù shì dōngxi. */
-  { type: "example", pinyin: "{{Word:dong4wu4}} {{word:shi4}} {{word:dong1xi}}.", ttsText: "动物是东西。" },
+  {
+    type: "example",
+    pinyin: "{{Word:ren2}} {{word:shi4}} {{word:nv3ren2}}.",
+    ttsText: "人是女人。",
+  },
+  /** Example: dòngwù bu shì dōngxi. */
+  {
+    type: "example",
+    pinyin: "{{Word:dong4wu4}} {{word:bu4}} {{word:shi4}} {{word:dong1xi}}.",
+    ttsText: "动物不是东西。",
+  },
   /** Example: nǚrén shì rén. */
-  { type: "example", pinyin: "{{Word:nv3ren2}} {{word:shi4}} {{word:ren2}}.", ttsText: "女人是人。" },
+  {
+    type: "example",
+    pinyin: "{{Word:nv3ren2}} {{word:shi4}} {{word:ren2}}.",
+    ttsText: "女人是人。",
+  },
 
   /** Exercise 1: Something is something. */
   { type: "exercise" },

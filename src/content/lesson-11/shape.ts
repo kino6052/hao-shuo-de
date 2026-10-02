@@ -15,6 +15,7 @@ import type {
   TExercise,
   TAnswer,
   TInfo,
+  TFaq,
 } from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
@@ -166,6 +167,12 @@ export type LessonShape = {
   answer9: TAnswer;
   /** Answer 10: wǒ-de jiā hěn jìn. */
   answer10: TAnswer;
+  /** FAQ: dào vs qù */
+  faqDaoOrQu: TFaq;
+  /** FAQ: why cóng + place before lái? */
+  faqCongOrder: TFaq;
+  /** FAQ: lái or qù depends on where the speaker is */
+  faqLaiOrQu: TFaq;
 };
 
 const shape: LessonShape = {
@@ -388,6 +395,9 @@ const shape: LessonShape = {
   answer8: { type: "answer", ttsText: "不要动！" },
   answer9: { type: "answer", ttsText: "市场很远。" },
   answer10: { type: "answer", ttsText: "我的家很近。" },
+  faqDaoOrQu: { type: "faq" },
+  faqCongOrder: { type: "faq" },
+  faqLaiOrQu: { type: "faq" },
 };
 
 export default shape;

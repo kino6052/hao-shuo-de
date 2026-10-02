@@ -38,7 +38,6 @@ const zh: PartialByKey<LessonShape> = {
   exampleAnswer1: { zh: [] },
   exampleAnswer2: { zh: [] },
   exampleAnswer3: { zh: [] },
-  exampleAnswer4: { zh: [] },
   infoAskingQuestions: {
     title: { zh: [] },
     items: [
@@ -63,6 +62,9 @@ const zh: PartialByKey<LessonShape> = {
   answer5: { zh: [] },
   answer6: { zh: [] },
   answer7: { zh: [] },
+  faqMaAndVerbBuVerb: { question: { zh: [] }, zh: [] },
+  faqYouMeiYou: { question: { zh: [] }, zh: [] },
+  faqWeishenmeFirst: { question: { zh: [] }, zh: [] },
 };
 
 export default zh;

@@ -16,6 +16,7 @@ const ru: PartialByKey<LessonShape> = {
   exampleColorThing2: { ru: [] },
   exampleColorThing3: { ru: [] },
   exampleColorThing4: { ru: [] },
+  exampleColorThing5: { ru: [] },
   vocabLanse: { ru: [] },
   proseIsColor: { ru: [], tldr: { ru: [] }, necessity: { ru: [] } },
   exampleIsColor1: { ru: [] },
@@ -55,6 +56,8 @@ const ru: PartialByKey<LessonShape> = {
   answer4: { ru: [] },
   answer5: { ru: [] },
   answer6: { ru: [] },
+  faqLanBlueGreen: { question: { ru: [] }, ru: [] },
+  faqColorNoHen: { question: { ru: [] }, ru: [] },
 };
 
 export default ru;

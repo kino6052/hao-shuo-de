@@ -15,6 +15,7 @@ import type {
   TExercise,
   TAnswer,
   TInfo,
+  TFaq,
 } from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
@@ -140,6 +141,12 @@ export type LessonShape = {
   answer8: TAnswer;
   /** Answer 9: zhè-zhǒng shuǐguǒ hěn tián. */
   answer9: TAnswer;
+  /** FAQ: how do I say "much bigger"? (adjective + hěn duō) */
+  faqMuchBigger: TFaq;
+  /** FAQ: how do I say "not as big as"? (méi-yǒu) */
+  faqNotAsBig: TFaq;
+  /** FAQ: bùtóng vs biéde */
+  faqButongOrBiede: TFaq;
 };
 
 const shape: LessonShape = {
@@ -321,6 +328,9 @@ const shape: LessonShape = {
   answer7: { type: "answer", ttsText: "棍子硬吗？" },
   answer8: { type: "answer", ttsText: "我要别的。" },
   answer9: { type: "answer", ttsText: "这种水果很甜。" },
+  faqMuchBigger: { type: "faq" },
+  faqNotAsBig: { type: "faq" },
+  faqButongOrBiede: { type: "faq" },
 };
 
 export default shape;

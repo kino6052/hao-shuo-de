@@ -181,6 +181,24 @@ const en: PartialByKey<LessonShape> = {
       "{{Word:nan2ren2}} {{word:zai4}} {{word:jia1}}-{{word:de}} {{word:pang2}}-{{word:bian1}}.",
     ],
   },
+  faqZaiSameWord: {
+    question: { en: ["Is {{word:zai4}} in {{word:zai4}} {{word:jia1}} the same word as in {{word:zai4}} {{word:chi1}}?"] },
+    en: [
+      "Yes. {{word:zai4}} means \"at\". {{Word:wo3}} {{word:zai4}} {{word:chi1}} is really \"I'm at eating\": you're in the middle of it.",
+    ],
+  },
+  faqThingNeedsLi: {
+    question: { en: ["Why is it {{word:zai4}} {{word:jia1}}, but {{word:zai4}} {{word:he2zi}}-{{word:li3}}?"] },
+    en: [
+      "A home is already a place. A thing like a box needs -{{word:li3}} or -{{word:shang4}} to become one: in the box, on the box. {{word:zai4}} {{word:he2zi}} on its own sounds wrong.",
+    ],
+  },
+  faqLiOrLimian: {
+    question: { en: ["What's the difference between -{{word:li3}} and {{word:li3}}-{{word:mian4}}?"] },
+    en: [
+      "-{{word:li3}} joins a place: {{word:he2zi}}-{{word:li3}}. {{word:li3}}-{{word:mian4}} can also stand on its own: {{Word:ta1}} {{word:zai4}} {{word:li3}}-{{word:mian4}} (She's inside).",
+    ],
+  },
 };
 
 export default en;

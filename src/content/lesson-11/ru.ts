@@ -89,6 +89,9 @@ const ru: PartialByKey<LessonShape> = {
   answer8: { ru: [] },
   answer9: { ru: [] },
   answer10: { ru: [] },
+  faqDaoOrQu: { question: { ru: [] }, ru: [] },
+  faqCongOrder: { question: { ru: [] }, ru: [] },
+  faqLaiOrQu: { question: { ru: [] }, ru: [] },
 };
 
 export default ru;

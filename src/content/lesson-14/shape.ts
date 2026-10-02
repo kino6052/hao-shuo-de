@@ -15,6 +15,7 @@ import type {
   TExercise,
   TAnswer,
   TInfo,
+  TFaq,
 } from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
@@ -134,6 +135,12 @@ export type LessonShape = {
   answer7: TAnswer;
   /** Answer 8: zhè-lǐ-de kōngqì hěn lěng. */
   answer8: TAnswer;
+  /** FAQ: how do I say "me too"? (wǒ yě shì, or repeat the verb) */
+  faqMeToo: TFaq;
+  /** FAQ: méi before a verb means "didn't" */
+  faqMeiDidnt: TFaq;
+  /** FAQ: how do I say "all people" if dōu can't go before a noun? */
+  faqAllPeople: TFaq;
 };
 
 const shape: LessonShape = {
@@ -316,6 +323,9 @@ const shape: LessonShape = {
   answer6: { type: "answer", ttsText: "植物很小。" },
   answer7: { type: "answer", ttsText: "火真热。" },
   answer8: { type: "answer", ttsText: "这里的空气很冷。" },
+  faqMeToo: { type: "faq" },
+  faqMeiDidnt: { type: "faq" },
+  faqAllPeople: { type: "faq" },
 };
 
 export default shape;

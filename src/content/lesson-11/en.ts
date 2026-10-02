@@ -220,6 +220,24 @@ const en: PartialByKey<LessonShape> = {
       "{{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:hen3}} {{word:jin4}}.",
     ],
   },
+  faqDaoOrQu: {
+    question: { en: ["What's the difference between {{word:qu4}} and {{word:dao4}}?"] },
+    en: [
+      "{{word:qu4}} is going toward a place. {{word:dao4}} is getting there: {{Word:wo3}} {{word:qu4}} {{word:shi4chang3}} (I'm on my way), {{Word:wo3}} {{word:dao4}} {{word:shi4chang3}} {{word:le}} (I'm there now).",
+    ],
+  },
+  faqCongOrder: {
+    question: { en: ["Why does the place go in the middle of {{word:cong2}} … {{word:lai2}}?"] },
+    en: [
+      "In Chinese, \"from where\" comes before the verb, like most details about an action. {{Word:wo3}} {{word:cong2}} {{word:shi4chang3}} {{word:lai2}} is \"I from the market come\".",
+    ],
+  },
+  faqLaiOrQu: {
+    question: { en: ["How do I choose between {{word:lai2}} and {{word:qu4}}?"] },
+    en: [
+      "It depends on where the speaker is. {{word:lai2}} moves toward the speaker, {{word:qu4}} moves away. Someone downstairs calls {{word:xia4}}-{{word:lai2}}! (Come down!). Someone upstairs says {{word:xia4}}-{{word:qu4}}! (Go down!).",
+    ],
+  },
 };
 
 export default en;

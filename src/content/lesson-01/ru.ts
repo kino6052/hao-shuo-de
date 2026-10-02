@@ -47,6 +47,9 @@ const ru: PartialByKey<LessonShape> = {
   answer2: { ru: [] },
   answer3: { ru: [] },
   answer4: { ru: [] },
+  faqWrongTone: { question: { ru: [] }, ru: [] },
+  faqToneChanges: { question: { ru: [] }, ru: [] },
+  faqPinyinWriting: { question: { ru: [] }, ru: [] },
 };
 
 export default ru;

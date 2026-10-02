@@ -45,6 +45,7 @@ const zh: PartialByKey<LessonShape> = {
   exampleCount19: { zh: [] },
   exampleCount20: { zh: [] },
   exampleCount21: { zh: [] },
+  exampleCount22: { zh: [] },
   proseTeens: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
   exampleTeens1: { zh: [] },
   exampleTeens2: { zh: [] },
@@ -89,6 +90,9 @@ const zh: PartialByKey<LessonShape> = {
   answer11: { zh: [] },
   answer12: { zh: [] },
   answer13: { zh: [] },
+  faqErInBigNumbers: { question: { zh: [] }, zh: [] },
+  faqHaoDays: { question: { zh: [] }, zh: [] },
+  faqYiTone: { question: { zh: [] }, zh: [] },
 };
 
 export default zh;

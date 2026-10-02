@@ -66,6 +66,9 @@ const ru: PartialByKey<LessonShape> = {
   answer6: { ru: [] },
   answer7: { ru: [] },
   answer8: { ru: [] },
+  faqHenStress: { question: { ru: [] }, ru: [] },
+  faqBuHenOrder: { question: { ru: [] }, ru: [] },
+  faqNoHenInQuestion: { question: { ru: [] }, ru: [] },
 };
 
 export default ru;

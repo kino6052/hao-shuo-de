@@ -188,6 +188,24 @@ const en: PartialByKey<LessonShape> = {
       "{{Word:wo3}} {{word:neng2}} {{word:mo1}} {{word:ma}}?",
     ],
   },
+  faqAndSentences: {
+    question: { en: ["How do I say \"and\" between two sentences?"] },
+    en: [
+      "Put them side by side with a comma: {{Word:wo3}} {{word:chi1}}, {{word:ta1}} {{word:shui4jiao4}} (I eat, and he sleeps). For \"too\", add {{word:ye3}}: {{Word:wo3}} {{word:hen3}} {{word:leng3}}, {{word:ta1}} {{word:ye3}} {{word:hen3}} {{word:leng3}}.",
+    ],
+  },
+  faqGeiForOrTo: {
+    question: { en: ["Does {{word:gei3}} {{word:ni3}} {{word:xie3}} mean \"write to you\" or \"write for you\"?"] },
+    en: [
+      "It can mean either. The situation tells you which.",
+    ],
+  },
+  faqHuozheQuestion: {
+    question: { en: ["Can I use {{word:huo4zhe3}} in a question?"] },
+    en: [
+      "Yes, but then it's a yes-or-no question: {{Word:ni3}} {{word:yao4}} {{word:zhe4}}-ge {{word:huo4zhe3}} {{word:na4}}-ge {{word:ma}}? asks \"Do you want one of these?\". To make someone choose, full Mandarin uses a different word for \"or\".",
+    ],
+  },
 };
 
 export default en;

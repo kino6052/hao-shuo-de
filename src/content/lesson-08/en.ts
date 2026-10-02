@@ -197,6 +197,24 @@ const en: PartialByKey<LessonShape> = {
   },
   answer9: { en: ["{{Word:ri4}} {{word:hen3}} {{word:da4}}."] },
   answer10: { en: ["{{Word:yue4}} {{word:hen3}} {{word:xiao3}}."] },
+  faqLePast: {
+    question: { en: ["Does {{word:le}} mean the past?"] },
+    en: [
+      "Not exactly. {{word:le}} says the action is done. Chinese verbs have no past form, and when you talk about the past in general, you often don't need {{word:le}} at all.",
+    ],
+  },
+  faqLeOrGuo: {
+    question: { en: ["What's the difference between {{word:le}} and -{{word:guo4}}?"] },
+    en: [
+      "{{word:le}} says it's done: {{Word:wo3}} {{word:chi1}} {{word:le}} (I ate, I've eaten). -{{word:guo4}} says it has happened at least once, some time before: {{Word:wo3}} {{word:chi1}}-{{word:guo4}} {{word:mi3fan4}} (I've had rice before).",
+    ],
+  },
+  faqHuiKnowHow: {
+    question: { en: ["Does {{word:hui4}} only mean \"will\"?"] },
+    en: [
+      "In full Mandarin, {{word:hui4}} also means \"know how to\": {{word:hui4}} {{word:xie3}} is \"can write\". Hao-shuo-de uses {{word:zhi1dao4}} {{word:zen3me}} (Lesson 7) for that, so here {{word:hui4}} just means \"will\".",
+    ],
+  },
 };
 
 export default en;

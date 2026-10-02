@@ -8,7 +8,7 @@ const en: PartialByKey<LessonShape> = {
   summary: {
     en: [
       "We often point at things and people instead of naming them.",
-      "In this lesson, you'll be able to say \"this one\", \"that one\", \"I am a person.\", \"we\", \"my hand\", and \"your family\".",
+      'In this lesson, you\'ll be able to say "this one", "that one", "I am a person.", "we", "my hand", and "your family".',
     ],
   },
   vocabNa: { en: ["that, those"] },
@@ -20,16 +20,14 @@ const en: PartialByKey<LessonShape> = {
     ],
     necessity: { en: ["Now you can point at things."] },
     tldr: {
-      en: [
-        "{{word:zhe4}} (this) and {{word:na4}} (that) work like nouns.",
-      ],
+      en: ["{{word:zhe4}} (this) and {{word:na4}} (that) work like nouns."],
     },
   },
   pointersExample01: { en: ["This."] },
   pointersExample02: { en: ["That."] },
   proseMandarinMeasureWords: {
     en: [
-      "In full Chinese, you can't put a number or a pronoun right before a noun. A small counting word (measure word) goes in between.",
+      "In Chinese, you can't put a number or a pronoun right before a noun (you can't directly say \"this apple\"). A small counting word (measure word) goes in between.",
       "Full Chinese has dozens of these measure words, one for each kind of thing: flat things, long things, animals, and so on.",
       "Learners spend years getting them right.",
     ],
@@ -90,9 +88,7 @@ const en: PartialByKey<LessonShape> = {
   pointToPeopleExample02: { en: ["You."] },
   pointToPeopleExample03: { en: ["He, she."] },
   vocabMen: {
-    en: [
-      'more than one person: {{word:wo3}}-{{word:men}} means "we"',
-    ],
+    en: ['more than one person: {{word:wo3}}-{{word:men}} means "we"'],
   },
   prosePluralPointers: {
     en: [
@@ -100,9 +96,7 @@ const en: PartialByKey<LessonShape> = {
       "{{word:men}} only goes after pronouns and other words for people. It doesn't go after other nouns.",
     ],
     tldr: {
-      en: [
-        'Add {{word:men}} to say "we", "you all", and "they".',
-      ],
+      en: ['Add {{word:men}} to say "we", "you all", and "they".'],
     },
     necessity: { en: ["Now you can talk about groups of people."] },
   },
@@ -133,13 +127,7 @@ const en: PartialByKey<LessonShape> = {
   posessionDeExample06: { en: ["My hands are big."] },
   posessionDeExample07: { en: ["His head is small."] },
   posessionDeExample08: { en: ["Her feet are small."] },
-  example1: { en: ["I am a person."] },
-  example2: { en: ["I am a man."] },
-  example3: { en: ["You are a good person."] },
-  example4: { en: ["This is my hand."] },
-  example5: { en: ["That is your thing."] },
-  example6: { en: ["My family is big."] },
-  example7: { en: ["The man's animal is small."] },
+
   exercise1L03: { en: ["This one is an animal."] },
   exercise2L03: { en: ["That one is a woman."] },
   exercise1L11: { en: ['Say "this person", using ge.'] },
@@ -161,9 +149,7 @@ const en: PartialByKey<LessonShape> = {
   answer1L11: { en: ["{{Word:zhe4}}-ge {{word:ren2}}."] },
   answer2L11: { en: ["{{Word:zhe4}}-ge {{word:dong4wu4}}."] },
   answer3L11: {
-    en: [
-      "{{Word:na4}}-ge {{word:shui3guo3}} {{word:hen3}} {{word:hao3}}.",
-    ],
+    en: ["{{Word:na4}}-ge {{word:shui3guo3}} {{word:hen3}} {{word:hao3}}."],
   },
   answer1: {
     en: [
@@ -171,33 +157,41 @@ const en: PartialByKey<LessonShape> = {
     ],
   },
   answer2: {
-    en: [
-      "{{Word:na4}} {{word:shi4}} {{word:ni3}}-{{word:de}} {{word:jia1}}.",
-    ],
+    en: ["{{Word:na4}} {{word:shi4}} {{word:ni3}}-{{word:de}} {{word:jia1}}."],
   },
   answer3: {
-    en: [
-      "{{Word:wo3}} {{word:shi4}} {{word:hao3}}-{{word:de}} {{word:ren2}}.",
-    ],
+    en: ["{{Word:wo3}} {{word:shi4}} {{word:hao3}}-{{word:de}} {{word:ren2}}."],
   },
   answer4: {
-    en: [
-      "{{Word:ta1}}-{{word:men}} {{word:shi4}} {{word:ren2}}.",
-    ],
+    en: ["{{Word:ta1}}-{{word:men}} {{word:shi4}} {{word:ren2}}."],
   },
   answer5: {
-    en: [
-      "{{Word:ni3}}-{{word:de}} {{word:shou3}} {{word:hen3}} {{word:da4}}.",
-    ],
+    en: ["{{Word:ni3}}-{{word:de}} {{word:shou3}} {{word:hen3}} {{word:da4}}."],
   },
   answer6: {
-    en: [
-      "{{Word:ta1}}-{{word:de}} {{word:tou2}} {{word:hen3}} {{word:da4}}.",
-    ],
+    en: ["{{Word:ta1}}-{{word:de}} {{word:tou2}} {{word:hen3}} {{word:da4}}."],
   },
   answer7: {
     en: [
       "{{Word:wo3}}-{{word:de}} {{word:jiao3}} {{word:hen3}} {{word:xiao3}}.",
+    ],
+  },
+  faqGeForEverything: {
+    question: { en: ["Is {{word:ge4}} really right for everything?"] },
+    en: [
+      "Full Mandarin has other counting words for some kinds of things. But {{word:ge4}} is the most common one, and people understand it with any noun.",
+    ],
+  },
+  faqTaHeOrShe: {
+    question: { en: ["Does {{word:ta1}} mean \"he\" or \"she\"?"] },
+    en: [
+      "Both, and \"it\" too. They all sound exactly the same. The situation tells you who it is.",
+    ],
+  },
+  faqDropDe: {
+    question: { en: ["Can I say {{word:wo3}} {{word:jia1}} without -{{word:de}}?"] },
+    en: [
+      "Mandarin speakers often do, for family and home: {{word:wo3}} {{word:jia1}}. With -{{word:de}}, it's always correct, so Hao-shuo-de keeps it.",
     ],
   },
 };

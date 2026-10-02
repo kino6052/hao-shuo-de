@@ -112,6 +112,18 @@ export interface TInfo {
   items: TInfoItem[];
 }
 
+/**
+ * One question in the "Some questions you may have" section after a
+ * lesson's exercises. Give `question` once the block has one (every
+ * language file does); the localized text is the answer. Neighbouring faq
+ * blocks share one collapsible section, so a lesson lists them together,
+ * after its answers.
+ */
+export interface TFaq extends LocalizedText {
+  type: "faq";
+  question?: LocalizedText;
+}
+
 export type ShapeSlot =
   | TTitle
   | TSummary
@@ -120,7 +132,8 @@ export type ShapeSlot =
   | TExample
   | TExercise
   | TAnswer
-  | TInfo;
+  | TInfo
+  | TFaq;
 
 /**
  * A lesson's full block sequence, keyed by a short descriptive name for

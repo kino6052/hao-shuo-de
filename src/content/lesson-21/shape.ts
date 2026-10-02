@@ -15,6 +15,7 @@ import type {
   TExercise,
   TAnswer,
   TInfo,
+  TFaq,
 } from "../../lib/chapter-shape-types.ts";
 
 export type LessonShape = {
@@ -152,6 +153,10 @@ export type LessonShape = {
   answer7: TAnswer;
   /** Answer 8: xìng bù shì ài. */
   answer8: TAnswer;
+  /** FAQ: is nǐ hǎo ma like "How are you?" */
+  faqNihaoma: TFaq;
+  /** FAQ: can juéde mean "I think"? (yes) */
+  faqJuedeThink: TFaq;
 };
 
 const shape: LessonShape = {
@@ -383,6 +388,8 @@ const shape: LessonShape = {
   answer6: { type: "answer", ttsText: "我听到声音。" },
   answer7: { type: "answer", ttsText: "我的手上有虫子。" },
   answer8: { type: "answer", ttsText: "性不是爱。" },
+  faqNihaoma: { type: "faq" },
+  faqJuedeThink: { type: "faq" },
 };
 
 export default shape;

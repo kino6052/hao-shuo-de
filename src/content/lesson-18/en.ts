@@ -168,6 +168,18 @@ const en: PartialByKey<LessonShape> = {
       "{{Word:ta1}}-{{word:de}} {{word:pi2fu1}} {{word:shi4}} {{word:bai2se4}}-{{word:de}}.",
     ],
   },
+  faqWhichDe: {
+    question: { en: ["How do I know which job -{{word:de}} is doing?"] },
+    en: [
+      "Look at what's right before and after it. Before a noun, it describes the noun: {{word:hao3}}-{{word:de}} {{word:ren2}}. After a verb, with nothing after it, it's the thing: {{word:chi1}}-{{word:de}}. After a verb and before an adjective, it says how: {{word:shuo1}}-{{word:de}} {{word:hao3}}.",
+    ],
+  },
+  faqDeSameWord: {
+    question: { en: ["Are all these -{{word:de}} the same word?"] },
+    en: [
+      "They sound the same, so Hao-shuo-de writes them all as -{{word:de}}. In Chinese characters, the \"how\" one ({{word:shuo1}}-{{word:de}} {{word:hao3}}) is written differently.",
+    ],
+  },
 };
 
 export default en;

@@ -43,6 +43,11 @@ export interface InfoEntry {
   items: InfoItem[];
 }
 
+export interface FaqEntry extends LangText {
+  type: 'faq';
+  question: LangText;
+}
+
 export type Entry =
   | TitleEntry
   | SummaryEntry
@@ -51,4 +56,5 @@ export type Entry =
   | ExampleEntry
   | ExerciseEntry
   | AnswerEntry
-  | InfoEntry;
+  | InfoEntry
+  | FaqEntry;

@@ -54,6 +54,7 @@ const en: PartialByKey<LessonShape> = {
   exampleFinished2: { en: ["Did you finish writing?"] },
   exampleFinished3: { en: ["She finished reading."] },
   vocabHou: { en: ["after; behind"] },
+  vocabLiu: { en: ["stay, keep"] },
   proseAfter: {
     en: [
       '**To say "after doing something"**, put {{word:hou4}} after the finished action, then a comma.',
@@ -71,6 +72,8 @@ const en: PartialByKey<LessonShape> = {
   exampleAfter2: { en: ["After writing, I play."] },
   exampleAfter3: { en: ["After reading, you speak."] },
   exampleAfter4: { en: ["After eating, what happened?"] },
+  exampleAfter5: { en: ["After eating, she stays."] },
+  exampleAfter6: { en: ["After reading it, I'll keep this one."] },
   vocabKaishi: { en: ["start"] },
   proseStart: {
     en: [
@@ -89,19 +92,6 @@ const en: PartialByKey<LessonShape> = {
   exampleStart2: { en: ["He starts to eat."] },
   exampleStart3: { en: ["Have you started writing?"] },
   exampleStart4: { en: ["I'm starting to write now."] },
-  vocabLiu: { en: ["stay, keep"] },
-  proseStay: {
-    en: [
-      "**To say you stay, or keep something**, use {{word:liu2}}.",
-      "",
-      "**Who + {{word:liu2}} (+ thing)**",
-    ],
-    tldr: { en: ["{{word:liu2}} means stay, or keep."] },
-    necessity: { en: ["Now you can say you stay, or keep something."] },
-  },
-  exampleStay1: { en: ["I'll keep this one."] },
-  exampleStay2: { en: ["Do you want to stay?"] },
-  exampleStay3: { en: ["After eating, she stays."] },
   vocabYixia: { en: ["a moment; after a verb: for a moment"] },
   proseMoment: {
     en: [
@@ -161,7 +151,7 @@ const en: PartialByKey<LessonShape> = {
   exercise3: { en: ["After reading, I sleep."] },
   exercise4: { en: ["She started to eat."] },
   exercise5: { en: ["Do you want to play?"] },
-  exercise6: { en: ["I will stay."] },
+  exercise6: { en: ["After eating, I'll stay."] },
   exercise7: { en: ["Wait a moment!"] },
   answer1: {
     en: [
@@ -188,8 +178,20 @@ const en: PartialByKey<LessonShape> = {
       "{{Word:ni3}} {{word:yao4}} {{word:wan2r}} {{word:ma}}?",
     ],
   },
-  answer6: { en: ["{{Word:wo3}} {{word:hui4}} {{word:liu2}}."] },
+  answer6: { en: ["{{Word:chi1}}-{{word:wan2}} {{word:hou4}}, {{word:wo3}} {{word:hui4}} {{word:liu2}}."] },
   answer7: { en: ["{{Word:deng3}} {{word:yi1xia4}}!"] },
+  faqWanOrWanr: {
+    question: { en: ["Are {{word:wan2}} and {{word:wan2r}} the same word?"] },
+    en: [
+      "No, they're two different words. {{word:wan2}} is \"finish\": {{word:chi1}}-{{word:wan2}} {{word:le}}. {{word:wan2r}} is \"play\", and the -r at the end is part of the word.",
+    ],
+  },
+  faqWanAndLe: {
+    question: { en: ["Do I need both -{{word:wan2}} and {{word:le}}?"] },
+    en: [
+      "To say you finished, yes: {{Word:wo3}} {{word:chi1}}-{{word:wan2}} {{word:le}}. Without {{word:le}}, {{word:chi1}}-{{word:wan2}} is only part of a sentence, like in {{word:chi1}}-{{word:wan2}} {{word:hou4}}, … (after eating, …).",
+    ],
+  },
 };
 
 export default en;
