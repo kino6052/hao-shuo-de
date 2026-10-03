@@ -184,6 +184,11 @@ export const CHAPTER_BLURBS: Record<string, LangText> = {
     zh: [],
     ru: ["инструмент, чтобы строить свои предложения из слов словаря."],
   },
+  "word-builder": {
+    en: ["a tool for making a word Hao-shuo-de doesn't have, by answering questions like \"what kind?\" and \"where?\"."],
+    zh: [],
+    ru: ["инструмент, чтобы составить слово, которого нет в Hǎo-shuō-de, отвечая на вопросы вроде «какой?» и «где?»."],
+  },
   "appendix-minimality": {
     en: ["why so few words can say so much."],
     zh: [],

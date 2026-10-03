@@ -12,6 +12,7 @@ import { DictionarySection } from './components/DictionarySection.jsx';
 import { CategoricalDictionarySection } from './components/CategoricalDictionarySection.jsx';
 import { CompositeDictionarySection } from './components/CompositeDictionarySection.jsx';
 import { SentenceBuilder } from './components/SentenceBuilder.jsx';
+import { WordBuilder } from './components/WordBuilder.jsx';
 import { PageNav } from './components/PageNav.jsx';
 import { TldrSummary } from './components/TldrSummary.jsx';
 import { MissingTranslationBanner } from './components/MissingTranslationBanner.jsx';
@@ -52,6 +53,14 @@ function renderContent(s, lang) {
       <>
         {s.bodyHtml && <div class="prose-body" dangerouslySetInnerHTML={{ __html: s.bodyHtml }} />}
         <SentenceBuilder lang={lang} />
+      </>
+    );
+  }
+  if (type === 'word-builder') {
+    return (
+      <>
+        {s.bodyHtml && <div class="prose-body" dangerouslySetInnerHTML={{ __html: s.bodyHtml }} />}
+        <WordBuilder lang={lang} />
       </>
     );
   }

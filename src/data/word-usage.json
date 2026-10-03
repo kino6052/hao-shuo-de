@@ -127,6 +127,10 @@
     "sentence-builder": {
       "label": "Sentence Builder",
       "order": 1
+    },
+    "word-builder": {
+      "label": "Word Builder",
+      "order": 2
     }
   },
   "words": {
@@ -447,6 +451,7 @@
     "shui3": [
       "phrase-book",
       "appendix-stories",
+      "word-builder",
       "appendix-grammar",
       "also-and-all",
       "becoming-and-making",
@@ -470,6 +475,7 @@
       "phrase-book",
       "appendix-stories",
       "appendix-minimality",
+      "word-builder",
       "appendix-grammar",
       "colors",
       "direction-and-result",
@@ -790,6 +796,7 @@
     "kuai4": [
       "phrase-book",
       "appendix-stories",
+      "word-builder",
       "comparing",
       "everyday-patterns",
       "how-much",
@@ -1145,6 +1152,7 @@
       "phrase-book",
       "appendix-stories",
       "appendix-minimality",
+      "word-builder",
       "appendix-grammar",
       "direction-and-result",
       "doubling-words",
@@ -1410,6 +1418,7 @@
       "phrase-book",
       "appendix-stories",
       "appendix-minimality",
+      "word-builder",
       "appendix-grammar",
       "also-and-all",
       "around-an-action",
@@ -1732,6 +1741,7 @@
     "li3": [
       "phrase-book",
       "appendix-stories",
+      "word-builder",
       "appendix-grammar",
       "also-and-all",
       "becoming-and-making",

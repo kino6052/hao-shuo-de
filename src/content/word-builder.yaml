@@ -1,0 +1,27 @@
+id: word-builder
+type: word-builder
+order: 2
+title:
+  eng: "Word Builder"
+  rus: "Конструктор слов"
+  zh: ""
+
+summary:
+  eng: "Make a word Hǎo-shuō-de doesn't have: pick what it is, then describe it by answering questions like \"what kind?\", \"where?\", and \"in what way?\"."
+  rus: "Составьте слово, которого нет в Hǎo-shuō-de: выберите, что это, а потом опишите его, отвечая на вопросы «какой?», «где?» и «как?»."
+  zh: ""
+
+blocks:
+  - type: prose
+    text:
+      eng: "When there is no word for something, describe it with words you know. A fish is an animal that is in the water: {{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}}. To run is to go fast: {{word:kuai4}}-{{word:kuai4}}-{{word:de}} {{word:qu4}}. Start by picking what your word is. Then answer the questions below it, in any order: each answer adds a part, and the builder puts the parts in the usual Mandarin order. Any answer can get its own questions too."
+      rus: "Если для чего-то нет слова, опишите это знакомыми словами. Рыба — это животное, которое живёт в воде: {{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}}. Бежать — значит быстро идти: {{word:kuai4}}-{{word:kuai4}}-{{word:de}} {{word:qu4}}. Сначала выберите, что это за слово. Потом отвечайте на вопросы под ним в любом порядке: каждый ответ добавляет часть, а конструктор ставит части в обычном для китайского порядке. На каждый ответ тоже можно задать свои вопросы."
+      zh: ""
+    tldr:
+      eng: "Pick a word, then answer questions to describe it and build a new word."
+      rus: "Выберите слово и отвечайте на вопросы, чтобы описать его и составить новое слово."
+      zh: ""
+    necessity:
+      eng: "You can say things Hǎo-shuō-de has no word for."
+      rus: "Так можно сказать то, для чего в Hǎo-shuō-de нет слова."
+      zh: ""
