@@ -32,24 +32,37 @@ export async function buildOverview() {
 
   const entries = [
     { type: 'title', ...text(['Grammar Patterns Reference'], ['Справочник грамматических конструкций'], ['语法结构参考']) },
-    { type: 'summary', ...text([`Every grammar box from the ${LESSON_IDS.length} lessons, in one place, in lesson order.`]) },
+    {
+      type: 'summary',
+      ...text(
+        [`Every grammar box from the ${LESSON_IDS.length} lessons, in one place, in lesson order.`],
+        [`Все грамматические схемы из ${LESSON_IDS.length} уроков в одном месте, по порядку уроков.`],
+      ),
+    },
     {
       type: 'prose',
-      ...text([
-        'Each box below comes from a lesson, and its title says which one.',
-        'Use this page to look up a pattern, then go back to its lesson for examples and practice.',
-      ]),
-      tldr: text(['Every grammar box from the lessons, in lesson order.']),
-      necessity: text(['You can look up a pattern without hunting through the lessons.']),
+      ...text(
+        [
+          'Each box below comes from a lesson, and its title says which one.',
+          'Use this page to look up a pattern, then go back to its lesson for examples and practice.',
+        ],
+        [
+          'Каждая схема ниже взята из урока, и её заголовок говорит, из какого.',
+          'Найдите здесь нужную схему, а потом вернитесь к её уроку за примерами и упражнениями.',
+        ],
+      ),
+      tldr: text(['Every grammar box from the lessons, in lesson order.'], ['Все грамматические схемы из уроков, по порядку.']),
+      necessity: text(
+        ['You can look up a pattern without hunting through the lessons.'],
+        ['Схему можно найти, не листая все уроки.'],
+      ),
     },
   ];
   for (const lesson of lessons) {
     for (const box of lesson.boxes) {
-      const boxTitle = box.title?.en?.join(' ') ?? '';
-      entries.push({
-        ...box,
-        title: { ...(box.title ?? blank()), en: [`Lesson ${lesson.number} · ${boxTitle}`] },
-      });
+      const title = { ...(box.title ?? blank()), en: [`Lesson ${lesson.number} · ${box.title?.en?.join(' ') ?? ''}`] };
+      if (title.ru.length) title.ru = [`Урок ${lesson.number} · ${title.ru.join(' ')}`];
+      entries.push({ ...box, title });
     }
   }
   return entries;

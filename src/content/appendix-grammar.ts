@@ -28,7 +28,9 @@ const content: Entry[] = [
       "Every grammar box from the 24 lessons, in one place, in lesson order."
     ],
     "zh": [],
-    "ru": []
+    "ru": [
+      "Все грамматические схемы из 24 уроков в одном месте, по порядку уроков."
+    ]
   },
   {
     "type": "prose",
@@ -37,20 +39,27 @@ const content: Entry[] = [
       "Use this page to look up a pattern, then go back to its lesson for examples and practice."
     ],
     "zh": [],
-    "ru": [],
+    "ru": [
+      "Каждая схема ниже взята из урока, и её заголовок говорит, из какого.",
+      "Найдите здесь нужную схему, а потом вернитесь к её уроку за примерами и упражнениями."
+    ],
     "tldr": {
       "en": [
         "Every grammar box from the lessons, in lesson order."
       ],
       "zh": [],
-      "ru": []
+      "ru": [
+        "Все грамматические схемы из уроков, по порядку."
+      ]
     },
     "necessity": {
       "en": [
         "You can look up a pattern without hunting through the lessons."
       ],
       "zh": [],
-      "ru": []
+      "ru": [
+        "Схему можно найти, не листая все уроки."
+      ]
     }
   },
   {
@@ -65,7 +74,10 @@ const content: Entry[] = [
             "**Words are written solid**. When several syllables form one dictionary word, they are never split apart, no matter how long the word is — {{word:dong4wu4}}, {{word:shui4jiao4}}, {{word:dan4shi4}}.",
             "Read the whole solid block as a single unit."
           ],
-          "ru": [],
+          "ru": [
+            "**Слова пишутся слитно**. Если несколько слогов составляют одно слово из словаря, их никогда не разделяют, какой бы длины ни было слово: {{word:dong4wu4}}, {{word:shui4jiao4}}, {{word:dan4shi4}}.",
+            "Читайте весь слитный блок как одно целое."
+          ],
           "zh": []
         }
       },
@@ -74,7 +86,9 @@ const content: Entry[] = [
           "en": [
             "**A hyphen joins words into one**. A hyphen glues a small word onto another word, so the two work as one word. Sometimes that gives the word a new job, like turning a verb into a describing word (an adjective)."
           ],
-          "ru": [],
+          "ru": [
+            "**Дефис соединяет слова в одно**. Дефис приклеивает маленькое слово к другому слову, и они работают как одно слово. Иногда так слово получает новую работу: например, глагол становится описательным словом (прилагательным)."
+          ],
           "zh": []
         },
         "items": [
@@ -83,7 +97,9 @@ const content: Entry[] = [
               "en": [
                 "{{word:zhe4}}-**ge** — this"
               ],
-              "ru": [],
+              "ru": [
+                "{{word:zhe4}}-**ge** — этот"
+              ],
               "zh": []
             }
           },
@@ -92,7 +108,9 @@ const content: Entry[] = [
               "en": [
                 "{{word:yi1}}-**ge** — one thing"
               ],
-              "ru": [],
+              "ru": [
+                "{{word:yi1}}-**ge** — одна вещь"
+              ],
               "zh": []
             }
           },
@@ -101,7 +119,9 @@ const content: Entry[] = [
               "en": [
                 "{{word:hen3}}-**{{word:da4}}-de** — very big"
               ],
-              "ru": [],
+              "ru": [
+                "{{word:hen3}}-**{{word:da4}}-de** — очень большой"
+              ],
               "zh": []
             }
           },
@@ -110,7 +130,9 @@ const content: Entry[] = [
               "en": [
                 "A hyphen always shows that the parts it joins work together as a single word."
               ],
-              "ru": [],
+              "ru": [
+                "Дефис всегда показывает, что части, которые он соединяет, работают вместе как одно слово."
+              ],
               "zh": []
             }
           }
@@ -121,7 +143,9 @@ const content: Entry[] = [
           "en": [
             "**Quotes set off the untranslatable**. Proper names and onomatopoeia — things that aren't really Hao-shuo-de vocabulary — are enclosed in quotes:"
           ],
-          "ru": [],
+          "ru": [
+            "**Кавычки выделяют то, что не переводится**. Имена и звукоподражания — то, что на самом деле не входит в словарь Hǎo-shuō-de, — пишутся в кавычках:"
+          ],
           "zh": []
         },
         "items": [
@@ -130,7 +154,9 @@ const content: Entry[] = [
               "en": [
                 "\"Beijing\" — Beijing"
               ],
-              "ru": [],
+              "ru": [
+                "\"Beijing\" — Пекин"
+              ],
               "zh": []
             }
           },
@@ -139,7 +165,9 @@ const content: Entry[] = [
               "en": [
                 "{{word:jiao4}} \"wāng-wāng\" — barks \"woof-woof\""
               ],
-              "ru": [],
+              "ru": [
+                "{{word:jiao4}} \"wāng-wāng\" — лает «гав-гав»"
+              ],
               "zh": []
             }
           },
@@ -148,7 +176,9 @@ const content: Entry[] = [
               "en": [
                 "If you see quotes, don't look the word up in the dictionary — it isn't a dictionary word."
               ],
-              "ru": [],
+              "ru": [
+                "Если видите кавычки, не ищите слово в словаре — это не словарное слово."
+              ],
               "zh": []
             }
           }
@@ -159,7 +189,9 @@ const content: Entry[] = [
       "en": [
         "Lesson 1 · Hao-shuo-de pinyin helpers"
       ],
-      "ru": [],
+      "ru": [
+        "Урок 1 · Подсказки пиньиня в Hǎo-shuō-de"
+      ],
       "zh": []
     }
   },
@@ -173,7 +205,9 @@ const content: Entry[] = [
           "en": [
             "NOUN + {{word:shi4}} + NOUN: {{Word:zhe4}} {{word:shi4}} {{word:ren2}}. (This is a person.)"
           ],
-          "ru": [],
+          "ru": [
+            "СУЩЕСТВИТЕЛЬНОЕ + {{word:shi4}} + СУЩЕСТВИТЕЛЬНОЕ: {{Word:zhe4}} {{word:shi4}} {{word:ren2}}. (Это человек.)"
+          ],
           "zh": []
         }
       },
@@ -182,7 +216,9 @@ const content: Entry[] = [
           "en": [
             "NOUN + {{word:bu4}} {{word:shi4}} + NOUN: {{Word:dong4wu4}} {{word:bu4}} {{word:shi4}} {{word:shui3guo3}}. (An animal is not a fruit.)"
           ],
-          "ru": [],
+          "ru": [
+            "СУЩЕСТВИТЕЛЬНОЕ + {{word:bu4}} {{word:shi4}} + СУЩЕСТВИТЕЛЬНОЕ: {{Word:dong4wu4}} {{word:bu4}} {{word:shi4}} {{word:shui3guo3}}. (Животное — не фрукт.)"
+          ],
           "zh": []
         }
       }
@@ -191,7 +227,9 @@ const content: Entry[] = [
       "en": [
         "Lesson 2 · Saying What Something Is"
       ],
-      "ru": [],
+      "ru": [
+        "Урок 2 · Как сказать, что это такое"
+      ],
       "zh": []
     }
   },
@@ -205,7 +243,9 @@ const content: Entry[] = [
           "en": [
             "NOUN + {{word:hen3}} + adjective: {{Word:shui3}} {{word:hen3}} {{word:hao3}}. (The water is good.)"
           ],
-          "ru": [],
+          "ru": [
+            "СУЩЕСТВИТЕЛЬНОЕ + {{word:hen3}} + прилагательное: {{Word:shui3}} {{word:hen3}} {{word:hao3}}. (Вода хорошая.)"
+          ],
           "zh": []
         }
       },
@@ -214,7 +254,9 @@ const content: Entry[] = [
           "en": [
             "adjective + -{{word:de}} + NOUN: {{word:da4}}-{{word:de}} {{word:di4fang1}} (a big place)"
           ],
-          "ru": [],
+          "ru": [
+            "прилагательное + -{{word:de}} + СУЩЕСТВИТЕЛЬНОЕ: {{word:da4}}-{{word:de}} {{word:di4fang1}} (большое место)"
+          ],
           "zh": []
         }
       },
@@ -223,7 +265,9 @@ const content: Entry[] = [
           "en": [
             "{{word:hen3}}-{{word:duo1}}-{{word:de}} + NOUN: {{word:hen3}}-{{word:duo1}}-{{word:de}} {{word:ren2}} (many people)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:hen3}}-{{word:duo1}}-{{word:de}} + СУЩЕСТВИТЕЛЬНОЕ: {{word:hen3}}-{{word:duo1}}-{{word:de}} {{word:ren2}} (много людей)"
+          ],
           "zh": []
         }
       },
@@ -232,7 +276,9 @@ const content: Entry[] = [
           "en": [
             "NOUN + {{word:hen3}} {{word:shao3}}: {{Word:ren2}} {{word:hen3}} {{word:shao3}}. (There are very few people.)"
           ],
-          "ru": [],
+          "ru": [
+            "СУЩЕСТВИТЕЛЬНОЕ + {{word:hen3}} {{word:shao3}}: {{Word:ren2}} {{word:hen3}} {{word:shao3}}. (Людей очень мало.)"
+          ],
           "zh": []
         }
       }
@@ -241,7 +287,9 @@ const content: Entry[] = [
       "en": [
         "Lesson 3 · Describing a Noun"
       ],
-      "ru": [],
+      "ru": [
+        "Урок 3 · Как описать существительное"
+      ],
       "zh": []
     }
   },
@@ -255,7 +303,9 @@ const content: Entry[] = [
           "en": [
             "{{word:zhe4}}, {{word:na4}}, or a number + ge + noun. The same `{{word:ge4}}` works with every noun."
           ],
-          "ru": [],
+          "ru": [
+            "{{word:zhe4}}, {{word:na4}} или число + ge + существительное. Одно и то же `{{word:ge4}}` подходит к любому существительному."
+          ],
           "zh": []
         }
       }
@@ -264,7 +314,9 @@ const content: Entry[] = [
       "en": [
         "Lesson 4 · One Counting Word for Everything"
       ],
-      "ru": [],
+      "ru": [
+        "Урок 4 · Одно счётное слово для всего"
+      ],
       "zh": []
     }
   },
@@ -278,7 +330,9 @@ const content: Entry[] = [
           "en": [
             "Who + verb + what: {{Word:wo3}} {{word:chi1}} {{word:mi3fan4}}. (I eat rice.)"
           ],
-          "ru": [],
+          "ru": [
+            "Кто + глагол + что: {{Word:wo3}} {{word:chi1}} {{word:mi3fan4}}. (Я ем рис.)"
+          ],
           "zh": []
         }
       },
@@ -287,7 +341,9 @@ const content: Entry[] = [
           "en": [
             "{{word:bu4}} + verb, for \"not\": {{Word:ta1}} {{word:bu4}} {{word:xie3}}. (She doesn't write.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:bu4}} + глагол — «не»: {{Word:ta1}} {{word:bu4}} {{word:xie3}}. (Она не пишет.)"
+          ],
           "zh": []
         }
       },
@@ -296,7 +352,9 @@ const content: Entry[] = [
           "en": [
             "{{word:mei2}}-{{word:you3}}, for \"don't have\": {{Word:wo3}} {{word:mei2}}-{{word:you3}} {{word:jin1}}. (I don't have money.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:mei2}}-{{word:you3}} — «нет, не иметь»: {{Word:wo3}} {{word:mei2}}-{{word:you3}} {{word:jin1}}. (У меня нет денег.)"
+          ],
           "zh": []
         }
       }
@@ -305,7 +363,9 @@ const content: Entry[] = [
       "en": [
         "Lesson 5 · Who Does What"
       ],
-      "ru": [],
+      "ru": [
+        "Урок 5 · Кто что делает"
+      ],
       "zh": []
     }
   },
@@ -319,7 +379,9 @@ const content: Entry[] = [
           "en": [
             "sentence + {{word:ma}}?, yes or no: {{Word:ni3}} {{word:you3}} {{word:gong1ju4}} {{word:ma}}? (Do you have a tool?)"
           ],
-          "ru": [],
+          "ru": [
+            "предложение + {{word:ma}}? — да или нет: {{Word:ni3}} {{word:you3}} {{word:gong1ju4}} {{word:ma}}? (У тебя есть инструмент?)"
+          ],
           "zh": []
         }
       },
@@ -328,7 +390,9 @@ const content: Entry[] = [
           "en": [
             "verb-{{word:bu4}}-verb?, yes or no: {{Word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}}? (Do you listen?)"
           ],
-          "ru": [],
+          "ru": [
+            "глагол-{{word:bu4}}-глагол? — да или нет: {{Word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}}? (Ты слушаешь?)"
+          ],
           "zh": []
         }
       },
@@ -337,7 +401,9 @@ const content: Entry[] = [
           "en": [
             "{{word:shen2me}} where the answer goes: {{Word:ni3}} {{word:zhao3}} {{word:shen2me}}? (What are you looking for?)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:shen2me}} там, где стоит ответ: {{Word:ni3}} {{word:zhao3}} {{word:shen2me}}? (Что ты ищешь?)"
+          ],
           "zh": []
         }
       },
@@ -346,7 +412,9 @@ const content: Entry[] = [
           "en": [
             "{{word:wei4shen2me}} + verb, why: {{Word:ni3}} {{word:wei4shen2me}} {{word:bu4}} {{word:chi1}}? (Why don't you eat?)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:wei4shen2me}} + глагол — почему: {{Word:ni3}} {{word:wei4shen2me}} {{word:bu4}} {{word:chi1}}? (Почему ты не ешь?)"
+          ],
           "zh": []
         }
       },
@@ -355,7 +423,9 @@ const content: Entry[] = [
           "en": [
             "{{word:zen3me}} + verb, how: {{Word:zhe4}}-ge {{word:zen3me}} {{word:shuo1}}? (How do you say this?)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:zen3me}} + глагол — как: {{Word:zhe4}}-ge {{word:zen3me}} {{word:shuo1}}? (Как это сказать?)"
+          ],
           "zh": []
         }
       }
@@ -364,7 +434,9 @@ const content: Entry[] = [
       "en": [
         "Lesson 6 · Asking Questions"
       ],
-      "ru": [],
+      "ru": [
+        "Урок 6 · Как задавать вопросы"
+      ],
       "zh": []
     }
   },
@@ -378,7 +450,9 @@ const content: Entry[] = [
           "en": [
             "{{word:yao4}} + verb, want to: {{Word:wo3}} {{word:yao4}} {{word:chi1}}. (I want to eat.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:yao4}} + глагол — хотеть: {{Word:wo3}} {{word:yao4}} {{word:chi1}}. (Я хочу есть.)"
+          ],
           "zh": []
         }
       },
@@ -387,7 +461,9 @@ const content: Entry[] = [
           "en": [
             "{{word:neng2}} + verb, can: {{Word:wo3}} {{word:neng2}} {{word:ting1}}. (I can hear.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:neng2}} + глагол — мочь: {{Word:wo3}} {{word:neng2}} {{word:ting1}}. (Я могу слышать.)"
+          ],
           "zh": []
         }
       },
@@ -396,7 +472,9 @@ const content: Entry[] = [
           "en": [
             "{{word:xue2}} + verb, learn to: {{Word:wo3}} {{word:xue2}} {{word:xie3}}. (I'm learning to write.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:xue2}} + глагол — учиться: {{Word:wo3}} {{word:xue2}} {{word:xie3}}. (Я учусь писать.)"
+          ],
           "zh": []
         }
       },
@@ -405,7 +483,9 @@ const content: Entry[] = [
           "en": [
             "{{word:zhi1dao4}} {{word:zen3me}} + verb, know how to: {{Word:wo3}} {{word:zhi1dao4}} {{word:zen3me}} {{word:xie3}}. (I know how to write.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:zhi1dao4}} {{word:zen3me}} + глагол — уметь: {{Word:wo3}} {{word:zhi1dao4}} {{word:zen3me}} {{word:xie3}}. (Я умею писать.)"
+          ],
           "zh": []
         }
       },
@@ -414,7 +494,9 @@ const content: Entry[] = [
           "en": [
             "{{word:ai4}} + verb, love to: {{Word:wo3}} {{word:ai4}} {{word:chi1}}. (I love to eat.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:ai4}} + глагол — любить: {{Word:wo3}} {{word:ai4}} {{word:chi1}}. (Я люблю поесть.)"
+          ],
           "zh": []
         }
       },
@@ -423,7 +505,9 @@ const content: Entry[] = [
           "en": [
             "{{word:ke3neng2}} + verb, maybe: {{Word:ta1}} {{word:ke3neng2}} {{word:zhi1dao4}}. (He might know.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:ke3neng2}} + глагол — может быть: {{Word:ta1}} {{word:ke3neng2}} {{word:zhi1dao4}}. (Он, может быть, знает.)"
+          ],
           "zh": []
         }
       },
@@ -432,7 +516,9 @@ const content: Entry[] = [
           "en": [
             "For \"not\", put {{word:bu4}} first: {{Word:ta1}} {{word:bu4}} {{word:neng2}} {{word:chi1}}. (He can't eat.)"
           ],
-          "ru": [],
+          "ru": [
+            "Чтобы сказать «не», поставьте {{word:bu4}} в начало: {{Word:ta1}} {{word:bu4}} {{word:neng2}} {{word:chi1}}. (Он не может есть.)"
+          ],
           "zh": []
         }
       }
@@ -441,7 +527,9 @@ const content: Entry[] = [
       "en": [
         "Lesson 7 · Words Before a Verb"
       ],
-      "ru": [],
+      "ru": [
+        "Урок 7 · Слова перед глаголом"
+      ],
       "zh": []
     }
   },
@@ -455,7 +543,9 @@ const content: Entry[] = [
           "en": [
             "verb + {{word:le}}, done: {{Word:wo3}} {{word:chi1}} {{word:le}}. (I ate.)"
           ],
-          "ru": [],
+          "ru": [
+            "глагол + {{word:le}} — сделано: {{Word:wo3}} {{word:chi1}} {{word:le}}. (Я поел.)"
+          ],
           "zh": []
         }
       },
@@ -464,7 +554,9 @@ const content: Entry[] = [
           "en": [
             "{{word:zai4}} + verb, right now: {{Word:wo3}} {{word:zai4}} {{word:chi1}}. (I'm eating.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:zai4}} + глагол — как раз сейчас: {{Word:wo3}} {{word:zai4}} {{word:chi1}}. (Я как раз ем.)"
+          ],
           "zh": []
         }
       },
@@ -473,7 +565,9 @@ const content: Entry[] = [
           "en": [
             "{{word:hui4}} + verb, will: {{Word:wo3}} {{word:hui4}} {{word:chi1}}. (I will eat.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:hui4}} + глагол — будет: {{Word:wo3}} {{word:hui4}} {{word:chi1}}. (Я буду есть.)"
+          ],
           "zh": []
         }
       },
@@ -482,7 +576,9 @@ const content: Entry[] = [
           "en": [
             "verb-{{word:guo4}}, done before: {{Word:wo3}} {{word:chi1}}-{{word:guo4}} {{word:mi3fan4}}. (I've eaten rice before.)"
           ],
-          "ru": [],
+          "ru": [
+            "глагол-{{word:guo4}} — уже когда-то делал: {{Word:wo3}} {{word:chi1}}-{{word:guo4}} {{word:mi3fan4}}. (Я уже пробовал рис.)"
+          ],
           "zh": []
         }
       },
@@ -491,7 +587,9 @@ const content: Entry[] = [
           "en": [
             "Time first: {{Word:yue4}}-{{word:de}} {{word:shi2jian1}}, {{word:wo3}} {{word:shui4jiao4}}. (At night, I sleep.) {{Word:xian4zai4}}, … (Now, …)"
           ],
-          "ru": [],
+          "ru": [
+            "Сначала время: {{Word:yue4}}-{{word:de}} {{word:shi2jian1}}, {{word:wo3}} {{word:shui4jiao4}}. (Ночью я сплю.) {{Word:xian4zai4}}, … (Сейчас …)"
+          ],
           "zh": []
         }
       },
@@ -500,7 +598,9 @@ const content: Entry[] = [
           "en": [
             "{{Word:fa1sheng1}} {{word:le}} {{word:shen2me}}? (What happened?)"
           ],
-          "ru": [],
+          "ru": [
+            "{{Word:fa1sheng1}} {{word:le}} {{word:shen2me}}? (Что случилось?)"
+          ],
           "zh": []
         }
       }
@@ -509,7 +609,9 @@ const content: Entry[] = [
       "en": [
         "Lesson 8 · When It Happens"
       ],
-      "ru": [],
+      "ru": [
+        "Урок 8 · Когда это происходит"
+      ],
       "zh": []
     }
   },
@@ -523,7 +625,9 @@ const content: Entry[] = [
           "en": [
             "verb-{{word:de}} {{word:shi2jian1}}, when: {{Word:wo3}} {{word:chi1}}-{{word:de}} {{word:shi2jian1}}, {{word:wo3}} {{word:bu4}} {{word:shuo1}}. (When I eat, I don't talk.)"
           ],
-          "ru": [],
+          "ru": [
+            "глагол-{{word:de}} {{word:shi2jian1}} — когда: {{Word:wo3}} {{word:chi1}}-{{word:de}} {{word:shi2jian1}}, {{word:wo3}} {{word:bu4}} {{word:shuo1}}. (Когда я ем, я не разговариваю.)"
+          ],
           "zh": []
         }
       },
@@ -532,7 +636,9 @@ const content: Entry[] = [
           "en": [
             "verb-{{word:wan2}} {{word:le}}, finished: {{Word:wo3}} {{word:chi1}}-{{word:wan2}} {{word:le}}. (I finished eating.)"
           ],
-          "ru": [],
+          "ru": [
+            "глагол-{{word:wan2}} {{word:le}} — закончил: {{Word:wo3}} {{word:chi1}}-{{word:wan2}} {{word:le}}. (Я доел.)"
+          ],
           "zh": []
         }
       },
@@ -541,7 +647,9 @@ const content: Entry[] = [
           "en": [
             "verb-{{word:wan2}} {{word:hou4}}, after: {{Word:chi1}}-{{word:wan2}} {{word:hou4}}, {{word:wo3}} {{word:shui4jiao4}}. (After eating, I sleep.)"
           ],
-          "ru": [],
+          "ru": [
+            "глагол-{{word:wan2}} {{word:hou4}} — после: {{Word:chi1}}-{{word:wan2}} {{word:hou4}}, {{word:wo3}} {{word:shui4jiao4}}. (После еды я сплю.)"
+          ],
           "zh": []
         }
       },
@@ -550,7 +658,9 @@ const content: Entry[] = [
           "en": [
             "{{word:kai1shi3}} + verb, start: {{Word:wo3}} {{word:kai1shi3}} {{word:wan2r}} {{word:le}}. (I started to play.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:kai1shi3}} + глагол — начать: {{Word:wo3}} {{word:kai1shi3}} {{word:wan2r}} {{word:le}}. (Я начал играть.)"
+          ],
           "zh": []
         }
       },
@@ -559,7 +669,9 @@ const content: Entry[] = [
           "en": [
             "verb + {{word:yi1xia4}}, for a moment: {{Word:deng3}} {{word:yi1xia4}}! (Wait a moment!)"
           ],
-          "ru": [],
+          "ru": [
+            "глагол + {{word:yi1xia4}} — на минутку: {{Word:deng3}} {{word:yi1xia4}}! (Подожди минутку!)"
+          ],
           "zh": []
         }
       },
@@ -568,7 +680,9 @@ const content: Entry[] = [
           "en": [
             "{{word:you4}} + verb + {{word:le}}, again: {{Word:ta1}} {{word:you4}} {{word:chi1}} {{word:le}}. (He ate again.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:you4}} + глагол + {{word:le}} — опять: {{Word:ta1}} {{word:you4}} {{word:chi1}} {{word:le}}. (Он опять поел.)"
+          ],
           "zh": []
         }
       },
@@ -577,7 +691,9 @@ const content: Entry[] = [
           "en": [
             "{{word:hen3}} {{word:duo1}} {{word:ci4}}, many times: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:hen3}} {{word:duo1}} {{word:ci4}}. (I've seen it many times.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:hen3}} {{word:duo1}} {{word:ci4}} — много раз: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:hen3}} {{word:duo1}} {{word:ci4}}. (Я видел это много раз.)"
+          ],
           "zh": []
         }
       }
@@ -586,7 +702,9 @@ const content: Entry[] = [
       "en": [
         "Lesson 9 · Around an Action"
       ],
-      "ru": [],
+      "ru": [
+        "Урок 9 · Вокруг действия"
+      ],
       "zh": []
     }
   },
@@ -600,7 +718,9 @@ const content: Entry[] = [
           "en": [
             "{{word:zai4}} + place: {{Word:wo3}} {{word:zai4}} {{word:jia1}}. (I'm at home.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:zai4}} + место: {{Word:wo3}} {{word:zai4}} {{word:jia1}}. (Я дома.)"
+          ],
           "zh": []
         }
       },
@@ -609,7 +729,9 @@ const content: Entry[] = [
           "en": [
             "{{word:na3li3}}, where: {{Word:ni3}} {{word:zai4}} {{word:na3li3}}? (Where are you?)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:na3li3}} — где: {{Word:ni3}} {{word:zai4}} {{word:na3li3}}? (Где ты?)"
+          ],
           "zh": []
         }
       },
@@ -618,7 +740,9 @@ const content: Entry[] = [
           "en": [
             "place-{{word:li3}} (in), place-{{word:shang4}} (on): {{Word:shui3}} {{word:zai4}} {{word:he2zi}}-{{word:li3}}. (The water is in the box.)"
           ],
-          "ru": [],
+          "ru": [
+            "место-{{word:li3}} (в), место-{{word:shang4}} (на): {{Word:shui3}} {{word:zai4}} {{word:he2zi}}-{{word:li3}}. (Вода в коробке.)"
+          ],
           "zh": []
         }
       },
@@ -627,7 +751,9 @@ const content: Entry[] = [
           "en": [
             "X-{{word:de}} {{word:qian2}}-{{word:mian4}} / {{word:hou4}}-{{word:mian4}} / {{word:xia4}}-{{word:mian4}} / {{word:pang2bian1}}: {{Word:wo3}} {{word:zai4}} {{word:ni3}}-{{word:de}} {{word:pang2bian1}}. (I'm beside you.)"
           ],
-          "ru": [],
+          "ru": [
+            "X-{{word:de}} {{word:qian2}}-{{word:mian4}} / {{word:hou4}}-{{word:mian4}} / {{word:xia4}}-{{word:mian4}} / {{word:pang2bian1}}: {{Word:wo3}} {{word:zai4}} {{word:ni3}}-{{word:de}} {{word:pang2bian1}}. (Я рядом с тобой.)"
+          ],
           "zh": []
         }
       },
@@ -636,7 +762,9 @@ const content: Entry[] = [
           "en": [
             "{{word:zuo3bian1}} / {{word:you4bian1}}, left / right: {{Word:he2zi}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3bian1}}. (The box is on my left.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:zuo3bian1}} / {{word:you4bian1}} — слева / справа: {{Word:he2zi}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3bian1}}. (Коробка слева от меня.)"
+          ],
           "zh": []
         }
       }
@@ -645,7 +773,9 @@ const content: Entry[] = [
       "en": [
         "Lesson 10 · Where Things Are"
       ],
-      "ru": [],
+      "ru": [
+        "Урок 10 · Где что находится"
+      ],
       "zh": []
     }
   },
@@ -659,7 +789,9 @@ const content: Entry[] = [
           "en": [
             "{{word:lai2}} / {{word:qu4}} + place: {{Word:wo3}} {{word:qu4}} {{word:fu4mu3}}-{{word:de}} {{word:jia1}}. (I'm going to my parents' home.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:lai2}} / {{word:qu4}} + место: {{Word:wo3}} {{word:qu4}} {{word:fu4mu3}}-{{word:de}} {{word:jia1}}. (Я иду домой к родителям.)"
+          ],
           "zh": []
         }
       },
@@ -668,7 +800,9 @@ const content: Entry[] = [
           "en": [
             "{{word:cong2}} + place + {{word:lai2}}: {{Word:wo3}} {{word:cong2}} {{word:jia1}} {{word:lai2}}. (I come from home.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:cong2}} + место + {{word:lai2}}: {{Word:wo3}} {{word:cong2}} {{word:jia1}} {{word:lai2}}. (Я пришёл из дома.)"
+          ],
           "zh": []
         }
       },
@@ -677,7 +811,9 @@ const content: Entry[] = [
           "en": [
             "{{word:dao4}} + place, arrive: {{Word:wo3}} {{word:dao4}} {{word:jia1}} {{word:le}}. (I've arrived home.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:dao4}} + место — добраться: {{Word:wo3}} {{word:dao4}} {{word:jia1}} {{word:le}}. (Я пришёл домой.)"
+          ],
           "zh": []
         }
       },
@@ -686,7 +822,9 @@ const content: Entry[] = [
           "en": [
             "{{word:qi3}}-{{word:lai2}} (get up), {{word:shang4}}-{{word:lai2}} (come up), {{word:xia4}}-{{word:lai2}} (come down); with {{word:qu4}} for going away."
           ],
-          "ru": [],
+          "ru": [
+            "{{word:qi3}}-{{word:lai2}} (вставать), {{word:shang4}}-{{word:lai2}} (подняться сюда), {{word:xia4}}-{{word:lai2}} (спуститься сюда); с {{word:qu4}} — движение от говорящего."
+          ],
           "zh": []
         }
       },
@@ -695,7 +833,9 @@ const content: Entry[] = [
           "en": [
             "{{word:dong4}}, move: {{Word:bu4}} {{word:yao4}} {{word:dong4}}! (Don't move!)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:dong4}} — двигаться: {{Word:bu4}} {{word:yao4}} {{word:dong4}}! (Не двигайся!)"
+          ],
           "zh": []
         }
       },
@@ -704,7 +844,9 @@ const content: Entry[] = [
           "en": [
             "{{word:yuan3}} / {{word:fu4jin4}}, far / nearby: {{Word:na4}}-ge {{word:di4fang1}} {{word:hen3}} {{word:yuan3}}. (That place is far.) {{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:zai4}} {{word:fu4jin4}}. (My home is nearby.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:yuan3}} / {{word:fu4jin4}} — далеко / поблизости: {{Word:na4}}-ge {{word:di4fang1}} {{word:hen3}} {{word:yuan3}}. (То место далеко.) {{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:zai4}} {{word:fu4jin4}}. (Мой дом поблизости.)"
+          ],
           "zh": []
         }
       },
@@ -713,7 +855,9 @@ const content: Entry[] = [
           "en": [
             "{{word:lu4}}, road, way: {{Word:ni3}} {{word:zhi1dao4}} {{word:lu4}} {{word:ma}}? (Do you know the way?)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:lu4}} — дорога, путь: {{Word:ni3}} {{word:zhi1dao4}} {{word:lu4}} {{word:ma}}? (Ты знаешь дорогу?)"
+          ],
           "zh": []
         }
       }
@@ -722,7 +866,9 @@ const content: Entry[] = [
       "en": [
         "Lesson 11 · Coming and Going"
       ],
-      "ru": [],
+      "ru": [
+        "Урок 11 · Приходить и уходить"
+      ],
       "zh": []
     }
   },
@@ -736,7 +882,9 @@ const content: Entry[] = [
           "en": [
             "{{word:hen3}} + adjective, very: {{Word:shui3}} {{word:hen3}} {{word:re4}}. (The water is very hot.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:hen3}} + прилагательное — очень: {{Word:shui3}} {{word:hen3}} {{word:re4}}. (Вода очень горячая.)"
+          ],
           "zh": []
         }
       },
@@ -745,7 +893,9 @@ const content: Entry[] = [
           "en": [
             "{{word:zhen1}} + adjective, really: {{Word:zhen1}} {{word:re4}}! (It's really hot!)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:zhen1}} + прилагательное — правда: {{Word:zhen1}} {{word:re4}}! (Правда жарко!)"
+          ],
           "zh": []
         }
       },
@@ -754,7 +904,9 @@ const content: Entry[] = [
           "en": [
             "{{word:bu4}} / {{word:bu4}} {{word:hen3}} + adjective, not / not very: {{Word:shui3}} {{word:bu4}} {{word:leng3}}. (The water isn't cold.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:bu4}} / {{word:bu4}} {{word:hen3}} + прилагательное — не / не очень: {{Word:shui3}} {{word:bu4}} {{word:leng3}}. (Вода не холодная.)"
+          ],
           "zh": []
         }
       },
@@ -763,7 +915,9 @@ const content: Entry[] = [
           "en": [
             "adjective + {{word:ma}}?, asking: {{Word:ni3}} {{word:leng3}} {{word:ma}}? (Are you cold?)"
           ],
-          "ru": [],
+          "ru": [
+            "прилагательное + {{word:ma}}? — вопрос: {{Word:ni3}} {{word:leng3}} {{word:ma}}? (Тебе холодно?)"
+          ],
           "zh": []
         }
       },
@@ -772,7 +926,9 @@ const content: Entry[] = [
           "en": [
             "{{word:hen3}} {{word:you3}} {{word:jia4zhi2}}, valuable: {{Word:zhe4}}-ge {{word:gong1ju4}} {{word:hen3}} {{word:you3}} {{word:jia4zhi2}}. (This tool is very valuable.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:hen3}} {{word:you3}} {{word:jia4zhi2}} — ценный: {{Word:zhe4}}-ge {{word:gong1ju4}} {{word:hen3}} {{word:you3}} {{word:jia4zhi2}}. (Этот инструмент очень ценный.)"
+          ],
           "zh": []
         }
       }
@@ -781,7 +937,9 @@ const content: Entry[] = [
       "en": [
         "Lesson 12 · How Much"
       ],
-      "ru": [],
+      "ru": [
+        "Урок 12 · Насколько"
+      ],
       "zh": []
     }
   },
@@ -795,7 +953,9 @@ const content: Entry[] = [
           "en": [
             "A {{word:bi3}} B + adjective: {{Word:wo3}} {{word:bi3}} {{word:ni3}} {{word:da4}}. (I'm bigger than you.) No {{word:hen3}} here."
           ],
-          "ru": [],
+          "ru": [
+            "A {{word:bi3}} B + прилагательное: {{Word:wo3}} {{word:bi3}} {{word:ni3}} {{word:da4}}. (Я больше тебя.) Без {{word:hen3}}."
+          ],
           "zh": []
         }
       },
@@ -804,7 +964,9 @@ const content: Entry[] = [
           "en": [
             "{{word:yi1yang4}}, the same: {{Word:ta1}}-{{word:men}} {{word:yi1yang4}}. (They're the same.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:yi1yang4}} — одинаковый: {{Word:ta1}}-{{word:men}} {{word:yi1yang4}}. (Они одинаковые.)"
+          ],
           "zh": []
         }
       },
@@ -813,7 +975,9 @@ const content: Entry[] = [
           "en": [
             "{{word:bu4tong2}}, different: {{Word:wo3}} {{word:yao4}} {{word:bu4tong2}}-{{word:de}} {{word:yi1fu}}. (I want different clothes.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:bu4tong2}} — разный: {{Word:wo3}} {{word:yao4}} {{word:bu4tong2}}-{{word:de}} {{word:yi1fu}}. (Мне нужна другая одежда.)"
+          ],
           "zh": []
         }
       },
@@ -822,7 +986,9 @@ const content: Entry[] = [
           "en": [
             "{{word:bie2de}}, other: {{Word:wo3}} {{word:yao4}} {{word:bie2de}}. (I want something else.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:bie2de}} — другой: {{Word:wo3}} {{word:yao4}} {{word:bie2de}}. (Мне нужно что-то другое.)"
+          ],
           "zh": []
         }
       },
@@ -831,7 +997,9 @@ const content: Entry[] = [
           "en": [
             "{{word:zhe4}}-{{word:zhong3}} + noun, this kind of: {{word:zhe4}}-{{word:zhong3}} {{word:shui3guo3}} (this kind of fruit)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:zhe4}}-{{word:zhong3}} + существительное — такой вид: {{word:zhe4}}-{{word:zhong3}} {{word:shui3guo3}} (такие фрукты)"
+          ],
           "zh": []
         }
       },
@@ -840,7 +1008,9 @@ const content: Entry[] = [
           "en": [
             "{{word:zui4}} + adjective, the most: {{Word:zhe4}}-ge {{word:zui4}} {{word:da4}}. (This one is the biggest.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:zui4}} + прилагательное — самый: {{Word:zhe4}}-ge {{word:zui4}} {{word:da4}}. (Этот самый большой.)"
+          ],
           "zh": []
         }
       }
@@ -849,7 +1019,9 @@ const content: Entry[] = [
       "en": [
         "Lesson 13 · Comparing"
       ],
-      "ru": [],
+      "ru": [
+        "Урок 13 · Сравнение"
+      ],
       "zh": []
     }
   },
@@ -863,7 +1035,9 @@ const content: Entry[] = [
           "en": [
             "{{word:ye3}} + verb, also: {{Word:wo3}} {{word:ye3}} {{word:chi1}}. (I eat too.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:ye3}} + глагол — тоже: {{Word:wo3}} {{word:ye3}} {{word:chi1}}. (Я тоже ем.)"
+          ],
           "zh": []
         }
       },
@@ -872,7 +1046,9 @@ const content: Entry[] = [
           "en": [
             "{{word:ye3}} {{word:hen3}} + adjective: {{Word:ta1}} {{word:ye3}} {{word:hen3}} {{word:leng3}}. (She's cold too.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:ye3}} {{word:hen3}} + прилагательное: {{Word:ta1}} {{word:ye3}} {{word:hen3}} {{word:leng3}}. (Ей тоже холодно.)"
+          ],
           "zh": []
         }
       },
@@ -881,7 +1057,9 @@ const content: Entry[] = [
           "en": [
             "{{word:dou1}} + verb, all: {{Word:wo3}}-{{word:men}} {{word:dou1}} {{word:chi1}}. (We all eat.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:dou1}} + глагол — все: {{Word:wo3}}-{{word:men}} {{word:dou1}} {{word:chi1}}. (Мы все едим.)"
+          ],
           "zh": []
         }
       },
@@ -890,7 +1068,9 @@ const content: Entry[] = [
           "en": [
             "{{word:shen2me}}-{{word:dou1}} + verb, everything: {{Word:wo3}} {{word:shen2me}}-{{word:dou1}} {{word:chi1}}. (I eat everything.) With {{word:bu4}}: nothing. {{word:na3li3}}-{{word:dou1}}: everywhere."
           ],
-          "ru": [],
+          "ru": [
+            "{{word:shen2me}}-{{word:dou1}} + глагол — всё: {{Word:wo3}} {{word:shen2me}}-{{word:dou1}} {{word:chi1}}. (Я ем всё.) С {{word:bu4}} — ничего. {{word:na3li3}}-{{word:dou1}} — везде."
+          ],
           "zh": []
         }
       },
@@ -899,7 +1079,9 @@ const content: Entry[] = [
           "en": [
             "{{word:bu4fen}}, part: {{Word:zhe4}} {{word:bu4fen}} {{word:hen3}} {{word:hao3}}. (This part is good.) {{word:da4}} {{word:bu4fen}}: most."
           ],
-          "ru": [],
+          "ru": [
+            "{{word:bu4fen}} — часть: {{Word:zhe4}} {{word:bu4fen}} {{word:hen3}} {{word:hao3}}. (Эта часть хорошая.) {{word:da4}} {{word:bu4fen}} — большинство."
+          ],
           "zh": []
         }
       }
@@ -908,7 +1090,9 @@ const content: Entry[] = [
       "en": [
         "Lesson 14 · Also and All"
       ],
-      "ru": [],
+      "ru": [
+        "Урок 14 · Тоже и все"
+      ],
       "zh": []
     }
   },
@@ -922,7 +1106,9 @@ const content: Entry[] = [
           "en": [
             "adjective + {{word:le}}, it changed: {{Word:shui3}} {{word:re4}} {{word:le}}. (The water got hot.)"
           ],
-          "ru": [],
+          "ru": [
+            "прилагательное + {{word:le}} — изменилось: {{Word:shui3}} {{word:re4}} {{word:le}}. (Вода нагрелась.)"
+          ],
           "zh": []
         }
       },
@@ -931,7 +1117,9 @@ const content: Entry[] = [
           "en": [
             "{{word:bian4}} + adjective + {{word:le}}, became: {{Word:shui3}} {{word:bian4}} {{word:leng3}} {{word:le}}. (The water turned cold.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:bian4}} + прилагательное + {{word:le}} — стало: {{Word:shui3}} {{word:bian4}} {{word:leng3}} {{word:le}}. (Вода стала холодной.)"
+          ],
           "zh": []
         }
       },
@@ -940,7 +1128,9 @@ const content: Entry[] = [
           "en": [
             "{{word:nong4}} + result, make it so: {{Word:wo3}} {{word:nong4}} {{word:hao3}} {{word:le}}. (I fixed it.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:nong4}} + результат — сделать таким: {{Word:wo3}} {{word:nong4}} {{word:hao3}} {{word:le}}. (Я починил.)"
+          ],
           "zh": []
         }
       },
@@ -949,7 +1139,9 @@ const content: Entry[] = [
           "en": [
             "{{word:ba3}} + thing + {{word:nong4}} + result: {{Word:wo3}} {{word:ba3}} {{word:gong1ju4}} {{word:nong4}} {{word:hao3}} {{word:le}}. (I fixed the tool.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:ba3}} + вещь + {{word:nong4}} + результат: {{Word:wo3}} {{word:ba3}} {{word:gong1ju4}} {{word:nong4}} {{word:hao3}} {{word:le}}. (Я починил инструмент.)"
+          ],
           "zh": []
         }
       },
@@ -958,7 +1150,9 @@ const content: Entry[] = [
           "en": [
             "{{word:ba3}} + thing + {{word:fang4}} {{word:zai4}} + place, put: {{Word:wo3}} {{word:ba3}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:di4}}-{{word:shang4}} {{word:le}}. (I put the clothes on the floor.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:ba3}} + вещь + {{word:fang4}} {{word:zai4}} + место — положить: {{Word:wo3}} {{word:ba3}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:di4}}-{{word:shang4}} {{word:le}}. (Я положил одежду на пол.)"
+          ],
           "zh": []
         }
       },
@@ -967,7 +1161,9 @@ const content: Entry[] = [
           "en": [
             "{{word:you3}} {{word:li4liang4}}, strong: {{Word:ta1}} {{word:hen3}} {{word:you3}} {{word:li4liang4}}. (He's very strong.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:you3}} {{word:li4liang4}} — сильный: {{Word:ta1}} {{word:hen3}} {{word:you3}} {{word:li4liang4}}. (Он очень сильный.)"
+          ],
           "zh": []
         }
       }
@@ -976,7 +1172,9 @@ const content: Entry[] = [
       "en": [
         "Lesson 15 · Becoming and Making"
       ],
-      "ru": [],
+      "ru": [
+        "Урок 15 · Становиться и делать"
+      ],
       "zh": []
     }
   },
@@ -990,7 +1188,9 @@ const content: Entry[] = [
           "en": [
             "verb-{{word:lai2}} / verb-{{word:qu4}}, toward you / away: {{Word:ba3}} {{word:shui3}} {{word:na2}}-{{word:lai2}}! (Bring the water!)"
           ],
-          "ru": [],
+          "ru": [
+            "глагол-{{word:lai2}} / глагол-{{word:qu4}} — к вам / от вас: {{Word:ba3}} {{word:shui3}} {{word:na2}}-{{word:lai2}}! (Принеси воду!)"
+          ],
           "zh": []
         }
       },
@@ -999,7 +1199,9 @@ const content: Entry[] = [
           "en": [
             "{{word:jin4}} / {{word:chu1}} / {{word:hui2}} + {{word:lai2}} / {{word:qu4}}, in / out / back: {{Word:ni3}} {{word:jin4}}-{{word:lai2}}! (Come in!) {{Word:wo3}} {{word:yao4}} {{word:hui2}} {{word:jia1}}. (I want to go home.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:jin4}} / {{word:chu1}} / {{word:hui2}} + {{word:lai2}} / {{word:qu4}} — внутрь / наружу / обратно: {{Word:ni3}} {{word:jin4}}-{{word:lai2}}! (Входи!) {{Word:wo3}} {{word:yao4}} {{word:hui2}} {{word:jia1}}. (Я хочу домой.)"
+          ],
           "zh": []
         }
       },
@@ -1008,7 +1210,9 @@ const content: Entry[] = [
           "en": [
             "verb + direction words: {{Word:ta1}} {{word:ba3}} {{word:jin1}} {{word:na2}}-{{word:chu1}}-{{word:lai2}} {{word:le}}. (He took out the money.)"
           ],
-          "ru": [],
+          "ru": [
+            "глагол + слова направления: {{Word:ta1}} {{word:ba3}} {{word:jin1}} {{word:na2}}-{{word:chu1}}-{{word:lai2}} {{word:le}}. (Он вынул деньги.)"
+          ],
           "zh": []
         }
       },
@@ -1017,7 +1221,9 @@ const content: Entry[] = [
           "en": [
             "verb-result: {{Word:wo3}} {{word:zhao3}}-{{word:dao4}} {{word:le}}. (I found it.)"
           ],
-          "ru": [],
+          "ru": [
+            "глагол-результат: {{Word:wo3}} {{word:zhao3}}-{{word:dao4}} {{word:le}}. (Я нашёл.)"
+          ],
           "zh": []
         }
       },
@@ -1026,7 +1232,9 @@ const content: Entry[] = [
           "en": [
             "verb-{{word:de}}-result / verb-{{word:bu4}}-result, can / can't: {{Word:wo3}} {{word:kan4}}-{{word:bu4}}-{{word:dao4}}. (I can't see it.)"
           ],
-          "ru": [],
+          "ru": [
+            "глагол-{{word:de}}-результат / глагол-{{word:bu4}}-результат — получается / не получается: {{Word:wo3}} {{word:kan4}}-{{word:bu4}}-{{word:dao4}}. (Мне не видно.)"
+          ],
           "zh": []
         }
       },
@@ -1035,7 +1243,9 @@ const content: Entry[] = [
           "en": [
             "verb-{{word:qi3}}-{{word:lai2}}, seems: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}. (This looks good.) verb-{{word:xia4}}-{{word:qu4}}, keep going: {{Word:shuo1}}-{{word:xia4}}-{{word:qu4}}! (Keep talking!)"
           ],
-          "ru": [],
+          "ru": [
+            "глагол-{{word:qi3}}-{{word:lai2}} — кажется: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}. (Это выглядит хорошо.) глагол-{{word:xia4}}-{{word:qu4}} — продолжать: {{Word:shuo1}}-{{word:xia4}}-{{word:qu4}}! (Говори дальше!)"
+          ],
           "zh": []
         }
       },
@@ -1044,7 +1254,9 @@ const content: Entry[] = [
           "en": [
             "{{word:zuo4}}-{{word:xia4}} / {{word:zhan4}}-{{word:qi3}}-{{word:lai2}} / {{word:tang3}}-{{word:xia4}}, sit down / stand up / lie down: {{Word:ni3}} {{word:zuo4}}-{{word:xia4}}! (Sit down!)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:zuo4}}-{{word:xia4}} / {{word:zhan4}}-{{word:qi3}}-{{word:lai2}} / {{word:tang3}}-{{word:xia4}} — сесть / встать / лечь: {{Word:ni3}} {{word:zuo4}}-{{word:xia4}}! (Садись!)"
+          ],
           "zh": []
         }
       }
@@ -1053,7 +1265,9 @@ const content: Entry[] = [
       "en": [
         "Lesson 16 · Direction and Result"
       ],
-      "ru": [],
+      "ru": [
+        "Урок 16 · Направление и результат"
+      ],
       "zh": []
     }
   },
@@ -1067,7 +1281,9 @@ const content: Entry[] = [
           "en": [
             "1 {{word:yi1}}, 2 {{word:er4}}, 3 {{word:san1}}, 4 {{word:si4}}, 5 {{word:wu3}}, 6 {{word:liu4}}, 7 {{word:qi1}}, 8 {{word:ba1}}, 9 {{word:jiu3}}, 10 {{word:shi2}}"
           ],
-          "ru": [],
+          "ru": [
+            "1 {{word:yi1}}, 2 {{word:er4}}, 3 {{word:san1}}, 4 {{word:si4}}, 5 {{word:wu3}}, 6 {{word:liu4}}, 7 {{word:qi1}}, 8 {{word:ba1}}, 9 {{word:jiu3}}, 10 {{word:shi2}}"
+          ],
           "zh": []
         }
       },
@@ -1076,7 +1292,9 @@ const content: Entry[] = [
           "en": [
             "number + {{word:ge4}} + noun: {{Word:san1}}-ge {{word:ren2}} (three people). For two things, {{word:liang3}}-ge."
           ],
-          "ru": [],
+          "ru": [
+            "число + {{word:ge4}} + существительное: {{Word:san1}}-ge {{word:ren2}} (три человека). Для двух вещей — {{word:liang3}}-ge."
+          ],
           "zh": []
         }
       },
@@ -1085,7 +1303,9 @@ const content: Entry[] = [
           "en": [
             "Above ten: {{word:shi2}}-{{word:er4}} (12), {{word:er4}}-{{word:shi2}} (20)"
           ],
-          "ru": [],
+          "ru": [
+            "Больше десяти: {{word:shi2}}-{{word:er4}} (12), {{word:er4}}-{{word:shi2}} (20)"
+          ],
           "zh": []
         }
       },
@@ -1094,7 +1314,9 @@ const content: Entry[] = [
           "en": [
             "number + {{word:hao4}}, number …: {{Word:er4}}-{{word:hao4}} (number two)"
           ],
-          "ru": [],
+          "ru": [
+            "число + {{word:hao4}} — номер: {{Word:er4}}-{{word:hao4}} (номер два)"
+          ],
           "zh": []
         }
       },
@@ -1103,7 +1325,9 @@ const content: Entry[] = [
           "en": [
             "number + {{word:dian3}}, o'clock: {{Word:xian4zai4}} {{word:shi4}} {{word:san1}}-{{word:dian3}}. (It's three o'clock now.)"
           ],
-          "ru": [],
+          "ru": [
+            "число + {{word:dian3}} — час: {{Word:xian4zai4}} {{word:shi4}} {{word:san1}}-{{word:dian3}}. (Сейчас три часа.)"
+          ],
           "zh": []
         }
       },
@@ -1112,7 +1336,9 @@ const content: Entry[] = [
           "en": [
             "{{word:yi1}}-{{word:dian3}}, a little: {{Word:wo3}} {{word:yao4}} {{word:yi1}}-{{word:dian3}} {{word:shui3}}. (I want a little water.) {{Word:zhe4}}-ge {{word:da4}} {{word:yi1}}-{{word:dian3}}. (This one is a bit bigger.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:yi1}}-{{word:dian3}} — немного: {{Word:wo3}} {{word:yao4}} {{word:yi1}}-{{word:dian3}} {{word:shui3}}. (Я хочу немного воды.) {{Word:zhe4}}-ge {{word:da4}} {{word:yi1}}-{{word:dian3}}. (Этот чуть больше.)"
+          ],
           "zh": []
         }
       },
@@ -1121,7 +1347,9 @@ const content: Entry[] = [
           "en": [
             "A, B {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}, add: {{Word:san1}}, {{word:si4}} {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}, {{word:shi4}} {{word:qi1}}. (3 + 4 = 7) {{word:cong2}} A {{word:li3}}-{{word:mian4}} {{word:na2}} B, take away: {{Word:cong2}} {{word:qi1}} {{word:li3}}-{{word:mian4}} {{word:na2}} {{word:san1}}, {{word:shi4}} {{word:si4}}. (7 − 3 = 4)"
           ],
-          "ru": [],
+          "ru": [
+            "A, B {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}} — сложить: {{Word:san1}}, {{word:si4}} {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}, {{word:shi4}} {{word:qi1}}. (3 + 4 = 7) {{word:cong2}} A {{word:li3}}-{{word:mian4}} {{word:na2}} B — отнять: {{Word:cong2}} {{word:qi1}} {{word:li3}}-{{word:mian4}} {{word:na2}} {{word:san1}}, {{word:shi4}} {{word:si4}}. (7 − 3 = 4)"
+          ],
           "zh": []
         }
       },
@@ -1130,7 +1358,9 @@ const content: Entry[] = [
           "en": [
             "{{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}} B-{{word:ci4}}, multiply: {{Word:ba3}} {{word:si4}} {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}} {{word:san1}}-{{word:ci4}}, {{word:shi4}} {{word:shi2}}-{{word:er4}}. (3 × 4 = 12) {{word:na2}} A, {{word:neng2}} {{word:na2}} B-{{word:ci4}}, divide: {{Word:cong2}} {{word:shi2}}-{{word:er4}} {{word:li3}}-{{word:mian4}} {{word:na2}} {{word:si4}}, {{word:neng2}} {{word:na2}} {{word:san1}}-{{word:ci4}}. (12 ÷ 4 = 3)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}} B-{{word:ci4}} — умножить: {{Word:ba3}} {{word:si4}} {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}} {{word:san1}}-{{word:ci4}}, {{word:shi4}} {{word:shi2}}-{{word:er4}}. (3 × 4 = 12) {{word:na2}} A, {{word:neng2}} {{word:na2}} B-{{word:ci4}} — разделить: {{Word:cong2}} {{word:shi2}}-{{word:er4}} {{word:li3}}-{{word:mian4}} {{word:na2}} {{word:si4}}, {{word:neng2}} {{word:na2}} {{word:san1}}-{{word:ci4}}. (12 ÷ 4 = 3)"
+          ],
           "zh": []
         }
       }
@@ -1139,7 +1369,9 @@ const content: Entry[] = [
       "en": [
         "Lesson 17 · Counting"
       ],
-      "ru": [],
+      "ru": [
+        "Урок 17 · Счёт"
+      ],
       "zh": []
     }
   },
@@ -1153,7 +1385,9 @@ const content: Entry[] = [
           "en": [
             "color-{{word:de}} + noun: {{word:hong2se4}}-{{word:de}} {{word:he2zi}} (a red box)"
           ],
-          "ru": [],
+          "ru": [
+            "цвет-{{word:de}} + существительное: {{word:hong2se4}}-{{word:de}} {{word:he2zi}} (красная коробка)"
+          ],
           "zh": []
         }
       },
@@ -1162,7 +1396,9 @@ const content: Entry[] = [
           "en": [
             "Thing + {{word:shi4}} + color-{{word:de}}: {{Word:he2zi}} {{word:shi4}} {{word:hong2se4}}-{{word:de}}. (The box is red.)"
           ],
-          "ru": [],
+          "ru": [
+            "Вещь + {{word:shi4}} + цвет-{{word:de}}: {{Word:he2zi}} {{word:shi4}} {{word:hong2se4}}-{{word:de}}. (Коробка красная.)"
+          ],
           "zh": []
         }
       },
@@ -1171,7 +1407,9 @@ const content: Entry[] = [
           "en": [
             "{{word:shen2me}} {{word:yan2se4}}, what color: {{Word:ni3}}-{{word:de}} {{word:yi1fu}} {{word:shi4}} {{word:shen2me}} {{word:yan2se4}}? (What color are your clothes?)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:shen2me}} {{word:yan2se4}} — какого цвета: {{Word:ni3}}-{{word:de}} {{word:yi1fu}} {{word:shi4}} {{word:shen2me}} {{word:yan2se4}}? (Какого цвета твоя одежда?)"
+          ],
           "zh": []
         }
       }
@@ -1180,7 +1418,9 @@ const content: Entry[] = [
       "en": [
         "Lesson 18 · Colors"
       ],
-      "ru": [],
+      "ru": [
+        "Урок 18 · Цвета"
+      ],
       "zh": []
     }
   },
@@ -1194,7 +1434,9 @@ const content: Entry[] = [
           "en": [
             "verb-{{word:de}}, the thing: {{word:chi1}}-{{word:de}} (food, something to eat)"
           ],
-          "ru": [],
+          "ru": [
+            "глагол-{{word:de}} — вещь: {{word:chi1}}-{{word:de}} (еда, то, что едят)"
+          ],
           "zh": []
         }
       },
@@ -1203,7 +1445,9 @@ const content: Entry[] = [
           "en": [
             "verb-{{word:de}} {{word:ren2}}, the one who: {{word:xie3}}-{{word:de}} {{word:ren2}} (the one who writes)"
           ],
-          "ru": [],
+          "ru": [
+            "глагол-{{word:de}} {{word:ren2}} — тот, кто: {{word:xie3}}-{{word:de}} {{word:ren2}} (тот, кто пишет)"
+          ],
           "zh": []
         }
       },
@@ -1212,7 +1456,9 @@ const content: Entry[] = [
           "en": [
             "verb-{{word:de}} + adjective, how: {{Word:ta1}} {{word:shuo1}}-{{word:de}} {{word:hao3}}. (She speaks well.)"
           ],
-          "ru": [],
+          "ru": [
+            "глагол-{{word:de}} + прилагательное — как: {{Word:ta1}} {{word:shuo1}}-{{word:de}} {{word:hao3}}. (Она хорошо говорит.)"
+          ],
           "zh": []
         }
       },
@@ -1221,7 +1467,9 @@ const content: Entry[] = [
           "en": [
             "adjective-{{word:de}} + noun: {{word:hao3}}-{{word:de}} {{word:ren2}} (a good person). Whose: {{word:wo3}}-{{word:de}} {{word:bi2zi}} (my nose)."
           ],
-          "ru": [],
+          "ru": [
+            "прилагательное-{{word:de}} + существительное: {{word:hao3}}-{{word:de}} {{word:ren2}} (хороший человек). Чьё: {{word:wo3}}-{{word:de}} {{word:bi2zi}} (мой нос)."
+          ],
           "zh": []
         }
       },
@@ -1230,7 +1478,9 @@ const content: Entry[] = [
           "en": [
             "a longer description-{{word:de}} + noun: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} (an animal in the water)"
           ],
-          "ru": [],
+          "ru": [
+            "более длинное описание-{{word:de}} + существительное: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} (животное в воде)"
+          ],
           "zh": []
         }
       }
@@ -1239,7 +1489,9 @@ const content: Entry[] = [
       "en": [
         "Lesson 19 · The Jobs of -de"
       ],
-      "ru": [],
+      "ru": [
+        "Урок 19 · Что делает -de"
+      ],
       "zh": []
     }
   },
@@ -1253,7 +1505,9 @@ const content: Entry[] = [
           "en": [
             "{{word:gei3}} + person + thing, give: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:shui3}}. (I give you water.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:gei3}} + человек + вещь — давать: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:shui3}}. (Я даю тебе воду.)"
+          ],
           "zh": []
         }
       },
@@ -1262,7 +1516,9 @@ const content: Entry[] = [
           "en": [
             "{{word:yong4}} + thing + verb, with: {{Word:wo3}} {{word:yong4}} {{word:gong1ju4}} {{word:xie3}}. (I write with a tool.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:yong4}} + вещь + глагол — чем: {{Word:wo3}} {{word:yong4}} {{word:gong1ju4}} {{word:xie3}}. (Я пишу инструментом.)"
+          ],
           "zh": []
         }
       },
@@ -1271,7 +1527,9 @@ const content: Entry[] = [
           "en": [
             "A {{word:he2}} B, and (nouns only): {{word:ni3}} {{word:he2}} {{word:wo3}} (you and me)"
           ],
-          "ru": [],
+          "ru": [
+            "A {{word:he2}} B — и (только для существительных): {{word:ni3}} {{word:he2}} {{word:wo3}} (ты и я)"
+          ],
           "zh": []
         }
       },
@@ -1280,7 +1538,9 @@ const content: Entry[] = [
           "en": [
             "A {{word:huo4zhe3}} B, or: {{word:zhe4}}-ge {{word:huo4zhe3}} {{word:na4}}-ge (this one or that one)"
           ],
-          "ru": [],
+          "ru": [
+            "A {{word:huo4zhe3}} B — или: {{word:zhe4}}-ge {{word:huo4zhe3}} {{word:na4}}-ge (это или то)"
+          ],
           "zh": []
         }
       },
@@ -1289,7 +1549,9 @@ const content: Entry[] = [
           "en": [
             "A {{word:dui4}} B + adjective, toward / for: {{Word:ta1}} {{word:dui4}} {{word:wo3}} {{word:hen3}} {{word:hao3}}. (He's good to me.)"
           ],
-          "ru": [],
+          "ru": [
+            "A {{word:dui4}} B + прилагательное — к кому / для кого: {{Word:ta1}} {{word:dui4}} {{word:wo3}} {{word:hen3}} {{word:hao3}}. (Он ко мне хорошо относится.)"
+          ],
           "zh": []
         }
       },
@@ -1298,7 +1560,9 @@ const content: Entry[] = [
           "en": [
             "A {{word:he2}} B-{{word:de}} {{word:guan1xi}}, relationship: {{Word:wo3}} {{word:he2}} {{word:ta1}}-{{word:de}} {{word:guan1xi}} {{word:hen3}} {{word:hao3}}. (He and I get along well.) {{Word:mei2}}-{{word:you3}} {{word:guan1xi}}! (It doesn't matter!)"
           ],
-          "ru": [],
+          "ru": [
+            "A {{word:he2}} B-{{word:de}} {{word:guan1xi}} — отношения: {{Word:wo3}} {{word:he2}} {{word:ta1}}-{{word:de}} {{word:guan1xi}} {{word:hen3}} {{word:hao3}}. (У нас с ним хорошие отношения.) {{Word:mei2}}-{{word:you3}} {{word:guan1xi}}! (Ничего страшного!)"
+          ],
           "zh": []
         }
       }
@@ -1307,7 +1571,9 @@ const content: Entry[] = [
       "en": [
         "Lesson 20 · Joining Words in a Sentence"
       ],
-      "ru": [],
+      "ru": [
+        "Урок 20 · Как связать слова в предложении"
+      ],
       "zh": []
     }
   },
@@ -1321,7 +1587,9 @@ const content: Entry[] = [
           "en": [
             "{{word:yin1wei4}} + reason, result: {{Word:yin1wei4}} {{word:wo3}} {{word:hen3}} {{word:leng3}}, {{word:wo3}} {{word:bu4}} {{word:qu4}}. (Because I'm cold, I'm not going.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:yin1wei4}} + причина, результат: {{Word:yin1wei4}} {{word:wo3}} {{word:hen3}} {{word:leng3}}, {{word:wo3}} {{word:bu4}} {{word:qu4}}. (Так как мне холодно, я не пойду.)"
+          ],
           "zh": []
         }
       },
@@ -1330,7 +1598,9 @@ const content: Entry[] = [
           "en": [
             "…, {{word:dan4shi4}} …, but: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4shi4}} {{word:wei4dao4}} {{word:bu4}} {{word:hao3}}. (It looks good, but it doesn't taste good.)"
           ],
-          "ru": [],
+          "ru": [
+            "…, {{word:dan4shi4}} … — но: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4shi4}} {{word:wei4dao4}} {{word:bu4}} {{word:hao3}}. (Выглядит хорошо, но невкусно.)"
+          ],
           "zh": []
         }
       },
@@ -1339,7 +1609,9 @@ const content: Entry[] = [
           "en": [
             "{{word:ru2guo3}} X, …, if: {{Word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:deng3}} {{word:ni3}}. (If you come, I'll wait for you.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:ru2guo3}} X, … — если: {{Word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:deng3}} {{word:ni3}}. (Если ты придёшь, я тебя подожду.)"
+          ],
           "zh": []
         }
       },
@@ -1348,7 +1620,9 @@ const content: Entry[] = [
           "en": [
             "who + {{word:jiu4}} + verb, then / right away: {{Word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:jiu4}} {{word:deng3}} {{word:ni3}}. (If you come, I'll wait for you.)"
           ],
-          "ru": [],
+          "ru": [
+            "кто + {{word:jiu4}} + глагол — то / сразу: {{Word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:jiu4}} {{word:deng3}} {{word:ni3}}. (Если ты придёшь, то я тебя подожду.)"
+          ],
           "zh": []
         }
       }
@@ -1357,7 +1631,9 @@ const content: Entry[] = [
       "en": [
         "Lesson 21 · Linking Sentences"
       ],
-      "ru": [],
+      "ru": [
+        "Урок 21 · Как связать предложения"
+      ],
       "zh": []
     }
   },
@@ -1371,7 +1647,9 @@ const content: Entry[] = [
           "en": [
             "{{Word:ni3}} {{word:hao3}}!, hello. {{Word:ni3}} {{word:hao3}} {{word:ma}}?, how are you?"
           ],
-          "ru": [],
+          "ru": [
+            "{{Word:ni3}} {{word:hao3}}! — привет. {{Word:ni3}} {{word:hao3}} {{word:ma}}? — как дела?"
+          ],
           "zh": []
         }
       },
@@ -1380,7 +1658,9 @@ const content: Entry[] = [
           "en": [
             "{{word:jiao4}} + \"name\": {{Word:wo3}} {{word:jiao4}} \"Lisa\". (My name is Lisa.) {{Word:ni3}} {{word:jiao4}} {{word:shen2me}}? (What's your name?)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:jiao4}} + \"имя\": {{Word:wo3}} {{word:jiao4}} \"Lisa\". (Меня зовут Лиза.) {{Word:ni3}} {{word:jiao4}} {{word:shen2me}}? (Как тебя зовут?)"
+          ],
           "zh": []
         }
       },
@@ -1389,7 +1669,9 @@ const content: Entry[] = [
           "en": [
             "A verb on its own is an order: {{Word:chi1}}! (Eat!) {{Word:bu4}} {{word:yao4}} + verb: don't."
           ],
-          "ru": [],
+          "ru": [
+            "Глагол сам по себе — просьба: {{Word:chi1}}! (Ешь!) {{Word:bu4}} {{word:yao4}} + глагол — не делай."
+          ],
           "zh": []
         }
       },
@@ -1398,7 +1680,9 @@ const content: Entry[] = [
           "en": [
             "{{word:jue2de}} + adjective, feel: {{Word:wo3}} {{word:jue2de}} {{word:leng3}}. (I feel cold.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:jue2de}} + прилагательное — чувствовать: {{Word:wo3}} {{word:jue2de}} {{word:leng3}}. (Мне холодно.)"
+          ],
           "zh": []
         }
       },
@@ -1407,7 +1691,9 @@ const content: Entry[] = [
           "en": [
             "{{word:pa4}} + thing, scared of: {{Word:wo3}} {{word:pa4}} {{word:chong2zi}}. (I'm scared of bugs.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:pa4}} + вещь — бояться: {{Word:wo3}} {{word:pa4}} {{word:chong2zi}}. (Я боюсь насекомых.)"
+          ],
           "zh": []
         }
       },
@@ -1416,7 +1702,9 @@ const content: Entry[] = [
           "en": [
             "{{word:xie4}}-xie, thank you: {{Word:xie4}}-xie {{word:ni3}}! (Thank you!) {{Word:bu4}} {{word:yong4}} {{word:xie4}}. (You're welcome.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:xie4}}-xie — спасибо: {{Word:xie4}}-xie {{word:ni3}}! (Спасибо тебе!) {{Word:bu4}} {{word:yong4}} {{word:xie4}}. (Не за что.)"
+          ],
           "zh": []
         }
       },
@@ -1425,7 +1713,9 @@ const content: Entry[] = [
           "en": [
             "{{word:kai1}}-{{word:xin1}}, happy: {{Word:wo3}} {{word:hen3}} {{word:kai1}}-{{word:xin1}}. (I'm very happy.) {{Word:xiao3}}-{{word:xin1}}! (Be careful!)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:kai1}}-{{word:xin1}} — радостный: {{Word:wo3}} {{word:hen3}} {{word:kai1}}-{{word:xin1}}. (Я очень рад.) {{Word:xiao3}}-{{word:xin1}}! (Осторожно!)"
+          ],
           "zh": []
         }
       }
@@ -1434,7 +1724,9 @@ const content: Entry[] = [
       "en": [
         "Lesson 22 · Greetings and Feelings"
       ],
-      "ru": [],
+      "ru": [
+        "Урок 22 · Приветствия и чувства"
+      ],
       "zh": []
     }
   },
@@ -1448,7 +1740,9 @@ const content: Entry[] = [
           "en": [
             "verb-verb, a little: {{Word:wo3}} {{word:kan4}}-kan. (Let me have a look.)"
           ],
-          "ru": [],
+          "ru": [
+            "глагол-глагол — немного: {{Word:wo3}} {{word:kan4}}-kan. (Дай-ка я посмотрю.)"
+          ],
           "zh": []
         }
       },
@@ -1457,7 +1751,9 @@ const content: Entry[] = [
           "en": [
             "adjective-adjective-{{word:de}}, stronger: {{Word:yue4}} {{word:yuan2}}-{{word:yuan2}}-{{word:de}}. (The moon is nice and round.) {{word:hao3}}-{{word:hao3}} + verb, well: {{Word:hao3}}-{{word:hao3}} {{word:xue2}}! (Study hard!)"
           ],
-          "ru": [],
+          "ru": [
+            "прилагательное-прилагательное-{{word:de}} — сильнее: {{Word:yue4}} {{word:yuan2}}-{{word:yuan2}}-{{word:de}}. (Луна круглая-круглая.) {{word:hao3}}-{{word:hao3}} + глагол — как следует: {{Word:hao3}}-{{word:hao3}} {{word:xue2}}! (Учись хорошенько!)"
+          ],
           "zh": []
         }
       },
@@ -1466,7 +1762,9 @@ const content: Entry[] = [
           "en": [
             "{{word:ren2}}-{{word:ren2}} / {{word:ge4}}-{{word:ge4}} + {{word:dou1}}, every: {{Word:ren2}}-{{word:ren2}} {{word:dou1}} {{word:yao4}} {{word:shui3}}. (Everyone needs water.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:ren2}}-{{word:ren2}} / {{word:ge4}}-{{word:ge4}} + {{word:dou1}} — каждый: {{Word:ren2}}-{{word:ren2}} {{word:dou1}} {{word:yao4}} {{word:shui3}}. (Всем людям нужна вода.)"
+          ],
           "zh": []
         }
       }
@@ -1475,7 +1773,9 @@ const content: Entry[] = [
       "en": [
         "Lesson 23 · Doubling Words"
       ],
-      "ru": [],
+      "ru": [
+        "Урок 23 · Удвоение слов"
+      ],
       "zh": []
     }
   },
@@ -1489,7 +1789,9 @@ const content: Entry[] = [
           "en": [
             "{{word:wo3}} {{word:lai2}} + verb, let me: {{Word:wo3}} {{word:lai2}} {{word:na2}}. (Let me carry it.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:wo3}} {{word:lai2}} + глагол — давай я: {{Word:wo3}} {{word:lai2}} {{word:na2}}. (Давай я понесу.)"
+          ],
           "zh": []
         }
       },
@@ -1498,7 +1800,9 @@ const content: Entry[] = [
           "en": [
             "{{word:gei3}} {{word:wo3}} + verb + {{word:yi1xia4}}, let me have a turn: {{Word:gei3}} {{word:wo3}} {{word:kan4}} {{word:yi1xia4}}. (Let me take a look.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:gei3}} {{word:wo3}} + глагол + {{word:yi1xia4}} — дай мне попробовать: {{Word:gei3}} {{word:wo3}} {{word:kan4}} {{word:yi1xia4}}. (Дай посмотреть.)"
+          ],
           "zh": []
         }
       },
@@ -1507,7 +1811,9 @@ const content: Entry[] = [
           "en": [
             "{{word:bang1}} + person + verb, help: {{Word:ni3}} {{word:bang1}} {{word:wo3}} {{word:na2}} {{word:yi1xia4}}. (Could you hold this for me?)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:bang1}} + человек + глагол — помочь: {{Word:ni3}} {{word:bang1}} {{word:wo3}} {{word:na2}} {{word:yi1xia4}}. (Подержишь это за меня?)"
+          ],
           "zh": []
         }
       },
@@ -1516,7 +1822,9 @@ const content: Entry[] = [
           "en": [
             "{{word:jiao4}} + person + verb, have or let: {{Word:jiao4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}}. (Let him in.) {{word:bu4}} {{word:jiao4}}, won't let: {{Word:fu4mu3}} {{word:bu4}} {{word:jiao4}} {{word:wo3}} {{word:chu1}}-{{word:qu4}}. (My parents won't let me go out.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:jiao4}} + человек + глагол — велеть или позволить: {{Word:jiao4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}}. (Пусть войдёт.) {{word:bu4}} {{word:jiao4}} — не позволять: {{Word:fu4mu3}} {{word:bu4}} {{word:jiao4}} {{word:wo3}} {{word:chu1}}-{{word:qu4}}. (Родители не пускают меня гулять.)"
+          ],
           "zh": []
         }
       },
@@ -1525,7 +1833,9 @@ const content: Entry[] = [
           "en": [
             "{{word:neng2}} … {{word:ma}}?, may I: {{Word:wo3}} {{word:neng2}} {{word:jin4}}-{{word:lai2}} {{word:ma}}? (Can I come in?) …, {{word:hao3}} {{word:ma}}?, let's or please: {{Word:wo3}}-{{word:men}} {{word:chu1}}-{{word:qu4}} {{word:wan2r}}, {{word:hao3}} {{word:ma}}? (Let's go out and play, okay?)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:neng2}} … {{word:ma}}? — можно ли: {{Word:wo3}} {{word:neng2}} {{word:jin4}}-{{word:lai2}} {{word:ma}}? (Можно войти?) …, {{word:hao3}} {{word:ma}}? — давай или пожалуйста: {{Word:wo3}}-{{word:men}} {{word:chu1}}-{{word:qu4}} {{word:wan2r}}, {{word:hao3}} {{word:ma}}? (Давай выйдем поиграть, хорошо?)"
+          ],
           "zh": []
         }
       },
@@ -1534,7 +1844,9 @@ const content: Entry[] = [
           "en": [
             "{{word:jiao1}} + person + verb, teach: {{Word:wo3}} {{word:jiao1}} {{word:ni3}} {{word:xie3}}. (I'll teach you to write.)"
           ],
-          "ru": [],
+          "ru": [
+            "{{word:jiao1}} + человек + глагол — научить: {{Word:wo3}} {{word:jiao1}} {{word:ni3}} {{word:xie3}}. (Я научу тебя писать.)"
+          ],
           "zh": []
         }
       }
@@ -1543,7 +1855,9 @@ const content: Entry[] = [
       "en": [
         "Lesson 24 · Let and Help"
       ],
-      "ru": [],
+      "ru": [
+        "Урок 24 · Позволить и помочь"
+      ],
       "zh": []
     }
   }
