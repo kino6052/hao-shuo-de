@@ -13,6 +13,7 @@
 import { readFileSync, readdirSync } from 'fs';
 import { resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
+import { LESSON_IDS, lessonNumber, importLessonFile } from './lessons.js';
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const CSV = resolve(ROOT, '../misc/translation/src/dictionaries/dictionary.raw.csv');
@@ -36,8 +37,8 @@ function parseCsv(text) {
 
 // hanzi -> dictionary word id, from every lesson's word cards
 const hanzi = new Map();
-for (const id of readdirSync(resolve(ROOT, 'src/content')).filter((d) => /^lesson-\d+$/.test(d))) {
-  const { default: entries } = await import(pathToFileURL(resolve(ROOT, 'src/content', id, 'index.ts')));
+for (const id of LESSON_IDS) {
+  const entries = await importLessonFile(id, 'index.ts');
   for (const e of entries) {
     const word = e.type === 'vocab' && e.term.match(/^\{\{word:([a-z0-9-]+)\}\}$/)?.[1];
     if (word) hanzi.set(e.ttsText, word);

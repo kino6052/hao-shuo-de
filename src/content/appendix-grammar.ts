@@ -25,7 +25,7 @@ const content: Entry[] = [
   {
     "type": "summary",
     "en": [
-      "Every grammar box from the 22 lessons, in one place, in lesson order."
+      "Every grammar box from the 24 lessons, in one place, in lesson order."
     ],
     "zh": [],
     "ru": []
@@ -630,6 +630,15 @@ const content: Entry[] = [
           "ru": [],
           "zh": []
         }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:zuo3bian1}} / {{word:you4bian1}}, left / right: {{Word:he2zi}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3bian1}}. (The box is on my left.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
       }
     ],
     "title": {
@@ -693,7 +702,16 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:yuan3}} / {{word:jin4}}, far / near: {{Word:na4}}-ge {{word:di4fang1}} {{word:hen3}} {{word:yuan3}}. (That place is far.)"
+            "{{word:yuan3}} / {{word:fu4jin4}}, far / nearby: {{Word:na4}}-ge {{word:di4fang1}} {{word:hen3}} {{word:yuan3}}. (That place is far.) {{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:zai4}} {{word:fu4jin4}}. (My home is nearby.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:lu4}}, road, way: {{Word:ni3}} {{word:zhi1dao4}} {{word:lu4}} {{word:ma}}? (Do you know the way?)"
           ],
           "ru": [],
           "zh": []
@@ -812,6 +830,15 @@ const content: Entry[] = [
         "text": {
           "en": [
             "{{word:zhe4}}-{{word:zhong3}} + noun, this kind of: {{word:zhe4}}-{{word:zhong3}} {{word:shui3guo3}} (this kind of fruit)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:zui4}} + adjective, the most: {{Word:zhe4}}-ge {{word:zui4}} {{word:da4}}. (This one is the biggest.)"
           ],
           "ru": [],
           "zh": []
@@ -956,6 +983,83 @@ const content: Entry[] = [
   {
     "type": "info",
     "subtype": "grammar",
+    "tag": "verbs/direction-and-result",
+    "items": [
+      {
+        "text": {
+          "en": [
+            "verb-{{word:lai2}} / verb-{{word:qu4}}, toward you / away: {{Word:ba3}} {{word:shui3}} {{word:na2}}-{{word:lai2}}! (Bring the water!)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:jin4}} / {{word:chu1}} / {{word:hui2}} + {{word:lai2}} / {{word:qu4}}, in / out / back: {{Word:ni3}} {{word:jin4}}-{{word:lai2}}! (Come in!) {{Word:wo3}} {{word:yao4}} {{word:hui2}} {{word:jia1}}. (I want to go home.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "verb + direction words: {{Word:ta1}} {{word:ba3}} {{word:jin1}} {{word:na2}}-{{word:chu1}}-{{word:lai2}} {{word:le}}. (He took out the money.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "verb-result: {{Word:wo3}} {{word:zhao3}}-{{word:dao4}} {{word:le}}. (I found it.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "verb-{{word:de}}-result / verb-{{word:bu4}}-result, can / can't: {{Word:wo3}} {{word:kan4}}-{{word:bu4}}-{{word:dao4}}. (I can't see it.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "verb-{{word:qi3}}-{{word:lai2}}, seems: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}. (This looks good.) verb-{{word:xia4}}-{{word:qu4}}, keep going: {{Word:shuo1}}-{{word:xia4}}-{{word:qu4}}! (Keep talking!)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:zuo4}}-{{word:xia4}} / {{word:zhan4}}-{{word:qi3}}-{{word:lai2}} / {{word:tang3}}-{{word:xia4}}, sit down / stand up / lie down: {{Word:ni3}} {{word:zuo4}}-{{word:xia4}}! (Sit down!)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      }
+    ],
+    "title": {
+      "en": [
+        "Lesson 16 · Direction and Result"
+      ],
+      "ru": [],
+      "zh": []
+    }
+  },
+  {
+    "type": "info",
+    "subtype": "grammar",
     "tag": "numbers/counting",
     "items": [
       {
@@ -1033,7 +1137,7 @@ const content: Entry[] = [
     ],
     "title": {
       "en": [
-        "Lesson 16 · Counting"
+        "Lesson 17 · Counting"
       ],
       "ru": [],
       "zh": []
@@ -1074,7 +1178,7 @@ const content: Entry[] = [
     ],
     "title": {
       "en": [
-        "Lesson 17 · Colors"
+        "Lesson 18 · Colors"
       ],
       "ru": [],
       "zh": []
@@ -1133,7 +1237,7 @@ const content: Entry[] = [
     ],
     "title": {
       "en": [
-        "Lesson 18 · The Jobs of -de"
+        "Lesson 19 · The Jobs of -de"
       ],
       "ru": [],
       "zh": []
@@ -1188,11 +1292,20 @@ const content: Entry[] = [
           "ru": [],
           "zh": []
         }
+      },
+      {
+        "text": {
+          "en": [
+            "A {{word:he2}} B-{{word:de}} {{word:guan1xi}}, relationship: {{Word:wo3}} {{word:he2}} {{word:ta1}}-{{word:de}} {{word:guan1xi}} {{word:hen3}} {{word:hao3}}. (He and I get along well.) {{Word:mei2}}-{{word:you3}} {{word:guan1xi}}! (It doesn't matter!)"
+          ],
+          "ru": [],
+          "zh": []
+        }
       }
     ],
     "title": {
       "en": [
-        "Lesson 19 · Joining Words in a Sentence"
+        "Lesson 20 · Joining Words in a Sentence"
       ],
       "ru": [],
       "zh": []
@@ -1224,7 +1337,7 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "X-{{word:de}} {{word:hua4}}, …, if: {{Word:ni3}} {{word:lai2}}-{{word:de}} {{word:hua4}}, {{word:wo3}} {{word:deng3}} {{word:ni3}}. (If you come, I'll wait for you.)"
+            "{{word:ru2guo3}} X, …, if: {{Word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:deng3}} {{word:ni3}}. (If you come, I'll wait for you.)"
           ],
           "ru": [],
           "zh": []
@@ -1233,7 +1346,7 @@ const content: Entry[] = [
     ],
     "title": {
       "en": [
-        "Lesson 20 · Linking Sentences"
+        "Lesson 21 · Linking Sentences"
       ],
       "ru": [],
       "zh": []
@@ -1297,11 +1410,20 @@ const content: Entry[] = [
           "ru": [],
           "zh": []
         }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:kai1}}-{{word:xin1}}, happy: {{Word:wo3}} {{word:hen3}} {{word:kai1}}-{{word:xin1}}. (I'm very happy.) {{Word:xiao3}}-{{word:xin1}}! (Be careful!)"
+          ],
+          "ru": [],
+          "zh": []
+        }
       }
     ],
     "title": {
       "en": [
-        "Lesson 21 · Greetings and Feelings"
+        "Lesson 22 · Greetings and Feelings"
       ],
       "ru": [],
       "zh": []
@@ -1342,7 +1464,75 @@ const content: Entry[] = [
     ],
     "title": {
       "en": [
-        "Lesson 22 · Doubling Words"
+        "Lesson 23 · Doubling Words"
+      ],
+      "ru": [],
+      "zh": []
+    }
+  },
+  {
+    "type": "info",
+    "subtype": "grammar",
+    "tag": "everyday/let-and-help",
+    "items": [
+      {
+        "text": {
+          "en": [
+            "{{word:wo3}} {{word:lai2}} + verb, let me: {{Word:wo3}} {{word:lai2}} {{word:na2}}. (Let me carry it.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:gei3}} {{word:wo3}} + verb + {{word:yi1xia4}}, let me have a turn: {{Word:gei3}} {{word:wo3}} {{word:kan4}} {{word:yi1xia4}}. (Let me take a look.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:bang1}} + person + verb, help: {{Word:ni3}} {{word:bang1}} {{word:wo3}} {{word:na2}} {{word:yi1xia4}}. (Could you hold this for me?)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:jiao4}} + person + verb, have or let: {{Word:jiao4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}}. (Let him in.) {{word:bu4}} {{word:jiao4}}, won't let: {{Word:fu4mu3}} {{word:bu4}} {{word:jiao4}} {{word:wo3}} {{word:chu1}}-{{word:qu4}}. (My parents won't let me go out.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:neng2}} … {{word:ma}}?, may I: {{Word:wo3}} {{word:neng2}} {{word:jin4}}-{{word:lai2}} {{word:ma}}? (Can I come in?) …, {{word:hao3}} {{word:ma}}?, let's or please: {{Word:wo3}}-{{word:men}} {{word:chu1}}-{{word:qu4}} {{word:wan2r}}, {{word:hao3}} {{word:ma}}? (Let's go out and play, okay?)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:jiao1}} + person + verb, teach: {{Word:wo3}} {{word:jiao1}} {{word:ni3}} {{word:xie3}}. (I'll teach you to write.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      }
+    ],
+    "title": {
+      "en": [
+        "Lesson 24 · Let and Help"
       ],
       "ru": [],
       "zh": []

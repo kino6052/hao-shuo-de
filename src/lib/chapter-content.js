@@ -5,8 +5,10 @@
 // header comment for the full view shape. Existing Preact components
 // (Section, VocabGrid, GrammarBlock, ...) render either format unmodified.
 //
-// TS chapter schema: a `meta` export (`{ id, type, lessonNumber, order }`)
-// plus a default-exported flat array of entries. Each entry is one prose
+// TS chapter schema: a `meta` export (`{ id, type }` for a lesson, whose
+// number and order src/lib/content-registry.js adds from src/content/book.js;
+// `{ id, type, lessonNumber, order }` for an intro) plus a default-exported
+// flat array of entries. Each entry is one prose
 // unit (a title, a summary, a paragraph, ...) -- a `type` tag
 // (title/summary/prose/...) plus a short language code per translation
 // (`en`, `zh`, `ru`), each an array of that unit's individual sentences
@@ -44,11 +46,13 @@ const INFO_BLOCK_ICONS = { info: 'ℹ️', warning: '⚠️' };
 // nested one like `entry.tldr`/an info item's `text`. Undefined (the field
 // wasn't given at all) and [] (given, but not translated yet) both mean
 // "nothing here for this language" -- same as the old i18n-object pick().
-function pick(obj, lang, { wordIndex, wordCount } = {}) {
+// `chapterTitles` ({ [lang]: Map(chapter id -> title) }) resolves {{title:..}}
+// refs: only intro-3's table of contents uses them (src/lib/content-registry.js).
+function pick(obj, lang, { wordIndex, wordCount, chapterTitles } = {}) {
   const sentences = obj && obj[LANG_KEYS[lang]];
   if (!sentences || sentences.length === 0) return undefined;
   const text = sentences.join('\n');
-  return wordIndex ? resolveWordRefs(text, wordIndex, wordCount) : text;
+  return wordIndex ? resolveWordRefs(text, wordIndex, wordCount, chapterTitles?.[lang]) : text;
 }
 
 // Non-i18n fields (a vocab entry's `term`, an example/story's `pinyin`) can
@@ -62,7 +66,7 @@ function resolveField(text, { wordIndex, wordCount } = {}) {
 // Renders one level of an info/warning entry's nested items, recursing into
 // child `items` arrays -- ported as-is from vite-plugin-chapter.js's
 // renderInfoItems/renderInfoBlock, just swapped to this module's pick().
-function renderInfoItems(items, lang, ordered, refs, onMissing) {
+function renderInfoItems(items, lang, ordered, refs, onMissing, start) {
   const rendered = [];
   for (const item of items) {
     const text = pick(item.text, lang, refs);
@@ -73,8 +77,8 @@ function renderInfoItems(items, lang, ordered, refs, onMissing) {
     rendered.push(`<li>${marked.parseInline(text)}${childHtml}</li>`);
   }
   if (rendered.length === 0) return '';
-  const tag = ordered ? 'ol' : 'ul';
-  return `<${tag}>${rendered.join('')}</${tag}>`;
+  if (!ordered) return `<ul>${rendered.join('')}</ul>`;
+  return start > 1 ? `<ol start="${start}">${rendered.join('')}</ol>` : `<ol>${rendered.join('')}</ol>`;
 }
 
 function renderInfoBlock(entry, lang, refs, onMissing) {
@@ -82,7 +86,7 @@ function renderInfoBlock(entry, lang, refs, onMissing) {
   const title = hasTitle ? pick(entry.title, lang, refs) : undefined;
   if (hasTitle && title === undefined) onMissing();
 
-  const listHtml = renderInfoItems(entry.items ?? [], lang, Boolean(entry.ordered), refs, onMissing);
+  const listHtml = renderInfoItems(entry.items ?? [], lang, Boolean(entry.ordered), refs, onMissing, entry.start);
   if (title === undefined && !listHtml) return { html: '', title };
 
   const kind = entry.type;

@@ -46,7 +46,7 @@ function isTrackedFile(filename) {
 }
 
 async function loadChapter(filename) {
-  // For a folder-based chapter (lesson-01/index.ts), {{word:..}} refs live
+  // For a folder-based chapter (lessons/<id>/index.ts), {{word:..}} refs live
   // scattered across shape.ts/en.ts/ru.ts/zh.ts too (see
   // chapter-shape-types.ts) -- concatenate the whole folder's *.ts files so
   // the regex scan below still sees every reference, not just index.ts's.

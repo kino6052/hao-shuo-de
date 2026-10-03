@@ -482,10 +482,10 @@
    "py": "chū",
    "en": "go out",
    "ru": "выходить",
-   "hsd": "{{word:qu4}} {{word:wai4}}-{{word:mian4}}",
-   "tts": "去外面",
-   "literal": "go outside",
-   "fit": "natural"
+   "hsd": "{{word:chu1}}",
+   "tts": "出",
+   "fit": "word",
+   "note": "Lesson {{lesson:direction-and-result}}: chū-qù, ná-chū-lái."
   },
   {
    "rank": 43,
@@ -974,12 +974,10 @@
    "py": "xīn",
    "en": "heart",
    "ru": "сердце",
-   "hsd": "{{word:jue2de}}-{{word:de}} {{word:di4fang1}}",
-   "tts": "觉得的地方",
-   "literal": "the place where you feel",
-   "fit": "plain",
-   "proposed": true,
-   "note": "For feelings, juéde is enough."
+   "hsd": "{{word:xin1}}",
+   "tts": "心",
+   "fit": "word",
+   "note": "Lesson {{lesson:greetings-and-feelings}}."
   },
   {
    "rank": 86,
@@ -1038,7 +1036,7 @@
    "tts": "月的时间",
    "literal": "moon time",
    "fit": "plain",
-   "note": "Lesson 8."
+   "note": "Lesson {{lesson:when-it-happens}}."
   },
   {
    "rank": 91,
@@ -1073,7 +1071,7 @@
    "tts": "谢谢 / 你对我很好",
    "literal": "thank-thank / you're very good to me",
    "fit": "natural",
-   "note": "Lesson 21. Also: hǎo-hǎo juéde, zhè bǎ wǒ juéde hěn hǎo."
+   "note": "Lesson {{lesson:greetings-and-feelings}}. Also: hǎo-hǎo juéde, zhè bǎ wǒ juéde hěn hǎo."
   },
   {
    "rank": 94,
@@ -1141,11 +1139,10 @@
    "py": "shìjiè",
    "en": "world",
    "ru": "мир",
-   "hsd": "{{word:ren2}} {{word:dou1}} {{word:zai4}}-{{word:de}} {{word:di4fang1}}",
-   "tts": "人都在的地方",
-   "literal": "the place where all people are",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:ren2}}-{{word:ren2}} {{word:dou1}} {{word:zai4}}-{{word:de}} {{word:di4fang1}}",
+   "tts": "人人都在的地方",
+   "literal": "the place where everyone is",
+   "fit": "plain"
   },
   {
    "rank": 100,
@@ -1154,11 +1151,10 @@
    "py": "guānxì",
    "en": "relationship",
    "ru": "отношения",
-   "hsd": "A {{word:dui4}} B-{{word:de}} {{word:jue2de}}",
-   "tts": "A对B的觉得",
-   "literal": "how A feels toward B",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:guan1xi}}",
+   "tts": "关系",
+   "fit": "word",
+   "note": "Lesson {{lesson:inside-a-sentence}}."
   },
   {
    "rank": 101,
@@ -1178,12 +1174,10 @@
    "py": "guójiā",
    "en": "country",
    "ru": "страна",
-   "hsd": "{{word:da4}}-{{word:qun2}}-{{word:de}} {{word:di4fang1}}",
-   "tts": "大群的地方",
-   "literal": "a big group's place",
-   "fit": "plain",
-   "proposed": true,
-   "note": "qún covers a nation."
+   "hsd": "{{word:da4}}-{{word:ren2}}-{{word:qun2}}-{{word:de}}-{{word:jia1}}-{{word:de}}-{{word:di4fang1}}",
+   "tts": "大人群的家的地方",
+   "literal": "the home place of a big group of people",
+   "fit": "plain"
   },
   {
    "rank": 103,
@@ -1384,11 +1378,11 @@
    "py": "gōngzuò",
    "en": "work",
    "ru": "работа",
-   "hsd": "{{word:nong4}}-{{word:dong1xi}}-{{word:de2}}-{{word:jin1}}",
-   "tts": "弄东西得金",
-   "literal": "do things, get money",
+   "hsd": "{{word:nong4}} / {{word:nong4}}-{{word:de}}",
+   "tts": "弄 / 弄的",
+   "literal": "do / what you do",
    "fit": "plain",
-   "proposed": true
+   "note": "As a verb, nòng. As a thing, nòng-de."
   },
   {
    "rank": 121,
@@ -1430,9 +1424,11 @@
    "py": "xīn",
    "en": "new",
    "ru": "новый",
-   "hsd": "{{word:xin1}}",
-   "tts": "新",
-   "fit": "word"
+   "hsd": "{{word:tou2}}-{{word:yi1}}-{{word:ci4}} {{word:kan4}}-{{word:dao4}}-{{word:de}}",
+   "tts": "头一次看到的",
+   "literal": "seen for the first time",
+   "fit": "plain",
+   "note": "Lesson {{lesson:greetings-and-feelings}}: tóu-yī-cì tīng-dào-de cí, a new word."
   },
   {
    "rank": 125,
@@ -1441,11 +1437,10 @@
    "py": "diànnǎo",
    "en": "computer",
    "ru": "компьютер",
-   "hsd": "{{word:zhi1dao4}}-{{word:hen3}}-{{word:duo1}}-{{word:de}} {{word:gong1ju4}}",
-   "tts": "知道很多的工具",
-   "literal": "a tool that knows a lot",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:suan4}}-{{word:de}} {{word:gong1ju4}}",
+   "tts": "算的工具",
+   "literal": "a calculating tool",
+   "fit": "plain"
   },
   {
    "rank": 126,
@@ -1561,11 +1556,10 @@
    "py": "mǎi",
    "en": "buy",
    "ru": "покупать",
-   "hsd": "{{word:gei3}}-{{word:jin1}}-{{word:de2}}-{{word:dong1xi}}",
-   "tts": "给金得东西",
-   "literal": "give money, get things",
-   "fit": "plain",
-   "note": "Lesson 19."
+   "hsd": "{{word:mai3}}",
+   "tts": "买",
+   "fit": "word",
+   "note": "Lesson {{lesson:questions}}."
   },
   {
    "rank": 136,
@@ -1624,7 +1618,7 @@
    "tts": "…后",
    "literal": "after X",
    "fit": "natural",
-   "note": "Lesson 9."
+   "note": "Lesson {{lesson:around-an-action}}."
   },
   {
    "rank": 141,
@@ -1821,10 +1815,10 @@
    "py": "huí",
    "en": "return",
    "ru": "возвращаться",
-   "hsd": "{{word:dao4}} / {{word:lai2}}",
-   "tts": "到 / 来",
-   "fit": "plain",
-   "note": "\"Get home\" is dào jiā."
+   "hsd": "{{word:hui2}}",
+   "tts": "回",
+   "fit": "word",
+   "note": "Lesson {{lesson:direction-and-result}}: huí jiā, huí-lái."
   },
   {
    "rank": 158,
@@ -1893,7 +1887,7 @@
    "literal": "person-person all",
    "fit": "natural",
    "proposed": true,
-   "note": "Lesson 22."
+   "note": "Lesson {{lesson:doubling-words}}."
   },
   {
    "rank": 164,
@@ -1905,7 +1899,7 @@
    "hsd": "{{word:zhen1}}",
    "tts": "真",
    "fit": "plain",
-   "note": "tài wasn't added (§4d)."
+   "note": "There's no word for \"too\" (§4d)."
   },
   {
    "rank": 165,
@@ -1958,11 +1952,10 @@
    "py": "rúguǒ",
    "en": "if",
    "ru": "если",
-   "hsd": "X-{{word:de}} {{word:hua4}}",
-   "tts": "…的话",
-   "literal": "in the words of X",
-   "fit": "natural",
-   "note": "Lesson 20."
+   "hsd": "{{word:ru2guo3}}",
+   "tts": "如果",
+   "fit": "word",
+   "note": "Lesson {{lesson:linking-sentences}}."
   },
   {
    "rank": 170,
@@ -1992,11 +1985,10 @@
    "py": "bāngzhù",
    "en": "help",
    "ru": "помогать",
-   "hsd": "{{word:gei3}} … {{word:nong4}}",
-   "tts": "给…弄",
-   "literal": "do for",
-   "fit": "plain",
-   "note": "wǒ gěi nǐ nòng: I'll do it for you."
+   "hsd": "{{word:bang1}}",
+   "tts": "帮",
+   "fit": "word",
+   "note": "Lesson {{lesson:everyday-patterns}}: nǐ bāng wǒ ná yīxià."
   },
   {
    "rank": 173,
@@ -2018,11 +2010,10 @@
    "py": "kuài",
    "en": "fast",
    "ru": "быстрый",
-   "hsd": "{{word:yong4}} {{word:hen3}} {{word:shao3}} {{word:shi2jian1}}",
-   "tts": "用很少时间",
-   "literal": "using little time",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:kuai4}}",
+   "tts": "快",
+   "fit": "word",
+   "note": "Lesson {{lesson:how-much}}."
   },
   {
    "rank": 175,
@@ -2053,11 +2044,10 @@
    "py": "shǒujī",
    "en": "mobile phone",
    "ru": "телефон",
-   "hsd": "{{word:shou3}}-{{word:li3}}-{{word:de}} {{word:shuo1}}-{{word:hua4}}-{{word:de}} {{word:gong1ju4}}",
-   "tts": "手里的说话的工具",
-   "literal": "the talking tool in your hand",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:xiao3}}-{{word:de}} {{word:gei3}}-{{word:yuan3}}-{{word:de}}-{{word:ren2}}-{{word:shuo1}}-{{word:de}} {{word:gong1ju4}}",
+   "tts": "小的给远的人说的工具",
+   "literal": "a small telephone",
+   "fit": "plain"
   },
   {
    "rank": 178,
@@ -2144,11 +2134,10 @@
    "py": "qìchē",
    "en": "car",
    "ru": "машина",
-   "hsd": "{{word:dong4}}-{{word:de}} {{word:he2zi}}",
-   "tts": "动的盒子",
-   "literal": "a moving box",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:qu4}}-{{word:hen3}}-{{word:duo1}}-{{word:di4fang1}}-{{word:de}} {{word:gong1ju4}}",
+   "tts": "去很多地方的工具",
+   "literal": "a tool for going to many places",
+   "fit": "plain"
   },
   {
    "rank": 186,
@@ -2157,8 +2146,8 @@
    "py": "zhùyì",
    "en": "pay attention",
    "ru": "обращать внимание",
-   "hsd": "{{word:hao3}}-{{word:hao3}} {{word:kan4}} / {{word:hao3}}-{{word:hao3}} {{word:ting1}}",
-   "tts": "好好看 / 好好听",
+   "hsd": "{{word:kan4}}-{{word:hao3}} / {{word:ting1}}-{{word:hao3}}",
+   "tts": "看好 / 听好",
    "literal": "look well / listen well",
    "fit": "natural"
   },
@@ -2192,11 +2181,10 @@
    "py": "diàn",
    "en": "electricity",
    "ru": "электричество",
-   "hsd": "{{word:gong1ju4}}-{{word:de}} {{word:li4liang4}}",
-   "tts": "工具的力量",
-   "literal": "the strength of tools",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:bang1}} {{word:wo3}}-{{word:men}} {{word:nong4}} {{word:gong1ju4}}-{{word:de}} {{word:li4liang4}}",
+   "tts": "帮我们弄工具的力量",
+   "literal": "the strength that helps us run tools",
+   "fit": "plain"
   },
   {
    "rank": 190,
@@ -2205,11 +2193,10 @@
    "py": "diànyǐng",
    "en": "movie",
    "ru": "фильм",
-   "hsd": "{{word:zai4}} {{word:da4}}-{{word:de}} {{word:di4fang1}} {{word:kan4}}-{{word:de}} {{word:dong4}}-{{word:de}} {{word:dong1xi}}",
-   "tts": "在大的地方看的动的东西",
-   "literal": "moving things you watch in a big place",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:dong4}}-{{word:de}} {{word:kan4}}-{{word:de}} {{word:dong1xi}}",
+   "tts": "动的看的东西",
+   "literal": "a moving thing to look at",
+   "fit": "plain"
   },
   {
    "rank": 191,
@@ -2218,9 +2205,9 @@
    "py": "diànhuà",
    "en": "telephone",
    "ru": "телефон",
-   "hsd": "{{word:gei3}}-{{word:yuan3}}-{{word:de}}-{{word:ren2}}-{{word:shuo1}}-{{word:hua4}}-{{word:de}} {{word:gong1ju4}}",
-   "tts": "给远的人说话的工具",
-   "literal": "a tool to talk to far-away people",
+   "hsd": "{{word:gei3}}-{{word:yuan3}}-{{word:de}}-{{word:ren2}}-{{word:shuo1}}-{{word:de}} {{word:gong1ju4}}",
+   "tts": "给远的人说的工具",
+   "literal": "a tool for talking to people far away",
    "fit": "plain",
    "proposed": true
   },
@@ -2298,10 +2285,11 @@
    "py": "jiǎndān",
    "en": "simple, easy",
    "ru": "простой",
-   "hsd": "{{word:hao3}} {{word:nong4}}",
-   "tts": "好弄",
-   "literal": "easy to do",
-   "fit": "natural"
+   "hsd": "{{word:bu4fen}}-{{word:hen3}}-{{word:shao3}}-{{word:de}}",
+   "tts": "部分很少的",
+   "literal": "with few parts",
+   "fit": "plain",
+   "note": "Parts first: Mandarin doesn't say yǒu hěn shǎo bùfen."
   },
   {
    "rank": 199,
@@ -2310,11 +2298,10 @@
    "py": "zhǐ",
    "en": "paper",
    "ru": "бумага",
-   "hsd": "{{word:neng2}}-{{word:zai4}}-{{word:shang4}}-{{word:mian4}}-{{word:xie3}}-{{word:de}} {{word:dong1xi}}",
-   "tts": "能在上面写的东西",
-   "literal": "a thing you can write on",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:bang1}}-{{word:ren2}}-{{word:zai4}}-{{word:shang4}}-{{word:mian4}}-{{word:xie3}}-{{word:de}} {{word:dong1xi}}",
+   "tts": "帮人在上面写的东西",
+   "literal": "the thing that helps people write on it",
+   "fit": "plain"
   },
   {
    "rank": 200,
@@ -2323,11 +2310,10 @@
    "py": "lǎo",
    "en": "old",
    "ru": "старый",
-   "hsd": "{{word:bu4}} {{word:xin1}} / {{word:da4}}",
-   "tts": "不新 / 大",
-   "literal": "not new / big",
-   "fit": "plain",
-   "note": "For things, bù xīn. For people, dà (older)."
+   "hsd": "{{word:lao3}}",
+   "tts": "老",
+   "fit": "word",
+   "note": "Lesson {{lesson:how-much}}."
   },
   {
    "rank": 201,
@@ -2336,11 +2322,10 @@
    "py": "lǎoshī",
    "en": "teacher",
    "ru": "учитель",
-   "hsd": "{{word:shuo1}}-{{word:gei3}}-{{word:xue2}}-{{word:de}}-{{word:ren2}}-{{word:ting1}}-{{word:de}} {{word:ren2}}",
-   "tts": "说给学的人听的人",
-   "literal": "the one who speaks for the learners",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:jiao1}}-{{word:de}} {{word:ren2}} / {{word:bang1}}-{{word:ren2}}-{{word:xue2}}-{{word:de}} {{word:ren2}}",
+   "tts": "教的人 / 帮人学的人",
+   "literal": "the one who teaches / the one who helps people learn",
+   "fit": "plain"
   },
   {
    "rank": 202,
@@ -2371,11 +2356,11 @@
    "py": "ràng",
    "en": "let",
    "ru": "позволять",
-   "hsd": "X {{word:neng2}} + verb / {{word:ba3}} X {{word:nong4}}-{{word:de}} …",
-   "tts": "X能… / 把X弄得…",
-   "fit": "plain",
-   "proposed": true,
-   "note": "\"Let him go\" is tā néng qù. \"Make it …\" is bǎ X nòng-de …"
+   "hsd": "{{word:jiao4}} X + verb / {{word:wo3}} {{word:lai2}} + verb / {{word:gei3}} {{word:wo3}} + verb",
+   "tts": "叫X… / 我来… / 给我…",
+   "literal": "have X … / I come … / give me …",
+   "fit": "natural",
+   "note": "Lesson {{lesson:everyday-patterns}}: jiào tā jìn-lái (let him in), bù jiào (won't let), wǒ lái (let me), gěi wǒ kàn yīxià (let me see)."
   },
   {
    "rank": 205,
@@ -2398,7 +2383,8 @@
    "hsd": "…, {{word:hao3}} {{word:ma}}?",
    "tts": "…，好吗？",
    "literal": "…, okay?",
-   "fit": "plain"
+   "fit": "plain",
+   "note": "Lesson {{lesson:everyday-patterns}}."
   },
   {
    "rank": 207,
@@ -2418,11 +2404,10 @@
    "py": "lù",
    "en": "road",
    "ru": "дорога",
-   "hsd": "{{word:cong2}}-{{word:zhe4}}-{{word:li3}}-{{word:dao4}}-{{word:na4}}-{{word:li3}}-{{word:de}} {{word:di4}}",
-   "tts": "从这里到那里的地",
-   "literal": "the ground from here to there",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:lu4}}",
+   "tts": "路",
+   "fit": "word",
+   "note": "Lesson {{lesson:moving}}. A way of doing something is fāngfǎ."
   },
   {
    "rank": 209,
@@ -2442,11 +2427,10 @@
    "py": "chē",
    "en": "vehicle",
    "ru": "машина",
-   "hsd": "{{word:dong4}}-{{word:de}} {{word:he2zi}}",
-   "tts": "动的盒子",
-   "literal": "a moving box",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:qu4}}-{{word:hen3}}-{{word:duo1}}-{{word:di4fang1}}-{{word:de}} {{word:gong1ju4}}",
+   "tts": "去很多地方的工具",
+   "literal": "a tool for going to many places",
+   "fit": "plain"
   },
   {
    "rank": 211,
@@ -2458,7 +2442,7 @@
    "hsd": "{{word:huo4zhe3}}",
    "tts": "或者",
    "fit": "plain",
-   "note": "See the Lesson 19 questions."
+   "note": "See the Lesson {{lesson:inside-a-sentence}} questions."
   },
   {
    "rank": 212,
@@ -2501,10 +2485,10 @@
    "py": "jìn",
    "en": "enter",
    "ru": "входить",
-   "hsd": "{{word:qu4}} {{word:li3}}-{{word:mian4}} / {{word:lai2}} {{word:li3}}-{{word:mian4}}",
-   "tts": "去里面 / 来里面",
-   "literal": "go inside",
-   "fit": "natural"
+   "hsd": "{{word:jin4}}",
+   "tts": "进",
+   "fit": "word",
+   "note": "Lesson {{lesson:direction-and-result}}: jìn-lái!"
   },
   {
    "rank": 216,
@@ -2571,10 +2555,10 @@
    "py": "nán",
    "en": "difficult",
    "ru": "трудный",
-   "hsd": "{{word:bu4}} {{word:hao3}} {{word:nong4}}",
-   "tts": "不好弄",
-   "literal": "not easy to do",
-   "fit": "natural"
+   "hsd": "{{word:yao4}}-{{word:hen3}}-{{word:duo1}}-{{word:li4liang4}}-{{word:de}}",
+   "tts": "要很多力量的",
+   "literal": "needing a lot of strength",
+   "fit": "plain"
   },
   {
    "rank": 222,
@@ -2677,11 +2661,10 @@
    "py": "zuò",
    "en": "sit",
    "ru": "сидеть",
-   "hsd": "{{word:ba3}} {{word:shen1ti3}} {{word:fang4}} {{word:zai4}} …-{{word:shang4}}",
-   "tts": "把身体放在…上",
-   "literal": "put your body on …",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:zuo4}}",
+   "tts": "坐",
+   "fit": "word",
+   "note": "Lesson {{lesson:direction-and-result}}: zuò-xià."
   },
   {
    "rank": 231,
@@ -2801,7 +2784,7 @@
    "tts": "把衣服放在身体上",
    "literal": "put clothes on the body",
    "fit": "plain",
-   "note": "Lesson 15."
+   "note": "Lesson {{lesson:becoming-and-making}}."
   },
   {
    "rank": 241,
@@ -2810,10 +2793,10 @@
    "py": "zhàn",
    "en": "stand",
    "ru": "стоять",
-   "hsd": "{{word:qi3}}-{{word:lai2}}",
-   "tts": "起来",
-   "fit": "plain",
-   "note": "\"Stand up\" is \"get up\"."
+   "hsd": "{{word:zhan4}}",
+   "tts": "站",
+   "fit": "word",
+   "note": "Lesson {{lesson:direction-and-result}}: zhàn-qǐ-lái."
   },
   {
    "rank": 242,
@@ -2895,10 +2878,11 @@
    "py": "gāoxìng",
    "en": "happy, glad",
    "ru": "радостный",
-   "hsd": "{{word:jue2de}} {{word:hao3}}",
-   "tts": "觉得好",
-   "literal": "feel good",
-   "fit": "plain"
+   "hsd": "{{word:kai1}}-{{word:xin1}}",
+   "tts": "开心",
+   "literal": "open heart",
+   "fit": "natural",
+   "note": "Lesson {{lesson:greetings-and-feelings}}."
   },
   {
    "rank": 249,
@@ -2918,9 +2902,9 @@
    "py": "tóufa",
    "en": "hair",
    "ru": "волосы",
-   "hsd": "{{word:tou2}}-{{word:shang4}}-{{word:de}} {{word:xian4}}",
-   "tts": "头上的线",
-   "literal": "lines on the head",
+   "hsd": "{{word:tou2}}-{{word:shang4}}-{{word:de}} {{word:mao2}}",
+   "tts": "头上的毛",
+   "literal": "the fur on the head",
    "fit": "plain"
   },
   {
@@ -2930,10 +2914,11 @@
    "py": "kāixīn",
    "en": "happy",
    "ru": "весёлый",
-   "hsd": "{{word:jue2de}} {{word:hao3}}",
-   "tts": "觉得好",
-   "literal": "feel good",
-   "fit": "plain"
+   "hsd": "{{word:kai1}}-{{word:xin1}}",
+   "tts": "开心",
+   "literal": "open heart",
+   "fit": "natural",
+   "note": "Lesson {{lesson:greetings-and-feelings}}."
   },
   {
    "rank": 252,
@@ -2989,9 +2974,9 @@
    "py": "dǎ diànhuà",
    "en": "make a phone call",
    "ru": "звонить",
-   "hsd": "{{word:yong4}} {{word:gong1ju4}} {{word:gei3}} {{word:yuan3}}-{{word:de}} {{word:ren2}} {{word:shuo1}}-{{word:hua4}}",
-   "tts": "用工具给远的人说话",
-   "literal": "talk to someone far away with a tool",
+   "hsd": "{{word:yong4}} {{word:gong1ju4}} {{word:gei3}} {{word:yuan3}}-{{word:de}} {{word:ren2}} {{word:shuo1}}",
+   "tts": "用工具给远的人说",
+   "literal": "use a tool to talk to someone far away",
    "fit": "plain",
    "proposed": true
   },
@@ -3025,10 +3010,10 @@
    "py": "Zhōngwén",
    "en": "Chinese (language)",
    "ru": "китайский язык",
-   "hsd": "\"Zhōngguó\"-{{word:de}} {{word:hua4}}",
-   "tts": "中国的话",
-   "literal": "China's speech",
-   "fit": "natural"
+   "hsd": "\"Zhōngguó\"-{{word:de}} {{word:shuo1}}-{{word:de}}",
+   "tts": "中国的说的",
+   "literal": "China's spoken",
+   "fit": "plain"
   },
   {
    "rank": 260,
@@ -3241,11 +3226,10 @@
    "py": "yǐngxiǎng",
    "en": "affect",
    "ru": "влиять",
-   "hsd": "{{word:ba3}} X {{word:nong4}}-{{word:de}} {{word:bu4tong2}}",
-   "tts": "把X弄得不同",
-   "literal": "make X different",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:de2}} {{word:hao3}}-{{word:de}} / {{word:bu4}}-{{word:hao3}}-{{word:de}} {{word:guan1xi}}",
+   "tts": "得好的 / 不好的关系",
+   "literal": "get a good / bad connection",
+   "fit": "plain"
   },
   {
    "rank": 278,
@@ -3276,22 +3260,22 @@
    "py": "xīnwén",
    "en": "news",
    "ru": "новости",
-   "hsd": "{{word:xin1}} {{word:fa1sheng1}}-{{word:de}} {{word:dong1xi}}",
-   "tts": "新发生的东西",
-   "literal": "things that just happened",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:xian4zai4}} {{word:fa1sheng1}}-{{word:de}} {{word:dong1xi}}",
+   "tts": "现在发生的东西",
+   "literal": "things happening now",
+   "fit": "plain"
   },
   {
    "rank": 281,
    "phase": 1,
    "zh": "方法",
    "py": "fāngfǎ",
-   "en": "way",
+   "en": "method, manner",
    "ru": "способ",
    "hsd": "{{word:fang1fa3}}",
    "tts": "方法",
-   "fit": "word"
+   "fit": "word",
+   "note": "The way something is done. A way to a place is lù."
   },
   {
    "rank": 282,
@@ -3300,10 +3284,10 @@
    "py": "Hànyǔ",
    "en": "Chinese (language)",
    "ru": "китайский язык",
-   "hsd": "\"Zhōngguó\"-{{word:de}} {{word:hua4}}",
-   "tts": "中国的话",
-   "literal": "China's speech",
-   "fit": "natural"
+   "hsd": "\"Zhōngguó\"-{{word:de}} {{word:shuo1}}-{{word:de}}",
+   "tts": "中国的说的",
+   "literal": "China's spoken",
+   "fit": "plain"
   },
   {
    "rank": 283,
@@ -3336,11 +3320,12 @@
    "py": "wǎngzhàn",
    "en": "website",
    "ru": "сайт",
-   "hsd": "{{word:gong1ju4}}-{{word:li3}}-{{word:de}} {{word:di4fang1}}",
-   "tts": "工具里的地方",
-   "literal": "a place inside the tool",
+   "hsd": "{{word:zai4}} {{word:suan4}}-{{word:de}}-{{word:gong1ju4}}-{{word:de}} {{word:xian4}}-{{word:shang4}} {{word:xie3}}-{{word:de}} {{word:dong1xi}}",
+   "tts": "在算的工具的线上写的东西",
+   "literal": "a written thing on the computers' lines",
    "fit": "plain",
-   "proposed": true
+   "proposed": true,
+   "note": "There's no word for \"web\": xiàn (lines) stands in."
   },
   {
    "rank": 286,
@@ -3362,8 +3347,9 @@
    "py": "yǔyán",
    "en": "language",
    "ru": "язык",
-   "hsd": "{{word:hua4}}",
-   "tts": "话",
+   "hsd": "{{word:shuo1}}-{{word:de}}",
+   "tts": "说的",
+   "literal": "what's said",
    "fit": "plain"
   },
   {
@@ -3408,11 +3394,10 @@
    "py": "jièshào",
    "en": "introduce",
    "ru": "представлять",
-   "hsd": "{{word:shuo1}}: {{word:zhe4}} {{word:shi4}} X",
-   "tts": "说：这是X",
-   "literal": "say \"this is X\"",
-   "fit": "natural",
-   "proposed": true
+   "hsd": "{{word:jiao4}} {{word:ren2}} {{word:zhi1dao4}}",
+   "tts": "叫人知道",
+   "literal": "let people know",
+   "fit": "natural"
   },
   {
    "rank": 292,
@@ -3432,11 +3417,10 @@
    "py": "bǎohù",
    "en": "protect",
    "ru": "защищать",
-   "hsd": "{{word:ba3}} X {{word:liu2}} {{word:zai4}} {{word:hao3}}-{{word:de}} {{word:di4fang1}}",
-   "tts": "把X留在好的地方",
-   "literal": "keep X in a good place",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:bang1}} X {{word:bu4}} {{word:bian4}} {{word:huai4}}",
+   "tts": "帮X不变坏",
+   "literal": "help X not go bad",
+   "fit": "plain"
   },
   {
    "rank": 294,
@@ -3484,7 +3468,7 @@
    "tts": "…、…放在一起",
    "literal": "put together",
    "fit": "plain",
-   "note": "sān, sì fàng zài yī-qǐ, shì qī: 3 + 4 = 7 (Lesson 16)."
+   "note": "sān, sì fàng zài yī-qǐ, shì qī: 3 + 4 = 7 (Lesson {{lesson:numbers}})."
   },
   {
    "rank": 298,
@@ -3568,12 +3552,11 @@
    "py": "xiǎoshí",
    "en": "hour",
    "ru": "час",
-   "hsd": "{{word:cong2}} X-{{word:dian3}} {{word:dao4}} Y-{{word:dian3}}",
-   "tts": "从…点到…点",
-   "literal": "from X o'clock to Y o'clock",
-   "fit": "plain",
-   "proposed": true,
-   "note": "An hour is the time from one diǎn to the next."
+   "hsd": "{{word:xiao3}}-{{word:shi2}}",
+   "tts": "小时",
+   "literal": "small time",
+   "fit": "natural",
+   "note": "shí here is 时 (time). It sounds the same as shí (ten)."
   },
   {
    "rank": 305,
@@ -3651,12 +3634,10 @@
    "py": "gùshi",
    "en": "story",
    "ru": "история",
-   "hsd": "{{word:fa1sheng1}}-{{word:guo4}}-{{word:de}} {{word:dong1xi}} / {{word:mei2}} {{word:fa1sheng1}}-{{word:guo4}}-{{word:de}} {{word:dong1xi}}",
-   "tts": "发生过的东西 / 没发生过的东西",
-   "literal": "things that happened / things that never happened",
-   "fit": "plain",
-   "proposed": true,
-   "note": "A true story, or a made-up one."
+   "hsd": "{{word:shuo1}}-{{word:de}} {{word:dong1xi}}",
+   "tts": "说的东西",
+   "literal": "a told thing",
+   "fit": "plain"
   },
   {
    "rank": 312,
@@ -3665,12 +3646,10 @@
    "py": "jiāo",
    "en": "teach",
    "ru": "учить (кого-то)",
-   "hsd": "{{word:shuo1}} {{word:gei3}} {{word:xue2}}-{{word:de}} {{word:ren2}} {{word:ting1}}",
-   "tts": "说给学的人听",
-   "literal": "speak for the learners to hear",
-   "fit": "natural",
-   "proposed": true,
-   "note": "说给…听 is a common pattern."
+   "hsd": "{{word:jiao1}}",
+   "tts": "教",
+   "fit": "word",
+   "note": "Lesson {{lesson:everyday-patterns}}."
   },
   {
    "rank": 313,
@@ -3691,10 +3670,10 @@
    "py": "pǔtōnghuà",
    "en": "Mandarin",
    "ru": "путунхуа, китайский",
-   "hsd": "\"Zhōngguó\"-{{word:de}} {{word:hua4}}",
-   "tts": "中国的话",
-   "literal": "China's speech",
-   "fit": "natural"
+   "hsd": "\"Zhōngguó\"-{{word:de}} {{word:shuo1}}-{{word:de}}",
+   "tts": "中国的说的",
+   "literal": "China's spoken",
+   "fit": "plain"
   },
   {
    "rank": 315,
@@ -3703,11 +3682,11 @@
    "py": "zuìhòu",
    "en": "last, final",
    "ru": "последний",
-   "hsd": "{{word:hou4}}-{{word:mian4}} {{word:mei2}}-{{word:you3}} {{word:bie2de}}-{{word:de}}",
-   "tts": "后面没有别的的",
-   "literal": "the one with nothing after it",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:zui4}}-{{word:hou4}}",
+   "tts": "最后",
+   "literal": "most behind",
+   "fit": "natural",
+   "note": "Lesson {{lesson:comparing}}."
   },
   {
    "rank": 316,
@@ -3716,11 +3695,11 @@
    "py": "zuìjìn",
    "en": "recently",
    "ru": "недавно",
-   "hsd": "{{word:jin4}}-{{word:de}} {{word:shi2jian1}}",
-   "tts": "近的时间",
-   "literal": "the near time",
+   "hsd": "{{word:he2}} {{word:xian4zai4}} {{word:bu4}} {{word:yuan3}}-{{word:de}} {{word:shi2jian1}}",
+   "tts": "和现在不远的时间",
+   "literal": "a time not far from now",
    "fit": "plain",
-   "proposed": true
+   "note": "jìn now means \"go in\", so \"near\" here is bù yuǎn."
   },
   {
    "rank": 317,
@@ -3729,11 +3708,11 @@
    "py": "jīhuì",
    "en": "opportunity",
    "ru": "возможность",
-   "hsd": "{{word:hao3}}-{{word:de}} {{word:shi2jian1}}",
-   "tts": "好的时间",
-   "literal": "a good time",
+   "hsd": "X-{{word:de}} {{word:ke3neng2}}",
+   "tts": "X的可能",
+   "literal": "the maybe of X",
    "fit": "plain",
-   "proposed": true
+   "note": "Put what you could do first: qù-de kěnéng, a chance to go."
   },
   {
    "rank": 318,
@@ -3766,11 +3745,10 @@
    "py": "zhàopiàn",
    "en": "photo",
    "ru": "фотография",
-   "hsd": "{{word:ba3}}-{{word:kan4}}-{{word:dao4}}-{{word:de}}-{{word:liu2}}-{{word:xia4}}-{{word:lai2}}-{{word:de}} {{word:dong1xi}}",
-   "tts": "把看到的留下来的东西",
-   "literal": "a thing that keeps what you saw",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:kan4}}-{{word:de}} {{word:dong1xi}}",
+   "tts": "看的东西",
+   "literal": "a thing to look at",
+   "fit": "plain"
   },
   {
    "rank": 321,
@@ -3852,11 +3830,10 @@
    "py": "kǎoshì",
    "en": "exam",
    "ru": "экзамен",
-   "hsd": "{{word:wen4}}-{{word:ni3}}-{{word:xue2}}-{{word:le}}-{{word:shen2me}}-{{word:de}} {{word:shi2jian1}}",
-   "tts": "问你学了什么的时间",
-   "literal": "the time they ask what you learned",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:kan4}}-{{word:ni3}}-{{word:xue2}}-{{word:le}}-{{word:shen2me}}-{{word:de}} {{word:dong1xi}}",
+   "tts": "看你学了什么的东西",
+   "literal": "a thing that looks at what you learned",
+   "fit": "plain"
   },
   {
    "rank": 328,
@@ -3962,7 +3939,7 @@
    "tts": "吃的",
    "literal": "eaten thing",
    "fit": "natural",
-   "note": "Lesson 18."
+   "note": "Lesson {{lesson:roles-of-a-word}}."
   },
   {
    "rank": 337,
@@ -4270,10 +4247,11 @@
    "py": "chūlái",
    "en": "come out",
    "ru": "выходить",
-   "hsd": "{{word:lai2}} {{word:wai4}}-{{word:mian4}}",
-   "tts": "来外面",
-   "literal": "come outside",
-   "fit": "plain"
+   "hsd": "{{word:chu1}}-{{word:lai2}}",
+   "tts": "出来",
+   "literal": "out-come",
+   "fit": "natural",
+   "note": "Lesson {{lesson:direction-and-result}}."
   },
   {
    "rank": 362,
@@ -4363,12 +4341,10 @@
    "py": "yòu",
    "en": "right (side)",
    "ru": "правый",
-   "hsd": "{{word:xie3}}-{{word:de}} {{word:shou3}}-{{word:de}} {{word:bian1}}",
-   "tts": "写的手的边",
-   "literal": "the side of your writing hand",
-   "fit": "plain",
-   "proposed": true,
-   "note": "For most people."
+   "hsd": "{{word:you4bian1}}",
+   "tts": "右边",
+   "fit": "word",
+   "note": "Lesson {{lesson:where-it-is}}."
   },
   {
    "rank": 370,
@@ -4439,7 +4415,7 @@
    "tts": "听到",
    "literal": "listen-arrive",
    "fit": "natural",
-   "note": "Lesson 21."
+   "note": "Lesson {{lesson:greetings-and-feelings}}."
   },
   {
    "rank": 376,
@@ -4448,10 +4424,10 @@
    "py": "shāngdiàn",
    "en": "shop",
    "ru": "магазин",
-   "hsd": "{{word:gei3}}-{{word:jin1}}-{{word:de2}}-{{word:dong1xi}}-{{word:de}} {{word:di4fang1}}",
-   "tts": "给金得东西的地方",
-   "literal": "buy-things place",
-   "fit": "plain"
+   "hsd": "{{word:mai3}} {{word:dong1xi}}-{{word:de}} {{word:di4fang1}}",
+   "tts": "买东西的地方",
+   "literal": "the place to buy things",
+   "fit": "natural"
   },
   {
    "rank": 377,
@@ -4460,9 +4436,11 @@
    "py": "huílái",
    "en": "come back",
    "ru": "возвращаться",
-   "hsd": "{{word:lai2}}",
-   "tts": "来",
-   "fit": "plain"
+   "hsd": "{{word:hui2}}-{{word:lai2}}",
+   "tts": "回来",
+   "literal": "back-come",
+   "fit": "natural",
+   "note": "Lesson {{lesson:direction-and-result}}."
   },
   {
    "rank": 378,
@@ -4556,10 +4534,10 @@
    "py": "róngyì",
    "en": "easy",
    "ru": "лёгкий",
-   "hsd": "{{word:hao3}} {{word:nong4}}",
-   "tts": "好弄",
-   "literal": "easy to do",
-   "fit": "natural"
+   "hsd": "{{word:yao4}}-{{word:hen3}}-{{word:shao3}}-{{word:li4liang4}}-{{word:de}}",
+   "tts": "要很少力量的",
+   "literal": "needing little strength",
+   "fit": "plain"
   },
   {
    "rank": 386,
@@ -4582,12 +4560,10 @@
    "py": "zuǒ",
    "en": "left (side)",
    "ru": "левый",
-   "hsd": "{{word:bu4}} {{word:xie3}}-{{word:de}} {{word:shou3}}-{{word:de}} {{word:bian1}}",
-   "tts": "不写的手的边",
-   "literal": "the side of your other hand",
-   "fit": "plain",
-   "proposed": true,
-   "note": "For most people."
+   "hsd": "{{word:zuo3bian1}}",
+   "tts": "左边",
+   "fit": "word",
+   "note": "Lesson {{lesson:where-it-is}}."
   },
   {
    "rank": 388,
@@ -4600,7 +4576,7 @@
    "tts": "拿来 / 拿去",
    "literal": "take-come / take-go",
    "fit": "natural",
-   "proposed": true
+   "note": "Lesson {{lesson:direction-and-result}}."
   },
   {
    "rank": 389,
@@ -4633,11 +4609,10 @@
    "py": "gānjìng",
    "en": "clean",
    "ru": "чистый",
-   "hsd": "{{word:mei2}}-{{word:you3}} {{word:huai4}}-{{word:de}} {{word:dong1xi}}",
-   "tts": "没有坏的东西",
-   "literal": "nothing bad on it",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:shang4}}-{{word:mian4}} {{word:mei2}}-{{word:you3}} {{word:luan4}}-{{word:de}} {{word:dong1xi}}",
+   "tts": "上面没有乱的东西",
+   "literal": "with nothing messy on it",
+   "fit": "plain"
   },
   {
    "rank": 392,
@@ -4646,9 +4621,10 @@
    "py": "niánqīng",
    "en": "young",
    "ru": "молодой",
-   "hsd": "{{word:xiao3}}",
-   "tts": "小",
-   "fit": "word"
+   "hsd": "{{word:bu4}} {{word:lao3}}",
+   "tts": "不老",
+   "literal": "not old",
+   "fit": "natural"
   },
   {
    "rank": 393,
@@ -4657,10 +4633,10 @@
    "py": "diàn",
    "en": "shop",
    "ru": "магазин",
-   "hsd": "{{word:gei3}}-{{word:jin1}}-{{word:de2}}-{{word:dong1xi}}-{{word:de}} {{word:di4fang1}}",
-   "tts": "给金得东西的地方",
-   "literal": "buy-things place",
-   "fit": "plain"
+   "hsd": "{{word:mai3}} {{word:dong1xi}}-{{word:de}} {{word:di4fang1}}",
+   "tts": "买东西的地方",
+   "literal": "the place to buy things",
+   "fit": "natural"
   },
   {
    "rank": 394,
@@ -4884,11 +4860,10 @@
    "py": "xīnnián",
    "en": "New Year",
    "ru": "Новый год",
-   "hsd": "{{word:xin1}} {{word:shi2}}-{{word:er4}}-ge {{word:yue4}}-{{word:de}} {{word:kai1shi3}}",
-   "tts": "新十二个月的开始",
-   "literal": "the start of the new twelve months",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:shi2}}-{{word:er4}}-ge {{word:yue4}}-{{word:de}} {{word:kai1shi3}}",
+   "tts": "十二个月的开始",
+   "literal": "the start of the twelve months",
+   "fit": "plain"
   },
   {
    "rank": 413,
@@ -4920,10 +4895,11 @@
    "py": "jiù",
    "en": "old (thing)",
    "ru": "старый (о вещи)",
-   "hsd": "{{word:bu4}} {{word:xin1}}",
-   "tts": "不新",
-   "literal": "not new",
-   "fit": "natural"
+   "hsd": "{{word:lao3}}",
+   "tts": "老",
+   "literal": "old",
+   "fit": "plain",
+   "note": "lǎo works for old things too."
   },
   {
    "rank": 416,
@@ -5068,11 +5044,10 @@
    "py": "huānyíng",
    "en": "welcome",
    "ru": "добро пожаловать",
-   "hsd": "{{word:ni3}} {{word:lai2}} {{word:le}}, {{word:hen3}} {{word:hao3}}!",
-   "tts": "你来了，很好！",
-   "literal": "you came, very good!",
-   "fit": "natural",
-   "proposed": true
+   "hsd": "{{word:hen3}} {{word:kai1}}-{{word:xin1}} {{word:ni3}} {{word:lai2}} {{word:le}}",
+   "tts": "很开心你来了",
+   "literal": "very happy you've come",
+   "fit": "natural"
   },
   {
    "rank": 428,
@@ -5097,7 +5072,7 @@
    "literal": "person-person / one-one … all",
    "fit": "natural",
    "proposed": true,
-   "note": "Lesson 22: rén-rén dōu yào shuǐ."
+   "note": "Lesson {{lesson:doubling-words}}: rén-rén dōu yào shuǐ."
   },
   {
    "rank": 430,
@@ -5188,11 +5163,10 @@
    "py": "huǒchē",
    "en": "train",
    "ru": "поезд",
-   "hsd": "{{word:hen3}} {{word:duo1}} {{word:dong4}}-{{word:de}} {{word:he2zi}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}",
-   "tts": "很多动的盒子在一起",
-   "literal": "many moving boxes together",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:yong4}}-{{word:huo3}}-{{word:de}} {{word:qu4}}-{{word:hen3}}-{{word:duo1}}-{{word:di4fang1}}-{{word:de}} {{word:gong1ju4}}",
+   "tts": "用火的去很多地方的工具",
+   "literal": "a fire-using vehicle",
+   "fit": "plain"
   },
   {
    "rank": 438,
@@ -5213,11 +5187,10 @@
    "py": "niúnǎi",
    "en": "milk",
    "ru": "молоко",
-   "hsd": "{{word:dong4wu4}}-{{word:gei3}}-{{word:xiao3}}-{{word:dong4wu4}}-{{word:de}} {{word:bai2se4}}-{{word:de}} {{word:shui3}}",
-   "tts": "动物给小动物的白色的水",
-   "literal": "the white water animals give their little ones",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:dong4wu4}}-{{word:de}} {{word:bai2se4}}-{{word:de}} {{word:shui3}}",
+   "tts": "动物的白色的水",
+   "literal": "animals' white water",
+   "fit": "plain"
   },
   {
    "rank": 440,
@@ -5417,9 +5390,9 @@
    "py": "wǎngshang",
    "en": "online",
    "ru": "в интернете",
-   "hsd": "{{word:zai4}} {{word:gong1ju4}}-{{word:li3}}",
-   "tts": "在工具里",
-   "literal": "in the tool",
+   "hsd": "{{word:zai4}} {{word:suan4}}-{{word:de}}-{{word:gong1ju4}}-{{word:de}} {{word:xian4}}-{{word:shang4}}",
+   "tts": "在算的工具的线上",
+   "literal": "on the computers' lines",
    "fit": "plain",
    "proposed": true
   },
@@ -5530,11 +5503,10 @@
    "py": "jiē",
    "en": "street",
    "ru": "улица",
-   "hsd": "{{word:liang3}}-{{word:bian1}}-{{word:you3}}-{{word:jia1}}-{{word:de}} {{word:di4}}",
-   "tts": "两边有家的地",
-   "literal": "ground with homes on both sides",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:liang3}}-{{word:bian1}}-{{word:you3}}-{{word:jia1}}-{{word:de}} {{word:lu4}}",
+   "tts": "两边有家的路",
+   "literal": "a road with homes on both sides",
+   "fit": "plain"
   },
   {
    "rank": 466,
@@ -5611,9 +5583,9 @@
    "py": "chāoshì",
    "en": "supermarket",
    "ru": "супермаркет",
-   "hsd": "{{word:da4}}-{{word:de}} {{word:gei3}}-{{word:jin1}}-{{word:de2}}-{{word:dong1xi}}-{{word:de}} {{word:di4fang1}}",
-   "tts": "大的给金得东西的地方",
-   "literal": "big buy-things place",
+   "hsd": "{{word:da4}}-{{word:de}} {{word:mai3}} {{word:dong1xi}}-{{word:de}} {{word:di4fang1}}",
+   "tts": "大的买东西的地方",
+   "literal": "a big place to buy things",
    "fit": "plain"
   },
   {
@@ -5646,9 +5618,11 @@
    "py": "jìn",
    "en": "near",
    "ru": "близкий",
-   "hsd": "{{word:jin4}}",
-   "tts": "近",
-   "fit": "word"
+   "hsd": "{{word:zai4}} {{word:fu4jin4}}",
+   "tts": "在附近",
+   "literal": "be nearby",
+   "fit": "natural",
+   "note": "fùjìn is a place word: zài fùjìn, not hěn fùjìn (Lesson {{lesson:moving}})."
   },
   {
    "rank": 476,
@@ -5750,10 +5724,10 @@
    "py": "fùjìn",
    "en": "nearby",
    "ru": "рядом",
-   "hsd": "{{word:jin4}}",
-   "tts": "近",
+   "hsd": "{{word:fu4jin4}}",
+   "tts": "附近",
    "fit": "word",
-   "note": "jìn-de dìfāng: a nearby place."
+   "note": "fùjìn-de dìfāng: a nearby place. Lesson {{lesson:moving}}."
   },
   {
    "rank": 485,
@@ -5786,11 +5760,10 @@
    "py": "fēi",
    "en": "fly",
    "ru": "летать",
-   "hsd": "{{word:zai4}} {{word:kong1qi4}}-{{word:li3}} {{word:dong4}}",
-   "tts": "在空气里动",
-   "literal": "move in the air",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:fei1}}",
+   "tts": "飞",
+   "fit": "word",
+   "note": "Lesson {{lesson:direction-and-result}}."
   },
   {
    "rank": 488,
@@ -5799,11 +5772,10 @@
    "py": "fēijī",
    "en": "airplane",
    "ru": "самолёт",
-   "hsd": "{{word:zai4}}-{{word:kong1qi4}}-{{word:li3}}-{{word:dong4}}-{{word:de}} {{word:he2zi}}",
-   "tts": "在空气里动的盒子",
-   "literal": "a box that moves in the air",
-   "fit": "plain",
-   "proposed": true
+   "hsd": "{{word:fei1}}-{{word:de}} {{word:qu4}}-{{word:hen3}}-{{word:duo1}}-{{word:di4fang1}}-{{word:de}} {{word:gong1ju4}}",
+   "tts": "飞的去很多地方的工具",
+   "literal": "a flying vehicle",
+   "fit": "plain"
   },
   {
    "rank": 489,
@@ -5840,7 +5812,7 @@
    "tts": "水里的动物",
    "literal": "animal in the water",
    "fit": "plain",
-   "note": "Lesson 18."
+   "note": "Lesson {{lesson:roles-of-a-word}}."
   },
   {
    "rank": 492,
@@ -5942,10 +5914,63 @@
    "py": "chūqù",
    "en": "go out",
    "ru": "выходить",
-   "hsd": "{{word:qu4}} {{word:wai4}}-{{word:mian4}}",
-   "tts": "去外面",
-   "literal": "go outside",
-   "fit": "natural"
+   "hsd": "{{word:chu1}}-{{word:qu4}}",
+   "tts": "出去",
+   "literal": "out-go",
+   "fit": "natural",
+   "note": "Lesson {{lesson:direction-and-result}}."
+  },
+  {
+   "rank": 518,
+   "phase": 2,
+   "zh": "小心",
+   "py": "xiǎoxīn",
+   "en": "careful",
+   "ru": "осторожно",
+   "hsd": "{{word:xiao3}}-{{word:xin1}}",
+   "tts": "小心",
+   "literal": "small heart",
+   "fit": "natural",
+   "note": "Lesson {{lesson:greetings-and-feelings}}."
+  },
+  {
+   "rank": 603,
+   "phase": 2,
+   "zh": "互联网",
+   "py": "hùliánwǎng",
+   "en": "Internet",
+   "ru": "интернет",
+   "hsd": "{{word:suan4}}-{{word:de}}-{{word:gong1ju4}}-{{word:de}} {{word:xian4}}",
+   "tts": "算的工具的线",
+   "literal": "the computers' lines",
+   "fit": "plain",
+   "proposed": true,
+   "note": "There's no word for \"web\": xiàn (lines) stands in."
+  },
+  {
+   "rank": 692,
+   "phase": 2,
+   "zh": "网络",
+   "py": "wǎngluò",
+   "en": "network",
+   "ru": "сеть",
+   "hsd": "{{word:suan4}}-{{word:de}}-{{word:gong1ju4}}-{{word:de}} {{word:xian4}}",
+   "tts": "算的工具的线",
+   "literal": "the computers' lines",
+   "fit": "plain",
+   "proposed": true
+  },
+  {
+   "rank": 742,
+   "phase": 2,
+   "zh": "卖",
+   "py": "mài",
+   "en": "sell",
+   "ru": "продавать",
+   "hsd": "{{word:gei3}}-{{word:dong1xi}}-{{word:de2}}-{{word:jin1}}",
+   "tts": "给东西得金",
+   "literal": "give things, get money",
+   "fit": "plain"
   },
   {
    "rank": 775,
@@ -5954,10 +5979,10 @@
    "py": "suàn",
    "en": "calculate",
    "ru": "считать, вычислять",
-   "hsd": "{{word:kan4}} {{word:shi4}} {{word:duo1}}-{{word:shao3}}",
-   "tts": "看是多少",
-   "literal": "see how much it is",
-   "fit": "plain"
+   "hsd": "{{word:suan4}}",
+   "tts": "算",
+   "fit": "word",
+   "note": "Lesson {{lesson:numbers}}."
   },
   {
    "rank": 792,
@@ -5970,6 +5995,32 @@
    "tts": "放在一起，是…",
    "literal": "put together, it is …",
    "fit": "plain"
+  },
+  {
+   "rank": 852,
+   "phase": 2,
+   "zh": "放心",
+   "py": "fàngxīn",
+   "en": "don't worry, feel at ease",
+   "ru": "не волноваться",
+   "hsd": "{{word:fang4}}-{{word:xin1}}",
+   "tts": "放心",
+   "literal": "put the heart down",
+   "fit": "natural",
+   "note": "Lesson {{lesson:greetings-and-feelings}}."
+  },
+  {
+   "rank": 1080,
+   "phase": 3,
+   "zh": "市场",
+   "py": "shìchǎng",
+   "en": "market",
+   "ru": "рынок",
+   "hsd": "{{word:mai3}} {{word:dong1xi}}-{{word:de}} {{word:di4fang1}}",
+   "tts": "买东西的地方",
+   "literal": "the place to buy things",
+   "fit": "natural",
+   "note": "Lesson {{lesson:inside-a-sentence}}."
   },
   {
    "rank": 1112,
@@ -6006,7 +6057,30 @@
    "tts": "把…放在一起…次",
    "literal": "put A together B times",
    "fit": "plain",
-   "note": "3 × 4: bǎ sì fàng zài yī-qǐ sān-cì (Lesson 16)."
+   "note": "3 × 4: bǎ sì fàng zài yī-qǐ sān-cì (Lesson {{lesson:numbers}})."
+  },
+  {
+   "rank": 1431,
+   "phase": 3,
+   "zh": "道路",
+   "py": "dàolù",
+   "en": "road",
+   "ru": "дорога",
+   "hsd": "{{word:lu4}}",
+   "tts": "路",
+   "fit": "word"
+  },
+  {
+   "rank": 1452,
+   "phase": 3,
+   "zh": "乱",
+   "py": "luàn",
+   "en": "messy",
+   "ru": "беспорядочный",
+   "hsd": "{{word:luan4}}",
+   "tts": "乱",
+   "fit": "word",
+   "note": "Lesson {{lesson:becoming-and-making}}."
   },
   {
    "rank": 1464,
@@ -6019,7 +6093,31 @@
    "tts": "从…里面拿…",
    "literal": "take B from A",
    "fit": "plain",
-   "note": "7 − 3: cóng qī lǐ-miàn ná sān (Lesson 16)."
+   "note": "7 − 3: cóng qī lǐ-miàn ná sān (Lesson {{lesson:numbers}})."
+  },
+  {
+   "rank": 1760,
+   "phase": 4,
+   "zh": "躺",
+   "py": "tǎng",
+   "en": "lie down",
+   "ru": "лежать",
+   "hsd": "{{word:tang3}}",
+   "tts": "躺",
+   "fit": "word",
+   "note": "Lesson {{lesson:direction-and-result}}: tǎng-xià."
+  },
+  {
+   "rank": 2143,
+   "phase": 5,
+   "zh": "伤害",
+   "py": "shānghài",
+   "en": "harm",
+   "ru": "вредить",
+   "hsd": "{{word:de2}} {{word:bu4}}-{{word:hao3}}-{{word:de}} {{word:guan1xi}}",
+   "tts": "得不好的关系",
+   "literal": "get a bad connection",
+   "fit": "plain"
   },
   {
    "rank": 2430,
@@ -6032,7 +6130,43 @@
    "tts": "从…里面拿…，能拿…次",
    "literal": "take A from C, B times",
    "fit": "plain",
-   "note": "12 ÷ 4: cóng shí-èr lǐ-miàn ná sì, néng ná sān-cì (Lesson 16)."
+   "note": "12 ÷ 4: cóng shí-èr lǐ-miàn ná sì, néng ná sān-cì (Lesson {{lesson:numbers}})."
+  },
+  {
+   "rank": 2601,
+   "phase": 6,
+   "zh": "整齐",
+   "py": "zhěngqí",
+   "en": "neat, tidy",
+   "ru": "аккуратный",
+   "hsd": "{{word:bu4}} {{word:luan4}}",
+   "tts": "不乱",
+   "literal": "not messy",
+   "fit": "natural"
+  },
+  {
+   "rank": 4116,
+   "phase": 9,
+   "zh": "秩序",
+   "py": "zhìxù",
+   "en": "order",
+   "ru": "порядок",
+   "hsd": "{{word:bu4}} {{word:luan4}}",
+   "tts": "不乱",
+   "literal": "no mess",
+   "fit": "natural"
+  },
+  {
+   "rank": 5265,
+   "phase": 11,
+   "zh": "毛",
+   "py": "máo",
+   "en": "hair, fur",
+   "ru": "шерсть",
+   "hsd": "{{word:mao2}}",
+   "tts": "毛",
+   "fit": "word",
+   "note": "Lesson {{lesson:roles-of-a-word}}."
   }
  ]
 }

@@ -1,12 +1,15 @@
 #!/usr/bin/env node
 // Checks that the lessons match the book's plan (see BOOK_PLAN.md §3-§4):
 //
-//   1. intro-3's table of contents and the lessons agree: same sections, same
-//      order, and each lesson's title is exactly the **bold name** intro-3
-//      gives it. src/lib/lesson-sections.js must group lessons the same way.
+//   1. src/content/book.js and the lesson folders agree: every folder in
+//      src/content/lessons/ is listed exactly once, every listed id has a
+//      folder, and each lesson's index.ts has that id. Every other chapter
+//      (not an intro) is in exactly one BACK_MATTER group of book.js. intro-3's
+//      table of contents (built from book.js) has a line for every lesson and
+//      every back-matter chapter, and no others.
 //   2. Every dictionary word is introduced (has a `vocab` block) in exactly
 //      one lesson. If BOOK_PLAN.md is present, each lesson's vocab list must
-//      also match its row in the §4b table.
+//      also match its row in the §4b table (rows are keyed by lesson id).
 //   3. Every summary and tldr/necessity line (lessons and intros) is
 //      jargon-free (scripts/jargon.js) and within the limits in
 //      scripts/limits.js -- for every lesson, finished or not.
@@ -19,8 +22,9 @@
 //   6. The Chinese in the proverbs and in the stories appendix (its **bold**
 //      lines) uses only dictionary words.
 //   7. The composite dictionary (src/data/composites.json) uses only
-//      dictionary words, lists each word once, and gives a Hao-shuo-de form
-//      for every entry that isn't a gap or a skip.
+//      dictionary words, in its Hao-shuo-de forms and in the pinyin of its
+//      notes, lists each word once, and gives a Hao-shuo-de form for every
+//      entry that isn't a gap or a skip.
 //
 // The other gates (jargon in the rest of the text, early words, word use,
 // grammar boxes) are separate scripts; scripts/check-all.js runs them all on
@@ -33,7 +37,8 @@
 import { readFileSync, readdirSync, existsSync } from 'fs';
 import { resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
-import { LESSON_SECTIONS } from '../src/lib/lesson-sections.js';
+import { LESSON_IDS, lessonNumber, lessonFolders, lessonFile } from './lessons.js';
+import { BACK_MATTER_IDS } from '../src/content/book.js';
 import { findJargon } from './jargon.js';
 import { SUMMARY_MAX_WORDS, TLDR_MAX_WORDS, countWords } from './limits.js';
 import { buildOverview, renderOverview } from './generate-grammar-overview.js';
@@ -64,11 +69,18 @@ const termToId = new Map(Object.entries(dictionary).map(([id, w]) => [w.term.nor
   }
 }
 
-// ---------- load lessons ----------
-const lessonIds = readdirSync(CONTENT_DIR).filter((d) => /^lesson-\d+$/.test(d)).sort();
+// ---------- 1. book.js, the lesson folders, and intro-3 agree ----------
+const folders = lessonFolders();
+for (const id of folders) if (!LESSON_IDS.includes(id)) errors.push(`src/content/lessons/${id}/ isn't in src/content/book.js`);
+for (const id of LESSON_IDS) if (!folders.includes(id)) errors.push(`src/content/book.js lists "${id}", but src/content/lessons/${id}/ doesn't exist`);
+const duplicates = LESSON_IDS.filter((id, i) => LESSON_IDS.indexOf(id) !== i);
+if (duplicates.length) errors.push(`src/content/book.js lists ${duplicates.join(', ')} more than once`);
+
+// ---------- load lessons, in book order ----------
 const lessons = [];
-for (const id of lessonIds) {
-  const { meta, default: entries } = await import(pathToFileURL(resolve(CONTENT_DIR, id, 'index.ts')));
+for (const id of LESSON_IDS.filter((id) => folders.includes(id))) {
+  const { meta, default: entries } = await import(pathToFileURL(lessonFile(id, 'index.ts')));
+  if (meta.id !== id) errors.push(`src/content/lessons/${id}/index.ts: meta.id is "${meta.id}", expected "${id}"`);
   const title = entries.find((e) => e.type === 'title')?.en?.join(' ') ?? '';
   const vocab = [];
   for (const entry of entries) {
@@ -77,41 +89,34 @@ for (const id of lessonIds) {
     if (m) vocab.push(m[1]);
     else errors.push(`${id}: vocab term "${entry.term}" is not a single dictionary word`);
   }
-  lessons.push({ id, number: meta.lessonNumber, title, vocab, entries });
+  lessons.push({ id, number: lessonNumber(id), title, vocab, entries });
 }
-lessons.sort((a, b) => a.number - b.number);
 
-// ---------- 1. intro-3's table of contents ----------
-const intro = (await import(pathToFileURL(resolve(CONTENT_DIR, 'intro-3.ts')))).default;
-const tocSections = intro
-  .filter((e) => e.type === 'info' && /^Section [1-3] /.test(e.title?.en?.[0] ?? ''))
-  .map((e) => ({
-    title: e.title.en[0],
-    lessons: e.items.map((item) => item.text.en.join(' ').match(/^\*\*(.+?)\*\*/)?.[1] ?? '(no bold name)'),
-  }));
-const tocTitles = tocSections.flatMap((s) => s.lessons);
+{
+  const { LESSON_BLURBS, CHAPTER_BLURBS } = await import(pathToFileURL(resolve(CONTENT_DIR, 'intro-3.ts')));
+  for (const id of LESSON_IDS) if (!LESSON_BLURBS[id]?.en?.length) errors.push(`intro-3: no table-of-contents line for "${id}" (LESSON_BLURBS)`);
+  for (const id of Object.keys(LESSON_BLURBS)) if (!LESSON_IDS.includes(id)) errors.push(`intro-3: LESSON_BLURBS has "${id}", which isn't in src/content/book.js`);
 
-if (tocSections.length !== LESSON_SECTIONS.length) {
-  errors.push(`intro-3 has ${tocSections.length} lesson sections, src/lib/lesson-sections.js has ${LESSON_SECTIONS.length}`);
-}
-if (tocTitles.length !== lessons.length) {
-  errors.push(`intro-3 lists ${tocTitles.length} lessons, src/content has ${lessons.length}`);
-}
-lessons.forEach((lesson, i) => {
-  if (lesson.number !== i + 1) errors.push(`${lesson.id}: lessonNumber is ${lesson.number}, expected ${i + 1}`);
-  if (tocTitles[i] !== undefined && tocTitles[i] !== lesson.title) {
-    errors.push(`${lesson.id}: title "${lesson.title}" doesn't match intro-3's lesson ${i + 1}, "${tocTitles[i]}"`);
+  // Every chapter that isn't an intro or a lesson is in one BACK_MATTER group
+  // of book.js, and intro-3 has a line for it.
+  const chapters = [];
+  for (const file of readdirSync(CONTENT_DIR)) {
+    const path = resolve(CONTENT_DIR, file);
+    if (/\.(rus|zh)\.md$/.test(file) || /^intro-\d+\.ts$/.test(file)) continue;
+    if (/\.(md|ya?ml)$/.test(file)) {
+      const id = readFileSync(path, 'utf-8').match(/^id:\s*(\S+)/m)?.[1];
+      if (id) chapters.push(id);
+    } else if (file.endsWith('.ts')) {
+      chapters.push((await import(pathToFileURL(path))).meta.id);
+    }
   }
-});
-let offset = 0;
-tocSections.forEach((section, i) => {
-  const expected = lessons.slice(offset, offset + section.lessons.length).map((l) => l.id);
-  offset += section.lessons.length;
-  const actual = LESSON_SECTIONS[i]?.lessonIds ?? [];
-  if (expected.join() !== actual.join()) {
-    errors.push(`"${section.title}": intro-3 puts ${expected.join(', ')} here, lesson-sections.js has ${actual.join(', ')}`);
-  }
-});
+  for (const id of chapters) if (!BACK_MATTER_IDS.includes(id)) errors.push(`chapter "${id}" isn't in a BACK_MATTER group of src/content/book.js`);
+  for (const id of BACK_MATTER_IDS) if (!chapters.includes(id)) errors.push(`src/content/book.js BACK_MATTER lists "${id}", but no chapter has that id`);
+  const twice = BACK_MATTER_IDS.filter((id, i) => BACK_MATTER_IDS.indexOf(id) !== i);
+  if (twice.length) errors.push(`src/content/book.js BACK_MATTER lists ${twice.join(', ')} more than once`);
+  for (const id of BACK_MATTER_IDS) if (!CHAPTER_BLURBS[id]?.en?.length) errors.push(`intro-3: no table-of-contents line for "${id}" (CHAPTER_BLURBS)`);
+  for (const id of Object.keys(CHAPTER_BLURBS)) if (!BACK_MATTER_IDS.includes(id)) errors.push(`intro-3: CHAPTER_BLURBS has "${id}", which isn't in BACK_MATTER`);
+}
 
 // ---------- 2. every word introduced exactly once ----------
 const home = new Map();
@@ -129,17 +134,21 @@ if (existsSync(PLAN_PATH)) {
   const plan = readFileSync(PLAN_PATH, 'utf-8');
   const table = plan.split('### 4b.')[1]?.split('\n###')[0] ?? '';
   // Any column padding (a markdown formatter may align the table).
-  const rows = table.split(/\r?\n/).filter((line) => /^\|\s*\d+\s*\|/.test(line));
+  // Rows are keyed by lesson id (first column), so they survive reordering.
+  const rows = table.split(/\r?\n/).filter((line) => /^\|\s*[a-z][a-z0-9-]*\s*\|/.test(line));
   if (!rows.length) errors.push('BOOK_PLAN.md: no §4b table found');
+  for (const lesson of lessons) {
+    if (!rows.some((row) => row.split('|')[1].trim() === lesson.id)) errors.push(`BOOK_PLAN.md §4b: no row for ${lesson.id}`);
+  }
   for (const row of rows) {
     const cells = row.split('|').map((c) => c.trim());
-    const number = Number(cells[1]);
+    const id = cells[1];
     const planned = cells
       .slice(3, 6)
       .flatMap((c) => (c === '—' ? [] : c.split(',').map((w) => w.trim().normalize('NFC'))))
       .map((term) => termToId.get(term) ?? `?${term}`);
-    const lesson = lessons.find((l) => l.number === number);
-    if (!lesson) { errors.push(`BOOK_PLAN.md §4b: no lesson ${number}`); continue; }
+    const lesson = lessons.find((l) => l.id === id);
+    if (!lesson) { errors.push(`BOOK_PLAN.md §4b: "${id}" isn't a lesson in src/content/book.js`); continue; }
     const actual = [...lesson.vocab].sort().join();
     if ([...planned].sort().join() !== actual) {
       errors.push(`${lesson.id}: vocab [${lesson.vocab.join(', ')}] doesn't match BOOK_PLAN.md §4b [${planned.join(', ')}]`);
@@ -219,6 +228,12 @@ for (const n of [1, 2, 3]) {
     // Names go in quotes (Lesson 1), so they don't count as words.
     const unknown = wordsIn(e.hsd.replace(/"[^"]*"/g, ' '), terms, { pinyinField: true }).filter((w) => !w.id || !dictionary[w.id]);
     if (unknown.length) errors.push(`${where}: ${unknown.map((w) => w.token).join(', ')} not in the dictionary: "${e.hsd}"`);
+  }
+  // Notes are English, but any pinyin in them must be dictionary words too.
+  for (const e of entries) {
+    if (!e.note) continue;
+    const unknown = wordsIn(e.note.replace(/"[^"]*"/g, ' '), terms).filter((w) => !w.id || !dictionary[w.id]);
+    if (unknown.length) errors.push(`composites.json "${e.zh}" note: ${unknown.map((w) => w.token).join(', ')} not in the dictionary: "${e.note}"`);
   }
 }
 

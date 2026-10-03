@@ -38,6 +38,8 @@ export interface InfoEntry {
   type: 'info' | 'warning';
   title?: LangText;
   ordered?: boolean;
+  /** For an ordered list: the number of its first item (default 1). */
+  start?: number;
   subtype?: 'grammar';
   tag?: string;
   items: InfoItem[];

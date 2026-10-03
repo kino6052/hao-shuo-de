@@ -24,93 +24,101 @@
       "label": "Hao-shuo-de is not toki pona",
       "order": 2
     },
-    "lesson-01": {
-      "label": "Lesson 1 · Sounds and Symbols",
-      "order": 1
+    "also-and-all": {
+      "label": "Modifiers 3 — Also and all",
+      "order": 999
     },
-    "lesson-02": {
-      "label": "Lesson 2 · Words and Sentences",
-      "order": 2
+    "around-an-action": {
+      "label": "Time 2 — Around an action",
+      "order": 999
     },
-    "lesson-03": {
-      "label": "Lesson 3 · Modifying Nouns",
-      "order": 3
+    "becoming-and-making": {
+      "label": "Modifiers 4 — Becoming and making",
+      "order": 999
     },
-    "lesson-04": {
-      "label": "Lesson 4 · Pointing at People and Things",
-      "order": 4
+    "colors": {
+      "label": "Colors",
+      "order": 999
     },
-    "lesson-05": {
-      "label": "Lesson 5 · Verbs",
-      "order": 5
+    "comparing": {
+      "label": "Modifiers 2 — Comparing",
+      "order": 999
     },
-    "lesson-06": {
-      "label": "Lesson 6 · Questions and Answers",
-      "order": 6
+    "direction-and-result": {
+      "label": "Verbs 2 — Direction and result",
+      "order": 999
     },
-    "lesson-07": {
-      "label": "Lesson 7 · Pre-Verbs",
-      "order": 7
+    "doubling-words": {
+      "label": "Doubling Words",
+      "order": 999
     },
-    "lesson-08": {
-      "label": "Lesson 8 · Time 1 — When it happens",
-      "order": 8
+    "everyday-patterns": {
+      "label": "Everyday Patterns",
+      "order": 999
     },
-    "lesson-09": {
-      "label": "Lesson 9 · Time 2 — Around an action",
-      "order": 9
+    "greetings-and-feelings": {
+      "label": "Greetings and Feelings",
+      "order": 999
     },
-    "lesson-10": {
-      "label": "Lesson 10 · Space 1 — Where it is",
-      "order": 10
+    "how-much": {
+      "label": "Modifiers 1 — How much",
+      "order": 999
     },
-    "lesson-11": {
-      "label": "Lesson 11 · Space 2 — Moving",
-      "order": 11
+    "inside-a-sentence": {
+      "label": "Relationships 1 — Inside a sentence",
+      "order": 999
     },
-    "lesson-12": {
-      "label": "Lesson 12 · Modifiers 1 — How much",
-      "order": 12
+    "linking-sentences": {
+      "label": "Relationships 2 — Linking sentences",
+      "order": 999
     },
-    "lesson-13": {
-      "label": "Lesson 13 · Modifiers 2 — Comparing",
-      "order": 13
+    "modifying-nouns": {
+      "label": "Modifying Nouns",
+      "order": 999
     },
-    "lesson-14": {
-      "label": "Lesson 14 · Modifiers 3 — Also and all",
-      "order": 14
+    "moving": {
+      "label": "Space 2 — Moving",
+      "order": 999
     },
-    "lesson-15": {
-      "label": "Lesson 15 · Modifiers 4 — Becoming and making",
-      "order": 15
+    "numbers": {
+      "label": "Numbers",
+      "order": 999
     },
-    "lesson-16": {
-      "label": "Lesson 16 · Numbers",
-      "order": 16
+    "pointing": {
+      "label": "Pointing at People and Things",
+      "order": 999
     },
-    "lesson-17": {
-      "label": "Lesson 17 · Colors",
-      "order": 17
+    "pre-verbs": {
+      "label": "Pre-Verbs",
+      "order": 999
     },
-    "lesson-18": {
-      "label": "Lesson 18 · Changing the Role of a Word",
-      "order": 18
+    "questions": {
+      "label": "Questions and Answers",
+      "order": 999
     },
-    "lesson-19": {
-      "label": "Lesson 19 · Relationships 1 — Inside a sentence",
-      "order": 19
+    "roles-of-a-word": {
+      "label": "Changing the Role of a Word",
+      "order": 999
     },
-    "lesson-20": {
-      "label": "Lesson 20 · Relationships 2 — Linking sentences",
-      "order": 20
+    "sounds-and-symbols": {
+      "label": "Sounds and Symbols",
+      "order": 999
     },
-    "lesson-21": {
-      "label": "Lesson 21 · Greetings and Feelings",
-      "order": 21
+    "when-it-happens": {
+      "label": "Time 1 — When it happens",
+      "order": 999
     },
-    "lesson-22": {
-      "label": "Lesson 22 · Doubling Words",
-      "order": 22
+    "where-it-is": {
+      "label": "Space 1 — Where it is",
+      "order": 999
+    },
+    "who-does-what": {
+      "label": "Verbs 1 — Who does what",
+      "order": 999
+    },
+    "words-and-sentences": {
+      "label": "Words and Sentences",
+      "order": 999
     },
     "proverbs": {
       "label": "Hao-shuo-de Proverbs",
@@ -123,1532 +131,1800 @@
   },
   "words": {
     "wo3": [
-      "lesson-01",
       "proverbs",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-04",
-      "lesson-05",
-      "lesson-06",
-      "lesson-07",
-      "lesson-08",
-      "lesson-09",
-      "lesson-10",
-      "lesson-11",
-      "lesson-12",
-      "lesson-13",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "also-and-all",
+      "around-an-action",
+      "becoming-and-making",
+      "colors",
+      "comparing",
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "how-much",
+      "inside-a-sentence",
+      "linking-sentences",
+      "moving",
+      "numbers",
+      "pointing",
+      "pre-verbs",
+      "questions",
+      "roles-of-a-word",
+      "sounds-and-symbols",
+      "when-it-happens",
+      "where-it-is",
+      "who-does-what"
     ],
     "ni3": [
       "proverbs",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-04",
-      "lesson-05",
-      "lesson-06",
-      "lesson-07",
-      "lesson-08",
-      "lesson-09",
-      "lesson-10",
-      "lesson-11",
-      "lesson-12",
-      "lesson-13",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "also-and-all",
+      "around-an-action",
+      "becoming-and-making",
+      "colors",
+      "comparing",
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "how-much",
+      "inside-a-sentence",
+      "linking-sentences",
+      "moving",
+      "numbers",
+      "pointing",
+      "pre-verbs",
+      "questions",
+      "roles-of-a-word",
+      "when-it-happens",
+      "where-it-is",
+      "who-does-what"
     ],
     "ta1": [
       "appendix-stories",
       "appendix-grammar",
-      "lesson-04",
-      "lesson-05",
-      "lesson-06",
-      "lesson-07",
-      "lesson-08",
-      "lesson-09",
-      "lesson-10",
-      "lesson-11",
-      "lesson-12",
-      "lesson-13",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "also-and-all",
+      "around-an-action",
+      "becoming-and-making",
+      "colors",
+      "comparing",
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "how-much",
+      "inside-a-sentence",
+      "linking-sentences",
+      "moving",
+      "numbers",
+      "pointing",
+      "pre-verbs",
+      "questions",
+      "roles-of-a-word",
+      "when-it-happens",
+      "where-it-is",
+      "who-does-what"
     ],
     "shen2me": [
       "proverbs",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-06",
-      "lesson-07",
-      "lesson-08",
-      "lesson-09",
-      "lesson-11",
-      "lesson-13",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17",
-      "lesson-18",
-      "lesson-21",
-      "lesson-22"
+      "also-and-all",
+      "around-an-action",
+      "becoming-and-making",
+      "colors",
+      "comparing",
+      "doubling-words",
+      "greetings-and-feelings",
+      "moving",
+      "numbers",
+      "pre-verbs",
+      "questions",
+      "roles-of-a-word",
+      "when-it-happens"
     ],
     "jia1": [
       "appendix-minimality",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-04",
-      "lesson-10",
-      "lesson-11",
-      "lesson-13",
-      "lesson-14",
-      "lesson-16",
-      "lesson-21",
-      "lesson-22"
+      "also-and-all",
+      "becoming-and-making",
+      "comparing",
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "linking-sentences",
+      "moving",
+      "numbers",
+      "pointing",
+      "where-it-is"
     ],
     "ri4": [
       "appendix-stories",
-      "lesson-08",
-      "lesson-14",
-      "lesson-19"
+      "also-and-all",
+      "inside-a-sentence",
+      "when-it-happens"
     ],
     "yue4": [
       "appendix-grammar",
-      "lesson-08",
-      "lesson-13",
-      "lesson-14",
-      "lesson-17",
-      "lesson-22"
+      "also-and-all",
+      "colors",
+      "comparing",
+      "doubling-words",
+      "when-it-happens"
     ],
     "zhi2wu4": [
       "appendix-stories",
-      "lesson-14",
-      "lesson-16",
-      "lesson-17",
-      "lesson-19",
-      "lesson-20"
+      "also-and-all",
+      "colors",
+      "doubling-words",
+      "inside-a-sentence",
+      "linking-sentences",
+      "numbers"
     ],
     "huo3": [
-      "lesson-14",
-      "lesson-15",
-      "lesson-17",
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "also-and-all",
+      "becoming-and-making",
+      "colors",
+      "doubling-words",
+      "greetings-and-feelings",
+      "linking-sentences"
     ],
     "kong1qi4": [
       "appendix-stories",
-      "lesson-14",
-      "lesson-15",
-      "lesson-20"
+      "also-and-all",
+      "becoming-and-making",
+      "direction-and-result",
+      "linking-sentences"
     ],
     "bi2zi": [
       "appendix-grammar",
-      "lesson-18",
-      "lesson-19",
-      "lesson-21"
+      "greetings-and-feelings",
+      "inside-a-sentence",
+      "roles-of-a-word"
     ],
     "jiao3": [
-      "lesson-04",
-      "lesson-10",
-      "lesson-12"
+      "how-much",
+      "linking-sentences",
+      "pointing",
+      "where-it-is"
     ],
     "kou3": [
-      "lesson-11",
-      "lesson-13",
-      "lesson-14",
-      "lesson-15"
+      "also-and-all",
+      "becoming-and-making",
+      "comparing",
+      "direction-and-result",
+      "moving"
     ],
     "pi2fu1": [
-      "lesson-18",
-      "lesson-19",
-      "lesson-20"
+      "inside-a-sentence",
+      "linking-sentences",
+      "roles-of-a-word"
     ],
     "shen1ti3": [
       "proverbs",
-      "lesson-12",
-      "lesson-15",
-      "lesson-17"
+      "becoming-and-making",
+      "colors",
+      "how-much"
     ],
     "shou3": [
-      "lesson-04",
-      "lesson-15",
-      "lesson-19",
-      "lesson-20",
-      "lesson-21"
+      "becoming-and-making",
+      "greetings-and-feelings",
+      "inside-a-sentence",
+      "linking-sentences",
+      "pointing"
     ],
     "tou2": [
       "appendix-stories",
-      "lesson-04"
+      "greetings-and-feelings",
+      "pointing",
+      "roles-of-a-word"
+    ],
+    "xin1": [
+      "appendix-grammar",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings"
+    ],
+    "mao2": [
+      "everyday-patterns",
+      "inside-a-sentence",
+      "roles-of-a-word"
     ],
     "ren2": [
       "proverbs",
       "appendix-minimality",
-      "lesson-02",
       "appendix-stories",
-      "lesson-03",
       "appendix-grammar",
-      "lesson-04",
-      "lesson-06",
-      "lesson-10",
-      "lesson-12",
-      "lesson-13",
-      "lesson-14",
-      "lesson-16",
-      "lesson-18",
-      "lesson-19",
-      "lesson-22"
+      "also-and-all",
+      "comparing",
+      "doubling-words",
+      "how-much",
+      "inside-a-sentence",
+      "modifying-nouns",
+      "moving",
+      "numbers",
+      "pointing",
+      "questions",
+      "roles-of-a-word",
+      "where-it-is",
+      "words-and-sentences"
     ],
     "fu4mu3": [
       "appendix-stories",
-      "lesson-03",
       "appendix-grammar",
-      "lesson-06",
-      "lesson-10",
-      "lesson-11",
-      "lesson-18"
+      "direction-and-result",
+      "everyday-patterns",
+      "how-much",
+      "inside-a-sentence",
+      "modifying-nouns",
+      "moving",
+      "questions",
+      "roles-of-a-word",
+      "where-it-is"
+    ],
+    "guan1xi": [
+      "appendix-grammar",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "inside-a-sentence"
     ],
     "bi3": [
       "appendix-grammar",
-      "lesson-13",
-      "lesson-16",
-      "lesson-18"
+      "comparing",
+      "numbers",
+      "roles-of-a-word"
     ],
     "nan2ren2": [
-      "lesson-02",
-      "lesson-10",
-      "lesson-19"
+      "inside-a-sentence",
+      "where-it-is",
+      "words-and-sentences"
     ],
     "nv3ren2": [
-      "lesson-02",
       "appendix-stories",
-      "lesson-04",
-      "lesson-19"
+      "inside-a-sentence",
+      "pointing",
+      "words-and-sentences"
     ],
     "qun2": [
       "appendix-stories",
-      "lesson-19"
+      "inside-a-sentence"
     ],
     "mi3fan4": [
       "appendix-grammar",
-      "lesson-05",
-      "lesson-08",
-      "lesson-12",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-19",
-      "lesson-20"
+      "also-and-all",
+      "becoming-and-making",
+      "direction-and-result",
+      "everyday-patterns",
+      "how-much",
+      "inside-a-sentence",
+      "linking-sentences",
+      "numbers",
+      "questions",
+      "when-it-happens",
+      "who-does-what"
     ],
     "shui3guo3": [
-      "lesson-02",
-      "lesson-03",
       "appendix-grammar",
-      "lesson-04",
-      "lesson-05",
-      "lesson-06",
-      "lesson-07",
-      "lesson-10",
-      "lesson-12",
-      "lesson-13",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "also-and-all",
+      "becoming-and-making",
+      "colors",
+      "comparing",
+      "direction-and-result",
+      "doubling-words",
+      "greetings-and-feelings",
+      "how-much",
+      "inside-a-sentence",
+      "linking-sentences",
+      "modifying-nouns",
+      "numbers",
+      "pointing",
+      "pre-verbs",
+      "questions",
+      "roles-of-a-word",
+      "where-it-is",
+      "who-does-what",
+      "words-and-sentences"
     ],
     "yan2": [
       "appendix-grammar",
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "doubling-words",
+      "greetings-and-feelings",
+      "linking-sentences"
     ],
     "shui3": [
       "proverbs",
       "appendix-stories",
-      "lesson-03",
       "appendix-grammar",
-      "lesson-05",
-      "lesson-06",
-      "lesson-07",
-      "lesson-10",
-      "lesson-12",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "also-and-all",
+      "becoming-and-making",
+      "colors",
+      "direction-and-result",
+      "doubling-words",
+      "greetings-and-feelings",
+      "how-much",
+      "inside-a-sentence",
+      "linking-sentences",
+      "modifying-nouns",
+      "moving",
+      "numbers",
+      "pre-verbs",
+      "questions",
+      "roles-of-a-word",
+      "where-it-is",
+      "who-does-what"
     ],
     "dong4wu4": [
-      "lesson-01",
       "appendix-minimality",
-      "lesson-02",
       "appendix-stories",
-      "lesson-03",
       "appendix-grammar",
-      "lesson-04",
-      "lesson-10",
-      "lesson-11",
-      "lesson-12",
-      "lesson-16",
-      "lesson-17",
-      "lesson-18",
-      "lesson-19",
-      "lesson-21"
+      "colors",
+      "direction-and-result",
+      "greetings-and-feelings",
+      "how-much",
+      "inside-a-sentence",
+      "modifying-nouns",
+      "moving",
+      "numbers",
+      "pointing",
+      "roles-of-a-word",
+      "sounds-and-symbols",
+      "where-it-is",
+      "words-and-sentences"
     ],
     "chong2zi": [
       "appendix-stories",
       "appendix-grammar",
-      "lesson-21",
-      "lesson-22"
+      "doubling-words",
+      "greetings-and-feelings"
     ],
     "dong1xi": [
       "proverbs",
       "appendix-minimality",
-      "lesson-02",
       "appendix-stories",
-      "lesson-04",
-      "lesson-05",
-      "lesson-18",
-      "lesson-19",
-      "lesson-21"
+      "greetings-and-feelings",
+      "inside-a-sentence",
+      "pointing",
+      "roles-of-a-word",
+      "who-does-what",
+      "words-and-sentences"
     ],
     "gong1ju4": [
       "appendix-minimality",
       "appendix-grammar",
-      "lesson-06",
-      "lesson-10",
-      "lesson-12",
-      "lesson-15",
-      "lesson-16",
-      "lesson-19"
+      "becoming-and-making",
+      "direction-and-result",
+      "how-much",
+      "inside-a-sentence",
+      "numbers",
+      "questions",
+      "where-it-is"
     ],
     "gun4zi": [
       "appendix-stories",
-      "lesson-13",
-      "lesson-16",
-      "lesson-19"
+      "comparing",
+      "direction-and-result",
+      "inside-a-sentence",
+      "numbers"
     ],
     "he2zi": [
       "appendix-grammar",
-      "lesson-06",
-      "lesson-10",
-      "lesson-11",
-      "lesson-12",
-      "lesson-13",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17",
-      "lesson-19"
+      "also-and-all",
+      "becoming-and-making",
+      "colors",
+      "comparing",
+      "direction-and-result",
+      "everyday-patterns",
+      "inside-a-sentence",
+      "moving",
+      "numbers",
+      "questions",
+      "where-it-is"
     ],
     "ni2": [
-      "lesson-15",
-      "lesson-17",
-      "lesson-19",
-      "lesson-20"
+      "becoming-and-making",
+      "colors",
+      "inside-a-sentence",
+      "linking-sentences"
     ],
     "jin1": [
       "proverbs",
       "appendix-minimality",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-05",
-      "lesson-06",
-      "lesson-13",
-      "lesson-15",
-      "lesson-16",
-      "lesson-19",
-      "lesson-20",
-      "lesson-22"
+      "becoming-and-making",
+      "comparing",
+      "direction-and-result",
+      "doubling-words",
+      "linking-sentences",
+      "numbers",
+      "questions",
+      "who-does-what"
     ],
     "xian4": [
       "appendix-stories",
-      "lesson-13"
+      "comparing"
     ],
     "yi1fu": [
       "appendix-stories",
       "appendix-grammar",
-      "lesson-07",
-      "lesson-10",
-      "lesson-12",
-      "lesson-13",
-      "lesson-15",
-      "lesson-17",
-      "lesson-19",
-      "lesson-20"
+      "becoming-and-making",
+      "colors",
+      "comparing",
+      "direction-and-result",
+      "inside-a-sentence",
+      "linking-sentences",
+      "pre-verbs",
+      "where-it-is"
     ],
     "ci2": [
-      "lesson-18",
-      "lesson-20",
-      "lesson-21"
+      "greetings-and-feelings",
+      "linking-sentences",
+      "roles-of-a-word"
     ],
     "li4liang4": [
       "proverbs",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-15",
-      "lesson-18",
-      "lesson-20"
+      "becoming-and-making",
+      "linking-sentences",
+      "roles-of-a-word"
     ],
     "xing4": [
-      "lesson-21"
+      "greetings-and-feelings"
     ],
     "na4": [
       "appendix-minimality",
       "appendix-grammar",
-      "lesson-04",
-      "lesson-06",
-      "lesson-10",
-      "lesson-11",
-      "lesson-12",
-      "lesson-13",
-      "lesson-14",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20",
-      "lesson-21"
+      "also-and-all",
+      "comparing",
+      "greetings-and-feelings",
+      "how-much",
+      "inside-a-sentence",
+      "linking-sentences",
+      "moving",
+      "pointing",
+      "questions",
+      "roles-of-a-word",
+      "where-it-is"
     ],
     "zhe4": [
-      "lesson-01",
       "appendix-minimality",
-      "lesson-02",
       "appendix-stories",
-      "lesson-03",
       "appendix-grammar",
-      "lesson-04",
-      "lesson-06",
-      "lesson-08",
-      "lesson-09",
-      "lesson-10",
-      "lesson-11",
-      "lesson-12",
-      "lesson-13",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "also-and-all",
+      "around-an-action",
+      "becoming-and-making",
+      "colors",
+      "comparing",
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "how-much",
+      "inside-a-sentence",
+      "linking-sentences",
+      "modifying-nouns",
+      "moving",
+      "numbers",
+      "pointing",
+      "questions",
+      "roles-of-a-word",
+      "sounds-and-symbols",
+      "when-it-happens",
+      "where-it-is",
+      "words-and-sentences"
     ],
     "bu4tong2": [
       "appendix-stories",
       "appendix-grammar",
-      "lesson-13",
-      "lesson-21",
-      "lesson-22"
+      "comparing",
+      "doubling-words",
+      "greetings-and-feelings",
+      "inside-a-sentence"
     ],
     "yi1yang4": [
       "appendix-grammar",
-      "lesson-13",
-      "lesson-16",
-      "lesson-17",
-      "lesson-22"
+      "colors",
+      "comparing",
+      "doubling-words",
+      "numbers"
     ],
     "ge4": [
       "appendix-minimality",
       "appendix-grammar",
-      "lesson-04",
-      "lesson-13",
-      "lesson-16",
-      "lesson-19",
-      "lesson-22"
+      "comparing",
+      "doubling-words",
+      "inside-a-sentence",
+      "numbers",
+      "pointing"
     ],
     "ci4": [
       "appendix-grammar",
-      "lesson-09",
-      "lesson-13",
-      "lesson-16",
-      "lesson-22"
+      "around-an-action",
+      "comparing",
+      "doubling-words",
+      "greetings-and-feelings",
+      "numbers"
     ],
     "yi1": [
-      "lesson-01",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-16",
-      "lesson-17",
-      "lesson-19",
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "colors",
+      "doubling-words",
+      "greetings-and-feelings",
+      "inside-a-sentence",
+      "linking-sentences",
+      "numbers",
+      "sounds-and-symbols"
     ],
     "liang3": [
       "appendix-stories",
       "appendix-grammar",
-      "lesson-16",
-      "lesson-17"
+      "colors",
+      "numbers"
     ],
     "hao4": [
       "appendix-grammar",
-      "lesson-16",
-      "lesson-17",
-      "lesson-20"
+      "colors",
+      "linking-sentences",
+      "numbers"
     ],
     "dian3": [
       "appendix-grammar",
-      "lesson-16",
-      "lesson-17",
-      "lesson-19",
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "colors",
+      "doubling-words",
+      "greetings-and-feelings",
+      "inside-a-sentence",
+      "linking-sentences",
+      "numbers"
     ],
     "duo1": [
       "proverbs",
       "appendix-stories",
-      "lesson-03",
       "appendix-grammar",
-      "lesson-09",
-      "lesson-13",
-      "lesson-16",
-      "lesson-18"
+      "around-an-action",
+      "comparing",
+      "direction-and-result",
+      "modifying-nouns",
+      "moving",
+      "numbers",
+      "roles-of-a-word"
     ],
     "dou1": [
       "proverbs",
       "appendix-grammar",
-      "lesson-14",
-      "lesson-15",
-      "lesson-17",
-      "lesson-18",
-      "lesson-21",
-      "lesson-22"
+      "also-and-all",
+      "becoming-and-making",
+      "colors",
+      "direction-and-result",
+      "doubling-words",
+      "greetings-and-feelings",
+      "roles-of-a-word"
     ],
     "hao3": [
-      "lesson-01",
       "proverbs",
       "appendix-minimality",
       "appendix-stories",
-      "lesson-03",
       "appendix-grammar",
-      "lesson-04",
-      "lesson-12",
-      "lesson-13",
-      "lesson-14",
-      "lesson-15",
-      "lesson-17",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "also-and-all",
+      "becoming-and-making",
+      "colors",
+      "comparing",
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "how-much",
+      "inside-a-sentence",
+      "linking-sentences",
+      "modifying-nouns",
+      "pointing",
+      "roles-of-a-word",
+      "sounds-and-symbols"
     ],
     "huai4": [
       "proverbs",
       "appendix-stories",
-      "lesson-15",
-      "lesson-16",
-      "lesson-18",
-      "lesson-21"
+      "becoming-and-making",
+      "direction-and-result",
+      "greetings-and-feelings",
+      "linking-sentences",
+      "numbers",
+      "roles-of-a-word"
     ],
     "bai2se4": [
       "appendix-stories",
-      "lesson-17",
-      "lesson-18"
+      "colors",
+      "roles-of-a-word"
     ],
     "hei1se4": [
       "appendix-stories",
-      "lesson-17",
-      "lesson-20"
+      "colors",
+      "linking-sentences",
+      "roles-of-a-word"
     ],
     "hong2se4": [
       "appendix-grammar",
-      "lesson-17",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20"
+      "colors",
+      "inside-a-sentence",
+      "linking-sentences",
+      "roles-of-a-word"
     ],
     "huang2se4": [
-      "lesson-17",
-      "lesson-18",
-      "lesson-20"
+      "colors",
+      "linking-sentences",
+      "roles-of-a-word"
     ],
     "lan2se4": [
-      "lesson-17",
-      "lesson-18",
-      "lesson-19"
+      "colors",
+      "inside-a-sentence",
+      "roles-of-a-word"
     ],
     "yan2se4": [
       "appendix-grammar",
-      "lesson-17",
-      "lesson-18",
-      "lesson-21"
+      "colors",
+      "greetings-and-feelings",
+      "roles-of-a-word"
     ],
     "qi2guai4": [
       "proverbs",
       "appendix-stories",
-      "lesson-12",
-      "lesson-20",
-      "lesson-21"
+      "direction-and-result",
+      "greetings-and-feelings",
+      "how-much",
+      "linking-sentences"
     ],
-    "xin1": [
-      "appendix-stories",
-      "lesson-12",
-      "lesson-15",
-      "lesson-19",
-      "lesson-21"
+    "kuai4": [
+      "comparing",
+      "direction-and-result",
+      "everyday-patterns",
+      "how-much",
+      "linking-sentences"
+    ],
+    "luan4": [
+      "becoming-and-making",
+      "everyday-patterns",
+      "linking-sentences"
+    ],
+    "lao3": [
+      "comparing",
+      "how-much",
+      "linking-sentences"
     ],
     "re4": [
       "appendix-grammar",
-      "lesson-12",
-      "lesson-14",
-      "lesson-15",
-      "lesson-18",
-      "lesson-20",
-      "lesson-22"
+      "also-and-all",
+      "becoming-and-making",
+      "doubling-words",
+      "how-much",
+      "linking-sentences",
+      "roles-of-a-word"
     ],
     "leng3": [
       "appendix-stories",
       "appendix-grammar",
-      "lesson-12",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-19",
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "also-and-all",
+      "becoming-and-making",
+      "direction-and-result",
+      "doubling-words",
+      "greetings-and-feelings",
+      "how-much",
+      "inside-a-sentence",
+      "linking-sentences",
+      "numbers"
     ],
     "tian2": [
-      "lesson-12",
-      "lesson-13",
-      "lesson-16",
-      "lesson-20",
-      "lesson-22"
+      "comparing",
+      "direction-and-result",
+      "doubling-words",
+      "how-much",
+      "linking-sentences",
+      "numbers"
     ],
     "ying4": [
       "appendix-stories",
-      "lesson-13",
-      "lesson-18"
+      "comparing",
+      "roles-of-a-word"
     ],
     "yuan2": [
       "appendix-grammar",
-      "lesson-13",
-      "lesson-14",
-      "lesson-17",
-      "lesson-22"
+      "also-and-all",
+      "colors",
+      "comparing",
+      "doubling-words"
     ],
     "xiao3": [
       "proverbs",
       "appendix-stories",
-      "lesson-03",
-      "lesson-04",
-      "lesson-06",
-      "lesson-08",
-      "lesson-11",
-      "lesson-14",
-      "lesson-16",
-      "lesson-18",
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "appendix-grammar",
+      "also-and-all",
+      "direction-and-result",
+      "doubling-words",
+      "greetings-and-feelings",
+      "linking-sentences",
+      "modifying-nouns",
+      "moving",
+      "numbers",
+      "pointing",
+      "questions",
+      "roles-of-a-word",
+      "when-it-happens"
     ],
     "da4": [
-      "lesson-01",
       "proverbs",
       "appendix-minimality",
       "appendix-stories",
-      "lesson-03",
       "appendix-grammar",
-      "lesson-04",
-      "lesson-08",
-      "lesson-11",
-      "lesson-12",
-      "lesson-13",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20",
-      "lesson-22"
+      "also-and-all",
+      "becoming-and-making",
+      "comparing",
+      "direction-and-result",
+      "doubling-words",
+      "how-much",
+      "inside-a-sentence",
+      "linking-sentences",
+      "modifying-nouns",
+      "moving",
+      "numbers",
+      "pointing",
+      "roles-of-a-word",
+      "sounds-and-symbols",
+      "when-it-happens",
+      "where-it-is"
     ],
     "yao4": [
       "proverbs",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-07",
-      "lesson-08",
-      "lesson-09",
-      "lesson-11",
-      "lesson-12",
-      "lesson-13",
-      "lesson-14",
-      "lesson-16",
-      "lesson-17",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "also-and-all",
+      "around-an-action",
+      "becoming-and-making",
+      "colors",
+      "comparing",
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "inside-a-sentence",
+      "linking-sentences",
+      "moving",
+      "numbers",
+      "pre-verbs",
+      "roles-of-a-word",
+      "when-it-happens"
     ],
     "ai4": [
       "proverbs",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-07",
-      "lesson-17",
-      "lesson-18",
-      "lesson-21"
+      "colors",
+      "comparing",
+      "greetings-and-feelings",
+      "pre-verbs",
+      "roles-of-a-word"
     ],
     "jue2de": [
       "proverbs",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-21",
-      "lesson-22"
+      "doubling-words",
+      "greetings-and-feelings"
     ],
     "zhi1dao4": [
       "proverbs",
       "appendix-minimality",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-07",
-      "lesson-08",
-      "lesson-14",
-      "lesson-18",
-      "lesson-20",
-      "lesson-22"
+      "also-and-all",
+      "doubling-words",
+      "linking-sentences",
+      "moving",
+      "pre-verbs",
+      "roles-of-a-word",
+      "when-it-happens"
     ],
     "xue2": [
       "appendix-grammar",
-      "lesson-07",
-      "lesson-08",
-      "lesson-09",
-      "lesson-22"
+      "around-an-action",
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "pre-verbs",
+      "when-it-happens"
+    ],
+    "suan4": [
+      "everyday-patterns",
+      "inside-a-sentence",
+      "numbers"
+    ],
+    "jiao1": [
+      "appendix-grammar",
+      "everyday-patterns"
     ],
     "kan4": [
       "appendix-stories",
       "appendix-grammar",
-      "lesson-05",
-      "lesson-07",
-      "lesson-08",
-      "lesson-09",
-      "lesson-12",
-      "lesson-14",
-      "lesson-15",
-      "lesson-22"
+      "also-and-all",
+      "around-an-action",
+      "becoming-and-making",
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "how-much",
+      "pre-verbs",
+      "when-it-happens",
+      "who-does-what"
     ],
     "ting1": [
       "appendix-stories",
       "appendix-grammar",
-      "lesson-05",
-      "lesson-06",
-      "lesson-07",
-      "lesson-08",
-      "lesson-09",
-      "lesson-21",
-      "lesson-22"
+      "around-an-action",
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "pre-verbs",
+      "questions",
+      "when-it-happens",
+      "who-does-what"
     ],
     "shuo1": [
       "proverbs",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-05",
-      "lesson-06",
-      "lesson-07",
-      "lesson-08",
-      "lesson-09",
-      "lesson-18",
-      "lesson-19",
-      "lesson-21",
-      "lesson-22"
+      "around-an-action",
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "inside-a-sentence",
+      "pre-verbs",
+      "questions",
+      "roles-of-a-word",
+      "when-it-happens",
+      "who-does-what"
     ],
     "xie3": [
       "appendix-grammar",
-      "lesson-05",
-      "lesson-06",
-      "lesson-07",
-      "lesson-08",
-      "lesson-09",
-      "lesson-18",
-      "lesson-19"
+      "around-an-action",
+      "direction-and-result",
+      "everyday-patterns",
+      "inside-a-sentence",
+      "pre-verbs",
+      "questions",
+      "roles-of-a-word",
+      "when-it-happens",
+      "who-does-what"
     ],
     "yong4": [
       "appendix-minimality",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-19",
-      "lesson-21"
+      "greetings-and-feelings",
+      "inside-a-sentence"
     ],
     "jiao4": [
-      "lesson-01",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-21",
-      "lesson-22"
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "sounds-and-symbols"
     ],
     "kai1shi3": [
       "appendix-stories",
       "appendix-grammar",
-      "lesson-09",
-      "lesson-21"
+      "around-an-action",
+      "greetings-and-feelings"
     ],
     "guan1": [
-      "lesson-14",
-      "lesson-15",
-      "lesson-20"
+      "also-and-all",
+      "becoming-and-making",
+      "linking-sentences"
     ],
     "kai1": [
-      "lesson-14",
-      "lesson-15",
-      "lesson-19"
+      "appendix-grammar",
+      "also-and-all",
+      "becoming-and-making",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "inside-a-sentence"
     ],
     "wan2": [
       "appendix-grammar",
-      "lesson-09",
-      "lesson-11",
-      "lesson-14",
-      "lesson-20"
+      "also-and-all",
+      "around-an-action",
+      "direction-and-result",
+      "everyday-patterns",
+      "linking-sentences",
+      "moving"
     ],
     "shui4jiao4": [
-      "lesson-01",
       "proverbs",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-08",
-      "lesson-09",
-      "lesson-16",
-      "lesson-19",
-      "lesson-22"
+      "around-an-action",
+      "doubling-words",
+      "everyday-patterns",
+      "inside-a-sentence",
+      "numbers",
+      "sounds-and-symbols",
+      "when-it-happens"
     ],
     "deng3": [
       "appendix-grammar",
-      "lesson-07",
-      "lesson-08",
-      "lesson-09",
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "around-an-action",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "linking-sentences",
+      "pre-verbs",
+      "when-it-happens"
     ],
     "chi1": [
       "appendix-stories",
       "appendix-grammar",
-      "lesson-05",
-      "lesson-06",
-      "lesson-07",
-      "lesson-08",
-      "lesson-09",
-      "lesson-10",
-      "lesson-11",
-      "lesson-14",
-      "lesson-16",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20",
-      "lesson-21"
+      "also-and-all",
+      "around-an-action",
+      "direction-and-result",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "inside-a-sentence",
+      "linking-sentences",
+      "moving",
+      "numbers",
+      "pre-verbs",
+      "questions",
+      "roles-of-a-word",
+      "when-it-happens",
+      "where-it-is",
+      "who-does-what"
     ],
     "wan2r": [
       "appendix-stories",
       "appendix-grammar",
-      "lesson-09",
-      "lesson-22"
+      "around-an-action",
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "linking-sentences"
     ],
     "lai2": [
       "proverbs",
       "appendix-minimality",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-11",
-      "lesson-14",
-      "lesson-16",
-      "lesson-19",
-      "lesson-20",
-      "lesson-21"
+      "also-and-all",
+      "colors",
+      "comparing",
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "how-much",
+      "inside-a-sentence",
+      "linking-sentences",
+      "moving",
+      "numbers"
     ],
     "qu4": [
       "appendix-minimality",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-11",
-      "lesson-16",
-      "lesson-19",
-      "lesson-20",
-      "lesson-21"
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "inside-a-sentence",
+      "linking-sentences",
+      "moving",
+      "numbers"
     ],
     "bian4": [
       "proverbs",
       "appendix-minimality",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-15",
-      "lesson-20"
+      "becoming-and-making",
+      "linking-sentences"
     ],
     "nong4": [
       "proverbs",
       "appendix-minimality",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-15",
-      "lesson-19"
+      "becoming-and-making",
+      "direction-and-result",
+      "everyday-patterns",
+      "inside-a-sentence"
     ],
     "fang4": [
       "appendix-grammar",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17"
+      "becoming-and-making",
+      "colors",
+      "direction-and-result",
+      "greetings-and-feelings",
+      "numbers"
     ],
     "na2": [
       "appendix-grammar",
-      "lesson-16",
-      "lesson-17",
-      "lesson-19",
-      "lesson-21"
+      "colors",
+      "direction-and-result",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "inside-a-sentence",
+      "numbers"
+    ],
+    "mai3": [
+      "inside-a-sentence",
+      "numbers",
+      "questions"
+    ],
+    "bang1": [
+      "appendix-grammar",
+      "everyday-patterns"
     ],
     "da3": [
       "proverbs",
       "appendix-stories",
-      "lesson-19"
+      "inside-a-sentence"
     ],
     "gei3": [
       "proverbs",
       "appendix-minimality",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-19",
-      "lesson-20",
-      "lesson-21"
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "inside-a-sentence",
+      "linking-sentences"
     ],
     "mo1": [
-      "lesson-19",
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "inside-a-sentence",
+      "linking-sentences"
     ],
     "zhao3": [
       "appendix-stories",
       "appendix-grammar",
-      "lesson-06",
-      "lesson-07"
+      "direction-and-result",
+      "everyday-patterns",
+      "pre-verbs",
+      "questions"
     ],
     "zai4": [
       "proverbs",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-08",
-      "lesson-10",
-      "lesson-11",
-      "lesson-13",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20",
-      "lesson-21"
+      "also-and-all",
+      "becoming-and-making",
+      "colors",
+      "comparing",
+      "direction-and-result",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "inside-a-sentence",
+      "linking-sentences",
+      "moving",
+      "numbers",
+      "roles-of-a-word",
+      "when-it-happens",
+      "where-it-is"
     ],
     "shi4": [
       "proverbs",
-      "lesson-02",
       "appendix-stories",
-      "lesson-03",
       "appendix-grammar",
-      "lesson-04",
-      "lesson-06",
-      "lesson-08",
-      "lesson-14",
-      "lesson-16",
-      "lesson-17",
-      "lesson-18",
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "also-and-all",
+      "colors",
+      "doubling-words",
+      "greetings-and-feelings",
+      "linking-sentences",
+      "modifying-nouns",
+      "numbers",
+      "pointing",
+      "questions",
+      "roles-of-a-word",
+      "when-it-happens",
+      "words-and-sentences"
     ],
     "liu2": [
       "proverbs",
-      "lesson-09",
-      "lesson-10",
-      "lesson-21"
+      "around-an-action",
+      "greetings-and-feelings",
+      "where-it-is"
     ],
     "de2": [
       "appendix-minimality",
       "appendix-stories",
-      "lesson-15",
-      "lesson-19"
+      "becoming-and-making"
     ],
     "you3": [
       "proverbs",
       "appendix-minimality",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-05",
-      "lesson-06",
-      "lesson-10",
-      "lesson-12",
-      "lesson-13",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17",
-      "lesson-18",
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "also-and-all",
+      "becoming-and-making",
+      "colors",
+      "comparing",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "how-much",
+      "inside-a-sentence",
+      "linking-sentences",
+      "moving",
+      "numbers",
+      "questions",
+      "roles-of-a-word",
+      "where-it-is",
+      "who-does-what"
     ],
     "si3": [
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "doubling-words",
+      "greetings-and-feelings",
+      "linking-sentences"
     ],
     "shi2jian1": [
       "proverbs",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-08",
-      "lesson-09",
-      "lesson-11",
-      "lesson-16",
-      "lesson-22"
+      "around-an-action",
+      "doubling-words",
+      "moving",
+      "numbers",
+      "when-it-happens"
     ],
     "cong2": [
       "appendix-grammar",
-      "lesson-11",
-      "lesson-16",
-      "lesson-21"
+      "direction-and-result",
+      "greetings-and-feelings",
+      "moving",
+      "numbers"
     ],
     "dui4": [
       "appendix-stories",
       "appendix-grammar",
-      "lesson-19"
+      "inside-a-sentence"
     ],
     "di4fang1": [
       "proverbs",
       "appendix-minimality",
       "appendix-stories",
-      "lesson-03",
       "appendix-grammar",
-      "lesson-11",
-      "lesson-13",
-      "lesson-19",
-      "lesson-20"
+      "comparing",
+      "everyday-patterns",
+      "inside-a-sentence",
+      "linking-sentences",
+      "modifying-nouns",
+      "moving"
+    ],
+    "lu4": [
+      "appendix-grammar",
+      "comparing",
+      "linking-sentences",
+      "moving"
     ],
     "di4": [
       "appendix-stories",
       "appendix-grammar",
-      "lesson-10",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17"
+      "becoming-and-making",
+      "colors",
+      "direction-and-result",
+      "numbers",
+      "where-it-is"
     ],
     "pang2bian1": [
       "proverbs",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-10"
+      "moving",
+      "where-it-is"
+    ],
+    "you4bian1": [
+      "appendix-grammar",
+      "colors",
+      "comparing",
+      "where-it-is"
+    ],
+    "zuo3bian1": [
+      "appendix-grammar",
+      "comparing",
+      "everyday-patterns",
+      "moving",
+      "where-it-is"
     ],
     "qian2": [
       "appendix-grammar",
-      "lesson-10",
-      "lesson-11",
-      "lesson-16"
+      "direction-and-result",
+      "moving",
+      "numbers",
+      "where-it-is"
     ],
     "wai4": [
       "appendix-stories",
-      "lesson-11",
-      "lesson-14",
-      "lesson-16",
-      "lesson-19",
-      "lesson-20"
+      "also-and-all",
+      "inside-a-sentence",
+      "linking-sentences",
+      "moving",
+      "numbers"
     ],
     "ba3": [
       "proverbs",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17",
-      "lesson-19"
+      "becoming-and-making",
+      "colors",
+      "direction-and-result",
+      "everyday-patterns",
+      "inside-a-sentence",
+      "numbers"
     ],
     "de": [
       "proverbs",
       "appendix-minimality",
       "appendix-stories",
-      "lesson-03",
       "appendix-grammar",
-      "lesson-04",
-      "lesson-05",
-      "lesson-06",
-      "lesson-07",
-      "lesson-08",
-      "lesson-09",
-      "lesson-10",
-      "lesson-11",
-      "lesson-12",
-      "lesson-13",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "also-and-all",
+      "around-an-action",
+      "becoming-and-making",
+      "colors",
+      "comparing",
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "how-much",
+      "inside-a-sentence",
+      "linking-sentences",
+      "modifying-nouns",
+      "moving",
+      "numbers",
+      "pointing",
+      "pre-verbs",
+      "questions",
+      "roles-of-a-word",
+      "when-it-happens",
+      "where-it-is",
+      "who-does-what"
     ],
     "le": [
       "proverbs",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-08",
-      "lesson-09",
-      "lesson-10",
-      "lesson-11",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "also-and-all",
+      "around-an-action",
+      "becoming-and-making",
+      "colors",
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "inside-a-sentence",
+      "linking-sentences",
+      "moving",
+      "numbers",
+      "roles-of-a-word",
+      "when-it-happens",
+      "where-it-is"
     ],
     "ma": [
       "appendix-grammar",
-      "lesson-06",
-      "lesson-07",
-      "lesson-08",
-      "lesson-09",
-      "lesson-10",
-      "lesson-11",
-      "lesson-12",
-      "lesson-13",
-      "lesson-14",
-      "lesson-15",
-      "lesson-17",
-      "lesson-18",
-      "lesson-19",
-      "lesson-21"
+      "also-and-all",
+      "around-an-action",
+      "becoming-and-making",
+      "colors",
+      "comparing",
+      "direction-and-result",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "how-much",
+      "inside-a-sentence",
+      "moving",
+      "numbers",
+      "pre-verbs",
+      "questions",
+      "roles-of-a-word",
+      "when-it-happens",
+      "where-it-is"
     ],
     "bu4": [
-      "lesson-02",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-05",
-      "lesson-06",
-      "lesson-07",
-      "lesson-09",
-      "lesson-11",
-      "lesson-12",
-      "lesson-14",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "also-and-all",
+      "around-an-action",
+      "becoming-and-making",
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "how-much",
+      "inside-a-sentence",
+      "linking-sentences",
+      "moving",
+      "pre-verbs",
+      "questions",
+      "roles-of-a-word",
+      "who-does-what",
+      "words-and-sentences"
     ],
     "mei2": [
       "appendix-stories",
       "appendix-grammar",
-      "lesson-05",
-      "lesson-06",
-      "lesson-13",
-      "lesson-14",
-      "lesson-15",
-      "lesson-20"
+      "also-and-all",
+      "becoming-and-making",
+      "comparing",
+      "direction-and-result",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "inside-a-sentence",
+      "linking-sentences",
+      "questions",
+      "who-does-what"
     ],
     "dan4shi4": [
-      "lesson-01",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-20",
-      "lesson-22"
+      "doubling-words",
+      "linking-sentences",
+      "sounds-and-symbols"
     ],
     "he2": [
       "proverbs",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-19",
-      "lesson-21"
+      "greetings-and-feelings",
+      "inside-a-sentence"
     ],
     "huo4zhe3": [
       "appendix-grammar",
-      "lesson-19",
-      "lesson-20",
-      "lesson-21"
+      "greetings-and-feelings",
+      "inside-a-sentence",
+      "linking-sentences"
     ],
     "ye3": [
       "proverbs",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-14",
-      "lesson-17",
-      "lesson-19"
+      "also-and-all",
+      "colors",
+      "inside-a-sentence"
     ],
     "you4": [
       "appendix-grammar",
-      "lesson-09",
-      "lesson-10",
-      "lesson-11"
+      "around-an-action",
+      "moving",
+      "where-it-is"
     ],
     "yin1wei4": [
       "appendix-grammar",
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "doubling-words",
+      "greetings-and-feelings",
+      "linking-sentences"
+    ],
+    "ru2guo3": [
+      "appendix-grammar",
+      "doubling-words",
+      "greetings-and-feelings",
+      "linking-sentences"
     ],
     "wei4shen2me": [
       "appendix-grammar",
-      "lesson-06",
-      "lesson-08",
-      "lesson-20",
-      "lesson-21"
+      "greetings-and-feelings",
+      "linking-sentences",
+      "questions",
+      "when-it-happens"
     ],
     "zen3me": [
       "appendix-grammar",
-      "lesson-06",
-      "lesson-07",
-      "lesson-08",
-      "lesson-18"
+      "pre-verbs",
+      "questions",
+      "roles-of-a-word",
+      "when-it-happens"
     ],
     "neng2": [
       "appendix-stories",
       "appendix-grammar",
-      "lesson-07",
-      "lesson-11",
-      "lesson-15",
-      "lesson-16",
-      "lesson-19",
-      "lesson-20"
+      "becoming-and-making",
+      "direction-and-result",
+      "everyday-patterns",
+      "inside-a-sentence",
+      "linking-sentences",
+      "moving",
+      "numbers",
+      "pre-verbs"
     ],
     "hui4": [
       "appendix-grammar",
-      "lesson-08",
-      "lesson-09",
-      "lesson-20"
+      "around-an-action",
+      "direction-and-result",
+      "linking-sentences",
+      "when-it-happens"
     ],
     "hen3": [
-      "lesson-01",
       "proverbs",
       "appendix-minimality",
       "appendix-stories",
-      "lesson-03",
       "appendix-grammar",
-      "lesson-04",
-      "lesson-05",
-      "lesson-08",
-      "lesson-09",
-      "lesson-11",
-      "lesson-12",
-      "lesson-13",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "also-and-all",
+      "around-an-action",
+      "becoming-and-making",
+      "colors",
+      "comparing",
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "how-much",
+      "inside-a-sentence",
+      "linking-sentences",
+      "modifying-nouns",
+      "moving",
+      "numbers",
+      "pointing",
+      "roles-of-a-word",
+      "sounds-and-symbols",
+      "when-it-happens",
+      "where-it-is",
+      "who-does-what"
+    ],
+    "zui4": [
+      "appendix-grammar",
+      "comparing",
+      "greetings-and-feelings",
+      "numbers"
     ],
     "fang1fa3": [
       "proverbs",
-      "lesson-18",
-      "lesson-19",
-      "lesson-20"
+      "inside-a-sentence",
+      "linking-sentences",
+      "roles-of-a-word"
     ],
     "sheng1yin1": [
       "appendix-stories",
-      "lesson-21",
-      "lesson-22"
+      "doubling-words",
+      "greetings-and-feelings"
     ],
     "zhen1": [
       "appendix-stories",
       "appendix-grammar",
-      "lesson-12",
-      "lesson-14"
+      "also-and-all",
+      "how-much"
     ],
     "wen4": [
       "appendix-stories",
-      "lesson-06",
-      "lesson-07",
-      "lesson-20",
-      "lesson-22"
+      "doubling-words",
+      "everyday-patterns",
+      "linking-sentences",
+      "pre-verbs",
+      "questions"
     ],
     "xie4": [
       "appendix-grammar",
-      "lesson-21",
-      "lesson-22"
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings"
     ],
     "na3li3": [
       "appendix-stories",
       "appendix-grammar",
-      "lesson-10",
-      "lesson-11",
-      "lesson-13",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-21"
+      "also-and-all",
+      "becoming-and-making",
+      "comparing",
+      "greetings-and-feelings",
+      "moving",
+      "numbers",
+      "where-it-is"
     ],
     "pa4": [
       "appendix-stories",
       "appendix-grammar",
-      "lesson-21",
-      "lesson-22"
+      "doubling-words",
+      "greetings-and-feelings"
     ],
     "xiao4": [
-      "lesson-21",
-      "lesson-22"
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings"
     ],
     "xia4": [
       "appendix-stories",
       "appendix-grammar",
-      "lesson-10",
-      "lesson-11"
+      "direction-and-result",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "moving",
+      "numbers",
+      "where-it-is"
     ],
     "shang4": [
       "appendix-stories",
       "appendix-grammar",
-      "lesson-10",
-      "lesson-11",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17",
-      "lesson-21"
+      "becoming-and-making",
+      "colors",
+      "direction-and-result",
+      "greetings-and-feelings",
+      "moving",
+      "numbers",
+      "roles-of-a-word",
+      "where-it-is"
     ],
     "qi3": [
       "appendix-grammar",
-      "lesson-11",
-      "lesson-14",
-      "lesson-16"
+      "also-and-all",
+      "direction-and-result",
+      "everyday-patterns",
+      "linking-sentences",
+      "moving",
+      "numbers"
     ],
     "hou4": [
+      "appendix-stories",
       "appendix-grammar",
-      "lesson-09",
-      "lesson-10",
-      "lesson-11"
+      "around-an-action",
+      "comparing",
+      "moving",
+      "where-it-is"
     ],
     "li3": [
       "proverbs",
       "appendix-stories",
       "appendix-grammar",
-      "lesson-10",
-      "lesson-13",
-      "lesson-14",
-      "lesson-15",
-      "lesson-16",
-      "lesson-17",
-      "lesson-18",
-      "lesson-20",
-      "lesson-21"
+      "also-and-all",
+      "becoming-and-making",
+      "colors",
+      "comparing",
+      "direction-and-result",
+      "greetings-and-feelings",
+      "linking-sentences",
+      "numbers",
+      "roles-of-a-word",
+      "where-it-is"
     ],
     "mian4": [
       "appendix-grammar",
-      "lesson-10",
-      "lesson-11",
-      "lesson-14",
-      "lesson-16",
-      "lesson-19",
-      "lesson-20"
+      "also-and-all",
+      "direction-and-result",
+      "inside-a-sentence",
+      "linking-sentences",
+      "moving",
+      "numbers",
+      "where-it-is"
     ],
     "bian1": [
-      "lesson-10",
-      "lesson-11",
-      "lesson-14"
+      "also-and-all",
+      "moving",
+      "where-it-is"
     ],
     "pang2": [
-      "lesson-10",
-      "lesson-11",
-      "lesson-14"
+      "also-and-all",
+      "moving",
+      "where-it-is"
     ],
     "dao4": [
       "appendix-stories",
       "appendix-grammar",
-      "lesson-11",
-      "lesson-14",
-      "lesson-21"
+      "also-and-all",
+      "direction-and-result",
+      "greetings-and-feelings",
+      "moving"
     ],
     "guo4": [
       "appendix-grammar",
-      "lesson-08",
-      "lesson-09",
-      "lesson-11",
-      "lesson-12",
-      "lesson-16"
-    ],
-    "hua4": [
-      "appendix-grammar",
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "around-an-action",
+      "how-much",
+      "moving",
+      "numbers",
+      "when-it-happens"
     ],
     "san1": [
       "appendix-grammar",
-      "lesson-16",
-      "lesson-19",
-      "lesson-21"
+      "greetings-and-feelings",
+      "inside-a-sentence",
+      "numbers"
     ],
     "si4": [
       "appendix-grammar",
-      "lesson-16",
-      "lesson-17",
-      "lesson-19"
+      "colors",
+      "inside-a-sentence",
+      "numbers"
     ],
     "wu3": [
       "appendix-grammar",
-      "lesson-16",
-      "lesson-17",
-      "lesson-20"
+      "colors",
+      "linking-sentences",
+      "numbers"
     ],
     "liu4": [
       "appendix-grammar",
-      "lesson-16",
-      "lesson-17",
-      "lesson-19"
+      "colors",
+      "inside-a-sentence",
+      "numbers"
     ],
     "qi1": [
       "appendix-grammar",
-      "lesson-16",
-      "lesson-17",
-      "lesson-19"
+      "colors",
+      "inside-a-sentence",
+      "numbers"
     ],
     "ba1": [
       "appendix-grammar",
-      "lesson-16",
-      "lesson-17",
-      "lesson-19"
+      "colors",
+      "inside-a-sentence",
+      "numbers"
     ],
     "jiu3": [
       "appendix-grammar",
-      "lesson-16",
-      "lesson-19",
-      "lesson-20"
+      "inside-a-sentence",
+      "linking-sentences",
+      "numbers"
     ],
     "shi2": [
       "appendix-grammar",
-      "lesson-16",
-      "lesson-18",
-      "lesson-20"
+      "linking-sentences",
+      "numbers",
+      "roles-of-a-word"
     ],
     "men": [
       "appendix-grammar",
-      "lesson-04",
-      "lesson-05",
-      "lesson-09",
-      "lesson-11",
-      "lesson-13",
-      "lesson-14",
-      "lesson-16",
-      "lesson-20",
-      "lesson-21",
-      "lesson-22"
+      "also-and-all",
+      "around-an-action",
+      "comparing",
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "inside-a-sentence",
+      "linking-sentences",
+      "moving",
+      "numbers",
+      "pointing",
+      "who-does-what"
     ],
     "er4": [
       "appendix-grammar",
-      "lesson-16",
-      "lesson-20",
-      "lesson-21"
+      "greetings-and-feelings",
+      "linking-sentences",
+      "numbers"
     ],
     "shao3": [
-      "lesson-03",
       "appendix-grammar",
-      "lesson-05",
-      "lesson-09",
-      "lesson-13",
-      "lesson-16"
+      "around-an-action",
+      "comparing",
+      "modifying-nouns",
+      "numbers",
+      "who-does-what"
     ],
     "ke3neng2": [
       "appendix-grammar",
-      "lesson-07",
-      "lesson-08",
-      "lesson-10"
+      "pre-verbs",
+      "when-it-happens",
+      "where-it-is"
     ],
     "xian4zai4": [
       "appendix-grammar",
-      "lesson-08",
-      "lesson-09",
-      "lesson-11",
-      "lesson-16"
+      "around-an-action",
+      "moving",
+      "numbers",
+      "when-it-happens"
     ],
     "fa1sheng1": [
       "appendix-grammar",
-      "lesson-08",
-      "lesson-09",
-      "lesson-21"
+      "around-an-action",
+      "greetings-and-feelings",
+      "when-it-happens"
     ],
     "yi1xia4": [
       "appendix-grammar",
-      "lesson-09",
-      "lesson-11",
-      "lesson-19",
-      "lesson-22"
+      "around-an-action",
+      "doubling-words",
+      "everyday-patterns",
+      "inside-a-sentence",
+      "moving",
+      "numbers"
     ],
     "yuan3": [
       "appendix-grammar",
-      "lesson-11",
-      "lesson-13",
-      "lesson-20"
+      "also-and-all",
+      "comparing",
+      "linking-sentences",
+      "moving"
     ],
-    "jin4": [
+    "fu4jin4": [
       "appendix-grammar",
-      "lesson-11",
-      "lesson-13",
-      "lesson-14",
-      "lesson-19"
+      "direction-and-result",
+      "inside-a-sentence",
+      "moving"
     ],
     "dong4": [
       "appendix-grammar",
-      "lesson-11",
-      "lesson-14",
-      "lesson-21"
+      "also-and-all",
+      "direction-and-result",
+      "greetings-and-feelings",
+      "moving"
+    ],
+    "fei1": [
+      "colors",
+      "direction-and-result",
+      "greetings-and-feelings"
+    ],
+    "tang3": [
+      "appendix-grammar",
+      "direction-and-result",
+      "greetings-and-feelings",
+      "numbers"
+    ],
+    "zhan4": [
+      "appendix-grammar",
+      "direction-and-result",
+      "everyday-patterns",
+      "linking-sentences"
+    ],
+    "zuo4": [
+      "appendix-grammar",
+      "direction-and-result",
+      "everyday-patterns",
+      "greetings-and-feelings"
+    ],
+    "jin4": [
+      "appendix-grammar",
+      "colors",
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings"
+    ],
+    "chu1": [
+      "appendix-grammar",
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "linking-sentences"
+    ],
+    "hui2": [
+      "appendix-grammar",
+      "direction-and-result",
+      "greetings-and-feelings",
+      "linking-sentences",
+      "numbers"
     ],
     "jia4zhi2": [
       "appendix-grammar",
-      "lesson-12",
-      "lesson-13",
-      "lesson-18"
+      "comparing",
+      "how-much",
+      "roles-of-a-word"
     ],
     "bie2de": [
       "appendix-grammar",
-      "lesson-13",
-      "lesson-14",
-      "lesson-17"
+      "also-and-all",
+      "colors",
+      "comparing"
     ],
     "zhong3": [
       "appendix-grammar",
-      "lesson-13",
-      "lesson-16",
-      "lesson-17"
+      "colors",
+      "comparing",
+      "numbers"
     ],
     "bu4fen": [
       "appendix-grammar",
-      "lesson-14",
-      "lesson-16",
-      "lesson-19"
+      "also-and-all",
+      "inside-a-sentence",
+      "numbers"
     ],
     "huo2": [
-      "lesson-20",
-      "lesson-21"
+      "doubling-words",
+      "greetings-and-feelings",
+      "linking-sentences"
     ]
   }
 }

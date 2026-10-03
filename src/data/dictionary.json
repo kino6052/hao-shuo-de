@@ -238,6 +238,32 @@
       },
       "maps": "lawa"
     },
+    "xin1": {
+      "term": "xīn",
+      "pos": {
+        "eng": "noun",
+        "rus": "существительное",
+        "zh": "名词"
+      },
+      "definition": {
+        "eng": "heart, mind; {{word:kai1}}-{{word:xin1}}, \"happy\"; {{word:xiao3}}-{{word:xin1}}, \"careful\"; {{word:fang4}}-{{word:xin1}}, \"don't worry\"",
+        "rus": "сердце, душа; {{word:kai1}}-{{word:xin1}} — «радостный»; {{word:xiao3}}-{{word:xin1}} — «осторожно»; {{word:fang4}}-{{word:xin1}} — «не волнуйся»",
+        "zh": "心"
+      }
+    },
+    "mao2": {
+      "term": "máo",
+      "pos": {
+        "eng": "noun",
+        "rus": "существительное",
+        "zh": "名词"
+      },
+      "definition": {
+        "eng": "hair, fur, feathers; {{word:tou2}}-{{word:shang4}}-{{word:de}} {{word:mao2}}, \"hair on the head\"",
+        "rus": "шерсть, волосы, перья; {{word:tou2}}-{{word:shang4}}-{{word:de}} {{word:mao2}} — «волосы на голове»",
+        "zh": "毛"
+      }
+    },
     "ren2": {
       "term": "rén",
       "pos": {
@@ -265,6 +291,19 @@
         "zh": "父母，祖先，创造者，照料者"
       },
       "maps": "mama"
+    },
+    "guan1xi": {
+      "term": "guānxi",
+      "pos": {
+        "eng": "noun",
+        "rus": "существительное",
+        "zh": "名词"
+      },
+      "definition": {
+        "eng": "relationship, connection; {{word:mei2}}-{{word:you3}} {{word:guan1xi}}, \"it doesn't matter\"",
+        "rus": "отношения, связь; {{word:mei2}}-{{word:you3}} {{word:guan1xi}} — «ничего страшного»",
+        "zh": "关系"
+      }
     },
     "bi3": {
       "term": "bǐ",
@@ -850,19 +889,44 @@
       },
       "maps": "nasa"
     },
-    "xin1": {
-      "term": "xīn",
+    "kuai4": {
+      "term": "kuài",
       "pos": {
         "eng": "adjective",
         "rus": "прилагательное",
         "zh": "形容词"
       },
       "definition": {
-        "eng": "new, fresh, additional, another, extra",
-        "rus": "новый, свежий, дополнительный, другой, лишний",
-        "zh": "新的，新鲜的，额外的，另一个的"
+        "eng": "fast, quick; before a verb, quickly ({{word:kuai4}} {{word:lai2}}!, \"come quickly!\")",
+        "rus": "быстрый; перед глаголом — быстро ({{word:kuai4}} {{word:lai2}}! — «иди скорее!»)",
+        "zh": "快"
+      }
+    },
+    "luan4": {
+      "term": "luàn",
+      "pos": {
+        "eng": "adjective",
+        "rus": "прилагательное",
+        "zh": "形容词"
       },
-      "maps": "sin"
+      "definition": {
+        "eng": "messy, in a mess; {{word:nong4}}-{{word:luan4}}, \"make a mess\"",
+        "rus": "беспорядочный, в беспорядке; {{word:nong4}}-{{word:luan4}} — «устроить беспорядок»",
+        "zh": "乱"
+      }
+    },
+    "lao3": {
+      "term": "lǎo",
+      "pos": {
+        "eng": "adjective",
+        "rus": "прилагательное",
+        "zh": "形容词"
+      },
+      "definition": {
+        "eng": "old (people, animals, plants); {{word:bu4}} {{word:lao3}}, \"young\"",
+        "rus": "старый (о людях, животных, растениях); {{word:bu4}} {{word:lao3}} — «молодой»",
+        "zh": "老"
+      }
     },
     "re4": {
       "term": "rè",
@@ -1031,6 +1095,32 @@
         "zh": "学，学习；放在动词前：学做某事（如：我学写）"
       }
     },
+    "suan4": {
+      "term": "suàn",
+      "pos": {
+        "eng": "verb",
+        "rus": "глагол",
+        "zh": "动词"
+      },
+      "definition": {
+        "eng": "to calculate, count, work out; {{word:suan4}}-{{word:de}} {{word:gong1ju4}}, \"computer\"",
+        "rus": "считать, вычислять; {{word:suan4}}-{{word:de}} {{word:gong1ju4}} — «компьютер»",
+        "zh": "算"
+      }
+    },
+    "jiao1": {
+      "term": "jiāo",
+      "pos": {
+        "eng": "verb",
+        "rus": "глагол",
+        "zh": "动词"
+      },
+      "definition": {
+        "eng": "to teach; {{word:jiao1}} + person + verb, \"teach someone to do it\"",
+        "rus": "учить (кого-то); {{word:jiao1}} + человек + глагол — «научить делать»",
+        "zh": "教"
+      }
+    },
     "kan4": {
       "term": "kàn",
       "pos": {
@@ -1109,8 +1199,8 @@
         "zh": "动词"
       },
       "definition": {
-        "eng": "to call, be named; to produce an animal vocalization under the Quote Partition",
-        "rus": "звать, называться; издавать звук животного (в рамках правила о кавычках)",
+        "eng": "to call, be named; to produce an animal vocalization under the Quote Partition; before a person and a verb, to tell, have, or let them do it (e.g. {{word:jiao4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}}, \"let him in\"; {{word:bu4}} {{word:jiao4}}, \"won't let\")",
+        "rus": "звать, называться; издавать звук животного (в рамках правила о кавычках); перед человеком и глаголом — велеть или позволить (например, {{word:jiao4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}} — «пусть войдёт»)",
         "zh": "叫，被称为；在\"引号隔离规则\"下发出动物叫声"
       },
       "maps": "nimi, mu"
@@ -1233,8 +1323,8 @@
         "zh": "动词"
       },
       "definition": {
-        "eng": "to come, arrive, happen",
-        "rus": "приходить, прибывать, происходить",
+        "eng": "to come, arrive, happen; {{word:wo3}} {{word:lai2}} + verb, \"let me do it\"",
+        "rus": "приходить, прибывать, происходить; {{word:wo3}} {{word:lai2}} + глагол — «давай я сделаю»",
         "zh": "来，到达，发生"
       },
       "maps": "kama"
@@ -1305,6 +1395,32 @@
         "eng": "to take, pick up, hold; take away (e.g. {{word:cong2}} {{word:qi1}} {{word:li3}}-{{word:mian4}} {{word:na2}} {{word:san1}}, \"take three from seven\")",
         "rus": "брать, взять, держать; отнимать (напр. {{word:cong2}} {{word:qi1}} {{word:li3}}-{{word:mian4}} {{word:na2}} {{word:san1}}, «отнять три от семи»)",
         "zh": "拿，拿走；（如：从七里面拿三）"
+      }
+    },
+    "mai3": {
+      "term": "mǎi",
+      "pos": {
+        "eng": "verb",
+        "rus": "глагол",
+        "zh": "动词"
+      },
+      "definition": {
+        "eng": "to buy; {{word:mai3}} {{word:dong1xi}}-{{word:de}} {{word:di4fang1}}, \"market, shop\"",
+        "rus": "покупать; {{word:mai3}} {{word:dong1xi}}-{{word:de}} {{word:di4fang1}} — «рынок, магазин»",
+        "zh": "买"
+      }
+    },
+    "bang1": {
+      "term": "bāng",
+      "pos": {
+        "eng": "verb",
+        "rus": "глагол",
+        "zh": "动词"
+      },
+      "definition": {
+        "eng": "to help; before a person and a verb, help them do it (e.g. {{word:bang1}} {{word:wo3}} {{word:kan4}} {{word:yi1xia4}}, \"take a look for me\")",
+        "rus": "помогать; перед человеком и глаголом — помочь сделать (например, {{word:bang1}} {{word:wo3}} {{word:kan4}} {{word:yi1xia4}} — «посмотри за меня»)",
+        "zh": "帮，帮助"
       }
     },
     "da3": {
@@ -1503,6 +1619,19 @@
       },
       "maps": ""
     },
+    "lu4": {
+      "term": "lù",
+      "pos": {
+        "eng": "noun",
+        "rus": "существительное",
+        "zh": "名词"
+      },
+      "definition": {
+        "eng": "road, path, street; the way to a place",
+        "rus": "дорога, путь",
+        "zh": "路"
+      }
+    },
     "di4": {
       "term": "dì",
       "pos": {
@@ -1530,6 +1659,32 @@
         "zh": "旁边，附近，侧面区域，髋部"
       },
       "maps": "poka"
+    },
+    "you4bian1": {
+      "term": "yòubiān",
+      "pos": {
+        "eng": "noun",
+        "rus": "существительное",
+        "zh": "名词"
+      },
+      "definition": {
+        "eng": "right, the right side",
+        "rus": "справа, правая сторона",
+        "zh": "右边"
+      }
+    },
+    "zuo3bian1": {
+      "term": "zuǒbiān",
+      "pos": {
+        "eng": "noun",
+        "rus": "существительное",
+        "zh": "名词"
+      },
+      "definition": {
+        "eng": "left, the left side",
+        "rus": "слева, левая сторона",
+        "zh": "左边"
+      }
     },
     "qian2": {
       "term": "qián",
@@ -1726,6 +1881,19 @@
       },
       "maps": ""
     },
+    "ru2guo3": {
+      "term": "rúguǒ",
+      "pos": {
+        "eng": "conjunction",
+        "rus": "союз",
+        "zh": "连词"
+      },
+      "definition": {
+        "eng": "if; it starts the if-part ({{word:ru2guo3}} {{word:ni3}} {{word:lai2}}, …, \"if you come, …\")",
+        "rus": "если; начинает условие ({{word:ru2guo3}} {{word:ni3}} {{word:lai2}}, … — «если ты придёшь, …»)",
+        "zh": "如果"
+      }
+    },
     "wei4shen2me": {
       "term": "wèishénme",
       "pos": {
@@ -1776,7 +1944,7 @@
         "zh": "助动词"
       },
       "definition": {
-        "eng": "will, going to (marks a predicted or future action); placed before a verb the same way {{word:neng2}} is",
+        "eng": "will, going to (marks a predicted or future action); placed before a verb the same way {{word:neng2}} is; after {{word:xue2}}, {{word:xue2}}-{{word:hui4}} is \"learn until you can\"",
         "rus": "будет, собирается (обозначает предсказанное или будущее действие); ставится перед глаголом так же, как {{word:neng2}}",
         "zh": "将，会（表示预测或未来的动作）；放在动词前，与 {{word:neng2}} 用法相同"
       },
@@ -1796,11 +1964,24 @@
       },
       "maps": "mute"
     },
+    "zui4": {
+      "term": "zuì",
+      "pos": {
+        "eng": "adverb",
+        "rus": "наречие",
+        "zh": "副词"
+      },
+      "definition": {
+        "eng": "most; before an adjective ({{word:zui4}} {{word:da4}}, \"biggest\"); {{word:zui4}}-{{word:hou4}}, \"last\"",
+        "rus": "самый; перед прилагательным ({{word:zui4}} {{word:da4}} — «самый большой»); {{word:zui4}}-{{word:hou4}} — «последний»",
+        "zh": "最"
+      }
+    },
     "fang1fa3": {
       "term": "fāngfǎ",
       "pos": {
-        "eng": "noun",
-        "rus": "существительное",
+        "eng": "method, manner: how something is done (a path to a place is {{word:lu4}})",
+        "rus": "способ, метод: как что-то делается (дорога — {{word:lu4}})",
         "zh": "名词"
       },
       "definition": {
@@ -2044,19 +2225,6 @@
         "zh": "用在动词后，表示曾经做过（如 {{word:chi1}}-{{word:guo4}}，“吃过”）"
       }
     },
-    "hua4": {
-      "term": "huà",
-      "pos": {
-        "eng": "noun",
-        "rus": "существительное",
-        "zh": "名词"
-      },
-      "definition": {
-        "eng": "speech, words; in X-{{word:de}} {{word:hua4}}, \"if X\" (literally \"the words of X\")",
-        "rus": "речь, слова; в X-{{word:de}} {{word:hua4}} значит «если X» (букв. «слова об X»)",
-        "zh": "话；X-{{word:de}} {{word:hua4}} 表示“如果 X”（字面意思“X 的话”）"
-      }
-    },
     "san1": {
       "term": "sān",
       "pos": {
@@ -2265,17 +2433,17 @@
         "zh": "远"
       }
     },
-    "jin4": {
-      "term": "jìn",
+    "fu4jin4": {
+      "term": "fùjìn",
       "pos": {
-        "eng": "adjective",
-        "rus": "прилагательное",
-        "zh": "形容词"
+        "eng": "noun",
+        "rus": "существительное",
+        "zh": "名词"
       },
       "definition": {
-        "eng": "near, close",
-        "rus": "близкий, близко",
-        "zh": "近"
+        "eng": "nearby, the area near something; a place word like {{word:pang2bian1}}: {{word:zai4}} {{word:fu4jin4}}, \"nearby\", or {{word:zai4}} {{word:jia1}} {{word:fu4jin4}}, \"near home\" (not {{word:hen3}} {{word:fu4jin4}})",
+        "rus": "поблизости, окрестность; слово места, как {{word:pang2bian1}}: {{word:zai4}} {{word:fu4jin4}} — «рядом», {{word:zai4}} {{word:jia1}} {{word:fu4jin4}} — «недалеко от дома»",
+        "zh": "附近"
       }
     },
     "dong4": {
@@ -2289,6 +2457,97 @@
         "eng": "to move; to stir, to budge",
         "rus": "двигаться, шевелиться; двигать",
         "zh": "动，移动"
+      }
+    },
+    "fei1": {
+      "term": "fēi",
+      "pos": {
+        "eng": "verb",
+        "rus": "глагол",
+        "zh": "动词"
+      },
+      "definition": {
+        "eng": "to fly",
+        "rus": "летать",
+        "zh": "飞"
+      }
+    },
+    "tang3": {
+      "term": "tǎng",
+      "pos": {
+        "eng": "verb",
+        "rus": "глагол",
+        "zh": "动词"
+      },
+      "definition": {
+        "eng": "to lie (down); {{word:tang3}}-{{word:xia4}}, \"lie down\"",
+        "rus": "лежать; {{word:tang3}}-{{word:xia4}} — «лечь»",
+        "zh": "躺"
+      }
+    },
+    "zhan4": {
+      "term": "zhàn",
+      "pos": {
+        "eng": "verb",
+        "rus": "глагол",
+        "zh": "动词"
+      },
+      "definition": {
+        "eng": "to stand; {{word:zhan4}}-{{word:qi3}}-{{word:lai2}}, \"stand up\"",
+        "rus": "стоять; {{word:zhan4}}-{{word:qi3}}-{{word:lai2}} — «встать»",
+        "zh": "站"
+      }
+    },
+    "zuo4": {
+      "term": "zuò",
+      "pos": {
+        "eng": "verb",
+        "rus": "глагол",
+        "zh": "动词"
+      },
+      "definition": {
+        "eng": "to sit; {{word:zuo4}}-{{word:xia4}}, \"sit down\"",
+        "rus": "сидеть; {{word:zuo4}}-{{word:xia4}} — «сесть»",
+        "zh": "坐"
+      }
+    },
+    "jin4": {
+      "term": "jìn",
+      "pos": {
+        "eng": "verb",
+        "rus": "глагол",
+        "zh": "动词"
+      },
+      "definition": {
+        "eng": "to enter, go in, come in; after a verb, says it goes in (e.g. {{word:jin4}}-{{word:lai2}}, \"come in\"; {{word:fang4}}-{{word:jin4}}-{{word:qu4}}, \"put in\")",
+        "rus": "входить; после глагола — внутрь (например, {{word:jin4}}-{{word:lai2}} — «войди», {{word:fang4}}-{{word:jin4}}-{{word:qu4}} — «положить внутрь»)",
+        "zh": "进"
+      }
+    },
+    "chu1": {
+      "term": "chū",
+      "pos": {
+        "eng": "verb",
+        "rus": "глагол",
+        "zh": "动词"
+      },
+      "definition": {
+        "eng": "to go out, come out, exit; after a verb, says it comes out (e.g. {{word:chu1}}-{{word:qu4}}, \"go out\"; {{word:na2}}-{{word:chu1}}-{{word:lai2}}, \"take out\")",
+        "rus": "выходить; после глагола — наружу (например, {{word:chu1}}-{{word:qu4}} — «выйти», {{word:na2}}-{{word:chu1}}-{{word:lai2}} — «вынуть»)",
+        "zh": "出"
+      }
+    },
+    "hui2": {
+      "term": "huí",
+      "pos": {
+        "eng": "verb",
+        "rus": "глагол",
+        "zh": "动词"
+      },
+      "definition": {
+        "eng": "to return, go back, come back; after a verb, says it goes back (e.g. {{word:hui2}} {{word:jia1}}, \"go home\"; {{word:hui2}}-{{word:lai2}}, \"come back\")",
+        "rus": "возвращаться; после глагола — обратно (например, {{word:hui2}} {{word:jia1}} — «пойти домой», {{word:hui2}}-{{word:lai2}} — «вернуться»)",
+        "zh": "回"
       }
     },
     "jia4zhi2": {
@@ -2400,15 +2659,7 @@
             "rus": "Тело",
             "zh": "身体"
           },
-          "wordIds": [
-            "bi2zi",
-            "jiao3",
-            "kou3",
-            "pi2fu1",
-            "shen1ti3",
-            "shou3",
-            "tou2"
-          ]
+          "wordIds": ["bi2zi", "jiao3", "kou3", "pi2fu1", "shen1ti3", "shou3", "tou2", "mao2", "xin1"]
         },
         {
           "key": "people-kinship",
@@ -2417,7 +2668,7 @@
             "rus": "Люди и родство",
             "zh": "人与亲属"
           },
-          "wordIds": ["ren2", "fu4mu3", "nan2ren2", "nv3ren2", "qun2"]
+          "wordIds": ["ren2", "fu4mu3", "nan2ren2", "nv3ren2", "qun2", "guan1xi"]
         },
         {
           "key": "food-drink",
@@ -2617,7 +2868,7 @@
             "rus": "Прочие качества",
             "zh": "其他性质"
           },
-          "wordIds": ["qi2guai4", "xin1"]
+          "wordIds": ["qi2guai4", "lao3", "luan4"]
         },
         {
           "key": "temperature-taste",
@@ -2644,7 +2895,7 @@
             "rus": "Размер",
             "zh": "大小"
           },
-          "wordIds": ["xiao3", "da4"]
+          "wordIds": ["xiao3", "da4", "kuai4"]
         }
       ]
     },
@@ -2672,7 +2923,7 @@
             "rus": "Познание",
             "zh": "认知"
           },
-          "wordIds": ["jue2de", "zhi1dao4", "xue2"]
+          "wordIds": ["jue2de", "zhi1dao4", "xue2", "jiao1", "suan4"]
         },
         {
           "key": "perception",
@@ -2746,7 +2997,7 @@
             "rus": "Движение",
             "zh": "运动"
           },
-          "wordIds": ["lai2", "qu4", "dao4", "dong4"]
+          "wordIds": ["lai2", "qu4", "dao4", "dong4", "jin4", "chu1", "hui2", "fei1", "zuo4", "zhan4", "tang3"]
         },
         {
           "key": "state-change-general",
@@ -2764,7 +3015,7 @@
             "rus": "Манипуляция и контакт",
             "zh": "操作与接触"
           },
-          "wordIds": ["da3", "gei3", "mo1", "zhao3", "fang4", "na2", "kai1", "guan1"]
+          "wordIds": ["da3", "gei3", "mo1", "zhao3", "fang4", "na2", "kai1", "guan1", "bang1", "mai3"]
         }
       ]
     },
@@ -2829,7 +3080,7 @@
             "rus": "Существительные места и предлоги",
             "zh": "地点名词与介词"
           },
-          "wordIds": ["cong2", "dui4", "di4fang1", "di4"]
+          "wordIds": ["cong2", "dui4", "di4fang1", "di4", "lu4"]
         },
         {
           "key": "relative-position",
@@ -2847,7 +3098,9 @@
             "xia4",
             "wai4",
             "yuan3",
-            "jin4"
+            "fu4jin4",
+            "zuo3bian1",
+            "you4bian1"
           ]
         }
       ]
@@ -2885,7 +3138,7 @@
             "rus": "Союзы",
             "zh": "连接"
           },
-          "wordIds": ["dan4shi4", "he2", "huo4zhe3", "ye3", "you4", "yin1wei4", "hua4"]
+          "wordIds": ["dan4shi4", "he2", "huo4zhe3", "ye3", "you4", "yin1wei4", "ru2guo3"]
         },
         {
           "key": "interrogatives",
@@ -2923,7 +3176,7 @@
         "rus": "Интенсификатор",
         "zh": "程度词"
       },
-      "wordIds": ["hen3"]
+      "wordIds": ["hen3", "zui4"]
     },
     {
       "key": "similarity",

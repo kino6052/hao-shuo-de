@@ -6,7 +6,7 @@
 // no summary is an error too. Intros and appendices may skip it.
 //
 //   npm run check-summaries                         # every chapter
-//   npm run check-summaries -- lesson-05 intro-3    # only these chapters
+//   npm run check-summaries -- who-does-what intro-3    # only these chapters
 //   npm run check-summaries -- --over               # only the ones too long
 
 import { readFileSync, readdirSync } from 'fs';
@@ -14,6 +14,7 @@ import { resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { parse as parseYaml } from 'yaml';
 import { SUMMARY_MAX_WORDS, countWords } from './limits.js';
+import { LESSON_IDS, lessonNumber, importLessonFile } from './lessons.js';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const CONTENT_DIR = resolve(__dirname, '../src/content');
@@ -33,9 +34,9 @@ for (const file of readdirSync(CONTENT_DIR).filter((f) => /^(intro-\d+|appendix-
   const summary = entries.find((e) => e.type === 'summary');
   chapters.push({ id, summary: summary ? summary.en.join(' ') : null, required: false });
 }
-for (const id of readdirSync(CONTENT_DIR).filter((d) => /^lesson-\d+$/.test(d)).sort()) {
+for (const id of LESSON_IDS) {
   if (!wanted(id)) continue;
-  const en = (await import(pathToFileURL(resolve(CONTENT_DIR, id, 'en.ts')))).default;
+  const en = await importLessonFile(id, 'en.ts');
   chapters.push({ id, summary: en.summary?.en?.join(' ') || null, required: true });
 }
 for (const file of readdirSync(CONTENT_DIR).filter((f) => /\.ya?ml$/.test(f)).sort()) {

@@ -11,7 +11,7 @@
 // Those are warnings, except with --strict.
 //
 //   npm run check-word-use                  # report all; fail for finished lessons
-//   npm run check-word-use -- lesson-07     # fail for words lesson 7 introduces
+//   npm run check-word-use -- pre-verbs     # fail for words that lesson introduces
 //   npm run check-word-use -- --targets     # also list every word below target
 //   npm run check-word-use -- --strict      # fail for any word, and for missed targets
 //   npm run check-word-use -- --summary     # counts only
@@ -22,6 +22,7 @@ import { fileURLToPath, pathToFileURL } from 'url';
 import { parse as parseYaml } from 'yaml';
 import { wordUse, wordUseProblems, HOME_LESSON_MIN, LATER_LESSONS_MIN } from './word-use.js';
 import { gatePolicy } from './finished-lessons.js';
+import { LESSON_IDS, lessonNumber, importLessonFile } from './lessons.js';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -31,9 +32,9 @@ const showTargets = args.includes('--targets') || strict;
 
 const dictionary = JSON.parse(readFileSync(resolve(ROOT, 'src/data/dictionary.json'), 'utf-8')).words;
 const lessons = [];
-for (const id of readdirSync(CONTENT_DIR).filter((d) => /^lesson-\d+$/.test(d)).sort()) {
-  const { meta, default: entries } = await import(pathToFileURL(resolve(CONTENT_DIR, id, 'index.ts')));
-  lessons.push({ id, number: meta.lessonNumber, entries });
+for (const id of LESSON_IDS) {
+  const entries = await importLessonFile(id, 'index.ts');
+  lessons.push({ id, number: lessonNumber(id), entries });
 }
 const unknown = named.filter((id) => !lessons.some((l) => l.id === id));
 if (unknown.length) {

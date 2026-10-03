@@ -12,6 +12,7 @@
 import { readdirSync, readFileSync, writeFileSync, existsSync } from 'fs';
 import { resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
+import { LESSON_IDS, lessonNumber, importLessonFile } from './lessons.js';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const CONTENT_DIR = resolve(__dirname, '../src/content');
@@ -22,16 +23,16 @@ const text = (en, ru = [], zh = []) => ({ en, zh, ru });
 
 export async function buildOverview() {
   const lessons = [];
-  for (const id of readdirSync(CONTENT_DIR).filter((d) => /^lesson-\d+$/.test(d)).sort()) {
-    const { meta, default: entries } = await import(pathToFileURL(resolve(CONTENT_DIR, id, 'index.ts')));
+  for (const id of LESSON_IDS) {
+    const entries = await importLessonFile(id, 'index.ts');
     const title = entries.find((e) => e.type === 'title')?.en?.join(' ') ?? id;
-    lessons.push({ number: meta.lessonNumber, title, boxes: entries.filter((e) => e.type === 'info' && e.subtype === 'grammar') });
+    lessons.push({ number: lessonNumber(id), title, boxes: entries.filter((e) => e.type === 'info' && e.subtype === 'grammar') });
   }
   lessons.sort((a, b) => a.number - b.number);
 
   const entries = [
     { type: 'title', ...text(['Grammar Patterns Reference'], ['Справочник грамматических конструкций'], ['语法结构参考']) },
-    { type: 'summary', ...text(['Every grammar box from the 22 lessons, in one place, in lesson order.']) },
+    { type: 'summary', ...text([`Every grammar box from the ${LESSON_IDS.length} lessons, in one place, in lesson order.`]) },
     {
       type: 'prose',
       ...text([

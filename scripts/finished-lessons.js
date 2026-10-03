@@ -7,10 +7,16 @@
 //   - --strict -> every chapter
 //   - otherwise (e.g. on every build) -> the finished lessons below
 //
-// A lesson goes on this list once its Phase 2 rewrite passes every gate.
-// From then on, every build keeps it that way.
+// A new lesson can start on DRAFT_LESSONS and come off it once it passes
+// every gate. From then on, every build keeps it that way.
 
-export const FINISHED_LESSONS = ['lesson-01', 'lesson-02', 'lesson-03', 'lesson-04', 'lesson-05', 'lesson-06', 'lesson-07', 'lesson-08', 'lesson-09', 'lesson-10', 'lesson-11', 'lesson-12', 'lesson-13', 'lesson-14', 'lesson-15', 'lesson-16', 'lesson-17', 'lesson-18', 'lesson-19', 'lesson-20', 'lesson-21', 'lesson-22'];
+import { LESSON_IDS } from '../src/content/book.js';
+
+// Lessons still being written: their problems are reported, but don't fail
+// the build. Every other lesson in src/content/book.js is finished.
+export const DRAFT_LESSONS = [];
+
+export const FINISHED_LESSONS = LESSON_IDS.filter((id) => !DRAFT_LESSONS.includes(id));
 
 export function gatePolicy(argv = process.argv) {
   const args = argv.slice(2);

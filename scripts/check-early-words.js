@@ -8,7 +8,7 @@
 // lessons you name, or every lesson with --strict), and reports the rest.
 //
 //   npm run check-early-words                          # every lesson; fails for finished ones
-//   npm run check-early-words -- lesson-05 lesson-06   # only these lessons; fails for them
+//   npm run check-early-words -- who-does-what questions   # only these lessons; fails for them
 //   npm run check-early-words -- --summary             # one line per lesson
 //   npm run check-early-words -- --strict              # fails for any lesson
 
@@ -17,6 +17,7 @@ import { resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { findEarlyWords } from './early-words.js';
 import { gatePolicy } from './finished-lessons.js';
+import { LESSON_IDS, lessonNumber, importLessonFile } from './lessons.js';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -27,10 +28,10 @@ const { named, blocking, scopeLabel, summary: summaryOnly } = gatePolicy();
 // Every lesson is loaded (home lessons depend on all of them); naming lessons
 // only limits what gets reported.
 const lessons = [];
-for (const id of readdirSync(CONTENT_DIR).filter((d) => /^lesson-\d+$/.test(d)).sort()) {
-  const { meta, default: entries } = await import(pathToFileURL(resolve(CONTENT_DIR, id, 'index.ts')));
-  const keys = Object.keys((await import(pathToFileURL(resolve(CONTENT_DIR, id, 'shape.ts')))).default);
-  lessons.push({ id, number: meta.lessonNumber, entries: entries.map((e, i) => ({ key: keys[i], ...e })) });
+for (const id of LESSON_IDS) {
+  const entries = await importLessonFile(id, 'index.ts');
+  const keys = Object.keys(await importLessonFile(id, 'shape.ts'));
+  lessons.push({ id, number: lessonNumber(id), entries: entries.map((e, i) => ({ key: keys[i], ...e })) });
 }
 lessons.sort((a, b) => a.number - b.number);
 

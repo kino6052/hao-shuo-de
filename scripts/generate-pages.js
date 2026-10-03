@@ -22,7 +22,7 @@ const LANG_MAP = { eng: "en", rus: "ru", zh: "zh" };
 const rootHtml = readFileSync(join(DIST_DIR, "index.html"), "utf-8");
 
 const routes = new Set();
-// Recursive: lessons now live one per folder (src/content/lesson-01/index.ts).
+// Recursive: lessons now live one per folder (src/content/lessons/<id>/index.ts).
 const allFiles = listContentFiles(CONTENT_DIR);
 
 // Markdown: one file per language, language given in frontmatter.

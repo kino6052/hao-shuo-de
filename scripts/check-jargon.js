@@ -11,7 +11,7 @@
 // them only where they're needed.
 //
 //   npm run check-jargon                              # the lessons; fails for finished ones
-//   npm run check-jargon -- lesson-05 appendix-stories  # only these chapters; fails for them
+//   npm run check-jargon -- who-does-what appendix-stories  # only these chapters; fails for them
 //   npm run check-jargon -- --summary                 # hit counts only
 //   npm run check-jargon -- --strict                  # fails for any hit in a lesson
 //   npm run check-jargon -- --all                     # also report every other chapter
@@ -28,6 +28,7 @@ import { fileURLToPath, pathToFileURL } from 'url';
 import { parse as parseYaml } from 'yaml';
 import { findJargon, findCoreTerms } from './jargon.js';
 import { gatePolicy } from './finished-lessons.js';
+import { LESSON_IDS, lessonNumber, importLessonFile } from './lessons.js';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -38,7 +39,7 @@ const only = new Set(named);
 // The no-jargon rule is for the lessons (BOOK_PLAN.md D32). --all also scans
 // the intros, appendices, proverbs, sentence builder, and dictionary.
 const includeAll = args.includes('--all');
-const wanted = (id) => (only.size ? only.has(id) : /^lesson-\d+$/.test(id) || includeAll);
+const wanted = (id) => (only.size ? only.has(id) : LESSON_IDS.includes(id) || includeAll);
 
 // chapter id -> [{ where, term, snippet }]
 const hits = new Map();
@@ -80,10 +81,10 @@ function walkEnglish(chapter, value, path, inEnglish = false) {
 }
 
 // ---------- lessons: every string in en.ts, located by block key ----------
-for (const dir of readdirSync(CONTENT_DIR).filter((d) => /^lesson-\d+$/.test(d)).sort()) {
+for (const dir of LESSON_IDS) {
   if (!wanted(dir)) continue;
   checked.push(dir);
-  const en = (await import(pathToFileURL(resolve(CONTENT_DIR, dir, 'en.ts')))).default;
+  const en = await importLessonFile(dir, 'en.ts');
   walkEnglish(dir, en, '');
 }
 

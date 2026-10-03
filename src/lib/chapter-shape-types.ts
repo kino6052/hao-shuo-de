@@ -1,5 +1,5 @@
 /**
- * Types for the split-authoring pattern used by src/content/lesson-01/ and
+ * Types for the split-authoring pattern used by src/content/lessons/<id>/ and
  * on: each lesson's content is written as one language-independent "shape"
  * file (structural skeleton: block type, vocab term, example pinyin,
  * audioFile, tag, ordered, ...) plus one file per language (en.ts/ru.ts/

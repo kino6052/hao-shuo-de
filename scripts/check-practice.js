@@ -10,7 +10,7 @@
 // reports the rest.
 //
 //   npm run check-practice                  # report all; fail for finished lessons
-//   npm run check-practice -- lesson-08     # fail if lesson 8 has a gap
+//   npm run check-practice -- when-it-happens     # fail if that lesson has a gap
 //   npm run check-practice -- --summary     # only the lessons with gaps
 //   npm run check-practice -- --strict      # fail for any lesson
 
@@ -19,6 +19,7 @@ import { resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { practiceGaps } from './word-use.js';
 import { gatePolicy } from './finished-lessons.js';
+import { LESSON_IDS, lessonNumber, importLessonFile } from './lessons.js';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -27,10 +28,10 @@ const { named, blocking, scopeLabel, summary } = gatePolicy();
 
 const dictionary = JSON.parse(readFileSync(resolve(ROOT, 'src/data/dictionary.json'), 'utf-8')).words;
 const lessons = [];
-for (const id of readdirSync(CONTENT_DIR).filter((d) => /^lesson-\d+$/.test(d)).sort()) {
+for (const id of LESSON_IDS) {
   if (named.length && !named.includes(id)) continue;
-  const { meta, default: entries } = await import(pathToFileURL(resolve(CONTENT_DIR, id, 'index.ts')));
-  lessons.push({ id, number: meta.lessonNumber, entries });
+  const entries = await importLessonFile(id, 'index.ts');
+  lessons.push({ id, number: lessonNumber(id), entries });
 }
 const unknown = named.filter((id) => !lessons.some((l) => l.id === id));
 if (unknown.length) {

@@ -6,7 +6,7 @@
 // scripts/finished-lessons.js; reports the rest.
 //
 //   npm run check-grammar-blocks                  # report all, fail for finished lessons
-//   npm run check-grammar-blocks -- lesson-07     # fail if lesson 7 has a problem
+//   npm run check-grammar-blocks -- pre-verbs     # fail if that lesson has a problem
 //   npm run check-grammar-blocks -- --strict      # fail for any lesson
 //   npm run check-grammar-blocks -- --summary     # only the lessons with problems
 
@@ -14,13 +14,14 @@ import { readdirSync } from 'fs';
 import { resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { gatePolicy } from './finished-lessons.js';
+import { LESSON_IDS, lessonNumber, importLessonFile } from './lessons.js';
 
 const CONTENT_DIR = resolve(fileURLToPath(new URL('.', import.meta.url)), '../src/content');
 const { blocking, named, scopeLabel, summary } = gatePolicy();
 
 const lessons = [];
-for (const id of readdirSync(CONTENT_DIR).filter((d) => /^lesson-\d+$/.test(d)).sort()) {
-  const { default: entries } = await import(pathToFileURL(resolve(CONTENT_DIR, id, 'index.ts')));
+for (const id of LESSON_IDS) {
+  const entries = await importLessonFile(id, 'index.ts');
   lessons.push({ id, boxes: entries.filter((e) => e.type === 'info' && e.subtype === 'grammar') });
 }
 const unknown = named.filter((id) => !lessons.some((l) => l.id === id));

@@ -2,7 +2,7 @@ import { useState } from "preact/hooks";
 import { ProgressBar } from "./ProgressBar.jsx";
 import { FontSelector } from "./FontSelector.jsx";
 import { LANG_CONFIG, t } from "../lib/i18n.js";
-import { LESSON_SECTIONS, sectionKeyForLesson } from "../lib/lesson-sections.js";
+import { SECTIONS, BACK_MATTER, sectionKeyForLesson, groupKeyForChapter } from "../content/book.js";
 import styles from "./Sidebar.module.css";
 
 export function Sidebar({
@@ -25,15 +25,23 @@ export function Sidebar({
   const lessons = sections.filter((s) => s.type === "lesson");
   const others = sections.filter((s) => !["intro", "lesson"].includes(s.type));
 
-  // Group lessons the same way intro-3's table of contents does. Lessons
-  // not yet reconciled with that plan (see lesson-sections.js) fall through
+  // Group lessons by the sections in src/content/book.js, like intro-3's
+  // table of contents. A lesson that isn't in the book yet falls through
   // to a generic "More Lessons" group instead of a named section.
-  const lessonGroups = LESSON_SECTIONS.map((section) => ({
+  const lessonGroups = SECTIONS.map((section) => ({
     key: section.key,
     label: t(lang, section.key),
     items: lessons.filter((l) => sectionKeyForLesson(l.id) === section.key),
   })).filter((g) => g.items.length > 0);
   const unsectionedLessons = lessons.filter((l) => sectionKeyForLesson(l.id) === null);
+  // The rest goes in the back-matter groups from book.js (content, reference,
+  // tools, misc), each in the order book.js lists it.
+  const otherGroups = BACK_MATTER.map((group) => ({
+    key: group.key,
+    label: t(lang, group.key),
+    items: group.chapters.map((id) => others.find((s) => s.id === id)).filter(Boolean),
+  })).filter((g) => g.items.length > 0);
+  const ungroupedOthers = others.filter((s) => groupKeyForChapter(s.id) === null);
 
   function go(id) {
     onNavigate(id);
@@ -108,10 +116,20 @@ export function Sidebar({
             onGo={go}
           />
         )}
-        {others.length > 0 && (
+        {otherGroups.map((g) => (
+          <TocGroup
+            key={g.key}
+            label={g.label}
+            items={g.items}
+            completed={completed}
+            currentId={currentId}
+            onGo={go}
+          />
+        ))}
+        {ungroupedOthers.length > 0 && (
           <TocGroup
             label={t(lang, "reference")}
-            items={others}
+            items={ungroupedOthers}
             completed={completed}
             currentId={currentId}
             onGo={go}

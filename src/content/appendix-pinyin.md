@@ -5,7 +5,7 @@ type: appendix
 order: 1
 ---
 
-This is the complete reference Lesson 1 pointed you to -- every sound pinyin can spell, with the spellings that mislead English speakers flagged explicitly. You won't need to memorize this table; just come back to it whenever a word's spelling doesn't tell you how to say it.
+This is the complete reference Lesson {{lesson:sounds-and-symbols}} pointed you to -- every sound pinyin can spell, with the spellings that mislead English speakers flagged explicitly. You won't need to memorize this table; just come back to it whenever a word's spelling doesn't tell you how to say it.
 
 ### Initials
 
@@ -43,8 +43,8 @@ Chinese has three parallel sets of consonants that English speakers routinely co
 ### Spelling rules that hide the sound
 
 - **Bare vowels get a stand-in consonant.** A syllable that's just `i`, `u`, or `u` (umlaut) with no initial consonant is spelled `yi`, `wu`, `yu` instead -- same sound, different spelling, purely so the syllable doesn't start with a vowel on the page.
-- **u (umlaut) quietly becomes u.** After `j`, `q`, `x`, or `y`, the u-umlaut sound is written as plain `u` -- because these consonants never pair with a regular `u` anyway, there's no ambiguity in speech, only on paper. So `ju`, `qu`, `xu`, and `yu` all secretly contain the u-umlaut sound, not "oo." This is exactly what's happening in `yun` (Lesson 1's example): it's really u-umlaut-n, said "yoo-in," not "yoon."
+- **u (umlaut) quietly becomes u.** After `j`, `q`, `x`, or `y`, the u-umlaut sound is written as plain `u` -- because these consonants never pair with a regular `u` anyway, there's no ambiguity in speech, only on paper. So `ju`, `qu`, `xu`, and `yu` all secretly contain the u-umlaut sound, not "oo." This is exactly what's happening in `yun` (Lesson {{lesson:sounds-and-symbols}}'s example): it's really u-umlaut-n, said "yoo-in," not "yoon."
 
 ### A note on tone changes in real speech
 
-In fast, natural speech, a few tones shift automatically: two third tones in a row, and the first one turns into a second tone; `bu` and `yi` change tone depending on the word that follows them. As Lesson 1 mentioned, this book always prints the dictionary's baseline tone rather than these live shifts, so what you hear in real conversation may sound slightly different from what's written here -- that's expected, not an error.
+In fast, natural speech, a few tones shift automatically: two third tones in a row, and the first one turns into a second tone; `bu` and `yi` change tone depending on the word that follows them. As Lesson {{lesson:sounds-and-symbols}} mentioned, this book always prints the dictionary's baseline tone rather than these live shifts, so what you hear in real conversation may sound slightly different from what's written here -- that's expected, not an error.

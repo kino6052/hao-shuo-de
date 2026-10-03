@@ -4,7 +4,7 @@ import { join, relative } from 'path';
 // Recursively lists every file under `dir`, returned as paths relative to
 // `dir` with forward slashes regardless of OS (so callers can match/join
 // them consistently). Content used to be flat, but lessons now live one per
-// folder (src/content/lesson-01/index.ts, ...), so a plain readdirSync no
+// folder (src/content/lessons/<id>/index.ts, ...), so a plain readdirSync no
 // longer sees everything -- this is the recursive equivalent both build
 // scripts need. Skips src/content/legacy/ -- archived, superseded lessons
 // kept for reference, never part of the built book.
