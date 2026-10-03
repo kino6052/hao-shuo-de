@@ -8,7 +8,7 @@ const en: PartialByKey<LessonShape> = {
   summary: {
     en: [
       "We often join two ideas: one thing happens because of another, or only if something else is true.",
-      "In this lesson, you'll be able to say \"Because I'm cold, I'm not going.\", \"It's good, but there's no salt.\", and \"If you come, I'll wait for you.\"",
+      "In this lesson, you'll be able to say \"Because I'm cold, I'm not going.\", \"It looks good, but it doesn't taste good.\", and \"If you come, I'll wait for you.\"",
     ],
   },
   vocabYinwei: { en: ["because"] },
@@ -44,7 +44,6 @@ const en: PartialByKey<LessonShape> = {
   exampleBecause11: { en: ["The house is a mess, so we're going out to play."] },
   exampleBecause12: { en: ["His foot is hurt, so he can't stand up."] },
   vocabDanshi: { en: ["but"] },
-  vocabYan: { en: ["salt"] },
   proseBut: {
     en: [
       "**To say but**, put {{word:dan4shi4}} at the start of the second part.",
@@ -53,7 +52,7 @@ const en: PartialByKey<LessonShape> = {
     ],
     tldr: {
       en: [
-        "{{word:dan4shi4}} means but: {{Word:zhe4}}-ge {{word:hen3}} {{word:hao3}}, {{word:dan4shi4}} {{word:mei2}}-{{word:you3}} {{word:yan2}}.",
+        "{{word:dan4shi4}} means but: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4shi4}} {{word:wei4dao4}} {{word:bu4}} {{word:hao3}}.",
       ],
     },
     necessity: {
@@ -62,10 +61,10 @@ const en: PartialByKey<LessonShape> = {
       ],
     },
   },
-  exampleBut1: { en: ["It's good, but there's no salt."] },
+  exampleBut1: { en: ["It looks good, but it doesn't taste good."] },
   exampleBut2: { en: ["I want to go, but I have no money."] },
   exampleBut3: { en: ["He's small, but very strong."] },
-  exampleBut4: { en: ["There's salt in the rice."] },
+  exampleBut4: { en: ["It tastes good, but it's very hot."] },
   exampleBut5: { en: ["This fruit is yellow, but it isn't sweet."] },
   exampleBut6: { en: ["This way is strange, but it's good."] },
   exampleBut7: { en: ["I have nine, but he has twenty."] },
@@ -109,7 +108,7 @@ const en: PartialByKey<LessonShape> = {
       },
       {
         en: [
-          "…, {{word:dan4shi4}} …, but: {{Word:zhe4}}-ge {{word:hen3}} {{word:hao3}}, {{word:dan4shi4}} {{word:mei2}}-{{word:you3}} {{word:yan2}}. (It's good, but there's no salt.)",
+          "…, {{word:dan4shi4}} …, but: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4shi4}} {{word:wei4dao4}} {{word:bu4}} {{word:hao3}}. (It looks good, but it doesn't taste good.)",
         ],
       },
       {
@@ -123,7 +122,7 @@ const en: PartialByKey<LessonShape> = {
   exercise2: { en: ["I want to eat, but I have no money."] },
   exercise3: { en: ["If you want it, I'll give it to you."] },
   exercise4: { en: ["The plant died."] },
-  exercise5: { en: ["I want salt."] },
+  exercise5: { en: ["The fruit is small, but it tastes good."] },
   exercise6: { en: ["If you're cold, come inside."] },
   exercise7: { en: ["If there's air, we can live."] },
   answer1: {
@@ -142,7 +141,7 @@ const en: PartialByKey<LessonShape> = {
     ],
   },
   answer4: { en: ["{{Word:zhi2wu4}} {{word:si3}} {{word:le}}."] },
-  answer5: { en: ["{{Word:wo3}} {{word:yao4}} {{word:yan2}}."] },
+  answer5: { en: ["{{Word:shui3guo3}} {{word:hen3}} {{word:xiao3}}, {{word:dan4shi4}} {{word:wei4dao4}} {{word:hen3}} {{word:hao3}}."] },
   answer6: {
     en: [
       "{{Word:ru2guo3}} {{word:ni3}} {{word:leng3}}, {{word:lai2}} {{word:li3}}-{{word:mian4}}.",

@@ -2676,7 +2676,8 @@
    "hsd": "{{word:hao3}} {{word:chi1}}",
    "tts": "好吃",
    "literal": "good to eat",
-   "fit": "natural"
+   "fit": "natural",
+   "note": "Or: wèidào hěn hǎo, \"it tastes very good\"."
   },
   {
    "rank": 232,
@@ -5973,6 +5974,18 @@
    "fit": "plain"
   },
   {
+   "rank": 745,
+   "phase": 2,
+   "zh": "味道",
+   "py": "wèidào",
+   "en": "taste, flavor",
+   "ru": "вкус",
+   "hsd": "{{word:wei4dao4}}",
+   "tts": "味道",
+   "fit": "word",
+   "note": "Lesson {{lesson:how-much}}. Good or not: wèidào hěn hǎo, wèidào bù hǎo."
+  },
+  {
    "rank": 775,
    "phase": 2,
    "zh": "算",
@@ -5997,6 +6010,17 @@
    "fit": "plain"
   },
   {
+   "rank": 819,
+   "phase": 2,
+   "zh": "味",
+   "py": "wèi",
+   "en": "taste, flavor",
+   "ru": "вкус",
+   "hsd": "{{word:wei4dao4}}",
+   "tts": "味道",
+   "fit": "word"
+  },
+  {
    "rank": 852,
    "phase": 2,
    "zh": "放心",
@@ -6008,6 +6032,19 @@
    "literal": "put the heart down",
    "fit": "natural",
    "note": "Lesson {{lesson:greetings-and-feelings}}."
+  },
+  {
+   "rank": 873,
+   "phase": 2,
+   "zh": "盐",
+   "py": "yán",
+   "en": "salt",
+   "ru": "соль",
+   "hsd": "{{word:nong4}}-{{word:hao3}} {{word:wei4dao4}}-{{word:de}} {{word:dong1xi}}",
+   "tts": "弄好味道的东西",
+   "literal": "the thing that makes it taste good",
+   "fit": "plain",
+   "note": "Lesson {{lesson:greetings-and-feelings}}: gěi wǒ nòng-hǎo wèidào-de dōngxi!"
   },
   {
    "rank": 1080,

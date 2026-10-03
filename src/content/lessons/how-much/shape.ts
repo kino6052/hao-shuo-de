@@ -31,6 +31,8 @@ export type LessonShape = {
   vocabLeng: TVocab;
   /** Vocabulary: "sweet". */
   vocabTian: TVocab;
+  /** Vocabulary: "taste". */
+  vocabWeidao: TVocab;
   /** Vocabulary: "strange". */
   vocabQiguai: TVocab;
   /** Vocabulary: "body; health". */
@@ -61,6 +63,8 @@ export type LessonShape = {
   exampleVery9: TExample;
   /** Example: kuài lái! */
   exampleVery10: TExample;
+  /** Example: mǐfàn-de wèidào hěn hǎo. */
+  exampleVery11: TExample;
   /** Say: To say really, put zhēn before the adjective. Pattern: Thing + zhēn + adjective */
   proseReally: TProse;
   /** Example: zhēn rè! */
@@ -71,6 +75,8 @@ export type LessonShape = {
   exampleReally3: TExample;
   /** Example: nǐ zhēn kuài! */
   exampleReally4: TExample;
+  /** Example: zhè-ge shuǐguǒ-de wèidào zhēn hǎo! */
+  exampleReally5: TExample;
   /** Say: To say not, or not very, put bù or bù hěn before the adjective. Pattern: Thing + bù (+ hěn) + adjective */
   proseNot: TProse;
   /** Example: shuǐ bù lěng. */
@@ -81,6 +87,8 @@ export type LessonShape = {
   exampleNot3: TExample;
   /** Example: wǒ bù kuài. */
   exampleNot4: TExample;
+  /** Example: wèidào bù hǎo. */
+  exampleNot5: TExample;
   /** Vocabulary: "old". */
   vocabLao: TVocab;
   /** Say: To ask how something is, put ma after the adjective. Pattern: Thing + adjective + ma? */
@@ -99,6 +107,8 @@ export type LessonShape = {
   exampleAsk6: TExample;
   /** Example: zhè-ge yǒu jiàzhí ma? */
   exampleAsk7: TExample;
+  /** Example: wèidào hǎo ma? */
+  exampleAsk8: TExample;
   /** Grammar box: hěn, zhēn, bù / bù hěn before an adjective, adjective + ma, and hěn yǒu jiàzhí. */
   infoHowMuch: TInfo;
   /** Exercise 1: Water has great value. */
@@ -121,6 +131,8 @@ export type LessonShape = {
   exercise9: TExercise;
   /** Exercise 10: Is that animal old? */
   exercise10: TExercise;
+  /** Exercise 11: The rice doesn't taste good. */
+  exercise11: TExercise;
   /** Answer 1: shuǐ-de jiàzhí hěn dà. */
   answer1: TAnswer;
   /** Answer 2: mǐfàn zhēn rè. */
@@ -141,6 +153,8 @@ export type LessonShape = {
   answer9: TAnswer;
   /** Answer 10: nà-ge dòngwù lǎo ma? */
   answer10: TAnswer;
+  /** Answer 11: mǐfàn-de wèidào bù hǎo. */
+  answer11: TAnswer;
   /** FAQ: is this hěn the same as in Lesson {{lesson:modifying-nouns}}? (yes; stress it, or use zhēn) */
   faqHenStress: TFaq;
   /** FAQ: bù hěn vs hěn bù (order matters) */
@@ -156,6 +170,7 @@ const shape: LessonShape = {
   vocabRe: { type: "vocab", term: "{{word:re4}}", ttsText: "热" },
   vocabLeng: { type: "vocab", term: "{{word:leng3}}", ttsText: "冷" },
   vocabTian: { type: "vocab", term: "{{word:tian2}}", ttsText: "甜" },
+  vocabWeidao: { type: "vocab", term: "{{word:wei4dao4}}", ttsText: "味道" },
   vocabQiguai: {
     type: "vocab",
     term: "{{word:qi2guai4}}",
@@ -223,6 +238,11 @@ const shape: LessonShape = {
     pinyin: "{{Word:kuai4}} {{word:lai2}}!",
     ttsText: "快来！",
   },
+  exampleVery11: {
+    type: "example",
+    pinyin: "{{Word:mi3fan4}}-{{word:de}} {{word:wei4dao4}} {{word:hen3}} {{word:hao3}}.",
+    ttsText: "米饭的味道很好。",
+  },
   proseReally: { type: "prose" },
   exampleReally1: {
     type: "example",
@@ -244,6 +264,11 @@ const shape: LessonShape = {
     pinyin: "{{Word:ni3}} {{word:zhen1}} {{word:kuai4}}!",
     ttsText: "你真快！",
   },
+  exampleReally5: {
+    type: "example",
+    pinyin: "{{Word:zhe4}}-ge {{word:shui3guo3}}-{{word:de}} {{word:wei4dao4}} {{word:zhen1}} {{word:hao3}}!",
+    ttsText: "这个水果的味道真好！",
+  },
   proseNot: { type: "prose" },
   exampleNot1: {
     type: "example",
@@ -264,6 +289,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:wo3}} {{word:bu4}} {{word:kuai4}}.",
     ttsText: "我不快。",
+  },
+  exampleNot5: {
+    type: "example",
+    pinyin: "{{Word:wei4dao4}} {{word:bu4}} {{word:hao3}}.",
+    ttsText: "味道不好。",
   },
   vocabLao: { type: "vocab", term: "{{word:lao3}}", ttsText: "老" },
   proseAsk: { type: "prose" },
@@ -302,6 +332,11 @@ const shape: LessonShape = {
     pinyin: "{{Word:zhe4}}-ge {{word:you3}} {{word:jia4zhi2}} {{word:ma}}?",
     ttsText: "这个有价值吗？",
   },
+  exampleAsk8: {
+    type: "example",
+    pinyin: "{{Word:wei4dao4}} {{word:hao3}} {{word:ma}}?",
+    ttsText: "味道好吗？",
+  },
   infoHowMuch: {
     type: "info",
     subtype: "grammar",
@@ -318,6 +353,7 @@ const shape: LessonShape = {
   exercise8: { type: "exercise" },
   exercise9: { type: "exercise" },
   exercise10: { type: "exercise" },
+  exercise11: { type: "exercise" },
   answer1: { type: "answer", ttsText: "水的价值很大。" },
   answer2: { type: "answer", ttsText: "米饭真热。" },
   answer3: { type: "answer", ttsText: "我很冷。" },
@@ -328,6 +364,7 @@ const shape: LessonShape = {
   answer8: { type: "answer", ttsText: "水不冷。" },
   answer9: { type: "answer", ttsText: "你真快！" },
   answer10: { type: "answer", ttsText: "那个动物老吗？" },
+  answer11: { type: "answer", ttsText: "米饭的味道不好。" },
   faqHenStress: { type: "faq" },
   faqBuHenOrder: { type: "faq" },
   faqNoHenInQuestion: { type: "faq" },

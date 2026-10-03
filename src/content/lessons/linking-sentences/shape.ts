@@ -57,17 +57,15 @@ export type LessonShape = {
   exampleBecause12: TExample;
   /** Vocabulary: "but". */
   vocabDanshi: TVocab;
-  /** Vocabulary: "salt". */
-  vocabYan: TVocab;
   /** Say: To say but, put dànshì at the start of the second part. Pattern: sentence, dànshì + sentence */
   proseBut: TProse;
-  /** Example: zhè-ge hěn hǎo, dànshì méi-yǒu yán. */
+  /** Example: zhè-ge kàn-qǐ-lái hěn hǎo, dànshì wèidào bù hǎo. */
   exampleBut1: TExample;
   /** Example: wǒ yào qù, dànshì wǒ méi-yǒu jīn. */
   exampleBut2: TExample;
   /** Example: tā hěn xiǎo, dànshì hěn yǒu lìliàng. */
   exampleBut3: TExample;
-  /** Example: mǐfàn-lǐ yǒu yán. */
+  /** Example: wèidào hěn hǎo, dànshì hěn rè. */
   exampleBut4: TExample;
   /** Example: zhè-ge shuǐguǒ shì huángsè-de, dànshì bù tián. */
   exampleBut5: TExample;
@@ -115,7 +113,7 @@ export type LessonShape = {
   exercise3: TExercise;
   /** Exercise 4: The plant died. */
   exercise4: TExercise;
-  /** Exercise 5: I want salt. */
+  /** Exercise 5: The fruit is small, but it tastes good. */
   exercise5: TExercise;
   /** Exercise 6: If you're cold, come inside. */
   exercise6: TExercise;
@@ -129,7 +127,7 @@ export type LessonShape = {
   answer3: TAnswer;
   /** Answer 4: zhíwù sǐ le. */
   answer4: TAnswer;
-  /** Answer 5: wǒ yào yán. */
+  /** Answer 5: shuǐguǒ hěn xiǎo, dànshì wèidào hěn hǎo. */
   answer5: TAnswer;
   /** Answer 6: rúguǒ nǐ lěng, lái lǐ-miàn. */
   answer6: TAnswer;
@@ -217,12 +215,11 @@ const shape: LessonShape = {
     term: "{{word:dan4shi4}}",
     ttsText: "但是",
   },
-  vocabYan: { type: "vocab", term: "{{word:yan2}}", ttsText: "盐" },
   proseBut: { type: "prose" },
   exampleBut1: {
     type: "example",
-    pinyin: "{{Word:zhe4}}-ge {{word:hen3}} {{word:hao3}}, {{word:dan4shi4}} {{word:mei2}}-{{word:you3}} {{word:yan2}}.",
-    ttsText: "这个很好，但是没有盐。",
+    pinyin: "{{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4shi4}} {{word:wei4dao4}} {{word:bu4}} {{word:hao3}}.",
+    ttsText: "这个看起来很好，但是味道不好。",
   },
   exampleBut2: {
     type: "example",
@@ -236,8 +233,8 @@ const shape: LessonShape = {
   },
   exampleBut4: {
     type: "example",
-    pinyin: "{{Word:mi3fan4}}-{{word:li3}} {{word:you3}} {{word:yan2}}.",
-    ttsText: "米饭里有盐。",
+    pinyin: "{{Word:wei4dao4}} {{word:hen3}} {{word:hao3}}, {{word:dan4shi4}} {{word:hen3}} {{word:re4}}.",
+    ttsText: "味道很好，但是很热。",
   },
   exampleBut5: {
     type: "example",
@@ -338,7 +335,7 @@ const shape: LessonShape = {
   answer2: { type: "answer", ttsText: "我要吃，但是我没有金。" },
   answer3: { type: "answer", ttsText: "如果你要，我给你。" },
   answer4: { type: "answer", ttsText: "植物死了。" },
-  answer5: { type: "answer", ttsText: "我要盐。" },
+  answer5: { type: "answer", ttsText: "水果很小，但是味道很好。" },
   answer6: { type: "answer", ttsText: "如果你冷，来里面。" },
   answer7: { type: "answer", ttsText: "如果有空气，我们能活。" },
   faqSo: { type: "faq" },

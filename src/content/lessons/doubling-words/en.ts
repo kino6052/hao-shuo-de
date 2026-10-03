@@ -58,7 +58,7 @@ const en: PartialByKey<LessonShape> = {
   exampleDescribe3: { en: ["The fruit is tiny, but nice and sweet."] },
   exampleDescribe4: { en: ["Study hard!"] },
   exampleDescribe5: { en: ["I think this one is perfectly fine."] },
-  exampleDescribe6: { en: ["I want just a tiny bit of salt."] },
+  exampleDescribe6: { en: ["I want just a tiny bit of water."] },
   exampleDescribe7: { en: ["The plant is alive and well."] },
   proseEvery: {
     en: [

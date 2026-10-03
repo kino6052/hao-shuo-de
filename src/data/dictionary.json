@@ -388,20 +388,6 @@
       },
       "maps": "kili"
     },
-    "yan2": {
-      "term": "yán",
-      "pos": {
-        "eng": "noun",
-        "rus": "существительное",
-        "zh": "名词"
-      },
-      "definition": {
-        "eng": "salt, spice, flavor enhancer, extra context",
-        "rus": "соль, специя, усилитель вкуса, дополнительный оттенок",
-        "zh": "盐，香料，增味剂，额外的语境"
-      },
-      "maps": "namako"
-    },
     "shui3": {
       "term": "shuǐ",
       "pos": {
@@ -969,6 +955,19 @@
         "zh": "甜的，香的，可爱的，天真的，讨人喜欢的"
       },
       "maps": "suwi"
+    },
+    "wei4dao4": {
+      "term": "wèidào",
+      "pos": {
+        "eng": "noun",
+        "rus": "существительное",
+        "zh": "名词"
+      },
+      "definition": {
+        "eng": "taste, flavor, good or not: {{word:wei4dao4}} {{word:hen3}} {{word:hao3}}, \"it tastes good\"; salt is {{word:nong4}}-{{word:hao3}} {{word:wei4dao4}}-{{word:de}} {{word:dong1xi}}, \"the thing that makes it taste good\"",
+        "rus": "вкус, хороший или нет: {{word:wei4dao4}} {{word:hen3}} {{word:hao3}} — «вкусно»; соль — {{word:nong4}}-{{word:hao3}} {{word:wei4dao4}}-{{word:de}} {{word:dong1xi}}",
+        "zh": "味道"
+      }
     },
     "ying4": {
       "term": "yìng",
@@ -2620,37 +2619,45 @@
     {
       "key": "substantives",
       "title": {
-        "eng": "Substantives",
-        "rus": "Субстантивы",
-        "zh": "实体词"
+        "eng": "Things",
+        "rus": "",
+        "zh": ""
       },
       "children": [
         {
           "key": "pronouns-interrogatives",
           "title": {
-            "eng": "Pronouns & Interrogatives",
-            "rus": "Местоимения и вопросительные слова",
-            "zh": "代词与疑问词"
+            "eng": "Pointers",
+            "rus": "",
+            "zh": ""
           },
-          "wordIds": ["wo3", "ni3", "ta1", "shen2me", "men"]
+          "wordIds": ["wo3", "ni3", "ta1", "shen2me", "men", "na4", "zhe4"]
         },
         {
           "key": "places-as-things",
           "title": {
-            "eng": "Places (as Things)",
-            "rus": "Места (как вещи)",
-            "zh": "地方（作为事物）"
+            "eng": "Places",
+            "rus": "",
+            "zh": ""
           },
-          "wordIds": ["jia1"]
+          "wordIds": ["jia1", "di4fang1"]
         },
         {
-          "key": "plants-natural-elements",
+          "key": "things-of-nature",
           "title": {
-            "eng": "Plants & Natural Elements",
-            "rus": "Растения и природные стихии",
-            "zh": "植物与自然元素"
+            "eng": "Things of Nature",
+            "rus": "",
+            "zh": ""
           },
-          "wordIds": ["ri4", "yue4", "zhi2wu4", "huo3", "kong1qi4"]
+          "wordIds": [
+            "ri4",
+            "yue4",
+            "zhi2wu4",
+            "huo3",
+            "kong1qi4",
+            "dong4wu4",
+            "chong2zi"
+          ]
         },
         {
           "key": "body",
@@ -2659,7 +2666,17 @@
             "rus": "Тело",
             "zh": "身体"
           },
-          "wordIds": ["bi2zi", "jiao3", "kou3", "pi2fu1", "shen1ti3", "shou3", "tou2", "mao2", "xin1"]
+          "wordIds": [
+            "bi2zi",
+            "jiao3",
+            "kou3",
+            "pi2fu1",
+            "shen1ti3",
+            "shou3",
+            "tou2",
+            "mao2",
+            "xin1"
+          ]
         },
         {
           "key": "people-kinship",
@@ -2668,7 +2685,14 @@
             "rus": "Люди и родство",
             "zh": "人与亲属"
           },
-          "wordIds": ["ren2", "fu4mu3", "nan2ren2", "nv3ren2", "qun2", "guan1xi"]
+          "wordIds": [
+            "ren2",
+            "fu4mu3",
+            "nan2ren2",
+            "nv3ren2",
+            "qun2",
+            "guan1xi"
+          ]
         },
         {
           "key": "food-drink",
@@ -2677,16 +2701,7 @@
             "rus": "Еда и питьё",
             "zh": "食物与饮品"
           },
-          "wordIds": ["mi3fan4", "shui3guo3", "yan2", "shui3"]
-        },
-        {
-          "key": "animals",
-          "title": {
-            "eng": "Animals",
-            "rus": "Животные",
-            "zh": "动物"
-          },
-          "wordIds": ["dong4wu4", "chong2zi"]
+          "wordIds": ["mi3fan4", "shui3guo3", "shui3"]
         },
         {
           "key": "tools-objects",
@@ -2699,7 +2714,7 @@
             {
               "key": "implements",
               "title": {
-                "eng": "Implements",
+                "eng": "Tools",
                 "rus": "Орудия",
                 "zh": "器具"
               },
@@ -2733,11 +2748,18 @@
         {
           "key": "abstract-substantives",
           "title": {
-            "eng": "Abstract Substantives",
-            "rus": "Абстрактные субстантивы",
-            "zh": "抽象实体词"
+            "eng": "Abstract Words",
+            "rus": "",
+            "zh": ""
           },
-          "wordIds": ["ci2", "li4liang4", "xing4", "sheng1yin1", "jia4zhi2"]
+          "wordIds": [
+            "ci2",
+            "li4liang4",
+            "xing4",
+            "sheng1yin1",
+            "jia4zhi2",
+            "fang1fa3"
+          ]
         },
         {
           "key": "kind-part",
@@ -2753,37 +2775,18 @@
     {
       "key": "determiners",
       "title": {
-        "eng": "Determiners",
-        "rus": "Детерминативы",
-        "zh": "限定词——这、那、同、异"
+        "eng": "Sameness & Difference",
+        "rus": "",
+        "zh": ""
       },
-      "children": [
-        {
-          "key": "demonstratives",
-          "title": {
-            "eng": "Demonstratives",
-            "rus": "Указательные слова",
-            "zh": "指示词"
-          },
-          "wordIds": ["na4", "zhe4"]
-        },
-        {
-          "key": "sameness-difference",
-          "title": {
-            "eng": "Sameness & Difference",
-            "rus": "Тождество и различие",
-            "zh": "相同与差异"
-          },
-          "wordIds": ["bu4tong2", "yi1yang4", "bie2de"]
-        }
-      ]
+      "wordIds": ["bu4tong2", "yi1yang4", "bie2de"]
     },
     {
       "key": "quantifiers",
       "title": {
-        "eng": "Quantifiers",
-        "rus": "Квантификаторы",
-        "zh": "量词"
+        "eng": "Quantity",
+        "rus": "",
+        "zh": ""
       },
       "children": [
         {
@@ -2798,9 +2801,9 @@
         {
           "key": "numbers-ordinals",
           "title": {
-            "eng": "Numbers & Ordinals",
-            "rus": "Числа и порядковые числительные",
-            "zh": "数字与序数"
+            "eng": "Numbers",
+            "rus": "",
+            "zh": ""
           },
           "wordIds": [
             "yi1",
@@ -2828,23 +2831,24 @@
         }
       ]
     },
-    {
-      "key": "evaluators",
-      "title": {
-        "eng": "Evaluators",
-        "rus": "Оценочные слова",
-        "zh": "评价词"
-      },
-      "wordIds": ["hao3", "huai4"]
-    },
+
     {
       "key": "descriptors",
       "title": {
-        "eng": "Descriptors",
-        "rus": "Дескрипторы",
-        "zh": "描述词"
+        "eng": "Qualities",
+        "rus": "",
+        "zh": ""
       },
       "children": [
+        {
+          "key": "evaluators",
+          "title": {
+            "eng": "Good / bad",
+            "rus": "",
+            "zh": ""
+          },
+          "wordIds": ["hao3", "huai4"]
+        },
         {
           "key": "colour",
           "title": {
@@ -2868,7 +2872,7 @@
             "rus": "Прочие качества",
             "zh": "其他性质"
           },
-          "wordIds": ["qi2guai4", "lao3", "luan4"]
+          "wordIds": ["qi2guai4", "lao3", "luan4", "kuai4"]
         },
         {
           "key": "temperature-taste",
@@ -2877,7 +2881,7 @@
             "rus": "Температура и вкус",
             "zh": "温度与味道"
           },
-          "wordIds": ["re4", "leng3", "tian2"]
+          "wordIds": ["re4", "leng3", "tian2", "wei4dao4"]
         },
         {
           "key": "physical-property",
@@ -2895,26 +2899,26 @@
             "rus": "Размер",
             "zh": "大小"
           },
-          "wordIds": ["xiao3", "da4", "kuai4"]
+          "wordIds": ["xiao3", "da4"]
         }
       ]
     },
     {
       "key": "mental-predicates",
       "title": {
-        "eng": "Mental Predicates",
-        "rus": "Ментальные предикаты",
-        "zh": "心理谓词"
+        "eng": "Mind",
+        "rus": "",
+        "zh": ""
       },
       "children": [
         {
           "key": "volition-affect",
           "title": {
-            "eng": "Volition & Affect",
+            "eng": "Will and feelings",
             "rus": "Воля и чувства",
             "zh": "意愿与情感"
           },
-          "wordIds": ["yao4", "ai4", "pa4", "xiao4"]
+          "wordIds": ["yao4", "ai4", "pa4", "xiao4", "xie4"]
         },
         {
           "key": "cognition",
@@ -2943,24 +2947,24 @@
         "rus": "Речь",
         "zh": "言语"
       },
-      "wordIds": ["shuo1", "xie3", "wen4", "xie4"]
+      "wordIds": ["shuo1", "xie3", "wen4", "jiao4"]
     },
     {
       "key": "actions",
       "title": {
-        "eng": "Actions, Motion, and Contact",
-        "rus": "Действия, движение и контакт",
-        "zh": "动作、运动与接触"
+        "eng": "Actions",
+        "rus": "",
+        "zh": ""
       },
       "children": [
         {
-          "key": "naming-using",
+          "key": "using",
           "title": {
-            "eng": "Naming & Using",
-            "rus": "Называние и использование",
-            "zh": "命名与使用"
+            "eng": "Usage",
+            "rus": "",
+            "zh": ""
           },
-          "wordIds": ["yong4", "jiao4"]
+          "wordIds": ["yong4"]
         },
         {
           "key": "daily-activities",
@@ -2997,7 +3001,19 @@
             "rus": "Движение",
             "zh": "运动"
           },
-          "wordIds": ["lai2", "qu4", "dao4", "dong4", "jin4", "chu1", "hui2", "fei1", "zuo4", "zhan4", "tang3"]
+          "wordIds": [
+            "lai2",
+            "qu4",
+            "dao4",
+            "dong4",
+            "jin4",
+            "chu1",
+            "hui2",
+            "fei1",
+            "zuo4",
+            "zhan4",
+            "tang3"
+          ]
         },
         {
           "key": "state-change-general",
@@ -3011,11 +3027,22 @@
         {
           "key": "manipulation-contact",
           "title": {
-            "eng": "Manipulation & Contact",
-            "rus": "Манипуляция и контакт",
-            "zh": "操作与接触"
+            "eng": "Interacting with things",
+            "rus": "",
+            "zh": ""
           },
-          "wordIds": ["da3", "gei3", "mo1", "zhao3", "fang4", "na2", "kai1", "guan1", "bang1", "mai3"]
+          "wordIds": [
+            "da3",
+            "gei3",
+            "mo1",
+            "zhao3",
+            "fang4",
+            "na2",
+            "kai1",
+            "guan1",
+            "bang1",
+            "mai3"
+          ]
         }
       ]
     },
@@ -3138,23 +3165,31 @@
             "rus": "Союзы",
             "zh": "连接"
           },
-          "wordIds": ["dan4shi4", "he2", "huo4zhe3", "ye3", "you4", "yin1wei4", "ru2guo3"]
+          "wordIds": [
+            "dan4shi4",
+            "he2",
+            "huo4zhe3",
+            "ye3",
+            "you4",
+            "yin1wei4",
+            "ru2guo3"
+          ]
         },
         {
           "key": "interrogatives",
           "title": {
-            "eng": "Interrogatives",
-            "rus": "Вопросительные слова",
-            "zh": "疑问词"
+            "eng": "Question words",
+            "rus": "",
+            "zh": ""
           },
           "wordIds": ["wei4shen2me", "zen3me", "na3li3"]
         },
         {
           "key": "modality",
           "title": {
-            "eng": "Modality",
-            "rus": "Модальность",
-            "zh": "情态"
+            "eng": "Ability & Possibility",
+            "rus": "",
+            "zh": ""
           },
           "wordIds": ["neng2", "hui4", "ke3neng2"]
         },
@@ -3172,20 +3207,11 @@
     {
       "key": "intensifier",
       "title": {
-        "eng": "Intensifier",
-        "rus": "Интенсификатор",
-        "zh": "程度词"
+        "eng": "Intensity",
+        "rus": "",
+        "zh": ""
       },
       "wordIds": ["hen3", "zui4"]
-    },
-    {
-      "key": "similarity",
-      "title": {
-        "eng": "Similarity",
-        "rus": "Подобие",
-        "zh": "相似"
-      },
-      "wordIds": ["fang1fa3"]
     }
   ]
 }

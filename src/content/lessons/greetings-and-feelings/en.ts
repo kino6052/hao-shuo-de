@@ -96,7 +96,7 @@ const en: PartialByKey<LessonShape> = {
   exampleOrder4: { en: ["Don't be scared."] },
   exampleOrder5: { en: ["Stay here!"] },
   exampleOrder6: { en: ["Don't touch my nose!"] },
-  exampleOrder7: { en: ["Give me the salt!"] },
+  exampleOrder7: { en: ["Pass me the salt! (the thing that makes it taste good)"] },
   exampleOrder8: { en: ["If you're cold, come inside!"] },
   exampleOrder9: { en: ["One, two, three, go!"] },
   exampleOrder10: { en: ["Don't touch my things!"] },

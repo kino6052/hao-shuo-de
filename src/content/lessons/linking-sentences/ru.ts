@@ -24,7 +24,6 @@ const ru: PartialByKey<LessonShape> = {
   exampleBecause11: { ru: [] },
   exampleBecause12: { ru: [] },
   vocabDanshi: { ru: [] },
-  vocabYan: { ru: [] },
   proseBut: { ru: [], tldr: { ru: [] }, necessity: { ru: [] } },
   exampleBut1: { ru: [] },
   exampleBut2: { ru: [] },

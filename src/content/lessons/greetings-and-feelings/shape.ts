@@ -81,7 +81,7 @@ export type LessonShape = {
   exampleOrder5: TExample;
   /** Example: bù yào mō wǒ-de bízi! */
   exampleOrder6: TExample;
-  /** Example: gěi wǒ yán! */
+  /** Example: gěi wǒ nòng-hǎo wèidào-de dōngxi! (salt) */
   exampleOrder7: TExample;
   /** Example: rúguǒ nǐ lěng, lái jiā-lǐ! */
   exampleOrder8: TExample;
@@ -345,8 +345,8 @@ const shape: LessonShape = {
   },
   exampleOrder7: {
     type: "example",
-    pinyin: "{{Word:gei3}} {{word:wo3}} {{word:yan2}}!",
-    ttsText: "给我盐！",
+    pinyin: "{{Word:gei3}} {{word:wo3}} {{word:nong4}}-{{word:hao3}} {{word:wei4dao4}}-{{word:de}} {{word:dong1xi}}!",
+    ttsText: "给我弄好味道的东西！",
   },
   exampleOrder8: {
     type: "example",

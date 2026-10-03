@@ -62,7 +62,7 @@ export type LessonShape = {
   exampleDescribe4: TExample;
   /** Example: wǒ juéde zhè-ge hǎo-hǎo-de. */
   exampleDescribe5: TExample;
-  /** Example: wǒ yào yī-diǎn-diǎn yán. */
+  /** Example: wǒ yào yī-diǎn-diǎn shuǐ. */
   exampleDescribe6: TExample;
   /** Example: zhíwù huó-de hǎo-hǎo-de. */
   exampleDescribe7: TExample;
@@ -206,8 +206,8 @@ const shape: LessonShape = {
   },
   exampleDescribe6: {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:yao4}} {{word:yi1}}-{{word:dian3}}-{{word:dian3}} {{word:yan2}}.",
-    ttsText: "我要一点点盐。",
+    pinyin: "{{Word:wo3}} {{word:yao4}} {{word:yi1}}-{{word:dian3}}-{{word:dian3}} {{word:shui3}}.",
+    ttsText: "我要一点点水。",
   },
   exampleDescribe7: {
     type: "example",

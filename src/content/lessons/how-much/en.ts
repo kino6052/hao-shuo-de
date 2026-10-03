@@ -15,6 +15,7 @@ const en: PartialByKey<LessonShape> = {
   vocabRe: { en: ["hot"] },
   vocabLeng: { en: ["cold"] },
   vocabTian: { en: ["sweet"] },
+  vocabWeidao: { en: ["taste"] },
   vocabQiguai: { en: ["strange"] },
   vocabShenti: { en: ["body; health"] },
   vocabJiazhi: { en: ["value, worth"] },
@@ -28,6 +29,7 @@ const en: PartialByKey<LessonShape> = {
       "Words that say how much, like {{word:hen3}}, {{word:zhen1}}, and {{word:bu4}}, are called adverbs.",
       '{{word:hen3}} {{word:you3}} {{word:jia4zhi2}} ("has a lot of value") means valuable.',
       "Before a verb, {{word:kuai4}} (fast) means quickly: {{Word:kuai4}} {{word:lai2}}!",
+      "{{word:wei4dao4}} is taste, good or not: {{Word:wei4dao4}} {{word:hen3}} {{word:hao3}}, it tastes very good. {{Word:wei4dao4}} {{word:bu4}} {{word:hao3}}, it doesn't taste good.",
     ],
     tldr: {
       en: ["{{word:hen3}} before an adjective means very."],
@@ -44,6 +46,7 @@ const en: PartialByKey<LessonShape> = {
   exampleVery8: { en: ["I've seen a very strange animal."] },
   exampleVery9: { en: ["That animal is very fast."] },
   exampleVery10: { en: ["Come quickly!"] },
+  exampleVery11: { en: ["The rice tastes very good."] },
   proseReally: {
     en: [
       "**To say really**, put {{word:zhen1}} before the adjective.",
@@ -65,6 +68,7 @@ const en: PartialByKey<LessonShape> = {
   exampleReally2: { en: ["She's really strange."] },
   exampleReally3: { en: ["This fruit is really sweet!"] },
   exampleReally4: { en: ["You're really fast!"] },
+  exampleReally5: { en: ["This fruit tastes really good!"] },
   proseNot: {
     en: [
       "**To say not, or not very**, put {{word:bu4}} or {{word:bu4}} {{word:hen3}} before the adjective.",
@@ -82,6 +86,7 @@ const en: PartialByKey<LessonShape> = {
   exampleNot2: { en: ["This isn't very strange."] },
   exampleNot3: { en: ["The rice isn't hot."] },
   exampleNot4: { en: ["I'm not fast."] },
+  exampleNot5: { en: ["It doesn't taste good."] },
   vocabLao: { en: ["old"] },
   proseAsk: {
     en: [
@@ -105,6 +110,7 @@ const en: PartialByKey<LessonShape> = {
   exampleAsk5: { en: ["That animal is very old."] },
   exampleAsk6: { en: ["My body is really hot."] },
   exampleAsk7: { en: ["Is this worth anything?"] },
+  exampleAsk8: { en: ["Does it taste good?"] },
   infoHowMuch: {
     title: { en: ["How Much"] },
     items: [
@@ -145,6 +151,7 @@ const en: PartialByKey<LessonShape> = {
   exercise8: { en: ["The water isn't cold."] },
   exercise9: { en: ["You're really fast!"] },
   exercise10: { en: ["Is that animal old?"] },
+  exercise11: { en: ["The rice doesn't taste good."] },
   answer1: {
     en: [
       "{{Word:shui3}}-{{word:de}} {{word:jia4zhi2}} {{word:hen3}} {{word:da4}}.",
@@ -171,6 +178,7 @@ const en: PartialByKey<LessonShape> = {
   answer8: { en: ["{{Word:shui3}} {{word:bu4}} {{word:leng3}}."] },
   answer9: { en: ["{{Word:ni3}} {{word:zhen1}} {{word:kuai4}}!"] },
   answer10: { en: ["{{Word:na4}}-ge {{word:dong4wu4}} {{word:lao3}} {{word:ma}}?"] },
+  answer11: { en: ["{{Word:mi3fan4}}-{{word:de}} {{word:wei4dao4}} {{word:bu4}} {{word:hao3}}."] },
   faqHenStress: {
     question: { en: ["Is this {{word:hen3}} the same as in Lesson {{lesson:modifying-nouns}}?"] },
     en: [

@@ -24,7 +24,6 @@ const zh: PartialByKey<LessonShape> = {
   exampleBecause11: { zh: [] },
   exampleBecause12: { zh: [] },
   vocabDanshi: { zh: [] },
-  vocabYan: { zh: [] },
   proseBut: { zh: [], tldr: { zh: [] }, necessity: { zh: [] } },
   exampleBut1: { zh: [] },
   exampleBut2: { zh: [] },
