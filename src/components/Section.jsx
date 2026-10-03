@@ -1,3 +1,4 @@
+import { t } from '../lib/i18n.js';
 import styles from './Section.module.css';
 
 const BADGE_THEMES = {
@@ -7,7 +8,7 @@ const BADGE_THEMES = {
   appendix: { bg: 'var(--blue-bg)', icon: '🔤', color: 'var(--blue)' },
 };
 
-export function Section({ data, children }) {
+export function Section({ data, lang, children }) {
   const { meta } = data;
   const theme = BADGE_THEMES[meta.type] || BADGE_THEMES.intro;
   const isLesson = meta.type === 'lesson';
@@ -35,7 +36,7 @@ export function Section({ data, children }) {
               {theme.icon}
             </div>
             <div class={styles.badgeLabel} style={{ color: theme.color }}>
-              {meta.type === 'intro' ? 'Introduction' : meta.title}
+              {meta.type === 'intro' ? t(lang, 'introduction') : meta.title}
             </div>
             <button
               type="button"

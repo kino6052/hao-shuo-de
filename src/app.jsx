@@ -117,7 +117,7 @@ export function App() {
         <div class="page-inner">
           {showHero && <HeroSection lang={router.lang} />}
 
-          <Section data={current}>
+          <Section data={current} lang={router.lang}>
             {renderContent(current, router.lang)}
           </Section>
 
