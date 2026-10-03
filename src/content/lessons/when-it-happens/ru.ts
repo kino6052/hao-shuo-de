@@ -7,7 +7,7 @@ const ru: PartialByKey<LessonShape> = {
   title: { ru: ["Время 1 — Когда это происходит"] },
   summary: {
     ru: [
-      "Нам часто нужно сказать, когда что-то происходит.",
+      "Нам часто нужно уметь выразить время, когда что-то происходит.",
       "В этом уроке вы научитесь говорить «Я поел.», «Я как раз ем.», «Я буду есть.», «Я уже пробовал рис.» и «Ночью я сплю.»",
     ],
   },
@@ -24,7 +24,9 @@ const ru: PartialByKey<LessonShape> = {
       "{{Word:fa1sheng1}} {{word:le}} {{word:shen2me}}? значит «Что случилось?» ({{word:fa1sheng1}} — «случаться»).",
     ],
     tldr: {
-      ru: ["Поставьте {{word:le}} после глагола, чтобы сказать, что это сделано."],
+      ru: [
+        "Поставьте {{word:le}} после глагола, чтобы сказать, что это сделано.",
+      ],
     },
     necessity: {
       ru: ["Теперь вы можете говорить о том, что уже случилось."],
@@ -174,22 +176,16 @@ const ru: PartialByKey<LessonShape> = {
     ru: ["{{Word:fa1sheng1}} {{word:le}} {{word:shen2me}}?"],
   },
   answer2: {
-    ru: [
-      "{{Word:xian4zai4}}, {{word:wo3}} {{word:zai4}} {{word:chi1}}.",
-    ],
+    ru: ["{{Word:xian4zai4}}, {{word:wo3}} {{word:zai4}} {{word:chi1}}."],
   },
   answer3: { ru: ["{{Word:wo3}} {{word:shui4jiao4}} {{word:le}}."] },
   answer4: { ru: ["{{Word:ta1}} {{word:zai4}} {{word:deng3}}."] },
   answer5: {
-    ru: [
-      "{{Word:ni3}} {{word:hui4}} {{word:xie3}} {{word:ma}}?",
-    ],
+    ru: ["{{Word:ni3}} {{word:hui4}} {{word:xie3}} {{word:ma}}?"],
   },
   answer6: { ru: ["{{Word:wo3}} {{word:ting1}}-{{word:guo4}}."] },
   answer7: {
-    ru: [
-      "{{Word:ni3}} {{word:zai4}} {{word:chi1}} {{word:shen2me}}?",
-    ],
+    ru: ["{{Word:ni3}} {{word:zai4}} {{word:chi1}} {{word:shen2me}}?"],
   },
   answer8: {
     ru: [

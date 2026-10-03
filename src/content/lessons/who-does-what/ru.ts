@@ -7,7 +7,7 @@ const ru: PartialByKey<LessonShape> = {
   title: { ru: ["Глаголы 1 — Кто что делает"] },
   summary: {
     ru: [
-      "Как и в любом языке, нам нужно говорить, что кто-то или что-то что-то делает.",
+      "Как и в любом языке, нам нужно уметь выразить действие.",
       "В этом уроке вы научитесь говорить «Я ем рис.», «Она не пишет.» и «У меня нет денег.»",
     ],
   },
@@ -48,7 +48,9 @@ const ru: PartialByKey<LessonShape> = {
       "",
       "**Кто + {{word:bu4}} + глагол**",
     ],
-    tldr: { ru: ["Поставьте {{word:bu4}} перед глаголом, чтобы сказать «не»."] },
+    tldr: {
+      ru: ["Поставьте {{word:bu4}} перед глаголом, чтобы сказать «не»."],
+    },
     necessity: { ru: ["Теперь вы можете сказать, чего кто-то не делает."] },
   },
   exampleNot1: { ru: ["Она не пишет."] },
@@ -115,9 +117,7 @@ const ru: PartialByKey<LessonShape> = {
   answer1: { ru: ["{{Word:wo3}} {{word:ting1}} {{word:ni3}}."] },
   answer2: { ru: ["{{Word:ta1}} {{word:chi1}} {{word:mi3fan4}}."] },
   answer3: {
-    ru: [
-      "{{Word:ta1}} {{word:mei2}}-{{word:you3}} {{word:jin1}}.",
-    ],
+    ru: ["{{Word:ta1}} {{word:mei2}}-{{word:you3}} {{word:jin1}}."],
   },
   answer4: { ru: ["{{Word:ni3}} {{word:kan4}} {{word:wo3}}."] },
   answer5: { ru: ["{{Word:wo3}} {{word:bu4}} {{word:xie3}}."] },

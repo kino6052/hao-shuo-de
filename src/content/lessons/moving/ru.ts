@@ -7,7 +7,7 @@ const ru: PartialByKey<LessonShape> = {
   title: { ru: ["Пространство 2 — Движение"] },
   summary: {
     ru: [
-      "Мы часто говорим о том, кто приходит и кто уходит.",
+      "Нам часто нужно уметь сказать, куда мы идём, откуда пришли и куда движется что-то.",
       "В этом уроке вы научитесь говорить «Откуда ты?», «Иди!», «Вставай!», «Я пришёл домой.» и «Я иду на улицу.»",
     ],
   },
@@ -214,16 +214,14 @@ const ru: PartialByKey<LessonShape> = {
   exercise11: { ru: ["Ты знаешь дорогу?"] },
   answer1: { ru: ["{{Word:ni3}} {{word:qu4}} {{word:na3li3}}?"] },
   answer2: {
-    ru: [
-      "{{Word:ta1}} {{word:cong2}} {{word:jia1}} {{word:lai2}}.",
-    ],
+    ru: ["{{Word:ta1}} {{word:cong2}} {{word:jia1}} {{word:lai2}}."],
   },
-  answer3: { ru: ["{{Word:wo3}}-{{word:men}} {{word:dao4}} {{word:jia1}} {{word:le}}."] },
+  answer3: {
+    ru: ["{{Word:wo3}}-{{word:men}} {{word:dao4}} {{word:jia1}} {{word:le}}."],
+  },
   answer4: { ru: ["{{Word:qi3}}-{{word:lai2}}!"] },
   answer5: {
-    ru: [
-      "{{Word:dong4wu4}} {{word:zai4}} {{word:wai4}}-{{word:mian4}}.",
-    ],
+    ru: ["{{Word:dong4wu4}} {{word:zai4}} {{word:wai4}}-{{word:mian4}}."],
   },
   answer6: {
     ru: [
@@ -232,13 +230,19 @@ const ru: PartialByKey<LessonShape> = {
   },
   answer7: { ru: ["{{Word:xia4}}-{{word:lai2}}!"] },
   answer8: { ru: ["{{Word:bu4}} {{word:yao4}} {{word:dong4}}!"] },
-  answer9: { ru: ["{{Word:fu4mu3}}-{{word:de}} {{word:jia1}} {{word:hen3}} {{word:yuan3}}."] },
+  answer9: {
+    ru: [
+      "{{Word:fu4mu3}}-{{word:de}} {{word:jia1}} {{word:hen3}} {{word:yuan3}}.",
+    ],
+  },
   answer10: {
     ru: [
       "{{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:zai4}} {{word:fu4jin4}}.",
     ],
   },
-  answer11: { ru: ["{{Word:ni3}} {{word:zhi1dao4}} {{word:lu4}} {{word:ma}}?"] },
+  answer11: {
+    ru: ["{{Word:ni3}} {{word:zhi1dao4}} {{word:lu4}} {{word:ma}}?"],
+  },
   faqDaoOrQu: {
     question: { ru: ["Чем {{word:qu4}} отличается от {{word:dao4}}?"] },
     ru: [
@@ -246,7 +250,9 @@ const ru: PartialByKey<LessonShape> = {
     ],
   },
   faqCongOrder: {
-    question: { ru: ["Почему место стоит между {{word:cong2}} и {{word:lai2}}?"] },
+    question: {
+      ru: ["Почему место стоит между {{word:cong2}} и {{word:lai2}}?"],
+    },
     ru: [
       "В китайском «откуда» стоит перед глаголом, как и большинство подробностей о действии. {{Word:wo3}} {{word:cong2}} {{word:jia1}} {{word:lai2}} — это «я из дома пришёл».",
     ],

@@ -8,7 +8,7 @@ const ru: PartialByKey<LessonShape> = {
   summary: {
     ru: [
       "В китайском часто говорят слово два раза, чтобы изменить его смысл.",
-      "В этом уроке вы научитесь говорить «Дай-ка я посмотрю.», «Луна круглая-круглая.», «Учись хорошенько!» и «Всем нужна вода.»",
+      "В этом уроке вы научитесь говорить «Дай-ка я посмотрю.», «Луна круглая-круглая.» и «Учись хорошенько!»",
     ],
   },
   proseVerbs: {
@@ -106,10 +106,18 @@ const ru: PartialByKey<LessonShape> = {
   exercise6: { ru: ["Каждый раз по-другому."] },
   answer1: { ru: ["{{Word:wo3}} {{word:ting1}}-ting."] },
   answer2: { ru: ["{{Word:wo3}}-{{word:men}} {{word:shuo1}}-shuo."] },
-  answer3: { ru: ["{{Word:shui3}} {{word:leng3}}-{{word:leng3}}-{{word:de}}."] },
+  answer3: {
+    ru: ["{{Word:shui3}} {{word:leng3}}-{{word:leng3}}-{{word:de}}."],
+  },
   answer4: { ru: ["{{Word:hao3}}-{{word:hao3}} {{word:shui4jiao4}}!"] },
-  answer5: { ru: ["{{Word:ren2}}-{{word:ren2}} {{word:dou1}} {{word:you3}} {{word:jin1}}."] },
-  answer6: { ru: ["{{Word:ci4}}-{{word:ci4}} {{word:dou1}} {{word:bu4tong2}}."] },
+  answer5: {
+    ru: [
+      "{{Word:ren2}}-{{word:ren2}} {{word:dou1}} {{word:you3}} {{word:jin1}}.",
+    ],
+  },
+  answer6: {
+    ru: ["{{Word:ci4}}-{{word:ci4}} {{word:dou1}} {{word:bu4tong2}}."],
+  },
   faqLight: {
     question: { ru: ["Вторая половина всегда звучит легко?"] },
     ru: [
@@ -123,7 +131,11 @@ const ru: PartialByKey<LessonShape> = {
     ],
   },
   faqHaoHaoKan: {
-    question: { ru: ["{{word:hao3}}-{{word:hao3}} {{word:kan4}} значит «посмотри внимательно»?"] },
+    question: {
+      ru: [
+        "{{word:hao3}}-{{word:hao3}} {{word:kan4}} значит «посмотри внимательно»?",
+      ],
+    },
     ru: [
       "Может значить. Но ещё это «очень красивый»: {{word:hao3}} {{word:kan4}} («хорошо смотреть»), только сильнее. Что именно — понятно из ситуации.",
     ],

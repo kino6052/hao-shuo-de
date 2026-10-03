@@ -7,7 +7,7 @@ const ru: PartialByKey<LessonShape> = {
   title: { ru: ["Связи 1 — Внутри предложения"] },
   summary: {
     ru: [
-      "Нам часто нужно сказать, для кого что-то или чем мы это делаем.",
+      "Нам часто нужно выразить связь между людьми, вещами и действиями в предложении.",
       "В этом уроке вы научитесь говорить «дай мне», «писать инструментом», «ты и я», «это или то» и «для меня».",
     ],
   },
@@ -115,9 +115,7 @@ const ru: PartialByKey<LessonShape> = {
       "**{{word:yi1}} / {{word:zhe4}} / {{word:na4}} + {{word:qun2}} + существительное**",
     ],
     tldr: {
-      ru: [
-        "{{word:yi1}}-{{word:qun2}} {{word:ren2}} — группа людей.",
-      ],
+      ru: ["{{word:yi1}}-{{word:qun2}} {{word:ren2}} — группа людей."],
     },
     necessity: { ru: ["Теперь вы можете говорить о многих сразу."] },
   },
@@ -139,7 +137,11 @@ const ru: PartialByKey<LessonShape> = {
         "{{word:guan1xi}} — отношения. {{word:mei2}}-{{word:you3}} {{word:guan1xi}} — ничего страшного.",
       ],
     },
-    necessity: { ru: ["Теперь вы можете сказать, кто с кем ладит, и ответить «ничего страшного»."] },
+    necessity: {
+      ru: [
+        "Теперь вы можете сказать, кто с кем ладит, и ответить «ничего страшного».",
+      ],
+    },
   },
   exampleRelation1: { ru: ["У нас с ним хорошие отношения."] },
   exampleRelation2: { ru: ["У них плохие отношения."] },
@@ -192,9 +194,7 @@ const ru: PartialByKey<LessonShape> = {
   exercise10: { ru: ["У меня с родителями хорошие отношения."] },
   answer1: { ru: ["{{Word:gei3}} {{word:wo3}} {{word:he2zi}}."] },
   answer2: {
-    ru: [
-      "{{Word:ta1}} {{word:yong4}} {{word:gun4zi}} {{word:xie3}}.",
-    ],
+    ru: ["{{Word:ta1}} {{word:yong4}} {{word:gun4zi}} {{word:xie3}}."],
   },
   answer3: {
     ru: [
@@ -211,17 +211,17 @@ const ru: PartialByKey<LessonShape> = {
   },
   answer6: { ru: ["{{Word:yi1}}-{{word:qun2}} {{word:dong4wu4}}."] },
   answer7: {
-    ru: [
-      "{{Word:bu4}} {{word:yao4}} {{word:da3}} {{word:ta1}}.",
-    ],
+    ru: ["{{Word:bu4}} {{word:yao4}} {{word:da3}} {{word:ta1}}."],
   },
   answer8: {
-    ru: [
-      "{{Word:wo3}} {{word:neng2}} {{word:mo1}} {{word:ma}}?",
-    ],
+    ru: ["{{Word:wo3}} {{word:neng2}} {{word:mo1}} {{word:ma}}?"],
   },
   answer9: { ru: ["{{Word:mei2}}-{{word:you3}} {{word:guan1xi}}!"] },
-  answer10: { ru: ["{{Word:wo3}} {{word:he2}} {{word:fu4mu3}}-{{word:de}} {{word:guan1xi}} {{word:hen3}} {{word:hao3}}."] },
+  answer10: {
+    ru: [
+      "{{Word:wo3}} {{word:he2}} {{word:fu4mu3}}-{{word:de}} {{word:guan1xi}} {{word:hen3}} {{word:hao3}}.",
+    ],
+  },
   faqAndSentences: {
     question: { ru: ["Как сказать «и» между двумя предложениями?"] },
     ru: [
@@ -229,10 +229,12 @@ const ru: PartialByKey<LessonShape> = {
     ],
   },
   faqGeiForOrTo: {
-    question: { ru: ["{{word:gei3}} {{word:ni3}} {{word:xie3}} — это «пишу тебе» или «пишу для тебя»?"] },
-    ru: [
-      "И то и другое. Что именно — понятно из ситуации.",
-    ],
+    question: {
+      ru: [
+        "{{word:gei3}} {{word:ni3}} {{word:xie3}} — это «пишу тебе» или «пишу для тебя»?",
+      ],
+    },
+    ru: ["И то и другое. Что именно — понятно из ситуации."],
   },
   faqHuozheQuestion: {
     question: { ru: ["Можно ли использовать {{word:huo4zhe3}} в вопросе?"] },

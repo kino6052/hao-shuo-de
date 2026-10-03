@@ -7,7 +7,7 @@ const ru: PartialByKey<LessonShape> = {
   title: { ru: ["Уточнения 3 — Тоже и все"] },
   summary: {
     ru: [
-      "Нам часто хочется добавить ещё кого-то или сказать обо всех сразу.",
+      "Нам иногда хочется добавить что-то к тому, о чем мы говорим, или сказать обо всем сразу.",
       "В этом уроке вы научитесь говорить «Я тоже ем.», «Мы все едим.», «Я ем всё.» и «Большинство людей едят рис.»",
     ],
   },
@@ -19,7 +19,7 @@ const ru: PartialByKey<LessonShape> = {
   vocabGuan: { ru: ["закрывать; выключать"] },
   proseAlsoDo: {
     ru: [
-      "**Чтобы сказать, что кто-то тоже что-то делает**, поставьте {{word:ye3}} (тоже) прямо перед глаголом.",
+      "**Чтобы сказать, что кто-то тоже делает что-то**, поставьте {{word:ye3}} (тоже) прямо перед глаголом.",
       "",
       "**Кто + {{word:ye3}} + глагол**",
       "",
@@ -30,7 +30,9 @@ const ru: PartialByKey<LessonShape> = {
         "Поставьте {{word:ye3}} прямо перед глаголом: {{Word:wo3}} {{word:ye3}} {{word:chi1}} — я тоже ем.",
       ],
     },
-    necessity: { ru: ["Теперь вы можете добавить ещё одного человека или ещё одну вещь."] },
+    necessity: {
+      ru: ["Теперь вы можете добавить что-то к тому, о чем вы говорите."],
+    },
   },
   exampleAlsoDo1: { ru: ["Я тоже ем."] },
   exampleAlsoDo2: { ru: ["Ты тоже хочешь?"] },
@@ -42,7 +44,7 @@ const ru: PartialByKey<LessonShape> = {
   exampleAlsoDo10: { ru: ["Я выключил огонь, и он тоже."] },
   proseAlsoIs: {
     ru: [
-      "**Чтобы сказать, что что-то тоже такое**, поставьте {{word:ye3}} перед {{word:hen3}} и прилагательным.",
+      "**Чтобы сказать, что вещь такая же как и другая**, поставьте {{word:ye3}} перед {{word:hen3}} и прилагательным.",
       "",
       "**Вещь + {{word:ye3}} + {{word:hen3}} + прилагательное**",
     ],
@@ -167,9 +169,7 @@ const ru: PartialByKey<LessonShape> = {
   exercise10: { ru: ["Выключи огонь!"] },
   answer1: { ru: ["{{Word:wo3}} {{word:ye3}} {{word:yao4}}."] },
   answer2: {
-    ru: [
-      "{{Word:shui3}} {{word:ye3}} {{word:hen3}} {{word:re4}}.",
-    ],
+    ru: ["{{Word:shui3}} {{word:ye3}} {{word:hen3}} {{word:re4}}."],
   },
   answer3: {
     ru: [
@@ -177,9 +177,7 @@ const ru: PartialByKey<LessonShape> = {
     ],
   },
   answer4: {
-    ru: [
-      "{{Word:wo3}} {{word:shen2me}}-{{word:dou1}} {{word:chi1}}.",
-    ],
+    ru: ["{{Word:wo3}} {{word:shen2me}}-{{word:dou1}} {{word:chi1}}."],
   },
   answer5: {
     ru: [
@@ -208,7 +206,11 @@ const ru: PartialByKey<LessonShape> = {
     ],
   },
   faqAllPeople: {
-    question: { ru: ["Как сказать «все люди», если {{word:dou1}} не может стоять перед существительным?"] },
+    question: {
+      ru: [
+        "Как сказать «все люди», если {{word:dou1}} не может стоять перед существительным?",
+      ],
+    },
     ru: [
       "Поставьте {{word:dou1}} после них, перед глаголом: {{Word:ren2}} {{word:dou1}} {{word:yao4}} {{word:shui3}} (Всем людям нужна вода).",
     ],

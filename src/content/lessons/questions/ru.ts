@@ -8,7 +8,7 @@ const ru: PartialByKey<LessonShape> = {
   summary: {
     ru: [
       "Без вопросов не обходится ни один разговор.",
-      "В этом уроке вы научитесь спрашивать «Что это?», «Ты человек?», «Почему?» и «Как?», а также отвечать «да» или «нет».",
+      "В этом уроке вы научитесь спрашивать «Что это?», «Почему?» и «Как?», а также отвечать «да» или «нет».",
     ],
   },
   vocabMa: { ru: ["превращает предложение в вопрос «да или нет»"] },
@@ -23,9 +23,7 @@ const ru: PartialByKey<LessonShape> = {
       "Или скажите глагол, потом {{word:bu4}}, потом снова глагол: {{Word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}}? Для {{word:you3}}: {{word:you3}}-{{word:mei2}}-{{word:you3}}.",
     ],
     tldr: {
-      ru: [
-        "Поставьте {{word:ma}} в конце, чтобы задать вопрос «да или нет».",
-      ],
+      ru: ["Поставьте {{word:ma}} в конце, чтобы задать вопрос «да или нет»."],
     },
     necessity: { ru: ["Теперь вы можете проверить, правда ли что-то."] },
   },
@@ -47,14 +45,10 @@ const ru: PartialByKey<LessonShape> = {
       "Остальное предложение не меняется. {{word:shen2me}} {{word:ren2}} значит «кто».",
     ],
     tldr: {
-      ru: [
-        "Поставьте {{word:shen2me}} (что) туда, где стоял бы ответ.",
-      ],
+      ru: ["Поставьте {{word:shen2me}} (что) туда, где стоял бы ответ."],
     },
     necessity: {
-      ru: [
-        "Чтобы задать вопрос, не нужно переставлять слова.",
-      ],
+      ru: ["Чтобы задать вопрос, не нужно переставлять слова."],
     },
   },
   exampleWhat1: { ru: ["Что ты ищешь?"] },
@@ -147,14 +141,10 @@ const ru: PartialByKey<LessonShape> = {
   exercise7: { ru: ["Кто спрашивает?"] },
   exercise8: { ru: ["Ты покупаешь рис?"] },
   answer1: {
-    ru: [
-      "{{Word:ni3}} {{word:you3}} {{word:shen2me}} {{word:gong1ju4}}?",
-    ],
+    ru: ["{{Word:ni3}} {{word:you3}} {{word:shen2me}} {{word:gong1ju4}}?"],
   },
   answer2: {
-    ru: [
-      "{{Word:ta1}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}}?",
-    ],
+    ru: ["{{Word:ta1}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}}?"],
   },
   answer3: { ru: ["{{Word:gong1ju4}} {{word:xiao3}} {{word:ma}}?"] },
   answer4: {
@@ -163,9 +153,7 @@ const ru: PartialByKey<LessonShape> = {
     ],
   },
   answer5: {
-    ru: [
-      "{{Word:ta1}} {{word:wei4shen2me}} {{word:zhao3}} {{word:shui3}}?",
-    ],
+    ru: ["{{Word:ta1}} {{word:wei4shen2me}} {{word:zhao3}} {{word:shui3}}?"],
   },
   answer6: {
     ru: ["{{Word:zhe4}}-ge {{word:zen3me}} {{word:xie3}}?"],
@@ -173,20 +161,30 @@ const ru: PartialByKey<LessonShape> = {
   answer7: { ru: ["{{Word:shen2me}} {{word:ren2}} {{word:wen4}}?"] },
   answer8: { ru: ["{{Word:ni3}} {{word:mai3}} {{word:mi3fan4}} {{word:ma}}?"] },
   faqMaAndVerbBuVerb: {
-    question: { ru: ["Можно ли использовать {{word:ma}} и глагол-{{word:bu4}}-глагол вместе?"] },
+    question: {
+      ru: [
+        "Можно ли использовать {{word:ma}} и глагол-{{word:bu4}}-глагол вместе?",
+      ],
+    },
     ru: [
       "Нет, выберите одно. {{Word:ni3}} {{word:ting1}} {{word:ma}}? и {{Word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}}? — оба правильные, а {{word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}} {{word:ma}}? — ошибка.",
       "Оба вопроса спрашивают одно и то же. {{word:ma}} подходит к любому предложению, так что с него проще начать.",
     ],
   },
   faqYouMeiYou: {
-    question: { ru: ["Почему {{word:you3}}-{{word:mei2}}-{{word:you3}}, а не {{word:you3}}-{{word:bu4}}-{{word:you3}}?"] },
+    question: {
+      ru: [
+        "Почему {{word:you3}}-{{word:mei2}}-{{word:you3}}, а не {{word:you3}}-{{word:bu4}}-{{word:you3}}?",
+      ],
+    },
     ru: [
       "{{word:you3}} никогда не берёт {{word:bu4}}. Его «не» — это {{word:mei2}}: {{word:mei2}}-{{word:you3}}. Поэтому и в вопросе стоит {{word:mei2}}.",
     ],
   },
   faqWeishenmeFirst: {
-    question: { ru: ["Можно ли поставить {{word:wei4shen2me}} в начало предложения?"] },
+    question: {
+      ru: ["Можно ли поставить {{word:wei4shen2me}} в начало предложения?"],
+    },
     ru: [
       "Да, {{Word:wei4shen2me}} {{word:ni3}} {{word:bu4}} {{word:chi1}}? — тоже правильный китайский. Но обычное место — перед глаголом, там же, где {{word:zen3me}}, поэтому в Hǎo-shuō-de его всегда ставят туда.",
     ],
