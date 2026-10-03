@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Jargon gate: the book uses no grammar jargon at all (BOOK_PLAN.md §1,
 // rule 4). Scans the English text of every chapter -- lessons, intros,
-// appendices, proverbs, the sentence builder, and the dictionary (definitions,
+// appendices, the phrase book, the sentence builder, and the dictionary (definitions,
 // part-of-speech labels, and category names) -- for the words listed in
 // scripts/jargon.js. Prints each hit with where it is. It fails for hits in
 // the blocking chapters (scripts/finished-lessons.js: the finished lessons,
@@ -19,7 +19,7 @@
 // The rule is for the lessons (BOOK_PLAN.md D32): without --all or chapter
 // ids, only lessons are scanned.
 //
-// Chapter ids: lesson-NN, intro-N, appendix-*, proverbs, sentence-builder,
+// Chapter ids: a lesson id, intro-N, appendix-*, phrase-book, sentence-builder,
 // dictionary, categorical-dictionary.
 
 import { readFileSync, readdirSync } from 'fs';
@@ -37,7 +37,7 @@ const CONTENT_DIR = resolve(ROOT, 'src/content');
 const { args, named, blocking, scopeLabel, summary: summaryOnly } = gatePolicy();
 const only = new Set(named);
 // The no-jargon rule is for the lessons (BOOK_PLAN.md D32). --all also scans
-// the intros, appendices, proverbs, sentence builder, and dictionary.
+// the intros, appendices, phrase book, sentence builder, and dictionary.
 const includeAll = args.includes('--all');
 const wanted = (id) => (only.size ? only.has(id) : LESSON_IDS.includes(id) || includeAll);
 
@@ -88,8 +88,8 @@ for (const dir of LESSON_IDS) {
   walkEnglish(dir, en, '');
 }
 
-// ---------- intros ----------
-for (const file of readdirSync(CONTENT_DIR).filter((f) => /^(intro-\d+|appendix-[a-z-]+)\.ts$/.test(f)).sort()) {
+// ---------- flat .ts chapters: intros, appendices, the phrase book ----------
+for (const file of readdirSync(CONTENT_DIR).filter((f) => f.endsWith('.ts')).sort()) {
   const id = file.replace(/\.ts$/, '');
   if (!wanted(id)) continue;
   checked.push(id);

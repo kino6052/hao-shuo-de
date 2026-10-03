@@ -81,10 +81,6 @@ export type LessonShape = {
   vocabBian: TVocab;
   /** Vocabulary: "beside, next to". */
   vocabPangbian: TVocab;
-  /** Vocabulary: "left". */
-  vocabZuobian: TVocab;
-  /** Vocabulary: "right". */
-  vocabYoubian: TVocab;
   /** Say: To say in front, behind, or beside, join miàn (side) to qián (front) or hòu (back), or use pángbiān (beside). Pattern: Thing + zài + X-de qián-miàn / hòu-miàn / pángbiān */
   proseSides: TProse;
   /** Example: rén zài wǒ-de qián-miàn. */
@@ -93,8 +89,6 @@ export type LessonShape = {
   exampleSides2: TExample;
   /** Example: wǒ zài nǐ-de pángbiān. */
   exampleSides3: TExample;
-  /** Example: tā zài lǐ-miàn. */
-  exampleSides4: TExample;
   /** Example: jiā-de qián-miàn yǒu dòngwù. */
   exampleSides5: TExample;
   /** Example: fùmǔ zài wǒ-de pángbiān. */
@@ -105,6 +99,12 @@ export type LessonShape = {
   exampleSides8: TExample;
   /** Example: shuǐguǒ zài hézi-de páng-biān. */
   exampleSides9: TExample;
+  /** Vocabulary: "left". */
+  vocabZuobian: TVocab;
+  /** Vocabulary: "right". */
+  vocabYoubian: TVocab;
+  /** Say: To say left or right, use zuǒbiān and yòubiān, like pángbiān. Pattern: Thing + zài + (X-de) zuǒbiān / yòubiān */
+  proseLeftRight: TProse;
   /** Example: hézi zài wǒ-de zuǒbiān. */
   exampleSides10: TExample;
   /** Example: tā zài nǐ-de yòubiān. */
@@ -263,8 +263,6 @@ const shape: LessonShape = {
     term: "{{word:pang2bian1}}",
     ttsText: "旁边",
   },
-  vocabZuobian: { type: "vocab", term: "{{word:zuo3bian1}}", ttsText: "左边" },
-  vocabYoubian: { type: "vocab", term: "{{word:you4bian1}}", ttsText: "右边" },
   proseSides: { type: "prose" },
   exampleSides1: {
     type: "example",
@@ -280,11 +278,6 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:wo3}} {{word:zai4}} {{word:ni3}}-{{word:de}} {{word:pang2bian1}}.",
     ttsText: "我在你的旁边。",
-  },
-  exampleSides4: {
-    type: "example",
-    pinyin: "{{Word:ta1}} {{word:zai4}} {{word:li3}}-{{word:mian4}}.",
-    ttsText: "她在里面。",
   },
   exampleSides5: {
     type: "example",
@@ -311,6 +304,9 @@ const shape: LessonShape = {
     pinyin: "{{Word:shui3guo3}} {{word:zai4}} {{word:he2zi}}-{{word:de}} {{word:pang2}}-{{word:bian1}}.",
     ttsText: "水果在盒子的旁边。",
   },
+  vocabZuobian: { type: "vocab", term: "{{word:zuo3bian1}}", ttsText: "左边" },
+  vocabYoubian: { type: "vocab", term: "{{word:you4bian1}}", ttsText: "右边" },
+  proseLeftRight: { type: "prose" },
   exampleSides10: {
     type: "example",
     pinyin: "{{Word:he2zi}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3bian1}}.",

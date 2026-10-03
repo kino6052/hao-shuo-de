@@ -46,7 +46,7 @@ export const JARGON = [
   // sentence parts
   "predicate",
   "clause",
-  "phrase",
+  "phrase(?! book)", // a "phrase book" is an everyday thing
   "complement",
   "copula",
   "copular",

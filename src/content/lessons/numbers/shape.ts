@@ -67,46 +67,30 @@ export type LessonShape = {
   exampleCount3: TExample;
   /** Example: wǒ yǒu sì-ge shuǐguǒ. */
   exampleCount4: TExample;
-  /** Example: wǔ-ge rén zài jiā-lǐ. */
-  exampleCount5: TExample;
-  /** Example: tā yào liù-ge. */
-  exampleCount6: TExample;
   /** Example: qī-ge gùnzi zài dì-shàng. */
   exampleCount7: TExample;
-  /** Example: wǒ-men bā-ge rén qù wài-miàn. */
-  exampleCount8: TExample;
   /** Example: jiǔ-ge rén chī mǐfàn. */
   exampleCount9: TExample;
   /** Example: shí-ge zhíwù. */
   exampleCount10: TExample;
-  /** Example: liǎng-ge rén yīyàng. */
-  exampleCount11: TExample;
+  /** Example: wǒ mǎi sān-ge shuǐguǒ. */
+  exampleCount24: TExample;
+  /** Say: To leave the noun out when it is clear, say just the number and gè. Pattern: number-gè */
+  proseCountAlone: TProse;
+  /** Example: tā yào liù-ge. */
+  exampleCount6: TExample;
   /** Example: wǒ yào qī-ge. */
   exampleCount12: TExample;
-  /** Example: tā yǒu jiǔ-ge gùnzi. */
-  exampleCount13: TExample;
-  /** Example: sì-ge rén zài wài-miàn. */
-  exampleCount14: TExample;
-  /** Example: liù-ge shuǐguǒ huài le. */
-  exampleCount15: TExample;
-  /** Example: bā-ge hézi hěn dà. */
-  exampleCount16: TExample;
-  /** Example: sì-ge rén cóng wài-miàn lái. */
-  exampleCount17: TExample;
-  /** Example: wǒ yǒu wǔ-ge hěn tián-de shuǐguǒ. */
-  exampleCount18: TExample;
-  /** Example: sān-ge rén qǐ-lái le. */
-  exampleCount19: TExample;
+  /** Example: wǒ yǒu sān-ge, tā yǒu wǔ-ge. */
+  exampleCount25: TExample;
+  /** Say: To count kinds, times, or parts, put the number before zhǒng, cì, or bùfen instead of gè. Pattern: number-zhǒng / number-cì / number-bùfen */
+  proseCountKinds: TProse;
   /** Example: wǒ yǒu sān-zhǒng shuǐguǒ. */
   exampleCount20: TExample;
   /** Example: yī-bùfen rén qù le. */
   exampleCount21: TExample;
-  /** Example: tā bǎ liǎng-ge hézi fàng zài dì-shàng le. */
-  exampleCount22: TExample;
   /** Example: wǒ qù-guò sān-cì. */
   exampleCount23: TExample;
-  /** Example: wǒ mǎi sān-ge shuǐguǒ. */
-  exampleCount24: TExample;
   /** Say: To say numbers above ten, put shí (ten) before or after the other number. Pattern: shí + number (11-19) / number + shí (20, 30 …) */
   proseTeens: TProse;
   /** Example: shí-yī-ge rén. */
@@ -344,25 +328,10 @@ const shape: LessonShape = {
     pinyin: "{{Word:wo3}} {{word:you3}} {{word:si4}}-ge {{word:shui3guo3}}.",
     ttsText: "我有四个水果。",
   },
-  exampleCount5: {
-    type: "example",
-    pinyin: "{{Word:wu3}}-ge {{word:ren2}} {{word:zai4}} {{word:jia1}}-{{word:li3}}.",
-    ttsText: "五个人在家里。",
-  },
-  exampleCount6: {
-    type: "example",
-    pinyin: "{{Word:ta1}} {{word:yao4}} {{word:liu4}}-ge.",
-    ttsText: "他要六个。",
-  },
   exampleCount7: {
     type: "example",
     pinyin: "{{Word:qi1}}-ge {{word:gun4zi}} {{word:zai4}} {{word:di4}}-{{word:shang4}}.",
     ttsText: "七个棍子在地上。",
-  },
-  exampleCount8: {
-    type: "example",
-    pinyin: "{{Word:wo3}}-{{word:men}} {{word:ba1}}-ge {{word:ren2}} {{word:qu4}} {{word:wai4}}-{{word:mian4}}.",
-    ttsText: "我们八个人去外面。",
   },
   exampleCount9: {
     type: "example",
@@ -374,51 +343,28 @@ const shape: LessonShape = {
     pinyin: "{{Word:shi2}}-ge {{word:zhi2wu4}}.",
     ttsText: "十个植物。",
   },
-  exampleCount11: {
+  exampleCount24: {
     type: "example",
-    pinyin: "{{Word:liang3}}-ge {{word:ren2}} {{word:yi1yang4}}.",
-    ttsText: "两个人一样。",
+    pinyin: "{{Word:wo3}} {{word:mai3}} {{word:san1}}-ge {{word:shui3guo3}}.",
+    ttsText: "我买三个水果。",
+  },
+  proseCountAlone: { type: "prose" },
+  exampleCount6: {
+    type: "example",
+    pinyin: "{{Word:ta1}} {{word:yao4}} {{word:liu4}}-ge.",
+    ttsText: "他要六个。",
   },
   exampleCount12: {
     type: "example",
     pinyin: "{{Word:wo3}} {{word:yao4}} {{word:qi1}}-ge.",
     ttsText: "我要七个。",
   },
-  exampleCount13: {
+  exampleCount25: {
     type: "example",
-    pinyin: "{{Word:ta1}} {{word:you3}} {{word:jiu3}}-ge {{word:gun4zi}}.",
-    ttsText: "她有九个棍子。",
+    pinyin: "{{Word:wo3}} {{word:you3}} {{word:san1}}-ge, {{word:ta1}} {{word:you3}} {{word:wu3}}-ge.",
+    ttsText: "我有三个，他有五个。",
   },
-  exampleCount14: {
-    type: "example",
-    pinyin: "{{Word:si4}}-ge {{word:ren2}} {{word:zai4}} {{word:wai4}}-{{word:mian4}}.",
-    ttsText: "四个人在外面。",
-  },
-  exampleCount15: {
-    type: "example",
-    pinyin: "{{Word:liu4}}-ge {{word:shui3guo3}} {{word:huai4}} {{word:le}}.",
-    ttsText: "六个水果坏了。",
-  },
-  exampleCount16: {
-    type: "example",
-    pinyin: "{{Word:ba1}}-ge {{word:he2zi}} {{word:hen3}} {{word:da4}}.",
-    ttsText: "八个盒子很大。",
-  },
-  exampleCount17: {
-    type: "example",
-    pinyin: "{{Word:si4}}-ge {{word:ren2}} {{word:cong2}} {{word:wai4}}-{{word:mian4}} {{word:lai2}}.",
-    ttsText: "四个人从外面来。",
-  },
-  exampleCount18: {
-    type: "example",
-    pinyin: "{{Word:wo3}} {{word:you3}} {{word:wu3}}-ge {{word:hen3}} {{word:tian2}}-{{word:de}} {{word:shui3guo3}}.",
-    ttsText: "我有五个很甜的水果。",
-  },
-  exampleCount19: {
-    type: "example",
-    pinyin: "{{Word:san1}}-ge {{word:ren2}} {{word:qi3}}-{{word:lai2}} {{word:le}}.",
-    ttsText: "三个人起来了。",
-  },
+  proseCountKinds: { type: "prose" },
   exampleCount20: {
     type: "example",
     pinyin: "{{Word:wo3}} {{word:you3}} {{word:san1}}-{{word:zhong3}} {{word:shui3guo3}}.",
@@ -429,20 +375,10 @@ const shape: LessonShape = {
     pinyin: "{{Word:yi1}}-{{word:bu4fen}} {{word:ren2}} {{word:qu4}} {{word:le}}.",
     ttsText: "一部分人去了。",
   },
-  exampleCount22: {
-    type: "example",
-    pinyin: "{{Word:ta1}} {{word:ba3}} {{word:liang3}}-ge {{word:he2zi}} {{word:fang4}} {{word:zai4}} {{word:di4}}-{{word:shang4}} {{word:le}}.",
-    ttsText: "他把两个盒子放在地上了。",
-  },
   exampleCount23: {
     type: "example",
     pinyin: "{{Word:wo3}} {{word:qu4}}-{{word:guo4}} {{word:san1}}-{{word:ci4}}.",
     ttsText: "我去过三次。",
-  },
-  exampleCount24: {
-    type: "example",
-    pinyin: "{{Word:wo3}} {{word:mai3}} {{word:san1}}-ge {{word:shui3guo3}}.",
-    ttsText: "我买三个水果。",
   },
   proseTeens: { type: "prose" },
   exampleTeens1: {

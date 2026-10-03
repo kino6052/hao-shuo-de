@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // Summary gate: every chapter summary is at most SUMMARY_MAX_WORDS (50)
 // words (BOOK_PLAN.md §1, rule 7). Checks the English summary of every lesson,
-// intro, and .yaml chapter (appendices, sentence builder). Prints each
+// flat .ts chapter (intros, appendices, the phrase book), and .yaml chapter
+// (the other appendices, sentence builder). Prints each
 // chapter's word count, and exits 1 if any summary is too long. A lesson with
 // no summary is an error too. Intros and appendices may skip it.
 //
@@ -27,7 +28,7 @@ const wanted = (id) => only.size === 0 || only.has(id);
 // [{ id, summary: string | null, required }]
 const chapters = [];
 
-for (const file of readdirSync(CONTENT_DIR).filter((f) => /^(intro-\d+|appendix-[a-z-]+)\.ts$/.test(f)).sort()) {
+for (const file of readdirSync(CONTENT_DIR).filter((f) => f.endsWith('.ts')).sort()) {
   const id = file.replace(/\.ts$/, '');
   if (!wanted(id)) continue;
   const entries = (await import(pathToFileURL(resolve(CONTENT_DIR, file)))).default;

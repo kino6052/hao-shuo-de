@@ -1328,7 +1328,7 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "…, {{word:dan4shi4}} …, but: {{Word:zhe4}}-ge {{word:hen3}} {{word:hao3}}, {{word:dan4shi4}} {{word:mei2}}-{{word:you3}} {{word:yan2}}. (It's good, but there's no salt.)"
+            "…, {{word:dan4shi4}} …, but: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4shi4}} {{word:wei4dao4}} {{word:bu4}} {{word:hao3}}. (It looks good, but it doesn't taste good.)"
           ],
           "ru": [],
           "zh": []
@@ -1338,6 +1338,15 @@ const content: Entry[] = [
         "text": {
           "en": [
             "{{word:ru2guo3}} X, …, if: {{Word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:deng3}} {{word:ni3}}. (If you come, I'll wait for you.)"
+          ],
+          "ru": [],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "who + {{word:jiu4}} + verb, then / right away: {{Word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:jiu4}} {{word:deng3}} {{word:ni3}}. (If you come, I'll wait for you.)"
           ],
           "ru": [],
           "zh": []

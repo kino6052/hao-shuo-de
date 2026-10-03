@@ -37,24 +37,14 @@ export type LessonShape = {
   proseThan: TProse;
   /** Example: wǒ bǐ nǐ dà. */
   exampleThan1: TExample;
-  /** Example: gùnzi bǐ xiàn yìng. */
-  exampleThan2: TExample;
-  /** Example: zhè-ge shuǐguǒ bǐ nà-ge tián. */
-  exampleThan3: TExample;
-  /** Example: zhè-ge hézi bǐ nà-ge yuán. */
-  exampleThan4: TExample;
   /** Example: shénme bǐ gùnzi yìng? */
   exampleThan5: TExample;
   /** Example: wǒ-de jīn bǐ nǐ-de shǎo. */
   exampleThan6: TExample;
   /** Example: nà-ge dìfāng bǐ jiā yuǎn. */
   exampleThan7: TExample;
-  /** Example: wǒ-de jiā bǐ nǐ-de yuǎn. */
-  exampleThan8: TExample;
   /** Example: rén bǐ jīn yǒu jiàzhí. */
   exampleThan9: TExample;
-  /** Example: zhè-cì bǐ nà-cì hǎo. */
-  exampleThan10: TExample;
   /** Example: tā bǐ wǒ lǎo. */
   exampleThan11: TExample;
   /** Example: zhè-ge lù bǐ nà-ge yuǎn. */
@@ -193,21 +183,6 @@ const shape: LessonShape = {
     pinyin: "{{Word:wo3}} {{word:bi3}} {{word:ni3}} {{word:da4}}.",
     ttsText: "我比你大。",
   },
-  exampleThan2: {
-    type: "example",
-    pinyin: "{{Word:gun4zi}} {{word:bi3}} {{word:xian4}} {{word:ying4}}.",
-    ttsText: "棍子比线硬。",
-  },
-  exampleThan3: {
-    type: "example",
-    pinyin: "{{Word:zhe4}}-ge {{word:shui3guo3}} {{word:bi3}} {{word:na4}}-ge {{word:tian2}}.",
-    ttsText: "这个水果比那个甜。",
-  },
-  exampleThan4: {
-    type: "example",
-    pinyin: "{{Word:zhe4}}-ge {{word:he2zi}} {{word:bi3}} {{word:na4}}-ge {{word:yuan2}}.",
-    ttsText: "这个盒子比那个圆。",
-  },
   exampleThan5: {
     type: "example",
     pinyin: "{{Word:shen2me}} {{word:bi3}} {{word:gun4zi}} {{word:ying4}}?",
@@ -223,20 +198,10 @@ const shape: LessonShape = {
     pinyin: "{{Word:na4}}-ge {{word:di4fang1}} {{word:bi3}} {{word:jia1}} {{word:yuan3}}.",
     ttsText: "那个地方比家远。",
   },
-  exampleThan8: {
-    type: "example",
-    pinyin: "{{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:bi3}} {{word:ni3}}-{{word:de}} {{word:yuan3}}.",
-    ttsText: "我的家比你的远。",
-  },
   exampleThan9: {
     type: "example",
     pinyin: "{{Word:ren2}} {{word:bi3}} {{word:jin1}} {{word:you3}} {{word:jia4zhi2}}.",
     ttsText: "人比金有价值。",
-  },
-  exampleThan10: {
-    type: "example",
-    pinyin: "{{Word:zhe4}}-{{word:ci4}} {{word:bi3}} {{word:na4}}-{{word:ci4}} {{word:hao3}}.",
-    ttsText: "这次比那次好。",
   },
   exampleThan11: {
     type: "example",

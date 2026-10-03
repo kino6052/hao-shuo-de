@@ -56,11 +56,12 @@ export const SECTIONS = [
 ];
 
 // After the lessons: everything that isn't a lesson, in four groups, by
-// chapter id. Content is to read, reference explains how the language works,
-// tools are dictionaries and builders, and misc holds extra articles. The
-// sidebar and intro-3 show them in this order.
+// chapter id. Content is to read and use (the phrase book, the stories),
+// reference explains how the language works, tools are dictionaries and
+// builders, and misc holds extra articles. The sidebar and intro-3 show them
+// in this order.
 export const BACK_MATTER = [
-  { key: "sectionContent", chapters: ["proverbs", "appendix-stories"] },
+  { key: "sectionContent", chapters: ["phrase-book", "appendix-stories"] },
   { key: "sectionReference", chapters: ["appendix-pinyin", "appendix-sandhi", "appendix-grammar"] },
   {
     key: "sectionTools",

@@ -70,11 +70,7 @@ const en: PartialByKey<LessonShape> = {
     necessity: { en: ["Now you can ask for help and offer it."] },
   },
   exampleHelp1: { en: ["Help me!"] },
-  exampleHelp2: { en: ["I'll help you."] },
   exampleHelp3: { en: ["Could you hold this for me?"] },
-  exampleHelp4: { en: ["I'll help you take the box in."] },
-  exampleHelp5: { en: ["He helps his parents make rice."] },
-  exampleHelp6: { en: ["Thank you for helping me."] },
   exampleHelp7: { en: ["Don't laugh, help me!"] },
   exampleHelp8: { en: ["The house is a mess. Could you help me?"] },
   exampleHelp9: { en: ["Let me help you stand up."] },
@@ -143,6 +139,7 @@ const en: PartialByKey<LessonShape> = {
   exampleMayI5: { en: ["Could you help me, please?"] },
   exampleMayI6: { en: ["Okay!"] },
   exampleMayI7: { en: ["Sit on my left, okay?"] },
+  exampleMayI8: { en: ["Okay, I'm coming right now!"] },
   infoEveryday: {
     title: { en: ["Let and Help"] },
     items: [

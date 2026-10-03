@@ -43,10 +43,6 @@ export type LessonShape = {
   exampleAlsoDo2: TExample;
   /** Example: zhíwù yě yào kōngqì. */
   exampleAlsoDo3: TExample;
-  /** Example: tā yě kàn huǒ. */
-  exampleAlsoDo4: TExample;
-  /** Example: wǒ yě qǐ-lái le. */
-  exampleAlsoDo5: TExample;
   /** Example: wǒ yě zài tā-de páng-biān. */
   exampleAlsoDo6: TExample;
   /** Example: tā yě bù dòng. */
@@ -191,16 +187,6 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:zhi2wu4}} {{word:ye3}} {{word:yao4}} {{word:kong1qi4}}.",
     ttsText: "植物也要空气。",
-  },
-  exampleAlsoDo4: {
-    type: "example",
-    pinyin: "{{Word:ta1}} {{word:ye3}} {{word:kan4}} {{word:huo3}}.",
-    ttsText: "他也看火。",
-  },
-  exampleAlsoDo5: {
-    type: "example",
-    pinyin: "{{Word:wo3}} {{word:ye3}} {{word:qi3}}-{{word:lai2}} {{word:le}}.",
-    ttsText: "我也起来了。",
   },
   exampleAlsoDo6: {
     type: "example",

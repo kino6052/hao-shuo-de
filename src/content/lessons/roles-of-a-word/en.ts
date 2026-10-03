@@ -70,9 +70,6 @@ const en: PartialByKey<LessonShape> = {
   exampleHow3: { en: ["He eats a lot."] },
   exampleHow4: { en: ["He speaks better than me."] },
   vocabFangfa: { en: ["way, method"] },
-  vocabBizi: { en: ["nose"] },
-  vocabPifu: { en: ["skin"] },
-  vocabMao: { en: ["hair, fur"] },
   proseName: {
     en: [
       "**To name something there's no word for**, describe it, then add -{{word:de}} and the noun.",
@@ -80,7 +77,6 @@ const en: PartialByKey<LessonShape> = {
       "**description-{{word:de}} + noun**",
       "",
       "You already know this -{{word:de}}: {{word:hao3}}-{{word:de}} {{word:ren2}} (Lesson {{lesson:modifying-nouns}}), {{word:wo3}}-{{word:de}} {{word:bi2zi}} (Lesson {{lesson:pointing}}). The description can be as long as you need.",
-      "{{word:mao2}} is fur: {{word:tou2}}-{{word:shang4}}-{{word:de}} {{word:mao2}} (the fur on the head) is hair.",
     ],
     tldr: {
       en: [
@@ -98,17 +94,34 @@ const en: PartialByKey<LessonShape> = {
   exampleName3: { en: ["The way of writing."] },
   exampleName4: { en: ["Do you have a good way?"] },
   exampleName5: { en: ["This way is good."] },
+  exampleName12: { en: ["The color I love is blue."] },
+  exampleName13: { en: ["This is a valuable thing."] },
+  vocabBizi: { en: ["nose"] },
+  vocabPifu: { en: ["skin"] },
+  vocabMao: { en: ["hair, fur"] },
+  proseParts: {
+    en: [
+      "**To say whose part it is**, put -{{word:de}} between the owner and the part: {{word:dong4wu4}}-{{word:de}} {{word:bi2zi}}, the animal's nose.",
+      "",
+      "**owner-{{word:de}} + part**",
+      "",
+      "{{word:mao2}} is fur: {{word:tou2}}-{{word:shang4}}-{{word:de}} {{word:mao2}} (the fur on the head) is hair.",
+    ],
+    tldr: {
+      en: [
+        "owner-{{word:de}} + part: {{word:wo3}}-{{word:de}} {{word:bi2zi}}, my nose.",
+      ],
+    },
+    necessity: { en: ["Now you can talk about the parts of people and animals."] },
+  },
   exampleName6: { en: ["My nose is big."] },
   exampleName7: { en: ["Your nose is red."] },
   exampleName8: { en: ["The animal's nose is small."] },
   exampleName9: { en: ["The animal's skin is hard."] },
   exampleName10: { en: ["My skin is hot."] },
-  exampleName11: { en: ["Her skin is healthy."] },
   exampleHair1: { en: ["This animal's fur is white."] },
   exampleHair2: { en: ["His hair is black."] },
   exampleHair3: { en: ["The animal's fur is stiff."] },
-  exampleName12: { en: ["The color I love is blue."] },
-  exampleName13: { en: ["This is a valuable thing."] },
   infoJobsOfDe: {
     title: { en: ["The Jobs of -de"] },
     items: [

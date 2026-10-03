@@ -35,8 +35,6 @@ const en: PartialByKey<LessonShape> = {
   exampleAlsoDo1: { en: ["I eat too."] },
   exampleAlsoDo2: { en: ["Do you want some too?"] },
   exampleAlsoDo3: { en: ["Plants need air too."] },
-  exampleAlsoDo4: { en: ["He's looking at the fire too."] },
-  exampleAlsoDo5: { en: ["I got up too."] },
   exampleAlsoDo6: { en: ["I'm beside him too."] },
   exampleAlsoDo7: { en: ["He doesn't move either."] },
   exampleAlsoDo8: { en: ["The other people came too."] },

@@ -3,7 +3,6 @@ import styles from './Section.module.css';
 const BADGE_THEMES = {
   intro: { bg: 'var(--amber-bg)', icon: '❓', color: 'var(--text-handwritten)' },
   lesson: { bg: null, icon: null, color: null },
-  proverbs: { bg: 'var(--green-bg)', icon: '🌿', color: 'var(--green)' },
   dictionary: { bg: 'var(--blue-bg)', icon: '📖', color: 'var(--blue)' },
   appendix: { bg: 'var(--blue-bg)', icon: '🔤', color: 'var(--blue)' },
 };

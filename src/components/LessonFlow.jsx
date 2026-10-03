@@ -19,7 +19,7 @@ export function LessonFlow({ flow, lang }) {
           {group.kind === 'vocab' && <VocabGrid items={group.items} label={t(lang, 'newWords')} />}
           {group.kind === 'html' && <GrammarBlock html={group.items.join('\n')} lang={lang} label={null} />}
           {group.kind === 'examples' && <ExampleList items={group.items} label={null} />}
-          {group.kind === 'story' && <StoryBlock items={group.items} />}
+          {group.kind === 'story' && <StoryBlock items={group.items} label={null} />}
           {group.kind === 'exercise' && (
             <PracticeExercise questions={group.questions} answers={group.answers} start={group.start} lang={lang} />
           )}

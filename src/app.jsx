@@ -12,7 +12,6 @@ import { DictionarySection } from './components/DictionarySection.jsx';
 import { CategoricalDictionarySection } from './components/CategoricalDictionarySection.jsx';
 import { CompositeDictionarySection } from './components/CompositeDictionarySection.jsx';
 import { SentenceBuilder } from './components/SentenceBuilder.jsx';
-import { ProverbList } from './components/ProverbList.jsx';
 import { PageNav } from './components/PageNav.jsx';
 import { TldrSummary } from './components/TldrSummary.jsx';
 import { MissingTranslationBanner } from './components/MissingTranslationBanner.jsx';
@@ -26,14 +25,6 @@ function renderContent(s, lang) {
       <>
         <div class="prose-body" dangerouslySetInnerHTML={{ __html: s.bodyHtml }} />
         {s.examples.length > 0 && <ExampleList items={s.examples} />}
-      </>
-    );
-  }
-  if (type === 'proverbs') {
-    return (
-      <>
-        {s.bodyHtml && <div class="prose-body" dangerouslySetInnerHTML={{ __html: s.bodyHtml }} />}
-        <ProverbList items={s.examples} />
       </>
     );
   }

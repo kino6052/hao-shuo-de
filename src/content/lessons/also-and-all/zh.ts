@@ -17,8 +17,6 @@ const zh: PartialByKey<LessonShape> = {
   exampleAlsoDo1: { zh: [] },
   exampleAlsoDo2: { zh: [] },
   exampleAlsoDo3: { zh: [] },
-  exampleAlsoDo4: { zh: [] },
-  exampleAlsoDo5: { zh: [] },
   exampleAlsoDo6: { zh: [] },
   exampleAlsoDo7: { zh: [] },
   exampleAlsoDo8: { zh: [] },

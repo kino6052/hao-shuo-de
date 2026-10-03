@@ -80,6 +80,7 @@ jiào | verb | to call, be named; to produce an animal vocalization under the Qu
 jiàzhí | noun | value, worth; how much something is worth |
 jīn | noun | money, cash, savings, wealth | mani
 jìn | verb | to enter, go in, come in; after a verb, says it goes in (e.g. {{word:jin4}}-{{word:lai2}}, "come in"; {{word:fang4}}-{{word:jin4}}-{{word:qu4}}, "put in") |
+jiù | adverb | then, right away, just; right before the verb, after the who ({{word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:jiu4}} {{word:deng3}} {{word:ni3}}, "if you come, I will wait for you"; {{word:wo3}} {{word:xian4zai4}} {{word:jiu4}} {{word:qu4}}, "I am going right now") |
 jiǔ | number | nine |
 juéde | noun/adjective/verb | feeling, emotion, direct experience; to feel, think | pilin
 kāi | verb | to open; to turn on (e.g. {{word:he2zi}} {{word:kai1}} {{word:le}}, "the box is open") |
@@ -157,6 +158,7 @@ tóu | noun | head, mind, internal regulatory director | lawa
 wài | verb/adjective | away, outside | weka
 wán | verb complement | finish, be done, run out; binds directly after a verb via a hyphen to mark a resultative completion (chī-wán, "finish eating") | pini
 wánr | verb/adjective | to play, have fun, engage in recreation; playful, artistic, frivolous | musi
+wèidào | noun | taste, flavor, good or not: {{word:wei4dao4}} {{word:hen3}} {{word:hao3}}, "it tastes good"; salt is {{word:nong4}}-{{word:hao3}} {{word:wei4dao4}}-{{word:de}} {{word:dong1xi}}, "the thing that makes it taste good" |
 wèishénme | pronoun | why |
 wèn | verb | to ask, inquire, question |
 wǒ | pronoun | I, me, we, us | mi
@@ -169,9 +171,7 @@ xiào | verb | to laugh, to smile |
 xiě | verb | to write, draw, represent with marks | sitelen
 xiè | verb | to thank; doubled, {{word:xie4}}-xie is "thank you", and {{word:bu4}} {{word:yong4}} {{word:xie4}} is "you are welcome" |
 xīn | noun | heart, mind; {{word:kai1}}-{{word:xin1}}, "happy"; {{word:xiao3}}-{{word:xin1}}, "careful"; {{word:fang4}}-{{word:xin1}}, "don't worry" |
-xìng | noun | sex, sexuality, marital relations | unpa
 xué | verb | to learn, study; before a verb: learn to do it (e.g. {{word:wo3}} {{word:xue2}} {{word:xie3}}, "I'm learning to write") |
-yán | noun | salt, spice, flavor enhancer, extra context | namako
 yánsè | noun | color, pigment, tint frame | kule
 yào | auxiliary/verb | to want, need, require, must, should | wile
 yě | adverb | also, too, additionally; placed directly before verbs to structure compound actions |

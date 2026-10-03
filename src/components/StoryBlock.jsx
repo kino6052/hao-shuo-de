@@ -1,11 +1,12 @@
 import { AudioButton } from './AudioButton.jsx';
 import styles from './StoryBlock.module.css';
 
-export function StoryBlock({ items }) {
+// `label` defaults to "Story"; pass null when a heading already names the story.
+export function StoryBlock({ items, label = 'Story' }) {
   if (!items || items.length === 0) return null;
   return (
     <div class={styles.story}>
-      <div class={styles.label}>Story</div>
+      {label && <div class={styles.label}>{label}</div>}
       {items.map((line, i) => (
         <div key={i} class={styles.line}>
           <div class={styles.pinyin}>

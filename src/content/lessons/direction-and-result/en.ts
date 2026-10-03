@@ -58,7 +58,6 @@ const en: PartialByKey<LessonShape> = {
   exampleInOut6: { en: ["I want to go home."] },
   exampleInOut7: { en: ["Mom and Dad are back."] },
   exampleInOut8: { en: ["Did she go back?"] },
-  exampleInOut9: { en: ["Come in, quick!"] },
   vocabZuo: { en: ["sit"] },
   vocabZhan: { en: ["stand"] },
   vocabTang: { en: ["lie"] },

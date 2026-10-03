@@ -17,8 +17,6 @@ const ru: PartialByKey<LessonShape> = {
   exampleAlsoDo1: { ru: [] },
   exampleAlsoDo2: { ru: [] },
   exampleAlsoDo3: { ru: [] },
-  exampleAlsoDo4: { ru: [] },
-  exampleAlsoDo5: { ru: [] },
   exampleAlsoDo6: { ru: [] },
   exampleAlsoDo7: { ru: [] },
   exampleAlsoDo8: { ru: [] },

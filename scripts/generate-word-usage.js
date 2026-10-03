@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Cross-references every dictionary word against every lesson/proverbs/appendix
+// Cross-references every dictionary word against every lesson/appendix
 // content file, so the dictionary UI can show "used in: Lesson 3, Lesson 5"
 // next to each word -- and, just as importantly, flag words that appear in
 // NO chapter at all, so unused vocabulary is easy to spot.
@@ -13,7 +13,7 @@
 //
 // Output: src/data/word-usage.json, structured as:
 //   { chapters: { <chapterId>: { label, order } }, words: { <wordId>: [chapterId, ...] } }
-// Regenerate after editing any lesson/proverbs/appendix content or the
+// Regenerate after editing any lesson/appendix content or the
 // dictionary itself: `node scripts/generate-word-usage.js`.
 
 import { readFileSync, writeFileSync, readdirSync } from 'fs';

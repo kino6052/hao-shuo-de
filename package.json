@@ -18,7 +18,8 @@
     "check-summaries": "node scripts/check-summaries.js",
     "check-word-use": "node scripts/check-word-use.js",
     "check-grammar-blocks": "node scripts/check-grammar-blocks.js",
-    "check-practice": "node scripts/check-practice.js"
+    "check-practice": "node scripts/check-practice.js",
+    "check-example-runs": "node scripts/check-example-runs.js"
   },
   "dependencies": {
     "preact": "^10.25.0"

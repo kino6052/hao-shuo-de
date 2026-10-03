@@ -32,10 +32,8 @@ const en: PartialByKey<LessonShape> = {
   exampleComeGo2: { en: ["Are you coming to my home?"] },
   exampleComeGo3: { en: ["Go!"] },
   exampleComeGo4: { en: ["Come!"] },
-  exampleComeGo5: { en: ["I've been to that place."] },
   exampleComeGo6: { en: ["After eating, we go to your home."] },
   exampleComeGo7: { en: ["He comes over beside me."] },
-  exampleComeGo8: { en: ["We're going to his home now."] },
   exampleComeGo9: { en: ["Come here a moment."] },
   exampleComeGo10: { en: ["You're here again!"] },
   vocabCong: { en: ["from"] },
@@ -95,7 +93,6 @@ const en: PartialByKey<LessonShape> = {
   exampleDirection3: { en: ["Come down!"] },
   exampleDirection4: { en: ["He went up."] },
   exampleDirection5: { en: ["I'm going outside."] },
-  exampleDirection6: { en: ["She's outside."] },
   exampleDirection7: { en: ["Go outside through this opening."] },
   exampleDirection8: { en: ["The box's opening is small."] },
   exampleDirection9: { en: ["Where is the door?"] },
@@ -125,7 +122,6 @@ const en: PartialByKey<LessonShape> = {
   exampleMove4: { en: ["Can you move?"] },
   vocabYuan: { en: ["far"] },
   vocabFujin: { en: ["nearby, the area near"] },
-  vocabLu: { en: ["road, path, way"] },
   proseFar: {
     en: [
       "**To say a place is far**, put {{word:hen3}} {{word:yuan3}} (very far) after it. **To say something is near**, put {{word:fu4jin4}} (nearby) after {{word:zai4}}, or after {{word:zai4}} and a place.",
@@ -133,7 +129,6 @@ const en: PartialByKey<LessonShape> = {
       "**Place + {{word:hen3}} + {{word:yuan3}} / Thing + {{word:zai4}} (+ place) + {{word:fu4jin4}}**",
       "",
       "{{word:fu4jin4}} is a place word, like {{word:pang2bian1}}: say {{word:zai4}} {{word:fu4jin4}}, not {{word:hen3}} {{word:fu4jin4}}.",
-      "{{word:lu4}} is the road, or the way to a place: {{Word:lu4}} {{word:hen3}} {{word:yuan3}}, it's a long way.",
     ],
     tldr: {
       en: [
@@ -148,6 +143,20 @@ const en: PartialByKey<LessonShape> = {
   exampleFar4: { en: ["We go somewhere nearby."] },
   exampleFar5: { en: ["He comes from far away."] },
   exampleFar6: { en: ["Is there water near home?"] },
+  vocabLu: { en: ["road, path, way"] },
+  proseRoad: {
+    en: [
+      "**To talk about the way to a place**, use {{word:lu4}} (road, way).",
+      "",
+      "**{{word:lu4}} {{word:hen3}} {{word:yuan3}} / {{word:zhi1dao4}} {{word:lu4}} / {{word:lu4}}-{{word:shang4}}**",
+    ],
+    tldr: {
+      en: [
+        "{{word:lu4}} is the road or the way: {{Word:lu4}} {{word:hen3}} {{word:yuan3}}, it's a long way.",
+      ],
+    },
+    necessity: { en: ["Now you can ask the way."] },
+  },
   exampleFar7: { en: ["It's a long way."] },
   exampleFar8: { en: ["Do you know the way?"] },
   exampleFar9: { en: ["There are lots of people on the road."] },

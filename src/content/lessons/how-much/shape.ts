@@ -55,16 +55,10 @@ export type LessonShape = {
   exampleVery5: TExample;
   /** Example: tā-de shēntǐ hěn hǎo. */
   exampleVery6: TExample;
-  /** Example: wǒ-de jiǎo hěn lěng. */
-  exampleVery7: TExample;
   /** Example: wǒ kàn-guò hěn qíguài-de dòngwù. */
   exampleVery8: TExample;
   /** Example: nà-ge dòngwù hěn kuài. */
   exampleVery9: TExample;
-  /** Example: kuài lái! */
-  exampleVery10: TExample;
-  /** Example: mǐfàn-de wèidào hěn hǎo. */
-  exampleVery11: TExample;
   /** Say: To say really, put zhēn before the adjective. Pattern: Thing + zhēn + adjective */
   proseReally: TProse;
   /** Example: zhēn rè! */
@@ -218,11 +212,6 @@ const shape: LessonShape = {
     pinyin: "{{Word:ta1}}-{{word:de}} {{word:shen1ti3}} {{word:hen3}} {{word:hao3}}.",
     ttsText: "他的身体很好。",
   },
-  exampleVery7: {
-    type: "example",
-    pinyin: "{{Word:wo3}}-{{word:de}} {{word:jiao3}} {{word:hen3}} {{word:leng3}}.",
-    ttsText: "我的脚很冷。",
-  },
   exampleVery8: {
     type: "example",
     pinyin: "{{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:hen3}} {{word:qi2guai4}}-{{word:de}} {{word:dong4wu4}}.",
@@ -232,16 +221,6 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:na4}}-ge {{word:dong4wu4}} {{word:hen3}} {{word:kuai4}}.",
     ttsText: "那个动物很快。",
-  },
-  exampleVery10: {
-    type: "example",
-    pinyin: "{{Word:kuai4}} {{word:lai2}}!",
-    ttsText: "快来！",
-  },
-  exampleVery11: {
-    type: "example",
-    pinyin: "{{Word:mi3fan4}}-{{word:de}} {{word:wei4dao4}} {{word:hen3}} {{word:hao3}}.",
-    ttsText: "米饭的味道很好。",
   },
   proseReally: { type: "prose" },
   exampleReally1: {

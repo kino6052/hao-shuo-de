@@ -61,12 +61,6 @@ export type LessonShape = {
   exampleHow4: TExample;
   /** Vocabulary: "way, method". */
   vocabFangfa: TVocab;
-  /** Vocabulary: "nose". */
-  vocabBizi: TVocab;
-  /** Vocabulary: "skin". */
-  vocabPifu: TVocab;
-  /** Vocabulary: "hair, fur". */
-  vocabMao: TVocab;
   /** Say: To name something there's no word for, describe it, then add -de and the noun. Pattern: description-de + noun */
   proseName: TProse;
   /** Example: zài-shuǐ-lǐ-de dòngwù. */
@@ -79,6 +73,18 @@ export type LessonShape = {
   exampleName4: TExample;
   /** Example: zhè-ge fāngfǎ hěn hǎo. */
   exampleName5: TExample;
+  /** Example: wǒ ài-de yánsè shì lánsè. */
+  exampleName12: TExample;
+  /** Example: zhè shì yǒu jiàzhí-de dōngxi. */
+  exampleName13: TExample;
+  /** Vocabulary: "nose". */
+  vocabBizi: TVocab;
+  /** Vocabulary: "skin". */
+  vocabPifu: TVocab;
+  /** Vocabulary: "hair, fur". */
+  vocabMao: TVocab;
+  /** Say: To say whose part it is, put -de between the owner and the part. Pattern: owner-de + part */
+  proseParts: TProse;
   /** Example: wǒ-de bízi hěn dà. */
   exampleName6: TExample;
   /** Example: nǐ-de bízi shì hóngsè-de. */
@@ -89,18 +95,12 @@ export type LessonShape = {
   exampleName9: TExample;
   /** Example: wǒ-de pífū hěn rè. */
   exampleName10: TExample;
-  /** Example: tā-de pífū hěn hǎo. */
-  exampleName11: TExample;
   /** Example: zhè-ge dòngwù-de máo shì báisè-de. */
   exampleHair1: TExample;
   /** Example: tā tóu-shàng-de máo shì hēisè-de. */
   exampleHair2: TExample;
   /** Example: dòngwù-de máo hěn yìng. */
   exampleHair3: TExample;
-  /** Example: wǒ ài-de yánsè shì lánsè. */
-  exampleName12: TExample;
-  /** Example: zhè shì yǒu jiàzhí-de dōngxi. */
-  exampleName13: TExample;
   /** Grammar box: every job of -de -- the thing, the one who, how, describing, whose, and longer descriptions. */
   infoJobsOfDe: TInfo;
   /** Exercise 1: Do you have anything to eat? */
@@ -223,9 +223,6 @@ const shape: LessonShape = {
     term: "{{word:fang1fa3}}",
     ttsText: "方法",
   },
-  vocabBizi: { type: "vocab", term: "{{word:bi2zi}}", ttsText: "鼻子" },
-  vocabPifu: { type: "vocab", term: "{{word:pi2fu1}}", ttsText: "皮肤" },
-  vocabMao: { type: "vocab", term: "{{word:mao2}}", ttsText: "毛" },
   proseName: { type: "prose" },
   exampleName1: {
     type: "example",
@@ -252,6 +249,20 @@ const shape: LessonShape = {
     pinyin: "{{Word:zhe4}}-ge {{word:fang1fa3}} {{word:hen3}} {{word:hao3}}.",
     ttsText: "这个方法很好。",
   },
+  exampleName12: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:ai4}}-{{word:de}} {{word:yan2se4}} {{word:shi4}} {{word:lan2se4}}.",
+    ttsText: "我爱的颜色是蓝色。",
+  },
+  exampleName13: {
+    type: "example",
+    pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:you3}} {{word:jia4zhi2}}-{{word:de}} {{word:dong1xi}}.",
+    ttsText: "这是有价值的东西。",
+  },
+  vocabBizi: { type: "vocab", term: "{{word:bi2zi}}", ttsText: "鼻子" },
+  vocabPifu: { type: "vocab", term: "{{word:pi2fu1}}", ttsText: "皮肤" },
+  vocabMao: { type: "vocab", term: "{{word:mao2}}", ttsText: "毛" },
+  proseParts: { type: "prose" },
   exampleName6: {
     type: "example",
     pinyin: "{{Word:wo3}}-{{word:de}} {{word:bi2zi}} {{word:hen3}} {{word:da4}}.",
@@ -277,11 +288,6 @@ const shape: LessonShape = {
     pinyin: "{{Word:wo3}}-{{word:de}} {{word:pi2fu1}} {{word:hen3}} {{word:re4}}.",
     ttsText: "我的皮肤很热。",
   },
-  exampleName11: {
-    type: "example",
-    pinyin: "{{Word:ta1}}-{{word:de}} {{word:pi2fu1}} {{word:hen3}} {{word:hao3}}.",
-    ttsText: "她的皮肤很好。",
-  },
   exampleHair1: {
     type: "example",
     pinyin: "{{Word:zhe4}}-ge {{word:dong4wu4}}-{{word:de}} {{word:mao2}} {{word:shi4}} {{word:bai2se4}}-{{word:de}}.",
@@ -296,16 +302,6 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:dong4wu4}}-{{word:de}} {{word:mao2}} {{word:hen3}} {{word:ying4}}.",
     ttsText: "动物的毛很硬。",
-  },
-  exampleName12: {
-    type: "example",
-    pinyin: "{{Word:wo3}} {{word:ai4}}-{{word:de}} {{word:yan2se4}} {{word:shi4}} {{word:lan2se4}}.",
-    ttsText: "我爱的颜色是蓝色。",
-  },
-  exampleName13: {
-    type: "example",
-    pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:you3}} {{word:jia4zhi2}}-{{word:de}} {{word:dong1xi}}.",
-    ttsText: "这是有价值的东西。",
   },
   infoJobsOfDe: {
     type: "info",

@@ -13,3 +13,6 @@ export const TLDR_MAX_WORDS = 20;
 export function countWords(text) {
   return plainText(text).split(/\s+/).filter(Boolean).length;
 }
+
+// The most example sentences a lesson shows in a row (scripts/check-example-runs.js).
+export const MAX_EXAMPLES_IN_A_ROW = 8;

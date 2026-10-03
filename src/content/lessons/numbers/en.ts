@@ -61,26 +61,44 @@ const en: PartialByKey<LessonShape> = {
   exampleCount2: { en: ["Two animals."] },
   exampleCount3: { en: ["Three boxes."] },
   exampleCount4: { en: ["I have four pieces of fruit."] },
-  exampleCount5: { en: ["Five people are in the house."] },
-  exampleCount6: { en: ["He wants six."] },
   exampleCount7: { en: ["Seven sticks are on the floor."] },
-  exampleCount8: { en: ["The eight of us go outside."] },
   exampleCount9: { en: ["Nine people eat rice."] },
   exampleCount10: { en: ["Ten plants."] },
-  exampleCount11: { en: ["The two people are the same."] },
+  exampleCount24: { en: ["I'm buying three pieces of fruit."] },
+  proseCountAlone: {
+    en: [
+      "**To leave the noun out**, when it's clear what you mean, say just the number and {{word:ge4}}.",
+      "",
+      "**number-{{word:ge4}}**",
+      "",
+      "{{Word:ta1}} {{word:yao4}} {{word:liu4}}-ge is \"he wants six\": six of whatever you're talking about.",
+    ],
+    tldr: {
+      en: [
+        "When the noun is clear, say just the number and {{word:ge4}}: {{word:liu4}}-ge, six of them.",
+      ],
+    },
+    necessity: { en: ["Now you can say how many without repeating the noun."] },
+  },
+  exampleCount6: { en: ["He wants six."] },
   exampleCount12: { en: ["I want seven."] },
-  exampleCount13: { en: ["She has nine sticks."] },
-  exampleCount14: { en: ["Four people are outside."] },
-  exampleCount15: { en: ["Six pieces of fruit went bad."] },
-  exampleCount16: { en: ["Eight boxes are big."] },
-  exampleCount17: { en: ["Four people come in from outside."] },
-  exampleCount18: { en: ["I have five very sweet pieces of fruit."] },
-  exampleCount19: { en: ["Three people got up."] },
+  exampleCount25: { en: ["I have three, and he has five."] },
+  proseCountKinds: {
+    en: [
+      "**To count kinds, times, or parts**, put the number before {{word:zhong3}} (kind), {{word:ci4}} (time), or {{word:bu4fen}} (part) instead of {{word:ge4}}.",
+      "",
+      "**number-{{word:zhong3}} / number-{{word:ci4}} / number-{{word:bu4fen}}**",
+    ],
+    tldr: {
+      en: [
+        "Count kinds with {{word:zhong3}} and times with {{word:ci4}}: {{word:san1}}-{{word:zhong3}}, {{word:san1}}-{{word:ci4}}.",
+      ],
+    },
+    necessity: { en: ["Now you can say how many kinds, and how many times."] },
+  },
   exampleCount20: { en: ["I have three kinds of fruit."] },
   exampleCount21: { en: ["Some of the people went."] },
-  exampleCount22: { en: ["He put two boxes on the floor."] },
   exampleCount23: { en: ["I've been there three times."] },
-  exampleCount24: { en: ["I'm buying three pieces of fruit."] },
   proseTeens: {
     en: [
       "**To say numbers above ten**, put {{word:shi2}} (ten) before or after the other number.",

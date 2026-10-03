@@ -19,7 +19,6 @@
 import { readFileSync, readdirSync } from 'fs';
 import { resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
-import { parse as parseYaml } from 'yaml';
 import { wordUse, wordUseProblems, HOME_LESSON_MIN, LATER_LESSONS_MIN } from './word-use.js';
 import { gatePolicy } from './finished-lessons.js';
 import { LESSON_IDS, lessonNumber, importLessonFile } from './lessons.js';
@@ -41,13 +40,12 @@ if (unknown.length) {
   console.error(`check-word-use: no lesson called ${unknown.join(', ')}`);
   process.exit(2);
 }
-const storyTexts = [];
-(function collect(v) {
-  if (typeof v === 'string') storyTexts.push(v);
-  else if (v && typeof v === 'object') Object.values(v).forEach(collect);
-})(parseYaml(readFileSync(resolve(CONTENT_DIR, 'appendix-stories.yaml'), 'utf-8')));
+// The stories' lines (a use there also counts as reuse).
+const storyTexts = (await import(pathToFileURL(resolve(CONTENT_DIR, 'appendix-stories.ts')))).default
+  .map((e) => e.pinyin)
+  .filter(Boolean);
 
-const lessonId = (n) => `lesson-${String(n).padStart(2, '0')}`;
+const lessonId = (n) => LESSON_IDS[n - 1];
 const rows = wordUse(lessons, dictionary, storyTexts).filter((r) => named.length === 0 || (r.home && named.includes(lessonId(r.home))));
 const { unused, fewHomeUses, notReused } = wordUseProblems(rows);
 const where = (r) => (r.home ? `L${r.home}` : 'no lesson');

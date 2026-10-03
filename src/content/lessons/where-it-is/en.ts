@@ -82,8 +82,6 @@ const en: PartialByKey<LessonShape> = {
   vocabPang: { en: ["beside (in pángbiān)"] },
   vocabBian: { en: ["side"] },
   vocabPangbian: { en: ["beside, next to"] },
-  vocabZuobian: { en: ["left"] },
-  vocabYoubian: { en: ["right"] },
   proseSides: {
     en: [
       "**To say in front, behind, or beside**, join {{word:mian4}} (side) to {{word:qian2}} (front) or {{word:hou4}} (back), or use {{word:pang2bian1}} (beside).",
@@ -92,7 +90,6 @@ const en: PartialByKey<LessonShape> = {
       "",
       "{{word:mian4}} joins the others too: {{word:li3}}-{{word:mian4}} (inside), {{word:shang4}}-{{word:mian4}} (on top), {{word:xia4}}-{{word:mian4}} (below).",
       "{{word:pang2bian1}} is {{word:pang2}} (beside) + {{word:bian1}} (side). {{word:zhe4}}-{{word:bian1}} is this side, {{word:na4}}-{{word:bian1}} is that side.",
-      "Left and right are {{word:zuo3bian1}} and {{word:you4bian1}}. They work like {{word:pang2bian1}}: {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3bian1}}, on my left.",
     ],
     tldr: {
       en: [
@@ -106,12 +103,26 @@ const en: PartialByKey<LessonShape> = {
   exampleSides1: { en: ["Someone is in front of me."] },
   exampleSides2: { en: ["The animal is behind the house."] },
   exampleSides3: { en: ["I'm beside you."] },
-  exampleSides4: { en: ["She's inside."] },
   exampleSides5: { en: ["There is an animal in front of the house."] },
   exampleSides6: { en: ["My parents are beside me."] },
   exampleSides7: { en: ["The box is on that side."] },
   exampleSides8: { en: ["He's beside me."] },
   exampleSides9: { en: ["The fruit is beside the box."] },
+  vocabZuobian: { en: ["left"] },
+  vocabYoubian: { en: ["right"] },
+  proseLeftRight: {
+    en: [
+      "**To say left or right**, use {{word:zuo3bian1}} (left) and {{word:you4bian1}} (right). They work like {{word:pang2bian1}}.",
+      "",
+      "**Thing + {{word:zai4}} + (X-{{word:de}}) {{word:zuo3bian1}} / {{word:you4bian1}}**",
+    ],
+    tldr: {
+      en: [
+        "{{word:zuo3bian1}} is left, {{word:you4bian1}} is right: {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3bian1}}, on my left.",
+      ],
+    },
+    necessity: { en: ["Now you can say which side something is on."] },
+  },
   exampleSides10: { en: ["The box is on my left."] },
   exampleSides11: { en: ["He's on your right."] },
   exampleSides12: { en: ["Is the water on the right?"] },

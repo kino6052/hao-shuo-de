@@ -60,16 +60,8 @@ export type LessonShape = {
   proseHelp: TProse;
   /** Example: bāng-bang wǒ! */
   exampleHelp1: TExample;
-  /** Example: wǒ bāng nǐ. */
-  exampleHelp2: TExample;
   /** Example: nǐ bāng wǒ ná yīxià. */
   exampleHelp3: TExample;
-  /** Example: wǒ bāng nǐ bǎ hézi ná-jìn-qù. */
-  exampleHelp4: TExample;
-  /** Example: tā bāng fùmǔ nòng mǐfàn. */
-  exampleHelp5: TExample;
-  /** Example: xiè-xie nǐ bāng wǒ. */
-  exampleHelp6: TExample;
   /** Example: bù yào xiào, bāng-bang wǒ! */
   exampleHelp7: TExample;
   /** Example: jiā hěn luàn, nǐ bāng wǒ, hǎo ma? */
@@ -122,6 +114,8 @@ export type LessonShape = {
   exampleMayI6: TExample;
   /** Example: nǐ zuò zài wǒ-de zuǒbiān, hǎo ma? */
   exampleMayI7: TExample;
+  /** Example: hǎo, wǒ xiànzài jiù lái! */
+  exampleMayI8: TExample;
   /** Grammar box: wǒ lái (let me), gěi wǒ + verb + yīxià (let me see), bāng (help), jiào (have, let), néng … ma? (may I), …, hǎo ma? (let's, please). */
   infoEveryday: TInfo;
   /** Exercise 1: Let me! */
@@ -256,30 +250,10 @@ const shape: LessonShape = {
     pinyin: "{{Word:bang1}}-bang {{word:wo3}}!",
     ttsText: "帮帮我！",
   },
-  exampleHelp2: {
-    type: "example",
-    pinyin: "{{Word:wo3}} {{word:bang1}} {{word:ni3}}.",
-    ttsText: "我帮你。",
-  },
   exampleHelp3: {
     type: "example",
     pinyin: "{{Word:ni3}} {{word:bang1}} {{word:wo3}} {{word:na2}} {{word:yi1xia4}}.",
     ttsText: "你帮我拿一下。",
-  },
-  exampleHelp4: {
-    type: "example",
-    pinyin: "{{Word:wo3}} {{word:bang1}} {{word:ni3}} {{word:ba3}} {{word:he2zi}} {{word:na2}}-{{word:jin4}}-{{word:qu4}}.",
-    ttsText: "我帮你把盒子拿进去。",
-  },
-  exampleHelp5: {
-    type: "example",
-    pinyin: "{{Word:ta1}} {{word:bang1}} {{word:fu4mu3}} {{word:nong4}} {{word:mi3fan4}}.",
-    ttsText: "他帮父母弄米饭。",
-  },
-  exampleHelp6: {
-    type: "example",
-    pinyin: "{{Word:xie4}}-xie {{word:ni3}} {{word:bang1}} {{word:wo3}}.",
-    ttsText: "谢谢你帮我。",
   },
   exampleHelp7: {
     type: "example",
@@ -394,6 +368,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ni3}} {{word:zuo4}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3bian1}}, {{word:hao3}} {{word:ma}}?",
     ttsText: "你坐在我的左边，好吗？",
+  },
+  exampleMayI8: {
+    type: "example",
+    pinyin: "{{Word:hao3}}, {{word:wo3}} {{word:xian4zai4}} {{word:jiu4}} {{word:lai2}}!",
+    ttsText: "好，我现在就来！",
   },
   infoEveryday: {
     type: "info",

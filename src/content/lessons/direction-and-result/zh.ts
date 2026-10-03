@@ -26,7 +26,6 @@ const zh: PartialByKey<LessonShape> = {
   exampleInOut6: { zh: [] },
   exampleInOut7: { zh: [] },
   exampleInOut8: { zh: [] },
-  exampleInOut9: { zh: [] },
   vocabZuo: { zh: [] },
   vocabZhan: { zh: [] },
   vocabTang: { zh: [] },

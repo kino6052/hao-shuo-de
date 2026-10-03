@@ -33,16 +33,8 @@ export type LessonShape = {
   proseBecause: TProse;
   /** Example: yīnwèi wǒ hěn lěng, wǒ bù qù wài-miàn. */
   exampleBecause1: TExample;
-  /** Example: wǒ bù chī, yīnwèi wǒ chī-wán le. */
-  exampleBecause2: TExample;
-  /** Example: yīnwèi méi-yǒu shuǐ, zhíwù sǐ le. */
-  exampleBecause3: TExample;
-  /** Example: nǐ wèishénme bù chī? yīnwèi hěn rè. */
-  exampleBecause4: TExample;
   /** Example: yīnwèi hěn rè, wǒ-de pífū biàn hóngsè le. */
   exampleBecause5: TExample;
-  /** Example: yīnwèi tā mō le ní, tā-de shǒu shì hēisè-de. */
-  exampleBecause6: TExample;
   /** Example: yīnwèi yǒu kōngqì, wǒ-men néng huó. */
   exampleBecause7: TExample;
   /** Example: yīnwèi hěn rè, wǒ guān le huǒ. */
@@ -73,10 +65,6 @@ export type LessonShape = {
   exampleBut6: TExample;
   /** Example: wǒ yǒu jiǔ-ge, dànshì tā yǒu èr-shí-ge. */
   exampleBut7: TExample;
-  /** Example: zhíwù hěn xiǎo, dànshì huó le. */
-  exampleBut8: TExample;
-  /** Example: zhè-ge hěn hǎo, dànshì yǒu yī-diǎn dà. */
-  exampleBut9: TExample;
   /** Example: tā hěn lǎo, dànshì tā hěn kuài. */
   exampleBut10: TExample;
   /** Vocabulary: "if". */
@@ -89,20 +77,36 @@ export type LessonShape = {
   exampleIf2: TExample;
   /** Example: rúguǒ zhíwù méi-yǒu shuǐ, tā huì sǐ. */
   exampleIf3: TExample;
-  /** Example: méi-yǒu shuǐ, zhíwù huì sǐ. */
-  exampleIf4: TExample;
   /** Example: rúguǒ wǔ-hào bù zài, wǒ-men děng. */
   exampleIf5: TExample;
   /** Example: rúguǒ nǐ bù zhīdào zhè-ge cí, wèn wǒ. */
   exampleIf6: TExample;
   /** Example: rúguǒ nǐ yào, chī mǐfàn huòzhě shuǐguǒ. */
   exampleIf7: TExample;
-  /** Example: rúguǒ yǒu shuǐ, zhíwù néng huó. */
-  exampleIf8: TExample;
   /** Example: rúguǒ nà-ge dìfāng yuǎn, wǒ bù qù. */
   exampleIf9: TExample;
   /** Example: rúguǒ nǐ huí-lái, wǒ-men chī mǐfàn. */
   exampleIf10: TExample;
+  /** Vocabulary: "then; right away; just". */
+  vocabJiu: TVocab;
+  /** Say: To say "then" or "right away", put jiù right before the verb, after the who. Pattern: (rúguǒ X,) who + jiù + verb */
+  proseThen: TProse;
+  /** Example: rúguǒ nǐ lái, wǒ jiù děng nǐ. */
+  exampleThen1: TExample;
+  /** Example: rúguǒ hěn yuǎn, wǒ jiù bù qù. */
+  exampleThen2: TExample;
+  /** Example: wǒ chī-wán le jiù qù. */
+  exampleThen3: TExample;
+  /** Example: wǒ xiànzài jiù qù. */
+  exampleThen4: TExample;
+  /** Example: jiù shì zhè-ge! */
+  exampleThen5: TExample;
+  /** Example: wǒ jiù yǒu yī-ge. */
+  exampleThen6: TExample;
+  /** Example: rúguǒ méi-yǒu shuǐ, zhíwù jiù huì sǐ. */
+  exampleThen7: TExample;
+  /** Example: rúguǒ yǒu shuǐ, zhíwù jiù néng huó. */
+  exampleThen8: TExample;
   /** Grammar box: yīnwèi, dànshì, rúguǒ (with huó). */
   infoLinkingSentences: TInfo;
   /** Exercise 1: Because I'm cold, I want clothes. */
@@ -119,6 +123,10 @@ export type LessonShape = {
   exercise6: TExercise;
   /** Exercise 7: If there's air, we can live. */
   exercise7: TExercise;
+  /** Exercise 8: I'm going right now. */
+  exercise8: TExercise;
+  /** Exercise 9: If it's cold, then I won't go out. */
+  exercise9: TExercise;
   /** Answer 1: yīnwèi wǒ hěn lěng, wǒ yào yīfu. */
   answer1: TAnswer;
   /** Answer 2: wǒ yào chī, dànshì wǒ méi-yǒu jīn. */
@@ -133,10 +141,16 @@ export type LessonShape = {
   answer6: TAnswer;
   /** Answer 7: rúguǒ yǒu kōngqì, wǒ-men néng huó. */
   answer7: TAnswer;
+  /** Answer 8: wǒ xiànzài jiù qù. */
+  answer8: TAnswer;
+  /** Answer 9: rúguǒ hěn lěng, wǒ jiù bù chū-qù. */
+  answer9: TAnswer;
   /** FAQ: do I need a word for "so" after yīnwèi? */
   faqSo: TFaq;
   /** FAQ: where does rúguǒ go? (at the start of the if-part, before or after the who) */
   faqIfWord: TFaq;
+  /** FAQ: do I need jiù after rúguǒ? (no, but it sounds more natural; it goes after the who) */
+  faqJiu: TFaq;
 };
 
 const shape: LessonShape = {
@@ -155,30 +169,10 @@ const shape: LessonShape = {
     pinyin: "{{Word:yin1wei4}} {{word:wo3}} {{word:hen3}} {{word:leng3}}, {{word:wo3}} {{word:bu4}} {{word:qu4}} {{word:wai4}}-{{word:mian4}}.",
     ttsText: "因为我很冷，我不去外面。",
   },
-  exampleBecause2: {
-    type: "example",
-    pinyin: "{{Word:wo3}} {{word:bu4}} {{word:chi1}}, {{word:yin1wei4}} {{word:wo3}} {{word:chi1}}-{{word:wan2}} {{word:le}}.",
-    ttsText: "我不吃，因为我吃完了。",
-  },
-  exampleBecause3: {
-    type: "example",
-    pinyin: "{{Word:yin1wei4}} {{word:mei2}}-{{word:you3}} {{word:shui3}}, {{word:zhi2wu4}} {{word:si3}} {{word:le}}.",
-    ttsText: "因为没有水，植物死了。",
-  },
-  exampleBecause4: {
-    type: "example",
-    pinyin: "{{Word:ni3}} {{word:wei4shen2me}} {{word:bu4}} {{word:chi1}}? {{Word:yin1wei4}} {{word:hen3}} {{word:re4}}.",
-    ttsText: "你为什么不吃？因为很热。",
-  },
   exampleBecause5: {
     type: "example",
     pinyin: "{{Word:yin1wei4}} {{word:hen3}} {{word:re4}}, {{word:wo3}}-{{word:de}} {{word:pi2fu1}} {{word:bian4}} {{word:hong2se4}} {{word:le}}.",
     ttsText: "因为很热，我的皮肤变红色了。",
-  },
-  exampleBecause6: {
-    type: "example",
-    pinyin: "{{Word:yin1wei4}} {{word:ta1}} {{word:mo1}} {{word:le}} {{word:ni2}}, {{word:ta1}}-{{word:de}} {{word:shou3}} {{word:shi4}} {{word:hei1se4}}-{{word:de}}.",
-    ttsText: "因为他摸了泥，他的手是黑色的。",
   },
   exampleBecause7: {
     type: "example",
@@ -251,16 +245,6 @@ const shape: LessonShape = {
     pinyin: "{{Word:wo3}} {{word:you3}} {{word:jiu3}}-ge, {{word:dan4shi4}} {{word:ta1}} {{word:you3}} {{word:er4}}-{{word:shi2}}-ge.",
     ttsText: "我有九个，但是他有二十个。",
   },
-  exampleBut8: {
-    type: "example",
-    pinyin: "{{Word:zhi2wu4}} {{word:hen3}} {{word:xiao3}}, {{word:dan4shi4}} {{word:huo2}} {{word:le}}.",
-    ttsText: "植物很小，但是活了。",
-  },
-  exampleBut9: {
-    type: "example",
-    pinyin: "{{Word:zhe4}}-ge {{word:hen3}} {{word:hao3}}, {{word:dan4shi4}} {{word:you3}} {{word:yi1}}-{{word:dian3}} {{word:da4}}.",
-    ttsText: "这个很好，但是有一点大。",
-  },
   exampleBut10: {
     type: "example",
     pinyin: "{{Word:ta1}} {{word:hen3}} {{word:lao3}}, {{word:dan4shi4}} {{word:ta1}} {{word:hen3}} {{word:kuai4}}.",
@@ -283,11 +267,6 @@ const shape: LessonShape = {
     pinyin: "{{Word:ru2guo3}} {{word:zhi2wu4}} {{word:mei2}}-{{word:you3}} {{word:shui3}}, {{word:ta1}} {{word:hui4}} {{word:si3}}.",
     ttsText: "如果植物没有水，它会死。",
   },
-  exampleIf4: {
-    type: "example",
-    pinyin: "{{Word:mei2}}-{{word:you3}} {{word:shui3}}, {{word:zhi2wu4}} {{word:hui4}} {{word:si3}}.",
-    ttsText: "没有水，植物会死。",
-  },
   exampleIf5: {
     type: "example",
     pinyin: "{{Word:ru2guo3}} {{word:wu3}}-{{word:hao4}} {{word:bu4}} {{word:zai4}}, {{word:wo3}}-{{word:men}} {{word:deng3}}.",
@@ -303,11 +282,6 @@ const shape: LessonShape = {
     pinyin: "{{Word:ru2guo3}} {{word:ni3}} {{word:yao4}}, {{word:chi1}} {{word:mi3fan4}} {{word:huo4zhe3}} {{word:shui3guo3}}.",
     ttsText: "如果你要，吃米饭或者水果。",
   },
-  exampleIf8: {
-    type: "example",
-    pinyin: "{{Word:ru2guo3}} {{word:you3}} {{word:shui3}}, {{word:zhi2wu4}} {{word:neng2}} {{word:huo2}}.",
-    ttsText: "如果有水，植物能活。",
-  },
   exampleIf9: {
     type: "example",
     pinyin: "{{Word:ru2guo3}} {{word:na4}}-ge {{word:di4fang1}} {{word:yuan3}}, {{word:wo3}} {{word:bu4}} {{word:qu4}}.",
@@ -318,11 +292,53 @@ const shape: LessonShape = {
     pinyin: "{{Word:ru2guo3}} {{word:ni3}} {{word:hui2}}-{{word:lai2}}, {{word:wo3}}-{{word:men}} {{word:chi1}} {{word:mi3fan4}}.",
     ttsText: "如果你回来，我们吃米饭。",
   },
+  vocabJiu: { type: "vocab", term: "{{word:jiu4}}", ttsText: "就" },
+  proseThen: { type: "prose" },
+  exampleThen1: {
+    type: "example",
+    pinyin: "{{Word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:jiu4}} {{word:deng3}} {{word:ni3}}.",
+    ttsText: "如果你来，我就等你。",
+  },
+  exampleThen2: {
+    type: "example",
+    pinyin: "{{Word:ru2guo3}} {{word:hen3}} {{word:yuan3}}, {{word:wo3}} {{word:jiu4}} {{word:bu4}} {{word:qu4}}.",
+    ttsText: "如果很远，我就不去。",
+  },
+  exampleThen3: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:chi1}}-{{word:wan2}} {{word:le}} {{word:jiu4}} {{word:qu4}}.",
+    ttsText: "我吃完了就去。",
+  },
+  exampleThen4: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:xian4zai4}} {{word:jiu4}} {{word:qu4}}.",
+    ttsText: "我现在就去。",
+  },
+  exampleThen5: {
+    type: "example",
+    pinyin: "{{Word:jiu4}} {{word:shi4}} {{word:zhe4}}-ge!",
+    ttsText: "就是这个！",
+  },
+  exampleThen6: {
+    type: "example",
+    pinyin: "{{Word:wo3}} {{word:jiu4}} {{word:you3}} {{word:yi1}}-ge.",
+    ttsText: "我就有一个。",
+  },
+  exampleThen7: {
+    type: "example",
+    pinyin: "{{Word:ru2guo3}} {{word:mei2}}-{{word:you3}} {{word:shui3}}, {{word:zhi2wu4}} {{word:jiu4}} {{word:hui4}} {{word:si3}}.",
+    ttsText: "如果没有水，植物就会死。",
+  },
+  exampleThen8: {
+    type: "example",
+    pinyin: "{{Word:ru2guo3}} {{word:you3}} {{word:shui3}}, {{word:zhi2wu4}} {{word:jiu4}} {{word:neng2}} {{word:huo2}}.",
+    ttsText: "如果有水，植物就能活。",
+  },
   infoLinkingSentences: {
     type: "info",
     subtype: "grammar",
     tag: "relationships/linking-sentences",
-    items: [{}, {}, {}],
+    items: [{}, {}, {}, {}],
   },
   exercise1: { type: "exercise" },
   exercise2: { type: "exercise" },
@@ -331,6 +347,8 @@ const shape: LessonShape = {
   exercise5: { type: "exercise" },
   exercise6: { type: "exercise" },
   exercise7: { type: "exercise" },
+  exercise8: { type: "exercise" },
+  exercise9: { type: "exercise" },
   answer1: { type: "answer", ttsText: "因为我很冷，我要衣服。" },
   answer2: { type: "answer", ttsText: "我要吃，但是我没有金。" },
   answer3: { type: "answer", ttsText: "如果你要，我给你。" },
@@ -338,8 +356,11 @@ const shape: LessonShape = {
   answer5: { type: "answer", ttsText: "水果很小，但是味道很好。" },
   answer6: { type: "answer", ttsText: "如果你冷，来里面。" },
   answer7: { type: "answer", ttsText: "如果有空气，我们能活。" },
+  answer8: { type: "answer", ttsText: "我现在就去。" },
+  answer9: { type: "answer", ttsText: "如果很冷，我就不出去。" },
   faqSo: { type: "faq" },
   faqIfWord: { type: "faq" },
+  faqJiu: { type: "faq" },
 };
 
 export default shape;

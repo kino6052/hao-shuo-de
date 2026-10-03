@@ -33,8 +33,6 @@ export type LessonShape = {
   exampleGive2: TExample;
   /** Example: tā gěi wǒ yīfu. */
   exampleGive3: TExample;
-  /** Example: wǒ gěi nǐ xiě. */
-  exampleGive4: TExample;
   /** Example: tā gěi wǒ sān-ge, wǒ gěi tā sì-ge. */
   exampleGive5: TExample;
   /** Example: tā gěi wǒ yī-bùfen. */
@@ -57,26 +55,14 @@ export type LessonShape = {
   exampleWith1: TExample;
   /** Example: tā yòng shǒu chī. */
   exampleWith2: TExample;
-  /** Example: yòng shǒu mō. */
-  exampleWith3: TExample;
   /** Example: tā yòng gùnzi dǎ. */
   exampleWith4: TExample;
-  /** Example: wǒ yòng shǒu mō dòngwù. */
-  exampleWith5: TExample;
   /** Example: bù yào yòng gùnzi dǎ dòngwù. */
   exampleWith6: TExample;
-  /** Example: tā yòng ní nòng le yī-ge hézi. */
-  exampleWith7: TExample;
   /** Example: dòngwù yòng bízi mō wǒ-de shǒu. */
   exampleWith8: TExample;
   /** Example: tā yòng bùtóng-de fāngfǎ. */
   exampleWith9: TExample;
-  /** Example: wǒ yòng yīxià nǐ-de gōngjù. */
-  exampleWith10: TExample;
-  /** Example: wǒ yòng gōngjù bǎ hézi nòng-kāi. */
-  exampleWith11: TExample;
-  /** Example: tā yòng shǒu ná shuǐguǒ. */
-  exampleWith12: TExample;
   /** Example: wǒ yòng gōngjù suàn. */
   exampleWith13: TExample;
   /** Example: wǒ yòng shǒu mō dòngwù-de máo. */
@@ -123,6 +109,8 @@ export type LessonShape = {
   exampleGroup2: TExample;
   /** Example: wǒ gěi nà-qún rén shuǐ. */
   exampleGroup3: TExample;
+  /** Example: yī-qún dòngwù zài ní-lǐ wánr. */
+  exampleGroup4: TExample;
   /** Vocabulary: "relationship". */
   vocabGuanxi: TVocab;
   /** Say: To say how two people get along, use guānxi (relationship). méi-yǒu guānxi is "it doesn't matter". Pattern: A hé B-de guānxi + hěn + adjective */
@@ -205,11 +193,6 @@ const shape: LessonShape = {
     pinyin: "{{Word:ta1}} {{word:gei3}} {{word:wo3}} {{word:yi1fu}}.",
     ttsText: "她给我衣服。",
   },
-  exampleGive4: {
-    type: "example",
-    pinyin: "{{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:xie3}}.",
-    ttsText: "我给你写。",
-  },
   exampleGive5: {
     type: "example",
     pinyin: "{{Word:ta1}} {{word:gei3}} {{word:wo3}} {{word:san1}}-ge, {{word:wo3}} {{word:gei3}} {{word:ta1}} {{word:si4}}-ge.",
@@ -249,30 +232,15 @@ const shape: LessonShape = {
     pinyin: "{{Word:ta1}} {{word:yong4}} {{word:shou3}} {{word:chi1}}.",
     ttsText: "他用手吃。",
   },
-  exampleWith3: {
-    type: "example",
-    pinyin: "{{Word:yong4}} {{word:shou3}} {{word:mo1}}.",
-    ttsText: "用手摸。",
-  },
   exampleWith4: {
     type: "example",
     pinyin: "{{Word:ta1}} {{word:yong4}} {{word:gun4zi}} {{word:da3}}.",
     ttsText: "他用棍子打。",
   },
-  exampleWith5: {
-    type: "example",
-    pinyin: "{{Word:wo3}} {{word:yong4}} {{word:shou3}} {{word:mo1}} {{word:dong4wu4}}.",
-    ttsText: "我用手摸动物。",
-  },
   exampleWith6: {
     type: "example",
     pinyin: "{{Word:bu4}} {{word:yao4}} {{word:yong4}} {{word:gun4zi}} {{word:da3}} {{word:dong4wu4}}.",
     ttsText: "不要用棍子打动物。",
-  },
-  exampleWith7: {
-    type: "example",
-    pinyin: "{{Word:ta1}} {{word:yong4}} {{word:ni2}} {{word:nong4}} {{word:le}} {{word:yi1}}-ge {{word:he2zi}}.",
-    ttsText: "他用泥弄了一个盒子。",
   },
   exampleWith8: {
     type: "example",
@@ -283,21 +251,6 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ta1}} {{word:yong4}} {{word:bu4tong2}}-{{word:de}} {{word:fang1fa3}}.",
     ttsText: "他用不同的方法。",
-  },
-  exampleWith10: {
-    type: "example",
-    pinyin: "{{Word:wo3}} {{word:yong4}} {{word:yi1xia4}} {{word:ni3}}-{{word:de}} {{word:gong1ju4}}.",
-    ttsText: "我用一下你的工具。",
-  },
-  exampleWith11: {
-    type: "example",
-    pinyin: "{{Word:wo3}} {{word:yong4}} {{word:gong1ju4}} {{word:ba3}} {{word:he2zi}} {{word:nong4}}-{{word:kai1}}.",
-    ttsText: "我用工具把盒子弄开。",
-  },
-  exampleWith12: {
-    type: "example",
-    pinyin: "{{Word:ta1}} {{word:yong4}} {{word:shou3}} {{word:na2}} {{word:shui3guo3}}.",
-    ttsText: "他用手拿水果。",
   },
   exampleWith13: {
     type: "example",
@@ -389,6 +342,11 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:wo3}} {{word:gei3}} {{word:na4}}-{{word:qun2}} {{word:ren2}} {{word:shui3}}.",
     ttsText: "我给那群人水。",
+  },
+  exampleGroup4: {
+    type: "example",
+    pinyin: "{{Word:yi1}}-{{word:qun2}} {{word:dong4wu4}} {{word:zai4}} {{word:ni2}}-{{word:li3}} {{word:wan2r}}.",
+    ttsText: "一群动物在泥里玩儿。",
   },
   vocabGuanxi: { type: "vocab", term: "{{word:guan1xi}}", ttsText: "关系" },
   proseRelation: { type: "prose" },

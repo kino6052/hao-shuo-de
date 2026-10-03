@@ -26,7 +26,6 @@ const ru: PartialByKey<LessonShape> = {
   exampleInOut6: { ru: [] },
   exampleInOut7: { ru: [] },
   exampleInOut8: { ru: [] },
-  exampleInOut9: { ru: [] },
   vocabZuo: { ru: [] },
   vocabZhan: { ru: [] },
   vocabTang: { ru: [] },

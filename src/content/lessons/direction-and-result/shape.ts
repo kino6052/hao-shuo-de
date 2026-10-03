@@ -64,8 +64,6 @@ export type LessonShape = {
   exampleInOut7: TExample;
   /** Example: tā huí-qù le ma? */
   exampleInOut8: TExample;
-  /** Example: kuài jìn-lái! */
-  exampleInOut9: TExample;
   /** Vocabulary: "sit". */
   vocabZuo: TVocab;
   /** Vocabulary: "stand". */
@@ -295,11 +293,6 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ta1}} {{word:hui2}}-{{word:qu4}} {{word:le}} {{word:ma}}?",
     ttsText: "她回去了吗？",
-  },
-  exampleInOut9: {
-    type: "example",
-    pinyin: "{{Word:kuai4}} {{word:jin4}}-{{word:lai2}}!",
-    ttsText: "快进来！",
   },
   vocabZuo: { type: "vocab", term: "{{word:zuo4}}", ttsText: "坐" },
   vocabZhan: { type: "vocab", term: "{{word:zhan4}}", ttsText: "站" },

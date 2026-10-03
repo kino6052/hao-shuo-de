@@ -30,13 +30,7 @@ const en: PartialByKey<LessonShape> = {
     necessity: { en: ["Now you can give reasons."] },
   },
   exampleBecause1: { en: ["Because I'm cold, I'm not going outside."] },
-  exampleBecause2: { en: ["I'm not eating, because I've finished."] },
-  exampleBecause3: { en: ["Because there was no water, the plant died."] },
-  exampleBecause4: { en: ["Why aren't you eating? Because it's hot."] },
   exampleBecause5: { en: ["Because it was hot, my skin turned red."] },
-  exampleBecause6: {
-    en: ["Because he touched the mud, his hands are black."],
-  },
   exampleBecause7: { en: ["Because there's air, we can live."] },
   exampleBecause8: { en: ["Because it was hot, I turned off the fire."] },
   exampleBecause9: { en: ["It's cold out, so I'm not going out."] },
@@ -68,8 +62,6 @@ const en: PartialByKey<LessonShape> = {
   exampleBut5: { en: ["This fruit is yellow, but it isn't sweet."] },
   exampleBut6: { en: ["This way is strange, but it's good."] },
   exampleBut7: { en: ["I have nine, but he has twenty."] },
-  exampleBut8: { en: ["The plant is small, but it lived."] },
-  exampleBut9: { en: ["This one is good, but a bit big."] },
   exampleBut10: { en: ["He's old, but he's fast."] },
   vocabRuguo: { en: ["if"] },
   proseIf: {
@@ -91,13 +83,35 @@ const en: PartialByKey<LessonShape> = {
   exampleIf1: { en: ["If you come, I'll wait for you."] },
   exampleIf2: { en: ["If you're cold, I'll give you clothes."] },
   exampleIf3: { en: ["If a plant has no water, it will die."] },
-  exampleIf4: { en: ["Without water, plants die."] },
   exampleIf5: { en: ["If number five isn't here, we wait."] },
   exampleIf6: { en: ["If you don't know this word, ask me."] },
   exampleIf7: { en: ["If you want, eat rice or fruit."] },
-  exampleIf8: { en: ["If there's water, the plant can live."] },
   exampleIf9: { en: ["If that place is far, I won't go."] },
   exampleIf10: { en: ["If you come back, we'll eat rice."] },
+  vocabJiu: { en: ["then; right away; just"] },
+  proseThen: {
+    en: [
+      "**To say \"then\" or \"right away\"**, put {{word:jiu4}} right before the verb, after the who.",
+      "",
+      "**({{word:ru2guo3}} X,) who + {{word:jiu4}} + verb**",
+      "",
+      "After {{word:ru2guo3}}, {{word:jiu4}} means \"then\": {{Word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:jiu4}} {{word:deng3}} {{word:ni3}}. On its own, it means \"right away\" or \"just\": {{Word:wo3}} {{word:xian4zai4}} {{word:jiu4}} {{word:qu4}}.",
+    ],
+    tldr: {
+      en: [
+        "{{word:jiu4}} before the verb means then, or right away: {{Word:wo3}} {{word:jiu4}} {{word:qu4}}, I'm going right away.",
+      ],
+    },
+    necessity: { en: ["Now your sentences sound more natural."] },
+  },
+  exampleThen1: { en: ["If you come, I'll wait for you."] },
+  exampleThen2: { en: ["If it's far, then I won't go."] },
+  exampleThen3: { en: ["I'll go as soon as I've eaten."] },
+  exampleThen4: { en: ["I'm going right now."] },
+  exampleThen5: { en: ["That's the one!"] },
+  exampleThen6: { en: ["I only have one."] },
+  exampleThen7: { en: ["If there's no water, the plant will die."] },
+  exampleThen8: { en: ["If there's water, then the plant can live."] },
   infoLinkingSentences: {
     title: { en: ["Linking Sentences"] },
     items: [
@@ -116,6 +130,11 @@ const en: PartialByKey<LessonShape> = {
           "{{word:ru2guo3}} X, …, if: {{Word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:deng3}} {{word:ni3}}. (If you come, I'll wait for you.)",
         ],
       },
+      {
+        en: [
+          "who + {{word:jiu4}} + verb, then / right away: {{Word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:jiu4}} {{word:deng3}} {{word:ni3}}. (If you come, I'll wait for you.)",
+        ],
+      },
     ],
   },
   exercise1: { en: ["Because I'm cold, I want clothes."] },
@@ -125,6 +144,8 @@ const en: PartialByKey<LessonShape> = {
   exercise5: { en: ["The fruit is small, but it tastes good."] },
   exercise6: { en: ["If you're cold, come inside."] },
   exercise7: { en: ["If there's air, we can live."] },
+  exercise8: { en: ["I'm going right now."] },
+  exercise9: { en: ["If it's cold, then I won't go out."] },
   answer1: {
     en: [
       "{{Word:yin1wei4}} {{word:wo3}} {{word:hen3}} {{word:leng3}}, {{word:wo3}} {{word:yao4}} {{word:yi1fu}}.",
@@ -152,6 +173,8 @@ const en: PartialByKey<LessonShape> = {
       "{{Word:ru2guo3}} {{word:you3}} {{word:kong1qi4}}, {{word:wo3}}-{{word:men}} {{word:neng2}} {{word:huo2}}.",
     ],
   },
+  answer8: { en: ["{{Word:wo3}} {{word:xian4zai4}} {{word:jiu4}} {{word:qu4}}."] },
+  answer9: { en: ["{{Word:ru2guo3}} {{word:hen3}} {{word:leng3}}, {{word:wo3}} {{word:jiu4}} {{word:bu4}} {{word:chu1}}-{{word:qu4}}."] },
   faqSo: {
     question: { en: ["Do I need a word for \"so\" after {{word:yin1wei4}}?"] },
     en: [
@@ -162,6 +185,12 @@ const en: PartialByKey<LessonShape> = {
     question: { en: ["Where does {{word:ru2guo3}} go?"] },
     en: [
       "At the start of the if-part, before or after the who: {{Word:ru2guo3}} {{word:ni3}} {{word:lai2}}, … or {{Word:ni3}} {{word:ru2guo3}} {{word:lai2}}, … Both are fine.",
+    ],
+  },
+  faqJiu: {
+    question: { en: ["Do I need {{word:jiu4}} after {{word:ru2guo3}}?"] },
+    en: [
+      "No, but it sounds more natural: {{Word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:jiu4}} {{word:deng3}} {{word:ni3}}. {{word:jiu4}} goes after the who, never before it.",
     ],
   },
 };

@@ -28,20 +28,12 @@ export type LessonShape = {
   proseVerbs: TProse;
   /** Example: wǒ kàn-kan. */
   exampleVerbs1: TExample;
-  /** Example: nǐ děng-deng! */
-  exampleVerbs2: TExample;
-  /** Example: nǐ tīng-ting zhè-ge shēngyīn. */
-  exampleVerbs3: TExample;
-  /** Example: tā xiào-xiao, bù shuō. */
-  exampleVerbs4: TExample;
   /** Example: yīnwèi wǒ bù zhīdào, wǒ wèn-wen. */
   exampleVerbs5: TExample;
   /** Example: chóngzi sǐ le? wǒ kàn-kan. */
   exampleVerbs6: TExample;
   /** Example: rúguǒ nǐ yǒu shíjiān, wǒ-men wánr-wanr. */
   exampleVerbs7: TExample;
-  /** Example: bù yào pà, nǐ mō-mo. */
-  exampleVerbs8: TExample;
   /** Example: xiè-xie, wǒ kàn-kan. */
   exampleVerbs9: TExample;
   /** Example: nǐ jìn-lái kàn-kan! */
@@ -123,21 +115,6 @@ const shape: LessonShape = {
     pinyin: "{{Word:wo3}} {{word:kan4}}-kan.",
     ttsText: "我看看。",
   },
-  exampleVerbs2: {
-    type: "example",
-    pinyin: "{{Word:ni3}} {{word:deng3}}-deng!",
-    ttsText: "你等等！",
-  },
-  exampleVerbs3: {
-    type: "example",
-    pinyin: "{{Word:ni3}} {{word:ting1}}-ting {{word:zhe4}}-ge {{word:sheng1yin1}}.",
-    ttsText: "你听听这个声音。",
-  },
-  exampleVerbs4: {
-    type: "example",
-    pinyin: "{{Word:ta1}} {{word:xiao4}}-xiao, {{word:bu4}} {{word:shuo1}}.",
-    ttsText: "他笑笑，不说。",
-  },
   exampleVerbs5: {
     type: "example",
     pinyin: "{{Word:yin1wei4}} {{word:wo3}} {{word:bu4}} {{word:zhi1dao4}}, {{word:wo3}} {{word:wen4}}-wen.",
@@ -152,11 +129,6 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ru2guo3}} {{word:ni3}} {{word:you3}} {{word:shi2jian1}}, {{word:wo3}}-{{word:men}} {{word:wan2r}}-wanr.",
     ttsText: "如果你有时间，我们玩玩。",
-  },
-  exampleVerbs8: {
-    type: "example",
-    pinyin: "{{Word:bu4}} {{word:yao4}} {{word:pa4}}, {{word:ni3}} {{word:mo1}}-mo.",
-    ttsText: "不要怕，你摸摸。",
   },
   exampleVerbs9: {
     type: "example",

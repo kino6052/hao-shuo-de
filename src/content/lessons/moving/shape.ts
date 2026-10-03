@@ -37,14 +37,10 @@ export type LessonShape = {
   exampleComeGo3: TExample;
   /** Example: lái! */
   exampleComeGo4: TExample;
-  /** Example: wǒ qù-guò nà-ge dìfāng. */
-  exampleComeGo5: TExample;
   /** Example: chī-wán hòu, wǒ-men qù nǐ-de jiā. */
   exampleComeGo6: TExample;
   /** Example: tā lái wǒ-de páng-biān. */
   exampleComeGo7: TExample;
-  /** Example: wǒ-men xiànzài qù tā-de jiā. */
-  exampleComeGo8: TExample;
   /** Example: nǐ lái yīxià. */
   exampleComeGo9: TExample;
   /** Example: nǐ yòu lái le! */
@@ -89,8 +85,6 @@ export type LessonShape = {
   exampleDirection4: TExample;
   /** Example: wǒ qù wài-miàn. */
   exampleDirection5: TExample;
-  /** Example: tā zài wài-miàn. */
-  exampleDirection6: TExample;
   /** Example: cóng zhè-ge kǒu qù wài-miàn. */
   exampleDirection7: TExample;
   /** Example: hézi-de kǒu hěn xiǎo. */
@@ -113,8 +107,6 @@ export type LessonShape = {
   vocabYuan: TVocab;
   /** Vocabulary: "nearby, the area near". */
   vocabFujin: TVocab;
-  /** Vocabulary: "road, path, way". */
-  vocabLu: TVocab;
   /** Say: To say a place is far, use hěn yuǎn. To say something is near, put fùjìn (nearby) after zài. Pattern: Place + hěn + yuǎn / Thing + zài (+ place) + fùjìn */
   proseFar: TProse;
   /** Example: nà-ge dìfāng hěn yuǎn. */
@@ -129,6 +121,10 @@ export type LessonShape = {
   exampleFar5: TExample;
   /** Example: shuǐ zài jiā fùjìn ma? */
   exampleFar6: TExample;
+  /** Vocabulary: "road, path, way". */
+  vocabLu: TVocab;
+  /** Say: To talk about the way to a place, use lù (road, way). Pattern: lù hěn yuǎn / zhīdào lù / lù-shàng */
+  proseRoad: TProse;
   /** Example: lù hěn yuǎn. */
   exampleFar7: TExample;
   /** Example: nǐ zhīdào lù ma? */
@@ -217,11 +213,6 @@ const shape: LessonShape = {
     pinyin: "{{Word:lai2}}!",
     ttsText: "来！",
   },
-  exampleComeGo5: {
-    type: "example",
-    pinyin: "{{Word:wo3}} {{word:qu4}}-{{word:guo4}} {{word:na4}}-ge {{word:di4fang1}}.",
-    ttsText: "我去过那个地方。",
-  },
   exampleComeGo6: {
     type: "example",
     pinyin: "{{Word:chi1}}-{{word:wan2}} {{word:hou4}}, {{word:wo3}}-{{word:men}} {{word:qu4}} {{word:ni3}}-{{word:de}} {{word:jia1}}.",
@@ -231,11 +222,6 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:ta1}} {{word:lai2}} {{word:wo3}}-{{word:de}} {{word:pang2}}-{{word:bian1}}.",
     ttsText: "他来我的旁边。",
-  },
-  exampleComeGo8: {
-    type: "example",
-    pinyin: "{{Word:wo3}}-{{word:men}} {{word:xian4zai4}} {{word:qu4}} {{word:ta1}}-{{word:de}} {{word:jia1}}.",
-    ttsText: "我们现在去他的家。",
   },
   exampleComeGo9: {
     type: "example",
@@ -315,11 +301,6 @@ const shape: LessonShape = {
     pinyin: "{{Word:wo3}} {{word:qu4}} {{word:wai4}}-{{word:mian4}}.",
     ttsText: "我去外面。",
   },
-  exampleDirection6: {
-    type: "example",
-    pinyin: "{{Word:ta1}} {{word:zai4}} {{word:wai4}}-{{word:mian4}}.",
-    ttsText: "她在外面。",
-  },
   exampleDirection7: {
     type: "example",
     pinyin: "{{Word:cong2}} {{word:zhe4}}-ge {{word:kou3}} {{word:qu4}} {{word:wai4}}-{{word:mian4}}.",
@@ -359,7 +340,6 @@ const shape: LessonShape = {
   },
   vocabYuan: { type: "vocab", term: "{{word:yuan3}}", ttsText: "远" },
   vocabFujin: { type: "vocab", term: "{{word:fu4jin4}}", ttsText: "附近" },
-  vocabLu: { type: "vocab", term: "{{word:lu4}}", ttsText: "路" },
   proseFar: { type: "prose" },
   exampleFar1: {
     type: "example",
@@ -391,6 +371,8 @@ const shape: LessonShape = {
     pinyin: "{{Word:shui3}} {{word:zai4}} {{word:jia1}} {{word:fu4jin4}} {{word:ma}}?",
     ttsText: "水在家附近吗？",
   },
+  vocabLu: { type: "vocab", term: "{{word:lu4}}", ttsText: "路" },
+  proseRoad: { type: "prose" },
   exampleFar7: {
     type: "example",
     pinyin: "{{Word:lu4}} {{word:hen3}} {{word:yuan3}}.",

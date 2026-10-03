@@ -42,11 +42,8 @@ const en: PartialByKey<LessonShape> = {
   exampleVery4: { en: ["I'm very cold."] },
   exampleVery5: { en: ["The fruit is very sweet."] },
   exampleVery6: { en: ["He is in good health."] },
-  exampleVery7: { en: ["My feet are cold."] },
   exampleVery8: { en: ["I've seen a very strange animal."] },
   exampleVery9: { en: ["That animal is very fast."] },
-  exampleVery10: { en: ["Come quickly!"] },
-  exampleVery11: { en: ["The rice tastes very good."] },
   proseReally: {
     en: [
       "**To say really**, put {{word:zhen1}} before the adjective.",

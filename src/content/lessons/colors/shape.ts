@@ -51,26 +51,16 @@ export type LessonShape = {
   proseIsColor: TProse;
   /** Example: hézi shì hóngsè-de. */
   exampleIsColor1: TExample;
-  /** Example: shuǐ shì lánsè-de. */
-  exampleIsColor2: TExample;
   /** Example: wǒ-de yīfu shì báisè-de. */
   exampleIsColor3: TExample;
-  /** Example: yuè shì huángsè-de. */
-  exampleIsColor4: TExample;
   /** Example: dì-shàng-de ní shì hēisè-de. */
   exampleIsColor5: TExample;
-  /** Example: huǒ shì hóngsè-de. */
-  exampleIsColor6: TExample;
   /** Example: zhè-ge dòngwù-de shēntǐ shì huángsè-de. */
   exampleIsColor7: TExample;
-  /** Example: yuè shì yuán-de, yě shì báisè-de. */
-  exampleIsColor8: TExample;
   /** Example: sì-ge dòngwù shì báisè-de, wǔ-ge shì hēisè-de. */
   exampleIsColor9: TExample;
   /** Example: qī-ge hézi shì hóngsè-de, bā-ge shì lánsè-de. */
   exampleIsColor10: TExample;
-  /** Example: tā-de yīfu dōu shì hēisè-de. */
-  exampleIsColor11: TExample;
   /** Example: yòubiān-de hézi shì hóngsè-de. */
   exampleIsColor12: TExample;
   /** Example: yī-ge hēisè-de dòngwù fēi-jìn-lái le. */
@@ -85,8 +75,6 @@ export type LessonShape = {
   exampleWhatColor2: TExample;
   /** Example: wǒ ài lánsè. */
   exampleWhatColor3: TExample;
-  /** Example: zhè-ge yánsè hěn hǎo. */
-  exampleWhatColor4: TExample;
   /** Example: zhè liǎng-ge hézi-de yánsè yīyàng. */
   exampleWhatColor5: TExample;
   /** Example: liù-hào shì shénme yánsè? */
@@ -182,40 +170,20 @@ const shape: LessonShape = {
     pinyin: "{{Word:he2zi}} {{word:shi4}} {{word:hong2se4}}-{{word:de}}.",
     ttsText: "盒子是红色的。",
   },
-  exampleIsColor2: {
-    type: "example",
-    pinyin: "{{Word:shui3}} {{word:shi4}} {{word:lan2se4}}-{{word:de}}.",
-    ttsText: "水是蓝色的。",
-  },
   exampleIsColor3: {
     type: "example",
     pinyin: "{{Word:wo3}}-{{word:de}} {{word:yi1fu}} {{word:shi4}} {{word:bai2se4}}-{{word:de}}.",
     ttsText: "我的衣服是白色的。",
-  },
-  exampleIsColor4: {
-    type: "example",
-    pinyin: "{{Word:yue4}} {{word:shi4}} {{word:huang2se4}}-{{word:de}}.",
-    ttsText: "月是黄色的。",
   },
   exampleIsColor5: {
     type: "example",
     pinyin: "{{Word:di4}}-{{word:shang4}}-{{word:de}} {{word:ni2}} {{word:shi4}} {{word:hei1se4}}-{{word:de}}.",
     ttsText: "地上的泥是黑色的。",
   },
-  exampleIsColor6: {
-    type: "example",
-    pinyin: "{{Word:huo3}} {{word:shi4}} {{word:hong2se4}}-{{word:de}}.",
-    ttsText: "火是红色的。",
-  },
   exampleIsColor7: {
     type: "example",
     pinyin: "{{Word:zhe4}}-ge {{word:dong4wu4}}-{{word:de}} {{word:shen1ti3}} {{word:shi4}} {{word:huang2se4}}-{{word:de}}.",
     ttsText: "这个动物的身体是黄色的。",
-  },
-  exampleIsColor8: {
-    type: "example",
-    pinyin: "{{Word:yue4}} {{word:shi4}} {{word:yuan2}}-{{word:de}}, {{word:ye3}} {{word:shi4}} {{word:bai2se4}}-{{word:de}}.",
-    ttsText: "月是圆的，也是白色的。",
   },
   exampleIsColor9: {
     type: "example",
@@ -226,11 +194,6 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:qi1}}-ge {{word:he2zi}} {{word:shi4}} {{word:hong2se4}}-{{word:de}}, {{word:ba1}}-ge {{word:shi4}} {{word:lan2se4}}-{{word:de}}.",
     ttsText: "七个盒子是红色的，八个是蓝色的。",
-  },
-  exampleIsColor11: {
-    type: "example",
-    pinyin: "{{Word:ta1}}-{{word:de}} {{word:yi1fu}} {{word:dou1}} {{word:shi4}} {{word:hei1se4}}-{{word:de}}.",
-    ttsText: "她的衣服都是黑色的。",
   },
   exampleIsColor12: {
     type: "example",
@@ -258,11 +221,6 @@ const shape: LessonShape = {
     type: "example",
     pinyin: "{{Word:wo3}} {{word:ai4}} {{word:lan2se4}}.",
     ttsText: "我爱蓝色。",
-  },
-  exampleWhatColor4: {
-    type: "example",
-    pinyin: "{{Word:zhe4}}-ge {{word:yan2se4}} {{word:hen3}} {{word:hao3}}.",
-    ttsText: "这个颜色很好。",
   },
   exampleWhatColor5: {
     type: "example",

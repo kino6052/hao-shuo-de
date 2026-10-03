@@ -43,8 +43,8 @@ const SECTION_TITLES: Record<string, LangText> = {
 // The same for the chapters after the lessons, keyed by chapter id, in the
 // groups and order src/content/book.js gives them (BACK_MATTER).
 export const CHAPTER_BLURBS: Record<string, LangText> = {
-  "proverbs": { en: ["short, memorable lines built from the dictionary."], zh: [], ru: [] },
-  "appendix-stories": { en: ["ten well-known tales, told with dictionary words only."], zh: [], ru: [] },
+  "phrase-book": { en: ["ready-made sentences for travel and daily life: greetings, directions, food, shopping, and getting help."], zh: [], ru: [] },
+  "appendix-stories": { en: ["ten well-known tales, retold with dictionary words only, with sound for every line."], zh: [], ru: [] },
   "appendix-pinyin": { en: ["every sound pinyin can spell, and the spellings that trip up English speakers."], zh: [], ru: [] },
   "appendix-sandhi": { en: ["how tones change when words come together."], zh: [], ru: [] },
   "appendix-grammar": { en: ["every grammar box from the lessons, in one place."], zh: [], ru: [] },
