@@ -83,6 +83,46 @@
   color: var(--accent-text);
 }
 
+.source {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+.source b {
+  color: var(--text-body);
+}
+
+/* Dictionary words ---------------------------------------------------- */
+
+.dict {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dictSearch {
+  width: 100%;
+  max-width: 360px;
+  box-sizing: border-box;
+  border: 2px solid var(--border-card);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 15px;
+  padding: 8px 14px;
+  border-radius: 12px;
+}
+.dictSearch:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.meaning {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-body);
+}
+
 /* Start: "What is it?" --------------------------------------------- */
 
 .start {

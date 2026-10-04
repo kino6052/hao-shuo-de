@@ -18,6 +18,7 @@ const hz = hanziSystem(
   new Map(Object.entries({
     dong4wu4: "动物", shui3: "水", li3: "里", de: "的", qu4: "去", kuai4: "快",
     gong1ju4: "工具", zhi1dao4: "知道", hen3: "很", duo1: "多", dong1xi: "东西",
+    zai4: "在", cong2: "从", lai2: "来", dao4: "到", jia1: "家", lu4: "路", fei1: "飞",
   })),
 );
 
@@ -46,10 +47,22 @@ describe("roleOf / poolFor", () => {
 });
 
 describe("render: nouns", () => {
-  test("where: place + position + de", () => {
+  test("where: zài + place + position + de", () => {
     const fish = node("dong4wu4", { where: word(node("shui3")) });
-    expect(render(fish, py)).toBe("shuǐ-lǐ-de dòngwù");
-    expect(render(fish, hz)).toBe("水里的动物");
+    expect(render(fish, py)).toBe("zài-shuǐ-lǐ-de dòngwù");
+    expect(render(fish, hz)).toBe("在水里的动物");
+  });
+
+  test("from where: cóng + place + lái + de", () => {
+    const n = node("dong4wu4", { from: word(node("shui3")) });
+    expect(render(n, py)).toBe("cóng-shuǐ-lǐ-lái-de dòngwù");
+    expect(render(n, hz)).toBe("从水里来的动物");
+  });
+
+  test("to where: dào (the default) or qù + place + de; a place word needs no lǐ", () => {
+    expect(render(node("lu4", { to: word(node("jia1")) }), py)).toBe("dào-jiā-de lù");
+    expect(render(node("lu4", { to: word(node("jia1"), { via: "qu4" }) }), hz)).toBe("去家的路");
+    expect(render(node("lu4", { to: word(node("jia1"), { position: "in" }) }), py)).toBe("dào-jiā-lǐ-de lù");
   });
 
   test("the parts follow Mandarin order, not answer order", () => {
@@ -57,8 +70,9 @@ describe("render: nouns", () => {
       color: word(node("huang2se4")),
       kind: word(node("xiao3")),
       where: word(node("shui3")),
+      from: word(node("jia1")),
     });
-    expect(render(n, py)).toBe("shuǐ-lǐ-de xiǎo-de huángsè-de dòngwù");
+    expect(render(n, py)).toBe("cóng-jiā-lái-de zài-shuǐ-lǐ-de xiǎo-de huángsè-de dòngwù");
   });
 
   test("answers nest, and duō takes hěn", () => {
@@ -75,7 +89,7 @@ describe("render: nouns", () => {
 
   test("other positions", () => {
     const n = node("dong1xi", { where: word(node("he2zi"), { position: "under" }) });
-    expect(render(n, py)).toBe("hézi-xià-miàn-de dōngxi");
+    expect(render(n, py)).toBe("zài-hézi-xià-miàn-de dōngxi");
   });
 });
 
@@ -106,13 +120,33 @@ describe("render: verbs", () => {
     expect(choicesFor(node("qu4"), "direction")).toEqual(["shang4-qu4", "xia4-qu4", "jin4-qu4", "chu1-qu4", "hui2-qu4"]);
     expect(choicesFor(node("fei1"), "direction")).toHaveLength(11);
   });
+
+  test("from where: cóng + place before the verb", () => {
+    expect(render(node("lai2", { from: word(node("jia1")) }), py)).toBe("cóng jiā lái");
+  });
+
+  test("to where: verb-dào / verb-qù + place; after lái or qù the place follows directly", () => {
+    expect(render(node("fei1", { to: word(node("shui3")) }), py)).toBe("fēi-dào shuǐ-lǐ");
+    expect(render(node("fei1", { to: word(node("shui3"), { via: "qu4" }) }), hz)).toBe("飞去水里");
+    expect(render(node("qu4", { to: word(node("jia1"), { via: "dao4" }) }), py)).toBe("qù jiā");
+    expect(render(node("qu4", { from: word(node("jia1")), to: word(node("shui3")) }), py)).toBe("cóng jiā qù shuǐ-lǐ");
+  });
+
+  test("a thing with a place it goes to moves up front with bǎ", () => {
+    expect(render(node("na2", { what: word(node("jin1")), to: word(node("jia1")) }), py)).toBe("bǎ jīn ná-dào jiā");
+  });
 });
 
 describe("openQuestions", () => {
   test("lists the unanswered questions in asking order", () => {
-    expect(openQuestions(node("dong4wu4"))).toEqual(["kind", "color", "where", "does"]);
-    expect(openQuestions(node("dong4wu4", { kind: word(node("da4")) }))).toEqual(["color", "where", "does"]);
+    expect(openQuestions(node("dong4wu4"))).toEqual(["kind", "color", "where", "from", "to", "does"]);
+    expect(openQuestions(node("dong4wu4", { kind: word(node("da4")) }))).toEqual(["color", "where", "from", "to", "does"]);
     expect(openQuestions(node("hong2se4"))).toEqual([]);
+  });
+
+  test("a verb takes a direction or a place it goes to, not both", () => {
+    expect(openQuestions(node("fei1", { to: word(node("jia1")) }))).not.toContain("direction");
+    expect(openQuestions(node("fei1", { direction: { value: "shang4-qu4" } }))).not.toContain("to");
   });
 });
 
@@ -132,6 +166,18 @@ describe("glossTree", () => {
         },
       ],
     });
+  });
+
+  test("place answers note their position (not 'the place itself') and dào or qù", () => {
+    const n = node("lu4", { to: word(node("jia1"), { via: "qu4" }), from: word(node("shui3")) });
+    expect(glossTree(dict, n, "eng", label).items.map((i) => i.text)).toEqual([
+      "water (<pos_in>)",
+      `${firstSense(dict, "jia1", "eng")} (<via_qu4>)`,
+    ]);
+    // With qù as the verb there is no dào or qù to pick.
+    expect(glossTree(dict, node("qu4", { to: word(node("jia1")) }), "eng", label).items[0].text).toBe(
+      firstSense(dict, "jia1", "eng"),
+    );
   });
 
   test("choice answers are named by their value", () => {

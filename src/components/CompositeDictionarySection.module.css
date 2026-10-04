@@ -78,6 +78,16 @@
 
 .literal { color: var(--text-muted); }
 
+.howBuilt {
+  margin-left: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-text);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.howBuilt:hover { text-decoration: underline; }
+
 .fit {
   display: inline-block;
   margin-left: 8px;

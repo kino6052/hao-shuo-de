@@ -25,7 +25,6 @@ if (unknown.length) {
 const problems = []; // { lesson, text }
 for (const id of LESSON_IDS) {
   const entries = await importLessonFile(id, 'index.ts');
-  const keys = Object.keys(await importLessonFile(id, 'shape.ts'));
   const runs = [];
   let start = -1;
   entries.forEach((e, i) => {
@@ -39,7 +38,7 @@ for (const id of LESSON_IDS) {
   if (start >= 0) runs.push([start, entries.length - 1]);
   const long = runs.filter(([a, b]) => b - a + 1 > MAX_EXAMPLES_IN_A_ROW);
   for (const [a, b] of long) {
-    problems.push({ lesson: id, text: `${b - a + 1} examples in a row (${keys[a]} … ${keys[b]})` });
+    problems.push({ lesson: id, text: `${b - a + 1} examples in a row (${entries[a].key} … ${entries[b].key})` });
   }
   if (!summary || long.length) {
     const longest = Math.max(0, ...runs.map(([a, b]) => b - a + 1));

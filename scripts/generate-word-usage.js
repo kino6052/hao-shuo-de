@@ -38,18 +38,18 @@ const WORD_REF_RE = /\{\{(?:word|Word):([a-z0-9-]+)\}\}/g;
 
 function isTrackedFile(filename) {
   if (!filename.endsWith('.md') && !filename.endsWith('.yaml') && !filename.endsWith('.yml') && !filename.endsWith('.ts')) return false;
-  // A lesson folder's shape.ts/en.ts/ru.ts/zh.ts (see chapter-shape-types.ts)
-  // are internal building blocks, not separate chapters -- only index.ts
-  // (or a flat file like intro-1.ts) is one.
+  // A lesson folder's module files and practice.ts (see src/lib/lesson.ts)
+  // are its building blocks, not separate chapters -- only index.ts (or a
+  // flat file like intro-1.ts) is one.
   if (filename.endsWith('.ts') && filename.includes('/') && !filename.endsWith('/index.ts')) return false;
   return !EXCLUDE_PREFIXES.some((prefix) => filename.startsWith(prefix));
 }
 
 async function loadChapter(filename) {
   // For a folder-based chapter (lessons/<id>/index.ts), {{word:..}} refs live
-  // scattered across shape.ts/en.ts/ru.ts/zh.ts too (see
-  // chapter-shape-types.ts) -- concatenate the whole folder's *.ts files so
-  // the regex scan below still sees every reference, not just index.ts's.
+  // in its module files and practice.ts (see src/lib/lesson.ts) -- concatenate
+  // the whole folder's *.ts files so the regex scan below still sees every
+  // reference, not just index.ts's.
   const raw = filename.endsWith('/index.ts')
     ? readdirSync(dirname(resolve(CONTENT_DIR, filename)))
         .filter((f) => f.endsWith('.ts'))

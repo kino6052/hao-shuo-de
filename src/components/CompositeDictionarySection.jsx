@@ -1,4 +1,4 @@
-import { useState } from "preact/hooks";
+import { useState, useEffect } from "preact/hooks";
 import composites from "../data/composites.json";
 import dictionary from "../data/dictionary.json";
 import {
@@ -8,6 +8,7 @@ import {
 import { resolveLessonRefs, resolveWordRefs } from "../lib/word-refs.js";
 import { AudioButton } from "./AudioButton.jsx";
 import { t } from "../lib/i18n.js";
+import { dictionaryBuilds, wordBuilderUrl, openInApp } from "../lib/builder-entries.js";
 import styles from "./CompositeDictionarySection.module.css";
 
 // The composite dictionary (src/data/composites.json): for a common word in
@@ -63,7 +64,8 @@ const counts = composites.entries.reduce(
   },
 );
 
-function Entry({ entry, lang }) {
+// `built`: the Word Builder can show how this entry's word is built.
+function Entry({ entry, lang, built }) {
   const source = (SOURCE[lang] ?? SOURCE.eng)(entry);
   const hsd = entry.hsd
     ? resolveWordRefs(entry.hsd, wordIndex, wordCount)
@@ -82,6 +84,15 @@ function Entry({ entry, lang }) {
         <span class={styles.none}>{t(lang, "compositeNone")}</span>
       )}
       {entry.literal && <span class={styles.literal}> “{entry.literal}”</span>}
+      {built && (
+        <a
+          class={styles.howBuilt}
+          href={wordBuilderUrl(lang, entry.rank)}
+          onClick={(e) => openInApp(e, wordBuilderUrl(lang, entry.rank))}
+        >
+          {t(lang, "wbHowBuilt")} →
+        </a>
+      )}
       <span class={`${styles.fit} ${styles[entry.fit]}`}>
         {t(lang, `fit_${entry.fit}`)}
       </span>
@@ -101,6 +112,12 @@ function Entry({ entry, lang }) {
 export function CompositeDictionarySection({ lang }) {
   const [query, setQuery] = useState("");
   const [fit, setFit] = useState("all");
+  // Which entries the Word Builder can show, read just after the first draw.
+  const [built, setBuilt] = useState(() => new Set());
+  useEffect(() => {
+    const id = setTimeout(() => setBuilt(new Set(dictionaryBuilds().map((b) => b.entry.rank))), 0);
+    return () => clearTimeout(id);
+  }, []);
   const q = query.trim().toLowerCase();
   const shown = (e) =>
     (fit === "all" || e.fit === fit || (fit === "proposed" && e.proposed)) &&
@@ -134,7 +151,7 @@ export function CompositeDictionarySection({ lang }) {
           <h3 class={styles.letter}>{g.letter}</h3>
           <ul class={styles.list}>
             {g.entries.map((e) => (
-              <Entry key={e.zh} entry={e} lang={lang} />
+              <Entry key={e.zh} entry={e} lang={lang} built={built.has(e.rank)} />
             ))}
           </ul>
         </div>

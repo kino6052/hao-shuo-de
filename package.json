@@ -19,7 +19,8 @@
     "check-word-use": "node scripts/check-word-use.js",
     "check-grammar-blocks": "node scripts/check-grammar-blocks.js",
     "check-practice": "node scripts/check-practice.js",
-    "check-example-runs": "node scripts/check-example-runs.js"
+    "check-example-runs": "node scripts/check-example-runs.js",
+    "check-word-builder": "node scripts/check-word-builder.js"
   },
   "dependencies": {
     "preact": "^10.25.0"

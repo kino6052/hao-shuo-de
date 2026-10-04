@@ -29,9 +29,8 @@ const { named, blocking, scopeLabel, summary: summaryOnly } = gatePolicy();
 // only limits what gets reported.
 const lessons = [];
 for (const id of LESSON_IDS) {
-  const entries = await importLessonFile(id, 'index.ts');
-  const keys = Object.keys(await importLessonFile(id, 'shape.ts'));
-  lessons.push({ id, number: lessonNumber(id), entries: entries.map((e, i) => ({ key: keys[i], ...e })) });
+  // Each assembled entry carries its `key` ("tong.example2"), which says where a use is.
+  lessons.push({ id, number: lessonNumber(id), entries: await importLessonFile(id, 'index.ts') });
 }
 lessons.sort((a, b) => a.number - b.number);
 

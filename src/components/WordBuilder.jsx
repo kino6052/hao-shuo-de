@@ -1,15 +1,20 @@
-import { useState } from "preact/hooks";
+import { useState, useEffect } from "preact/hooks";
 import dictionary from "../data/dictionary.json";
 import { t } from "../lib/i18n.js";
 import { AudioButton } from "./AudioButton.jsx";
 import { WordPicker } from "./WordPicker.jsx";
 import { getAtPath, setAtPath } from "../lib/sentence-builder.js";
 import { WORD_HANZI } from "../lib/word-hanzi.js";
+import { dictionaryBuilds, buildOfRank } from "../lib/builder-entries.js";
 import {
   ASK_ORDER,
   CHOICES,
   POSITIONS,
-  DEFAULT_POSITION,
+  PLACE_QUESTIONS,
+  VIAS,
+  DEFAULT_VIA,
+  positionOf,
+  takesVia,
   START_NOUNS,
   START_VERBS,
   questionOf,
@@ -32,18 +37,49 @@ const HANZI = hanziSystem(WORD_HANZI);
 const term = (id) => dictionary.words[id]?.term || id;
 const choicePinyin = (key, value) => CHOICES[key][value].map(term).join("-");
 const lowerFirst = (s) => s.charAt(0).toLowerCase() + s.slice(1);
+// A composite dictionary entry's word in the reader's language.
+const meaningOf = (entry, lang) => (lang === "rus" ? entry.ru : lang === "zh" ? entry.zh : entry.en);
 
 // The Word Builder: pick a broad word (or any noun or verb), then describe
 // it by answering questions. Each answer that is a word can be described
 // with its own questions, so the built word is a tree (see
-// src/lib/word-builder.js for the shapes and the Mandarin word order).
+// src/lib/word-builder.js for the shapes and the Mandarin word order). A
+// word from the composite dictionary can be opened too (?w=<rank>), to show
+// how it's built.
 export function WordBuilder({ lang }) {
-  const [root, setRoot] = useState(null);
+  const [root, setRootState] = useState(null);
+  // The composite dictionary entry on show, until the reader changes it.
+  const [source, setSource] = useState(null);
   const [picker, setPicker] = useState(null);
   // The choice question whose options are showing: "<path>|<question>".
   const [openChoice, setOpenChoice] = useState(null);
 
   const label = (key) => t(lang, `wb_${key}`);
+  // Any change the reader makes: it's no longer the dictionary's word.
+  const setRoot = (next) => {
+    setRootState(next);
+    setSource(null);
+  };
+  const open = (entry, tree) => {
+    setRootState(tree);
+    setSource(entry);
+    setOpenChoice(null);
+  };
+
+  useEffect(() => {
+    const rank = Number(new URLSearchParams(window.location.search).get("w"));
+    const build = rank ? buildOfRank(rank) : null;
+    if (build) open(build.entry, build.tree);
+  }, []);
+
+  // Keep the dictionary word in the URL (?w=<rank>) while it's on show, so the
+  // link can be shared; replaceState, so it doesn't add history entries.
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    if (source) url.searchParams.set("w", source.rank);
+    else url.searchParams.delete("w");
+    window.history.replaceState(null, "", url);
+  }, [source]);
 
   function pick(pool, title, onPick) {
     setPicker({
@@ -91,6 +127,9 @@ export function WordBuilder({ lang }) {
     setPosition(path, key, position) {
       setRoot((r) => setAtPath(r, [...path, "answers", key, "position"], position));
     },
+    setVia(path, key, via) {
+      setRoot((r) => setAtPath(r, [...path, "answers", key, "via"], via));
+    },
     remove(path, key) {
       setRoot((r) => {
         const { [key]: _, ...rest } = getAtPath(r, path).answers;
@@ -103,7 +142,9 @@ export function WordBuilder({ lang }) {
 
   return (
     <div class={styles.wrap}>
-      <Result root={root} lang={lang} label={label} onReset={() => setRoot(null)} />
+      <Result root={root} source={source} lang={lang} label={label} onReset={() => setRoot(null)} />
+
+      <DictionaryWords lang={lang} onOpen={open} />
 
       {root ? (
         <WordNode node={root} path={[]} ctx={ctx} />
@@ -150,8 +191,45 @@ function StartChip({ id, lang, onPick }) {
   );
 }
 
+// "See how a dictionary word is built": the composite dictionary's words the
+// Word Builder can show, found by meaning. Reading them all takes a moment,
+// so it happens just after the page first draws.
+function DictionaryWords({ lang, onOpen }) {
+  const [builds, setBuilds] = useState(null);
+  const [query, setQuery] = useState("");
+  useEffect(() => {
+    const id = setTimeout(() => setBuilds(dictionaryBuilds()), 0);
+    return () => clearTimeout(id);
+  }, []);
+  const q = query.trim().toLowerCase();
+  const found = (builds ?? []).filter(
+    ({ entry: e }) => !q || [e.en, e.ru, e.zh, e.py].some((s) => s?.toLowerCase().includes(q)),
+  );
+  return (
+    <div class={styles.dict}>
+      <div class={styles.startLabel}>{t(lang, "wbDictTitle")}</div>
+      <input
+        class={styles.dictSearch}
+        type="search"
+        value={query}
+        placeholder={t(lang, "wbDictSearch")}
+        onInput={(e) => setQuery(e.currentTarget.value)}
+      />
+      <div class={styles.chips}>
+        {found.slice(0, 8).map(({ entry, tree }) => (
+          <button type="button" key={entry.rank} class={styles.startChip} onClick={() => onOpen(entry, tree)}>
+            <span class={styles.meaning}>{meaningOf(entry, lang)}</span>
+            <span class={styles.sense}>{render(tree, PINYIN)}</span>
+          </button>
+        ))}
+      </div>
+      {builds && q && found.length === 0 && <div class={styles.placeholder}>{t(lang, "sbNoResults")}</div>}
+    </div>
+  );
+}
+
 // The built word: pinyin, hanzi with audio, and what it means, question by question.
-function Result({ root, lang, label, onReset }) {
+function Result({ root, source, lang, label, onReset }) {
   if (!root) {
     return (
       <div class={styles.output}>
@@ -164,6 +242,11 @@ function Result({ root, lang, label, onReset }) {
   const gloss = glossTree(dictionary, root, lang, (key) => lowerFirst(label(key)));
   return (
     <div class={styles.output}>
+      {source && (
+        <div class={styles.source}>
+          {t(lang, "wbDictWord")} <b>{meaningOf(source, lang)}</b> · <span lang="zh">{source.zh}</span>
+        </div>
+      )}
       <div class={styles.wordRow}>
         <span class={styles.wordText}>{pinyin}</span>
         <AudioButton pinyin={pinyin} ttsText={hanzi} />
@@ -221,7 +304,7 @@ function WordNode({ node, path, ctx }) {
       {answered.length > 0 && (
         <ul class={styles.answers}>
           {answered.map((key) => (
-            <AnswerRow key={key} qKey={key} answer={node.answers[key]} path={path} ctx={ctx} />
+            <AnswerRow key={key} qKey={key} answer={node.answers[key]} parent={node} path={path} ctx={ctx} />
           ))}
         </ul>
       )}
@@ -260,9 +343,8 @@ function WordNode({ node, path, ctx }) {
   );
 }
 
-function AnswerRow({ qKey, answer, path, ctx }) {
+function AnswerRow({ qKey, answer, parent, path, ctx }) {
   const { lang, label, actions } = ctx;
-  const position = answer.position || DEFAULT_POSITION;
   return (
     <li class={styles.answer}>
       <div class={styles.answerHead}>
@@ -284,16 +366,31 @@ function AnswerRow({ qKey, answer, path, ctx }) {
         </span>
       ) : (
         <>
-          {qKey === "where" && (
+          {takesVia(parent, qKey) && (
+            <div class={styles.chips}>
+              {VIAS.map((via) => (
+                <button
+                  type="button"
+                  key={via}
+                  class={`${styles.choiceChip} ${via === (answer.via || DEFAULT_VIA) ? styles.choiceActive : ""}`}
+                  onClick={() => actions.setVia(path, qKey, via)}
+                >
+                  <span class={styles.term}>{term(via)}</span>
+                  <span class={styles.sense}>{label(`via_${via}`)}</span>
+                </button>
+              ))}
+            </div>
+          )}
+          {PLACE_QUESTIONS.has(qKey) && (
             <div class={styles.chips}>
               {Object.keys(POSITIONS).map((p) => (
                 <button
                   type="button"
                   key={p}
-                  class={`${styles.choiceChip} ${p === position ? styles.choiceActive : ""}`}
+                  class={`${styles.choiceChip} ${p === positionOf(answer) ? styles.choiceActive : ""}`}
                   onClick={() => actions.setPosition(path, qKey, p)}
                 >
-                  <span class={styles.term}>{POSITIONS[p].map(term).join("-")}</span>
+                  <span class={styles.term}>{POSITIONS[p].map(term).join("-") || "—"}</span>
                   <span class={styles.sense}>{label(`pos_${p}`)}</span>
                 </button>
               ))}

@@ -1,0 +1,87 @@
+// To say really, put zhēn before the adjective. Pattern: Thing + zhēn +
+// adjective
+import { lessonModule } from "../../../lib/lesson.ts";
+
+export default lessonModule({
+  id: "really",
+  prose: {
+    en: [
+      "**To say really**, put {{word:zhen1}} before the adjective.",
+      "",
+      "**Thing + {{word:zhen1}} + adjective**",
+      "",
+      "On its own, it's a whole sentence: {{Word:zhen1}} {{word:re4}}! (It's really hot!)",
+    ],
+    ru: [
+      "**Чтобы сказать «правда, по-настоящему»**, поставьте {{word:zhen1}} перед прилагательным.",
+      "",
+      "**Вещь + {{word:zhen1}} + прилагательное**",
+      "",
+      "Само по себе это уже целое предложение: {{Word:zhen1}} {{word:re4}}! (Правда жарко!)",
+    ],
+    tldr: {
+      en: "{{word:zhen1}} before an adjective means really.",
+      ru: "{{word:zhen1}} перед прилагательным значит «правда, по-настоящему».",
+    },
+    necessity: {
+      en: "Now you can say how strongly you feel about something.",
+      ru: "Теперь вы можете сказать, насколько сильно вы что-то чувствуете.",
+    },
+  },
+  info: {
+    en: "{{word:zhen1}} + adjective, really: {{Word:zhen1}} {{word:re4}}! (It's really hot!)",
+    ru: "{{word:zhen1}} + прилагательное — правда: {{Word:zhen1}} {{word:re4}}! (Правда жарко!)",
+  },
+  examples: [
+    {
+      pinyin: "{{Word:zhen1}} {{word:re4}}!",
+      hanzi: "真热！",
+      en: "It's really hot!",
+      ru: "Правда жарко!",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:zhen1}} {{word:qi2guai4}}.",
+      hanzi: "她真奇怪。",
+      en: "She's really strange.",
+      ru: "Она правда странная.",
+    },
+    {
+      pinyin: "{{Word:zhe4}}-ge {{word:shui3guo3}} {{word:zhen1}} {{word:tian2}}!",
+      hanzi: "这个水果真甜！",
+      en: "This fruit is really sweet!",
+      ru: "Этот фрукт правда сладкий!",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:zhen1}} {{word:kuai4}}!",
+      hanzi: "你真快！",
+      en: "You're really fast!",
+      ru: "Ты правда быстрый!",
+    },
+    {
+      pinyin: "{{Word:zhe4}}-ge {{word:shui3guo3}}-{{word:de}} {{word:wei4dao4}} {{word:zhen1}} {{word:hao3}}!",
+      hanzi: "这个水果的味道真好！",
+      en: "This fruit tastes really good!",
+      ru: "У этого фрукта правда хороший вкус!",
+    },
+  ],
+  exercises: [
+    {
+      en: "The rice is really hot.",
+      ru: "Рис правда горячий.",
+      answer: "{{Word:mi3fan4}} {{word:zhen1}} {{word:re4}}.",
+      hanzi: "米饭真热。",
+    },
+    {
+      en: "That person is really strange.",
+      ru: "Тот человек правда странный.",
+      answer: "{{Word:na4}}-ge {{word:ren2}} {{word:zhen1}} {{word:qi2guai4}}.",
+      hanzi: "那个人真奇怪。",
+    },
+    {
+      en: "You're really fast!",
+      ru: "Ты правда быстрый!",
+      answer: "{{Word:ni3}} {{word:zhen1}} {{word:kuai4}}!",
+      hanzi: "你真快！",
+    },
+  ],
+});

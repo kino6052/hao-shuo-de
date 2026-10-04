@@ -7,9 +7,9 @@ const mdModules = import.meta.glob('../content/*.md', { eager: true });
 const chapterModules = import.meta.glob('../content/*.{yaml,yml}', { eager: true });
 // Lessons live one per folder (../content/lessons/<id>/index.ts), while
 // other *.ts chapters (intro-*) sit flat directly in content/. Only
-// index.ts is a chapter module -- a lesson folder's shape.ts/en.ts/ru.ts/
-// zh.ts (see chapter-shape-types.ts) are its internal building blocks, not
-// separate chapters, so the glob must not also pick those up.
+// index.ts is a chapter module -- a lesson folder's module files and
+// practice.ts (see src/lib/lesson.ts) are its building blocks, not separate
+// chapters, so the glob must not also pick those up.
 const lessonModules = import.meta.glob('../content/lessons/*/index.ts', { eager: true });
 const flatTsModules = import.meta.glob('../content/*.ts', { eager: true });
 

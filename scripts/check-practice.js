@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 // Practice gate: in every lesson, each word the lesson introduces appears in
 // at least one of its example sentences AND in at least one exercise (its
-// answer -- exercise prompts are English). A lesson with new words must have
-// examples and exercises at all. Every lesson also has a FAQ ("Some
-// questions you may have"): faq blocks with a question and an answer, all
-// together after the exercises. Rules in scripts/word-use.js (practiceGaps).
+// answer -- exercise prompts are English). Every module of a lesson
+// (src/lib/lesson.ts) has its own exercises, shown under it. A module may
+// also have a FAQ ("Some questions you may have"): faq blocks with a question
+// and an answer, together after the module's exercises. Rules in
+// scripts/word-use.js (practiceGaps).
 // Fails for the blocking lessons (scripts/finished-lessons.js: the finished
 // lessons, or the lessons you name, or every lesson with --strict), and
 // reports the rest.
@@ -47,9 +48,9 @@ for (const g of practiceGaps(lessons, dictionary)) {
   if (g.introduced && !g.exercises) problems.push('no exercises');
   if (g.examples && g.missingExample.length) problems.push(`not in any example: ${g.missingExample.join(', ')}`);
   if (g.exercises && g.missingExercise.length) problems.push(`not in any exercise: ${g.missingExercise.join(', ')}`);
-  if (!g.faq) problems.push('no FAQ questions');
+  if (g.noPractice.length) problems.push(`no exercises in module(s): ${g.noPractice.join(', ')}`);
   if (g.faqIncomplete) problems.push(`${g.faqIncomplete} FAQ question(s) without a question or an answer`);
-  if (g.faqOutOfPlace) problems.push('the FAQ questions must come together, after the exercises and answers');
+  if (g.faqOutOfPlace) problems.push("a module's FAQ questions must come together, after its exercises and answers");
   if (problems.length) (blocking(g.lesson) ? failing : { push: () => others++ }).push(g.lesson);
   if (summary && !problems.length) continue;
   const counts = `${g.introduced} new word(s), ${g.examples} example(s), ${g.exercises} exercise(s), ${g.faq} FAQ question(s)`;

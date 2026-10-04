@@ -1,15 +1,40 @@
-// See src/lib/chapter-content.js for the schema this ultimately produces,
-// and src/lib/chapter-shape-types.ts / assemble-chapter.js for how shape.ts
-// + en.ts/ru.ts/zh.ts combine into it.
-import { assembleChapter } from "../../../lib/assemble-chapter.js";
-import shape from "./shape.ts";
-import en from "./en.ts";
-import ru from "./ru.ts";
-import zh from "./zh.ts";
+// inside-a-sentence ("Relationships 1 — Inside a sentence"): its modules, in reading order.
+// See src/lib/lesson.ts.
+//
+// Rewritten in Phase 2 (BOOK_PLAN.md): give / for (gěi), with (yòng), and / or (hé, huòzhě), and toward / for (duì), with qún, mō, dǎ.
+// Only words from this lesson and earlier ones; passes every gate
+// (npm run check -- inside-a-sentence).
+import { lesson } from "../../../lib/lesson.ts";
+import give from "./give.ts";
+import withPoint from "./with.ts";
+import andOr from "./and-or.ts";
+import toward from "./toward.ts";
+import group from "./group.ts";
+import relation from "./relation.ts";
 
 export const meta = {
   id: "inside-a-sentence",
   type: "lesson",
 };
 
-export default assembleChapter(shape, { en, ru, zh }, meta.id);
+export default lesson(meta.id, {
+  title: { en: "Relationships 1 — Inside a sentence", ru: "Связи 1 — Внутри предложения" },
+  summary: {
+    en: [
+      "We often need to say who something is for, or what we do it with.",
+      "In this lesson, you'll be able to say \"give it to me\", \"write with a tool\", \"you and me\", \"this or that\", and \"for me\".",
+    ],
+    ru: [
+      "Нам часто нужно выразить связь между людьми, вещами и действиями в предложении.",
+      "В этом уроке вы научитесь говорить «дай мне», «писать инструментом», «ты и я», «это или то» и «для меня».",
+    ],
+  },
+  modules: [
+    give,
+    withPoint,
+    andOr,
+    toward,
+    group,
+    relation,
+  ],
+});

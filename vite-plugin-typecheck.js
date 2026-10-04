@@ -1,6 +1,6 @@
 // Type-checks the project while `npm run dev` runs. Vite strips types without
-// checking them, so a wrong key in a chapter file (say, a block renamed in
-// shape.ts but not in ru.ts) would otherwise go unnoticed. Runs `tsc --noEmit`
+// checking them, so a wrong field in a chapter file (say, a module without
+// its info block, see src/lib/lesson.ts) would otherwise go unnoticed. Runs `tsc --noEmit`
 // at startup and after every .ts/.tsx change, prints the errors in the
 // terminal, and shows them in the browser's error overlay. Once they're fixed
 // the page reloads, which clears the overlay.

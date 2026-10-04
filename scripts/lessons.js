@@ -12,7 +12,7 @@ const ROOT = resolve(fileURLToPath(new URL('.', import.meta.url)), '..');
 export const LESSONS_DIR = resolve(ROOT, 'src/content/lessons');
 export { LESSON_IDS, lessonNumber };
 
-// -> the path of one of a lesson's files (index.ts, shape.ts, en.ts, ...).
+// -> the path of one of a lesson's files (index.ts, practice.ts, a module's file).
 export const lessonFile = (id, file) => resolve(LESSONS_DIR, id, file);
 
 // -> a lesson file's default export.

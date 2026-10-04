@@ -37,8 +37,8 @@ for (const file of readdirSync(CONTENT_DIR).filter((f) => f.endsWith('.ts')).sor
 }
 for (const id of LESSON_IDS) {
   if (!wanted(id)) continue;
-  const en = await importLessonFile(id, 'en.ts');
-  chapters.push({ id, summary: en.summary?.en?.join(' ') || null, required: true });
+  const summary = (await importLessonFile(id, 'index.ts')).find((e) => e.type === 'summary');
+  chapters.push({ id, summary: summary?.en?.join(' ') || null, required: true });
 }
 for (const file of readdirSync(CONTENT_DIR).filter((f) => /\.ya?ml$/.test(f)).sort()) {
   const doc = parseYaml(readFileSync(resolve(CONTENT_DIR, file), 'utf-8'));

@@ -25,7 +25,7 @@ const content: Entry[] = [
   {
     "type": "summary",
     "en": [
-      "Every grammar box from the 24 lessons, in one place, in lesson order."
+      "Every pattern from the 24 lessons, in one place, in lesson order."
     ],
     "zh": [],
     "ru": [
@@ -35,17 +35,17 @@ const content: Entry[] = [
   {
     "type": "prose",
     "en": [
-      "Each box below comes from a lesson, and its title says which one.",
+      "Each box below holds one lesson's patterns, and its title says which lesson.",
       "Use this page to look up a pattern, then go back to its lesson for examples and practice."
     ],
     "zh": [],
     "ru": [
-      "Каждая схема ниже взята из урока, и её заголовок говорит, из какого.",
+      "В каждом блоке ниже — схемы одного урока, и заголовок говорит, какого.",
       "Найдите здесь нужную схему, а потом вернитесь к её уроку за примерами и упражнениями."
     ],
     "tldr": {
       "en": [
-        "Every grammar box from the lessons, in lesson order."
+        "Every pattern from the lessons, in lesson order."
       ],
       "zh": [],
       "ru": [
@@ -64,9 +64,16 @@ const content: Entry[] = [
   },
   {
     "type": "info",
-    "ordered": true,
     "subtype": "grammar",
-    "tag": "pinyin/helpers",
+    "title": {
+      "en": [
+        "Lesson 1 · Sounds and Symbols"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 1 · Звуки и знаки"
+      ]
+    },
     "items": [
       {
         "text": {
@@ -184,29 +191,39 @@ const content: Entry[] = [
           }
         ]
       }
-    ],
-    "title": {
-      "en": [
-        "Lesson 1 · Hao-shuo-de pinyin helpers"
-      ],
-      "ru": [
-        "Урок 1 · Подсказки пиньиня в Hǎo-shuō-de"
-      ],
-      "zh": []
-    }
+    ]
   },
   {
     "type": "info",
     "subtype": "grammar",
-    "tag": "sentences/is-and-is-not",
+    "title": {
+      "en": [
+        "Lesson 2 · Words and Sentences"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 2 · Слова и предложения"
+      ]
+    },
     "items": [
       {
         "text": {
           "en": [
-            "NOUN + {{word:shi4}} + NOUN: {{Word:zhe4}} {{word:shi4}} {{word:ren2}}. (This is a person.)"
+            "NOUN + {{word:shi4}} + NOUN: {{Word:nv3ren2}} {{word:shi4}} {{word:ren2}}. (A woman is a person.)"
           ],
           "ru": [
-            "СУЩЕСТВИТЕЛЬНОЕ + {{word:shi4}} + СУЩЕСТВИТЕЛЬНОЕ: {{Word:zhe4}} {{word:shi4}} {{word:ren2}}. (Это человек.)"
+            "СУЩЕСТВИТЕЛЬНОЕ + {{word:shi4}} + СУЩЕСТВИТЕЛЬНОЕ: {{Word:nv3ren2}} {{word:shi4}} {{word:ren2}}. (Женщина — человек.)"
+          ],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:zhe4}} {{word:shi4}} + NOUN, this is: {{Word:zhe4}} {{word:shi4}} {{word:ren2}}. (This is a person.)"
+          ],
+          "ru": [
+            "{{word:zhe4}} {{word:shi4}} + СУЩЕСТВИТЕЛЬНОЕ — это: {{Word:zhe4}} {{word:shi4}} {{word:ren2}}. (Это человек.)"
           ],
           "zh": []
         }
@@ -222,21 +239,20 @@ const content: Entry[] = [
           "zh": []
         }
       }
-    ],
-    "title": {
-      "en": [
-        "Lesson 2 · Saying What Something Is"
-      ],
-      "ru": [
-        "Урок 2 · Как сказать, что это такое"
-      ],
-      "zh": []
-    }
+    ]
   },
   {
     "type": "info",
     "subtype": "grammar",
-    "tag": "describing/hen-and-de",
+    "title": {
+      "en": [
+        "Lesson 3 · Modifying Nouns"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 3 · Описание существительных"
+      ]
+    },
     "items": [
       {
         "text": {
@@ -282,22 +298,32 @@ const content: Entry[] = [
           "zh": []
         }
       }
-    ],
-    "title": {
-      "en": [
-        "Lesson 3 · Describing a Noun"
-      ],
-      "ru": [
-        "Урок 3 · Как описать существительное"
-      ],
-      "zh": []
-    }
+    ]
   },
   {
     "type": "info",
     "subtype": "grammar",
-    "tag": "pointers/counting-word",
+    "title": {
+      "en": [
+        "Lesson 4 · Pointing at People and Things"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 4 · Указываем на людей и вещи"
+      ]
+    },
     "items": [
+      {
+        "text": {
+          "en": [
+            "{{word:zhe4}}, this; {{word:na4}}, that. They work like nouns: {{Word:zhe4}}. (This.)"
+          ],
+          "ru": [
+            "{{word:zhe4}} — это, {{word:na4}} — то. Они работают как существительные: {{Word:zhe4}}. (Это.)"
+          ],
+          "zh": []
+        }
+      },
       {
         "text": {
           "en": [
@@ -308,22 +334,54 @@ const content: Entry[] = [
           ],
           "zh": []
         }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:wo3}}, I; {{word:ni3}}, you; {{word:ta1}}, he or she. They work like nouns: {{Word:ni3}}. (You.)"
+          ],
+          "ru": [
+            "{{word:wo3}} — я, {{word:ni3}} — ты, {{word:ta1}} — он или она. Они работают как существительные: {{Word:ni3}}. (Ты.)"
+          ],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:wo3}} / {{word:ni3}} / {{word:ta1}} + -{{word:men}}, more than one: {{Word:wo3}}-{{word:men}}. (We.)"
+          ],
+          "ru": [
+            "{{word:wo3}} / {{word:ni3}} / {{word:ta1}} + -{{word:men}} — больше одного: {{Word:wo3}}-{{word:men}}. (Мы.)"
+          ],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:wo3}}-{{word:de}} / {{word:ni3}}-{{word:de}} + noun, whose: {{word:wo3}}-{{word:de}} {{word:shui3guo3}} (my fruit)"
+          ],
+          "ru": [
+            "{{word:wo3}}-{{word:de}} / {{word:ni3}}-{{word:de}} + существительное — чей: {{word:wo3}}-{{word:de}} {{word:shui3guo3}} (мой фрукт)"
+          ],
+          "zh": []
+        }
       }
-    ],
-    "title": {
-      "en": [
-        "Lesson 4 · One Counting Word for Everything"
-      ],
-      "ru": [
-        "Урок 4 · Одно счётное слово для всего"
-      ],
-      "zh": []
-    }
+    ]
   },
   {
     "type": "info",
     "subtype": "grammar",
-    "tag": "verbs/who-does-what",
+    "title": {
+      "en": [
+        "Lesson 5 · Verbs 1 — Who does what"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 5 · Глаголы 1 — Кто что делает"
+      ]
+    },
     "items": [
       {
         "text": {
@@ -358,21 +416,20 @@ const content: Entry[] = [
           "zh": []
         }
       }
-    ],
-    "title": {
-      "en": [
-        "Lesson 5 · Who Does What"
-      ],
-      "ru": [
-        "Урок 5 · Кто что делает"
-      ],
-      "zh": []
-    }
+    ]
   },
   {
     "type": "info",
     "subtype": "grammar",
-    "tag": "questions/asking",
+    "title": {
+      "en": [
+        "Lesson 6 · Questions and Answers"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 6 · Вопросы и ответы"
+      ]
+    },
     "items": [
       {
         "text": {
@@ -428,22 +485,32 @@ const content: Entry[] = [
           ],
           "zh": []
         }
+      },
+      {
+        "text": {
+          "en": [
+            "verb. / {{word:bu4}} + verb., yes / no: {{Word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}}? {{Word:ting1}}. (Do you listen? Yes, I do.)"
+          ],
+          "ru": [
+            "глагол. / {{word:bu4}} + глагол. — да / нет: {{Word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}}? {{Word:ting1}}. (Ты слушаешь? Да, слушаю.)"
+          ],
+          "zh": []
+        }
       }
-    ],
-    "title": {
-      "en": [
-        "Lesson 6 · Asking Questions"
-      ],
-      "ru": [
-        "Урок 6 · Как задавать вопросы"
-      ],
-      "zh": []
-    }
+    ]
   },
   {
     "type": "info",
     "subtype": "grammar",
-    "tag": "pre-verbs/want-can-know-love",
+    "title": {
+      "en": [
+        "Lesson 7 · Pre-Verbs"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 7 · Слова перед глаголом"
+      ]
+    },
     "items": [
       {
         "text": {
@@ -463,6 +530,17 @@ const content: Entry[] = [
           ],
           "ru": [
             "{{word:neng2}} + глагол — мочь: {{Word:wo3}} {{word:neng2}} {{word:ting1}}. (Я могу слышать.)"
+          ],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "For \"not\", put {{word:bu4}} first: {{Word:ta1}} {{word:bu4}} {{word:neng2}} {{word:chi1}}. (He can't eat.)"
+          ],
+          "ru": [
+            "Чтобы сказать «не», поставьте {{word:bu4}} в начало: {{Word:ta1}} {{word:bu4}} {{word:neng2}} {{word:chi1}}. (Он не может есть.)"
           ],
           "zh": []
         }
@@ -510,33 +588,21 @@ const content: Entry[] = [
           ],
           "zh": []
         }
-      },
-      {
-        "text": {
-          "en": [
-            "For \"not\", put {{word:bu4}} first: {{Word:ta1}} {{word:bu4}} {{word:neng2}} {{word:chi1}}. (He can't eat.)"
-          ],
-          "ru": [
-            "Чтобы сказать «не», поставьте {{word:bu4}} в начало: {{Word:ta1}} {{word:bu4}} {{word:neng2}} {{word:chi1}}. (Он не может есть.)"
-          ],
-          "zh": []
-        }
       }
-    ],
-    "title": {
-      "en": [
-        "Lesson 7 · Words Before a Verb"
-      ],
-      "ru": [
-        "Урок 7 · Слова перед глаголом"
-      ],
-      "zh": []
-    }
+    ]
   },
   {
     "type": "info",
     "subtype": "grammar",
-    "tag": "time/done-now-will-before",
+    "title": {
+      "en": [
+        "Lesson 8 · Time 1 — When it happens"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 8 · Время 1 — Когда это происходит"
+      ]
+    },
     "items": [
       {
         "text": {
@@ -545,6 +611,17 @@ const content: Entry[] = [
           ],
           "ru": [
             "глагол + {{word:le}} — сделано: {{Word:wo3}} {{word:chi1}} {{word:le}}. (Я поел.)"
+          ],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{Word:fa1sheng1}} {{word:le}} {{word:shen2me}}? (What happened?)"
+          ],
+          "ru": [
+            "{{Word:fa1sheng1}} {{word:le}} {{word:shen2me}}? (Что случилось?)"
           ],
           "zh": []
         }
@@ -592,33 +669,21 @@ const content: Entry[] = [
           ],
           "zh": []
         }
-      },
-      {
-        "text": {
-          "en": [
-            "{{Word:fa1sheng1}} {{word:le}} {{word:shen2me}}? (What happened?)"
-          ],
-          "ru": [
-            "{{Word:fa1sheng1}} {{word:le}} {{word:shen2me}}? (Что случилось?)"
-          ],
-          "zh": []
-        }
       }
-    ],
-    "title": {
-      "en": [
-        "Lesson 8 · When It Happens"
-      ],
-      "ru": [
-        "Урок 8 · Когда это происходит"
-      ],
-      "zh": []
-    }
+    ]
   },
   {
     "type": "info",
     "subtype": "grammar",
-    "tag": "time/when-finish-after-start",
+    "title": {
+      "en": [
+        "Lesson 9 · Time 2 — Around an action"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 9 · Время 2 — Вокруг действия"
+      ]
+    },
     "items": [
       {
         "text": {
@@ -697,21 +762,20 @@ const content: Entry[] = [
           "zh": []
         }
       }
-    ],
-    "title": {
-      "en": [
-        "Lesson 9 · Around an Action"
-      ],
-      "ru": [
-        "Урок 9 · Вокруг действия"
-      ],
-      "zh": []
-    }
+    ]
   },
   {
     "type": "info",
     "subtype": "grammar",
-    "tag": "place/where-and-sides",
+    "title": {
+      "en": [
+        "Lesson 10 · Space 1 — Where it is"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 10 · Пространство 1 — Где это"
+      ]
+    },
     "items": [
       {
         "text": {
@@ -768,21 +832,20 @@ const content: Entry[] = [
           "zh": []
         }
       }
-    ],
-    "title": {
-      "en": [
-        "Lesson 10 · Where Things Are"
-      ],
-      "ru": [
-        "Урок 10 · Где что находится"
-      ],
-      "zh": []
-    }
+    ]
   },
   {
     "type": "info",
     "subtype": "grammar",
-    "tag": "place/coming-and-going",
+    "title": {
+      "en": [
+        "Lesson 11 · Space 2 — Moving"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 11 · Пространство 2 — Движение"
+      ]
+    },
     "items": [
       {
         "text": {
@@ -861,21 +924,20 @@ const content: Entry[] = [
           "zh": []
         }
       }
-    ],
-    "title": {
-      "en": [
-        "Lesson 11 · Coming and Going"
-      ],
-      "ru": [
-        "Урок 11 · Приходить и уходить"
-      ],
-      "zh": []
-    }
+    ]
   },
   {
     "type": "info",
     "subtype": "grammar",
-    "tag": "describing/how-much",
+    "title": {
+      "en": [
+        "Lesson 12 · Modifiers 1 — How much"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 12 · Уточнения 1 — Насколько"
+      ]
+    },
     "items": [
       {
         "text": {
@@ -884,6 +946,17 @@ const content: Entry[] = [
           ],
           "ru": [
             "{{word:hen3}} + прилагательное — очень: {{Word:shui3}} {{word:hen3}} {{word:re4}}. (Вода очень горячая.)"
+          ],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:hen3}} {{word:you3}} {{word:jia4zhi2}}, valuable: {{Word:zhe4}}-ge {{word:gong1ju4}} {{word:hen3}} {{word:you3}} {{word:jia4zhi2}}. (This tool is very valuable.)"
+          ],
+          "ru": [
+            "{{word:hen3}} {{word:you3}} {{word:jia4zhi2}} — ценный: {{Word:zhe4}}-ge {{word:gong1ju4}} {{word:hen3}} {{word:you3}} {{word:jia4zhi2}}. (Этот инструмент очень ценный.)"
           ],
           "zh": []
         }
@@ -920,33 +993,21 @@ const content: Entry[] = [
           ],
           "zh": []
         }
-      },
-      {
-        "text": {
-          "en": [
-            "{{word:hen3}} {{word:you3}} {{word:jia4zhi2}}, valuable: {{Word:zhe4}}-ge {{word:gong1ju4}} {{word:hen3}} {{word:you3}} {{word:jia4zhi2}}. (This tool is very valuable.)"
-          ],
-          "ru": [
-            "{{word:hen3}} {{word:you3}} {{word:jia4zhi2}} — ценный: {{Word:zhe4}}-ge {{word:gong1ju4}} {{word:hen3}} {{word:you3}} {{word:jia4zhi2}}. (Этот инструмент очень ценный.)"
-          ],
-          "zh": []
-        }
       }
-    ],
-    "title": {
-      "en": [
-        "Lesson 12 · How Much"
-      ],
-      "ru": [
-        "Урок 12 · Насколько"
-      ],
-      "zh": []
-    }
+    ]
   },
   {
     "type": "info",
     "subtype": "grammar",
-    "tag": "describing/comparing",
+    "title": {
+      "en": [
+        "Lesson 13 · Modifiers 2 — Comparing"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 13 · Уточнения 2 — Сравнение"
+      ]
+    },
     "items": [
       {
         "text": {
@@ -955,6 +1016,17 @@ const content: Entry[] = [
           ],
           "ru": [
             "A {{word:bi3}} B + прилагательное: {{Word:wo3}} {{word:bi3}} {{word:ni3}} {{word:da4}}. (Я больше тебя.) Без {{word:hen3}}."
+          ],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:zui4}} + adjective, the most: {{Word:zhe4}}-ge {{word:zui4}} {{word:da4}}. (This one is the biggest.)"
+          ],
+          "ru": [
+            "{{word:zui4}} + прилагательное — самый: {{Word:zhe4}}-ge {{word:zui4}} {{word:da4}}. (Этот самый большой.)"
           ],
           "zh": []
         }
@@ -1006,29 +1078,28 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:zui4}} + adjective, the most: {{Word:zhe4}}-ge {{word:zui4}} {{word:da4}}. (This one is the biggest.)"
+            "Thing + {{word:hen3}} + {{word:ying4}} / {{word:yuan2}}, how it feels or looks: {{Word:yue4}} {{word:hen3}} {{word:yuan2}}. (The moon is round.)"
           ],
           "ru": [
-            "{{word:zui4}} + прилагательное — самый: {{Word:zhe4}}-ge {{word:zui4}} {{word:da4}}. (Этот самый большой.)"
+            "Вещь + {{word:hen3}} + {{word:ying4}} / {{word:yuan2}} — какая она на ощупь или на вид: {{Word:yue4}} {{word:hen3}} {{word:yuan2}}. (Луна круглая.)"
           ],
           "zh": []
         }
       }
-    ],
-    "title": {
-      "en": [
-        "Lesson 13 · Comparing"
-      ],
-      "ru": [
-        "Урок 13 · Сравнение"
-      ],
-      "zh": []
-    }
+    ]
   },
   {
     "type": "info",
     "subtype": "grammar",
-    "tag": "describing/also-and-all",
+    "title": {
+      "en": [
+        "Lesson 14 · Modifiers 3 — Also and all"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 14 · Уточнения 3 — Тоже и все"
+      ]
+    },
     "items": [
       {
         "text": {
@@ -1085,21 +1156,20 @@ const content: Entry[] = [
           "zh": []
         }
       }
-    ],
-    "title": {
-      "en": [
-        "Lesson 14 · Also and All"
-      ],
-      "ru": [
-        "Урок 14 · Тоже и все"
-      ],
-      "zh": []
-    }
+    ]
   },
   {
     "type": "info",
     "subtype": "grammar",
-    "tag": "describing/becoming-and-making",
+    "title": {
+      "en": [
+        "Lesson 15 · Modifiers 4 — Becoming and making"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 15 · Уточнения 4 — Становиться и делать"
+      ]
+    },
     "items": [
       {
         "text": {
@@ -1167,21 +1237,20 @@ const content: Entry[] = [
           "zh": []
         }
       }
-    ],
-    "title": {
-      "en": [
-        "Lesson 15 · Becoming and Making"
-      ],
-      "ru": [
-        "Урок 15 · Становиться и делать"
-      ],
-      "zh": []
-    }
+    ]
   },
   {
     "type": "info",
     "subtype": "grammar",
-    "tag": "verbs/direction-and-result",
+    "title": {
+      "en": [
+        "Lesson 16 · Verbs 2 — Direction and result"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 16 · Глаголы 2 — Направление и результат"
+      ]
+    },
     "items": [
       {
         "text": {
@@ -1201,6 +1270,17 @@ const content: Entry[] = [
           ],
           "ru": [
             "{{word:jin4}} / {{word:chu1}} / {{word:hui2}} + {{word:lai2}} / {{word:qu4}} — внутрь / наружу / обратно: {{Word:ni3}} {{word:jin4}}-{{word:lai2}}! (Входи!) {{Word:wo3}} {{word:yao4}} {{word:hui2}} {{word:jia1}}. (Я хочу домой.)"
+          ],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:zuo4}}-{{word:xia4}} / {{word:zhan4}}-{{word:qi3}}-{{word:lai2}} / {{word:tang3}}-{{word:xia4}}, sit down / stand up / lie down: {{Word:ni3}} {{word:zuo4}}-{{word:xia4}}! (Sit down!)"
+          ],
+          "ru": [
+            "{{word:zuo4}}-{{word:xia4}} / {{word:zhan4}}-{{word:qi3}}-{{word:lai2}} / {{word:tang3}}-{{word:xia4}} — сесть / встать / лечь: {{Word:ni3}} {{word:zuo4}}-{{word:xia4}}! (Садись!)"
           ],
           "zh": []
         }
@@ -1241,10 +1321,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "verb-{{word:qi3}}-{{word:lai2}}, seems: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}. (This looks good.) verb-{{word:xia4}}-{{word:qu4}}, keep going: {{Word:shuo1}}-{{word:xia4}}-{{word:qu4}}! (Keep talking!)"
+            "{{word:tong1}}-{{word:guo4}} + place, go through; {{word:tong1}}-{{word:dao4}} + place, lead to: {{Word:zhe4}}-ge {{word:lu4}} {{word:tong1}}-{{word:dao4}} {{word:wo3}}-{{word:de}} {{word:jia1}}. (This road leads to my home.)"
           ],
           "ru": [
-            "глагол-{{word:qi3}}-{{word:lai2}} — кажется: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}. (Это выглядит хорошо.) глагол-{{word:xia4}}-{{word:qu4}} — продолжать: {{Word:shuo1}}-{{word:xia4}}-{{word:qu4}}! (Говори дальше!)"
+            "{{word:tong1}}-{{word:guo4}} + место — пройти через; {{word:tong1}}-{{word:dao4}} + место — вести туда: {{Word:zhe4}}-ge {{word:lu4}} {{word:tong1}}-{{word:dao4}} {{word:wo3}}-{{word:de}} {{word:jia1}}. (Эта дорога ведёт к моему дому.)"
           ],
           "zh": []
         }
@@ -1252,29 +1332,28 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:zuo4}}-{{word:xia4}} / {{word:zhan4}}-{{word:qi3}}-{{word:lai2}} / {{word:tang3}}-{{word:xia4}}, sit down / stand up / lie down: {{Word:ni3}} {{word:zuo4}}-{{word:xia4}}! (Sit down!)"
+            "verb-{{word:qi3}}-{{word:lai2}}, seems: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}. (This looks good.) verb-{{word:xia4}}-{{word:qu4}}, keep going: {{Word:shuo1}}-{{word:xia4}}-{{word:qu4}}! (Keep talking!)"
           ],
           "ru": [
-            "{{word:zuo4}}-{{word:xia4}} / {{word:zhan4}}-{{word:qi3}}-{{word:lai2}} / {{word:tang3}}-{{word:xia4}} — сесть / встать / лечь: {{Word:ni3}} {{word:zuo4}}-{{word:xia4}}! (Садись!)"
+            "глагол-{{word:qi3}}-{{word:lai2}} — кажется: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}. (Это выглядит хорошо.) глагол-{{word:xia4}}-{{word:qu4}} — продолжать: {{Word:shuo1}}-{{word:xia4}}-{{word:qu4}}! (Говори дальше!)"
           ],
           "zh": []
         }
       }
-    ],
-    "title": {
-      "en": [
-        "Lesson 16 · Direction and Result"
-      ],
-      "ru": [
-        "Урок 16 · Направление и результат"
-      ],
-      "zh": []
-    }
+    ]
   },
   {
     "type": "info",
     "subtype": "grammar",
-    "tag": "numbers/counting",
+    "title": {
+      "en": [
+        "Lesson 17 · Numbers"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 17 · Числа"
+      ]
+    },
     "items": [
       {
         "text": {
@@ -1294,6 +1373,28 @@ const content: Entry[] = [
           ],
           "ru": [
             "число + {{word:ge4}} + существительное: {{Word:san1}}-ge {{word:ren2}} (три человека). Для двух вещей — {{word:liang3}}-ge."
+          ],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "number-ge, without the noun: {{Word:ta1}} {{word:yao4}} {{word:liu4}}-ge. (He wants six.)"
+          ],
+          "ru": [
+            "число-ge без существительного: {{Word:ta1}} {{word:yao4}} {{word:liu4}}-ge. (Он хочет шесть.)"
+          ],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "number-{{word:zhong3}} / -{{word:ci4}} / -{{word:bu4fen}}, kinds / times / parts: {{Word:wo3}} {{word:qu4}}-{{word:guo4}} {{word:san1}}-{{word:ci4}}. (I've been there three times.)"
+          ],
+          "ru": [
+            "число-{{word:zhong3}} / -{{word:ci4}} / -{{word:bu4fen}} — виды / разы / части: {{Word:wo3}} {{word:qu4}}-{{word:guo4}} {{word:san1}}-{{word:ci4}}. (Я был там три раза.)"
           ],
           "zh": []
         }
@@ -1364,21 +1465,20 @@ const content: Entry[] = [
           "zh": []
         }
       }
-    ],
-    "title": {
-      "en": [
-        "Lesson 17 · Counting"
-      ],
-      "ru": [
-        "Урок 17 · Счёт"
-      ],
-      "zh": []
-    }
+    ]
   },
   {
     "type": "info",
     "subtype": "grammar",
-    "tag": "describing/colors",
+    "title": {
+      "en": [
+        "Lesson 18 · Colors"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 18 · Цвета"
+      ]
+    },
     "items": [
       {
         "text": {
@@ -1413,21 +1513,20 @@ const content: Entry[] = [
           "zh": []
         }
       }
-    ],
-    "title": {
-      "en": [
-        "Lesson 18 · Colors"
-      ],
-      "ru": [
-        "Урок 18 · Цвета"
-      ],
-      "zh": []
-    }
+    ]
   },
   {
     "type": "info",
     "subtype": "grammar",
-    "tag": "de/making-words",
+    "title": {
+      "en": [
+        "Lesson 19 · Changing the Role of a Word"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 19 · Слово в новой роли"
+      ]
+    },
     "items": [
       {
         "text": {
@@ -1465,17 +1564,6 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "adjective-{{word:de}} + noun: {{word:hao3}}-{{word:de}} {{word:ren2}} (a good person). Whose: {{word:wo3}}-{{word:de}} {{word:bi2zi}} (my nose)."
-          ],
-          "ru": [
-            "прилагательное-{{word:de}} + существительное: {{word:hao3}}-{{word:de}} {{word:ren2}} (хороший человек). Чьё: {{word:wo3}}-{{word:de}} {{word:bi2zi}} (мой нос)."
-          ],
-          "zh": []
-        }
-      },
-      {
-        "text": {
-          "en": [
             "a longer description-{{word:de}} + noun: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} (an animal in the water)"
           ],
           "ru": [
@@ -1483,22 +1571,32 @@ const content: Entry[] = [
           ],
           "zh": []
         }
+      },
+      {
+        "text": {
+          "en": [
+            "adjective-{{word:de}} + noun: {{word:hao3}}-{{word:de}} {{word:ren2}} (a good person). Whose: {{word:wo3}}-{{word:de}} {{word:bi2zi}} (my nose)."
+          ],
+          "ru": [
+            "прилагательное-{{word:de}} + существительное: {{word:hao3}}-{{word:de}} {{word:ren2}} (хороший человек). Чьё: {{word:wo3}}-{{word:de}} {{word:bi2zi}} (мой нос)."
+          ],
+          "zh": []
+        }
       }
-    ],
-    "title": {
-      "en": [
-        "Lesson 19 · The Jobs of -de"
-      ],
-      "ru": [
-        "Урок 19 · Что делает -de"
-      ],
-      "zh": []
-    }
+    ]
   },
   {
     "type": "info",
     "subtype": "grammar",
-    "tag": "relationships/inside-a-sentence",
+    "title": {
+      "en": [
+        "Lesson 20 · Relationships 1 — Inside a sentence"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 20 · Связи 1 — Внутри предложения"
+      ]
+    },
     "items": [
       {
         "text": {
@@ -1558,6 +1656,17 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
+            "{{word:yi1}} / {{word:zhe4}} / {{word:na4}} + {{word:qun2}} + noun, a group: {{Word:yi1}}-{{word:qun2}} {{word:ren2}} {{word:zai4}} {{word:wai4}}-{{word:mian4}}. (A group of people is outside.)"
+          ],
+          "ru": [
+            "{{word:yi1}} / {{word:zhe4}} / {{word:na4}} + {{word:qun2}} + существительное — группа: {{Word:yi1}}-{{word:qun2}} {{word:ren2}} {{word:zai4}} {{word:wai4}}-{{word:mian4}}. (На улице группа людей.)"
+          ],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
             "A {{word:he2}} B-{{word:de}} {{word:guan1xi}}, relationship: {{Word:wo3}} {{word:he2}} {{word:ta1}}-{{word:de}} {{word:guan1xi}} {{word:hen3}} {{word:hao3}}. (He and I get along well.) {{Word:mei2}}-{{word:you3}} {{word:guan1xi}}! (It doesn't matter!)"
           ],
           "ru": [
@@ -1566,21 +1675,20 @@ const content: Entry[] = [
           "zh": []
         }
       }
-    ],
-    "title": {
-      "en": [
-        "Lesson 20 · Joining Words in a Sentence"
-      ],
-      "ru": [
-        "Урок 20 · Как связать слова в предложении"
-      ],
-      "zh": []
-    }
+    ]
   },
   {
     "type": "info",
     "subtype": "grammar",
-    "tag": "relationships/linking-sentences",
+    "title": {
+      "en": [
+        "Lesson 21 · Relationships 2 — Linking sentences"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 21 · Связи 2 — Как связать предложения"
+      ]
+    },
     "items": [
       {
         "text": {
@@ -1626,21 +1734,20 @@ const content: Entry[] = [
           "zh": []
         }
       }
-    ],
-    "title": {
-      "en": [
-        "Lesson 21 · Linking Sentences"
-      ],
-      "ru": [
-        "Урок 21 · Как связать предложения"
-      ],
-      "zh": []
-    }
+    ]
   },
   {
     "type": "info",
     "subtype": "grammar",
-    "tag": "expressions/greetings-and-feelings",
+    "title": {
+      "en": [
+        "Lesson 22 · Greetings and Feelings"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 22 · Приветствия и чувства"
+      ]
+    },
     "items": [
       {
         "text": {
@@ -1649,6 +1756,17 @@ const content: Entry[] = [
           ],
           "ru": [
             "{{Word:ni3}} {{word:hao3}}! — привет. {{Word:ni3}} {{word:hao3}} {{word:ma}}? — как дела?"
+          ],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:xie4}}-xie, thank you: {{Word:xie4}}-xie {{word:ni3}}! (Thank you!) {{Word:bu4}} {{word:yong4}} {{word:xie4}}. (You're welcome.)"
+          ],
+          "ru": [
+            "{{word:xie4}}-xie — спасибо: {{Word:xie4}}-xie {{word:ni3}}! (Спасибо тебе!) {{Word:bu4}} {{word:yong4}} {{word:xie4}}. (Не за что.)"
           ],
           "zh": []
         }
@@ -1700,10 +1818,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:xie4}}-xie, thank you: {{Word:xie4}}-xie {{word:ni3}}! (Thank you!) {{Word:bu4}} {{word:yong4}} {{word:xie4}}. (You're welcome.)"
+            "Who + {{word:xiao4}}, laugh or smile: {{Word:ta1}} {{word:xiao4}} {{word:le}}. (She smiled.)"
           ],
           "ru": [
-            "{{word:xie4}}-xie — спасибо: {{Word:xie4}}-xie {{word:ni3}}! (Спасибо тебе!) {{Word:bu4}} {{word:yong4}} {{word:xie4}}. (Не за что.)"
+            "Кто + {{word:xiao4}} — смеяться или улыбаться: {{Word:ta1}} {{word:xiao4}} {{word:le}}. (Она улыбнулась.)"
           ],
           "zh": []
         }
@@ -1718,22 +1836,32 @@ const content: Entry[] = [
           ],
           "zh": []
         }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:ting1}}-{{word:dao4}} + {{word:sheng1yin1}}, hear a sound: {{Word:wo3}} {{word:ting1}}-{{word:dao4}} {{word:qi2guai4}}-{{word:de}} {{word:sheng1yin1}}. (I hear a strange sound.)"
+          ],
+          "ru": [
+            "{{word:ting1}}-{{word:dao4}} + {{word:sheng1yin1}} — слышать звук: {{Word:wo3}} {{word:ting1}}-{{word:dao4}} {{word:qi2guai4}}-{{word:de}} {{word:sheng1yin1}}. (Я слышу странный звук.)"
+          ],
+          "zh": []
+        }
       }
-    ],
-    "title": {
-      "en": [
-        "Lesson 22 · Greetings and Feelings"
-      ],
-      "ru": [
-        "Урок 22 · Приветствия и чувства"
-      ],
-      "zh": []
-    }
+    ]
   },
   {
     "type": "info",
     "subtype": "grammar",
-    "tag": "words/doubling",
+    "title": {
+      "en": [
+        "Lesson 23 · Doubling Words"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 23 · Удвоение слов"
+      ]
+    },
     "items": [
       {
         "text": {
@@ -1768,21 +1896,20 @@ const content: Entry[] = [
           "zh": []
         }
       }
-    ],
-    "title": {
-      "en": [
-        "Lesson 23 · Doubling Words"
-      ],
-      "ru": [
-        "Урок 23 · Удвоение слов"
-      ],
-      "zh": []
-    }
+    ]
   },
   {
     "type": "info",
     "subtype": "grammar",
-    "tag": "everyday/let-and-help",
+    "title": {
+      "en": [
+        "Lesson 24 · Everyday Patterns"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 24 · Обороты на каждый день"
+      ]
+    },
     "items": [
       {
         "text": {
@@ -1820,6 +1947,17 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
+            "{{word:jiao1}} + person + verb, teach: {{Word:wo3}} {{word:jiao1}} {{word:ni3}} {{word:xie3}}. (I'll teach you to write.)"
+          ],
+          "ru": [
+            "{{word:jiao1}} + человек + глагол — научить: {{Word:wo3}} {{word:jiao1}} {{word:ni3}} {{word:xie3}}. (Я научу тебя писать.)"
+          ],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
             "{{word:jiao4}} + person + verb, have or let: {{Word:jiao4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}}. (Let him in.) {{word:bu4}} {{word:jiao4}}, won't let: {{Word:fu4mu3}} {{word:bu4}} {{word:jiao4}} {{word:wo3}} {{word:chu1}}-{{word:qu4}}. (My parents won't let me go out.)"
           ],
           "ru": [
@@ -1838,28 +1976,8 @@ const content: Entry[] = [
           ],
           "zh": []
         }
-      },
-      {
-        "text": {
-          "en": [
-            "{{word:jiao1}} + person + verb, teach: {{Word:wo3}} {{word:jiao1}} {{word:ni3}} {{word:xie3}}. (I'll teach you to write.)"
-          ],
-          "ru": [
-            "{{word:jiao1}} + человек + глагол — научить: {{Word:wo3}} {{word:jiao1}} {{word:ni3}} {{word:xie3}}. (Я научу тебя писать.)"
-          ],
-          "zh": []
-        }
       }
-    ],
-    "title": {
-      "en": [
-        "Lesson 24 · Let and Help"
-      ],
-      "ru": [
-        "Урок 24 · Позволить и помочь"
-      ],
-      "zh": []
-    }
+    ]
   }
 ];
 

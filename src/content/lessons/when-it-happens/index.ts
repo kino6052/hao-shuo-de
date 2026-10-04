@@ -1,15 +1,38 @@
-// See src/lib/chapter-content.js for the schema this ultimately produces,
-// and src/lib/chapter-shape-types.ts / assemble-chapter.js for how shape.ts
-// + en.ts/ru.ts/zh.ts combine into it.
-import { assembleChapter } from "../../../lib/assemble-chapter.js";
-import shape from "./shape.ts";
-import en from "./en.ts";
-import ru from "./ru.ts";
-import zh from "./zh.ts";
+// when-it-happens ("Time 1 — When it happens"): its modules, in reading order.
+// See src/lib/lesson.ts.
+//
+// Rewritten in Phase 2 (BOOK_PLAN.md): done (le), right now (zài), will (huì), done before (guò), and saying the time first.
+// Only words from this lesson and earlier ones; passes every gate
+// (npm run check -- when-it-happens).
+import { lesson } from "../../../lib/lesson.ts";
+import done from "./done.ts";
+import now from "./now.ts";
+import will from "./will.ts";
+import before from "./before.ts";
+import time from "./time.ts";
 
 export const meta = {
   id: "when-it-happens",
   type: "lesson",
 };
 
-export default assembleChapter(shape, { en, ru, zh }, meta.id);
+export default lesson(meta.id, {
+  title: { en: "Time 1 — When it happens", ru: "Время 1 — Когда это происходит" },
+  summary: {
+    en: [
+      "We often need to say when something happens.",
+      "In this lesson, you'll be able to say \"I ate.\", \"I'm eating right now.\", \"I will eat.\", \"I've eaten rice before.\", and \"At night, I sleep.\"",
+    ],
+    ru: [
+      "Нам часто нужно уметь выразить время, когда что-то происходит.",
+      "В этом уроке вы научитесь говорить «Я поел.», «Я как раз ем.», «Я буду есть.», «Я уже пробовал рис.» и «Ночью я сплю.»",
+    ],
+  },
+  modules: [
+    done,
+    now,
+    will,
+    before,
+    time,
+  ],
+});

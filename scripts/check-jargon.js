@@ -80,12 +80,11 @@ function walkEnglish(chapter, value, path, inEnglish = false) {
   }
 }
 
-// ---------- lessons: every string in en.ts, located by block key ----------
+// ---------- lessons: every English string, located by block key ("tong.prose") ----------
 for (const dir of LESSON_IDS) {
   if (!wanted(dir)) continue;
   checked.push(dir);
-  const en = await importLessonFile(dir, 'en.ts');
-  walkEnglish(dir, en, '');
+  for (const entry of await importLessonFile(dir, 'index.ts')) walkEnglish(dir, entry, entry.key);
 }
 
 // ---------- flat .ts chapters: intros, appendices, the phrase book ----------

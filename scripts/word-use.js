@@ -72,11 +72,15 @@ export function wordUse(lessons, dictionary, storyTexts = []) {
 }
 
 // Practice check: in each lesson, every word the lesson introduces appears in
-// at least one of its examples AND in at least one exercise's answer. Also
-// counts the lesson's FAQ ("Some questions you may have"): `faqIncomplete`
-// questions lack a question or an answer, and `faqOutOfPlace` is true unless
-// the faq blocks come together, after the last exercise and answer.
-// -> [{ lesson, number, examples, exercises, missingExample: [terms], missingExercise: [terms], faq, faqIncomplete, faqOutOfPlace }]
+// at least one of its examples AND in at least one exercise's answer. A
+// lesson is built from modules (src/lib/lesson.ts; entries carry `module`),
+// and each module has its own practice: `noPractice` lists the modules
+// without an exercise. A module's FAQ ("Some questions you may have") is
+// optional: `faqIncomplete` questions lack a question or an answer, and
+// `faqOutOfPlace` is true unless each module's faq blocks come together,
+// after its last exercise and answer. Entries without `module` count as one
+// module.
+// -> [{ lesson, number, examples, exercises, missingExample: [terms], missingExercise: [terms], noPractice: [modules], faq, faqIncomplete, faqOutOfPlace }]
 export function practiceGaps(lessons, dictionary) {
   const terms = termIndex(dictionary);
   const idsIn = (text) => new Set(wordsIn(text, terms, { pinyinField: true }).map((w) => w.id).filter(Boolean));
@@ -89,22 +93,31 @@ export function practiceGaps(lessons, dictionary) {
     const inAnswers = new Set();
     let examples = 0;
     let exercises = 0;
-    let lastPractice = -1;
-    const faqAt = [];
+    let faq = 0;
     let faqIncomplete = 0;
-    lesson.entries.forEach((entry, i) => {
+    lesson.entries.forEach((entry) => {
       if ((entry.type === 'example' || entry.type === 'story') && entry.pinyin) {
         examples += 1;
         idsIn(entry.pinyin).forEach((id) => inExamples.add(id));
       }
       if (entry.type === 'exercise') exercises += 1;
       if (entry.type === 'answer') (entry.en ?? []).forEach((t) => idsIn(t).forEach((id) => inAnswers.add(id)));
-      if (entry.type === 'exercise' || entry.type === 'answer') lastPractice = i;
       if (entry.type === 'faq') {
-        faqAt.push(i);
+        faq += 1;
         if (!entry.question?.en?.length || !entry.en?.length) faqIncomplete += 1;
       }
     });
+    const moduleOf = (e) => e.module ?? '(lesson)';
+    const modules = [...new Set(lesson.entries.map(moduleOf))].filter((m) => m !== 'head');
+    const noPractice = [];
+    let faqOutOfPlace = false;
+    for (const m of modules) {
+      const mine = lesson.entries.filter((e) => moduleOf(e) === m);
+      if (!mine.some((e) => e.type === 'exercise')) noPractice.push(m);
+      const lastPractice = mine.findLastIndex((e) => e.type === 'exercise' || e.type === 'answer');
+      const faqAt = mine.flatMap((e, i) => (e.type === 'faq' ? [i] : []));
+      if (faqAt.some((at, k) => at < lastPractice || (k > 0 && at !== faqAt[k - 1] + 1))) faqOutOfPlace = true;
+    }
     return {
       lesson: lesson.id,
       number: lesson.number,
@@ -113,9 +126,10 @@ export function practiceGaps(lessons, dictionary) {
       exercises,
       missingExample: introduced.filter((id) => !inExamples.has(id)).map((id) => dictionary[id].term),
       missingExercise: introduced.filter((id) => !inAnswers.has(id)).map((id) => dictionary[id].term),
-      faq: faqAt.length,
+      noPractice,
+      faq,
       faqIncomplete,
-      faqOutOfPlace: faqAt.some((at, k) => at < lastPractice || (k > 0 && at !== faqAt[k - 1] + 1)),
+      faqOutOfPlace,
     };
   });
 }

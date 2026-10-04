@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 // Builds the grammar overview chapter (src/content/appendix-grammar.ts) from
-// every lesson's grammar boxes -- the `info` blocks with subtype "grammar"
-// (BOOK_PLAN.md §6; scripts/check-grammar-blocks.js makes sure each lesson
-// has one). The boxes are copied in lesson order, each titled with its lesson,
-// so the overview always matches the lessons. Runs at the start of
+// the lessons' patterns: every module's info block (src/lib/lesson.ts) that
+// isn't a note (BOOK_PLAN.md §6; scripts/check-grammar-blocks.js makes sure
+// each module has one). Each lesson becomes one box, titled with the lesson,
+// with its modules' lines in reading order, so the overview always matches
+// the lessons. Runs at the start of
 // `npm run build`; scripts/check-book.js fails if the file is out of date.
 //
 //   node scripts/generate-grammar-overview.js           # write the chapter
@@ -25,8 +26,8 @@ export async function buildOverview() {
   const lessons = [];
   for (const id of LESSON_IDS) {
     const entries = await importLessonFile(id, 'index.ts');
-    const title = entries.find((e) => e.type === 'title')?.en?.join(' ') ?? id;
-    lessons.push({ number: lessonNumber(id), title, boxes: entries.filter((e) => e.type === 'info' && e.subtype === 'grammar') });
+    const title = entries.find((e) => e.type === 'title') ?? text([id]);
+    lessons.push({ number: lessonNumber(id), title, patterns: entries.filter((e) => e.type === 'info' && e.subtype === 'grammar') });
   }
   lessons.sort((a, b) => a.number - b.number);
 
@@ -35,7 +36,7 @@ export async function buildOverview() {
     {
       type: 'summary',
       ...text(
-        [`Every grammar box from the ${LESSON_IDS.length} lessons, in one place, in lesson order.`],
+        [`Every pattern from the ${LESSON_IDS.length} lessons, in one place, in lesson order.`],
         [`Все грамматические схемы из ${LESSON_IDS.length} уроков в одном месте, по порядку уроков.`],
       ),
     },
@@ -43,15 +44,15 @@ export async function buildOverview() {
       type: 'prose',
       ...text(
         [
-          'Each box below comes from a lesson, and its title says which one.',
+          "Each box below holds one lesson's patterns, and its title says which lesson.",
           'Use this page to look up a pattern, then go back to its lesson for examples and practice.',
         ],
         [
-          'Каждая схема ниже взята из урока, и её заголовок говорит, из какого.',
+          'В каждом блоке ниже — схемы одного урока, и заголовок говорит, какого.',
           'Найдите здесь нужную схему, а потом вернитесь к её уроку за примерами и упражнениями.',
         ],
       ),
-      tldr: text(['Every grammar box from the lessons, in lesson order.'], ['Все грамматические схемы из уроков, по порядку.']),
+      tldr: text(['Every pattern from the lessons, in lesson order.'], ['Все грамматические схемы из уроков, по порядку.']),
       necessity: text(
         ['You can look up a pattern without hunting through the lessons.'],
         ['Схему можно найти, не листая все уроки.'],
@@ -59,11 +60,13 @@ export async function buildOverview() {
     },
   ];
   for (const lesson of lessons) {
-    for (const box of lesson.boxes) {
-      const title = { ...(box.title ?? blank()), en: [`Lesson ${lesson.number} · ${box.title?.en?.join(' ') ?? ''}`] };
-      if (title.ru.length) title.ru = [`Урок ${lesson.number} · ${title.ru.join(' ')}`];
-      entries.push({ ...box, title });
-    }
+    if (!lesson.patterns.length) continue;
+    const title = blank();
+    title.en = [`Lesson ${lesson.number} · ${lesson.title.en.join(' ')}`];
+    if (lesson.title.ru?.length) title.ru = [`Урок ${lesson.number} · ${lesson.title.ru.join(' ')}`];
+    // One line per module; a module's box with several lines adds them all.
+    const items = lesson.patterns.flatMap((p) => p.items);
+    entries.push({ type: 'info', subtype: 'grammar', title, items });
   }
   return entries;
 }

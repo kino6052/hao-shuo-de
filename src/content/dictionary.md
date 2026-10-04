@@ -154,6 +154,7 @@ tā | pronoun | he, she, it, they, them; syntactically genderless and number-flu
 tǎng | verb | to lie (down); {{word:tang3}}-{{word:xia4}}, "lie down" |
 tián | adjective | sweet, fragrant, cute, innocent, adorable | suwi
 tīng | verb | to hear, listen, pay attention to, obey | kute
+tōng | verb | to go through, lead to; open, not blocked (e.g. {{word:tong1}}-{{word:guo4}} {{word:zhe4}}-ge {{word:di4fang1}}, "go through this place"; {{word:lu4}} {{word:tong1}}-{{word:dao4}} {{word:jia1}}, "the road leads home"; {{word:lu4}} {{word:bu4}} {{word:tong1}}, "the road is blocked") |
 tóu | noun | head, mind, internal regulatory director | lawa
 wài | verb/adjective | away, outside | weka
 wán | verb complement | finish, be done, run out; binds directly after a verb via a hyphen to mark a resultative completion (chī-wán, "finish eating") | pini

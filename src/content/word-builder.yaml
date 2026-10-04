@@ -14,8 +14,8 @@ summary:
 blocks:
   - type: prose
     text:
-      eng: "When there is no word for something, describe it with words you know. A fish is an animal that is in the water: {{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}}. To run is to go fast: {{word:kuai4}}-{{word:kuai4}}-{{word:de}} {{word:qu4}}. Start by picking what your word is. Then answer the questions below it, in any order: each answer adds a part, and the builder puts the parts in the usual Mandarin order. Any answer can get its own questions too."
-      rus: "Если для чего-то нет слова, опишите это знакомыми словами. Рыба — это животное, которое живёт в воде: {{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}}. Бежать — значит быстро идти: {{word:kuai4}}-{{word:kuai4}}-{{word:de}} {{word:qu4}}. Сначала выберите, что это за слово. Потом отвечайте на вопросы под ним в любом порядке: каждый ответ добавляет часть, а конструктор ставит части в обычном для китайского порядке. На каждый ответ тоже можно задать свои вопросы."
+      eng: "When there is no word for something, describe it with words you know. A fish is an animal in the water: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}}. To run is to go fast: {{word:kuai4}}-{{word:kuai4}}-{{word:de}} {{word:qu4}}. Start by picking what your word is. Then answer the questions below it, in any order: each answer adds a part, and the builder puts the parts in the usual Mandarin order. Any answer can get its own questions too."
+      rus: "Если для чего-то нет слова, опишите это знакомыми словами. Рыба — это животное в воде: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}}. Бежать — значит быстро идти: {{word:kuai4}}-{{word:kuai4}}-{{word:de}} {{word:qu4}}. Сначала выберите, что это за слово. Потом отвечайте на вопросы под ним в любом порядке: каждый ответ добавляет часть, а конструктор ставит части в обычном для китайского порядке. На каждый ответ тоже можно задать свои вопросы."
       zh: ""
     tldr:
       eng: "Pick a word, then answer questions to describe it and build a new word."
@@ -25,3 +25,40 @@ blocks:
       eng: "You can say things Hǎo-shuō-de has no word for."
       rus: "Так можно сказать то, для чего в Hǎo-shuō-de нет слова."
       zh: ""
+
+  - type: prose
+    text:
+      eng: "Space has three different questions, and each one has its own word. Where something is, where it comes from, and where it goes are not the same thing, so don't mix them up."
+      rus: "О месте можно спросить тремя разными вопросами, и у каждого своё слово. Где что-то находится, откуда оно и куда — это разные вещи, поэтому не путайте их."
+      zh: ""
+    tldr:
+      eng: "Where is zài, from where is cóng, and to where is dào or qù."
+      rus: "Где — zài, откуда — cóng, куда — dào или qù."
+      zh: ""
+    necessity:
+      eng: "Each question about a place needs its own word."
+      rus: "Каждому вопросу о месте нужно своё слово."
+      zh: ""
+
+  - type: info
+    title:
+      eng: "Where, from where, and to where"
+      rus: "Где, откуда и куда"
+      zh: ""
+    items:
+      - text:
+          eng: "**Where is it?** {{word:zai4}} + place: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}}, an animal in the water."
+          rus: "**Где?** {{word:zai4}} + место: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} — животное в воде."
+          zh: ""
+      - text:
+          eng: "**From where?** {{word:cong2}} + place: {{word:cong2}}-{{word:shui3}}-{{word:li3}}-{{word:lai2}}-{{word:de}} {{word:dong4wu4}}, an animal that comes from the water."
+          rus: "**Откуда?** {{word:cong2}} + место: {{word:cong2}}-{{word:shui3}}-{{word:li3}}-{{word:lai2}}-{{word:de}} {{word:dong4wu4}} — животное, которое пришло из воды."
+          zh: ""
+      - text:
+          eng: "**To where?** {{word:dao4}} or {{word:qu4}} + place. {{word:dao4}} gets all the way there: {{word:dao4}}-{{word:jia1}}-{{word:de}} {{word:lu4}}, the road that reaches home. {{word:qu4}} only heads that way: {{word:qu4}}-{{word:jia1}}-{{word:de}} {{word:lu4}}, the road toward home."
+          rus: "**Куда?** {{word:dao4}} или {{word:qu4}} + место. {{word:dao4}} — до самого места: {{word:dao4}}-{{word:jia1}}-{{word:de}} {{word:lu4}} — дорога, которая доходит до дома. {{word:qu4}} — только в ту сторону: {{word:qu4}}-{{word:jia1}}-{{word:de}} {{word:lu4}} — дорога в сторону дома."
+          zh: ""
+      - text:
+          eng: "With an action, it works the same way: {{word:zai4}} {{word:shui3}}-{{word:li3}} {{word:wan2r}} (play in the water), {{word:cong2}} {{word:jia1}} {{word:lai2}} (come from home), {{word:fei1}}-{{word:dao4}} {{word:shui3}}-{{word:li3}} (fly into the water)."
+          rus: "С действием всё так же: {{word:zai4}} {{word:shui3}}-{{word:li3}} {{word:wan2r}} (играть в воде), {{word:cong2}} {{word:jia1}} {{word:lai2}} (прийти из дома), {{word:fei1}}-{{word:dao4}} {{word:shui3}}-{{word:li3}} (долететь до воды)."
+          zh: ""

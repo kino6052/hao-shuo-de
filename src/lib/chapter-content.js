@@ -86,7 +86,18 @@ function renderInfoBlock(entry, lang, refs, onMissing) {
   const title = hasTitle ? pick(entry.title, lang, refs) : undefined;
   if (hasTitle && title === undefined) onMissing();
 
-  const listHtml = renderInfoItems(entry.items ?? [], lang, Boolean(entry.ordered), refs, onMissing, entry.start);
+  // A lesson module's info block is often a single line: show it as a line,
+  // not as a one-item list.
+  const items = entry.items ?? [];
+  const single = !hasTitle && !entry.ordered && items.length === 1 && !items[0].items?.length;
+  let listHtml;
+  if (single) {
+    const text = pick(items[0].text, lang, refs);
+    if (text === undefined) onMissing();
+    listHtml = text === undefined ? '' : `<p class="${entry.type}-block-line">${marked.parseInline(text)}</p>`;
+  } else {
+    listHtml = renderInfoItems(items, lang, Boolean(entry.ordered), refs, onMissing, entry.start);
+  }
   if (title === undefined && !listHtml) return { html: '', title };
 
   const kind = entry.type;

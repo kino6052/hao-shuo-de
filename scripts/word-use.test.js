@@ -94,6 +94,19 @@ describe('practiceGaps', () => {
     expect(blank.faqIncomplete).toBe(2);
   });
 
+  test('each module has its own practice, and its FAQ after it', () => {
+    const faq = { type: 'faq', question: { en: ['Why?'] }, en: ['Because.'] };
+    const exercise = { type: 'exercise', en: ['x'] };
+    const inModule = (module, entries) => entries.map((e) => ({ ...e, module }));
+    const [ok] = practiceGaps(
+      lesson([...inModule('a', [ex('x'), exercise, answer('x'), faq]), ...inModule('b', [ex('y'), exercise, answer('y')])]),
+      dictionary,
+    );
+    expect(ok).toMatchObject({ noPractice: [], faq: 1, faqOutOfPlace: false });
+    const [gap] = practiceGaps(lesson([...inModule('a', [ex('x'), exercise, answer('x')]), ...inModule('b', [ex('y'), faq])]), dictionary);
+    expect(gap.noPractice).toEqual(['b']);
+  });
+
   test('a lesson with no new words has nothing to miss', () => {
     const [gap] = practiceGaps(lesson([{ type: 'prose', en: ['Sounds.'] }]), dictionary);
     expect(gap).toMatchObject({ introduced: 0, missingExample: [], missingExercise: [] });

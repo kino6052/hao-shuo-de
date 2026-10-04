@@ -48,9 +48,9 @@ for (const file of allFiles.filter(
 
 // Chapter TS: same idea, one file covers all languages, just a plain ESM
 // module (with a `meta` export) instead of YAML -- see src/lib/chapter-content.js.
-// Only index.ts is a chapter module -- a lesson folder's shape.ts/en.ts/
-// ru.ts/zh.ts (see chapter-shape-types.ts) are internal building blocks,
-// not separate chapters.
+// Only index.ts is a chapter module -- a lesson folder's module files and
+// practice.ts (see src/lib/lesson.ts) are its building blocks, not separate
+// chapters.
 for (const file of allFiles.filter(
   (f) => f.endsWith(".ts") && (!f.includes("/") || f.endsWith("/index.ts")),
 )) {

@@ -171,13 +171,19 @@ describe('buildTsChapterView: info/warning', () => {
     expect(out.missingBlocks).toEqual([]);
   });
 
-  test('warning entry uses the warning icon/classes and renders without a title', () => {
+  test('warning entry uses the warning icon/classes; one untitled line is a line, not a list', () => {
     const entries = [{ type: 'warning', items: [{ text: { en: ['Careful'], zh: [], ru: [] } }] }];
     const out = buildTsChapterView(meta, entries, 'eng');
     expect(out.bodyHtml).toBe(
       '<div class="warning-block"><span class="warning-block-icon" aria-hidden="true">⚠️</span>' +
-      '<div class="warning-block-content"><ul><li>Careful</li></ul></div></div>',
+      '<div class="warning-block-content"><p class="warning-block-line">Careful</p></div></div>',
     );
+  });
+
+  test('two untitled lines stay a list', () => {
+    const line = (t) => ({ text: { en: [t], zh: [], ru: [] } });
+    const out = buildTsChapterView(meta, [{ type: 'info', items: [line('One'), line('Two')] }], 'eng');
+    expect(out.bodyHtml).toContain('<ul><li>One</li><li>Two</li></ul>');
   });
 
   test('ordered: true renders that level as <ol>, and nested items recurse', () => {
