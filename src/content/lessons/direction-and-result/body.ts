@@ -6,26 +6,22 @@ export default lessonModule({
   id: "body",
   words: [
     {
-      term: "{{word:zuo4}}",
-      hanzi: "坐",
+      word: "zuo4",
       en: "sit",
       ru: "сидеть",
     },
     {
-      term: "{{word:zhan4}}",
-      hanzi: "站",
+      word: "zhan4",
       en: "stand",
       ru: "стоять",
     },
     {
-      term: "{{word:tang3}}",
-      hanzi: "躺",
+      word: "tang3",
       en: "lie",
       ru: "лежать",
     },
     {
-      term: "{{word:fei1}}",
-      hanzi: "飞",
+      word: "fei1",
       en: "fly",
       ru: "летать",
     },

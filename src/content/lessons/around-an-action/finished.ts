@@ -6,8 +6,7 @@ export default lessonModule({
   id: "finished",
   words: [
     {
-      term: "{{word:wan2}}",
-      hanzi: "完",
+      word: "wan2",
       en: "finish; after a verb: finished",
       ru: "закончить; после глагола: до конца",
     },

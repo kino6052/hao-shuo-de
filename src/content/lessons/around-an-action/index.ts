@@ -1,7 +1,7 @@
 // around-an-action ("Time 2 — Around an action"): its modules, in reading order.
 // See src/lib/lesson.ts.
 //
-// Rewritten in Phase 2 (BOOK_PLAN.md): when (X-de shíjiān), finished (verb-wán), after (verb-wán hòu), start (kāishǐ), for a moment (yīxià), again (yòu), and how many times (cì, D41). liú (stay, keep) is only used in their examples.
+// Rewritten in Phase 2 (BOOK_PLAN.md): when (X-de shíjiān), finished (verb-wán), after (verb-wán hòu), start (kāishǐ), for a moment (yī-xià), again (yòu), and how many times (cì, D41). liú (stay, keep) is only used in their examples.
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- around-an-action).
 import { lesson } from "../../../lib/lesson.ts";

@@ -6,20 +6,17 @@ export default lessonModule({
   id: "direction",
   words: [
     {
-      term: "{{word:qi3}}",
-      hanzi: "起",
+      word: "qi3",
       en: "rise; qǐ-lái: get up",
       ru: "подниматься; qǐ-lái: вставать",
     },
     {
-      term: "{{word:wai4}}",
-      hanzi: "外",
+      word: "wai4",
       en: "out; wài-miàn: outside",
       ru: "снаружи; wài-miàn: на улице, снаружи",
     },
     {
-      term: "{{word:kou3}}",
-      hanzi: "口",
+      word: "kou3",
       en: "opening, door",
       ru: "проём, дверь",
     },

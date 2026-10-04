@@ -6,8 +6,7 @@ export default lessonModule({
   id: "most",
   words: [
     {
-      term: "{{word:zui4}}",
-      hanzi: "最",
+      word: "zui4",
       en: "most",
       ru: "самый",
     },
@@ -60,10 +59,10 @@ export default lessonModule({
       ru: "Что лучше всего?",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:zui4}} {{word:ai4}} {{word:shui3guo3}}.",
-      hanzi: "我最爱水果。",
-      en: "I love fruit the most.",
-      ru: "Больше всего я люблю фрукты.",
+      pinyin: "{{Word:wo3}} {{word:zui4}} {{word:ai4}} {{word:zhi2wu4}}.",
+      hanzi: "我最爱植物。",
+      en: "I love plants the most.",
+      ru: "Больше всего я люблю растения.",
     },
     {
       pinyin: "{{Word:ta1}} {{word:zui4}}-{{word:hou4}} {{word:lai2}}.",
@@ -78,6 +77,12 @@ export default lessonModule({
       ru: "Этот самый большой.",
       answer: "{{Word:zhe4}}-ge {{word:zui4}} {{word:da4}}.",
       hanzi: "这个最大。",
+    },
+    {
+      en: "The box in the middle is the biggest.",
+      ru: "Коробка посередине — самая большая.",
+      answer: "{{Word:zhong1}}-{{word:jian1}}-{{word:de}} {{word:he2zi}} {{word:zui4}} {{word:da4}}.",
+      hanzi: "中间的盒子最大。",
     },
   ],
 });

@@ -18,6 +18,7 @@ const extra = process.argv.slice(2);
 const GATES = [
   ['check-types', []],
   ['check-book', []],
+  ['check-coverage', []],
   ['check-summaries', ['--over']],
   ['check-jargon', ['--summary']],
   ['check-early-words', ['--summary']],

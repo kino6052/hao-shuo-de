@@ -6,14 +6,12 @@ export default lessonModule({
   id: "come-go",
   words: [
     {
-      term: "{{word:lai2}}",
-      hanzi: "来",
+      word: "lai2",
       en: "come",
       ru: "приходить",
     },
     {
-      term: "{{word:qu4}}",
-      hanzi: "去",
+      word: "qu4",
       en: "go",
       ru: "идти, уходить",
     },
@@ -75,13 +73,13 @@ export default lessonModule({
       ru: "После еды мы идём к тебе домой.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:lai2}} {{word:wo3}}-{{word:de}} {{word:pang2}}-{{word:bian1}}.",
+      pinyin: "{{Word:ta1}} {{word:lai2}} {{word:wo3}}-{{word:de}} {{word:pang2bian1}}.",
       hanzi: "他来我的旁边。",
       en: "He comes over beside me.",
       ru: "Он подходит ко мне.",
     },
     {
-      pinyin: "{{Word:ni3}} {{word:lai2}} {{word:yi1xia4}}.",
+      pinyin: "{{Word:ni3}} {{word:lai2}} {{word:yi1}}-{{word:xia4}}.",
       hanzi: "你来一下。",
       en: "Come here a moment.",
       ru: "Подойди на минутку.",
@@ -99,6 +97,12 @@ export default lessonModule({
       ru: "Куда ты идёшь?",
       answer: "{{Word:ni3}} {{word:qu4}} {{word:na3li3}}?",
       hanzi: "你去哪里？",
+    },
+    {
+      en: "I'm going over there.",
+      ru: "Я иду туда.",
+      answer: "{{Word:wo3}} {{word:qu4}} {{word:na4}}-{{word:bian1}}.",
+      hanzi: "我去那边。",
     },
   ],
   faq: [

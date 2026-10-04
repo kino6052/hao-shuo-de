@@ -6,8 +6,7 @@ export default lessonModule({
   id: "where-question",
   words: [
     {
-      term: "{{word:na3li3}}",
-      hanzi: "哪里",
+      word: "na3li3",
       en: "where",
       ru: "где",
     },

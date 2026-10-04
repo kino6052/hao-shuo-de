@@ -1,0 +1,15 @@
+import { composite } from "../../lib/composite.ts";
+
+export default composite({
+  rank: 954,
+  phase: 2,
+  zh: "糖",
+  py: "táng",
+  en: "sugar, candy",
+  ru: "сахар, конфета",
+  hsd: ["{{word:nong4}} {{word:tian2}}-{{word:de}} {{word:dong1xi}}"],
+  tts: ["弄甜的东西"],
+  literal: "the thing that makes it sweet",
+  fit: "plain",
+  note: "Like salt, nòng-hǎo wèidào-de dōngxi.",
+});

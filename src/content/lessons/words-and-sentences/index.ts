@@ -19,11 +19,11 @@ export default lesson(meta.id, {
   summary: {
     en: [
       "Every language needs a way to say what something is.",
-      "In this lesson, you'll be able to say \"This is a person.\" and \"An animal is not a fruit.\"",
+      "In this lesson, you'll be able to say \"This is a person.\" and \"An animal is not a plant.\"",
     ],
     ru: [
       "В любом языке нужно уметь выразить простые факты о людях, вещах и животных.",
-      "В этом уроке вы научитесь говорить «Это человек.» и «Животное — не фрукт.»",
+      "В этом уроке вы научитесь говорить «Это человек.» и «Животное — не растение.»",
     ],
   },
   modules: [

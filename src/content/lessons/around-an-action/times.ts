@@ -6,8 +6,7 @@ export default lessonModule({
   id: "times",
   words: [
     {
-      term: "{{word:ci4}}",
-      hanzi: "次",
+      word: "ci4",
       en: "time, as in \"many times\"",
       ru: "раз, как в «много раз»",
     },

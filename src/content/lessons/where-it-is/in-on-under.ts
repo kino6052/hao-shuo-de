@@ -6,28 +6,25 @@ export default lessonModule({
   id: "in-on-under",
   words: [
     {
-      term: "{{word:shang4}}",
+      word: "shang4",
       hanzi: "上面",
       en: "on, up",
       ru: "на, вверх",
     },
     {
-      term: "{{word:xia4}}",
-      hanzi: "下面",
-      en: "under, down",
-      ru: "под, вниз",
-    },
-    {
-      term: "{{word:mian4}}",
-      hanzi: "面",
+      word: "mian4",
       en: "side; joins a place word: lǐ-miàn, qián-miàn",
       ru: "сторона; присоединяется к слову места: lǐ-miàn, qián-miàn",
     },
     {
-      term: "{{word:di4}}",
-      hanzi: "地",
+      word: "di4",
       en: "floor, ground",
       ru: "пол, земля",
+    },
+    {
+      word: "wang3",
+      en: "net; the internet",
+      ru: "сеть; интернет",
     },
   ],
   prose: {
@@ -37,6 +34,7 @@ export default lessonModule({
       "**Thing + {{word:zai4}} + place-{{word:li3}} / place-{{word:shang4}}**",
       "",
       "For under, say {{word:xia4}}-{{word:mian4}} (the bottom side): {{word:he2zi}}-{{word:de}} {{word:xia4}}-{{word:mian4}}.",
+      "{{word:wang3}} is a net, and the internet too: {{word:zai4}} {{word:wang3}}-{{word:shang4}} is online.",
     ],
     ru: [
       "**Чтобы сказать «в» или «на» чём-то**, присоедините {{word:li3}} (в) или {{word:shang4}} (на) к месту.",
@@ -45,6 +43,7 @@ export default lessonModule({
       "",
       "В русском «в» и «на» стоят перед словом, а в китайском — после него: {{word:he2zi}}-{{word:li3}}, «коробка-в».",
       "Чтобы сказать «под», говорите {{word:xia4}}-{{word:mian4}} (нижняя сторона): {{word:he2zi}}-{{word:de}} {{word:xia4}}-{{word:mian4}}.",
+      "{{word:wang3}} — сеть, и интернет тоже: {{word:zai4}} {{word:wang3}}-{{word:shang4}} — в интернете.",
     ],
     tldr: {
       en: "Join {{word:li3}} (in) or {{word:shang4}} (on) to the place: {{word:he2zi}}-{{word:li3}}, in the box.",
@@ -56,8 +55,8 @@ export default lessonModule({
     },
   },
   info: {
-    en: "place-{{word:li3}} (in), place-{{word:shang4}} (on): {{Word:shui3}} {{word:zai4}} {{word:he2zi}}-{{word:li3}}. (The water is in the box.)",
-    ru: "место-{{word:li3}} (в), место-{{word:shang4}} (на): {{Word:shui3}} {{word:zai4}} {{word:he2zi}}-{{word:li3}}. (Вода в коробке.)",
+    en: "place-{{word:li3}} (in), place-{{word:shang4}} (on): {{Word:shui3}} {{word:zai4}} {{word:he2zi}}-{{word:li3}}. (The water is in the box.) {{word:wang3}}-{{word:shang4}}, online: {{Word:wo3}} {{word:zai4}} {{word:wang3}}-{{word:shang4}} {{word:zhao3}}. (I'm looking online.)",
+    ru: "место-{{word:li3}} (в), место-{{word:shang4}} (на): {{Word:shui3}} {{word:zai4}} {{word:he2zi}}-{{word:li3}}. (Вода в коробке.) {{word:wang3}}-{{word:shang4}} — в интернете: {{Word:wo3}} {{word:zai4}} {{word:wang3}}-{{word:shang4}} {{word:zhao3}}. (Я ищу в интернете.)",
   },
   examples: [
     {
@@ -73,10 +72,10 @@ export default lessonModule({
       ru: "Инструмент на полу.",
     },
     {
-      pinyin: "{{Word:shui3guo3}} {{word:zai4}} {{word:he2zi}}-{{word:de}} {{word:xia4}}-{{word:mian4}}.",
-      hanzi: "水果在盒子的下面。",
-      en: "The fruit is under the box.",
-      ru: "Фрукт под коробкой.",
+      pinyin: "{{Word:gong1ju4}} {{word:zai4}} {{word:he2zi}}-{{word:de}} {{word:xia4}}-{{word:mian4}}.",
+      hanzi: "工具在盒子的下面。",
+      en: "The tool is under the box.",
+      ru: "Инструмент под коробкой.",
     },
     {
       pinyin: "{{Word:yi1fu}} {{word:zai4}} {{word:jia1}}-{{word:li3}}.",
@@ -102,19 +101,37 @@ export default lessonModule({
       en: "My feet are in the water.",
       ru: "Мои ноги в воде.",
     },
+    {
+      pinyin: "{{Word:wo3}} {{word:zai4}} {{word:wang3}}-{{word:shang4}} {{word:zhao3}}.",
+      hanzi: "我在网上找。",
+      en: "I'm looking for it online.",
+      ru: "Я ищу это в интернете.",
+    },
   ],
   exercises: [
     {
-      en: "The fruit is in the box.",
-      ru: "Фрукт в коробке.",
-      answer: "{{Word:shui3guo3}} {{word:zai4}} {{word:he2zi}}-{{word:li3}}.",
-      hanzi: "水果在盒子里。",
+      en: "The money is in the box.",
+      ru: "Деньги в коробке.",
+      answer: "{{Word:jin1}} {{word:zai4}} {{word:he2zi}}-{{word:li3}}.",
+      hanzi: "金在盒子里。",
     },
     {
       en: "The box is on the floor.",
       ru: "Коробка на полу.",
       answer: "{{Word:he2zi}} {{word:zai4}} {{word:di4}}-{{word:shang4}}.",
       hanzi: "盒子在地上。",
+    },
+    {
+      en: "She's online.",
+      ru: "Она в интернете.",
+      answer: "{{Word:ta1}} {{word:zai4}} {{word:wang3}}-{{word:shang4}}.",
+      hanzi: "她在网上。",
+    },
+    {
+      en: "Are you online?",
+      ru: "Ты в интернете?",
+      answer: "{{Word:ni3}} {{word:zai4}} {{word:wang3}}-{{word:shang4}} {{word:ma}}?",
+      hanzi: "你在网上吗？",
     },
   ],
   faq: [

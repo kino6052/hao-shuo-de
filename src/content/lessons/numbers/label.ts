@@ -6,8 +6,7 @@ export default lessonModule({
   id: "label",
   words: [
     {
-      term: "{{word:hao4}}",
-      hanzi: "号",
+      word: "hao4",
       en: "number (as in number two)",
       ru: "номер (как в «номер два»)",
     },

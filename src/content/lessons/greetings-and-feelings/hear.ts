@@ -6,8 +6,7 @@ export default lessonModule({
   id: "hear",
   words: [
     {
-      term: "{{word:sheng1yin1}}",
-      hanzi: "声音",
+      word: "sheng1yin1",
       en: "sound, voice",
       ru: "звук, голос",
     },
@@ -50,16 +49,16 @@ export default lessonModule({
       ru: "У тебя хороший голос.",
     },
     {
-      pinyin: "{{Word:chong2zi}}-{{word:de}} {{word:sheng1yin1}} {{word:hen3}} {{word:xiao3}}.",
-      hanzi: "虫子的声音很小。",
-      en: "The bug's sound is quiet.",
-      ru: "Насекомое звучит тихо.",
+      pinyin: "{{Word:dong4wu4}}-{{word:de}} {{word:sheng1yin1}} {{word:hen3}} {{word:xiao3}}.",
+      hanzi: "动物的声音很小。",
+      en: "The animal's sound is quiet.",
+      ru: "Животное звучит тихо.",
     },
     {
-      pinyin: "{{Word:you3}} {{word:chong2zi}}!",
-      hanzi: "有虫子！",
-      en: "There's a bug!",
-      ru: "Тут насекомое!",
+      pinyin: "{{Word:you3}} {{word:dong4wu4}}!",
+      hanzi: "有动物！",
+      en: "There's an animal!",
+      ru: "Тут животное!",
     },
     {
       pinyin: "{{Word:wo3}} {{word:ting1}}-{{word:dao4}} {{word:le}} {{word:yi1}}-ge {{word:tou2}}-{{word:yi1}}-{{word:ci4}} {{word:ting1}}-{{word:dao4}}-{{word:de}} {{word:ci2}}.",
@@ -68,7 +67,7 @@ export default lessonModule({
       ru: "Я услышал слово, которого никогда раньше не слышал.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:ting1}}-{{word:dao4}} {{word:sheng1yin1}}. {{Word:fa1sheng1}} {{word:le}} {{word:shen2me}}?",
+      pinyin: "{{Word:wo3}} {{word:ting1}}-{{word:dao4}} {{word:sheng1yin1}}. {{Word:fa1}}-{{word:sheng1}} {{word:le}} {{word:shen2me}}?",
       hanzi: "我听到声音。发生了什么？",
       en: "I hear a sound. What happened?",
       ru: "Я слышу звук. Что случилось?",

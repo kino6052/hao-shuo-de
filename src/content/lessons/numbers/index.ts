@@ -12,6 +12,7 @@ import countKinds from "./count-kinds.ts";
 import teens from "./teens.ts";
 import label from "./label.ts";
 import clock from "./clock.ts";
+import daysYears from "./days-years.ts";
 import little from "./little.ts";
 import addTake from "./add-take.ts";
 import timesShare from "./times-share.ts";
@@ -41,6 +42,7 @@ export default lesson(meta.id, {
     teens,
     label,
     clock,
+    daysYears,
     little,
     addTake,
     timesShare,

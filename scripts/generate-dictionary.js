@@ -1,10 +1,10 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { resolve } from 'path';
 import { fileURLToPath } from 'url';
+import dictionaryData from '../src/data/dictionary.ts';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const ROOT = resolve(__dirname, '..');
-const DATA_PATH = resolve(ROOT, 'src/data/dictionary.json');
 const CONTENT_DIR = resolve(ROOT, 'src/content');
 
 const LANGS = ['eng', 'rus', 'zh'];
@@ -35,7 +35,7 @@ function frontmatter({ id, title, order, lang }) {
   return `---\nid: ${id}\ntitle: "${title}"\ntype: dictionary\norder: ${order}\nlanguage: ${lang}\n---\n`;
 }
 
-const data = JSON.parse(readFileSync(DATA_PATH, 'utf-8'));
+const data = dictionaryData;
 
 for (const lang of LANGS) {
   const allWords = Object.values(data.words)

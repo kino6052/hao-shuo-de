@@ -1,0 +1,15 @@
+import { composite } from "../../lib/composite.ts";
+
+export default composite({
+  rank: 1223,
+  phase: 3,
+  zh: "题目",
+  py: "tímù",
+  en: "topic, question",
+  ru: "тема, задание",
+  hsd: ["{{word:wen4}}-{{word:de}} {{word:dong1xi}}"],
+  tts: ["问的东西"],
+  literal: "what's asked",
+  fit: "plain",
+  proposed: true,
+});

@@ -5,8 +5,7 @@ export default lessonModule({
   id: "can",
   words: [
     {
-      term: "{{word:neng2}}",
-      hanzi: "能",
+      word: "neng2",
       en: "can",
       ru: "мочь",
     },

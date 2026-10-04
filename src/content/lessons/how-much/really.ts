@@ -46,10 +46,10 @@ export default lessonModule({
       ru: "Она правда странная.",
     },
     {
-      pinyin: "{{Word:zhe4}}-ge {{word:shui3guo3}} {{word:zhen1}} {{word:tian2}}!",
-      hanzi: "这个水果真甜！",
-      en: "This fruit is really sweet!",
-      ru: "Этот фрукт правда сладкий!",
+      pinyin: "{{Word:zhe4}}-ge {{word:zhen1}} {{word:tian2}}!",
+      hanzi: "这个真甜！",
+      en: "This is really sweet!",
+      ru: "Это правда сладкое!",
     },
     {
       pinyin: "{{Word:ni3}} {{word:zhen1}} {{word:kuai4}}!",
@@ -58,18 +58,24 @@ export default lessonModule({
       ru: "Ты правда быстрый!",
     },
     {
-      pinyin: "{{Word:zhe4}}-ge {{word:shui3guo3}}-{{word:de}} {{word:wei4dao4}} {{word:zhen1}} {{word:hao3}}!",
-      hanzi: "这个水果的味道真好！",
-      en: "This fruit tastes really good!",
-      ru: "У этого фрукта правда хороший вкус!",
+      pinyin: "{{Word:zhe4}}-ge {{word:shui3}}-{{word:de}} {{word:wei4dao4}} {{word:zhen1}} {{word:hao3}}!",
+      hanzi: "这个水的味道真好！",
+      en: "This water tastes really good!",
+      ru: "У этой воды правда хороший вкус!",
+    },
+    {
+      pinyin: "{{Word:zhe4}}-ge {{word:che1}} {{word:zhen1}} {{word:kuai4}}!",
+      hanzi: "这个车真快！",
+      en: "This car is really fast!",
+      ru: "Эта машина правда быстрая!",
     },
   ],
   exercises: [
     {
-      en: "The rice is really hot.",
-      ru: "Рис правда горячий.",
-      answer: "{{Word:mi3fan4}} {{word:zhen1}} {{word:re4}}.",
-      hanzi: "米饭真热。",
+      en: "The water is really hot.",
+      ru: "Вода правда горячая.",
+      answer: "{{Word:shui3}} {{word:zhen1}} {{word:re4}}.",
+      hanzi: "水真热。",
     },
     {
       en: "That person is really strange.",

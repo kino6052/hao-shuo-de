@@ -6,8 +6,7 @@ export default lessonModule({
   id: "kind",
   words: [
     {
-      term: "{{word:zhong3}}",
-      hanzi: "种",
+      word: "zhong3",
       en: "kind, type",
       ru: "вид, сорт",
     },
@@ -24,8 +23,8 @@ export default lessonModule({
       "**{{word:zhe4}}-{{word:zhong3}} / {{word:na4}}-{{word:zhong3}} + существительное**",
     ],
     tldr: {
-      en: "{{word:zhe4}}-{{word:zhong3}} + noun means this kind of: {{word:zhe4}}-{{word:zhong3}} {{word:shui3guo3}}, this kind of fruit.",
-      ru: "{{word:zhe4}}-{{word:zhong3}} + существительное — «такой вид»: {{word:zhe4}}-{{word:zhong3}} {{word:shui3guo3}} — такие фрукты.",
+      en: "{{word:zhe4}}-{{word:zhong3}} + noun means this kind of: {{word:zhe4}}-{{word:zhong3}} {{word:zhi2wu4}}, this kind of plant.",
+      ru: "{{word:zhe4}}-{{word:zhong3}} + существительное — «такой вид»: {{word:zhe4}}-{{word:zhong3}} {{word:zhi2wu4}} — такие растения.",
     },
     necessity: {
       en: "Now you can talk about kinds of things, and compare them.",
@@ -33,15 +32,15 @@ export default lessonModule({
     },
   },
   info: {
-    en: "{{word:zhe4}}-{{word:zhong3}} + noun, this kind of: {{word:zhe4}}-{{word:zhong3}} {{word:shui3guo3}} (this kind of fruit)",
-    ru: "{{word:zhe4}}-{{word:zhong3}} + существительное — такой вид: {{word:zhe4}}-{{word:zhong3}} {{word:shui3guo3}} (такие фрукты)",
+    en: "{{word:zhe4}}-{{word:zhong3}} + noun, this kind of: {{word:zhe4}}-{{word:zhong3}} {{word:zhi2wu4}} (this kind of plant)",
+    ru: "{{word:zhe4}}-{{word:zhong3}} + существительное — такой вид: {{word:zhe4}}-{{word:zhong3}} {{word:zhi2wu4}} (такие растения)",
   },
   examples: [
     {
-      pinyin: "{{Word:zhe4}}-{{word:zhong3}} {{word:shui3guo3}} {{word:hen3}} {{word:tian2}}.",
-      hanzi: "这种水果很甜。",
-      en: "This kind of fruit is sweet.",
-      ru: "Этот сорт фруктов сладкий.",
+      pinyin: "{{Word:zhe4}}-{{word:zhong3}} {{word:zhi2wu4}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "这种植物很大。",
+      en: "This kind of plant is big.",
+      ru: "Этот вид растений большой.",
     },
     {
       pinyin: "{{Word:zhe4}}-{{word:zhong3}} {{word:bi3}} {{word:na4}}-{{word:zhong3}} {{word:hao3}}.",
@@ -58,10 +57,10 @@ export default lessonModule({
   ],
   exercises: [
     {
-      en: "This kind of fruit is sweet.",
-      ru: "Этот сорт фруктов сладкий.",
-      answer: "{{Word:zhe4}}-{{word:zhong3}} {{word:shui3guo3}} {{word:hen3}} {{word:tian2}}.",
-      hanzi: "这种水果很甜。",
+      en: "This kind of plant is big.",
+      ru: "Этот вид растений большой.",
+      answer: "{{Word:zhe4}}-{{word:zhong3}} {{word:zhi2wu4}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "这种植物很大。",
     },
   ],
 });

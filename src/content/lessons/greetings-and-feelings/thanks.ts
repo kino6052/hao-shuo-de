@@ -6,8 +6,7 @@ export default lessonModule({
   id: "thanks",
   words: [
     {
-      term: "{{word:xie4}}",
-      hanzi: "谢",
+      word: "xie4",
       en: "thank; xiè-xie: thank you",
       ru: "благодарить; xiè-xie: спасибо",
     },
@@ -65,10 +64,10 @@ export default lessonModule({
   ],
   exercises: [
     {
-      en: "Thank you for giving me fruit.",
-      ru: "Спасибо, что дал мне фрукты.",
-      answer: "{{Word:xie4}}-xie {{word:ni3}} {{word:gei3}} {{word:wo3}} {{word:shui3guo3}}.",
-      hanzi: "谢谢你给我水果。",
+      en: "Thank you for giving me water.",
+      ru: "Спасибо, что дал мне воды.",
+      answer: "{{Word:xie4}}-xie {{word:ni3}} {{word:gei3}} {{word:wo3}} {{word:shui3}}.",
+      hanzi: "谢谢你给我水。",
     },
     {
       en: "You're welcome.",

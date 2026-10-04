@@ -5,8 +5,7 @@ export default lessonModule({
   id: "ge-is-universal",
   words: [
     {
-      term: "{{word:ge4}}",
-      hanzi: "个",
+      word: "ge4",
       en: "goes between this / that / a number and a noun",
       ru: "ставится между «этот / тот» или числом и существительным",
     },
@@ -14,15 +13,15 @@ export default lessonModule({
   prose: {
     en: [
       "Hao-shuo-de keeps only one of them: `{{word:ge4}}`.",
-      "It works for everything: a person, an animal, a tool, a fruit, or an idea.",
+      "It works for everything: a person, an animal, a tool, a plant, or an idea.",
       "Put it after a pronoun: `{{word:zhe4}}-ge` means \"this one\", and `{{word:na4}}-ge` means \"that one\".",
-      "Add a noun to say which thing: `{{word:zhe4}}-ge {{word:shui3guo3}}` means \"this fruit\".",
+      "Add a noun to say which thing: `{{word:zhe4}}-ge {{word:zhi2wu4}}` means \"this plant\".",
     ],
     ru: [
       "В Hǎo-shuō-de осталось только одно из них: `{{word:ge4}}`.",
-      "Оно подходит для всего: человека, животного, инструмента, фрукта или мысли.",
+      "Оно подходит для всего: человека, животного, инструмента, растения или мысли.",
       "Поставьте его после местоимения: `{{word:zhe4}}-ge` значит «вот этот», а `{{word:na4}}-ge` — «вон тот».",
-      "Добавьте существительное, чтобы сказать, какая именно вещь: `{{word:zhe4}}-ge {{word:shui3guo3}}` значит «этот фрукт».",
+      "Добавьте существительное, чтобы сказать, какая именно вещь: `{{word:zhe4}}-ge {{word:zhi2wu4}}` значит «это растение».",
     ],
     tldr: {
       en: "Hao-shuo-de uses {{word:ge4}} for everything.",
@@ -62,16 +61,16 @@ export default lessonModule({
       ru: "Та женщина.",
     },
     {
-      pinyin: "{{Word:zhe4}}-ge {{word:shui3guo3}} {{word:hen3}} {{word:hao3}}.",
-      hanzi: "这个水果很好。",
-      en: "This fruit is good.",
-      ru: "Этот фрукт хороший.",
+      pinyin: "{{Word:zhe4}}-ge {{word:zhi2wu4}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "这个植物很好。",
+      en: "This plant is good.",
+      ru: "Это растение хорошее.",
     },
     {
-      pinyin: "{{Word:na4}}-ge {{word:dong1xi}} {{word:shi4}} {{word:shui3guo3}}.",
-      hanzi: "那个东西是水果。",
-      en: "That thing is a fruit.",
-      ru: "Та вещь — фрукт.",
+      pinyin: "{{Word:na4}}-ge {{word:dong1xi}} {{word:shi4}} {{word:zhi2wu4}}.",
+      hanzi: "那个东西是植物。",
+      en: "That thing is a plant.",
+      ru: "Та вещь — растение.",
     },
   ],
   exercises: [
@@ -100,10 +99,10 @@ export default lessonModule({
       hanzi: "这个动物。",
     },
     {
-      en: "Say \"That fruit is good.\", using ge.",
-      ru: "Скажите «Тот фрукт хороший.» с помощью ge.",
-      answer: "{{Word:na4}}-ge {{word:shui3guo3}} {{word:hen3}} {{word:hao3}}.",
-      hanzi: "那个水果很好。",
+      en: "Say \"That plant is good.\", using ge.",
+      ru: "Скажите «То растение хорошее.» с помощью ge.",
+      answer: "{{Word:na4}}-ge {{word:zhi2wu4}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "那个植物很好。",
     },
   ],
   faq: [

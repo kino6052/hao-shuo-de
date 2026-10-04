@@ -6,14 +6,12 @@ export default lessonModule({
   id: "time",
   words: [
     {
-      term: "{{word:shi2jian1}}",
-      hanzi: "时间",
+      word: "shi2jian1",
       en: "time",
       ru: "время",
     },
     {
-      term: "{{word:ri4}}",
-      hanzi: "日",
+      word: "ri4",
       en: "sun, day",
       ru: "солнце, день",
     },

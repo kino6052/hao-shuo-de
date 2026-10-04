@@ -49,10 +49,10 @@ export default lessonModule({
       ru: "Здесь пятнадцать животных.",
     },
     {
-      pinyin: "{{Word:shi2}}-{{word:er4}}-ge {{word:shui3guo3}}.",
-      hanzi: "十二个水果。",
-      en: "Twelve pieces of fruit.",
-      ru: "Двенадцать фруктов.",
+      pinyin: "{{Word:shi2}}-{{word:er4}}-ge {{word:zhi2wu4}}.",
+      hanzi: "十二个植物。",
+      en: "Twelve plants.",
+      ru: "Двенадцать растений.",
     },
     {
       pinyin: "{{Word:er4}}-{{word:shi2}}-ge {{word:ren2}}.",

@@ -19,11 +19,11 @@ export default lesson(meta.id, {
   summary: {
     en: [
       "Like in every other language, we want to say that someone or something does something.",
-      "In this lesson, you'll be able to say \"I eat rice.\", \"She doesn't write.\", and \"I don't have money.\"",
+      "In this lesson, you'll be able to say \"I drink water.\", \"She doesn't write.\", and \"I don't have money.\"",
     ],
     ru: [
       "Как и в любом языке, нам нужно уметь выразить действие.",
-      "В этом уроке вы научитесь говорить «Я ем рис.», «Она не пишет.» и «У меня нет денег.»",
+      "В этом уроке вы научитесь говорить «Я пью воду.», «Она не пишет.» и «У меня нет денег.»",
     ],
   },
   modules: [

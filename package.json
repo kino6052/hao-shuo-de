@@ -13,6 +13,7 @@
     "grammar-overview": "node scripts/generate-grammar-overview.js",
     "check": "node scripts/check-all.js",
     "check-book": "node scripts/check-book.js",
+    "check-coverage": "node scripts/check-coverage.js",
     "check-jargon": "node scripts/check-jargon.js",
     "check-early-words": "node scripts/check-early-words.js",
     "check-summaries": "node scripts/check-summaries.js",

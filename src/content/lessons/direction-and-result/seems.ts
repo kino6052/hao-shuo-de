@@ -35,10 +35,10 @@ export default lessonModule({
   },
   examples: [
     {
-      pinyin: "{{Word:zhe4}}-ge {{word:shui3guo3}} {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}.",
-      hanzi: "这个水果看起来很好。",
-      en: "This fruit looks good.",
-      ru: "Этот фрукт выглядит хорошо.",
+      pinyin: "{{Word:zhe4}}-ge {{word:zhi2wu4}} {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "这个植物看起来很好。",
+      en: "This plant looks good.",
+      ru: "Это растение выглядит хорошо.",
     },
     {
       pinyin: "{{Word:chi1}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:tian2}}.",
@@ -53,7 +53,7 @@ export default lessonModule({
       ru: "Звучит странно.",
     },
     {
-      pinyin: "{{Word:kong1qi4}} {{word:leng3}}-{{word:qi3}}-{{word:lai2}} {{word:le}}.",
+      pinyin: "{{Word:kong1}}-{{word:qi4}} {{word:leng3}}-{{word:qi3}}-{{word:lai2}} {{word:le}}.",
       hanzi: "空气冷起来了。",
       en: "It's getting cold.",
       ru: "Становится холодно.",
@@ -73,10 +73,10 @@ export default lessonModule({
   ],
   exercises: [
     {
-      en: "The rice tastes good.",
-      ru: "Рис вкусный.",
-      answer: "{{Word:mi3fan4}} {{word:chi1}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}.",
-      hanzi: "米饭吃起来很好。",
+      en: "This tastes good.",
+      ru: "Это вкусно.",
+      answer: "{{Word:zhe4}}-ge {{word:chi1}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "这个吃起来很好。",
     },
     {
       en: "Keep writing!",

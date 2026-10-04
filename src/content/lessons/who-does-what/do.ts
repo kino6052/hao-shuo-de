@@ -6,40 +6,34 @@ export default lessonModule({
   id: "do",
   words: [
     {
-      term: "{{word:chi1}}",
-      hanzi: "吃",
-      en: "eat, drink",
-      ru: "есть, пить",
+      word: "chi1",
+      en: "eat",
+      ru: "есть",
     },
     {
-      term: "{{word:kan4}}",
-      hanzi: "看",
+      word: "kan4",
       en: "look, read",
       ru: "смотреть, читать",
     },
     {
-      term: "{{word:ting1}}",
-      hanzi: "听",
+      word: "ting1",
       en: "listen, hear",
       ru: "слушать, слышать",
     },
     {
-      term: "{{word:shuo1}}",
-      hanzi: "说",
+      word: "shuo1",
       en: "say, speak",
       ru: "говорить",
     },
     {
-      term: "{{word:xie3}}",
-      hanzi: "写",
+      word: "xie3",
       en: "write",
       ru: "писать",
     },
     {
-      term: "{{word:mi3fan4}}",
-      hanzi: "米饭",
-      en: "rice",
-      ru: "рис",
+      word: "he1",
+      en: "drink",
+      ru: "пить",
     },
   ],
   prose: {
@@ -48,7 +42,7 @@ export default lessonModule({
       "",
       "**Who + verb + what**",
       "",
-      "A verb is an action word: {{word:chi1}} (eat), {{word:kan4}} (look), {{word:shuo1}} (speak).",
+      "A verb is an action word: {{word:chi1}} (eat), {{word:he1}} (drink), {{word:kan4}} (look), {{word:shuo1}} (speak).",
       "The order shows who does what. Swap them, and the meaning swaps: {{Word:wo3}} {{word:kan4}} {{word:ta1}} / {{Word:ta1}} {{word:kan4}} {{word:wo3}}.",
     ],
     ru: [
@@ -56,7 +50,7 @@ export default lessonModule({
       "",
       "**Кто + глагол + что**",
       "",
-      "Глагол — это слово-действие: {{word:chi1}} (есть), {{word:kan4}} (смотреть), {{word:shuo1}} (говорить).",
+      "Глагол — это слово-действие: {{word:chi1}} (есть), {{word:he1}} (пить), {{word:kan4}} (смотреть), {{word:shuo1}} (говорить).",
       "Порядок слов показывает, кто что делает. Поменяйте слова местами — и смысл поменяется: {{Word:wo3}} {{word:kan4}} {{word:ta1}} / {{Word:ta1}} {{word:kan4}} {{word:wo3}}.",
       "В русском смысл держат окончания, а в китайском окончаний нет — эту работу делает порядок слов.",
     ],
@@ -70,15 +64,21 @@ export default lessonModule({
     },
   },
   info: {
-    en: "Who + verb + what: {{Word:wo3}} {{word:chi1}} {{word:mi3fan4}}. (I eat rice.)",
-    ru: "Кто + глагол + что: {{Word:wo3}} {{word:chi1}} {{word:mi3fan4}}. (Я ем рис.)",
+    en: "Who + verb + what: {{Word:wo3}} {{word:he1}} {{word:shui3}}. (I drink water.)",
+    ru: "Кто + глагол + что: {{Word:wo3}} {{word:he1}} {{word:shui3}}. (Я пью воду.)",
   },
   examples: [
     {
-      pinyin: "{{Word:wo3}} {{word:chi1}} {{word:mi3fan4}}.",
-      hanzi: "我吃米饭。",
-      en: "I eat rice.",
-      ru: "Я ем рис.",
+      pinyin: "{{Word:wo3}} {{word:chi1}} {{word:dong1xi}}.",
+      hanzi: "我吃东西。",
+      en: "I'm eating.",
+      ru: "Я ем.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:he1}} {{word:shui3}}.",
+      hanzi: "我喝水。",
+      en: "I drink water.",
+      ru: "Я пью воду.",
     },
     {
       pinyin: "{{Word:wo3}} {{word:kan4}} {{word:ta1}}.",
@@ -119,10 +119,16 @@ export default lessonModule({
       hanzi: "我听你。",
     },
     {
-      en: "She eats rice.",
-      ru: "Она ест рис.",
-      answer: "{{Word:ta1}} {{word:chi1}} {{word:mi3fan4}}.",
-      hanzi: "她吃米饭。",
+      en: "She's eating.",
+      ru: "Она ест.",
+      answer: "{{Word:ta1}} {{word:chi1}} {{word:dong1xi}}.",
+      hanzi: "她吃东西。",
+    },
+    {
+      en: "She drinks water.",
+      ru: "Она пьёт воду.",
+      answer: "{{Word:ta1}} {{word:he1}} {{word:shui3}}.",
+      hanzi: "她喝水。",
     },
     {
       en: "You look at me.",
@@ -141,17 +147,17 @@ export default lessonModule({
     // how do I say "ate" or "will eat"? (the verb never changes; Lesson {{lesson:when-it-happens}})
     {
       question: { en: "How do I say \"ate\" or \"will eat\"?", ru: "Как сказать «ел» или «буду есть»?" },
-      en: "The verb never changes. {{Word:wo3}} {{word:chi1}} {{word:mi3fan4}} can mean \"I eat rice\", \"I ate rice\", or \"I'll eat rice\". The situation tells you when, and Lesson {{lesson:when-it-happens}} adds small words for it.",
-      ru: "Глагол никогда не меняется. {{Word:wo3}} {{word:chi1}} {{word:mi3fan4}} может значить «Я ем рис», «Я ел рис» или «Я буду есть рис». Когда — понятно из ситуации, а в уроке {{lesson:when-it-happens}} появятся маленькие слова для этого.",
+      en: "The verb never changes. {{Word:wo3}} {{word:chi1}} {{word:dong1xi}} can mean \"I eat\", \"I ate\", or \"I'll eat\". The situation tells you when, and Lesson {{lesson:when-it-happens}} adds small words for it.",
+      ru: "Глагол никогда не меняется. {{Word:wo3}} {{word:chi1}} {{word:dong1xi}} может значить «Я ем», «Я ел» или «Я буду есть». Когда — понятно из ситуации, а в уроке {{lesson:when-it-happens}} появятся маленькие слова для этого.",
     },
-    // can chī mean drink? (in Hao-shuo-de yes; everyday Mandarin has a separate word)
+    // can chī mean drink? (no -- drinking is hē)
     {
       question: {
         en: "Can I use {{word:chi1}} for drinking?",
         ru: "Можно ли сказать {{word:chi1}}, когда пьёшь?",
       },
-      en: "In Hao-shuo-de, yes: {{word:chi1}} {{word:shui3}}. Everyday Mandarin usually has a separate word for \"drink\", but {{word:chi1}} is understood.",
-      ru: "В Hǎo-shuō-de — да: {{word:chi1}} {{word:shui3}}. В обычном китайском для «пить» обычно есть отдельное слово, но {{word:chi1}} поймут.",
+      en: "No, drinking has its own verb, {{word:he1}}: {{Word:wo3}} {{word:he1}} {{word:shui3}}. {{word:chi1}} is for food you chew.",
+      ru: "Нет, для питья есть свой глагол, {{word:he1}}: {{Word:wo3}} {{word:he1}} {{word:shui3}}. {{word:chi1}} — для еды, которую жуют.",
     },
   ],
 });

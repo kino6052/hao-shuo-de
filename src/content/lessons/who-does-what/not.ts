@@ -52,6 +52,12 @@ export default lessonModule({
       en: "I don't speak.",
       ru: "Я не говорю.",
     },
+    {
+      pinyin: "{{Word:ta1}} {{word:bu4}} {{word:he1}} {{word:shui3}}.",
+      hanzi: "他不喝水。",
+      en: "He doesn't drink water.",
+      ru: "Он не пьёт воду.",
+    },
   ],
   exercises: [
     {

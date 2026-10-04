@@ -6,8 +6,7 @@ export default lessonModule({
   id: "add-take",
   words: [
     {
-      term: "{{word:suan4}}",
-      hanzi: "算",
+      word: "suan4",
       en: "calculate, work out",
       ru: "считать, вычислять",
     },
@@ -19,7 +18,7 @@ export default lessonModule({
       "**A, B {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}, {{word:shi4}} C / {{word:cong2}} A {{word:li3}}-{{word:mian4}} {{word:na2}} B, {{word:shi4}} C**",
       "",
       "To ask for the answer, end with {{word:shi4}} {{word:duo1}}-{{word:shao3}}? You know {{word:na2}} (take) from Lesson {{lesson:direction-and-result}}: {{Word:na2}} {{word:yi1}}-ge! (Take one!)",
-      "{{word:suan4}} is \"work it out\": {{Word:wo3}} {{word:suan4}} {{word:yi1xia4}}, let me work it out.",
+      "{{word:suan4}} is \"work it out\": {{Word:wo3}} {{word:suan4}} {{word:yi1}}-{{word:xia4}}, let me work it out.",
     ],
     ru: [
       "**Чтобы сложить**, сложите числа вместе с помощью {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}. **Чтобы отнять**, используйте {{word:na2}} (взять).",
@@ -27,7 +26,7 @@ export default lessonModule({
       "**A, B {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}, {{word:shi4}} C / {{word:cong2}} A {{word:li3}}-{{word:mian4}} {{word:na2}} B, {{word:shi4}} C**",
       "",
       "Чтобы спросить ответ, закончите словами {{word:shi4}} {{word:duo1}}-{{word:shao3}}? {{word:na2}} (взять) вы знаете из урока {{lesson:direction-and-result}}: {{Word:na2}} {{word:yi1}}-ge! (Возьми одну!)",
-      "{{word:suan4}} — «посчитать»: {{Word:wo3}} {{word:suan4}} {{word:yi1xia4}} — дай-ка я посчитаю.",
+      "{{word:suan4}} — «посчитать»: {{Word:wo3}} {{word:suan4}} {{word:yi1}}-{{word:xia4}} — дай-ка я посчитаю.",
     ],
     tldr: {
       en: "Add: put the numbers together with {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}. Take away: {{word:na2}}.",
@@ -71,7 +70,7 @@ export default lessonModule({
       ru: "Возьми одну!",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:suan4}} {{word:yi1xia4}}.",
+      pinyin: "{{Word:wo3}} {{word:suan4}} {{word:yi1}}-{{word:xia4}}.",
       hanzi: "我算一下。",
       en: "Let me work it out.",
       ru: "Дай-ка я посчитаю.",
@@ -105,7 +104,7 @@ export default lessonModule({
     {
       en: "Let me work it out.",
       ru: "Дай-ка я посчитаю.",
-      answer: "{{Word:wo3}} {{word:suan4}} {{word:yi1xia4}}.",
+      answer: "{{Word:wo3}} {{word:suan4}} {{word:yi1}}-{{word:xia4}}.",
       hanzi: "我算一下。",
     },
   ],

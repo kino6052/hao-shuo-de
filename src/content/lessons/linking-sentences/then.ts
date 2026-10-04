@@ -6,8 +6,7 @@ export default lessonModule({
   id: "then",
   words: [
     {
-      term: "{{word:jiu4}}",
-      hanzi: "就",
+      word: "jiu4",
       en: "then; right away; just",
       ru: "то, тогда; сразу; именно, только",
     },

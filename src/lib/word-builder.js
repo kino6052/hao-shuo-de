@@ -140,7 +140,7 @@ const COLORS = new Set(["bai2se4", "hei1se4", "hong2se4", "huang2se4", "lan2se4"
 // place and direction words), so they're never offered as answers.
 const NOT_OFFERED = new Set([
   "shi4", "zai4", "yong4", "wan2", "hen3", "zui4", "zhen1", "bie2de",
-  "li3", "shang4", "xia4", "hou4", "qian2", "pang2", "mian4", "bian1",
+  "li3", "shang4", "xia4", "hou4", "qian2", "mian4", "bian1",
   "pang2bian1", "zuo3bian1", "you4bian1", "fu4jin4",
   "dian3", "zhong3", "xian4zai4",
 ]);

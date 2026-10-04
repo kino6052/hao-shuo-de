@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Word Builder gate for the composite dictionary (src/data/composites.json):
+// Word Builder gate for the composite dictionary (src/data/composites/):
 // every description the Word Builder can read is written the way it writes
 // it, with matching hanzi, so a word opened in the Word Builder shows exactly
 // the dictionary's form, built question by question. It fails for
@@ -21,16 +21,18 @@ import { fileURLToPath } from "url";
 import { LESSON_IDS, importLessonFile } from "./lessons.js";
 import { builderForm, REWRITTEN_FITS } from "../src/lib/word-builder-parse.js";
 import { render, hanziSystem } from "../src/lib/word-builder.js";
-import { hanziFromLessons } from "../src/lib/hanzi-map.js";
+import { wordHanzi } from "../src/lib/hanzi-map.js";
+import dictionaryData from "../src/data/dictionary.ts";
+import compositesData from "../src/data/composites.ts";
 
 const ROOT = resolve(fileURLToPath(new URL(".", import.meta.url)), "..");
-const dict = JSON.parse(readFileSync(resolve(ROOT, "src/data/dictionary.json"), "utf-8"));
-const { entries } = JSON.parse(readFileSync(resolve(ROOT, "src/data/composites.json"), "utf-8"));
+const dict = dictionaryData;
+const { entries } = compositesData;
 const list = process.argv.includes("--list");
 
 const lessons = [];
 for (const id of LESSON_IDS) lessons.push(await importLessonFile(id, "index.ts"));
-const hanzi = hanziSystem(hanziFromLessons(lessons));
+const hanzi = hanziSystem(wordHanzi());
 const pinyin = (form) => form.replace(/\{\{[wW]ord:([a-z0-9-]+)\}\}/g, (_, id) => dict.words[id]?.term ?? id);
 
 const errors = [];

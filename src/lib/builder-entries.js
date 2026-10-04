@@ -1,7 +1,7 @@
 // The composite dictionary words a reader can open in the Word Builder, read
 // once and shared by the Word Builder and the composite dictionary page.
-import composites from "../data/composites.json";
-import dictionary from "../data/dictionary.json";
+import composites from "../data/composites.ts";
+import dictionary from "../data/dictionary.ts";
 import { builderEntries } from "./word-builder-parse.js";
 import { buildUrl, parseUrl } from "./router.js";
 

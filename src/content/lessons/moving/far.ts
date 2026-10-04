@@ -7,16 +7,19 @@ export default lessonModule({
   id: "far",
   words: [
     {
-      term: "{{word:yuan3}}",
-      hanzi: "远",
+      word: "yuan3",
       en: "far",
       ru: "далеко, далёкий",
     },
     {
-      term: "{{word:fu4jin4}}",
-      hanzi: "附近",
+      word: "fu4jin4",
       en: "nearby, the area near",
       ru: "поблизости, рядом",
+    },
+    {
+      word: "guo2",
+      en: "country",
+      ru: "страна",
     },
   ],
   prose: {
@@ -26,6 +29,7 @@ export default lessonModule({
       "**Place + {{word:hen3}} + {{word:yuan3}} / Thing + {{word:zai4}} (+ place) + {{word:fu4jin4}}**",
       "",
       "{{word:fu4jin4}} is a place word, like {{word:pang2bian1}}: say {{word:zai4}} {{word:fu4jin4}}, not {{word:hen3}} {{word:fu4jin4}}.",
+      "{{word:guo2}} is a country: {{Word:wo3}}-{{word:de}} {{word:guo2}} {{word:hen3}} {{word:yuan3}}, my country is far. Everyday Mandarin often says {{word:guo2}}-{{word:jia1}}.",
     ],
     ru: [
       "**Чтобы сказать, что место далеко**, поставьте после него {{word:hen3}} {{word:yuan3}} (очень далеко). **Чтобы сказать, что что-то близко**, поставьте {{word:fu4jin4}} (поблизости) после {{word:zai4}} или после {{word:zai4}} и места.",
@@ -33,6 +37,7 @@ export default lessonModule({
       "**Место + {{word:hen3}} + {{word:yuan3}} / Вещь + {{word:zai4}} (+ место) + {{word:fu4jin4}}**",
       "",
       "{{word:fu4jin4}} — слово места, как {{word:pang2bian1}}: говорите {{word:zai4}} {{word:fu4jin4}}, а не {{word:hen3}} {{word:fu4jin4}}.",
+      "{{word:guo2}} — страна: {{Word:wo3}}-{{word:de}} {{word:guo2}} {{word:hen3}} {{word:yuan3}} — моя страна далеко. В обычном китайском часто говорят {{word:guo2}}-{{word:jia1}}.",
     ],
     tldr: {
       en: "{{word:yuan3}} is far: {{word:hen3}} {{word:yuan3}}. {{word:fu4jin4}} is nearby: {{word:zai4}} {{word:fu4jin4}}.",
@@ -44,8 +49,8 @@ export default lessonModule({
     },
   },
   info: {
-    en: "{{word:yuan3}} / {{word:fu4jin4}}, far / nearby: {{Word:na4}}-ge {{word:di4fang1}} {{word:hen3}} {{word:yuan3}}. (That place is far.) {{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:zai4}} {{word:fu4jin4}}. (My home is nearby.)",
-    ru: "{{word:yuan3}} / {{word:fu4jin4}} — далеко / поблизости: {{Word:na4}}-ge {{word:di4fang1}} {{word:hen3}} {{word:yuan3}}. (То место далеко.) {{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:zai4}} {{word:fu4jin4}}. (Мой дом поблизости.)",
+    en: "{{word:yuan3}} / {{word:fu4jin4}}, far / nearby: {{Word:wo3}}-{{word:de}} {{word:guo2}} {{word:hen3}} {{word:yuan3}}. (My country is far.) {{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:zai4}} {{word:fu4jin4}}. (My home is nearby.)",
+    ru: "{{word:yuan3}} / {{word:fu4jin4}} — далеко / поблизости: {{Word:wo3}}-{{word:de}} {{word:guo2}} {{word:hen3}} {{word:yuan3}}. (Моя страна далеко.) {{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:zai4}} {{word:fu4jin4}}. (Мой дом поблизости.)",
   },
   examples: [
     {
@@ -84,6 +89,18 @@ export default lessonModule({
       en: "Is there water near home?",
       ru: "Около дома есть вода?",
     },
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:guo2}} {{word:hen3}} {{word:yuan3}}.",
+      hanzi: "我的国很远。",
+      en: "My country is far.",
+      ru: "Моя страна далеко.",
+    },
+    {
+      pinyin: "{{Word:ni3}}-{{word:de}} {{word:guo2}} {{word:hen3}} {{word:da4}} {{word:ma}}?",
+      hanzi: "你的国很大吗？",
+      en: "Is your country big?",
+      ru: "Твоя страна большая?",
+    },
   ],
   exercises: [
     {
@@ -97,6 +114,12 @@ export default lessonModule({
       ru: "Мой дом поблизости.",
       answer: "{{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:zai4}} {{word:fu4jin4}}.",
       hanzi: "我的家在附近。",
+    },
+    {
+      en: "Is your country far?",
+      ru: "Твоя страна далеко?",
+      answer: "{{Word:ni3}}-{{word:de}} {{word:guo2}} {{word:yuan3}} {{word:ma}}?",
+      hanzi: "你的国远吗？",
     },
   ],
 });

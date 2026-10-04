@@ -6,26 +6,22 @@ export default lessonModule({
   id: "color-thing",
   words: [
     {
-      term: "{{word:bai2se4}}",
-      hanzi: "白色",
+      word: "bai2se4",
       en: "white",
       ru: "белый",
     },
     {
-      term: "{{word:hei1se4}}",
-      hanzi: "黑色",
+      word: "hei1se4",
       en: "black",
       ru: "чёрный",
     },
     {
-      term: "{{word:hong2se4}}",
-      hanzi: "红色",
+      word: "hong2se4",
       en: "red",
       ru: "красный",
     },
     {
-      term: "{{word:huang2se4}}",
-      hanzi: "黄色",
+      word: "huang2se4",
       en: "yellow",
       ru: "жёлтый",
     },
@@ -74,10 +70,10 @@ export default lessonModule({
       ru: "Чёрное животное.",
     },
     {
-      pinyin: "{{Word:huang2se4}}-{{word:de}} {{word:shui3guo3}}.",
-      hanzi: "黄色的水果。",
-      en: "Yellow fruit.",
-      ru: "Жёлтый фрукт.",
+      pinyin: "{{Word:huang2se4}}-{{word:de}} {{word:zhi2wu4}}.",
+      hanzi: "黄色的植物。",
+      en: "A yellow plant.",
+      ru: "Жёлтое растение.",
     },
     {
       pinyin: "{{Word:ba3}} {{word:hong2se4}}-{{word:de}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:zhe4}}-{{word:li3}}.",

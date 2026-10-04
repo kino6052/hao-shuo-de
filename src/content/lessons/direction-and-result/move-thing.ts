@@ -48,10 +48,10 @@ export default lessonModule({
       ru: "Положи одежду внутрь!",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:ba3}} {{word:shui3guo3}} {{word:na2}}-{{word:qi3}}-{{word:lai2}}.",
-      hanzi: "我把水果拿起来。",
-      en: "I pick up the fruit.",
-      ru: "Я поднимаю фрукт.",
+      pinyin: "{{Word:wo3}} {{word:ba3}} {{word:zhi2wu4}} {{word:na2}}-{{word:qi3}}-{{word:lai2}}.",
+      hanzi: "我把植物拿起来。",
+      en: "I pick up the plant.",
+      ru: "Я поднимаю растение.",
     },
     {
       pinyin: "{{Word:ba3}} {{word:gong1ju4}} {{word:fang4}}-{{word:xia4}}!",

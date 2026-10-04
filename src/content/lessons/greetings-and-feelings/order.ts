@@ -6,14 +6,12 @@ export default lessonModule({
   id: "order",
   words: [
     {
-      term: "{{word:pa4}}",
-      hanzi: "怕",
+      word: "pa4",
       en: "be scared (of)",
       ru: "бояться",
     },
     {
-      term: "{{word:xiao4}}",
-      hanzi: "笑",
+      word: "xiao4",
       en: "laugh, smile",
       ru: "смеяться, улыбаться",
     },

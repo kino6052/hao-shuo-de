@@ -6,20 +6,17 @@ export default lessonModule({
   id: "because",
   words: [
     {
-      term: "{{word:yin1wei4}}",
-      hanzi: "因为",
+      word: "yin1wei4",
       en: "because",
       ru: "потому что, так как",
     },
     {
-      term: "{{word:si3}}",
-      hanzi: "死",
+      word: "si3",
       en: "die; dead",
       ru: "умирать; мёртвый",
     },
     {
-      term: "{{word:huo2}}",
-      hanzi: "活",
+      word: "huo2",
       en: "live; alive",
       ru: "жить; живой",
     },
@@ -57,13 +54,13 @@ export default lessonModule({
       ru: "Так как мне холодно, я не пойду на улицу.",
     },
     {
-      pinyin: "{{Word:yin1wei4}} {{word:hen3}} {{word:re4}}, {{word:wo3}}-{{word:de}} {{word:pi2fu1}} {{word:bian4}} {{word:hong2se4}} {{word:le}}.",
-      hanzi: "因为很热，我的皮肤变红色了。",
+      pinyin: "{{Word:yin1wei4}} {{word:hen3}} {{word:re4}}, {{word:wo3}} {{word:shen1ti3}}-{{word:de}} {{word:wai4}}-{{word:mian4}} {{word:bian4}} {{word:hong2se4}} {{word:le}}.",
+      hanzi: "因为很热，我身体的外面变红色了。",
       en: "Because it was hot, my skin turned red.",
       ru: "Так как было жарко, у меня покраснела кожа.",
     },
     {
-      pinyin: "{{Word:yin1wei4}} {{word:you3}} {{word:kong1qi4}}, {{word:wo3}}-{{word:men}} {{word:neng2}} {{word:huo2}}.",
+      pinyin: "{{Word:yin1wei4}} {{word:you3}} {{word:kong1}}-{{word:qi4}}, {{word:wo3}}-{{word:men}} {{word:neng2}} {{word:huo2}}.",
       hanzi: "因为有空气，我们能活。",
       en: "Because there's air, we can live.",
       ru: "Так как есть воздух, мы можем жить.",
@@ -75,7 +72,7 @@ export default lessonModule({
       ru: "Так как было жарко, я выключил огонь.",
     },
     {
-      pinyin: "{{Word:yin1wei4}} {{word:kong1qi4}} {{word:hen3}} {{word:leng3}}, {{word:wo3}} {{word:bu4}} {{word:chu1}}-{{word:qu4}}.",
+      pinyin: "{{Word:yin1wei4}} {{word:kong1}}-{{word:qi4}} {{word:hen3}} {{word:leng3}}, {{word:wo3}} {{word:bu4}} {{word:chu1}}-{{word:qu4}}.",
       hanzi: "因为空气很冷，我不出去。",
       en: "It's cold out, so I'm not going out.",
       ru: "На улице холодно, поэтому я не выхожу.",
@@ -111,6 +108,12 @@ export default lessonModule({
       ru: "Растение погибло.",
       answer: "{{Word:zhi2wu4}} {{word:si3}} {{word:le}}.",
       hanzi: "植物死了。",
+    },
+    {
+      en: "Because the light isn't bright, I can't see.",
+      ru: "Свет тусклый, поэтому мне не видно.",
+      answer: "{{Word:yin1wei4}} {{word:deng1}} {{word:bu4}} {{word:ming2}}, {{word:wo3}} {{word:kan4}}-{{word:bu4}}-{{word:dao4}}.",
+      hanzi: "因为灯不明，我看不到。",
     },
   ],
   faq: [

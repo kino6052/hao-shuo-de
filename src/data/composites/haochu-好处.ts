@@ -1,0 +1,15 @@
+import { composite } from "../../lib/composite.ts";
+
+export default composite({
+  rank: 1480,
+  phase: 3,
+  zh: "好处",
+  py: "hǎochù",
+  en: "benefit",
+  ru: "польза",
+  hsd: ["{{word:hao3}}-{{word:de}} {{word:di4fang1}}"],
+  tts: ["好的地方"],
+  literal: "the good points",
+  fit: "plain",
+  proposed: true,
+});

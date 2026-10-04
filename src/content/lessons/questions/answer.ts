@@ -46,10 +46,10 @@ export default lessonModule({
       ru: "Ты слушаешь? Нет, не слушаю.",
     },
     {
-      pinyin: "{{Word:ni3}} {{word:you3}}-{{word:mei2}}-{{word:you3}} {{word:shui3guo3}}? {{Word:you3}}.",
-      hanzi: "你有没有水果？有。",
-      en: "Do you have fruit? Yes, I do.",
-      ru: "У тебя есть фрукты? Да, есть.",
+      pinyin: "{{Word:ni3}} {{word:you3}}-{{word:mei2}}-{{word:you3}} {{word:shui3}}? {{Word:you3}}.",
+      hanzi: "你有没有水？有。",
+      en: "Do you have water? Yes, I do.",
+      ru: "У тебя есть вода? Да, есть.",
     },
   ],
   exercises: [

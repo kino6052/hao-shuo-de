@@ -6,8 +6,7 @@ export default lessonModule({
   id: "is-color",
   words: [
     {
-      term: "{{word:lan2se4}}",
-      hanzi: "蓝色",
+      word: "lan2se4",
       en: "blue, green",
       ru: "синий, голубой, зелёный",
     },
@@ -47,10 +46,10 @@ export default lessonModule({
       ru: "Моя одежда белая.",
     },
     {
-      pinyin: "{{Word:di4}}-{{word:shang4}}-{{word:de}} {{word:ni2}} {{word:shi4}} {{word:hei1se4}}-{{word:de}}.",
-      hanzi: "地上的泥是黑色的。",
-      en: "The mud on the floor is black.",
-      ru: "Грязь на полу чёрная.",
+      pinyin: "{{Word:di4}}-{{word:shang4}}-{{word:de}} {{word:gun4zi}} {{word:shi4}} {{word:hei1se4}}-{{word:de}}.",
+      hanzi: "地上的棍子是黑色的。",
+      en: "The stick on the floor is black.",
+      ru: "Палка на полу чёрная.",
     },
     {
       pinyin: "{{Word:zhe4}}-ge {{word:dong4wu4}}-{{word:de}} {{word:shen1ti3}} {{word:shi4}} {{word:huang2se4}}-{{word:de}}.",
@@ -85,10 +84,10 @@ export default lessonModule({
   ],
   exercises: [
     {
-      en: "The fruit is yellow.",
-      ru: "Фрукт жёлтый.",
-      answer: "{{Word:shui3guo3}} {{word:shi4}} {{word:huang2se4}}-{{word:de}}.",
-      hanzi: "水果是黄色的。",
+      en: "The box is yellow.",
+      ru: "Коробка жёлтая.",
+      answer: "{{Word:he2zi}} {{word:shi4}} {{word:huang2se4}}-{{word:de}}.",
+      hanzi: "盒子是黄色的。",
     },
     {
       en: "The animal is black.",
@@ -101,6 +100,24 @@ export default lessonModule({
       ru: "Коробка синяя.",
       answer: "{{Word:he2zi}} {{word:shi4}} {{word:lan2se4}}-{{word:de}}.",
       hanzi: "盒子是蓝色的。",
+    },
+    {
+      en: "Her eyes are blue.",
+      ru: "У неё голубые глаза.",
+      answer: "{{Word:ta1}}-{{word:de}} {{word:yan3jing}} {{word:shi4}} {{word:lan2se4}}-{{word:de}}.",
+      hanzi: "她的眼睛是蓝色的。",
+    },
+    {
+      en: "My car is red.",
+      ru: "Моя машина красная.",
+      answer: "{{Word:wo3}}-{{word:de}} {{word:che1}} {{word:shi4}} {{word:hong2se4}}-{{word:de}}.",
+      hanzi: "我的车是红色的。",
+    },
+    {
+      en: "The sky is blue.",
+      ru: "Небо синее.",
+      answer: "{{Word:tian1}} {{word:shi4}} {{word:lan2se4}}-{{word:de}}.",
+      hanzi: "天是蓝色的。",
     },
   ],
   faq: [

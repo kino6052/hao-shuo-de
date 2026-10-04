@@ -6,14 +6,12 @@ export default lessonModule({
   id: "and-or",
   words: [
     {
-      term: "{{word:he2}}",
-      hanzi: "和",
+      word: "he2",
       en: "and (between nouns)",
       ru: "и (между существительными)",
     },
     {
-      term: "{{word:huo4zhe3}}",
-      hanzi: "或者",
+      word: "huo4zhe3",
       en: "or",
       ru: "или",
     },
@@ -74,10 +72,10 @@ export default lessonModule({
       ru: "Я хочу это или то.",
     },
     {
-      pinyin: "{{Word:chi1}} {{word:shui3guo3}} {{word:huo4zhe3}} {{word:mi3fan4}}.",
-      hanzi: "吃水果或者米饭。",
-      en: "Eat fruit or rice.",
-      ru: "Ешь фрукты или рис.",
+      pinyin: "{{Word:na2}} {{word:he2zi}} {{word:huo4zhe3}} {{word:gong1ju4}}.",
+      hanzi: "拿盒子或者工具。",
+      en: "Take the box or the tool.",
+      ru: "Возьми коробку или инструмент.",
     },
     {
       pinyin: "{{Word:wo3}} {{word:yao4}} {{word:hong2se4}}-{{word:de}} {{word:huo4zhe3}} {{word:lan2se4}}-{{word:de}}.",
@@ -100,16 +98,22 @@ export default lessonModule({
   ],
   exercises: [
     {
-      en: "I want fruit and rice.",
-      ru: "Я хочу фрукты и рис.",
-      answer: "{{Word:wo3}} {{word:yao4}} {{word:shui3guo3}} {{word:he2}} {{word:mi3fan4}}.",
-      hanzi: "我要水果和米饭。",
+      en: "I want fruit and water.",
+      ru: "Я хочу фрукты и воду.",
+      answer: "{{Word:wo3}} {{word:yao4}} {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1xi}} {{word:he2}} {{word:shui3}}.",
+      hanzi: "我要植物生的东西和水。",
     },
     {
       en: "this one or that one",
       ru: "это или то",
       answer: "{{Word:zhe4}}-ge {{word:huo4zhe3}} {{word:na4}}-ge.",
       hanzi: "这个或者那个。",
+    },
+    {
+      en: "The box is between you and me.",
+      ru: "Коробка между тобой и мной.",
+      answer: "{{Word:he2zi}} {{word:zai4}} {{word:ni3}} {{word:he2}} {{word:wo3}} {{word:zhong1}}-{{word:jian1}}.",
+      hanzi: "盒子在你和我中间。",
     },
   ],
   faq: [

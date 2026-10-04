@@ -29,6 +29,7 @@ import { parse as parseYaml } from 'yaml';
 import { findJargon, findCoreTerms } from './jargon.js';
 import { gatePolicy } from './finished-lessons.js';
 import { LESSON_IDS, lessonNumber, importLessonFile } from './lessons.js';
+import dictionaryData from '../src/data/dictionary.ts';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -119,7 +120,7 @@ for (const file of readdirSync(CONTENT_DIR).filter((f) => f.endsWith('.md') && !
 // ---------- dictionary: definitions, part-of-speech labels, categories ----------
 if (wanted('dictionary')) {
   checked.push('dictionary');
-  const dictionary = JSON.parse(readFileSync(resolve(ROOT, 'src/data/dictionary.json'), 'utf-8'));
+  const dictionary = dictionaryData;
   for (const [id, word] of Object.entries(dictionary.words)) {
     scan('dictionary', `${id} (part of speech)`, word.pos?.eng);
     scan('dictionary', `${id} (definition)`, word.definition?.eng);

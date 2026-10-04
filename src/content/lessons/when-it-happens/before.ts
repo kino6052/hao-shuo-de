@@ -6,14 +6,12 @@ export default lessonModule({
   id: "before",
   words: [
     {
-      term: "{{word:yue4}}",
-      hanzi: "月",
+      word: "yue4",
       en: "moon, night",
       ru: "луна, ночь",
     },
     {
-      term: "{{word:guo4}}",
-      hanzi: "过",
+      word: "guo4",
       en: "after a verb: have done before",
       ru: "после глагола: уже когда-то делал",
     },
@@ -43,15 +41,15 @@ export default lessonModule({
     },
   },
   info: {
-    en: "verb-{{word:guo4}}, done before: {{Word:wo3}} {{word:chi1}}-{{word:guo4}} {{word:mi3fan4}}. (I've eaten rice before.)",
-    ru: "глагол-{{word:guo4}} — уже когда-то делал: {{Word:wo3}} {{word:chi1}}-{{word:guo4}} {{word:mi3fan4}}. (Я уже пробовал рис.)",
+    en: "verb-{{word:guo4}}, done before: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:zhe4}}-ge {{word:dong4wu4}}. (I've seen this animal before.)",
+    ru: "глагол-{{word:guo4}} — уже когда-то делал: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:zhe4}}-ge {{word:dong4wu4}}. (Я уже видел это животное.)",
   },
   examples: [
     {
-      pinyin: "{{Word:wo3}} {{word:chi1}}-{{word:guo4}} {{word:mi3fan4}}.",
-      hanzi: "我吃过米饭。",
-      en: "I've eaten rice before.",
-      ru: "Я уже пробовал рис.",
+      pinyin: "{{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:zhe4}}-ge {{word:dong4wu4}}.",
+      hanzi: "我看过这个动物。",
+      en: "I've seen this animal before.",
+      ru: "Я уже видел это животное.",
     },
     {
       pinyin: "{{Word:ni3}} {{word:kan4}}-{{word:guo4}} {{word:yue4}} {{word:ma}}?",
@@ -66,7 +64,7 @@ export default lessonModule({
       ru: "Он это уже говорил.",
     },
     {
-      pinyin: "{{Word:zhe4}} {{word:fa1sheng1}}-{{word:guo4}}.",
+      pinyin: "{{Word:zhe4}} {{word:fa1}}-{{word:sheng1}}-{{word:guo4}}.",
       hanzi: "这发生过。",
       en: "This has happened before.",
       ru: "Такое уже случалось.",
@@ -93,8 +91,8 @@ export default lessonModule({
         en: "What's the difference between {{word:le}} and -{{word:guo4}}?",
         ru: "Чем {{word:le}} отличается от -{{word:guo4}}?",
       },
-      en: "{{word:le}} says it's done: {{Word:wo3}} {{word:chi1}} {{word:le}} (I ate, I've eaten). -{{word:guo4}} says it has happened at least once, some time before: {{Word:wo3}} {{word:chi1}}-{{word:guo4}} {{word:mi3fan4}} (I've had rice before).",
-      ru: "{{word:le}} говорит, что дело сделано: {{Word:wo3}} {{word:chi1}} {{word:le}} (Я поел). -{{word:guo4}} говорит, что это хотя бы раз уже было когда-то раньше: {{Word:wo3}} {{word:chi1}}-{{word:guo4}} {{word:mi3fan4}} (Я уже пробовал рис).",
+      en: "{{word:le}} says it's done: {{Word:wo3}} {{word:chi1}} {{word:le}} (I ate, I've eaten). -{{word:guo4}} says it has happened at least once, some time before: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:zhe4}}-ge {{word:dong4wu4}} (I've seen this animal before).",
+      ru: "{{word:le}} говорит, что дело сделано: {{Word:wo3}} {{word:chi1}} {{word:le}} (Я поел). -{{word:guo4}} говорит, что это хотя бы раз уже было когда-то раньше: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:zhe4}}-ge {{word:dong4wu4}} (Я уже видел это животное).",
     },
   ],
 });

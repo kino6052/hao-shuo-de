@@ -1,29 +1,40 @@
-// To say how something looks or feels, use adjectives like yìng (hard) and
-// yuán (round). Pattern: Thing + hěn + yìng / yuán
+// To say how something looks or feels, use adjectives like yìng (hard),
+// yuán (round) and gāo (tall). Pattern: Thing + hěn + yìng / yuán / gāo
 import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "shape-feel",
+  words: [
+    {
+      word: "gao1",
+      en: "tall, high",
+      ru: "высокий",
+    },
+  ],
   prose: {
     en: [
-      "**To say how something looks or feels**, use adjectives like {{word:ying4}} (hard) and {{word:yuan2}} (round).",
+      "**To say how something looks or feels**, use adjectives like {{word:ying4}} (hard), {{word:yuan2}} (round) and {{word:gao1}} (tall).",
       "",
-      "**Thing + {{word:hen3}} + {{word:ying4}} / {{word:yuan2}}**",
+      "**Thing + {{word:hen3}} + {{word:ying4}} / {{word:yuan2}} / {{word:gao1}}**",
+      "",
+      "They compare like any adjective: {{Word:ta1}} {{word:bi3}} {{word:wo3}} {{word:gao1}}, he's taller than me.",
     ],
     ru: [
-      "**Чтобы сказать, как что-то выглядит или ощущается**, используйте прилагательные, например {{word:ying4}} (твёрдый) и {{word:yuan2}} (круглый).",
+      "**Чтобы сказать, как что-то выглядит или ощущается**, используйте прилагательные, например {{word:ying4}} (твёрдый), {{word:yuan2}} (круглый) и {{word:gao1}} (высокий).",
       "",
-      "**Вещь + {{word:hen3}} + {{word:ying4}} / {{word:yuan2}}**",
+      "**Вещь + {{word:hen3}} + {{word:ying4}} / {{word:yuan2}} / {{word:gao1}}**",
+      "",
+      "Их сравнивают, как любое прилагательное: {{Word:ta1}} {{word:bi3}} {{word:wo3}} {{word:gao1}} — он выше меня.",
     ],
     tldr: {
-      en: "{{word:ying4}} is hard, {{word:yuan2}} is round. They work like any adjective.",
-      ru: "{{word:ying4}} — «твёрдый», {{word:yuan2}} — «круглый». Они работают как любое прилагательное.",
+      en: "{{word:ying4}} is hard, {{word:yuan2}} is round, {{word:gao1}} is tall. They work like any adjective.",
+      ru: "{{word:ying4}} — «твёрдый», {{word:yuan2}} — «круглый», {{word:gao1}} — «высокий». Они работают как любое прилагательное.",
     },
     necessity: { en: "Now you have more to compare.", ru: "Теперь вам есть что ещё сравнивать." },
   },
   info: {
-    en: "Thing + {{word:hen3}} + {{word:ying4}} / {{word:yuan2}}, how it feels or looks: {{Word:yue4}} {{word:hen3}} {{word:yuan2}}. (The moon is round.)",
-    ru: "Вещь + {{word:hen3}} + {{word:ying4}} / {{word:yuan2}} — какая она на ощупь или на вид: {{Word:yue4}} {{word:hen3}} {{word:yuan2}}. (Луна круглая.)",
+    en: "Thing + {{word:hen3}} + {{word:ying4}} / {{word:yuan2}} / {{word:gao1}}, how it feels or looks: {{Word:yue4}} {{word:hen3}} {{word:yuan2}}. (The moon is round.)",
+    ru: "Вещь + {{word:hen3}} + {{word:ying4}} / {{word:yuan2}} / {{word:gao1}} — какая она на ощупь или на вид: {{Word:yue4}} {{word:hen3}} {{word:yuan2}}. (Луна круглая.)",
   },
   examples: [
     {
@@ -56,6 +67,18 @@ export default lessonModule({
       en: "This opening is round.",
       ru: "Это отверстие круглое.",
     },
+    {
+      pinyin: "{{Word:ta1}} {{word:hen3}} {{word:gao1}}.",
+      hanzi: "他很高。",
+      en: "He's tall.",
+      ru: "Он высокий.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:bi3}} {{word:wo3}} {{word:gao1}}.",
+      hanzi: "他比我高。",
+      en: "He's taller than me.",
+      ru: "Он выше меня.",
+    },
   ],
   exercises: [
     {
@@ -75,6 +98,12 @@ export default lessonModule({
       ru: "Палка твёрдая?",
       answer: "{{Word:gun4zi}} {{word:ying4}} {{word:ma}}?",
       hanzi: "棍子硬吗？",
+    },
+    {
+      en: "He's taller than you.",
+      ru: "Он выше тебя.",
+      answer: "{{Word:ta1}} {{word:bi3}} {{word:ni3}} {{word:gao1}}.",
+      hanzi: "他比你高。",
     },
   ],
 });

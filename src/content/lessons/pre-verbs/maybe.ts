@@ -6,8 +6,7 @@ export default lessonModule({
   id: "maybe",
   words: [
     {
-      term: "{{word:ke3neng2}}",
-      hanzi: "可能",
+      word: "ke3neng2",
       en: "maybe, might",
       ru: "может быть, возможно",
     },

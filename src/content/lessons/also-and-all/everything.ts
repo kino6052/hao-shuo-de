@@ -60,7 +60,7 @@ export default lessonModule({
       ru: "Он ничего не увидел.",
     },
     {
-      pinyin: "{{Word:na3li3}}-{{word:dou1}} {{word:you3}} {{word:kong1qi4}}.",
+      pinyin: "{{Word:na3li3}}-{{word:dou1}} {{word:you3}} {{word:kong1}}-{{word:qi4}}.",
       hanzi: "哪里都有空气。",
       en: "There's air everywhere.",
       ru: "Воздух есть везде.",

@@ -21,11 +21,11 @@ export default lesson(meta.id, {
   summary: {
     en: [
       "We often need to say when something happens.",
-      "In this lesson, you'll be able to say \"I ate.\", \"I'm eating right now.\", \"I will eat.\", \"I've eaten rice before.\", and \"At night, I sleep.\"",
+      "In this lesson, you'll be able to say \"I ate.\", \"I'm eating right now.\", \"I will eat.\", \"I've seen this animal before.\", and \"At night, I sleep.\"",
     ],
     ru: [
       "Нам часто нужно уметь выразить время, когда что-то происходит.",
-      "В этом уроке вы научитесь говорить «Я поел.», «Я как раз ем.», «Я буду есть.», «Я уже пробовал рис.» и «Ночью я сплю.»",
+      "В этом уроке вы научитесь говорить «Я поел.», «Я как раз ем.», «Я буду есть.», «Я уже видел это животное.» и «Ночью я сплю.»",
     ],
   },
   modules: [

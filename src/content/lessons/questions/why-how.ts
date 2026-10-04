@@ -6,14 +6,12 @@ export default lessonModule({
   id: "why-how",
   words: [
     {
-      term: "{{word:wei4shen2me}}",
-      hanzi: "为什么",
+      word: "wei4shen2me",
       en: "why",
       ru: "почему",
     },
     {
-      term: "{{word:zen3me}}",
-      hanzi: "怎么",
+      word: "zen3me",
       en: "how",
       ru: "как",
     },

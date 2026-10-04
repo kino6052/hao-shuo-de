@@ -6,8 +6,7 @@ export default lessonModule({
   id: "same",
   words: [
     {
-      term: "{{word:yi1yang4}}",
-      hanzi: "一样",
+      word: "yi1yang4",
       en: "the same",
       ru: "одинаковый, такой же",
     },

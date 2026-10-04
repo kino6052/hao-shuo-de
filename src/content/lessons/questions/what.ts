@@ -6,26 +6,22 @@ export default lessonModule({
   id: "what",
   words: [
     {
-      term: "{{word:shen2me}}",
-      hanzi: "什么",
+      word: "shen2me",
       en: "what, which",
       ru: "что, какой",
     },
     {
-      term: "{{word:wen4}}",
-      hanzi: "问",
+      word: "wen4",
       en: "ask",
       ru: "спрашивать",
     },
     {
-      term: "{{word:zhao3}}",
-      hanzi: "找",
+      word: "zhao3",
       en: "look for",
       ru: "искать",
     },
     {
-      term: "{{word:mai3}}",
-      hanzi: "买",
+      word: "mai3",
       en: "buy",
       ru: "покупать",
     },
@@ -78,10 +74,10 @@ export default lessonModule({
       ru: "О чём он спрашивает?",
     },
     {
-      pinyin: "{{Word:shen2me}} {{word:ren2}} {{word:chi1}} {{word:shui3guo3}}?",
-      hanzi: "什么人吃水果？",
-      en: "Who eats fruit?",
-      ru: "Кто ест фрукты?",
+      pinyin: "{{Word:shen2me}} {{word:ren2}} {{word:chi1}} {{word:zhe4}}-ge?",
+      hanzi: "什么人吃这个？",
+      en: "Who eats this?",
+      ru: "Кто это ест?",
     },
     {
       pinyin: "{{Word:wo3}} {{word:zhao3}} {{word:he2zi}}.",
@@ -96,10 +92,10 @@ export default lessonModule({
       ru: "Что ты покупаешь?",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:mai3}} {{word:shui3guo3}}.",
-      hanzi: "我买水果。",
-      en: "I'm buying fruit.",
-      ru: "Я покупаю фрукты.",
+      pinyin: "{{Word:wo3}} {{word:mai3}} {{word:he2zi}}.",
+      hanzi: "我买盒子。",
+      en: "I'm buying a box.",
+      ru: "Я покупаю коробку.",
     },
     {
       pinyin: "{{Word:ta1}} {{word:mai3}} {{word:gong1ju4}} {{word:ma}}?",
@@ -122,10 +118,10 @@ export default lessonModule({
       hanzi: "什么人问？",
     },
     {
-      en: "Are you buying rice?",
-      ru: "Ты покупаешь рис?",
-      answer: "{{Word:ni3}} {{word:mai3}} {{word:mi3fan4}} {{word:ma}}?",
-      hanzi: "你买米饭吗？",
+      en: "Are you buying a tool?",
+      ru: "Ты покупаешь инструмент?",
+      answer: "{{Word:ni3}} {{word:mai3}} {{word:gong1ju4}} {{word:ma}}?",
+      hanzi: "你买工具吗？",
     },
   ],
 });

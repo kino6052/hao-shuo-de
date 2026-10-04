@@ -5,20 +5,17 @@ export default lessonModule({
   id: "yes-no",
   words: [
     {
-      term: "{{word:ma}}",
-      hanzi: "吗",
+      word: "ma",
       en: "turns a sentence into a yes-or-no question",
       ru: "превращает предложение в вопрос «да или нет»",
     },
     {
-      term: "{{word:gong1ju4}}",
-      hanzi: "工具",
+      word: "gong1ju4",
       en: "tool",
       ru: "инструмент",
     },
     {
-      term: "{{word:he2zi}}",
-      hanzi: "盒子",
+      word: "he2zi",
       en: "box",
       ru: "коробка",
     },
@@ -73,10 +70,10 @@ export default lessonModule({
       ru: "Это коробка?",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:chi1}} {{word:shui3guo3}} {{word:ma}}?",
-      hanzi: "他吃水果吗？",
-      en: "Does he eat fruit?",
-      ru: "Он ест фрукты?",
+      pinyin: "{{Word:ta1}} {{word:he1}} {{word:shui3}} {{word:ma}}?",
+      hanzi: "他喝水吗？",
+      en: "Does he drink water?",
+      ru: "Он пьёт воду?",
     },
     {
       pinyin: "{{Word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}} {{word:fu4mu3}}?",

@@ -5,8 +5,7 @@ export default lessonModule({
   id: "move",
   words: [
     {
-      term: "{{word:dong4}}",
-      hanzi: "动",
+      word: "dong4",
       en: "move",
       ru: "двигаться",
     },

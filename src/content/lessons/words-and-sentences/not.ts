@@ -6,8 +6,7 @@ export default lessonModule({
   id: "not",
   words: [
     {
-      term: "{{word:bu4}}",
-      hanzi: "不",
+      word: "bu4",
       en: "not",
       ru: "не",
     },
@@ -33,15 +32,15 @@ export default lessonModule({
     },
   },
   info: {
-    en: "NOUN + {{word:bu4}} {{word:shi4}} + NOUN: {{Word:dong4wu4}} {{word:bu4}} {{word:shi4}} {{word:shui3guo3}}. (An animal is not a fruit.)",
-    ru: "СУЩЕСТВИТЕЛЬНОЕ + {{word:bu4}} {{word:shi4}} + СУЩЕСТВИТЕЛЬНОЕ: {{Word:dong4wu4}} {{word:bu4}} {{word:shi4}} {{word:shui3guo3}}. (Животное — не фрукт.)",
+    en: "NOUN + {{word:bu4}} {{word:shi4}} + NOUN: {{Word:dong4wu4}} {{word:bu4}} {{word:shi4}} {{word:zhi2wu4}}. (An animal is not a plant.)",
+    ru: "СУЩЕСТВИТЕЛЬНОЕ + {{word:bu4}} {{word:shi4}} + СУЩЕСТВИТЕЛЬНОЕ: {{Word:dong4wu4}} {{word:bu4}} {{word:shi4}} {{word:zhi2wu4}}. (Животное — не растение.)",
   },
   examples: [
     {
-      pinyin: "{{Word:dong4wu4}} {{word:bu4}} {{word:shi4}} {{word:shui3guo3}}.",
-      hanzi: "动物不是水果。",
-      en: "An animal is not a fruit.",
-      ru: "Животное — не фрукт.",
+      pinyin: "{{Word:dong4wu4}} {{word:bu4}} {{word:shi4}} {{word:zhi2wu4}}.",
+      hanzi: "动物不是植物。",
+      en: "An animal is not a plant.",
+      ru: "Животное — не растение.",
     },
     {
       pinyin: "{{Word:zhe4}} {{word:bu4}} {{word:shi4}} {{word:dong4wu4}}.",
@@ -56,18 +55,18 @@ export default lessonModule({
       ru: "Женщина — не мужчина.",
     },
     {
-      pinyin: "{{Word:shui3guo3}} {{word:bu4}} {{word:shi4}} {{word:ren2}}.",
-      hanzi: "水果不是人。",
-      en: "Fruit is not a person.",
-      ru: "Фрукт — не человек.",
+      pinyin: "{{Word:zhi2wu4}} {{word:bu4}} {{word:shi4}} {{word:ren2}}.",
+      hanzi: "植物不是人。",
+      en: "A plant is not a person.",
+      ru: "Растение — не человек.",
     },
   ],
   exercises: [
     {
-      en: "This is not a fruit.",
-      ru: "Это не фрукт.",
-      answer: "{{Word:zhe4}} {{word:bu4}} {{word:shi4}} {{word:shui3guo3}}.",
-      hanzi: "这不是水果。",
+      en: "This is not a plant.",
+      ru: "Это не растение.",
+      answer: "{{Word:zhe4}} {{word:bu4}} {{word:shi4}} {{word:zhi2wu4}}.",
+      hanzi: "这不是植物。",
     },
     {
       en: "An animal is not a person.",

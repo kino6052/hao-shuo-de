@@ -5,8 +5,7 @@ export default lessonModule({
   id: "this",
   words: [
     {
-      term: "{{word:zhe4}}",
-      hanzi: "这",
+      word: "zhe4",
       en: "this",
       ru: "это, этот",
     },
@@ -43,10 +42,10 @@ export default lessonModule({
       ru: "Это человек.",
     },
     {
-      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:shui3guo3}}.",
-      hanzi: "这是水果。",
-      en: "This is a fruit.",
-      ru: "Это фрукт.",
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:zhi2wu4}}.",
+      hanzi: "这是植物。",
+      en: "This is a plant.",
+      ru: "Это растение.",
     },
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:dong4wu4}}.",

@@ -6,20 +6,17 @@ export default lessonModule({
   id: "in-out",
   words: [
     {
-      term: "{{word:jin4}}",
-      hanzi: "进",
+      word: "jin4",
       en: "go in, enter",
       ru: "входить",
     },
     {
-      term: "{{word:chu1}}",
-      hanzi: "出",
+      word: "chu1",
       en: "go out, come out",
       ru: "выходить",
     },
     {
-      term: "{{word:hui2}}",
-      hanzi: "回",
+      word: "hui2",
       en: "go back, come back",
       ru: "возвращаться",
     },

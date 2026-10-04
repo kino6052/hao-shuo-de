@@ -6,20 +6,12 @@ export default lessonModule({
   id: "parts",
   words: [
     {
-      term: "{{word:bi2zi}}",
-      hanzi: "鼻子",
+      word: "bi2zi",
       en: "nose",
       ru: "нос",
     },
     {
-      term: "{{word:pi2fu1}}",
-      hanzi: "皮肤",
-      en: "skin",
-      ru: "кожа",
-    },
-    {
-      term: "{{word:mao2}}",
-      hanzi: "毛",
+      word: "mao2",
       en: "hair, fur",
       ru: "волосы, шерсть",
     },
@@ -72,14 +64,14 @@ export default lessonModule({
       ru: "У животного маленький нос.",
     },
     {
-      pinyin: "{{Word:dong4wu4}}-{{word:de}} {{word:pi2fu1}} {{word:hen3}} {{word:ying4}}.",
-      hanzi: "动物的皮肤很硬。",
+      pinyin: "{{Word:dong4wu4}} {{word:shen1ti3}}-{{word:de}} {{word:wai4}}-{{word:mian4}} {{word:hen3}} {{word:ying4}}.",
+      hanzi: "动物身体的外面很硬。",
       en: "The animal's skin is hard.",
       ru: "У животного твёрдая кожа.",
     },
     {
-      pinyin: "{{Word:wo3}}-{{word:de}} {{word:pi2fu1}} {{word:hen3}} {{word:re4}}.",
-      hanzi: "我的皮肤很热。",
+      pinyin: "{{Word:wo3}} {{word:shen1ti3}}-{{word:de}} {{word:wai4}}-{{word:mian4}} {{word:hen3}} {{word:re4}}.",
+      hanzi: "我身体的外面很热。",
       en: "My skin is hot.",
       ru: "У меня горячая кожа.",
     },
@@ -112,8 +104,8 @@ export default lessonModule({
     {
       en: "Her skin is white.",
       ru: "У неё белая кожа.",
-      answer: "{{Word:ta1}}-{{word:de}} {{word:pi2fu1}} {{word:shi4}} {{word:bai2se4}}-{{word:de}}.",
-      hanzi: "她的皮肤是白色的。",
+      answer: "{{Word:ta1}} {{word:shen1ti3}}-{{word:de}} {{word:wai4}}-{{word:mian4}} {{word:shi4}} {{word:bai2se4}}-{{word:de}}.",
+      hanzi: "她身体的外面是白色的。",
     },
     {
       en: "This animal's fur is white.",

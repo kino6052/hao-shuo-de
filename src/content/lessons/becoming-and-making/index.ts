@@ -1,7 +1,7 @@
 // becoming-and-making ("Modifiers 4 — Becoming and making"): its modules, in reading order.
 // See src/lib/lesson.ts.
 //
-// Rewritten in Phase 2 (BOOK_PLAN.md): it changed (adjective + le), became (biàn), making it so (nòng), putting the thing first (bǎ), where you put it (fàng), and strong (yǒu lìliàng).
+// Rewritten in Phase 2 (BOOK_PLAN.md): it changed (adjective + le), became (biàn), making it so (nòng), putting the thing first (bǎ), where you put it (fàng), and strong (yǒu lì).
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- becoming-and-making).
 import { lesson } from "../../../lib/lesson.ts";
@@ -22,11 +22,11 @@ export default lesson(meta.id, {
   summary: {
     en: [
       "Things change, and we often make them change.",
-      "In this lesson, you'll be able to say \"It got better.\", \"The fruit went bad.\", \"I fixed it.\", and \"He's very strong.\"",
+      "In this lesson, you'll be able to say \"It got better.\", \"The water went bad.\", \"I fixed it.\", and \"He's very strong.\"",
     ],
     ru: [
       "Вещи меняются, и мы часто сами их меняем.",
-      "В этом уроке вы научитесь говорить «Стало лучше.», «Фрукт испортился.», «Я починил.» и «Он очень сильный.»",
+      "В этом уроке вы научитесь говорить «Стало лучше.», «Вода испортилась.», «Я починил.» и «Он очень сильный.»",
     ],
   },
   modules: [

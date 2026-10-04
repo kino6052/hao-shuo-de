@@ -6,8 +6,7 @@ export default lessonModule({
   id: "arrive",
   words: [
     {
-      term: "{{word:dao4}}",
-      hanzi: "到",
+      word: "dao4",
       en: "arrive, to",
       ru: "прибывать, доходить до",
     },

@@ -10,14 +10,14 @@ export default lessonModule({
       "",
       "**verb-verb**",
       "",
-      "It's softer than the verb alone, like verb + {{word:yi1xia4}} (Lesson {{lesson:around-an-action}}): {{Word:wo3}} {{word:kan4}}-kan is \"let me have a look\". You already know one: {{word:xie4}}-xie (Lesson {{lesson:greetings-and-feelings}}).",
+      "It's softer than the verb alone, like verb + {{word:yi1}}-{{word:xia4}} (Lesson {{lesson:around-an-action}}): {{Word:wo3}} {{word:kan4}}-kan is \"let me have a look\". You already know one: {{word:xie4}}-xie (Lesson {{lesson:greetings-and-feelings}}).",
     ],
     ru: [
       "**Чтобы сделать что-то немного или просто попробовать**, скажите глагол два раза. Второй раз — коротко и легко.",
       "",
       "**глагол-глагол**",
       "",
-      "Так мягче, чем один глагол, — как глагол + {{word:yi1xia4}} (урок {{lesson:around-an-action}}): {{Word:wo3}} {{word:kan4}}-kan — «дай-ка я посмотрю». Одно такое слово вы уже знаете: {{word:xie4}}-xie (урок {{lesson:greetings-and-feelings}}).",
+      "Так мягче, чем один глагол, — как глагол + {{word:yi1}}-{{word:xia4}} (урок {{lesson:around-an-action}}): {{Word:wo3}} {{word:kan4}}-kan — «дай-ка я посмотрю». Одно такое слово вы уже знаете: {{word:xie4}}-xie (урок {{lesson:greetings-and-feelings}}).",
     ],
     tldr: {
       en: "Say a verb twice to do it a little: {{word:kan4}}-kan, have a look.",
@@ -43,10 +43,10 @@ export default lessonModule({
       ru: "Я не знаю, так что спрошу.",
     },
     {
-      pinyin: "{{Word:chong2zi}} {{word:si3}} {{word:le}}? {{Word:wo3}} {{word:kan4}}-kan.",
-      hanzi: "虫子死了？我看看。",
-      en: "Is the bug dead? Let me have a look.",
-      ru: "Насекомое умерло? Дай-ка посмотрю.",
+      pinyin: "{{Word:dong4wu4}} {{word:si3}} {{word:le}}? {{Word:wo3}} {{word:kan4}}-kan.",
+      hanzi: "动物死了？我看看。",
+      en: "Is the animal dead? Let me have a look.",
+      ru: "Животное умерло? Дай-ка посмотрю.",
     },
     {
       pinyin: "{{Word:ru2guo3}} {{word:ni3}} {{word:you3}} {{word:shi2jian1}}, {{word:wo3}}-{{word:men}} {{word:wan2r}}-wanr.",
@@ -91,6 +91,12 @@ export default lessonModule({
       ru: "Давай немного поговорим.",
       answer: "{{Word:wo3}}-{{word:men}} {{word:shuo1}}-shuo.",
       hanzi: "我们说说。",
+    },
+    {
+      en: "Let me have a look online.",
+      ru: "Дай-ка посмотрю в интернете.",
+      answer: "{{Word:wo3}} {{word:zai4}} {{word:wang3}}-{{word:shang4}} {{word:kan4}}-kan.",
+      hanzi: "我在网上看看。",
     },
   ],
   faq: [

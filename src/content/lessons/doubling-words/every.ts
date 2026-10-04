@@ -77,8 +77,20 @@ export default lessonModule({
     {
       en: "It's different every time.",
       ru: "Каждый раз по-другому.",
-      answer: "{{Word:ci4}}-{{word:ci4}} {{word:dou1}} {{word:bu4tong2}}.",
-      hanzi: "次次都不同。",
+      answer: "{{Word:ci4}}-{{word:ci4}} {{word:dou1}} {{word:bu4}} {{word:yi1yang4}}.",
+      hanzi: "次次都不一样。",
+    },
+    {
+      en: "I drink water every day.",
+      ru: "Я пью воду каждый день.",
+      answer: "{{Word:wo3}} {{word:tian1}}-{{word:tian1}} {{word:dou1}} {{word:he1}} {{word:shui3}}.",
+      hanzi: "我天天都喝水。",
+    },
+    {
+      en: "He comes every year.",
+      ru: "Он приезжает каждый год.",
+      answer: "{{Word:ta1}} {{word:nian2}}-{{word:nian2}} {{word:dou1}} {{word:lai2}}.",
+      hanzi: "他年年都来。",
     },
   ],
 });

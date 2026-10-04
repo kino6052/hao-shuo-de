@@ -6,7 +6,7 @@ export default lessonModule({
   id: "where",
   words: [
     {
-      term: "{{word:li3}}",
+      word: "li3",
       hanzi: "里面",
       en: "in, inside",
       ru: "в, внутри",

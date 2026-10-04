@@ -1,13 +1,12 @@
 // To help someone do something, put bāng (help) and the person before the
-// verb. Add yīxià to ask nicely. Pattern: bāng + person + verb
+// verb. Add yī-xià to ask nicely. Pattern: bāng + person + verb
 import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "help",
   words: [
     {
-      term: "{{word:bang1}}",
-      hanzi: "帮",
+      word: "bang1",
       en: "help",
       ru: "помогать",
     },
@@ -18,14 +17,14 @@ export default lessonModule({
       "",
       "**Who + {{word:bang1}} + person + verb**",
       "",
-      "Add {{word:yi1xia4}} to ask nicely: {{Word:ni3}} {{word:bang1}} {{word:wo3}} {{word:zhao3}} {{word:yi1xia4}} is \"could you look for it for me?\". \"Help me!\" is {{word:bang1}}-bang {{word:wo3}}!",
+      "Add {{word:yi1}}-{{word:xia4}} to ask nicely: {{Word:ni3}} {{word:bang1}} {{word:wo3}} {{word:zhao3}} {{word:yi1}}-{{word:xia4}} is \"could you look for it for me?\". \"Help me!\" is {{word:bang1}}-bang {{word:wo3}}!",
     ],
     ru: [
       "**Чтобы помочь кому-то что-то сделать**, поставьте {{word:bang1}} (помогать) и человека перед глаголом.",
       "",
       "**Кто + {{word:bang1}} + человек + глагол**",
       "",
-      "Добавьте {{word:yi1xia4}}, чтобы попросить вежливо: {{Word:ni3}} {{word:bang1}} {{word:wo3}} {{word:zhao3}} {{word:yi1xia4}} — «поищешь это за меня?». «Помоги мне!» — это {{word:bang1}}-bang {{word:wo3}}!",
+      "Добавьте {{word:yi1}}-{{word:xia4}}, чтобы попросить вежливо: {{Word:ni3}} {{word:bang1}} {{word:wo3}} {{word:zhao3}} {{word:yi1}}-{{word:xia4}} — «поищешь это за меня?». «Помоги мне!» — это {{word:bang1}}-bang {{word:wo3}}!",
     ],
     tldr: {
       en: "{{word:bang1}} + person + verb is help someone do it: {{word:wo3}} {{word:bang1}} {{word:ni3}} {{word:na2}}.",
@@ -37,8 +36,8 @@ export default lessonModule({
     },
   },
   info: {
-    en: "{{word:bang1}} + person + verb, help: {{Word:ni3}} {{word:bang1}} {{word:wo3}} {{word:na2}} {{word:yi1xia4}}. (Could you hold this for me?)",
-    ru: "{{word:bang1}} + человек + глагол — помочь: {{Word:ni3}} {{word:bang1}} {{word:wo3}} {{word:na2}} {{word:yi1xia4}}. (Подержишь это за меня?)",
+    en: "{{word:bang1}} + person + verb, help: {{Word:ni3}} {{word:bang1}} {{word:wo3}} {{word:na2}} {{word:yi1}}-{{word:xia4}}. (Could you hold this for me?)",
+    ru: "{{word:bang1}} + человек + глагол — помочь: {{Word:ni3}} {{word:bang1}} {{word:wo3}} {{word:na2}} {{word:yi1}}-{{word:xia4}}. (Подержишь это за меня?)",
   },
   examples: [
     {
@@ -48,7 +47,7 @@ export default lessonModule({
       ru: "Помоги мне!",
     },
     {
-      pinyin: "{{Word:ni3}} {{word:bang1}} {{word:wo3}} {{word:na2}} {{word:yi1xia4}}.",
+      pinyin: "{{Word:ni3}} {{word:bang1}} {{word:wo3}} {{word:na2}} {{word:yi1}}-{{word:xia4}}.",
       hanzi: "你帮我拿一下。",
       en: "Could you hold this for me?",
       ru: "Подержишь это за меня?",
@@ -78,7 +77,7 @@ export default lessonModule({
       ru: "Скорее, помоги мне!",
     },
     {
-      pinyin: "{{Word:ni3}} {{word:bang1}} {{word:wo3}} {{word:suan4}} {{word:yi1xia4}}, {{word:hao3}} {{word:ma}}?",
+      pinyin: "{{Word:ni3}} {{word:bang1}} {{word:wo3}} {{word:suan4}} {{word:yi1}}-{{word:xia4}}, {{word:hao3}} {{word:ma}}?",
       hanzi: "你帮我算一下，好吗？",
       en: "Could you work it out for me?",
       ru: "Посчитаешь за меня?",
@@ -106,7 +105,7 @@ export default lessonModule({
     {
       en: "Could you look for it for me?",
       ru: "Поищешь это за меня?",
-      answer: "{{Word:ni3}} {{word:bang1}} {{word:wo3}} {{word:zhao3}} {{word:yi1xia4}}.",
+      answer: "{{Word:ni3}} {{word:bang1}} {{word:wo3}} {{word:zhao3}} {{word:yi1}}-{{word:xia4}}.",
       hanzi: "你帮我找一下。",
     },
     {
@@ -114,6 +113,12 @@ export default lessonModule({
       ru: "Спасибо, что помог мне.",
       answer: "{{Word:xie4}}-xie {{word:ni3}} {{word:bang1}} {{word:wo3}}.",
       hanzi: "谢谢你帮我。",
+    },
+    {
+      en: "Help me find my phone.",
+      ru: "Помоги мне найти телефон.",
+      answer: "{{Word:bang1}} {{word:wo3}} {{word:zhao3}} {{word:wo3}}-{{word:de}} {{word:shou3}}-{{word:ji1}}.",
+      hanzi: "帮我找我的手机。",
     },
   ],
 });

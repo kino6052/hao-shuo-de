@@ -6,8 +6,7 @@ export default lessonModule({
   id: "will",
   words: [
     {
-      term: "{{word:hui4}}",
-      hanzi: "会",
+      word: "hui4",
       en: "will",
       ru: "будет (о том, что случится)",
     },

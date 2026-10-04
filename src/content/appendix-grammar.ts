@@ -231,10 +231,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "NOUN + {{word:bu4}} {{word:shi4}} + NOUN: {{Word:dong4wu4}} {{word:bu4}} {{word:shi4}} {{word:shui3guo3}}. (An animal is not a fruit.)"
+            "NOUN + {{word:bu4}} {{word:shi4}} + NOUN: {{Word:dong4wu4}} {{word:bu4}} {{word:shi4}} {{word:zhi2wu4}}. (An animal is not a plant.)"
           ],
           "ru": [
-            "СУЩЕСТВИТЕЛЬНОЕ + {{word:bu4}} {{word:shi4}} + СУЩЕСТВИТЕЛЬНОЕ: {{Word:dong4wu4}} {{word:bu4}} {{word:shi4}} {{word:shui3guo3}}. (Животное — не фрукт.)"
+            "СУЩЕСТВИТЕЛЬНОЕ + {{word:bu4}} {{word:shi4}} + СУЩЕСТВИТЕЛЬНОЕ: {{Word:dong4wu4}} {{word:bu4}} {{word:shi4}} {{word:zhi2wu4}}. (Животное — не растение.)"
           ],
           "zh": []
         }
@@ -290,10 +290,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "NOUN + {{word:hen3}} {{word:shao3}}: {{Word:ren2}} {{word:hen3}} {{word:shao3}}. (There are very few people.)"
+            "NOUN + {{word:hen3}} {{word:shao3}}: {{Word:ren2}} {{word:hen3}} {{word:shao3}}. (There are few people.)"
           ],
           "ru": [
-            "СУЩЕСТВИТЕЛЬНОЕ + {{word:hen3}} {{word:shao3}}: {{Word:ren2}} {{word:hen3}} {{word:shao3}}. (Людей очень мало.)"
+            "СУЩЕСТВИТЕЛЬНОЕ + {{word:hen3}} {{word:shao3}}: {{Word:ren2}} {{word:hen3}} {{word:shao3}}. (Людей мало.)"
           ],
           "zh": []
         }
@@ -360,10 +360,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:wo3}}-{{word:de}} / {{word:ni3}}-{{word:de}} + noun, whose: {{word:wo3}}-{{word:de}} {{word:shui3guo3}} (my fruit)"
+            "{{word:wo3}}-{{word:de}} / {{word:ni3}}-{{word:de}} + noun, whose: {{word:wo3}}-{{word:de}} {{word:zhi2wu4}} (my plant)"
           ],
           "ru": [
-            "{{word:wo3}}-{{word:de}} / {{word:ni3}}-{{word:de}} + существительное — чей: {{word:wo3}}-{{word:de}} {{word:shui3guo3}} (мой фрукт)"
+            "{{word:wo3}}-{{word:de}} / {{word:ni3}}-{{word:de}} + существительное — чей: {{word:wo3}}-{{word:de}} {{word:zhi2wu4}} (моё растение)"
           ],
           "zh": []
         }
@@ -386,10 +386,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "Who + verb + what: {{Word:wo3}} {{word:chi1}} {{word:mi3fan4}}. (I eat rice.)"
+            "Who + verb + what: {{Word:wo3}} {{word:he1}} {{word:shui3}}. (I drink water.)"
           ],
           "ru": [
-            "Кто + глагол + что: {{Word:wo3}} {{word:chi1}} {{word:mi3fan4}}. (Я ем рис.)"
+            "Кто + глагол + что: {{Word:wo3}} {{word:he1}} {{word:shui3}}. (Я пью воду.)"
           ],
           "zh": []
         }
@@ -618,10 +618,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{Word:fa1sheng1}} {{word:le}} {{word:shen2me}}? (What happened?)"
+            "{{Word:fa1}}-{{word:sheng1}} {{word:le}} {{word:shen2me}}? (What happened?)"
           ],
           "ru": [
-            "{{Word:fa1sheng1}} {{word:le}} {{word:shen2me}}? (Что случилось?)"
+            "{{Word:fa1}}-{{word:sheng1}} {{word:le}} {{word:shen2me}}? (Что случилось?)"
           ],
           "zh": []
         }
@@ -651,10 +651,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "verb-{{word:guo4}}, done before: {{Word:wo3}} {{word:chi1}}-{{word:guo4}} {{word:mi3fan4}}. (I've eaten rice before.)"
+            "verb-{{word:guo4}}, done before: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:zhe4}}-ge {{word:dong4wu4}}. (I've seen this animal before.)"
           ],
           "ru": [
-            "глагол-{{word:guo4}} — уже когда-то делал: {{Word:wo3}} {{word:chi1}}-{{word:guo4}} {{word:mi3fan4}}. (Я уже пробовал рис.)"
+            "глагол-{{word:guo4}} — уже когда-то делал: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:zhe4}}-ge {{word:dong4wu4}}. (Я уже видел это животное.)"
           ],
           "zh": []
         }
@@ -732,10 +732,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "verb + {{word:yi1xia4}}, for a moment: {{Word:deng3}} {{word:yi1xia4}}! (Wait a moment!)"
+            "verb + {{word:yi1}}-{{word:xia4}}, for a moment: {{Word:deng3}} {{word:yi1}}-{{word:xia4}}! (Wait a moment!)"
           ],
           "ru": [
-            "глагол + {{word:yi1xia4}} — на минутку: {{Word:deng3}} {{word:yi1xia4}}! (Подожди минутку!)"
+            "глагол + {{word:yi1}}-{{word:xia4}} — на минутку: {{Word:deng3}} {{word:yi1}}-{{word:xia4}}! (Подожди минутку!)"
           ],
           "zh": []
         }
@@ -802,10 +802,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "place-{{word:li3}} (in), place-{{word:shang4}} (on): {{Word:shui3}} {{word:zai4}} {{word:he2zi}}-{{word:li3}}. (The water is in the box.)"
+            "place-{{word:li3}} (in), place-{{word:shang4}} (on): {{Word:shui3}} {{word:zai4}} {{word:he2zi}}-{{word:li3}}. (The water is in the box.) {{word:wang3}}-{{word:shang4}}, online: {{Word:wo3}} {{word:zai4}} {{word:wang3}}-{{word:shang4}} {{word:zhao3}}. (I'm looking online.)"
           ],
           "ru": [
-            "место-{{word:li3}} (в), место-{{word:shang4}} (на): {{Word:shui3}} {{word:zai4}} {{word:he2zi}}-{{word:li3}}. (Вода в коробке.)"
+            "место-{{word:li3}} (в), место-{{word:shang4}} (на): {{Word:shui3}} {{word:zai4}} {{word:he2zi}}-{{word:li3}}. (Вода в коробке.) {{word:wang3}}-{{word:shang4}} — в интернете: {{Word:wo3}} {{word:zai4}} {{word:wang3}}-{{word:shang4}} {{word:zhao3}}. (Я ищу в интернете.)"
           ],
           "zh": []
         }
@@ -817,6 +817,17 @@ const content: Entry[] = [
           ],
           "ru": [
             "X-{{word:de}} {{word:qian2}}-{{word:mian4}} / {{word:hou4}}-{{word:mian4}} / {{word:xia4}}-{{word:mian4}} / {{word:pang2bian1}}: {{Word:wo3}} {{word:zai4}} {{word:ni3}}-{{word:de}} {{word:pang2bian1}}. (Я рядом с тобой.)"
+          ],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:zai4}} {{word:zhong1}}-{{word:jian1}}, in the middle: {{Word:he2zi}} {{word:zai4}} {{word:zhong1}}-{{word:jian1}}. (The box is in the middle.)"
+          ],
+          "ru": [
+            "{{word:zai4}} {{word:zhong1}}-{{word:jian1}} — посередине: {{Word:he2zi}} {{word:zai4}} {{word:zhong1}}-{{word:jian1}}. (Коробка посередине.)"
           ],
           "zh": []
         }
@@ -905,10 +916,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:yuan3}} / {{word:fu4jin4}}, far / nearby: {{Word:na4}}-ge {{word:di4fang1}} {{word:hen3}} {{word:yuan3}}. (That place is far.) {{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:zai4}} {{word:fu4jin4}}. (My home is nearby.)"
+            "{{word:yuan3}} / {{word:fu4jin4}}, far / nearby: {{Word:wo3}}-{{word:de}} {{word:guo2}} {{word:hen3}} {{word:yuan3}}. (My country is far.) {{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:zai4}} {{word:fu4jin4}}. (My home is nearby.)"
           ],
           "ru": [
-            "{{word:yuan3}} / {{word:fu4jin4}} — далеко / поблизости: {{Word:na4}}-ge {{word:di4fang1}} {{word:hen3}} {{word:yuan3}}. (То место далеко.) {{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:zai4}} {{word:fu4jin4}}. (Мой дом поблизости.)"
+            "{{word:yuan3}} / {{word:fu4jin4}} — далеко / поблизости: {{Word:wo3}}-{{word:de}} {{word:guo2}} {{word:hen3}} {{word:yuan3}}. (Моя страна далеко.) {{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:zai4}} {{word:fu4jin4}}. (Мой дом поблизости.)"
           ],
           "zh": []
         }
@@ -916,10 +927,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:lu4}}, road, way: {{Word:ni3}} {{word:zhi1dao4}} {{word:lu4}} {{word:ma}}? (Do you know the way?)"
+            "{{word:lu4}}, road, way: {{Word:ni3}} {{word:zhi1dao4}} {{word:lu4}} {{word:ma}}? (Do you know the way?) {{word:che1}}, car: {{Word:che1}} {{word:zai4}} {{word:lu4}}-{{word:shang4}}. (The car is on the road.)"
           ],
           "ru": [
-            "{{word:lu4}} — дорога, путь: {{Word:ni3}} {{word:zhi1dao4}} {{word:lu4}} {{word:ma}}? (Ты знаешь дорогу?)"
+            "{{word:lu4}} — дорога, путь: {{Word:ni3}} {{word:zhi1dao4}} {{word:lu4}} {{word:ma}}? (Ты знаешь дорогу?) {{word:che1}} — машина: {{Word:che1}} {{word:zai4}} {{word:lu4}}-{{word:shang4}}. (Машина на дороге.)"
           ],
           "zh": []
         }
@@ -986,6 +997,17 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
+            "{{word:hen3}} {{word:nan2}}, difficult; {{word:hao3}}-{{word:kan4}} / {{word:nan2}}-{{word:kan4}}, beautiful / ugly: {{Word:ta1}} {{word:hen3}} {{word:hao3}}-{{word:kan4}}. (She's beautiful.)"
+          ],
+          "ru": [
+            "{{word:hen3}} {{word:nan2}} — трудно; {{word:hao3}}-{{word:kan4}} / {{word:nan2}}-{{word:kan4}} — красивый / некрасивый: {{Word:ta1}} {{word:hen3}} {{word:hao3}}-{{word:kan4}}. (Она красивая.)"
+          ],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
             "adjective + {{word:ma}}?, asking: {{Word:ni3}} {{word:leng3}} {{word:ma}}? (Are you cold?)"
           ],
           "ru": [
@@ -1045,10 +1067,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:bu4tong2}}, different: {{Word:wo3}} {{word:yao4}} {{word:bu4tong2}}-{{word:de}} {{word:yi1fu}}. (I want different clothes.)"
+            "{{word:bu4}} {{word:yi1yang4}}, different: {{Word:wo3}} {{word:yao4}} {{word:bu4}}-{{word:yi1yang4}}-{{word:de}} {{word:yi1fu}}. (I want different clothes.)"
           ],
           "ru": [
-            "{{word:bu4tong2}} — разный: {{Word:wo3}} {{word:yao4}} {{word:bu4tong2}}-{{word:de}} {{word:yi1fu}}. (Мне нужна другая одежда.)"
+            "{{word:bu4}} {{word:yi1yang4}} — разный: {{Word:wo3}} {{word:yao4}} {{word:bu4}}-{{word:yi1yang4}}-{{word:de}} {{word:yi1fu}}. (Мне нужна другая одежда.)"
           ],
           "zh": []
         }
@@ -1067,10 +1089,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:zhe4}}-{{word:zhong3}} + noun, this kind of: {{word:zhe4}}-{{word:zhong3}} {{word:shui3guo3}} (this kind of fruit)"
+            "{{word:zhe4}}-{{word:zhong3}} + noun, this kind of: {{word:zhe4}}-{{word:zhong3}} {{word:zhi2wu4}} (this kind of plant)"
           ],
           "ru": [
-            "{{word:zhe4}}-{{word:zhong3}} + существительное — такой вид: {{word:zhe4}}-{{word:zhong3}} {{word:shui3guo3}} (такие фрукты)"
+            "{{word:zhe4}}-{{word:zhong3}} + существительное — такой вид: {{word:zhe4}}-{{word:zhong3}} {{word:zhi2wu4}} (такие растения)"
           ],
           "zh": []
         }
@@ -1078,10 +1100,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "Thing + {{word:hen3}} + {{word:ying4}} / {{word:yuan2}}, how it feels or looks: {{Word:yue4}} {{word:hen3}} {{word:yuan2}}. (The moon is round.)"
+            "Thing + {{word:hen3}} + {{word:ying4}} / {{word:yuan2}} / {{word:gao1}}, how it feels or looks: {{Word:yue4}} {{word:hen3}} {{word:yuan2}}. (The moon is round.)"
           ],
           "ru": [
-            "Вещь + {{word:hen3}} + {{word:ying4}} / {{word:yuan2}} — какая она на ощупь или на вид: {{Word:yue4}} {{word:hen3}} {{word:yuan2}}. (Луна круглая.)"
+            "Вещь + {{word:hen3}} + {{word:ying4}} / {{word:yuan2}} / {{word:gao1}} — какая она на ощупь или на вид: {{Word:yue4}} {{word:hen3}} {{word:yuan2}}. (Луна круглая.)"
           ],
           "zh": []
         }
@@ -1108,6 +1130,17 @@ const content: Entry[] = [
           ],
           "ru": [
             "{{word:ye3}} + глагол — тоже: {{Word:wo3}} {{word:ye3}} {{word:chi1}}. (Я тоже ем.)"
+          ],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:kai1}} / {{word:guan1}} {{word:deng1}}, light on / off: {{Word:kai1}} {{word:deng1}}! (Turn on the light!) {{word:hen3}} {{word:ming2}}, bright: {{Word:deng1}} {{word:hen3}} {{word:ming2}}. (The light is bright.)"
+          ],
+          "ru": [
+            "{{word:kai1}} / {{word:guan1}} {{word:deng1}} — включить / выключить свет: {{Word:kai1}} {{word:deng1}}! (Включи свет!) {{word:hen3}} {{word:ming2}} — яркий: {{Word:deng1}} {{word:hen3}} {{word:ming2}}. (Свет яркий.)"
           ],
           "zh": []
         }
@@ -1229,10 +1262,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:you3}} {{word:li4liang4}}, strong: {{Word:ta1}} {{word:hen3}} {{word:you3}} {{word:li4liang4}}. (He's very strong.)"
+            "{{word:you3}} {{word:li4}}, strong: {{Word:ta1}} {{word:hen3}} {{word:you3}} {{word:li4}}. (He's very strong.)"
           ],
           "ru": [
-            "{{word:you3}} {{word:li4liang4}} — сильный: {{Word:ta1}} {{word:hen3}} {{word:you3}} {{word:li4liang4}}. (Он очень сильный.)"
+            "{{word:you3}} {{word:li4}} — сильный: {{Word:ta1}} {{word:hen3}} {{word:you3}} {{word:li4}}. (Он очень сильный.)"
           ],
           "zh": []
         }
@@ -1310,10 +1343,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "verb-{{word:de}}-result / verb-{{word:bu4}}-result, can / can't: {{Word:wo3}} {{word:kan4}}-{{word:bu4}}-{{word:dao4}}. (I can't see it.)"
+            "verb-{{word:de}}-result / verb-{{word:bu4}}-result, can / can't: {{Word:wo3}}-{{word:de}} {{word:yan3jing}} {{word:bu4}} {{word:hao3}}, {{word:kan4}}-{{word:bu4}}-{{word:dao4}}. (My eyes are bad, I can't see.)"
           ],
           "ru": [
-            "глагол-{{word:de}}-результат / глагол-{{word:bu4}}-результат — получается / не получается: {{Word:wo3}} {{word:kan4}}-{{word:bu4}}-{{word:dao4}}. (Мне не видно.)"
+            "глагол-{{word:de}}-результат / глагол-{{word:bu4}}-результат — получается / не получается: {{Word:wo3}}-{{word:de}} {{word:yan3jing}} {{word:bu4}} {{word:hao3}}, {{word:kan4}}-{{word:bu4}}-{{word:dao4}}. (У меня плохие глаза, мне не видно.)"
           ],
           "zh": []
         }
@@ -1428,6 +1461,17 @@ const content: Entry[] = [
           ],
           "ru": [
             "число + {{word:dian3}} — час: {{Word:xian4zai4}} {{word:shi4}} {{word:san1}}-{{word:dian3}}. (Сейчас три часа.)"
+          ],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "number + {{word:tian1}} / {{word:nian2}}: {{word:san1}} {{word:tian1}} (three days); {{word:ming2}}-{{word:tian1}} (tomorrow), {{word:qu4}}-{{word:nian2}} (last year)"
+          ],
+          "ru": [
+            "число + {{word:tian1}} / {{word:nian2}}: {{word:san1}} {{word:tian1}} (три дня); {{word:ming2}}-{{word:tian1}} (завтра), {{word:qu4}}-{{word:nian2}} (в прошлом году)"
           ],
           "zh": []
         }
@@ -1564,10 +1608,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "a longer description-{{word:de}} + noun: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} (an animal in the water)"
+            "a longer description-{{word:de}} + noun: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} (an animal in the water), {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1xi}} (fruit)"
           ],
           "ru": [
-            "более длинное описание-{{word:de}} + существительное: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} (животное в воде)"
+            "более длинное описание-{{word:de}} + существительное: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} (животное в воде), {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1xi}} (фрукт)"
           ],
           "zh": []
         }
@@ -1807,10 +1851,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:pa4}} + thing, scared of: {{Word:wo3}} {{word:pa4}} {{word:chong2zi}}. (I'm scared of bugs.)"
+            "{{word:pa4}} + thing, scared of: {{Word:wo3}} {{word:pa4}} {{word:huo3}}. (I'm scared of fire.)"
           ],
           "ru": [
-            "{{word:pa4}} + вещь — бояться: {{Word:wo3}} {{word:pa4}} {{word:chong2zi}}. (Я боюсь насекомых.)"
+            "{{word:pa4}} + вещь — бояться: {{Word:wo3}} {{word:pa4}} {{word:huo3}}. (Я боюсь огня.)"
           ],
           "zh": []
         }
@@ -1925,10 +1969,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:gei3}} {{word:wo3}} + verb + {{word:yi1xia4}}, let me have a turn: {{Word:gei3}} {{word:wo3}} {{word:kan4}} {{word:yi1xia4}}. (Let me take a look.)"
+            "{{word:gei3}} {{word:wo3}} + verb + {{word:yi1}}-{{word:xia4}}, let me have a turn: {{Word:gei3}} {{word:wo3}} {{word:kan4}} {{word:yi1}}-{{word:xia4}}. (Let me take a look.)"
           ],
           "ru": [
-            "{{word:gei3}} {{word:wo3}} + глагол + {{word:yi1xia4}} — дай мне попробовать: {{Word:gei3}} {{word:wo3}} {{word:kan4}} {{word:yi1xia4}}. (Дай посмотреть.)"
+            "{{word:gei3}} {{word:wo3}} + глагол + {{word:yi1}}-{{word:xia4}} — дай мне попробовать: {{Word:gei3}} {{word:wo3}} {{word:kan4}} {{word:yi1}}-{{word:xia4}}. (Дай посмотреть.)"
           ],
           "zh": []
         }
@@ -1936,10 +1980,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:bang1}} + person + verb, help: {{Word:ni3}} {{word:bang1}} {{word:wo3}} {{word:na2}} {{word:yi1xia4}}. (Could you hold this for me?)"
+            "{{word:bang1}} + person + verb, help: {{Word:ni3}} {{word:bang1}} {{word:wo3}} {{word:na2}} {{word:yi1}}-{{word:xia4}}. (Could you hold this for me?)"
           ],
           "ru": [
-            "{{word:bang1}} + человек + глагол — помочь: {{Word:ni3}} {{word:bang1}} {{word:wo3}} {{word:na2}} {{word:yi1xia4}}. (Подержишь это за меня?)"
+            "{{word:bang1}} + человек + глагол — помочь: {{Word:ni3}} {{word:bang1}} {{word:wo3}} {{word:na2}} {{word:yi1}}-{{word:xia4}}. (Подержишь это за меня?)"
           ],
           "zh": []
         }

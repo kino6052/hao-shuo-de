@@ -6,26 +6,22 @@ export default lessonModule({
   id: "possession-de",
   words: [
     {
-      term: "{{word:jia1}}",
-      hanzi: "家",
+      word: "jia1",
       en: "home, family",
       ru: "дом, семья",
     },
     {
-      term: "{{word:tou2}}",
-      hanzi: "头",
+      word: "tou2",
       en: "head",
       ru: "голова",
     },
     {
-      term: "{{word:shou3}}",
-      hanzi: "手",
+      word: "shou3",
       en: "hand",
       ru: "рука",
     },
     {
-      term: "{{word:jiao3}}",
-      hanzi: "脚",
+      word: "jiao3",
       en: "foot",
       ru: "нога, ступня",
     },
@@ -49,15 +45,15 @@ export default lessonModule({
     },
   },
   info: {
-    en: "{{word:wo3}}-{{word:de}} / {{word:ni3}}-{{word:de}} + noun, whose: {{word:wo3}}-{{word:de}} {{word:shui3guo3}} (my fruit)",
-    ru: "{{word:wo3}}-{{word:de}} / {{word:ni3}}-{{word:de}} + существительное — чей: {{word:wo3}}-{{word:de}} {{word:shui3guo3}} (мой фрукт)",
+    en: "{{word:wo3}}-{{word:de}} / {{word:ni3}}-{{word:de}} + noun, whose: {{word:wo3}}-{{word:de}} {{word:zhi2wu4}} (my plant)",
+    ru: "{{word:wo3}}-{{word:de}} / {{word:ni3}}-{{word:de}} + существительное — чей: {{word:wo3}}-{{word:de}} {{word:zhi2wu4}} (моё растение)",
   },
   examples: [
     {
-      pinyin: "{{Word:wo3}}-{{word:de}} {{word:shui3guo3}}.",
-      hanzi: "我的水果。",
-      en: "My fruit.",
-      ru: "Мой фрукт.",
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:zhi2wu4}}.",
+      hanzi: "我的植物。",
+      en: "My plant.",
+      ru: "Моё растение.",
     },
     {
       pinyin: "{{Word:ni3}}-{{word:de}} {{word:jia1}}.",
@@ -104,10 +100,10 @@ export default lessonModule({
   ],
   exercises: [
     {
-      en: "Your fruit is good.",
-      ru: "Твой фрукт хороший.",
-      answer: "{{Word:ni3}}-{{word:de}} {{word:shui3guo3}} {{word:hen3}} {{word:hao3}}.",
-      hanzi: "你的水果很好。",
+      en: "Your plant is good.",
+      ru: "Твоё растение хорошее.",
+      answer: "{{Word:ni3}}-{{word:de}} {{word:zhi2wu4}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "你的植物很好。",
     },
     {
       en: "That is your family.",

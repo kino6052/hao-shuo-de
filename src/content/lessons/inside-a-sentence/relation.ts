@@ -6,8 +6,7 @@ export default lessonModule({
   id: "relation",
   words: [
     {
-      term: "{{word:guan1xi}}",
-      hanzi: "关系",
+      word: "guan1xi",
       en: "relationship",
       ru: "отношения, связь",
     },

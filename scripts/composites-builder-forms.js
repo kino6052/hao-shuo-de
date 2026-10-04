@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Rewrites the composite dictionary's descriptions (src/data/composites.json,
+// Rewrites the composite dictionary's descriptions (src/data/composites/,
 // fit "plain") into the form the Word Builder writes them in, so a reader who
 // opens a dictionary word in the Word Builder sees exactly the dictionary's
 // form, built question by question (src/lib/word-builder-parse.js says which
@@ -10,17 +10,16 @@
 //   node scripts/composites-builder-forms.js          # rewrite, and list what changed
 //   node scripts/composites-builder-forms.js --check  # list only; exit 1 if anything would change
 
-import { readFileSync, writeFileSync } from "fs";
 import { resolve } from "path";
 import { fileURLToPath } from "url";
-import { LESSON_IDS, importLessonFile } from "./lessons.js";
 import { builderForm, REWRITTEN_FITS } from "../src/lib/word-builder-parse.js";
 import { render, hanziSystem } from "../src/lib/word-builder.js";
-import { hanziFromLessons } from "../src/lib/hanzi-map.js";
+import { wordHanzi } from "../src/lib/hanzi-map.js";
+import { writeComposite } from "./data-files.js";
+import dictionaryData from "../src/data/dictionary.ts";
+import compositesData from "../src/data/composites.ts";
 
-const ROOT = resolve(fileURLToPath(new URL(".", import.meta.url)), "..");
-const FILE = resolve(ROOT, "src/data/composites.json");
-const dict = JSON.parse(readFileSync(resolve(ROOT, "src/data/dictionary.json"), "utf-8"));
+const dict = dictionaryData;
 const check = process.argv.includes("--check");
 
 // -> [{ entry, alt, from, to, tts }] for every description not in the Word
@@ -43,10 +42,7 @@ export function pendingRewrites(entries, hanzi) {
 
 const isMain = process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1]);
 if (isMain) {
-  const data = JSON.parse(readFileSync(FILE, "utf-8"));
-  const lessons = [];
-  for (const id of LESSON_IDS) lessons.push(await importLessonFile(id, "index.ts"));
-  const pending = pendingRewrites(data.entries, hanziFromLessons(lessons));
+  const pending = pendingRewrites(compositesData.entries, wordHanzi());
   const pinyin = (form) => form.replace(/\{\{[wW]ord:([a-z0-9-]+)\}\}/g, (_, id) => dict.words[id]?.term ?? id);
   for (const p of pending) {
     console.log(p.from === p.to ? `${p.entry.en}: hanzi -> ${p.tts}` : `${p.entry.en}: ${pinyin(p.from)}  ->  ${pinyin(p.to)}`);
@@ -69,7 +65,7 @@ if (isMain) {
       p.entry.hsd = forms.join(" / ");
       p.entry.tts = tts.join(" / ");
     }
-    writeFileSync(FILE, JSON.stringify(data, null, 1) + "\n");
+    for (const entry of new Set(pending.map((p) => p.entry))) writeComposite(entry);
     console.log(`composites-builder-forms: rewrote ${pending.length} description(s).`);
   }
 }

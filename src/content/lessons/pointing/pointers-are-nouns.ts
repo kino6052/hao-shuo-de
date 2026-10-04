@@ -5,8 +5,7 @@ export default lessonModule({
   id: "pointers-are-nouns",
   words: [
     {
-      term: "{{word:na4}}",
-      hanzi: "那",
+      word: "na4",
       en: "that, those",
       ru: "тот, те",
     },
@@ -48,10 +47,10 @@ export default lessonModule({
   ],
   exercises: [
     {
-      en: "That is a fruit.",
-      ru: "То — фрукт.",
-      answer: "{{Word:na4}} {{word:shi4}} {{word:shui3guo3}}.",
-      hanzi: "那是水果。",
+      en: "That is a plant.",
+      ru: "То — растение.",
+      answer: "{{Word:na4}} {{word:shi4}} {{word:zhi2wu4}}.",
+      hanzi: "那是植物。",
     },
   ],
 });

@@ -6,8 +6,7 @@ export default lessonModule({
   id: "toward-away",
   words: [
     {
-      term: "{{word:na2}}",
-      hanzi: "拿",
+      word: "na2",
       en: "take, pick up, hold",
       ru: "брать, взять, держать",
     },
@@ -54,10 +53,10 @@ export default lessonModule({
       ru: "Принеси воду!",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:ba3}} {{word:shui3guo3}} {{word:na2}}-{{word:lai2}} {{word:le}}.",
-      hanzi: "我把水果拿来了。",
-      en: "I brought the fruit.",
-      ru: "Я принёс фрукты.",
+      pinyin: "{{Word:wo3}} {{word:ba3}} {{word:gong1ju4}} {{word:na2}}-{{word:lai2}} {{word:le}}.",
+      hanzi: "我把工具拿来了。",
+      en: "I brought the tool.",
+      ru: "Я принёс инструмент.",
     },
     {
       pinyin: "{{Word:ta1}} {{word:ba3}} {{word:he2zi}} {{word:na2}}-{{word:qu4}} {{word:le}}.",
@@ -74,10 +73,10 @@ export default lessonModule({
   ],
   exercises: [
     {
-      en: "Bring the fruit!",
-      ru: "Принеси фрукты!",
-      answer: "{{Word:ba3}} {{word:shui3guo3}} {{word:na2}}-{{word:lai2}}!",
-      hanzi: "把水果拿来！",
+      en: "Bring the stick!",
+      ru: "Принеси палку!",
+      answer: "{{Word:ba3}} {{word:gun4zi}} {{word:na2}}-{{word:lai2}}!",
+      hanzi: "把棍子拿来！",
     },
   ],
   faq: [

@@ -9,6 +9,7 @@ import where from "./where.ts";
 import whereQuestion from "./where-question.ts";
 import inOnUnder from "./in-on-under.ts";
 import sides from "./sides.ts";
+import middle from "./middle.ts";
 import leftRight from "./left-right.ts";
 
 export const meta = {
@@ -33,6 +34,7 @@ export default lesson(meta.id, {
     whereQuestion,
     inOnUnder,
     sides,
+    middle,
     leftRight,
   ],
 });
