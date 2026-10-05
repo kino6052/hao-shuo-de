@@ -7,7 +7,7 @@ export default composite({
   py: "zhòngdiǎn",
   en: "key point",
   ru: "главное",
-  hsd: ["{{word:zui4}} {{word:you3}} {{word:jia4zhi2}}-{{word:de}} {{word:bu4fen}}"],
+  hsd: ["{{word:zui4}} {{word:you3}} {{word:jia4zhi2}}-{{word:de}} {{word:bu4}}-{{light:fen1}}"],
   tts: ["最有价值的部分"],
   literal: "the most valuable part",
   fit: "plain",

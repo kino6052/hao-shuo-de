@@ -37,8 +37,8 @@ export default lessonModule({
   },
   examples: [
     {
-      pinyin: "{{Word:wo3}} {{word:cong2}} {{word:fu4mu3}}-{{word:de}} {{word:jia1}} {{word:lai2}}.",
-      hanzi: "我从父母的家来。",
+      pinyin: "{{Word:wo3}} {{word:cong2}} {{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:jia1}} {{word:lai2}}.",
+      hanzi: "我从爸爸妈妈的家来。",
       en: "I come from my parents' home.",
       ru: "Я пришёл из дома родителей.",
     },

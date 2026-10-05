@@ -101,7 +101,7 @@ export default lessonModule({
       ru: "Эта дорога длиннее той.",
     },
     {
-      pinyin: "{{Word:you4bian1}}-{{word:de}} {{word:he2zi}} {{word:bi3}} {{word:zuo3}}-{{word:bian1}}-{{word:de}} {{word:da4}}.",
+      pinyin: "{{Word:you4}}-{{word:bian1}}-{{word:de}} {{word:he2zi}} {{word:bi3}} {{word:zuo3}}-{{word:bian1}}-{{word:de}} {{word:da4}}.",
       hanzi: "右边的盒子比左边的大。",
       en: "The box on the right is bigger than the one on the left.",
       ru: "Коробка справа больше той, что слева.",

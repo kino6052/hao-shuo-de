@@ -49,7 +49,7 @@ export default lessonModule({
       ru: "Это не животное.",
     },
     {
-      pinyin: "{{Word:nv3}}-{{word:ren2}} {{word:bu4}} {{word:shi4}} {{word:nan2ren2}}.",
+      pinyin: "{{Word:nv3}}-{{word:ren2}} {{word:bu4}} {{word:shi4}} {{word:nan2}}-{{word:ren2}}.",
       hanzi: "女人不是男人。",
       en: "A woman is not a man.",
       ru: "Женщина — не мужчина.",

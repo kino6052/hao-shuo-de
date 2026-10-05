@@ -3,7 +3,8 @@
 //   - yòu stays 又 (again) and nán stays 难 (difficult); 右 (right) and 男
 //     (male) become their senses, so yòubiān and nánrén split.
 //   - bùfen becomes bù (sense 部, part) + fēn, written bù-{{light:fen1}}.
-//   - fùmǔ leaves for bà 爸 and mā 妈: parents are bà-mā (爸妈).
+//   - fùmǔ leaves for the words bàba 爸爸 and māma 妈妈: parents are
+//     bàba-māma (爸爸妈妈).
 //   - nòng leaves for zuò 做 (do, make): zuò's old meaning, sit 坐, becomes a
 //     sense used in zuò-xià, zuò-zài and zuò-chē, and 作 (work) a sense in
 //     gōng-zuò, zuò-zhě, zuò-yòng, dòng-zuò and xiě-zuò.
@@ -55,20 +56,20 @@ export default [
     },
   },
 
-  // -- parents: fùmǔ -> bà-mā ----------------------------------------------------------
+  // -- parents: fùmǔ -> bàba māma (whole words, not roots) ----------------------------
   {
-    op: "add", id: "ba4", hanzi: "爸", category: "people-kinship",
-    ...w(noun, "dad: {{word:ba4}}-{{light:ba4}}, dad; {{word:ba4}}-{{word:ma1}}, mom and dad, parents", "папа: {{word:ba4}}-{{light:ba4}} — папа; {{word:ba4}}-{{word:ma1}} — мама и папа, родители", "爸", 4,
-      "Dad: {{word:ba4}}-{{light:ba4}}, and with {{word:ma1}}, the parents ({{word:ba4}}-{{word:ma1}}).", "Папа: {{word:ba4}}-{{light:ba4}}, а с {{word:ma1}} — родители ({{word:ba4}}-{{word:ma1}})."),
+    op: "add", id: "ba4ba", hanzi: "爸爸", category: "people-kinship",
+    ...w(noun, "dad: {{word:ba4ba}}-{{word:ma1ma}}, mom and dad, parents", "папа: {{word:ba4ba}}-{{word:ma1ma}} — мама и папа, родители", "爸爸", 4,
+      "Dad, and with {{word:ma1ma}}, the parents ({{word:ba4ba}}-{{word:ma1ma}}).", "Папа, а с {{word:ma1ma}} — родители ({{word:ba4ba}}-{{word:ma1ma}})."),
   },
   {
-    op: "add", id: "ma1", hanzi: "妈", category: "people-kinship",
-    ...w(noun, "mom: {{word:ma1}}-{{light:ma1}}, mom; {{word:ba4}}-{{word:ma1}}, mom and dad, parents", "мама: {{word:ma1}}-{{light:ma1}} — мама; {{word:ba4}}-{{word:ma1}} — мама и папа, родители", "妈", 4,
-      "Mom: {{word:ma1}}-{{light:ma1}}, and with {{word:ba4}}, the parents ({{word:ba4}}-{{word:ma1}}).", "Мама: {{word:ma1}}-{{light:ma1}}, а с {{word:ba4}} — родители ({{word:ba4}}-{{word:ma1}})."),
+    op: "add", id: "ma1ma", hanzi: "妈妈", category: "people-kinship",
+    ...w(noun, "mom: {{word:ba4ba}}-{{word:ma1ma}}, mom and dad, parents", "мама: {{word:ba4ba}}-{{word:ma1ma}} — мама и папа, родители", "妈妈", 4,
+      "Mom, and with {{word:ba4ba}}, the parents ({{word:ba4ba}}-{{word:ma1ma}}).", "Мама, а с {{word:ba4ba}} — родители ({{word:ba4ba}}-{{word:ma1ma}})."),
   },
-  { op: "replace", id: "fu4mu3", with: "{{word:ba4}}-{{word:ma1}}", hanzi: { "父母": "爸妈" } },
-  { op: "card", id: "ba4", to: "modifying-nouns/like", en: "dad; {{word:ba4}}-{{word:ma1}}: parents", ru: "папа; {{word:ba4}}-{{word:ma1}} — родители" },
-  { op: "card", id: "ma1", to: "modifying-nouns/like", en: "mom", ru: "мама" },
+  { op: "replace", id: "fu4mu3", with: "{{word:ba4ba}}-{{word:ma1ma}}", hanzi: { "父母": "爸爸妈妈" } },
+  { op: "card", id: "ba4ba", to: "modifying-nouns/like", en: "dad; {{word:ba4ba}}-{{word:ma1ma}}: parents", ru: "папа; {{word:ba4ba}}-{{word:ma1ma}} — родители" },
+  { op: "card", id: "ma1ma", to: "modifying-nouns/like", en: "mom", ru: "мама" },
 
   // -- sit: zuò keeps 坐 only in zuò-xià, zuò-zài, zuò-chē -----------------------------
   { op: "composite", zh: "坐下", create: { rank: 5401, phase: 4, py: "zuòxià", en: "sit down", ru: "сесть" }, set: { hsd: ["{{word:zuo4}}-{{word:xia4}}"], tts: ["坐下"], fit: "natural", transparent: true } },
@@ -113,13 +114,17 @@ export default [
   { op: "category", id: "zuo4", to: "state-change-general" },
 
   // -- do: nòng -> zuò ---------------------------------------------------------------------
-  // Opening is dǎ-kāi in Mandarin (打开), not zuò-kāi.
-  { op: "text", file: "src/content/lessons/becoming-and-making/ba.ts", from: '{{word:he2zi}} {{word:nong4}}-{{word:kai1}} {{word:le}}.",\n      hanzi: "我把盒子弄开了。",', to: '{{word:he2zi}} {{word:da3}}-{{word:kai1}} {{word:le}}.",\n      hanzi: "我把盒子打开了。",' },
+  // Opening: bǎ hézi kāi le (把盒子开了), not zuò-kāi (dǎ-kāi would come before dǎ is taught).
+  { op: "text", file: "src/content/lessons/becoming-and-making/ba.ts", from: '{{word:he2zi}} {{word:nong4}}-{{word:kai1}} {{word:le}}.",\n      hanzi: "我把盒子弄开了。",', to: '{{word:he2zi}} {{word:kai1}} {{word:le}}.",\n      hanzi: "我把盒子开了。",' },
   { op: "replace", id: "nong4", with: "{{word:zuo4}}", hanzi: { "弄": "做" } },
   { op: "card", id: "zuo4", to: "becoming-and-making/make", en: "do, make", ru: "делать" },
-  { op: "composite", zh: "弄", set: { fit: "plain", proposed: true, note: "Hao-shuo-de says zuò for any doing; Mandarin also has nòng for handling and fixing." } },
+  { op: "composite", zh: "弄", set: { fit: "plain", proposed: true, note: "Hao-shuo-de says zuò for any doing; Mandarin also has 弄 for handling and fixing." } },
   { op: "text", file: "src/lib/word-builder.js", from: '"zuo3", "you4bian1", "fu4jin4",', to: '"zuo3", "fu4jin4",' },
   { op: "text", file: "src/lib/word-builder.js", from: 'export const START_VERBS = ["nong4", "qu4", "chi1", "kan4"];', to: 'export const START_VERBS = ["zuo4", "qu4", "chi1", "kan4"];' },
+
+  // nòng-xià-qù (keep on doing, push down) would now read zuò-xià, sit: other forms.
+  { op: "composite", zh: "坚持", set: { hsd: ["{{word:zuo4}} {{word:dao4}} {{word:zui4}} {{word:hou4}}"], tts: ["做到最后"], literal: "do it to the end", proposed: true } },
+  { op: "composite", zh: "压", set: { hsd: ["{{word:yong4}} {{word:li4}} {{word:fang4}}-{{word:xia4}}-{{word:qu4}}"], tts: ["用力放下去"], literal: "put down with force", proposed: true } },
 
   { op: "compounds" },
 ];

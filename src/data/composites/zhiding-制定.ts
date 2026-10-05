@@ -7,8 +7,8 @@ export default composite({
   py: "zhìdìng",
   en: "draw up, set",
   ru: "разработать",
-  hsd: ["{{word:nong4}}-{{word:chu1}}"],
-  tts: ["弄出"],
+  hsd: ["{{word:zuo4}}-{{word:chu1}}"],
+  tts: ["做出"],
   literal: "make",
   fit: "plain",
 });

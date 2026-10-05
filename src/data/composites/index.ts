@@ -1516,17 +1516,20 @@ import m1512 from "./zuo-做.ts";
 import m1513 from "./zuo-坐.ts";
 import m1514 from "./zuo-左.ts";
 import m1515 from "./zuobian-左边.ts";
-import m1516 from "./zuochu-作出.ts";
-import m1517 from "./zuofan-做饭.ts";
-import m1518 from "./zuojia-作家.ts";
-import m1519 from "./zuopin-作品.ts";
-import m1520 from "./zuotian-昨天.ts";
-import m1521 from "./zuowei-座位.ts";
-import m1522 from "./zuoyong-作用.ts";
-import m1523 from "./zuoyou-左右.ts";
-import m1524 from "./zuozhe-作者.ts";
-import m1525 from "./zuqiu-足球.ts";
-import m1526 from "./zuzhi-组织.ts";
+import m1516 from "./zuoche-坐车.ts";
+import m1517 from "./zuochu-作出.ts";
+import m1518 from "./zuofan-做饭.ts";
+import m1519 from "./zuojia-作家.ts";
+import m1520 from "./zuopin-作品.ts";
+import m1521 from "./zuotian-昨天.ts";
+import m1522 from "./zuowei-座位.ts";
+import m1523 from "./zuoxia-坐下.ts";
+import m1524 from "./zuoyong-作用.ts";
+import m1525 from "./zuoyou-左右.ts";
+import m1526 from "./zuozai-坐在.ts";
+import m1527 from "./zuozhe-作者.ts";
+import m1528 from "./zuqiu-足球.ts";
+import m1529 from "./zuzhi-组织.ts";
 
 export const ENTRIES = [
   m0,
@@ -3056,4 +3059,7 @@ export const ENTRIES = [
   m1524,
   m1525,
   m1526,
+  m1527,
+  m1528,
+  m1529,
 ];

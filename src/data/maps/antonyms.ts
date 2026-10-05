@@ -22,6 +22,7 @@ export default relations({
     ["yuan3", "fu4jin4"],
     ["jin4", "chu1"],
     ["bai2", "hei1"],
+    ["zuo3", "you4"],
   ],
   phrases: {
     nan2: ["{{word:bu4}} {{word:nan2}}"],

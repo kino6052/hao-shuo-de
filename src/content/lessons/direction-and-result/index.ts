@@ -2,7 +2,7 @@
 // See src/lib/lesson.ts.
 //
 // Added after Phase 2 (BOOK_PLAN.md D44): what comes after a verb. Which way it goes (ná-lái,
-// jìn / chū / huí + lái / qù, ná-chū-lái), how it ends (zhǎo-dào, nòng-huài, xué-huì), whether
+// jìn / chū / huí + lái / qù, ná-chū-lái), how it ends (zhǎo-dào, zuò-huài, xué-huì), whether
 // you can get there (kàn-bù-dào, kàn-de-dào), and qǐ-lái (seems, starts) / xià-qù (keep going).
 // New words: ná (moved here from Numbers), jìn, chū, huí; tōng (go through, lead to) joined in D51.
 // Only words from this lesson and earlier ones; passes every gate

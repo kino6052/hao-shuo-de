@@ -7,8 +7,8 @@ export default composite({
   py: "nǔlì",
   en: "work hard",
   ru: "стараться",
-  hsd: ["{{word:yong4}} {{word:li4}} {{word:nong4}}"],
-  tts: ["用力弄"],
+  hsd: ["{{word:yong4}} {{word:li4}} {{word:zuo4}}"],
+  tts: ["用力做"],
   literal: "do it with strength",
   fit: "plain",
 });

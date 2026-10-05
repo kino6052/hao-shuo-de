@@ -7,8 +7,8 @@ export default composite({
   py: "dānwèi",
   en: "unit; workplace",
   ru: "единица; место работы",
-  hsd: ["{{word:nong4}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
-  tts: ["弄的地方"],
+  hsd: ["{{word:zuo4}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
+  tts: ["做的地方"],
   literal: "the place where you work",
   fit: "plain",
 });

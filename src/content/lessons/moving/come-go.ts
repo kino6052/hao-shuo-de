@@ -38,13 +38,13 @@ export default lessonModule({
     necessity: { en: "Now you can say where you're going.", ru: "Теперь вы можете сказать, куда идёте." },
   },
   info: {
-    en: "{{word:lai2}} / {{word:qu4}} + place: {{Word:wo3}} {{word:qu4}} {{word:fu4mu3}}-{{word:de}} {{word:jia1}}. (I'm going to my parents' home.)",
-    ru: "{{word:lai2}} / {{word:qu4}} + место: {{Word:wo3}} {{word:qu4}} {{word:fu4mu3}}-{{word:de}} {{word:jia1}}. (Я иду домой к родителям.)",
+    en: "{{word:lai2}} / {{word:qu4}} + place: {{Word:wo3}} {{word:qu4}} {{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:jia1}}. (I'm going to my parents' home.)",
+    ru: "{{word:lai2}} / {{word:qu4}} + место: {{Word:wo3}} {{word:qu4}} {{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:jia1}}. (Я иду домой к родителям.)",
   },
   examples: [
     {
-      pinyin: "{{Word:wo3}} {{word:qu4}} {{word:fu4mu3}}-{{word:de}} {{word:jia1}}.",
-      hanzi: "我去父母的家。",
+      pinyin: "{{Word:wo3}} {{word:qu4}} {{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:jia1}}.",
+      hanzi: "我去爸爸妈妈的家。",
       en: "I'm going to my parents' home.",
       ru: "Я иду домой к родителям.",
     },

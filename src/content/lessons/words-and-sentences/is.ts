@@ -31,9 +31,10 @@ export default lessonModule({
       ru: "женский; {{word:nv3}}-{{word:ren2}} — женщина",
     },
     {
-      word: "nan2ren2",
-      en: "man",
-      ru: "мужчина",
+      word: "nan2",
+      sense: "male",
+      en: "male (in {{word:nan2}}-{{word:ren2}}: man)",
+      ru: "мужской (в {{word:nan2}}-{{word:ren2}} — мужчина)",
     },
     {
       word: "dong4",
@@ -88,7 +89,7 @@ export default lessonModule({
       ru: "Женщина — человек.",
     },
     {
-      pinyin: "{{Word:nan2ren2}} {{word:shi4}} {{word:ren2}}.",
+      pinyin: "{{Word:nan2}}-{{word:ren2}} {{word:shi4}} {{word:ren2}}.",
       hanzi: "男人是人。",
       en: "A man is a person.",
       ru: "Мужчина — человек.",

@@ -7,7 +7,7 @@ export default composite({
   py: "nánháir",
   en: "boy",
   ru: "мальчик",
-  hsd: ["{{word:xiao3}}-{{word:de}} {{word:nan2ren2}}"],
+  hsd: ["{{word:xiao3}}-{{word:de}} {{word:nan2}}-{{word:ren2}}"],
   tts: ["小的男人"],
   literal: "small man",
   fit: "plain",

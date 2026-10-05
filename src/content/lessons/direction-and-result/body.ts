@@ -6,11 +6,6 @@ export default lessonModule({
   id: "body",
   words: [
     {
-      word: "zuo4",
-      en: "sit",
-      ru: "сидеть",
-    },
-    {
       word: "zhan4",
       en: "stand",
       ru: "стоять",
@@ -25,21 +20,27 @@ export default lessonModule({
       en: "fly",
       ru: "летать",
     },
+    {
+      word: "zuo4",
+      sense: "sit",
+      en: "sit; {{word:zuo4}}-{{word:xia4}}: sit down",
+      ru: "сидеть; {{word:zuo4}}-{{word:xia4}} — сесть",
+    },
   ],
   prose: {
     en: [
-      "**To say sit, stand, and lie down**, use {{word:zuo4}} (sit), {{word:zhan4}} (stand), and {{word:tang3}} (lie). Add direction words for the movement.",
+      "**To say sit, stand, and lie down**, use {{word:zuo4}}-{{word:xia4}} (sit), {{word:zhan4}} (stand), and {{word:tang3}} (lie). Add direction words for the movement.",
       "",
       "**{{word:zuo4}}-{{word:xia4}} / {{word:zhan4}}-{{word:qi3}}-{{word:lai2}} / {{word:tang3}}-{{word:xia4}}**",
       "",
-      "To say where, add {{word:zai4}} and the place: {{word:zuo4}} {{word:zai4}} {{word:di4}}-{{word:shang4}}, sit on the floor. {{word:fei1}} (fly) takes direction words too: {{word:fei1}}-{{word:shang4}}-{{word:qu4}}, fly up.",
+      "To say where, add {{word:zai4}} and the place: {{word:zuo4}}-{{word:zai4}} {{word:di4}}-{{word:shang4}}, sit on the floor. {{word:fei1}} (fly) takes direction words too: {{word:fei1}}-{{word:shang4}}-{{word:qu4}}, fly up.",
     ],
     ru: [
-      "**Чтобы сказать «сидеть», «стоять» и «лежать»**, используйте {{word:zuo4}} (сидеть), {{word:zhan4}} (стоять) и {{word:tang3}} (лежать). Чтобы показать движение, добавьте слова направления.",
+      "**Чтобы сказать «сидеть», «стоять» и «лежать»**, используйте {{word:zuo4}}-{{word:xia4}} (сидеть), {{word:zhan4}} (стоять) и {{word:tang3}} (лежать). Чтобы показать движение, добавьте слова направления.",
       "",
       "**{{word:zuo4}}-{{word:xia4}} / {{word:zhan4}}-{{word:qi3}}-{{word:lai2}} / {{word:tang3}}-{{word:xia4}}**",
       "",
-      "Чтобы сказать где, добавьте {{word:zai4}} и место: {{word:zuo4}} {{word:zai4}} {{word:di4}}-{{word:shang4}} — сидеть на полу. {{word:fei1}} (летать) тоже берёт слова направления: {{word:fei1}}-{{word:shang4}}-{{word:qu4}} — взлететь.",
+      "Чтобы сказать где, добавьте {{word:zai4}} и место: {{word:zuo4}}-{{word:zai4}} {{word:di4}}-{{word:shang4}} — сидеть на полу. {{word:fei1}} (летать) тоже берёт слова направления: {{word:fei1}}-{{word:shang4}}-{{word:qu4}} — взлететь.",
     ],
     tldr: {
       en: "{{word:zuo4}}-{{word:xia4}} is sit down, {{word:zhan4}}-{{word:qi3}}-{{word:lai2}} is stand up, {{word:tang3}}-{{word:xia4}} is lie down.",
@@ -62,7 +63,7 @@ export default lessonModule({
       ru: "Садись!",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:zuo4}} {{word:zai4}} {{word:di4}}-{{word:shang4}}.",
+      pinyin: "{{Word:wo3}} {{word:zuo4}}-{{word:zai4}} {{word:di4}}-{{word:shang4}}.",
       hanzi: "我坐在地上。",
       en: "I'm sitting on the floor.",
       ru: "Я сижу на полу.",

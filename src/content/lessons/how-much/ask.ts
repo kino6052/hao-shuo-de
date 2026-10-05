@@ -56,8 +56,8 @@ export default lessonModule({
       ru: "Ты здоров?",
     },
     {
-      pinyin: "{{Word:ni3}}-{{word:de}} {{word:fu4mu3}} {{word:lao3}} {{word:ma}}?",
-      hanzi: "你的父母老吗？",
+      pinyin: "{{Word:ni3}}-{{word:de}} {{word:ba4ba}}-{{word:ma1ma}} {{word:lao3}} {{word:ma}}?",
+      hanzi: "你的爸爸妈妈老吗？",
       en: "Are your parents old?",
       ru: "Твои родители старые?",
     },

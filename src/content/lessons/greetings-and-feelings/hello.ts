@@ -69,8 +69,8 @@ export default lessonModule({
       ru: "Ты вернулся!",
     },
     {
-      pinyin: "{{Word:ni3}} {{word:hao3}}! {{Word:jin4}}-{{word:lai2}} {{word:zuo4}}!",
-      hanzi: "你好！进来坐！",
+      pinyin: "{{Word:ni3}} {{word:hao3}}! {{Word:jin4}}-{{word:lai2}} {{word:zuo4}}-{{word:xia4}}!",
+      hanzi: "你好！进来坐下！",
       en: "Hi! Come in and sit down!",
       ru: "Привет! Заходи, садись!",
     },

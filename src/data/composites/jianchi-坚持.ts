@@ -7,9 +7,9 @@ export default composite({
   py: "jiānchí",
   en: "persist",
   ru: "упорствовать, держаться",
-  hsd: ["{{word:nong4}}-{{word:xia4}}-{{word:qu4}}"],
-  tts: ["弄下去"],
-  literal: "keep on doing",
+  hsd: ["{{word:zuo4}} {{word:dao4}} {{word:zui4}} {{word:hou4}}"],
+  tts: ["做到最后"],
+  literal: "do it to the end",
   fit: "plain",
   proposed: true,
 });

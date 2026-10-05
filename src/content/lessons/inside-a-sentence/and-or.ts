@@ -89,7 +89,7 @@ export default lessonModule({
       ru: "Я хочу красный или синий.",
     },
     {
-      pinyin: "{{Word:liu4}}-ge {{word:nan2ren2}} {{word:he2}} {{word:qi1}}-ge {{word:nv3}}-{{word:ren2}}.",
+      pinyin: "{{Word:liu4}}-ge {{word:nan2}}-{{word:ren2}} {{word:he2}} {{word:qi1}}-ge {{word:nv3}}-{{word:ren2}}.",
       hanzi: "六个男人和七个女人。",
       en: "Six men and seven women.",
       ru: "Шесть мужчин и семь женщин.",

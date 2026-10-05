@@ -106,8 +106,8 @@ export default lessonModule({
     {
       en: "My parents' home is far.",
       ru: "Дом моих родителей далеко.",
-      answer: "{{Word:fu4mu3}}-{{word:de}} {{word:jia1}} {{word:hen3}} {{word:yuan3}}.",
-      hanzi: "父母的家很远。",
+      answer: "{{Word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:jia1}} {{word:hen3}} {{word:yuan3}}.",
+      hanzi: "爸爸妈妈的家很远。",
     },
     {
       en: "My home is nearby.",

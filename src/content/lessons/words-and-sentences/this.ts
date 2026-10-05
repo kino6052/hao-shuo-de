@@ -54,7 +54,7 @@ export default lessonModule({
       ru: "Это животное.",
     },
     {
-      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:nan2ren2}}.",
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:nan2}}-{{word:ren2}}.",
       hanzi: "这是男人。",
       en: "This is a man.",
       ru: "Это мужчина.",
@@ -76,7 +76,7 @@ export default lessonModule({
     {
       en: "This is a man.",
       ru: "Это мужчина.",
-      answer: "{{Word:zhe4}} {{word:shi4}} {{word:nan2ren2}}.",
+      answer: "{{Word:zhe4}} {{word:shi4}} {{word:nan2}}-{{word:ren2}}.",
       hanzi: "这是男人。",
     },
   ],

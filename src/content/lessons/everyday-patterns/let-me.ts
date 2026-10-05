@@ -43,8 +43,8 @@ export default lessonModule({
       ru: "Давай я понесу.",
     },
     {
-      pinyin: "{{Word:ni3}} {{word:deng3}}-deng, {{word:wo3}} {{word:lai2}} {{word:nong4}}.",
-      hanzi: "你等等，我来弄。",
+      pinyin: "{{Word:ni3}} {{word:deng3}}-deng, {{word:wo3}} {{word:lai2}} {{word:zuo4}}.",
+      hanzi: "你等等，我来做。",
       en: "Wait a bit, let me do it.",
       ru: "Подожди, давай я сделаю.",
     },

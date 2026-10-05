@@ -11,7 +11,7 @@ export default word("zhan4", {
   },
   necessity: {
     index: 3,
-    eng: "Stand. With {{word:zuo4}} and {{word:tang3}}, one of the three ways a body rests.",
-    rus: "Стоять. Вместе с {{word:zuo4}} и {{word:tang3}} — одна из трёх поз тела.",
+    eng: "Stand. With {{word:zuo4}}-{{word:xia4}} and {{word:tang3}}, one of the three ways a body rests.",
+    rus: "Стоять. Вместе с {{word:zuo4}}-{{word:xia4}} и {{word:tang3}} — одна из трёх поз тела.",
   },
 });

@@ -7,7 +7,7 @@ export default composite({
   py: "nánpéngyou",
   en: "boyfriend",
   ru: "парень",
-  hsd: ["{{word:ai4}}-{{word:de}} {{word:nan2ren2}}"],
+  hsd: ["{{word:ai4}}-{{word:de}} {{word:nan2}}-{{word:ren2}}"],
   tts: ["爱的男人"],
   literal: "the man you love",
   fit: "plain",

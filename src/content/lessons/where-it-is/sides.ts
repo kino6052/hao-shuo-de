@@ -78,8 +78,8 @@ export default lessonModule({
       ru: "Перед домом животное.",
     },
     {
-      pinyin: "{{Word:fu4mu3}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:pang2bian1}}.",
-      hanzi: "父母在我的旁边。",
+      pinyin: "{{Word:ba4ba}}-{{word:ma1ma}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:pang2bian1}}.",
+      hanzi: "爸爸妈妈在我的旁边。",
       en: "My parents are beside me.",
       ru: "Мои родители рядом со мной.",
     },
@@ -130,7 +130,7 @@ export default lessonModule({
     {
       en: "The man is beside the house.",
       ru: "Мужчина возле дома.",
-      answer: "{{Word:nan2ren2}} {{word:zai4}} {{word:jia1}}-{{word:de}} {{word:pang2bian1}}.",
+      answer: "{{Word:nan2}}-{{word:ren2}} {{word:zai4}} {{word:jia1}}-{{word:de}} {{word:pang2bian1}}.",
       hanzi: "男人在家的旁边。",
     },
     {

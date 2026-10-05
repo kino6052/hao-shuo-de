@@ -87,8 +87,8 @@ export default lessonModule({
       ru: "Я хочу домой.",
     },
     {
-      pinyin: "{{Word:fu4mu3}} {{word:hui2}}-{{word:lai2}} {{word:le}}.",
-      hanzi: "父母回来了。",
+      pinyin: "{{Word:ba4ba}}-{{word:ma1ma}} {{word:hui2}}-{{word:lai2}} {{word:le}}.",
+      hanzi: "爸爸妈妈回来了。",
       en: "Mom and Dad are back.",
       ru: "Мама и папа вернулись.",
     },

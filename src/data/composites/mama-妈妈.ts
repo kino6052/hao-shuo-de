@@ -7,8 +7,12 @@ export default composite({
   py: "māma",
   en: "mom",
   ru: "мама",
-  hsd: ["{{word:fu4mu3}}-{{word:li3}}-{{word:de}} {{word:nv3}}-{{word:ren2}}"],
-  tts: ["父母里的女人"],
+  hsd: [
+    "{{word:ma1ma}}",
+    "{{word:ba4ba}}-{{word:ma1ma}}-{{word:li3}}-{{word:de}} {{word:nv3}}-{{word:ren2}}",
+  ],
+  tts: ["妈妈", "爸爸妈妈里的女人"],
   literal: "the woman of the parents",
-  fit: "natural",
+  fit: "word",
+  proposed: true,
 });

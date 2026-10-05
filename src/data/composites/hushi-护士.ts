@@ -8,9 +8,9 @@ export default composite({
   en: "nurse",
   ru: "медсестра, медбрат",
   hsd: [
-    "{{word:zai4}}-{{word:ba3}}-{{word:shen1ti3}}-{{word:nong4}}-{{word:hao3}}-{{word:de}}-{{word:di4}}-{{light:fang1}} {{word:bang1}}-{{word:ren2}}-{{word:de}} {{word:ren2}}",
+    "{{word:zai4}}-{{word:ba3}}-{{word:shen1ti3}}-{{word:zuo4}}-{{word:hao3}}-{{word:de}}-{{word:di4}}-{{light:fang1}} {{word:bang1}}-{{word:ren2}}-{{word:de}} {{word:ren2}}",
   ],
-  tts: ["在把身体弄好的地方帮人的人"],
+  tts: ["在把身体做好的地方帮人的人"],
   literal: "a person who helps at the hospital",
   fit: "plain",
   proposed: true,

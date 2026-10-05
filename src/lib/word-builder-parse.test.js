@@ -37,8 +37,8 @@ describe("builderForm", () => {
     expect(builderForm(dict, form("zhi1dao4 hen3 duo1-de ren2"))).toBe(null);
     // "passenger": zuò zài X, sit at X.
     expect(builderForm(dict, form("zuo4 zai4 jia1-li3-de ren2"))).toBe(null);
-    // "toothbrush": nòng hǎo X, fix X.
-    expect(builderForm(dict, form("nong4-hao3 kou3-li3-de ying4 dong1xi-de gong1ju4"))).toBe(null);
+    // "toothbrush": zuò hǎo X, fix X.
+    expect(builderForm(dict, form("zuo4-hao3 kou3-li3-de ying4 dong1-xi1-de gong1-ju4"))).toBe(null);
   });
 
   test("words of their own are not descriptions", () => {

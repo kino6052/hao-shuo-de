@@ -188,3 +188,18 @@ describe("glossTree", () => {
     ]);
   });
 });
+
+describe("hanzi with senses", () => {
+  test("a word in a listed compound writes its sense's hanzi", () => {
+    const sensed = {
+      ...dict,
+      words: { ...dict.words, zuo4: { ...dict.words.zuo4, hanzi: "做", senses: { sit: { hanzi: "坐", compounds: ["zuo4 che1"] } } } },
+    };
+    const hzs = hanziSystem(new Map([["zuo4", "做"], ["che1", "车"], ["de", "的"], ["ren2", "人"]]), sensed);
+    const rider = node("ren2", { does: word(node("zuo4", { what: word(node("che1")) })) });
+    expect(render(rider, hzs)).toBe("坐车的人");
+    const glued = { ...rider, answers: {} };
+    expect(render(glued, hzs)).toBe("人");
+    expect(hzs.finish("⟦zuo4⟧-⟦che1⟧ ⟦ren2⟧")).toBe("坐车人");
+  });
+});

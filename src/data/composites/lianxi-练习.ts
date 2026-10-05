@@ -7,8 +7,8 @@ export default composite({
   py: "liànxí",
   en: "practice, exercise",
   ru: "упражнение",
-  hsd: ["{{word:hen3}} {{word:duo1}} {{word:ci4}} {{word:nong4}}"],
-  tts: ["很多次弄"],
+  hsd: ["{{word:hen3}} {{word:duo1}} {{word:ci4}} {{word:zuo4}}"],
+  tts: ["很多次做"],
   literal: "do it many times",
   fit: "plain",
 });

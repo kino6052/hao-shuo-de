@@ -66,7 +66,7 @@ export default lessonModule({
       ru: "Он даёт мне три, а я ему — четыре.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:gei3}} {{word:wo3}} {{word:yi1}}-{{word:bu4fen}}.",
+      pinyin: "{{Word:ta1}} {{word:gei3}} {{word:wo3}} {{word:yi1}}-{{word:bu4}}-{{light:fen1}}.",
       hanzi: "他给我一部分。",
       en: "He gives me part of it.",
       ru: "Он даёт мне часть.",

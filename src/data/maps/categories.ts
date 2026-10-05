@@ -29,7 +29,7 @@ export default categories([
       {
         key: "people-kinship",
         title: { eng: "People & Kinship", rus: "Люди и родство", zh: "人与亲属" },
-        wordIds: ["ren2", "fu4mu3", "nan2ren2", "nv3", "qun2", "guan1xi"],
+        wordIds: ["ren2", "nv3", "qun2", "guan1xi", "ba4ba", "ma1ma"],
       },
       {
         key: "food-drink",
@@ -66,7 +66,7 @@ export default categories([
       {
         key: "kind-part",
         title: { eng: "Kind & Part", rus: "Вид и часть", zh: "种类与部分" },
-        wordIds: ["zhong3", "bu4fen", "yang4"],
+        wordIds: ["zhong3", "fen1", "yang4"],
       },
     ],
   },
@@ -205,7 +205,6 @@ export default categories([
           "hui2",
           "qi3",
           "fei1",
-          "zuo4",
           "zhan4",
           "tang3",
           "tong1",
@@ -218,7 +217,7 @@ export default categories([
           rus: "Изменение состояния и общее действие",
           zh: "状态变化与一般动作",
         },
-        wordIds: ["bian4", "nong4", "fa1"],
+        wordIds: ["bian4", "fa1", "zuo4"],
       },
       {
         key: "manipulation-contact",
@@ -288,7 +287,6 @@ export default categories([
           "yuan3",
           "fu4jin4",
           "zuo3",
-          "you4bian1",
           "dong1",
           "xi1",
           "fang1",

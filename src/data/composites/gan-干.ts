@@ -7,7 +7,7 @@ export default composite({
   py: "gàn",
   en: "do",
   ru: "делать",
-  hsd: ["{{word:nong4}}"],
-  tts: ["弄"],
+  hsd: ["{{word:zuo4}}"],
+  tts: ["做"],
   fit: "word",
 });

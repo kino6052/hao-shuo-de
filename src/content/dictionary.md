@@ -12,6 +12,7 @@ This section presents the complete core vocabulary of Hao-shuo-de sorted alphabe
 ài | verb | to love, have compassion for, show deep affection to | olin
 bā | number | eight |
 bǎ | particle | grammatical object-introducing particle; used to implement the transitive state-change framework |
+bàba | noun | dad: {{word:ba4ba}}-{{word:ma1ma}}, mom and dad, parents |
 bái | adjective | white; with {{word:se4}}, the colour: {{word:bai2}}-{{word:se4}} |
 bāng | verb | to help; before a person and a verb, help them do it (e.g. {{word:bang1}} {{word:wo3}} {{word:kan4}} {{word:yi1}}-{{word:xia4}}, "take a look for me") |
 bǐ | preposition | comparison |
@@ -20,7 +21,6 @@ biān | noun/suffix | side, edge; joins {{word:zhe4}} or {{word:na4}} via a hyph
 bié | adjective/adverb | other; before a verb, don't: {{word:bie2}}-{{word:de}}, other; {{word:bie2}}-{{word:ren2}}, other people |
 bízi | noun | nose, snout, protuberance | nena
 bù | particle | not, no; used for standard negation of verbs and adjectives, except for you | ala
-bùfen | noun | part, portion (e.g. {{word:yi1}}-{{word:bu4fen}}, "a part, some of it") |
 chē | noun | car, vehicle; anything on wheels that carries people or things |
 chī | verb/noun | to eat, consume, ingest; food, meal, edible substance | moku
 chū | verb | to go out, come out, exit; after a verb, says it comes out (e.g. {{word:chu1}}-{{word:qu4}}, "go out"; {{word:na2}}-{{word:chu1}}-{{word:lai2}}, "take out") |
@@ -48,8 +48,8 @@ fā | verb | to send out, give off; to start (e.g. {{word:fa1}}-{{word:sheng1}},
 fàng | verb | to put, place, set down; with bǎ, says where a thing goes (e.g. {{word:ba3}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:di4}}-{{word:shang4}}, "put the clothes on the floor") |
 fāng | noun | side, direction; way, method: {{word:di4}}-{{light:fang1}}, a place; {{word:fang1}}-{{word:fa3}}, a method |
 fēi | verb | to fly |
+fēn | noun | part, share; minute; to divide: {{word:bu4}}-{{light:fen1}}, a part; {{word:fen1}}-{{word:kai1}}, to separate |
 fùjìn | noun | nearby, the area near something; a place word like {{word:pang2bian1}}: {{word:zai4}} {{word:fu4jin4}}, "nearby", or {{word:zai4}} {{word:jia1}} {{word:fu4jin4}}, "near home" (not {{word:hen3}} {{word:fu4jin4}}) |
-fùmǔ | noun | parent, ancestor, creator, caretaker | mama
 gāo | adjective | tall, high |
 gè | measure word | universal classifier; mandatory interface between numbers/demonstratives and nouns |
 gěi | verb/coverb | to give, send, emit, provide; to, for, from the perspective of | pana, tawa
@@ -106,9 +106,10 @@ liǎng | number | two; quantifies dual entities when coupled to the measure word
 liù | number | six |
 liú | verb | to stay, remain, keep, endure, protect | awen
 lù | noun | road, path, street; the way to a place |
-luàn | adjective | messy, in a mess; {{word:nong4}}-{{word:luan4}}, "make a mess" |
+luàn | adjective | messy, in a mess; {{word:zuo4}}-{{word:luan4}}, "make a mess" |
 ma | particle | final interrogative yes-or-no question marker |
 mǎi | verb | to buy; {{word:mai3}} {{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}}, "market, shop" |
+māma | noun | mom: {{word:ba4ba}}-{{word:ma1ma}}, mom and dad, parents |
 máo | noun | hair, fur, feathers; {{word:tou2}}-{{word:shang4}}-{{word:de}} {{word:mao2}}, "hair on the head" |
 méi | particle | negative particle used exclusively to negate the verb you (to form meiyou) |
 men | particle | more than one person: after a pointer or a word for people, as in {{word:wo3}}-{{word:men}} ("we") |
@@ -119,11 +120,9 @@ nà | pronoun/adjective | that, those; syntactically binds as na-ge | ni
 ná | verb | to take, pick up, hold; take away (e.g. {{word:cong2}} {{word:qi1}} {{word:li3}}-{{word:mian4}} {{word:na2}} {{word:san1}}, "take three from seven") |
 nǎ | pronoun | which: {{word:na3}}-{{word:li3}}, where; {{word:na3}}-ge, which one |
 nán | adjective | difficult, hard to do; before {{word:kan4}}, {{word:ting1}} or {{word:chi1}}, unpleasant to see, hear or eat (e.g. {{word:nan2}}-{{word:kan4}}, "ugly") |
-nánrén | noun | man, male, masculine human, husband | mije
 néng | auxiliary | to be able to, be allowed to, can, may, possible | ken
 nǐ | pronoun | you | sina
 nián | noun | year (e.g. {{word:san1}} {{word:nian2}}, "three years"; {{word:qu4}}-{{word:nian2}}, "last year"; {{word:ming2}}-{{word:nian2}}, "next year") |
-nòng | verb | to do, take action on, work on, build, make, prepare | pali
 nǚ | adjective/noun | female, woman: {{word:nv3}}-{{word:ren2}}, a woman |
 pà | verb/adjective | to fear, be afraid of; scared, frightened |
 pángbiān | noun | side, vicinity, area beside, hip | poka
@@ -168,7 +167,7 @@ wán | verb complement | finish, be done, run out; binds directly after a verb v
 wǎng | noun | net, web; the internet (e.g. {{word:zai4}} {{word:wang3}}-{{word:shang4}}, "online") |
 wánr | verb/adjective | to play, have fun, engage in recreation; playful, artistic, frivolous | musi
 wèi | preposition/coverb | for, for the sake of: {{word:wei4}}-{{word:shen2me}}, why ("for what") |
-wèidào | noun | taste, flavor, good or not: {{word:wei4dao4}} {{word:hen3}} {{word:hao3}}, "it tastes good"; salt is {{word:nong4}}-{{word:hao3}} {{word:wei4dao4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}, "the thing that makes it taste good" |
+wèidào | noun | taste, flavor, good or not: {{word:wei4dao4}} {{word:hen3}} {{word:hao3}}, "it tastes good"; salt is {{word:zuo4}}-{{word:hao3}} {{word:wei4dao4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}, "the thing that makes it taste good" |
 wèn | verb | to ask, inquire, question |
 wǒ | pronoun | I, me, we, us | mi
 wù | noun | thing, creature, in words: {{word:dong4}}-{{word:wu4}}, animal ("moving creature") |
@@ -195,7 +194,6 @@ yīnwèi | conjunction/coverb | because, because of |
 yòng | verb/coverb | to use, utilize; with, by means of | kepeken
 yǒu | verb | to have, contain, carry, hold, exist, there is; must be negated with mei, never bu | jo, lon
 yòu | adverb | again: it happens once more; goes before the verb (e.g. {{word:ta1}} {{word:you4}} {{word:chi1}} {{word:le}}, "he ate again") |
-yòubiān | noun | right, the right side |
 yuán | adjective/noun | round, circular, spherical; ball, circle, wheel, cycle | sike
 yuǎn | adjective | far, distant |
 yuè | noun | moon, night sky object, star | mun
@@ -211,6 +209,6 @@ zhíwù | noun | plant, vegetation, herb, leaf | kasi
 zhǒng | noun/measure word | kind, type, sort; after {{word:zhe4}} or {{word:na4}}, like {{word:ge4}} (e.g. {{word:zhe4}}-{{word:zhong3}} {{word:zhi2wu4}}, "this kind of plant") |
 zhōng | noun | middle, center (e.g. {{word:zhong1}}-{{word:jian1}}, "in the middle") |
 zuì | adverb | most; before an adjective ({{word:zui4}} {{word:da4}}, "biggest"); {{word:zui4}}-{{word:hou4}}, "last" |
-zuò | verb | to sit; {{word:zuo4}}-{{word:xia4}}, "sit down" |
+zuò | verb | to do, make: {{word:zuo4}}-{{word:hao3}}, do well, finish; {{word:zuo4}} {{word:dong1}}-{{light:xi1}}, make things |
 zuǒ | noun/directional | left: {{word:zuo3}}-{{word:bian1}}, the left side |
 ```

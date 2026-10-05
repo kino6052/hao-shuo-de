@@ -14,4 +14,16 @@ export default word("you4", {
     eng: "Again: it happened once more. {{word:zai4}} is taken, so \"again\" needs its own word.",
     rus: "Опять: это случилось ещё раз. {{word:zai4}} уже занято, поэтому «снова» — отдельное слово.",
   },
+  senses: {
+    right: {
+      hanzi: "右",
+      eng: "right (side)",
+      rus: "правый",
+      why: {
+        eng: "Written 右, {{word:you4}} means right in {{word:you4}}-{{word:bian1}}; on its own it is again.",
+        rus: "Записанное как 右, {{word:you4}} значит «правый» в {{word:you4}}-{{word:bian1}}; само по себе — «снова».",
+      },
+      compounds: ["you4 bian1"],
+    },
+  },
 });

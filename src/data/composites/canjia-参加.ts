@@ -8,10 +8,10 @@ export default composite({
   en: "take part",
   ru: "участвовать",
   hsd: [
-    "{{word:he2}} {{word:ren2}} {{word:yi1}}-{{word:qi3}} {{word:nong4}}",
+    "{{word:he2}} {{word:ren2}} {{word:yi1}}-{{word:qi3}} {{word:zuo4}}",
     "{{word:he2}} {{word:ren2}} {{word:yi1}}-{{word:qi3}} {{word:wan2r}}",
   ],
-  tts: ["和人一起弄", "和人一起玩儿"],
+  tts: ["和人一起做", "和人一起玩儿"],
   literal: "do it together with people / play together with people",
   fit: "plain",
 });

@@ -266,8 +266,8 @@ export default coverageGroup({
       key: "make",
       eng: "Making it so",
       rus: "Сделать каким-то",
-      words: ["nong4", "ba3"],
-      forms: ["{{word:nong4}} + adjective", "{{word:ba3}} X {{word:nong4}} + adjective"],
+      words: ["zuo4", "ba3"],
+      forms: ["{{word:zuo4}} + adjective", "{{word:ba3}} X {{word:zuo4}} + adjective"],
       taught: "becoming-and-making/make",
     },
     {

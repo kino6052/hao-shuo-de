@@ -7,8 +7,8 @@ export default composite({
   py: "bàngōng",
   en: "work (at an office)",
   ru: "работать (в офисе)",
-  hsd: ["{{word:nong4}}"],
-  tts: ["弄"],
+  hsd: ["{{word:zuo4}}"],
+  tts: ["做"],
   fit: "word",
   proposed: true,
 });

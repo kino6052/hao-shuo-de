@@ -1,5 +1,5 @@
 // To say how an action ends, join a result word to the verb: kàn-dào,
-// zhǎo-dào, nòng-hǎo, nòng-huài, xué-huì. Pattern: verb-result
+// zhǎo-dào, zuò-hǎo, zuò-huài, xué-huì. Pattern: verb-result
 import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
@@ -10,18 +10,18 @@ export default lessonModule({
       "",
       "**verb-result**",
       "",
-      "{{word:dao4}} says you reach it: {{word:kan4}}-{{word:dao4}} (see), {{word:ting1}}-{{word:dao4}} (hear), {{word:zhao3}}-{{word:dao4}} (find). {{word:nong4}}-{{word:hao3}} is \"fix\", {{word:nong4}}-{{word:huai4}} is \"break\", and {{word:xue2}}-{{word:hui4}} is \"learn until you can\". For \"didn't\", use {{word:mei2}} (Lesson {{lesson:also-and-all}}): {{word:mei2}} {{word:zhao3}}-{{word:dao4}}.",
+      "{{word:dao4}} says you reach it: {{word:kan4}}-{{word:dao4}} (see), {{word:ting1}}-{{word:dao4}} (hear), {{word:zhao3}}-{{word:dao4}} (find). {{word:zuo4}}-{{word:hao3}} is \"fix\", {{word:zuo4}}-{{word:huai4}} is \"break\", and {{word:xue2}}-{{word:hui4}} is \"learn until you can\". For \"didn't\", use {{word:mei2}} (Lesson {{lesson:also-and-all}}): {{word:mei2}} {{word:zhao3}}-{{word:dao4}}.",
     ],
     ru: [
       "**Чтобы сказать, чем закончилось действие**, присоедините к глаголу слово-результат. Вы уже знаете {{word:chi1}}-{{word:wan2}} (урок {{lesson:around-an-action}}).",
       "",
       "**глагол-результат**",
       "",
-      "{{word:dao4}} говорит, что вы этого достигли: {{word:kan4}}-{{word:dao4}} (увидеть), {{word:ting1}}-{{word:dao4}} (услышать), {{word:zhao3}}-{{word:dao4}} (найти) — как в русском «искать» и «найти». {{word:nong4}}-{{word:hao3}} — «починить», {{word:nong4}}-{{word:huai4}} — «сломать», а {{word:xue2}}-{{word:hui4}} — «учиться, пока не научишься». Чтобы сказать «не сделал», используйте {{word:mei2}} (урок {{lesson:also-and-all}}): {{word:mei2}} {{word:zhao3}}-{{word:dao4}}.",
+      "{{word:dao4}} говорит, что вы этого достигли: {{word:kan4}}-{{word:dao4}} (увидеть), {{word:ting1}}-{{word:dao4}} (услышать), {{word:zhao3}}-{{word:dao4}} (найти) — как в русском «искать» и «найти». {{word:zuo4}}-{{word:hao3}} — «починить», {{word:zuo4}}-{{word:huai4}} — «сломать», а {{word:xue2}}-{{word:hui4}} — «учиться, пока не научишься». Чтобы сказать «не сделал», используйте {{word:mei2}} (урок {{lesson:also-and-all}}): {{word:mei2}} {{word:zhao3}}-{{word:dao4}}.",
     ],
     tldr: {
-      en: "Join the result to the verb: {{word:zhao3}}-{{word:dao4}} is find, {{word:nong4}}-{{word:huai4}} is break.",
-      ru: "Присоедините результат к глаголу: {{word:zhao3}}-{{word:dao4}} — найти, {{word:nong4}}-{{word:huai4}} — сломать.",
+      en: "Join the result to the verb: {{word:zhao3}}-{{word:dao4}} is find, {{word:zuo4}}-{{word:huai4}} is break.",
+      ru: "Присоедините результат к глаголу: {{word:zhao3}}-{{word:dao4}} — найти, {{word:zuo4}}-{{word:huai4}} — сломать.",
     },
     necessity: {
       en: "Now you can say you found it, fixed it, or broke it.",
@@ -52,14 +52,14 @@ export default lessonModule({
       ru: "Ты его увидел?",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:nong4}}-{{word:huai4}} {{word:le}}.",
-      hanzi: "他把工具弄坏了。",
+      pinyin: "{{Word:ta1}} {{word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:zuo4}}-{{word:huai4}} {{word:le}}.",
+      hanzi: "他把工具做坏了。",
       en: "He broke the tool.",
       ru: "Он сломал инструмент.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:nong4}}-{{word:hao3}} {{word:le}}.",
-      hanzi: "我把工具弄好了。",
+      pinyin: "{{Word:wo3}} {{word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:zuo4}}-{{word:hao3}} {{word:le}}.",
+      hanzi: "我把工具做好了。",
       en: "I fixed the tool.",
       ru: "Я починил инструмент.",
     },
@@ -80,8 +80,8 @@ export default lessonModule({
     {
       en: "He broke the box.",
       ru: "Он сломал коробку.",
-      answer: "{{Word:ta1}} {{word:ba3}} {{word:he2zi}} {{word:nong4}}-{{word:huai4}} {{word:le}}.",
-      hanzi: "他把盒子弄坏了。",
+      answer: "{{Word:ta1}} {{word:ba3}} {{word:he2zi}} {{word:zuo4}}-{{word:huai4}} {{word:le}}.",
+      hanzi: "他把盒子做坏了。",
     },
   ],
 });

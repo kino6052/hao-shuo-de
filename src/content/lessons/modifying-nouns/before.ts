@@ -47,8 +47,8 @@ export default lessonModule({
       ru: "Большое место.",
     },
     {
-      pinyin: "{{Word:hao3}}-{{word:de}} {{word:fu4mu3}}.",
-      hanzi: "好的父母。",
+      pinyin: "{{Word:hao3}}-{{word:de}} {{word:ba4ba}}-{{word:ma1ma}}.",
+      hanzi: "好的爸爸妈妈。",
       en: "Good parents.",
       ru: "Хорошие родители.",
     },
@@ -81,8 +81,8 @@ export default lessonModule({
     {
       en: "good parents",
       ru: "хорошие родители",
-      answer: "{{Word:hao3}}-{{word:de}} {{word:fu4mu3}}",
-      hanzi: "好的父母",
+      answer: "{{Word:hao3}}-{{word:de}} {{word:ba4ba}}-{{word:ma1ma}}",
+      hanzi: "好的爸爸妈妈",
     },
   ],
 });

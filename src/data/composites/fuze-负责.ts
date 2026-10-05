@@ -7,8 +7,8 @@ export default composite({
   py: "fùzé",
   en: "be responsible",
   ru: "отвечать за",
-  hsd: ["{{word:ba3}} X {{word:nong4}}-{{word:hao3}}-{{word:de}} {{word:ren2}}"],
-  tts: ["把X弄好的人"],
+  hsd: ["{{word:ba3}} X {{word:zuo4}}-{{word:hao3}}-{{word:de}} {{word:ren2}}"],
+  tts: ["把X做好的人"],
   literal: "the one who makes X good",
   fit: "plain",
 });

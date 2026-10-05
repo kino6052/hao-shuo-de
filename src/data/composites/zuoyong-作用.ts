@@ -7,9 +7,12 @@ export default composite({
   py: "zuòyòng",
   en: "function, effect",
   ru: "роль, действие",
-  hsd: ["{{word:neng2}} {{word:nong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["能弄的东西"],
+  hsd: [
+    "{{word:zuo4}}-{{word:yong4}}",
+    "{{word:neng2}} {{word:zuo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+  ],
+  tts: ["作用", "能做的东西"],
   literal: "what it can do",
-  fit: "plain",
+  fit: "natural",
   proposed: true,
 });

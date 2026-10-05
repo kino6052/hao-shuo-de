@@ -48,8 +48,8 @@ export default lessonModule({
       ru: "Я дома.",
     },
     {
-      pinyin: "{{Word:ni3}}-{{word:de}} {{word:fu4mu3}} {{word:zai4}} {{word:jia1}} {{word:ma}}?",
-      hanzi: "你的父母在家吗？",
+      pinyin: "{{Word:ni3}}-{{word:de}} {{word:ba4ba}}-{{word:ma1ma}} {{word:zai4}} {{word:jia1}} {{word:ma}}?",
+      hanzi: "你的爸爸妈妈在家吗？",
       en: "Are your parents at home?",
       ru: "Твои родители дома?",
     },

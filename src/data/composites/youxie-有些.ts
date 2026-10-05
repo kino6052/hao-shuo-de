@@ -7,7 +7,7 @@ export default composite({
   py: "yǒuxiē",
   en: "some",
   ru: "некоторые",
-  hsd: ["{{word:yi1}}-{{word:bu4fen}}"],
+  hsd: ["{{word:yi1}}-{{word:bu4}}-{{light:fen1}}"],
   tts: ["一部分"],
   literal: "a part",
   fit: "natural",

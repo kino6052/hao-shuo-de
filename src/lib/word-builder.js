@@ -22,6 +22,7 @@
 //         cóng jiā yòng jiǎo kuài-kuài-de qù     fēi-dào shuǐ-lǐ
 
 import { wordRefRe, refTerm } from "./word-refs.js";
+import { chainSenses, senseHanzi } from "./senses.js";
 
 // Each question with the role its answer takes. `choice` questions are
 // answered by picking one of CHOICES[key] instead of a word. The order is the
@@ -133,7 +134,7 @@ export function takesVia(node, key) {
 
 // The broad words offered by the first question, "What is it?".
 export const START_NOUNS = ["东西", "ren2", "动物", "zhi2wu4", "工具", "地方"];
-export const START_VERBS = ["nong4", "qu4", "chi1", "kan4"];
+export const START_VERBS = ["zuo4", "qu4", "chi1", "kan4"];
 
 // -- Which words can answer which question -----------------------------
 
@@ -143,7 +144,7 @@ const COLORS = new Set(["bai2", "hei1", "hong2", "huang2", "lan2"]);
 const NOT_OFFERED = new Set([
   "shi4", "zai4", "yong4", "wan2", "hen3", "zui4", "zhen1", "bie2",
   "li3", "shang4", "xia4", "hou4", "qian2", "mian4", "bian1",
-  "pang2bian1", "zuo3", "you4bian1", "fu4jin4", "fang1", "dong1", "xi1", "se4", "zhe3",
+  "pang2bian1", "zuo3", "fu4jin4", "fang1", "dong1", "xi1", "se4", "zhe3",
   "dian3", "zhong3", "xian4zai4",
 ]);
 // Words whose part of speech in the dictionary doesn't say what they are here.
@@ -224,14 +225,30 @@ export function refSystem(dict) {
 }
 
 // `hanzi` is a Map of word id -> characters (src/lib/hanzi-map.js); a unit
-// (from `dict`) writes its own hanzi.
+// (from `dict`) writes its own hanzi. Words are marked while drawing (⟦id⟧,
+// joined like pinyin) and written at the end, chain by chain, so a word in
+// one of its senses gets that sense's hanzi: zuò-chē is 坐车, not 做车
+// (src/lib/senses.js).
 export function hanziSystem(hanzi, dict) {
+  const words = new Proxy({}, {
+    get: (_, id) => (hanzi.has(id) ? { hanzi: hanzi.get(id), senses: dict?.words?.[id]?.senses } : unitOf(dict, id) ? { hanzi: unitOf(dict, id).hanzi } : undefined),
+  });
+  const write = (chain) => {
+    const ids = chain.map((t) => t.slice(1, -1));
+    const senses = chainSenses(ids, dict?.words ?? {});
+    return ids.map((id, i) => (id.startsWith("=") ? id.slice(1) : senseHanzi(words, id, senses[i]))).join("");
+  };
   return {
-    word: (id) => hanzi.get(id) || unitOf(dict, id)?.hanzi || "",
-    wayDe: "地",
-    hyphen: (parts) => parts.filter(Boolean).join(""),
-    space: (parts) => parts.filter(Boolean).join(""),
-    glue: (text) => text,
+    word: (id) => `⟦${id}⟧`,
+    wayDe: "⟦=地⟧",
+    hyphen: (parts) => parts.filter(Boolean).join("-"),
+    space: (parts) => parts.filter(Boolean).join(" "),
+    glue: (text) => text.replace(/ /g, "-"),
+    finish: (text) =>
+      text
+        .split(" ")
+        .map((piece) => write(piece.split("-").filter(Boolean)))
+        .join(""),
   };
 }
 
@@ -251,7 +268,7 @@ function renderAdj(node, sys) {
 // A place and where at it: dà-de shuǐ-lǐ. Glued into one piece where it's
 // part of a describing part (zài-dà-de-shuǐ-lǐ-de dòng-wù).
 function renderPlace(answer, sys) {
-  return sys.hyphen([render(answer.node, sys), ...POSITIONS[positionOf(answer)].map(sys.word)]);
+  return sys.hyphen([draw(answer.node, sys), ...POSITIONS[positionOf(answer)].map(sys.word)]);
 }
 
 // How a verb is done: a one-syllable describing word is said twice
@@ -270,7 +287,7 @@ function renderNoun(node, sys) {
     a.from && part([sys.word("cong2"), renderPlace(a.from, sys), sys.word("lai2"), de]),
     a.to && part([sys.word(a.to.via || DEFAULT_VIA), renderPlace(a.to, sys), de]),
     a.where && part([sys.word("zai4"), renderPlace(a.where, sys), de]),
-    a.does && sys.hyphen([sys.glue(render(a.does.node, sys)), de]),
+    a.does && sys.hyphen([sys.glue(draw(a.does.node, sys)), de]),
     a.kind && sys.hyphen([renderAdj(a.kind.node, sys), de]),
     a.color && sys.hyphen([sys.word(a.color.node.id), de]),
     sys.word(node.id),
@@ -288,11 +305,11 @@ function renderVerb(node, sys) {
     : sys.hyphen(core.map(sys.word));
   // With a place after the verb, the thing moves up front with bǎ
   // (Lesson becoming-and-making): bǎ jīn ná-dào jiā.
-  const thing = a.what && render(a.what.node, sys);
+  const thing = a.what && draw(a.what.node, sys);
   return sys.space([
     a.from && sys.space([sys.word("cong2"), renderPlace(a.from, sys)]),
     a.where && sys.space([sys.word("zai4"), renderPlace(a.where, sys)]),
-    a.with && sys.space([sys.word("yong4"), render(a.with.node, sys)]),
+    a.with && sys.space([sys.word("yong4"), draw(a.with.node, sys)]),
     a.way && renderWay(a.way.node, sys),
     a.to && thing && sys.space([sys.word("ba3"), thing]),
     verb,
@@ -301,7 +318,14 @@ function renderVerb(node, sys) {
 }
 
 // -> the built word, in the given writing system.
+// -> the node in a writing system; a system with finish() gets the whole text
+// once at the end (the hanzi system reads its hyphen chains there).
 export function render(node, sys) {
+  const text = draw(node, sys);
+  return sys.finish ? sys.finish(text) : text;
+}
+
+function draw(node, sys) {
   if (node.role === "noun") return renderNoun(node, sys);
   if (node.role === "verb") return renderVerb(node, sys);
   return renderAdj(node, sys);

@@ -67,8 +67,8 @@ export default lessonModule({
         en: "What's the difference between {{word:qu4}} and {{word:dao4}}?",
         ru: "Чем {{word:qu4}} отличается от {{word:dao4}}?",
       },
-      en: "{{word:qu4}} is going toward a place. {{word:dao4}} is getting there: {{Word:wo3}} {{word:qu4}} {{word:fu4mu3}}-{{word:de}} {{word:jia1}} (I'm on my way), {{Word:wo3}} {{word:dao4}} {{word:fu4mu3}}-{{word:de}} {{word:jia1}} {{word:le}} (I'm there now).",
-      ru: "{{word:qu4}} — идти к месту. {{word:dao4}} — добраться до него: {{Word:wo3}} {{word:qu4}} {{word:fu4mu3}}-{{word:de}} {{word:jia1}} (я в пути), {{Word:wo3}} {{word:dao4}} {{word:fu4mu3}}-{{word:de}} {{word:jia1}} {{word:le}} (я уже на месте).",
+      en: "{{word:qu4}} is going toward a place. {{word:dao4}} is getting there: {{Word:wo3}} {{word:qu4}} {{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:jia1}} (I'm on my way), {{Word:wo3}} {{word:dao4}} {{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:jia1}} {{word:le}} (I'm there now).",
+      ru: "{{word:qu4}} — идти к месту. {{word:dao4}} — добраться до него: {{Word:wo3}} {{word:qu4}} {{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:jia1}} (я в пути), {{Word:wo3}} {{word:dao4}} {{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:jia1}} {{word:le}} (я уже на месте).",
     },
   ],
 });

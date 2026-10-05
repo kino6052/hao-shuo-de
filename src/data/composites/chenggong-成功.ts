@@ -7,8 +7,8 @@ export default composite({
   py: "chénggōng",
   en: "succeed",
   ru: "добиться успеха",
-  hsd: ["{{word:nong4}} {{word:hao3}} {{word:le}}"],
-  tts: ["弄好了"],
+  hsd: ["{{word:zuo4}} {{word:hao3}} {{word:le}}"],
+  tts: ["做好了"],
   literal: "got it done",
   fit: "plain",
 });

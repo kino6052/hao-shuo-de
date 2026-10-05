@@ -7,7 +7,7 @@ export default composite({
   py: "bàn",
   en: "half",
   ru: "половина",
-  hsd: ["{{word:yi1}} {{word:bu4fen}}"],
+  hsd: ["{{word:yi1}} {{word:bu4}}-{{light:fen1}}"],
   tts: ["一部分"],
   literal: "one part",
   fit: "plain",

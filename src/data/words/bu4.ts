@@ -15,4 +15,16 @@ export default word("bu4", {
     rus: "Не. Без него нельзя ничего отрицать.",
   },
   maps: "ala",
+  senses: {
+    part: {
+      hanzi: "部",
+      eng: "part",
+      rus: "часть",
+      why: {
+        eng: "Written 部, {{word:bu4}} means part in {{word:bu4}}-{{light:fen1}}; on its own it is not.",
+        rus: "Записанное как 部, {{word:bu4}} значит «часть» в {{word:bu4}}-{{light:fen1}}; само по себе — «не».",
+      },
+      compounds: ["bu4 fen1"],
+    },
+  },
 });

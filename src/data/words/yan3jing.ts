@@ -7,7 +7,7 @@ export default word("yan3jing", {
   definition: { eng: "eye", rus: "глаз", zh: "眼睛" },
   necessity: {
     index: 3,
-    eng: "The eyes. {{word:kan4}}-{{word:de}} {{word:bu4fen}} would work, but eyes come up too often for that.",
-    rus: "Глаза. Можно сказать {{word:kan4}}-{{word:de}} {{word:bu4fen}}, но глаза нужны слишком часто.",
+    eng: "The eyes. {{word:kan4}}-{{word:de}} {{word:bu4}}-{{light:fen1}} would work, but eyes come up too often for that.",
+    rus: "Глаза. Можно сказать {{word:kan4}}-{{word:de}} {{word:bu4}}-{{light:fen1}}, но глаза нужны слишком часто.",
   },
 });

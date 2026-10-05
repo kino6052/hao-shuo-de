@@ -7,9 +7,9 @@ export default composite({
   py: "yā",
   en: "press",
   ru: "давить",
-  hsd: ["{{word:yong4}} {{word:li4}} {{word:nong4}}-{{word:xia4}}-{{word:qu4}}"],
-  tts: ["用力弄下去"],
-  literal: "push it down with strength",
+  hsd: ["{{word:yong4}} {{word:li4}} {{word:fang4}}-{{word:xia4}}-{{word:qu4}}"],
+  tts: ["用力放下去"],
+  literal: "put down with force",
   fit: "plain",
   proposed: true,
 });

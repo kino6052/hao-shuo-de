@@ -42,7 +42,7 @@ const hanzi = new Map();
 for (const id of LESSON_IDS) {
   const entries = await importLessonFile(id, 'index.ts');
   for (const e of entries) {
-    const word = e.type === 'vocab' && soleWordRef(e.term);
+    const word = e.type === 'vocab' && !e.sense && soleWordRef(e.term);
     if (word) hanzi.set(e.ttsText, word);
   }
 }

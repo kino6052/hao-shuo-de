@@ -7,8 +7,8 @@ export default composite({
   py: "jǔxíng",
   en: "hold (an event)",
   ru: "проводить",
-  hsd: ["{{word:nong4}}"],
-  tts: ["弄"],
+  hsd: ["{{word:zuo4}}"],
+  tts: ["做"],
   literal: "do",
   fit: "plain",
 });

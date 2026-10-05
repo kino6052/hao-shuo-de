@@ -11,6 +11,6 @@ export default composite({
   tts: ["叫X+…"],
   literal: "have X do it",
   fit: "plain",
-  note: "Or bǎ X nòng + adjective.",
+  note: "Or bǎ X zuò + adjective.",
   proposed: true,
 });

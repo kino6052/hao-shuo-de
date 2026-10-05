@@ -835,10 +835,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:zuo3}}-{{word:bian1}} / {{word:you4bian1}}, left / right: {{Word:he2zi}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}. (The box is on my left.)"
+            "{{word:zuo3}}-{{word:bian1}} / {{word:you4}}-{{word:bian1}}, left / right: {{Word:he2zi}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}. (The box is on my left.)"
           ],
           "ru": [
-            "{{word:zuo3}}-{{word:bian1}} / {{word:you4bian1}} — слева / справа: {{Word:he2zi}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}. (Коробка слева от меня.)"
+            "{{word:zuo3}}-{{word:bian1}} / {{word:you4}}-{{word:bian1}} — слева / справа: {{Word:he2zi}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}. (Коробка слева от меня.)"
           ],
           "zh": []
         }
@@ -861,10 +861,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:lai2}} / {{word:qu4}} + place: {{Word:wo3}} {{word:qu4}} {{word:fu4mu3}}-{{word:de}} {{word:jia1}}. (I'm going to my parents' home.)"
+            "{{word:lai2}} / {{word:qu4}} + place: {{Word:wo3}} {{word:qu4}} {{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:jia1}}. (I'm going to my parents' home.)"
           ],
           "ru": [
-            "{{word:lai2}} / {{word:qu4}} + место: {{Word:wo3}} {{word:qu4}} {{word:fu4mu3}}-{{word:de}} {{word:jia1}}. (Я иду домой к родителям.)"
+            "{{word:lai2}} / {{word:qu4}} + место: {{Word:wo3}} {{word:qu4}} {{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:jia1}}. (Я иду домой к родителям.)"
           ],
           "zh": []
         }
@@ -1181,10 +1181,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:bu4fen}}, part: {{Word:zhe4}} {{word:bu4fen}} {{word:hen3}} {{word:hao3}}. (This part is good.) {{word:da4}} {{word:bu4fen}}: most."
+            "{{word:bu4}}-{{light:fen1}}, part: {{Word:zhe4}} {{word:bu4}}-{{light:fen1}} {{word:hen3}} {{word:hao3}}. (This part is good.) {{word:da4}} {{word:bu4}}-{{light:fen1}}: most."
           ],
           "ru": [
-            "{{word:bu4fen}} — часть: {{Word:zhe4}} {{word:bu4fen}} {{word:hen3}} {{word:hao3}}. (Эта часть хорошая.) {{word:da4}} {{word:bu4fen}} — большинство."
+            "{{word:bu4}}-{{light:fen1}} — часть: {{Word:zhe4}} {{word:bu4}}-{{light:fen1}} {{word:hen3}} {{word:hao3}}. (Эта часть хорошая.) {{word:da4}} {{word:bu4}}-{{light:fen1}} — большинство."
           ],
           "zh": []
         }
@@ -1229,10 +1229,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:nong4}} + result, make it so: {{Word:wo3}} {{word:nong4}} {{word:hao3}} {{word:le}}. (I fixed it.)"
+            "{{word:zuo4}} + result, make it so: {{Word:wo3}} {{word:zuo4}} {{word:hao3}} {{word:le}}. (I fixed it.)"
           ],
           "ru": [
-            "{{word:nong4}} + результат — сделать таким: {{Word:wo3}} {{word:nong4}} {{word:hao3}} {{word:le}}. (Я починил.)"
+            "{{word:zuo4}} + результат — сделать таким: {{Word:wo3}} {{word:zuo4}} {{word:hao3}} {{word:le}}. (Я починил.)"
           ],
           "zh": []
         }
@@ -1240,10 +1240,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:ba3}} + thing + {{word:nong4}} + result: {{Word:wo3}} {{word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:nong4}} {{word:hao3}} {{word:le}}. (I fixed the tool.)"
+            "{{word:ba3}} + thing + {{word:zuo4}} + result: {{Word:wo3}} {{word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:zuo4}} {{word:hao3}} {{word:le}}. (I fixed the tool.)"
           ],
           "ru": [
-            "{{word:ba3}} + вещь + {{word:nong4}} + результат: {{Word:wo3}} {{word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:nong4}} {{word:hao3}} {{word:le}}. (Я починил инструмент.)"
+            "{{word:ba3}} + вещь + {{word:zuo4}} + результат: {{Word:wo3}} {{word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:zuo4}} {{word:hao3}} {{word:le}}. (Я починил инструмент.)"
           ],
           "zh": []
         }
@@ -1424,10 +1424,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "number-{{word:zhong3}} / -{{word:ci4}} / -{{word:bu4fen}}, kinds / times / parts: {{Word:wo3}} {{word:qu4}}-{{word:guo4}} {{word:san1}}-{{word:ci4}}. (I've been there three times.)"
+            "number-{{word:zhong3}} / -{{word:ci4}} / -{{word:bu4}}-{{light:fen1}}, kinds / times / parts: {{Word:wo3}} {{word:qu4}}-{{word:guo4}} {{word:san1}}-{{word:ci4}}. (I've been there three times.)"
           ],
           "ru": [
-            "число-{{word:zhong3}} / -{{word:ci4}} / -{{word:bu4fen}} — виды / разы / части: {{Word:wo3}} {{word:qu4}}-{{word:guo4}} {{word:san1}}-{{word:ci4}}. (Я был там три раза.)"
+            "число-{{word:zhong3}} / -{{word:ci4}} / -{{word:bu4}}-{{light:fen1}} — виды / разы / части: {{Word:wo3}} {{word:qu4}}-{{word:guo4}} {{word:san1}}-{{word:ci4}}. (Я был там три раза.)"
           ],
           "zh": []
         }
@@ -2002,10 +2002,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:jiao4}} + person + verb, have or let: {{Word:jiao4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}}. (Let him in.) {{word:bu4}} {{word:jiao4}}, won't let: {{Word:fu4mu3}} {{word:bu4}} {{word:jiao4}} {{word:wo3}} {{word:chu1}}-{{word:qu4}}. (My parents won't let me go out.)"
+            "{{word:jiao4}} + person + verb, have or let: {{Word:jiao4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}}. (Let him in.) {{word:bu4}} {{word:jiao4}}, won't let: {{Word:ba4ba}}-{{word:ma1ma}} {{word:bu4}} {{word:jiao4}} {{word:wo3}} {{word:chu1}}-{{word:qu4}}. (My parents won't let me go out.)"
           ],
           "ru": [
-            "{{word:jiao4}} + человек + глагол — велеть или позволить: {{Word:jiao4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}}. (Пусть войдёт.) {{word:bu4}} {{word:jiao4}} — не позволять: {{Word:fu4mu3}} {{word:bu4}} {{word:jiao4}} {{word:wo3}} {{word:chu1}}-{{word:qu4}}. (Родители не пускают меня гулять.)"
+            "{{word:jiao4}} + человек + глагол — велеть или позволить: {{Word:jiao4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}}. (Пусть войдёт.) {{word:bu4}} {{word:jiao4}} — не позволять: {{Word:ba4ba}}-{{word:ma1ma}} {{word:bu4}} {{word:jiao4}} {{word:wo3}} {{word:chu1}}-{{word:qu4}}. (Родители не пускают меня гулять.)"
           ],
           "zh": []
         }

@@ -7,8 +7,10 @@ export default composite({
   py: "cáiliào",
   en: "material",
   ru: "материал",
-  hsd: ["{{word:nong4}} {{word:dong1}}-{{light:xi1}} {{word:yong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["弄东西用的东西"],
+  hsd: [
+    "{{word:zuo4}} {{word:dong1}}-{{light:xi1}} {{word:yong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+  ],
+  tts: ["做东西用的东西"],
   literal: "what you use to make things",
   fit: "plain",
 });

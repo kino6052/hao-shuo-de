@@ -41,9 +41,14 @@ export default lessonModule({
       ru: "сторона; {{word:di4}}-{{light:fang1}} — место",
     },
     {
-      word: "fu4mu3",
-      en: "parents",
-      ru: "родители",
+      word: "ba4ba",
+      en: "dad; {{word:ba4ba}}-{{word:ma1ma}}: parents",
+      ru: "папа; {{word:ba4ba}}-{{word:ma1ma}} — родители",
+    },
+    {
+      word: "ma1ma",
+      en: "mom",
+      ru: "мама",
     },
   ],
   prose: {
@@ -94,8 +99,8 @@ export default lessonModule({
       ru: "Животное маленькое.",
     },
     {
-      pinyin: "{{Word:fu4mu3}} {{word:hen3}} {{word:hao3}}.",
-      hanzi: "父母很好。",
+      pinyin: "{{Word:ba4ba}}-{{word:ma1ma}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "爸爸妈妈很好。",
       en: "The parents are good.",
       ru: "Родители хорошие.",
     },

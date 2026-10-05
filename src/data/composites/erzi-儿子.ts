@@ -7,8 +7,10 @@ export default composite({
   py: "érzi",
   en: "son",
   ru: "сын",
-  hsd: ["{{word:fu4mu3}}-{{word:de}} {{word:xiao3}}-{{word:de}} {{word:nan2ren2}}"],
-  tts: ["父母的小的男人"],
+  hsd: [
+    "{{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:xiao3}}-{{word:de}} {{word:nan2}}-{{word:ren2}}",
+  ],
+  tts: ["爸爸妈妈的小的男人"],
   literal: "the parents' little man",
   fit: "plain",
 });

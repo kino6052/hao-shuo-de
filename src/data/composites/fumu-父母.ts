@@ -7,7 +7,7 @@ export default composite({
   py: "fùmǔ",
   en: "parent",
   ru: "родитель",
-  hsd: ["{{word:fu4mu3}}"],
-  tts: ["父母"],
+  hsd: ["{{word:ba4ba}}-{{word:ma1ma}}"],
+  tts: ["爸爸妈妈"],
   fit: "word",
 });

@@ -1,7 +1,7 @@
 // becoming-and-making ("Modifiers 4 — Becoming and making"): its modules, in reading order.
 // See src/lib/lesson.ts.
 //
-// Rewritten in Phase 2 (BOOK_PLAN.md): it changed (adjective + le), became (biàn), making it so (nòng), putting the thing first (bǎ), where you put it (fàng), and strong (yǒu lì).
+// Rewritten in Phase 2 (BOOK_PLAN.md): it changed (adjective + le), became (biàn), making it so (zuò), putting the thing first (bǎ), where you put it (fàng), and strong (yǒu lì).
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- becoming-and-making).
 import { lesson } from "../../../lib/lesson.ts";

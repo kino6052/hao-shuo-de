@@ -7,7 +7,7 @@ export default composite({
   py: "kè",
   en: "lesson, class",
   ru: "урок",
-  hsd: ["{{word:xue2}}-{{word:de}} {{word:bu4fen}}"],
+  hsd: ["{{word:xue2}}-{{word:de}} {{word:bu4}}-{{light:fen1}}"],
   tts: ["学的部分"],
   literal: "learning part",
   fit: "plain",

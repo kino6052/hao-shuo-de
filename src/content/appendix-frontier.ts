@@ -216,9 +216,9 @@ const content: Entry[] = [
   },
   {
     type: "prose",
-    en: ["## Family", "There are {{word:fu4mu3}} (parents), {{word:nan2ren2}}, and {{word:nv3}}-{{word:ren2}}. Mom and dad are \"the woman and the man of the parents\", and grandparents, uncles, and cousins need chains of -{{word:de}}."],
+    en: ["## Family", "There are {{word:ba4ba}}-{{word:ma1ma}} (parents), {{word:nan2}}-{{word:ren2}}, and {{word:nv3}}-{{word:ren2}}. Mom and dad are \"the woman and the man of the parents\", and grandparents, uncles, and cousins need chains of -{{word:de}}."],
     zh: [],
-    ru: ["## Семья", "Есть {{word:fu4mu3}} (родители), {{word:nan2ren2}} и {{word:nv3}}-{{word:ren2}}. Мама и папа — «женщина и мужчина из родителей», а бабушки, дяди и двоюродные братья требуют цепочек из -{{word:de}}."],
+    ru: ["## Семья", "Есть {{word:ba4ba}}-{{word:ma1ma}} (родители), {{word:nan2}}-{{word:ren2}} и {{word:nv3}}-{{word:ren2}}. Мама и папа — «женщина и мужчина из родителей», а бабушки, дяди и двоюродные братья требуют цепочек из -{{word:de}}."],
     tldr: {
       en: ["Family words are built from parents, men, and women."],
       zh: [],
@@ -232,16 +232,16 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:fu4mu3}}-{{word:li3}}-{{word:de}} {{word:nv3}}-{{word:ren2}}.",
-    ttsText: "父母里的女人。",
+    pinyin: "{{Word:ba4ba}}-{{word:ma1ma}}-{{word:li3}}-{{word:de}} {{word:nv3}}-{{word:ren2}}.",
+    ttsText: "爸爸妈妈里的女人。",
     en: ["Mom (literally: the woman of the parents)."],
     zh: [],
     ru: ["Мама (дословно: женщина из родителей)."],
   },
   {
     type: "example",
-    pinyin: "{{Word:fu4mu3}}-{{word:de}} {{word:fu4mu3}}.",
-    ttsText: "父母的父母。",
+    pinyin: "{{Word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:ba4ba}}-{{word:ma1ma}}.",
+    ttsText: "爸爸妈妈的爸爸妈妈。",
     en: ["Grandparents (literally: the parents' parents)."],
     zh: [],
     ru: ["Бабушка и дедушка (дословно: родители родителей)."],
@@ -288,8 +288,8 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:ta1}} {{word:ba3}} {{word:he2zi}} {{word:nong4}}-{{word:huai4}} {{word:le}}.",
-    ttsText: "他把盒子弄坏了。",
+    pinyin: "{{Word:ta1}} {{word:ba3}} {{word:he2zi}} {{word:zuo4}}-{{word:huai4}} {{word:le}}.",
+    ttsText: "他把盒子做坏了。",
     en: ["The box was broken by him (literally: he broke the box)."],
     zh: [],
     ru: ["Коробку сломал он (дословно: он сломал коробку)."],

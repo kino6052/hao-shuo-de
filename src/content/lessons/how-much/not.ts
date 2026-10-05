@@ -64,8 +64,8 @@ export default lessonModule({
     {
       en: "My parents aren't old.",
       ru: "Мои родители не старые.",
-      answer: "{{Word:wo3}}-{{word:de}} {{word:fu4mu3}} {{word:bu4}} {{word:lao3}}.",
-      hanzi: "我的父母不老。",
+      answer: "{{Word:wo3}}-{{word:de}} {{word:ba4ba}}-{{word:ma1ma}} {{word:bu4}} {{word:lao3}}.",
+      hanzi: "我的爸爸妈妈不老。",
     },
     {
       en: "The water isn't cold.",

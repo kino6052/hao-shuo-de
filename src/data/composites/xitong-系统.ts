@@ -7,7 +7,7 @@ export default composite({
   py: "xìtǒng",
   en: "system",
   ru: "система",
-  hsd: ["{{word:yi1}}-{{word:qi3}} {{word:dong4}}-{{word:de}} {{word:bu4fen}}"],
+  hsd: ["{{word:yi1}}-{{word:qi3}} {{word:dong4}}-{{word:de}} {{word:bu4}}-{{light:fen1}}"],
   tts: ["一起动的部分"],
   literal: "parts that move together",
   fit: "plain",

@@ -36,7 +36,7 @@ export function wordUse(lessons, dictionary, storyTexts = []) {
   const home = new Map();
   for (const lesson of lessons) {
     for (const entry of lesson.entries) {
-      const id = entry.type === 'vocab' ? soleWordRef(entry.term) : null;
+      const id = entry.type === 'vocab' && !entry.sense ? soleWordRef(entry.term) : null; // a sense card isn't the word's home
       if (id && !home.has(id)) home.set(id, lesson.number);
     }
   }
@@ -86,7 +86,7 @@ export function practiceGaps(lessons, dictionary) {
   const idsIn = (text) => new Set(wordsIn(text, terms, { pinyinField: true }).map((w) => w.id).filter(Boolean));
   return lessons.map((lesson) => {
     const introduced = lesson.entries
-      .filter((e) => e.type === 'vocab')
+      .filter((e) => e.type === 'vocab' && !e.sense)
       .map((e) => soleWordRef(e.term))
       .filter((id) => id && dictionary[id]);
     const inExamples = new Set();

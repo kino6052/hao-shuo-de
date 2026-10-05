@@ -62,7 +62,7 @@ for (const [i, id] of LESSON_IDS.entries()) {
   const entries = await importLessonFile(id, 'index.ts');
   modules.set(id, new Set(entries.map((e) => e.module)));
   for (const e of entries) {
-    const word = e.type === 'vocab' && soleWordRef(e.term);
+    const word = e.type === 'vocab' && !e.sense && soleWordRef(e.term); // a sense card isn't the word's home
     if (word) home.set(word, i);
     const text = e.type === 'example' ? e.pinyin : e.type === 'answer' ? [].concat(e.en)[0] : null;
     if (text) sentences.push({ where: `${id}/${e.module}`, words: new Set(wordsOf(text)) });

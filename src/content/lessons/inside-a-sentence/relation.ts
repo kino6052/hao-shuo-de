@@ -75,8 +75,8 @@ export default lessonModule({
     {
       en: "My parents and I get along well.",
       ru: "У меня с родителями хорошие отношения.",
-      answer: "{{Word:wo3}} {{word:he2}} {{word:fu4mu3}}-{{word:de}} {{word:guan1xi}} {{word:hen3}} {{word:hao3}}.",
-      hanzi: "我和父母的关系很好。",
+      answer: "{{Word:wo3}} {{word:he2}} {{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:guan1xi}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "我和爸爸妈妈的关系很好。",
     },
   ],
 });

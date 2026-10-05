@@ -1,7 +1,7 @@
 // also-and-all ("Modifiers 3 — Also and all"): its modules, in reading order.
 // See src/lib/lesson.ts.
 //
-// Rewritten in Phase 2 (BOOK_PLAN.md): also (yě) with verbs and with adjectives, all (dōu), everything (shénme-dōu), and part (bùfen). kāi and guān (open, close, D41) are theme words in the examples; light (dēng, míng, D53) turns them on and off.
+// Rewritten in Phase 2 (BOOK_PLAN.md): also (yě) with verbs and with adjectives, all (dōu), everything (shénme-dōu), and part (bù-fen). kāi and guān (open, close, D41) are theme words in the examples; light (dēng, míng, D53) turns them on and off.
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- also-and-all).
 import { lesson } from "../../../lib/lesson.ts";

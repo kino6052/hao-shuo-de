@@ -7,7 +7,7 @@ export default composite({
   py: "yòubian",
   en: "right side",
   ru: "справа",
-  hsd: ["{{word:you4bian1}}"],
+  hsd: ["{{word:you4}}-{{word:bian1}}"],
   tts: ["右边"],
   fit: "word",
 });

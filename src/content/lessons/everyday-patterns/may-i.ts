@@ -70,7 +70,7 @@ export default lessonModule({
       ru: "Хорошо!",
     },
     {
-      pinyin: "{{Word:ni3}} {{word:zuo4}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}, {{word:hao3}} {{word:ma}}?",
+      pinyin: "{{Word:ni3}} {{word:zuo4}}-{{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}, {{word:hao3}} {{word:ma}}?",
       hanzi: "你坐在我的左边，好吗？",
       en: "Sit on my left, okay?",
       ru: "Сядь слева от меня, хорошо?",

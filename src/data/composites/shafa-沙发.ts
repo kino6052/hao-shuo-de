@@ -7,8 +7,8 @@ export default composite({
   py: "shāfā",
   en: "sofa",
   ru: "диван",
-  hsd: ["{{word:da4}}-{{word:de}} {{word:zuo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["大的坐的东西"],
+  hsd: ["{{word:da4}}-{{word:de}} {{word:zuo4}}-{{word:xia4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
+  tts: ["大的坐下的东西"],
   literal: "a big thing to sit on",
   fit: "plain",
 });

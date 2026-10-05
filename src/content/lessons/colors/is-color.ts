@@ -70,7 +70,7 @@ export default lessonModule({
       ru: "Семь коробок красные, а восемь — синие.",
     },
     {
-      pinyin: "{{Word:you4bian1}}-{{word:de}} {{word:he2zi}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}.",
+      pinyin: "{{Word:you4}}-{{word:bian1}}-{{word:de}} {{word:he2zi}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}.",
       hanzi: "右边的盒子是红色的。",
       en: "The box on the right is red.",
       ru: "Коробка справа красная.",

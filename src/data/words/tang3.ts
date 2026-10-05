@@ -11,7 +11,7 @@ export default word("tang3", {
   },
   necessity: {
     index: 3,
-    eng: "Lie down. With {{word:zuo4}} and {{word:zhan4}}, one of the three ways a body rests.",
-    rus: "Лежать. Вместе с {{word:zuo4}} и {{word:zhan4}} — одна из трёх поз тела.",
+    eng: "Lie down. With {{word:zuo4}}-{{word:xia4}} and {{word:zhan4}}, one of the three ways a body rests.",
+    rus: "Лежать. Вместе с {{word:zuo4}}-{{word:xia4}} и {{word:zhan4}} — одна из трёх поз тела.",
   },
 });

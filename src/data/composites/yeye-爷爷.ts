@@ -7,8 +7,10 @@ export default composite({
   py: "yéye",
   en: "grandfather",
   ru: "дедушка",
-  hsd: ["{{word:fu4mu3}}-{{word:de}} {{word:fu4mu3}}-{{word:li3}}-{{word:de}} {{word:nan2ren2}}"],
-  tts: ["父母的父母里的男人"],
+  hsd: [
+    "{{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:ba4ba}}-{{word:ma1ma}}-{{word:li3}}-{{word:de}} {{word:nan2}}-{{word:ren2}}",
+  ],
+  tts: ["爸爸妈妈的爸爸妈妈里的男人"],
   literal: "the man among your parents' parents",
   fit: "plain",
 });

@@ -7,8 +7,8 @@ export default composite({
   py: "wánchéng",
   en: "complete",
   ru: "завершить",
-  hsd: ["{{word:nong4}}-{{word:wan2}}"],
-  tts: ["弄完"],
+  hsd: ["{{word:zuo4}}-{{word:wan2}}"],
+  tts: ["做完"],
   literal: "do-finish",
   fit: "natural",
 });

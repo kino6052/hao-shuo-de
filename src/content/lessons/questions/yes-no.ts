@@ -81,8 +81,8 @@ export default lessonModule({
       ru: "Он пьёт воду?",
     },
     {
-      pinyin: "{{Word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}} {{word:fu4mu3}}?",
-      hanzi: "你听不听父母？",
+      pinyin: "{{Word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}} {{word:ba4ba}}-{{word:ma1ma}}?",
+      hanzi: "你听不听爸爸妈妈？",
       en: "Do you listen to your parents?",
       ru: "Ты слушаешься родителей?",
     },

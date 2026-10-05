@@ -7,8 +7,8 @@ export default composite({
   py: "zuò",
   en: "do, make",
   ru: "делать",
-  hsd: ["{{word:nong4}}"],
-  tts: ["弄"],
+  hsd: ["{{word:zuo4}}"],
+  tts: ["做"],
   fit: "word",
-  note: "Hao-shuo-de says nòng for \"do\" and \"make\".",
+  note: "Hao-shuo-de says zuò for \"do\" and \"make\".",
 });

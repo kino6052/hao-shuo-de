@@ -8,7 +8,7 @@ export default composite({
   en: "hardware",
   ru: "оборудование, «железо»",
   hsd: [
-    "{{word:suan4}}-{{word:de}}-{{word:gong1}}-{{word:ju4}}-{{word:de}} {{word:ying4}}-{{word:de}} {{word:bu4fen}}",
+    "{{word:suan4}}-{{word:de}}-{{word:gong1}}-{{word:ju4}}-{{word:de}} {{word:ying4}}-{{word:de}} {{word:bu4}}-{{light:fen1}}",
   ],
   tts: ["算的工具的硬的部分"],
   literal: "the hard part of a computer",

@@ -7,8 +7,8 @@ export default composite({
   py: "guǎn",
   en: "manage",
   ru: "управлять",
-  hsd: ["{{word:ba3}} X {{word:nong4}}-{{word:hao3}}"],
-  tts: ["把X弄好"],
+  hsd: ["{{word:ba3}} X {{word:zuo4}}-{{word:hao3}}"],
+  tts: ["把X做好"],
   literal: "keep X good",
   fit: "plain",
 });

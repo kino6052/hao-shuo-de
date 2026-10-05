@@ -11,6 +11,6 @@ export default composite({
   tts: ["从"],
   literal: "from",
   fit: "plain",
-  note: "For who did it, say it first: tā nòng-de.",
+  note: "For who did it, say it first: tā zuò-de.",
   proposed: true,
 });

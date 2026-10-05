@@ -7,8 +7,8 @@ export default composite({
   py: "yǐzi",
   en: "chair",
   ru: "стул",
-  hsd: ["{{word:zuo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["坐的东西"],
+  hsd: ["{{word:zuo4}}-{{word:xia4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
+  tts: ["坐下的东西"],
   literal: "the thing to sit on",
   fit: "plain",
 });

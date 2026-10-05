@@ -7,7 +7,7 @@ export default composite({
   py: "bù",
   en: "part, department",
   ru: "часть, отдел",
-  hsd: ["{{word:bu4fen}}"],
+  hsd: ["{{word:bu4}}-{{light:fen1}}"],
   tts: ["部分"],
   fit: "word",
   proposed: true,

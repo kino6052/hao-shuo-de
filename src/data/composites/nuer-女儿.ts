@@ -7,8 +7,10 @@ export default composite({
   py: "nǚ’ér",
   en: "daughter",
   ru: "дочь",
-  hsd: ["{{word:fu4mu3}}-{{word:de}} {{word:xiao3}}-{{word:de}} {{word:nv3}}-{{word:ren2}}"],
-  tts: ["父母的小的女人"],
+  hsd: [
+    "{{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:xiao3}}-{{word:de}} {{word:nv3}}-{{word:ren2}}",
+  ],
+  tts: ["爸爸妈妈的小的女人"],
   literal: "the parents' little woman",
   fit: "plain",
 });

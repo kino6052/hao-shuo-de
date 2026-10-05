@@ -31,9 +31,9 @@ export function compoundSplitter(words) {
 }
 
 // Words said with the light tone after another word in a compound (zhè-ge,
-// nǎ-ge), and kin words said light when doubled (bà-ba, mā-ma).
+// nǎ-ge), and words said light when doubled (none yet).
 const LIGHT_AFTER = new Set(['ge4']);
-const LIGHT_DOUBLED = new Set(['ba4', 'ma1']);
+const LIGHT_DOUBLED = new Set();
 
 // -> the compound's form: {{word:a}}-{{word:b}}, light where Mandarin is.
 export const compoundForm = (ids) =>

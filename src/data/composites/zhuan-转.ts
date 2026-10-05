@@ -8,7 +8,7 @@ export default composite({
   en: "turn",
   ru: "поворачивать(ся)",
   hsd: [
-    "{{word:qu4}} {{word:zuo3}}-{{word:bian1}} {{word:huo4}}-{{word:zhe3}} {{word:you4bian1}}",
+    "{{word:qu4}} {{word:zuo3}}-{{word:bian1}} {{word:huo4}}-{{word:zhe3}} {{word:you4}}-{{word:bian1}}",
     "{{word:yuan2}}-{{word:yuan2}}-{{word:de}} {{word:dong4}}",
   ],
   tts: ["去左边或者右边", "圆圆地动"],

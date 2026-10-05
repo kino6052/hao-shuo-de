@@ -7,8 +7,8 @@ export default composite({
   py: "zìyóu",
   en: "free; freedom",
   ru: "свободный; свобода",
-  hsd: ["{{word:shen2me}} {{word:dou1}} {{word:neng2}} {{word:nong4}}"],
-  tts: ["什么都能弄"],
+  hsd: ["{{word:shen2me}} {{word:dou1}} {{word:neng2}} {{word:zuo4}}"],
+  tts: ["什么都能做"],
   literal: "can do anything",
   fit: "plain",
 });

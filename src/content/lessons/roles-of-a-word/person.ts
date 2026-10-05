@@ -36,8 +36,8 @@ export default lessonModule({
       ru: "Тот, кто пишет.",
     },
     {
-      pinyin: "{{Word:na4}}-ge {{word:shuo1}}-{{word:de}} {{word:ren2}} {{word:shi4}} {{word:wo3}}-{{word:de}} {{word:fu4mu3}}.",
-      hanzi: "那个说的人是我的父母。",
+      pinyin: "{{Word:na4}}-ge {{word:shuo1}}-{{word:de}} {{word:ren2}} {{word:shi4}} {{word:wo3}}-{{word:de}} {{word:ba4ba}}-{{word:ma1ma}}.",
+      hanzi: "那个说的人是我的爸爸妈妈。",
       en: "The one speaking is my parent.",
       ru: "Тот, кто говорит, — мой родитель.",
     },

@@ -8,9 +8,9 @@ export default composite({
   en: "government",
   ru: "правительство",
   hsd: [
-    "{{word:shuo1}}-{{word:guo2}}-{{word:yao4}}-{{word:nong4}}-{{word:shen2me}}-{{word:de}} {{word:ren2}}",
+    "{{word:shuo1}}-{{word:guo2}}-{{word:yao4}}-{{word:zuo4}}-{{word:shen2me}}-{{word:de}} {{word:ren2}}",
   ],
-  tts: ["说国要弄什么的人"],
+  tts: ["说国要做什么的人"],
   literal: "the people who say what the country will do",
   fit: "plain",
   proposed: true,

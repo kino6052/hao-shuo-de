@@ -7,8 +7,8 @@ export default composite({
   py: "juédìng",
   en: "decide",
   ru: "решать",
-  hsd: ["{{word:lai2}} {{word:zhi1dao4}} {{word:yao4}} {{word:nong4}} {{word:shen2me}} {{word:le}}"],
-  tts: ["来知道要弄什么了"],
+  hsd: ["{{word:lai2}} {{word:zhi1dao4}} {{word:yao4}} {{word:zuo4}} {{word:shen2me}} {{word:le}}"],
+  tts: ["来知道要做什么了"],
   literal: "come to know what to do",
   fit: "plain",
 });

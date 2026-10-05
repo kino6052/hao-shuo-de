@@ -9,7 +9,7 @@
 // scripts/composites-builder-forms.js rewrites every description it can read
 // into the Word Builder's own form, so the two agree. A form is left alone
 // when it can't be read (a name, "X", a pattern the Word Builder has no
-// question for, like bǎ … nòng-hǎo or bāng rén …), or when it can be read in
+// question for, like bǎ … zuò-hǎo or bāng rén …), or when it can be read in
 // more than one way that the Word Builder would write differently.
 
 import { roleOf, isOffered, render, refSystem, POSITIONS, CHOICES, SELF_DIRECTED } from "./word-builder.js";
@@ -174,7 +174,7 @@ function reader(dict, { ids: t, glued }) {
       const base = core.direction ? { ...answers, direction: { value: core.direction } } : answers;
       const make = (extra, j) => ({ node: node(core.id, "verb", { ...base, ...extra }), j });
       const thing = moved ? { what: moved } : {};
-      // A describing word right after a verb is its result (nòng hǎo X, "fix
+      // A describing word right after a verb is its result (zuò hǎo X, "fix
       // X"), which the Word Builder has no question for, not the start of a thing.
       const result = role(core.j) === "adj" && !is(core.j + 1, "de");
       if (!core.direction && !result) {
@@ -259,7 +259,7 @@ function keepsJoins(oldWords, newWords) {
 // -> { tree, form, same } for a dictionary form that describes its word with
 // the Word Builder's questions, where `form` is how the Word Builder writes it
 // and `same` says whether that's already the dictionary's form; or null.
-// A noun with no -de at all is a word of its own (dà bùfen, "most";
+// A noun with no -de at all is a word of its own (dà bù-fen, "most";
 // xiǎo-xīn, "careful"), not a description, so it's left alone.
 export function builderForm(dict, form) {
   const words = formWords(form, dict);

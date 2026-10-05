@@ -7,7 +7,7 @@ export default composite({
   py: "fùzá",
   en: "complicated",
   ru: "сложный",
-  hsd: ["{{word:bu4fen}}-{{word:hen3}}-{{word:duo1}}-{{word:de}}"],
+  hsd: ["{{word:bu4}}-{{light:fen1}}-{{word:hen3}}-{{word:duo1}}-{{word:de}}"],
   tts: ["部分很多的"],
   literal: "with many parts",
   fit: "plain",

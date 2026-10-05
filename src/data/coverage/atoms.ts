@@ -69,8 +69,8 @@ export default coverageGroup({
       key: "PART",
       eng: "part",
       rus: "часть",
-      words: ["bu4fen"],
-      forms: ["{{word:bu4fen}}"],
+      words: ["bu4", "fen1"],
+      forms: ["{{word:bu4}}-{{light:fen1}}"],
       lesson: "also-and-all",
     },
     {
@@ -261,8 +261,8 @@ export default coverageGroup({
       key: "DO",
       eng: "do",
       rus: "делать",
-      words: ["nong4"],
-      forms: ["{{word:nong4}}"],
+      words: ["zuo4"],
+      forms: ["{{word:zuo4}}"],
       lesson: "becoming-and-making",
     },
     {

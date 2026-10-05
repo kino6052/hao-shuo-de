@@ -29,8 +29,8 @@ export default lessonModule({
     },
   },
   info: {
-    en: "{{word:jiao4}} + person + verb, have or let: {{Word:jiao4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}}. (Let him in.) {{word:bu4}} {{word:jiao4}}, won't let: {{Word:fu4mu3}} {{word:bu4}} {{word:jiao4}} {{word:wo3}} {{word:chu1}}-{{word:qu4}}. (My parents won't let me go out.)",
-    ru: "{{word:jiao4}} + человек + глагол — велеть или позволить: {{Word:jiao4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}}. (Пусть войдёт.) {{word:bu4}} {{word:jiao4}} — не позволять: {{Word:fu4mu3}} {{word:bu4}} {{word:jiao4}} {{word:wo3}} {{word:chu1}}-{{word:qu4}}. (Родители не пускают меня гулять.)",
+    en: "{{word:jiao4}} + person + verb, have or let: {{Word:jiao4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}}. (Let him in.) {{word:bu4}} {{word:jiao4}}, won't let: {{Word:ba4ba}}-{{word:ma1ma}} {{word:bu4}} {{word:jiao4}} {{word:wo3}} {{word:chu1}}-{{word:qu4}}. (My parents won't let me go out.)",
+    ru: "{{word:jiao4}} + человек + глагол — велеть или позволить: {{Word:jiao4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}}. (Пусть войдёт.) {{word:bu4}} {{word:jiao4}} — не позволять: {{Word:ba4ba}}-{{word:ma1ma}} {{word:bu4}} {{word:jiao4}} {{word:wo3}} {{word:chu1}}-{{word:qu4}}. (Родители не пускают меня гулять.)",
   },
   examples: [
     {
@@ -46,8 +46,8 @@ export default lessonModule({
       ru: "Я велел им подождать.",
     },
     {
-      pinyin: "{{Word:fu4mu3}} {{word:bu4}} {{word:jiao4}} {{word:wo3}} {{word:chu1}}-{{word:qu4}}.",
-      hanzi: "父母不叫我出去。",
+      pinyin: "{{Word:ba4ba}}-{{word:ma1ma}} {{word:bu4}} {{word:jiao4}} {{word:wo3}} {{word:chu1}}-{{word:qu4}}.",
+      hanzi: "爸爸妈妈不叫我出去。",
       en: "My parents won't let me go out.",
       ru: "Родители не пускают меня гулять.",
     },

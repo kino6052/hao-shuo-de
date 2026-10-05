@@ -7,8 +7,10 @@ export default composite({
   py: "xiōngdì",
   en: "brothers",
   ru: "братья",
-  hsd: ["{{word:yi1}}-{{word:yang4}}-{{word:fu4mu3}}-{{word:de}} {{word:nan2ren2}}"],
-  tts: ["一样父母的男人"],
+  hsd: [
+    "{{word:yi1}}-{{word:yang4}}-{{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:nan2}}-{{word:ren2}}",
+  ],
+  tts: ["一样爸爸妈妈的男人"],
   literal: "men with the same parents",
   fit: "plain",
   proposed: true,

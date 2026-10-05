@@ -5,8 +5,8 @@ export default word("luan4", {
   hanzi: "乱",
   pos: { eng: "adjective", rus: "прилагательное", zh: "形容词" },
   definition: {
-    eng: "messy, in a mess; {{word:nong4}}-{{word:luan4}}, \"make a mess\"",
-    rus: "беспорядочный, в беспорядке; {{word:nong4}}-{{word:luan4}} — «устроить беспорядок»",
+    eng: "messy, in a mess; {{word:zuo4}}-{{word:luan4}}, \"make a mess\"",
+    rus: "беспорядочный, в беспорядке; {{word:zuo4}}-{{word:luan4}} — «устроить беспорядок»",
     zh: "乱",
   },
   necessity: {
