@@ -4,6 +4,7 @@ import markdownPlugin from "./vite-plugin-markdown.js";
 import chapterYamlPlugin from "./vite-plugin-chapter.js";
 import typecheckPlugin from "./vite-plugin-typecheck.js";
 import dataPlugin from "./vite-plugin-data.js";
+import reviewPlugin from "./vite-plugin-review.js";
 
 export default defineConfig({
   base: "./",
@@ -13,7 +14,7 @@ export default defineConfig({
   preview: {
     host: "127.0.0.1",
   },
-  plugins: [dataPlugin(), markdownPlugin(), chapterYamlPlugin(), preact(), typecheckPlugin()],
+  plugins: [dataPlugin(), reviewPlugin(), markdownPlugin(), chapterYamlPlugin(), preact(), typecheckPlugin()],
   build: {
     outDir: "docs",
     emptyOutDir: true,

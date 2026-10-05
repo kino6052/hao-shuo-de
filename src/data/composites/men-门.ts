@@ -8,7 +8,8 @@ export default composite({
   en: "door",
   ru: "дверь",
   pos: "noun",
-  hsd: ["{{word:kou3}}"],
-  tts: ["口"],
+  hsd: ["{{word:men2}}", "{{word:kou3}}"],
+  tts: ["门", "口"],
   fit: "word",
+  proposed: true,
 });

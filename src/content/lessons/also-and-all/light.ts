@@ -16,6 +16,11 @@ export default lessonModule({
       en: "bright",
       ru: "яркий, светлый",
     },
+    {
+      word: "men2",
+      en: "door",
+      ru: "дверь",
+    },
   ],
   prose: {
     en: [
@@ -25,6 +30,7 @@ export default lessonModule({
       "",
       "{{word:ming2}} (bright) works like any adjective: {{Word:ri4}} {{word:hen3}} {{word:ming2}}, the sun is bright. {{word:bu4}} {{word:ming2}} is dark.",
       "Everyday Mandarin often has another word for a bright light, but {{word:ming2}} is understood.",
+      "Doors open and close the same way: {{Word:kai1}} {{word:men2}}! {{Word:guan1}} {{word:men2}}!",
     ],
     ru: [
       "**Чтобы включить или выключить свет**, поставьте {{word:kai1}} или {{word:guan1}} перед {{word:deng1}} (лампа, свет).",
@@ -33,6 +39,7 @@ export default lessonModule({
       "",
       "{{word:ming2}} (яркий) работает как любое прилагательное: {{Word:ri4}} {{word:hen3}} {{word:ming2}} — солнце яркое. {{word:bu4}} {{word:ming2}} — темно.",
       "В обычном китайском для яркого света часто есть другое слово, но {{word:ming2}} поймут.",
+      "Двери открывают и закрывают так же: {{Word:kai1}} {{word:men2}}! {{Word:guan1}} {{word:men2}}!",
     ],
     tldr: {
       en: "{{word:kai1}} {{word:deng1}} turns the light on, {{word:guan1}} {{word:deng1}} turns it off. {{word:ming2}} is bright.",
@@ -78,6 +85,18 @@ export default lessonModule({
       en: "This place is dark.",
       ru: "Здесь темно.",
     },
+    {
+      pinyin: "{{Word:kai1}} {{word:men2}}!",
+      hanzi: "开门！",
+      en: "Open the door!",
+      ru: "Открой дверь!",
+    },
+    {
+      pinyin: "{{Word:men2}} {{word:guan1}} {{word:le}}.",
+      hanzi: "门关了。",
+      en: "The door is closed.",
+      ru: "Дверь закрыта.",
+    },
   ],
   exercises: [
     {
@@ -91,6 +110,12 @@ export default lessonModule({
       ru: "Солнце яркое.",
       answer: "{{Word:ri4}} {{word:hen3}} {{word:ming2}}.",
       hanzi: "日很明。",
+    },
+    {
+      en: "Close the door!",
+      ru: "Закрой дверь!",
+      answer: "{{Word:guan1}} {{word:men2}}!",
+      hanzi: "关门！",
     },
   ],
 });

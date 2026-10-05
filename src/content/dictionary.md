@@ -120,6 +120,7 @@ māma | noun | mom: {{word:ba4ba}}-{{word:ma1ma}}, mom and dad, parents |
 máo | noun | hair, fur, feathers; {{word:tou2}}-{{word:fa1}}, "hair on the head" |
 méi | particle | negative particle used exclusively to negate the verb you (to form meiyou) |
 men | particle | more than one person: after a pointer or a word for people, as in {{word:wo3}}-{{word:men}} ("we") |
+mén | noun | door: {{word:kai1}} {{word:men2}}, open the door; {{word:men2}}-{{word:kou3}}, doorway; {{word:chu1}}-{{word:men2}}, go out |
 miàn | noun/suffix | side, face, surface; binds to a directional root via a hyphen to form a location noun (e.g. {{word:xia4}}-{{word:mian4}}, "below") |
 míng | adjective | bright, light, clear |
 mō | verb | to touch, feel, pet, perceive by contact | pilin

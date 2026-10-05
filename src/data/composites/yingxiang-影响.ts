@@ -9,10 +9,12 @@ export default composite({
   ru: "влиять",
   pos: "verb",
   hsd: [
-    "{{word:de2}} {{word:hao3}}-{{word:de}}",
-    "{{word:bu4}}-{{word:hao3}}-{{word:de}} {{word:guan1xi}}",
+    "X {{word:ba3}} Y {{word:bian4}}",
+    "X {{word:dui4}} Y {{word:hao3}}",
+    "X {{word:dui4}} Y {{word:bu4}} {{word:hao3}}",
   ],
-  tts: ["得好的", "不好的关系"],
-  literal: "get a good / bad connection",
+  tts: ["X把Y变", "X对Y好", "X对Y不好"],
+  literal: "X changes Y / X is good for Y / X is bad for Y",
   fit: "plain",
+  proposed: true,
 });

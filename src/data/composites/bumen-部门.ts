@@ -8,9 +8,12 @@ export default composite({
   en: "department",
   ru: "отдел",
   pos: "noun",
-  hsd: ["{{word:yi1}}-{{word:qi3}}-{{word:gong1}}-{{word:zuo4}}-{{word:de}} {{word:ren2}}"],
-  tts: ["一起工作的人"],
+  hsd: [
+    "{{word:bu4}}-{{word:men2}}",
+    "{{word:yi1}}-{{word:qi3}}-{{word:gong1}}-{{word:zuo4}}-{{word:de}} {{word:ren2}}",
+  ],
+  tts: ["部门", "一起工作的人"],
   literal: "the people who work together",
-  fit: "plain",
+  fit: "natural",
   proposed: true,
 });

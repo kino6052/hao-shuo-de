@@ -24,7 +24,7 @@ export default word("bu4", {
         eng: "Written 部, {{word:bu4}} means part in {{word:bu4}}-{{light:fen1}}; on its own it is not.",
         rus: "Записанное как 部, {{word:bu4}} значит «часть» в {{word:bu4}}-{{light:fen1}}; само по себе — «не».",
       },
-      compounds: ["bu4 fen1"],
+      compounds: ["bu4 fen1", "bu4 men2"],
     },
   },
 });

@@ -14,7 +14,7 @@ export default categories([
       {
         key: "places-as-things",
         title: { eng: "Places", rus: "Места", zh: "地方" },
-        wordIds: ["jia1", "guo2", "fang2"],
+        wordIds: ["jia1", "guo2", "fang2", "men2"],
       },
       {
         key: "things-of-nature",

@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hao-shuo-de Composite Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+SC:wght@600&display=swap">
+<style>
+/* The composite review, served by the dev server (vite-plugin-review.js). A ledger: one row per
+   entry, with the word, how Hao-shuo-de says it now, Claude's proposal, and the author's decision. */
+:root {
+  --paper: #f3f5f2;
+  --card: #fbfcfa;
+  --ink: #1b2420;
+  --muted: #5d6a64;
+  --line: #d6ddd7;
+  --accent: #1d6f55;
+  --accent-ink: #ffffff;
+  --accent-soft: #dcece4;
+  --edit: #9a5b00;
+  --edit-soft: #f6e8d2;
+  --keep: #4c5c74;
+  --keep-soft: #e3e8f0;
+  --dot-off: #c9d1cb;
+  --danger: #a3332b;
+  --font-han: "Noto Serif SC", "Songti SC", "SimSun", serif;
+  --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #131916; --card: #1a221e; --ink: #e5ece8; --muted: #9aa8a1; --line: #2c3833;
+    --accent: #4fbf94; --accent-ink: #0d1a14; --accent-soft: #1f3a2f;
+    --edit: #e0a24a; --edit-soft: #3b2e19; --keep: #9db0cf; --keep-soft: #252f3e; --dot-off: #3a4842; --danger: #ef7a70;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 15px/1.5 var(--font-body); }
+.wrap { max-width: 1080px; margin: 0 auto; padding-inline: 16px; padding-block: 24px 64px; }
+header { display: grid; gap: 6px; margin-bottom: 18px; }
+.eyebrow { font: 500 12px/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.eyebrow a { color: var(--accent); text-decoration: none; }
+.eyebrow a:hover { text-decoration: underline; }
+h1 { font-size: 26px; line-height: 1.2; margin: 0; text-wrap: balance; }
+.lede { margin: 0; color: var(--muted); max-width: 68ch; }
+.bar { position: sticky; top: 0; z-index: 2; background: var(--paper); border-bottom: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; padding-block: 10px; margin-bottom: 12px; }
+.tally { display: flex; flex-wrap: wrap; gap: 6px; font-variant-numeric: tabular-nums; }
+.chip { font: 600 13px/1 var(--font-body); border: 1px solid var(--line); background: var(--card); color: var(--ink);
+  padding: 7px 10px; border-radius: 999px; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.chip:focus-visible, button:focus-visible, input:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.spacer { flex: 1 1 auto; }
+.bulk { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.status { font-size: 13px; color: var(--muted); min-height: 1.5em; }
+.status.err { color: var(--danger); }
+ol.rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.row { display: grid; grid-template-columns: 52px minmax(140px, 200px) minmax(0, 1fr) 230px; gap: 14px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; align-items: start; }
+.row.has-prop { border-left: 4px solid var(--edit); }
+.rank { font: 500 13px/1.6 var(--font-mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.word { display: grid; gap: 2px; min-width: 0; }
+.han { font: 600 28px/1.15 var(--font-han); }
+.py { font-weight: 600; }
+.gloss { color: var(--muted); font-size: 13px; overflow-wrap: anywhere; }
+.forms { display: grid; gap: 8px; min-width: 0; }
+.form-block { display: grid; gap: 3px; }
+.label { font: 500 11px/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); display: flex; gap: 8px; align-items: center; }
+.label.prop { color: var(--edit); }
+.form { font-size: 15px; overflow-wrap: anywhere; }
+.form .hz { font-family: var(--font-han); color: var(--muted); font-size: 13px; margin-left: 6px; }
+.why { font-size: 13px; color: var(--muted); margin: 2px 0 0; }
+.dots { display: inline-flex; gap: 3px; vertical-align: middle; }
+.dots i { width: 7px; height: 7px; border-radius: 50%; background: var(--dot-off); display: block; }
+.dots i.on { background: var(--accent); }
+.actions { display: grid; gap: 6px; }
+.btns { display: flex; flex-wrap: wrap; gap: 6px; }
+button { font: 600 13px/1 var(--font-body); padding: 8px 10px; border-radius: 7px; border: 1px solid var(--line);
+  background: var(--card); color: var(--ink); cursor: pointer; }
+button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+button:disabled { opacity: .5; cursor: progress; }
+.decision { font-size: 13px; padding: 6px 9px; border-radius: 7px; display: grid; gap: 2px; }
+.decision.approve { background: var(--accent-soft); color: var(--accent); }
+.decision.edit { background: var(--edit-soft); color: var(--edit); }
+.decision.keep { background: var(--keep-soft); color: var(--keep); }
+.decision .what { font-weight: 700; }
+.decision .detail { color: var(--ink); overflow-wrap: anywhere; }
+.editor { display: grid; gap: 6px; }
+.editor label { font-size: 12px; color: var(--muted); }
+.editor input { font: 400 14px/1.3 var(--font-body); width: 100%; padding: 7px 8px;
+  border: 1px solid var(--line); border-radius: 6px; background: var(--paper); color: var(--ink); }
+.empty { color: var(--muted); padding: 24px 0; }
+@media (max-width: 760px) {
+  .row { grid-template-columns: 40px minmax(0, 1fr); }
+  .forms, .actions { grid-column: 1 / -1; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow"><span id="eyebrow">Composite review</span><a id="prev" href="#">← previous batch</a><a id="next" href="#">next batch →</a></div>
+    <h1 id="title">Loading the batch…</h1>
+    <p class="lede">Each entry shows how Hao-shuo-de says the word now, and Claude's proposal where one is worth making. The dots show how close a form is to Mandarin: five is Mandarin's own word. Approve, keep the current form, or write your own in plain pinyin (for example fēi-jī zhàn-de dì-fang). Each decision is saved to review/decisions in the project at once.</p>
+  </header>
+  <div class="bar">
+    <div class="tally" role="group" aria-label="Show">
+      <button class="chip" data-filter="all" aria-pressed="true" id="f-all">All</button>
+      <button class="chip" data-filter="prop" aria-pressed="false" id="f-prop">Proposed changes</button>
+      <button class="chip" data-filter="open" aria-pressed="false" id="f-open">Undecided</button>
+      <button class="chip" data-filter="done" aria-pressed="false" id="f-done">Decided</button>
+    </div>
+    <div class="spacer"></div>
+    <div class="bulk" id="bulk"></div>
+  </div>
+  <div class="status" id="status" role="status" aria-live="polite"></div>
+  <ol class="rows" id="rows"></ol>
+</div>
+
+<script>
+const params = new URLSearchParams(location.search);
+const N = Math.max(1, Number(params.get("batch")) || 1);
+const state = { batch: null, decisions: {}, filter: "all", editing: null, confirmBulk: false, busy: new Set() };
+const $ = (s) => document.querySelector(s);
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+
+function say(text, err = false) {
+  const s = $("#status");
+  s.textContent = text;
+  s.className = "status" + (err ? " err" : "");
+}
+
+async function post(body) {
+  const r = await fetch("/__review/decide", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  const v = await r.json();
+  if (!r.ok) throw new Error(v.error || r.statusText);
+  return v.decisions;
+}
+
+function dots(score) {
+  const d = el("span", "dots");
+  const label = score == null ? "no form" : `${score} of 5: ${state.batch.scale[score]}`;
+  d.setAttribute("role", "img");
+  d.setAttribute("aria-label", label);
+  d.title = label;
+  for (let i = 1; i <= 5; i++) d.appendChild(el("i", score != null && i <= score ? "on" : ""));
+  return d;
+}
+
+function formBlock(kind, forms, tts, score, why) {
+  const b = el("div", "form-block");
+  const lab = el("div", "label" + (kind === "prop" ? " prop" : ""), kind === "prop" ? "Proposed" : "Now");
+  lab.appendChild(dots(score));
+  b.appendChild(lab);
+  if (!forms.length) b.appendChild(el("div", "form", "no form"));
+  forms.forEach((f, i) => {
+    const line = el("div", "form", f);
+    if (tts[i]) line.appendChild(el("span", "hz", tts[i]));
+    b.appendChild(line);
+  });
+  if (why) b.appendChild(el("p", "why", why));
+  return b;
+}
+
+function visible(e) {
+  const d = state.decisions[e.rank];
+  if (state.filter === "prop") return !!e.prop;
+  if (state.filter === "open") return !d;
+  if (state.filter === "done") return !!d;
+  return true;
+}
+
+function decisionView(e, d) {
+  const box = el("div", "decision " + d.status);
+  const what = { approve: e.prop ? "Approved: use the proposal" : "Approved as it is", keep: "Keep the current form", edit: "Your form" }[d.status];
+  box.appendChild(el("span", "what", what));
+  if (d.status === "edit" && d.form) box.appendChild(el("span", "detail", d.form));
+  if (d.note) box.appendChild(el("span", "detail", "Note: " + d.note));
+  return box;
+}
+
+function actions(e) {
+  const wrap = el("div", "actions");
+  const d = state.decisions[e.rank];
+  const busy = state.busy.has(e.rank);
+  if (state.editing === e.rank) {
+    const ed = el("div", "editor");
+    const id = `form-${e.rank}`, nid = `note-${e.rank}`;
+    const l1 = el("label", null, "Your form, in pinyin"); l1.htmlFor = id;
+    const i1 = el("input"); i1.id = id; i1.value = d?.form ?? (e.prop ? e.prop.forms[0] : e.now.forms[0] ?? "");
+    const l2 = el("label", null, "Note (optional)"); l2.htmlFor = nid;
+    const i2 = el("input"); i2.id = nid; i2.value = d?.note ?? "";
+    const btns = el("div", "btns");
+    const save = el("button", "primary", "Save");
+    save.onclick = () => decide(e, i1.value.trim() ? "edit" : "approve", i1.value.trim(), i2.value.trim());
+    const cancel = el("button", null, "Cancel");
+    cancel.onclick = () => { state.editing = null; render(); };
+    i1.onkeydown = i2.onkeydown = (ev) => { if (ev.key === "Enter") save.click(); if (ev.key === "Escape") cancel.click(); };
+    btns.append(save, cancel);
+    ed.append(l1, i1, l2, i2, btns);
+    wrap.appendChild(ed);
+    requestAnimationFrame(() => i1.focus());
+    return wrap;
+  }
+  if (d) {
+    wrap.appendChild(decisionView(e, d));
+    const btns = el("div", "btns");
+    const change = el("button", null, "Change");
+    change.onclick = () => { state.editing = e.rank; render(); };
+    const undo = el("button", null, "Undo");
+    undo.disabled = busy;
+    undo.onclick = () => decide(e, null);
+    btns.append(change, undo);
+    wrap.appendChild(btns);
+    return wrap;
+  }
+  const btns = el("div", "btns");
+  const ok = el("button", "primary", e.prop ? "Approve" : "Fine as it is");
+  ok.onclick = () => decide(e, "approve");
+  btns.appendChild(ok);
+  if (e.prop) {
+    const keep = el("button", null, "Keep current");
+    keep.onclick = () => decide(e, "keep");
+    btns.appendChild(keep);
+  }
+  const edit = el("button", null, "Write my own");
+  edit.onclick = () => { state.editing = e.rank; render(); };
+  btns.appendChild(edit);
+  for (const b of btns.children) b.disabled = busy;
+  wrap.appendChild(btns);
+  return wrap;
+}
+
+function row(e) {
+  const li = el("li", "row" + (e.prop ? " has-prop" : ""));
+  li.id = `r${e.rank}`;
+  li.appendChild(el("div", "rank", "#" + e.rank));
+  const w = el("div", "word");
+  w.appendChild(el("div", "han", e.zh));
+  w.appendChild(el("div", "py", e.py));
+  w.appendChild(el("div", "gloss", `${e.en} · ${e.ru}`));
+  li.appendChild(w);
+  const f = el("div", "forms");
+  f.appendChild(formBlock("now", e.now.forms, e.now.tts, e.now.score));
+  if (e.prop) f.appendChild(formBlock("prop", e.prop.forms, e.prop.tts, e.prop.score, e.prop.why));
+  li.appendChild(f);
+  li.appendChild(actions(e));
+  return li;
+}
+
+function renderBulk() {
+  const bulk = $("#bulk");
+  bulk.replaceChildren();
+  const plain = state.batch.entries.filter((e) => !e.prop && !state.decisions[e.rank]);
+  if (!plain.length) return;
+  if (state.confirmBulk) {
+    bulk.appendChild(el("span", "status", `Approve ${plain.length} entries as they are?`));
+    const yes = el("button", "primary", "Approve them");
+    yes.onclick = () => { state.confirmBulk = false; bulkApprove(plain); };
+    const no = el("button", null, "Cancel");
+    no.onclick = () => { state.confirmBulk = false; render(); };
+    bulk.append(yes, no);
+  } else {
+    const b = el("button", null, `Approve the ${plain.length} unchanged`);
+    b.onclick = () => { state.confirmBulk = true; render(); };
+    bulk.appendChild(b);
+  }
+}
+
+function render() {
+  const B = state.batch;
+  const n = B.entries.length;
+  const decided = B.entries.filter((e) => state.decisions[e.rank]).length;
+  const props = B.entries.filter((e) => e.prop).length;
+  $("#f-all").textContent = `All · ${n}`;
+  $("#f-prop").textContent = `Proposed changes · ${props}`;
+  $("#f-open").textContent = `Undecided · ${n - decided}`;
+  $("#f-done").textContent = `Decided · ${decided}`;
+  for (const c of document.querySelectorAll(".chip")) c.setAttribute("aria-pressed", String(c.dataset.filter === state.filter));
+  renderBulk();
+  const shown = B.entries.filter(visible);
+  const list = $("#rows");
+  list.replaceChildren(...shown.map(row));
+  if (!shown.length) list.appendChild(el("li", "empty", "Nothing here."));
+}
+
+// One row at a time: the file write is instant, so the server's answer replaces the local state.
+async function decide(e, status, form = "", note = "") {
+  state.busy.add(e.rank);
+  state.editing = null;
+  render();
+  try {
+    state.decisions = await post({ batch: N, rank: e.rank, zh: e.zh, status, form, note });
+    say(status ? `Saved #${e.rank} ${e.zh}.` : `Cleared #${e.rank} ${e.zh}.`);
+  } catch (err) {
+    say(`Couldn't save #${e.rank}: ${err.message}. Is npm run dev still running?`, true);
+  }
+  state.busy.delete(e.rank);
+  render();
+}
+
+async function bulkApprove(list) {
+  say(`Saving ${list.length} approvals…`);
+  let failed = 0;
+  for (const e of list) {
+    try { state.decisions = await post({ batch: N, rank: e.rank, zh: e.zh, status: "approve" }); }
+    catch { failed++; }
+  }
+  render();
+  say(failed ? `${list.length - failed} saved, ${failed} failed.` : `Approved ${list.length} entries.`, failed > 0);
+}
+
+for (const c of document.querySelectorAll(".chip")) c.onclick = () => { state.filter = c.dataset.filter; render(); };
+
+(async () => {
+  try {
+    const r = await fetch(`/__review/data?batch=${N}`);
+    const B = await r.json();
+    if (!r.ok) throw new Error(B.error || r.statusText);
+    state.batch = B;
+    state.decisions = B.decisions || {};
+    document.title = `Review batch ${N} · Hao-shuo-de`;
+    $("#eyebrow").textContent = `Composite review · batch ${N} of ${B.batches}`;
+    $("#title").textContent = `Ranks ${B.from}–${B.to}: ${B.entries.filter((e) => e.prop).length} proposed changes`;
+    const prev = $("#prev"), next = $("#next");
+    if (N > 1) prev.href = `?batch=${N - 1}`; else prev.hidden = true;
+    if (N < B.batches) next.href = `?batch=${N + 1}`; else next.hidden = true;
+    render();
+  } catch (err) {
+    $("#title").textContent = "Couldn't load the batch";
+    say(`${err.message}. Open this page from the dev server (npm run dev).`, true);
+  }
+})();
+</script>
+</body>
+</html>
