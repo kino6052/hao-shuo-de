@@ -18,6 +18,7 @@
 // Lesson 1 is exempt: it shows words as sound examples.
 
 import { wordRefIds, wordRefRe, soleWordRef } from '../src/lib/word-refs.js';
+import { refSenses, senseKey } from '../src/lib/senses.js';
 
 const TONE_MARK_RE = /[āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ]/i;
 // The book's own name is not vocabulary.
@@ -71,8 +72,11 @@ function textsOf(entry) {
   return out;
 }
 
+// A catch-all word's sense counts as its own word: shí-jiān needs the card
+// for shí's "time" sense, a bare shí needs its main card (src/lib/senses.js).
+//
 // lessons: [{ id, number, entries: [{ key, ...assembled entry }] }] in order.
-// -> { home: Map(id -> lesson number), problems: [{ lesson, key, kind, word, home?, text }] }
+// -> { home: Map(id or id#sense -> lesson number), problems: [{ lesson, key, kind, word, home?, text }] }
 //    kind 'early': a dictionary word used before its home lesson
 //    kind 'not-in-dictionary': a pinyin word the dictionary doesn't have
 //    kind 'never-introduced': a dictionary word no lesson introduces
@@ -83,7 +87,8 @@ export function findEarlyWords(lessons, dictionary) {
     for (const entry of lesson.entries) {
       if (entry.type !== 'vocab') continue;
       const id = soleWordRef(entry.term);
-      if (id && !home.has(id)) home.set(id, lesson.number);
+      const key = id && senseKey(id, entry.sense);
+      if (key && !home.has(key)) home.set(key, lesson.number);
     }
   }
   const problems = [];
@@ -91,12 +96,17 @@ export function findEarlyWords(lessons, dictionary) {
     if (lesson.number === 1) continue;
     for (const entry of lesson.entries) {
       for (const { text, pinyinField } of textsOf(entry)) {
-        for (const { id, token } of wordsIn(text, terms, { pinyinField })) {
+        // wordsIn lists the refs first, in order, so the i-th ref's sense is senses[i].
+        const senses = refSenses(text, dictionary);
+        wordsIn(text, terms, { pinyinField }).forEach(({ id, token }, i) => {
           const base = { lesson: lesson.id, key: entry.key, text };
+          const sense = senses[i]?.sense;
+          const key = senseKey(id, sense);
+          const word = id && dictionary[id] ? `${dictionary[id].term}${sense ? ` (${sense})` : ''}` : null;
           if (!id || !dictionary[id]) problems.push({ ...base, kind: 'not-in-dictionary', word: id ?? token });
-          else if (!home.has(id)) problems.push({ ...base, kind: 'never-introduced', word: dictionary[id].term });
-          else if (home.get(id) > lesson.number) problems.push({ ...base, kind: 'early', word: dictionary[id].term, home: home.get(id) });
-        }
+          else if (!home.has(key)) problems.push({ ...base, kind: 'never-introduced', word });
+          else if (home.get(key) > lesson.number) problems.push({ ...base, kind: 'early', word, home: home.get(key) });
+        });
       }
     }
   }

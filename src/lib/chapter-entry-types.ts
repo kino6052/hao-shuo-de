@@ -14,6 +14,8 @@ export interface ProseEntry extends LangText {
 export interface VocabEntry extends LangText {
   type: 'vocab';
   term: string;
+  /** The sense the card teaches, for a catch-all word (src/lib/senses.js). */
+  sense?: string;
   audioFile?: string;
   ttsText?: string;
 }

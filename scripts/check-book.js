@@ -51,6 +51,7 @@ import { wordHanzi } from '../src/lib/hanzi-map.js';
 import dictionaryData from '../src/data/dictionary.ts';
 import compositesData from '../src/data/composites.ts';
 import { wordRefIds, soleWordRef } from '../src/lib/word-refs.js';
+import { senseKey, chainSenses } from '../src/lib/senses.js';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -76,13 +77,15 @@ for (const id of LESSON_IDS.filter((id) => folders.includes(id))) {
   if (meta.id !== id) errors.push(`src/content/lessons/${id}/index.ts: meta.id is "${meta.id}", expected "${id}"`);
   const title = entries.find((e) => e.type === 'title')?.en?.join(' ') ?? '';
   const vocab = [];
+  const senseCards = [];
   for (const entry of entries) {
     if (entry.type !== 'vocab') continue;
     const wordId = soleWordRef(entry.term);
-    if (wordId) vocab.push(wordId);
-    else errors.push(`${id}: vocab term "${entry.term}" is not a single dictionary word`);
+    if (!wordId) errors.push(`${id}: vocab term "${entry.term}" is not a single dictionary word`);
+    else if (entry.sense) senseCards.push(senseKey(wordId, entry.sense));
+    else vocab.push(wordId);
   }
-  lessons.push({ id, number: lessonNumber(id), title, vocab, entries });
+  lessons.push({ id, number: lessonNumber(id), title, vocab, senseCards, entries });
 }
 
 {
@@ -118,6 +121,16 @@ for (const lesson of lessons) {
     if (!dictionary[wordId]) errors.push(`${lesson.id}: vocab word "${wordId}" is not in the dictionary`);
     else if (home.has(wordId)) errors.push(`"${wordId}" is introduced twice: ${home.get(wordId).id} and ${lesson.id}`);
     else home.set(wordId, lesson);
+  }
+}
+// A catch-all word's other senses get a card each, once (src/lib/senses.js).
+const senseHome = new Map();
+for (const lesson of lessons) {
+  for (const key of lesson.senseCards) {
+    const [wordId, sense] = key.split('#');
+    if (!dictionary[wordId]?.senses?.[sense]) errors.push(`${lesson.id}: a card teaches sense "${sense}" of ${wordId}, which its word file doesn't list`);
+    else if (senseHome.has(key)) errors.push(`"${key}" is introduced twice: ${senseHome.get(key).id} and ${lesson.id}`);
+    else senseHome.set(key, lesson);
   }
 }
 const neverIntroduced = Object.keys(dictionary).filter((wordId) => !home.has(wordId));
@@ -220,19 +233,24 @@ for (const n of [1, 2, 3]) {
     if (unknown.length) errors.push(`${where}: ${unknown.map((w) => w.token).join(', ')} not in the dictionary: "${e.hsd}"`);
   }
   // A Chinese word made of Hao-shuo-de words is said with that compound.
+  // A sense's hanzi counts only inside the compounds it lists (时 is shí only in shí-jiān ...).
   const byHanzi = new Map();
-  for (const [id, h] of wordHanzi()) if (!byHanzi.has(h)) byHanzi.set(h, id);
+  for (const [id, h] of wordHanzi()) if (!byHanzi.has(h)) byHanzi.set(h, { id });
+  for (const [id, w] of Object.entries(dictionary))
+    for (const [sense, s] of Object.entries(w.senses ?? {})) if (!byHanzi.has(s.hanzi)) byHanzi.set(s.hanzi, { id, sense });
   const longest = Math.max(...[...byHanzi.keys()].map((h) => h.length));
   const compound = (zh) => {
-    const ids = [];
+    const parts = [];
     for (let i = 0; i < zh.length; ) {
       let n = Math.min(longest, zh.length - i);
       while (n > 0 && !byHanzi.has(zh.slice(i, i + n))) n--;
       if (!n) return null;
-      ids.push(byHanzi.get(zh.slice(i, i + n)));
+      parts.push(byHanzi.get(zh.slice(i, i + n)));
       i += n;
     }
-    return ids;
+    const ids = parts.map((p) => p.id);
+    const senses = chainSenses(ids, dictionary);
+    return parts.every((p, k) => !p.sense || senses[k] === p.sense) ? ids : null;
   };
   for (const e of entries) {
     if (!e.hsd || e.fit === 'name' || e.fit === 'skip') continue;

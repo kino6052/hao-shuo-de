@@ -19,6 +19,7 @@ const GATES = [
   ['check-data', []],
   ['check-types', []],
   ['check-book', []],
+  ['check-sounds', []],
   ['check-coverage', []],
   ['check-summaries', ['--over']],
   ['check-jargon', ['--summary']],

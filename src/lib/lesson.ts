@@ -169,7 +169,7 @@ export function lesson(id: string, parts: LessonParts): LessonEntry[] {
     if (seen.has(m.id)) throw new Error(`lesson(${id}): module "${m.id}" is listed twice`);
     seen.add(m.id);
     (m.words ?? []).forEach((w, i) =>
-      add(m.id, `${m.id}.word${i + 1}`, { type: "vocab", term: `{{word:${w.word}}}`, audioFile: w.audioFile, ttsText: cardHanzi(w), ...langs(w) }),
+      add(m.id, `${m.id}.word${i + 1}`, { type: "vocab", term: `{{word:${w.word}}}`, ...(w.sense ? { sense: w.sense } : {}), audioFile: w.audioFile, ttsText: cardHanzi(w), ...langs(w) }),
     );
     const prose: Entry = { type: "prose", ...langs(m.prose) };
     if (m.prose.tldr) prose.tldr = langs(m.prose.tldr);
