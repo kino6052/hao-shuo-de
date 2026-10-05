@@ -402,7 +402,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:jue2de}} {{word:hen3}} {{word:hao3}}.",
+    pinyin: "{{Word:wo3}} {{word:jue2}}-{{light:de2}} {{word:hen3}} {{word:hao3}}.",
     ttsText: "我觉得很好。",
     en: ["I feel great."],
     zh: ["我感觉很好。"],
@@ -442,9 +442,9 @@ const content: Entry[] = [
   },
   {
     type: "prose",
-    en: ["## Time", "Today is {{word:xian4zai4}}-{{word:de}} {{word:ri4}} (\"the day that's now\"), tomorrow is {{word:xia4}} {{word:yi1}}-ge {{word:ri4}} (\"the next day\"), and yesterday is {{word:qian2}} {{word:yi1}}-ge {{word:ri4}}."],
-    zh: ["## 时间", "今天是 {{word:xian4zai4}}-{{word:de}} {{word:ri4}}（现在的日），明天是 {{word:xia4}} {{word:yi1}}-ge {{word:ri4}}（下一个日），昨天是 {{word:qian2}} {{word:yi1}}-ge {{word:ri4}}（前一个日）。"],
-    ru: ["## Время", "Сегодня — {{word:xian4zai4}}-{{word:de}} {{word:ri4}} («день, который сейчас»), завтра — {{word:xia4}} {{word:yi1}}-ge {{word:ri4}} («следующий день»), вчера — {{word:qian2}} {{word:yi1}}-ge {{word:ri4}}."],
+    en: ["## Time", "Today is {{word:xian4}}-{{word:zai4}}-{{word:de}} {{word:ri4}} (\"the day that's now\"), tomorrow is {{word:xia4}} {{word:yi1}}-ge {{word:ri4}} (\"the next day\"), and yesterday is {{word:qian2}} {{word:yi1}}-ge {{word:ri4}}."],
+    zh: ["## 时间", "今天是 {{word:xian4}}-{{word:zai4}}-{{word:de}} {{word:ri4}}（现在的日），明天是 {{word:xia4}} {{word:yi1}}-ge {{word:ri4}}（下一个日），昨天是 {{word:qian2}} {{word:yi1}}-ge {{word:ri4}}（前一个日）。"],
+    ru: ["## Время", "Сегодня — {{word:xian4}}-{{word:zai4}}-{{word:de}} {{word:ri4}} («день, который сейчас»), завтра — {{word:xia4}} {{word:yi1}}-ge {{word:ri4}} («следующий день»), вчера — {{word:qian2}} {{word:yi1}}-ge {{word:ri4}}."],
     tldr: {
       en: ["What time it is, when, today, tomorrow, and yesterday."],
       zh: ["几点了、什么时候、今天、明天和昨天。"],
@@ -458,7 +458,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:xian4zai4}} {{word:shi4}} {{word:shen2me}} {{word:shi2jian1}}?",
+    pinyin: "{{Word:xian4}}-{{word:zai4}} {{word:shi4}} {{word:shen2me}} {{word:shi2}}-{{word:jian1}}?",
     ttsText: "现在是什么时间？",
     en: ["What time is it?"],
     zh: ["现在几点？"],
@@ -466,7 +466,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:xian4zai4}} {{word:shi4}} {{word:san1}}-{{word:dian3}}.",
+    pinyin: "{{Word:xian4}}-{{word:zai4}} {{word:shi4}} {{word:san1}}-{{word:dian3}}.",
     ttsText: "现在是三点。",
     en: ["It's three o'clock."],
     zh: ["现在三点。"],
@@ -474,7 +474,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:ni3}} {{word:shen2me}} {{word:shi2jian1}} {{word:lai2}}?",
+    pinyin: "{{Word:ni3}} {{word:shen2me}} {{word:shi2}}-{{word:jian1}} {{word:lai2}}?",
     ttsText: "你什么时间来？",
     en: ["When are you coming?"],
     zh: ["你什么时候来？"],
@@ -498,7 +498,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:xian4zai4}}-{{word:de}} {{word:ri4}} {{word:hen3}} {{word:re4}}.",
+    pinyin: "{{Word:xian4}}-{{word:zai4}}-{{word:de}} {{word:ri4}} {{word:hen3}} {{word:re4}}.",
     ttsText: "现在的日很热。",
     en: ["It's hot today."],
     zh: ["今天很热。"],
@@ -514,7 +514,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:deng3}} {{word:yi1}}-{{word:xia4}}, {{word:wo3}} {{word:xian4zai4}} {{word:jiu4}} {{word:lai2}}!",
+    pinyin: "{{Word:deng3}} {{word:yi1}}-{{word:xia4}}, {{word:wo3}} {{word:xian4}}-{{word:zai4}} {{word:jiu4}} {{word:lai2}}!",
     ttsText: "等一下，我现在就来！",
     en: ["Just a moment, I'm coming right now!"],
     zh: ["等一下，我马上来！"],
@@ -754,7 +754,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:xian4zai4}} {{word:jiu4}} {{word:qu4}}.",
+    pinyin: "{{Word:wo3}} {{word:xian4}}-{{word:zai4}} {{word:jiu4}} {{word:qu4}}.",
     ttsText: "我现在就去。",
     en: ["I'm leaving now. (Checking out.)"],
     zh: ["我现在就退房。"],
@@ -818,7 +818,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:zhe4}}-ge {{word:wei4dao4}} {{word:hen3}} {{word:hao3}}!",
+    pinyin: "{{Word:zhe4}}-ge {{word:wei4}}-{{word:dao4}} {{word:hen3}} {{word:hao3}}!",
     ttsText: "这个味道很好！",
     en: ["This tastes great!"],
     zh: ["这个味道很好！"],
@@ -1026,7 +1026,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:wo3}}-{{word:de}} {{word:tou2}} {{word:jue2de}} {{word:hen3}} {{word:bu4}} {{word:hao3}}.",
+    pinyin: "{{Word:wo3}}-{{word:de}} {{word:tou2}} {{word:jue2}}-{{light:de2}} {{word:hen3}} {{word:bu4}} {{word:hao3}}.",
     ttsText: "我的头觉得很不好。",
     en: ["My head hurts. (Literally: \"my head feels very bad.\")"],
     zh: ["我头疼。"],

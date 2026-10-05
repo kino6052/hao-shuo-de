@@ -7,7 +7,7 @@ export default composite({
   py: "xìnxīn",
   en: "confidence",
   ru: "уверенность",
-  hsd: ["{{word:jue2de}} {{word:wo3}} {{word:neng2}}"],
+  hsd: ["{{word:jue2}}-{{light:de2}} {{word:wo3}} {{word:neng2}}"],
   tts: ["觉得我能"],
   literal: "feel \"I can\"",
   fit: "plain",

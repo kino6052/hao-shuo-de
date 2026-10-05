@@ -80,7 +80,7 @@ export default lessonModule({
     {
       en: "I waited a long time.",
       ru: "Я долго ждал.",
-      answer: "{{Word:wo3}} {{word:deng3}} {{word:le}} {{word:hen3}}-{{word:duo1}}-{{word:de}} {{word:shi2jian1}}.",
+      answer: "{{Word:wo3}} {{word:deng3}} {{word:le}} {{word:hen3}}-{{word:duo1}}-{{word:de}} {{word:shi2}}-{{word:jian1}}.",
       hanzi: "我等了很多的时间。",
     },
   ],

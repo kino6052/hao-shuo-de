@@ -33,7 +33,7 @@ describe("roleOf / poolFor", () => {
     expect(roleOf(dict, "chi1")).toBe("verb");
     expect(roleOf(dict, "da4")).toBe("adj");
     expect(roleOf(dict, "hong2")).toBe("color");
-    expect(roleOf(dict, "jue2de")).toBe("verb");
+    expect(roleOf(dict, "jue2")).toBe("verb");
     expect(roleOf(dict, "ma")).toBe(null);
   });
 

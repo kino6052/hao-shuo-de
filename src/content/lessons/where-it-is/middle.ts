@@ -10,11 +10,6 @@ export default lessonModule({
       en: "middle",
       ru: "середина",
     },
-    {
-      word: "jian1",
-      en: "between",
-      ru: "между",
-    },
   ],
   prose: {
     en: [

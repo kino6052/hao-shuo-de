@@ -131,7 +131,7 @@ export default categories([
       {
         key: "temperature-taste",
         title: { eng: "Temperature & Taste", rus: "Температура и вкус", zh: "温度与味道" },
-        wordIds: ["re4", "leng3", "tian2", "wei4dao4"],
+        wordIds: ["re4", "leng3", "tian2"],
       },
       {
         key: "physical-property",
@@ -157,7 +157,7 @@ export default categories([
       {
         key: "cognition",
         title: { eng: "Cognition", rus: "Познание", zh: "认知" },
-        wordIds: ["jue2de", "zhi1dao4", "xue2", "jiao1", "suan4"],
+        wordIds: ["jue2", "zhi1dao4", "xue2", "jiao1", "suan4"],
       },
       {
         key: "perception",
@@ -254,7 +254,7 @@ export default categories([
   {
     key: "time",
     title: { eng: "Time", rus: "Время", zh: "时间" },
-    wordIds: ["shi2jian1", "xian4zai4", "tian1", "nian2", "dian3"],
+    wordIds: ["tian1", "nian2", "dian3"],
   },
   {
     key: "space",
@@ -330,7 +330,7 @@ export default categories([
       {
         key: "truth-value",
         title: { eng: "Truth Value", rus: "Истинностное значение", zh: "真值" },
-        wordIds: ["zhen1"],
+        wordIds: ["zhen1", "ding4"],
       },
     ],
   },

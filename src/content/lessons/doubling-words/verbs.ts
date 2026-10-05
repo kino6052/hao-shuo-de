@@ -49,7 +49,7 @@ export default lessonModule({
       ru: "Животное умерло? Дай-ка посмотрю.",
     },
     {
-      pinyin: "{{Word:ru2guo3}} {{word:ni3}} {{word:you3}} {{word:shi2jian1}}, {{word:wo3}}-{{word:men}} {{word:wan2r}}-wanr.",
+      pinyin: "{{Word:ru2guo3}} {{word:ni3}} {{word:you3}} {{word:shi2}}-{{word:jian1}}, {{word:wo3}}-{{word:men}} {{word:wan2r}}-wanr.",
       hanzi: "如果你有时间，我们玩玩。",
       en: "If you have time, let's play a bit.",
       ru: "Если у тебя есть время, давай немного поиграем.",

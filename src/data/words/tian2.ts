@@ -11,8 +11,8 @@ export default word("tian2", {
   },
   necessity: {
     index: 3,
-    eng: "Sweet: the one taste you can name. Other tastes are {{word:wei4dao4}} {{word:hao3}} or {{word:bu4}} {{word:hao3}}.",
-    rus: "Сладкий — единственный вкус, который можно назвать. Остальные — {{word:wei4dao4}} {{word:hao3}} или {{word:bu4}} {{word:hao3}}.",
+    eng: "Sweet: the one taste you can name. Other tastes are {{word:wei4}}-{{word:dao4}} {{word:hao3}} or {{word:bu4}} {{word:hao3}}.",
+    rus: "Сладкий — единственный вкус, который можно назвать. Остальные — {{word:wei4}}-{{word:dao4}} {{word:hao3}} или {{word:bu4}} {{word:hao3}}.",
   },
   maps: "suwi",
 });

@@ -80,7 +80,7 @@ export default lessonModule({
     {
       en: "I need a little time.",
       ru: "Мне нужно немного времени.",
-      answer: "{{Word:wo3}} {{word:yao4}} {{word:yi1}}-{{word:dian3}} {{word:shi2jian1}}.",
+      answer: "{{Word:wo3}} {{word:yao4}} {{word:yi1}}-{{word:dian3}} {{word:shi2}}-{{word:jian1}}.",
       hanzi: "我要一点时间。",
     },
   ],

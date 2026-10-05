@@ -7,8 +7,12 @@ export default composite({
   py: "yuánlái",
   en: "originally",
   ru: "изначально",
-  hsd: ["{{word:zai4}} {{word:kai1shi3}}-{{word:de}} {{word:shi2jian1}}"],
-  tts: ["在开始的时间"],
+  hsd: [
+    "{{word:yuan2}}-{{word:lai2}}",
+    "{{word:zai4}} {{word:kai1shi3}}-{{word:de}} {{word:shi2}}-{{word:jian1}}",
+  ],
+  tts: ["原来", "在开始的时间"],
   literal: "at the start",
-  fit: "plain",
+  fit: "natural",
+  proposed: true,
 });

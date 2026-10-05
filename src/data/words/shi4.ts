@@ -15,4 +15,16 @@ export default word("shi4", {
     rus: "Быть, являться: «это человек». Без него не построить самое простое предложение.",
   },
   maps: "",
+  senses: {
+    matter: {
+      hanzi: "事",
+      eng: "matter, thing to do",
+      rus: "дело",
+      compounds: ["mei2 shi4"],
+      why: {
+        eng: "Written 事, {{word:shi4}} means matter, thing to do in {{word:mei2}}-{{word:shi4}}; on its own it is be.",
+        rus: "Записанное как 事, {{word:shi4}} значит «дело» в {{word:mei2}}-{{word:shi4}}; само по себе — «быть».",
+      },
+    },
+  },
 });

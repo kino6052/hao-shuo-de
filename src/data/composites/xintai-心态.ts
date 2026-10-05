@@ -7,7 +7,7 @@ export default composite({
   py: "xīntài",
   en: "mindset",
   ru: "настрой",
-  hsd: ["{{word:xin1}}-{{word:li3}} {{word:zen3me}} {{word:jue2de}}"],
+  hsd: ["{{word:xin1}}-{{word:li3}} {{word:zen3me}} {{word:jue2}}-{{light:de2}}"],
   tts: ["心里怎么觉得"],
   literal: "how you feel inside",
   fit: "plain",

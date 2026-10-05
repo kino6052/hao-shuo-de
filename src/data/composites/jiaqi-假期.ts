@@ -7,7 +7,7 @@ export default composite({
   py: "jiàqī",
   en: "vacation",
   ru: "отпуск",
-  hsd: ["{{word:bu4}} {{word:zuo4}}-{{word:de}} {{word:shi2jian1}}"],
+  hsd: ["{{word:bu4}} {{word:zuo4}}-{{word:de}} {{word:shi2}}-{{word:jian1}}"],
   tts: ["不做的时间"],
   literal: "time off work",
   fit: "plain",

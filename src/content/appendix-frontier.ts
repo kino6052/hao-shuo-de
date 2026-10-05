@@ -184,9 +184,9 @@ const content: Entry[] = [
   },
   {
     type: "prose",
-    en: ["## Tastes, smells, and colors", "Only one taste has a name, {{word:tian2}} (sweet). Sour, bitter, salty, and spicy are all {{word:wei4dao4}} {{word:bu4}} {{word:hao3}}, or a description. Smells go through the nose, {{word:bi2zi}}. There are six colors; pink, orange, and gray need to be described."],
+    en: ["## Tastes, smells, and colors", "Only one taste has a name, {{word:tian2}} (sweet). Sour, bitter, salty, and spicy are all {{word:wei4}}-{{word:dao4}} {{word:bu4}} {{word:hao3}}, or a description. Smells go through the nose, {{word:bi2zi}}. There are six colors; pink, orange, and gray need to be described."],
     zh: [],
-    ru: ["## Вкусы, запахи и цвета", "Имя есть только у одного вкуса — {{word:tian2}} (сладкий). Кислое, горькое, солёное и острое — всё это {{word:wei4dao4}} {{word:bu4}} {{word:hao3}} или описание. Запахи передаются через нос, {{word:bi2zi}}. Цветов шесть; розовый, оранжевый и серый приходится описывать."],
+    ru: ["## Вкусы, запахи и цвета", "Имя есть только у одного вкуса — {{word:tian2}} (сладкий). Кислое, горькое, солёное и острое — всё это {{word:wei4}}-{{word:dao4}} {{word:bu4}} {{word:hao3}} или описание. Запахи передаются через нос, {{word:bi2zi}}. Цветов шесть; розовый, оранжевый и серый приходится описывать."],
     tldr: {
       en: ["Sweet is the only named taste, and there are six colors."],
       zh: [],
@@ -200,7 +200,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:wei4dao4}} {{word:bu4}} {{word:hao3}}.",
+    pinyin: "{{Word:wei4}}-{{word:dao4}} {{word:bu4}} {{word:hao3}}.",
     ttsText: "味道不好。",
     en: ["Sour, bitter, or salty: it doesn't taste good."],
     zh: [],
@@ -208,7 +208,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:wo3}}-{{word:de}} {{word:bi2zi}} {{word:jue2de}} {{word:bu4}} {{word:hao3}}.",
+    pinyin: "{{Word:wo3}}-{{word:de}} {{word:bi2zi}} {{word:jue2}}-{{light:de2}} {{word:bu4}} {{word:hao3}}.",
     ttsText: "我的鼻子觉得不好。",
     en: ["It smells bad (literally: my nose feels bad)."],
     zh: [],

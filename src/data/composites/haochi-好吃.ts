@@ -11,5 +11,5 @@ export default composite({
   tts: ["好吃"],
   literal: "good to eat",
   fit: "natural",
-  note: "Or: wèidào hěn hǎo, \"it tastes very good\".",
+  note: "Or: wèi-dào hěn hǎo, \"it tastes very good\".",
 });

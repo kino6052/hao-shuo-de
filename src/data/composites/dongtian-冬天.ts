@@ -7,8 +7,9 @@ export default composite({
   py: "dōngtiān",
   en: "winter",
   ru: "зима",
-  hsd: ["{{word:leng3}}-{{word:de}} {{word:shi2jian1}}"],
-  tts: ["冷的时间"],
+  hsd: ["{{word:dong1}}-{{word:tian1}}", "{{word:leng3}}-{{word:de}} {{word:shi2}}-{{word:jian1}}"],
+  tts: ["冬天", "冷的时间"],
   literal: "cold time",
-  fit: "plain",
+  fit: "natural",
+  proposed: true,
 });

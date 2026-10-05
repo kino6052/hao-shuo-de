@@ -7,7 +7,7 @@ export default composite({
   py: "mùqián",
   en: "at present",
   ru: "в настоящее время",
-  hsd: ["{{word:xian4zai4}}"],
+  hsd: ["{{word:xian4}}-{{word:zai4}}"],
   tts: ["现在"],
   fit: "word",
   proposed: true,

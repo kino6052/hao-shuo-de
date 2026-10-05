@@ -8,10 +8,11 @@ export default composite({
   en: "robot",
   ru: "робот",
   hsd: [
+    "{{word:ji1}}-{{word:qi4}}-{{word:ren2}}",
     "{{word:neng2}}-{{word:zuo4}}-{{word:ren2}}-{{word:zuo4}}-{{word:de}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:gong1}}-{{word:ju4}}",
   ],
-  tts: ["能做人做的东西的工具"],
+  tts: ["机器人", "能做人做的东西的工具"],
   literal: "a tool that can do what people do",
-  fit: "plain",
+  fit: "natural",
   proposed: true,
 });

@@ -7,7 +7,7 @@ export default composite({
   py: "qiūtiān",
   en: "autumn",
   ru: "осень",
-  hsd: ["{{word:zhi2wu4}} {{word:bian4}} {{word:huang2}}-{{word:se4}}-{{word:de}} {{word:shi2jian1}}"],
+  hsd: ["{{word:zhi2wu4}} {{word:bian4}} {{word:huang2}}-{{word:se4}}-{{word:de}} {{word:shi2}}-{{word:jian1}}"],
   tts: ["植物变黄色的时间"],
   literal: "when plants turn yellow",
   fit: "plain",

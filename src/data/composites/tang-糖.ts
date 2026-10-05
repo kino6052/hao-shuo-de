@@ -11,5 +11,5 @@ export default composite({
   tts: ["做甜的东西"],
   literal: "the thing that makes it sweet",
   fit: "plain",
-  note: "Like salt, zuò-hǎo wèidào-de dōng-xi.",
+  note: "Like salt, zuò-hǎo wèi-dào-de dōng-xi.",
 });

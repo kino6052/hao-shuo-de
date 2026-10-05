@@ -41,6 +41,12 @@ export default lessonModule({
   },
   examples: [
     {
+      pinyin: "{{Word:ta1}} {{word:yi1}}-{{word:ding4}} {{word:hen3}} {{word:pa4}}.",
+      hanzi: "他一定很怕。",
+      en: "He must be very scared.",
+      ru: "Ему, наверное, очень страшно.",
+    },
+    {
       pinyin: "{{Word:wo3}} {{word:hen3}} {{word:kai1}}-{{word:xin1}}.",
       hanzi: "我很开心。",
       en: "I'm very happy.",
@@ -71,7 +77,7 @@ export default lessonModule({
       ru: "Не волнуйся, ничего страшного.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:jue2de}} {{word:bu4}} {{word:hao3}}, {{word:wo3}} {{word:yao4}} {{word:tang3}}-{{word:xia4}}.",
+      pinyin: "{{Word:wo3}} {{word:jue2}}-{{light:de2}} {{word:bu4}} {{word:hao3}}, {{word:wo3}} {{word:yao4}} {{word:tang3}}-{{word:xia4}}.",
       hanzi: "我觉得不好，我要躺下。",
       en: "I don't feel well. I want to lie down.",
       ru: "Мне плохо, я хочу лечь.",

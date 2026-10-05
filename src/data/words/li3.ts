@@ -15,4 +15,16 @@ export default word("li3", {
     rus: "Внутри, в: {{word:he2zi}}-{{word:li3}} — в коробке. Самое частое слово места.",
   },
   maps: "",
+  senses: {
+    reason: {
+      hanzi: "理",
+      eng: "reason",
+      rus: "смысл, порядок",
+      compounds: ["dao4 li3"],
+      why: {
+        eng: "Written 理, {{word:li3}} means reason in {{word:dao4}}-{{word:li3}}; on its own it is inside.",
+        rus: "Записанное как 理, {{word:li3}} значит «смысл, порядок» в {{word:dao4}}-{{word:li3}}; само по себе — «внутри».",
+      },
+    },
+  },
 });

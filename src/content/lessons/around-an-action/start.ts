@@ -55,7 +55,7 @@ export default lessonModule({
       ru: "Ты уже начал писать?",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:xian4zai4}} {{word:kai1shi3}} {{word:xie3}}.",
+      pinyin: "{{Word:wo3}} {{word:xian4}}-{{word:zai4}} {{word:kai1shi3}} {{word:xie3}}.",
       hanzi: "我现在开始写。",
       en: "I'm starting to write now.",
       ru: "Я сейчас начинаю писать.",

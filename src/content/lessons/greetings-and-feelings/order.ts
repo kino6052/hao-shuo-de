@@ -66,7 +66,7 @@ export default lessonModule({
       ru: "Не трогай мой нос!",
     },
     {
-      pinyin: "{{Word:gei3}} {{word:wo3}} {{word:zuo4}}-{{word:hao3}} {{word:wei4dao4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}!",
+      pinyin: "{{Word:gei3}} {{word:wo3}} {{word:zuo4}}-{{word:hao3}} {{word:wei4}}-{{word:dao4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}!",
       hanzi: "给我做好味道的东西！",
       en: "Pass me the salt! (the thing that makes it taste good)",
       ru: "Передай мне соль! (то, от чего вкус становится хорошим)",
@@ -100,7 +100,7 @@ export default lessonModule({
     {
       en: "I'm coming right now!",
       ru: "Я сейчас же приду!",
-      answer: "{{Word:wo3}} {{word:xian4zai4}} {{word:jiu4}} {{word:lai2}}!",
+      answer: "{{Word:wo3}} {{word:xian4}}-{{word:zai4}} {{word:jiu4}} {{word:lai2}}!",
       hanzi: "我现在就来！",
     },
   ],

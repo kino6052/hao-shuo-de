@@ -25,9 +25,16 @@ export default lessonModule({
       ru: "сладкий",
     },
     {
-      word: "wei4dao4",
-      en: "taste",
-      ru: "вкус",
+      word: "wei4",
+      sense: "taste",
+      en: "taste (in {{word:wei4}}-{{word:dao4}})",
+      ru: "вкус (в {{word:wei4}}-{{word:dao4}})",
+    },
+    {
+      word: "dao4",
+      sense: "way",
+      en: "way (in {{word:wei4}}-{{word:dao4}}: taste)",
+      ru: "путь (в {{word:wei4}}-{{word:dao4}} — вкус)",
     },
     {
       word: "qi2guai4",
@@ -59,7 +66,7 @@ export default lessonModule({
       "Words that say how much, like {{word:hen3}}, {{word:zhen1}}, and {{word:bu4}}, are called adverbs.",
       "{{word:hen3}} {{word:you3}} {{word:jia4zhi2}} (\"has a lot of value\") means valuable.",
       "Before a verb, {{word:kuai4}} (fast) means quickly: {{Word:kuai4}} {{word:lai2}}!",
-      "{{word:wei4dao4}} is taste, good or not: {{Word:wei4dao4}} {{word:hen3}} {{word:hao3}}, it tastes very good. {{Word:wei4dao4}} {{word:bu4}} {{word:hao3}}, it doesn't taste good.",
+      "{{word:wei4}}-{{word:dao4}} is taste, good or not: {{Word:wei4}}-{{word:dao4}} {{word:hen3}} {{word:hao3}}, it tastes very good. {{Word:wei4}}-{{word:dao4}} {{word:bu4}} {{word:hao3}}, it doesn't taste good.",
     ],
     ru: [
       "**Чтобы сказать «очень»**, поставьте {{word:hen3}} перед прилагательным.",
@@ -69,7 +76,7 @@ export default lessonModule({
       "Слова, которые говорят «насколько», такие как {{word:hen3}}, {{word:zhen1}} и {{word:bu4}}, называются наречиями.",
       "{{word:hen3}} {{word:you3}} {{word:jia4zhi2}} («имеет много ценности») значит «ценный».",
       "Перед глаголом {{word:kuai4}} (быстрый) значит «быстро»: {{Word:kuai4}} {{word:lai2}}!",
-      "{{word:wei4dao4}} — это вкус, хороший или нет: {{Word:wei4dao4}} {{word:hen3}} {{word:hao3}} — очень вкусно. {{Word:wei4dao4}} {{word:bu4}} {{word:hao3}} — невкусно.",
+      "{{word:wei4}}-{{word:dao4}} — это вкус, хороший или нет: {{Word:wei4}}-{{word:dao4}} {{word:hen3}} {{word:hao3}} — очень вкусно. {{Word:wei4}}-{{word:dao4}} {{word:bu4}} {{word:hao3}} — невкусно.",
     ],
     tldr: {
       en: "{{word:hen3}} before an adjective means very.",

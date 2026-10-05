@@ -15,4 +15,16 @@ export default word("hao4", {
     rus: "Номер по порядку: второй, номер пять, третье число месяца.",
   },
   maps: "nanpa",
+  senses: {
+    fond: {
+      hanzi: "好",
+      eng: "be fond of",
+      rus: "любить",
+      compounds: ["ai4 hao4"],
+      why: {
+        eng: "Written 好, {{word:hao4}} means be fond of in {{word:ai4}}-{{word:hao4}}; on its own it is number.",
+        rus: "Записанное как 好, {{word:hao4}} значит «любить» в {{word:ai4}}-{{word:hao4}}; само по себе — «номер».",
+      },
+    },
+  },
 });

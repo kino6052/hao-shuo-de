@@ -7,7 +7,7 @@ export default composite({
   py: "zūnjìng",
   en: "respect",
   ru: "уважать",
-  hsd: ["{{word:jue2de}} X {{word:hen3}} {{word:you3}} {{word:jia4zhi2}}"],
+  hsd: ["{{word:jue2}}-{{light:de2}} X {{word:hen3}} {{word:you3}} {{word:jia4zhi2}}"],
   tts: ["觉得X很有价值"],
   literal: "feel X is very valuable",
   fit: "plain",

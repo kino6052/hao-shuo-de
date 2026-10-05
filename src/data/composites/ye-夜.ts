@@ -7,7 +7,7 @@ export default composite({
   py: "yè",
   en: "night",
   ru: "ночь",
-  hsd: ["{{word:yue4}}-{{word:de}} {{word:shi2jian1}}"],
+  hsd: ["{{word:yue4}}-{{word:de}} {{word:shi2}}-{{word:jian1}}"],
   tts: ["月的时间"],
   literal: "moon time",
   fit: "plain",

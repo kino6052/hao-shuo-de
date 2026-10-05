@@ -7,8 +7,8 @@ export default composite({
   py: "wèidào",
   en: "taste, flavor",
   ru: "вкус",
-  hsd: ["{{word:wei4dao4}}"],
+  hsd: ["{{word:wei4}}-{{word:dao4}}"],
   tts: ["味道"],
   fit: "word",
-  note: "Lesson {{lesson:how-much}}. Good or not: wèidào hěn hǎo, wèidào bù hǎo.",
+  note: "Lesson {{lesson:how-much}}. Good or not: wèi-dào hěn hǎo, wèi-dào bù hǎo.",
 });

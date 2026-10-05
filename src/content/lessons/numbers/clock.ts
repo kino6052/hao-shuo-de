@@ -16,14 +16,14 @@ export default lessonModule({
       "",
       "**number + {{word:dian3}}**",
       "",
-      "Put the time before the verb: {{Word:wo3}} {{word:shi2}}-{{word:er4}}-{{word:dian3}} {{word:chi1}}. Ask with {{word:shen2me}} {{word:shi2jian1}} (Lesson {{lesson:when-it-happens}}).",
+      "Put the time before the verb: {{Word:wo3}} {{word:shi2}}-{{word:er4}}-{{word:dian3}} {{word:chi1}}. Ask with {{word:shen2me}} {{word:shi2}}-{{word:jian1}} (Lesson {{lesson:when-it-happens}}).",
     ],
     ru: [
       "**Чтобы сказать, который час**, поставьте {{word:dian3}} (час) после числа.",
       "",
       "**число + {{word:dian3}}**",
       "",
-      "Время ставится перед глаголом: {{Word:wo3}} {{word:shi2}}-{{word:er4}}-{{word:dian3}} {{word:chi1}}. Спрашивайте с {{word:shen2me}} {{word:shi2jian1}} (урок {{lesson:when-it-happens}}).",
+      "Время ставится перед глаголом: {{Word:wo3}} {{word:shi2}}-{{word:er4}}-{{word:dian3}} {{word:chi1}}. Спрашивайте с {{word:shen2me}} {{word:shi2}}-{{word:jian1}} (урок {{lesson:when-it-happens}}).",
     ],
     tldr: {
       en: "number + {{word:dian3}} is the time: {{word:san1}}-{{word:dian3}} is three o'clock.",
@@ -32,12 +32,12 @@ export default lessonModule({
     necessity: { en: "Now you can say what time it is.", ru: "Теперь вы можете сказать, который час." },
   },
   info: {
-    en: "number + {{word:dian3}}, o'clock: {{Word:xian4zai4}} {{word:shi4}} {{word:san1}}-{{word:dian3}}. (It's three o'clock now.)",
-    ru: "число + {{word:dian3}} — час: {{Word:xian4zai4}} {{word:shi4}} {{word:san1}}-{{word:dian3}}. (Сейчас три часа.)",
+    en: "number + {{word:dian3}}, o'clock: {{Word:xian4}}-{{word:zai4}} {{word:shi4}} {{word:san1}}-{{word:dian3}}. (It's three o'clock now.)",
+    ru: "число + {{word:dian3}} — час: {{Word:xian4}}-{{word:zai4}} {{word:shi4}} {{word:san1}}-{{word:dian3}}. (Сейчас три часа.)",
   },
   examples: [
     {
-      pinyin: "{{Word:xian4zai4}} {{word:shi4}} {{word:san1}}-{{word:dian3}}.",
+      pinyin: "{{Word:xian4}}-{{word:zai4}} {{word:shi4}} {{word:san1}}-{{word:dian3}}.",
       hanzi: "现在是三点。",
       en: "It's three o'clock now.",
       ru: "Сейчас три часа.",
@@ -71,7 +71,7 @@ export default lessonModule({
     {
       en: "It's five o'clock now.",
       ru: "Сейчас пять часов.",
-      answer: "{{Word:xian4zai4}} {{word:shi4}} {{word:wu3}}-{{word:dian3}}.",
+      answer: "{{Word:xian4}}-{{word:zai4}} {{word:shi4}} {{word:wu3}}-{{word:dian3}}.",
       hanzi: "现在是五点。",
     },
   ],

@@ -7,7 +7,7 @@ export default composite({
   py: "běnlái",
   en: "originally",
   ru: "изначально",
-  hsd: ["{{word:kai1shi3}}-{{word:de}} {{word:shi2jian1}}"],
+  hsd: ["{{word:kai1shi3}}-{{word:de}} {{word:shi2}}-{{word:jian1}}"],
   tts: ["开始的时间"],
   literal: "at the start",
   fit: "plain",

@@ -76,7 +76,7 @@ export default lessonModule({
       ru: "Сядь слева от меня, хорошо?",
     },
     {
-      pinyin: "{{Word:hao3}}, {{word:wo3}} {{word:xian4zai4}} {{word:jiu4}} {{word:lai2}}!",
+      pinyin: "{{Word:hao3}}, {{word:wo3}} {{word:xian4}}-{{word:zai4}} {{word:jiu4}} {{word:lai2}}!",
       hanzi: "好，我现在就来！",
       en: "Okay, I'm coming right now!",
       ru: "Хорошо, сейчас же приду!",

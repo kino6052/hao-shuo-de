@@ -145,10 +145,10 @@ const NOT_OFFERED = new Set([
   "shi4", "zai4", "yong4", "wan2", "hen3", "zui4", "zhen1", "bie2",
   "li3", "shang4", "xia4", "hou4", "qian2", "mian4", "bian1",
   "pang2bian1", "zuo3", "fu4jin4", "fang1", "dong1", "xi1", "se4", "zhe3",
-  "dian3", "zhong3", "xian4zai4",
+  "dian3", "zhong3",
 ]);
 // Words whose part of speech in the dictionary doesn't say what they are here.
-const ROLE_OVERRIDES = { jue2de: "verb" };
+const ROLE_OVERRIDES = {};
 
 // A unit is a ready-made word made of words: a composite with a role
 // (src/lib/composite.ts), like dōng-xi, "thing". dict.units holds them, keyed

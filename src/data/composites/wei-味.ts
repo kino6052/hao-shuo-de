@@ -7,7 +7,7 @@ export default composite({
   py: "wèi",
   en: "taste, flavor",
   ru: "вкус",
-  hsd: ["{{word:wei4dao4}}"],
+  hsd: ["{{word:wei4}}-{{word:dao4}}"],
   tts: ["味道"],
   fit: "word",
 });

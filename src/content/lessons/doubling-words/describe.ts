@@ -59,7 +59,7 @@ export default lessonModule({
       ru: "Учись хорошенько!",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:jue2de}} {{word:zhe4}}-ge {{word:hao3}}-{{word:hao3}}-{{word:de}}.",
+      pinyin: "{{Word:wo3}} {{word:jue2}}-{{light:de2}} {{word:zhe4}}-ge {{word:hao3}}-{{word:hao3}}-{{word:de}}.",
       hanzi: "我觉得这个好好的。",
       en: "I think this one is perfectly fine.",
       ru: "Мне кажется, этот вполне хороший.",

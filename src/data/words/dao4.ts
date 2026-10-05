@@ -14,4 +14,16 @@ export default word("dao4", {
     eng: "Arrive, to: {{word:qu4}}-{{word:dao4}} … , and a result reached ({{word:zhao3}}-{{word:dao4}}, found).",
     rus: "Добраться, до: {{word:qu4}}-{{word:dao4}} …, а также достигнутый результат ({{word:zhao3}}-{{word:dao4}} — нашёл).",
   },
+  senses: {
+    way: {
+      hanzi: "道",
+      eng: "way",
+      rus: "путь",
+      compounds: ["wei4 dao4", "dao4 li3"],
+      why: {
+        eng: "Written 道, {{word:dao4}} means way in {{word:wei4}}-{{word:dao4}}, {{word:dao4}}-{{word:li3}}; on its own it is arrive.",
+        rus: "Записанное как 道, {{word:dao4}} значит «путь» в {{word:wei4}}-{{word:dao4}}, {{word:dao4}}-{{word:li3}}; само по себе — «прийти».",
+      },
+    },
+  },
 });

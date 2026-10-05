@@ -7,7 +7,7 @@ export default composite({
   py: "tóngyì",
   en: "agree",
   ru: "соглашаться",
-  hsd: ["{{word:jue2de}} {{word:yi1}}-{{word:yang4}}"],
+  hsd: ["{{word:jue2}}-{{light:de2}} {{word:yi1}}-{{word:yang4}}"],
   tts: ["觉得一样"],
   literal: "think the same",
   fit: "plain",

@@ -7,7 +7,7 @@ export default composite({
   py: "shíjiān",
   en: "time",
   ru: "время",
-  hsd: ["{{word:shi2jian1}}"],
+  hsd: ["{{word:shi2}}-{{word:jian1}}"],
   tts: ["时间"],
   fit: "word",
 });

@@ -54,7 +54,7 @@ export default lessonModule({
       ru: "Я не быстрый.",
     },
     {
-      pinyin: "{{Word:wei4dao4}} {{word:bu4}} {{word:hao3}}.",
+      pinyin: "{{Word:wei4}}-{{word:dao4}} {{word:bu4}} {{word:hao3}}.",
       hanzi: "味道不好。",
       en: "It doesn't taste good.",
       ru: "Невкусно.",
@@ -76,7 +76,7 @@ export default lessonModule({
     {
       en: "The water doesn't taste good.",
       ru: "У воды плохой вкус.",
-      answer: "{{Word:shui3}}-{{word:de}} {{word:wei4dao4}} {{word:bu4}} {{word:hao3}}.",
+      answer: "{{Word:shui3}}-{{word:de}} {{word:wei4}}-{{word:dao4}} {{word:bu4}} {{word:hao3}}.",
       hanzi: "水的味道不好。",
     },
   ],

@@ -662,10 +662,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "Time first: {{Word:yue4}}-{{word:de}} {{word:shi2jian1}}, {{word:wo3}} {{word:shui4jiao4}}. (At night, I sleep.) {{Word:xian4zai4}}, … (Now, …)"
+            "Time first: {{Word:yue4}}-{{word:de}} {{word:shi2}}-{{word:jian1}}, {{word:wo3}} {{word:shui4jiao4}}. (At night, I sleep.) {{Word:xian4}}-{{word:zai4}}, … (Now, …)"
           ],
           "ru": [
-            "Сначала время: {{Word:yue4}}-{{word:de}} {{word:shi2jian1}}, {{word:wo3}} {{word:shui4jiao4}}. (Ночью я сплю.) {{Word:xian4zai4}}, … (Сейчас …)"
+            "Сначала время: {{Word:yue4}}-{{word:de}} {{word:shi2}}-{{word:jian1}}, {{word:wo3}} {{word:shui4jiao4}}. (Ночью я сплю.) {{Word:xian4}}-{{word:zai4}}, … (Сейчас …)"
           ],
           "zh": []
         }
@@ -688,10 +688,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "verb-{{word:de}} {{word:shi2jian1}}, when: {{Word:wo3}} {{word:chi1}}-{{word:de}} {{word:shi2jian1}}, {{word:wo3}} {{word:bu4}} {{word:shuo1}}. (When I eat, I don't talk.)"
+            "verb-{{word:de}} {{word:shi2}}-{{word:jian1}}, when: {{Word:wo3}} {{word:chi1}}-{{word:de}} {{word:shi2}}-{{word:jian1}}, {{word:wo3}} {{word:bu4}} {{word:shuo1}}. (When I eat, I don't talk.)"
           ],
           "ru": [
-            "глагол-{{word:de}} {{word:shi2jian1}} — когда: {{Word:wo3}} {{word:chi1}}-{{word:de}} {{word:shi2jian1}}, {{word:wo3}} {{word:bu4}} {{word:shuo1}}. (Когда я ем, я не разговариваю.)"
+            "глагол-{{word:de}} {{word:shi2}}-{{word:jian1}} — когда: {{Word:wo3}} {{word:chi1}}-{{word:de}} {{word:shi2}}-{{word:jian1}}, {{word:wo3}} {{word:bu4}} {{word:shuo1}}. (Когда я ем, я не разговариваю.)"
           ],
           "zh": []
         }
@@ -1457,10 +1457,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "number + {{word:dian3}}, o'clock: {{Word:xian4zai4}} {{word:shi4}} {{word:san1}}-{{word:dian3}}. (It's three o'clock now.)"
+            "number + {{word:dian3}}, o'clock: {{Word:xian4}}-{{word:zai4}} {{word:shi4}} {{word:san1}}-{{word:dian3}}. (It's three o'clock now.)"
           ],
           "ru": [
-            "число + {{word:dian3}} — час: {{Word:xian4zai4}} {{word:shi4}} {{word:san1}}-{{word:dian3}}. (Сейчас три часа.)"
+            "число + {{word:dian3}} — час: {{Word:xian4}}-{{word:zai4}} {{word:shi4}} {{word:san1}}-{{word:dian3}}. (Сейчас три часа.)"
           ],
           "zh": []
         }
@@ -1748,10 +1748,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "…, {{word:dan4}}-{{word:shi4}} …, but: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4}}-{{word:shi4}} {{word:wei4dao4}} {{word:bu4}} {{word:hao3}}. (It looks good, but it doesn't taste good.)"
+            "…, {{word:dan4}}-{{word:shi4}} …, but: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4}}-{{word:shi4}} {{word:wei4}}-{{word:dao4}} {{word:bu4}} {{word:hao3}}. (It looks good, but it doesn't taste good.)"
           ],
           "ru": [
-            "…, {{word:dan4}}-{{word:shi4}} … — но: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4}}-{{word:shi4}} {{word:wei4dao4}} {{word:bu4}} {{word:hao3}}. (Выглядит хорошо, но невкусно.)"
+            "…, {{word:dan4}}-{{word:shi4}} … — но: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4}}-{{word:shi4}} {{word:wei4}}-{{word:dao4}} {{word:bu4}} {{word:hao3}}. (Выглядит хорошо, но невкусно.)"
           ],
           "zh": []
         }
@@ -1840,10 +1840,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:jue2de}} + adjective, feel: {{Word:wo3}} {{word:jue2de}} {{word:leng3}}. (I feel cold.)"
+            "{{word:jue2}}-{{light:de2}} + adjective, feel: {{Word:wo3}} {{word:jue2}}-{{light:de2}} {{word:leng3}}. (I feel cold.)"
           ],
           "ru": [
-            "{{word:jue2de}} + прилагательное — чувствовать: {{Word:wo3}} {{word:jue2de}} {{word:leng3}}. (Мне холодно.)"
+            "{{word:jue2}}-{{light:de2}} + прилагательное — чувствовать: {{Word:wo3}} {{word:jue2}}-{{light:de2}} {{word:leng3}}. (Мне холодно.)"
           ],
           "zh": []
         }

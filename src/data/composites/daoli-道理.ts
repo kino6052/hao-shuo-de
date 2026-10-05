@@ -7,9 +7,12 @@ export default composite({
   py: "dàolǐ",
   en: "reason, principle",
   ru: "смысл, принцип",
-  hsd: ["{{word:wei4}}-{{word:shen2me}} {{word:shi4}} {{word:dui4}}-{{word:de}}"],
-  tts: ["为什么是对的"],
+  hsd: [
+    "{{word:dao4}}-{{word:li3}}",
+    "{{word:wei4}}-{{word:shen2me}} {{word:shi4}} {{word:dui4}}-{{word:de}}",
+  ],
+  tts: ["道理", "为什么是对的"],
   literal: "why it's right",
-  fit: "plain",
+  fit: "natural",
   proposed: true,
 });

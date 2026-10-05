@@ -7,7 +7,7 @@ export default composite({
   py: "zǎochen",
   en: "morning",
   ru: "утро",
-  hsd: ["{{word:ri4}} {{word:qi3}}-{{word:lai2}}-{{word:de}} {{word:shi2jian1}}"],
+  hsd: ["{{word:ri4}} {{word:qi3}}-{{word:lai2}}-{{word:de}} {{word:shi2}}-{{word:jian1}}"],
   tts: ["日起来的时间"],
   literal: "when the sun gets up",
   fit: "plain",

@@ -74,8 +74,13 @@ export default [
   },
   { op: "card", id: "ding4", to: "greetings-and-feelings/feel", en: "settled; {{word:yi1}}-{{word:ding4}}: surely", ru: "решённый; {{word:yi1}}-{{word:ding4}} — обязательно" },
   {
-    op: "text", file: "src/content/lessons/greetings-and-feelings/feel.ts", from: "  examples: [\n",
-    to: '  examples: [\n    {\n      pinyin: "{{Word:wo3}} {{word:yi1}}-{{word:ding4}} {{word:lai2}}.",\n      hanzi: "我一定来。",\n      en: "I\'ll surely come.",\n      ru: "Я обязательно приду.",\n    },\n',
+    op: "text", file: "src/content/lessons/greetings-and-feelings/feel.ts", from: "  exercises: [\n",
+    to: '  exercises: [\n    {\n      en: "I\'ll surely come.",\n      ru: "Я обязательно приду.",\n      answer: "{{Word:wo3}} {{word:yi1}}-{{word:ding4}} {{word:lai2}}.",\n      hanzi: "我一定来。",\n    },\n',
+  },
+
+  {
+    op: "text", file: "src/content/lessons/greetings-and-feelings/heart.ts", from: "  examples: [\n",
+    to: '  examples: [\n    {\n      pinyin: "{{Word:ta1}} {{word:yi1}}-{{word:ding4}} {{word:hen3}} {{word:pa4}}.",\n      hanzi: "他一定很怕。",\n      en: "He must be very scared.",\n      ru: "Ему, наверное, очень страшно.",\n    },\n',
   },
 
   // -- senses that open compounds already in the composite dictionary ------------------------------

@@ -7,9 +7,13 @@ export default composite({
   py: "xiǎoshíhou",
   en: "childhood",
   ru: "детство",
-  hsd: ["{{word:xiao3}}-{{word:de}} {{word:shi2jian1}}"],
-  tts: ["小的时间"],
+  hsd: [
+    "{{word:xiao3}}-{{word:shi2}}-{{light:hou4}}",
+    "{{word:xiao3}}-{{word:de}} {{word:shi2}}-{{word:jian1}}",
+  ],
+  tts: ["小时候", "小的时间"],
   literal: "the small time",
   fit: "natural",
-  note: "wǒ xiǎo-de shíjiān: when I was little.",
+  note: "wǒ xiǎo-de shí-jiān: when I was little.",
+  proposed: true,
 });

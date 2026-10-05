@@ -11,8 +11,8 @@ export default word("yue4", {
   },
   necessity: {
     index: 4,
-    eng: "The moon, and with it the night: {{word:yue4}}-{{word:de}} {{word:shi2jian1}} is \"at night\".",
-    rus: "Луна, а с ней и ночь: {{word:yue4}}-{{word:de}} {{word:shi2jian1}} — «ночью».",
+    eng: "The moon, and with it the night: {{word:yue4}}-{{word:de}} {{word:shi2}}-{{word:jian1}} is \"at night\".",
+    rus: "Луна, а с ней и ночь: {{word:yue4}}-{{word:de}} {{word:shi2}}-{{word:jian1}} — «ночью».",
   },
   maps: "mun",
 });

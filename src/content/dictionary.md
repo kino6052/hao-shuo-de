@@ -37,6 +37,7 @@ dēng | noun | lamp, light (e.g. {{word:kai1}} {{word:deng1}}, "turn on the ligh
 děng | verb | to wait |
 dì | noun | floor, horizontal surface, platform | supa
 diǎn | noun/measure word | o'clock, after a number ({{word:san1}}-{{word:dian3}}, "three o'clock"); a little: {{word:yi1}}-{{word:dian3}} ("a bit"), as in {{word:da4}} {{word:yi1}}-{{word:dian3}}, "a bit bigger" |
+dìng | adjective/verb | fixed, settled; to settle: {{word:yi1}}-{{word:ding4}}, surely; {{word:jue2}}-{{word:ding4}}, to decide |
 dòng | verb | to move; to stir, to budge |
 dōng | noun | east; with {{word:xi1}} said lightly, {{word:dong1}}-{{light:xi1}} is a thing ("east and west": everything) |
 dōu | adverb | all, both, every one of them; goes before the verb, after the people or things it covers (e.g. {{word:wo3}}-{{word:men}} {{word:dou1}} {{word:chi1}}, "we all eat"). {{word:shen2me}}-{{word:dou1}} means everything |
@@ -85,9 +86,9 @@ jiàzhí | noun | value, worth; how much something is worth |
 jīn | noun | money, cash, savings, wealth | mani
 jìn | verb | to enter, go in, come in; after a verb, says it goes in (e.g. {{word:jin4}}-{{word:lai2}}, "come in"; {{word:fang4}}-{{word:jin4}}-{{word:qu4}}, "put in") |
 jiǔ | number | nine |
-jiù | adverb | then, right away, just; right before the verb, after the who ({{word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:jiu4}} {{word:deng3}} {{word:ni3}}, "if you come, I will wait for you"; {{word:wo3}} {{word:xian4zai4}} {{word:jiu4}} {{word:qu4}}, "I am going right now") |
+jiù | adverb | then, right away, just; right before the verb, after the who ({{word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:jiu4}} {{word:deng3}} {{word:ni3}}, "if you come, I will wait for you"; {{word:wo3}} {{word:xian4}}-{{word:zai4}} {{word:jiu4}} {{word:qu4}}, "I am going right now") |
 jù | noun | tool, thing to use, in words: {{word:gong1}}-{{word:ju4}}, a tool |
-juéde | noun/adjective/verb | feeling, emotion, direct experience; to feel, think | pilin
+jué | verb | to feel, sense: {{word:jue2}}-{{light:de2}}, to feel, think |
 kāi | verb | to open; to turn on (e.g. {{word:he2zi}} {{word:kai1}} {{word:le}}, "the box is open") |
 kāishǐ | verb/auxiliary | to begin, start, open; turn on; manage to | open, kama
 kàn | verb | to look at, see, examine, observe, read, watch | lukin
@@ -147,7 +148,6 @@ shénme | pronoun/particle | what? which?; retains position without altering Chi
 shēntǐ | noun | body, physical torso, physical state | sijelo
 shí | number | ten |
 shì | verb | to be, copula link between subjects and identity predicates |
-shíjiān | noun | time, duration, moment, occasion, period, situation | tenpo
 shǒu | noun | hand, arm, tactile organ | luka
 shuǐ | noun | water, liquid, fluid, wet substance, beverage | telo
 shuìjiào | verb/adjective | to sleep, rest, be inactive; sleeping, asleep | lape
@@ -167,7 +167,6 @@ wán | verb complement | finish, be done, run out; binds directly after a verb v
 wǎng | noun | net, web; the internet (e.g. {{word:zai4}} {{word:wang3}}-{{word:shang4}}, "online") |
 wánr | verb/adjective | to play, have fun, engage in recreation; playful, artistic, frivolous | musi
 wèi | preposition/coverb | for, for the sake of: {{word:wei4}}-{{word:shen2me}}, why ("for what") |
-wèidào | noun | taste, flavor, good or not: {{word:wei4dao4}} {{word:hen3}} {{word:hao3}}, "it tastes good"; salt is {{word:zuo4}}-{{word:hao3}} {{word:wei4dao4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}, "the thing that makes it taste good" |
 wèn | verb | to ask, inquire, question |
 wǒ | pronoun | I, me, we, us | mi
 wù | noun | thing, creature, in words: {{word:dong4}}-{{word:wu4}}, animal ("moving creature") |
@@ -175,7 +174,6 @@ wǔ | number | five |
 xī | noun | west; said lightly after {{word:dong1}}, {{word:dong1}}-{{light:xi1}}, a thing |
 xià | noun/directional | down, below, under; composes with other roots via a hyphen (e.g. {{word:xia4}}-{{word:lai2}}, {{word:xia4}}-{{word:mian4}}) |
 xiàn | noun | line, rope, hair, thread, cord, flexible long thing | linja
-xiànzài | noun/adverb | now, at present, these days |
 xiǎo | adjective | little, small, short, few, young, a bit | lili
 xiào | verb | to laugh, to smile |
 xiè | verb | to thank; doubled, {{word:xie4}}-xie is "thank you", and {{word:bu4}} {{word:yong4}} {{word:xie4}} is "you are welcome" |

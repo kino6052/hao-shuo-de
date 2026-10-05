@@ -7,8 +7,12 @@ export default composite({
   py: "shàngwǔ",
   en: "morning",
   ru: "утро",
-  hsd: ["{{word:ri4}} {{word:qi3}}-{{word:lai2}}-{{word:de}} {{word:shi2jian1}}"],
-  tts: ["日起来的时间"],
+  hsd: [
+    "{{word:shang4}}-{{word:wu3}}",
+    "{{word:ri4}} {{word:qi3}}-{{word:lai2}}-{{word:de}} {{word:shi2}}-{{word:jian1}}",
+  ],
+  tts: ["上午", "日起来的时间"],
   literal: "the time the sun gets up",
-  fit: "plain",
+  fit: "natural",
+  proposed: true,
 });

@@ -15,4 +15,16 @@ export default word("xian4", {
     rus: "Линия, нитка, верёвка — всё длинное и тонкое.",
   },
   maps: "linja",
+  senses: {
+    now: {
+      hanzi: "现",
+      eng: "now, appear",
+      rus: "сейчас, появляться",
+      compounds: ["xian4 zai4", "fa1 xian4", "chu1 xian4"],
+      why: {
+        eng: "Written 现, {{word:xian4}} means now, appear in {{word:xian4}}-{{word:zai4}}, {{word:fa1}}-{{word:xian4}}, {{word:chu1}}-{{word:xian4}}; on its own it is line.",
+        rus: "Записанное как 现, {{word:xian4}} значит «сейчас, появляться» в {{word:xian4}}-{{word:zai4}}, {{word:fa1}}-{{word:xian4}}, {{word:chu1}}-{{word:xian4}}; само по себе — «линия».",
+      },
+    },
+  },
 });

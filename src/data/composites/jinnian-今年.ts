@@ -7,8 +7,12 @@ export default composite({
   py: "jīnnián",
   en: "this year",
   ru: "в этом году",
-  hsd: ["{{word:xian4zai4}}-{{word:de}} {{word:shi2}}-{{word:er4}}-ge {{word:yue4}}"],
-  tts: ["现在的十二个月"],
+  hsd: [
+    "{{word:jin1}}-{{word:nian2}}",
+    "{{word:xian4}}-{{word:zai4}}-{{word:de}} {{word:shi2}}-{{word:er4}}-ge {{word:yue4}}",
+  ],
+  tts: ["今年", "现在的十二个月"],
   literal: "the twelve months of now",
-  fit: "plain",
+  fit: "natural",
+  proposed: true,
 });

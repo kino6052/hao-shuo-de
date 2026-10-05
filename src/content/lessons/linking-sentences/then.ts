@@ -17,14 +17,14 @@ export default lessonModule({
       "",
       "**({{word:ru2guo3}} X,) who + {{word:jiu4}} + verb**",
       "",
-      "After {{word:ru2guo3}}, {{word:jiu4}} means \"then\": {{Word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:jiu4}} {{word:deng3}} {{word:ni3}}. On its own, it means \"right away\" or \"just\": {{Word:wo3}} {{word:xian4zai4}} {{word:jiu4}} {{word:qu4}}.",
+      "After {{word:ru2guo3}}, {{word:jiu4}} means \"then\": {{Word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:jiu4}} {{word:deng3}} {{word:ni3}}. On its own, it means \"right away\" or \"just\": {{Word:wo3}} {{word:xian4}}-{{word:zai4}} {{word:jiu4}} {{word:qu4}}.",
     ],
     ru: [
       "**Чтобы сказать «то» или «сразу»**, поставьте {{word:jiu4}} прямо перед глаголом, после того, кто делает.",
       "",
       "**({{word:ru2guo3}} X,) кто + {{word:jiu4}} + глагол**",
       "",
-      "После {{word:ru2guo3}} {{word:jiu4}} значит «то», как в русском «если…, то…»: {{Word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:jiu4}} {{word:deng3}} {{word:ni3}}. Само по себе оно значит «сразу» или «именно, только»: {{Word:wo3}} {{word:xian4zai4}} {{word:jiu4}} {{word:qu4}}.",
+      "После {{word:ru2guo3}} {{word:jiu4}} значит «то», как в русском «если…, то…»: {{Word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:jiu4}} {{word:deng3}} {{word:ni3}}. Само по себе оно значит «сразу» или «именно, только»: {{Word:wo3}} {{word:xian4}}-{{word:zai4}} {{word:jiu4}} {{word:qu4}}.",
     ],
     tldr: {
       en: "{{word:jiu4}} before the verb means then, or right away: {{Word:wo3}} {{word:jiu4}} {{word:qu4}}, I'm going right away.",
@@ -59,7 +59,7 @@ export default lessonModule({
       ru: "Как только поем, сразу пойду.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:xian4zai4}} {{word:jiu4}} {{word:qu4}}.",
+      pinyin: "{{Word:wo3}} {{word:xian4}}-{{word:zai4}} {{word:jiu4}} {{word:qu4}}.",
       hanzi: "我现在就去。",
       en: "I'm going right now.",
       ru: "Я иду прямо сейчас.",
@@ -93,7 +93,7 @@ export default lessonModule({
     {
       en: "I'm going right now.",
       ru: "Я иду прямо сейчас.",
-      answer: "{{Word:wo3}} {{word:xian4zai4}} {{word:jiu4}} {{word:qu4}}.",
+      answer: "{{Word:wo3}} {{word:xian4}}-{{word:zai4}} {{word:jiu4}} {{word:qu4}}.",
       hanzi: "我现在就去。",
     },
     {

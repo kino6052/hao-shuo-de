@@ -7,8 +7,9 @@ export default composite({
   py: "fāxiàn",
   en: "discover, find",
   ru: "обнаружить",
-  hsd: ["{{word:zhao3}}-{{word:dao4}}"],
-  tts: ["找到"],
+  hsd: ["{{word:fa1}}-{{word:xian4}}", "{{word:zhao3}}-{{word:dao4}}"],
+  tts: ["发现", "找到"],
   literal: "look-arrive",
   fit: "natural",
+  proposed: true,
 });

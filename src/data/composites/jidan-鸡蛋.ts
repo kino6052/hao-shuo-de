@@ -7,8 +7,12 @@ export default composite({
   py: "jīdàn",
   en: "egg",
   ru: "яйцо",
-  hsd: ["{{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["飞的动物生的东西"],
+  hsd: [
+    "{{word:ji1}}-{{word:dan4}}",
+    "{{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+  ],
+  tts: ["鸡蛋", "飞的动物生的东西"],
   literal: "what flying animals give birth to",
-  fit: "plain",
+  fit: "natural",
+  proposed: true,
 });

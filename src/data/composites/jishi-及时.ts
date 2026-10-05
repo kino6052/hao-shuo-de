@@ -7,7 +7,7 @@ export default composite({
   py: "jíshí",
   en: "in time",
   ru: "вовремя",
-  hsd: ["{{word:zai4}} {{word:yao4}}-{{word:de}} {{word:shi2jian1}}"],
+  hsd: ["{{word:zai4}} {{word:yao4}}-{{word:de}} {{word:shi2}}-{{word:jian1}}"],
   tts: ["在要的时间"],
   literal: "at the time it's needed",
   fit: "plain",

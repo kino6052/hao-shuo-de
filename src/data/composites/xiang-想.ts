@@ -7,8 +7,8 @@ export default composite({
   py: "xiǎng",
   en: "think; want",
   ru: "думать; хотеть",
-  hsd: ["{{word:jue2de}}", "{{word:yao4}}"],
+  hsd: ["{{word:jue2}}-{{light:de2}}", "{{word:yao4}}"],
   tts: ["觉得", "要"],
   fit: "word",
-  note: "\"Think\" is juéde, \"want\" is yào.",
+  note: "\"Think\" is jué-de, \"want\" is yào.",
 });

@@ -7,9 +7,10 @@ export default composite({
   py: "jīntiān",
   en: "today",
   ru: "сегодня",
-  hsd: ["{{word:xian4zai4}}-{{word:de}} {{word:ri4}}"],
-  tts: ["现在的日"],
+  hsd: ["{{word:jin1}}-{{word:tian1}}", "{{word:xian4}}-{{word:zai4}}-{{word:de}} {{word:ri4}}"],
+  tts: ["今天", "现在的日"],
   literal: "the day of now",
-  fit: "plain",
+  fit: "natural",
   note: "Understood, but not how people say it.",
+  proposed: true,
 });

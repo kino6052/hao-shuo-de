@@ -218,7 +218,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:san1}}-{{word:hao4}} {{word:xiao3}} {{word:dong4}}-{{word:wu4}} {{word:yong4}} {{word:ying4}} {{word:dong1}}-{{light:xi1}} {{word:zuo4}} {{word:jia1}}. {{Word:ta1}} {{word:zuo4}} {{word:le}} {{word:hen3}} {{word:duo1}} {{word:shi2jian1}}.",
+    pinyin: "{{Word:san1}}-{{word:hao4}} {{word:xiao3}} {{word:dong4}}-{{word:wu4}} {{word:yong4}} {{word:ying4}} {{word:dong1}}-{{light:xi1}} {{word:zuo4}} {{word:jia1}}. {{Word:ta1}} {{word:zuo4}} {{word:le}} {{word:hen3}} {{word:duo1}} {{word:shi2}}-{{word:jian1}}.",
     ttsText: "三号小动物用硬东西做家。他做了很多时间。",
     en: ["The third built his of stones (literally: \"hard things\"). It took him a long time."],
     zh: ["第三只小猪用石头盖房子，花了很长时间。"],
@@ -546,7 +546,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}} {{word:jue2de}} {{word:mei2}}-{{word:you3}} {{word:shen2me}} {{word:hao3}} {{word:wan2r}}-{{word:de}}.",
+    pinyin: "{{Word:ta1}} {{word:jue2}}-{{light:de2}} {{word:mei2}}-{{word:you3}} {{word:shen2me}} {{word:hao3}} {{word:wan2r}}-{{word:de}}.",
     ttsText: "他觉得没有什么好玩儿的。",
     en: ["He was bored. (Literally: \"he felt there was nothing fun.\")"],
     zh: ["他觉得很无聊。"],
@@ -610,7 +610,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:dan4}}-{{word:shi4}} {{word:ren2}}-{{word:men}} {{word:jue2de}} {{word:ta1}} {{word:you4}} {{word:bu4}} {{word:shuo1}} {{word:zhen1}}-{{word:de}}, {{word:mei2}}-{{word:you3}} {{word:ren2}} {{word:lai2}}.",
+    pinyin: "{{Word:dan4}}-{{word:shi4}} {{word:ren2}}-{{word:men}} {{word:jue2}}-{{light:de2}} {{word:ta1}} {{word:you4}} {{word:bu4}} {{word:shuo1}} {{word:zhen1}}-{{word:de}}, {{word:mei2}}-{{word:you3}} {{word:ren2}} {{word:lai2}}.",
     ttsText: "但是人们觉得他又不说真的，没有人来。",
     en: ["But people thought he was lying again (literally: \"not saying true things\"), and nobody came."],
     zh: ["可是大家以为他又在说谎，谁也没来。"],
@@ -690,7 +690,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:leng3}}-{{word:de}} {{word:shi2jian1}} {{word:lai2}} {{word:le}}. {{Word:shui3}} {{word:bian4}} {{word:ying4}} {{word:le}}. {{Word:ta1}} {{word:hen3}} {{word:leng3}}, {{word:mei2}}-{{word:you3}} {{word:chi1}}-{{word:de}}.",
+    pinyin: "{{Word:leng3}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:lai2}} {{word:le}}. {{Word:shui3}} {{word:bian4}} {{word:ying4}} {{word:le}}. {{Word:ta1}} {{word:hen3}} {{word:leng3}}, {{word:mei2}}-{{word:you3}} {{word:chi1}}-{{word:de}}.",
     ttsText: "冷的时间来了。水变硬了。他很冷，没有吃的。",
     en: ["Winter came. The water froze (literally: \"became hard\"). He was cold and had nothing to eat."],
     zh: ["冬天来了。水结冰了。它又冷又饿，没有吃的。"],
@@ -698,7 +698,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:bian4}} {{word:re4}}-{{word:de}} {{word:shi2jian1}} {{word:lai2}} {{word:le}}, {{word:ta1}} {{word:ye3}} {{word:bian4}} {{word:da4}} {{word:le}}.",
+    pinyin: "{{Word:bian4}} {{word:re4}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:lai2}} {{word:le}}, {{word:ta1}} {{word:ye3}} {{word:bian4}} {{word:da4}} {{word:le}}.",
     ttsText: "变热的时间来了，他也变大了。",
     en: ["Spring came (literally: \"the time that turns warm\"), and he had grown."],
     zh: ["春天来了，它也长大了。"],
@@ -714,7 +714,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}} {{word:pa4}}, {{word:dan4}}-{{word:shi4}} {{word:ta1}} {{word:qu4}} {{word:le}} {{word:ta1}}-{{word:men}} {{word:pang2bian1}}. {{Word:ta1}} {{word:jue2de}}: {{Word:ta1}}-{{word:men}} {{word:hui4}} {{word:da3}} {{word:wo3}}.",
+    pinyin: "{{Word:ta1}} {{word:pa4}}, {{word:dan4}}-{{word:shi4}} {{word:ta1}} {{word:qu4}} {{word:le}} {{word:ta1}}-{{word:men}} {{word:pang2bian1}}. {{Word:ta1}} {{word:jue2}}-{{light:de2}}: {{Word:ta1}}-{{word:men}} {{word:hui4}} {{word:da3}} {{word:wo3}}.",
     ttsText: "他怕，但是他去了他们旁边。他觉得：他们会打我。",
     en: ["He was scared, but he swam up to them. He thought: \"They will peck me.\""],
     zh: ["它很害怕，可是还是游到它们旁边。它想：\"它们会啄我。\""],
@@ -794,7 +794,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:yue4}}-{{word:de}} {{word:shi2jian1}}, {{word:cong2}} {{word:xiao3}} {{word:yuan2}} {{word:dong1}}-{{light:xi1}} {{word:li3}}-{{word:mian4}} {{word:chu1}}-{{word:lai2}} {{word:le}} {{word:yi1}}-ge {{word:zhi2wu4}}.",
+    pinyin: "{{Word:yue4}}-{{word:de}} {{word:shi2}}-{{word:jian1}}, {{word:cong2}} {{word:xiao3}} {{word:yuan2}} {{word:dong1}}-{{light:xi1}} {{word:li3}}-{{word:mian4}} {{word:chu1}}-{{word:lai2}} {{word:le}} {{word:yi1}}-ge {{word:zhi2wu4}}.",
     ttsText: "月的时间，从小圆东西里面出来了一个植物。",
     en: ["That night, a plant came up out of the beans."],
     zh: ["晚上，豆子发芽了。"],
@@ -826,7 +826,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:zhen1}} {{word:da4}}-{{word:de}} {{word:ren2}} {{word:shui4jiao4}}-{{word:de}} {{word:shi2jian1}}, \"Jiékè\" {{word:na2}} {{word:le}} {{word:ta1}}-{{word:de}} {{word:jin1}}, {{word:kuai4}} {{word:xia4}}-{{word:qu4}} {{word:le}}.",
+    pinyin: "{{Word:zhen1}} {{word:da4}}-{{word:de}} {{word:ren2}} {{word:shui4jiao4}}-{{word:de}} {{word:shi2}}-{{word:jian1}}, \"Jiékè\" {{word:na2}} {{word:le}} {{word:ta1}}-{{word:de}} {{word:jin1}}, {{word:kuai4}} {{word:xia4}}-{{word:qu4}} {{word:le}}.",
     ttsText: "真大的人睡觉的时间，杰克拿了他的金，快下去了。",
     en: ["While the giant slept, Jack took his gold and hurried down."],
     zh: ["巨人睡觉的时候，杰克拿了他的金子，赶紧爬了下去。"],
@@ -882,7 +882,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:zui4}} {{word:da4}}-{{word:de}} {{word:ren2}} {{word:hen3}} {{word:ai4}} {{word:yi1fu}}. {{Word:ta1}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:yi1fu}}, {{word:dan4}}-{{word:shi4}} {{word:ta1}} {{word:shen2me}} {{word:shi2jian1}} {{word:dou1}} {{word:yao4}} {{word:tou2}}-{{word:yi1}}-{{word:ci4}} {{word:kan4}}-{{word:dao4}}-{{word:de}} {{word:yi1fu}}.",
+    pinyin: "{{Word:zui4}} {{word:da4}}-{{word:de}} {{word:ren2}} {{word:hen3}} {{word:ai4}} {{word:yi1fu}}. {{Word:ta1}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:yi1fu}}, {{word:dan4}}-{{word:shi4}} {{word:ta1}} {{word:shen2me}} {{word:shi2}}-{{word:jian1}} {{word:dou1}} {{word:yao4}} {{word:tou2}}-{{word:yi1}}-{{word:ci4}} {{word:kan4}}-{{word:dao4}}-{{word:de}} {{word:yi1fu}}.",
     ttsText: "最大的人很爱衣服。他有很多衣服，但是他什么时间都要头一次看到的衣服。",
     en: ["The emperor (literally: \"the biggest person\") loved clothes. He had lots of them, but he always wanted new ones (literally: \"ones seen for the first time\")."],
     zh: ["皇帝非常喜欢衣服。他有很多衣服，可是总想要新的。"],
@@ -994,7 +994,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:re4}}-{{word:de}} {{word:shi2jian1}}, {{word:yi1}}-ge {{word:hei1}}-{{word:se4}}-{{word:de}} {{word:xiao3}} {{word:dong4}}-{{word:wu4}} {{word:shen2me}} {{word:shi2jian1}} {{word:dou1}} {{word:zai4}} {{word:zuo4}}.",
+    pinyin: "{{Word:re4}}-{{word:de}} {{word:shi2}}-{{word:jian1}}, {{word:yi1}}-ge {{word:hei1}}-{{word:se4}}-{{word:de}} {{word:xiao3}} {{word:dong4}}-{{word:wu4}} {{word:shen2me}} {{word:shi2}}-{{word:jian1}} {{word:dou1}} {{word:zai4}} {{word:zuo4}}.",
     ttsText: "热的时间，一个黑色的小动物什么时间都在做。",
     en: ["In summer (literally: \"the hot time\"), an ant (literally: \"a little black animal\") was always working."],
     zh: ["夏天，一只小蚂蚁一天到晚都在干活。"],
@@ -1026,7 +1026,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:hei1}}-{{word:se4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:shuo1}}: {{Word:leng3}}-{{word:de}} {{word:shi2jian1}} {{word:hui4}} {{word:lai2}}. {{Word:wo3}} {{word:yao4}} {{word:you3}} {{word:chi1}}-{{word:de}}.",
+    pinyin: "{{Word:hei1}}-{{word:se4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:shuo1}}: {{Word:leng3}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:hui4}} {{word:lai2}}. {{Word:wo3}} {{word:yao4}} {{word:you3}} {{word:chi1}}-{{word:de}}.",
     ttsText: "黑色的动物说：冷的时间会来。我要有吃的。",
     en: ["The ant said: \"Winter will come. I need to have food.\""],
     zh: ["蚂蚁说：\"冬天会来的。我要准备吃的。\""],
@@ -1034,7 +1034,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:lan2}}-{{word:se4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:xiao4}}: {{Word:leng3}}-{{word:de}} {{word:shi2jian1}} {{word:hen3}} {{word:yuan3}}!",
+    pinyin: "{{Word:lan2}}-{{word:se4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:xiao4}}: {{Word:leng3}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:hen3}} {{word:yuan3}}!",
     ttsText: "蓝色的动物笑：冷的时间很远！",
     en: ["The grasshopper laughed: \"Winter is far away!\""],
     zh: ["蚱蜢笑了：\"冬天还早着呢！\""],
@@ -1042,7 +1042,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:hou4}}-{{word:lai2}}, {{word:leng3}}-{{word:de}} {{word:shi2jian1}} {{word:lai2}} {{word:le}}. {{Word:di4}}-{{word:shang4}} {{word:dou1}} {{word:shi4}} {{word:bai2}}-{{word:se4}}-{{word:de}}.",
+    pinyin: "{{Word:hou4}}-{{word:lai2}}, {{word:leng3}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:lai2}} {{word:le}}. {{Word:di4}}-{{word:shang4}} {{word:dou1}} {{word:shi4}} {{word:bai2}}-{{word:se4}}-{{word:de}}.",
     ttsText: "后来，冷的时间来了。地上都是白色的。",
     en: ["Then winter came. The ground was all white."],
     zh: ["后来，冬天来了。地上都是白的。"],
@@ -1066,7 +1066,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:hei1}}-{{word:se4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:shuo1}}: {{Word:re4}}-{{word:de}} {{word:shi2jian1}}, {{word:ni3}} {{word:zai4}} {{word:zuo4}} {{word:shen2me}}?",
+    pinyin: "{{Word:hei1}}-{{word:se4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:shuo1}}: {{Word:re4}}-{{word:de}} {{word:shi2}}-{{word:jian1}}, {{word:ni3}} {{word:zai4}} {{word:zuo4}} {{word:shen2me}}?",
     ttsText: "黑色的动物说：热的时间，你在做什么？",
     en: ["The ant said: \"What were you doing in the summer?\""],
     zh: ["蚂蚁说：\"夏天的时候你在干什么？\""],
@@ -1082,7 +1082,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:hei1}}-{{word:se4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:gei3}} {{word:le}} {{word:ta1}} {{word:yi1}}-{{word:dian3}} {{word:chi1}}-{{word:de}}, {{word:shuo1}}: {{Word:xia4}} {{word:yi1}}-ge {{word:re4}}-{{word:de}} {{word:shi2jian1}}, {{word:ni3}} {{word:ye3}} {{word:yao4}} {{word:zuo4}}!",
+    pinyin: "{{Word:hei1}}-{{word:se4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:gei3}} {{word:le}} {{word:ta1}} {{word:yi1}}-{{word:dian3}} {{word:chi1}}-{{word:de}}, {{word:shuo1}}: {{Word:xia4}} {{word:yi1}}-ge {{word:re4}}-{{word:de}} {{word:shi2}}-{{word:jian1}}, {{word:ni3}} {{word:ye3}} {{word:yao4}} {{word:zuo4}}!",
     ttsText: "黑色的动物给了他一点吃的，说：下一个热的时间，你也要做！",
     en: ["The ant gave it a little food and said: \"Next summer, you work too!\""],
     zh: ["蚂蚁给了它一点吃的，说：\"明年夏天，你也要干活！\""],

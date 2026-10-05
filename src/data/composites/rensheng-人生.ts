@@ -7,7 +7,7 @@ export default composite({
   py: "rénshēng",
   en: "life (one's life)",
   ru: "жизнь (человека)",
-  hsd: ["{{word:ren2}}-{{word:sheng1}}", "{{word:ren2}} {{word:huo2}}-{{word:de}} {{word:shi2jian1}}"],
+  hsd: ["{{word:ren2}}-{{word:sheng1}}", "{{word:ren2}} {{word:huo2}}-{{word:de}} {{word:shi2}}-{{word:jian1}}"],
   tts: ["人生", "人活的时间"],
   literal: "a person's life / the time a person lives",
   fit: "natural",

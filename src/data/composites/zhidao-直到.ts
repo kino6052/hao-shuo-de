@@ -7,7 +7,7 @@ export default composite({
   py: "zhídào",
   en: "until",
   ru: "до тех пор пока",
-  hsd: ["{{word:dao4}} X-{{word:de}} {{word:shi2jian1}}"],
+  hsd: ["{{word:dao4}} X-{{word:de}} {{word:shi2}}-{{word:jian1}}"],
   tts: ["到X的时间"],
   literal: "up to the time of X",
   fit: "plain",

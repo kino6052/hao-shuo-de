@@ -15,4 +15,16 @@ export default word("jiao4", {
     rus: "Называть(ся), а также «велеть кому-то». Без него не спросить, как кого зовут.",
   },
   maps: "nimi, mu",
+  senses: {
+    compare: {
+      hanzi: "较",
+      eng: "compare",
+      rus: "сравнивать",
+      compounds: ["bi3 jiao4"],
+      why: {
+        eng: "Written 较, {{word:jiao4}} means compare in {{word:bi3}}-{{word:jiao4}}; on its own it is call.",
+        rus: "Записанное как 较, {{word:jiao4}} значит «сравнивать» в {{word:bi3}}-{{word:jiao4}}; само по себе — «звать».",
+      },
+    },
+  },
 });

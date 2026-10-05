@@ -11,9 +11,10 @@ export default lessonModule({
       ru: "перед глаголом: как раз сейчас",
     },
     {
-      word: "xian4zai4",
-      en: "now",
-      ru: "сейчас",
+      word: "xian4",
+      sense: "now",
+      en: "now (in {{word:xian4}}-{{word:zai4}})",
+      ru: "сейчас (в {{word:xian4}}-{{word:zai4}})",
     },
   ],
   prose: {
@@ -67,7 +68,7 @@ export default lessonModule({
       ru: "Почему ты спишь?",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:xian4zai4}} {{word:zai4}} {{word:shui4jiao4}}.",
+      pinyin: "{{Word:ta1}} {{word:xian4}}-{{word:zai4}} {{word:zai4}} {{word:shui4jiao4}}.",
       hanzi: "他现在在睡觉。",
       en: "He's sleeping now.",
       ru: "Он сейчас спит.",
@@ -89,7 +90,7 @@ export default lessonModule({
     {
       en: "Now I'm eating.",
       ru: "Сейчас я ем.",
-      answer: "{{Word:xian4zai4}}, {{word:wo3}} {{word:zai4}} {{word:chi1}}.",
+      answer: "{{Word:xian4}}-{{word:zai4}}, {{word:wo3}} {{word:zai4}} {{word:chi1}}.",
       hanzi: "现在，我在吃。",
     },
     {

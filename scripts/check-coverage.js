@@ -41,6 +41,7 @@ import dictionaryData from '../src/data/dictionary.ts';
 import compositesData from '../src/data/composites.ts';
 import coverage from '../src/data/coverage.ts';
 import { wordRefIds, soleWordRef } from '../src/lib/word-refs.js';
+import { refSenses, senseKey } from '../src/lib/senses.js';
 
 const dictionary = dictionaryData.words;
 const composites = compositesData.entries;
@@ -62,8 +63,9 @@ for (const [i, id] of LESSON_IDS.entries()) {
   const entries = await importLessonFile(id, 'index.ts');
   modules.set(id, new Set(entries.map((e) => e.module)));
   for (const e of entries) {
-    const word = e.type === 'vocab' && !e.sense && soleWordRef(e.term); // a sense card isn't the word's home
-    if (word) home.set(word, i);
+    // keyed by word and sense (src/lib/senses.js): shí-jiān needs shí's "time" card
+    const word = e.type === 'vocab' && soleWordRef(e.term);
+    if (word && !home.has(senseKey(word, e.sense))) home.set(senseKey(word, e.sense), i);
     const text = e.type === 'example' ? e.pinyin : e.type === 'answer' ? [].concat(e.en)[0] : null;
     if (text) sentences.push({ where: `${id}/${e.module}`, words: new Set(wordsOf(text)) });
   }
@@ -73,8 +75,9 @@ const shown = (form, where) =>
   sentences.some((s) => (!where || s.where === where) && wordsOf(form).every((w) => s.words.has(w)));
 // -> whether every word of `form` is introduced by the end of lesson `upTo` (a position)
 const sayableBy = (form, upTo) => {
-  const words = wordsOf(form);
-  return words.length > 0 && words.every((w) => home.has(w) && home.get(w) <= upTo);
+  const keys = refSenses(form, dictionary).map((u) => senseKey(u.id, u.sense));
+  if (wordsOf(form).includes('ge4') && !keys.includes('ge4')) keys.push('ge4');
+  return keys.length > 0 && keys.every((k) => home.has(k) && home.get(k) <= upTo);
 };
 
 const errors = [];

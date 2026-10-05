@@ -49,9 +49,9 @@ export const LESSON_BLURBS: Record<string, LangText> = {
     ru: ["как сказать, что что-то случилось, происходит прямо сейчас, случится или уже бывало раньше, как поставить время в начало предложения и как спросить, что случилось."],
   },
   "around-an-action": {
-    en: ["\"when X\" with `X-de shíjiān`, finishing an action, what comes after it, starting, doing it again, how many times, and doing something for a moment."],
+    en: ["\"when X\" with `X-de shí-jiān`, finishing an action, what comes after it, starting, doing it again, how many times, and doing something for a moment."],
     zh: [],
-    ru: ["«когда X» с помощью `X-de shíjiān`, как закончить действие, что идёт после него, как начать, сделать снова, сколько раз и как сделать что-то на минутку."],
+    ru: ["«когда X» с помощью `X-de shí-jiān`, как закончить действие, что идёт после него, как начать, сделать снова, сколько раз и как сделать что-то на минутку."],
   },
   "where-it-is": {
     en: ["saying where something is: inside, on, under, in front, behind, beside, left, and right."],

@@ -306,8 +306,8 @@ export default coverageGroup({
       key: "when",
       eng: "When it happens",
       rus: "Когда это происходит",
-      words: ["shi2jian1"],
-      forms: ["X-{{word:de}} {{word:shi2jian1}}, Y"],
+      words: ["shi2", "jian1"],
+      forms: ["X-{{word:de}} {{word:shi2}}-{{word:jian1}}, Y"],
       taught: "around-an-action/when",
     },
     {

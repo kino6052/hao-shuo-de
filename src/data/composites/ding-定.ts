@@ -7,9 +7,9 @@ export default composite({
   py: "dìng",
   en: "settle, fix",
   ru: "установить, решить",
-  hsd: ["{{word:bu4}} {{word:bian4}} {{word:le}}"],
-  tts: ["不变了"],
+  hsd: ["{{word:ding4}}", "{{word:bu4}} {{word:bian4}} {{word:le}}"],
+  tts: ["定", "不变了"],
   literal: "won't change anymore",
-  fit: "plain",
+  fit: "word",
   proposed: true,
 });

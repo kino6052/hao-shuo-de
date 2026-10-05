@@ -46,7 +46,7 @@ export default lessonModule({
       ru: "Она добралась до того места.",
     },
     {
-      pinyin: "{{Word:shen2me}} {{word:shi2jian1}} {{word:ni3}} {{word:dao4}}?",
+      pinyin: "{{Word:shen2me}} {{word:shi2}}-{{word:jian1}} {{word:ni3}} {{word:dao4}}?",
       hanzi: "什么时间你到？",
       en: "When do you arrive?",
       ru: "Когда ты приедешь?",

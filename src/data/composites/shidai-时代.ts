@@ -7,7 +7,7 @@ export default composite({
   py: "shídài",
   en: "era",
   ru: "эпоха",
-  hsd: ["X-{{word:de}} {{word:shi2jian1}}"],
+  hsd: ["X-{{word:de}} {{word:shi2}}-{{word:jian1}}"],
   tts: ["X的时间"],
   literal: "the time of X",
   fit: "plain",

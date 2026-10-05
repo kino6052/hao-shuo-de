@@ -7,7 +7,7 @@ export default composite({
   py: "shūfu",
   en: "comfortable",
   ru: "удобный",
-  hsd: ["{{word:jue2de}} {{word:hao3}}"],
+  hsd: ["{{word:jue2}}-{{light:de2}} {{word:hao3}}"],
   tts: ["觉得好"],
   literal: "feel good",
   fit: "plain",

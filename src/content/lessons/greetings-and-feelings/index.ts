@@ -1,7 +1,7 @@
 // greetings-and-feelings ("Greetings and Feelings"): its modules, in reading order.
 // See src/lib/lesson.ts.
 //
-// Rewritten in Phase 2 (BOOK_PLAN.md): hello (nǐ hǎo), thank you (xiè-xie, D43), names (jiào), orders (a bare verb, bù yào), feelings (juéde, pà, xiào, D41), and hearing sounds (shēngyīn).
+// Rewritten in Phase 2 (BOOK_PLAN.md): hello (nǐ hǎo), thank you (xiè-xie, D43), names (jiào), orders (a bare verb, bù yào), feelings (jué-de, pà, xiào, D41), and hearing sounds (shēngyīn).
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- greetings-and-feelings).
 import { lesson } from "../../../lib/lesson.ts";

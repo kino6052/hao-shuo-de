@@ -23,8 +23,8 @@ export default lessonModule({
       "**предложение, {{word:dan4}}-{{word:shi4}} + предложение**",
     ],
     tldr: {
-      en: "{{word:dan4}}-{{word:shi4}} means but: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4}}-{{word:shi4}} {{word:wei4dao4}} {{word:bu4}} {{word:hao3}}.",
-      ru: "{{word:dan4}}-{{word:shi4}} значит «но»: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4}}-{{word:shi4}} {{word:wei4dao4}} {{word:bu4}} {{word:hao3}}.",
+      en: "{{word:dan4}}-{{word:shi4}} means but: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4}}-{{word:shi4}} {{word:wei4}}-{{word:dao4}} {{word:bu4}} {{word:hao3}}.",
+      ru: "{{word:dan4}}-{{word:shi4}} значит «но»: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4}}-{{word:shi4}} {{word:wei4}}-{{word:dao4}} {{word:bu4}} {{word:hao3}}.",
     },
     necessity: {
       en: "Now you can say two things that pull against each other.",
@@ -32,12 +32,12 @@ export default lessonModule({
     },
   },
   info: {
-    en: "…, {{word:dan4}}-{{word:shi4}} …, but: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4}}-{{word:shi4}} {{word:wei4dao4}} {{word:bu4}} {{word:hao3}}. (It looks good, but it doesn't taste good.)",
-    ru: "…, {{word:dan4}}-{{word:shi4}} … — но: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4}}-{{word:shi4}} {{word:wei4dao4}} {{word:bu4}} {{word:hao3}}. (Выглядит хорошо, но невкусно.)",
+    en: "…, {{word:dan4}}-{{word:shi4}} …, but: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4}}-{{word:shi4}} {{word:wei4}}-{{word:dao4}} {{word:bu4}} {{word:hao3}}. (It looks good, but it doesn't taste good.)",
+    ru: "…, {{word:dan4}}-{{word:shi4}} … — но: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4}}-{{word:shi4}} {{word:wei4}}-{{word:dao4}} {{word:bu4}} {{word:hao3}}. (Выглядит хорошо, но невкусно.)",
   },
   examples: [
     {
-      pinyin: "{{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4}}-{{word:shi4}} {{word:wei4dao4}} {{word:bu4}} {{word:hao3}}.",
+      pinyin: "{{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4}}-{{word:shi4}} {{word:wei4}}-{{word:dao4}} {{word:bu4}} {{word:hao3}}.",
       hanzi: "这个看起来很好，但是味道不好。",
       en: "It looks good, but it doesn't taste good.",
       ru: "Выглядит хорошо, но невкусно.",
@@ -55,7 +55,7 @@ export default lessonModule({
       ru: "Он маленький, но очень сильный.",
     },
     {
-      pinyin: "{{Word:wei4dao4}} {{word:hen3}} {{word:hao3}}, {{word:dan4}}-{{word:shi4}} {{word:hen3}} {{word:re4}}.",
+      pinyin: "{{Word:wei4}}-{{word:dao4}} {{word:hen3}} {{word:hao3}}, {{word:dan4}}-{{word:shi4}} {{word:hen3}} {{word:re4}}.",
       hanzi: "味道很好，但是很热。",
       en: "It tastes good, but it's very hot.",
       ru: "Вкусно, но очень горячо.",
@@ -95,7 +95,7 @@ export default lessonModule({
     {
       en: "This one is small, but it tastes good.",
       ru: "Это маленькое, но вкусное.",
-      answer: "{{Word:zhe4}}-ge {{word:hen3}} {{word:xiao3}}, {{word:dan4}}-{{word:shi4}} {{word:wei4dao4}} {{word:hen3}} {{word:hao3}}.",
+      answer: "{{Word:zhe4}}-ge {{word:hen3}} {{word:xiao3}}, {{word:dan4}}-{{word:shi4}} {{word:wei4}}-{{word:dao4}} {{word:hen3}} {{word:hao3}}.",
       hanzi: "这个很小，但是味道很好。",
     },
     {

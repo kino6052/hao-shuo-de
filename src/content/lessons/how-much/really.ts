@@ -58,7 +58,7 @@ export default lessonModule({
       ru: "Ты правда быстрый!",
     },
     {
-      pinyin: "{{Word:zhe4}}-ge {{word:shui3}}-{{word:de}} {{word:wei4dao4}} {{word:zhen1}} {{word:hao3}}!",
+      pinyin: "{{Word:zhe4}}-ge {{word:shui3}}-{{word:de}} {{word:wei4}}-{{word:dao4}} {{word:zhen1}} {{word:hao3}}!",
       hanzi: "这个水的味道真好！",
       en: "This water tastes really good!",
       ru: "У этой воды правда хороший вкус!",

@@ -80,7 +80,7 @@ export default lessonModule({
       ru: "Это чего-нибудь стоит?",
     },
     {
-      pinyin: "{{Word:wei4dao4}} {{word:hao3}} {{word:ma}}?",
+      pinyin: "{{Word:wei4}}-{{word:dao4}} {{word:hao3}} {{word:ma}}?",
       hanzi: "味道好吗？",
       en: "Does it taste good?",
       ru: "Вкусно?",

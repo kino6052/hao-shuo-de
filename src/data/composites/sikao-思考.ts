@@ -7,7 +7,7 @@ export default composite({
   py: "sīkǎo",
   en: "think, ponder",
   ru: "размышлять",
-  hsd: ["{{word:jue2de}}"],
+  hsd: ["{{word:jue2}}-{{light:de2}}"],
   tts: ["觉得"],
   fit: "word",
   proposed: true,
