@@ -333,5 +333,9 @@ export default categories([
       },
     ],
   },
-  { key: "intensifier", title: { eng: "Intensity", rus: "Степень", zh: "程度" }, wordIds: ["hen3", "zui4"] },
+  {
+    key: "intensifier",
+    title: { eng: "Intensity", rus: "Степень", zh: "程度" },
+    wordIds: ["hen3", "zui4"],
+  },
 ]);
