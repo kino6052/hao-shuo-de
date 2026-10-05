@@ -1,7 +1,7 @@
 // See src/lib/chapter-content.js for the schema this is transformed by.
 // GENERATED from a plain-pinyin spec, but safe to edit by hand: every
 // {{word:..}} must be a dictionary word (scripts/check-book.js checks).
-// Things with no word are described the way src/data/composites.json
+// Things with no word are described the way src/data/composites/
 // does it (a bird is fēi-de dòngwù, a bed is shuìjiào-de dìfāng).
 import type { Entry } from "../lib/chapter-entry-types.ts";
 

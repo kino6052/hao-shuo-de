@@ -4,21 +4,21 @@ import { categories } from "../../lib/data-maps.ts";
 export default categories([
   {
     key: "substantives",
-    title: { eng: "Things", rus: "", zh: "" },
+    title: { eng: "Things", rus: "Вещи", zh: "事物" },
     children: [
       {
         key: "pronouns-interrogatives",
-        title: { eng: "Pointers", rus: "", zh: "" },
+        title: { eng: "Pointers", rus: "Указатели", zh: "指代" },
         wordIds: ["wo3", "ni3", "ta1", "shen2me", "men", "na4", "zhe4"],
       },
       {
         key: "places-as-things",
-        title: { eng: "Places", rus: "", zh: "" },
+        title: { eng: "Places", rus: "Места", zh: "地方" },
         wordIds: ["jia1", "guo2", "di4fang1"],
       },
       {
         key: "things-of-nature",
-        title: { eng: "Things of Nature", rus: "", zh: "" },
+        title: { eng: "Things of Nature", rus: "Природа", zh: "自然之物" },
         wordIds: ["ri4", "yue4", "zhi2wu4", "huo3", "qi4", "dong4wu4"],
       },
       {
@@ -60,7 +60,7 @@ export default categories([
       },
       {
         key: "abstract-substantives",
-        title: { eng: "Abstract Words", rus: "", zh: "" },
+        title: { eng: "Abstract Words", rus: "Абстрактные слова", zh: "抽象词" },
         wordIds: ["ci2", "li4", "sheng1yin1", "jia4zhi2", "fang1fa3"],
       },
       {
@@ -72,12 +72,12 @@ export default categories([
   },
   {
     key: "determiners",
-    title: { eng: "Sameness & Difference", rus: "", zh: "" },
+    title: { eng: "Sameness & Difference", rus: "Сходство и различие", zh: "异同" },
     wordIds: ["yi1yang4", "bi3", "bie2de"],
   },
   {
     key: "quantifiers",
-    title: { eng: "Quantity", rus: "", zh: "" },
+    title: { eng: "Quantity", rus: "Количество", zh: "数量" },
     children: [
       {
         key: "classifier",
@@ -86,7 +86,7 @@ export default categories([
       },
       {
         key: "numbers-ordinals",
-        title: { eng: "Numbers", rus: "", zh: "" },
+        title: { eng: "Numbers", rus: "Числа", zh: "数字" },
         wordIds: [
           "yi1",
           "liang3",
@@ -111,11 +111,11 @@ export default categories([
   },
   {
     key: "descriptors",
-    title: { eng: "Qualities", rus: "", zh: "" },
+    title: { eng: "Qualities", rus: "Качества", zh: "性质" },
     children: [
       {
         key: "evaluators",
-        title: { eng: "Good / bad", rus: "", zh: "" },
+        title: { eng: "Good / bad", rus: "Хорошее и плохое", zh: "好与坏" },
         wordIds: ["hao3", "huai4", "nan2"],
       },
       {
@@ -147,7 +147,7 @@ export default categories([
   },
   {
     key: "mental-predicates",
-    title: { eng: "Mind", rus: "", zh: "" },
+    title: { eng: "Mind", rus: "Разум", zh: "心智" },
     children: [
       {
         key: "volition-affect",
@@ -173,9 +173,9 @@ export default categories([
   },
   {
     key: "actions",
-    title: { eng: "Actions", rus: "", zh: "" },
+    title: { eng: "Actions", rus: "Действия", zh: "动作" },
     children: [
-      { key: "using", title: { eng: "Usage", rus: "", zh: "" }, wordIds: ["yong4"] },
+      { key: "using", title: { eng: "Usage", rus: "Использование", zh: "使用" }, wordIds: ["yong4"] },
       {
         key: "daily-activities",
         title: { eng: "Daily Activities", rus: "Повседневные занятия", zh: "日常活动" },
@@ -222,7 +222,7 @@ export default categories([
       },
       {
         key: "manipulation-contact",
-        title: { eng: "Interacting with things", rus: "", zh: "" },
+        title: { eng: "Interacting with things", rus: "Действия с вещами", zh: "与物互动" },
         wordIds: ["da3", "gei3", "mo1", "zhao3", "fang4", "na2", "kai1", "guan1", "bang1", "mai3"],
       },
     ],
@@ -268,7 +268,7 @@ export default categories([
           rus: "Существительные места и предлоги",
           zh: "地点名词与介词",
         },
-        wordIds: ["cong2", "dui4", "di4fang1", "di4", "lu4"],
+        wordIds: ["cong2", "dui4", "di4", "lu4"],
       },
       {
         key: "relative-position",
@@ -318,12 +318,12 @@ export default categories([
       },
       {
         key: "interrogatives",
-        title: { eng: "Question words", rus: "", zh: "" },
+        title: { eng: "Question words", rus: "Вопросительные слова", zh: "疑问词" },
         wordIds: ["wei4shen2me", "zen3me", "na3li3"],
       },
       {
         key: "modality",
-        title: { eng: "Ability & Possibility", rus: "", zh: "" },
+        title: { eng: "Ability & Possibility", rus: "Способность и возможность", zh: "能力与可能" },
         wordIds: ["neng2", "hui4", "ke3neng2"],
       },
       {
@@ -333,5 +333,5 @@ export default categories([
       },
     ],
   },
-  { key: "intensifier", title: { eng: "Intensity", rus: "", zh: "" }, wordIds: ["hen3", "zui4"] },
+  { key: "intensifier", title: { eng: "Intensity", rus: "Степень", zh: "程度" }, wordIds: ["hen3", "zui4"] },
 ]);

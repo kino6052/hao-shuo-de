@@ -1,5 +1,5 @@
 // Reads a Hao-shuo-de form from the composite dictionary
-// (src/data/composites.json) back into a Word Builder tree (see
+// (src/data/composites/) back into a Word Builder tree (see
 // src/lib/word-builder.js), so a reader can open a dictionary word in the
 // Word Builder and see the questions it answers.
 //

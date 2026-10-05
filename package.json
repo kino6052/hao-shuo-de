@@ -9,6 +9,8 @@
     "preview": "vite preview",
     "test": "bun test",
     "typecheck": "tsc --noEmit",
+    "data": "node scripts/build-data.js",
+    "check-data": "node scripts/check-data.js",
     "word-usage": "node scripts/generate-word-usage.js",
     "grammar-overview": "node scripts/generate-grammar-overview.js",
     "check": "node scripts/check-all.js",

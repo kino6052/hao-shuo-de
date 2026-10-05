@@ -89,7 +89,7 @@ function foldDiacritics(str) {
 
 const WORD_REF_RE = /\{\{(word|Word):([a-z0-9_-]+)\}\}/g;
 
-// dictionary.json definitions sometimes carry unresolved {{word:id}} /
+// dictionary definitions sometimes carry unresolved {{word:id}} /
 // {{Word:id}} cross-reference markup (resolved to real pinyin only when
 // content is compiled through scripts/word-refs.js at build time -- a
 // Node-only pipeline dictionary.json's own entries don't go through). This

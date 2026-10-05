@@ -11,7 +11,7 @@ import { t } from "../lib/i18n.js";
 import { dictionaryBuilds, wordBuilderUrl, openInApp } from "../lib/builder-entries.js";
 import styles from "./CompositeDictionarySection.module.css";
 
-// The composite dictionary (src/data/composites.json): for a common word in
+// The composite dictionary (src/data/composites/): for a common word in
 // the reader's language, what Hao-shuo-de says. The file keeps frequency
 // order (its phases go by rank); here the entries are in alphabetical order
 // of the reader's word, under letter headings, like a paper dictionary. The

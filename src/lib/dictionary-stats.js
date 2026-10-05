@@ -1,4 +1,4 @@
-// Pure, environment-agnostic helpers over dictionary.json's shape -- no
+// Pure, environment-agnostic helpers over the dictionary's shape (src/data/dictionary.ts) -- no
 // Node/fs APIs here, so this module is safe to import from both browser
 // code (src/lib/i18n.js) and Node build scripts (scripts/word-refs.js).
 // Keeping the counting logic in one place matters because the dictionary

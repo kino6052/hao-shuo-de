@@ -203,7 +203,7 @@ export function pinyinSystem(dict) {
   };
 }
 
-// Word references ({{word:shui3}}), the way src/data/composites.json writes
+// Word references ({{word:shui3}}), the way src/data/composites/ writes
 // its forms, joined like pinyin.
 export function refSystem() {
   return {
