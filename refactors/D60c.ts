@@ -31,6 +31,7 @@ export default [
   // -- shí: 时 (time), 食 (food) ---------------------------------------------------------
   sense("shi2", "time", "时", "time", "время", ten, ["shi2 jian1", "shi2 hou4", "xiao3 shi2", "you3 shi2"]),
   sense("shi2", "food", "食", "food", "еда", ten, ["shi2 wu4"]),
+  sense("hou4", "season", "候", "time, season", "время, сезон", { eng: "after, behind", rus: "после, позади" }, ["shi2 hou4"]),
   {
     op: "split", id: "shi2jian1", into: ["shi2", "jian1"], senses: { shi2: "time" },
     cards: { shi2: { en: "time (in {{word:shi2}}-{{word:jian1}})", ru: "время (в {{word:shi2}}-{{word:jian1}})" } },
@@ -95,6 +96,11 @@ export default [
 
   // ài-hǎo was Hao-shuo-de's guess; Mandarin says ài-hào (爱好).
   { op: "composite", zh: "爱好", set: { hsd: ["{{word:ai4}}-{{word:hao4}}", "{{word:ai4}} {{word:zuo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"], tts: ["爱好", "爱做的东西"], proposed: true } },
+
+  // the Word Builder: xiànzài and juéde are gone
+  { op: "text", file: "src/lib/word-builder.js", from: '"dian3", "zhong3", "xian4zai4",', to: '"dian3", "zhong3",' },
+  { op: "text", file: "src/lib/word-builder.js", from: 'const ROLE_OVERRIDES = { jue2de: "verb" };', to: "const ROLE_OVERRIDES = {};" },
+  { op: "text", file: "src/lib/word-builder.test.js", from: 'expect(roleOf(dict, "jue2de")).toBe("verb");', to: 'expect(roleOf(dict, "jue2")).toBe("verb");' },
 
   { op: "compounds" },
   // shíhou: hòu is light
