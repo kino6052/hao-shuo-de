@@ -8,8 +8,9 @@ export default composite({
   en: "society",
   ru: "общество",
   pos: "noun",
-  hsd: ["{{word:da4}} {{word:qun2}}"],
-  tts: ["大群"],
-  literal: "the big group",
+  hsd: ["{{word:zai4}}-{{word:yi1}}-{{word:qi3}}-{{word:de}} {{word:hen3}}-{{word:duo1}} {{word:ren2}}"],
+  tts: ["在一起的很多人"],
+  literal: "many people together",
   fit: "plain",
+  proposed: true,
 });

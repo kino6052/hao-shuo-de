@@ -92,10 +92,10 @@ export default lessonModule({
   ],
   exercises: [
     {
-      en: "Give me the box.",
-      ru: "Дай мне коробку.",
-      answer: "{{Word:gei3}} {{word:wo3}} {{word:he2zi}}.",
-      hanzi: "给我盒子。",
+      en: "Give me the bag.",
+      ru: "Дай мне сумку.",
+      answer: "{{Word:gei3}} {{word:wo3}} {{word:bao1}}.",
+      hanzi: "给我包。",
     },
   ],
   faq: [

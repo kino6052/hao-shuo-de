@@ -8,9 +8,9 @@ export default composite({
   en: "join",
   ru: "вступать, присоединяться",
   pos: "verb",
-  hsd: ["{{word:jin4}} X-{{word:de}} {{word:qun2}}"],
-  tts: ["进X的群"],
-  literal: "go into X's group",
+  hsd: ["{{word:jin4}}-{{word:dao4}} X-{{word:li3}}"],
+  tts: ["进到X里"],
+  literal: "go into X",
   fit: "plain",
   proposed: true,
 });

@@ -8,8 +8,9 @@ export default composite({
   en: "sentence",
   ru: "предложение",
   pos: "noun",
-  hsd: ["{{word:ci2}}-{{word:de}} {{word:qun2}}"],
-  tts: ["词的群"],
-  literal: "a group of words",
+  hsd: ["{{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}-{{word:de}} {{word:ci2}}"],
+  tts: ["放在一起的词"],
+  literal: "words put together",
   fit: "plain",
+  proposed: true,
 });

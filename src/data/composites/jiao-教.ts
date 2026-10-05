@@ -8,8 +8,10 @@ export default composite({
   en: "teach",
   ru: "учить (кого-то)",
   pos: "verb",
-  hsd: ["{{word:jiao1}}"],
-  tts: ["教"],
-  fit: "word",
+  hsd: ["{{word:bang1}} X {{word:xue2}}"],
+  tts: ["帮X学"],
+  fit: "plain",
   note: "Lesson {{lesson:everyday-patterns}}.",
+  literal: "help X learn",
+  proposed: true,
 });

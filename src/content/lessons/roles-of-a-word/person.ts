@@ -6,14 +6,9 @@ export default lessonModule({
   id: "person",
   words: [
     {
-      word: "er2",
-      en: "child, son; {{word:nv3}}-{{word:er2}}: daughter",
-      ru: "ребёнок, сын; {{word:nv3}}-{{word:er2}} — дочь",
-    },
-    {
       word: "zi",
-      en: "a noun ending: {{word:er2}}-{{light:zi}}, son",
-      ru: "окончание существительного: {{word:er2}}-{{light:zi}} — сын",
+      en: "a noun ending: {{word:nan2}}-{{word:hai2}}-{{light:zi}}, son",
+      ru: "окончание существительного: {{word:nan2}}-{{word:hai2}}-{{light:zi}} — сын",
     },
     {
       word: "hai2",
@@ -27,13 +22,13 @@ export default lessonModule({
       "**To name the one who does something**, put -{{word:de}} {{word:ren2}} after the verb.",
       "",
       "**verb-{{word:de}} {{word:ren2}}**",
-      "Family words: {{word:er2}}-{{light:zi}} (son), {{word:nv3}}-{{word:er2}} (daughter), {{word:hai2}}-{{light:zi}} (child; here {{word:hai2}} is written 孩). {{word:zi}} is a light ending many nouns have.",
+      "Family words: {{word:nan2}}-{{word:hai2}}-{{light:zi}} (son), {{word:nv3}}-{{word:hai2}}-{{light:zi}} (daughter), {{word:hai2}}-{{light:zi}} (child; here {{word:hai2}} is written 孩). {{word:zi}} is a light ending many nouns have.",
     ],
     ru: [
       "**Чтобы назвать того, кто что-то делает**, поставьте -{{word:de}} {{word:ren2}} после глагола.",
       "",
       "**глагол-{{word:de}} {{word:ren2}}**",
-      "Слова семьи: {{word:er2}}-{{light:zi}} (сын), {{word:nv3}}-{{word:er2}} (дочь), {{word:hai2}}-{{light:zi}} (ребёнок; здесь {{word:hai2}} пишется 孩). {{word:zi}} — лёгкое окончание многих существительных.",
+      "Слова семьи: {{word:nan2}}-{{word:hai2}}-{{light:zi}} (сын), {{word:nv3}}-{{word:hai2}}-{{light:zi}} (дочь), {{word:hai2}}-{{light:zi}} (ребёнок; здесь {{word:hai2}} пишется 孩). {{word:zi}} — лёгкое окончание многих существительных.",
     ],
     tldr: {
       en: "verb-{{word:de}} {{word:ren2}} is the one who does it: {{word:xie3}}-{{word:de}} {{word:ren2}}, the one who writes.",
@@ -68,14 +63,14 @@ export default lessonModule({
       ru: "Кто знает, тот не говорит.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:you3}} {{word:yi1}}-ge {{word:er2}}-{{light:zi}}.",
-      hanzi: "我有一个儿子。",
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:yi1}}-ge {{word:nan2}}-{{word:hai2}}-{{light:zi}}.",
+      hanzi: "我有一个男孩子。",
       en: "I have a son.",
       ru: "У меня есть сын.",
     },
     {
-      pinyin: "{{Word:ta1}}-{{word:de}} {{word:nv3}}-{{word:er2}} {{word:hen3}} {{word:xiao3}}.",
-      hanzi: "她的女儿很小。",
+      pinyin: "{{Word:ta1}}-{{word:de}} {{word:nv3}}-{{word:hai2}}-{{light:zi}} {{word:hen3}} {{word:xiao3}}.",
+      hanzi: "她的女孩子很小。",
       en: "Her daughter is little.",
       ru: "Её дочь маленькая.",
     },
@@ -96,14 +91,14 @@ export default lessonModule({
     {
       en: "My son is big.",
       ru: "Мой сын большой.",
-      answer: "{{Word:wo3}}-{{word:de}} {{word:er2}}-{{light:zi}} {{word:hen3}} {{word:da4}}.",
-      hanzi: "我的儿子很大。",
+      answer: "{{Word:wo3}}-{{word:de}} {{word:nan2}}-{{word:hai2}}-{{light:zi}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "我的男孩子很大。",
     },
     {
       en: "Her daughter loves books.",
       ru: "Её дочь любит книги.",
-      answer: "{{Word:ta1}}-{{word:de}} {{word:nv3}}-{{word:er2}} {{word:ai4}} {{word:shu1}}.",
-      hanzi: "她的女儿爱书。",
+      answer: "{{Word:ta1}}-{{word:de}} {{word:nv3}}-{{word:hai2}}-{{light:zi}} {{word:ai4}} {{word:shu1}}.",
+      hanzi: "她的女孩子爱书。",
     },
   ],
 });

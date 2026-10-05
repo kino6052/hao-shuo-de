@@ -9,10 +9,11 @@ export default composite({
   ru: "организовать; организация",
   pos: "verb",
   hsd: [
-    "{{word:qun2}}",
+    "{{word:yi1}}-{{word:qi3}}-{{word:zuo4}}-{{word:de}} {{word:ren2}}",
     "{{word:ba3}} {{word:ren2}} {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}",
   ],
-  tts: ["群", "把人放在一起"],
-  literal: "group / put people together",
+  tts: ["一起做的人", "把人放在一起"],
+  literal: "the people who do it together / put people together",
   fit: "plain",
+  proposed: true,
 });

@@ -57,10 +57,10 @@ export default lessonModule({
       ru: "Луна круглая.",
     },
     {
-      pinyin: "{{Word:xian4}} {{word:zai4}} {{word:he2zi}}-{{word:li3}}.",
-      hanzi: "线在盒子里。",
-      en: "The thread is in the box.",
-      ru: "Нитка в коробке.",
+      pinyin: "{{Word:xian4}} {{word:zai4}} {{word:bao1}}-{{word:li3}}.",
+      hanzi: "线在包里。",
+      en: "The thread is in the bag.",
+      ru: "Нитка в сумке.",
     },
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
@@ -87,10 +87,10 @@ export default lessonModule({
       ru: "Он выше меня.",
     },
     {
-      pinyin: "{{Word:zhe4}}-ge {{word:he2zi}} {{word:hen3}} {{word:zhong4}}.",
-      hanzi: "这个盒子很重。",
-      en: "This box is heavy.",
-      ru: "Эта коробка тяжёлая.",
+      pinyin: "{{Word:zhe4}}-ge {{word:bao1}} {{word:hen3}} {{word:zhong4}}.",
+      hanzi: "这个包很重。",
+      en: "This bag is heavy.",
+      ru: "Эта сумка тяжёлая.",
     },
   ],
   exercises: [

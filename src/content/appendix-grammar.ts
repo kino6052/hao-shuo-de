@@ -802,10 +802,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "place-{{word:li3}} (in), place-{{word:shang4}} (on): {{Word:shui3}} {{word:zai4}} {{word:he2zi}}-{{word:li3}}. (The water is in the box.) {{word:wang3}}-{{word:shang4}}, online: {{Word:wo3}} {{word:zai4}} {{word:wang3}}-{{word:shang4}} {{word:zhao3}}. (I'm looking online.)"
+            "place-{{word:li3}} (in), place-{{word:shang4}} (on): {{Word:shui3}} {{word:zai4}} {{word:bao1}}-{{word:li3}}. (The water is in the bag.) {{word:wang3}}-{{word:shang4}}, online: {{Word:wo3}} {{word:zai4}} {{word:wang3}}-{{word:shang4}} {{word:zhao3}}. (I'm looking online.)"
           ],
           "ru": [
-            "место-{{word:li3}} (в), место-{{word:shang4}} (на): {{Word:shui3}} {{word:zai4}} {{word:he2zi}}-{{word:li3}}. (Вода в коробке.) {{word:wang3}}-{{word:shang4}} — в интернете: {{Word:wo3}} {{word:zai4}} {{word:wang3}}-{{word:shang4}} {{word:zhao3}}. (Я ищу в интернете.)"
+            "место-{{word:li3}} (в), место-{{word:shang4}} (на): {{Word:shui3}} {{word:zai4}} {{word:bao1}}-{{word:li3}}. (Вода в сумке.) {{word:wang3}}-{{word:shang4}} — в интернете: {{Word:wo3}} {{word:zai4}} {{word:wang3}}-{{word:shang4}} {{word:zhao3}}. (Я ищу в интернете.)"
           ],
           "zh": []
         }
@@ -824,10 +824,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:zai4}} {{word:zhong1}}-{{word:jian1}}, in the middle: {{Word:he2zi}} {{word:zai4}} {{word:zhong1}}-{{word:jian1}}. (The box is in the middle.)"
+            "{{word:zai4}} {{word:zhong1}}-{{word:jian1}}, in the middle: {{Word:bao1}} {{word:zai4}} {{word:zhong1}}-{{word:jian1}}. (The bag is in the middle.)"
           ],
           "ru": [
-            "{{word:zai4}} {{word:zhong1}}-{{word:jian1}} — посередине: {{Word:he2zi}} {{word:zai4}} {{word:zhong1}}-{{word:jian1}}. (Коробка посередине.)"
+            "{{word:zai4}} {{word:zhong1}}-{{word:jian1}} — посередине: {{Word:bao1}} {{word:zai4}} {{word:zhong1}}-{{word:jian1}}. (Сумка посередине.)"
           ],
           "zh": []
         }
@@ -835,10 +835,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:zuo3}}-{{word:bian1}} / {{word:you4}}-{{word:bian1}}, left / right: {{Word:he2zi}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}. (The box is on my left.)"
+            "{{word:zuo3}}-{{word:bian1}} / {{word:you4}}-{{word:bian1}}, left / right: {{Word:bao1}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}. (The bag is on my left.)"
           ],
           "ru": [
-            "{{word:zuo3}}-{{word:bian1}} / {{word:you4}}-{{word:bian1}} — слева / справа: {{Word:he2zi}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}. (Коробка слева от меня.)"
+            "{{word:zuo3}}-{{word:bian1}} / {{word:you4}}-{{word:bian1}} — слева / справа: {{Word:bao1}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}. (Сумка слева от меня.)"
           ],
           "zh": []
         }
@@ -1527,10 +1527,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "color-{{word:de}} + noun: {{word:hong2}}-{{word:se4}}-{{word:de}} {{word:he2zi}} (a red box)"
+            "color-{{word:de}} + noun: {{word:hong2}}-{{word:se4}}-{{word:de}} {{word:bao1}} (a red bag)"
           ],
           "ru": [
-            "цвет-{{word:de}} + существительное: {{word:hong2}}-{{word:se4}}-{{word:de}} {{word:he2zi}} (красная коробка)"
+            "цвет-{{word:de}} + существительное: {{word:hong2}}-{{word:se4}}-{{word:de}} {{word:bao1}} (красная сумка)"
           ],
           "zh": []
         }
@@ -1538,10 +1538,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "Thing + {{word:shi4}} + color-{{word:de}}: {{Word:he2zi}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}. (The box is red.)"
+            "Thing + {{word:shi4}} + color-{{word:de}}: {{Word:bao1}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}. (The bag is red.)"
           ],
           "ru": [
-            "Вещь + {{word:shi4}} + цвет-{{word:de}}: {{Word:he2zi}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}. (Коробка красная.)"
+            "Вещь + {{word:shi4}} + цвет-{{word:de}}: {{Word:bao1}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}. (Сумка красная.)"
           ],
           "zh": []
         }
@@ -1700,10 +1700,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:yi1}} / {{word:zhe4}} / {{word:na4}} + {{word:qun2}} + noun, a group: {{Word:yi1}}-{{word:qun2}} {{word:ren2}} {{word:zai4}} {{word:wai4}}-{{word:mian4}}. (A group of people is outside.)"
+            "{{word:hen3}}-{{word:duo1}} / {{word:zhe4}}-{{word:xie1}} / {{word:na4}}-{{word:xie1}} + noun, many: {{Word:hen3}}-{{word:duo1}} {{word:ren2}} {{word:zai4}} {{word:wai4}}-{{word:mian4}}. (A lot of people are outside.)"
           ],
           "ru": [
-            "{{word:yi1}} / {{word:zhe4}} / {{word:na4}} + {{word:qun2}} + существительное — группа: {{Word:yi1}}-{{word:qun2}} {{word:ren2}} {{word:zai4}} {{word:wai4}}-{{word:mian4}}. (На улице группа людей.)"
+            "{{word:hen3}}-{{word:duo1}} / {{word:zhe4}}-{{word:xie1}} / {{word:na4}}-{{word:xie1}} + существительное — много: {{Word:hen3}}-{{word:duo1}} {{word:ren2}} {{word:zai4}} {{word:wai4}}-{{word:mian4}}. (На улице много людей.)"
           ],
           "zh": []
         }
@@ -1991,10 +1991,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:jiao1}} + person + verb, teach: {{Word:wo3}} {{word:jiao1}} {{word:ni3}} {{word:xie3}}. (I'll teach you to write.)"
+            "{{word:bang1}} + person + {{word:xue2}} + verb, teach: {{Word:wo3}} {{word:bang1}} {{word:ni3}} {{word:xue2}} {{word:xie3}}. (I'll teach you to write.)"
           ],
           "ru": [
-            "{{word:jiao1}} + человек + глагол — научить: {{Word:wo3}} {{word:jiao1}} {{word:ni3}} {{word:xie3}}. (Я научу тебя писать.)"
+            "{{word:bang1}} + человек + {{word:xue2}} + глагол — научить: {{Word:wo3}} {{word:bang1}} {{word:ni3}} {{word:xue2}} {{word:xie3}}. (Я научу тебя писать.)"
           ],
           "zh": []
         }

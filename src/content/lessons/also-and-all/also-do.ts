@@ -86,10 +86,10 @@ export default lessonModule({
       ru: "Растениям тоже нужен воздух.",
     },
     {
-      pinyin: "{{Word:zhe4}}-ge {{word:he2zi}} {{word:shi4}} {{word:kong1}}-{{word:de}}, {{word:na4}}-ge {{word:ye3}} {{word:shi4}} {{word:kong1}}-{{word:de}}.",
-      hanzi: "这个盒子是空的，那个也是空的。",
-      en: "This box is empty, and so is that one.",
-      ru: "Эта коробка пустая, и та тоже.",
+      pinyin: "{{Word:zhe4}}-ge {{word:bao1}} {{word:shi4}} {{word:kong1}}-{{word:de}}, {{word:na4}}-ge {{word:ye3}} {{word:shi4}} {{word:kong1}}-{{word:de}}.",
+      hanzi: "这个包是空的，那个也是空的。",
+      en: "This bag is empty, and so is that one.",
+      ru: "Эта сумка пустая, и та тоже.",
     },
     {
       pinyin: "{{Word:ta1}} {{word:ye3}} {{word:bu4}} {{word:dong4}}.",
@@ -104,10 +104,10 @@ export default lessonModule({
       ru: "Другие люди тоже пришли.",
     },
     {
-      pinyin: "{{Word:he2zi}} {{word:kai1}} {{word:le}}, {{word:kou3}} {{word:ye3}} {{word:kai1}} {{word:le}}.",
-      hanzi: "盒子开了，口也开了。",
-      en: "The box is open, and the door is open too.",
-      ru: "Коробка открыта, и дверь тоже открыта.",
+      pinyin: "{{Word:bao1}} {{word:kai1}} {{word:le}}, {{word:kou3}} {{word:ye3}} {{word:kai1}} {{word:le}}.",
+      hanzi: "包开了，口也开了。",
+      en: "The bag is open, and the door is open too.",
+      ru: "Сумка открыта, и дверь тоже открыта.",
     },
     {
       pinyin: "{{Word:wo3}} {{word:guan1}} {{word:le}} {{word:huo3}}, {{word:ta1}} {{word:ye3}} {{word:guan1}} {{word:le}}.",
@@ -142,10 +142,10 @@ export default lessonModule({
       hanzi: "这里的空气很冷。",
     },
     {
-      en: "Is the box open?",
-      ru: "Коробка открыта?",
-      answer: "{{Word:he2zi}} {{word:kai1}} {{word:le}} {{word:ma}}?",
-      hanzi: "盒子开了吗？",
+      en: "Is the bag open?",
+      ru: "Сумка открыта?",
+      answer: "{{Word:bao1}} {{word:kai1}} {{word:le}} {{word:ma}}?",
+      hanzi: "包开了吗？",
     },
     {
       en: "Turn off the fire!",

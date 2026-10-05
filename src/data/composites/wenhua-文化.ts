@@ -8,8 +8,9 @@ export default composite({
   en: "culture",
   ru: "культура",
   pos: "noun",
-  hsd: ["{{word:yi1}}-{{word:qun2}} {{word:ren2}}-{{word:de}} {{word:fang1}}-{{word:fa3}}"],
-  tts: ["一群人的方法"],
-  literal: "a group's ways",
+  hsd: ["{{word:yi1}}-{{word:xie1}} {{word:ren2}}-{{word:de}} {{word:fang1}}-{{word:fa3}}"],
+  tts: ["一些人的方法"],
+  literal: "a people's way",
   fit: "plain",
+  proposed: true,
 });

@@ -11,8 +11,8 @@ export default word("shang4", {
   },
   necessity: {
     index: 5,
-    eng: "Up, on, above: {{word:he2zi}}-{{word:shang4}}, on the box. Position and movement need it.",
-    rus: "Вверх, на: {{word:he2zi}}-{{word:shang4}} — на коробке. Без него ни положения, ни движения.",
+    eng: "Up, on, above: {{word:bao1}}-{{word:shang4}}, on the box. Position and movement need it.",
+    rus: "Вверх, на: {{word:bao1}}-{{word:shang4}} — на коробке. Без него ни положения, ни движения.",
   },
   maps: "",
 });

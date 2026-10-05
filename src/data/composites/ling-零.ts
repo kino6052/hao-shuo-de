@@ -8,8 +8,8 @@ export default composite({
   en: "zero",
   ru: "ноль",
   pos: "number",
-  hsd: ["{{word:mei2}}-{{word:you3}}"],
-  tts: ["没有"],
-  literal: "none",
-  fit: "plain",
+  hsd: ["{{word:ling2}}"],
+  tts: ["零"],
+  fit: "word",
+  proposed: true,
 });

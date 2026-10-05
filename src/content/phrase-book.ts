@@ -970,8 +970,8 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:wo3}}-{{word:de}} {{word:he2zi}} {{word:mei2}}-{{word:you3}} {{word:le}}!",
-    ttsText: "我的盒子没有了！",
+    pinyin: "{{Word:wo3}}-{{word:de}} {{word:bao1}} {{word:mei2}}-{{word:you3}} {{word:le}}!",
+    ttsText: "我的包没有了！",
     en: ["My bag is gone!"],
     zh: ["我的包不见了！"],
     ru: ["Моя сумка пропала!"],

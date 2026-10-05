@@ -8,8 +8,11 @@ export default composite({
   en: "company",
   ru: "компания",
   pos: "noun",
-  hsd: ["{{word:qun2}}"],
-  tts: ["群"],
-  fit: "word",
-  note: "qún covers groups of people.",
+  hsd: [
+    "{{word:yi1}}-{{word:qi3}}-{{word:gong1}}-{{word:zuo4}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
+  ],
+  tts: ["一起工作的地方"],
+  fit: "plain",
+  literal: "where people work together",
+  proposed: true,
 });

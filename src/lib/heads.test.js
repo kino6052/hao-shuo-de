@@ -10,7 +10,8 @@ const w = (term, hanzi, pos) => ({ term, hanzi, pos: { eng: pos } });
 const words = {
   shou3: w('shǒu', '手', 'noun'),
   ji1: w('jī', '机', 'noun'),
-  jiao1: w('jiāo', '教', 'verb'),
+  bang1: w('bāng', '帮', 'verb'),
+  xue2: w('xué', '学', 'verb'),
   de: w('de', '的', 'particle'),
   ren2: w('rén', '人', 'noun'),
   chi1: w('chī', '吃', 'verb'),
@@ -25,7 +26,7 @@ const dict = { words };
 const e = (zh, pos, hsd, tts) => ({ zh, pos, hsd, tts, rank: 1 });
 const entries = [
   e('手机', 'noun', '{{word:shou3}}-{{word:ji1}}', '手机'),
-  e('老师', 'noun', '{{word:jiao1}}-{{word:de}} {{word:ren2}}', '教的人'),
+  e('老师', 'noun', '{{word:bang1}}-{{word:ren2}}-{{word:xue2}}-{{word:de}} {{word:ren2}}', '帮人学的人'),
   e('吃饭', 'verb', '{{word:chi1}} {{word:dong1}}-{{light:xi1}}', '吃东西'),
   e('写', 'verb', '{{word:yong4}} {{word:shou3}} {{word:kan4}}', '用手看'),
   e('好看', 'adjective', '{{word:hao3}}-{{word:kan4}}', '好看'),

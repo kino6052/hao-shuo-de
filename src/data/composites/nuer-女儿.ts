@@ -8,12 +8,9 @@ export default composite({
   en: "daughter",
   ru: "дочь",
   pos: "noun",
-  hsd: [
-    "{{word:nv3}}-{{word:er2}}",
-    "{{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:xiao3}}-{{word:de}} {{word:nv3}}-{{word:ren2}}",
-  ],
-  tts: ["女儿", "爸爸妈妈的小的女人"],
-  literal: "the parents' little woman",
-  fit: "natural",
+  hsd: ["{{word:nv3}}-{{word:hai2}}-{{light:zi}}"],
+  tts: ["女孩子"],
+  literal: "girl (said of your daughter)",
+  fit: "plain",
   proposed: true,
 });

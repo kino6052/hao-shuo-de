@@ -8,8 +8,9 @@ export default composite({
   en: "refrigerator",
   ru: "холодильник",
   pos: "noun",
-  hsd: ["{{word:leng3}}-{{word:de}} {{word:he2zi}}"],
-  tts: ["冷的盒子"],
-  literal: "the cold box",
+  hsd: ["{{word:leng3}}-{{word:de}} {{word:ji1}}"],
+  tts: ["冷的机"],
+  literal: "the cold machine",
   fit: "plain",
+  proposed: true,
 });

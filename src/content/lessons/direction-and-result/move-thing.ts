@@ -60,10 +60,10 @@ export default lessonModule({
       ru: "Положи инструмент!",
     },
     {
-      pinyin: "{{Word:ni3}} {{word:ba3}} {{word:he2zi}} {{word:na2}}-{{word:hui2}}-{{word:qu4}}.",
-      hanzi: "你把盒子拿回去。",
-      en: "Take the box back.",
-      ru: "Отнеси коробку обратно.",
+      pinyin: "{{Word:ni3}} {{word:ba3}} {{word:bao1}} {{word:na2}}-{{word:hui2}}-{{word:qu4}}.",
+      hanzi: "你把包拿回去。",
+      en: "Take the bag back.",
+      ru: "Отнеси сумку обратно.",
     },
     {
       pinyin: "{{Word:ta1}} {{word:ba3}} {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:na2}}-{{word:shang4}}-{{word:lai2}} {{word:le}}.",
@@ -80,10 +80,10 @@ export default lessonModule({
       hanzi: "把工具拿出来！",
     },
     {
-      en: "Put the box down!",
-      ru: "Опусти коробку!",
-      answer: "{{Word:ba3}} {{word:he2zi}} {{word:fang4}}-{{word:xia4}}!",
-      hanzi: "把盒子放下！",
+      en: "Put the bag down!",
+      ru: "Опусти сумку!",
+      answer: "{{Word:ba3}} {{word:bao1}} {{word:fang4}}-{{word:xia4}}!",
+      hanzi: "把包放下！",
     },
   ],
   faq: [

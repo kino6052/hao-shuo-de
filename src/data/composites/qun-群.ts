@@ -8,8 +8,9 @@ export default composite({
   en: "group, crowd",
   ru: "группа, толпа",
   pos: "classifier",
-  hsd: ["{{word:qun2}}"],
-  tts: ["群"],
-  fit: "word",
+  hsd: ["{{word:hen3}}-{{word:duo1}} {{word:ren2}}"],
+  tts: ["很多人"],
+  fit: "plain",
   proposed: true,
+  literal: "many people",
 });

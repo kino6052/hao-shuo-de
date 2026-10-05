@@ -8,8 +8,9 @@ export default composite({
   en: "education",
   ru: "образование",
   pos: "noun",
-  hsd: ["{{word:jiao1}}"],
-  tts: ["教"],
-  fit: "word",
+  hsd: ["{{word:bang1}} {{word:ren2}} {{word:xue2}}"],
+  tts: ["帮人学"],
+  fit: "plain",
   proposed: true,
+  literal: "helping people learn",
 });

@@ -79,10 +79,10 @@ export default lessonModule({
       hanzi: "这个最大。",
     },
     {
-      en: "The box in the middle is the biggest.",
-      ru: "Коробка посередине — самая большая.",
-      answer: "{{Word:zhong1}}-{{word:jian1}}-{{word:de}} {{word:he2zi}} {{word:zui4}} {{word:da4}}.",
-      hanzi: "中间的盒子最大。",
+      en: "The bag in the middle is the biggest.",
+      ru: "Сумка посередине — самая большая.",
+      answer: "{{Word:zhong1}}-{{word:jian1}}-{{word:de}} {{word:bao1}} {{word:zui4}} {{word:da4}}.",
+      hanzi: "中间的包最大。",
     },
   ],
 });

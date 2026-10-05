@@ -60,10 +60,10 @@ export default lessonModule({
       ru: "Где ты?",
     },
     {
-      pinyin: "{{Word:he2zi}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
-      hanzi: "盒子在哪里？",
-      en: "Where is the box?",
-      ru: "Где коробка?",
+      pinyin: "{{Word:bao1}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
+      hanzi: "包在哪里？",
+      en: "Where is the bag?",
+      ru: "Где сумка?",
     },
     {
       pinyin: "{{Word:zai4}} {{word:na4}}-{{word:li3}}.",

@@ -103,10 +103,10 @@ export default lessonModule({
       ru: "Эта дорога длиннее той.",
     },
     {
-      pinyin: "{{Word:you4}}-{{word:bian1}}-{{word:de}} {{word:he2zi}} {{word:bi3}} {{word:zuo3}}-{{word:bian1}}-{{word:de}} {{word:da4}}.",
-      hanzi: "右边的盒子比左边的大。",
-      en: "The box on the right is bigger than the one on the left.",
-      ru: "Коробка справа больше той, что слева.",
+      pinyin: "{{Word:you4}}-{{word:bian1}}-{{word:de}} {{word:bao1}} {{word:bi3}} {{word:zuo3}}-{{word:bian1}}-{{word:de}} {{word:da4}}.",
+      hanzi: "右边的包比左边的大。",
+      en: "The bag on the right is bigger than the one on the left.",
+      ru: "Сумка справа больше той, что слева.",
     },
   ],
   exercises: [
@@ -141,10 +141,10 @@ export default lessonModule({
       hanzi: "写比说难。",
     },
     {
-      en: "The box on this side is bigger than the one on that side.",
-      ru: "Коробка с этой стороны больше, чем с той.",
-      answer: "{{Word:zhe4}}-{{word:bian1}}-{{word:de}} {{word:he2zi}} {{word:bi3}} {{word:na4}}-{{word:bian1}}-{{word:de}} {{word:da4}}.",
-      hanzi: "这边的盒子比那边的大。",
+      en: "The bag on this side is bigger than the one on that side.",
+      ru: "Сумка с этой стороны больше, чем с той.",
+      answer: "{{Word:zhe4}}-{{word:bian1}}-{{word:de}} {{word:bao1}} {{word:bi3}} {{word:na4}}-{{word:bian1}}-{{word:de}} {{word:da4}}.",
+      hanzi: "这边的包比那边的大。",
     },
   ],
   faq: [

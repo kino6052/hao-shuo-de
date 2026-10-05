@@ -69,10 +69,10 @@ export default lessonModule({
       ru: "Она красивая.",
     },
     {
-      pinyin: "{{Word:zhe4}}-ge {{word:he2zi}} {{word:hen3}} {{word:nan2}}-{{word:kan4}}.",
-      hanzi: "这个盒子很难看。",
-      en: "This box is ugly.",
-      ru: "Эта коробка некрасивая.",
+      pinyin: "{{Word:zhe4}}-ge {{word:bao1}} {{word:hen3}} {{word:nan2}}-{{word:kan4}}.",
+      hanzi: "这个包很难看。",
+      en: "This bag is ugly.",
+      ru: "Эта сумка некрасивая.",
     },
     {
       pinyin: "{{Word:zhe4}}-ge {{word:hen3}} {{word:hao3}}-{{word:chi1}}.",
@@ -101,10 +101,10 @@ export default lessonModule({
       hanzi: "这很难。",
     },
     {
-      en: "The box is ugly.",
-      ru: "Коробка некрасивая.",
-      answer: "{{Word:he2zi}} {{word:hen3}} {{word:nan2}}-{{word:kan4}}.",
-      hanzi: "盒子很难看。",
+      en: "The bag is ugly.",
+      ru: "Сумка некрасивая.",
+      answer: "{{Word:bao1}} {{word:hen3}} {{word:nan2}}-{{word:kan4}}.",
+      hanzi: "包很难看。",
     },
     {
       en: "The water is clean.",

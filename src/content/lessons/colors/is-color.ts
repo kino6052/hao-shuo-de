@@ -29,15 +29,15 @@ export default lessonModule({
     necessity: { en: "Now you can describe what you see.", ru: "Теперь вы можете описать то, что видите." },
   },
   info: {
-    en: "Thing + {{word:shi4}} + color-{{word:de}}: {{Word:he2zi}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}. (The box is red.)",
-    ru: "Вещь + {{word:shi4}} + цвет-{{word:de}}: {{Word:he2zi}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}. (Коробка красная.)",
+    en: "Thing + {{word:shi4}} + color-{{word:de}}: {{Word:bao1}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}. (The bag is red.)",
+    ru: "Вещь + {{word:shi4}} + цвет-{{word:de}}: {{Word:bao1}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}. (Сумка красная.)",
   },
   examples: [
     {
-      pinyin: "{{Word:he2zi}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}.",
-      hanzi: "盒子是红色的。",
-      en: "The box is red.",
-      ru: "Коробка красная.",
+      pinyin: "{{Word:bao1}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}.",
+      hanzi: "包是红色的。",
+      en: "The bag is red.",
+      ru: "Сумка красная.",
     },
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:yi1fu}} {{word:shi4}} {{word:bai2}}-{{word:se4}}-{{word:de}}.",
@@ -64,16 +64,16 @@ export default lessonModule({
       ru: "Четыре животных белые, а пять — чёрные.",
     },
     {
-      pinyin: "{{Word:qi1}}-ge {{word:he2zi}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}, {{word:ba1}}-ge {{word:shi4}} {{word:lan2}}-{{word:se4}}-{{word:de}}.",
-      hanzi: "七个盒子是红色的，八个是蓝色的。",
-      en: "Seven boxes are red, and eight are blue.",
-      ru: "Семь коробок красные, а восемь — синие.",
+      pinyin: "{{Word:qi1}}-ge {{word:bao1}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}, {{word:ba1}}-ge {{word:shi4}} {{word:lan2}}-{{word:se4}}-{{word:de}}.",
+      hanzi: "七个包是红色的，八个是蓝色的。",
+      en: "Seven bags are red, and eight are blue.",
+      ru: "Семь сумок красные, а восемь — синие.",
     },
     {
-      pinyin: "{{Word:you4}}-{{word:bian1}}-{{word:de}} {{word:he2zi}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}.",
-      hanzi: "右边的盒子是红色的。",
-      en: "The box on the right is red.",
-      ru: "Коробка справа красная.",
+      pinyin: "{{Word:you4}}-{{word:bian1}}-{{word:de}} {{word:bao1}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}.",
+      hanzi: "右边的包是红色的。",
+      en: "The bag on the right is red.",
+      ru: "Сумка справа красная.",
     },
     {
       pinyin: "{{Word:yi1}}-ge {{word:hei1}}-{{word:se4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:fei1}}-{{word:jin4}}-{{word:lai2}} {{word:le}}.",
@@ -84,10 +84,10 @@ export default lessonModule({
   ],
   exercises: [
     {
-      en: "The box is yellow.",
-      ru: "Коробка жёлтая.",
-      answer: "{{Word:he2zi}} {{word:shi4}} {{word:huang2}}-{{word:se4}}-{{word:de}}.",
-      hanzi: "盒子是黄色的。",
+      en: "The bag is yellow.",
+      ru: "Сумка жёлтая.",
+      answer: "{{Word:bao1}} {{word:shi4}} {{word:huang2}}-{{word:se4}}-{{word:de}}.",
+      hanzi: "包是黄色的。",
     },
     {
       en: "The animal is black.",
@@ -96,10 +96,10 @@ export default lessonModule({
       hanzi: "动物是黑色的。",
     },
     {
-      en: "The box is blue.",
-      ru: "Коробка синяя.",
-      answer: "{{Word:he2zi}} {{word:shi4}} {{word:lan2}}-{{word:se4}}-{{word:de}}.",
-      hanzi: "盒子是蓝色的。",
+      en: "The bag is blue.",
+      ru: "Сумка синяя.",
+      answer: "{{Word:bao1}} {{word:shi4}} {{word:lan2}}-{{word:se4}}-{{word:de}}.",
+      hanzi: "包是蓝色的。",
     },
     {
       en: "Her eyes are blue.",
@@ -136,8 +136,8 @@ export default lessonModule({
         en: "Why is it {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}, not {{word:hen3}} {{word:hong2}}-{{word:se4}}?",
         ru: "Почему {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}, а не {{word:hen3}} {{word:hong2}}-{{word:se4}}?",
       },
-      en: "Color words like {{word:hong2}}-{{word:se4}} work like nouns (\"the color red\"), so they don't take {{word:hen3}}. {{Word:he2zi}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}} is \"The box is a red one\".",
-      ru: "Слова цвета вроде {{word:hong2}}-{{word:se4}} работают как существительные («красный цвет»), поэтому {{word:hen3}} с ними не ставят. {{Word:he2zi}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}} — это «Коробка — красного цвета».",
+      en: "Color words like {{word:hong2}}-{{word:se4}} work like nouns (\"the color red\"), so they don't take {{word:hen3}}. {{Word:bao1}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}} is \"The bag is a red one\".",
+      ru: "Слова цвета вроде {{word:hong2}}-{{word:se4}} работают как существительные («красный цвет»), поэтому {{word:hen3}} с ними не ставят. {{Word:bao1}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}} — это «Сумка — красного цвета».",
     },
   ],
 });

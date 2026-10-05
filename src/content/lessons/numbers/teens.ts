@@ -6,9 +6,9 @@ export default lessonModule({
   id: "teens",
   words: [
     {
-      word: "bai3",
-      en: "hundred",
-      ru: "сто",
+      word: "ling2",
+      en: "zero",
+      ru: "ноль",
     },
   ],
   prose: {
@@ -18,7 +18,7 @@ export default lessonModule({
       "**{{word:shi2}} + number (11-19) / number + {{word:shi2}} (20, 30 …)**",
       "",
       "{{word:shi2}}-{{word:er4}} is 12 (ten and two). {{word:er4}}-{{word:shi2}} is 20 (two tens).",
-      "After ninety-nine comes {{word:yi1}}-{{word:bai3}}, a hundred.",
+      "Past ninety-nine, say the digits one by one, with {{word:ling2}} for zero: {{word:yi1}}-{{word:ling2}}-{{word:ling2}} is 100, {{word:er4}}-{{word:ling2}}-{{word:ling2}} is 200. Years are said the same way.",
     ],
     ru: [
       "**Чтобы назвать числа больше десяти**, поставьте {{word:shi2}} (десять) перед другим числом или после него.",
@@ -26,7 +26,7 @@ export default lessonModule({
       "**{{word:shi2}} + число (11–19) / число + {{word:shi2}} (20, 30 …)**",
       "",
       "{{word:shi2}}-{{word:er4}} — это 12 (десять и два). {{word:er4}}-{{word:shi2}} — это 20 (два десятка).",
-      "После девяноста девяти идёт {{word:yi1}}-{{word:bai3}} — сто.",
+      "После девяноста девяти называйте цифры по одной, а ноль — {{word:ling2}}: {{word:yi1}}-{{word:ling2}}-{{word:ling2}} — это 100, {{word:er4}}-{{word:ling2}}-{{word:ling2}} — 200. Годы называют так же.",
     ],
     tldr: {
       en: "{{word:shi2}}-{{word:er4}} is 12. {{word:er4}}-{{word:shi2}} is 20.",
@@ -70,22 +70,22 @@ export default lessonModule({
       ru: "Двадцать человек.",
     },
     {
-      pinyin: "{{Word:san1}}-{{word:shi2}}-ge {{word:he2zi}}.",
-      hanzi: "三十个盒子。",
-      en: "Thirty boxes.",
-      ru: "Тридцать коробок.",
+      pinyin: "{{Word:san1}}-{{word:shi2}}-ge {{word:bao1}}.",
+      hanzi: "三十个包。",
+      en: "Thirty bags.",
+      ru: "Тридцать сумок.",
     },
     {
-      pinyin: "{{Word:yi1}}-{{word:bai3}}.",
-      hanzi: "一百。",
-      en: "A hundred.",
-      ru: "Сто.",
+      pinyin: "{{Word:er4}}-{{word:ling2}}-{{word:ling2}}.",
+      hanzi: "二零零。",
+      en: "Two hundred.",
+      ru: "Двести.",
     },
     {
-      pinyin: "{{Word:san1}}-{{word:bai3}}-ge {{word:ren2}}.",
-      hanzi: "三百个人。",
-      en: "Three hundred people.",
-      ru: "Триста человек.",
+      pinyin: "{{Word:er4}}-{{word:ling2}}-{{word:er4}}-{{word:liu4}} {{word:nian2}}.",
+      hanzi: "二零二六年。",
+      en: "The year 2026.",
+      ru: "2026 год.",
     },
   ],
   exercises: [
@@ -96,10 +96,10 @@ export default lessonModule({
       hanzi: "十二个人。",
     },
     {
-      en: "Two hundred.",
-      ru: "Двести.",
-      answer: "{{Word:liang3}}-{{word:bai3}}.",
-      hanzi: "两百。",
+      en: "Three hundred (digit by digit).",
+      ru: "Триста (по цифрам).",
+      answer: "{{Word:san1}}-{{word:ling2}}-{{word:ling2}}.",
+      hanzi: "三零零。",
     },
   ],
   faq: [

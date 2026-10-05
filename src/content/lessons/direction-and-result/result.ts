@@ -43,10 +43,10 @@ export default lessonModule({
   },
   examples: [
     {
-      pinyin: "{{Word:wo3}} {{word:zhao3}}-{{word:dao4}} {{word:wo3}}-{{word:de}} {{word:he2zi}} {{word:le}}.",
-      hanzi: "我找到我的盒子了。",
-      en: "I found my box.",
-      ru: "Я нашёл свою коробку.",
+      pinyin: "{{Word:wo3}} {{word:zhao3}}-{{word:dao4}} {{word:wo3}}-{{word:de}} {{word:bao1}} {{word:le}}.",
+      hanzi: "我找到我的包了。",
+      en: "I found my bag.",
+      ru: "Я нашёл свою сумку.",
     },
     {
       pinyin: "{{Word:wo3}} {{word:mei2}} {{word:zhao3}}-{{word:dao4}}.",
@@ -99,10 +99,10 @@ export default lessonModule({
       hanzi: "我找到金了。",
     },
     {
-      en: "He broke the box.",
-      ru: "Он сломал коробку.",
-      answer: "{{Word:ta1}} {{word:ba3}} {{word:he2zi}} {{word:zuo4}}-{{word:huai4}} {{word:le}}.",
-      hanzi: "他把盒子做坏了。",
+      en: "He broke the bag.",
+      ru: "Он сломал сумку.",
+      answer: "{{Word:ta1}} {{word:ba3}} {{word:bao1}} {{word:zuo4}}-{{word:huai4}} {{word:le}}.",
+      hanzi: "他把包做坏了。",
     },
     {
       en: "I didn't see it.",

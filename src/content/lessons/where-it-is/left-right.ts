@@ -38,15 +38,15 @@ export default lessonModule({
     },
   },
   info: {
-    en: "{{word:zuo3}}-{{word:bian1}} / {{word:you4}}-{{word:bian1}}, left / right: {{Word:he2zi}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}. (The box is on my left.)",
-    ru: "{{word:zuo3}}-{{word:bian1}} / {{word:you4}}-{{word:bian1}} — слева / справа: {{Word:he2zi}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}. (Коробка слева от меня.)",
+    en: "{{word:zuo3}}-{{word:bian1}} / {{word:you4}}-{{word:bian1}}, left / right: {{Word:bao1}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}. (The bag is on my left.)",
+    ru: "{{word:zuo3}}-{{word:bian1}} / {{word:you4}}-{{word:bian1}} — слева / справа: {{Word:bao1}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}. (Сумка слева от меня.)",
   },
   examples: [
     {
-      pinyin: "{{Word:he2zi}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}.",
-      hanzi: "盒子在我的左边。",
-      en: "The box is on my left.",
-      ru: "Коробка слева от меня.",
+      pinyin: "{{Word:bao1}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}.",
+      hanzi: "包在我的左边。",
+      en: "The bag is on my left.",
+      ru: "Сумка слева от меня.",
     },
     {
       pinyin: "{{Word:ta1}} {{word:zai4}} {{word:ni3}}-{{word:de}} {{word:you4}}-{{word:bian1}}.",
@@ -61,10 +61,10 @@ export default lessonModule({
       ru: "Вода справа?",
     },
     {
-      pinyin: "{{Word:zuo3}}-{{word:bian1}}-{{word:de}} {{word:he2zi}} {{word:hen3}} {{word:da4}}.",
-      hanzi: "左边的盒子很大。",
-      en: "The box on the left is big.",
-      ru: "Коробка слева большая.",
+      pinyin: "{{Word:zuo3}}-{{word:bian1}}-{{word:de}} {{word:bao1}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "左边的包很大。",
+      en: "The bag on the left is big.",
+      ru: "Сумка слева большая.",
     },
   ],
   exercises: [

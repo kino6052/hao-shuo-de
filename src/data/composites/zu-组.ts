@@ -8,8 +8,9 @@ export default composite({
   en: "group",
   ru: "группа",
   pos: "noun",
-  hsd: ["{{word:qun2}}"],
-  tts: ["群"],
-  fit: "word",
+  hsd: ["{{word:yi1}}-{{word:qi3}}-{{word:de}} {{word:ren2}}"],
+  tts: ["一起的人"],
+  fit: "plain",
   proposed: true,
+  literal: "the people together",
 });

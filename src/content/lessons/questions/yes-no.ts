@@ -20,14 +20,14 @@ export default lessonModule({
       ru: "орудие, предмет",
     },
     {
-      word: "he2zi",
-      en: "box",
-      ru: "коробка",
-    },
-    {
       word: "ti2",
       en: "question; {{word:wen4}}-{{word:ti2}}: a question, a problem",
       ru: "вопрос; {{word:wen4}}-{{word:ti2}} — вопрос, проблема",
+    },
+    {
+      word: "bao1",
+      en: "bag, container",
+      ru: "сумка",
     },
   ],
   prose: {
@@ -76,10 +76,10 @@ export default lessonModule({
       ru: "У тебя есть инструмент?",
     },
     {
-      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:he2zi}} {{word:ma}}?",
-      hanzi: "这是盒子吗？",
-      en: "Is this a box?",
-      ru: "Это коробка?",
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:bao1}} {{word:ma}}?",
+      hanzi: "这是包吗？",
+      en: "Is this a bag?",
+      ru: "Это сумка?",
     },
     {
       pinyin: "{{Word:ta1}} {{word:he1}} {{word:shui3}} {{word:ma}}?",
@@ -126,10 +126,10 @@ export default lessonModule({
       hanzi: "工具小吗？",
     },
     {
-      en: "Is that your box?",
-      ru: "Это твоя коробка?",
-      answer: "{{Word:na4}} {{word:shi4}} {{word:ni3}}-{{word:de}} {{word:he2zi}} {{word:ma}}?",
-      hanzi: "那是你的盒子吗？",
+      en: "Is that your bag?",
+      ru: "Это твоя сумка?",
+      answer: "{{Word:na4}} {{word:shi4}} {{word:ni3}}-{{word:de}} {{word:bao1}} {{word:ma}}?",
+      hanzi: "那是你的包吗？",
     },
     {
       en: "Do they have questions?",

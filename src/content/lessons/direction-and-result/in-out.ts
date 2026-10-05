@@ -69,10 +69,10 @@ export default lessonModule({
       ru: "Он вышел.",
     },
     {
-      pinyin: "{{Word:dong4}}-{{word:wu4}} {{word:cong2}} {{word:he2zi}}-{{word:li3}} {{word:chu1}}-{{word:lai2}} {{word:le}}.",
-      hanzi: "动物从盒子里出来了。",
-      en: "The animal came out of the box.",
-      ru: "Животное вылезло из коробки.",
+      pinyin: "{{Word:dong4}}-{{word:wu4}} {{word:cong2}} {{word:bao1}}-{{word:li3}} {{word:chu1}}-{{word:lai2}} {{word:le}}.",
+      hanzi: "动物从包里出来了。",
+      en: "The animal came out of the bag.",
+      ru: "Животное вылезло из сумки.",
     },
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:chu1}}-{{word:qu4}}, {{word:zai4}} {{word:fu4jin4}} {{word:wan2r}}.",

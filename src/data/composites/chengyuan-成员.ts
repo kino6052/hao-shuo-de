@@ -8,9 +8,9 @@ export default composite({
   en: "member",
   ru: "член (группы)",
   pos: "noun",
-  hsd: ["{{word:zai4}}-{{word:qun2}}-{{word:li3}}-{{word:de}} {{word:ren2}}"],
-  tts: ["在群里的人"],
-  literal: "a person in the group",
+  hsd: ["{{word:hen3}}-{{word:duo1}}-{{word:ren2}}-{{word:li3}}-{{word:de}} {{word:yi1}}-ge"],
+  tts: ["很多人里的一个"],
+  literal: "one of many people",
   fit: "plain",
   proposed: true,
 });

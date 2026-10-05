@@ -89,8 +89,8 @@ describe("render: nouns", () => {
   });
 
   test("other positions", () => {
-    const n = node("东西", { where: word(node("he2zi"), { position: "under" }) });
-    expect(render(n, py)).toBe("zài-hézi-xià-miàn-de dōng-xi");
+    const n = node("东西", { where: word(node("bao1"), { position: "under" }) });
+    expect(render(n, py)).toBe("zài-bāo-xià-miàn-de dōng-xi");
   });
 });
 

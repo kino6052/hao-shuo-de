@@ -29,7 +29,7 @@ export default categories([
       {
         key: "people-kinship",
         title: { eng: "People & Kinship", rus: "Люди и родство", zh: "人与亲属" },
-        wordIds: ["ren2", "nv3", "qun2", "guan1xi", "ba4ba", "ma1ma", "er2"],
+        wordIds: ["ren2", "nv3", "guan1xi", "ba4ba", "ma1ma"],
       },
       {
         key: "food-drink",
@@ -48,7 +48,7 @@ export default categories([
           {
             key: "containers-materials",
             title: { eng: "Containers & Materials", rus: "Контейнеры и материалы", zh: "容器与材料" },
-            wordIds: ["he2zi", "xian4"],
+            wordIds: ["xian4", "bao1"],
           },
           {
             key: "valuables-wearables",
@@ -100,7 +100,7 @@ export default categories([
           "jiu3",
           "shi2",
           "er4",
-          "bai3",
+          "ling2",
         ],
       },
       {
@@ -158,7 +158,7 @@ export default categories([
       {
         key: "cognition",
         title: { eng: "Cognition", rus: "Познание", zh: "认知" },
-        wordIds: ["jue2", "zhi1dao4", "xue2", "jiao1", "suan4", "xiang3"],
+        wordIds: ["jue2", "zhi1dao4", "xue2", "suan4", "xiang3"],
       },
       {
         key: "perception",
@@ -256,7 +256,7 @@ export default categories([
   {
     key: "time",
     title: { eng: "Time", rus: "Время", zh: "时间" },
-    wordIds: ["tian1", "nian2", "dian3", "wan3", "zuo2"],
+    wordIds: ["tian1", "nian2", "dian3", "wan3"],
   },
   {
     key: "space",

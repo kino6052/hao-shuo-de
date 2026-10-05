@@ -113,7 +113,7 @@ export const POSITIONS = {
   beside: ["pang2bian1"],
   near: ["fu4jin4"],
 };
-// Words that are a place already (zài jiā), unlike a thing (zài hézi-lǐ).
+// Words that are a place already (zài jiā), unlike a thing (zài bāo-lǐ).
 const PLACE_WORDS = new Set(["jia1", "地方"]);
 
 // -> the position of a place answer: the reader's pick, or the place itself

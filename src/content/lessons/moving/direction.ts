@@ -89,10 +89,10 @@ export default lessonModule({
       ru: "Выйди наружу через этот проём.",
     },
     {
-      pinyin: "{{Word:he2zi}}-{{word:de}} {{word:kou3}} {{word:hen3}} {{word:xiao3}}.",
-      hanzi: "盒子的口很小。",
-      en: "The box's opening is small.",
-      ru: "У коробки маленькое отверстие.",
+      pinyin: "{{Word:bao1}}-{{word:de}} {{word:kou3}} {{word:hen3}} {{word:xiao3}}.",
+      hanzi: "包的口很小。",
+      en: "The bag's opening is small.",
+      ru: "У сумки маленькое отверстие.",
     },
     {
       pinyin: "{{Word:kou3}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
@@ -115,10 +115,10 @@ export default lessonModule({
       hanzi: "动物在外面。",
     },
     {
-      en: "The box's opening is big.",
-      ru: "У коробки большое отверстие.",
-      answer: "{{Word:he2zi}}-{{word:de}} {{word:kou3}} {{word:hen3}} {{word:da4}}.",
-      hanzi: "盒子的口很大。",
+      en: "The bag's opening is big.",
+      ru: "У сумки большое отверстие.",
+      answer: "{{Word:bao1}}-{{word:de}} {{word:kou3}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "包的口很大。",
     },
     {
       en: "Come down!",

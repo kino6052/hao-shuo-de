@@ -8,8 +8,9 @@ export default composite({
   en: "guide, instruct",
   ru: "руководить, наставлять",
   pos: "verb",
-  hsd: ["{{word:jiao1}}"],
-  tts: ["教"],
-  fit: "word",
+  hsd: ["{{word:bang1}} X {{word:zuo4}}"],
+  tts: ["帮X做"],
+  fit: "plain",
   proposed: true,
+  literal: "help X do it",
 });

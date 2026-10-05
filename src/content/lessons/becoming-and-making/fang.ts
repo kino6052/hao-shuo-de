@@ -40,10 +40,10 @@ export default lessonModule({
       ru: "Я положил одежду на пол.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:fang4}} {{word:zai4}} {{word:he2zi}}-{{word:li3}} {{word:le}}.",
-      hanzi: "他把工具放在盒子里了。",
-      en: "He put the tool in the box.",
-      ru: "Он положил инструмент в коробку.",
+      pinyin: "{{Word:ta1}} {{word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:fang4}} {{word:zai4}} {{word:bao1}}-{{word:li3}} {{word:le}}.",
+      hanzi: "他把工具放在包里了。",
+      en: "He put the tool in the bag.",
+      ru: "Он положил инструмент в сумку.",
     },
     {
       pinyin: "{{Word:ba3}} {{word:zhi2wu4}} {{word:fang4}} {{word:zai4}} {{word:zhe4}}-{{word:li3}}.",
@@ -60,10 +60,10 @@ export default lessonModule({
   ],
   exercises: [
     {
-      en: "Put the box here.",
-      ru: "Положи коробку сюда.",
-      answer: "{{Word:ba3}} {{word:he2zi}} {{word:fang4}} {{word:zai4}} {{word:zhe4}}-{{word:li3}}.",
-      hanzi: "把盒子放在这里。",
+      en: "Put the bag here.",
+      ru: "Положи сумку сюда.",
+      answer: "{{Word:ba3}} {{word:bao1}} {{word:fang4}} {{word:zai4}} {{word:zhe4}}-{{word:li3}}.",
+      hanzi: "把包放在这里。",
     },
   ],
 });

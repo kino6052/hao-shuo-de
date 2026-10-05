@@ -52,10 +52,10 @@ export default lessonModule({
       ru: "Я люблю синий цвет.",
     },
     {
-      pinyin: "{{Word:zhe4}} {{word:liang3}}-ge {{word:he2zi}}-{{word:de}} {{word:yan2se4}} {{word:yi1}}-{{word:yang4}}.",
-      hanzi: "这两个盒子的颜色一样。",
-      en: "These two boxes are the same color.",
-      ru: "Эти две коробки одного цвета.",
+      pinyin: "{{Word:zhe4}} {{word:liang3}}-ge {{word:bao1}}-{{word:de}} {{word:yan2se4}} {{word:yi1}}-{{word:yang4}}.",
+      hanzi: "这两个包的颜色一样。",
+      en: "These two bags are the same color.",
+      ru: "Эти две сумки одного цвета.",
     },
     {
       pinyin: "{{Word:liu4}}-{{word:hao4}} {{word:shi4}} {{word:shen2me}} {{word:yan2se4}}?",

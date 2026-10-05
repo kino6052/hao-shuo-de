@@ -8,8 +8,9 @@ export default composite({
   en: "classroom",
   ru: "класс",
   pos: "noun",
-  hsd: ["{{word:jiao1}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
-  tts: ["教的地方"],
-  literal: "the place where you teach",
+  hsd: ["{{word:xue2}}-{{word:de}} {{word:fang2}}-{{word:jian1}}"],
+  tts: ["学的房间"],
+  literal: "the learning room",
   fit: "plain",
+  proposed: true,
 });

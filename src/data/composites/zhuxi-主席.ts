@@ -8,8 +8,11 @@ export default composite({
   en: "chairperson",
   ru: "председатель",
   pos: "noun",
-  hsd: ["{{word:qun2}}-{{word:li3}} {{word:zui4}} {{word:da4}}-{{word:de}} {{word:ren2}}"],
-  tts: ["群里最大的人"],
-  literal: "the biggest person in the group",
+  hsd: [
+    "{{word:hen3}}-{{word:duo1}}-{{word:ren2}}-{{word:li3}} {{word:zui4}} {{word:da4}}-{{word:de}} {{word:ren2}}",
+  ],
+  tts: ["很多人里最大的人"],
+  literal: "the biggest among many people",
   fit: "plain",
+  proposed: true,
 });

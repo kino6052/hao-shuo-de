@@ -84,10 +84,10 @@ export default lessonModule({
       ru: "Мои родители рядом со мной.",
     },
     {
-      pinyin: "{{Word:he2zi}} {{word:zai4}} {{word:na4}}-{{word:bian1}}.",
-      hanzi: "盒子在那边。",
-      en: "The box is on that side.",
-      ru: "Коробка на той стороне.",
+      pinyin: "{{Word:bao1}} {{word:zai4}} {{word:na4}}-{{word:bian1}}.",
+      hanzi: "包在那边。",
+      en: "The bag is on that side.",
+      ru: "Сумка на той стороне.",
     },
     {
       pinyin: "{{Word:ta1}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:pang2bian1}}.",
@@ -96,18 +96,18 @@ export default lessonModule({
       ru: "Он рядом со мной.",
     },
     {
-      pinyin: "{{Word:zhi2wu4}} {{word:zai4}} {{word:he2zi}}-{{word:de}} {{word:pang2bian1}}.",
-      hanzi: "植物在盒子的旁边。",
-      en: "The plant is beside the box.",
-      ru: "Растение рядом с коробкой.",
+      pinyin: "{{Word:zhi2wu4}} {{word:zai4}} {{word:bao1}}-{{word:de}} {{word:pang2bian1}}.",
+      hanzi: "植物在包的旁边。",
+      en: "The plant is beside the bag.",
+      ru: "Растение рядом с сумкой.",
     },
   ],
   exercises: [
     {
-      en: "The animal is under the box.",
-      ru: "Животное под коробкой.",
-      answer: "{{Word:dong4}}-{{word:wu4}} {{word:zai4}} {{word:he2zi}}-{{word:de}} {{word:xia4}}-{{word:mian4}}.",
-      hanzi: "动物在盒子的下面。",
+      en: "The animal is under the bag.",
+      ru: "Животное под сумкой.",
+      answer: "{{Word:dong4}}-{{word:wu4}} {{word:zai4}} {{word:bao1}}-{{word:de}} {{word:xia4}}-{{word:mian4}}.",
+      hanzi: "动物在包的下面。",
     },
     {
       en: "I'm in front of you.",
@@ -134,10 +134,10 @@ export default lessonModule({
       hanzi: "男人在家的旁边。",
     },
     {
-      en: "The box is on this side.",
-      ru: "Коробка с этой стороны.",
-      answer: "{{Word:he2zi}} {{word:zai4}} {{word:zhe4}}-{{word:bian1}}.",
-      hanzi: "盒子在这边。",
+      en: "The bag is on this side.",
+      ru: "Сумка с этой стороны.",
+      answer: "{{Word:bao1}} {{word:zai4}} {{word:zhe4}}-{{word:bian1}}.",
+      hanzi: "包在这边。",
     },
     {
       en: "The sun is above us.",
@@ -153,8 +153,8 @@ export default lessonModule({
         en: "What's the difference between -{{word:li3}} and {{word:li3}}-{{word:mian4}}?",
         ru: "Чем -{{word:li3}} отличается от {{word:li3}}-{{word:mian4}}?",
       },
-      en: "-{{word:li3}} joins a place: {{word:he2zi}}-{{word:li3}}. {{word:li3}}-{{word:mian4}} can also stand on its own: {{Word:ta1}} {{word:zai4}} {{word:li3}}-{{word:mian4}} (She's inside).",
-      ru: "-{{word:li3}} присоединяется к месту: {{word:he2zi}}-{{word:li3}}. {{word:li3}}-{{word:mian4}} может стоять и само по себе: {{Word:ta1}} {{word:zai4}} {{word:li3}}-{{word:mian4}} (Она внутри).",
+      en: "-{{word:li3}} joins a place: {{word:bao1}}-{{word:li3}}. {{word:li3}}-{{word:mian4}} can also stand on its own: {{Word:ta1}} {{word:zai4}} {{word:li3}}-{{word:mian4}} (She's inside).",
+      ru: "-{{word:li3}} присоединяется к месту: {{word:bao1}}-{{word:li3}}. {{word:li3}}-{{word:mian4}} может стоять и само по себе: {{Word:ta1}} {{word:zai4}} {{word:li3}}-{{word:mian4}} (Она внутри).",
     },
   ],
 });

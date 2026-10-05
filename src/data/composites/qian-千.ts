@@ -8,8 +8,12 @@ export default composite({
   en: "thousand",
   ru: "тысяча",
   pos: "number",
-  hsd: ["{{word:shi2}}-ge {{word:shi2}}-ge {{word:shi2}}"],
-  tts: ["十个十个十"],
-  literal: "ten tens of ten",
+  hsd: [
+    "{{word:yi1}}-{{word:ling2}}-{{word:ling2}}-{{word:ling2}}",
+    "{{word:shi2}}-ge {{word:shi2}}-ge {{word:shi2}}",
+  ],
+  tts: ["一零零零", "十个十个十"],
+  literal: "one-zero-zero-zero / ten tens of tens",
   fit: "plain",
+  proposed: true,
 });

@@ -8,8 +8,11 @@ export default composite({
   en: "battery",
   ru: "батарейка",
   pos: "noun",
-  hsd: ["{{word:fang4}}-{{word:li4}}-{{word:de}} {{word:xiao3}}-{{word:de}} {{word:he2zi}}"],
-  tts: ["放力的小的盒子"],
-  literal: "a small box that holds power",
+  hsd: [
+    "{{word:fang4}}-{{word:li4}}-{{word:de}} {{word:xiao3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+  ],
+  tts: ["放力的小的东西"],
+  literal: "the small thing that keeps power",
   fit: "plain",
+  proposed: true,
 });

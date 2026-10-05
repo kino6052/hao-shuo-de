@@ -43,10 +43,10 @@ export default lessonModule({
       ru: "Я починил инструмент.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:ba3}} {{word:he2zi}} {{word:zuo4}} {{word:huai4}} {{word:le}}.",
-      hanzi: "他把盒子做坏了。",
-      en: "He broke the box.",
-      ru: "Он сломал коробку.",
+      pinyin: "{{Word:ta1}} {{word:ba3}} {{word:bao1}} {{word:zuo4}} {{word:huai4}} {{word:le}}.",
+      hanzi: "他把包做坏了。",
+      en: "He broke the bag.",
+      ru: "Он сломал сумку.",
     },
     {
       pinyin: "{{Word:ba3}} {{word:shui3}} {{word:zuo4}} {{word:re4}}.",
@@ -67,10 +67,10 @@ export default lessonModule({
       ru: "Он нагрел всю воду.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:ba3}} {{word:he2zi}} {{word:kai1}} {{word:le}}.",
-      hanzi: "我把盒子开了。",
-      en: "I got the box open.",
-      ru: "Я открыл коробку.",
+      pinyin: "{{Word:wo3}} {{word:ba3}} {{word:bao1}} {{word:kai1}} {{word:le}}.",
+      hanzi: "我把包开了。",
+      en: "I got the bag open.",
+      ru: "Я открыл сумку.",
     },
     {
       pinyin: "{{Word:ta1}} {{word:ba3}} {{word:huo3}} {{word:guan1}} {{word:le}}.",
@@ -87,10 +87,10 @@ export default lessonModule({
   ],
   exercises: [
     {
-      en: "I fixed the box.",
-      ru: "Я починил коробку.",
-      answer: "{{Word:wo3}} {{word:ba3}} {{word:he2zi}} {{word:zuo4}} {{word:hao3}} {{word:le}}.",
-      hanzi: "我把盒子做好了。",
+      en: "I fixed the bag.",
+      ru: "Я починил сумку.",
+      answer: "{{Word:wo3}} {{word:ba3}} {{word:bao1}} {{word:zuo4}} {{word:hao3}} {{word:le}}.",
+      hanzi: "我把包做好了。",
     },
     {
       en: "Turn the light off.",

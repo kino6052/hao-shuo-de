@@ -77,10 +77,10 @@ export default lessonModule({
       ru: "Я хочу это или то.",
     },
     {
-      pinyin: "{{Word:na2}} {{word:he2zi}} {{word:huo4}}-{{word:zhe3}} {{word:gong1}}-{{word:ju4}}.",
-      hanzi: "拿盒子或者工具。",
-      en: "Take the box or the tool.",
-      ru: "Возьми коробку или инструмент.",
+      pinyin: "{{Word:na2}} {{word:bao1}} {{word:huo4}}-{{word:zhe3}} {{word:gong1}}-{{word:ju4}}.",
+      hanzi: "拿包或者工具。",
+      en: "Take the bag or the tool.",
+      ru: "Возьми сумку или инструмент.",
     },
     {
       pinyin: "{{Word:wo3}} {{word:yao4}} {{word:hong2}}-{{word:se4}}-{{word:de}} {{word:huo4}}-{{word:zhe3}} {{word:lan2}}-{{word:se4}}-{{word:de}}.",
@@ -115,10 +115,10 @@ export default lessonModule({
       hanzi: "这个或者那个。",
     },
     {
-      en: "The box is between you and me.",
-      ru: "Коробка между тобой и мной.",
-      answer: "{{Word:he2zi}} {{word:zai4}} {{word:ni3}} {{word:he2}} {{word:wo3}} {{word:zhong1}}-{{word:jian1}}.",
-      hanzi: "盒子在你和我中间。",
+      en: "The bag is between you and me.",
+      ru: "Сумка между тобой и мной.",
+      answer: "{{Word:bao1}} {{word:zai4}} {{word:ni3}} {{word:he2}} {{word:wo3}} {{word:zhong1}}-{{word:jian1}}.",
+      hanzi: "包在你和我中间。",
     },
   ],
   faq: [

@@ -23,8 +23,8 @@ export default lessonModule({
       "**Вещи + {{word:yi1}}-{{word:yang4}} / {{word:yi1}}-{{word:yang4}}-{{word:de}} + существительное**",
     ],
     tldr: {
-      en: "{{word:yi1}}-{{word:yang4}} means the same. {{word:yi1}}-{{word:yang4}}-{{word:de}} {{word:he2zi}} is the same box.",
-      ru: "{{word:yi1}}-{{word:yang4}} значит «одинаковый». {{word:yi1}}-{{word:yang4}}-{{word:de}} {{word:he2zi}} — такая же коробка.",
+      en: "{{word:yi1}}-{{word:yang4}} means the same. {{word:yi1}}-{{word:yang4}}-{{word:de}} {{word:bao1}} is the same bag.",
+      ru: "{{word:yi1}}-{{word:yang4}} значит «одинаковый». {{word:yi1}}-{{word:yang4}}-{{word:de}} {{word:bao1}} — такая же сумка.",
     },
     necessity: {
       en: "Now you can say two things match.",

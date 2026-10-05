@@ -11,8 +11,8 @@ export default word("li3", {
   },
   necessity: {
     index: 5,
-    eng: "Inside, in: {{word:he2zi}}-{{word:li3}}, in the box. The most used place word.",
-    rus: "Внутри, в: {{word:he2zi}}-{{word:li3}} — в коробке. Самое частое слово места.",
+    eng: "Inside, in: {{word:bao1}}-{{word:li3}}, in the box. The most used place word.",
+    rus: "Внутри, в: {{word:bao1}}-{{word:li3}} — в коробке. Самое частое слово места.",
   },
   maps: "",
   senses: {

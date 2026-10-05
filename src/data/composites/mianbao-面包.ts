@@ -8,9 +8,9 @@ export default composite({
   en: "bread",
   ru: "хлеб",
   pos: "noun",
-  hsd: ["{{word:chi1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["吃的东西"],
+  hsd: ["{{word:mian4}}-{{word:bao1}}", "{{word:chi1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
+  tts: ["面包", "吃的东西"],
   literal: "food",
-  fit: "plain",
+  fit: "natural",
   proposed: true,
 });

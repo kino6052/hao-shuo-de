@@ -54,8 +54,8 @@ export default lessonModule({
   ],
   exercises: [
     {
-      en: "Answer \"Do you have a box?\" with yes.",
-      ru: "Ответьте «да» на вопрос «У тебя есть коробка?».",
+      en: "Answer \"Do you have a bag?\" with yes.",
+      ru: "Ответьте «да» на вопрос «У тебя есть сумка?».",
       answer: "{{Word:you3}}.",
       hanzi: "有。",
     },

@@ -8,11 +8,9 @@ export default composite({
   en: "pot",
   ru: "кастрюля",
   pos: "noun",
-  hsd: [
-    "{{word:zuo4}}-{{word:chi1}}-{{word:de}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:da4}}-{{word:de}} {{word:he2zi}}",
-  ],
-  tts: ["做吃的东西的大的盒子"],
-  literal: "the big container for cooking",
+  hsd: ["{{word:zuo4}}-{{word:fan4}}-{{word:yong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
+  tts: ["做饭用的东西"],
+  literal: "what you cook in",
   fit: "plain",
   proposed: true,
 });

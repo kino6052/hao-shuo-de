@@ -36,15 +36,15 @@ export default lessonModule({
     },
   },
   info: {
-    en: "{{word:zai4}} {{word:zhong1}}-{{word:jian1}}, in the middle: {{Word:he2zi}} {{word:zai4}} {{word:zhong1}}-{{word:jian1}}. (The box is in the middle.)",
-    ru: "{{word:zai4}} {{word:zhong1}}-{{word:jian1}} — посередине: {{Word:he2zi}} {{word:zai4}} {{word:zhong1}}-{{word:jian1}}. (Коробка посередине.)",
+    en: "{{word:zai4}} {{word:zhong1}}-{{word:jian1}}, in the middle: {{Word:bao1}} {{word:zai4}} {{word:zhong1}}-{{word:jian1}}. (The bag is in the middle.)",
+    ru: "{{word:zai4}} {{word:zhong1}}-{{word:jian1}} — посередине: {{Word:bao1}} {{word:zai4}} {{word:zhong1}}-{{word:jian1}}. (Сумка посередине.)",
   },
   examples: [
     {
-      pinyin: "{{Word:he2zi}} {{word:zai4}} {{word:zhong1}}-{{word:jian1}}.",
-      hanzi: "盒子在中间。",
-      en: "The box is in the middle.",
-      ru: "Коробка посередине.",
+      pinyin: "{{Word:bao1}} {{word:zai4}} {{word:zhong1}}-{{word:jian1}}.",
+      hanzi: "包在中间。",
+      en: "The bag is in the middle.",
+      ru: "Сумка посередине.",
     },
     {
       pinyin: "{{Word:ta1}} {{word:zai4}} {{word:wo3}}-{{word:men}} {{word:zhong1}}-{{word:jian1}}.",
@@ -53,10 +53,10 @@ export default lessonModule({
       ru: "Он между нами.",
     },
     {
-      pinyin: "{{Word:zhong1}}-{{word:jian1}}-{{word:de}} {{word:he2zi}} {{word:hen3}} {{word:da4}}.",
-      hanzi: "中间的盒子很大。",
-      en: "The box in the middle is big.",
-      ru: "Коробка посередине большая.",
+      pinyin: "{{Word:zhong1}}-{{word:jian1}}-{{word:de}} {{word:bao1}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "中间的包很大。",
+      en: "The bag in the middle is big.",
+      ru: "Сумка посередине большая.",
     },
     {
       pinyin: "{{Word:jia1}}-{{word:de}} {{word:zhong1}}-{{word:jian1}} {{word:you3}} {{word:zhi2wu4}}.",
@@ -73,10 +73,10 @@ export default lessonModule({
       hanzi: "谁在中间？",
     },
     {
-      en: "The box in the middle is small.",
-      ru: "Коробка посередине маленькая.",
-      answer: "{{Word:zhong1}}-{{word:jian1}}-{{word:de}} {{word:he2zi}} {{word:hen3}} {{word:xiao3}}.",
-      hanzi: "中间的盒子很小。",
+      en: "The bag in the middle is small.",
+      ru: "Сумка посередине маленькая.",
+      answer: "{{Word:zhong1}}-{{word:jian1}}-{{word:de}} {{word:bao1}} {{word:hen3}} {{word:xiao3}}.",
+      hanzi: "中间的包很小。",
     },
   ],
 });

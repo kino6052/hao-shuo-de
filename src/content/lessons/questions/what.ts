@@ -85,10 +85,10 @@ export default lessonModule({
       ru: "Кто это ест?",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:zhao3}} {{word:he2zi}}.",
-      hanzi: "我找盒子。",
-      en: "I'm looking for a box.",
-      ru: "Я ищу коробку.",
+      pinyin: "{{Word:wo3}} {{word:zhao3}} {{word:bao1}}.",
+      hanzi: "我找包。",
+      en: "I'm looking for a bag.",
+      ru: "Я ищу сумку.",
     },
     {
       pinyin: "{{Word:ni3}} {{word:mai3}} {{word:shen2me}}?",
@@ -97,10 +97,10 @@ export default lessonModule({
       ru: "Что ты покупаешь?",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:mai3}} {{word:he2zi}}.",
-      hanzi: "我买盒子。",
-      en: "I'm buying a box.",
-      ru: "Я покупаю коробку.",
+      pinyin: "{{Word:wo3}} {{word:mai3}} {{word:bao1}}.",
+      hanzi: "我买包。",
+      en: "I'm buying a bag.",
+      ru: "Я покупаю сумку.",
     },
     {
       pinyin: "{{Word:ta1}} {{word:mai3}} {{word:gong1}}-{{word:ju4}} {{word:ma}}?",

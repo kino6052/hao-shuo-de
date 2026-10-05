@@ -288,11 +288,11 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:ta1}} {{word:ba3}} {{word:he2zi}} {{word:zuo4}}-{{word:huai4}} {{word:le}}.",
-    ttsText: "他把盒子做坏了。",
-    en: ["The box was broken by him (literally: he broke the box)."],
+    pinyin: "{{Word:ta1}} {{word:ba3}} {{word:bao1}} {{word:zuo4}}-{{word:huai4}} {{word:le}}.",
+    ttsText: "他把包做坏了。",
+    en: ["The bag was broken by him (literally: he broke the bag)."],
     zh: [],
-    ru: ["Коробку сломал он (дословно: он сломал коробку)."],
+    ru: ["Сумку сломал он (дословно: он сломал сумку)."],
   },
   {
     type: "prose",

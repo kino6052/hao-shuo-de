@@ -22,11 +22,11 @@ export default lesson(meta.id, {
   summary: {
     en: [
       "We often need to say where things are.",
-      "In this lesson, you'll be able to say \"The box is on the floor.\", \"inside the house\", \"in front of me\", and \"Where is it?\"",
+      "In this lesson, you'll be able to say \"The bag is on the floor.\", \"inside the house\", \"in front of me\", and \"Where is it?\"",
     ],
     ru: [
       "Нам часто нужно сказать, где что находится.",
-      "В этом уроке вы научитесь говорить «Коробка на полу.», «в доме», «передо мной» и «Где это?»",
+      "В этом уроке вы научитесь говорить «Сумка на полу.», «в доме», «передо мной» и «Где это?»",
     ],
   },
   modules: [

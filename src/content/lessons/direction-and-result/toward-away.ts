@@ -59,10 +59,10 @@ export default lessonModule({
       ru: "Я принёс инструмент.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:ba3}} {{word:he2zi}} {{word:na2}}-{{word:qu4}} {{word:le}}.",
-      hanzi: "他把盒子拿去了。",
-      en: "He took the box away.",
-      ru: "Он унёс коробку.",
+      pinyin: "{{Word:ta1}} {{word:ba3}} {{word:bao1}} {{word:na2}}-{{word:qu4}} {{word:le}}.",
+      hanzi: "他把包拿去了。",
+      en: "He took the bag away.",
+      ru: "Он унёс сумку.",
     },
     {
       pinyin: "{{Word:ba3}} {{word:ni3}}-{{word:de}} {{word:yi1fu}} {{word:na2}}-{{word:qu4}}!",

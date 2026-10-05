@@ -5,8 +5,8 @@ export default word("zi", {
   hanzi: "子",
   pos: { eng: "suffix", rus: "суффикс", zh: "后缀" },
   definition: {
-    eng: "a light ending that makes a thing word: {{word:hai2}}-{{light:zi}}, child; {{word:er2}}-{{light:zi}}, son; {{word:yang4}}-{{light:zi}}, the way something looks; {{word:ri4}}-{{light:zi}}, days, life",
-    rus: "лёгкое окончание существительных: {{word:hai2}}-{{light:zi}} — ребёнок; {{word:er2}}-{{light:zi}} — сын; {{word:yang4}}-{{light:zi}} — вид; {{word:ri4}}-{{light:zi}} — дни, жизнь",
+    eng: "a light ending that makes a thing word: {{word:hai2}}-{{light:zi}}, child; {{word:nan2}}-{{word:hai2}}-{{light:zi}}, son; {{word:yang4}}-{{light:zi}}, the way something looks; {{word:ri4}}-{{light:zi}}, days, life",
+    rus: "лёгкое окончание существительных: {{word:hai2}}-{{light:zi}} — ребёнок; {{word:nan2}}-{{word:hai2}}-{{light:zi}} — сын; {{word:yang4}}-{{light:zi}} — вид; {{word:ri4}}-{{light:zi}} — дни, жизнь",
     zh: "子（名词后缀）",
   },
   necessity: {

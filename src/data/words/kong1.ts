@@ -5,8 +5,8 @@ export default word("kong1", {
   hanzi: "空",
   pos: { eng: "adjective", rus: "прилагательное", zh: "形容词" },
   definition: {
-    eng: "empty (e.g. {{word:he2zi}} {{word:shi4}} {{word:kong1}}-{{word:de}}, \"the box is empty\"; {{word:kong1}}-{{word:jian1}}, \"space, room\")",
-    rus: "пустой (например, {{word:he2zi}} {{word:shi4}} {{word:kong1}}-{{word:de}} — «коробка пустая»; {{word:kong1}}-{{word:jian1}} — «пространство, место»)",
+    eng: "empty (e.g. {{word:bao1}} {{word:shi4}} {{word:kong1}}-{{word:de}}, \"the box is empty\"; {{word:kong1}}-{{word:jian1}}, \"space, room\")",
+    rus: "пустой (например, {{word:bao1}} {{word:shi4}} {{word:kong1}}-{{word:de}} — «коробка пустая»; {{word:kong1}}-{{word:jian1}} — «пространство, место»)",
     zh: "空",
   },
   necessity: {

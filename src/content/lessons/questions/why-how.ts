@@ -60,10 +60,10 @@ export default lessonModule({
       ru: "Почему ты не ешь?",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:wei4}}-{{word:shen2me}} {{word:zhao3}} {{word:he2zi}}?",
-      hanzi: "他为什么找盒子？",
-      en: "Why is he looking for a box?",
-      ru: "Почему он ищет коробку?",
+      pinyin: "{{Word:ta1}} {{word:wei4}}-{{word:shen2me}} {{word:zhao3}} {{word:bao1}}?",
+      hanzi: "他为什么找包？",
+      en: "Why is he looking for a bag?",
+      ru: "Почему он ищет сумку?",
     },
     {
       pinyin: "{{Word:ni3}} {{word:wei4}}-{{word:shen2me}} {{word:wen4}}?",

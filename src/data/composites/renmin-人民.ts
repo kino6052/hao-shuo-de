@@ -8,8 +8,9 @@ export default composite({
   en: "the people",
   ru: "народ",
   pos: "noun",
-  hsd: ["{{word:da4}} {{word:qun2}}-{{word:de}} {{word:ren2}}"],
-  tts: ["大群的人"],
-  literal: "the people of the big group",
+  hsd: ["{{word:guo2}}-{{word:de}} {{word:ren2}}"],
+  tts: ["国的人"],
+  literal: "the country's people",
   fit: "plain",
+  proposed: true,
 });

@@ -8,12 +8,9 @@ export default composite({
   en: "son",
   ru: "сын",
   pos: "noun",
-  hsd: [
-    "{{word:er2}}-{{light:zi}}",
-    "{{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:xiao3}}-{{word:de}} {{word:nan2}}-{{word:ren2}}",
-  ],
-  tts: ["儿子", "爸爸妈妈的小的男人"],
-  literal: "the parents' little man",
-  fit: "natural",
+  hsd: ["{{word:nan2}}-{{word:hai2}}-{{light:zi}}"],
+  tts: ["男孩子"],
+  literal: "boy (said of your son)",
+  fit: "plain",
   proposed: true,
 });

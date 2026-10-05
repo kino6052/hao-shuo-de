@@ -19,11 +19,11 @@ export default lesson(meta.id, {
   summary: {
     en: [
       "Colors help us tell things apart.",
-      "In this lesson, you'll be able to say \"a red box\", \"The water is blue.\", and \"What color is it?\"",
+      "In this lesson, you'll be able to say \"a red bag\", \"The water is blue.\", and \"What color is it?\"",
     ],
     ru: [
       "Цвета помогают отличать вещи друг от друга.",
-      "В этом уроке вы научитесь говорить «красная коробка», «Вода синяя.» и «Какого это цвета?»",
+      "В этом уроке вы научитесь говорить «красная сумка», «Вода синяя.» и «Какого это цвета?»",
     ],
   },
   modules: [

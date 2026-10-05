@@ -51,10 +51,10 @@ export default lessonModule({
       ru: "Два животных.",
     },
     {
-      pinyin: "{{Word:san1}}-ge {{word:he2zi}}.",
-      hanzi: "三个盒子。",
-      en: "Three boxes.",
-      ru: "Три коробки.",
+      pinyin: "{{Word:san1}}-ge {{word:bao1}}.",
+      hanzi: "三个包。",
+      en: "Three bags.",
+      ru: "Три сумки.",
     },
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:si4}}-ge {{word:gong1}}-{{word:ju4}}.",
@@ -81,18 +81,18 @@ export default lessonModule({
       ru: "Десять растений.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:mai3}} {{word:san1}}-ge {{word:he2zi}}.",
-      hanzi: "我买三个盒子。",
-      en: "I'm buying three boxes.",
-      ru: "Я покупаю три коробки.",
+      pinyin: "{{Word:wo3}} {{word:mai3}} {{word:san1}}-ge {{word:bao1}}.",
+      hanzi: "我买三个包。",
+      en: "I'm buying three bags.",
+      ru: "Я покупаю три сумки.",
     },
   ],
   exercises: [
     {
-      en: "one box",
-      ru: "одна коробка",
-      answer: "{{Word:yi1}}-ge {{word:he2zi}}.",
-      hanzi: "一个盒子。",
+      en: "one bag",
+      ru: "одна сумка",
+      answer: "{{Word:yi1}}-ge {{word:bao1}}.",
+      hanzi: "一个包。",
     },
     {
       en: "two people",

@@ -71,10 +71,10 @@ export default lessonModule({
       ru: "Воды много, я не могу всё выпить.",
     },
     {
-      pinyin: "{{Word:he2zi}} {{word:hen3}} {{word:da4}}, {{word:wo3}} {{word:na2}}-{{word:bu4}}-{{word:dong4}}.",
-      hanzi: "盒子很大，我拿不动。",
-      en: "The box is too big. I can't lift it.",
-      ru: "Коробка слишком большая, я не могу её поднять.",
+      pinyin: "{{Word:bao1}} {{word:hen3}} {{word:da4}}, {{word:wo3}} {{word:na2}}-{{word:bu4}}-{{word:dong4}}.",
+      hanzi: "包很大，我拿不动。",
+      en: "The bag is too big. I can't lift it.",
+      ru: "Сумка слишком большая, я не могу её поднять.",
     },
     {
       pinyin: "{{Word:kou3}} {{word:hen3}} {{word:xiao3}}, {{word:wo3}}-{{word:men}} {{word:jin4}}-{{word:bu4}}-{{word:qu4}}.",

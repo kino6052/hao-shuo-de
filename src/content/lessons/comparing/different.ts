@@ -106,10 +106,10 @@ export default lessonModule({
   ],
   exercises: [
     {
-      en: "I want a different box.",
-      ru: "Мне нужна другая коробка.",
-      answer: "{{Word:wo3}} {{word:yao4}} {{word:bu4}}-{{word:yi1}}-{{word:yang4}}-{{word:de}} {{word:he2zi}}.",
-      hanzi: "我要不一样的盒子。",
+      en: "I want a different bag.",
+      ru: "Мне нужна другая сумка.",
+      answer: "{{Word:wo3}} {{word:yao4}} {{word:bu4}}-{{word:yi1}}-{{word:yang4}}-{{word:de}} {{word:bao1}}.",
+      hanzi: "我要不一样的包。",
     },
     {
       en: "I want something else.",

@@ -8,8 +8,9 @@ export default composite({
   en: "television",
   ru: "телевизор",
   pos: "noun",
-  hsd: ["{{word:kan4}}-{{word:de}} {{word:he2zi}}"],
-  tts: ["看的盒子"],
-  literal: "a box you watch",
+  hsd: ["{{word:kan4}}-{{word:de}} {{word:ji1}}"],
+  tts: ["看的机"],
+  literal: "the watching machine",
   fit: "plain",
+  proposed: true,
 });
