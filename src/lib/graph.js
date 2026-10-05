@@ -136,3 +136,34 @@ export function neighbourSimilarity(g, a, b) {
   const d = norm(va, b) * norm(vb, a);
   return d ? dot / d : 0;
 }
+
+// Pure structure words: they glue nearly every composite, so they'd say
+// nothing about which meanings go together.
+export const STRUCTURE_WORDS = ['de', 'le', 'ma', 'men'];
+
+// -> the word graph with its families, as the report and the Word Map page
+// show them: { graph, reach, parts, participation, clusters, alone }.
+// clusters: [{ index, ids }] largest first, ids by how central they are to
+// the family (the first three name it); alone: words no composite uses.
+export function analyzeWords({ dictionary, composites }, { resolution = 1 } = {}) {
+  const skip = STRUCTURE_WORDS.filter((id) => dictionary.words[id]);
+  const { graph, reach } = wordGraph({ dictionary, composites }, { skip });
+  const parts = clusters(graph, { resolution });
+  const inner = new Map();
+  graph.forEachNode((n) => {
+    let s = 0;
+    graph.forEachEdge(n, (e, a, x, y) => {
+      if (parts.get(x === n ? y : x) === parts.get(n)) s += a.weight;
+    });
+    inner.set(n, s);
+  });
+  const byCluster = new Map();
+  for (const [id, c] of parts) byCluster.set(c, [...(byCluster.get(c) ?? []), id]);
+  const all = [...byCluster.values()].map((ids) => ids.sort((a, b) => inner.get(b) - inner.get(a))).sort((a, b) => b.length - a.length);
+  const clustersList = all.filter((ids) => ids.length > 1).map((ids, index) => ({ index, ids }));
+  // renumber parts so a word's family is its index in the list (-1 when alone)
+  const family = new Map();
+  clustersList.forEach((c) => c.ids.forEach((id) => family.set(id, c.index)));
+  for (const id of parts.keys()) if (!family.has(id)) family.set(id, -1);
+  return { graph, reach, parts: family, participation: participation(graph, parts), clusters: clustersList, alone: all.filter((ids) => ids.length === 1).flat(), skip };
+}

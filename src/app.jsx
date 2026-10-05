@@ -13,6 +13,7 @@ import { CategoricalDictionarySection } from './components/CategoricalDictionary
 import { CompositeDictionarySection } from './components/CompositeDictionarySection.jsx';
 import { SentenceBuilder } from './components/SentenceBuilder.jsx';
 import { WordBuilder } from './components/WordBuilder.jsx';
+import { WordMap } from './components/WordMap.jsx';
 import { PageNav } from './components/PageNav.jsx';
 import { TldrSummary } from './components/TldrSummary.jsx';
 import { MissingTranslationBanner } from './components/MissingTranslationBanner.jsx';
@@ -53,6 +54,14 @@ function renderContent(s, lang) {
       <>
         {s.bodyHtml && <div class="prose-body" dangerouslySetInnerHTML={{ __html: s.bodyHtml }} />}
         <SentenceBuilder lang={lang} />
+      </>
+    );
+  }
+  if (type === 'word-map') {
+    return (
+      <>
+        {s.bodyHtml && <div class="prose-body" dangerouslySetInnerHTML={{ __html: s.bodyHtml }} />}
+        <WordMap lang={lang} />
       </>
     );
   }

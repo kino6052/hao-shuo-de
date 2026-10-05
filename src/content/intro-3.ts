@@ -189,6 +189,11 @@ export const CHAPTER_BLURBS: Record<string, LangText> = {
     zh: [],
     ru: ["инструмент, чтобы составить слово, которого нет в Hǎo-shuō-de, отвечая на вопросы вроде «какой?» и «где?»."],
   },
+  "word-map": {
+    en: ["a map of all the words, where families of words that build things together show up as clusters."],
+    zh: [],
+    ru: ["карта всех слов, где семьи слов, которые строят что-то вместе, видны как скопления."],
+  },
   "appendix-minimality": {
     en: ["why so few words can say so much."],
     zh: [],

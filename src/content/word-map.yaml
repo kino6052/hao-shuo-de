@@ -1,0 +1,27 @@
+id: word-map
+type: word-map
+order: 2
+title:
+  eng: "Word Map"
+  rus: "Карта слов"
+  zh: ""
+
+summary:
+  eng: "All the words as one map: words that build composites together sit close, so families of words show up as clusters."
+  rus: "Все слова на одной карте: слова, которые вместе образуют составные слова, стоят рядом, и семьи слов видны как скопления."
+  zh: ""
+
+blocks:
+  - type: prose
+    text:
+      eng: "Each dot is a word. Two words are linked when composites use them together, and the more often they do, the closer they sit. The size of a dot is how many composites use the word. Words that keep building things together form a family, shown in one colour: a family is a part of life the language talks about with the same few words."
+      rus: "Каждая точка — слово. Два слова связаны, если составные слова используют их вместе, и чем чаще, тем ближе они стоят. Размер точки — сколько составных слов используют это слово. Слова, которые постоянно строят что-то вместе, образуют семью одного цвета: это часть жизни, о которой язык говорит одними и теми же словами."
+      zh: ""
+    tldr:
+      eng: "A map of the words: families of words that build things together."
+      rus: "Карта слов: семьи слов, которые строят что-то вместе."
+      zh: ""
+    necessity:
+      eng: "It shows which words carry the language and which hardly connect."
+      rus: "Она показывает, какие слова держат язык, а какие почти ни с чем не связаны."
+      zh: ""
