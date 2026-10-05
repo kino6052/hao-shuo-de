@@ -51,7 +51,8 @@ import { wordHanzi } from '../src/lib/hanzi-map.js';
 import dictionaryData from '../src/data/dictionary.ts';
 import compositesData from '../src/data/composites.ts';
 import { wordRefIds, soleWordRef } from '../src/lib/word-refs.js';
-import { senseKey, chainSenses, refSenses } from '../src/lib/senses.js';
+import { senseKey, refSenses } from '../src/lib/senses.js';
+import { compoundSplitter } from '../src/lib/compound-rule.js';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -233,25 +234,7 @@ for (const n of [1, 2, 3]) {
     if (unknown.length) errors.push(`${where}: ${unknown.map((w) => w.token).join(', ')} not in the dictionary: "${e.hsd}"`);
   }
   // A Chinese word made of Hao-shuo-de words is said with that compound.
-  // A sense's hanzi counts only inside the compounds it lists (时 is shí only in shí-jiān ...).
-  const byHanzi = new Map();
-  for (const [id, h] of wordHanzi()) if (!byHanzi.has(h)) byHanzi.set(h, { id });
-  for (const [id, w] of Object.entries(dictionary))
-    for (const [sense, s] of Object.entries(w.senses ?? {})) if (!byHanzi.has(s.hanzi)) byHanzi.set(s.hanzi, { id, sense });
-  const longest = Math.max(...[...byHanzi.keys()].map((h) => h.length));
-  const compound = (zh) => {
-    const parts = [];
-    for (let i = 0; i < zh.length; ) {
-      let n = Math.min(longest, zh.length - i);
-      while (n > 0 && !byHanzi.has(zh.slice(i, i + n))) n--;
-      if (!n) return null;
-      parts.push(byHanzi.get(zh.slice(i, i + n)));
-      i += n;
-    }
-    const ids = parts.map((p) => p.id);
-    const senses = chainSenses(ids, dictionary);
-    return parts.every((p, k) => !p.sense || senses[k] === p.sense) ? ids : null;
-  };
+  const compound = compoundSplitter(dictionary);
   for (const e of entries) {
     if (!e.hsd || e.fit === 'name' || e.fit === 'skip') continue;
     const ids = compound(e.zh);

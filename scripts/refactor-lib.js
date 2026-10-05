@@ -20,7 +20,8 @@ import { readdirSync, readFileSync, writeFileSync, unlinkSync, existsSync, mkdir
 import { resolve, dirname, relative, extname } from 'path';
 import { fileURLToPath } from 'url';
 import { tsLiteral, compositeFileName } from './data-files.js';
-import { wordRefRe, toneless } from '../src/lib/word-refs.js';
+import { wordRefRe, wordRefIds, toneless } from '../src/lib/word-refs.js';
+import { compoundSplitter, compoundForm } from '../src/lib/compound-rule.js';
 import { LESSON_IDS } from '../src/content/book.js';
 
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -835,6 +836,44 @@ const OPS = {
     if (op.remove) r.pairs = r.pairs.filter((p) => !(p.includes(op.remove[0]) && p.includes(op.remove[1])));
     if (op.add) r.pairs.push(op.add);
     ws.setData(path, r);
+  },
+
+  // { op: "composite", zh, set?: { fit, role, transparent, ... }, addForm?: [form, hanzi], create?: { rank, phase, py, en, ru } }
+  composite(ws, op) {
+    let found = ws.composites().find(({ entry }) => entry.zh === op.zh);
+    if (!found) {
+      if (!op.create) throw new Error(`composite: no entry ${op.zh} (give create: { rank, phase, py, en, ru } to add one)`);
+      found = { path: null, entry: { ...op.create, zh: op.zh, proposed: true } };
+    }
+    const e = { ...found.entry, ...(op.set ?? {}) };
+    if (op.addForm) {
+      const [form, hanzi] = op.addForm;
+      if (!(e.hsd ?? []).includes(form)) {
+        e.hsd = [...(e.hsd ?? []), form];
+        e.tts = [...(e.tts ?? []), hanzi];
+      }
+    }
+    if (found.path) ws.setComposite(found.path, e);
+    else ws.set(`${COMPOSITES_DIR}${compositeFileName(e)}`, `import { composite } from "../../lib/composite.ts";\n\nexport default composite(${tsLiteral(e)});\n`);
+  },
+
+  // { op: "compounds" } -- the compound rule over every composite: a Chinese
+  // word now made of Hao-shuo-de words gets that compound as its first form
+  // (marked proposed), and its old forms follow after " / " as constructive ones.
+  compounds(ws) {
+    const words = Object.fromEntries(ws.wordIds().map((id) => [id, ws.word(id)]));
+    const split = compoundSplitter(words);
+    for (const { path, entry } of ws.composites()) {
+      if (entry.fit === 'name' || entry.fit === 'skip') continue;
+      const ids = split(entry.zh);
+      if (!ids) continue;
+      const forms = entry.hsd ?? [];
+      if ((entry.tts ?? []).includes(entry.zh) || forms.some((f) => wordRefIds(f).join(' ') === ids.join(' '))) continue;
+      const form = compoundForm(ids);
+      const e = { ...entry, hsd: [form, ...forms], tts: [entry.zh, ...(entry.tts ?? [])], fit: ids.length === 1 ? 'word' : 'natural', proposed: true };
+      ws.setComposite(path, e);
+      ws.note('composite', `${entry.zh} ${entry.en}: ${ids.map((id) => words[id].term).join('-')} first${forms.length ? ` (then ${forms.length} older form(s))` : ''}`);
+    }
   },
 
   // { op: "text", file, from, to, all? } -- a hand edit kept in the list
