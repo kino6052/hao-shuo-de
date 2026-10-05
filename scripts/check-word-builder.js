@@ -33,7 +33,7 @@ const list = process.argv.includes("--list");
 
 const lessons = [];
 for (const id of LESSON_IDS) lessons.push(await importLessonFile(id, "index.ts"));
-const hanzi = hanziSystem(wordHanzi());
+const hanzi = hanziSystem(wordHanzi(), dict);
 const pinyin = (form) => replaceWordRefs(form, (id, kind) => (dict.words[id] ? refTerm(dict.words[id].term, kind) : id));
 
 const errors = [];

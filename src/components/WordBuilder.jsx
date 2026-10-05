@@ -32,9 +32,9 @@ import {
 import styles from "./WordBuilder.module.css";
 
 const PINYIN = pinyinSystem(dictionary);
-const HANZI = hanziSystem(WORD_HANZI);
+const HANZI = hanziSystem(WORD_HANZI, dictionary);
 
-const term = (id) => dictionary.words[id]?.term || id;
+const term = (id) => dictionary.words[id]?.term || dictionary.units[id]?.term || id;
 const choicePinyin = (key, value) => CHOICES[key][value].map(term).join("-");
 const lowerFirst = (s) => s.charAt(0).toLowerCase() + s.slice(1);
 // A composite dictionary entry's word in the reader's language.

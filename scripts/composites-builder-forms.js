@@ -34,7 +34,7 @@ export function pendingRewrites(entries, hanzi) {
     entry.hsd.split(" / ").forEach((form, alt) => {
       const built = builderForm(dict, form);
       if (!built || (!built.same && !REWRITTEN_FITS.has(entry.fit))) return;
-      const want = render(built.tree, hanziSystem(hanzi));
+      const want = render(built.tree, hanziSystem(hanzi, dict));
       if (!built.same || tts[alt] !== want) out.push({ entry, alt, from: form, to: built.form, tts: want });
     });
   }

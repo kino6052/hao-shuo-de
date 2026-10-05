@@ -66,3 +66,39 @@ describe("the composite dictionary", () => {
     expect(py(treeOfForm(dict, fish.hsd))).toBe("zài-shuǐ-lǐ-de dòngwù");
   });
 });
+
+describe("units", () => {
+  // A ready-made unit: dōng-xi, "thing", made of two words (src/lib/composite.ts, role).
+  const unitDict = {
+    ...dict,
+    words: {
+      ...dict.words,
+      dong1: { term: "dōng", hanzi: "东", pos: { eng: "noun" }, definition: { eng: "east" } },
+      xi1: { term: "xī", hanzi: "西", pos: { eng: "noun" }, definition: { eng: "west" } },
+    },
+    units: {
+      东西: { term: "dōng-xi", form: "{{word:dong1}}-{{light:xi1}}", hanzi: "东西", role: "noun", pos: { eng: "noun" }, definition: { eng: "thing", rus: "вещь", zh: "东西" } },
+    },
+  };
+
+  test("a unit's hyphen-joined words read as the unit", () => {
+    expect(formWords("{{word:da4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}", unitDict)).toEqual({
+      ids: ["da4", "de", "东西"],
+      glued: [false, true, false],
+    });
+    expect(formWords("{{word:dong1}} {{light:xi1}}", unitDict).ids).toEqual(["dong1", "xi1"]);
+  });
+
+  test("a unit is offered, written and read back like a word", async () => {
+    const { roleOf, poolFor, refSystem, hanziSystem, newNode, firstSense } = await import("./word-builder.js");
+    expect(roleOf(unitDict, "东西")).toBe("noun");
+    expect(poolFor(unitDict, "noun")).toContain("东西");
+    expect(firstSense(unitDict, "东西", "eng")).toBe("thing");
+    const tree = { ...newNode(unitDict, "东西"), answers: { kind: { node: newNode(unitDict, "da4") } } };
+    const refs = render(tree, refSystem(unitDict));
+    expect(refs).toContain("{{word:dong1}}-{{light:xi1}}");
+    expect(render(tree, pinyinSystem(unitDict))).toContain("dōng-xi");
+    expect(render(tree, hanziSystem(new Map([["da4", "大"], ["de", "的"]]), unitDict))).toContain("东西");
+    expect(treeOfForm(unitDict, refs)?.id).toBe("东西");
+  });
+});

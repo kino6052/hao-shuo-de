@@ -31,6 +31,12 @@ export interface Composite {
    * constructive form after it is needed (check-book).
    */
   transparent?: boolean;
+  /**
+   * Offered by the Word Builder as one ready-made word (a unit), with this
+   * role: the split-up dōng-xi is still "thing", a noun. src/data/dictionary.ts
+   * collects these into `units`, keyed by the hanzi.
+   */
+  role?: "noun" | "verb" | "adj" | "color";
   /** Written or changed by Claude, waiting for the author's review. */
   proposed?: boolean;
 }

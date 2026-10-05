@@ -21,8 +21,9 @@ const MAX_READINGS = 40;
 
 // -> { ids, glued } for a form: its word ids, and for each one whether a
 // hyphen (not a space) joins it to the word before; or null if any piece of
-// the form isn't a dictionary word.
-export function formWords(form) {
+// the form isn't a dictionary word. A unit's words, joined by hyphens, read
+// as the unit (dict.units, keyed by hanzi).
+export function formWords(form, dict) {
   const pieces = form.trim().split(/([\s-]+)/);
   const ids = [];
   const glued = [];
@@ -31,6 +32,22 @@ export function formWords(form) {
     if (!id) return null;
     ids.push(id);
     glued.push(k > 0 && !/\s/.test(pieces[k - 1]));
+  }
+  return mergeUnits({ ids, glued }, dict);
+}
+
+// -> the words with each unit's run of hyphen-joined words read as the unit.
+function mergeUnits(words, dict) {
+  const units = Object.entries(dict?.units ?? {}).map(([key, u]) => ({ key, parts: formWords(u.form)?.ids ?? [] })).filter((u) => u.parts.length > 1);
+  if (!units.length) return words;
+  units.sort((a, b) => b.parts.length - a.parts.length);
+  const ids = [];
+  const glued = [];
+  for (let i = 0; i < words.ids.length; ) {
+    const u = units.find((u) => u.parts.every((p, k) => words.ids[i + k] === p && (k === 0 || words.glued[i + k])));
+    ids.push(u ? u.key : words.ids[i]);
+    glued.push(words.glued[i]);
+    i += u ? u.parts.length : 1;
   }
   return { ids, glued };
 }
@@ -188,7 +205,7 @@ function* wholeReadings(dict, words) {
 
 // -> every whole reading of a form as a Word Builder tree (at most a few dozen).
 export function readForm(dict, form) {
-  const words = formWords(form);
+  const words = formWords(form, dict);
   if (!words?.ids.length) return [];
   const trees = [];
   try {
@@ -206,9 +223,9 @@ export function readForm(dict, form) {
 // question answered), or null. Stops at the first one, so it's quick enough
 // to run over the whole dictionary in the browser.
 export function treeOfForm(dict, form) {
-  const words = formWords(form);
+  const words = formWords(form, dict);
   if (!words?.ids.length) return null;
-  const sys = refSystem();
+  const sys = refSystem(dict);
   try {
     for (const tree of wholeReadings(dict, words)) {
       if (Object.keys(tree.answers).length && render(tree, sys) === form) return tree;
@@ -245,9 +262,9 @@ function keepsJoins(oldWords, newWords) {
 // A noun with no -de at all is a word of its own (dà bùfen, "most";
 // xiǎo-xīn, "careful"), not a description, so it's left alone.
 export function builderForm(dict, form) {
-  const words = formWords(form);
+  const words = formWords(form, dict);
   if (!words) return null;
-  const sys = refSystem();
+  const sys = refSystem(dict);
   const readings = readForm(dict, form)
     .filter((tree) => Object.keys(tree.answers).length > 0)
     .filter((tree) => tree.role === "verb" || words.ids.includes("de"))
@@ -261,7 +278,7 @@ export function builderForm(dict, form) {
   // noun the Word Builder can't say ("the one who knows a lot"), so it's
   // only taken as written, never rewritten.
   if (reading.tree.role === "verb" && words.ids.includes("de")) return null;
-  if (!keepsJoins(words, formWords(reading.form))) return null;
+  if (!keepsJoins(words, formWords(reading.form, dict))) return null;
   return { ...reading, same: false };
 }
 

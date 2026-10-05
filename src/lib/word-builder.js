@@ -149,9 +149,15 @@ const NOT_OFFERED = new Set([
 // Words whose part of speech in the dictionary doesn't say what they are here.
 const ROLE_OVERRIDES = { jue2de: "verb", fang1fa3: "noun" };
 
+// A unit is a ready-made word made of words: a composite with a role
+// (src/lib/composite.ts), like dōng-xi, "thing". dict.units holds them, keyed
+// by their hanzi, and the builder offers and writes them like one word.
+const unitOf = (dict, id) => dict?.units?.[id];
+
 // -> 'noun' | 'verb' | 'adj' | 'color' | null, from the first part of speech
 // the dictionary lists for the word ("verb/noun" -> verb).
 export function roleOf(dict, id) {
+  if (unitOf(dict, id)) return unitOf(dict, id).role;
   if (COLORS.has(id)) return "color";
   if (ROLE_OVERRIDES[id]) return ROLE_OVERRIDES[id];
   const first = (dict.words[id]?.pos?.eng || "").split("/")[0].trim();
@@ -169,7 +175,7 @@ export function isOffered(id) {
 // -> every dictionary word id that can take `role` (the base-word search
 // offers nouns and verbs together).
 export function poolFor(dict, ...roles) {
-  return Object.keys(dict.words).filter((id) => isOffered(id) && roles.includes(roleOf(dict, id)));
+  return [...Object.keys(dict.words), ...Object.keys(dict.units ?? {})].filter((id) => isOffered(id) && roles.includes(roleOf(dict, id)));
 }
 
 // -- Building the tree ------------------------------------------------------
@@ -197,7 +203,7 @@ export function questionOf(role, key) {
 // everything without spaces.
 export function pinyinSystem(dict) {
   return {
-    word: (id) => dict.words[id]?.term || id,
+    word: (id) => dict.words[id]?.term || unitOf(dict, id)?.term || id,
     wayDe: dict.words.de?.term || "de",
     hyphen: (parts) => parts.filter(Boolean).join("-"),
     space: (parts) => parts.filter(Boolean).join(" "),
@@ -207,9 +213,9 @@ export function pinyinSystem(dict) {
 
 // Word references ({{word:shui3}}), the way src/data/composites/ writes
 // its forms, joined like pinyin.
-export function refSystem() {
+export function refSystem(dict) {
   return {
-    word: (id) => `{{word:${id}}}`,
+    word: (id) => unitOf(dict, id)?.form ?? `{{word:${id}}}`,
     wayDe: "{{word:de}}",
     hyphen: (parts) => parts.filter(Boolean).join("-"),
     space: (parts) => parts.filter(Boolean).join(" "),
@@ -217,10 +223,11 @@ export function refSystem() {
   };
 }
 
-// `hanzi` is a Map of word id -> characters (from the lessons' word cards).
-export function hanziSystem(hanzi) {
+// `hanzi` is a Map of word id -> characters (src/lib/hanzi-map.js); a unit
+// (from `dict`) writes its own hanzi.
+export function hanziSystem(hanzi, dict) {
   return {
-    word: (id) => hanzi.get(id) || "",
+    word: (id) => hanzi.get(id) || unitOf(dict, id)?.hanzi || "",
     wayDe: "地",
     hyphen: (parts) => parts.filter(Boolean).join(""),
     space: (parts) => parts.filter(Boolean).join(""),
@@ -304,7 +311,7 @@ export function render(node, sys) {
 
 // The first sense of a word's definition: "animal, land mammal" -> "animal".
 export function firstSense(dict, id, lang) {
-  const w = dict.words[id];
+  const w = dict.words[id] ?? unitOf(dict, id);
   const def = w?.definition?.[lang] || w?.definition?.eng || "";
   return def
     .replace(wordRefRe(), (_, kind, ref) => (dict.words[ref] ? refTerm(dict.words[ref].term, kind) : ref))
