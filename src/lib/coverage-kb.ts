@@ -18,7 +18,7 @@ export interface CoverageItem {
   lesson?: string;
   /** ... or the "lesson/module" that teaches it. */
   taught?: string;
-  example?: string;
+  example?: { eng: string; rus: string };
 }
 
 export interface CoverageGroup {

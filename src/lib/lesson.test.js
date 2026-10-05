@@ -3,7 +3,7 @@ import { lesson, lessonModule } from './lesson.ts';
 
 const tong = lessonModule({
   id: 'through',
-  words: [{ term: '{{word:tong1}}', hanzi: '通', en: 'go through', ru: 'проходить через' }],
+  words: [{ word: 'tong1', en: 'go through', ru: 'проходить через' }],
   prose: { en: ['**To say go through** …'], ru: ['…'], tldr: { en: 'tldr' }, necessity: { en: 'why' } },
   info: { en: 'tōng-guò + place', ru: 'tōng-guò + место' },
   examples: [{ pinyin: '{{Word:wo3}}.', hanzi: '我。', en: 'Me.' }],

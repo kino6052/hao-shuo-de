@@ -7,7 +7,8 @@
 /** A dictionary category: a branch (children) or a leaf (wordIds). */
 export interface Category {
   key: string;
-  title: Record<string, string>;
+  /** null for an untitled leaf ("general"). */
+  title: Record<string, string> | null;
   children?: Category[];
   wordIds?: string[];
 }
