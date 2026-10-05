@@ -23,6 +23,7 @@ import matter from 'gray-matter';
 import { parse as parseYaml } from 'yaml';
 import { listContentFiles } from './list-content-files.js';
 import dictionaryData from '../src/data/dictionary.ts';
+import { wordRefIds } from '../src/lib/word-refs.js';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -34,7 +35,6 @@ const OUT_PATH = resolve(ROOT, 'src/data/word-usage.json');
 // and including the dictionary would make every word trivially self-referential.
 const EXCLUDE_PREFIXES = ['intro-', 'dictionary'];
 
-const WORD_REF_RE = /\{\{(?:word|Word):([a-z0-9-]+)\}\}/g;
 
 function isTrackedFile(filename) {
   if (!filename.endsWith('.md') && !filename.endsWith('.yaml') && !filename.endsWith('.yml') && !filename.endsWith('.ts')) return false;
@@ -97,7 +97,7 @@ async function loadChapter(filename) {
 
 function collectWordRefs(text) {
   const ids = new Set();
-  for (const match of text.matchAll(WORD_REF_RE)) ids.add(match[1]);
+  for (const id of wordRefIds(text)) ids.add(id);
   return ids;
 }
 

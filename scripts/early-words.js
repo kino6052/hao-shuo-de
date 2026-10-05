@@ -17,7 +17,8 @@
 //     except known pinyin words missing from the dictionary (like "men").
 // Lesson 1 is exempt: it shows words as sound examples.
 
-const WORD_REF_RE = /\{\{(?:word|Word):([a-z0-9-]+)\}\}/g;
+import { wordRefIds, wordRefRe, soleWordRef } from '../src/lib/word-refs.js';
+
 const TONE_MARK_RE = /[āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ]/i;
 // The book's own name is not vocabulary.
 const NAME_RE = /h[aǎ]o-shu[oō]-de/gi;
@@ -38,8 +39,8 @@ export function termIndex(dictionary) {
 // pinyin word that isn't in the dictionary.
 export function wordsIn(text, terms, { pinyinField = false } = {}) {
   const found = [];
-  for (const [, id] of text.matchAll(WORD_REF_RE)) found.push({ id, token: `{{word:${id}}}` });
-  const rest = text.replace(WORD_REF_RE, ' ').replace(NAME_RE, ' ').replace(/<[^>]*>/g, ' ');
+  for (const id of wordRefIds(text)) found.push({ id, token: `{{word:${id}}}` });
+  const rest = text.replace(wordRefRe(), ' ').replace(NAME_RE, ' ').replace(/<[^>]*>/g, ' ');
   for (const raw of rest.split(/[\s\-–—.,!?;:()"'`“”‘’«»\[\]\/…*_]+/)) {
     if (!raw) continue;
     const token = norm(raw);
@@ -81,7 +82,7 @@ export function findEarlyWords(lessons, dictionary) {
   for (const lesson of lessons) {
     for (const entry of lesson.entries) {
       if (entry.type !== 'vocab') continue;
-      const id = entry.term.match(/^\{\{word:([a-z0-9-]+)\}\}$/)?.[1];
+      const id = soleWordRef(entry.term);
       if (id && !home.has(id)) home.set(id, lesson.number);
     }
   }

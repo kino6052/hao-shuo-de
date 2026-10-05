@@ -18,6 +18,7 @@ import { wordHanzi } from "../src/lib/hanzi-map.js";
 import { writeComposite } from "./data-files.js";
 import dictionaryData from "../src/data/dictionary.ts";
 import compositesData from "../src/data/composites.ts";
+import { replaceWordRefs, refTerm } from "../src/lib/word-refs.js";
 
 const dict = dictionaryData;
 const check = process.argv.includes("--check");
@@ -43,7 +44,7 @@ export function pendingRewrites(entries, hanzi) {
 const isMain = process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1]);
 if (isMain) {
   const pending = pendingRewrites(compositesData.entries, wordHanzi());
-  const pinyin = (form) => form.replace(/\{\{[wW]ord:([a-z0-9-]+)\}\}/g, (_, id) => dict.words[id]?.term ?? id);
+  const pinyin = (form) => replaceWordRefs(form, (id, kind) => (dict.words[id] ? refTerm(dict.words[id].term, kind) : id));
   for (const p of pending) {
     console.log(p.from === p.to ? `${p.entry.en}: hanzi -> ${p.tts}` : `${p.entry.en}: ${pinyin(p.from)}  ->  ${pinyin(p.to)}`);
   }

@@ -24,6 +24,7 @@ import { render, hanziSystem } from "../src/lib/word-builder.js";
 import { wordHanzi } from "../src/lib/hanzi-map.js";
 import dictionaryData from "../src/data/dictionary.ts";
 import compositesData from "../src/data/composites.ts";
+import { replaceWordRefs, refTerm } from "../src/lib/word-refs.js";
 
 const ROOT = resolve(fileURLToPath(new URL(".", import.meta.url)), "..");
 const dict = dictionaryData;
@@ -33,7 +34,7 @@ const list = process.argv.includes("--list");
 const lessons = [];
 for (const id of LESSON_IDS) lessons.push(await importLessonFile(id, "index.ts"));
 const hanzi = hanziSystem(wordHanzi());
-const pinyin = (form) => form.replace(/\{\{[wW]ord:([a-z0-9-]+)\}\}/g, (_, id) => dict.words[id]?.term ?? id);
+const pinyin = (form) => replaceWordRefs(form, (id, kind) => (dict.words[id] ? refTerm(dict.words[id].term, kind) : id));
 
 const errors = [];
 const unread = [];

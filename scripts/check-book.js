@@ -50,6 +50,7 @@ import { wordsIn, termIndex } from './early-words.js';
 import { wordHanzi } from '../src/lib/hanzi-map.js';
 import dictionaryData from '../src/data/dictionary.ts';
 import compositesData from '../src/data/composites.ts';
+import { wordRefIds, soleWordRef } from '../src/lib/word-refs.js';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -77,8 +78,8 @@ for (const id of LESSON_IDS.filter((id) => folders.includes(id))) {
   const vocab = [];
   for (const entry of entries) {
     if (entry.type !== 'vocab') continue;
-    const m = entry.term.match(/^\{\{word:([a-z0-9-]+)\}\}$/);
-    if (m) vocab.push(m[1]);
+    const wordId = soleWordRef(entry.term);
+    if (wordId) vocab.push(wordId);
     else errors.push(`${id}: vocab term "${entry.term}" is not a single dictionary word`);
   }
   lessons.push({ id, number: lessonNumber(id), title, vocab, entries });
@@ -238,7 +239,7 @@ for (const n of [1, 2, 3]) {
     const ids = compound(e.zh);
     if (!ids || (e.tts ?? '').split(' / ').includes(e.zh)) continue;
     // A form that is exactly those words counts too (the builder speaks a bare 上 as 上面).
-    const sequences = e.hsd.split(' / ').map((f) => [...f.matchAll(/\{\{[wW]ord:([^}]+)\}\}/g)].map((m) => m[1]).join(' '));
+    const sequences = e.hsd.split(' / ').map((f) => wordRefIds(f).join(' '));
     if (sequences.includes(ids.join(' '))) continue;
     const form = ids.map((id) => dictionary[id].term).join('-');
     errors.push(`composite "${e.zh}": it's made of Hao-shuo-de words, so say it the Mandarin way first: ${form}`);

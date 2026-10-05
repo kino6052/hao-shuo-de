@@ -14,11 +14,11 @@
 // are: a word from the last lesson has nothing later to be reused in.
 
 import { wordsIn, termIndex } from './early-words.js';
+import { wordRefIds, soleWordRef } from '../src/lib/word-refs.js';
 
 export const HOME_LESSON_MIN = 3;
 export const LATER_LESSONS_MIN = 2;
 
-const WORD_REF_RE = /\{\{(?:word|Word):([a-z0-9-]+)\}\}/g;
 
 // Chinese sentences in an assembled lesson entry.
 function sentencesOf(entry) {
@@ -36,7 +36,7 @@ export function wordUse(lessons, dictionary, storyTexts = []) {
   const home = new Map();
   for (const lesson of lessons) {
     for (const entry of lesson.entries) {
-      const id = entry.type === 'vocab' ? entry.term.match(/^\{\{word:([a-z0-9-]+)\}\}$/)?.[1] : null;
+      const id = entry.type === 'vocab' ? soleWordRef(entry.term) : null;
       if (id && !home.has(id)) home.set(id, lesson.number);
     }
   }
@@ -54,7 +54,7 @@ export function wordUse(lessons, dictionary, storyTexts = []) {
     }
   }
   for (const text of storyTexts) {
-    for (const [, id] of text.matchAll(WORD_REF_RE)) if (stats.has(id)) stats.get(id).inStories = true;
+    for (const id of wordRefIds(text)) if (stats.has(id)) stats.get(id).inStories = true;
   }
   return [...stats].map(([id, s]) => {
     const h = home.get(id) ?? null;
@@ -87,7 +87,7 @@ export function practiceGaps(lessons, dictionary) {
   return lessons.map((lesson) => {
     const introduced = lesson.entries
       .filter((e) => e.type === 'vocab')
-      .map((e) => e.term.match(/^\{\{word:([a-z0-9-]+)\}\}$/)?.[1])
+      .map((e) => soleWordRef(e.term))
       .filter((id) => id && dictionary[id]);
     const inExamples = new Set();
     const inAnswers = new Set();

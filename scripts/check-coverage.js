@@ -40,6 +40,7 @@ import { NSM_PRIMES, ARISTOTLE_CATEGORIES, CORE_GRAMMAR } from './coverage-canon
 import dictionaryData from '../src/data/dictionary.ts';
 import compositesData from '../src/data/composites.ts';
 import coverage from '../src/data/coverage.ts';
+import { wordRefIds, soleWordRef } from '../src/lib/word-refs.js';
 
 const dictionary = dictionaryData.words;
 const composites = compositesData.entries;
@@ -47,7 +48,7 @@ const composites = compositesData.entries;
 // The dictionary words a form or sentence uses. The counting word is written
 // plainly ("san1-ge"), so a bare "ge" counts as ge4.
 const wordsOf = (form) => {
-  const words = [...form.matchAll(/\{\{[wW]ord:([^}]+)\}\}/g)].map((m) => m[1]);
+  const words = wordRefIds(form);
   if (/(^|[\s-])ge(?![a-z])/.test(form.replace(/\{\{[^}]+\}\}/g, ' '))) words.push('ge4');
   return words;
 };
@@ -61,7 +62,7 @@ for (const [i, id] of LESSON_IDS.entries()) {
   const entries = await importLessonFile(id, 'index.ts');
   modules.set(id, new Set(entries.map((e) => e.module)));
   for (const e of entries) {
-    const word = e.type === 'vocab' && e.term.match(/^\{\{word:([a-z0-9-]+)\}\}$/)?.[1];
+    const word = e.type === 'vocab' && soleWordRef(e.term);
     if (word) home.set(word, i);
     const text = e.type === 'example' ? e.pinyin : e.type === 'answer' ? [].concat(e.en)[0] : null;
     if (text) sentences.push({ where: `${id}/${e.module}`, words: new Set(wordsOf(text)) });
@@ -159,7 +160,7 @@ for (const [id, word] of Object.entries(dictionary)) {
   if (items.length && need <= 3 && items.every((c) => [...carried].some(([other, list]) => other !== id && list.includes(c)))) {
     reasons.push(`everything it carries (${items.join(', ')}) another word carries too`);
   }
-  const twins = (word.synonyms ?? []).map((form) => form.match(/^\{\{word:([^}]+)\}\}$/)?.[1]).filter((w) => w && dictionary[w]);
+  const twins = (word.synonyms ?? []).map((form) => soleWordRef(form)).filter((w) => w && dictionary[w]);
   if (twins.length && need <= 3) reasons.push(`close to ${twins.map((w) => dictionary[w].term).join(', ')}`);
   if (reasons.length) {
     const chunk = used ? ` [${[...new Set(glosses.get(id))].join(', ')}]` : '';

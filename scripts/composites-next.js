@@ -15,6 +15,7 @@ import { resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { LESSON_IDS, lessonNumber, importLessonFile } from './lessons.js';
 import compositesData from '../src/data/composites.ts';
+import { soleWordRef } from '../src/lib/word-refs.js';
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const CSV = resolve(ROOT, '../misc/translation/src/dictionaries/dictionary.raw.csv');
@@ -41,7 +42,7 @@ const hanzi = new Map();
 for (const id of LESSON_IDS) {
   const entries = await importLessonFile(id, 'index.ts');
   for (const e of entries) {
-    const word = e.type === 'vocab' && e.term.match(/^\{\{word:([a-z0-9-]+)\}\}$/)?.[1];
+    const word = e.type === 'vocab' && soleWordRef(e.term);
     if (word) hanzi.set(e.ttsText, word);
   }
 }

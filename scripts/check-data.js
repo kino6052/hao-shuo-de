@@ -22,10 +22,10 @@ import SYNONYMS from '../src/data/maps/synonyms.ts';
 import { buildData } from './build-data.js';
 import { compositeFileName } from './data-files.js';
 import { dataFiles } from './build-data.js';
+import { wordRefIds } from '../src/lib/word-refs.js';
 
 const errors = [];
 const ids = new Set(Object.keys(WORDS));
-const refIds = (s) => [...String(s).matchAll(/\{\{(?:word|Word|light):([^}]+)\}\}/g)].map((m) => m[1]);
 
 // 1. indexes
 for (const path of buildData({ check: true })) errors.push(`${path.split('/src/')[1]}: out of date -- run npm run data`);
@@ -59,7 +59,7 @@ for (const [id, w] of Object.entries(WORDS)) {
       for (const p of parts) if (!ids.has(p)) errors.push(`${at}: compound "${c}" names unknown word ${p}`);
     }
   }
-  for (const r of refIds(JSON.stringify([w.definition, w.necessity]))) if (!ids.has(r)) errors.push(`${where}: refers to unknown word ${r}`);
+  for (const r of wordRefIds(JSON.stringify([w.definition, w.necessity]))) if (!ids.has(r)) errors.push(`${where}: refers to unknown word ${r}`);
 }
 
 // 3. categories
@@ -90,12 +90,12 @@ for (const [name, r] of [['antonyms', ANTONYMS], ['synonyms', SYNONYMS]]) {
   }
   for (const [id, forms] of Object.entries(r.phrases)) {
     if (!ids.has(id)) errors.push(`maps/${name}.ts: phrases for unknown word ${id}`);
-    for (const ref of refIds(forms.join(' '))) if (!ids.has(ref)) errors.push(`maps/${name}.ts: ${id}'s phrase names unknown word ${ref}`);
+    for (const ref of wordRefIds(forms.join(' '))) if (!ids.has(ref)) errors.push(`maps/${name}.ts: ${id}'s phrase names unknown word ${ref}`);
   }
 }
 for (const g of GROUPS) for (const item of g.items) {
   for (const w of item.words) if (!ids.has(w)) errors.push(`coverage/${g.key}.ts ${item.key}: unknown word ${w}`);
-  for (const ref of refIds(item.forms.join(' '))) if (!ids.has(ref)) errors.push(`coverage/${g.key}.ts ${item.key}: form names unknown word ${ref}`);
+  for (const ref of wordRefIds(item.forms.join(' '))) if (!ids.has(ref)) errors.push(`coverage/${g.key}.ts ${item.key}: form names unknown word ${ref}`);
 }
 
 // 5. composite file names

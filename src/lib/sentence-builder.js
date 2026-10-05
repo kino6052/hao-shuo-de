@@ -20,6 +20,8 @@
 //   5.3 hen3 + Adjective before a Verb (adverbial)
 //   5.4 Modifier chains stack left-to-right before one head noun
 
+import { replaceWordRefs, refTerm } from "./word-refs.js";
+
 // Grammar-glue words the app inserts automatically -- never offered as a
 // pick in any search pool.
 export const GRAMMAR_WORD_IDS = new Set(["shi4", "hen3", "de", "bu4", "mei2"]);
@@ -87,20 +89,17 @@ function foldDiacritics(str) {
   return str.normalize("NFD").replace(DIACRITICS_RE, "");
 }
 
-const WORD_REF_RE = /\{\{(word|Word):([a-z0-9_-]+)\}\}/g;
-
 // dictionary definitions sometimes carry unresolved {{word:id}} /
 // {{Word:id}} cross-reference markup (resolved to real pinyin only when
 // content is compiled through scripts/word-refs.js at build time -- a
-// Node-only pipeline dictionary.json's own entries don't go through). This
+// Node-only pipeline the dictionary's own entries don't go through). This
 // mirrors that resolution at runtime from the dictionary already loaded in
 // the browser, so search and the picker never show raw template syntax.
 export function resolveInlineRefs(dict, text) {
   if (!text) return text;
-  return text.replace(WORD_REF_RE, (full, kind, id) => {
+  return replaceWordRefs(text, (id, kind, full) => {
     const term = dict.words[id]?.term;
-    if (!term) return full;
-    return kind === "Word" ? term.charAt(0).toUpperCase() + term.slice(1) : term;
+    return term ? refTerm(term, kind) : full;
   });
 }
 

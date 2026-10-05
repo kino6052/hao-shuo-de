@@ -14,6 +14,8 @@
 // every build). Each entry is a regex fragment; a plural "s" is matched
 // automatically.
 
+import { wordRefRe } from '../src/lib/word-refs.js';
+
 export const CORE_TERMS = [
   "noun",
   "verb",
@@ -91,7 +93,7 @@ const CORE_RE = termsRe(CORE_TERMS);
 // HTML tags (with their attributes) aren't prose.
 export function plainText(text) {
   return text
-    .replace(/\{\{(?:word|Word):[a-z0-9-]+\}\}/g, "w")
+    .replace(wordRefRe(), "w")
     .replace(/\{\{dictionaryCount\}\}/g, "0")
     .replace(/<[^>]*>/g, " ");
 }

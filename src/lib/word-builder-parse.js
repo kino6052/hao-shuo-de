@@ -13,8 +13,8 @@
 // more than one way that the Word Builder would write differently.
 
 import { roleOf, isOffered, render, refSystem, POSITIONS, CHOICES, SELF_DIRECTED } from "./word-builder.js";
+import { onlyWordRef } from "./word-refs.js";
 
-const REF_RE = /^\{\{(?:word|Word):([a-z0-9-]+)\}\}$/;
 // Stop reading a form that branches too much; it won't be one the builder wrote.
 const MAX_STEPS = 20000;
 const MAX_READINGS = 40;
@@ -27,7 +27,7 @@ export function formWords(form) {
   const ids = [];
   const glued = [];
   for (let k = 0; k < pieces.length; k += 2) {
-    const id = pieces[k].match(REF_RE)?.[1];
+    const id = onlyWordRef(pieces[k]);
     if (!id) return null;
     ids.push(id);
     glued.push(k > 0 && !/\s/.test(pieces[k - 1]));

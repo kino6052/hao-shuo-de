@@ -21,6 +21,8 @@
 //   verb: cóng X, zài X, yòng + thing, way-de + VERB-direction / VERB-dào X + object
 //         cóng jiā yòng jiǎo kuài-kuài-de qù     fēi-dào shuǐ-lǐ
 
+import { wordRefRe, refTerm } from "./word-refs.js";
+
 // Each question with the role its answer takes. `choice` questions are
 // answered by picking one of CHOICES[key] instead of a word. The order is the
 // order of the meaning list under the built word.
@@ -300,14 +302,12 @@ export function render(node, sys) {
 
 // -- Literal meaning ------------------------------------------------------------
 
-const WORD_REF_RE = /\{\{(?:word|Word):([a-z0-9-]+)\}\}/g;
-
 // The first sense of a word's definition: "animal, land mammal" -> "animal".
 export function firstSense(dict, id, lang) {
   const w = dict.words[id];
   const def = w?.definition?.[lang] || w?.definition?.eng || "";
   return def
-    .replace(WORD_REF_RE, (_, ref) => dict.words[ref]?.term || ref)
+    .replace(wordRefRe(), (_, kind, ref) => (dict.words[ref] ? refTerm(dict.words[ref].term, kind) : ref))
     .split(/[,;(]/)[0]
     .trim();
 }
