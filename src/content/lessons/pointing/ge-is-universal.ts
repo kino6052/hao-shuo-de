@@ -49,13 +49,13 @@ export default lessonModule({
       ru: "Этот человек.",
     },
     {
-      pinyin: "{{Word:na4}}-ge {{word:dong4wu4}}.",
+      pinyin: "{{Word:na4}}-ge {{word:dong4}}-{{word:wu4}}.",
       hanzi: "那个动物。",
       en: "That animal.",
       ru: "То животное.",
     },
     {
-      pinyin: "{{Word:na4}}-ge {{word:nv3ren2}}.",
+      pinyin: "{{Word:na4}}-ge {{word:nv3}}-{{word:ren2}}.",
       hanzi: "那个女人。",
       en: "That woman.",
       ru: "Та женщина.",
@@ -67,7 +67,7 @@ export default lessonModule({
       ru: "Это растение хорошее.",
     },
     {
-      pinyin: "{{Word:na4}}-ge {{word:dong1xi}} {{word:shi4}} {{word:zhi2wu4}}.",
+      pinyin: "{{Word:na4}}-ge {{word:dong1}}-{{light:xi1}} {{word:shi4}} {{word:zhi2wu4}}.",
       hanzi: "那个东西是植物。",
       en: "That thing is a plant.",
       ru: "Та вещь — растение.",
@@ -77,13 +77,13 @@ export default lessonModule({
     {
       en: "This one is an animal.",
       ru: "Вот это — животное.",
-      answer: "{{Word:zhe4}}-ge {{word:shi4}} {{word:dong4wu4}}.",
+      answer: "{{Word:zhe4}}-ge {{word:shi4}} {{word:dong4}}-{{word:wu4}}.",
       hanzi: "这个是动物。",
     },
     {
       en: "That one is a woman.",
       ru: "Вон та — женщина.",
-      answer: "{{Word:na4}}-ge {{word:shi4}} {{word:nv3ren2}}.",
+      answer: "{{Word:na4}}-ge {{word:shi4}} {{word:nv3}}-{{word:ren2}}.",
       hanzi: "那个是女人。",
     },
     {
@@ -95,7 +95,7 @@ export default lessonModule({
     {
       en: "Say \"this animal\", using ge.",
       ru: "Скажите «это животное» с помощью ge.",
-      answer: "{{Word:zhe4}}-ge {{word:dong4wu4}}.",
+      answer: "{{Word:zhe4}}-ge {{word:dong4}}-{{word:wu4}}.",
       hanzi: "这个动物。",
     },
     {

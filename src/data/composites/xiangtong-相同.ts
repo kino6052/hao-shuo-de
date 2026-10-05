@@ -7,7 +7,7 @@ export default composite({
   py: "xiāngtóng",
   en: "same",
   ru: "одинаковый",
-  hsd: ["{{word:yi1yang4}}"],
+  hsd: ["{{word:yi1}}-{{word:yang4}}"],
   tts: ["一样"],
   fit: "word",
   proposed: true,

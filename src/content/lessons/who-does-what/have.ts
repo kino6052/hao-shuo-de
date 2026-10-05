@@ -52,7 +52,7 @@ export default lessonModule({
   },
   examples: [
     {
-      pinyin: "{{Word:wo3}} {{word:you3}} {{word:dong4wu4}}.",
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:dong4}}-{{word:wu4}}.",
       hanzi: "我有动物。",
       en: "I have an animal.",
       ru: "У меня есть животное.",
@@ -76,7 +76,7 @@ export default lessonModule({
       ru: "У неё есть деньги.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:mei2}}-{{word:you3}} {{word:dong1xi}}.",
+      pinyin: "{{Word:ta1}} {{word:mei2}}-{{word:you3}} {{word:dong1}}-{{light:xi1}}.",
       hanzi: "他没有东西。",
       en: "He doesn't have anything.",
       ru: "У него ничего нет.",

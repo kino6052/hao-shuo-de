@@ -66,7 +66,7 @@ export default lessonModule({
       ru: "Не трогай мой нос!",
     },
     {
-      pinyin: "{{Word:gei3}} {{word:wo3}} {{word:nong4}}-{{word:hao3}} {{word:wei4dao4}}-{{word:de}} {{word:dong1xi}}!",
+      pinyin: "{{Word:gei3}} {{word:wo3}} {{word:nong4}}-{{word:hao3}} {{word:wei4dao4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}!",
       hanzi: "给我弄好味道的东西！",
       en: "Pass me the salt! (the thing that makes it taste good)",
       ru: "Передай мне соль! (то, от чего вкус становится хорошим)",

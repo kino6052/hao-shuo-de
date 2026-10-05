@@ -1,7 +1,7 @@
 // linking-sentences ("Relationships 2 — Linking sentences"): its modules, in reading order.
 // See src/lib/lesson.ts.
 //
-// Rewritten in Phase 2 (BOOK_PLAN.md): because (yīnwèi), but (dànshì), and if (rúguǒ, D46), with yán, sǐ, and huó.
+// Rewritten in Phase 2 (BOOK_PLAN.md): because (yīnwèi), but (dàn-shì), and if (rúguǒ, D46), with yán, sǐ, and huó.
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- linking-sentences).
 import { lesson } from "../../../lib/lesson.ts";

@@ -7,7 +7,7 @@ export default composite({
   py: "zuòwèi",
   en: "seat",
   ru: "место (сиденье)",
-  hsd: ["{{word:zuo4}}-{{word:de}} {{word:di4fang1}}"],
+  hsd: ["{{word:zuo4}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
   tts: ["坐的地方"],
   literal: "a place to sit",
   fit: "plain",

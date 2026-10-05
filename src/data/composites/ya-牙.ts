@@ -8,7 +8,7 @@ export default composite({
   en: "tooth",
   ru: "зуб",
   hsd: [
-    "{{word:zai4}}-{{word:kou3}}-{{word:li3}}-{{word:de}} {{word:ying4}}-{{word:de}} {{word:dong1xi}}",
+    "{{word:zai4}}-{{word:kou3}}-{{word:li3}}-{{word:de}} {{word:ying4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],
   tts: ["在口里的硬的东西"],
   literal: "the hard thing in the mouth",

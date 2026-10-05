@@ -14,12 +14,12 @@ export default categories([
       {
         key: "places-as-things",
         title: { eng: "Places", rus: "Места", zh: "地方" },
-        wordIds: ["jia1", "guo2", "di4fang1"],
+        wordIds: ["jia1", "guo2"],
       },
       {
         key: "things-of-nature",
         title: { eng: "Things of Nature", rus: "Природа", zh: "自然之物" },
-        wordIds: ["ri4", "yue4", "zhi2wu4", "huo3", "qi4", "dong4wu4"],
+        wordIds: ["ri4", "yue4", "zhi2wu4", "huo3", "qi4"],
       },
       {
         key: "body",
@@ -29,7 +29,7 @@ export default categories([
       {
         key: "people-kinship",
         title: { eng: "People & Kinship", rus: "Люди и родство", zh: "人与亲属" },
-        wordIds: ["ren2", "fu4mu3", "nan2ren2", "nv3ren2", "qun2", "guan1xi"],
+        wordIds: ["ren2", "fu4mu3", "nan2ren2", "nv3", "qun2", "guan1xi"],
       },
       {
         key: "food-drink",
@@ -43,7 +43,7 @@ export default categories([
           {
             key: "implements",
             title: { eng: "Tools", rus: "Орудия", zh: "器具" },
-            wordIds: ["gong1ju4", "ji1", "gun4zi", "deng1", "che1", "wang3"],
+            wordIds: ["ju4", "ji1", "gun4zi", "deng1", "che1", "wang3"],
           },
           {
             key: "containers-materials",
@@ -55,25 +55,25 @@ export default categories([
             title: { eng: "Valuables & Wearables", rus: "Ценности и одежда", zh: "财物与穿戴" },
             wordIds: ["jin1", "yi1fu"],
           },
-          { key: "general", title: null, wordIds: ["dong1xi"] },
+          { key: "general", title: null, wordIds: ["wu4"] },
         ],
       },
       {
         key: "abstract-substantives",
         title: { eng: "Abstract Words", rus: "Абстрактные слова", zh: "抽象词" },
-        wordIds: ["ci2", "li4", "sheng1yin1", "jia4zhi2", "fang1fa3"],
+        wordIds: ["ci2", "li4", "sheng1yin1", "jia4zhi2", "fa3", "gong1"],
       },
       {
         key: "kind-part",
         title: { eng: "Kind & Part", rus: "Вид и часть", zh: "种类与部分" },
-        wordIds: ["zhong3", "bu4fen"],
+        wordIds: ["zhong3", "bu4fen", "yang4"],
       },
     ],
   },
   {
     key: "determiners",
     title: { eng: "Sameness & Difference", rus: "Сходство и различие", zh: "异同" },
-    wordIds: ["yi1yang4", "bi3", "bie2de"],
+    wordIds: ["bi3", "bie2"],
   },
   {
     key: "quantifiers",
@@ -121,7 +121,7 @@ export default categories([
       {
         key: "colour",
         title: { eng: "Colour", rus: "Цвет", zh: "颜色" },
-        wordIds: ["bai2se4", "hei1se4", "hong2se4", "huang2se4", "lan2se4", "yan2se4"],
+        wordIds: ["bai2", "se4", "hei1", "hong2", "huang2", "lan2", "yan2se4"],
       },
       {
         key: "other-quality",
@@ -268,7 +268,7 @@ export default categories([
           rus: "Существительные места и предлоги",
           zh: "地点名词与介词",
         },
-        wordIds: ["cong2", "dui4", "di4", "lu4"],
+        wordIds: ["cong2", "dui4", "di4", "lu4", "wei4"],
       },
       {
         key: "relative-position",
@@ -287,8 +287,11 @@ export default categories([
           "wai4",
           "yuan3",
           "fu4jin4",
-          "zuo3bian1",
+          "zuo3",
           "you4bian1",
+          "dong1",
+          "xi1",
+          "fang1",
         ],
       },
     ],
@@ -304,7 +307,7 @@ export default categories([
       {
         key: "grammatical-particles",
         title: { eng: "Grammatical Particles", rus: "Грамматические частицы", zh: "语法助词" },
-        wordIds: ["ba3", "de", "le", "ma", "guo4"],
+        wordIds: ["ba3", "de", "le", "ma", "guo4", "zhe3"],
       },
       {
         key: "negation",
@@ -314,17 +317,17 @@ export default categories([
       {
         key: "conjunction",
         title: { eng: "Conjunction", rus: "Союзы", zh: "连接" },
-        wordIds: ["dan4shi4", "he2", "huo4zhe3", "ye3", "you4", "yin1wei4", "ru2guo3", "jiu4"],
+        wordIds: ["dan4", "he2", "huo4", "ye3", "you4", "yin1wei4", "ru2guo3", "jiu4"],
       },
       {
         key: "interrogatives",
         title: { eng: "Question words", rus: "Вопросительные слова", zh: "疑问词" },
-        wordIds: ["wei4shen2me", "zen3me", "na3li3"],
+        wordIds: ["zen3me", "na3"],
       },
       {
         key: "modality",
         title: { eng: "Ability & Possibility", rus: "Способность и возможность", zh: "能力与可能" },
-        wordIds: ["neng2", "hui4", "ke3neng2"],
+        wordIds: ["neng2", "hui4", "ke3"],
       },
       {
         key: "truth-value",

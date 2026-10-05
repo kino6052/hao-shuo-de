@@ -7,7 +7,7 @@ export default composite({
   py: "niǎo",
   en: "bird",
   ru: "птица",
-  hsd: ["{{word:fei1}}-{{word:de}} {{word:dong4wu4}}"],
+  hsd: ["{{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}}"],
   tts: ["飞的动物"],
   literal: "a flying animal",
   fit: "plain",

@@ -7,7 +7,7 @@ export default composite({
   py: "wèntí",
   en: "question; problem",
   ru: "вопрос; проблема",
-  hsd: ["{{word:wen4}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:wen4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["问的东西"],
   literal: "thing you ask",
   fit: "plain",

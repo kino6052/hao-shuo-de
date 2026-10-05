@@ -7,7 +7,7 @@ export default composite({
   py: "xíguàn",
   en: "habit; be used to",
   ru: "привычка",
-  hsd: ["{{word:ci4}}-{{word:ci4}} {{word:dou1}} {{word:nong4}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:ci4}}-{{word:ci4}} {{word:dou1}} {{word:nong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["次次都弄的东西"],
   literal: "something you do every time",
   fit: "plain",

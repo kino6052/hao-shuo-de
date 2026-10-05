@@ -71,7 +71,7 @@ export default lessonModule({
       ru: "Воздух на улице хороший.",
     },
     {
-      pinyin: "{{Word:huo3}} {{word:zai4}} {{word:na3li3}}?",
+      pinyin: "{{Word:huo3}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
       hanzi: "火在哪里？",
       en: "Where is the fire?",
       ru: "Где огонь?",

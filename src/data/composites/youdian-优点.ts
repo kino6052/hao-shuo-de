@@ -7,7 +7,7 @@ export default composite({
   py: "yōudiǎn",
   en: "strong point",
   ru: "достоинство",
-  hsd: ["{{word:hao3}}-{{word:de}} {{word:di4fang1}}"],
+  hsd: ["{{word:hao3}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
   tts: ["好的地方"],
   literal: "the good points",
   fit: "plain",

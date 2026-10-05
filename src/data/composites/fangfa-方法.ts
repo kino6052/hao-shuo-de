@@ -7,8 +7,11 @@ export default composite({
   py: "fāngfǎ",
   en: "method, manner",
   ru: "способ",
-  hsd: ["{{word:fang1fa3}}"],
+  hsd: ["{{word:fang1}}-{{word:fa3}}"],
   tts: ["方法"],
-  fit: "word",
+  fit: "natural",
   note: "The way something is done. A way to a place is lù.",
+  role: "noun",
+  transparent: true,
+  proposed: true,
 });

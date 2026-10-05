@@ -52,7 +52,7 @@ export default lessonModule({
       ru: "Та часть горячая.",
     },
     {
-      pinyin: "{{Word:da4}} {{word:bu4fen}} {{word:ren2}} {{word:ai4}} {{word:dong4wu4}}.",
+      pinyin: "{{Word:da4}} {{word:bu4fen}} {{word:ren2}} {{word:ai4}} {{word:dong4}}-{{word:wu4}}.",
       hanzi: "大部分人爱动物。",
       en: "Most people love animals.",
       ru: "Большинство людей любят животных.",
@@ -68,7 +68,7 @@ export default lessonModule({
     {
       en: "Most people love animals.",
       ru: "Большинство людей любят животных.",
-      answer: "{{Word:da4}} {{word:bu4fen}} {{word:ren2}} {{word:ai4}} {{word:dong4wu4}}.",
+      answer: "{{Word:da4}} {{word:bu4fen}} {{word:ren2}} {{word:ai4}} {{word:dong4}}-{{word:wu4}}.",
       hanzi: "大部分人爱动物。",
     },
   ],

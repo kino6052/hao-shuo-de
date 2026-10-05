@@ -84,14 +84,14 @@ export default lessonModule({
         ru: "{{word:hen3}} + прилагательное — очень: {{Word:shui3}} {{word:hen3}} {{word:re4}}. (Вода очень горячая.)",
       },
       {
-        en: "{{word:hen3}} {{word:you3}} {{word:jia4zhi2}}, valuable: {{Word:zhe4}}-ge {{word:gong1ju4}} {{word:hen3}} {{word:you3}} {{word:jia4zhi2}}. (This tool is very valuable.)",
-        ru: "{{word:hen3}} {{word:you3}} {{word:jia4zhi2}} — ценный: {{Word:zhe4}}-ge {{word:gong1ju4}} {{word:hen3}} {{word:you3}} {{word:jia4zhi2}}. (Этот инструмент очень ценный.)",
+        en: "{{word:hen3}} {{word:you3}} {{word:jia4zhi2}}, valuable: {{Word:zhe4}}-ge {{word:gong1}}-{{word:ju4}} {{word:hen3}} {{word:you3}} {{word:jia4zhi2}}. (This tool is very valuable.)",
+        ru: "{{word:hen3}} {{word:you3}} {{word:jia4zhi2}} — ценный: {{Word:zhe4}}-ge {{word:gong1}}-{{word:ju4}} {{word:hen3}} {{word:you3}} {{word:jia4zhi2}}. (Этот инструмент очень ценный.)",
       },
     ],
   },
   examples: [
     {
-      pinyin: "{{Word:zhe4}}-ge {{word:gong1ju4}} {{word:hen3}} {{word:you3}} {{word:jia4zhi2}}.",
+      pinyin: "{{Word:zhe4}}-ge {{word:gong1}}-{{word:ju4}} {{word:hen3}} {{word:you3}} {{word:jia4zhi2}}.",
       hanzi: "这个工具很有价值。",
       en: "This tool is very valuable.",
       ru: "Этот инструмент очень ценный.",
@@ -127,13 +127,13 @@ export default lessonModule({
       ru: "У него хорошее здоровье.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:hen3}} {{word:qi2guai4}}-{{word:de}} {{word:dong4wu4}}.",
+      pinyin: "{{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:hen3}} {{word:qi2guai4}}-{{word:de}} {{word:dong4}}-{{word:wu4}}.",
       hanzi: "我看过很奇怪的动物。",
       en: "I've seen a very strange animal.",
       ru: "Я видел очень странное животное.",
     },
     {
-      pinyin: "{{Word:na4}}-ge {{word:dong4wu4}} {{word:hen3}} {{word:kuai4}}.",
+      pinyin: "{{Word:na4}}-ge {{word:dong4}}-{{word:wu4}} {{word:hen3}} {{word:kuai4}}.",
       hanzi: "那个动物很快。",
       en: "That animal is very fast.",
       ru: "То животное очень быстрое.",

@@ -73,13 +73,13 @@ export default lessonModule({
       ru: "Если ты не знаешь этого слова, спроси меня.",
     },
     {
-      pinyin: "{{Word:ru2guo3}} {{word:ni3}} {{word:yao4}}, {{word:he1}} {{word:shui3}} {{word:huo4zhe3}} {{word:chi1}} {{word:dong1xi}}.",
+      pinyin: "{{Word:ru2guo3}} {{word:ni3}} {{word:yao4}}, {{word:he1}} {{word:shui3}} {{word:huo4}}-{{word:zhe3}} {{word:chi1}} {{word:dong1}}-{{light:xi1}}.",
       hanzi: "如果你要，喝水或者吃东西。",
       en: "If you want, drink some water or eat something.",
       ru: "Если хочешь, попей воды или поешь.",
     },
     {
-      pinyin: "{{Word:ru2guo3}} {{word:na4}}-ge {{word:di4fang1}} {{word:yuan3}}, {{word:wo3}} {{word:bu4}} {{word:qu4}}.",
+      pinyin: "{{Word:ru2guo3}} {{word:na4}}-ge {{word:di4}}-{{light:fang1}} {{word:yuan3}}, {{word:wo3}} {{word:bu4}} {{word:qu4}}.",
       hanzi: "如果那个地方远，我不去。",
       en: "If that place is far, I won't go.",
       ru: "Если то место далеко, я не пойду.",

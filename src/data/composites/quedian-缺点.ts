@@ -7,7 +7,7 @@ export default composite({
   py: "quēdiǎn",
   en: "shortcoming",
   ru: "недостаток",
-  hsd: ["{{word:bu4}}-{{word:hao3}}-{{word:de}} {{word:di4fang1}}"],
+  hsd: ["{{word:bu4}}-{{word:hao3}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
   tts: ["不好的地方"],
   literal: "the bad points",
   fit: "plain",

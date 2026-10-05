@@ -7,7 +7,7 @@ export default composite({
   py: "mùbiāo",
   en: "goal",
   ru: "цель",
-  hsd: ["{{word:yao4}} {{word:dao4}}-{{word:de}} {{word:di4fang1}}"],
+  hsd: ["{{word:yao4}} {{word:dao4}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
   tts: ["要到的地方"],
   literal: "where you want to get to",
   fit: "plain",

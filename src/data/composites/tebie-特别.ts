@@ -7,7 +7,7 @@ export default composite({
   py: "tèbié",
   en: "special",
   ru: "особенный",
-  hsd: ["{{word:hen3}} {{word:bu4}} {{word:yi1yang4}}"],
+  hsd: ["{{word:hen3}} {{word:bu4}} {{word:yi1}}-{{word:yang4}}"],
   tts: ["很不一样"],
   literal: "very different",
   fit: "natural",

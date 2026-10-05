@@ -2,7 +2,7 @@
 // GENERATED from a plain-pinyin spec, but safe to edit by hand: every
 // {{word:..}} must be a dictionary word (scripts/check-book.js checks).
 // Things with no word are described the way src/data/composites/
-// does it (a bird is fēi-de dòngwù, a bed is shuìjiào-de dìfāng).
+// does it (a bird is fēi-de dòng-wù, a bed is shuìjiào-de dì-fang).
 import type { Entry } from "../lib/chapter-entry-types.ts";
 
 export const meta = {
@@ -58,7 +58,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:you3}} {{word:yi1}}-ge {{word:xiao3}} {{word:nv3ren2}}, {{word:ta1}} {{word:hen3}} {{word:ai4}} {{word:hong2se4}}-{{word:de}} {{word:yi1fu}}.",
+    pinyin: "{{Word:you3}} {{word:yi1}}-ge {{word:xiao3}} {{word:nv3}}-{{word:ren2}}, {{word:ta1}} {{word:hen3}} {{word:ai4}} {{word:hong2}}-{{word:se4}}-{{word:de}} {{word:yi1fu}}.",
     ttsText: "有一个小女人，他很爱红色的衣服。",
     en: ["There was a little girl who loved red clothes."],
     zh: ["从前有个小女孩，她很喜欢红色的衣服。"],
@@ -66,7 +66,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}}-{{word:de}} {{word:fu4mu3}}-{{word:de}} {{word:fu4mu3}} {{word:shi4}} {{word:yi1}}-ge {{word:lao3}} {{word:nv3ren2}}. {{Word:lao3}} {{word:nv3ren2}}-{{word:de}} {{word:jia1}} {{word:hen3}} {{word:yuan3}}.",
+    pinyin: "{{Word:ta1}}-{{word:de}} {{word:fu4mu3}}-{{word:de}} {{word:fu4mu3}} {{word:shi4}} {{word:yi1}}-ge {{word:lao3}} {{word:nv3}}-{{word:ren2}}. {{Word:lao3}} {{word:nv3}}-{{word:ren2}}-{{word:de}} {{word:jia1}} {{word:hen3}} {{word:yuan3}}.",
     ttsText: "他的父母的父母是一个老女人。老女人的家很远。",
     en: ["Her grandmother (literally: \"her parents' parent\") was an old woman who lived far away."],
     zh: ["她的奶奶是个老奶奶，住得很远。"],
@@ -74,7 +74,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:lao3}} {{word:nv3ren2}} {{word:shen1ti3}} {{word:bu4}} {{word:hao3}}, {{word:xiao3}} {{word:nv3ren2}} {{word:na2}} {{word:chi1}}-{{word:de}} {{word:dong1xi}} {{word:qu4}} {{word:ta1}}-{{word:de}} {{word:jia1}}.",
+    pinyin: "{{Word:lao3}} {{word:nv3}}-{{word:ren2}} {{word:shen1ti3}} {{word:bu4}} {{word:hao3}}, {{word:xiao3}} {{word:nv3}}-{{word:ren2}} {{word:na2}} {{word:chi1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:qu4}} {{word:ta1}}-{{word:de}} {{word:jia1}}.",
     ttsText: "老女人身体不好，小女人拿吃的东西去他的家。",
     en: ["The old woman was ill, so the girl took her some food."],
     zh: ["奶奶生病了，小女孩带着吃的去她家。"],
@@ -82,7 +82,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:zai4}} {{word:lu4}}-{{word:shang4}}, {{word:yi1}}-ge {{word:da4}} {{word:huai4}} {{word:dong4wu4}} {{word:lai2}} {{word:le}}.",
+    pinyin: "{{Word:zai4}} {{word:lu4}}-{{word:shang4}}, {{word:yi1}}-ge {{word:da4}} {{word:huai4}} {{word:dong4}}-{{word:wu4}} {{word:lai2}} {{word:le}}.",
     ttsText: "在路上，一个大坏动物来了。",
     en: ["On the road, a wolf (literally: \"a big bad animal\") came up."],
     zh: ["在路上，来了一只大灰狼。"],
@@ -90,7 +90,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:da4}} {{word:huai4}} {{word:dong4wu4}} {{word:wen4}}: {{Word:ni3}} {{word:qu4}} {{word:na3li3}}?",
+    pinyin: "{{Word:da4}} {{word:huai4}} {{word:dong4}}-{{word:wu4}} {{word:wen4}}: {{Word:ni3}} {{word:qu4}} {{word:na3}}-{{word:li3}}?",
     ttsText: "大坏动物问：你去哪里？",
     en: ["The wolf asked: \"Where are you going?\""],
     zh: ["大灰狼问：\"你去哪里？\""],
@@ -98,7 +98,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:xiao3}} {{word:nv3ren2}} {{word:bu4}} {{word:pa4}}, {{word:shuo1}}: {{Word:wo3}} {{word:qu4}} {{word:lao3}} {{word:nv3ren2}}-{{word:de}} {{word:jia1}}.",
+    pinyin: "{{Word:xiao3}} {{word:nv3}}-{{word:ren2}} {{word:bu4}} {{word:pa4}}, {{word:shuo1}}: {{Word:wo3}} {{word:qu4}} {{word:lao3}} {{word:nv3}}-{{word:ren2}}-{{word:de}} {{word:jia1}}.",
     ttsText: "小女人不怕，说：我去老女人的家。",
     en: ["The girl wasn't scared and said: \"To my grandmother's house.\""],
     zh: ["小女孩不害怕，说：\"我去奶奶家。\""],
@@ -106,7 +106,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:da4}} {{word:huai4}} {{word:dong4wu4}} {{word:yong4}} {{word:jiao3}} {{word:kuai4}} {{word:qu4}} {{word:lao3}} {{word:nv3ren2}}-{{word:de}} {{word:jia1}}, {{word:ba3}} {{word:ta1}} {{word:chi1}} {{word:le}}.",
+    pinyin: "{{Word:da4}} {{word:huai4}} {{word:dong4}}-{{word:wu4}} {{word:yong4}} {{word:jiao3}} {{word:kuai4}} {{word:qu4}} {{word:lao3}} {{word:nv3}}-{{word:ren2}}-{{word:de}} {{word:jia1}}, {{word:ba3}} {{word:ta1}} {{word:chi1}} {{word:le}}.",
     ttsText: "大坏动物用脚快去老女人的家，把他吃了。",
     en: ["The wolf ran to the grandmother's house and ate her."],
     zh: ["大灰狼跑到奶奶家，把奶奶吃了。"],
@@ -114,7 +114,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}} {{word:ba3}} {{word:lao3}} {{word:nv3ren2}}-{{word:de}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:shen1ti3}}-{{word:shang4}}, {{word:tang3}} {{word:zai4}} {{word:shui4jiao4}}-{{word:de}} {{word:di4fang1}}.",
+    pinyin: "{{Word:ta1}} {{word:ba3}} {{word:lao3}} {{word:nv3}}-{{word:ren2}}-{{word:de}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:shen1ti3}}-{{word:shang4}}, {{word:tang3}} {{word:zai4}} {{word:shui4jiao4}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",
     ttsText: "他把老女人的衣服放在身体上，躺在睡觉的地方。",
     en: ["He put on her clothes and lay down in her bed (literally: \"the sleeping place\")."],
     zh: ["它穿上奶奶的衣服，躺在床上。"],
@@ -122,7 +122,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:xiao3}} {{word:nv3ren2}} {{word:lai2}} {{word:le}}, {{word:shuo1}}: {{Word:ni3}}-{{word:de}} {{word:kan4}}-{{word:de}} {{word:bu4fen}} {{word:zhen1}} {{word:da4}}!",
+    pinyin: "{{Word:xiao3}} {{word:nv3}}-{{word:ren2}} {{word:lai2}} {{word:le}}, {{word:shuo1}}: {{Word:ni3}}-{{word:de}} {{word:kan4}}-{{word:de}} {{word:bu4fen}} {{word:zhen1}} {{word:da4}}!",
     ttsText: "小女人来了，说：你的看的部分真大！",
     en: ["The girl came and said: \"What big eyes you have!\" (Literally: \"your looking parts.\")"],
     zh: ["小女孩来了，说：\"你的眼睛真大！\""],
@@ -146,7 +146,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:yin1wei4}} {{word:wo3}} {{word:yao4}} {{word:chi1}} {{word:ni3}}! {{Word:da4}} {{word:huai4}} {{word:dong4wu4}} {{word:ba3}} {{word:xiao3}} {{word:nv3ren2}} {{word:ye3}} {{word:chi1}} {{word:le}}.",
+    pinyin: "{{Word:yin1wei4}} {{word:wo3}} {{word:yao4}} {{word:chi1}} {{word:ni3}}! {{Word:da4}} {{word:huai4}} {{word:dong4}}-{{word:wu4}} {{word:ba3}} {{word:xiao3}} {{word:nv3}}-{{word:ren2}} {{word:ye3}} {{word:chi1}} {{word:le}}.",
     ttsText: "因为我要吃你！大坏动物把小女人也吃了。",
     en: ["\"All the better to eat you with!\" And the wolf ate the girl too."],
     zh: ["\"为了吃掉你！\"大灰狼把小女孩也吃了。"],
@@ -154,7 +154,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:yi1}}-ge {{word:nan2ren2}} {{word:ting1}}-{{word:dao4}} {{word:sheng1yin1}}, {{word:jin4}}-{{word:lai2}}, {{word:da3}} {{word:le}} {{word:da4}} {{word:huai4}} {{word:dong4wu4}}.",
+    pinyin: "{{Word:yi1}}-ge {{word:nan2ren2}} {{word:ting1}}-{{word:dao4}} {{word:sheng1yin1}}, {{word:jin4}}-{{word:lai2}}, {{word:da3}} {{word:le}} {{word:da4}} {{word:huai4}} {{word:dong4}}-{{word:wu4}}.",
     ttsText: "一个男人听到声音，进来，打了大坏动物。",
     en: ["A man heard the noise, came in, and struck the wolf."],
     zh: ["一个猎人听到声音，进来打了大灰狼。"],
@@ -162,7 +162,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:lao3}} {{word:nv3ren2}} {{word:he2}} {{word:xiao3}} {{word:nv3ren2}} {{word:cong2}} {{word:dong4wu4}} {{word:li3}}-{{word:mian4}} {{word:chu1}}-{{word:lai2}} {{word:le}}, {{word:ta1}}-{{word:men}} {{word:dou1}} {{word:mei2}} {{word:si3}}.",
+    pinyin: "{{Word:lao3}} {{word:nv3}}-{{word:ren2}} {{word:he2}} {{word:xiao3}} {{word:nv3}}-{{word:ren2}} {{word:cong2}} {{word:dong4}}-{{word:wu4}} {{word:li3}}-{{word:mian4}} {{word:chu1}}-{{word:lai2}} {{word:le}}, {{word:ta1}}-{{word:men}} {{word:dou1}} {{word:mei2}} {{word:si3}}.",
     ttsText: "老女人和小女人从动物里面出来了，他们都没死。",
     en: ["The grandmother and the girl came out of the wolf, and neither of them was dead."],
     zh: ["奶奶和小女孩从狼肚子里出来了，她们都没死。"],
@@ -186,7 +186,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:you3}} {{word:san1}}-ge {{word:xiao3}} {{word:dong4wu4}}, {{word:ta1}}-{{word:men}} {{word:jiao4}} \"hēng-hēng\".",
+    pinyin: "{{Word:you3}} {{word:san1}}-ge {{word:xiao3}} {{word:dong4}}-{{word:wu4}}, {{word:ta1}}-{{word:men}} {{word:jiao4}} \"hēng-hēng\".",
     ttsText: "有三个小动物，他们叫哼哼。",
     en: ["There were three little pigs. (Literally: \"three little animals that say 'oink-oink'.\")"],
     zh: ["从前有三只小猪。"],
@@ -202,7 +202,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:yi1}}-{{word:hao4}} {{word:xiao3}} {{word:dong4wu4}} {{word:yong4}} {{word:huang2se4}}-{{word:de}} {{word:xiao3}} {{word:zhi2wu4}} {{word:nong4}} {{word:jia1}}, {{word:hen3}} {{word:kuai4}} {{word:jiu4}} {{word:nong4}}-{{word:hao3}} {{word:le}}.",
+    pinyin: "{{Word:yi1}}-{{word:hao4}} {{word:xiao3}} {{word:dong4}}-{{word:wu4}} {{word:yong4}} {{word:huang2}}-{{word:se4}}-{{word:de}} {{word:xiao3}} {{word:zhi2wu4}} {{word:nong4}} {{word:jia1}}, {{word:hen3}} {{word:kuai4}} {{word:jiu4}} {{word:nong4}}-{{word:hao3}} {{word:le}}.",
     ttsText: "一号小动物用黄色的小植物弄家，很快就弄好了。",
     en: ["The first pig built a house of straw (literally: \"little yellow plants\") and finished very quickly."],
     zh: ["第一只小猪用稻草盖房子，很快就盖好了。"],
@@ -210,7 +210,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:er4}}-{{word:hao4}} {{word:xiao3}} {{word:dong4wu4}} {{word:yong4}} {{word:gun4zi}} {{word:nong4}} {{word:jia1}}, {{word:ye3}} {{word:hen3}} {{word:kuai4}}.",
+    pinyin: "{{Word:er4}}-{{word:hao4}} {{word:xiao3}} {{word:dong4}}-{{word:wu4}} {{word:yong4}} {{word:gun4zi}} {{word:nong4}} {{word:jia1}}, {{word:ye3}} {{word:hen3}} {{word:kuai4}}.",
     ttsText: "二号小动物用棍子弄家，也很快。",
     en: ["The second built his of sticks, also quickly."],
     zh: ["第二只小猪用木棍盖房子，也很快。"],
@@ -218,7 +218,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:san1}}-{{word:hao4}} {{word:xiao3}} {{word:dong4wu4}} {{word:yong4}} {{word:ying4}} {{word:dong1xi}} {{word:nong4}} {{word:jia1}}. {{Word:ta1}} {{word:nong4}} {{word:le}} {{word:hen3}} {{word:duo1}} {{word:shi2jian1}}.",
+    pinyin: "{{Word:san1}}-{{word:hao4}} {{word:xiao3}} {{word:dong4}}-{{word:wu4}} {{word:yong4}} {{word:ying4}} {{word:dong1}}-{{light:xi1}} {{word:nong4}} {{word:jia1}}. {{Word:ta1}} {{word:nong4}} {{word:le}} {{word:hen3}} {{word:duo1}} {{word:shi2jian1}}.",
     ttsText: "三号小动物用硬东西弄家。他弄了很多时间。",
     en: ["The third built his of stones (literally: \"hard things\"). It took him a long time."],
     zh: ["第三只小猪用石头盖房子，花了很长时间。"],
@@ -226,7 +226,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:yi1}}-ge {{word:da4}} {{word:huai4}} {{word:dong4wu4}} {{word:lai2}} {{word:le}}, {{word:shuo1}}: {{Word:kai1}} {{word:kou3}}! {{Word:jiao4}} {{word:wo3}} {{word:jin4}}-{{word:qu4}}!",
+    pinyin: "{{Word:yi1}}-ge {{word:da4}} {{word:huai4}} {{word:dong4}}-{{word:wu4}} {{word:lai2}} {{word:le}}, {{word:shuo1}}: {{Word:kai1}} {{word:kou3}}! {{Word:jiao4}} {{word:wo3}} {{word:jin4}}-{{word:qu4}}!",
     ttsText: "一个大坏动物来了，说：开口！叫我进去！",
     en: ["A wolf came and said: \"Open the door! Let me in!\""],
     zh: ["大灰狼来了，说：\"开门！让我进去！\""],
@@ -234,7 +234,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:xiao3}} {{word:dong4wu4}} {{word:shuo1}}: {{Word:bu4}} {{word:jiao4}}!",
+    pinyin: "{{Word:xiao3}} {{word:dong4}}-{{word:wu4}} {{word:shuo1}}: {{Word:bu4}} {{word:jiao4}}!",
     ttsText: "小动物说：不叫！",
     en: ["The pig said: \"I won't!\""],
     zh: ["小猪说：\"不让！\""],
@@ -242,7 +242,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:da4}} {{word:huai4}} {{word:dong4wu4}} {{word:yong4}} {{word:kou3}} {{word:da4}}-{{word:da4}}-{{word:de}} {{word:nong4}} {{word:kong1}}-{{word:qi4}}, {{word:zhi2wu4}}-{{word:de}} {{word:jia1}} {{word:jiu4}} {{word:fei1}} {{word:le}}!",
+    pinyin: "{{Word:da4}} {{word:huai4}} {{word:dong4}}-{{word:wu4}} {{word:yong4}} {{word:kou3}} {{word:da4}}-{{word:da4}}-{{word:de}} {{word:nong4}} {{word:kong1}}-{{word:qi4}}, {{word:zhi2wu4}}-{{word:de}} {{word:jia1}} {{word:jiu4}} {{word:fei1}} {{word:le}}!",
     ttsText: "大坏动物用口大大的弄空气，植物的家就飞了！",
     en: ["The wolf blew hard (literally: \"moved the air with his mouth\"), and the straw house flew away!"],
     zh: ["大灰狼用力一吹，稻草房子就飞走了！"],
@@ -250,7 +250,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:yi1}}-{{word:hao4}} {{word:xiao3}} {{word:dong4wu4}} {{word:qu4}} {{word:le}} {{word:gun4zi}}-{{word:de}} {{word:jia1}}. {{Word:da4}} {{word:huai4}} {{word:dong4wu4}} {{word:you4}} {{word:nong4}} {{word:kong1}}-{{word:qi4}}, {{word:gun4zi}}-{{word:de}} {{word:jia1}} {{word:ye3}} {{word:fei1}} {{word:le}}!",
+    pinyin: "{{Word:yi1}}-{{word:hao4}} {{word:xiao3}} {{word:dong4}}-{{word:wu4}} {{word:qu4}} {{word:le}} {{word:gun4zi}}-{{word:de}} {{word:jia1}}. {{Word:da4}} {{word:huai4}} {{word:dong4}}-{{word:wu4}} {{word:you4}} {{word:nong4}} {{word:kong1}}-{{word:qi4}}, {{word:gun4zi}}-{{word:de}} {{word:jia1}} {{word:ye3}} {{word:fei1}} {{word:le}}!",
     ttsText: "一号小动物去了棍子的家。大坏动物又弄空气，棍子的家也飞了！",
     en: ["The first pig ran to the stick house. The wolf blew again, and the stick house flew away too!"],
     zh: ["第一只小猪跑到木棍房子里。大灰狼又一吹，木棍房子也飞走了！"],
@@ -258,7 +258,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:liang3}}-ge {{word:xiao3}} {{word:dong4wu4}} {{word:qu4}} {{word:le}} {{word:ying4}} {{word:dong1xi}}-{{word:de}} {{word:jia1}}.",
+    pinyin: "{{Word:liang3}}-ge {{word:xiao3}} {{word:dong4}}-{{word:wu4}} {{word:qu4}} {{word:le}} {{word:ying4}} {{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:jia1}}.",
     ttsText: "两个小动物去了硬东西的家。",
     en: ["The two pigs ran to the stone house."],
     zh: ["两只小猪跑到石头房子里。"],
@@ -266,7 +266,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:da4}} {{word:huai4}} {{word:dong4wu4}} {{word:nong4}} {{word:kong1}}-{{word:qi4}}, {{word:nong4}} {{word:kong1}}-{{word:qi4}}, {{word:dan4shi4}} {{word:ying4}} {{word:dong1xi}}-{{word:de}} {{word:jia1}} {{word:bu4}} {{word:dong4}}.",
+    pinyin: "{{Word:da4}} {{word:huai4}} {{word:dong4}}-{{word:wu4}} {{word:nong4}} {{word:kong1}}-{{word:qi4}}, {{word:nong4}} {{word:kong1}}-{{word:qi4}}, {{word:dan4}}-{{word:shi4}} {{word:ying4}} {{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:jia1}} {{word:bu4}} {{word:dong4}}.",
     ttsText: "大坏动物弄空气，弄空气，但是硬东西的家不动。",
     en: ["The wolf blew and blew, but the stone house didn't move."],
     zh: ["大灰狼吹啊吹，可是石头房子一动也不动。"],
@@ -274,7 +274,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}} {{word:cong2}} {{word:shang4}}-{{word:mian4}}-{{word:de}} {{word:kou3}} {{word:jin4}}-{{word:qu4}}, {{word:dan4shi4}} {{word:xia4}}-{{word:mian4}} {{word:you3}} {{word:re4}} {{word:shui3}}!",
+    pinyin: "{{Word:ta1}} {{word:cong2}} {{word:shang4}}-{{word:mian4}}-{{word:de}} {{word:kou3}} {{word:jin4}}-{{word:qu4}}, {{word:dan4}}-{{word:shi4}} {{word:xia4}}-{{word:mian4}} {{word:you3}} {{word:re4}} {{word:shui3}}!",
     ttsText: "他从上面的口进去，但是下面有热水！",
     en: ["He climbed in through the hole at the top (the chimney), but below there was hot water!"],
     zh: ["它从烟囱爬进去，可是下面有热水！"],
@@ -282,7 +282,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:da4}} {{word:huai4}} {{word:dong4wu4}} {{word:hen3}} {{word:pa4}}, {{word:kuai4}} {{word:chu1}}-{{word:qu4}} {{word:le}}, {{word:hou4}}-{{word:lai2}} {{word:mei2}}-{{word:you3}} {{word:hui2}}-{{word:lai2}}.",
+    pinyin: "{{Word:da4}} {{word:huai4}} {{word:dong4}}-{{word:wu4}} {{word:hen3}} {{word:pa4}}, {{word:kuai4}} {{word:chu1}}-{{word:qu4}} {{word:le}}, {{word:hou4}}-{{word:lai2}} {{word:mei2}}-{{word:you3}} {{word:hui2}}-{{word:lai2}}.",
     ttsText: "大坏动物很怕，快出去了，后来没有回来。",
     en: ["The wolf got scared, rushed out, and never came back."],
     zh: ["大灰狼吓坏了，赶紧跑了，再也没回来。"],
@@ -306,7 +306,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:san1}}-ge {{word:da4}} {{word:dong4wu4}} {{word:zai4}} {{word:yi1}}-ge {{word:jia1}}-{{word:li3}} {{word:huo2}}: {{word:yi1}}-ge {{word:da4}}-{{word:de}}, {{word:yi1}}-ge {{word:bu4}} {{word:da4}} {{word:bu4}} {{word:xiao3}}-{{word:de}}, {{word:yi1}}-ge {{word:xiao3}}-{{word:de}}.",
+    pinyin: "{{Word:san1}}-ge {{word:da4}} {{word:dong4}}-{{word:wu4}} {{word:zai4}} {{word:yi1}}-ge {{word:jia1}}-{{word:li3}} {{word:huo2}}: {{word:yi1}}-ge {{word:da4}}-{{word:de}}, {{word:yi1}}-ge {{word:bu4}} {{word:da4}} {{word:bu4}} {{word:xiao3}}-{{word:de}}, {{word:yi1}}-ge {{word:xiao3}}-{{word:de}}.",
     ttsText: "三个大动物在一个家里活：一个大的，一个不大不小的，一个小的。",
     en: ["Three bears (literally: \"big animals\") lived in a house: a big one, a middle-sized one, and a little one."],
     zh: ["三只熊住在一座房子里：一只大的，一只不大不小的，一只小的。"],
@@ -322,7 +322,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:yi1}}-ge {{word:huang2se4}} {{word:mao2}}-{{word:de}} {{word:xiao3}} {{word:nv3ren2}} {{word:lai2}} {{word:le}}.",
+    pinyin: "{{Word:yi1}}-ge {{word:huang2}}-{{word:se4}} {{word:mao2}}-{{word:de}} {{word:xiao3}} {{word:nv3}}-{{word:ren2}} {{word:lai2}} {{word:le}}.",
     ttsText: "一个黄色毛的小女人来了。",
     en: ["A little girl with yellow hair came along."],
     zh: ["一个金头发的小女孩来了。"],
@@ -338,7 +338,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}} {{word:chi1}} {{word:le}} {{word:da4}} {{word:dong4wu4}}-{{word:de}} {{word:chi1}}-{{word:de}}: {{word:zhen1}} {{word:re4}}!",
+    pinyin: "{{Word:ta1}} {{word:chi1}} {{word:le}} {{word:da4}} {{word:dong4}}-{{word:wu4}}-{{word:de}} {{word:chi1}}-{{word:de}}: {{word:zhen1}} {{word:re4}}!",
     ttsText: "他吃了大动物的吃的：真热！",
     en: ["She tasted the big bear's porridge: too hot!"],
     zh: ["她吃了大熊的粥：太烫了！"],
@@ -346,7 +346,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}} {{word:chi1}} {{word:le}} {{word:bu4}}-{{word:da4}}-{{word:bu4}}-{{word:xiao3}}-{{word:de}} {{word:dong4wu4}}-{{word:de}} {{word:chi1}}-{{word:de}}: {{word:zhen1}} {{word:leng3}}!",
+    pinyin: "{{Word:ta1}} {{word:chi1}} {{word:le}} {{word:bu4}}-{{word:da4}}-{{word:bu4}}-{{word:xiao3}}-{{word:de}} {{word:dong4}}-{{word:wu4}}-{{word:de}} {{word:chi1}}-{{word:de}}: {{word:zhen1}} {{word:leng3}}!",
     ttsText: "他吃了不大不小的动物的吃的：真冷！",
     en: ["She tasted the middle bear's: too cold!"],
     zh: ["她吃了中熊的粥：太凉了！"],
@@ -354,7 +354,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}} {{word:chi1}} {{word:le}} {{word:xiao3}} {{word:dong4wu4}}-{{word:de}} {{word:chi1}}-{{word:de}}: {{word:hen3}} {{word:hao3}}! {{Word:ta1}} {{word:ba3}} {{word:chi1}}-{{word:de}} {{word:dou1}} {{word:chi1}}-{{word:wan2}} {{word:le}}.",
+    pinyin: "{{Word:ta1}} {{word:chi1}} {{word:le}} {{word:xiao3}} {{word:dong4}}-{{word:wu4}}-{{word:de}} {{word:chi1}}-{{word:de}}: {{word:hen3}} {{word:hao3}}! {{Word:ta1}} {{word:ba3}} {{word:chi1}}-{{word:de}} {{word:dou1}} {{word:chi1}}-{{word:wan2}} {{word:le}}.",
     ttsText: "他吃了小动物的吃的：很好！他把吃的都吃完了。",
     en: ["She tasted the little bear's: just right! And she ate it all up."],
     zh: ["她吃了小熊的粥：刚刚好！她把粥都吃完了。"],
@@ -362,7 +362,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}} {{word:zuo4}} {{word:zai4}} {{word:xiao3}} {{word:dong4wu4}}-{{word:de}} {{word:zuo4}}-{{word:de}} {{word:dong1xi}}-{{word:shang4}}, {{word:zuo4}}-{{word:de}} {{word:dong1xi}} {{word:huai4}} {{word:le}}.",
+    pinyin: "{{Word:ta1}} {{word:zuo4}} {{word:zai4}} {{word:xiao3}} {{word:dong4}}-{{word:wu4}}-{{word:de}} {{word:zuo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}-{{word:shang4}}, {{word:zuo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:huai4}} {{word:le}}.",
     ttsText: "他坐在小动物的坐的东西上，坐的东西坏了。",
     en: ["She sat on the little bear's chair (literally: \"sitting thing\"), and the chair broke."],
     zh: ["她坐在小熊的椅子上，椅子坏了。"],
@@ -370,7 +370,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}} {{word:yao4}} {{word:shui4jiao4}}, {{word:jiu4}} {{word:tang3}} {{word:zai4}} {{word:xiao3}} {{word:dong4wu4}}-{{word:de}} {{word:shui4jiao4}}-{{word:de}} {{word:di4fang1}}.",
+    pinyin: "{{Word:ta1}} {{word:yao4}} {{word:shui4jiao4}}, {{word:jiu4}} {{word:tang3}} {{word:zai4}} {{word:xiao3}} {{word:dong4}}-{{word:wu4}}-{{word:de}} {{word:shui4jiao4}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",
     ttsText: "他要睡觉，就躺在小动物的睡觉的地方。",
     en: ["She was sleepy, so she lay down in the little bear's bed."],
     zh: ["她困了，就躺在小熊的床上。"],
@@ -378,7 +378,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:san1}}-ge {{word:da4}} {{word:dong4wu4}} {{word:hui2}}-{{word:lai2}} {{word:le}}. {{Word:xiao3}} {{word:dong4wu4}} {{word:shuo1}}: {{Word:shen2me}} {{word:ren2}} {{word:chi1}} {{word:le}} {{word:wo3}}-{{word:de}} {{word:chi1}}-{{word:de}}?",
+    pinyin: "{{Word:san1}}-ge {{word:da4}} {{word:dong4}}-{{word:wu4}} {{word:hui2}}-{{word:lai2}} {{word:le}}. {{Word:xiao3}} {{word:dong4}}-{{word:wu4}} {{word:shuo1}}: {{Word:shen2me}} {{word:ren2}} {{word:chi1}} {{word:le}} {{word:wo3}}-{{word:de}} {{word:chi1}}-{{word:de}}?",
     ttsText: "三个大动物回来了。小动物说：什么人吃了我的吃的？",
     en: ["The three bears came home. The little bear said: \"Who ate my porridge?\""],
     zh: ["三只熊回来了。小熊说：\"谁吃了我的粥？\""],
@@ -386,7 +386,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:shen2me}} {{word:ren2}} {{word:nong4}}-{{word:huai4}} {{word:le}} {{word:wo3}}-{{word:de}} {{word:zuo4}}-{{word:de}} {{word:dong1xi}}?",
+    pinyin: "{{Word:shen2me}} {{word:ren2}} {{word:nong4}}-{{word:huai4}} {{word:le}} {{word:wo3}}-{{word:de}} {{word:zuo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}?",
     ttsText: "什么人弄坏了我的坐的东西？",
     en: ["\"Who broke my chair?\""],
     zh: ["\"谁弄坏了我的椅子？\""],
@@ -394,7 +394,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}}-{{word:men}} {{word:kan4}}-{{word:dao4}} {{word:xiao3}} {{word:nv3ren2}} {{word:zai4}} {{word:xiao3}} {{word:dong4wu4}}-{{word:de}} {{word:shui4jiao4}}-{{word:de}} {{word:di4fang1}} {{word:shui4jiao4}}!",
+    pinyin: "{{Word:ta1}}-{{word:men}} {{word:kan4}}-{{word:dao4}} {{word:xiao3}} {{word:nv3}}-{{word:ren2}} {{word:zai4}} {{word:xiao3}} {{word:dong4}}-{{word:wu4}}-{{word:de}} {{word:shui4jiao4}}-{{word:de}} {{word:di4}}-{{light:fang1}} {{word:shui4jiao4}}!",
     ttsText: "他们看到小女人在小动物的睡觉的地方睡觉！",
     en: ["Then they found the girl asleep in the little bear's bed!"],
     zh: ["它们看到小女孩在小熊的床上睡觉！"],
@@ -402,7 +402,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:xiao3}} {{word:nv3ren2}} {{word:kai1}} {{word:le}} {{word:kan4}}-{{word:de}} {{word:bu4fen}}, {{word:hen3}} {{word:pa4}}, {{word:kuai4}} {{word:chu1}}-{{word:qu4}} {{word:le}}, {{word:mei2}}-{{word:you3}} {{word:hui2}}-{{word:lai2}}.",
+    pinyin: "{{Word:xiao3}} {{word:nv3}}-{{word:ren2}} {{word:kai1}} {{word:le}} {{word:kan4}}-{{word:de}} {{word:bu4fen}}, {{word:hen3}} {{word:pa4}}, {{word:kuai4}} {{word:chu1}}-{{word:qu4}} {{word:le}}, {{word:mei2}}-{{word:you3}} {{word:hui2}}-{{word:lai2}}.",
     ttsText: "小女人开了看的部分，很怕，快出去了，没有回来。",
     en: ["The girl opened her eyes, got scared, ran out, and never came back."],
     zh: ["小女孩睁开眼睛，吓坏了，赶紧跑了出去，再也没回来。"],
@@ -426,7 +426,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:you3}} {{word:yi1}}-ge {{word:dong4wu4}}, {{word:ta1}}-{{word:de}} {{word:jiao3}} {{word:hen3}} {{word:kuai4}}. {{Word:you3}} {{word:yi1}}-ge {{word:dong4wu4}}, {{word:ta1}} {{word:shen1ti3}}-{{word:de}} {{word:wai4}}-{{word:mian4}} {{word:hen3}} {{word:ying4}}, {{word:ta1}} {{word:hen3}} {{word:bu4}} {{word:kuai4}}.",
+    pinyin: "{{Word:you3}} {{word:yi1}}-ge {{word:dong4}}-{{word:wu4}}, {{word:ta1}}-{{word:de}} {{word:jiao3}} {{word:hen3}} {{word:kuai4}}. {{Word:you3}} {{word:yi1}}-ge {{word:dong4}}-{{word:wu4}}, {{word:ta1}} {{word:shen1ti3}}-{{word:de}} {{word:wai4}}-{{word:mian4}} {{word:hen3}} {{word:ying4}}, {{word:ta1}} {{word:hen3}} {{word:bu4}} {{word:kuai4}}.",
     ttsText: "有一个动物，他的脚很快。有一个动物，他身体的外面很硬，他很不快。",
     en: ["There was a hare with very fast feet, and a tortoise with a hard shell (literally: \"hard on the outside\"), who was very slow."],
     zh: ["有一只兔子，跑得很快。有一只乌龟，壳很硬，爬得很慢。"],
@@ -434,7 +434,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:jiao3}} {{word:kuai4}}-{{word:de}} {{word:dong4wu4}} {{word:xiao4}}: {{Word:ni3}} {{word:zhen1}} {{word:bu4}} {{word:kuai4}}!",
+    pinyin: "{{Word:jiao3}} {{word:kuai4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:xiao4}}: {{Word:ni3}} {{word:zhen1}} {{word:bu4}} {{word:kuai4}}!",
     ttsText: "脚快的动物笑：你真不快！",
     en: ["The hare laughed: \"You're so slow!\""],
     zh: ["兔子笑道：\"你真慢！\""],
@@ -442,7 +442,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:wai4}}-{{word:mian4}}-{{word:ying4}}-{{word:de}} {{word:dong4wu4}} {{word:shuo1}}: {{Word:wo3}}-{{word:men}} {{word:bi3}} {{word:yi1}}-{{word:xia4}}, {{word:kan4}} {{word:shen2me}} {{word:dong4wu4}} {{word:zui4}} {{word:kuai4}} {{word:dao4}} {{word:na4}}-ge {{word:da4}} {{word:zhi2wu4}}!",
+    pinyin: "{{Word:wai4}}-{{word:mian4}}-{{word:ying4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:shuo1}}: {{Word:wo3}}-{{word:men}} {{word:bi3}} {{word:yi1}}-{{word:xia4}}, {{word:kan4}} {{word:shen2me}} {{word:dong4}}-{{word:wu4}} {{word:zui4}} {{word:kuai4}} {{word:dao4}} {{word:na4}}-ge {{word:da4}} {{word:zhi2wu4}}!",
     ttsText: "外面硬的动物说：我们比一下，看什么动物最快到那个大植物！",
     en: ["The tortoise said: \"Let's race, and see who gets to that big tree first!\""],
     zh: ["乌龟说：\"我们比一比，看谁先到那棵大树！\""],
@@ -450,7 +450,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:liang3}}-ge {{word:dong4wu4}} {{word:kai1shi3}} {{word:qu4}}. {{Word:jiao3}} {{word:kuai4}}-{{word:de}} {{word:dong4wu4}} {{word:hen3}} {{word:kuai4}} {{word:jiu4}} {{word:zai4}} {{word:hen3}} {{word:yuan3}}-{{word:de}} {{word:qian2}}-{{word:mian4}} {{word:le}}.",
+    pinyin: "{{Word:liang3}}-ge {{word:dong4}}-{{word:wu4}} {{word:kai1shi3}} {{word:qu4}}. {{Word:jiao3}} {{word:kuai4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:hen3}} {{word:kuai4}} {{word:jiu4}} {{word:zai4}} {{word:hen3}} {{word:yuan3}}-{{word:de}} {{word:qian2}}-{{word:mian4}} {{word:le}}.",
     ttsText: "两个动物开始去。脚快的动物很快就在很远的前面了。",
     en: ["They set off. The hare was soon far ahead."],
     zh: ["比赛开始了。兔子很快就跑到很远的前面去了。"],
@@ -458,7 +458,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}} {{word:kan4}} {{word:hou4}}-{{word:mian4}}: {{word:wai4}}-{{word:mian4}}-{{word:ying4}}-{{word:de}} {{word:dong4wu4}} {{word:zai4}} {{word:hen3}} {{word:yuan3}}-{{word:de}} {{word:hou4}}-{{word:mian4}}.",
+    pinyin: "{{Word:ta1}} {{word:kan4}} {{word:hou4}}-{{word:mian4}}: {{word:wai4}}-{{word:mian4}}-{{word:ying4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:zai4}} {{word:hen3}} {{word:yuan3}}-{{word:de}} {{word:hou4}}-{{word:mian4}}.",
     ttsText: "他看后面：外面硬的动物在很远的后面。",
     en: ["He looked back: the tortoise was far behind."],
     zh: ["它回头一看，乌龟还在很远的后面。"],
@@ -482,7 +482,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:wai4}}-{{word:mian4}}-{{word:ying4}}-{{word:de}} {{word:dong4wu4}} {{word:hen3}} {{word:bu4}} {{word:kuai4}}, {{word:dan4shi4}} {{word:ta1}} {{word:bu4}} {{word:deng3}}, {{word:bu4}} {{word:shui4jiao4}}, {{word:yi1}}-{{word:dian3}} {{word:yi1}}-{{word:dian3}}-{{word:de}} {{word:qu4}}.",
+    pinyin: "{{Word:wai4}}-{{word:mian4}}-{{word:ying4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:hen3}} {{word:bu4}} {{word:kuai4}}, {{word:dan4}}-{{word:shi4}} {{word:ta1}} {{word:bu4}} {{word:deng3}}, {{word:bu4}} {{word:shui4jiao4}}, {{word:yi1}}-{{word:dian3}} {{word:yi1}}-{{word:dian3}}-{{word:de}} {{word:qu4}}.",
     ttsText: "外面硬的动物很不快，但是他不等，不睡觉，一点一点的去。",
     en: ["The tortoise was very slow, but she didn't stop and didn't sleep; she kept going, little by little."],
     zh: ["乌龟爬得很慢，可是它不停下来，也不睡觉，一点一点地往前爬。"],
@@ -490,7 +490,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}} {{word:dao4}} {{word:le}} {{word:shui4jiao4}}-{{word:de}} {{word:dong4wu4}} {{word:pang2bian1}}, {{word:you4}} {{word:dao4}} {{word:le}} {{word:ta1}}-{{word:de}} {{word:qian2}}-{{word:mian4}}.",
+    pinyin: "{{Word:ta1}} {{word:dao4}} {{word:le}} {{word:shui4jiao4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:pang2bian1}}, {{word:you4}} {{word:dao4}} {{word:le}} {{word:ta1}}-{{word:de}} {{word:qian2}}-{{word:mian4}}.",
     ttsText: "他到了睡觉的动物旁边，又到了他的前面。",
     en: ["She reached the sleeping hare, and then passed him."],
     zh: ["它爬到睡着的兔子旁边，又爬到了它前面。"],
@@ -498,7 +498,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:jiao3}} {{word:kuai4}}-{{word:de}} {{word:dong4wu4}} {{word:bu4}} {{word:shui4jiao4}} {{word:le}}. {{Word:ta1}} {{word:kan4}}: {{word:wai4}}-{{word:mian4}}-{{word:ying4}}-{{word:de}} {{word:dong4wu4}} {{word:kuai4}} {{word:dao4}} {{word:da4}} {{word:zhi2wu4}} {{word:le}}!",
+    pinyin: "{{Word:jiao3}} {{word:kuai4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:bu4}} {{word:shui4jiao4}} {{word:le}}. {{Word:ta1}} {{word:kan4}}: {{word:wai4}}-{{word:mian4}}-{{word:ying4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:kuai4}} {{word:dao4}} {{word:da4}} {{word:zhi2wu4}} {{word:le}}!",
     ttsText: "脚快的动物不睡觉了。他看：外面硬的动物快到大植物了！",
     en: ["The hare woke up and looked: the tortoise was almost at the big tree!"],
     zh: ["兔子醒了，一看，乌龟快到大树了！"],
@@ -506,7 +506,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}} {{word:yong4}} {{word:zui4}} {{word:da4}}-{{word:de}} {{word:li4}} {{word:qu4}}, {{word:dan4shi4}} {{word:wai4}}-{{word:mian4}}-{{word:ying4}}-{{word:de}} {{word:dong4wu4}} {{word:zai4}} {{word:ta1}} {{word:qian2}}-{{word:mian4}} {{word:dao4}} {{word:le}}.",
+    pinyin: "{{Word:ta1}} {{word:yong4}} {{word:zui4}} {{word:da4}}-{{word:de}} {{word:li4}} {{word:qu4}}, {{word:dan4}}-{{word:shi4}} {{word:wai4}}-{{word:mian4}}-{{word:ying4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:zai4}} {{word:ta1}} {{word:qian2}}-{{word:mian4}} {{word:dao4}} {{word:le}}.",
     ttsText: "他用最大的力去，但是外面硬的动物在他前面到了。",
     en: ["He ran with all his strength, but the tortoise got there ahead of him."],
     zh: ["它拼命地跑，可是乌龟先到了。"],
@@ -538,7 +538,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:yi1}}-ge {{word:xiao3}} {{word:nan2ren2}} {{word:kan4}} {{word:hen3}} {{word:duo1}} {{word:bai2se4}} {{word:mao2}}-{{word:de}} {{word:dong4wu4}}.",
+    pinyin: "{{Word:yi1}}-ge {{word:xiao3}} {{word:nan2ren2}} {{word:kan4}} {{word:hen3}} {{word:duo1}} {{word:bai2}}-{{word:se4}} {{word:mao2}}-{{word:de}} {{word:dong4}}-{{word:wu4}}.",
     ttsText: "一个小男人看很多白色毛的动物。",
     en: ["A boy looked after many sheep. (Literally: \"white-haired animals.\")"],
     zh: ["一个小男孩在放羊。"],
@@ -554,7 +554,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}} {{word:yong4}} {{word:da4}} {{word:sheng1yin1}} {{word:shuo1}}: {{Word:da4}} {{word:huai4}} {{word:dong4wu4}} {{word:lai2}} {{word:le}}! {{Word:bang1}}-bang {{word:wo3}}!",
+    pinyin: "{{Word:ta1}} {{word:yong4}} {{word:da4}} {{word:sheng1yin1}} {{word:shuo1}}: {{Word:da4}} {{word:huai4}} {{word:dong4}}-{{word:wu4}} {{word:lai2}} {{word:le}}! {{Word:bang1}}-bang {{word:wo3}}!",
     ttsText: "他用大声音说：大坏动物来了！帮帮我！",
     en: ["He shouted: \"Wolf! Help!\" (Literally: \"the big bad animal has come!\")"],
     zh: ["他大声喊：\"狼来了！救命啊！\""],
@@ -562,7 +562,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:hen3}} {{word:duo1}} {{word:ren2}} {{word:kuai4}} {{word:lai2}} {{word:le}}, {{word:dan4shi4}} {{word:mei2}}-{{word:you3}} {{word:da4}} {{word:huai4}} {{word:dong4wu4}}.",
+    pinyin: "{{Word:hen3}} {{word:duo1}} {{word:ren2}} {{word:kuai4}} {{word:lai2}} {{word:le}}, {{word:dan4}}-{{word:shi4}} {{word:mei2}}-{{word:you3}} {{word:da4}} {{word:huai4}} {{word:dong4}}-{{word:wu4}}.",
     ttsText: "很多人快来了，但是没有大坏动物。",
     en: ["Many people came running, but there was no wolf."],
     zh: ["很多人跑来了，可是没有狼。"],
@@ -578,7 +578,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:hou4}}-{{word:lai2}}, {{word:ta1}} {{word:you4}} {{word:shuo1}} {{word:le}} {{word:yi1}}-{{word:ci4}}. {{Word:ren2}}-{{word:men}} {{word:you4}} {{word:lai2}} {{word:le}}, {{word:you4}} {{word:mei2}}-{{word:you3}} {{word:da4}} {{word:huai4}} {{word:dong4wu4}}.",
+    pinyin: "{{Word:hou4}}-{{word:lai2}}, {{word:ta1}} {{word:you4}} {{word:shuo1}} {{word:le}} {{word:yi1}}-{{word:ci4}}. {{Word:ren2}}-{{word:men}} {{word:you4}} {{word:lai2}} {{word:le}}, {{word:you4}} {{word:mei2}}-{{word:you3}} {{word:da4}} {{word:huai4}} {{word:dong4}}-{{word:wu4}}.",
     ttsText: "后来，他又说了一次。人们又来了，又没有大坏动物。",
     en: ["Later he did it again. People came again, and again there was no wolf."],
     zh: ["后来他又喊了一次。大家又来了，又没有狼。"],
@@ -594,7 +594,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:you3}} {{word:yi1}}-{{word:ci4}}, {{word:zhen1}}-{{word:de}} {{word:da4}} {{word:huai4}} {{word:dong4wu4}} {{word:lai2}} {{word:le}}!",
+    pinyin: "{{Word:you3}} {{word:yi1}}-{{word:ci4}}, {{word:zhen1}}-{{word:de}} {{word:da4}} {{word:huai4}} {{word:dong4}}-{{word:wu4}} {{word:lai2}} {{word:le}}!",
     ttsText: "有一次，真的大坏动物来了！",
     en: ["Then one day, a real wolf came!"],
     zh: ["有一天，狼真的来了！"],
@@ -602,7 +602,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:xiao3}} {{word:nan2ren2}} {{word:yong4}} {{word:da4}} {{word:sheng1yin1}} {{word:shuo1}}: {{Word:da4}} {{word:huai4}} {{word:dong4wu4}} {{word:lai2}} {{word:le}}! {{Word:zhe4}}-{{word:ci4}} {{word:shi4}} {{word:zhen1}}-{{word:de}}!",
+    pinyin: "{{Word:xiao3}} {{word:nan2ren2}} {{word:yong4}} {{word:da4}} {{word:sheng1yin1}} {{word:shuo1}}: {{Word:da4}} {{word:huai4}} {{word:dong4}}-{{word:wu4}} {{word:lai2}} {{word:le}}! {{Word:zhe4}}-{{word:ci4}} {{word:shi4}} {{word:zhen1}}-{{word:de}}!",
     ttsText: "小男人用大声音说：大坏动物来了！这次是真的！",
     en: ["The boy shouted: \"Wolf! This time it's true!\""],
     zh: ["小男孩大喊：\"狼来了！这次是真的！\""],
@@ -610,7 +610,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:dan4shi4}} {{word:ren2}}-{{word:men}} {{word:jue2de}} {{word:ta1}} {{word:you4}} {{word:bu4}} {{word:shuo1}} {{word:zhen1}}-{{word:de}}, {{word:mei2}}-{{word:you3}} {{word:ren2}} {{word:lai2}}.",
+    pinyin: "{{Word:dan4}}-{{word:shi4}} {{word:ren2}}-{{word:men}} {{word:jue2de}} {{word:ta1}} {{word:you4}} {{word:bu4}} {{word:shuo1}} {{word:zhen1}}-{{word:de}}, {{word:mei2}}-{{word:you3}} {{word:ren2}} {{word:lai2}}.",
     ttsText: "但是人们觉得他又不说真的，没有人来。",
     en: ["But people thought he was lying again (literally: \"not saying true things\"), and nobody came."],
     zh: ["可是大家以为他又在说谎，谁也没来。"],
@@ -618,7 +618,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:da4}} {{word:huai4}} {{word:dong4wu4}} {{word:chi1}} {{word:le}} {{word:hen3}} {{word:duo1}} {{word:bai2se4}} {{word:mao2}}-{{word:de}} {{word:dong4wu4}}.",
+    pinyin: "{{Word:da4}} {{word:huai4}} {{word:dong4}}-{{word:wu4}} {{word:chi1}} {{word:le}} {{word:hen3}} {{word:duo1}} {{word:bai2}}-{{word:se4}} {{word:mao2}}-{{word:de}} {{word:dong4}}-{{word:wu4}}.",
     ttsText: "大坏动物吃了很多白色毛的动物。",
     en: ["The wolf ate many of the sheep."],
     zh: ["狼吃了很多羊。"],
@@ -650,7 +650,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:zai4}} {{word:shui3}} {{word:pang2bian1}}, {{word:yi1}}-ge {{word:fei1}}-{{word:de}} {{word:dong4wu4}}-{{word:de}} {{word:jia1}}-{{word:li3}} {{word:you3}} {{word:le}} {{word:liu4}}-ge {{word:xiao3}} {{word:fei1}}-{{word:de}} {{word:dong4wu4}}.",
+    pinyin: "{{Word:zai4}} {{word:shui3}} {{word:pang2bian1}}, {{word:yi1}}-ge {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}}-{{word:de}} {{word:jia1}}-{{word:li3}} {{word:you3}} {{word:le}} {{word:liu4}}-ge {{word:xiao3}} {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}}.",
     ttsText: "在水旁边，一个飞的动物的家里有了六个小飞的动物。",
     en: ["By the water, a mother duck had six ducklings. (Literally: \"six little flying animals.\")"],
     zh: ["在水边，鸭妈妈孵出了六只小鸭子。"],
@@ -658,7 +658,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:wu3}}-ge {{word:shi4}} {{word:huang2se4}}-{{word:de}}, {{word:hen3}} {{word:hao3}}-{{word:kan4}}. {{Word:yi1}}-ge {{word:hen3}} {{word:da4}}, {{word:shi4}} {{word:hei1se4}}-{{word:de}}, {{word:bu4}} {{word:hao3}}-{{word:kan4}}.",
+    pinyin: "{{Word:wu3}}-ge {{word:shi4}} {{word:huang2}}-{{word:se4}}-{{word:de}}, {{word:hen3}} {{word:hao3}}-{{word:kan4}}. {{Word:yi1}}-ge {{word:hen3}} {{word:da4}}, {{word:shi4}} {{word:hei1}}-{{word:se4}}-{{word:de}}, {{word:bu4}} {{word:hao3}}-{{word:kan4}}.",
     ttsText: "五个是黄色的，很好看。一个很大，是黑色的，不好看。",
     en: ["Five were yellow and pretty. One was big, dark, and ugly (literally: \"not good-looking\")."],
     zh: ["五只是黄色的，很好看。一只很大，是灰黑色的，不好看。"],
@@ -666,7 +666,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:bie2de}} {{word:fei1}}-{{word:de}} {{word:dong4wu4}} {{word:shuo1}}: {{Word:ni3}} {{word:zhen1}} {{word:qi2guai4}}! {{Word:ni3}} {{word:he2}} {{word:wo3}}-{{word:men}} {{word:bu4}} {{word:yi1yang4}}!",
+    pinyin: "{{Word:bie2}}-{{word:de}} {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:shuo1}}: {{Word:ni3}} {{word:zhen1}} {{word:qi2guai4}}! {{Word:ni3}} {{word:he2}} {{word:wo3}}-{{word:men}} {{word:bu4}} {{word:yi1}}-{{word:yang4}}!",
     ttsText: "别的飞的动物说：你真奇怪！你和我们不一样！",
     en: ["The other birds said: \"You're so strange! You're not like us!\""],
     zh: ["别的鸭子说：\"你真奇怪！你跟我们不一样！\""],
@@ -682,7 +682,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}} {{word:hen3}} {{word:bu4}} {{word:kai1}}-{{word:xin1}}, {{word:jiu4}} {{word:qu4}} {{word:le}} {{word:hen3}} {{word:yuan3}}-{{word:de}} {{word:di4fang1}}.",
+    pinyin: "{{Word:ta1}} {{word:hen3}} {{word:bu4}} {{word:kai1}}-{{word:xin1}}, {{word:jiu4}} {{word:qu4}} {{word:le}} {{word:hen3}} {{word:yuan3}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",
     ttsText: "他很不开心，就去了很远的地方。",
     en: ["He was very unhappy, and went far away."],
     zh: ["它很伤心，就走到了很远的地方。"],
@@ -706,7 +706,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}} {{word:kan4}}-{{word:dao4}} {{word:shui3}}-{{word:shang4}} {{word:you3}} {{word:san1}}-ge {{word:da4}}-{{word:de}} {{word:bai2se4}} {{word:fei1}}-{{word:de}} {{word:dong4wu4}}, {{word:zhen1}} {{word:hao3}}-{{word:kan4}}!",
+    pinyin: "{{Word:ta1}} {{word:kan4}}-{{word:dao4}} {{word:shui3}}-{{word:shang4}} {{word:you3}} {{word:san1}}-ge {{word:da4}}-{{word:de}} {{word:bai2}}-{{word:se4}} {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}}, {{word:zhen1}} {{word:hao3}}-{{word:kan4}}!",
     ttsText: "他看到水上有三个大的白色飞的动物，真好看！",
     en: ["He saw three big white birds on the water, so beautiful! (Swans.)"],
     zh: ["它看到水上有三只大白天鹅，真好看！"],
@@ -714,7 +714,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}} {{word:pa4}}, {{word:dan4shi4}} {{word:ta1}} {{word:qu4}} {{word:le}} {{word:ta1}}-{{word:men}} {{word:pang2bian1}}. {{Word:ta1}} {{word:jue2de}}: {{Word:ta1}}-{{word:men}} {{word:hui4}} {{word:da3}} {{word:wo3}}.",
+    pinyin: "{{Word:ta1}} {{word:pa4}}, {{word:dan4}}-{{word:shi4}} {{word:ta1}} {{word:qu4}} {{word:le}} {{word:ta1}}-{{word:men}} {{word:pang2bian1}}. {{Word:ta1}} {{word:jue2de}}: {{Word:ta1}}-{{word:men}} {{word:hui4}} {{word:da3}} {{word:wo3}}.",
     ttsText: "他怕，但是他去了他们旁边。他觉得：他们会打我。",
     en: ["He was scared, but he swam up to them. He thought: \"They will peck me.\""],
     zh: ["它很害怕，可是还是游到它们旁边。它想：\"它们会啄我。\""],
@@ -722,7 +722,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}} {{word:kan4}} {{word:xia4}}-{{word:mian4}}-{{word:de}} {{word:shui3}}. {{Word:shui3}}-{{word:li3}} {{word:you3}} {{word:yi1}}-ge {{word:da4}}-{{word:de}} {{word:bai2se4}} {{word:fei1}}-{{word:de}} {{word:dong4wu4}}: {{word:shi4}} {{word:ta1}}!",
+    pinyin: "{{Word:ta1}} {{word:kan4}} {{word:xia4}}-{{word:mian4}}-{{word:de}} {{word:shui3}}. {{Word:shui3}}-{{word:li3}} {{word:you3}} {{word:yi1}}-ge {{word:da4}}-{{word:de}} {{word:bai2}}-{{word:se4}} {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}}: {{word:shi4}} {{word:ta1}}!",
     ttsText: "他看下面的水。水里有一个大的白色飞的动物：是他！",
     en: ["He looked down at the water. In the water was a big white bird: it was him!"],
     zh: ["它低头看水，水里有一只大白天鹅——就是它自己！"],
@@ -730,7 +730,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}} {{word:bu4}} {{word:shi4}} {{word:qi2guai4}}-{{word:de}} {{word:fei1}}-{{word:de}} {{word:dong4wu4}}, {{word:ta1}} {{word:shi4}} {{word:da4}}-{{word:de}} {{word:bai2se4}} {{word:fei1}}-{{word:de}} {{word:dong4wu4}}!",
+    pinyin: "{{Word:ta1}} {{word:bu4}} {{word:shi4}} {{word:qi2guai4}}-{{word:de}} {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}}, {{word:ta1}} {{word:shi4}} {{word:da4}}-{{word:de}} {{word:bai2}}-{{word:se4}} {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}}!",
     ttsText: "他不是奇怪的飞的动物，他是大的白色飞的动物！",
     en: ["He wasn't a strange duckling. He was a swan!"],
     zh: ["它不是丑小鸭，它是一只天鹅！"],
@@ -738,7 +738,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:bie2de}} {{word:bai2se4}} {{word:fei1}}-{{word:de}} {{word:dong4wu4}} {{word:he2}} {{word:ta1}} {{word:yi1}}-{{word:qi3}} {{word:wan2r}}, {{word:ta1}} {{word:hen3}} {{word:kai1}}-{{word:xin1}}.",
+    pinyin: "{{Word:bie2}}-{{word:de}} {{word:bai2}}-{{word:se4}} {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:he2}} {{word:ta1}} {{word:yi1}}-{{word:qi3}} {{word:wan2r}}, {{word:ta1}} {{word:hen3}} {{word:kai1}}-{{word:xin1}}.",
     ttsText: "别的白色飞的动物和他一起玩儿，他很开心。",
     en: ["The other swans played with him, and he was very happy."],
     zh: ["别的天鹅跟它一起玩，它很开心。"],
@@ -762,7 +762,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "\"Jiékè\" {{word:he2}} {{word:ta1}}-{{word:de}} {{word:fu4mu3}} {{word:mei2}}-{{word:you3}} {{word:jin1}}, {{word:jiu4}} {{word:you3}} {{word:yi1}}-ge {{word:jiao4}} \"mōu\"-{{word:de}} {{word:dong4wu4}}.",
+    pinyin: "\"Jiékè\" {{word:he2}} {{word:ta1}}-{{word:de}} {{word:fu4mu3}} {{word:mei2}}-{{word:you3}} {{word:jin1}}, {{word:jiu4}} {{word:you3}} {{word:yi1}}-ge {{word:jiao4}} \"mōu\"-{{word:de}} {{word:dong4}}-{{word:wu4}}.",
     ttsText: "杰克和他的父母没有金，就有一个叫哞的动物。",
     en: ["Jack and his mother had no money, only one cow. (Literally: \"an animal that says 'moo'.\")"],
     zh: ["杰克和妈妈没有钱，只有一头奶牛。"],
@@ -770,7 +770,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}}-{{word:de}} {{word:fu4mu3}} {{word:shuo1}}: {{Word:ni3}} {{word:na2}} {{word:dong4wu4}} {{word:qu4}}, {{word:gei3}} {{word:ren2}}, {{word:de2}} {{word:jin1}} {{word:hui2}}-{{word:lai2}}.",
+    pinyin: "{{Word:ta1}}-{{word:de}} {{word:fu4mu3}} {{word:shuo1}}: {{Word:ni3}} {{word:na2}} {{word:dong4}}-{{word:wu4}} {{word:qu4}}, {{word:gei3}} {{word:ren2}}, {{word:de2}} {{word:jin1}} {{word:hui2}}-{{word:lai2}}.",
     ttsText: "他的父母说：你拿动物去，给人，得金回来。",
     en: ["His mother said: \"Take the cow, sell it, and bring the money back.\""],
     zh: ["妈妈说：\"把牛牵去卖了，换点钱回来。\""],
@@ -778,7 +778,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:zai4}} {{word:lu4}}-{{word:shang4}}, {{word:yi1}}-ge {{word:qi2guai4}}-{{word:de}} {{word:lao3}} {{word:nan2ren2}} {{word:shuo1}}: {{Word:gei3}} {{word:wo3}} {{word:ni3}}-{{word:de}} {{word:dong4wu4}}, {{word:wo3}} {{word:gei3}} {{word:ni3}} {{word:wu3}}-ge {{word:hen3}} {{word:qi2guai4}}-{{word:de}} {{word:xiao3}} {{word:yuan2}} {{word:dong1xi}}.",
+    pinyin: "{{Word:zai4}} {{word:lu4}}-{{word:shang4}}, {{word:yi1}}-ge {{word:qi2guai4}}-{{word:de}} {{word:lao3}} {{word:nan2ren2}} {{word:shuo1}}: {{Word:gei3}} {{word:wo3}} {{word:ni3}}-{{word:de}} {{word:dong4}}-{{word:wu4}}, {{word:wo3}} {{word:gei3}} {{word:ni3}} {{word:wu3}}-ge {{word:hen3}} {{word:qi2guai4}}-{{word:de}} {{word:xiao3}} {{word:yuan2}} {{word:dong1}}-{{light:xi1}}.",
     ttsText: "在路上，一个奇怪的老男人说：给我你的动物，我给你五个很奇怪的小圆东西。",
     en: ["On the road, a strange old man said: \"Give me your cow, and I'll give you five magic beans.\" (Literally: \"five very strange little round things.\")"],
     zh: ["路上，一个奇怪的老人说：\"把你的牛给我，我给你五颗魔豆。\""],
@@ -786,7 +786,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "\"Jiékè\" {{word:hui2}} {{word:jia1}} {{word:le}}. {{Word:ta1}}-{{word:de}} {{word:fu4mu3}} {{word:xin1}}-{{word:li3}} {{word:you3}} {{word:huo3}}, {{word:ba3}} {{word:xiao3}} {{word:yuan2}} {{word:dong1xi}} {{word:fang4}} {{word:dao4}} {{word:kou3}} {{word:wai4}}-{{word:mian4}}.",
+    pinyin: "\"Jiékè\" {{word:hui2}} {{word:jia1}} {{word:le}}. {{Word:ta1}}-{{word:de}} {{word:fu4mu3}} {{word:xin1}}-{{word:li3}} {{word:you3}} {{word:huo3}}, {{word:ba3}} {{word:xiao3}} {{word:yuan2}} {{word:dong1}}-{{light:xi1}} {{word:fang4}} {{word:dao4}} {{word:kou3}} {{word:wai4}}-{{word:mian4}}.",
     ttsText: "杰克回家了。他的父母心里有火，把小圆东西放到口外面。",
     en: ["Jack went home. His mother was furious and threw the beans out of the window."],
     zh: ["杰克回到家。妈妈很生气，把豆子扔到了窗外。"],
@@ -794,7 +794,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:yue4}}-{{word:de}} {{word:shi2jian1}}, {{word:cong2}} {{word:xiao3}} {{word:yuan2}} {{word:dong1xi}} {{word:li3}}-{{word:mian4}} {{word:chu1}}-{{word:lai2}} {{word:le}} {{word:yi1}}-ge {{word:zhi2wu4}}.",
+    pinyin: "{{Word:yue4}}-{{word:de}} {{word:shi2jian1}}, {{word:cong2}} {{word:xiao3}} {{word:yuan2}} {{word:dong1}}-{{light:xi1}} {{word:li3}}-{{word:mian4}} {{word:chu1}}-{{word:lai2}} {{word:le}} {{word:yi1}}-ge {{word:zhi2wu4}}.",
     ttsText: "月的时间，从小圆东西里面出来了一个植物。",
     en: ["That night, a plant came up out of the beans."],
     zh: ["晚上，豆子发芽了。"],
@@ -842,7 +842,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "\"Jiékè\" {{word:yong4}} {{word:gong1ju4}} {{word:ba3}} {{word:zhi2wu4}} {{word:nong4}}-{{word:huai4}} {{word:le}}.",
+    pinyin: "\"Jiékè\" {{word:yong4}} {{word:gong1}}-{{word:ju4}} {{word:ba3}} {{word:zhi2wu4}} {{word:nong4}}-{{word:huai4}} {{word:le}}.",
     ttsText: "杰克用工具把植物弄坏了。",
     en: ["Jack broke the plant with a tool (an axe)."],
     zh: ["杰克用斧头把豆苗砍断了。"],
@@ -882,7 +882,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:zui4}} {{word:da4}}-{{word:de}} {{word:ren2}} {{word:hen3}} {{word:ai4}} {{word:yi1fu}}. {{Word:ta1}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:yi1fu}}, {{word:dan4shi4}} {{word:ta1}} {{word:shen2me}} {{word:shi2jian1}} {{word:dou1}} {{word:yao4}} {{word:tou2}}-{{word:yi1}}-{{word:ci4}} {{word:kan4}}-{{word:dao4}}-{{word:de}} {{word:yi1fu}}.",
+    pinyin: "{{Word:zui4}} {{word:da4}}-{{word:de}} {{word:ren2}} {{word:hen3}} {{word:ai4}} {{word:yi1fu}}. {{Word:ta1}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:yi1fu}}, {{word:dan4}}-{{word:shi4}} {{word:ta1}} {{word:shen2me}} {{word:shi2jian1}} {{word:dou1}} {{word:yao4}} {{word:tou2}}-{{word:yi1}}-{{word:ci4}} {{word:kan4}}-{{word:dao4}}-{{word:de}} {{word:yi1fu}}.",
     ttsText: "最大的人很爱衣服。他有很多衣服，但是他什么时间都要头一次看到的衣服。",
     en: ["The emperor (literally: \"the biggest person\") loved clothes. He had lots of them, but he always wanted new ones (literally: \"ones seen for the first time\")."],
     zh: ["皇帝非常喜欢衣服。他有很多衣服，可是总想要新的。"],
@@ -906,7 +906,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:zui4}} {{word:da4}}-{{word:de}} {{word:ren2}} {{word:gei3}} {{word:le}} {{word:ta1}}-{{word:men}} {{word:hen3}} {{word:duo1}} {{word:jin1}}. {{Word:ta1}}-{{word:men}} {{word:na2}} {{word:le}} {{word:jin1}}, {{word:dan4shi4}} {{word:shen2me}} {{word:dou1}} {{word:mei2}} {{word:nong4}}.",
+    pinyin: "{{Word:zui4}} {{word:da4}}-{{word:de}} {{word:ren2}} {{word:gei3}} {{word:le}} {{word:ta1}}-{{word:men}} {{word:hen3}} {{word:duo1}} {{word:jin1}}. {{Word:ta1}}-{{word:men}} {{word:na2}} {{word:le}} {{word:jin1}}, {{word:dan4}}-{{word:shi4}} {{word:shen2me}} {{word:dou1}} {{word:mei2}} {{word:nong4}}.",
     ttsText: "最大的人给了他们很多金。他们拿了金，但是什么都没弄。",
     en: ["The emperor gave them lots of money. They took it, but didn't make anything at all."],
     zh: ["皇帝给了他们很多钱。他们拿了钱，可是什么也没做。"],
@@ -922,7 +922,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:dan4shi4}} {{word:ta1}} {{word:pa4}}: {{Word:ru2guo3}} {{word:wo3}} {{word:shuo1}} {{word:wo3}} {{word:kan4}}-{{word:bu4}}-{{word:dao4}}, {{word:ren2}}-{{word:men}} {{word:jiu4}} {{word:hui4}} {{word:shuo1}} {{word:wo3}} {{word:tou2}} {{word:bu4}} {{word:hao3}}.",
+    pinyin: "{{Word:dan4}}-{{word:shi4}} {{word:ta1}} {{word:pa4}}: {{Word:ru2guo3}} {{word:wo3}} {{word:shuo1}} {{word:wo3}} {{word:kan4}}-{{word:bu4}}-{{word:dao4}}, {{word:ren2}}-{{word:men}} {{word:jiu4}} {{word:hui4}} {{word:shuo1}} {{word:wo3}} {{word:tou2}} {{word:bu4}} {{word:hao3}}.",
     ttsText: "但是他怕：如果我说我看不到，人们就会说我头不好。",
     en: ["But he was afraid: \"If I say I can't see them, people will say I'm a fool.\""],
     zh: ["可是他害怕：\"如果我说看不见，大家就会说我笨。\""],
@@ -970,7 +970,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:zui4}} {{word:da4}}-{{word:de}} {{word:ren2}} {{word:zhi1dao4}} {{word:ta1}}-{{word:men}} {{word:shuo1}}-{{word:de}} {{word:dui4}}, {{word:dan4shi4}} {{word:ta1}} {{word:qu4}}-{{word:xia4}}-{{word:qu4}} {{word:le}}.",
+    pinyin: "{{Word:zui4}} {{word:da4}}-{{word:de}} {{word:ren2}} {{word:zhi1dao4}} {{word:ta1}}-{{word:men}} {{word:shuo1}}-{{word:de}} {{word:dui4}}, {{word:dan4}}-{{word:shi4}} {{word:ta1}} {{word:qu4}}-{{word:xia4}}-{{word:qu4}} {{word:le}}.",
     ttsText: "最大的人知道他们说的对，但是他去下去了。",
     en: ["The emperor knew they were right, but he kept on walking."],
     zh: ["皇帝知道他们说得对，可是他还是继续往前走。"],
@@ -994,7 +994,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:re4}}-{{word:de}} {{word:shi2jian1}}, {{word:yi1}}-ge {{word:hei1se4}}-{{word:de}} {{word:xiao3}} {{word:dong4wu4}} {{word:shen2me}} {{word:shi2jian1}} {{word:dou1}} {{word:zai4}} {{word:nong4}}.",
+    pinyin: "{{Word:re4}}-{{word:de}} {{word:shi2jian1}}, {{word:yi1}}-ge {{word:hei1}}-{{word:se4}}-{{word:de}} {{word:xiao3}} {{word:dong4}}-{{word:wu4}} {{word:shen2me}} {{word:shi2jian1}} {{word:dou1}} {{word:zai4}} {{word:nong4}}.",
     ttsText: "热的时间，一个黑色的小动物什么时间都在弄。",
     en: ["In summer (literally: \"the hot time\"), an ant (literally: \"a little black animal\") was always working."],
     zh: ["夏天，一只小蚂蚁一天到晚都在干活。"],
@@ -1002,7 +1002,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}} {{word:zhao3}} {{word:chi1}}-{{word:de}} {{word:dong1xi}}, {{word:na2}} {{word:hui2}} {{word:jia1}}.",
+    pinyin: "{{Word:ta1}} {{word:zhao3}} {{word:chi1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}, {{word:na2}} {{word:hui2}} {{word:jia1}}.",
     ttsText: "他找吃的东西，拿回家。",
     en: ["It looked for food and carried it home."],
     zh: ["它找吃的，搬回家。"],
@@ -1010,7 +1010,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:yi1}}-ge {{word:lan2se4}}-{{word:de}} {{word:da4}} {{word:dong4wu4}} {{word:bu4}} {{word:nong4}}. {{Word:ta1}} {{word:wan2r}}, {{word:shuo1}}-shuo, {{word:xiao4}}-xiao.",
+    pinyin: "{{Word:yi1}}-ge {{word:lan2}}-{{word:se4}}-{{word:de}} {{word:da4}} {{word:dong4}}-{{word:wu4}} {{word:bu4}} {{word:nong4}}. {{Word:ta1}} {{word:wan2r}}, {{word:shuo1}}-shuo, {{word:xiao4}}-xiao.",
     ttsText: "一个蓝色的大动物不弄。他玩儿，说说，笑笑。",
     en: ["A grasshopper (literally: \"a big green animal\") didn't work. It played, chatted, and laughed."],
     zh: ["一只蚱蜢不干活，整天玩，说说笑笑。"],
@@ -1018,7 +1018,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:lan2se4}}-{{word:de}} {{word:dong4wu4}} {{word:shuo1}}: {{Word:ni3}} {{word:wei4shen2me}} {{word:nong4}}? {{Word:lai2}} {{word:wan2r}}!",
+    pinyin: "{{Word:lan2}}-{{word:se4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:shuo1}}: {{Word:ni3}} {{word:wei4}}-{{word:shen2me}} {{word:nong4}}? {{Word:lai2}} {{word:wan2r}}!",
     ttsText: "蓝色的动物说：你为什么弄？来玩儿！",
     en: ["The grasshopper said: \"Why are you working? Come and play!\""],
     zh: ["蚱蜢说：\"你干吗干活？来玩吧！\""],
@@ -1026,7 +1026,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:hei1se4}}-{{word:de}} {{word:dong4wu4}} {{word:shuo1}}: {{Word:leng3}}-{{word:de}} {{word:shi2jian1}} {{word:hui4}} {{word:lai2}}. {{Word:wo3}} {{word:yao4}} {{word:you3}} {{word:chi1}}-{{word:de}}.",
+    pinyin: "{{Word:hei1}}-{{word:se4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:shuo1}}: {{Word:leng3}}-{{word:de}} {{word:shi2jian1}} {{word:hui4}} {{word:lai2}}. {{Word:wo3}} {{word:yao4}} {{word:you3}} {{word:chi1}}-{{word:de}}.",
     ttsText: "黑色的动物说：冷的时间会来。我要有吃的。",
     en: ["The ant said: \"Winter will come. I need to have food.\""],
     zh: ["蚂蚁说：\"冬天会来的。我要准备吃的。\""],
@@ -1034,7 +1034,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:lan2se4}}-{{word:de}} {{word:dong4wu4}} {{word:xiao4}}: {{Word:leng3}}-{{word:de}} {{word:shi2jian1}} {{word:hen3}} {{word:yuan3}}!",
+    pinyin: "{{Word:lan2}}-{{word:se4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:xiao4}}: {{Word:leng3}}-{{word:de}} {{word:shi2jian1}} {{word:hen3}} {{word:yuan3}}!",
     ttsText: "蓝色的动物笑：冷的时间很远！",
     en: ["The grasshopper laughed: \"Winter is far away!\""],
     zh: ["蚱蜢笑了：\"冬天还早着呢！\""],
@@ -1042,7 +1042,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:hou4}}-{{word:lai2}}, {{word:leng3}}-{{word:de}} {{word:shi2jian1}} {{word:lai2}} {{word:le}}. {{Word:di4}}-{{word:shang4}} {{word:dou1}} {{word:shi4}} {{word:bai2se4}}-{{word:de}}.",
+    pinyin: "{{Word:hou4}}-{{word:lai2}}, {{word:leng3}}-{{word:de}} {{word:shi2jian1}} {{word:lai2}} {{word:le}}. {{Word:di4}}-{{word:shang4}} {{word:dou1}} {{word:shi4}} {{word:bai2}}-{{word:se4}}-{{word:de}}.",
     ttsText: "后来，冷的时间来了。地上都是白色的。",
     en: ["Then winter came. The ground was all white."],
     zh: ["后来，冬天来了。地上都是白的。"],
@@ -1050,7 +1050,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:lan2se4}}-{{word:de}} {{word:dong4wu4}} {{word:hen3}} {{word:leng3}}, {{word:mei2}}-{{word:you3}} {{word:chi1}}-{{word:de}}, {{word:hen3}} {{word:bu4}} {{word:kai1}}-{{word:xin1}}.",
+    pinyin: "{{Word:lan2}}-{{word:se4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:hen3}} {{word:leng3}}, {{word:mei2}}-{{word:you3}} {{word:chi1}}-{{word:de}}, {{word:hen3}} {{word:bu4}} {{word:kai1}}-{{word:xin1}}.",
     ttsText: "蓝色的动物很冷，没有吃的，很不开心。",
     en: ["The grasshopper was cold, had nothing to eat, and was very unhappy."],
     zh: ["蚱蜢又冷又饿，没有吃的，很难过。"],
@@ -1058,7 +1058,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}} {{word:qu4}} {{word:hei1se4}}-{{word:de}} {{word:dong4wu4}}-{{word:de}} {{word:jia1}}, {{word:wen4}}: {{Word:ni3}} {{word:neng2}} {{word:gei3}} {{word:wo3}} {{word:yi1}}-{{word:dian3}} {{word:chi1}}-{{word:de}} {{word:ma}}?",
+    pinyin: "{{Word:ta1}} {{word:qu4}} {{word:hei1}}-{{word:se4}}-{{word:de}} {{word:dong4}}-{{word:wu4}}-{{word:de}} {{word:jia1}}, {{word:wen4}}: {{Word:ni3}} {{word:neng2}} {{word:gei3}} {{word:wo3}} {{word:yi1}}-{{word:dian3}} {{word:chi1}}-{{word:de}} {{word:ma}}?",
     ttsText: "他去黑色的动物的家，问：你能给我一点吃的吗？",
     en: ["It went to the ant's house and asked: \"Can you give me a little food?\""],
     zh: ["它去蚂蚁家，问：\"你能给我一点吃的吗？\""],
@@ -1066,7 +1066,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:hei1se4}}-{{word:de}} {{word:dong4wu4}} {{word:shuo1}}: {{Word:re4}}-{{word:de}} {{word:shi2jian1}}, {{word:ni3}} {{word:zai4}} {{word:nong4}} {{word:shen2me}}?",
+    pinyin: "{{Word:hei1}}-{{word:se4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:shuo1}}: {{Word:re4}}-{{word:de}} {{word:shi2jian1}}, {{word:ni3}} {{word:zai4}} {{word:nong4}} {{word:shen2me}}?",
     ttsText: "黑色的动物说：热的时间，你在弄什么？",
     en: ["The ant said: \"What were you doing in the summer?\""],
     zh: ["蚂蚁说：\"夏天的时候你在干什么？\""],
@@ -1074,7 +1074,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:lan2se4}}-{{word:de}} {{word:dong4wu4}} {{word:shuo1}}: {{Word:wo3}} {{word:zai4}} {{word:wan2r}}.",
+    pinyin: "{{Word:lan2}}-{{word:se4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:shuo1}}: {{Word:wo3}} {{word:zai4}} {{word:wan2r}}.",
     ttsText: "蓝色的动物说：我在玩儿。",
     en: ["The grasshopper said: \"I was playing.\""],
     zh: ["蚱蜢说：\"我在玩。\""],
@@ -1082,7 +1082,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:hei1se4}}-{{word:de}} {{word:dong4wu4}} {{word:gei3}} {{word:le}} {{word:ta1}} {{word:yi1}}-{{word:dian3}} {{word:chi1}}-{{word:de}}, {{word:shuo1}}: {{Word:xia4}} {{word:yi1}}-ge {{word:re4}}-{{word:de}} {{word:shi2jian1}}, {{word:ni3}} {{word:ye3}} {{word:yao4}} {{word:nong4}}!",
+    pinyin: "{{Word:hei1}}-{{word:se4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:gei3}} {{word:le}} {{word:ta1}} {{word:yi1}}-{{word:dian3}} {{word:chi1}}-{{word:de}}, {{word:shuo1}}: {{Word:xia4}} {{word:yi1}}-ge {{word:re4}}-{{word:de}} {{word:shi2jian1}}, {{word:ni3}} {{word:ye3}} {{word:yao4}} {{word:nong4}}!",
     ttsText: "黑色的动物给了他一点吃的，说：下一个热的时间，你也要弄！",
     en: ["The ant gave it a little food and said: \"Next summer, you work too!\""],
     zh: ["蚂蚁给了它一点吃的，说：\"明年夏天，你也要干活！\""],
@@ -1106,7 +1106,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:yi1}}-ge {{word:lao3}} {{word:nan2ren2}} {{word:he2}} {{word:ta1}}-{{word:de}} {{word:lao3}} {{word:nv3ren2}} {{word:zai4}} {{word:hen3}} {{word:da4}}-{{word:de}} {{word:shui3}} {{word:pang2bian1}} {{word:huo2}}. {{Word:ta1}}-{{word:men}} {{word:mei2}}-{{word:you3}} {{word:jin1}}.",
+    pinyin: "{{Word:yi1}}-ge {{word:lao3}} {{word:nan2ren2}} {{word:he2}} {{word:ta1}}-{{word:de}} {{word:lao3}} {{word:nv3}}-{{word:ren2}} {{word:zai4}} {{word:hen3}} {{word:da4}}-{{word:de}} {{word:shui3}} {{word:pang2bian1}} {{word:huo2}}. {{Word:ta1}}-{{word:men}} {{word:mei2}}-{{word:you3}} {{word:jin1}}.",
     ttsText: "一个老男人和他的老女人在很大的水旁边活。他们没有金。",
     en: ["An old man and his old wife lived by the sea (literally: \"a very big water\"). They were poor (literally: \"had no money\")."],
     zh: ["一个老渔夫和他的老太婆住在海边，他们很穷。"],
@@ -1114,7 +1114,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:lao3}} {{word:nan2ren2}} {{word:zhao3}} {{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}}. {{Word:you3}} {{word:yi1}}-{{word:ci4}}, {{word:ta1}} {{word:na2}}-{{word:dao4}} {{word:le}} {{word:yi1}}-ge {{word:huang2se4}}-{{word:de}} {{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}}.",
+    pinyin: "{{Word:lao3}} {{word:nan2ren2}} {{word:zhao3}} {{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4}}-{{word:wu4}}. {{Word:you3}} {{word:yi1}}-{{word:ci4}}, {{word:ta1}} {{word:na2}}-{{word:dao4}} {{word:le}} {{word:yi1}}-ge {{word:huang2}}-{{word:se4}}-{{word:de}} {{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4}}-{{word:wu4}}.",
     ttsText: "老男人找水里的动物。有一次，他拿到了一个黄色的水里的动物。",
     en: ["The old man fished (literally: \"hunted water animals\"). One day he caught a golden fish (literally: \"a yellow water animal\")."],
     zh: ["老人每天打鱼。有一次，他打到了一条金鱼。"],
@@ -1122,7 +1122,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:huang2se4}}-{{word:de}} {{word:dong4wu4}} {{word:shuo1}}: {{Word:ba3}} {{word:wo3}} {{word:fang4}}-{{word:hui2}} {{word:shui3}}-{{word:li3}}! {{Word:ni3}} {{word:yao4}} {{word:shen2me}}, {{word:wo3}} {{word:jiu4}} {{word:gei3}} {{word:ni3}} {{word:shen2me}}.",
+    pinyin: "{{Word:huang2}}-{{word:se4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:shuo1}}: {{Word:ba3}} {{word:wo3}} {{word:fang4}}-{{word:hui2}} {{word:shui3}}-{{word:li3}}! {{Word:ni3}} {{word:yao4}} {{word:shen2me}}, {{word:wo3}} {{word:jiu4}} {{word:gei3}} {{word:ni3}} {{word:shen2me}}.",
     ttsText: "黄色的动物说：把我放回水里！你要什么，我就给你什么。",
     en: ["The golden fish spoke: \"Put me back in the water! Whatever you want, I'll give you.\""],
     zh: ["金鱼说：\"把我放回水里吧！你要什么，我就给你什么。\""],
@@ -1138,7 +1138,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}} {{word:hui2}} {{word:jia1}}, {{word:dui4}} {{word:lao3}} {{word:nv3ren2}} {{word:shuo1}} {{word:le}}. {{Word:lao3}} {{word:nv3ren2}} {{word:xin1}}-{{word:li3}} {{word:you3}} {{word:huo3}}: {{Word:ni3}} {{word:tou2}} {{word:bu4}} {{word:hao3}}! {{Word:wo3}}-{{word:men}}-{{word:de}} {{word:he2zi}} {{word:huai4}} {{word:le}}! {{Word:qu4}} {{word:yao4}} {{word:yi1}}-ge {{word:hao3}}-{{word:de}}!",
+    pinyin: "{{Word:ta1}} {{word:hui2}} {{word:jia1}}, {{word:dui4}} {{word:lao3}} {{word:nv3}}-{{word:ren2}} {{word:shuo1}} {{word:le}}. {{Word:lao3}} {{word:nv3}}-{{word:ren2}} {{word:xin1}}-{{word:li3}} {{word:you3}} {{word:huo3}}: {{Word:ni3}} {{word:tou2}} {{word:bu4}} {{word:hao3}}! {{Word:wo3}}-{{word:men}}-{{word:de}} {{word:he2zi}} {{word:huai4}} {{word:le}}! {{Word:qu4}} {{word:yao4}} {{word:yi1}}-ge {{word:hao3}}-{{word:de}}!",
     ttsText: "他回家，对老女人说了。老女人心里有火：你头不好！我们的盒子坏了！去要一个好的！",
     en: ["He went home and told his wife. She was furious: \"You fool! Our trough is broken! Go and ask for a good one!\""],
     zh: ["他回家告诉了老太婆。老太婆很生气：\"你真笨！我们的木盆坏了！去要一个新的！\""],
@@ -1146,7 +1146,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:huang2se4}}-{{word:de}} {{word:dong4wu4}} {{word:gei3}} {{word:le}} {{word:ta1}}-{{word:men}} {{word:yi1}}-ge {{word:hao3}} {{word:he2zi}}.",
+    pinyin: "{{Word:huang2}}-{{word:se4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:gei3}} {{word:le}} {{word:ta1}}-{{word:men}} {{word:yi1}}-ge {{word:hao3}} {{word:he2zi}}.",
     ttsText: "黄色的动物给了他们一个好盒子。",
     en: ["The golden fish gave them a good trough."],
     zh: ["金鱼给了他们一个新木盆。"],
@@ -1154,7 +1154,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:dan4shi4}} {{word:lao3}} {{word:nv3ren2}} {{word:shuo1}}: {{Word:wo3}} {{word:yao4}} {{word:yi1}}-ge {{word:da4}} {{word:jia1}}!",
+    pinyin: "{{Word:dan4}}-{{word:shi4}} {{word:lao3}} {{word:nv3}}-{{word:ren2}} {{word:shuo1}}: {{Word:wo3}} {{word:yao4}} {{word:yi1}}-ge {{word:da4}} {{word:jia1}}!",
     ttsText: "但是老女人说：我要一个大家！",
     en: ["But the old woman said: \"I want a big house!\""],
     zh: ["可是老太婆说：\"我要一座大房子！\""],
@@ -1162,7 +1162,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}}-{{word:men}} {{word:you3}} {{word:le}} {{word:da4}} {{word:jia1}}. {{Word:lao3}} {{word:nv3ren2}} {{word:you4}} {{word:shuo1}}: {{Word:wo3}} {{word:yao4}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:jin1}}!",
+    pinyin: "{{Word:ta1}}-{{word:men}} {{word:you3}} {{word:le}} {{word:da4}} {{word:jia1}}. {{Word:lao3}} {{word:nv3}}-{{word:ren2}} {{word:you4}} {{word:shuo1}}: {{Word:wo3}} {{word:yao4}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:jin1}}!",
     ttsText: "他们有了大家。老女人又说：我要有很多金！",
     en: ["They got a big house. Then the old woman said: \"I want lots of money!\""],
     zh: ["他们有了大房子。老太婆又说：\"我要很多很多钱！\""],
@@ -1170,7 +1170,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:ta1}}-{{word:men}} {{word:you3}} {{word:le}} {{word:hen3}} {{word:duo1}} {{word:jin1}}. {{Word:lao3}} {{word:nv3ren2}} {{word:you4}} {{word:shuo1}}: {{Word:wo3}} {{word:yao4}} {{word:bian4}} {{word:zui4}} {{word:da4}}-{{word:de}} {{word:ren2}}!",
+    pinyin: "{{Word:ta1}}-{{word:men}} {{word:you3}} {{word:le}} {{word:hen3}} {{word:duo1}} {{word:jin1}}. {{Word:lao3}} {{word:nv3}}-{{word:ren2}} {{word:you4}} {{word:shuo1}}: {{Word:wo3}} {{word:yao4}} {{word:bian4}} {{word:zui4}} {{word:da4}}-{{word:de}} {{word:ren2}}!",
     ttsText: "他们有了很多金。老女人又说：我要变最大的人！",
     en: ["They got lots of money. Again she said: \"I want to be queen!\" (Literally: \"the biggest person.\")"],
     zh: ["他们有了很多钱。老太婆又说：\"我要当女王！\""],
@@ -1178,7 +1178,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:zui4}}-{{word:hou4}}, {{word:ta1}} {{word:shuo1}}: {{Word:wo3}} {{word:yao4}} {{word:hen3}} {{word:da4}}-{{word:de}} {{word:shui3}} {{word:dou1}} {{word:shi4}} {{word:wo3}}-{{word:de}}, {{word:huang2se4}}-{{word:de}} {{word:dong4wu4}} {{word:ye3}} {{word:yao4}} {{word:ting1}} {{word:wo3}}-{{word:de}}!",
+    pinyin: "{{Word:zui4}}-{{word:hou4}}, {{word:ta1}} {{word:shuo1}}: {{Word:wo3}} {{word:yao4}} {{word:hen3}} {{word:da4}}-{{word:de}} {{word:shui3}} {{word:dou1}} {{word:shi4}} {{word:wo3}}-{{word:de}}, {{word:huang2}}-{{word:se4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:ye3}} {{word:yao4}} {{word:ting1}} {{word:wo3}}-{{word:de}}!",
     ttsText: "最后，他说：我要很大的水都是我的，黄色的动物也要听我的！",
     en: ["At last she said: \"I want the whole sea to be mine, and the golden fish must obey me!\""],
     zh: ["最后她说：\"我要整个大海都是我的，金鱼也要听我的！\""],
@@ -1186,7 +1186,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:huang2se4}}-{{word:de}} {{word:dong4wu4}} {{word:shen2me}} {{word:dou1}} {{word:mei2}} {{word:shuo1}}, {{word:jiu4}} {{word:qu4}} {{word:le}} {{word:shui3}}-{{word:li3}}, {{word:mei2}}-{{word:you3}} {{word:hui2}}-{{word:lai2}}.",
+    pinyin: "{{Word:huang2}}-{{word:se4}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:shen2me}} {{word:dou1}} {{word:mei2}} {{word:shuo1}}, {{word:jiu4}} {{word:qu4}} {{word:le}} {{word:shui3}}-{{word:li3}}, {{word:mei2}}-{{word:you3}} {{word:hui2}}-{{word:lai2}}.",
     ttsText: "黄色的动物什么都没说，就去了水里，没有回来。",
     en: ["The golden fish said nothing. It just swam off into the water and never came back."],
     zh: ["金鱼什么也没说，游回了大海，再也没有回来。"],
@@ -1194,7 +1194,7 @@ const content: Entry[] = [
   },
   {
     type: "story",
-    pinyin: "{{Word:lao3}} {{word:nan2ren2}} {{word:hui2}} {{word:jia1}}: {{word:da4}} {{word:jia1}} {{word:mei2}}-{{word:you3}} {{word:le}}, {{word:jin1}} {{word:mei2}}-{{word:you3}} {{word:le}}. {{Word:lao3}} {{word:nv3ren2}} {{word:zuo4}} {{word:zai4}} {{word:huai4}}-{{word:de}} {{word:he2zi}} {{word:pang2bian1}}.",
+    pinyin: "{{Word:lao3}} {{word:nan2ren2}} {{word:hui2}} {{word:jia1}}: {{word:da4}} {{word:jia1}} {{word:mei2}}-{{word:you3}} {{word:le}}, {{word:jin1}} {{word:mei2}}-{{word:you3}} {{word:le}}. {{Word:lao3}} {{word:nv3}}-{{word:ren2}} {{word:zuo4}} {{word:zai4}} {{word:huai4}}-{{word:de}} {{word:he2zi}} {{word:pang2bian1}}.",
     ttsText: "老男人回家：大家没有了，金没有了。老女人坐在坏的盒子旁边。",
     en: ["The old man went home: the big house was gone, the money was gone. The old woman sat beside the broken trough."],
     zh: ["老人回到家：大房子没有了，钱也没有了。老太婆坐在破木盆旁边。"],

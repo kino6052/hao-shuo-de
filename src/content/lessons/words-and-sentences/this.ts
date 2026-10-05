@@ -48,7 +48,7 @@ export default lessonModule({
       ru: "Это растение.",
     },
     {
-      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:dong4wu4}}.",
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:dong4}}-{{word:wu4}}.",
       hanzi: "这是动物。",
       en: "This is an animal.",
       ru: "Это животное.",
@@ -64,13 +64,13 @@ export default lessonModule({
     {
       en: "This is an animal.",
       ru: "Это животное.",
-      answer: "{{Word:zhe4}} {{word:shi4}} {{word:dong4wu4}}.",
+      answer: "{{Word:zhe4}} {{word:shi4}} {{word:dong4}}-{{word:wu4}}.",
       hanzi: "这是动物。",
     },
     {
       en: "This is a woman.",
       ru: "Это женщина.",
-      answer: "{{Word:zhe4}} {{word:shi4}} {{word:nv3ren2}}.",
+      answer: "{{Word:zhe4}} {{word:shi4}} {{word:nv3}}-{{word:ren2}}.",
       hanzi: "这是女人。",
     },
     {

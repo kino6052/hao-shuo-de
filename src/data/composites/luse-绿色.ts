@@ -7,9 +7,9 @@ export default composite({
   py: "lǜsè",
   en: "green",
   ru: "зелёный",
-  hsd: ["{{word:lan2se4}}"],
+  hsd: ["{{word:lan2}}-{{word:se4}}"],
   tts: ["蓝色"],
   literal: "blue-green",
   fit: "plain",
-  note: "lánsè covers green too.",
+  note: "lán-sè covers green too.",
 });

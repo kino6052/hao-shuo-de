@@ -7,8 +7,9 @@ export default composite({
   py: "zhèyàng",
   en: "like this",
   ru: "так",
-  hsd: ["{{word:zhe4}}-{{word:zhong3}}"],
-  tts: ["这种"],
+  hsd: ["{{word:zhe4}}-{{word:yang4}}", "{{word:zhe4}}-{{word:zhong3}}"],
+  tts: ["这样", "这种"],
   literal: "this kind",
-  fit: "plain",
+  fit: "natural",
+  proposed: true,
 });

@@ -7,7 +7,7 @@ export default composite({
   py: "háishi",
   en: "or (choosing)",
   ru: "или",
-  hsd: ["{{word:huo4zhe3}}"],
+  hsd: ["{{word:huo4}}-{{word:zhe3}}"],
   tts: ["或者"],
   fit: "plain",
   note: "See the Lesson {{lesson:inside-a-sentence}} questions.",

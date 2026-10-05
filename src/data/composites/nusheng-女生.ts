@@ -7,8 +7,9 @@ export default composite({
   py: "nǚshēng",
   en: "girl (student)",
   ru: "девочка, студентка",
-  hsd: ["{{word:xue2}}-{{word:de}} {{word:nv3ren2}}"],
-  tts: ["学的女人"],
+  hsd: ["{{word:nv3}}-{{word:sheng1}}", "{{word:xue2}}-{{word:de}} {{word:nv3}}-{{word:ren2}}"],
+  tts: ["女生", "学的女人"],
   literal: "a woman who learns",
-  fit: "plain",
+  fit: "natural",
+  proposed: true,
 });

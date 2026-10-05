@@ -7,7 +7,7 @@ export default composite({
   py: "diànnǎo",
   en: "computer",
   ru: "компьютер",
-  hsd: ["{{word:suan4}}-{{word:de}} {{word:gong1ju4}}"],
+  hsd: ["{{word:suan4}}-{{word:de}} {{word:gong1}}-{{word:ju4}}"],
   tts: ["算的工具"],
   literal: "a calculating tool",
   fit: "plain",

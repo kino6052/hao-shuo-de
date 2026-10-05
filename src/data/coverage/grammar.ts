@@ -29,8 +29,13 @@ export default coverageGroup({
       key: "question-word",
       eng: "What, where, why, how",
       rus: "Что, где, почему, как",
-      words: ["shen2me", "na3li3", "wei4shen2me", "zen3me"],
-      forms: ["{{word:shen2me}}", "{{word:na3li3}}", "{{word:wei4shen2me}}", "{{word:zen3me}}"],
+      words: ["shen2me", "na3", "li3", "wei4", "zen3me"],
+      forms: [
+        "{{word:shen2me}}",
+        "{{word:na3}}-{{word:li3}}",
+        "{{word:wei4}}-{{word:shen2me}}",
+        "{{word:zen3me}}",
+      ],
       taught: "questions/what",
     },
     {
@@ -109,8 +114,8 @@ export default coverageGroup({
       key: "same",
       eng: "The same, different",
       rus: "Такой же, другой",
-      words: ["yi1yang4"],
-      forms: ["{{word:yi1yang4}}", "{{word:bu4}} {{word:yi1yang4}}"],
+      words: ["yi1", "yang4"],
+      forms: ["{{word:yi1}}-{{word:yang4}}", "{{word:bu4}} {{word:yi1}}-{{word:yang4}}"],
       taught: "comparing/same",
     },
     {
@@ -133,8 +138,8 @@ export default coverageGroup({
       key: "but",
       eng: "Contrast",
       rus: "Противопоставление",
-      words: ["dan4shi4"],
-      forms: ["X, {{word:dan4shi4}} Y"],
+      words: ["dan4", "shi4"],
+      forms: ["X, {{word:dan4}}-{{word:shi4}} Y"],
       taught: "linking-sentences/but",
     },
     {
@@ -149,8 +154,8 @@ export default coverageGroup({
       key: "or",
       eng: "Or",
       rus: "Или",
-      words: ["huo4zhe3"],
-      forms: ["A {{word:huo4zhe3}} B"],
+      words: ["huo4", "zhe3"],
+      forms: ["A {{word:huo4}}-{{word:zhe3}} B"],
       taught: "inside-a-sentence/and-or",
     },
     {

@@ -8,7 +8,7 @@ export default composite({
   en: "basketball",
   ru: "баскетбол",
   hsd: [
-    "{{word:yong4}}-{{word:shou3}}-{{word:wan2r}}-{{word:de}} {{word:yuan2}}-{{word:de}} {{word:dong1xi}}",
+    "{{word:yong4}}-{{word:shou3}}-{{word:wan2r}}-{{word:de}} {{word:yuan2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],
   tts: ["用手玩儿的圆的东西"],
   literal: "the round thing you play with your hands",

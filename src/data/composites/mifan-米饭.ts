@@ -8,7 +8,7 @@ export default composite({
   en: "cooked rice",
   ru: "рис",
   hsd: [
-    "{{word:chi1}}-{{word:de}} {{word:xiao3}}-{{word:de}} {{word:bai2se4}}-{{word:de}} {{word:dong1xi}}",
+    "{{word:chi1}}-{{word:de}} {{word:xiao3}}-{{word:de}} {{word:bai2}}-{{word:se4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],
   tts: ["吃的小的白色的东西"],
   fit: "plain",

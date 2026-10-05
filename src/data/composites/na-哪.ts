@@ -7,8 +7,9 @@ export default composite({
   py: "nǎ",
   en: "which",
   ru: "какой",
-  hsd: ["{{word:shen2me}}"],
-  tts: ["什么"],
+  hsd: ["{{word:na3}}", "{{word:shen2me}}"],
+  tts: ["哪", "什么"],
   fit: "word",
   note: "shénme also means \"which\".",
+  proposed: true,
 });

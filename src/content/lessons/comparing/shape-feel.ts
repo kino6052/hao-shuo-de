@@ -90,7 +90,7 @@ export default lessonModule({
     {
       en: "Where is the rope?",
       ru: "Где верёвка?",
-      answer: "{{Word:xian4}} {{word:zai4}} {{word:na3li3}}?",
+      answer: "{{Word:xian4}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
       hanzi: "线在哪里？",
     },
     {

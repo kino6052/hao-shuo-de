@@ -70,7 +70,7 @@ export default lessonModule({
       ru: "Мне хорошо, потому что ты пришёл.",
     },
     {
-      pinyin: "{{Word:ta1}}-{{word:de}} {{word:dong4wu4}} {{word:si3}} {{word:le}}, {{word:ta1}} {{word:jue2de}} {{word:hen3}} {{word:huai4}}.",
+      pinyin: "{{Word:ta1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:si3}} {{word:le}}, {{word:ta1}} {{word:jue2de}} {{word:hen3}} {{word:huai4}}.",
       hanzi: "她的动物死了，她觉得很坏。",
       en: "Her animal died, and she feels bad.",
       ru: "Её животное умерло, и ей очень плохо.",
@@ -82,7 +82,7 @@ export default lessonModule({
       ru: "Мне кажется, этот цвет хороший.",
     },
     {
-      pinyin: "{{Word:dong4wu4}} {{word:huo2}} {{word:le}}, {{word:wo3}} {{word:jue2de}} {{word:hen3}} {{word:hao3}}.",
+      pinyin: "{{Word:dong4}}-{{word:wu4}} {{word:huo2}} {{word:le}}, {{word:wo3}} {{word:jue2de}} {{word:hen3}} {{word:hao3}}.",
       hanzi: "动物活了，我觉得很好。",
       en: "The animal lived, and I feel good.",
       ru: "Животное выжило, и мне хорошо.",

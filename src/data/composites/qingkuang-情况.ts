@@ -7,7 +7,7 @@ export default composite({
   py: "qíngkuàng",
   en: "situation",
   ru: "ситуация",
-  hsd: ["{{word:fa1}}-{{word:sheng1}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:fa1}}-{{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["发生的东西"],
   literal: "what happens",
   fit: "plain",

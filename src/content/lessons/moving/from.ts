@@ -49,7 +49,7 @@ export default lessonModule({
       ru: "Он идёт из дома.",
     },
     {
-      pinyin: "{{Word:ni3}} {{word:cong2}} {{word:na3li3}} {{word:lai2}}?",
+      pinyin: "{{Word:ni3}} {{word:cong2}} {{word:na3}}-{{word:li3}} {{word:lai2}}?",
       hanzi: "你从哪里来？",
       en: "Where do you come from?",
       ru: "Откуда ты?",

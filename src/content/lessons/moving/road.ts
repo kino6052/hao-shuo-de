@@ -61,7 +61,7 @@ export default lessonModule({
       ru: "На дороге много людей.",
     },
     {
-      pinyin: "{{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:zai4}} {{word:lu4}}-{{word:de}} {{word:zuo3bian1}}.",
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:zai4}} {{word:lu4}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}.",
       hanzi: "我的家在路的左边。",
       en: "My home is on the left side of the road.",
       ru: "Мой дом слева от дороги.",
@@ -89,7 +89,7 @@ export default lessonModule({
     {
       en: "Where is your car?",
       ru: "Где твоя машина?",
-      answer: "{{Word:ni3}}-{{word:de}} {{word:che1}} {{word:zai4}} {{word:na3li3}}?",
+      answer: "{{Word:ni3}}-{{word:de}} {{word:che1}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
       hanzi: "你的车在哪里？",
     },
   ],

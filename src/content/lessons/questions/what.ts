@@ -98,7 +98,7 @@ export default lessonModule({
       ru: "Я покупаю коробку.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:mai3}} {{word:gong1ju4}} {{word:ma}}?",
+      pinyin: "{{Word:ta1}} {{word:mai3}} {{word:gong1}}-{{word:ju4}} {{word:ma}}?",
       hanzi: "他买工具吗？",
       en: "Is he buying a tool?",
       ru: "Он покупает инструмент?",
@@ -108,7 +108,7 @@ export default lessonModule({
     {
       en: "What tools do you have?",
       ru: "Какие у тебя есть инструменты?",
-      answer: "{{Word:ni3}} {{word:you3}} {{word:shen2me}} {{word:gong1ju4}}?",
+      answer: "{{Word:ni3}} {{word:you3}} {{word:shen2me}} {{word:gong1}}-{{word:ju4}}?",
       hanzi: "你有什么工具？",
     },
     {
@@ -120,7 +120,7 @@ export default lessonModule({
     {
       en: "Are you buying a tool?",
       ru: "Ты покупаешь инструмент?",
-      answer: "{{Word:ni3}} {{word:mai3}} {{word:gong1ju4}} {{word:ma}}?",
+      answer: "{{Word:ni3}} {{word:mai3}} {{word:gong1}}-{{word:ju4}} {{word:ma}}?",
       hanzi: "你买工具吗？",
     },
   ],

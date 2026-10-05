@@ -71,13 +71,13 @@ export default lessonModule({
       ru: "Я знаю это слово.",
     },
     {
-      pinyin: "{{Word:shi2}}-ge {{word:chi1}}-{{word:de}} {{word:dong1xi}} {{word:dou1}} {{word:huai4}} {{word:le}}.",
+      pinyin: "{{Word:shi2}}-ge {{word:chi1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:dou1}} {{word:huai4}} {{word:le}}.",
       hanzi: "十个吃的东西都坏了。",
       en: "All ten pieces of food went bad.",
       ru: "Вся еда — десять штук — испортилась.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:chi1}}-{{word:de}} {{word:shi4}} {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1xi}}.",
+      pinyin: "{{Word:ta1}} {{word:chi1}}-{{word:de}} {{word:shi4}} {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
       hanzi: "他吃的是植物生的东西。",
       en: "What he's eating is fruit.",
       ru: "То, что он ест, — фрукты.",

@@ -46,13 +46,13 @@ export default lessonModule({
       ru: "Какого цвета это растение?",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:ai4}} {{word:lan2se4}}.",
+      pinyin: "{{Word:wo3}} {{word:ai4}} {{word:lan2}}-{{word:se4}}.",
       hanzi: "我爱蓝色。",
       en: "I love blue.",
       ru: "Я люблю синий цвет.",
     },
     {
-      pinyin: "{{Word:zhe4}} {{word:liang3}}-ge {{word:he2zi}}-{{word:de}} {{word:yan2se4}} {{word:yi1yang4}}.",
+      pinyin: "{{Word:zhe4}} {{word:liang3}}-ge {{word:he2zi}}-{{word:de}} {{word:yan2se4}} {{word:yi1}}-{{word:yang4}}.",
       hanzi: "这两个盒子的颜色一样。",
       en: "These two boxes are the same color.",
       ru: "Эти две коробки одного цвета.",
@@ -64,7 +64,7 @@ export default lessonModule({
       ru: "Какого цвета номер шесть?",
     },
     {
-      pinyin: "{{Word:ni3}} {{word:you3}} {{word:bie2de}} {{word:yan2se4}} {{word:ma}}?",
+      pinyin: "{{Word:ni3}} {{word:you3}} {{word:bie2}}-{{word:de}} {{word:yan2se4}} {{word:ma}}?",
       hanzi: "你有别的颜色吗？",
       en: "Do you have other colors?",
       ru: "У тебя есть другие цвета?",

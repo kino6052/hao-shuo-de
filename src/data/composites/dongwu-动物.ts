@@ -7,7 +7,10 @@ export default composite({
   py: "dòngwù",
   en: "animal",
   ru: "животное",
-  hsd: ["{{word:dong4wu4}}"],
+  hsd: ["{{word:dong4}}-{{word:wu4}}"],
   tts: ["动物"],
-  fit: "word",
+  fit: "natural",
+  role: "noun",
+  transparent: true,
+  proposed: true,
 });

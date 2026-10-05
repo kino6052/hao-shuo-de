@@ -8,7 +8,7 @@ export default composite({
   en: "safe and sound",
   ru: "благополучный",
   hsd: [
-    "{{word:huai4}}-{{word:de}} {{word:dong1xi}} {{word:bu4}} {{word:hui4}} {{word:fa1}}-{{word:sheng1}}",
+    "{{word:huai4}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:bu4}} {{word:hui4}} {{word:fa1}}-{{word:sheng1}}",
   ],
   tts: ["坏的东西不会发生"],
   literal: "nothing bad will happen",

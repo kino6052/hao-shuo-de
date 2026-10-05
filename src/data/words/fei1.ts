@@ -7,7 +7,7 @@ export default word("fei1", {
   definition: { eng: "to fly", rus: "летать", zh: "飞" },
   necessity: {
     index: 3,
-    eng: "Fly: birds are {{word:fei1}}-{{word:de}} {{word:dong4wu4}}, planes are flying tools.",
-    rus: "Летать: птицы — {{word:fei1}}-{{word:de}} {{word:dong4wu4}}, самолёты — летающие инструменты.",
+    eng: "Fly: birds are {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}}, planes are flying tools.",
+    rus: "Летать: птицы — {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}}, самолёты — летающие инструменты.",
   },
 });

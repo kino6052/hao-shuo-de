@@ -11,7 +11,7 @@ export default word("dou1", {
   },
   necessity: {
     index: 5,
-    eng: "All, every one: and with {{word:shen2me}}, everything; with {{word:na3li3}}, everywhere.",
-    rus: "Все, каждый, а с {{word:shen2me}} — «всё», с {{word:na3li3}} — «везде».",
+    eng: "All, every one: and with {{word:shen2me}}, everything; with {{word:na3}}-{{word:li3}}, everywhere.",
+    rus: "Все, каждый, а с {{word:shen2me}} — «всё», с {{word:na3}}-{{word:li3}} — «везде».",
   },
 });

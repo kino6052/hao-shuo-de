@@ -8,9 +8,11 @@ export default composite({
   en: "furniture",
   ru: "мебель",
   hsd: [
-    "{{word:zai4}}-{{word:jia1}}-{{word:li3}}-{{word:de}} {{word:da4}}-{{word:de}} {{word:dong1xi}}",
+    "{{word:jia1}}-{{word:ju4}}",
+    "{{word:zai4}}-{{word:jia1}}-{{word:li3}}-{{word:de}} {{word:da4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],
-  tts: ["在家里的大的东西"],
+  tts: ["家具", "在家里的大的东西"],
   literal: "big things in the home",
-  fit: "plain",
+  fit: "natural",
+  proposed: true,
 });

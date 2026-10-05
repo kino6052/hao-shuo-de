@@ -8,7 +8,7 @@ export default composite({
   en: "telephone",
   ru: "телефон",
   hsd: [
-    "{{word:gei3}}-{{word:yuan3}}-{{word:de}}-{{word:ren2}}-{{word:shuo1}}-{{word:de}} {{word:gong1ju4}}",
+    "{{word:gei3}}-{{word:yuan3}}-{{word:de}}-{{word:ren2}}-{{word:shuo1}}-{{word:de}} {{word:gong1}}-{{word:ju4}}",
   ],
   tts: ["给远的人说的工具"],
   literal: "a tool for talking to people far away",

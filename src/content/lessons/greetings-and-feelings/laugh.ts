@@ -35,7 +35,7 @@ export default lessonModule({
       ru: "Она улыбнулась.",
     },
     {
-      pinyin: "{{Word:ni3}} {{word:wei4shen2me}} {{word:xiao4}}?",
+      pinyin: "{{Word:ni3}} {{word:wei4}}-{{word:shen2me}} {{word:xiao4}}?",
       hanzi: "你为什么笑？",
       en: "Why are you laughing?",
       ru: "Почему ты смеёшься?",

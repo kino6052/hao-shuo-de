@@ -9,7 +9,7 @@ export default composite({
   ru: "мероприятие",
   hsd: [
     "{{word:huo2}}-{{word:dong4}}",
-    "{{word:yi1}}-{{word:qi3}} {{word:nong4}}-{{word:de}} {{word:dong1xi}}",
+    "{{word:yi1}}-{{word:qi3}} {{word:nong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],
   tts: ["活动", "一起弄的东西"],
   literal: "live-move / something done together",

@@ -19,7 +19,7 @@ export default lessonModule({
       "",
       "{{word:gei3}} before a verb means for or to: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:xie3}}, I write to you.",
       "",
-      "You know {{word:mai3}} (buy) from Lesson {{lesson:questions}}. A market is {{word:mai3}} {{word:dong1xi}}-{{word:de}} {{word:di4fang1}}, the place where you buy things.",
+      "You know {{word:mai3}} (buy) from Lesson {{lesson:questions}}. A market is {{word:mai3}} {{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}}, the place where you buy things.",
     ],
     ru: [
       "**Чтобы сказать, что вы даёте что-то кому-то**, используйте {{word:gei3}}: сначала человек, потом вещь.",
@@ -28,7 +28,7 @@ export default lessonModule({
       "",
       "{{word:gei3}} перед глаголом значит «для» или «кому»: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:xie3}} — я пишу тебе.",
       "",
-      "{{word:mai3}} (покупать) вы знаете из урока {{lesson:questions}}. Рынок — это {{word:mai3}} {{word:dong1xi}}-{{word:de}} {{word:di4fang1}}, место, где покупают вещи.",
+      "{{word:mai3}} (покупать) вы знаете из урока {{lesson:questions}}. Рынок — это {{word:mai3}} {{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}}, место, где покупают вещи.",
     ],
     tldr: {
       en: "{{word:gei3}} + person + thing: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:shui3}}, I give you water.",
@@ -72,13 +72,13 @@ export default lessonModule({
       ru: "Он даёт мне часть.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:qu4}} {{word:mai3}} {{word:dong1xi}}.",
+      pinyin: "{{Word:wo3}} {{word:qu4}} {{word:mai3}} {{word:dong1}}-{{light:xi1}}.",
       hanzi: "我去买东西。",
       en: "I'm going shopping.",
       ru: "Я иду за покупками.",
     },
     {
-      pinyin: "{{Word:mai3}} {{word:dong1xi}}-{{word:de}} {{word:di4fang1}} {{word:zai4}} {{word:fu4jin4}}.",
+      pinyin: "{{Word:mai3}} {{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}} {{word:zai4}} {{word:fu4jin4}}.",
       hanzi: "买东西的地方在附近。",
       en: "The market is nearby.",
       ru: "Рынок поблизости.",

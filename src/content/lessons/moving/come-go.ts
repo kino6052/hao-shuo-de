@@ -95,7 +95,7 @@ export default lessonModule({
     {
       en: "Where are you going?",
       ru: "Куда ты идёшь?",
-      answer: "{{Word:ni3}} {{word:qu4}} {{word:na3li3}}?",
+      answer: "{{Word:ni3}} {{word:qu4}} {{word:na3}}-{{word:li3}}?",
       hanzi: "你去哪里？",
     },
     {

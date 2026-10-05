@@ -7,7 +7,7 @@ export default composite({
   py: "pāizhào",
   en: "take a photo",
   ru: "фотографировать",
-  hsd: ["{{word:nong4}} {{word:kan4}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:nong4}} {{word:kan4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["弄看的东西"],
   literal: "make a picture",
   fit: "plain",

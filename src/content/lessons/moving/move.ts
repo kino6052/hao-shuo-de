@@ -3,27 +3,20 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "move",
-  words: [
-    {
-      word: "dong4",
-      en: "move",
-      ru: "двигаться",
-    },
-  ],
   prose: {
     en: [
       "**To say something moves**, use {{word:dong4}} (move).",
       "",
       "**Who + {{word:dong4}}**",
       "",
-      "{{Word:bu4}} {{word:yao4}} {{word:dong4}}! means \"Don't move!\" And {{word:dong4wu4}} (animal) is a \"moving thing\".",
+      "{{Word:bu4}} {{word:yao4}} {{word:dong4}}! means \"Don't move!\" And {{word:dong4}}-{{word:wu4}} (animal) is a \"moving thing\".",
     ],
     ru: [
       "**Чтобы сказать, что что-то двигается**, используйте {{word:dong4}} (двигаться).",
       "",
       "**Кто + {{word:dong4}}**",
       "",
-      "{{Word:bu4}} {{word:yao4}} {{word:dong4}}! значит «Не двигайся!». А {{word:dong4wu4}} (животное) — это «двигающаяся вещь».",
+      "{{Word:bu4}} {{word:yao4}} {{word:dong4}}! значит «Не двигайся!». А {{word:dong4}}-{{word:wu4}} (животное) — это «двигающаяся вещь».",
     ],
     tldr: {
       en: "{{word:dong4}} means move: {{Word:ta1}} {{word:dong4}} {{word:le}}, it moved.",
@@ -52,7 +45,7 @@ export default lessonModule({
       ru: "Не двигайся!",
     },
     {
-      pinyin: "{{Word:dong4wu4}} {{word:zai4}} {{word:dong4}}.",
+      pinyin: "{{Word:dong4}}-{{word:wu4}} {{word:zai4}} {{word:dong4}}.",
       hanzi: "动物在动。",
       en: "The animal is moving.",
       ru: "Животное двигается.",

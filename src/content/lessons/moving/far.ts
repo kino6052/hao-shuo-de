@@ -54,7 +54,7 @@ export default lessonModule({
   },
   examples: [
     {
-      pinyin: "{{Word:na4}}-ge {{word:di4fang1}} {{word:hen3}} {{word:yuan3}}.",
+      pinyin: "{{Word:na4}}-ge {{word:di4}}-{{light:fang1}} {{word:hen3}} {{word:yuan3}}.",
       hanzi: "那个地方很远。",
       en: "That place is far.",
       ru: "То место далеко.",
@@ -72,13 +72,13 @@ export default lessonModule({
       ru: "Твой дом далеко?",
     },
     {
-      pinyin: "{{Word:wo3}}-{{word:men}} {{word:qu4}} {{word:fu4jin4}}-{{word:de}} {{word:di4fang1}}.",
+      pinyin: "{{Word:wo3}}-{{word:men}} {{word:qu4}} {{word:fu4jin4}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",
       hanzi: "我们去附近的地方。",
       en: "We go somewhere nearby.",
       ru: "Мы идём куда-нибудь поблизости.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:cong2}} {{word:hen3}} {{word:yuan3}}-{{word:de}} {{word:di4fang1}} {{word:lai2}}.",
+      pinyin: "{{Word:ta1}} {{word:cong2}} {{word:hen3}} {{word:yuan3}}-{{word:de}} {{word:di4}}-{{light:fang1}} {{word:lai2}}.",
       hanzi: "他从很远的地方来。",
       en: "He comes from far away.",
       ru: "Он пришёл издалека.",

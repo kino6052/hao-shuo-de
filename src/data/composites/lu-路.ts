@@ -10,5 +10,5 @@ export default composite({
   hsd: ["{{word:lu4}}"],
   tts: ["路"],
   fit: "word",
-  note: "Lesson {{lesson:moving}}. A way of doing something is fāngfǎ.",
+  note: "Lesson {{lesson:moving}}. A way of doing something is fāng-fǎ.",
 });

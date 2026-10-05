@@ -7,7 +7,7 @@ export default composite({
   py: "jīngyàn",
   en: "experience",
   ru: "опыт",
-  hsd: ["{{word:nong4}}-{{word:guo4}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:nong4}}-{{word:guo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["弄过的东西"],
   literal: "things you've done before",
   fit: "plain",

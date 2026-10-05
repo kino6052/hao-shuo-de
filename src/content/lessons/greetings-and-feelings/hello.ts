@@ -57,7 +57,7 @@ export default lessonModule({
       ru: "Я пошёл. / Пока.",
     },
     {
-      pinyin: "{{Word:ni3}} {{word:cong2}} {{word:na3li3}} {{word:lai2}}?",
+      pinyin: "{{Word:ni3}} {{word:cong2}} {{word:na3}}-{{word:li3}} {{word:lai2}}?",
       hanzi: "你从哪里来？",
       en: "Where are you from?",
       ru: "Откуда ты?",

@@ -49,13 +49,13 @@ export default lessonModule({
       ru: "У тебя хороший голос.",
     },
     {
-      pinyin: "{{Word:dong4wu4}}-{{word:de}} {{word:sheng1yin1}} {{word:hen3}} {{word:xiao3}}.",
+      pinyin: "{{Word:dong4}}-{{word:wu4}}-{{word:de}} {{word:sheng1yin1}} {{word:hen3}} {{word:xiao3}}.",
       hanzi: "动物的声音很小。",
       en: "The animal's sound is quiet.",
       ru: "Животное звучит тихо.",
     },
     {
-      pinyin: "{{Word:you3}} {{word:dong4wu4}}!",
+      pinyin: "{{Word:you3}} {{word:dong4}}-{{word:wu4}}!",
       hanzi: "有动物！",
       en: "There's an animal!",
       ru: "Тут животное!",
@@ -73,7 +73,7 @@ export default lessonModule({
       ru: "Я слышу звук. Что случилось?",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:ting1}}-{{word:dao4}} {{word:dong4wu4}} {{word:fei1}}-{{word:de}} {{word:sheng1yin1}}.",
+      pinyin: "{{Word:wo3}} {{word:ting1}}-{{word:dao4}} {{word:dong4}}-{{word:wu4}} {{word:fei1}}-{{word:de}} {{word:sheng1yin1}}.",
       hanzi: "我听到动物飞的声音。",
       en: "I hear an animal flying.",
       ru: "Я слышу, как летит животное.",

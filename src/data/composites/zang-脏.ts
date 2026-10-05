@@ -7,7 +7,7 @@ export default composite({
   py: "zāng",
   en: "dirty",
   ru: "грязный",
-  hsd: ["{{word:shang4}}-{{word:mian4}} {{word:you3}} {{word:luan4}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:shang4}}-{{word:mian4}} {{word:you3}} {{word:luan4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["上面有乱的东西"],
   literal: "there's mess on it",
   fit: "plain",

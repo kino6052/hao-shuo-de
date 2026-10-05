@@ -7,7 +7,7 @@ export default composite({
   py: "zuìhǎo",
   en: "best",
   ru: "лучший",
-  hsd: ["{{word:zui4}}-{{word:hao3}}", "{{word:bi3}} {{word:bie2de}} {{word:dou1}} {{word:hao3}}"],
+  hsd: ["{{word:zui4}}-{{word:hao3}}", "{{word:bi3}} {{word:bie2}}-{{word:de}} {{word:dou1}} {{word:hao3}}"],
   tts: ["最好", "比别的都好"],
   literal: "most good / better than all the others",
   fit: "natural",

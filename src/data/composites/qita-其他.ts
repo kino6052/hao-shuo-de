@@ -7,7 +7,7 @@ export default composite({
   py: "qítā",
   en: "other",
   ru: "другой",
-  hsd: ["{{word:bie2de}}"],
+  hsd: ["{{word:bie2}}-{{word:de}}"],
   tts: ["别的"],
   fit: "word",
 });

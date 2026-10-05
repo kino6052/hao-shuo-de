@@ -7,7 +7,7 @@ export default composite({
   py: "gǎibiàn",
   en: "change",
   ru: "изменить",
-  hsd: ["{{word:nong4}}-{{word:de}} {{word:bu4}} {{word:yi1yang4}}"],
+  hsd: ["{{word:nong4}}-{{word:de}} {{word:bu4}} {{word:yi1}}-{{word:yang4}}"],
   tts: ["弄的不一样"],
   literal: "make it different",
   fit: "natural",

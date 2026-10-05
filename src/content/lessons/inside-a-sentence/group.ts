@@ -40,7 +40,7 @@ export default lessonModule({
       ru: "На улице группа людей.",
     },
     {
-      pinyin: "{{Word:na4}}-{{word:qun2}} {{word:dong4wu4}} {{word:hen3}} {{word:da4}}.",
+      pinyin: "{{Word:na4}}-{{word:qun2}} {{word:dong4}}-{{word:wu4}} {{word:hen3}} {{word:da4}}.",
       hanzi: "那群动物很大。",
       en: "That group of animals is big.",
       ru: "Та группа животных большая.",
@@ -52,7 +52,7 @@ export default lessonModule({
       ru: "Я даю той группе людей воду.",
     },
     {
-      pinyin: "{{Word:yi1}}-{{word:qun2}} {{word:dong4wu4}} {{word:zai4}} {{word:shui3}}-{{word:li3}} {{word:wan2r}}.",
+      pinyin: "{{Word:yi1}}-{{word:qun2}} {{word:dong4}}-{{word:wu4}} {{word:zai4}} {{word:shui3}}-{{word:li3}} {{word:wan2r}}.",
       hanzi: "一群动物在水里玩儿。",
       en: "A group of animals is playing in the water.",
       ru: "Группа животных играет в воде.",
@@ -62,7 +62,7 @@ export default lessonModule({
     {
       en: "a group of animals",
       ru: "группа животных",
-      answer: "{{Word:yi1}}-{{word:qun2}} {{word:dong4wu4}}.",
+      answer: "{{Word:yi1}}-{{word:qun2}} {{word:dong4}}-{{word:wu4}}.",
       hanzi: "一群动物。",
     },
   ],

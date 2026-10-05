@@ -9,7 +9,7 @@ export default composite({
   ru: "старшая школа",
   hsd: [
     "{{word:gao1}}-{{word:zhong1}}",
-    "{{word:da4}}-{{word:xue2}}-{{word:qian2}}-{{word:de}} {{word:xue2}}-{{word:de}} {{word:di4fang1}}",
+    "{{word:da4}}-{{word:xue2}}-{{word:qian2}}-{{word:de}} {{word:xue2}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
   ],
   tts: ["高中", "大学前的学的地方"],
   literal: "high middle / the learning place before university",

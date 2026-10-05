@@ -7,7 +7,7 @@ export default composite({
   py: "xiàozhǎng",
   en: "principal",
   ru: "директор школы",
-  hsd: ["{{word:xue2}}-{{word:de}}-{{word:di4fang1}}-{{word:de}} {{word:tou2}}"],
+  hsd: ["{{word:xue2}}-{{word:de}}-{{word:di4}}-{{light:fang1}}-{{word:de}} {{word:tou2}}"],
   tts: ["学的地方的头"],
   literal: "the head of the school",
   fit: "plain",

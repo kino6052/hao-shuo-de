@@ -8,7 +8,7 @@ export default composite({
   en: "apple",
   ru: "яблоко",
   hsd: [
-    "{{word:yuan2}}-{{word:de}} {{word:hong2se4}}-{{word:de}} {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1xi}}",
+    "{{word:yuan2}}-{{word:de}} {{word:hong2}}-{{word:se4}}-{{word:de}} {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],
   tts: ["圆的红色的植物生的东西"],
   literal: "a red round fruit",

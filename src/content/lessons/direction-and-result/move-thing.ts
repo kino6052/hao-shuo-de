@@ -54,7 +54,7 @@ export default lessonModule({
       ru: "Я поднимаю растение.",
     },
     {
-      pinyin: "{{Word:ba3}} {{word:gong1ju4}} {{word:fang4}}-{{word:xia4}}!",
+      pinyin: "{{Word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:fang4}}-{{word:xia4}}!",
       hanzi: "把工具放下！",
       en: "Put the tool down!",
       ru: "Положи инструмент!",
@@ -76,7 +76,7 @@ export default lessonModule({
     {
       en: "Take out the tool!",
       ru: "Вынь инструмент!",
-      answer: "{{Word:ba3}} {{word:gong1ju4}} {{word:na2}}-{{word:chu1}}-{{word:lai2}}!",
+      answer: "{{Word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:na2}}-{{word:chu1}}-{{word:lai2}}!",
       hanzi: "把工具拿出来！",
     },
     {

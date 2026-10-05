@@ -7,7 +7,7 @@ export default composite({
   py: "wénhuà",
   en: "culture",
   ru: "культура",
-  hsd: ["{{word:yi1}}-{{word:qun2}} {{word:ren2}}-{{word:de}} {{word:fang1fa3}}"],
+  hsd: ["{{word:yi1}}-{{word:qun2}} {{word:ren2}}-{{word:de}} {{word:fang1}}-{{word:fa3}}"],
   tts: ["一群人的方法"],
   literal: "a group's ways",
   fit: "plain",

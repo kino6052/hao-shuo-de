@@ -6,22 +6,27 @@ export default lessonModule({
   id: "color-thing",
   words: [
     {
-      word: "bai2se4",
+      word: "bai2",
       en: "white",
       ru: "белый",
     },
     {
-      word: "hei1se4",
+      word: "se4",
+      en: "colour (in colour words)",
+      ru: "цвет (в словах цвета)",
+    },
+    {
+      word: "hei1",
       en: "black",
       ru: "чёрный",
     },
     {
-      word: "hong2se4",
+      word: "hong2",
       en: "red",
       ru: "красный",
     },
     {
-      word: "huang2se4",
+      word: "huang2",
       en: "yellow",
       ru: "жёлтый",
     },
@@ -38,8 +43,8 @@ export default lessonModule({
       "**цвет-{{word:de}} + существительное**",
     ],
     tldr: {
-      en: "color-{{word:de}} + noun: {{word:hong2se4}}-{{word:de}} {{word:he2zi}}, a red box.",
-      ru: "цвет-{{word:de}} + существительное: {{word:hong2se4}}-{{word:de}} {{word:he2zi}} — красная коробка.",
+      en: "color-{{word:de}} + noun: {{word:hong2}}-{{word:se4}}-{{word:de}} {{word:he2zi}}, a red box.",
+      ru: "цвет-{{word:de}} + существительное: {{word:hong2}}-{{word:se4}}-{{word:de}} {{word:he2zi}} — красная коробка.",
     },
     necessity: {
       en: "Now you can tell things apart by color.",
@@ -47,42 +52,42 @@ export default lessonModule({
     },
   },
   info: {
-    en: "color-{{word:de}} + noun: {{word:hong2se4}}-{{word:de}} {{word:he2zi}} (a red box)",
-    ru: "цвет-{{word:de}} + существительное: {{word:hong2se4}}-{{word:de}} {{word:he2zi}} (красная коробка)",
+    en: "color-{{word:de}} + noun: {{word:hong2}}-{{word:se4}}-{{word:de}} {{word:he2zi}} (a red box)",
+    ru: "цвет-{{word:de}} + существительное: {{word:hong2}}-{{word:se4}}-{{word:de}} {{word:he2zi}} (красная коробка)",
   },
   examples: [
     {
-      pinyin: "{{Word:hong2se4}}-{{word:de}} {{word:he2zi}}.",
+      pinyin: "{{Word:hong2}}-{{word:se4}}-{{word:de}} {{word:he2zi}}.",
       hanzi: "红色的盒子。",
       en: "A red box.",
       ru: "Красная коробка.",
     },
     {
-      pinyin: "{{Word:bai2se4}}-{{word:de}} {{word:yi1fu}}.",
+      pinyin: "{{Word:bai2}}-{{word:se4}}-{{word:de}} {{word:yi1fu}}.",
       hanzi: "白色的衣服。",
       en: "White clothes.",
       ru: "Белая одежда.",
     },
     {
-      pinyin: "{{Word:hei1se4}}-{{word:de}} {{word:dong4wu4}}.",
+      pinyin: "{{Word:hei1}}-{{word:se4}}-{{word:de}} {{word:dong4}}-{{word:wu4}}.",
       hanzi: "黑色的动物。",
       en: "A black animal.",
       ru: "Чёрное животное.",
     },
     {
-      pinyin: "{{Word:huang2se4}}-{{word:de}} {{word:zhi2wu4}}.",
+      pinyin: "{{Word:huang2}}-{{word:se4}}-{{word:de}} {{word:zhi2wu4}}.",
       hanzi: "黄色的植物。",
       en: "A yellow plant.",
       ru: "Жёлтое растение.",
     },
     {
-      pinyin: "{{Word:ba3}} {{word:hong2se4}}-{{word:de}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:zhe4}}-{{word:li3}}.",
+      pinyin: "{{Word:ba3}} {{word:hong2}}-{{word:se4}}-{{word:de}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:zhe4}}-{{word:li3}}.",
       hanzi: "把红色的衣服放在这里。",
       en: "Put the red clothes here.",
       ru: "Положи красную одежду сюда.",
     },
     {
-      pinyin: "{{Word:na2}} {{word:hong2se4}}-{{word:de}}.",
+      pinyin: "{{Word:na2}} {{word:hong2}}-{{word:se4}}-{{word:de}}.",
       hanzi: "拿红色的。",
       en: "Take the red one.",
       ru: "Возьми красную.",
@@ -92,13 +97,13 @@ export default lessonModule({
     {
       en: "a white box",
       ru: "белая коробка",
-      answer: "{{Word:bai2se4}}-{{word:de}} {{word:he2zi}}.",
+      answer: "{{Word:bai2}}-{{word:se4}}-{{word:de}} {{word:he2zi}}.",
       hanzi: "白色的盒子。",
     },
     {
       en: "I want red clothes.",
       ru: "Я хочу красную одежду.",
-      answer: "{{Word:wo3}} {{word:yao4}} {{word:hong2se4}}-{{word:de}} {{word:yi1fu}}.",
+      answer: "{{Word:wo3}} {{word:yao4}} {{word:hong2}}-{{word:se4}}-{{word:de}} {{word:yi1fu}}.",
       hanzi: "我要红色的衣服。",
     },
   ],

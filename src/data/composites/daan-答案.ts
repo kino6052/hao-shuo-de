@@ -7,7 +7,7 @@ export default composite({
   py: "dá’àn",
   en: "answer",
   ru: "ответ",
-  hsd: ["{{word:dui4}} {{word:wen4}}-{{word:de}} {{word:shuo1}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:dui4}} {{word:wen4}}-{{word:de}} {{word:shuo1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["对问的说的东西"],
   literal: "what's said to the one who asks",
   fit: "plain",

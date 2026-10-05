@@ -8,7 +8,7 @@ export default composite({
   en: "takeout",
   ru: "доставка еды",
   hsd: [
-    "{{word:na2}} {{word:dao4}} {{word:jia1}}-{{word:li3}}-{{word:de}} {{word:chi1}}-{{word:de}} {{word:dong1xi}}",
+    "{{word:na2}} {{word:dao4}} {{word:jia1}}-{{word:li3}}-{{word:de}} {{word:chi1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],
   tts: ["拿到家里的吃的东西"],
   literal: "food brought home",

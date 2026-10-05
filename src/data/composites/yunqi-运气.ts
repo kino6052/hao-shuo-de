@@ -7,7 +7,7 @@ export default composite({
   py: "yùnqi",
   en: "luck",
   ru: "удача",
-  hsd: ["{{word:fa1}}-{{word:sheng1}} {{word:hao3}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:fa1}}-{{word:sheng1}} {{word:hao3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["发生好的东西"],
   literal: "good things happening",
   fit: "plain",

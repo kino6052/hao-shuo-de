@@ -7,7 +7,7 @@ export default composite({
   py: "guǎngchǎng",
   en: "square, plaza",
   ru: "площадь",
-  hsd: ["{{word:ren2}}-{{word:duo1}}-{{word:de}} {{word:kong1}}-{{word:de}} {{word:di4fang1}}"],
+  hsd: ["{{word:ren2}}-{{word:duo1}}-{{word:de}} {{word:kong1}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
   tts: ["人多的空的地方"],
   literal: "an open place with many people",
   fit: "plain",

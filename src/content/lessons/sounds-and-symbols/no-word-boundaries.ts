@@ -28,11 +28,11 @@ export default lessonModule({
     items: [
       {
         en: [
-          "**Words are written solid**. When several syllables form one dictionary word, they are never split apart, no matter how long the word is — {{word:dong4wu4}}, {{word:shui4jiao4}}, {{word:dan4shi4}}.",
+          "**Words are written solid**. When several syllables form one dictionary word, they are never split apart, no matter how long the word is — {{word:dong4}}-{{word:wu4}}, {{word:shui4jiao4}}, {{word:dan4}}-{{word:shi4}}.",
           "Read the whole solid block as a single unit.",
         ],
         ru: [
-          "**Слова пишутся слитно**. Если несколько слогов составляют одно слово из словаря, их никогда не разделяют, какой бы длины ни было слово: {{word:dong4wu4}}, {{word:shui4jiao4}}, {{word:dan4shi4}}.",
+          "**Слова пишутся слитно**. Если несколько слогов составляют одно слово из словаря, их никогда не разделяют, какой бы длины ни было слово: {{word:dong4}}-{{word:wu4}}, {{word:shui4jiao4}}, {{word:dan4}}-{{word:shi4}}.",
           "Читайте весь слитный блок как одно целое.",
         ],
       },

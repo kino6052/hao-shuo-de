@@ -1,7 +1,7 @@
 // where-it-is ("Space 1 — Where it is"): its modules, in reading order.
 // See src/lib/lesson.ts.
 //
-// Rewritten in Phase 2 (BOOK_PLAN.md): zài + place, asking where (nǎlǐ), in / on / under, and the side words (qián-miàn, hòu-miàn, pángbiān).
+// Rewritten in Phase 2 (BOOK_PLAN.md): zài + place, asking where (nǎ-lǐ), in / on / under, and the side words (qián-miàn, hòu-miàn, pángbiān).
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- where-it-is).
 import { lesson } from "../../../lib/lesson.ts";

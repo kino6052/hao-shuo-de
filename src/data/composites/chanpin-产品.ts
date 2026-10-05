@@ -7,7 +7,7 @@ export default composite({
   py: "chǎnpǐn",
   en: "product",
   ru: "продукт",
-  hsd: ["{{word:nong4}}-{{word:chu1}}-{{word:lai2}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:nong4}}-{{word:chu1}}-{{word:lai2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["弄出来的东西"],
   literal: "something made",
   fit: "plain",

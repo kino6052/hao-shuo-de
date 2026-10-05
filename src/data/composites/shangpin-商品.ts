@@ -7,7 +7,7 @@ export default composite({
   py: "shāngpǐn",
   en: "product, goods",
   ru: "товар",
-  hsd: ["{{word:mai3}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:mai3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["买的东西"],
   literal: "things to buy",
   fit: "plain",

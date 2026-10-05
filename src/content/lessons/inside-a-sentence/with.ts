@@ -35,8 +35,8 @@ export default lessonModule({
       "В русском это показывает окончание («пишу ручкой»), а в китайском — слово {{word:yong4}} («использую»).",
     ],
     tldr: {
-      en: "{{word:yong4}} + thing + verb: {{Word:wo3}} {{word:yong4}} {{word:gong1ju4}} {{word:xie3}}, I write with a tool.",
-      ru: "{{word:yong4}} + вещь + глагол: {{Word:wo3}} {{word:yong4}} {{word:gong1ju4}} {{word:xie3}} — я пишу инструментом.",
+      en: "{{word:yong4}} + thing + verb: {{Word:wo3}} {{word:yong4}} {{word:gong1}}-{{word:ju4}} {{word:xie3}}, I write with a tool.",
+      ru: "{{word:yong4}} + вещь + глагол: {{Word:wo3}} {{word:yong4}} {{word:gong1}}-{{word:ju4}} {{word:xie3}} — я пишу инструментом.",
     },
     necessity: {
       en: "Now you can say how you do things.",
@@ -44,12 +44,12 @@ export default lessonModule({
     },
   },
   info: {
-    en: "{{word:yong4}} + thing + verb, with: {{Word:wo3}} {{word:yong4}} {{word:gong1ju4}} {{word:xie3}}. (I write with a tool.)",
-    ru: "{{word:yong4}} + вещь + глагол — чем: {{Word:wo3}} {{word:yong4}} {{word:gong1ju4}} {{word:xie3}}. (Я пишу инструментом.)",
+    en: "{{word:yong4}} + thing + verb, with: {{Word:wo3}} {{word:yong4}} {{word:gong1}}-{{word:ju4}} {{word:xie3}}. (I write with a tool.)",
+    ru: "{{word:yong4}} + вещь + глагол — чем: {{Word:wo3}} {{word:yong4}} {{word:gong1}}-{{word:ju4}} {{word:xie3}}. (Я пишу инструментом.)",
   },
   examples: [
     {
-      pinyin: "{{Word:wo3}} {{word:yong4}} {{word:gong1ju4}} {{word:xie3}}.",
+      pinyin: "{{Word:wo3}} {{word:yong4}} {{word:gong1}}-{{word:ju4}} {{word:xie3}}.",
       hanzi: "我用工具写。",
       en: "I write with a tool.",
       ru: "Я пишу инструментом.",
@@ -67,31 +67,31 @@ export default lessonModule({
       ru: "Он бьёт палкой.",
     },
     {
-      pinyin: "{{Word:bu4}} {{word:yao4}} {{word:yong4}} {{word:gun4zi}} {{word:da3}} {{word:dong4wu4}}.",
+      pinyin: "{{Word:bu4}} {{word:yao4}} {{word:yong4}} {{word:gun4zi}} {{word:da3}} {{word:dong4}}-{{word:wu4}}.",
       hanzi: "不要用棍子打动物。",
       en: "Don't hit the animal with a stick.",
       ru: "Не бей животное палкой.",
     },
     {
-      pinyin: "{{Word:dong4wu4}} {{word:yong4}} {{word:bi2zi}} {{word:mo1}} {{word:wo3}}-{{word:de}} {{word:shou3}}.",
+      pinyin: "{{Word:dong4}}-{{word:wu4}} {{word:yong4}} {{word:bi2zi}} {{word:mo1}} {{word:wo3}}-{{word:de}} {{word:shou3}}.",
       hanzi: "动物用鼻子摸我的手。",
       en: "The animal touches my hand with its nose.",
       ru: "Животное трогает мою руку носом.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:yong4}} {{word:bu4}}-{{word:yi1yang4}}-{{word:de}} {{word:fang1fa3}}.",
+      pinyin: "{{Word:ta1}} {{word:yong4}} {{word:bu4}}-{{word:yi1}}-{{word:yang4}}-{{word:de}} {{word:fang1}}-{{word:fa3}}.",
       hanzi: "他用不一样的方法。",
       en: "He does it a different way.",
       ru: "Он делает это по-другому.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:yong4}} {{word:gong1ju4}} {{word:suan4}}.",
+      pinyin: "{{Word:wo3}} {{word:yong4}} {{word:gong1}}-{{word:ju4}} {{word:suan4}}.",
       hanzi: "我用工具算。",
       en: "I work it out with a tool.",
       ru: "Я считаю с помощью инструмента.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:yong4}} {{word:shou3}} {{word:mo1}} {{word:dong4wu4}}-{{word:de}} {{word:mao2}}.",
+      pinyin: "{{Word:wo3}} {{word:yong4}} {{word:shou3}} {{word:mo1}} {{word:dong4}}-{{word:wu4}}-{{word:de}} {{word:mao2}}.",
       hanzi: "我用手摸动物的毛。",
       en: "I touch the animal's fur with my hand.",
       ru: "Я трогаю рукой шерсть животного.",

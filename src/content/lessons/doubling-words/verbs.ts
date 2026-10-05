@@ -43,7 +43,7 @@ export default lessonModule({
       ru: "Я не знаю, так что спрошу.",
     },
     {
-      pinyin: "{{Word:dong4wu4}} {{word:si3}} {{word:le}}? {{Word:wo3}} {{word:kan4}}-kan.",
+      pinyin: "{{Word:dong4}}-{{word:wu4}} {{word:si3}} {{word:le}}? {{Word:wo3}} {{word:kan4}}-kan.",
       hanzi: "动物死了？我看看。",
       en: "Is the animal dead? Let me have a look.",
       ru: "Животное умерло? Дай-ка посмотрю.",

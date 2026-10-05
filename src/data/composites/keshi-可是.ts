@@ -7,7 +7,8 @@ export default composite({
   py: "kěshì",
   en: "but",
   ru: "но",
-  hsd: ["{{word:dan4shi4}}"],
-  tts: ["但是"],
-  fit: "word",
+  hsd: ["{{word:ke3}}-{{word:shi4}}", "{{word:dan4}}-{{word:shi4}}"],
+  tts: ["可是", "但是"],
+  fit: "natural",
+  proposed: true,
 });

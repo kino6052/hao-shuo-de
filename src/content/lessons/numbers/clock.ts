@@ -43,7 +43,7 @@ export default lessonModule({
       ru: "Сейчас три часа.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:shi2}}-{{word:er4}}-{{word:dian3}} {{word:chi1}} {{word:dong1xi}}.",
+      pinyin: "{{Word:wo3}} {{word:shi2}}-{{word:er4}}-{{word:dian3}} {{word:chi1}} {{word:dong1}}-{{light:xi1}}.",
       hanzi: "我十二点吃东西。",
       en: "I eat at twelve o'clock.",
       ru: "Я ем в двенадцать часов.",

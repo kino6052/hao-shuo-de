@@ -10,9 +10,14 @@ export default lessonModule({
       ru: "превращает предложение в вопрос «да или нет»",
     },
     {
-      word: "gong1ju4",
-      en: "tool",
-      ru: "инструмент",
+      word: "gong1",
+      en: "work; {{word:gong1}}-{{word:ju4}}: tool",
+      ru: "работа; {{word:gong1}}-{{word:ju4}} — инструмент",
+    },
+    {
+      word: "ju4",
+      en: "implement, thing to use",
+      ru: "орудие, предмет",
     },
     {
       word: "he2zi",
@@ -47,8 +52,8 @@ export default lessonModule({
   info: {
     items: [
       {
-        en: "sentence + {{word:ma}}?, yes or no: {{Word:ni3}} {{word:you3}} {{word:gong1ju4}} {{word:ma}}? (Do you have a tool?)",
-        ru: "предложение + {{word:ma}}? — да или нет: {{Word:ni3}} {{word:you3}} {{word:gong1ju4}} {{word:ma}}? (У тебя есть инструмент?)",
+        en: "sentence + {{word:ma}}?, yes or no: {{Word:ni3}} {{word:you3}} {{word:gong1}}-{{word:ju4}} {{word:ma}}? (Do you have a tool?)",
+        ru: "предложение + {{word:ma}}? — да или нет: {{Word:ni3}} {{word:you3}} {{word:gong1}}-{{word:ju4}} {{word:ma}}? (У тебя есть инструмент?)",
       },
       {
         en: "verb-{{word:bu4}}-verb?, yes or no: {{Word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}}? (Do you listen?)",
@@ -58,7 +63,7 @@ export default lessonModule({
   },
   examples: [
     {
-      pinyin: "{{Word:ni3}} {{word:you3}} {{word:gong1ju4}} {{word:ma}}?",
+      pinyin: "{{Word:ni3}} {{word:you3}} {{word:gong1}}-{{word:ju4}} {{word:ma}}?",
       hanzi: "你有工具吗？",
       en: "Do you have a tool?",
       ru: "У тебя есть инструмент?",
@@ -98,7 +103,7 @@ export default lessonModule({
     {
       en: "Is the tool small?",
       ru: "Инструмент маленький?",
-      answer: "{{Word:gong1ju4}} {{word:xiao3}} {{word:ma}}?",
+      answer: "{{Word:gong1}}-{{word:ju4}} {{word:xiao3}} {{word:ma}}?",
       hanzi: "工具小吗？",
     },
     {

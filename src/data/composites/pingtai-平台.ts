@@ -8,7 +8,7 @@ export default composite({
   en: "platform",
   ru: "платформа",
   hsd: [
-    "{{word:zai4}}-{{word:wang3}}-{{word:shang4}}-{{word:de}} {{word:di4fang1}}",
+    "{{word:zai4}}-{{word:wang3}}-{{word:shang4}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
     "{{word:gao1}}-{{word:de}} {{word:di4}}",
   ],
   tts: ["在网上的地方", "高的地"],

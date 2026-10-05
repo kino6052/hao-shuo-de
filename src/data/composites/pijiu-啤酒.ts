@@ -7,7 +7,7 @@ export default composite({
   py: "píjiǔ",
   en: "beer",
   ru: "пиво",
-  hsd: ["{{word:huang2se4}}-{{word:de}} {{word:tou2}}-{{word:luan4}}-{{word:de}} {{word:shui3}}"],
+  hsd: ["{{word:huang2}}-{{word:se4}}-{{word:de}} {{word:tou2}}-{{word:luan4}}-{{word:de}} {{word:shui3}}"],
   tts: ["黄色的头乱的水"],
   literal: "the yellow drink that makes your head messy",
   fit: "plain",

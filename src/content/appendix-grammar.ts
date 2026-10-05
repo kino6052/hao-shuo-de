@@ -78,11 +78,11 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "**Words are written solid**. When several syllables form one dictionary word, they are never split apart, no matter how long the word is — {{word:dong4wu4}}, {{word:shui4jiao4}}, {{word:dan4shi4}}.",
+            "**Words are written solid**. When several syllables form one dictionary word, they are never split apart, no matter how long the word is — {{word:dong4}}-{{word:wu4}}, {{word:shui4jiao4}}, {{word:dan4}}-{{word:shi4}}.",
             "Read the whole solid block as a single unit."
           ],
           "ru": [
-            "**Слова пишутся слитно**. Если несколько слогов составляют одно слово из словаря, их никогда не разделяют, какой бы длины ни было слово: {{word:dong4wu4}}, {{word:shui4jiao4}}, {{word:dan4shi4}}.",
+            "**Слова пишутся слитно**. Если несколько слогов составляют одно слово из словаря, их никогда не разделяют, какой бы длины ни было слово: {{word:dong4}}-{{word:wu4}}, {{word:shui4jiao4}}, {{word:dan4}}-{{word:shi4}}.",
             "Читайте весь слитный блок как одно целое."
           ],
           "zh": []
@@ -209,10 +209,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "NOUN + {{word:shi4}} + NOUN: {{Word:nv3ren2}} {{word:shi4}} {{word:ren2}}. (A woman is a person.)"
+            "NOUN + {{word:shi4}} + NOUN: {{Word:nv3}}-{{word:ren2}} {{word:shi4}} {{word:ren2}}. (A woman is a person.)"
           ],
           "ru": [
-            "СУЩЕСТВИТЕЛЬНОЕ + {{word:shi4}} + СУЩЕСТВИТЕЛЬНОЕ: {{Word:nv3ren2}} {{word:shi4}} {{word:ren2}}. (Женщина — человек.)"
+            "СУЩЕСТВИТЕЛЬНОЕ + {{word:shi4}} + СУЩЕСТВИТЕЛЬНОЕ: {{Word:nv3}}-{{word:ren2}} {{word:shi4}} {{word:ren2}}. (Женщина — человек.)"
           ],
           "zh": []
         }
@@ -231,10 +231,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "NOUN + {{word:bu4}} {{word:shi4}} + NOUN: {{Word:dong4wu4}} {{word:bu4}} {{word:shi4}} {{word:zhi2wu4}}. (An animal is not a plant.)"
+            "NOUN + {{word:bu4}} {{word:shi4}} + NOUN: {{Word:dong4}}-{{word:wu4}} {{word:bu4}} {{word:shi4}} {{word:zhi2wu4}}. (An animal is not a plant.)"
           ],
           "ru": [
-            "СУЩЕСТВИТЕЛЬНОЕ + {{word:bu4}} {{word:shi4}} + СУЩЕСТВИТЕЛЬНОЕ: {{Word:dong4wu4}} {{word:bu4}} {{word:shi4}} {{word:zhi2wu4}}. (Животное — не растение.)"
+            "СУЩЕСТВИТЕЛЬНОЕ + {{word:bu4}} {{word:shi4}} + СУЩЕСТВИТЕЛЬНОЕ: {{Word:dong4}}-{{word:wu4}} {{word:bu4}} {{word:shi4}} {{word:zhi2wu4}}. (Животное — не растение.)"
           ],
           "zh": []
         }
@@ -268,10 +268,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "adjective + -{{word:de}} + NOUN: {{word:da4}}-{{word:de}} {{word:di4fang1}} (a big place)"
+            "adjective + -{{word:de}} + NOUN: {{word:da4}}-{{word:de}} {{word:di4}}-{{light:fang1}} (a big place)"
           ],
           "ru": [
-            "прилагательное + -{{word:de}} + СУЩЕСТВИТЕЛЬНОЕ: {{word:da4}}-{{word:de}} {{word:di4fang1}} (большое место)"
+            "прилагательное + -{{word:de}} + СУЩЕСТВИТЕЛЬНОЕ: {{word:da4}}-{{word:de}} {{word:di4}}-{{light:fang1}} (большое место)"
           ],
           "zh": []
         }
@@ -434,10 +434,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "sentence + {{word:ma}}?, yes or no: {{Word:ni3}} {{word:you3}} {{word:gong1ju4}} {{word:ma}}? (Do you have a tool?)"
+            "sentence + {{word:ma}}?, yes or no: {{Word:ni3}} {{word:you3}} {{word:gong1}}-{{word:ju4}} {{word:ma}}? (Do you have a tool?)"
           ],
           "ru": [
-            "предложение + {{word:ma}}? — да или нет: {{Word:ni3}} {{word:you3}} {{word:gong1ju4}} {{word:ma}}? (У тебя есть инструмент?)"
+            "предложение + {{word:ma}}? — да или нет: {{Word:ni3}} {{word:you3}} {{word:gong1}}-{{word:ju4}} {{word:ma}}? (У тебя есть инструмент?)"
           ],
           "zh": []
         }
@@ -467,10 +467,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:wei4shen2me}} + verb, why: {{Word:ni3}} {{word:wei4shen2me}} {{word:bu4}} {{word:chi1}}? (Why don't you eat?)"
+            "{{word:wei4}}-{{word:shen2me}} + verb, why: {{Word:ni3}} {{word:wei4}}-{{word:shen2me}} {{word:bu4}} {{word:chi1}}? (Why don't you eat?)"
           ],
           "ru": [
-            "{{word:wei4shen2me}} + глагол — почему: {{Word:ni3}} {{word:wei4shen2me}} {{word:bu4}} {{word:chi1}}? (Почему ты не ешь?)"
+            "{{word:wei4}}-{{word:shen2me}} + глагол — почему: {{Word:ni3}} {{word:wei4}}-{{word:shen2me}} {{word:bu4}} {{word:chi1}}? (Почему ты не ешь?)"
           ],
           "zh": []
         }
@@ -581,10 +581,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:ke3neng2}} + verb, maybe: {{Word:ta1}} {{word:ke3neng2}} {{word:zhi1dao4}}. (He might know.)"
+            "{{word:ke3}}-{{word:neng2}} + verb, maybe: {{Word:ta1}} {{word:ke3}}-{{word:neng2}} {{word:zhi1dao4}}. (He might know.)"
           ],
           "ru": [
-            "{{word:ke3neng2}} + глагол — может быть: {{Word:ta1}} {{word:ke3neng2}} {{word:zhi1dao4}}. (Он, может быть, знает.)"
+            "{{word:ke3}}-{{word:neng2}} + глагол — может быть: {{Word:ta1}} {{word:ke3}}-{{word:neng2}} {{word:zhi1dao4}}. (Он, может быть, знает.)"
           ],
           "zh": []
         }
@@ -651,10 +651,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "verb-{{word:guo4}}, done before: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:zhe4}}-ge {{word:dong4wu4}}. (I've seen this animal before.)"
+            "verb-{{word:guo4}}, done before: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:zhe4}}-ge {{word:dong4}}-{{word:wu4}}. (I've seen this animal before.)"
           ],
           "ru": [
-            "глагол-{{word:guo4}} — уже когда-то делал: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:zhe4}}-ge {{word:dong4wu4}}. (Я уже видел это животное.)"
+            "глагол-{{word:guo4}} — уже когда-то делал: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:zhe4}}-ge {{word:dong4}}-{{word:wu4}}. (Я уже видел это животное.)"
           ],
           "zh": []
         }
@@ -791,10 +791,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:na3li3}}, where: {{Word:ni3}} {{word:zai4}} {{word:na3li3}}? (Where are you?)"
+            "{{word:na3}}-{{word:li3}}, where: {{Word:ni3}} {{word:zai4}} {{word:na3}}-{{word:li3}}? (Where are you?)"
           ],
           "ru": [
-            "{{word:na3li3}} — где: {{Word:ni3}} {{word:zai4}} {{word:na3li3}}? (Где ты?)"
+            "{{word:na3}}-{{word:li3}} — где: {{Word:ni3}} {{word:zai4}} {{word:na3}}-{{word:li3}}? (Где ты?)"
           ],
           "zh": []
         }
@@ -835,10 +835,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:zuo3bian1}} / {{word:you4bian1}}, left / right: {{Word:he2zi}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3bian1}}. (The box is on my left.)"
+            "{{word:zuo3}}-{{word:bian1}} / {{word:you4bian1}}, left / right: {{Word:he2zi}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}. (The box is on my left.)"
           ],
           "ru": [
-            "{{word:zuo3bian1}} / {{word:you4bian1}} — слева / справа: {{Word:he2zi}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3bian1}}. (Коробка слева от меня.)"
+            "{{word:zuo3}}-{{word:bian1}} / {{word:you4bian1}} — слева / справа: {{Word:he2zi}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}. (Коробка слева от меня.)"
           ],
           "zh": []
         }
@@ -964,10 +964,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:hen3}} {{word:you3}} {{word:jia4zhi2}}, valuable: {{Word:zhe4}}-ge {{word:gong1ju4}} {{word:hen3}} {{word:you3}} {{word:jia4zhi2}}. (This tool is very valuable.)"
+            "{{word:hen3}} {{word:you3}} {{word:jia4zhi2}}, valuable: {{Word:zhe4}}-ge {{word:gong1}}-{{word:ju4}} {{word:hen3}} {{word:you3}} {{word:jia4zhi2}}. (This tool is very valuable.)"
           ],
           "ru": [
-            "{{word:hen3}} {{word:you3}} {{word:jia4zhi2}} — ценный: {{Word:zhe4}}-ge {{word:gong1ju4}} {{word:hen3}} {{word:you3}} {{word:jia4zhi2}}. (Этот инструмент очень ценный.)"
+            "{{word:hen3}} {{word:you3}} {{word:jia4zhi2}} — ценный: {{Word:zhe4}}-ge {{word:gong1}}-{{word:ju4}} {{word:hen3}} {{word:you3}} {{word:jia4zhi2}}. (Этот инструмент очень ценный.)"
           ],
           "zh": []
         }
@@ -1056,10 +1056,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:yi1yang4}}, the same: {{Word:ta1}}-{{word:men}} {{word:yi1yang4}}. (They're the same.)"
+            "{{word:yi1}}-{{word:yang4}}, the same: {{Word:ta1}}-{{word:men}} {{word:yi1}}-{{word:yang4}}. (They're the same.)"
           ],
           "ru": [
-            "{{word:yi1yang4}} — одинаковый: {{Word:ta1}}-{{word:men}} {{word:yi1yang4}}. (Они одинаковые.)"
+            "{{word:yi1}}-{{word:yang4}} — одинаковый: {{Word:ta1}}-{{word:men}} {{word:yi1}}-{{word:yang4}}. (Они одинаковые.)"
           ],
           "zh": []
         }
@@ -1067,10 +1067,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:bu4}} {{word:yi1yang4}}, different: {{Word:wo3}} {{word:yao4}} {{word:bu4}}-{{word:yi1yang4}}-{{word:de}} {{word:yi1fu}}. (I want different clothes.)"
+            "{{word:bu4}} {{word:yi1}}-{{word:yang4}}, different: {{Word:wo3}} {{word:yao4}} {{word:bu4}}-{{word:yi1}}-{{word:yang4}}-{{word:de}} {{word:yi1fu}}. (I want different clothes.)"
           ],
           "ru": [
-            "{{word:bu4}} {{word:yi1yang4}} — разный: {{Word:wo3}} {{word:yao4}} {{word:bu4}}-{{word:yi1yang4}}-{{word:de}} {{word:yi1fu}}. (Мне нужна другая одежда.)"
+            "{{word:bu4}} {{word:yi1}}-{{word:yang4}} — разный: {{Word:wo3}} {{word:yao4}} {{word:bu4}}-{{word:yi1}}-{{word:yang4}}-{{word:de}} {{word:yi1fu}}. (Мне нужна другая одежда.)"
           ],
           "zh": []
         }
@@ -1078,10 +1078,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:bie2de}}, other: {{Word:wo3}} {{word:yao4}} {{word:bie2de}}. (I want something else.)"
+            "{{word:bie2}}-{{word:de}}, other: {{Word:wo3}} {{word:yao4}} {{word:bie2}}-{{word:de}}. (I want something else.)"
           ],
           "ru": [
-            "{{word:bie2de}} — другой: {{Word:wo3}} {{word:yao4}} {{word:bie2de}}. (Мне нужно что-то другое.)"
+            "{{word:bie2}}-{{word:de}} — другой: {{Word:wo3}} {{word:yao4}} {{word:bie2}}-{{word:de}}. (Мне нужно что-то другое.)"
           ],
           "zh": []
         }
@@ -1170,10 +1170,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:shen2me}}-{{word:dou1}} + verb, everything: {{Word:wo3}} {{word:shen2me}}-{{word:dou1}} {{word:chi1}}. (I eat everything.) With {{word:bu4}}: nothing. {{word:na3li3}}-{{word:dou1}}: everywhere."
+            "{{word:shen2me}}-{{word:dou1}} + verb, everything: {{Word:wo3}} {{word:shen2me}}-{{word:dou1}} {{word:chi1}}. (I eat everything.) With {{word:bu4}}: nothing. {{word:na3}}-{{word:li3}}-{{word:dou1}}: everywhere."
           ],
           "ru": [
-            "{{word:shen2me}}-{{word:dou1}} + глагол — всё: {{Word:wo3}} {{word:shen2me}}-{{word:dou1}} {{word:chi1}}. (Я ем всё.) С {{word:bu4}} — ничего. {{word:na3li3}}-{{word:dou1}} — везде."
+            "{{word:shen2me}}-{{word:dou1}} + глагол — всё: {{Word:wo3}} {{word:shen2me}}-{{word:dou1}} {{word:chi1}}. (Я ем всё.) С {{word:bu4}} — ничего. {{word:na3}}-{{word:li3}}-{{word:dou1}} — везде."
           ],
           "zh": []
         }
@@ -1240,10 +1240,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:ba3}} + thing + {{word:nong4}} + result: {{Word:wo3}} {{word:ba3}} {{word:gong1ju4}} {{word:nong4}} {{word:hao3}} {{word:le}}. (I fixed the tool.)"
+            "{{word:ba3}} + thing + {{word:nong4}} + result: {{Word:wo3}} {{word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:nong4}} {{word:hao3}} {{word:le}}. (I fixed the tool.)"
           ],
           "ru": [
-            "{{word:ba3}} + вещь + {{word:nong4}} + результат: {{Word:wo3}} {{word:ba3}} {{word:gong1ju4}} {{word:nong4}} {{word:hao3}} {{word:le}}. (Я починил инструмент.)"
+            "{{word:ba3}} + вещь + {{word:nong4}} + результат: {{Word:wo3}} {{word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:nong4}} {{word:hao3}} {{word:le}}. (Я починил инструмент.)"
           ],
           "zh": []
         }
@@ -1527,10 +1527,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "color-{{word:de}} + noun: {{word:hong2se4}}-{{word:de}} {{word:he2zi}} (a red box)"
+            "color-{{word:de}} + noun: {{word:hong2}}-{{word:se4}}-{{word:de}} {{word:he2zi}} (a red box)"
           ],
           "ru": [
-            "цвет-{{word:de}} + существительное: {{word:hong2se4}}-{{word:de}} {{word:he2zi}} (красная коробка)"
+            "цвет-{{word:de}} + существительное: {{word:hong2}}-{{word:se4}}-{{word:de}} {{word:he2zi}} (красная коробка)"
           ],
           "zh": []
         }
@@ -1538,10 +1538,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "Thing + {{word:shi4}} + color-{{word:de}}: {{Word:he2zi}} {{word:shi4}} {{word:hong2se4}}-{{word:de}}. (The box is red.)"
+            "Thing + {{word:shi4}} + color-{{word:de}}: {{Word:he2zi}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}. (The box is red.)"
           ],
           "ru": [
-            "Вещь + {{word:shi4}} + цвет-{{word:de}}: {{Word:he2zi}} {{word:shi4}} {{word:hong2se4}}-{{word:de}}. (Коробка красная.)"
+            "Вещь + {{word:shi4}} + цвет-{{word:de}}: {{Word:he2zi}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}. (Коробка красная.)"
           ],
           "zh": []
         }
@@ -1608,10 +1608,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "a longer description-{{word:de}} + noun: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} (an animal in the water), {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1xi}} (fruit)"
+            "a longer description-{{word:de}} + noun: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4}}-{{word:wu4}} (an animal in the water), {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (fruit)"
           ],
           "ru": [
-            "более длинное описание-{{word:de}} + существительное: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} (животное в воде), {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1xi}} (фрукт)"
+            "более длинное описание-{{word:de}} + существительное: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4}}-{{word:wu4}} (животное в воде), {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (фрукт)"
           ],
           "zh": []
         }
@@ -1656,10 +1656,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:yong4}} + thing + verb, with: {{Word:wo3}} {{word:yong4}} {{word:gong1ju4}} {{word:xie3}}. (I write with a tool.)"
+            "{{word:yong4}} + thing + verb, with: {{Word:wo3}} {{word:yong4}} {{word:gong1}}-{{word:ju4}} {{word:xie3}}. (I write with a tool.)"
           ],
           "ru": [
-            "{{word:yong4}} + вещь + глагол — чем: {{Word:wo3}} {{word:yong4}} {{word:gong1ju4}} {{word:xie3}}. (Я пишу инструментом.)"
+            "{{word:yong4}} + вещь + глагол — чем: {{Word:wo3}} {{word:yong4}} {{word:gong1}}-{{word:ju4}} {{word:xie3}}. (Я пишу инструментом.)"
           ],
           "zh": []
         }
@@ -1678,10 +1678,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "A {{word:huo4zhe3}} B, or: {{word:zhe4}}-ge {{word:huo4zhe3}} {{word:na4}}-ge (this one or that one)"
+            "A {{word:huo4}}-{{word:zhe3}} B, or: {{word:zhe4}}-ge {{word:huo4}}-{{word:zhe3}} {{word:na4}}-ge (this one or that one)"
           ],
           "ru": [
-            "A {{word:huo4zhe3}} B — или: {{word:zhe4}}-ge {{word:huo4zhe3}} {{word:na4}}-ge (это или то)"
+            "A {{word:huo4}}-{{word:zhe3}} B — или: {{word:zhe4}}-ge {{word:huo4}}-{{word:zhe3}} {{word:na4}}-ge (это или то)"
           ],
           "zh": []
         }
@@ -1748,10 +1748,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "…, {{word:dan4shi4}} …, but: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4shi4}} {{word:wei4dao4}} {{word:bu4}} {{word:hao3}}. (It looks good, but it doesn't taste good.)"
+            "…, {{word:dan4}}-{{word:shi4}} …, but: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4}}-{{word:shi4}} {{word:wei4dao4}} {{word:bu4}} {{word:hao3}}. (It looks good, but it doesn't taste good.)"
           ],
           "ru": [
-            "…, {{word:dan4shi4}} … — но: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4shi4}} {{word:wei4dao4}} {{word:bu4}} {{word:hao3}}. (Выглядит хорошо, но невкусно.)"
+            "…, {{word:dan4}}-{{word:shi4}} … — но: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4}}-{{word:shi4}} {{word:wei4dao4}} {{word:bu4}} {{word:hao3}}. (Выглядит хорошо, но невкусно.)"
           ],
           "zh": []
         }

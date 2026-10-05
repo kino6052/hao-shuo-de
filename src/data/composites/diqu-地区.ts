@@ -7,7 +7,7 @@ export default composite({
   py: "dìqū",
   en: "region, area",
   ru: "район",
-  hsd: ["{{word:da4}} {{word:di4fang1}}"],
+  hsd: ["{{word:da4}} {{word:di4}}-{{light:fang1}}"],
   tts: ["大地方"],
   literal: "big place",
   fit: "plain",

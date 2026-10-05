@@ -86,13 +86,13 @@ export default lessonModule({
       ru: "Я хочу лечь.",
     },
     {
-      pinyin: "{{Word:dong4wu4}} {{word:tang3}} {{word:zai4}} {{word:di4}}-{{word:shang4}}.",
+      pinyin: "{{Word:dong4}}-{{word:wu4}} {{word:tang3}} {{word:zai4}} {{word:di4}}-{{word:shang4}}.",
       hanzi: "动物躺在地上。",
       en: "The animal is lying on the ground.",
       ru: "Животное лежит на земле.",
     },
     {
-      pinyin: "{{Word:dong4wu4}} {{word:fei1}}-{{word:shang4}}-{{word:qu4}} {{word:le}}.",
+      pinyin: "{{Word:dong4}}-{{word:wu4}} {{word:fei1}}-{{word:shang4}}-{{word:qu4}} {{word:le}}.",
       hanzi: "动物飞上去了。",
       en: "The animal flew up.",
       ru: "Животное взлетело.",

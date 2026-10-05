@@ -37,13 +37,13 @@ export default lessonModule({
       ru: "Одиннадцать человек.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:you3}} {{word:shi2}}-{{word:san1}}-ge {{word:gong1ju4}}.",
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:shi2}}-{{word:san1}}-ge {{word:gong1}}-{{word:ju4}}.",
       hanzi: "我有十三个工具。",
       en: "I have thirteen tools.",
       ru: "У меня тринадцать инструментов.",
     },
     {
-      pinyin: "{{Word:shi2}}-{{word:wu3}}-ge {{word:dong4wu4}} {{word:zai4}} {{word:zhe4}}-{{word:li3}}.",
+      pinyin: "{{Word:shi2}}-{{word:wu3}}-ge {{word:dong4}}-{{word:wu4}} {{word:zai4}} {{word:zhe4}}-{{word:li3}}.",
       hanzi: "十五个动物在这里。",
       en: "Fifteen animals are here.",
       ru: "Здесь пятнадцать животных.",

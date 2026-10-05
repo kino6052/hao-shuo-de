@@ -7,7 +7,7 @@ export default composite({
   py: "niúnǎi",
   en: "milk",
   ru: "молоко",
-  hsd: ["{{word:dong4wu4}}-{{word:de}} {{word:bai2se4}}-{{word:de}} {{word:shui3}}"],
+  hsd: ["{{word:dong4}}-{{word:wu4}}-{{word:de}} {{word:bai2}}-{{word:se4}}-{{word:de}} {{word:shui3}}"],
   tts: ["动物的白色的水"],
   literal: "animals' white water",
   fit: "plain",

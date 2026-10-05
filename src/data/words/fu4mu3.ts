@@ -11,8 +11,8 @@ export default word("fu4mu3", {
   },
   necessity: {
     index: 3,
-    eng: "Parents. Mom and dad are described from it ({{word:fu4mu3}}-{{word:li3}}-{{word:de}} {{word:nv3ren2}}).",
-    rus: "Родители. Через него описывают маму и папу ({{word:fu4mu3}}-{{word:li3}}-{{word:de}} {{word:nv3ren2}}).",
+    eng: "Parents. Mom and dad are described from it ({{word:fu4mu3}}-{{word:li3}}-{{word:de}} {{word:nv3}}-{{word:ren2}}).",
+    rus: "Родители. Через него описывают маму и папу ({{word:fu4mu3}}-{{word:li3}}-{{word:de}} {{word:nv3}}-{{word:ren2}}).",
   },
   maps: "mama",
 });

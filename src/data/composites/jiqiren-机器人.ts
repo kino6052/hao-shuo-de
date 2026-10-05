@@ -8,7 +8,7 @@ export default composite({
   en: "robot",
   ru: "робот",
   hsd: [
-    "{{word:neng2}}-{{word:nong4}}-{{word:ren2}}-{{word:nong4}}-{{word:de}}-{{word:dong1xi}}-{{word:de}} {{word:gong1ju4}}",
+    "{{word:neng2}}-{{word:nong4}}-{{word:ren2}}-{{word:nong4}}-{{word:de}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:gong1}}-{{word:ju4}}",
   ],
   tts: ["能弄人弄的东西的工具"],
   literal: "a tool that can do what people do",

@@ -11,8 +11,8 @@ export default word("nan2ren2", {
   },
   necessity: {
     index: 4,
-    eng: "A man. With {{word:nv3ren2}}, it's how you say who someone is: husband, son, boy.",
-    rus: "Мужчина. Вместе с {{word:nv3ren2}} через него говорят, кто человек: муж, сын, мальчик.",
+    eng: "A man. With {{word:nv3}}-{{word:ren2}}, it's how you say who someone is: husband, son, boy.",
+    rus: "Мужчина. Вместе с {{word:nv3}}-{{word:ren2}} через него говорят, кто человек: муж, сын, мальчик.",
   },
   maps: "mije",
 });

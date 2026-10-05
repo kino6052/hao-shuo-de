@@ -61,7 +61,7 @@ export default lessonModule({
       ru: "На что ты смотришь?",
     },
     {
-      pinyin: "{{Word:ni3}} {{word:wei4shen2me}} {{word:zai4}} {{word:shui4jiao4}}?",
+      pinyin: "{{Word:ni3}} {{word:wei4}}-{{word:shen2me}} {{word:zai4}} {{word:shui4jiao4}}?",
       hanzi: "你为什么在睡觉？",
       en: "Why are you sleeping?",
       ru: "Почему ты спишь?",
@@ -73,7 +73,7 @@ export default lessonModule({
       ru: "Он сейчас спит.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:ke3neng2}} {{word:zai4}} {{word:shui4jiao4}}.",
+      pinyin: "{{Word:ta1}} {{word:ke3}}-{{word:neng2}} {{word:zai4}} {{word:shui4jiao4}}.",
       hanzi: "他可能在睡觉。",
       en: "He might be sleeping.",
       ru: "Он, может быть, спит.",

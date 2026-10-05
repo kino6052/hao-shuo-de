@@ -8,7 +8,7 @@ export default composite({
   en: "older sister",
   ru: "старшая сестра",
   hsd: [
-    "{{word:jia1}}-{{word:li3}} {{word:bi3}} {{word:wo3}} {{word:da4}}-{{word:de}} {{word:nv3ren2}}",
+    "{{word:jia1}}-{{word:li3}} {{word:bi3}} {{word:wo3}} {{word:da4}}-{{word:de}} {{word:nv3}}-{{word:ren2}}",
   ],
   tts: ["家里比我大的女人"],
   literal: "the woman at home who's older than me",

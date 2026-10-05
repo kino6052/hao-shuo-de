@@ -7,7 +7,8 @@ export default composite({
   py: "míngbai",
   en: "understand",
   ru: "понимать",
-  hsd: ["{{word:zhi1dao4}}"],
-  tts: ["知道"],
-  fit: "word",
+  hsd: ["{{word:ming2}}-{{word:bai2}}", "{{word:zhi1dao4}}"],
+  tts: ["明白", "知道"],
+  fit: "natural",
+  proposed: true,
 });

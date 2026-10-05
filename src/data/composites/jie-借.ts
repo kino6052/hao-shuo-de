@@ -8,7 +8,7 @@ export default composite({
   en: "borrow",
   ru: "брать взаймы",
   hsd: [
-    "{{word:na2}} {{word:bie2de}} {{word:ren2}}-{{word:de}}, {{word:hou4}}-{{word:lai2}} {{word:gei3}} {{word:ta1}}",
+    "{{word:na2}} {{word:bie2}}-{{word:de}} {{word:ren2}}-{{word:de}}, {{word:hou4}}-{{word:lai2}} {{word:gei3}} {{word:ta1}}",
   ],
   tts: ["拿别的人的，后来给他"],
   literal: "take someone else's, give it back later",

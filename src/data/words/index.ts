@@ -3,13 +3,13 @@
 import w0 from "./ai4.ts";
 import w1 from "./ba1.ts";
 import w2 from "./ba3.ts";
-import w3 from "./bai2se4.ts";
+import w3 from "./bai2.ts";
 import w4 from "./bang1.ts";
 import w5 from "./bi2zi.ts";
 import w6 from "./bi3.ts";
 import w7 from "./bian1.ts";
 import w8 from "./bian4.ts";
-import w9 from "./bie2de.ts";
+import w9 from "./bie2.ts";
 import w10 from "./bu4.ts";
 import w11 from "./bu4fen.ts";
 import w12 from "./che1.ts";
@@ -20,74 +20,74 @@ import w16 from "./ci4.ts";
 import w17 from "./cong2.ts";
 import w18 from "./da3.ts";
 import w19 from "./da4.ts";
-import w20 from "./dan4shi4.ts";
+import w20 from "./dan4.ts";
 import w21 from "./dao4.ts";
 import w22 from "./de.ts";
 import w23 from "./de2.ts";
 import w24 from "./deng1.ts";
 import w25 from "./deng3.ts";
 import w26 from "./di4.ts";
-import w27 from "./di4fang1.ts";
-import w28 from "./dian3.ts";
-import w29 from "./dong1xi.ts";
-import w30 from "./dong4.ts";
-import w31 from "./dong4wu4.ts";
-import w32 from "./dou1.ts";
-import w33 from "./dui4.ts";
-import w34 from "./duo1.ts";
-import w35 from "./er4.ts";
-import w36 from "./fa1.ts";
-import w37 from "./fang1fa3.ts";
-import w38 from "./fang4.ts";
-import w39 from "./fei1.ts";
-import w40 from "./fu4jin4.ts";
-import w41 from "./fu4mu3.ts";
-import w42 from "./gao1.ts";
-import w43 from "./ge4.ts";
-import w44 from "./gei3.ts";
-import w45 from "./gong1ju4.ts";
-import w46 from "./guan1.ts";
-import w47 from "./guan1xi.ts";
-import w48 from "./gun4zi.ts";
-import w49 from "./guo2.ts";
-import w50 from "./guo4.ts";
-import w51 from "./hao3.ts";
-import w52 from "./hao4.ts";
-import w53 from "./he1.ts";
-import w54 from "./he2.ts";
-import w55 from "./he2zi.ts";
-import w56 from "./hei1se4.ts";
-import w57 from "./hen3.ts";
-import w58 from "./hong2se4.ts";
-import w59 from "./hou4.ts";
-import w60 from "./huai4.ts";
-import w61 from "./huang2se4.ts";
-import w62 from "./hui2.ts";
-import w63 from "./hui4.ts";
-import w64 from "./huo2.ts";
-import w65 from "./huo3.ts";
-import w66 from "./huo4zhe3.ts";
-import w67 from "./ji1.ts";
-import w68 from "./jia1.ts";
-import w69 from "./jia4zhi2.ts";
-import w70 from "./jian1.ts";
-import w71 from "./jiao1.ts";
-import w72 from "./jiao3.ts";
-import w73 from "./jiao4.ts";
-import w74 from "./jin1.ts";
-import w75 from "./jin4.ts";
-import w76 from "./jiu3.ts";
-import w77 from "./jiu4.ts";
+import w27 from "./dian3.ts";
+import w28 from "./dong1.ts";
+import w29 from "./dong4.ts";
+import w30 from "./dou1.ts";
+import w31 from "./dui4.ts";
+import w32 from "./duo1.ts";
+import w33 from "./er4.ts";
+import w34 from "./fa1.ts";
+import w35 from "./fa3.ts";
+import w36 from "./fang1.ts";
+import w37 from "./fang4.ts";
+import w38 from "./fei1.ts";
+import w39 from "./fu4jin4.ts";
+import w40 from "./fu4mu3.ts";
+import w41 from "./gao1.ts";
+import w42 from "./ge4.ts";
+import w43 from "./gei3.ts";
+import w44 from "./gong1.ts";
+import w45 from "./guan1.ts";
+import w46 from "./guan1xi.ts";
+import w47 from "./gun4zi.ts";
+import w48 from "./guo2.ts";
+import w49 from "./guo4.ts";
+import w50 from "./hao3.ts";
+import w51 from "./hao4.ts";
+import w52 from "./he1.ts";
+import w53 from "./he2.ts";
+import w54 from "./he2zi.ts";
+import w55 from "./hei1.ts";
+import w56 from "./hen3.ts";
+import w57 from "./hong2.ts";
+import w58 from "./hou4.ts";
+import w59 from "./huai4.ts";
+import w60 from "./huang2.ts";
+import w61 from "./hui2.ts";
+import w62 from "./hui4.ts";
+import w63 from "./huo2.ts";
+import w64 from "./huo3.ts";
+import w65 from "./huo4.ts";
+import w66 from "./ji1.ts";
+import w67 from "./jia1.ts";
+import w68 from "./jia4zhi2.ts";
+import w69 from "./jian1.ts";
+import w70 from "./jiao1.ts";
+import w71 from "./jiao3.ts";
+import w72 from "./jiao4.ts";
+import w73 from "./jin1.ts";
+import w74 from "./jin4.ts";
+import w75 from "./jiu3.ts";
+import w76 from "./jiu4.ts";
+import w77 from "./ju4.ts";
 import w78 from "./jue2de.ts";
 import w79 from "./kai1.ts";
 import w80 from "./kai1shi3.ts";
 import w81 from "./kan4.ts";
-import w82 from "./ke3neng2.ts";
+import w82 from "./ke3.ts";
 import w83 from "./kong1.ts";
 import w84 from "./kou3.ts";
 import w85 from "./kuai4.ts";
 import w86 from "./lai2.ts";
-import w87 from "./lan2se4.ts";
+import w87 from "./lan2.ts";
 import w88 from "./lao3.ts";
 import w89 from "./le.ts";
 import w90 from "./leng3.ts";
@@ -107,7 +107,7 @@ import w103 from "./mian4.ts";
 import w104 from "./ming2.ts";
 import w105 from "./mo1.ts";
 import w106 from "./na2.ts";
-import w107 from "./na3li3.ts";
+import w107 from "./na3.ts";
 import w108 from "./na4.ts";
 import w109 from "./nan2.ts";
 import w110 from "./nan2ren2.ts";
@@ -115,7 +115,7 @@ import w111 from "./neng2.ts";
 import w112 from "./ni3.ts";
 import w113 from "./nian2.ts";
 import w114 from "./nong4.ts";
-import w115 from "./nv3ren2.ts";
+import w115 from "./nv3.ts";
 import w116 from "./pa4.ts";
 import w117 from "./pang2bian1.ts";
 import w118 from "./qi1.ts";
@@ -130,88 +130,92 @@ import w126 from "./ren2.ts";
 import w127 from "./ri4.ts";
 import w128 from "./ru2guo3.ts";
 import w129 from "./san1.ts";
-import w130 from "./shang4.ts";
-import w131 from "./shao3.ts";
-import w132 from "./shen1ti3.ts";
-import w133 from "./shen2me.ts";
-import w134 from "./sheng1.ts";
-import w135 from "./sheng1yin1.ts";
-import w136 from "./shi2.ts";
-import w137 from "./shi2jian1.ts";
-import w138 from "./shi4.ts";
-import w139 from "./shou3.ts";
-import w140 from "./shui3.ts";
-import w141 from "./shui4jiao4.ts";
-import w142 from "./shuo1.ts";
-import w143 from "./si3.ts";
-import w144 from "./si4.ts";
-import w145 from "./suan4.ts";
-import w146 from "./ta1.ts";
-import w147 from "./tang3.ts";
-import w148 from "./tian1.ts";
-import w149 from "./tian2.ts";
-import w150 from "./ting1.ts";
-import w151 from "./tong1.ts";
-import w152 from "./tou2.ts";
-import w153 from "./wai4.ts";
-import w154 from "./wan2.ts";
-import w155 from "./wan2r.ts";
-import w156 from "./wang3.ts";
-import w157 from "./wei4dao4.ts";
-import w158 from "./wei4shen2me.ts";
-import w159 from "./wen4.ts";
-import w160 from "./wo3.ts";
-import w161 from "./wu3.ts";
-import w162 from "./xia4.ts";
-import w163 from "./xian4.ts";
-import w164 from "./xian4zai4.ts";
-import w165 from "./xiao3.ts";
-import w166 from "./xiao4.ts";
-import w167 from "./xie3.ts";
-import w168 from "./xie4.ts";
-import w169 from "./xin1.ts";
-import w170 from "./xue2.ts";
-import w171 from "./yan2se4.ts";
-import w172 from "./yan3jing.ts";
-import w173 from "./yao4.ts";
-import w174 from "./ye3.ts";
-import w175 from "./yi1.ts";
-import w176 from "./yi1fu.ts";
-import w177 from "./yi1yang4.ts";
-import w178 from "./yin1wei4.ts";
-import w179 from "./ying4.ts";
-import w180 from "./yong4.ts";
-import w181 from "./you3.ts";
-import w182 from "./you4.ts";
-import w183 from "./you4bian1.ts";
-import w184 from "./yuan2.ts";
-import w185 from "./yuan3.ts";
-import w186 from "./yue4.ts";
-import w187 from "./zai4.ts";
-import w188 from "./zen3me.ts";
-import w189 from "./zhan4.ts";
-import w190 from "./zhao3.ts";
-import w191 from "./zhe4.ts";
-import w192 from "./zhen1.ts";
-import w193 from "./zhi1dao4.ts";
-import w194 from "./zhi2wu4.ts";
-import w195 from "./zhong1.ts";
-import w196 from "./zhong3.ts";
-import w197 from "./zui4.ts";
-import w198 from "./zuo3bian1.ts";
-import w199 from "./zuo4.ts";
+import w130 from "./se4.ts";
+import w131 from "./shang4.ts";
+import w132 from "./shao3.ts";
+import w133 from "./shen1ti3.ts";
+import w134 from "./shen2me.ts";
+import w135 from "./sheng1.ts";
+import w136 from "./sheng1yin1.ts";
+import w137 from "./shi2.ts";
+import w138 from "./shi2jian1.ts";
+import w139 from "./shi4.ts";
+import w140 from "./shou3.ts";
+import w141 from "./shui3.ts";
+import w142 from "./shui4jiao4.ts";
+import w143 from "./shuo1.ts";
+import w144 from "./si3.ts";
+import w145 from "./si4.ts";
+import w146 from "./suan4.ts";
+import w147 from "./ta1.ts";
+import w148 from "./tang3.ts";
+import w149 from "./tian1.ts";
+import w150 from "./tian2.ts";
+import w151 from "./ting1.ts";
+import w152 from "./tong1.ts";
+import w153 from "./tou2.ts";
+import w154 from "./wai4.ts";
+import w155 from "./wan2.ts";
+import w156 from "./wan2r.ts";
+import w157 from "./wang3.ts";
+import w158 from "./wei4.ts";
+import w159 from "./wei4dao4.ts";
+import w160 from "./wen4.ts";
+import w161 from "./wo3.ts";
+import w162 from "./wu3.ts";
+import w163 from "./wu4.ts";
+import w164 from "./xi1.ts";
+import w165 from "./xia4.ts";
+import w166 from "./xian4.ts";
+import w167 from "./xian4zai4.ts";
+import w168 from "./xiao3.ts";
+import w169 from "./xiao4.ts";
+import w170 from "./xie3.ts";
+import w171 from "./xie4.ts";
+import w172 from "./xin1.ts";
+import w173 from "./xue2.ts";
+import w174 from "./yan2se4.ts";
+import w175 from "./yan3jing.ts";
+import w176 from "./yang4.ts";
+import w177 from "./yao4.ts";
+import w178 from "./ye3.ts";
+import w179 from "./yi1.ts";
+import w180 from "./yi1fu.ts";
+import w181 from "./yin1wei4.ts";
+import w182 from "./ying4.ts";
+import w183 from "./yong4.ts";
+import w184 from "./you3.ts";
+import w185 from "./you4.ts";
+import w186 from "./you4bian1.ts";
+import w187 from "./yuan2.ts";
+import w188 from "./yuan3.ts";
+import w189 from "./yue4.ts";
+import w190 from "./zai4.ts";
+import w191 from "./zen3me.ts";
+import w192 from "./zhan4.ts";
+import w193 from "./zhao3.ts";
+import w194 from "./zhe3.ts";
+import w195 from "./zhe4.ts";
+import w196 from "./zhen1.ts";
+import w197 from "./zhi1dao4.ts";
+import w198 from "./zhi2wu4.ts";
+import w199 from "./zhong1.ts";
+import w200 from "./zhong3.ts";
+import w201 from "./zui4.ts";
+import w202 from "./zuo3.ts";
+import w203 from "./zuo4.ts";
 
 export const WORDS = {
   "ai4": w0,
   "ba1": w1,
   "ba3": w2,
-  "bai2se4": w3,
+  "bai2": w3,
   "bang1": w4,
   "bi2zi": w5,
   "bi3": w6,
   "bian1": w7,
   "bian4": w8,
-  "bie2de": w9,
+  "bie2": w9,
   "bu4": w10,
   "bu4fen": w11,
   "che1": w12,
@@ -222,74 +226,74 @@ export const WORDS = {
   "cong2": w17,
   "da3": w18,
   "da4": w19,
-  "dan4shi4": w20,
+  "dan4": w20,
   "dao4": w21,
   "de": w22,
   "de2": w23,
   "deng1": w24,
   "deng3": w25,
   "di4": w26,
-  "di4fang1": w27,
-  "dian3": w28,
-  "dong1xi": w29,
-  "dong4": w30,
-  "dong4wu4": w31,
-  "dou1": w32,
-  "dui4": w33,
-  "duo1": w34,
-  "er4": w35,
-  "fa1": w36,
-  "fang1fa3": w37,
-  "fang4": w38,
-  "fei1": w39,
-  "fu4jin4": w40,
-  "fu4mu3": w41,
-  "gao1": w42,
-  "ge4": w43,
-  "gei3": w44,
-  "gong1ju4": w45,
-  "guan1": w46,
-  "guan1xi": w47,
-  "gun4zi": w48,
-  "guo2": w49,
-  "guo4": w50,
-  "hao3": w51,
-  "hao4": w52,
-  "he1": w53,
-  "he2": w54,
-  "he2zi": w55,
-  "hei1se4": w56,
-  "hen3": w57,
-  "hong2se4": w58,
-  "hou4": w59,
-  "huai4": w60,
-  "huang2se4": w61,
-  "hui2": w62,
-  "hui4": w63,
-  "huo2": w64,
-  "huo3": w65,
-  "huo4zhe3": w66,
-  "ji1": w67,
-  "jia1": w68,
-  "jia4zhi2": w69,
-  "jian1": w70,
-  "jiao1": w71,
-  "jiao3": w72,
-  "jiao4": w73,
-  "jin1": w74,
-  "jin4": w75,
-  "jiu3": w76,
-  "jiu4": w77,
+  "dian3": w27,
+  "dong1": w28,
+  "dong4": w29,
+  "dou1": w30,
+  "dui4": w31,
+  "duo1": w32,
+  "er4": w33,
+  "fa1": w34,
+  "fa3": w35,
+  "fang1": w36,
+  "fang4": w37,
+  "fei1": w38,
+  "fu4jin4": w39,
+  "fu4mu3": w40,
+  "gao1": w41,
+  "ge4": w42,
+  "gei3": w43,
+  "gong1": w44,
+  "guan1": w45,
+  "guan1xi": w46,
+  "gun4zi": w47,
+  "guo2": w48,
+  "guo4": w49,
+  "hao3": w50,
+  "hao4": w51,
+  "he1": w52,
+  "he2": w53,
+  "he2zi": w54,
+  "hei1": w55,
+  "hen3": w56,
+  "hong2": w57,
+  "hou4": w58,
+  "huai4": w59,
+  "huang2": w60,
+  "hui2": w61,
+  "hui4": w62,
+  "huo2": w63,
+  "huo3": w64,
+  "huo4": w65,
+  "ji1": w66,
+  "jia1": w67,
+  "jia4zhi2": w68,
+  "jian1": w69,
+  "jiao1": w70,
+  "jiao3": w71,
+  "jiao4": w72,
+  "jin1": w73,
+  "jin4": w74,
+  "jiu3": w75,
+  "jiu4": w76,
+  "ju4": w77,
   "jue2de": w78,
   "kai1": w79,
   "kai1shi3": w80,
   "kan4": w81,
-  "ke3neng2": w82,
+  "ke3": w82,
   "kong1": w83,
   "kou3": w84,
   "kuai4": w85,
   "lai2": w86,
-  "lan2se4": w87,
+  "lan2": w87,
   "lao3": w88,
   "le": w89,
   "leng3": w90,
@@ -309,7 +313,7 @@ export const WORDS = {
   "ming2": w104,
   "mo1": w105,
   "na2": w106,
-  "na3li3": w107,
+  "na3": w107,
   "na4": w108,
   "nan2": w109,
   "nan2ren2": w110,
@@ -317,7 +321,7 @@ export const WORDS = {
   "ni3": w112,
   "nian2": w113,
   "nong4": w114,
-  "nv3ren2": w115,
+  "nv3": w115,
   "pa4": w116,
   "pang2bian1": w117,
   "qi1": w118,
@@ -332,76 +336,80 @@ export const WORDS = {
   "ri4": w127,
   "ru2guo3": w128,
   "san1": w129,
-  "shang4": w130,
-  "shao3": w131,
-  "shen1ti3": w132,
-  "shen2me": w133,
-  "sheng1": w134,
-  "sheng1yin1": w135,
-  "shi2": w136,
-  "shi2jian1": w137,
-  "shi4": w138,
-  "shou3": w139,
-  "shui3": w140,
-  "shui4jiao4": w141,
-  "shuo1": w142,
-  "si3": w143,
-  "si4": w144,
-  "suan4": w145,
-  "ta1": w146,
-  "tang3": w147,
-  "tian1": w148,
-  "tian2": w149,
-  "ting1": w150,
-  "tong1": w151,
-  "tou2": w152,
-  "wai4": w153,
-  "wan2": w154,
-  "wan2r": w155,
-  "wang3": w156,
-  "wei4dao4": w157,
-  "wei4shen2me": w158,
-  "wen4": w159,
-  "wo3": w160,
-  "wu3": w161,
-  "xia4": w162,
-  "xian4": w163,
-  "xian4zai4": w164,
-  "xiao3": w165,
-  "xiao4": w166,
-  "xie3": w167,
-  "xie4": w168,
-  "xin1": w169,
-  "xue2": w170,
-  "yan2se4": w171,
-  "yan3jing": w172,
-  "yao4": w173,
-  "ye3": w174,
-  "yi1": w175,
-  "yi1fu": w176,
-  "yi1yang4": w177,
-  "yin1wei4": w178,
-  "ying4": w179,
-  "yong4": w180,
-  "you3": w181,
-  "you4": w182,
-  "you4bian1": w183,
-  "yuan2": w184,
-  "yuan3": w185,
-  "yue4": w186,
-  "zai4": w187,
-  "zen3me": w188,
-  "zhan4": w189,
-  "zhao3": w190,
-  "zhe4": w191,
-  "zhen1": w192,
-  "zhi1dao4": w193,
-  "zhi2wu4": w194,
-  "zhong1": w195,
-  "zhong3": w196,
-  "zui4": w197,
-  "zuo3bian1": w198,
-  "zuo4": w199,
+  "se4": w130,
+  "shang4": w131,
+  "shao3": w132,
+  "shen1ti3": w133,
+  "shen2me": w134,
+  "sheng1": w135,
+  "sheng1yin1": w136,
+  "shi2": w137,
+  "shi2jian1": w138,
+  "shi4": w139,
+  "shou3": w140,
+  "shui3": w141,
+  "shui4jiao4": w142,
+  "shuo1": w143,
+  "si3": w144,
+  "si4": w145,
+  "suan4": w146,
+  "ta1": w147,
+  "tang3": w148,
+  "tian1": w149,
+  "tian2": w150,
+  "ting1": w151,
+  "tong1": w152,
+  "tou2": w153,
+  "wai4": w154,
+  "wan2": w155,
+  "wan2r": w156,
+  "wang3": w157,
+  "wei4": w158,
+  "wei4dao4": w159,
+  "wen4": w160,
+  "wo3": w161,
+  "wu3": w162,
+  "wu4": w163,
+  "xi1": w164,
+  "xia4": w165,
+  "xian4": w166,
+  "xian4zai4": w167,
+  "xiao3": w168,
+  "xiao4": w169,
+  "xie3": w170,
+  "xie4": w171,
+  "xin1": w172,
+  "xue2": w173,
+  "yan2se4": w174,
+  "yan3jing": w175,
+  "yang4": w176,
+  "yao4": w177,
+  "ye3": w178,
+  "yi1": w179,
+  "yi1fu": w180,
+  "yin1wei4": w181,
+  "ying4": w182,
+  "yong4": w183,
+  "you3": w184,
+  "you4": w185,
+  "you4bian1": w186,
+  "yuan2": w187,
+  "yuan3": w188,
+  "yue4": w189,
+  "zai4": w190,
+  "zen3me": w191,
+  "zhan4": w192,
+  "zhao3": w193,
+  "zhe3": w194,
+  "zhe4": w195,
+  "zhen1": w196,
+  "zhi1dao4": w197,
+  "zhi2wu4": w198,
+  "zhong1": w199,
+  "zhong3": w200,
+  "zui4": w201,
+  "zuo3": w202,
+  "zuo4": w203,
 };
 
 export type WordId = keyof typeof WORDS;

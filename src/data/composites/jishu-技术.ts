@@ -7,7 +7,7 @@ export default composite({
   py: "jìshù",
   en: "technology, skill",
   ru: "техника, технология",
-  hsd: ["{{word:nong4}}-{{word:dong1xi}}-{{word:de}} {{word:fang1fa3}}"],
+  hsd: ["{{word:nong4}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:fang1}}-{{word:fa3}}"],
   tts: ["弄东西的方法"],
   literal: "the way of making things",
   fit: "plain",

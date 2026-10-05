@@ -17,7 +17,7 @@
 // The parts always come out in the usual Mandarin order, whatever order the
 // reader answered in:
 //   noun: cóng-X-lái-de, dào/qù-X-de, zài-X-de, does-de, kind-de, color-de + NOUN
-//         zài-shuǐ-lǐ-de xiǎo-de huángsè-de dòngwù
+//         zài-shuǐ-lǐ-de xiǎo-de huáng-sè-de dòng-wù
 //   verb: cóng X, zài X, yòng + thing, way-de + VERB-direction / VERB-dào X + object
 //         cóng jiā yòng jiǎo kuài-kuài-de qù     fēi-dào shuǐ-lǐ
 
@@ -113,7 +113,7 @@ export const POSITIONS = {
   near: ["fu4jin4"],
 };
 // Words that are a place already (zài jiā), unlike a thing (zài hézi-lǐ).
-const PLACE_WORDS = new Set(["jia1", "di4fang1"]);
+const PLACE_WORDS = new Set(["jia1", "地方"]);
 
 // -> the position of a place answer: the reader's pick, or the place itself
 // for a place word and "in" for anything else.
@@ -132,22 +132,22 @@ export function takesVia(node, key) {
 }
 
 // The broad words offered by the first question, "What is it?".
-export const START_NOUNS = ["dong1xi", "ren2", "dong4wu4", "zhi2wu4", "gong1ju4", "di4fang1"];
+export const START_NOUNS = ["东西", "ren2", "动物", "zhi2wu4", "工具", "地方"];
 export const START_VERBS = ["nong4", "qu4", "chi1", "kan4"];
 
 // -- Which words can answer which question -----------------------------
 
-const COLORS = new Set(["bai2se4", "hei1se4", "hong2se4", "huang2se4", "lan2se4"]);
+const COLORS = new Set(["bai2", "hei1", "hong2", "huang2", "lan2"]);
 // Grammar words and words the questions themselves add (zài, cóng, yòng, the
 // place and direction words), so they're never offered as answers.
 const NOT_OFFERED = new Set([
-  "shi4", "zai4", "yong4", "wan2", "hen3", "zui4", "zhen1", "bie2de",
+  "shi4", "zai4", "yong4", "wan2", "hen3", "zui4", "zhen1", "bie2",
   "li3", "shang4", "xia4", "hou4", "qian2", "mian4", "bian1",
-  "pang2bian1", "zuo3bian1", "you4bian1", "fu4jin4",
+  "pang2bian1", "zuo3", "you4bian1", "fu4jin4", "fang1", "dong1", "xi1", "se4", "zhe3",
   "dian3", "zhong3", "xian4zai4",
 ]);
 // Words whose part of speech in the dictionary doesn't say what they are here.
-const ROLE_OVERRIDES = { jue2de: "verb", fang1fa3: "noun" };
+const ROLE_OVERRIDES = { jue2de: "verb" };
 
 // A unit is a ready-made word made of words: a composite with a role
 // (src/lib/composite.ts), like dōng-xi, "thing". dict.units holds them, keyed
@@ -199,7 +199,7 @@ export function questionOf(role, key) {
 
 // A writing system: how words are spelled and how parts are joined. Pinyin
 // joins the parts of one describing part with hyphens and the parts with
-// spaces (the composite dictionary's style: shuǐ-lǐ-de dòngwù); hanzi joins
+// spaces (the composite dictionary's style: shuǐ-lǐ-de dòng-wù); hanzi joins
 // everything without spaces.
 export function pinyinSystem(dict) {
   return {
@@ -249,7 +249,7 @@ function renderAdj(node, sys) {
 }
 
 // A place and where at it: dà-de shuǐ-lǐ. Glued into one piece where it's
-// part of a describing part (zài-dà-de-shuǐ-lǐ-de dòngwù).
+// part of a describing part (zài-dà-de-shuǐ-lǐ-de dòng-wù).
 function renderPlace(answer, sys) {
   return sys.hyphen([render(answer.node, sys), ...POSITIONS[positionOf(answer)].map(sys.word)]);
 }

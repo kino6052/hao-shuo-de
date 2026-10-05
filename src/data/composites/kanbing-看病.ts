@@ -8,7 +8,7 @@ export default composite({
   en: "see a doctor",
   ru: "идти к врачу",
   hsd: [
-    "{{word:qu4}} {{word:ba3}}-{{word:shen1ti3}}-{{word:nong4}}-{{word:hao3}}-{{word:de}} {{word:di4fang1}}",
+    "{{word:qu4}} {{word:ba3}}-{{word:shen1ti3}}-{{word:nong4}}-{{word:hao3}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
   ],
   tts: ["去把身体弄好的地方"],
   literal: "go to the place that fixes bodies",

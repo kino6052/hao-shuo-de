@@ -7,7 +7,7 @@ export default composite({
   py: "zhí",
   en: "straight",
   ru: "прямой",
-  hsd: ["{{word:he2}} {{word:gun4zi}} {{word:yi1yang4}}"],
+  hsd: ["{{word:he2}} {{word:gun4zi}} {{word:yi1}}-{{word:yang4}}"],
   tts: ["和棍子一样"],
   literal: "like a stick",
   fit: "plain",

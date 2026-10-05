@@ -11,8 +11,8 @@ export default word("qi2guai4", {
   },
   necessity: {
     index: 2,
-    eng: "Strange, unusual. {{word:bu4}} {{word:yi1yang4}} is close, but doesn't say it surprises you.",
-    rus: "Странный, необычный. {{word:bu4}} {{word:yi1yang4}} близко, но не говорит, что это удивляет.",
+    eng: "Strange, unusual. {{word:bu4}} {{word:yi1}}-{{word:yang4}} is close, but doesn't say it surprises you.",
+    rus: "Странный, необычный. {{word:bu4}} {{word:yi1}}-{{word:yang4}} близко, но не говорит, что это удивляет.",
   },
   maps: "nasa",
 });

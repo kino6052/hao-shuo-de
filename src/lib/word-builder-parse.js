@@ -3,9 +3,9 @@
 // src/lib/word-builder.js), so a reader can open a dictionary word in the
 // Word Builder and see the questions it answers.
 //
-// It reads the forms the Word Builder writes (zài-shuǐ-lǐ-de dòngwù) and the
-// shorter forms the dictionary used before (shuǐ-lǐ-de dòngwù, with zài left
-// out; mǎi dōngxi-de dìfāng, with a space inside a part).
+// It reads the forms the Word Builder writes (zài-shuǐ-lǐ-de dòng-wù) and the
+// shorter forms the dictionary used before (shuǐ-lǐ-de dòng-wù, with zài left
+// out; mǎi dōng-xi-de dì-fang, with a space inside a part).
 // scripts/composites-builder-forms.js rewrites every description it can read
 // into the Word Builder's own form, so the two agree. A form is left alone
 // when it can't be read (a name, "X", a pattern the Word Builder has no
@@ -94,7 +94,7 @@ function reader(dict, { ids: t, glued }) {
     step();
     if (depth > 5) return;
     if (role(i) === "noun") yield { node: node(t[i], "noun"), j: i + 1 };
-    // A describing word right before the noun, with no -de (hěn duō dìfāng).
+    // A describing word right before the noun, with no -de (hěn duō dì-fang).
     for (const a of adjective(i)) {
       if (role(a.j) === "noun") yield { node: node(t[a.j], "noun", { kind: { node: a.node } }), j: a.j + 1 };
     }
@@ -237,8 +237,8 @@ export function treeOfForm(dict, form) {
 }
 
 // Whether the new form keeps every pair of words the old form joined with a
-// hyphen joined (with at most a -de or zài between): "zhīdào-hěn-duō-de gōngjù",
-// a tool that knows a lot, must not become "zhīdào hěn-duō-de gōngjù", knowing
+// hyphen joined (with at most a -de or zài between): "zhīdào-hěn-duō-de gōng-jù",
+// a tool that knows a lot, must not become "zhīdào hěn-duō-de gōng-jù", knowing
 // many tools. Forms whose parts moved are not compared.
 function keepsJoins(oldWords, newWords) {
   const extra = new Set(["de", "zai4"]);

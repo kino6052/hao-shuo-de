@@ -7,7 +7,7 @@ export default composite({
   py: "gōngkè",
   en: "homework",
   ru: "домашнее задание",
-  hsd: ["{{word:hui2}} {{word:jia1}} {{word:xue2}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:hui2}} {{word:jia1}} {{word:xue2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["回家学的东西"],
   literal: "things to learn at home",
   fit: "plain",

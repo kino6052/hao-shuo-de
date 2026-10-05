@@ -7,7 +7,7 @@ export default composite({
   py: "kèběn",
   en: "textbook",
   ru: "учебник",
-  hsd: ["{{word:xue2}}-{{word:de}} {{word:xie3}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:xue2}}-{{word:de}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["学的写的东西"],
   literal: "a written thing for learning",
   fit: "plain",

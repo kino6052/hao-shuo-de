@@ -7,7 +7,7 @@ export default composite({
   py: "sùshè",
   en: "dormitory",
   ru: "общежитие",
-  hsd: ["{{word:xue2}}-{{word:de}} {{word:ren2}} {{word:shui4jiao4}}-{{word:de}} {{word:di4fang1}}"],
+  hsd: ["{{word:xue2}}-{{word:de}} {{word:ren2}} {{word:shui4jiao4}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
   tts: ["学的人睡觉的地方"],
   literal: "where students sleep",
   fit: "plain",

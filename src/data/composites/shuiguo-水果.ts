@@ -7,7 +7,7 @@ export default composite({
   py: "shuǐguǒ",
   en: "fruit",
   ru: "фрукт",
-  hsd: ["{{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["植物生的东西"],
   fit: "plain",
   literal: "what plants give birth to",

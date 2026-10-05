@@ -18,14 +18,14 @@ export default lessonModule({
   ],
   prose: {
     en: [
-      "**To say whose part it is**, put -{{word:de}} between the owner and the part: {{word:dong4wu4}}-{{word:de}} {{word:bi2zi}}, the animal's nose.",
+      "**To say whose part it is**, put -{{word:de}} between the owner and the part: {{word:dong4}}-{{word:wu4}}-{{word:de}} {{word:bi2zi}}, the animal's nose.",
       "",
       "**owner-{{word:de}} + part**",
       "",
       "{{word:mao2}} is fur: {{word:tou2}}-{{word:shang4}}-{{word:de}} {{word:mao2}} (the fur on the head) is hair.",
     ],
     ru: [
-      "**Чтобы сказать, чья это часть**, поставьте -{{word:de}} между владельцем и частью: {{word:dong4wu4}}-{{word:de}} {{word:bi2zi}} — нос животного.",
+      "**Чтобы сказать, чья это часть**, поставьте -{{word:de}} между владельцем и частью: {{word:dong4}}-{{word:wu4}}-{{word:de}} {{word:bi2zi}} — нос животного.",
       "",
       "**владелец-{{word:de}} + часть**",
       "",
@@ -52,19 +52,19 @@ export default lessonModule({
       ru: "У меня большой нос.",
     },
     {
-      pinyin: "{{Word:ni3}}-{{word:de}} {{word:bi2zi}} {{word:shi4}} {{word:hong2se4}}-{{word:de}}.",
+      pinyin: "{{Word:ni3}}-{{word:de}} {{word:bi2zi}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}.",
       hanzi: "你的鼻子是红色的。",
       en: "Your nose is red.",
       ru: "У тебя красный нос.",
     },
     {
-      pinyin: "{{Word:dong4wu4}}-{{word:de}} {{word:bi2zi}} {{word:hen3}} {{word:xiao3}}.",
+      pinyin: "{{Word:dong4}}-{{word:wu4}}-{{word:de}} {{word:bi2zi}} {{word:hen3}} {{word:xiao3}}.",
       hanzi: "动物的鼻子很小。",
       en: "The animal's nose is small.",
       ru: "У животного маленький нос.",
     },
     {
-      pinyin: "{{Word:dong4wu4}} {{word:shen1ti3}}-{{word:de}} {{word:wai4}}-{{word:mian4}} {{word:hen3}} {{word:ying4}}.",
+      pinyin: "{{Word:dong4}}-{{word:wu4}} {{word:shen1ti3}}-{{word:de}} {{word:wai4}}-{{word:mian4}} {{word:hen3}} {{word:ying4}}.",
       hanzi: "动物身体的外面很硬。",
       en: "The animal's skin is hard.",
       ru: "У животного твёрдая кожа.",
@@ -76,19 +76,19 @@ export default lessonModule({
       ru: "У меня горячая кожа.",
     },
     {
-      pinyin: "{{Word:zhe4}}-ge {{word:dong4wu4}}-{{word:de}} {{word:mao2}} {{word:shi4}} {{word:bai2se4}}-{{word:de}}.",
+      pinyin: "{{Word:zhe4}}-ge {{word:dong4}}-{{word:wu4}}-{{word:de}} {{word:mao2}} {{word:shi4}} {{word:bai2}}-{{word:se4}}-{{word:de}}.",
       hanzi: "这个动物的毛是白色的。",
       en: "This animal's fur is white.",
       ru: "Шерсть у этого животного белая.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:tou2}}-{{word:shang4}}-{{word:de}} {{word:mao2}} {{word:shi4}} {{word:hei1se4}}-{{word:de}}.",
+      pinyin: "{{Word:ta1}} {{word:tou2}}-{{word:shang4}}-{{word:de}} {{word:mao2}} {{word:shi4}} {{word:hei1}}-{{word:se4}}-{{word:de}}.",
       hanzi: "他头上的毛是黑色的。",
       en: "His hair is black.",
       ru: "У него чёрные волосы.",
     },
     {
-      pinyin: "{{Word:dong4wu4}}-{{word:de}} {{word:mao2}} {{word:hen3}} {{word:ying4}}.",
+      pinyin: "{{Word:dong4}}-{{word:wu4}}-{{word:de}} {{word:mao2}} {{word:hen3}} {{word:ying4}}.",
       hanzi: "动物的毛很硬。",
       en: "The animal's fur is stiff.",
       ru: "У животного жёсткая шерсть.",
@@ -104,13 +104,13 @@ export default lessonModule({
     {
       en: "Her skin is white.",
       ru: "У неё белая кожа.",
-      answer: "{{Word:ta1}} {{word:shen1ti3}}-{{word:de}} {{word:wai4}}-{{word:mian4}} {{word:shi4}} {{word:bai2se4}}-{{word:de}}.",
+      answer: "{{Word:ta1}} {{word:shen1ti3}}-{{word:de}} {{word:wai4}}-{{word:mian4}} {{word:shi4}} {{word:bai2}}-{{word:se4}}-{{word:de}}.",
       hanzi: "她身体的外面是白色的。",
     },
     {
       en: "This animal's fur is white.",
       ru: "Шерсть у этого животного белая.",
-      answer: "{{Word:zhe4}}-ge {{word:dong4wu4}}-{{word:de}} {{word:mao2}} {{word:shi4}} {{word:bai2se4}}-{{word:de}}.",
+      answer: "{{Word:zhe4}}-ge {{word:dong4}}-{{word:wu4}}-{{word:de}} {{word:mao2}} {{word:shi4}} {{word:bai2}}-{{word:se4}}-{{word:de}}.",
       hanzi: "这个动物的毛是白色的。",
     },
   ],

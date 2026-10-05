@@ -10,5 +10,5 @@ export default composite({
   hsd: ["{{word:fu4jin4}}"],
   tts: ["附近"],
   fit: "word",
-  note: "fùjìn-de dìfāng: a nearby place. Lesson {{lesson:moving}}.",
+  note: "fùjìn-de dì-fang: a nearby place. Lesson {{lesson:moving}}.",
 });

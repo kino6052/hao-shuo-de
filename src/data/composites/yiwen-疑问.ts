@@ -7,7 +7,7 @@ export default composite({
   py: "yíwèn",
   en: "doubt, question",
   ru: "сомнение, вопрос",
-  hsd: ["{{word:bu4}} {{word:zhi1dao4}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:bu4}} {{word:zhi1dao4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["不知道的东西"],
   literal: "something you don't know",
   fit: "plain",

@@ -7,7 +7,7 @@ export default composite({
   py: "cáinéng",
   en: "talent, ability",
   ru: "талант, способности",
-  hsd: ["{{word:neng2}} {{word:nong4}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:neng2}} {{word:nong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["能弄的东西"],
   literal: "what you can do",
   fit: "plain",

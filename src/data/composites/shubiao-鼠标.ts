@@ -8,7 +8,7 @@ export default composite({
   en: "computer mouse",
   ru: "мышь (компьютерная)",
   hsd: [
-    "{{word:yong4}}-{{word:shou3}}-{{word:nong4}}-{{word:suan4}}-{{word:de}}-{{word:gong1ju4}}-{{word:de}} {{word:xiao3}}-{{word:de}} {{word:dong1xi}}",
+    "{{word:yong4}}-{{word:shou3}}-{{word:nong4}}-{{word:suan4}}-{{word:de}}-{{word:gong1}}-{{word:ju4}}-{{word:de}} {{word:xiao3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],
   tts: ["用手弄算的工具的小的东西"],
   literal: "the small thing your hand runs the computer with",

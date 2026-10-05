@@ -98,7 +98,7 @@ export default lessonModule({
       ru: "Он тоже не двигается.",
     },
     {
-      pinyin: "{{Word:bie2de}} {{word:ren2}} {{word:ye3}} {{word:lai2}} {{word:le}}.",
+      pinyin: "{{Word:bie2}}-{{word:de}} {{word:ren2}} {{word:ye3}} {{word:lai2}} {{word:le}}.",
       hanzi: "别的人也来了。",
       en: "The other people came too.",
       ru: "Другие люди тоже пришли.",

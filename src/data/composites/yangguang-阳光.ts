@@ -7,7 +7,7 @@ export default composite({
   py: "yángguāng",
   en: "sunlight",
   ru: "солнечный свет",
-  hsd: ["{{word:ri4}} {{word:gei3}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:ri4}} {{word:gei3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["日给的东西"],
   literal: "what the sun gives",
   fit: "plain",

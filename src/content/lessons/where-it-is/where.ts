@@ -66,7 +66,7 @@ export default lessonModule({
       ru: "Он остаётся дома.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:ke3neng2}} {{word:zai4}} {{word:jia1}}-{{word:li3}}.",
+      pinyin: "{{Word:ta1}} {{word:ke3}}-{{word:neng2}} {{word:zai4}} {{word:jia1}}-{{word:li3}}.",
       hanzi: "她可能在家里。",
       en: "She might be at home.",
       ru: "Она, может быть, дома.",

@@ -7,7 +7,9 @@ export default composite({
   py: "nǚrén",
   en: "woman",
   ru: "женщина",
-  hsd: ["{{word:nv3ren2}}"],
+  hsd: ["{{word:nv3}}-{{word:ren2}}"],
   tts: ["女人"],
-  fit: "word",
+  fit: "natural",
+  transparent: true,
+  proposed: true,
 });

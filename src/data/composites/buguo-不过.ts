@@ -7,7 +7,7 @@ export default composite({
   py: "búguò",
   en: "but",
   ru: "однако",
-  hsd: ["{{word:bu4}}-{{word:guo4}}", "{{word:dan4shi4}}"],
+  hsd: ["{{word:bu4}}-{{word:guo4}}", "{{word:dan4}}-{{word:shi4}}"],
   tts: ["不过", "但是"],
   fit: "natural",
   literal: "not past",

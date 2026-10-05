@@ -7,7 +7,7 @@ export default composite({
   py: "shāngdiàn",
   en: "shop",
   ru: "магазин",
-  hsd: ["{{word:mai3}} {{word:dong1xi}}-{{word:de}} {{word:di4fang1}}"],
+  hsd: ["{{word:mai3}} {{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
   tts: ["买东西的地方"],
   literal: "the place to buy things",
   fit: "natural",

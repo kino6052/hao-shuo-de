@@ -40,7 +40,7 @@ export default lessonModule({
       ru: "Я пришёл домой.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:dao4}} {{word:na4}}-ge {{word:di4fang1}} {{word:le}}.",
+      pinyin: "{{Word:ta1}} {{word:dao4}} {{word:na4}}-ge {{word:di4}}-{{light:fang1}} {{word:le}}.",
       hanzi: "她到那个地方了。",
       en: "She got to that place.",
       ru: "Она добралась до того места.",

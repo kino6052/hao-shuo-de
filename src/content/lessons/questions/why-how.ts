@@ -1,14 +1,14 @@
-// To ask "why?" or "how?", put wèishénme (why) or zěnme (how) before the
-// verb. Pattern: who + wèishénme / zěnme + verb?
+// To ask "why?" or "how?", put wèi-shénme (why) or zěnme (how) before the
+// verb. Pattern: who + wèi-shénme / zěnme + verb?
 import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "why-how",
   words: [
     {
-      word: "wei4shen2me",
-      en: "why",
-      ru: "почему",
+      word: "wei4",
+      en: "for; {{word:wei4}}-{{word:shen2me}}: why",
+      ru: "для; {{word:wei4}}-{{word:shen2me}} — почему",
     },
     {
       word: "zen3me",
@@ -18,22 +18,22 @@ export default lessonModule({
   ],
   prose: {
     en: [
-      "**To ask \"why?\" or \"how?\"**, put {{word:wei4shen2me}} (why) or {{word:zen3me}} (how) before the verb.",
+      "**To ask \"why?\" or \"how?\"**, put {{word:wei4}}-{{word:shen2me}} (why) or {{word:zen3me}} (how) before the verb.",
       "",
-      "**Who + {{word:wei4shen2me}} / {{word:zen3me}} + verb?**",
+      "**Who + {{word:wei4}}-{{word:shen2me}} / {{word:zen3me}} + verb?**",
       "",
-      "{{word:wei4shen2me}} also goes before {{word:bu4}}: {{Word:ni3}} {{word:wei4shen2me}} {{word:bu4}} {{word:chi1}}?",
+      "{{word:wei4}}-{{word:shen2me}} also goes before {{word:bu4}}: {{Word:ni3}} {{word:wei4}}-{{word:shen2me}} {{word:bu4}} {{word:chi1}}?",
     ],
     ru: [
-      "**Чтобы спросить «почему?» или «как?»**, поставьте {{word:wei4shen2me}} (почему) или {{word:zen3me}} (как) перед глаголом.",
+      "**Чтобы спросить «почему?» или «как?»**, поставьте {{word:wei4}}-{{word:shen2me}} (почему) или {{word:zen3me}} (как) перед глаголом.",
       "",
-      "**Кто + {{word:wei4shen2me}} / {{word:zen3me}} + глагол?**",
+      "**Кто + {{word:wei4}}-{{word:shen2me}} / {{word:zen3me}} + глагол?**",
       "",
-      "{{word:wei4shen2me}} ставится и перед {{word:bu4}}: {{Word:ni3}} {{word:wei4shen2me}} {{word:bu4}} {{word:chi1}}?",
+      "{{word:wei4}}-{{word:shen2me}} ставится и перед {{word:bu4}}: {{Word:ni3}} {{word:wei4}}-{{word:shen2me}} {{word:bu4}} {{word:chi1}}?",
     ],
     tldr: {
-      en: "Put {{word:wei4shen2me}} (why) or {{word:zen3me}} (how) before the verb.",
-      ru: "Поставьте {{word:wei4shen2me}} (почему) или {{word:zen3me}} (как) перед глаголом.",
+      en: "Put {{word:wei4}}-{{word:shen2me}} (why) or {{word:zen3me}} (how) before the verb.",
+      ru: "Поставьте {{word:wei4}}-{{word:shen2me}} (почему) или {{word:zen3me}} (как) перед глаголом.",
     },
     necessity: {
       en: "Now you can ask for reasons and ways.",
@@ -43,8 +43,8 @@ export default lessonModule({
   info: {
     items: [
       {
-        en: "{{word:wei4shen2me}} + verb, why: {{Word:ni3}} {{word:wei4shen2me}} {{word:bu4}} {{word:chi1}}? (Why don't you eat?)",
-        ru: "{{word:wei4shen2me}} + глагол — почему: {{Word:ni3}} {{word:wei4shen2me}} {{word:bu4}} {{word:chi1}}? (Почему ты не ешь?)",
+        en: "{{word:wei4}}-{{word:shen2me}} + verb, why: {{Word:ni3}} {{word:wei4}}-{{word:shen2me}} {{word:bu4}} {{word:chi1}}? (Why don't you eat?)",
+        ru: "{{word:wei4}}-{{word:shen2me}} + глагол — почему: {{Word:ni3}} {{word:wei4}}-{{word:shen2me}} {{word:bu4}} {{word:chi1}}? (Почему ты не ешь?)",
       },
       {
         en: "{{word:zen3me}} + verb, how: {{Word:zhe4}}-ge {{word:zen3me}} {{word:shuo1}}? (How do you say this?)",
@@ -54,19 +54,19 @@ export default lessonModule({
   },
   examples: [
     {
-      pinyin: "{{Word:ni3}} {{word:wei4shen2me}} {{word:bu4}} {{word:chi1}}?",
+      pinyin: "{{Word:ni3}} {{word:wei4}}-{{word:shen2me}} {{word:bu4}} {{word:chi1}}?",
       hanzi: "你为什么不吃？",
       en: "Why don't you eat?",
       ru: "Почему ты не ешь?",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:wei4shen2me}} {{word:zhao3}} {{word:he2zi}}?",
+      pinyin: "{{Word:ta1}} {{word:wei4}}-{{word:shen2me}} {{word:zhao3}} {{word:he2zi}}?",
       hanzi: "他为什么找盒子？",
       en: "Why is he looking for a box?",
       ru: "Почему он ищет коробку?",
     },
     {
-      pinyin: "{{Word:ni3}} {{word:wei4shen2me}} {{word:wen4}}?",
+      pinyin: "{{Word:ni3}} {{word:wei4}}-{{word:shen2me}} {{word:wen4}}?",
       hanzi: "你为什么问？",
       en: "Why are you asking?",
       ru: "Почему ты спрашиваешь?",
@@ -94,7 +94,7 @@ export default lessonModule({
     {
       en: "Why is he looking for water?",
       ru: "Почему он ищет воду?",
-      answer: "{{Word:ta1}} {{word:wei4shen2me}} {{word:zhao3}} {{word:shui3}}?",
+      answer: "{{Word:ta1}} {{word:wei4}}-{{word:shen2me}} {{word:zhao3}} {{word:shui3}}?",
       hanzi: "他为什么找水？",
     },
     {
@@ -105,14 +105,14 @@ export default lessonModule({
     },
   ],
   faq: [
-    // can wèishénme go at the start? (yes, but before the verb is the usual place)
+    // can wèi-shénme go at the start? (yes, but before the verb is the usual place)
     {
       question: {
-        en: "Can {{word:wei4shen2me}} go at the start of the sentence?",
-        ru: "Можно ли поставить {{word:wei4shen2me}} в начало предложения?",
+        en: "Can {{word:wei4}}-{{word:shen2me}} go at the start of the sentence?",
+        ru: "Можно ли поставить {{word:wei4}}-{{word:shen2me}} в начало предложения?",
       },
-      en: "Yes, {{Word:wei4shen2me}} {{word:ni3}} {{word:bu4}} {{word:chi1}}? is also correct Mandarin. Before the verb is the usual place, and it's the same place as {{word:zen3me}}, so Hao-shuo-de always puts it there.",
-      ru: "Да, {{Word:wei4shen2me}} {{word:ni3}} {{word:bu4}} {{word:chi1}}? — тоже правильный китайский. Но обычное место — перед глаголом, там же, где {{word:zen3me}}, поэтому в Hǎo-shuō-de его всегда ставят туда.",
+      en: "Yes, {{Word:wei4}}-{{word:shen2me}} {{word:ni3}} {{word:bu4}} {{word:chi1}}? is also correct Mandarin. Before the verb is the usual place, and it's the same place as {{word:zen3me}}, so Hao-shuo-de always puts it there.",
+      ru: "Да, {{Word:wei4}}-{{word:shen2me}} {{word:ni3}} {{word:bu4}} {{word:chi1}}? — тоже правильный китайский. Но обычное место — перед глаголом, там же, где {{word:zen3me}}, поэтому в Hǎo-shuō-de его всегда ставят туда.",
     },
   ],
 });

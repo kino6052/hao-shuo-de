@@ -60,7 +60,7 @@ export default lessonModule({
       ru: "Передо мной кто-то есть.",
     },
     {
-      pinyin: "{{Word:dong4wu4}} {{word:zai4}} {{word:jia1}}-{{word:de}} {{word:hou4}}-{{word:mian4}}.",
+      pinyin: "{{Word:dong4}}-{{word:wu4}} {{word:zai4}} {{word:jia1}}-{{word:de}} {{word:hou4}}-{{word:mian4}}.",
       hanzi: "动物在家的后面。",
       en: "The animal is behind the house.",
       ru: "Животное за домом.",
@@ -72,7 +72,7 @@ export default lessonModule({
       ru: "Я рядом с тобой.",
     },
     {
-      pinyin: "{{Word:jia1}}-{{word:de}} {{word:qian2}}-{{word:mian4}} {{word:you3}} {{word:dong4wu4}}.",
+      pinyin: "{{Word:jia1}}-{{word:de}} {{word:qian2}}-{{word:mian4}} {{word:you3}} {{word:dong4}}-{{word:wu4}}.",
       hanzi: "家的前面有动物。",
       en: "There is an animal in front of the house.",
       ru: "Перед домом животное.",
@@ -106,7 +106,7 @@ export default lessonModule({
     {
       en: "The animal is under the box.",
       ru: "Животное под коробкой.",
-      answer: "{{Word:dong4wu4}} {{word:zai4}} {{word:he2zi}}-{{word:de}} {{word:xia4}}-{{word:mian4}}.",
+      answer: "{{Word:dong4}}-{{word:wu4}} {{word:zai4}} {{word:he2zi}}-{{word:de}} {{word:xia4}}-{{word:mian4}}.",
       hanzi: "动物在盒子的下面。",
     },
     {

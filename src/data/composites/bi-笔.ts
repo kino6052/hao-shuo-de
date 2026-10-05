@@ -7,7 +7,7 @@ export default composite({
   py: "bǐ",
   en: "pen",
   ru: "ручка",
-  hsd: ["{{word:xie3}}-{{word:de}} {{word:gong1ju4}}"],
+  hsd: ["{{word:xie3}}-{{word:de}} {{word:gong1}}-{{word:ju4}}"],
   tts: ["写的工具"],
   literal: "writing tool",
   fit: "plain",

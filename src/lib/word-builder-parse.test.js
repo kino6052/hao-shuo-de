@@ -4,14 +4,14 @@ import composites from "../data/composites.ts";
 import { formWords, builderForm, builderEntries, treeOfForm } from "./word-builder-parse.js";
 import { render, pinyinSystem } from "./word-builder.js";
 
-// Plain pinyin ids -> a dictionary form: "shui3-li3-de dong4wu4" -> "{{word:shui3}}-{{word:li3}}-...".
+// Plain pinyin ids -> a dictionary form: "shui3-li3-de dong4-wu4" -> "{{word:shui3}}-{{word:li3}}-...".
 const form = (s) => s.replace(/[a-z]+\d?[a-z]*\d?/g, (id) => `{{word:${id}}}`);
 const py = (tree) => render(tree, pinyinSystem(dict));
 
 describe("formWords", () => {
   test("word ids, and which ones a hyphen joins to the word before", () => {
-    expect(formWords(form("shui3-li3-de dong4wu4"))).toEqual({
-      ids: ["shui3", "li3", "de", "dong4wu4"],
+    expect(formWords(form("shui3-li3-de dong4-wu4"), dict)).toEqual({
+      ids: ["shui3", "li3", "de", "动物"],
       glued: [false, true, true, false],
     });
     expect(formWords(`${form("zhe4")}-ge`)).toBe(null);
@@ -20,9 +20,9 @@ describe("formWords", () => {
 
 describe("builderForm", () => {
   test("an older form is read and rewritten the Word Builder's way", () => {
-    const built = builderForm(dict, form("shui3-li3-de dong4wu4"));
+    const built = builderForm(dict, form("shui3-li3-de dong4-wu4"));
     expect(built.same).toBe(false);
-    expect(py(built.tree)).toBe("zài-shuǐ-lǐ-de dòngwù");
+    expect(py(built.tree)).toBe("zài-shuǐ-lǐ-de dòng-wù");
     expect(builderForm(dict, built.form).same).toBe(true);
   });
 
@@ -63,7 +63,7 @@ describe("the composite dictionary", () => {
     expect(opened).toContain("book");
     expect(opened).toContain("walk; leave");
     const fish = composites.entries.find((e) => e.en === "fish");
-    expect(py(treeOfForm(dict, fish.hsd))).toBe("zài-shuǐ-lǐ-de dòngwù");
+    expect(py(treeOfForm(dict, fish.hsd))).toBe("zài-shuǐ-lǐ-de dòng-wù");
   });
 });
 

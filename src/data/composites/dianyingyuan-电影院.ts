@@ -8,7 +8,7 @@ export default composite({
   en: "cinema",
   ru: "кинотеатр",
   hsd: [
-    "{{word:kan4}} {{word:dong4}}-{{word:de}}-{{word:kan4}}-{{word:de}}-{{word:dong1xi}}-{{word:de}} {{word:di4fang1}}",
+    "{{word:kan4}} {{word:dong4}}-{{word:de}}-{{word:kan4}}-{{word:de}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
   ],
   tts: ["看动的看的东西的地方"],
   literal: "where you watch movies",

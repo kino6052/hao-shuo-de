@@ -7,7 +7,7 @@ export default composite({
   py: "xiàng",
   en: "be like",
   ru: "быть похожим",
-  hsd: ["{{word:he2}} … {{word:yi1yang4}}"],
+  hsd: ["{{word:he2}} … {{word:yi1}}-{{word:yang4}}"],
   tts: ["和…一样"],
   literal: "the same as",
   fit: "natural",

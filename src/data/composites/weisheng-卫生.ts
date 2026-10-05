@@ -8,7 +8,7 @@ export default composite({
   en: "hygiene, clean",
   ru: "гигиена, чистота",
   hsd: [
-    "{{word:shang4}}-{{word:mian4}} {{word:mei2}}-{{word:you3}} {{word:luan4}}-{{word:de}} {{word:dong1xi}}",
+    "{{word:shang4}}-{{word:mian4}} {{word:mei2}}-{{word:you3}} {{word:luan4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],
   tts: ["上面没有乱的东西"],
   literal: "nothing dirty on it",

@@ -77,7 +77,7 @@ export default lessonModule({
       ru: "У меня меньше денег, чем у тебя.",
     },
     {
-      pinyin: "{{Word:na4}}-ge {{word:di4fang1}} {{word:bi3}} {{word:jia1}} {{word:yuan3}}.",
+      pinyin: "{{Word:na4}}-ge {{word:di4}}-{{light:fang1}} {{word:bi3}} {{word:jia1}} {{word:yuan3}}.",
       hanzi: "那个地方比家远。",
       en: "That place is farther than home.",
       ru: "То место дальше, чем дом.",
@@ -101,7 +101,7 @@ export default lessonModule({
       ru: "Эта дорога длиннее той.",
     },
     {
-      pinyin: "{{Word:you4bian1}}-{{word:de}} {{word:he2zi}} {{word:bi3}} {{word:zuo3bian1}}-{{word:de}} {{word:da4}}.",
+      pinyin: "{{Word:you4bian1}}-{{word:de}} {{word:he2zi}} {{word:bi3}} {{word:zuo3}}-{{word:bian1}}-{{word:de}} {{word:da4}}.",
       hanzi: "右边的盒子比左边的大。",
       en: "The box on the right is bigger than the one on the left.",
       ru: "Коробка справа больше той, что слева.",

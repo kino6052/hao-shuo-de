@@ -7,8 +7,9 @@ export default composite({
   py: "fāngmiàn",
   en: "aspect",
   ru: "аспект",
-  hsd: ["{{word:bu4fen}}"],
-  tts: ["部分"],
+  hsd: ["{{word:fang1}}-{{word:mian4}}", "{{word:bu4fen}}"],
+  tts: ["方面", "部分"],
   literal: "part",
-  fit: "plain",
+  fit: "natural",
+  proposed: true,
 });

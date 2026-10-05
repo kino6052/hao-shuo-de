@@ -7,8 +7,8 @@ export default word("zen3me", {
   definition: { eng: "how", rus: "как", zh: "怎么" },
   necessity: {
     index: 3,
-    eng: "Asks \"how?\". Without it, you'd ask about the {{word:fang1fa3}} every time.",
-    rus: "Спрашивает «как?». Без него пришлось бы каждый раз спрашивать про {{word:fang1fa3}}.",
+    eng: "Asks \"how?\". Without it, you'd ask about the {{word:fang1}}-{{word:fa3}} every time.",
+    rus: "Спрашивает «как?». Без него пришлось бы каждый раз спрашивать про {{word:fang1}}-{{word:fa3}}.",
   },
   maps: "",
 });

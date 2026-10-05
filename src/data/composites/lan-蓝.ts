@@ -7,7 +7,8 @@ export default composite({
   py: "lán",
   en: "blue",
   ru: "синий",
-  hsd: ["{{word:lan2se4}}"],
-  tts: ["蓝色"],
+  hsd: ["{{word:lan2}}", "{{word:lan2}}-{{word:se4}}"],
+  tts: ["蓝", "蓝色"],
   fit: "word",
+  proposed: true,
 });

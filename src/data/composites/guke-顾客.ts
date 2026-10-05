@@ -7,7 +7,7 @@ export default composite({
   py: "gùkè",
   en: "customer",
   ru: "клиент, покупатель",
-  hsd: ["{{word:mai3}}-{{word:dong1xi}}-{{word:de}} {{word:ren2}}"],
+  hsd: ["{{word:mai3}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:ren2}}"],
   tts: ["买东西的人"],
   literal: "a person who buys",
   fit: "plain",

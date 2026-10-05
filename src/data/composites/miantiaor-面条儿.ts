@@ -7,7 +7,7 @@ export default composite({
   py: "miàntiáor",
   en: "noodles",
   ru: "лапша",
-  hsd: ["{{word:xian4}}-{{word:yi1yang4}}-{{word:de}} {{word:chi1}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:xian4}}-{{word:yi1}}-{{word:yang4}}-{{word:de}} {{word:chi1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["线一样的吃的东西"],
   literal: "food like threads",
   fit: "plain",

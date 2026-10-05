@@ -7,7 +7,7 @@ export default composite({
   py: "ruǎnjiàn",
   en: "software",
   ru: "программа",
-  hsd: ["{{word:suan4}}-{{word:de}}-{{word:gong1ju4}}-{{word:li3}}-{{word:de}} {{word:gong1ju4}}"],
+  hsd: ["{{word:suan4}}-{{word:de}}-{{word:gong1}}-{{word:ju4}}-{{word:li3}}-{{word:de}} {{word:gong1}}-{{word:ju4}}"],
   tts: ["算的工具里的工具"],
   literal: "the tool inside the computer",
   fit: "plain",

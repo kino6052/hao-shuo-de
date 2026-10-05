@@ -7,7 +7,7 @@ export default composite({
   py: "qiú",
   en: "ball",
   ru: "мяч",
-  hsd: ["{{word:yuan2}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:yuan2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["圆的东西"],
   literal: "round thing",
   fit: "plain",

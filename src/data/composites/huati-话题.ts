@@ -7,7 +7,7 @@ export default composite({
   py: "huàtí",
   en: "topic",
   ru: "тема разговора",
-  hsd: ["{{word:shuo1}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:shuo1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["说的东西"],
   literal: "what you talk about",
   fit: "plain",

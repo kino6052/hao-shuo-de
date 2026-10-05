@@ -47,7 +47,7 @@ export default lessonModule({
       ru: "Я хочу горяченькой воды.",
     },
     {
-      pinyin: "{{Word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1xi}} {{word:xiao3}}-{{word:xiao3}}-{{word:de}}, {{word:dan4shi4}} {{word:tian2}}-{{word:tian2}}-{{word:de}}.",
+      pinyin: "{{Word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:xiao3}}-{{word:xiao3}}-{{word:de}}, {{word:dan4}}-{{word:shi4}} {{word:tian2}}-{{word:tian2}}-{{word:de}}.",
       hanzi: "植物生的东西小小的，但是甜甜的。",
       en: "The fruit is tiny, but nice and sweet.",
       ru: "Фрукт маленький-маленький, но сладкий-сладкий.",

@@ -7,7 +7,7 @@ export default composite({
   py: "yuányīn",
   en: "reason",
   ru: "причина",
-  hsd: ["{{word:wei4shen2me}}"],
+  hsd: ["{{word:wei4}}-{{word:shen2me}}"],
   tts: ["为什么"],
   literal: "why",
   fit: "plain",

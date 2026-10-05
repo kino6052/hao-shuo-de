@@ -7,7 +7,8 @@ export default composite({
   py: "kě’ài",
   en: "cute, lovely",
   ru: "милый",
-  hsd: ["{{word:tian2}}"],
-  tts: ["甜"],
-  fit: "plain",
+  hsd: ["{{word:ke3}}-{{word:ai4}}", "{{word:tian2}}"],
+  tts: ["可爱", "甜"],
+  fit: "natural",
+  proposed: true,
 });

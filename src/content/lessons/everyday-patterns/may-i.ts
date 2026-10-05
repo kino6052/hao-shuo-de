@@ -46,7 +46,7 @@ export default lessonModule({
       ru: "Можно потрогать?",
     },
     {
-      pinyin: "{{Word:ni3}} {{word:bu4}} {{word:neng2}} {{word:zai4}} {{word:zhe4}}-ge {{word:di4fang1}} {{word:shui4jiao4}}.",
+      pinyin: "{{Word:ni3}} {{word:bu4}} {{word:neng2}} {{word:zai4}} {{word:zhe4}}-ge {{word:di4}}-{{light:fang1}} {{word:shui4jiao4}}.",
       hanzi: "你不能在这个地方睡觉。",
       en: "You can't sleep here.",
       ru: "Здесь нельзя спать.",
@@ -70,7 +70,7 @@ export default lessonModule({
       ru: "Хорошо!",
     },
     {
-      pinyin: "{{Word:ni3}} {{word:zuo4}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3bian1}}, {{word:hao3}} {{word:ma}}?",
+      pinyin: "{{Word:ni3}} {{word:zuo4}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}, {{word:hao3}} {{word:ma}}?",
       hanzi: "你坐在我的左边，好吗？",
       en: "Sit on my left, okay?",
       ru: "Сядь слева от меня, хорошо?",
@@ -92,7 +92,7 @@ export default lessonModule({
     {
       en: "Let's eat, okay?",
       ru: "Давай поедим, хорошо?",
-      answer: "{{Word:wo3}}-{{word:men}} {{word:chi1}} {{word:dong1xi}}, {{word:hao3}} {{word:ma}}?",
+      answer: "{{Word:wo3}}-{{word:men}} {{word:chi1}} {{word:dong1}}-{{light:xi1}}, {{word:hao3}} {{word:ma}}?",
       hanzi: "我们吃东西，好吗？",
     },
   ],

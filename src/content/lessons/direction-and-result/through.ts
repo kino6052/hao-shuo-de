@@ -41,7 +41,7 @@ export default lessonModule({
   },
   examples: [
     {
-      pinyin: "{{Word:wo3}}-{{word:men}} {{word:tong1}}-{{word:guo4}} {{word:zhe4}}-ge {{word:di4fang1}}.",
+      pinyin: "{{Word:wo3}}-{{word:men}} {{word:tong1}}-{{word:guo4}} {{word:zhe4}}-ge {{word:di4}}-{{light:fang1}}.",
       hanzi: "我们通过这个地方。",
       en: "We go through this place.",
       ru: "Мы проходим через это место.",
@@ -59,7 +59,7 @@ export default lessonModule({
       ru: "Дорога перекрыта, мы идём домой.",
     },
     {
-      pinyin: "{{Word:dong4wu4}} {{word:tong1}}-{{word:guo4}} {{word:zhe4}}-ge {{word:kou3}} {{word:chu1}}-{{word:qu4}} {{word:le}}.",
+      pinyin: "{{Word:dong4}}-{{word:wu4}} {{word:tong1}}-{{word:guo4}} {{word:zhe4}}-ge {{word:kou3}} {{word:chu1}}-{{word:qu4}} {{word:le}}.",
       hanzi: "动物通过这个口出去了。",
       en: "The animal went out through this opening.",
       ru: "Животное вышло через этот проём.",

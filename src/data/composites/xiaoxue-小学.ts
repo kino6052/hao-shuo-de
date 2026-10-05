@@ -9,7 +9,7 @@ export default composite({
   ru: "начальная школа",
   hsd: [
     "{{word:xiao3}}-{{word:xue2}}",
-    "{{word:xiao3}}-{{word:de}} {{word:ren2}} {{word:xue2}}-{{word:de}} {{word:di4fang1}}",
+    "{{word:xiao3}}-{{word:de}} {{word:ren2}} {{word:xue2}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
   ],
   tts: ["小学", "小的人学的地方"],
   literal: "small learning / where small people learn",

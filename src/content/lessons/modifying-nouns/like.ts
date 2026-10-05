@@ -31,9 +31,14 @@ export default lessonModule({
       ru: "вода",
     },
     {
-      word: "di4fang1",
-      en: "place",
-      ru: "место",
+      word: "di4",
+      en: "floor, ground",
+      ru: "пол, земля",
+    },
+    {
+      word: "fang1",
+      en: "side, direction; {{word:di4}}-{{light:fang1}}: place",
+      ru: "сторона; {{word:di4}}-{{light:fang1}} — место",
     },
     {
       word: "fu4mu3",
@@ -77,13 +82,13 @@ export default lessonModule({
       ru: "Вода хорошая.",
     },
     {
-      pinyin: "{{Word:di4fang1}} {{word:hen3}} {{word:da4}}.",
+      pinyin: "{{Word:di4}}-{{light:fang1}} {{word:hen3}} {{word:da4}}.",
       hanzi: "地方很大。",
       en: "The place is big.",
       ru: "Место большое.",
     },
     {
-      pinyin: "{{Word:dong4wu4}} {{word:hen3}} {{word:xiao3}}.",
+      pinyin: "{{Word:dong4}}-{{word:wu4}} {{word:hen3}} {{word:xiao3}}.",
       hanzi: "动物很小。",
       en: "The animal is small.",
       ru: "Животное маленькое.",
@@ -105,7 +110,7 @@ export default lessonModule({
     {
       en: "The place is small.",
       ru: "Место маленькое.",
-      answer: "{{Word:di4fang1}} {{word:hen3}} {{word:xiao3}}.",
+      answer: "{{Word:di4}}-{{light:fang1}} {{word:hen3}} {{word:xiao3}}.",
       hanzi: "地方很小。",
     },
     {
@@ -117,7 +122,7 @@ export default lessonModule({
     {
       en: "The animal is small.",
       ru: "Животное маленькое.",
-      answer: "{{Word:dong4wu4}} {{word:hen3}} {{word:xiao3}}.",
+      answer: "{{Word:dong4}}-{{word:wu4}} {{word:hen3}} {{word:xiao3}}.",
       hanzi: "动物很小。",
     },
   ],

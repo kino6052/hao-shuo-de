@@ -95,7 +95,7 @@ export default lessonModule({
       ru: "У коробки маленькое отверстие.",
     },
     {
-      pinyin: "{{Word:kou3}} {{word:zai4}} {{word:na3li3}}?",
+      pinyin: "{{Word:kou3}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
       hanzi: "口在哪里？",
       en: "Where is the door?",
       ru: "Где дверь?",
@@ -111,7 +111,7 @@ export default lessonModule({
     {
       en: "The animal is outside.",
       ru: "Животное снаружи.",
-      answer: "{{Word:dong4wu4}} {{word:zai4}} {{word:wai4}}-{{word:mian4}}.",
+      answer: "{{Word:dong4}}-{{word:wu4}} {{word:zai4}} {{word:wai4}}-{{word:mian4}}.",
       hanzi: "动物在外面。",
     },
     {

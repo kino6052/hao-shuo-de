@@ -7,7 +7,7 @@ export default composite({
   py: "shū",
   en: "book",
   ru: "книга",
-  hsd: ["{{word:xie3}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["写的东西"],
   literal: "written thing",
   fit: "plain",

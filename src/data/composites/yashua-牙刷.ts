@@ -8,7 +8,7 @@ export default composite({
   en: "toothbrush",
   ru: "зубная щётка",
   hsd: [
-    "{{word:nong4}}-{{word:hao3}} {{word:kou3}}-{{word:li3}}-{{word:de}} {{word:ying4}} {{word:dong1xi}}-{{word:de}} {{word:gong1ju4}}",
+    "{{word:nong4}}-{{word:hao3}} {{word:kou3}}-{{word:li3}}-{{word:de}} {{word:ying4}} {{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:gong1}}-{{word:ju4}}",
   ],
   tts: ["弄好口里的硬东西的工具"],
   literal: "the tool that cleans your teeth",

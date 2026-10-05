@@ -8,7 +8,7 @@ export default composite({
   en: "museum",
   ru: "музей",
   hsd: [
-    "{{word:gei3}}-{{word:ren2}}-{{word:kan4}}-{{word:lao3}}-{{word:dong1xi}}-{{word:de}} {{word:di4fang1}}",
+    "{{word:gei3}}-{{word:ren2}}-{{word:kan4}}-{{word:lao3}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
   ],
   tts: ["给人看老东西的地方"],
   literal: "the place that shows people old things",

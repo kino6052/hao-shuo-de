@@ -7,7 +7,7 @@ export default composite({
   py: "dàyuē",
   en: "about, roughly",
   ru: "примерно",
-  hsd: ["{{word:ke3neng2}} X"],
+  hsd: ["{{word:ke3}}-{{word:neng2}} X"],
   tts: ["可能X"],
   literal: "maybe X",
   fit: "plain",

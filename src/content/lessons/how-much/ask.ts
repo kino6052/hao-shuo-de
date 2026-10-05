@@ -62,7 +62,7 @@ export default lessonModule({
       ru: "Твои родители старые?",
     },
     {
-      pinyin: "{{Word:na4}}-ge {{word:dong4wu4}} {{word:hen3}} {{word:lao3}}.",
+      pinyin: "{{Word:na4}}-ge {{word:dong4}}-{{word:wu4}} {{word:hen3}} {{word:lao3}}.",
       hanzi: "那个动物很老。",
       en: "That animal is very old.",
       ru: "То животное очень старое.",
@@ -96,7 +96,7 @@ export default lessonModule({
     {
       en: "Is that animal old?",
       ru: "То животное старое?",
-      answer: "{{Word:na4}}-ge {{word:dong4wu4}} {{word:lao3}} {{word:ma}}?",
+      answer: "{{Word:na4}}-ge {{word:dong4}}-{{word:wu4}} {{word:lao3}} {{word:ma}}?",
       hanzi: "那个动物老吗？",
     },
   ],

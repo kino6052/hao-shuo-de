@@ -7,7 +7,7 @@ export default composite({
   py: "wēixiǎn",
   en: "dangerous",
   ru: "опасный",
-  hsd: ["{{word:ke3neng2}} {{word:hui4}} {{word:si3}}"],
+  hsd: ["{{word:ke3}}-{{word:neng2}} {{word:hui4}} {{word:si3}}"],
   tts: ["可能会死"],
   literal: "you might die",
   fit: "natural",

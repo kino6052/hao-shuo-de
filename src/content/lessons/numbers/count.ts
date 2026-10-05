@@ -45,7 +45,7 @@ export default lessonModule({
       ru: "Один человек.",
     },
     {
-      pinyin: "{{Word:liang3}}-ge {{word:dong4wu4}}.",
+      pinyin: "{{Word:liang3}}-ge {{word:dong4}}-{{word:wu4}}.",
       hanzi: "两个动物。",
       en: "Two animals.",
       ru: "Два животных.",
@@ -57,7 +57,7 @@ export default lessonModule({
       ru: "Три коробки.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:you3}} {{word:si4}}-ge {{word:gong1ju4}}.",
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:si4}}-ge {{word:gong1}}-{{word:ju4}}.",
       hanzi: "我有四个工具。",
       en: "I have four tools.",
       ru: "У меня четыре инструмента.",
@@ -69,7 +69,7 @@ export default lessonModule({
       ru: "На полу семь палок.",
     },
     {
-      pinyin: "{{Word:jiu3}}-ge {{word:ren2}} {{word:chi1}} {{word:dong1xi}}.",
+      pinyin: "{{Word:jiu3}}-ge {{word:ren2}} {{word:chi1}} {{word:dong1}}-{{light:xi1}}.",
       hanzi: "九个人吃东西。",
       en: "Nine people are eating.",
       ru: "Девять человек едят.",
@@ -103,7 +103,7 @@ export default lessonModule({
     {
       en: "I have three tools.",
       ru: "У меня три инструмента.",
-      answer: "{{Word:wo3}} {{word:you3}} {{word:san1}}-ge {{word:gong1ju4}}.",
+      answer: "{{Word:wo3}} {{word:you3}} {{word:san1}}-ge {{word:gong1}}-{{word:ju4}}.",
       hanzi: "我有三个工具。",
     },
     {
@@ -121,7 +121,7 @@ export default lessonModule({
     {
       en: "seven animals",
       ru: "семь животных",
-      answer: "{{Word:qi1}}-ge {{word:dong4wu4}}.",
+      answer: "{{Word:qi1}}-ge {{word:dong4}}-{{word:wu4}}.",
       hanzi: "七个动物。",
     },
     {

@@ -7,7 +7,7 @@ export default composite({
   py: "huàmiàn",
   en: "picture, scene",
   ru: "картинка, кадр",
-  hsd: ["{{word:kan4}}-{{word:dao4}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:kan4}}-{{word:dao4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["看到的东西"],
   literal: "what you see",
   fit: "plain",

@@ -70,7 +70,7 @@ export default lessonModule({
       ru: "Он вырос.",
     },
     {
-      pinyin: "{{Word:zhe4}}-ge {{word:di4fang1}} {{word:bian4}} {{word:ming2}} {{word:le}}.",
+      pinyin: "{{Word:zhe4}}-ge {{word:di4}}-{{light:fang1}} {{word:bian4}} {{word:ming2}} {{word:le}}.",
       hanzi: "这个地方变明了。",
       en: "This place got bright.",
       ru: "Здесь стало светло.",

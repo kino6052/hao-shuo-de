@@ -214,31 +214,31 @@ Approved (D23). It can still be adjusted as each lesson is written, but the rule
 
 | Id  | Lesson                            | Core words                                                 | Theme words                                 | Added words                        | Senses |     New | Total so far |    % |
 | --- | --------------------------------- | ---------------------------------------------------------- | ------------------------------------------- | ---------------------------------- | ------ | ------: | -----------: | ---: |
-| sounds-and-symbols | Sounds and Symbols | — | — | — | — | **0** | 0 / 200 | 0% |
-| words-and-sentences | Words and Sentences | shì, zhè, bù | dōngxi, rén, nǚrén, nánrén, dòngwù, zhíwù | — | — | **9** | 9 / 200 | 5% |
-| modifying-nouns | Modifying Nouns | hěn, hǎo, dà, xiǎo, de, duō | shuǐ, dìfāng, fùmǔ | shǎo | — | **10** | 19 / 200 | 10% |
-| pointing | Pointing at People and Things | nà, gè, wǒ, nǐ, tā | jiā, tóu, shǒu, jiǎo | men | — | **10** | 29 / 200 | 14% |
-| who-does-what | Verbs 1 | chī, kàn, tīng, shuō, xiě, yǒu, méi | jīn | hē | — | **9** | 38 / 200 | 19% |
-| questions | Questions and Answers | ma, shénme, wèn, wèishénme, zěnme | gōngjù, hézi, zhǎo | mǎi | — | **9** | 47 / 200 | 24% |
-| pre-verbs | Pre-Verbs | yào, néng, zhīdào, ài | děng, yīfu | xué, kěnéng | — | **8** | 55 / 200 | 28% |
-| when-it-happens | Time 1 | le, zài, huì, shíjiān | shuìjiào, yuè, rì | fā, shēng, xiànzài, guò | — | **11** | 66 / 200 | 33% |
-| around-an-action | Time 2 | wán, hòu, kāishǐ, yī, xià | wánr, liú | yòu, cì | — | **9** | 75 / 200 | 38% |
-| where-it-is | Space 1 | lǐ, nǎlǐ, shàng, miàn, qián, biān, pángbiān | dì | wǎng, zhōng, jiān, zuǒbiān, yòubiān | — | **13** | 88 / 200 | 44% |
-| moving | Space 2 | lái, qù, cóng, qǐ, wài | kǒu | dào, dòng, yuǎn, fùjìn, guó, lù, chē | — | **13** | 101 / 200 | 51% |
-| how-much | Modifiers 1 — How much | zhēn | rè, lěng, tián, qíguài, shēntǐ | wèidào, jiàzhí, kuài, nán, lǎo | — | **11** | 112 / 200 | 56% |
-| comparing | Modifiers 2 — Comparing | bǐ, yīyàng | yìng, yuán, gùnzi, xiàn | zuì, biéde, zhǒng, gāo | — | **10** | 122 / 200 | 61% |
-| also-and-all | Modifiers 3 — Also and all | yě | huǒ | kōng, qì, kāi, guān, dēng, míng, dōu, bùfen | — | **10** | 132 / 200 | 66% |
-| becoming-and-making | Modifiers 4 — Becoming and making | biàn, nòng, dé, bǎ | huài | luàn, fàng, lì | — | **8** | 140 / 200 | 70% |
-| direction-and-result | Verbs 2 | — | — | ná, jìn, chū, huí, zuò, zhàn, tǎng, fēi, yǎnjing, tōng | — | **10** | 150 / 200 | 75% |
-| numbers | Numbers | liǎng, hào | — | èr, sān, sì, wǔ, liù, qī, bā, jiǔ, shí, diǎn, tiān, nián, suàn | — | **15** | 165 / 200 | 83% |
-| colors | Colors | báisè, hēisè, hóngsè, huángsè, lánsè, yánsè | — | — | — | **6** | 171 / 200 | 86% |
-| roles-of-a-word | Changing the Role of a Word | cí, fāngfǎ | bízi | jī, máo | — | **5** | 176 / 200 | 88% |
-| inside-a-sentence | Relationships 1 | gěi, yòng, hé, huòzhě, duì | mō, dǎ, qún | guānxi | — | **9** | 185 / 200 | 93% |
-| linking-sentences | Relationships 2 | yīnwèi, dànshì | sǐ | huó, rúguǒ, jiù | — | **6** | 191 / 200 | 96% |
-| greetings-and-feelings | Greetings and Feelings | jiào, pà, juéde | shēngyīn | xiè, xiào, xīn | — | **7** | 198 / 200 | 99% |
-| doubling-words | Doubling Words | — | — | — | — | **0** | 198 / 200 | 99% |
-| everyday-patterns | Everyday Patterns | — | — | bāng, jiāo | — | **2** | 200 / 200 | 100% |
-| | **Total** | **79** | **43** | **78** | | **200** | | |
+| sounds-and-symbols | Sounds and Symbols | — | — | — | — | **0** | 0 / 204 | 0% |
+| words-and-sentences | Words and Sentences | shì, zhè, bù | rén, nánrén, zhíwù | dōng, xī, nǚ, dòng, wù | — | **11** | 11 / 204 | 5% |
+| modifying-nouns | Modifying Nouns | hěn, hǎo, dà, xiǎo, de, duō | shuǐ, dì, fùmǔ | fāng, shǎo | — | **11** | 22 / 204 | 11% |
+| pointing | Pointing at People and Things | nà, gè, wǒ, nǐ, tā | jiā, tóu, shǒu, jiǎo | men | — | **10** | 32 / 204 | 16% |
+| who-does-what | Verbs 1 | chī, kàn, tīng, shuō, xiě, yǒu, méi | jīn | hē | — | **9** | 41 / 204 | 20% |
+| questions | Questions and Answers | ma, shénme, wèn, zěnme | hézi, zhǎo | gōng, jù, mǎi, wèi | — | **10** | 51 / 204 | 25% |
+| pre-verbs | Pre-Verbs | yào, néng, zhīdào, ài | děng, yīfu | xué, kě | — | **8** | 59 / 204 | 29% |
+| when-it-happens | Time 1 | le, zài, huì, shíjiān | shuìjiào, yuè, rì | fā, shēng, xiànzài, guò | — | **11** | 70 / 204 | 34% |
+| around-an-action | Time 2 | wán, hòu, kāishǐ, yī, xià | wánr, liú | yòu, cì | — | **9** | 79 / 204 | 39% |
+| where-it-is | Space 1 | lǐ, shàng, miàn, qián, biān, pángbiān | — | nǎ, wǎng, zhōng, jiān, zuǒ, yòubiān | — | **12** | 91 / 204 | 45% |
+| moving | Space 2 | lái, qù, cóng, qǐ, wài | kǒu | dào, yuǎn, fùjìn, guó, lù, chē | — | **12** | 103 / 204 | 50% |
+| how-much | Modifiers 1 — How much | zhēn | rè, lěng, tián, qíguài, shēntǐ | wèidào, jiàzhí, kuài, nán, lǎo | — | **11** | 114 / 204 | 56% |
+| comparing | Modifiers 2 — Comparing | bǐ | yìng, yuán, gùnzi, xiàn | zuì, yàng, bié, zhǒng, gāo | — | **10** | 124 / 204 | 61% |
+| also-and-all | Modifiers 3 — Also and all | yě | huǒ | kōng, qì, kāi, guān, dēng, míng, dōu, bùfen | — | **10** | 134 / 204 | 66% |
+| becoming-and-making | Modifiers 4 — Becoming and making | biàn, nòng, dé, bǎ | huài | luàn, fàng, lì | — | **8** | 142 / 204 | 70% |
+| direction-and-result | Verbs 2 | — | — | ná, jìn, chū, huí, zuò, zhàn, tǎng, fēi, yǎnjing, tōng | — | **10** | 152 / 204 | 75% |
+| numbers | Numbers | liǎng, hào | — | èr, sān, sì, wǔ, liù, qī, bā, jiǔ, shí, diǎn, tiān, nián, suàn | — | **15** | 167 / 204 | 82% |
+| colors | Colors | yánsè | — | bái, sè, hēi, hóng, huáng, lán | — | **7** | 174 / 204 | 85% |
+| roles-of-a-word | Changing the Role of a Word | cí | bízi | fǎ, jī, máo | — | **5** | 179 / 204 | 88% |
+| inside-a-sentence | Relationships 1 | gěi, yòng, hé, duì | mō, dǎ, qún | huò, zhě, guānxi | — | **10** | 189 / 204 | 93% |
+| linking-sentences | Relationships 2 | yīnwèi | sǐ | huó, dàn, rúguǒ, jiù | — | **6** | 195 / 204 | 96% |
+| greetings-and-feelings | Greetings and Feelings | jiào, pà, juéde | shēngyīn | xiè, xiào, xīn | — | **7** | 202 / 204 | 99% |
+| doubling-words | Doubling Words | — | — | — | — | **0** | 202 / 204 | 99% |
+| everyday-patterns | Everyday Patterns | — | — | bāng, jiāo | — | **2** | 204 / 204 | 100% |
+| | **Total** | **68** | **38** | **98** | | **204** | | |
 
 **By section:**
 

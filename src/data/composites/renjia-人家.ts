@@ -7,7 +7,7 @@ export default composite({
   py: "rénjia",
   en: "other people",
   ru: "другие",
-  hsd: ["{{word:ren2}}-{{word:jia1}}", "{{word:bie2de}} {{word:ren2}}"],
+  hsd: ["{{word:ren2}}-{{word:jia1}}", "{{word:bie2}}-{{word:de}} {{word:ren2}}"],
   tts: ["人家", "别的人"],
   literal: "people's home / other people",
   fit: "natural",

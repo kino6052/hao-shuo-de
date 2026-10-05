@@ -23,8 +23,8 @@ export default lessonModule({
       "**Кто + {{word:ba3}} + вещь + {{word:nong4}} + результат**",
     ],
     tldr: {
-      en: "{{word:ba3}} + thing comes before the action: {{Word:wo3}} {{word:ba3}} {{word:gong1ju4}} {{word:nong4}} {{word:hao3}} {{word:le}}.",
-      ru: "{{word:ba3}} + вещь ставится перед действием: {{Word:wo3}} {{word:ba3}} {{word:gong1ju4}} {{word:nong4}} {{word:hao3}} {{word:le}}.",
+      en: "{{word:ba3}} + thing comes before the action: {{Word:wo3}} {{word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:nong4}} {{word:hao3}} {{word:le}}.",
+      ru: "{{word:ba3}} + вещь ставится перед действием: {{Word:wo3}} {{word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:nong4}} {{word:hao3}} {{word:le}}.",
     },
     necessity: {
       en: "Now you can say exactly which thing you changed.",
@@ -32,12 +32,12 @@ export default lessonModule({
     },
   },
   info: {
-    en: "{{word:ba3}} + thing + {{word:nong4}} + result: {{Word:wo3}} {{word:ba3}} {{word:gong1ju4}} {{word:nong4}} {{word:hao3}} {{word:le}}. (I fixed the tool.)",
-    ru: "{{word:ba3}} + вещь + {{word:nong4}} + результат: {{Word:wo3}} {{word:ba3}} {{word:gong1ju4}} {{word:nong4}} {{word:hao3}} {{word:le}}. (Я починил инструмент.)",
+    en: "{{word:ba3}} + thing + {{word:nong4}} + result: {{Word:wo3}} {{word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:nong4}} {{word:hao3}} {{word:le}}. (I fixed the tool.)",
+    ru: "{{word:ba3}} + вещь + {{word:nong4}} + результат: {{Word:wo3}} {{word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:nong4}} {{word:hao3}} {{word:le}}. (Я починил инструмент.)",
   },
   examples: [
     {
-      pinyin: "{{Word:wo3}} {{word:ba3}} {{word:gong1ju4}} {{word:nong4}} {{word:hao3}} {{word:le}}.",
+      pinyin: "{{Word:wo3}} {{word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:nong4}} {{word:hao3}} {{word:le}}.",
       hanzi: "我把工具弄好了。",
       en: "I fixed the tool.",
       ru: "Я починил инструмент.",
@@ -103,8 +103,8 @@ export default lessonModule({
     // when do I use bǎ? (doing something to a thing, with a result)
     {
       question: { en: "When do I use {{word:ba3}}?", ru: "Когда нужно {{word:ba3}}?" },
-      en: "When you do something to a thing, and it ends up a certain way: fixed, broken, finished. {{Word:wo3}} {{word:ba3}} {{word:gong1ju4}} {{word:nong4}} {{word:huai4}} {{word:le}} (I broke the tool). Just looking at a thing doesn't change it, so {{Word:wo3}} {{word:kan4}} {{word:gong1ju4}} has no {{word:ba3}}.",
-      ru: "Когда вы что-то делаете с вещью и она в итоге становится какой-то: починенной, сломанной, законченной. {{Word:wo3}} {{word:ba3}} {{word:gong1ju4}} {{word:nong4}} {{word:huai4}} {{word:le}} (Я сломал инструмент). Если просто смотреть на вещь, она не меняется, поэтому в {{Word:wo3}} {{word:kan4}} {{word:gong1ju4}} нет {{word:ba3}}.",
+      en: "When you do something to a thing, and it ends up a certain way: fixed, broken, finished. {{Word:wo3}} {{word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:nong4}} {{word:huai4}} {{word:le}} (I broke the tool). Just looking at a thing doesn't change it, so {{Word:wo3}} {{word:kan4}} {{word:gong1}}-{{word:ju4}} has no {{word:ba3}}.",
+      ru: "Когда вы что-то делаете с вещью и она в итоге становится какой-то: починенной, сломанной, законченной. {{Word:wo3}} {{word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:nong4}} {{word:huai4}} {{word:le}} (Я сломал инструмент). Если просто смотреть на вещь, она не меняется, поэтому в {{Word:wo3}} {{word:kan4}} {{word:gong1}}-{{word:ju4}} нет {{word:ba3}}.",
     },
   ],
 });

@@ -17,14 +17,14 @@ export default lessonModule({
       "",
       "**Who + {{word:jiao4}} + \"name\"**",
       "",
-      "Animals {{word:jiao4}} too: {{Word:dong4wu4}} {{word:jiao4}} \"wang-wang\" means the animal goes woof.",
+      "Animals {{word:jiao4}} too: {{Word:dong4}}-{{word:wu4}} {{word:jiao4}} \"wang-wang\" means the animal goes woof.",
     ],
     ru: [
       "**Чтобы назвать своё имя**, используйте {{word:jiao4}} (называться), а имя поставьте в кавычки.",
       "",
       "**Кто + {{word:jiao4}} + \"имя\"**",
       "",
-      "Животные тоже {{word:jiao4}}: {{Word:dong4wu4}} {{word:jiao4}} \"wang-wang\" значит, что животное говорит «гав-гав».",
+      "Животные тоже {{word:jiao4}}: {{Word:dong4}}-{{word:wu4}} {{word:jiao4}} \"wang-wang\" значит, что животное говорит «гав-гав».",
     ],
     tldr: {
       en: "{{word:jiao4}} + name: {{Word:wo3}} {{word:jiao4}} \"Lisa\", my name is Lisa.",
@@ -53,13 +53,13 @@ export default lessonModule({
       ru: "Как тебя зовут?",
     },
     {
-      pinyin: "{{Word:na4}}-ge {{word:dong4wu4}} {{word:jiao4}} \"wang-wang\".",
+      pinyin: "{{Word:na4}}-ge {{word:dong4}}-{{word:wu4}} {{word:jiao4}} \"wang-wang\".",
       hanzi: "那个动物叫汪汪。",
       en: "That animal goes woof woof.",
       ru: "То животное говорит «гав-гав».",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:jiao4}} \"Tom\" {{word:huo4zhe3}} \"Tim\".",
+      pinyin: "{{Word:ta1}} {{word:jiao4}} \"Tom\" {{word:huo4}}-{{word:zhe3}} \"Tim\".",
       hanzi: "他叫\"Tom\"或者\"Tim\"。",
       en: "He's called Tom or Tim.",
       ru: "Его зовут Том или Тим.",

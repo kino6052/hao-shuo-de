@@ -7,9 +7,9 @@ export default composite({
   py: "gōngrén",
   en: "worker",
   ru: "рабочий",
-  hsd: ["{{word:nong4}}-{{word:de}} {{word:ren2}}"],
-  tts: ["弄的人"],
+  hsd: ["{{word:gong1}}-{{word:ren2}}", "{{word:nong4}}-{{word:de}} {{word:ren2}}"],
+  tts: ["工人", "弄的人"],
   literal: "a person who works",
-  fit: "plain",
+  fit: "natural",
   proposed: true,
 });

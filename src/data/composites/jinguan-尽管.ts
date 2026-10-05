@@ -7,10 +7,10 @@ export default composite({
   py: "jǐnguǎn",
   en: "although",
   ru: "хотя",
-  hsd: ["{{word:dan4shi4}}"],
+  hsd: ["{{word:dan4}}-{{word:shi4}}"],
   tts: ["但是"],
   literal: "but",
   fit: "plain",
-  note: "Say it with dànshì: X, dànshì Y.",
+  note: "Say it with dàn-shì: X, dàn-shì Y.",
   proposed: true,
 });

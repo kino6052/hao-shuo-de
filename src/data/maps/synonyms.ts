@@ -14,9 +14,7 @@ export default relations({
     yan3jing: ["{{word:kan4}}-{{word:de}} {{word:bu4fen}}"],
     deng1: ["{{word:jia1}}-{{word:li3}}-{{word:de}} {{word:xiao3}} {{word:ri4}}"],
     jiao1: ["{{word:bang1}} … {{word:xue2}}"],
-    mai3: ["{{word:gei3}} {{word:jin1}} {{word:de2}} {{word:dong1xi}}"],
-    wei4shen2me: ["{{word:yin1wei4}} {{word:shen2me}}"],
-    zui4: ["{{word:bi3}} {{word:bie2de}} {{word:dou1}}"],
-    na3li3: ["{{word:shen2me}} {{word:di4fang1}}"],
+    mai3: ["{{word:gei3}} {{word:jin1}} {{word:de2}} {{word:dong1}}-{{light:xi1}}"],
+    zui4: ["{{word:bi3}} {{word:bie2}}-{{word:de}} {{word:dou1}}"],
   },
 });

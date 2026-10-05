@@ -112,7 +112,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:mai3}} {{word:dong1xi}} {{word:he2}} {{word:gei3}} {{word:dong1xi}} {{word:de2}} {{word:jin1}}.",
+    pinyin: "{{Word:mai3}} {{word:dong1}}-{{light:xi1}} {{word:he2}} {{word:gei3}} {{word:dong1}}-{{light:xi1}} {{word:de2}} {{word:jin1}}.",
     ttsText: "买东西和给东西得金。",
     en: ["The economy (literally: buying things, and giving things to get money)."],
     zh: [],
@@ -216,9 +216,9 @@ const content: Entry[] = [
   },
   {
     type: "prose",
-    en: ["## Family", "There are {{word:fu4mu3}} (parents), {{word:nan2ren2}}, and {{word:nv3ren2}}. Mom and dad are \"the woman and the man of the parents\", and grandparents, uncles, and cousins need chains of -{{word:de}}."],
+    en: ["## Family", "There are {{word:fu4mu3}} (parents), {{word:nan2ren2}}, and {{word:nv3}}-{{word:ren2}}. Mom and dad are \"the woman and the man of the parents\", and grandparents, uncles, and cousins need chains of -{{word:de}}."],
     zh: [],
-    ru: ["## Семья", "Есть {{word:fu4mu3}} (родители), {{word:nan2ren2}} и {{word:nv3ren2}}. Мама и папа — «женщина и мужчина из родителей», а бабушки, дяди и двоюродные братья требуют цепочек из -{{word:de}}."],
+    ru: ["## Семья", "Есть {{word:fu4mu3}} (родители), {{word:nan2ren2}} и {{word:nv3}}-{{word:ren2}}. Мама и папа — «женщина и мужчина из родителей», а бабушки, дяди и двоюродные братья требуют цепочек из -{{word:de}}."],
     tldr: {
       en: ["Family words are built from parents, men, and women."],
       zh: [],
@@ -232,7 +232,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:fu4mu3}}-{{word:li3}}-{{word:de}} {{word:nv3ren2}}.",
+    pinyin: "{{Word:fu4mu3}}-{{word:li3}}-{{word:de}} {{word:nv3}}-{{word:ren2}}.",
     ttsText: "父母里的女人。",
     en: ["Mom (literally: the woman of the parents)."],
     zh: [],

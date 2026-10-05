@@ -7,7 +7,7 @@ export default composite({
   py: "xiànchǎng",
   en: "scene, site",
   ru: "место событий",
-  hsd: ["{{word:fa1}}-{{word:sheng1}}-{{word:de}} {{word:di4fang1}}"],
+  hsd: ["{{word:fa1}}-{{word:sheng1}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
   tts: ["发生的地方"],
   literal: "the place where it happened",
   fit: "plain",

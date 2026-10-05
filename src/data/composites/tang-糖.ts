@@ -7,9 +7,9 @@ export default composite({
   py: "táng",
   en: "sugar, candy",
   ru: "сахар, конфета",
-  hsd: ["{{word:nong4}} {{word:tian2}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:nong4}} {{word:tian2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["弄甜的东西"],
   literal: "the thing that makes it sweet",
   fit: "plain",
-  note: "Like salt, nòng-hǎo wèidào-de dōngxi.",
+  note: "Like salt, nòng-hǎo wèidào-de dōng-xi.",
 });

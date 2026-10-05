@@ -43,13 +43,13 @@ export default lessonModule({
       ru: "Мой дом — номер пять.",
     },
     {
-      pinyin: "{{Word:er4}}-{{word:hao4}} {{word:zai4}} {{word:na3li3}}?",
+      pinyin: "{{Word:er4}}-{{word:hao4}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
       hanzi: "二号在哪里？",
       en: "Where is number two?",
       ru: "Где номер два?",
     },
     {
-      pinyin: "{{Word:san1}}-{{word:hao4}} {{word:zai4}} {{word:na3li3}}?",
+      pinyin: "{{Word:san1}}-{{word:hao4}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
       hanzi: "三号在哪里？",
       en: "Where is number three?",
       ru: "Где номер три?",
@@ -77,7 +77,7 @@ export default lessonModule({
     {
       en: "Where is number four?",
       ru: "Где номер четыре?",
-      answer: "{{Word:si4}}-{{word:hao4}} {{word:zai4}} {{word:na3li3}}?",
+      answer: "{{Word:si4}}-{{word:hao4}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
       hanzi: "四号在哪里？",
     },
   ],

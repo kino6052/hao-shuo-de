@@ -7,7 +7,7 @@ export default composite({
   py: "nǚháir",
   en: "girl",
   ru: "девочка",
-  hsd: ["{{word:xiao3}}-{{word:de}} {{word:nv3ren2}}"],
+  hsd: ["{{word:xiao3}}-{{word:de}} {{word:nv3}}-{{word:ren2}}"],
   tts: ["小的女人"],
   literal: "small woman",
   fit: "plain",

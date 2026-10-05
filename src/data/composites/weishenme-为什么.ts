@@ -7,7 +7,9 @@ export default composite({
   py: "wèi shénme",
   en: "why",
   ru: "почему",
-  hsd: ["{{word:wei4shen2me}}"],
+  hsd: ["{{word:wei4}}-{{word:shen2me}}"],
   tts: ["为什么"],
-  fit: "word",
+  fit: "natural",
+  transparent: true,
+  proposed: true,
 });

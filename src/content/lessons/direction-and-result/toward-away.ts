@@ -53,7 +53,7 @@ export default lessonModule({
       ru: "Принеси воду!",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:ba3}} {{word:gong1ju4}} {{word:na2}}-{{word:lai2}} {{word:le}}.",
+      pinyin: "{{Word:wo3}} {{word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:na2}}-{{word:lai2}} {{word:le}}.",
       hanzi: "我把工具拿来了。",
       en: "I brought the tool.",
       ru: "Я принёс инструмент.",

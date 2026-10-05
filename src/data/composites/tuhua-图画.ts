@@ -7,7 +7,7 @@ export default composite({
   py: "túhuà",
   en: "drawing",
   ru: "рисунок",
-  hsd: ["{{word:xie3}}-{{word:de}} {{word:kan4}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:xie3}}-{{word:de}} {{word:kan4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["写的看的东西"],
   literal: "a drawn thing to look at",
   fit: "plain",

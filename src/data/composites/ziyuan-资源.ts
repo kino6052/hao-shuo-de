@@ -7,7 +7,7 @@ export default composite({
   py: "zīyuán",
   en: "resources",
   ru: "ресурсы",
-  hsd: ["{{word:neng2}} {{word:yong4}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:neng2}} {{word:yong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["能用的东西"],
   literal: "things you can use",
   fit: "plain",

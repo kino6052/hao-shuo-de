@@ -32,24 +32,24 @@ export default lessonModule({
     },
   },
   info: {
-    en: "NOUN + {{word:bu4}} {{word:shi4}} + NOUN: {{Word:dong4wu4}} {{word:bu4}} {{word:shi4}} {{word:zhi2wu4}}. (An animal is not a plant.)",
-    ru: "СУЩЕСТВИТЕЛЬНОЕ + {{word:bu4}} {{word:shi4}} + СУЩЕСТВИТЕЛЬНОЕ: {{Word:dong4wu4}} {{word:bu4}} {{word:shi4}} {{word:zhi2wu4}}. (Животное — не растение.)",
+    en: "NOUN + {{word:bu4}} {{word:shi4}} + NOUN: {{Word:dong4}}-{{word:wu4}} {{word:bu4}} {{word:shi4}} {{word:zhi2wu4}}. (An animal is not a plant.)",
+    ru: "СУЩЕСТВИТЕЛЬНОЕ + {{word:bu4}} {{word:shi4}} + СУЩЕСТВИТЕЛЬНОЕ: {{Word:dong4}}-{{word:wu4}} {{word:bu4}} {{word:shi4}} {{word:zhi2wu4}}. (Животное — не растение.)",
   },
   examples: [
     {
-      pinyin: "{{Word:dong4wu4}} {{word:bu4}} {{word:shi4}} {{word:zhi2wu4}}.",
+      pinyin: "{{Word:dong4}}-{{word:wu4}} {{word:bu4}} {{word:shi4}} {{word:zhi2wu4}}.",
       hanzi: "动物不是植物。",
       en: "An animal is not a plant.",
       ru: "Животное — не растение.",
     },
     {
-      pinyin: "{{Word:zhe4}} {{word:bu4}} {{word:shi4}} {{word:dong4wu4}}.",
+      pinyin: "{{Word:zhe4}} {{word:bu4}} {{word:shi4}} {{word:dong4}}-{{word:wu4}}.",
       hanzi: "这不是动物。",
       en: "This is not an animal.",
       ru: "Это не животное.",
     },
     {
-      pinyin: "{{Word:nv3ren2}} {{word:bu4}} {{word:shi4}} {{word:nan2ren2}}.",
+      pinyin: "{{Word:nv3}}-{{word:ren2}} {{word:bu4}} {{word:shi4}} {{word:nan2ren2}}.",
       hanzi: "女人不是男人。",
       en: "A woman is not a man.",
       ru: "Женщина — не мужчина.",
@@ -71,7 +71,7 @@ export default lessonModule({
     {
       en: "An animal is not a person.",
       ru: "Животное — не человек.",
-      answer: "{{Word:dong4wu4}} {{word:bu4}} {{word:shi4}} {{word:ren2}}.",
+      answer: "{{Word:dong4}}-{{word:wu4}} {{word:bu4}} {{word:shi4}} {{word:ren2}}.",
       hanzi: "动物不是人。",
     },
   ],

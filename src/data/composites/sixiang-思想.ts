@@ -7,7 +7,7 @@ export default composite({
   py: "sīxiǎng",
   en: "thought, thinking",
   ru: "мысль",
-  hsd: ["{{word:jue2de}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:jue2de}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["觉得的东西"],
   literal: "what you think",
   fit: "plain",

@@ -1,14 +1,14 @@
-// To say left or right, use zuǒbiān and yòubiān, like pángbiān. Pattern:
-// Thing + zài + (X-de) zuǒbiān / yòubiān
+// To say left or right, use zuǒ-biān and yòubiān, like pángbiān. Pattern:
+// Thing + zài + (X-de) zuǒ-biān / yòubiān
 import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "left-right",
   words: [
     {
-      word: "zuo3bian1",
-      en: "left",
-      ru: "слева, левая сторона",
+      word: "zuo3",
+      en: "left; {{word:zuo3}}-{{word:bian1}}: left side",
+      ru: "левый; {{word:zuo3}}-{{word:bian1}} — левая сторона",
     },
     {
       word: "you4bian1",
@@ -18,18 +18,18 @@ export default lessonModule({
   ],
   prose: {
     en: [
-      "**To say left or right**, use {{word:zuo3bian1}} (left) and {{word:you4bian1}} (right). They work like {{word:pang2bian1}}.",
+      "**To say left or right**, use {{word:zuo3}}-{{word:bian1}} (left) and {{word:you4bian1}} (right). They work like {{word:pang2bian1}}.",
       "",
-      "**Thing + {{word:zai4}} + (X-{{word:de}}) {{word:zuo3bian1}} / {{word:you4bian1}}**",
+      "**Thing + {{word:zai4}} + (X-{{word:de}}) {{word:zuo3}}-{{word:bian1}} / {{word:you4bian1}}**",
     ],
     ru: [
-      "**Чтобы сказать «слева» или «справа»**, используйте {{word:zuo3bian1}} (слева) и {{word:you4bian1}} (справа). Они работают как {{word:pang2bian1}}.",
+      "**Чтобы сказать «слева» или «справа»**, используйте {{word:zuo3}}-{{word:bian1}} (слева) и {{word:you4bian1}} (справа). Они работают как {{word:pang2bian1}}.",
       "",
-      "**Вещь + {{word:zai4}} + (X-{{word:de}}) {{word:zuo3bian1}} / {{word:you4bian1}}**",
+      "**Вещь + {{word:zai4}} + (X-{{word:de}}) {{word:zuo3}}-{{word:bian1}} / {{word:you4bian1}}**",
     ],
     tldr: {
-      en: "{{word:zuo3bian1}} is left, {{word:you4bian1}} is right: {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3bian1}}, on my left.",
-      ru: "{{word:zuo3bian1}} — слева, {{word:you4bian1}} — справа: {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3bian1}} — слева от меня.",
+      en: "{{word:zuo3}}-{{word:bian1}} is left, {{word:you4bian1}} is right: {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}, on my left.",
+      ru: "{{word:zuo3}}-{{word:bian1}} — слева, {{word:you4bian1}} — справа: {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}} — слева от меня.",
     },
     necessity: {
       en: "Now you can say which side something is on.",
@@ -37,12 +37,12 @@ export default lessonModule({
     },
   },
   info: {
-    en: "{{word:zuo3bian1}} / {{word:you4bian1}}, left / right: {{Word:he2zi}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3bian1}}. (The box is on my left.)",
-    ru: "{{word:zuo3bian1}} / {{word:you4bian1}} — слева / справа: {{Word:he2zi}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3bian1}}. (Коробка слева от меня.)",
+    en: "{{word:zuo3}}-{{word:bian1}} / {{word:you4bian1}}, left / right: {{Word:he2zi}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}. (The box is on my left.)",
+    ru: "{{word:zuo3}}-{{word:bian1}} / {{word:you4bian1}} — слева / справа: {{Word:he2zi}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}. (Коробка слева от меня.)",
   },
   examples: [
     {
-      pinyin: "{{Word:he2zi}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3bian1}}.",
+      pinyin: "{{Word:he2zi}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}.",
       hanzi: "盒子在我的左边。",
       en: "The box is on my left.",
       ru: "Коробка слева от меня.",
@@ -60,7 +60,7 @@ export default lessonModule({
       ru: "Вода справа?",
     },
     {
-      pinyin: "{{Word:zuo3bian1}}-{{word:de}} {{word:he2zi}} {{word:hen3}} {{word:da4}}.",
+      pinyin: "{{Word:zuo3}}-{{word:bian1}}-{{word:de}} {{word:he2zi}} {{word:hen3}} {{word:da4}}.",
       hanzi: "左边的盒子很大。",
       en: "The box on the left is big.",
       ru: "Коробка слева большая.",
@@ -70,7 +70,7 @@ export default lessonModule({
     {
       en: "The tool is on the left.",
       ru: "Инструмент слева.",
-      answer: "{{Word:gong1ju4}} {{word:zai4}} {{word:zuo3bian1}}.",
+      answer: "{{Word:gong1}}-{{word:ju4}} {{word:zai4}} {{word:zuo3}}-{{word:bian1}}.",
       hanzi: "工具在左边。",
     },
     {

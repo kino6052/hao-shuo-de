@@ -60,7 +60,7 @@ export default lessonModule({
       ru: "Вода испортилась.",
     },
     {
-      pinyin: "{{Word:gong1ju4}} {{word:huai4}} {{word:le}}.",
+      pinyin: "{{Word:gong1}}-{{word:ju4}} {{word:huai4}} {{word:le}}.",
       hanzi: "工具坏了。",
       en: "The tool is broken.",
       ru: "Инструмент сломался.",
@@ -82,7 +82,7 @@ export default lessonModule({
     {
       en: "My tool is broken.",
       ru: "Мой инструмент сломался.",
-      answer: "{{Word:wo3}}-{{word:de}} {{word:gong1ju4}} {{word:huai4}} {{word:le}}.",
+      answer: "{{Word:wo3}}-{{word:de}} {{word:gong1}}-{{word:ju4}} {{word:huai4}} {{word:le}}.",
       hanzi: "我的工具坏了。",
     },
   ],

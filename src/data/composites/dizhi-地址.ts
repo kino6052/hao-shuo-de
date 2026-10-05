@@ -7,7 +7,7 @@ export default composite({
   py: "dìzhǐ",
   en: "address",
   ru: "адрес",
-  hsd: ["{{word:di4fang1}}-{{word:de}} {{word:hao4}}"],
+  hsd: ["{{word:di4}}-{{light:fang1}}-{{word:de}} {{word:hao4}}"],
   tts: ["地方的号"],
   literal: "the place's number",
   fit: "plain",

@@ -7,7 +7,7 @@ export default composite({
   py: "gōngyuán",
   en: "park",
   ru: "парк",
-  hsd: ["{{word:you3}}-{{word:zhi2wu4}}-{{word:de}} {{word:di4fang1}}"],
+  hsd: ["{{word:you3}}-{{word:zhi2wu4}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
   tts: ["有植物的地方"],
   literal: "place with plants",
   fit: "plain",

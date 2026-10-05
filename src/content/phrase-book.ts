@@ -322,7 +322,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:ni3}} {{word:cong2}} {{word:na3li3}} {{word:lai2}}?",
+    pinyin: "{{Word:ni3}} {{word:cong2}} {{word:na3}}-{{word:li3}} {{word:lai2}}?",
     ttsText: "你从哪里来？",
     en: ["Where are you from?"],
     zh: ["你从哪里来？"],
@@ -338,7 +338,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:ni3}}-{{word:de}} {{word:jia1}} {{word:zai4}} {{word:na3li3}}?",
+    pinyin: "{{Word:ni3}}-{{word:de}} {{word:jia1}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
     ttsText: "你的家在哪里？",
     en: ["Where do you live? (Literally: \"where is your home?\")"],
     zh: ["你住在哪里？"],
@@ -418,7 +418,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:ai4}} {{word:zhe4}}-ge {{word:di4fang1}}!",
+    pinyin: "{{Word:wo3}} {{word:ai4}} {{word:zhe4}}-ge {{word:di4}}-{{light:fang1}}!",
     ttsText: "我爱这个地方！",
     en: ["I love this place!"],
     zh: ["我喜欢这个地方！"],
@@ -506,7 +506,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:wo3}}-{{word:men}} {{word:shi2}}-{{word:er4}}-{{word:dian3}} {{word:chi1}} {{word:dong1xi}}.",
+    pinyin: "{{Word:wo3}}-{{word:men}} {{word:shi2}}-{{word:er4}}-{{word:dian3}} {{word:chi1}} {{word:dong1}}-{{light:xi1}}.",
     ttsText: "我们十二点吃东西。",
     en: ["We eat at twelve."],
     zh: ["我们十二点吃饭。"],
@@ -522,9 +522,9 @@ const content: Entry[] = [
   },
   {
     type: "prose",
-    en: ["## Asking the way", "To ask where something is, say the place, then {{word:zai4}} {{word:na3li3}}? (\"is where?\")."],
-    zh: ["## 问路", "问某个地方在哪里，先说地方，再加 {{word:zai4}} {{word:na3li3}}?（在哪里？）。"],
-    ru: ["## Как пройти", "Чтобы спросить, где что-то находится, назовите место и добавьте {{word:zai4}} {{word:na3li3}}? («где?»)."],
+    en: ["## Asking the way", "To ask where something is, say the place, then {{word:zai4}} {{word:na3}}-{{word:li3}}? (\"is where?\")."],
+    zh: ["## 问路", "问某个地方在哪里，先说地方，再加 {{word:zai4}} {{word:na3}}-{{word:li3}}?（在哪里？）。"],
+    ru: ["## Как пройти", "Чтобы спросить, где что-то находится, назовите место и добавьте {{word:zai4}} {{word:na3}}-{{word:li3}}? («где?»)."],
     tldr: {
       en: ["Where is it, how to get there, is it far, left, right, and straight ahead."],
       zh: ["在哪里、怎么走、远不远、左边、右边和往前走。"],
@@ -538,7 +538,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:yong4}} {{word:shui3}} {{word:nong4}} {{word:shou3}}-{{word:de}} {{word:di4fang1}} {{word:zai4}} {{word:na3li3}}?",
+    pinyin: "{{Word:yong4}} {{word:shui3}} {{word:nong4}} {{word:shou3}}-{{word:de}} {{word:di4}}-{{light:fang1}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
     ttsText: "用水弄手的地方在哪里？",
     en: ["Where's the toilet? (Literally: \"the place where you wash your hands.\")"],
     zh: ["厕所在哪里？"],
@@ -570,7 +570,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:zai4}} {{word:zuo3bian1}}.",
+    pinyin: "{{Word:zai4}} {{word:zuo3}}-{{word:bian1}}.",
     ttsText: "在左边。",
     en: ["It's on the left."],
     zh: ["在左边。"],
@@ -602,9 +602,9 @@ const content: Entry[] = [
   },
   {
     type: "prose",
-    en: ["## Getting around", "There is no word for car, train, or plane: they are all {{word:qu4}}-{{word:hen3}}-{{word:duo1}}-{{word:di4fang1}}-{{word:de}} {{word:gong1ju4}}, \"the tool that goes to many places.\"", "Most of the time you don't need the word at all."],
-    zh: ["## 交通", "没有\"车\"\"火车\"\"飞机\"这些词，它们都是 {{word:qu4}}-{{word:hen3}}-{{word:duo1}}-{{word:di4fang1}}-{{word:de}} {{word:gong1ju4}}（去很多地方的工具）。", "大多数时候，根本用不着这个词。"],
-    ru: ["## Транспорт", "Слов «машина», «поезд» и «самолёт» нет: всё это {{word:qu4}}-{{word:hen3}}-{{word:duo1}}-{{word:di4fang1}}-{{word:de}} {{word:gong1ju4}}, «инструмент, который ездит во многие места».", "Чаще всего это слово и не нужно."],
+    en: ["## Getting around", "There is no word for car, train, or plane: they are all {{word:qu4}}-{{word:hen3}}-{{word:duo1}}-{{word:di4}}-{{light:fang1}}-{{word:de}} {{word:gong1}}-{{word:ju4}}, \"the tool that goes to many places.\"", "Most of the time you don't need the word at all."],
+    zh: ["## 交通", "没有\"车\"\"火车\"\"飞机\"这些词，它们都是 {{word:qu4}}-{{word:hen3}}-{{word:duo1}}-{{word:di4}}-{{light:fang1}}-{{word:de}} {{word:gong1}}-{{word:ju4}}（去很多地方的工具）。", "大多数时候，根本用不着这个词。"],
+    ru: ["## Транспорт", "Слов «машина», «поезд» и «самолёт» нет: всё это {{word:qu4}}-{{word:hen3}}-{{word:duo1}}-{{word:di4}}-{{light:fang1}}-{{word:de}} {{word:gong1}}-{{word:ju4}}, «инструмент, который ездит во многие места».", "Чаще всего это слово и не нужно."],
     tldr: {
       en: ["Where to, how much, the airport, faster, right here, and getting off."],
       zh: ["去哪里、多少钱、机场、快一点、就在这里和下车。"],
@@ -626,7 +626,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:yao4}} {{word:qu4}} {{word:zhe4}}-ge {{word:di4fang1}}.",
+    pinyin: "{{Word:wo3}} {{word:yao4}} {{word:qu4}} {{word:zhe4}}-ge {{word:di4}}-{{light:fang1}}.",
     ttsText: "我要去这个地方。",
     en: ["I want to go to this place. (Show the address.)"],
     zh: ["我要去这个地方。"],
@@ -650,7 +650,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:yao4}} {{word:qu4}} {{word:fei1}}-{{word:de}}-{{word:gong1ju4}} {{word:zai4}}-{{word:de}} {{word:di4fang1}}.",
+    pinyin: "{{Word:wo3}} {{word:yao4}} {{word:qu4}} {{word:fei1}}-{{word:de}}-{{word:gong1}}-{{word:ju4}} {{word:zai4}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",
     ttsText: "我要去飞的工具在的地方。",
     en: ["I want to go to the airport. (Literally: \"the place where the flying tools are.\")"],
     zh: ["我要去机场。"],
@@ -682,9 +682,9 @@ const content: Entry[] = [
   },
   {
     type: "prose",
-    en: ["## A place to sleep", "A hotel room is simply {{word:shui4jiao4}}-{{word:de}} {{word:di4fang1}}, \"a place to sleep.\""],
-    zh: ["## 住宿", "酒店房间就是 {{word:shui4jiao4}}-{{word:de}} {{word:di4fang1}}（睡觉的地方）。"],
-    ru: ["## Где переночевать", "Номер в гостинице — это просто {{word:shui4jiao4}}-{{word:de}} {{word:di4fang1}}, «место, где спать»."],
+    en: ["## A place to sleep", "A hotel room is simply {{word:shui4jiao4}}-{{word:de}} {{word:di4}}-{{light:fang1}}, \"a place to sleep.\""],
+    zh: ["## 住宿", "酒店房间就是 {{word:shui4jiao4}}-{{word:de}} {{word:di4}}-{{light:fang1}}（睡觉的地方）。"],
+    ru: ["## Где переночевать", "Номер в гостинице — это просто {{word:shui4jiao4}}-{{word:de}} {{word:di4}}-{{light:fang1}}, «место, где спать»."],
     tldr: {
       en: ["A room, the price, how long you stay, the key, and leaving."],
       zh: ["房间、价钱、住几天、钥匙和退房。"],
@@ -698,7 +698,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:you3}} {{word:shui4jiao4}}-{{word:de}} {{word:di4fang1}} {{word:ma}}?",
+    pinyin: "{{Word:you3}} {{word:shui4jiao4}}-{{word:de}} {{word:di4}}-{{light:fang1}} {{word:ma}}?",
     ttsText: "有睡觉的地方吗？",
     en: ["Do you have a room? (Literally: \"is there a place to sleep?\")"],
     zh: ["有房间吗？"],
@@ -730,7 +730,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:gei3}} {{word:wo3}} {{word:kai1}} {{word:kou3}}-{{word:de}} {{word:xiao3}} {{word:gong1ju4}}, {{word:hao3}} {{word:ma}}?",
+    pinyin: "{{Word:gei3}} {{word:wo3}} {{word:kai1}} {{word:kou3}}-{{word:de}} {{word:xiao3}} {{word:gong1}}-{{word:ju4}}, {{word:hao3}} {{word:ma}}?",
     ttsText: "给我开口的小工具，好吗？",
     en: ["Could I have the key? (Literally: \"the little tool that opens the door.\")"],
     zh: ["请给我钥匙。"],
@@ -778,7 +778,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:yao4}} {{word:chi1}} {{word:dong1xi}}.",
+    pinyin: "{{Word:wo3}} {{word:yao4}} {{word:chi1}} {{word:dong1}}-{{light:xi1}}.",
     ttsText: "我要吃东西。",
     en: ["I'm hungry. (Literally: \"I want to eat something.\")"],
     zh: ["我饿了。"],
@@ -802,7 +802,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:bu4}} {{word:chi1}} {{word:dong4wu4}}-{{word:de}} {{word:shen1ti3}}.",
+    pinyin: "{{Word:wo3}} {{word:bu4}} {{word:chi1}} {{word:dong4}}-{{word:wu4}}-{{word:de}} {{word:shen1ti3}}.",
     ttsText: "我不吃动物的身体。",
     en: ["I don't eat meat. (Literally: \"animals' bodies.\")"],
     zh: ["我不吃肉。"],
@@ -858,7 +858,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:mai3}} {{word:dong1xi}}-{{word:de}} {{word:di4fang1}} {{word:zai4}} {{word:na3li3}}?",
+    pinyin: "{{Word:mai3}} {{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
     ttsText: "买东西的地方在哪里？",
     en: ["Where's a shop? (Literally: \"the place to buy things.\")"],
     zh: ["商店在哪里？"],
@@ -898,7 +898,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:you3}} {{word:bie2de}} {{word:yan2se4}} {{word:ma}}?",
+    pinyin: "{{Word:you3}} {{word:bie2}}-{{word:de}} {{word:yan2se4}} {{word:ma}}?",
     ttsText: "有别的颜色吗？",
     en: ["Do you have another color?"],
     zh: ["有别的颜色吗？"],
@@ -962,7 +962,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:bu4}} {{word:zhi1dao4}} {{word:wo3}} {{word:zai4}} {{word:na3li3}}.",
+    pinyin: "{{Word:wo3}} {{word:bu4}} {{word:zhi1dao4}} {{word:wo3}} {{word:zai4}} {{word:na3}}-{{word:li3}}.",
     ttsText: "我不知道我在哪里。",
     en: ["I'm lost. (Literally: \"I don't know where I am.\")"],
     zh: ["我迷路了。"],
@@ -994,7 +994,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:mei2}}-{{word:you3}} {{word:nong4}} {{word:huai4}}-{{word:de}} {{word:dong1xi}}.",
+    pinyin: "{{Word:wo3}} {{word:mei2}}-{{word:you3}} {{word:nong4}} {{word:huai4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
     ttsText: "我没有弄坏的东西。",
     en: ["I haven't done anything wrong. (Literally: \"I didn't do bad things.\")"],
     zh: ["我没做坏事。"],
@@ -1042,7 +1042,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:chi1}} {{word:le}} {{word:huai4}}-{{word:de}} {{word:dong1xi}}.",
+    pinyin: "{{Word:wo3}} {{word:chi1}} {{word:le}} {{word:huai4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
     ttsText: "我吃了坏的东西。",
     en: ["I ate something bad."],
     zh: ["我吃坏东西了。"],
@@ -1066,7 +1066,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:ba3}}-{{word:shen1ti3}}-{{word:nong4}}-{{word:hao3}}-{{word:de}} {{word:di4fang1}} {{word:zai4}} {{word:na3li3}}?",
+    pinyin: "{{Word:ba3}}-{{word:shen1ti3}}-{{word:nong4}}-{{word:hao3}}-{{word:de}} {{word:di4}}-{{light:fang1}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
     ttsText: "把身体弄好的地方在哪里？",
     en: ["Where's the hospital? (Literally: \"the place that makes bodies good.\")"],
     zh: ["医院在哪里？"],
@@ -1074,7 +1074,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:yao4}} {{word:ba3}} {{word:shen1ti3}} {{word:nong4}}-{{word:hao3}}-{{word:de}} {{word:dong1xi}}.",
+    pinyin: "{{Word:wo3}} {{word:yao4}} {{word:ba3}} {{word:shen1ti3}} {{word:nong4}}-{{word:hao3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
     ttsText: "我要把身体弄好的东西。",
     en: ["I need medicine. (Literally: \"the thing that makes the body good.\")"],
     zh: ["我需要药。"],

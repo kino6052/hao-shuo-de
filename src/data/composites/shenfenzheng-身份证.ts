@@ -8,7 +8,7 @@ export default composite({
   en: "ID card",
   ru: "удостоверение личности",
   hsd: [
-    "{{word:shuo1}}-{{word:ming2}} {{word:ni3}} {{word:shi4}} {{word:shen2me}} {{word:ren2}}-{{word:de}} {{word:xie3}}-{{word:de}} {{word:dong1xi}}",
+    "{{word:shuo1}}-{{word:ming2}} {{word:ni3}} {{word:shi4}} {{word:shen2me}} {{word:ren2}}-{{word:de}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],
   tts: ["说明你是什么人的写的东西"],
   literal: "a written thing that says who you are",

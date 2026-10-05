@@ -8,7 +8,7 @@ export default composite({
   en: "mail, email",
   ru: "почта",
   hsd: [
-    "{{word:gei3}} {{word:yuan3}}-{{word:de}} {{word:ren2}} {{word:xie3}}-{{word:de}} {{word:dong1xi}}",
+    "{{word:gei3}} {{word:yuan3}}-{{word:de}} {{word:ren2}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],
   tts: ["给远的人写的东西"],
   literal: "something written to someone far away",

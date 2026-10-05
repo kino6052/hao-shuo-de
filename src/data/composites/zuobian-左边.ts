@@ -7,7 +7,9 @@ export default composite({
   py: "zuǒbian",
   en: "left side",
   ru: "слева",
-  hsd: ["{{word:zuo3bian1}}"],
+  hsd: ["{{word:zuo3}}-{{word:bian1}}"],
   tts: ["左边"],
-  fit: "word",
+  fit: "natural",
+  transparent: true,
+  proposed: true,
 });

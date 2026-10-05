@@ -7,7 +7,9 @@ export default composite({
   py: "dōngxi",
   en: "thing",
   ru: "вещь",
-  hsd: ["{{word:dong1xi}}"],
-  tts: ["东西"],
-  fit: "word",
+  hsd: ["{{word:dong1}}-{{light:xi1}}", "{{word:wu4}}"],
+  tts: ["东西", "物"],
+  fit: "natural",
+  role: "noun",
+  proposed: true,
 });

@@ -7,9 +7,9 @@ export default composite({
   py: "shēngwù",
   en: "living thing",
   ru: "живое существо",
-  hsd: ["{{word:huo2}}-{{word:de}} {{word:dong1xi}}"],
-  tts: ["活的东西"],
+  hsd: ["{{word:sheng1}}-{{word:wu4}}", "{{word:huo2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
+  tts: ["生物", "活的东西"],
   literal: "a living thing",
-  fit: "plain",
+  fit: "natural",
   proposed: true,
 });

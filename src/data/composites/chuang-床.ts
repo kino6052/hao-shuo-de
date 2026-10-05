@@ -7,7 +7,7 @@ export default composite({
   py: "chuáng",
   en: "bed",
   ru: "кровать",
-  hsd: ["{{word:shui4jiao4}}-{{word:de}} {{word:di4fang1}}"],
+  hsd: ["{{word:shui4jiao4}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
   tts: ["睡觉的地方"],
   literal: "sleeping place",
   fit: "plain",

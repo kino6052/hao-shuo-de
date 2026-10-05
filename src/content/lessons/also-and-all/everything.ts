@@ -11,7 +11,7 @@ export default lessonModule({
       "**Who + {{word:shen2me}}-{{word:dou1}} + verb**",
       "",
       "With {{word:bu4}} or {{word:mei2}}, it means nothing: {{Word:wo3}} {{word:shen2me}}-{{word:dou1}} {{word:bu4}} {{word:yao4}}, I don't want anything.",
-      "{{word:na3li3}}-{{word:dou1}} means everywhere.",
+      "{{word:na3}}-{{word:li3}}-{{word:dou1}} means everywhere.",
     ],
     ru: [
       "**Чтобы сказать «всё»**, поставьте {{word:shen2me}}-{{word:dou1}} перед глаголом.",
@@ -19,7 +19,7 @@ export default lessonModule({
       "**Кто + {{word:shen2me}}-{{word:dou1}} + глагол**",
       "",
       "С {{word:bu4}} или {{word:mei2}} это значит «ничего», как в русском «ничего не хочу»: {{Word:wo3}} {{word:shen2me}}-{{word:dou1}} {{word:bu4}} {{word:yao4}} — я ничего не хочу.",
-      "{{word:na3li3}}-{{word:dou1}} значит «везде».",
+      "{{word:na3}}-{{word:li3}}-{{word:dou1}} значит «везде».",
     ],
     tldr: {
       en: "{{word:shen2me}}-{{word:dou1}} + verb: {{Word:wo3}} {{word:shen2me}}-{{word:dou1}} {{word:chi1}}, I eat everything.",
@@ -31,8 +31,8 @@ export default lessonModule({
     },
   },
   info: {
-    en: "{{word:shen2me}}-{{word:dou1}} + verb, everything: {{Word:wo3}} {{word:shen2me}}-{{word:dou1}} {{word:chi1}}. (I eat everything.) With {{word:bu4}}: nothing. {{word:na3li3}}-{{word:dou1}}: everywhere.",
-    ru: "{{word:shen2me}}-{{word:dou1}} + глагол — всё: {{Word:wo3}} {{word:shen2me}}-{{word:dou1}} {{word:chi1}}. (Я ем всё.) С {{word:bu4}} — ничего. {{word:na3li3}}-{{word:dou1}} — везде.",
+    en: "{{word:shen2me}}-{{word:dou1}} + verb, everything: {{Word:wo3}} {{word:shen2me}}-{{word:dou1}} {{word:chi1}}. (I eat everything.) With {{word:bu4}}: nothing. {{word:na3}}-{{word:li3}}-{{word:dou1}}: everywhere.",
+    ru: "{{word:shen2me}}-{{word:dou1}} + глагол — всё: {{Word:wo3}} {{word:shen2me}}-{{word:dou1}} {{word:chi1}}. (Я ем всё.) С {{word:bu4}} — ничего. {{word:na3}}-{{word:li3}}-{{word:dou1}} — везде.",
   },
   examples: [
     {
@@ -60,7 +60,7 @@ export default lessonModule({
       ru: "Он ничего не увидел.",
     },
     {
-      pinyin: "{{Word:na3li3}}-{{word:dou1}} {{word:you3}} {{word:kong1}}-{{word:qi4}}.",
+      pinyin: "{{Word:na3}}-{{word:li3}}-{{word:dou1}} {{word:you3}} {{word:kong1}}-{{word:qi4}}.",
       hanzi: "哪里都有空气。",
       en: "There's air everywhere.",
       ru: "Воздух есть везде.",

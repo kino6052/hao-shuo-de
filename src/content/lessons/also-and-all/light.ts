@@ -73,7 +73,7 @@ export default lessonModule({
       ru: "Солнце яркое.",
     },
     {
-      pinyin: "{{Word:zhe4}}-ge {{word:di4fang1}} {{word:bu4}} {{word:ming2}}.",
+      pinyin: "{{Word:zhe4}}-ge {{word:di4}}-{{light:fang1}} {{word:bu4}} {{word:ming2}}.",
       hanzi: "这个地方不明。",
       en: "This place is dark.",
       ru: "Здесь темно.",

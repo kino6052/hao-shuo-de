@@ -7,9 +7,13 @@ export default composite({
   py: "fāng",
   en: "square; direction",
   ru: "квадрат; сторона",
-  hsd: ["{{word:si4}}-ge {{word:bian1}} {{word:yi1yang4}}-{{word:de}}", "{{word:bian1}}"],
-  tts: ["四个边一样的", "边"],
+  hsd: [
+    "{{word:fang1}}",
+    "{{word:si4}}-ge {{word:bian1}} {{word:yi1}}-{{word:yang4}}-{{word:de}}",
+    "{{word:bian1}}",
+  ],
+  tts: ["方", "四个边一样的", "边"],
   literal: "with four equal sides / a side",
-  fit: "plain",
+  fit: "word",
   proposed: true,
 });

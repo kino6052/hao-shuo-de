@@ -7,7 +7,7 @@ export default composite({
   py: "kāfēi",
   en: "coffee",
   ru: "кофе",
-  hsd: ["{{word:re4}}-{{word:de}} {{word:hei1se4}}-{{word:de}} {{word:shui3}}"],
+  hsd: ["{{word:re4}}-{{word:de}} {{word:hei1}}-{{word:se4}}-{{word:de}} {{word:shui3}}"],
   tts: ["热的黑色的水"],
   literal: "black hot water",
   fit: "plain",

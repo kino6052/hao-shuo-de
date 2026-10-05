@@ -8,7 +8,7 @@ export default composite({
   en: "driver",
   ru: "водитель",
   hsd: [
-    "{{word:kai1}}-{{word:qu4}}-{{word:hen3}}-{{word:duo1}}-{{word:de}}-{{word:di4fang1}}-{{word:de}}-{{word:gong1ju4}}-{{word:de}} {{word:ren2}}",
+    "{{word:kai1}}-{{word:qu4}}-{{word:hen3}}-{{word:duo1}}-{{word:de}}-{{word:di4}}-{{light:fang1}}-{{word:de}}-{{word:gong1}}-{{word:ju4}}-{{word:de}} {{word:ren2}}",
   ],
   tts: ["开去很多的地方的工具的人"],
   literal: "the one who drives the vehicle",

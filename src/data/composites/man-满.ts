@@ -7,7 +7,7 @@ export default composite({
   py: "mǎn",
   en: "full",
   ru: "полный",
-  hsd: ["{{word:mei2}}-{{word:you3}} {{word:di4fang1}} {{word:le}}"],
+  hsd: ["{{word:mei2}}-{{word:you3}} {{word:di4}}-{{light:fang1}} {{word:le}}"],
   tts: ["没有地方了"],
   literal: "no room left",
   fit: "natural",

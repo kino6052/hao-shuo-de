@@ -8,7 +8,7 @@ export default composite({
   en: "oil",
   ru: "масло",
   hsd: [
-    "{{word:nong4}} {{word:chi1}}-{{word:de}} {{word:dong1xi}} {{word:yong4}}-{{word:de}} {{word:shui3}}",
+    "{{word:nong4}} {{word:chi1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:yong4}}-{{word:de}} {{word:shui3}}",
   ],
   tts: ["弄吃的东西用的水"],
   literal: "the liquid used to cook",

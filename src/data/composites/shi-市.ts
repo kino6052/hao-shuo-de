@@ -8,7 +8,7 @@ export default composite({
   en: "city",
   ru: "город",
   hsd: [
-    "{{word:you3}}-{{word:hen3}}-{{word:duo1}}-{{word:de}}-{{word:jia1}}-{{word:de}} {{word:di4fang1}}",
+    "{{word:you3}}-{{word:hen3}}-{{word:duo1}}-{{word:de}}-{{word:jia1}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
   ],
   tts: ["有很多的家的地方"],
   literal: "a place with many homes",

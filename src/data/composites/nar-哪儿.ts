@@ -7,7 +7,7 @@ export default composite({
   py: "nǎr",
   en: "where",
   ru: "где",
-  hsd: ["{{word:na3li3}}"],
+  hsd: ["{{word:na3}}-{{word:li3}}"],
   tts: ["哪里"],
   fit: "word",
 });

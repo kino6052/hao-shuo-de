@@ -7,7 +7,7 @@ export default composite({
   py: "kuàidì",
   en: "express delivery",
   ru: "курьерская доставка",
-  hsd: ["{{word:kuai4}} {{word:na2}}-{{word:lai2}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:kuai4}} {{word:na2}}-{{word:lai2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["快拿来的东西"],
   literal: "things brought fast",
   fit: "plain",

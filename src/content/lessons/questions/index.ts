@@ -1,7 +1,7 @@
 // questions ("Questions and Answers"): its modules, in reading order.
 // See src/lib/lesson.ts.
 //
-// Rewritten in Phase 2 (BOOK_PLAN.md): yes-or-no questions (ma, verb-not-verb), what (shénme), why (wèishénme), how (zěnme), and answering.
+// Rewritten in Phase 2 (BOOK_PLAN.md): yes-or-no questions (ma, verb-not-verb), what (shénme), why (wèi-shénme), how (zěnme), and answering.
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- questions).
 import { lesson } from "../../../lib/lesson.ts";

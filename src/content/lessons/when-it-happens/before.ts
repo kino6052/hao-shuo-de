@@ -41,12 +41,12 @@ export default lessonModule({
     },
   },
   info: {
-    en: "verb-{{word:guo4}}, done before: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:zhe4}}-ge {{word:dong4wu4}}. (I've seen this animal before.)",
-    ru: "глагол-{{word:guo4}} — уже когда-то делал: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:zhe4}}-ge {{word:dong4wu4}}. (Я уже видел это животное.)",
+    en: "verb-{{word:guo4}}, done before: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:zhe4}}-ge {{word:dong4}}-{{word:wu4}}. (I've seen this animal before.)",
+    ru: "глагол-{{word:guo4}} — уже когда-то делал: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:zhe4}}-ge {{word:dong4}}-{{word:wu4}}. (Я уже видел это животное.)",
   },
   examples: [
     {
-      pinyin: "{{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:zhe4}}-ge {{word:dong4wu4}}.",
+      pinyin: "{{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:zhe4}}-ge {{word:dong4}}-{{word:wu4}}.",
       hanzi: "我看过这个动物。",
       en: "I've seen this animal before.",
       ru: "Я уже видел это животное.",
@@ -91,8 +91,8 @@ export default lessonModule({
         en: "What's the difference between {{word:le}} and -{{word:guo4}}?",
         ru: "Чем {{word:le}} отличается от -{{word:guo4}}?",
       },
-      en: "{{word:le}} says it's done: {{Word:wo3}} {{word:chi1}} {{word:le}} (I ate, I've eaten). -{{word:guo4}} says it has happened at least once, some time before: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:zhe4}}-ge {{word:dong4wu4}} (I've seen this animal before).",
-      ru: "{{word:le}} говорит, что дело сделано: {{Word:wo3}} {{word:chi1}} {{word:le}} (Я поел). -{{word:guo4}} говорит, что это хотя бы раз уже было когда-то раньше: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:zhe4}}-ge {{word:dong4wu4}} (Я уже видел это животное).",
+      en: "{{word:le}} says it's done: {{Word:wo3}} {{word:chi1}} {{word:le}} (I ate, I've eaten). -{{word:guo4}} says it has happened at least once, some time before: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:zhe4}}-ge {{word:dong4}}-{{word:wu4}} (I've seen this animal before).",
+      ru: "{{word:le}} говорит, что дело сделано: {{Word:wo3}} {{word:chi1}} {{word:le}} (Я поел). -{{word:guo4}} говорит, что это хотя бы раз уже было когда-то раньше: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:zhe4}}-ge {{word:dong4}}-{{word:wu4}} (Я уже видел это животное).",
     },
   ],
 });

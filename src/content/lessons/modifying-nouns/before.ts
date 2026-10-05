@@ -13,18 +13,18 @@ export default lessonModule({
   ],
   prose: {
     en: [
-      "**To put an adjective before a noun**, join them with -{{word:de}} (like \"{{word:da4}}-{{word:de}} {{word:di4fang1}}\").",
+      "**To put an adjective before a noun**, join them with -{{word:de}} (like \"{{word:da4}}-{{word:de}} {{word:di4}}-{{light:fang1}}\").",
       "",
       "**adjective-{{word:de}} + NOUN**",
       "",
-      "Mandarin speakers often drop -{{word:de}} after a short adjective: {{word:da4}} {{word:di4fang1}}. Hao-shuo-de always keeps it. With -{{word:de}}, it's always correct Mandarin, so it's the only rule you need.",
+      "Mandarin speakers often drop -{{word:de}} after a short adjective: {{word:da4}} {{word:di4}}-{{light:fang1}}. Hao-shuo-de always keeps it. With -{{word:de}}, it's always correct Mandarin, so it's the only rule you need.",
     ],
     ru: [
-      "**Чтобы поставить прилагательное перед существительным**, соедините их с помощью -{{word:de}} (например, «{{word:da4}}-{{word:de}} {{word:di4fang1}}»).",
+      "**Чтобы поставить прилагательное перед существительным**, соедините их с помощью -{{word:de}} (например, «{{word:da4}}-{{word:de}} {{word:di4}}-{{light:fang1}}»).",
       "",
       "**прилагательное-{{word:de}} + СУЩЕСТВИТЕЛЬНОЕ**",
       "",
-      "Носители китайского часто опускают -{{word:de}} после короткого прилагательного: {{word:da4}} {{word:di4fang1}}. В Hǎo-shuō-de его всегда сохраняют. С -{{word:de}} это всегда правильный китайский, так что это единственное правило, которое вам нужно.",
+      "Носители китайского часто опускают -{{word:de}} после короткого прилагательного: {{word:da4}} {{word:di4}}-{{light:fang1}}. В Hǎo-shuō-de его всегда сохраняют. С -{{word:de}} это всегда правильный китайский, так что это единственное правило, которое вам нужно.",
     ],
     tldr: {
       en: "To put an adjective before a noun, join them with {{word:de}}.",
@@ -36,12 +36,12 @@ export default lessonModule({
     },
   },
   info: {
-    en: "adjective + -{{word:de}} + NOUN: {{word:da4}}-{{word:de}} {{word:di4fang1}} (a big place)",
-    ru: "прилагательное + -{{word:de}} + СУЩЕСТВИТЕЛЬНОЕ: {{word:da4}}-{{word:de}} {{word:di4fang1}} (большое место)",
+    en: "adjective + -{{word:de}} + NOUN: {{word:da4}}-{{word:de}} {{word:di4}}-{{light:fang1}} (a big place)",
+    ru: "прилагательное + -{{word:de}} + СУЩЕСТВИТЕЛЬНОЕ: {{word:da4}}-{{word:de}} {{word:di4}}-{{light:fang1}} (большое место)",
   },
   examples: [
     {
-      pinyin: "{{Word:da4}}-{{word:de}} {{word:di4fang1}}.",
+      pinyin: "{{Word:da4}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",
       hanzi: "大的地方。",
       en: "A big place.",
       ru: "Большое место.",
@@ -53,7 +53,7 @@ export default lessonModule({
       ru: "Хорошие родители.",
     },
     {
-      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:xiao3}}-{{word:de}} {{word:di4fang1}}.",
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:xiao3}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",
       hanzi: "这是小的地方。",
       en: "This is a small place.",
       ru: "Это маленькое место.",
@@ -65,7 +65,7 @@ export default lessonModule({
       ru: "Это хорошая вода.",
     },
     {
-      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:da4}}-{{word:de}} {{word:dong4wu4}}.",
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:da4}}-{{word:de}} {{word:dong4}}-{{word:wu4}}.",
       hanzi: "这是大的动物。",
       en: "This is a big animal.",
       ru: "Это большое животное.",
@@ -75,7 +75,7 @@ export default lessonModule({
     {
       en: "a big place",
       ru: "большое место",
-      answer: "{{Word:da4}}-{{word:de}} {{word:di4fang1}}",
+      answer: "{{Word:da4}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
       hanzi: "大的地方",
     },
     {

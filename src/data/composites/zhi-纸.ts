@@ -8,7 +8,7 @@ export default composite({
   en: "paper",
   ru: "бумага",
   hsd: [
-    "{{word:bang1}}-{{word:ren2}}-{{word:zai4}}-{{word:shang4}}-{{word:mian4}}-{{word:xie3}}-{{word:de}} {{word:dong1xi}}",
+    "{{word:bang1}}-{{word:ren2}}-{{word:zai4}}-{{word:shang4}}-{{word:mian4}}-{{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],
   tts: ["帮人在上面写的东西"],
   literal: "the thing that helps people write on it",

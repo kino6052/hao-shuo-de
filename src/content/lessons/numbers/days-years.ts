@@ -72,7 +72,7 @@ export default lessonModule({
       ru: "Я пойду завтра.",
     },
     {
-      pinyin: "{{Word:ming2}}-{{word:nian2}} {{word:wo3}}-{{word:men}} {{word:qu4}} {{word:hen3}} {{word:yuan3}}-{{word:de}} {{word:di4fang1}}.",
+      pinyin: "{{Word:ming2}}-{{word:nian2}} {{word:wo3}}-{{word:men}} {{word:qu4}} {{word:hen3}} {{word:yuan3}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",
       hanzi: "明年我们去很远的地方。",
       en: "Next year we're going somewhere far away.",
       ru: "В следующем году мы поедем далеко.",

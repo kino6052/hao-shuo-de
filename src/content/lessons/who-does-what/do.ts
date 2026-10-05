@@ -69,7 +69,7 @@ export default lessonModule({
   },
   examples: [
     {
-      pinyin: "{{Word:wo3}} {{word:chi1}} {{word:dong1xi}}.",
+      pinyin: "{{Word:wo3}} {{word:chi1}} {{word:dong1}}-{{light:xi1}}.",
       hanzi: "我吃东西。",
       en: "I'm eating.",
       ru: "Я ем.",
@@ -121,7 +121,7 @@ export default lessonModule({
     {
       en: "She's eating.",
       ru: "Она ест.",
-      answer: "{{Word:ta1}} {{word:chi1}} {{word:dong1xi}}.",
+      answer: "{{Word:ta1}} {{word:chi1}} {{word:dong1}}-{{light:xi1}}.",
       hanzi: "她吃东西。",
     },
     {
@@ -147,8 +147,8 @@ export default lessonModule({
     // how do I say "ate" or "will eat"? (the verb never changes; Lesson {{lesson:when-it-happens}})
     {
       question: { en: "How do I say \"ate\" or \"will eat\"?", ru: "Как сказать «ел» или «буду есть»?" },
-      en: "The verb never changes. {{Word:wo3}} {{word:chi1}} {{word:dong1xi}} can mean \"I eat\", \"I ate\", or \"I'll eat\". The situation tells you when, and Lesson {{lesson:when-it-happens}} adds small words for it.",
-      ru: "Глагол никогда не меняется. {{Word:wo3}} {{word:chi1}} {{word:dong1xi}} может значить «Я ем», «Я ел» или «Я буду есть». Когда — понятно из ситуации, а в уроке {{lesson:when-it-happens}} появятся маленькие слова для этого.",
+      en: "The verb never changes. {{Word:wo3}} {{word:chi1}} {{word:dong1}}-{{light:xi1}} can mean \"I eat\", \"I ate\", or \"I'll eat\". The situation tells you when, and Lesson {{lesson:when-it-happens}} adds small words for it.",
+      ru: "Глагол никогда не меняется. {{Word:wo3}} {{word:chi1}} {{word:dong1}}-{{light:xi1}} может значить «Я ем», «Я ел» или «Я буду есть». Когда — понятно из ситуации, а в уроке {{lesson:when-it-happens}} появятся маленькие слова для этого.",
     },
     // can chī mean drink? (no -- drinking is hē)
     {

@@ -7,8 +7,9 @@ export default composite({
   py: "bié",
   en: "don't",
   ru: "не надо",
-  hsd: ["{{word:bu4}} {{word:yao4}}"],
-  tts: ["不要"],
-  fit: "natural",
+  hsd: ["{{word:bie2}}", "{{word:bu4}} {{word:yao4}}"],
+  tts: ["别", "不要"],
+  fit: "word",
   note: "Lesson {{lesson:greetings-and-feelings}}: bù yào xiào!",
+  proposed: true,
 });

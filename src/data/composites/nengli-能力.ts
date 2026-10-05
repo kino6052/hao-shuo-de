@@ -7,7 +7,7 @@ export default composite({
   py: "nénglì",
   en: "ability",
   ru: "способность",
-  hsd: ["{{word:neng2}}-{{word:li4}}", "{{word:neng2}} {{word:nong4}}-{{word:de}} {{word:dong1xi}}"],
+  hsd: ["{{word:neng2}}-{{word:li4}}", "{{word:neng2}} {{word:nong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["能力", "能弄的东西"],
   literal: "can-strength / what you can do",
   fit: "natural",

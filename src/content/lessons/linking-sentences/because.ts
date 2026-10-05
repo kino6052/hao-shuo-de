@@ -54,7 +54,7 @@ export default lessonModule({
       ru: "Так как мне холодно, я не пойду на улицу.",
     },
     {
-      pinyin: "{{Word:yin1wei4}} {{word:hen3}} {{word:re4}}, {{word:wo3}} {{word:shen1ti3}}-{{word:de}} {{word:wai4}}-{{word:mian4}} {{word:bian4}} {{word:hong2se4}} {{word:le}}.",
+      pinyin: "{{Word:yin1wei4}} {{word:hen3}} {{word:re4}}, {{word:wo3}} {{word:shen1ti3}}-{{word:de}} {{word:wai4}}-{{word:mian4}} {{word:bian4}} {{word:hong2}}-{{word:se4}} {{word:le}}.",
       hanzi: "因为很热，我身体的外面变红色了。",
       en: "Because it was hot, my skin turned red.",
       ru: "Так как было жарко, у меня покраснела кожа.",

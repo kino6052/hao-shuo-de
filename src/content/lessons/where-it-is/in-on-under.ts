@@ -17,11 +17,6 @@ export default lessonModule({
       ru: "сторона; присоединяется к слову места: lǐ-miàn, qián-miàn",
     },
     {
-      word: "di4",
-      en: "floor, ground",
-      ru: "пол, земля",
-    },
-    {
       word: "wang3",
       en: "net; the internet",
       ru: "сеть; интернет",
@@ -66,13 +61,13 @@ export default lessonModule({
       ru: "Вода в коробке.",
     },
     {
-      pinyin: "{{Word:gong1ju4}} {{word:zai4}} {{word:di4}}-{{word:shang4}}.",
+      pinyin: "{{Word:gong1}}-{{word:ju4}} {{word:zai4}} {{word:di4}}-{{word:shang4}}.",
       hanzi: "工具在地上。",
       en: "The tool is on the floor.",
       ru: "Инструмент на полу.",
     },
     {
-      pinyin: "{{Word:gong1ju4}} {{word:zai4}} {{word:he2zi}}-{{word:de}} {{word:xia4}}-{{word:mian4}}.",
+      pinyin: "{{Word:gong1}}-{{word:ju4}} {{word:zai4}} {{word:he2zi}}-{{word:de}} {{word:xia4}}-{{word:mian4}}.",
       hanzi: "工具在盒子的下面。",
       en: "The tool is under the box.",
       ru: "Инструмент под коробкой.",

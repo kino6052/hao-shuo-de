@@ -7,7 +7,10 @@ export default composite({
   py: "gōngjù",
   en: "tool",
   ru: "инструмент",
-  hsd: ["{{word:gong1ju4}}"],
+  hsd: ["{{word:gong1}}-{{word:ju4}}"],
   tts: ["工具"],
-  fit: "word",
+  fit: "natural",
+  role: "noun",
+  transparent: true,
+  proposed: true,
 });

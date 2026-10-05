@@ -7,7 +7,7 @@ export default composite({
   py: "xuéxiào",
   en: "school",
   ru: "школа",
-  hsd: ["{{word:xue2}}-{{word:de}} {{word:di4fang1}}"],
+  hsd: ["{{word:xue2}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
   tts: ["学的地方"],
   literal: "learning place",
   fit: "plain",

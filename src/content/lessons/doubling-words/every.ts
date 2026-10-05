@@ -49,7 +49,7 @@ export default lessonModule({
       ru: "В каждом доме есть огонь.",
     },
     {
-      pinyin: "{{Word:ci4}}-{{word:ci4}} {{word:dou1}} {{word:yi1yang4}}.",
+      pinyin: "{{Word:ci4}}-{{word:ci4}} {{word:dou1}} {{word:yi1}}-{{word:yang4}}.",
       hanzi: "次次都一样。",
       en: "It's the same every time.",
       ru: "Каждый раз одно и то же.",
@@ -77,7 +77,7 @@ export default lessonModule({
     {
       en: "It's different every time.",
       ru: "Каждый раз по-другому.",
-      answer: "{{Word:ci4}}-{{word:ci4}} {{word:dou1}} {{word:bu4}} {{word:yi1yang4}}.",
+      answer: "{{Word:ci4}}-{{word:ci4}} {{word:dou1}} {{word:bu4}} {{word:yi1}}-{{word:yang4}}.",
       hanzi: "次次都不一样。",
     },
     {

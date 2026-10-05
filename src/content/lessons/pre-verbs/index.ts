@@ -2,7 +2,7 @@
 // See src/lib/lesson.ts.
 //
 // Rewritten in Phase 2 (BOOK_PLAN.md): want, can, learn to (xué, D40), know
-// how, love to, and maybe (kěnéng, D36). Only words from lessons 2-7; passes every gate.
+// how, love to, and maybe (kě-néng, D36). Only words from lessons 2-7; passes every gate.
 // Word cards sit next to the points that use them.
 import { lesson } from "../../../lib/lesson.ts";
 import want from "./want.ts";

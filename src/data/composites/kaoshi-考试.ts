@@ -8,7 +8,7 @@ export default composite({
   en: "exam",
   ru: "экзамен",
   hsd: [
-    "{{word:kan4}}-{{word:ni3}}-{{word:xue2}}-{{word:le}}-{{word:shen2me}}-{{word:de}} {{word:dong1xi}}",
+    "{{word:kan4}}-{{word:ni3}}-{{word:xue2}}-{{word:le}}-{{word:shen2me}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],
   tts: ["看你学了什么的东西"],
   literal: "a thing that looks at what you learned",

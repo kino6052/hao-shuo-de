@@ -7,7 +7,7 @@ export default composite({
   py: "zhuōzi",
   en: "table",
   ru: "стол",
-  hsd: ["{{word:fang4}}-{{word:dong1xi}}-{{word:de}} {{word:di4fang1}}"],
+  hsd: ["{{word:fang4}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
   tts: ["放东西的地方"],
   literal: "place to put things",
   fit: "plain",

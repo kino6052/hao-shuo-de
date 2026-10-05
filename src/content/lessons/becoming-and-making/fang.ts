@@ -40,7 +40,7 @@ export default lessonModule({
       ru: "Я положил одежду на пол.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:ba3}} {{word:gong1ju4}} {{word:fang4}} {{word:zai4}} {{word:he2zi}}-{{word:li3}} {{word:le}}.",
+      pinyin: "{{Word:ta1}} {{word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:fang4}} {{word:zai4}} {{word:he2zi}}-{{word:li3}} {{word:le}}.",
       hanzi: "他把工具放在盒子里了。",
       en: "He put the tool in the box.",
       ru: "Он положил инструмент в коробку.",
@@ -52,7 +52,7 @@ export default lessonModule({
       ru: "Поставь растение сюда.",
     },
     {
-      pinyin: "{{Word:ni3}} {{word:ba3}} {{word:wo3}}-{{word:de}} {{word:jin1}} {{word:fang4}} {{word:zai4}} {{word:na3li3}} {{word:le}}?",
+      pinyin: "{{Word:ni3}} {{word:ba3}} {{word:wo3}}-{{word:de}} {{word:jin1}} {{word:fang4}} {{word:zai4}} {{word:na3}}-{{word:li3}} {{word:le}}?",
       hanzi: "你把我的金放在哪里了？",
       en: "Where did you put my money?",
       ru: "Куда ты положил мои деньги?",

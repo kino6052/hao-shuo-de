@@ -7,7 +7,7 @@ export default composite({
   py: "shìwù",
   en: "thing",
   ru: "вещь, предмет",
-  hsd: ["{{word:dong1xi}}"],
+  hsd: ["{{word:dong1}}-{{light:xi1}}"],
   tts: ["东西"],
   fit: "word",
   proposed: true,

@@ -8,7 +8,7 @@ export default composite({
   en: "kindergarten",
   ru: "детский сад",
   hsd: [
-    "{{word:hen3}} {{word:xiao3}}-{{word:de}} {{word:ren2}} {{word:wan2r}} {{word:he2}} {{word:xue2}}-{{word:de}} {{word:di4fang1}}",
+    "{{word:hen3}} {{word:xiao3}}-{{word:de}} {{word:ren2}} {{word:wan2r}} {{word:he2}} {{word:xue2}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
   ],
   tts: ["很小的人玩儿和学的地方"],
   literal: "where little children play and learn",

@@ -7,8 +7,9 @@ export default composite({
   py: "báitiān",
   en: "daytime",
   ru: "день",
-  hsd: ["{{word:you3}}-{{word:ri4}}-{{word:de}} {{word:shi2jian1}}"],
-  tts: ["有日的时间"],
+  hsd: ["{{word:bai2}}-{{word:tian1}}", "{{word:you3}}-{{word:ri4}}-{{word:de}} {{word:shi2jian1}}"],
+  tts: ["白天", "有日的时间"],
   literal: "the time when there's sun",
-  fit: "plain",
+  fit: "natural",
+  proposed: true,
 });

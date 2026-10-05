@@ -8,7 +8,7 @@ export default composite({
   en: "dictionary",
   ru: "словарь",
   hsd: [
-    "{{word:you3}} {{word:hen3}} {{word:duo1}} {{word:ci2}}-{{word:de}} {{word:xie3}}-{{word:de}} {{word:dong1xi}}",
+    "{{word:you3}} {{word:hen3}} {{word:duo1}} {{word:ci2}}-{{word:de}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],
   tts: ["有很多词的写的东西"],
   literal: "a written thing with many words",

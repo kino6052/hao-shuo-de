@@ -11,8 +11,8 @@ export default word("xie3", {
   },
   necessity: {
     index: 4,
-    eng: "Write: books, letters, and signs are all {{word:xie3}}-{{word:de}} {{word:dong1xi}}.",
-    rus: "Писать: книги, письма и вывески — всё это {{word:xie3}}-{{word:de}} {{word:dong1xi}}.",
+    eng: "Write: books, letters, and signs are all {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
+    rus: "Писать: книги, письма и вывески — всё это {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
   },
   maps: "sitelen",
 });

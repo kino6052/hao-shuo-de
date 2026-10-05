@@ -20,6 +20,7 @@ const hz = hanziSystem(
     gong1ju4: "工具", zhi1dao4: "知道", hen3: "很", duo1: "多", dong1xi: "东西",
     zai4: "在", cong2: "从", lai2: "来", dao4: "到", jia1: "家", lu4: "路", fei1: "飞",
   })),
+  dict,
 );
 
 // node(id, { key: answer }) with word answers given as nodes.
@@ -31,7 +32,7 @@ describe("roleOf / poolFor", () => {
     expect(roleOf(dict, "shui3")).toBe("noun");
     expect(roleOf(dict, "chi1")).toBe("verb");
     expect(roleOf(dict, "da4")).toBe("adj");
-    expect(roleOf(dict, "hong2se4")).toBe("color");
+    expect(roleOf(dict, "hong2")).toBe("color");
     expect(roleOf(dict, "jue2de")).toBe("verb");
     expect(roleOf(dict, "ma")).toBe(null);
   });
@@ -41,21 +42,21 @@ describe("roleOf / poolFor", () => {
     expect(nouns).toContain("shui3");
     expect(nouns).not.toContain("pang2bian1");
     expect(poolFor(dict, "verb")).not.toContain("zai4");
-    expect(poolFor(dict, "adj")).not.toContain("hong2se4");
+    expect(poolFor(dict, "adj")).not.toContain("hong2");
     expect(poolFor(dict, "adj")).not.toContain("zhen1");
   });
 });
 
 describe("render: nouns", () => {
   test("where: zài + place + position + de", () => {
-    const fish = node("dong4wu4", { where: word(node("shui3")) });
-    expect(render(fish, py)).toBe("zài-shuǐ-lǐ-de dòngwù");
+    const fish = node("动物", { where: word(node("shui3")) });
+    expect(render(fish, py)).toBe("zài-shuǐ-lǐ-de dòng-wù");
     expect(render(fish, hz)).toBe("在水里的动物");
   });
 
   test("from where: cóng + place + lái + de", () => {
-    const n = node("dong4wu4", { from: word(node("shui3")) });
-    expect(render(n, py)).toBe("cóng-shuǐ-lǐ-lái-de dòngwù");
+    const n = node("动物", { from: word(node("shui3")) });
+    expect(render(n, py)).toBe("cóng-shuǐ-lǐ-lái-de dòng-wù");
     expect(render(n, hz)).toBe("从水里来的动物");
   });
 
@@ -66,30 +67,30 @@ describe("render: nouns", () => {
   });
 
   test("the parts follow Mandarin order, not answer order", () => {
-    const n = node("dong4wu4", {
-      color: word(node("huang2se4")),
+    const n = node("动物", {
+      color: word(node("huang2")),
       kind: word(node("xiao3")),
       where: word(node("shui3")),
       from: word(node("jia1")),
     });
-    expect(render(n, py)).toBe("cóng-jiā-lái-de zài-shuǐ-lǐ-de xiǎo-de huángsè-de dòngwù");
+    expect(render(n, py)).toBe("cóng-jiā-lái-de zài-shuǐ-lǐ-de xiǎo-de huáng-de dòng-wù");
   });
 
   test("answers nest, and duō takes hěn", () => {
-    const things = node("dong1xi", { kind: word(node("duo1")) });
-    const computer = node("gong1ju4", { does: word(node("zhi1dao4", { what: word(things) })) });
-    expect(render(computer, py)).toBe("zhīdào-hěn-duō-de-dōngxi-de gōngjù");
+    const things = node("东西", { kind: word(node("duo1")) });
+    const computer = node("工具", { does: word(node("zhi1dao4", { what: word(things) })) });
+    expect(render(computer, py)).toBe("zhīdào-hěn-duō-de-dōng-xi-de gōng-jù");
     expect(render(computer, hz)).toBe("知道很多的东西的工具");
   });
 
   test("a degree goes before the describing word", () => {
-    const n = node("dong4wu4", { kind: word(node("da4", { degree: { value: "hen3" } })) });
-    expect(render(n, py)).toBe("hěn-dà-de dòngwù");
+    const n = node("动物", { kind: word(node("da4", { degree: { value: "hen3" } })) });
+    expect(render(n, py)).toBe("hěn-dà-de dòng-wù");
   });
 
   test("other positions", () => {
-    const n = node("dong1xi", { where: word(node("he2zi"), { position: "under" }) });
-    expect(render(n, py)).toBe("zài-hézi-xià-miàn-de dōngxi");
+    const n = node("东西", { where: word(node("he2zi"), { position: "under" }) });
+    expect(render(n, py)).toBe("zài-hézi-xià-miàn-de dōng-xi");
   });
 });
 
@@ -112,7 +113,7 @@ describe("render: verbs", () => {
     });
     expect(render(n, py)).toBe("zài shuǐ-lǐ yòng jiǎo kuài-kuài-de qù");
     expect(render(node("fei1", { direction: { value: "shang4-qu4" } }), py)).toBe("fēi-shàng-qù");
-    expect(render(node("chi1", { what: word(node("dong1xi")) }), py)).toBe("chī dōngxi");
+    expect(render(node("chi1", { what: word(node("东西")) }), py)).toBe("chī dōng-xi");
   });
 
   test("with lái or qù as the verb, the direction ends in the verb itself", () => {
@@ -139,9 +140,9 @@ describe("render: verbs", () => {
 
 describe("openQuestions", () => {
   test("lists the unanswered questions in asking order", () => {
-    expect(openQuestions(node("dong4wu4"))).toEqual(["kind", "color", "where", "from", "to", "does"]);
-    expect(openQuestions(node("dong4wu4", { kind: word(node("da4")) }))).toEqual(["color", "where", "from", "to", "does"]);
-    expect(openQuestions(node("hong2se4"))).toEqual([]);
+    expect(openQuestions(node("动物"))).toEqual(["kind", "color", "where", "from", "to", "does"]);
+    expect(openQuestions(node("动物", { kind: word(node("da4")) }))).toEqual(["color", "where", "from", "to", "does"]);
+    expect(openQuestions(node("hong2"))).toEqual([]);
   });
 
   test("a verb takes a direction or a place it goes to, not both", () => {
@@ -155,9 +156,9 @@ describe("glossTree", () => {
 
   test("first sense of each word, nested like the word", () => {
     expect(firstSense(dict, "shui3", "eng")).toBe("water");
-    const fish = node("dong4wu4", { where: word(node("shui3", { kind: word(node("da4")) })) });
+    const fish = node("动物", { where: word(node("shui3", { kind: word(node("da4")) })) });
     expect(glossTree(dict, fish, "eng", label)).toEqual({
-      text: firstSense(dict, "dong4wu4", "eng"),
+      text: firstSense(dict, "动物", "eng"),
       items: [
         {
           question: "<where>",

@@ -6,9 +6,9 @@ export default lessonModule({
   id: "name",
   words: [
     {
-      word: "fang1fa3",
-      en: "way, method",
-      ru: "способ, метод",
+      word: "fa3",
+      en: "way, method; {{word:fang1}}-{{word:fa3}}: method",
+      ru: "способ; {{word:fang1}}-{{word:fa3}} — способ",
     },
     {
       word: "ji1",
@@ -23,7 +23,7 @@ export default lessonModule({
       "**description-{{word:de}} + noun**",
       "",
       "You already know this -{{word:de}}: {{word:hao3}}-{{word:de}} {{word:ren2}} (Lesson {{lesson:modifying-nouns}}), {{word:wo3}}-{{word:de}} {{word:bi2zi}} (Lesson {{lesson:pointing}}). The description can be as long as you need.",
-      "Everyday things are named this way too. {{word:sheng1}} means give birth: {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1xi}} (what a plant gives birth to) is fruit, and {{word:fei1}}-{{word:de}} {{word:dong4wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1xi}} (what a flying animal gives birth to) is an egg. Some names are just two words: {{word:shou3}}-{{word:ji1}} (hand machine) is a phone, and {{word:fei1}}-{{word:ji1}} (flying machine) is a plane.",
+      "Everyday things are named this way too. {{word:sheng1}} means give birth: {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (what a plant gives birth to) is fruit, and {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (what a flying animal gives birth to) is an egg. Some names are just two words: {{word:shou3}}-{{word:ji1}} (hand machine) is a phone, and {{word:fei1}}-{{word:ji1}} (flying machine) is a plane.",
     ],
     ru: [
       "**Чтобы назвать то, для чего нет слова**, опишите это, а потом добавьте -{{word:de}} и существительное.",
@@ -31,11 +31,11 @@ export default lessonModule({
       "**описание-{{word:de}} + существительное**",
       "",
       "Это -{{word:de}} вы уже знаете: {{word:hao3}}-{{word:de}} {{word:ren2}} (урок {{lesson:modifying-nouns}}), {{word:wo3}}-{{word:de}} {{word:bi2zi}} (урок {{lesson:pointing}}). Описание может быть сколь угодно длинным.",
-      "Так называют и обычные вещи. {{word:sheng1}} значит «рожать»: {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1xi}} (то, что рождает растение) — фрукт, а {{word:fei1}}-{{word:de}} {{word:dong4wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1xi}} (то, что рождает летающее животное) — яйцо. Некоторые названия — просто два слова: {{word:shou3}}-{{word:ji1}} («ручная машина») — телефон, а {{word:fei1}}-{{word:ji1}} («летающая машина») — самолёт.",
+      "Так называют и обычные вещи. {{word:sheng1}} значит «рожать»: {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (то, что рождает растение) — фрукт, а {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (то, что рождает летающее животное) — яйцо. Некоторые названия — просто два слова: {{word:shou3}}-{{word:ji1}} («ручная машина») — телефон, а {{word:fei1}}-{{word:ji1}} («летающая машина») — самолёт.",
     ],
     tldr: {
-      en: "description-{{word:de}} + noun: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}}, an animal in the water.",
-      ru: "описание-{{word:de}} + существительное: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} — животное в воде.",
+      en: "description-{{word:de}} + noun: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4}}-{{word:wu4}}, an animal in the water.",
+      ru: "описание-{{word:de}} + существительное: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4}}-{{word:wu4}} — животное в воде.",
     },
     necessity: {
       en: "When there's no word for something, you can still name it.",
@@ -43,12 +43,12 @@ export default lessonModule({
     },
   },
   info: {
-    en: "a longer description-{{word:de}} + noun: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} (an animal in the water), {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1xi}} (fruit)",
-    ru: "более длинное описание-{{word:de}} + существительное: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}} (животное в воде), {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1xi}} (фрукт)",
+    en: "a longer description-{{word:de}} + noun: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4}}-{{word:wu4}} (an animal in the water), {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (fruit)",
+    ru: "более длинное описание-{{word:de}} + существительное: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4}}-{{word:wu4}} (животное в воде), {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (фрукт)",
   },
   examples: [
     {
-      pinyin: "{{Word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4wu4}}.",
+      pinyin: "{{Word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4}}-{{word:wu4}}.",
       hanzi: "在水里的动物。",
       en: "An animal that lives in the water.",
       ru: "Животное, которое живёт в воде.",
@@ -60,7 +60,7 @@ export default lessonModule({
       ru: "Сильный человек.",
     },
     {
-      pinyin: "{{Word:xie3}}-{{word:de}} {{word:fang1fa3}}.",
+      pinyin: "{{Word:xie3}}-{{word:de}} {{word:fang1}}-{{word:fa3}}.",
       hanzi: "写的方法。",
       en: "The way of writing.",
       ru: "Способ писать.",
@@ -72,19 +72,19 @@ export default lessonModule({
       ru: "Мой телефон дома.",
     },
     {
-      pinyin: "{{Word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1xi}} {{word:hen3}} {{word:tian2}}.",
+      pinyin: "{{Word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:hen3}} {{word:tian2}}.",
       hanzi: "植物生的东西很甜。",
       en: "Fruit is sweet.",
       ru: "Фрукты сладкие.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:ai4}}-{{word:de}} {{word:yan2se4}} {{word:shi4}} {{word:lan2se4}}.",
+      pinyin: "{{Word:wo3}} {{word:ai4}}-{{word:de}} {{word:yan2se4}} {{word:shi4}} {{word:lan2}}-{{word:se4}}.",
       hanzi: "我爱的颜色是蓝色。",
       en: "The color I love is blue.",
       ru: "Цвет, который я люблю, — синий.",
     },
     {
-      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:fei1}}-{{word:de}} {{word:dong4wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1xi}}.",
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
       hanzi: "这是飞的动物生的东西。",
       en: "This is an egg.",
       ru: "Это яйцо.",
@@ -100,31 +100,31 @@ export default lessonModule({
     {
       en: "I have a way.",
       ru: "У меня есть способ.",
-      answer: "{{Word:wo3}} {{word:you3}} {{word:fang1fa3}}.",
+      answer: "{{Word:wo3}} {{word:you3}} {{word:fang1}}-{{word:fa3}}.",
       hanzi: "我有方法。",
     },
     {
       en: "Where is your phone?",
       ru: "Где твой телефон?",
-      answer: "{{Word:ni3}}-{{word:de}} {{word:shou3}}-{{word:ji1}} {{word:zai4}} {{word:na3li3}}?",
+      answer: "{{Word:ni3}}-{{word:de}} {{word:shou3}}-{{word:ji1}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
       hanzi: "你的手机在哪里？",
     },
     {
       en: "I want fruit.",
       ru: "Я хочу фруктов.",
-      answer: "{{Word:wo3}} {{word:yao4}} {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1xi}}.",
+      answer: "{{Word:wo3}} {{word:yao4}} {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
       hanzi: "我要植物生的东西。",
     },
     {
       en: "This is a valuable thing.",
       ru: "Это ценная вещь.",
-      answer: "{{Word:zhe4}} {{word:shi4}} {{word:you3}}-{{word:jia4zhi2}}-{{word:de}} {{word:dong1xi}}.",
+      answer: "{{Word:zhe4}} {{word:shi4}} {{word:you3}}-{{word:jia4zhi2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
       hanzi: "这是有价值的东西。",
     },
     {
       en: "Do you have a good way?",
       ru: "У тебя есть хороший способ?",
-      answer: "{{Word:ni3}} {{word:you3}} {{word:hao3}}-{{word:de}} {{word:fang1fa3}} {{word:ma}}?",
+      answer: "{{Word:ni3}} {{word:you3}} {{word:hao3}}-{{word:de}} {{word:fang1}}-{{word:fa3}} {{word:ma}}?",
       hanzi: "你有好的方法吗？",
     },
     {

@@ -52,13 +52,13 @@ export default lessonModule({
       ru: "Ты его увидел?",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:ba3}} {{word:gong1ju4}} {{word:nong4}}-{{word:huai4}} {{word:le}}.",
+      pinyin: "{{Word:ta1}} {{word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:nong4}}-{{word:huai4}} {{word:le}}.",
       hanzi: "他把工具弄坏了。",
       en: "He broke the tool.",
       ru: "Он сломал инструмент.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:ba3}} {{word:gong1ju4}} {{word:nong4}}-{{word:hao3}} {{word:le}}.",
+      pinyin: "{{Word:wo3}} {{word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:nong4}}-{{word:hao3}} {{word:le}}.",
       hanzi: "我把工具弄好了。",
       en: "I fixed the tool.",
       ru: "Я починил инструмент.",
