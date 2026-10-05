@@ -7,6 +7,7 @@ export default composite({
   py: "chūxiàn",
   en: "appear",
   ru: "появляться",
+  pos: "verb",
   hsd: ["{{word:chu1}}-{{word:xian4}}", "{{word:you3}} {{word:le}}"],
   tts: ["出现", "有了"],
   literal: "now there is",

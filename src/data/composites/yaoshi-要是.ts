@@ -7,9 +7,10 @@ export default composite({
   py: "yàoshi",
   en: "if",
   ru: "если",
+  pos: "conjunction",
   hsd: ["{{word:yao4}}-{{word:shi4}}", "{{word:ru2guo3}}"],
   tts: ["要是", "如果"],
-  fit: "natural",
   literal: "want-is",
+  fit: "natural",
   proposed: true,
 });

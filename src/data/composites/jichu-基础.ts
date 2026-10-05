@@ -7,6 +7,7 @@ export default composite({
   py: "jīchǔ",
   en: "basis, foundation",
   ru: "основа",
+  pos: "noun",
   hsd: ["{{word:zui4}} {{word:xia4}}-{{word:mian4}}-{{word:de}} {{word:bu4}}-{{light:fen1}}"],
   tts: ["最下面的部分"],
   literal: "the lowest part",

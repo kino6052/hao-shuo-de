@@ -7,6 +7,7 @@ export default composite({
   py: "dàxuéshēng",
   en: "university student",
   ru: "студент",
+  pos: "noun",
   hsd: [
     "{{word:da4}}-{{word:xue2}}-{{word:sheng1}}",
     "{{word:da4}}-{{word:de}} {{word:xue2}}-{{word:de}} {{word:ren2}}",

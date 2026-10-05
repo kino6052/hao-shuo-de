@@ -7,6 +7,7 @@ export default composite({
   py: "fā",
   en: "send",
   ru: "отправлять",
+  pos: "verb",
   hsd: ["{{word:fa1}}"],
   tts: ["发"],
   fit: "word",

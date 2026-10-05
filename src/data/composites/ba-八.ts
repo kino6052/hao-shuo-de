@@ -7,6 +7,7 @@ export default composite({
   py: "bā",
   en: "eight",
   ru: "восемь",
+  pos: "number",
   hsd: ["{{word:ba1}}"],
   tts: ["八"],
   fit: "word",

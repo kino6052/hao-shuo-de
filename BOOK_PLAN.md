@@ -120,6 +120,8 @@ For each teaching point -- one module, one file (2–10 per lesson):
 | D57 | **Composite dictionary, phase 3 (2026-10-05).** The next 500 words by frequency (ranks 1011–1520; 面 was already in) join `src/data/composites.json`, all marked proposed for review: 367 descriptions, 98 dictionary words, 41 combinations Mandarin also uses (rén-kǒu, chū-kǒu, xiǎo-shuō, kāi-xué), and 3 skips; no new gaps. The user's edits: science is xué-de, politics guó-jiā yǒu guānxi-de xué-de, and getting angry shēng-qì (now also in the Frontier chapter). shí stays "ten" and shíjiān one word. With the new composites, check-coverage's redundancy warnings fell from 31 to 22. |
 | D58 | **Build from what we have: a Chinese word made of Hao-shuo-de words is said that way (2026-10-05).** 爱好 is ài-hǎo, 学生 xué-shēng, 生日 shēng-rì, 对不起 duì-bù-qǐ, 车站 chē-zhàn: 49 composites now give the real compound first (fit natural) and keep the old description after it. check-book enforces it: if an entry's Chinese splits into the hanzi of dictionary words, one of its forms must be exactly that compound. A game is wánr-de, like chī-de for food. |
 | D59 | **Swap: the vocabulary is 200 (2026-10-05).** Two words were other words joined, so they leave: yīxià is yī-xià (一下, one + down) and fāshēng is fā-shēng (发生, send out + be born). lìliàng becomes lì (力): the same meaning, shorter, and the root of néng-lì, yòng-lì, and lì-qì (a body's strength). pífū leaves: skin is shēntǐ-de wài-miàn. In come fā (发: tóu-fā hair, chū-fā set out), lì, tiān (天, day and sky: míng-tiān, tiān-qì), nián (年, year: qù-nián, míng-nián), and jī (机, machine: shǒu-jī phone, fēi-jī plane, jī-huì chance), chosen by how many common words they complete and how often they appear in real words. yī and xià are now taught in Time 2 with yī-xià, fā and shēng in Time 1 with fā-shēng, tiān and nián in a new Numbers module (days-years), and jī in Roles of a Word. 16 composites now give their real compound (明天, 手机, 去年 …). 122 original words plus 78 added. |
+| D60 | **Modular data, and roots instead of compounds (2026-10-05).** The data lives in one file per word and per composite (src/data/words, src/data/composites), with categories, opposites and close words in map files and coverage as its own knowledge base; `npm run word` and `npm run refactor` apply word changes from lists kept in refactors/. Catch-all words: one toned sound is one word, and other hanzi with that sound are senses used only inside listed compounds, each explained in the dictionary (shí 时 in shí-jiān); a lesson teaches one sense of a word at most; check-sounds guards it. refactors/D60a–c split 19 compounds into Mandarin's own roots (dōng-xi, dì-fang, kě-néng, gōng-jù ...), made yòu 右, nán 男, bù 部, zuò 坐/作 senses, replaced nòng with zuò 做 and fùmǔ with bàba, māma, and split shíjiān, xiànzài, wèidào, juéde into senses. The 200 cap is gone: the count is reported, not enforced. |
+| D61 | **Closer to Mandarin, by heads and naturalness (2026-10-05).** Every composite now hangs under its head (手机 under jī; src/lib/heads.js) and shows how close it is to Mandarin, from five dots (Mandarin's own word) to one (a description); `npm run report-heads` ranks the roots that would make the most composites Mandarin's own word. From it, 24 words join: ràng (let, make; jiào keeps tell, have), yǐ, hái, xiē, zhǐ, shéi, tóng, ér, zi, shū, zì, xiǎng, zǒu, fàn, wǎn, zuó, bǎi, zhòng, jiàn, tí, huà, cháng, fáng (fáng-jiān, a room) and gānjìng (clean: washing is yòng shuǐ ràng X gānjìng; alcohol is ràng-tóu-biàn-luàn-de shuǐ); new senses: 再 (zài-jiàn), 校 (xué-xiào), 实 (shì-shí ...), 新 (xīn-nián), 孩 (hái-zi), 卫 (wèi-shēng-jiān, bathroom), 名 also in míng-zi. gùnzi leaves: a stick is cháng-de dōng-xi. chī dōng-xi is chī fàn, shénme rén is shéi, hair is tóu-fā. The compound rule now also checks the sound (长 read zhǎng isn't cháng; 以为 yǐwéi isn't yǐ + wèi). 223 words; 457 composites say Mandarin's own word (was 387). Next: the composites are reviewed by hand in batches of 100. |
 
 ---
 
@@ -214,31 +216,31 @@ Approved (D23). It can still be adjusted as each lesson is written, but the rule
 
 | Id  | Lesson                            | Core words                                                 | Theme words                                 | Added words                        | Senses |     New | Total so far |    % |
 | --- | --------------------------------- | ---------------------------------------------------------- | ------------------------------------------- | ---------------------------------- | ------ | ------: | -----------: | ---: |
-| sounds-and-symbols | Sounds and Symbols | — | — | — | — | **0** | 0 / 200 | 0% |
-| words-and-sentences | Words and Sentences | shì, zhè, bù | rén, zhíwù | dōng, xī, nǚ, dòng, wù | nán (male) | **10** | 10 / 200 | 5% |
-| modifying-nouns | Modifying Nouns | hěn, hǎo, dà, xiǎo, de, duō | shuǐ, dì | fāng, bàba, māma, shǎo | — | **12** | 22 / 200 | 11% |
-| pointing | Pointing at People and Things | nà, gè, wǒ, nǐ, tā | jiā, tóu, shǒu, jiǎo | men | — | **10** | 32 / 200 | 16% |
-| who-does-what | Verbs 1 | chī, kàn, tīng, shuō, xiě, yǒu, méi | jīn | hē | — | **9** | 41 / 200 | 21% |
-| questions | Questions and Answers | ma, shénme, wèn, zěnme | hézi, zhǎo | gōng, jù, mǎi, wèi | — | **10** | 51 / 200 | 26% |
-| pre-verbs | Pre-Verbs | yào, néng, zhīdào, ài | děng, yīfu | xué, kě | — | **8** | 59 / 200 | 30% |
-| when-it-happens | Time 1 | le, zài, huì | shuìjiào, yuè, rì | fā, shēng, guò, jiān | xiàn (now), shí (time) | **10** | 69 / 200 | 35% |
-| around-an-action | Time 2 | wán, hòu, kāishǐ, yī, xià | wánr, liú | yòu, cì | — | **9** | 78 / 200 | 39% |
-| where-it-is | Space 1 | lǐ, shàng, miàn, qián, biān, pángbiān | — | nǎ, wǎng, zhōng, zuǒ | yòu (right) | **10** | 88 / 200 | 44% |
-| moving | Space 2 | lái, qù, cóng, qǐ, wài | kǒu | dào, yuǎn, fùjìn, guó, lù, chē | — | **12** | 100 / 200 | 50% |
-| how-much | Modifiers 1 — How much | zhēn | rè, lěng, tián, qíguài, shēntǐ | jiàzhí, kuài, nán, lǎo | wèi (taste), dào (way) | **10** | 110 / 200 | 55% |
-| comparing | Modifiers 2 — Comparing | bǐ | yìng, yuán, gùnzi, xiàn | zuì, yàng, bié, zhǒng, gāo | — | **10** | 120 / 200 | 60% |
-| also-and-all | Modifiers 3 — Also and all | yě | huǒ | kōng, qì, kāi, guān, dēng, míng, dōu, fēn | bù (part) | **10** | 130 / 200 | 65% |
-| becoming-and-making | Modifiers 4 — Becoming and making | biàn, dé, bǎ | huài | luàn, zuò, fàng, lì | — | **8** | 138 / 200 | 69% |
-| direction-and-result | Verbs 2 | — | — | ná, jìn, chū, huí, zhàn, tǎng, fēi, yǎnjing, tōng | zuò (sit) | **9** | 147 / 200 | 74% |
-| numbers | Numbers | liǎng, hào | — | èr, sān, sì, wǔ, liù, qī, bā, jiǔ, shí, diǎn, tiān, nián, suàn | — | **15** | 162 / 200 | 81% |
-| colors | Colors | yánsè | — | bái, sè, hēi, hóng, huáng, lán | — | **7** | 169 / 200 | 85% |
-| roles-of-a-word | Changing the Role of a Word | cí | bízi | fǎ, jī, máo | — | **5** | 174 / 200 | 87% |
-| inside-a-sentence | Relationships 1 | gěi, yòng, hé, duì | mō, dǎ, qún | huò, zhě, guānxi | — | **10** | 184 / 200 | 92% |
-| linking-sentences | Relationships 2 | yīnwèi | sǐ | huó, dàn, rúguǒ, jiù | — | **6** | 190 / 200 | 95% |
-| greetings-and-feelings | Greetings and Feelings | jiào, pà | shēngyīn | xiè, xiào, jué, dìng, xīn | — | **8** | 198 / 200 | 99% |
-| doubling-words | Doubling Words | — | — | — | — | **0** | 198 / 200 | 99% |
-| everyday-patterns | Everyday Patterns | — | — | bāng, jiāo | — | **2** | 200 / 200 | 100% |
-| | **Total** | **65** | **36** | **99** | | **200** | | |
+| sounds-and-symbols | Sounds and Symbols | — | — | — | — | **0** | 0 / 223 | 0% |
+| words-and-sentences | Words and Sentences | shì, zhè, bù | rén, zhíwù | dōng, xī, nǚ, dòng, wù | nán (male) | **10** | 10 / 223 | 4% |
+| modifying-nouns | Modifying Nouns | hěn, hǎo, dà, xiǎo, de, duō | shuǐ, dì | fāng, bàba, māma, shǎo | — | **12** | 22 / 223 | 10% |
+| pointing | Pointing at People and Things | nà, gè, wǒ, nǐ, tā | jiā, tóu, shǒu, jiǎo | men, xiē | — | **11** | 33 / 223 | 15% |
+| who-does-what | Verbs 1 | chī, kàn, tīng, shuō, xiě, yǒu, méi | jīn | hē, fàn, zì, huà, shū | — | **13** | 46 / 223 | 21% |
+| questions | Questions and Answers | ma, shénme, wèn, zěnme | hézi, zhǎo | gōng, jù, tí, mǎi, shéi, wèi | — | **12** | 58 / 223 | 26% |
+| pre-verbs | Pre-Verbs | yào, néng, zhīdào, ài | děng, yīfu | xiǎng, yǐ, xué, kě | — | **10** | 68 / 223 | 30% |
+| when-it-happens | Time 1 | le, zài, huì | shuìjiào, yuè, rì | fā, shēng, guò, jiān | xiàn (now), shí (time) | **10** | 78 / 223 | 35% |
+| around-an-action | Time 2 | wán, hòu, kāishǐ, yī, xià | wánr, liú | yòu, cì | — | **9** | 87 / 223 | 39% |
+| where-it-is | Space 1 | lǐ, shàng, miàn, qián, biān, pángbiān | — | nǎ, fáng, wǎng, zhōng, zuǒ | wèi (guard), yòu (right) | **11** | 98 / 223 | 44% |
+| moving | Space 2 | lái, qù, cóng, qǐ, wài | kǒu | dào, zǒu, yuǎn, fùjìn, guó, lù, chē | xiào (school) | **13** | 111 / 223 | 50% |
+| how-much | Modifiers 1 — How much | zhēn | rè, lěng, tián, qíguài, shēntǐ | jiàzhí, kuài, zhǐ, nán, gānjìng, lǎo | wèi (taste), dào (way) | **12** | 123 / 223 | 55% |
+| comparing | Modifiers 2 — Comparing | bǐ | yìng, yuán, xiàn | cháng, zuì, yàng, bié, tóng, zhǒng, gāo, zhòng | — | **12** | 135 / 223 | 61% |
+| also-and-all | Modifiers 3 — Also and all | yě | huǒ | kōng, qì, kāi, guān, dēng, míng, hái, dōu, fēn | bù (part) | **11** | 146 / 223 | 65% |
+| becoming-and-making | Modifiers 4 — Becoming and making | biàn, dé, bǎ | huài | luàn, zuò, fàng, lì | — | **8** | 154 / 223 | 69% |
+| direction-and-result | Verbs 2 | — | — | ná, jìn, chū, huí, zhàn, tǎng, fēi, jiàn, yǎnjing, tōng | zuò (sit) | **10** | 164 / 223 | 74% |
+| numbers | Numbers | liǎng, hào | — | èr, sān, sì, wǔ, liù, qī, bā, jiǔ, shí, bǎi, diǎn, wǎn, tiān, nián, zuó, suàn | xīn (new) | **18** | 182 / 223 | 82% |
+| colors | Colors | yánsè | — | bái, sè, hēi, hóng, huáng, lán | — | **7** | 189 / 223 | 85% |
+| roles-of-a-word | Changing the Role of a Word | cí | bízi | ér, zi, fǎ, jī, máo | hái (child) | **7** | 196 / 223 | 88% |
+| inside-a-sentence | Relationships 1 | gěi, yòng, hé, duì | mō, dǎ, qún | huò, zhě, guānxi | — | **10** | 206 / 223 | 92% |
+| linking-sentences | Relationships 2 | yīnwèi | sǐ | huó, dàn, rúguǒ, jiù | — | **6** | 212 / 223 | 95% |
+| greetings-and-feelings | Greetings and Feelings | jiào, pà | shēngyīn | xiè, xiào, jué, dìng, xīn | zài (again) | **8** | 220 / 223 | 99% |
+| doubling-words | Doubling Words | — | — | — | — | **0** | 220 / 223 | 99% |
+| everyday-patterns | Everyday Patterns | — | — | bāng, jiāo, ràng | — | **3** | 223 / 223 | 100% |
+| | **Total** | **65** | **35** | **123** | | **223** | | |
 
 **By section:**
 

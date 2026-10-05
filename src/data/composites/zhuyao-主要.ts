@@ -7,6 +7,7 @@ export default composite({
   py: "zhǔyào",
   en: "main",
   ru: "главный",
+  pos: "adjective",
   hsd: ["{{word:da4}} {{word:bu4}}-{{light:fen1}}"],
   tts: ["大部分"],
   literal: "most",

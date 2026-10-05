@@ -7,6 +7,7 @@ export default composite({
   py: "xìngqù",
   en: "interest",
   ru: "интерес",
+  pos: "noun",
   hsd: ["{{word:ai4}}"],
   tts: ["爱"],
   literal: "love",

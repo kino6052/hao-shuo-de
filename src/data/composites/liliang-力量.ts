@@ -7,6 +7,7 @@ export default composite({
   py: "lìliàng",
   en: "strength",
   ru: "сила",
+  pos: "noun",
   hsd: ["{{word:li4}}"],
   tts: ["力"],
   fit: "word",

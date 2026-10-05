@@ -7,6 +7,7 @@ export default composite({
   py: "xīyǐn",
   en: "attract",
   ru: "привлекать",
+  pos: "verb",
   hsd: ["{{word:jiao4}} {{word:ren2}} {{word:yao4}} {{word:lai2}}"],
   tts: ["叫人要来"],
   literal: "make people want to come",

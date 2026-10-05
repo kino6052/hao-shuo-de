@@ -7,6 +7,7 @@ export default composite({
   py: "zhǐchū",
   en: "point out",
   ru: "указать",
+  pos: "verb",
   hsd: ["{{word:jiao4}} {{word:ren2}} {{word:kan4}}-{{word:dao4}}"],
   tts: ["叫人看到"],
   literal: "make people see it",

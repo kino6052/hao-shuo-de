@@ -7,8 +7,10 @@ export default composite({
   py: "wǎn",
   en: "late",
   ru: "поздно",
-  hsd: ["{{word:bi3}} … {{word:hou4}}"],
-  tts: ["比…后"],
+  pos: "adjective",
+  hsd: ["{{word:wan3}}", "{{word:bi3}} … {{word:hou4}}"],
+  tts: ["晚", "比…后"],
   literal: "after …",
-  fit: "plain",
+  fit: "word",
+  proposed: true,
 });

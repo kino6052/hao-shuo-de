@@ -22,14 +22,14 @@ export default lessonModule({
       "",
       "**owner-{{word:de}} + part**",
       "",
-      "{{word:mao2}} is fur: {{word:tou2}}-{{word:shang4}}-{{word:de}} {{word:mao2}} (the fur on the head) is hair.",
+      "{{word:mao2}} is fur: {{word:tou2}}-{{word:fa1}} (the fur on the head) is hair.",
     ],
     ru: [
       "**Чтобы сказать, чья это часть**, поставьте -{{word:de}} между владельцем и частью: {{word:dong4}}-{{word:wu4}}-{{word:de}} {{word:bi2zi}} — нос животного.",
       "",
       "**владелец-{{word:de}} + часть**",
       "",
-      "{{word:mao2}} — это шерсть: {{word:tou2}}-{{word:shang4}}-{{word:de}} {{word:mao2}} («шерсть на голове») — это волосы.",
+      "{{word:mao2}} — это шерсть: {{word:tou2}}-{{word:fa1}} («шерсть на голове») — это волосы.",
     ],
     tldr: {
       en: "owner-{{word:de}} + part: {{word:wo3}}-{{word:de}} {{word:bi2zi}}, my nose.",
@@ -82,8 +82,8 @@ export default lessonModule({
       ru: "Шерсть у этого животного белая.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:tou2}}-{{word:shang4}}-{{word:de}} {{word:mao2}} {{word:shi4}} {{word:hei1}}-{{word:se4}}-{{word:de}}.",
-      hanzi: "他头上的毛是黑色的。",
+      pinyin: "{{Word:ta1}}-{{word:de}} {{word:tou2}}-{{word:fa1}} {{word:shi4}} {{word:hei1}}-{{word:se4}}-{{word:de}}.",
+      hanzi: "他的头发是黑色的。",
       en: "His hair is black.",
       ru: "У него чёрные волосы.",
     },

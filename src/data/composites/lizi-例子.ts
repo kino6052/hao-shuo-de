@@ -7,6 +7,7 @@ export default composite({
   py: "lìzi",
   en: "example",
   ru: "пример",
+  pos: "noun",
   hsd: ["{{word:gei3}} {{word:ren2}} {{word:kan4}}-{{word:de}} {{word:yi1}}-ge"],
   tts: ["给人看的一个"],
   literal: "one to show people",

@@ -7,6 +7,7 @@ export default composite({
   py: "zhèngcháng",
   en: "normal",
   ru: "нормальный",
+  pos: "adjective",
   hsd: ["{{word:bu4}} {{word:qi2guai4}}"],
   tts: ["不奇怪"],
   literal: "not strange",

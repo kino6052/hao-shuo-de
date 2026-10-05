@@ -7,6 +7,7 @@ export default composite({
   py: "hūxī",
   en: "breathe",
   ru: "дышать",
+  pos: "verb",
   hsd: ["{{word:qi4}} {{word:jin4}} {{word:qi4}} {{word:chu1}}"],
   tts: ["气进气出"],
   literal: "air in, air out",

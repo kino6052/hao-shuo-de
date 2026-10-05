@@ -7,6 +7,7 @@ export default composite({
   py: "fēijī",
   en: "airplane",
   ru: "самолёт",
+  pos: "noun",
   hsd: [
     "{{word:fei1}}-{{word:ji1}}",
     "{{word:qu4}}-{{word:hen3}}-{{word:duo1}}-{{word:de}}-{{word:di4}}-{{light:fang1}}-{{word:de}} {{word:fei1}}-{{word:de}} {{word:gong1}}-{{word:ju4}}",

@@ -7,6 +7,7 @@ export default composite({
   py: "jiǔ",
   en: "nine",
   ru: "девять",
+  pos: "number",
   hsd: ["{{word:jiu3}}"],
   tts: ["九"],
   fit: "word",

@@ -7,9 +7,10 @@ export default composite({
   py: "nòng",
   en: "do, make",
   ru: "делать",
+  pos: "verb",
   hsd: ["{{word:zuo4}}"],
   tts: ["做"],
   fit: "plain",
-  proposed: true,
   note: "Hao-shuo-de says zuò for any doing; Mandarin also has 弄 for handling and fixing.",
+  proposed: true,
 });

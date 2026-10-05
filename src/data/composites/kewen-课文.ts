@@ -7,6 +7,7 @@ export default composite({
   py: "kèwén",
   en: "text (of a lesson)",
   ru: "текст урока",
+  pos: "noun",
   hsd: ["{{word:xue2}}-{{word:de}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["学的写的东西"],
   literal: "a written thing to learn",

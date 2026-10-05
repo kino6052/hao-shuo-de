@@ -7,6 +7,7 @@ export default composite({
   py: "shì",
   en: "try",
   ru: "пробовать",
+  pos: "verb",
   hsd: ["{{word:zuo4}} {{word:yi1}}-{{word:xia4}}"],
   tts: ["做一下"],
   literal: "do it for a moment",

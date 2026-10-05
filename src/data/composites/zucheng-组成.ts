@@ -7,6 +7,7 @@ export default composite({
   py: "zǔchéng",
   en: "make up, form",
   ru: "составлять",
+  pos: "verb",
   hsd: ["{{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}"],
   tts: ["放在一起"],
   literal: "put together",

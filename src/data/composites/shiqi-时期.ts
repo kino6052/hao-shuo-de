@@ -7,6 +7,7 @@ export default composite({
   py: "shíqī",
   en: "period",
   ru: "период",
+  pos: "noun",
   hsd: ["X-{{word:de}} {{word:shi2}}-{{word:jian1}}"],
   tts: ["X的时间"],
   literal: "the time of X",

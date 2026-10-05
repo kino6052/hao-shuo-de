@@ -69,8 +69,8 @@ export default lessonModule({
     {
       en: "Who is in the middle?",
       ru: "Кто посередине?",
-      answer: "{{Word:shen2me}} {{word:ren2}} {{word:zai4}} {{word:zhong1}}-{{word:jian1}}?",
-      hanzi: "什么人在中间？",
+      answer: "{{Word:shei2}} {{word:zai4}} {{word:zhong1}}-{{word:jian1}}?",
+      hanzi: "谁在中间？",
     },
     {
       en: "The box in the middle is small.",

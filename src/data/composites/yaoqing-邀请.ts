@@ -7,6 +7,7 @@ export default composite({
   py: "yāoqǐng",
   en: "invite",
   ru: "приглашать",
+  pos: "verb",
   hsd: ["{{word:jiao4}} X {{word:lai2}}"],
   tts: ["叫X来"],
   literal: "ask X to come",

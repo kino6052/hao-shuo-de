@@ -7,6 +7,7 @@ export default composite({
   py: "shìhé",
   en: "suit, fit",
   ru: "подходить",
+  pos: "verb",
   hsd: ["{{word:dui4}} X {{word:hao3}}"],
   tts: ["对X好"],
   literal: "good for X",

@@ -7,6 +7,7 @@ export default composite({
   py: "qì",
   en: "air; anger",
   ru: "воздух; злость",
+  pos: "noun",
   hsd: ["{{word:qi4}}"],
   tts: ["气"],
   fit: "word",

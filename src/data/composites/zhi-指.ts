@@ -7,6 +7,7 @@ export default composite({
   py: "zhǐ",
   en: "point",
   ru: "указывать",
+  pos: "verb",
   hsd: ["{{word:yong4}} {{word:shou3}} {{word:dui4}} X"],
   tts: ["用手对X"],
   literal: "aim your hand at X",

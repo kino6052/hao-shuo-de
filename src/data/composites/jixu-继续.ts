@@ -7,6 +7,7 @@ export default composite({
   py: "jìxù",
   en: "continue",
   ru: "продолжать",
+  pos: "verb",
   hsd: ["verb-{{word:xia4}}-{{word:qu4}}"],
   tts: ["…下去"],
   literal: "keep going down",

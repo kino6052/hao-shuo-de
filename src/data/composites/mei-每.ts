@@ -7,6 +7,7 @@ export default composite({
   py: "měi",
   en: "every",
   ru: "каждый",
+  pos: "pronoun",
   hsd: ["{{word:ren2}}-{{word:ren2}}", "{{word:ge4}}-{{word:ge4}} … {{word:dou1}}"],
   tts: ["人人", "个个…都"],
   literal: "person-person / one-one … all",

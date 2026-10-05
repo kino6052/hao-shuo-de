@@ -7,6 +7,7 @@ export default composite({
   py: "chéngyuán",
   en: "member",
   ru: "член (группы)",
+  pos: "noun",
   hsd: ["{{word:zai4}}-{{word:qun2}}-{{word:li3}}-{{word:de}} {{word:ren2}}"],
   tts: ["在群里的人"],
   literal: "a person in the group",

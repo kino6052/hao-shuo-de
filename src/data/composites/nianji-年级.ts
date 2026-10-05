@@ -7,6 +7,7 @@ export default composite({
   py: "niánjí",
   en: "grade, year at school",
   ru: "класс",
+  pos: "noun",
   hsd: ["{{word:xue2}}-{{word:de}} {{word:hao4}}"],
   tts: ["学的号"],
   literal: "the learning number",

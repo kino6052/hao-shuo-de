@@ -7,6 +7,7 @@ export default composite({
   py: "bùmén",
   en: "department",
   ru: "отдел",
+  pos: "noun",
   hsd: ["{{word:qun2}}"],
   tts: ["群"],
   literal: "group",

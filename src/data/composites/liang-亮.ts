@@ -7,6 +7,7 @@ export default composite({
   py: "liàng",
   en: "bright",
   ru: "яркий",
+  pos: "adjective",
   hsd: ["{{word:ming2}}"],
   tts: ["明"],
   fit: "word",

@@ -7,6 +7,7 @@ export default composite({
   py: "dàngzuò",
   en: "treat as",
   ru: "считать чем-то",
+  pos: "verb",
   hsd: ["{{word:jue2}}-{{light:de2}} X {{word:shi4}} Y"],
   tts: ["觉得X是Y"],
   literal: "think of X as Y",

@@ -7,6 +7,7 @@ export default composite({
   py: "niánjì",
   en: "age",
   ru: "возраст",
+  pos: "noun",
   hsd: ["{{word:duo1}} {{word:da4}}"],
   tts: ["多大"],
   literal: "how big",

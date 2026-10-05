@@ -9,6 +9,8 @@ import { resolveLessonRefs, resolveWordRefs } from "../lib/word-refs.js";
 import { AudioButton } from "./AudioButton.jsx";
 import { t } from "../lib/i18n.js";
 import { dictionaryBuilds, wordBuilderUrl, openInApp } from "../lib/builder-entries.js";
+import { compositeHeads, headHanzi } from "../lib/heads.js";
+import { naturalness, naturalnessSummary } from "../lib/naturalness.js";
 import styles from "./CompositeDictionarySection.module.css";
 
 // The composite dictionary (src/data/composites/): for a common word in
@@ -17,6 +19,8 @@ import styles from "./CompositeDictionarySection.module.css";
 // of the reader's word, under letter headings, like a paper dictionary. The
 // search box and the fit buttons narrow the list. `critical` marks a gap
 // worth a new word; `proposed` marks a description still waiting for review.
+// Each entry shows how close it is to Mandarin (src/lib/naturalness.js):
+// five dots for Mandarin's own word, one for a description.
 const wordIndex = buildWordIndex(dictionary);
 const wordCount = countDictionaryWords(dictionary);
 const FITS = ["word", "natural", "plain", "gap", "skip", "name", "proposed"];
@@ -55,6 +59,23 @@ function alphabetical(lang) {
   }
   return byLetter[lang];
 }
+// zh -> 1..5 (null without a form): how close each entry is to Mandarin.
+const { heads } = compositeHeads(dictionary, composites.entries);
+const NATURAL = new Map(composites.entries.map((e) => [e.zh, naturalness(e, headHanzi(heads.get(e.zh), dictionary.words))]));
+const naturalCounts = { any: 0, 5: 0, 4: 0, 3: 0, 2: 0, 1: 0 };
+for (const s of NATURAL.values()) if (s != null) (naturalCounts[s]++, naturalCounts.any++);
+const SUMMARY = naturalnessSummary(composites.entries.map((entry) => ({ entry, score: NATURAL.get(entry.zh) })));
+
+function Closeness({ score, lang }) {
+  if (score == null) return null;
+  const label = t(lang, `natural_${score}`);
+  return (
+    <span class={styles.closeness} title={`${t(lang, "naturalness")}: ${label}`} aria-label={`${t(lang, "naturalness")}: ${label}`}>
+      <span aria-hidden="true">{"●".repeat(score)}{"○".repeat(5 - score)}</span>
+    </span>
+  );
+}
+
 // "proposed" is a flag on top of a fit, so it gets its own count.
 const counts = composites.entries.reduce(
   (acc, e) => ({ ...acc, [e.fit]: (acc[e.fit] ?? 0) + 1 }),
@@ -84,6 +105,7 @@ function Entry({ entry, lang, built }) {
         <span class={styles.none}>{t(lang, "compositeNone")}</span>
       )}
       {entry.literal && <span class={styles.literal}> “{entry.literal}”</span>}
+      <Closeness score={NATURAL.get(entry.zh)} lang={lang} />
       {built && (
         <a
           class={styles.howBuilt}
@@ -112,6 +134,7 @@ function Entry({ entry, lang, built }) {
 export function CompositeDictionarySection({ lang }) {
   const [query, setQuery] = useState("");
   const [fit, setFit] = useState("all");
+  const [close, setClose] = useState("any");
   // Which entries the Word Builder can show, read just after the first draw.
   const [built, setBuilt] = useState(() => new Set());
   useEffect(() => {
@@ -121,6 +144,7 @@ export function CompositeDictionarySection({ lang }) {
   const q = query.trim().toLowerCase();
   const shown = (e) =>
     (fit === "all" || e.fit === fit || (fit === "proposed" && e.proposed)) &&
+    (close === "any" || NATURAL.get(e.zh) === Number(close)) &&
     (!q || [e.en, e.ru, e.zh, e.py].some((s) => s?.toLowerCase().includes(q)));
   const groups = alphabetical(lang)
     .map((g) => ({ letter: g.letter, entries: g.entries.filter(shown) }))
@@ -146,6 +170,20 @@ export function CompositeDictionarySection({ lang }) {
           </button>
         ))}
       </div>
+      <div class={styles.filters} role="group" aria-label={t(lang, "naturalness")}>
+        <span class={styles.filterLabel}>{t(lang, "naturalness")}:</span>
+        {["any", "5", "4", "3", "2", "1"].map((n) => (
+          <button
+            key={n}
+            class={n === close ? styles.filterOn : styles.filter}
+            onClick={() => setClose(n)}
+            title={n === "any" ? undefined : t(lang, `natural_${n}`)}
+          >
+            {n === "any" ? t(lang, "naturalAll") : `${"●".repeat(Number(n))} ${t(lang, `natural_${n}`)}`} · {naturalCounts[n]}
+          </button>
+        ))}
+      </div>
+      <p class={styles.summary}>{t(lang, "naturalSummary")(naturalCounts[5], naturalCounts.any, SUMMARY.weighted.toFixed(1))}</p>
       {groups.map((g) => (
         <div key={g.letter}>
           <h3 class={styles.letter}>{g.letter}</h3>

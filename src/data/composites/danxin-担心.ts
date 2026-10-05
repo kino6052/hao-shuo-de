@@ -7,6 +7,7 @@ export default composite({
   py: "dānxīn",
   en: "worry",
   ru: "волноваться",
+  pos: "verb",
   hsd: ["{{word:pa4}}"],
   tts: ["怕"],
   fit: "natural",

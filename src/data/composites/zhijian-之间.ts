@@ -7,6 +7,7 @@ export default composite({
   py: "zhījiān",
   en: "between",
   ru: "между",
+  pos: "noun",
   hsd: ["{{word:zai4}} A {{word:he2}} B {{word:zhong1}}-{{word:jian1}}"],
   tts: ["在A和B中间"],
   literal: "in the middle of A and B",

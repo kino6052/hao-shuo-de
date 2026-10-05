@@ -7,6 +7,7 @@ export default composite({
   py: "érqiě",
   en: "moreover",
   ru: "к тому же",
+  pos: "conjunction",
   hsd: ["{{word:ye3}}"],
   tts: ["也"],
   literal: "also",

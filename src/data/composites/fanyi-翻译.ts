@@ -7,6 +7,7 @@ export default composite({
   py: "fānyì",
   en: "translate",
   ru: "переводить",
+  pos: "verb",
   hsd: [
     "{{word:ba3}} {{word:yi1}}-{{word:zhong3}} {{word:shuo1}}-{{word:de}} {{word:bian4}} {{word:bie2}}-{{word:de}} {{word:shuo1}}-{{word:de}}",
   ],

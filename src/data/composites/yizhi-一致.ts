@@ -7,6 +7,7 @@ export default composite({
   py: "yízhì",
   en: "consistent, the same",
   ru: "единый",
+  pos: "adjective",
   hsd: ["{{word:yi1}}-{{word:yang4}}"],
   tts: ["一样"],
   literal: "same",

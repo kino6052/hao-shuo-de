@@ -14,7 +14,7 @@ export default categories([
       {
         key: "places-as-things",
         title: { eng: "Places", rus: "Места", zh: "地方" },
-        wordIds: ["jia1", "guo2"],
+        wordIds: ["jia1", "guo2", "fang2"],
       },
       {
         key: "things-of-nature",
@@ -29,12 +29,12 @@ export default categories([
       {
         key: "people-kinship",
         title: { eng: "People & Kinship", rus: "Люди и родство", zh: "人与亲属" },
-        wordIds: ["ren2", "nv3", "qun2", "guan1xi", "ba4ba", "ma1ma"],
+        wordIds: ["ren2", "nv3", "qun2", "guan1xi", "ba4ba", "ma1ma", "er2"],
       },
       {
         key: "food-drink",
         title: { eng: "Food & Drink", rus: "Еда и питьё", zh: "食物与饮品" },
-        wordIds: ["shui3"],
+        wordIds: ["shui3", "fan4"],
       },
       {
         key: "tools-objects",
@@ -43,7 +43,7 @@ export default categories([
           {
             key: "implements",
             title: { eng: "Tools", rus: "Орудия", zh: "器具" },
-            wordIds: ["ju4", "ji1", "gun4zi", "deng1", "che1", "wang3"],
+            wordIds: ["ju4", "ji1", "deng1", "che1", "wang3"],
           },
           {
             key: "containers-materials",
@@ -55,13 +55,13 @@ export default categories([
             title: { eng: "Valuables & Wearables", rus: "Ценности и одежда", zh: "财物与穿戴" },
             wordIds: ["jin1", "yi1fu"],
           },
-          { key: "general", title: null, wordIds: ["wu4"] },
+          { key: "general", title: null, wordIds: ["wu4", "shu1"] },
         ],
       },
       {
         key: "abstract-substantives",
         title: { eng: "Abstract Words", rus: "Абстрактные слова", zh: "抽象词" },
-        wordIds: ["ci2", "li4", "sheng1yin1", "jia4zhi2", "fa3", "gong1"],
+        wordIds: ["ci2", "li4", "sheng1yin1", "jia4zhi2", "fa3", "gong1", "zi4", "ti2"],
       },
       {
         key: "kind-part",
@@ -73,7 +73,7 @@ export default categories([
   {
     key: "determiners",
     title: { eng: "Sameness & Difference", rus: "Сходство и различие", zh: "异同" },
-    wordIds: ["bi3", "bie2"],
+    wordIds: ["bi3", "bie2", "tong2"],
   },
   {
     key: "quantifiers",
@@ -100,12 +100,13 @@ export default categories([
           "jiu3",
           "shi2",
           "er4",
+          "bai3",
         ],
       },
       {
         key: "amount",
         title: { eng: "Amount", rus: "Количество", zh: "数量" },
-        wordIds: ["duo1", "dou1", "shao3"],
+        wordIds: ["duo1", "dou1", "shao3", "xie1", "zhi3"],
       },
     ],
   },
@@ -136,12 +137,12 @@ export default categories([
       {
         key: "physical-property",
         title: { eng: "Physical Property", rus: "Физическое свойство", zh: "物理属性" },
-        wordIds: ["ying4", "kong1", "yuan2", "ming2"],
+        wordIds: ["ying4", "kong1", "yuan2", "ming2", "zhong4", "gan1jing4"],
       },
       {
         key: "size",
         title: { eng: "Size", rus: "Размер", zh: "大小" },
-        wordIds: ["xiao3", "da4", "gao1"],
+        wordIds: ["xiao3", "da4", "gao1", "chang2"],
       },
     ],
   },
@@ -157,19 +158,19 @@ export default categories([
       {
         key: "cognition",
         title: { eng: "Cognition", rus: "Познание", zh: "认知" },
-        wordIds: ["jue2", "zhi1dao4", "xue2", "jiao1", "suan4"],
+        wordIds: ["jue2", "zhi1dao4", "xue2", "jiao1", "suan4", "xiang3"],
       },
       {
         key: "perception",
         title: { eng: "Perception", rus: "Восприятие", zh: "感知" },
-        wordIds: ["kan4", "ting1"],
+        wordIds: ["kan4", "ting1", "jian4"],
       },
     ],
   },
   {
     key: "speech",
     title: { eng: "Speech", rus: "Речь", zh: "言语" },
-    wordIds: ["shuo1", "xie3", "wen4", "jiao4"],
+    wordIds: ["shuo1", "xie3", "wen4", "jiao4", "hua4"],
   },
   {
     key: "actions",
@@ -208,6 +209,7 @@ export default categories([
           "zhan4",
           "tang3",
           "tong1",
+          "zou3",
         ],
       },
       {
@@ -217,7 +219,7 @@ export default categories([
           rus: "Изменение состояния и общее действие",
           zh: "状态变化与一般动作",
         },
-        wordIds: ["bian4", "fa1", "zuo4"],
+        wordIds: ["bian4", "fa1", "zuo4", "rang4"],
       },
       {
         key: "manipulation-contact",
@@ -254,7 +256,7 @@ export default categories([
   {
     key: "time",
     title: { eng: "Time", rus: "Время", zh: "时间" },
-    wordIds: ["tian1", "nian2", "dian3"],
+    wordIds: ["tian1", "nian2", "dian3", "wan3", "zuo2"],
   },
   {
     key: "space",
@@ -305,7 +307,7 @@ export default categories([
       {
         key: "grammatical-particles",
         title: { eng: "Grammatical Particles", rus: "Грамматические частицы", zh: "语法助词" },
-        wordIds: ["ba3", "de", "le", "ma", "guo4", "zhe3"],
+        wordIds: ["ba3", "de", "le", "ma", "guo4", "zhe3", "zi"],
       },
       {
         key: "negation",
@@ -315,17 +317,17 @@ export default categories([
       {
         key: "conjunction",
         title: { eng: "Conjunction", rus: "Союзы", zh: "连接" },
-        wordIds: ["dan4", "he2", "huo4", "ye3", "you4", "yin1wei4", "ru2guo3", "jiu4"],
+        wordIds: ["dan4", "he2", "huo4", "ye3", "you4", "yin1wei4", "ru2guo3", "jiu4", "hai2"],
       },
       {
         key: "interrogatives",
         title: { eng: "Question words", rus: "Вопросительные слова", zh: "疑问词" },
-        wordIds: ["zen3me", "na3"],
+        wordIds: ["zen3me", "na3", "shei2"],
       },
       {
         key: "modality",
         title: { eng: "Ability & Possibility", rus: "Способность и возможность", zh: "能力与可能" },
-        wordIds: ["neng2", "hui4", "ke3"],
+        wordIds: ["neng2", "hui4", "ke3", "yi3"],
       },
       {
         key: "truth-value",

@@ -7,6 +7,7 @@ export default composite({
   py: "qíguài",
   en: "strange",
   ru: "странный",
+  pos: "adjective",
   hsd: ["{{word:qi2guai4}}"],
   tts: ["奇怪"],
   fit: "word",

@@ -7,6 +7,7 @@ export default composite({
   py: "bōli",
   en: "glass",
   ru: "стекло",
+  pos: "noun",
   hsd: [
     "{{word:neng2}} {{word:kan4}}-{{word:dao4}} {{word:hou4}}-{{word:mian4}}-{{word:de}} {{word:ying4}} {{word:dong1}}-{{light:xi1}}",
   ],

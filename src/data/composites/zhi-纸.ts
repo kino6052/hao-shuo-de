@@ -7,6 +7,7 @@ export default composite({
   py: "zhǐ",
   en: "paper",
   ru: "бумага",
+  pos: "noun",
   hsd: [
     "{{word:bang1}}-{{word:ren2}}-{{word:zai4}}-{{word:shang4}}-{{word:mian4}}-{{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],

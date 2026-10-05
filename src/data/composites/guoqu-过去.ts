@@ -7,6 +7,7 @@ export default composite({
   py: "guòqù",
   en: "the past",
   ru: "прошлое",
+  pos: "noun",
   hsd: ["{{word:guo4}}-{{word:qu4}}"],
   tts: ["过去"],
   fit: "natural",

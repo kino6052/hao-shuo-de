@@ -7,8 +7,9 @@ export default composite({
   py: "shéi/shuí",
   en: "who",
   ru: "кто",
-  hsd: ["{{word:shen2me}} {{word:ren2}}"],
-  tts: ["什么人"],
+  pos: "pronoun",
+  hsd: ["{{word:shei2}}"],
+  tts: ["谁"],
   literal: "what person",
   fit: "natural",
 });

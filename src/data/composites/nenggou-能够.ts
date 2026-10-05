@@ -7,6 +7,7 @@ export default composite({
   py: "nénggòu",
   en: "can, be able to",
   ru: "мочь",
+  pos: "verb",
   hsd: ["{{word:neng2}}"],
   tts: ["能"],
   fit: "word",

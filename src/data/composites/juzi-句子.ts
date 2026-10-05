@@ -7,6 +7,7 @@ export default composite({
   py: "jùzi",
   en: "sentence",
   ru: "предложение",
+  pos: "noun",
   hsd: ["{{word:ci2}}-{{word:de}} {{word:qun2}}"],
   tts: ["词的群"],
   literal: "a group of words",

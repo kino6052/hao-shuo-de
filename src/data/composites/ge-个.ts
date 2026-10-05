@@ -7,6 +7,7 @@ export default composite({
   py: "gè",
   en: "universal classifier",
   ru: "универсальный классификатор",
+  pos: "classifier",
   hsd: ["{{word:ge4}}"],
   tts: ["个"],
   fit: "word",

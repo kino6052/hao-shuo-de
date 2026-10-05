@@ -7,6 +7,7 @@ export default composite({
   py: "zhíwù",
   en: "plant",
   ru: "растение",
+  pos: "noun",
   hsd: ["{{word:zhi2wu4}}"],
   tts: ["植物"],
   fit: "word",

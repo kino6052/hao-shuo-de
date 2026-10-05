@@ -7,10 +7,11 @@ export default composite({
   py: "dìfang",
   en: "a place",
   ru: "место",
+  pos: "noun",
   hsd: ["{{word:di4}}-{{light:fang1}}"],
   tts: ["地方"],
   fit: "natural",
-  role: "noun",
   transparent: true,
+  role: "noun",
   proposed: true,
 });

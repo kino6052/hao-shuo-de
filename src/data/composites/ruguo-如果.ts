@@ -7,6 +7,7 @@ export default composite({
   py: "rúguǒ",
   en: "if",
   ru: "если",
+  pos: "conjunction",
   hsd: ["{{word:ru2guo3}}"],
   tts: ["如果"],
   fit: "word",

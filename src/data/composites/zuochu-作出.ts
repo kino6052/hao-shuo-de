@@ -7,6 +7,7 @@ export default composite({
   py: "zuòchū",
   en: "make, put forward",
   ru: "сделать, выдвинуть",
+  pos: "verb",
   hsd: ["{{word:zuo4}}-{{word:chu1}}"],
   tts: ["做出"],
   literal: "make come out",

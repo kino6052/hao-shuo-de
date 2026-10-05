@@ -7,6 +7,7 @@ export default composite({
   py: "shēngyi",
   en: "business",
   ru: "бизнес, торговля",
+  pos: "noun",
   hsd: [
     "{{word:mai3}} {{word:dong1}}-{{light:xi1}} {{word:he2}} {{word:gei3}}-{{word:dong1}}-{{light:xi1}}-{{word:de2}}-{{word:jin1}}",
   ],

@@ -7,6 +7,7 @@ export default composite({
   py: "yě",
   en: "also",
   ru: "тоже",
+  pos: "adverb",
   hsd: ["{{word:ye3}}"],
   tts: ["也"],
   fit: "word",

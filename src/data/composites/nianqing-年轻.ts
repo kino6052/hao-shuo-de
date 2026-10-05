@@ -7,6 +7,7 @@ export default composite({
   py: "niánqīng",
   en: "young",
   ru: "молодой",
+  pos: "adjective",
   hsd: ["{{word:bu4}} {{word:lao3}}"],
   tts: ["不老"],
   literal: "not old",

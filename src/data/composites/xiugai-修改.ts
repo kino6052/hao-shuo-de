@@ -7,6 +7,7 @@ export default composite({
   py: "xiūgǎi",
   en: "modify",
   ru: "изменять, исправлять",
+  pos: "verb",
   hsd: ["{{word:ba3}} X {{word:bian4}} {{word:yi1}}-{{word:dian3}}"],
   tts: ["把X变一点"],
   literal: "change X a little",

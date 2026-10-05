@@ -7,6 +7,7 @@ export default composite({
   py: "shǒu",
   en: "hand",
   ru: "рука",
+  pos: "noun",
   hsd: ["{{word:shou3}}"],
   tts: ["手"],
   fit: "word",

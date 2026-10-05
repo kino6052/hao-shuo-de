@@ -7,6 +7,7 @@ export default composite({
   py: "rénkǒu",
   en: "population",
   ru: "население",
+  pos: "noun",
   hsd: ["{{word:ren2}}-{{word:kou3}}"],
   tts: ["人口"],
   literal: "people's mouths",

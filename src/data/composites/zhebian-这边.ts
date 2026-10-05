@@ -7,6 +7,7 @@ export default composite({
   py: "zhèbiān",
   en: "here, this side",
   ru: "здесь",
+  pos: "pronoun",
   hsd: ["{{word:zhe4}}-{{word:bian1}}"],
   tts: ["这边"],
   literal: "this side",

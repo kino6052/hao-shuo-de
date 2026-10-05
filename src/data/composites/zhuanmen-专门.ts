@@ -7,6 +7,7 @@ export default composite({
   py: "zhuānmén",
   en: "specially",
   ru: "специально",
+  pos: "adverb",
   hsd: ["{{word:jiu4}} {{word:zuo4}} {{word:zhe4}}-ge"],
   tts: ["就做这个"],
   literal: "just doing this",

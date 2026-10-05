@@ -7,6 +7,7 @@ export default composite({
   py: "lǎorén",
   en: "old person",
   ru: "пожилой человек",
+  pos: "noun",
   hsd: ["{{word:lao3}} {{word:ren2}}"],
   tts: ["老人"],
   literal: "old person",

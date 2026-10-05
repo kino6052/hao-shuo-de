@@ -7,6 +7,7 @@ export default composite({
   py: "chūlái",
   en: "come out",
   ru: "выходить",
+  pos: "verb",
   hsd: ["{{word:chu1}}-{{word:lai2}}"],
   tts: ["出来"],
   literal: "out-come",

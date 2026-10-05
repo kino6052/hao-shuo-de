@@ -7,6 +7,7 @@ export default composite({
   py: "yǒuguān",
   en: "related",
   ru: "связанный",
+  pos: "verb",
   hsd: ["{{word:you3}}-{{word:guan1}}", "{{word:you3}} {{word:guan1xi}}"],
   tts: ["有关", "有关系"],
   literal: "has to do with / has a connection",

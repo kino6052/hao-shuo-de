@@ -7,6 +7,7 @@ export default composite({
   py: "zhōuwéi",
   en: "surroundings",
   ru: "вокруг, окрестности",
+  pos: "noun",
   hsd: ["{{word:fu4jin4}}"],
   tts: ["附近"],
   fit: "word",

@@ -7,6 +7,7 @@ export default composite({
   py: "gēnjù",
   en: "according to",
   ru: "согласно",
+  pos: "verb",
   hsd: ["{{word:yong4}} X"],
   tts: ["用X"],
   literal: "using X",

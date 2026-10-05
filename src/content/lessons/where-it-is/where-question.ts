@@ -10,6 +10,17 @@ export default lessonModule({
       en: "which; {{word:na3}}-{{word:li3}}: where",
       ru: "какой; {{word:na3}}-{{word:li3}} — где",
     },
+    {
+      word: "fang2",
+      en: "house, room; {{word:fang2}}-{{word:jian1}}: room",
+      ru: "дом, комната; {{word:fang2}}-{{word:jian1}} — комната",
+    },
+    {
+      word: "wei4",
+      sense: "guard",
+      en: "keep clean (in {{word:wei4}}-{{word:sheng1}}-{{word:jian1}}: bathroom)",
+      ru: "беречь (в {{word:wei4}}-{{word:sheng1}}-{{word:jian1}} — туалет)",
+    },
   ],
   prose: {
     en: [
@@ -18,6 +29,7 @@ export default lessonModule({
       "**Who + {{word:zai4}} {{word:na3}}-{{word:li3}}?**",
       "",
       "Answer with {{word:zhe4}}-{{word:li3}} (\"here\") or {{word:na4}}-{{word:li3}} (\"there\").",
+      "Rooms: {{word:fang2}}-{{word:jian1}} is a room, and {{word:wei4}}-{{word:sheng1}}-{{word:jian1}} (卫生间) is the bathroom.",
     ],
     ru: [
       "**Чтобы спросить «где?»**, поставьте {{word:na3}}-{{word:li3}} туда, где стояло бы место.",
@@ -25,6 +37,7 @@ export default lessonModule({
       "**Кто + {{word:zai4}} {{word:na3}}-{{word:li3}}?**",
       "",
       "Отвечайте {{word:zhe4}}-{{word:li3}} («здесь») или {{word:na4}}-{{word:li3}} («там»).",
+      "Комнаты: {{word:fang2}}-{{word:jian1}} — комната, а {{word:wei4}}-{{word:sheng1}}-{{word:jian1}} (卫生间) — туалет.",
     ],
     tldr: {
       en: "{{word:na3}}-{{word:li3}} means \"where\". Answer with {{word:zhe4}}-{{word:li3}} (here) or {{word:na4}}-{{word:li3}} (there).",
@@ -58,6 +71,24 @@ export default lessonModule({
       en: "It's over there.",
       ru: "Она вон там.",
     },
+    {
+      pinyin: "{{Word:wei4}}-{{word:sheng1}}-{{word:jian1}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
+      hanzi: "卫生间在哪里？",
+      en: "Where's the bathroom?",
+      ru: "Где туалет?",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:zai4}} {{word:fang2}}-{{word:jian1}}-{{word:li3}}.",
+      hanzi: "她在房间里。",
+      en: "She's in the room.",
+      ru: "Она в комнате.",
+    },
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:fang2}}-{{word:jian1}} {{word:hen3}} {{word:xiao3}}.",
+      hanzi: "我的房间很小。",
+      en: "My room is small.",
+      ru: "Моя комната маленькая.",
+    },
   ],
   exercises: [
     {
@@ -65,6 +96,18 @@ export default lessonModule({
       ru: "Где мой инструмент?",
       answer: "{{Word:wo3}}-{{word:de}} {{word:gong1}}-{{word:ju4}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
       hanzi: "我的工具在哪里？",
+    },
+    {
+      en: "Where's your room?",
+      ru: "Где твоя комната?",
+      answer: "{{Word:ni3}}-{{word:de}} {{word:fang2}}-{{word:jian1}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
+      hanzi: "你的房间在哪里？",
+    },
+    {
+      en: "Where's the bathroom?",
+      ru: "Где туалет?",
+      answer: "{{Word:wei4}}-{{word:sheng1}}-{{word:jian1}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
+      hanzi: "卫生间在哪里？",
     },
   ],
 });

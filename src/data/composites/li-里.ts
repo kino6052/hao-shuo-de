@@ -7,6 +7,7 @@ export default composite({
   py: "lǐ",
   en: "inside",
   ru: "внутри",
+  pos: "noun",
   hsd: ["{{word:li3}}"],
   tts: ["里面"],
   fit: "word",

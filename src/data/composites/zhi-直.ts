@@ -7,8 +7,11 @@ export default composite({
   py: "zhí",
   en: "straight",
   ru: "прямой",
-  hsd: ["{{word:he2}} {{word:gun4zi}} {{word:yi1}}-{{word:yang4}}"],
-  tts: ["和棍子一样"],
+  pos: "adjective",
+  hsd: [
+    "{{word:he2}} {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:yi1}}-{{word:yang4}}",
+  ],
+  tts: ["和长的东西一样"],
   literal: "like a stick",
   fit: "plain",
 });

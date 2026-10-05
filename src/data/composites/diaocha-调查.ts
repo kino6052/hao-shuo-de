@@ -7,6 +7,7 @@ export default composite({
   py: "diàochá",
   en: "investigate",
   ru: "расследовать",
+  pos: "verb",
   hsd: ["{{word:zhao3}} {{word:zhen1}}-{{word:de}}"],
   tts: ["找真的"],
   literal: "look for what's true",

@@ -7,8 +7,13 @@ export default composite({
   py: "tóngxué",
   en: "classmate",
   ru: "одноклассник",
-  hsd: ["{{word:yi1}}-{{word:qi3}} {{word:xue2}}-{{word:de}} {{word:ren2}}"],
-  tts: ["一起学的人"],
+  pos: "noun",
+  hsd: [
+    "{{word:tong2}}-{{word:xue2}}",
+    "{{word:yi1}}-{{word:qi3}} {{word:xue2}}-{{word:de}} {{word:ren2}}",
+  ],
+  tts: ["同学", "一起学的人"],
   literal: "person who learns with you",
   fit: "natural",
+  proposed: true,
 });

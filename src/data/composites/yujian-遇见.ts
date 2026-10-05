@@ -7,6 +7,7 @@ export default composite({
   py: "yùjiàn",
   en: "meet",
   ru: "встретить",
+  pos: "verb",
   hsd: ["{{word:kan4}}-{{word:dao4}}"],
   tts: ["看到"],
   literal: "see",

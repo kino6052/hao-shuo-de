@@ -7,6 +7,7 @@ export default composite({
   py: "rè’ài",
   en: "love deeply",
   ru: "горячо любить",
+  pos: "verb",
   hsd: ["{{word:re4}}-{{word:ai4}}", "{{word:hen3}} {{word:ai4}}"],
   tts: ["热爱", "很爱"],
   literal: "hot love / love very much",

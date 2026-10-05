@@ -7,6 +7,7 @@ export default composite({
   py: "jiǎnchá",
   en: "inspect",
   ru: "проверять",
+  pos: "verb",
   hsd: ["{{word:hao3}}-{{word:hao3}} {{word:kan4}}"],
   tts: ["好好看"],
   literal: "look carefully",

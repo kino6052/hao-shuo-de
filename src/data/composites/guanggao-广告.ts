@@ -7,6 +7,7 @@ export default composite({
   py: "guǎnggào",
   en: "advertisement",
   ru: "реклама",
+  pos: "noun",
   hsd: ["{{word:jiao4}}-{{word:ren2}}-{{word:mai3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["叫人买的东西"],
   literal: "something that gets people to buy",

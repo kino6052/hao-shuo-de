@@ -7,6 +7,7 @@ export default composite({
   py: "piàoliang",
   en: "beautiful",
   ru: "красивый",
+  pos: "adjective",
   hsd: ["{{word:hao3}}-{{word:kan4}}"],
   tts: ["好看"],
   literal: "good to look at",

@@ -7,6 +7,7 @@ export default composite({
   py: "yùn",
   en: "transport",
   ru: "перевозить",
+  pos: "verb",
   hsd: ["{{word:yong4}} {{word:che1}} {{word:na2}}-{{word:qu4}}"],
   tts: ["用车拿去"],
   literal: "take it away by car",

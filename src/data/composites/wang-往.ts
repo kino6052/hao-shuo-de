@@ -7,6 +7,7 @@ export default composite({
   py: "wǎng",
   en: "toward",
   ru: "к, в сторону",
+  pos: "verb",
   hsd: ["{{word:dui4}}"],
   tts: ["对"],
   fit: "plain",

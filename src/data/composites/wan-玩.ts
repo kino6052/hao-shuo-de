@@ -7,6 +7,7 @@ export default composite({
   py: "wán",
   en: "play",
   ru: "играть",
+  pos: "verb",
   hsd: ["{{word:wan2r}}"],
   tts: ["玩儿"],
   fit: "word",

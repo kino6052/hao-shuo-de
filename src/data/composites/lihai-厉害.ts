@@ -7,6 +7,7 @@ export default composite({
   py: "lìhai",
   en: "impressive; severe",
   ru: "крутой; сильный",
+  pos: "adjective",
   hsd: ["{{word:hen3}} {{word:you3}} {{word:li4}}"],
   tts: ["很有力"],
   literal: "very powerful",

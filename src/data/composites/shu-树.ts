@@ -7,6 +7,7 @@ export default composite({
   py: "shù",
   en: "tree",
   ru: "дерево",
+  pos: "noun",
   hsd: ["{{word:da4}}-{{word:de}} {{word:zhi2wu4}}"],
   tts: ["大的植物"],
   literal: "big plant",

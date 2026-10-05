@@ -7,6 +7,7 @@ export default composite({
   py: "cōngmíng",
   en: "smart",
   ru: "умный",
+  pos: "adjective",
   hsd: ["{{word:tou2}} {{word:hen3}} {{word:hao3}}"],
   tts: ["头很好"],
   literal: "a good head",

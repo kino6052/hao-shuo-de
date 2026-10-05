@@ -7,6 +7,7 @@ export default composite({
   py: "jīhū",
   en: "almost",
   ru: "почти",
+  pos: "adverb",
   hsd: ["{{word:kuai4}} … {{word:le}}"],
   tts: ["快…了"],
   fit: "natural",

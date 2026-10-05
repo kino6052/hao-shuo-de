@@ -7,6 +7,7 @@ export default composite({
   py: "zìrán",
   en: "nature; naturally",
   ru: "природа; естественно",
+  pos: "noun",
   hsd: [
     "{{word:ren2}} {{word:mei2}} {{word:zuo4}}-{{word:guo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],

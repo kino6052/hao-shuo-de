@@ -7,9 +7,10 @@ export default composite({
   py: "fēng",
   en: "wind",
   ru: "ветер",
+  pos: "noun",
   hsd: ["{{word:dong4}}-{{word:de}} {{word:kong1}}-{{word:qi4}}"],
   tts: ["动的空气"],
-  fit: "plain",
   literal: "moving air",
+  fit: "plain",
   proposed: true,
 });

@@ -7,6 +7,7 @@ export default composite({
   py: "kāixué",
   en: "school starts",
   ru: "начало учёбы",
+  pos: "verb",
   hsd: ["{{word:kai1}}-{{word:xue2}}"],
   tts: ["开学"],
   literal: "open learning",

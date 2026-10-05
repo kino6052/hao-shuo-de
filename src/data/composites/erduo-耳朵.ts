@@ -7,6 +7,7 @@ export default composite({
   py: "ěrduo",
   en: "ear",
   ru: "ухо",
+  pos: "noun",
   hsd: ["{{word:ting1}}-{{word:de}} {{word:bu4}}-{{light:fen1}}"],
   tts: ["听的部分"],
   literal: "the hearing part",

@@ -7,6 +7,7 @@ export default composite({
   py: "xīngxing",
   en: "star",
   ru: "звезда",
+  pos: "noun",
   hsd: ["{{word:xiao3}}-{{word:de}} {{word:yue4}}"],
   tts: ["小的月"],
   literal: "a small moon",

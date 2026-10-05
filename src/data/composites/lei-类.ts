@@ -7,6 +7,7 @@ export default composite({
   py: "lèi",
   en: "category, kind",
   ru: "категория, вид",
+  pos: "noun",
   hsd: ["{{word:zhong3}}"],
   tts: ["种"],
   fit: "word",

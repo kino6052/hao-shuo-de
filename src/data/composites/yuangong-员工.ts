@@ -7,6 +7,7 @@ export default composite({
   py: "yuángōng",
   en: "employee",
   ru: "сотрудник",
+  pos: "noun",
   hsd: ["{{word:zai4}}-{{word:qun2}}-{{word:li3}}-{{word:zuo4}}-{{word:de}} {{word:ren2}}"],
   tts: ["在群里做的人"],
   literal: "a person who works in the company",

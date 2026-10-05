@@ -7,6 +7,7 @@ export default composite({
   py: "dìmiàn",
   en: "ground, floor",
   ru: "земля, пол",
+  pos: "noun",
   hsd: ["{{word:di4}}-{{word:mian4}}"],
   tts: ["地面"],
   literal: "ground surface",

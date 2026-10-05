@@ -7,6 +7,7 @@ export default composite({
   py: "yóujiàn",
   en: "mail, email",
   ru: "почта",
+  pos: "noun",
   hsd: [
     "{{word:gei3}} {{word:yuan3}}-{{word:de}} {{word:ren2}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],

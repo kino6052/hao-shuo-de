@@ -7,6 +7,7 @@ export default composite({
   py: "xiāoshī",
   en: "disappear",
   ru: "исчезать",
+  pos: "verb",
   hsd: ["{{word:kan4}}-{{word:bu4}}-{{word:dao4}} {{word:le}}"],
   tts: ["看不到了"],
   literal: "can't be seen anymore",

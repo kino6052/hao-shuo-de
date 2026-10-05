@@ -7,9 +7,10 @@ export default composite({
   py: "yǐshàng",
   en: "above, more than",
   ru: "выше, больше",
-  hsd: ["{{word:bi3}} X {{word:duo1}}"],
-  tts: ["比X多"],
+  pos: "noun",
+  hsd: ["{{word:yi3}}-{{word:shang4}}", "{{word:bi3}} X {{word:duo1}}"],
+  tts: ["以上", "比X多"],
   literal: "more than X",
-  fit: "plain",
+  fit: "natural",
   proposed: true,
 });

@@ -7,6 +7,7 @@ export default composite({
   py: "jīběnshàng",
   en: "basically",
   ru: "в основном",
+  pos: "adverb",
   hsd: ["{{word:da4}} {{word:bu4}}-{{light:fen1}}"],
   tts: ["大部分"],
   literal: "the big part",

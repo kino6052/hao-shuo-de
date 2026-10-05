@@ -7,6 +7,7 @@ export default composite({
   py: "xiānsheng",
   en: "Mr., husband",
   ru: "господин, муж",
+  pos: "noun",
   hsd: ["{{word:nan2}}-{{word:ren2}}"],
   tts: ["男人"],
   literal: "man",

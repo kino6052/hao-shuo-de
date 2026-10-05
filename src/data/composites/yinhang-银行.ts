@@ -7,6 +7,7 @@ export default composite({
   py: "yínháng",
   en: "bank",
   ru: "банк",
+  pos: "noun",
   hsd: ["{{word:fang4}}-{{word:jin1}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
   tts: ["放金的地方"],
   literal: "place to put money",

@@ -7,6 +7,7 @@ export default composite({
   py: "nǐmen",
   en: "you (more than one)",
   ru: "вы",
+  pos: "pronoun",
   hsd: ["{{word:ni3}}-{{word:men}}"],
   tts: ["你们"],
   fit: "natural",

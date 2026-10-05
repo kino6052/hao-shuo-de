@@ -7,6 +7,7 @@ export default composite({
   py: "yǒudiǎnr",
   en: "a little, slightly",
   ru: "немного",
+  pos: "adverb",
   hsd: ["{{word:you3}} {{word:yi1}}-{{word:dian3}}"],
   tts: ["有一点"],
   fit: "natural",

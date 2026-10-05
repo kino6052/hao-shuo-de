@@ -7,6 +7,7 @@ export default composite({
   py: "shúxi",
   en: "familiar with",
   ru: "хорошо знакомый",
+  pos: "verb",
   hsd: ["{{word:hen3}} {{word:zhi1dao4}}"],
   tts: ["很知道"],
   literal: "know well",

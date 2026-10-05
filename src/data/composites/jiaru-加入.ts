@@ -7,6 +7,7 @@ export default composite({
   py: "jiārù",
   en: "join",
   ru: "вступать, присоединяться",
+  pos: "verb",
   hsd: ["{{word:jin4}} X-{{word:de}} {{word:qun2}}"],
   tts: ["进X的群"],
   literal: "go into X's group",

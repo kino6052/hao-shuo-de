@@ -7,6 +7,7 @@ export default composite({
   py: "yǎnjing",
   en: "eye",
   ru: "глаз",
+  pos: "noun",
   hsd: ["{{word:yan3jing}}"],
   tts: ["眼睛"],
   fit: "word",

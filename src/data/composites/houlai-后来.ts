@@ -7,6 +7,7 @@ export default composite({
   py: "hòulái",
   en: "later",
   ru: "потом",
+  pos: "noun",
   hsd: ["{{word:hou4}}-{{word:lai2}}"],
   tts: ["后来"],
   fit: "natural",

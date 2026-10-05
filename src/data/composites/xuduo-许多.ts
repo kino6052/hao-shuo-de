@@ -7,6 +7,7 @@ export default composite({
   py: "xǔduō",
   en: "many",
   ru: "многие",
+  pos: "number",
   hsd: ["{{word:hen3}} {{word:duo1}}"],
   tts: ["很多"],
   literal: "very many",

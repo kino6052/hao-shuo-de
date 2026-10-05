@@ -7,7 +7,11 @@ export default composite({
   py: "zuǒyòu",
   en: "left and right; about",
   ru: "слева и справа; примерно",
-  hsd: ["{{word:zuo3}}-{{word:bian1}} {{word:he2}} {{word:you4}}-{{word:bian1}}", "{{word:ke3}}-{{word:neng2}} X"],
+  pos: "noun",
+  hsd: [
+    "{{word:zuo3}}-{{word:bian1}} {{word:he2}} {{word:you4}}-{{word:bian1}}",
+    "{{word:ke3}}-{{word:neng2}} X",
+  ],
   tts: ["左边和右边", "可能X"],
   literal: "left and right / maybe X",
   fit: "plain",

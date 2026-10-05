@@ -7,6 +7,7 @@ export default composite({
   py: "bēizi",
   en: "cup",
   ru: "чашка",
+  pos: "noun",
   hsd: ["{{word:chi1}}-{{word:shui3}}-{{word:de}} {{word:he2zi}}"],
   tts: ["吃水的盒子"],
   literal: "the container you drink water from",

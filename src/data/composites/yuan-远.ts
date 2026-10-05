@@ -7,6 +7,7 @@ export default composite({
   py: "yuǎn",
   en: "far",
   ru: "далёкий",
+  pos: "adjective",
   hsd: ["{{word:yuan3}}"],
   tts: ["远"],
   fit: "word",

@@ -4,16 +4,25 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "also-is",
+  words: [
+    {
+      word: "hai2",
+      en: "still, also",
+      ru: "ещё, всё ещё",
+    },
+  ],
   prose: {
     en: [
       "**To say something is also like that**, put {{word:ye3}} before {{word:hen3}} and the adjective.",
       "",
       "**Thing + {{word:ye3}} + {{word:hen3}} + adjective**",
+      "{{word:hai2}} before the verb is still: it hasn't stopped.",
     ],
     ru: [
       "**Чтобы сказать, что вещь такая же как и другая**, поставьте {{word:ye3}} перед {{word:hen3}} и прилагательным.",
       "",
       "**Вещь + {{word:ye3}} + {{word:hen3}} + прилагательное**",
+      "{{word:hai2}} перед глаголом — «всё ещё»: это не закончилось.",
     ],
     tldr: {
       en: "{{word:ye3}} {{word:hen3}} + adjective: {{Word:ta1}} {{word:ye3}} {{word:hen3}} {{word:leng3}}, she's cold too.",
@@ -59,6 +68,18 @@ export default lessonModule({
       en: "Your home is far too.",
       ru: "Твой дом тоже далеко.",
     },
+    {
+      pinyin: "{{Word:ta1}} {{word:hai2}} {{word:zai4}} {{word:jia1}}.",
+      hanzi: "他还在家。",
+      en: "He's still at home.",
+      ru: "Он ещё дома.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:hai2}} {{word:yao4}} {{word:ma}}?",
+      hanzi: "你还要吗？",
+      en: "Do you want more?",
+      ru: "Тебе ещё?",
+    },
   ],
   exercises: [
     {
@@ -66,6 +87,12 @@ export default lessonModule({
       ru: "Вода тоже горячая.",
       answer: "{{Word:shui3}} {{word:ye3}} {{word:hen3}} {{word:re4}}.",
       hanzi: "水也很热。",
+    },
+    {
+      en: "I'm still here.",
+      ru: "Я всё ещё здесь.",
+      answer: "{{Word:wo3}} {{word:hai2}} {{word:zai4}} {{word:zhe4}}-{{word:li3}}.",
+      hanzi: "我还在这里。",
     },
   ],
 });

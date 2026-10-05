@@ -7,6 +7,7 @@ export default composite({
   py: "wéiyī",
   en: "only, sole",
   ru: "единственный",
+  pos: "adjective",
   hsd: ["{{word:jiu4}} {{word:yi1}}-ge"],
   tts: ["就一个"],
   literal: "just one",

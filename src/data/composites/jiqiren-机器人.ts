@@ -7,6 +7,7 @@ export default composite({
   py: "jīqìrén",
   en: "robot",
   ru: "робот",
+  pos: "noun",
   hsd: [
     "{{word:ji1}}-{{word:qi4}}-{{word:ren2}}",
     "{{word:neng2}}-{{word:zuo4}}-{{word:ren2}}-{{word:zuo4}}-{{word:de}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:gong1}}-{{word:ju4}}",

@@ -7,6 +7,7 @@ export default composite({
   py: "zhìliàng",
   en: "quality",
   ru: "качество",
+  pos: "noun",
   hsd: ["{{word:hao3}} {{word:bu4}} {{word:hao3}}"],
   tts: ["好不好"],
   literal: "good or not",

@@ -7,6 +7,7 @@ export default composite({
   py: "zhōngxīn",
   en: "center",
   ru: "центр",
+  pos: "noun",
   hsd: ["{{word:zhong1}}-{{word:xin1}}", "{{word:zhong1}}-{{word:jian1}}"],
   tts: ["中心", "中间"],
   literal: "middle heart / the middle",

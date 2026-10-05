@@ -7,6 +7,7 @@ export default composite({
   py: "tuī",
   en: "push",
   ru: "толкать",
+  pos: "verb",
   hsd: ["{{word:yong4}} {{word:shou3}} {{word:dong4}} X"],
   tts: ["用手动X"],
   literal: "move X with your hand",

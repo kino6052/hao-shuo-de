@@ -7,9 +7,10 @@ export default composite({
   py: "chūshēng",
   en: "be born",
   ru: "родиться",
+  pos: "verb",
   hsd: ["{{word:chu1}}-{{word:sheng1}}", "{{word:sheng1}}"],
   tts: ["出生", "生"],
+  literal: "come out, be born",
   fit: "natural",
   proposed: true,
-  literal: "come out, be born",
 });

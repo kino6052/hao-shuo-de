@@ -7,6 +7,7 @@ export default composite({
   py: "huódòng",
   en: "activity",
   ru: "мероприятие",
+  pos: "verb",
   hsd: [
     "{{word:huo2}}-{{word:dong4}}",
     "{{word:yi1}}-{{word:qi3}} {{word:zuo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",

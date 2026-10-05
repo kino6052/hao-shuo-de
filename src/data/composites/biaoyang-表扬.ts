@@ -7,6 +7,7 @@ export default composite({
   py: "biǎoyáng",
   en: "praise",
   ru: "хвалить",
+  pos: "verb",
   hsd: ["{{word:shuo1}} X {{word:hao3}}"],
   tts: ["说X好"],
   literal: "say X is good",

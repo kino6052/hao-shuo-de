@@ -7,6 +7,7 @@ export default composite({
   py: "tián",
   en: "sweet",
   ru: "сладкий",
+  pos: "adjective",
   hsd: ["{{word:tian2}}"],
   tts: ["甜"],
   fit: "word",

@@ -7,6 +7,7 @@ export default composite({
   py: "xiàkè",
   en: "class is over",
   ru: "урок закончился",
+  pos: "verb",
   hsd: ["{{word:xue2}}-{{word:wan2}} {{word:le}}"],
   tts: ["学完了"],
   literal: "finished learning",

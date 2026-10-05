@@ -7,6 +7,7 @@ export default composite({
   py: "zhuānyè",
   en: "major; professional",
   ru: "специальность",
+  pos: "noun",
   hsd: [
     "{{word:xue2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
     "{{word:zhi1dao4}} {{word:hen3}} {{word:duo1}}-{{word:de}}",

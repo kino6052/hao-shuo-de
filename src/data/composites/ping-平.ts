@@ -7,6 +7,7 @@ export default composite({
   py: "píng",
   en: "flat",
   ru: "ровный",
+  pos: "adjective",
   hsd: ["{{word:he2}} {{word:di4}} {{word:yi1}}-{{word:yang4}}"],
   tts: ["和地一样"],
   literal: "like the floor",

@@ -7,6 +7,7 @@ export default composite({
   py: "hé",
   en: "and",
   ru: "и",
+  pos: "preposition",
   hsd: ["{{word:he2}}"],
   tts: ["和"],
   fit: "word",

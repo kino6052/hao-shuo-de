@@ -7,6 +7,7 @@ export default composite({
   py: "qīnzì",
   en: "personally",
   ru: "лично",
+  pos: "adverb",
   hsd: ["X {{word:lai2}} {{word:zuo4}}"],
   tts: ["X来做"],
   literal: "X does it",

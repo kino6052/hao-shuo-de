@@ -7,6 +7,7 @@ export default composite({
   py: "yuánlái",
   en: "originally",
   ru: "изначально",
+  pos: "noun",
   hsd: [
     "{{word:yuan2}}-{{word:lai2}}",
     "{{word:zai4}} {{word:kai1shi3}}-{{word:de}} {{word:shi2}}-{{word:jian1}}",

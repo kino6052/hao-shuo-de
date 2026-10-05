@@ -7,6 +7,7 @@ export default composite({
   py: "gǎnxiè",
   en: "thank",
   ru: "благодарить",
+  pos: "verb",
   hsd: ["{{word:xie4}}"],
   tts: ["谢"],
   fit: "word",

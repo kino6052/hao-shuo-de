@@ -7,6 +7,7 @@ export default composite({
   py: "píngtái",
   en: "platform",
   ru: "платформа",
+  pos: "noun",
   hsd: [
     "{{word:zai4}}-{{word:wang3}}-{{word:shang4}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
     "{{word:gao1}}-{{word:de}} {{word:di4}}",

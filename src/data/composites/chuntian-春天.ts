@@ -7,6 +7,7 @@ export default composite({
   py: "chūntiān",
   en: "spring",
   ru: "весна",
+  pos: "noun",
   hsd: ["{{word:bian4}} {{word:re4}}-{{word:de}} {{word:shi2}}-{{word:jian1}}"],
   tts: ["变热的时间"],
   literal: "the time it gets warm",

@@ -7,6 +7,7 @@ export default composite({
   py: "wàiguó",
   en: "foreign country",
   ru: "заграница",
+  pos: "noun",
   hsd: ["{{word:wai4}}-{{word:guo2}}"],
   tts: ["外国"],
   literal: "outside country",

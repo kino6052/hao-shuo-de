@@ -7,6 +7,7 @@ export default composite({
   py: "yòu’éryuán",
   en: "kindergarten",
   ru: "детский сад",
+  pos: "noun",
   hsd: [
     "{{word:hen3}} {{word:xiao3}}-{{word:de}} {{word:ren2}} {{word:wan2r}} {{word:he2}} {{word:xue2}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
   ],

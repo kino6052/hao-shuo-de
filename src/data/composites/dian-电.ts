@@ -7,6 +7,7 @@ export default composite({
   py: "diàn",
   en: "electricity",
   ru: "электричество",
+  pos: "noun",
   hsd: [
     "{{word:bang1}} {{word:wo3}}-{{word:men}} {{word:zuo4}} {{word:gong1}}-{{word:ju4}}-{{word:de}} {{word:li4}}",
   ],

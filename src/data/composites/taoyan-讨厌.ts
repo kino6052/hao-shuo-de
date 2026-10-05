@@ -7,6 +7,7 @@ export default composite({
   py: "tǎoyàn",
   en: "dislike",
   ru: "не любить",
+  pos: "adjective",
   hsd: ["{{word:bu4}} {{word:ai4}}"],
   tts: ["不爱"],
   literal: "not love",

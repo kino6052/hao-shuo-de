@@ -7,6 +7,7 @@ export default composite({
   py: "guò",
   en: "placed right after a verb to say you have done it at least once before",
   ru: "ставится сразу после глагола и означает",
+  pos: "verb",
   hsd: ["{{word:guo4}}"],
   tts: ["过"],
   fit: "word",

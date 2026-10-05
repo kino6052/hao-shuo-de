@@ -7,6 +7,7 @@ export default composite({
   py: "cuòwù",
   en: "mistake; wrong",
   ru: "ошибка; неверный",
+  pos: "adjective",
   hsd: ["{{word:bu4}} {{word:dui4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["不对的东西"],
   literal: "something wrong",

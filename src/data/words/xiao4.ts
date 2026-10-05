@@ -10,4 +10,16 @@ export default word("xiao4", {
     eng: "Laugh, smile. No description captures it.",
     rus: "Смеяться, улыбаться. Никакое описание этого не передаст.",
   },
+  senses: {
+    school: {
+      hanzi: "校",
+      eng: "school",
+      rus: "школа",
+      why: {
+        eng: "Written 校, {{word:xiao4}} means school in {{word:xue2}}-{{word:xiao4}}; on its own it is laugh.",
+        rus: "Записанное как 校, {{word:xiao4}} значит «школа» в {{word:xue2}}-{{word:xiao4}}; само по себе — «смеяться».",
+      },
+      compounds: ["xue2 xiao4"],
+    },
+  },
 });

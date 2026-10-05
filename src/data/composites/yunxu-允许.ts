@@ -7,6 +7,7 @@ export default composite({
   py: "yǔnxǔ",
   en: "allow",
   ru: "разрешать",
+  pos: "verb",
   hsd: ["{{word:jiao4}} X + verb"],
   tts: ["叫X+…"],
   literal: "let X do it",

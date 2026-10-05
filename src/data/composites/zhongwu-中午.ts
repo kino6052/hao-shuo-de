@@ -7,6 +7,7 @@ export default composite({
   py: "zhōngwǔ",
   en: "noon",
   ru: "полдень",
+  pos: "noun",
   hsd: ["{{word:zhong1}}-{{word:wu3}}", "{{word:shi2}}-{{word:er4}}-{{word:dian3}}"],
   tts: ["中午", "十二点"],
   literal: "twelve o'clock",

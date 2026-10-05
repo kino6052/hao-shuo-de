@@ -7,6 +7,7 @@ export default composite({
   py: "qīnqi",
   en: "relative",
   ru: "родственник",
+  pos: "noun",
   hsd: ["{{word:jia1}}-{{word:li3}}-{{word:de}} {{word:ren2}}"],
   tts: ["家里的人"],
   literal: "a person of the family",

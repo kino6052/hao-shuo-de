@@ -7,6 +7,7 @@ export default composite({
   py: "nán",
   en: "male",
   ru: "мужской",
+  pos: "adjective",
   hsd: ["{{word:nan2}}-{{word:ren2}}"],
   tts: ["男人"],
   fit: "word",

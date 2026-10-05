@@ -7,8 +7,10 @@ export default composite({
   py: "zuò fàn",
   en: "cook",
   ru: "готовить еду",
-  hsd: ["{{word:zuo4}} {{word:chi1}}-{{word:de}}"],
-  tts: ["做吃的"],
+  pos: "verb",
+  hsd: ["{{word:zuo4}}-{{word:fan4}}", "{{word:zuo4}} {{word:chi1}}-{{word:de}}"],
+  tts: ["做饭", "做吃的"],
   literal: "make food",
   fit: "natural",
+  proposed: true,
 });

@@ -7,6 +7,7 @@ export default composite({
   py: "míngbai",
   en: "understand",
   ru: "понимать",
+  pos: "adjective",
   hsd: ["{{word:ming2}}-{{word:bai2}}", "{{word:zhi1dao4}}"],
   tts: ["明白", "知道"],
   fit: "natural",

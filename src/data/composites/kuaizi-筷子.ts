@@ -7,8 +7,11 @@ export default composite({
   py: "kuàizi",
   en: "chopsticks",
   ru: "палочки",
-  hsd: ["{{word:chi1}} {{word:dong1}}-{{light:xi1}} {{word:yong4}}-{{word:de}} {{word:liang3}}-ge {{word:gun4zi}}"],
-  tts: ["吃东西用的两个棍子"],
+  pos: "noun",
+  hsd: [
+    "{{word:chi1}} {{word:fan4}} {{word:yong4}}-{{word:de}} {{word:liang3}}-ge {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+  ],
+  tts: ["吃饭用的两个长的东西"],
   literal: "two sticks for eating",
   fit: "plain",
   proposed: true,

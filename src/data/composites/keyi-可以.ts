@@ -7,8 +7,10 @@ export default composite({
   py: "kěyǐ",
   en: "can, may",
   ru: "можно",
-  hsd: ["{{word:neng2}}"],
-  tts: ["能"],
-  fit: "word",
+  pos: "verb",
+  hsd: ["{{word:ke3}}-{{word:yi3}}", "{{word:neng2}}"],
+  tts: ["可以", "能"],
+  fit: "natural",
   note: "\"Can\" and \"may\" are both néng (D19).",
+  proposed: true,
 });

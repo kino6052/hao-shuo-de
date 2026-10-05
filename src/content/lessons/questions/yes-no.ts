@@ -24,6 +24,11 @@ export default lessonModule({
       en: "box",
       ru: "коробка",
     },
+    {
+      word: "ti2",
+      en: "question; {{word:wen4}}-{{word:ti2}}: a question, a problem",
+      ru: "вопрос; {{word:wen4}}-{{word:ti2}} — вопрос, проблема",
+    },
   ],
   prose: {
     en: [
@@ -32,6 +37,7 @@ export default lessonModule({
       "**sentence + {{word:ma}}?**",
       "",
       "Or say the verb, then {{word:bu4}}, then the verb again: {{Word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}}? For {{word:you3}}: {{word:you3}}-{{word:mei2}}-{{word:you3}}.",
+      "A question, or a problem, is {{word:wen4}}-{{word:ti2}}.",
     ],
     ru: [
       "**Чтобы задать вопрос «да или нет»**, поставьте {{word:ma}} в конце.",
@@ -39,6 +45,7 @@ export default lessonModule({
       "**предложение + {{word:ma}}?**",
       "",
       "Или скажите глагол, потом {{word:bu4}}, потом снова глагол: {{Word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}}? Для {{word:you3}}: {{word:you3}}-{{word:mei2}}-{{word:you3}}.",
+      "Вопрос или проблема — {{word:wen4}}-{{word:ti2}}.",
     ],
     tldr: {
       en: "Put {{word:ma}} at the end to ask a yes-or-no question.",
@@ -92,6 +99,18 @@ export default lessonModule({
       en: "Does she have money?",
       ru: "У неё есть деньги?",
     },
+    {
+      pinyin: "{{Word:ni3}} {{word:you3}} {{word:wen4}}-{{word:ti2}} {{word:ma}}?",
+      hanzi: "你有问题吗？",
+      en: "Do you have a question?",
+      ru: "У тебя есть вопрос?",
+    },
+    {
+      pinyin: "{{Word:mei2}}-{{word:you3}} {{word:wen4}}-{{word:ti2}}.",
+      hanzi: "没有问题。",
+      en: "No problem.",
+      ru: "Без проблем.",
+    },
   ],
   exercises: [
     {
@@ -111,6 +130,12 @@ export default lessonModule({
       ru: "Это твоя коробка?",
       answer: "{{Word:na4}} {{word:shi4}} {{word:ni3}}-{{word:de}} {{word:he2zi}} {{word:ma}}?",
       hanzi: "那是你的盒子吗？",
+    },
+    {
+      en: "Do they have questions?",
+      ru: "У них есть вопросы?",
+      answer: "{{Word:ta1}}-{{word:men}} {{word:you3}} {{word:wen4}}-{{word:ti2}} {{word:ma}}?",
+      hanzi: "他们有问题吗？",
     },
   ],
   faq: [

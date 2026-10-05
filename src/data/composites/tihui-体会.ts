@@ -7,6 +7,7 @@ export default composite({
   py: "tǐhuì",
   en: "come to understand",
   ru: "прочувствовать, понять",
+  pos: "verb",
   hsd: ["{{word:xin1}}-{{word:li3}} {{word:zhi1dao4}}"],
   tts: ["心里知道"],
   literal: "know it in your heart",

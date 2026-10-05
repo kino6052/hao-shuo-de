@@ -7,6 +7,7 @@ export default composite({
   py: "fàng",
   en: "put",
   ru: "класть",
+  pos: "verb",
   hsd: ["{{word:fang4}}"],
   tts: ["放"],
   fit: "word",

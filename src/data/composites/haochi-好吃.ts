@@ -7,6 +7,7 @@ export default composite({
   py: "hǎochī",
   en: "tasty",
   ru: "вкусный",
+  pos: "adjective",
   hsd: ["{{word:hao3}} {{word:chi1}}"],
   tts: ["好吃"],
   literal: "good to eat",

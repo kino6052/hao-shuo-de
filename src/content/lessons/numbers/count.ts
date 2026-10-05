@@ -63,14 +63,14 @@ export default lessonModule({
       ru: "У меня четыре инструмента.",
     },
     {
-      pinyin: "{{Word:qi1}}-ge {{word:gun4zi}} {{word:zai4}} {{word:di4}}-{{word:shang4}}.",
-      hanzi: "七个棍子在地上。",
+      pinyin: "{{Word:qi1}}-ge {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:zai4}} {{word:di4}}-{{word:shang4}}.",
+      hanzi: "七个长的东西在地上。",
       en: "Seven sticks are on the floor.",
       ru: "На полу семь палок.",
     },
     {
-      pinyin: "{{Word:jiu3}}-ge {{word:ren2}} {{word:chi1}} {{word:dong1}}-{{light:xi1}}.",
-      hanzi: "九个人吃东西。",
+      pinyin: "{{Word:jiu3}}-ge {{word:ren2}} {{word:chi1}} {{word:fan4}}.",
+      hanzi: "九个人吃饭。",
       en: "Nine people are eating.",
       ru: "Девять человек едят.",
     },
@@ -127,8 +127,8 @@ export default lessonModule({
     {
       en: "eight sticks",
       ru: "восемь палок",
-      answer: "{{Word:ba1}}-ge {{word:gun4zi}}.",
-      hanzi: "八个棍子。",
+      answer: "{{Word:ba1}}-ge {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
+      hanzi: "八个长的东西。",
     },
     {
       en: "nine plants",

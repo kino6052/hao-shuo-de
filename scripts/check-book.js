@@ -237,7 +237,7 @@ for (const n of [1, 2, 3]) {
   const compound = compoundSplitter(dictionary);
   for (const e of entries) {
     if (!e.hsd || e.fit === 'name' || e.fit === 'skip') continue;
-    const ids = compound(e.zh);
+    const ids = compound(e.zh, e.py);
     if (!ids || (e.tts ?? '').split(' / ').includes(e.zh)) continue;
     // A form that is exactly those words counts too (the builder speaks a bare 上 as 上面).
     const sequences = e.hsd.split(' / ').map((f) => wordRefIds(f).join(' '));

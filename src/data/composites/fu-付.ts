@@ -7,6 +7,7 @@ export default composite({
   py: "fù",
   en: "pay",
   ru: "платить",
+  pos: "verb",
   hsd: ["{{word:gei3}} {{word:jin1}}"],
   tts: ["给金"],
   literal: "give money",

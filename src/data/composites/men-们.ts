@@ -7,6 +7,7 @@ export default composite({
   py: "men",
   en: "more than one person: after a pointer or a word for people",
   ru: "больше одного человека: после указательного слова или слова о людях",
+  pos: "suffix",
   hsd: ["{{word:men}}"],
   tts: ["们"],
   fit: "word",

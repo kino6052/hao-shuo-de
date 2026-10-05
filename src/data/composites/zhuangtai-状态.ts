@@ -7,6 +7,7 @@ export default composite({
   py: "zhuàngtài",
   en: "state",
   ru: "состояние",
+  pos: "noun",
   hsd: ["{{word:xian4}}-{{word:zai4}}-{{word:de}} X"],
   tts: ["现在的X"],
   literal: "how X is now",

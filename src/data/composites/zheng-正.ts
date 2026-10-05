@@ -7,6 +7,7 @@ export default composite({
   py: "zhèng",
   en: "exactly, just",
   ru: "как раз",
+  pos: "adverb",
   hsd: ["{{word:jiu4}}"],
   tts: ["就"],
   fit: "natural",

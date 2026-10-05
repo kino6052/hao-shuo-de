@@ -7,6 +7,7 @@ export default composite({
   py: "xìng",
   en: "surname",
   ru: "фамилия",
+  pos: "noun",
   hsd: ["{{word:jia1}} {{word:jiao4}}-{{word:de}}"],
   tts: ["家叫的"],
   literal: "what the family is called",

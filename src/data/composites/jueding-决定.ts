@@ -7,6 +7,7 @@ export default composite({
   py: "juédìng",
   en: "decide",
   ru: "решать",
+  pos: "verb",
   hsd: [
     "{{word:jue2}}-{{word:ding4}}",
     "{{word:lai2}} {{word:zhi1dao4}} {{word:yao4}} {{word:zuo4}} {{word:shen2me}} {{word:le}}",

@@ -7,6 +7,7 @@ export default composite({
   py: "bìyèshēng",
   en: "graduate",
   ru: "выпускник",
+  pos: "noun",
   hsd: ["{{word:xue2}}-{{word:wan2}}-{{word:de}} {{word:ren2}}"],
   tts: ["学完的人"],
   literal: "someone who finished learning",

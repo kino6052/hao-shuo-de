@@ -7,6 +7,7 @@ export default composite({
   py: "jiàqián",
   en: "price",
   ru: "цена",
+  pos: "noun",
   hsd: ["{{word:duo1}}-{{word:shao3}} {{word:jin1}}"],
   tts: ["多少金"],
   literal: "how much money",

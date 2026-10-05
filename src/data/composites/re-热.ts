@@ -7,6 +7,7 @@ export default composite({
   py: "rè",
   en: "hot",
   ru: "горячий",
+  pos: "adjective",
   hsd: ["{{word:re4}}"],
   tts: ["热"],
   fit: "word",

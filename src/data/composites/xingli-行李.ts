@@ -7,6 +7,7 @@ export default composite({
   py: "xíngli",
   en: "luggage",
   ru: "багаж",
+  pos: "noun",
   hsd: [
     "{{word:qu4}} {{word:yuan3}}-{{word:de}} {{word:di4}}-{{light:fang1}} {{word:na2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],

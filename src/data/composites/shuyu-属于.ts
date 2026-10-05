@@ -7,6 +7,7 @@ export default composite({
   py: "shǔyú",
   en: "belong to",
   ru: "принадлежать",
+  pos: "verb",
   hsd: ["{{word:shi4}} X-{{word:de}}"],
   tts: ["是X的"],
   literal: "is X's",

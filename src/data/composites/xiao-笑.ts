@@ -7,6 +7,7 @@ export default composite({
   py: "xiào",
   en: "laugh, smile",
   ru: "смеяться, улыбаться",
+  pos: "verb",
   hsd: ["{{word:xiao4}}"],
   tts: ["笑"],
   fit: "word",

@@ -7,6 +7,7 @@ export default composite({
   py: "nǚpéngyou",
   en: "girlfriend",
   ru: "девушка",
+  pos: "noun",
   hsd: ["{{word:ai4}}-{{word:de}} {{word:nv3}}-{{word:ren2}}"],
   tts: ["爱的女人"],
   literal: "the woman you love",

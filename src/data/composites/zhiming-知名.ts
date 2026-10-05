@@ -7,6 +7,7 @@ export default composite({
   py: "zhīmíng",
   en: "well-known",
   ru: "известный",
+  pos: "adjective",
   hsd: ["{{word:ren2}}-{{word:ren2}} {{word:dou1}} {{word:zhi1dao4}}-{{word:de}}"],
   tts: ["人人都知道的"],
   literal: "that everyone knows",

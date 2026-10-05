@@ -7,6 +7,7 @@ export default composite({
   py: "guānzhù",
   en: "pay attention to, follow",
   ru: "следить, уделять внимание",
+  pos: "verb",
   hsd: ["{{word:hao3}}-{{word:hao3}} {{word:kan4}}"],
   tts: ["好好看"],
   literal: "look at it well",

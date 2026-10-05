@@ -7,6 +7,7 @@ export default composite({
   py: "gōngsī",
   en: "company",
   ru: "компания",
+  pos: "noun",
   hsd: ["{{word:qun2}}"],
   tts: ["群"],
   fit: "word",

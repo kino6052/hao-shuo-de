@@ -7,6 +7,7 @@ export default composite({
   py: "tíchū",
   en: "propose, raise",
   ru: "выдвигать, предлагать",
+  pos: "verb",
   hsd: ["{{word:shuo1}}-{{word:chu1}}-{{word:lai2}}"],
   tts: ["说出来"],
   literal: "say it out",

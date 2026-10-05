@@ -7,6 +7,7 @@ export default composite({
   py: "yǔyīn",
   en: "speech sound, voice",
   ru: "звук речи, голос",
+  pos: "noun",
   hsd: ["{{word:shuo1}}-{{word:de}} {{word:sheng1yin1}}"],
   tts: ["说的声音"],
   literal: "the sound of speaking",

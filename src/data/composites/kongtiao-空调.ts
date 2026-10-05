@@ -7,6 +7,7 @@ export default composite({
   py: "kōngtiáo",
   en: "air conditioner",
   ru: "кондиционер",
+  pos: "noun",
   hsd: [
     "{{word:ba3}} {{word:kong1}}-{{word:qi4}} {{word:zuo4}} {{word:leng3}}-{{word:de}} {{word:gong1}}-{{word:ju4}}",
   ],

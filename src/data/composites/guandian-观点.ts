@@ -7,6 +7,7 @@ export default composite({
   py: "guāndiǎn",
   en: "viewpoint",
   ru: "точка зрения",
+  pos: "noun",
   hsd: ["{{word:jue2}}-{{light:de2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["觉得的东西"],
   literal: "what you think",

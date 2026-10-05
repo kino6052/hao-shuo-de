@@ -7,6 +7,7 @@ export default composite({
   py: "qíngxù",
   en: "mood",
   ru: "настроение",
+  pos: "noun",
   hsd: ["{{word:xin1}}-{{word:li3}}"],
   tts: ["心里"],
   literal: "in the heart",

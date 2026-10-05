@@ -7,6 +7,7 @@ export default composite({
   py: "tuánduì",
   en: "team",
   ru: "команда",
+  pos: "noun",
   hsd: ["{{word:yi1}}-{{word:qi3}} {{word:zuo4}}-{{word:de}} {{word:qun2}}"],
   tts: ["一起做的群"],
   literal: "a group working together",

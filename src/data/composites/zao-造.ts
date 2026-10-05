@@ -7,6 +7,7 @@ export default composite({
   py: "zào",
   en: "make",
   ru: "делать, создавать",
+  pos: "verb",
   hsd: ["{{word:zuo4}}"],
   tts: ["做"],
   fit: "word",

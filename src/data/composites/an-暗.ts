@@ -7,6 +7,7 @@ export default composite({
   py: "àn",
   en: "dark",
   ru: "тёмный",
+  pos: "adjective",
   hsd: ["{{word:bu4}} {{word:ming2}}"],
   tts: ["不明"],
   literal: "not bright",

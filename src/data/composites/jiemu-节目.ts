@@ -7,7 +7,10 @@ export default composite({
   py: "jiémù",
   en: "program, show",
   ru: "передача",
-  hsd: ["{{word:kan4}}-{{word:de}} {{word:he2zi}}-{{word:li3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
+  pos: "noun",
+  hsd: [
+    "{{word:kan4}}-{{word:de}} {{word:he2zi}}-{{word:li3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+  ],
   tts: ["看的盒子里的东西"],
   literal: "what's on the TV",
   fit: "plain",

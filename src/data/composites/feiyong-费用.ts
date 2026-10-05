@@ -7,6 +7,7 @@ export default composite({
   py: "fèiyong",
   en: "cost, expense",
   ru: "расходы",
+  pos: "noun",
   hsd: ["{{word:yao4}}-{{word:de}} {{word:jin1}}"],
   tts: ["要的金"],
   literal: "the money it takes",

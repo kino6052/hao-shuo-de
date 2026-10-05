@@ -7,6 +7,7 @@ export default composite({
   py: "yìng",
   en: "hard",
   ru: "твёрдый",
+  pos: "adjective",
   hsd: ["{{word:ying4}}"],
   tts: ["硬"],
   fit: "word",

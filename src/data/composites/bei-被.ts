@@ -7,6 +7,7 @@ export default composite({
   py: "bèi",
   en: "(passive)",
   ru: "(пассив)",
+  pos: "preposition",
   fit: "skip",
   note: "Say it actively: who did it comes first.",
 });

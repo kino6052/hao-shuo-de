@@ -7,6 +7,7 @@ export default composite({
   py: "dònghuà",
   en: "cartoon, animation",
   ru: "мультфильм",
+  pos: "noun",
   hsd: ["{{word:dong4}}-{{word:de}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["动的写的东西"],
   literal: "drawn things that move",

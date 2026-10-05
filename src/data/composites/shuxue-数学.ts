@@ -7,6 +7,7 @@ export default composite({
   py: "shùxué",
   en: "mathematics",
   ru: "математика",
+  pos: "noun",
   hsd: [
     "{{word:fang4}}-{{word:zai4}}-{{word:yi1}}-{{word:qi3}}-{{word:he2}}-{{word:na2}}-{{word:de}} {{word:xue2}}",
   ],

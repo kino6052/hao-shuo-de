@@ -7,6 +7,7 @@ export default composite({
   py: "dúlì",
   en: "independent",
   ru: "независимый",
+  pos: "verb",
   hsd: ["{{word:bu4}} {{word:yao4}} {{word:bie2}}-{{word:de}} {{word:ren2}} {{word:bang1}}"],
   tts: ["不要别的人帮"],
   literal: "needs no one's help",

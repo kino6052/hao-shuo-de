@@ -7,6 +7,7 @@ export default composite({
   py: "yǒushí",
   en: "sometimes",
   ru: "иногда",
+  pos: "adverb",
   hsd: ["{{word:you3}}-{{word:shi2}}", "{{word:you3}}-{{word:de}} {{word:shi2}}-{{word:jian1}}"],
   tts: ["有时", "有的时间"],
   literal: "some of the time",

@@ -7,6 +7,7 @@ export default composite({
   py: "zǔzhī",
   en: "organize; organization",
   ru: "организовать; организация",
+  pos: "verb",
   hsd: [
     "{{word:qun2}}",
     "{{word:ba3}} {{word:ren2}} {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}",

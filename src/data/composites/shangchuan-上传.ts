@@ -7,6 +7,7 @@ export default composite({
   py: "shàngchuán",
   en: "upload",
   ru: "загружать (в сеть)",
+  pos: "verb",
   hsd: ["{{word:fang4}}-{{word:dao4}} {{word:wang3}}-{{word:shang4}}"],
   tts: ["放到网上"],
   literal: "put it on the net",

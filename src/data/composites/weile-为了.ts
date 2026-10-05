@@ -7,6 +7,7 @@ export default composite({
   py: "wèile",
   en: "in order to",
   ru: "чтобы",
+  pos: "preposition",
   hsd: ["{{word:yin1wei4}} {{word:yao4}} …"],
   tts: ["因为要…"],
   literal: "because (you) want to …",

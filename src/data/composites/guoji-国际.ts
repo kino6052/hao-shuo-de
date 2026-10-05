@@ -7,6 +7,7 @@ export default composite({
   py: "guójì",
   en: "international",
   ru: "международный",
+  pos: "adjective",
   hsd: ["{{word:hen3}}-{{word:duo1}}-{{word:guo2}}-{{word:de}}"],
   tts: ["很多国的"],
   literal: "of many countries",

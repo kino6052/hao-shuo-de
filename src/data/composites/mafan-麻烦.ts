@@ -7,6 +7,7 @@ export default composite({
   py: "máfan",
   en: "trouble",
   ru: "хлопоты",
+  pos: "adjective",
   hsd: ["{{word:bu4}} {{word:hao3}} {{word:zuo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["不好做的东西"],
   literal: "something hard to deal with",

@@ -7,6 +7,7 @@ export default composite({
   py: "shēntǐ",
   en: "body",
   ru: "тело",
+  pos: "noun",
   hsd: ["{{word:shen1ti3}}"],
   tts: ["身体"],
   fit: "word",

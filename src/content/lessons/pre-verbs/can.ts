@@ -9,6 +9,11 @@ export default lessonModule({
       en: "can",
       ru: "мочь",
     },
+    {
+      word: "yi3",
+      en: "{{word:ke3}}-{{word:yi3}}: can, may",
+      ru: "{{word:ke3}}-{{word:yi3}} — можно",
+    },
   ],
   prose: {
     en: [
@@ -17,6 +22,7 @@ export default lessonModule({
       "**Who + {{word:neng2}} + verb**",
       "",
       "To say you can't, put {{word:bu4}} before {{word:neng2}}.",
+      "{{word:ke3}}-{{word:yi3}} is can in the sense of may: it is allowed.",
     ],
     ru: [
       "**Чтобы сказать, что вы можете что-то сделать**, поставьте {{word:neng2}} (мочь) перед глаголом.",
@@ -24,6 +30,7 @@ export default lessonModule({
       "**Кто + {{word:neng2}} + глагол**",
       "",
       "Чтобы сказать, что не можете, поставьте {{word:bu4}} перед {{word:neng2}}.",
+      "{{word:ke3}}-{{word:yi3}} — «можно»: это разрешено.",
     ],
     tldr: {
       en: "Put {{word:neng2}} before a verb to say you can do it.",
@@ -71,6 +78,18 @@ export default lessonModule({
       en: "Can you see?",
       ru: "Ты видишь?",
     },
+    {
+      pinyin: "{{Word:wo3}} {{word:ke3}}-{{word:yi3}} {{word:kan4}} {{word:ma}}?",
+      hanzi: "我可以看吗？",
+      en: "May I look?",
+      ru: "Можно посмотреть?",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:ke3}}-{{word:yi3}} {{word:he1}} {{word:shui3}}.",
+      hanzi: "你可以喝水。",
+      en: "You can drink some water.",
+      ru: "Можешь попить воды.",
+    },
   ],
   exercises: [
     {
@@ -84,6 +103,12 @@ export default lessonModule({
       ru: "Он не может ждать.",
       answer: "{{Word:ta1}} {{word:bu4}} {{word:neng2}} {{word:deng3}}.",
       hanzi: "他不能等。",
+    },
+    {
+      en: "May I ask?",
+      ru: "Можно спросить?",
+      answer: "{{Word:wo3}} {{word:ke3}}-{{word:yi3}} {{word:wen4}} {{word:ma}}?",
+      hanzi: "我可以问吗？",
     },
   ],
 });

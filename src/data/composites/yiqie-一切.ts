@@ -7,6 +7,7 @@ export default composite({
   py: "yíqiè",
   en: "everything",
   ru: "всё",
+  pos: "pronoun",
   hsd: ["{{word:shen2me}}-{{word:dou1}}"],
   tts: ["什么都"],
   fit: "natural",

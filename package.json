@@ -29,7 +29,8 @@
     "check-grammar-blocks": "node scripts/check-grammar-blocks.js",
     "check-practice": "node scripts/check-practice.js",
     "check-example-runs": "node scripts/check-example-runs.js",
-    "check-word-builder": "node scripts/check-word-builder.js"
+    "check-word-builder": "node scripts/check-word-builder.js",
+    "report-heads": "node scripts/report-heads.js"
   },
   "dependencies": {
     "graphology": "^0.26.0",

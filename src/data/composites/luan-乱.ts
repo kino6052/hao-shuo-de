@@ -7,6 +7,7 @@ export default composite({
   py: "luàn",
   en: "messy",
   ru: "беспорядочный",
+  pos: "adjective",
   hsd: ["{{word:luan4}}"],
   tts: ["乱"],
   fit: "word",

@@ -7,6 +7,7 @@ export default composite({
   py: "lèi",
   en: "tired",
   ru: "уставший",
+  pos: "adjective",
   hsd: ["{{word:yao4}} {{word:shui4jiao4}}"],
   tts: ["要睡觉"],
   literal: "want to sleep",

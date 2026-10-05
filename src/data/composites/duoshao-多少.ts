@@ -7,6 +7,7 @@ export default composite({
   py: "duōshao",
   en: "how many, how much",
   ru: "сколько",
+  pos: "pronoun",
   hsd: ["{{word:duo1}}-{{word:shao3}}"],
   tts: ["多少"],
   fit: "natural",

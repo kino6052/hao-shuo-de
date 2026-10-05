@@ -7,6 +7,7 @@ export default composite({
   py: "lóu",
   en: "building",
   ru: "здание",
+  pos: "noun",
   hsd: ["{{word:da4}}-{{word:de}} {{word:jia1}}"],
   tts: ["大的家"],
   literal: "a big house",

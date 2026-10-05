@@ -7,6 +7,7 @@ export default composite({
   py: "chāoguò",
   en: "exceed",
   ru: "превышать",
+  pos: "verb",
   hsd: ["{{word:bi3}} X {{word:duo1}}"],
   tts: ["比X多"],
   literal: "more than X",

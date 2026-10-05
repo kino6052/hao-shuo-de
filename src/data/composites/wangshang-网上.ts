@@ -7,6 +7,7 @@ export default composite({
   py: "wǎngshang",
   en: "online",
   ru: "в интернете",
+  pos: "noun",
   hsd: ["{{word:wang3}}-{{word:shang4}}", "{{word:zai4}} {{word:wang3}}-{{word:shang4}}"],
   tts: ["网上", "在网上"],
   literal: "on the net",

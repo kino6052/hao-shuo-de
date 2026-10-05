@@ -7,10 +7,11 @@ export default composite({
   py: "xīnli",
   en: "in one's heart",
   ru: "в душе",
+  pos: "noun",
   hsd: ["{{word:xin1}}-{{word:li3}}", "{{word:jue2}}-{{light:de2}}"],
   tts: ["心里", "觉得"],
+  literal: "in the heart",
   fit: "natural",
   note: "wǒ jué-de …: in my heart, I feel …",
-  literal: "in the heart",
   proposed: true,
 });

@@ -7,6 +7,7 @@ export default composite({
   py: "zhēng",
   en: "contend, fight for",
   ru: "бороться, спорить",
+  pos: "verb",
   hsd: ["{{word:liang3}}-ge {{word:ren2}} {{word:dou1}} {{word:yao4}}"],
   tts: ["两个人都要"],
   literal: "both want it",

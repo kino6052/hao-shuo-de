@@ -7,6 +7,7 @@ export default composite({
   py: "jìhuà",
   en: "plan",
   ru: "план",
+  pos: "noun",
   hsd: ["{{word:yao4}} {{word:zuo4}}-{{word:de}} {{word:fang1}}-{{word:fa3}}"],
   tts: ["要做的方法"],
   literal: "the way you're going to do it",

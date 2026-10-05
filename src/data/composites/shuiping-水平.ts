@@ -7,6 +7,7 @@ export default composite({
   py: "shuǐpíng",
   en: "level, standard",
   ru: "уровень",
+  pos: "noun",
   hsd: ["{{word:duo1}} {{word:hao3}}"],
   tts: ["多好"],
   literal: "how good",

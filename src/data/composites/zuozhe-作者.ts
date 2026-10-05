@@ -7,6 +7,7 @@ export default composite({
   py: "zuòzhě",
   en: "author",
   ru: "автор",
+  pos: "noun",
   hsd: ["{{word:zuo4}}-{{word:zhe3}}", "{{word:xie3}}-{{word:de}} {{word:ren2}}"],
   tts: ["作者", "写的人"],
   literal: "the one who writes",

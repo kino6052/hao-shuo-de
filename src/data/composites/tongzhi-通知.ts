@@ -7,6 +7,7 @@ export default composite({
   py: "tōngzhī",
   en: "notify",
   ru: "уведомлять",
+  pos: "verb",
   hsd: ["{{word:jiao4}} {{word:ren2}} {{word:zhi1dao4}}"],
   tts: ["叫人知道"],
   literal: "let people know",

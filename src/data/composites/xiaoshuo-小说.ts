@@ -7,6 +7,7 @@ export default composite({
   py: "xiǎoshuō",
   en: "novel",
   ru: "роман",
+  pos: "noun",
   hsd: ["{{word:xiao3}}-{{word:shuo1}}"],
   tts: ["小说"],
   literal: "small talk",

@@ -7,6 +7,7 @@ export default composite({
   py: "jǔ",
   en: "raise, lift",
   ru: "поднимать",
+  pos: "verb",
   hsd: ["{{word:na2}}-{{word:qi3}}-{{word:lai2}}"],
   tts: ["拿起来"],
   literal: "lift it up",

@@ -7,6 +7,7 @@ export default composite({
   py: "zhíbō",
   en: "live broadcast",
   ru: "прямая трансляция",
+  pos: "verb",
   hsd: [
     "{{word:fa1}}-{{word:sheng1}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:gei3}} {{word:ren2}} {{word:kan4}}",
   ],

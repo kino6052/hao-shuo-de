@@ -7,6 +7,7 @@ export default composite({
   py: "biǎoshì",
   en: "express",
   ru: "выражать",
+  pos: "verb",
   hsd: ["{{word:shuo1}}"],
   tts: ["说"],
   literal: "say",

@@ -7,6 +7,7 @@ export default composite({
   py: "qízhōng",
   en: "among them",
   ru: "среди них",
+  pos: "noun",
   hsd: ["X {{word:li3}}-{{word:mian4}}"],
   tts: ["X里面"],
   literal: "inside X",

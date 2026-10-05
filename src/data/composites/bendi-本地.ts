@@ -7,6 +7,7 @@ export default composite({
   py: "běndì",
   en: "local",
   ru: "местный",
+  pos: "noun",
   hsd: ["{{word:zhe4}}-{{word:li3}}"],
   tts: ["这里"],
   literal: "here",

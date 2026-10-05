@@ -7,6 +7,7 @@ export default composite({
   py: "zhǎng",
   en: "grow",
   ru: "расти",
+  pos: "verb",
   hsd: ["{{word:bian4}} {{word:da4}}"],
   tts: ["变大"],
   literal: "get bigger",

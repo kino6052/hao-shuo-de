@@ -7,6 +7,7 @@ export default composite({
   py: "yùndòngyuán",
   en: "athlete",
   ru: "спортсмен",
+  pos: "noun",
   hsd: ["{{word:dong4}}-{{word:shen1ti3}}-{{word:de}} {{word:ren2}}"],
   tts: ["动身体的人"],
   literal: "a person who exercises",

@@ -4,6 +4,13 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "result",
+  words: [
+    {
+      word: "jian4",
+      en: "see; {{word:kan4}}-{{word:jian4}}: see",
+      ru: "видеть; {{word:kan4}}-{{word:jian4}} — увидеть",
+    },
+  ],
   prose: {
     en: [
       "**To say how an action ends**, join a result word to the verb. You know {{word:chi1}}-{{word:wan2}} (Lesson {{lesson:around-an-action}}).",
@@ -11,6 +18,7 @@ export default lessonModule({
       "**verb-result**",
       "",
       "{{word:dao4}} says you reach it: {{word:kan4}}-{{word:dao4}} (see), {{word:ting1}}-{{word:dao4}} (hear), {{word:zhao3}}-{{word:dao4}} (find). {{word:zuo4}}-{{word:hao3}} is \"fix\", {{word:zuo4}}-{{word:huai4}} is \"break\", and {{word:xue2}}-{{word:hui4}} is \"learn until you can\". For \"didn't\", use {{word:mei2}} (Lesson {{lesson:also-and-all}}): {{word:mei2}} {{word:zhao3}}-{{word:dao4}}.",
+      "{{word:jian4}} after {{word:kan4}} or {{word:ting1}} says you caught it: {{word:kan4}}-{{word:jian4}}, see; {{word:ting1}}-{{word:jian4}}, hear.",
     ],
     ru: [
       "**Чтобы сказать, чем закончилось действие**, присоедините к глаголу слово-результат. Вы уже знаете {{word:chi1}}-{{word:wan2}} (урок {{lesson:around-an-action}}).",
@@ -18,6 +26,7 @@ export default lessonModule({
       "**глагол-результат**",
       "",
       "{{word:dao4}} говорит, что вы этого достигли: {{word:kan4}}-{{word:dao4}} (увидеть), {{word:ting1}}-{{word:dao4}} (услышать), {{word:zhao3}}-{{word:dao4}} (найти) — как в русском «искать» и «найти». {{word:zuo4}}-{{word:hao3}} — «починить», {{word:zuo4}}-{{word:huai4}} — «сломать», а {{word:xue2}}-{{word:hui4}} — «учиться, пока не научишься». Чтобы сказать «не сделал», используйте {{word:mei2}} (урок {{lesson:also-and-all}}): {{word:mei2}} {{word:zhao3}}-{{word:dao4}}.",
+      "{{word:jian4}} после {{word:kan4}} или {{word:ting1}} говорит, что вы уловили: {{word:kan4}}-{{word:jian4}} — увидеть; {{word:ting1}}-{{word:jian4}} — услышать.",
     ],
     tldr: {
       en: "Join the result to the verb: {{word:zhao3}}-{{word:dao4}} is find, {{word:zuo4}}-{{word:huai4}} is break.",
@@ -69,6 +78,18 @@ export default lessonModule({
       en: "Have you learned how?",
       ru: "Ты научился?",
     },
+    {
+      pinyin: "{{Word:wo3}} {{word:kan4}}-{{word:jian4}} {{word:le}}.",
+      hanzi: "我看见了。",
+      en: "I saw it.",
+      ru: "Я увидел.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:ting1}}-{{word:jian4}} {{word:le}} {{word:ma}}?",
+      hanzi: "你听见了吗？",
+      en: "Did you hear it?",
+      ru: "Ты услышал?",
+    },
   ],
   exercises: [
     {
@@ -82,6 +103,12 @@ export default lessonModule({
       ru: "Он сломал коробку.",
       answer: "{{Word:ta1}} {{word:ba3}} {{word:he2zi}} {{word:zuo4}}-{{word:huai4}} {{word:le}}.",
       hanzi: "他把盒子做坏了。",
+    },
+    {
+      en: "I didn't see it.",
+      ru: "Я не увидел.",
+      answer: "{{Word:wo3}} {{word:mei2}} {{word:kan4}}-{{word:jian4}}.",
+      hanzi: "我没看见。",
     },
   ],
 });

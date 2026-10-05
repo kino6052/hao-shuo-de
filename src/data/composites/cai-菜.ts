@@ -7,9 +7,10 @@ export default composite({
   py: "cài",
   en: "vegetable; dish",
   ru: "овощи; блюдо",
+  pos: "noun",
   hsd: ["{{word:chi1}}-{{word:de}} {{word:zhi2wu4}}"],
   tts: ["吃的植物"],
-  fit: "plain",
   literal: "plants you eat",
+  fit: "plain",
   proposed: true,
 });

@@ -7,6 +7,7 @@ export default composite({
   py: "tiàowǔ",
   en: "dance",
   ru: "танцевать",
+  pos: "verb",
   hsd: ["{{word:hao3}}-{{word:kan4}}-{{word:de}} {{word:dong4}} {{word:shen1ti3}}"],
   tts: ["好看的动身体"],
   literal: "move the body nicely",

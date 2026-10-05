@@ -7,6 +7,7 @@ export default composite({
   py: "hē",
   en: "drink",
   ru: "пить",
+  pos: "verb",
   hsd: ["{{word:he1}}"],
   tts: ["喝"],
   fit: "word",

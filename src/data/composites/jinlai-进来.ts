@@ -7,6 +7,7 @@ export default composite({
   py: "jìnlái",
   en: "come in",
   ru: "входить",
+  pos: "verb",
   hsd: ["{{word:jin4}}-{{word:lai2}}"],
   tts: ["进来"],
   fit: "natural",

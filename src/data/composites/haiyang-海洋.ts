@@ -7,6 +7,7 @@ export default composite({
   py: "hǎiyáng",
   en: "ocean",
   ru: "океан",
+  pos: "noun",
   hsd: ["{{word:hen3}}-{{word:da4}}-{{word:de}} {{word:shui3}}"],
   tts: ["很大的水"],
   literal: "very big water",

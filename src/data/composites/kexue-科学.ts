@@ -7,6 +7,7 @@ export default composite({
   py: "kēxué",
   en: "science",
   ru: "наука",
+  pos: "noun",
   hsd: ["{{word:xue2}}-{{word:de}}"],
   tts: ["学的"],
   literal: "what is learned",

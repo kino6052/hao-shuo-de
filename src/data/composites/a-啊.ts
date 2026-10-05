@@ -7,6 +7,7 @@ export default composite({
   py: "a",
   en: "ah, oh",
   ru: "ах",
+  pos: "auxiliary",
   fit: "skip",
   note: "Sentence-end particles weren't added (D17).",
 });

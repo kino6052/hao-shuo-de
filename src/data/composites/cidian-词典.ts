@@ -7,6 +7,7 @@ export default composite({
   py: "cídiǎn",
   en: "dictionary",
   ru: "словарь",
+  pos: "noun",
   hsd: [
     "{{word:shuo1}} {{word:ci2}} {{word:shi4}} {{word:shen2me}}-{{word:de}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],

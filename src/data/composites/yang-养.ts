@@ -7,6 +7,7 @@ export default composite({
   py: "yǎng",
   en: "raise, keep (animals)",
   ru: "держать (животных)",
+  pos: "verb",
   hsd: ["{{word:zai4}} {{word:jia1}}-{{word:li3}} {{word:you3}}"],
   tts: ["在家里有"],
   literal: "have at home",

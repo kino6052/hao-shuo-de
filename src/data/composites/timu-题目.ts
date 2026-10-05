@@ -7,6 +7,7 @@ export default composite({
   py: "tímù",
   en: "topic, question",
   ru: "тема, задание",
+  pos: "noun",
   hsd: ["{{word:wen4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["问的东西"],
   literal: "what's asked",

@@ -7,6 +7,7 @@ export default composite({
   py: "yīnyuè",
   en: "music",
   ru: "музыка",
+  pos: "noun",
   hsd: ["{{word:hao3}} {{word:ting1}}-{{word:de}} {{word:sheng1yin1}}"],
   tts: ["好听的声音"],
   literal: "nice sounds",

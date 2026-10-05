@@ -7,6 +7,7 @@ export default composite({
   py: "cái",
   en: "only then",
   ru: "только тогда",
+  pos: "adverb",
   hsd: ["X-{{word:wan2}} {{word:hou4}}, Y"],
   tts: ["X完后，Y"],
   literal: "after finishing X, Y",

@@ -7,6 +7,7 @@ export default composite({
   py: "zhèngquè",
   en: "correct",
   ru: "правильный",
+  pos: "adjective",
   hsd: ["{{word:dui4}}"],
   tts: ["对"],
   fit: "word",

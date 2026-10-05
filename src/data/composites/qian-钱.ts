@@ -7,6 +7,7 @@ export default composite({
   py: "qián",
   en: "money",
   ru: "деньги",
+  pos: "noun",
   hsd: ["{{word:jin1}}"],
   tts: ["金"],
   fit: "word",

@@ -7,6 +7,7 @@ export default composite({
   py: "liángshi",
   en: "grain, food crops",
   ru: "зерно, продовольствие",
+  pos: "noun",
   hsd: ["{{word:chi1}}-{{word:de}} {{word:zhi2wu4}}"],
   tts: ["吃的植物"],
   literal: "plants we eat",

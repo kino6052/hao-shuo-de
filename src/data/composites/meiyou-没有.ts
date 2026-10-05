@@ -7,6 +7,7 @@ export default composite({
   py: "méiyǒu",
   en: "not have",
   ru: "не иметь",
+  pos: "verb",
   hsd: ["{{word:mei2}}-{{word:you3}}"],
   tts: ["没有"],
   fit: "natural",

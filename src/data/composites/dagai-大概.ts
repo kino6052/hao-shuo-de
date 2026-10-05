@@ -7,6 +7,7 @@ export default composite({
   py: "dàgài",
   en: "probably",
   ru: "вероятно",
+  pos: "adjective",
   hsd: ["{{word:ke3}}-{{word:neng2}}"],
   tts: ["可能"],
   fit: "word",

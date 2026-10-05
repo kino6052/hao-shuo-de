@@ -7,6 +7,7 @@ export default composite({
   py: "xiàtiān",
   en: "summer",
   ru: "лето",
+  pos: "noun",
   hsd: [
     "{{word:shi2}}-{{word:er4}}-ge {{word:yue4}}-{{word:li3}} {{word:zui4}} {{word:re4}}-{{word:de}} {{word:shi2}}-{{word:jian1}}",
   ],

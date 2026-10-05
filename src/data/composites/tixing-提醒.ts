@@ -7,6 +7,7 @@ export default composite({
   py: "tíxǐng",
   en: "remind",
   ru: "напоминать",
+  pos: "verb",
   hsd: ["{{word:you4}} {{word:shuo1}}"],
   tts: ["又说"],
   literal: "say it again",

@@ -7,6 +7,7 @@ export default composite({
   py: "chákàn",
   en: "check, look over",
   ru: "проверять, просматривать",
+  pos: "verb",
   hsd: ["{{word:kan4}}"],
   tts: ["看"],
   fit: "word",

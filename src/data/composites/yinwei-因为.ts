@@ -7,6 +7,7 @@ export default composite({
   py: "yīnwèi",
   en: "because",
   ru: "потому что",
+  pos: "preposition",
   hsd: ["{{word:yin1wei4}}"],
   tts: ["因为"],
   fit: "word",

@@ -7,6 +7,7 @@ export default composite({
   py: "dòng",
   en: "move",
   ru: "двигаться",
+  pos: "verb",
   hsd: ["{{word:dong4}}"],
   tts: ["动"],
   fit: "word",

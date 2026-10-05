@@ -7,6 +7,7 @@ export default composite({
   py: "mùdì",
   en: "purpose",
   ru: "цель",
+  pos: "noun",
   hsd: ["{{word:yao4}} {{word:zuo4}}-{{word:dao4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["要做到的东西"],
   literal: "the thing you want to get done",

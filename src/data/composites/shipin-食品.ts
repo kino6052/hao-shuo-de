@@ -7,6 +7,7 @@ export default composite({
   py: "shípǐn",
   en: "food",
   ru: "еда, продукты",
+  pos: "noun",
   hsd: ["{{word:chi1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["吃的东西"],
   literal: "things to eat",

@@ -7,6 +7,7 @@ export default composite({
   py: "fàngxīn",
   en: "don't worry, feel at ease",
   ru: "не волноваться",
+  pos: "verb",
   hsd: ["{{word:fang4}}-{{word:xin1}}"],
   tts: ["放心"],
   literal: "put the heart down",

@@ -7,6 +7,7 @@ export default composite({
   py: "zuìhòu",
   en: "last, final",
   ru: "последний",
+  pos: "noun",
   hsd: ["{{word:zui4}}-{{word:hou4}}"],
   tts: ["最后"],
   literal: "most behind",

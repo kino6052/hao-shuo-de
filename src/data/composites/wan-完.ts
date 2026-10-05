@@ -7,6 +7,7 @@ export default composite({
   py: "wán",
   en: "finish",
   ru: "закончить",
+  pos: "verb",
   hsd: ["{{word:wan2}}"],
   tts: ["完"],
   fit: "word",

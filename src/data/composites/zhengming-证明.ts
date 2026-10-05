@@ -7,6 +7,7 @@ export default composite({
   py: "zhèngmíng",
   en: "prove",
   ru: "доказывать",
+  pos: "verb",
   hsd: ["{{word:jiao4}} {{word:ren2}} {{word:zhi1dao4}} {{word:shi4}} {{word:zhen1}}-{{word:de}}"],
   tts: ["叫人知道是真的"],
   literal: "make people know it's true",

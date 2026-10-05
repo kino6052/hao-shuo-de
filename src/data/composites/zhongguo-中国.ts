@@ -7,6 +7,7 @@ export default composite({
   py: "Zhōngguó",
   en: "China",
   ru: "Китай",
+  pos: "noun",
   hsd: ["\"Zhōngguó\""],
   tts: ["中国"],
   fit: "name",

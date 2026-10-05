@@ -7,6 +7,7 @@ export default composite({
   py: "chúle",
   en: "except",
   ru: "кроме",
+  pos: "preposition",
   hsd: ["X {{word:bu4}} {{word:suan4}}"],
   tts: ["X不算"],
   literal: "X doesn't count",

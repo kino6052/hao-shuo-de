@@ -7,6 +7,7 @@ export default composite({
   py: "dī",
   en: "low",
   ru: "низкий",
+  pos: "adjective",
   hsd: ["{{word:zai4}} {{word:xia4}}-{{word:mian4}}", "{{word:xiao3}}"],
   tts: ["在下面", "小"],
   literal: "below / small",

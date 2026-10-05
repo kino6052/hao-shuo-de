@@ -7,6 +7,7 @@ export default composite({
   py: "nián",
   en: "year",
   ru: "год",
+  pos: "noun",
   hsd: ["{{word:nian2}}"],
   tts: ["年"],
   fit: "word",

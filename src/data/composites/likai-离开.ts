@@ -7,6 +7,7 @@ export default composite({
   py: "líkāi",
   en: "leave",
   ru: "уходить",
+  pos: "verb",
   hsd: ["{{word:qu4}}"],
   tts: ["去"],
   fit: "plain",

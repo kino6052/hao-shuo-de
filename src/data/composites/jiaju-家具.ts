@@ -7,6 +7,7 @@ export default composite({
   py: "jiājù",
   en: "furniture",
   ru: "мебель",
+  pos: "noun",
   hsd: [
     "{{word:jia1}}-{{word:ju4}}",
     "{{word:zai4}}-{{word:jia1}}-{{word:li3}}-{{word:de}} {{word:da4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",

@@ -7,6 +7,7 @@ export default composite({
   py: "zhěnggè",
   en: "whole, entire",
   ru: "весь, целый",
+  pos: "adjective",
   hsd: ["X {{word:dou1}}"],
   tts: ["X都"],
   literal: "all of X",

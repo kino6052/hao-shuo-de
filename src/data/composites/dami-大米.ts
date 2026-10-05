@@ -7,11 +7,12 @@ export default composite({
   py: "dàmǐ",
   en: "rice (uncooked)",
   ru: "рис",
+  pos: "noun",
   hsd: [
     "{{word:chi1}}-{{word:de}} {{word:xiao3}}-{{word:de}} {{word:bai2}}-{{word:se4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],
   tts: ["吃的小的白色的东西"],
-  fit: "plain",
   literal: "small white food",
+  fit: "plain",
   proposed: true,
 });

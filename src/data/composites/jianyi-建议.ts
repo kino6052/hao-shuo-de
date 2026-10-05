@@ -7,6 +7,7 @@ export default composite({
   py: "jiànyì",
   en: "suggest; suggestion",
   ru: "предлагать",
+  pos: "verb",
   hsd: ["…, {{word:hao3}} {{word:ma}}?"],
   tts: ["…，好吗？"],
   literal: "…, okay?",

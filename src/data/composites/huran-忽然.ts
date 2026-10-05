@@ -7,6 +7,7 @@ export default composite({
   py: "hūrán",
   en: "suddenly",
   ru: "вдруг",
+  pos: "adverb",
   hsd: ["{{word:yi1}}-{{word:xia4}}"],
   tts: ["一下"],
   literal: "in a moment",

@@ -506,8 +506,8 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:wo3}}-{{word:men}} {{word:shi2}}-{{word:er4}}-{{word:dian3}} {{word:chi1}} {{word:dong1}}-{{light:xi1}}.",
-    ttsText: "我们十二点吃东西。",
+    pinyin: "{{Word:wo3}}-{{word:men}} {{word:shi2}}-{{word:er4}}-{{word:dian3}} {{word:chi1}} {{word:fan4}}.",
+    ttsText: "我们十二点吃饭。",
     en: ["We eat at twelve."],
     zh: ["我们十二点吃饭。"],
     ru: ["Мы обедаем в двенадцать."],
@@ -778,8 +778,8 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:yao4}} {{word:chi1}} {{word:dong1}}-{{light:xi1}}.",
-    ttsText: "我要吃东西。",
+    pinyin: "{{Word:wo3}} {{word:yao4}} {{word:chi1}} {{word:fan4}}.",
+    ttsText: "我要吃饭。",
     en: ["I'm hungry. (Literally: \"I want to eat something.\")"],
     zh: ["我饿了。"],
     ru: ["Я хочу есть. (Дословно: «я хочу что-нибудь съесть».)"],

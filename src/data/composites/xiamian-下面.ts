@@ -7,9 +7,10 @@ export default composite({
   py: "xiàmiàn",
   en: "down",
   ru: "вниз",
+  pos: "noun",
   hsd: ["{{word:xia4}}-{{word:mian4}}", "{{word:xia4}}"],
   tts: ["下面", "下面"],
-  fit: "natural",
   literal: "the bottom side",
+  fit: "natural",
   proposed: true,
 });

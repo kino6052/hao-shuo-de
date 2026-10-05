@@ -7,6 +7,7 @@ export default composite({
   py: "suǒyǒu",
   en: "all",
   ru: "все",
+  pos: "adjective",
   hsd: ["… {{word:dou1}}"],
   tts: ["都"],
   fit: "word",

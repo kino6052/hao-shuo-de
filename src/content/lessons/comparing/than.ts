@@ -21,14 +21,14 @@ export default lessonModule({
       ru: "круглый",
     },
     {
-      word: "gun4zi",
-      en: "stick",
-      ru: "палка",
-    },
-    {
       word: "xian4",
       en: "line, rope, thread",
       ru: "линия, верёвка, нитка",
+    },
+    {
+      word: "chang2",
+      en: "long",
+      ru: "длинный",
     },
   ],
   prose: {
@@ -38,6 +38,7 @@ export default lessonModule({
       "**A + {{word:bi3}} + B + adjective**",
       "",
       "Don't put {{word:hen3}} in these sentences: {{Word:wo3}} {{word:bi3}} {{word:ni3}} {{word:da4}}, not {{word:hen3}} {{word:da4}}.",
+      "{{word:chang2}} is long; a stick is {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}, a long thing.",
     ],
     ru: [
       "**Чтобы сказать, что одно больше другого**, поставьте между ними {{word:bi3}} (чем), а потом прилагательное.",
@@ -46,6 +47,7 @@ export default lessonModule({
       "",
       "Прилагательное не меняется: в русском «большой» становится «больше», а в китайском остаётся {{word:da4}}.",
       "Не ставьте {{word:hen3}} в такие предложения: {{Word:wo3}} {{word:bi3}} {{word:ni3}} {{word:da4}}, а не {{word:hen3}} {{word:da4}}.",
+      "{{word:chang2}} — длинный; палка — {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}, длинная вещь.",
     ],
     tldr: {
       en: "A {{word:bi3}} B + adjective: {{Word:wo3}} {{word:bi3}} {{word:ni3}} {{word:da4}}, I'm bigger than you.",
@@ -65,8 +67,8 @@ export default lessonModule({
       ru: "Я больше тебя.",
     },
     {
-      pinyin: "{{Word:shen2me}} {{word:bi3}} {{word:gun4zi}} {{word:ying4}}?",
-      hanzi: "什么比棍子硬？",
+      pinyin: "{{Word:shen2me}} {{word:bi3}} {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:ying4}}?",
+      hanzi: "什么比长的东西硬？",
       en: "What is harder than a stick?",
       ru: "Что твёрже палки?",
     },
@@ -111,8 +113,8 @@ export default lessonModule({
     {
       en: "This stick is harder than that one.",
       ru: "Эта палка твёрже той.",
-      answer: "{{Word:zhe4}}-ge {{word:gun4zi}} {{word:bi3}} {{word:na4}}-ge {{word:ying4}}.",
-      hanzi: "这个棍子比那个硬。",
+      answer: "{{Word:zhe4}}-ge {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:bi3}} {{word:na4}}-ge {{word:ying4}}.",
+      hanzi: "这个长的东西比那个硬。",
     },
     {
       en: "You're bigger than me.",

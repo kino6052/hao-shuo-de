@@ -7,6 +7,7 @@ export default composite({
   py: "kěnéng",
   en: "maybe",
   ru: "может быть",
+  pos: "adjective",
   hsd: ["{{word:ke3}}-{{word:neng2}}"],
   tts: ["可能"],
   fit: "natural",

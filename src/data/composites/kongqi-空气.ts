@@ -7,6 +7,7 @@ export default composite({
   py: "kōngqì",
   en: "air",
   ru: "воздух",
+  pos: "noun",
   hsd: ["{{word:kong1}}-{{word:qi4}}"],
   tts: ["空气"],
   fit: "natural",

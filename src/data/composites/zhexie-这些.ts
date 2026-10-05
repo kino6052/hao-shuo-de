@@ -7,8 +7,10 @@ export default composite({
   py: "zhèxiē",
   en: "these",
   ru: "эти",
-  hsd: ["{{word:zhe4}}"],
-  tts: ["这"],
-  fit: "word",
+  pos: "pronoun",
+  hsd: ["{{word:zhe4}}-{{word:xie1}}", "{{word:zhe4}}"],
+  tts: ["这些", "这"],
+  fit: "natural",
   note: "zhè means \"this\" and \"these\".",
+  proposed: true,
 });

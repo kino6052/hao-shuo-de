@@ -7,6 +7,7 @@ export default composite({
   py: "zàixiàn",
   en: "online",
   ru: "онлайн",
+  pos: "verb",
   hsd: [
     "{{word:zai4}}-{{word:xian4}}",
     "{{word:wang3}}-{{word:shang4}}",

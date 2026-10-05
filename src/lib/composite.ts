@@ -8,6 +8,11 @@
 
 export type Fit = "word" | "natural" | "plain" | "gap" | "skip" | "name";
 
+/** The source word's part of speech (from the frequency list it came from). */
+export type CompositePos =
+  | "noun" | "verb" | "adjective" | "adverb" | "pronoun" | "number" | "classifier"
+  | "conjunction" | "preposition" | "auxiliary" | "phrase" | "suffix" | "prefix" | "interjection";
+
 export interface Composite {
   rank: number;
   phase: number;
@@ -15,6 +20,13 @@ export interface Composite {
   py: string;
   en: string;
   ru: string;
+  /** Decides the entry's head: a noun hangs under its last word, a verb under its verb (src/lib/heads.js). */
+  pos?: CompositePos;
+  /**
+   * The word id (or another entry's hanzi, e.g. "东西") this entry hangs under,
+   * when the rule in src/lib/heads.js picks the wrong one.
+   */
+  head?: string;
   /**
    * The Hao-shuo-de forms, most natural first ({{word:id}} references). When
    * the first is the colloquial Mandarin compound (míng-tiān), a constructive

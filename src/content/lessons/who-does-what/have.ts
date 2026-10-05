@@ -20,6 +20,11 @@ export default lessonModule({
       en: "money",
       ru: "деньги",
     },
+    {
+      word: "shu1",
+      en: "book",
+      ru: "книга",
+    },
   ],
   prose: {
     en: [
@@ -28,6 +33,7 @@ export default lessonModule({
       "**Who + {{word:you3}} / {{word:mei2}}-{{word:you3}} + thing**",
       "",
       "{{word:you3}} is the one verb that doesn't use {{word:bu4}}.",
+      "{{word:kan4}} {{word:shu1}} (look at a book) is reading.",
     ],
     ru: [
       "**Чтобы сказать, что у вас что-то есть**, используйте {{word:you3}}. Чтобы сказать «нет», говорите {{word:mei2}}-{{word:you3}}.",
@@ -36,6 +42,7 @@ export default lessonModule({
       "",
       "В русском говорят «у меня есть», а в китайском — «я имею»: {{Word:wo3}} {{word:you3}} {{word:jin1}}.",
       "{{word:you3}} — единственный глагол, который не использует {{word:bu4}}.",
+      "{{word:kan4}} {{word:shu1}} («смотреть книгу») — читать.",
     ],
     tldr: {
       en: "{{word:you3}} is have. For \"don't have\", say {{word:mei2}}-{{word:you3}}, never {{word:bu4}} {{word:you3}}.",
@@ -87,6 +94,18 @@ export default lessonModule({
       en: "I have very little money.",
       ru: "У меня очень мало денег.",
     },
+    {
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:shu1}}.",
+      hanzi: "我有书。",
+      en: "I have a book.",
+      ru: "У меня есть книга.",
+    },
+    {
+      pinyin: "{{Word:ta1}}-{{word:men}} {{word:kan4}} {{word:shu1}}.",
+      hanzi: "他们看书。",
+      en: "They read books.",
+      ru: "Они читают книги.",
+    },
   ],
   exercises: [
     {
@@ -94,6 +113,12 @@ export default lessonModule({
       ru: "У него нет денег.",
       answer: "{{Word:ta1}} {{word:mei2}}-{{word:you3}} {{word:jin1}}.",
       hanzi: "他没有金。",
+    },
+    {
+      en: "She doesn't have a book.",
+      ru: "У неё нет книги.",
+      answer: "{{Word:ta1}} {{word:mei2}}-{{word:you3}} {{word:shu1}}.",
+      hanzi: "她没有书。",
     },
   ],
 });

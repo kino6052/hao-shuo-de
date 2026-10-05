@@ -7,6 +7,7 @@ export default composite({
   py: "cānyù",
   en: "participate",
   ru: "участвовать",
+  pos: "verb",
   hsd: ["{{word:he2}} {{word:ren2}} {{word:yi1}}-{{word:qi3}} {{word:zuo4}}"],
   tts: ["和人一起做"],
   literal: "do it together with people",

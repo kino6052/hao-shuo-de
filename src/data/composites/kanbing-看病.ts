@@ -7,6 +7,7 @@ export default composite({
   py: "kànbìng",
   en: "see a doctor",
   ru: "идти к врачу",
+  pos: "verb",
   hsd: [
     "{{word:qu4}} {{word:ba3}}-{{word:shen1ti3}}-{{word:zuo4}}-{{word:hao3}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
   ],

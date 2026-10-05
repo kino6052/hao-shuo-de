@@ -7,6 +7,7 @@ export default composite({
   py: "fāng",
   en: "square; direction",
   ru: "квадрат; сторона",
+  pos: "adjective",
   hsd: [
     "{{word:fang1}}",
     "{{word:si4}}-ge {{word:bian1}} {{word:yi1}}-{{word:yang4}}-{{word:de}}",

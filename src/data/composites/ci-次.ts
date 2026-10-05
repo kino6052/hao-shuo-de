@@ -7,6 +7,7 @@ export default composite({
   py: "cì",
   en: "time (occurrence)",
   ru: "раз",
+  pos: "classifier",
   hsd: ["{{word:ci4}}"],
   tts: ["次"],
   fit: "word",

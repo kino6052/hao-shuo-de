@@ -7,6 +7,7 @@ export default composite({
   py: "bùrú",
   en: "not as good as",
   ru: "хуже, чем",
+  pos: "verb",
   hsd: ["{{word:mei2}}-{{word:you3}} X {{word:hao3}}"],
   tts: ["没有X好"],
   literal: "not as good as X",

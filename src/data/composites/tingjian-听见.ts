@@ -7,9 +7,11 @@ export default composite({
   py: "tīngjiàn",
   en: "hear",
   ru: "слышать",
-  hsd: ["{{word:ting1}}-{{word:dao4}}"],
-  tts: ["听到"],
+  pos: "verb",
+  hsd: ["{{word:ting1}}-{{word:jian4}}", "{{word:ting1}}-{{word:dao4}}"],
+  tts: ["听见", "听到"],
   literal: "listen-arrive",
   fit: "natural",
   note: "Lesson {{lesson:greetings-and-feelings}}.",
+  proposed: true,
 });

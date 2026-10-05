@@ -2002,10 +2002,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:jiao4}} + person + verb, have or let: {{Word:jiao4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}}. (Let him in.) {{word:bu4}} {{word:jiao4}}, won't let: {{Word:ba4ba}}-{{word:ma1ma}} {{word:bu4}} {{word:jiao4}} {{word:wo3}} {{word:chu1}}-{{word:qu4}}. (My parents won't let me go out.)"
+            "{{word:jiao4}} + person + verb, have: {{Word:wo3}} {{word:jiao4}} {{word:ta1}}-{{word:men}} {{word:deng3}}. (I told them to wait.) {{word:rang4}} + person + verb, let: {{Word:rang4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}}. (Let him in.) {{word:bu4}} {{word:rang4}}, won't let: {{Word:ba4ba}}-{{word:ma1ma}} {{word:bu4}} {{word:rang4}} {{word:wo3}} {{word:chu1}}-{{word:qu4}}. (My parents won't let me go out.)"
           ],
           "ru": [
-            "{{word:jiao4}} + человек + глагол — велеть или позволить: {{Word:jiao4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}}. (Пусть войдёт.) {{word:bu4}} {{word:jiao4}} — не позволять: {{Word:ba4ba}}-{{word:ma1ma}} {{word:bu4}} {{word:jiao4}} {{word:wo3}} {{word:chu1}}-{{word:qu4}}. (Родители не пускают меня гулять.)"
+            "{{word:jiao4}} + человек + глагол — велеть: {{Word:wo3}} {{word:jiao4}} {{word:ta1}}-{{word:men}} {{word:deng3}}. (Я велел им подождать.) {{word:rang4}} + человек + глагол — позволить: {{Word:rang4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}}. (Впусти его.) {{word:bu4}} {{word:rang4}} — не позволять: {{Word:ba4ba}}-{{word:ma1ma}} {{word:bu4}} {{word:rang4}} {{word:wo3}} {{word:chu1}}-{{word:qu4}}. (Родители не пускают меня гулять.)"
           ],
           "zh": []
         }

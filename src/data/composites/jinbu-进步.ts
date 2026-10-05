@@ -7,6 +7,7 @@ export default composite({
   py: "jìnbù",
   en: "improve, progress",
   ru: "прогресс, совершенствоваться",
+  pos: "verb",
   hsd: ["{{word:bian4}} {{word:hao3}}"],
   tts: ["变好"],
   literal: "get better",

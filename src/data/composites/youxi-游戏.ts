@@ -7,6 +7,7 @@ export default composite({
   py: "yóuxì",
   en: "game",
   ru: "игра",
+  pos: "noun",
   hsd: ["{{word:wan2r}}-{{word:de}}"],
   tts: ["玩儿的"],
   literal: "what you play",

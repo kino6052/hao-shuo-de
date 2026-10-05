@@ -7,6 +7,7 @@ export default composite({
   py: "jìn",
   en: "near",
   ru: "близкий",
+  pos: "adjective",
   hsd: ["{{word:zai4}} {{word:fu4jin4}}"],
   tts: ["在附近"],
   literal: "be nearby",

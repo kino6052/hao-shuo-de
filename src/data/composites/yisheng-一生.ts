@@ -7,6 +7,7 @@ export default composite({
   py: "yìshēng",
   en: "lifetime",
   ru: "вся жизнь",
+  pos: "noun",
   hsd: ["{{word:yi1}}-{{word:sheng1}}"],
   tts: ["一生"],
   literal: "one life",

@@ -7,6 +7,7 @@ export default composite({
   py: "táng",
   en: "sugar, candy",
   ru: "сахар, конфета",
+  pos: "noun",
   hsd: ["{{word:zuo4}} {{word:tian2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["做甜的东西"],
   literal: "the thing that makes it sweet",

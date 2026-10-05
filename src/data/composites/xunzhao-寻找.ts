@@ -7,6 +7,7 @@ export default composite({
   py: "xúnzhǎo",
   en: "look for",
   ru: "искать",
+  pos: "verb",
   hsd: ["{{word:zhao3}}"],
   tts: ["找"],
   fit: "word",

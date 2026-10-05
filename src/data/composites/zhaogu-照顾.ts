@@ -7,6 +7,7 @@ export default composite({
   py: "zhàogù",
   en: "take care of",
   ru: "заботиться",
+  pos: "verb",
   hsd: ["{{word:kan4}}-{{word:hao3}} X"],
   tts: ["看好X"],
   literal: "watch over X",

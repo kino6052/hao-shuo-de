@@ -7,6 +7,7 @@ export default composite({
   py: "sòng",
   en: "give (as a gift)",
   ru: "дарить",
+  pos: "verb",
   hsd: ["{{word:gei3}}"],
   tts: ["给"],
   fit: "word",

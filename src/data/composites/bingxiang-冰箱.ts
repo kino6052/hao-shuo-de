@@ -7,6 +7,7 @@ export default composite({
   py: "bīngxiāng",
   en: "refrigerator",
   ru: "холодильник",
+  pos: "noun",
   hsd: ["{{word:leng3}}-{{word:de}} {{word:he2zi}}"],
   tts: ["冷的盒子"],
   literal: "the cold box",

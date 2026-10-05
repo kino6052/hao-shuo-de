@@ -7,6 +7,7 @@ export default composite({
   py: "diànshì",
   en: "television",
   ru: "телевизор",
+  pos: "noun",
   hsd: ["{{word:kan4}}-{{word:de}} {{word:he2zi}}"],
   tts: ["看的盒子"],
   literal: "a box you watch",

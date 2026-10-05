@@ -7,6 +7,7 @@ export default composite({
   py: "zhǒng",
   en: "kind",
   ru: "вид",
+  pos: "classifier",
   hsd: ["{{word:zhong3}}"],
   tts: ["种"],
   fit: "word",

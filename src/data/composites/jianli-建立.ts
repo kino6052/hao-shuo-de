@@ -7,6 +7,7 @@ export default composite({
   py: "jiànlì",
   en: "establish, set up",
   ru: "создавать, учреждать",
+  pos: "verb",
   hsd: ["{{word:zuo4}}-{{word:qi3}}-{{word:lai2}}"],
   tts: ["做起来"],
   literal: "get it going",

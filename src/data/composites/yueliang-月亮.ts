@@ -7,6 +7,7 @@ export default composite({
   py: "yuèliang",
   en: "moon",
   ru: "луна",
+  pos: "noun",
   hsd: ["{{word:yue4}}"],
   tts: ["月"],
   fit: "word",

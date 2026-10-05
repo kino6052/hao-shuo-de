@@ -7,6 +7,7 @@ export default composite({
   py: "guānyú",
   en: "about",
   ru: "о, насчёт",
+  pos: "preposition",
   hsd: ["{{word:shuo1}} X-{{word:de}}"],
   tts: ["说X的"],
   literal: "that talks about X",

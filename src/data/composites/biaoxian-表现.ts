@@ -7,6 +7,7 @@ export default composite({
   py: "biǎoxiàn",
   en: "show, perform",
   ru: "проявлять, выступать",
+  pos: "verb",
   hsd: ["{{word:gei3}} {{word:ren2}} {{word:kan4}}"],
   tts: ["给人看"],
   literal: "show people",

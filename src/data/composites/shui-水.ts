@@ -7,6 +7,7 @@ export default composite({
   py: "shuǐ",
   en: "water",
   ru: "вода",
+  pos: "noun",
   hsd: ["{{word:shui3}}"],
   tts: ["水"],
   fit: "word",

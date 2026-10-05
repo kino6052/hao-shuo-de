@@ -7,6 +7,7 @@ export default composite({
   py: "yǐnqǐ",
   en: "cause, lead to",
   ru: "вызывать",
+  pos: "verb",
   hsd: ["{{word:jiao4}} X {{word:fa1}}-{{word:sheng1}}"],
   tts: ["叫X发生"],
   literal: "make X happen",

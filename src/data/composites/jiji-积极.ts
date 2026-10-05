@@ -7,6 +7,7 @@ export default composite({
   py: "jījí",
   en: "eager, positive",
   ru: "активный, позитивный",
+  pos: "adjective",
   hsd: ["{{word:hen3}} {{word:yao4}} {{word:zuo4}}"],
   tts: ["很要做"],
   literal: "very willing to do it",

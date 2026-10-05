@@ -7,6 +7,7 @@ export default composite({
   py: "rénmín",
   en: "the people",
   ru: "народ",
+  pos: "noun",
   hsd: ["{{word:da4}} {{word:qun2}}-{{word:de}} {{word:ren2}}"],
   tts: ["大群的人"],
   literal: "the people of the big group",

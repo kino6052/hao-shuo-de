@@ -7,6 +7,7 @@ export default composite({
   py: "zhīqián",
   en: "before",
   ru: "до",
+  pos: "noun",
   hsd: ["X {{word:qian2}}"],
   tts: ["X前"],
   fit: "natural",

@@ -7,6 +7,7 @@ export default composite({
   py: "xiǎo",
   en: "little",
   ru: "маленький",
+  pos: "adjective",
   hsd: ["{{word:xiao3}}"],
   tts: ["小"],
   fit: "word",

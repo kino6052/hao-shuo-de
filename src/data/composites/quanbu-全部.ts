@@ -7,6 +7,7 @@ export default composite({
   py: "quánbù",
   en: "all, whole",
   ru: "весь, целиком",
+  pos: "noun",
   hsd: ["{{word:dou1}}"],
   tts: ["都"],
   fit: "word",

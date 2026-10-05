@@ -7,6 +7,7 @@ export default composite({
   py: "fēnxiǎng",
   en: "share",
   ru: "делиться",
+  pos: "verb",
   hsd: ["{{word:gei3}} {{word:bie2}}-{{word:de}} {{word:ren2}} {{word:yi1}}-{{word:dian3}}"],
   tts: ["给别的人一点"],
   literal: "give others some",

@@ -7,6 +7,7 @@ export default composite({
   py: "shíkè",
   en: "moment",
   ru: "момент",
+  pos: "noun",
   hsd: ["{{word:yi1}}-{{word:xia4}}"],
   tts: ["一下"],
   fit: "word",

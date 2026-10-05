@@ -7,6 +7,7 @@ export default composite({
   py: "cānguān",
   en: "visit, tour",
   ru: "посещать",
+  pos: "verb",
   hsd: ["{{word:qu4}} {{word:kan4}}-kan"],
   tts: ["去看看"],
   literal: "go and have a look",

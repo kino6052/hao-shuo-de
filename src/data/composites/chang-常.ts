@@ -7,6 +7,7 @@ export default composite({
   py: "cháng",
   en: "often",
   ru: "часто",
+  pos: "adverb",
   hsd: ["{{word:hen3}} {{word:duo1}} {{word:ci4}}"],
   tts: ["很多次"],
   literal: "many times",

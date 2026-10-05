@@ -7,6 +7,7 @@ export default composite({
   py: "huǒchē",
   en: "train",
   ru: "поезд",
+  pos: "noun",
   hsd: ["{{word:huo3}}-{{word:che1}}"],
   tts: ["火车"],
   literal: "fire car",

@@ -7,6 +7,7 @@ export default composite({
   py: "chéngkè",
   en: "passenger",
   ru: "пассажир",
+  pos: "noun",
   hsd: ["{{word:zuo4}}-{{word:che1}}-{{word:de}} {{word:ren2}}"],
   tts: ["坐车的人"],
   literal: "a person riding in the car",

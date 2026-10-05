@@ -7,6 +7,7 @@ export default composite({
   py: "guòchéng",
   en: "process",
   ru: "процесс",
+  pos: "noun",
   hsd: ["{{word:cong2}} {{word:kai1shi3}} {{word:dao4}} {{word:wan2}}"],
   tts: ["从开始到完"],
   literal: "from the start to the end",

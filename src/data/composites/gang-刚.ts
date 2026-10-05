@@ -7,6 +7,7 @@ export default composite({
   py: "gāng",
   en: "just now",
   ru: "только что",
+  pos: "adverb",
   hsd: ["{{word:xian4}}-{{word:zai4}} … {{word:le}}"],
   tts: ["现在…了"],
   literal: "now … has happened",

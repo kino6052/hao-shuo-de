@@ -7,6 +7,7 @@ export default composite({
   py: "yìsi",
   en: "meaning",
   ru: "смысл",
+  pos: "noun",
   hsd: ["X {{word:shi4}} {{word:shen2me}}?"],
   tts: ["…是什么？"],
   literal: "what is X?",

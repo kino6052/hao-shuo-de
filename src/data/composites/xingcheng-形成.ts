@@ -7,6 +7,7 @@ export default composite({
   py: "xíngchéng",
   en: "form, take shape",
   ru: "образоваться",
+  pos: "verb",
   hsd: ["{{word:bian4}}"],
   tts: ["变"],
   fit: "word",

@@ -7,8 +7,9 @@ export default composite({
   py: "tóngyàng",
   en: "same",
   ru: "такой же",
-  hsd: ["{{word:yi1}}-{{word:yang4}}"],
-  tts: ["一样"],
-  fit: "word",
+  pos: "adjective",
+  hsd: ["{{word:tong2}}-{{word:yang4}}", "{{word:yi1}}-{{word:yang4}}"],
+  tts: ["同样", "一样"],
+  fit: "natural",
   proposed: true,
 });

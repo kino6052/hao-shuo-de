@@ -7,6 +7,7 @@ export default composite({
   py: "mǒu",
   en: "a certain",
   ru: "некий",
+  pos: "pronoun",
   hsd: ["{{word:yi1}}-ge"],
   tts: ["一个"],
   literal: "one",

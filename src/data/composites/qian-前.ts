@@ -7,6 +7,7 @@ export default composite({
   py: "qián",
   en: "front",
   ru: "перед",
+  pos: "noun",
   hsd: ["{{word:qian2}}"],
   tts: ["前"],
   fit: "word",

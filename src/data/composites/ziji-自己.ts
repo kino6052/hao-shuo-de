@@ -7,6 +7,7 @@ export default composite({
   py: "zìjǐ",
   en: "oneself",
   ru: "сам, себя",
+  pos: "pronoun",
   hsd: ["{{word:wo3}}", "{{word:ni3}}", "{{word:ta1}}"],
   tts: ["我", "你", "他"],
   fit: "word",

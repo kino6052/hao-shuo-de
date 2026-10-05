@@ -7,6 +7,7 @@ export default composite({
   py: "yīfu",
   en: "clothing",
   ru: "одежда",
+  pos: "noun",
   hsd: ["{{word:yi1fu}}"],
   tts: ["衣服"],
   fit: "word",

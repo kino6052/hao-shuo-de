@@ -7,6 +7,7 @@ export default composite({
   py: "túpiàn",
   en: "picture, image",
   ru: "картинка",
+  pos: "noun",
   hsd: ["{{word:kan4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["看的东西"],
   literal: "a thing to look at",

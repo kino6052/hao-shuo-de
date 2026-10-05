@@ -7,6 +7,7 @@ export default composite({
   py: "zhuānxīn",
   en: "focused",
   ru: "сосредоточенный",
+  pos: "adjective",
   hsd: ["{{word:xin1}} {{word:zai4}} X-{{word:shang4}}"],
   tts: ["心在X上"],
   literal: "the heart on X",

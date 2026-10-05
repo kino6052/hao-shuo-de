@@ -7,6 +7,7 @@ export default composite({
   py: "yuán",
   en: "round; circle",
   ru: "круглый; круг",
+  pos: "noun",
   hsd: ["{{word:yuan2}}"],
   tts: ["圆"],
   fit: "word",

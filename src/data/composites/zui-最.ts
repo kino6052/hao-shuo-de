@@ -7,6 +7,7 @@ export default composite({
   py: "zuì",
   en: "most",
   ru: "самый",
+  pos: "adverb",
   hsd: ["{{word:zui4}}"],
   tts: ["最"],
   fit: "word",

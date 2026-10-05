@@ -7,6 +7,7 @@ export default composite({
   py: "guóqìng",
   en: "National Day",
   ru: "национальный праздник",
+  pos: "noun",
   hsd: ["{{word:guo2}}-{{word:de}} {{word:ri4}}"],
   tts: ["国的日"],
   literal: "the country's day",

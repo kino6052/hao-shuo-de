@@ -7,6 +7,7 @@ export default composite({
   py: "sān",
   en: "three",
   ru: "три",
+  pos: "number",
   hsd: ["{{word:san1}}"],
   tts: ["三"],
   fit: "word",

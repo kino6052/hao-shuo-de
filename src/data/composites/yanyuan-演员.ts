@@ -7,6 +7,7 @@ export default composite({
   py: "yǎnyuán",
   en: "actor",
   ru: "актёр",
+  pos: "noun",
   hsd: ["{{word:zuo4}}-{{word:gei3}}-{{word:ren2}}-{{word:kan4}}-{{word:de}} {{word:ren2}}"],
   tts: ["做给人看的人"],
   literal: "someone who acts for others to watch",

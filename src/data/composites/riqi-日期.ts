@@ -7,6 +7,7 @@ export default composite({
   py: "rìqī",
   en: "date",
   ru: "дата",
+  pos: "noun",
   hsd: ["{{word:shen2me}} {{word:ri4}}"],
   tts: ["什么日"],
   literal: "which day",

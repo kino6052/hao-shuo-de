@@ -7,6 +7,7 @@ export default composite({
   py: "huó",
   en: "live",
   ru: "жить",
+  pos: "verb",
   hsd: ["{{word:huo2}}"],
   tts: ["活"],
   fit: "word",

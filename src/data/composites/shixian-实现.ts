@@ -7,6 +7,7 @@ export default composite({
   py: "shíxiàn",
   en: "come true",
   ru: "осуществить",
+  pos: "verb",
   hsd: ["{{word:bian4}} {{word:zhen1}}"],
   tts: ["变真"],
   literal: "become real",

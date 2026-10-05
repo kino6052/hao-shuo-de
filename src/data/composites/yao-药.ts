@@ -7,6 +7,7 @@ export default composite({
   py: "yào",
   en: "medicine",
   ru: "лекарство",
+  pos: "noun",
   hsd: [
     "{{word:ba3}} {{word:shen1ti3}} {{word:zuo4}}-{{word:hao3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],

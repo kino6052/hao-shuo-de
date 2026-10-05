@@ -7,6 +7,7 @@ export default composite({
   py: "zuò",
   en: "sit",
   ru: "сидеть",
+  pos: "verb",
   hsd: ["{{word:zuo4}}-{{word:xia4}}"],
   tts: ["坐下"],
   fit: "word",

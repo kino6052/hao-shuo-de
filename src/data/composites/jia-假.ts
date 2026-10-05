@@ -7,6 +7,7 @@ export default composite({
   py: "jiǎ",
   en: "fake, false",
   ru: "поддельный, ложный",
+  pos: "adjective",
   hsd: ["{{word:bu4}} {{word:zhen1}}"],
   tts: ["不真"],
   literal: "not real",

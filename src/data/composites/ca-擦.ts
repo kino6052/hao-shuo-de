@@ -7,6 +7,7 @@ export default composite({
   py: "cā",
   en: "wipe",
   ru: "вытирать",
+  pos: "verb",
   hsd: ["{{word:yong4}} {{word:yi1fu}} {{word:zuo4}}-{{word:hao3}}"],
   tts: ["用衣服做好"],
   literal: "clean it with cloth",

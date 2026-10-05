@@ -7,6 +7,7 @@ export default composite({
   py: "mǎnyì",
   en: "satisfied",
   ru: "довольный",
+  pos: "verb",
   hsd: ["{{word:jue2}}-{{light:de2}} {{word:hao3}}"],
   tts: ["觉得好"],
   literal: "feel good",

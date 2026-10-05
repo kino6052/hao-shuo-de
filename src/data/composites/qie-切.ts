@@ -7,6 +7,7 @@ export default composite({
   py: "qiē",
   en: "cut",
   ru: "резать",
+  pos: "verb",
   hsd: ["{{word:yong4}} {{word:gong1}}-{{word:ju4}} {{word:zuo4}}-{{word:kai1}}"],
   tts: ["用工具做开"],
   literal: "open it with a tool",

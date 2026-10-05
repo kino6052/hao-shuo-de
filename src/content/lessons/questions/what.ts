@@ -25,6 +25,11 @@ export default lessonModule({
       en: "buy",
       ru: "покупать",
     },
+    {
+      word: "shei2",
+      en: "who",
+      ru: "кто",
+    },
   ],
   prose: {
     en: [
@@ -32,14 +37,14 @@ export default lessonModule({
       "",
       "**Who + verb + {{word:shen2me}}?**",
       "",
-      "The rest of the sentence stays the same. {{word:shen2me}} {{word:ren2}} means who.",
+      "The rest of the sentence stays the same. {{word:shei2}} means who.",
     ],
     ru: [
       "**Чтобы спросить «что?»**, поставьте {{word:shen2me}} туда, где стоял бы ответ.",
       "",
       "**Кто + глагол + {{word:shen2me}}?**",
       "",
-      "Остальное предложение не меняется. {{word:shen2me}} {{word:ren2}} значит «кто».",
+      "Остальное предложение не меняется. {{word:shei2}} значит «кто».",
     ],
     tldr: {
       en: "Put {{word:shen2me}} (what) right where the answer would go.",
@@ -74,8 +79,8 @@ export default lessonModule({
       ru: "О чём он спрашивает?",
     },
     {
-      pinyin: "{{Word:shen2me}} {{word:ren2}} {{word:chi1}} {{word:zhe4}}-ge?",
-      hanzi: "什么人吃这个？",
+      pinyin: "{{Word:shei2}} {{word:chi1}} {{word:zhe4}}-ge?",
+      hanzi: "谁吃这个？",
       en: "Who eats this?",
       ru: "Кто это ест?",
     },
@@ -114,8 +119,8 @@ export default lessonModule({
     {
       en: "Who is asking?",
       ru: "Кто спрашивает?",
-      answer: "{{Word:shen2me}} {{word:ren2}} {{word:wen4}}?",
-      hanzi: "什么人问？",
+      answer: "{{Word:shei2}} {{word:wen4}}?",
+      hanzi: "谁问？",
     },
     {
       en: "Are you buying a tool?",

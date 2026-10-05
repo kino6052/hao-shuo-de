@@ -7,6 +7,7 @@ export default composite({
   py: "biǎomiàn",
   en: "surface",
   ru: "поверхность",
+  pos: "noun",
   hsd: ["{{word:wai4}}-{{word:mian4}}"],
   tts: ["外面"],
   literal: "the outside",

@@ -7,6 +7,7 @@ export default composite({
   py: "máng",
   en: "busy",
   ru: "занятой",
+  pos: "adjective",
   hsd: [
     "{{word:you3}} {{word:hen3}} {{word:duo1}} {{word:dong1}}-{{light:xi1}} {{word:yao4}} {{word:zuo4}}",
   ],

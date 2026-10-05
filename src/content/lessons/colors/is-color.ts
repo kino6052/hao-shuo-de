@@ -46,8 +46,8 @@ export default lessonModule({
       ru: "Моя одежда белая.",
     },
     {
-      pinyin: "{{Word:di4}}-{{word:shang4}}-{{word:de}} {{word:gun4zi}} {{word:shi4}} {{word:hei1}}-{{word:se4}}-{{word:de}}.",
-      hanzi: "地上的棍子是黑色的。",
+      pinyin: "{{Word:di4}}-{{word:shang4}}-{{word:de}} {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:shi4}} {{word:hei1}}-{{word:se4}}-{{word:de}}.",
+      hanzi: "地上的长的东西是黑色的。",
       en: "The stick on the floor is black.",
       ru: "Палка на полу чёрная.",
     },

@@ -7,6 +7,7 @@ export default composite({
   py: "yìngjiàn",
   en: "hardware",
   ru: "оборудование, «железо»",
+  pos: "noun",
   hsd: [
     "{{word:suan4}}-{{word:de}}-{{word:gong1}}-{{word:ju4}}-{{word:de}} {{word:ying4}}-{{word:de}} {{word:bu4}}-{{light:fen1}}",
   ],

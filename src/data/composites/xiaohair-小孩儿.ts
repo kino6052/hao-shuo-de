@@ -7,6 +7,7 @@ export default composite({
   py: "xiǎoháir",
   en: "child",
   ru: "ребёнок",
+  pos: "noun",
   hsd: ["{{word:xiao3}}-{{word:de}} {{word:ren2}}"],
   tts: ["小的人"],
   literal: "small person",

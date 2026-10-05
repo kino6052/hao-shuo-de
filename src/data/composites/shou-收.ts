@@ -7,6 +7,7 @@ export default composite({
   py: "shōu",
   en: "receive",
   ru: "получать",
+  pos: "verb",
   hsd: ["{{word:de2}}"],
   tts: ["得"],
   fit: "word",

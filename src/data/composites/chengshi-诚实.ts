@@ -7,6 +7,7 @@ export default composite({
   py: "chéngshí",
   en: "honest",
   ru: "честный",
+  pos: "adjective",
   hsd: ["{{word:shuo1}} {{word:zhen1}}-{{word:de}}"],
   tts: ["说真的"],
   literal: "says what's true",

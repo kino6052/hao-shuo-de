@@ -7,6 +7,7 @@ export default composite({
   py: "fēnshù",
   en: "score, grade",
   ru: "оценка",
+  pos: "noun",
   hsd: ["{{word:hao3}}-{{word:huai4}}-{{word:de}} {{word:hao4}}"],
   tts: ["好坏的号"],
   literal: "the number for how good",

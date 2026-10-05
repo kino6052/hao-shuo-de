@@ -7,6 +7,7 @@ export default composite({
   py: "dì",
   en: "(ordinal)",
   ru: "порядковый",
+  pos: "prefix",
   hsd: ["{{word:tou2}}-{{word:yi1}}-ge"],
   tts: ["头一个"],
   literal: "the first one",

@@ -7,6 +7,7 @@ export default composite({
   py: "fāngbiàn",
   en: "convenient",
   ru: "удобный",
+  pos: "adjective",
   hsd: ["{{word:hao3}} {{word:yong4}}"],
   tts: ["好用"],
   literal: "good to use",

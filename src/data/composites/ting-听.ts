@@ -7,6 +7,7 @@ export default composite({
   py: "tīng",
   en: "hear",
   ru: "слышать",
+  pos: "verb",
   hsd: ["{{word:ting1}}"],
   tts: ["听"],
   fit: "word",

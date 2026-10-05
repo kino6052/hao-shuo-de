@@ -7,6 +7,7 @@ export default composite({
   py: "fùxí",
   en: "review (lessons)",
   ru: "повторять (урок)",
+  pos: "verb",
   hsd: ["{{word:you4}} {{word:xue2}}"],
   tts: ["又学"],
   literal: "learn again",

@@ -7,6 +7,7 @@ export default composite({
   py: "yánjiū",
   en: "research",
   ru: "исследовать",
+  pos: "verb",
   hsd: ["{{word:hao3}}-{{word:hao3}} {{word:kan4}}, {{word:hao3}}-{{word:hao3}} {{word:xue2}}"],
   tts: ["好好看，好好学"],
   literal: "look carefully, learn carefully",

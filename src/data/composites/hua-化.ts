@@ -7,6 +7,7 @@ export default composite({
   py: "huà",
   en: "change into, -ize",
   ru: "превращаться",
+  pos: "suffix",
   hsd: ["{{word:bian4}}"],
   tts: ["变"],
   fit: "word",

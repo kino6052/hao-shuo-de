@@ -7,6 +7,7 @@ export default composite({
   py: "chénglì",
   en: "be founded",
   ru: "основываться",
+  pos: "verb",
   hsd: ["{{word:kai1shi3}} {{word:you3}}"],
   tts: ["开始有"],
   literal: "start to exist",

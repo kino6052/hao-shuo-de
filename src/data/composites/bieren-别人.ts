@@ -7,6 +7,7 @@ export default composite({
   py: "biérén",
   en: "other people",
   ru: "другие люди",
+  pos: "pronoun",
   hsd: ["{{word:bie2}}-{{word:ren2}}", "{{word:bie2}}-{{word:de}} {{word:ren2}}"],
   tts: ["别人", "别的人"],
   fit: "natural",

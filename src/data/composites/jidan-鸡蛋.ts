@@ -7,6 +7,7 @@ export default composite({
   py: "jīdàn",
   en: "egg",
   ru: "яйцо",
+  pos: "noun",
   hsd: [
     "{{word:ji1}}-{{word:dan4}}",
     "{{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",

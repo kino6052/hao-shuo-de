@@ -7,6 +7,7 @@ export default composite({
   py: "yǔwén",
   en: "Chinese (school subject)",
   ru: "китайский язык",
+  pos: "noun",
   hsd: ["\"Zhōngguó\"-{{word:de}} {{word:shuo1}}-{{word:de}}"],
   tts: ["中国的说的"],
   literal: "China's spoken",

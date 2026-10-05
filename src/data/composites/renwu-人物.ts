@@ -7,6 +7,7 @@ export default composite({
   py: "rénwù",
   en: "person, character",
   ru: "личность, персонаж",
+  pos: "noun",
   hsd: ["{{word:ren2}}-{{word:wu4}}", "{{word:ren2}}"],
   tts: ["人物", "人"],
   fit: "natural",

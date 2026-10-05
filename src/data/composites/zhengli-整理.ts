@@ -7,6 +7,7 @@ export default composite({
   py: "zhěnglǐ",
   en: "tidy, sort out",
   ru: "приводить в порядок",
+  pos: "verb",
   hsd: ["{{word:zuo4}} {{word:bu4}} {{word:luan4}}"],
   tts: ["做不乱"],
   literal: "make it not messy",

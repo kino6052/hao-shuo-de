@@ -7,6 +7,7 @@ export default composite({
   py: "quèdìng",
   en: "certain; confirm",
   ru: "уверенный; установить",
+  pos: "adjective",
   hsd: ["{{word:zhen1}} {{word:zhi1dao4}}"],
   tts: ["真知道"],
   literal: "really know",

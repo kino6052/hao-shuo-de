@@ -7,6 +7,7 @@ export default composite({
   py: "lǐngdǎo",
   en: "lead; leader",
   ru: "руководить; руководитель",
+  pos: "verb",
   hsd: [
     "{{word:jiao4}} {{word:ren2}} {{word:zuo4}} {{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:ren2}}",
   ],

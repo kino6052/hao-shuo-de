@@ -7,6 +7,7 @@ export default composite({
   py: "xià",
   en: "down",
   ru: "вниз",
+  pos: "noun",
   hsd: ["{{word:xia4}}"],
   tts: ["下面"],
   fit: "word",

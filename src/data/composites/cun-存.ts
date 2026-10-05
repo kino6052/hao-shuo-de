@@ -7,6 +7,7 @@ export default composite({
   py: "cún",
   en: "store, save",
   ru: "хранить, копить",
+  pos: "verb",
   hsd: ["{{word:fang4}} {{word:hao3}}"],
   tts: ["放好"],
   literal: "put it away",

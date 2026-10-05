@@ -7,6 +7,7 @@ export default composite({
   py: "jiù",
   en: "old (thing)",
   ru: "старый (о вещи)",
+  pos: "adjective",
   hsd: ["{{word:lao3}}"],
   tts: ["老"],
   literal: "old",

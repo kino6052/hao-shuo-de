@@ -7,6 +7,7 @@ export default composite({
   py: "dàolǐ",
   en: "reason, principle",
   ru: "смысл, принцип",
+  pos: "noun",
   hsd: [
     "{{word:dao4}}-{{word:li3}}",
     "{{word:wei4}}-{{word:shen2me}} {{word:shi4}} {{word:dui4}}-{{word:de}}",

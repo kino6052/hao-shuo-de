@@ -7,6 +7,7 @@ export default composite({
   py: "píngmù",
   en: "screen",
   ru: "экран",
+  pos: "noun",
   hsd: ["{{word:gong1}}-{{word:ju4}}-{{word:shang4}} {{word:kan4}}-{{word:de}} {{word:mian4}}"],
   tts: ["工具上看的面"],
   literal: "the side of a tool you look at",

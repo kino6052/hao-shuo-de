@@ -7,6 +7,7 @@ export default composite({
   py: "zi",
   en: "(noun ending)",
   ru: "(суффикс)",
+  pos: "suffix",
   fit: "skip",
   note: "Not a word on its own.",
 });

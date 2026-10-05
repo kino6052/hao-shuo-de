@@ -7,6 +7,7 @@ export default composite({
   py: "fāngmiàn",
   en: "aspect",
   ru: "аспект",
+  pos: "noun",
   hsd: ["{{word:fang1}}-{{word:mian4}}", "{{word:bu4}}-{{light:fen1}}"],
   tts: ["方面", "部分"],
   literal: "part",

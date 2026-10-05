@@ -7,7 +7,10 @@ export default composite({
   py: "huánjìng",
   en: "environment",
   ru: "окружение",
-  hsd: ["{{word:zai4}} {{word:wo3}}-{{word:men}} {{word:pang2bian1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
+  pos: "noun",
+  hsd: [
+    "{{word:zai4}} {{word:wo3}}-{{word:men}} {{word:pang2bian1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+  ],
   tts: ["在我们旁边的东西"],
   literal: "the things around us",
   fit: "plain",

@@ -7,6 +7,7 @@ export default composite({
   py: "yuè",
   en: "the more … the more",
   ru: "чем … тем",
+  pos: "adverb",
   hsd: ["{{word:bian4}} …"],
   tts: ["变…"],
   literal: "become …",

@@ -7,6 +7,7 @@ export default composite({
   py: "piào",
   en: "ticket",
   ru: "билет",
+  pos: "noun",
   hsd: [
     "{{word:neng2}} {{word:jin4}}-{{word:qu4}}-{{word:de}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],

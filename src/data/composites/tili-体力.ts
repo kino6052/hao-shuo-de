@@ -7,6 +7,7 @@ export default composite({
   py: "tǐlì",
   en: "physical strength",
   ru: "физическая сила",
+  pos: "noun",
   hsd: ["{{word:shen1ti3}}-{{word:de}} {{word:li4}}"],
   tts: ["身体的力"],
   literal: "the body's strength",

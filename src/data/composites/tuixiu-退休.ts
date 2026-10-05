@@ -7,6 +7,7 @@ export default composite({
   py: "tuìxiū",
   en: "retire",
   ru: "выйти на пенсию",
+  pos: "verb",
   hsd: ["{{word:lao3}} {{word:le}}, {{word:bu4}} {{word:zuo4}} {{word:le}}"],
   tts: ["老了，不做了"],
   literal: "old, no longer working",

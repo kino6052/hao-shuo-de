@@ -7,6 +7,7 @@ export default composite({
   py: "xiǎngxiàng",
   en: "imagine",
   ru: "представлять, воображать",
+  pos: "verb",
   hsd: ["{{word:zai4}} {{word:xin1}}-{{word:li3}} {{word:kan4}}"],
   tts: ["在心里看"],
   literal: "see it in your heart",

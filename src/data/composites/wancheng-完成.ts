@@ -7,6 +7,7 @@ export default composite({
   py: "wánchéng",
   en: "complete",
   ru: "завершить",
+  pos: "verb",
   hsd: ["{{word:zuo4}}-{{word:wan2}}"],
   tts: ["做完"],
   literal: "do-finish",

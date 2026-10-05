@@ -7,6 +7,7 @@ export default composite({
   py: "shízài",
   en: "really, honestly",
   ru: "действительно",
+  pos: "adjective",
   hsd: ["{{word:zhen1}}"],
   tts: ["真"],
   fit: "word",

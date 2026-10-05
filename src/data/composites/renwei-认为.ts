@@ -7,6 +7,7 @@ export default composite({
   py: "rènwéi",
   en: "think, believe",
   ru: "считать",
+  pos: "verb",
   hsd: ["{{word:jue2}}-{{light:de2}}"],
   tts: ["觉得"],
   fit: "word",

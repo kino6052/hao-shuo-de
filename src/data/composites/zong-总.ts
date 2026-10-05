@@ -7,6 +7,7 @@ export default composite({
   py: "zǒng",
   en: "always",
   ru: "всегда",
+  pos: "adverb",
   hsd: ["{{word:ci4}}-{{word:ci4}} {{word:dou1}}"],
   tts: ["次次都"],
   literal: "every time",

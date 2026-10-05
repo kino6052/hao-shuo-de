@@ -7,6 +7,7 @@ export default composite({
   py: "duì",
   en: "facing",
   ru: "лицом к",
+  pos: "adjective",
   hsd: ["{{word:dui4}}"],
   tts: ["对"],
   fit: "word",

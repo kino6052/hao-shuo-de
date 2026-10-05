@@ -7,6 +7,7 @@ export default composite({
   py: "zhèngzài",
   en: "in the middle of (doing)",
   ru: "как раз (делать)",
+  pos: "adverb",
   hsd: ["{{word:zai4}}"],
   tts: ["在"],
   fit: "word",

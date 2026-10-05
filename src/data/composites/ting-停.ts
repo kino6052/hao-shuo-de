@@ -7,6 +7,7 @@ export default composite({
   py: "tíng",
   en: "stop",
   ru: "останавливаться",
+  pos: "verb",
   hsd: ["{{word:bu4}} {{word:dong4}}"],
   tts: ["不动"],
   literal: "not move",

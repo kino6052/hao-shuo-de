@@ -7,6 +7,7 @@ export default composite({
   py: "tóu",
   en: "head",
   ru: "голова",
+  pos: "noun",
   hsd: ["{{word:tou2}}"],
   tts: ["头"],
   fit: "word",

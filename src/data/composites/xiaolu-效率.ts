@@ -7,6 +7,7 @@ export default composite({
   py: "xiàolǜ",
   en: "efficiency",
   ru: "эффективность",
+  pos: "noun",
   hsd: ["{{word:zuo4}}-{{word:de}} {{word:duo1}} {{word:kuai4}}"],
   tts: ["做的多快"],
   literal: "how fast you get it done",

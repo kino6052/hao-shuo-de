@@ -7,6 +7,7 @@ export default composite({
   py: "chú",
   en: "divide",
   ru: "делить",
+  pos: "verb",
   hsd: [
     "{{word:cong2}} C {{word:li3}}-{{word:mian4}} {{word:na2}} A, {{word:neng2}} {{word:na2}} B-{{word:ci4}}",
   ],

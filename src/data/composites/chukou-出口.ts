@@ -7,6 +7,7 @@ export default composite({
   py: "chūkǒu",
   en: "exit; export",
   ru: "выход; экспорт",
+  pos: "noun",
   hsd: ["{{word:chu1}}-{{word:kou3}}"],
   tts: ["出口"],
   literal: "out-door",

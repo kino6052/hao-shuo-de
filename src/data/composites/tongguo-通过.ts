@@ -7,6 +7,7 @@ export default composite({
   py: "tōngguò",
   en: "pass through; by means of",
   ru: "через; посредством",
+  pos: "verb",
   hsd: ["{{word:tong1}}-{{word:guo4}}"],
   tts: ["通过"],
   literal: "go through",

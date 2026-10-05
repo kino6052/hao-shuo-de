@@ -7,6 +7,7 @@ export default composite({
   py: "wǎn",
   en: "bowl",
   ru: "миска",
+  pos: "noun",
   hsd: ["{{word:he2zi}}"],
   tts: ["盒子"],
   literal: "container",

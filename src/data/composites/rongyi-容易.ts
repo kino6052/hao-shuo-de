@@ -7,6 +7,7 @@ export default composite({
   py: "róngyì",
   en: "easy",
   ru: "лёгкий",
+  pos: "adjective",
   hsd: ["{{word:bu4}} {{word:nan2}}"],
   tts: ["不难"],
   literal: "not difficult",

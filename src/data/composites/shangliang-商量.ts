@@ -7,6 +7,7 @@ export default composite({
   py: "shāngliang",
   en: "talk it over",
   ru: "советоваться",
+  pos: "verb",
   hsd: ["{{word:yi1}}-{{word:qi3}} {{word:shuo1}}"],
   tts: ["一起说"],
   literal: "talk together",

@@ -7,6 +7,7 @@ export default composite({
   py: "zì",
   en: "from",
   ru: "от, с",
+  pos: "preposition",
   hsd: ["{{word:cong2}}"],
   tts: ["从"],
   fit: "word",

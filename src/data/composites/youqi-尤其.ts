@@ -7,6 +7,7 @@ export default composite({
   py: "yóuqí",
   en: "especially",
   ru: "особенно",
+  pos: "adverb",
   hsd: ["{{word:zui4}}"],
   tts: ["最"],
   literal: "most",

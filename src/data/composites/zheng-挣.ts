@@ -7,6 +7,7 @@ export default composite({
   py: "zhèng",
   en: "earn",
   ru: "зарабатывать",
+  pos: "verb",
   hsd: ["{{word:de2}} {{word:jin1}}"],
   tts: ["得金"],
   literal: "get money",

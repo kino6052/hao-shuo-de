@@ -7,6 +7,7 @@ export default composite({
   py: "xié",
   en: "shoe",
   ru: "обувь",
+  pos: "noun",
   hsd: ["{{word:zai4}}-{{word:jiao3}}-{{word:shang4}}-{{word:de}} {{word:yi1fu}}"],
   tts: ["在脚上的衣服"],
   literal: "clothes for the feet",

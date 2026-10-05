@@ -7,6 +7,7 @@ export default composite({
   py: "sùdù",
   en: "speed",
   ru: "скорость",
+  pos: "noun",
   hsd: ["{{word:kuai4}} {{word:bu4}} {{word:kuai4}}"],
   tts: ["快不快"],
   literal: "how fast",

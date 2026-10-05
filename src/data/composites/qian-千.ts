@@ -7,6 +7,7 @@ export default composite({
   py: "qiān",
   en: "thousand",
   ru: "тысяча",
+  pos: "number",
   hsd: ["{{word:shi2}}-ge {{word:shi2}}-ge {{word:shi2}}"],
   tts: ["十个十个十"],
   literal: "ten tens of ten",

@@ -7,6 +7,7 @@ export default composite({
   py: "máo",
   en: "hair, fur",
   ru: "шерсть",
+  pos: "classifier",
   hsd: ["{{word:mao2}}"],
   tts: ["毛"],
   fit: "word",

@@ -7,6 +7,7 @@ export default composite({
   py: "bàomíng",
   en: "sign up",
   ru: "записаться",
+  pos: "verb",
   hsd: ["{{word:xie3}} {{word:ni3}} {{word:jiao4}} {{word:shen2me}}"],
   tts: ["写你叫什么"],
   literal: "write what you're called",

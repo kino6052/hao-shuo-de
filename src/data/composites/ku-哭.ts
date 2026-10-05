@@ -7,6 +7,7 @@ export default composite({
   py: "kū",
   en: "cry",
   ru: "плакать",
+  pos: "verb",
   hsd: ["{{word:yan3jing}} {{word:chu1}} {{word:shui3}}"],
   tts: ["眼睛出水"],
   literal: "water comes out of the eyes",

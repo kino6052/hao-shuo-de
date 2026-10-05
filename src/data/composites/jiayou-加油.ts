@@ -7,6 +7,7 @@ export default composite({
   py: "jiāyóu",
   en: "come on!",
   ru: "давай!",
+  pos: "verb",
   hsd: ["{{word:hao3}}-{{word:hao3}} {{word:zuo4}}!"],
   tts: ["好好做！"],
   literal: "do it well!",

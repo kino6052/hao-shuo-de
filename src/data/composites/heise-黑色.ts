@@ -7,6 +7,7 @@ export default composite({
   py: "hēisè",
   en: "black",
   ru: "чёрный",
+  pos: "noun",
   hsd: ["{{word:hei1}}-{{word:se4}}"],
   tts: ["黑色"],
   fit: "natural",

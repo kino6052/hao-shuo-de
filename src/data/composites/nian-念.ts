@@ -7,6 +7,7 @@ export default composite({
   py: "niàn",
   en: "read aloud; miss",
   ru: "читать вслух; скучать",
+  pos: "verb",
   hsd: [
     "{{word:shuo1}}-{{word:chu1}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
     "{{word:xin1}}-{{word:li3}} {{word:you3}} X",

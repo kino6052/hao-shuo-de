@@ -7,6 +7,7 @@ export default composite({
   py: "zhìliáo",
   en: "treat (medically)",
   ru: "лечить",
+  pos: "verb",
   hsd: ["{{word:ba3}} {{word:shen1ti3}} {{word:zuo4}} {{word:hao3}}"],
   tts: ["把身体做好"],
   literal: "make the body good",

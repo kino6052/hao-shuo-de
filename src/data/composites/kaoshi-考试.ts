@@ -7,6 +7,7 @@ export default composite({
   py: "kǎoshì",
   en: "exam",
   ru: "экзамен",
+  pos: "verb",
   hsd: [
     "{{word:kan4}}-{{word:ni3}}-{{word:xue2}}-{{word:le}}-{{word:shen2me}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],

@@ -7,6 +7,7 @@ export default composite({
   py: "kōngjiān",
   en: "space",
   ru: "пространство",
+  pos: "noun",
   hsd: ["{{word:kong1}}-{{word:jian1}}"],
   tts: ["空间"],
   literal: "the empty between",

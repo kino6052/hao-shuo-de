@@ -7,6 +7,7 @@ export default composite({
   py: "wàimài",
   en: "takeout",
   ru: "доставка еды",
+  pos: "verb",
   hsd: [
     "{{word:na2}} {{word:dao4}} {{word:jia1}}-{{word:li3}}-{{word:de}} {{word:chi1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],

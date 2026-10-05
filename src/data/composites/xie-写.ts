@@ -7,6 +7,7 @@ export default composite({
   py: "xiě",
   en: "write",
   ru: "писать",
+  pos: "verb",
   hsd: ["{{word:xie3}}"],
   tts: ["写"],
   fit: "word",

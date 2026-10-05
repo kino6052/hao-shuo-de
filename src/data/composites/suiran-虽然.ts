@@ -7,6 +7,7 @@ export default composite({
   py: "suīrán",
   en: "although",
   ru: "хотя",
+  pos: "conjunction",
   hsd: ["…, {{word:dan4}}-{{word:shi4}} …"],
   tts: ["…，但是…"],
   literal: "…, but …",

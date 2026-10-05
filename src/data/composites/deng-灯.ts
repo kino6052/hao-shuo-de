@@ -7,6 +7,7 @@ export default composite({
   py: "dēng",
   en: "lamp, light",
   ru: "лампа",
+  pos: "noun",
   hsd: ["{{word:deng1}}"],
   tts: ["灯"],
   fit: "word",

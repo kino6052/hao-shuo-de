@@ -7,6 +7,7 @@ export default composite({
   py: "yǎnjìng",
   en: "glasses",
   ru: "очки",
+  pos: "noun",
   hsd: ["{{word:bang1}} {{word:kan4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["帮看的东西"],
   literal: "the thing that helps you see",

@@ -7,6 +7,7 @@ export default composite({
   py: "yuán",
   en: "member, worker (suffix)",
   ru: "работник",
+  pos: "suffix",
   hsd: ["X-{{word:de}} {{word:ren2}}"],
   tts: ["X的人"],
   literal: "X's person",

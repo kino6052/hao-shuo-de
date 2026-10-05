@@ -7,6 +7,7 @@ export default composite({
   py: "duō",
   en: "many",
   ru: "много",
+  pos: "adjective",
   hsd: ["{{word:duo1}}"],
   tts: ["多"],
   fit: "word",

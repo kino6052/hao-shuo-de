@@ -31,5 +31,15 @@ export default word("shi2", {
         rus: "Записанное как 食, {{word:shi2}} значит «еда» в {{word:shi2}}-{{word:wu4}}; само по себе — «десять».",
       },
     },
+    real: {
+      hanzi: "实",
+      eng: "real, solid",
+      rus: "настоящий, реальный",
+      why: {
+        eng: "Written 实, {{word:shi2}} means real in {{word:shi4}}-{{word:shi2}} (fact), {{word:zhen1}}-{{word:shi2}} (true) and {{word:xian4}}-{{word:shi2}} (reality); on its own it is ten.",
+        rus: "Записанное как 实, {{word:shi2}} значит «настоящий» в {{word:shi4}}-{{word:shi2}} (факт), {{word:zhen1}}-{{word:shi2}} (правдивый) и {{word:xian4}}-{{word:shi2}} (реальность); само по себе — «десять».",
+      },
+      compounds: ["shi4 shi2", "zhen1 shi2", "xian4 shi2"],
+    },
   },
 });

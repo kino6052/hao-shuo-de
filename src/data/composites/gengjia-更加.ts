@@ -7,6 +7,7 @@ export default composite({
   py: "gèngjiā",
   en: "even more",
   ru: "ещё более",
+  pos: "adverb",
   hsd: ["{{word:bi3}}"],
   tts: ["比"],
   fit: "skip",

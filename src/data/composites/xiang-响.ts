@@ -7,6 +7,7 @@ export default composite({
   py: "xiǎng",
   en: "loud; ring",
   ru: "громкий; звенеть",
+  pos: "verb",
   hsd: ["{{word:sheng1yin1}} {{word:hen3}} {{word:da4}}"],
   tts: ["声音很大"],
   literal: "the sound is big",

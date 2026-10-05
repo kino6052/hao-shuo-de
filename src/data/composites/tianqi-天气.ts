@@ -7,6 +7,7 @@ export default composite({
   py: "tiānqì",
   en: "weather",
   ru: "погода",
+  pos: "noun",
   hsd: [
     "{{word:tian1}}-{{word:qi4}}",
     "{{word:wai4}}-{{word:mian4}}-{{word:de}} {{word:kong1}}-{{word:qi4}}",

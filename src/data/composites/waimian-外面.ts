@@ -7,6 +7,7 @@ export default composite({
   py: "wàimiàn",
   en: "outside",
   ru: "снаружи",
+  pos: "noun",
   hsd: ["{{word:wai4}}-{{word:mian4}}"],
   tts: ["外面"],
   fit: "natural",

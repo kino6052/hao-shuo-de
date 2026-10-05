@@ -7,6 +7,7 @@ export default composite({
   py: "ānpái",
   en: "arrange",
   ru: "устроить",
+  pos: "verb",
   hsd: ["{{word:ba3}} {{word:dong1}}-{{light:xi1}} {{word:fang4}}-{{word:hao3}}"],
   tts: ["把东西放好"],
   literal: "put things in their place",

@@ -7,9 +7,10 @@ export default composite({
   py: "huàtí",
   en: "topic",
   ru: "тема разговора",
-  hsd: ["{{word:shuo1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["说的东西"],
+  pos: "noun",
+  hsd: ["{{word:hua4}}-{{word:ti2}}", "{{word:shuo1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
+  tts: ["话题", "说的东西"],
   literal: "what you talk about",
-  fit: "plain",
+  fit: "natural",
   proposed: true,
 });

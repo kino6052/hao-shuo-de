@@ -7,6 +7,7 @@ export default composite({
   py: "zhǎngjià",
   en: "go up in price",
   ru: "дорожать",
+  pos: "verb",
   hsd: ["{{word:yao4}}-{{word:de}} {{word:jin1}} {{word:bian4}} {{word:duo1}}"],
   tts: ["要的金变多"],
   literal: "it costs more money",

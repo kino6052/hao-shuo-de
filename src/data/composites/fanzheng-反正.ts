@@ -7,6 +7,7 @@ export default composite({
   py: "fǎnzhèng",
   en: "anyway",
   ru: "всё равно",
+  pos: "adverb",
   hsd: ["{{word:zen3me}} {{word:dou1}}"],
   tts: ["怎么都"],
   literal: "whichever way",

@@ -7,6 +7,7 @@ export default composite({
   py: "sì",
   en: "four",
   ru: "четыре",
+  pos: "number",
   hsd: ["{{word:si4}}"],
   tts: ["四"],
   fit: "word",

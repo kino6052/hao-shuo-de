@@ -7,6 +7,7 @@ export default composite({
   py: "guòlái",
   en: "come over",
   ru: "подойти",
+  pos: "verb",
   hsd: ["{{word:guo4}}-{{word:lai2}}", "{{word:lai2}} {{word:zhe4}}-{{word:bian1}}"],
   tts: ["过来", "来这边"],
   literal: "come across / come to this side",

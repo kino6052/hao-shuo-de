@@ -7,6 +7,7 @@ export default composite({
   py: "búcuò",
   en: "not bad, pretty good",
   ru: "неплохо",
+  pos: "adjective",
   hsd: ["{{word:bu4}} {{word:huai4}}"],
   tts: ["不坏"],
   literal: "not bad",

@@ -7,6 +7,7 @@ export default composite({
   py: "guān",
   en: "close, turn off",
   ru: "закрывать",
+  pos: "verb",
   hsd: ["{{word:guan1}}"],
   tts: ["关"],
   fit: "word",

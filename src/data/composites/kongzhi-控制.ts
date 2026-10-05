@@ -7,6 +7,7 @@ export default composite({
   py: "kòngzhì",
   en: "control",
   ru: "контролировать",
+  pos: "verb",
   hsd: ["{{word:jiao4}} X {{word:ting1}}"],
   tts: ["叫X听"],
   literal: "make X obey",

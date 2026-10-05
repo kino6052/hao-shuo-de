@@ -7,6 +7,7 @@ export default composite({
   py: "kě",
   en: "thirsty",
   ru: "хотеть пить",
+  pos: "adjective",
   hsd: ["{{word:yao4}} {{word:chi1}} {{word:shui3}}"],
   tts: ["要吃水"],
   literal: "want to drink water",

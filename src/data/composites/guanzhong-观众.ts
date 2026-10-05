@@ -7,6 +7,7 @@ export default composite({
   py: "guānzhòng",
   en: "audience",
   ru: "зрители",
+  pos: "noun",
   hsd: ["{{word:kan4}}-{{word:de}} {{word:ren2}}"],
   tts: ["看的人"],
   literal: "the people watching",

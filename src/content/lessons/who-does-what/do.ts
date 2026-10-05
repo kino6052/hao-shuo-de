@@ -35,6 +35,16 @@ export default lessonModule({
       en: "drink",
       ru: "пить",
     },
+    {
+      word: "fan4",
+      en: "meal, rice; {{word:chi1}} {{word:fan4}}: eat",
+      ru: "еда, рис; {{word:chi1}} {{word:fan4}} — есть",
+    },
+    {
+      word: "zi4",
+      en: "written character",
+      ru: "иероглиф",
+    },
   ],
   prose: {
     en: [
@@ -44,6 +54,7 @@ export default lessonModule({
       "",
       "A verb is an action word: {{word:chi1}} (eat), {{word:he1}} (drink), {{word:kan4}} (look), {{word:shuo1}} (speak).",
       "The order shows who does what. Swap them, and the meaning swaps: {{Word:wo3}} {{word:kan4}} {{word:ta1}} / {{Word:ta1}} {{word:kan4}} {{word:wo3}}.",
+      "Eating is {{word:chi1}} {{word:fan4}} (eat a meal), and {{word:zi4}} is a written character: {{word:xie3}} {{word:zi4}}, write characters.",
     ],
     ru: [
       "**Чтобы сказать, что кто-то делает**, поставьте глагол после того, кто делает, а то, что делают, — после глагола.",
@@ -53,6 +64,7 @@ export default lessonModule({
       "Глагол — это слово-действие: {{word:chi1}} (есть), {{word:he1}} (пить), {{word:kan4}} (смотреть), {{word:shuo1}} (говорить).",
       "Порядок слов показывает, кто что делает. Поменяйте слова местами — и смысл поменяется: {{Word:wo3}} {{word:kan4}} {{word:ta1}} / {{Word:ta1}} {{word:kan4}} {{word:wo3}}.",
       "В русском смысл держат окончания, а в китайском окончаний нет — эту работу делает порядок слов.",
+      "«Есть» — это {{word:chi1}} {{word:fan4}} («есть еду»), а {{word:zi4}} — иероглиф: {{word:xie3}} {{word:zi4}} — писать иероглифы.",
     ],
     tldr: {
       en: "Say who does it, then the action, then what it is done to.",
@@ -69,8 +81,8 @@ export default lessonModule({
   },
   examples: [
     {
-      pinyin: "{{Word:wo3}} {{word:chi1}} {{word:dong1}}-{{light:xi1}}.",
-      hanzi: "我吃东西。",
+      pinyin: "{{Word:wo3}} {{word:chi1}} {{word:fan4}}.",
+      hanzi: "我吃饭。",
       en: "I'm eating.",
       ru: "Я ем.",
     },
@@ -110,6 +122,12 @@ export default lessonModule({
       en: "I write.",
       ru: "Я пишу.",
     },
+    {
+      pinyin: "{{Word:wo3}} {{word:xie3}} {{word:zi4}}.",
+      hanzi: "我写字。",
+      en: "I write characters.",
+      ru: "Я пишу иероглифы.",
+    },
   ],
   exercises: [
     {
@@ -121,8 +139,8 @@ export default lessonModule({
     {
       en: "She's eating.",
       ru: "Она ест.",
-      answer: "{{Word:ta1}} {{word:chi1}} {{word:dong1}}-{{light:xi1}}.",
-      hanzi: "她吃东西。",
+      answer: "{{Word:ta1}} {{word:chi1}} {{word:fan4}}.",
+      hanzi: "她吃饭。",
     },
     {
       en: "She drinks water.",
@@ -142,13 +160,19 @@ export default lessonModule({
       answer: "{{Word:ta1}}-{{word:men}} {{word:shuo1}}.",
       hanzi: "他们说。",
     },
+    {
+      en: "She writes characters.",
+      ru: "Она пишет иероглифы.",
+      answer: "{{Word:ta1}} {{word:xie3}} {{word:zi4}}.",
+      hanzi: "她写字。",
+    },
   ],
   faq: [
     // how do I say "ate" or "will eat"? (the verb never changes; Lesson {{lesson:when-it-happens}})
     {
       question: { en: "How do I say \"ate\" or \"will eat\"?", ru: "Как сказать «ел» или «буду есть»?" },
-      en: "The verb never changes. {{Word:wo3}} {{word:chi1}} {{word:dong1}}-{{light:xi1}} can mean \"I eat\", \"I ate\", or \"I'll eat\". The situation tells you when, and Lesson {{lesson:when-it-happens}} adds small words for it.",
-      ru: "Глагол никогда не меняется. {{Word:wo3}} {{word:chi1}} {{word:dong1}}-{{light:xi1}} может значить «Я ем», «Я ел» или «Я буду есть». Когда — понятно из ситуации, а в уроке {{lesson:when-it-happens}} появятся маленькие слова для этого.",
+      en: "The verb never changes. {{Word:wo3}} {{word:chi1}} {{word:fan4}} can mean \"I eat\", \"I ate\", or \"I'll eat\". The situation tells you when, and Lesson {{lesson:when-it-happens}} adds small words for it.",
+      ru: "Глагол никогда не меняется. {{Word:wo3}} {{word:chi1}} {{word:fan4}} может значить «Я ем», «Я ел» или «Я буду есть». Когда — понятно из ситуации, а в уроке {{lesson:when-it-happens}} появятся маленькие слова для этого.",
     },
     // can chī mean drink? (no -- drinking is hē)
     {

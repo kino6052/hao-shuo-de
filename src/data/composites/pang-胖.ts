@@ -7,6 +7,7 @@ export default composite({
   py: "pàng",
   en: "fat",
   ru: "толстый",
+  pos: "adjective",
   hsd: ["{{word:shen1ti3}} {{word:hen3}} {{word:da4}}"],
   tts: ["身体很大"],
   literal: "the body is big",

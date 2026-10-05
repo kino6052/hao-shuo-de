@@ -7,6 +7,7 @@ export default composite({
   py: "zěnme",
   en: "how",
   ru: "как",
+  pos: "pronoun",
   hsd: ["{{word:zen3me}}"],
   tts: ["怎么"],
   fit: "word",

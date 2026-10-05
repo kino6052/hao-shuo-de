@@ -7,6 +7,7 @@ export default composite({
   py: "yèwù",
   en: "business, work",
   ru: "дела",
+  pos: "noun",
   hsd: ["{{word:zuo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["做的东西"],
   literal: "the things you do",

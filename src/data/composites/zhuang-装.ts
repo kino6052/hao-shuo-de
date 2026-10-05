@@ -7,6 +7,7 @@ export default composite({
   py: "zhuāng",
   en: "load, pack",
   ru: "грузить, упаковывать",
+  pos: "verb",
   hsd: ["{{word:fang4}}-{{word:jin4}}-{{word:qu4}}"],
   tts: ["放进去"],
   literal: "put it in",

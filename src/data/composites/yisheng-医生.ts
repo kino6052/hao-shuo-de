@@ -7,6 +7,7 @@ export default composite({
   py: "yīshēng",
   en: "doctor",
   ru: "врач",
+  pos: "noun",
   hsd: ["{{word:bang1}}-{{word:shen1ti3}}-{{word:bu4}}-{{word:hao3}}-{{word:de}} {{word:ren2}}"],
   tts: ["帮身体不好的人"],
   literal: "the one who helps bodies that aren't well",

@@ -7,6 +7,7 @@ export default composite({
   py: "xiàzài",
   en: "download",
   ru: "скачать",
+  pos: "verb",
   hsd: ["{{word:cong2}} {{word:wang3}}-{{word:shang4}} {{word:na2}}-{{word:xia4}}-{{word:lai2}}"],
   tts: ["从网上拿下来"],
   literal: "take it down from the net",

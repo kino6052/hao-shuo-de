@@ -7,6 +7,7 @@ export default composite({
   py: "jìlù",
   en: "record",
   ru: "записывать, запись",
+  pos: "verb",
   hsd: ["{{word:xie3}}-{{word:xia4}}-{{word:lai2}}"],
   tts: ["写下来"],
   literal: "write it down",

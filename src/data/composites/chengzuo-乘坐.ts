@@ -7,6 +7,7 @@ export default composite({
   py: "chéngzuò",
   en: "ride, take (a vehicle)",
   ru: "ехать (на транспорте)",
+  pos: "verb",
   hsd: ["{{word:zuo4}}-{{word:xia4}}"],
   tts: ["坐下"],
   fit: "word",

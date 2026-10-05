@@ -7,6 +7,7 @@ export default composite({
   py: "dádào",
   en: "reach, achieve",
   ru: "достигать",
+  pos: "verb",
   hsd: ["{{word:dao4}}"],
   tts: ["到"],
   fit: "word",

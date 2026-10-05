@@ -7,6 +7,7 @@ export default composite({
   py: "bàngōngshì",
   en: "office",
   ru: "офис, кабинет",
+  pos: "noun",
   hsd: ["{{word:zuo4}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
   tts: ["做的地方"],
   literal: "the place where you work",

@@ -7,6 +7,7 @@ export default composite({
   py: "xiūxi",
   en: "rest",
   ru: "отдыхать",
+  pos: "verb",
   hsd: ["{{word:shui4jiao4}}"],
   tts: ["睡觉"],
   fit: "plain",

@@ -7,6 +7,7 @@ export default composite({
   py: "wūrǎn",
   en: "pollute",
   ru: "загрязнять",
+  pos: "verb",
   hsd: [
     "{{word:ba3}} {{word:kong1}}-{{word:qi4}} {{word:he2}} {{word:shui3}} {{word:zuo4}} {{word:huai4}}",
   ],

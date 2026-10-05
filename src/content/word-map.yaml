@@ -7,19 +7,19 @@ title:
   zh: ""
 
 summary:
-  eng: "All the words as one map: words that build composites together sit close, so families of words show up as clusters."
-  rus: "Все слова на одной карте: слова, которые вместе образуют составные слова, стоят рядом, и семьи слов видны как скопления."
+  eng: "All the words as one map: each composite sits under the word it is a kind of, so you see what every word carries and which families the words form."
+  rus: "Все слова на одной карте: каждое составное слово стоит под словом, разновидностью которого оно является, так что видно, что несёт каждое слово и какие семьи образуют слова."
   zh: ""
 
 blocks:
   - type: prose
     text:
-      eng: "Each dot is a word. Two words are linked when composites use them together, and the more often they do, the closer they sit. The size of a dot is how many composites use the word. Words that keep building things together form a family, shown in one colour: a family is a part of life the language talks about with the same few words."
-      rus: "Каждая точка — слово. Два слова связаны, если составные слова используют их вместе, и чем чаще, тем ближе они стоят. Размер точки — сколько составных слов используют это слово. Слова, которые постоянно строят что-то вместе, образуют семью одного цвета: это часть жизни, о которой язык говорит одними и теми же словами."
+      eng: "Each dot is a word. Every composite sits under its head, the word that says what it is: a phone (shǒu-jī, hand machine) is a kind of jī, so it sits under jī, not under shǒu. The size of a dot is how many composites a word heads. Words that head related composites, share a category or carry the same atoms form a family, shown in one colour; the slider sets how much the categories and atoms count against the composites. Two words are linked when composites use them together."
+      rus: "Каждая точка — слово. Каждое составное слово стоит под своим главным словом, тем, что говорит, что это такое: телефон (shǒu-jī, «ручная машина») — разновидность jī, поэтому он стоит под jī, а не под shǒu. Размер точки — сколько составных слов возглавляет слово. Слова, которые возглавляют родственные составные слова, входят в одну категорию или несут одни атомы, образуют семью одного цвета; ползунок задаёт, насколько категории и атомы весят против составных слов. Два слова связаны, если составные слова используют их вместе."
       zh: ""
     tldr:
-      eng: "A map of the words: families of words that build things together."
-      rus: "Карта слов: семьи слов, которые строят что-то вместе."
+      eng: "A map of the words: what each word heads, and its family."
+      rus: "Карта слов: что возглавляет каждое слово и его семья."
       zh: ""
     necessity:
       eng: "It shows which words carry the language and which hardly connect."

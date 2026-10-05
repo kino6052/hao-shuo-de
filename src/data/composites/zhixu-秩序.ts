@@ -7,6 +7,7 @@ export default composite({
   py: "zhìxù",
   en: "order",
   ru: "порядок",
+  pos: "noun",
   hsd: ["{{word:bu4}} {{word:luan4}}"],
   tts: ["不乱"],
   literal: "no mess",

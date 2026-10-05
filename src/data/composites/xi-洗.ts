@@ -7,8 +7,10 @@ export default composite({
   py: "xǐ",
   en: "wash",
   ru: "мыть",
-  hsd: ["{{word:yong4}} {{word:shui3}} {{word:ba3}} X {{word:zuo4}} {{word:hao3}}"],
-  tts: ["用水把X做好"],
-  literal: "make X good with water",
+  pos: "verb",
+  hsd: ["{{word:yong4}} {{word:shui3}} {{word:rang4}} X {{word:gan1jing4}}"],
+  tts: ["用水让X干净"],
+  literal: "use water to make X clean",
   fit: "plain",
+  proposed: true,
 });

@@ -7,6 +7,7 @@ export default composite({
   py: "xíguàn",
   en: "habit; be used to",
   ru: "привычка",
+  pos: "verb",
   hsd: [
     "{{word:ci4}}-{{word:ci4}} {{word:dou1}} {{word:zuo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],

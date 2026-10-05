@@ -7,6 +7,7 @@ export default composite({
   py: "bìng",
   en: "illness",
   ru: "болезнь",
+  pos: "noun",
   hsd: ["{{word:shen1ti3}} {{word:bu4}} {{word:hao3}}"],
   tts: ["身体不好"],
   literal: "body not good",

@@ -7,6 +7,7 @@ export default composite({
   py: "suí",
   en: "follow",
   ru: "следовать",
+  pos: "verb",
   hsd: ["{{word:zai4}} X {{word:hou4}}-{{word:mian4}} {{word:qu4}}"],
   tts: ["在X后面去"],
   literal: "go behind X",

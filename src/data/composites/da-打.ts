@@ -7,6 +7,7 @@ export default composite({
   py: "dǎ",
   en: "hit",
   ru: "бить",
+  pos: "verb",
   hsd: ["{{word:da3}}"],
   tts: ["打"],
   fit: "word",

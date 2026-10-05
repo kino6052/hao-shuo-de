@@ -7,6 +7,7 @@ export default composite({
   py: "bànfǎ",
   en: "way, solution",
   ru: "способ",
+  pos: "noun",
   hsd: ["{{word:fang1}}-{{word:fa3}}"],
   tts: ["方法"],
   fit: "word",

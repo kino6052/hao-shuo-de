@@ -7,6 +7,7 @@ export default composite({
   py: "wánquán",
   en: "completely",
   ru: "полностью",
+  pos: "adjective",
   hsd: ["{{word:dou1}}"],
   tts: ["都"],
   literal: "all",

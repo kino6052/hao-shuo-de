@@ -7,6 +7,7 @@ export default composite({
   py: "jiù",
   en: "save, rescue",
   ru: "спасать",
+  pos: "verb",
   hsd: ["{{word:bang1}} X {{word:bu4}} {{word:si3}}"],
   tts: ["帮X不死"],
   literal: "help X not die",

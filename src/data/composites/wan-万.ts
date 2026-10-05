@@ -7,6 +7,7 @@ export default composite({
   py: "wàn",
   en: "ten thousand",
   ru: "десять тысяч",
+  pos: "number",
   fit: "gap",
   note: "Numbers go up to what shí can build.",
 });

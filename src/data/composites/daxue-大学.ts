@@ -7,6 +7,7 @@ export default composite({
   py: "dàxué",
   en: "university",
   ru: "университет",
+  pos: "noun",
   hsd: ["{{word:da4}}-{{word:xue2}}"],
   tts: ["大学"],
   literal: "big learning",

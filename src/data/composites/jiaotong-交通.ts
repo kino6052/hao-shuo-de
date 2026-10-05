@@ -7,6 +7,7 @@ export default composite({
   py: "jiāotōng",
   en: "traffic",
   ru: "движение, транспорт",
+  pos: "noun",
   hsd: ["{{word:lu4}}-{{word:shang4}}-{{word:de}} {{word:che1}} {{word:he2}} {{word:ren2}}"],
   tts: ["路上的车和人"],
   literal: "the cars and people on the road",

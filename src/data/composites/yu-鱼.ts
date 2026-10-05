@@ -7,6 +7,7 @@ export default composite({
   py: "yú",
   en: "fish",
   ru: "рыба",
+  pos: "noun",
   hsd: ["{{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4}}-{{word:wu4}}"],
   tts: ["在水里的动物"],
   literal: "animal in the water",

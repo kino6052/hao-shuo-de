@@ -7,6 +7,7 @@ export default composite({
   py: "zhǔrén",
   en: "owner, host",
   ru: "хозяин",
+  pos: "noun",
   hsd: ["{{word:you3}} X-{{word:de}} {{word:ren2}}"],
   tts: ["有X的人"],
   literal: "the person who has X",

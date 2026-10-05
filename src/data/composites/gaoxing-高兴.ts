@@ -7,6 +7,7 @@ export default composite({
   py: "gāoxìng",
   en: "happy, glad",
   ru: "радостный",
+  pos: "adjective",
   hsd: ["{{word:kai1}}-{{word:xin1}}"],
   tts: ["开心"],
   literal: "open heart",

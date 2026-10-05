@@ -7,6 +7,7 @@ export default composite({
   py: "děngyú",
   en: "equal, equals",
   ru: "равняться",
+  pos: "verb",
   hsd: ["{{word:shi4}}"],
   tts: ["是"],
   fit: "word",

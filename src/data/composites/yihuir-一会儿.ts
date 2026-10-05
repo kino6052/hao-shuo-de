@@ -7,6 +7,7 @@ export default composite({
   py: "yíhuìr",
   en: "a while",
   ru: "немного",
+  pos: "number",
   hsd: ["{{word:yi1}}-{{word:xia4}}"],
   tts: ["一下"],
   literal: "a moment",

@@ -7,6 +7,7 @@ export default composite({
   py: "ne",
   en: "(question particle)",
   ru: "частица ne",
+  pos: "auxiliary",
   fit: "skip",
   note: "Leave it out; ask with ma or a question word.",
 });

@@ -7,6 +7,7 @@ export default composite({
   py: "zǒngtǒng",
   en: "president",
   ru: "президент",
+  pos: "noun",
   hsd: ["{{word:guo2}}-{{word:de}} {{word:tou2}}"],
   tts: ["国的头"],
   literal: "the country's head",

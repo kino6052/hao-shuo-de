@@ -61,14 +61,14 @@ export default lessonModule({
       ru: "Он ест руками.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:yong4}} {{word:gun4zi}} {{word:da3}}.",
-      hanzi: "他用棍子打。",
+      pinyin: "{{Word:ta1}} {{word:yong4}} {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:da3}}.",
+      hanzi: "他用长的东西打。",
       en: "He hits it with a stick.",
       ru: "Он бьёт палкой.",
     },
     {
-      pinyin: "{{Word:bu4}} {{word:yao4}} {{word:yong4}} {{word:gun4zi}} {{word:da3}} {{word:dong4}}-{{word:wu4}}.",
-      hanzi: "不要用棍子打动物。",
+      pinyin: "{{Word:bu4}} {{word:yao4}} {{word:yong4}} {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:da3}} {{word:dong4}}-{{word:wu4}}.",
+      hanzi: "不要用长的东西打动物。",
       en: "Don't hit the animal with a stick.",
       ru: "Не бей животное палкой.",
     },
@@ -101,8 +101,8 @@ export default lessonModule({
     {
       en: "She writes with a stick.",
       ru: "Она пишет палкой.",
-      answer: "{{Word:ta1}} {{word:yong4}} {{word:gun4zi}} {{word:xie3}}.",
-      hanzi: "她用棍子写。",
+      answer: "{{Word:ta1}} {{word:yong4}} {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:xie3}}.",
+      hanzi: "她用长的东西写。",
     },
     {
       en: "Don't hit him.",

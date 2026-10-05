@@ -7,6 +7,7 @@ export default composite({
   py: "shīwàng",
   en: "disappointed",
   ru: "разочарованный",
+  pos: "verb",
   hsd: [
     "{{word:mei2}}-{{word:you3}} {{word:de2}}-{{word:dao4}} {{word:yao4}}-{{word:de}}, {{word:bu4}} {{word:kai1}}-{{word:xin1}}",
   ],

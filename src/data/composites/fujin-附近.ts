@@ -7,6 +7,7 @@ export default composite({
   py: "fùjìn",
   en: "nearby",
   ru: "рядом",
+  pos: "noun",
   hsd: ["{{word:fu4jin4}}"],
   tts: ["附近"],
   fit: "word",

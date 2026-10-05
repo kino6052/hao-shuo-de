@@ -7,6 +7,7 @@ export default composite({
   py: "chóngxīn",
   en: "again, anew",
   ru: "заново",
+  pos: "adverb",
   hsd: ["{{word:you4}}"],
   tts: ["又"],
   fit: "word",

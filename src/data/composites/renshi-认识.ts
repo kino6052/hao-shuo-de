@@ -7,6 +7,7 @@ export default composite({
   py: "rènshi",
   en: "know (a person)",
   ru: "знать (кого-то)",
+  pos: "verb",
   hsd: ["{{word:zhi1dao4}}"],
   tts: ["知道"],
   fit: "plain",

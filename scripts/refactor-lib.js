@@ -61,15 +61,24 @@ function splitData(text, path) {
   return { prefix: m[1], value: Function(`return (${m[2]});`)() };
 }
 
+const LF = String.fromCharCode(10);
+const CRLF = String.fromCharCode(13, 10);
+
 export class Workspace {
   constructor() {
     this.orig = new Map();
     this.text = new Map();
+    // files are edited with LF line ends and written back with the ones they had
+    this.crlf = new Set();
     const files = [...walk(resolve(ROOT, 'src'), []), ...walk(resolve(ROOT, 'scripts'), []).filter((p) => p.endsWith('.test.js'))];
     for (const p of files) {
       const r = rel(p);
       if (SKIP.has(r)) continue;
-      const t = readFileSync(p, 'utf-8');
+      let t = readFileSync(p, 'utf-8');
+      if (t.includes(CRLF)) {
+        this.crlf.add(r);
+        t = t.split(CRLF).join(LF);
+      }
       this.orig.set(r, t);
       this.text.set(r, t);
     }
@@ -154,7 +163,7 @@ export class Workspace {
         if (existsSync(p)) unlinkSync(p);
       } else {
         mkdirSync(dirname(p), { recursive: true });
-        writeFileSync(p, after);
+        writeFileSync(p, this.crlf.has(path) ? after.split(LF).join(CRLF) : after);
       }
     }
   }
@@ -684,6 +693,15 @@ const OPS = {
     ws.setWord(op.id, { ...w, senses: { ...(w.senses ?? {}), [key]: sense } });
   },
 
+  // { op: "senseCompounds", id, key, add: ["shi4 shi2", ...] } -- more compounds for a sense
+  senseCompounds(ws, op) {
+    const w = ws.word(op.id);
+    const s = w.senses?.[op.key];
+    if (!s) throw new Error(`${op.id} has no sense "${op.key}"`);
+    s.compounds = [...new Set([...s.compounds, ...op.add])];
+    ws.setWord(op.id, w);
+  },
+
   // { op: "category", id, to: "<leaf key>" }
   category(ws, op) {
     editCategories(ws, (ids) => ids.filter((x) => x !== op.id));
@@ -920,7 +938,7 @@ const OPS = {
     const split = compoundSplitter(words);
     for (const { path, entry } of ws.composites()) {
       if (entry.fit === 'name' || entry.fit === 'skip') continue;
-      const ids = split(entry.zh);
+      const ids = split(entry.zh, entry.py);
       if (!ids) continue;
       const forms = entry.hsd ?? [];
       if ((entry.tts ?? []).includes(entry.zh) || forms.some((f) => wordRefIds(f).join(' ') === ids.join(' '))) continue;

@@ -7,6 +7,7 @@ export default composite({
   py: "pà",
   en: "fear",
   ru: "бояться",
+  pos: "verb",
   hsd: ["{{word:pa4}}"],
   tts: ["怕"],
   fit: "word",

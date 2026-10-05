@@ -7,6 +7,7 @@ export default composite({
   py: "liáo",
   en: "chat",
   ru: "болтать",
+  pos: "verb",
   hsd: ["{{word:shuo1}}-shuo"],
   tts: ["说说"],
   literal: "talk a bit",

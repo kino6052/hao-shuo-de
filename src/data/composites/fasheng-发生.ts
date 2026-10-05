@@ -7,9 +7,10 @@ export default composite({
   py: "fāshēng",
   en: "happen",
   ru: "происходить",
+  pos: "verb",
   hsd: ["{{word:fa1}}-{{word:sheng1}}"],
   tts: ["发生"],
-  fit: "natural",
   literal: "send out, be born",
+  fit: "natural",
   proposed: true,
 });

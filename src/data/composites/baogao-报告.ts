@@ -7,6 +7,7 @@ export default composite({
   py: "bàogào",
   en: "report",
   ru: "доклад, отчёт",
+  pos: "verb",
   hsd: ["{{word:shuo1}} {{word:fa1}}-{{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["说发生的东西"],
   literal: "tell what happened",

@@ -7,6 +7,7 @@ export default composite({
   py: "chǔlǐ",
   en: "handle, deal with",
   ru: "обрабатывать, решать",
+  pos: "verb",
   hsd: ["{{word:zuo4}}"],
   tts: ["做"],
   fit: "word",

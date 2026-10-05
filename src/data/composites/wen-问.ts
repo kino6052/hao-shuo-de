@@ -7,6 +7,7 @@ export default composite({
   py: "wèn",
   en: "ask",
   ru: "спрашивать",
+  pos: "verb",
   hsd: ["{{word:wen4}}"],
   tts: ["问"],
   fit: "word",

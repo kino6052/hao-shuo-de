@@ -7,6 +7,7 @@ export default composite({
   py: "yùnyòng",
   en: "apply, use",
   ru: "применять",
+  pos: "verb",
   hsd: ["{{word:yong4}}"],
   tts: ["用"],
   fit: "word",

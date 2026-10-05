@@ -7,9 +7,10 @@ export default composite({
   py: "shēnghuó",
   en: "life; live",
   ru: "жизнь; жить",
+  pos: "noun",
   hsd: ["{{word:sheng1}}-{{word:huo2}}", "{{word:huo2}}"],
   tts: ["生活", "活"],
-  fit: "natural",
   literal: "be born, live",
+  fit: "natural",
   proposed: true,
 });

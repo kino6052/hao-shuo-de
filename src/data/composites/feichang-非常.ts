@@ -7,6 +7,7 @@ export default composite({
   py: "fēicháng",
   en: "very",
   ru: "очень",
+  pos: "adverb",
   hsd: ["{{word:hen3}}", "{{word:zhen1}}"],
   tts: ["很", "真"],
   fit: "word",

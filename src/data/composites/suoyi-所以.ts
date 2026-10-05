@@ -7,6 +7,7 @@ export default composite({
   py: "suǒyǐ",
   en: "so, therefore",
   ru: "поэтому",
+  pos: "conjunction",
   fit: "skip",
   note: "yīnwèi alone is enough (§4d).",
 });

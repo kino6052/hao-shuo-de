@@ -7,6 +7,7 @@ export default composite({
   py: "zhèngfǔ",
   en: "government",
   ru: "правительство",
+  pos: "noun",
   hsd: [
     "{{word:shuo1}}-{{word:guo2}}-{{word:yao4}}-{{word:zuo4}}-{{word:shen2me}}-{{word:de}} {{word:ren2}}",
   ],

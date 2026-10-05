@@ -7,6 +7,7 @@ export default composite({
   py: "fǎ",
   en: "law",
   ru: "закон",
+  pos: "noun",
   hsd: [
     "{{word:fa3}}",
     "{{word:ren2}}-{{word:ren2}} {{word:dou1}} {{word:yao4}} {{word:ting1}}-{{word:de}} {{word:shuo1}}-{{word:de}}",

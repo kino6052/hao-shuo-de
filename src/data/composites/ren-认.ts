@@ -7,6 +7,7 @@ export default composite({
   py: "rèn",
   en: "recognize",
   ru: "узнавать",
+  pos: "verb",
   hsd: ["{{word:kan4}}-{{word:dao4}} {{word:jiu4}} {{word:zhi1dao4}}"],
   tts: ["看到就知道"],
   literal: "see it and know it",

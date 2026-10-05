@@ -7,6 +7,7 @@ export default composite({
   py: "mǎi",
   en: "buy",
   ru: "покупать",
+  pos: "verb",
   hsd: ["{{word:mai3}}"],
   tts: ["买"],
   fit: "word",

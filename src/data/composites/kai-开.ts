@@ -7,6 +7,7 @@ export default composite({
   py: "kāi",
   en: "open",
   ru: "открывать",
+  pos: "verb",
   hsd: ["{{word:kai1}}"],
   tts: ["开"],
   fit: "word",

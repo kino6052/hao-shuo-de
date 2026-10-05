@@ -7,6 +7,7 @@ export default composite({
   py: "dǎ zhāohu",
   en: "greet",
   ru: "здороваться",
+  pos: "phrase",
   hsd: ["{{word:shuo1}} {{word:ni3}} {{word:hao3}}"],
   tts: ["说你好"],
   literal: "say hello",

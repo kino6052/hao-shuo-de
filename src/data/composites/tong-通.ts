@@ -7,6 +7,7 @@ export default composite({
   py: "tōng",
   en: "go through",
   ru: "проходить",
+  pos: "verb",
   hsd: ["{{word:tong1}}"],
   tts: ["通"],
   fit: "word",

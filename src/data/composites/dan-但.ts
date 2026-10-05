@@ -7,6 +7,7 @@ export default composite({
   py: "dàn",
   en: "but",
   ru: "но",
+  pos: "conjunction",
   hsd: ["{{word:dan4}}", "{{word:dan4}}-{{word:shi4}}"],
   tts: ["但", "但是"],
   fit: "word",

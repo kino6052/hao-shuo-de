@@ -7,9 +7,10 @@ export default composite({
   py: "bùdébù",
   en: "have to",
   ru: "приходится",
+  pos: "adverb",
   hsd: ["{{word:bu4}}-{{word:de2}}-{{word:bu4}}", "{{word:yao4}}"],
   tts: ["不得不", "要"],
+  literal: "can't not",
   fit: "natural",
   proposed: true,
-  literal: "can't not",
 });

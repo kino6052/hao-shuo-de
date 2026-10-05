@@ -7,6 +7,7 @@ export default composite({
   py: "zēngjiā",
   en: "increase",
   ru: "увеличивать(ся)",
+  pos: "verb",
   hsd: ["{{word:bian4}} {{word:duo1}}"],
   tts: ["变多"],
   literal: "become more",

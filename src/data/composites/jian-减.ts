@@ -7,6 +7,7 @@ export default composite({
   py: "jiǎn",
   en: "subtract, minus",
   ru: "вычитать, минус",
+  pos: "verb",
   hsd: ["{{word:cong2}} A {{word:li3}}-{{word:mian4}} {{word:na2}} B"],
   tts: ["从…里面拿…"],
   literal: "take B from A",

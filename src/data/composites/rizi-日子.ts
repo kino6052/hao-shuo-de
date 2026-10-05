@@ -7,8 +7,10 @@ export default composite({
   py: "rìzi",
   en: "day; life",
   ru: "день; жизнь",
-  hsd: ["{{word:ri4}}"],
-  tts: ["日"],
+  pos: "noun",
+  hsd: ["{{word:ri4}}-{{word:zi}}", "{{word:ri4}}"],
+  tts: ["日子", "日"],
   literal: "day",
   fit: "natural",
+  proposed: true,
 });

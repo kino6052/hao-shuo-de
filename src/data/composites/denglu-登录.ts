@@ -7,6 +7,7 @@ export default composite({
   py: "dēnglù",
   en: "log in",
   ru: "войти (в систему)",
+  pos: "verb",
   hsd: ["{{word:jin4}}-{{word:qu4}}"],
   tts: ["进去"],
   literal: "go in",

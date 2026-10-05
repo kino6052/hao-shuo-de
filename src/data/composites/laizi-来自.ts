@@ -7,6 +7,7 @@ export default composite({
   py: "láizì",
   en: "come from",
   ru: "происходить из",
+  pos: "verb",
   hsd: ["{{word:cong2}} X {{word:lai2}}"],
   tts: ["从X来"],
   literal: "come from X",

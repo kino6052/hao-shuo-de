@@ -7,6 +7,7 @@ export default composite({
   py: "bǐjiào",
   en: "compare; rather",
   ru: "сравнивать; довольно",
+  pos: "verb",
   hsd: ["{{word:bi3}}-{{word:jiao4}}", "{{word:bi3}}"],
   tts: ["比较", "比"],
   fit: "natural",

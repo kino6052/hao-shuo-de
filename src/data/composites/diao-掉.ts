@@ -7,6 +7,7 @@ export default composite({
   py: "diào",
   en: "fall, drop",
   ru: "падать",
+  pos: "verb",
   hsd: ["{{word:dao4}} {{word:di4}}-{{word:shang4}}"],
   tts: ["到地上"],
   literal: "reach the floor",

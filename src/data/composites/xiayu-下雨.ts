@@ -7,6 +7,7 @@ export default composite({
   py: "xià yǔ",
   en: "rain (verb)",
   ru: "идёт дождь",
+  pos: "verb",
   hsd: [
     "{{word:you3}} {{word:cong2}}-{{word:shang4}}-{{word:mian4}}-{{word:xia4}}-{{word:lai2}}-{{word:de}} {{word:shui3}}",
   ],

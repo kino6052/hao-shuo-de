@@ -7,6 +7,7 @@ export default composite({
   py: "lùshang",
   en: "on the road",
   ru: "в пути",
+  pos: "noun",
   hsd: ["{{word:lu4}}-{{word:shang4}}"],
   tts: ["路上"],
   fit: "natural",

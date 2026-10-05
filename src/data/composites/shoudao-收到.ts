@@ -7,6 +7,7 @@ export default composite({
   py: "shōudào",
   en: "receive",
   ru: "получить",
+  pos: "verb",
   hsd: ["{{word:na2}}-{{word:dao4}}"],
   tts: ["拿到"],
   literal: "take and reach",

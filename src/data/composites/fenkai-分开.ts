@@ -7,6 +7,7 @@ export default composite({
   py: "fēnkāi",
   en: "separate",
   ru: "разделять(ся)",
+  pos: "verb",
   hsd: ["{{word:fen1}}-{{word:kai1}}", "{{word:bu4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}"],
   tts: ["分开", "不在一起"],
   literal: "not together anymore",

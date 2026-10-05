@@ -7,6 +7,7 @@ export default composite({
   py: "píngshí",
   en: "usually",
   ru: "обычно",
+  pos: "noun",
   hsd: ["{{word:da4}} {{word:bu4}}-{{light:fen1}} {{word:shi2}}-{{word:jian1}}"],
   tts: ["大部分时间"],
   literal: "most of the time",

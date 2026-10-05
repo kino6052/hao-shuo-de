@@ -7,6 +7,7 @@ export default composite({
   py: "tóngshì",
   en: "colleague",
   ru: "коллега",
+  pos: "noun",
   hsd: ["{{word:yi1}}-{{word:qi3}} {{word:zuo4}}-{{word:de}} {{word:ren2}}"],
   tts: ["一起做的人"],
   literal: "someone you work with",

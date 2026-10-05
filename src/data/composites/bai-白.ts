@@ -7,6 +7,7 @@ export default composite({
   py: "bái",
   en: "white",
   ru: "белый",
+  pos: "adjective",
   hsd: ["{{word:bai2}}", "{{word:bai2}}-{{word:se4}}"],
   tts: ["白", "白色"],
   fit: "word",

@@ -7,6 +7,7 @@ export default composite({
   py: "liù",
   en: "six",
   ru: "шесть",
+  pos: "number",
   hsd: ["{{word:liu4}}"],
   tts: ["六"],
   fit: "word",

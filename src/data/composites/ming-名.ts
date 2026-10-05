@@ -7,6 +7,7 @@ export default composite({
   py: "míng",
   en: "name",
   ru: "имя",
+  pos: "noun",
   hsd: ["{{word:jiao4}}-{{word:de}} {{word:ci2}}"],
   tts: ["叫的词"],
   literal: "the word you're called",

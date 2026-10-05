@@ -7,6 +7,7 @@ export default composite({
   py: "zěnme bàn",
   en: "what to do",
   ru: "что делать",
+  pos: "phrase",
   hsd: ["{{word:zen3me}} {{word:zuo4}}?"],
   tts: ["怎么做？"],
   literal: "how to do it?",

@@ -7,6 +7,7 @@ export default composite({
   py: "chǒu",
   en: "ugly",
   ru: "уродливый",
+  pos: "adjective",
   hsd: [
     "{{word:nan2}}-{{word:kan4}}",
     "{{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:bu4}} {{word:hao3}}",

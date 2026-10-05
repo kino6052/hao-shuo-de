@@ -7,6 +7,7 @@ export default composite({
   py: "ruò",
   en: "weak",
   ru: "слабый",
+  pos: "adjective",
   hsd: ["{{word:mei2}}-{{word:you3}} {{word:li4}}"],
   tts: ["没有力"],
   literal: "no strength",

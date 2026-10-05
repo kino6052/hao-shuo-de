@@ -7,6 +7,7 @@ export default composite({
   py: "biàn",
   en: "become",
   ru: "становиться",
+  pos: "verb",
   hsd: ["{{word:bian4}}"],
   tts: ["变"],
   fit: "word",

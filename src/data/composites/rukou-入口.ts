@@ -7,6 +7,7 @@ export default composite({
   py: "rùkǒu",
   en: "entrance",
   ru: "вход",
+  pos: "noun",
   hsd: ["{{word:jin4}}-{{word:qu4}}-{{word:de}} {{word:kou3}}"],
   tts: ["进去的口"],
   literal: "the door to go in",

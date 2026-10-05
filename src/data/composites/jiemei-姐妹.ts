@@ -7,6 +7,7 @@ export default composite({
   py: "jiěmèi",
   en: "sisters",
   ru: "сёстры",
+  pos: "noun",
   hsd: [
     "{{word:ba4ba}}-{{word:ma1ma}} {{word:yi1}}-{{word:yang4}}-{{word:de}} {{word:nv3}}-{{word:ren2}}",
   ],

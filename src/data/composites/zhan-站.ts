@@ -7,6 +7,7 @@ export default composite({
   py: "zhàn",
   en: "stand",
   ru: "стоять",
+  pos: "verb",
   hsd: ["{{word:zhan4}}"],
   tts: ["站"],
   fit: "word",

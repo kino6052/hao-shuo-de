@@ -7,6 +7,7 @@ export default composite({
   py: "rénlèi",
   en: "humanity",
   ru: "человечество",
+  pos: "noun",
   hsd: ["{{word:ren2}}"],
   tts: ["人"],
   fit: "word",

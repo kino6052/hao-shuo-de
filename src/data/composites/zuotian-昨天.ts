@@ -7,8 +7,10 @@ export default composite({
   py: "zuótiān",
   en: "yesterday",
   ru: "вчера",
-  hsd: ["{{word:qian2}} {{word:yi1}}-ge {{word:ri4}}"],
-  tts: ["前一个日"],
+  pos: "noun",
+  hsd: ["{{word:zuo2}}-{{word:tian1}}", "{{word:qian2}} {{word:yi1}}-ge {{word:ri4}}"],
+  tts: ["昨天", "前一个日"],
   literal: "the day before",
-  fit: "plain",
+  fit: "natural",
+  proposed: true,
 });

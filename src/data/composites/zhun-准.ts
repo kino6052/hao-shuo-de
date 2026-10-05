@@ -7,6 +7,7 @@ export default composite({
   py: "zhǔn",
   en: "accurate",
   ru: "точный",
+  pos: "adjective",
   hsd: ["{{word:hen3}} {{word:dui4}}"],
   tts: ["很对"],
   literal: "very right",

@@ -7,6 +7,7 @@ export default composite({
   py: "qún",
   en: "group, crowd",
   ru: "группа, толпа",
+  pos: "classifier",
   hsd: ["{{word:qun2}}"],
   tts: ["群"],
   fit: "word",

@@ -7,9 +7,10 @@ export default composite({
   py: "shàngmiàn",
   en: "up",
   ru: "вверх",
+  pos: "noun",
   hsd: ["{{word:shang4}}-{{word:mian4}}", "{{word:shang4}}"],
   tts: ["上面", "上面"],
-  fit: "natural",
   literal: "the top side",
+  fit: "natural",
   proposed: true,
 });

@@ -7,9 +7,10 @@ export default composite({
   py: "búyòng",
   en: "no need",
   ru: "не нужно",
+  pos: "adverb",
   hsd: ["{{word:bu4}}-{{word:yong4}}", "{{word:bu4}} {{word:yao4}}"],
   tts: ["不用", "不要"],
-  fit: "natural",
   literal: "no use",
+  fit: "natural",
   proposed: true,
 });

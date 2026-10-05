@@ -7,6 +7,7 @@ export default composite({
   py: "tíngzhǐ",
   en: "stop",
   ru: "прекращать",
+  pos: "verb",
   hsd: ["{{word:bu4}} {{word:zuo4}} {{word:le}}"],
   tts: ["不做了"],
   literal: "not doing it anymore",

@@ -7,6 +7,7 @@ export default composite({
   py: "jiěshì",
   en: "explain",
   ru: "объяснять",
+  pos: "verb",
   hsd: ["{{word:shuo1}}-{{word:ming2}}"],
   tts: ["说明"],
   literal: "say it clearly",

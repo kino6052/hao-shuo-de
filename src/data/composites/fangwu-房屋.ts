@@ -7,6 +7,7 @@ export default composite({
   py: "fángwū",
   en: "house",
   ru: "дом, здание",
+  pos: "noun",
   hsd: ["{{word:jia1}}"],
   tts: ["家"],
   fit: "word",

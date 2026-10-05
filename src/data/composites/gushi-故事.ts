@@ -7,6 +7,7 @@ export default composite({
   py: "gùshi",
   en: "story",
   ru: "история",
+  pos: "noun",
   hsd: ["{{word:shuo1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["说的东西"],
   literal: "a told thing",

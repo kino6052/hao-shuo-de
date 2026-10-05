@@ -7,6 +7,7 @@ export default composite({
   py: "yíkuàir",
   en: "together",
   ru: "вместе",
+  pos: "noun",
   hsd: ["{{word:yi1}}-{{word:qi3}}"],
   tts: ["一起"],
   fit: "natural",

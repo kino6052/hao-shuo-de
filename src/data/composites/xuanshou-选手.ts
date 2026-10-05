@@ -7,6 +7,7 @@ export default composite({
   py: "xuǎnshǒu",
   en: "contestant",
   ru: "участник соревнования",
+  pos: "noun",
   hsd: ["{{word:bi3}}-{{word:de}} {{word:ren2}}"],
   tts: ["比的人"],
   literal: "the one competing",

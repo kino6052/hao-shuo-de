@@ -7,6 +7,7 @@ export default composite({
   py: "hóngsè",
   en: "red",
   ru: "красный",
+  pos: "noun",
   hsd: ["{{word:hong2}}-{{word:se4}}"],
   tts: ["红色"],
   fit: "natural",

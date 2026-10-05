@@ -7,6 +7,7 @@ export default composite({
   py: "nèi",
   en: "inside",
   ru: "внутри",
+  pos: "noun",
   hsd: ["{{word:li3}}-{{word:mian4}}"],
   tts: ["里面"],
   fit: "natural",

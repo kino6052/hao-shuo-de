@@ -7,6 +7,7 @@ export default composite({
   py: "búdàn",
   en: "not only",
   ru: "не только",
+  pos: "conjunction",
   fit: "skip",
   note: "Say the first part, then yě: X, yě Y.",
   proposed: true,

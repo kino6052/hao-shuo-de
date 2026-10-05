@@ -7,8 +7,13 @@ export default composite({
   py: "xiǎngfǎ",
   en: "idea, thought",
   ru: "мысль",
-  hsd: ["{{word:jue2}}-{{light:de2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["觉得的东西"],
+  pos: "noun",
+  hsd: [
+    "{{word:xiang3}}-{{word:fa3}}",
+    "{{word:jue2}}-{{light:de2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+  ],
+  tts: ["想法", "觉得的东西"],
   literal: "what you think",
-  fit: "plain",
+  fit: "natural",
+  proposed: true,
 });

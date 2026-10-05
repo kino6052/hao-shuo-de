@@ -7,6 +7,7 @@ export default composite({
   py: "jiātíng",
   en: "family",
   ru: "семья",
+  pos: "noun",
   hsd: ["{{word:jia1}}"],
   tts: ["家"],
   fit: "word",

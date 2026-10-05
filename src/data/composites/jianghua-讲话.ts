@@ -7,6 +7,7 @@ export default composite({
   py: "jiǎnghuà",
   en: "speak; speech",
   ru: "выступать; речь",
+  pos: "noun",
   hsd: ["{{word:shuo1}}"],
   tts: ["说"],
   fit: "word",

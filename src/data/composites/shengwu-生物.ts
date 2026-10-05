@@ -7,6 +7,7 @@ export default composite({
   py: "shēngwù",
   en: "living thing",
   ru: "живое существо",
+  pos: "noun",
   hsd: ["{{word:sheng1}}-{{word:wu4}}", "{{word:huo2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["生物", "活的东西"],
   literal: "a living thing",

@@ -7,6 +7,7 @@ export default composite({
   py: "xiū",
   en: "repair",
   ru: "чинить",
+  pos: "verb",
   hsd: ["{{word:zuo4}} {{word:hao3}}"],
   tts: ["做好"],
   literal: "make it good",

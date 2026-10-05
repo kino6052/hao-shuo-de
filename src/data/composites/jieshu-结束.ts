@@ -7,6 +7,7 @@ export default composite({
   py: "jiéshù",
   en: "end",
   ru: "заканчиваться",
+  pos: "verb",
   hsd: ["{{word:wan2}}"],
   tts: ["完"],
   fit: "word",

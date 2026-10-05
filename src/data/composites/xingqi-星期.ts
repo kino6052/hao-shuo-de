@@ -7,6 +7,7 @@ export default composite({
   py: "xīngqī",
   en: "week",
   ru: "неделя",
+  pos: "noun",
   hsd: ["{{word:qi1}}-ge {{word:ri4}}"],
   tts: ["七个日"],
   literal: "seven days",

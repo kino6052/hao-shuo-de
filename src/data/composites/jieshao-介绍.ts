@@ -7,6 +7,7 @@ export default composite({
   py: "jièshào",
   en: "introduce",
   ru: "представлять",
+  pos: "verb",
   hsd: ["{{word:jiao4}} {{word:ren2}} {{word:zhi1dao4}}"],
   tts: ["叫人知道"],
   literal: "let people know",

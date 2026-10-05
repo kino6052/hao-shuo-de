@@ -7,6 +7,7 @@ export default composite({
   py: "zháojí",
   en: "anxious",
   ru: "волноваться",
+  pos: "adjective",
   hsd: ["{{word:bu4}} {{word:fang4}}-{{word:xin1}}"],
   tts: ["不放心"],
   literal: "can't put the heart down",

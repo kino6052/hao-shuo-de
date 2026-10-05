@@ -7,6 +7,7 @@ export default composite({
   py: "chéngdù",
   en: "degree, extent",
   ru: "степень",
+  pos: "noun",
   hsd: ["{{word:duo1}}-{{word:shao3}}"],
   tts: ["多少"],
   literal: "how much",

@@ -11,6 +11,7 @@ export default lessonModule({
       "**{{word:wo3}} {{word:lai2}} + verb**",
       "",
       "{{Word:wo3}} {{word:lai2}}! alone is \"let me!\". {{word:wo3}}-{{word:men}} {{word:lai2}} + verb is \"let's\".",
+      "To ask to be let do it, say {{word:rang4}} {{word:wo3}} + verb: {{Word:rang4}} {{word:wo3}} {{word:kan4}}-kan, let me see.",
     ],
     ru: [
       "**Чтобы вызваться что-то сделать**, скажите {{word:wo3}} {{word:lai2}} («я иду»), а потом глагол. Это значит «давай я сделаю».",
@@ -18,6 +19,7 @@ export default lessonModule({
       "**{{word:wo3}} {{word:lai2}} + глагол**",
       "",
       "Одно {{Word:wo3}} {{word:lai2}}! — это «давай я!». {{word:wo3}}-{{word:men}} {{word:lai2}} + глагол — «давайте».",
+      "Чтобы попросить разрешения, скажите {{word:rang4}} {{word:wo3}} + глагол: {{Word:rang4}} {{word:wo3}} {{word:kan4}}-kan — дай посмотреть.",
     ],
     tldr: {
       en: "{{word:wo3}} {{word:lai2}} + verb is let me: {{Word:wo3}} {{word:lai2}} {{word:na2}}, let me carry it.",
@@ -66,6 +68,12 @@ export default lessonModule({
       en: "No problem, let me!",
       ru: "Ничего страшного, давай я!",
     },
+    {
+      pinyin: "{{Word:rang4}} {{word:wo3}} {{word:kan4}}-kan.",
+      hanzi: "让我看看。",
+      en: "Let me have a look.",
+      ru: "Дай посмотреть.",
+    },
   ],
   exercises: [
     {
@@ -85,6 +93,12 @@ export default lessonModule({
       ru: "Давай я включу свет!",
       answer: "{{Word:wo3}} {{word:lai2}} {{word:kai1}} {{word:deng1}}!",
       hanzi: "我来开灯！",
+    },
+    {
+      en: "Let me see.",
+      ru: "Дай посмотреть.",
+      answer: "{{Word:rang4}} {{word:wo3}} {{word:kan4}}-kan.",
+      hanzi: "让我看看。",
     },
   ],
 });

@@ -7,6 +7,7 @@ export default composite({
   py: "xiàlái",
   en: "come down",
   ru: "спуститься (сюда)",
+  pos: "verb",
   hsd: ["{{word:xia4}}-{{word:lai2}}"],
   tts: ["下来"],
   fit: "natural",

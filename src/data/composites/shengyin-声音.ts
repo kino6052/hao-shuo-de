@@ -7,6 +7,7 @@ export default composite({
   py: "shēngyīn",
   en: "sound",
   ru: "звук",
+  pos: "noun",
   hsd: ["{{word:sheng1yin1}}"],
   tts: ["声音"],
   fit: "word",

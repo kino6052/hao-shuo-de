@@ -7,6 +7,7 @@ export default composite({
   py: "cāntīng",
   en: "restaurant",
   ru: "ресторан",
+  pos: "noun",
   hsd: ["{{word:chi1}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
   tts: ["吃东西的地方"],
   literal: "eating place",

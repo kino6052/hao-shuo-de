@@ -7,6 +7,7 @@ export default composite({
   py: "suì",
   en: "(years of age)",
   ru: "лет (о возрасте)",
+  pos: "classifier",
   hsd: ["{{word:ni3}} {{word:duo1}} {{word:da4}}?"],
   tts: ["你多大？"],
   literal: "how big are you?",

@@ -7,6 +7,7 @@ export default composite({
   py: "tàiyáng",
   en: "sun",
   ru: "солнце",
+  pos: "noun",
   hsd: ["{{word:ri4}}"],
   tts: ["日"],
   fit: "word",

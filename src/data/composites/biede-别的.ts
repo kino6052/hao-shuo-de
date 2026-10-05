@@ -7,6 +7,7 @@ export default composite({
   py: "biéde",
   en: "other",
   ru: "другой",
+  pos: "pronoun",
   hsd: ["{{word:bie2}}-{{word:de}}"],
   tts: ["别的"],
   fit: "natural",

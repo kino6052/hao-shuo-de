@@ -7,6 +7,7 @@ export default composite({
   py: "yìdiǎnr",
   en: "a little",
   ru: "немного",
+  pos: "number",
   hsd: ["{{word:yi1}}-{{word:dian3}}"],
   tts: ["一点"],
   fit: "natural",

@@ -7,6 +7,7 @@ export default composite({
   py: "juéxīn",
   en: "determination",
   ru: "решимость",
+  pos: "noun",
   hsd: ["{{word:zai4}}-{{word:xin1}}-{{word:li3}}-{{word:de}} {{word:li4}}"],
   tts: ["在心里的力"],
   literal: "strength in the heart",

@@ -7,6 +7,7 @@ export default composite({
   py: "búbì",
   en: "need not",
   ru: "не нужно",
+  pos: "adverb",
   hsd: ["{{word:bu4}} {{word:yong4}}"],
   tts: ["不用"],
   literal: "no need",

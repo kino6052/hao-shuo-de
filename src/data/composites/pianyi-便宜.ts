@@ -7,6 +7,7 @@ export default composite({
   py: "piányi",
   en: "cheap",
   ru: "дешёвый",
+  pos: "adjective",
   hsd: ["{{word:yao4}} {{word:hen3}} {{word:shao3}} {{word:jin1}}"],
   tts: ["要很少金"],
   literal: "needs little money",

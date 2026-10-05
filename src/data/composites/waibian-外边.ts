@@ -7,10 +7,11 @@ export default composite({
   py: "wàibian",
   en: "outside",
   ru: "снаружи",
+  pos: "noun",
   hsd: ["{{word:wai4}}-{{word:bian1}}", "{{word:wai4}}-{{word:mian4}}"],
   tts: ["外边", "外面"],
+  literal: "the outside",
   fit: "natural",
   note: "Lesson {{lesson:moving}}.",
-  literal: "the outside",
   proposed: true,
 });

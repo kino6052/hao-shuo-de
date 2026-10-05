@@ -7,6 +7,7 @@ export default composite({
   py: "kāishǐ",
   en: "begin",
   ru: "начинать",
+  pos: "verb",
   hsd: ["{{word:kai1shi3}}"],
   tts: ["开始"],
   fit: "word",

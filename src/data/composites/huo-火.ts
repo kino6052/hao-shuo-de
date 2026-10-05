@@ -7,6 +7,7 @@ export default composite({
   py: "huǒ",
   en: "fire",
   ru: "огонь",
+  pos: "noun",
   hsd: ["{{word:huo3}}"],
   tts: ["火"],
   fit: "word",

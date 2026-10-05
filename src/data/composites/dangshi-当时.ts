@@ -7,6 +7,7 @@ export default composite({
   py: "dāngshí",
   en: "at that time",
   ru: "тогда",
+  pos: "noun",
   hsd: ["{{word:na4}}-ge {{word:shi2}}-{{word:jian1}}"],
   tts: ["那个时间"],
   literal: "that time",

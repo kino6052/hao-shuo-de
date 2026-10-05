@@ -7,9 +7,13 @@ export default composite({
   py: "wǎnfàn",
   en: "dinner",
   ru: "ужин",
-  hsd: ["{{word:yue4}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:chi1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["月的时间吃的东西"],
+  pos: "noun",
+  hsd: [
+    "{{word:wan3}}-{{word:fan4}}",
+    "{{word:yue4}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:chi1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+  ],
+  tts: ["晚饭", "月的时间吃的东西"],
   literal: "the food you eat at moon time",
-  fit: "plain",
+  fit: "natural",
   proposed: true,
 });

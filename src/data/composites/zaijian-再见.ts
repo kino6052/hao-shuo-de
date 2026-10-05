@@ -7,8 +7,13 @@ export default composite({
   py: "zàijiàn",
   en: "goodbye",
   ru: "до свидания",
-  hsd: ["{{word:wo3}} {{word:hui4}} {{word:kan4}}-{{word:dao4}} {{word:ni3}}"],
-  tts: ["我会看到你"],
+  pos: "verb",
+  hsd: [
+    "{{word:zai4}}-{{word:jian4}}",
+    "{{word:wo3}} {{word:hui4}} {{word:kan4}}-{{word:dao4}} {{word:ni3}}",
+  ],
+  tts: ["再见", "我会看到你"],
   literal: "I will see you",
-  fit: "plain",
+  fit: "natural",
+  proposed: true,
 });

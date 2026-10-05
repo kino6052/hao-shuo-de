@@ -7,6 +7,7 @@ export default composite({
   py: "lái",
   en: "come",
   ru: "приходить",
+  pos: "verb",
   hsd: ["{{word:lai2}}"],
   tts: ["来"],
   fit: "word",

@@ -7,6 +7,7 @@ export default composite({
   py: "shénme",
   en: "what? which?",
   ru: "что? какой?",
+  pos: "pronoun",
   hsd: ["{{word:shen2me}}"],
   tts: ["什么"],
   fit: "word",

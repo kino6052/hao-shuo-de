@@ -7,6 +7,7 @@ export default composite({
   py: "yǐ",
   en: "already",
   ru: "уже",
+  pos: "adverb",
   hsd: ["{{word:le}}"],
   tts: ["了"],
   fit: "skip",

@@ -7,6 +7,7 @@ export default composite({
   py: "fàngqì",
   en: "give up",
   ru: "отказаться, бросить",
+  pos: "verb",
   hsd: ["{{word:bu4}} {{word:yao4}} {{word:le}}"],
   tts: ["不要了"],
   literal: "not wanting it anymore",

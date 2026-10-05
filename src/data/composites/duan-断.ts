@@ -7,6 +7,7 @@ export default composite({
   py: "duàn",
   en: "break (apart)",
   ru: "ломаться, обрываться",
+  pos: "verb",
   hsd: ["{{word:bian4}} {{word:liang3}}-ge {{word:bu4}}-{{light:fen1}}"],
   tts: ["变两个部分"],
   literal: "become two parts",

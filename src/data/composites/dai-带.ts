@@ -7,6 +7,7 @@ export default composite({
   py: "dài",
   en: "bring, take along",
   ru: "приносить",
+  pos: "verb",
   hsd: ["{{word:na2}}-{{word:lai2}}", "{{word:na2}}-{{word:qu4}}"],
   tts: ["拿来", "拿去"],
   literal: "take-come / take-go",

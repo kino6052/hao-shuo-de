@@ -7,6 +7,7 @@ export default composite({
   py: "shèbèi",
   en: "equipment",
   ru: "оборудование",
+  pos: "noun",
   hsd: ["{{word:gong1}}-{{word:ju4}}"],
   tts: ["工具"],
   fit: "word",

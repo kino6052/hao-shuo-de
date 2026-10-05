@@ -7,6 +7,7 @@ export default composite({
   py: "shōuhuò",
   en: "harvest, gain",
   ru: "урожай, приобретение",
+  pos: "verb",
   hsd: ["{{word:de2}}-{{word:dao4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["得到的东西"],
   literal: "what you got",

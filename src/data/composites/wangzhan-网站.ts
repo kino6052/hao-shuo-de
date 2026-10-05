@@ -7,6 +7,7 @@ export default composite({
   py: "wǎngzhàn",
   en: "website",
   ru: "сайт",
+  pos: "noun",
   hsd: ["{{word:wang3}}-{{word:zhan4}}"],
   tts: ["网站"],
   literal: "net station",

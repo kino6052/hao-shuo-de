@@ -7,6 +7,7 @@ export default composite({
   py: "ná",
   en: "take, hold",
   ru: "брать, держать",
+  pos: "verb",
   hsd: ["{{word:na2}}"],
   tts: ["拿"],
   fit: "word",

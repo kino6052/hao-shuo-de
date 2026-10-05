@@ -7,6 +7,7 @@ export default composite({
   py: "diǎn",
   en: "point; o'clock",
   ru: "точка; час",
+  pos: "classifier",
   hsd: ["{{word:dian3}}"],
   tts: ["点"],
   fit: "word",

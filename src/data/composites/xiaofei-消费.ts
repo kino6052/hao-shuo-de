@@ -7,6 +7,7 @@ export default composite({
   py: "xiāofèi",
   en: "consume, spend",
   ru: "потреблять, тратить",
+  pos: "verb",
   hsd: ["{{word:yong4}} {{word:jin1}}"],
   tts: ["用金"],
   literal: "use money",

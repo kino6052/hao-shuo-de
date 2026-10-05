@@ -7,7 +7,10 @@ export default composite({
   py: "xiāngjiāo",
   en: "banana",
   ru: "банан",
-  hsd: ["{{word:huang2}}-{{word:se4}}-{{word:de}} {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
+  pos: "noun",
+  hsd: [
+    "{{word:huang2}}-{{word:se4}}-{{word:de}} {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+  ],
   tts: ["黄色的植物生的东西"],
   literal: "a yellow fruit",
   fit: "plain",

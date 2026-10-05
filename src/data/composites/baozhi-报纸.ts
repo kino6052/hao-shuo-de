@@ -7,6 +7,7 @@ export default composite({
   py: "bàozhǐ",
   en: "newspaper",
   ru: "газета",
+  pos: "noun",
   hsd: [
     "{{word:shuo1}}-{{word:xian4}}-{{word:zai4}}-{{word:fa1}}-{{word:sheng1}}-{{word:shen2me}}-{{word:de}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],

@@ -7,6 +7,7 @@ export default composite({
   py: "chuán",
   en: "pass on",
   ru: "передавать",
+  pos: "verb",
   hsd: ["{{word:gei3}} {{word:bie2}}-{{word:de}} {{word:ren2}}"],
   tts: ["给别的人"],
   literal: "give to someone else",

@@ -7,6 +7,7 @@ export default composite({
   py: "chuānghu",
   en: "window",
   ru: "окно",
+  pos: "noun",
   hsd: ["{{word:kou3}}"],
   tts: ["口"],
   fit: "word",

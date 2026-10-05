@@ -75,8 +75,8 @@ export default lessonModule({
     {
       en: "Bring the stick!",
       ru: "Принеси палку!",
-      answer: "{{Word:ba3}} {{word:gun4zi}} {{word:na2}}-{{word:lai2}}!",
-      hanzi: "把棍子拿来！",
+      answer: "{{Word:ba3}} {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:na2}}-{{word:lai2}}!",
+      hanzi: "把长的东西拿来！",
     },
   ],
   faq: [

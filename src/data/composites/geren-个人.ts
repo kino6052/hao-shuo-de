@@ -7,6 +7,7 @@ export default composite({
   py: "gèrén",
   en: "individual",
   ru: "личность",
+  pos: "noun",
   hsd: ["{{word:ge4}}-{{word:ren2}}", "{{word:yi1}}-ge {{word:ren2}}"],
   tts: ["个人", "一个人"],
   literal: "one person / one person",

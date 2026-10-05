@@ -7,6 +7,7 @@ export default composite({
   py: "zhǐdǎo",
   en: "guide, instruct",
   ru: "руководить, наставлять",
+  pos: "verb",
   hsd: ["{{word:jiao1}}"],
   tts: ["教"],
   fit: "word",

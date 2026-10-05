@@ -7,6 +7,7 @@ export default composite({
   py: "shòu",
   en: "receive, suffer",
   ru: "получать, испытывать",
+  pos: "verb",
   hsd: ["{{word:de2}}"],
   tts: ["得"],
   fit: "word",

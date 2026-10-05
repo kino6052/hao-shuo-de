@@ -7,6 +7,7 @@ export default composite({
   py: "zuǐ",
   en: "mouth",
   ru: "рот",
+  pos: "noun",
   hsd: ["{{word:kou3}}"],
   tts: ["口"],
   fit: "word",

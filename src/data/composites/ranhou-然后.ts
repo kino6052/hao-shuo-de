@@ -7,6 +7,7 @@ export default composite({
   py: "ránhòu",
   en: "then, afterwards",
   ru: "потом",
+  pos: "conjunction",
   hsd: ["X-{{word:wan2}} {{word:hou4}}"],
   tts: ["…完后"],
   literal: "after finishing X",

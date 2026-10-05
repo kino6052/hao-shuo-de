@@ -7,6 +7,7 @@ export default composite({
   py: "nàge",
   en: "that one",
   ru: "тот",
+  pos: "pronoun",
   hsd: ["{{word:na4}}-ge"],
   tts: ["那个"],
   fit: "natural",

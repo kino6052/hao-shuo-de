@@ -7,6 +7,7 @@ export default composite({
   py: "shù",
   en: "number, figure",
   ru: "число",
+  pos: "noun",
   hsd: ["{{word:hao4}}"],
   tts: ["号"],
   literal: "number",

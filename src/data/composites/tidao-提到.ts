@@ -7,6 +7,7 @@ export default composite({
   py: "tídào",
   en: "mention",
   ru: "упоминать",
+  pos: "verb",
   hsd: ["{{word:shuo1}}-{{word:dao4}}"],
   tts: ["说到"],
   literal: "speak of",

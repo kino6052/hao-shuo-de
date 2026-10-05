@@ -7,6 +7,7 @@ export default composite({
   py: "yuèfèn",
   en: "month",
   ru: "месяц",
+  pos: "noun",
   hsd: ["{{word:yue4}}"],
   tts: ["月"],
   fit: "word",

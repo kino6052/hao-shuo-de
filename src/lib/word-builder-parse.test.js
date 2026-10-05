@@ -57,11 +57,11 @@ describe("the composite dictionary", () => {
     }
   });
 
-  test("the words a reader can open include fish, book, and walk", () => {
+  test("the words a reader can open include fish, teacher, and kitchen", () => {
     const opened = builderEntries(dict, composites.entries).map((b) => b.entry.en);
     expect(opened).toContain("fish");
-    expect(opened).toContain("book");
-    expect(opened).toContain("walk; leave");
+    expect(opened).toContain("teacher");
+    expect(opened).toContain("kitchen");
     const fish = composites.entries.find((e) => e.en === "fish");
     expect(py(treeOfForm(dict, fish.hsd))).toBe("zài-shuǐ-lǐ-de dòng-wù");
   });

@@ -92,8 +92,8 @@ export default lessonModule({
     {
       en: "Let's eat, okay?",
       ru: "Давай поедим, хорошо?",
-      answer: "{{Word:wo3}}-{{word:men}} {{word:chi1}} {{word:dong1}}-{{light:xi1}}, {{word:hao3}} {{word:ma}}?",
-      hanzi: "我们吃东西，好吗？",
+      answer: "{{Word:wo3}}-{{word:men}} {{word:chi1}} {{word:fan4}}, {{word:hao3}} {{word:ma}}?",
+      hanzi: "我们吃饭，好吗？",
     },
   ],
 });

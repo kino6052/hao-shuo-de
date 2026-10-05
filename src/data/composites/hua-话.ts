@@ -7,9 +7,10 @@ export default composite({
   py: "huà",
   en: "words, speech",
   ru: "слова, речь",
-  hsd: ["{{word:shuo1}}-{{word:de}}"],
-  tts: ["说的"],
+  pos: "noun",
+  hsd: ["{{word:hua4}}", "{{word:shuo1}}-{{word:de}}"],
+  tts: ["话", "说的"],
   literal: "what's said",
-  fit: "plain",
+  fit: "word",
   proposed: true,
 });

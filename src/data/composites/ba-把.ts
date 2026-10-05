@@ -7,6 +7,7 @@ export default composite({
   py: "bǎ",
   en: "grammatical object-introducing particle",
   ru: "грамматическая частица",
+  pos: "classifier",
   hsd: ["{{word:ba3}}"],
   tts: ["把"],
   fit: "word",

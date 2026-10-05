@@ -7,6 +7,7 @@ export default composite({
   py: "ài",
   en: "love",
   ru: "любить",
+  pos: "verb",
   hsd: ["{{word:ai4}}"],
   tts: ["爱"],
   fit: "word",

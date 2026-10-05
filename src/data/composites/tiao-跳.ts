@@ -7,6 +7,7 @@ export default composite({
   py: "tiào",
   en: "jump",
   ru: "прыгать",
+  pos: "verb",
   hsd: [
     "{{word:yong4}} {{word:jiao3}} {{word:cong2}} {{word:di4}}-{{word:shang4}} {{word:qi3}}-{{word:lai2}}",
   ],

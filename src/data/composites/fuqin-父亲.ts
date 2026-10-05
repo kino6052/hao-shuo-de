@@ -7,6 +7,7 @@ export default composite({
   py: "fùqīn",
   en: "father",
   ru: "отец",
+  pos: "noun",
   hsd: ["{{word:ba4ba}}-{{word:ma1ma}}-{{word:li3}}-{{word:de}} {{word:nan2}}-{{word:ren2}}"],
   tts: ["爸爸妈妈里的男人"],
   literal: "the man of the parents",

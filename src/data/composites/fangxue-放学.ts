@@ -7,6 +7,7 @@ export default composite({
   py: "fàngxué",
   en: "school's out",
   ru: "конец уроков",
+  pos: "verb",
   hsd: [
     "{{word:fang4}}-{{word:xue2}}",
     "{{word:xue2}}-{{word:wan2}} {{word:le}}, {{word:hui2}} {{word:jia1}}",

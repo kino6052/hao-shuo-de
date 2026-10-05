@@ -7,6 +7,7 @@ export default composite({
   py: "guójiā",
   en: "country",
   ru: "страна",
+  pos: "noun",
   hsd: ["{{word:guo2}}-{{word:jia1}}"],
   tts: ["国家"],
   fit: "natural",

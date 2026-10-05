@@ -7,6 +7,7 @@ export default composite({
   py: "xuǎnzé",
   en: "choose",
   ru: "выбирать",
+  pos: "verb",
   hsd: ["{{word:na2}} {{word:yi1}}-ge"],
   tts: ["拿一个"],
   literal: "take one",

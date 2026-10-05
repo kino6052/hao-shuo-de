@@ -7,6 +7,7 @@ export default composite({
   py: "chūzūchē",
   en: "taxi",
   ru: "такси",
+  pos: "noun",
   hsd: ["{{word:gei3}}-{{word:jin1}}-{{word:zuo4}}-{{word:xia4}}-{{word:de}} {{word:che1}}"],
   tts: ["给金坐下的车"],
   literal: "a car you pay to sit in",

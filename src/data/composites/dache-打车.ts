@@ -7,6 +7,7 @@ export default composite({
   py: "dǎchē",
   en: "take a taxi",
   ru: "взять такси",
+  pos: "verb",
   hsd: ["{{word:da3}} {{word:che1}}"],
   tts: ["打车"],
   fit: "natural",

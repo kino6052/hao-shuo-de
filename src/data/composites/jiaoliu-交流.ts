@@ -7,6 +7,7 @@ export default composite({
   py: "jiāoliú",
   en: "communicate, exchange",
   ru: "общаться, обмениваться",
+  pos: "verb",
   hsd: ["{{word:he2}} {{word:ren2}} {{word:shuo1}}"],
   tts: ["和人说"],
   literal: "talk with people",

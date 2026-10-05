@@ -7,6 +7,7 @@ export default composite({
   py: "qiáng",
   en: "strong",
   ru: "сильный",
+  pos: "adjective",
   hsd: ["{{word:hen3}} {{word:you3}} {{word:li4}}"],
   tts: ["很有力"],
   literal: "has a lot of strength",

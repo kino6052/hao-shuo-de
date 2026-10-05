@@ -7,6 +7,7 @@ export default composite({
   py: "huàn",
   en: "exchange, change",
   ru: "менять",
+  pos: "verb",
   hsd: ["{{word:gei3}} X, {{word:na2}} Y"],
   tts: ["给X，拿Y"],
   literal: "give X, take Y",

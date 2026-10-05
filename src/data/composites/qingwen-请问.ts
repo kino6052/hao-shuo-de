@@ -7,6 +7,7 @@ export default composite({
   py: "qǐngwèn",
   en: "may I ask",
   ru: "скажите, пожалуйста",
+  pos: "verb",
   hsd: ["{{word:wo3}} {{word:neng2}} {{word:wen4}} {{word:ma}}?"],
   tts: ["我能问吗？"],
   literal: "can I ask?",

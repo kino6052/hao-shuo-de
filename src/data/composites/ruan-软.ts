@@ -7,6 +7,7 @@ export default composite({
   py: "ruǎn",
   en: "soft",
   ru: "мягкий",
+  pos: "adjective",
   hsd: ["{{word:bu4}} {{word:ying4}}"],
   tts: ["不硬"],
   literal: "not hard",

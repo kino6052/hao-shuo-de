@@ -7,6 +7,7 @@ export default composite({
   py: "rènhé",
   en: "any",
   ru: "любой",
+  pos: "pronoun",
   hsd: ["{{word:shen2me}} … {{word:dou1}}"],
   tts: ["什么…都"],
   literal: "whatever … all",

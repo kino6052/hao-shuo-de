@@ -7,6 +7,7 @@ export default composite({
   py: "zuòyòng",
   en: "function, effect",
   ru: "роль, действие",
+  pos: "noun",
   hsd: [
     "{{word:zuo4}}-{{word:yong4}}",
     "{{word:neng2}} {{word:zuo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",

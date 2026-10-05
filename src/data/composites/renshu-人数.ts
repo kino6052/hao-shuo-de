@@ -7,6 +7,7 @@ export default composite({
   py: "rénshù",
   en: "number of people",
   ru: "число людей",
+  pos: "noun",
   hsd: ["{{word:duo1}}-{{word:shao3}} {{word:ren2}}"],
   tts: ["多少人"],
   literal: "how many people",

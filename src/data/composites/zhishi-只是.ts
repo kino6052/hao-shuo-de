@@ -7,8 +7,10 @@ export default composite({
   py: "zhǐshì",
   en: "only, just",
   ru: "только",
-  hsd: ["{{word:jiu4}}"],
-  tts: ["就"],
+  pos: "adverb",
+  hsd: ["{{word:zhi3}}-{{word:shi4}}", "{{word:jiu4}}"],
+  tts: ["只是", "就"],
   literal: "just",
   fit: "natural",
+  proposed: true,
 });

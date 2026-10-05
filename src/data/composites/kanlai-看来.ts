@@ -7,6 +7,7 @@ export default composite({
   py: "kànlái",
   en: "it seems",
   ru: "похоже",
+  pos: "verb",
   hsd: ["{{word:kan4}}-{{word:lai2}}", "{{word:kan4}}-{{word:qi3}}-{{word:lai2}}"],
   tts: ["看来", "看起来"],
   literal: "look-come / it looks",

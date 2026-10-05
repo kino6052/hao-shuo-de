@@ -7,6 +7,7 @@ export default composite({
   py: "jīběn",
   en: "basic; basically",
   ru: "основной; в основном",
+  pos: "adjective",
   hsd: ["{{word:da4}} {{word:bu4}}-{{light:fen1}}"],
   tts: ["大部分"],
   literal: "for the most part",

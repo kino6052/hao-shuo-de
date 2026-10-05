@@ -7,6 +7,7 @@ export default composite({
   py: "nǐ",
   en: "you",
   ru: "ты",
+  pos: "pronoun",
   hsd: ["{{word:ni3}}"],
   tts: ["你"],
   fit: "word",

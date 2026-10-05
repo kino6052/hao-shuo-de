@@ -7,6 +7,7 @@ export default composite({
   py: "xiǎoxuéshēng",
   en: "primary-school pupil",
   ru: "школьник",
+  pos: "noun",
   hsd: [
     "{{word:xiao3}}-{{word:xue2}}-{{word:sheng1}}",
     "{{word:xiao3}}-{{word:de}} {{word:xue2}}-{{word:de}} {{word:ren2}}",

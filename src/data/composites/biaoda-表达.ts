@@ -7,7 +7,10 @@ export default composite({
   py: "biǎodá",
   en: "express",
   ru: "выражать",
-  hsd: ["{{word:shuo1}}-{{word:chu1}} {{word:xin1}}-{{word:li3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
+  pos: "verb",
+  hsd: [
+    "{{word:shuo1}}-{{word:chu1}} {{word:xin1}}-{{word:li3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+  ],
   tts: ["说出心里的东西"],
   literal: "say what's in your heart",
   fit: "plain",

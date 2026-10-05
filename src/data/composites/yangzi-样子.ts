@@ -7,9 +7,11 @@ export default composite({
   py: "yàngzi",
   en: "appearance",
   ru: "вид",
-  hsd: ["{{word:kan4}}-{{word:qi3}}-{{word:lai2}}"],
-  tts: ["看起来"],
+  pos: "noun",
+  hsd: ["{{word:yang4}}-{{word:zi}}", "{{word:kan4}}-{{word:qi3}}-{{word:lai2}}"],
+  tts: ["样子", "看起来"],
   literal: "looks",
   fit: "natural",
   note: "Lesson {{lesson:direction-and-result}}: X kàn-qǐ-lái hěn hǎo.",
+  proposed: true,
 });

@@ -7,7 +7,10 @@ export default composite({
   py: "yóuxiāng",
   en: "mailbox",
   ru: "почтовый ящик",
-  hsd: ["{{word:fang4}}-{{word:xie3}}-{{word:de}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:he2zi}}"],
+  pos: "noun",
+  hsd: [
+    "{{word:fang4}}-{{word:xie3}}-{{word:de}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:he2zi}}",
+  ],
   tts: ["放写的东西的盒子"],
   literal: "the box for written things",
   fit: "plain",

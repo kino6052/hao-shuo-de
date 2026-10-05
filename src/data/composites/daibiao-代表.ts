@@ -7,6 +7,7 @@ export default composite({
   py: "dàibiǎo",
   en: "represent",
   ru: "представлять",
+  pos: "noun",
   hsd: ["{{word:bang1}} {{word:qun2}} {{word:shuo1}}-{{word:de}} {{word:ren2}}"],
   tts: ["帮群说的人"],
   literal: "the one who speaks for the group",

@@ -7,6 +7,7 @@ export default composite({
   py: "ba",
   en: "(suggestion particle)",
   ru: "частица ba",
+  pos: "auxiliary",
   fit: "skip",
   note: "For a suggestion, end with …, hǎo ma?",
 });

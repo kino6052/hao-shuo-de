@@ -7,6 +7,7 @@ export default composite({
   py: "hào",
   en: "sequence marker",
   ru: "показатель порядка",
+  pos: "noun",
   hsd: ["{{word:hao4}}"],
   tts: ["号"],
   fit: "word",

@@ -7,6 +7,7 @@ export default composite({
   py: "tàidù",
   en: "attitude",
   ru: "отношение",
+  pos: "noun",
   hsd: ["{{word:xin1}}-{{word:li3}} {{word:zen3me}} {{word:jue2}}-{{light:de2}}"],
   tts: ["心里怎么觉得"],
   literal: "how you feel inside",

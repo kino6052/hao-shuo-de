@@ -7,6 +7,7 @@ export default composite({
   py: "tóngshí",
   en: "at the same time",
   ru: "одновременно",
+  pos: "noun",
   hsd: ["{{word:yi1}}-{{word:yang4}}-{{word:de}} {{word:shi2}}-{{word:jian1}}"],
   tts: ["一样的时间"],
   literal: "at the same time",

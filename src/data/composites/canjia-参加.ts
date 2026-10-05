@@ -7,6 +7,7 @@ export default composite({
   py: "cānjiā",
   en: "take part",
   ru: "участвовать",
+  pos: "verb",
   hsd: [
     "{{word:he2}} {{word:ren2}} {{word:yi1}}-{{word:qi3}} {{word:zuo4}}",
     "{{word:he2}} {{word:ren2}} {{word:yi1}}-{{word:qi3}} {{word:wan2r}}",

@@ -7,6 +7,7 @@ export default composite({
   py: "jiàoyù",
   en: "education",
   ru: "образование",
+  pos: "noun",
   hsd: ["{{word:jiao1}}"],
   tts: ["教"],
   fit: "word",

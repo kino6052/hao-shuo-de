@@ -7,6 +7,7 @@ export default composite({
   py: "líng",
   en: "zero",
   ru: "ноль",
+  pos: "number",
   hsd: ["{{word:mei2}}-{{word:you3}}"],
   tts: ["没有"],
   literal: "none",

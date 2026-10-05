@@ -7,6 +7,7 @@ export default composite({
   py: "gǒu",
   en: "dog",
   ru: "собака",
+  pos: "noun",
   hsd: ["{{word:jiao4}} \"wāng-wāng\"-{{word:de}} {{word:dong4}}-{{word:wu4}}"],
   tts: ["叫汪汪的动物"],
   literal: "the animal that says \"wang-wang\"",

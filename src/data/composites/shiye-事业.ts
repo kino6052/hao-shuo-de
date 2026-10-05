@@ -7,6 +7,7 @@ export default composite({
   py: "shìyè",
   en: "career",
   ru: "карьера, дело жизни",
+  pos: "noun",
   hsd: ["{{word:yi1}}-{{word:sheng1}} {{word:zuo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["一生做的东西"],
   literal: "what you do all your life",

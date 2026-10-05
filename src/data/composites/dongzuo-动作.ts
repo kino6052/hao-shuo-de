@@ -7,6 +7,7 @@ export default composite({
   py: "dòngzuò",
   en: "movement, action",
   ru: "движение",
+  pos: "noun",
   hsd: ["{{word:dong4}}-{{word:zuo4}}", "{{word:dong4}}"],
   tts: ["动作", "动"],
   fit: "natural",

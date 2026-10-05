@@ -7,6 +7,7 @@ export default composite({
   py: "qiáng",
   en: "wall",
   ru: "стена",
+  pos: "noun",
   hsd: ["{{word:jia1}}-{{word:de}} {{word:bian1}}"],
   tts: ["家的边"],
   literal: "the house's side",

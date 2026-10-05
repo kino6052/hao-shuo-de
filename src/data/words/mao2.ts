@@ -5,8 +5,8 @@ export default word("mao2", {
   hanzi: "毛",
   pos: { eng: "noun", rus: "существительное", zh: "名词" },
   definition: {
-    eng: "hair, fur, feathers; {{word:tou2}}-{{word:shang4}}-{{word:de}} {{word:mao2}}, \"hair on the head\"",
-    rus: "шерсть, волосы, перья; {{word:tou2}}-{{word:shang4}}-{{word:de}} {{word:mao2}} — «волосы на голове»",
+    eng: "hair, fur, feathers; {{word:tou2}}-{{word:fa1}}, \"hair on the head\"",
+    rus: "шерсть, волосы, перья; {{word:tou2}}-{{word:fa1}} — «волосы на голове»",
     zh: "毛",
   },
   necessity: {

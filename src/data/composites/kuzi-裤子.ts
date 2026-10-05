@@ -7,6 +7,7 @@ export default composite({
   py: "kùzi",
   en: "pants",
   ru: "брюки",
+  pos: "noun",
   hsd: ["{{word:jiao3}}-{{word:de}} {{word:yi1fu}}"],
   tts: ["脚的衣服"],
   literal: "leg clothes",

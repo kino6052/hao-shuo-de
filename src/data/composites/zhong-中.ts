@@ -7,6 +7,7 @@ export default composite({
   py: "zhōng",
   en: "middle",
   ru: "середина",
+  pos: "noun",
   hsd: ["{{word:zhong1}}"],
   tts: ["中"],
   fit: "word",

@@ -7,6 +7,7 @@ export default composite({
   py: "dìqiú",
   en: "the Earth",
   ru: "Земля",
+  pos: "noun",
   hsd: ["{{word:da4}} {{word:yuan2}} {{word:di4}}"],
   tts: ["大圆地"],
   literal: "the big round ground",

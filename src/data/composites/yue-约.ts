@@ -7,6 +7,7 @@ export default composite({
   py: "yuē",
   en: "arrange; about",
   ru: "договориться; примерно",
+  pos: "verb",
   hsd: ["{{word:shuo1}} {{word:hao3}}", "{{word:ke3}}-{{word:neng2}}"],
   tts: ["说好", "可能"],
   literal: "agree on it / maybe",

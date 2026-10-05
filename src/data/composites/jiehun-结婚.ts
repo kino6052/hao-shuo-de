@@ -7,6 +7,7 @@ export default composite({
   py: "jiéhūn",
   en: "marry",
   ru: "жениться, выйти замуж",
+  pos: "verb",
   hsd: ["{{word:liang3}}-ge {{word:ren2}} {{word:bian4}} {{word:yi1}}-ge {{word:jia1}}"],
   tts: ["两个人变一个家"],
   literal: "two people become one family",

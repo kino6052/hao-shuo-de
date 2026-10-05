@@ -7,6 +7,7 @@ export default composite({
   py: "duìbuqǐ",
   en: "sorry",
   ru: "извините",
+  pos: "verb",
   hsd: [
     "{{word:dui4}}-{{word:bu4}}-{{word:qi3}}",
     "{{word:shi4}} {{word:wo3}} {{word:bu4}} {{word:hao3}}",

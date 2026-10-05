@@ -7,6 +7,7 @@ export default composite({
   py: "xíngwéi",
   en: "behavior",
   ru: "поведение",
+  pos: "noun",
   hsd: ["{{word:zen3me}} {{word:zuo4}}"],
   tts: ["怎么做"],
   literal: "how someone acts",

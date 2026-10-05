@@ -7,6 +7,7 @@ export default composite({
   py: "kējì",
   en: "science and technology",
   ru: "наука и техника",
+  pos: "noun",
   hsd: [
     "{{word:xue2}}-{{word:de}} {{word:he2}} {{word:zuo4}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:fang1}}-{{word:fa3}}",
   ],

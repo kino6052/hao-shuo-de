@@ -7,6 +7,7 @@ export default composite({
   py: "hǎowánr",
   en: "fun",
   ru: "весёлый",
+  pos: "adjective",
   hsd: ["{{word:hao3}} {{word:wan2r}}"],
   tts: ["好玩儿"],
   literal: "good to play",

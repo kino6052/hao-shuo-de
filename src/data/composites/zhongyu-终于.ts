@@ -7,6 +7,7 @@ export default composite({
   py: "zhōngyú",
   en: "finally",
   ru: "наконец",
+  pos: "adverb",
   hsd: ["{{word:zui4}}-{{word:hou4}}"],
   tts: ["最后"],
   literal: "last of all",

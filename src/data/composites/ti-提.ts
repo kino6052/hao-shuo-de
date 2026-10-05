@@ -7,6 +7,7 @@ export default composite({
   py: "tí",
   en: "carry; mention",
   ru: "нести; упомянуть",
+  pos: "verb",
   hsd: ["{{word:na2}}", "{{word:shuo1}}-{{word:qi3}}"],
   tts: ["拿", "说起"],
   literal: "take / bring up",

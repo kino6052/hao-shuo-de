@@ -7,6 +7,7 @@ export default composite({
   py: "huài",
   en: "bad",
   ru: "плохой",
+  pos: "adjective",
   hsd: ["{{word:huai4}}"],
   tts: ["坏"],
   fit: "word",

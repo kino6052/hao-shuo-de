@@ -7,9 +7,10 @@ export default composite({
   py: "xiànshí",
   en: "reality",
   ru: "реальность",
-  hsd: ["{{word:zhen1}}-{{word:de}}"],
-  tts: ["真的"],
+  pos: "noun",
+  hsd: ["{{word:xian4}}-{{word:shi2}}", "{{word:zhen1}}-{{word:de}}"],
+  tts: ["现实", "真的"],
   literal: "what's real",
-  fit: "plain",
+  fit: "natural",
   proposed: true,
 });

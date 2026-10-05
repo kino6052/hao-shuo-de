@@ -7,6 +7,7 @@ export default composite({
   py: "tǔ",
   en: "soil",
   ru: "почва",
+  pos: "noun",
   hsd: ["{{word:di4}}"],
   tts: ["地"],
   fit: "word",

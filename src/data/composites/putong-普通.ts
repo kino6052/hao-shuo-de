@@ -7,6 +7,7 @@ export default composite({
   py: "pǔtōng",
   en: "ordinary",
   ru: "обычный",
+  pos: "adjective",
   hsd: ["{{word:he2}} {{word:bie2}}-{{word:de}} {{word:yi1}}-{{word:yang4}}"],
   tts: ["和别的一样"],
   literal: "like the others",

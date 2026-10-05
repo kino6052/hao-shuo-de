@@ -7,6 +7,7 @@ export default composite({
   py: "zhe",
   en: "(ongoing action)",
   ru: "(длительность)",
+  pos: "auxiliary",
   hsd: ["{{word:zai4}} + verb"],
   tts: ["在"],
   fit: "skip",

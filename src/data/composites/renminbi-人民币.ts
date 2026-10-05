@@ -7,6 +7,7 @@ export default composite({
   py: "rénmínbì",
   en: "renminbi (yuan)",
   ru: "юань",
+  pos: "noun",
   hsd: ["\"Zhōngguó\"-{{word:de}} {{word:jin1}}"],
   tts: ["中国的金"],
   literal: "China's money",

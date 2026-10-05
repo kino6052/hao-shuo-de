@@ -7,6 +7,7 @@ export default composite({
   py: "nénglì",
   en: "ability",
   ru: "способность",
+  pos: "noun",
   hsd: [
     "{{word:neng2}}-{{word:li4}}",
     "{{word:neng2}} {{word:zuo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",

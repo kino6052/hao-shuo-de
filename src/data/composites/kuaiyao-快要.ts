@@ -7,10 +7,11 @@ export default composite({
   py: "kuàiyào",
   en: "soon, about to",
   ru: "скоро",
+  pos: "adverb",
   hsd: ["{{word:kuai4}}-{{word:yao4}}", "{{word:kuai4}} … {{word:le}}"],
   tts: ["快要", "快…了"],
+  literal: "fast-want",
   fit: "natural",
   note: "kuài lái le: almost here.",
-  literal: "fast-want",
   proposed: true,
 });

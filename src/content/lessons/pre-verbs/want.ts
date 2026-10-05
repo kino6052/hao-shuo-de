@@ -19,6 +19,11 @@ export default lessonModule({
       en: "clothes",
       ru: "одежда",
     },
+    {
+      word: "xiang3",
+      en: "think; would like to",
+      ru: "думать; хотеть",
+    },
   ],
   prose: {
     en: [
@@ -27,6 +32,7 @@ export default lessonModule({
       "**Who + {{word:yao4}} + verb**",
       "",
       "It works with a thing too: {{Word:wo3}} {{word:yao4}} {{word:shui3}} means \"I want water\".",
+      "{{word:xiang3}} + verb is a softer want: would like to. On its own, {{word:xiang3}} is think.",
     ],
     ru: [
       "**Чтобы сказать, что вы хотите что-то сделать**, поставьте {{word:yao4}} (хотеть) перед глаголом.",
@@ -34,6 +40,7 @@ export default lessonModule({
       "**Кто + {{word:yao4}} + глагол**",
       "",
       "С вещью тоже работает: {{Word:wo3}} {{word:yao4}} {{word:shui3}} значит «Я хочу воды».",
+      "{{word:xiang3}} + глагол — мягкое «хочу»: хотелось бы. Само по себе {{word:xiang3}} — «думать».",
     ],
     tldr: {
       en: "Put {{word:yao4}} before a verb to say you want to do it.",
@@ -82,6 +89,18 @@ export default lessonModule({
       en: "I want to drink water.",
       ru: "Я хочу попить воды.",
     },
+    {
+      pinyin: "{{Word:wo3}} {{word:xiang3}} {{word:chi1}} {{word:fan4}}.",
+      hanzi: "我想吃饭。",
+      en: "I'd like to eat.",
+      ru: "Я хочу есть.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:xiang3}} {{word:mai3}} {{word:shen2me}}?",
+      hanzi: "你想买什么？",
+      en: "What would you like to buy?",
+      ru: "Что ты хочешь купить?",
+    },
   ],
   exercises: [
     {
@@ -101,6 +120,12 @@ export default lessonModule({
       ru: "Хочешь посмотреть на мою одежду?",
       answer: "{{Word:ni3}} {{word:yao4}} {{word:kan4}} {{word:wo3}}-{{word:de}} {{word:yi1fu}} {{word:ma}}?",
       hanzi: "你要看我的衣服吗？",
+    },
+    {
+      en: "I'd like to drink water.",
+      ru: "Я хочу пить.",
+      answer: "{{Word:wo3}} {{word:xiang3}} {{word:he1}} {{word:shui3}}.",
+      hanzi: "我想喝水。",
     },
   ],
   faq: [

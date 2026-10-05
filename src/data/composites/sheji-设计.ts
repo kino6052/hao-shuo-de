@@ -7,6 +7,7 @@ export default composite({
   py: "shèjì",
   en: "design",
   ru: "проектировать, дизайн",
+  pos: "verb",
   hsd: ["{{word:zuo4}} {{word:qian2}}, {{word:jue2}}-{{light:de2}} {{word:zen3me}} {{word:zuo4}}"],
   tts: ["做前，觉得怎么做"],
   literal: "before making it, think how",

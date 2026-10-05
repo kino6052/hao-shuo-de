@@ -7,6 +7,7 @@ export default composite({
   py: "bāng",
   en: "help",
   ru: "помогать",
+  pos: "verb",
   hsd: ["{{word:bang1}}"],
   tts: ["帮"],
   fit: "word",

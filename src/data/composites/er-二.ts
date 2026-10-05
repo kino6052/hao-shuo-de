@@ -7,6 +7,7 @@ export default composite({
   py: "èr",
   en: "two",
   ru: "два при счёте вслух и в номерах",
+  pos: "number",
   hsd: ["{{word:er4}}"],
   tts: ["二"],
   fit: "word",

@@ -7,6 +7,7 @@ export default composite({
   py: "bù hǎoyìsi",
   en: "sorry, excuse me",
   ru: "извините",
+  pos: "phrase",
   hsd: ["{{word:shi4}} {{word:wo3}} {{word:bu4}} {{word:hao3}}"],
   tts: ["是我不好"],
   literal: "it's my fault",

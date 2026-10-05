@@ -10,6 +10,11 @@ export default lessonModule({
       en: "other; {{word:bie2}}-{{word:de}}: other",
       ru: "другой; {{word:bie2}}-{{word:de}} — другой",
     },
+    {
+      word: "tong2",
+      en: "same; {{word:bu4}}-{{word:tong2}}: different",
+      ru: "одинаковый; {{word:bu4}}-{{word:tong2}} — разный",
+    },
   ],
   prose: {
     en: [
@@ -18,6 +23,7 @@ export default lessonModule({
       "**Things + {{word:bu4}} {{word:yi1}}-{{word:yang4}} / {{word:bu4}}-{{word:yi1}}-{{word:yang4}}-{{word:de}} + noun**",
       "",
       "For another one, or something else, use {{word:bie2}}-{{word:de}} (other): {{Word:wo3}} {{word:yao4}} {{word:bie2}}-{{word:de}}, I want something else.",
+      "{{word:bu4}}-{{word:tong2}} (not the same) says different in one word.",
     ],
     ru: [
       "**Чтобы сказать, что вещи разные**, скажите, что они не одинаковые: {{word:bu4}} {{word:yi1}}-{{word:yang4}}.",
@@ -25,6 +31,7 @@ export default lessonModule({
       "**Вещи + {{word:bu4}} {{word:yi1}}-{{word:yang4}} / {{word:bu4}}-{{word:yi1}}-{{word:yang4}}-{{word:de}} + существительное**",
       "",
       "Чтобы сказать «другой» или «что-то ещё», используйте {{word:bie2}}-{{word:de}} (другой): {{Word:wo3}} {{word:yao4}} {{word:bie2}}-{{word:de}} — мне нужно что-то другое.",
+      "{{word:bu4}}-{{word:tong2}} («не одинаковый») — «разный» одним словом.",
     ],
     tldr: {
       en: "{{word:bu4}} {{word:yi1}}-{{word:yang4}} means different. {{word:bie2}}-{{word:de}} means other: {{word:bie2}}-{{word:de}} {{word:ren2}}, other people.",
@@ -84,6 +91,18 @@ export default lessonModule({
       en: "The other people are bigger than me.",
       ru: "Другие люди больше меня.",
     },
+    {
+      pinyin: "{{Word:ta1}}-{{word:men}} {{word:hen3}} {{word:bu4}}-{{word:tong2}}.",
+      hanzi: "他们很不同。",
+      en: "They're very different.",
+      ru: "Они очень разные.",
+    },
+    {
+      pinyin: "{{Word:wo3}}-{{word:men}}-{{word:de}} {{word:jia1}} {{word:bu4}}-{{word:tong2}}.",
+      hanzi: "我们的家不同。",
+      en: "Our homes are different.",
+      ru: "Наши дома разные.",
+    },
   ],
   exercises: [
     {
@@ -97,6 +116,12 @@ export default lessonModule({
       ru: "Мне нужно что-то другое.",
       answer: "{{Word:wo3}} {{word:yao4}} {{word:bie2}}-{{word:de}}.",
       hanzi: "我要别的。",
+    },
+    {
+      en: "These are very different.",
+      ru: "Эти очень разные.",
+      answer: "{{Word:zhe4}}-{{word:xie1}} {{word:hen3}} {{word:bu4}}-{{word:tong2}}.",
+      hanzi: "这些很不同。",
     },
   ],
   faq: [

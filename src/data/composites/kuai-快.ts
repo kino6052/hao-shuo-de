@@ -7,6 +7,7 @@ export default composite({
   py: "kuài",
   en: "fast",
   ru: "быстрый",
+  pos: "adjective",
   hsd: ["{{word:kuai4}}"],
   tts: ["快"],
   fit: "word",

@@ -7,6 +7,7 @@ export default composite({
   py: "yǐwéi",
   en: "think (wrongly)",
   ru: "думать (ошибочно)",
+  pos: "verb",
   hsd: ["{{word:jue2}}-{{light:de2}}"],
   tts: ["觉得"],
   literal: "feel, think",

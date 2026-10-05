@@ -7,8 +7,10 @@ export default composite({
   py: "shìshí",
   en: "fact",
   ru: "факт",
-  hsd: ["{{word:zhen1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["真的东西"],
+  pos: "noun",
+  hsd: ["{{word:shi4}}-{{word:shi2}}", "{{word:zhen1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
+  tts: ["事实", "真的东西"],
   literal: "a true thing",
-  fit: "plain",
+  fit: "natural",
+  proposed: true,
 });

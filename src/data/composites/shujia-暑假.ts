@@ -7,6 +7,7 @@ export default composite({
   py: "shǔjià",
   en: "summer vacation",
   ru: "летние каникулы",
+  pos: "noun",
   hsd: ["{{word:re4}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:bu4}} {{word:xue2}}"],
   tts: ["热的时间不学"],
   literal: "no school in summer",

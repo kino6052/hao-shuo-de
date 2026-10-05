@@ -7,6 +7,7 @@ export default composite({
   py: "xuéqī",
   en: "semester",
   ru: "семестр",
+  pos: "noun",
   hsd: ["{{word:xue2}}-{{word:de}} {{word:shi2}}-{{word:jian1}}"],
   tts: ["学的时间"],
   literal: "study time",

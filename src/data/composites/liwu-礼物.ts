@@ -7,6 +7,7 @@ export default composite({
   py: "lǐwù",
   en: "gift",
   ru: "подарок",
+  pos: "noun",
   hsd: ["{{word:gei3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["给的东西"],
   literal: "a given thing",

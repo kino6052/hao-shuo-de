@@ -7,6 +7,7 @@ export default composite({
   py: "shǐ",
   en: "make, cause",
   ru: "заставлять, вызывать",
+  pos: "verb",
   hsd: ["{{word:jiao4}} X + verb"],
   tts: ["叫X+…"],
   literal: "have X do it",

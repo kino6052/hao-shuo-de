@@ -7,6 +7,7 @@ export default composite({
   py: "kǎolǜ",
   en: "consider",
   ru: "обдумывать",
+  pos: "verb",
   hsd: ["{{word:kan4}}-kan"],
   tts: ["看看"],
   literal: "have a look",

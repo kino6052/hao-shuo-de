@@ -7,6 +7,7 @@ export default composite({
   py: "dìdi",
   en: "younger brother",
   ru: "младший брат",
+  pos: "noun",
   hsd: [
     "{{word:jia1}}-{{word:li3}} {{word:bi3}} {{word:wo3}} {{word:xiao3}}-{{word:de}} {{word:nan2}}-{{word:ren2}}",
   ],

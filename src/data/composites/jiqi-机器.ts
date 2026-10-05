@@ -7,6 +7,7 @@ export default composite({
   py: "jīqì",
   en: "machine",
   ru: "машина, механизм",
+  pos: "noun",
   hsd: ["{{word:ji1}}-{{word:qi4}}", "{{word:gong1}}-{{word:ju4}}"],
   tts: ["机器", "工具"],
   fit: "natural",

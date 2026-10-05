@@ -7,6 +7,7 @@ export default composite({
   py: "ròu",
   en: "meat",
   ru: "мясо",
+  pos: "noun",
   hsd: ["{{word:dong4}}-{{word:wu4}}-{{word:de}} {{word:shen1ti3}}"],
   tts: ["动物的身体"],
   literal: "animal body",

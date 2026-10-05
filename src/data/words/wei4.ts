@@ -35,5 +35,15 @@ export default word("wei4", {
         rus: "Записанное как 未, {{word:wei4}} значит «ещё не» в {{word:wei4}}-{{word:lai2}}; само по себе — «для».",
       },
     },
+    guard: {
+      hanzi: "卫",
+      eng: "guard, keep clean",
+      rus: "охранять, беречь",
+      why: {
+        eng: "Written 卫, {{word:wei4}} means guarding health in {{word:wei4}}-{{word:sheng1}} (clean, hygiene) and {{word:wei4}}-{{word:sheng1}}-{{word:jian1}} (bathroom); on its own it is for.",
+        rus: "Записанное как 卫, {{word:wei4}} значит «беречь здоровье» в {{word:wei4}}-{{word:sheng1}} (чистота, гигиена) и {{word:wei4}}-{{word:sheng1}}-{{word:jian1}} (туалет); само по себе — «для».",
+      },
+      compounds: ["wei4 sheng1", "wei4 sheng1 jian1"],
+    },
   },
 });

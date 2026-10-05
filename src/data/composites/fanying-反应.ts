@@ -7,6 +7,7 @@ export default composite({
   py: "fǎnyìng",
   en: "reaction",
   ru: "реакция",
+  pos: "verb",
   hsd: ["{{word:kan4}}-{{word:dao4}} X {{word:hou4}} {{word:zuo4}}-{{word:de}}"],
   tts: ["看到X后做的"],
   literal: "what you do after seeing X",

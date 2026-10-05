@@ -7,7 +7,10 @@ export default composite({
   py: "xìnrèn",
   en: "trust",
   ru: "доверять",
-  hsd: ["{{word:jue2}}-{{light:de2}} X {{word:shuo1}}-{{word:de}} {{word:shi4}} {{word:zhen1}}-{{word:de}}"],
+  pos: "verb",
+  hsd: [
+    "{{word:jue2}}-{{light:de2}} X {{word:shuo1}}-{{word:de}} {{word:shi4}} {{word:zhen1}}-{{word:de}}",
+  ],
   tts: ["觉得X说的是真的"],
   literal: "believe what X says is true",
   fit: "plain",

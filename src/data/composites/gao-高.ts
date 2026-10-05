@@ -7,6 +7,7 @@ export default composite({
   py: "gāo",
   en: "tall, high",
   ru: "высокий",
+  pos: "adjective",
   hsd: ["{{word:gao1}}"],
   tts: ["高"],
   fit: "word",

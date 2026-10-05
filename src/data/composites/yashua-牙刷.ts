@@ -7,6 +7,7 @@ export default composite({
   py: "yáshuā",
   en: "toothbrush",
   ru: "зубная щётка",
+  pos: "noun",
   hsd: [
     "{{word:zuo4}}-{{word:hao3}} {{word:kou3}}-{{word:li3}}-{{word:de}} {{word:ying4}} {{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:gong1}}-{{word:ju4}}",
   ],

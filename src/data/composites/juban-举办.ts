@@ -7,6 +7,7 @@ export default composite({
   py: "jǔbàn",
   en: "hold, host (an event)",
   ru: "проводить (мероприятие)",
+  pos: "verb",
   hsd: ["{{word:zuo4}}"],
   tts: ["做"],
   fit: "word",

@@ -7,6 +7,7 @@ export default composite({
   py: "kèrén",
   en: "guest",
   ru: "гость",
+  pos: "noun",
   hsd: ["{{word:lai2}} {{word:jia1}}-{{word:li3}}-{{word:de}} {{word:ren2}}"],
   tts: ["来家里的人"],
   literal: "someone who comes to your home",

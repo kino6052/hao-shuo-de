@@ -7,6 +7,7 @@ export default composite({
   py: "qiáo",
   en: "bridge",
   ru: "мост",
+  pos: "noun",
   hsd: [
     "{{word:cong2}} {{word:shui3}}-{{word:shang4}} {{word:tong1}}-{{word:guo4}}-{{word:qu4}}-{{word:de}} {{word:lu4}}",
   ],

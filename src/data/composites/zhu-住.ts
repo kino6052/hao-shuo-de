@@ -7,6 +7,7 @@ export default composite({
   py: "zhù",
   en: "live (somewhere)",
   ru: "жить (где-то)",
+  pos: "verb",
   hsd: ["X-{{word:de}} {{word:jia1}} {{word:zai4}} …"],
   tts: ["…的家在…"],
   literal: "X's home is at",

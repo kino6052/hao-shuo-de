@@ -7,6 +7,7 @@ export default composite({
   py: "xiàngmù",
   en: "project",
   ru: "проект",
+  pos: "noun",
   hsd: ["{{word:yao4}} {{word:zuo4}}-{{word:de}} {{word:da4}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["要做的大东西"],
   literal: "a big thing to do",

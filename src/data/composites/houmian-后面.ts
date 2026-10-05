@@ -7,6 +7,7 @@ export default composite({
   py: "hòumiàn",
   en: "behind",
   ru: "сзади",
+  pos: "noun",
   hsd: ["{{word:hou4}}-{{word:mian4}}"],
   tts: ["后面"],
   fit: "natural",

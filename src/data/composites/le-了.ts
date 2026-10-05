@@ -7,6 +7,7 @@ export default composite({
   py: "le",
   en: "perfective aspect marker",
   ru: "показатель совершённого вида",
+  pos: "auxiliary",
   hsd: ["{{word:le}}"],
   tts: ["了"],
   fit: "word",

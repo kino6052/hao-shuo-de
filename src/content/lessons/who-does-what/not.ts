@@ -3,16 +3,25 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "not",
+  words: [
+    {
+      word: "hua4",
+      en: "words, speech; {{word:shuo1}} {{word:hua4}}: talk",
+      ru: "слова, речь; {{word:shuo1}} {{word:hua4}} — разговаривать",
+    },
+  ],
   prose: {
     en: [
       "**To say \"not\"**, put {{word:bu4}} right before the verb.",
       "",
       "**Who + {{word:bu4}} + verb**",
+      "{{word:shuo1}} {{word:hua4}} (say words) is to talk.",
     ],
     ru: [
       "**Чтобы сказать «не»**, поставьте {{word:bu4}} прямо перед глаголом.",
       "",
       "**Кто + {{word:bu4}} + глагол**",
+      "{{word:shuo1}} {{word:hua4}} («говорить слова») — разговаривать.",
     ],
     tldr: {
       en: "Put {{word:bu4}} before a verb to say \"not\".",
@@ -58,6 +67,18 @@ export default lessonModule({
       en: "He doesn't drink water.",
       ru: "Он не пьёт воду.",
     },
+    {
+      pinyin: "{{Word:ta1}} {{word:bu4}} {{word:shuo1}} {{word:hua4}}.",
+      hanzi: "他不说话。",
+      en: "He doesn't talk.",
+      ru: "Он не разговаривает.",
+    },
+    {
+      pinyin: "{{Word:wo3}}-{{word:men}} {{word:shuo1}} {{word:hua4}}.",
+      hanzi: "我们说话。",
+      en: "We're talking.",
+      ru: "Мы разговариваем.",
+    },
   ],
   exercises: [
     {
@@ -65,6 +86,12 @@ export default lessonModule({
       ru: "Я не пишу.",
       answer: "{{Word:wo3}} {{word:bu4}} {{word:xie3}}.",
       hanzi: "我不写。",
+    },
+    {
+      en: "I don't talk.",
+      ru: "Я не разговариваю.",
+      answer: "{{Word:wo3}} {{word:bu4}} {{word:shuo1}} {{word:hua4}}.",
+      hanzi: "我不说话。",
     },
   ],
 });

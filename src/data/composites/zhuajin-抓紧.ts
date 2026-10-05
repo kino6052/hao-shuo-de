@@ -7,6 +7,7 @@ export default composite({
   py: "zhuājǐn",
   en: "hurry; hold tight",
   ru: "спешить; держать крепко",
+  pos: "verb",
   hsd: ["{{word:kuai4}} {{word:zuo4}}"],
   tts: ["快做"],
   literal: "do it fast",

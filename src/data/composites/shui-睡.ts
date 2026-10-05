@@ -7,6 +7,7 @@ export default composite({
   py: "shuì",
   en: "sleep",
   ru: "спать",
+  pos: "verb",
   hsd: ["{{word:shui4jiao4}}"],
   tts: ["睡觉"],
   fit: "word",

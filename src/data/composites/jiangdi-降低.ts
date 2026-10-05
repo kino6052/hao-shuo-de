@@ -7,6 +7,7 @@ export default composite({
   py: "jiàngdī",
   en: "lower, reduce",
   ru: "понижать",
+  pos: "verb",
   hsd: ["{{word:bian4}} {{word:shao3}}"],
   tts: ["变少"],
   literal: "become less",

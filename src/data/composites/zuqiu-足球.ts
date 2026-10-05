@@ -7,6 +7,7 @@ export default composite({
   py: "zúqiú",
   en: "soccer",
   ru: "футбол",
+  pos: "noun",
   hsd: [
     "{{word:yong4}}-{{word:jiao3}}-{{word:wan2r}}-{{word:de}} {{word:yuan2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],

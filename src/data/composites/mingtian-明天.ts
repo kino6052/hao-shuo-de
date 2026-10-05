@@ -7,6 +7,7 @@ export default composite({
   py: "míngtiān",
   en: "tomorrow",
   ru: "завтра",
+  pos: "noun",
   hsd: ["{{word:ming2}}-{{word:tian1}}", "{{word:xia4}} {{word:yi1}}-ge {{word:ri4}}"],
   tts: ["明天", "下一个日"],
   literal: "bright-day / the next day",

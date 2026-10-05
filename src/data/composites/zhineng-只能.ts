@@ -7,8 +7,13 @@ export default composite({
   py: "zhǐ néng",
   en: "can only",
   ru: "можно только",
-  hsd: ["X, {{word:mei2}}-{{word:you3}} {{word:bie2}}-{{word:de}} {{word:fang1}}-{{word:fa3}}"],
-  tts: ["X，没有别的方法"],
+  pos: "verb",
+  hsd: [
+    "{{word:zhi3}}-{{word:neng2}}",
+    "X, {{word:mei2}}-{{word:you3}} {{word:bie2}}-{{word:de}} {{word:fang1}}-{{word:fa3}}",
+  ],
+  tts: ["只能", "X，没有别的方法"],
   literal: "X, there's no other way",
-  fit: "plain",
+  fit: "natural",
+  proposed: true,
 });

@@ -7,6 +7,7 @@ export default composite({
   py: "yánzhòng",
   en: "serious",
   ru: "серьёзный",
+  pos: "adjective",
   hsd: ["{{word:hen3}} {{word:huai4}}"],
   tts: ["很坏"],
   literal: "very bad",

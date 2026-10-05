@@ -7,6 +7,7 @@ export default composite({
   py: "wénjiàn",
   en: "document, file",
   ru: "документ, файл",
+  pos: "noun",
   hsd: ["{{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["写的东西"],
   literal: "a written thing",

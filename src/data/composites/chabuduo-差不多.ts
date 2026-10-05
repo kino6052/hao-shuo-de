@@ -7,6 +7,7 @@ export default composite({
   py: "chàbuduō",
   en: "almost; about the same",
   ru: "почти; примерно",
+  pos: "adjective",
   hsd: ["{{word:da4}} {{word:bu4}}-{{light:fen1}} {{word:yi1}}-{{word:yang4}}"],
   tts: ["大部分一样"],
   literal: "mostly the same",

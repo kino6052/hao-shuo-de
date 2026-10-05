@@ -7,6 +7,7 @@ export default composite({
   py: "wèi",
   en: "for",
   ru: "для",
+  pos: "preposition",
   hsd: ["{{word:wei4}}", "{{word:gei3}}", "{{word:dui4}}"],
   tts: ["为", "给", "对"],
   fit: "word",

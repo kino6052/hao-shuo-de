@@ -7,6 +7,7 @@ export default composite({
   py: "liú",
   en: "stay, keep",
   ru: "оставаться, оставлять",
+  pos: "verb",
   hsd: ["{{word:liu2}}"],
   tts: ["留"],
   fit: "word",

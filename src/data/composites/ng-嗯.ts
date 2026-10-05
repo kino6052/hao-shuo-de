@@ -7,6 +7,7 @@ export default composite({
   py: "ǹg",
   en: "uh-huh",
   ru: "угу",
+  pos: "interjection",
   hsd: ["{{word:dui4}}"],
   tts: ["对"],
   literal: "right",

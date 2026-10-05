@@ -7,6 +7,7 @@ export default composite({
   py: "yǐnshí",
   en: "diet, food and drink",
   ru: "питание",
+  pos: "noun",
   hsd: ["{{word:chi1}}-{{word:de}} {{word:he2}} {{word:he1}}-{{word:de}}"],
   tts: ["吃的和喝的"],
   literal: "what you eat and drink",

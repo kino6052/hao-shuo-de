@@ -7,6 +7,7 @@ export default composite({
   py: "fēn",
   en: "minute; part; divide",
   ru: "минута; часть; делить",
+  pos: "classifier",
   hsd: ["{{word:fen1}}", "{{word:bu4}}-{{light:fen1}}"],
   tts: ["分", "部分"],
   literal: "part",

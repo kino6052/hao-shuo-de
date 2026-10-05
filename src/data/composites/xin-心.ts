@@ -7,6 +7,7 @@ export default composite({
   py: "xīn",
   en: "heart",
   ru: "сердце",
+  pos: "noun",
   hsd: ["{{word:xin1}}"],
   tts: ["心"],
   fit: "word",

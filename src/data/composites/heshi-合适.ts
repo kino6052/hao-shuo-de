@@ -7,6 +7,7 @@ export default composite({
   py: "héshì",
   en: "suitable",
   ru: "подходящий",
+  pos: "adjective",
   hsd: ["{{word:bu4}} {{word:da4}} {{word:bu4}} {{word:xiao3}}"],
   tts: ["不大不小"],
   literal: "not too big, not too small",

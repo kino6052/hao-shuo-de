@@ -7,6 +7,7 @@ export default composite({
   py: "gēn",
   en: "with, and",
   ru: "с, и",
+  pos: "preposition",
   hsd: ["{{word:he2}}"],
   tts: ["和"],
   fit: "word",

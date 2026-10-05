@@ -7,6 +7,7 @@ export default composite({
   py: "děng",
   en: "wait",
   ru: "ждать",
+  pos: "verb",
   hsd: ["{{word:deng3}}"],
   tts: ["等"],
   fit: "word",

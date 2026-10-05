@@ -7,6 +7,7 @@ export default composite({
   py: "gōngzuò",
   en: "work",
   ru: "работа",
+  pos: "verb",
   hsd: ["{{word:gong1}}-{{word:zuo4}}", "{{word:zuo4}}", "{{word:zuo4}}-{{word:de}}"],
   tts: ["工作", "做", "做的"],
   literal: "do / what you do",

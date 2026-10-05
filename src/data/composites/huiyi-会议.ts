@@ -7,6 +7,7 @@ export default composite({
   py: "huìyì",
   en: "meeting",
   ru: "собрание, совещание",
+  pos: "noun",
   hsd: ["{{word:kai1}}-{{word:hui4}}"],
   tts: ["开会"],
   literal: "hold a meeting",

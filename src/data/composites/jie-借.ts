@@ -7,6 +7,7 @@ export default composite({
   py: "jiè",
   en: "borrow",
   ru: "брать взаймы",
+  pos: "verb",
   hsd: [
     "{{word:na2}} {{word:bie2}}-{{word:de}} {{word:ren2}}-{{word:de}}, {{word:hou4}}-{{word:lai2}} {{word:gei3}} {{word:ta1}}",
   ],

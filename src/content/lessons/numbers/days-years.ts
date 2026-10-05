@@ -15,6 +15,17 @@ export default lessonModule({
       en: "year",
       ru: "год",
     },
+    {
+      word: "zuo2",
+      en: "{{word:zuo2}}-{{word:tian1}}: yesterday",
+      ru: "{{word:zuo2}}-{{word:tian1}} — вчера",
+    },
+    {
+      word: "xin1",
+      sense: "new",
+      en: "new (in {{word:xin1}}-{{word:nian2}}: New Year)",
+      ru: "новый (в {{word:xin1}}-{{word:nian2}} — Новый год)",
+    },
   ],
   prose: {
     en: [
@@ -24,6 +35,7 @@ export default lessonModule({
       "",
       "{{word:ming2}}-{{word:tian1}} (the bright day) is tomorrow, {{word:hou4}}-{{word:tian1}} the day after, and {{word:qian2}}-{{word:tian1}} the day before yesterday. {{word:qu4}}-{{word:nian2}} (the gone year) is last year, and {{word:ming2}}-{{word:nian2}} is next year.",
       "{{word:tian1}} is also the sky: {{word:tian1}}-{{word:qi4}} (sky air) is the weather.",
+      "{{word:zuo2}}-{{word:tian1}} is yesterday, and {{word:xin1}}-{{word:nian2}} (新年: here 新 means new) is the New Year.",
     ],
     ru: [
       "**Чтобы считать дни и годы**, ставьте число прямо перед {{word:tian1}} (день) или {{word:nian2}} (год), без -ge.",
@@ -32,6 +44,7 @@ export default lessonModule({
       "",
       "{{word:ming2}}-{{word:tian1}} («светлый день») — завтра, {{word:hou4}}-{{word:tian1}} — послезавтра, {{word:qian2}}-{{word:tian1}} — позавчера. {{word:qu4}}-{{word:nian2}} («ушедший год») — прошлый год, {{word:ming2}}-{{word:nian2}} — следующий.",
       "{{word:tian1}} — это ещё и небо: {{word:tian1}}-{{word:qi4}} («небесный воздух») — погода.",
+      "{{word:zuo2}}-{{word:tian1}} — вчера, а {{word:xin1}}-{{word:nian2}} (新年: здесь 新 значит «новый») — Новый год.",
     ],
     tldr: {
       en: "number + {{word:tian1}} / {{word:nian2}}: {{word:san1}} {{word:tian1}}, three days. {{word:ming2}}-{{word:tian1}} is tomorrow.",
@@ -89,6 +102,12 @@ export default lessonModule({
       en: "The weather is nice.",
       ru: "Погода хорошая.",
     },
+    {
+      pinyin: "{{Word:zuo2}}-{{word:tian1}} {{word:wo3}} {{word:qu4}} {{word:le}}.",
+      hanzi: "昨天我去了。",
+      en: "I went yesterday.",
+      ru: "Вчера я ходил.",
+    },
   ],
   exercises: [
     {
@@ -108,6 +127,18 @@ export default lessonModule({
       ru: "в следующем году",
       answer: "{{Word:ming2}}-{{word:nian2}}",
       hanzi: "明年",
+    },
+    {
+      en: "Yesterday was hot.",
+      ru: "Вчера было жарко.",
+      answer: "{{Word:zuo2}}-{{word:tian1}} {{word:hen3}} {{word:re4}}.",
+      hanzi: "昨天很热。",
+    },
+    {
+      en: "Happy New Year!",
+      ru: "С Новым годом!",
+      answer: "{{Word:xin1}}-{{word:nian2}} {{word:hao3}}!",
+      hanzi: "新年好！",
     },
   ],
   faq: [

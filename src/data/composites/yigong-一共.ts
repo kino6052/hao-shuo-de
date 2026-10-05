@@ -7,6 +7,7 @@ export default composite({
   py: "yígòng",
   en: "altogether, in total",
   ru: "всего, итого",
+  pos: "adverb",
   hsd: ["{{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}, {{word:shi4}} …"],
   tts: ["放在一起，是…"],
   literal: "put together, it is …",

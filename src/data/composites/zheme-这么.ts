@@ -7,6 +7,7 @@ export default composite({
   py: "zhème",
   en: "so, like this",
   ru: "так",
+  pos: "pronoun",
   hsd: ["{{word:zhen1}}"],
   tts: ["真"],
   fit: "plain",

@@ -7,6 +7,7 @@ export default composite({
   py: "jùjué",
   en: "refuse",
   ru: "отказываться",
+  pos: "verb",
   hsd: ["{{word:shuo1}} {{word:bu4}} {{word:yao4}}"],
   tts: ["说不要"],
   literal: "say \"don't want\"",

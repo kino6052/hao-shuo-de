@@ -7,6 +7,7 @@ export default composite({
   py: "xiàngjī",
   en: "camera",
   ru: "фотоаппарат",
+  pos: "noun",
   hsd: [
     "{{word:zuo4}}-{{word:kan4}}-{{word:de}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:gong1}}-{{word:ju4}}",
   ],

@@ -7,6 +7,7 @@ export default composite({
   py: "dāngrán",
   en: "of course",
   ru: "конечно",
+  pos: "adverb",
   hsd: ["{{word:bu4}} {{word:yong4}} {{word:wen4}}"],
   tts: ["不用问"],
   literal: "no need to ask",

@@ -7,6 +7,7 @@ export default composite({
   py: "zhuī",
   en: "chase",
   ru: "догонять",
+  pos: "verb",
   hsd: ["{{word:zai4}} X {{word:hou4}}-{{word:mian4}} {{word:kuai4}} {{word:qu4}}"],
   tts: ["在X后面快去"],
   literal: "go fast behind X",

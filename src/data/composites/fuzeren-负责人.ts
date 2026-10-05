@@ -7,6 +7,7 @@ export default composite({
   py: "fùzérén",
   en: "person in charge",
   ru: "ответственный",
+  pos: "noun",
   hsd: ["{{word:yao4}} {{word:ba3}} X {{word:zuo4}} {{word:hao3}}-{{word:de}} {{word:ren2}}"],
   tts: ["要把X做好的人"],
   literal: "the person who has to make X good",

@@ -7,6 +7,7 @@ export default composite({
   py: "dǐ",
   en: "bottom",
   ru: "дно, низ",
+  pos: "noun",
   hsd: ["{{word:zui4}} {{word:xia4}}-{{word:mian4}}"],
   tts: ["最下面"],
   literal: "the lowest side",

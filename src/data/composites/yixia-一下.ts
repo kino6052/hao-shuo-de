@@ -7,9 +7,10 @@ export default composite({
   py: "yíxià",
   en: "a moment",
   ru: "мгновение",
+  pos: "number",
   hsd: ["{{word:yi1}}-{{word:xia4}}"],
   tts: ["一下"],
-  fit: "natural",
   literal: "one-down",
+  fit: "natural",
   proposed: true,
 });

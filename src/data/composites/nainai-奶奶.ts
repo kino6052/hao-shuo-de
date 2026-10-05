@@ -7,6 +7,7 @@ export default composite({
   py: "nǎinai",
   en: "grandmother",
   ru: "бабушка",
+  pos: "noun",
   hsd: [
     "{{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:ba4ba}}-{{word:ma1ma}}-{{word:li3}}-{{word:de}} {{word:nv3}}-{{word:ren2}}",
   ],

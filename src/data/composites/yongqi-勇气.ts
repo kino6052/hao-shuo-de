@@ -7,6 +7,7 @@ export default composite({
   py: "yǒngqì",
   en: "courage",
   ru: "смелость",
+  pos: "noun",
   hsd: ["{{word:bu4}} {{word:pa4}}-{{word:de}} {{word:xin1}}"],
   tts: ["不怕的心"],
   literal: "a heart that isn't afraid",

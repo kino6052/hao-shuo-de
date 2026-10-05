@@ -7,6 +7,7 @@ export default composite({
   py: "kùnnan",
   en: "difficult; difficulty",
   ru: "трудный; трудность",
+  pos: "adjective",
   hsd: ["{{word:nan2}}"],
   tts: ["难"],
   fit: "word",

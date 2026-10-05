@@ -7,6 +7,7 @@ export default composite({
   py: "diànhuà",
   en: "telephone",
   ru: "телефон",
+  pos: "noun",
   hsd: [
     "{{word:gei3}}-{{word:yuan3}}-{{word:de}}-{{word:ren2}}-{{word:shuo1}}-{{word:de}} {{word:gong1}}-{{word:ju4}}",
   ],

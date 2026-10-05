@@ -88,6 +88,27 @@
 }
 .howBuilt:hover { text-decoration: underline; }
 
+.closeness {
+  margin-left: 8px;
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  vertical-align: 1px;
+}
+
+.filterLabel {
+  align-self: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.summary {
+  margin: 0 0 1rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
 .fit {
   display: inline-block;
   margin-left: 8px;

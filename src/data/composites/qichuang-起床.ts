@@ -7,6 +7,7 @@ export default composite({
   py: "qǐchuáng",
   en: "get up",
   ru: "вставать",
+  pos: "verb",
   hsd: ["{{word:qi3}}-{{word:lai2}}"],
   tts: ["起来"],
   literal: "rise",

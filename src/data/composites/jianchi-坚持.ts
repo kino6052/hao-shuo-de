@@ -7,6 +7,7 @@ export default composite({
   py: "jiānchí",
   en: "persist",
   ru: "упорствовать, держаться",
+  pos: "verb",
   hsd: ["{{word:zuo4}} {{word:dao4}} {{word:zui4}} {{word:hou4}}"],
   tts: ["做到最后"],
   literal: "do it to the end",

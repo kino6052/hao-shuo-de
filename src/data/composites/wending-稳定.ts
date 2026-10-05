@@ -7,6 +7,7 @@ export default composite({
   py: "wěndìng",
   en: "stable",
   ru: "стабильный",
+  pos: "adjective",
   hsd: ["{{word:bu4}} {{word:dong4}}, {{word:bu4}} {{word:bian4}}"],
   tts: ["不动，不变"],
   literal: "doesn't move or change",

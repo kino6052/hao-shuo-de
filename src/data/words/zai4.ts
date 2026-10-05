@@ -15,4 +15,16 @@ export default word("zai4", {
     rus: "Находиться где-то, а также «как раз делать». С него начинается любое «где».",
   },
   maps: "lon",
+  senses: {
+    again: {
+      hanzi: "再",
+      eng: "again, once more",
+      rus: "снова, ещё раз",
+      why: {
+        eng: "Written 再, {{word:zai4}} means once more in {{word:zai4}}-{{word:jian4}} (goodbye: see you again); on its own it is be at.",
+        rus: "Записанное как 再, {{word:zai4}} значит «ещё раз» в {{word:zai4}}-{{word:jian4}} (до свидания: увидимся снова); само по себе — «находиться».",
+      },
+      compounds: ["zai4 jian4"],
+    },
+  },
 });

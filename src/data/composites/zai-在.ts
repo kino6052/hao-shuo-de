@@ -7,6 +7,7 @@ export default composite({
   py: "zài",
   en: "exist at",
   ru: "находиться в",
+  pos: "verb",
   hsd: ["{{word:zai4}}"],
   tts: ["在"],
   fit: "word",

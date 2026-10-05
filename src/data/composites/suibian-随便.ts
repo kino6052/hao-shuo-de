@@ -7,6 +7,7 @@ export default composite({
   py: "suíbiàn",
   en: "as you like",
   ru: "как хочешь",
+  pos: "verb",
   hsd: ["{{word:ni3}} {{word:yao4}} {{word:shen2me}} {{word:dou1}} {{word:hao3}}"],
   tts: ["你要什么都好"],
   literal: "whatever you want is fine",

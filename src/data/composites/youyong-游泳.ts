@@ -7,6 +7,7 @@ export default composite({
   py: "yóuyǒng",
   en: "swim",
   ru: "плавать",
+  pos: "verb",
   hsd: ["{{word:zai4}} {{word:shui3}}-{{word:li3}} {{word:dong4}}"],
   tts: ["在水里动"],
   literal: "move in the water",

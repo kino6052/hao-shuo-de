@@ -7,6 +7,7 @@ export default composite({
   py: "bāokuò",
   en: "include",
   ru: "включать",
+  pos: "verb",
   hsd: ["X {{word:li3}}-{{word:mian4}} {{word:you3}} Y"],
   tts: ["X里面有Y"],
   literal: "X has Y inside",

@@ -7,8 +7,10 @@ export default composite({
   py: "jīchǎng",
   en: "airport",
   ru: "аэропорт",
-  hsd: ["{{word:fei1}}-{{word:de}}-{{word:gong1}}-{{word:ju4}} {{word:zai4}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
-  tts: ["飞的工具在的地方"],
-  literal: "where the flying vehicles are",
+  pos: "noun",
+  hsd: ["{{word:fei1}}-{{word:ji1}} {{word:zhan4}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
+  tts: ["飞机站的地方"],
+  literal: "the place where planes stand",
   fit: "plain",
+  proposed: true,
 });

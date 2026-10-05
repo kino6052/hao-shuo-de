@@ -7,6 +7,7 @@ export default composite({
   py: "suàn",
   en: "calculate",
   ru: "считать, вычислять",
+  pos: "verb",
   hsd: ["{{word:suan4}}"],
   tts: ["算"],
   fit: "word",

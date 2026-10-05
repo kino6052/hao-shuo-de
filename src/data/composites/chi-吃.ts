@@ -7,6 +7,7 @@ export default composite({
   py: "chī",
   en: "eat",
   ru: "есть",
+  pos: "verb",
   hsd: ["{{word:chi1}}"],
   tts: ["吃"],
   fit: "word",

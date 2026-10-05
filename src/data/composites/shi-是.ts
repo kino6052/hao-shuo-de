@@ -7,6 +7,7 @@ export default composite({
   py: "shì",
   en: "be",
   ru: "быть",
+  pos: "verb",
   hsd: ["{{word:shi4}}"],
   tts: ["是"],
   fit: "word",

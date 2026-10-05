@@ -7,6 +7,7 @@ export default composite({
   py: "dàolù",
   en: "road",
   ru: "дорога",
+  pos: "noun",
   hsd: ["{{word:lu4}}"],
   tts: ["路"],
   fit: "word",

@@ -7,6 +7,7 @@ export default composite({
   py: "shēng",
   en: "give birth",
   ru: "родить",
+  pos: "verb",
   hsd: ["{{word:sheng1}}"],
   tts: ["生"],
   fit: "word",

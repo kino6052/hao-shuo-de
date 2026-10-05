@@ -7,6 +7,7 @@ export default composite({
   py: "qūyù",
   en: "region",
   ru: "область, район",
+  pos: "noun",
   hsd: ["{{word:di4}}-{{light:fang1}}"],
   tts: ["地方"],
   fit: "word",

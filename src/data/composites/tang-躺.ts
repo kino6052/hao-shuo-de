@@ -7,6 +7,7 @@ export default composite({
   py: "tǎng",
   en: "lie down",
   ru: "лежать",
+  pos: "verb",
   hsd: ["{{word:tang3}}"],
   tts: ["躺"],
   fit: "word",

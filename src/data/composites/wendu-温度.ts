@@ -7,6 +7,7 @@ export default composite({
   py: "wēndù",
   en: "temperature",
   ru: "температура",
+  pos: "noun",
   hsd: ["{{word:duo1}} {{word:re4}}"],
   tts: ["多热"],
   literal: "how hot",

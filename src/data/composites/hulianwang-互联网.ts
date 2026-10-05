@@ -7,6 +7,7 @@ export default composite({
   py: "hùliánwǎng",
   en: "Internet",
   ru: "интернет",
+  pos: "noun",
   hsd: ["{{word:wang3}}"],
   tts: ["网"],
   fit: "word",

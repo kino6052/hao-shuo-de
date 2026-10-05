@@ -7,6 +7,7 @@ export default composite({
   py: "kāifàng",
   en: "open (up)",
   ru: "открытый, открывать",
+  pos: "verb",
   hsd: ["{{word:kai1}}-{{word:fang4}}"],
   tts: ["开放"],
   literal: "open-put",

@@ -7,6 +7,7 @@ export default composite({
   py: "rènzhēn",
   en: "earnest, careful",
   ru: "серьёзный",
+  pos: "adjective",
   hsd: ["{{word:hao3}}-{{word:hao3}}"],
   tts: ["好好"],
   fit: "natural",

@@ -7,6 +7,7 @@ export default composite({
   py: "tiān",
   en: "day",
   ru: "день",
+  pos: "noun",
   hsd: ["{{word:tian1}}"],
   tts: ["天"],
   fit: "word",

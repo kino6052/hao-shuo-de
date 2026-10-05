@@ -7,6 +7,7 @@ export default composite({
   py: "biǎo",
   en: "watch; form",
   ru: "часы; таблица",
+  pos: "noun",
   hsd: ["{{word:kan4}} {{word:dian3}}-{{word:de}} {{word:gong1}}-{{word:ju4}}"],
   tts: ["看点的工具"],
   literal: "a tool for seeing the time",

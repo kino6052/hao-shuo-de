@@ -7,6 +7,7 @@ export default composite({
   py: "lìngwài",
   en: "other; besides",
   ru: "другой; кроме того",
+  pos: "pronoun",
   hsd: ["{{word:bie2}}-{{word:de}}"],
   tts: ["别的"],
   fit: "word",

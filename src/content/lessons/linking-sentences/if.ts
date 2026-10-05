@@ -73,8 +73,8 @@ export default lessonModule({
       ru: "Если ты не знаешь этого слова, спроси меня.",
     },
     {
-      pinyin: "{{Word:ru2guo3}} {{word:ni3}} {{word:yao4}}, {{word:he1}} {{word:shui3}} {{word:huo4}}-{{word:zhe3}} {{word:chi1}} {{word:dong1}}-{{light:xi1}}.",
-      hanzi: "如果你要，喝水或者吃东西。",
+      pinyin: "{{Word:ru2guo3}} {{word:ni3}} {{word:yao4}}, {{word:he1}} {{word:shui3}} {{word:huo4}}-{{word:zhe3}} {{word:chi1}} {{word:fan4}}.",
+      hanzi: "如果你要，喝水或者吃饭。",
       en: "If you want, drink some water or eat something.",
       ru: "Если хочешь, попей воды или поешь.",
     },

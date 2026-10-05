@@ -7,6 +7,7 @@ export default composite({
   py: "xuéshēng",
   en: "student",
   ru: "ученик",
+  pos: "noun",
   hsd: ["{{word:xue2}}-{{word:sheng1}}", "{{word:xue2}}-{{word:de}} {{word:ren2}}"],
   tts: ["学生", "学的人"],
   literal: "learn-born / one who learns",

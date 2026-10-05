@@ -7,6 +7,7 @@ export default composite({
   py: "píng’ān",
   en: "safe and sound",
   ru: "благополучный",
+  pos: "adjective",
   hsd: [
     "{{word:huai4}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:bu4}} {{word:hui4}} {{word:fa1}}-{{word:sheng1}}",
   ],

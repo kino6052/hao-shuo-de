@@ -7,10 +7,11 @@ export default composite({
   py: "méi guānxi",
   en: "never mind",
   ru: "ничего страшного",
+  pos: "phrase",
   hsd: ["{{word:mei2}}-{{word:guan1xi}}", "{{word:mei2}}-{{word:you3}} {{word:guan1xi}}"],
   tts: ["没关系", "没有关系"],
+  literal: "no connection",
   fit: "natural",
   note: "Lesson {{lesson:inside-a-sentence}}.",
-  literal: "no connection",
   proposed: true,
 });

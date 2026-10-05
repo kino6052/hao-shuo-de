@@ -7,6 +7,7 @@ export default composite({
   py: "zhǔyi",
   en: "idea",
   ru: "идея",
+  pos: "noun",
   hsd: ["{{word:fang1}}-{{word:fa3}}"],
   tts: ["方法"],
   literal: "way",

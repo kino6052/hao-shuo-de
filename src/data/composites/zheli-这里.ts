@@ -7,6 +7,7 @@ export default composite({
   py: "zhèlǐ",
   en: "here",
   ru: "здесь",
+  pos: "pronoun",
   hsd: ["{{word:zhe4}}-{{word:li3}}"],
   tts: ["这里"],
   fit: "natural",

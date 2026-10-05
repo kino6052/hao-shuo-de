@@ -7,6 +7,7 @@ export default composite({
   py: "cíyǔ",
   en: "word, phrase",
   ru: "слово, выражение",
+  pos: "noun",
   hsd: ["{{word:ci2}}"],
   tts: ["词"],
   fit: "word",

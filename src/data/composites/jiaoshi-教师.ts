@@ -7,6 +7,7 @@ export default composite({
   py: "jiàoshī",
   en: "teacher",
   ru: "учитель",
+  pos: "noun",
   hsd: ["{{word:jiao1}}-{{word:de}} {{word:ren2}}"],
   tts: ["教的人"],
   literal: "the one who teaches",

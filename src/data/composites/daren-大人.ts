@@ -7,6 +7,7 @@ export default composite({
   py: "dàren",
   en: "adult",
   ru: "взрослый",
+  pos: "noun",
   hsd: ["{{word:da4}} {{word:ren2}}"],
   tts: ["大人"],
   literal: "big person",

@@ -7,6 +7,7 @@ export default composite({
   py: "liǎn",
   en: "face",
   ru: "лицо",
+  pos: "noun",
   hsd: ["{{word:tou2}}-{{word:de}} {{word:qian2}}-{{word:mian4}}"],
   tts: ["头的前面"],
   literal: "the front of the head",

@@ -7,6 +7,7 @@ export default composite({
   py: "bìyào",
   en: "necessary",
   ru: "необходимый",
+  pos: "adjective",
   hsd: ["{{word:yao4}}-{{word:de}}"],
   tts: ["要的"],
   literal: "needed",

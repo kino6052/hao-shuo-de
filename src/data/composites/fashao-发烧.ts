@@ -7,6 +7,7 @@ export default composite({
   py: "fāshāo",
   en: "have a fever",
   ru: "температура",
+  pos: "verb",
   hsd: ["{{word:shen1ti3}} {{word:hen3}} {{word:re4}}"],
   tts: ["身体很热"],
   literal: "the body is very hot",

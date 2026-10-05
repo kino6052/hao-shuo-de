@@ -7,6 +7,7 @@ export default composite({
   py: "wèilái",
   en: "future",
   ru: "будущее",
+  pos: "adjective",
   hsd: [
     "{{word:wei4}}-{{word:lai2}}",
     "{{word:hou4}}-{{word:mian4}}-{{word:de}} {{word:shi2}}-{{word:jian1}}",

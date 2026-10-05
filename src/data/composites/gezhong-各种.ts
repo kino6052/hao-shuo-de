@@ -7,6 +7,7 @@ export default composite({
   py: "gèzhǒng",
   en: "all kinds of",
   ru: "всевозможные",
+  pos: "pronoun",
   hsd: ["{{word:hen3}} {{word:duo1}} {{word:zhong3}}"],
   tts: ["很多种"],
   literal: "many kinds",

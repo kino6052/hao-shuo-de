@@ -7,6 +7,7 @@ export default composite({
   py: "cāi",
   en: "guess",
   ru: "угадывать",
+  pos: "verb",
   hsd: ["{{word:jue2}}-{{light:de2}} {{word:shi4}} …"],
   tts: ["觉得是…"],
   literal: "think it's …",

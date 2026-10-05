@@ -7,6 +7,7 @@ export default composite({
   py: "tī",
   en: "kick",
   ru: "пинать",
+  pos: "verb",
   hsd: ["{{word:yong4}} {{word:jiao3}} {{word:da3}}"],
   tts: ["用脚打"],
   literal: "hit with the foot",

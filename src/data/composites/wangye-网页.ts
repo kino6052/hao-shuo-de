@@ -7,6 +7,7 @@ export default composite({
   py: "wǎngyè",
   en: "webpage",
   ru: "веб-страница",
+  pos: "noun",
   hsd: ["{{word:wang3}}-{{word:shang4}}-{{word:de}} {{word:yi1}}-{{word:mian4}}"],
   tts: ["网上的一面"],
   literal: "a page on the net",

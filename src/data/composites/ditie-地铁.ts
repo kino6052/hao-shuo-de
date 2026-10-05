@@ -7,6 +7,7 @@ export default composite({
   py: "dìtiě",
   en: "subway",
   ru: "метро",
+  pos: "noun",
   hsd: ["{{word:di4}}-{{word:xia4}}-{{word:de}} {{word:che1}}"],
   tts: ["地下的车"],
   literal: "the underground car",

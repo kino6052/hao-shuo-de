@@ -7,6 +7,7 @@ export default composite({
   py: "bú kèqi",
   en: "you're welcome",
   ru: "пожалуйста",
+  pos: "phrase",
   hsd: ["{{word:bu4}} {{word:yong4}} {{word:xie4}}"],
   tts: ["不用谢"],
   literal: "no need to thank",

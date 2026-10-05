@@ -7,6 +7,7 @@ export default composite({
   py: "hézuò",
   en: "cooperate",
   ru: "сотрудничать",
+  pos: "verb",
   hsd: ["{{word:yi1}}-{{word:qi3}} {{word:zuo4}}"],
   tts: ["一起做"],
   literal: "do it together",

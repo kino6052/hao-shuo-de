@@ -7,6 +7,7 @@ export default composite({
   py: "cáiliào",
   en: "material",
   ru: "материал",
+  pos: "noun",
   hsd: [
     "{{word:zuo4}} {{word:dong1}}-{{light:xi1}} {{word:yong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],

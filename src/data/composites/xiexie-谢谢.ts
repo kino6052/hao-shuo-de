@@ -7,6 +7,7 @@ export default composite({
   py: "xièxie",
   en: "thank you",
   ru: "спасибо",
+  pos: "verb",
   hsd: ["{{word:xie4}}-xie", "{{word:ni3}}-{{word:dui4}}-{{word:wo3}}-{{word:hen3}}-{{word:hao3}}"],
   tts: ["谢谢", "你对我很好"],
   literal: "thank-thank / you're very good to me",

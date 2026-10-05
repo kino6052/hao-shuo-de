@@ -7,6 +7,7 @@ export default composite({
   py: "yǒuhǎo",
   en: "friendly",
   ru: "дружелюбный",
+  pos: "adjective",
   hsd: ["{{word:dui4}} {{word:ren2}} {{word:hao3}}"],
   tts: ["对人好"],
   literal: "good to people",

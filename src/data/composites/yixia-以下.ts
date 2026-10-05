@@ -7,9 +7,10 @@ export default composite({
   py: "yǐxià",
   en: "below, less than",
   ru: "ниже, меньше",
-  hsd: ["{{word:bi3}} X {{word:shao3}}"],
-  tts: ["比X少"],
+  pos: "noun",
+  hsd: ["{{word:yi3}}-{{word:xia4}}", "{{word:bi3}} X {{word:shao3}}"],
+  tts: ["以下", "比X少"],
   literal: "less than X",
-  fit: "plain",
+  fit: "natural",
   proposed: true,
 });

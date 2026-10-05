@@ -7,6 +7,7 @@ export default composite({
   py: "tǐzhòng",
   en: "body weight",
   ru: "вес тела",
+  pos: "noun",
   hsd: ["{{word:shen1ti3}}-{{word:de}} {{word:da4}}-{{word:xiao3}}"],
   tts: ["身体的大小"],
   literal: "how big the body is",

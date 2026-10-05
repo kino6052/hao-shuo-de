@@ -7,6 +7,7 @@ export default composite({
   py: "qìchē",
   en: "car",
   ru: "машина",
+  pos: "noun",
   hsd: ["{{word:qi4}}-{{word:che1}}", "{{word:che1}}"],
   tts: ["汽车", "车"],
   fit: "natural",

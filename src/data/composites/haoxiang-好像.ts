@@ -7,6 +7,7 @@ export default composite({
   py: "hǎoxiàng",
   en: "seem",
   ru: "кажется",
+  pos: "verb",
   hsd: ["{{word:ke3}}-{{word:neng2}}"],
   tts: ["可能"],
   literal: "maybe",

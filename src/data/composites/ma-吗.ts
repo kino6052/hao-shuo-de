@@ -7,6 +7,7 @@ export default composite({
   py: "ma",
   en: "final interrogative yes-or-no question marker",
   ru: "конечная вопросительная частица для вопросов да/нет",
+  pos: "auxiliary",
   hsd: ["{{word:ma}}"],
   tts: ["吗"],
   fit: "word",

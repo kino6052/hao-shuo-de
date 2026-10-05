@@ -7,6 +7,7 @@ export default composite({
   py: "bùxíng",
   en: "not allowed, no good",
   ru: "нельзя, не годится",
+  pos: "verb",
   hsd: ["{{word:bu4}} {{word:neng2}}", "{{word:bu4}} {{word:hao3}}"],
   tts: ["不能", "不好"],
   fit: "natural",

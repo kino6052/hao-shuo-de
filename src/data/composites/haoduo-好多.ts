@@ -7,6 +7,7 @@ export default composite({
   py: "hǎoduō",
   en: "many, a lot",
   ru: "много",
+  pos: "number",
   hsd: ["{{word:hao3}} {{word:duo1}}"],
   tts: ["好多"],
   fit: "natural",

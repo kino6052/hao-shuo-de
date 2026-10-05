@@ -7,6 +7,7 @@ export default composite({
   py: "jīnnián",
   en: "this year",
   ru: "в этом году",
+  pos: "noun",
   hsd: [
     "{{word:jin1}}-{{word:nian2}}",
     "{{word:xian4}}-{{word:zai4}}-{{word:de}} {{word:shi2}}-{{word:er4}}-ge {{word:yue4}}",

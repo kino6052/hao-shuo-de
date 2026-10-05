@@ -7,6 +7,7 @@ export default composite({
   py: "Hànzì",
   en: "Chinese character",
   ru: "иероглиф",
+  pos: "noun",
   hsd: ["\"Zhōngguó\"-{{word:de}} {{word:xie3}}-{{word:de}} {{word:ci2}}"],
   tts: ["中国的写的词"],
   literal: "China's written word",

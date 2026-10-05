@@ -7,6 +7,7 @@ export default composite({
   py: "shàng",
   en: "up",
   ru: "вверх",
+  pos: "noun",
   hsd: ["{{word:shang4}}"],
   tts: ["上面"],
   fit: "word",

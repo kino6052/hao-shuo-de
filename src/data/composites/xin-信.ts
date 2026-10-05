@@ -7,6 +7,7 @@ export default composite({
   py: "xìn",
   en: "believe; letter",
   ru: "верить; письмо",
+  pos: "verb",
   hsd: [
     "{{word:jue2}}-{{light:de2}} {{word:shi4}} {{word:zhen1}}-{{word:de}}",
     "{{word:gei3}} {{word:yuan3}}-{{word:de}} {{word:ren2}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",

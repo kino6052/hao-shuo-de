@@ -7,10 +7,11 @@ export default composite({
   py: "miànqián",
   en: "in front of",
   ru: "перед",
+  pos: "noun",
   hsd: ["{{word:mian4}}-{{word:qian2}}", "{{word:qian2}}-{{word:mian4}}"],
   tts: ["面前", "前面"],
+  literal: "face-front",
   fit: "natural",
   note: "Lesson {{lesson:where-it-is}}.",
-  literal: "face-front",
   proposed: true,
 });

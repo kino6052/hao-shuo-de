@@ -7,6 +7,7 @@ export default composite({
   py: "shòushāng",
   en: "get hurt",
   ru: "получить травму",
+  pos: "verb",
   hsd: ["{{word:shen1ti3}} {{word:huai4}} {{word:le}}"],
   tts: ["身体坏了"],
   literal: "the body got hurt",

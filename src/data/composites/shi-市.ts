@@ -7,6 +7,7 @@ export default composite({
   py: "shì",
   en: "city",
   ru: "город",
+  pos: "noun",
   hsd: [
     "{{word:you3}}-{{word:hen3}}-{{word:duo1}}-{{word:de}}-{{word:jia1}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
   ],

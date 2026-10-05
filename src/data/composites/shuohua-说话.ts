@@ -7,7 +7,9 @@ export default composite({
   py: "shuōhuà",
   en: "talk",
   ru: "говорить",
-  hsd: ["{{word:shuo1}}"],
-  tts: ["说"],
-  fit: "word",
+  pos: "verb",
+  hsd: ["{{word:shuo1}}-{{word:hua4}}", "{{word:shuo1}}"],
+  tts: ["说话", "说"],
+  fit: "natural",
+  proposed: true,
 });

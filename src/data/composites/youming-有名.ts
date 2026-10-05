@@ -7,6 +7,7 @@ export default composite({
   py: "yǒumíng",
   en: "famous",
   ru: "знаменитый",
+  pos: "adjective",
   hsd: [
     "{{word:you3}}-{{word:ming2}}",
     "{{word:ren2}}-{{word:ren2}} {{word:dou1}} {{word:zhi1dao4}}-{{word:de}}",

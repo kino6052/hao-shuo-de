@@ -7,6 +7,7 @@ export default composite({
   py: "jǐngdiǎn",
   en: "sight, scenic spot",
   ru: "достопримечательность",
+  pos: "noun",
   hsd: ["{{word:hao3}}-{{word:kan4}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
   tts: ["好看的地方"],
   literal: "a beautiful place",

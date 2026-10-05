@@ -7,6 +7,7 @@ export default composite({
   py: "wénzì",
   en: "writing, script",
   ru: "письменность, текст",
+  pos: "noun",
   hsd: ["{{word:xie3}}-{{word:de}} {{word:ci2}}"],
   tts: ["写的词"],
   literal: "written words",

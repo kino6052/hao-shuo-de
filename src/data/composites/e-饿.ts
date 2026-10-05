@@ -7,6 +7,7 @@ export default composite({
   py: "è",
   en: "hungry",
   ru: "голодный",
+  pos: "adjective",
   hsd: ["{{word:yao4}} {{word:chi1}}"],
   tts: ["要吃"],
   literal: "want to eat",

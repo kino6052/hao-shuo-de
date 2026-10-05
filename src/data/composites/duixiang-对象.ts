@@ -7,6 +7,7 @@ export default composite({
   py: "duìxiàng",
   en: "partner; target",
   ru: "партнёр; объект",
+  pos: "noun",
   hsd: ["{{word:ai4}}-{{word:de}} {{word:ren2}}"],
   tts: ["爱的人"],
   literal: "the person you love",

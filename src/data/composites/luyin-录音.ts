@@ -7,6 +7,7 @@ export default composite({
   py: "lùyīn",
   en: "record (sound)",
   ru: "записывать звук",
+  pos: "verb",
   hsd: ["{{word:ba3}} {{word:sheng1yin1}} {{word:liu2}}-{{word:xia4}}-{{word:lai2}}"],
   tts: ["把声音留下来"],
   literal: "keep the sound",

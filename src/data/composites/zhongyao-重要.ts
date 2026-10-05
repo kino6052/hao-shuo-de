@@ -7,8 +7,10 @@ export default composite({
   py: "zhòngyào",
   en: "important",
   ru: "важный",
-  hsd: ["{{word:hen3}} {{word:you3}} {{word:jia4zhi2}}"],
-  tts: ["很有价值"],
+  pos: "adjective",
+  hsd: ["{{word:zhong4}}-{{word:yao4}}", "{{word:hen3}} {{word:you3}} {{word:jia4zhi2}}"],
+  tts: ["重要", "很有价值"],
   literal: "very valuable",
-  fit: "plain",
+  fit: "natural",
+  proposed: true,
 });

@@ -7,6 +7,7 @@ export default composite({
   py: "zhīhòu",
   en: "after",
   ru: "после",
+  pos: "noun",
   hsd: ["X {{word:hou4}}"],
   tts: ["X后"],
   fit: "natural",

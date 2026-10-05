@@ -7,6 +7,7 @@ export default composite({
   py: "dāying",
   en: "agree, promise",
   ru: "согласиться",
+  pos: "verb",
   hsd: ["{{word:shuo1}} {{word:hao3}}"],
   tts: ["说好"],
   literal: "say okay",

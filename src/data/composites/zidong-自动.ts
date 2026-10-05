@@ -7,6 +7,7 @@ export default composite({
   py: "zìdòng",
   en: "automatic",
   ru: "автоматический",
+  pos: "adverb",
   hsd: ["{{word:mei2}}-{{word:you3}} {{word:ren2}} {{word:zuo4}} {{word:ye3}} {{word:dong4}}"],
   tts: ["没有人做也动"],
   literal: "moves with nobody doing it",

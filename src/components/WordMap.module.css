@@ -8,6 +8,26 @@
   margin: 0 0 0.75rem;
 }
 
+.balance {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-body);
+}
+
+.balance input {
+  flex: 1 1 8rem;
+  max-width: 16rem;
+  accent-color: var(--accent);
+}
+
+.balanceEnd {
+  color: var(--text-muted);
+}
+
 .legend {
   display: flex;
   flex-wrap: wrap;

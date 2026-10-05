@@ -15,6 +15,12 @@ export default lessonModule({
       en: "car, vehicle",
       ru: "машина, транспорт",
     },
+    {
+      word: "xiao4",
+      sense: "school",
+      en: "school (in {{word:xue2}}-{{word:xiao4}})",
+      ru: "школа (в {{word:xue2}}-{{word:xiao4}})",
+    },
   ],
   prose: {
     en: [
@@ -23,6 +29,7 @@ export default lessonModule({
       "**{{word:lu4}} {{word:hen3}} {{word:yuan3}} / {{word:zhi1dao4}} {{word:lu4}} / {{word:lu4}}-{{word:shang4}}**",
       "",
       "{{word:che1}} is a car, or anything on wheels that carries you: {{Word:che1}} {{word:zai4}} {{word:lu4}}-{{word:shang4}}, the car is on the road.",
+      "A school is {{word:xue2}}-{{word:xiao4}} (学校): here 校 means school.",
     ],
     ru: [
       "**Чтобы говорить о дороге куда-то**, используйте {{word:lu4}} (дорога, путь).",
@@ -30,6 +37,7 @@ export default lessonModule({
       "**{{word:lu4}} {{word:hen3}} {{word:yuan3}} / {{word:zhi1dao4}} {{word:lu4}} / {{word:lu4}}-{{word:shang4}}**",
       "",
       "{{word:che1}} — машина или всё, что возит вас на колёсах: {{Word:che1}} {{word:zai4}} {{word:lu4}}-{{word:shang4}} — машина на дороге.",
+      "Школа — {{word:xue2}}-{{word:xiao4}} (学校): здесь 校 значит «школа».",
     ],
     tldr: {
       en: "{{word:lu4}} is the road or the way: {{Word:lu4}} {{word:hen3}} {{word:yuan3}}, it's a long way.",
@@ -78,6 +86,12 @@ export default lessonModule({
       en: "My car is nearby.",
       ru: "Моя машина поблизости.",
     },
+    {
+      pinyin: "{{Word:xue2}}-{{word:xiao4}} {{word:hen3}} {{word:yuan3}}.",
+      hanzi: "学校很远。",
+      en: "The school is far.",
+      ru: "Школа далеко.",
+    },
   ],
   exercises: [
     {
@@ -91,6 +105,12 @@ export default lessonModule({
       ru: "Где твоя машина?",
       answer: "{{Word:ni3}}-{{word:de}} {{word:che1}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
       hanzi: "你的车在哪里？",
+    },
+    {
+      en: "I'm going to school.",
+      ru: "Я иду в школу.",
+      answer: "{{Word:wo3}} {{word:qu4}} {{word:xue2}}-{{word:xiao4}}.",
+      hanzi: "我去学校。",
     },
   ],
 });

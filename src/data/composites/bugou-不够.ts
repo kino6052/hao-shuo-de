@@ -7,6 +7,7 @@ export default composite({
   py: "búgòu",
   en: "not enough",
   ru: "недостаточно",
+  pos: "verb",
   hsd: ["{{word:shao3}} {{word:le}}"],
   tts: ["少了"],
   literal: "it's short",

@@ -7,6 +7,7 @@ export default composite({
   py: "rénqún",
   en: "crowd",
   ru: "толпа",
+  pos: "noun",
   hsd: ["{{word:ren2}}-{{word:qun2}}", "{{word:hen3}}-{{word:duo1}}-{{word:de}} {{word:ren2}}"],
   tts: ["人群", "很多的人"],
   literal: "people group / lots of people",

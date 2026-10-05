@@ -7,6 +7,7 @@ export default composite({
   py: "jié",
   en: "tie, knot",
   ru: "завязывать, узел",
+  pos: "verb",
   hsd: ["{{word:ba3}} {{word:xian4}} {{word:zuo4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}"],
   tts: ["把线做在一起"],
   literal: "put threads together",

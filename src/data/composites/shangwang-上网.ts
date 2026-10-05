@@ -7,6 +7,7 @@ export default composite({
   py: "shàngwǎng",
   en: "go online",
   ru: "выходить в интернет",
+  pos: "verb",
   hsd: ["{{word:shang4}} {{word:wang3}}"],
   tts: ["上网"],
   literal: "go onto the net",

@@ -7,6 +7,7 @@ export default composite({
   py: "xīn",
   en: "new",
   ru: "новый",
+  pos: "adjective",
   hsd: ["{{word:tou2}}-{{word:yi1}}-{{word:ci4}} {{word:kan4}}-{{word:dao4}}-{{word:de}}"],
   tts: ["头一次看到的"],
   literal: "seen for the first time",

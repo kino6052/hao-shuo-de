@@ -7,8 +7,13 @@ export default composite({
   py: "fángjiān",
   en: "room",
   ru: "комната",
-  hsd: ["{{word:zai4}}-{{word:jia1}}-{{word:li3}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
-  tts: ["在家里的地方"],
+  pos: "noun",
+  hsd: [
+    "{{word:fang2}}-{{word:jian1}}",
+    "{{word:zai4}}-{{word:jia1}}-{{word:li3}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
+  ],
+  tts: ["房间", "在家里的地方"],
   literal: "place in the home",
-  fit: "plain",
+  fit: "natural",
+  proposed: true,
 });

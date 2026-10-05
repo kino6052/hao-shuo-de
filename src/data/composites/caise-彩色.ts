@@ -7,6 +7,7 @@ export default composite({
   py: "cǎisè",
   en: "colorful",
   ru: "цветной",
+  pos: "noun",
   hsd: ["{{word:hen3}}-{{word:duo1}}-{{word:yan2se4}}-{{word:de}}"],
   tts: ["很多颜色的"],
   literal: "many-colored",

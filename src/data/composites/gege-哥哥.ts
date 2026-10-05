@@ -7,6 +7,7 @@ export default composite({
   py: "gēge",
   en: "older brother",
   ru: "старший брат",
+  pos: "noun",
   hsd: [
     "{{word:jia1}}-{{word:li3}} {{word:bi3}} {{word:wo3}} {{word:da4}}-{{word:de}} {{word:nan2}}-{{word:ren2}}",
   ],

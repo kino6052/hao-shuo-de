@@ -7,8 +7,10 @@ export default composite({
   py: "nàxiē",
   en: "those",
   ru: "те",
-  hsd: ["{{word:na4}}"],
-  tts: ["那"],
-  fit: "word",
+  pos: "pronoun",
+  hsd: ["{{word:na4}}-{{word:xie1}}", "{{word:na4}}"],
+  tts: ["那些", "那"],
+  fit: "natural",
   note: "nà-ge … dōu: all of those.",
+  proposed: true,
 });

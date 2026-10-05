@@ -7,6 +7,7 @@ export default composite({
   py: "zhāng",
   en: "(counting word for flat things)",
   ru: "(счётное слово)",
+  pos: "verb",
   hsd: ["{{word:ge4}}"],
   tts: ["个"],
   fit: "word",

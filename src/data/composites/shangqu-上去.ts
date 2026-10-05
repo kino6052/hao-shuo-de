@@ -7,6 +7,7 @@ export default composite({
   py: "shàngqù",
   en: "go up",
   ru: "подняться",
+  pos: "verb",
   hsd: ["{{word:shang4}}-{{word:qu4}}"],
   tts: ["上去"],
   fit: "natural",

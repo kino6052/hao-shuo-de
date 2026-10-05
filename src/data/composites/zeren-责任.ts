@@ -7,6 +7,7 @@ export default composite({
   py: "zérèn",
   en: "responsibility",
   ru: "ответственность",
+  pos: "noun",
   hsd: ["{{word:yao4}} {{word:zuo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["要做的东西"],
   literal: "what you have to do",

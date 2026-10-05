@@ -7,8 +7,10 @@ export default composite({
   py: "tí",
   en: "question, problem",
   ru: "задача",
-  hsd: ["{{word:wen4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["问的东西"],
+  pos: "noun",
+  hsd: ["{{word:ti2}}", "{{word:wen4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
+  tts: ["题", "问的东西"],
   literal: "something asked",
-  fit: "plain",
+  fit: "word",
+  proposed: true,
 });

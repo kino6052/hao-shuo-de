@@ -7,9 +7,11 @@ export default composite({
   py: "yǐqián",
   en: "before",
   ru: "до, раньше",
-  hsd: ["X {{word:qian2}}"],
-  tts: ["…前"],
+  pos: "noun",
+  hsd: ["{{word:yi3}}-{{word:qian2}}", "X {{word:qian2}}"],
+  tts: ["以前", "…前"],
   literal: "before X",
   fit: "natural",
   note: "chī qián: before eating.",
+  proposed: true,
 });

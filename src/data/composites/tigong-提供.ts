@@ -7,6 +7,7 @@ export default composite({
   py: "tígōng",
   en: "provide",
   ru: "предоставлять",
+  pos: "verb",
   hsd: ["{{word:gei3}}"],
   tts: ["给"],
   fit: "word",

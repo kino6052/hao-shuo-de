@@ -7,6 +7,7 @@ export default composite({
   py: "pǔtōnghuà",
   en: "Mandarin",
   ru: "путунхуа, китайский",
+  pos: "noun",
   hsd: ["\"Zhōngguó\"-{{word:de}} {{word:shuo1}}-{{word:de}}"],
   tts: ["中国的说的"],
   literal: "China's spoken",

@@ -7,6 +7,7 @@ export default composite({
   py: "zǎo",
   en: "early",
   ru: "рано",
+  pos: "adjective",
   hsd: ["{{word:bi3}} … {{word:qian2}}"],
   tts: ["比…前"],
   literal: "before …",

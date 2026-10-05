@@ -7,6 +7,7 @@ export default composite({
   py: "duànliàn",
   en: "exercise",
   ru: "тренироваться",
+  pos: "verb",
   hsd: ["{{word:dong4}} {{word:shen1ti3}}"],
   tts: ["动身体"],
   literal: "move the body",

@@ -66,8 +66,8 @@ export default lessonModule({
       ru: "Отнеси коробку обратно.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:ba3}} {{word:gun4zi}} {{word:na2}}-{{word:shang4}}-{{word:lai2}} {{word:le}}.",
-      hanzi: "他把棍子拿上来了。",
+      pinyin: "{{Word:ta1}} {{word:ba3}} {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:na2}}-{{word:shang4}}-{{word:lai2}} {{word:le}}.",
+      hanzi: "他把长的东西拿上来了。",
       en: "He brought the stick up.",
       ru: "Он принёс палку наверх.",
     },

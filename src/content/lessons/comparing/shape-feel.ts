@@ -10,6 +10,11 @@ export default lessonModule({
       en: "tall, high",
       ru: "высокий",
     },
+    {
+      word: "zhong4",
+      en: "heavy",
+      ru: "тяжёлый",
+    },
   ],
   prose: {
     en: [
@@ -18,6 +23,7 @@ export default lessonModule({
       "**Thing + {{word:hen3}} + {{word:ying4}} / {{word:yuan2}} / {{word:gao1}}**",
       "",
       "They compare like any adjective: {{Word:ta1}} {{word:bi3}} {{word:wo3}} {{word:gao1}}, he's taller than me.",
+      "{{word:zhong4}} is heavy.",
     ],
     ru: [
       "**Чтобы сказать, как что-то выглядит или ощущается**, используйте прилагательные, например {{word:ying4}} (твёрдый), {{word:yuan2}} (круглый) и {{word:gao1}} (высокий).",
@@ -25,6 +31,7 @@ export default lessonModule({
       "**Вещь + {{word:hen3}} + {{word:ying4}} / {{word:yuan2}} / {{word:gao1}}**",
       "",
       "Их сравнивают, как любое прилагательное: {{Word:ta1}} {{word:bi3}} {{word:wo3}} {{word:gao1}} — он выше меня.",
+      "{{word:zhong4}} — тяжёлый.",
     ],
     tldr: {
       en: "{{word:ying4}} is hard, {{word:yuan2}} is round, {{word:gao1}} is tall. They work like any adjective.",
@@ -38,8 +45,8 @@ export default lessonModule({
   },
   examples: [
     {
-      pinyin: "{{Word:gun4zi}} {{word:hen3}} {{word:ying4}}.",
-      hanzi: "棍子很硬。",
+      pinyin: "{{Word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:hen3}} {{word:ying4}}.",
+      hanzi: "长的东西很硬。",
       en: "The stick is hard.",
       ru: "Палка твёрдая.",
     },
@@ -56,8 +63,8 @@ export default lessonModule({
       ru: "Нитка в коробке.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:you3}} {{word:gun4zi}}.",
-      hanzi: "我有棍子。",
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
+      hanzi: "我有长的东西。",
       en: "I have a stick.",
       ru: "У меня есть палка.",
     },
@@ -79,6 +86,12 @@ export default lessonModule({
       en: "He's taller than me.",
       ru: "Он выше меня.",
     },
+    {
+      pinyin: "{{Word:zhe4}}-ge {{word:he2zi}} {{word:hen3}} {{word:zhong4}}.",
+      hanzi: "这个盒子很重。",
+      en: "This box is heavy.",
+      ru: "Эта коробка тяжёлая.",
+    },
   ],
   exercises: [
     {
@@ -96,14 +109,20 @@ export default lessonModule({
     {
       en: "Is the stick hard?",
       ru: "Палка твёрдая?",
-      answer: "{{Word:gun4zi}} {{word:ying4}} {{word:ma}}?",
-      hanzi: "棍子硬吗？",
+      answer: "{{Word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:ying4}} {{word:ma}}?",
+      hanzi: "长的东西硬吗？",
     },
     {
       en: "He's taller than you.",
       ru: "Он выше тебя.",
       answer: "{{Word:ta1}} {{word:bi3}} {{word:ni3}} {{word:gao1}}.",
       hanzi: "他比你高。",
+    },
+    {
+      en: "Water is heavy.",
+      ru: "Вода тяжёлая.",
+      answer: "{{Word:shui3}} {{word:hen3}} {{word:zhong4}}.",
+      hanzi: "水很重。",
     },
   ],
 });

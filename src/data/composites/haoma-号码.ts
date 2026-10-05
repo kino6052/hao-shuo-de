@@ -7,6 +7,7 @@ export default composite({
   py: "hàomǎ",
   en: "number",
   ru: "номер",
+  pos: "noun",
   hsd: ["{{word:hao4}}"],
   tts: ["号"],
   fit: "word",

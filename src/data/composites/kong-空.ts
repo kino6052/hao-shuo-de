@@ -7,6 +7,7 @@ export default composite({
   py: "kōng",
   en: "empty",
   ru: "пустой",
+  pos: "adjective",
   hsd: ["{{word:kong1}}"],
   tts: ["空"],
   fit: "word",

@@ -7,6 +7,7 @@ export default composite({
   py: "huò",
   en: "or",
   ru: "или",
+  pos: "conjunction",
   hsd: ["{{word:huo4}}", "{{word:huo4}}-{{word:zhe3}}"],
   tts: ["或", "或者"],
   fit: "word",

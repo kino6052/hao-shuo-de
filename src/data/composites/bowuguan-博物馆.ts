@@ -7,6 +7,7 @@ export default composite({
   py: "bówùguǎn",
   en: "museum",
   ru: "музей",
+  pos: "noun",
   hsd: [
     "{{word:gei3}}-{{word:ren2}}-{{word:kan4}}-{{word:lao3}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
   ],

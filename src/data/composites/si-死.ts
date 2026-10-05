@@ -7,6 +7,7 @@ export default composite({
   py: "sǐ",
   en: "die",
   ru: "умирать",
+  pos: "verb",
   hsd: ["{{word:si3}}"],
   tts: ["死"],
   fit: "word",

@@ -7,6 +7,7 @@ export default composite({
   py: "yìyì",
   en: "meaning, significance",
   ru: "смысл",
+  pos: "noun",
   hsd: ["{{word:jia4zhi2}}"],
   tts: ["价值"],
   literal: "value",

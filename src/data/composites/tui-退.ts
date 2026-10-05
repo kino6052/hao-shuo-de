@@ -7,6 +7,7 @@ export default composite({
   py: "tuì",
   en: "go back, retreat",
   ru: "отступать",
+  pos: "verb",
   hsd: ["{{word:hui2}}-{{word:qu4}}"],
   tts: ["回去"],
   literal: "go back",

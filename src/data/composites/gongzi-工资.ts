@@ -7,6 +7,7 @@ export default composite({
   py: "gōngzī",
   en: "wages, salary",
   ru: "зарплата",
+  pos: "noun",
   hsd: ["{{word:zuo4}} {{word:de2}}-{{word:de}} {{word:jin1}}"],
   tts: ["做得的金"],
   literal: "money you get for working",

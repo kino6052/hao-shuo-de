@@ -7,6 +7,7 @@ export default composite({
   py: "zhǎng",
   en: "rise (go up)",
   ru: "подниматься, расти",
+  pos: "verb",
   hsd: ["{{word:bian4}} {{word:gao1}}"],
   tts: ["变高"],
   literal: "become high",

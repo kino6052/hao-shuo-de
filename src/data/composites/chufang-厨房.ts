@@ -7,6 +7,7 @@ export default composite({
   py: "chúfáng",
   en: "kitchen",
   ru: "кухня",
+  pos: "noun",
   hsd: [
     "{{word:zuo4}}-{{word:chi1}}-{{word:de}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
   ],

@@ -7,6 +7,7 @@ export default composite({
   py: "fǎnduì",
   en: "oppose",
   ru: "возражать, быть против",
+  pos: "verb",
   hsd: ["{{word:shuo1}} {{word:bu4}}"],
   tts: ["说不"],
   literal: "say no",

@@ -7,6 +7,7 @@ export default composite({
   py: "tiānkōng",
   en: "sky",
   ru: "небо",
+  pos: "noun",
   hsd: [
     "{{word:tian1}}-{{word:kong1}}",
     "{{word:ri4}} {{word:he2}} {{word:yue4}} {{word:zai4}}-{{word:de}} {{word:di4}}-{{light:fang1}}",

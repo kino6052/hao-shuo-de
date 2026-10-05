@@ -135,6 +135,10 @@
     "word-builder": {
       "label": "Word Builder",
       "order": 2
+    },
+    "word-map": {
+      "label": "Word Map",
+      "order": 2
     }
   },
   "words": {
@@ -234,8 +238,74 @@
       "pre-verbs",
       "questions",
       "roles-of-a-word",
-      "when-it-happens",
+      "when-it-happens"
+    ],
+    "men": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-frontier",
+      "appendix-grammar",
+      "also-and-all",
+      "around-an-action",
+      "comparing",
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "inside-a-sentence",
+      "linking-sentences",
+      "moving",
+      "numbers",
+      "pointing",
+      "questions",
+      "where-it-is",
+      "who-does-what"
+    ],
+    "na4": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-minimality",
+      "appendix-grammar",
+      "also-and-all",
+      "comparing",
+      "greetings-and-feelings",
+      "how-much",
+      "inside-a-sentence",
+      "linking-sentences",
+      "moving",
+      "pointing",
+      "questions",
+      "roles-of-a-word",
       "where-it-is"
+    ],
+    "zhe4": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-minimality",
+      "appendix-frontier",
+      "appendix-grammar",
+      "also-and-all",
+      "around-an-action",
+      "becoming-and-making",
+      "colors",
+      "comparing",
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "how-much",
+      "inside-a-sentence",
+      "linking-sentences",
+      "modifying-nouns",
+      "moving",
+      "numbers",
+      "pointing",
+      "questions",
+      "roles-of-a-word",
+      "sounds-and-symbols",
+      "when-it-happens",
+      "where-it-is",
+      "words-and-sentences"
     ],
     "jia1": [
       "phrase-book",
@@ -256,6 +326,17 @@
       "numbers",
       "pointing",
       "roles-of-a-word",
+      "where-it-is"
+    ],
+    "guo2": [
+      "appendix-frontier",
+      "appendix-grammar",
+      "comparing",
+      "moving",
+      "numbers"
+    ],
+    "fang2": [
+      "how-much",
       "where-it-is"
     ],
     "ri4": [
@@ -340,11 +421,6 @@
       "direction-and-result",
       "moving"
     ],
-    "ji1": [
-      "everyday-patterns",
-      "inside-a-sentence",
-      "roles-of-a-word"
-    ],
     "shen1ti3": [
       "phrase-book",
       "appendix-stories",
@@ -360,6 +436,7 @@
       "becoming-and-making",
       "everyday-patterns",
       "greetings-and-feelings",
+      "how-much",
       "inside-a-sentence",
       "pointing",
       "roles-of-a-word"
@@ -371,6 +448,12 @@
       "pointing",
       "roles-of-a-word"
     ],
+    "mao2": [
+      "appendix-stories",
+      "everyday-patterns",
+      "inside-a-sentence",
+      "roles-of-a-word"
+    ],
     "xin1": [
       "phrase-book",
       "appendix-stories",
@@ -378,13 +461,8 @@
       "appendix-grammar",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings"
-    ],
-    "mao2": [
-      "appendix-stories",
-      "everyday-patterns",
-      "inside-a-sentence",
-      "roles-of-a-word"
+      "greetings-and-feelings",
+      "numbers"
     ],
     "ren2": [
       "phrase-book",
@@ -401,12 +479,33 @@
       "moving",
       "numbers",
       "pointing",
-      "questions",
       "roles-of-a-word",
       "where-it-is",
       "words-and-sentences"
     ],
-    "fu4mu3": [
+    "nv3": [
+      "appendix-stories",
+      "appendix-frontier",
+      "appendix-grammar",
+      "inside-a-sentence",
+      "pointing",
+      "roles-of-a-word",
+      "words-and-sentences"
+    ],
+    "qun2": [
+      "appendix-grammar",
+      "inside-a-sentence"
+    ],
+    "guan1xi": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-frontier",
+      "appendix-grammar",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "inside-a-sentence"
+    ],
+    "ba4ba": [
       "phrase-book",
       "appendix-stories",
       "appendix-frontier",
@@ -421,40 +520,23 @@
       "roles-of-a-word",
       "where-it-is"
     ],
-    "guan1xi": [
+    "ma1ma": [
       "phrase-book",
       "appendix-stories",
       "appendix-frontier",
       "appendix-grammar",
+      "direction-and-result",
       "everyday-patterns",
-      "greetings-and-feelings",
-      "inside-a-sentence"
+      "how-much",
+      "inside-a-sentence",
+      "modifying-nouns",
+      "moving",
+      "questions",
+      "roles-of-a-word",
+      "where-it-is"
     ],
-    "bi3": [
-      "appendix-stories",
-      "appendix-grammar",
-      "comparing",
-      "numbers",
+    "er2": [
       "roles-of-a-word"
-    ],
-    "nan2ren2": [
-      "appendix-stories",
-      "appendix-frontier",
-      "inside-a-sentence",
-      "where-it-is",
-      "words-and-sentences"
-    ],
-    "nv3ren2": [
-      "appendix-stories",
-      "appendix-frontier",
-      "appendix-grammar",
-      "inside-a-sentence",
-      "pointing",
-      "words-and-sentences"
-    ],
-    "qun2": [
-      "appendix-grammar",
-      "inside-a-sentence"
     ],
     "shui3": [
       "phrase-book",
@@ -464,6 +546,7 @@
       "also-and-all",
       "becoming-and-making",
       "colors",
+      "comparing",
       "direction-and-result",
       "doubling-words",
       "greetings-and-feelings",
@@ -479,48 +562,15 @@
       "where-it-is",
       "who-does-what"
     ],
-    "dong4wu4": [
+    "fan4": [
       "phrase-book",
-      "appendix-stories",
-      "appendix-minimality",
-      "word-builder",
-      "appendix-grammar",
-      "also-and-all",
-      "colors",
-      "direction-and-result",
-      "doubling-words",
-      "greetings-and-feelings",
-      "how-much",
-      "inside-a-sentence",
-      "modifying-nouns",
-      "moving",
-      "numbers",
-      "pointing",
-      "roles-of-a-word",
-      "sounds-and-symbols",
-      "when-it-happens",
-      "where-it-is",
-      "who-does-what",
-      "words-and-sentences"
-    ],
-    "dong1xi": [
-      "phrase-book",
-      "appendix-stories",
-      "appendix-minimality",
-      "appendix-frontier",
-      "appendix-grammar",
-      "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
-      "inside-a-sentence",
       "linking-sentences",
       "numbers",
-      "pointing",
-      "roles-of-a-word",
-      "who-does-what",
-      "words-and-sentences"
+      "pre-verbs",
+      "who-does-what"
     ],
-    "gong1ju4": [
+    "ju4": [
       "phrase-book",
       "appendix-stories",
       "appendix-minimality",
@@ -533,13 +583,10 @@
       "questions",
       "where-it-is"
     ],
-    "gun4zi": [
-      "appendix-stories",
-      "colors",
-      "comparing",
-      "direction-and-result",
+    "ji1": [
+      "everyday-patterns",
       "inside-a-sentence",
-      "numbers"
+      "roles-of-a-word"
     ],
     "deng1": [
       "appendix-grammar",
@@ -577,6 +624,17 @@
       "questions",
       "where-it-is"
     ],
+    "xian4": [
+      "phrase-book",
+      "appendix-grammar",
+      "around-an-action",
+      "comparing",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "linking-sentences",
+      "numbers",
+      "when-it-happens"
+    ],
     "jin1": [
       "phrase-book",
       "appendix-stories",
@@ -593,9 +651,6 @@
       "where-it-is",
       "who-does-what"
     ],
-    "xian4": [
-      "comparing"
-    ],
     "yi1fu": [
       "appendix-stories",
       "appendix-grammar",
@@ -607,6 +662,34 @@
       "linking-sentences",
       "pre-verbs",
       "where-it-is"
+    ],
+    "wu4": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-minimality",
+      "word-builder",
+      "appendix-grammar",
+      "also-and-all",
+      "colors",
+      "direction-and-result",
+      "doubling-words",
+      "greetings-and-feelings",
+      "how-much",
+      "inside-a-sentence",
+      "modifying-nouns",
+      "moving",
+      "numbers",
+      "pointing",
+      "roles-of-a-word",
+      "sounds-and-symbols",
+      "when-it-happens",
+      "where-it-is",
+      "who-does-what",
+      "words-and-sentences"
+    ],
+    "shu1": [
+      "roles-of-a-word",
+      "who-does-what"
     ],
     "ci2": [
       "greetings-and-feelings",
@@ -620,59 +703,80 @@
       "linking-sentences",
       "roles-of-a-word"
     ],
-    "na4": [
+    "sheng1yin1": [
+      "appendix-stories",
+      "appendix-grammar",
+      "greetings-and-feelings"
+    ],
+    "jia4zhi2": [
+      "appendix-grammar",
+      "comparing",
+      "how-much",
+      "roles-of-a-word"
+    ],
+    "fa3": [
+      "inside-a-sentence",
+      "linking-sentences",
+      "roles-of-a-word"
+    ],
+    "gong1": [
       "phrase-book",
       "appendix-stories",
       "appendix-minimality",
       "appendix-grammar",
-      "also-and-all",
-      "comparing",
-      "greetings-and-feelings",
+      "becoming-and-making",
+      "direction-and-result",
       "how-much",
       "inside-a-sentence",
-      "linking-sentences",
-      "moving",
-      "pointing",
+      "numbers",
       "questions",
-      "roles-of-a-word",
       "where-it-is"
     ],
-    "zhe4": [
-      "phrase-book",
+    "zi4": [
+      "who-does-what"
+    ],
+    "ti2": [
+      "questions"
+    ],
+    "zhong3": [
       "appendix-stories",
-      "appendix-minimality",
-      "appendix-frontier",
       "appendix-grammar",
-      "also-and-all",
-      "around-an-action",
-      "becoming-and-making",
       "colors",
       "comparing",
-      "direction-and-result",
-      "doubling-words",
-      "everyday-patterns",
-      "greetings-and-feelings",
-      "how-much",
-      "inside-a-sentence",
-      "linking-sentences",
-      "modifying-nouns",
-      "moving",
-      "numbers",
-      "pointing",
-      "questions",
-      "roles-of-a-word",
-      "sounds-and-symbols",
-      "when-it-happens",
-      "where-it-is",
-      "words-and-sentences"
+      "numbers"
     ],
-    "yi1yang4": [
+    "fen1": [
+      "appendix-stories",
+      "appendix-grammar",
+      "also-and-all",
+      "inside-a-sentence",
+      "numbers"
+    ],
+    "yang4": [
       "appendix-stories",
       "appendix-grammar",
       "colors",
       "comparing",
       "doubling-words",
       "inside-a-sentence"
+    ],
+    "bi3": [
+      "appendix-stories",
+      "appendix-grammar",
+      "comparing",
+      "numbers",
+      "roles-of-a-word"
+    ],
+    "bie2": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-grammar",
+      "also-and-all",
+      "colors",
+      "comparing"
+    ],
+    "tong2": [
+      "comparing"
     ],
     "ge4": [
       "appendix-minimality",
@@ -697,13 +801,16 @@
       "appendix-grammar",
       "around-an-action",
       "colors",
+      "comparing",
       "doubling-words",
       "everyday-patterns",
       "greetings-and-feelings",
+      "how-much",
       "inside-a-sentence",
       "linking-sentences",
       "moving",
       "numbers",
+      "roles-of-a-word",
       "sounds-and-symbols"
     ],
     "liang3": [
@@ -719,13 +826,77 @@
       "linking-sentences",
       "numbers"
     ],
-    "dian3": [
+    "san1": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-grammar",
+      "greetings-and-feelings",
+      "inside-a-sentence",
+      "numbers"
+    ],
+    "si4": [
+      "appendix-grammar",
+      "colors",
+      "inside-a-sentence",
+      "numbers"
+    ],
+    "wu3": [
+      "appendix-stories",
+      "appendix-grammar",
+      "colors",
+      "linking-sentences",
+      "numbers"
+    ],
+    "liu4": [
       "phrase-book",
       "appendix-stories",
       "appendix-grammar",
       "colors",
-      "doubling-words",
       "inside-a-sentence",
+      "numbers"
+    ],
+    "qi1": [
+      "appendix-frontier",
+      "appendix-grammar",
+      "colors",
+      "inside-a-sentence",
+      "numbers"
+    ],
+    "ba1": [
+      "appendix-grammar",
+      "colors",
+      "inside-a-sentence",
+      "numbers"
+    ],
+    "jiu3": [
+      "appendix-grammar",
+      "inside-a-sentence",
+      "linking-sentences",
+      "numbers"
+    ],
+    "shi2": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-frontier",
+      "appendix-grammar",
+      "around-an-action",
+      "doubling-words",
+      "greetings-and-feelings",
+      "linking-sentences",
+      "moving",
+      "numbers",
+      "roles-of-a-word",
+      "when-it-happens"
+    ],
+    "er4": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-grammar",
+      "greetings-and-feelings",
+      "linking-sentences",
+      "numbers"
+    ],
+    "bai3": [
       "numbers"
     ],
     "duo1": [
@@ -748,6 +919,22 @@
       "direction-and-result",
       "doubling-words",
       "roles-of-a-word"
+    ],
+    "shao3": [
+      "phrase-book",
+      "appendix-grammar",
+      "around-an-action",
+      "comparing",
+      "modifying-nouns",
+      "numbers",
+      "who-does-what"
+    ],
+    "xie1": [
+      "comparing",
+      "pointing"
+    ],
+    "zhi3": [
+      "how-much"
     ],
     "hao3": [
       "phrase-book",
@@ -783,22 +970,22 @@
       "roles-of-a-word"
     ],
     "nan2": [
+      "appendix-stories",
+      "appendix-frontier",
       "appendix-grammar",
       "comparing",
       "how-much",
-      "linking-sentences"
+      "inside-a-sentence",
+      "linking-sentences",
+      "where-it-is",
+      "words-and-sentences"
     ],
-    "bai2se4": [
+    "bai2": [
       "appendix-stories",
       "colors",
       "roles-of-a-word"
     ],
-    "hei1se4": [
-      "appendix-stories",
-      "colors",
-      "roles-of-a-word"
-    ],
-    "hong2se4": [
+    "se4": [
       "appendix-stories",
       "appendix-grammar",
       "colors",
@@ -806,12 +993,25 @@
       "linking-sentences",
       "roles-of-a-word"
     ],
-    "huang2se4": [
+    "hei1": [
+      "appendix-stories",
+      "colors",
+      "roles-of-a-word"
+    ],
+    "hong2": [
+      "appendix-stories",
+      "appendix-grammar",
+      "colors",
+      "inside-a-sentence",
+      "linking-sentences",
+      "roles-of-a-word"
+    ],
+    "huang2": [
       "appendix-stories",
       "colors",
       "linking-sentences"
     ],
-    "lan2se4": [
+    "lan2": [
       "appendix-stories",
       "colors",
       "inside-a-sentence",
@@ -832,12 +1032,10 @@
       "how-much",
       "linking-sentences"
     ],
-    "kuai4": [
-      "phrase-book",
+    "lao3": [
       "appendix-stories",
-      "word-builder",
+      "becoming-and-making",
       "comparing",
-      "everyday-patterns",
       "how-much",
       "linking-sentences"
     ],
@@ -846,10 +1044,12 @@
       "everyday-patterns",
       "linking-sentences"
     ],
-    "lao3": [
+    "kuai4": [
+      "phrase-book",
       "appendix-stories",
-      "becoming-and-making",
+      "word-builder",
       "comparing",
+      "everyday-patterns",
       "how-much",
       "linking-sentences"
     ],
@@ -887,26 +1087,11 @@
       "linking-sentences",
       "roles-of-a-word"
     ],
-    "wei4dao4": [
-      "phrase-book",
-      "appendix-frontier",
-      "appendix-grammar",
-      "greetings-and-feelings",
-      "how-much",
-      "linking-sentences"
-    ],
     "ying4": [
       "appendix-stories",
       "appendix-grammar",
       "comparing",
       "roles-of-a-word"
-    ],
-    "yuan2": [
-      "appendix-stories",
-      "appendix-grammar",
-      "also-and-all",
-      "comparing",
-      "doubling-words"
     ],
     "kong1": [
       "appendix-stories",
@@ -915,6 +1100,13 @@
       "direction-and-result",
       "linking-sentences"
     ],
+    "yuan2": [
+      "appendix-stories",
+      "appendix-grammar",
+      "also-and-all",
+      "comparing",
+      "doubling-words"
+    ],
     "ming2": [
       "appendix-frontier",
       "appendix-grammar",
@@ -922,6 +1114,12 @@
       "becoming-and-making",
       "linking-sentences",
       "numbers"
+    ],
+    "zhong4": [
+      "comparing"
+    ],
+    "gan1jing4": [
+      "how-much"
     ],
     "xiao3": [
       "phrase-book",
@@ -969,6 +1167,14 @@
       "becoming-and-making",
       "comparing"
     ],
+    "chang2": [
+      "appendix-stories",
+      "colors",
+      "comparing",
+      "direction-and-result",
+      "inside-a-sentence",
+      "numbers"
+    ],
     "yao4": [
       "phrase-book",
       "appendix-stories",
@@ -982,6 +1188,7 @@
       "doubling-words",
       "everyday-patterns",
       "greetings-and-feelings",
+      "how-much",
       "inside-a-sentence",
       "linking-sentences",
       "moving",
@@ -1000,7 +1207,30 @@
       "pre-verbs",
       "roles-of-a-word"
     ],
-    "jue2de": [
+    "pa4": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-frontier",
+      "appendix-grammar",
+      "everyday-patterns",
+      "greetings-and-feelings"
+    ],
+    "xiao4": [
+      "appendix-stories",
+      "appendix-grammar",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings",
+      "moving"
+    ],
+    "xie4": [
+      "phrase-book",
+      "appendix-grammar",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings"
+    ],
+    "jue2": [
       "phrase-book",
       "appendix-stories",
       "appendix-frontier",
@@ -1030,17 +1260,21 @@
       "everyday-patterns",
       "how-much",
       "linking-sentences",
+      "moving",
       "pre-verbs",
       "when-it-happens"
+    ],
+    "jiao1": [
+      "appendix-grammar",
+      "everyday-patterns"
     ],
     "suan4": [
       "everyday-patterns",
       "inside-a-sentence",
       "numbers"
     ],
-    "jiao1": [
-      "appendix-grammar",
-      "everyday-patterns"
+    "xiang3": [
+      "pre-verbs"
     ],
     "kan4": [
       "phrase-book",
@@ -1072,6 +1306,10 @@
       "questions",
       "when-it-happens",
       "who-does-what"
+    ],
+    "jian4": [
+      "direction-and-result",
+      "greetings-and-feelings"
     ],
     "shuo1": [
       "phrase-book",
@@ -1105,13 +1343,13 @@
       "when-it-happens",
       "who-does-what"
     ],
-    "yong4": [
-      "phrase-book",
+    "wen4": [
       "appendix-stories",
-      "appendix-minimality",
-      "appendix-grammar",
-      "greetings-and-feelings",
-      "inside-a-sentence"
+      "doubling-words",
+      "everyday-patterns",
+      "linking-sentences",
+      "pre-verbs",
+      "questions"
     ],
     "jiao4": [
       "phrase-book",
@@ -1122,27 +1360,21 @@
       "greetings-and-feelings",
       "sounds-and-symbols"
     ],
+    "hua4": [
+      "who-does-what"
+    ],
+    "yong4": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-minimality",
+      "appendix-grammar",
+      "greetings-and-feelings",
+      "inside-a-sentence"
+    ],
     "kai1shi3": [
       "appendix-stories",
       "appendix-grammar",
       "around-an-action",
-      "greetings-and-feelings"
-    ],
-    "guan1": [
-      "appendix-grammar",
-      "also-and-all",
-      "becoming-and-making",
-      "linking-sentences"
-    ],
-    "kai1": [
-      "phrase-book",
-      "appendix-stories",
-      "appendix-frontier",
-      "appendix-grammar",
-      "also-and-all",
-      "becoming-and-making",
-      "doubling-words",
-      "everyday-patterns",
       "greetings-and-feelings"
     ],
     "wan2": [
@@ -1157,18 +1389,6 @@
       "linking-sentences",
       "moving"
     ],
-    "shui4jiao4": [
-      "phrase-book",
-      "appendix-stories",
-      "appendix-grammar",
-      "around-an-action",
-      "doubling-words",
-      "everyday-patterns",
-      "inside-a-sentence",
-      "numbers",
-      "sounds-and-symbols",
-      "when-it-happens"
-    ],
     "deng3": [
       "phrase-book",
       "appendix-stories",
@@ -1180,6 +1400,18 @@
       "linking-sentences",
       "numbers",
       "pre-verbs",
+      "when-it-happens"
+    ],
+    "shui4jiao4": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-grammar",
+      "around-an-action",
+      "doubling-words",
+      "everyday-patterns",
+      "inside-a-sentence",
+      "numbers",
+      "sounds-and-symbols",
       "when-it-happens"
     ],
     "chi1": [
@@ -1208,6 +1440,7 @@
       "also-and-all",
       "direction-and-result",
       "doubling-words",
+      "how-much",
       "linking-sentences",
       "pre-verbs",
       "questions",
@@ -1222,7 +1455,8 @@
       "doubling-words",
       "everyday-patterns",
       "inside-a-sentence",
-      "linking-sentences"
+      "linking-sentences",
+      "roles-of-a-word"
     ],
     "lai2": [
       "phrase-book",
@@ -1258,6 +1492,112 @@
       "moving",
       "numbers"
     ],
+    "dao4": [
+      "phrase-book",
+      "appendix-stories",
+      "word-builder",
+      "appendix-frontier",
+      "appendix-grammar",
+      "also-and-all",
+      "direction-and-result",
+      "greetings-and-feelings",
+      "how-much",
+      "linking-sentences",
+      "moving",
+      "numbers",
+      "roles-of-a-word"
+    ],
+    "dong4": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-minimality",
+      "word-builder",
+      "appendix-grammar",
+      "also-and-all",
+      "colors",
+      "direction-and-result",
+      "doubling-words",
+      "greetings-and-feelings",
+      "how-much",
+      "inside-a-sentence",
+      "modifying-nouns",
+      "moving",
+      "numbers",
+      "pointing",
+      "roles-of-a-word",
+      "sounds-and-symbols",
+      "when-it-happens",
+      "where-it-is",
+      "who-does-what",
+      "words-and-sentences"
+    ],
+    "jin4": [
+      "appendix-stories",
+      "appendix-grammar",
+      "colors",
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings"
+    ],
+    "chu1": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-grammar",
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "linking-sentences"
+    ],
+    "hui2": [
+      "appendix-stories",
+      "appendix-grammar",
+      "direction-and-result",
+      "greetings-and-feelings",
+      "linking-sentences",
+      "numbers"
+    ],
+    "qi3": [
+      "appendix-stories",
+      "appendix-grammar",
+      "direction-and-result",
+      "everyday-patterns",
+      "linking-sentences",
+      "moving",
+      "numbers"
+    ],
+    "fei1": [
+      "phrase-book",
+      "appendix-stories",
+      "word-builder",
+      "colors",
+      "direction-and-result",
+      "greetings-and-feelings",
+      "roles-of-a-word"
+    ],
+    "zhan4": [
+      "appendix-grammar",
+      "direction-and-result",
+      "everyday-patterns",
+      "linking-sentences"
+    ],
+    "tang3": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-grammar",
+      "direction-and-result",
+      "greetings-and-feelings",
+      "numbers"
+    ],
+    "tong1": [
+      "appendix-grammar",
+      "direction-and-result",
+      "numbers",
+      "roles-of-a-word"
+    ],
+    "zou3": [
+      "moving"
+    ],
     "bian4": [
       "appendix-stories",
       "appendix-minimality",
@@ -1265,7 +1605,14 @@
       "becoming-and-making",
       "linking-sentences"
     ],
-    "nong4": [
+    "fa1": [
+      "appendix-grammar",
+      "around-an-action",
+      "greetings-and-feelings",
+      "roles-of-a-word",
+      "when-it-happens"
+    ],
+    "zuo4": [
       "phrase-book",
       "appendix-stories",
       "appendix-minimality",
@@ -1276,36 +1623,7 @@
       "everyday-patterns",
       "greetings-and-feelings"
     ],
-    "fang4": [
-      "phrase-book",
-      "appendix-stories",
-      "appendix-grammar",
-      "becoming-and-making",
-      "colors",
-      "direction-and-result",
-      "greetings-and-feelings",
-      "numbers"
-    ],
-    "na2": [
-      "phrase-book",
-      "appendix-stories",
-      "appendix-grammar",
-      "colors",
-      "direction-and-result",
-      "everyday-patterns",
-      "inside-a-sentence",
-      "numbers"
-    ],
-    "mai3": [
-      "phrase-book",
-      "appendix-frontier",
-      "inside-a-sentence",
-      "numbers",
-      "questions"
-    ],
-    "bang1": [
-      "phrase-book",
-      "appendix-stories",
+    "rang4": [
       "appendix-grammar",
       "everyday-patterns"
     ],
@@ -1340,6 +1658,57 @@
       "questions",
       "where-it-is"
     ],
+    "fang4": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-grammar",
+      "becoming-and-making",
+      "colors",
+      "direction-and-result",
+      "greetings-and-feelings",
+      "numbers"
+    ],
+    "na2": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-grammar",
+      "colors",
+      "direction-and-result",
+      "everyday-patterns",
+      "inside-a-sentence",
+      "numbers"
+    ],
+    "kai1": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-frontier",
+      "appendix-grammar",
+      "also-and-all",
+      "becoming-and-making",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings"
+    ],
+    "guan1": [
+      "appendix-grammar",
+      "also-and-all",
+      "becoming-and-making",
+      "linking-sentences"
+    ],
+    "bang1": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-grammar",
+      "everyday-patterns"
+    ],
+    "mai3": [
+      "phrase-book",
+      "appendix-frontier",
+      "inside-a-sentence",
+      "numbers",
+      "pre-verbs",
+      "questions"
+    ],
     "zai4": [
       "phrase-book",
       "appendix-stories",
@@ -1347,6 +1716,7 @@
       "appendix-frontier",
       "appendix-grammar",
       "also-and-all",
+      "around-an-action",
       "becoming-and-making",
       "colors",
       "comparing",
@@ -1375,6 +1745,7 @@
       "pointing",
       "questions",
       "roles-of-a-word",
+      "sounds-and-symbols",
       "when-it-happens",
       "words-and-sentences"
     ],
@@ -1386,10 +1757,14 @@
       "where-it-is"
     ],
     "de2": [
+      "phrase-book",
       "appendix-stories",
       "appendix-minimality",
       "appendix-frontier",
-      "becoming-and-making"
+      "appendix-grammar",
+      "becoming-and-making",
+      "doubling-words",
+      "greetings-and-feelings"
     ],
     "you3": [
       "phrase-book",
@@ -1420,6 +1795,12 @@
       "greetings-and-feelings",
       "linking-sentences"
     ],
+    "huo2": [
+      "appendix-stories",
+      "doubling-words",
+      "greetings-and-feelings",
+      "linking-sentences"
+    ],
     "sheng1": [
       "appendix-frontier",
       "appendix-grammar",
@@ -1429,18 +1810,38 @@
       "inside-a-sentence",
       "linking-sentences",
       "roles-of-a-word",
-      "when-it-happens"
+      "when-it-happens",
+      "where-it-is"
     ],
-    "shi2jian1": [
+    "tian1": [
+      "appendix-frontier",
+      "appendix-grammar",
+      "colors",
+      "doubling-words",
+      "numbers",
+      "roles-of-a-word"
+    ],
+    "nian2": [
+      "appendix-frontier",
+      "appendix-grammar",
+      "doubling-words",
+      "linking-sentences",
+      "numbers"
+    ],
+    "dian3": [
       "phrase-book",
       "appendix-stories",
       "appendix-grammar",
-      "around-an-action",
+      "colors",
       "doubling-words",
-      "greetings-and-feelings",
-      "moving",
-      "numbers",
-      "when-it-happens"
+      "inside-a-sentence",
+      "numbers"
+    ],
+    "wan3": [
+      "numbers"
+    ],
+    "zuo2": [
+      "numbers"
     ],
     "cong2": [
       "phrase-book",
@@ -1458,13 +1859,14 @@
       "appendix-grammar",
       "inside-a-sentence"
     ],
-    "di4fang1": [
+    "di4": [
       "phrase-book",
       "appendix-stories",
       "appendix-minimality",
       "appendix-grammar",
       "also-and-all",
       "becoming-and-making",
+      "colors",
       "comparing",
       "direction-and-result",
       "everyday-patterns",
@@ -1472,14 +1874,8 @@
       "linking-sentences",
       "modifying-nouns",
       "moving",
-      "numbers"
-    ],
-    "guo2": [
-      "appendix-frontier",
-      "appendix-grammar",
-      "comparing",
-      "moving",
-      "numbers"
+      "numbers",
+      "where-it-is"
     ],
     "lu4": [
       "phrase-book",
@@ -1493,13 +1889,45 @@
       "numbers",
       "roles-of-a-word"
     ],
-    "di4": [
+    "wei4": [
+      "phrase-book",
       "appendix-stories",
+      "appendix-frontier",
       "appendix-grammar",
+      "greetings-and-feelings",
+      "how-much",
+      "linking-sentences",
+      "questions",
+      "when-it-happens",
+      "where-it-is"
+    ],
+    "hou4": [
+      "appendix-stories",
+      "appendix-frontier",
+      "appendix-grammar",
+      "around-an-action",
+      "comparing",
+      "moving",
+      "numbers",
+      "where-it-is"
+    ],
+    "li3": [
+      "phrase-book",
+      "appendix-stories",
+      "word-builder",
+      "appendix-frontier",
+      "appendix-grammar",
+      "also-and-all",
       "becoming-and-making",
       "colors",
+      "comparing",
       "direction-and-result",
+      "greetings-and-feelings",
+      "inside-a-sentence",
+      "linking-sentences",
+      "moving",
       "numbers",
+      "roles-of-a-word",
       "where-it-is"
     ],
     "pang2bian1": [
@@ -1509,19 +1937,48 @@
       "moving",
       "where-it-is"
     ],
-    "you4bian1": [
+    "mian4": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-grammar",
+      "also-and-all",
+      "direction-and-result",
+      "inside-a-sentence",
+      "linking-sentences",
+      "moving",
+      "numbers",
+      "roles-of-a-word",
+      "where-it-is"
+    ],
+    "bian1": [
       "phrase-book",
       "appendix-grammar",
       "colors",
       "comparing",
-      "where-it-is"
-    ],
-    "zuo3bian1": [
-      "phrase-book",
-      "appendix-grammar",
-      "comparing",
       "everyday-patterns",
       "moving",
+      "where-it-is"
+    ],
+    "zhong1": [
+      "appendix-grammar",
+      "comparing",
+      "inside-a-sentence",
+      "where-it-is"
+    ],
+    "jian1": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-grammar",
+      "also-and-all",
+      "around-an-action",
+      "comparing",
+      "doubling-words",
+      "greetings-and-feelings",
+      "how-much",
+      "inside-a-sentence",
+      "moving",
+      "numbers",
+      "when-it-happens",
       "where-it-is"
     ],
     "qian2": [
@@ -1529,6 +1986,33 @@
       "appendix-stories",
       "appendix-grammar",
       "direction-and-result",
+      "moving",
+      "numbers",
+      "where-it-is"
+    ],
+    "shang4": [
+      "appendix-stories",
+      "appendix-grammar",
+      "becoming-and-making",
+      "colors",
+      "direction-and-result",
+      "doubling-words",
+      "greetings-and-feelings",
+      "linking-sentences",
+      "moving",
+      "numbers",
+      "roles-of-a-word",
+      "where-it-is"
+    ],
+    "xia4": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-grammar",
+      "around-an-action",
+      "direction-and-result",
+      "doubling-words",
+      "everyday-patterns",
+      "greetings-and-feelings",
       "moving",
       "numbers",
       "where-it-is"
@@ -1541,6 +2025,86 @@
       "inside-a-sentence",
       "linking-sentences",
       "moving",
+      "roles-of-a-word"
+    ],
+    "yuan3": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-grammar",
+      "also-and-all",
+      "comparing",
+      "linking-sentences",
+      "moving",
+      "numbers"
+    ],
+    "fu4jin4": [
+      "phrase-book",
+      "appendix-grammar",
+      "direction-and-result",
+      "inside-a-sentence",
+      "moving"
+    ],
+    "zuo3": [
+      "phrase-book",
+      "appendix-grammar",
+      "comparing",
+      "everyday-patterns",
+      "moving",
+      "where-it-is"
+    ],
+    "dong1": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-minimality",
+      "appendix-frontier",
+      "appendix-grammar",
+      "colors",
+      "comparing",
+      "direction-and-result",
+      "doubling-words",
+      "greetings-and-feelings",
+      "inside-a-sentence",
+      "linking-sentences",
+      "numbers",
+      "pointing",
+      "roles-of-a-word",
+      "who-does-what",
+      "words-and-sentences"
+    ],
+    "xi1": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-minimality",
+      "appendix-frontier",
+      "appendix-grammar",
+      "colors",
+      "comparing",
+      "direction-and-result",
+      "doubling-words",
+      "greetings-and-feelings",
+      "inside-a-sentence",
+      "linking-sentences",
+      "numbers",
+      "pointing",
+      "roles-of-a-word",
+      "who-does-what",
+      "words-and-sentences"
+    ],
+    "fang1": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-minimality",
+      "appendix-grammar",
+      "also-and-all",
+      "becoming-and-making",
+      "comparing",
+      "direction-and-result",
+      "everyday-patterns",
+      "inside-a-sentence",
+      "linking-sentences",
+      "modifying-nouns",
+      "moving",
+      "numbers",
       "roles-of-a-word"
     ],
     "ba3": [
@@ -1626,6 +2190,23 @@
       "when-it-happens",
       "where-it-is"
     ],
+    "guo4": [
+      "appendix-grammar",
+      "around-an-action",
+      "direction-and-result",
+      "how-much",
+      "numbers",
+      "when-it-happens"
+    ],
+    "zhe3": [
+      "appendix-grammar",
+      "greetings-and-feelings",
+      "inside-a-sentence",
+      "linking-sentences"
+    ],
+    "zi": [
+      "roles-of-a-word"
+    ],
     "bu4": [
       "phrase-book",
       "appendix-stories",
@@ -1643,6 +2224,7 @@
       "inside-a-sentence",
       "linking-sentences",
       "moving",
+      "numbers",
       "pre-verbs",
       "questions",
       "roles-of-a-word",
@@ -1665,7 +2247,7 @@
       "questions",
       "who-does-what"
     ],
-    "dan4shi4": [
+    "dan4": [
       "appendix-stories",
       "appendix-grammar",
       "doubling-words",
@@ -1678,7 +2260,7 @@
       "appendix-grammar",
       "inside-a-sentence"
     ],
-    "huo4zhe3": [
+    "huo4": [
       "appendix-grammar",
       "greetings-and-feelings",
       "inside-a-sentence",
@@ -1691,9 +2273,12 @@
       "inside-a-sentence"
     ],
     "you4": [
+      "phrase-book",
       "appendix-stories",
       "appendix-grammar",
       "around-an-action",
+      "colors",
+      "comparing",
       "moving",
       "where-it-is"
     ],
@@ -1720,12 +2305,9 @@
       "greetings-and-feelings",
       "linking-sentences"
     ],
-    "wei4shen2me": [
-      "appendix-stories",
-      "appendix-grammar",
-      "greetings-and-feelings",
-      "questions",
-      "when-it-happens"
+    "hai2": [
+      "also-and-all",
+      "roles-of-a-word"
     ],
     "zen3me": [
       "phrase-book",
@@ -1734,6 +2316,24 @@
       "questions",
       "roles-of-a-word",
       "when-it-happens"
+    ],
+    "na3": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-grammar",
+      "also-and-all",
+      "becoming-and-making",
+      "comparing",
+      "greetings-and-feelings",
+      "moving",
+      "numbers",
+      "roles-of-a-word",
+      "where-it-is"
+    ],
+    "shei2": [
+      "appendix-stories",
+      "questions",
+      "where-it-is"
     ],
     "neng2": [
       "phrase-book",
@@ -1746,7 +2346,9 @@
       "linking-sentences",
       "moving",
       "numbers",
-      "pre-verbs"
+      "pre-verbs",
+      "when-it-happens",
+      "where-it-is"
     ],
     "hui4": [
       "phrase-book",
@@ -1756,6 +2358,25 @@
       "direction-and-result",
       "linking-sentences",
       "when-it-happens"
+    ],
+    "ke3": [
+      "appendix-grammar",
+      "pre-verbs",
+      "when-it-happens",
+      "where-it-is"
+    ],
+    "yi3": [
+      "pre-verbs"
+    ],
+    "zhen1": [
+      "phrase-book",
+      "appendix-stories",
+      "appendix-grammar",
+      "also-and-all",
+      "how-much"
+    ],
+    "ding4": [
+      "greetings-and-feelings"
     ],
     "hen3": [
       "phrase-book",
@@ -1791,431 +2412,6 @@
       "comparing",
       "greetings-and-feelings",
       "numbers"
-    ],
-    "fang1fa3": [
-      "inside-a-sentence",
-      "linking-sentences",
-      "roles-of-a-word"
-    ],
-    "sheng1yin1": [
-      "appendix-stories",
-      "appendix-grammar",
-      "greetings-and-feelings"
-    ],
-    "zhen1": [
-      "phrase-book",
-      "appendix-stories",
-      "appendix-grammar",
-      "also-and-all",
-      "how-much"
-    ],
-    "wen4": [
-      "appendix-stories",
-      "doubling-words",
-      "everyday-patterns",
-      "linking-sentences",
-      "pre-verbs",
-      "questions"
-    ],
-    "xie4": [
-      "phrase-book",
-      "appendix-grammar",
-      "doubling-words",
-      "everyday-patterns",
-      "greetings-and-feelings"
-    ],
-    "na3li3": [
-      "phrase-book",
-      "appendix-stories",
-      "appendix-grammar",
-      "also-and-all",
-      "becoming-and-making",
-      "comparing",
-      "greetings-and-feelings",
-      "moving",
-      "numbers",
-      "roles-of-a-word",
-      "where-it-is"
-    ],
-    "pa4": [
-      "phrase-book",
-      "appendix-stories",
-      "appendix-frontier",
-      "appendix-grammar",
-      "greetings-and-feelings"
-    ],
-    "xiao4": [
-      "appendix-stories",
-      "appendix-grammar",
-      "doubling-words",
-      "everyday-patterns",
-      "greetings-and-feelings"
-    ],
-    "xia4": [
-      "phrase-book",
-      "appendix-stories",
-      "appendix-grammar",
-      "around-an-action",
-      "direction-and-result",
-      "doubling-words",
-      "everyday-patterns",
-      "greetings-and-feelings",
-      "moving",
-      "numbers",
-      "where-it-is"
-    ],
-    "shang4": [
-      "appendix-stories",
-      "appendix-grammar",
-      "becoming-and-making",
-      "colors",
-      "direction-and-result",
-      "doubling-words",
-      "greetings-and-feelings",
-      "linking-sentences",
-      "moving",
-      "numbers",
-      "roles-of-a-word",
-      "where-it-is"
-    ],
-    "qi3": [
-      "appendix-stories",
-      "appendix-grammar",
-      "direction-and-result",
-      "everyday-patterns",
-      "linking-sentences",
-      "moving",
-      "numbers"
-    ],
-    "hou4": [
-      "appendix-stories",
-      "appendix-frontier",
-      "appendix-grammar",
-      "around-an-action",
-      "comparing",
-      "moving",
-      "numbers",
-      "where-it-is"
-    ],
-    "li3": [
-      "phrase-book",
-      "appendix-stories",
-      "word-builder",
-      "appendix-frontier",
-      "appendix-grammar",
-      "also-and-all",
-      "becoming-and-making",
-      "colors",
-      "comparing",
-      "direction-and-result",
-      "greetings-and-feelings",
-      "inside-a-sentence",
-      "linking-sentences",
-      "numbers",
-      "roles-of-a-word",
-      "where-it-is"
-    ],
-    "mian4": [
-      "phrase-book",
-      "appendix-stories",
-      "appendix-grammar",
-      "also-and-all",
-      "direction-and-result",
-      "inside-a-sentence",
-      "linking-sentences",
-      "moving",
-      "numbers",
-      "roles-of-a-word",
-      "where-it-is"
-    ],
-    "bian1": [
-      "comparing",
-      "moving",
-      "where-it-is"
-    ],
-    "zhong1": [
-      "appendix-grammar",
-      "comparing",
-      "inside-a-sentence",
-      "where-it-is"
-    ],
-    "jian1": [
-      "appendix-grammar",
-      "also-and-all",
-      "comparing",
-      "inside-a-sentence",
-      "where-it-is"
-    ],
-    "dao4": [
-      "phrase-book",
-      "appendix-stories",
-      "word-builder",
-      "appendix-grammar",
-      "also-and-all",
-      "direction-and-result",
-      "greetings-and-feelings",
-      "linking-sentences",
-      "moving",
-      "numbers",
-      "roles-of-a-word"
-    ],
-    "guo4": [
-      "appendix-grammar",
-      "around-an-action",
-      "direction-and-result",
-      "how-much",
-      "numbers",
-      "when-it-happens"
-    ],
-    "san1": [
-      "phrase-book",
-      "appendix-stories",
-      "appendix-grammar",
-      "greetings-and-feelings",
-      "inside-a-sentence",
-      "numbers"
-    ],
-    "si4": [
-      "appendix-grammar",
-      "colors",
-      "inside-a-sentence",
-      "numbers"
-    ],
-    "wu3": [
-      "appendix-stories",
-      "appendix-grammar",
-      "colors",
-      "linking-sentences",
-      "numbers"
-    ],
-    "liu4": [
-      "phrase-book",
-      "appendix-stories",
-      "appendix-grammar",
-      "colors",
-      "inside-a-sentence",
-      "numbers"
-    ],
-    "qi1": [
-      "appendix-frontier",
-      "appendix-grammar",
-      "colors",
-      "inside-a-sentence",
-      "numbers"
-    ],
-    "ba1": [
-      "appendix-grammar",
-      "colors",
-      "inside-a-sentence",
-      "numbers"
-    ],
-    "jiu3": [
-      "appendix-grammar",
-      "inside-a-sentence",
-      "linking-sentences",
-      "numbers"
-    ],
-    "shi2": [
-      "phrase-book",
-      "appendix-frontier",
-      "appendix-grammar",
-      "linking-sentences",
-      "numbers",
-      "roles-of-a-word"
-    ],
-    "men": [
-      "phrase-book",
-      "appendix-stories",
-      "appendix-frontier",
-      "appendix-grammar",
-      "also-and-all",
-      "around-an-action",
-      "comparing",
-      "direction-and-result",
-      "doubling-words",
-      "everyday-patterns",
-      "greetings-and-feelings",
-      "inside-a-sentence",
-      "linking-sentences",
-      "moving",
-      "numbers",
-      "pointing",
-      "where-it-is",
-      "who-does-what"
-    ],
-    "er4": [
-      "phrase-book",
-      "appendix-stories",
-      "appendix-grammar",
-      "greetings-and-feelings",
-      "linking-sentences",
-      "numbers"
-    ],
-    "shao3": [
-      "phrase-book",
-      "appendix-grammar",
-      "around-an-action",
-      "comparing",
-      "modifying-nouns",
-      "numbers",
-      "who-does-what"
-    ],
-    "ke3neng2": [
-      "appendix-grammar",
-      "pre-verbs",
-      "when-it-happens",
-      "where-it-is"
-    ],
-    "xian4zai4": [
-      "phrase-book",
-      "appendix-grammar",
-      "around-an-action",
-      "everyday-patterns",
-      "greetings-and-feelings",
-      "linking-sentences",
-      "numbers",
-      "when-it-happens"
-    ],
-    "fa1": [
-      "appendix-grammar",
-      "around-an-action",
-      "greetings-and-feelings",
-      "when-it-happens"
-    ],
-    "tian1": [
-      "appendix-frontier",
-      "appendix-grammar",
-      "colors",
-      "doubling-words",
-      "numbers",
-      "roles-of-a-word"
-    ],
-    "nian2": [
-      "appendix-frontier",
-      "appendix-grammar",
-      "doubling-words",
-      "linking-sentences",
-      "numbers"
-    ],
-    "yuan3": [
-      "phrase-book",
-      "appendix-stories",
-      "appendix-grammar",
-      "also-and-all",
-      "comparing",
-      "linking-sentences",
-      "moving",
-      "numbers"
-    ],
-    "fu4jin4": [
-      "phrase-book",
-      "appendix-grammar",
-      "direction-and-result",
-      "inside-a-sentence",
-      "moving"
-    ],
-    "dong4": [
-      "appendix-stories",
-      "appendix-grammar",
-      "also-and-all",
-      "direction-and-result",
-      "moving"
-    ],
-    "fei1": [
-      "phrase-book",
-      "appendix-stories",
-      "word-builder",
-      "colors",
-      "direction-and-result",
-      "greetings-and-feelings",
-      "roles-of-a-word"
-    ],
-    "tang3": [
-      "phrase-book",
-      "appendix-stories",
-      "appendix-grammar",
-      "direction-and-result",
-      "greetings-and-feelings",
-      "numbers"
-    ],
-    "zhan4": [
-      "appendix-grammar",
-      "direction-and-result",
-      "everyday-patterns",
-      "linking-sentences"
-    ],
-    "zuo4": [
-      "appendix-stories",
-      "appendix-grammar",
-      "direction-and-result",
-      "everyday-patterns",
-      "greetings-and-feelings"
-    ],
-    "jin4": [
-      "appendix-stories",
-      "appendix-grammar",
-      "colors",
-      "direction-and-result",
-      "doubling-words",
-      "everyday-patterns",
-      "greetings-and-feelings"
-    ],
-    "chu1": [
-      "phrase-book",
-      "appendix-stories",
-      "appendix-grammar",
-      "direction-and-result",
-      "doubling-words",
-      "everyday-patterns",
-      "linking-sentences"
-    ],
-    "hui2": [
-      "appendix-stories",
-      "appendix-grammar",
-      "direction-and-result",
-      "greetings-and-feelings",
-      "linking-sentences",
-      "numbers"
-    ],
-    "tong1": [
-      "appendix-grammar",
-      "direction-and-result",
-      "numbers",
-      "roles-of-a-word"
-    ],
-    "jia4zhi2": [
-      "appendix-grammar",
-      "comparing",
-      "how-much",
-      "roles-of-a-word"
-    ],
-    "bie2de": [
-      "phrase-book",
-      "appendix-stories",
-      "appendix-grammar",
-      "also-and-all",
-      "colors",
-      "comparing"
-    ],
-    "zhong3": [
-      "appendix-stories",
-      "appendix-grammar",
-      "colors",
-      "comparing",
-      "numbers"
-    ],
-    "bu4fen": [
-      "appendix-stories",
-      "appendix-grammar",
-      "also-and-all",
-      "inside-a-sentence",
-      "numbers"
-    ],
-    "huo2": [
-      "appendix-stories",
-      "doubling-words",
-      "greetings-and-feelings",
-      "linking-sentences"
     ]
   }
 }

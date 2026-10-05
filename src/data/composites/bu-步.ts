@@ -7,6 +7,7 @@ export default composite({
   py: "bù",
   en: "step",
   ru: "шаг",
+  pos: "noun",
   hsd: ["{{word:jiao3}} {{word:dong4}} {{word:yi1}}-{{word:ci4}}"],
   tts: ["脚动一次"],
   literal: "one move of the foot",

@@ -7,6 +7,7 @@ export default composite({
   py: "xīwàng",
   en: "hope",
   ru: "надеяться",
+  pos: "verb",
   hsd: ["{{word:yao4}}"],
   tts: ["要"],
   literal: "want",

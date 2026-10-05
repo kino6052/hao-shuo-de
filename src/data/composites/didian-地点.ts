@@ -7,6 +7,7 @@ export default composite({
   py: "dìdiǎn",
   en: "location",
   ru: "место",
+  pos: "noun",
   hsd: ["{{word:di4}}-{{word:dian3}}"],
   tts: ["地点"],
   literal: "ground point",

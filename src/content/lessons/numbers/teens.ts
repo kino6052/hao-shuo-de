@@ -4,6 +4,13 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "teens",
+  words: [
+    {
+      word: "bai3",
+      en: "hundred",
+      ru: "сто",
+    },
+  ],
   prose: {
     en: [
       "**To say numbers above ten**, put {{word:shi2}} (ten) before or after the other number.",
@@ -11,6 +18,7 @@ export default lessonModule({
       "**{{word:shi2}} + number (11-19) / number + {{word:shi2}} (20, 30 …)**",
       "",
       "{{word:shi2}}-{{word:er4}} is 12 (ten and two). {{word:er4}}-{{word:shi2}} is 20 (two tens).",
+      "After ninety-nine comes {{word:yi1}}-{{word:bai3}}, a hundred.",
     ],
     ru: [
       "**Чтобы назвать числа больше десяти**, поставьте {{word:shi2}} (десять) перед другим числом или после него.",
@@ -18,6 +26,7 @@ export default lessonModule({
       "**{{word:shi2}} + число (11–19) / число + {{word:shi2}} (20, 30 …)**",
       "",
       "{{word:shi2}}-{{word:er4}} — это 12 (десять и два). {{word:er4}}-{{word:shi2}} — это 20 (два десятка).",
+      "После девяноста девяти идёт {{word:yi1}}-{{word:bai3}} — сто.",
     ],
     tldr: {
       en: "{{word:shi2}}-{{word:er4}} is 12. {{word:er4}}-{{word:shi2}} is 20.",
@@ -66,6 +75,18 @@ export default lessonModule({
       en: "Thirty boxes.",
       ru: "Тридцать коробок.",
     },
+    {
+      pinyin: "{{Word:yi1}}-{{word:bai3}}.",
+      hanzi: "一百。",
+      en: "A hundred.",
+      ru: "Сто.",
+    },
+    {
+      pinyin: "{{Word:san1}}-{{word:bai3}}-ge {{word:ren2}}.",
+      hanzi: "三百个人。",
+      en: "Three hundred people.",
+      ru: "Триста человек.",
+    },
   ],
   exercises: [
     {
@@ -73,6 +94,12 @@ export default lessonModule({
       ru: "двенадцать человек",
       answer: "{{Word:shi2}}-{{word:er4}}-ge {{word:ren2}}.",
       hanzi: "十二个人。",
+    },
+    {
+      en: "Two hundred.",
+      ru: "Двести.",
+      answer: "{{Word:liang3}}-{{word:bai3}}.",
+      hanzi: "两百。",
     },
   ],
   faq: [

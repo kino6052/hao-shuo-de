@@ -7,6 +7,7 @@ export default composite({
   py: "duǎnxìn",
   en: "text message",
   ru: "SMS",
+  pos: "noun",
   hsd: ["{{word:xiao3}}-{{word:de}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["小的写的东西"],
   literal: "a small written thing",

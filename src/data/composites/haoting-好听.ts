@@ -7,6 +7,7 @@ export default composite({
   py: "hǎotīng",
   en: "pleasant to hear",
   ru: "приятный на слух",
+  pos: "adjective",
   hsd: ["{{word:hao3}} {{word:ting1}}"],
   tts: ["好听"],
   literal: "good to listen to",

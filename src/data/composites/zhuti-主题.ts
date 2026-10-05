@@ -7,6 +7,7 @@ export default composite({
   py: "zhǔtí",
   en: "theme, topic",
   ru: "тема",
+  pos: "noun",
   hsd: ["{{word:zui4}} {{word:yao4}} {{word:shuo1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["最要说的东西"],
   literal: "the main thing to talk about",

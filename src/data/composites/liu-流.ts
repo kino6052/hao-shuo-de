@@ -7,6 +7,7 @@ export default composite({
   py: "liú",
   en: "flow",
   ru: "течь",
+  pos: "verb",
   hsd: ["{{word:dong4}}"],
   tts: ["动"],
   fit: "word",

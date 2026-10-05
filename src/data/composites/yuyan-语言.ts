@@ -7,6 +7,7 @@ export default composite({
   py: "yǔyán",
   en: "language",
   ru: "язык",
+  pos: "noun",
   hsd: ["{{word:shuo1}}-{{word:de}}"],
   tts: ["说的"],
   literal: "what's said",

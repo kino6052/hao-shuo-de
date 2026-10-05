@@ -7,6 +7,7 @@ export default composite({
   py: "chūqù",
   en: "go out",
   ru: "выходить",
+  pos: "verb",
   hsd: ["{{word:chu1}}-{{word:qu4}}"],
   tts: ["出去"],
   literal: "out-go",

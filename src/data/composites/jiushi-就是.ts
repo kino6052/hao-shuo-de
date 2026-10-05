@@ -7,9 +7,10 @@ export default composite({
   py: "jiùshì",
   en: "exactly",
   ru: "именно",
+  pos: "auxiliary",
   hsd: ["{{word:jiu4}}-{{word:shi4}}", "{{word:shi4}}"],
   tts: ["就是", "是"],
-  fit: "natural",
   literal: "just is",
+  fit: "natural",
   proposed: true,
 });

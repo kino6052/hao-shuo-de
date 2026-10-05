@@ -7,6 +7,7 @@ export default composite({
   py: "jiérì",
   en: "festival, holiday",
   ru: "праздник",
+  pos: "noun",
   hsd: ["{{word:kai1}}-{{word:xin1}}-{{word:de}} {{word:ri4}}"],
   tts: ["开心的日"],
   literal: "a happy day",

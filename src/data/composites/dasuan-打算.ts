@@ -7,9 +7,10 @@ export default composite({
   py: "dǎsuàn",
   en: "plan, intend",
   ru: "собираться",
+  pos: "verb",
   hsd: ["{{word:da3}}-{{word:suan4}}", "{{word:yao4}}"],
   tts: ["打算", "要"],
-  fit: "natural",
   literal: "hit-calculate",
+  fit: "natural",
   proposed: true,
 });

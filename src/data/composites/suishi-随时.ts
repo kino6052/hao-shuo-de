@@ -7,6 +7,7 @@ export default composite({
   py: "suíshí",
   en: "at any time",
   ru: "в любое время",
+  pos: "adverb",
   hsd: ["{{word:shen2me}} {{word:shi2}}-{{word:jian1}} {{word:dou1}}"],
   tts: ["什么时间都"],
   literal: "at any time",

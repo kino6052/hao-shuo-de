@@ -7,6 +7,7 @@ export default composite({
   py: "duìmiàn",
   en: "opposite side",
   ru: "напротив",
+  pos: "noun",
   hsd: ["{{word:dui4}}-{{word:mian4}}"],
   tts: ["对面"],
   literal: "facing side",

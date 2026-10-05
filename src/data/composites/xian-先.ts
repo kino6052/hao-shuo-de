@@ -7,6 +7,7 @@ export default composite({
   py: "xiān",
   en: "first",
   ru: "сначала",
+  pos: "adverb",
   hsd: ["X-{{word:wan2}} {{word:hou4}}, Y", "Y {{word:qian2}}, X"],
   tts: ["X完后，Y", "Y前，X"],
   literal: "after finishing X, Y / before Y, X",

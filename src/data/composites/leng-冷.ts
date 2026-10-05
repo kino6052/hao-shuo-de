@@ -7,6 +7,7 @@ export default composite({
   py: "lěng",
   en: "cold",
   ru: "холодный",
+  pos: "adjective",
   hsd: ["{{word:leng3}}"],
   tts: ["冷"],
   fit: "word",

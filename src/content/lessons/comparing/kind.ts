@@ -49,8 +49,8 @@ export default lessonModule({
       ru: "Этот сорт лучше того.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:yao4}} {{word:na4}}-{{word:zhong3}} {{word:gun4zi}}.",
-      hanzi: "我要那种棍子。",
+      pinyin: "{{Word:wo3}} {{word:yao4}} {{word:na4}}-{{word:zhong3}} {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
+      hanzi: "我要那种长的东西。",
       en: "I want that kind of stick.",
       ru: "Мне нужна палка вон такого вида.",
     },

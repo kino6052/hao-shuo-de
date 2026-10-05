@@ -7,6 +7,7 @@ export default composite({
   py: "kāichē",
   en: "drive",
   ru: "водить машину",
+  pos: "verb",
   hsd: ["{{word:kai1}} {{word:che1}}"],
   tts: ["开车"],
   fit: "natural",

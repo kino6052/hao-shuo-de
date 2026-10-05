@@ -7,6 +7,7 @@ export default composite({
   py: "jiànkāng",
   en: "healthy",
   ru: "здоровый",
+  pos: "adjective",
   hsd: ["{{word:shen1ti3}} {{word:hao3}}"],
   tts: ["身体好"],
   literal: "body good",

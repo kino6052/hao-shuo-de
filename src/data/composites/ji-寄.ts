@@ -7,6 +7,7 @@ export default composite({
   py: "jì",
   en: "send, mail",
   ru: "отправлять (почтой)",
+  pos: "verb",
   hsd: ["{{word:gei3}} {{word:yuan3}}-{{word:de}} {{word:ren2}}"],
   tts: ["给远的人"],
   literal: "give to someone far away",

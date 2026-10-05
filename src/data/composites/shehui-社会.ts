@@ -7,6 +7,7 @@ export default composite({
   py: "shèhuì",
   en: "society",
   ru: "общество",
+  pos: "noun",
   hsd: ["{{word:da4}} {{word:qun2}}"],
   tts: ["大群"],
   literal: "the big group",

@@ -7,6 +7,7 @@ export default composite({
   py: "shāngxīn",
   en: "sad",
   ru: "грустный",
+  pos: "adjective",
   hsd: ["{{word:bu4}} {{word:kai1}}-{{word:xin1}}"],
   tts: ["不开心"],
   literal: "not happy",

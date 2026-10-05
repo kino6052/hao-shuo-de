@@ -7,6 +7,7 @@ export default composite({
   py: "shìchǎng",
   en: "market",
   ru: "рынок",
+  pos: "noun",
   hsd: ["{{word:mai3}} {{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
   tts: ["买东西的地方"],
   literal: "the place to buy things",

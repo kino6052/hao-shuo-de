@@ -7,6 +7,7 @@ export default composite({
   py: "shèqū",
   en: "community",
   ru: "сообщество, район",
+  pos: "noun",
   hsd: ["{{word:jia1}} {{word:zai4}} {{word:fu4jin4}}-{{word:de}} {{word:ren2}}"],
   tts: ["家在附近的人"],
   literal: "people whose homes are nearby",

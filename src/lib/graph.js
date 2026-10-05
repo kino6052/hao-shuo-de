@@ -18,6 +18,7 @@
 import Graph from 'graphology';
 import louvain from 'graphology-communities-louvain';
 import { wordRefIds } from './word-refs.js';
+import { compositeHeads, headKey, headCounts } from './heads.js';
 
 // -> word id -> the leaf key it's in.
 export function wordCategories(dictionary) {
@@ -166,4 +167,111 @@ export function analyzeWords({ dictionary, composites }, { resolution = 1 } = {}
   clustersList.forEach((c) => c.ids.forEach((id) => family.set(id, c.index)));
   for (const id of parts.keys()) if (!family.has(id)) family.set(id, -1);
   return { graph, reach, parts: family, participation: participation(graph, parts), clusters: clustersList, alone: all.filter((ids) => ids.length === 1).flat(), skip };
+}
+
+// -- Families by head --------------------------------------------------------
+//
+// The Word Map's families. Every composite hangs under its head (src/lib/
+// heads.js: 手机 under jī, ... -de dōng-xi under 东西), weakly touches its
+// other words, and every word is tied to its category leaf and the coverage
+// items it carries. categoryWeight (the map's slider) sets how much the
+// categories and atoms count against the composites: 0 is composites alone;
+// the default keeps whole categories (the numbers) together.
+
+export const FAMILY_DEFAULTS = { categoryWeight: 2, atomWeight: 1, otherWeight: 0.15, resolution: 1 };
+
+// -> the graph of words (w:id), composites (c:zh), category leaves (k:leaf)
+// and coverage items (a:group:key).
+export function familyGraph({ dictionary, composites, coverage }, options = {}) {
+  const { categoryWeight, atomWeight, otherWeight } = { ...FAMILY_DEFAULTS, ...options };
+  const g = new Graph({ type: 'undirected' });
+  const words = dictionary.words;
+  for (const id of Object.keys(words)) g.addNode(`w:${id}`, { kind: 'word', id });
+  const { heads } = compositeHeads(dictionary, composites.entries);
+  for (const e of composites.entries) if (heads.has(e.zh)) g.mergeNode(`c:${e.zh}`, { kind: 'composite', zh: e.zh });
+  for (const e of composites.entries) {
+    const h = heads.get(e.zh);
+    if (!h) continue;
+    const node = `c:${e.zh}`;
+    const hk = headKey(h);
+    if (g.hasNode(hk) && hk !== node) g.mergeEdge(node, hk, { weight: 1 });
+    const others = [...compositeWords(e)].filter((id) => words[id] && !STRUCTURE_WORDS.includes(id) && `w:${id}` !== hk);
+    for (const id of others) g.mergeEdge(node, `w:${id}`, { weight: otherWeight / Math.sqrt(others.length) });
+  }
+  if (categoryWeight > 0) {
+    for (const [id, { leaf }] of wordCategories(dictionary)) {
+      if (!words[id]) continue;
+      g.mergeNode(`k:${leaf}`, { kind: 'category' });
+      g.mergeEdge(`k:${leaf}`, `w:${id}`, { weight: categoryWeight });
+    }
+    // atoms count as much as categories do, relative to the default
+    const share = (atomWeight * categoryWeight) / FAMILY_DEFAULTS.categoryWeight;
+    for (const group of coverage.groups)
+      for (const item of group.items) {
+        const ws = item.words.filter((id) => words[id]);
+        if (ws.length < 2 || !share) continue;
+        const node = `a:${group.key}:${item.key}`;
+        g.mergeNode(node, { kind: 'coverage' });
+        for (const id of ws) g.mergeEdge(node, `w:${id}`, { weight: share / ws.length });
+      }
+  }
+  return { graph: g, heads };
+}
+
+// -> the families, as the Word Map shows them:
+//   graph       the word co-occurrence graph (for the layout and partners)
+//   reach       word id -> how many composites use it at all
+//   parts       word id -> family index (-1 alone)
+//   clusters    [{ index, ids, composites }] largest first; ids by how many
+//               composites each heads, so the first three name the family
+//   heads, direct, under   what each word heads (src/lib/heads.js)
+export function analyzeFamilies(data, options = {}) {
+  const opts = { ...FAMILY_DEFAULTS, ...options };
+  const { dictionary, composites } = data;
+  const { graph: fg } = familyGraph(data, opts);
+  const { heads, direct, under } = headCounts(dictionary, composites.entries);
+  let s = 1;
+  const rng = () => ((s = (s * 16807) % 2147483647) - 1) / 2147483646;
+  const comm = louvain(fg, { getEdgeWeight: 'weight', resolution: opts.resolution, rng });
+  const skip = STRUCTURE_WORDS.filter((id) => dictionary.words[id]);
+  const { graph, reach } = wordGraph({ dictionary, composites }, { skip });
+  const byComm = new Map();
+  for (const [node, c] of Object.entries(comm)) {
+    if (!byComm.has(c)) byComm.set(c, { ids: [], composites: [] });
+    if (node.startsWith('w:')) byComm.get(c).ids.push(node.slice(2));
+    else if (node.startsWith('c:')) byComm.get(c).composites.push(node.slice(2));
+  }
+  const weight = (id) => (under.get(id)?.length ?? 0) * 1000 + (reach.get(id) ?? 0);
+  const groups = [...byComm.values()]
+    .filter((x) => x.ids.length)
+    .map((x) => ({ ids: x.ids.sort((a, b) => weight(b) - weight(a)), composites: x.composites }))
+    .sort((a, b) => b.ids.length - a.ids.length || b.composites.length - a.composites.length);
+  const clustersList = groups.filter((x) => x.ids.length > 1 || x.composites.length).map((x, index) => ({ index, ...x }));
+  const parts = new Map();
+  clustersList.forEach((c) => c.ids.forEach((id) => parts.set(id, c.index)));
+  for (const id of Object.keys(dictionary.words)) if (!parts.has(id)) parts.set(id, -1);
+  const compositeFamily = new Map();
+  clustersList.forEach((c) => c.composites.forEach((zh) => compositeFamily.set(zh, c.index)));
+  const alone = Object.keys(dictionary.words).filter((id) => parts.get(id) === -1);
+  return { graph, reach, parts, clusters: clustersList, alone, heads, direct, under, compositeFamily, skip, options: opts };
+}
+
+// -> how well the families follow the categories: the share of each leaf's
+// words in its largest family (weighted by leaf size), and the leaves split
+// over more than one family.
+export function categoryFit(dictionary, parts) {
+  const leaves = new Map();
+  for (const [id, { leaf }] of wordCategories(dictionary)) if (dictionary.words[id]) leaves.set(leaf, [...(leaves.get(leaf) ?? []), id]);
+  let inside = 0;
+  let all = 0;
+  const split = [];
+  for (const [leaf, ids] of leaves) {
+    if (ids.length < 2) continue;
+    const count = new Map();
+    for (const id of ids) count.set(parts.get(id), (count.get(parts.get(id)) ?? 0) + 1);
+    inside += Math.max(...count.values());
+    all += ids.length;
+    if (count.size > 1) split.push({ leaf, families: count.size, ids });
+  }
+  return { purity: all ? inside / all : 1, split };
 }

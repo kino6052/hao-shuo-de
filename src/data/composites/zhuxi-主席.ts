@@ -7,6 +7,7 @@ export default composite({
   py: "zhǔxí",
   en: "chairperson",
   ru: "председатель",
+  pos: "noun",
   hsd: ["{{word:qun2}}-{{word:li3}} {{word:zui4}} {{word:da4}}-{{word:de}} {{word:ren2}}"],
   tts: ["群里最大的人"],
   literal: "the biggest person in the group",

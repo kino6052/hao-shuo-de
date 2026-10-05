@@ -7,6 +7,7 @@ export default composite({
   py: "dà",
   en: "big",
   ru: "большой",
+  pos: "adjective",
   hsd: ["{{word:da4}}"],
   tts: ["大"],
   fit: "word",

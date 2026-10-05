@@ -7,6 +7,7 @@ export default composite({
   py: "wǒmen",
   en: "we",
   ru: "мы",
+  pos: "pronoun",
   hsd: ["{{word:wo3}}-{{word:men}}"],
   tts: ["我们"],
   literal: "I + more people",

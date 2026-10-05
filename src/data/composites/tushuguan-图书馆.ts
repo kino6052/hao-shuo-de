@@ -7,7 +7,10 @@ export default composite({
   py: "túshūguǎn",
   en: "library",
   ru: "библиотека",
-  hsd: ["{{word:fang4}}-{{word:xie3}}-{{word:de}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
+  pos: "noun",
+  hsd: [
+    "{{word:fang4}}-{{word:xie3}}-{{word:de}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
+  ],
   tts: ["放写的东西的地方"],
   literal: "place that keeps written things",
   fit: "plain",

@@ -7,9 +7,10 @@ export default composite({
   py: "fàn",
   en: "meal, rice",
   ru: "еда, рис",
-  hsd: ["{{word:chi1}}-{{word:de}}"],
-  tts: ["吃的"],
-  fit: "natural",
+  pos: "noun",
+  hsd: ["{{word:fan4}}", "{{word:chi1}}-{{word:de}}"],
+  tts: ["饭", "吃的"],
   literal: "what you eat",
+  fit: "word",
   proposed: true,
 });

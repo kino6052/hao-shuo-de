@@ -7,6 +7,7 @@ export default composite({
   py: "yǐngxiǎng",
   en: "affect",
   ru: "влиять",
+  pos: "verb",
   hsd: [
     "{{word:de2}} {{word:hao3}}-{{word:de}}",
     "{{word:bu4}}-{{word:hao3}}-{{word:de}} {{word:guan1xi}}",

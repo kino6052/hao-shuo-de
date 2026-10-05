@@ -7,6 +7,7 @@ export default composite({
   py: "shǒuxiān",
   en: "first of all",
   ru: "прежде всего",
+  pos: "adverb",
   hsd: ["{{word:kai1shi3}}"],
   tts: ["开始"],
   literal: "to begin with",

@@ -7,6 +7,7 @@ export default composite({
   py: "kāi wánxiào",
   en: "joke",
   ru: "шутить",
+  pos: "phrase",
   hsd: ["{{word:wan2r}}-{{word:de}} {{word:shuo1}}"],
   tts: ["玩儿的说"],
   literal: "say in play",

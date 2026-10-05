@@ -7,8 +7,10 @@ export default composite({
   py: "bǎi",
   en: "hundred",
   ru: "сто",
-  hsd: ["{{word:shi2}}-ge {{word:shi2}}"],
-  tts: ["十个十"],
+  pos: "number",
+  hsd: ["{{word:bai3}}", "{{word:shi2}}-ge {{word:shi2}}"],
+  tts: ["百", "十个十"],
   literal: "ten tens",
-  fit: "plain",
+  fit: "word",
+  proposed: true,
 });

@@ -7,6 +7,7 @@ export default composite({
   py: "tèsè",
   en: "special feature",
   ru: "отличительная черта",
+  pos: "noun",
   hsd: ["{{word:bu4}}-{{word:yi1}}-{{word:yang4}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
   tts: ["不一样的地方"],
   literal: "the way it's different",

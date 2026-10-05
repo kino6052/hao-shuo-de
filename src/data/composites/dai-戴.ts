@@ -7,6 +7,7 @@ export default composite({
   py: "dài",
   en: "wear (hat, glasses)",
   ru: "носить",
+  pos: "verb",
   hsd: ["{{word:fang4}} {{word:zai4}} {{word:shen1ti3}}-{{word:shang4}}"],
   tts: ["放在身体上"],
   literal: "put on the body",

@@ -7,6 +7,7 @@ export default composite({
   py: "dúshū",
   en: "read, study",
   ru: "читать, учиться",
+  pos: "verb",
   hsd: ["{{word:kan4}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["看写的东西"],
   literal: "look at written things",

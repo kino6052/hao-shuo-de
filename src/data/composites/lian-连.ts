@@ -7,6 +7,7 @@ export default composite({
   py: "lián",
   en: "even; connect",
   ru: "даже; соединять",
+  pos: "preposition",
   hsd: ["… {{word:ye3}} …", "{{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}"],
   tts: ["…也…", "放在一起"],
   literal: "also / put together",

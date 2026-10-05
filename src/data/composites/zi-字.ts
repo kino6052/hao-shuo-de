@@ -7,8 +7,10 @@ export default composite({
   py: "zì",
   en: "character (writing)",
   ru: "иероглиф",
-  hsd: ["{{word:xie3}}-{{word:de}} {{word:ci2}}"],
-  tts: ["写的词"],
+  pos: "noun",
+  hsd: ["{{word:zi4}}", "{{word:xie3}}-{{word:de}} {{word:ci2}}"],
+  tts: ["字", "写的词"],
   literal: "written word",
-  fit: "plain",
+  fit: "word",
+  proposed: true,
 });

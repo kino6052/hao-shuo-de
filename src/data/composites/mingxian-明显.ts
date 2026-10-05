@@ -7,6 +7,7 @@ export default composite({
   py: "míngxiǎn",
   en: "obvious",
   ru: "очевидный",
+  pos: "adjective",
   hsd: ["{{word:yi1}} {{word:kan4}} {{word:jiu4}} {{word:zhi1dao4}}"],
   tts: ["一看就知道"],
   literal: "you look and you know",

@@ -7,6 +7,7 @@ export default composite({
   py: "lǎobǎn",
   en: "boss",
   ru: "начальник",
+  pos: "noun",
   hsd: ["{{word:qun2}}-{{word:de}} {{word:tou2}}"],
   tts: ["群的头"],
   literal: "the head of the group",

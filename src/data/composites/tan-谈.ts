@@ -7,6 +7,7 @@ export default composite({
   py: "tán",
   en: "talk",
   ru: "разговаривать",
+  pos: "verb",
   hsd: ["{{word:shuo1}}"],
   tts: ["说"],
   fit: "word",

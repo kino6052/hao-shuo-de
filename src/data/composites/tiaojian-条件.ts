@@ -7,6 +7,7 @@ export default composite({
   py: "tiáojiàn",
   en: "condition, requirement",
   ru: "условие",
+  pos: "noun",
   hsd: ["{{word:yao4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["要的东西"],
   literal: "what's needed",

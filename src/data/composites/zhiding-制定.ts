@@ -7,6 +7,7 @@ export default composite({
   py: "zhìdìng",
   en: "draw up, set",
   ru: "разработать",
+  pos: "verb",
   hsd: ["{{word:zuo4}}-{{word:chu1}}"],
   tts: ["做出"],
   literal: "make",

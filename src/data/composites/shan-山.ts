@@ -7,6 +7,7 @@ export default composite({
   py: "shān",
   en: "mountain",
   ru: "гора",
+  pos: "noun",
   hsd: ["{{word:gao1}}-{{word:di4}}"],
   tts: ["高地"],
   literal: "high ground",

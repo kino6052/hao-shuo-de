@@ -7,6 +7,7 @@ export default composite({
   py: "méitǐ",
   en: "media",
   ru: "СМИ",
+  pos: "noun",
   hsd: [
     "{{word:shuo1}}-{{word:xian4}}-{{word:zai4}}-{{word:fa1}}-{{word:sheng1}}-{{word:shen2me}}-{{word:de}} {{word:gong1}}-{{word:ju4}}",
   ],

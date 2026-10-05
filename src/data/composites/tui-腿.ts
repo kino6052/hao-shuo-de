@@ -7,6 +7,7 @@ export default composite({
   py: "tuǐ",
   en: "leg",
   ru: "нога",
+  pos: "noun",
   hsd: ["{{word:jiao3}}"],
   tts: ["脚"],
   fit: "word",

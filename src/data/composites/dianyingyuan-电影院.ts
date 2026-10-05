@@ -7,6 +7,7 @@ export default composite({
   py: "diànyǐngyuàn",
   en: "cinema",
   ru: "кинотеатр",
+  pos: "noun",
   hsd: [
     "{{word:kan4}} {{word:dong4}}-{{word:de}}-{{word:kan4}}-{{word:de}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
   ],

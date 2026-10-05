@@ -2,16 +2,18 @@ import { useEffect, useMemo, useRef, useState } from "preact/hooks";
 import dictionary from "../data/dictionary.ts";
 import composites from "../data/composites.ts";
 import coverage from "../data/coverage.ts";
-import { analyzeWords, compositeWords, wordCategories } from "../lib/graph.js";
+import { analyzeFamilies, categoryFit, compositeWords, wordCategories, FAMILY_DEFAULTS } from "../lib/graph.js";
 import { resolveWordRefs } from "../lib/word-refs.js";
 import { buildWordIndex } from "../lib/dictionary-stats.js";
 import styles from "./WordMap.module.css";
 
-// The Word Map: the 200 words as a network, linked when composites use them
-// together, so families of words that build things together show up as
-// clusters (src/lib/graph.js; `npm run graph-report` prints the same
-// analysis as text). Colour is the family, backed by the legend, the labels
-// and the list view, so it's never the only cue.
+// The Word Map: the words as a network. Every composite hangs under its head
+// word (src/lib/heads.js: 手机 under jī), so a word's size is how many
+// composites it gets under the hood, and families form from the composites
+// together with the categories and atoms; the slider sets how much those
+// count (src/lib/graph.js analyzeFamilies). Words are drawn linked when
+// composites use them together. Colour is the family, backed by the legend,
+// the labels and the list view, so it's never the only cue.
 
 // Categorical slots, fixed order (largest family first); families past the
 // eighth are "other" (grey). Validated for both surfaces with the dataviz
@@ -37,8 +39,14 @@ const TEXT = {
     category: "Category",
     none: "none",
     words: "words",
-    stats: (w, f, a) => `${w} words, ${f} families, ${a} in no composite.`,
+    stats: (w, f, p) => `${w} words in ${f} families; each category keeps ${p}% of its words together.`,
     other: "Other",
+    balance: "Families from",
+    byComposites: "composites",
+    byCategories: "categories & atoms",
+    heads: "Heads",
+    alsoIn: "Also used in",
+    chipTitle: (w, c) => `${w} words, ${c} composites`,
   },
   rus: {
     loading: "Рисуем карту…",
@@ -54,8 +62,14 @@ const TEXT = {
     category: "Категория",
     none: "нет",
     words: "слов",
-    stats: (w, f, a) => `${w} слов, ${f} семей, ${a} — ни в одном составном слове.`,
+    stats: (w, f, p) => `${w} слов в ${f} семьях; каждая категория держит вместе ${p}% своих слов.`,
     other: "Другое",
+    balance: "Семьи по",
+    byComposites: "составным словам",
+    byCategories: "категориям и атомам",
+    heads: "Возглавляет",
+    alsoIn: "Ещё входит в",
+    chipTitle: (w, c) => `${w} слов, ${c} составных слов`,
   },
 };
 
@@ -75,16 +89,19 @@ export function WordMap({ lang }) {
   const [hovered, setHovered] = useState(null);
   const [selected, setSelected] = useState(null);
   const [focus, setFocus] = useState(null); // a family index
+  const [weight, setWeight] = useState(FAMILY_DEFAULTS.categoryWeight);
 
   const data = useMemo(() => {
-    const a = analyzeWords({ dictionary, composites });
+    const a = analyzeFamilies({ dictionary, composites, coverage }, { categoryWeight: weight });
     const cats = wordCategories(dictionary);
     const uses = new Map();
     for (const e of composites.entries) for (const id of compositeWords(e)) uses.set(id, [...(uses.get(id) ?? []), e]);
     const covers = new Map();
     for (const g of coverage.groups) for (const item of g.items) for (const id of item.words) covers.set(id, [...(covers.get(id) ?? []), item.key]);
-    return { ...a, cats, uses, covers };
-  }, []);
+    const purity = Math.round(categoryFit(dictionary, a.parts).purity * 100);
+    return { ...a, cats, uses, covers, purity };
+  }, [weight]);
+  const headed = (id) => data.under.get(id) ?? [];
 
   const colors = dark ? PALETTE.dark : PALETTE.light;
   const familyColor = (f) => (f >= 0 && f < colors.length ? colors[f] : dark ? OTHER.dark : OTHER.light);
@@ -116,7 +133,7 @@ export function WordMap({ lang }) {
         const f = data.parts.get(id);
         const angle = (((f < 0 ? n - 1 : f) + ((k++ * 0.618) % 1)) / n) * 2 * Math.PI;
         const r = 10 + (k % 7);
-        g.addNode(id, { x: Math.cos(angle) * r, y: Math.sin(angle) * r, size: 3 + Math.sqrt(data.reach.get(id) ?? 0) * 1.1, label: term(id), family: f });
+        g.addNode(id, { x: Math.cos(angle) * r, y: Math.sin(angle) * r, size: 3 + Math.sqrt(headed(id).length) * 1.4, label: term(id), family: f });
       });
       // the strongest links only: each word's top three, and anything strong
       const keep = new Set();
@@ -215,7 +232,24 @@ export function WordMap({ lang }) {
 
   return (
     <div class={styles.map}>
-      <p class={styles.stats}>{tx.stats(Object.keys(dictionary.words).length, data.clusters.length, data.alone.length)} {tx.hint}</p>
+      <p class={styles.stats}>{tx.stats(Object.keys(dictionary.words).length, data.clusters.length, data.purity)} {tx.hint}</p>
+
+      <label class={styles.balance}>
+        <span>{tx.balance}</span>
+        <span class={styles.balanceEnd}>{tx.byComposites}</span>
+        <input
+          type="range"
+          min="0"
+          max="3"
+          step="0.5"
+          value={weight}
+          onChange={(e) => {
+            setFocus(null);
+            setWeight(Number(e.currentTarget.value));
+          }}
+        />
+        <span class={styles.balanceEnd}>{tx.byCategories}</span>
+      </label>
 
       <div class={styles.legend} role="group" aria-label={tx.families}>
         {data.clusters.map((c) => (
@@ -226,7 +260,10 @@ export function WordMap({ lang }) {
             aria-pressed={focus === c.index}
           >
             <span class={styles.swatch} style={{ background: familyColor(c.index) }} />
-            {c.index < colors.length ? familyName(c) : `${tx.other}: ${familyName(c)}`} <span class={styles.count}>{c.ids.length}</span>
+            {c.index < colors.length ? familyName(c) : `${tx.other}: ${familyName(c)}`}{" "}
+            <span class={styles.count} title={tx.chipTitle(c.ids.length, c.composites.length)}>
+              {c.ids.length} · {c.composites.length}
+            </span>
           </button>
         ))}
         {focus !== null && (
@@ -266,10 +303,20 @@ export function WordMap({ lang }) {
                 : tx.none}
             </dd>
             <dt>
-              {tx.composites} ({(data.uses.get(selected) ?? []).length})
+              {tx.heads} ({headed(selected).length})
             </dt>
             <dd>
-              {(data.uses.get(selected) ?? []).slice(0, 24).map((e) => `${e.zh} ${lang === "rus" ? e.ru : e.en}`).join(" · ") || tx.none}
+              {headed(selected).slice(0, 24).map((e) => `${e.zh} ${lang === "rus" ? e.ru : e.en}`).join(" · ") || tx.none}
+            </dd>
+            <dt>
+              {tx.alsoIn} ({(data.uses.get(selected) ?? []).filter((e) => !headed(selected).includes(e)).length})
+            </dt>
+            <dd>
+              {(data.uses.get(selected) ?? [])
+                .filter((e) => !headed(selected).includes(e))
+                .slice(0, 16)
+                .map((e) => `${e.zh} ${lang === "rus" ? e.ru : e.en}`)
+                .join(" · ") || tx.none}
             </dd>
             <dt>{tx.covers}</dt>
             <dd>{(data.covers.get(selected) ?? []).join(", ") || tx.none}</dd>
@@ -286,7 +333,8 @@ export function WordMap({ lang }) {
             {data.clusters.map((c) => (
               <tr key={c.index}>
                 <th scope="row">
-                  <span class={styles.swatch} style={{ background: familyColor(c.index) }} /> {familyName(c)}
+                  <span class={styles.swatch} style={{ background: familyColor(c.index) }} /> {familyName(c)}{" "}
+                  <span class={styles.count}>{tx.chipTitle(c.ids.length, c.composites.length)}</span>
                 </th>
                 <td>
                   {c.ids.map((id, i) => (

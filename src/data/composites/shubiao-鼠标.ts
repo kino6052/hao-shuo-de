@@ -7,6 +7,7 @@ export default composite({
   py: "shǔbiāo",
   en: "computer mouse",
   ru: "мышь (компьютерная)",
+  pos: "noun",
   hsd: [
     "{{word:yong4}}-{{word:shou3}}-{{word:zuo4}}-{{word:suan4}}-{{word:de}}-{{word:gong1}}-{{word:ju4}}-{{word:de}} {{word:xiao3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],

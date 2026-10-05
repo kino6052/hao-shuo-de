@@ -3,6 +3,13 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "move",
+  words: [
+    {
+      word: "zou3",
+      en: "walk, leave; {{word:zou3}}-{{word:lu4}}: walk",
+      ru: "идти пешком, уходить; {{word:zou3}}-{{word:lu4}} — идти пешком",
+    },
+  ],
   prose: {
     en: [
       "**To say something moves**, use {{word:dong4}} (move).",
@@ -10,6 +17,7 @@ export default lessonModule({
       "**Who + {{word:dong4}}**",
       "",
       "{{Word:bu4}} {{word:yao4}} {{word:dong4}}! means \"Don't move!\" And {{word:dong4}}-{{word:wu4}} (animal) is a \"moving thing\".",
+      "{{word:zou3}} is to walk, and also to leave: {{Word:wo3}} {{word:zou3}} {{word:le}}, I'm off.",
     ],
     ru: [
       "**Чтобы сказать, что что-то двигается**, используйте {{word:dong4}} (двигаться).",
@@ -17,6 +25,7 @@ export default lessonModule({
       "**Кто + {{word:dong4}}**",
       "",
       "{{Word:bu4}} {{word:yao4}} {{word:dong4}}! значит «Не двигайся!». А {{word:dong4}}-{{word:wu4}} (животное) — это «двигающаяся вещь».",
+      "{{word:zou3}} — идти пешком, а ещё уходить: {{Word:wo3}} {{word:zou3}} {{word:le}} — я пошёл.",
     ],
     tldr: {
       en: "{{word:dong4}} means move: {{Word:ta1}} {{word:dong4}} {{word:le}}, it moved.",
@@ -56,6 +65,18 @@ export default lessonModule({
       en: "Can you move?",
       ru: "Ты можешь двигаться?",
     },
+    {
+      pinyin: "{{Word:wo3}} {{word:zou3}} {{word:le}}.",
+      hanzi: "我走了。",
+      en: "I'm off.",
+      ru: "Я пошёл.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:zou3}}-{{word:lu4}} {{word:qu4}}.",
+      hanzi: "他走路去。",
+      en: "He walks there.",
+      ru: "Он идёт туда пешком.",
+    },
   ],
   exercises: [
     {
@@ -63,6 +84,12 @@ export default lessonModule({
       ru: "Не двигайся!",
       answer: "{{Word:bu4}} {{word:yao4}} {{word:dong4}}!",
       hanzi: "不要动！",
+    },
+    {
+      en: "We walk there.",
+      ru: "Мы идём туда пешком.",
+      answer: "{{Word:wo3}}-{{word:men}} {{word:zou3}}-{{word:lu4}} {{word:qu4}}.",
+      hanzi: "我们走路去。",
     },
   ],
 });

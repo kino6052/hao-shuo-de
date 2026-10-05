@@ -7,8 +7,10 @@ export default composite({
   py: "yǐ",
   en: "with; in order to",
   ru: "с помощью; чтобы",
-  hsd: ["{{word:yong4}} X"],
-  tts: ["用X"],
+  pos: "preposition",
+  hsd: ["{{word:yi3}}", "{{word:yong4}} X"],
+  tts: ["以", "用X"],
   literal: "using X",
-  fit: "plain",
+  fit: "word",
+  proposed: true,
 });

@@ -7,6 +7,7 @@ export default composite({
   py: "bànshì",
   en: "handle things",
   ru: "делать дела",
+  pos: "verb",
   hsd: ["{{word:zuo4}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["做东西"],
   literal: "do things",

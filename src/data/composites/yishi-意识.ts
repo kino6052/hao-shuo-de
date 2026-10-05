@@ -7,6 +7,7 @@ export default composite({
   py: "yìshí",
   en: "realize; awareness",
   ru: "осознавать; сознание",
+  pos: "verb",
   hsd: ["{{word:zhi1dao4}}"],
   tts: ["知道"],
   fit: "word",

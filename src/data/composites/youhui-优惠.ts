@@ -7,6 +7,7 @@ export default composite({
   py: "yōuhuì",
   en: "discounted, favorable",
   ru: "льготный, со скидкой",
+  pos: "adjective",
   hsd: ["{{word:yao4}}-{{word:de}} {{word:jin1}} {{word:shao3}} {{word:yi1}}-{{word:dian3}}"],
   tts: ["要的金少一点"],
   literal: "it costs a little less",

@@ -7,6 +7,7 @@ export default composite({
   py: "zhè",
   en: "this",
   ru: "этот",
+  pos: "pronoun",
   hsd: ["{{word:zhe4}}"],
   tts: ["这"],
   fit: "word",

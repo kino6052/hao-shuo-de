@@ -7,6 +7,7 @@ export default composite({
   py: "wài",
   en: "away",
   ru: "вдали",
+  pos: "noun",
   hsd: ["{{word:wai4}}"],
   tts: ["外"],
   fit: "word",

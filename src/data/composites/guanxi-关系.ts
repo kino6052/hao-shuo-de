@@ -7,6 +7,7 @@ export default composite({
   py: "guānxì",
   en: "relationship",
   ru: "отношения",
+  pos: "noun",
   hsd: ["{{word:guan1xi}}"],
   tts: ["关系"],
   fit: "word",

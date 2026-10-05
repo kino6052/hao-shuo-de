@@ -7,6 +7,7 @@ export default composite({
   py: "shìjiàn",
   en: "incident",
   ru: "происшествие",
+  pos: "noun",
   hsd: ["{{word:fa1}}-{{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["发生的东西"],
   literal: "something that happened",

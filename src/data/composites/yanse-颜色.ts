@@ -7,6 +7,7 @@ export default composite({
   py: "yánsè",
   en: "color",
   ru: "цвет",
+  pos: "noun",
   hsd: ["{{word:yan2se4}}"],
   tts: ["颜色"],
   fit: "word",

@@ -7,6 +7,7 @@ export default composite({
   py: "xiǎoxīn",
   en: "careful",
   ru: "осторожно",
+  pos: "verb",
   hsd: ["{{word:xiao3}}-{{word:xin1}}"],
   tts: ["小心"],
   literal: "small heart",

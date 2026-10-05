@@ -7,6 +7,7 @@ export default composite({
   py: "màn",
   en: "slow",
   ru: "медленный",
+  pos: "adjective",
   hsd: ["{{word:bu4}} {{word:kuai4}}"],
   tts: ["不快"],
   literal: "not fast",

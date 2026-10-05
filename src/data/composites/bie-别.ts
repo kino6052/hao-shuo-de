@@ -7,6 +7,7 @@ export default composite({
   py: "bié",
   en: "don't",
   ru: "не надо",
+  pos: "adverb",
   hsd: ["{{word:bie2}}", "{{word:bu4}} {{word:yao4}}"],
   tts: ["别", "不要"],
   fit: "word",

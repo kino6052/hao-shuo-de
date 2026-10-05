@@ -7,6 +7,7 @@ export default composite({
   py: "bízi",
   en: "nose",
   ru: "нос",
+  pos: "noun",
   hsd: ["{{word:bi2zi}}"],
   tts: ["鼻子"],
   fit: "word",
