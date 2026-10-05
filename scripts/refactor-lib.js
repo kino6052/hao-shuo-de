@@ -518,14 +518,20 @@ const isCode = (r) => /\.(ts|js|jsx)$/.test(r);
 // Rewrites every ref to `id` in every file with make(kind). hanziFn, when
 // given, rewrites the hanzi of each sentence that changed; every changed
 // sentence is noted when noteSentences is set.
-function rewriteAll(ws, id, make, { hanziFn, noteSentences = false, label } = {}) {
-  const has = (t) => t.includes(`:${id}}}`);
+function rewriteAll(ws, id, make, opts = {}) {
+  rewriteText(ws, (t) => replaceRefsTo(t, id, make), { ...opts, has: (t) => t.includes(`:${id}}}`) });
+}
+
+// Rewrites text everywhere with fn(text) -> text: string literals in code,
+// whole files elsewhere, composite forms with their hanzi kept in step.
+function rewriteText(ws, fn, { hanziFn, noteSentences = false, label, has = () => true } = {}) {
+  const apply = (v) => fn(v);
   for (const path of ws.files()) {
     let src = ws.get(path);
     if (!has(src)) continue;
     if (path.startsWith(WORDS_DIR) || path.startsWith(COMPOSITES_DIR) || path.startsWith(MAPS) || path.startsWith(COVERAGE)) {
       // data: refs are inside string values; composites keep hsd/tts in step
-      const r = rewriteStrings(src, (v) => replaceRefsTo(v, id, make));
+      const r = rewriteStrings(src, (v) => apply(v));
       if (path.startsWith(COMPOSITES_DIR) && hanziFn) {
         const e = ws.data(path);
         const before = splitData(src, path).value;
@@ -540,7 +546,7 @@ function rewriteAll(ws, id, make, { hanziFn, noteSentences = false, label } = {}
       continue;
     }
     if (isCode(path)) {
-      const r = rewriteStrings(src, (v) => replaceRefsTo(v, id, make), hanziFn);
+      const r = rewriteStrings(src, (v) => apply(v), hanziFn);
       ws.set(path, r.text);
       if (noteSentences) {
         for (const c of r.changed) {
@@ -550,7 +556,7 @@ function rewriteAll(ws, id, make, { hanziFn, noteSentences = false, label } = {}
         }
       }
     } else {
-      ws.set(path, replaceRefsTo(src, id, make));
+      ws.set(path, apply(src));
       if (noteSentences && /\.yaml$/.test(path)) ws.note('sentence', `${path}: ${label}: YAML text changed -- check hanzi there by hand`);
     }
   }
@@ -785,11 +791,26 @@ const OPS = {
       let c;
       while ((c = cards(ws).find((x) => x.word === id))) removeCard(ws, c);
       editCategories(ws, (ids) => ids.filter((x) => x !== id));
+      if (single) rewriteMentions(ws, id, old.term, ws.word(single).term);
       noteMentions(ws, id, old.term, `${id} was replaced`);
       ws.remove(ws.wordPath(id));
     } else {
       ws.note('todo', `${id} is kept for reuse: change its file and card with edit/move ops`);
     }
+  },
+
+  // { op: "refs", pattern, to, hanzi?: [pattern, to], label? } -- a regex over the
+  // text (refs included, e.g. "\\{\\{(w|W)ord:zuo4\\}\\} \\{\\{word:zai4\\}\\}"); each
+  // changed sentence's hanzi gets the hanzi regex, and is noted for review.
+  refs(ws, op) {
+    const re = new RegExp(op.pattern, 'g');
+    const hz = op.hanzi ? [new RegExp(op.hanzi[0], 'g'), op.hanzi[1]] : null;
+    rewriteText(ws, (t) => t.replace(re, op.to), {
+      hanziFn: hz ? (h) => h.replace(hz[0], hz[1]) : undefined,
+      noteSentences: true,
+      label: op.label ?? op.pattern,
+      has: (t) => new RegExp(op.pattern).test(t),
+    });
   },
 
   // { op: "rename", id, to } -- a new id (and its refs, cards, maps, coverage, senses)
