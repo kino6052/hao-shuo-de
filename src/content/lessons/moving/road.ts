@@ -1,15 +1,19 @@
-// To talk about the way to a place, use lù (road, way). Pattern: lù hěn yuǎn
-// / zhīdào lù / lù-shàng
+// To talk about the way to a place, use lù (road, way); chē (car) goes on it.
+// Pattern: lù hěn yuǎn / zhīdào lù / lù-shàng
 import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "road",
   words: [
     {
-      term: "{{word:lu4}}",
-      hanzi: "路",
+      word: "lu4",
       en: "road, path, way",
       ru: "дорога, путь",
+    },
+    {
+      word: "che1",
+      en: "car, vehicle",
+      ru: "машина, транспорт",
     },
   ],
   prose: {
@@ -17,11 +21,15 @@ export default lessonModule({
       "**To talk about the way to a place**, use {{word:lu4}} (road, way).",
       "",
       "**{{word:lu4}} {{word:hen3}} {{word:yuan3}} / {{word:zhi1dao4}} {{word:lu4}} / {{word:lu4}}-{{word:shang4}}**",
+      "",
+      "{{word:che1}} is a car, or anything on wheels that carries you: {{Word:che1}} {{word:zai4}} {{word:lu4}}-{{word:shang4}}, the car is on the road.",
     ],
     ru: [
       "**Чтобы говорить о дороге куда-то**, используйте {{word:lu4}} (дорога, путь).",
       "",
       "**{{word:lu4}} {{word:hen3}} {{word:yuan3}} / {{word:zhi1dao4}} {{word:lu4}} / {{word:lu4}}-{{word:shang4}}**",
+      "",
+      "{{word:che1}} — машина или всё, что возит вас на колёсах: {{Word:che1}} {{word:zai4}} {{word:lu4}}-{{word:shang4}} — машина на дороге.",
     ],
     tldr: {
       en: "{{word:lu4}} is the road or the way: {{Word:lu4}} {{word:hen3}} {{word:yuan3}}, it's a long way.",
@@ -30,8 +38,8 @@ export default lessonModule({
     necessity: { en: "Now you can ask the way.", ru: "Теперь вы можете спросить дорогу." },
   },
   info: {
-    en: "{{word:lu4}}, road, way: {{Word:ni3}} {{word:zhi1dao4}} {{word:lu4}} {{word:ma}}? (Do you know the way?)",
-    ru: "{{word:lu4}} — дорога, путь: {{Word:ni3}} {{word:zhi1dao4}} {{word:lu4}} {{word:ma}}? (Ты знаешь дорогу?)",
+    en: "{{word:lu4}}, road, way: {{Word:ni3}} {{word:zhi1dao4}} {{word:lu4}} {{word:ma}}? (Do you know the way?) {{word:che1}}, car: {{Word:che1}} {{word:zai4}} {{word:lu4}}-{{word:shang4}}. (The car is on the road.)",
+    ru: "{{word:lu4}} — дорога, путь: {{Word:ni3}} {{word:zhi1dao4}} {{word:lu4}} {{word:ma}}? (Ты знаешь дорогу?) {{word:che1}} — машина: {{Word:che1}} {{word:zai4}} {{word:lu4}}-{{word:shang4}}. (Машина на дороге.)",
   },
   examples: [
     {
@@ -58,6 +66,18 @@ export default lessonModule({
       en: "My home is on the left side of the road.",
       ru: "Мой дом слева от дороги.",
     },
+    {
+      pinyin: "{{Word:che1}} {{word:zai4}} {{word:lu4}}-{{word:shang4}}.",
+      hanzi: "车在路上。",
+      en: "The car is on the road.",
+      ru: "Машина на дороге.",
+    },
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:che1}} {{word:zai4}} {{word:fu4jin4}}.",
+      hanzi: "我的车在附近。",
+      en: "My car is nearby.",
+      ru: "Моя машина поблизости.",
+    },
   ],
   exercises: [
     {
@@ -65,6 +85,12 @@ export default lessonModule({
       ru: "Ты знаешь дорогу?",
       answer: "{{Word:ni3}} {{word:zhi1dao4}} {{word:lu4}} {{word:ma}}?",
       hanzi: "你知道路吗？",
+    },
+    {
+      en: "Where is your car?",
+      ru: "Где твоя машина?",
+      answer: "{{Word:ni3}}-{{word:de}} {{word:che1}} {{word:zai4}} {{word:na3li3}}?",
+      hanzi: "你的车在哪里？",
     },
   ],
 });

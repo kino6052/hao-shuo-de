@@ -24,11 +24,11 @@ export default lesson(meta.id, {
   summary: {
     en: [
       "Every day, we greet people and say how we feel.",
-      "In this lesson, you'll be able to say \"Hello!\", \"Thank you!\", \"What's your name?\", \"Eat!\", \"Don't laugh!\", \"I feel cold.\", and \"I'm scared of bugs.\"",
+      "In this lesson, you'll be able to say \"Hello!\", \"Thank you!\", \"What's your name?\", \"Eat!\", \"Don't laugh!\", \"I feel cold.\", and \"I'm scared of fire.\"",
     ],
     ru: [
       "Каждый день мы здороваемся с людьми и говорим, как себя чувствуем.",
-      "В этом уроке вы научитесь говорить «Привет!», «Спасибо!», «Как тебя зовут?», «Ешь!», «Не смейся!», «Мне холодно.» и «Я боюсь насекомых.»",
+      "В этом уроке вы научитесь говорить «Привет!», «Спасибо!», «Как тебя зовут?», «Ешь!», «Не смейся!», «Мне холодно.» и «Я боюсь огня.»",
     ],
   },
   modules: [

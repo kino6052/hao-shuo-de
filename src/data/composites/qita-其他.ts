@@ -1,0 +1,13 @@
+import { composite } from "../../lib/composite.ts";
+
+export default composite({
+  rank: 145,
+  phase: 1,
+  zh: "其他",
+  py: "qítā",
+  en: "other",
+  ru: "другой",
+  hsd: ["{{word:bie2de}}"],
+  tts: ["别的"],
+  fit: "word",
+});

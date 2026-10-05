@@ -18,6 +18,7 @@ import { fileURLToPath, pathToFileURL } from 'url';
 import { findEarlyWords } from './early-words.js';
 import { gatePolicy } from './finished-lessons.js';
 import { LESSON_IDS, lessonNumber, importLessonFile } from './lessons.js';
+import dictionaryData from '../src/data/dictionary.ts';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -34,7 +35,7 @@ for (const id of LESSON_IDS) {
 }
 lessons.sort((a, b) => a.number - b.number);
 
-const dictionary = JSON.parse(readFileSync(resolve(ROOT, 'src/data/dictionary.json'), 'utf-8')).words;
+const dictionary = dictionaryData.words;
 const unknown = named.filter((id) => !lessons.some((l) => l.id === id));
 if (unknown.length) {
   console.error(`check-early-words: no lesson called ${unknown.join(', ')}`);

@@ -36,7 +36,7 @@ export default lessonModule({
       ru: "Мне холодно, и ему тоже холодно.",
     },
     {
-      pinyin: "{{Word:kong1qi4}} {{word:ye3}} {{word:hen3}} {{word:leng3}}.",
+      pinyin: "{{Word:kong1}}-{{word:qi4}} {{word:ye3}} {{word:hen3}} {{word:leng3}}.",
       hanzi: "空气也很冷。",
       en: "The air is cold too.",
       ru: "Воздух тоже холодный.",

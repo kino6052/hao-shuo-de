@@ -6,8 +6,7 @@ export default lessonModule({
   id: "if",
   words: [
     {
-      term: "{{word:ru2guo3}}",
-      hanzi: "如果",
+      word: "ru2guo3",
       en: "if",
       ru: "если",
     },
@@ -74,10 +73,10 @@ export default lessonModule({
       ru: "Если ты не знаешь этого слова, спроси меня.",
     },
     {
-      pinyin: "{{Word:ru2guo3}} {{word:ni3}} {{word:yao4}}, {{word:chi1}} {{word:mi3fan4}} {{word:huo4zhe3}} {{word:shui3guo3}}.",
-      hanzi: "如果你要，吃米饭或者水果。",
-      en: "If you want, eat rice or fruit.",
-      ru: "Если хочешь, ешь рис или фрукты.",
+      pinyin: "{{Word:ru2guo3}} {{word:ni3}} {{word:yao4}}, {{word:he1}} {{word:shui3}} {{word:huo4zhe3}} {{word:chi1}} {{word:dong1xi}}.",
+      hanzi: "如果你要，喝水或者吃东西。",
+      en: "If you want, drink some water or eat something.",
+      ru: "Если хочешь, попей воды или поешь.",
     },
     {
       pinyin: "{{Word:ru2guo3}} {{word:na4}}-ge {{word:di4fang1}} {{word:yuan3}}, {{word:wo3}} {{word:bu4}} {{word:qu4}}.",
@@ -86,10 +85,10 @@ export default lessonModule({
       ru: "Если то место далеко, я не пойду.",
     },
     {
-      pinyin: "{{Word:ru2guo3}} {{word:ni3}} {{word:hui2}}-{{word:lai2}}, {{word:wo3}}-{{word:men}} {{word:chi1}} {{word:mi3fan4}}.",
-      hanzi: "如果你回来，我们吃米饭。",
-      en: "If you come back, we'll eat rice.",
-      ru: "Если ты вернёшься, мы будем есть рис.",
+      pinyin: "{{Word:ru2guo3}} {{word:ni3}} {{word:hui2}}-{{word:lai2}}, {{word:wo3}}-{{word:men}} {{word:yi1}}-{{word:qi3}} {{word:chi1}}.",
+      hanzi: "如果你回来，我们一起吃。",
+      en: "If you come back, we'll eat together.",
+      ru: "Если ты вернёшься, мы поедим вместе.",
     },
   ],
   exercises: [
@@ -108,8 +107,20 @@ export default lessonModule({
     {
       en: "If there's air, we can live.",
       ru: "Если есть воздух, мы можем жить.",
-      answer: "{{Word:ru2guo3}} {{word:you3}} {{word:kong1qi4}}, {{word:wo3}}-{{word:men}} {{word:neng2}} {{word:huo2}}.",
+      answer: "{{Word:ru2guo3}} {{word:you3}} {{word:kong1}}-{{word:qi4}}, {{word:wo3}}-{{word:men}} {{word:neng2}} {{word:huo2}}.",
       hanzi: "如果有空气，我们能活。",
+    },
+    {
+      en: "If you don't know, look online.",
+      ru: "Если не знаешь, поищи в интернете.",
+      answer: "{{Word:ru2guo3}} {{word:ni3}} {{word:bu4}} {{word:zhi1dao4}}, {{word:zai4}} {{word:wang3}}-{{word:shang4}} {{word:zhao3}}.",
+      hanzi: "如果你不知道，在网上找。",
+    },
+    {
+      en: "If you come next year, we'll play together.",
+      ru: "Если ты приедешь в следующем году, мы поиграем вместе.",
+      answer: "{{Word:ru2guo3}} {{word:ni3}} {{word:ming2}}-{{word:nian2}} {{word:lai2}}, {{word:wo3}}-{{word:men}} {{word:yi1}}-{{word:qi3}} {{word:wan2r}}.",
+      hanzi: "如果你明年来，我们一起玩儿。",
     },
   ],
   faq: [

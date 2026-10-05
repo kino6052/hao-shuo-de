@@ -6,8 +6,7 @@ export default lessonModule({
   id: "heart",
   words: [
     {
-      term: "{{word:xin1}}",
-      hanzi: "心",
+      word: "xin1",
       en: "heart",
       ru: "сердце",
     },

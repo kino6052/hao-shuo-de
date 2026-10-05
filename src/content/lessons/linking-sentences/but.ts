@@ -6,8 +6,7 @@ export default lessonModule({
   id: "but",
   words: [
     {
-      term: "{{word:dan4shi4}}",
-      hanzi: "但是",
+      word: "dan4shi4",
       en: "but",
       ru: "но",
     },
@@ -50,8 +49,8 @@ export default lessonModule({
       ru: "Я хочу пойти, но у меня нет денег.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:hen3}} {{word:xiao3}}, {{word:dan4shi4}} {{word:hen3}} {{word:you3}} {{word:li4liang4}}.",
-      hanzi: "他很小，但是很有力量。",
+      pinyin: "{{Word:ta1}} {{word:hen3}} {{word:xiao3}}, {{word:dan4shi4}} {{word:hen3}} {{word:you3}} {{word:li4}}-{{word:qi4}}.",
+      hanzi: "他很小，但是很有力气。",
       en: "He's small, but very strong.",
       ru: "Он маленький, но очень сильный.",
     },
@@ -62,10 +61,10 @@ export default lessonModule({
       ru: "Вкусно, но очень горячо.",
     },
     {
-      pinyin: "{{Word:zhe4}}-ge {{word:shui3guo3}} {{word:shi4}} {{word:huang2se4}}-{{word:de}}, {{word:dan4shi4}} {{word:bu4}} {{word:tian2}}.",
-      hanzi: "这个水果是黄色的，但是不甜。",
-      en: "This fruit is yellow, but it isn't sweet.",
-      ru: "Этот фрукт жёлтый, но не сладкий.",
+      pinyin: "{{Word:zhe4}}-ge {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1xi}} {{word:shi4}} {{word:huang2se4}}-{{word:de}}, {{word:dan4shi4}} {{word:bu4}} {{word:tian2}}.",
+      hanzi: "这个植物生的东西是黄色的，但是不甜。",
+      en: "This plant's fruit is yellow, but it isn't sweet.",
+      ru: "Плоды этого растения жёлтые, но не сладкие.",
     },
     {
       pinyin: "{{Word:zhe4}}-ge {{word:fang1fa3}} {{word:hen3}} {{word:qi2guai4}}, {{word:dan4shi4}} {{word:hen3}} {{word:hao3}}.",
@@ -94,10 +93,16 @@ export default lessonModule({
       hanzi: "我要吃，但是我没有金。",
     },
     {
-      en: "The fruit is small, but it tastes good.",
-      ru: "Фрукт маленький, но вкусный.",
-      answer: "{{Word:shui3guo3}} {{word:hen3}} {{word:xiao3}}, {{word:dan4shi4}} {{word:wei4dao4}} {{word:hen3}} {{word:hao3}}.",
-      hanzi: "水果很小，但是味道很好。",
+      en: "This one is small, but it tastes good.",
+      ru: "Это маленькое, но вкусное.",
+      answer: "{{Word:zhe4}}-ge {{word:hen3}} {{word:xiao3}}, {{word:dan4shi4}} {{word:wei4dao4}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "这个很小，但是味道很好。",
+    },
+    {
+      en: "This is difficult, but I'm learning it.",
+      ru: "Это трудно, но я учусь.",
+      answer: "{{Word:zhe4}} {{word:hen3}} {{word:nan2}}, {{word:dan4shi4}} {{word:wo3}} {{word:xue2}}.",
+      hanzi: "这很难，但是我学。",
     },
   ],
 });

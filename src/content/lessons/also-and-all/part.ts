@@ -5,8 +5,7 @@ export default lessonModule({
   id: "part",
   words: [
     {
-      term: "{{word:bu4fen}}",
-      hanzi: "部分",
+      word: "bu4fen",
       en: "part",
       ru: "часть",
     },
@@ -53,10 +52,10 @@ export default lessonModule({
       ru: "Та часть горячая.",
     },
     {
-      pinyin: "{{Word:da4}} {{word:bu4fen}} {{word:ren2}} {{word:chi1}} {{word:mi3fan4}}.",
-      hanzi: "大部分人吃米饭。",
-      en: "Most people eat rice.",
-      ru: "Большинство людей едят рис.",
+      pinyin: "{{Word:da4}} {{word:bu4fen}} {{word:ren2}} {{word:ai4}} {{word:dong4wu4}}.",
+      hanzi: "大部分人爱动物。",
+      en: "Most people love animals.",
+      ru: "Большинство людей любят животных.",
     },
     {
       pinyin: "{{Word:da4}} {{word:bu4fen}} {{word:zhi2wu4}} {{word:hen3}} {{word:xiao3}}.",
@@ -67,10 +66,10 @@ export default lessonModule({
   ],
   exercises: [
     {
-      en: "Most people eat rice.",
-      ru: "Большинство людей едят рис.",
-      answer: "{{Word:da4}} {{word:bu4fen}} {{word:ren2}} {{word:chi1}} {{word:mi3fan4}}.",
-      hanzi: "大部分人吃米饭。",
+      en: "Most people love animals.",
+      ru: "Большинство людей любят животных.",
+      answer: "{{Word:da4}} {{word:bu4fen}} {{word:ren2}} {{word:ai4}} {{word:dong4wu4}}.",
+      hanzi: "大部分人爱动物。",
     },
   ],
 });

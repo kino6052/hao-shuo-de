@@ -1,0 +1,15 @@
+import { composite } from "../../lib/composite.ts";
+
+export default composite({
+  rank: 93,
+  phase: 1,
+  zh: "谢谢",
+  py: "xièxie",
+  en: "thank you",
+  ru: "спасибо",
+  hsd: ["{{word:xie4}}-xie", "{{word:ni3}}-{{word:dui4}}-{{word:wo3}}-{{word:hen3}}-{{word:hao3}}"],
+  tts: ["谢谢", "你对我很好"],
+  literal: "thank-thank / you're very good to me",
+  fit: "natural",
+  note: "Lesson {{lesson:greetings-and-feelings}}. Also: hǎo-hǎo juéde, zhè bǎ wǒ juéde hěn hǎo.",
+});

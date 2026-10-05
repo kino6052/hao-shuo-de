@@ -6,8 +6,7 @@ export default lessonModule({
   id: "again",
   words: [
     {
-      term: "{{word:you4}}",
-      hanzi: "又",
+      word: "you4",
       en: "again",
       ru: "снова, опять",
     },
@@ -54,7 +53,7 @@ export default lessonModule({
       ru: "Ты опять заснул!",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:you4}} {{word:kan4}} {{word:le}} {{word:yi1xia4}}.",
+      pinyin: "{{Word:wo3}} {{word:you4}} {{word:kan4}} {{word:le}} {{word:yi1}}-{{word:xia4}}.",
       hanzi: "我又看了一下。",
       en: "I had another look.",
       ru: "Я посмотрел ещё раз.",

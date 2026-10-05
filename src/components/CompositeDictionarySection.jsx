@@ -1,6 +1,6 @@
 import { useState, useEffect } from "preact/hooks";
-import composites from "../data/composites.json";
-import dictionary from "../data/dictionary.json";
+import composites from "../data/composites.ts";
+import dictionary from "../data/dictionary.ts";
 import {
   buildWordIndex,
   countDictionaryWords,

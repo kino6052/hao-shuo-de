@@ -6,20 +6,17 @@ export default lessonModule({
   id: "have",
   words: [
     {
-      term: "{{word:you3}}",
-      hanzi: "有",
+      word: "you3",
       en: "have; there is",
       ru: "иметь; есть, имеется",
     },
     {
-      term: "{{word:mei2}}",
-      hanzi: "没",
+      word: "mei2",
       en: "not, but only with {{word:you3}}: {{word:mei2}}-{{word:you3}} means \"don't have\"",
       ru: "не, но только с {{word:you3}}: {{word:mei2}}-{{word:you3}} значит «нет, не иметь»",
     },
     {
-      term: "{{word:jin1}}",
-      hanzi: "金",
+      word: "jin1",
       en: "money",
       ru: "деньги",
     },
@@ -55,10 +52,10 @@ export default lessonModule({
   },
   examples: [
     {
-      pinyin: "{{Word:wo3}} {{word:you3}} {{word:shui3guo3}}.",
-      hanzi: "我有水果。",
-      en: "I have fruit.",
-      ru: "У меня есть фрукты.",
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:dong4wu4}}.",
+      hanzi: "我有动物。",
+      en: "I have an animal.",
+      ru: "У меня есть животное.",
     },
     {
       pinyin: "{{Word:wo3}} {{word:mei2}}-{{word:you3}} {{word:jin1}}.",
@@ -67,10 +64,10 @@ export default lessonModule({
       ru: "У меня нет денег.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:you3}} {{word:mi3fan4}}.",
-      hanzi: "他有米饭。",
-      en: "He has rice.",
-      ru: "У него есть рис.",
+      pinyin: "{{Word:ta1}} {{word:you3}} {{word:shui3}}.",
+      hanzi: "他有水。",
+      en: "He has water.",
+      ru: "У него есть вода.",
     },
     {
       pinyin: "{{Word:ta1}} {{word:you3}} {{word:jin1}}.",

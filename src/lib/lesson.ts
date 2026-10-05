@@ -22,6 +22,7 @@
  * ("tong.example2"), which the scripts use to say where a problem is.
  */
 import type { Entry, InfoItem as EntryInfoItem, LangText } from "./chapter-entry-types.ts";
+import { WORDS, type WordId } from "../data/words/index.ts";
 
 /** One sentence, or several. */
 export type Text = string | string[];
@@ -33,11 +34,28 @@ export interface Localized {
   zh?: Text;
 }
 
-/** A word card: the dictionary word, its hanzi (for the audio), and a short gloss. */
+/**
+ * A word card: which dictionary word it introduces (src/data/words/<id>.ts)
+ * and a short gloss in this lesson's words. The hanzi comes from the word
+ * file; for a catch-all word, `sense` names the sense the card teaches (a
+ * lesson teaches at most one sense of a word).
+ */
 export interface Word extends Localized {
-  term: string;
-  hanzi: string;
+  word: WordId;
+  sense?: string;
+  /** Only when the card writes the word another way (lǐ as 里面). */
+  hanzi?: string;
   audioFile?: string;
+}
+
+// -> the hanzi a card says aloud.
+function cardHanzi(w: Word): string {
+  if (w.hanzi) return w.hanzi;
+  const entry = WORDS[w.word];
+  if (!w.sense) return entry.hanzi;
+  const sense = (entry as { senses?: Record<string, { hanzi: string }> }).senses?.[w.sense];
+  if (!sense) throw new Error(`card for "${w.word}" names sense "${w.sense}", which the word file doesn't have`);
+  return sense.hanzi;
 }
 
 /** The explanation. Give tldr and necessity: they feed the lesson's TL;DR. */
@@ -151,7 +169,7 @@ export function lesson(id: string, parts: LessonParts): LessonEntry[] {
     if (seen.has(m.id)) throw new Error(`lesson(${id}): module "${m.id}" is listed twice`);
     seen.add(m.id);
     (m.words ?? []).forEach((w, i) =>
-      add(m.id, `${m.id}.word${i + 1}`, { type: "vocab", term: w.term, audioFile: w.audioFile, ttsText: w.hanzi, ...langs(w) }),
+      add(m.id, `${m.id}.word${i + 1}`, { type: "vocab", term: `{{word:${w.word}}}`, audioFile: w.audioFile, ttsText: cardHanzi(w), ...langs(w) }),
     );
     const prose: Entry = { type: "prose", ...langs(m.prose) };
     if (m.prose.tldr) prose.tldr = langs(m.prose.tldr);

@@ -6,8 +6,7 @@ export default lessonModule({
   id: "all",
   words: [
     {
-      term: "{{word:dou1}}",
-      hanzi: "都",
+      word: "dou1",
       en: "all; shénme-dōu: everything",
       ru: "все; shénme-dōu: всё",
     },
@@ -60,13 +59,13 @@ export default lessonModule({
       ru: "У них у всех всё хорошо.",
     },
     {
-      pinyin: "{{Word:shui3guo3}} {{word:dou1}} {{word:chi1}}-{{word:wan2}} {{word:le}}.",
-      hanzi: "水果都吃完了。",
-      en: "The fruit is all eaten.",
-      ru: "Фрукты все съедены.",
+      pinyin: "{{Word:shui3}} {{word:dou1}} {{word:he1}}-{{word:wan2}} {{word:le}}.",
+      hanzi: "水都喝完了。",
+      en: "The water is all gone.",
+      ru: "Вода вся выпита.",
     },
     {
-      pinyin: "{{Word:wai4}}-{{word:mian4}}-{{word:de}} {{word:kong1qi4}} {{word:hen3}} {{word:hao3}}.",
+      pinyin: "{{Word:wai4}}-{{word:mian4}}-{{word:de}} {{word:kong1}}-{{word:qi4}} {{word:hen3}} {{word:hao3}}.",
       hanzi: "外面的空气很好。",
       en: "The air outside is good.",
       ru: "Воздух на улице хороший.",
@@ -92,10 +91,16 @@ export default lessonModule({
   ],
   exercises: [
     {
-      en: "We all want fruit.",
-      ru: "Мы все хотим фруктов.",
-      answer: "{{Word:wo3}}-{{word:men}} {{word:dou1}} {{word:yao4}} {{word:shui3guo3}}.",
-      hanzi: "我们都要水果。",
+      en: "We all want water.",
+      ru: "Мы все хотим воды.",
+      answer: "{{Word:wo3}}-{{word:men}} {{word:dou1}} {{word:yao4}} {{word:shui3}}.",
+      hanzi: "我们都要水。",
+    },
+    {
+      en: "All the plants are tall.",
+      ru: "Все растения высокие.",
+      answer: "{{Word:zhi2wu4}} {{word:dou1}} {{word:hen3}} {{word:gao1}}.",
+      hanzi: "植物都很高。",
     },
   ],
   faq: [

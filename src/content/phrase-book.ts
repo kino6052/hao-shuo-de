@@ -170,7 +170,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:gei3}} {{word:wo3}} {{word:kan4}} {{word:yi1xia4}}, {{word:hao3}} {{word:ma}}?",
+    pinyin: "{{Word:gei3}} {{word:wo3}} {{word:kan4}} {{word:yi1}}-{{word:xia4}}, {{word:hao3}} {{word:ma}}?",
     ttsText: "给我看一下，好吗？",
     en: ["Can I have a look, please?"],
     zh: ["请让我看一下。"],
@@ -178,7 +178,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:deng3}} {{word:yi1xia4}}!",
+    pinyin: "{{Word:deng3}} {{word:yi1}}-{{word:xia4}}!",
     ttsText: "等一下！",
     en: ["Wait a moment!"],
     zh: ["等一下！"],
@@ -506,15 +506,15 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:wo3}}-{{word:men}} {{word:shi2}}-{{word:er4}}-{{word:dian3}} {{word:chi1}} {{word:mi3fan4}}.",
-    ttsText: "我们十二点吃米饭。",
+    pinyin: "{{Word:wo3}}-{{word:men}} {{word:shi2}}-{{word:er4}}-{{word:dian3}} {{word:chi1}} {{word:dong1xi}}.",
+    ttsText: "我们十二点吃东西。",
     en: ["We eat at twelve."],
     zh: ["我们十二点吃饭。"],
     ru: ["Мы обедаем в двенадцать."],
   },
   {
     type: "example",
-    pinyin: "{{Word:deng3}} {{word:yi1xia4}}, {{word:wo3}} {{word:xian4zai4}} {{word:jiu4}} {{word:lai2}}!",
+    pinyin: "{{Word:deng3}} {{word:yi1}}-{{word:xia4}}, {{word:wo3}} {{word:xian4zai4}} {{word:jiu4}} {{word:lai2}}!",
     ttsText: "等一下，我现在就来！",
     en: ["Just a moment, I'm coming right now!"],
     zh: ["等一下，我马上来！"],
@@ -722,7 +722,7 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:neng2}} {{word:kan4}} {{word:yi1xia4}} {{word:ma}}?",
+    pinyin: "{{Word:wo3}} {{word:neng2}} {{word:kan4}} {{word:yi1}}-{{word:xia4}} {{word:ma}}?",
     ttsText: "我能看一下吗？",
     en: ["Can I see it?"],
     zh: ["我能看一下吗？"],

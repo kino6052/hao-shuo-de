@@ -6,14 +6,12 @@ export default lessonModule({
   id: "after",
   words: [
     {
-      term: "{{word:hou4}}",
-      hanzi: "后",
+      word: "hou4",
       en: "after; behind",
       ru: "после; сзади",
     },
     {
-      term: "{{word:liu2}}",
-      hanzi: "留",
+      word: "liu2",
       en: "stay, keep",
       ru: "оставаться, оставлять",
     },
@@ -62,7 +60,7 @@ export default lessonModule({
       ru: "Дочитав, ты говоришь.",
     },
     {
-      pinyin: "{{Word:chi1}}-{{word:wan2}} {{word:hou4}}, {{word:fa1sheng1}} {{word:le}} {{word:shen2me}}?",
+      pinyin: "{{Word:chi1}}-{{word:wan2}} {{word:hou4}}, {{word:fa1}}-{{word:sheng1}} {{word:le}} {{word:shen2me}}?",
       hanzi: "吃完后，发生了什么？",
       en: "After eating, what happened?",
       ru: "Что случилось после еды?",

@@ -6,8 +6,7 @@ export default lessonModule({
   id: "teach",
   words: [
     {
-      term: "{{word:jiao1}}",
-      hanzi: "教",
+      word: "jiao1",
       en: "teach",
       ru: "учить (кого-то)",
     },

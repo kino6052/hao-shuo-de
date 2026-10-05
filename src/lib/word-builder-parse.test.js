@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
-import dict from "../data/dictionary.json";
-import composites from "../data/composites.json";
+import dict from "../data/dictionary.ts";
+import composites from "../data/composites.ts";
 import { formWords, builderForm, builderEntries, treeOfForm } from "./word-builder-parse.js";
 import { render, pinyinSystem } from "./word-builder.js";
 

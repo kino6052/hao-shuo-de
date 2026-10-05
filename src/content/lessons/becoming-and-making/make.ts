@@ -6,14 +6,12 @@ export default lessonModule({
   id: "make",
   words: [
     {
-      term: "{{word:nong4}}",
-      hanzi: "弄",
+      word: "nong4",
       en: "do, make",
       ru: "делать",
     },
     {
-      term: "{{word:de2}}",
-      hanzi: "得",
+      word: "de2",
       en: "get",
       ru: "получать",
     },

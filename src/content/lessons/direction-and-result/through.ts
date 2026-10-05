@@ -6,8 +6,7 @@ export default lessonModule({
   id: "through",
   words: [
     {
-      term: "{{word:tong1}}",
-      hanzi: "通",
+      word: "tong1",
       en: "go through, lead to",
       ru: "проходить через, вести (куда-то)",
     },

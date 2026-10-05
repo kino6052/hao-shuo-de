@@ -12,6 +12,12 @@
         "rus": "я, меня, мы, нас",
         "zh": "我，我们"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Without it, you can't talk about yourself: no \"I\", \"me\", or \"my\".",
+        "rus": "Без него нельзя говорить о себе: нет «я», «меня», «мой»."
+      },
+      "covers": ["atoms:I"],
       "maps": "mi"
     },
     "ni3": {
@@ -26,6 +32,12 @@
         "rus": "ты, вы",
         "zh": "你，你们"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Without it, you can't talk to anyone: no \"you\" or \"your\".",
+        "rus": "Без него нельзя обратиться к собеседнику: нет «ты», «твой»."
+      },
+      "covers": ["atoms:YOU"],
       "maps": "sina"
     },
     "ta1": {
@@ -39,6 +51,11 @@
         "eng": "he, she, it, they, them; syntactically genderless and number-fluid",
         "rus": "он, она, оно, они; синтаксически не различает род и число",
         "zh": "他，她，它，他们；在语法上不分性别、不分单复数"
+      },
+      "necessity": {
+        "index": 5,
+        "eng": "Without it, you'd have to repeat a name every time: no \"he\", \"she\", \"it\", or \"they\".",
+        "rus": "Без него пришлось бы каждый раз повторять имя: нет «он», «она», «оно», «они»."
       },
       "maps": "ona"
     },
@@ -54,6 +71,12 @@
         "rus": "что? какой?; остаётся на своём месте, не нарушая порядок слов SVO",
         "zh": "什么？哪个？；保留原位，不改变中文 SVO 语序结构"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Without it, you can't ask \"what?\", and with {{word:dou1}} it makes \"everything\".",
+        "rus": "Без него нельзя спросить «что?», а вместе с {{word:dou1}} оно даёт «всё»."
+      },
+      "covers": ["grammar:question-word"],
       "maps": "seme"
     },
     "jia1": {
@@ -67,6 +90,11 @@
         "eng": "home, house, family, household",
         "rus": "дом, семья, домашнее хозяйство",
         "zh": "家，家庭，住所"
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Home and family: the place you belong. No description says it as simply.",
+        "rus": "Дом и семья — место, где ты свой. Никакое описание не скажет это так же просто."
       },
       "maps": "tomo"
     },
@@ -82,6 +110,12 @@
         "rus": "солнце, источник яркого света, яркость, сияние",
         "zh": "太阳，发光光源，明亮，光辉"
       },
+      "necessity": {
+        "index": 4,
+        "eng": "The sun, and with it the day. Day and night are said with the sun and the moon.",
+        "rus": "Солнце, а с ним и день. День и ночь говорят через солнце и луну."
+      },
+      "antonyms": ["{{word:yue4}}"],
       "maps": "suno"
     },
     "yue4": {
@@ -96,6 +130,12 @@
         "rus": "луна, ночное небесное тело, звезда",
         "zh": "月亮，夜空天体，星星"
       },
+      "necessity": {
+        "index": 4,
+        "eng": "The moon, and with it the night: {{word:yue4}}-{{word:de}} {{word:shi2jian1}} is \"at night\".",
+        "rus": "Луна, а с ней и ночь: {{word:yue4}}-{{word:de}} {{word:shi2jian1}} — «ночью»."
+      },
+      "antonyms": ["{{word:ri4}}"],
       "maps": "mun"
     },
     "zhi2wu4": {
@@ -109,6 +149,11 @@
         "eng": "plant, vegetation, herb, leaf",
         "rus": "растение, растительность, трава, лист",
         "zh": "植物，草木，草本，叶子"
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Plants: one of the three kinds of living things, with people and animals. Fruit is described from it.",
+        "rus": "Растения — один из трёх видов живого, рядом с людьми и животными. Через него описывают фрукты."
       },
       "maps": "kasi"
     },
@@ -124,21 +169,30 @@
         "rus": "огонь, средство для готовки, химический источник тепла",
         "zh": "火，烹饪元素，化学热源"
       },
+      "necessity": {
+        "index": 4,
+        "eng": "Fire: heat, cooking, light. Nothing else in the dictionary can describe it.",
+        "rus": "Огонь: жар, готовка, свет. Ничто другое в словаре его не опишет."
+      },
       "maps": "seli"
     },
-    "kong1qi4": {
-      "term": "kōngqì",
+    "qi4": {
+      "term": "qì",
       "pos": {
         "eng": "noun",
         "rus": "существительное",
         "zh": "名词"
       },
       "definition": {
-        "eng": "air, wind, breath, spirit, hidden reality",
-        "rus": "воздух, ветер, дыхание, дух, скрытая сущность",
-        "zh": "空气，风，呼吸，精神，隐藏的实质"
+        "eng": "air, gas, breath (in everyday Mandarin, air is {{word:kong1}}-{{word:qi4}})",
+        "rus": "воздух, газ, дыхание (в обычном китайском воздух — {{word:kong1}}-{{word:qi4}})",
+        "zh": "气"
       },
-      "maps": "kon"
+      "necessity": {
+        "index": 3,
+        "eng": "Air, which you can't see or touch. With {{word:kong1}} it's the everyday word, {{word:kong1}}-{{word:qi4}}.",
+        "rus": "Воздух, которого не видно и не потрогать. С {{word:kong1}} — обычное слово {{word:kong1}}-{{word:qi4}}."
+      }
     },
     "bi2zi": {
       "term": "bízi",
@@ -152,7 +206,31 @@
         "rus": "нос, морда, выступ",
         "zh": "鼻子，口鼻部，凸起物"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "The nose, and with it smell: there's no other way to talk about smelling.",
+        "rus": "Нос, а с ним и запах: иначе о запахах не поговорить."
+      },
       "maps": "nena"
+    },
+    "yan3jing": {
+      "term": "yǎnjing",
+      "pos": {
+        "eng": "noun",
+        "rus": "существительное",
+        "zh": "名词"
+      },
+      "definition": {
+        "eng": "eye",
+        "rus": "глаз",
+        "zh": "眼睛"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "The eyes. {{word:kan4}}-{{word:de}} {{word:bu4fen}} would work, but eyes come up too often for that.",
+        "rus": "Глаза. Можно сказать {{word:kan4}}-{{word:de}} {{word:bu4fen}}, но глаза нужны слишком часто."
+      },
+      "synonyms": ["{{word:kan4}}-{{word:de}} {{word:bu4fen}}"]
     },
     "jiao3": {
       "term": "jiǎo",
@@ -165,6 +243,11 @@
         "eng": "foot, leg, organ of locomotion, bottom part",
         "rus": "нога, стопа, орган передвижения, нижняя часть",
         "zh": "脚，腿，行走器官，底部"
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Feet and legs: walking, standing, kicking. A basic body part with no short description.",
+        "rus": "Ступни и ноги: ходить, стоять, пинать. Основная часть тела без короткого описания."
       },
       "maps": "noka"
     },
@@ -180,21 +263,30 @@
         "rus": "отверстие, проём, дверь, окно, дыра",
         "zh": "洞，开口，门，窗，孔"
       },
+      "necessity": {
+        "index": 4,
+        "eng": "The mouth, and any opening: a door, a hole. Speaking, eating, and going in all need it.",
+        "rus": "Рот и любое отверстие: дверь, дыра. Без него не сказать про речь, еду и вход."
+      },
       "maps": "lupa"
     },
-    "pi2fu1": {
-      "term": "pífū",
+    "ji1": {
+      "term": "jī",
       "pos": {
         "eng": "noun",
         "rus": "существительное",
         "zh": "名词"
       },
       "definition": {
-        "eng": "skin, outer layer, bark, peel, shell, boundary",
-        "rus": "кожа, внешний слой, кора, кожура, скорлупа, граница",
-        "zh": "皮肤，外层，树皮，果皮，壳，边界"
+        "eng": "machine (e.g. {{word:shou3}}-{{word:ji1}}, \"phone\"; {{word:fei1}}-{{word:ji1}}, \"plane\"; {{word:ji1}}-{{word:hui4}}, \"chance\")",
+        "rus": "машина, механизм (например, {{word:shou3}}-{{word:ji1}} — «телефон»; {{word:fei1}}-{{word:ji1}} — «самолёт»; {{word:ji1}}-{{word:hui4}} — «возможность»)",
+        "zh": "机"
       },
-      "maps": "selo"
+      "necessity": {
+        "index": 3,
+        "eng": "Machines: the phone ({{word:shou3}}-{{word:ji1}}), the plane ({{word:fei1}}-{{word:ji1}}), and a chance ({{word:ji1}}-{{word:hui4}}).",
+        "rus": "Машины: телефон ({{word:shou3}}-{{word:ji1}}), самолёт ({{word:fei1}}-{{word:ji1}}) и возможность ({{word:ji1}}-{{word:hui4}})."
+      }
     },
     "shen1ti3": {
       "term": "shēntǐ",
@@ -208,6 +300,12 @@
         "rus": "тело, физический торс, физическое состояние",
         "zh": "身体，躯干，身体状态"
       },
+      "necessity": {
+        "index": 4,
+        "eng": "The body, and health: {{word:shen1ti3}} {{word:bu4}} {{word:hao3}} is \"unwell\". Needed for every illness and feeling.",
+        "rus": "Тело и здоровье: {{word:shen1ti3}} {{word:bu4}} {{word:hao3}} — «нездоровится». Нужно для любой болезни и самочувствия."
+      },
+      "covers": ["atoms:BODY"],
       "maps": "sijelo"
     },
     "shou3": {
@@ -221,6 +319,11 @@
         "eng": "hand, arm, tactile organ",
         "rus": "рука, кисть, орган осязания",
         "zh": "手，手臂，触觉器官"
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Hands: holding, touching, giving. The most used body part.",
+        "rus": "Руки: держать, трогать, давать. Самая нужная часть тела."
       },
       "maps": "luka"
     },
@@ -236,6 +339,11 @@
         "rus": "голова, разум, внутренний управляющий орган",
         "zh": "头，头脑，内部主管器官"
       },
+      "necessity": {
+        "index": 4,
+        "eng": "The head, and what's in it: a head that's {{word:luan4}} is a confused mind.",
+        "rus": "Голова и то, что в ней: {{word:luan4}} голова — спутанные мысли."
+      },
       "maps": "lawa"
     },
     "xin1": {
@@ -249,6 +357,11 @@
         "eng": "heart, mind; {{word:kai1}}-{{word:xin1}}, \"happy\"; {{word:xiao3}}-{{word:xin1}}, \"careful\"; {{word:fang4}}-{{word:xin1}}, \"don't worry\"",
         "rus": "сердце, душа; {{word:kai1}}-{{word:xin1}} — «радостный»; {{word:xiao3}}-{{word:xin1}} — «осторожно»; {{word:fang4}}-{{word:xin1}} — «не волнуйся»",
         "zh": "心"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "The heart: feelings live here ({{word:kai1}}-{{word:xin1}}, happy; {{word:xiao3}}-{{word:xin1}}, careful).",
+        "rus": "Сердце: в нём живут чувства ({{word:kai1}}-{{word:xin1}} — радостный, {{word:xiao3}}-{{word:xin1}} — осторожный)."
       }
     },
     "mao2": {
@@ -262,6 +375,11 @@
         "eng": "hair, fur, feathers; {{word:tou2}}-{{word:shang4}}-{{word:de}} {{word:mao2}}, \"hair on the head\"",
         "rus": "шерсть, волосы, перья; {{word:tou2}}-{{word:shang4}}-{{word:de}} {{word:mao2}} — «волосы на голове»",
         "zh": "毛"
+      },
+      "necessity": {
+        "index": 2,
+        "eng": "Hair and fur. {{word:xian4}} is close, but hair and fur come up often enough to keep it.",
+        "rus": "Волосы и шерсть. {{word:xian4}} близко, но волосы и шерсть встречаются достаточно часто."
       }
     },
     "ren2": {
@@ -276,6 +394,12 @@
         "rus": "человек, личность, кто-то",
         "zh": "人，人类，某人"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "People: \"someone\", \"a person\". One of the most basic ideas there is.",
+        "rus": "Люди: «кто-то», «человек». Одно из самых базовых понятий."
+      },
+      "covers": ["atoms:SOMEONE", "atoms:PEOPLE"],
       "maps": "jan"
     },
     "fu4mu3": {
@@ -290,6 +414,11 @@
         "rus": "родитель, предок, создатель, опекун",
         "zh": "父母，祖先，创造者，照料者"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "Parents. Mom and dad are described from it ({{word:fu4mu3}}-{{word:li3}}-{{word:de}} {{word:nv3ren2}}).",
+        "rus": "Родители. Через него описывают маму и папу ({{word:fu4mu3}}-{{word:li3}}-{{word:de}} {{word:nv3ren2}})."
+      },
       "maps": "mama"
     },
     "guan1xi": {
@@ -303,6 +432,11 @@
         "eng": "relationship, connection; {{word:mei2}}-{{word:you3}} {{word:guan1xi}}, \"it doesn't matter\"",
         "rus": "отношения, связь; {{word:mei2}}-{{word:you3}} {{word:guan1xi}} — «ничего страшного»",
         "zh": "关系"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "A connection between people or things, and {{word:mei2}}-{{word:you3}} {{word:guan1xi}}, \"never mind\".",
+        "rus": "Связь между людьми или вещами, а также {{word:mei2}}-{{word:you3}} {{word:guan1xi}} — «ничего страшного»."
       }
     },
     "bi3": {
@@ -316,7 +450,13 @@
         "eng": "comparison",
         "rus": "сравнение",
         "zh": "比较"
-      }
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Than: A {{word:bi3}} B {{word:da4}}, A is bigger than B. Comparing two things needs it.",
+        "rus": "Чем: A {{word:bi3}} B {{word:da4}} — A больше, чем B. Без него не сравнить две вещи."
+      },
+      "covers": ["atoms:MORE", "categories:relation", "grammar:compare"]
     },
     "nan2ren2": {
       "term": "nánrén",
@@ -330,6 +470,12 @@
         "rus": "мужчина, лицо мужского пола, муж",
         "zh": "男人，男性，丈夫"
       },
+      "necessity": {
+        "index": 4,
+        "eng": "A man. With {{word:nv3ren2}}, it's how you say who someone is: husband, son, boy.",
+        "rus": "Мужчина. Вместе с {{word:nv3ren2}} через него говорят, кто человек: муж, сын, мальчик."
+      },
+      "antonyms": ["{{word:nv3ren2}}"],
       "maps": "mije"
     },
     "nv3ren2": {
@@ -344,6 +490,12 @@
         "rus": "женщина, лицо женского пола, жена",
         "zh": "女人，女性，妻子"
       },
+      "necessity": {
+        "index": 4,
+        "eng": "A woman. With {{word:nan2ren2}}, it's how you say who someone is: wife, daughter, girl.",
+        "rus": "Женщина. Вместе с {{word:nan2ren2}} через него говорят, кто человек: жена, дочь, девочка."
+      },
+      "antonyms": ["{{word:nan2ren2}}"],
       "maps": "meli"
     },
     "qun2": {
@@ -358,35 +510,12 @@
         "rus": "группа, сообщество, компания, нация, общество, племя",
         "zh": "群体，社区，公司，国家，社会，部落"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "A group: a crowd, a team, a people. {{word:hen3}}-{{word:duo1}}-{{word:de}} {{word:ren2}} doesn't say they belong together.",
+        "rus": "Группа: толпа, команда, народ. {{word:hen3}}-{{word:duo1}}-{{word:de}} {{word:ren2}} не говорит, что они вместе."
+      },
       "maps": "kulupu"
-    },
-    "mi3fan4": {
-      "term": "mǐfàn",
-      "pos": {
-        "eng": "noun",
-        "rus": "существительное",
-        "zh": "名词"
-      },
-      "definition": {
-        "eng": "grain, rice, cereal, bread, pasta, staple food",
-        "rus": "зерно, рис, крупа, хлеб, паста, основная пища",
-        "zh": "谷物，米饭，谷类，面包，面食，主食"
-      },
-      "maps": "pan"
-    },
-    "shui3guo3": {
-      "term": "shuǐguǒ",
-      "pos": {
-        "eng": "noun",
-        "rus": "существительное",
-        "zh": "名词"
-      },
-      "definition": {
-        "eng": "fruit, vegetable, mushroom, plant food crop",
-        "rus": "фрукт, овощ, гриб, растительная пищевая культура",
-        "zh": "水果，蔬菜，蘑菇，植物性食物作物"
-      },
-      "maps": "kili"
     },
     "shui3": {
       "term": "shuǐ",
@@ -399,6 +528,11 @@
         "eng": "water, liquid, fluid, wet substance, beverage",
         "rus": "вода, жидкость, влажное вещество, напиток",
         "zh": "水，液体，流体，湿润物质，饮品"
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Water and any liquid: drinking, washing, rain, the sea.",
+        "rus": "Вода и любая жидкость: пить, мыть, дождь, море."
       },
       "maps": "telo"
     },
@@ -414,21 +548,12 @@
         "rus": "животное, наземное млекопитающее, зверь",
         "zh": "动物，陆地哺乳动物，野兽"
       },
+      "necessity": {
+        "index": 4,
+        "eng": "Animals: one of the three kinds of living things. Every animal is described from it.",
+        "rus": "Животные — один из трёх видов живого. Через него описывают любое животное."
+      },
       "maps": "soweli"
-    },
-    "chong2zi": {
-      "term": "chóngzi",
-      "pos": {
-        "eng": "noun",
-        "rus": "существительное",
-        "zh": "名词"
-      },
-      "definition": {
-        "eng": "insect, bug, beetle, spider",
-        "rus": "насекомое, жук, паук",
-        "zh": "昆虫，虫子，甲虫，蜘蛛"
-      },
-      "maps": "pipi"
     },
     "dong1xi": {
       "term": "dōngxi",
@@ -442,6 +567,12 @@
         "rus": "вещь, явление, объект, физическое существо, материя",
         "zh": "东西，现象，物体，实体存在，物质"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "\"Something\", \"a thing\". Most descriptions end in it: {{word:xie3}}-{{word:de}} {{word:dong1xi}} is a book.",
+        "rus": "«Что-то», «вещь». Им заканчивается большинство описаний: {{word:xie3}}-{{word:de}} {{word:dong1xi}} — книга."
+      },
+      "covers": ["atoms:SOMETHING", "categories:substance"],
       "maps": "ijo"
     },
     "gong1ju4": {
@@ -455,6 +586,11 @@
         "eng": "tool, implement, machine, device",
         "rus": "инструмент, приспособление, машина, устройство",
         "zh": "工具，器具，机器，装置"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "A tool or machine: the base of every device, from a hammer ({{word:da3}}-{{word:de}} {{word:gong1ju4}}) to a computer.",
+        "rus": "Инструмент или машина — основа любого устройства, от молотка ({{word:da3}}-{{word:de}} {{word:gong1ju4}}) до компьютера."
       },
       "maps": "ilo"
     },
@@ -470,7 +606,67 @@
         "rus": "палка, прут, ветка, длинный твёрдый предмет",
         "zh": "棍子，杆，树枝，长而硬的东西"
       },
+      "necessity": {
+        "index": 2,
+        "eng": "A stick: anything long and hard. {{word:ying4}}-{{word:de}} {{word:xian4}} would do, but sticks are everywhere in stories.",
+        "rus": "Палка — всё длинное и твёрдое. Подошло бы {{word:ying4}}-{{word:de}} {{word:xian4}}, но палки в историях повсюду."
+      },
       "maps": "palisa"
+    },
+    "deng1": {
+      "term": "dēng",
+      "pos": {
+        "eng": "noun",
+        "rus": "существительное",
+        "zh": "名词"
+      },
+      "definition": {
+        "eng": "lamp, light (e.g. {{word:kai1}} {{word:deng1}}, \"turn on the light\")",
+        "rus": "лампа, свет (например, {{word:kai1}} {{word:deng1}} — «включить свет»)",
+        "zh": "灯"
+      },
+      "necessity": {
+        "index": 2,
+        "eng": "A lamp, a light. {{word:jia1}}-{{word:li3}}-{{word:de}} {{word:xiao3}} {{word:ri4}} would work, but lights are switched on every day.",
+        "rus": "Лампа, свет. Можно сказать {{word:jia1}}-{{word:li3}}-{{word:de}} {{word:xiao3}} {{word:ri4}}, но свет включают каждый день."
+      },
+      "synonyms": ["{{word:jia1}}-{{word:li3}}-{{word:de}} {{word:xiao3}} {{word:ri4}}"]
+    },
+    "che1": {
+      "term": "chē",
+      "pos": {
+        "eng": "noun",
+        "rus": "существительное",
+        "zh": "名词"
+      },
+      "definition": {
+        "eng": "car, vehicle; anything on wheels that carries people or things",
+        "rus": "машина, транспорт; всё на колёсах, что возит людей или вещи",
+        "zh": "车"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Cars and anything on wheels: buses, trains, taxis, and bikes are all described from it.",
+        "rus": "Машины и всё на колёсах: через него описывают автобусы, поезда, такси и велосипеды."
+      }
+    },
+    "wang3": {
+      "term": "wǎng",
+      "pos": {
+        "eng": "noun",
+        "rus": "существительное",
+        "zh": "名词"
+      },
+      "definition": {
+        "eng": "net, web; the internet (e.g. {{word:zai4}} {{word:wang3}}-{{word:shang4}}, \"online\")",
+        "rus": "сеть, паутина; интернет (например, {{word:zai4}} {{word:wang3}}-{{word:shang4}} — «в интернете»)",
+        "zh": "网"
+      },
+      "necessity": {
+        "index": 2,
+        "eng": "A net, and the internet: online, websites, and downloads are all described from it.",
+        "rus": "Сеть и интернет: через него описывают «онлайн», сайты и загрузки."
+      }
     },
     "he2zi": {
       "term": "hézi",
@@ -484,21 +680,12 @@
         "rus": "контейнер, сумка, миска, коробка, чашка, сосуд",
         "zh": "容器，袋子，碗，盒子，杯子，器皿"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "A container: a box, a bag, a cup. Anything that holds something else.",
+        "rus": "Ёмкость: коробка, сумка, чашка — всё, во что что-то кладут."
+      },
       "maps": "poki"
-    },
-    "ni2": {
-      "term": "ní",
-      "pos": {
-        "eng": "noun",
-        "rus": "существительное",
-        "zh": "名词"
-      },
-      "definition": {
-        "eng": "paste, mud, dough, clay, semi-solid substance, powder",
-        "rus": "паста, грязь, тесто, глина, полутвёрдое вещество, порошок",
-        "zh": "糊状物，泥，面团，粘土，半固态物质，粉末"
-      },
-      "maps": "ko"
     },
     "jin1": {
       "term": "jīn",
@@ -511,6 +698,11 @@
         "eng": "money, cash, savings, wealth",
         "rus": "деньги, наличные, сбережения, богатство",
         "zh": "钱，现金，储蓄，财富"
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Money: buying, paying, price. Daily life needs it, and no description is short.",
+        "rus": "Деньги: покупать, платить, цена. Без них не обойтись в жизни, а короткого описания нет."
       },
       "maps": "mani"
     },
@@ -526,6 +718,11 @@
         "rus": "линия, верёвка, волос, нить, шнур, длинный гибкий предмет",
         "zh": "线，绳子，头发，线绳，长而柔软的东西"
       },
+      "necessity": {
+        "index": 2,
+        "eng": "A line, a thread, a rope: anything long and thin.",
+        "rus": "Линия, нитка, верёвка — всё длинное и тонкое."
+      },
       "maps": "linja"
     },
     "yi1fu": {
@@ -539,6 +736,11 @@
         "eng": "clothing, cloth, fabric, textile, privacy layer",
         "rus": "одежда, ткань, материя, текстиль, покров, скрывающий тело",
         "zh": "衣服，布，织物，纺织品，遮蔽身体的层"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Clothes and cloth. Wearing, buying, and washing them comes up every day.",
+        "rus": "Одежда и ткань. Носить, покупать и стирать её приходится каждый день."
       },
       "maps": "len"
     },
@@ -554,21 +756,31 @@
         "rus": "слово",
         "zh": "词"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "A word. Without it, you can't talk about language itself: \"what's the word for…?\"",
+        "rus": "Слово. Без него нельзя говорить о самом языке: «как называется…?»"
+      },
+      "covers": ["atoms:WORDS"],
       "maps": ""
     },
-    "li4liang4": {
-      "term": "lìliàng",
+    "li4": {
+      "term": "lì",
       "pos": {
-        "eng": "noun/adjective",
-        "rus": "существительное/прилагательное",
-        "zh": "名词/形容词"
+        "eng": "noun",
+        "rus": "существительное",
+        "zh": "名词"
       },
       "definition": {
-        "eng": "energy, power, intensity, physical strength; confident, sure, intense",
-        "rus": "энергия, сила, интенсивность, физическая мощь; уверенный, надёжный, сильный",
-        "zh": "能量，力量，强度，体力；自信的，可靠的，强烈的"
+        "eng": "strength, force (e.g. {{word:you3}} {{word:li4}}, \"strong\"; {{word:li4}}-{{word:qi4}}, \"a body's strength\"; {{word:neng2}}-{{word:li4}}, \"ability\")",
+        "rus": "сила (например, {{word:you3}} {{word:li4}} — «сильный»; {{word:li4}}-{{word:qi4}} — «сила тела»; {{word:neng2}}-{{word:li4}} — «способность»)",
+        "zh": "力"
       },
-      "maps": "wawa"
+      "necessity": {
+        "index": 3,
+        "eng": "Strength: {{word:you3}} {{word:li4}} is strong, and ability ({{word:neng2}}-{{word:li4}}) and effort ({{word:yong4}}-{{word:li4}}) are built from it.",
+        "rus": "Сила: {{word:you3}} {{word:li4}} — сильный, а из него строятся «способность» ({{word:neng2}}-{{word:li4}}) и «стараться» ({{word:yong4}}-{{word:li4}})."
+      }
     },
     "na4": {
       "term": "nà",
@@ -582,6 +794,12 @@
         "rus": "тот, те; синтаксически связывается как na-ge",
         "zh": "那，那些；在语法上以 na-ge 形式连接"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Without it, you can't point at what's over there: no \"that\".",
+        "rus": "Без него нельзя указать на то, что далеко: нет «то»."
+      },
+      "antonyms": ["{{word:zhe4}}"],
       "maps": "ni"
     },
     "zhe4": {
@@ -596,21 +814,14 @@
         "rus": "этот, эти; синтаксически связывается как zhe-ge",
         "zh": "这，这些；在语法上以 zhe-ge 形式连接"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Without it, you can't point at what's here: no \"this\".",
+        "rus": "Без него нельзя указать на то, что рядом: нет «это»."
+      },
+      "covers": ["atoms:THIS", "atoms:HERE"],
+      "antonyms": ["{{word:na4}}"],
       "maps": "ni"
-    },
-    "bu4tong2": {
-      "term": "bùtóng",
-      "pos": {
-        "eng": "adjective/noun",
-        "rus": "прилагательное/существительное",
-        "zh": "形容词/名词"
-      },
-      "definition": {
-        "eng": "different, altered, changed, other",
-        "rus": "другой, изменённый, отличающийся, иной",
-        "zh": "不同的，改变了的，其他的"
-      },
-      "maps": "ante"
     },
     "yi1yang4": {
       "term": "yīyàng",
@@ -620,10 +831,17 @@
         "zh": "形容词"
       },
       "definition": {
-        "eng": "same, similar, peer, fellow, each other",
-        "rus": "одинаковый, похожий, равный, товарищеский, друг друга",
-        "zh": "相同的，相似的，同伴，彼此"
+        "eng": "same, similar, peer, fellow, each other; {{word:bu4}} {{word:yi1yang4}}: different",
+        "rus": "одинаковый, похожий, равный, товарищеский, друг друга; {{word:bu4}} {{word:yi1yang4}} — разный, другой",
+        "zh": "相同的，相似的，同伴，彼此；{{word:bu4}} {{word:yi1yang4}}：不同"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "\"The same\", and with {{word:bu4}}, \"different\". Comparing things starts here.",
+        "rus": "«Одинаковый», а с {{word:bu4}} — «разный». С него начинается любое сравнение."
+      },
+      "covers": ["atoms:THE SAME", "atoms:LIKE", "categories:relation", "grammar:same"],
+      "antonyms": ["{{word:bu4}} {{word:yi1yang4}}"],
       "maps": "sama"
     },
     "ge4": {
@@ -638,6 +856,12 @@
         "rus": "универсальный классификатор; обязательное связующее звено между числительными/указательными местоимениями и существительными",
         "zh": "通用量词；数词/指示词与名词之间的强制连接件"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Without it, a number or {{word:zhe4}} can't stand before a noun: \"this one\", \"two people\".",
+        "rus": "Без него число или {{word:zhe4}} не могут стоять перед существительным: «этот», «два человека»."
+      },
+      "covers": ["categories:quantity", "grammar:count"],
       "maps": ""
     },
     "ci4": {
@@ -651,6 +875,11 @@
         "eng": "time, occurrence: counts how often something happens (e.g. {{word:liang3}}-{{word:ci4}}, \"twice\"; {{word:hen3}} {{word:duo1}} {{word:ci4}}, \"many times\")",
         "rus": "раз: счётное слово для того, сколько раз что-то происходит (напр. {{word:liang3}}-{{word:ci4}}, «дважды»)",
         "zh": "次，量词，表示事情发生的次数（如：两次，很多次）"
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Times, as in \"twice\": without it, you can't say how often something happens.",
+        "rus": "Раз, как в «дважды»: без него нельзя сказать, как часто что-то бывает."
       }
     },
     "yi1": {
@@ -665,6 +894,12 @@
         "rus": "один, единственный, единый",
         "zh": "一，唯一，统一"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "One: the first number, and \"a\" as in {{word:yi1}}-ge {{word:ren2}}, a person.",
+        "rus": "Один: первое число, а также «какой-то», как в {{word:yi1}}-ge {{word:ren2}}."
+      },
+      "covers": ["atoms:ONE", "atoms:A SHORT TIME", "atoms:MOMENT"],
       "maps": "wan"
     },
     "liang3": {
@@ -679,6 +914,13 @@
         "rus": "два; используется для пары предметов вместе со счётным словом (liang-ge)",
         "zh": "二，两；与量词搭配（liang-ge）表示两个"
       },
+      "necessity": {
+        "index": 4,
+        "eng": "Two of something: {{word:liang3}}-ge {{word:ren2}}. Mandarin uses it, not {{word:er4}}, before {{word:ge4}}.",
+        "rus": "Два чего-то: {{word:liang3}}-ge {{word:ren2}}. Перед {{word:ge4}} в китайском говорят его, а не {{word:er4}}."
+      },
+      "covers": ["atoms:TWO"],
+      "synonyms": ["{{word:er4}}"],
       "maps": "tu"
     },
     "hao4": {
@@ -693,6 +935,11 @@
         "rus": "показатель порядка, числовой идентификатор, префикс порядкового числительного",
         "zh": "序号标记，数字身份，序数前缀"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "Number in a series: the second one, number five, the 3rd of the month.",
+        "rus": "Номер по порядку: второй, номер пять, третье число месяца."
+      },
       "maps": "nanpa"
     },
     "dian3": {
@@ -706,7 +953,13 @@
         "eng": "o'clock, after a number ({{word:san1}}-{{word:dian3}}, \"three o'clock\"); a little: {{word:yi1}}-{{word:dian3}} (\"a bit\"), as in {{word:da4}} {{word:yi1}}-{{word:dian3}}, \"a bit bigger\"",
         "rus": "час, после числа ({{word:san1}}-{{word:dian3}}, «три часа»); немного: {{word:yi1}}-{{word:dian3}} («чуть-чуть»), как в {{word:da4}} {{word:yi1}}-{{word:dian3}}, «чуть больше»",
         "zh": "点：几点钟（三点）；一点：一点儿，少量（如：大一点）"
-      }
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "O'clock ({{word:san1}}-{{word:dian3}}), and \"a little\" ({{word:yi1}}-{{word:dian3}}). Both come up all the time.",
+        "rus": "Час ({{word:san1}}-{{word:dian3}}) и «немного» ({{word:yi1}}-{{word:dian3}}). И то и другое нужно постоянно."
+      },
+      "covers": ["atoms:SOME", "atoms:FOR SOME TIME"]
     },
     "duo1": {
       "term": "duō",
@@ -720,6 +973,13 @@
         "rus": "много, многочисленный, весьма, обильный; в зависимости от контекста обозначает количество больше двух",
         "zh": "多，许多，非常，丰富；依语境表示多于两个的数量"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Many, much, a lot. Amounts can't be described without it.",
+        "rus": "Много. Без него не описать количество."
+      },
+      "covers": ["atoms:MUCH", "atoms:A LONG TIME", "categories:quantity"],
+      "antonyms": ["{{word:shao3}}"],
       "maps": "mute"
     },
     "dou1": {
@@ -733,7 +993,13 @@
         "eng": "all, both, every one of them; goes before the verb, after the people or things it covers (e.g. {{word:wo3}}-{{word:men}} {{word:dou1}} {{word:chi1}}, \"we all eat\"). {{word:shen2me}}-{{word:dou1}} means everything",
         "rus": "все, оба, каждый из них; ставится перед глаголом, после тех, о ком идёт речь (например, {{word:wo3}}-{{word:men}} {{word:dou1}} {{word:chi1}}, «мы все едим»). {{word:shen2me}}-{{word:dou1}} значит «всё»",
         "zh": "都，全都；放在动词前、所说的人或事物后面（如 {{word:wo3}}-{{word:men}} {{word:dou1}} {{word:chi1}}，“我们都吃”）。{{word:shen2me}}-{{word:dou1}} 表示“什么都，一切”"
-      }
+      },
+      "necessity": {
+        "index": 5,
+        "eng": "All, every one: and with {{word:shen2me}}, everything; with {{word:na3li3}}, everywhere.",
+        "rus": "Все, каждый, а с {{word:shen2me}} — «всё», с {{word:na3li3}} — «везде»."
+      },
+      "covers": ["atoms:ALL", "grammar:all"]
     },
     "hao3": {
       "term": "hǎo",
@@ -747,6 +1013,13 @@
         "rus": "хороший, положительный, полезный, дружелюбный, мирный, простой",
         "zh": "好的，积极的，有用的，友好的，平和的，简单的"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Good: the most basic way to judge anything. Many composites start with it.",
+        "rus": "Хороший — самая базовая оценка чего угодно. С него начинаются многие составные слова."
+      },
+      "covers": ["atoms:GOOD", "grammar:suggest"],
+      "antonyms": ["{{word:huai4}}"],
       "maps": "pona"
     },
     "huai4": {
@@ -761,7 +1034,33 @@
         "rus": "плохой, отрицательный, сломанный, повреждённый, второстепенный",
         "zh": "坏的，负面的，坏掉的，受损的，非必要的"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Bad, broken. {{word:bu4}} {{word:hao3}} is only \"not good\": this says something went wrong.",
+        "rus": "Плохой, сломанный. {{word:bu4}} {{word:hao3}} — лишь «не хороший», а это значит, что что-то испортилось."
+      },
+      "covers": ["atoms:BAD"],
+      "antonyms": ["{{word:hao3}}"],
       "maps": "ike, pakala"
+    },
+    "nan2": {
+      "term": "nán",
+      "pos": {
+        "eng": "adjective",
+        "rus": "прилагательное",
+        "zh": "形容词"
+      },
+      "definition": {
+        "eng": "difficult, hard to do; before {{word:kan4}}, {{word:ting1}} or {{word:chi1}}, unpleasant to see, hear or eat (e.g. {{word:nan2}}-{{word:kan4}}, \"ugly\")",
+        "rus": "трудный, сложный; перед {{word:kan4}}, {{word:ting1}} или {{word:chi1}} — неприятный на вид, на слух или на вкус (например, {{word:nan2}}-{{word:kan4}} — «некрасивый»)",
+        "zh": "难"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Difficult, and before a verb, unpleasant: {{word:nan2}}-{{word:kan4}} is ugly. A description would need a long sentence.",
+        "rus": "Трудный, а перед глаголом — неприятный: {{word:nan2}}-{{word:kan4}} — некрасивый. Описание вышло бы длинным."
+      },
+      "antonyms": ["{{word:bu4}} {{word:nan2}}"]
     },
     "bai2se4": {
       "term": "báisè",
@@ -775,6 +1074,12 @@
         "rus": "белый, бледный, светлого цвета",
         "zh": "白色，苍白，浅色"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "White, one of the six colors. Colors can't be described with other words.",
+        "rus": "Белый, один из шести цветов. Цвета не описать другими словами."
+      },
+      "antonyms": ["{{word:hei1se4}}"],
       "maps": "walo"
     },
     "hei1se4": {
@@ -789,6 +1094,12 @@
         "rus": "чёрный, тёмный, неосвещённый, неясный",
         "zh": "黑色，黑暗，未点亮，模糊"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "Black, one of the six colors. Colors can't be described with other words.",
+        "rus": "Чёрный, один из шести цветов. Цвета не описать другими словами."
+      },
+      "antonyms": ["{{word:bai2se4}}"],
       "maps": "pimeja"
     },
     "hong2se4": {
@@ -802,6 +1113,11 @@
         "eng": "red, reddish",
         "rus": "красный, красноватый",
         "zh": "红色，偏红"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Red, one of the six colors. Colors can't be described with other words.",
+        "rus": "Красный, один из шести цветов. Цвета не описать другими словами."
       },
       "maps": "loje"
     },
@@ -817,6 +1133,11 @@
         "rus": "жёлтый, желтоватый",
         "zh": "黄色，偏黄"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "Yellow, one of the six colors. Colors can't be described with other words.",
+        "rus": "Жёлтый, один из шести цветов. Цвета не описать другими словами."
+      },
       "maps": "jelo"
     },
     "lan2se4": {
@@ -830,6 +1151,11 @@
         "eng": "blue, green, aqua, shifting spectrum colors",
         "rus": "синий, зелёный, бирюзовый, переходные цвета спектра",
         "zh": "蓝色，绿色，青色，光谱中过渡性的颜色"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Blue and green, one of the six colors. Colors can't be described with other words.",
+        "rus": "Синий и зелёный, один из шести цветов. Цвета не описать другими словами."
       },
       "maps": "laso"
     },
@@ -845,6 +1171,11 @@
         "rus": "цвет, пигмент, цветовой оттенок",
         "zh": "颜色，色素，色调范围"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "Color itself: without it, you can't ask \"what color is it?\"",
+        "rus": "Сам цвет: без него не спросить «какого это цвета?»"
+      },
       "maps": "kule"
     },
     "qi2guai4": {
@@ -859,6 +1190,11 @@
         "rus": "странный, необычный, глупый, безумный, опьянённый",
         "zh": "奇怪的，不寻常的，愚蠢的，疯狂的，醉的"
       },
+      "necessity": {
+        "index": 2,
+        "eng": "Strange, unusual. {{word:bu4}} {{word:yi1yang4}} is close, but doesn't say it surprises you.",
+        "rus": "Странный, необычный. {{word:bu4}} {{word:yi1yang4}} близко, но не говорит, что это удивляет."
+      },
       "maps": "nasa"
     },
     "kuai4": {
@@ -872,7 +1208,13 @@
         "eng": "fast, quick; before a verb, quickly ({{word:kuai4}} {{word:lai2}}!, \"come quickly!\")",
         "rus": "быстрый; перед глаголом — быстро ({{word:kuai4}} {{word:lai2}}! — «иди скорее!»)",
         "zh": "快"
-      }
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Fast, and before a verb, \"quickly\": {{word:kuai4}} {{word:lai2}}! Slow is {{word:bu4}} {{word:kuai4}}.",
+        "rus": "Быстрый, а перед глаголом — «быстро»: {{word:kuai4}} {{word:lai2}}! Медленный — {{word:bu4}} {{word:kuai4}}."
+      },
+      "antonyms": ["{{word:bu4}} {{word:kuai4}}"]
     },
     "luan4": {
       "term": "luàn",
@@ -885,7 +1227,13 @@
         "eng": "messy, in a mess; {{word:nong4}}-{{word:luan4}}, \"make a mess\"",
         "rus": "беспорядочный, в беспорядке; {{word:nong4}}-{{word:luan4}} — «устроить беспорядок»",
         "zh": "乱"
-      }
+      },
+      "necessity": {
+        "index": 2,
+        "eng": "Messy. {{word:bu4}} {{word:hao3}} is too vague; tidy is {{word:bu4}} {{word:luan4}}.",
+        "rus": "Беспорядочный. {{word:bu4}} {{word:hao3}} слишком размыто; аккуратный — {{word:bu4}} {{word:luan4}}."
+      },
+      "antonyms": ["{{word:bu4}} {{word:luan4}}"]
     },
     "lao3": {
       "term": "lǎo",
@@ -898,7 +1246,13 @@
         "eng": "old (people, animals, plants); {{word:bu4}} {{word:lao3}}, \"young\"",
         "rus": "старый (о людях, животных, растениях); {{word:bu4}} {{word:lao3}} — «молодой»",
         "zh": "老"
-      }
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Old, for living things; young is {{word:bu4}} {{word:lao3}}. Age comes up whenever you talk about people.",
+        "rus": "Старый, о живом; молодой — {{word:bu4}} {{word:lao3}}. О возрасте говорят всегда, когда речь о людях."
+      },
+      "antonyms": ["{{word:bu4}} {{word:lao3}}"]
     },
     "re4": {
       "term": "rè",
@@ -912,6 +1266,12 @@
         "rus": "горячий, тёплый, приготовленный, химически активный",
         "zh": "热的，温暖的，煮熟的，化学上活跃的"
       },
+      "necessity": {
+        "index": 4,
+        "eng": "Hot: weather, food, fire. A feeling you can't describe with other words.",
+        "rus": "Горячий, жаркий: погода, еда, огонь. Ощущение, которое не описать другими словами."
+      },
+      "antonyms": ["{{word:leng3}}"],
       "maps": "seli"
     },
     "leng3": {
@@ -926,6 +1286,12 @@
         "rus": "холодный, прохладный, сырой, необработанный",
         "zh": "冷的，凉的，生的，未加工的"
       },
+      "necessity": {
+        "index": 4,
+        "eng": "Cold: weather, water, food. A feeling you can't describe with other words.",
+        "rus": "Холодный: погода, вода, еда. Ощущение, которое не описать другими словами."
+      },
+      "antonyms": ["{{word:re4}}"],
       "maps": "lete"
     },
     "tian2": {
@@ -940,6 +1306,11 @@
         "rus": "сладкий, ароматный, милый, невинный, очаровательный",
         "zh": "甜的，香的，可爱的，天真的，讨人喜欢的"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "Sweet: the one taste you can name. Other tastes are {{word:wei4dao4}} {{word:hao3}} or {{word:bu4}} {{word:hao3}}.",
+        "rus": "Сладкий — единственный вкус, который можно назвать. Остальные — {{word:wei4dao4}} {{word:hao3}} или {{word:bu4}} {{word:hao3}}."
+      },
       "maps": "suwi"
     },
     "wei4dao4": {
@@ -953,6 +1324,11 @@
         "eng": "taste, flavor, good or not: {{word:wei4dao4}} {{word:hen3}} {{word:hao3}}, \"it tastes good\"; salt is {{word:nong4}}-{{word:hao3}} {{word:wei4dao4}}-{{word:de}} {{word:dong1xi}}, \"the thing that makes it taste good\"",
         "rus": "вкус, хороший или нет: {{word:wei4dao4}} {{word:hen3}} {{word:hao3}} — «вкусно»; соль — {{word:nong4}}-{{word:hao3}} {{word:wei4dao4}}-{{word:de}} {{word:dong1xi}}",
         "zh": "味道"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Taste, good or bad. Every food sentence needs it.",
+        "rus": "Вкус, хороший или плохой. Он нужен в каждом разговоре о еде."
       }
     },
     "ying4": {
@@ -967,6 +1343,12 @@
         "rus": "твёрдый, каменистый; камень, скала, металл",
         "zh": "硬的，石头般的；岩石，石头，金属"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "Hard, like stone: rock, metal, and glass are described from it.",
+        "rus": "Твёрдый, как камень: через него описывают камень, металл и стекло."
+      },
+      "antonyms": ["{{word:bu4}} {{word:ying4}}"],
       "maps": "kiwen"
     },
     "yuan2": {
@@ -981,7 +1363,50 @@
         "rus": "круглый, кольцевидный, шарообразный; шар, круг, колесо, цикл",
         "zh": "圆的，环形的，球形的；球，圆圈，轮子，循环"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "Round: balls, wheels, the earth, and circles are described from it.",
+        "rus": "Круглый: через него описывают мячи, колёса, Землю и круги."
+      },
       "maps": "sike"
+    },
+    "kong1": {
+      "term": "kōng",
+      "pos": {
+        "eng": "adjective",
+        "rus": "прилагательное",
+        "zh": "形容词"
+      },
+      "definition": {
+        "eng": "empty (e.g. {{word:he2zi}} {{word:shi4}} {{word:kong1}}-{{word:de}}, \"the box is empty\"; {{word:kong1}}-{{word:jian1}}, \"space, room\")",
+        "rus": "пустой (например, {{word:he2zi}} {{word:shi4}} {{word:kong1}}-{{word:de}} — «коробка пустая»; {{word:kong1}}-{{word:jian1}} — «пространство, место»)",
+        "zh": "空"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Empty, and the first half of {{word:kong1}}-{{word:qi4}} (air) and {{word:kong1}}-{{word:jian1}} (space).",
+        "rus": "Пустой, а также первая половина слов {{word:kong1}}-{{word:qi4}} (воздух) и {{word:kong1}}-{{word:jian1}} (пространство)."
+      },
+      "antonyms": ["{{word:you3}} {{word:dong1xi}}"]
+    },
+    "ming2": {
+      "term": "míng",
+      "pos": {
+        "eng": "adjective",
+        "rus": "прилагательное",
+        "zh": "形容词"
+      },
+      "definition": {
+        "eng": "bright, light, clear",
+        "rus": "яркий, светлый, ясный",
+        "zh": "明"
+      },
+      "necessity": {
+        "index": 2,
+        "eng": "Bright; dark is {{word:bu4}} {{word:ming2}}. {{word:you3}} {{word:ri4}}-{{word:de}} would work only for sunlight.",
+        "rus": "Яркий; тёмный — {{word:bu4}} {{word:ming2}}. {{word:you3}} {{word:ri4}}-{{word:de}} подошло бы только для солнца."
+      },
+      "antonyms": ["{{word:bu4}} {{word:ming2}}"]
     },
     "xiao3": {
       "term": "xiǎo",
@@ -995,6 +1420,13 @@
         "rus": "маленький, небольшой, короткий, немногочисленный, молодой, чуть-чуть",
         "zh": "小的，短的，少的，年幼的，一点儿"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Small, little: one of the most basic ways to describe anything.",
+        "rus": "Маленький — один из самых базовых способов что-то описать."
+      },
+      "covers": ["atoms:SMALL"],
+      "antonyms": ["{{word:da4}}"],
       "maps": "lili"
     },
     "da4": {
@@ -1005,11 +1437,37 @@
         "zh": "形容词"
       },
       "definition": {
-        "eng": "big, heavy, large, long, tall, important, adult",
-        "rus": "большой, тяжёлый, крупный, длинный, высокий, важный, взрослый",
-        "zh": "大的，重的，长的，高的，重要的，成年的"
+        "eng": "big, heavy, large, long, important, adult",
+        "rus": "большой, тяжёлый, крупный, длинный, важный, взрослый",
+        "zh": "大的，重的，长的，重要的，成年的"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Big: one of the most basic ways to describe anything. Adults and important things too.",
+        "rus": "Большой — один из самых базовых способов что-то описать. А ещё взрослый и важный."
+      },
+      "covers": ["atoms:BIG"],
+      "antonyms": ["{{word:xiao3}}"],
       "maps": "suli"
+    },
+    "gao1": {
+      "term": "gāo",
+      "pos": {
+        "eng": "adjective",
+        "rus": "прилагательное",
+        "zh": "形容词"
+      },
+      "definition": {
+        "eng": "tall, high",
+        "rus": "высокий",
+        "zh": "高"
+      },
+      "necessity": {
+        "index": 2,
+        "eng": "Tall, high. {{word:da4}} covers size, but not height: mountains, buildings, and people need it.",
+        "rus": "Высокий. {{word:da4}} говорит о размере, но не о высоте: она нужна для гор, домов и людей."
+      },
+      "antonyms": ["{{word:bu4}} {{word:gao1}}"]
     },
     "yao4": {
       "term": "yào",
@@ -1023,6 +1481,12 @@
         "rus": "хотеть, нуждаться, требовать, должен, следует",
         "zh": "想要，需要，必须，应该"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Want, need. Without it, you can't ask for anything.",
+        "rus": "Хотеть, нужно. Без него ничего не попросить."
+      },
+      "covers": ["atoms:WANT", "atoms:DON'T WANT", "grammar:want", "grammar:dont"],
       "maps": "wile"
     },
     "ai4": {
@@ -1036,6 +1500,11 @@
         "eng": "to love, have compassion for, show deep affection to",
         "rus": "любить, испытывать сострадание, проявлять глубокую привязанность",
         "zh": "爱，怜悯，表达深厚的感情"
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Love, and before a verb, \"love to\". Liking is {{word:ai4}} too.",
+        "rus": "Любить, а перед глаголом — «любить что-то делать». «Нравиться» — тоже {{word:ai4}}."
       },
       "maps": "olin"
     },
@@ -1051,6 +1520,12 @@
         "rus": "чувство, эмоция, непосредственное переживание; чувствовать, думать",
         "zh": "感觉，情绪，直接体验；感觉，认为"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Feel and think: \"I feel cold\", \"I think so\". Your inner life needs it.",
+        "rus": "Чувствовать и думать: «мне холодно», «я так думаю». Без него не рассказать о себе изнутри."
+      },
+      "covers": ["atoms:THINK", "atoms:FEEL"],
       "maps": "pilin"
     },
     "zhi1dao4": {
@@ -1065,6 +1540,13 @@
         "rus": "знать, разбираться в чём-то, обладать сведениями; уметь",
         "zh": "知道，通晓，掌握信息；懂得怎么做"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Know, and know how. Without it, you can't say what you know or don't.",
+        "rus": "Знать и уметь. Без него не сказать, что ты знаешь, а что нет."
+      },
+      "covers": ["atoms:KNOW"],
+      "antonyms": ["{{word:bu4}} {{word:zhi1dao4}}"],
       "maps": "sona"
     },
     "xue2": {
@@ -1078,6 +1560,11 @@
         "eng": "to learn, study; before a verb: learn to do it (e.g. {{word:wo3}} {{word:xue2}} {{word:xie3}}, \"I'm learning to write\")",
         "rus": "учиться, изучать; перед глаголом: учиться что-то делать (напр. {{word:wo3}} {{word:xue2}} {{word:xie3}}, «я учусь писать»)",
         "zh": "学，学习；放在动词前：学做某事（如：我学写）"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Learn. You could say you want to {{word:zhi1dao4}}, but learning is a whole activity: school, students, practice.",
+        "rus": "Учиться. Можно сказать, что хочешь {{word:zhi1dao4}}, но учёба — целое занятие: школа, ученики, практика."
       }
     },
     "suan4": {
@@ -1091,6 +1578,11 @@
         "eng": "to calculate, count, work out; {{word:suan4}}-{{word:de}} {{word:gong1ju4}}, \"computer\"",
         "rus": "считать, вычислять; {{word:suan4}}-{{word:de}} {{word:gong1ju4}} — «компьютер»",
         "zh": "算"
+      },
+      "necessity": {
+        "index": 2,
+        "eng": "Calculate, count: the computer is {{word:suan4}}-{{word:de}} {{word:gong1ju4}}, and sums use it.",
+        "rus": "Считать, вычислять: компьютер — {{word:suan4}}-{{word:de}} {{word:gong1ju4}}, и примеры решают с ним."
       }
     },
     "jiao1": {
@@ -1104,7 +1596,13 @@
         "eng": "to teach; {{word:jiao1}} + person + verb, \"teach someone to do it\"",
         "rus": "учить (кого-то); {{word:jiao1}} + человек + глагол — «научить делать»",
         "zh": "教"
-      }
+      },
+      "necessity": {
+        "index": 2,
+        "eng": "Teach. {{word:bang1}} … {{word:xue2}} would work, but teachers and schools come up often.",
+        "rus": "Учить кого-то. Подошло бы {{word:bang1}} … {{word:xue2}}, но учителя и школы нужны часто."
+      },
+      "synonyms": ["{{word:bang1}} … {{word:xue2}}"]
     },
     "kan4": {
       "term": "kàn",
@@ -1118,6 +1616,12 @@
         "rus": "смотреть, видеть, рассматривать, наблюдать, читать, следить",
         "zh": "看，看见，查看，观察，阅读，观看"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "See, look, read, watch. One of the five senses, and one of the most used verbs.",
+        "rus": "Видеть, смотреть, читать. Одно из пяти чувств и один из самых нужных глаголов."
+      },
+      "covers": ["atoms:SEE"],
       "maps": "lukin"
     },
     "ting1": {
@@ -1132,6 +1636,12 @@
         "rus": "слышать, слушать, обращать внимание, слушаться",
         "zh": "听，倾听，注意，听从"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Hear, listen. One of the five senses: music, sound, and obeying all need it.",
+        "rus": "Слышать, слушать. Одно из пяти чувств: без него ни музыки, ни звуков, ни «слушаться»."
+      },
+      "covers": ["atoms:HEAR"],
       "maps": "kute"
     },
     "shuo1": {
@@ -1146,6 +1656,12 @@
         "rus": "сообщать, говорить, разговаривать, пользоваться языком; язык, речь",
         "zh": "交流，说，讲话，使用语言；语言，言语"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Say, speak. Without it, you can't talk about talking.",
+        "rus": "Говорить, сказать. Без него не рассказать, кто что сказал."
+      },
+      "covers": ["atoms:SAY"],
       "maps": "toki"
     },
     "xie3": {
@@ -1159,6 +1675,11 @@
         "eng": "to write, draw, represent with marks",
         "rus": "писать, рисовать, изображать знаками",
         "zh": "写，画，用符号表示"
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Write: books, letters, and signs are all {{word:xie3}}-{{word:de}} {{word:dong1xi}}.",
+        "rus": "Писать: книги, письма и вывески — всё это {{word:xie3}}-{{word:de}} {{word:dong1xi}}."
       },
       "maps": "sitelen"
     },
@@ -1174,6 +1695,12 @@
         "rus": "использовать, применять; с помощью, посредством",
         "zh": "使用，利用；用，凭借"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Use, and \"with\": {{word:yong4}} {{word:shou3}}, with your hand. Every tool sentence needs it.",
+        "rus": "Использовать, а также «с помощью»: {{word:yong4}} {{word:shou3}} — рукой. Без него ни одного предложения про инструменты."
+      },
+      "covers": ["grammar:with"],
       "maps": "kepeken"
     },
     "jiao4": {
@@ -1188,6 +1715,12 @@
         "rus": "звать, называться; издавать звук животного (в рамках правила о кавычках); перед человеком и глаголом — велеть или позволить (например, {{word:jiao4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}} — «пусть войдёт»)",
         "zh": "叫，被称为；在\"引号隔离规则\"下发出动物叫声"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "Call, be named, and \"have someone do it\". Names can't be asked about without it.",
+        "rus": "Называть(ся), а также «велеть кому-то». Без него не спросить, как кого зовут."
+      },
+      "covers": ["grammar:name"],
       "maps": "nimi, mu"
     },
     "kai1shi3": {
@@ -1202,6 +1735,13 @@
         "rus": "начинать, стартовать, открывать; включать; суметь",
         "zh": "开始，启动，打开；打开（设备）；设法做到"
       },
+      "necessity": {
+        "index": 4,
+        "eng": "Begin, start. Without it, you can't say when something starts.",
+        "rus": "Начинать. Без него не сказать, когда что-то начинается."
+      },
+      "antonyms": ["{{word:wan2}}"],
+      "synonyms": ["{{word:qi3}}"],
       "maps": "open, kama"
     },
     "guan1": {
@@ -1215,7 +1755,13 @@
         "eng": "to close, shut; to turn off (e.g. {{word:guan1}} {{word:huo3}}, \"turn off the fire\")",
         "rus": "закрывать; выключать (напр. {{word:guan1}} {{word:huo3}}, «выключить огонь»)",
         "zh": "关，关上，关掉（如：关火）"
-      }
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Close, turn off: doors, lights, machines. {{word:bu4}} {{word:kai1}} is a state, not an action.",
+        "rus": "Закрыть, выключить: двери, свет, машины. {{word:bu4}} {{word:kai1}} — состояние, а не действие."
+      },
+      "antonyms": ["{{word:kai1}}"]
     },
     "kai1": {
       "term": "kāi",
@@ -1228,7 +1774,13 @@
         "eng": "to open; to turn on (e.g. {{word:he2zi}} {{word:kai1}} {{word:le}}, \"the box is open\")",
         "rus": "открывать, открываться; включать (напр. {{word:he2zi}} {{word:kai1}} {{word:le}}, «коробка открыта»)",
         "zh": "开，打开（如：盒子开了）"
-      }
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Open, turn on: doors, boxes, lights, cars ({{word:kai1}} {{word:che1}}, drive).",
+        "rus": "Открыть, включить: двери, коробки, свет, машины ({{word:kai1}} {{word:che1}} — водить)."
+      },
+      "antonyms": ["{{word:guan1}}"]
     },
     "wan2": {
       "term": "wán",
@@ -1242,6 +1794,13 @@
         "rus": "закончить, быть готовым, закончиться; присоединяется через дефис прямо после глагола, обозначая результативное завершение (chī-wán, «доесть»)",
         "zh": "完，完毕，用尽；通过连字符直接附着在动词之后，表示动作的结果性完成（chī-wán，「吃完」）"
       },
+      "necessity": {
+        "index": 4,
+        "eng": "Finish, be done: {{word:chi1}}-{{word:wan2}}, finish eating. Without it, nothing ever ends.",
+        "rus": "Закончить: {{word:chi1}}-{{word:wan2}} — доесть. Без него ничего не заканчивается."
+      },
+      "covers": ["grammar:result"],
+      "antonyms": ["{{word:kai1shi3}}"],
       "maps": "pini"
     },
     "shui4jiao4": {
@@ -1255,6 +1814,11 @@
         "eng": "to sleep, rest, be inactive; sleeping, asleep",
         "rus": "спать, отдыхать, бездействовать; спящий",
         "zh": "睡觉，休息，不活动；睡着的"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Sleep: every day ends with it, and no description is short.",
+        "rus": "Спать: каждый день кончается сном, а короткого описания нет."
       },
       "maps": "lape"
     },
@@ -1270,6 +1834,11 @@
         "rus": "ждать",
         "zh": "等待"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "Wait. Without it, you can't say \"wait a moment\" ({{word:deng3}} {{word:yi1}}-{{word:xia4}}).",
+        "rus": "Ждать. Без него не сказать «подожди минутку» ({{word:deng3}} {{word:yi1}}-{{word:xia4}})."
+      },
       "maps": ""
     },
     "chi1": {
@@ -1280,11 +1849,34 @@
         "zh": "动词/名词"
       },
       "definition": {
-        "eng": "to eat, drink, consume, ingest; food, meal, edible substance",
-        "rus": "есть, пить, потреблять, принимать пищу; еда, приём пищи, съедобное вещество",
-        "zh": "吃，喝，消耗，摄入；食物，一餐，可食用之物"
+        "eng": "to eat, consume, ingest; food, meal, edible substance",
+        "rus": "есть, потреблять, принимать пищу; еда, приём пищи, съедобное вещество",
+        "zh": "吃，消耗，摄入；食物，一餐，可食用之物"
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Eat, and with -{{word:de}}, food ({{word:chi1}}-{{word:de}}). Every meal and food word comes from it.",
+        "rus": "Есть, а с -{{word:de}} — еда ({{word:chi1}}-{{word:de}}). Из него выходят все слова про еду."
       },
       "maps": "moku"
+    },
+    "he1": {
+      "term": "hē",
+      "pos": {
+        "eng": "verb",
+        "rus": "глагол",
+        "zh": "动词"
+      },
+      "definition": {
+        "eng": "to drink (e.g. {{word:he1}} {{word:shui3}}, \"drink water\")",
+        "rus": "пить (например, {{word:he1}} {{word:shui3}} — «пить воду»)",
+        "zh": "喝"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Drink: water, tea, anything you drink. {{word:chi1}} doesn't cover it in Mandarin.",
+        "rus": "Пить: воду, чай, что угодно. {{word:chi1}} в китайском этого не покрывает."
+      }
     },
     "wan2r": {
       "term": "wánr",
@@ -1297,6 +1889,11 @@
         "eng": "to play, have fun, engage in recreation; playful, artistic, frivolous",
         "rus": "играть, веселиться, отдыхать; игривый, творческий, легкомысленный",
         "zh": "玩儿，玩乐，娱乐；爱玩的，艺术性的，轻浮的"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Play, have fun. Games, toys, and free time are described from it.",
+        "rus": "Играть, развлекаться. Через него описывают игры, игрушки и отдых."
       },
       "maps": "musi"
     },
@@ -1312,6 +1909,13 @@
         "rus": "приходить, прибывать, происходить; {{word:wo3}} {{word:lai2}} + глагол — «давай я сделаю»",
         "zh": "来，到达，发生"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Come, toward you. With {{word:qu4}}, it gives every movement a direction.",
+        "rus": "Приходить, к тебе. Вместе с {{word:qu4}} задаёт направление любому движению."
+      },
+      "covers": ["grammar:direction"],
+      "antonyms": ["{{word:qu4}}"],
       "maps": "kama"
     },
     "qu4": {
@@ -1326,6 +1930,13 @@
         "rus": "идти, двигаться к, уходить",
         "zh": "走，朝……移动，离开前往"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Go, away from you. With {{word:lai2}}, it gives every movement a direction.",
+        "rus": "Уходить, от тебя. Вместе с {{word:lai2}} задаёт направление любому движению."
+      },
+      "covers": ["grammar:direction", "grammar:to"],
+      "antonyms": ["{{word:lai2}}"],
       "maps": "tawa"
     },
     "bian4": {
@@ -1340,6 +1951,12 @@
         "rus": "становиться, превращаться, преобразовываться; в сочетании с ba выступает как каузативный глагольный механизм",
         "zh": "变成，转变，转化；与 ba 搭配作为致使性动词机制"
       },
+      "necessity": {
+        "index": 4,
+        "eng": "Become, change: {{word:bian4}} {{word:hao3}} {{word:le}}, it got better. Without it, things can't change.",
+        "rus": "Становиться, меняться: {{word:bian4}} {{word:hao3}} {{word:le}} — стало лучше. Без него ничего не меняется."
+      },
+      "covers": ["grammar:change"],
       "maps": "kama"
     },
     "nong4": {
@@ -1354,6 +1971,12 @@
         "rus": "делать, предпринимать действие, работать над, строить, изготавливать, готовить",
         "zh": "做，采取行动，从事，建造，制作，准备"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Do, make, fix: the all-purpose action. Most work and making verbs are described with it.",
+        "rus": "Делать, мастерить, чинить — универсальное действие. Через него описывают почти любую работу."
+      },
+      "covers": ["atoms:DO", "categories:action", "grammar:make"],
       "maps": "pali"
     },
     "fang4": {
@@ -1367,6 +1990,11 @@
         "eng": "to put, place, set down; with bǎ, says where a thing goes (e.g. {{word:ba3}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:di4}}-{{word:shang4}}, \"put the clothes on the floor\")",
         "rus": "класть, ставить, помещать; с bǎ говорит, куда кладут вещь (напр. {{word:ba3}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:di4}}-{{word:shang4}}, «положить одежду на пол»)",
         "zh": "放，放置，搁；常和“把”一起说东西放在哪里（如：把衣服放在地上）"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Put, place: {{word:ba3}} X {{word:fang4}} {{word:zai4}} … says where something goes.",
+        "rus": "Класть, ставить: {{word:ba3}} X {{word:fang4}} {{word:zai4}} … говорит, куда что-то кладут."
       }
     },
     "na2": {
@@ -1380,7 +2008,13 @@
         "eng": "to take, pick up, hold; take away (e.g. {{word:cong2}} {{word:qi1}} {{word:li3}}-{{word:mian4}} {{word:na2}} {{word:san1}}, \"take three from seven\")",
         "rus": "брать, взять, держать; отнимать (напр. {{word:cong2}} {{word:qi1}} {{word:li3}}-{{word:mian4}} {{word:na2}} {{word:san1}}, «отнять три от семи»)",
         "zh": "拿，拿走；（如：从七里面拿三）"
-      }
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Take, hold, bring: {{word:na2}}-{{word:lai2}}, bring it. Also subtraction.",
+        "rus": "Брать, держать, нести: {{word:na2}}-{{word:lai2}} — принести. А ещё вычитание."
+      },
+      "antonyms": ["{{word:gei3}}"]
     },
     "mai3": {
       "term": "mǎi",
@@ -1393,7 +2027,13 @@
         "eng": "to buy; {{word:mai3}} {{word:dong1xi}}-{{word:de}} {{word:di4fang1}}, \"market, shop\"",
         "rus": "покупать; {{word:mai3}} {{word:dong1xi}}-{{word:de}} {{word:di4fang1}} — «рынок, магазин»",
         "zh": "买"
-      }
+      },
+      "necessity": {
+        "index": 2,
+        "eng": "Buy. {{word:gei3}} {{word:jin1}} {{word:de2}} {{word:dong1xi}} would work, but shopping is everyday life.",
+        "rus": "Покупать. Подошло бы {{word:gei3}} {{word:jin1}} {{word:de2}} {{word:dong1xi}}, но покупки — часть каждого дня."
+      },
+      "synonyms": ["{{word:gei3}} {{word:jin1}} {{word:de2}} {{word:dong1xi}}"]
     },
     "bang1": {
       "term": "bāng",
@@ -1403,9 +2043,14 @@
         "zh": "动词"
       },
       "definition": {
-        "eng": "to help; before a person and a verb, help them do it (e.g. {{word:bang1}} {{word:wo3}} {{word:kan4}} {{word:yi1xia4}}, \"take a look for me\")",
-        "rus": "помогать; перед человеком и глаголом — помочь сделать (например, {{word:bang1}} {{word:wo3}} {{word:kan4}} {{word:yi1xia4}} — «посмотри за меня»)",
+        "eng": "to help; before a person and a verb, help them do it (e.g. {{word:bang1}} {{word:wo3}} {{word:kan4}} {{word:yi1}}-{{word:xia4}}, \"take a look for me\")",
+        "rus": "помогать; перед человеком и глаголом — помочь сделать (например, {{word:bang1}} {{word:wo3}} {{word:kan4}} {{word:yi1}}-{{word:xia4}} — «посмотри за меня»)",
         "zh": "帮，帮助"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Help: {{word:bang1}} {{word:wo3}}! Asking for help can't wait for a description.",
+        "rus": "Помогать: {{word:bang1}} {{word:wo3}}! Просьба о помощи не ждёт описаний."
       }
     },
     "da3": {
@@ -1419,6 +2064,11 @@
         "eng": "to hit, fight, battle, challenge, compete against",
         "rus": "бить, драться, сражаться, бросать вызов, соревноваться",
         "zh": "打，打架，战斗，挑战，竞争"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Hit, and the start of many actions: {{word:da3}}-{{word:kai1}}, open; {{word:da3}} {{word:che1}}, take a taxi.",
+        "rus": "Бить, а также начало многих действий: {{word:da3}}-{{word:kai1}} — открыть; {{word:da3}} {{word:che1}} — взять такси."
       },
       "maps": "utala"
     },
@@ -1434,6 +2084,13 @@
         "rus": "давать, посылать, испускать, предоставлять; кому, для, с точки зрения",
         "zh": "给，送，发出，提供；给，为了，从……的角度"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Give, and \"to\" or \"for\": {{word:gei3}} {{word:wo3}}. Without it, nothing passes between people.",
+        "rus": "Давать, а также «кому», «для»: {{word:gei3}} {{word:wo3}}. Без него ничего не передать."
+      },
+      "covers": ["grammar:for"],
+      "antonyms": ["{{word:na2}}"],
       "maps": "pana, tawa"
     },
     "mo1": {
@@ -1448,6 +2105,12 @@
         "rus": "трогать, ощупывать, гладить, воспринимать на ощупь",
         "zh": "摸，触摸，抚摸，通过接触感知"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "Touch, feel with your hand. The sense of touch has no other word.",
+        "rus": "Трогать, щупать. У осязания нет другого слова."
+      },
+      "covers": ["atoms:TOUCH"],
       "maps": "pilin"
     },
     "zhao3": {
@@ -1461,6 +2124,11 @@
         "eng": "to hunt, forage, search for, look for",
         "rus": "охотиться, добывать, искать, разыскивать",
         "zh": "打猎，觅食，寻找，搜寻"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Look for, find ({{word:zhao3}}-{{word:dao4}}). Searching for things comes up every day.",
+        "rus": "Искать, найти ({{word:zhao3}}-{{word:dao4}}). Искать что-то приходится каждый день."
       },
       "maps": "alasa"
     },
@@ -1476,6 +2144,12 @@
         "rus": "находиться в, быть расположенным в, присутствовать в помещении",
         "zh": "存在于，位于，在某处/房间里"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Be at a place, and \"in the middle of doing\". Saying where anything is starts here.",
+        "rus": "Находиться где-то, а также «как раз делать». С него начинается любое «где»."
+      },
+      "covers": ["atoms:BE SOMEWHERE", "categories:place", "grammar:ongoing", "grammar:location"],
       "maps": "lon"
     },
     "shi4": {
@@ -1490,6 +2164,13 @@
         "rus": "быть, связка между подлежащим и именным сказуемым",
         "zh": "是，连接主语与判断谓语的系动词"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Be: \"this is a person\". The simplest sentence can't be made without it.",
+        "rus": "Быть, являться: «это человек». Без него не построить самое простое предложение."
+      },
+      "covers": ["atoms:BE SOMEONE", "categories:substance"],
+      "antonyms": ["{{word:bu4}} {{word:shi4}}"],
       "maps": ""
     },
     "liu2": {
@@ -1503,6 +2184,11 @@
         "eng": "to stay, remain, keep, endure, protect",
         "rus": "оставаться, пребывать, хранить, выдерживать, защищать",
         "zh": "留下，保持，保留，忍受，保护"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Stay, keep: stay home, keep something for later.",
+        "rus": "Оставаться, оставлять: остаться дома, оставить на потом."
       },
       "maps": "awen"
     },
@@ -1518,6 +2204,11 @@
         "rus": "получать, обретать, приобретать; сочетается с номинализированной через de глагольной фразой для выражения приобретения абстрактного результата (например, de zhidao-de, «учиться», буквально «получить познанное»)",
         "zh": "得到，获得，取得；与经 de 名词化的动词短语搭配，表示获得某种抽象结果（例如 de zhidao-de，“学习”，字面意思是“得到已知之物”）"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "Get, receive. Winning, earning, and getting sick are described with it.",
+        "rus": "Получать. Через него описывают выигрыш, заработок и болезнь."
+      },
       "maps": "kama"
     },
     "you3": {
@@ -1532,6 +2223,13 @@
         "rus": "иметь, содержать, нести, удерживать, существовать, имеется; отрицается только через mei, никогда через bu",
         "zh": "有，包含，携带，持有，存在；只能用 mei 否定，绝不用 bu"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Have, and \"there is\". Without it, nothing exists and nobody owns anything.",
+        "rus": "Иметь, а также «есть, имеется». Без него ничего не существует и ни у кого ничего нет."
+      },
+      "covers": ["atoms:SOME", "atoms:THERE IS", "categories:state", "grammar:owner"],
+      "antonyms": ["{{word:mei2}}-{{word:you3}}"],
       "maps": "jo, lon"
     },
     "si3": {
@@ -1546,7 +2244,34 @@
         "rus": "умирать; мёртвый, умирающий",
         "zh": "死，去世；死的，垂死的"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Die, dead. Life and death are among the most basic ideas.",
+        "rus": "Умирать, мёртвый. Жизнь и смерть — одни из самых базовых понятий."
+      },
+      "covers": ["atoms:DIE"],
+      "antonyms": ["{{word:huo2}}", "{{word:sheng1}}"],
       "maps": "moli"
+    },
+    "sheng1": {
+      "term": "shēng",
+      "pos": {
+        "eng": "verb",
+        "rus": "глагол",
+        "zh": "动词"
+      },
+      "definition": {
+        "eng": "to give birth, be born; to bring forth (e.g. {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1xi}}, \"fruit\"; {{word:fei1}}-{{word:de}} {{word:dong4wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1xi}}, \"egg\")",
+        "rus": "рожать, рождаться; давать (например, {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1xi}} — «фрукт»; {{word:fei1}}-{{word:de}} {{word:dong4wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1xi}} — «яйцо»)",
+        "zh": "生"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Give birth, be born. Fruit, eggs, and birth itself are described with it.",
+        "rus": "Рожать, рождаться. Через него описывают фрукты, яйца и само рождение."
+      },
+      "covers": ["atoms:HAPPEN"],
+      "antonyms": ["{{word:si3}}"]
     },
     "shi2jian1": {
       "term": "shíjiān",
@@ -1560,6 +2285,12 @@
         "rus": "время, длительность, момент, случай, период, ситуация",
         "zh": "时间，时长，时刻，场合，时期，情况"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Time, and \"when\": X-{{word:de}} {{word:shi2jian1}}. Every time expression is built on it.",
+        "rus": "Время и «когда»: X-{{word:de}} {{word:shi2jian1}}. На нём построено всё, что про время."
+      },
+      "covers": ["atoms:WHEN", "atoms:A LONG TIME", "atoms:FOR SOME TIME", "categories:time", "grammar:when"],
       "maps": "tenpo"
     },
     "cong2": {
@@ -1574,6 +2305,12 @@
         "rus": "от, из",
         "zh": "从"
       },
+      "necessity": {
+        "index": 4,
+        "eng": "From: where something starts. Without it, no journey has a beginning.",
+        "rus": "Из, от: откуда что-то начинается. Без него у пути нет начала."
+      },
+      "covers": ["grammar:from"],
       "maps": ""
     },
     "dui4": {
@@ -1588,6 +2325,13 @@
         "rus": "лицом к, по направлению к, касательно, полезный для; правильный",
         "zh": "面对，朝向，关于，对……有益；正确"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "Toward, to, for: {{word:dui4}} {{word:wo3}} {{word:hen3}} {{word:hao3}}, good to me. Also \"right\" ({{word:bu4}} {{word:dui4}}, wrong).",
+        "rus": "К, для, по отношению к: {{word:dui4}} {{word:wo3}} {{word:hen3}} {{word:hao3}} — добр ко мне. А ещё «правильно» ({{word:bu4}} {{word:dui4}} — неверно)."
+      },
+      "covers": ["grammar:for"],
+      "antonyms": ["{{word:bu4}} {{word:dui4}}"],
       "maps": "tawa"
     },
     "di4fang1": {
@@ -1602,7 +2346,31 @@
         "rus": "место (как в пространстве, так и в переносном смысле — часть чего-либо)",
         "zh": "地方（既指空间位置，也可比喻指某事物的一部分）"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "A place, \"somewhere\". Every place word is described from it.",
+        "rus": "Место, «где-то». Через него описывают любое место."
+      },
+      "covers": ["atoms:WHERE"],
       "maps": ""
+    },
+    "guo2": {
+      "term": "guó",
+      "pos": {
+        "eng": "noun",
+        "rus": "существительное",
+        "zh": "名词"
+      },
+      "definition": {
+        "eng": "country, nation",
+        "rus": "страна, государство",
+        "zh": "国"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "A country. Nations, travel, and the news all need it.",
+        "rus": "Страна. Без неё не поговорить о народах, поездках и новостях."
+      }
     },
     "lu4": {
       "term": "lù",
@@ -1615,6 +2383,11 @@
         "eng": "road, path, street; the way to a place",
         "rus": "дорога, путь",
         "zh": "路"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "A road, the way to a place. Asking the way needs it.",
+        "rus": "Дорога, путь куда-то. Без него не спросить дорогу."
       }
     },
     "di4": {
@@ -1628,6 +2401,11 @@
         "eng": "floor, horizontal surface, platform",
         "rus": "пол, горизонтальная поверхность",
         "zh": "地板，水平表面，平台"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "The floor, the ground. Mountains, soil, and \"down there\" are described from it.",
+        "rus": "Пол, земля. Через него описывают горы, почву и «внизу»."
       },
       "maps": "supa"
     },
@@ -1643,6 +2421,13 @@
         "rus": "сторона, окрестность, область сбоку, бедро",
         "zh": "旁边，附近，侧面区域，髋部"
       },
+      "necessity": {
+        "index": 4,
+        "eng": "Beside, next to. A basic position with no other word.",
+        "rus": "Рядом, сбоку. Базовое положение, для которого нет другого слова."
+      },
+      "covers": ["atoms:SIDE"],
+      "synonyms": ["{{word:fu4jin4}}"],
       "maps": "poka"
     },
     "you4bian1": {
@@ -1656,7 +2441,13 @@
         "eng": "right, the right side",
         "rus": "справа, правая сторона",
         "zh": "右边"
-      }
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Right, the right side. Left and right can't be described with other words.",
+        "rus": "Справа, правая сторона. «Лево» и «право» не описать другими словами."
+      },
+      "antonyms": ["{{word:zuo3bian1}}"]
     },
     "zuo3bian1": {
       "term": "zuǒbiān",
@@ -1669,7 +2460,13 @@
         "eng": "left, the left side",
         "rus": "слева, левая сторона",
         "zh": "左边"
-      }
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Left, the left side. Left and right can't be described with other words.",
+        "rus": "Слева, левая сторона. «Лево» и «право» не описать другими словами."
+      },
+      "antonyms": ["{{word:you4bian1}}"]
     },
     "qian2": {
       "term": "qián",
@@ -1683,6 +2480,13 @@
         "rus": "перед, лицо, передняя область, грудь",
         "zh": "前面，脸，最前方区域，胸部"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "In front, and before (in time): {{word:qian2}}-{{word:mian4}}, in front.",
+        "rus": "Впереди, а также «раньше»: {{word:qian2}}-{{word:mian4}} — впереди."
+      },
+      "covers": ["atoms:BEFORE"],
+      "antonyms": ["{{word:hou4}}"],
       "maps": "sinpin"
     },
     "wai4": {
@@ -1697,6 +2501,12 @@
         "rus": "вдали, снаружи",
         "zh": "在外，外面"
       },
+      "necessity": {
+        "index": 4,
+        "eng": "Outside, out: {{word:wai4}}-{{word:mian4}}, outside. The pair to {{word:li3}}.",
+        "rus": "Снаружи, вне: {{word:wai4}}-{{word:mian4}} — снаружи. Пара к {{word:li3}}."
+      },
+      "antonyms": ["{{word:li3}}"],
       "maps": "weka"
     },
     "ba3": {
@@ -1711,6 +2521,12 @@
         "rus": "грамматическая частица, вводящая объект; используется для реализации переходной конструкции изменения состояния",
         "zh": "引出宾语的语法助词；用于实现及物性状态改变结构"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "Puts the thing before the verb: {{word:ba3}} X {{word:fang4}} {{word:zai4}} …. Needed to say where you put something.",
+        "rus": "Ставит вещь перед глаголом: {{word:ba3}} X {{word:fang4}} {{word:zai4}} …. Без него не сказать, куда что-то положили."
+      },
+      "covers": ["categories:affection", "grammar:make"],
       "maps": ""
     },
     "de": {
@@ -1725,6 +2541,12 @@
         "rus": "показатель принадлежности, структурная определительная частица; используется для присоединения определений и многословных описательных конструкций к существительным",
         "zh": "所属标记，结构性定语助词；用于把修饰语和多词描述结构连接到目标名词上"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Joins a describing word to a noun: {{word:da4}}-{{word:de}} {{word:di4fang1}}. Every description in Hao-shuo-de uses it.",
+        "rus": "Соединяет описание с существительным: {{word:da4}}-{{word:de}} {{word:di4fang1}}. Им пользуется каждое описание в Hǎo-shuō-de."
+      },
+      "covers": ["atoms:MINE", "categories:relation", "grammar:owner", "grammar:can-cant", "grammar:describe"],
       "maps": "pi"
     },
     "le": {
@@ -1739,6 +2561,12 @@
         "rus": "показатель совершённого вида, завершённое изменение состояния",
         "zh": "完成体标记，表示状态变化已完成"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Says it happened, or it changed: {{word:wo3}} {{word:chi1}} {{word:le}}. The past and changes need it.",
+        "rus": "Говорит, что что-то случилось или изменилось: {{word:wo3}} {{word:chi1}} {{word:le}}. Без него ни прошлого, ни перемен."
+      },
+      "covers": ["grammar:happened"],
       "maps": "pini"
     },
     "ma": {
@@ -1753,6 +2581,12 @@
         "rus": "конечная вопросительная частица для вопросов да/нет",
         "zh": "句末是非疑问助词"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Turns a sentence into a yes-or-no question. Without it, you can't ask most questions.",
+        "rus": "Превращает предложение в вопрос «да или нет». Без него не задать большинство вопросов."
+      },
+      "covers": ["grammar:yes-no", "grammar:suggest"],
       "maps": ""
     },
     "bu4": {
@@ -1767,6 +2601,12 @@
         "rus": "не, нет; используется для стандартного отрицания глаголов и прилагательных, кроме you",
         "zh": "不，没；用于动词和形容词的标准否定，you 除外"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Not. Without it, you can't say no.",
+        "rus": "Не. Без него нельзя ничего отрицать."
+      },
+      "covers": ["atoms:DON'T WANT", "atoms:NOT", "grammar:not", "grammar:can-cant", "grammar:dont"],
       "maps": "ala"
     },
     "mei2": {
@@ -1780,6 +2620,11 @@
         "eng": "negative particle used exclusively to negate the verb you (to form meiyou)",
         "rus": "отрицательная частица, используемая исключительно для отрицания глагола you (образует meiyou)",
         "zh": "专用于否定动词 you 的否定助词（构成 meiyou）"
+      },
+      "necessity": {
+        "index": 5,
+        "eng": "\"Not\" for {{word:you3}}: {{word:mei2}}-{{word:you3}}, there isn't, I don't have. {{word:bu4}} can't do this job.",
+        "rus": "«Не» для {{word:you3}}: {{word:mei2}}-{{word:you3}} — нет, не имею. {{word:bu4}} эту работу не делает."
       },
       "maps": ""
     },
@@ -1795,6 +2640,12 @@
         "rus": "но, однако, лишь",
         "zh": "但是，然而，只是"
       },
+      "necessity": {
+        "index": 4,
+        "eng": "But: it links two ideas that pull against each other.",
+        "rus": "Но: связывает две мысли, которые спорят друг с другом."
+      },
+      "covers": ["grammar:but"],
       "maps": "taso"
     },
     "he2": {
@@ -1809,6 +2660,12 @@
         "rus": "и; используется строго для соединения нескольких существительных или подлежащих",
         "zh": "和；严格用于连接多个名词或主语"
       },
+      "necessity": {
+        "index": 4,
+        "eng": "And, between nouns: {{word:ni3}} {{word:he2}} {{word:wo3}}, you and me.",
+        "rus": "И, между существительными: {{word:ni3}} {{word:he2}} {{word:wo3}} — ты и я."
+      },
+      "covers": ["grammar:and"],
       "maps": "en"
     },
     "huo4zhe3": {
@@ -1823,6 +2680,12 @@
         "rus": "или; связывает варианты выбора или альтернативные части предложения",
         "zh": "或者；连接选择项或备选分句"
       },
+      "necessity": {
+        "index": 4,
+        "eng": "Or: without it, you can't offer a choice.",
+        "rus": "Или: без него не предложить выбор."
+      },
+      "covers": ["grammar:or"],
       "maps": "anu"
     },
     "ye3": {
@@ -1837,6 +2700,12 @@
         "rus": "тоже, также, к тому же; ставится непосредственно перед глаголами для построения составных действий",
         "zh": "也，还，另外；直接放在动词前，用来构造复合动作"
       },
+      "necessity": {
+        "index": 4,
+        "eng": "Also, too: {{word:wo3}} {{word:ye3}} {{word:chi1}}. Without it, you can't add one more.",
+        "rus": "Тоже, также: {{word:wo3}} {{word:ye3}} {{word:chi1}}. Без него ничего не добавить."
+      },
+      "covers": ["grammar:also"],
       "maps": ""
     },
     "you4": {
@@ -1850,6 +2719,11 @@
         "eng": "again: it happens once more; goes before the verb (e.g. {{word:ta1}} {{word:you4}} {{word:chi1}} {{word:le}}, \"he ate again\")",
         "rus": "снова, опять; ставится перед глаголом (напр. {{word:ta1}} {{word:you4}} {{word:chi1}} {{word:le}}, «он снова поел»)",
         "zh": "又，再一次；放在动词前（如：他又吃了）"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Again: it happened once more. {{word:zai4}} is taken, so \"again\" needs its own word.",
+        "rus": "Опять: это случилось ещё раз. {{word:zai4}} уже занято, поэтому «снова» — отдельное слово."
       }
     },
     "yin1wei4": {
@@ -1864,6 +2738,12 @@
         "rus": "потому что, из-за",
         "zh": "因为，由于"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Because: without it, you can't give a reason.",
+        "rus": "Потому что: без него не объяснить причину."
+      },
+      "covers": ["atoms:BECAUSE", "grammar:because"],
       "maps": ""
     },
     "ru2guo3": {
@@ -1877,7 +2757,13 @@
         "eng": "if; it starts the if-part ({{word:ru2guo3}} {{word:ni3}} {{word:lai2}}, …, \"if you come, …\")",
         "rus": "если; начинает условие ({{word:ru2guo3}} {{word:ni3}} {{word:lai2}}, … — «если ты придёшь, …»)",
         "zh": "如果"
-      }
+      },
+      "necessity": {
+        "index": 5,
+        "eng": "If: without it, you can't say what would happen.",
+        "rus": "Если: без него не сказать, что было бы."
+      },
+      "covers": ["atoms:IF", "grammar:if"]
     },
     "jiu4": {
       "term": "jiù",
@@ -1890,6 +2776,11 @@
         "eng": "then, right away, just; right before the verb, after the who ({{word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:jiu4}} {{word:deng3}} {{word:ni3}}, \"if you come, I will wait for you\"; {{word:wo3}} {{word:xian4zai4}} {{word:jiu4}} {{word:qu4}}, \"I am going right now\")",
         "rus": "тогда, сразу, именно; прямо перед глаголом ({{word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:jiu4}} {{word:deng3}} {{word:ni3}} — «если ты придёшь, я тебя подожду»)",
         "zh": "就"
+      },
+      "necessity": {
+        "index": 2,
+        "eng": "Then, right away, just. Sentences work without it, but sound much more natural with it.",
+        "rus": "Тогда, сразу, именно. Без него предложения работают, но с ним звучат гораздо естественнее."
       }
     },
     "wei4shen2me": {
@@ -1904,6 +2795,13 @@
         "rus": "почему",
         "zh": "为什么"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "Asks \"why?\". {{word:yin1wei4}} {{word:shen2me}} would also work, but this is the everyday way.",
+        "rus": "Спрашивает «почему?». Можно сказать и {{word:yin1wei4}} {{word:shen2me}}, но так говорят обычно."
+      },
+      "covers": ["grammar:question-word"],
+      "synonyms": ["{{word:yin1wei4}} {{word:shen2me}}"],
       "maps": ""
     },
     "zen3me": {
@@ -1918,6 +2816,12 @@
         "rus": "как",
         "zh": "怎么"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "Asks \"how?\". Without it, you'd ask about the {{word:fang1fa3}} every time.",
+        "rus": "Спрашивает «как?». Без него пришлось бы каждый раз спрашивать про {{word:fang1fa3}}."
+      },
+      "covers": ["grammar:question-word"],
       "maps": ""
     },
     "neng2": {
@@ -1932,6 +2836,13 @@
         "rus": "мочь, иметь право, можно, возможно",
         "zh": "能，可以，被允许，也许"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Can, may. Without it, you can't say what's possible or allowed.",
+        "rus": "Мочь, можно. Без него не сказать, что возможно или разрешено."
+      },
+      "covers": ["atoms:CAN", "grammar:can"],
+      "antonyms": ["{{word:bu4}} {{word:neng2}}"],
       "maps": "ken"
     },
     "hui4": {
@@ -1946,6 +2857,12 @@
         "rus": "будет, собирается (обозначает предсказанное или будущее действие); ставится перед глаголом так же, как {{word:neng2}}",
         "zh": "将，会（表示预测或未来的动作）；放在动词前，与 {{word:neng2}} 用法相同"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "Will, is going to. Context often says when, but plans and predictions need it.",
+        "rus": "Будет, собирается. Время часто понятно из ситуации, но планам и прогнозам он нужен."
+      },
+      "covers": ["grammar:future"],
       "maps": ""
     },
     "hen3": {
@@ -1960,6 +2877,13 @@
         "rus": "очень, весьма, сильно; обязательный синтаксический якорь перед одиночным прилагательным в сказуемом",
         "zh": "很，非常，强烈地；谓语中单独出现的形容词前必需的语法支点"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Very, and the link between a thing and its adjective: {{word:shui3}} {{word:hen3}} {{word:hao3}}.",
+        "rus": "Очень, а также связка между вещью и прилагательным: {{word:shui3}} {{word:hen3}} {{word:hao3}}."
+      },
+      "covers": ["atoms:VERY", "categories:quality", "grammar:degree"],
+      "synonyms": ["{{word:zhen1}}"],
       "maps": "mute"
     },
     "zui4": {
@@ -1973,20 +2897,33 @@
         "eng": "most; before an adjective ({{word:zui4}} {{word:da4}}, \"biggest\"); {{word:zui4}}-{{word:hou4}}, \"last\"",
         "rus": "самый; перед прилагательным ({{word:zui4}} {{word:da4}} — «самый большой»); {{word:zui4}}-{{word:hou4}} — «последний»",
         "zh": "最"
-      }
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Most: {{word:zui4}} {{word:da4}}, the biggest. {{word:bi3}} {{word:bie2de}} {{word:dou1}} … would work, but it's long.",
+        "rus": "Самый: {{word:zui4}} {{word:da4}} — самый большой. Подошло бы {{word:bi3}} {{word:bie2de}} {{word:dou1}} …, но это длинно."
+      },
+      "covers": ["grammar:most"],
+      "synonyms": ["{{word:bi3}} {{word:bie2de}} {{word:dou1}}"]
     },
     "fang1fa3": {
       "term": "fāngfǎ",
       "pos": {
-        "eng": "method, manner: how something is done (a path to a place is {{word:lu4}})",
-        "rus": "способ, метод: как что-то делается (дорога — {{word:lu4}})",
+        "eng": "noun",
+        "rus": "существительное",
         "zh": "名词"
       },
       "definition": {
-        "eng": "way, custom, method, doctrine",
-        "rus": "способ, обычай, метод, учение",
-        "zh": "方式，习俗，道路，方法，学说"
+        "eng": "way, method, manner: how something is done (a path to a place is {{word:lu4}})",
+        "rus": "способ, метод: как что-то делается (дорога — {{word:lu4}})",
+        "zh": "方式，方法，做法"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "A way, a method: how something is done. Plans and instructions need it.",
+        "rus": "Способ, метод: как что-то делается. Без него не обойтись в планах и инструкциях."
+      },
+      "covers": ["atoms:LIKE"],
       "maps": "nasin"
     },
     "sheng1yin1": {
@@ -2000,6 +2937,11 @@
         "eng": "sound, noise, voice",
         "rus": "звук, шум, голос",
         "zh": "声音，噪音，嗓音"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Sound, voice, noise. Music and speech are described from it.",
+        "rus": "Звук, голос, шум. Через него описывают музыку и речь."
       },
       "maps": "kalama"
     },
@@ -2015,6 +2957,14 @@
         "rus": "истинный, настоящий, подлинный",
         "zh": "真的，真实的，真正的"
       },
+      "necessity": {
+        "index": 2,
+        "eng": "Really, truly. {{word:hen3}} is close, but {{word:zhen1}} says you mean it: {{word:zhen1}} {{word:hao3}}!",
+        "rus": "Правда, действительно. {{word:hen3}} близко, но {{word:zhen1}} подчёркивает, что вы это серьёзно: {{word:zhen1}} {{word:hao3}}!"
+      },
+      "covers": ["atoms:TRUE", "grammar:degree"],
+      "antonyms": ["{{word:bu4}} {{word:zhen1}}"],
+      "synonyms": ["{{word:hen3}}"],
       "maps": "lon"
     },
     "wen4": {
@@ -2029,6 +2979,12 @@
         "rus": "спрашивать, задавать вопрос",
         "zh": "问，询问，提问"
       },
+      "necessity": {
+        "index": 4,
+        "eng": "Ask. Without it, you can't talk about questions: \"he asked me\".",
+        "rus": "Спрашивать. Без него не рассказать о вопросах: «он спросил меня»."
+      },
+      "antonyms": ["{{word:dui4}} {{word:wen4}}-{{word:de}} {{word:ren2}} {{word:shuo1}}"],
       "maps": ""
     },
     "xie4": {
@@ -2042,6 +2998,11 @@
         "eng": "to thank; doubled, {{word:xie4}}-xie is \"thank you\", and {{word:bu4}} {{word:yong4}} {{word:xie4}} is \"you are welcome\"",
         "rus": "благодарить; удвоенное {{word:xie4}}-xie — «спасибо», {{word:bu4}} {{word:yong4}} {{word:xie4}} — «не за что»",
         "zh": "谢，感谢；谢谢；不用谢"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Thank: {{word:xie4}}-xie. Politeness can't wait for a description.",
+        "rus": "Благодарить: {{word:xie4}}-xie. Вежливость не ждёт описаний."
       }
     },
     "na3li3": {
@@ -2056,6 +3017,13 @@
         "rus": "где; какое место",
         "zh": "哪里，什么地方"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "Asks \"where?\". {{word:shen2me}} {{word:di4fang1}} would work, but it's long for such a common question.",
+        "rus": "Спрашивает «где?». Можно сказать {{word:shen2me}} {{word:di4fang1}}, но для такого частого вопроса это длинно."
+      },
+      "covers": ["atoms:WHERE", "categories:place", "grammar:question-word"],
+      "synonyms": ["{{word:shen2me}} {{word:di4fang1}}"],
       "maps": ""
     },
     "pa4": {
@@ -2070,6 +3038,11 @@
         "rus": "бояться, пугаться; испуганный",
         "zh": "害怕，恐惧；害怕的"
       },
+      "necessity": {
+        "index": 4,
+        "eng": "Be scared. Fear is a basic feeling no other word covers.",
+        "rus": "Бояться. Страх — базовое чувство, которое не покрыть другим словом."
+      },
       "maps": ""
     },
     "xiao4": {
@@ -2083,6 +3056,11 @@
         "eng": "to laugh, to smile",
         "rus": "смеяться, улыбаться",
         "zh": "笑"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Laugh, smile. No description captures it.",
+        "rus": "Смеяться, улыбаться. Никакое описание этого не передаст."
       }
     },
     "xia4": {
@@ -2097,6 +3075,13 @@
         "rus": "вниз, ниже, под; соединяется с другими корнями через дефис (например, {{word:xia4}}-{{word:lai2}}, {{word:xia4}}-{{word:mian4}})",
         "zh": "下，向下，在……之下；通过连字符与其他词根组合（例如 {{word:xia4}}-{{word:lai2}}、{{word:xia4}}-{{word:mian4}}）"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Down, under, below: {{word:xia4}}-{{word:mian4}}, {{word:na2}}-{{word:xia4}}-{{word:lai2}}. Position and movement need it.",
+        "rus": "Вниз, под: {{word:xia4}}-{{word:mian4}}, {{word:na2}}-{{word:xia4}}-{{word:lai2}}. Без него ни положения, ни движения."
+      },
+      "covers": ["atoms:A SHORT TIME", "atoms:MOMENT", "atoms:BELOW"],
+      "antonyms": ["{{word:shang4}}"],
       "maps": ""
     },
     "shang4": {
@@ -2111,6 +3096,13 @@
         "rus": "вверх, наверху, на; соединяется с другими корнями через дефис (например, {{word:shang4}}-{{word:lai2}}, {{word:shang4}}-{{word:mian4}})",
         "zh": "上，向上，在……之上；通过连字符与其他词根组合（例如 {{word:shang4}}-{{word:lai2}}、{{word:shang4}}-{{word:mian4}}）"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Up, on, above: {{word:he2zi}}-{{word:shang4}}, on the box. Position and movement need it.",
+        "rus": "Вверх, на: {{word:he2zi}}-{{word:shang4}} — на коробке. Без него ни положения, ни движения."
+      },
+      "covers": ["atoms:ABOVE"],
+      "antonyms": ["{{word:xia4}}"],
       "maps": ""
     },
     "qi3": {
@@ -2125,6 +3117,12 @@
         "rus": "подниматься, вставать; начинать; соединяется с глаголом через дефис, отмечая начало действия (например, {{word:shuo1}}-{{word:qi3}}, «завести речь о чём-то»)",
         "zh": "起，起身；开始；通过连字符与动词组合，表示动作的开始（例如 {{word:shuo1}}-{{word:qi3}}，“提起，说到”）"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "Rise, up: {{word:qi3}}-{{word:lai2}}, get up, and a verb starting ({{word:lai2}}-{{word:qi3}}-{{word:lai2}}).",
+        "rus": "Подниматься: {{word:qi3}}-{{word:lai2}} — встать, а также начало действия."
+      },
+      "synonyms": ["{{word:kai1shi3}}"],
       "maps": ""
     },
     "hou4": {
@@ -2139,6 +3137,13 @@
         "rus": "сзади, после, позади; соединяется с другими корнями через дефис (например, {{word:hou4}}-{{word:mian4}})",
         "zh": "后，在……后面，之后；通过连字符与其他词根组合（例如 {{word:hou4}}-{{word:mian4}}）"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Behind, and after (in time): {{word:hou4}}-{{word:mian4}}, behind.",
+        "rus": "Сзади, а также «после»: {{word:hou4}}-{{word:mian4}} — сзади."
+      },
+      "covers": ["atoms:AFTER"],
+      "antonyms": ["{{word:qian2}}"],
       "maps": ""
     },
     "li3": {
@@ -2153,6 +3158,13 @@
         "rus": "внутри, внутрь; соединяется с другими корнями через дефис (например, {{word:li3}}-{{word:mian4}})",
         "zh": "里，里面，之内；通过连字符与其他词根组合（例如 {{word:li3}}-{{word:mian4}}）"
       },
+      "necessity": {
+        "index": 5,
+        "eng": "Inside, in: {{word:he2zi}}-{{word:li3}}, in the box. The most used place word.",
+        "rus": "Внутри, в: {{word:he2zi}}-{{word:li3}} — в коробке. Самое частое слово места."
+      },
+      "covers": ["atoms:HERE", "atoms:INSIDE"],
+      "antonyms": ["{{word:wai4}}"],
       "maps": ""
     },
     "mian4": {
@@ -2167,6 +3179,12 @@
         "rus": "сторона, лицо, поверхность; присоединяется к направленческому корню через дефис, образуя пространственное существительное (например, {{word:xia4}}-{{word:mian4}}, «внизу»)",
         "zh": "面，脸，表面；通过连字符与方向词根结合，构成方位名词（例如 {{word:xia4}}-{{word:mian4}}，“下面”）"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "Side, face: it turns the direction words into places ({{word:li3}}-{{word:mian4}}, {{word:qian2}}-{{word:mian4}}).",
+        "rus": "Сторона, лицо: превращает слова направления в места ({{word:li3}}-{{word:mian4}}, {{word:qian2}}-{{word:mian4}})."
+      },
+      "synonyms": ["{{word:bian1}}"],
       "maps": ""
     },
     "bian1": {
@@ -2177,25 +3195,54 @@
         "zh": "名词/后缀"
       },
       "definition": {
-        "eng": "side, edge; binds to a directional root via a hyphen to form a location noun (e.g. {{word:pang2}}-{{word:bian1}}, \"beside\")",
-        "rus": "сторона, край; присоединяется к направленческому корню через дефис, образуя пространственное существительное (например, {{word:pang2}}-{{word:bian1}}, «рядом»)",
-        "zh": "边，边缘；通过连字符与方向词根结合，构成方位名词（例如 {{word:pang2}}-{{word:bian1}}，“旁边”）"
+        "eng": "side, edge; joins {{word:zhe4}} or {{word:na4}} via a hyphen to form a place word (e.g. {{word:zhe4}}-{{word:bian1}}, \"this side\"; {{word:na4}}-{{word:bian1}}, \"that side\")",
+        "rus": "сторона, край; присоединяется к {{word:zhe4}} или {{word:na4}} через дефис, образуя слово места (например, {{word:zhe4}}-{{word:bian1}} — «эта сторона», {{word:na4}}-{{word:bian1}} — «та сторона»)",
+        "zh": "边，边缘；通过连字符与 {{word:zhe4}} 或 {{word:na4}} 结合，构成方位词（例如 {{word:zhe4}}-{{word:bian1}}，“这边”；{{word:na4}}-{{word:bian1}}，“那边”）"
       },
+      "necessity": {
+        "index": 3,
+        "eng": "Side, edge: {{word:zhe4}}-{{word:bian1}}, this side; {{word:na4}}-{{word:bian1}}, over there.",
+        "rus": "Сторона, край: {{word:zhe4}}-{{word:bian1}} — эта сторона, {{word:na4}}-{{word:bian1}} — там."
+      },
+      "covers": ["atoms:SIDE"],
+      "synonyms": ["{{word:mian4}}"],
       "maps": ""
     },
-    "pang2": {
-      "term": "páng",
+    "zhong1": {
+      "term": "zhōng",
       "pos": {
-        "eng": "noun/directional",
-        "rus": "существительное/направление",
-        "zh": "名词/方向"
+        "eng": "noun",
+        "rus": "существительное",
+        "zh": "名词"
       },
       "definition": {
-        "eng": "beside, alongside; composes with {{word:bian1}} via a hyphen (e.g. {{word:pang2}}-{{word:bian1}})",
-        "rus": "рядом, сбоку; соединяется с {{word:bian1}} через дефис (например, {{word:pang2}}-{{word:bian1}})",
-        "zh": "旁，旁边；通过连字符与 {{word:bian1}} 组合（例如 {{word:pang2}}-{{word:bian1}}）"
+        "eng": "middle, center (e.g. {{word:zhong1}}-{{word:jian1}}, \"in the middle\")",
+        "rus": "середина, центр (например, {{word:zhong1}}-{{word:jian1}} — «посередине»)",
+        "zh": "中"
       },
-      "maps": ""
+      "necessity": {
+        "index": 2,
+        "eng": "Middle: with {{word:jian1}}, {{word:zhong1}}-{{word:jian1}}, in the middle. China and many composites use it.",
+        "rus": "Середина: с {{word:jian1}} — {{word:zhong1}}-{{word:jian1}}, посередине. Его используют Китай и многие составные слова."
+      }
+    },
+    "jian1": {
+      "term": "jiān",
+      "pos": {
+        "eng": "noun",
+        "rus": "существительное",
+        "zh": "名词"
+      },
+      "definition": {
+        "eng": "between, the space between (e.g. {{word:zhong1}}-{{word:jian1}}, \"the middle\"; {{word:kong1}}-{{word:jian1}}, \"space\")",
+        "rus": "между, промежуток (например, {{word:zhong1}}-{{word:jian1}} — «середина»; {{word:kong1}}-{{word:jian1}} — «пространство»)",
+        "zh": "间"
+      },
+      "necessity": {
+        "index": 2,
+        "eng": "Between: {{word:zhong1}}-{{word:jian1}} (middle) and {{word:kong1}}-{{word:jian1}} (space) need it.",
+        "rus": "Между: без него нет {{word:zhong1}}-{{word:jian1}} (середина) и {{word:kong1}}-{{word:jian1}} (пространство)."
+      }
     },
     "dao4": {
       "term": "dào",
@@ -2208,7 +3255,13 @@
         "eng": "to arrive, reach, go to; to (a place); after a verb, marks reaching the goal (e.g. {{word:ting1}}-{{word:dao4}}, \"hear\")",
         "rus": "прибывать, достигать, доходить до; до (какого-то места); после глагола отмечает достижение цели (например, {{word:ting1}}-{{word:dao4}}, «услышать»)",
         "zh": "到达，到；到（某地）；用在动词后表示达到目标（如 {{word:ting1}}-{{word:dao4}}，“听到”）"
-      }
+      },
+      "necessity": {
+        "index": 5,
+        "eng": "Arrive, to: {{word:qu4}}-{{word:dao4}} … , and a result reached ({{word:zhao3}}-{{word:dao4}}, found).",
+        "rus": "Добраться, до: {{word:qu4}}-{{word:dao4}} …, а также достигнутый результат ({{word:zhao3}}-{{word:dao4}} — нашёл)."
+      },
+      "covers": ["grammar:result", "grammar:to"]
     },
     "guo4": {
       "term": "guò",
@@ -2221,7 +3274,13 @@
         "eng": "placed right after a verb to say you have done it at least once before (e.g. {{word:chi1}}-{{word:guo4}}, \"have eaten before\")",
         "rus": "ставится сразу после глагола и означает, что действие уже когда-то совершалось (например, {{word:chi1}}-{{word:guo4}}, «когда-то ел»)",
         "zh": "用在动词后，表示曾经做过（如 {{word:chi1}}-{{word:guo4}}，“吃过”）"
-      }
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Have done it before: {{word:kan4}}-{{word:guo4}}, have seen. Experience has no other way to be said.",
+        "rus": "Уже когда-то делал: {{word:kan4}}-{{word:guo4}} — видел. Опыт иначе не выразить."
+      },
+      "covers": ["grammar:ever"]
     },
     "san1": {
       "term": "sān",
@@ -2234,6 +3293,11 @@
         "eng": "three",
         "rus": "три",
         "zh": "三"
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Three. Numbers can't be described with other words.",
+        "rus": "Три. Числа не описать другими словами."
       }
     },
     "si4": {
@@ -2247,6 +3311,11 @@
         "eng": "four",
         "rus": "четыре",
         "zh": "四"
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Four. Numbers can't be described with other words.",
+        "rus": "Четыре. Числа не описать другими словами."
       }
     },
     "wu3": {
@@ -2260,6 +3329,11 @@
         "eng": "five",
         "rus": "пять",
         "zh": "五"
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Five. Numbers can't be described with other words.",
+        "rus": "Пять. Числа не описать другими словами."
       }
     },
     "liu4": {
@@ -2273,6 +3347,11 @@
         "eng": "six",
         "rus": "шесть",
         "zh": "六"
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Six. Numbers can't be described with other words.",
+        "rus": "Шесть. Числа не описать другими словами."
       }
     },
     "qi1": {
@@ -2286,6 +3365,11 @@
         "eng": "seven",
         "rus": "семь",
         "zh": "七"
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Seven. Numbers can't be described with other words.",
+        "rus": "Семь. Числа не описать другими словами."
       }
     },
     "ba1": {
@@ -2299,6 +3383,11 @@
         "eng": "eight",
         "rus": "восемь",
         "zh": "八"
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Eight. Numbers can't be described with other words.",
+        "rus": "Восемь. Числа не описать другими словами."
       }
     },
     "jiu3": {
@@ -2312,6 +3401,11 @@
         "eng": "nine",
         "rus": "девять",
         "zh": "九"
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Nine. Numbers can't be described with other words.",
+        "rus": "Девять. Числа не описать другими словами."
       }
     },
     "shi2": {
@@ -2325,6 +3419,11 @@
         "eng": "ten",
         "rus": "десять",
         "zh": "十"
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Ten, and the base of every bigger number: {{word:shi2}}-{{word:er4}} is twelve.",
+        "rus": "Десять — основа всех чисел побольше: {{word:shi2}}-{{word:er4}} — двенадцать."
       }
     },
     "men": {
@@ -2338,7 +3437,13 @@
         "eng": "more than one person: after a pointer or a word for people, as in {{word:wo3}}-{{word:men}} (\"we\")",
         "rus": "больше одного человека: после указательного слова или слова о людях, как в {{word:wo3}}-{{word:men}} («мы»)",
         "zh": "表示不止一个人：用在指人的词后面，如 {{word:wo3}}-{{word:men}}（“我们”）"
-      }
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Without it, you can't say \"we\" or \"they\": {{word:wo3}}-{{word:men}} is the only way to show more than one person.",
+        "rus": "Без него нельзя сказать «мы» или «они»: {{word:wo3}}-{{word:men}} — единственный способ показать, что людей несколько."
+      },
+      "covers": ["grammar:more-people"]
     },
     "er4": {
       "term": "èr",
@@ -2351,7 +3456,14 @@
         "eng": "two, when counting aloud or naming a number (yī, èr, sān; èr-hào, \"number two\"; shí-èr, 12); before gè, two is liǎng",
         "rus": "два при счёте вслух и в номерах (yī, èr, sān; èr-hào, «номер два»; shí-èr, 12); перед gè «два» — это liǎng",
         "zh": "二，用于数数和编号（yī, èr, sān；èr-hào，“二号”；shí-èr，十二）；在 gè 前面用 liǎng"
-      }
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Two when counting: 12, 20, number two. {{word:liang3}} only works before {{word:ge4}}.",
+        "rus": "Два при счёте: 12, 20, номер два. {{word:liang3}} работает только перед {{word:ge4}}."
+      },
+      "covers": ["atoms:TWO"],
+      "synonyms": ["{{word:liang3}}"]
     },
     "shao3": {
       "term": "shǎo",
@@ -2364,7 +3476,14 @@
         "eng": "few, little, not much; the opposite of {{word:duo1}}",
         "rus": "мало, немного; противоположность {{word:duo1}}",
         "zh": "少；与 {{word:duo1}} 相对"
-      }
+      },
+      "necessity": {
+        "index": 5,
+        "eng": "Few, little. The pair to {{word:duo1}}: amounts need both.",
+        "rus": "Мало. Пара к {{word:duo1}}: для количества нужны оба."
+      },
+      "covers": ["atoms:LITTLE", "categories:quantity"],
+      "antonyms": ["{{word:duo1}}"]
     },
     "ke3neng2": {
       "term": "kěnéng",
@@ -2377,7 +3496,13 @@
         "eng": "maybe, perhaps, might; goes before the verb (e.g. {{word:ta1}} {{word:ke3neng2}} {{word:lai2}}, \"he might come\")",
         "rus": "может быть, возможно; ставится перед глаголом (например, {{word:ta1}} {{word:ke3neng2}} {{word:lai2}}, «он, может быть, придёт»)",
         "zh": "可能，也许；放在动词前（如 {{word:ta1}} {{word:ke3neng2}} {{word:lai2}}，“他可能来”）"
-      }
+      },
+      "necessity": {
+        "index": 5,
+        "eng": "Maybe. Without it, you can only speak in certainties.",
+        "rus": "Может быть. Без него можно говорить только наверняка."
+      },
+      "covers": ["atoms:MAYBE"]
     },
     "xian4zai4": {
       "term": "xiànzài",
@@ -2390,32 +3515,67 @@
         "eng": "now, at present, these days",
         "rus": "сейчас, теперь, в настоящее время",
         "zh": "现在，目前"
-      }
+      },
+      "necessity": {
+        "index": 5,
+        "eng": "Now. Without it, you can't say something is happening at this moment.",
+        "rus": "Сейчас. Без него не сказать, что что-то происходит в этот момент."
+      },
+      "covers": ["atoms:NOW", "categories:time"]
     },
-    "fa1sheng1": {
-      "term": "fāshēng",
+    "fa1": {
+      "term": "fā",
       "pos": {
         "eng": "verb",
         "rus": "глагол",
         "zh": "动词"
       },
       "definition": {
-        "eng": "to happen, take place, occur (e.g. {{word:fa1sheng1}} {{word:le}} {{word:shen2me}}?, \"what happened?\")",
-        "rus": "происходить, случаться (например, {{word:fa1sheng1}} {{word:le}} {{word:shen2me}}?, «что случилось?»)",
-        "zh": "发生（如 {{word:fa1sheng1}} {{word:le}} {{word:shen2me}}？，“发生了什么？”）"
-      }
+        "eng": "to send out, give off; to start (e.g. {{word:fa1}}-{{word:sheng1}}, \"happen\"; {{word:tou2}}-{{word:fa1}}, \"hair\"; {{word:chu1}}-{{word:fa1}}, \"set out\")",
+        "rus": "выпускать, испускать; начинать (например, {{word:fa1}}-{{word:sheng1}} — «случаться»; {{word:tou2}}-{{word:fa1}} — «волосы»; {{word:chu1}}-{{word:fa1}} — «отправляться»)",
+        "zh": "发"
+      },
+      "necessity": {
+        "index": 5,
+        "eng": "Happen is {{word:fa1}}-{{word:sheng1}}; it also gives hair ({{word:tou2}}-{{word:fa1}}) and setting out ({{word:chu1}}-{{word:fa1}}).",
+        "rus": "«Случаться» — это {{word:fa1}}-{{word:sheng1}}; ещё из него волосы ({{word:tou2}}-{{word:fa1}}) и «отправляться» ({{word:chu1}}-{{word:fa1}})."
+      },
+      "covers": ["atoms:HAPPEN"]
     },
-    "yi1xia4": {
-      "term": "yīxià",
+    "tian1": {
+      "term": "tiān",
       "pos": {
-        "eng": "measure word (for actions)",
-        "rus": "счётное слово (для действий)",
-        "zh": "动量词"
+        "eng": "noun",
+        "rus": "существительное",
+        "zh": "名词"
       },
       "definition": {
-        "eng": "a moment, a short time; after a verb, do it briefly or just a little (e.g. {{word:deng3}} {{word:yi1xia4}}, \"wait a moment\")",
-        "rus": "мгновение, недолго; после глагола — сделать что-то быстро или чуть-чуть (например, {{word:deng3}} {{word:yi1xia4}}, «подожди минутку»)",
-        "zh": "一下，一会儿；用在动词后表示动作短暂或轻微（如 {{word:deng3}} {{word:yi1xia4}}，“等一下”）"
+        "eng": "day; the sky (e.g. {{word:san1}} {{word:tian1}}, \"three days\"; {{word:ming2}}-{{word:tian1}}, \"tomorrow\"; {{word:tian1}}-{{word:qi4}}, \"weather\")",
+        "rus": "день; небо (например, {{word:san1}} {{word:tian1}} — «три дня»; {{word:ming2}}-{{word:tian1}} — «завтра»; {{word:tian1}}-{{word:qi4}} — «погода»)",
+        "zh": "天"
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Days and the sky: tomorrow ({{word:ming2}}-{{word:tian1}}), the weather ({{word:tian1}}-{{word:qi4}}), and counting days all need it.",
+        "rus": "Дни и небо: без него нет «завтра» ({{word:ming2}}-{{word:tian1}}), «погоды» ({{word:tian1}}-{{word:qi4}}) и счёта дней."
+      }
+    },
+    "nian2": {
+      "term": "nián",
+      "pos": {
+        "eng": "noun",
+        "rus": "существительное",
+        "zh": "名词"
+      },
+      "definition": {
+        "eng": "year (e.g. {{word:san1}} {{word:nian2}}, \"three years\"; {{word:qu4}}-{{word:nian2}}, \"last year\"; {{word:ming2}}-{{word:nian2}}, \"next year\")",
+        "rus": "год (например, {{word:san1}} {{word:nian2}} — «три года»; {{word:qu4}}-{{word:nian2}} — «прошлый год»; {{word:ming2}}-{{word:nian2}} — «следующий год»)",
+        "zh": "年"
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Years: last year ({{word:qu4}}-{{word:nian2}}), next year, ages, and counting years.",
+        "rus": "Годы: «в прошлом году» ({{word:qu4}}-{{word:nian2}}), «в следующем году», возраст и счёт лет."
       }
     },
     "yuan3": {
@@ -2429,7 +3589,14 @@
         "eng": "far, distant",
         "rus": "далёкий, далеко",
         "zh": "远"
-      }
+      },
+      "necessity": {
+        "index": 5,
+        "eng": "Far. Distance is a basic idea; near is {{word:fu4jin4}}.",
+        "rus": "Далеко. Расстояние — базовое понятие; близко — {{word:fu4jin4}}."
+      },
+      "covers": ["atoms:FAR"],
+      "antonyms": ["{{word:fu4jin4}}"]
     },
     "fu4jin4": {
       "term": "fùjìn",
@@ -2442,7 +3609,15 @@
         "eng": "nearby, the area near something; a place word like {{word:pang2bian1}}: {{word:zai4}} {{word:fu4jin4}}, \"nearby\", or {{word:zai4}} {{word:jia1}} {{word:fu4jin4}}, \"near home\" (not {{word:hen3}} {{word:fu4jin4}})",
         "rus": "поблизости, окрестность; слово места, как {{word:pang2bian1}}: {{word:zai4}} {{word:fu4jin4}} — «рядом», {{word:zai4}} {{word:jia1}} {{word:fu4jin4}} — «недалеко от дома»",
         "zh": "附近"
-      }
+      },
+      "necessity": {
+        "index": 5,
+        "eng": "Nearby. Distance is a basic idea; far is {{word:yuan3}}.",
+        "rus": "Поблизости. Расстояние — базовое понятие; далеко — {{word:yuan3}}."
+      },
+      "covers": ["atoms:NEAR"],
+      "antonyms": ["{{word:yuan3}}"],
+      "synonyms": ["{{word:pang2bian1}}"]
     },
     "dong4": {
       "term": "dòng",
@@ -2455,7 +3630,14 @@
         "eng": "to move; to stir, to budge",
         "rus": "двигаться, шевелиться; двигать",
         "zh": "动，移动"
-      }
+      },
+      "necessity": {
+        "index": 5,
+        "eng": "Move. Without it, nothing moves: {{word:bu4}} {{word:dong4}}, don't move.",
+        "rus": "Двигаться. Без него ничто не движется: {{word:bu4}} {{word:dong4}} — не двигайся."
+      },
+      "covers": ["atoms:MOVE"],
+      "antonyms": ["{{word:bu4}} {{word:dong4}}"]
     },
     "fei1": {
       "term": "fēi",
@@ -2468,6 +3650,11 @@
         "eng": "to fly",
         "rus": "летать",
         "zh": "飞"
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Fly: birds are {{word:fei1}}-{{word:de}} {{word:dong4wu4}}, planes are flying tools.",
+        "rus": "Летать: птицы — {{word:fei1}}-{{word:de}} {{word:dong4wu4}}, самолёты — летающие инструменты."
       }
     },
     "tang3": {
@@ -2481,7 +3668,13 @@
         "eng": "to lie (down); {{word:tang3}}-{{word:xia4}}, \"lie down\"",
         "rus": "лежать; {{word:tang3}}-{{word:xia4}} — «лечь»",
         "zh": "躺"
-      }
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Lie down. With {{word:zuo4}} and {{word:zhan4}}, one of the three ways a body rests.",
+        "rus": "Лежать. Вместе с {{word:zuo4}} и {{word:zhan4}} — одна из трёх поз тела."
+      },
+      "covers": ["categories:position"]
     },
     "zhan4": {
       "term": "zhàn",
@@ -2494,7 +3687,13 @@
         "eng": "to stand; {{word:zhan4}}-{{word:qi3}}-{{word:lai2}}, \"stand up\"",
         "rus": "стоять; {{word:zhan4}}-{{word:qi3}}-{{word:lai2}} — «встать»",
         "zh": "站"
-      }
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Stand. With {{word:zuo4}} and {{word:tang3}}, one of the three ways a body rests.",
+        "rus": "Стоять. Вместе с {{word:zuo4}} и {{word:tang3}} — одна из трёх поз тела."
+      },
+      "covers": ["categories:position"]
     },
     "zuo4": {
       "term": "zuò",
@@ -2507,7 +3706,13 @@
         "eng": "to sit; {{word:zuo4}}-{{word:xia4}}, \"sit down\"",
         "rus": "сидеть; {{word:zuo4}}-{{word:xia4}} — «сесть»",
         "zh": "坐"
-      }
+      },
+      "necessity": {
+        "index": 3,
+        "eng": "Sit, and ride: {{word:zuo4}} {{word:che1}}, go by car.",
+        "rus": "Сидеть, а также ехать: {{word:zuo4}} {{word:che1}} — ехать на машине."
+      },
+      "covers": ["categories:position"]
     },
     "jin4": {
       "term": "jìn",
@@ -2520,7 +3725,13 @@
         "eng": "to enter, go in, come in; after a verb, says it goes in (e.g. {{word:jin4}}-{{word:lai2}}, \"come in\"; {{word:fang4}}-{{word:jin4}}-{{word:qu4}}, \"put in\")",
         "rus": "входить; после глагола — внутрь (например, {{word:jin4}}-{{word:lai2}} — «войди», {{word:fang4}}-{{word:jin4}}-{{word:qu4}} — «положить внутрь»)",
         "zh": "进"
-      }
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Go in: {{word:jin4}}-{{word:lai2}}, come in! The pair to {{word:chu1}}.",
+        "rus": "Входить: {{word:jin4}}-{{word:lai2}} — входи! Пара к {{word:chu1}}."
+      },
+      "antonyms": ["{{word:chu1}}"]
     },
     "chu1": {
       "term": "chū",
@@ -2533,7 +3744,13 @@
         "eng": "to go out, come out, exit; after a verb, says it comes out (e.g. {{word:chu1}}-{{word:qu4}}, \"go out\"; {{word:na2}}-{{word:chu1}}-{{word:lai2}}, \"take out\")",
         "rus": "выходить; после глагола — наружу (например, {{word:chu1}}-{{word:qu4}} — «выйти», {{word:na2}}-{{word:chu1}}-{{word:lai2}} — «вынуть»)",
         "zh": "出"
-      }
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Go out: {{word:chu1}}-{{word:qu4}}, go out. The pair to {{word:jin4}}.",
+        "rus": "Выходить: {{word:chu1}}-{{word:qu4}} — выйти. Пара к {{word:jin4}}."
+      },
+      "antonyms": ["{{word:jin4}}"]
     },
     "hui2": {
       "term": "huí",
@@ -2546,6 +3763,11 @@
         "eng": "to return, go back, come back; after a verb, says it goes back (e.g. {{word:hui2}} {{word:jia1}}, \"go home\"; {{word:hui2}}-{{word:lai2}}, \"come back\")",
         "rus": "возвращаться; после глагола — обратно (например, {{word:hui2}} {{word:jia1}} — «пойти домой», {{word:hui2}}-{{word:lai2}} — «вернуться»)",
         "zh": "回"
+      },
+      "necessity": {
+        "index": 4,
+        "eng": "Go back: {{word:hui2}} {{word:jia1}}, go home. Returning has no other word.",
+        "rus": "Возвращаться: {{word:hui2}} {{word:jia1}} — пойти домой. У возвращения нет другого слова."
       }
     },
     "tong1": {
@@ -2559,7 +3781,13 @@
         "eng": "to go through, lead to; open, not blocked (e.g. {{word:tong1}}-{{word:guo4}} {{word:zhe4}}-ge {{word:di4fang1}}, \"go through this place\"; {{word:lu4}} {{word:tong1}}-{{word:dao4}} {{word:jia1}}, \"the road leads home\"; {{word:lu4}} {{word:bu4}} {{word:tong1}}, \"the road is blocked\")",
         "rus": "проходить через, вести (куда-то); быть открытым, не перекрытым (например, {{word:tong1}}-{{word:guo4}} {{word:zhe4}}-ge {{word:di4fang1}} — «пройти через это место», {{word:lu4}} {{word:tong1}}-{{word:dao4}} {{word:jia1}} — «дорога ведёт домой», {{word:lu4}} {{word:bu4}} {{word:tong1}} — «дорога перекрыта»)",
         "zh": "通"
-      }
+      },
+      "necessity": {
+        "index": 2,
+        "eng": "Go through, lead to: {{word:lu4}} {{word:tong1}}-{{word:dao4}} {{word:jia1}}. {{word:qu4}}-{{word:dao4}} covers part of it.",
+        "rus": "Проходить, вести куда-то: {{word:lu4}} {{word:tong1}}-{{word:dao4}} {{word:jia1}}. {{word:qu4}}-{{word:dao4}} покрывает лишь часть."
+      },
+      "antonyms": ["{{word:bu4}} {{word:tong1}}"]
     },
     "jia4zhi2": {
       "term": "jiàzhí",
@@ -2572,6 +3800,11 @@
         "eng": "value, worth; how much something is worth",
         "rus": "ценность, стоимость; то, сколько что-то стоит",
         "zh": "价值；某物值多少"
+      },
+      "necessity": {
+        "index": 2,
+        "eng": "Value, worth: {{word:hen3}} {{word:you3}} {{word:jia4zhi2}}, valuable. Prices and judgments use it.",
+        "rus": "Ценность: {{word:hen3}} {{word:you3}} {{word:jia4zhi2}} — ценный. Им пользуются цены и оценки."
       }
     },
     "bie2de": {
@@ -2585,7 +3818,13 @@
         "eng": "other, another, else (e.g. {{word:bie2de}} {{word:ren2}}, \"other people\")",
         "rus": "другой, иной (например, {{word:bie2de}} {{word:ren2}}, «другие люди»)",
         "zh": "别的，其他的（如 {{word:bie2de}} {{word:ren2}}，“别的人”）"
-      }
+      },
+      "necessity": {
+        "index": 5,
+        "eng": "Other, else: {{word:bie2de}} {{word:ren2}}, other people. A basic idea no description covers.",
+        "rus": "Другой, ещё: {{word:bie2de}} {{word:ren2}} — другие люди. Базовое понятие, которое не описать."
+      },
+      "covers": ["atoms:OTHER"]
     },
     "zhong3": {
       "term": "zhǒng",
@@ -2595,10 +3834,16 @@
         "zh": "名词/量词"
       },
       "definition": {
-        "eng": "kind, type, sort; after {{word:zhe4}} or {{word:na4}}, like {{word:ge4}} (e.g. {{word:zhe4}}-{{word:zhong3}} {{word:shui3guo3}}, \"this kind of fruit\")",
-        "rus": "вид, род, сорт; после {{word:zhe4}} или {{word:na4}}, как {{word:ge4}} (например, {{word:zhe4}}-{{word:zhong3}} {{word:shui3guo3}}, «этот вид фруктов»)",
-        "zh": "种，种类；像 {{word:ge4}} 一样用在 {{word:zhe4}}、{{word:na4}} 后（如 {{word:zhe4}}-{{word:zhong3}} {{word:shui3guo3}}，“这种水果”）"
-      }
+        "eng": "kind, type, sort; after {{word:zhe4}} or {{word:na4}}, like {{word:ge4}} (e.g. {{word:zhe4}}-{{word:zhong3}} {{word:zhi2wu4}}, \"this kind of plant\")",
+        "rus": "вид, род, сорт; после {{word:zhe4}} или {{word:na4}}, как {{word:ge4}} (например, {{word:zhe4}}-{{word:zhong3}} {{word:zhi2wu4}}, «этот вид растений»)",
+        "zh": "种，种类；像 {{word:ge4}} 一样用在 {{word:zhe4}}、{{word:na4}} 后（如 {{word:zhe4}}-{{word:zhong3}} {{word:zhi2wu4}}，“这种植物”）"
+      },
+      "necessity": {
+        "index": 5,
+        "eng": "Kind, type: {{word:zhe4}}-{{word:zhong3}}, this kind. Without it, you can't sort things.",
+        "rus": "Вид, сорт: {{word:zhe4}}-{{word:zhong3}} — такой. Без него ничего не разделить на виды."
+      },
+      "covers": ["atoms:KIND", "categories:quality"]
     },
     "bu4fen": {
       "term": "bùfen",
@@ -2611,7 +3856,13 @@
         "eng": "part, portion (e.g. {{word:yi1}}-{{word:bu4fen}}, \"a part, some of it\")",
         "rus": "часть, доля (например, {{word:yi1}}-{{word:bu4fen}}, «часть, некоторые»)",
         "zh": "部分（如 {{word:yi1}}-{{word:bu4fen}}，“一部分”）"
-      }
+      },
+      "necessity": {
+        "index": 5,
+        "eng": "Part: {{word:da4}} {{word:bu4fen}}, most. Wholes and parts are basic ideas.",
+        "rus": "Часть: {{word:da4}} {{word:bu4fen}} — большинство. Целое и части — базовые понятия."
+      },
+      "covers": ["atoms:PART"]
     },
     "huo2": {
       "term": "huó",
@@ -2624,7 +3875,14 @@
         "eng": "to live, be alive; alive, living; life. The opposite of {{word:si3}}",
         "rus": "жить, быть живым; живой; жизнь. Противоположность {{word:si3}}",
         "zh": "活，生存；活的；生命。与 {{word:si3}} 相对"
-      }
+      },
+      "necessity": {
+        "index": 5,
+        "eng": "Live, alive. The pair to {{word:si3}}: life can't be described without it.",
+        "rus": "Жить, живой. Пара к {{word:si3}}: без него не описать жизнь."
+      },
+      "covers": ["atoms:LIVE"],
+      "antonyms": ["{{word:si3}}"]
     }
   },
   "categories": [
@@ -2652,7 +3910,7 @@
             "rus": "",
             "zh": ""
           },
-          "wordIds": ["jia1", "di4fang1"]
+          "wordIds": ["jia1", "guo2", "di4fang1"]
         },
         {
           "key": "things-of-nature",
@@ -2666,9 +3924,8 @@
             "yue4",
             "zhi2wu4",
             "huo3",
-            "kong1qi4",
-            "dong4wu4",
-            "chong2zi"
+            "qi4",
+            "dong4wu4"
           ]
         },
         {
@@ -2680,9 +3937,9 @@
           },
           "wordIds": [
             "bi2zi",
+            "yan3jing",
             "jiao3",
             "kou3",
-            "pi2fu1",
             "shen1ti3",
             "shou3",
             "tou2",
@@ -2713,7 +3970,7 @@
             "rus": "Еда и питьё",
             "zh": "食物与饮品"
           },
-          "wordIds": ["mi3fan4", "shui3guo3", "shui3"]
+          "wordIds": ["shui3"]
         },
         {
           "key": "tools-objects",
@@ -2730,7 +3987,7 @@
                 "rus": "Орудия",
                 "zh": "器具"
               },
-              "wordIds": ["gong1ju4", "gun4zi"]
+              "wordIds": ["gong1ju4", "ji1", "gun4zi", "deng1", "che1", "wang3"]
             },
             {
               "key": "containers-materials",
@@ -2739,7 +3996,7 @@
                 "rus": "Контейнеры и материалы",
                 "zh": "容器与材料"
               },
-              "wordIds": ["he2zi", "ni2", "xian4"]
+              "wordIds": ["he2zi", "xian4"]
             },
             {
               "key": "valuables-wearables",
@@ -2766,7 +4023,7 @@
           },
           "wordIds": [
             "ci2",
-            "li4liang4",
+            "li4",
             "sheng1yin1",
             "jia4zhi2",
             "fang1fa3"
@@ -2790,7 +4047,7 @@
         "rus": "",
         "zh": ""
       },
-      "wordIds": ["bu4tong2", "yi1yang4", "bie2de"]
+      "wordIds": ["yi1yang4", "bi3", "bie2de"]
     },
     {
       "key": "quantifiers",
@@ -2858,7 +4115,7 @@
             "rus": "",
             "zh": ""
           },
-          "wordIds": ["hao3", "huai4"]
+          "wordIds": ["hao3", "huai4", "nan2"]
         },
         {
           "key": "colour",
@@ -2901,7 +4158,7 @@
             "rus": "Физическое свойство",
             "zh": "物理属性"
           },
-          "wordIds": ["ying4", "yuan2"]
+          "wordIds": ["ying4", "kong1", "yuan2", "ming2"]
         },
         {
           "key": "size",
@@ -2910,7 +4167,7 @@
             "rus": "Размер",
             "zh": "大小"
           },
-          "wordIds": ["xiao3", "da4"]
+          "wordIds": ["xiao3", "da4", "gao1"]
         }
       ]
     },
@@ -3001,7 +4258,7 @@
                 "rus": "Еда, отдых и игра",
                 "zh": "饮食、休息与玩乐"
               },
-              "wordIds": ["shui4jiao4", "chi1", "wan2r"]
+              "wordIds": ["shui4jiao4", "chi1", "he1", "wan2r"]
             }
           ]
         },
@@ -3020,6 +4277,7 @@
             "jin4",
             "chu1",
             "hui2",
+            "qi3",
             "fei1",
             "zuo4",
             "zhan4",
@@ -3034,7 +4292,7 @@
             "rus": "Изменение состояния и общее действие",
             "zh": "状态变化与一般动作"
           },
-          "wordIds": ["bian4", "nong4", "fa1sheng1"]
+          "wordIds": ["bian4", "nong4", "fa1"]
         },
         {
           "key": "manipulation-contact",
@@ -3093,7 +4351,7 @@
         "rus": "Жизнь и смерть",
         "zh": "生与死"
       },
-      "wordIds": ["si3", "huo2"]
+      "wordIds": ["si3", "huo2", "sheng1"]
     },
     {
       "key": "time",
@@ -3102,7 +4360,7 @@
         "rus": "Время",
         "zh": "时间"
       },
-      "wordIds": ["shi2jian1", "xian4zai4", "yi1xia4", "dian3"]
+      "wordIds": ["shi2jian1", "xian4zai4", "tian1", "nian2", "dian3"]
     },
     {
       "key": "space",
@@ -3132,6 +4390,10 @@
             "hou4",
             "li3",
             "pang2bian1",
+            "mian4",
+            "bian1",
+            "zhong1",
+            "jian1",
             "qian2",
             "shang4",
             "xia4",

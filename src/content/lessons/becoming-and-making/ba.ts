@@ -6,8 +6,7 @@ export default lessonModule({
   id: "ba",
   words: [
     {
-      term: "{{word:ba3}}",
-      hanzi: "把",
+      word: "ba3",
       en: "puts the thing first: bǎ + thing + action",
       ru: "ставит вещь вперёд: bǎ + вещь + действие",
     },
@@ -92,6 +91,12 @@ export default lessonModule({
       ru: "Я починил коробку.",
       answer: "{{Word:wo3}} {{word:ba3}} {{word:he2zi}} {{word:nong4}} {{word:hao3}} {{word:le}}.",
       hanzi: "我把盒子弄好了。",
+    },
+    {
+      en: "Turn the light off.",
+      ru: "Выключи свет.",
+      answer: "{{Word:ba3}} {{word:deng1}} {{word:guan1}} {{word:le}}.",
+      hanzi: "把灯关了。",
     },
   ],
   faq: [

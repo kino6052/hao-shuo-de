@@ -1,0 +1,48 @@
+// Opposites: pairs link two words both ways and are written once; phrases
+// give a word a longer form that isn't a word itself.
+import { relations } from "../../lib/data-maps.ts";
+
+export default relations({
+  pairs: [
+    ["ri4", "yue4"],
+    ["nan2ren2", "nv3ren2"],
+    ["na4", "zhe4"],
+    ["duo1", "shao3"],
+    ["hao3", "huai4"],
+    ["bai2se4", "hei1se4"],
+    ["re4", "leng3"],
+    ["xiao3", "da4"],
+    ["kai1shi3", "wan2"],
+    ["guan1", "kai1"],
+    ["lai2", "qu4"],
+    ["na2", "gei3"],
+    ["si3", "huo2"],
+    ["si3", "sheng1"],
+    ["you4bian1", "zuo3bian1"],
+    ["qian2", "hou4"],
+    ["wai4", "li3"],
+    ["xia4", "shang4"],
+    ["yuan3", "fu4jin4"],
+    ["jin4", "chu1"],
+  ],
+  phrases: {
+    yi1yang4: ["{{word:bu4}} {{word:yi1yang4}}"],
+    nan2: ["{{word:bu4}} {{word:nan2}}"],
+    kuai4: ["{{word:bu4}} {{word:kuai4}}"],
+    luan4: ["{{word:bu4}} {{word:luan4}}"],
+    lao3: ["{{word:bu4}} {{word:lao3}}"],
+    ying4: ["{{word:bu4}} {{word:ying4}}"],
+    kong1: ["{{word:you3}} {{word:dong1xi}}"],
+    ming2: ["{{word:bu4}} {{word:ming2}}"],
+    gao1: ["{{word:bu4}} {{word:gao1}}"],
+    zhi1dao4: ["{{word:bu4}} {{word:zhi1dao4}}"],
+    shi4: ["{{word:bu4}} {{word:shi4}}"],
+    you3: ["{{word:mei2}}-{{word:you3}}"],
+    dui4: ["{{word:bu4}} {{word:dui4}}"],
+    neng2: ["{{word:bu4}} {{word:neng2}}"],
+    zhen1: ["{{word:bu4}} {{word:zhen1}}"],
+    wen4: ["{{word:dui4}} {{word:wen4}}-{{word:de}} {{word:ren2}} {{word:shuo1}}"],
+    dong4: ["{{word:bu4}} {{word:dong4}}"],
+    tong1: ["{{word:bu4}} {{word:tong1}}"],
+  },
+});

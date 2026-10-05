@@ -1,4 +1,4 @@
-import dictionary from "../data/dictionary.json";
+import dictionary from "../data/dictionary.ts";
 import { countDictionaryWords } from "./dictionary-stats.js";
 
 export const LANG_CONFIG = {
@@ -53,6 +53,13 @@ const UI = {
     missingContent: "Some content isn't translated yet for section(s):",
     usedIn: "Used in:",
     notUsedYet: "Not used in any chapter yet",
+    necessity: "Why it's needed",
+    opposite: "Opposite:",
+    similar: "Close to:",
+    covers: "Covers:",
+    coverAtoms: "atom",
+    coverCategories: "Aristotle",
+    coverGrammar: "grammar",
     sbSubject: "Subject",
     sbPredicate: "Verb",
     sbObject: "Object",
@@ -157,6 +164,13 @@ const UI = {
     missingContent: "Часть содержимого пока не переведена в разделе(ах):",
     usedIn: "Используется в:",
     notUsedYet: "Пока не используется ни в одной главе",
+    necessity: "Зачем это слово",
+    opposite: "Противоположность:",
+    similar: "Близко к:",
+    covers: "Покрывает:",
+    coverAtoms: "атом",
+    coverCategories: "Аристотель",
+    coverGrammar: "грамматика",
     sbSubject: "Подлежащее",
     sbPredicate: "Сказуемое",
     sbObject: "Дополнение",
@@ -261,6 +275,13 @@ const UI = {
     missingContent: "以下章节的内容尚未翻译：",
     usedIn: "使用于：",
     notUsedYet: "尚未在任何章节中使用",
+    necessity: "为什么需要",
+    opposite: "反义：",
+    similar: "近义：",
+    covers: "涵盖：",
+    coverAtoms: "语义基元",
+    coverCategories: "亚里士多德",
+    coverGrammar: "语法",
     sbSubject: "主语",
     sbPredicate: "谓语",
     sbObject: "宾语",

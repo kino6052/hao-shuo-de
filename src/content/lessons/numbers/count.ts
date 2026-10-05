@@ -6,8 +6,7 @@ export default lessonModule({
   id: "count",
   words: [
     {
-      term: "{{word:liang3}}",
-      hanzi: "两",
+      word: "liang3",
       en: "two (before gè)",
       ru: "два (перед gè)",
     },
@@ -58,10 +57,10 @@ export default lessonModule({
       ru: "Три коробки.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:you3}} {{word:si4}}-ge {{word:shui3guo3}}.",
-      hanzi: "我有四个水果。",
-      en: "I have four pieces of fruit.",
-      ru: "У меня четыре фрукта.",
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:si4}}-ge {{word:gong1ju4}}.",
+      hanzi: "我有四个工具。",
+      en: "I have four tools.",
+      ru: "У меня четыре инструмента.",
     },
     {
       pinyin: "{{Word:qi1}}-ge {{word:gun4zi}} {{word:zai4}} {{word:di4}}-{{word:shang4}}.",
@@ -70,10 +69,10 @@ export default lessonModule({
       ru: "На полу семь палок.",
     },
     {
-      pinyin: "{{Word:jiu3}}-ge {{word:ren2}} {{word:chi1}} {{word:mi3fan4}}.",
-      hanzi: "九个人吃米饭。",
-      en: "Nine people eat rice.",
-      ru: "Девять человек едят рис.",
+      pinyin: "{{Word:jiu3}}-ge {{word:ren2}} {{word:chi1}} {{word:dong1xi}}.",
+      hanzi: "九个人吃东西。",
+      en: "Nine people are eating.",
+      ru: "Девять человек едят.",
     },
     {
       pinyin: "{{Word:shi2}}-ge {{word:zhi2wu4}}.",
@@ -82,10 +81,10 @@ export default lessonModule({
       ru: "Десять растений.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:mai3}} {{word:san1}}-ge {{word:shui3guo3}}.",
-      hanzi: "我买三个水果。",
-      en: "I'm buying three pieces of fruit.",
-      ru: "Я покупаю три фрукта.",
+      pinyin: "{{Word:wo3}} {{word:mai3}} {{word:san1}}-ge {{word:he2zi}}.",
+      hanzi: "我买三个盒子。",
+      en: "I'm buying three boxes.",
+      ru: "Я покупаю три коробки.",
     },
   ],
   exercises: [
@@ -132,16 +131,22 @@ export default lessonModule({
       hanzi: "八个棍子。",
     },
     {
-      en: "nine pieces of fruit",
-      ru: "девять фруктов",
-      answer: "{{Word:jiu3}}-ge {{word:shui3guo3}}.",
-      hanzi: "九个水果。",
+      en: "nine plants",
+      ru: "девять растений",
+      answer: "{{Word:jiu3}}-ge {{word:zhi2wu4}}.",
+      hanzi: "九个植物。",
     },
     {
       en: "ten people",
       ru: "десять человек",
       answer: "{{Word:shi2}}-ge {{word:ren2}}.",
       hanzi: "十个人。",
+    },
+    {
+      en: "I've been to three countries.",
+      ru: "Я был в трёх странах.",
+      answer: "{{Word:wo3}} {{word:qu4}}-{{word:guo4}} {{word:san1}}-ge {{word:guo2}}.",
+      hanzi: "我去过三个国。",
     },
   ],
   faq: [

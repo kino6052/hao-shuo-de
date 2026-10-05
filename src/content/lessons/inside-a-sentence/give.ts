@@ -6,8 +6,7 @@ export default lessonModule({
   id: "give",
   words: [
     {
-      term: "{{word:gei3}}",
-      hanzi: "给",
+      word: "gei3",
       en: "give; to, for",
       ru: "давать; кому, для",
     },

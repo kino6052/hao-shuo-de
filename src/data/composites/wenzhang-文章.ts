@@ -1,0 +1,15 @@
+import { composite } from "../../lib/composite.ts";
+
+export default composite({
+  rank: 1117,
+  phase: 3,
+  zh: "文章",
+  py: "wénzhāng",
+  en: "article, essay",
+  ru: "статья",
+  hsd: ["{{word:xie3}}-{{word:de}} {{word:dong1xi}}"],
+  tts: ["写的东西"],
+  literal: "a written thing",
+  fit: "plain",
+  proposed: true,
+});

@@ -1,0 +1,16 @@
+import { composite } from "../../lib/composite.ts";
+
+export default composite({
+  rank: 786,
+  phase: 2,
+  zh: "身份证",
+  py: "shēnfènzhèng",
+  en: "ID card",
+  ru: "удостоверение личности",
+  hsd: [
+    "{{word:shuo1}}-{{word:ming2}} {{word:ni3}} {{word:shi4}} {{word:shen2me}} {{word:ren2}}-{{word:de}} {{word:xie3}}-{{word:de}} {{word:dong1xi}}",
+  ],
+  tts: ["说明你是什么人的写的东西"],
+  literal: "a written thing that says who you are",
+  fit: "plain",
+});

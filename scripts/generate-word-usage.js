@@ -22,11 +22,11 @@ import { fileURLToPath, pathToFileURL } from 'url';
 import matter from 'gray-matter';
 import { parse as parseYaml } from 'yaml';
 import { listContentFiles } from './list-content-files.js';
+import dictionaryData from '../src/data/dictionary.ts';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const ROOT = resolve(__dirname, '..');
 const CONTENT_DIR = resolve(ROOT, 'src/content');
-const DICTIONARY_PATH = resolve(ROOT, 'src/data/dictionary.json');
 const OUT_PATH = resolve(ROOT, 'src/data/word-usage.json');
 
 // Content that actually teaches/uses vocabulary. Intro chapters and the
@@ -102,7 +102,7 @@ function collectWordRefs(text) {
 }
 
 async function main() {
-  const dictionary = JSON.parse(readFileSync(DICTIONARY_PATH, 'utf-8'));
+  const dictionary = dictionaryData;
   const files = listContentFiles(CONTENT_DIR).filter(isTrackedFile);
   const chaptersRaw = await Promise.all(files.map(loadChapter));
 

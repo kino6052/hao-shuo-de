@@ -4,6 +4,13 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "can-cant",
+  words: [
+    {
+      word: "yan3jing",
+      en: "eye",
+      ru: "глаз",
+    },
+  ],
   prose: {
     en: [
       "**To say you can or can't get the result**, put {{word:de}} (can) or {{word:bu4}} (can't) between the verb and the result.",
@@ -29,8 +36,8 @@ export default lessonModule({
     },
   },
   info: {
-    en: "verb-{{word:de}}-result / verb-{{word:bu4}}-result, can / can't: {{Word:wo3}} {{word:kan4}}-{{word:bu4}}-{{word:dao4}}. (I can't see it.)",
-    ru: "глагол-{{word:de}}-результат / глагол-{{word:bu4}}-результат — получается / не получается: {{Word:wo3}} {{word:kan4}}-{{word:bu4}}-{{word:dao4}}. (Мне не видно.)",
+    en: "verb-{{word:de}}-result / verb-{{word:bu4}}-result, can / can't: {{Word:wo3}}-{{word:de}} {{word:yan3jing}} {{word:bu4}} {{word:hao3}}, {{word:kan4}}-{{word:bu4}}-{{word:dao4}}. (My eyes are bad, I can't see.)",
+    ru: "глагол-{{word:de}}-результат / глагол-{{word:bu4}}-результат — получается / не получается: {{Word:wo3}}-{{word:de}} {{word:yan3jing}} {{word:bu4}} {{word:hao3}}, {{word:kan4}}-{{word:bu4}}-{{word:dao4}}. (У меня плохие глаза, мне не видно.)",
   },
   examples: [
     {
@@ -38,6 +45,12 @@ export default lessonModule({
       hanzi: "我看不到。",
       en: "I can't see it.",
       ru: "Мне не видно.",
+    },
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:yan3jing}} {{word:bu4}} {{word:hao3}}, {{word:kan4}}-{{word:bu4}}-{{word:dao4}}.",
+      hanzi: "我的眼睛不好，看不到。",
+      en: "My eyes are bad, I can't see.",
+      ru: "У меня плохие глаза, мне не видно.",
     },
     {
       pinyin: "{{Word:ni3}} {{word:ting1}}-{{word:de}}-{{word:dao4}} {{word:ma}}?",
@@ -52,10 +65,10 @@ export default lessonModule({
       ru: "Я не могу найти свою одежду.",
     },
     {
-      pinyin: "{{Word:mi3fan4}} {{word:hen3}} {{word:duo1}}, {{word:wo3}} {{word:chi1}}-{{word:bu4}}-{{word:wan2}}.",
-      hanzi: "米饭很多，我吃不完。",
-      en: "There's a lot of rice. I can't finish it.",
-      ru: "Риса много, я не могу всё доесть.",
+      pinyin: "{{Word:shui3}} {{word:hen3}} {{word:duo1}}, {{word:wo3}} {{word:he1}}-{{word:bu4}}-{{word:wan2}}.",
+      hanzi: "水很多，我喝不完。",
+      en: "There's a lot of water. I can't finish it.",
+      ru: "Воды много, я не могу всё выпить.",
     },
     {
       pinyin: "{{Word:he2zi}} {{word:hen3}} {{word:da4}}, {{word:wo3}} {{word:na2}}-{{word:bu4}}-{{word:dong4}}.",
@@ -68,6 +81,12 @@ export default lessonModule({
       hanzi: "口很小，我们进不去。",
       en: "The opening is small. We can't get in.",
       ru: "Проём маленький, мы не можем войти.",
+    },
+    {
+      pinyin: "{{Word:ta1}}-{{word:de}} {{word:yan3jing}} {{word:hen3}} {{word:hao3}}, {{word:kan4}}-{{word:de}}-{{word:dao4}}.",
+      hanzi: "他的眼睛很好，看得到。",
+      en: "His eyes are good, he can see it.",
+      ru: "У него хорошие глаза, ему видно.",
     },
   ],
   exercises: [
@@ -82,6 +101,12 @@ export default lessonModule({
       ru: "Тебе видно?",
       answer: "{{Word:ni3}} {{word:kan4}}-{{word:de}}-{{word:dao4}} {{word:ma}}?",
       hanzi: "你看得到吗？",
+    },
+    {
+      en: "Her eyes are big.",
+      ru: "У неё большие глаза.",
+      answer: "{{Word:ta1}}-{{word:de}} {{word:yan3jing}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "她的眼睛很大。",
     },
   ],
   faq: [

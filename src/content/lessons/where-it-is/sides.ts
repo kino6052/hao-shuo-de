@@ -7,26 +7,17 @@ export default lessonModule({
   id: "sides",
   words: [
     {
-      term: "{{word:qian2}}",
-      hanzi: "前",
+      word: "qian2",
       en: "front; qián-miàn: in front",
       ru: "перед; qián-miàn: впереди",
     },
     {
-      term: "{{word:pang2}}",
-      hanzi: "旁",
-      en: "beside (in pángbiān)",
-      ru: "рядом (в слове pángbiān)",
-    },
-    {
-      term: "{{word:bian1}}",
-      hanzi: "边",
+      word: "bian1",
       en: "side",
       ru: "сторона",
     },
     {
-      term: "{{word:pang2bian1}}",
-      hanzi: "旁边",
+      word: "pang2bian1",
       en: "beside, next to",
       ru: "рядом, возле",
     },
@@ -38,7 +29,7 @@ export default lessonModule({
       "**Thing + {{word:zai4}} + X-{{word:de}} {{word:qian2}}-{{word:mian4}} / {{word:hou4}}-{{word:mian4}} / {{word:pang2bian1}}**",
       "",
       "{{word:mian4}} joins the others too: {{word:li3}}-{{word:mian4}} (inside), {{word:shang4}}-{{word:mian4}} (on top), {{word:xia4}}-{{word:mian4}} (below).",
-      "{{word:pang2bian1}} is {{word:pang2}} (beside) + {{word:bian1}} (side). {{word:zhe4}}-{{word:bian1}} is this side, {{word:na4}}-{{word:bian1}} is that side.",
+      "{{word:pang2bian1}} means beside, and {{word:bian1}} is a side: {{word:zhe4}}-{{word:bian1}} is this side, {{word:na4}}-{{word:bian1}} is that side.",
     ],
     ru: [
       "**Чтобы сказать «перед», «за» или «рядом»**, присоедините {{word:mian4}} (сторона) к {{word:qian2}} (перед) или {{word:hou4}} (зад) или используйте {{word:pang2bian1}} (рядом).",
@@ -46,7 +37,7 @@ export default lessonModule({
       "**Вещь + {{word:zai4}} + X-{{word:de}} {{word:qian2}}-{{word:mian4}} / {{word:hou4}}-{{word:mian4}} / {{word:pang2bian1}}**",
       "",
       "{{word:mian4}} присоединяется и к другим словам: {{word:li3}}-{{word:mian4}} (внутри), {{word:shang4}}-{{word:mian4}} (сверху), {{word:xia4}}-{{word:mian4}} (внизу).",
-      "{{word:pang2bian1}} — это {{word:pang2}} (рядом) + {{word:bian1}} (сторона). {{word:zhe4}}-{{word:bian1}} — эта сторона, {{word:na4}}-{{word:bian1}} — та сторона.",
+      "{{word:pang2bian1}} значит «рядом», а {{word:bian1}} — сторона: {{word:zhe4}}-{{word:bian1}} — эта сторона, {{word:na4}}-{{word:bian1}} — та сторона.",
     ],
     tldr: {
       en: "Join {{word:mian4}} to {{word:qian2}} or {{word:hou4}} for in front or behind. {{word:pang2bian1}} means beside.",
@@ -99,16 +90,16 @@ export default lessonModule({
       ru: "Коробка на той стороне.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:pang2}}-{{word:bian1}}.",
+      pinyin: "{{Word:ta1}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:pang2bian1}}.",
       hanzi: "他在我的旁边。",
       en: "He's beside me.",
       ru: "Он рядом со мной.",
     },
     {
-      pinyin: "{{Word:shui3guo3}} {{word:zai4}} {{word:he2zi}}-{{word:de}} {{word:pang2}}-{{word:bian1}}.",
-      hanzi: "水果在盒子的旁边。",
-      en: "The fruit is beside the box.",
-      ru: "Фрукт рядом с коробкой.",
+      pinyin: "{{Word:zhi2wu4}} {{word:zai4}} {{word:he2zi}}-{{word:de}} {{word:pang2bian1}}.",
+      hanzi: "植物在盒子的旁边。",
+      en: "The plant is beside the box.",
+      ru: "Растение рядом с коробкой.",
     },
   ],
   exercises: [
@@ -139,8 +130,20 @@ export default lessonModule({
     {
       en: "The man is beside the house.",
       ru: "Мужчина возле дома.",
-      answer: "{{Word:nan2ren2}} {{word:zai4}} {{word:jia1}}-{{word:de}} {{word:pang2}}-{{word:bian1}}.",
+      answer: "{{Word:nan2ren2}} {{word:zai4}} {{word:jia1}}-{{word:de}} {{word:pang2bian1}}.",
       hanzi: "男人在家的旁边。",
+    },
+    {
+      en: "The box is on this side.",
+      ru: "Коробка с этой стороны.",
+      answer: "{{Word:he2zi}} {{word:zai4}} {{word:zhe4}}-{{word:bian1}}.",
+      hanzi: "盒子在这边。",
+    },
+    {
+      en: "The sun is above us.",
+      ru: "Солнце над нами.",
+      answer: "{{Word:ri4}} {{word:zai4}} {{word:wo3}}-{{word:men}}-{{word:de}} {{word:shang4}}-{{word:mian4}}.",
+      hanzi: "日在我们的上面。",
     },
   ],
   faq: [

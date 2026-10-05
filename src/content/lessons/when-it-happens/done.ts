@@ -5,22 +5,24 @@ export default lessonModule({
   id: "done",
   words: [
     {
-      term: "{{word:le}}",
-      hanzi: "了",
+      word: "le",
       en: "after a verb: it's done",
       ru: "после глагола: сделано",
     },
     {
-      term: "{{word:shui4jiao4}}",
-      hanzi: "睡觉",
+      word: "shui4jiao4",
       en: "sleep",
       ru: "спать",
     },
     {
-      term: "{{word:fa1sheng1}}",
-      hanzi: "发生",
-      en: "happen",
-      ru: "происходить, случаться",
+      word: "fa1",
+      en: "send out; fā-shēng: happen",
+      ru: "выпускать; fā-shēng: случаться",
+    },
+    {
+      word: "sheng1",
+      en: "be born, give birth",
+      ru: "рождаться, рожать",
     },
   ],
   prose: {
@@ -30,7 +32,7 @@ export default lessonModule({
       "**Who + verb + {{word:le}}**",
       "",
       "Verbs never change. Small words (particles) like {{word:le}} show when.",
-      "{{Word:fa1sheng1}} {{word:le}} {{word:shen2me}}? means \"What happened?\" ({{word:fa1sheng1}} is happen).",
+      "{{Word:fa1}}-{{word:sheng1}} {{word:le}} {{word:shen2me}}? means \"What happened?\" ({{word:fa1}}-{{word:sheng1}}, \"send out, be born\", is happen).",
     ],
     ru: [
       "**Чтобы сказать, что что-то сделано**, поставьте {{word:le}} после глагола.",
@@ -38,7 +40,7 @@ export default lessonModule({
       "**Кто + глагол + {{word:le}}**",
       "",
       "Глаголы никогда не меняются. Когда это было, показывают маленькие слова (частицы), такие как {{word:le}}.",
-      "{{Word:fa1sheng1}} {{word:le}} {{word:shen2me}}? значит «Что случилось?» ({{word:fa1sheng1}} — «случаться»).",
+      "{{Word:fa1}}-{{word:sheng1}} {{word:le}} {{word:shen2me}}? значит «Что случилось?» ({{word:fa1}}-{{word:sheng1}}, «выпустить, родиться», — «случаться»).",
     ],
     tldr: {
       en: "Put {{word:le}} after a verb to say it is done.",
@@ -56,8 +58,8 @@ export default lessonModule({
         ru: "глагол + {{word:le}} — сделано: {{Word:wo3}} {{word:chi1}} {{word:le}}. (Я поел.)",
       },
       {
-        en: "{{Word:fa1sheng1}} {{word:le}} {{word:shen2me}}? (What happened?)",
-        ru: "{{Word:fa1sheng1}} {{word:le}} {{word:shen2me}}? (Что случилось?)",
+        en: "{{Word:fa1}}-{{word:sheng1}} {{word:le}} {{word:shen2me}}? (What happened?)",
+        ru: "{{Word:fa1}}-{{word:sheng1}} {{word:le}} {{word:shen2me}}? (Что случилось?)",
       },
     ],
   },
@@ -81,13 +83,13 @@ export default lessonModule({
       ru: "Ты это видел?",
     },
     {
-      pinyin: "{{Word:fa1sheng1}} {{word:le}} {{word:shen2me}}?",
+      pinyin: "{{Word:fa1}}-{{word:sheng1}} {{word:le}} {{word:shen2me}}?",
       hanzi: "发生了什么？",
       en: "What happened?",
       ru: "Что случилось?",
     },
     {
-      pinyin: "{{Word:ni3}} {{word:zhi1dao4}} {{word:fa1sheng1}} {{word:le}} {{word:shen2me}} {{word:ma}}?",
+      pinyin: "{{Word:ni3}} {{word:zhi1dao4}} {{word:fa1}}-{{word:sheng1}} {{word:le}} {{word:shen2me}} {{word:ma}}?",
       hanzi: "你知道发生了什么吗？",
       en: "Do you know what happened?",
       ru: "Ты знаешь, что случилось?",
@@ -97,7 +99,7 @@ export default lessonModule({
     {
       en: "What happened?",
       ru: "Что случилось?",
-      answer: "{{Word:fa1sheng1}} {{word:le}} {{word:shen2me}}?",
+      answer: "{{Word:fa1}}-{{word:sheng1}} {{word:le}} {{word:shen2me}}?",
       hanzi: "发生了什么？",
     },
     {

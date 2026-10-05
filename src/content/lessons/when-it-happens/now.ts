@@ -6,14 +6,12 @@ export default lessonModule({
   id: "now",
   words: [
     {
-      term: "{{word:zai4}}",
-      hanzi: "在",
+      word: "zai4",
       en: "before a verb: right now",
       ru: "перед глаголом: как раз сейчас",
     },
     {
-      term: "{{word:xian4zai4}}",
-      hanzi: "现在",
+      word: "xian4zai4",
       en: "now",
       ru: "сейчас",
     },

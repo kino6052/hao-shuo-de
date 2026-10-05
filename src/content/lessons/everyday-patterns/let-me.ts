@@ -80,5 +80,11 @@ export default lessonModule({
       answer: "{{Word:wo3}} {{word:lai2}} {{word:wen4}}.",
       hanzi: "我来问。",
     },
+    {
+      en: "Let me turn on the light!",
+      ru: "Давай я включу свет!",
+      answer: "{{Word:wo3}} {{word:lai2}} {{word:kai1}} {{word:deng1}}!",
+      hanzi: "我来开灯！",
+    },
   ],
 });

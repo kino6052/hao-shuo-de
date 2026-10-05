@@ -6,8 +6,7 @@ export default lessonModule({
   id: "before",
   words: [
     {
-      term: "{{word:de}}",
-      hanzi: "的",
+      word: "de",
       en: "joins an adjective to a noun",
       ru: "связывает прилагательное с существительным",
     },
@@ -54,10 +53,10 @@ export default lessonModule({
       ru: "Хорошие родители.",
     },
     {
-      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:hen3}}-{{word:xiao3}}-{{word:de}} {{word:di4fang1}}.",
-      hanzi: "这是很小的地方。",
-      en: "This is a very small place.",
-      ru: "Это очень маленькое место.",
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:xiao3}}-{{word:de}} {{word:di4fang1}}.",
+      hanzi: "这是小的地方。",
+      en: "This is a small place.",
+      ru: "Это маленькое место.",
     },
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:hao3}}-{{word:de}} {{word:shui3}}.",
@@ -66,10 +65,10 @@ export default lessonModule({
       ru: "Это хорошая вода.",
     },
     {
-      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:hen3}}-{{word:da4}}-{{word:de}} {{word:dong4wu4}}.",
-      hanzi: "这是很大的动物。",
-      en: "This is a very big animal.",
-      ru: "Это очень большое животное.",
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:da4}}-{{word:de}} {{word:dong4wu4}}.",
+      hanzi: "这是大的动物。",
+      en: "This is a big animal.",
+      ru: "Это большое животное.",
     },
   ],
   exercises: [

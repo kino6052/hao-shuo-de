@@ -6,8 +6,7 @@ export default lessonModule({
   id: "thing",
   words: [
     {
-      term: "{{word:ci2}}",
-      hanzi: "词",
+      word: "ci2",
       en: "word",
       ru: "слово",
     },
@@ -78,10 +77,10 @@ export default lessonModule({
       ru: "Вся еда — десять штук — испортилась.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:chi1}}-{{word:de}} {{word:shi4}} {{word:huang2se4}}-{{word:de}} {{word:shui3guo3}}.",
-      hanzi: "他吃的是黄色的水果。",
-      en: "What he's eating is yellow fruit.",
-      ru: "То, что он ест, — жёлтый фрукт.",
+      pinyin: "{{Word:ta1}} {{word:chi1}}-{{word:de}} {{word:shi4}} {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1xi}}.",
+      hanzi: "他吃的是植物生的东西。",
+      en: "What he's eating is fruit.",
+      ru: "То, что он ест, — фрукты.",
     },
   ],
   exercises: [

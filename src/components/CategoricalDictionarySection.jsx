@@ -1,5 +1,5 @@
 import { useState } from "preact/hooks";
-import dictionary from "../data/dictionary.json";
+import dictionary from "../data/dictionary.ts";
 import { categoryWordCount } from "../lib/dictionary-stats.js";
 import { AudioButton } from "./AudioButton.jsx";
 import { getUsageLabels } from "../lib/word-usage.js";

@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import dict from "../data/dictionary.json";
+import dict from "../data/dictionary.ts";
 import {
   roleOf,
   poolFor,
@@ -112,7 +112,7 @@ describe("render: verbs", () => {
     });
     expect(render(n, py)).toBe("zài shuǐ-lǐ yòng jiǎo kuài-kuài-de qù");
     expect(render(node("fei1", { direction: { value: "shang4-qu4" } }), py)).toBe("fēi-shàng-qù");
-    expect(render(node("chi1", { what: word(node("mi3fan4")) }), py)).toBe("chī mǐfàn");
+    expect(render(node("chi1", { what: word(node("dong1xi")) }), py)).toBe("chī dōngxi");
   });
 
   test("with lái or qù as the verb, the direction ends in the verb itself", () => {

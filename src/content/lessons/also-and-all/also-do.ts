@@ -6,38 +6,32 @@ export default lessonModule({
   id: "also-do",
   words: [
     {
-      term: "{{word:ye3}}",
-      hanzi: "也",
+      word: "ye3",
       en: "also, too",
       ru: "тоже, также",
     },
     {
-      term: "{{word:zhi2wu4}}",
-      hanzi: "植物",
-      en: "plant",
-      ru: "растение",
-    },
-    {
-      term: "{{word:huo3}}",
-      hanzi: "火",
+      word: "huo3",
       en: "fire",
       ru: "огонь",
     },
     {
-      term: "{{word:kong1qi4}}",
-      hanzi: "空气",
+      word: "kong1",
+      en: "empty",
+      ru: "пустой",
+    },
+    {
+      word: "qi4",
       en: "air",
       ru: "воздух",
     },
     {
-      term: "{{word:kai1}}",
-      hanzi: "开",
+      word: "kai1",
       en: "open; turn on",
       ru: "открывать; включать",
     },
     {
-      term: "{{word:guan1}}",
-      hanzi: "关",
+      word: "guan1",
       en: "close; turn off",
       ru: "закрывать; выключать",
     },
@@ -49,6 +43,7 @@ export default lessonModule({
       "**Who + {{word:ye3}} + verb**",
       "",
       "{{word:ye3}} comes after the who, never at the start of the sentence.",
+      "{{word:kong1}} is empty and {{word:qi4}} is air. Together, {{word:kong1}}-{{word:qi4}} is the everyday word for air, and {{word:kong1}}-{{word:jian1}} (the empty between) is space, or room.",
     ],
     ru: [
       "**Чтобы сказать, что кто-то тоже делает что-то**, поставьте {{word:ye3}} (тоже) прямо перед глаголом.",
@@ -56,6 +51,7 @@ export default lessonModule({
       "**Кто + {{word:ye3}} + глагол**",
       "",
       "{{word:ye3}} стоит после того, кто делает, и никогда — в начале предложения.",
+      "{{word:kong1}} — пустой, {{word:qi4}} — воздух. Вместе {{word:kong1}}-{{word:qi4}} — обычное слово для воздуха, а {{word:kong1}}-{{word:jian1}} («пустое между») — пространство, место.",
     ],
     tldr: {
       en: "Put {{word:ye3}} right before the verb: {{Word:wo3}} {{word:ye3}} {{word:chi1}}, I eat too.",
@@ -84,16 +80,16 @@ export default lessonModule({
       ru: "Ты тоже хочешь?",
     },
     {
-      pinyin: "{{Word:zhi2wu4}} {{word:ye3}} {{word:yao4}} {{word:kong1qi4}}.",
+      pinyin: "{{Word:zhi2wu4}} {{word:ye3}} {{word:yao4}} {{word:kong1}}-{{word:qi4}}.",
       hanzi: "植物也要空气。",
       en: "Plants need air too.",
       ru: "Растениям тоже нужен воздух.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:ye3}} {{word:zai4}} {{word:ta1}}-{{word:de}} {{word:pang2}}-{{word:bian1}}.",
-      hanzi: "我也在他的旁边。",
-      en: "I'm beside him too.",
-      ru: "Я тоже рядом с ним.",
+      pinyin: "{{Word:zhe4}}-ge {{word:he2zi}} {{word:shi4}} {{word:kong1}}-{{word:de}}, {{word:na4}}-ge {{word:ye3}} {{word:shi4}} {{word:kong1}}-{{word:de}}.",
+      hanzi: "这个盒子是空的，那个也是空的。",
+      en: "This box is empty, and so is that one.",
+      ru: "Эта коробка пустая, и та тоже.",
     },
     {
       pinyin: "{{Word:ta1}} {{word:ye3}} {{word:bu4}} {{word:dong4}}.",
@@ -142,7 +138,7 @@ export default lessonModule({
     {
       en: "The air here is cold.",
       ru: "Воздух здесь холодный.",
-      answer: "{{Word:zhe4}}-{{word:li3}}-{{word:de}} {{word:kong1qi4}} {{word:hen3}} {{word:leng3}}.",
+      answer: "{{Word:zhe4}}-{{word:li3}}-{{word:de}} {{word:kong1}}-{{word:qi4}} {{word:hen3}} {{word:leng3}}.",
       hanzi: "这里的空气很冷。",
     },
     {
@@ -156,6 +152,12 @@ export default lessonModule({
       ru: "Выключи огонь!",
       answer: "{{Word:guan1}} {{word:huo3}}!",
       hanzi: "关火！",
+    },
+    {
+      en: "Is there room here?",
+      ru: "Здесь есть место?",
+      answer: "{{Word:zhe4}}-{{word:li3}} {{word:you3}} {{word:kong1}}-{{word:jian1}} {{word:ma}}?",
+      hanzi: "这里有空间吗？",
     },
   ],
   faq: [

@@ -6,14 +6,12 @@ export default lessonModule({
   id: "changed",
   words: [
     {
-      term: "{{word:huai4}}",
-      hanzi: "坏",
+      word: "huai4",
       en: "bad, broken",
       ru: "плохой, сломанный",
     },
     {
-      term: "{{word:luan4}}",
-      hanzi: "乱",
+      word: "luan4",
       en: "messy",
       ru: "в беспорядке",
     },
@@ -56,10 +54,10 @@ export default lessonModule({
       ru: "Стало лучше.",
     },
     {
-      pinyin: "{{Word:shui3guo3}} {{word:huai4}} {{word:le}}.",
-      hanzi: "水果坏了。",
-      en: "The fruit went bad.",
-      ru: "Фрукт испортился.",
+      pinyin: "{{Word:shui3}} {{word:huai4}} {{word:le}}.",
+      hanzi: "水坏了。",
+      en: "The water went bad.",
+      ru: "Вода испортилась.",
     },
     {
       pinyin: "{{Word:gong1ju4}} {{word:huai4}} {{word:le}}.",
@@ -76,10 +74,10 @@ export default lessonModule({
   ],
   exercises: [
     {
-      en: "The rice got cold.",
-      ru: "Рис остыл.",
-      answer: "{{Word:mi3fan4}} {{word:leng3}} {{word:le}}.",
-      hanzi: "米饭冷了。",
+      en: "The water got cold.",
+      ru: "Вода остыла.",
+      answer: "{{Word:shui3}} {{word:leng3}} {{word:le}}.",
+      hanzi: "水冷了。",
     },
     {
       en: "My tool is broken.",

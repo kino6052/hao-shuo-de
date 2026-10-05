@@ -2,7 +2,7 @@
 // See src/lib/lesson.ts.
 //
 // Added after Phase 2 (BOOK_PLAN.md D45): the last, catch-all lesson. English "let" and "help"
-// without a word for "let": wǒ lái (let me), gěi wǒ + verb + yīxià (let me see), bāng (help),
+// without a word for "let": wǒ lái (let me), gěi wǒ + verb + yī-xià (let me see), bāng (help),
 // jiào + person + verb (have / let someone), néng … ma? (may I), and …, hǎo ma? (let's, please).
 // New word: bāng.
 // Only words from this lesson and earlier ones; passes every gate

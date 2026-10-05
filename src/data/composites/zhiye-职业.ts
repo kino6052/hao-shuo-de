@@ -1,0 +1,15 @@
+import { composite } from "../../lib/composite.ts";
+
+export default composite({
+  rank: 1175,
+  phase: 3,
+  zh: "职业",
+  py: "zhíyè",
+  en: "occupation",
+  ru: "профессия",
+  hsd: ["{{word:nong4}}-{{word:de}}"],
+  tts: ["弄的"],
+  literal: "what you do",
+  fit: "plain",
+  proposed: true,
+});

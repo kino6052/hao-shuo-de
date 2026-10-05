@@ -42,10 +42,10 @@ export default lessonModule({
       ru: "Это не очень странно.",
     },
     {
-      pinyin: "{{Word:mi3fan4}} {{word:bu4}} {{word:re4}}.",
-      hanzi: "米饭不热。",
-      en: "The rice isn't hot.",
-      ru: "Рис не горячий.",
+      pinyin: "{{Word:shui3}} {{word:bu4}} {{word:re4}}.",
+      hanzi: "水不热。",
+      en: "The water isn't hot.",
+      ru: "Вода не горячая.",
     },
     {
       pinyin: "{{Word:wo3}} {{word:bu4}} {{word:kuai4}}.",
@@ -74,10 +74,10 @@ export default lessonModule({
       hanzi: "水不冷。",
     },
     {
-      en: "The rice doesn't taste good.",
-      ru: "Рис невкусный.",
-      answer: "{{Word:mi3fan4}}-{{word:de}} {{word:wei4dao4}} {{word:bu4}} {{word:hao3}}.",
-      hanzi: "米饭的味道不好。",
+      en: "The water doesn't taste good.",
+      ru: "У воды плохой вкус.",
+      answer: "{{Word:shui3}}-{{word:de}} {{word:wei4dao4}} {{word:bu4}} {{word:hao3}}.",
+      hanzi: "水的味道不好。",
     },
   ],
   faq: [

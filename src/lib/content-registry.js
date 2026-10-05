@@ -1,4 +1,4 @@
-import dictionaryData from '../data/dictionary.json';
+import dictionaryData from '../data/dictionary.ts';
 import { countDictionaryWords, buildWordIndex } from './dictionary-stats.js';
 import { buildTsChapterView } from './chapter-content.js';
 import { lessonNumber, BACK_MATTER_IDS } from '../content/book.js';

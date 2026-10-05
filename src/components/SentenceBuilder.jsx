@@ -1,5 +1,5 @@
 import { useState, useEffect } from "preact/hooks";
-import dictionary from "../data/dictionary.json";
+import dictionary from "../data/dictionary.ts";
 import { t } from "../lib/i18n.js";
 import { AudioButton } from "./AudioButton.jsx";
 import { WordPicker } from "./WordPicker.jsx";

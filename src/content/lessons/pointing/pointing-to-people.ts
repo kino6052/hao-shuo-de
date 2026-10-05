@@ -5,20 +5,17 @@ export default lessonModule({
   id: "pointing-to-people",
   words: [
     {
-      term: "{{word:wo3}}",
-      hanzi: "我",
+      word: "wo3",
       en: "I, me",
       ru: "я, меня",
     },
     {
-      term: "{{word:ni3}}",
-      hanzi: "你",
+      word: "ni3",
       en: "you",
       ru: "ты",
     },
     {
-      term: "{{word:ta1}}",
-      hanzi: "他",
+      word: "ta1",
       en: "he, she, it, they",
       ru: "он, она, оно, они",
     },

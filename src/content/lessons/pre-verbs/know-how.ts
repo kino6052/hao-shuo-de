@@ -5,8 +5,7 @@ export default lessonModule({
   id: "know-how",
   words: [
     {
-      term: "{{word:zhi1dao4}}",
-      hanzi: "知道",
+      word: "zhi1dao4",
       en: "know; know how to (with zěnme)",
       ru: "знать; уметь (с zěnme)",
     },

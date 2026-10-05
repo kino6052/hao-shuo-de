@@ -5,8 +5,7 @@ export default lessonModule({
   id: "love",
   words: [
     {
-      term: "{{word:ai4}}",
-      hanzi: "爱",
+      word: "ai4",
       en: "love; love to",
       ru: "любить; любить что-то делать",
     },
@@ -73,10 +72,10 @@ export default lessonModule({
   ],
   exercises: [
     {
-      en: "She loves to eat fruit.",
-      ru: "Она любит есть фрукты.",
-      answer: "{{Word:ta1}} {{word:ai4}} {{word:chi1}} {{word:shui3guo3}}.",
-      hanzi: "她爱吃水果。",
+      en: "She loves looking at plants.",
+      ru: "Она любит смотреть на растения.",
+      answer: "{{Word:ta1}} {{word:ai4}} {{word:kan4}} {{word:zhi2wu4}}.",
+      hanzi: "她爱看植物。",
     },
   ],
 });

@@ -6,32 +6,27 @@ export default lessonModule({
   id: "than",
   words: [
     {
-      term: "{{word:bi3}}",
-      hanzi: "比",
+      word: "bi3",
       en: "than",
       ru: "чем (при сравнении)",
     },
     {
-      term: "{{word:ying4}}",
-      hanzi: "硬",
+      word: "ying4",
       en: "hard",
       ru: "твёрдый",
     },
     {
-      term: "{{word:yuan2}}",
-      hanzi: "圆",
+      word: "yuan2",
       en: "round",
       ru: "круглый",
     },
     {
-      term: "{{word:gun4zi}}",
-      hanzi: "棍子",
+      word: "gun4zi",
       en: "stick",
       ru: "палка",
     },
     {
-      term: "{{word:xian4}}",
-      hanzi: "线",
+      word: "xian4",
       en: "line, rope, thread",
       ru: "линия, верёвка, нитка",
     },
@@ -130,6 +125,24 @@ export default lessonModule({
       ru: "Он старше меня.",
       answer: "{{Word:ta1}} {{word:bi3}} {{word:wo3}} {{word:lao3}}.",
       hanzi: "他比我老。",
+    },
+    {
+      en: "My country is bigger than yours.",
+      ru: "Моя страна больше твоей.",
+      answer: "{{Word:wo3}}-{{word:de}} {{word:guo2}} {{word:bi3}} {{word:ni3}}-{{word:de}} {{word:da4}}.",
+      hanzi: "我的国比你的大。",
+    },
+    {
+      en: "Writing is harder than speaking.",
+      ru: "Писать труднее, чем говорить.",
+      answer: "{{Word:xie3}} {{word:bi3}} {{word:shuo1}} {{word:nan2}}.",
+      hanzi: "写比说难。",
+    },
+    {
+      en: "The box on this side is bigger than the one on that side.",
+      ru: "Коробка с этой стороны больше, чем с той.",
+      answer: "{{Word:zhe4}}-{{word:bian1}}-{{word:de}} {{word:he2zi}} {{word:bi3}} {{word:na4}}-{{word:bian1}}-{{word:de}} {{word:da4}}.",
+      hanzi: "这边的盒子比那边的大。",
     },
   ],
   faq: [

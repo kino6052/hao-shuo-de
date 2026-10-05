@@ -30,10 +30,10 @@ export default lessonModule({
   },
   examples: [
     {
-      pinyin: "{{Word:wo3}} {{word:you3}} {{word:san1}}-{{word:zhong3}} {{word:shui3guo3}}.",
-      hanzi: "我有三种水果。",
-      en: "I have three kinds of fruit.",
-      ru: "У меня три сорта фруктов.",
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:san1}}-{{word:zhong3}} {{word:zhi2wu4}}.",
+      hanzi: "我有三种植物。",
+      en: "I have three kinds of plants.",
+      ru: "У меня три вида растений.",
     },
     {
       pinyin: "{{Word:yi1}}-{{word:bu4fen}} {{word:ren2}} {{word:qu4}} {{word:le}}.",
@@ -50,10 +50,10 @@ export default lessonModule({
   ],
   exercises: [
     {
-      en: "I have two kinds of fruit.",
-      ru: "У меня два сорта фруктов.",
-      answer: "{{Word:wo3}} {{word:you3}} {{word:liang3}}-{{word:zhong3}} {{word:shui3guo3}}.",
-      hanzi: "我有两种水果。",
+      en: "I have two kinds of plants.",
+      ru: "У меня два вида растений.",
+      answer: "{{Word:wo3}} {{word:you3}} {{word:liang3}}-{{word:zhong3}} {{word:zhi2wu4}}.",
+      hanzi: "我有两种植物。",
     },
   ],
 });

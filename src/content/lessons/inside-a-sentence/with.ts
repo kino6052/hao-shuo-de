@@ -6,20 +6,17 @@ export default lessonModule({
   id: "with",
   words: [
     {
-      term: "{{word:yong4}}",
-      hanzi: "用",
+      word: "yong4",
       en: "use; with",
       ru: "использовать; с помощью",
     },
     {
-      term: "{{word:mo1}}",
-      hanzi: "摸",
+      word: "mo1",
       en: "touch",
       ru: "трогать",
     },
     {
-      term: "{{word:da3}}",
-      hanzi: "打",
+      word: "da3",
       en: "hit",
       ru: "бить",
     },
@@ -82,8 +79,8 @@ export default lessonModule({
       ru: "Животное трогает мою руку носом.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:yong4}} {{word:bu4tong2}}-{{word:de}} {{word:fang1fa3}}.",
-      hanzi: "他用不同的方法。",
+      pinyin: "{{Word:ta1}} {{word:yong4}} {{word:bu4}}-{{word:yi1yang4}}-{{word:de}} {{word:fang1fa3}}.",
+      hanzi: "他用不一样的方法。",
       en: "He does it a different way.",
       ru: "Он делает это по-другому.",
     },
@@ -118,6 +115,18 @@ export default lessonModule({
       ru: "Можно мне потрогать?",
       answer: "{{Word:wo3}} {{word:neng2}} {{word:mo1}} {{word:ma}}?",
       hanzi: "我能摸吗？",
+    },
+    {
+      en: "I see with my eyes.",
+      ru: "Я смотрю глазами.",
+      answer: "{{Word:wo3}} {{word:yong4}} {{word:yan3jing}} {{word:kan4}}.",
+      hanzi: "我用眼睛看。",
+    },
+    {
+      en: "He writes to me on his phone.",
+      ru: "Он пишет мне с телефона.",
+      answer: "{{Word:ta1}} {{word:yong4}} {{word:shou3}}-{{word:ji1}} {{word:gei3}} {{word:wo3}} {{word:xie3}}.",
+      hanzi: "他用手机给我写。",
     },
   ],
 });

@@ -1,7 +1,7 @@
 // comparing ("Modifiers 2 — Comparing"): its modules, in reading order.
 // See src/lib/lesson.ts.
 //
-// Rewritten in Phase 2 (BOOK_PLAN.md): A bǐ B + adjective (bigger than), yīyàng (the same), bùtóng (different), biéde (other), and zhǒng (kind).
+// Rewritten in Phase 2 (BOOK_PLAN.md): A bǐ B + adjective (bigger than), yīyàng (the same), bù yīyàng (different), biéde (other), and zhǒng (kind).
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- comparing).
 import { lesson } from "../../../lib/lesson.ts";

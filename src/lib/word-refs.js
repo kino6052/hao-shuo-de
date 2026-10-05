@@ -56,7 +56,7 @@ export function resolveWordRefs(text, index, wordCount, chapterTitles) {
     .replace(WORD_REF_RE, (full, kind, id) => {
       if (!index.has(id)) {
         throw new Error(
-          `Unknown word id "${id}" referenced as ${full}. Check src/data/dictionary.json -- it must have a "${id}" key under "words".`,
+          `Unknown word id "${id}" referenced as ${full}. Check src/data/words/ -- there must be a ${id}.ts.`,
         );
       }
       const term = index.get(id);

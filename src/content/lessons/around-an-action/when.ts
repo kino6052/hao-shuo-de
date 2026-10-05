@@ -6,8 +6,7 @@ export default lessonModule({
   id: "when",
   words: [
     {
-      term: "{{word:wan2r}}",
-      hanzi: "玩儿",
+      word: "wan2r",
       en: "play",
       ru: "играть",
     },

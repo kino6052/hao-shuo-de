@@ -5,8 +5,7 @@ export default lessonModule({
   id: "clock",
   words: [
     {
-      term: "{{word:dian3}}",
-      hanzi: "点",
+      word: "dian3",
       en: "o'clock; yī-diǎn: a little",
       ru: "час (о времени); yī-diǎn: немного",
     },
@@ -44,8 +43,8 @@ export default lessonModule({
       ru: "Сейчас три часа.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:shi2}}-{{word:er4}}-{{word:dian3}} {{word:chi1}} {{word:mi3fan4}}.",
-      hanzi: "我十二点吃米饭。",
+      pinyin: "{{Word:wo3}} {{word:shi2}}-{{word:er4}}-{{word:dian3}} {{word:chi1}} {{word:dong1xi}}.",
+      hanzi: "我十二点吃东西。",
       en: "I eat at twelve o'clock.",
       ru: "Я ем в двенадцать часов.",
     },

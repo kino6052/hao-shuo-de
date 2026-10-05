@@ -40,7 +40,7 @@ export default lessonModule({
       ru: "Можно войти?",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:neng2}} {{word:mo1}} {{word:yi1xia4}} {{word:ma}}?",
+      pinyin: "{{Word:wo3}} {{word:neng2}} {{word:mo1}} {{word:yi1}}-{{word:xia4}} {{word:ma}}?",
       hanzi: "我能摸一下吗？",
       en: "May I touch it?",
       ru: "Можно потрогать?",
@@ -90,10 +90,10 @@ export default lessonModule({
       hanzi: "我能进来吗？",
     },
     {
-      en: "Let's eat rice, okay?",
-      ru: "Давай поедим рис, хорошо?",
-      answer: "{{Word:wo3}}-{{word:men}} {{word:chi1}} {{word:mi3fan4}}, {{word:hao3}} {{word:ma}}?",
-      hanzi: "我们吃米饭，好吗？",
+      en: "Let's eat, okay?",
+      ru: "Давай поедим, хорошо?",
+      answer: "{{Word:wo3}}-{{word:men}} {{word:chi1}} {{word:dong1xi}}, {{word:hao3}} {{word:ma}}?",
+      hanzi: "我们吃东西，好吗？",
     },
   ],
 });

@@ -1,0 +1,14 @@
+import { composite } from "../../lib/composite.ts";
+
+export default composite({
+  rank: 732,
+  phase: 2,
+  zh: "习惯",
+  py: "xíguàn",
+  en: "habit; be used to",
+  ru: "привычка",
+  hsd: ["{{word:ci4}}-{{word:ci4}} {{word:dou1}} {{word:nong4}}-{{word:de}} {{word:dong1xi}}"],
+  tts: ["次次都弄的东西"],
+  literal: "something you do every time",
+  fit: "plain",
+});

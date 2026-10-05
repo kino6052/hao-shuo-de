@@ -5,20 +5,17 @@ export default lessonModule({
   id: "want",
   words: [
     {
-      term: "{{word:yao4}}",
-      hanzi: "要",
+      word: "yao4",
       en: "want; want to",
       ru: "хотеть; хотеть что-то сделать",
     },
     {
-      term: "{{word:deng3}}",
-      hanzi: "等",
+      word: "deng3",
       en: "wait",
       ru: "ждать",
     },
     {
-      term: "{{word:yi1fu}}",
-      hanzi: "衣服",
+      word: "yi1fu",
       en: "clothes",
       ru: "одежда",
     },
@@ -78,6 +75,12 @@ export default lessonModule({
       hanzi: "你要等吗？",
       en: "Do you want to wait?",
       ru: "Ты хочешь подождать?",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:yao4}} {{word:he1}} {{word:shui3}}.",
+      hanzi: "我要喝水。",
+      en: "I want to drink water.",
+      ru: "Я хочу попить воды.",
     },
   ],
   exercises: [

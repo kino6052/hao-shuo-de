@@ -6,8 +6,7 @@ export default lessonModule({
   id: "what-color",
   words: [
     {
-      term: "{{word:yan2se4}}",
-      hanzi: "颜色",
+      word: "yan2se4",
       en: "color",
       ru: "цвет",
     },
@@ -41,10 +40,10 @@ export default lessonModule({
       ru: "Какого цвета твоя одежда?",
     },
     {
-      pinyin: "{{Word:zhe4}}-ge {{word:shui3guo3}} {{word:shi4}} {{word:shen2me}} {{word:yan2se4}}?",
-      hanzi: "这个水果是什么颜色？",
-      en: "What color is this fruit?",
-      ru: "Какого цвета этот фрукт?",
+      pinyin: "{{Word:zhe4}}-ge {{word:zhi2wu4}} {{word:shi4}} {{word:shen2me}} {{word:yan2se4}}?",
+      hanzi: "这个植物是什么颜色？",
+      en: "What color is this plant?",
+      ru: "Какого цвета это растение?",
     },
     {
       pinyin: "{{Word:wo3}} {{word:ai4}} {{word:lan2se4}}.",

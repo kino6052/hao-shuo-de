@@ -6,16 +6,9 @@ export default lessonModule({
   id: "became",
   words: [
     {
-      term: "{{word:bian4}}",
-      hanzi: "变",
+      word: "bian4",
       en: "become, change",
       ru: "становиться, меняться",
-    },
-    {
-      term: "{{word:ni2}}",
-      hanzi: "泥",
-      en: "mud, paste",
-      ru: "грязь, паста",
     },
   ],
   prose: {
@@ -53,22 +46,34 @@ export default lessonModule({
       ru: "Ему стало лучше.",
     },
     {
-      pinyin: "{{Word:kong1qi4}} {{word:bian4}} {{word:re4}} {{word:le}}.",
+      pinyin: "{{Word:kong1}}-{{word:qi4}} {{word:bian4}} {{word:re4}} {{word:le}}.",
       hanzi: "空气变热了。",
       en: "The air turned hot.",
       ru: "Воздух стал горячим.",
     },
     {
-      pinyin: "{{Word:shui3}} {{word:bian4}} {{word:ni2}} {{word:le}}.",
-      hanzi: "水变泥了。",
-      en: "The water turned into mud.",
-      ru: "Вода превратилась в грязь.",
+      pinyin: "{{Word:ta1}} {{word:bian4}} {{word:lao3}} {{word:le}}.",
+      hanzi: "他变老了。",
+      en: "He got old.",
+      ru: "Он постарел.",
     },
     {
-      pinyin: "{{Word:di4}}-{{word:shang4}} {{word:you3}} {{word:ni2}}.",
-      hanzi: "地上有泥。",
-      en: "There's mud on the floor.",
-      ru: "На полу грязь.",
+      pinyin: "{{Word:di4}}-{{word:shang4}} {{word:you3}} {{word:shui3}}.",
+      hanzi: "地上有水。",
+      en: "There's water on the floor.",
+      ru: "На полу вода.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:bian4}} {{word:gao1}} {{word:le}}.",
+      hanzi: "他变高了。",
+      en: "He got taller.",
+      ru: "Он вырос.",
+    },
+    {
+      pinyin: "{{Word:zhe4}}-ge {{word:di4fang1}} {{word:bian4}} {{word:ming2}} {{word:le}}.",
+      hanzi: "这个地方变明了。",
+      en: "This place got bright.",
+      ru: "Здесь стало светло.",
     },
   ],
   exercises: [
@@ -79,10 +84,10 @@ export default lessonModule({
       hanzi: "水变热了。",
     },
     {
-      en: "There's mud on my clothes.",
-      ru: "На моей одежде грязь.",
-      answer: "{{Word:wo3}}-{{word:de}} {{word:yi1fu}}-{{word:shang4}} {{word:you3}} {{word:ni2}}.",
-      hanzi: "我的衣服上有泥。",
+      en: "There's water on my clothes.",
+      ru: "На моей одежде вода.",
+      answer: "{{Word:wo3}}-{{word:de}} {{word:yi1fu}}-{{word:shang4}} {{word:you3}} {{word:shui3}}.",
+      hanzi: "我的衣服上有水。",
     },
   ],
   faq: [

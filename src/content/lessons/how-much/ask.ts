@@ -6,8 +6,7 @@ export default lessonModule({
   id: "ask",
   words: [
     {
-      term: "{{word:lao3}}",
-      hanzi: "老",
+      word: "lao3",
       en: "old",
       ru: "старый",
     },
@@ -89,10 +88,10 @@ export default lessonModule({
   ],
   exercises: [
     {
-      en: "Is the fruit sweet?",
-      ru: "Фрукт сладкий?",
-      answer: "{{Word:shui3guo3}} {{word:tian2}} {{word:ma}}?",
-      hanzi: "水果甜吗？",
+      en: "Is the water sweet?",
+      ru: "Вода сладкая?",
+      answer: "{{Word:shui3}} {{word:tian2}} {{word:ma}}?",
+      hanzi: "水甜吗？",
     },
     {
       en: "Is that animal old?",

@@ -29,9 +29,9 @@ export const LESSON_BLURBS: Record<string, LangText> = {
     ru: ["слова-указатели: слова, которые указывают на вещи и людей. Этот, тот (со счётным словом gè), я, ты и он или она."],
   },
   "who-does-what": {
-    en: ["the second most important type of word, for sentences like \"I eat rice.\""],
+    en: ["the second most important type of word, for sentences like \"I drink water.\""],
     zh: [],
-    ru: ["второй по важности вид слов — для предложений вроде «Я ем рис.»"],
+    ru: ["второй по важности вид слов — для предложений вроде «Я пью воду.»"],
   },
   "questions": {
     en: ["a new type of sentence: yes-or-no questions, \"what?\", \"why?\", and \"how?\", and how to answer them."],
@@ -124,9 +124,9 @@ export const LESSON_BLURBS: Record<string, LangText> = {
     ru: ["слово, сказанное дважды: чтобы сделать что-то совсем немного, усилить описательное слово и сказать «каждый»."],
   },
   "everyday-patterns": {
-    en: ["useful ways of saying things that don't fit anywhere else: let me (`wǒ lái`), let me see (`gěi wǒ kàn yīxià`), help (bāng), letting someone (jiào), teaching (jiāo), may I, and let's."],
+    en: ["useful ways of saying things that don't fit anywhere else: let me (`wǒ lái`), let me see (`gěi wǒ kàn yī-xià`), help (bāng), letting someone (jiào), teaching (jiāo), may I, and let's."],
     zh: [],
-    ru: ["полезные обороты, которые больше никуда не подошли: давай я (`wǒ lái`), дай посмотреть (`gěi wǒ kàn yīxià`), помочь (bāng), разрешить кому-то (jiào), научить (jiāo), можно ли и давай."],
+    ru: ["полезные обороты, которые больше никуда не подошли: давай я (`wǒ lái`), дай посмотреть (`gěi wǒ kàn yī-xià`), помочь (bāng), разрешить кому-то (jiào), научить (jiāo), можно ли и давай."],
   },
 };
 
@@ -193,6 +193,11 @@ export const CHAPTER_BLURBS: Record<string, LangText> = {
     en: ["why so few words can say so much."],
     zh: [],
     ru: ["почему так мало слов может сказать так много."],
+  },
+  "appendix-frontier": {
+    en: ["what is still hard to say in Hao-shuo-de, and the best way to say it for now."],
+    zh: [],
+    ru: ["что на Hǎo-shuō-de всё ещё трудно сказать, и как сказать это пока."],
   },
   "appendix-toki-pona": {
     en: ["how Hao-shuo-de differs from Toki Pona."],

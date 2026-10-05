@@ -6,16 +6,9 @@ export default lessonModule({
   id: "feel",
   words: [
     {
-      term: "{{word:jue2de}}",
-      hanzi: "觉得",
+      word: "jue2de",
       en: "feel, think",
       ru: "чувствовать, думать",
-    },
-    {
-      term: "{{word:chong2zi}}",
-      hanzi: "虫子",
-      en: "bug",
-      ru: "насекомое, жук",
     },
   ],
   prose: {
@@ -24,14 +17,14 @@ export default lessonModule({
       "",
       "**Who + {{word:jue2de}} + adjective**",
       "",
-      "{{word:pa4}} means be scared of: {{Word:wo3}} {{word:pa4}} {{word:chong2zi}}, I'm scared of bugs.",
+      "{{word:pa4}} means be scared of: {{Word:wo3}} {{word:pa4}} {{word:huo3}}, I'm scared of fire.",
     ],
     ru: [
       "**Чтобы сказать, как вы себя чувствуете**, поставьте {{word:jue2de}} (чувствовать) перед прилагательным.",
       "",
       "**Кто + {{word:jue2de}} + прилагательное**",
       "",
-      "{{word:pa4}} значит «бояться»: {{Word:wo3}} {{word:pa4}} {{word:chong2zi}} — я боюсь насекомых.",
+      "{{word:pa4}} значит «бояться»: {{Word:wo3}} {{word:pa4}} {{word:huo3}} — я боюсь огня.",
     ],
     tldr: {
       en: "{{word:jue2de}} + adjective says how you feel: {{Word:wo3}} {{word:jue2de}} {{word:leng3}}.",
@@ -46,8 +39,8 @@ export default lessonModule({
         ru: "{{word:jue2de}} + прилагательное — чувствовать: {{Word:wo3}} {{word:jue2de}} {{word:leng3}}. (Мне холодно.)",
       },
       {
-        en: "{{word:pa4}} + thing, scared of: {{Word:wo3}} {{word:pa4}} {{word:chong2zi}}. (I'm scared of bugs.)",
-        ru: "{{word:pa4}} + вещь — бояться: {{Word:wo3}} {{word:pa4}} {{word:chong2zi}}. (Я боюсь насекомых.)",
+        en: "{{word:pa4}} + thing, scared of: {{Word:wo3}} {{word:pa4}} {{word:huo3}}. (I'm scared of fire.)",
+        ru: "{{word:pa4}} + вещь — бояться: {{Word:wo3}} {{word:pa4}} {{word:huo3}}. (Я боюсь огня.)",
       },
     ],
   },
@@ -59,10 +52,10 @@ export default lessonModule({
       ru: "Мне холодно.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:pa4}} {{word:chong2zi}}.",
-      hanzi: "我怕虫子。",
-      en: "I'm scared of bugs.",
-      ru: "Я боюсь насекомых.",
+      pinyin: "{{Word:wo3}} {{word:pa4}} {{word:huo3}}.",
+      hanzi: "我怕火。",
+      en: "I'm scared of fire.",
+      ru: "Я боюсь огня.",
     },
     {
       pinyin: "{{Word:ta1}} {{word:pa4}} {{word:huo3}}.",
@@ -95,10 +88,10 @@ export default lessonModule({
       ru: "Животное выжило, и мне хорошо.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:zui4}} {{word:pa4}} {{word:chong2zi}}.",
-      hanzi: "我最怕虫子。",
-      en: "I'm most scared of bugs.",
-      ru: "Больше всего я боюсь насекомых.",
+      pinyin: "{{Word:wo3}} {{word:zui4}} {{word:pa4}} {{word:yue4}}-{{word:de}} {{word:shi2jian1}}.",
+      hanzi: "我最怕月的时间。",
+      en: "I'm most scared of the night.",
+      ru: "Больше всего я боюсь ночи.",
     },
   ],
   exercises: [
@@ -115,10 +108,10 @@ export default lessonModule({
       hanzi: "我不怕。",
     },
     {
-      en: "There's a bug on my hand.",
-      ru: "У меня на руке насекомое.",
-      answer: "{{Word:wo3}}-{{word:de}} {{word:shou3}}-{{word:shang4}} {{word:you3}} {{word:chong2zi}}.",
-      hanzi: "我的手上有虫子。",
+      en: "There's water on my hand.",
+      ru: "У меня на руке вода.",
+      answer: "{{Word:wo3}}-{{word:de}} {{word:shou3}}-{{word:shang4}} {{word:you3}} {{word:shui3}}.",
+      hanzi: "我的手上有水。",
     },
   ],
   faq: [

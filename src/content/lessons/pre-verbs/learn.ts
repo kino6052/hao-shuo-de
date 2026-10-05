@@ -5,8 +5,7 @@ export default lessonModule({
   id: "learn",
   words: [
     {
-      term: "{{word:xue2}}",
-      hanzi: "学",
+      word: "xue2",
       en: "learn; before a verb: learn to",
       ru: "учиться; перед глаголом: учиться что-то делать",
     },

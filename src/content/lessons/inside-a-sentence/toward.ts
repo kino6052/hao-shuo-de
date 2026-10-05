@@ -6,8 +6,7 @@ export default lessonModule({
   id: "toward",
   words: [
     {
-      term: "{{word:dui4}}",
-      hanzi: "对",
+      word: "dui4",
       en: "toward, for",
       ru: "к, по отношению к, для",
     },
@@ -60,8 +59,8 @@ export default lessonModule({
       ru: "Для меня это хорошо.",
     },
     {
-      pinyin: "{{Word:ri4}} {{word:dui4}} {{word:pi2fu1}} {{word:bu4}} {{word:hao3}}.",
-      hanzi: "日对皮肤不好。",
+      pinyin: "{{Word:ri4}} {{word:dui4}} {{word:shen1ti3}}-{{word:de}} {{word:wai4}}-{{word:mian4}} {{word:bu4}} {{word:hao3}}.",
+      hanzi: "日对身体的外面不好。",
       en: "The sun is bad for your skin.",
       ru: "Солнце вредно для кожи.",
     },

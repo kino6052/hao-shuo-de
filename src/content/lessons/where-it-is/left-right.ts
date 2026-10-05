@@ -6,14 +6,12 @@ export default lessonModule({
   id: "left-right",
   words: [
     {
-      term: "{{word:zuo3bian1}}",
-      hanzi: "左边",
+      word: "zuo3bian1",
       en: "left",
       ru: "слева, левая сторона",
     },
     {
-      term: "{{word:you4bian1}}",
-      hanzi: "右边",
+      word: "you4bian1",
       en: "right",
       ru: "справа, правая сторона",
     },

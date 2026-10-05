@@ -5,8 +5,7 @@ export default lessonModule({
   id: "plural-pointers",
   words: [
     {
-      term: "{{word:men}}",
-      hanzi: "们",
+      word: "men",
       en: "more than one person: {{word:wo3}}-{{word:men}} means \"we\"",
       ru: "больше одного человека: {{word:wo3}}-{{word:men}} значит «мы»",
     },

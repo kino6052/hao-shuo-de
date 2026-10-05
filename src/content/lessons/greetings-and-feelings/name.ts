@@ -6,8 +6,7 @@ export default lessonModule({
   id: "name",
   words: [
     {
-      term: "{{word:jiao4}}",
-      hanzi: "叫",
+      word: "jiao4",
       en: "be called; call, make an animal sound",
       ru: "называться; звать, издавать звук (о животных)",
     },

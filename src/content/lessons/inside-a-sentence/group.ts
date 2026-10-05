@@ -6,8 +6,7 @@ export default lessonModule({
   id: "group",
   words: [
     {
-      term: "{{word:qun2}}",
-      hanzi: "群",
+      word: "qun2",
       en: "group",
       ru: "группа",
     },
@@ -53,10 +52,10 @@ export default lessonModule({
       ru: "Я даю той группе людей воду.",
     },
     {
-      pinyin: "{{Word:yi1}}-{{word:qun2}} {{word:dong4wu4}} {{word:zai4}} {{word:ni2}}-{{word:li3}} {{word:wan2r}}.",
-      hanzi: "一群动物在泥里玩儿。",
-      en: "A group of animals is playing in the mud.",
-      ru: "Группа животных играет в грязи.",
+      pinyin: "{{Word:yi1}}-{{word:qun2}} {{word:dong4wu4}} {{word:zai4}} {{word:shui3}}-{{word:li3}} {{word:wan2r}}.",
+      hanzi: "一群动物在水里玩儿。",
+      en: "A group of animals is playing in the water.",
+      ru: "Группа животных играет в воде.",
     },
   ],
   exercises: [

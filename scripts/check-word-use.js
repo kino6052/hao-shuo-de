@@ -22,6 +22,7 @@ import { fileURLToPath, pathToFileURL } from 'url';
 import { wordUse, wordUseProblems, HOME_LESSON_MIN, LATER_LESSONS_MIN } from './word-use.js';
 import { gatePolicy } from './finished-lessons.js';
 import { LESSON_IDS, lessonNumber, importLessonFile } from './lessons.js';
+import dictionaryData from '../src/data/dictionary.ts';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -29,7 +30,7 @@ const CONTENT_DIR = resolve(ROOT, 'src/content');
 const { args, strict, named, blocking, scopeLabel, summary } = gatePolicy();
 const showTargets = args.includes('--targets') || strict;
 
-const dictionary = JSON.parse(readFileSync(resolve(ROOT, 'src/data/dictionary.json'), 'utf-8')).words;
+const dictionary = dictionaryData.words;
 const lessons = [];
 for (const id of LESSON_IDS) {
   const entries = await importLessonFile(id, 'index.ts');

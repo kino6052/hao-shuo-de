@@ -6,8 +6,7 @@ export default lessonModule({
   id: "fang",
   words: [
     {
-      term: "{{word:fang4}}",
-      hanzi: "放",
+      word: "fang4",
       en: "put",
       ru: "класть, ставить",
     },
@@ -47,10 +46,10 @@ export default lessonModule({
       ru: "Он положил инструмент в коробку.",
     },
     {
-      pinyin: "{{Word:ba3}} {{word:shui3guo3}} {{word:fang4}} {{word:zai4}} {{word:zhe4}}-{{word:li3}}.",
-      hanzi: "把水果放在这里。",
-      en: "Put the fruit here.",
-      ru: "Положи фрукты сюда.",
+      pinyin: "{{Word:ba3}} {{word:zhi2wu4}} {{word:fang4}} {{word:zai4}} {{word:zhe4}}-{{word:li3}}.",
+      hanzi: "把植物放在这里。",
+      en: "Put the plant here.",
+      ru: "Поставь растение сюда.",
     },
     {
       pinyin: "{{Word:ni3}} {{word:ba3}} {{word:wo3}}-{{word:de}} {{word:jin1}} {{word:fang4}} {{word:zai4}} {{word:na3li3}} {{word:le}}?",
