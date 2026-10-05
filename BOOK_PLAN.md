@@ -201,43 +201,44 @@ Four groups, set in `src/content/book.js` (`BACK_MATTER`, D48): **Content** (pro
     A word that simplifies a large chunk of the vocabulary has its place even with a low index: `npm run check-coverage` lists, for each word it warns about, the composites it helps say, and doesn't warn about a word that 10 or more composites use.
     Words that `src/data/coverage.json` depends on (the atoms of meaning, Aristotle's categories, the core grammar) can't leave, or move later, until those items get another form: `npm run check-coverage` fails.
 
-### 4b. Spread of the 200 words (first introduction)
+### 4b. Spread of the words (first introduction)
 
 Approved (D23). It can still be adjusted as each lesson is written, but the rules in §4a must always hold.
 
 - **Id:** the lesson's id in `src/content/book.js`, which sets the order. Rows are keyed by id, so moving a lesson doesn't break the check; the running totals below follow the order at the time of writing.
 - **Added words:** approved additions (§4d). They join `dictionary.json` in Phase 1.
 - **New:** words introduced for the first time in this lesson, added words included.
-- **Total so far:** words introduced by the end of this lesson, out of the whole vocabulary (200).
+- **Total so far:** words introduced by the end of this lesson, out of the whole vocabulary (about 200; the count is reported, not capped: a root that opens many words beats a low count).
+- **Senses:** sense cards of catch-all words (D60). The table is generated from the lessons by `npm run plan-4b` (run by `npm run refactor -- --write`); don't edit it by hand.
 - **%:** how much of the vocabulary the learner has met.
 
-| Id  | Lesson                            | Core words                                                 | Theme words                                 | Added words                        |     New | Total so far |    % |
-| --- | --------------------------------- | ---------------------------------------------------------- | ------------------------------------------- | ---------------------------------- | ------: | -----------: | ---: |
-| sounds-and-symbols | Sounds and Symbols | — | — | — | **0** | 0 / 200 | 0% |
-| words-and-sentences | Words and Sentences | shì, bù, zhè | dōngxi, rén, nǚrén, nánrén, dòngwù, zhíwù | — | **9** | 9 / 200 | 4% |
-| modifying-nouns | Modifying Nouns | hěn, de, duō, hǎo, dà, xiǎo | shuǐ, dìfāng, fùmǔ | shǎo | **10** | 19 / 200 | 10% |
-| pointing | Pointing at People and Things | wǒ, nǐ, tā, nà, gè | jiā, tóu, shǒu, jiǎo | men | **10** | 29 / 200 | 14% |
-| who-does-what | Verbs 1 | yǒu, méi, chī, kàn, tīng, shuō, xiě | jīn | hē | **9** | 38 / 200 | 19% |
-| questions | Questions and Answers | shénme, ma, wèishénme, zěnme, wèn | zhǎo, gōngjù, hézi | mǎi | **9** | 47 / 200 | 24% |
-| pre-verbs | Pre-Verbs | yào, néng, zhīdào, ài | děng, yīfu | kěnéng, xué | **8** | 55 / 200 | 28% |
-| when-it-happens | Time 1 | shíjiān, le, huì, zài | rì, yuè, shuìjiào | guò, xiànzài, fā, shēng | **11** | 66 / 200 | 33% |
-| around-an-action | Time 2 | wán, kāishǐ, hòu, yī, xià | wánr, liú | yòu, cì | **9** | 75 / 200 | 38% |
-| where-it-is | Space 1 | lǐ, shàng, qián, biān, pángbiān, miàn, nǎlǐ | dì | zuǒbiān, yòubiān, wǎng, zhōng, jiān | **13** | 88 / 200 | 44% |
-| moving | Space 2 | cóng, lái, qù, qǐ, wài | kǒu | dào, dòng, yuǎn, fùjìn, lù, guó, chē | **13** | 101 / 200 | 50% |
-| how-much | Modifiers 1 — How much | zhēn | rè, lěng, tián, qíguài, shēntǐ | jiàzhí, lǎo, kuài, wèidào, nán | **11** | 112 / 200 | 56% |
-| comparing | Modifiers 2 — Comparing | bǐ, yīyàng | yìng, yuán, gùnzi, xiàn | biéde, zhǒng, zuì, gāo | **10** | 122 / 200 | 61% |
-| also-and-all | Modifiers 3 — Also and all | yě | huǒ | dōu, bùfen, kāi, guān, dēng, míng, kōng, qì | **10** | 132 / 200 | 66% |
-| becoming-and-making | Modifiers 4 — Becoming and making | biàn, bǎ, nòng, dé | huài | fàng, luàn, lì | **8** | 140 / 200 | 70% |
-| direction-and-result | Verbs 2 | — | — | ná, jìn, chū, huí, zuò, zhàn, tǎng, fēi, tōng, yǎnjing | **10** | 150 / 200 | 75% |
-| numbers | Numbers | liǎng, hào | — | èr, sān, sì, wǔ, liù, qī, bā, jiǔ, shí, diǎn, suàn, tiān, nián | **15** | 165 / 200 | 82% |
-| colors | Colors | yánsè, báisè, hēisè, hóngsè, huángsè, lánsè | — | — | **6** | 171 / 200 | 86% |
-| roles-of-a-word | Changing the Role of a Word | cí, fāngfǎ | bízi | máo, jī | **5** | 176 / 200 | 88% |
-| inside-a-sentence | Relationships 1 | gěi, yòng, hé, huòzhě, duì | qún, mō, dǎ | guānxi | **9** | 185 / 200 | 92% |
-| linking-sentences | Relationships 2 | yīnwèi, dànshì | sǐ | rúguǒ, huó, jiù | **6** | 191 / 200 | 96% |
-| greetings-and-feelings | Greetings and Feelings | juéde, pà, jiào | shēngyīn | xiào, xiè, xīn | **7** | 198 / 200 | 99% |
-| doubling-words | Doubling Words | — | — | — | **0** | 198 / 200 | 99% |
-| everyday-patterns | Everyday Patterns | — | — | bāng, jiāo | **2** | 200 / 200 | 100% |
-| | **Total** | **79** | **43** | **78** | **200** | | |
+| Id  | Lesson                            | Core words                                                 | Theme words                                 | Added words                        | Senses |     New | Total so far |    % |
+| --- | --------------------------------- | ---------------------------------------------------------- | ------------------------------------------- | ---------------------------------- | ------ | ------: | -----------: | ---: |
+| sounds-and-symbols | Sounds and Symbols | — | — | — | — | **0** | 0 / 200 | 0% |
+| words-and-sentences | Words and Sentences | shì, zhè, bù | dōngxi, rén, nǚrén, nánrén, dòngwù, zhíwù | — | — | **9** | 9 / 200 | 5% |
+| modifying-nouns | Modifying Nouns | hěn, hǎo, dà, xiǎo, de, duō | shuǐ, dìfāng, fùmǔ | shǎo | — | **10** | 19 / 200 | 10% |
+| pointing | Pointing at People and Things | nà, gè, wǒ, nǐ, tā | jiā, tóu, shǒu, jiǎo | men | — | **10** | 29 / 200 | 14% |
+| who-does-what | Verbs 1 | chī, kàn, tīng, shuō, xiě, yǒu, méi | jīn | hē | — | **9** | 38 / 200 | 19% |
+| questions | Questions and Answers | ma, shénme, wèn, wèishénme, zěnme | gōngjù, hézi, zhǎo | mǎi | — | **9** | 47 / 200 | 24% |
+| pre-verbs | Pre-Verbs | yào, néng, zhīdào, ài | děng, yīfu | xué, kěnéng | — | **8** | 55 / 200 | 28% |
+| when-it-happens | Time 1 | le, zài, huì, shíjiān | shuìjiào, yuè, rì | fā, shēng, xiànzài, guò | — | **11** | 66 / 200 | 33% |
+| around-an-action | Time 2 | wán, hòu, kāishǐ, yī, xià | wánr, liú | yòu, cì | — | **9** | 75 / 200 | 38% |
+| where-it-is | Space 1 | lǐ, nǎlǐ, shàng, miàn, qián, biān, pángbiān | dì | wǎng, zhōng, jiān, zuǒbiān, yòubiān | — | **13** | 88 / 200 | 44% |
+| moving | Space 2 | lái, qù, cóng, qǐ, wài | kǒu | dào, dòng, yuǎn, fùjìn, guó, lù, chē | — | **13** | 101 / 200 | 51% |
+| how-much | Modifiers 1 — How much | zhēn | rè, lěng, tián, qíguài, shēntǐ | wèidào, jiàzhí, kuài, nán, lǎo | — | **11** | 112 / 200 | 56% |
+| comparing | Modifiers 2 — Comparing | bǐ, yīyàng | yìng, yuán, gùnzi, xiàn | zuì, biéde, zhǒng, gāo | — | **10** | 122 / 200 | 61% |
+| also-and-all | Modifiers 3 — Also and all | yě | huǒ | kōng, qì, kāi, guān, dēng, míng, dōu, bùfen | — | **10** | 132 / 200 | 66% |
+| becoming-and-making | Modifiers 4 — Becoming and making | biàn, nòng, dé, bǎ | huài | luàn, fàng, lì | — | **8** | 140 / 200 | 70% |
+| direction-and-result | Verbs 2 | — | — | ná, jìn, chū, huí, zuò, zhàn, tǎng, fēi, yǎnjing, tōng | — | **10** | 150 / 200 | 75% |
+| numbers | Numbers | liǎng, hào | — | èr, sān, sì, wǔ, liù, qī, bā, jiǔ, shí, diǎn, tiān, nián, suàn | — | **15** | 165 / 200 | 83% |
+| colors | Colors | báisè, hēisè, hóngsè, huángsè, lánsè, yánsè | — | — | — | **6** | 171 / 200 | 86% |
+| roles-of-a-word | Changing the Role of a Word | cí, fāngfǎ | bízi | jī, máo | — | **5** | 176 / 200 | 88% |
+| inside-a-sentence | Relationships 1 | gěi, yòng, hé, huòzhě, duì | mō, dǎ, qún | guānxi | — | **9** | 185 / 200 | 93% |
+| linking-sentences | Relationships 2 | yīnwèi, dànshì | sǐ | huó, rúguǒ, jiù | — | **6** | 191 / 200 | 96% |
+| greetings-and-feelings | Greetings and Feelings | jiào, pà, juéde | shēngyīn | xiè, xiào, xīn | — | **7** | 198 / 200 | 99% |
+| doubling-words | Doubling Words | — | — | — | — | **0** | 198 / 200 | 99% |
+| everyday-patterns | Everyday Patterns | — | — | bāng, jiāo | — | **2** | 200 / 200 | 100% |
+| | **Total** | **79** | **43** | **78** | | **200** | | |
 
 **By section:**
 
@@ -603,27 +604,46 @@ The word lists and limits live in `scripts/jargon.js` and `scripts/limits.js`.
 
 For each lesson: ☐ written to template ☐ `npm run check -- <lesson-id>` passes (every gate) ☐ exercises + answers ☐ **user approved** ☐ added to `scripts/finished-lessons.js`
 
-- [ ] L1 Sounds and Symbols — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L2 Words and Sentences — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L3 Modifying Nouns — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L4 Pointing at People and Things — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L5 Verbs — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L6 Questions and Answers — rewritten, passes every gate, on the finished list; **waiting for your review**
+- [ ] L1 Sounds and Symbols
+ — rewritten, passes every gate, on the finished list; **waiting for your review**
+- [ ] L2 Words and Sentences
+ — rewritten, passes every gate, on the finished list; **waiting for your review**
+- [ ] L3 Modifying Nouns
+ — rewritten, passes every gate, on the finished list; **waiting for your review**
+- [ ] L4 Pointing at People and Things
+ — rewritten, passes every gate, on the finished list; **waiting for your review**
+- [ ] L5 Verbs
+ — rewritten, passes every gate, on the finished list; **waiting for your review**
+- [ ] L6 Questions and Answers
+ — rewritten, passes every gate, on the finished list; **waiting for your review**
 - [ ] L7 Pre-Verbs — rewritten, passes every gate, on the finished list; **waiting for your review**
 - [ ] L8 Time 1 — When it happens — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L9 Time 2 — Around an action — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L10 Space 1 — Where it is — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L11 Space 2 — Moving — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L12 Modifiers 1 — How much — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L13 Modifiers 2 — Comparing — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L14 Modifiers 3 — Also and all — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L15 Modifiers 4 — Becoming and making — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L16 Numbers — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L17 Colors — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L18 Changing the Role of a Word — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L19 Relationships 1 — Inside a sentence — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L20 Relationships 2 — Linking sentences — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L21 Greetings and Feelings (takes in the old L22) — rewritten, passes every gate, on the finished list; **waiting for your review**
+- [ ] L9 Time 2 — Around an action
+ — rewritten, passes every gate, on the finished list; **waiting for your review**
+- [ ] L10 Space 1 — Where it is
+ — rewritten, passes every gate, on the finished list; **waiting for your review**
+- [ ] L11 Space 2 — Moving
+ — rewritten, passes every gate, on the finished list; **waiting for your review**
+- [ ] L12 Modifiers 1 — How much
+ — rewritten, passes every gate, on the finished list; **waiting for your review**
+- [ ] L13 Modifiers 2 — Comparing
+ — rewritten, passes every gate, on the finished list; **waiting for your review**
+- [ ] L14 Modifiers 3 — Also and all
+ — rewritten, passes every gate, on the finished list; **waiting for your review**
+- [ ] L15 Modifiers 4 — Becoming and making
+ — rewritten, passes every gate, on the finished list; **waiting for your review**
+- [ ] L16 Numbers
+ — rewritten, passes every gate, on the finished list; **waiting for your review**
+- [ ] L17 Colors
+ — rewritten, passes every gate, on the finished list; **waiting for your review**
+- [ ] L18 Changing the Role of a Word
+ — rewritten, passes every gate, on the finished list; **waiting for your review**
+- [ ] L19 Relationships 1 — Inside a sentence
+ — rewritten, passes every gate, on the finished list; **waiting for your review**
+- [ ] L20 Relationships 2 — Linking sentences
+ — rewritten, passes every gate, on the finished list; **waiting for your review**
+- [ ] L21 Greetings and Feelings (takes in the old L22)
+ — rewritten, passes every gate, on the finished list; **waiting for your review**
 
 ### Phase 3 — Intros and reference
 

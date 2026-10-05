@@ -16,6 +16,7 @@
     "refactor": "node scripts/refactor.js",
     "graph-report": "node scripts/graph-report.js",
     "report-roots": "node scripts/report-roots.js",
+    "plan-4b": "node scripts/generate-plan-4b.js",
     "word-usage": "node scripts/generate-word-usage.js",
     "grammar-overview": "node scripts/generate-grammar-overview.js",
     "check": "node scripts/check-all.js",

@@ -12,7 +12,8 @@
 //   npm run word -- move <id> <lesson/module> [--sense <key>]
 //   npm run word -- remove <id>
 //
-// After --write it rebuilds the data indexes and the dictionary pages; run
+// After --write it rebuilds the data indexes, the dictionary pages and
+// BOOK_PLAN.md §4b; run
 // `npm run check` to see the result.
 
 import { Workspace, applyOps, summary, cards, idSyllables, ROOT } from './refactor-lib.js';
@@ -148,7 +149,7 @@ export function run(ops, { write = false, diff = false, title = '' } = {}) {
   console.log(summary(ws, { diff }));
   if (!write) return;
   ws.write();
-  for (const script of ['build-data.js', 'generate-dictionary.js']) {
+  for (const script of ['build-data.js', 'generate-dictionary.js', 'generate-plan-4b.js']) {
     spawnSync(process.execPath, [`${ROOT}/scripts/${script}`], { stdio: 'inherit' });
   }
   console.log('\nWritten. Now run: npm run check');

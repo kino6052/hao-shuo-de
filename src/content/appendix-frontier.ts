@@ -320,9 +320,9 @@ const content: Entry[] = [
   },
   {
     type: "prose",
-    en: ["## What would push the frontier", "The vocabulary stays at 200 words or fewer, and {{dictionaryCount}} are in use, so a new word has to take an old one's place and earn it: it must say something nothing else can, or shorten many descriptions at once. Each word in the dictionary shows its necessity, from 5 (no sentence without it) to 1 (convenience only). Those numbers show which words hold the language up, and which could make room for a better one."],
+    en: ["## What would push the frontier", "The vocabulary stays small, about 200 words ({{dictionaryCount}} now), so a new word has to earn its place: it must say something nothing else can, or open many words at once. A root that completes many real Chinese words is worth more than a low word count. Each word in the dictionary shows its necessity, from 5 (no sentence without it) to 1 (convenience only). Those numbers show which words hold the language up, and which could make room for a better one."],
     zh: [],
-    ru: ["## Что отодвинуло бы границу", "В словаре не больше 200 слов, и {{dictionaryCount}} уже заняты, поэтому новое слово должно занять место старого и заслужить его: сказать то, чего не скажет ничто другое, или сразу сократить много описаний. У каждого слова в словаре указана его необходимость — от 5 (без него не построить предложение) до 1 (только для удобства). Эти числа показывают, на каких словах держится язык, а какие могли бы уступить место лучшему."],
+    ru: ["## Что отодвинуло бы границу", "Словарь остаётся небольшим, около 200 слов (сейчас {{dictionaryCount}}), поэтому новое слово должно заслужить своё место: сказать то, чего не скажет ничто другое, или открыть сразу много слов. Корень, который достраивает много настоящих китайских слов, ценнее, чем маленькое число слов. У каждого слова в словаре указана его необходимость — от 5 (без него не построить предложение) до 1 (только для удобства). Эти числа показывают, на каких словах держится язык, а какие могли бы уступить место лучшему."],
     tldr: {
       en: ["A new word must say what nothing else can, or shorten many descriptions."],
       zh: [],
