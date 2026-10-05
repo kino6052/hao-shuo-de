@@ -14,6 +14,7 @@
     "check-sounds": "node scripts/check-sounds.js",
     "word": "node scripts/word.js",
     "refactor": "node scripts/refactor.js",
+    "graph-report": "node scripts/graph-report.js",
     "word-usage": "node scripts/generate-word-usage.js",
     "grammar-overview": "node scripts/generate-grammar-overview.js",
     "check": "node scripts/check-all.js",
@@ -29,6 +30,9 @@
     "check-word-builder": "node scripts/check-word-builder.js"
   },
   "dependencies": {
+    "graphology": "^0.26.0",
+    "graphology-communities-louvain": "^2.0.2",
+    "graphology-metrics": "^2.4.2",
     "preact": "^10.25.0"
   },
   "devDependencies": {
