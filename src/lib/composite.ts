@@ -15,13 +15,22 @@ export interface Composite {
   py: string;
   en: string;
   ru: string;
-  /** The Hao-shuo-de forms, most natural first ({{word:id}} references). */
+  /**
+   * The Hao-shuo-de forms, most natural first ({{word:id}} references). When
+   * the first is the colloquial Mandarin compound (míng-tiān), a constructive
+   * one follows it (xià yī-ge rì), so the meaning can always be built up.
+   */
   hsd?: string[];
   /** Each form's hanzi, in the same order. */
   tts?: string[];
   literal?: string;
   fit?: Fit;
   note?: string;
+  /**
+   * The colloquial form is plain enough on its own (wǒ-men: I + plural), so no
+   * constructive form after it is needed (check-book).
+   */
+  transparent?: boolean;
   /** Written or changed by Claude, waiting for the author's review. */
   proposed?: boolean;
 }

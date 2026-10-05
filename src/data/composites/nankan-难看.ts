@@ -7,9 +7,12 @@ export default composite({
   py: "nánkàn",
   en: "ugly",
   ru: "некрасивый",
-  hsd: ["{{word:nan2}}-{{word:kan4}}"],
-  tts: ["难看"],
-  literal: "hard to look at",
+  hsd: [
+    "{{word:nan2}}-{{word:kan4}}",
+    "{{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:bu4}} {{word:hao3}}",
+  ],
+  tts: ["难看", "看起来不好"],
+  literal: "hard to look at / looks not good",
   fit: "natural",
   proposed: true,
 });

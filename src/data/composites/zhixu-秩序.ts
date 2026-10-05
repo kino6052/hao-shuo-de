@@ -11,4 +11,5 @@ export default composite({
   tts: ["不乱"],
   literal: "no mess",
   fit: "natural",
+  transparent: true,
 });

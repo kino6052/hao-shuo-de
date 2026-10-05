@@ -51,7 +51,7 @@ import { wordHanzi } from '../src/lib/hanzi-map.js';
 import dictionaryData from '../src/data/dictionary.ts';
 import compositesData from '../src/data/composites.ts';
 import { wordRefIds, soleWordRef } from '../src/lib/word-refs.js';
-import { senseKey, chainSenses } from '../src/lib/senses.js';
+import { senseKey, chainSenses, refSenses } from '../src/lib/senses.js';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -261,6 +261,25 @@ for (const n of [1, 2, 3]) {
     if (sequences.includes(ids.join(' '))) continue;
     const form = ids.map((id) => dictionary[id].term).join('-');
     errors.push(`composite "${e.zh}": it's made of Hao-shuo-de words, so say it the Mandarin way first: ${form}`);
+  }
+  // A colloquial form (Mandarin's own compound, or a word read in one of its
+  // senses) comes with a constructive one after " / ", so the meaning can be
+  // built up from the core: míng-tiān / xià yī-ge rì. Required from phase 4
+  // on; older entries are counted (--list-colloquial names them).
+  const colloquialOnly = [];
+  for (const e of entries) {
+    if (!e.hsd || e.transparent || !['natural', 'word'].includes(e.fit)) continue;
+    const forms = e.hsd.split(' / ');
+    if (forms.length > 1) continue;
+    const ids = wordRefIds(forms[0]);
+    const usesSense = refSenses(forms[0], dictionary).some((u) => u.sense);
+    if (ids.length < 2 && !usesSense) continue;
+    if (e.phase >= 4) errors.push(`composite "${e.zh}": ${forms[0]} is the colloquial form -- add a constructive one after " / " (or mark it transparent: true)`);
+    else colloquialOnly.push(`${e.zh} ${e.hsd}`);
+  }
+  if (colloquialOnly.length) {
+    console.log(`check-book: ${colloquialOnly.length} older composite(s) give only the colloquial form${process.argv.includes('--list-colloquial') ? ':' : ' (--list-colloquial to name them).'}`);
+    if (process.argv.includes('--list-colloquial')) for (const c of colloquialOnly) console.log(`  ${c}`);
   }
   // Notes are English, but any pinyin in them must be dictionary words too.
   for (const e of entries) {
