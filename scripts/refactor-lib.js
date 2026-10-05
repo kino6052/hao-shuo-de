@@ -556,6 +556,35 @@ function rewriteAll(ws, id, make, { hanziFn, noteSentences = false, label } = {}
   }
 }
 
+// Rewrites plain-pinyin mentions of `term` (outside refs, and not a
+// composite's own Mandarin pinyin) to `to`, capitalized where they were.
+function rewriteMentions(ws, id, term, to) {
+  const esc = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const re = new RegExp(`(^|[^\\p{L}])(${esc})(?![\\p{L}])`, 'giu');
+  const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+  for (const path of ws.files()) {
+    if (path === ws.wordPath(id)) continue;
+    const src = ws.get(path);
+    if (!src.toLowerCase().includes(term.toLowerCase())) continue;
+    let n = 0;
+    const out = src
+      .split('\n')
+      .map((line) => {
+        if (path.startsWith(COMPOSITES_DIR) && /^\s*py:/.test(line)) return line;
+        // leave refs alone: rewrite only the text between them
+        return line
+          .split(/(\{\{[^}]*\}\})/)
+          .map((piece, k) => (k % 2 ? piece : piece.replace(re, (m, pre, word) => (n++, pre + (word[0] === word[0].toUpperCase() ? cap(to) : to)))))
+          .join('');
+      })
+      .join('\n');
+    if (n) {
+      ws.set(path, out);
+      ws.note('mention', `${path}: rewrote ${n} plain "${term}" as "${to}"`);
+    }
+  }
+}
+
 // Notes plain-text mentions of a word's term outside refs, and id strings in code.
 function noteMentions(ws, id, term, why) {
   const forms = [...new Set([term, toneless(term)])].filter((f) => f.length > 2);
@@ -667,10 +696,12 @@ const OPS = {
       if (ws.hasWord(p)) continue;
       const partial = op.words?.[p] ?? {};
       if (!partial.hanzi) {
-        const syl = idSyllables(id);
+        // the old hanzi, one character per syllable, cut at the parts' syllables
         const chars = [...old.hanzi];
-        if (chars.length === into.length && syl.length === into.length) partial.hanzi = chars[into.indexOf(p)];
-        else throw new Error(`split ${id}: give the hanzi of new part ${p} (words.${p}.hanzi)`);
+        const counts = into.map((x) => idSyllables(x).length);
+        if (counts.reduce((a, b) => a + b, 0) !== chars.length) throw new Error(`split ${id}: give the hanzi of new part ${p} (words.${p}.hanzi)`);
+        const at = counts.slice(0, into.indexOf(p)).reduce((a, b) => a + b, 0);
+        partial.hanzi = chars.slice(at, at + counts[into.indexOf(p)]).join('');
       }
       ws.setWord(p, newWordData(p, partial));
       if (!partial.definition || !partial.necessity || !partial.pos) ws.note('todo', `${p}: new word from splitting ${id} -- fill in its definition, part of speech and necessity`);
@@ -723,6 +754,9 @@ const OPS = {
     for (const { path, entry } of ws.composites()) {
       if (entry.zh === old.hanzi && entry.fit === 'word') ws.note('composite', `${path}: ${entry.zh} was the word ${id}; now ${into.join('-')} -- its fit "word" may now be "natural"`);
     }
+    // plain pinyin of the old word becomes the parts' pinyin (dòngwù -> dòng-wù)
+    const newTerm = into.map((p) => (light.has(p) ? toneless(ws.word(p).term) : ws.word(p).term)).join('-');
+    rewriteMentions(ws, id, old.term, newTerm);
     noteMentions(ws, id, old.term, `${id} was split`);
     ws.remove(ws.wordPath(id));
   },

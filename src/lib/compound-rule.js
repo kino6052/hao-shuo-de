@@ -30,6 +30,8 @@ export function compoundSplitter(words) {
   };
 }
 
-// -> the compound's form: {{word:a}}-{{word:b}} (a word written light keeps
-// its light tone, given lightIds).
-export const compoundForm = (ids, lightIds = new Set()) => ids.map((id, i) => `{{${lightIds.has(id) && i > 0 ? 'light' : 'word'}:${id}}}`).join('-');
+// Words said with the light tone after another word in a compound (zhè-ge, nǎ-ge).
+const LIGHT_AFTER = new Set(['ge4']);
+
+// -> the compound's form: {{word:a}}-{{word:b}}, light where Mandarin is.
+export const compoundForm = (ids, lightIds = LIGHT_AFTER) => ids.map((id, i) => `{{${lightIds.has(id) && i > 0 ? 'light' : 'word'}:${id}}}`).join('-');
