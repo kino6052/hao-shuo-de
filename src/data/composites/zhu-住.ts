@@ -13,4 +13,18 @@ export default composite({
   literal: "X's home is at",
   fit: "plain",
   note: "wǒ-de jiā zài nà-lǐ.",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:zai4}} {{word:na4}}-{{word:li3}}.",
+      hanzi: "我的家在那里。",
+      en: "I live there.",
+      ru: "Я живу там.",
+    },
+    {
+      pinyin: "{{Word:ni3}}-{{word:de}} {{word:jia1}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
+      hanzi: "你的家在哪里？",
+      en: "Where do you live?",
+      ru: "Где ты живёшь?",
+    },
+  ],
 });

@@ -13,4 +13,18 @@ export default composite({
   literal: "big learning",
   fit: "natural",
   note: "A real word: dà + xué.",
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:zai4}} {{word:da4}}-{{word:xue2}} {{word:xue2}}.",
+      hanzi: "他在大学学。",
+      en: "He studies at university.",
+      ru: "Он учится в университете.",
+    },
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:da4}}-{{word:xue2}} {{word:hen3}} {{word:yuan3}}.",
+      hanzi: "我的大学很远。",
+      en: "My university is far away.",
+      ru: "Мой университет далеко.",
+    },
+  ],
 });

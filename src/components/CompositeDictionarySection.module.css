@@ -131,6 +131,26 @@
   font-size: 13px;
 }
 
+.examples {
+  list-style: none;
+  margin: 2px 0 0;
+  padding: 0 0 0 14px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.exPinyin { font-weight: 600; }
+
+.exHanzi {
+  margin: 0 8px 0 4px;
+  color: var(--text-body);
+}
+
+.exGloss {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
 .letter {
   font-family: var(--font-heading);
   font-size: 22px;

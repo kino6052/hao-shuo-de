@@ -13,5 +13,18 @@ export default composite({
   literal: "after X",
   fit: "natural",
   note: "Lesson {{lesson:around-an-action}}.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:yi3}}-{{word:hou4}} {{word:wo3}} {{word:xiang3}} {{word:qu4}} \"Zhōngguó\".",
+      hanzi: "以后我想去中国。",
+      en: "Later I'd like to go to China.",
+      ru: "Потом я хочу поехать в Китай.",
+    },
+    {
+      pinyin: "{{Word:xue2}}-{{word:wan2}} {{word:hou4}}, {{word:wo3}} {{word:hui2}} {{word:jia1}}.",
+      hanzi: "学完后，我回家。",
+      en: "After studying, I go home.",
+      ru: "После учёбы я иду домой.",
+    },
+  ],
 });

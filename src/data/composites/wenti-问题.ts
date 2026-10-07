@@ -8,9 +8,22 @@ export default composite({
   en: "question; problem",
   ru: "вопрос; проблема",
   pos: "noun",
-  hsd: ["{{word:wen4}}-{{word:ti2}}", "{{word:wen4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["问题", "问的东西"],
-  literal: "thing you ask",
+  hsd: ["{{word:wen4}}-{{word:ti2}}"],
+  tts: ["问题"],
   fit: "natural",
-  proposed: true,
+  transparent: true,
+  examples: [
+    {
+      pinyin: "{{Word:ni3}} {{word:you3}} {{word:wen4}}-{{word:ti2}} {{word:ma}}?",
+      hanzi: "你有问题吗？",
+      en: "Do you have any questions?",
+      ru: "У тебя есть вопросы?",
+    },
+    {
+      pinyin: "{{Word:mei2}}-{{word:you3}} {{word:wen4}}-{{word:ti2}}!",
+      hanzi: "没有问题！",
+      en: "No problem!",
+      ru: "Без проблем!",
+    },
+  ],
 });

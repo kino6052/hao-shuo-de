@@ -8,11 +8,22 @@ export default composite({
   en: "company",
   ru: "компания",
   pos: "noun",
-  hsd: [
-    "{{word:yi1}}-{{word:qi3}}-{{word:gong1}}-{{word:zuo4}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
-  ],
-  tts: ["一起工作的地方"],
+  hsd: ["{{word:gong1}}-{{word:zuo4}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
+  tts: ["工作的地方"],
+  literal: "the place where you work",
   fit: "plain",
-  literal: "where people work together",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:gong1}}-{{word:zuo4}}-{{word:de}} {{word:di4}}-{{light:fang1}} {{word:hen3}} {{word:yuan3}}.",
+      hanzi: "我的工作的地方很远。",
+      en: "My company is far away.",
+      ru: "Моя компания далеко.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:zai4}} {{word:gong1}}-{{word:zuo4}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",
+      hanzi: "他在工作的地方。",
+      en: "He's at work.",
+      ru: "Он на работе.",
+    },
+  ],
 });

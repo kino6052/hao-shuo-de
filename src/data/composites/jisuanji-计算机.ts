@@ -8,9 +8,22 @@ export default composite({
   en: "computer",
   ru: "компьютер",
   pos: "noun",
-  hsd: ["{{word:zhi1dao4}}-{{word:hen3}}-{{word:duo1}}-{{word:de}} {{word:gong1}}-{{word:ju4}}"],
-  tts: ["知道很多的工具"],
-  literal: "a tool that knows a lot",
+  hsd: ["{{word:suan4}}-{{word:de}} {{word:ji1}}"],
+  tts: ["算的机"],
+  literal: "the calculating machine",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:suan4}}-{{word:de}} {{word:ji1}} {{word:hen3}} {{word:kuai4}}.",
+      hanzi: "这个算的机很快。",
+      en: "This computer is fast.",
+      ru: "Этот компьютер быстрый.",
+    },
+    {
+      pinyin: "{{Word:wo3}}-{{word:men}} {{word:yong4}} {{word:suan4}}-{{word:de}} {{word:ji1}} {{word:xue2}}.",
+      hanzi: "我们用算的机学。",
+      en: "We study with computers.",
+      ru: "Мы учимся с помощью компьютеров.",
+    },
+  ],
 });

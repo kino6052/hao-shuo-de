@@ -11,6 +11,11 @@
 //                        (dōng-{{light:xi1}} -> dōng-xi, "thing", where
 //                        dōng-xī would be "east and west"). Still a use of
 //                        the word. {{Light:ID}} capitalizes.
+//   {{word:ID#SENSE}} -- (any kind) a use of one of the word's senses on
+//                        its own, outside its listed compounds: xīn is 心
+//                        (heart), but {{word:xin1#new}} is 新 (new). Only a
+//                        sense marked `alone` may be used so (check-sounds).
+//                        Written like the plain ref.
 //   {{dictionaryCount}} -- the CURRENT total word count of the dictionary,
 //                        so prose stating "N words" never drifts out of
 //                        sync as words are added or removed.
@@ -31,7 +36,7 @@
 
 import { LESSON_NUMBERS } from '../content/book.js';
 
-const WORD_REF_SOURCE = String.raw`\{\{(word|Word|light|Light):([a-z0-9_-]+)\}\}`;
+const WORD_REF_SOURCE = String.raw`\{\{(word|Word|light|Light):([a-z0-9_-]+)(?:#([a-z]+))?\}\}`;
 const COUNT_REF_RE = /\{\{dictionaryCount\}\}/g;
 const LESSON_REF_RE = /\{\{lesson:([a-z0-9-]+)\}\}/g;
 const TITLE_RE = /\{\{title:([a-z0-9-]+)\}\}/g;
@@ -53,8 +58,8 @@ export function resolveLessonRefs(text, chapterTitles) {
 }
 
 // -> a fresh global regex over word refs: match[1] the kind (word, Word,
-// light, Light), match[2] the id. Fresh each call, since a /g regex keeps
-// state between uses.
+// light, Light), match[2] the id, match[3] the sense it names, if any.
+// Fresh each call, since a /g regex keeps state between uses.
 export const wordRefRe = () => new RegExp(WORD_REF_SOURCE, 'g');
 
 // -> the ids of every word ref in text, in order, repeats kept.

@@ -12,5 +12,18 @@ export default composite({
   tts: ["冬天", "冷的时间"],
   literal: "cold time",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:dong1}}-{{word:tian1}} {{word:hen3}} {{word:leng3}}.",
+      hanzi: "冬天很冷。",
+      en: "Winter is cold.",
+      ru: "Зимой холодно.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:ai4}} {{word:dong1}}-{{word:tian1}}.",
+      hanzi: "我爱冬天。",
+      en: "I love winter.",
+      ru: "Я люблю зиму.",
+    },
+  ],
 });

@@ -2,6 +2,7 @@ import { describe, expect, test } from 'bun:test';
 import { compositeHeads, headCounts, headHanzi } from './heads.js';
 import { naturalness, coreHanzi } from './naturalness.js';
 import { analyzeFamilies, categoryFit, wordCategories } from './graph.js';
+import { wordRefIds } from './word-refs.js';
 import dictionary from '../data/dictionary.ts';
 import composites from '../data/composites.ts';
 import coverage from '../data/coverage.ts';
@@ -107,8 +108,8 @@ describe('families (the real vocabulary)', () => {
     expect(categoryFit(dictionary, a.parts).purity).toBeGreaterThan(0.9);
   });
 
-  test('every composite with a form has a head and a family (names in quotes have none)', () => {
-    const formed = composites.entries.filter((x) => x.hsd && x.fit !== 'name');
+  test('every composite with a form has a head and a family (names and sounds in quotes have none)', () => {
+    const formed = composites.entries.filter((x) => x.hsd && x.fit !== 'name' && wordRefIds(x.hsd).length);
     expect(formed.every((x) => a.heads.has(x.zh))).toBe(true);
     expect(formed.filter((x) => !a.compositeFamily.has(x.zh)).length).toBe(0);
   });

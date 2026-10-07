@@ -1608,10 +1608,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "a longer description-{{word:de}} + noun: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4}}-{{word:wu4}} (an animal in the water), {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (fruit)"
+            "a longer description-{{word:de}} + noun: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4}}-{{word:wu4}} (an animal in the water), {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (an egg)"
           ],
           "ru": [
-            "более длинное описание-{{word:de}} + существительное: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4}}-{{word:wu4}} (животное в воде), {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (фрукт)"
+            "более длинное описание-{{word:de}} + существительное: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4}}-{{word:wu4}} (животное в воде), {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (яйцо)"
           ],
           "zh": []
         }
@@ -1884,10 +1884,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:ting1}}-{{word:dao4}} + {{word:sheng1yin1}}, hear a sound: {{Word:wo3}} {{word:ting1}}-{{word:dao4}} {{word:qi2guai4}}-{{word:de}} {{word:sheng1yin1}}. (I hear a strange sound.)"
+            "{{word:ting1}}-{{word:dao4}} + {{word:sheng1yin1}}, hear a sound: {{Word:wo3}} {{word:ting1}}-{{word:dao4}} {{word:yi3}}-{{word:qian2}}-{{word:mei2}}-{{word:ting1}}-{{word:guo4}}-{{word:de}} {{word:sheng1yin1}}. (I hear a sound I've never heard before.)"
           ],
           "ru": [
-            "{{word:ting1}}-{{word:dao4}} + {{word:sheng1yin1}} — слышать звук: {{Word:wo3}} {{word:ting1}}-{{word:dao4}} {{word:qi2guai4}}-{{word:de}} {{word:sheng1yin1}}. (Я слышу странный звук.)"
+            "{{word:ting1}}-{{word:dao4}} + {{word:sheng1yin1}} — слышать звук: {{Word:wo3}} {{word:ting1}}-{{word:dao4}} {{word:yi3}}-{{word:qian2}}-{{word:mei2}}-{{word:ting1}}-{{word:guo4}}-{{word:de}} {{word:sheng1yin1}}. (Я слышу звук, которого раньше не слышал.)"
           ],
           "zh": []
         }

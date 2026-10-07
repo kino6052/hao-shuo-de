@@ -12,5 +12,18 @@ export default composite({
   tts: ["生活", "活"],
   literal: "be born, live",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:sheng1}}-{{word:huo2}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "我的生活很好。",
+      en: "My life is good.",
+      ru: "У меня хорошая жизнь.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:zai4}} \"Zhōngguó\" {{word:sheng1}}-{{word:huo2}}.",
+      hanzi: "他在中国生活。",
+      en: "He lives in China.",
+      ru: "Он живёт в Китае.",
+    },
+  ],
 });

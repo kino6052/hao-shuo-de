@@ -1,8 +1,9 @@
 // The composite review, served by the dev server only (`npm run dev`, then
 // /__review/?batch=1). The composites are reviewed by hand in batches of 100
-// by rank: Claude's proposals for a batch are review/proposals/batch-<n>.mjs,
-// the page (review/page.html) shows each entry's current forms and the
-// proposal with how close each is to Mandarin, and every decision the author
+// by rank: Claude's proposals for a batch are review/proposals/batch-<n>.mjs
+// and its example sentences review/examples/batch-<n>.mjs; the page
+// (review/page.html) shows each entry's current forms, the proposal with how
+// close each is to Mandarin, and the examples; every decision the author
 // makes is written at once to review/decisions/batch-<n>.json, which Claude
 // reads to apply the batch.
 //
@@ -45,8 +46,10 @@ async function batchData(server, n) {
   const idx = buildWordIndex(dictionary);
   const words = dictionary.words;
   const { heads } = compositeHeads(dictionary, composites.entries);
-  const propFile = resolve(DIR, 'proposals', `batch-${n}.mjs`);
-  const proposals = existsSync(propFile) ? (await import(`${pathToFileURL(propFile).href}?t=${Date.now()}`)).default : {};
+  const fresh = async (file) => (existsSync(file) ? (await import(`${pathToFileURL(file).href}?t=${Date.now()}`)).default : {});
+  const proposals = await fresh(resolve(DIR, 'proposals', `batch-${n}.mjs`));
+  // example sentences waiting to go in (plain pinyin), for entries without any yet
+  const exampleDrafts = await fresh(resolve(DIR, 'examples', `batch-${n}.mjs`));
   const py = (f) => resolveWordRefs(f, idx);
   const from = (n - 1) * BATCH_SIZE + 1;
   const to = n * BATCH_SIZE;
@@ -60,7 +63,13 @@ async function batchData(server, n) {
       const prop = p
         ? { forms: p.hsd.map(py), tts: p.tts, why: p.why, score: naturalness({ ...e, hsd: p.hsd.join(' / '), tts: p.tts.join(' / ') }, headHanzi(h, words)) }
         : null;
-      return { rank: e.rank, zh: e.zh, py: e.py, en: e.en, ru: e.ru, now, prop };
+      const drafts = exampleDrafts[e.zh];
+      const examples = e.examples?.length
+        ? { proposed: false, list: e.examples.map((x) => ({ pinyin: py(x.pinyin), hanzi: x.hanzi, en: x.en })) }
+        : drafts
+          ? { proposed: true, list: drafts.map(([pinyin, hanzi, en]) => ({ pinyin: py(pinyin), hanzi, en })) }
+          : null;
+      return { rank: e.rank, zh: e.zh, py: e.py, en: e.en, ru: e.ru, now, prop, examples };
     });
   return {
     n,

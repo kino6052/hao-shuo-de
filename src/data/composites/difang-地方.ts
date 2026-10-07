@@ -13,5 +13,18 @@ export default composite({
   fit: "natural",
   transparent: true,
   role: "noun",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:di4}}-{{light:fang1}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "这个地方很好。",
+      en: "This place is nice.",
+      ru: "Это хорошее место.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:zai4}} {{word:shen2me}} {{word:di4}}-{{light:fang1}}?",
+      hanzi: "你在什么地方？",
+      en: "Where are you?",
+      ru: "Где ты?",
+    },
+  ],
 });

@@ -8,9 +8,22 @@ export default composite({
   en: "new",
   ru: "новый",
   pos: "adjective",
-  hsd: ["{{word:tou2}}-{{word:yi1}}-{{word:ci4}} {{word:kan4}}-{{word:dao4}}-{{word:de}}"],
-  tts: ["头一次看到的"],
-  literal: "seen for the first time",
-  fit: "plain",
-  note: "Lesson {{lesson:greetings-and-feelings}}: tóu-yī-cì tīng-dào-de cí, a new word.",
+  hsd: ["{{word:xin1#new}}"],
+  tts: ["新"],
+  fit: "word",
+  note: "xīn on its own: the heart as a thing, new when it describes one.",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:mai3}} {{word:le}} {{word:xin1#new}} {{word:yi1fu}}.",
+      hanzi: "我买了新衣服。",
+      en: "I bought new clothes.",
+      ru: "Я купил новую одежду.",
+    },
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:shou3}}-{{word:ji1}} {{word:shi4}} {{word:xin1#new}}-{{word:de}}.",
+      hanzi: "这个手机是新的。",
+      en: "This phone is new.",
+      ru: "Этот телефон новый.",
+    },
+  ],
 });

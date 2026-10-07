@@ -15,6 +15,11 @@ export default lessonModule({
       en: "machine",
       ru: "машина, механизм",
     },
+    {
+      word: "guo3",
+      en: "fruit; {{word:shui3}}-{{word:guo3}}: fruit to eat",
+      ru: "плод; {{word:shui3}}-{{word:guo3}} — фрукты",
+    },
   ],
   prose: {
     en: [
@@ -23,7 +28,7 @@ export default lessonModule({
       "**description-{{word:de}} + noun**",
       "",
       "You already know this -{{word:de}}: {{word:hao3}}-{{word:de}} {{word:ren2}} (Lesson {{lesson:modifying-nouns}}), {{word:wo3}}-{{word:de}} {{word:bi2zi}} (Lesson {{lesson:pointing}}). The description can be as long as you need.",
-      "Everyday things are named this way too. {{word:sheng1}} means give birth: {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (what a plant gives birth to) is fruit, and {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (what a flying animal gives birth to) is an egg. Some names are just two words: {{word:shou3}}-{{word:ji1}} (hand machine) is a phone, and {{word:fei1}}-{{word:ji1}} (flying machine) is a plane.",
+      "Everyday things are named this way too. {{word:sheng1}} means give birth: {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (what a flying animal gives birth to) is an egg. Some names are just two words: {{word:shou3}}-{{word:ji1}} (hand machine) is a phone, {{word:fei1}}-{{word:ji1}} (flying machine) is a plane, and {{word:shui3}}-{{word:guo3}} (water fruit) is fruit.",
     ],
     ru: [
       "**Чтобы назвать то, для чего нет слова**, опишите это, а потом добавьте -{{word:de}} и существительное.",
@@ -31,7 +36,7 @@ export default lessonModule({
       "**описание-{{word:de}} + существительное**",
       "",
       "Это -{{word:de}} вы уже знаете: {{word:hao3}}-{{word:de}} {{word:ren2}} (урок {{lesson:modifying-nouns}}), {{word:wo3}}-{{word:de}} {{word:bi2zi}} (урок {{lesson:pointing}}). Описание может быть сколь угодно длинным.",
-      "Так называют и обычные вещи. {{word:sheng1}} значит «рожать»: {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (то, что рождает растение) — фрукт, а {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (то, что рождает летающее животное) — яйцо. Некоторые названия — просто два слова: {{word:shou3}}-{{word:ji1}} («ручная машина») — телефон, а {{word:fei1}}-{{word:ji1}} («летающая машина») — самолёт.",
+      "Так называют и обычные вещи. {{word:sheng1}} значит «рожать»: {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (то, что рождает летающее животное) — яйцо. Некоторые названия — просто два слова: {{word:shou3}}-{{word:ji1}} («ручная машина») — телефон, {{word:fei1}}-{{word:ji1}} («летающая машина») — самолёт, а {{word:shui3}}-{{word:guo3}} («водяной плод») — фрукты.",
     ],
     tldr: {
       en: "description-{{word:de}} + noun: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4}}-{{word:wu4}}, an animal in the water.",
@@ -43,8 +48,8 @@ export default lessonModule({
     },
   },
   info: {
-    en: "a longer description-{{word:de}} + noun: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4}}-{{word:wu4}} (an animal in the water), {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (fruit)",
-    ru: "более длинное описание-{{word:de}} + существительное: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4}}-{{word:wu4}} (животное в воде), {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (фрукт)",
+    en: "a longer description-{{word:de}} + noun: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4}}-{{word:wu4}} (an animal in the water), {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (an egg)",
+    ru: "более длинное описание-{{word:de}} + существительное: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4}}-{{word:wu4}} (животное в воде), {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (яйцо)",
   },
   examples: [
     {
@@ -72,8 +77,8 @@ export default lessonModule({
       ru: "Мой телефон дома.",
     },
     {
-      pinyin: "{{Word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:hen3}} {{word:tian2}}.",
-      hanzi: "植物生的东西很甜。",
+      pinyin: "{{Word:shui3}}-{{word:guo3}} {{word:hen3}} {{word:tian2}}.",
+      hanzi: "水果很甜。",
       en: "Fruit is sweet.",
       ru: "Фрукты сладкие.",
     },
@@ -112,8 +117,8 @@ export default lessonModule({
     {
       en: "I want fruit.",
       ru: "Я хочу фруктов.",
-      answer: "{{Word:wo3}} {{word:yao4}} {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
-      hanzi: "我要植物生的东西。",
+      answer: "{{Word:wo3}} {{word:yao4}} {{word:shui3}}-{{word:guo3}}.",
+      hanzi: "我要水果。",
     },
     {
       en: "This is a valuable thing.",

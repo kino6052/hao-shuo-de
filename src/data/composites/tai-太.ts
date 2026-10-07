@@ -12,4 +12,18 @@ export default composite({
   tts: ["真"],
   fit: "plain",
   note: "There's no word for \"too\" (§4d).",
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:zhen1}} {{word:da4}}!",
+      hanzi: "这个真大！",
+      en: "This is so big!",
+      ru: "Это такое большое!",
+    },
+    {
+      pinyin: "{{Word:jin1}}-{{word:tian1}} {{word:zhen1}} {{word:re4}}.",
+      hanzi: "今天真热。",
+      en: "It's so hot today.",
+      ru: "Сегодня так жарко.",
+    },
+  ],
 });

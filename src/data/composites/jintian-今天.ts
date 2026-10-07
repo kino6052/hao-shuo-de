@@ -13,5 +13,18 @@ export default composite({
   literal: "the day of now",
   fit: "natural",
   note: "Understood, but not how people say it.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:jin1}}-{{word:tian1}} {{word:wo3}} {{word:bu4}} {{word:qu4}}.",
+      hanzi: "今天我不去。",
+      en: "I'm not going today.",
+      ru: "Сегодня я не пойду.",
+    },
+    {
+      pinyin: "{{Word:jin1}}-{{word:tian1}} {{word:tian1}}-{{word:qi4}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "今天天气很好。",
+      en: "The weather is nice today.",
+      ru: "Сегодня хорошая погода.",
+    },
+  ],
 });

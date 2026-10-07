@@ -9,9 +9,23 @@ export default composite({
   ru: "библиотека",
   pos: "noun",
   hsd: [
-    "{{word:fang4}}-{{word:xie3}}-{{word:de}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
+    "{{word:you3}}-{{word:hen3}}-{{word:duo1}}-{{word:de}}-{{word:shu1}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
   ],
-  tts: ["放写的东西的地方"],
-  literal: "place that keeps written things",
+  tts: ["有很多的书的地方"],
+  literal: "the place with many books",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:qu4}} {{word:you3}}-{{word:hen3}}-{{word:duo1}}-{{word:de}}-{{word:shu1}}-{{word:de}} {{word:di4}}-{{light:fang1}} {{word:kan4}} {{word:shu1}}.",
+      hanzi: "我去有很多的书的地方看书。",
+      en: "I go to the library to read.",
+      ru: "Я хожу в библиотеку читать.",
+    },
+    {
+      pinyin: "{{Word:you3}}-{{word:hen3}}-{{word:duo1}}-{{word:de}}-{{word:shu1}}-{{word:de}} {{word:di4}}-{{light:fang1}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
+      hanzi: "有很多的书的地方在哪里？",
+      en: "Where's the library?",
+      ru: "Где библиотека?",
+    },
+  ],
 });

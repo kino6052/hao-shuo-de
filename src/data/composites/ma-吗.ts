@@ -11,4 +11,18 @@ export default composite({
   hsd: ["{{word:ma}}"],
   tts: ["吗"],
   fit: "word",
+  examples: [
+    {
+      pinyin: "{{Word:ni3}} {{word:hao3}} {{word:ma}}?",
+      hanzi: "你好吗？",
+      en: "How are you?",
+      ru: "Как дела?",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:yao4}} {{word:he1}} {{word:shui3}} {{word:ma}}?",
+      hanzi: "你要喝水吗？",
+      en: "Do you want some water?",
+      ru: "Хочешь воды?",
+    },
+  ],
 });

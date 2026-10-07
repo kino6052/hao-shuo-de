@@ -8,8 +8,22 @@ export default composite({
   en: "Chinese (language)",
   ru: "китайский язык",
   pos: "noun",
-  hsd: ["\"Zhōngguó\"-{{word:de}} {{word:shuo1}}-{{word:de}}"],
-  tts: ["中国的说的"],
-  literal: "China's spoken",
-  fit: "plain",
+  hsd: ["\"Zhōngguó\" {{word:hua4}}"],
+  tts: ["中国话"],
+  literal: "China speech",
+  fit: "natural",
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:xue2}} \"Zhōngguó\" {{word:hua4}} {{word:san1}} {{word:nian2}} {{word:le}}.",
+      hanzi: "他学中国话三年了。",
+      en: "He's been learning Chinese for three years.",
+      ru: "Он учит китайский три года.",
+    },
+    {
+      pinyin: "\"Zhōngguó\" {{word:hua4}} {{word:bu4}} {{word:nan2}}.",
+      hanzi: "中国话不难。",
+      en: "Chinese isn't hard.",
+      ru: "Китайский несложный.",
+    },
+  ],
 });

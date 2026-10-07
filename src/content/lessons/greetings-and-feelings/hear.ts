@@ -32,15 +32,15 @@ export default lessonModule({
     },
   },
   info: {
-    en: "{{word:ting1}}-{{word:dao4}} + {{word:sheng1yin1}}, hear a sound: {{Word:wo3}} {{word:ting1}}-{{word:dao4}} {{word:qi2guai4}}-{{word:de}} {{word:sheng1yin1}}. (I hear a strange sound.)",
-    ru: "{{word:ting1}}-{{word:dao4}} + {{word:sheng1yin1}} — слышать звук: {{Word:wo3}} {{word:ting1}}-{{word:dao4}} {{word:qi2guai4}}-{{word:de}} {{word:sheng1yin1}}. (Я слышу странный звук.)",
+    en: "{{word:ting1}}-{{word:dao4}} + {{word:sheng1yin1}}, hear a sound: {{Word:wo3}} {{word:ting1}}-{{word:dao4}} {{word:yi3}}-{{word:qian2}}-{{word:mei2}}-{{word:ting1}}-{{word:guo4}}-{{word:de}} {{word:sheng1yin1}}. (I hear a sound I've never heard before.)",
+    ru: "{{word:ting1}}-{{word:dao4}} + {{word:sheng1yin1}} — слышать звук: {{Word:wo3}} {{word:ting1}}-{{word:dao4}} {{word:yi3}}-{{word:qian2}}-{{word:mei2}}-{{word:ting1}}-{{word:guo4}}-{{word:de}} {{word:sheng1yin1}}. (Я слышу звук, которого раньше не слышал.)",
   },
   examples: [
     {
-      pinyin: "{{Word:wo3}} {{word:ting1}}-{{word:dao4}} {{word:qi2guai4}}-{{word:de}} {{word:sheng1yin1}}.",
-      hanzi: "我听到奇怪的声音。",
-      en: "I hear a strange sound.",
-      ru: "Я слышу странный звук.",
+      pinyin: "{{Word:wo3}} {{word:ting1}}-{{word:dao4}} {{word:yi3}}-{{word:qian2}}-{{word:mei2}}-{{word:ting1}}-{{word:guo4}}-{{word:de}} {{word:sheng1yin1}}.",
+      hanzi: "我听到以前没听过的声音。",
+      en: "I hear a sound I've never heard before.",
+      ru: "Я слышу звук, которого раньше не слышал.",
     },
     {
       pinyin: "{{Word:ni3}}-{{word:de}} {{word:sheng1yin1}} {{word:hen3}} {{word:hao3}}.",

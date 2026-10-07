@@ -27,8 +27,9 @@ export interface Necessity {
 /**
  * A catch-all word's other sense: the same toned sound written with other
  * hanzi, used only inside the listed compounds ("shi2 jian1" is shí-jiān).
- * On its own the word always has its main sense. A lesson teaches at most one
- * sense of a word, on a card that names the sense.
+ * On its own the word has its main sense, unless the sense is marked `alone`
+ * and the ref names it. A lesson teaches at most one sense of a word, on a
+ * card that names the sense.
  */
 export interface Sense {
   hanzi: string;
@@ -38,6 +39,12 @@ export interface Sense {
   why: { eng: string; rus: string };
   /** Word-id chains, space-separated, e.g. "shi2 jian1". */
   compounds: string[];
+  /**
+   * The sense may also stand on its own where the main sense can't be meant
+   * (xīn 心 is a thing, xīn 新 describes one), written with a ref that names
+   * it: {{word:xin1#new}}. The `why` says how to tell them apart.
+   */
+  alone?: boolean;
 }
 
 export interface WordData {

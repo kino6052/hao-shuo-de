@@ -8,10 +8,22 @@ export default composite({
   en: "paper",
   ru: "бумага",
   pos: "noun",
-  hsd: [
-    "{{word:bang1}}-{{word:ren2}}-{{word:zai4}}-{{word:shang4}}-{{word:mian4}}-{{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
-  ],
-  tts: ["帮人在上面写的东西"],
-  literal: "the thing that helps people write on it",
+  hsd: ["{{word:xie3}}-{{word:de}} {{word:mian4}}r"],
+  tts: ["写的面儿"],
+  literal: "the surface you write on",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:gei3}} {{word:wo3}} {{word:yi1}}-{{light:ge4}} {{word:xie3}}-{{word:de}} {{word:mian4}}r.",
+      hanzi: "给我一个写的面儿。",
+      en: "Give me a sheet of paper.",
+      ru: "Дай мне лист бумаги.",
+    },
+    {
+      pinyin: "{{Word:xie3}}-{{word:de}} {{word:mian4}}r-{{word:shang4}} {{word:you3}} {{word:zi4}}.",
+      hanzi: "写的面儿上有字。",
+      en: "There's writing on the paper.",
+      ru: "На бумаге что-то написано.",
+    },
+  ],
 });

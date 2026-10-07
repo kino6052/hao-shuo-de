@@ -16,5 +16,18 @@ export default composite({
   tts: ["X把Y变", "X对Y好", "X对Y不好"],
   literal: "X changes Y / X is good for Y / X is bad for Y",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:shui3}} {{word:dui4}} {{word:shen1ti3}} {{word:hao3}}.",
+      hanzi: "水对身体好。",
+      en: "Water is good for the body.",
+      ru: "Вода полезна для тела.",
+    },
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:dong1}}-{{light:xi1}} {{word:ba3}} {{word:ta1}} {{word:bian4}} {{word:le}}.",
+      hanzi: "这个东西把他变了。",
+      en: "This changed him.",
+      ru: "Это изменило его.",
+    },
+  ],
 });

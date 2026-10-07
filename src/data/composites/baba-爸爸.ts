@@ -8,12 +8,21 @@ export default composite({
   en: "dad",
   ru: "папа",
   pos: "noun",
-  hsd: [
-    "{{word:ba4ba}}",
-    "{{word:ba4ba}}-{{word:ma1ma}}-{{word:li3}}-{{word:de}} {{word:nan2}}-{{word:ren2}}",
-  ],
-  tts: ["爸爸", "爸爸妈妈里的男人"],
-  literal: "the man of the parents",
+  hsd: ["{{word:ba4ba}}"],
+  tts: ["爸爸"],
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:ba4ba}} {{word:hen3}} {{word:gao1}}.",
+      hanzi: "我爸爸很高。",
+      en: "My dad is tall.",
+      ru: "Мой папа высокий.",
+    },
+    {
+      pinyin: "{{Word:ba4ba}} {{word:qu4}} {{word:gong1}}-{{word:zuo4}} {{word:le}}.",
+      hanzi: "爸爸去工作了。",
+      en: "Dad went to work.",
+      ru: "Папа ушёл на работу.",
+    },
+  ],
 });

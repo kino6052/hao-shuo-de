@@ -49,10 +49,10 @@ export default lessonModule({
       ru: "Правда жарко!",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:zhen1}} {{word:qi2guai4}}.",
-      hanzi: "她真奇怪。",
-      en: "She's really strange.",
-      ru: "Она правда странная.",
+      pinyin: "{{Word:ta1}} {{word:zhen1}} {{word:hao3}}.",
+      hanzi: "她真好。",
+      en: "She's really nice.",
+      ru: "Она правда хорошая.",
     },
     {
       pinyin: "{{Word:zhe4}}-ge {{word:zhen1}} {{word:tian2}}!",
@@ -99,10 +99,10 @@ export default lessonModule({
       hanzi: "水真热。",
     },
     {
-      en: "That person is really strange.",
-      ru: "Тот человек правда странный.",
-      answer: "{{Word:na4}}-ge {{word:ren2}} {{word:zhen1}} {{word:qi2guai4}}.",
-      hanzi: "那个人真奇怪。",
+      en: "That person is really fast.",
+      ru: "Тот человек правда быстрый.",
+      answer: "{{Word:na4}}-ge {{word:ren2}} {{word:zhen1}} {{word:kuai4}}.",
+      hanzi: "那个人真快。",
     },
     {
       en: "You're really fast!",

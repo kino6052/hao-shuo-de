@@ -12,5 +12,18 @@ export default composite({
   tts: ["女孩子"],
   literal: "girl (said of your daughter)",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:nv3}}-{{word:hai2}}-{{word:zi}} {{word:hen3}} {{word:ke3}}-{{word:ai4}}.",
+      hanzi: "我的女孩子很可爱。",
+      en: "My daughter is cute.",
+      ru: "Моя дочка милая.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:you3}} {{word:liang3}}-{{light:ge4}} {{word:nv3}}-{{word:hai2}}-{{word:zi}}.",
+      hanzi: "她有两个女孩子。",
+      en: "She has two daughters.",
+      ru: "У неё две дочери.",
+    },
+  ],
 });

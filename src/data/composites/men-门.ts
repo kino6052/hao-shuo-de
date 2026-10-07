@@ -8,8 +8,21 @@ export default composite({
   en: "door",
   ru: "дверь",
   pos: "noun",
-  hsd: ["{{word:men2}}", "{{word:kou3}}"],
-  tts: ["门", "口"],
+  hsd: ["{{word:men2}}"],
+  tts: ["门"],
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:men2}} {{word:kai1}} {{word:le}}.",
+      hanzi: "门开了。",
+      en: "The door opened.",
+      ru: "Дверь открылась.",
+    },
+    {
+      pinyin: "{{Word:ba3}} {{word:men2}} {{word:guan1}} {{word:le}}.",
+      hanzi: "把门关了。",
+      en: "Close the door.",
+      ru: "Закрой дверь.",
+    },
+  ],
 });

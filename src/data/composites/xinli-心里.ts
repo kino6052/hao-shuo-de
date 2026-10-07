@@ -13,5 +13,18 @@ export default composite({
   literal: "in the heart",
   fit: "natural",
   note: "wǒ jué-de …: in my heart, I feel …",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:xin1}}-{{word:li3}} {{word:hen3}} {{word:kai1}}-{{word:xin1}}.",
+      hanzi: "我心里很开心。",
+      en: "I'm happy inside.",
+      ru: "На душе у меня радостно.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:xin1}}-{{word:li3}} {{word:you3}} {{word:ni3}}.",
+      hanzi: "他心里有你。",
+      en: "He has you in his heart.",
+      ru: "Ты в его сердце.",
+    },
+  ],
 });

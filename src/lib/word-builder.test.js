@@ -102,7 +102,7 @@ describe("render: verbs", () => {
   });
 
   test("a longer describing word is not doubled", () => {
-    expect(render(node("shuo1", { way: word(node("qi2guai4")) }), py)).toBe("qíguài-de shuō");
+    expect(render(node("shuo1", { way: word(node("gan1jing4")) }), py)).toBe("gānjìng-de shuō");
   });
 
   test("where, with, way, verb-direction, what", () => {

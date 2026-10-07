@@ -37,11 +37,6 @@ export default lessonModule({
       ru: "путь (в {{word:wei4}}-{{word:dao4}} — вкус)",
     },
     {
-      word: "qi2guai4",
-      en: "strange",
-      ru: "странный",
-    },
-    {
       word: "shen1ti3",
       en: "body; health",
       ru: "тело; здоровье",
@@ -134,10 +129,10 @@ export default lessonModule({
       ru: "У него хорошее здоровье.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:hen3}} {{word:qi2guai4}}-{{word:de}} {{word:dong4}}-{{word:wu4}}.",
-      hanzi: "我看过很奇怪的动物。",
-      en: "I've seen a very strange animal.",
-      ru: "Я видел очень странное животное.",
+      pinyin: "{{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:hen3}} {{word:da4}}-{{word:de}} {{word:dong4}}-{{word:wu4}}.",
+      hanzi: "我看过很大的动物。",
+      en: "I've seen a very big animal.",
+      ru: "Я видел очень большое животное.",
     },
     {
       pinyin: "{{Word:na4}}-ge {{word:dong4}}-{{word:wu4}} {{word:hen3}} {{word:kuai4}}.",

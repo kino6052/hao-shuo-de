@@ -13,6 +13,8 @@
 //   5. A composite whose hanzi uses a sense's hanzi where its Hao-shuo-de form
 //      doesn't use that sense (时 in the hanzi, but no listed compound).
 //   6. A lesson that introduces two senses of one word (main sense included).
+//   7. A ref that names a sense ({{word:xin1#new}}) the word doesn't have, or
+//      one not marked `alone` (that one is only used in its compounds).
 // (A sense used before its card is check-early-words; a sense without its
 // meaning, why or compounds is check-data.)
 //
@@ -27,9 +29,14 @@
 import dictionaryData from '../src/data/dictionary.ts';
 import compositesData from '../src/data/composites.ts';
 import { loadLessons } from './lessons.js';
-import { soleWordRef, toneless, wordRefIds } from '../src/lib/word-refs.js';
+import { readdirSync, readFileSync, statSync } from 'fs';
+import { resolve, dirname } from 'path';
+import { fileURLToPath } from 'url';
+import { soleWordRef, toneless, wordRefIds, wordRefRe } from '../src/lib/word-refs.js';
 import { refSenses, chainHanzi, senseKey } from '../src/lib/senses.js';
 import { idSyllables } from './refactor-lib.js';
+
+const SRC = resolve(dirname(fileURLToPath(import.meta.url)), '../src');
 
 const words = dictionaryData.words;
 const ids = Object.keys(words);
@@ -113,6 +120,22 @@ for (const lesson of lessons) {
     senses.set(id, [...(senses.get(id) ?? []), entry.sense ?? 'main']);
   }
   for (const [id, list] of senses) if (list.length > 1) errors.push(`${lesson.id}: introduces ${list.length} senses of ${id} (${list.join(', ')}) -- one per lesson`);
+}
+
+// 7. a ref that names its sense: the sense exists and may stand alone
+const walk = (dir) => readdirSync(dir).flatMap((f) => {
+  const p = resolve(dir, f);
+  return statSync(p).isDirectory() ? walk(p) : /\.(ts|js|jsx|yaml)$/.test(f) ? [p] : [];
+});
+for (const file of [...walk(resolve(SRC, 'content')), ...walk(resolve(SRC, 'data'))]) {
+  for (const m of readFileSync(file, 'utf-8').matchAll(wordRefRe())) {
+    const [full, , id, key] = m;
+    if (!key || !words[id]) continue;
+    const s = words[id].senses?.[key];
+    const where = file.slice(SRC.length + 1).replace(/\\/g, '/');
+    if (!s) errors.push(`${where}: ${full} -- ${id} has no sense "${key}"`);
+    else if (!s.alone) errors.push(`${where}: ${full} -- sense "${key}" isn't marked alone, so it is only used in its compounds`);
+  }
 }
 
 // Reports: words that differ only by tone; one syllable inside another word

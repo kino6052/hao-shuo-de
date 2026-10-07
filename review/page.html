@@ -73,6 +73,9 @@ ol.rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .form { font-size: 15px; overflow-wrap: anywhere; }
 .form .hz { font-family: var(--font-han); color: var(--muted); font-size: 13px; margin-left: 6px; }
 .why { font-size: 13px; color: var(--muted); margin: 2px 0 0; }
+.example { font-size: 14px; overflow-wrap: anywhere; }
+.example .hz { font-family: var(--font-han); color: var(--muted); font-size: 13px; margin-left: 6px; }
+.example .en { color: var(--muted); font-size: 13px; font-style: italic; margin-left: 6px; }
 .dots { display: inline-flex; gap: 3px; vertical-align: middle; }
 .dots i { width: 7px; height: 7px; border-radius: 50%; background: var(--dot-off); display: block; }
 .dots i.on { background: var(--accent); }
@@ -104,7 +107,7 @@ button:disabled { opacity: .5; cursor: progress; }
   <header>
     <div class="eyebrow"><span id="eyebrow">Composite review</span><a id="prev" href="#">← previous batch</a><a id="next" href="#">next batch →</a></div>
     <h1 id="title">Loading the batch…</h1>
-    <p class="lede">Each entry shows how Hao-shuo-de says the word now, and Claude's proposal where one is worth making. The dots show how close a form is to Mandarin: five is Mandarin's own word. Approve, keep the current form, or write your own in plain pinyin (for example fēi-jī zhàn-de dì-fang). Each decision is saved to review/decisions in the project at once.</p>
+    <p class="lede">Each entry shows how Hao-shuo-de says the word now, Claude's proposal where one is worth making, and two example sentences (approving an entry approves its examples; to change one, write a note). The dots show how close a form is to Mandarin: five is Mandarin's own word. Approve, keep the current form, or write your own in plain pinyin (for example fēi-jī zhàn-de dì-fang). Each decision is saved to review/decisions in the project at once.</p>
   </header>
   <div class="bar">
     <div class="tally" role="group" aria-label="Show">
@@ -162,6 +165,18 @@ function formBlock(kind, forms, tts, score, why) {
     b.appendChild(line);
   });
   if (why) b.appendChild(el("p", "why", why));
+  return b;
+}
+
+function examplesBlock(ex) {
+  const b = el("div", "form-block");
+  b.appendChild(el("div", "label" + (ex.proposed ? " prop" : ""), ex.proposed ? "Examples (proposed)" : "Examples"));
+  for (const x of ex.list) {
+    const line = el("div", "example", x.pinyin);
+    line.appendChild(el("span", "hz", x.hanzi));
+    line.appendChild(el("span", "en", x.en));
+    b.appendChild(line);
+  }
   return b;
 }
 
@@ -246,6 +261,7 @@ function row(e) {
   const f = el("div", "forms");
   f.appendChild(formBlock("now", e.now.forms, e.now.tts, e.now.score));
   if (e.prop) f.appendChild(formBlock("prop", e.prop.forms, e.prop.tts, e.prop.score, e.prop.why));
+  if (e.examples?.list.length) f.appendChild(examplesBlock(e.examples));
   li.appendChild(f);
   li.appendChild(actions(e));
   return li;

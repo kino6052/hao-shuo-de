@@ -12,5 +12,18 @@ export default composite({
   tts: ["好看"],
   literal: "good to look at",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ni3}}-{{word:de}} {{word:yi1fu}} {{word:hen3}} {{word:hao3}}-{{word:kan4}}.",
+      hanzi: "你的衣服很好看。",
+      en: "Your clothes look nice.",
+      ru: "У тебя красивая одежда.",
+    },
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:di4}}-{{light:fang1}} {{word:zhen1}} {{word:hao3}}-{{word:kan4}}!",
+      hanzi: "这个地方真好看！",
+      en: "This place is beautiful!",
+      ru: "Какое красивое место!",
+    },
+  ],
 });

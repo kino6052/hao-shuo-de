@@ -12,5 +12,18 @@ export default composite({
   tts: ["上网"],
   literal: "go onto the net",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:zai4}} {{word:shang4}} {{word:wang3}}.",
+      hanzi: "我在上网。",
+      en: "I'm online.",
+      ru: "Я в интернете.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:tian1}}-{{word:tian1}} {{word:shang4}} {{word:wang3}}.",
+      hanzi: "他天天上网。",
+      en: "He goes online every day.",
+      ru: "Он каждый день сидит в интернете.",
+    },
+  ],
 });

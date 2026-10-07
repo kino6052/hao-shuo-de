@@ -13,5 +13,18 @@ export default composite({
   literal: "big home / person-person all",
   fit: "natural",
   note: "Lesson {{lesson:doubling-words}}.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:da4}}-{{word:jia1}} {{word:hao3}}!",
+      hanzi: "大家好！",
+      en: "Hello, everyone!",
+      ru: "Всем привет!",
+    },
+    {
+      pinyin: "{{Word:ren2}}-{{word:ren2}} {{word:dou1}} {{word:zhi1dao4}}.",
+      hanzi: "人人都知道。",
+      en: "Everybody knows.",
+      ru: "Все знают.",
+    },
+  ],
 });

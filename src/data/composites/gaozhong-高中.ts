@@ -10,10 +10,23 @@ export default composite({
   pos: "noun",
   hsd: [
     "{{word:gao1}}-{{word:zhong1}}",
-    "{{word:da4}}-{{word:xue2}}-{{word:qian2}}-{{word:de}} {{word:xue2}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
+    "{{word:da4}}-{{word:xue2}}-{{word:qian2}}-{{word:de}} {{word:xue2}}-{{word:xiao4}}",
   ],
-  tts: ["高中", "大学前的学的地方"],
-  literal: "high middle / the learning place before university",
+  tts: ["高中", "大学前的学校"],
+  literal: "high middle / the school before university",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:zai4}} {{word:gao1}}-{{word:zhong1}} {{word:xue2}}.",
+      hanzi: "他在高中学。",
+      en: "He's in high school.",
+      ru: "Он учится в старшей школе.",
+    },
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:gao1}}-{{word:zhong1}} {{word:hen3}} {{word:yuan3}}.",
+      hanzi: "我的高中很远。",
+      en: "My high school is far away.",
+      ru: "Моя школа далеко.",
+    },
+  ],
 });

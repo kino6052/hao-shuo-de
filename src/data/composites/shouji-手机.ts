@@ -8,12 +8,23 @@ export default composite({
   en: "mobile phone",
   ru: "телефон",
   pos: "noun",
-  hsd: [
-    "{{word:shou3}}-{{word:ji1}}",
-    "{{word:xiao3}}-{{word:de}} {{word:gei3}}-{{word:yuan3}}-{{word:de}}-{{word:ren2}}-{{word:shuo1}}-{{word:de}} {{word:gong1}}-{{word:ju4}}",
-  ],
-  tts: ["手机", "小的给远的人说的工具"],
-  literal: "hand-machine / a small telephone",
+  hsd: ["{{word:shou3}}-{{word:ji1}}"],
+  tts: ["手机"],
+  literal: "hand machine",
   fit: "natural",
-  proposed: true,
+  transparent: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:shou3}}-{{word:ji1}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
+      hanzi: "我的手机在哪里？",
+      en: "Where's my phone?",
+      ru: "Где мой телефон?",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:zai4}} {{word:kan4}} {{word:shou3}}-{{word:ji1}}.",
+      hanzi: "他在看手机。",
+      en: "He's looking at his phone.",
+      ru: "Он смотрит в телефон.",
+    },
+  ],
 });

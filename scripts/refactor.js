@@ -2,9 +2,9 @@
 // Applies a refactor list: a file in refactors/ whose default export is a
 // list of word ops (see scripts/refactor-lib.js for each op's fields), in
 // order. A dry run by default: a per-file summary, then the notes to check
-// by hand. --write applies it and rebuilds the data indexes and the
-// dictionary pages; --diff also prints the changed lines. The list stays in
-// the repo as the record of the decision.
+// by hand. --write applies it and rebuilds the data indexes, the grammar
+// overview, word usage and the dictionary pages; --diff also prints the
+// changed lines. The list stays in the repo as the record of the decision.
 //
 //   npm run refactor -- refactors/D60.ts
 //   npm run refactor -- refactors/D60.ts --diff

@@ -10,6 +10,11 @@ export default lessonModule({
       en: "eye",
       ru: "глаз",
     },
+    {
+      word: "er3duo",
+      en: "ear",
+      ru: "ухо",
+    },
   ],
   prose: {
     en: [
@@ -83,10 +88,10 @@ export default lessonModule({
       ru: "Проём маленький, мы не можем войти.",
     },
     {
-      pinyin: "{{Word:ta1}}-{{word:de}} {{word:yan3jing}} {{word:hen3}} {{word:hao3}}, {{word:kan4}}-{{word:de}}-{{word:dao4}}.",
-      hanzi: "他的眼睛很好，看得到。",
-      en: "His eyes are good, he can see it.",
-      ru: "У него хорошие глаза, ему видно.",
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:er3duo}} {{word:bu4}} {{word:hao3}}, {{word:ting1}}-{{word:bu4}}-{{word:dao4}}.",
+      hanzi: "我的耳朵不好，听不到。",
+      en: "My ears are bad, I can't hear.",
+      ru: "У меня плохие уши, мне не слышно.",
     },
   ],
   exercises: [
@@ -107,6 +112,24 @@ export default lessonModule({
       ru: "У неё большие глаза.",
       answer: "{{Word:ta1}}-{{word:de}} {{word:yan3jing}} {{word:hen3}} {{word:da4}}.",
       hanzi: "她的眼睛很大。",
+    },
+    {
+      en: "His eyes are good, he can see it.",
+      ru: "У него хорошие глаза, ему видно.",
+      answer: "{{Word:ta1}}-{{word:de}} {{word:yan3jing}} {{word:hen3}} {{word:hao3}}, {{word:kan4}}-{{word:de}}-{{word:dao4}}.",
+      hanzi: "他的眼睛很好，看得到。",
+    },
+    {
+      en: "Her ears are small.",
+      ru: "У неё маленькие уши.",
+      answer: "{{Word:ta1}}-{{word:de}} {{word:er3duo}} {{word:hen3}} {{word:xiao3}}.",
+      hanzi: "她的耳朵很小。",
+    },
+    {
+      en: "His ears are good, he can hear it.",
+      ru: "У него хорошие уши, ему слышно.",
+      answer: "{{Word:ta1}}-{{word:de}} {{word:er3duo}} {{word:hen3}} {{word:hao3}}, {{word:ting1}}-{{word:de}}-{{word:dao4}}.",
+      hanzi: "他的耳朵很好，听得到。",
     },
   ],
   faq: [

@@ -8,8 +8,22 @@ export default composite({
   en: "hungry",
   ru: "голодный",
   pos: "adjective",
-  hsd: ["{{word:yao4}} {{word:chi1}}"],
-  tts: ["要吃"],
+  hsd: ["{{word:xiang3}} {{word:chi1}}-{{word:fan4}}"],
+  tts: ["想吃饭"],
   literal: "want to eat",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:xiang3}} {{word:chi1}}-{{word:fan4}} {{word:le}}.",
+      hanzi: "我想吃饭了。",
+      en: "I'm hungry.",
+      ru: "Я проголодался.",
+    },
+    {
+      pinyin: "{{Word:hai2}}-{{word:zi}}-{{word:men}} {{word:xiang3}} {{word:chi1}}-{{word:fan4}}.",
+      hanzi: "孩子们想吃饭。",
+      en: "The children are hungry.",
+      ru: "Дети голодны.",
+    },
+  ],
 });

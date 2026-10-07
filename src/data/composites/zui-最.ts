@@ -12,4 +12,18 @@ export default composite({
   tts: ["最"],
   fit: "word",
   note: "Lesson {{lesson:comparing}}.",
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:zui4}} {{word:gao1}}.",
+      hanzi: "他最高。",
+      en: "He's the tallest.",
+      ru: "Он самый высокий.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:zui4}} {{word:ai4}} {{word:shui3}}-{{word:guo3}}.",
+      hanzi: "我最爱水果。",
+      en: "I love fruit most of all.",
+      ru: "Больше всего я люблю фрукты.",
+    },
+  ],
 });

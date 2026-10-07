@@ -42,7 +42,7 @@ function WordNotes({ word, lang }) {
       {Object.entries(word.senses ?? {}).map(([key, s]) => (
         <div key={key} class={styles.related}>
           {t(lang, 'alsoWritten')} {s.hanzi} ({s[lang === 'zh' ? 'eng' : lang] || s.eng}): {refs(s.why[lang] || s.why.eng)}{' '}
-          {t(lang, 'inCompounds')} {s.compounds.map(compoundTerm).join(', ')} ({s.compounds.length})
+          {t(lang, 'inCompounds')} {s.compounds.map(compoundTerm).join(', ')} ({s.compounds.length}){s.alone && `, ${t(lang, 'senseAlone')}`}
         </div>
       ))}
     </>

@@ -18,5 +18,18 @@ export default composite({
   literal: "have X … / I come … / give me …",
   fit: "word",
   note: "Lesson {{lesson:everyday-patterns}}: jiào tā jìn-lái (let him in), bù jiào (won't let), wǒ lái (let me), gěi wǒ kàn yī-xià (let me see).",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:rang4}} {{word:wo3}} {{word:kan4}}-{{word:kan4}}.",
+      hanzi: "让我看看。",
+      en: "Let me see.",
+      ru: "Дай посмотреть.",
+    },
+    {
+      pinyin: "{{Word:ma1ma}} {{word:bu4}} {{word:rang4}} {{word:wo3}} {{word:qu4}}.",
+      hanzi: "妈妈不让我去。",
+      en: "Mom won't let me go.",
+      ru: "Мама меня не пускает.",
+    },
+  ],
 });

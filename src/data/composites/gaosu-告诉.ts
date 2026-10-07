@@ -12,4 +12,18 @@ export default composite({
   tts: ["对…说"],
   literal: "say to",
   fit: "natural",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:dui4}} {{word:ta1}} {{word:shuo1}} {{word:le}}.",
+      hanzi: "我对他说了。",
+      en: "I told him.",
+      ru: "Я ему сказал.",
+    },
+    {
+      pinyin: "{{Word:bie2}} {{word:dui4}} {{word:ta1}} {{word:shuo1}}!",
+      hanzi: "别对他说！",
+      en: "Don't tell him!",
+      ru: "Не говори ему!",
+    },
+  ],
 });

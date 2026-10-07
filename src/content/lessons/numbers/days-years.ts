@@ -18,8 +18,8 @@ export default lessonModule({
     {
       word: "xin1",
       sense: "new",
-      en: "new (in {{word:xin1}}-{{word:nian2}}: New Year)",
-      ru: "новый (в {{word:xin1}}-{{word:nian2}} — Новый год)",
+      en: "new: {{word:xin1}}-{{word:nian2}}, New Year; also on its own, describing a thing",
+      ru: "новый: {{word:xin1}}-{{word:nian2}} — Новый год; и сам по себе, как описание вещи",
     },
   ],
   prose: {

@@ -149,7 +149,9 @@ export function run(ops, { write = false, diff = false, title = '' } = {}) {
   console.log(summary(ws, { diff }));
   if (!write) return;
   ws.write();
-  for (const script of ['build-data.js', 'generate-dictionary.js', 'generate-plan-4b.js']) {
+  // the grammar overview before word usage: "used in" counts it too
+  const scripts = ['build-data.js', 'generate-grammar-overview.js', 'generate-word-usage.js', 'generate-dictionary.js', 'generate-plan-4b.js'];
+  for (const script of scripts) {
     spawnSync(process.execPath, [`${ROOT}/scripts/${script}`], { stdio: 'inherit' });
   }
   console.log('\nWritten. Now run: npm run check');

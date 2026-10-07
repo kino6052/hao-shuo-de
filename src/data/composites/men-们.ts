@@ -11,4 +11,18 @@ export default composite({
   hsd: ["{{word:men}}"],
   tts: ["们"],
   fit: "word",
+  examples: [
+    {
+      pinyin: "{{Word:hai2}}-{{word:zi}}-{{word:men}} {{word:zai4}} {{word:wan2r}}.",
+      hanzi: "孩子们在玩儿。",
+      en: "The children are playing.",
+      ru: "Дети играют.",
+    },
+    {
+      pinyin: "{{Word:ni3}}-{{word:men}} {{word:hao3}}!",
+      hanzi: "你们好！",
+      en: "Hello, everyone!",
+      ru: "Здравствуйте!",
+    },
+  ],
 });

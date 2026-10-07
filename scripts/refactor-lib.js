@@ -19,7 +19,7 @@
 import { readdirSync, readFileSync, writeFileSync, unlinkSync, existsSync, mkdirSync, statSync } from 'fs';
 import { resolve, dirname, relative, extname } from 'path';
 import { fileURLToPath } from 'url';
-import { tsLiteral, compositeFileName } from './data-files.js';
+import { tsLiteral, compositeFileName, compositeSource } from './data-files.js';
 import { wordRefRe, wordRefIds, toneless } from '../src/lib/word-refs.js';
 import { compoundSplitter, compoundForm } from '../src/lib/compound-rule.js';
 import { LESSON_IDS } from '../src/content/book.js';
@@ -142,8 +142,7 @@ export class Workspace {
   setComposite(path, entry) {
     const want = COMPOSITES_DIR + compositeFileName(entry);
     if (want !== path) this.remove(path);
-    const text = `import { composite } from "../../lib/composite.ts";\n\nexport default composite(${tsLiteral(entry)});\n`;
-    this.set(want, text);
+    this.set(want, compositeSource(entry));
   }
 
   // -> [{ path, before, after }] for every file that changed.
@@ -300,8 +299,13 @@ export function rewriteStrings(src, fn, hanziFn) {
 }
 
 // -> text with each ref to `id` replaced by make(kind) (kind: word, Word, light, Light).
+// A ref that names its sense ({{word:xin1#new}}) is left to a hand edit.
 export function replaceRefsTo(text, id, make) {
-  return text.replace(wordRefRe(), (full, kind, ref) => (ref === id ? make(kind) : full));
+  return text.replace(wordRefRe(), (full, kind, ref, sense) => {
+    if (ref !== id) return full;
+    if (sense) throw new Error(`${full} names its sense: edit it by hand first`);
+    return make(kind);
+  });
 }
 
 // -> a ref of a kind, with the case of `kind` kept and its lightness given.
@@ -528,7 +532,7 @@ const isCode = (r) => /\.(ts|js|jsx)$/.test(r);
 // given, rewrites the hanzi of each sentence that changed; every changed
 // sentence is noted when noteSentences is set.
 function rewriteAll(ws, id, make, opts = {}) {
-  rewriteText(ws, (t) => replaceRefsTo(t, id, make), { ...opts, has: (t) => t.includes(`:${id}}}`) });
+  rewriteText(ws, (t) => replaceRefsTo(t, id, make), { ...opts, has: (t) => t.includes(`:${id}}}`) || t.includes(`:${id}#`) });
 }
 
 // Rewrites text everywhere with fn(text) -> text: string literals in code,
@@ -548,6 +552,12 @@ function rewriteText(ws, fn, { hanziFn, noteSentences = false, label, has = () =
         const after = ws.data(path);
         (after.hsd ?? []).forEach((f, i) => {
           if (f !== before.hsd[i] && after.tts?.[i] != null) after.tts[i] = hanziFn(after.tts[i]);
+        });
+        // its example sentences too; their glosses may need a hand edit
+        (after.examples ?? []).forEach((x, i) => {
+          if (x.pinyin === before.examples?.[i]?.pinyin) return;
+          x.hanzi = hanziFn(x.hanzi);
+          if (noteSentences) ws.note('sentence', `${path} example ${i + 1}: ${x.hanzi} (${x.en})`);
         });
         ws.setComposite(path, after);
         void e;
@@ -927,7 +937,7 @@ const OPS = {
       }
     }
     if (found.path) ws.setComposite(found.path, e);
-    else ws.set(`${COMPOSITES_DIR}${compositeFileName(e)}`, `import { composite } from "../../lib/composite.ts";\n\nexport default composite(${tsLiteral(e)});\n`);
+    else ws.set(`${COMPOSITES_DIR}${compositeFileName(e)}`, compositeSource(e));
   },
 
   // { op: "compounds" } -- the compound rule over every composite: a Chinese
@@ -947,6 +957,18 @@ const OPS = {
       ws.setComposite(path, e);
       ws.note('composite', `${entry.zh} ${entry.en}: ${ids.map((id) => words[id].term).join('-')} first${forms.length ? ` (then ${forms.length} older form(s))` : ''}`);
     }
+  },
+
+  // { op: "reviewed", from, to } -- the author has reviewed the composites
+  // ranked from..to (one review batch): their "proposed" marks go
+  reviewed(ws, op) {
+    let n = 0;
+    for (const { path, entry } of ws.composites()) {
+      if (entry.rank < op.from || entry.rank > op.to || !entry.proposed) continue;
+      ws.setComposite(path, { ...entry, proposed: undefined });
+      n++;
+    }
+    ws.note('composite', `ranks ${op.from}-${op.to} reviewed: ${n} proposed mark(s) cleared`);
   },
 
   // { op: "text", file, from, to, all? } -- a hand edit kept in the list

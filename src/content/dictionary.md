@@ -46,6 +46,7 @@ dōu | adverb | all, both, every one of them; goes before the verb, after the pe
 duì | preposition/coverb | facing, towards, regarding, beneficial to; correct | tawa
 duō | adjective | many, a lot, much, several, very, abundant; used contextually to signify quantities greater than two | mute
 èr | number | two, when counting aloud or naming a number (yī, èr, sān; èr-hào, "number two"; shí-èr, 12); before gè, two is liǎng |
+ěrduo | noun | ear: {{word:er3duo}} {{word:bu4}} {{word:hao3}}, {{word:ting1}}-{{word:bu4}}-{{word:dao4}}, the ears are bad, (I) can't hear |
 fǎ | noun | method, way; law: {{word:fang1}}-{{word:fa3}}, a method; {{word:kan4}}-{{word:fa3}}, a view; {{word:shuo1}}-{{word:fa3}}, a way of saying it |
 fā | verb | to send out, give off; to start (e.g. {{word:fa1}}-{{word:sheng1}}, "happen"; {{word:tou2}}-{{word:fa1}}, "hair"; {{word:chu1}}-{{word:fa1}}, "set out") |
 fàn | noun | meal; cooked rice: {{word:chi1}} {{word:fan4}}, eat (a meal); {{word:zuo4}} {{word:fan4}}, cook |
@@ -63,6 +64,7 @@ gōng | noun | work, labour: {{word:gong1}}-{{word:ju4}}, a tool; {{word:gong1}}
 guān | verb | to close, shut; to turn off (e.g. {{word:guan1}} {{word:huo3}}, "turn off the fire") |
 guānxi | noun | relationship, connection; {{word:mei2}}-{{word:you3}} {{word:guan1xi}}, "it doesn't matter" |
 guó | noun | country, nation |
+guǒ | noun | fruit, what a plant bears; {{word:shui3}}-{{word:guo3}}, fruit to eat |
 guò | particle | placed right after a verb to say you have done it at least once before (e.g. {{word:chi1}}-{{word:guo4}}, "have eaten before") |
 hái | adverb | still, also, yet: {{word:ta1}} {{word:hai2}} {{word:zai4}} {{word:jia1}}, he's still at home; {{word:hai2}}-{{word:shi4}}, or (in a question) |
 hào | particle | sequence marker, number identity, ordinal number prefix | nanpa
@@ -138,7 +140,6 @@ qì | noun | air, gas, breath (in everyday Mandarin, air is {{word:kong1}}-{{wor
 qī | number | seven |
 qǐ | verb/directional | to rise, get up; begin; composes with a verb via a hyphen to mark the start of an action (e.g. {{word:shuo1}}-{{word:qi3}}, "to bring up/mention") |
 qián | noun | front, face, foremost area, chest | sinpin
-qíguài | adjective | strange, unusual, foolish, crazy, intoxicated | nasa
 qù | verb | to go, move toward, travel away | tawa
 ràng | verb | to let, allow; to make (someone do or feel something): {{word:rang4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}}, let him in; {{word:rang4}} {{word:wo3}} {{word:kan4}}-kan, let me see |
 rè | adjective | hot, warm, cooked, chemically energetic | seli

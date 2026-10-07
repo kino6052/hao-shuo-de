@@ -13,6 +13,14 @@ export type CompositePos =
   | "noun" | "verb" | "adjective" | "adverb" | "pronoun" | "number" | "classifier"
   | "conjunction" | "preposition" | "auxiliary" | "phrase" | "suffix" | "prefix" | "interjection";
 
+/** A sentence that uses an entry, written like a lesson example (word refs in the pinyin). */
+export interface CompositeExample {
+  pinyin: string;
+  hanzi: string;
+  en: string;
+  ru: string;
+}
+
 export interface Composite {
   rank: number;
   phase: number;
@@ -49,6 +57,12 @@ export interface Composite {
    * collects these into `units`, keyed by the hanzi.
    */
   role?: "noun" | "verb" | "adj" | "color";
+  /**
+   * A couple of sentences that use one of the forms (src/lib/composite-examples.js
+   * checks them: dictionary words only, hanzi in step with the words, a form used).
+   * Every reviewed entry has them (check-book).
+   */
+  examples?: CompositeExample[];
   /** Written or changed by Claude, waiting for the author's review. */
   proposed?: boolean;
 }

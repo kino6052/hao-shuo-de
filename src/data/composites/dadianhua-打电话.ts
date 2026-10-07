@@ -8,9 +8,22 @@ export default composite({
   en: "make a phone call",
   ru: "звонить",
   pos: "verb",
-  hsd: ["{{word:yong4}} {{word:gong1}}-{{word:ju4}} {{word:gei3}} {{word:ren2}} {{word:shuo1}}"],
-  tts: ["用工具给人说"],
-  literal: "use a tool to talk to someone",
+  hsd: ["{{word:da3}} {{word:hua4}}-{{word:ji1}}"],
+  tts: ["打话机"],
+  literal: "hit the talk machine",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wan3}}-{{light:shang4}} {{word:wo3}} {{word:da3}} {{word:hua4}}-{{word:ji1}} {{word:gei3}} {{word:ma1ma}}.",
+      hanzi: "晚上我打话机给妈妈。",
+      en: "In the evening I call mom.",
+      ru: "Вечером я звоню маме.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:zai4}} {{word:da3}} {{word:hua4}}-{{word:ji1}}.",
+      hanzi: "他在打话机。",
+      en: "He's on the phone.",
+      ru: "Он разговаривает по телефону.",
+    },
+  ],
 });

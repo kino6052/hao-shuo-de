@@ -15,5 +15,18 @@ export default composite({
   tts: ["妈妈", "爸爸妈妈里的女人"],
   literal: "the woman of the parents",
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:ma1ma}} {{word:zai4}} {{word:jia1}}.",
+      hanzi: "我妈妈在家。",
+      en: "My mom is at home.",
+      ru: "Моя мама дома.",
+    },
+    {
+      pinyin: "{{Word:ma1ma}}, {{word:wo3}} {{word:hui2}}-{{word:lai2}} {{word:le}}!",
+      hanzi: "妈妈，我回来了！",
+      en: "Mom, I'm back!",
+      ru: "Мама, я вернулся!",
+    },
+  ],
 });

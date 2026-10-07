@@ -24,7 +24,18 @@ export default categories([
       {
         key: "body",
         title: { eng: "Body", rus: "Тело", zh: "身体" },
-        wordIds: ["bi2zi", "yan3jing", "jiao3", "kou3", "shen1ti3", "shou3", "tou2", "mao2", "xin1"],
+        wordIds: [
+          "bi2zi",
+          "yan3jing",
+          "jiao3",
+          "kou3",
+          "shen1ti3",
+          "shou3",
+          "tou2",
+          "mao2",
+          "xin1",
+          "er3duo",
+        ],
       },
       {
         key: "people-kinship",
@@ -34,7 +45,7 @@ export default categories([
       {
         key: "food-drink",
         title: { eng: "Food & Drink", rus: "Еда и питьё", zh: "食物与饮品" },
-        wordIds: ["shui3", "fan4"],
+        wordIds: ["shui3", "fan4", "guo3"],
       },
       {
         key: "tools-objects",
@@ -127,7 +138,7 @@ export default categories([
       {
         key: "other-quality",
         title: { eng: "Other Quality", rus: "Прочие качества", zh: "其他性质" },
-        wordIds: ["qi2guai4", "lao3", "luan4", "kuai4"],
+        wordIds: ["lao3", "luan4", "kuai4"],
       },
       {
         key: "temperature-taste",

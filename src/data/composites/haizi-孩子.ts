@@ -13,5 +13,18 @@ export default composite({
   literal: "small person",
   fit: "natural",
   note: "Keep -de: xiǎo rén means a mean person.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:you3}} {{word:san1}}-{{light:ge4}} {{word:hai2}}-{{word:zi}}.",
+      hanzi: "她有三个孩子。",
+      en: "She has three children.",
+      ru: "У неё трое детей.",
+    },
+    {
+      pinyin: "{{Word:hai2}}-{{word:zi}} {{word:zai4}} {{word:wan2r}}.",
+      hanzi: "孩子在玩儿。",
+      en: "The child is playing.",
+      ru: "Ребёнок играет.",
+    },
+  ],
 });

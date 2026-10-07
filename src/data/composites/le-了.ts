@@ -11,4 +11,18 @@ export default composite({
   hsd: ["{{word:le}}"],
   tts: ["了"],
   fit: "word",
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:lai2}} {{word:le}}.",
+      hanzi: "他来了。",
+      en: "He's come.",
+      ru: "Он пришёл.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:chi1}} {{word:le}}.",
+      hanzi: "我吃了。",
+      en: "I've eaten.",
+      ru: "Я поел.",
+    },
+  ],
 });

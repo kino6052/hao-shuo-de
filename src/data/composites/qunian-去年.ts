@@ -12,5 +12,18 @@ export default composite({
   tts: ["去年", "前十二个月"],
   literal: "go-year / the twelve months before",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:qu4}}-{{word:nian2}} {{word:wo3}} {{word:qu4}} {{word:le}} \"Zhōngguó\".",
+      hanzi: "去年我去了中国。",
+      en: "Last year I went to China.",
+      ru: "В прошлом году я ездил в Китай.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:qu4}}-{{word:nian2}} {{word:kai1shi3}} {{word:gong1}}-{{word:zuo4}}.",
+      hanzi: "他去年开始工作。",
+      en: "He started working last year.",
+      ru: "Он начал работать в прошлом году.",
+    },
+  ],
 });

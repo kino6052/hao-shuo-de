@@ -105,8 +105,8 @@ export default lessonModule({
     {
       en: "I want fruit and water.",
       ru: "Я хочу фрукты и воду.",
-      answer: "{{Word:wo3}} {{word:yao4}} {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:he2}} {{word:shui3}}.",
-      hanzi: "我要植物生的东西和水。",
+      answer: "{{Word:wo3}} {{word:yao4}} {{word:shui3}}-{{word:guo3}} {{word:he2}} {{word:shui3}}.",
+      hanzi: "我要水果和水。",
     },
     {
       en: "this one or that one",

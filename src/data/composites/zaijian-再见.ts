@@ -8,12 +8,17 @@ export default composite({
   en: "goodbye",
   ru: "до свидания",
   pos: "verb",
-  hsd: [
-    "{{word:zai4}}-{{word:jian4}}",
-    "{{word:wo3}} {{word:hui4}} {{word:kan4}}-{{word:dao4}} {{word:ni3}}",
-  ],
-  tts: ["再见", "我会看到你"],
-  literal: "I will see you",
+  hsd: ["{{word:zai4}}-{{word:jian4}}"],
+  tts: ["再见"],
   fit: "natural",
-  proposed: true,
+  transparent: true,
+  examples: [
+    { pinyin: "{{Word:zai4}}-{{word:jian4}}!", hanzi: "再见！", en: "Goodbye!", ru: "До свидания!" },
+    {
+      pinyin: "{{Word:ming2}}-{{word:tian1}} {{word:zai4}}-{{word:jian4}}!",
+      hanzi: "明天再见！",
+      en: "See you again tomorrow!",
+      ru: "Увидимся завтра!",
+    },
+  ],
 });

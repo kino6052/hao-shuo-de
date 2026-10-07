@@ -28,7 +28,9 @@
 //      entry that isn't a gap or a skip. When an entry's Chinese is made of
 //      Hao-shuo-de words (爱好 = ài + hǎo), one of its forms says exactly
 //      that real compound: its hanzi (`tts`) is the entry's Chinese, or it
-//      is exactly those words.
+//      is exactly those words. Its example sentences use dictionary words,
+//      hanzi in step with them, and one of the entry's forms; every entry
+//      of an applied review batch (refactors/R<n>.ts) has two or more.
 //
 // The other gates (jargon in the rest of the text, early words, word use,
 // grammar boxes) are separate scripts; scripts/check-all.js runs them all on
@@ -53,6 +55,7 @@ import compositesData from '../src/data/composites.ts';
 import { wordRefIds, soleWordRef } from '../src/lib/word-refs.js';
 import { senseKey, refSenses } from '../src/lib/senses.js';
 import { compoundSplitter } from '../src/lib/compound-rule.js';
+import { exampleProblems } from '../src/lib/composite-examples.js';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -232,6 +235,19 @@ for (const n of [1, 2, 3]) {
     // Names go in quotes (Lesson 1), so they don't count as words.
     const unknown = wordsIn(e.hsd.replace(/"[^"]*"/g, ' '), terms, { pinyinField: true }).filter((w) => !w.id || !dictionary[w.id]);
     if (unknown.length) errors.push(`${where}: ${unknown.map((w) => w.token).join(', ')} not in the dictionary: "${e.hsd}"`);
+  }
+  // The examples: dictionary words, hanzi in step, a form used. Every entry
+  // of a review batch already applied (refactors/R<n>.ts) has two or more.
+  let reviewed = 0;
+  while (existsSync(resolve(ROOT, `refactors/R${reviewed + 1}.ts`))) reviewed++;
+  for (const e of entries) {
+    (e.examples ?? []).forEach((x, i) => {
+      const p = exampleProblems(e, x, dictionary);
+      if (p.length) errors.push(`composite "${e.zh}" example ${i + 1}: ${p.join('; ')}`);
+    });
+    if (e.rank <= reviewed * 100 && (e.examples?.length ?? 0) < 2) {
+      errors.push(`composite "${e.zh}" (rank ${e.rank}, reviewed in R${Math.ceil(e.rank / 100)}): give it two examples (review/examples/batch-${Math.ceil(e.rank / 100)}.mjs)`);
+    }
   }
   // A Chinese word made of Hao-shuo-de words is said with that compound.
   const compound = compoundSplitter(dictionary);

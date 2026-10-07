@@ -36,10 +36,10 @@ export default lessonModule({
       ru: "Вода не холодная.",
     },
     {
-      pinyin: "{{Word:zhe4}}-ge {{word:bu4}} {{word:hen3}} {{word:qi2guai4}}.",
-      hanzi: "这个不很奇怪。",
-      en: "This isn't very strange.",
-      ru: "Это не очень странно.",
+      pinyin: "{{Word:zhe4}}-ge {{word:bu4}} {{word:hen3}} {{word:tian2}}.",
+      hanzi: "这个不很甜。",
+      en: "This isn't very sweet.",
+      ru: "Это не очень сладкое.",
     },
     {
       pinyin: "{{Word:shui3}} {{word:bu4}} {{word:re4}}.",

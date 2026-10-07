@@ -8,10 +8,23 @@ export default composite({
   en: "telephone",
   ru: "телефон",
   pos: "noun",
-  hsd: [
-    "{{word:gei3}}-{{word:yuan3}}-{{word:de}}-{{word:ren2}}-{{word:shuo1}}-{{word:de}} {{word:gong1}}-{{word:ju4}}",
+  hsd: ["{{word:hua4}}-{{word:ji1}}"],
+  tts: ["话机"],
+  literal: "talk machine",
+  fit: "natural",
+  transparent: true,
+  examples: [
+    {
+      pinyin: "{{Word:hua4}}-{{word:ji1}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
+      hanzi: "话机在哪里？",
+      en: "Where's the phone?",
+      ru: "Где телефон?",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:yong4}} {{word:ta1}}-{{word:de}} {{word:hua4}}-{{word:ji1}}.",
+      hanzi: "我用他的话机。",
+      en: "I'm using his phone.",
+      ru: "Я пользуюсь его телефоном.",
+    },
   ],
-  tts: ["给远的人说的工具"],
-  literal: "a tool for talking to people far away",
-  fit: "plain",
 });

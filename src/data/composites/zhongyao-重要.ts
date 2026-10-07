@@ -12,5 +12,18 @@ export default composite({
   tts: ["重要", "很有价值"],
   literal: "very valuable",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:hen3}} {{word:zhong4}}-{{word:yao4}}.",
+      hanzi: "这个很重要。",
+      en: "This is important.",
+      ru: "Это важно.",
+    },
+    {
+      pinyin: "{{Word:shen1ti3}} {{word:zui4}} {{word:zhong4}}-{{word:yao4}}.",
+      hanzi: "身体最重要。",
+      en: "Health comes first.",
+      ru: "Здоровье важнее всего.",
+    },
+  ],
 });

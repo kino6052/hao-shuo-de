@@ -11,4 +11,18 @@ export default composite({
   hsd: ["{{word:hui4}}"],
   tts: ["会"],
   fit: "word",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:hui4}} {{word:shuo1}} \"Zhōngguó\" {{word:hua4}}.",
+      hanzi: "我会说中国话。",
+      en: "I can speak Chinese.",
+      ru: "Я говорю по-китайски.",
+    },
+    {
+      pinyin: "{{Word:ming2}}-{{word:tian1}} {{word:ta1}} {{word:hui4}} {{word:lai2}}.",
+      hanzi: "明天他会来。",
+      en: "He'll come tomorrow.",
+      ru: "Завтра он придёт.",
+    },
+  ],
 });

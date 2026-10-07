@@ -12,4 +12,18 @@ export default composite({
   tts: ["睡觉"],
   fit: "plain",
   note: "shuìjiào covers resting.",
+  examples: [
+    {
+      pinyin: "{{Word:ni3}} {{word:yao4}} {{word:shui4jiao4}}.",
+      hanzi: "你要睡觉。",
+      en: "You need to rest.",
+      ru: "Тебе надо отдохнуть.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:shui4jiao4}} {{word:yi1}}-{{word:xia4}}.",
+      hanzi: "我睡觉一下。",
+      en: "I'll rest a bit.",
+      ru: "Я немного отдохну.",
+    },
+  ],
 });

@@ -12,4 +12,18 @@ export default composite({
   tts: ["开会"],
   fit: "natural",
   note: "Real Mandarin: 开会.",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:men}} {{word:ming2}}-{{word:tian1}} {{word:kai1}}-{{word:hui4}}.",
+      hanzi: "我们明天开会。",
+      en: "We have a meeting tomorrow.",
+      ru: "Завтра у нас собрание.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:zai4}} {{word:kai1}}-{{word:hui4}}.",
+      hanzi: "他在开会。",
+      en: "He's in a meeting.",
+      ru: "Он на собрании.",
+    },
+  ],
 });

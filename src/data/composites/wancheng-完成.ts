@@ -12,4 +12,18 @@ export default composite({
   tts: ["做完"],
   literal: "do-finish",
   fit: "natural",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:zuo4}}-{{word:wan2}} {{word:le}}.",
+      hanzi: "我做完了。",
+      en: "I've finished.",
+      ru: "Я закончил.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:ming2}}-{{word:tian1}} {{word:neng2}} {{word:zuo4}}-{{word:wan2}} {{word:ma}}?",
+      hanzi: "你明天能做完吗？",
+      en: "Can you finish it tomorrow?",
+      ru: "Ты сможешь закончить завтра?",
+    },
+  ],
 });

@@ -13,5 +13,18 @@ export default composite({
   literal: "before X",
   fit: "natural",
   note: "chī qián: before eating.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:yi3}}-{{word:qian2}} {{word:wo3}} {{word:zai4}} \"Zhōngguó\".",
+      hanzi: "以前我在中国。",
+      en: "I used to be in China.",
+      ru: "Раньше я был в Китае.",
+    },
+    {
+      pinyin: "{{Word:shui4jiao4}} {{word:qian2}}, {{word:wo3}} {{word:kan4}} {{word:shu1}}.",
+      hanzi: "睡觉前，我看书。",
+      en: "Before bed, I read.",
+      ru: "Перед сном я читаю.",
+    },
+  ],
 });

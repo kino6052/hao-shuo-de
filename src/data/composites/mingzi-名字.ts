@@ -13,5 +13,18 @@ export default composite({
   literal: "the word you're called",
   fit: "natural",
   note: "Ask with nǐ jiào shénme?",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ni3}}-{{word:de}} {{word:ming2}}-{{light:zi4}} {{word:shi4}} {{word:shen2me}}?",
+      hanzi: "你的名字是什么？",
+      en: "What's your name?",
+      ru: "Как тебя зовут?",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:bu4}} {{word:zhi1dao4}} {{word:ta1}}-{{word:de}} {{word:ming2}}-{{light:zi4}}.",
+      hanzi: "我不知道他的名字。",
+      en: "I don't know his name.",
+      ru: "Я не знаю, как его зовут.",
+    },
+  ],
 });

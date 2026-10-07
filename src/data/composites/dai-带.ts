@@ -13,4 +13,18 @@ export default composite({
   literal: "take-come / take-go",
   fit: "natural",
   note: "Lesson {{lesson:direction-and-result}}.",
+  examples: [
+    {
+      pinyin: "{{Word:ba3}} {{word:shu1}} {{word:na2}}-{{word:lai2}}.",
+      hanzi: "把书拿来。",
+      en: "Bring the book.",
+      ru: "Принеси книгу.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:ba3}} {{word:zhe4}}-{{light:ge4}} {{word:na2}}-{{word:qu4}}.",
+      hanzi: "你把这个拿去。",
+      en: "Take this with you.",
+      ru: "Возьми это с собой.",
+    },
+  ],
 });

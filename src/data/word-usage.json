@@ -339,6 +339,9 @@
       "how-much",
       "where-it-is"
     ],
+    "men2": [
+      "also-and-all"
+    ],
     "ri4": [
       "phrase-book",
       "also-and-all",
@@ -371,7 +374,6 @@
       "numbers",
       "pointing",
       "pre-verbs",
-      "roles-of-a-word",
       "where-it-is",
       "words-and-sentences"
     ],
@@ -463,6 +465,9 @@
       "everyday-patterns",
       "greetings-and-feelings",
       "numbers"
+    ],
+    "er3duo": [
+      "direction-and-result"
     ],
     "ren2": [
       "phrase-book",
@@ -563,6 +568,12 @@
       "numbers",
       "pre-verbs",
       "who-does-what"
+    ],
+    "guo3": [
+      "doubling-words",
+      "inside-a-sentence",
+      "linking-sentences",
+      "roles-of-a-word"
     ],
     "ju4": [
       "phrase-book",
@@ -751,6 +762,7 @@
       "appendix-grammar",
       "colors",
       "comparing",
+      "direction-and-result",
       "doubling-words",
       "inside-a-sentence"
     ],
@@ -795,6 +807,7 @@
       "around-an-action",
       "colors",
       "comparing",
+      "direction-and-result",
       "doubling-words",
       "everyday-patterns",
       "greetings-and-feelings",
@@ -980,6 +993,7 @@
     "bai2": [
       "appendix-stories",
       "colors",
+      "linking-sentences",
       "roles-of-a-word"
     ],
     "se4": [
@@ -1020,14 +1034,6 @@
       "colors",
       "greetings-and-feelings",
       "roles-of-a-word"
-    ],
-    "qi2guai4": [
-      "appendix-stories",
-      "appendix-grammar",
-      "direction-and-result",
-      "greetings-and-feelings",
-      "how-much",
-      "linking-sentences"
     ],
     "lao3": [
       "appendix-stories",
@@ -1563,6 +1569,7 @@
       "phrase-book",
       "appendix-stories",
       "word-builder",
+      "appendix-grammar",
       "colors",
       "direction-and-result",
       "greetings-and-feelings",
@@ -1798,10 +1805,7 @@
       "appendix-frontier",
       "appendix-grammar",
       "around-an-action",
-      "doubling-words",
       "greetings-and-feelings",
-      "inside-a-sentence",
-      "linking-sentences",
       "roles-of-a-word",
       "when-it-happens",
       "where-it-is"
@@ -1976,6 +1980,7 @@
       "appendix-stories",
       "appendix-grammar",
       "direction-and-result",
+      "greetings-and-feelings",
       "moving",
       "numbers",
       "where-it-is"
@@ -2051,10 +2056,8 @@
       "colors",
       "comparing",
       "direction-and-result",
-      "doubling-words",
       "greetings-and-feelings",
       "inside-a-sentence",
-      "linking-sentences",
       "numbers",
       "pointing",
       "roles-of-a-word",
@@ -2070,10 +2073,8 @@
       "colors",
       "comparing",
       "direction-and-result",
-      "doubling-words",
       "greetings-and-feelings",
       "inside-a-sentence",
-      "linking-sentences",
       "numbers",
       "pointing",
       "roles-of-a-word",
@@ -2181,9 +2182,11 @@
       "where-it-is"
     ],
     "guo4": [
+      "appendix-stories",
       "appendix-grammar",
       "around-an-action",
       "direction-and-result",
+      "greetings-and-feelings",
       "how-much",
       "numbers",
       "when-it-happens"
@@ -2357,6 +2360,9 @@
       "where-it-is"
     ],
     "yi3": [
+      "appendix-stories",
+      "appendix-grammar",
+      "greetings-and-feelings",
       "pre-verbs"
     ],
     "zhen1": [

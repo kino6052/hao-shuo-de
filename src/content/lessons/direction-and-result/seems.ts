@@ -47,10 +47,10 @@ export default lessonModule({
       ru: "На вкус сладко.",
     },
     {
-      pinyin: "{{Word:ting1}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:qi2guai4}}.",
-      hanzi: "听起来很奇怪。",
-      en: "That sounds strange.",
-      ru: "Звучит странно.",
+      pinyin: "{{Word:ting1}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:bu4}} {{word:yi1}}-{{word:yang4}}.",
+      hanzi: "听起来很不一样。",
+      en: "That sounds very different.",
+      ru: "Звучит совсем по-другому.",
     },
     {
       pinyin: "{{Word:kong1}}-{{word:qi4}} {{word:leng3}}-{{word:qi3}}-{{word:lai2}} {{word:le}}.",

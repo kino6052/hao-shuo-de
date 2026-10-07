@@ -15,5 +15,18 @@ export default composite({
   tts: ["今年", "现在的十二个月"],
   literal: "the twelve months of now",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:jin1}}-{{word:nian2}} {{word:wo3}} {{word:er4}}-{{word:shi2}}.",
+      hanzi: "今年我二十。",
+      en: "I'm twenty this year.",
+      ru: "В этом году мне двадцать.",
+    },
+    {
+      pinyin: "{{Word:jin1}}-{{word:nian2}} {{word:hen3}} {{word:re4}}.",
+      hanzi: "今年很热。",
+      en: "It's hot this year.",
+      ru: "В этом году жарко.",
+    },
+  ],
 });

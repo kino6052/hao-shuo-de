@@ -2,7 +2,9 @@
 // other hanzi inside listed compounds -- shí is 十 (ten) on its own and 时
 // (time) in shí-jiān. Which sense a use has is read from the text: a ref in a
 // hyphen chain that contains one of a sense's compounds has that sense;
-// anything else is the main sense. Pure, for the app and the scripts.
+// a ref that names its sense ({{word:xin1#new}}, for a sense marked
+// `alone`) has that one; anything else is the main sense. Pure, for the
+// app and the scripts.
 //
 // `words` is { [id]: { hanzi, senses? } } (the dictionary's words, or WORDS).
 
@@ -24,13 +26,13 @@ function compoundList(words) {
   return list;
 }
 
-// -> the hyphen chains of refs in text: [[{ id, kind, index }]], in order.
+// -> the hyphen chains of refs in text: [[{ id, kind, sense?, index }]], in order.
 // Refs joined by "-" (and nothing else) are one chain.
 export function refChains(text) {
   const chains = [];
   let last = null;
   for (const m of String(text).matchAll(wordRefRe())) {
-    const ref = { id: m[2], kind: m[1], index: m.index, end: m.index + m[0].length };
+    const ref = { id: m[2], kind: m[1], sense: m[3], index: m.index, end: m.index + m[0].length };
     if (last && text.slice(last.end, ref.index) === '-') chains[chains.length - 1].push(ref);
     else chains.push([ref]);
     last = ref;
@@ -44,19 +46,22 @@ export function chainSenses(ids, words) {
   for (const c of compoundList(words)) {
     for (let start = 0; start + c.parts.length <= ids.length; start++) {
       if (!c.parts.every((p, k) => ids[start + k] === p)) continue;
-      const at = start + c.parts.indexOf(c.id);
-      if (out[at] === undefined) out[at] = c.key;
+      // every place the word stands in it: both of cháng-cháng are 常
+      c.parts.forEach((p, k) => {
+        if (p === c.id && out[start + k] === undefined) out[start + k] = c.key;
+      });
     }
   }
   return out;
 }
 
-// -> [{ id, sense }] for every ref in text, in order.
+// -> [{ id, sense, named }] for every ref in text, in order (named: the ref
+// names its sense itself).
 export function refSenses(text, words) {
   const out = [];
   for (const chain of refChains(text)) {
     const senses = chainSenses(chain.map((r) => r.id), words);
-    chain.forEach((r, i) => out.push({ id: r.id, sense: senses[i] }));
+    chain.forEach((r, i) => out.push({ id: r.id, sense: r.sense ?? senses[i], named: Boolean(r.sense) }));
   }
   return out;
 }

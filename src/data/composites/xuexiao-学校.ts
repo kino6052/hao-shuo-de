@@ -12,5 +12,18 @@ export default composite({
   tts: ["学校", "学的地方"],
   literal: "learning place",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:xue2}}-{{word:xiao4}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "我的学校很大。",
+      en: "My school is big.",
+      ru: "Моя школа большая.",
+    },
+    {
+      pinyin: "{{Word:hai2}}-{{word:zi}}-{{word:men}} {{word:zai4}} {{word:xue2}}-{{word:xiao4}}.",
+      hanzi: "孩子们在学校。",
+      en: "The children are at school.",
+      ru: "Дети в школе.",
+    },
+  ],
 });

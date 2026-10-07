@@ -57,8 +57,13 @@ export function writeComposite(entry) {
   const c = { ...entry };
   if (typeof c.hsd === 'string') c.hsd = c.hsd.split(' / ');
   if (typeof c.tts === 'string') c.tts = c.tts.split(' / ');
-  const order = ['rank', 'phase', 'zh', 'py', 'en', 'ru', 'pos', 'head', 'hsd', 'tts', 'literal', 'fit', 'transparent', 'role', 'note', 'proposed'];
+  writeFileSync(compositePath(entry), compositeSource(c));
+}
+
+// A composite file's text, its keys in the usual order (undefined ones left out).
+export function compositeSource(c) {
+  const order = ['rank', 'phase', 'zh', 'py', 'en', 'ru', 'pos', 'head', 'hsd', 'tts', 'literal', 'fit', 'transparent', 'role', 'note', 'examples', 'proposed'];
   const out = {};
   for (const k of [...order, ...Object.keys(c).filter((k) => !order.includes(k))]) if (c[k] !== undefined) out[k] = c[k];
-  writeFileSync(compositePath(entry), `import { composite } from "../../lib/composite.ts";\n\nexport default composite(${tsLiteral(out)});\n`);
+  return `import { composite } from "../../lib/composite.ts";\n\nexport default composite(${tsLiteral(out)});\n`;
 }

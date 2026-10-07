@@ -31,6 +31,7 @@ import coverage from '../src/data/coverage.ts';
 import { headCounts, headHanzi } from '../src/lib/heads.js';
 import { naturalness, naturalnessSummary, coreHanzi, NATURALNESS } from '../src/lib/naturalness.js';
 import { analyzeFamilies, categoryFit, wordCategories } from '../src/lib/graph.js';
+import { wordRefIds } from '../src/lib/word-refs.js';
 
 const ROOT = resolve(fileURLToPath(new URL('.', import.meta.url)), '..');
 const CSV = resolve(ROOT, '../misc/translation/src/dictionaries/dictionary.raw.csv');
@@ -136,7 +137,7 @@ for (const [c, v] of [...candidates].sort((a, b) => gain(b[1]) - gain(a[1])).sli
 // 4. idle words
 console.log(`\n4. IDLE: words that head nothing (with how many composites use them at all)`);
 const uses = new Map();
-for (const e of entries) for (const id of new Set((e.hsd ?? '').match(/\{\{(?:word|Word|light):([^}]+)\}\}/g)?.map((m) => m.replace(/.*:|}}/g, '')) ?? [])) uses.set(id, (uses.get(id) ?? 0) + 1);
+for (const e of entries) for (const id of new Set(wordRefIds(e.hsd ?? ''))) uses.set(id, (uses.get(id) ?? 0) + 1);
 const idle = Object.keys(W).filter((id) => !under.has(id)).sort((a, b) => (uses.get(a) ?? 0) - (uses.get(b) ?? 0));
 console.log(`   ${idle.map((id) => `${term(id)} (${uses.get(id) ?? 0}, necessity ${W[id].necessity.index})`).join(', ') || 'none'}`);
 

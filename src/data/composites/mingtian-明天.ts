@@ -12,5 +12,18 @@ export default composite({
   tts: ["明天", "下一个日"],
   literal: "bright-day / the next day",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ming2}}-{{word:tian1}} {{word:jian4}}!",
+      hanzi: "明天见！",
+      en: "See you tomorrow!",
+      ru: "До завтра!",
+    },
+    {
+      pinyin: "{{Word:ming2}}-{{word:tian1}} {{word:wo3}} {{word:yao4}} {{word:qu4}} {{word:xue2}}-{{word:xiao4}}.",
+      hanzi: "明天我要去学校。",
+      en: "Tomorrow I have to go to school.",
+      ru: "Завтра мне надо в школу.",
+    },
+  ],
 });

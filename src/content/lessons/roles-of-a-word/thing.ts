@@ -77,8 +77,8 @@ export default lessonModule({
       ru: "Вся еда — десять штук — испортилась.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:chi1}}-{{word:de}} {{word:shi4}} {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
-      hanzi: "他吃的是植物生的东西。",
+      pinyin: "{{Word:ta1}} {{word:chi1}}-{{word:de}} {{word:shi4}} {{word:shui3}}-{{word:guo3}}.",
+      hanzi: "他吃的是水果。",
       en: "What he's eating is fruit.",
       ru: "То, что он ест, — фрукты.",
     },

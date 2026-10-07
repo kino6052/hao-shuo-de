@@ -12,5 +12,18 @@ export default composite({
   tts: ["学生", "学的人"],
   literal: "learn-born / one who learns",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{word:xie1}} {{word:xue2}}-{{word:sheng1}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "这些学生很好。",
+      en: "These students are good.",
+      ru: "Эти студенты хорошие.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:shi4}} {{word:xue2}}-{{word:sheng1}} {{word:ma}}?",
+      hanzi: "你是学生吗？",
+      en: "Are you a student?",
+      ru: "Ты студент?",
+    },
+  ],
 });

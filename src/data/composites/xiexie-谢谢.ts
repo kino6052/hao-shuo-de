@@ -13,4 +13,18 @@ export default composite({
   literal: "thank-thank / you're very good to me",
   fit: "natural",
   note: "Lesson {{lesson:greetings-and-feelings}}. Also: hǎo-hǎo jué-de, zhè bǎ wǒ jué-de hěn hǎo.",
+  examples: [
+    {
+      pinyin: "{{Word:xie4}}-{{light:xie4}} {{word:ni3}}!",
+      hanzi: "谢谢你！",
+      en: "Thank you!",
+      ru: "Спасибо!",
+    },
+    {
+      pinyin: "{{Word:xie4}}-{{light:xie4}}, {{word:wo3}} {{word:bu4}} {{word:he1}}.",
+      hanzi: "谢谢，我不喝。",
+      en: "No thanks, I won't have any.",
+      ru: "Спасибо, я не буду.",
+    },
+  ],
 });

@@ -8,8 +8,23 @@ export default composite({
   en: "fruit",
   ru: "фрукт",
   pos: "noun",
-  hsd: ["{{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["植物生的东西"],
-  literal: "what plants give birth to",
-  fit: "plain",
+  hsd: ["{{word:shui3}}-{{word:guo3}}"],
+  tts: ["水果"],
+  literal: "water fruit",
+  fit: "natural",
+  transparent: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:ai4}} {{word:chi1}} {{word:shui3}}-{{word:guo3}}.",
+      hanzi: "我爱吃水果。",
+      en: "I love eating fruit.",
+      ru: "Я люблю фрукты.",
+    },
+    {
+      pinyin: "{{Word:shui3}}-{{word:guo3}} {{word:hen3}} {{word:tian2}}.",
+      hanzi: "水果很甜。",
+      en: "The fruit is sweet.",
+      ru: "Фрукты сладкие.",
+    },
+  ],
 });

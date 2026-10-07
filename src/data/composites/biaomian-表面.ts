@@ -8,9 +8,9 @@ export default composite({
   en: "surface",
   ru: "поверхность",
   pos: "noun",
-  hsd: ["{{word:wai4}}-{{word:mian4}}"],
-  tts: ["外面"],
-  literal: "the outside",
+  hsd: ["{{word:mian4}}r", "{{word:wai4}}-{{word:mian4}}"],
+  tts: ["面儿", "外面"],
+  literal: "surface / the outside",
   fit: "natural",
   proposed: true,
 });

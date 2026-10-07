@@ -252,7 +252,7 @@ export function hanziSystem(hanzi, dict) {
   };
 }
 
-// One syllable or more, from the id's tone numbers (kuai4 = 1, qi2guai4 = 2).
+// One syllable or more, from the id's tone numbers (kuai4 = 1, gan1jing4 = 2).
 function isOneSyllable(id) {
   return (id.match(/\d/g) || []).length <= 1;
 }

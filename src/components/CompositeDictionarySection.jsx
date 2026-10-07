@@ -127,6 +127,21 @@ function Entry({ entry, lang, built }) {
         <span class={styles.fit}>{t(lang, "compositeProposed")}</span>
       )}
       {entry.note && <div class={styles.note}>{resolveLessonRefs(entry.note)}</div>}
+      {entry.examples?.length > 0 && (
+        <ul class={styles.examples}>
+          {entry.examples.map((x, i) => {
+            const pinyin = resolveWordRefs(x.pinyin, wordIndex, wordCount);
+            return (
+              <li key={i}>
+                <span class={styles.exPinyin}>{pinyin}</span>
+                <AudioButton pinyin={pinyin} ttsText={x.hanzi} />
+                <span class={styles.exHanzi}>{x.hanzi}</span>
+                <span class={styles.exGloss}>{lang === "rus" ? x.ru : x.en}</span>
+              </li>
+            );
+          })}
+        </ul>
+      )}
     </li>
   );
 }
