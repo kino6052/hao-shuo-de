@@ -12,4 +12,18 @@ export default composite({
   tts: ["好听"],
   literal: "good to listen to",
   fit: "natural",
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:hen3}} {{word:hao3}}-{{word:ting1}}.",
+      hanzi: "这个很好听。",
+      en: "This sounds good.",
+      ru: "Это приятно слышать.",
+    },
+    {
+      pinyin: "{{Word:ta1}}-{{word:de}} {{word:sheng1yin1}} {{word:hen3}} {{word:hao3}}-{{word:ting1}}.",
+      hanzi: "他的声音很好听。",
+      en: "His voice is pleasant.",
+      ru: "У него приятный голос.",
+    },
+  ],
 });

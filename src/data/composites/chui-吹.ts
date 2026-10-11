@@ -8,9 +8,22 @@ export default composite({
   en: "blow",
   ru: "дуть",
   pos: "verb",
-  hsd: ["{{word:yong4}} {{word:kou3}} {{word:zuo4}} {{word:kong1}}-{{word:qi4}}"],
-  tts: ["用口做空气"],
-  literal: "move air with your mouth",
+  hsd: ["{{word:fa1}}-{{word:chu1}} {{word:kong1}}-{{word:qi4}}"],
+  tts: ["发出空气"],
+  literal: "send out air",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:fa1}}-{{word:chu1}} {{word:kong1}}-{{word:qi4}}.",
+      hanzi: "我发出空气。",
+      en: "I blow.",
+      ru: "Я дую.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:fa1}}-{{word:chu1}} {{word:kong1}}-{{word:qi4}}.",
+      hanzi: "他发出空气。",
+      en: "He blows.",
+      ru: "Он дует.",
+    },
+  ],
 });

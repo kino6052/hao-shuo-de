@@ -11,4 +11,18 @@ export default composite({
   hsd: ["{{word:bian4}}"],
   tts: ["变"],
   fit: "word",
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:bian4}} {{word:da4}} {{word:le}}.",
+      hanzi: "他变大了。",
+      en: "He has grown up.",
+      ru: "Он вырос.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:bian4}} {{word:hao3}} {{word:le}}.",
+      hanzi: "你变好了。",
+      en: "You've become better.",
+      ru: "Ты стал лучше.",
+    },
+  ],
 });

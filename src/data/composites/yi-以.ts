@@ -12,5 +12,18 @@ export default composite({
   tts: ["以", "用X"],
   literal: "using X",
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:yong4}} X {{word:zuo4}}.",
+      hanzi: "我用X做。",
+      en: "I do it with X.",
+      ru: "Я делаю это с помощью X.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:yong4}} X {{word:xie3}}.",
+      hanzi: "他用X写。",
+      en: "He writes with X.",
+      ru: "Он пишет с помощью X.",
+    },
+  ],
 });

@@ -12,4 +12,18 @@ export default composite({
   tts: ["玩儿的说"],
   literal: "say in play",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:wan2r}}-{{word:de}} {{word:shuo1}}.",
+      hanzi: "他玩儿的说。",
+      en: "He is joking.",
+      ru: "Он шутит.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:wan2r}}-{{word:de}} {{word:shuo1}}.",
+      hanzi: "我玩儿的说。",
+      en: "I'm joking.",
+      ru: "Я шучу.",
+    },
+  ],
 });

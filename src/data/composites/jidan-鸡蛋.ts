@@ -15,5 +15,18 @@ export default composite({
   tts: ["鸡蛋", "飞的动物生的东西"],
   literal: "what flying animals give birth to",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:chi1}} {{word:ji1}}-{{word:dan4}}.",
+      hanzi: "我吃鸡蛋。",
+      en: "I eat an egg.",
+      ru: "Я ем яйцо.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:yao4}} {{word:ji1}}-{{word:dan4}} {{word:ma}}?",
+      hanzi: "你要鸡蛋吗？",
+      en: "Do you want an egg?",
+      ru: "Хочешь яйцо?",
+    },
+  ],
 });

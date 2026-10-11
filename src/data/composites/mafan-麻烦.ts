@@ -8,8 +8,22 @@ export default composite({
   en: "trouble",
   ru: "хлопоты",
   pos: "adjective",
-  hsd: ["{{word:bu4}} {{word:hao3}} {{word:zuo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["不好做的东西"],
-  literal: "something hard to deal with",
-  fit: "natural",
+  hsd: ["{{word:nan2}} {{word:zuo4}}", "{{word:you3}} {{word:wen4}}-{{word:ti2}}"],
+  tts: ["难做", "有问题"],
+  literal: "hard to do / has a problem",
+  fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:nan2}} {{word:zuo4}}.",
+      hanzi: "这个难做。",
+      en: "This is troublesome.",
+      ru: "Это хлопотно.",
+    },
+    {
+      pinyin: "{{Word:na4}}-{{light:ge4}} {{word:hen3}} {{word:nan2}} {{word:zuo4}}.",
+      hanzi: "那个很难做。",
+      en: "That is a lot of trouble.",
+      ru: "Это очень хлопотно.",
+    },
+  ],
 });

@@ -12,4 +12,18 @@ export default composite({
   tts: ["鼻子不好"],
   literal: "a bad nose",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:bi2zi}} {{word:bu4}} {{word:hao3}}.",
+      hanzi: "我鼻子不好。",
+      en: "I have a cold.",
+      ru: "Я простужен.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:bi2zi}} {{word:bu4}} {{word:hao3}}.",
+      hanzi: "他鼻子不好。",
+      en: "He has a cold.",
+      ru: "Он простужен.",
+    },
+  ],
 });

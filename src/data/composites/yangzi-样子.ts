@@ -13,5 +13,18 @@ export default composite({
   literal: "looks",
   fit: "natural",
   note: "Lesson {{lesson:direction-and-result}}: X kàn-qǐ-lái hěn hǎo.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}}-{{word:de}} {{word:yang4}}-{{word:zi}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "他的样子很好。",
+      en: "He looks good.",
+      ru: "Он хорошо выглядит.",
+    },
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "这个看起来很好。",
+      en: "This looks good.",
+      ru: "Это выглядит хорошо.",
+    },
+  ],
 });

@@ -31,6 +31,7 @@
     "check-practice": "node scripts/check-practice.js",
     "check-example-runs": "node scripts/check-example-runs.js",
     "check-word-builder": "node scripts/check-word-builder.js",
+    "check-passive": "node scripts/check-passive.js",
     "report-heads": "node scripts/report-heads.js"
   },
   "dependencies": {

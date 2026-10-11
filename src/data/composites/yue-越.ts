@@ -13,4 +13,18 @@ export default composite({
   literal: "become …",
   fit: "plain",
   note: "For \"more and more\", say biàn duō le, biàn dà le.",
+  examples: [
+    {
+      pinyin: "{{Word:tian1}} {{word:bian4}} {{word:leng3}} {{word:le}}.",
+      hanzi: "天变冷了。",
+      en: "It's getting colder.",
+      ru: "Становится всё холоднее.",
+    },
+    {
+      pinyin: "{{Word:shui3}} {{word:bian4}} {{word:duo1}} {{word:le}}.",
+      hanzi: "水变多了。",
+      en: "There is more and more water.",
+      ru: "Воды всё больше.",
+    },
+  ],
 });

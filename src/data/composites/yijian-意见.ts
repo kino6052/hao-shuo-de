@@ -8,9 +8,22 @@ export default composite({
   en: "opinion",
   ru: "мнение",
   pos: "noun",
-  hsd: ["{{word:xiang3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["想的东西"],
-  literal: "what you think",
+  hsd: ["{{word:xiang3}}-{{word:fa3}}"],
+  tts: ["想法"],
+  literal: "thought-way",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:xiang3}}-{{word:fa3}}.",
+      hanzi: "我有想法。",
+      en: "I have an opinion.",
+      ru: "У меня есть мнение.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:you3}} {{word:xiang3}}-{{word:fa3}} {{word:ma}}?",
+      hanzi: "你有想法吗？",
+      en: "Do you have an opinion?",
+      ru: "У тебя есть мнение?",
+    },
+  ],
 });

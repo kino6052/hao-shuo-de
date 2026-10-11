@@ -20,10 +20,10 @@ export default composite({
       ru: "Почему ты не придёшь?",
     },
     {
-      pinyin: "{{Word:wei4}}-{{word:shen2me}} {{word:tian1}} {{word:shi4}} {{word:lan2}}-{{word:se4}}-{{word:de}}?",
-      hanzi: "为什么天是蓝色的？",
-      en: "Why is the sky blue?",
-      ru: "Почему небо синее?",
+      pinyin: "{{Word:wei4}}-{{word:shen2me}} {{word:shui3}} {{word:shi4}} {{word:tian1}}-{{word:de}} {{word:yan2se4}}-{{word:de}}?",
+      hanzi: "为什么水是天的颜色的？",
+      en: "Why is the water blue?",
+      ru: "Почему вода синяя?",
     },
   ],
 });

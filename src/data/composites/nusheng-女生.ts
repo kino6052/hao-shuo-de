@@ -12,5 +12,18 @@ export default composite({
   tts: ["女生", "学的女人"],
   literal: "a woman who learns",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:shi4}} {{word:nv3}}-{{word:sheng1}}.",
+      hanzi: "她是女生。",
+      en: "She is a girl student.",
+      ru: "Она школьница.",
+    },
+    {
+      pinyin: "{{Word:na4}}-{{light:ge4}} {{word:nv3}}-{{word:sheng1}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "那个女生很好。",
+      en: "That girl is nice.",
+      ru: "Та девочка хорошая.",
+    },
+  ],
 });

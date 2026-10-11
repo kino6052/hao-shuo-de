@@ -13,4 +13,18 @@ export default composite({
   literal: "how big",
   fit: "natural",
   note: "nǐ duō dà? How old are you?",
+  examples: [
+    {
+      pinyin: "{{Word:ni3}} {{word:duo1}} {{word:da4}}?",
+      hanzi: "你多大？",
+      en: "How old are you?",
+      ru: "Сколько тебе лет?",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:duo1}} {{word:da4}} {{word:le}}?",
+      hanzi: "他多大了？",
+      en: "How old is he?",
+      ru: "Сколько ему лет?",
+    },
+  ],
 });

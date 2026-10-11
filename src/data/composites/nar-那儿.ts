@@ -12,4 +12,18 @@ export default composite({
   tts: ["那边"],
   literal: "that side",
   fit: "natural",
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:zai4}} {{word:na4}}-{{word:bian1}}.",
+      hanzi: "他在那边。",
+      en: "He is there.",
+      ru: "Он там.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:yao4}} {{word:qu4}} {{word:na4}}-{{word:bian1}}.",
+      hanzi: "我要去那边。",
+      en: "I want to go there.",
+      ru: "Я хочу пойти туда.",
+    },
+  ],
 });

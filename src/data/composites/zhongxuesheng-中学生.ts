@@ -15,5 +15,18 @@ export default composite({
   tts: ["中学生", "不大不小的学的人"],
   literal: "middle-learning student / a not-big, not-small learner",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:shi4}} {{word:zhong1}}-{{word:xue2}}-{{word:sheng1}}.",
+      hanzi: "他是中学生。",
+      en: "He is a middle-school student.",
+      ru: "Он школьник.",
+    },
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:hai2}}-{{word:zi}} {{word:shi4}} {{word:zhong1}}-{{word:xue2}}-{{word:sheng1}}.",
+      hanzi: "我的孩子是中学生。",
+      en: "My child is a middle-school student.",
+      ru: "Мой ребёнок — школьник.",
+    },
+  ],
 });

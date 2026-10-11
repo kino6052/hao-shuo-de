@@ -8,11 +8,22 @@ export default composite({
   en: "chairperson",
   ru: "председатель",
   pos: "noun",
-  hsd: [
-    "{{word:hen3}}-{{word:duo1}}-{{word:ren2}}-{{word:li3}} {{word:zui4}} {{word:da4}}-{{word:de}} {{word:ren2}}",
-  ],
-  tts: ["很多人里最大的人"],
-  literal: "the biggest among many people",
+  hsd: ["{{word:jue2}}-{{word:ding4}}-{{word:zhe3}}"],
+  tts: ["决定者"],
+  literal: "one who decides",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:shi4}} {{word:jue2}}-{{word:ding4}}-{{word:zhe3}}.",
+      hanzi: "他是决定者。",
+      en: "He is the chairperson.",
+      ru: "Он председатель.",
+    },
+    {
+      pinyin: "{{Word:jue2}}-{{word:ding4}}-{{word:zhe3}} {{word:zai4}} {{word:zhe4}}-{{word:li3}}.",
+      hanzi: "决定者在这里。",
+      en: "The chairperson is here.",
+      ru: "Председатель здесь.",
+    },
+  ],
 });

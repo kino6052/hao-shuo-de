@@ -12,5 +12,18 @@ export default composite({
   tts: ["有时", "有的时间"],
   literal: "some of the time",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:you3}}-{{word:shi2}} {{word:lai2}}.",
+      hanzi: "我有时来。",
+      en: "Sometimes I come.",
+      ru: "Иногда я прихожу.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:you3}}-{{word:shi2}} {{word:bu4}} {{word:lai2}}.",
+      hanzi: "他有时不来。",
+      en: "Sometimes he doesn't come.",
+      ru: "Иногда он не приходит.",
+    },
+  ],
 });

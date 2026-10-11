@@ -20,10 +20,10 @@ export default composite({
       ru: "Сегодня жарко.",
     },
     {
-      pinyin: "{{Word:tian1}} {{word:hen3}} {{word:lan2}}.",
-      hanzi: "天很蓝。",
-      en: "The sky is very blue.",
-      ru: "Небо очень синее.",
+      pinyin: "{{Word:ming2}}-{{word:tian1}} {{word:wo3}} {{word:zai4}} {{word:jia1}}.",
+      hanzi: "明天我在家。",
+      en: "Tomorrow I'll be at home.",
+      ru: "Завтра я буду дома.",
     },
   ],
 });

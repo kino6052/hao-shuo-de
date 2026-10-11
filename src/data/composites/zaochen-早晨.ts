@@ -13,4 +13,18 @@ export default composite({
   fit: "natural",
   transparent: true,
   note: "Same as 早上.",
+  examples: [
+    {
+      pinyin: "{{Word:zao3}}-{{word:shang4}} {{word:wo3}} {{word:he1}} {{word:shui3}}.",
+      hanzi: "早上我喝水。",
+      en: "In the morning I drink water.",
+      ru: "Утром я пью воду.",
+    },
+    {
+      pinyin: "{{Word:zao3}}-{{word:shang4}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "早上很好。",
+      en: "The morning is nice.",
+      ru: "Утро хорошее.",
+    },
+  ],
 });

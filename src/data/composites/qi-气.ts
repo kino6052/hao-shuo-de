@@ -12,5 +12,18 @@ export default composite({
   tts: ["气"],
   fit: "word",
   note: "For anger, say shēng-qì.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:tian1}}-{{word:shang4}} {{word:you3}} {{word:qi4}}.",
+      hanzi: "天上有气。",
+      en: "There is air in the sky.",
+      ru: "В небе есть воздух.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:qi4}}.",
+      hanzi: "我有气。",
+      en: "I'm angry.",
+      ru: "Я сержусь.",
+    },
+  ],
 });

@@ -8,8 +8,22 @@ export default composite({
   en: "project",
   ru: "проект",
   pos: "noun",
-  hsd: ["{{word:yao4}} {{word:zuo4}}-{{word:de}} {{word:da4}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["要做的大东西"],
-  literal: "a big thing to do",
+  hsd: ["{{word:yao4}} {{word:zuo4}}-{{word:de}}"],
+  tts: ["要做的"],
+  literal: "what is to be done",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:yao4}} {{word:zuo4}}-{{word:de}}.",
+      hanzi: "我有要做的。",
+      en: "I have a project.",
+      ru: "У меня есть проект.",
+    },
+    {
+      pinyin: "{{Word:yao4}} {{word:zuo4}}-{{word:de}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "要做的很大。",
+      en: "The project is big.",
+      ru: "Проект большой.",
+    },
+  ],
 });

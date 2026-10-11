@@ -4,27 +4,24 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "is-color",
-  words: [
-    {
-      word: "lan2",
-      en: "blue",
-      ru: "синий",
-    },
-  ],
   prose: {
     en: [
       "**To say what color something is**, put {{word:shi4}} before the color, and -{{word:de}} after it.",
       "",
       "**Thing + {{word:shi4}} + color-{{word:de}}**",
+      "",
+      "Blue, green and yellow have no word of their own. Name a thing that has the color: {{word:tian1}}-{{word:de}} {{word:yan2se4}} (the color of the sky) is blue, {{word:zhi2wu4}}-{{word:de}} {{word:yan2se4}} (the color of plants) is green, and {{word:jin1}}-{{word:de}} {{word:yan2se4}} (the color of gold) is yellow.",
     ],
     ru: [
       "**Чтобы сказать, какого цвета что-то**, поставьте {{word:shi4}} перед цветом, а -{{word:de}} — после него.",
       "",
       "**Вещь + {{word:shi4}} + цвет-{{word:de}}**",
+      "",
+      "У синего, зелёного и жёлтого нет своих слов. Назовите вещь такого цвета: {{word:tian1}}-{{word:de}} {{word:yan2se4}} (цвет неба) — синий, {{word:zhi2wu4}}-{{word:de}} {{word:yan2se4}} (цвет растений) — зелёный, а {{word:jin1}}-{{word:de}} {{word:yan2se4}} (цвет золота) — жёлтый.",
     ],
     tldr: {
-      en: "Thing + {{word:shi4}} + color-{{word:de}}: {{Word:shui3}} {{word:shi4}} {{word:lan2}}-{{word:se4}}-{{word:de}}, the water is blue.",
-      ru: "Вещь + {{word:shi4}} + цвет-{{word:de}}: {{Word:shui3}} {{word:shi4}} {{word:lan2}}-{{word:se4}}-{{word:de}} — вода синяя.",
+      en: "Thing + {{word:shi4}} + color-{{word:de}}: {{Word:shui3}} {{word:shi4}} {{word:tian1}}-{{word:de}} {{word:yan2se4}}-{{word:de}}, the water is blue.",
+      ru: "Вещь + {{word:shi4}} + цвет-{{word:de}}: {{Word:shui3}} {{word:shi4}} {{word:tian1}}-{{word:de}} {{word:yan2se4}}-{{word:de}} — вода синяя.",
     },
     necessity: { en: "Now you can describe what you see.", ru: "Теперь вы можете описать то, что видите." },
   },
@@ -52,8 +49,8 @@ export default lessonModule({
       ru: "Палка на полу чёрная.",
     },
     {
-      pinyin: "{{Word:zhe4}}-ge {{word:dong4}}-{{word:wu4}}-{{word:de}} {{word:shen1ti3}} {{word:shi4}} {{word:huang2}}-{{word:se4}}-{{word:de}}.",
-      hanzi: "这个动物的身体是黄色的。",
+      pinyin: "{{Word:zhe4}}-ge {{word:dong4}}-{{word:wu4}}-{{word:de}} {{word:shen1ti3}} {{word:shi4}} {{word:jin1}}-{{word:de}} {{word:yan2se4}}-{{word:de}}.",
+      hanzi: "这个动物的身体是金的颜色的。",
       en: "This animal's body is yellow.",
       ru: "Тело этого животного жёлтое.",
     },
@@ -64,8 +61,8 @@ export default lessonModule({
       ru: "Четыре животных белые, а пять — чёрные.",
     },
     {
-      pinyin: "{{Word:qi1}}-ge {{word:bao1}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}, {{word:ba1}}-ge {{word:shi4}} {{word:lan2}}-{{word:se4}}-{{word:de}}.",
-      hanzi: "七个包是红色的，八个是蓝色的。",
+      pinyin: "{{Word:qi1}}-ge {{word:bao1}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}, {{word:ba1}}-ge {{word:shi4}} {{word:tian1}}-{{word:de}} {{word:yan2se4}}-{{word:de}}.",
+      hanzi: "七个包是红色的，八个是天的颜色的。",
       en: "Seven bags are red, and eight are blue.",
       ru: "Семь сумок красные, а восемь — синие.",
     },
@@ -86,8 +83,8 @@ export default lessonModule({
     {
       en: "The bag is yellow.",
       ru: "Сумка жёлтая.",
-      answer: "{{Word:bao1}} {{word:shi4}} {{word:huang2}}-{{word:se4}}-{{word:de}}.",
-      hanzi: "包是黄色的。",
+      answer: "{{Word:bao1}} {{word:shi4}} {{word:jin1}}-{{word:de}} {{word:yan2se4}}-{{word:de}}.",
+      hanzi: "包是金的颜色的。",
     },
     {
       en: "The animal is black.",
@@ -98,14 +95,14 @@ export default lessonModule({
     {
       en: "The bag is blue.",
       ru: "Сумка синяя.",
-      answer: "{{Word:bao1}} {{word:shi4}} {{word:lan2}}-{{word:se4}}-{{word:de}}.",
-      hanzi: "包是蓝色的。",
+      answer: "{{Word:bao1}} {{word:shi4}} {{word:tian1}}-{{word:de}} {{word:yan2se4}}-{{word:de}}.",
+      hanzi: "包是天的颜色的。",
     },
     {
       en: "Her eyes are blue.",
       ru: "У неё голубые глаза.",
-      answer: "{{Word:ta1}}-{{word:de}} {{word:yan3jing}} {{word:shi4}} {{word:lan2}}-{{word:se4}}-{{word:de}}.",
-      hanzi: "她的眼睛是蓝色的。",
+      answer: "{{Word:ta1}}-{{word:de}} {{word:yan3jing}} {{word:shi4}} {{word:tian1}}-{{word:de}} {{word:yan2se4}}-{{word:de}}.",
+      hanzi: "她的眼睛是天的颜色的。",
     },
     {
       en: "My car is red.",
@@ -114,21 +111,27 @@ export default lessonModule({
       hanzi: "我的车是红色的。",
     },
     {
-      en: "The sky is blue.",
-      ru: "Небо синее.",
-      answer: "{{Word:tian1}} {{word:shi4}} {{word:lan2}}-{{word:se4}}-{{word:de}}.",
-      hanzi: "天是蓝色的。",
+      en: "The bag is green.",
+      ru: "Сумка зелёная.",
+      answer: "{{Word:bao1}} {{word:shi4}} {{word:zhi2wu4}}-{{word:de}} {{word:yan2se4}}-{{word:de}}.",
+      hanzi: "包是植物的颜色的。",
+    },
+    {
+      en: "The water is blue.",
+      ru: "Вода синяя.",
+      answer: "{{Word:shui3}} {{word:shi4}} {{word:tian1}}-{{word:de}} {{word:yan2se4}}-{{word:de}}.",
+      hanzi: "水是天的颜色的。",
     },
   ],
   faq: [
-    // why does lán-sè mean blue and green? (Hao-shuo-de choice; describe green)
+    // why are blue, green and yellow made of other words? (Hao-shuo-de choice)
     {
       question: {
-        en: "Why does {{word:lan2}}-{{word:se4}} mean blue and green?",
-        ru: "Почему {{word:lan2}}-{{word:se4}} значит и синий, и зелёный?",
+        en: "Why is blue {{word:tian1}}-{{word:de}} {{word:yan2se4}}, not a word of its own?",
+        ru: "Почему «синий» — это {{word:tian1}}-{{word:de}} {{word:yan2se4}}, а не отдельное слово?",
       },
-      en: "In full Mandarin, {{word:lan2}}-{{word:se4}} is blue, and green has its own word. Hao-shuo-de keeps the list short, so it uses {{word:lan2}}-{{word:se4}} for both. To make green clear, describe it: {{word:zhi2wu4}}-{{word:de}} {{word:yan2se4}} (the color of plants).",
-      ru: "В полном китайском {{word:lan2}}-{{word:se4}} — это синий, а для зелёного есть своё слово. Hǎo-shuō-de держит список коротким, поэтому {{word:lan2}}-{{word:se4}} — это и синий, и голубой, и зелёный. Чтобы ясно сказать «зелёный», опишите его: {{word:zhi2wu4}}-{{word:de}} {{word:yan2se4}} (цвет растений).",
+      en: "In full Mandarin, blue, green and yellow each have a word. Hao-shuo-de keeps the list short, so it names these colors by a thing that has them: the sky, plants, gold. The same way works for any other color: say the color of a thing you both know.",
+      ru: "В полном китайском у синего, зелёного и жёлтого есть свои слова. Hǎo-shuō-de держит список коротким и называет эти цвета через вещь, у которой они есть: небо, растения, золото. Так можно сказать о любом другом цвете: назовите цвет вещи, которую знаете вы оба.",
     },
     // why shì hóng-sè-de and not hěn hóng-sè?
     {

@@ -10,6 +10,11 @@ export default lessonModule({
       en: "give; to, for",
       ru: "давать; кому, для",
     },
+    {
+      word: "ti4",
+      en: "instead of, in someone's place",
+      ru: "вместо, за (кого-то)",
+    },
   ],
   prose: {
     en: [
@@ -18,6 +23,8 @@ export default lessonModule({
       "**Who + {{word:gei3}} + person + thing**",
       "",
       "{{word:gei3}} before a verb means for or to: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:xie3}}, I write to you.",
+      "",
+      "{{word:ti4}} before a verb means in someone's place: {{Word:ta1}} {{word:ti4}} {{word:wo3}} {{word:qu4}}, he goes instead of me.",
       "",
       "You know {{word:mai3}} (buy) from Lesson {{lesson:questions}}. A market is {{word:mai3}} {{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}}, the place where you buy things.",
     ],
@@ -28,6 +35,8 @@ export default lessonModule({
       "",
       "{{word:gei3}} перед глаголом значит «для» или «кому»: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:xie3}} — я пишу тебе.",
       "",
+      "{{word:ti4}} перед глаголом значит «вместо»: {{Word:ta1}} {{word:ti4}} {{word:wo3}} {{word:qu4}} — он идёт вместо меня.",
+      "",
       "{{word:mai3}} (покупать) вы знаете из урока {{lesson:questions}}. Рынок — это {{word:mai3}} {{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}}, место, где покупают вещи.",
     ],
     tldr: {
@@ -37,8 +46,8 @@ export default lessonModule({
     necessity: { en: "Now you can say who gets what.", ru: "Теперь вы можете сказать, кто что получает." },
   },
   info: {
-    en: "{{word:gei3}} + person + thing, give: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:shui3}}. (I give you water.)",
-    ru: "{{word:gei3}} + человек + вещь — давать: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:shui3}}. (Я даю тебе воду.)",
+    en: "{{word:gei3}} + person + thing, give: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:shui3}}. (I give you water.) {{word:ti4}} + person + verb, instead of: {{Word:ta1}} {{word:ti4}} {{word:wo3}} {{word:qu4}}. (He goes instead of me.)",
+    ru: "{{word:gei3}} + человек + вещь — давать: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:shui3}}. (Я даю тебе воду.) {{word:ti4}} + человек + глагол — вместо: {{Word:ta1}} {{word:ti4}} {{word:wo3}} {{word:qu4}}. (Он идёт вместо меня.)",
   },
   examples: [
     {
@@ -54,10 +63,10 @@ export default lessonModule({
       ru: "Я даю тебе воду.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:gei3}} {{word:wo3}} {{word:yi1fu}}.",
-      hanzi: "她给我衣服。",
-      en: "She gives me clothes.",
-      ru: "Она даёт мне одежду.",
+      pinyin: "{{Word:wo3}} {{word:ti4}} {{word:ni3}} {{word:shuo1}}.",
+      hanzi: "我替你说。",
+      en: "I'll say it for you.",
+      ru: "Я скажу за тебя.",
     },
     {
       pinyin: "{{Word:ta1}} {{word:gei3}} {{word:wo3}} {{word:san1}}-ge, {{word:wo3}} {{word:gei3}} {{word:ta1}} {{word:si4}}-ge.",
@@ -84,10 +93,10 @@ export default lessonModule({
       ru: "Рынок поблизости.",
     },
     {
-      pinyin: "{{Word:gei3}} {{word:wo3}} {{word:yi1}}-{{word:dian3}} {{word:shui3}}.",
-      hanzi: "给我一点水。",
-      en: "Give me a little water.",
-      ru: "Дай мне немного воды.",
+      pinyin: "{{Word:ta1}} {{word:ti4}} {{word:wo3}} {{word:qu4}}.",
+      hanzi: "他替我去。",
+      en: "He goes instead of me.",
+      ru: "Он идёт вместо меня.",
     },
   ],
   exercises: [
@@ -96,6 +105,12 @@ export default lessonModule({
       ru: "Дай мне сумку.",
       answer: "{{Word:gei3}} {{word:wo3}} {{word:bao1}}.",
       hanzi: "给我包。",
+    },
+    {
+      en: "He says it for me.",
+      ru: "Он говорит за меня.",
+      answer: "{{Word:ta1}} {{word:ti4}} {{word:wo3}} {{word:shuo1}}.",
+      hanzi: "他替我说。",
     },
   ],
   faq: [

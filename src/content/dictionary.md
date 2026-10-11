@@ -78,7 +78,6 @@ hóng | adjective | red; with {{word:se4}}, the colour: {{word:hong2}}-{{word:se
 hòu | noun/directional | behind, after, back; composes with other roots via a hyphen (e.g. {{word:hou4}}-{{word:mian4}}) |
 huà | noun | words, speech, what is said: {{word:shuo1}} {{word:hua4}}, talk; {{word:dui4}}-{{word:hua4}}, a conversation |
 huài | adjective/verb | bad, negative, broken, damaged, non-essential | ike, pakala
-huáng | adjective | yellow; with {{word:se4}}, the colour: {{word:huang2}}-{{word:se4}} |
 huí | verb | to return, go back, come back; after a verb, says it goes back (e.g. {{word:hui2}} {{word:jia1}}, "go home"; {{word:hui2}}-{{word:lai2}}, "come back") |
 huì | auxiliary | will, going to (marks a predicted or future action); placed before a verb the same way {{word:neng2}} is; after {{word:xue2}}, {{word:xue2}}-{{word:hui4}} is "learn until you can" |
 huǒ | noun | fire, cooking element, chemical heat source | seli
@@ -90,6 +89,7 @@ jiān | noun | between, the space between (e.g. {{word:zhong1}}-{{word:jian1}}, 
 jiǎo | noun | foot, leg, organ of locomotion, bottom part | noka
 jiào | verb | to call, be named; to produce an animal vocalization under the Quote Partition; before a person and a verb, to tell, have, or let them do it (e.g. {{word:jiao4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}}, "let him in"; {{word:bu4}} {{word:jiao4}}, "won't let") | nimi, mu
 jiàzhí | noun | value, worth; how much something is worth |
+jié | verb | to tie, knot, bind together: {{word:ba3}} {{word:xian4}} {{word:jie2}}-{{word:hao3}}, tie the thread up; in {{word:jie2}}-{{word:guo3}}, the result |
 jīn | noun | money, cash, savings, wealth | mani
 jìn | verb | to enter, go in, come in; after a verb, says it goes in (e.g. {{word:jin4}}-{{word:lai2}}, "come in"; {{word:fang4}}-{{word:jin4}}-{{word:qu4}}, "put in") |
 jiǔ | number | nine |
@@ -104,13 +104,13 @@ kōng | adjective | empty (e.g. {{word:bao1}} {{word:shi4}} {{word:kong1}}-{{wor
 kǒu | noun | hole, opening, door, window, orifice | lupa
 kuài | adjective | fast, quick; before a verb, quickly ({{word:kuai4}} {{word:lai2}}!, "come quickly!") |
 lái | verb | to come, arrive, happen; {{word:wo3}} {{word:lai2}} + verb, "let me do it" | kama
-lán | adjective | blue; with {{word:se4}}, the colour: {{word:lan2}}-{{word:se4}} |
 lǎo | adjective | old (people, animals, plants); {{word:bu4}} {{word:lao3}}, "young" |
 le | particle | perfective aspect marker, completed change of state | pini
 lěng | adjective | cold, cool, uncooked, raw | lete
 lì | noun | strength, force (e.g. {{word:you3}} {{word:li4}}, "strong"; {{word:li4}}-{{word:qi4}}, "a body's strength"; {{word:neng2}}-{{word:li4}}, "ability") |
 lǐ | noun/directional | inside, within; composes with other roots via a hyphen (e.g. {{word:li3}}-{{word:mian4}}) |
 liǎng | number | two; quantifies dual entities when coupled to the measure word (liang-ge) | tu
+liào | noun | material, ingredients, the stuff something is made from: {{word:zuo4}} {{word:fan4}} {{word:yao4}} {{word:liao4}}, cooking needs ingredients |
 líng | number | zero; big numbers are read digit by digit: {{word:er4}}-{{word:ling2}}-{{word:ling2}}, 200; {{word:er4}}-{{word:ling2}}-{{word:er4}}-{{word:liu4}} {{word:nian2}}, the year 2026 |
 liù | number | six |
 liú | verb | to stay, remain, keep, endure, protect | awen
@@ -136,10 +136,12 @@ nián | noun | year (e.g. {{word:san1}} {{word:nian2}}, "three years"; {{word:qu
 nǚ | adjective/noun | female, woman: {{word:nv3}}-{{word:ren2}}, a woman |
 pà | verb/adjective | to fear, be afraid of; scared, frightened |
 pángbiān | noun | side, vicinity, area beside, hip | poka
+píng | adjective | flat, level, even: {{word:lu4}} {{word:hen3}} {{word:ping2}}, the road is flat; {{word:shui3}}-{{word:ping2}}, level |
 qì | noun | air, gas, breath (in everyday Mandarin, air is {{word:kong1}}-{{word:qi4}}) |
 qī | number | seven |
 qǐ | verb/directional | to rise, get up; begin; composes with a verb via a hyphen to mark the start of an action (e.g. {{word:shuo1}}-{{word:qi3}}, "to bring up/mention") |
 qián | noun | front, face, foremost area, chest | sinpin
+qiú | noun | ball, sphere: {{word:wan2r}} {{word:qiu2}}, play with a ball; {{word:di4}}-{{word:qiu2}}, the Earth |
 qù | verb | to go, move toward, travel away | tawa
 ràng | verb | to let, allow; to make (someone do or feel something): {{word:rang4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}}, let him in; {{word:rang4}} {{word:wo3}} {{word:kan4}}-kan, let me see |
 rè | adjective | hot, warm, cooked, chemically energetic | seli
@@ -159,6 +161,7 @@ shí | number | ten |
 shì | verb | to be, copula link between subjects and identity predicates |
 shǒu | noun | hand, arm, tactile organ | luka
 shū | noun | book: {{word:kan4}} {{word:shu1}}, read; {{word:xie3}} {{word:shu1}}, write a book |
+shù | noun | number, amount, count: {{word:ren2}}-{{word:de}} {{word:shu4}}, the number of people; {{word:hao3}}-{{word:huai4}}-{{word:de}} {{word:shu4}}, a score |
 shuǐ | noun | water, liquid, fluid, wet substance, beverage | telo
 shuìjiào | verb/adjective | to sleep, rest, be inactive; sleeping, asleep | lape
 shuō | verb/noun | to communicate, say, speak, talk, use language; language, speech | toki
@@ -168,10 +171,12 @@ suàn | verb | to calculate, count, work out; {{word:suan4}}-{{word:de}} {{word:
 tā | pronoun | he, she, it, they, them; syntactically genderless and number-fluid | ona
 tǎng | verb | to lie (down); {{word:tang3}}-{{word:xia4}}, "lie down" |
 tí | noun | question, problem, topic: {{word:wen4}}-{{word:ti2}}, a question, a problem |
+tì | preposition | instead of, for (in someone's place): {{word:ti4}} {{word:wo3}} {{word:qu4}}, goes in my place; {{word:ti4}} {{word:ni3}} {{word:shuo1}}, says it for you |
 tián | adjective | sweet, fragrant, cute, innocent, adorable | suwi
 tiān | noun | day; the sky (e.g. {{word:san1}} {{word:tian1}}, "three days"; {{word:ming2}}-{{word:tian1}}, "tomorrow"; {{word:tian1}}-{{word:qi4}}, "weather") |
 tīng | verb | to hear, listen, pay attention to, obey | kute
 tóng | adjective | same, together: {{word:bu4}}-{{word:tong2}}, different; {{word:tong2}}-{{word:xue2}}, classmate; {{word:tong2}}-{{word:yang4}}, the same way |
+tòng | adjective | pain, painful, to hurt: {{word:wo3}}-{{word:de}} {{word:tou2}} {{word:hen3}} {{word:tong4}}, my head hurts |
 tōng | verb | to go through, lead to; open, not blocked (e.g. {{word:tong1}}-{{word:guo4}} {{word:zhe4}}-ge {{word:di4}}-{{light:fang1}}, "go through this place"; {{word:lu4}} {{word:tong1}}-{{word:dao4}} {{word:jia1}}, "the road leads home"; {{word:lu4}} {{word:bu4}} {{word:tong1}}, "the road is blocked") |
 tóu | noun | head, mind, internal regulatory director | lawa
 wài | verb/adjective | away, outside | weka
@@ -207,6 +212,7 @@ yīfu | noun | clothing, cloth, fabric, textile, privacy layer | len
 yìng | adjective/noun | hard, stone-like; rock, stone, metal | kiwen
 yīnwèi | conjunction/coverb | because, because of |
 yòng | verb/coverb | to use, utilize; with, by means of | kepeken
+yóu | noun | oil, cooking oil, fat: {{word:zuo4}} {{word:fan4}} {{word:yong4}} {{word:you2}}, cooking uses oil |
 yǒu | verb | to have, contain, carry, hold, exist, there is; must be negated with mei, never bu | jo, lon
 yòu | adverb | again: it happens once more; goes before the verb (e.g. {{word:ta1}} {{word:you4}} {{word:chi1}} {{word:le}}, "he ate again") |
 yuán | adjective/noun | round, circular, spherical; ball, circle, wheel, cycle | sike

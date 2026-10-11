@@ -68,12 +68,12 @@ describe("render: nouns", () => {
 
   test("the parts follow Mandarin order, not answer order", () => {
     const n = node("动物", {
-      color: word(node("huang2")),
+      color: word(node("hong2")),
       kind: word(node("xiao3")),
       where: word(node("shui3")),
       from: word(node("jia1")),
     });
-    expect(render(n, py)).toBe("cóng-jiā-lái-de zài-shuǐ-lǐ-de xiǎo-de huáng-de dòng-wù");
+    expect(render(n, py)).toBe("cóng-jiā-lái-de zài-shuǐ-lǐ-de xiǎo-de hóng-de dòng-wù");
   });
 
   test("answers nest, and duō takes hěn", () => {

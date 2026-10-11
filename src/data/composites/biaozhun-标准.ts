@@ -8,10 +8,22 @@ export default composite({
   en: "standard",
   ru: "стандарт",
   pos: "noun",
-  hsd: [
-    "{{word:ren2}}-{{word:ren2}} {{word:dou1}} {{word:yong4}}-{{word:de}} {{word:fang1}}-{{word:fa3}}",
-  ],
-  tts: ["人人都用的方法"],
-  literal: "the way everyone uses",
+  hsd: ["{{word:dui4}}-{{word:de}} {{word:fang1}}-{{word:fa3}}"],
+  tts: ["对的方法"],
+  literal: "the right way",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:yong4}} {{word:dui4}}-{{word:de}} {{word:fang1}}-{{word:fa3}}.",
+      hanzi: "我用对的方法。",
+      en: "I use the standard.",
+      ru: "Я использую стандарт.",
+    },
+    {
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:dui4}}-{{word:de}} {{word:fang1}}-{{word:fa3}}.",
+      hanzi: "这是对的方法。",
+      en: "This is the standard.",
+      ru: "Это стандарт.",
+    },
+  ],
 });

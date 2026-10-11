@@ -12,4 +12,18 @@ export default composite({
   tts: ["方法"],
   literal: "way",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:hao3}} {{word:fang1}}-{{word:fa3}}.",
+      hanzi: "我有好方法。",
+      en: "I have a good idea.",
+      ru: "У меня есть хорошая идея.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:you3}} {{word:fang1}}-{{word:fa3}} {{word:ma}}?",
+      hanzi: "你有方法吗？",
+      en: "Do you have an idea?",
+      ru: "У тебя есть идея?",
+    },
+  ],
 });

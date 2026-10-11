@@ -15,5 +15,18 @@ export default composite({
   tts: ["车站", "等车的地方"],
   literal: "car stand / where you wait for the car",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:che1}}-{{word:zhan4}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "车站很大。",
+      en: "The station is big.",
+      ru: "Станция большая.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:qu4}} {{word:che1}}-{{word:zhan4}}.",
+      hanzi: "我去车站。",
+      en: "I'm going to the station.",
+      ru: "Я иду на станцию.",
+    },
+  ],
 });

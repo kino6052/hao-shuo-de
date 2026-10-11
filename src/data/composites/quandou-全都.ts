@@ -11,4 +11,18 @@ export default composite({
   hsd: ["{{word:dou1}}"],
   tts: ["都"],
   fit: "word",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:men}} {{word:dou1}} {{word:lai2}}.",
+      hanzi: "我们都来。",
+      en: "We are all coming.",
+      ru: "Мы все придём.",
+    },
+    {
+      pinyin: "{{Word:ta1}}-{{word:men}} {{word:dou1}} {{word:hao3}}.",
+      hanzi: "他们都好。",
+      en: "They are all fine.",
+      ru: "У них всё хорошо.",
+    },
+  ],
 });

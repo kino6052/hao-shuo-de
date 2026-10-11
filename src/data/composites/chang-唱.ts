@@ -8,11 +8,22 @@ export default composite({
   en: "sing",
   ru: "петь",
   pos: "verb",
-  hsd: [
-    "{{word:yong4}} {{word:kou3}} {{word:zuo4}} {{word:hao3}}-{{word:ting1}}-{{word:de}} {{word:sheng1yin1}}",
-  ],
-  tts: ["用口做好听的声音"],
-  literal: "make nice sounds with your mouth",
+  hsd: ["{{word:fa1}} {{word:hao3}}-{{word:ting1}}-{{word:de}} {{word:sheng1yin1}}"],
+  tts: ["发好听的声音"],
+  literal: "make a nice sound",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:fa1}} {{word:hao3}}-{{word:ting1}}-{{word:de}} {{word:sheng1yin1}}.",
+      hanzi: "我发好听的声音。",
+      en: "I sing.",
+      ru: "Я пою.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:fa1}} {{word:hao3}}-{{word:ting1}}-{{word:de}} {{word:sheng1yin1}}.",
+      hanzi: "他发好听的声音。",
+      en: "He sings.",
+      ru: "Он поёт.",
+    },
+  ],
 });

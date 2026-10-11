@@ -12,4 +12,18 @@ export default composite({
   tts: ["做"],
   literal: "do",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:men}} {{word:zuo4}} {{word:zhe4}}-{{light:ge4}}.",
+      hanzi: "我们做这个。",
+      en: "We are doing this.",
+      ru: "Мы делаем это.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:zuo4}} {{word:shen2me}}?",
+      hanzi: "你做什么？",
+      en: "What are you carrying out?",
+      ru: "Что ты делаешь?",
+    },
+  ],
 });

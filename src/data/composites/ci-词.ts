@@ -11,4 +11,18 @@ export default composite({
   hsd: ["{{word:ci2}}"],
   tts: ["词"],
   fit: "word",
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:ci2}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "这个词很好。",
+      en: "This word is good.",
+      ru: "Это слово хорошее.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:zhi1dao4}} {{word:zhe4}}-{{light:ge4}} {{word:ci2}} {{word:ma}}?",
+      hanzi: "你知道这个词吗？",
+      en: "Do you know this word?",
+      ru: "Ты знаешь это слово?",
+    },
+  ],
 });

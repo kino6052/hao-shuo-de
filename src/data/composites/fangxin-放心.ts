@@ -13,4 +13,18 @@ export default composite({
   literal: "put the heart down",
   fit: "natural",
   note: "Lesson {{lesson:greetings-and-feelings}}.",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:fang4}}-{{word:xin1}} {{word:le}}.",
+      hanzi: "我放心了。",
+      en: "I feel at ease.",
+      ru: "Я спокоен.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:fang4}}-{{word:xin1}}.",
+      hanzi: "你放心。",
+      en: "Don't worry.",
+      ru: "Не волнуйся.",
+    },
+  ],
 });

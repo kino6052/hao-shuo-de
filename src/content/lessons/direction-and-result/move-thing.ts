@@ -5,6 +5,13 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "move-thing",
+  words: [
+    {
+      word: "jie2",
+      en: "tie, knot",
+      ru: "завязывать, узел",
+    },
+  ],
   prose: {
     en: [
       "**To say which way you move a thing**, put the direction words right after the verb: {{word:shang4}}, {{word:xia4}}, {{word:jin4}}, {{word:chu1}}, {{word:hui2}}, or {{word:qi3}}, then {{word:lai2}} or {{word:qu4}}.",
@@ -12,6 +19,8 @@ export default lessonModule({
       "**Who + {{word:ba3}} + thing + verb-direction-{{word:lai2}} / {{word:qu4}}**",
       "",
       "{{word:ba3}} puts the thing first, so the direction words stay together. {{word:na2}}-{{word:chu1}}-{{word:lai2}} is \"take out\", {{word:na2}}-{{word:qi3}}-{{word:lai2}} is \"pick up\", and {{word:fang4}}-{{word:xia4}} is \"put down\".",
+      "",
+      "{{word:jie2}} means tie: {{word:ba3}} {{word:xian4}} {{word:jie2}}-{{word:hao3}}, tie the thread up.",
     ],
     ru: [
       "**Чтобы сказать, куда вы перемещаете вещь**, поставьте слова направления сразу после глагола: {{word:shang4}}, {{word:xia4}}, {{word:jin4}}, {{word:chu1}}, {{word:hui2}} или {{word:qi3}}, а потом {{word:lai2}} или {{word:qu4}}.",
@@ -20,6 +29,8 @@ export default lessonModule({
       "",
       "{{word:ba3}} ставит вещь вперёд, поэтому слова направления остаются вместе. {{word:na2}}-{{word:chu1}}-{{word:lai2}} — «вынуть», {{word:na2}}-{{word:qi3}}-{{word:lai2}} — «поднять», а {{word:fang4}}-{{word:xia4}} — «положить, опустить».",
       "В русском эту работу делают приставки: «вы-нуть», «под-нять».",
+      "",
+      "{{word:jie2}} значит «завязать»: {{word:ba3}} {{word:xian4}} {{word:jie2}}-{{word:hao3}} — завязать нитку.",
     ],
     tldr: {
       en: "Put direction words after the verb: {{word:na2}}-{{word:chu1}}-{{word:lai2}}, take out; {{word:fang4}}-{{word:xia4}}, put down.",
@@ -71,6 +82,12 @@ export default lessonModule({
       en: "He brought the stick up.",
       ru: "Он принёс палку наверх.",
     },
+    {
+      pinyin: "{{Word:ta1}} {{word:ba3}} {{word:xian4}} {{word:jie2}}-{{word:hao3}} {{word:le}}.",
+      hanzi: "他把线结好了。",
+      en: "He tied the thread.",
+      ru: "Он завязал нитку.",
+    },
   ],
   exercises: [
     {
@@ -84,6 +101,12 @@ export default lessonModule({
       ru: "Опусти сумку!",
       answer: "{{Word:ba3}} {{word:bao1}} {{word:fang4}}-{{word:xia4}}!",
       hanzi: "把包放下！",
+    },
+    {
+      en: "Tie the thread up!",
+      ru: "Завяжи нитку!",
+      answer: "{{Word:ba3}} {{word:xian4}} {{word:jie2}}-{{word:hao3}}!",
+      hanzi: "把线结好！",
     },
   ],
   faq: [

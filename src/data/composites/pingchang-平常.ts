@@ -8,9 +8,12 @@ export default composite({
   en: "usual, ordinary",
   ru: "обычный",
   pos: "adjective",
-  hsd: ["{{word:he2}} {{word:bie2}}-{{word:de}} {{word:yi1}}-{{word:yang4}}"],
-  tts: ["和别的一样"],
+  hsd: [
+    "{{word:ping2}}-{{word:chang2}}",
+    "{{word:he2}} {{word:bie2}}-{{word:de}} {{word:yi1}}-{{word:yang4}}",
+  ],
+  tts: ["平常", "和别的一样"],
   literal: "like the others",
-  fit: "plain",
+  fit: "natural",
   proposed: true,
 });

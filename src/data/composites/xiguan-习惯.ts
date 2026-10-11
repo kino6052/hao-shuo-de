@@ -14,4 +14,18 @@ export default composite({
   tts: ["次次都做的东西"],
   literal: "something you do every time",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:ci4}}-{{word:ci4}} {{word:dou1}} {{word:zuo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
+      hanzi: "这是次次都做的东西。",
+      en: "This is a habit.",
+      ru: "Это привычка.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:ci4}}-{{word:ci4}} {{word:dou1}} {{word:zuo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
+      hanzi: "我有次次都做的东西。",
+      en: "I have a habit.",
+      ru: "У меня есть привычка.",
+    },
+  ],
 });

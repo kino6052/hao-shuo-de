@@ -12,4 +12,18 @@ export default composite({
   tts: ["用手动X"],
   literal: "move X with your hand",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:yong4}} {{word:shou3}} {{word:dong4}} {{word:na4}}-{{light:ge4}}.",
+      hanzi: "我用手动那个。",
+      en: "I push that.",
+      ru: "Я толкаю это.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:yong4}} {{word:shou3}} {{word:dong4}} {{word:wo3}}.",
+      hanzi: "他用手动我。",
+      en: "He pushes me.",
+      ru: "Он толкает меня.",
+    },
+  ],
 });

@@ -15,5 +15,18 @@ export default composite({
   tts: ["只能", "X，没有别的方法"],
   literal: "X, there's no other way",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:zhi3}}-{{word:neng2}} {{word:zuo4}} {{word:zhe4}}-{{light:ge4}}.",
+      hanzi: "我只能做这个。",
+      en: "I can only do this.",
+      ru: "Я могу сделать только это.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:zhi3}}-{{word:neng2}} {{word:qu4}} {{word:na4}}-{{word:li3}}.",
+      hanzi: "你只能去那里。",
+      en: "You can only go there.",
+      ru: "Ты можешь пойти только туда.",
+    },
+  ],
 });

@@ -8,8 +8,22 @@ export default composite({
   en: "as you like",
   ru: "как хочешь",
   pos: "verb",
-  hsd: ["{{word:ni3}} {{word:yao4}} {{word:shen2me}} {{word:dou1}} {{word:hao3}}"],
-  tts: ["你要什么都好"],
-  literal: "whatever you want is fine",
+  hsd: ["{{word:jiu4}} {{word:ke3}}-{{word:yi3}}"],
+  tts: ["就可以"],
+  literal: "then it's fine",
   fit: "natural",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:jiu4}} {{word:ke3}}-{{word:yi3}}.",
+      hanzi: "我就可以。",
+      en: "Whatever you like.",
+      ru: "Как хочешь.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:xiang3}} {{word:qu4}}, {{word:wo3}} {{word:jiu4}} {{word:ke3}}-{{word:yi3}}.",
+      hanzi: "你想去，我就可以。",
+      en: "If you want to go, fine with me.",
+      ru: "Если хочешь пойти, мне подходит.",
+    },
+  ],
 });

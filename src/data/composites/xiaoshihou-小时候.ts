@@ -16,5 +16,18 @@ export default composite({
   literal: "the small time",
   fit: "natural",
   note: "wǒ xiǎo-de shí-jiān: when I was little.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:xiao3}}-{{word:shi2}}-{{light:hou4}} {{word:zai4}} {{word:jia1}}.",
+      hanzi: "我小时候在家。",
+      en: "As a child I was at home.",
+      ru: "В детстве я был дома.",
+    },
+    {
+      pinyin: "{{Word:xiao3}}-{{word:shi2}}-{{light:hou4}} {{word:wo3}} {{word:ai4}} {{word:shui3}}.",
+      hanzi: "小时候我爱水。",
+      en: "As a child I loved water.",
+      ru: "В детстве я любил воду.",
+    },
+  ],
 });

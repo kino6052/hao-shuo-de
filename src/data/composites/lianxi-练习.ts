@@ -12,4 +12,18 @@ export default composite({
   tts: ["很多次做"],
   literal: "do it many times",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:hen3}} {{word:duo1}} {{word:ci4}} {{word:zuo4}} {{word:zhe4}}-{{light:ge4}}.",
+      hanzi: "我很多次做这个。",
+      en: "I practice this.",
+      ru: "Я упражняюсь в этом.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:hen3}} {{word:duo1}} {{word:ci4}} {{word:zuo4}}.",
+      hanzi: "他很多次做。",
+      en: "He practices.",
+      ru: "Он упражняется.",
+    },
+  ],
 });

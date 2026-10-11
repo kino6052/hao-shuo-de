@@ -12,4 +12,18 @@ export default composite({
   tts: ["进去"],
   fit: "natural",
   note: "Lesson {{lesson:direction-and-result}}.",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:jin4}}-{{word:qu4}}.",
+      hanzi: "我进去。",
+      en: "I go in.",
+      ru: "Я захожу.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:yao4}} {{word:jin4}}-{{word:qu4}} {{word:ma}}?",
+      hanzi: "你要进去吗？",
+      en: "Do you want to go in?",
+      ru: "Ты хочешь войти?",
+    },
+  ],
 });

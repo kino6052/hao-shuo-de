@@ -12,7 +12,20 @@ export default composite({
     "{{word:you3}}-{{word:hen3}}-{{word:duo1}}-{{word:de}}-{{word:jia1}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
   ],
   tts: ["有很多的家的地方"],
-  literal: "a place with many homes",
+  literal: "the place with very many homes",
   fit: "plain",
-  note: "Same as 城.",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:men}} {{word:qu4}} {{word:you3}}-{{word:hen3}}-{{word:duo1}}-{{word:de}}-{{word:jia1}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",
+      hanzi: "我们去有很多的家的地方。",
+      en: "We're going to the city.",
+      ru: "Мы едем в город.",
+    },
+    {
+      pinyin: "{{Word:you3}}-{{word:hen3}}-{{word:duo1}}-{{word:de}}-{{word:jia1}}-{{word:de}} {{word:di4}}-{{light:fang1}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "有很多的家的地方很大。",
+      en: "The city is big.",
+      ru: "Город большой.",
+    },
+  ],
 });

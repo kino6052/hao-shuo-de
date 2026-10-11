@@ -8,10 +8,22 @@ export default composite({
   en: "bookstore",
   ru: "книжный магазин",
   pos: "noun",
-  hsd: [
-    "{{word:mai3}}-{{word:xie3}}-{{word:de}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
-  ],
-  tts: ["买写的东西的地方"],
-  literal: "the place to buy written things",
+  hsd: ["{{word:mai3}}-{{word:shu1}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
+  tts: ["买书的地方"],
+  literal: "the place where one buys books",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:qu4}} {{word:mai3}}-{{word:shu1}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",
+      hanzi: "我去买书的地方。",
+      en: "I'm going to the bookstore.",
+      ru: "Я иду в книжный магазин.",
+    },
+    {
+      pinyin: "{{Word:mai3}}-{{word:shu1}}-{{word:de}} {{word:di4}}-{{light:fang1}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "买书的地方很大。",
+      en: "The bookstore is big.",
+      ru: "Книжный магазин большой.",
+    },
+  ],
 });

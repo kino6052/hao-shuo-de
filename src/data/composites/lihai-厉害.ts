@@ -12,4 +12,18 @@ export default composite({
   tts: ["很有力"],
   literal: "very powerful",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:hen3}} {{word:you3}} {{word:li4}}.",
+      hanzi: "他很有力。",
+      en: "He is impressive.",
+      ru: "Он впечатляет.",
+    },
+    {
+      pinyin: "{{Word:na4}}-{{light:ge4}} {{word:ren2}} {{word:hen3}} {{word:you3}} {{word:li4}}.",
+      hanzi: "那个人很有力。",
+      en: "That person is impressive.",
+      ru: "Тот человек впечатляет.",
+    },
+  ],
 });

@@ -8,11 +8,22 @@ export default composite({
   en: "noodles",
   ru: "лапша",
   pos: "noun",
-  hsd: [
-    "{{word:xian4}}-{{word:yi1}}-{{word:yang4}}-{{word:de}} {{word:chi1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+  hsd: ["\"miàn\""],
+  tts: ["面"],
+  literal: "noodles",
+  fit: "name",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:chi1}} \"miàn\".",
+      hanzi: "我吃面。",
+      en: "I eat noodles.",
+      ru: "Я ем лапшу.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:ai4}} \"miàn\".",
+      hanzi: "我爱面。",
+      en: "I love noodles.",
+      ru: "Я люблю лапшу.",
+    },
   ],
-  tts: ["线一样的吃的东西"],
-  literal: "food like threads",
-  fit: "plain",
-  proposed: true,
 });

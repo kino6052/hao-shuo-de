@@ -16,4 +16,18 @@ export default composite({
   literal: "write / a drawn thing to look at",
   fit: "plain",
   note: "xiě covers drawing too.",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:xie3}} {{word:ta1}}.",
+      hanzi: "我写他。",
+      en: "I draw him.",
+      ru: "Я рисую его.",
+    },
+    {
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:xie3}}-{{word:de}} {{word:kan4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
+      hanzi: "这是写的看的东西。",
+      en: "This is a painting.",
+      ru: "Это картина.",
+    },
+  ],
 });

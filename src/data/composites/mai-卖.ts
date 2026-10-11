@@ -12,4 +12,18 @@ export default composite({
   tts: ["给东西得金"],
   literal: "give things, get money",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:gei3}} {{word:dong1}}-{{light:xi1}} {{word:de2}} {{word:jin1}}.",
+      hanzi: "我给东西得金。",
+      en: "I sell things.",
+      ru: "Я продаю вещи.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:gei3}} {{word:dong1}}-{{light:xi1}} {{word:de2}} {{word:jin1}}.",
+      hanzi: "他给东西得金。",
+      en: "He sells things.",
+      ru: "Он продаёт вещи.",
+    },
+  ],
 });

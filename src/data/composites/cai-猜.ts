@@ -12,5 +12,18 @@ export default composite({
   tts: ["想是…"],
   literal: "think it's …",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:xiang3}} {{word:shi4}} {{word:shui3}}.",
+      hanzi: "我想是水。",
+      en: "I guess it's water.",
+      ru: "Думаю, это вода.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:xiang3}} {{word:shi4}} {{word:shei2}}?",
+      hanzi: "你想是谁？",
+      en: "Who do you guess it is?",
+      ru: "Как думаешь, кто это?",
+    },
+  ],
 });

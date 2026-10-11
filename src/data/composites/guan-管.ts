@@ -12,4 +12,18 @@ export default composite({
   tts: ["把X做好"],
   literal: "keep X good",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:ba3}} {{word:jia1}} {{word:zuo4}}-{{word:hao3}}.",
+      hanzi: "我把家做好。",
+      en: "I take care of the house.",
+      ru: "Я слежу за домом.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:ba3}} {{word:shu1}} {{word:zuo4}}-{{word:hao3}}.",
+      hanzi: "他把书做好。",
+      en: "He takes care of the books.",
+      ru: "Он следит за книгами.",
+    },
+  ],
 });

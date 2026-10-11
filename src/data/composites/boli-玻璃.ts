@@ -8,10 +8,22 @@ export default composite({
   en: "glass",
   ru: "стекло",
   pos: "noun",
-  hsd: [
-    "{{word:neng2}} {{word:kan4}}-{{word:dao4}} {{word:hou4}}-{{word:mian4}}-{{word:de}} {{word:ying4}} {{word:dong1}}-{{light:xi1}}",
-  ],
-  tts: ["能看到后面的硬东西"],
-  literal: "a hard thing you can see through",
+  hsd: ["{{word:tong1}}-{{word:kan4}}-{{word:de}} {{word:liao4}}"],
+  tts: ["通看的料"],
+  literal: "material you can see through",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:tong1}}-{{word:kan4}}-{{word:de}} {{word:liao4}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "通看的料很大。",
+      en: "The glass is big.",
+      ru: "Стекло большое.",
+    },
+    {
+      pinyin: "{{Word:jia1}} {{word:you3}} {{word:tong1}}-{{word:kan4}}-{{word:de}} {{word:liao4}}.",
+      hanzi: "家有通看的料。",
+      en: "The house has glass.",
+      ru: "В доме есть стекло.",
+    },
+  ],
 });

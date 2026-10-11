@@ -8,9 +8,9 @@ export default composite({
   en: "level, standard",
   ru: "уровень",
   pos: "noun",
-  hsd: ["{{word:duo1}} {{word:hao3}}"],
-  tts: ["多好"],
+  hsd: ["{{word:shui3}}-{{word:ping2}}", "{{word:duo1}} {{word:hao3}}"],
+  tts: ["水平", "多好"],
   literal: "how good",
-  fit: "plain",
+  fit: "natural",
   proposed: true,
 });

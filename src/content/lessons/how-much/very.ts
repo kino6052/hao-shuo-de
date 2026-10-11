@@ -51,6 +51,11 @@ export default lessonModule({
       en: "fast, quick",
       ru: "быстрый",
     },
+    {
+      word: "tong4",
+      en: "pain, painful",
+      ru: "боль, больно",
+    },
   ],
   prose: {
     en: [
@@ -99,10 +104,10 @@ export default lessonModule({
       ru: "Этот инструмент очень ценный.",
     },
     {
-      pinyin: "{{Word:shui3}}-{{word:de}} {{word:jia4zhi2}} {{word:hen3}} {{word:da4}}.",
-      hanzi: "水的价值很大。",
-      en: "Water's value is great.",
-      ru: "Ценность воды велика.",
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:tou2}} {{word:hen3}} {{word:tong4}}.",
+      hanzi: "我的头很痛。",
+      en: "My head hurts a lot.",
+      ru: "У меня сильно болит голова.",
     },
     {
       pinyin: "{{Word:shui3}} {{word:hen3}} {{word:re4}}.",
@@ -159,6 +164,12 @@ export default lessonModule({
       ru: "У неё хорошее здоровье.",
       answer: "{{Word:ta1}}-{{word:de}} {{word:shen1ti3}} {{word:hen3}} {{word:hao3}}.",
       hanzi: "她的身体很好。",
+    },
+    {
+      en: "I'm in a lot of pain.",
+      ru: "Мне очень больно.",
+      answer: "{{Word:wo3}} {{word:hen3}} {{word:tong4}}.",
+      hanzi: "我很痛。",
     },
   ],
   faq: [

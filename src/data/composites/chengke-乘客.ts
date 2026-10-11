@@ -12,5 +12,18 @@ export default composite({
   tts: ["坐车的人"],
   literal: "a person riding in the car",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:shi4}} {{word:zuo4}}-{{word:che1}}-{{word:de}} {{word:ren2}}.",
+      hanzi: "他是坐车的人。",
+      en: "He is a passenger.",
+      ru: "Он пассажир.",
+    },
+    {
+      pinyin: "{{Word:zuo4}}-{{word:che1}}-{{word:de}} {{word:ren2}} {{word:hen3}} {{word:duo1}}.",
+      hanzi: "坐车的人很多。",
+      en: "There are many passengers.",
+      ru: "Пассажиров много.",
+    },
+  ],
 });

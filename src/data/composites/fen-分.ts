@@ -13,5 +13,18 @@ export default composite({
   literal: "part",
   fit: "word",
   note: "A minute is a small part of an hour, xiǎo-shí.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:xian4}}-{{word:zai4}} {{word:shi4}} {{word:san1}}-{{word:dian3}} {{word:wu3}}-{{word:fen1}}.",
+      hanzi: "现在是三点五分。",
+      en: "It's five past three.",
+      ru: "Сейчас пять минут четвёртого.",
+    },
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:shi4}} {{word:shu1}}-{{word:de}} {{word:yi1}}-{{word:bu4}}-{{light:fen1}}.",
+      hanzi: "这个是书的一部分。",
+      en: "This is a part of the book.",
+      ru: "Это часть книги.",
+    },
+  ],
 });

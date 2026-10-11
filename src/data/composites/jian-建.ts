@@ -12,4 +12,18 @@ export default composite({
   tts: ["做"],
   literal: "make",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:zuo4}} {{word:le}} {{word:yi1}}-{{light:ge4}} {{word:fang2}}-{{word:jian1}}.",
+      hanzi: "他做了一个房间。",
+      en: "He built a room.",
+      ru: "Он построил комнату.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:yao4}} {{word:zuo4}} {{word:yi1}}-{{light:ge4}} {{word:jia1}}.",
+      hanzi: "我要做一个家。",
+      en: "I'm going to build a home.",
+      ru: "Я построю дом.",
+    },
+  ],
 });

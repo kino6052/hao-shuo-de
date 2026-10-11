@@ -12,4 +12,18 @@ export default composite({
   tts: ["你看，X"],
   literal: "look, X",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:ni3}} {{word:kan4}}, X.",
+      hanzi: "你看，X。",
+      en: "For example, X.",
+      ru: "Например, X.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:kan4}}, X, {{word:wo3}} {{word:you3}}.",
+      hanzi: "你看，X，我有。",
+      en: "For example, X, I have it.",
+      ru: "Например, X, у меня есть.",
+    },
+  ],
 });

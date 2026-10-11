@@ -12,4 +12,18 @@ export default composite({
   tts: ["好好看，好好学"],
   literal: "look carefully, learn carefully",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:hao3}}-{{word:hao3}} {{word:kan4}}, {{word:hao3}}-{{word:hao3}} {{word:xue2}}.",
+      hanzi: "我好好看，好好学。",
+      en: "I do research.",
+      ru: "Я занимаюсь исследованием.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:hao3}}-{{word:hao3}} {{word:kan4}}, {{word:hao3}}-{{word:hao3}} {{word:xue2}}.",
+      hanzi: "他好好看，好好学。",
+      en: "He does research.",
+      ru: "Он занимается исследованием.",
+    },
+  ],
 });

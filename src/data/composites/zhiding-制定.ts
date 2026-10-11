@@ -12,4 +12,18 @@ export default composite({
   tts: ["做出"],
   literal: "make",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:zuo4}}-{{word:chu1}} {{word:fa3}}.",
+      hanzi: "我做出法。",
+      en: "I draw up a rule.",
+      ru: "Я составляю правило.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:zuo4}}-{{word:chu1}} {{word:zhe4}}-{{light:ge4}}.",
+      hanzi: "他做出这个。",
+      en: "He draws this up.",
+      ru: "Он составляет это.",
+    },
+  ],
 });

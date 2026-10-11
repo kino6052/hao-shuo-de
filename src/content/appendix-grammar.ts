@@ -1229,10 +1229,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:zuo4}} + result, make it so: {{Word:wo3}} {{word:zuo4}} {{word:hao3}} {{word:le}}. (I fixed it.)"
+            "{{word:zuo4}} + result, make it so: {{Word:wo3}} {{word:zuo4}} {{word:hao3}} {{word:le}}. (I fixed it.) {{word:liao4}}, the stuff to make it from: {{word:zuo4}} {{word:fan4}} {{word:yao4}} {{word:liao4}}."
           ],
           "ru": [
-            "{{word:zuo4}} + результат — сделать таким: {{Word:wo3}} {{word:zuo4}} {{word:hao3}} {{word:le}}. (Я починил.)"
+            "{{word:zuo4}} + результат — сделать таким: {{Word:wo3}} {{word:zuo4}} {{word:hao3}} {{word:le}}. (Я починил.) {{word:liao4}} — из чего делают: {{word:zuo4}} {{word:fan4}} {{word:yao4}} {{word:liao4}}."
           ],
           "zh": []
         }
@@ -1424,10 +1424,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "number-{{word:zhong3}} / -{{word:ci4}} / -{{word:bu4}}-{{light:fen1}}, kinds / times / parts: {{Word:wo3}} {{word:qu4}}-{{word:guo4}} {{word:san1}}-{{word:ci4}}. (I've been there three times.)"
+            "number-{{word:zhong3}} / -{{word:ci4}} / -{{word:bu4}}-{{light:fen1}}, kinds / times / parts: {{Word:wo3}} {{word:qu4}}-{{word:guo4}} {{word:san1}}-{{word:ci4}}. (I've been there three times.) {{word:shu4}}, the number of: {{word:ren2}}-{{word:de}} {{word:shu4}}."
           ],
           "ru": [
-            "число-{{word:zhong3}} / -{{word:ci4}} / -{{word:bu4}}-{{light:fen1}} — виды / разы / части: {{Word:wo3}} {{word:qu4}}-{{word:guo4}} {{word:san1}}-{{word:ci4}}. (Я был там три раза.)"
+            "число-{{word:zhong3}} / -{{word:ci4}} / -{{word:bu4}}-{{light:fen1}} — виды / разы / части: {{Word:wo3}} {{word:qu4}}-{{word:guo4}} {{word:san1}}-{{word:ci4}}. (Я был там три раза.) {{word:shu4}} — число: {{word:ren2}}-{{word:de}} {{word:shu4}}."
           ],
           "zh": []
         }
@@ -1645,10 +1645,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:gei3}} + person + thing, give: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:shui3}}. (I give you water.)"
+            "{{word:gei3}} + person + thing, give: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:shui3}}. (I give you water.) {{word:ti4}} + person + verb, instead of: {{Word:ta1}} {{word:ti4}} {{word:wo3}} {{word:qu4}}. (He goes instead of me.)"
           ],
           "ru": [
-            "{{word:gei3}} + человек + вещь — давать: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:shui3}}. (Я даю тебе воду.)"
+            "{{word:gei3}} + человек + вещь — давать: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:shui3}}. (Я даю тебе воду.) {{word:ti4}} + человек + глагол — вместо: {{Word:ta1}} {{word:ti4}} {{word:wo3}} {{word:qu4}}. (Он идёт вместо меня.)"
           ],
           "zh": []
         }

@@ -15,5 +15,18 @@ export default composite({
   tts: ["原来", "在开始的时间"],
   literal: "at the start",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zai4}} {{word:kai1shi3}}-{{word:de}} {{word:shi2}}-{{word:jian1}}, {{word:wo3}} {{word:zai4}} {{word:jia1}}.",
+      hanzi: "在开始的时间，我在家。",
+      en: "At first I was at home.",
+      ru: "Сначала я был дома.",
+    },
+    {
+      pinyin: "{{Word:zai4}} {{word:kai1shi3}}-{{word:de}} {{word:shi2}}-{{word:jian1}}, {{word:ta1}} {{word:bu4}} {{word:lai2}}.",
+      hanzi: "在开始的时间，他不来。",
+      en: "At first he wasn't coming.",
+      ru: "Сначала он не приходил.",
+    },
+  ],
 });

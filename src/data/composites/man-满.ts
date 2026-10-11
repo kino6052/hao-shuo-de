@@ -12,4 +12,18 @@ export default composite({
   tts: ["没有地方了"],
   literal: "no room left",
   fit: "natural",
+  examples: [
+    {
+      pinyin: "{{Word:mei2}} {{word:you3}} {{word:di4}}-{{light:fang1}} {{word:le}}.",
+      hanzi: "没有地方了。",
+      en: "It's full.",
+      ru: "Мест нет.",
+    },
+    {
+      pinyin: "{{Word:jia1}}-{{word:li3}} {{word:mei2}} {{word:you3}} {{word:di4}}-{{light:fang1}} {{word:le}}.",
+      hanzi: "家里没有地方了。",
+      en: "The house is full.",
+      ru: "В доме нет места.",
+    },
+  ],
 });

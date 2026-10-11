@@ -8,10 +8,25 @@ export default composite({
   en: "bowl",
   ru: "миска",
   pos: "noun",
-  hsd: ["{{word:chi1}}-{{word:fan4}}-{{word:yong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["吃饭用的东西"],
-  literal: "what you eat a meal from",
+  hsd: [
+    "{{word:rang4}} {{word:fan4}} {{word:fang4}} {{word:zai4}} {{word:li3}}-{{word:mian4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+  ],
+  tts: ["让饭放在里面的东西"],
+  literal: "a thing that lets food be put inside",
   fit: "plain",
   note: "bāo covers bowls too.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:rang4}} {{word:fan4}} {{word:fang4}} {{word:zai4}} {{word:li3}}-{{word:mian4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
+      hanzi: "我有让饭放在里面的东西。",
+      en: "I have a bowl.",
+      ru: "У меня есть миска.",
+    },
+    {
+      pinyin: "{{Word:rang4}} {{word:fan4}} {{word:fang4}} {{word:zai4}} {{word:li3}}-{{word:mian4}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:zai4}} {{word:jia1}}.",
+      hanzi: "让饭放在里面的东西在家。",
+      en: "The bowl is at home.",
+      ru: "Миска дома.",
+    },
+  ],
 });

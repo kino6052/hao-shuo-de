@@ -8,10 +8,22 @@ export default composite({
   en: "politics",
   ru: "политика",
   pos: "noun",
-  hsd: [
-    "{{word:guo2}}-{{word:jia1}} {{word:you3}} {{word:guan1xi}}-{{word:de}} {{word:xue2}}-{{word:de}}",
-  ],
-  tts: ["国家有关系的学的"],
-  literal: "the learning that has to do with the country",
+  hsd: ["{{word:guo2}}-{{word:jia1}} {{word:li3}}-{{word:mian4}}-{{word:de}} {{word:guan1xi}}"],
+  tts: ["国家里面的关系"],
+  literal: "the relations inside a country",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:xiang3}} {{word:zhi1dao4}} {{word:guo2}}-{{word:jia1}} {{word:li3}}-{{word:mian4}}-{{word:de}} {{word:guan1xi}}.",
+      hanzi: "我想知道国家里面的关系。",
+      en: "I want to know about politics.",
+      ru: "Я хочу знать о политике.",
+    },
+    {
+      pinyin: "{{Word:guo2}}-{{word:jia1}} {{word:li3}}-{{word:mian4}}-{{word:de}} {{word:guan1xi}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "国家里面的关系很大。",
+      en: "Politics matters a lot.",
+      ru: "Политика очень важна.",
+    },
+  ],
 });

@@ -8,10 +8,22 @@ export default composite({
   en: "material",
   ru: "материал",
   pos: "noun",
-  hsd: [
-    "{{word:zuo4}} {{word:dong1}}-{{light:xi1}} {{word:yong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
-  ],
-  tts: ["做东西用的东西"],
-  literal: "what you use to make things",
+  hsd: ["{{word:liao4}}"],
+  tts: ["料"],
   fit: "plain",
+  note: "材 is not a core character; liào alone says the stuff something is made from.",
+  examples: [
+    {
+      pinyin: "{{Word:zuo4}} {{word:fan4}} {{word:yao4}} {{word:hen3}}-{{word:duo1}} {{word:liao4}}.",
+      hanzi: "做饭要很多料。",
+      en: "Cooking takes a lot of ingredients.",
+      ru: "Для готовки нужно много продуктов.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:hao3}}-{{word:de}} {{word:liao4}}.",
+      hanzi: "我有好的料。",
+      en: "I have good material.",
+      ru: "У меня хороший материал.",
+    },
+  ],
 });

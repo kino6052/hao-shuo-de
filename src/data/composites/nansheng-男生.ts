@@ -12,5 +12,18 @@ export default composite({
   tts: ["男生", "学的男人"],
   literal: "a man who learns",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:shi4}} {{word:nan2}}-{{word:sheng1}}.",
+      hanzi: "他是男生。",
+      en: "He is a boy student.",
+      ru: "Он школьник.",
+    },
+    {
+      pinyin: "{{Word:na4}}-{{light:ge4}} {{word:nan2}}-{{word:sheng1}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "那个男生很好。",
+      en: "That boy is nice.",
+      ru: "Тот мальчик хороший.",
+    },
+  ],
 });

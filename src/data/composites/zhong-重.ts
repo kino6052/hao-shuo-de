@@ -13,5 +13,18 @@ export default composite({
   literal: "big",
   fit: "word",
   note: "ná-bù-dòng: too heavy to lift.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:hen3}} {{word:zhong4}}.",
+      hanzi: "这个很重。",
+      en: "This is heavy.",
+      ru: "Это тяжёлое.",
+    },
+    {
+      pinyin: "{{Word:shu1}} {{word:bu4}} {{word:zhong4}}.",
+      hanzi: "书不重。",
+      en: "The book isn't heavy.",
+      ru: "Книга нетяжёлая.",
+    },
+  ],
 });

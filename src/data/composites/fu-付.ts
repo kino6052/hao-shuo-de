@@ -12,4 +12,18 @@ export default composite({
   tts: ["给金"],
   literal: "give money",
   fit: "natural",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:gei3}} {{word:jin1}}.",
+      hanzi: "我给金。",
+      en: "I pay.",
+      ru: "Я плачу.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:gei3}} {{word:ta1}} {{word:jin1}} {{word:ma}}?",
+      hanzi: "你给他金吗？",
+      en: "Are you paying him?",
+      ru: "Ты платишь ему?",
+    },
+  ],
 });

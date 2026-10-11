@@ -10,10 +10,23 @@ export default composite({
   pos: "noun",
   hsd: [
     "{{word:jia1}}-{{word:ju4}}",
-    "{{word:zai4}}-{{word:jia1}}-{{word:li3}}-{{word:de}} {{word:da4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+    "{{word:jia1}}-{{word:li3}}-{{word:yong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],
-  tts: ["家具", "在家里的大的东西"],
-  literal: "big things in the home",
+  tts: ["家具", "家里用的东西"],
+  literal: "home tool / the things used at home",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:jia1}}-{{word:ju4}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "我的家具很好。",
+      en: "My furniture is good.",
+      ru: "У меня хорошая мебель.",
+    },
+    {
+      pinyin: "{{Word:jia1}}-{{word:li3}}-{{word:yong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "家里用的东西很大。",
+      en: "The furniture is big.",
+      ru: "Мебель большая.",
+    },
+  ],
 });

@@ -12,5 +12,18 @@ export default composite({
   tts: ["学的房间"],
   literal: "the learning room",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:zai4}} {{word:xue2}}-{{word:de}} {{word:fang2}}-{{word:jian1}}.",
+      hanzi: "我在学的房间。",
+      en: "I'm in the classroom.",
+      ru: "Я в классе.",
+    },
+    {
+      pinyin: "{{Word:xue2}}-{{word:de}} {{word:fang2}}-{{word:jian1}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "学的房间很大。",
+      en: "The classroom is big.",
+      ru: "Класс большой.",
+    },
+  ],
 });

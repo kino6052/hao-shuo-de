@@ -26,8 +26,8 @@ export default {
     ["Nǐ yào \"Zhōngguó\"-de jīn ma?", "你要“中国”的金吗？", "Do you want renminbi?", "Тебе нужны юани?"],
   ],
   "代表": [
-    ["Tā shì bāng hěn-duō rén shuō-de rén.", "他是帮很多人说的人。", "He is a representative.", "Он представитель."],
-    ["Bāng hěn-duō rén shuō-de rén zài zhè-lǐ.", "帮很多人说的人在这里。", "The representative is here.", "Представитель здесь."],
+    ["Tā tì wǒ-men shuō-de rén zài zhè-lǐ.", "他替我们说的人在这里。", "The person who speaks for us is here.", "Здесь тот, кто говорит за нас."],
+    ["Tā tì wǒ-men shuō.", "他替我们说。", "He speaks for us.", "Он говорит за нас."],
   ],
   "任何": [
     ["Shénme rén wǒ dōu ài.", "什么人我都爱。", "I love any kind of person.", "Я люблю любых людей."],
@@ -66,8 +66,8 @@ export default {
     ["Zhè-ge shì shū-de yī-bù-fen.", "这个是书的一部分。", "This is a part of the book.", "Это часть книги."],
   ],
   "分数": [
-    ["Wǒ-de hǎo-huài-de hào hěn gāo.", "我的好坏的号很高。", "My grade is high.", "У меня высокая оценка."],
-    ["Tā-de hǎo-huài-de hào shì bā-shí.", "他的好坏的号是八十。", "His score is eighty.", "У него восемьдесят баллов."],
+    ["Wǒ-de hǎo-huài-de shù hěn gāo.", "我的好坏的数很高。", "My score is high.", "У меня высокая оценка."],
+    ["Tā-de hǎo-huài-de shù shì bā-shí.", "他的好坏的数是八十。", "His score is eighty.", "У него восемьдесят баллов."],
   ],
   "力量": [
     ["Tā-de lì hěn dà.", "他的力很大。", "His strength is great.", "У него большая сила."],
@@ -94,8 +94,8 @@ export default {
     ["Nǐ biàn le.", "你变了。", "You've changed.", "Ты изменился."],
   ],
   "句子": [
-    ["Wǒ xiě le hěn-duō fàng zài yī-qǐ-de cí.", "我写了很多放在一起的词。", "I wrote many sentences.", "Я написал много предложений."],
-    ["Nǐ néng xiě fàng zài yī-qǐ-de cí ma?", "你能写放在一起的词吗？", "Can you write a sentence?", "Ты можешь написать предложение?"],
+    ["Wǒ xiě le hěn-duō fàng-zài-yī-qǐ-de cí.", "我写了很多放在一起的词。", "I wrote many sentences.", "Я написал много предложений."],
+    ["Nǐ néng xiě fàng-zài-yī-qǐ-de cí ma?", "你能写放在一起的词吗？", "Can you write a sentence?", "Ты можешь написать предложение?"],
   ],
   "各": [
     ["Gè-gè rén dōu lái le.", "个个人都来了。", "Everyone came.", "Пришёл каждый."],
@@ -134,8 +134,8 @@ export default {
     ["Dà yuán dì hěn dà.", "大圆地很大。", "The Earth is very big.", "Земля очень большая."],
   ],
   "城": [
-    ["Wǒ-de jiā zài yǒu-hěn-duō-jiā-de dì-fang.", "我的家在有很多家的地方。", "My home is in the city.", "Мой дом в городе."],
-    ["Tā qù yǒu-hěn-duō-jiā-de dì-fang.", "他去有很多家的地方。", "He's going to the city.", "Он едет в город."],
+    ["Wǒ-de jiā zài guó-jiā-lǐ-de dì-fang.", "我的家在国家里的地方。", "My home is in the city.", "Мой дом в городе."],
+    ["Tā qù guó-jiā-lǐ-de dì-fang.", "他去国家里的地方。", "He's going to town.", "Он едет в город."],
   ],
   "基本": [
     ["Dà bù-fen rén dōu lái.", "大部分人都来。", "Most people are coming.", "Приходит большинство людей."],
@@ -150,11 +150,11 @@ export default {
     ["Míng-tiān kě-néng lěng.", "明天可能冷。", "Tomorrow it will probably be cold.", "Завтра, вероятно, будет холодно."],
   ],
   "字典": [
-    ["Zhè shì yǒu-hěn-duō-cí-de shū.", "这是有很多词的书。", "This is a dictionary.", "Это словарь."],
-    ["Nǐ-de yǒu-hěn-duō-cí-de shū zài nǎ-lǐ?", "你的有很多词的书在哪里？", "Where is your dictionary?", "Где твой словарь?"],
+    ["Zhè shì yǒu-hěn-duō-de-cí-de shū.", "这是有很多的词的书。", "This is a dictionary.", "Это словарь."],
+    ["Nǐ-de yǒu-hěn-duō-de-cí-de shū zài nǎ-lǐ?", "你的有很多的词的书在哪里？", "Where is your dictionary?", "Где твой словарь?"],
   ],
   "安排": [
-    ["Wǒ bǎ dōng-xi fàng-hǎo.", "我把东西放好。", "I'll arrange the things.", "Я всё расставлю."],
+    ["Wǒ dǎ-suàn míng-tiān qù.", "我打算明天去。", "I've arranged to go tomorrow.", "Я решил пойти завтра."],
     ["Tā bǎ dōng-xi fàng-hǎo le.", "他把东西放好了。", "He has arranged the things.", "Он всё расставил."],
   ],
   "家庭": [
@@ -170,12 +170,12 @@ export default {
     ["Nǐ yǒu gōng-jù ma?", "你有工具吗？", "Do you have a tool?", "У тебя есть инструмент?"],
   ],
   "市": [
-    ["Wǒ-men qù yǒu-hěn-duō-jiā-de dì-fang.", "我们去有很多家的地方。", "We're going to the city.", "Мы едем в город."],
-    ["Yǒu-hěn-duō-jiā-de dì-fang hěn dà.", "有很多家的地方很大。", "The city is big.", "Город большой."],
+    ["Wǒ-men qù yǒu-hěn-duō-de-jiā-de dì-fang.", "我们去有很多的家的地方。", "We're going to the city.", "Мы едем в город."],
+    ["Yǒu-hěn-duō-de-jiā-de dì-fang hěn dà.", "有很多的家的地方很大。", "The city is big.", "Город большой."],
   ],
   "年级": [
-    ["Tā-de xué-de hào shì sān.", "他的学的号是三。", "He's in third grade.", "Он в третьем классе."],
-    ["Nǐ-de xué-de hào shì shénme?", "你的学的号是什么？", "What grade are you in?", "В каком ты классе?"],
+    ["Tā-de xué-de zuì-hòu fā-shēng-de dōng-xi shì sān.", "他的学的最后发生的东西是三。", "He's in third grade.", "Он в третьем классе."],
+    ["Nǐ xué-de zuì-hòu fā-shēng-de dōng-xi shì shénme?", "你学的最后发生的东西是什么？", "What grade are you in?", "В каком ты классе?"],
   ],
   "年龄": [
     ["Nǐ duō dà?", "你多大？", "How old are you?", "Сколько тебе лет?"],
@@ -202,12 +202,12 @@ export default {
     ["Nǐ dé-dào le ma?", "你得到了吗？", "Did you get it?", "Ты получил?"],
   ],
   "总": [
-    ["Cì-cì dōu hěn hǎo.", "次次都很好。", "It's good every time.", "Каждый раз хорошо."],
-    ["Tā cì-cì dōu lái.", "他次次都来。", "He always comes.", "Он всегда приходит."],
+    ["Tā shénme shí-jiān dōu lái.", "他什么时间都来。", "He always comes.", "Он приходит всегда."],
+    ["Shénme shí-jiān dōu hěn hǎo.", "什么时间都很好。", "Any time is fine.", "Любое время подходит."],
   ],
   "情况": [
-    ["Fā-shēng-de dōng-xi hěn hǎo.", "发生的东西很好。", "The situation is good.", "Ситуация хорошая."],
-    ["Nǐ zhīdào fā-shēng-de dōng-xi ma?", "你知道发生的东西吗？", "Do you know the situation?", "Ты знаешь, какова ситуация?"],
+    ["Xiàn-zài-de yàng-zi hěn hǎo.", "现在的样子很好。", "The situation is good.", "Ситуация хорошая."],
+    ["Nǐ zhīdào xiàn-zài-de yàng-zi ma?", "你知道现在的样子吗？", "Do you know the situation?", "Ты знаешь, какова ситуация?"],
   ],
   "成为": [
     ["Tā biàn dà le.", "他变大了。", "He has grown up.", "Он вырос."],
@@ -226,8 +226,8 @@ export default {
     ["Nǐ bié shuō-qǐ zhè-ge.", "你别说起这个。", "Don't bring this up.", "Не заводи об этом речь."],
   ],
   "提高": [
-    ["Wǒ yào zuò-hǎo yī-diǎn.", "我要做好一点。", "I want to do a bit better.", "Я хочу делать лучше."],
-    ["Nǐ néng zuò-hǎo yī-diǎn ma?", "你能做好一点吗？", "Can you do a bit better?", "Ты можешь сделать чуть лучше?"],
+    ["Wǒ yào bǐ qián zuò-hǎo yī-diǎn.", "我要比前做好一点。", "I want to do better than before.", "Я хочу делать лучше, чем раньше."],
+    ["Nǐ néng bǐ qián zuò-hǎo yī-diǎn ma?", "你能比前做好一点吗？", "Can you do better than before?", "Ты можешь сделать лучше, чем раньше?"],
   ],
   "支持": [
     ["Wǒ bāng nǐ.", "我帮你。", "I support you.", "Я тебя поддерживаю."],
@@ -238,8 +238,8 @@ export default {
     ["Nǐ zuò-de bù yī-yàng le.", "你做的不一样了。", "You've changed how you do it.", "Ты стал делать иначе."],
   ],
   "数": [
-    ["Nǐ-de hào shì shénme?", "你的号是什么？", "What is your number?", "Какой у тебя номер?"],
-    ["Zhè-ge hào hěn dà.", "这个号很大。", "This number is big.", "Это число большое."],
+    ["Rén-de shù hěn duō.", "人的数很多。", "The number of people is large.", "Людей много."],
+    ["Shū-de shù hěn shǎo.", "书的数很少。", "There are few books.", "Книг мало."],
   ],
   "方面": [
     ["Zài zhè-ge fāng-miàn, tā hěn hǎo.", "在这个方面，他很好。", "In this respect he is good.", "В этом отношении он хорош."],
@@ -262,8 +262,8 @@ export default {
     ["Hòu-miàn-de shí-jiān hěn hǎo.", "后面的时间很好。", "The future is good.", "Будущее хорошее."],
   ],
   "材料": [
-    ["Wǒ yǒu zuò dōng-xi yòng-de dōng-xi.", "我有做东西用的东西。", "I have the materials.", "У меня есть материалы."],
-    ["Zhè-ge shì zuò dōng-xi yòng-de dōng-xi.", "这个是做东西用的东西。", "This is material for making things.", "Это материал, из которого делают вещи."],
+    ["Zuò fàn yào hěn-duō liào.", "做饭要很多料。", "Cooking takes a lot of ingredients.", "Для готовки нужно много продуктов."],
+    ["Wǒ yǒu hǎo-de liào.", "我有好的料。", "I have good material.", "У меня хороший материал."],
   ],
   "极": [
     ["Tā hěn-hěn hǎo.", "他很很好。", "He is extremely good.", "Он чрезвычайно хорош."],
@@ -298,8 +298,8 @@ export default {
     ["Xiǎo-hái-zi ài huó-dòng.", "小孩子爱活动。", "Children love to be active.", "Дети любят двигаться."],
   ],
   "消息": [
-    ["Xiàn-zài fā-shēng-de dōng-xi hěn hǎo.", "现在发生的东西很好。", "The news is good.", "Новости хорошие."],
-    ["Nǐ zhīdào xiàn-zài fā-shēng-de dōng-xi ma?", "你知道现在发生的东西吗？", "Do you know the news?", "Ты знаешь новости?"],
+    ["Xiàn-zài-fā-shēng-de hěn hǎo.", "现在发生的很好。", "The news is good.", "Новости хорошие."],
+    ["Nǐ zhīdào xiàn-zài-fā-shēng-de ma?", "你知道现在发生的吗？", "Do you know the news?", "Ты знаешь новости?"],
   ],
   "现代": [
     ["Xiàn-zài-de rén ài wǎng.", "现在的人爱网。", "Modern people love the internet.", "Современные люди любят интернет."],
@@ -342,8 +342,8 @@ export default {
     ["Nǐ shì dì-yī.", "你是第一。", "You are first.", "Ты первый."],
   ],
   "答案": [
-    ["Nǐ zhīdào duì wèn-de shuō-de dōng-xi ma?", "你知道对问的说的东西吗？", "Do you know the answer?", "Ты знаешь ответ?"],
-    ["Wǒ bù zhīdào duì wèn-de shuō-de dōng-xi.", "我不知道对问的说的东西。", "I don't know the answer.", "Я не знаю ответа."],
+    ["Nǐ zhīdào duì-wèn-de shuō-de ma?", "你知道对问的说的吗？", "Do you know the answer?", "Ты знаешь ответ?"],
+    ["Wǒ bù zhīdào duì-wèn-de shuō-de.", "我不知道对问的说的。", "I don't know the answer.", "Я не знаю ответа."],
   ],
   "精神": [
     ["Tā-de xīn hěn hǎo.", "他的心很好。", "He is in good spirits.", "Он в хорошем настроении."],
@@ -378,20 +378,20 @@ export default {
     ["Wǒ yī-dìng qù.", "我一定去。", "I'm definitely going.", "Я обязательно пойду."],
   ],
   "自然": [
-    ["Zhè-ge shì rén méi zuò-guò-de dōng-xi.", "这个是人没做过的东西。", "This is nature.", "Это природа."],
-    ["Wǒ ài rén méi zuò-guò-de dōng-xi.", "我爱人没做过的东西。", "I love nature.", "Я люблю природу."],
+    ["Wǒ ài wài-miàn.", "我爱外面。", "I love nature.", "Я люблю природу."],
+    ["Wǒ-men qù yǒu duō zhíwù-de dì-fang.", "我们去有多植物的地方。", "We're going out into nature.", "Мы идём на природу."],
   ],
   "自由": [
     ["Shénme wǒ dōu néng zuò.", "什么我都能做。", "I'm free to do anything.", "Я свободен делать что угодно."],
     ["Shénme tā dōu néng zuò.", "什么他都能做。", "He is free to do anything.", "Он свободен делать что угодно."],
   ],
   "节目": [
-    ["Wǒ ài kàn-de-jī-lǐ-de dōng-xi.", "我爱看的机里的东西。", "I love this show.", "Я люблю эту передачу."],
-    ["Kàn-de-jī-lǐ-de dōng-xi hěn hǎo-wánr.", "看的机里的东西很好玩儿。", "The show is fun.", "Передача весёлая."],
+    ["Wǒ ài zài-kàn-de-jī-kàn-de dōng-xi.", "我爱在看的机看的东西。", "I love this show.", "Я люблю эту передачу."],
+    ["Zài-kàn-de-jī-kàn-de dōng-xi hěn hǎo-wánr.", "在看的机看的东西很好玩儿。", "The show is fun.", "Передача весёлая."],
   ],
   "意见": [
-    ["Wǒ yǒu xiǎng-de dōng-xi.", "我有想的东西。", "I have an opinion.", "У меня есть мнение."],
-    ["Nǐ yǒu xiǎng-de dōng-xi ma?", "你有想的东西吗？", "Do you have an opinion?", "У тебя есть мнение?"],
+    ["Wǒ yǒu xiǎng-fǎ.", "我有想法。", "I have an opinion.", "У меня есть мнение."],
+    ["Nǐ yǒu xiǎng-fǎ ma?", "你有想法吗？", "Do you have an opinion?", "У тебя есть мнение?"],
   ],
   "或者": [
     ["Nǐ hē shuǐ hái-shì chī fàn?", "你喝水还是吃饭？", "Will you drink water or eat?", "Ты будешь пить воду или есть?"],
@@ -406,5 +406,6 @@ export default {
     ["Tā hěn lěng, dàn-shì tā bù pà.", "他很冷，但是他不怕。", "Although he's cold, he isn't afraid.", "Хотя ему холодно, он не боится."],
   ],
 };
+
 
 

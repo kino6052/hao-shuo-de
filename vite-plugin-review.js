@@ -53,6 +53,20 @@ async function batchData(server, n) {
   const py = (f) => resolveWordRefs(f, idx);
   const from = (n - 1) * BATCH_SIZE + 1;
   const to = n * BATCH_SIZE;
+  // every composite that says it the same way (any form in common), so the
+  // synonyms can be seen and kept consistent: form text -> [entry]
+  const byForm = new Map();
+  for (const e of composites.entries) {
+    for (const f of e.hsd ? e.hsd.split(' / ').map(py) : []) {
+      if (!byForm.has(f)) byForm.set(f, []);
+      byForm.get(f).push(e);
+    }
+  }
+  const sameAs = (e, forms) => {
+    const seen = new Map();
+    for (const f of forms) for (const o of byForm.get(f) ?? []) if (o.zh !== e.zh) seen.set(o.zh, { zh: o.zh, rank: o.rank, en: o.en });
+    return [...seen.values()].sort((a, b) => a.rank - b.rank);
+  };
   const entries = composites.entries
     .filter((e) => e.rank >= from && e.rank <= to)
     .sort((a, b) => a.rank - b.rank)
@@ -69,6 +83,8 @@ async function batchData(server, n) {
         : drafts
           ? { proposed: true, list: drafts.map(([pinyin, hanzi, en]) => ({ pinyin: py(pinyin), hanzi, en })) }
           : null;
+      now.same = sameAs(e, now.forms);
+      if (prop) prop.same = sameAs(e, prop.forms);
       return { rank: e.rank, zh: e.zh, py: e.py, en: e.en, ru: e.ru, now, prop, examples };
     });
   return {

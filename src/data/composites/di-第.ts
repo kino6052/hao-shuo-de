@@ -13,4 +13,18 @@ export default composite({
   literal: "first",
   fit: "natural",
   note: "dì in front of a number puts it in order: dì-yī, first; dì-èr, second.",
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:shi4}} {{word:di4}}-{{word:yi1}}.",
+      hanzi: "他是第一。",
+      en: "He is first.",
+      ru: "Он первый.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:shi4}} {{word:di4}}-{{word:yi1}}.",
+      hanzi: "你是第一。",
+      en: "You are first.",
+      ru: "Ты первый.",
+    },
+  ],
 });

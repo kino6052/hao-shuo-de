@@ -12,4 +12,18 @@ export default composite({
   tts: ["拿一个"],
   literal: "take one",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:ni3}} {{word:na2}} {{word:yi1}}-{{light:ge4}}.",
+      hanzi: "你拿一个。",
+      en: "You pick one.",
+      ru: "Ты выбираешь один.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:na2}} {{word:yi1}}-{{light:ge4}} {{word:hao3}}-{{word:de}}.",
+      hanzi: "我拿一个好的。",
+      en: "I choose a good one.",
+      ru: "Я выбираю хороший.",
+    },
+  ],
 });

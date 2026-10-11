@@ -14,5 +14,18 @@ export default composite({
   tts: ["我爸爸妈妈的女孩子"],
   literal: "my parents' girls",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:nv3}}-{{word:hai2}}-{{word:zi}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "我爸爸妈妈的女孩子很好。",
+      en: "My sister is nice.",
+      ru: "Моя сестра хорошая.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:nv3}}-{{word:hai2}}-{{word:zi}} {{word:zai4}} {{word:jia1}}.",
+      hanzi: "我爸爸妈妈的女孩子在家。",
+      en: "My sister is at home.",
+      ru: "Моя сестра дома.",
+    },
+  ],
 });

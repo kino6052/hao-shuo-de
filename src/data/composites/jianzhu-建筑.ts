@@ -12,4 +12,18 @@ export default composite({
   tts: ["大的家"],
   literal: "a big house",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:kan4}}-{{word:dao4}} {{word:da4}}-{{word:de}} {{word:jia1}}.",
+      hanzi: "我看到大的家。",
+      en: "I see a building.",
+      ru: "Я вижу здание.",
+    },
+    {
+      pinyin: "{{Word:da4}}-{{word:de}} {{word:jia1}} {{word:zai4}} {{word:na4}}-{{word:li3}}.",
+      hanzi: "大的家在那里。",
+      en: "The building is over there.",
+      ru: "Здание вон там.",
+    },
+  ],
 });

@@ -13,4 +13,18 @@ export default composite({
   literal: "one-one",
   fit: "natural",
   note: "Lesson {{lesson:doubling-words}}: gè-gè dōu.",
+  examples: [
+    {
+      pinyin: "{{Word:ge4}}-{{word:ge4}} {{word:ren2}} {{word:dou1}} {{word:lai2}} {{word:le}}.",
+      hanzi: "个个人都来了。",
+      en: "Everyone came.",
+      ru: "Пришёл каждый.",
+    },
+    {
+      pinyin: "{{Word:ge4}}-{{word:ge4}} {{word:dou1}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "个个都很好。",
+      en: "Each one is good.",
+      ru: "Каждый хорош.",
+    },
+  ],
 });

@@ -12,4 +12,18 @@ export default composite({
   tts: ["口"],
   fit: "natural",
   note: "Real Mandarin: 口.",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:kou3}} {{word:hen3}} {{word:xiao3}}.",
+      hanzi: "我的口很小。",
+      en: "My mouth is small.",
+      ru: "У меня маленький рот.",
+    },
+    {
+      pinyin: "{{Word:ta1}}-{{word:de}} {{word:kou3}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "他的口很大。",
+      en: "His mouth is big.",
+      ru: "У него большой рот.",
+    },
+  ],
 });

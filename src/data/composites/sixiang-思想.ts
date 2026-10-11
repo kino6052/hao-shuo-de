@@ -8,9 +8,22 @@ export default composite({
   en: "thought, thinking",
   ru: "мысль",
   pos: "noun",
-  hsd: ["{{word:xiang3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["想的东西"],
+  hsd: ["{{word:xiang3}}-{{word:de}}"],
+  tts: ["想的"],
   literal: "what you think",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:xiang3}}-{{word:de}}.",
+      hanzi: "我有想的。",
+      en: "I have a thought.",
+      ru: "У меня есть мысль.",
+    },
+    {
+      pinyin: "{{Word:xiang3}}-{{word:de}} {{word:hen3}} {{word:duo1}}.",
+      hanzi: "想的很多。",
+      en: "There are many thoughts.",
+      ru: "Мыслей много.",
+    },
+  ],
 });

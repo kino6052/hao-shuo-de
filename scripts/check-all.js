@@ -29,6 +29,7 @@ const GATES = [
   ['check-practice', ['--summary']],
   ['check-example-runs', ['--summary']],
   ['check-word-builder', []],
+  ['check-passive', []],
 ];
 
 const results = [];

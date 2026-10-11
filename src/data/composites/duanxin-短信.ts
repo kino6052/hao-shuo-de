@@ -12,4 +12,18 @@ export default composite({
   tts: ["小的写的东西"],
   literal: "a small written thing",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:xiao3}}-{{word:de}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
+      hanzi: "我有小的写的东西。",
+      en: "I have a text message.",
+      ru: "У меня есть сообщение.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:gei3}} {{word:wo3}} {{word:xiao3}}-{{word:de}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
+      hanzi: "他给我小的写的东西。",
+      en: "He sends me a text message.",
+      ru: "Он присылает мне сообщение.",
+    },
+  ],
 });

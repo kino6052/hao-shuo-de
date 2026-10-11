@@ -13,5 +13,18 @@ export default composite({
   literal: "the outside",
   fit: "natural",
   note: "Lesson {{lesson:moving}}.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:zai4}} {{word:wai4}}-{{word:bian1}}.",
+      hanzi: "他在外边。",
+      en: "He is outside.",
+      ru: "Он снаружи.",
+    },
+    {
+      pinyin: "{{Word:shui3}} {{word:zai4}} {{word:wai4}}-{{word:mian4}}.",
+      hanzi: "水在外面。",
+      en: "The water is outside.",
+      ru: "Вода снаружи.",
+    },
+  ],
 });

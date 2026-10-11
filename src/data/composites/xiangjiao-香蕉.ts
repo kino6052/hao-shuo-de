@@ -8,11 +8,22 @@ export default composite({
   en: "banana",
   ru: "банан",
   pos: "noun",
-  hsd: [
-    "{{word:huang2}}-{{word:se4}}-{{word:de}} {{word:zhi2wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
-  ],
-  tts: ["黄色的植物生的东西"],
-  literal: "a yellow fruit",
+  hsd: ["{{word:jin1}}-{{word:de}} {{word:yan2se4}}-{{word:de}} {{word:shui3}}-{{word:guo3}}"],
+  tts: ["金的颜色的水果"],
+  literal: "the fruit of the golden colour",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:chi1}} {{word:jin1}}-{{word:de}} {{word:yan2se4}}-{{word:de}} {{word:shui3}}-{{word:guo3}}.",
+      hanzi: "我吃金的颜色的水果。",
+      en: "I eat a banana.",
+      ru: "Я ем банан.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:yao4}} {{word:jin1}}-{{word:de}} {{word:yan2se4}}-{{word:de}} {{word:shui3}}-{{word:guo3}}.",
+      hanzi: "他要金的颜色的水果。",
+      en: "He wants a banana.",
+      ru: "Он хочет банан.",
+    },
+  ],
 });

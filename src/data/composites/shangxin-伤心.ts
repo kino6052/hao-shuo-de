@@ -12,4 +12,18 @@ export default composite({
   tts: ["不开心"],
   literal: "not happy",
   fit: "natural",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:bu4}} {{word:kai1}}-{{word:xin1}}.",
+      hanzi: "我不开心。",
+      en: "I am sad.",
+      ru: "Мне грустно.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:bu4}} {{word:kai1}}-{{word:xin1}}.",
+      hanzi: "他不开心。",
+      en: "He is sad.",
+      ru: "Ему грустно.",
+    },
+  ],
 });

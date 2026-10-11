@@ -12,4 +12,18 @@ export default composite({
   tts: ["开心的日"],
   literal: "a happy day",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:kai1}}-{{word:xin1}}-{{word:de}} {{word:ri4}} {{word:hen3}} {{word:duo1}}.",
+      hanzi: "开心的日很多。",
+      en: "There are many holidays.",
+      ru: "Праздников много.",
+    },
+    {
+      pinyin: "{{Word:jin1}}-{{word:tian1}} {{word:shi4}} {{word:kai1}}-{{word:xin1}}-{{word:de}} {{word:ri4}}.",
+      hanzi: "今天是开心的日。",
+      en: "Today is a holiday.",
+      ru: "Сегодня праздник.",
+    },
+  ],
 });

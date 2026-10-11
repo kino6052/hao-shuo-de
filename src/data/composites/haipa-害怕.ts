@@ -11,4 +11,13 @@ export default composite({
   hsd: ["{{word:pa4}}"],
   tts: ["怕"],
   fit: "word",
+  examples: [
+    { pinyin: "{{Word:wo3}} {{word:pa4}}.", hanzi: "我怕。", en: "I'm afraid.", ru: "Мне страшно." },
+    {
+      pinyin: "{{Word:ta1}} {{word:bu4}} {{word:pa4}}.",
+      hanzi: "他不怕。",
+      en: "He isn't afraid.",
+      ru: "Ему не страшно.",
+    },
+  ],
 });

@@ -12,4 +12,18 @@ export default composite({
   tts: ["做的不一样"],
   literal: "make it different",
   fit: "natural",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:ba3}} {{word:zhe4}}-{{light:ge4}} {{word:zuo4}}-{{word:de}} {{word:bu4}} {{word:yi1}}-{{word:yang4}}.",
+      hanzi: "我把这个做的不一样。",
+      en: "I changed this.",
+      ru: "Я изменил это.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:ba3}} {{word:shu1}} {{word:zuo4}}-{{word:de}} {{word:bu4}} {{word:yi1}}-{{word:yang4}}.",
+      hanzi: "他把书做的不一样。",
+      en: "He changed the book.",
+      ru: "Он изменил книгу.",
+    },
+  ],
 });

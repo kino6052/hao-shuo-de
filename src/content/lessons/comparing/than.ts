@@ -30,6 +30,11 @@ export default lessonModule({
       en: "long",
       ru: "длинный",
     },
+    {
+      word: "qiu2",
+      en: "ball",
+      ru: "мяч",
+    },
   ],
   prose: {
     en: [
@@ -38,7 +43,7 @@ export default lessonModule({
       "**A + {{word:bi3}} + B + adjective**",
       "",
       "Don't put {{word:hen3}} in these sentences: {{Word:wo3}} {{word:bi3}} {{word:ni3}} {{word:da4}}, not {{word:hen3}} {{word:da4}}.",
-      "{{word:chang2}} is long; a stick is {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}, a long thing.",
+      "{{word:chang2}} is long; a stick is {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}, a long thing. {{word:qiu2}} is a ball: a round thing.",
     ],
     ru: [
       "**Чтобы сказать, что одно больше другого**, поставьте между ними {{word:bi3}} (чем), а потом прилагательное.",
@@ -47,7 +52,7 @@ export default lessonModule({
       "",
       "Прилагательное не меняется: в русском «большой» становится «больше», а в китайском остаётся {{word:da4}}.",
       "Не ставьте {{word:hen3}} в такие предложения: {{Word:wo3}} {{word:bi3}} {{word:ni3}} {{word:da4}}, а не {{word:hen3}} {{word:da4}}.",
-      "{{word:chang2}} — длинный; палка — {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}, длинная вещь.",
+      "{{word:chang2}} — длинный; палка — {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}, длинная вещь. {{word:qiu2}} — мяч: круглая вещь.",
     ],
     tldr: {
       en: "A {{word:bi3}} B + adjective: {{Word:wo3}} {{word:bi3}} {{word:ni3}} {{word:da4}}, I'm bigger than you.",
@@ -97,10 +102,10 @@ export default lessonModule({
       ru: "Он старше меня.",
     },
     {
-      pinyin: "{{Word:zhe4}}-ge {{word:lu4}} {{word:bi3}} {{word:na4}}-ge {{word:yuan3}}.",
-      hanzi: "这个路比那个远。",
-      en: "This way is farther than that one.",
-      ru: "Эта дорога длиннее той.",
+      pinyin: "{{Word:zhe4}}-ge {{word:qiu2}} {{word:bi3}} {{word:na4}}-ge {{word:da4}}.",
+      hanzi: "这个球比那个大。",
+      en: "This ball is bigger than that one.",
+      ru: "Этот мяч больше того.",
     },
     {
       pinyin: "{{Word:you4}}-{{word:bian1}}-{{word:de}} {{word:bao1}} {{word:bi3}} {{word:zuo3}}-{{word:bian1}}-{{word:de}} {{word:da4}}.",
@@ -145,6 +150,12 @@ export default lessonModule({
       ru: "Сумка с этой стороны больше, чем с той.",
       answer: "{{Word:zhe4}}-{{word:bian1}}-{{word:de}} {{word:bao1}} {{word:bi3}} {{word:na4}}-{{word:bian1}}-{{word:de}} {{word:da4}}.",
       hanzi: "这边的包比那边的大。",
+    },
+    {
+      en: "The ball is harder than the bag.",
+      ru: "Мяч твёрже сумки.",
+      answer: "{{Word:qiu2}} {{word:bi3}} {{word:bao1}} {{word:ying4}}.",
+      hanzi: "球比包硬。",
     },
   ],
   faq: [

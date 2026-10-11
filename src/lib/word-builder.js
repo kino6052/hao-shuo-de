@@ -17,7 +17,7 @@
 // The parts always come out in the usual Mandarin order, whatever order the
 // reader answered in:
 //   noun: cóng-X-lái-de, dào/qù-X-de, zài-X-de, does-de, kind-de, color-de + NOUN
-//         zài-shuǐ-lǐ-de xiǎo-de huáng-sè-de dòng-wù
+//         zài-shuǐ-lǐ-de xiǎo-de hóng-sè-de dòng-wù
 //   verb: cóng X, zài X, yòng + thing, way-de + VERB-direction / VERB-dào X + object
 //         cóng jiā yòng jiǎo kuài-kuài-de qù     fēi-dào shuǐ-lǐ
 
@@ -138,7 +138,7 @@ export const START_VERBS = ["zuo4", "qu4", "chi1", "kan4"];
 
 // -- Which words can answer which question -----------------------------
 
-const COLORS = new Set(["bai2", "hei1", "hong2", "huang2", "lan2"]);
+const COLORS = new Set(["bai2", "hei1", "hong2"]);
 // Grammar words and words the questions themselves add (zài, cóng, yòng, the
 // place and direction words), so they're never offered as answers.
 const NOT_OFFERED = new Set([

@@ -13,5 +13,18 @@ export default composite({
   literal: "container",
   fit: "word",
   note: "bāo covers bags too.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:bao1}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "我的包很大。",
+      en: "My bag is big.",
+      ru: "Моя сумка большая.",
+    },
+    {
+      pinyin: "{{Word:shu1}} {{word:zai4}} {{word:bao1}}-{{word:li3}}.",
+      hanzi: "书在包里。",
+      en: "The book is in the bag.",
+      ru: "Книга в сумке.",
+    },
+  ],
 });

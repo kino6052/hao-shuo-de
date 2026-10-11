@@ -9,9 +9,25 @@ export default composite({
   ru: "природа; естественно",
   pos: "noun",
   hsd: [
-    "{{word:ren2}} {{word:mei2}} {{word:zuo4}}-{{word:guo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+    "{{word:wai4}}-{{word:mian4}}",
+    "{{word:you3}} {{word:duo1}} {{word:zhi2wu4}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
+    "{{word:cong2}} {{word:yi3}}-{{word:qian2}} {{word:jiu4}} X",
   ],
-  tts: ["人没做过的东西"],
-  literal: "what people never made",
+  tts: ["外面", "有多植物的地方", "从以前就X"],
+  literal: "outside / a place with many plants / since before, already X",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:ai4}} {{word:wai4}}-{{word:mian4}}.",
+      hanzi: "我爱外面。",
+      en: "I love nature.",
+      ru: "Я люблю природу.",
+    },
+    {
+      pinyin: "{{Word:wo3}}-{{word:men}} {{word:qu4}} {{word:you3}} {{word:duo1}} {{word:zhi2wu4}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",
+      hanzi: "我们去有多植物的地方。",
+      en: "We're going out into nature.",
+      ru: "Мы идём на природу.",
+    },
+  ],
 });

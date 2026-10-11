@@ -11,5 +11,18 @@ export default composite({
   hsd: ["{{word:ming2}}"],
   tts: ["明"],
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:yue4}} {{word:hen3}} {{word:ming2}}.",
+      hanzi: "月很明。",
+      en: "The moon is bright.",
+      ru: "Луна яркая.",
+    },
+    {
+      pinyin: "{{Word:ri4}} {{word:hen3}} {{word:ming2}}.",
+      hanzi: "日很明。",
+      en: "The sun is bright.",
+      ru: "Солнце яркое.",
+    },
+  ],
 });

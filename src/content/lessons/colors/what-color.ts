@@ -46,10 +46,10 @@ export default lessonModule({
       ru: "Какого цвета это растение?",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:ai4}} {{word:lan2}}-{{word:se4}}.",
-      hanzi: "我爱蓝色。",
-      en: "I love blue.",
-      ru: "Я люблю синий цвет.",
+      pinyin: "{{Word:wo3}} {{word:ai4}} {{word:hong2}}-{{word:se4}}.",
+      hanzi: "我爱红色。",
+      en: "I love red.",
+      ru: "Я люблю красный цвет.",
     },
     {
       pinyin: "{{Word:zhe4}} {{word:liang3}}-ge {{word:bao1}}-{{word:de}} {{word:yan2se4}} {{word:yi1}}-{{word:yang4}}.",

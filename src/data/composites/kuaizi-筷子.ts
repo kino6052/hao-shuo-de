@@ -8,11 +8,22 @@ export default composite({
   en: "chopsticks",
   ru: "палочки",
   pos: "noun",
-  hsd: [
-    "{{word:chi1}} {{word:fan4}} {{word:yong4}}-{{word:de}} {{word:liang3}}-ge {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
-  ],
-  tts: ["吃饭用的两个长的东西"],
-  literal: "two sticks for eating",
+  hsd: ["\"Zhōngguó\"-{{word:de}} {{word:chi1}}-{{word:de}} {{word:gong1}}-{{word:ju4}}"],
+  tts: ["中国的吃的工具"],
+  literal: "China's tool for eating",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:you3}} \"Zhōngguó\"-{{word:de}} {{word:chi1}}-{{word:de}} {{word:gong1}}-{{word:ju4}}.",
+      hanzi: "我有中国的吃的工具。",
+      en: "I have chopsticks.",
+      ru: "У меня есть палочки.",
+    },
+    {
+      pinyin: "\"Zhōngguó\"-{{word:de}} {{word:chi1}}-{{word:de}} {{word:gong1}}-{{word:ju4}} {{word:zai4}} {{word:zhe4}}-{{word:li3}}.",
+      hanzi: "中国的吃的工具在这里。",
+      en: "The chopsticks are here.",
+      ru: "Палочки здесь.",
+    },
+  ],
 });

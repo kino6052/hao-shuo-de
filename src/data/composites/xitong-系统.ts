@@ -8,8 +8,24 @@ export default composite({
   en: "system",
   ru: "система",
   pos: "noun",
-  hsd: ["{{word:yi1}}-{{word:qi3}} {{word:dong4}}-{{word:de}} {{word:bu4}}-{{light:fen1}}"],
-  tts: ["一起动的部分"],
-  literal: "parts that move together",
+  hsd: [
+    "{{word:you3}}-{{word:duo1}}-{{word:bu4}}-{{light:fen1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+  ],
+  tts: ["有多部分的东西"],
+  literal: "a thing with many parts",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:you3}}-{{word:duo1}}-{{word:bu4}}-{{light:fen1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "这个有多部分的东西很大。",
+      en: "This system is big.",
+      ru: "Эта система большая.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:xiang3}} {{word:zhi1dao4}} {{word:you3}}-{{word:duo1}}-{{word:bu4}}-{{light:fen1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
+      hanzi: "我想知道有多部分的东西。",
+      en: "I want to understand the system.",
+      ru: "Я хочу понять систему.",
+    },
+  ],
 });

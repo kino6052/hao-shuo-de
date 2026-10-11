@@ -8,12 +8,23 @@ export default composite({
   en: "sky",
   ru: "небо",
   pos: "noun",
-  hsd: [
-    "{{word:tian1}}-{{word:kong1}}",
-    "{{word:ri4}} {{word:he2}} {{word:yue4}} {{word:zai4}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
-  ],
-  tts: ["天空", "日和月在的地方"],
-  literal: "day-empty / where the sun and moon are",
+  hsd: ["{{word:tian1}}-{{word:kong1}}", "{{word:tian1}}-{{word:shang4}}"],
+  tts: ["天空", "天上"],
+  literal: "up in the sky",
   fit: "natural",
-  proposed: true,
+  transparent: true,
+  examples: [
+    {
+      pinyin: "{{Word:tian1}}-{{word:shang4}} {{word:you3}} {{word:ri4}} {{word:he2}} {{word:yue4}}.",
+      hanzi: "天上有日和月。",
+      en: "There is a sun and a moon in the sky.",
+      ru: "В небе солнце и луна.",
+    },
+    {
+      pinyin: "{{Word:tian1}}-{{word:shang4}} {{word:mei2}} {{word:you3}} {{word:shui3}}.",
+      hanzi: "天上没有水。",
+      en: "There is no water in the sky.",
+      ru: "В небе нет воды.",
+    },
+  ],
 });

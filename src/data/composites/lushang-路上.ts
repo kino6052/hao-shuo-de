@@ -12,4 +12,18 @@ export default composite({
   tts: ["路上"],
   fit: "natural",
   note: "Lesson {{lesson:moving}}.",
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:zai4}} {{word:lu4}}-{{word:shang4}}.",
+      hanzi: "他在路上。",
+      en: "He is on the road.",
+      ru: "Он в пути.",
+    },
+    {
+      pinyin: "{{Word:lu4}}-{{word:shang4}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:ren2}}.",
+      hanzi: "路上有很多人。",
+      en: "There are many people on the road.",
+      ru: "На дороге много людей.",
+    },
+  ],
 });

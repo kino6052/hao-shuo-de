@@ -12,5 +12,18 @@ export default composite({
   tts: ["难过", "不开心"],
   literal: "hard to get through / not happy",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:hen3}} {{word:nan2}}-{{word:guo4}}.",
+      hanzi: "我很难过。",
+      en: "I'm sad.",
+      ru: "Мне грустно.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:hen3}} {{word:nan2}}-{{word:guo4}}.",
+      hanzi: "他很难过。",
+      en: "He is sad.",
+      ru: "Ему грустно.",
+    },
+  ],
 });

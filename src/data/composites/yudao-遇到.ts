@@ -12,4 +12,18 @@ export default composite({
   tts: ["看到"],
   literal: "see",
   fit: "natural",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:kan4}}-{{word:dao4}} {{word:ta1}}.",
+      hanzi: "我看到他。",
+      en: "I came across him.",
+      ru: "Я встретил его.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:kan4}}-{{word:dao4}} {{word:wo3}} {{word:le}} {{word:ma}}?",
+      hanzi: "你看到我了吗？",
+      en: "Did you come across me?",
+      ru: "Ты меня встретил?",
+    },
+  ],
 });

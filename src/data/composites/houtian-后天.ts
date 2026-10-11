@@ -12,5 +12,18 @@ export default composite({
   tts: ["后天", "两个日后"],
   literal: "after-day / two days later",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:hou4}}-{{word:tian1}} {{word:wo3}} {{word:zai4}} {{word:jia1}}.",
+      hanzi: "后天我在家。",
+      en: "The day after tomorrow I'll be at home.",
+      ru: "Послезавтра я буду дома.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:hou4}}-{{word:tian1}} {{word:qu4}}.",
+      hanzi: "我后天去。",
+      en: "I'm going the day after tomorrow.",
+      ru: "Я иду послезавтра.",
+    },
+  ],
 });

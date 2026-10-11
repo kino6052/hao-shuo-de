@@ -12,5 +12,18 @@ export default composite({
   tts: ["题", "问的东西"],
   literal: "something asked",
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:ti2}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "这个题很好。",
+      en: "This question is good.",
+      ru: "Этот вопрос хороший.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:you3}} {{word:ti2}} {{word:ma}}?",
+      hanzi: "你有题吗？",
+      en: "Do you have a question?",
+      ru: "У тебя есть вопрос?",
+    },
+  ],
 });

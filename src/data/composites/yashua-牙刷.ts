@@ -8,10 +8,22 @@ export default composite({
   en: "toothbrush",
   ru: "зубная щётка",
   pos: "noun",
-  hsd: [
-    "{{word:zuo4}}-{{word:hao3}} {{word:kou3}}-{{word:li3}}-{{word:de}} {{word:ying4}} {{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:gong1}}-{{word:ju4}}",
-  ],
-  tts: ["做好口里的硬东西的工具"],
-  literal: "the tool that cleans your teeth",
+  hsd: ["{{word:rang4}} {{word:ya2}} {{word:gan1jing4}}-{{word:de}} {{word:gong1}}-{{word:ju4}}"],
+  tts: ["让牙干净的工具"],
+  literal: "a tool that makes the teeth clean",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:yao4}} {{word:rang4}} {{word:ya2}} {{word:gan1jing4}}-{{word:de}} {{word:gong1}}-{{word:ju4}}.",
+      hanzi: "我要让牙干净的工具。",
+      en: "I want a toothbrush.",
+      ru: "Мне нужна зубная щётка.",
+    },
+    {
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:rang4}} {{word:ya2}} {{word:gan1jing4}}-{{word:de}} {{word:gong1}}-{{word:ju4}}.",
+      hanzi: "这是让牙干净的工具。",
+      en: "This is a toothbrush.",
+      ru: "Это зубная щётка.",
+    },
+  ],
 });

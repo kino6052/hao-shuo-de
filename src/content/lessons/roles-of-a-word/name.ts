@@ -20,6 +20,12 @@ export default lessonModule({
       en: "fruit; {{word:shui3}}-{{word:guo3}}: fruit to eat",
       ru: "плод; {{word:shui3}}-{{word:guo3}} — фрукты",
     },
+    {
+      word: "jie2",
+      sense: "result",
+      en: "result: {{word:jie2}}-{{word:guo3}}",
+      ru: "результат: {{word:jie2}}-{{word:guo3}}",
+    },
   ],
   prose: {
     en: [
@@ -28,7 +34,7 @@ export default lessonModule({
       "**description-{{word:de}} + noun**",
       "",
       "You already know this -{{word:de}}: {{word:hao3}}-{{word:de}} {{word:ren2}} (Lesson {{lesson:modifying-nouns}}), {{word:wo3}}-{{word:de}} {{word:bi2zi}} (Lesson {{lesson:pointing}}). The description can be as long as you need.",
-      "Everyday things are named this way too. {{word:sheng1}} means give birth: {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (what a flying animal gives birth to) is an egg. Some names are just two words: {{word:shou3}}-{{word:ji1}} (hand machine) is a phone, {{word:fei1}}-{{word:ji1}} (flying machine) is a plane, and {{word:shui3}}-{{word:guo3}} (water fruit) is fruit.",
+      "Everyday things are named this way too. {{word:sheng1}} means give birth: {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (what a flying animal gives birth to) is an egg. Some names are just two words: {{word:shou3}}-{{word:ji1}} (hand machine) is a phone, {{word:fei1}}-{{word:ji1}} (flying machine) is a plane, and {{word:shui3}}-{{word:guo3}} (water fruit) is fruit. {{word:jie2}} is tie, and {{word:jie2}}-{{word:guo3}} (tie fruit) is the result: where a thing ends up.",
     ],
     ru: [
       "**Чтобы назвать то, для чего нет слова**, опишите это, а потом добавьте -{{word:de}} и существительное.",
@@ -36,7 +42,7 @@ export default lessonModule({
       "**описание-{{word:de}} + существительное**",
       "",
       "Это -{{word:de}} вы уже знаете: {{word:hao3}}-{{word:de}} {{word:ren2}} (урок {{lesson:modifying-nouns}}), {{word:wo3}}-{{word:de}} {{word:bi2zi}} (урок {{lesson:pointing}}). Описание может быть сколь угодно длинным.",
-      "Так называют и обычные вещи. {{word:sheng1}} значит «рожать»: {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (то, что рождает летающее животное) — яйцо. Некоторые названия — просто два слова: {{word:shou3}}-{{word:ji1}} («ручная машина») — телефон, {{word:fei1}}-{{word:ji1}} («летающая машина») — самолёт, а {{word:shui3}}-{{word:guo3}} («водяной плод») — фрукты.",
+      "Так называют и обычные вещи. {{word:sheng1}} значит «рожать»: {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (то, что рождает летающее животное) — яйцо. Некоторые названия — просто два слова: {{word:shou3}}-{{word:ji1}} («ручная машина») — телефон, {{word:fei1}}-{{word:ji1}} («летающая машина») — самолёт, а {{word:shui3}}-{{word:guo3}} («водяной плод») — фрукты. {{word:jie2}} — «завязать», а {{word:jie2}}-{{word:guo3}} («завязанный плод») — результат: то, чем всё кончилось.",
     ],
     tldr: {
       en: "description-{{word:de}} + noun: {{word:zai4}}-{{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4}}-{{word:wu4}}, an animal in the water.",
@@ -83,10 +89,10 @@ export default lessonModule({
       ru: "Фрукты сладкие.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:ai4}}-{{word:de}} {{word:yan2se4}} {{word:shi4}} {{word:lan2}}-{{word:se4}}.",
-      hanzi: "我爱的颜色是蓝色。",
-      en: "The color I love is blue.",
-      ru: "Цвет, который я люблю, — синий.",
+      pinyin: "{{Word:jie2}}-{{word:guo3}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "结果很好。",
+      en: "The result is good.",
+      ru: "Результат хороший.",
     },
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
@@ -137,6 +143,12 @@ export default lessonModule({
       ru: "Самолёт в небе.",
       answer: "{{Word:fei1}}-{{word:ji1}} {{word:zai4}} {{word:tian1}}-{{word:shang4}}.",
       hanzi: "飞机在天上。",
+    },
+    {
+      en: "What is the result?",
+      ru: "Каков результат?",
+      answer: "{{Word:jie2}}-{{word:guo3}} {{word:shi4}} {{word:shen2me}}?",
+      hanzi: "结果是什么？",
     },
   ],
 });

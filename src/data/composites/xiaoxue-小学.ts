@@ -15,5 +15,18 @@ export default composite({
   tts: ["小学", "小的人学的地方"],
   literal: "small learning / where small people learn",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:xiao3}}-{{word:hai2}}-{{word:zi}} {{word:zai4}} {{word:xiao3}}-{{word:xue2}}.",
+      hanzi: "小孩子在小学。",
+      en: "The child is in primary school.",
+      ru: "Ребёнок учится в начальной школе.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:zai4}} {{word:xiao3}}-{{word:xue2}} {{word:xue2}} {{word:zi4}}.",
+      hanzi: "他在小学学字。",
+      en: "He learns characters in primary school.",
+      ru: "Он учит иероглифы в начальной школе.",
+    },
+  ],
 });

@@ -4,16 +4,27 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "count-kinds",
+  words: [
+    {
+      word: "shu4",
+      en: "number, amount (how many there are)",
+      ru: "число, количество (сколько есть)",
+    },
+  ],
   prose: {
     en: [
       "**To count kinds, times, or parts**, put the number before {{word:zhong3}} (kind), {{word:ci4}} (time), or {{word:bu4}}-{{light:fen1}} (part) instead of {{word:ge4}}.",
       "",
       "**number-{{word:zhong3}} / number-{{word:ci4}} / number-{{word:bu4}}-{{light:fen1}}**",
+      "",
+      "To say how many there are, use {{word:shu4}} (the number of): {{word:ren2}}-{{word:de}} {{word:shu4}} is the number of people.",
     ],
     ru: [
       "**Чтобы посчитать виды, разы или части**, поставьте число перед {{word:zhong3}} (вид), {{word:ci4}} (раз) или {{word:bu4}}-{{light:fen1}} (часть) вместо {{word:ge4}}.",
       "",
       "**число-{{word:zhong3}} / число-{{word:ci4}} / число-{{word:bu4}}-{{light:fen1}}**",
+      "",
+      "Чтобы сказать, сколько чего-то, используйте {{word:shu4}} (число): {{word:ren2}}-{{word:de}} {{word:shu4}} — число людей.",
     ],
     tldr: {
       en: "Count kinds with {{word:zhong3}} and times with {{word:ci4}}: {{word:san1}}-{{word:zhong3}}, {{word:san1}}-{{word:ci4}}.",
@@ -25,8 +36,8 @@ export default lessonModule({
     },
   },
   info: {
-    en: "number-{{word:zhong3}} / -{{word:ci4}} / -{{word:bu4}}-{{light:fen1}}, kinds / times / parts: {{Word:wo3}} {{word:qu4}}-{{word:guo4}} {{word:san1}}-{{word:ci4}}. (I've been there three times.)",
-    ru: "число-{{word:zhong3}} / -{{word:ci4}} / -{{word:bu4}}-{{light:fen1}} — виды / разы / части: {{Word:wo3}} {{word:qu4}}-{{word:guo4}} {{word:san1}}-{{word:ci4}}. (Я был там три раза.)",
+    en: "number-{{word:zhong3}} / -{{word:ci4}} / -{{word:bu4}}-{{light:fen1}}, kinds / times / parts: {{Word:wo3}} {{word:qu4}}-{{word:guo4}} {{word:san1}}-{{word:ci4}}. (I've been there three times.) {{word:shu4}}, the number of: {{word:ren2}}-{{word:de}} {{word:shu4}}.",
+    ru: "число-{{word:zhong3}} / -{{word:ci4}} / -{{word:bu4}}-{{light:fen1}} — виды / разы / части: {{Word:wo3}} {{word:qu4}}-{{word:guo4}} {{word:san1}}-{{word:ci4}}. (Я был там три раза.) {{word:shu4}} — число: {{word:ren2}}-{{word:de}} {{word:shu4}}.",
   },
   examples: [
     {
@@ -47,6 +58,12 @@ export default lessonModule({
       en: "I've been there three times.",
       ru: "Я был там три раза.",
     },
+    {
+      pinyin: "{{Word:ren2}}-{{word:de}} {{word:shu4}} {{word:hen3}} {{word:duo1}}.",
+      hanzi: "人的数很多。",
+      en: "There are a lot of people.",
+      ru: "Людей много.",
+    },
   ],
   exercises: [
     {
@@ -54,6 +71,12 @@ export default lessonModule({
       ru: "У меня два вида растений.",
       answer: "{{Word:wo3}} {{word:you3}} {{word:liang3}}-{{word:zhong3}} {{word:zhi2wu4}}.",
       hanzi: "我有两种植物。",
+    },
+    {
+      en: "There are few plants.",
+      ru: "Растений мало.",
+      answer: "{{Word:zhi2wu4}}-{{word:de}} {{word:shu4}} {{word:hen3}} {{word:shao3}}.",
+      hanzi: "植物的数很少。",
     },
   ],
 });

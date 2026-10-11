@@ -15,5 +15,18 @@ export default composite({
   tts: ["想是真的", "给远的人写的东西"],
   literal: "think it's true / something written to someone far away",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:xiang3}} {{word:shi4}} {{word:zhen1}}-{{word:de}}.",
+      hanzi: "我想是真的。",
+      en: "I believe it.",
+      ru: "Я верю.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:xiang3}} {{word:shi4}} {{word:zhen1}}-{{word:de}} {{word:ma}}?",
+      hanzi: "你想是真的吗？",
+      en: "Do you believe it?",
+      ru: "Ты веришь?",
+    },
+  ],
 });

@@ -12,4 +12,18 @@ export default composite({
   tts: ["说好"],
   literal: "say okay",
   fit: "natural",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:shuo1}} {{word:hao3}}.",
+      hanzi: "我说好。",
+      en: "I agree.",
+      ru: "Я соглашаюсь.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:shuo1}} {{word:hao3}}.",
+      hanzi: "他说好。",
+      en: "He agrees.",
+      ru: "Он соглашается.",
+    },
+  ],
 });

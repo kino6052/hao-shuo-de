@@ -73,7 +73,7 @@ export default lessonModule({
       ru: "Ты берёшь сумку или инструмент?",
     },
     {
-      pinyin: "{{Word:ni3}} {{word:yao4}} {{word:hong2}}-{{word:se4}}-{{word:de}} {{word:hai2}}-{{word:shi4}} {{word:lan2}}-{{word:se4}}-{{word:de}}?",
+      pinyin: "{{Word:ni3}} {{word:yao4}} {{word:hong2}}-{{word:se4}}-{{word:de}} {{word:hai2}}-{{word:shi4}} {{word:bai2}}-{{word:se4}}-{{word:de}}?",
       hanzi: "你要红色的还是蓝色的？",
       en: "Do you want a red one or a blue one?",
       ru: "Ты хочешь красный или синий?",

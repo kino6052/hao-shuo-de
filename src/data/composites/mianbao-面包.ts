@@ -12,5 +12,18 @@ export default composite({
   tts: ["面包", "吃的东西"],
   literal: "food",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:yao4}} {{word:chi1}} {{word:mian4}}-{{word:bao1}}.",
+      hanzi: "我要吃面包。",
+      en: "I want to eat bread.",
+      ru: "Я хочу съесть хлеб.",
+    },
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:mian4}}-{{word:bao1}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "这个面包很好。",
+      en: "This bread is good.",
+      ru: "Этот хлеб хороший.",
+    },
+  ],
 });

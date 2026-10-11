@@ -15,6 +15,11 @@ export default lessonModule({
       en: "heavy",
       ru: "тяжёлый",
     },
+    {
+      word: "ping2",
+      en: "flat, level",
+      ru: "ровный, плоский",
+    },
   ],
   prose: {
     en: [
@@ -24,6 +29,7 @@ export default lessonModule({
       "",
       "They compare like any adjective: {{Word:ta1}} {{word:bi3}} {{word:wo3}} {{word:gao1}}, he's taller than me.",
       "{{word:zhong4}} is heavy.",
+      "{{word:ping2}} is flat: {{word:lu4}} {{word:hen3}} {{word:ping2}}, the road is flat.",
     ],
     ru: [
       "**Чтобы сказать, как что-то выглядит или ощущается**, используйте прилагательные, например {{word:ying4}} (твёрдый), {{word:yuan2}} (круглый) и {{word:gao1}} (высокий).",
@@ -32,6 +38,7 @@ export default lessonModule({
       "",
       "Их сравнивают, как любое прилагательное: {{Word:ta1}} {{word:bi3}} {{word:wo3}} {{word:gao1}} — он выше меня.",
       "{{word:zhong4}} — тяжёлый.",
+      "{{word:ping2}} — «ровный»: {{word:lu4}} {{word:hen3}} {{word:ping2}} — дорога ровная.",
     ],
     tldr: {
       en: "{{word:ying4}} is hard, {{word:yuan2}} is round, {{word:gao1}} is tall. They work like any adjective.",
@@ -63,10 +70,10 @@ export default lessonModule({
       ru: "Нитка в сумке.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:you3}} {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
-      hanzi: "我有长的东西。",
-      en: "I have a stick.",
-      ru: "У меня есть палка.",
+      pinyin: "{{Word:lu4}} {{word:hen3}} {{word:ping2}}.",
+      hanzi: "路很平。",
+      en: "The road is flat.",
+      ru: "Дорога ровная.",
     },
     {
       pinyin: "{{Word:zhe4}}-ge {{word:kou3}} {{word:hen3}} {{word:yuan2}}.",
@@ -123,6 +130,12 @@ export default lessonModule({
       ru: "Вода тяжёлая.",
       answer: "{{Word:shui3}} {{word:hen3}} {{word:zhong4}}.",
       hanzi: "水很重。",
+    },
+    {
+      en: "Is the road flat?",
+      ru: "Дорога ровная?",
+      answer: "{{Word:lu4}} {{word:ping2}} {{word:ma}}?",
+      hanzi: "路平吗？",
     },
   ],
 });

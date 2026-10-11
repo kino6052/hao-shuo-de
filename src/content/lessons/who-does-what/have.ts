@@ -25,6 +25,11 @@ export default lessonModule({
       en: "book",
       ru: "книга",
     },
+    {
+      word: "you2",
+      en: "oil",
+      ru: "масло",
+    },
   ],
   prose: {
     en: [
@@ -77,10 +82,10 @@ export default lessonModule({
       ru: "У него есть вода.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:you3}} {{word:jin1}}.",
-      hanzi: "她有金。",
-      en: "She has money.",
-      ru: "У неё есть деньги.",
+      pinyin: "{{Word:ta1}} {{word:you3}} {{word:you2}}.",
+      hanzi: "她有油。",
+      en: "She has oil.",
+      ru: "У неё есть масло.",
     },
     {
       pinyin: "{{Word:ta1}} {{word:mei2}}-{{word:you3}} {{word:dong1}}-{{light:xi1}}.",
@@ -119,6 +124,12 @@ export default lessonModule({
       ru: "У неё нет книги.",
       answer: "{{Word:ta1}} {{word:mei2}}-{{word:you3}} {{word:shu1}}.",
       hanzi: "她没有书。",
+    },
+    {
+      en: "She has oil.",
+      ru: "У неё есть масло.",
+      answer: "{{Word:ta1}} {{word:you3}} {{word:you2}}.",
+      hanzi: "她有油。",
     },
   ],
 });

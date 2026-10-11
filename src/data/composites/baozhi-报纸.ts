@@ -14,5 +14,18 @@ export default composite({
   tts: ["说现在发生什么的写的东西"],
   literal: "a written thing that says what's happening now",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:kan4}} {{word:shuo1}}-{{word:xian4}}-{{word:zai4}}-{{word:fa1}}-{{word:sheng1}}-{{word:shen2me}}-{{word:de}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
+      hanzi: "我看说现在发生什么的写的东西。",
+      en: "I read the newspaper.",
+      ru: "Я читаю газету.",
+    },
+    {
+      pinyin: "{{Word:ba4ba}} {{word:kan4}} {{word:shuo1}}-{{word:xian4}}-{{word:zai4}}-{{word:fa1}}-{{word:sheng1}}-{{word:shen2me}}-{{word:de}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
+      hanzi: "爸爸看说现在发生什么的写的东西。",
+      en: "Dad reads the newspaper.",
+      ru: "Папа читает газету.",
+    },
+  ],
 });

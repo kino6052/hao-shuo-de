@@ -8,9 +8,22 @@ export default composite({
   en: "beautiful",
   ru: "прекрасный",
   pos: "adjective",
-  hsd: ["{{word:hao3}}-{{word:kan4}}"],
-  tts: ["好看"],
-  literal: "good to look at",
-  fit: "natural",
-  proposed: true,
+  hsd: ["{{word:hen3}}-{{word:hao3}}-{{word:kan4}}"],
+  tts: ["很好看"],
+  literal: "very good to look at",
+  fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:tian1}} {{word:hen3}} {{word:hao3}}-{{word:kan4}}.",
+      hanzi: "天很好看。",
+      en: "The sky is beautiful.",
+      ru: "Небо очень красивое.",
+    },
+    {
+      pinyin: "{{Word:ta1}}-{{word:de}} {{word:jia1}} {{word:hen3}} {{word:hao3}}-{{word:kan4}}.",
+      hanzi: "他的家很好看。",
+      en: "His home is beautiful.",
+      ru: "Его дом очень красивый.",
+    },
+  ],
 });

@@ -12,4 +12,18 @@ export default composite({
   tts: ["看你学了什么"],
   literal: "see what you learned",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:kan4}} {{word:ni3}} {{word:xue2}}-{{word:le}} {{word:shen2me}}.",
+      hanzi: "看你学了什么。",
+      en: "Let's see what you've learned.",
+      ru: "Посмотрим, что ты выучил.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:yao4}} {{word:kan4}} {{word:ni3}} {{word:xue2}}-{{word:le}} {{word:shen2me}}.",
+      hanzi: "我要看你学了什么。",
+      en: "I'm going to test what you've learned.",
+      ru: "Я проверю, что ты выучил.",
+    },
+  ],
 });

@@ -12,5 +12,18 @@ export default composite({
   tts: ["人家", "别的人"],
   literal: "people's home / other people",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ren2}}-{{word:jia1}} {{word:you3}} {{word:shu1}}.",
+      hanzi: "人家有书。",
+      en: "They have books.",
+      ru: "У них есть книги.",
+    },
+    {
+      pinyin: "{{Word:bie2}}-{{word:de}} {{word:ren2}} {{word:you3}} {{word:shu1}}.",
+      hanzi: "别的人有书。",
+      en: "Other people have books.",
+      ru: "У других есть книги.",
+    },
+  ],
 });

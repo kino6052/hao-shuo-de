@@ -12,4 +12,18 @@ export default composite({
   tts: ["快去"],
   literal: "go fast",
   fit: "natural",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:kuai4}} {{word:qu4}}.",
+      hanzi: "我快去。",
+      en: "I'm hurrying.",
+      ru: "Я спешу.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:kuai4}} {{word:qu4}}!",
+      hanzi: "你快去！",
+      en: "Hurry up!",
+      ru: "Спеши!",
+    },
+  ],
 });

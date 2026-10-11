@@ -12,5 +12,18 @@ export default composite({
   tts: ["出门", "出去"],
   fit: "natural",
   note: "Lesson {{lesson:direction-and-result}}.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:chu1}}-{{word:men2}} {{word:le}}.",
+      hanzi: "他出门了。",
+      en: "He went out.",
+      ru: "Он вышел из дома.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:yao4}} {{word:chu1}}-{{word:men2}}.",
+      hanzi: "我要出门。",
+      en: "I'm going out.",
+      ru: "Я собираюсь выйти.",
+    },
+  ],
 });

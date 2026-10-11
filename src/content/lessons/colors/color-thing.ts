@@ -25,11 +25,6 @@ export default lessonModule({
       en: "red",
       ru: "красный",
     },
-    {
-      word: "huang2",
-      en: "yellow",
-      ru: "жёлтый",
-    },
   ],
   prose: {
     en: [
@@ -75,10 +70,10 @@ export default lessonModule({
       ru: "Чёрное животное.",
     },
     {
-      pinyin: "{{Word:huang2}}-{{word:se4}}-{{word:de}} {{word:zhi2wu4}}.",
-      hanzi: "黄色的植物。",
-      en: "A yellow plant.",
-      ru: "Жёлтое растение.",
+      pinyin: "{{Word:bai2}}-{{word:se4}}-{{word:de}} {{word:zhi2wu4}}.",
+      hanzi: "白色的植物。",
+      en: "A white plant.",
+      ru: "Белое растение.",
     },
     {
       pinyin: "{{Word:ba3}} {{word:hong2}}-{{word:se4}}-{{word:de}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:zhe4}}-{{word:li3}}.",

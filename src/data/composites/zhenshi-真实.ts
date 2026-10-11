@@ -11,5 +11,18 @@ export default composite({
   hsd: ["{{word:zhen1}}-{{word:shi2}}", "{{word:zhen1}}"],
   tts: ["真实", "真"],
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:zhen1}}-{{word:de}}.",
+      hanzi: "这是真的。",
+      en: "This is real.",
+      ru: "Это правда.",
+    },
+    {
+      pinyin: "{{Word:ta1}}-{{word:de}} {{word:hua4}} {{word:hen3}} {{word:zhen1}}.",
+      hanzi: "他的话很真。",
+      en: "His words are true.",
+      ru: "Его слова правдивы.",
+    },
+  ],
 });

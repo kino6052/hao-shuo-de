@@ -8,9 +8,23 @@ export default composite({
   en: "consider",
   ru: "обдумывать",
   pos: "verb",
-  hsd: ["{{word:kan4}}-kan"],
-  tts: ["看看"],
-  literal: "have a look",
-  fit: "natural",
+  hsd: ["{{word:xiang3}}-{{word:xiang3}}"],
+  tts: ["想想"],
+  literal: "think a little",
+  fit: "plain",
   note: "wǒ kàn-kan: let me think about it.",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:xiang3}}-{{word:xiang3}}.",
+      hanzi: "我想想。",
+      en: "I'll think about it.",
+      ru: "Я подумаю.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:xiang3}}-{{word:xiang3}} \"ba\".",
+      hanzi: "你想想吧。",
+      en: "Think it over.",
+      ru: "Подумай.",
+    },
+  ],
 });

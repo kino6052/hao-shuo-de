@@ -13,5 +13,18 @@ export default composite({
   literal: "face-front",
   fit: "natural",
   note: "Lesson {{lesson:where-it-is}}.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:zhan4}} {{word:zai4}} {{word:wo3}} {{word:mian4}}-{{word:qian2}}.",
+      hanzi: "他站在我面前。",
+      en: "He is standing in front of me.",
+      ru: "Он стоит передо мной.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:zai4}} {{word:wo3}} {{word:mian4}}-{{word:qian2}}.",
+      hanzi: "你在我面前。",
+      en: "You are in front of me.",
+      ru: "Ты передо мной.",
+    },
+  ],
 });

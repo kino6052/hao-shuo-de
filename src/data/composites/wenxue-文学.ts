@@ -8,8 +8,22 @@ export default composite({
   en: "literature",
   ru: "литература",
   pos: "noun",
-  hsd: ["{{word:hao3}}-{{word:de}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["好的写的东西"],
-  literal: "good written things",
-  fit: "plain",
+  hsd: ["\"wén\"-{{word:xue2}}"],
+  tts: ["文学"],
+  literal: "literature",
+  fit: "name",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:kan4}} \"wén\"-{{word:xue2}}.",
+      hanzi: "我看文学。",
+      en: "I read literature.",
+      ru: "Я читаю литературу.",
+    },
+    {
+      pinyin: "\"Wén\"-{{word:xue2}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "文学很好。",
+      en: "Literature is good.",
+      ru: "Литература хороша.",
+    },
+  ],
 });

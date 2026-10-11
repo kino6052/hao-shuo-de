@@ -8,8 +8,22 @@ export default composite({
   en: "low",
   ru: "низкий",
   pos: "adjective",
-  hsd: ["{{word:zai4}} {{word:xia4}}-{{word:mian4}}", "{{word:xiao3}}"],
-  tts: ["在下面", "小"],
-  literal: "below / small",
+  hsd: ["{{word:bu4}} {{word:gao1}}"],
+  tts: ["不高"],
+  literal: "not high",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:bu4}} {{word:gao1}}.",
+      hanzi: "这个不高。",
+      en: "This is low.",
+      ru: "Это низкое.",
+    },
+    {
+      pinyin: "{{Word:na4}}-{{light:ge4}} {{word:jia1}} {{word:bu4}} {{word:gao1}}.",
+      hanzi: "那个家不高。",
+      en: "That house is low.",
+      ru: "Тот дом низкий.",
+    },
+  ],
 });

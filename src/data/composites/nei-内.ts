@@ -12,4 +12,18 @@ export default composite({
   tts: ["里面"],
   fit: "natural",
   note: "Lesson {{lesson:where-it-is}}.",
+  examples: [
+    {
+      pinyin: "{{Word:che1}}-{{word:de}} {{word:li3}}-{{word:mian4}} {{word:you3}} {{word:ren2}}.",
+      hanzi: "车的里面有人。",
+      en: "There are people inside the car.",
+      ru: "Внутри машины люди.",
+    },
+    {
+      pinyin: "{{Word:fang2}}-{{word:jian1}}-{{word:de}} {{word:li3}}-{{word:mian4}} {{word:hen3}} {{word:gan1jing4}}.",
+      hanzi: "房间的里面很干净。",
+      en: "The inside of the room is clean.",
+      ru: "Внутри комнаты чисто.",
+    },
+  ],
 });

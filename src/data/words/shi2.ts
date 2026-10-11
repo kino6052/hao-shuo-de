@@ -15,10 +15,10 @@ export default word("shi2", {
       hanzi: "时",
       eng: "time",
       rus: "время",
-      compounds: ["shi2 jian1", "shi2 hou4", "xiao3 shi2", "you3 shi2"],
+      compounds: ["shi2 jian1", "shi2 hou4", "xiao3 shi2", "you3 shi2", "ping2 shi2"],
       why: {
-        eng: "Written 时, {{word:shi2}} means time in {{word:shi2}}-{{word:jian1}}, {{word:shi2}}-{{light:hou4}}, {{word:xiao3}}-{{word:shi2}}, {{word:you3}}-{{word:shi2}}; on its own it is ten.",
-        rus: "Записанное как 时, {{word:shi2}} значит «время» в {{word:shi2}}-{{word:jian1}}, {{word:shi2}}-{{light:hou4}}, {{word:xiao3}}-{{word:shi2}}, {{word:you3}}-{{word:shi2}}; само по себе — «десять».",
+        eng: "Written 时, {{word:shi2}} means time in {{word:shi2}}-{{word:jian1}}, {{word:shi2}}-{{light:hou4}}, {{word:xiao3}}-{{word:shi2}}, {{word:you3}}-{{word:shi2}}, {{word:ping2}}-{{word:shi2}}; on its own it is ten.",
+        rus: "Записанное как 时, {{word:shi2}} значит «время» в {{word:shi2}}-{{word:jian1}}, {{word:shi2}}-{{light:hou4}}, {{word:xiao3}}-{{word:shi2}}, {{word:you3}}-{{word:shi2}}, {{word:ping2}}-{{word:shi2}}; само по себе — «десять».",
       },
     },
     food: {

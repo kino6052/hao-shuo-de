@@ -8,11 +8,22 @@ export default composite({
   en: "rice (uncooked)",
   ru: "рис",
   pos: "noun",
-  hsd: [
-    "{{word:chi1}}-{{word:de}} {{word:xiao3}}-{{word:de}} {{word:bai2}}-{{word:se4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+  hsd: ["{{word:fan4}}"],
+  tts: ["饭"],
+  literal: "rice (a meal)",
+  fit: "word",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:fan4}}.",
+      hanzi: "我有饭。",
+      en: "I have rice.",
+      ru: "У меня есть рис.",
+    },
+    {
+      pinyin: "{{Word:fan4}} {{word:zai4}} {{word:jia1}}-{{word:li3}}.",
+      hanzi: "饭在家里。",
+      en: "The rice is at home.",
+      ru: "Рис дома.",
+    },
   ],
-  tts: ["吃的小的白色的东西"],
-  literal: "small white food",
-  fit: "plain",
-  proposed: true,
 });

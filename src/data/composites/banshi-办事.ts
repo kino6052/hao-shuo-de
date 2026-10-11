@@ -12,4 +12,18 @@ export default composite({
   tts: ["做东西"],
   literal: "do things",
   fit: "natural",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:zuo4}} {{word:dong1}}-{{light:xi1}}.",
+      hanzi: "我做东西。",
+      en: "I handle things.",
+      ru: "Я занимаюсь делами.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:zai4}} {{word:zuo4}} {{word:dong1}}-{{light:xi1}}.",
+      hanzi: "他在做东西。",
+      en: "He is handling things.",
+      ru: "Он занимается делами.",
+    },
+  ],
 });

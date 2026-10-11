@@ -8,9 +8,23 @@ export default composite({
   en: "taxi",
   ru: "такси",
   pos: "noun",
-  hsd: ["{{word:gei3}}-{{word:jin1}}-{{word:zuo4}}-{{word:xia4}}-{{word:de}} {{word:che1}}"],
-  tts: ["给金坐下的车"],
-  literal: "a car you pay to sit in",
-  fit: "plain",
-  proposed: true,
+  hsd: ["{{word:da3}} {{word:che1}}", "{{word:che1}}"],
+  tts: ["打车", "车"],
+  literal: "take a car / the car",
+  fit: "natural",
+  note: "Same as 打车.",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:qu4}} {{word:da3}} {{word:che1}}.",
+      hanzi: "我去打车。",
+      en: "I'm taking a taxi.",
+      ru: "Я еду на такси.",
+    },
+    {
+      pinyin: "{{Word:che1}} {{word:zai4}} {{word:zhe4}}-{{word:li3}}.",
+      hanzi: "车在这里。",
+      en: "The taxi is here.",
+      ru: "Такси здесь.",
+    },
+  ],
 });

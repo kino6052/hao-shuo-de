@@ -12,5 +12,18 @@ export default composite({
   tts: ["左边"],
   fit: "natural",
   transparent: true,
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:shu1}} {{word:zai4}} {{word:zuo3}}-{{word:bian1}}.",
+      hanzi: "书在左边。",
+      en: "The book is on the left.",
+      ru: "Книга слева.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}.",
+      hanzi: "他在我的左边。",
+      en: "He is on my left.",
+      ru: "Он слева от меня.",
+    },
+  ],
 });

@@ -13,5 +13,18 @@ export default composite({
   literal: "fast-want",
   fit: "natural",
   note: "kuài lái le: almost here.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:kuai4}}-{{word:yao4}} {{word:lai2}} {{word:le}}.",
+      hanzi: "他快要来了。",
+      en: "He is about to come.",
+      ru: "Он вот-вот придёт.",
+    },
+    {
+      pinyin: "{{Word:shui3}} {{word:kuai4}}-{{word:yao4}} {{word:mei2}} {{word:you3}} {{word:le}}.",
+      hanzi: "水快要没有了。",
+      en: "The water is about to run out.",
+      ru: "Вода скоро кончится.",
+    },
+  ],
 });

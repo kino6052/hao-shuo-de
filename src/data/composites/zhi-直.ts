@@ -14,4 +14,18 @@ export default composite({
   tts: ["和长的东西一样"],
   literal: "like a stick",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:lu4}} {{word:he2}} {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:yi1}}-{{word:yang4}}.",
+      hanzi: "这个路和长的东西一样。",
+      en: "This road is straight.",
+      ru: "Эта дорога прямая.",
+    },
+    {
+      pinyin: "{{Word:na4}}-{{light:ge4}} {{word:lu4}} {{word:he2}} {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:yi1}}-{{word:yang4}}.",
+      hanzi: "那个路和长的东西一样。",
+      en: "That road is straight.",
+      ru: "Та дорога прямая.",
+    },
+  ],
 });

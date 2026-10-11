@@ -11,4 +11,18 @@ export default composite({
   hsd: ["{{word:ying4}}"],
   tts: ["硬"],
   fit: "word",
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:hen3}} {{word:ying4}}.",
+      hanzi: "这个很硬。",
+      en: "This is hard.",
+      ru: "Это твёрдое.",
+    },
+    {
+      pinyin: "{{Word:lu4}} {{word:hen3}} {{word:ying4}}.",
+      hanzi: "路很硬。",
+      en: "The road is hard.",
+      ru: "Дорога твёрдая.",
+    },
+  ],
 });

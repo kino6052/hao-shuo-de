@@ -12,4 +12,18 @@ export default composite({
   tts: ["下去"],
   fit: "natural",
   note: "Lesson {{lesson:direction-and-result}}: shuō-xià-qù, keep talking.",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:xia4}}-{{word:qu4}}.",
+      hanzi: "我下去。",
+      en: "I'm going down.",
+      ru: "Я спускаюсь.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:xia4}}-{{word:qu4}} {{word:le}}.",
+      hanzi: "他下去了。",
+      en: "He went down.",
+      ru: "Он спустился.",
+    },
+  ],
 });

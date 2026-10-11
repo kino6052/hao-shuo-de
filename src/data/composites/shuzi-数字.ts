@@ -8,8 +8,8 @@ export default composite({
   en: "digit, number",
   ru: "цифра, число",
   pos: "noun",
-  hsd: ["{{word:hao4}}"],
-  tts: ["号"],
-  fit: "word",
-  proposed: true,
+  hsd: ["{{word:shu4}}-{{word:zi4}}"],
+  tts: ["数字"],
+  fit: "natural",
+  transparent: true,
 });

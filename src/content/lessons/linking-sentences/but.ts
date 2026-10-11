@@ -61,8 +61,8 @@ export default lessonModule({
       ru: "Вкусно, но очень горячо.",
     },
     {
-      pinyin: "{{Word:zhe4}}-ge {{word:shui3}}-{{word:guo3}} {{word:shi4}} {{word:huang2}}-{{word:se4}}-{{word:de}}, {{word:dan4}}-{{word:shi4}} {{word:bu4}} {{word:tian2}}.",
-      hanzi: "这个水果是黄色的，但是不甜。",
+      pinyin: "{{Word:zhe4}}-ge {{word:shui3}}-{{word:guo3}} {{word:shi4}} {{word:jin1}}-{{word:de}} {{word:yan2se4}}-{{word:de}}, {{word:dan4}}-{{word:shi4}} {{word:bu4}} {{word:tian2}}.",
+      hanzi: "这个水果是金的颜色的，但是不甜。",
       en: "This fruit is yellow, but it isn't sweet.",
       ru: "Этот фрукт жёлтый, но не сладкий.",
     },

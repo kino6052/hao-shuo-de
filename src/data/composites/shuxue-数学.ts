@@ -9,9 +9,10 @@ export default composite({
   ru: "математика",
   pos: "noun",
   hsd: [
+    "{{word:shu4}}-{{word:xue2}}",
     "{{word:fang4}}-{{word:zai4}}-{{word:yi1}}-{{word:qi3}}-{{word:he2}}-{{word:na2}}-{{word:de}} {{word:xue2}}",
   ],
-  tts: ["放在一起和拿的学"],
+  tts: ["数学", "放在一起和拿的学"],
   literal: "the learning of putting together and taking away",
-  fit: "plain",
+  fit: "natural",
 });

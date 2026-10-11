@@ -19,8 +19,8 @@ export default composite({
       ru: "Закрой глаза.",
     },
     {
-      pinyin: "{{Word:ta1}}-{{word:de}} {{word:yan3jing}} {{word:shi4}} {{word:lan2}}-{{word:se4}}-{{word:de}}.",
-      hanzi: "她的眼睛是蓝色的。",
+      pinyin: "{{Word:ta1}}-{{word:de}} {{word:yan3jing}} {{word:shi4}} {{word:tian1}}-{{word:de}} {{word:yan2se4}}-{{word:de}}.",
+      hanzi: "她的眼睛是天的颜色的。",
       en: "Her eyes are blue.",
       ru: "У неё голубые глаза.",
     },

@@ -12,4 +12,18 @@ export default composite({
   tts: ["这边"],
   literal: "this side",
   fit: "natural",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:zai4}} {{word:zhe4}}-{{word:bian1}}.",
+      hanzi: "我在这边。",
+      en: "I'm here.",
+      ru: "Я здесь.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:yao4}} {{word:zai4}} {{word:zhe4}}-{{word:bian1}} {{word:ma}}?",
+      hanzi: "你要在这边吗？",
+      en: "Do you want to be here?",
+      ru: "Ты хочешь быть здесь?",
+    },
+  ],
 });

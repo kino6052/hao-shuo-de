@@ -8,10 +8,22 @@ export default composite({
   en: "result",
   ru: "результат",
   pos: "noun",
-  hsd: [
-    "{{word:zui4}}-{{word:hou4}} {{word:fa1}}-{{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+  hsd: ["{{word:jie2}}-{{word:guo3}}"],
+  tts: ["结果"],
+  fit: "natural",
+  transparent: true,
+  examples: [
+    {
+      pinyin: "{{Word:jie2}}-{{word:guo3}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "结果很好。",
+      en: "The result was good.",
+      ru: "Результат был хороший.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:zhi1dao4}} {{word:jie2}}-{{word:guo3}} {{word:ma}}?",
+      hanzi: "你知道结果吗？",
+      en: "Do you know the result?",
+      ru: "Ты знаешь результат?",
+    },
   ],
-  tts: ["最后发生的东西"],
-  literal: "what happens at the end",
-  fit: "plain",
 });

@@ -8,11 +8,8 @@ export default composite({
   en: "effect, result",
   ru: "эффект, результат",
   pos: "noun",
-  hsd: [
-    "{{word:zui4}}-{{word:hou4}} {{word:fa1}}-{{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
-  ],
-  tts: ["最后发生的东西"],
-  literal: "what happens at the end",
+  hsd: ["{{word:jie2}}-{{word:guo3}}"],
+  tts: ["结果"],
   fit: "plain",
   proposed: true,
 });

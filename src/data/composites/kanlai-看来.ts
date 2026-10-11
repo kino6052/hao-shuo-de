@@ -13,5 +13,18 @@ export default composite({
   literal: "look-come / it looks",
   fit: "natural",
   note: "Lesson {{lesson:direction-and-result}}.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:kan4}}-{{word:lai2}} {{word:ta1}} {{word:bu4}} {{word:lai2}}.",
+      hanzi: "看来他不来。",
+      en: "It seems he isn't coming.",
+      ru: "Похоже, он не придёт.",
+    },
+    {
+      pinyin: "{{Word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "看起来很好。",
+      en: "It looks good.",
+      ru: "Выглядит хорошо.",
+    },
+  ],
 });

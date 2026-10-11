@@ -8,12 +8,22 @@ export default composite({
   en: "law",
   ru: "закон",
   pos: "noun",
-  hsd: [
-    "{{word:fa3}}",
-    "{{word:ren2}}-{{word:ren2}} {{word:dou1}} {{word:yao4}} {{word:ting1}}-{{word:de}} {{word:shuo1}}-{{word:de}}",
-  ],
-  tts: ["法", "人人都要听的说的"],
-  literal: "what everyone must listen to",
+  hsd: ["{{word:fa3}}"],
+  tts: ["法"],
+  literal: "law",
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:zhi1dao4}} {{word:fa3}}.",
+      hanzi: "我知道法。",
+      en: "I know the law.",
+      ru: "Я знаю закон.",
+    },
+    {
+      pinyin: "{{Word:fa3}} {{word:hen3}} {{word:zhong4}}.",
+      hanzi: "法很重。",
+      en: "The law is heavy.",
+      ru: "Закон строгий.",
+    },
+  ],
 });

@@ -15,6 +15,11 @@ export default lessonModule({
       en: "do, make",
       ru: "делать",
     },
+    {
+      word: "liao4",
+      en: "material, ingredients (what something is made from)",
+      ru: "материал, продукты (из чего делают)",
+    },
   ],
   prose: {
     en: [
@@ -23,6 +28,8 @@ export default lessonModule({
       "**Who + {{word:zuo4}} + result**",
       "",
       "{{word:zuo4}} {{word:hao3}} is \"fix it\", and {{word:zuo4}} {{word:huai4}} is \"break it\". {{word:de2}} means get: {{Word:ni3}} {{word:de2}} {{word:le}} {{word:shen2me}}? (What did you get?)",
+      "",
+      "{{word:liao4}} is the stuff something is made from: {{word:zuo4}} {{word:fan4}} {{word:yao4}} {{word:liao4}}, cooking takes ingredients.",
     ],
     ru: [
       "**Чтобы сказать, что вы что-то сделали таким**, поставьте {{word:zuo4}} (делать) перед результатом.",
@@ -30,6 +37,8 @@ export default lessonModule({
       "**Кто + {{word:zuo4}} + результат**",
       "",
       "{{word:zuo4}} {{word:hao3}} — «починить», а {{word:zuo4}} {{word:huai4}} — «сломать». {{word:de2}} значит «получать»: {{Word:ni3}} {{word:de2}} {{word:le}} {{word:shen2me}}? (Что ты получил?)",
+      "",
+      "{{word:liao4}} — то, из чего что-то делают: {{word:zuo4}} {{word:fan4}} {{word:yao4}} {{word:liao4}} — для готовки нужны продукты.",
     ],
     tldr: {
       en: "{{word:zuo4}} + result: {{word:zuo4}} {{word:hao3}} means fix it.",
@@ -41,8 +50,8 @@ export default lessonModule({
     },
   },
   info: {
-    en: "{{word:zuo4}} + result, make it so: {{Word:wo3}} {{word:zuo4}} {{word:hao3}} {{word:le}}. (I fixed it.)",
-    ru: "{{word:zuo4}} + результат — сделать таким: {{Word:wo3}} {{word:zuo4}} {{word:hao3}} {{word:le}}. (Я починил.)",
+    en: "{{word:zuo4}} + result, make it so: {{Word:wo3}} {{word:zuo4}} {{word:hao3}} {{word:le}}. (I fixed it.) {{word:liao4}}, the stuff to make it from: {{word:zuo4}} {{word:fan4}} {{word:yao4}} {{word:liao4}}.",
+    ru: "{{word:zuo4}} + результат — сделать таким: {{Word:wo3}} {{word:zuo4}} {{word:hao3}} {{word:le}}. (Я починил.) {{word:liao4}} — из чего делают: {{word:zuo4}} {{word:fan4}} {{word:yao4}} {{word:liao4}}.",
   },
   examples: [
     {
@@ -81,6 +90,18 @@ export default lessonModule({
       en: "Don't make a mess!",
       ru: "Не устраивай беспорядок!",
     },
+    {
+      pinyin: "{{Word:zuo4}} {{word:fan4}} {{word:yao4}} {{word:hen3}}-{{word:duo1}} {{word:liao4}}.",
+      hanzi: "做饭要很多料。",
+      en: "Cooking takes a lot of ingredients.",
+      ru: "Для готовки нужно много продуктов.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:hao3}}-{{word:de}} {{word:liao4}}.",
+      hanzi: "我有好的料。",
+      en: "I have good material.",
+      ru: "У меня хороший материал.",
+    },
   ],
   exercises: [
     {
@@ -94,6 +115,12 @@ export default lessonModule({
       ru: "Не устраивай беспорядок!",
       answer: "{{Word:bu4}} {{word:yao4}} {{word:zuo4}}-{{word:luan4}}!",
       hanzi: "不要做乱！",
+    },
+    {
+      en: "I have a lot of ingredients.",
+      ru: "У меня много продуктов.",
+      answer: "{{Word:wo3}} {{word:you3}} {{word:hen3}}-{{word:duo1}} {{word:liao4}}.",
+      hanzi: "我有很多料。",
     },
   ],
 });

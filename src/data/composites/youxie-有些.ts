@@ -13,5 +13,18 @@ export default composite({
   literal: "a part",
   fit: "natural",
   note: "Lesson {{lesson:also-and-all}}.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:you3}}-{{word:xie1}} {{word:ren2}} {{word:bu4}} {{word:lai2}}.",
+      hanzi: "有些人不来。",
+      en: "Some people aren't coming.",
+      ru: "Некоторые не придут.",
+    },
+    {
+      pinyin: "{{Word:you3}}-{{word:xie1}} {{word:shu1}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "有些书很好。",
+      en: "Some books are good.",
+      ru: "Некоторые книги хорошие.",
+    },
+  ],
 });

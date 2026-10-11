@@ -8,9 +8,9 @@ export default composite({
   en: "foreign language",
   ru: "иностранный язык",
   pos: "noun",
-  hsd: ["{{word:wai4}}-{{word:guo2}}-{{word:de}} {{word:shuo1}}-{{word:de}}"],
-  tts: ["外国的说的"],
-  literal: "a foreign country's speech",
+  hsd: ["{{word:wai4}}-{{word:guo2}}-{{word:de}} {{word:hua4}}"],
+  tts: ["外国的话"],
+  literal: "foreign speech",
   fit: "plain",
   proposed: true,
 });

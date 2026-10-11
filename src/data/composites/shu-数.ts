@@ -8,8 +8,21 @@ export default composite({
   en: "number, figure",
   ru: "число",
   pos: "noun",
-  hsd: ["{{word:hao4}}"],
-  tts: ["号"],
-  literal: "number",
-  fit: "plain",
+  hsd: ["{{word:shu4}}"],
+  tts: ["数"],
+  fit: "word",
+  examples: [
+    {
+      pinyin: "{{Word:ren2}}-{{word:de}} {{word:shu4}} {{word:hen3}} {{word:duo1}}.",
+      hanzi: "人的数很多。",
+      en: "The number of people is large.",
+      ru: "Людей много.",
+    },
+    {
+      pinyin: "{{Word:shu1}}-{{word:de}} {{word:shu4}} {{word:hen3}} {{word:shao3}}.",
+      hanzi: "书的数很少。",
+      en: "There are few books.",
+      ru: "Книг мало.",
+    },
+  ],
 });

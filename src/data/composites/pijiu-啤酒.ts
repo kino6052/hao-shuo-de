@@ -9,10 +9,23 @@ export default composite({
   ru: "пиво",
   pos: "noun",
   hsd: [
-    "{{word:huang2}}-{{word:se4}}-{{word:de}} {{word:rang4}}-{{word:tou2}}-{{word:bian4}}-{{word:luan4}}-{{word:de}} {{word:shui3}}",
+    "{{word:jin1}}-{{word:de}} {{word:yan2se4}}-{{word:de}} {{word:rang4}}-{{word:tou2}}-{{word:bian4}}-{{word:luan4}}-{{word:de}} {{word:shui3}}",
   ],
-  tts: ["黄色的让头变乱的水"],
+  tts: ["金的颜色的让头变乱的水"],
   literal: "the yellow water that makes your head messy",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:he1}} {{word:jin1}}-{{word:de}} {{word:yan2se4}}-{{word:de}} {{word:rang4}}-{{word:tou2}}-{{word:bian4}}-{{word:luan4}}-{{word:de}} {{word:shui3}}.",
+      hanzi: "我喝金的颜色的让头变乱的水。",
+      en: "I drink beer.",
+      ru: "Я пью пиво.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:yao4}} {{word:jin1}}-{{word:de}} {{word:yan2se4}}-{{word:de}} {{word:rang4}}-{{word:tou2}}-{{word:bian4}}-{{word:luan4}}-{{word:de}} {{word:shui3}}.",
+      hanzi: "他要金的颜色的让头变乱的水。",
+      en: "He wants a beer.",
+      ru: "Он хочет пива.",
+    },
+  ],
 });

@@ -8,11 +8,23 @@ export default composite({
   en: "mother",
   ru: "мать",
   pos: "noun",
-  hsd: [
-    "{{word:zai4}}-{{word:ba4ba}}-{{word:ma1ma}}-{{word:li3}}-{{word:de}} {{word:nv3}}-{{word:ren2}}",
-  ],
-  tts: ["在爸爸妈妈里的女人"],
-  literal: "the woman of the parents",
+  hsd: ["{{word:ma1ma}}"],
+  tts: ["妈妈"],
+  literal: "mom",
   fit: "plain",
   note: "Same as 妈妈.",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:ma1ma}} {{word:ai4}} {{word:wo3}}.",
+      hanzi: "我的妈妈爱我。",
+      en: "My mother loves me.",
+      ru: "Моя мать любит меня.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:he2}} {{word:ma1ma}} {{word:yi1}}-{{word:qi3}} {{word:chi1}}-{{word:fan4}}.",
+      hanzi: "我和妈妈一起吃饭。",
+      en: "I eat with my mother.",
+      ru: "Я ем вместе с матерью.",
+    },
+  ],
 });

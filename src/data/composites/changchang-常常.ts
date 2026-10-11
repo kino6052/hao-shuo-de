@@ -12,5 +12,18 @@ export default composite({
   tts: ["常常", "很多次"],
   literal: "many times",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:chang2}}-{{word:chang2}} {{word:lai2}}.",
+      hanzi: "我常常来。",
+      en: "I come often.",
+      ru: "Я прихожу часто.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:chang2}}-{{word:chang2}} {{word:chi1}} {{word:shui3}}-{{word:guo3}}.",
+      hanzi: "他常常吃水果。",
+      en: "He often eats fruit.",
+      ru: "Он часто ест фрукты.",
+    },
+  ],
 });

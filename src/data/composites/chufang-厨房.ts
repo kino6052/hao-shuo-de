@@ -14,5 +14,18 @@ export default composite({
   tts: ["做吃的东西的地方"],
   literal: "the place where you make food",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:zai4}} {{word:zuo4}}-{{word:chi1}}-{{word:de}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",
+      hanzi: "我在做吃的东西的地方。",
+      en: "I'm in the kitchen.",
+      ru: "Я на кухне.",
+    },
+    {
+      pinyin: "{{Word:zuo4}}-{{word:chi1}}-{{word:de}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "做吃的东西的地方很大。",
+      en: "The kitchen is big.",
+      ru: "Кухня большая.",
+    },
+  ],
 });

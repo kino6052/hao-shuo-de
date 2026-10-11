@@ -8,8 +8,22 @@ export default composite({
   en: "fragrant",
   ru: "ароматный",
   pos: "adjective",
-  hsd: ["{{word:bi2zi}} {{word:jue2}}-{{light:de2}} {{word:hao3}}"],
-  tts: ["鼻子觉得好"],
-  literal: "the nose feels good",
+  hsd: ["{{word:hao3}} {{word:wei4}}-{{word:dao4}}"],
+  tts: ["好味道"],
+  literal: "a good taste/smell",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:hao3}} {{word:wei4}}-{{word:dao4}}.",
+      hanzi: "这个好味道。",
+      en: "It smells good.",
+      ru: "Приятно пахнет.",
+    },
+    {
+      pinyin: "{{Word:na4}}-{{light:ge4}} {{word:ye3}} {{word:hao3}} {{word:wei4}}-{{word:dao4}}.",
+      hanzi: "那个也好味道。",
+      en: "That smells good too.",
+      ru: "Это тоже приятно пахнет.",
+    },
+  ],
 });

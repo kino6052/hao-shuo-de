@@ -11,4 +11,18 @@ export default composite({
   hsd: ["{{word:you3}}"],
   tts: ["有"],
   fit: "word",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:hen3}}-{{word:duo1}} {{word:shu1}}.",
+      hanzi: "我有很多书。",
+      en: "I own a lot of books.",
+      ru: "У меня много книг.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:you3}} {{word:yi1}}-{{light:ge4}} {{word:da4}} {{word:jia1}}.",
+      hanzi: "他有一个大家。",
+      en: "He owns a big home.",
+      ru: "У него большой дом.",
+    },
+  ],
 });

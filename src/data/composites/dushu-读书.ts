@@ -8,8 +8,23 @@ export default composite({
   en: "read, study",
   ru: "читать, учиться",
   pos: "verb",
-  hsd: ["{{word:kan4}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["看写的东西"],
-  literal: "look at written things",
-  fit: "plain",
+  hsd: ["{{word:kan4}} {{word:shu1}}"],
+  tts: ["看书"],
+  literal: "look at books",
+  fit: "natural",
+  transparent: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:kan4}} {{word:shu1}}.",
+      hanzi: "我看书。",
+      en: "I read.",
+      ru: "Я читаю.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:zai4}} {{word:kan4}} {{word:shu1}}.",
+      hanzi: "他在看书。",
+      en: "He is reading.",
+      ru: "Он читает.",
+    },
+  ],
 });

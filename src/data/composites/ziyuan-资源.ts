@@ -8,8 +8,22 @@ export default composite({
   en: "resources",
   ru: "ресурсы",
   pos: "noun",
-  hsd: ["{{word:neng2}} {{word:yong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["能用的东西"],
-  literal: "things you can use",
+  hsd: ["{{word:you3}}-{{word:yong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
+  tts: ["有用的东西"],
+  literal: "useful things",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:you3}}-{{word:yong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
+      hanzi: "我有有用的东西。",
+      en: "I have resources.",
+      ru: "У меня есть ресурсы.",
+    },
+    {
+      pinyin: "{{Word:you3}}-{{word:yong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:hen3}} {{word:duo1}}.",
+      hanzi: "有用的东西很多。",
+      en: "There are many resources.",
+      ru: "Ресурсов много.",
+    },
+  ],
 });

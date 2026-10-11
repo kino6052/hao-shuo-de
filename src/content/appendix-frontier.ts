@@ -272,9 +272,9 @@ const content: Entry[] = [
   },
   {
     type: "prose",
-    en: ["## Grammar Mandarin has, and Hao-shuo-de skips", "There's no passive (被): say who did it. There's no \"already\": {{word:le}} does the job. \"In order to\", \"only then\", and \"so\" are said with {{word:yin1wei4}} or X-{{word:wan2}} {{word:hou4}}. Nothing is lost, but some sentences have to be turned around."],
+    en: ["## Grammar Mandarin has, and Hao-shuo-de skips", "There's no passive word (被): say who did it, or use {{word:rang4}} the way speakers do ({{word:wo3}}-{{word:de}} {{word:bao1}} {{word:rang4}} {{word:ta1}} {{word:na2}}-{{word:zou3}} {{word:le}}, \"my bag got taken by him\"). There's no \"already\": {{word:le}} does the job. \"In order to\", \"only then\", and \"so\" are said with {{word:yin1wei4}} or X-{{word:wan2}} {{word:hou4}}. Nothing is lost, but some sentences have to be turned around."],
     zh: [],
-    ru: ["## Грамматика, которая есть в китайском, но не в Hǎo-shuō-de", "Страдательного залога (被) нет: говорят, кто это сделал. Нет «уже»: его работу делает {{word:le}}. «Чтобы», «только тогда» и «поэтому» говорят через {{word:yin1wei4}} или X-{{word:wan2}} {{word:hou4}}. Ничего не теряется, но некоторые фразы приходится переворачивать."],
+    ru: ["## Грамматика, которая есть в китайском, но не в Hǎo-shuō-de", "Слова для страдательного залога (被) нет: говорят, кто это сделал, или используют {{word:rang4}}, как в речи ({{word:wo3}}-{{word:de}} {{word:bao1}} {{word:rang4}} {{word:ta1}} {{word:na2}}-{{word:zou3}} {{word:le}} — «мою сумку забрал он»). Нет «уже»: его работу делает {{word:le}}. «Чтобы», «только тогда» и «поэтому» говорят через {{word:yin1wei4}} или X-{{word:wan2}} {{word:hou4}}. Ничего не теряется, но некоторые фразы приходится переворачивать."],
     tldr: {
       en: ["No passive and no \"already\": say who did it, and use le."],
       zh: [],

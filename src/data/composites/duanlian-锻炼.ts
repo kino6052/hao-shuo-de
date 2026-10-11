@@ -13,4 +13,18 @@ export default composite({
   literal: "move the body",
   fit: "plain",
   note: "Same as 运动.",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:dong4}} {{word:shen1ti3}}.",
+      hanzi: "我动身体。",
+      en: "I exercise.",
+      ru: "Я занимаюсь спортом.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:yao4}} {{word:dong4}} {{word:shen1ti3}}.",
+      hanzi: "他要动身体。",
+      en: "He wants to exercise.",
+      ru: "Он хочет потренироваться.",
+    },
+  ],
 });

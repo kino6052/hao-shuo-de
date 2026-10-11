@@ -13,4 +13,18 @@ export default composite({
   literal: "what the family is called",
   fit: "plain",
   note: "Lesson {{lesson:greetings-and-feelings}}: jiào \"…\".",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:jia1}} {{word:jiao4}}-{{word:de}} {{word:shi4}} \"Wáng\".",
+      hanzi: "我家叫的是“王”。",
+      en: "My surname is Wang.",
+      ru: "Моя фамилия Ван.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:jia1}} {{word:jiao4}}-{{word:de}} {{word:shi4}} {{word:shen2me}}?",
+      hanzi: "你家叫的是什么？",
+      en: "What is your surname?",
+      ru: "Какая у тебя фамилия?",
+    },
+  ],
 });

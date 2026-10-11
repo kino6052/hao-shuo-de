@@ -47,7 +47,7 @@ export default categories([
       {
         key: "food-drink",
         title: { eng: "Food & Drink", rus: "Еда и питьё", zh: "食物与饮品" },
-        wordIds: ["shui3", "fan4", "guo3"],
+        wordIds: ["shui3", "fan4", "guo3", "you2"],
       },
       {
         key: "tools-objects",
@@ -61,20 +61,20 @@ export default categories([
           {
             key: "containers-materials",
             title: { eng: "Containers & Materials", rus: "Контейнеры и материалы", zh: "容器与材料" },
-            wordIds: ["xian4", "bao1"],
+            wordIds: ["xian4", "bao1", "liao4"],
           },
           {
             key: "valuables-wearables",
             title: { eng: "Valuables & Wearables", rus: "Ценности и одежда", zh: "财物与穿戴" },
             wordIds: ["jin1", "yi1fu"],
           },
-          { key: "general", title: null, wordIds: ["wu4", "shu1"] },
+          { key: "general", title: null, wordIds: ["wu4", "shu1", "qiu2"] },
         ],
       },
       {
         key: "abstract-substantives",
         title: { eng: "Abstract Words", rus: "Абстрактные слова", zh: "抽象词" },
-        wordIds: ["ci2", "li4", "sheng1yin1", "jia4zhi2", "fa3", "gong1", "zi4", "ti2"],
+        wordIds: ["ci2", "li4", "sheng1yin1", "jia4zhi2", "fa3", "gong1", "zi4", "ti2", "shu4"],
       },
       {
         key: "kind-part",
@@ -135,7 +135,7 @@ export default categories([
       {
         key: "colour",
         title: { eng: "Colour", rus: "Цвет", zh: "颜色" },
-        wordIds: ["bai2", "se4", "hei1", "hong2", "huang2", "lan2", "yan2se4"],
+        wordIds: ["bai2", "se4", "hei1", "hong2", "yan2se4"],
       },
       {
         key: "other-quality",
@@ -145,12 +145,12 @@ export default categories([
       {
         key: "temperature-taste",
         title: { eng: "Temperature & Taste", rus: "Температура и вкус", zh: "温度与味道" },
-        wordIds: ["re4", "leng3", "tian2"],
+        wordIds: ["re4", "leng3", "tian2", "tong4"],
       },
       {
         key: "physical-property",
         title: { eng: "Physical Property", rus: "Физическое свойство", zh: "物理属性" },
-        wordIds: ["ying4", "kong1", "yuan2", "ming2", "zhong4", "gan1jing4"],
+        wordIds: ["ying4", "kong1", "yuan2", "ming2", "zhong4", "gan1jing4", "ping2"],
       },
       {
         key: "size",
@@ -237,7 +237,7 @@ export default categories([
       {
         key: "manipulation-contact",
         title: { eng: "Interacting with things", rus: "Действия с вещами", zh: "与物互动" },
-        wordIds: ["da3", "gei3", "mo1", "zhao3", "fang4", "na2", "kai1", "guan1", "bang1", "mai3"],
+        wordIds: ["da3", "gei3", "mo1", "zhao3", "fang4", "na2", "kai1", "guan1", "bang1", "mai3", "jie2"],
       },
     ],
   },
@@ -282,7 +282,7 @@ export default categories([
           rus: "Существительные места и предлоги",
           zh: "地点名词与介词",
         },
-        wordIds: ["cong2", "dui4", "di4", "lu4", "wei4"],
+        wordIds: ["cong2", "dui4", "di4", "lu4", "wei4", "ti4"],
       },
       {
         key: "relative-position",

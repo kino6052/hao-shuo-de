@@ -12,4 +12,18 @@ export default composite({
   tts: ["好好做！"],
   literal: "do it well!",
   fit: "natural",
+  examples: [
+    {
+      pinyin: "{{Word:hao3}}-{{word:hao3}} {{word:zuo4}}!",
+      hanzi: "好好做！",
+      en: "Come on!",
+      ru: "Давай!",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:hao3}}-{{word:hao3}} {{word:zuo4}}!",
+      hanzi: "你好好做！",
+      en: "Go for it!",
+      ru: "Ты сможешь!",
+    },
+  ],
 });

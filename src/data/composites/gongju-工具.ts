@@ -13,5 +13,18 @@ export default composite({
   fit: "natural",
   transparent: true,
   role: "noun",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:gong1}}-{{word:ju4}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "这个工具很好。",
+      en: "This tool is good.",
+      ru: "Этот инструмент хороший.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:you3}} {{word:gong1}}-{{word:ju4}} {{word:ma}}?",
+      hanzi: "你有工具吗？",
+      en: "Do you have a tool?",
+      ru: "У тебя есть инструмент?",
+    },
+  ],
 });

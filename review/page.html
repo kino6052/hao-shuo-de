@@ -153,7 +153,7 @@ function dots(score) {
   return d;
 }
 
-function formBlock(kind, forms, tts, score, why) {
+function formBlock(kind, forms, tts, score, why, same) {
   const b = el("div", "form-block");
   const lab = el("div", "label" + (kind === "prop" ? " prop" : ""), kind === "prop" ? "Proposed" : "Now");
   lab.appendChild(dots(score));
@@ -164,6 +164,7 @@ function formBlock(kind, forms, tts, score, why) {
     if (tts[i]) line.appendChild(el("span", "hz", tts[i]));
     b.appendChild(line);
   });
+  if (same?.length) b.appendChild(el("p", "why", "Same form: " + same.map((s) => `${s.zh} (#${s.rank} ${s.en})`).join(", ")));
   if (why) b.appendChild(el("p", "why", why));
   return b;
 }
@@ -259,8 +260,8 @@ function row(e) {
   w.appendChild(el("div", "gloss", `${e.en} · ${e.ru}`));
   li.appendChild(w);
   const f = el("div", "forms");
-  f.appendChild(formBlock("now", e.now.forms, e.now.tts, e.now.score));
-  if (e.prop) f.appendChild(formBlock("prop", e.prop.forms, e.prop.tts, e.prop.score, e.prop.why));
+  f.appendChild(formBlock("now", e.now.forms, e.now.tts, e.now.score, null, e.now.same));
+  if (e.prop) f.appendChild(formBlock("prop", e.prop.forms, e.prop.tts, e.prop.score, e.prop.why, e.prop.same));
   if (e.examples?.list.length) f.appendChild(examplesBlock(e.examples));
   li.appendChild(f);
   li.appendChild(actions(e));

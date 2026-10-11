@@ -12,4 +12,18 @@ export default composite({
   tts: ["给"],
   literal: "give",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:gei3}} {{word:ta1}} {{word:shu1}}.",
+      hanzi: "我给他书。",
+      en: "I hand him the book.",
+      ru: "Я передаю ему книгу.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:gei3}} {{word:wo3}} {{word:ma}}?",
+      hanzi: "你给我吗？",
+      en: "Will you hand it in to me?",
+      ru: "Ты сдашь это мне?",
+    },
+  ],
 });

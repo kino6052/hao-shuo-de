@@ -12,4 +12,18 @@ export default composite({
   tts: ["好好看"],
   literal: "look carefully",
   fit: "natural",
+  examples: [
+    {
+      pinyin: "{{Word:hao3}}-{{word:hao3}} {{word:kan4}}!",
+      hanzi: "好好看！",
+      en: "Check it carefully!",
+      ru: "Проверь как следует!",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:hao3}}-{{word:hao3}} {{word:kan4}} {{word:zhe4}}-{{light:ge4}}.",
+      hanzi: "你好好看这个。",
+      en: "Check this carefully.",
+      ru: "Проверь это как следует.",
+    },
+  ],
 });

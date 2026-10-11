@@ -12,4 +12,18 @@ export default composite({
   tts: ["好玩儿"],
   literal: "good to play",
   fit: "natural",
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:hao3}}-{{word:wan2r}}.",
+      hanzi: "这个好玩儿。",
+      en: "This is interesting.",
+      ru: "Это интересно.",
+    },
+    {
+      pinyin: "{{Word:na4}}-{{light:ge4}} {{word:hao3}}-{{word:wan2r}}.",
+      hanzi: "那个好玩儿。",
+      en: "That is interesting.",
+      ru: "То интересно.",
+    },
+  ],
 });

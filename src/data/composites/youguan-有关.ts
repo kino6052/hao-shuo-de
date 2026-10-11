@@ -12,5 +12,18 @@ export default composite({
   tts: ["有关", "有关系"],
   literal: "has to do with / has a connection",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}} {{word:he2}} {{word:wo3}} {{word:you3}}-{{word:guan1}}.",
+      hanzi: "这和我有关。",
+      en: "This is related to me.",
+      ru: "Это связано со мной.",
+    },
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:he2}} {{word:ni3}} {{word:you3}}-{{word:guan1}} {{word:ma}}?",
+      hanzi: "这个和你有关吗？",
+      en: "Is this related to you?",
+      ru: "Это связано с тобой?",
+    },
+  ],
 });

@@ -12,5 +12,18 @@ export default composite({
   tts: ["难"],
   fit: "word",
   note: "Same as 难.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:hen3}} {{word:nan2}}.",
+      hanzi: "这个很难。",
+      en: "This is difficult.",
+      ru: "Это трудно.",
+    },
+    {
+      pinyin: "{{Word:zuo4}} {{word:zhe4}}-{{light:ge4}} {{word:nan2}} {{word:ma}}?",
+      hanzi: "做这个难吗？",
+      en: "Is it hard to do this?",
+      ru: "Это трудно сделать?",
+    },
+  ],
 });
