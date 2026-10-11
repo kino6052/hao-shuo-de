@@ -8,8 +8,9 @@ export default composite({
   en: "thought, thinking",
   ru: "мысль",
   pos: "noun",
-  hsd: ["{{word:jue2}}-{{light:de2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["觉得的东西"],
+  hsd: ["{{word:xiang3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
+  tts: ["想的东西"],
   literal: "what you think",
   fit: "plain",
+  proposed: true,
 });

@@ -8,8 +8,22 @@ export default composite({
   en: "run, jog",
   ru: "бегать",
   pos: "verb",
-  hsd: ["{{word:yong4}} {{word:jiao3}} {{word:kuai4}} {{word:qu4}}"],
-  tts: ["用脚快去"],
-  literal: "go fast on your feet",
+  hsd: ["{{word:zou3}}-{{word:de}} {{word:hen3}} {{word:kuai4}}"],
+  tts: ["走得很快"],
+  literal: "walk very fast",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:zou3}}-{{word:de}} {{word:hen3}} {{word:kuai4}}.",
+      hanzi: "他走得很快。",
+      en: "He runs fast.",
+      ru: "Он быстро бегает.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:zou3}}-{{word:de}} {{word:hen3}} {{word:kuai4}} {{word:ma}}?",
+      hanzi: "你走得很快吗？",
+      en: "Do you run fast?",
+      ru: "Ты быстро бегаешь?",
+    },
+  ],
 });

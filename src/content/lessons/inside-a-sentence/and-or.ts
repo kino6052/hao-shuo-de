@@ -1,5 +1,5 @@
-// To join two nouns, put hé (and) or huò-zhě (or) between them. Pattern: A +
-// hé / huò-zhě + B
+// To join two nouns, put hé (and) between them; to give a choice, put hái-shì
+// (or). Pattern: A + hé / hái-shì + B
 import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
@@ -10,39 +10,29 @@ export default lessonModule({
       en: "and (between nouns)",
       ru: "и (между существительными)",
     },
-    {
-      word: "huo4",
-      en: "or; {{word:huo4}}-{{word:zhe3}}: or",
-      ru: "или; {{word:huo4}}-{{word:zhe3}} — или",
-    },
-    {
-      word: "zhe3",
-      en: "the one who",
-      ru: "тот, кто",
-    },
   ],
   prose: {
     en: [
-      "**To join two nouns**, put {{word:he2}} (and) or {{word:huo4}}-{{word:zhe3}} (or) between them.",
+      "**To join two nouns**, put {{word:he2}} (and) between them. **To give a choice**, put {{word:hai2}}-{{word:shi4}} (or).",
       "",
-      "**A + {{word:he2}} / {{word:huo4}}-{{word:zhe3}} + B**",
+      "**A + {{word:he2}} / {{word:hai2}}-{{word:shi4}} + B**",
       "",
-      "{{word:he2}} joins nouns only, not whole sentences.",
+      "{{word:he2}} joins nouns only, not whole sentences. {{word:hai2}}-{{word:shi4}} asks the other person to choose, so it comes in a question.",
     ],
     ru: [
-      "**Чтобы соединить два существительных**, поставьте между ними {{word:he2}} (и) или {{word:huo4}}-{{word:zhe3}} (или).",
+      "**Чтобы соединить два существительных**, поставьте между ними {{word:he2}} (и). **Чтобы предложить выбор**, поставьте {{word:hai2}}-{{word:shi4}} (или).",
       "",
-      "**A + {{word:he2}} / {{word:huo4}}-{{word:zhe3}} + B**",
+      "**A + {{word:he2}} / {{word:hai2}}-{{word:shi4}} + B**",
       "",
-      "{{word:he2}} соединяет только существительные, а не целые предложения.",
+      "{{word:he2}} соединяет только существительные, а не целые предложения. {{word:hai2}}-{{word:shi4}} просит собеседника выбрать, поэтому стоит в вопросе.",
     ],
     tldr: {
-      en: "{{word:he2}} is and, {{word:huo4}}-{{word:zhe3}} is or: {{word:ni3}} {{word:he2}} {{word:wo3}}, you and me.",
-      ru: "{{word:he2}} — «и», {{word:huo4}}-{{word:zhe3}} — «или»: {{word:ni3}} {{word:he2}} {{word:wo3}} — ты и я.",
+      en: "{{word:he2}} is and, {{word:hai2}}-{{word:shi4}} is or: {{word:ni3}} {{word:he2}} {{word:wo3}}, you and me.",
+      ru: "{{word:he2}} — «и», {{word:hai2}}-{{word:shi4}} — «или»: {{word:ni3}} {{word:he2}} {{word:wo3}} — ты и я.",
     },
     necessity: {
-      en: "Now you can talk about two things at once.",
-      ru: "Теперь вы можете говорить о двух вещах сразу.",
+      en: "Now you can talk about two things at once, or ask which one.",
+      ru: "Теперь вы можете говорить о двух вещах сразу или спросить, какую из них.",
     },
   },
   info: {
@@ -52,8 +42,8 @@ export default lessonModule({
         ru: "A {{word:he2}} B — и (только для существительных): {{word:ni3}} {{word:he2}} {{word:wo3}} (ты и я)",
       },
       {
-        en: "A {{word:huo4}}-{{word:zhe3}} B, or: {{word:zhe4}}-ge {{word:huo4}}-{{word:zhe3}} {{word:na4}}-ge (this one or that one)",
-        ru: "A {{word:huo4}}-{{word:zhe3}} B — или: {{word:zhe4}}-ge {{word:huo4}}-{{word:zhe3}} {{word:na4}}-ge (это или то)",
+        en: "A {{word:hai2}}-{{word:shi4}} B, or (a choice): {{word:zhe4}}-ge {{word:hai2}}-{{word:shi4}} {{word:na4}}-ge? (this one or that one?)",
+        ru: "A {{word:hai2}}-{{word:shi4}} B — или (выбор): {{word:zhe4}}-ge {{word:hai2}}-{{word:shi4}} {{word:na4}}-ge? (это или то?)",
       },
     ],
   },
@@ -71,22 +61,22 @@ export default lessonModule({
       ru: "Мы с ним идём на улицу.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:yao4}} {{word:zhe4}}-ge {{word:huo4}}-{{word:zhe3}} {{word:na4}}-ge.",
-      hanzi: "我要这个或者那个。",
-      en: "I want this one or that one.",
-      ru: "Я хочу это или то.",
+      pinyin: "{{Word:ni3}} {{word:yao4}} {{word:zhe4}}-ge {{word:hai2}}-{{word:shi4}} {{word:na4}}-ge?",
+      hanzi: "你要这个还是那个？",
+      en: "Do you want this one or that one?",
+      ru: "Ты хочешь это или то?",
     },
     {
-      pinyin: "{{Word:na2}} {{word:bao1}} {{word:huo4}}-{{word:zhe3}} {{word:gong1}}-{{word:ju4}}.",
-      hanzi: "拿包或者工具。",
-      en: "Take the bag or the tool.",
-      ru: "Возьми сумку или инструмент.",
+      pinyin: "{{Word:ni3}} {{word:na2}} {{word:bao1}} {{word:hai2}}-{{word:shi4}} {{word:gong1}}-{{word:ju4}}?",
+      hanzi: "你拿包还是工具？",
+      en: "Are you taking the bag or the tool?",
+      ru: "Ты берёшь сумку или инструмент?",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:yao4}} {{word:hong2}}-{{word:se4}}-{{word:de}} {{word:huo4}}-{{word:zhe3}} {{word:lan2}}-{{word:se4}}-{{word:de}}.",
-      hanzi: "我要红色的或者蓝色的。",
-      en: "I want a red one or a blue one.",
-      ru: "Я хочу красный или синий.",
+      pinyin: "{{Word:ni3}} {{word:yao4}} {{word:hong2}}-{{word:se4}}-{{word:de}} {{word:hai2}}-{{word:shi4}} {{word:lan2}}-{{word:se4}}-{{word:de}}?",
+      hanzi: "你要红色的还是蓝色的？",
+      en: "Do you want a red one or a blue one?",
+      ru: "Ты хочешь красный или синий?",
     },
     {
       pinyin: "{{Word:liu4}}-ge {{word:nan2}}-{{word:ren2}} {{word:he2}} {{word:qi1}}-ge {{word:nv3}}-{{word:ren2}}.",
@@ -95,10 +85,10 @@ export default lessonModule({
       ru: "Шесть мужчин и семь женщин.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:yao4}} {{word:ba1}}-ge {{word:huo4}}-{{word:zhe3}} {{word:jiu3}}-ge.",
-      hanzi: "我要八个或者九个。",
-      en: "I want eight or nine.",
-      ru: "Я хочу восемь или девять.",
+      pinyin: "{{Word:ni3}} {{word:yao4}} {{word:ba1}}-ge {{word:hai2}}-{{word:shi4}} {{word:jiu3}}-ge?",
+      hanzi: "你要八个还是九个？",
+      en: "Do you want eight or nine?",
+      ru: "Тебе восемь или девять?",
     },
   ],
   exercises: [
@@ -109,10 +99,10 @@ export default lessonModule({
       hanzi: "我要水果和水。",
     },
     {
-      en: "this one or that one",
-      ru: "это или то",
-      answer: "{{Word:zhe4}}-ge {{word:huo4}}-{{word:zhe3}} {{word:na4}}-ge.",
-      hanzi: "这个或者那个。",
+      en: "this one or that one?",
+      ru: "это или то?",
+      answer: "{{Word:zhe4}}-ge {{word:hai2}}-{{word:shi4}} {{word:na4}}-ge?",
+      hanzi: "这个还是那个？",
     },
     {
       en: "The bag is between you and me.",
@@ -131,14 +121,14 @@ export default lessonModule({
       en: "Put them side by side with a comma: {{Word:wo3}} {{word:chi1}}, {{word:ta1}} {{word:shui4jiao4}} (I eat, and he sleeps). For \"too\", add {{word:ye3}}: {{Word:wo3}} {{word:hen3}} {{word:leng3}}, {{word:ta1}} {{word:ye3}} {{word:hen3}} {{word:leng3}}.",
       ru: "Поставьте их рядом через запятую: {{Word:wo3}} {{word:chi1}}, {{word:ta1}} {{word:shui4jiao4}} (Я ем, а он спит). Для «тоже» добавьте {{word:ye3}}: {{Word:wo3}} {{word:hen3}} {{word:leng3}}, {{word:ta1}} {{word:ye3}} {{word:hen3}} {{word:leng3}}.",
     },
-    // huò-zhě in a question asks yes or no
+    // hái-shì asks for a choice
     {
       question: {
-        en: "Can I use {{word:huo4}}-{{word:zhe3}} in a question?",
-        ru: "Можно ли использовать {{word:huo4}}-{{word:zhe3}} в вопросе?",
+        en: "Can I use {{word:hai2}}-{{word:shi4}} in a plain sentence?",
+        ru: "Можно ли использовать {{word:hai2}}-{{word:shi4}} в обычном предложении?",
       },
-      en: "Yes, but then it's a yes-or-no question: {{Word:ni3}} {{word:yao4}} {{word:zhe4}}-ge {{word:huo4}}-{{word:zhe3}} {{word:na4}}-ge {{word:ma}}? asks \"Do you want one of these?\". To make someone choose, full Mandarin uses a different word for \"or\".",
-      ru: "Да, но тогда это вопрос «да или нет»: {{Word:ni3}} {{word:yao4}} {{word:zhe4}}-ge {{word:huo4}}-{{word:zhe3}} {{word:na4}}-ge {{word:ma}}? спрашивает «Тебе нужно что-нибудь из этого?». Чтобы попросить выбрать, в полном китайском есть другое слово для «или».",
+      en: "Mostly it asks: {{Word:ni3}} {{word:yao4}} {{word:zhe4}}-ge {{word:hai2}}-{{word:shi4}} {{word:na4}}-ge? makes the other person choose. To say \"either is fine\", use {{word:dou1}}: {{Word:zhe4}}-ge {{word:na4}}-ge {{word:dou1}} {{word:hao3}}.",
+      ru: "В основном оно задаёт вопрос: {{Word:ni3}} {{word:yao4}} {{word:zhe4}}-ge {{word:hai2}}-{{word:shi4}} {{word:na4}}-ge? просит собеседника выбрать. Чтобы сказать «подойдёт любое», используйте {{word:dou1}}: {{Word:zhe4}}-ge {{word:na4}}-ge {{word:dou1}} {{word:hao3}}.",
     },
   ],
 });

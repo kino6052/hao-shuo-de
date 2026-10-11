@@ -8,12 +8,22 @@ export default composite({
   en: "airplane",
   ru: "самолёт",
   pos: "noun",
-  hsd: [
-    "{{word:fei1}}-{{word:ji1}}",
-    "{{word:qu4}}-{{word:hen3}}-{{word:duo1}}-{{word:de}}-{{word:di4}}-{{light:fang1}}-{{word:de}} {{word:fei1}}-{{word:de}} {{word:gong1}}-{{word:ju4}}",
-  ],
-  tts: ["飞机", "去很多的地方的飞的工具"],
-  literal: "fly-machine / a flying vehicle",
+  hsd: ["{{word:fei1}}-{{word:ji1}}"],
+  tts: ["飞机"],
   fit: "natural",
-  proposed: true,
+  transparent: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:fei1}}-{{word:ji1}} {{word:shi2}} {{word:dian3}} {{word:fei1}}.",
+      hanzi: "我的飞机十点飞。",
+      en: "My plane leaves at ten.",
+      ru: "Мой самолёт вылетает в десять.",
+    },
+    {
+      pinyin: "{{Word:fei1}}-{{word:ji1}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "飞机很大。",
+      en: "The plane is big.",
+      ru: "Самолёт большой.",
+    },
+  ],
 });

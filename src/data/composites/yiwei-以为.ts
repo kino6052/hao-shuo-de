@@ -8,8 +8,9 @@ export default composite({
   en: "think (wrongly)",
   ru: "думать (ошибочно)",
   pos: "verb",
-  hsd: ["{{word:jue2}}-{{light:de2}}"],
-  tts: ["觉得"],
+  hsd: ["{{word:xiang3}}"],
+  tts: ["想"],
   literal: "feel, think",
   fit: "plain",
+  proposed: true,
 });

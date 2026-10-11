@@ -21,8 +21,8 @@ export default {
     ["Nǐ míng-bái wǒ shuō-de huà ma?", "你明白我说的话吗？", "Do you understand what I'm saying?", "Ты понимаешь, что я говорю?"],
   ],
   "或": [
-    ["Jīn-tiān huò-zhě míng-tiān.", "今天或者明天。", "Today or tomorrow.", "Сегодня или завтра."],
-    ["Nǐ lái huò wǒ qù, dōu kě-yǐ.", "你来或我去，都可以。", "You come or I go, either is fine.", "Ты придёшь или я приду — всё равно."],
+    ["Nǐ jīn-tiān hái-shì míng-tiān lái?", "你今天还是明天来？", "Are you coming today or tomorrow?", "Ты придёшь сегодня или завтра?"],
+    ["Nǐ hē shuǐ hái-shì chī shuǐ-guǒ?", "你喝水还是吃水果？", "Will you drink water or eat fruit?", "Ты будешь пить воду или есть фрукты?"],
   ],
   "房间": [
     ["Wǒ-de fáng-jiān hěn xiǎo.", "我的房间很小。", "My room is small.", "Моя комната маленькая."],
@@ -77,8 +77,8 @@ export default {
     ["Tā míng-nián kāishǐ gōng-zuò.", "他明年开始工作。", "He starts work next year.", "Он начнёт работать в следующем году."],
   ],
   "春天": [
-    ["Biàn rè-de shí-jiān hěn hǎo.", "变热的时间很好。", "Spring is lovely.", "Весна прекрасна."],
-    ["Biàn rè-de shí-jiān, zhíwù dōu chū-lái le.", "变热的时间，植物都出来了。", "In spring, the plants all come up.", "Весной всё растёт."],
+    ["Nián-de dì-yī-bù-fen hěn hǎo.", "年的第一部分很好。", "Spring is lovely.", "Весна прекрасна."],
+    ["Nián-de dì-yī-bù-fen, zhíwù dōu chū-lái le.", "年的第一部分，植物都出来了。", "In spring, the plants all come up.", "Весной всё растёт."],
   ],
   "晚": [
     ["Wǒ lái wǎn le.", "我来晚了。", "I'm late.", "Я опоздал."],
@@ -214,7 +214,7 @@ export default {
   ],
   "累": [
     ["Wǒ zǒu le hěn duō lù, méi-yǒu lì le.", "我走了很多路，没有力了。", "I've walked a long way; I'm tired.", "Я много прошёл и устал."],
-    ["Hái-zi yào shuìjiào le.", "孩子要睡觉了。", "The child is tired.", "Ребёнок устал."],
+    ["Hái-zi xiǎng shuìjiào le.", "孩子想睡觉了。", "The child is tired.", "Ребёнок устал."],
   ],
   "红": [
     ["Tā-de tóu-de qián-miàn hóng le.", "他的头的前面红了。", "His face turned red.", "Он покраснел."],
@@ -265,8 +265,8 @@ export default {
     ["Wǒ ài hē zhíwù-de rè-shuǐ.", "我爱喝植物的热水。", "I love drinking tea.", "Я люблю пить чай."],
   ],
   "街": [
-    ["Wǒ jiā zài zhè-ge liǎng-biān-yǒu-jiā-de lù-shàng.", "我家在这个两边有家的路上。", "My home is on this street.", "Мой дом на этой улице."],
-    ["Hái-zi-men zài liǎng-biān-yǒu-jiā-de lù-shàng wánr.", "孩子们在两边有家的路上玩儿。", "The kids are playing in the street.", "Дети играют на улице."],
+    ["Wǒ jiā zài zhè-ge lù-shàng.", "我家在这个路上。", "My home is on this street.", "Мой дом на этой улице."],
+    ["Hái-zi-men zài lù-shàng wánr.", "孩子们在路上玩儿。", "The kids are playing in the street.", "Дети играют на улице."],
   ],
   "记": [
     ["Nǐ hái zhīdào wǒ ma?", "你还知道我吗？", "Do you remember me?", "Ты меня помнишь?"],
@@ -293,8 +293,8 @@ export default {
     ["Tā zhàn-qǐ-lái le.", "他站起来了。", "He stood up.", "Он поднялся."],
   ],
   "超市": [
-    ["Wǒ qù dà-de mǎi-dōng-xi-de dì-fang mǎi shuǐ-guǒ.", "我去大的买东西的地方买水果。", "I'm going to the supermarket to buy fruit.", "Я иду в супермаркет за фруктами."],
-    ["Dà-de mǎi-dōng-xi-de dì-fang shí diǎn kāi.", "大的买东西的地方十点开。", "The supermarket opens at ten.", "Супермаркет открывается в десять."],
+    ["Wǒ qù mǎi-dōng-xi-de dì-fang mǎi shuǐ-guǒ.", "我去买东西的地方买水果。", "I'm going to the supermarket to buy fruit.", "Я иду в супермаркет за фруктами."],
+    ["Mǎi-dōng-xi-de dì-fang shí diǎn kāi.", "买东西的地方十点开。", "The supermarket opens at ten.", "Супермаркет открывается в десять."],
   ],
   "边": [
     ["Lù liǎng-biān yǒu jiā.", "路两边有家。", "There are houses on both sides of the road.", "По обеим сторонам дороги дома."],
@@ -345,12 +345,12 @@ export default {
     ["Tā zài fùjìn gōng-zuò.", "他在附近工作。", "He works nearby.", "Он работает рядом."],
   ],
   "雨": [
-    ["Tiān-shàng-xià-lái-de shuǐ hěn lěng.", "天上下来的水很冷。", "The rain is cold.", "Дождь холодный."],
-    ["Wǒ ài tiān-shàng-xià-lái-de shuǐ.", "我爱天上下来的水。", "I love the rain.", "Я люблю дождь."],
+    ["Cóng-tiān-xià-lái-de shuǐ hěn lěng.", "从天下来的水很冷。", "The rain is cold.", "Дождь холодный."],
+    ["Wǒ ài cóng-tiān-xià-lái-de shuǐ.", "我爱从天下来的水。", "I love the rain.", "Я люблю дождь."],
   ],
   "风": [
-    ["Wài-miàn dòng-de kōng-qì hěn dà.", "外面动的空气很大。", "It's very windy outside.", "На улице сильный ветер."],
-    ["Dòng-de kōng-qì hěn lěng.", "动的空气很冷。", "The wind is cold.", "Ветер холодный."],
+    ["Wài-miàn kuài-fēi-de kōng-qì hěn dà.", "外面快飞的空气很大。", "It's very windy outside.", "На улице сильный ветер."],
+    ["Kuài-fēi-de kōng-qì hěn lěng.", "快飞的空气很冷。", "The wind is cold.", "Ветер холодный."],
   ],
   "飞": [
     ["Fēi-jī zài tiān-shàng fēi.", "飞机在天上飞。", "The plane is flying in the sky.", "Самолёт летит в небе."],

@@ -11,4 +11,18 @@ export default composite({
   hsd: ["{{word:deng1}}"],
   tts: ["灯"],
   fit: "word",
+  examples: [
+    {
+      pinyin: "{{Word:kai1}} {{word:deng1}}.",
+      hanzi: "开灯。",
+      en: "Turn on the light.",
+      ru: "Включи свет.",
+    },
+    {
+      pinyin: "{{Word:guan1}} {{word:deng1}}.",
+      hanzi: "关灯。",
+      en: "Turn off the light.",
+      ru: "Выключи свет.",
+    },
+  ],
 });

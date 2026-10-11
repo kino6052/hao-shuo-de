@@ -8,10 +8,16 @@ export default composite({
   en: "rest",
   ru: "отдыхать",
   pos: "verb",
-  hsd: ["{{word:shui4jiao4}}"],
-  tts: ["睡觉"],
+  hsd: [
+    "{{word:shui4jiao4}}",
+    "{{word:zuo4}}-{{word:xia4}} {{word:yi1}}-{{word:xia4}}",
+    "{{word:tang3}}-{{word:xia4}} {{word:yi1}}-{{word:xia4}}",
+    "{{word:bu4}} {{word:dong4}} {{word:yi1}}-{{word:xia4}}",
+  ],
+  tts: ["睡觉", "坐下一下", "躺下一下", "不动一下"],
+  literal: "sleep / sit down a while / lie down a while / not move a while",
   fit: "plain",
-  note: "shuìjiào covers resting.",
+  note: "Resting can be sleep, or just sitting, lying down or standing still for a while.",
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:yao4}} {{word:shui4jiao4}}.",
@@ -20,10 +26,10 @@ export default composite({
       ru: "Тебе надо отдохнуть.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:shui4jiao4}} {{word:yi1}}-{{word:xia4}}.",
-      hanzi: "我睡觉一下。",
-      en: "I'll rest a bit.",
-      ru: "Я немного отдохну.",
+      pinyin: "{{Word:wo3}} {{word:zuo4}}-{{word:xia4}} {{word:yi1}}-{{word:xia4}}.",
+      hanzi: "我坐下一下。",
+      en: "I'll sit down and rest a bit.",
+      ru: "Я немного посижу и отдохну.",
     },
   ],
 });

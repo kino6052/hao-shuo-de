@@ -16,6 +16,11 @@ export default lessonModule({
       en: "child (in {{word:hai2}}-{{light:zi}})",
       ru: "ребёнок (в {{word:hai2}}-{{light:zi}})",
     },
+    {
+      word: "zhe3",
+      en: "the one who (after a verb): {{word:xue2}}-{{word:zhe3}}, scholar",
+      ru: "тот, кто (после глагола): {{word:xue2}}-{{word:zhe3}} — учёный",
+    },
   ],
   prose: {
     en: [
@@ -23,12 +28,16 @@ export default lessonModule({
       "",
       "**verb-{{word:de}} {{word:ren2}}**",
       "Family words: {{word:nan2}}-{{word:hai2}}-{{light:zi}} (son), {{word:nv3}}-{{word:hai2}}-{{light:zi}} (daughter), {{word:hai2}}-{{light:zi}} (child; here {{word:hai2}} is written 孩). {{word:zi}} is a light ending many nouns have.",
+      "",
+      "{{word:zhe3}} says -{{word:de}} {{word:ren2}} in one short word: {{word:xue2}}-{{word:zhe3}} is the one who learns, a scholar.",
     ],
     ru: [
       "**Чтобы назвать того, кто что-то делает**, поставьте -{{word:de}} {{word:ren2}} после глагола.",
       "",
       "**глагол-{{word:de}} {{word:ren2}}**",
       "Слова семьи: {{word:nan2}}-{{word:hai2}}-{{light:zi}} (сын), {{word:nv3}}-{{word:hai2}}-{{light:zi}} (дочь), {{word:hai2}}-{{light:zi}} (ребёнок; здесь {{word:hai2}} пишется 孩). {{word:zi}} — лёгкое окончание многих существительных.",
+      "",
+      "{{word:zhe3}} говорит -{{word:de}} {{word:ren2}} одним коротким словом: {{word:xue2}}-{{word:zhe3}} — тот, кто учится, учёный.",
     ],
     tldr: {
       en: "verb-{{word:de}} {{word:ren2}} is the one who does it: {{word:xie3}}-{{word:de}} {{word:ren2}}, the one who writes.",
@@ -80,6 +89,18 @@ export default lessonModule({
       en: "The child is playing at home.",
       ru: "Ребёнок играет дома.",
     },
+    {
+      pinyin: "{{Word:ta1}} {{word:shi4}} {{word:xue2}}-{{word:zhe3}}.",
+      hanzi: "他是学者。",
+      en: "He's a scholar.",
+      ru: "Он учёный.",
+    },
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:ba4ba}} {{word:bu4}} {{word:shi4}} {{word:xue2}}-{{word:zhe3}}.",
+      hanzi: "我的爸爸不是学者。",
+      en: "My dad isn't a scholar.",
+      ru: "Мой папа не учёный.",
+    },
   ],
   exercises: [
     {
@@ -99,6 +120,12 @@ export default lessonModule({
       ru: "Её дочь любит книги.",
       answer: "{{Word:ta1}}-{{word:de}} {{word:nv3}}-{{word:hai2}}-{{light:zi}} {{word:ai4}} {{word:shu1}}.",
       hanzi: "她的女孩子爱书。",
+    },
+    {
+      en: "She is a scholar.",
+      ru: "Она учёная.",
+      answer: "{{Word:ta1}} {{word:shi4}} {{word:xue2}}-{{word:zhe3}}.",
+      hanzi: "她是学者。",
     },
   ],
 });

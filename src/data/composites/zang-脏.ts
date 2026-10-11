@@ -13,5 +13,18 @@ export default composite({
   literal: "not clean",
   fit: "natural",
   note: "The opposite of clean.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:fang2}}-{{word:jian1}} {{word:bu4}} {{word:gan1jing4}}.",
+      hanzi: "这个房间不干净。",
+      en: "This room is dirty.",
+      ru: "Эта комната грязная.",
+    },
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:shou3}} {{word:bu4}} {{word:gan1jing4}}.",
+      hanzi: "我的手不干净。",
+      en: "My hands are dirty.",
+      ru: "Мои руки грязные.",
+    },
+  ],
 });

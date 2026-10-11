@@ -13,4 +13,18 @@ export default composite({
   literal: "hit-open",
   fit: "natural",
   note: "A real pair: dǎ + kāi.",
+  examples: [
+    {
+      pinyin: "{{Word:da3}}-{{word:kai1}} {{word:men2}}.",
+      hanzi: "打开门。",
+      en: "Open the door.",
+      ru: "Открой дверь.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:da3}}-{{word:kai1}} {{word:le}} {{word:bao1}}.",
+      hanzi: "他打开了包。",
+      en: "He opened the bag.",
+      ru: "Он открыл сумку.",
+    },
+  ],
 });

@@ -12,5 +12,18 @@ export default composite({
   tts: ["做饭", "做吃的"],
   literal: "make food",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ba4ba}} {{word:zai4}} {{word:zuo4}}-{{word:fan4}}.",
+      hanzi: "爸爸在做饭。",
+      en: "Dad is cooking.",
+      ru: "Папа готовит.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:bu4}} {{word:hui4}} {{word:zuo4}}-{{word:fan4}}.",
+      hanzi: "我不会做饭。",
+      en: "I can't cook.",
+      ru: "Я не умею готовить.",
+    },
+  ],
 });

@@ -8,9 +8,9 @@ export default composite({
   en: "morning",
   ru: "утро",
   pos: "noun",
-  hsd: ["{{word:ri4}} {{word:qi3}}-{{word:lai2}}-{{word:de}} {{word:shi2}}-{{word:jian1}}"],
-  tts: ["日起来的时间"],
-  literal: "when the sun gets up",
-  fit: "plain",
+  hsd: ["{{word:zao3}}-{{light:shang4}}"],
+  tts: ["早上"],
+  fit: "natural",
+  transparent: true,
   note: "Same as 早上.",
 });

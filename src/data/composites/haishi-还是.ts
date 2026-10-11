@@ -8,8 +8,8 @@ export default composite({
   en: "or (choosing)",
   ru: "или",
   pos: "adverb",
-  hsd: ["{{word:hai2}}-{{word:shi4}}", "{{word:huo4}}-{{word:zhe3}}"],
-  tts: ["还是", "或者"],
+  hsd: ["{{word:hai2}}-{{word:shi4}}"],
+  tts: ["还是"],
   fit: "natural",
   note: "See the Lesson {{lesson:inside-a-sentence}} questions.",
   examples: [
@@ -20,10 +20,10 @@ export default composite({
       ru: "Тебе воды или еды?",
     },
     {
-      pinyin: "{{Word:ming2}}-{{word:tian1}} {{word:huo4}}-{{word:zhe3}} {{word:hou4}}-{{word:tian1}}.",
-      hanzi: "明天或者后天。",
-      en: "Tomorrow or the day after.",
-      ru: "Завтра или послезавтра.",
+      pinyin: "{{Word:ni3}} {{word:ming2}}-{{word:tian1}} {{word:hai2}}-{{word:shi4}} {{word:hou4}}-{{word:tian1}} {{word:lai2}}?",
+      hanzi: "你明天还是后天来？",
+      en: "Are you coming tomorrow or the day after?",
+      ru: "Ты придёшь завтра или послезавтра?",
     },
   ],
 });

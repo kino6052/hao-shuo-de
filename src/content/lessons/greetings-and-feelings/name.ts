@@ -59,10 +59,10 @@ export default lessonModule({
       ru: "То животное говорит «гав-гав».",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:jiao4}} \"Tom\" {{word:huo4}}-{{word:zhe3}} \"Tim\".",
-      hanzi: "他叫\"Tom\"或者\"Tim\"。",
-      en: "He's called Tom or Tim.",
-      ru: "Его зовут Том или Тим.",
+      pinyin: "{{Word:ta1}} {{word:jiao4}} \"Tom\" {{word:hai2}}-{{word:shi4}} \"Tim\"?",
+      hanzi: "他叫\"Tom\"还是\"Tim\"？",
+      en: "Is he called Tom or Tim?",
+      ru: "Его зовут Том или Тим?",
     },
   ],
   exercises: [

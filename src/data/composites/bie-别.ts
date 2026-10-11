@@ -8,9 +8,17 @@ export default composite({
   en: "don't",
   ru: "не надо",
   pos: "adverb",
-  hsd: ["{{word:bie2}}", "{{word:bu4}} {{word:yao4}}"],
-  tts: ["别", "不要"],
+  hsd: ["{{word:bie2}}"],
+  tts: ["别"],
   fit: "word",
   note: "Lesson {{lesson:greetings-and-feelings}}: bù yào xiào!",
-  proposed: true,
+  examples: [
+    { pinyin: "{{Word:bie2}} {{word:zou3}}!", hanzi: "别走！", en: "Don't go!", ru: "Не уходи!" },
+    {
+      pinyin: "{{Word:bie2}} {{word:pa4}}.",
+      hanzi: "别怕。",
+      en: "Don't be afraid.",
+      ru: "Не бойся.",
+    },
+  ],
 });

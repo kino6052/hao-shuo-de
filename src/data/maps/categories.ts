@@ -35,6 +35,8 @@ export default categories([
           "mao2",
           "xin1",
           "er3duo",
+          "ya2",
+          "du4zi",
         ],
       },
       {
@@ -267,7 +269,7 @@ export default categories([
   {
     key: "time",
     title: { eng: "Time", rus: "Время", zh: "时间" },
-    wordIds: ["tian1", "nian2", "dian3", "wan3"],
+    wordIds: ["tian1", "nian2", "dian3", "wan3", "zao3"],
   },
   {
     key: "space",
@@ -328,7 +330,7 @@ export default categories([
       {
         key: "conjunction",
         title: { eng: "Conjunction", rus: "Союзы", zh: "连接" },
-        wordIds: ["dan4", "he2", "huo4", "ye3", "you4", "yin1wei4", "ru2guo3", "jiu4", "hai2"],
+        wordIds: ["dan4", "he2", "ye3", "you4", "yin1wei4", "ru2guo3", "jiu4", "hai2"],
       },
       {
         key: "interrogatives",

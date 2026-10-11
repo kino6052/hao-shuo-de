@@ -9,9 +9,10 @@ export default composite({
   ru: "сёстры",
   pos: "noun",
   hsd: [
-    "{{word:ba4ba}}-{{word:ma1ma}} {{word:yi1}}-{{word:yang4}}-{{word:de}} {{word:nv3}}-{{word:ren2}}",
+    "{{word:wo3}} {{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:nv3}}-{{word:hai2}}-{{light:zi}}",
   ],
-  tts: ["爸爸妈妈一样的女人"],
-  literal: "women with the same parents",
+  tts: ["我爸爸妈妈的女孩子"],
+  literal: "my parents' girls",
   fit: "plain",
+  proposed: true,
 });

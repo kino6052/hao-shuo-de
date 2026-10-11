@@ -73,10 +73,10 @@ export default lessonModule({
       ru: "Если ты не знаешь этого слова, спроси меня.",
     },
     {
-      pinyin: "{{Word:ru2guo3}} {{word:ni3}} {{word:yao4}}, {{word:he1}} {{word:shui3}} {{word:huo4}}-{{word:zhe3}} {{word:chi1}} {{word:fan4}}.",
-      hanzi: "如果你要，喝水或者吃饭。",
-      en: "If you want, drink some water or eat something.",
-      ru: "Если хочешь, попей воды или поешь.",
+      pinyin: "{{Word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:ni3}} {{word:yao4}} {{word:he1}} {{word:shui3}} {{word:hai2}}-{{word:shi4}} {{word:chi1}} {{word:fan4}}?",
+      hanzi: "如果你来，你要喝水还是吃饭？",
+      en: "If you come, do you want water or food?",
+      ru: "Если придёшь, ты хочешь воды или еды?",
     },
     {
       pinyin: "{{Word:ru2guo3}} {{word:na4}}-ge {{word:di4}}-{{light:fang1}} {{word:yuan3}}, {{word:wo3}} {{word:bu4}} {{word:qu4}}.",

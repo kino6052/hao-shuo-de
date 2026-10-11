@@ -15,6 +15,16 @@ export default lessonModule({
       en: "hair, fur",
       ru: "волосы, шерсть",
     },
+    {
+      word: "ya2",
+      en: "tooth",
+      ru: "зуб",
+    },
+    {
+      word: "du4zi",
+      en: "belly",
+      ru: "живот",
+    },
   ],
   prose: {
     en: [
@@ -52,10 +62,10 @@ export default lessonModule({
       ru: "У меня большой нос.",
     },
     {
-      pinyin: "{{Word:ni3}}-{{word:de}} {{word:bi2zi}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}.",
-      hanzi: "你的鼻子是红色的。",
-      en: "Your nose is red.",
-      ru: "У тебя красный нос.",
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:ya2}} {{word:hen3}} {{word:bai2}}.",
+      hanzi: "我的牙很白。",
+      en: "My teeth are white.",
+      ru: "У меня белые зубы.",
     },
     {
       pinyin: "{{Word:dong4}}-{{word:wu4}}-{{word:de}} {{word:bi2zi}} {{word:hen3}} {{word:xiao3}}.",
@@ -70,10 +80,10 @@ export default lessonModule({
       ru: "У животного твёрдая кожа.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:shen1ti3}}-{{word:de}} {{word:wai4}}-{{word:mian4}} {{word:hen3}} {{word:re4}}.",
-      hanzi: "我身体的外面很热。",
-      en: "My skin is hot.",
-      ru: "У меня горячая кожа.",
+      pinyin: "{{Word:dong4}}-{{word:wu4}}-{{word:de}} {{word:ya2}} {{word:hen3}} {{word:ying4}}.",
+      hanzi: "动物的牙很硬。",
+      en: "The animal's teeth are hard.",
+      ru: "У животного крепкие зубы.",
     },
     {
       pinyin: "{{Word:zhe4}}-ge {{word:dong4}}-{{word:wu4}}-{{word:de}} {{word:mao2}} {{word:shi4}} {{word:bai2}}-{{word:se4}}-{{word:de}}.",
@@ -88,10 +98,10 @@ export default lessonModule({
       ru: "У него чёрные волосы.",
     },
     {
-      pinyin: "{{Word:dong4}}-{{word:wu4}}-{{word:de}} {{word:mao2}} {{word:hen3}} {{word:ying4}}.",
-      hanzi: "动物的毛很硬。",
-      en: "The animal's fur is stiff.",
-      ru: "У животного жёсткая шерсть.",
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:du4zi}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "我的肚子很大。",
+      en: "My belly is big.",
+      ru: "У меня большой живот.",
     },
   ],
   exercises: [
@@ -100,6 +110,18 @@ export default lessonModule({
       ru: "У меня маленький нос.",
       answer: "{{Word:wo3}}-{{word:de}} {{word:bi2zi}} {{word:hen3}} {{word:xiao3}}.",
       hanzi: "我的鼻子很小。",
+    },
+    {
+      en: "His teeth are white.",
+      ru: "У него белые зубы.",
+      answer: "{{Word:ta1}}-{{word:de}} {{word:ya2}} {{word:hen3}} {{word:bai2}}.",
+      hanzi: "他的牙很白。",
+    },
+    {
+      en: "His belly is small.",
+      ru: "У него маленький живот.",
+      answer: "{{Word:ta1}}-{{word:de}} {{word:du4zi}} {{word:hen3}} {{word:xiao3}}.",
+      hanzi: "他的肚子很小。",
     },
     {
       en: "Her skin is white.",

@@ -9,9 +9,9 @@ export default composite({
   ru: "младший брат",
   pos: "noun",
   hsd: [
-    "{{word:jia1}}-{{word:li3}} {{word:bi3}} {{word:wo3}} {{word:xiao3}}-{{word:de}} {{word:nan2}}-{{word:ren2}}",
+    "{{word:wo3}} {{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:bi3}}-{{word:wo3}}-{{word:xiao3}}-{{word:de}} {{word:nan2}}-{{word:hai2}}-{{light:zi}}",
   ],
-  tts: ["家里比我小的男人"],
-  literal: "the man at home who's younger than me",
+  tts: ["我爸爸妈妈的比我小的男孩子"],
+  literal: "my parents' boy, smaller than me",
   fit: "plain",
 });

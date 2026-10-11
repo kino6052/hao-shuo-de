@@ -8,9 +8,9 @@ export default composite({
   en: "(ordinal)",
   ru: "порядковый",
   pos: "prefix",
-  hsd: ["{{word:tou2}}-{{word:yi1}}-ge"],
-  tts: ["头一个"],
-  literal: "the first one",
+  hsd: ["{{word:di4}}-{{word:yi1}}"],
+  tts: ["第一"],
+  literal: "first",
   fit: "natural",
-  note: "For \"first\", say tóu-yī-ge; for numbered things, X-hào.",
+  note: "dì in front of a number puts it in order: dì-yī, first; dì-èr, second.",
 });

@@ -12,5 +12,18 @@ export default composite({
   tts: ["事实", "真的东西"],
   literal: "a true thing",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:shi4}} {{word:shi4}}-{{word:shi2}}.",
+      hanzi: "这个是事实。",
+      en: "This is a fact.",
+      ru: "Это факт.",
+    },
+    {
+      pinyin: "{{Word:shi4}}-{{word:shi2}} {{word:shi4}} {{word:zhen1}}-{{word:de}}.",
+      hanzi: "事实是真的。",
+      en: "The fact is true.",
+      ru: "Факт — это правда.",
+    },
+  ],
 });

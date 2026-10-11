@@ -1,0 +1,526 @@
+{
+  "batch": 6,
+  "decisions": {
+    "501": {
+      "zh": "刚才",
+      "status": "edit",
+      "form": "yi-hui-r yi-qian",
+      "at": "2026-10-11T00:47:07.402Z"
+    },
+    "502": {
+      "zh": "别",
+      "status": "approve",
+      "at": "2026-10-11T00:47:36.762Z"
+    },
+    "503": {
+      "zh": "别的",
+      "status": "approve",
+      "at": "2026-10-11T00:47:43.428Z"
+    },
+    "504": {
+      "zh": "午饭",
+      "status": "approve",
+      "at": "2026-10-11T00:47:51.723Z"
+    },
+    "505": {
+      "zh": "卫生间",
+      "status": "approve",
+      "at": "2026-10-11T00:47:59.867Z"
+    },
+    "506": {
+      "zh": "厕所",
+      "status": "edit",
+      "form": "wèi-shēng-jiān",
+      "note": "you proposal was really strange given that bathroom was just next to it.",
+      "at": "2026-10-11T00:49:02.063Z"
+    },
+    "507": {
+      "zh": "司机",
+      "status": "approve",
+      "at": "2026-10-11T00:49:12.501Z"
+    },
+    "508": {
+      "zh": "听说",
+      "status": "approve",
+      "at": "2026-10-11T00:49:18.011Z"
+    },
+    "509": {
+      "zh": "周末",
+      "status": "approve",
+      "at": "2026-10-11T00:49:35.325Z"
+    },
+    "510": {
+      "zh": "哥哥",
+      "status": "edit",
+      "form": "wo babamama de bi wo da de nanahai",
+      "at": "2026-10-11T00:50:56.332Z"
+    },
+    "511": {
+      "zh": "哭",
+      "status": "approve",
+      "at": "2026-10-11T00:51:20.550Z"
+    },
+    "512": {
+      "zh": "墙",
+      "status": "edit",
+      "form": "unsure, need to keep thinking, probably just bian, or mianr",
+      "note": "unsure, need to keep thinking",
+      "at": "2026-10-11T01:02:08.016Z"
+    },
+    "513": {
+      "zh": "夏天",
+      "status": "approve",
+      "at": "2026-10-11T01:02:19.064Z"
+    },
+    "514": {
+      "zh": "大人",
+      "status": "approve",
+      "at": "2026-10-11T01:02:23.219Z"
+    },
+    "515": {
+      "zh": "好多",
+      "status": "approve",
+      "at": "2026-10-11T01:02:27.717Z"
+    },
+    "516": {
+      "zh": "妹妹",
+      "status": "edit",
+      "form": "for relatives we just say - my parents (boy/girl) child - smaller/bigger than me",
+      "at": "2026-10-11T01:03:43.853Z"
+    },
+    "517": {
+      "zh": "姐姐",
+      "status": "edit",
+      "form": "for relatives we just say - my parents (boy/girl) child - smaller/bigger than me",
+      "at": "2026-10-11T01:03:48.691Z"
+    },
+    "518": {
+      "zh": "小心",
+      "status": "approve",
+      "at": "2026-10-11T01:03:50.735Z"
+    },
+    "519": {
+      "zh": "山",
+      "status": "approve",
+      "at": "2026-10-11T01:04:08.890Z"
+    },
+    "520": {
+      "zh": "帮忙",
+      "status": "approve",
+      "at": "2026-10-11T01:04:10.478Z"
+    },
+    "521": {
+      "zh": "开车",
+      "status": "approve",
+      "at": "2026-10-11T01:04:12.191Z"
+    },
+    "522": {
+      "zh": "怎么样",
+      "status": "approve",
+      "at": "2026-10-11T01:04:14.849Z"
+    },
+    "523": {
+      "zh": "早饭",
+      "status": "edit",
+      "form": "zao-fan",
+      "note": "we need to word zao",
+      "at": "2026-10-11T01:05:01.145Z"
+    },
+    "524": {
+      "zh": "晚饭",
+      "status": "approve",
+      "at": "2026-10-11T01:05:02.786Z"
+    },
+    "525": {
+      "zh": "椅子",
+      "status": "edit",
+      "form": "rang-ren-zuò-xià-de dōng-xi",
+      "note": "it is important that we construct words like this - the chair itself doesn't sit - check if there are also similar mistakes with other words",
+      "at": "2026-10-11T01:07:32.042Z"
+    },
+    "526": {
+      "zh": "游泳",
+      "status": "edit",
+      "form": "if sport - zài shuǐ-lǐ wanr, if actual purpose is to move - guo shui qu X difang or something",
+      "at": "2026-10-11T01:12:46.756Z"
+    },
+    "527": {
+      "zh": "灯",
+      "status": "approve",
+      "at": "2026-10-11T01:10:44.044Z"
+    },
+    "528": {
+      "zh": "牙",
+      "status": "edit",
+      "form": "need a word in core dict",
+      "note": "need a word in core dict",
+      "at": "2026-10-11T01:14:23.836Z"
+    },
+    "529": {
+      "zh": "狗",
+      "status": "approve",
+      "at": "2026-10-11T01:14:26.726Z"
+    },
+    "530": {
+      "zh": "猫",
+      "status": "approve",
+      "at": "2026-10-11T01:14:29.868Z"
+    },
+    "531": {
+      "zh": "生气",
+      "status": "approve",
+      "at": "2026-10-11T01:14:33.944Z"
+    },
+    "532": {
+      "zh": "看病",
+      "status": "approve",
+      "at": "2026-10-11T01:14:40.696Z"
+    },
+    "533": {
+      "zh": "眼",
+      "status": "approve",
+      "at": "2026-10-11T01:14:52.256Z"
+    },
+    "534": {
+      "zh": "米饭",
+      "status": "approve",
+      "at": "2026-10-11T01:15:00.448Z"
+    },
+    "535": {
+      "zh": "肚子",
+      "status": "approve",
+      "at": "2026-10-11T01:15:04.123Z"
+    },
+    "536": {
+      "zh": "胖",
+      "status": "edit",
+      "form": "duzi-da",
+      "note": "need word belly",
+      "at": "2026-10-11T01:18:04.326Z"
+    },
+    "537": {
+      "zh": "脏",
+      "status": "approve",
+      "at": "2026-10-11T01:18:08.360Z"
+    },
+    "538": {
+      "zh": "苹果",
+      "status": "approve",
+      "at": "2026-10-11T01:18:20.204Z"
+    },
+    "539": {
+      "zh": "行",
+      "status": "approve",
+      "at": "2026-10-11T01:18:22.970Z"
+    },
+    "540": {
+      "zh": "裤子",
+      "status": "approve",
+      "at": "2026-10-11T01:18:25.829Z"
+    },
+    "541": {
+      "zh": "要是",
+      "status": "approve",
+      "at": "2026-10-11T01:18:30.842Z"
+    },
+    "542": {
+      "zh": "见面",
+      "status": "approve",
+      "at": "2026-10-11T01:18:33.788Z"
+    },
+    "543": {
+      "zh": "请问",
+      "status": "approve",
+      "at": "2026-10-11T01:18:35.931Z"
+    },
+    "544": {
+      "zh": "起床",
+      "status": "approve",
+      "at": "2026-10-11T01:18:38.458Z"
+    },
+    "545": {
+      "zh": "足球",
+      "status": "approve",
+      "at": "2026-10-11T01:18:42.248Z"
+    },
+    "546": {
+      "zh": "跑步",
+      "status": "approve",
+      "at": "2026-10-11T01:18:44.962Z"
+    },
+    "547": {
+      "zh": "这边",
+      "status": "approve",
+      "at": "2026-10-11T01:18:47.285Z"
+    },
+    "548": {
+      "zh": "进来",
+      "status": "approve",
+      "at": "2026-10-11T01:18:48.382Z"
+    },
+    "549": {
+      "zh": "遇见",
+      "status": "approve",
+      "at": "2026-10-11T01:18:49.848Z"
+    },
+    "550": {
+      "zh": "那边",
+      "status": "approve",
+      "at": "2026-10-11T01:18:51.498Z"
+    },
+    "551": {
+      "zh": "鞋",
+      "status": "approve",
+      "at": "2026-10-11T01:18:53.039Z"
+    },
+    "552": {
+      "zh": "饮料",
+      "status": "approve",
+      "at": "2026-10-11T01:18:54.560Z"
+    },
+    "553": {
+      "zh": "鼻子",
+      "status": "approve",
+      "at": "2026-10-11T01:19:03.392Z"
+    },
+    "554": {
+      "zh": "一会儿",
+      "status": "approve",
+      "at": "2026-10-11T01:19:05.835Z"
+    },
+    "555": {
+      "zh": "呢",
+      "status": "approve",
+      "at": "2026-10-11T01:19:13.151Z"
+    },
+    "556": {
+      "zh": "哪儿",
+      "status": "approve",
+      "at": "2026-10-11T01:19:15.293Z"
+    },
+    "557": {
+      "zh": "女孩儿",
+      "status": "approve",
+      "at": "2026-10-11T01:19:19.303Z"
+    },
+    "558": {
+      "zh": "奶奶",
+      "status": "approve",
+      "at": "2026-10-11T01:19:35.443Z"
+    },
+    "559": {
+      "zh": "好玩儿",
+      "status": "approve",
+      "at": "2026-10-11T01:19:37.593Z"
+    },
+    "560": {
+      "zh": "小孩儿",
+      "status": "approve",
+      "at": "2026-10-11T01:19:40.182Z"
+    },
+    "561": {
+      "zh": "小朋友",
+      "status": "approve",
+      "at": "2026-10-11T01:19:43.538Z"
+    },
+    "562": {
+      "zh": "杯子",
+      "status": "approve",
+      "at": "2026-10-11T01:19:45.946Z"
+    },
+    "563": {
+      "zh": "没事",
+      "status": "approve",
+      "at": "2026-10-11T01:19:48.086Z"
+    },
+    "564": {
+      "zh": "没关系",
+      "status": "approve",
+      "at": "2026-10-11T01:19:49.830Z"
+    },
+    "565": {
+      "zh": "洗手间",
+      "status": "approve",
+      "at": "2026-10-11T01:19:53.176Z"
+    },
+    "566": {
+      "zh": "洗澡",
+      "status": "approve",
+      "at": "2026-10-11T01:19:56.885Z"
+    },
+    "567": {
+      "zh": "渴",
+      "status": "edit",
+      "form": "xian3 hē shuǐ",
+      "note": "it is important to change hungry to xiang3 chi because yao means you will do it, but it is more correct to say xiang. we also need to change jue-de to xiang when more appropriate",
+      "at": "2026-10-11T01:21:12.455Z"
+    },
+    "568": {
+      "zh": "爷爷",
+      "status": "approve",
+      "at": "2026-10-11T01:20:14.221Z"
+    },
+    "569": {
+      "zh": "男孩儿",
+      "status": "approve",
+      "at": "2026-10-11T01:21:18.915Z"
+    },
+    "570": {
+      "zh": "白天",
+      "status": "approve",
+      "at": "2026-10-11T01:21:23.652Z"
+    },
+    "571": {
+      "zh": "着急",
+      "status": "approve",
+      "at": "2026-10-11T01:21:27.546Z"
+    },
+    "572": {
+      "zh": "跳",
+      "status": "approve",
+      "at": "2026-10-11T01:21:30.386Z"
+    },
+    "573": {
+      "zh": "跳舞",
+      "status": "edit",
+      "form": "dong-yi-dong",
+      "note": "the proposed sounded too unnatural",
+      "at": "2026-10-11T01:24:55.932Z"
+    },
+    "574": {
+      "zh": "一块儿",
+      "status": "approve",
+      "at": "2026-10-11T01:24:57.975Z"
+    },
+    "575": {
+      "zh": "一点儿",
+      "status": "approve",
+      "at": "2026-10-11T01:24:59.546Z"
+    },
+    "576": {
+      "zh": "不客气",
+      "status": "approve",
+      "at": "2026-10-11T01:25:01.355Z"
+    },
+    "577": {
+      "zh": "怎么办",
+      "status": "approve",
+      "at": "2026-10-11T01:25:03.239Z"
+    },
+    "578": {
+      "zh": "聊天儿",
+      "status": "approve",
+      "at": "2026-10-11T01:25:06.034Z"
+    },
+    "579": {
+      "zh": "吧",
+      "status": "approve",
+      "at": "2026-10-11T01:25:09.307Z"
+    },
+    "580": {
+      "zh": "嗯",
+      "status": "approve",
+      "at": "2026-10-11T01:25:13.060Z"
+    },
+    "581": {
+      "zh": "专家",
+      "status": "edit",
+      "form": "zhīdào hěn-duō-de rén",
+      "note": "yi-jing hen chang de shijian zuo X de ren",
+      "at": "2026-10-11T01:26:49.319Z"
+    },
+    "582": {
+      "zh": "事实",
+      "status": "approve",
+      "at": "2026-10-11T01:26:59.334Z"
+    },
+    "583": {
+      "zh": "信息",
+      "status": "approve",
+      "at": "2026-10-11T01:27:06.576Z"
+    },
+    "584": {
+      "zh": "关于",
+      "status": "approve",
+      "at": "2026-10-11T01:27:08.900Z"
+    },
+    "586": {
+      "zh": "完全",
+      "status": "approve",
+      "at": "2026-10-11T01:27:14.196Z"
+    },
+    "587": {
+      "zh": "实现",
+      "status": "approve",
+      "at": "2026-10-11T01:27:15.630Z"
+    },
+    "588": {
+      "zh": "意义",
+      "status": "approve",
+      "at": "2026-10-11T01:27:17.242Z"
+    },
+    "589": {
+      "zh": "政府",
+      "status": "edit",
+      "form": "guó-jiā de jue-ding-zhe",
+      "at": "2026-10-11T01:29:53.549Z"
+    },
+    "590": {
+      "zh": "文化",
+      "status": "edit",
+      "form": "shenghuo-de āng-fǎ",
+      "at": "2026-10-11T01:41:17.074Z"
+    },
+    "591": {
+      "zh": "根据",
+      "status": "approve",
+      "at": "2026-10-11T01:41:18.086Z"
+    },
+    "592": {
+      "zh": "汉字",
+      "status": "approve",
+      "at": "2026-10-11T01:41:20.982Z"
+    },
+    "593": {
+      "zh": "环境",
+      "status": "approve",
+      "at": "2026-10-11T01:41:23.714Z"
+    },
+    "594": {
+      "zh": "目的",
+      "status": "approve",
+      "at": "2026-10-11T01:41:25.052Z"
+    },
+    "595": {
+      "zh": "解决",
+      "status": "edit",
+      "form": "ba wenti jiu meile or something",
+      "at": "2026-10-11T01:41:38.577Z"
+    },
+    "596": {
+      "zh": "下载",
+      "status": "approve",
+      "at": "2026-10-11T01:41:40.414Z"
+    },
+    "597": {
+      "zh": "不管",
+      "status": "approve",
+      "at": "2026-10-11T01:41:41.657Z"
+    },
+    "598": {
+      "zh": "个人",
+      "status": "approve",
+      "at": "2026-10-11T01:41:43.343Z"
+    },
+    "599": {
+      "zh": "中学",
+      "status": "approve",
+      "at": "2026-10-11T01:41:45.843Z"
+    },
+    "600": {
+      "zh": "中心",
+      "status": "approve",
+      "at": "2026-10-11T01:41:48.514Z"
+    }
+  }
+}

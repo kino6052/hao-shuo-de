@@ -1,7 +1,7 @@
 // inside-a-sentence ("Relationships 1 — Inside a sentence"): its modules, in reading order.
 // See src/lib/lesson.ts.
 //
-// Rewritten in Phase 2 (BOOK_PLAN.md): give / for (gěi), with (yòng), and / or (hé, huò-zhě), and toward / for (duì), with qún, mō, dǎ.
+// Rewritten in Phase 2 (BOOK_PLAN.md): give / for (gěi), with (yòng), and / or (hé, hái-shì), and toward / for (duì), with qún, mō, dǎ.
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- inside-a-sentence).
 import { lesson } from "../../../lib/lesson.ts";

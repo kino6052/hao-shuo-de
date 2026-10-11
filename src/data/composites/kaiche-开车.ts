@@ -11,5 +11,18 @@ export default composite({
   hsd: ["{{word:kai1}} {{word:che1}}"],
   tts: ["开车"],
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:kai1}} {{word:che1}} {{word:hui2}} {{word:jia1}}.",
+      hanzi: "他开车回家。",
+      en: "He drives home.",
+      ru: "Он едет домой на машине.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:bu4}} {{word:neng2}} {{word:kai1}} {{word:che1}}.",
+      hanzi: "我不能开车。",
+      en: "I can't drive.",
+      ru: "Я не могу водить машину.",
+    },
+  ],
 });

@@ -12,4 +12,18 @@ export default composite({
   tts: ["用"],
   fit: "natural",
   note: "yòng jīn: spend money.",
+  examples: [
+    {
+      pinyin: "{{Word:ni3}} {{word:yong4}} {{word:le}} {{word:duo1}}-{{word:shao3}} {{word:jin1}}?",
+      hanzi: "你用了多少金？",
+      en: "How much did you spend?",
+      ru: "Сколько ты потратил?",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:yong4}} {{word:le}} {{word:hen3}} {{word:duo1}} {{word:shi2}}-{{word:jian1}}.",
+      hanzi: "我用了很多时间。",
+      en: "I spent a lot of time.",
+      ru: "Я потратил много времени.",
+    },
+  ],
 });

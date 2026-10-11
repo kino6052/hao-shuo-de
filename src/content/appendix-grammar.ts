@@ -1446,10 +1446,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "number + {{word:hao4}}, number …: {{Word:er4}}-{{word:hao4}} (number two)"
+            "number + {{word:hao4}}, number …: {{Word:er4}}-{{word:hao4}} (number two). {{word:di4}} + number, the order: {{word:di4}}-{{word:yi1}} (first)"
           ],
           "ru": [
-            "число + {{word:hao4}} — номер: {{Word:er4}}-{{word:hao4}} (номер два)"
+            "число + {{word:hao4}} — номер: {{Word:er4}}-{{word:hao4}} (номер два). {{word:di4}} + число — порядок: {{word:di4}}-{{word:yi1}} (первый)"
           ],
           "zh": []
         }
@@ -1678,10 +1678,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "A {{word:huo4}}-{{word:zhe3}} B, or: {{word:zhe4}}-ge {{word:huo4}}-{{word:zhe3}} {{word:na4}}-ge (this one or that one)"
+            "A {{word:hai2}}-{{word:shi4}} B, or (a choice): {{word:zhe4}}-ge {{word:hai2}}-{{word:shi4}} {{word:na4}}-ge? (this one or that one?)"
           ],
           "ru": [
-            "A {{word:huo4}}-{{word:zhe3}} B — или: {{word:zhe4}}-ge {{word:huo4}}-{{word:zhe3}} {{word:na4}}-ge (это или то)"
+            "A {{word:hai2}}-{{word:shi4}} B — или (выбор): {{word:zhe4}}-ge {{word:hai2}}-{{word:shi4}} {{word:na4}}-ge? (это или то?)"
           ],
           "zh": []
         }

@@ -12,5 +12,18 @@ export default composite({
   tts: ["怎么样", "…，好吗？"],
   literal: "…, okay?",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ni3}}-{{word:de}} {{word:fang2}}-{{word:jian1}} {{word:zen3me}}-{{word:yang4}}?",
+      hanzi: "你的房间怎么样？",
+      en: "How is your room?",
+      ru: "Как твоя комната?",
+    },
+    {
+      pinyin: "{{Word:jin1}}-{{word:tian1}} {{word:zen3me}}-{{word:yang4}}?",
+      hanzi: "今天怎么样？",
+      en: "How is today?",
+      ru: "Как сегодня?",
+    },
+  ],
 });

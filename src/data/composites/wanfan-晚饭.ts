@@ -8,12 +8,23 @@ export default composite({
   en: "dinner",
   ru: "ужин",
   pos: "noun",
-  hsd: [
-    "{{word:wan3}}-{{word:fan4}}",
-    "{{word:yue4}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:chi1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
-  ],
-  tts: ["晚饭", "月的时间吃的东西"],
-  literal: "the food you eat at moon time",
+  hsd: ["{{word:wan3}}-{{word:fan4}}"],
+  tts: ["晚饭"],
+  literal: "late meal",
   fit: "natural",
-  proposed: true,
+  transparent: true,
+  examples: [
+    {
+      pinyin: "{{Word:wan3}}-{{word:fan4}} {{word:you3}} {{word:shui3}}-{{word:guo3}}.",
+      hanzi: "晚饭有水果。",
+      en: "There's fruit with dinner.",
+      ru: "К ужину есть фрукты.",
+    },
+    {
+      pinyin: "{{Word:wo3}}-{{word:men}} {{word:wan3}}-{{word:fan4}} {{word:chi1}} {{word:shen2me}}?",
+      hanzi: "我们晚饭吃什么？",
+      en: "What are we having for dinner?",
+      ru: "Что у нас на ужин?",
+    },
+  ],
 });

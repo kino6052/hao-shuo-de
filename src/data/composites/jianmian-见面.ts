@@ -12,5 +12,18 @@ export default composite({
   tts: ["见面", "看到"],
   literal: "see",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:men}} {{word:ming2}}-{{word:tian1}} {{word:jian4}}-{{word:mian4}}.",
+      hanzi: "我们明天见面。",
+      en: "We'll meet tomorrow.",
+      ru: "Мы встретимся завтра.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:yao4}} {{word:he2}} {{word:ni3}} {{word:jian4}}-{{word:mian4}}.",
+      hanzi: "我要和你见面。",
+      en: "I want to meet you.",
+      ru: "Я хочу с тобой встретиться.",
+    },
+  ],
 });

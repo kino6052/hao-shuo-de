@@ -14,5 +14,18 @@ export default composite({
   tts: ["用脚从地上起来"],
   literal: "rise off the ground with your feet",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:yong4}} {{word:jiao3}} {{word:cong2}} {{word:di4}}-{{word:shang4}} {{word:qi3}}-{{word:lai2}}.",
+      hanzi: "他用脚从地上起来。",
+      en: "He jumps up from the ground.",
+      ru: "Он подпрыгивает с земли.",
+    },
+    {
+      pinyin: "{{Word:xiao3}}-{{word:hai2}}-{{word:zi}} {{word:yong4}} {{word:jiao3}} {{word:cong2}} {{word:di4}}-{{word:shang4}} {{word:qi3}}-{{word:lai2}}.",
+      hanzi: "小孩子用脚从地上起来。",
+      en: "The child jumps up.",
+      ru: "Ребёнок подпрыгивает.",
+    },
+  ],
 });

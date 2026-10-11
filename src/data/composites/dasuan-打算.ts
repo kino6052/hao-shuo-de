@@ -12,5 +12,18 @@ export default composite({
   tts: ["打算", "要"],
   literal: "hit-calculate",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ni3}} {{word:da3}}-{{word:suan4}} {{word:zuo4}} {{word:shen2me}}?",
+      hanzi: "你打算做什么？",
+      en: "What do you plan to do?",
+      ru: "Что ты собираешься делать?",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:da3}}-{{word:suan4}} {{word:ming2}}-{{word:nian2}} {{word:qu4}} \"Zhōngguó\".",
+      hanzi: "我打算明年去中国。",
+      en: "I plan to go to China next year.",
+      ru: "Я собираюсь поехать в Китай в следующем году.",
+    },
+  ],
 });

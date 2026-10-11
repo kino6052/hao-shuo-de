@@ -8,8 +8,22 @@ export default composite({
   en: "building",
   ru: "здание",
   pos: "noun",
-  hsd: ["{{word:da4}}-{{word:de}} {{word:jia1}}"],
-  tts: ["大的家"],
-  literal: "a big house",
+  hsd: ["{{word:gao1}}-{{word:de}} {{word:fang2}}-{{word:zi}}"],
+  tts: ["高的房子"],
+  literal: "a tall house",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:zai4}} {{word:na4}}-{{light:ge4}} {{word:gao1}}-{{word:de}} {{word:fang2}}-{{word:zi}}-{{word:li3}} {{word:gong1}}-{{word:zuo4}}.",
+      hanzi: "他在那个高的房子里工作。",
+      en: "He works in that building.",
+      ru: "Он работает в том здании.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:jia1}} {{word:zai4}} {{word:gao1}}-{{word:de}} {{word:fang2}}-{{word:zi}}-{{word:li3}}.",
+      hanzi: "我家在高的房子里。",
+      en: "My home is in a tall building.",
+      ru: "Я живу в высоком доме.",
+    },
+  ],
 });

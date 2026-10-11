@@ -8,8 +8,22 @@ export default composite({
   en: "spring",
   ru: "весна",
   pos: "noun",
-  hsd: ["{{word:bian4}} {{word:re4}}-{{word:de}} {{word:shi2}}-{{word:jian1}}"],
-  tts: ["变热的时间"],
-  literal: "the time it gets warm",
+  hsd: ["{{word:nian2}}-{{word:de}} {{word:di4}}-{{word:yi1}}-{{word:bu4}}-{{light:fen1}}"],
+  tts: ["年的第一部分"],
+  literal: "the first part of the year",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:nian2}}-{{word:de}} {{word:di4}}-{{word:yi1}}-{{word:bu4}}-{{light:fen1}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "年的第一部分很好。",
+      en: "Spring is lovely.",
+      ru: "Весна прекрасна.",
+    },
+    {
+      pinyin: "{{Word:nian2}}-{{word:de}} {{word:di4}}-{{word:yi1}}-{{word:bu4}}-{{light:fen1}}, {{word:zhi2wu4}} {{word:dou1}} {{word:chu1}}-{{word:lai2}} {{word:le}}.",
+      hanzi: "年的第一部分，植物都出来了。",
+      en: "In spring, the plants all come up.",
+      ru: "Весной всё растёт.",
+    },
+  ],
 });

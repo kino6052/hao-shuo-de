@@ -8,8 +8,9 @@ export default composite({
   en: "guess",
   ru: "угадывать",
   pos: "verb",
-  hsd: ["{{word:jue2}}-{{light:de2}} {{word:shi4}} …"],
-  tts: ["觉得是…"],
+  hsd: ["{{word:xiang3}} {{word:shi4}} …"],
+  tts: ["想是…"],
   literal: "think it's …",
   fit: "plain",
+  proposed: true,
 });

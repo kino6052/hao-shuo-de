@@ -8,8 +8,22 @@ export default composite({
   en: "dance",
   ru: "танцевать",
   pos: "verb",
-  hsd: ["{{word:hao3}}-{{word:kan4}}-{{word:de}} {{word:dong4}} {{word:shen1ti3}}"],
-  tts: ["好看的动身体"],
-  literal: "move the body nicely",
+  hsd: ["{{word:dong4}}-{{word:yi1}}-{{word:dong4}}"],
+  tts: ["动一动"],
+  literal: "move a bit",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:nv3}}-{{word:hai2}}-{{word:zi}} {{word:dong4}}-{{word:yi1}}-{{word:dong4}}, {{word:hen3}} {{word:hao3}}-{{word:kan4}}.",
+      hanzi: "女孩子动一动，很好看。",
+      en: "The girl dances beautifully.",
+      ru: "Девочка красиво танцует.",
+    },
+    {
+      pinyin: "{{Word:ta1}}-{{word:men}} {{word:dong4}}-{{word:yi1}}-{{word:dong4}}, {{word:hen3}} {{word:hao3}}-{{word:kan4}}.",
+      hanzi: "他们动一动，很好看。",
+      en: "They dance beautifully.",
+      ru: "Они красиво танцуют.",
+    },
+  ],
 });

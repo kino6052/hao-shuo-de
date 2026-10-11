@@ -8,13 +8,23 @@ export default composite({
   en: "bathroom",
   ru: "ванная",
   pos: "noun",
-  hsd: [
-    "{{word:wei4}}-{{word:sheng1}}-{{word:jian1}}",
-    "{{word:yong4}}-{{word:shui3}}-{{word:zuo4}}-{{word:shou3}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
-  ],
-  tts: ["卫生间", "用水做手的地方"],
-  literal: "the place where you wash your hands",
+  hsd: ["{{word:wei4}}-{{word:sheng1}}-{{word:jian1}}"],
+  tts: ["卫生间"],
   fit: "natural",
+  transparent: true,
   note: "A polite way to say toilet.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wei4}}-{{word:sheng1}}-{{word:jian1}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
+      hanzi: "卫生间在哪里？",
+      en: "Where is the bathroom?",
+      ru: "Где ванная?",
+    },
+    {
+      pinyin: "{{Word:wei4}}-{{word:sheng1}}-{{word:jian1}} {{word:hen3}} {{word:gan1jing4}}.",
+      hanzi: "卫生间很干净。",
+      en: "The bathroom is very clean.",
+      ru: "Ванная очень чистая.",
+    },
+  ],
 });

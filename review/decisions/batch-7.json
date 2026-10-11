@@ -1,0 +1,512 @@
+{
+  "batch": 7,
+  "decisions": {
+    "601": {
+      "zh": "之前",
+      "status": "approve",
+      "at": "2026-10-11T02:31:39.685Z"
+    },
+    "602": {
+      "zh": "之后",
+      "status": "approve",
+      "at": "2026-10-11T02:31:41.044Z"
+    },
+    "603": {
+      "zh": "互联网",
+      "status": "approve",
+      "at": "2026-10-11T02:31:42.662Z"
+    },
+    "604": {
+      "zh": "产生",
+      "status": "approve",
+      "at": "2026-10-11T02:31:48.272Z"
+    },
+    "605": {
+      "zh": "人民币",
+      "status": "approve",
+      "at": "2026-10-11T02:31:50.492Z"
+    },
+    "606": {
+      "zh": "代表",
+      "status": "edit",
+      "form": "we need to think of how to express the word \"represent\" and \"representative\" - something that used instead of other thing or somebody who is speaking instead of someone",
+      "at": "2026-10-11T02:36:13.052Z"
+    },
+    "607": {
+      "zh": "任何",
+      "status": "approve",
+      "at": "2026-10-11T02:33:33.076Z"
+    },
+    "608": {
+      "zh": "传",
+      "status": "approve",
+      "at": "2026-10-11T02:36:18.924Z"
+    },
+    "609": {
+      "zh": "位置",
+      "status": "approve",
+      "at": "2026-10-11T02:36:21.236Z"
+    },
+    "610": {
+      "zh": "使用",
+      "status": "approve",
+      "at": "2026-10-11T02:36:24.171Z"
+    },
+    "611": {
+      "zh": "光",
+      "status": "approve",
+      "at": "2026-10-11T02:36:27.041Z"
+    },
+    "612": {
+      "zh": "内",
+      "status": "approve",
+      "at": "2026-10-11T02:36:28.893Z"
+    },
+    "613": {
+      "zh": "几乎",
+      "status": "approve",
+      "at": "2026-10-11T02:36:30.019Z"
+    },
+    "614": {
+      "zh": "出生",
+      "status": "approve",
+      "at": "2026-10-11T02:36:31.656Z"
+    },
+    "615": {
+      "zh": "分",
+      "status": "approve",
+      "at": "2026-10-11T02:36:33.632Z"
+    },
+    "616": {
+      "zh": "分数",
+      "status": "edit",
+      "form": "we will need to add shu4 to the core dictionary",
+      "at": "2026-10-11T02:39:07.347Z"
+    },
+    "617": {
+      "zh": "力量",
+      "status": "approve",
+      "at": "2026-10-11T02:39:10.546Z"
+    },
+    "618": {
+      "zh": "办",
+      "status": "approve",
+      "at": "2026-10-11T02:39:12.446Z"
+    },
+    "619": {
+      "zh": "化",
+      "status": "approve",
+      "at": "2026-10-11T02:39:16.724Z"
+    },
+    "620": {
+      "zh": "单位",
+      "status": "approve",
+      "at": "2026-10-11T02:39:21.048Z"
+    },
+    "621": {
+      "zh": "原来",
+      "status": "approve",
+      "at": "2026-10-11T02:39:26.585Z"
+    },
+    "622": {
+      "zh": "变化",
+      "status": "approve",
+      "at": "2026-10-11T02:39:28.676Z"
+    },
+    "623": {
+      "zh": "句子",
+      "status": "edit",
+      "form": "fang-zai-yi-qi-de-ci",
+      "at": "2026-10-11T02:40:42.524Z"
+    },
+    "624": {
+      "zh": "各",
+      "status": "approve",
+      "at": "2026-10-11T02:40:44.521Z"
+    },
+    "625": {
+      "zh": "名人",
+      "status": "approve",
+      "at": "2026-10-11T02:40:50.761Z"
+    },
+    "626": {
+      "zh": "员",
+      "status": "approve",
+      "at": "2026-10-11T02:40:52.953Z"
+    },
+    "627": {
+      "zh": "周",
+      "status": "approve",
+      "at": "2026-10-11T02:40:55.295Z"
+    },
+    "628": {
+      "zh": "困难",
+      "status": "approve",
+      "at": "2026-10-11T02:40:57.181Z"
+    },
+    "629": {
+      "zh": "在线",
+      "status": "approve",
+      "at": "2026-10-11T02:40:58.210Z"
+    },
+    "630": {
+      "zh": "地区",
+      "status": "approve",
+      "at": "2026-10-11T02:40:59.989Z"
+    },
+    "631": {
+      "zh": "地址",
+      "status": "approve",
+      "at": "2026-10-11T02:41:01.913Z"
+    },
+    "632": {
+      "zh": "地球",
+      "status": "approve",
+      "at": "2026-10-11T02:41:04.096Z"
+    },
+    "633": {
+      "zh": "城",
+      "status": "edit",
+      "form": "guo-jia-li de di-fang",
+      "at": "2026-10-11T02:41:48.732Z"
+    },
+    "634": {
+      "zh": "基本",
+      "status": "approve",
+      "at": "2026-10-11T02:41:51.800Z"
+    },
+    "635": {
+      "zh": "大学生",
+      "status": "approve",
+      "at": "2026-10-11T02:41:58.383Z"
+    },
+    "636": {
+      "zh": "大概",
+      "status": "approve",
+      "at": "2026-10-11T02:41:59.385Z"
+    },
+    "637": {
+      "zh": "字典",
+      "status": "edit",
+      "form": "yǒu-hěn-duō-cí-de shū",
+      "at": "2026-10-11T02:42:06.929Z"
+    },
+    "638": {
+      "zh": "安排",
+      "status": "edit",
+      "form": "dǎ-suàn",
+      "note": "bǎ dōng-xi fàng-hǎo also possible, need to think of more natural ways",
+      "at": "2026-10-11T02:43:16.829Z"
+    },
+    "640": {
+      "zh": "小学",
+      "status": "approve",
+      "at": "2026-10-11T02:43:22.117Z"
+    },
+    "641": {
+      "zh": "工具",
+      "status": "approve",
+      "at": "2026-10-11T02:43:24.249Z"
+    },
+    "642": {
+      "zh": "市",
+      "status": "approve",
+      "at": "2026-10-11T02:43:27.025Z"
+    },
+    "643": {
+      "zh": "年级",
+      "status": "edit",
+      "form": "xué-de jie-guo (the result)",
+      "at": "2026-10-11T02:43:55.439Z"
+    },
+    "644": {
+      "zh": "年龄",
+      "status": "approve",
+      "at": "2026-10-11T02:44:07.980Z"
+    },
+    "645": {
+      "zh": "建",
+      "status": "approve",
+      "at": "2026-10-11T02:44:10.185Z"
+    },
+    "646": {
+      "zh": "建议",
+      "status": "approve",
+      "at": "2026-10-11T02:44:13.945Z"
+    },
+    "647": {
+      "zh": "强",
+      "status": "approve",
+      "at": "2026-10-11T02:44:15.066Z"
+    },
+    "648": {
+      "zh": "当",
+      "status": "approve",
+      "at": "2026-10-11T02:44:16.962Z"
+    },
+    "649": {
+      "zh": "得",
+      "status": "approve",
+      "at": "2026-10-11T02:44:18.622Z"
+    },
+    "650": {
+      "zh": "总",
+      "status": "edit",
+      "form": "shénme shí-jiān dōu",
+      "at": "2026-10-11T02:44:57.033Z"
+    },
+    "651": {
+      "zh": "情况",
+      "status": "edit",
+      "form": "shang-xia or something like xian-zai de yang-zi",
+      "at": "2026-10-11T02:46:42.518Z"
+    },
+    "652": {
+      "zh": "意见",
+      "status": "edit",
+      "form": "xiǎng-fa",
+      "at": "2026-10-11T02:46:54.083Z"
+    },
+    "653": {
+      "zh": "成为",
+      "status": "approve",
+      "at": "2026-10-11T02:46:56.138Z"
+    },
+    "654": {
+      "zh": "或者",
+      "status": "approve",
+      "at": "2026-10-11T02:47:18.833Z"
+    },
+    "655": {
+      "zh": "报纸",
+      "status": "approve",
+      "at": "2026-10-11T02:47:25.226Z"
+    },
+    "656": {
+      "zh": "拥有",
+      "status": "approve",
+      "at": "2026-10-11T02:47:26.740Z"
+    },
+    "657": {
+      "zh": "接受",
+      "status": "approve",
+      "at": "2026-10-11T02:47:35.671Z"
+    },
+    "658": {
+      "zh": "提",
+      "status": "approve",
+      "at": "2026-10-11T02:47:37.727Z"
+    },
+    "659": {
+      "zh": "提高",
+      "status": "edit",
+      "form": "by qian zuò-hǎo yī-diǎn or something",
+      "at": "2026-10-11T02:48:19.973Z"
+    },
+    "660": {
+      "zh": "支持",
+      "status": "approve",
+      "at": "2026-10-11T02:48:22.500Z"
+    },
+    "661": {
+      "zh": "改变",
+      "status": "approve",
+      "at": "2026-10-11T02:48:26.598Z"
+    },
+    "662": {
+      "zh": "数",
+      "status": "approve",
+      "at": "2026-10-11T02:48:27.564Z"
+    },
+    "663": {
+      "zh": "方面",
+      "status": "approve",
+      "at": "2026-10-11T02:48:29.657Z"
+    },
+    "664": {
+      "zh": "有关",
+      "status": "approve",
+      "at": "2026-10-11T02:48:31.934Z"
+    },
+    "665": {
+      "zh": "有名",
+      "status": "approve",
+      "at": "2026-10-11T02:48:34.701Z"
+    },
+    "667": {
+      "zh": "未来",
+      "status": "approve",
+      "at": "2026-10-11T02:48:42.056Z"
+    },
+    "668": {
+      "zh": "材料",
+      "status": "edit",
+      "form": "this is a very critical and important word - we need to think of how to express material or ingredient in haoshuode - if everything is awkward, we will need to add liao4 to the core",
+      "at": "2026-10-11T02:49:46.680Z"
+    },
+    "669": {
+      "zh": "极",
+      "status": "approve",
+      "at": "2026-10-11T02:49:51.045Z"
+    },
+    "670": {
+      "zh": "查",
+      "status": "approve",
+      "at": "2026-10-11T02:49:52.366Z"
+    },
+    "671": {
+      "zh": "检查",
+      "status": "approve",
+      "at": "2026-10-11T02:49:54.393Z"
+    },
+    "672": {
+      "zh": "植物",
+      "status": "approve",
+      "at": "2026-10-11T02:49:56.433Z"
+    },
+    "673": {
+      "zh": "正",
+      "status": "approve",
+      "at": "2026-10-11T02:49:58.327Z"
+    },
+    "674": {
+      "zh": "母亲",
+      "status": "approve",
+      "at": "2026-10-11T02:50:05.240Z"
+    },
+    "675": {
+      "zh": "毕业",
+      "status": "approve",
+      "at": "2026-10-11T02:50:07.332Z"
+    },
+    "676": {
+      "zh": "活动",
+      "status": "approve",
+      "at": "2026-10-11T02:50:09.035Z"
+    },
+    "677": {
+      "zh": "消息",
+      "status": "edit",
+      "form": "xiàn-zài fā-shēng-de",
+      "at": "2026-10-11T02:50:30.790Z"
+    },
+    "678": {
+      "zh": "现代",
+      "status": "approve",
+      "at": "2026-10-11T02:50:33.080Z"
+    },
+    "679": {
+      "zh": "理解",
+      "status": "approve",
+      "at": "2026-10-11T02:50:36.670Z"
+    },
+    "680": {
+      "zh": "生",
+      "status": "approve",
+      "at": "2026-10-11T02:50:37.847Z"
+    },
+    "681": {
+      "zh": "用户",
+      "status": "approve",
+      "at": "2026-10-11T02:50:40.072Z"
+    },
+    "682": {
+      "zh": "直",
+      "status": "approve",
+      "at": "2026-10-11T02:50:42.404Z"
+    },
+    "683": {
+      "zh": "真实",
+      "status": "approve",
+      "at": "2026-10-11T02:50:44.293Z"
+    },
+    "684": {
+      "zh": "种",
+      "status": "approve",
+      "at": "2026-10-11T02:50:46.253Z"
+    },
+    "685": {
+      "zh": "移动",
+      "status": "approve",
+      "at": "2026-10-11T02:50:47.495Z"
+    },
+    "686": {
+      "zh": "空气",
+      "status": "approve",
+      "at": "2026-10-11T02:50:50.200Z"
+    },
+    "687": {
+      "zh": "第",
+      "status": "approve",
+      "at": "2026-10-11T02:50:53.351Z"
+    },
+    "688": {
+      "zh": "答案",
+      "status": "edit",
+      "form": "duì wèn-de shuō-de",
+      "at": "2026-10-11T02:51:22.017Z"
+    },
+    "689": {
+      "zh": "精神",
+      "status": "approve",
+      "at": "2026-10-11T02:51:25.766Z"
+    },
+    "690": {
+      "zh": "终于",
+      "status": "approve",
+      "at": "2026-10-11T02:51:29.553Z"
+    },
+    "691": {
+      "zh": "结果",
+      "status": "approve",
+      "at": "2026-10-11T02:51:31.131Z"
+    },
+    "692": {
+      "zh": "网络",
+      "status": "approve",
+      "at": "2026-10-11T02:51:32.932Z"
+    },
+    "693": {
+      "zh": "考",
+      "status": "approve",
+      "at": "2026-10-11T02:51:35.994Z"
+    },
+    "694": {
+      "zh": "考虑",
+      "status": "approve",
+      "at": "2026-10-11T02:51:38.207Z"
+    },
+    "695": {
+      "zh": "而且",
+      "status": "approve",
+      "at": "2026-10-11T02:51:40.358Z"
+    },
+    "696": {
+      "zh": "肯定",
+      "status": "approve",
+      "at": "2026-10-11T02:51:41.513Z"
+    },
+    "697": {
+      "zh": "自然",
+      "status": "edit",
+      "form": "wai-mian or you duo-zhi-wu de difang or if it means natural state of affairs - we express it as \"since always X\"  or something like that (need to think)",
+      "at": "2026-10-11T02:53:54.258Z"
+    },
+    "698": {
+      "zh": "自由",
+      "status": "approve",
+      "at": "2026-10-11T02:53:59.004Z"
+    },
+    "699": {
+      "zh": "节目",
+      "status": "edit",
+      "form": "zai kàn-de-jī kan de dōng-xi",
+      "at": "2026-10-11T02:54:23.128Z"
+    },
+    "700": {
+      "zh": "虽然",
+      "status": "approve",
+      "at": "2026-10-11T02:54:25.314Z"
+    }
+  }
+}

@@ -13,4 +13,18 @@ export default composite({
   literal: "good to play",
   fit: "natural",
   note: "For \"fun\".",
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:hen3}} {{word:hao3}} {{word:wan2r}}.",
+      hanzi: "这个很好玩儿。",
+      en: "This is fun.",
+      ru: "Это интересно.",
+    },
+    {
+      pinyin: "{{Word:xue2}} \"Zhōngguó\" {{word:hua4}} {{word:hen3}} {{word:hao3}} {{word:wan2r}}.",
+      hanzi: "学中国话很好玩儿。",
+      en: "Learning Chinese is fun.",
+      ru: "Учить китайский интересно.",
+    },
+  ],
 });

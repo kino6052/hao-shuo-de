@@ -9,10 +9,10 @@ export default composite({
   ru: "братья",
   pos: "noun",
   hsd: [
-    "{{word:yi1}}-{{word:yang4}}-{{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:nan2}}-{{word:ren2}}",
+    "{{word:wo3}} {{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:nan2}}-{{word:hai2}}-{{light:zi}}",
   ],
-  tts: ["一样爸爸妈妈的男人"],
-  literal: "men with the same parents",
+  tts: ["我爸爸妈妈的男孩子"],
+  literal: "my parents' boys",
   fit: "plain",
   proposed: true,
 });

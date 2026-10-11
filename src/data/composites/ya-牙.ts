@@ -8,10 +8,21 @@ export default composite({
   en: "tooth",
   ru: "зуб",
   pos: "noun",
-  hsd: [
-    "{{word:zai4}}-{{word:kou3}}-{{word:li3}}-{{word:de}} {{word:ying4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+  hsd: ["{{word:ya2}}"],
+  tts: ["牙"],
+  fit: "word",
+  examples: [
+    {
+      pinyin: "{{Word:ni3}}-{{word:de}} {{word:ya2}} {{word:hen3}} {{word:bai2}}.",
+      hanzi: "你的牙很白。",
+      en: "Your teeth are very white.",
+      ru: "У тебя очень белые зубы.",
+    },
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:ya2}} {{word:bu4}} {{word:hao3}}.",
+      hanzi: "我的牙不好。",
+      en: "My teeth aren't good.",
+      ru: "У меня плохие зубы.",
+    },
   ],
-  tts: ["在口里的硬的东西"],
-  literal: "the hard thing in the mouth",
-  fit: "plain",
 });

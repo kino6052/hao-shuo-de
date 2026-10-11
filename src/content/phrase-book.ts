@@ -386,8 +386,8 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:yao4}} {{word:shui4jiao4}}.",
-    ttsText: "我要睡觉。",
+    pinyin: "{{Word:wo3}} {{word:xiang3}} {{word:shui4jiao4}}.",
+    ttsText: "我想睡觉。",
     en: ["I'm tired. (Literally: \"I want to sleep.\")"],
     zh: ["我累了。"],
     ru: ["Я устал. (Дословно: «я хочу спать».)"],
@@ -778,8 +778,8 @@ const content: Entry[] = [
   },
   {
     type: "example",
-    pinyin: "{{Word:wo3}} {{word:yao4}} {{word:chi1}} {{word:fan4}}.",
-    ttsText: "我要吃饭。",
+    pinyin: "{{Word:wo3}} {{word:xiang3}} {{word:chi1}} {{word:fan4}}.",
+    ttsText: "我想吃饭。",
     en: ["I'm hungry. (Literally: \"I want to eat something.\")"],
     zh: ["我饿了。"],
     ru: ["Я хочу есть. (Дословно: «я хочу что-нибудь съесть».)"],

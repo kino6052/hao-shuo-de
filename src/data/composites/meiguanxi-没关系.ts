@@ -13,5 +13,18 @@ export default composite({
   literal: "no connection",
   fit: "natural",
   note: "Lesson {{lesson:inside-a-sentence}}.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:mei2}}-{{word:guan1xi}}, {{word:wo3}} {{word:bu4}} {{word:pa4}}.",
+      hanzi: "没关系，我不怕。",
+      en: "Never mind, I'm not afraid.",
+      ru: "Ничего, я не боюсь.",
+    },
+    {
+      pinyin: "{{Word:mei2}}-{{word:guan1xi}}, {{word:ming2}}-{{word:tian1}} {{word:lai2}}.",
+      hanzi: "没关系，明天来。",
+      en: "Never mind, come tomorrow.",
+      ru: "Ничего, приходи завтра.",
+    },
+  ],
 });

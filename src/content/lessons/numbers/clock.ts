@@ -14,6 +14,11 @@ export default lessonModule({
       en: "late; {{word:wan3}}-{{light:shang4}}: evening",
       ru: "поздний; {{word:wan3}}-{{light:shang4}} — вечер",
     },
+    {
+      word: "zao3",
+      en: "early; {{word:zao3}}-{{light:shang4}}: morning",
+      ru: "ранний; {{word:zao3}}-{{light:shang4}} — утро",
+    },
   ],
   prose: {
     en: [
@@ -22,7 +27,7 @@ export default lessonModule({
       "**number + {{word:dian3}}**",
       "",
       "Put the time before the verb: {{Word:wo3}} {{word:shi2}}-{{word:er4}}-{{word:dian3}} {{word:chi1}}. Ask with {{word:shen2me}} {{word:shi2}}-{{word:jian1}} (Lesson {{lesson:when-it-happens}}).",
-      "{{word:wan3}}-{{light:shang4}} is the evening; {{word:wan3}} alone is late.",
+      "{{word:wan3}}-{{light:shang4}} is the evening; {{word:wan3}} alone is late. {{word:zao3}}-{{light:shang4}} is the morning; {{word:zao3}} alone is early.",
     ],
     ru: [
       "**Чтобы сказать, который час**, поставьте {{word:dian3}} (час) после числа.",
@@ -30,7 +35,7 @@ export default lessonModule({
       "**число + {{word:dian3}}**",
       "",
       "Время ставится перед глаголом: {{Word:wo3}} {{word:shi2}}-{{word:er4}}-{{word:dian3}} {{word:chi1}}. Спрашивайте с {{word:shen2me}} {{word:shi2}}-{{word:jian1}} (урок {{lesson:when-it-happens}}).",
-      "{{word:wan3}}-{{light:shang4}} — вечер; само {{word:wan3}} — поздно.",
+      "{{word:wan3}}-{{light:shang4}} — вечер; само {{word:wan3}} — поздно. {{word:zao3}}-{{light:shang4}} — утро; само {{word:zao3}} — рано.",
     ],
     tldr: {
       en: "number + {{word:dian3}} is the time: {{word:san1}}-{{word:dian3}} is three o'clock.",
@@ -85,6 +90,12 @@ export default lessonModule({
       en: "It's late.",
       ru: "Уже поздно.",
     },
+    {
+      pinyin: "{{Word:wo3}} {{word:zao3}}-{{light:shang4}} {{word:liu4}}-{{word:dian3}} {{word:chi1}} {{word:fan4}}.",
+      hanzi: "我早上六点吃饭。",
+      en: "I eat at six in the morning.",
+      ru: "Я ем в шесть утра.",
+    },
   ],
   exercises: [
     {
@@ -98,6 +109,12 @@ export default lessonModule({
       ru: "Он ложится спать в десять вечера.",
       answer: "{{Word:ta1}} {{word:wan3}}-{{light:shang4}} {{word:shi2}}-{{word:dian3}} {{word:shui4jiao4}}.",
       hanzi: "他晚上十点睡觉。",
+    },
+    {
+      en: "I eat at seven in the morning.",
+      ru: "Я ем в семь утра.",
+      answer: "{{Word:wo3}} {{word:zao3}}-{{light:shang4}} {{word:qi1}}-{{word:dian3}} {{word:chi1}} {{word:fan4}}.",
+      hanzi: "我早上七点吃饭。",
     },
   ],
 });

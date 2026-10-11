@@ -12,5 +12,18 @@ export default composite({
   tts: ["晚", "比…后"],
   literal: "after …",
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:lai2}} {{word:wan3}} {{word:le}}.",
+      hanzi: "我来晚了。",
+      en: "I'm late.",
+      ru: "Я опоздал.",
+    },
+    {
+      pinyin: "{{Word:xian4}}-{{word:zai4}} {{word:hen3}} {{word:wan3}} {{word:le}}.",
+      hanzi: "现在很晚了。",
+      en: "It's late now.",
+      ru: "Сейчас уже поздно.",
+    },
+  ],
 });

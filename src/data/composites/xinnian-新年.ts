@@ -8,12 +8,22 @@ export default composite({
   en: "New Year",
   ru: "Новый год",
   pos: "noun",
-  hsd: [
-    "{{word:xin1}}-{{word:nian2}}",
-    "{{word:shi2}}-{{word:er4}}-ge {{word:yue4}}-{{word:de}} {{word:kai1shi3}}",
-  ],
-  tts: ["新年", "十二个月的开始"],
-  literal: "the start of the twelve months",
+  hsd: ["{{word:xin1}}-{{word:nian2}}"],
+  tts: ["新年"],
   fit: "natural",
-  proposed: true,
+  transparent: true,
+  examples: [
+    {
+      pinyin: "{{Word:xin1}}-{{word:nian2}} {{word:hao3}}!",
+      hanzi: "新年好！",
+      en: "Happy New Year!",
+      ru: "С Новым годом!",
+    },
+    {
+      pinyin: "{{Word:xin1}}-{{word:nian2}} {{word:wo3}}-{{word:men}} {{word:hui2}} {{word:jia1}}.",
+      hanzi: "新年我们回家。",
+      en: "We go home for the New Year.",
+      ru: "На Новый год мы едем домой.",
+    },
+  ],
 });

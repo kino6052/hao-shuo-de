@@ -13,4 +13,18 @@ export default composite({
   literal: "birth air / there's fire in the heart",
   fit: "natural",
   note: "Real Mandarin: 生气.",
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:hen3}} {{word:sheng1}}-{{word:qi4}}.",
+      hanzi: "他很生气。",
+      en: "He's very angry.",
+      ru: "Он очень сердится.",
+    },
+    {
+      pinyin: "{{Word:bie2}} {{word:sheng1}}-{{word:qi4}}!",
+      hanzi: "别生气！",
+      en: "Don't be angry!",
+      ru: "Не сердись!",
+    },
+  ],
 });

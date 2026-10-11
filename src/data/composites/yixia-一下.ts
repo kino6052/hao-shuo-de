@@ -12,5 +12,18 @@ export default composite({
   tts: ["一下"],
   literal: "one-down",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ni3}} {{word:kan4}} {{word:yi1}}-{{word:xia4}}.",
+      hanzi: "你看一下。",
+      en: "Take a look.",
+      ru: "Взгляни.",
+    },
+    {
+      pinyin: "{{Word:rang4}} {{word:wo3}} {{word:xiang3}} {{word:yi1}}-{{word:xia4}}.",
+      hanzi: "让我想一下。",
+      en: "Let me think a moment.",
+      ru: "Дай подумать.",
+    },
+  ],
 });

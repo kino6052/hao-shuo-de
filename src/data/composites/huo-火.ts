@@ -11,4 +11,18 @@ export default composite({
   hsd: ["{{word:huo3}}"],
   tts: ["火"],
   fit: "word",
+  examples: [
+    {
+      pinyin: "{{Word:bie2}} {{word:mo1}} {{word:huo3}}!",
+      hanzi: "别摸火！",
+      en: "Don't touch the fire!",
+      ru: "Не трогай огонь!",
+    },
+    {
+      pinyin: "{{Word:huo3}} {{word:hen3}} {{word:re4}}.",
+      hanzi: "火很热。",
+      en: "Fire is hot.",
+      ru: "Огонь горячий.",
+    },
+  ],
 });

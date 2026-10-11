@@ -37,7 +37,7 @@ dé | verb | to get, obtain, acquire, come to have; combines with a de-nominaliz
 de | particle | possessive marker, structural adjectival particle; used to bind modifiers and multi-word description structures onto target nouns | pi
 dēng | noun | lamp, light (e.g. {{word:kai1}} {{word:deng1}}, "turn on the light") |
 děng | verb | to wait |
-dì | noun | floor, horizontal surface, platform | supa
+dì | noun | floor, horizontal surface, platform; before a number, the order: {{word:di4}}-{{word:yi1}}, first; {{word:di4}}-{{word:er4}}, second | supa
 diǎn | noun/measure word | o'clock, after a number ({{word:san1}}-{{word:dian3}}, "three o'clock"); a little: {{word:yi1}}-{{word:dian3}} ("a bit"), as in {{word:da4}} {{word:yi1}}-{{word:dian3}}, "a bit bigger" |
 dìng | adjective/verb | fixed, settled; to settle: {{word:yi1}}-{{word:ding4}}, surely; {{word:jue2}}-{{word:ding4}}, to decide |
 dòng | verb | to move; to stir, to budge |
@@ -45,6 +45,7 @@ dōng | noun | east; with {{word:xi1}} said lightly, {{word:dong1}}-{{light:xi1}
 dōu | adverb | all, both, every one of them; goes before the verb, after the people or things it covers (e.g. {{word:wo3}}-{{word:men}} {{word:dou1}} {{word:chi1}}, "we all eat"). {{word:shen2me}}-{{word:dou1}} means everything |
 duì | preposition/coverb | facing, towards, regarding, beneficial to; correct | tawa
 duō | adjective | many, a lot, much, several, very, abundant; used contextually to signify quantities greater than two | mute
+dùzi | noun | belly, stomach: {{word:wo3}}-{{word:de}} {{word:du4zi}} {{word:hen3}} {{word:da4}}, I have a big belly |
 èr | number | two, when counting aloud or naming a number (yī, èr, sān; èr-hào, "number two"; shí-èr, 12); before gè, two is liǎng |
 ěrduo | noun | ear: {{word:er3duo}} {{word:bu4}} {{word:hao3}}, {{word:ting1}}-{{word:bu4}}-{{word:dao4}}, the ears are bad, (I) can't hear |
 fǎ | noun | method, way; law: {{word:fang1}}-{{word:fa3}}, a method; {{word:kan4}}-{{word:fa3}}, a view; {{word:shuo1}}-{{word:fa3}}, a way of saying it |
@@ -82,7 +83,6 @@ huí | verb | to return, go back, come back; after a verb, says it goes back (e.
 huì | auxiliary | will, going to (marks a predicted or future action); placed before a verb the same way {{word:neng2}} is; after {{word:xue2}}, {{word:xue2}}-{{word:hui4}} is "learn until you can" |
 huǒ | noun | fire, cooking element, chemical heat source | seli
 huó | verb/adjective | to live, be alive; alive, living; life. The opposite of {{word:si3}} |
-huò | conjunction | or: {{word:huo4}}-{{word:zhe3}}, or |
 jī | noun | machine (e.g. {{word:shou3}}-{{word:ji1}}, "phone"; {{word:fei1}}-{{word:ji1}}, "plane"; {{word:ji1}}-{{word:hui4}}, "chance") |
 jiā | noun | home, house, family, household | tomo
 jiàn | verb | to see, meet: after a verb, says you caught it ({{word:kan4}}-{{word:jian4}}, see; {{word:ting1}}-{{word:jian4}}, hear); {{word:jian4}}-{{word:mian4}}, meet |
@@ -195,6 +195,7 @@ xiè | verb | to thank; doubled, {{word:xie4}}-xie is "thank you", and {{word:bu
 xiě | verb | to write, draw, represent with marks | sitelen
 xīn | noun | heart, mind; {{word:kai1}}-{{word:xin1}}, "happy"; {{word:xiao3}}-{{word:xin1}}, "careful"; {{word:fang4}}-{{word:xin1}}, "don't worry" |
 xué | verb | to learn, study; before a verb: learn to do it (e.g. {{word:wo3}} {{word:xue2}} {{word:xie3}}, "I'm learning to write") |
+yá | noun | tooth, teeth: {{word:wo3}}-{{word:de}} {{word:ya2}} {{word:hen3}} {{word:bai2}}, my teeth are white |
 yàng | noun | look, way, kind: {{word:yi1}}-{{word:yang4}}, the same ("one look"); {{word:zhe4}}-{{word:yang4}}, like this; {{word:zen3me}}-{{word:yang4}}, how |
 yǎnjing | noun | eye |
 yánsè | noun | color, pigment, tint frame | kule
@@ -212,11 +213,12 @@ yuán | adjective/noun | round, circular, spherical; ball, circle, wheel, cycle 
 yuǎn | adjective | far, distant |
 yuè | noun | moon, night sky object, star | mun
 zài | verb/coverb | to exist at, be located at, present in a room | lon
+zǎo | adjective | early; morning: {{word:zao3}}-{{light:shang4}}, morning; {{word:zao3}}-{{word:fan4}}, breakfast; {{word:hen3}} {{word:zao3}}, it's early |
 zěnme | pronoun | how |
 zhàn | verb | to stand; {{word:zhan4}}-{{word:qi3}}-{{word:lai2}}, "stand up" |
 zhǎo | verb | to hunt, forage, search for, look for | alasa
 zhè | pronoun/adjective | this, these; syntactically binds as zhe-ge | ni
-zhě | noun/suffix | the one who: after a verb, the person who does it; {{word:huo4}}-{{word:zhe3}}, or |
+zhě | noun/suffix | the one who: after a verb, the person who does it; {{word:xue2}}-{{word:zhe3}}, a scholar; {{word:zuo4}}-{{word:zhe3}}, the author |
 zhēn | adjective | true, real, genuine, actual | lon
 zhǐ | adverb | only, just: before the verb ({{word:wo3}} {{word:zhi3}} {{word:yao4}} {{word:shui3}}, I only want water); {{word:zhi3}}-{{word:you3}}, only |
 zhīdào | verb/auxiliary | to know, be wise about, possess information; know how to | sona

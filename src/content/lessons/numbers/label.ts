@@ -10,17 +10,27 @@ export default lessonModule({
       en: "number (as in number two)",
       ru: "номер (как в «номер два»)",
     },
+    {
+      word: "di4",
+      sense: "order",
+      en: "first, second …: {{word:di4}}-{{word:yi1}}, {{word:di4}}-{{word:er4}}",
+      ru: "первый, второй …: {{word:di4}}-{{word:yi1}}, {{word:di4}}-{{word:er4}}",
+    },
   ],
   prose: {
     en: [
       "**To say number one, number two**, put {{word:hao4}} after the number.",
       "",
       "**number + {{word:hao4}}**",
+      "",
+      "To say first, second, put {{word:di4}} before the number: {{word:di4}}-{{word:yi1}} is first, {{word:di4}}-{{word:er4}} is second.",
     ],
     ru: [
       "**Чтобы сказать «номер один», «номер два»**, поставьте {{word:hao4}} после числа.",
       "",
       "**число + {{word:hao4}}**",
+      "",
+      "Чтобы сказать «первый», «второй», поставьте {{word:di4}} перед числом: {{word:di4}}-{{word:yi1}} — первый, {{word:di4}}-{{word:er4}} — второй.",
     ],
     tldr: {
       en: "number + {{word:hao4}}: {{word:er4}}-{{word:hao4}} is number two.",
@@ -32,8 +42,8 @@ export default lessonModule({
     },
   },
   info: {
-    en: "number + {{word:hao4}}, number …: {{Word:er4}}-{{word:hao4}} (number two)",
-    ru: "число + {{word:hao4}} — номер: {{Word:er4}}-{{word:hao4}} (номер два)",
+    en: "number + {{word:hao4}}, number …: {{Word:er4}}-{{word:hao4}} (number two). {{word:di4}} + number, the order: {{word:di4}}-{{word:yi1}} (first)",
+    ru: "число + {{word:hao4}} — номер: {{Word:er4}}-{{word:hao4}} (номер два). {{word:di4}} + число — порядок: {{word:di4}}-{{word:yi1}} (первый)",
   },
   examples: [
     {
@@ -72,6 +82,18 @@ export default lessonModule({
       en: "Road number six leads to my home.",
       ru: "Дорога номер шесть ведёт к моему дому.",
     },
+    {
+      pinyin: "{{Word:ta1}} {{word:shi4}} {{word:di4}}-{{word:yi1}}.",
+      hanzi: "他是第一。",
+      en: "He's first.",
+      ru: "Он первый.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:shi4}} {{word:di4}}-{{word:san1}}-ge.",
+      hanzi: "我是第三个。",
+      en: "I'm the third one.",
+      ru: "Я третий.",
+    },
   ],
   exercises: [
     {
@@ -79,6 +101,12 @@ export default lessonModule({
       ru: "Где номер четыре?",
       answer: "{{Word:si4}}-{{word:hao4}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",
       hanzi: "四号在哪里？",
+    },
+    {
+      en: "He's second.",
+      ru: "Он второй.",
+      answer: "{{Word:ta1}} {{word:shi4}} {{word:di4}}-{{word:er4}}.",
+      hanzi: "他是第二。",
     },
   ],
   faq: [

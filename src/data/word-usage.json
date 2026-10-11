@@ -469,6 +469,12 @@
     "er3duo": [
       "direction-and-result"
     ],
+    "ya2": [
+      "roles-of-a-word"
+    ],
+    "du4zi": [
+      "roles-of-a-word"
+    ],
     "ren2": [
       "phrase-book",
       "appendix-stories",
@@ -925,6 +931,7 @@
       "becoming-and-making",
       "direction-and-result",
       "doubling-words",
+      "inside-a-sentence",
       "roles-of-a-word"
     ],
     "shao3": [
@@ -1014,8 +1021,7 @@
       "appendix-grammar",
       "colors",
       "inside-a-sentence",
-      "linking-sentences",
-      "roles-of-a-word"
+      "linking-sentences"
     ],
     "huang2": [
       "appendix-stories",
@@ -1065,8 +1071,7 @@
       "doubling-words",
       "how-much",
       "linking-sentences",
-      "numbers",
-      "roles-of-a-word"
+      "numbers"
     ],
     "leng3": [
       "phrase-book",
@@ -1265,6 +1270,7 @@
       "linking-sentences",
       "moving",
       "pre-verbs",
+      "roles-of-a-word",
       "when-it-happens"
     ],
     "suan4": [
@@ -1273,6 +1279,7 @@
       "numbers"
     ],
     "xiang3": [
+      "phrase-book",
       "pre-verbs"
     ],
     "kan4": [
@@ -1739,6 +1746,8 @@
       "also-and-all",
       "colors",
       "doubling-words",
+      "greetings-and-feelings",
+      "inside-a-sentence",
       "linking-sentences",
       "modifying-nouns",
       "numbers",
@@ -1835,6 +1844,9 @@
       "numbers"
     ],
     "wan3": [
+      "numbers"
+    ],
+    "zao3": [
       "numbers"
     ],
     "cong2": [
@@ -2192,10 +2204,7 @@
       "when-it-happens"
     ],
     "zhe3": [
-      "appendix-grammar",
-      "greetings-and-feelings",
-      "inside-a-sentence",
-      "linking-sentences"
+      "roles-of-a-word"
     ],
     "zi": [
       "roles-of-a-word"
@@ -2253,12 +2262,6 @@
       "appendix-grammar",
       "inside-a-sentence"
     ],
-    "huo4": [
-      "appendix-grammar",
-      "greetings-and-feelings",
-      "inside-a-sentence",
-      "linking-sentences"
-    ],
     "ye3": [
       "appendix-stories",
       "appendix-grammar",
@@ -2299,7 +2302,11 @@
       "linking-sentences"
     ],
     "hai2": [
+      "appendix-grammar",
       "also-and-all",
+      "greetings-and-feelings",
+      "inside-a-sentence",
+      "linking-sentences",
       "roles-of-a-word"
     ],
     "zen3me": [

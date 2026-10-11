@@ -8,10 +8,21 @@ export default composite({
   en: "belly",
   ru: "живот",
   pos: "noun",
-  hsd: [
-    "{{word:chi1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:qu4}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
+  hsd: ["{{word:du4zi}}"],
+  tts: ["肚子"],
+  fit: "word",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:du4zi}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "我的肚子很大。",
+      en: "My belly is big.",
+      ru: "У меня большой живот.",
+    },
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:du4zi}} {{word:bu4}} {{word:hao3}}.",
+      hanzi: "我的肚子不好。",
+      en: "My belly isn't well.",
+      ru: "У меня болит живот.",
+    },
   ],
-  tts: ["吃的东西去的地方"],
-  literal: "where food goes",
-  fit: "plain",
 });

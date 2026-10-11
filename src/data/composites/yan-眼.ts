@@ -12,5 +12,18 @@ export default composite({
   tts: ["眼睛"],
   fit: "word",
   note: "Same as 眼睛.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:yan3jing}} {{word:hen3}} {{word:xiao3}}.",
+      hanzi: "我的眼睛很小。",
+      en: "My eyes are small.",
+      ru: "У меня маленькие глаза.",
+    },
+    {
+      pinyin: "{{Word:ta1}}-{{word:de}} {{word:yan3jing}} {{word:shi4}} {{word:lan2}}-{{word:se4}}-{{word:de}}.",
+      hanzi: "他的眼睛是蓝色的。",
+      en: "His eyes are blue.",
+      ru: "У него голубые глаза.",
+    },
+  ],
 });

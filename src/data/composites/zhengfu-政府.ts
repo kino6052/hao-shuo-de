@@ -8,11 +8,22 @@ export default composite({
   en: "government",
   ru: "правительство",
   pos: "noun",
-  hsd: [
-    "{{word:shuo1}}-{{word:guo2}}-{{word:yao4}}-{{word:zuo4}}-{{word:shen2me}}-{{word:de}} {{word:ren2}}",
-  ],
-  tts: ["说国要做什么的人"],
-  literal: "the people who say what the country will do",
+  hsd: ["{{word:guo2}}-{{word:jia1}}-{{word:de}} {{word:jue2}}-{{word:ding4}}-{{word:zhe3}}"],
+  tts: ["国家的决定者"],
+  literal: "the country's decider",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:guo2}}-{{word:jia1}}-{{word:de}} {{word:jue2}}-{{word:ding4}}-{{word:zhe3}} {{word:shuo1}} {{word:le}}.",
+      hanzi: "国家的决定者说了。",
+      en: "The government has spoken.",
+      ru: "Правительство высказалось.",
+    },
+    {
+      pinyin: "{{Word:wo3}}-{{word:men}} {{word:bang1}} {{word:guo2}}-{{word:jia1}}-{{word:de}} {{word:jue2}}-{{word:ding4}}-{{word:zhe3}}.",
+      hanzi: "我们帮国家的决定者。",
+      en: "We help the government.",
+      ru: "Мы помогаем правительству.",
+    },
+  ],
 });

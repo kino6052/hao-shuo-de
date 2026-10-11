@@ -154,8 +154,8 @@ export default coverageGroup({
       key: "or",
       eng: "Or",
       rus: "Или",
-      words: ["huo4", "zhe3"],
-      forms: ["A {{word:huo4}}-{{word:zhe3}} B"],
+      words: ["hai2", "shi4"],
+      forms: ["A {{word:hai2}}-{{word:shi4}} B"],
       taught: "inside-a-sentence/and-or",
     },
     {
