@@ -19,57 +19,67 @@ import m15 from "./de-modifier.ts";
 import m16 from "./dian-clock.ts";
 import m17 from "./doing-as-subject.ts";
 import m18 from "./dou-all.ts";
-import m19 from "./fujin-near.ts";
-import m20 from "./guo-before.ts";
-import m21 from "./hai-still.ts";
-import m22 from "./hao-label.ts";
-import m23 from "./hen-adjective.ts";
-import m24 from "./hen-duo-noun.ts";
-import m25 from "./hui-will.ts";
-import m26 from "./kaishi-start.ts";
-import m27 from "./know-how.ts";
-import m28 from "./le-changed.ts";
-import m29 from "./le-done.ts";
-import m30 from "./le-new-situation.ts";
-import m31 from "./learn-verb.ts";
-import m32 from "./love-verb.ts";
-import m33 from "./ma-question.ts";
-import m34 from "./maybe-verb.ts";
-import m35 from "./measure-word.ts";
-import m36 from "./middle-of.ts";
-import m37 from "./perceive-doing.ts";
-import m38 from "./place-li-shang.ts";
-import m39 from "./qi-lai-start.ts";
-import m40 from "./result-can-cant.ts";
-import m41 from "./serial-verbs.ts";
-import m42 from "./shenme-dou.ts";
-import m43 from "./shi-copula.ts";
-import m44 from "./short-answer.ts";
-import m45 from "./stacked-modifiers.ts";
-import m46 from "./subject-predicate.ts";
-import m47 from "./svo.ts";
-import m48 from "./tian-nian-spans.ts";
-import m49 from "./time-first.ts";
-import m50 from "./times-share.ts";
-import m51 from "./verb-bu-verb.ts";
-import m52 from "./verb-result.ts";
-import m53 from "./wan-finished.ts";
-import m54 from "./wan-hou-after.ts";
-import m55 from "./want-verb.ts";
-import m56 from "./what-question.ts";
-import m57 from "./when-clause.ts";
-import m58 from "./why-how-question.ts";
-import m59 from "./ye-also.ts";
-import m60 from "./yi-dian-little.ts";
-import m61 from "./yi-xia-moment.ts";
-import m62 from "./yi-yang-same.ts";
-import m63 from "./you-again.ts";
-import m64 from "./zai-now.ts";
-import m65 from "./zai-place.ts";
-import m66 from "./zhen-really.ts";
-import m67 from "./zhi-only.ts";
-import m68 from "./zui-most.ts";
-import m69 from "./zuo-make.ts";
+import m19 from "./dui-toward.ts";
+import m20 from "./fujin-near.ts";
+import m21 from "./gei-give.ts";
+import m22 from "./guo-before.ts";
+import m23 from "./hai-shi-or.ts";
+import m24 from "./hai-still.ts";
+import m25 from "./hao-label.ts";
+import m26 from "./he-and.ts";
+import m27 from "./hen-adjective.ts";
+import m28 from "./hen-duo-noun.ts";
+import m29 from "./hui-will.ts";
+import m30 from "./kaishi-start.ts";
+import m31 from "./know-how.ts";
+import m32 from "./le-changed.ts";
+import m33 from "./le-done.ts";
+import m34 from "./le-new-situation.ts";
+import m35 from "./learn-verb.ts";
+import m36 from "./love-verb.ts";
+import m37 from "./ma-question.ts";
+import m38 from "./maybe-verb.ts";
+import m39 from "./measure-word.ts";
+import m40 from "./middle-of.ts";
+import m41 from "./owner-part.ts";
+import m42 from "./perceive-doing.ts";
+import m43 from "./place-li-shang.ts";
+import m44 from "./qi-lai-start.ts";
+import m45 from "./result-can-cant.ts";
+import m46 from "./serial-verbs.ts";
+import m47 from "./shenme-dou.ts";
+import m48 from "./shi-copula.ts";
+import m49 from "./short-answer.ts";
+import m50 from "./stacked-modifiers.ts";
+import m51 from "./subject-predicate.ts";
+import m52 from "./svo.ts";
+import m53 from "./ti-instead.ts";
+import m54 from "./tian-nian-spans.ts";
+import m55 from "./time-first.ts";
+import m56 from "./times-share.ts";
+import m57 from "./verb-bu-verb.ts";
+import m58 from "./verb-de-how.ts";
+import m59 from "./verb-de-person.ts";
+import m60 from "./verb-de-thing.ts";
+import m61 from "./verb-result.ts";
+import m62 from "./wan-finished.ts";
+import m63 from "./wan-hou-after.ts";
+import m64 from "./want-verb.ts";
+import m65 from "./what-question.ts";
+import m66 from "./when-clause.ts";
+import m67 from "./why-how-question.ts";
+import m68 from "./ye-also.ts";
+import m69 from "./yi-dian-little.ts";
+import m70 from "./yi-xia-moment.ts";
+import m71 from "./yi-yang-same.ts";
+import m72 from "./yong-with.ts";
+import m73 from "./you-again.ts";
+import m74 from "./zai-now.ts";
+import m75 from "./zai-place.ts";
+import m76 from "./zhen-really.ts";
+import m77 from "./zhi-only.ts";
+import m78 from "./zui-most.ts";
+import m79 from "./zuo-make.ts";
 
 export const PATTERNS = [
   m0,
@@ -142,4 +152,14 @@ export const PATTERNS = [
   m67,
   m68,
   m69,
+  m70,
+  m71,
+  m72,
+  m73,
+  m74,
+  m75,
+  m76,
+  m77,
+  m78,
+  m79,
 ];
