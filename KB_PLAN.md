@@ -23,6 +23,7 @@ Status: planned 2026-10-12, nothing built yet. The research and the options are 
 | K15 | **English → Hao-shuo-de sentences**: rule-based on the site (runs in the browser); AI drafts that the grammar checks and explains, for the author and Claude. Used as the author's tool, for coverage measurement, as a learner page, and as Claude's tool. |
 | K16 | **Interfaces: ask Claude** (MCP tools) **and an explorer page** (`/__kb` on the dev server). A thin CLI exists only for tests and the tools. |
 | K17 | **Order: a foundation for both words and grammar first** (engine, facts, explorer, Claude tools, and a thin slice of each), then grow both side by side. |
+| K18 | **Relations are captured wherever they show up, not only in one review** (the author, 2026-10-12: "make sure we capture such relationships and more"). One typed store: a kind, two ends (words or composites), a status (accepted, proposed, rejected), where it came from, and a why. Anything that implies a relation proposes it: a paraphrase, a composite description, a category, the same-form groups, WordNet later, and Claude's proposals in any review. Proposals wait as candidates; the author accepts or rejects them; a rejected one is remembered. Reports use accepted relations and show proposed ones apart. The kinds are listed in phase 5. |
 
 ## 1. Ground rules
 
@@ -205,6 +206,17 @@ A lesson's grammar box becomes `{ type: "grammar", pattern: "compare-bi" }`. The
 - **Author:** classes review, flagged sentences, and a check of each migrated lesson's boxes.
 
 ### Phase 5: Relations
+- [ ] **The kinds (K18).** Today the data has only "opposite" (19 word pairs and 17 phrases) and "close in meaning" (5 pairs and 4 phrases), for words, with no kind and nothing for composites. The store takes these kinds:
+  - **same:** true synonyms (one form, K9 and the same-form groups); close in meaning, with how they differ (degree, tone, formal or casual);
+  - **opposite**, with its kind: either-or (alive, dead), more-or-less (hot, cold), the other side of one act (buy, sell; give, take), undoing (open, close), and said by "not" (shǎo = bù duō);
+  - **one of a set:** a group that excludes each other (the four directions, the days, the numbers), and a **scale** with an order (small, big; the sizes; first, second, third);
+  - **kind-of** and **part-of** (made-of and member-of with it);
+  - **from the description:** who does it (X-de rén), where (X-de dì-fang), with what (yòng X), what makes it (ràng X), what it is made of;
+  - **built from:** a composite and its head, its parts, its sense (this already exists as `head_word` and `head_comp`);
+  - **defined by:** the paraphrase edges (phase 2);
+  - **goes with:** words that keep company in the book and in composites (from the usage data);
+  - **same meaning in English:** the WordNet link (phase 6).
+- [ ] **Candidates report, no review needed to start.** `kb_relations` lists every relation the data already implies, each with its kind, its source and its why, marked proposed: the existing pairs and phrases, the 59 composite opposite hits, the same-form groups, the "bù X" paraphrases (opposites by "not"), the "X-de rén / dì-fang" descriptions, the categories (kind-of), and the head and parts of composites. Nothing is lost between now and the relations review, and the removal and addition reports (phase 3) can name the pairs that break.
 - [ ] Opposite kinds on word pairs. Composite opposites go in the new map, from candidates: the 59 rule hits plus the `antonyms` proposed in review batches 13–16, which were never stored. Review mode `?relations`. Rejected pairs are remembered so they aren't proposed again.
 - [ ] The 242 same-form composite groups are sorted into true synonyms and different meanings. Different meanings get distinct forms through a normal composite batch.
 - [ ] The `part-of` map (body, house, plant, machine…) and kind-of trees from the heads.
