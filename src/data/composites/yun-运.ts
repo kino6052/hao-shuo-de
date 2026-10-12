@@ -12,5 +12,18 @@ export default composite({
   tts: ["用车拿去"],
   literal: "take it away by car",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:yong4}} {{word:che1}} {{word:na2}}-{{word:qu4}} {{word:shu1}}.",
+      hanzi: "我用车拿去书。",
+      en: "I carry the books by car.",
+      ru: "Я везу книги на машине.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:yong4}} {{word:che1}} {{word:na2}}-{{word:qu4}} {{word:fan4}}.",
+      hanzi: "他用车拿去饭。",
+      en: "He takes the food by car.",
+      ru: "Он везёт еду на машине.",
+    },
+  ],
 });

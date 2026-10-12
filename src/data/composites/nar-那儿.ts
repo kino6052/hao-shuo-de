@@ -8,8 +8,8 @@ export default composite({
   en: "there",
   ru: "там",
   pos: "pronoun",
-  hsd: ["{{word:na4}}-{{word:bian1}}"],
-  tts: ["那边"],
+  hsd: ["{{word:na4}}-{{word:li3}}", "{{word:na4}}-{{word:bian1}}"],
+  tts: ["那里", "那边"],
   literal: "that side",
   fit: "natural",
   examples: [

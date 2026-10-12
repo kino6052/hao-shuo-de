@@ -9,10 +9,11 @@ export default composite({
   ru: "будущее",
   pos: "adjective",
   hsd: [
+    "{{word:hui4}} {{word:lai2}}-{{word:de}} {{word:shi2}}-{{word:jian1}}",
     "{{word:wei4}}-{{word:lai2}}",
     "{{word:hou4}}-{{word:mian4}}-{{word:de}} {{word:shi2}}-{{word:jian1}}",
   ],
-  tts: ["未来", "后面的时间"],
+  tts: ["会来的时间", "未来", "后面的时间"],
   literal: "the time behind",
   fit: "natural",
   examples: [

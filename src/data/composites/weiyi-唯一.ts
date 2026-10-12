@@ -12,5 +12,18 @@ export default composite({
   tts: ["就一个"],
   literal: "just one",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:jiu4}} {{word:yi1}}-{{light:ge4}}.",
+      hanzi: "我就一个。",
+      en: "I have only one.",
+      ru: "У меня только один.",
+    },
+    {
+      pinyin: "{{Word:jia1}} {{word:jiu4}} {{word:yi1}}-{{light:ge4}}.",
+      hanzi: "家就一个。",
+      en: "There is only one home.",
+      ru: "Дом только один.",
+    },
+  ],
 });

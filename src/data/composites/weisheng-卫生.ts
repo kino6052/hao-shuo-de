@@ -15,5 +15,18 @@ export default composite({
   tts: ["卫生", "上面没有乱的东西"],
   literal: "nothing dirty on it",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:fang2}}-{{word:jian1}} {{word:hen3}} {{word:wei4}}-{{word:sheng1}}.",
+      hanzi: "这个房间很卫生。",
+      en: "This room is very clean.",
+      ru: "В этой комнате очень чисто.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:ai4}} {{word:wei4}}-{{word:sheng1}}.",
+      hanzi: "我爱卫生。",
+      en: "I love cleanliness.",
+      ru: "Я люблю чистоту.",
+    },
+  ],
 });

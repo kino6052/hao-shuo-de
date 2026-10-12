@@ -83,6 +83,7 @@ huì | auxiliary | will, going to (marks a predicted or future action); placed b
 huǒ | noun | fire, cooking element, chemical heat source | seli
 huó | verb/adjective | to live, be alive; alive, living; life. The opposite of {{word:si3}} |
 jī | noun | machine (e.g. {{word:shou3}}-{{word:ji1}}, "phone"; {{word:fei1}}-{{word:ji1}}, "plane"; {{word:ji1}}-{{word:hui4}}, "chance") |
+jì | verb | to remember, keep in mind: {{word:ji4}}-{{light:de2}}, to remember; {{word:bu4}} {{word:ji4}}-{{light:de2}}, to have forgotten |
 jiā | noun | home, house, family, household | tomo
 jiàn | verb | to see, meet: after a verb, says you caught it ({{word:kan4}}-{{word:jian4}}, see; {{word:ting1}}-{{word:jian4}}, hear); {{word:jian4}}-{{word:mian4}}, meet |
 jiān | noun | between, the space between (e.g. {{word:zhong1}}-{{word:jian1}}, "the middle"; {{word:kong1}}-{{word:jian1}}, "space") |

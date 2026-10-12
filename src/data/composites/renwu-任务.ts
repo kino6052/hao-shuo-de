@@ -8,9 +8,22 @@ export default composite({
   en: "task",
   ru: "задание",
   pos: "noun",
-  hsd: ["{{word:yao4}} {{word:zuo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["要做的东西"],
-  literal: "the thing you must do",
+  hsd: ["{{word:yao4}} {{word:zuo4}}-{{word:de}}"],
+  tts: ["要做的"],
+  literal: "what is to be done",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:yao4}} {{word:zuo4}}-{{word:de}}.",
+      hanzi: "我有要做的。",
+      en: "I have a task.",
+      ru: "У меня есть задача.",
+    },
+    {
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:yao4}} {{word:zuo4}}-{{word:de}}.",
+      hanzi: "这是要做的。",
+      en: "This is the task.",
+      ru: "Это задача.",
+    },
+  ],
 });

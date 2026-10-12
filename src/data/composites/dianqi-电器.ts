@@ -8,9 +8,22 @@ export default composite({
   en: "electrical appliance",
   ru: "электроприбор",
   pos: "noun",
-  hsd: ["{{word:zai4}}-{{word:jia1}}-{{word:li3}}-{{word:de}} {{word:gong1}}-{{word:ju4}}"],
-  tts: ["在家里的工具"],
-  literal: "a tool at home",
+  hsd: ["\"diàn\"-{{light:zi}}-{{word:de}} {{word:gong1}}-{{word:ju4}}"],
+  tts: ["电子的工具"],
+  literal: "an electronic tool",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}} {{word:shi4}} \"diàn\"-{{word:zi}}-{{word:de}} {{word:gong1}}-{{word:ju4}}.",
+      hanzi: "这是电子的工具。",
+      en: "This is an electrical appliance.",
+      ru: "Это электроприбор.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:mai3}} \"diàn\"-{{word:zi}}-{{word:de}} {{word:gong1}}-{{word:ju4}}.",
+      hanzi: "我买电子的工具。",
+      en: "I buy an electrical appliance.",
+      ru: "Я покупаю электроприбор.",
+    },
+  ],
 });

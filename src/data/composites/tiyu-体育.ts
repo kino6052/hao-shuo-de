@@ -12,5 +12,18 @@ export default composite({
   tts: ["动身体"],
   literal: "move the body",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:ai4}} {{word:dong4}} {{word:shen1ti3}}.",
+      hanzi: "我爱动身体。",
+      en: "I love sports.",
+      ru: "Я люблю спорт.",
+    },
+    {
+      pinyin: "{{Word:jin1}}-{{word:tian1}} {{word:wo3}}-{{word:men}} {{word:dong4}} {{word:shen1ti3}}.",
+      hanzi: "今天我们动身体。",
+      en: "Today we have PE.",
+      ru: "Сегодня у нас физкультура.",
+    },
+  ],
 });

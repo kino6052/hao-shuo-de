@@ -12,5 +12,18 @@ export default composite({
   tts: ["说不要"],
   literal: "say \"don't want\"",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:shuo1}} {{word:bu4}} {{word:yao4}}.",
+      hanzi: "我说不要。",
+      en: "I refuse.",
+      ru: "Я отказываюсь.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:dui4}} {{word:wo3}} {{word:shuo1}} {{word:bu4}} {{word:yao4}}.",
+      hanzi: "他对我说不要。",
+      en: "He refuses me.",
+      ru: "Он мне отказывает.",
+    },
+  ],
 });

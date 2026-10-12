@@ -11,5 +11,18 @@ export default composite({
   hsd: ["{{word:jie2}}-{{word:guo3}}"],
   tts: ["结果"],
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:jie2}}-{{word:guo3}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "这个结果很好。",
+      en: "The effect is good.",
+      ru: "Эффект хороший.",
+    },
+    {
+      pinyin: "{{Word:zhe4}} {{word:hen3}} {{word:you3}} {{word:jie2}}-{{word:guo3}}.",
+      hanzi: "这很有结果。",
+      en: "This has a great effect.",
+      ru: "Это очень эффективно.",
+    },
+  ],
 });

@@ -12,5 +12,18 @@ export default composite({
   tts: ["用力放下去"],
   literal: "put down with force",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:yong4}} {{word:li4}} {{word:fang4}}-{{word:xia4}}-{{word:qu4}}.",
+      hanzi: "我用力放下去。",
+      en: "I press down.",
+      ru: "Я нажимаю.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:yong4}} {{word:li4}} {{word:fang4}}-{{word:xia4}}-{{word:qu4}}.",
+      hanzi: "你用力放下去。",
+      en: "You press down.",
+      ru: "Ты нажимаешь.",
+    },
+  ],
 });

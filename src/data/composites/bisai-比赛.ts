@@ -12,5 +12,18 @@ export default composite({
   tts: ["看谁最好"],
   literal: "see who is best",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:men}} {{word:kan4}} {{word:shei2}} {{word:zui4}} {{word:hao3}}.",
+      hanzi: "我们看谁最好。",
+      en: "We hold a competition.",
+      ru: "Мы устраиваем соревнование.",
+    },
+    {
+      pinyin: "{{Word:jin1}}-{{word:tian1}} {{word:kan4}} {{word:shei2}} {{word:zui4}} {{word:hao3}}.",
+      hanzi: "今天看谁最好。",
+      en: "Today there is a competition.",
+      ru: "Сегодня соревнование.",
+    },
+  ],
 });

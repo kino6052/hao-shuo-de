@@ -14,5 +14,18 @@ export default composite({
   tts: ["没有得到要的，不开心"],
   literal: "didn't get what you wanted, and unhappy",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:mei2}}-{{word:you3}} {{word:de2}}-{{word:dao4}} {{word:yao4}}-{{word:de}}, {{word:bu4}} {{word:kai1}}-{{word:xin1}}.",
+      hanzi: "我没有得到要的，不开心。",
+      en: "I'm disappointed.",
+      ru: "Я разочарован.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:mei2}}-{{word:you3}} {{word:de2}}-{{word:dao4}} {{word:yao4}}-{{word:de}}, {{word:bu4}} {{word:kai1}}-{{word:xin1}}.",
+      hanzi: "他没有得到要的，不开心。",
+      en: "He is disappointed.",
+      ru: "Он разочарован.",
+    },
+  ],
 });

@@ -12,5 +12,18 @@ export default composite({
   tts: ["不得不", "要"],
   literal: "can't not",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:bu4}}-{{word:de2}}-{{word:bu4}} {{word:qu4}}.",
+      hanzi: "我不得不去。",
+      en: "I have to go.",
+      ru: "Я должен идти.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:bu4}}-{{word:de2}}-{{word:bu4}} {{word:zuo4}}.",
+      hanzi: "他不得不做。",
+      en: "He has to do it.",
+      ru: "Он должен это сделать.",
+    },
+  ],
 });

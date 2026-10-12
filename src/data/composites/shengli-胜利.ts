@@ -12,5 +12,18 @@ export default composite({
   tts: ["比别的人好"],
   literal: "do better than the others",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:bi3}} {{word:bie2}}-{{word:de}} {{word:ren2}} {{word:hao3}}.",
+      hanzi: "我比别的人好。",
+      en: "I won.",
+      ru: "Я победил.",
+    },
+    {
+      pinyin: "{{Word:wo3}}-{{word:men}} {{word:bi3}} {{word:bie2}}-{{word:de}} {{word:ren2}} {{word:hao3}}.",
+      hanzi: "我们比别的人好。",
+      en: "We are victorious.",
+      ru: "Мы победили.",
+    },
+  ],
 });

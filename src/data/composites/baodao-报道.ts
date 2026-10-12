@@ -8,11 +8,22 @@ export default composite({
   en: "news report",
   ru: "репортаж",
   pos: "verb",
-  hsd: [
-    "{{word:shuo1}} {{word:xian4}}-{{word:zai4}} {{word:fa1}}-{{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
-  ],
-  tts: ["说现在发生的东西"],
-  literal: "tell what's happening now",
+  hsd: ["{{word:gei3}} {{word:xin1#new}}-\"wén\""],
+  tts: ["给新闻"],
+  literal: "give the news",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:ai4}} {{word:kan4}} {{word:ta1}} {{word:gei3}} {{word:xin1#new}}-\"wén\".",
+      hanzi: "我爱看他给新闻。",
+      en: "I like watching him report the news.",
+      ru: "Я люблю смотреть, как он ведёт репортаж.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:zai4}} {{word:gei3}} {{word:xin1#new}}-\"wén\".",
+      hanzi: "他在给新闻。",
+      en: "He is giving a news report.",
+      ru: "Он ведёт репортаж.",
+    },
+  ],
 });

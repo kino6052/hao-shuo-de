@@ -12,5 +12,18 @@ export default composite({
   tts: ["回家学的东西"],
   literal: "things to learn at home",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:hui2}} {{word:jia1}} {{word:xue2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
+      hanzi: "我有回家学的东西。",
+      en: "I have homework.",
+      ru: "У меня есть домашнее задание.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:you3}} {{word:hui2}} {{word:jia1}} {{word:xue2}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:ma}}?",
+      hanzi: "你有回家学的东西吗？",
+      en: "Do you have homework?",
+      ru: "У тебя есть домашнее задание?",
+    },
+  ],
 });

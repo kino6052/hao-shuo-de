@@ -12,5 +12,18 @@ export default composite({
   tts: ["X来做"],
   literal: "X does it",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:lai2}} {{word:zuo4}}.",
+      hanzi: "我来做。",
+      en: "I'll do it myself.",
+      ru: "Я сделаю это сам.",
+    },
+    {
+      pinyin: "{{Word:ni3}}-{{word:de}} {{word:ba4ba}} {{word:lai2}} {{word:zuo4}}.",
+      hanzi: "你的爸爸来做。",
+      en: "Your father will do it himself.",
+      ru: "Твой отец сделает это сам.",
+    },
+  ],
 });

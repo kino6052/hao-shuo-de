@@ -12,5 +12,18 @@ export default composite({
   tts: ["对X好"],
   literal: "good for X",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:dui4}} {{word:wo3}} {{word:hao3}}.",
+      hanzi: "这个对我好。",
+      en: "This suits me.",
+      ru: "Это мне подходит.",
+    },
+    {
+      pinyin: "{{Word:na4}}-{{light:ge4}} {{word:dui4}} {{word:ta1}} {{word:hao3}}.",
+      hanzi: "那个对他好。",
+      en: "That suits him.",
+      ru: "То ему подходит.",
+    },
+  ],
 });

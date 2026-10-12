@@ -8,8 +8,11 @@ export default composite({
   en: "express",
   ru: "выражать",
   pos: "verb",
-  hsd: ["{{word:shuo1}}"],
-  tts: ["说"],
+  hsd: [
+    "{{word:shuo1}}-{{word:chu1}} {{word:xin1}}-{{word:li3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+    "{{word:shuo1}}",
+  ],
+  tts: ["说出心里的东西", "说"],
   literal: "say",
   fit: "plain",
   examples: [

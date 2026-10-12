@@ -12,5 +12,18 @@ export default composite({
   tts: ["要的金变多"],
   literal: "it costs more money",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:yao4}}-{{word:de}} {{word:jin1}} {{word:bian4}} {{word:duo1}} {{word:le}}.",
+      hanzi: "要的金变多了。",
+      en: "The price has gone up.",
+      ru: "Цена выросла.",
+    },
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:yao4}}-{{word:de}} {{word:jin1}} {{word:bian4}} {{word:duo1}} {{word:le}}.",
+      hanzi: "这个要的金变多了。",
+      en: "The price of this has gone up.",
+      ru: "Цена на это выросла.",
+    },
+  ],
 });

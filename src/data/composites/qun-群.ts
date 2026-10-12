@@ -10,7 +10,20 @@ export default composite({
   pos: "classifier",
   hsd: ["{{word:hen3}}-{{word:duo1}} {{word:ren2}}"],
   tts: ["很多人"],
-  fit: "plain",
-  proposed: true,
   literal: "many people",
+  fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{word:li3}} {{word:you3}} {{word:hen3}}-{{word:duo1}} {{word:ren2}}.",
+      hanzi: "这里有很多人。",
+      en: "There is a crowd here.",
+      ru: "Здесь толпа.",
+    },
+    {
+      pinyin: "{{Word:hen3}}-{{word:duo1}} {{word:ren2}} {{word:zai4}} {{word:lu4}}-{{word:shang4}}.",
+      hanzi: "很多人在路上。",
+      en: "A crowd is on the road.",
+      ru: "На дороге толпа.",
+    },
+  ],
 });

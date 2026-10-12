@@ -8,10 +8,10 @@ export default composite({
   en: "smart",
   ru: "умный",
   pos: "adjective",
-  hsd: ["{{word:tou2}} {{word:hen3}} {{word:hao3}}"],
-  tts: ["头很好"],
+  hsd: ["{{word:gao1}}-{{word:ming2}}", "{{word:tou2}} {{word:hen3}} {{word:hao3}}"],
+  tts: ["高明", "头很好"],
   literal: "a good head",
-  fit: "plain",
+  fit: "natural",
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:tou2}} {{word:hen3}} {{word:hao3}}.",

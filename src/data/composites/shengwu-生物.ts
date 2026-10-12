@@ -12,5 +12,18 @@ export default composite({
   tts: ["生物", "活的东西"],
   literal: "a living thing",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:shui3}}-{{word:li3}} {{word:you3}} {{word:sheng1}}-{{word:wu4}}.",
+      hanzi: "水里有生物。",
+      en: "There are living things in the water.",
+      ru: "В воде есть живые существа.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:ai4}} {{word:sheng1}}-{{word:wu4}}.",
+      hanzi: "我爱生物。",
+      en: "I love living things.",
+      ru: "Я люблю живых существ.",
+    },
+  ],
 });

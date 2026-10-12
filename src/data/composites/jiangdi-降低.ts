@@ -12,5 +12,18 @@ export default composite({
   tts: ["变少"],
   literal: "become less",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:che1}} {{word:bian4}} {{word:shao3}} {{word:le}}.",
+      hanzi: "车变少了。",
+      en: "There are fewer cars now.",
+      ru: "Машин стало меньше.",
+    },
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:jin1}} {{word:bian4}} {{word:shao3}} {{word:le}}.",
+      hanzi: "我的金变少了。",
+      en: "My money has gone down.",
+      ru: "Моих денег стало меньше.",
+    },
+  ],
 });

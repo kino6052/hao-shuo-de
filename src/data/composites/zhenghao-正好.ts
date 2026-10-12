@@ -12,5 +12,18 @@ export default composite({
   tts: ["不多不少"],
   literal: "not too much, not too little",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:bu4}} {{word:duo1}} {{word:bu4}} {{word:shao3}}.",
+      hanzi: "这个不多不少。",
+      en: "This is just right.",
+      ru: "Это как раз то, что нужно.",
+    },
+    {
+      pinyin: "{{Word:shui3}} {{word:bu4}} {{word:duo1}} {{word:bu4}} {{word:shao3}}.",
+      hanzi: "水不多不少。",
+      en: "The water is just right.",
+      ru: "Воды в самый раз.",
+    },
+  ],
 });

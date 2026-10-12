@@ -11,5 +11,18 @@ export default composite({
   hsd: ["{{word:dong4}}"],
   tts: ["动"],
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:shui3}} {{word:zai4}} {{word:dong4}}.",
+      hanzi: "水在动。",
+      en: "The water is flowing.",
+      ru: "Вода течёт.",
+    },
+    {
+      pinyin: "{{Word:shui3}} {{word:dong4}} {{word:le}}.",
+      hanzi: "水动了。",
+      en: "The water has started to flow.",
+      ru: "Вода потекла.",
+    },
+  ],
 });

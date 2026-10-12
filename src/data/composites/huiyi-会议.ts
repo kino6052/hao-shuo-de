@@ -13,5 +13,18 @@ export default composite({
   literal: "hold a meeting",
   fit: "natural",
   note: "Real Mandarin: 开会.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:men}} {{word:ming2}}-{{word:tian1}} {{word:kai1}}-{{word:hui4}}.",
+      hanzi: "我们明天开会。",
+      en: "We have a meeting tomorrow.",
+      ru: "Завтра у нас собрание.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:kai1}}-{{word:hui4}} {{word:ma}}?",
+      hanzi: "你开会吗？",
+      en: "Are you in the meeting?",
+      ru: "Ты на собрании?",
+    },
+  ],
 });

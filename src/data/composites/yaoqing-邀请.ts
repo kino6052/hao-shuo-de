@@ -12,5 +12,18 @@ export default composite({
   tts: ["叫X来"],
   literal: "ask X to come",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:jiao4}} {{word:ni3}} {{word:lai2}}.",
+      hanzi: "我叫你来。",
+      en: "I invite you.",
+      ru: "Я приглашаю тебя.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:jiao4}} {{word:wo3}}-{{word:men}} {{word:lai2}}.",
+      hanzi: "他叫我们来。",
+      en: "He invites us.",
+      ru: "Он приглашает нас.",
+    },
+  ],
 });

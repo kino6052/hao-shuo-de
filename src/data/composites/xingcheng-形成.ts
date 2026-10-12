@@ -11,5 +11,18 @@ export default composite({
   hsd: ["{{word:bian4}}"],
   tts: ["变"],
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:bian4}} {{word:da4}} {{word:le}}.",
+      hanzi: "它变大了。",
+      en: "It has taken shape.",
+      ru: "Это приняло форму.",
+    },
+    {
+      pinyin: "{{Word:shui3}} {{word:bian4}} {{word:leng3}} {{word:le}}.",
+      hanzi: "水变冷了。",
+      en: "The water has formed ice.",
+      ru: "Вода остыла и образовалась.",
+    },
+  ],
 });

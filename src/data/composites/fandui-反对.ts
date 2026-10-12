@@ -8,9 +8,22 @@ export default composite({
   en: "oppose",
   ru: "возражать, быть против",
   pos: "verb",
-  hsd: ["{{word:shuo1}} {{word:bu4}}"],
-  tts: ["说不"],
-  literal: "say no",
+  hsd: ["{{word:shuo1}} {{word:bu4}}", "{{word:shuo1}} {{word:bu4}} {{word:dui4}}"],
+  tts: ["说不", "说不对"],
+  literal: "say no / say it's not right",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:shuo1}} {{word:bu4}}.",
+      hanzi: "我说不。",
+      en: "I object.",
+      ru: "Я возражаю.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:shuo1}} {{word:bu4}}, {{word:wo3}} {{word:ye3}} {{word:shuo1}} {{word:bu4}}.",
+      hanzi: "他说不，我也说不。",
+      en: "He objects and so do I.",
+      ru: "Он против, и я тоже.",
+    },
+  ],
 });

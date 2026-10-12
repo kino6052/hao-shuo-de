@@ -10,6 +10,7 @@ import thanks from "./thanks.ts";
 import name from "./name.ts";
 import order from "./order.ts";
 import feel from "./feel.ts";
+import remember from "./remember.ts";
 import laugh from "./laugh.ts";
 import heart from "./heart.ts";
 import hear from "./hear.ts";
@@ -37,6 +38,7 @@ export default lesson(meta.id, {
     name,
     order,
     feel,
+    remember,
     laugh,
     heart,
     hear,

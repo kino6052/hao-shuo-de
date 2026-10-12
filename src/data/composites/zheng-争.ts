@@ -12,5 +12,18 @@ export default composite({
   tts: ["两个人都要"],
   literal: "both want it",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:liang3}}-{{light:ge4}} {{word:ren2}} {{word:dou1}} {{word:yao4}} {{word:zhe4}}-{{light:ge4}}.",
+      hanzi: "两个人都要这个。",
+      en: "The two of them are fighting for this.",
+      ru: "Двое борются за это.",
+    },
+    {
+      pinyin: "{{Word:liang3}}-{{light:ge4}} {{word:ren2}} {{word:dou1}} {{word:yao4}} {{word:na4}}-{{light:ge4}} {{word:che1}}.",
+      hanzi: "两个人都要那个车。",
+      en: "Both want that car.",
+      ru: "Обоим нужна та машина.",
+    },
+  ],
 });

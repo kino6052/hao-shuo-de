@@ -12,5 +12,18 @@ export default composite({
   tts: ["不好的地方"],
   literal: "the bad points",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:bu4}}-{{word:hao3}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",
+      hanzi: "我有不好的地方。",
+      en: "I have shortcomings.",
+      ru: "У меня есть недостатки.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:bu4}}-{{word:hao3}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",
+      hanzi: "他有很多不好的地方。",
+      en: "He has many shortcomings.",
+      ru: "У него много недостатков.",
+    },
+  ],
 });

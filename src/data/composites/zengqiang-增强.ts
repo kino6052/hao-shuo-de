@@ -12,5 +12,18 @@ export default composite({
   tts: ["变有力"],
   literal: "become stronger",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:bian4}} {{word:you3}} {{word:li4}} {{word:le}}.",
+      hanzi: "我变有力了。",
+      en: "I've become stronger.",
+      ru: "Я стал сильнее.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:bian4}} {{word:you3}} {{word:li4}} {{word:le}}.",
+      hanzi: "他变有力了。",
+      en: "He has become stronger.",
+      ru: "Он стал сильнее.",
+    },
+  ],
 });

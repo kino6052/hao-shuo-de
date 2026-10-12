@@ -12,5 +12,18 @@ export default composite({
   tts: ["心里很不好"],
   literal: "feeling very bad inside",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:xin1}}-{{word:li3}} {{word:hen3}} {{word:bu4}} {{word:hao3}}.",
+      hanzi: "我心里很不好。",
+      en: "I am in pain.",
+      ru: "Мне очень тяжело.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:xin1}}-{{word:li3}} {{word:hen3}} {{word:bu4}} {{word:hao3}}.",
+      hanzi: "他心里很不好。",
+      en: "He is suffering.",
+      ru: "Ему очень тяжело.",
+    },
+  ],
 });

@@ -12,5 +12,18 @@ export default composite({
   tts: ["做"],
   fit: "plain",
   note: "Hao-shuo-de says zuò for any doing; Mandarin also has 弄 for handling and fixing.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:zuo4}} {{word:le}} {{word:zhe4}}-{{light:ge4}}.",
+      hanzi: "我做了这个。",
+      en: "I made this.",
+      ru: "Я сделал это.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:zuo4}} {{word:shen2me}}?",
+      hanzi: "你做什么？",
+      en: "What are you doing?",
+      ru: "Что ты делаешь?",
+    },
+  ],
 });

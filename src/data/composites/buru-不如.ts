@@ -12,5 +12,18 @@ export default composite({
   tts: ["没有X好"],
   literal: "not as good as X",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:mei2}}-{{word:you3}} {{word:ta1}} {{word:hao3}}.",
+      hanzi: "我没有他好。",
+      en: "I'm not as good as him.",
+      ru: "Я не так хорош, как он.",
+    },
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:mei2}}-{{word:you3}} {{word:na4}}-{{light:ge4}} {{word:hao3}}.",
+      hanzi: "这个没有那个好。",
+      en: "This one is not as good as that one.",
+      ru: "Этот не так хорош, как тот.",
+    },
+  ],
 });

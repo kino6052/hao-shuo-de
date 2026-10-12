@@ -11,5 +11,18 @@ export default composite({
   hsd: ["{{word:zuo4}}"],
   tts: ["做"],
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:bang1}} {{word:ta1}} {{word:zuo4}} {{word:zhe4}}-{{light:ge4}}.",
+      hanzi: "我帮他做这个。",
+      en: "I'll handle this for him.",
+      ru: "Я займусь этим за него.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:bang1}} {{word:wo3}} {{word:zuo4}} {{word:ma}}?",
+      hanzi: "你帮我做吗？",
+      en: "Will you handle it for me?",
+      ru: "Ты займёшься этим для меня?",
+    },
+  ],
 });

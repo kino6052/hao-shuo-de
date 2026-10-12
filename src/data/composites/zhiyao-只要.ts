@@ -13,5 +13,18 @@ export default composite({
   literal: "if",
   fit: "natural",
   note: "rúguǒ X, jiù Y.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhi3}}-{{word:yao4}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:jiu4}} {{word:hao3}}.",
+      hanzi: "只要你来，我就好。",
+      en: "As long as you come, I'm fine.",
+      ru: "Лишь бы ты пришёл, и мне хорошо.",
+    },
+    {
+      pinyin: "{{Word:zhi3}}-{{word:yao4}} {{word:you3}} {{word:shui3}}, {{word:wo3}} {{word:jiu4}} {{word:neng2}} {{word:zuo4}}.",
+      hanzi: "只要有水，我就能做。",
+      en: "As long as there is water, I can do it.",
+      ru: "Лишь бы была вода, и я смогу.",
+    },
+  ],
 });

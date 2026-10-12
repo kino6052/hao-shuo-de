@@ -12,5 +12,18 @@ export default composite({
   tts: ["放进算的工具"],
   literal: "put it into the computer",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:ba3}} {{word:zi4}} {{word:fang4}}-{{word:jin4}} {{word:suan4}}-{{word:de}} {{word:gong1}}-{{word:ju4}}.",
+      hanzi: "我把字放进算的工具。",
+      en: "I type the words in.",
+      ru: "Я ввожу слова.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:ba3}} {{word:ci2}} {{word:fang4}}-{{word:jin4}} {{word:suan4}}-{{word:de}} {{word:gong1}}-{{word:ju4}} {{word:le}}.",
+      hanzi: "他把词放进算的工具了。",
+      en: "He typed the word in.",
+      ru: "Он ввёл слово.",
+    },
+  ],
 });

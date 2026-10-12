@@ -12,5 +12,18 @@ export default composite({
   tts: ["东西的名字"],
   literal: "the name of a thing",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:ming2}}-{{word:zi4}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "这个东西的名字很好。",
+      en: "This brand is good.",
+      ru: "Этот бренд хороший.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:zhi1dao4}} {{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:ming2}}-{{word:zi4}} {{word:ma}}?",
+      hanzi: "你知道东西的名字吗？",
+      en: "Do you know the brand?",
+      ru: "Ты знаешь этот бренд?",
+    },
+  ],
 });

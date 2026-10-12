@@ -12,5 +12,18 @@ export default composite({
   tts: ["真好"],
   literal: "really good",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:zhen1}} {{word:hao3}}.",
+      hanzi: "他真好。",
+      en: "He is excellent.",
+      ru: "Он отличный.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:zhen1}} {{word:hao3}}.",
+      hanzi: "你真好。",
+      en: "You are excellent.",
+      ru: "Ты отличный.",
+    },
+  ],
 });

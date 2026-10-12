@@ -15,5 +15,18 @@ export default composite({
   tts: ["人生", "人活的时间"],
   literal: "a person's life / the time a person lives",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ren2}}-{{word:sheng1}} {{word:hen3}} {{word:chang2}}.",
+      hanzi: "人生很长。",
+      en: "Life is long.",
+      ru: "Жизнь длинная.",
+    },
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:ren2}}-{{word:sheng1}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "我的人生很好。",
+      en: "My life is good.",
+      ru: "Моя жизнь хороша.",
+    },
+  ],
 });

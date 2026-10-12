@@ -11,5 +11,18 @@ export default composite({
   hsd: ["{{word:zhen1}}"],
   tts: ["真"],
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}} {{word:zhen1}} {{word:hao3}}.",
+      hanzi: "这真好。",
+      en: "This is really good.",
+      ru: "Это правда хорошо.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:zhen1}} {{word:xiang3}} {{word:chi1}}.",
+      hanzi: "我真想吃。",
+      en: "I honestly want to eat.",
+      ru: "Я честно хочу есть.",
+    },
+  ],
 });

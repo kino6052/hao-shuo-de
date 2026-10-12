@@ -12,5 +12,18 @@ export default composite({
   tts: ["回去"],
   literal: "go back",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:hui2}}-{{word:qu4}}.",
+      hanzi: "我回去。",
+      en: "I go back.",
+      ru: "Я возвращаюсь.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:yao4}} {{word:hui2}}-{{word:qu4}} {{word:ma}}?",
+      hanzi: "你要回去吗？",
+      en: "Do you want to go back?",
+      ru: "Ты хочешь вернуться?",
+    },
+  ],
 });

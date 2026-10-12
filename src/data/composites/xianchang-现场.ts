@@ -12,5 +12,18 @@ export default composite({
   tts: ["发生的地方"],
   literal: "the place where it happened",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:zai4}} {{word:fa1}}-{{word:sheng1}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",
+      hanzi: "他在发生的地方。",
+      en: "He is at the scene.",
+      ru: "Он на месте событий.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:qu4}} {{word:fa1}}-{{word:sheng1}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",
+      hanzi: "我去发生的地方。",
+      en: "I go to the scene.",
+      ru: "Я иду на место событий.",
+    },
+  ],
 });

@@ -15,4 +15,18 @@ export default composite({
   tts: ["数学", "放在一起和拿的学"],
   literal: "the learning of putting together and taking away",
   fit: "natural",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:ai4}} {{word:shu4}}-{{word:xue2}}.",
+      hanzi: "我爱数学。",
+      en: "I love maths.",
+      ru: "Я люблю математику.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:xue2}} {{word:shu4}}-{{word:xue2}}.",
+      hanzi: "他学数学。",
+      en: "He studies maths.",
+      ru: "Он учит математику.",
+    },
+  ],
 });

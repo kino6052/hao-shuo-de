@@ -14,4 +14,16 @@ export default word("hua4", {
     eng: "Talk ({{word:shuo1}} {{word:hua4}}): what is said, as a thing.",
     rus: "Разговор ({{word:shuo1}} {{word:hua4}}): сказанное как вещь.",
   },
+  senses: {
+    draw: {
+      hanzi: "画",
+      eng: "draw, picture",
+      rus: "рисовать, картина",
+      why: {
+        eng: "Written 画, {{word:hua4}} means draw, picture in {{word:hua4}}-{{word:mian4}} (picture, scene); on its own it is words.",
+        rus: "Записанное как 画, {{word:hua4}} значит «рисовать, картина» в {{word:hua4}}-{{word:mian4}} (картинка, кадр); само по себе — «слова».",
+      },
+      compounds: ["hua4 mian4"],
+    },
+  },
 });

@@ -10,7 +10,20 @@ export default composite({
   pos: "noun",
   hsd: ["{{word:yi1}}-{{word:qi3}}-{{word:de}} {{word:ren2}}"],
   tts: ["一起的人"],
-  fit: "plain",
-  proposed: true,
   literal: "the people together",
+  fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:men}} {{word:shi4}} {{word:yi1}}-{{word:qi3}}-{{word:de}} {{word:ren2}}.",
+      hanzi: "我们是一起的人。",
+      en: "We are a group.",
+      ru: "Мы одна группа.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:shi4}} {{word:wo3}}-{{word:men}} {{word:yi1}}-{{word:qi3}}-{{word:de}} {{word:ren2}}.",
+      hanzi: "他是我们一起的人。",
+      en: "He is in our group.",
+      ru: "Он в нашей группе.",
+    },
+  ],
 });

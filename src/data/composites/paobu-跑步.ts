@@ -8,8 +8,8 @@ export default composite({
   en: "run, jog",
   ru: "бегать",
   pos: "verb",
-  hsd: ["{{word:zou3}}-{{word:de}} {{word:hen3}} {{word:kuai4}}"],
-  tts: ["走得很快"],
+  hsd: ["{{word:kuai4}} {{word:zou3}}", "{{word:zou3}}-{{word:de}} {{word:hen3}} {{word:kuai4}}"],
+  tts: ["快走", "走得很快"],
   literal: "walk very fast",
   fit: "plain",
   examples: [

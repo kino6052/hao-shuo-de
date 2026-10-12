@@ -12,5 +12,18 @@ export default composite({
   tts: ["身体的力"],
   literal: "the body's strength",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:shen1ti3}}-{{word:de}} {{word:li4}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "我身体的力很好。",
+      en: "My physical strength is good.",
+      ru: "У меня хорошая выносливость.",
+    },
+    {
+      pinyin: "{{Word:lao3}} {{word:ren2}} {{word:shen1ti3}}-{{word:de}} {{word:li4}} {{word:shao3}}.",
+      hanzi: "老人身体的力少。",
+      en: "Old people have little strength.",
+      ru: "У стариков мало сил.",
+    },
+  ],
 });

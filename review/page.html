@@ -169,6 +169,25 @@ function formBlock(kind, forms, tts, score, why, same) {
   return b;
 }
 
+function synonymBlock(syn) {
+  const b = el("div", "form-block");
+  b.appendChild(el("div", "label prop", "Synonym of"));
+  for (const s of syn) {
+    const line = el("div", "form", `${s.zh} (#${s.rank} ${s.en}): ${s.forms.join(" / ") || "no form"}`);
+    b.appendChild(line);
+  }
+  b.appendChild(el("p", "why", "Synonyms share one form, so the dictionary links them."));
+  return b;
+}
+
+function antonymBlock(ant) {
+  const b = el("div", "form-block");
+  b.appendChild(el("div", "label prop", "Opposite of"));
+  for (const s of ant) b.appendChild(el("div", "form", `${s.zh} (#${s.rank} ${s.en}): ${s.forms.join(" / ") || "no form"}`));
+  b.appendChild(el("p", "why", "Opposites should look like opposites: the same words, with the one that differs swapped (or bù added)."));
+  return b;
+}
+
 function examplesBlock(ex) {
   const b = el("div", "form-block");
   b.appendChild(el("div", "label" + (ex.proposed ? " prop" : ""), ex.proposed ? "Examples (proposed)" : "Examples"));
@@ -262,6 +281,9 @@ function row(e) {
   const f = el("div", "forms");
   f.appendChild(formBlock("now", e.now.forms, e.now.tts, e.now.score, null, e.now.same));
   if (e.prop) f.appendChild(formBlock("prop", e.prop.forms, e.prop.tts, e.prop.score, e.prop.why, e.prop.same));
+  if (e.carried) f.appendChild(el("p", "why", "Carried over from an earlier batch: " + e.carried));
+  if (e.syn?.length) f.appendChild(synonymBlock(e.syn));
+  if (e.ant?.length) f.appendChild(antonymBlock(e.ant));
   if (e.examples?.list.length) f.appendChild(examplesBlock(e.examples));
   li.appendChild(f);
   li.appendChild(actions(e));
@@ -271,7 +293,7 @@ function row(e) {
 function renderBulk() {
   const bulk = $("#bulk");
   bulk.replaceChildren();
-  const plain = state.batch.entries.filter((e) => !e.prop && !state.decisions[e.rank]);
+  const plain = state.batch.entries.filter((e) => !e.prop && !e.carried && !state.decisions[e.rank]);
   if (!plain.length) return;
   if (state.confirmBulk) {
     bulk.appendChild(el("span", "status", `Approve ${plain.length} entries as they are?`));
@@ -341,7 +363,8 @@ for (const c of document.querySelectorAll(".chip")) c.onclick = () => { state.fi
     state.decisions = B.decisions || {};
     document.title = `Review batch ${N} · Hao-shuo-de`;
     $("#eyebrow").textContent = `Composite review · batch ${N} of ${B.batches}`;
-    $("#title").textContent = `Ranks ${B.from}–${B.to}: ${B.entries.filter((e) => e.prop).length} proposed changes`;
+    const carried = B.entries.filter((e) => e.carried).length;
+    $("#title").textContent = `Ranks ${B.from}–${B.to}${carried ? ` + ${carried} carried over` : ""}: ${B.entries.filter((e) => e.prop).length} proposed changes`;
     const prev = $("#prev"), next = $("#next");
     if (N > 1) prev.href = `?batch=${N - 1}`; else prev.hidden = true;
     if (N < B.batches) next.href = `?batch=${N + 1}`; else next.hidden = true;

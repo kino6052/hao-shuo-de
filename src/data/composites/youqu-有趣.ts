@@ -8,8 +8,8 @@ export default composite({
   en: "interesting",
   ru: "интересный",
   pos: "adjective",
-  hsd: ["{{word:hao3}} {{word:wan2r}}"],
-  tts: ["好玩儿"],
+  hsd: ["{{word:hao3}}-{{word:wan2r}}", "{{word:hao3}} {{word:wan2r}}"],
+  tts: ["好玩儿", "好玩儿"],
   literal: "good to play",
   fit: "natural",
   examples: [

@@ -8,9 +8,22 @@ export default composite({
   en: "member",
   ru: "член (группы)",
   pos: "noun",
-  hsd: ["{{word:hen3}}-{{word:duo1}}-{{word:ren2}}-{{word:li3}}-{{word:de}} {{word:yi1}}-ge"],
-  tts: ["很多人里的一个"],
-  literal: "one of many people",
+  hsd: ["{{word:shi4}} X {{word:ren2}}-{{word:de}} {{word:yi1}} {{word:bu4}}-{{light:fen1}}"],
+  tts: ["是X人的一部分"],
+  literal: "be a part of X's people",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:shi4}} {{word:wo3}}-{{word:men}} {{word:ren2}}-{{word:de}} {{word:yi1}} {{word:bu4}}-{{light:fen1}}.",
+      hanzi: "他是我们人的一部分。",
+      en: "He is a member of ours.",
+      ru: "Он наш член.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:shi4}} {{word:ta1}}-{{word:men}} {{word:ren2}}-{{word:de}} {{word:yi1}} {{word:bu4}}-{{light:fen1}}.",
+      hanzi: "我是他们人的一部分。",
+      en: "I am a member of theirs.",
+      ru: "Я их член.",
+    },
+  ],
 });

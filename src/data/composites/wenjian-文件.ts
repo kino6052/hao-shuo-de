@@ -12,5 +12,18 @@ export default composite({
   tts: ["写的东西"],
   literal: "a written thing",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:kan4}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
+      hanzi: "我看写的东西。",
+      en: "I read the document.",
+      ru: "Я читаю документ.",
+    },
+    {
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:ta1}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
+      hanzi: "这是他写的东西。",
+      en: "This is the file he wrote.",
+      ru: "Это файл, который он написал.",
+    },
+  ],
 });

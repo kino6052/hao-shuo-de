@@ -8,8 +8,8 @@ export default composite({
   en: "true, real",
   ru: "настоящий",
   pos: "adjective",
-  hsd: ["{{word:zhen1}}-{{word:shi2}}", "{{word:zhen1}}"],
-  tts: ["真实", "真"],
+  hsd: ["{{word:zhen1}}-{{word:de}}", "{{word:zhen1}}-{{word:shi2}}", "{{word:zhen1}}"],
+  tts: ["真的", "真实", "真"],
   fit: "natural",
   examples: [
     {

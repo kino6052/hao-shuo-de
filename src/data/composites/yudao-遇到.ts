@@ -8,8 +8,11 @@ export default composite({
   en: "come across",
   ru: "встретить",
   pos: "verb",
-  hsd: ["{{word:kan4}}-{{word:dao4}}"],
-  tts: ["看到"],
+  hsd: [
+    "{{word:mei2}} {{word:xiang3}}-{{word:dao4}} {{word:hui4}} {{word:kan4}}-{{word:dao4}}",
+    "{{word:kan4}}-{{word:dao4}}",
+  ],
+  tts: ["没想到会看到", "看到"],
   literal: "see",
   fit: "natural",
   examples: [

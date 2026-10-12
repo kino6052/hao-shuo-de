@@ -12,5 +12,18 @@ export default composite({
   tts: ["衣服"],
   fit: "word",
   note: "yīfu covers cloth.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:mai3}} {{word:yi1fu}}.",
+      hanzi: "我买衣服。",
+      en: "I buy cloth.",
+      ru: "Я покупаю ткань.",
+    },
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:yi1fu}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "这个衣服很好。",
+      en: "This cloth is good.",
+      ru: "Эта ткань хорошая.",
+    },
+  ],
 });

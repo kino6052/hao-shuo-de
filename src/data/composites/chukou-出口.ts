@@ -13,5 +13,18 @@ export default composite({
   literal: "out-door",
   fit: "natural",
   note: "Real Mandarin: 出口.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:chu1}}-{{word:kou3}}.",
+      hanzi: "这是出口。",
+      en: "This is the exit.",
+      ru: "Это выход.",
+    },
+    {
+      pinyin: "{{Word:chu1}}-{{word:kou3}} {{word:zai4}} {{word:na4}}-{{word:li3}}.",
+      hanzi: "出口在那里。",
+      en: "The exit is over there.",
+      ru: "Выход вон там.",
+    },
+  ],
 });

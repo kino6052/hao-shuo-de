@@ -9,10 +9,11 @@ export default composite({
   ru: "только что",
   pos: "adverb",
   hsd: [
+    "{{word:yi1}}-{{word:xia4}} {{word:yi3}}-{{word:qian2}}",
     "{{word:xian4}}-{{word:zai4}} … {{word:le}}",
     "{{word:xian4}}-{{word:zai4}} {{word:jiu4}} … {{word:le}}",
   ],
-  tts: ["现在…了", "现在就…了"],
+  tts: ["一下以前", "现在…了", "现在就…了"],
   literal: "now … has happened / right now … has happened",
   fit: "plain",
   note: "tā xiàn-zài lái le: he just came.",

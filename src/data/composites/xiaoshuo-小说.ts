@@ -13,5 +13,18 @@ export default composite({
   literal: "small talk",
   fit: "natural",
   note: "Real Mandarin: 小说.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:ai4}} {{word:kan4}} {{word:xiao3}}-{{word:shuo1}}.",
+      hanzi: "我爱看小说。",
+      en: "I love reading novels.",
+      ru: "Я люблю читать романы.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:xie3}} {{word:xiao3}}-{{word:shuo1}}.",
+      hanzi: "他写小说。",
+      en: "He writes novels.",
+      ru: "Он пишет романы.",
+    },
+  ],
 });

@@ -8,8 +8,8 @@ export default composite({
   en: "whole, all",
   ru: "весь",
   pos: "adjective",
-  hsd: ["{{word:dou1}}"],
-  tts: ["都"],
+  hsd: ["X {{word:dou1}}", "{{word:dou1}}"],
+  tts: ["X都", "都"],
   fit: "word",
   examples: [
     {

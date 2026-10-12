@@ -12,5 +12,18 @@ export default composite({
   tts: ["写下来"],
   literal: "write it down",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:xie3}}-{{word:xia4}}-{{word:lai2}}.",
+      hanzi: "我写下来。",
+      en: "I record it.",
+      ru: "Я записываю.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:xie3}}-{{word:xia4}}-{{word:lai2}} {{word:le}}.",
+      hanzi: "他写下来了。",
+      en: "He recorded it.",
+      ru: "Он записал.",
+    },
+  ],
 });

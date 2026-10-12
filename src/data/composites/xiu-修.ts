@@ -12,5 +12,18 @@ export default composite({
   tts: ["做好"],
   literal: "make it good",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:neng2}} {{word:zuo4}} {{word:hao3}}.",
+      hanzi: "我能做好。",
+      en: "I can repair it.",
+      ru: "Я могу это починить.",
+    },
+    {
+      pinyin: "{{Word:ba4ba}} {{word:ba3}} {{word:che1}} {{word:zuo4}} {{word:hao3}} {{word:le}}.",
+      hanzi: "爸爸把车做好了。",
+      en: "Dad repaired the car.",
+      ru: "Папа починил машину.",
+    },
+  ],
 });

@@ -11,5 +11,18 @@ export default composite({
   hsd: ["{{word:yi1}}-{{word:xia4}}"],
   tts: ["一下"],
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:deng3}} {{word:yi1}}-{{word:xia4}}.",
+      hanzi: "等一下。",
+      en: "Wait a moment.",
+      ru: "Подожди минутку.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:kan4}} {{word:yi1}}-{{word:xia4}}.",
+      hanzi: "我看一下。",
+      en: "I look for a moment.",
+      ru: "Я смотрю мгновение.",
+    },
+  ],
 });

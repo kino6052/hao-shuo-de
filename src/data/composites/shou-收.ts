@@ -8,8 +8,8 @@ export default composite({
   en: "receive",
   ru: "получать",
   pos: "verb",
-  hsd: ["{{word:de2}}-{{word:dao4}}"],
-  tts: ["得到"],
+  hsd: ["{{word:na2}}-{{word:dao4}}", "{{word:de2}}-{{word:dao4}}"],
+  tts: ["拿到", "得到"],
   literal: "get-reach",
   fit: "natural",
   examples: [

@@ -12,5 +12,18 @@ export default composite({
   tts: ["觉得X很有价值"],
   literal: "feel X is very valuable",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:jue2}}-{{word:de2}} {{word:ta1}} {{word:hen3}} {{word:you3}} {{word:jia4zhi2}}.",
+      hanzi: "我觉得他很有价值。",
+      en: "I respect him.",
+      ru: "Я уважаю его.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:jue2}}-{{word:de2}} {{word:wo3}} {{word:hen3}} {{word:you3}} {{word:jia4zhi2}} {{word:ma}}?",
+      hanzi: "你觉得我很有价值吗？",
+      en: "Do you respect me?",
+      ru: "Ты меня уважаешь?",
+    },
+  ],
 });

@@ -8,8 +8,8 @@ export default composite({
   en: "check",
   ru: "проверить",
   pos: "verb",
-  hsd: ["{{word:kan4}}-kan"],
-  tts: ["看看"],
+  hsd: ["{{word:hao3}}-{{word:hao3}} {{word:kan4}}", "{{word:kan4}}-kan"],
+  tts: ["好好看", "看看"],
   literal: "have a look",
   fit: "natural",
   examples: [

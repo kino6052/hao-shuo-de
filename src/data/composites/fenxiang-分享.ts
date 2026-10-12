@@ -12,5 +12,18 @@ export default composite({
   tts: ["给别的人一点"],
   literal: "give others some",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:gei3}} {{word:bie2}}-{{word:de}} {{word:ren2}} {{word:yi1}}-{{word:dian3}}.",
+      hanzi: "我给别的人一点。",
+      en: "I share.",
+      ru: "Я делюсь.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:gei3}} {{word:bie2}}-{{word:de}} {{word:ren2}} {{word:yi1}}-{{word:dian3}} {{word:ma}}?",
+      hanzi: "你给别的人一点吗？",
+      en: "Do you share?",
+      ru: "Ты делишься?",
+    },
+  ],
 });

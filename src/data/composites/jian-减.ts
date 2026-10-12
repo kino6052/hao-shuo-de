@@ -13,4 +13,18 @@ export default composite({
   literal: "take B from A",
   fit: "plain",
   note: "7 − 3: cóng qī lǐ-miàn ná sān (Lesson {{lesson:numbers}}).",
+  examples: [
+    {
+      pinyin: "{{Word:cong2}} {{word:shi2}} {{word:li3}}-{{word:mian4}} {{word:na2}} {{word:san1}}.",
+      hanzi: "从十里面拿三。",
+      en: "Ten minus three.",
+      ru: "Десять минус три.",
+    },
+    {
+      pinyin: "{{Word:cong2}} {{word:wu3}} {{word:li3}}-{{word:mian4}} {{word:na2}} {{word:yi1}}.",
+      hanzi: "从五里面拿一。",
+      en: "Five minus one.",
+      ru: "Пять минус один.",
+    },
+  ],
 });

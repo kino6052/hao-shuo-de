@@ -10,7 +10,20 @@ export default composite({
   pos: "noun",
   hsd: ["{{word:bang1}} {{word:ren2}} {{word:xue2}}"],
   tts: ["帮人学"],
-  fit: "plain",
-  proposed: true,
   literal: "helping people learn",
+  fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:bang1}} {{word:ren2}} {{word:xue2}}.",
+      hanzi: "他帮人学。",
+      en: "He works in education.",
+      ru: "Он работает в сфере образования.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:ai4}} {{word:bang1}} {{word:ren2}} {{word:xue2}}.",
+      hanzi: "我爱帮人学。",
+      en: "I love education.",
+      ru: "Я люблю образование.",
+    },
+  ],
 });

@@ -12,5 +12,18 @@ export default composite({
   tts: ["现实", "真的"],
   literal: "what's real",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:xian4}}-{{word:shi2}}.",
+      hanzi: "这是现实。",
+      en: "This is reality.",
+      ru: "Это реальность.",
+    },
+    {
+      pinyin: "{{Word:xian4}}-{{word:shi2}} {{word:hen3}} {{word:nan2}}.",
+      hanzi: "现实很难。",
+      en: "Reality is hard.",
+      ru: "Реальность трудна.",
+    },
+  ],
 });

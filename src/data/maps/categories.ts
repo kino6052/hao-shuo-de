@@ -171,7 +171,7 @@ export default categories([
       {
         key: "cognition",
         title: { eng: "Cognition", rus: "Познание", zh: "认知" },
-        wordIds: ["jue2", "zhi1dao4", "xue2", "suan4", "xiang3"],
+        wordIds: ["jue2", "zhi1dao4", "xue2", "suan4", "xiang3", "ji4"],
       },
       {
         key: "perception",

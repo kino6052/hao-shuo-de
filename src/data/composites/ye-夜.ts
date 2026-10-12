@@ -12,5 +12,18 @@ export default composite({
   tts: ["月的时间"],
   literal: "moon time",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:zai4}} {{word:yue4}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:shui4jiao4}}.",
+      hanzi: "我在月的时间睡觉。",
+      en: "I sleep at night.",
+      ru: "Я сплю ночью.",
+    },
+    {
+      pinyin: "{{Word:yue4}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:hen3}} {{word:leng3}}.",
+      hanzi: "月的时间很冷。",
+      en: "The night is cold.",
+      ru: "Ночь холодная.",
+    },
+  ],
 });

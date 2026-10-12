@@ -12,5 +12,18 @@ export default composite({
   tts: ["对人好"],
   literal: "good to people",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:dui4}} {{word:ren2}} {{word:hao3}}.",
+      hanzi: "他对人好。",
+      en: "He is friendly.",
+      ru: "Он дружелюбен.",
+    },
+    {
+      pinyin: "{{Word:wo3}}-{{word:men}} {{word:dui4}} {{word:ren2}} {{word:hao3}}.",
+      hanzi: "我们对人好。",
+      en: "We are friendly.",
+      ru: "Мы дружелюбны.",
+    },
+  ],
 });

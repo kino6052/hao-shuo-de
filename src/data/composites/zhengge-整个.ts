@@ -12,5 +12,18 @@ export default composite({
   tts: ["X都"],
   literal: "all of X",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}} {{word:shu1}} {{word:dou1}} {{word:shi4}} {{word:wo3}}-{{word:de}}.",
+      hanzi: "这书都是我的。",
+      en: "The whole book is mine.",
+      ru: "Вся книга моя.",
+    },
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:jia1}} {{word:dou1}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "这个家都很大。",
+      en: "The whole home is big.",
+      ru: "Весь дом большой.",
+    },
+  ],
 });

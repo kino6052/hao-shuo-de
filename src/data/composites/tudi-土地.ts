@@ -11,5 +11,18 @@ export default composite({
   hsd: ["{{word:di4}}"],
   tts: ["地"],
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:di4}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "地很大。",
+      en: "The land is big.",
+      ru: "Земля большая.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:di4}}.",
+      hanzi: "我有地。",
+      en: "I have land.",
+      ru: "У меня есть земля.",
+    },
+  ],
 });

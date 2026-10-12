@@ -486,6 +486,7 @@
       "comparing",
       "doubling-words",
       "everyday-patterns",
+      "greetings-and-feelings",
       "how-much",
       "inside-a-sentence",
       "modifying-nouns",
@@ -1298,6 +1299,10 @@
       "phrase-book",
       "pre-verbs"
     ],
+    "ji4": [
+      "appendix-grammar",
+      "greetings-and-feelings"
+    ],
     "kan4": [
       "phrase-book",
       "appendix-stories",
@@ -1383,6 +1388,7 @@
       "sounds-and-symbols"
     ],
     "hua4": [
+      "where-it-is",
       "who-does-what"
     ],
     "yong4": [
@@ -1619,6 +1625,7 @@
       "roles-of-a-word"
     ],
     "zou3": [
+      "appendix-frontier",
       "moving"
     ],
     "bian4": [
@@ -1647,6 +1654,7 @@
       "greetings-and-feelings"
     ],
     "rang4": [
+      "appendix-frontier",
       "appendix-grammar",
       "everyday-patterns"
     ],
@@ -1694,6 +1702,7 @@
     "na2": [
       "phrase-book",
       "appendix-stories",
+      "appendix-frontier",
       "appendix-grammar",
       "colors",
       "direction-and-result",

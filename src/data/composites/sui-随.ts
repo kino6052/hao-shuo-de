@@ -12,5 +12,18 @@ export default composite({
   tts: ["在X后面去"],
   literal: "go behind X",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:zai4}} {{word:ta1}} {{word:hou4}}-{{word:mian4}} {{word:qu4}}.",
+      hanzi: "我在他后面去。",
+      en: "I follow him.",
+      ru: "Я иду за ним.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:zai4}} {{word:ba4ba}} {{word:hou4}}-{{word:mian4}} {{word:qu4}}.",
+      hanzi: "他在爸爸后面去。",
+      en: "He follows his dad.",
+      ru: "Он идёт за папой.",
+    },
+  ],
 });

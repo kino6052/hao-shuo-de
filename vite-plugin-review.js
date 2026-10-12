@@ -5,7 +5,9 @@
 // (review/page.html) shows each entry's current forms, the proposal with how
 // close each is to Mandarin, and the examples; every decision the author
 // makes is written at once to review/decisions/batch-<n>.json, which Claude
-// reads to apply the batch.
+// reads to apply the batch. A proposals file may also export `extras` (rank ->
+// why), entries of earlier batches that were never decided or reviewed; they
+// are shown with the batch, marked "carried over".
 //
 //   GET  /__review/                 the page
 //   GET  /__review/data?batch=n     the batch: entries, proposals, decisions
@@ -48,6 +50,14 @@ async function batchData(server, n) {
   const { heads } = compositeHeads(dictionary, composites.entries);
   const fresh = async (file) => (existsSync(file) ? (await import(`${pathToFileURL(file).href}?t=${Date.now()}`)).default : {});
   const proposals = await fresh(resolve(DIR, 'proposals', `batch-${n}.mjs`));
+  // synonyms Claude marked for this batch: zh -> [zh of the composites it means the same as]
+  const proposalFile = resolve(DIR, 'proposals', `batch-${n}.mjs`);
+  const proposalModule = existsSync(proposalFile) ? await import(`${pathToFileURL(proposalFile).href}?t=${Date.now()}`) : {};
+  const synonyms = proposalModule.synonyms ?? {};
+  // antonyms Claude marked for this batch: zh -> [zh of the composites it is the opposite of]
+  const antonyms = proposalModule.antonyms ?? {};
+  // entries from earlier batches that were never decided (or never reviewed): rank -> why they are here
+  const extras = proposalModule.extras ?? {};
   // example sentences waiting to go in (plain pinyin), for entries without any yet
   const exampleDrafts = await fresh(resolve(DIR, 'examples', `batch-${n}.mjs`));
   const py = (f) => resolveWordRefs(f, idx);
@@ -68,7 +78,7 @@ async function batchData(server, n) {
     return [...seen.values()].sort((a, b) => a.rank - b.rank);
   };
   const entries = composites.entries
-    .filter((e) => e.rank >= from && e.rank <= to)
+    .filter((e) => (e.rank >= from && e.rank <= to) || extras[e.rank])
     .sort((a, b) => a.rank - b.rank)
     .map((e) => {
       const h = heads.get(e.zh);
@@ -78,14 +88,23 @@ async function batchData(server, n) {
         ? { forms: p.hsd.map(py), tts: p.tts, why: p.why, score: naturalness({ ...e, hsd: p.hsd.join(' / '), tts: p.tts.join(' / ') }, headHanzi(h, words)) }
         : null;
       const drafts = exampleDrafts[e.zh];
-      const examples = e.examples?.length
-        ? { proposed: false, list: e.examples.map((x) => ({ pinyin: py(x.pinyin), hanzi: x.hanzi, en: x.en })) }
-        : drafts
-          ? { proposed: true, list: drafts.map(([pinyin, hanzi, en]) => ({ pinyin: py(pinyin), hanzi, en })) }
+      // a proposed new form comes with new draft sentences, which replace the old ones
+      const examples = drafts && (p || !e.examples?.length)
+        ? { proposed: true, list: drafts.map(([pinyin, hanzi, en]) => ({ pinyin: py(pinyin), hanzi, en })) }
+        : e.examples?.length
+          ? { proposed: false, list: e.examples.map((x) => ({ pinyin: py(x.pinyin), hanzi: x.hanzi, en: x.en })) }
           : null;
       now.same = sameAs(e, now.forms);
       if (prop) prop.same = sameAs(e, prop.forms);
-      return { rank: e.rank, zh: e.zh, py: e.py, en: e.en, ru: e.ru, now, prop, examples };
+      const syn = (synonyms[e.zh] ?? [])
+        .map((z) => composites.entries.find((o) => o.zh === z))
+        .filter(Boolean)
+        .map((o) => ({ zh: o.zh, rank: o.rank, en: o.en, forms: o.hsd ? o.hsd.split(' / ').map(py) : [] }));
+      const ant = (antonyms[e.zh] ?? [])
+        .map((z) => composites.entries.find((o) => o.zh === z))
+        .filter(Boolean)
+        .map((o) => ({ zh: o.zh, rank: o.rank, en: o.en, forms: o.hsd ? o.hsd.split(' / ').map(py) : [] }));
+      return { rank: e.rank, zh: e.zh, py: e.py, en: e.en, ru: e.ru, now, prop, examples, syn, ant, ...(extras[e.rank] ? { carried: extras[e.rank] } : {}) };
     });
   return {
     n,

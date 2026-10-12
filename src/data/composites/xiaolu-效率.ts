@@ -12,5 +12,18 @@ export default composite({
   tts: ["做的多快"],
   literal: "how fast you get it done",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:zuo4}}-{{word:de}} {{word:duo1}} {{word:kuai4}}!",
+      hanzi: "他做的多快！",
+      en: "How efficient he is!",
+      ru: "Как он эффективен!",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:kan4}} {{word:ta1}} {{word:zuo4}}-{{word:de}} {{word:duo1}} {{word:kuai4}}.",
+      hanzi: "我看他做的多快。",
+      en: "I see how efficient he is.",
+      ru: "Я вижу, как он эффективен.",
+    },
+  ],
 });

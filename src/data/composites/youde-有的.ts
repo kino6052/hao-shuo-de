@@ -13,5 +13,18 @@ export default composite({
   literal: "some",
   fit: "natural",
   note: "Real Mandarin: 有的.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:you3}}-{{word:de}} {{word:ren2}} {{word:lai2}} {{word:le}}.",
+      hanzi: "有的人来了。",
+      en: "Some people came.",
+      ru: "Некоторые люди пришли.",
+    },
+    {
+      pinyin: "{{Word:you3}}-{{word:de}} {{word:shu1}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "有的书很好。",
+      en: "Some books are good.",
+      ru: "Некоторые книги хорошие.",
+    },
+  ],
 });

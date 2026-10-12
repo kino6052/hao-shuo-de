@@ -12,5 +12,18 @@ export default composite({
   tts: ["关系", "给X说"],
   literal: "a connection / talk to X",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:gei3}} {{word:ta1}} {{word:shuo1}}.",
+      hanzi: "我给他说。",
+      en: "I contact him.",
+      ru: "Я связываюсь с ним.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:gei3}} {{word:wo3}} {{word:shuo1}}.",
+      hanzi: "你给我说。",
+      en: "Contact me.",
+      ru: "Свяжись со мной.",
+    },
+  ],
 });

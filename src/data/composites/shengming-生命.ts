@@ -11,5 +11,18 @@ export default composite({
   hsd: ["{{word:huo2}}"],
   tts: ["活"],
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:ai4}} {{word:huo2}}.",
+      hanzi: "我爱活。",
+      en: "I love life.",
+      ru: "Я люблю жизнь.",
+    },
+    {
+      pinyin: "{{Word:huo2}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "活很好。",
+      en: "Life is good.",
+      ru: "Жизнь хороша.",
+    },
+  ],
 });

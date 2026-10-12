@@ -8,8 +8,11 @@ export default composite({
   en: "restaurant",
   ru: "ресторан",
   pos: "noun",
-  hsd: ["{{word:chi1}}-{{word:de}} {{word:di4}}-{{light:fang1}}"],
-  tts: ["吃的地方"],
+  hsd: [
+    "{{word:chi1}}-{{word:fan4}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
+    "{{word:chi1}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
+  ],
+  tts: ["吃饭的地方", "吃的地方"],
   literal: "a place to eat",
   fit: "plain",
   examples: [

@@ -8,9 +8,24 @@ export default composite({
   en: "pinyin",
   ru: "пиньинь",
   pos: "verb",
-  hsd: ["{{word:xie3}}-{{word:sheng1yin1}}-{{word:de}} {{word:fang1}}-{{word:fa3}}"],
-  tts: ["写声音的方法"],
-  literal: "a way of writing sounds",
+  hsd: [
+    "{{word:xie3}}-\"Zhōngguó\"-{{word:hua4}} {{word:sheng1yin1}}-{{word:de}} {{word:fang1}}-{{word:fa3}}",
+  ],
+  tts: ["写中国话声音的方法"],
+  literal: "the way to write the sounds of Chinese",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:xie3}}-\"Zhōngguó\"-{{word:hua4}} {{word:sheng1yin1}}-{{word:de}} {{word:fang1}}-{{word:fa3}}.",
+      hanzi: "这是写中国话声音的方法。",
+      en: "This is pinyin.",
+      ru: "Это пиньинь.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:xue2}} {{word:xie3}}-\"Zhōngguó\"-{{word:hua4}} {{word:sheng1yin1}}-{{word:de}} {{word:fang1}}-{{word:fa3}}.",
+      hanzi: "我学写中国话声音的方法。",
+      en: "I learn pinyin.",
+      ru: "Я учу пиньинь.",
+    },
+  ],
 });

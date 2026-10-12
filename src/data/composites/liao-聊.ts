@@ -8,8 +8,8 @@ export default composite({
   en: "chat",
   ru: "болтать",
   pos: "verb",
-  hsd: ["{{word:shuo1}}-shuo"],
-  tts: ["说说"],
+  hsd: ["{{word:yi1}}-{{word:qi3}} {{word:shuo1}}-{{word:hua4}}", "{{word:shuo1}}-shuo"],
+  tts: ["一起说话", "说说"],
   literal: "talk a bit",
   fit: "natural",
   examples: [

@@ -12,5 +12,18 @@ export default composite({
   tts: ["是X的"],
   literal: "is X's",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:shi4}} {{word:wo3}}-{{word:de}}.",
+      hanzi: "这个是我的。",
+      en: "This belongs to me.",
+      ru: "Это принадлежит мне.",
+    },
+    {
+      pinyin: "{{Word:na4}}-{{light:ge4}} {{word:shi4}} {{word:ta1}}-{{word:de}}.",
+      hanzi: "那个是他的。",
+      en: "That belongs to him.",
+      ru: "То принадлежит ему.",
+    },
+  ],
 });

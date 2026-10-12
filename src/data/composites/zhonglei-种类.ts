@@ -11,5 +11,18 @@ export default composite({
   hsd: ["{{word:zhong3}}"],
   tts: ["种"],
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:zhong3}}.",
+      hanzi: "这有很多种。",
+      en: "There are many kinds.",
+      ru: "Здесь много видов.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:yao4}} {{word:na3}} {{word:zhong3}}?",
+      hanzi: "你要哪种？",
+      en: "Which kind do you want?",
+      ru: "Какой вид ты хочешь?",
+    },
+  ],
 });

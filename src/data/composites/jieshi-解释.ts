@@ -12,5 +12,18 @@ export default composite({
   tts: ["说明"],
   literal: "say it clearly",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:shuo1}}-{{word:ming2}}.",
+      hanzi: "我说明。",
+      en: "I explain.",
+      ru: "Я объясняю.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:shuo1}}-{{word:ming2}} {{word:ma}}?",
+      hanzi: "你说明吗？",
+      en: "Will you explain?",
+      ru: "Ты объяснишь?",
+    },
+  ],
 });

@@ -8,9 +8,22 @@ export default composite({
   en: "attract",
   ru: "привлекать",
   pos: "verb",
-  hsd: ["{{word:jiao4}} {{word:ren2}} {{word:yao4}} {{word:lai2}}"],
-  tts: ["叫人要来"],
+  hsd: ["{{word:rang4}} {{word:ren2}} {{word:xiang3}} {{word:lai2}}"],
+  tts: ["让人想来"],
   literal: "make people want to come",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:di4}}-{{light:fang1}} {{word:rang4}} {{word:ren2}} {{word:xiang3}} {{word:lai2}}.",
+      hanzi: "这个地方让人想来。",
+      en: "This place attracts people.",
+      ru: "Это место привлекает людей.",
+    },
+    {
+      pinyin: "{{Word:hao3}} {{word:chi1}}-{{word:de}} {{word:rang4}} {{word:ren2}} {{word:xiang3}} {{word:lai2}}.",
+      hanzi: "好吃的让人想来。",
+      en: "Good food attracts people.",
+      ru: "Вкусная еда привлекает людей.",
+    },
+  ],
 });

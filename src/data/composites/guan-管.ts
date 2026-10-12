@@ -8,8 +8,8 @@ export default composite({
   en: "manage",
   ru: "управлять",
   pos: "verb",
-  hsd: ["{{word:ba3}} X {{word:zuo4}}-{{word:hao3}}"],
-  tts: ["把X做好"],
+  hsd: ["{{word:ba3}} X {{word:zuo4}} {{word:hao3}}", "{{word:ba3}} X {{word:zuo4}}-{{word:hao3}}"],
+  tts: ["把X做好", "把X做好"],
   literal: "keep X good",
   fit: "plain",
   examples: [

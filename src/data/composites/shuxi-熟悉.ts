@@ -12,5 +12,18 @@ export default composite({
   tts: ["很知道"],
   literal: "know well",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:hen3}} {{word:zhi1dao4}} {{word:zhe4}}-{{word:li3}}.",
+      hanzi: "我很知道这里。",
+      en: "I am familiar with this place.",
+      ru: "Я хорошо знаю это место.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:hen3}} {{word:zhi1dao4}} {{word:ni3}}.",
+      hanzi: "他很知道你。",
+      en: "He knows you well.",
+      ru: "Он хорошо тебя знает.",
+    },
+  ],
 });

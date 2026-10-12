@@ -11,5 +11,18 @@ export default composite({
   hsd: ["{{word:shui4jiao4}}"],
   tts: ["睡觉"],
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:ai4}} {{word:shui4jiao4}}.",
+      hanzi: "我爱睡觉。",
+      en: "I love sleep.",
+      ru: "Я люблю спать.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:yao4}} {{word:shui4jiao4}}.",
+      hanzi: "他要睡觉。",
+      en: "He needs sleep.",
+      ru: "Ему нужен сон.",
+    },
+  ],
 });

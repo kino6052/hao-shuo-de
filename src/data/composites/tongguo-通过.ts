@@ -13,5 +13,18 @@ export default composite({
   literal: "go through",
   fit: "natural",
   note: "Lesson {{lesson:direction-and-result}}.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:tong1}}-{{word:guo4}} {{word:le}}.",
+      hanzi: "我通过了。",
+      en: "I passed.",
+      ru: "Я прошёл.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:tong1}}-{{word:guo4}} {{word:men2}} {{word:jin4}}-{{word:lai2}}.",
+      hanzi: "他通过门进来。",
+      en: "He came in through the door.",
+      ru: "Он вошёл через дверь.",
+    },
+  ],
 });

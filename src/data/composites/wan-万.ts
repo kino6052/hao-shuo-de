@@ -8,10 +8,23 @@ export default composite({
   en: "ten thousand",
   ru: "десять тысяч",
   pos: "number",
-  fit: "plain",
-  note: "Numbers go up to what shí can build.",
   hsd: ["{{word:yi1}}-{{word:ling2}}-{{word:ling2}}-{{word:ling2}}-{{word:ling2}}"],
   tts: ["一零零零零"],
   literal: "one-zero-zero-zero-zero",
-  proposed: true,
+  fit: "plain",
+  note: "Numbers go up to what shí can build.",
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:you3}} {{word:yi1}}-{{word:ling2}}-{{word:ling2}}-{{word:ling2}}-{{word:ling2}}.",
+      hanzi: "他有一零零零零。",
+      en: "He has ten thousand.",
+      ru: "У него десять тысяч.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:mai3}} {{word:le}} {{word:yi1}}-{{word:ling2}}-{{word:ling2}}-{{word:ling2}}-{{word:ling2}}.",
+      hanzi: "我买了一零零零零。",
+      en: "I bought ten thousand.",
+      ru: "Я купил десять тысяч.",
+    },
+  ],
 });

@@ -8,8 +8,8 @@ export default composite({
   en: "beautiful",
   ru: "прекрасный",
   pos: "adjective",
-  hsd: ["{{word:hen3}}-{{word:hao3}}-{{word:kan4}}"],
-  tts: ["很好看"],
+  hsd: ["{{word:hao3}}-{{word:kan4}}", "{{word:hen3}}-{{word:hao3}}-{{word:kan4}}"],
+  tts: ["好看", "很好看"],
   literal: "very good to look at",
   fit: "plain",
   examples: [

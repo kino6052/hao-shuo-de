@@ -11,5 +11,18 @@ export default composite({
   hsd: ["{{word:de2}}"],
   tts: ["得"],
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:de2}} {{word:le}} {{word:yi1}}-{{light:ge4}} {{word:hao3}} {{word:gong1}}-{{word:zuo4}}.",
+      hanzi: "我得了一个好工作。",
+      en: "I got a good job.",
+      ru: "Я получил хорошую работу.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:de2}} {{word:le}} {{word:hen3}} {{word:duo1}} {{word:jin1}}.",
+      hanzi: "他得了很多金。",
+      en: "He obtained a lot of money.",
+      ru: "Он получил много денег.",
+    },
+  ],
 });

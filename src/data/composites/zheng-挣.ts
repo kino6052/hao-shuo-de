@@ -12,5 +12,18 @@ export default composite({
   tts: ["得金"],
   literal: "get money",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:gong1}}-{{word:zuo4}} {{word:de2}} {{word:jin1}}.",
+      hanzi: "我工作得金。",
+      en: "I work to earn money.",
+      ru: "Я работаю, чтобы зарабатывать.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:gong1}}-{{word:zuo4}}, {{word:de2}} {{word:jin1}}.",
+      hanzi: "他工作，得金。",
+      en: "He works and earns money.",
+      ru: "Он работает и зарабатывает.",
+    },
+  ],
 });

@@ -8,9 +8,22 @@ export default composite({
   en: "consume, spend",
   ru: "потреблять, тратить",
   pos: "verb",
-  hsd: ["{{word:yong4}} {{word:jin1}}"],
-  tts: ["用金"],
-  literal: "use money",
+  hsd: ["{{word:yong4}}"],
+  tts: ["用"],
+  literal: "use (money)",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:yong4}} {{word:hen3}} {{word:duo1}}.",
+      hanzi: "我用很多。",
+      en: "I spend a lot.",
+      ru: "Я трачу много.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:yong4}} {{word:hen3}} {{word:shao3}}.",
+      hanzi: "他用很少。",
+      en: "He spends little.",
+      ru: "Он тратит мало.",
+    },
+  ],
 });

@@ -12,5 +12,18 @@ export default composite({
   tts: ["身体坏了"],
   literal: "the body got hurt",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:shen1ti3}} {{word:huai4}} {{word:le}}.",
+      hanzi: "我身体坏了。",
+      en: "I got hurt.",
+      ru: "Я получил травму.",
+    },
+    {
+      pinyin: "{{Word:ta1}}-{{word:de}} {{word:shen1ti3}} {{word:huai4}} {{word:le}}.",
+      hanzi: "他的身体坏了。",
+      en: "He got hurt.",
+      ru: "Он получил травму.",
+    },
+  ],
 });

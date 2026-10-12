@@ -12,4 +12,18 @@ export default composite({
   tts: ["数字"],
   fit: "natural",
   transparent: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:ai4}} {{word:shu4}}-{{word:zi4}}.",
+      hanzi: "我爱数字。",
+      en: "I love numbers.",
+      ru: "Я люблю цифры.",
+    },
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:shu4}}-{{word:zi4}} {{word:shi4}} {{word:san1}}.",
+      hanzi: "这个数字是三。",
+      en: "This number is three.",
+      ru: "Это число — три.",
+    },
+  ],
 });

@@ -12,5 +12,18 @@ export default composite({
   tts: ["水平", "多好"],
   literal: "how good",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}}-{{word:de}} {{word:shui3}}-{{word:ping2}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "他的水平很好。",
+      en: "His level is good.",
+      ru: "У него хороший уровень.",
+    },
+    {
+      pinyin: "{{Word:ni3}}-{{word:de}} {{word:shui3}}-{{word:ping2}} {{word:hen3}} {{word:gao1}}.",
+      hanzi: "你的水平很高。",
+      en: "Your level is high.",
+      ru: "У тебя высокий уровень.",
+    },
+  ],
 });

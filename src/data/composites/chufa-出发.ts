@@ -12,5 +12,18 @@ export default composite({
   tts: ["出发", "开始去"],
   literal: "go out-send out / start going",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:men}} {{word:jin1}}-{{word:tian1}} {{word:chu1}}-{{word:fa1}}.",
+      hanzi: "我们今天出发。",
+      en: "We set out today.",
+      ru: "Мы отправляемся сегодня.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:shen2me}} {{word:shi2}}-{{word:jian1}} {{word:chu1}}-{{word:fa1}}?",
+      hanzi: "你什么时间出发？",
+      en: "When do you set out?",
+      ru: "Когда ты отправляешься?",
+    },
+  ],
 });

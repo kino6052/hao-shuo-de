@@ -8,9 +8,22 @@ export default composite({
   en: "normal",
   ru: "нормальный",
   pos: "adjective",
-  hsd: ["{{word:he2}} {{word:da4}}-{{word:jia1}} {{word:yi1}}-{{word:yang4}}"],
-  tts: ["和大家一样"],
-  literal: "like everyone",
-  fit: "plain",
-  proposed: true,
+  hsd: ["{{word:ping2}}-{{word:chang2}}"],
+  tts: ["平常"],
+  literal: "usual",
+  fit: "natural",
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}} {{word:hen3}} {{word:ping2}}-{{word:chang2}}.",
+      hanzi: "这很平常。",
+      en: "This is normal.",
+      ru: "Это нормально.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:hen3}} {{word:ping2}}-{{word:chang2}}.",
+      hanzi: "他很平常。",
+      en: "He is normal.",
+      ru: "Он нормальный.",
+    },
+  ],
 });

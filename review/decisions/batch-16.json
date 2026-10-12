@@ -1,0 +1,111 @@
+{
+  "batch": 16,
+  "decisions": {
+    "1501": {
+      "zh": "感动",
+      "status": "edit",
+      "form": "xin-dong, rang xin jue-de hen hao,",
+      "at": "2026-10-12T09:03:55.652Z"
+    },
+    "1502": {
+      "zh": "戏",
+      "status": "edit",
+      "form": "gěi rén kàn-de dōng-xi, something similar to show we need to find a better word",
+      "at": "2026-10-12T09:04:43.419Z"
+    },
+    "1503": {
+      "zh": "抓紧",
+      "status": "edit",
+      "form": "kuài-de zuò",
+      "at": "2026-10-12T09:05:02.472Z"
+    },
+    "1504": {
+      "zh": "护士",
+      "status": "approve",
+      "at": "2026-10-12T09:05:10.972Z"
+    },
+    "1505": {
+      "zh": "拼音",
+      "status": "edit",
+      "form": "xiě-\"zhongguo\"-hua shēngyīn-de fāng-fǎ",
+      "at": "2026-10-12T09:05:35.578Z"
+    },
+    "1506": {
+      "zh": "提醒",
+      "status": "approve",
+      "at": "2026-10-12T09:05:18.022Z"
+    },
+    "1507": {
+      "zh": "收拾",
+      "status": "edit",
+      "form": "ba X ganjing, ba X bu luan",
+      "at": "2026-10-12T09:06:06.883Z"
+    },
+    "1508": {
+      "zh": "放松",
+      "status": "approve",
+      "at": "2026-10-12T09:06:09.273Z"
+    },
+    "1509": {
+      "zh": "旅行",
+      "status": "edit",
+      "form": "qù bie-de dì-fang wánr",
+      "at": "2026-10-12T09:06:31.320Z"
+    },
+    "1510": {
+      "zh": "景点",
+      "status": "approve",
+      "at": "2026-10-12T09:06:13.804Z"
+    },
+    "1511": {
+      "zh": "景色",
+      "status": "approve",
+      "at": "2026-10-12T09:06:33.356Z"
+    },
+    "1512": {
+      "zh": "暑假",
+      "status": "approve",
+      "at": "2026-10-12T09:06:34.613Z"
+    },
+    "1513": {
+      "zh": "暗",
+      "status": "approve",
+      "at": "2026-10-12T09:06:37.174Z"
+    },
+    "1514": {
+      "zh": "有的",
+      "status": "approve",
+      "at": "2026-10-12T09:06:38.419Z"
+    },
+    "1515": {
+      "zh": "本地",
+      "status": "approve",
+      "at": "2026-10-12T09:06:39.884Z"
+    },
+    "1516": {
+      "zh": "机器人",
+      "status": "approve",
+      "at": "2026-10-12T09:06:41.470Z"
+    },
+    "1517": {
+      "zh": "根",
+      "status": "approve",
+      "at": "2026-10-12T09:06:45.274Z"
+    },
+    "1518": {
+      "zh": "桥",
+      "status": "approve",
+      "at": "2026-10-12T09:06:47.760Z"
+    },
+    "1519": {
+      "zh": "歌曲",
+      "status": "approve",
+      "at": "2026-10-12T09:06:52.317Z"
+    },
+    "1520": {
+      "zh": "正好",
+      "status": "approve",
+      "at": "2026-10-12T09:06:54.372Z"
+    }
+  }
+}

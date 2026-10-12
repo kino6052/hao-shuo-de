@@ -8,9 +8,25 @@ export default composite({
   en: "future",
   ru: "будущее",
   pos: "noun",
-  hsd: ["{{word:hui4}} {{word:lai2}}-{{word:de}} {{word:shi2}}-{{word:jian1}}"],
-  tts: ["会来的时间"],
-  literal: "the time that will come",
+  hsd: [
+    "{{word:hui4}} {{word:lai2}}-{{word:de}} {{word:shi2}}-{{word:jian1}}",
+    "{{word:wei4}}-{{word:lai2}}",
+  ],
+  tts: ["会来的时间", "未来"],
+  literal: "the time that will come / not yet come",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:hui4}} {{word:lai2}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "会来的时间很好。",
+      en: "The future is good.",
+      ru: "Будущее хорошее.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:xiang3}} {{word:wei4}}-{{word:lai2}}.",
+      hanzi: "我想未来。",
+      en: "I think about the future.",
+      ru: "Я думаю о будущем.",
+    },
+  ],
 });

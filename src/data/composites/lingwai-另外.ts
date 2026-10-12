@@ -12,5 +12,18 @@ export default composite({
   tts: ["别的"],
   fit: "word",
   note: "Besides is yě.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:yao4}} {{word:bie2}}-{{word:de}}.",
+      hanzi: "我要别的。",
+      en: "I want another one.",
+      ru: "Я хочу другой.",
+    },
+    {
+      pinyin: "{{Word:hai2}} {{word:you3}} {{word:bie2}}-{{word:de}} {{word:ren2}}.",
+      hanzi: "还有别的人。",
+      en: "There are other people too.",
+      ru: "Есть и другие люди.",
+    },
+  ],
 });

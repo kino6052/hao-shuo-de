@@ -8,9 +8,22 @@ export default composite({
   en: "master, grasp",
   ru: "овладеть",
   pos: "verb",
-  hsd: ["{{word:zhi1dao4}}, {{word:ye3}} {{word:neng2}} {{word:zuo4}}"],
-  tts: ["知道，也能做"],
-  literal: "know it and can do it",
+  hsd: ["{{word:zhi1dao4}} {{word:hen3}} {{word:hao3}}"],
+  tts: ["知道很好"],
+  literal: "know it well",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:wo3}} {{word:zhi1dao4}} {{word:hen3}} {{word:hao3}}, {{word:ye3}} {{word:neng2}} {{word:zuo4}}.",
+      hanzi: "这个我知道很好，也能做。",
+      en: "I have mastered this.",
+      ru: "Я освоил это.",
+    },
+    {
+      pinyin: "{{Word:na4}}-{{light:ge4}} {{word:ta1}} {{word:zhi1dao4}} {{word:hen3}} {{word:hao3}}, {{word:ye3}} {{word:neng2}} {{word:zuo4}}.",
+      hanzi: "那个他知道很好，也能做。",
+      en: "He has mastered that.",
+      ru: "Он освоил то.",
+    },
+  ],
 });

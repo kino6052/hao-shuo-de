@@ -8,9 +8,25 @@ export default composite({
   en: "answer",
   ru: "отвечать",
   pos: "verb",
-  hsd: ["{{word:dui4}} {{word:wen4}}-{{word:de}} {{word:ren2}} {{word:shuo1}}"],
-  tts: ["对问的人说"],
+  hsd: [
+    "{{word:hui2}}-{{word:hua4}}",
+    "{{word:dui4}} {{word:wen4}}-{{word:de}} {{word:ren2}} {{word:shuo1}}",
+  ],
+  tts: ["回话", "对问的人说"],
   literal: "say to the one who asked",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:hui2}}-{{word:hua4}} {{word:le}}.",
+      hanzi: "我回话了。",
+      en: "I answered.",
+      ru: "Я ответил.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:dui4}} {{word:wen4}}-{{word:de}} {{word:ren2}} {{word:shuo1}}.",
+      hanzi: "他对问的人说。",
+      en: "He answers the one who asked.",
+      ru: "Он отвечает спросившему.",
+    },
+  ],
 });

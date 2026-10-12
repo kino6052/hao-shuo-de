@@ -12,5 +12,18 @@ export default composite({
   tts: ["爱的人"],
   literal: "the person you love",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:shi4}} {{word:wo3}} {{word:ai4}}-{{word:de}} {{word:ren2}}.",
+      hanzi: "他是我爱的人。",
+      en: "He is my partner.",
+      ru: "Он мой любимый человек.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:you3}} {{word:ai4}}-{{word:de}} {{word:ren2}} {{word:ma}}?",
+      hanzi: "你有爱的人吗？",
+      en: "Do you have a partner?",
+      ru: "У тебя есть любимый человек?",
+    },
+  ],
 });

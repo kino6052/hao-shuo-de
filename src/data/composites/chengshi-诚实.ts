@@ -12,5 +12,18 @@ export default composite({
   tts: ["说真的"],
   literal: "says what's true",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:shuo1}} {{word:zhen1}}-{{word:de}}.",
+      hanzi: "我说真的。",
+      en: "I am honest.",
+      ru: "Я говорю честно.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:yao4}} {{word:shuo1}} {{word:zhen1}}-{{word:de}}.",
+      hanzi: "你要说真的。",
+      en: "You must be honest.",
+      ru: "Ты должен говорить честно.",
+    },
+  ],
 });

@@ -11,5 +11,18 @@ export default composite({
   hsd: ["{{word:yi1fu}}"],
   tts: ["衣服"],
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:mai3}} {{word:yi1fu}}.",
+      hanzi: "我买衣服。",
+      en: "I buy clothing.",
+      ru: "Я покупаю одежду.",
+    },
+    {
+      pinyin: "{{Word:ta1}}-{{word:de}} {{word:yi1fu}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "他的衣服很好。",
+      en: "His clothing is nice.",
+      ru: "Его одежда хорошая.",
+    },
+  ],
 });

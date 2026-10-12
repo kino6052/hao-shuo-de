@@ -8,8 +8,8 @@ export default composite({
   en: "don't",
   ru: "не надо",
   pos: "adverb",
-  hsd: ["{{word:bie2}}"],
-  tts: ["别"],
+  hsd: ["{{word:bu4}} {{word:yao4}}", "{{word:bie2}}"],
+  tts: ["不要", "别"],
   fit: "word",
   note: "Lesson {{lesson:greetings-and-feelings}}: bù yào xiào!",
   examples: [

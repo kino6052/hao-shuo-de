@@ -11,5 +11,18 @@ export default composite({
   hsd: ["{{word:tong2}}", "{{word:yi1}}-{{word:yang4}}", "{{word:yi1}}-{{word:qi3}}", "{{word:he2}}"],
   tts: ["同", "一样", "一起", "和"],
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:he2}} {{word:ta1}} {{word:yi1}}-{{word:qi3}} {{word:qu4}}.",
+      hanzi: "我和他一起去。",
+      en: "I go with him.",
+      ru: "Я иду с ним.",
+    },
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:he2}} {{word:ni3}}-{{word:de}} {{word:yi1}}-{{word:yang4}}.",
+      hanzi: "我的和你的一样。",
+      en: "Mine is the same as yours.",
+      ru: "Моё такое же, как твоё.",
+    },
+  ],
 });

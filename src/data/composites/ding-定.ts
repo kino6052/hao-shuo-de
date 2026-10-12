@@ -12,5 +12,18 @@ export default composite({
   tts: ["定", "不变了"],
   literal: "won't change anymore",
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:ding4}} {{word:le}}.",
+      hanzi: "我定了。",
+      en: "I've settled it.",
+      ru: "Я решил.",
+    },
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:bu4}} {{word:bian4}} {{word:le}}.",
+      hanzi: "这个不变了。",
+      en: "This is fixed now.",
+      ru: "Это теперь не изменится.",
+    },
+  ],
 });

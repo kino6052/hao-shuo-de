@@ -8,8 +8,22 @@ export default composite({
   en: "theme, topic",
   ru: "тема",
   pos: "noun",
-  hsd: ["{{word:zui4}} {{word:yao4}} {{word:shuo1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["最要说的东西"],
-  literal: "the main thing to talk about",
+  hsd: ["{{word:shi4}} {{word:shuo1}} X-{{word:de}}"],
+  tts: ["是说X的"],
+  literal: "what it is about",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:shuo1}} {{word:jia1}}-{{word:de}}.",
+      hanzi: "这是说家的。",
+      en: "The theme is home.",
+      ru: "Тема — дом.",
+    },
+    {
+      pinyin: "{{Word:zhe4}} {{word:shu1}} {{word:shi4}} {{word:shuo1}} {{word:shui3}}-{{word:de}}.",
+      hanzi: "这书是说水的。",
+      en: "This book is about water.",
+      ru: "Эта книга о воде.",
+    },
+  ],
 });

@@ -12,5 +12,18 @@ export default composite({
   tts: ["网上的一面"],
   literal: "a page on the net",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:kan4}} {{word:wang3}}-{{word:shang4}}-{{word:de}} {{word:yi1}}-{{word:mian4}}.",
+      hanzi: "我看网上的一面。",
+      en: "I look at a webpage.",
+      ru: "Я смотрю веб-страницу.",
+    },
+    {
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:wang3}}-{{word:shang4}}-{{word:de}} {{word:yi1}}-{{word:mian4}}.",
+      hanzi: "这是网上的一面。",
+      en: "This is a webpage.",
+      ru: "Это веб-страница.",
+    },
+  ],
 });

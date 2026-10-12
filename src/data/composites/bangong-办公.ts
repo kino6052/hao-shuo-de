@@ -8,8 +8,22 @@ export default composite({
   en: "work (at an office)",
   ru: "работать (в офисе)",
   pos: "verb",
-  hsd: ["{{word:zuo4}}"],
-  tts: ["做"],
+  hsd: ["{{word:zai4}} {{word:fang2}}-{{word:jian1}}-{{word:li3}} {{word:gong1}}-{{word:zuo4}}"],
+  tts: ["在房间里工作"],
+  literal: "work in a room",
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:zai4}} {{word:fang2}}-{{word:jian1}}-{{word:li3}} {{word:gong1}}-{{word:zuo4}}.",
+      hanzi: "我在房间里工作。",
+      en: "I work in the office.",
+      ru: "Я работаю в офисе.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:zai4}} {{word:fang2}}-{{word:jian1}}-{{word:li3}} {{word:gong1}}-{{word:zuo4}}.",
+      hanzi: "他在房间里工作。",
+      en: "He works in an office.",
+      ru: "Он работает в офисе.",
+    },
+  ],
 });

@@ -12,5 +12,18 @@ export default composite({
   tts: ["作者", "写的人"],
   literal: "the one who writes",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zuo4}}-{{word:zhe3}} {{word:shi4}} {{word:ta1}}.",
+      hanzi: "作者是他。",
+      en: "The author is him.",
+      ru: "Автор — он.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:zhi1dao4}} {{word:zuo4}}-{{word:zhe3}}.",
+      hanzi: "我知道作者。",
+      en: "I know the author.",
+      ru: "Я знаю автора.",
+    },
+  ],
 });

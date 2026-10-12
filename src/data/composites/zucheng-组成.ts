@@ -12,5 +12,18 @@ export default composite({
   tts: ["放在一起"],
   literal: "put together",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:ba3}} {{word:shu1}} {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}.",
+      hanzi: "我把书放在一起。",
+      en: "I put the books together into a set.",
+      ru: "Я собираю книги в набор.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:ba3}} {{word:ren2}} {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}.",
+      hanzi: "他把人放在一起。",
+      en: "He puts the people together into a group.",
+      ru: "Он собирает людей в группу.",
+    },
+  ],
 });

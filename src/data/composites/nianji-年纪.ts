@@ -12,5 +12,18 @@ export default composite({
   tts: ["多大"],
   literal: "how big",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ni3}} {{word:duo1}} {{word:da4}}?",
+      hanzi: "你多大？",
+      en: "How old are you?",
+      ru: "Сколько тебе лет?",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:ba4ba}} {{word:duo1}} {{word:da4}}?",
+      hanzi: "他爸爸多大？",
+      en: "How old is his father?",
+      ru: "Сколько лет его отцу?",
+    },
+  ],
 });

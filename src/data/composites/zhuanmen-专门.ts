@@ -12,5 +12,18 @@ export default composite({
   tts: ["就做这个"],
   literal: "just doing this",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:jiu4}} {{word:zuo4}} {{word:zhe4}}-{{light:ge4}}.",
+      hanzi: "我就做这个。",
+      en: "I do only this.",
+      ru: "Я занимаюсь только этим.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:jiu4}} {{word:zuo4}} {{word:zhe4}}-{{light:ge4}}, {{word:bu4}} {{word:zuo4}} {{word:bie2}}-{{word:de}}.",
+      hanzi: "他就做这个，不做别的。",
+      en: "He does only this, nothing else.",
+      ru: "Он делает только это, больше ничего.",
+    },
+  ],
 });

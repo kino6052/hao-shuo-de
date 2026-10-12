@@ -26,5 +26,4 @@ export default composite({
       ru: "Ты веришь тому, что он сказал?",
     },
   ],
-  proposed: true,
 });

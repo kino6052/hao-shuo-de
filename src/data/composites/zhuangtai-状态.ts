@@ -8,9 +8,25 @@ export default composite({
   en: "state",
   ru: "состояние",
   pos: "noun",
-  hsd: ["{{word:xian4}}-{{word:zai4}}-{{word:de}} X"],
-  tts: ["现在的X"],
+  hsd: [
+    "{{word:xian4}}-{{word:zai4}}-{{word:de}} {{word:yang4}}-{{light:zi}}",
+    "{{word:xian4}}-{{word:zai4}}-{{word:de}} X",
+  ],
+  tts: ["现在的样子", "现在的X"],
   literal: "how X is now",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:men}} {{word:xian4}}-{{word:zai4}}-{{word:de}} {{word:yang4}}-{{word:zi}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "我们现在的样子很好。",
+      en: "Our state is good.",
+      ru: "Наше состояние хорошее.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:xian4}}-{{word:zai4}}-{{word:de}} {{word:yang4}}-{{word:zi}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "你现在的样子很好。",
+      en: "Your state is good.",
+      ru: "Твоё состояние хорошее.",
+    },
+  ],
 });

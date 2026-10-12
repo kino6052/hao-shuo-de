@@ -8,9 +8,26 @@ export default composite({
   en: "content",
   ru: "содержание",
   pos: "noun",
-  hsd: ["{{word:li3}}-{{word:mian4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["里面的东西"],
-  literal: "what's inside",
+  hsd: [
+    "{{word:li3}}-{{word:mian4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+    "{{word:kan4}}-{{word:de}}",
+    "{{word:shuo1}}-{{word:de}}",
+  ],
+  tts: ["里面的东西", "看的", "说的"],
+  literal: "what is inside / what you watch / what is said",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:kan4}} {{word:li3}}-{{word:mian4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
+      hanzi: "我看里面的东西。",
+      en: "I look at the contents.",
+      ru: "Я смотрю на содержимое.",
+    },
+    {
+      pinyin: "{{Word:li3}}-{{word:mian4}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "里面的东西很好。",
+      en: "The content is good.",
+      ru: "Содержание хорошее.",
+    },
+  ],
 });

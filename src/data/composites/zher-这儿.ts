@@ -8,8 +8,8 @@ export default composite({
   en: "here",
   ru: "здесь",
   pos: "pronoun",
-  hsd: ["{{word:zhe4}}-{{word:bian1}}"],
-  tts: ["这边"],
+  hsd: ["{{word:zhe4}}-{{word:li3}}", "{{word:zhe4}}-{{word:bian1}}"],
+  tts: ["这里", "这边"],
   literal: "this side",
   fit: "natural",
   examples: [

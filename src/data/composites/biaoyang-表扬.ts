@@ -12,5 +12,18 @@ export default composite({
   tts: ["说X好"],
   literal: "say X is good",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ba4ba}} {{word:shuo1}} {{word:wo3}} {{word:hao3}}.",
+      hanzi: "爸爸说我好。",
+      en: "Dad praised me.",
+      ru: "Папа меня похвалил.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:shuo1}} {{word:ta1}} {{word:hao3}}.",
+      hanzi: "我说他好。",
+      en: "I praise him.",
+      ru: "Я хвалю его.",
+    },
+  ],
 });

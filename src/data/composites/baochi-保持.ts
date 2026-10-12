@@ -11,5 +11,18 @@ export default composite({
   hsd: ["{{word:liu2}}"],
   tts: ["留"],
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ni3}} {{word:yao4}} {{word:liu2}} {{word:zhe4}}-{{light:ge4}} {{word:ma}}?",
+      hanzi: "你要留这个吗？",
+      en: "Do you want to keep this?",
+      ru: "Ты хочешь оставить это?",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:liu2}} {{word:zhe4}}-{{light:ge4}}.",
+      hanzi: "我留这个。",
+      en: "I'm keeping this.",
+      ru: "Я оставляю это.",
+    },
+  ],
 });

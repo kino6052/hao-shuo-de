@@ -12,5 +12,18 @@ export default composite({
   tts: ["人"],
   fit: "word",
   note: "rén covers people in general.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ren2}} {{word:bu4}} {{word:neng2}} {{word:fei1}}.",
+      hanzi: "人不能飞。",
+      en: "Humans can't fly.",
+      ru: "Человек не может летать.",
+    },
+    {
+      pinyin: "{{Word:ren2}} {{word:zhi1dao4}} {{word:hen3}} {{word:duo1}}.",
+      hanzi: "人知道很多。",
+      en: "Humans know a lot.",
+      ru: "Человечество знает много.",
+    },
+  ],
 });

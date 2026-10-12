@@ -12,5 +12,18 @@ export default composite({
   tts: ["大部分"],
   literal: "the big part",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:da4}} {{word:bu4}}-{{light:fen1}} {{word:zhi1dao4}}.",
+      hanzi: "我大部分知道。",
+      en: "I basically know.",
+      ru: "В основном я знаю.",
+    },
+    {
+      pinyin: "{{Word:zhe4}} {{word:da4}} {{word:bu4}}-{{light:fen1}} {{word:shi4}} {{word:ni3}}-{{word:de}}.",
+      hanzi: "这大部分是你的。",
+      en: "This is mostly yours.",
+      ru: "Это в основном твоё.",
+    },
+  ],
 });

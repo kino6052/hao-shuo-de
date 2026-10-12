@@ -8,8 +8,11 @@ export default composite({
   en: "news, message",
   ru: "новость",
   pos: "noun",
-  hsd: ["{{word:xian4}}-{{word:zai4}}-{{word:fa1}}-{{word:sheng1}}-{{word:de}}"],
-  tts: ["现在发生的"],
+  hsd: [
+    "{{word:xin1#new}}-\"wén\"",
+    "{{word:xian4}}-{{word:zai4}}-{{word:fa1}}-{{word:sheng1}}-{{word:de}}",
+  ],
+  tts: ["新闻", "现在发生的"],
   literal: "what is happening now",
   fit: "plain",
   note: "Same as 新闻.",

@@ -8,9 +8,22 @@ export default composite({
   en: "review (lessons)",
   ru: "повторять (урок)",
   pos: "verb",
-  hsd: ["{{word:you4}} {{word:xue2}}"],
-  tts: ["又学"],
-  literal: "learn again",
+  hsd: ["{{word:you4}} {{word:xue2}}", "{{word:you4}} {{word:kan4}} {{word:yi1}}-{{word:xia4}}"],
+  tts: ["又学", "又看一下"],
+  literal: "learn again / look again for a moment",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:you4}} {{word:xue2}} {{word:le}}.",
+      hanzi: "我又学了。",
+      en: "I reviewed it again.",
+      ru: "Я повторил это ещё раз.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:you4}} {{word:kan4}} {{word:yi1}}-{{word:xia4}} {{word:zhe4}}-{{light:ge4}}.",
+      hanzi: "我又看一下这个。",
+      en: "I'll review this once more.",
+      ru: "Я ещё раз просмотрю это.",
+    },
+  ],
 });

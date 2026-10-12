@@ -8,9 +8,25 @@ export default composite({
   en: "enough",
   ru: "достаточно",
   pos: "verb",
-  hsd: ["{{word:you3}} {{word:le}}, {{word:bu4}} {{word:yao4}} {{word:duo1}}-{{word:de}} {{word:le}}"],
-  tts: ["有了，不要多的了"],
-  literal: "there's enough: no more needed",
+  hsd: [
+    "{{word:hao3}} {{word:le}}",
+    "{{word:you3}} {{word:le}}, {{word:bu4}} {{word:yao4}} {{word:duo1}}-{{word:de}} {{word:le}}",
+  ],
+  tts: ["好了", "有了，不要多的了"],
+  literal: "it is fine / I have it, I don't need more",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:le}}, {{word:bu4}} {{word:yao4}} {{word:duo1}}-{{word:de}} {{word:le}}.",
+      hanzi: "我有了，不要多的了。",
+      en: "I have enough.",
+      ru: "У меня достаточно.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:le}}, {{word:wo3}} {{word:bu4}} {{word:yao4}} {{word:duo1}}-{{word:de}} {{word:le}}.",
+      hanzi: "我有了，我不要多的了。",
+      en: "That's enough for me.",
+      ru: "Мне достаточно.",
+    },
+  ],
 });

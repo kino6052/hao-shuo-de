@@ -12,5 +12,18 @@ export default composite({
   tts: ["心在X上"],
   literal: "the heart on X",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:xin1}} {{word:zai4}} {{word:shu1}}-{{word:shang4}}.",
+      hanzi: "我心在书上。",
+      en: "I focus on the book.",
+      ru: "Я сосредоточен на книге.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:xin1}} {{word:zai4}} {{word:gong1}}-{{word:zuo4}}-{{word:shang4}}.",
+      hanzi: "他心在工作上。",
+      en: "He focuses on his work.",
+      ru: "Он сосредоточен на работе.",
+    },
+  ],
 });

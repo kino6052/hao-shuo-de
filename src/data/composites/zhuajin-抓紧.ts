@@ -8,9 +8,22 @@ export default composite({
   en: "hurry; hold tight",
   ru: "спешить; держать крепко",
   pos: "verb",
-  hsd: ["{{word:kuai4}} {{word:zuo4}}"],
-  tts: ["快做"],
-  literal: "do it fast",
+  hsd: ["{{word:kuai4}}-{{word:de}} {{word:zuo4}}"],
+  tts: ["快的做"],
+  literal: "do it quickly",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ni3}} {{word:kuai4}}-{{word:de}} {{word:zuo4}}.",
+      hanzi: "你快的做。",
+      en: "Hurry up and do it.",
+      ru: "Давай поскорее, делай.",
+    },
+    {
+      pinyin: "{{Word:wo3}}-{{word:men}} {{word:kuai4}}-{{word:de}} {{word:zuo4}}.",
+      hanzi: "我们快的做。",
+      en: "We hurry to do it.",
+      ru: "Мы торопимся сделать это.",
+    },
+  ],
 });

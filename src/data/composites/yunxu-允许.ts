@@ -8,10 +8,23 @@ export default composite({
   en: "allow",
   ru: "разрешать",
   pos: "verb",
-  hsd: ["{{word:jiao4}} X + verb"],
-  tts: ["叫X+…"],
-  literal: "let X do it",
+  hsd: ["{{word:rang4}}"],
+  tts: ["让"],
+  literal: "let",
   fit: "plain",
   note: "bù jiào: won't let.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ba4ba}} {{word:rang4}} {{word:wo3}} {{word:qu4}}.",
+      hanzi: "爸爸让我去。",
+      en: "Dad allows me to go.",
+      ru: "Папа разрешает мне идти.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:bu4}} {{word:rang4}} {{word:wo3}} {{word:chi1}}.",
+      hanzi: "他不让我吃。",
+      en: "He doesn't allow me to eat.",
+      ru: "Он не разрешает мне есть.",
+    },
+  ],
 });

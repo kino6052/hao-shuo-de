@@ -13,5 +13,18 @@ export default composite({
   literal: "in the heart",
   fit: "natural",
   note: "Real Mandarin: 心理.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:xin1}}-{{word:li3}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "他心里很好。",
+      en: "His mind is healthy.",
+      ru: "У него здоровая психика.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:xin1}}-{{word:li3}} {{word:hen3}} {{word:leng3}}.",
+      hanzi: "我心里很冷。",
+      en: "I feel cold inside.",
+      ru: "Мне холодно внутри.",
+    },
+  ],
 });

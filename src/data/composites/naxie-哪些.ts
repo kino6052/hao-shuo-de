@@ -11,5 +11,18 @@ export default composite({
   hsd: ["{{word:na3}}-{{word:xie1}}", "{{word:shen2me}}"],
   tts: ["哪些", "什么"],
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ni3}} {{word:yao4}} {{word:na3}}-{{word:xie1}}?",
+      hanzi: "你要哪些？",
+      en: "Which ones do you want?",
+      ru: "Какие ты хочешь?",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:ai4}} {{word:na3}}-{{word:xie1}}?",
+      hanzi: "你爱哪些？",
+      en: "Which ones do you like?",
+      ru: "Какие тебе нравятся?",
+    },
+  ],
 });

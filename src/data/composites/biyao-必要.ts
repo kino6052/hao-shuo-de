@@ -12,5 +12,18 @@ export default composite({
   tts: ["要的"],
   literal: "needed",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:yao4}}-{{word:de}}.",
+      hanzi: "这是要的。",
+      en: "This is necessary.",
+      ru: "Это необходимо.",
+    },
+    {
+      pinyin: "{{Word:shui3}} {{word:shi4}} {{word:yao4}}-{{word:de}}.",
+      hanzi: "水是要的。",
+      en: "Water is necessary.",
+      ru: "Вода необходима.",
+    },
+  ],
 });

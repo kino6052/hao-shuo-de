@@ -11,5 +11,18 @@ export default composite({
   hsd: ["{{word:zhi1dao4}}"],
   tts: ["知道"],
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:zhi1dao4}}.",
+      hanzi: "我知道。",
+      en: "I realize.",
+      ru: "Я осознаю.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:zhi1dao4}} {{word:le}}.",
+      hanzi: "他知道了。",
+      en: "He has realized.",
+      ru: "Он осознал.",
+    },
+  ],
 });

@@ -12,5 +12,18 @@ export default composite({
   tts: ["家里的人"],
   literal: "a person of the family",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:shi4}} {{word:wo3}} {{word:jia1}}-{{word:li3}}-{{word:de}} {{word:ren2}}.",
+      hanzi: "他是我家里的人。",
+      en: "He is my relative.",
+      ru: "Он мой родственник.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:jia1}}-{{word:li3}}-{{word:de}} {{word:ren2}}.",
+      hanzi: "我有很多家里的人。",
+      en: "I have many relatives.",
+      ru: "У меня много родственников.",
+    },
+  ],
 });

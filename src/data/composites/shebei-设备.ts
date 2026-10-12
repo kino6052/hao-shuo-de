@@ -11,5 +11,18 @@ export default composite({
   hsd: ["{{word:gong1}}-{{word:ju4}}"],
   tts: ["工具"],
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:mai3}} {{word:gong1}}-{{word:ju4}}.",
+      hanzi: "我买工具。",
+      en: "I buy equipment.",
+      ru: "Я покупаю оборудование.",
+    },
+    {
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:ta1}}-{{word:de}} {{word:gong1}}-{{word:ju4}}.",
+      hanzi: "这是他的工具。",
+      en: "This is his equipment.",
+      ru: "Это его оборудование.",
+    },
+  ],
 });

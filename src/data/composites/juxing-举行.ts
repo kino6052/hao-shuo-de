@@ -12,4 +12,18 @@ export default composite({
   tts: ["做"],
   literal: "do",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:men}} {{word:zai4}} {{word:jia1}} {{word:zuo4}}.",
+      hanzi: "我们在家做。",
+      en: "We hold it at home.",
+      ru: "Мы проводим это дома.",
+    },
+    {
+      pinyin: "{{Word:ta1}}-{{word:men}} {{word:zai4}} {{word:zhe4}}-{{word:li3}} {{word:zuo4}}.",
+      hanzi: "他们在这里做。",
+      en: "They hold it here.",
+      ru: "Они проводят это здесь.",
+    },
+  ],
 });

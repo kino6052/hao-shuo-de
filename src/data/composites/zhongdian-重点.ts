@@ -9,11 +9,24 @@ export default composite({
   ru: "главное",
   pos: "noun",
   hsd: [
+    "{{word:zui4}} {{word:you3}} {{word:zhong4}}-{{word:yao4}}-{{word:de}} {{word:bu4}}-{{light:fen1}}",
     "{{word:zhong4}}-{{word:dian3}}",
-    "{{word:zui4}} {{word:you3}} {{word:jia4zhi2}}-{{word:de}} {{word:bu4}}-{{light:fen1}}",
   ],
-  tts: ["重点", "最有价值的部分"],
-  literal: "the most valuable part",
+  tts: ["最有重要的部分", "重点"],
+  literal: "the most important part",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:zhong4}}-{{word:dian3}}.",
+      hanzi: "这是重点。",
+      en: "This is the key point.",
+      ru: "Это главное.",
+    },
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:shi4}} {{word:zui4}} {{word:you3}} {{word:zhong4}}-{{word:yao4}}-{{word:de}} {{word:bu4}}-{{light:fen1}}.",
+      hanzi: "这个是最有重要的部分。",
+      en: "This is the most important part.",
+      ru: "Это самая важная часть.",
+    },
+  ],
 });

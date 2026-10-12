@@ -8,9 +8,25 @@ export default composite({
   en: "basis, foundation",
   ru: "основа",
   pos: "noun",
-  hsd: ["{{word:zui4}} {{word:xia4}}-{{word:mian4}}-{{word:de}} {{word:bu4}}-{{light:fen1}}"],
-  tts: ["最下面的部分"],
-  literal: "the lowest part",
+  hsd: [
+    "{{word:zui4}} {{word:xia4}}-{{word:mian4}}-{{word:de}} {{word:bu4}}-{{light:fen1}}",
+    "{{word:cong2}} {{word:ling2}} {{word:kai1shi3}}",
+  ],
+  tts: ["最下面的部分", "从零开始"],
+  literal: "the lowest part / start from zero",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zui4}} {{word:xia4}}-{{word:mian4}}-{{word:de}} {{word:bu4}}-{{light:fen1}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "最下面的部分很大。",
+      en: "The foundation is big.",
+      ru: "Основа большая.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:cong2}} {{word:ling2}} {{word:kai1shi3}}.",
+      hanzi: "我从零开始。",
+      en: "I start from scratch.",
+      ru: "Я начинаю с нуля.",
+    },
+  ],
 });

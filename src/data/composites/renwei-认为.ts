@@ -8,8 +8,8 @@ export default composite({
   en: "think, believe",
   ru: "считать",
   pos: "verb",
-  hsd: ["{{word:xiang3}}"],
-  tts: ["想"],
+  hsd: ["{{word:jue2}}-{{light:de2}}", "{{word:xiang3}}"],
+  tts: ["觉得", "想"],
   fit: "word",
   examples: [
     {

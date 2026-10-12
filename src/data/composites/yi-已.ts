@@ -12,5 +12,18 @@ export default composite({
   tts: ["了"],
   fit: "skip",
   note: "le often does the job: wǒ chī le.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:lai2}} {{word:le}}.",
+      hanzi: "我来了。",
+      en: "I've already come.",
+      ru: "Я уже пришёл.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:qu4}} {{word:le}}.",
+      hanzi: "他去了。",
+      en: "He has already gone.",
+      ru: "Он уже ушёл.",
+    },
+  ],
 });

@@ -8,10 +8,23 @@ export default composite({
   en: "make, cause",
   ru: "заставлять, вызывать",
   pos: "verb",
-  hsd: ["{{word:jiao4}} X + verb"],
-  tts: ["叫X+…"],
-  literal: "have X do it",
+  hsd: ["{{word:rang4}} X + verb"],
+  tts: ["让X…"],
+  literal: "let X do it",
   fit: "plain",
   note: "Or bǎ X zuò + adjective.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:rang4}} {{word:wo3}} {{word:xiao4}}.",
+      hanzi: "他让我笑。",
+      en: "He makes me laugh.",
+      ru: "Он заставляет меня смеяться.",
+    },
+    {
+      pinyin: "{{Word:zhe4}} {{word:rang4}} {{word:wo3}} {{word:pa4}}.",
+      hanzi: "这让我怕。",
+      en: "This makes me afraid.",
+      ru: "Это пугает меня.",
+    },
+  ],
 });

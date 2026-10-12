@@ -12,5 +12,18 @@ export default composite({
   tts: ["说的声音"],
   literal: "the sound of speaking",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ni3}} {{word:shuo1}}-{{word:de}} {{word:sheng1yin1}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "你说的声音很好。",
+      en: "Your pronunciation is good.",
+      ru: "У тебя хорошее произношение.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:shuo1}}-{{word:de}} {{word:sheng1yin1}} {{word:hen3}} {{word:dui4}}.",
+      hanzi: "他说的声音很对。",
+      en: "His pronunciation is correct.",
+      ru: "У него правильное произношение.",
+    },
+  ],
 });

@@ -12,5 +12,18 @@ export default composite({
   tts: ["变两个部分"],
   literal: "become two parts",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:che1}} {{word:bian4}} {{word:liang3}}-{{light:ge4}} {{word:bu4}}-{{light:fen1}} {{word:le}}.",
+      hanzi: "车变两个部分了。",
+      en: "The car broke in two.",
+      ru: "Машина сломалась пополам.",
+    },
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:bian4}} {{word:liang3}}-{{light:ge4}} {{word:bu4}}-{{light:fen1}} {{word:le}}.",
+      hanzi: "这个变两个部分了。",
+      en: "This broke in two.",
+      ru: "Это сломалось пополам.",
+    },
+  ],
 });

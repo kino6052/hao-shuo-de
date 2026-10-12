@@ -8,8 +8,8 @@ export default composite({
   en: "choose",
   ru: "выбирать",
   pos: "verb",
-  hsd: ["{{word:yao4}}"],
-  tts: ["要"],
+  hsd: ["{{word:na2}} {{word:yi1}}-ge", "{{word:yao4}}"],
+  tts: ["拿一个", "要"],
   fit: "plain",
   note: "wǒ yào zhè-ge: I'll take this one.",
   examples: [

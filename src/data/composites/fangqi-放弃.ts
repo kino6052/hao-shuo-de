@@ -12,5 +12,18 @@ export default composite({
   tts: ["不要了"],
   literal: "not wanting it anymore",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:bu4}} {{word:yao4}} {{word:le}}.",
+      hanzi: "我不要了。",
+      en: "I give up.",
+      ru: "Я сдаюсь.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:shuo1}} {{word:ta1}} {{word:bu4}} {{word:yao4}} {{word:le}}.",
+      hanzi: "他说他不要了。",
+      en: "He says he gives up.",
+      ru: "Он говорит, что сдаётся.",
+    },
+  ],
 });

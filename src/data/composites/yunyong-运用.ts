@@ -11,5 +11,18 @@ export default composite({
   hsd: ["{{word:yong4}}"],
   tts: ["用"],
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:yong4}} {{word:zhe4}}-{{word:xie1}} {{word:ci2}}.",
+      hanzi: "我用这些词。",
+      en: "I use these words.",
+      ru: "Я использую эти слова.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:neng2}} {{word:yong4}} {{word:zhe4}}-{{light:ge4}}.",
+      hanzi: "他能用这个。",
+      en: "He can apply this.",
+      ru: "Он умеет это применять.",
+    },
+  ],
 });

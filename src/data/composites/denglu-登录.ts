@@ -12,5 +12,18 @@ export default composite({
   tts: ["进去"],
   literal: "go in",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:jin4}}-{{word:qu4}} {{word:le}}.",
+      hanzi: "我进去了。",
+      en: "I logged in.",
+      ru: "Я вошёл.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:jin4}}-{{word:qu4}} {{word:ma}}?",
+      hanzi: "你进去吗？",
+      en: "Are you logging in?",
+      ru: "Ты входишь?",
+    },
+  ],
 });

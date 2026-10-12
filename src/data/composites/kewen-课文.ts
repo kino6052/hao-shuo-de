@@ -12,5 +12,18 @@ export default composite({
   tts: ["学的写的东西"],
   literal: "a written thing to learn",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:kan4}} {{word:xue2}}-{{word:de}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
+      hanzi: "我看学的写的东西。",
+      en: "I read the text of the lesson.",
+      ru: "Я читаю текст урока.",
+    },
+    {
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:xue2}}-{{word:de}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
+      hanzi: "这是学的写的东西。",
+      en: "This is the text of the lesson.",
+      ru: "Это текст урока.",
+    },
+  ],
 });

@@ -12,5 +12,18 @@ export default composite({
   tts: ["说到"],
   literal: "speak of",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:shuo1}}-{{word:dao4}} {{word:ni3}}.",
+      hanzi: "他说到你。",
+      en: "He mentioned you.",
+      ru: "Он упомянул тебя.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:shuo1}}-{{word:dao4}} {{word:zhe4}}-{{light:ge4}}.",
+      hanzi: "我说到这个。",
+      en: "I mentioned this.",
+      ru: "Я упомянул это.",
+    },
+  ],
 });

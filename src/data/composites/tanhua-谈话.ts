@@ -8,8 +8,21 @@ export default composite({
   en: "talk, chat",
   ru: "беседовать",
   pos: "verb",
-  hsd: ["{{word:shuo1}}"],
-  tts: ["说"],
+  hsd: ["{{word:yi1}}-{{word:qi3}} {{word:shuo1}}-{{word:hua4}}", "{{word:shuo1}}"],
+  tts: ["一起说话", "说"],
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:men}} {{word:yi1}}-{{word:qi3}} {{word:shuo1}}-{{word:hua4}}.",
+      hanzi: "我们一起说话。",
+      en: "We chat together.",
+      ru: "Мы разговариваем вместе.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:he2}} {{word:wo3}} {{word:yi1}}-{{word:qi3}} {{word:shuo1}}-{{word:hua4}}.",
+      hanzi: "他和我一起说话。",
+      en: "He chats with me.",
+      ru: "Он разговаривает со мной.",
+    },
+  ],
 });

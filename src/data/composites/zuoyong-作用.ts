@@ -15,5 +15,18 @@ export default composite({
   tts: ["作用", "能做的东西"],
   literal: "what it can do",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:zuo4}}-{{word:yong4}} {{word:hen3}} {{word:da4}}.",
+      hanzi: "这个作用很大。",
+      en: "This effect is big.",
+      ru: "Это действие сильное.",
+    },
+    {
+      pinyin: "{{Word:shui3}} {{word:you3}} {{word:hen3}} {{word:da4}}-{{word:de}} {{word:zuo4}}-{{word:yong4}}.",
+      hanzi: "水有很大的作用。",
+      en: "Water has a big effect.",
+      ru: "У воды большое значение.",
+    },
+  ],
 });

@@ -8,8 +8,8 @@ export default composite({
   en: "idea",
   ru: "идея",
   pos: "noun",
-  hsd: ["{{word:fang1}}-{{word:fa3}}"],
-  tts: ["方法"],
+  hsd: ["{{word:xiang3}}-{{word:fa3}}", "{{word:fang1}}-{{word:fa3}}"],
+  tts: ["想法", "方法"],
   literal: "way",
   fit: "plain",
   examples: [

@@ -8,9 +8,24 @@ export default composite({
   en: "automatic",
   ru: "автоматический",
   pos: "adverb",
-  hsd: ["{{word:mei2}}-{{word:you3}} {{word:ren2}} {{word:zuo4}} {{word:ye3}} {{word:dong4}}"],
-  tts: ["没有人做也动"],
-  literal: "moves with nobody doing it",
+  hsd: [
+    "{{word:ta1}} {{word:bu4}} {{word:yao4}} {{word:bie2}} {{word:ren2}}-{{word:de}} {{word:bang1}} {{word:jiu4}} {{word:dong4}}",
+  ],
+  tts: ["他不要别人的帮就动"],
+  literal: "it moves without anyone's help",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:che1}}, {{word:ta1}} {{word:bu4}} {{word:yao4}} {{word:bie2}} {{word:ren2}}-{{word:de}} {{word:bang1}} {{word:jiu4}} {{word:dong4}}.",
+      hanzi: "这个车，他不要别人的帮就动。",
+      en: "This car runs automatically.",
+      ru: "Эта машина едет автоматически.",
+    },
+    {
+      pinyin: "{{Word:wo3}}-{{word:de}} {{word:che1}}, {{word:ta1}} {{word:bu4}} {{word:yao4}} {{word:bie2}} {{word:ren2}}-{{word:de}} {{word:bang1}} {{word:jiu4}} {{word:dong4}}.",
+      hanzi: "我的车，他不要别人的帮就动。",
+      en: "My car runs on its own.",
+      ru: "Моя машина едет сама.",
+    },
+  ],
 });

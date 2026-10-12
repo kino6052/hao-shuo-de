@@ -12,5 +12,18 @@ export default composite({
   tts: ["做前，想怎么做"],
   literal: "before making it, think how",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:zuo4}} {{word:qian2}}, {{word:xiang3}} {{word:zen3me}} {{word:zuo4}}.",
+      hanzi: "我做前，想怎么做。",
+      en: "I design it.",
+      ru: "Я проектирую это.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:zuo4}} {{word:qian2}}, {{word:xiang3}} {{word:zen3me}} {{word:zuo4}}.",
+      hanzi: "他做前，想怎么做。",
+      en: "He designs it.",
+      ru: "Он проектирует это.",
+    },
+  ],
 });

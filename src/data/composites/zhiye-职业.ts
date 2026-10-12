@@ -8,9 +8,22 @@ export default composite({
   en: "occupation",
   ru: "профессия",
   pos: "noun",
-  hsd: ["{{word:zuo4}}-{{word:de}}"],
-  tts: ["做的"],
-  literal: "what you do",
+  hsd: ["{{word:gong1}}-{{word:zuo4}}"],
+  tts: ["工作"],
+  literal: "work",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:ai4}} {{word:wo3}}-{{word:de}} {{word:gong1}}-{{word:zuo4}}.",
+      hanzi: "我爱我的工作。",
+      en: "I love my occupation.",
+      ru: "Я люблю свою профессию.",
+    },
+    {
+      pinyin: "{{Word:ta1}}-{{word:de}} {{word:gong1}}-{{word:zuo4}} {{word:hen3}} {{word:hao3}}.",
+      hanzi: "他的工作很好。",
+      en: "His occupation is good.",
+      ru: "У него хорошая профессия.",
+    },
+  ],
 });

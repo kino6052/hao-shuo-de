@@ -11,5 +11,18 @@ export default composite({
   hsd: ["{{word:de2}}"],
   tts: ["得"],
   fit: "word",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:de2}} {{word:le}} {{word:tong4}}.",
+      hanzi: "我得了痛。",
+      en: "I suffered pain.",
+      ru: "Я испытал боль.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:de2}} {{word:le}} {{word:bang1}}.",
+      hanzi: "他得了帮。",
+      en: "He received help.",
+      ru: "Он получил помощь.",
+    },
+  ],
 });

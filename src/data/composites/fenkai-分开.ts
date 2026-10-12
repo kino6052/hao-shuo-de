@@ -12,5 +12,18 @@ export default composite({
   tts: ["分开", "不在一起"],
   literal: "not together anymore",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}}-{{word:men}} {{word:fen1}}-{{word:kai1}} {{word:le}}.",
+      hanzi: "我们分开了。",
+      en: "We have separated.",
+      ru: "Мы расстались.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:fen1}}-{{word:kai1}} {{word:na4}}-{{word:xie1}} {{word:shu1}}.",
+      hanzi: "他分开那些书。",
+      en: "He separates those books.",
+      ru: "Он разделяет те книги.",
+    },
+  ],
 });

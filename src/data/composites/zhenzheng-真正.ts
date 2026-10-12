@@ -12,5 +12,18 @@ export default composite({
   tts: ["真的"],
   literal: "real",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:zhen1}}-{{word:de}}.",
+      hanzi: "这是真的。",
+      en: "This is real.",
+      ru: "Это настоящее.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:zhen1}}-{{word:de}} {{word:ai4}} {{word:ni3}}.",
+      hanzi: "他真的爱你。",
+      en: "He truly loves you.",
+      ru: "Он действительно любит тебя.",
+    },
+  ],
 });

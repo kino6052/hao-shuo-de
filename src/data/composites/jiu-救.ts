@@ -12,5 +12,18 @@ export default composite({
   tts: ["帮X不死"],
   literal: "help X not die",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:bang1}} {{word:ta1}} {{word:bu4}} {{word:si3}}.",
+      hanzi: "我帮他不死。",
+      en: "I save him.",
+      ru: "Я спасаю его.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:neng2}} {{word:bang1}} {{word:wo3}} {{word:bu4}} {{word:si3}} {{word:ma}}?",
+      hanzi: "你能帮我不死吗？",
+      en: "Can you save me?",
+      ru: "Ты можешь меня спасти?",
+    },
+  ],
 });

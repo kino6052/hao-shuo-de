@@ -8,8 +8,11 @@ export default composite({
   en: "window",
   ru: "окно",
   pos: "noun",
-  hsd: ["{{word:kan4}}-{{word:wai4}}-{{word:mian4}}-{{word:de}} {{word:kou3}}"],
-  tts: ["看外面的口"],
+  hsd: [
+    "{{word:kan4}} {{word:wai4}}-{{word:mian4}}-{{word:de}} {{word:kou3}}",
+    "{{word:kan4}}-{{word:wai4}}-{{word:mian4}}-{{word:de}} {{word:kou3}}",
+  ],
+  tts: ["看外面的口", "看外面的口"],
   literal: "the opening you look outside through",
   fit: "word",
   note: "kǒu covers doors and windows.",

@@ -8,9 +8,22 @@ export default composite({
   en: "president",
   ru: "президент",
   pos: "noun",
-  hsd: ["{{word:guo2}}-{{word:de}} {{word:tou2}}"],
-  tts: ["国的头"],
-  literal: "the country's head",
+  hsd: ["{{word:guo2}}-{{word:jia1}}-{{word:de}} {{word:jue2}}-{{word:ding4}}-{{word:zhe3}}"],
+  tts: ["国家的决定者"],
+  literal: "the one who decides for the country",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:shi4}} {{word:guo2}}-{{word:jia1}}-{{word:de}} {{word:jue2}}-{{word:ding4}}-{{word:zhe3}}.",
+      hanzi: "他是国家的决定者。",
+      en: "He is the president.",
+      ru: "Он президент.",
+    },
+    {
+      pinyin: "{{Word:guo2}}-{{word:jia1}}-{{word:de}} {{word:jue2}}-{{word:ding4}}-{{word:zhe3}} {{word:zai4}} {{word:jia1}}.",
+      hanzi: "国家的决定者在家。",
+      en: "The president is at home.",
+      ru: "Президент дома.",
+    },
+  ],
 });

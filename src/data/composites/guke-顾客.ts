@@ -12,5 +12,18 @@ export default composite({
   tts: ["买东西的人"],
   literal: "a person who buys",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:shi4}} {{word:mai3}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:ren2}}.",
+      hanzi: "他是买东西的人。",
+      en: "He is a customer.",
+      ru: "Он покупатель.",
+    },
+    {
+      pinyin: "{{Word:mai3}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:ren2}} {{word:hen3}} {{word:duo1}}.",
+      hanzi: "买东西的人很多。",
+      en: "There are many customers.",
+      ru: "Покупателей много.",
+    },
+  ],
 });

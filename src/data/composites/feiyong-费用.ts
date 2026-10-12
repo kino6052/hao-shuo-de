@@ -12,5 +12,18 @@ export default composite({
   tts: ["要的金"],
   literal: "the money it takes",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:yao4}}-{{word:de}} {{word:jin1}} {{word:hen3}} {{word:duo1}}.",
+      hanzi: "这个要的金很多。",
+      en: "The cost of this is high.",
+      ru: "Это стоит дорого.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:yao4}}-{{word:de}} {{word:jin1}} {{word:shi4}} {{word:duo1}}-{{word:shao3}}?",
+      hanzi: "你要的金是多少？",
+      en: "How much do you ask?",
+      ru: "Сколько ты просишь?",
+    },
+  ],
 });

@@ -8,8 +8,22 @@ export default composite({
   en: "business, work",
   ru: "дела",
   pos: "noun",
-  hsd: ["{{word:zuo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
-  tts: ["做的东西"],
-  literal: "the things you do",
+  hsd: ["{{word:yao4}} {{word:zuo4}}-{{word:de}}"],
+  tts: ["要做的"],
+  literal: "what is to be done",
   fit: "plain",
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:wo3}} {{word:yao4}} {{word:zuo4}}-{{word:de}}.",
+      hanzi: "这是我要做的。",
+      en: "This is my business.",
+      ru: "Это моё дело.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:yao4}} {{word:zuo4}}-{{word:de}} {{word:hen3}} {{word:duo1}}.",
+      hanzi: "他要做的很多。",
+      en: "He has a lot of business.",
+      ru: "У него много дел.",
+    },
+  ],
 });

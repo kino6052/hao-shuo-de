@@ -12,5 +12,18 @@ export default composite({
   tts: ["时间"],
   fit: "word",
   note: "Same as 时间.",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:wo3}} {{word:you3}} {{word:shi2}}-{{word:jian1}}.",
+      hanzi: "我有时间。",
+      en: "I have time.",
+      ru: "У меня есть время.",
+    },
+    {
+      pinyin: "{{Word:ni3}} {{word:you3}} {{word:shi2}}-{{word:jian1}} {{word:ma}}?",
+      hanzi: "你有时间吗？",
+      en: "Do you have time?",
+      ru: "У тебя есть время?",
+    },
+  ],
 });

@@ -8,11 +8,22 @@ export default composite({
   en: "media",
   ru: "СМИ",
   pos: "noun",
-  hsd: [
-    "{{word:shuo1}}-{{word:xian4}}-{{word:zai4}}-{{word:fa1}}-{{word:sheng1}}-{{word:shen2me}}-{{word:de}} {{word:gong1}}-{{word:ju4}}",
-  ],
-  tts: ["说现在发生什么的工具"],
-  literal: "tools that tell what's happening now",
+  hsd: ["{{word:zuo4}} {{word:xin1#new}}-\"wén\"-{{word:de}} {{word:ren2}}"],
+  tts: ["做新闻的人"],
+  literal: "people who make the news",
   fit: "plain",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ta1}} {{word:shi4}} {{word:zuo4}} {{word:xin1#new}}-\"wén\"-{{word:de}} {{word:ren2}}.",
+      hanzi: "他是做新闻的人。",
+      en: "He works in the media.",
+      ru: "Он работает в СМИ.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:ai4}} {{word:zuo4}} {{word:xin1#new}}-\"wén\"-{{word:de}} {{word:ren2}}.",
+      hanzi: "我爱做新闻的人。",
+      en: "I like the media people.",
+      ru: "Я люблю людей из СМИ.",
+    },
+  ],
 });

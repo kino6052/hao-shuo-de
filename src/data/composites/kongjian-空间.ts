@@ -12,5 +12,18 @@ export default composite({
   tts: ["空间"],
   literal: "the empty between",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:jia1}} {{word:you3}} {{word:kong1}}-{{word:jian1}}.",
+      hanzi: "这个家有空间。",
+      en: "This home has space.",
+      ru: "В этом доме есть пространство.",
+    },
+    {
+      pinyin: "{{Word:wo3}} {{word:yao4}} {{word:kong1}}-{{word:jian1}}.",
+      hanzi: "我要空间。",
+      en: "I want space.",
+      ru: "Мне нужно пространство.",
+    },
+  ],
 });

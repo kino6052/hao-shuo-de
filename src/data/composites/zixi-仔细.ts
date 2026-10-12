@@ -12,5 +12,18 @@ export default composite({
   tts: ["小心"],
   literal: "small heart",
   fit: "natural",
-  proposed: true,
+  examples: [
+    {
+      pinyin: "{{Word:ni3}} {{word:yao4}} {{word:xiao3}}-{{word:xin1}} {{word:kan4}}.",
+      hanzi: "你要小心看。",
+      en: "Look carefully.",
+      ru: "Смотри внимательно.",
+    },
+    {
+      pinyin: "{{Word:ta1}} {{word:xiao3}}-{{word:xin1}} {{word:zuo4}}.",
+      hanzi: "他小心做。",
+      en: "He works carefully.",
+      ru: "Он работает тщательно.",
+    },
+  ],
 });
