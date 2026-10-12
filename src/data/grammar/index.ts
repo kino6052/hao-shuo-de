@@ -2,14 +2,37 @@
 // Add or delete a file instead; `npm run data` (or the dev server) rewrites this list.
 import m0 from "./adverb-before-verb.ts";
 import m1 from "./bu-negation.ts";
-import m2 from "./de-modifier.ts";
-import m3 from "./hen-adjective.ts";
-import m4 from "./ma-question.ts";
-import m5 from "./measure-word.ts";
-import m6 from "./shi-copula.ts";
-import m7 from "./stacked-modifiers.ts";
-import m8 from "./subject-predicate.ts";
-import m9 from "./svo.ts";
+import m2 from "./can-verb.ts";
+import m3 from "./ci-times.ts";
+import m4 from "./de-modifier.ts";
+import m5 from "./guo-before.ts";
+import m6 from "./hen-adjective.ts";
+import m7 from "./hui-will.ts";
+import m8 from "./kaishi-start.ts";
+import m9 from "./know-how.ts";
+import m10 from "./le-done.ts";
+import m11 from "./learn-verb.ts";
+import m12 from "./love-verb.ts";
+import m13 from "./ma-question.ts";
+import m14 from "./maybe-verb.ts";
+import m15 from "./measure-word.ts";
+import m16 from "./perceive-doing.ts";
+import m17 from "./shi-copula.ts";
+import m18 from "./short-answer.ts";
+import m19 from "./stacked-modifiers.ts";
+import m20 from "./subject-predicate.ts";
+import m21 from "./svo.ts";
+import m22 from "./time-first.ts";
+import m23 from "./verb-bu-verb.ts";
+import m24 from "./wan-finished.ts";
+import m25 from "./wan-hou-after.ts";
+import m26 from "./want-verb.ts";
+import m27 from "./what-question.ts";
+import m28 from "./when-clause.ts";
+import m29 from "./why-how-question.ts";
+import m30 from "./yi-xia-moment.ts";
+import m31 from "./you-again.ts";
+import m32 from "./zai-now.ts";
 
 export const PATTERNS = [
   m0,
@@ -22,4 +45,27 @@ export const PATTERNS = [
   m7,
   m8,
   m9,
+  m10,
+  m11,
+  m12,
+  m13,
+  m14,
+  m15,
+  m16,
+  m17,
+  m18,
+  m19,
+  m20,
+  m21,
+  m22,
+  m23,
+  m24,
+  m25,
+  m26,
+  m27,
+  m28,
+  m29,
+  m30,
+  m31,
+  m32,
 ];

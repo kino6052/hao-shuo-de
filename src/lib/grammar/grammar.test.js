@@ -16,10 +16,10 @@ const parser = createParser({ patterns: PATTERNS, words, composites });
 const items = new Set(coverage.groups.flatMap((g) => g.items.map((i) => `${g.key}:${i.key}`)));
 
 describe('the patterns', () => {
-  test('there are the ten, with distinct ids', () => {
-    expect(PATTERNS.map((p) => p.id).sort()).toEqual(
-      ['adverb-before-verb', 'bu-negation', 'de-modifier', 'hen-adjective', 'ma-question', 'measure-word', 'shi-copula', 'stacked-modifiers', 'subject-predicate', 'svo'],
-    );
+  test('every pattern has its own id', () => {
+    const ids = PATTERNS.map((p) => p.id);
+    expect(new Set(ids).size).toBe(ids.length);
+    expect(ids).toContain('subject-predicate');
   });
 
   test('the rules use only words, classes and parts of a sentence that exist', () => {
