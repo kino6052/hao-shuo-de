@@ -8,6 +8,7 @@ import { loadSource } from '../../../scripts/kb-source.js';
 import { createKb } from './kb.js';
 import { wordRefIds } from '../word-refs.js';
 import { wordsOfText } from './facts.js';
+import { findClingo } from './clingo.js';
 import { parseReport, renderParseReport } from './parse-report.js';
 
 let kb;
@@ -63,8 +64,31 @@ describe('the explorer questions on the real data', () => {
   test('the program for a what-if fits in clingo-wasm even for the commonest words', async () => {
     const common = ['de', 'wo3', 'ni3', 'shi4', 'bu4', 'ta1', 'le', 'ma'].filter((id) => source.words[id]);
     expect(common.length).toBeGreaterThan(3);
-    const r = await kb.remove(common);
-    expect(r.words.map((w) => w.id)).toEqual(common);
+    // the built-in engine is the one with the size limit, so this runs on it even when clingo is installed
+    const before = process.env.KB_CLINGO;
+    process.env.KB_CLINGO = 'wasm';
+    try {
+      const r = await kb.remove(common);
+      expect(r.words.map((w) => w.id)).toEqual(common);
+    } finally {
+      if (before === undefined) delete process.env.KB_CLINGO;
+      else process.env.KB_CLINGO = before;
+    }
+  }, 60_000);
+
+  test.skipIf(!findClingo())('the two engines give the same what-if on the real data', async () => {
+    const before = process.env.KB_CLINGO;
+    const ask = async (setting) => {
+      if (setting === undefined) delete process.env.KB_CLINGO;
+      else process.env.KB_CLINGO = setting;
+      return JSON.stringify(await kb.remove(['wo3', 'de']));
+    };
+    try {
+      expect(await ask('wasm')).toBe(await ask(before));
+    } finally {
+      if (before === undefined) delete process.env.KB_CLINGO;
+      else process.env.KB_CLINGO = before;
+    }
   }, 60_000);
 
   test('every word has a card, and the counts on the card equal the loops', () => {

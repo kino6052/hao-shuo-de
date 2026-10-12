@@ -44,7 +44,8 @@ export function createKb(source, { rules = readRules('base', 'whatif') } = {}) {
     // come back as rows per predicate; ask for them with `#show`.
     // text: the sentences and mentions to load with the language facts. false
     // (default) none; ['deng1', …] those that name these words; true all of
-    // them (too big for clingo-wasm together with the language facts today).
+    // them (too big for the built-in clingo-wasm; fine with native clingo, see
+    // clingo.js).
     async query(program, { models = 1, timeoutMs = 20_000, withBase = true, text = false } = {}) {
       const extra = text === true ? facts.textProgram() : Array.isArray(text) ? facts.textProgram(ids(text)) : '';
       const full = [withBase ? readRules('base') : '', facts.program, extra, program].join('\n');

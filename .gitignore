@@ -173,3 +173,6 @@ dist
 
 # Finder (MacOS) folder config
 .DS_Store
+
+# native clingo for the knowledge base (a release unzipped here; see src/lib/kb/clingo.js)
+tools/clingo/

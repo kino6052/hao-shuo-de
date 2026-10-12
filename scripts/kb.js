@@ -7,6 +7,7 @@
 //   node scripts/kb.js query "<rules>"
 //   node scripts/kb.js parse "Wǒ chī fàn."
 //   node scripts/kb.js parse-report [--lessons 4] [--stdout]
+//   node scripts/kb.js engine
 //
 // parse-report parses every Hao-shuo-de sentence of the first N lessons and
 // writes kb/reports/lessons-1-N-parse.md (--stdout prints it instead).
@@ -23,6 +24,7 @@ import { Worker } from 'worker_threads';
 import { createKb, renderCard, renderRemoval, renderParse } from '../src/lib/kb/kb.js';
 import { parseReport, renderParseReport } from '../src/lib/kb/parse-report.js';
 import { renderCheckForm } from '../src/lib/kb/tools.js';
+import { engine } from '../src/lib/kb/clingo.js';
 
 const ROOT = resolve(fileURLToPath(new URL('.', import.meta.url)), '..');
 // what the answers depend on: the data, the book text, the dictionary helpers, the rules
@@ -122,8 +124,16 @@ async function main(argv) {
       writeFileSync(file, `${text}\n`);
       return console.log(`${report.parsed} of ${report.total} sentences parse (${Math.round(report.rate * 100)}%); written to kb/reports/lessons-1-${n}-parse.md`);
     }
+    case 'engine': {
+      const e = engine();
+      const text =
+        e.name === 'native'
+          ? `native clingo ${e.version} (${[e.path, ...e.args].join(' ')}): no limit on the program's size`
+          : `built-in clingo-wasm: programs over about ${e.limit.toLocaleString('en')} bytes are refused.\nFor no limit, install clingo: python -m venv tools/clingo/venv, then tools/clingo/venv/Scripts/pip install clingo (or put any clingo on the PATH).`;
+      return print(e, text);
+    }
     default:
-      console.log('usage: node scripts/kb.js word|remove|check-form|query|parse|parse-report …  (--json for data)');
+      console.log('usage: node scripts/kb.js word|remove|check-form|query|parse|parse-report|engine …  (--json for data)');
       process.exitCode = command ? 1 : 0;
   }
 }
