@@ -49,14 +49,14 @@ describe('the protocol', () => {
     expect((await rpc('nope')).error.code).toBe(-32601);
   });
 
-  test('tools/list names the eight tools, each with a description and a schema', async () => {
+  test('tools/list names the eleven tools, each with a description and a schema', async () => {
     const { tools } = (await rpc('tools/list')).result;
-    expect(tools.map((t) => t.name)).toEqual(['kb_word', 'kb_remove', 'kb_parse', 'kb_check_form', 'kb_atoms', 'kb_relations', 'kb_scoreboard', 'kb_query']);
+    expect(tools.map((t) => t.name)).toEqual(['kb_word', 'kb_remove', 'kb_parse', 'kb_check_form', 'kb_atoms', 'kb_relations', 'kb_candidates', 'kb_add', 'kb_swaps', 'kb_scoreboard', 'kb_query']);
     for (const t of TOOLS) {
       expect(t.description.length).toBeGreaterThan(40);
       expect(t.inputSchema.type).toBe('object');
-      // kb_atoms, kb_relations and kb_scoreboard ask for nothing: no name is the whole report, no flag is the numbers now
-      if (!['kb_atoms', 'kb_relations', 'kb_scoreboard'].includes(t.name)) expect(t.inputSchema.required.length).toBeGreaterThan(0);
+      // kb_atoms, kb_relations, kb_candidates, kb_swaps and kb_scoreboard ask for nothing: no name is the whole report, no flag is the numbers now
+      if (!['kb_atoms', 'kb_relations', 'kb_candidates', 'kb_swaps', 'kb_scoreboard'].includes(t.name)) expect(t.inputSchema.required.length).toBeGreaterThan(0);
       for (const r of t.inputSchema.required ?? []) expect(t.inputSchema.properties[r]).toBeDefined();
     }
   });
@@ -118,6 +118,17 @@ describe('the tools answer with the text the command line prints', () => {
     const bad = await call('kb_relations', { kind: 'cousin' });
     expect(bad.result.isError).toBe(true);
     expect(textOf(bad)).toContain('the kinds are');
+  });
+
+  test('kb_candidates ranks the words that could go; kb_add and kb_swaps need the frequency list for Mandarin', async () => {
+    const text = textOf(await call('kb_candidates', { limit: 3 }));
+    expect(text).toMatch(/^Words that could go, the cheapest first \(12 words/);
+    expect(text).toContain('… and 9 more');
+    expect(textOf(await call('kb_candidates', { kind: 'add' }))).toContain('No frequency list');
+    expect(textOf(await call('kb_add', { root: '器' }))).toContain('No frequency list');
+    expect(textOf(await call('kb_swaps', { k: 2 }))).toMatch(/^No trade of 2 root/);
+    expect((await call('kb_candidates', { kind: 'both' })).result.isError).toBe(true);
+    expect((await call('kb_add', {})).result.isError).toBe(true);
   });
 
   test('kb_atoms is the report, or one word\'s line', async () => {
@@ -190,7 +201,7 @@ describe('the real server over stdio, on the real data', () => {
       expect(init.result.serverInfo.name).toBe('hao-shuo-de-kb');
       send({ jsonrpc: '2.0', method: 'notifications/initialized' });
       const list = await ask(2, 'tools/list', {});
-      expect(list.result.tools).toHaveLength(8);
+      expect(list.result.tools).toHaveLength(11);
       const drop = await ask(3, 'tools/call', { name: 'kb_remove', arguments: { words: 'dēng' } });
       const text = drop.result.content[0].text;
       expect(drop.result.isError).toBeUndefined();

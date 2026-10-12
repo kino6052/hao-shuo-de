@@ -79,6 +79,13 @@ pre.text { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font: 400 
 .board-card { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; background: var(--paper); display: grid; gap: 4px; align-content: start; min-height: 106px; }
 .board-card .big { font: 600 24px/1.1 var(--font-body); font-variant-numeric: tabular-nums; }
 .board-card svg { display: block; max-width: 100%; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font: 500 11px/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.scroll { overflow-x: auto; }
+button.link-chip { cursor: pointer; }
+h3 { margin: 0 0 8px; font-size: 16px; }
 .row { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
 .label { font: 500 11px/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 details summary { cursor: pointer; color: var(--accent); font-size: 14px; }
@@ -98,6 +105,9 @@ details summary { cursor: pointer; color: var(--accent); font-size: 14px; }
     <button class="tab" role="tab" id="tab-remove" data-mode="remove" aria-selected="false">Drop a word</button>
     <button class="tab" role="tab" id="tab-parse" data-mode="parse" aria-selected="false">Parse a sentence</button>
     <button class="tab" role="tab" id="tab-atoms" data-mode="atoms" aria-selected="false">Atoms</button>
+    <button class="tab" role="tab" id="tab-candidates" data-mode="candidates" aria-selected="false">Candidates</button>
+    <button class="tab" role="tab" id="tab-add" data-mode="add" aria-selected="false">Add a root</button>
+    <button class="tab" role="tab" id="tab-relations" data-mode="relations" aria-selected="false">Relations</button>
     <button class="tab" role="tab" id="tab-scoreboard" data-mode="scoreboard" aria-selected="false">Scoreboard</button>
   </div>
 
@@ -125,6 +135,9 @@ const HINTS = {
   remove: 'One or more words, separated by spaces or commas. Nothing is changed; this only shows what would have to change.',
   parse: 'Plain pinyin ("Wǒ shì rén.") or text with word references. Several sentences are checked one by one.',
   atoms: 'Which words the others cannot be said from. Leave the box empty for the whole report, or name a word to see where it stands and how it is said.',
+  candidates: 'The words that cost least to drop, the roots that would complete the most Mandarin words, and the best trades. Nothing to type. Worked out directly, not by the solver; the same lists as node scripts/kb.js audit.',
+  add: 'One hanzi: the words it would complete, the ones that still need more roots, the composites it lets be spelled, and its sound against the words we have.',
+  relations: 'The relations the data states or implies. Leave the box empty for the counts, or name a kind (opposite, close, same-form, kind-of, agent, category, ...) to see each with its reason.',
   scoreboard: 'The language\'s numbers now, charted against the rows stored after each change (kb/scoreboard.csv). Nothing to type.',
 };
 let mode = 'word';
@@ -135,10 +148,10 @@ const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&l
 function setMode(m, { keep = false } = {}) {
   mode = m;
   for (const t of document.querySelectorAll('.tab')) t.setAttribute('aria-selected', String(t.dataset.mode === m));
-  $('field-name').hidden = m === 'parse' || m === 'scoreboard';
+  $('field-name').hidden = m === 'parse' || m === 'scoreboard' || m === 'candidates';
   $('field-text').hidden = m !== 'parse';
-  $('name').placeholder = m === 'remove' ? 'dēng, fàn …' : m === 'atoms' ? 'a word (optional)' : 'dēng, deng1 or 灯';
-  $('name').setAttribute('aria-label', m === 'remove' ? 'Words to drop' : 'Word');
+  $('name').placeholder = m === 'remove' ? 'dēng, fàn …' : m === 'atoms' ? 'a word (optional)' : m === 'add' ? 'a hanzi, e.g. 电' : m === 'relations' ? 'a kind (optional), e.g. opposite' : 'dēng, deng1 or 灯';
+  $('name').setAttribute('aria-label', m === 'remove' ? 'Words to drop' : m === 'add' ? 'Root' : m === 'relations' ? 'Kind' : 'Word');
   $('hint').textContent = HINTS[m];
   if (!keep) { $('out').innerHTML = ''; $('status').textContent = ''; $('status').className = 'status'; }
 }
@@ -239,6 +252,34 @@ function scoreboard(d) {
     <section class="card"><details><summary>The same as text</summary><pre class="text">${esc(d.text)}</pre></details></section>`;
 }
 
+// the parts of a cost, shortened for a table cell
+const PART_LABEL = { redo: 'redo', loses: 'loses form', headLost: 'head', lessonLine: 'lessons', compositeExample: 'examples', mention: 'mentions', coverageLost: 'coverage lost', coverageTouched: 'coverage touched', definition: 'definitions', sense: 'senses', relation: 'relations', mandarin: 'Mandarin' };
+const costText = (parts) => Object.entries(parts).filter(([, v]) => v).map(([k, v]) => (PART_LABEL[k] ?? k) + ' ' + Math.round(v * 100) / 100).join(', ') || 'nothing';
+const round = (x) => Math.round(x * 100) / 100;
+
+function candidates(d) {
+  const said = (s) => (s.source === 'atom' ? 'an atom' : s.source === 'none' ? 'no draft' : esc(s.forms.join(' / ')) + (s.verdict === 'clumsy' ? ' (clumsy)' : ''));
+  const words = d.remove.map((r) => '<tr><td><button class="link" data-remove="' + esc(r.id) + '">' + esc(r.term) + ' ' + esc(r.hanzi) + '</button></td><td class="num">' + round(r.cost) + '</td><td>' + esc(costText(r.parts)) + '</td><td>' + said(r.said) + '</td></tr>').join('');
+  const roots = (d.roots ?? []).slice(0, 30).map((r) => '<tr><td><button class="link" data-add="' + esc(r.root) + '">' + esc(r.root) + '</button> ' + esc(r.sound ?? '') + '</td><td class="num">' + r.score + '</td><td>' + esc(r.completes.slice(0, 8).map((w) => w.zh).join(' ')) + ' (' + r.completes.length + ')</td><td>' + (r.as.kind === 'sense' ? 'sense of ' + esc(r.as.term + ' ' + r.as.hanzi) : 'new word') + (r.toneNeighbour ? ' · near ' + esc(r.toneNeighbour.term + ' ' + r.toneNeighbour.hanzi) : '') + '</td></tr>').join('');
+  const trades = d.swaps.map((s) => '<tr><td class="num">' + s.k + '</td><td>' + (s.adds.length ? 'bring in ' + esc(s.adds.join(' ')) + '; drop ' + esc(s.removes.join(', ')) : 'no trade pays') + '</td><td class="num">' + round(s.value) + '</td><td>+' + s.mandarin.gainedWords.length + ' / -' + s.mandarin.lostWords.length + ' Mandarin words, drop costs ' + round(s.cost) + '</td></tr>').join('');
+  const none = '<p class="hint">No frequency list found (set HSD_FREQ_CSV).</p>';
+  return '<section class="card"><h3>Words that could go (the ' + d.remove.length + ' cheapest of ' + d.total + ')</h3><div class="scroll"><table><thead><tr><th>word</th><th>cost</th><th>what it costs</th><th>said as (draft)</th></tr></thead><tbody>' + words + '</tbody></table></div></section>' +
+    '<section class="card"><h3>Roots that would complete the most Mandarin words</h3>' + (d.roots ? '<div class="scroll"><table><thead><tr><th>root</th><th>score</th><th>completes</th><th>as</th></tr></thead><tbody>' + roots + '</tbody></table></div>' : none) + '</section>' +
+    '<section class="card"><h3>Trades: K roots in, K words out</h3>' + (trades ? '<div class="scroll"><table><thead><tr><th>K</th><th>trade</th><th>value</th><th>effect</th></tr></thead><tbody>' + trades + '</tbody></table></div>' : none) + '</section>' +
+    '<section class="card"><details><summary>The same as text</summary><pre class="text">' + esc(d.text) + '</pre></details></section>';
+}
+
+function addition(d) {
+  const r = d.report;
+  const chips = r.noFrequencies ? '' : '<div class="chips"><span class="chip ' + (r.completes.length ? 'hit' : 'zero') + '">' + r.completes.length + ' words completed</span><span class="chip">' + r.pending.length + ' need more roots</span><span class="chip">' + r.spellable.length + ' composites it lets be spelled</span></div>';
+  return '<section class="card">' + chips + '<pre class="text">' + esc(d.text) + '</pre></section>';
+}
+
+function relationsReport(d) {
+  const chips = d.kinds.map((k) => '<button class="chip link-chip" data-kind="' + esc(k) + '">' + esc(k) + ' · ' + d.counts[k].accepted + ' accepted, ' + d.counts[k].proposed + ' proposed</button>').join('');
+  return '<section class="card"><div class="chips">' + chips + '</div><pre class="text">' + esc(d.text) + '</pre></section>';
+}
+
 function parsed(d) {
   if (d.view.error) return `<section class="card"><p>${esc(d.view.error)}</p></section>`;
   return d.view.sentences.map((s) => `<section class="card sentence">
@@ -257,15 +298,15 @@ async function ask() {
   const my = ++seq;
   const name = $('name').value.trim();
   const text = $('text').value.trim();
-  if (mode !== 'parse' && mode !== 'atoms' && mode !== 'scoreboard' && !name) return say('Type a word.');
+  if (mode !== 'parse' && mode !== 'atoms' && mode !== 'scoreboard' && mode !== 'candidates' && mode !== 'relations' && !name) return say(mode === 'add' ? 'Type a hanzi.' : 'Type a word.');
   if (mode === 'parse' && !text) return say('Type a sentence.');
   history.replaceState(null, '', `#${mode}=${encodeURIComponent(mode === 'parse' ? text : name)}`);
-  say(mode === 'remove' || mode === 'atoms' || mode === 'scoreboard' ? 'Working it out (clingo)…' : 'Looking…');
+  say(mode === 'remove' || mode === 'atoms' || mode === 'scoreboard' ? 'Working it out (clingo)…' : mode === 'candidates' ? 'Working it out (a few seconds)…' : 'Looking…');
   $('out').innerHTML = '';
   try {
-    const d = mode === 'word' ? await api('word', { name }) : mode === 'remove' ? await api('remove', { names: name }) : mode === 'atoms' ? await api('atoms', { name }) : mode === 'scoreboard' ? await api('scoreboard', {}) : await api('parse', { text });
+    const d = mode === 'word' ? await api('word', { name }) : mode === 'remove' ? await api('remove', { names: name }) : mode === 'atoms' ? await api('atoms', { name }) : mode === 'scoreboard' ? await api('scoreboard', {}) : mode === 'candidates' ? await api('candidates', {}) : mode === 'add' ? await api('add', { root: name }) : mode === 'relations' ? await api('relations', { kind: name, limit: 40 }) : await api('parse', { text });
     if (my !== seq) return;
-    $('out').innerHTML = mode === 'word' ? wordCard(d) : mode === 'remove' ? removal(d) : mode === 'atoms' ? atomsReport(d) : mode === 'scoreboard' ? scoreboard(d) : parsed(d);
+    $('out').innerHTML = mode === 'word' ? wordCard(d) : mode === 'remove' ? removal(d) : mode === 'atoms' ? atomsReport(d) : mode === 'scoreboard' ? scoreboard(d) : mode === 'candidates' ? candidates(d) : mode === 'add' ? addition(d) : mode === 'relations' ? relationsReport(d) : parsed(d);
     say('');
   } catch (e) {
     if (my === seq) say(e.message, true);
@@ -289,20 +330,20 @@ $('name').addEventListener('input', () => {
 $('ask').addEventListener('submit', (e) => { e.preventDefault(); ask(); });
 for (const t of document.querySelectorAll('.tab')) t.addEventListener('click', () => {
   setMode(t.dataset.mode);
-  // the atoms report and the scoreboard need no question, so they open with their answer
-  if (t.dataset.mode === 'atoms' || t.dataset.mode === 'scoreboard') ask();
+  // these need no question, so they open with their answer
+  if (['atoms', 'scoreboard', 'candidates', 'relations'].includes(t.dataset.mode)) ask();
 });
 $('out').addEventListener('click', (e) => {
-  const id = e.target.dataset?.remove;
-  if (!id) return;
-  setMode('remove');
-  $('name').value = id;
+  const { remove, add, kind } = e.target.dataset ?? {};
+  if (!remove && !add && !kind) return;
+  setMode(remove ? 'remove' : add ? 'add' : 'relations');
+  $('name').value = remove ?? add ?? kind;
   ask();
 });
 
-// #word=deng1, #remove=deng1,fan4, #parse=Wǒ shì rén., #atoms= or #atoms=deng1, #scoreboard=
+// #word=deng1, #remove=deng1,fan4, #parse=Wǒ shì rén., #atoms= or #atoms=deng1, #candidates=, #add=电, #relations=opposite, #scoreboard=
 function fromHash() {
-  const m = /^#(word|remove|parse|atoms|scoreboard)=(.*)$/.exec(location.hash);
+  const m = /^#(word|remove|parse|atoms|scoreboard|candidates|add|relations)=(.*)$/.exec(location.hash);
   if (!m) return setMode('word');
   setMode(m[1], { keep: true });
   (m[1] === 'parse' ? $('text') : $('name')).value = decodeURIComponent(m[2]);

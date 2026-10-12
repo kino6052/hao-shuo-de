@@ -8,12 +8,24 @@
 //   node scripts/kb.js parse "Wǒ chī fàn."
 //   node scripts/kb.js atoms [word]
 //   node scripts/kb.js relations [kind] [--status proposed|accepted] [--limit N]
+//   node scripts/kb.js candidates [remove|add] [--limit N]
+//   node scripts/kb.js add <hanzi>
+//   node scripts/kb.js swaps [--k N]
+//   node scripts/kb.js audit [--stdout]
 //   node scripts/kb.js parse-report [--lessons 4] [--stdout]
 //   node scripts/kb.js scoreboard [--append] [--label "what changed"] [--no-atoms]
 //   node scripts/kb.js engine
 //
 // parse-report parses every Hao-shuo-de sentence of the first N lessons and
 // writes kb/reports/lessons-1-N-parse.md (--stdout prints it instead).
+//
+// candidates ranks the words that could go (cheapest first, with how each would be said
+// without it) or the roots that would complete the most Mandarin words; add says what one
+// root would bring; swaps finds the best trade of K roots in for K words out. The Mandarin
+// numbers need the frequency list (scripts/frequency-list.js).
+//
+// audit writes kb/reports/candidates-audit.md: the words that cost least to drop, the best roots
+// to add and the best trades, for the author to read.
 //
 // scoreboard measures the language now and prints it against the last stored
 // row; --append stores the row in kb/scoreboard.csv (refactor --write does
@@ -28,7 +40,9 @@ import { mkdirSync, readdirSync, statSync, writeFileSync } from 'fs';
 import { resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { Worker } from 'worker_threads';
-import { createKb, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations } from '../src/lib/kb/kb.js';
+import { createKb, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps, renderAudit } from '../src/lib/kb/kb.js';
+import { loadFrequencyList } from './frequency-list.js';
+import { loadDrafts } from './kb-drafts.js';
 import { parseReport, renderParseReport } from '../src/lib/kb/parse-report.js';
 import { renderCheckForm } from '../src/lib/kb/tools.js';
 import { engine } from '../src/lib/kb/clingo.js';
@@ -65,13 +79,15 @@ export function reloadSource() {
 }
 
 let cached = null;
+let frequencies; // the Mandarin frequency list, read once (null when there is none)
 
 // -> the KB for the data as it is now. `force` rebuilds.
 export async function openKb({ force = false } = {}) {
   const stamp = fingerprint();
   if (!force && cached && cached.stamp === stamp) return cached.kb;
   const source = await reloadSource();
-  const kb = createKb(source);
+  frequencies ??= loadFrequencyList();
+  const kb = createKb(source, { freq: frequencies, drafts: await loadDrafts(source) });
   cached = { stamp, kb };
   return kb;
 }
@@ -138,6 +154,36 @@ async function main(argv) {
       const report = kb.relations();
       return print(report, renderRelations(report, { kind: rest[0], status, limit }));
     }
+    case 'candidates': {
+      const limit = Number(option(rest, '--limit') ?? 20);
+      const which = rest[0] ?? 'remove';
+      if (which === 'remove') {
+        const rows = kb.candidates().removalCandidates({ drafts: kb.drafts });
+        return print(rows, renderRemovalCandidates(rows, { limit }));
+      }
+      if (which === 'add') {
+        const rows = kb.candidates().rootCandidates();
+        return print(rows, renderRootCandidates(rows, { limit }));
+      }
+      throw new Error('usage: kb candidates [remove|add] [--limit N]');
+    }
+    case 'add': {
+      if (!rest.length) throw new Error('usage: kb add <hanzi>');
+      const r = kb.candidates().addition(rest[0]);
+      return print(r, renderAddition(r));
+    }
+    case 'swaps': {
+      const k = Number(option(rest, '--k') ?? 1);
+      const r = kb.candidates().swaps({ k, drafts: kb.drafts });
+      return print(r, renderSwaps(r));
+    }
+    case 'audit': {
+      const text = renderAudit(kb.candidates(), { drafts: kb.drafts });
+      if (rest.includes('--stdout')) return console.log(text);
+      mkdirSync(resolve(ROOT, 'kb/reports'), { recursive: true });
+      writeFileSync(resolve(ROOT, 'kb/reports/candidates-audit.md'), text);
+      return console.log('written to kb/reports/candidates-audit.md');
+    }
     case 'scoreboard': {
       const file = resolve(ROOT, 'kb/scoreboard.csv');
       const label = option(rest, '--label') ?? '';
@@ -165,7 +211,7 @@ async function main(argv) {
       return print(e, text);
     }
     default:
-      console.log('usage: node scripts/kb.js word|remove|check-form|query|parse|atoms|parse-report|engine …  (--json for data)');
+      console.log('usage: node scripts/kb.js word|remove|check-form|query|parse|atoms|relations|candidates|add|swaps|scoreboard|parse-report|engine …  (--json for data)');
       process.exitCode = command ? 1 : 0;
   }
 }

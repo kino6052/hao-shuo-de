@@ -10,6 +10,10 @@
 //   GET /__kb/parse?text=         { view, text }: does it parse, and how
 //   GET /__kb/atoms?name=         { counts, hidden, line?, text }: which words are atoms; with a
 //                                 name, that word's line (its sort and how it is said)
+//   GET /__kb/candidates          { remove, roots, swaps, text }: the cheapest words to drop, the best roots to add
+//                                 and the best trades of 1, 2 and 3 (the audit, as data)
+//   GET /__kb/add?root=           { report, text }: what one hanzi would bring as a root
+//   GET /__kb/relations?kind=     { counts, kinds, text }: the relations the data states or implies
 //   GET /__kb/scoreboard          { now, rows, columns, text }: the language's numbers now, and the stored
 //                                 rows (kb/scoreboard.csv) to chart them against
 //
@@ -48,7 +52,7 @@ export default function kbPlugin() {
           if (url.pathname === '/' || url.pathname === '') return send(res, 200, 'text/html; charset=utf-8', readFileSync(PAGE, 'utf-8'));
 
           const { openKb } = await load('scripts/kb.js');
-          const { renderCard, renderRemoval, renderParse, viewParse, renderAtoms, renderAtomWord } = await load('src/lib/kb/kb.js');
+          const { renderCard, renderRemoval, renderParse, viewParse, renderAtoms, renderAtomWord, renderRelations, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps } = await load('src/lib/kb/kb.js');
           const kb = await openKb();
           switch (url.pathname) {
             case '/find':
@@ -68,6 +72,24 @@ export default function kbPlugin() {
               if (!get('name')) return json(res, { counts, hidden, text: renderAtoms(report) });
               const line = await kb.atoms(get('name'));
               return json(res, { counts, hidden, line, text: renderAtomWord(report, line) });
+            }
+            case '/candidates': {
+              const model = kb.candidates();
+              const remove = model.removalCandidates({ drafts: kb.drafts });
+              const roots = model.rootCandidates();
+              const swaps = roots ? [1, 2, 3].map((k) => model.swaps({ k, drafts: kb.drafts })) : [];
+              const text = [renderRemovalCandidates(remove, { limit: 30 }), renderRootCandidates(roots, { limit: 30 }), ...swaps.map(renderSwaps)].join('\n\n');
+              return json(res, { remove: remove.slice(0, 60), total: remove.length, roots: roots?.slice(0, 60) ?? null, swaps, text });
+            }
+            case '/add': {
+              const report = kb.candidates().addition(get('root'));
+              return json(res, { report, text: renderAddition(report) });
+            }
+            case '/relations': {
+              const report = kb.relations();
+              const limit = Number(get('limit')) > 0 ? Number(get('limit')) : 12;
+              const text = renderRelations(report, { kind: get('kind') || undefined, status: get('status') || undefined, limit });
+              return json(res, { counts: report.counts, kinds: report.kinds, text });
             }
             case '/scoreboard': {
               const { scoreboardRow, readScoreboard, renderScoreboard, COLUMNS } = await load('src/lib/kb/scoreboard.js');

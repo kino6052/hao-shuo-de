@@ -7,7 +7,7 @@
 //   callTool(kb, name, args)      -> the answer as text (throws on a bad question)
 
 import { fileURLToPath } from 'node:url';
-import { renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations } from './kb.js';
+import { renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps } from './kb.js';
 import { scoreboardRow, readScoreboard, renderScoreboard, renderHistory } from './scoreboard.js';
 
 // the stored rows (refactor --write adds one after every change)
@@ -100,6 +100,42 @@ export const TOOLS = [
     },
   },
   {
+    name: 'kb_candidates',
+    description:
+      'Which words could go, or which roots could be added. kind "remove" (the default): every word that is not marked as an atom, the cheapest to drop first, each with what dropping it costs ' +
+      '(composites to redo, book lines to rewrite, coverage lost, Mandarin words that could no longer be written) and how it would be said without it (its paraphrase or the proposed draft). ' +
+      'kind "add": the hanzi the language does not have, ranked by the common Mandarin words they would complete. The cost is a sum of parts with set weights (COSTS in candidates.js); the parts are shown next to it. ' +
+      'For one set of words with the reason for every line use kb_remove; for one root use kb_add.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        kind: { type: 'string', enum: ['remove', 'add'], description: 'remove (default): words that could go. add: roots that could come in.' },
+        limit: { type: 'integer', description: 'How many to list (default 20).' },
+      },
+    },
+  },
+  {
+    name: 'kb_add',
+    description:
+      'What adding one hanzi as a root would bring: the Mandarin words it completes (the other hanzi of the word are already here), the ones that still need more roots, ' +
+      'the composites it would let be spelled in hanzi, and its sound against the words we have (a new word, or a sense of the word with that sound; the neighbour with another tone).',
+    inputSchema: {
+      type: 'object',
+      properties: { root: { type: 'string', description: 'The hanzi (the first one is used).' } },
+      required: ['root'],
+    },
+  },
+  {
+    name: 'kb_swaps',
+    description:
+      'The best trade of K roots in for K words out, so the core keeps its size: the value is the Mandarin words that become writable less everything dropping the words costs (see kb_candidates). ' +
+      'K = 1 looks at every pair; for more it builds on the best pair and improves one change at a time, which is how it stays under a few seconds. Gives the roots, the words, the Mandarin words gained and lost, and the cost.',
+    inputSchema: {
+      type: 'object',
+      properties: { k: { type: 'integer', description: 'How many roots to bring in (and words to drop). Default 1; 1 to 10.' } },
+    },
+  },
+  {
     name: 'kb_scoreboard',
     description:
       'The numbers about the language as it is now (words, composites, average description length, words reviewed, the smallest defining set, true atoms, hidden vocabulary, coverage, parse rate, grammar patterns), ' +
@@ -164,6 +200,19 @@ export async function callTool(kb, name, args = {}, { scoreboardFile = SCOREBOAR
     }
     case 'kb_relations':
       return renderRelations(kb.relations(), { kind: args.kind || undefined, status: args.status || undefined, limit: Number(args.limit) > 0 ? Number(args.limit) : 8 });
+    case 'kb_candidates': {
+      const limit = Number(args.limit) > 0 ? Number(args.limit) : 20;
+      const model = kb.candidates();
+      if (!args.kind || args.kind === 'remove') return renderRemovalCandidates(model.removalCandidates({ drafts: kb.drafts }), { limit });
+      if (args.kind === 'add') return renderRootCandidates(model.rootCandidates(), { limit });
+      throw new Error('kind is remove or add');
+    }
+    case 'kb_add':
+      return renderAddition(kb.candidates().addition(String(need(args, 'root'))));
+    case 'kb_swaps': {
+      const k = Math.min(Math.max(Math.floor(Number(args.k)) || 1, 1), 10);
+      return renderSwaps(kb.candidates().swaps({ k, drafts: kb.drafts }));
+    }
     case 'kb_scoreboard': {
       const rows = readScoreboard(scoreboardFile);
       if (args.history) return renderHistory(rows);

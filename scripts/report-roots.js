@@ -21,63 +21,14 @@
 //   npm run report-roots -- --show 电        the words one root would complete
 //   npm run report-roots -- --json
 
-import { existsSync, readFileSync } from 'fs';
-import { resolve } from 'path';
 import dictionaryData from '../src/data/dictionary.ts';
 import compositesData from '../src/data/composites.ts';
-import { ROOT } from './refactor-lib.js';
+import { FREQ_CSV, loadFrequencyList } from './frequency-list.js';
+import { syllables } from '../src/lib/pinyin-syllables.js';
 import { toneless } from '../src/lib/word-refs.js';
 
-const CANDIDATES = [
-  process.env.HSD_FREQ_CSV,
-  resolve(ROOT, '../misc/translation/src/dictionaries/dictionary.raw.csv'),
-  resolve(ROOT, '../kino6052/jiandanhua-dictionary/misc/translation/src/dictionaries/dictionary.raw.csv'),
-  resolve(ROOT, '../jiandanhua-dictionary/misc/translation/src/dictionaries/dictionary.raw.csv'),
-].filter(Boolean);
-
-export const FREQ_CSV = CANDIDATES.find((p) => existsSync(p)) ?? null;
-
-function parseLine(line) {
-  const out = [];
-  let cur = '';
-  let q = false;
-  for (const ch of line) {
-    if (ch === '"') q = !q;
-    else if (ch === ',' && !q) out.push(cur), (cur = '');
-    else cur += ch;
-  }
-  out.push(cur);
-  return out;
-}
-
-// -> [{ zh, py, pos, speaking, writing, rank }] in frequency order (speaking
-// commonality, then writing), without the ignored rows; one row per word.
-export function loadFrequencyList(path = FREQ_CSV) {
-  if (!path) return null;
-  const rows = readFileSync(path, 'utf-8').trim().split('\n').slice(1).map(parseLine);
-  const seen = new Set();
-  return rows
-    .map((r) => ({ n: Number(r[0]), zh: r[1].replace(/\d+$/, ''), py: r[2], pos: r[3], speaking: Number(r[9]), writing: Number(r[10]), ignored: !!r[11]?.trim() }))
-    .filter((r) => !r.ignored && r.zh)
-    .sort((a, b) => b.speaking - a.speaking || b.writing - a.writing || a.n - b.n)
-    .filter((r) => (seen.has(r.zh) ? false : seen.add(r.zh)))
-    .map((r, i) => ({ ...r, rank: i + 1 }));
-}
-
-const V = 'aeiouüvāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ';
-const SYL = new RegExp(`(?:zh|ch|sh|[bpmfdtnlgkhjqxrzcsyw])?[${V}]+(?:ng(?![${V}])|n(?![${V}])|r(?![${V}]))?`, 'gi');
-
-// -> the syllables of a pinyin word, one per character, or null if they don't line up.
-export function syllables(py, zh) {
-  const s = py.normalize('NFC').toLowerCase().replace(new RegExp(`[^a-z${V}]`, 'g'), ' ').match(SYL) ?? [];
-  const chars = [...zh];
-  // erhua: 一会儿 is yīhuìr, two syllables for three characters
-  if (s.length === chars.length - 1 && chars[chars.length - 1] === '儿' && /r$/.test(s[s.length - 1])) {
-    s[s.length - 1] = s[s.length - 1].slice(0, -1);
-    s.push('r');
-  }
-  return s.length === chars.length ? s : null;
-}
+export { FREQ_CSV, loadFrequencyList };
+export { syllables };
 
 if (process.argv[1]?.endsWith('report-roots.js')) {
   if (!FREQ_CSV) {

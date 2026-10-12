@@ -93,7 +93,7 @@ export function formSlots(form, words) {
   return out;
 }
 
-// -> { program, lines, sentences, heads, counts } for a source (see the header).
+// -> { program, lines, sentences, mentions, heads, counts } for a source (see the header).
 export function buildFacts(source) {
   const lines = new Set();
   const lang = new Set();
@@ -258,6 +258,7 @@ export function buildFacts(source) {
     textProgram: (about) => textProgram(sentences, mentions, about),
     lines: list,
     sentences,
+    mentions,
     heads,
     counts: {
       words: Object.keys(words).length,
