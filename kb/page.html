@@ -92,6 +92,7 @@ details summary { cursor: pointer; color: var(--accent); font-size: 14px; }
     <button class="tab" role="tab" id="tab-word" data-mode="word" aria-selected="true">Word</button>
     <button class="tab" role="tab" id="tab-remove" data-mode="remove" aria-selected="false">Drop a word</button>
     <button class="tab" role="tab" id="tab-parse" data-mode="parse" aria-selected="false">Parse a sentence</button>
+    <button class="tab" role="tab" id="tab-atoms" data-mode="atoms" aria-selected="false">Atoms</button>
   </div>
 
   <form id="ask" autocomplete="off">
@@ -117,6 +118,7 @@ const HINTS = {
   word: 'One word, by its pinyin, its id (hao3) or its hanzi.',
   remove: 'One or more words, separated by spaces or commas. Nothing is changed; this only shows what would have to change.',
   parse: 'Plain pinyin ("Wǒ shì rén.") or text with word references. Several sentences are checked one by one.',
+  atoms: 'Which words the others cannot be said from. Leave the box empty for the whole report, or name a word to see where it stands and how it is said.',
 };
 let mode = 'word';
 let seq = 0;
@@ -128,7 +130,7 @@ function setMode(m, { keep = false } = {}) {
   for (const t of document.querySelectorAll('.tab')) t.setAttribute('aria-selected', String(t.dataset.mode === m));
   $('field-name').hidden = m === 'parse';
   $('field-text').hidden = m !== 'parse';
-  $('name').placeholder = m === 'remove' ? 'dēng, fàn …' : 'dēng, deng1 or 灯';
+  $('name').placeholder = m === 'remove' ? 'dēng, fàn …' : m === 'atoms' ? 'a word (optional)' : 'dēng, deng1 or 灯';
   $('name').setAttribute('aria-label', m === 'remove' ? 'Words to drop' : 'Word');
   $('hint').textContent = HINTS[m];
   if (!keep) { $('out').innerHTML = ''; $('status').textContent = ''; $('status').className = 'status'; }
@@ -172,6 +174,23 @@ function removal(d) {
   return `<section class="card"><div class="chips">${chips}</div><pre class="text">${esc(d.text)}</pre></section>`;
 }
 
+function atomsReport(d) {
+  const c = d.counts;
+  const chip = (n, label, hit) => `<span class="chip ${hit ? 'hit' : n ? '' : 'zero'}">${n} ${esc(label)}</span>`;
+  const chips = [
+    chip(c.atoms, `true atoms (${c.marked} marked, ${c.clumsy} clumsy)`),
+    chip(c.swappable, 'swappable'),
+    chip(c.secondary, 'secondary'),
+    chip(c.unreviewed, 'not reviewed yet', c.unreviewed > 0),
+    chip(c.kernel, 'in the kernel'),
+    chip(c.core, 'in the core'),
+    chip(d.hidden.spelled, 'spelled forms (hidden vocabulary)'),
+    chip(d.hidden.undecided, 'compounds still undecided', d.hidden.undecided > 0),
+  ].join('');
+  const kind = d.line ? `<p class="hint">${esc(d.line.kind)}</p>` : '';
+  return `<section class="card"><div class="chips">${chips}</div>${kind}<pre class="text">${esc(d.text)}</pre></section>`;
+}
+
 function parsed(d) {
   if (d.view.error) return `<section class="card"><p>${esc(d.view.error)}</p></section>`;
   return d.view.sentences.map((s) => `<section class="card sentence">
@@ -190,15 +209,15 @@ async function ask() {
   const my = ++seq;
   const name = $('name').value.trim();
   const text = $('text').value.trim();
-  if (mode !== 'parse' && !name) return say('Type a word.');
+  if (mode !== 'parse' && mode !== 'atoms' && !name) return say('Type a word.');
   if (mode === 'parse' && !text) return say('Type a sentence.');
   history.replaceState(null, '', `#${mode}=${encodeURIComponent(mode === 'parse' ? text : name)}`);
-  say(mode === 'remove' ? 'Working it out (clingo)…' : 'Looking…');
+  say(mode === 'remove' || mode === 'atoms' ? 'Working it out (clingo)…' : 'Looking…');
   $('out').innerHTML = '';
   try {
-    const d = mode === 'word' ? await api('word', { name }) : mode === 'remove' ? await api('remove', { names: name }) : await api('parse', { text });
+    const d = mode === 'word' ? await api('word', { name }) : mode === 'remove' ? await api('remove', { names: name }) : mode === 'atoms' ? await api('atoms', { name }) : await api('parse', { text });
     if (my !== seq) return;
-    $('out').innerHTML = mode === 'word' ? wordCard(d) : mode === 'remove' ? removal(d) : parsed(d);
+    $('out').innerHTML = mode === 'word' ? wordCard(d) : mode === 'remove' ? removal(d) : mode === 'atoms' ? atomsReport(d) : parsed(d);
     say('');
   } catch (e) {
     if (my === seq) say(e.message, true);
@@ -220,7 +239,11 @@ $('name').addEventListener('input', () => {
 });
 
 $('ask').addEventListener('submit', (e) => { e.preventDefault(); ask(); });
-for (const t of document.querySelectorAll('.tab')) t.addEventListener('click', () => setMode(t.dataset.mode));
+for (const t of document.querySelectorAll('.tab')) t.addEventListener('click', () => {
+  setMode(t.dataset.mode);
+  // the atoms report needs no question, so it opens with its answer
+  if (t.dataset.mode === 'atoms') ask();
+});
 $('out').addEventListener('click', (e) => {
   const id = e.target.dataset?.remove;
   if (!id) return;
@@ -229,9 +252,9 @@ $('out').addEventListener('click', (e) => {
   ask();
 });
 
-// #word=deng1, #remove=deng1,fan4, #parse=Wǒ shì rén.
+// #word=deng1, #remove=deng1,fan4, #parse=Wǒ shì rén., #atoms= or #atoms=deng1
 function fromHash() {
-  const m = /^#(word|remove|parse)=(.*)$/.exec(location.hash);
+  const m = /^#(word|remove|parse|atoms)=(.*)$/.exec(location.hash);
   if (!m) return setMode('word');
   setMode(m[1], { keep: true });
   (m[1] === 'parse' ? $('text') : $('name')).value = decodeURIComponent(m[2]);

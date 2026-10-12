@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hao-shuo-de Word Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+SC:wght@600&display=swap">
+<style>
+/* The word review and the kinds review, served by the dev server (vite-plugin-review.js).
+   ?words=N: how each core word is said with other words, or why it cannot be.
+   ?kinds=N: whether a Mandarin compound builds its meaning from its parts or is learned whole. */
+:root {
+  --paper: #f3f5f2;
+  --card: #fbfcfa;
+  --ink: #1b2420;
+  --muted: #5d6a64;
+  --line: #d6ddd7;
+  --accent: #1d6f55;
+  --accent-ink: #ffffff;
+  --accent-soft: #dcece4;
+  --edit: #9a5b00;
+  --edit-soft: #f6e8d2;
+  --atom: #4c5c74;
+  --atom-soft: #e3e8f0;
+  --danger: #a3332b;
+  --font-han: "Noto Serif SC", "Songti SC", "SimSun", serif;
+  --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #131916; --card: #1a221e; --ink: #e5ece8; --muted: #9aa8a1; --line: #2c3833;
+    --accent: #4fbf94; --accent-ink: #0d1a14; --accent-soft: #1f3a2f;
+    --edit: #e0a24a; --edit-soft: #3b2e19; --atom: #9db0cf; --atom-soft: #252f3e; --danger: #ef7a70;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 15px/1.5 var(--font-body); }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: 16px; padding-block: 24px 64px; }
+header { display: grid; gap: 6px; margin-bottom: 18px; }
+.eyebrow { font: 500 12px/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.eyebrow a { color: var(--accent); text-decoration: none; }
+.eyebrow a:hover { text-decoration: underline; }
+h1 { font-size: 26px; line-height: 1.2; margin: 0; text-wrap: balance; }
+.lede { margin: 0; color: var(--muted); max-width: 72ch; }
+.lede + .lede { margin-top: 4px; }
+.bar { position: sticky; top: 0; z-index: 2; background: var(--paper); border-bottom: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; padding-block: 10px; margin-bottom: 12px; }
+.tally { display: flex; flex-wrap: wrap; gap: 6px; font-variant-numeric: tabular-nums; }
+.chip { font: 600 13px/1 var(--font-body); border: 1px solid var(--line); background: var(--card); color: var(--ink);
+  padding: 7px 10px; border-radius: 999px; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.chip:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.spacer { flex: 1 1 auto; }
+.bulk { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.status { font-size: 13px; color: var(--muted); min-height: 1.5em; }
+.status.err { color: var(--danger); }
+ol.rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.row { display: grid; grid-template-columns: 44px minmax(130px, 190px) minmax(0, 1fr) 240px; gap: 14px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; align-items: start; }
+.row.has-prop { border-left: 4px solid var(--edit); }
+.row.is-atom { border-left: 4px solid var(--atom); }
+.row.bad { border-left: 4px solid var(--danger); }
+.num { font: 500 13px/1.6 var(--font-mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.word { display: grid; gap: 2px; min-width: 0; align-content: start; }
+.han { font: 600 28px/1.15 var(--font-han); }
+.py { font-weight: 600; }
+.gloss { color: var(--muted); font-size: 13px; overflow-wrap: anywhere; }
+.cat { font: 500 11px/1.4 var(--font-mono); color: var(--muted); letter-spacing: .04em; margin-top: 4px; overflow-wrap: anywhere; }
+.forms { display: grid; gap: 9px; min-width: 0; }
+.form-block { display: grid; gap: 3px; }
+.label { font: 500 11px/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.label.prop { color: var(--edit); }
+.label.atom { color: var(--atom); }
+.form { font-size: 15px; overflow-wrap: anywhere; }
+.form .hz { font-family: var(--font-han); color: var(--muted); font-size: 13px; margin-left: 6px; }
+.form .tag { font: 500 11px/1 var(--font-mono); color: var(--accent); margin-left: 6px; }
+.why { font-size: 13px; color: var(--muted); margin: 2px 0 0; overflow-wrap: anywhere; }
+.why.bad { color: var(--danger); }
+.part { font-size: 13px; color: var(--muted); }
+.part b { color: var(--ink); font-weight: 600; }
+.actions { display: grid; gap: 6px; }
+.btns { display: flex; flex-wrap: wrap; gap: 6px; }
+button { font: 600 13px/1 var(--font-body); padding: 8px 10px; border-radius: 7px; border: 1px solid var(--line);
+  background: var(--card); color: var(--ink); cursor: pointer; }
+button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+button:disabled { opacity: .5; cursor: progress; }
+.decision { font-size: 13px; padding: 6px 9px; border-radius: 7px; display: grid; gap: 2px; background: var(--accent-soft); color: var(--accent); }
+.decision.edit, .decision.clumsy { background: var(--edit-soft); color: var(--edit); }
+.decision.atom { background: var(--atom-soft); color: var(--atom); }
+.decision .what { font-weight: 700; }
+.decision .detail { color: var(--ink); overflow-wrap: anywhere; }
+.editor { display: grid; gap: 6px; }
+.editor label { font-size: 12px; color: var(--muted); }
+.editor input, .editor select { font: 400 14px/1.3 var(--font-body); width: 100%; padding: 7px 8px;
+  border: 1px solid var(--line); border-radius: 6px; background: var(--paper); color: var(--ink); }
+.empty { color: var(--muted); padding: 24px 0; }
+@media (max-width: 800px) {
+  .row { grid-template-columns: 36px minmax(0, 1fr); }
+  .forms, .actions { grid-column: 1 / -1; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow"><span id="eyebrow">Review</span><a id="prev" href="#">← previous batch</a><a id="next" href="#">next batch →</a><a id="other" href="#"></a></div>
+    <h1 id="title">Loading the batch…</h1>
+    <p class="lede" id="lede1"></p>
+    <p class="lede" id="lede2"></p>
+  </header>
+  <div class="bar">
+    <div class="tally" role="group" aria-label="Show">
+      <button class="chip" data-filter="all" aria-pressed="true" id="f-all">All</button>
+      <button class="chip" data-filter="open" aria-pressed="false" id="f-open">Undecided</button>
+      <button class="chip" data-filter="done" aria-pressed="false" id="f-done">Decided</button>
+      <button class="chip" data-filter="bad" aria-pressed="false" id="f-bad">Needs a look</button>
+    </div>
+    <div class="spacer"></div>
+    <div class="bulk" id="bulk"></div>
+  </div>
+  <div class="status" id="status" role="status" aria-live="polite"></div>
+  <ol class="rows" id="rows"></ol>
+</div>
+
+<script>
+const params = new URLSearchParams(location.search);
+const MODE = params.has("kinds") ? "kinds" : "words";
+const N = Math.max(1, Number(params.get(MODE)) || 1);
+const state = { data: null, decisions: {}, filter: "all", editing: null, how: null, confirmBulk: false, busy: new Set(), check: null };
+const $ = (s) => document.querySelector(s);
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+const keyOf = (e) => (MODE === "words" ? e.id : e.zh);
+const nameOf = (e) => (MODE === "words" ? `${e.term} ${e.hanzi}` : `#${e.rank} ${e.zh}`);
+
+function say(text, err = false) {
+  const s = $("#status");
+  s.textContent = text;
+  s.className = "status" + (err ? " err" : "");
+}
+
+async function post(path, body) {
+  const r = await fetch(`/__review/${path}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  const v = await r.json();
+  if (!r.ok) throw new Error(v.error || r.statusText);
+  return v;
+}
+
+// -- words ---------------------------------------------------------------------------------
+
+const VERDICT = { fine: "a paraphrase", clumsy: "a clumsy paraphrase (counts as an atom)", atom: "an atom" };
+
+function nowBlock(e) {
+  if (e.now.status === "none") return null;
+  const b = el("div", "form-block");
+  if (e.now.atom) {
+    b.appendChild(el("div", "label atom", "In the data now · atom"));
+    b.appendChild(el("div", "form", e.now.atom.eng));
+    return b;
+  }
+  b.appendChild(el("div", "label", "In the data now · " + (e.now.paraphrase.verdict === "clumsy" ? "clumsy" : "fine")));
+  for (const f of e.now.paraphrase.forms) b.appendChild(el("div", "form", f));
+  if (e.now.paraphrase.note) b.appendChild(el("p", "why", "Note: " + e.now.paraphrase.note));
+  return b;
+}
+
+function proposalBlock(e) {
+  const p = e.prop;
+  const b = el("div", "form-block");
+  b.appendChild(el("div", "label " + (p.verdict === "atom" ? "atom" : "prop"), "Proposed · " + VERDICT[p.verdict]));
+  if (p.verdict === "atom") {
+    b.appendChild(el("div", "form", p.atom.eng));
+    b.appendChild(el("p", "why", p.atom.rus));
+  } else {
+    p.forms.forEach((f, i) => b.appendChild(el("div", "form", p.check?.forms[i]?.pinyin ?? f)));
+  }
+  if (p.check && !p.check.ok) b.appendChild(el("p", "why bad", "Does not pass: " + p.check.problems.join("; ")));
+  if (p.note) b.appendChild(el("p", "why", "Note: " + p.note));
+  if (p.why) b.appendChild(el("p", "why", p.why));
+  return b;
+}
+
+function relatedBlock(e) {
+  const r = e.related;
+  const lines = [];
+  for (const o of r.own) {
+    const forms = o.forms.map((f) => f.pinyin + (f.selfFree ? " (without the word)" : "")).join(" / ") || "no form";
+    lines.push(`Its own entry ${o.zh} #${o.rank} "${o.en}": ${forms}`);
+  }
+  if (r.synonymPhrases.length) lines.push("Close in meaning, said as: " + r.synonymPhrases.join(" / "));
+  if (r.synonyms.length) lines.push("Close in meaning: " + r.synonyms.map((x) => `${x.term} ${x.hanzi}`).join(", "));
+  if (r.antonyms.length) lines.push("Opposite: " + r.antonyms.map((x) => `${x.term} ${x.hanzi}`).join(", "));
+  if (r.antonymPhrases.length) lines.push("Its opposite is said as: " + r.antonymPhrases.join(" / "));
+  if (!lines.length) return null;
+  const b = el("div", "form-block");
+  b.appendChild(el("div", "label", "In the dictionary"));
+  for (const l of lines) b.appendChild(el("div", "why", l));
+  return b;
+}
+
+function wordRow(e) {
+  const d = state.decisions[e.id];
+  const li = el("li", "row" + (e.prop ? (e.prop.verdict === "atom" ? " is-atom" : " has-prop") : "") + (e.prop?.check && !e.prop.check.ok ? " bad" : ""));
+  li.id = `w-${e.id}`;
+  li.appendChild(el("div", "num", e.number));
+  const w = el("div", "word");
+  w.appendChild(el("div", "han", e.hanzi));
+  w.appendChild(el("div", "py", e.term));
+  w.appendChild(el("div", "gloss", e.pos || ""));
+  w.appendChild(el("div", "cat", e.category.join(" › ")));
+  li.appendChild(w);
+  const f = el("div", "forms");
+  f.appendChild(el("div", "gloss", e.definition));
+  if (e.senses.length) f.appendChild(el("div", "gloss", "Senses: " + e.senses.map((s) => `${s.hanzi} ${s.eng}${s.alone ? " (alone)" : ""}`).join("; ")));
+  const now = nowBlock(e);
+  if (now) f.appendChild(now);
+  if (e.prop) f.appendChild(proposalBlock(e));
+  else f.appendChild(el("p", "why", "No proposal for this word yet: write your own, or mark it as an atom."));
+  const rel = relatedBlock(e);
+  if (rel) f.appendChild(rel);
+  li.appendChild(f);
+  li.appendChild(wordActions(e, d));
+  return li;
+}
+
+function decisionView(e, d) {
+  const box = el("div", "decision " + d.status);
+  const p = e.prop;
+  const what = {
+    approve: !p ? "Approved" : p.verdict === "atom" ? "Approved: an atom" : p.verdict === "clumsy" ? "Approved: clumsy" : "Approved: use the proposal",
+    edit: d.verdict === "clumsy" ? "Your forms (clumsy)" : "Your forms",
+    clumsy: "Clumsy",
+    atom: "An atom",
+  }[d.status];
+  box.appendChild(el("span", "what", what));
+  if (d.forms?.length) box.appendChild(el("span", "detail", [].concat(d.forms).join(" / ")));
+  if (d.status === "atom" && (d.eng || d.rus)) box.appendChild(el("span", "detail", [d.eng, d.rus].filter(Boolean).join(" · ")));
+  if (d.note) box.appendChild(el("span", "detail", "Note: " + d.note));
+  return box;
+}
+
+// one labelled input; returns [label, input]
+function field(id, label, value, tag = "input") {
+  const l = el("label", null, label); l.htmlFor = id;
+  const i = el(tag); i.id = id; i.value = value;
+  return [l, i];
+}
+
+function checkLive(e, input, out) {
+  clearTimeout(state.check);
+  state.check = setTimeout(async () => {
+    try {
+      const r = await post("words-check", { id: e.id, forms: input.value });
+      out.textContent = r.ok ? "Passes: " + r.forms.map((x) => x.pinyin).join(" / ") : r.problems.join("; ");
+      out.className = "why" + (r.ok ? "" : " bad");
+    } catch (err) { out.textContent = err.message; out.className = "why bad"; }
+  }, 250);
+}
+
+function wordEditor(e, d) {
+  const ed = el("div", "editor");
+  const btns = el("div", "btns");
+  const save = el("button", "primary", "Save");
+  const cancel = el("button", null, "Cancel");
+  cancel.onclick = () => { state.editing = null; render(); };
+  let first;
+  if (state.how === "atom") {
+    const [l1, eng] = field(`eng-${e.id}`, "Why there is no honest paraphrase (English)", d?.eng ?? e.prop?.atom?.eng ?? e.now.atom?.eng ?? "");
+    const [l2, rus] = field(`rus-${e.id}`, "The same in Russian", d?.rus ?? e.prop?.atom?.rus ?? e.now.atom?.rus ?? "");
+    save.onclick = () => decide(e, "atom", { eng: eng.value.trim(), rus: rus.value.trim() });
+    eng.onkeydown = rus.onkeydown = (ev) => { if (ev.key === "Enter") save.click(); if (ev.key === "Escape") cancel.click(); };
+    ed.append(l1, eng, l2, rus);
+    first = eng;
+  } else {
+    const start = d?.forms ? [].concat(d.forms).join(" / ") : (e.prop?.forms ?? e.now.paraphrase?.forms ?? []).join(" / ");
+    const [l1, forms] = field(`forms-${e.id}`, "Forms in plain pinyin, several separated by ' / '", start);
+    const [l2, verdict] = field(`verdict-${e.id}`, "Verdict", "", "select");
+    for (const v of ["fine", "clumsy"]) verdict.appendChild(new Option(v === "fine" ? "Fine: a good way to say it" : "Clumsy: it exists, but nobody would say it", v));
+    verdict.value = state.how === "forms-clumsy" ? "clumsy" : d?.verdict ?? "fine";
+    const [l3, note] = field(`note-${e.id}`, "Note (kept as the reason when the paraphrase is clumsy)", d?.note ?? "");
+    const out = el("p", "why");
+    forms.oninput = () => checkLive(e, forms, out);
+    save.onclick = () => decide(e, "edit", { forms: forms.value.split(" / ").map((s) => s.trim()).filter(Boolean), verdict: verdict.value, note: note.value.trim() });
+    forms.onkeydown = note.onkeydown = (ev) => { if (ev.key === "Enter") save.click(); if (ev.key === "Escape") cancel.click(); };
+    ed.append(l1, forms, out, l2, verdict, l3, note);
+    first = forms;
+    if (forms.value) checkLive(e, forms, out);
+  }
+  btns.append(save, cancel);
+  ed.appendChild(btns);
+  requestAnimationFrame(() => first.focus());
+  return ed;
+}
+
+function wordActions(e, d) {
+  const wrap = el("div", "actions");
+  const busy = state.busy.has(e.id);
+  if (state.editing === e.id) { wrap.appendChild(wordEditor(e, d)); return wrap; }
+  const open = (how) => () => { state.editing = e.id; state.how = how; render(); };
+  const btns = el("div", "btns");
+  if (d) {
+    wrap.appendChild(decisionView(e, d));
+    const change = el("button", null, "Change");
+    change.onclick = open(d.status === "atom" ? "atom" : "forms");
+    const undo = el("button", null, "Undo");
+    undo.onclick = () => decide(e, null);
+    btns.append(change, undo);
+  } else {
+    const p = e.prop;
+    if (p && (p.verdict === "atom" || p.check?.ok)) {
+      const ok = el("button", "primary", p.verdict === "atom" ? "Approve: atom" : p.verdict === "clumsy" ? "Approve: clumsy" : "Approve");
+      ok.onclick = () => decide(e, "approve");
+      btns.appendChild(ok);
+    }
+    if (p && p.verdict === "fine" && p.check?.ok) {
+      const clumsy = el("button", null, "Clumsy");
+      clumsy.title = "Keep the forms, but they are clumsy: the word counts as an atom";
+      clumsy.onclick = open("forms-clumsy");
+      btns.appendChild(clumsy);
+    }
+    const mine = el("button", null, "Write my own");
+    mine.onclick = open("forms");
+    const atom = el("button", null, "It's an atom");
+    atom.onclick = open("atom");
+    btns.append(mine, atom);
+  }
+  for (const b of btns.children) b.disabled = busy;
+  wrap.appendChild(btns);
+  return wrap;
+}
+
+// -- kinds ---------------------------------------------------------------------------------
+
+function kindsRow(e) {
+  const d = state.decisions[e.zh];
+  const li = el("li", "row" + (e.prop ? " has-prop" : ""));
+  li.id = `k-${e.rank}`;
+  li.appendChild(el("div", "num", "#" + e.rank));
+  const w = el("div", "word");
+  w.appendChild(el("div", "han", e.zh));
+  w.appendChild(el("div", "py", e.py));
+  w.appendChild(el("div", "gloss", `${e.en} · ${e.ru ?? ""}`));
+  li.appendChild(w);
+  const f = el("div", "forms");
+  for (const form of e.forms) {
+    const b = el("div", "form-block");
+    const line = el("div", "form", form.pinyin);
+    if (form.hanzi) line.appendChild(el("span", "hz", form.hanzi));
+    if (form.mandarin) line.appendChild(el("span", "tag", "Mandarin's own word, written with ours"));
+    b.appendChild(line);
+    if (form.mandarin) {
+      const parts = el("div", "part");
+      form.parts.forEach((p, i) => {
+        if (i) parts.append(" + ");
+        const strong = el("b", null, `${p.term} ${p.hanzi ?? ""}`);
+        parts.append(strong, " " + (p.gloss || ""));
+      });
+      b.appendChild(parts);
+    }
+    f.appendChild(b);
+  }
+  if (e.prop) {
+    const b = el("div", "form-block");
+    b.appendChild(el("div", "label prop", "Proposed · " + e.prop.as));
+    if (e.prop.why) b.appendChild(el("p", "why", e.prop.why));
+    f.appendChild(b);
+  }
+  if (e.now !== "unknown" && !d) f.appendChild(el("p", "why", "In the data now: " + e.now));
+  li.appendChild(f);
+  li.appendChild(kindsActions(e, d));
+  return li;
+}
+
+function kindsActions(e, d) {
+  const wrap = el("div", "actions");
+  const busy = state.busy.has(e.zh);
+  const btns = el("div", "btns");
+  if (d && state.editing !== e.zh) {
+    const box = el("div", "decision " + (d.status === "spelled" ? "edit" : ""));
+    box.appendChild(el("span", "what", d.status === "spelled" ? "Spelled: learned whole" : "Built: from its parts"));
+    wrap.appendChild(box);
+    const change = el("button", null, "Change");
+    change.onclick = () => { state.editing = e.zh; render(); };
+    const undo = el("button", null, "Undo");
+    undo.onclick = () => decide(e, null);
+    btns.append(change, undo);
+  } else {
+    if (e.prop) {
+      const ok = el("button", "primary", "Approve: " + e.prop.as);
+      ok.onclick = () => decide(e, e.prop.as);
+      btns.appendChild(ok);
+    }
+    const built = el("button", null, "Built");
+    built.title = "The meaning comes from the parts: fēi-jī is fly + machine";
+    built.onclick = () => decide(e, "built");
+    const spelled = el("button", null, "Spelled");
+    spelled.title = "Mandarin's own word, learned whole: dōng-xi is 'thing', not east + west";
+    spelled.onclick = () => decide(e, "spelled");
+    if (!e.prop || e.prop.as !== "built") btns.appendChild(built);
+    if (!e.prop || e.prop.as !== "spelled") btns.appendChild(spelled);
+  }
+  for (const b of btns.children) b.disabled = busy;
+  wrap.appendChild(btns);
+  return wrap;
+}
+
+// -- the page ------------------------------------------------------------------------------
+
+function isBad(e) {
+  return MODE === "words" ? !e.prop || (e.prop.check && !e.prop.check.ok) : false;
+}
+
+function visible(e) {
+  const d = state.decisions[keyOf(e)];
+  if (state.filter === "open") return !d;
+  if (state.filter === "done") return !!d;
+  if (state.filter === "bad") return isBad(e);
+  return true;
+}
+
+// the undecided entries whose proposal can be approved as it is
+function approvable() {
+  return state.data.entries.filter((e) => {
+    if (state.decisions[keyOf(e)] || !e.prop) return false;
+    return MODE === "words" ? e.prop.verdict === "atom" || e.prop.check?.ok : true;
+  });
+}
+
+function renderBulk() {
+  const bulk = $("#bulk");
+  bulk.replaceChildren();
+  const list = approvable();
+  if (!list.length) return;
+  if (state.confirmBulk) {
+    bulk.appendChild(el("span", "status", `Approve ${list.length} proposal${list.length === 1 ? "" : "s"} as ${list.length === 1 ? "it is" : "they are"}?`));
+    const yes = el("button", "primary", "Approve them");
+    yes.onclick = () => { state.confirmBulk = false; bulkApprove(list); };
+    const no = el("button", null, "Cancel");
+    no.onclick = () => { state.confirmBulk = false; render(); };
+    bulk.append(yes, no);
+  } else {
+    const b = el("button", null, `Approve the ${list.length} proposal${list.length === 1 ? "" : "s"} that pass${list.length === 1 ? "es" : ""}`);
+    b.onclick = () => { state.confirmBulk = true; render(); };
+    bulk.appendChild(b);
+  }
+}
+
+function render() {
+  const entries = state.data.entries;
+  const decided = entries.filter((e) => state.decisions[keyOf(e)]).length;
+  $("#f-all").textContent = `All · ${entries.length}`;
+  $("#f-open").textContent = `Undecided · ${entries.length - decided}`;
+  $("#f-done").textContent = `Decided · ${decided}`;
+  $("#f-bad").textContent = `Needs a look · ${entries.filter(isBad).length}`;
+  $("#f-bad").hidden = MODE === "kinds";
+  for (const c of document.querySelectorAll(".chip")) c.setAttribute("aria-pressed", String(c.dataset.filter === state.filter));
+  renderBulk();
+  const shown = entries.filter(visible);
+  const list = $("#rows");
+  list.replaceChildren(...shown.map(MODE === "words" ? wordRow : kindsRow));
+  if (!shown.length) list.appendChild(el("li", "empty", "Nothing here."));
+}
+
+// One row at a time: the file write is instant, so the server's answer replaces the local state.
+// A save that fails leaves the editor open with what was typed, and says why.
+async function decide(e, status, extra = {}) {
+  const key = keyOf(e);
+  if (state.busy.has(key)) return;
+  state.busy.add(key);
+  try {
+    const body = MODE === "words" ? { batch: N, id: e.id, status, ...extra } : { batch: N, zh: e.zh, status, ...extra };
+    state.decisions = (await post(MODE === "words" ? "words-decide" : "kinds-decide", body)).decisions;
+    state.editing = null;
+    say(status ? `Saved ${nameOf(e)}.` : `Cleared ${nameOf(e)}.`);
+    render();
+  } catch (err) {
+    say(`Couldn't save ${nameOf(e)}: ${err.message}`, true);
+  } finally {
+    state.busy.delete(key);
+  }
+}
+
+async function bulkApprove(list) {
+  say(`Saving ${list.length} approvals…`);
+  let failed = 0;
+  for (const e of list) {
+    try {
+      const status = MODE === "words" ? "approve" : e.prop.as;
+      const body = MODE === "words" ? { batch: N, id: e.id, status } : { batch: N, zh: e.zh, status };
+      state.decisions = (await post(MODE === "words" ? "words-decide" : "kinds-decide", body)).decisions;
+    } catch { failed++; }
+  }
+  render();
+  say(failed ? `${list.length - failed} saved, ${failed} failed.` : `Approved ${list.length}.`, failed > 0);
+}
+
+for (const c of document.querySelectorAll(".chip")) c.onclick = () => { state.filter = c.dataset.filter; render(); };
+
+(async () => {
+  try {
+    const r = await fetch(`/__review/${MODE}-data?batch=${N}`);
+    const B = await r.json();
+    if (!r.ok) throw new Error(B.error || r.statusText);
+    state.data = B;
+    state.decisions = B.decisions || {};
+    document.title = `${MODE === "words" ? "Word" : "Kinds"} review ${N} · Hao-shuo-de`;
+    $("#eyebrow").textContent = `${MODE === "words" ? "Word review" : "Kinds review"} · batch ${N} of ${B.batches}`;
+    if (MODE === "words") {
+      $("#title").textContent = `Words ${B.from}–${B.to} of ${B.total}`;
+      $("#lede1").textContent = "A paraphrase says a word with other dictionary words, without the word itself (zǒu = yòng jiǎo qù). Each word has one, or is marked as an atom with the reason there is none. Write forms in plain pinyin; the page turns them into word references and checks them.";
+      $("#lede2").textContent = "Approve takes Claude's proposal. Clumsy keeps the forms but says nobody would say it: the word then counts as an atom. Words come in the order of the categories, so related words sit together. Each decision is saved to review/decisions at once.";
+    } else {
+      $("#title").textContent = `Built or spelled: ${B.entries.length} of ${B.total} compounds`;
+      $("#lede1").textContent = "Some Mandarin words can be written with our words (dōng-xi: east + west). If the parts give the meaning (fēi-jī: fly + machine), the form is built. If it is Mandarin's own word that only looks like its parts (dōng-xi is 'thing', not east + west), it is spelled: learned whole, and it counts as hidden vocabulary.";
+      $("#lede2").textContent = "Only the compounds the rule could not decide are here. Each decision is saved to review/decisions at once.";
+    }
+    const prev = $("#prev"), next = $("#next"), other = $("#other");
+    if (N > 1) prev.href = `?${MODE}=${N - 1}`; else prev.hidden = true;
+    if (N < B.batches) next.href = `?${MODE}=${N + 1}`; else next.hidden = true;
+    other.href = MODE === "words" ? "?kinds=1" : "?words=1";
+    other.textContent = MODE === "words" ? "built or spelled →" : "word paraphrases →";
+    render();
+  } catch (err) {
+    $("#title").textContent = "Couldn't load the batch";
+    say(`${err.message}. Open this page from the dev server (npm run dev).`, true);
+  }
+})();
+</script>
+</body>
+</html>

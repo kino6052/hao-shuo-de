@@ -8,6 +8,8 @@
 //   GET /__kb/word?name=          { card, text }
 //   GET /__kb/remove?names=a,b    { report, text }: what happens if we drop them
 //   GET /__kb/parse?text=         { view, text }: does it parse, and how
+//   GET /__kb/atoms?name=         { counts, hidden, line?, text }: which words are atoms; with a
+//                                 name, that word's line (its sort and how it is said)
 //
 // The KB code is loaded by Node itself (not bundled with this config) so it
 // reads the .ts data files the way the command line does.
@@ -43,7 +45,7 @@ export default function kbPlugin() {
           if (url.pathname === '/' || url.pathname === '') return send(res, 200, 'text/html; charset=utf-8', readFileSync(PAGE, 'utf-8'));
 
           const { openKb } = await load('scripts/kb.js');
-          const { renderCard, renderRemoval, renderParse, viewParse } = await load('src/lib/kb/kb.js');
+          const { renderCard, renderRemoval, renderParse, viewParse, renderAtoms, renderAtomWord } = await load('src/lib/kb/kb.js');
           const kb = await openKb();
           switch (url.pathname) {
             case '/find':
@@ -55,6 +57,14 @@ export default function kbPlugin() {
             case '/remove': {
               const report = await kb.remove(get('names'));
               return json(res, { report, text: renderRemoval(report) });
+            }
+            case '/atoms': {
+              const report = await kb.atoms();
+              const counts = { ...report.counts, smallest: report.smallest };
+              const hidden = { spelled: report.hidden.spelled.length, undecided: report.hidden.undecided.length };
+              if (!get('name')) return json(res, { counts, hidden, text: renderAtoms(report) });
+              const line = await kb.atoms(get('name'));
+              return json(res, { counts, hidden, line, text: renderAtomWord(report, line) });
             }
             case '/parse': {
               const result = kb.parse(get('text'));

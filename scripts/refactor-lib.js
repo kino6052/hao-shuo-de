@@ -22,6 +22,8 @@ import { fileURLToPath } from 'url';
 import { tsLiteral, compositeFileName, compositeSource, WORD_KEYS } from './data-files.js';
 import { wordRefRe, wordRefIds, toneless } from '../src/lib/word-refs.js';
 import { compoundSplitter, compoundForm } from '../src/lib/compound-rule.js';
+import { paraphraseProblems } from '../src/lib/paraphrase.js';
+import { FORM_KINDS, formKinds, kindsProblems } from '../src/lib/form-kinds.js';
 import { LESSON_IDS } from '../src/content/book.js';
 
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -99,9 +101,11 @@ export class Workspace {
   }
   set(r, t) {
     this.text.set(r, t);
+    if (r.startsWith(WORDS_DIR)) this.words = null;
   }
   remove(r) {
     this.text.set(r, null);
+    if (r.startsWith(WORDS_DIR)) this.words = null;
   }
   files(prefix = '') {
     return [...this.text.keys()].filter((r) => r.startsWith(prefix) && this.text.get(r) != null);
@@ -128,6 +132,11 @@ export class Workspace {
   word(id) {
     if (!this.hasWord(id)) throw new Error(`no word ${id}`);
     return this.data(this.wordPath(id));
+  }
+  // -> every word as an object, { id: data }; read once until a word file changes
+  wordMap() {
+    this.words ??= Object.fromEntries(this.wordIds().map((id) => [id, this.word(id)]));
+    return this.words;
   }
   setWord(id, value) {
     const order = WORD_KEYS;
@@ -710,6 +719,46 @@ const OPS = {
     if (!s) throw new Error(`${op.id} has no sense "${op.key}"`);
     s.compounds = [...new Set([...s.compounds, ...op.add])];
     ws.setWord(op.id, w);
+  },
+
+  // { op: "paraphrase", id, forms: ["{{word:a}} {{word:b}}", ...], verdict?: "fine" | "clumsy", note? }
+  // -- how the word is said with other words (KB_PLAN.md K3). It replaces an
+  // atom mark; a clumsy paraphrase is counted as an atom (K8).
+  paraphrase(ws, op) {
+    const w = ws.word(op.id);
+    const paraphrase = { forms: op.forms, verdict: op.verdict ?? 'fine', ...(op.note ? { note: op.note } : {}) };
+    const next = { ...w, paraphrase, atom: undefined };
+    const problems = paraphraseProblems(op.id, next, ws.wordMap());
+    if (problems.length) throw new Error(problems.join('; '));
+    ws.setWord(op.id, next);
+  },
+
+  // { op: "atom", id, eng, rus } -- the word cannot be said with other words, and why.
+  // It replaces a paraphrase.
+  atom(ws, op) {
+    const w = ws.word(op.id);
+    const next = { ...w, atom: { eng: op.eng, rus: op.rus }, paraphrase: undefined };
+    const problems = paraphraseProblems(op.id, next, ws.wordMap());
+    if (problems.length) throw new Error(problems.join('; '));
+    ws.setWord(op.id, next);
+  },
+
+  // { op: "kinds", zh, kinds: ["built", "spelled", ...] } or { op: "kinds", zh, as: "spelled" }
+  // -- which forms of a composite build the meaning and which spell Mandarin's
+  // own word (K9). `as` decides only the forms the rule left undecided.
+  kinds(ws, op) {
+    const found = ws.composites().find(({ entry }) => entry.zh === op.zh);
+    if (!found) throw new Error(`no composite ${op.zh}`);
+    const { path, entry } = found;
+    let kinds = op.kinds;
+    if (!kinds) {
+      if (!FORM_KINDS.includes(op.as)) throw new Error('give kinds: [...] or as: "built" | "spelled"');
+      kinds = formKinds(entry).map((k) => (k === 'unknown' ? op.as : k));
+    }
+    const next = { ...entry, kinds };
+    const problems = kindsProblems(next);
+    if (problems.length) throw new Error(problems.join('; '));
+    ws.setComposite(path, next);
   },
 
   // { op: "category", id, to: "<leaf key>" }

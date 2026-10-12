@@ -13,6 +13,19 @@
 //   GET  /__review/data?batch=n     the batch: entries, proposals, decisions
 //   POST /__review/decide           { batch, rank, zh, status, form?, note? }
 //                                   (status null clears the decision)
+//
+// Phase 2 of the knowledge base adds two more reviews to the same server,
+// served by review/words.html (KB_PLAN.md phase 2; the rules are in
+// src/lib/kb/review.js, the decisions become refactors/W<n>.ts and K<n>.ts
+// through scripts/review-batch.js):
+//
+//   GET  /__review/?words=n         the paraphrases of the n-th batch of 80 words, in category order
+//   GET  /__review/?kinds=n         built or spelled, for the n-th batch of 100 composites
+//   GET  /__review/words-data?batch=n    { entries, decisions } (proposals: review/proposals/words-<n>.mjs)
+//   GET  /__review/kinds-data?batch=n    (review/proposals/kinds-<n>.mjs)
+//   POST /__review/words-check     { id, forms }  plain pinyin -> refs and the problems, for the editor
+//   POST /__review/words-decide    { batch, id, status, forms?, verdict?, eng?, rus?, note? }
+//   POST /__review/kinds-decide    { batch, zh, status, note? }   (status null clears the decision)
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { resolve, dirname } from 'path';
@@ -24,17 +37,54 @@ export const BATCH_SIZE = 100;
 // the review covers the frequency phases (ranks up to 1600)
 const LAST_RANK = 1600;
 
-const decisionsPath = (n) => resolve(DIR, 'decisions', `batch-${n}.json`);
+// the composite review's files are batch-<n>.json; the words and kinds reviews' are words-<n>.json, kinds-<n>.json
+const decisionsPath = (n, prefix = 'batch') => resolve(DIR, 'decisions', `${prefix}-${n}.json`);
 
-function readDecisions(n) {
-  const p = decisionsPath(n);
+function readDecisions(n, prefix = 'batch') {
+  const p = decisionsPath(n, prefix);
   return existsSync(p) ? JSON.parse(readFileSync(p, 'utf-8')).decisions ?? {} : {};
 }
 
-function writeDecisions(n, decisions) {
-  mkdirSync(dirname(decisionsPath(n)), { recursive: true });
-  const sorted = Object.fromEntries(Object.entries(decisions).sort((a, b) => Number(a[0]) - Number(b[0])));
-  writeFileSync(decisionsPath(n), JSON.stringify({ batch: n, decisions: sorted }, null, 2) + '\n');
+function writeDecisions(n, decisions, prefix = 'batch') {
+  mkdirSync(dirname(decisionsPath(n, prefix)), { recursive: true });
+  const byKey = prefix === 'batch' ? (a, b) => Number(a[0]) - Number(b[0]) : (a, b) => a[0].localeCompare(b[0]);
+  const sorted = Object.fromEntries(Object.entries(decisions).sort(byKey));
+  writeFileSync(decisionsPath(n, prefix), JSON.stringify({ batch: n, decisions: sorted }, null, 2) + '\n');
+}
+
+// -- the words and kinds reviews --------------------------------------------------------------
+// They read the knowledge base's source (scripts/kb.js, rebuilt when the data changes), which
+// Node loads itself, not the dev server's module graph.
+
+const loadNode = (file) => import(/* @vite-ignore */ pathToFileURL(resolve(ROOT, file)).href);
+
+async function proposalsFor(mode, n) {
+  const file = resolve(DIR, 'proposals', `${mode}-${n}.mjs`);
+  return existsSync(file) ? (await import(`${pathToFileURL(file).href}?t=${Date.now()}`)).default ?? {} : {};
+}
+
+async function phase2Source() {
+  const { openKb } = await loadNode('scripts/kb.js');
+  return (await openKb()).source;
+}
+
+// -> the decision as it is saved, or throws Error(reason) for a request that can't be (a 400).
+async function wordDecision(source, n, body) {
+  const { id, status, forms, verdict, eng, rus, note } = body;
+  if (!source.words[id]) throw new Error(`no word ${id}`);
+  const { wordOp } = await loadNode('src/lib/kb/review.js');
+  const d = {
+    status,
+    ...(forms?.length ? { forms } : {}),
+    ...(verdict ? { verdict } : {}),
+    ...(eng ? { eng } : {}),
+    ...(rus ? { rus } : {}),
+    ...(note ? { note } : {}),
+    at: new Date().toISOString(),
+  };
+  // the same check the refactor list makes, so a decision that is saved can always be applied
+  wordOp(source.words, id, d, (await proposalsFor('words', n))[id]);
+  return d;
 }
 
 async function batchData(server, n) {
@@ -140,7 +190,56 @@ export default function reviewPlugin() {
         try {
           const url = new URL(req.url ?? '/', 'http://localhost');
           if (req.method === 'GET' && (url.pathname === '/' || url.pathname === '')) {
-            return send(res, 200, 'text/html; charset=utf-8', readFileSync(resolve(DIR, 'page.html'), 'utf-8'));
+            const page = url.searchParams.has('words') || url.searchParams.has('kinds') ? 'words.html' : 'page.html';
+            return send(res, 200, 'text/html; charset=utf-8', readFileSync(resolve(DIR, page), 'utf-8'));
+          }
+          const batchOf = () => Math.max(1, Number(url.searchParams.get('batch')) || 1);
+          if (req.method === 'GET' && url.pathname === '/words-data') {
+            const n = batchOf();
+            const { wordBatch } = await loadNode('src/lib/kb/review.js');
+            const batch = wordBatch(await phase2Source(), n, { proposals: await proposalsFor('words', n), decisions: readDecisions(n, 'words') });
+            return json(res, batch);
+          }
+          if (req.method === 'GET' && url.pathname === '/kinds-data') {
+            const n = batchOf();
+            const { kindsBatch } = await loadNode('src/lib/kb/review.js');
+            return json(res, kindsBatch(await phase2Source(), n, { proposals: await proposalsFor('kinds', n), decisions: readDecisions(n, 'kinds') }));
+          }
+          if (req.method === 'POST' && url.pathname === '/words-check') {
+            const { id, forms } = await readBody(req);
+            const { checkParaphrase } = await loadNode('src/lib/kb/review.js');
+            const source = await phase2Source();
+            if (!source.words[id]) return json(res, { error: `no word ${id}` }, 400);
+            return json(res, checkParaphrase(source.words, id, forms));
+          }
+          if (req.method === 'POST' && url.pathname === '/words-decide') {
+            const body = await readBody(req);
+            const n = Number(body.batch);
+            if (!n || !body.id) return json(res, { error: 'batch and id are required' }, 400);
+            const decisions = readDecisions(n, 'words');
+            if (!body.status) delete decisions[body.id];
+            else {
+              try {
+                decisions[body.id] = await wordDecision(await phase2Source(), n, body);
+              } catch (e) {
+                return json(res, { error: String(e.message ?? e) }, 400);
+              }
+            }
+            writeDecisions(n, decisions, 'words');
+            return json(res, { decisions });
+          }
+          if (req.method === 'POST' && url.pathname === '/kinds-decide') {
+            const { batch, zh, status, note } = await readBody(req);
+            const n = Number(batch);
+            if (!n || !zh) return json(res, { error: 'batch and zh are required' }, 400);
+            const decisions = readDecisions(n, 'kinds');
+            if (!status) delete decisions[zh];
+            else {
+              if (!['built', 'spelled'].includes(status)) return json(res, { error: `unknown status ${status}` }, 400);
+              decisions[zh] = { status, ...(note ? { note } : {}), at: new Date().toISOString() };
+            }
+            writeDecisions(n, decisions, 'kinds');
+            return json(res, { decisions });
           }
           if (req.method === 'GET' && url.pathname === '/data') {
             const n = Math.max(1, Number(url.searchParams.get('batch')) || 1);
