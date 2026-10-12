@@ -179,6 +179,28 @@ describe('the text report', () => {
   });
 });
 
+describe('questions that do not finish', () => {
+  test('a word whose question runs out of time is left unchecked, not guessed', async () => {
+    const r = await atoms({ source, facts: buildFacts(source) }, { questionMs: 0 });
+    // the words the rules force into every set are still known; everything that needed a question is open
+    expect(ids(r.atoms)).toEqual(['a', 'b', 'g', 'x']);
+    expect(ids(r.unreviewed)).toEqual(['h']);
+    expect(r.swappable).toEqual([]);
+    expect(r.secondary).toEqual([]);
+    expect(r.counts.unchecked).toBe(8);
+    expect(r.counts.atoms + r.counts.unchecked + r.counts.unreviewed).toBe(r.counts.words);
+    expect(atomWord(r, 'c').kind).toBe('unchecked');
+    expect(renderAtoms(r)).toMatch(/8 word\(s\) not checked/);
+  });
+
+  test('asking the words one at a time gives the same sorts as asking several at once', async () => {
+    const ctx = { source, facts: buildFacts(source) };
+    const one = await atoms(ctx, { parallel: 1 });
+    const many = await atoms(ctx, { parallel: 3 });
+    for (const kind of ['atoms', 'swappable', 'secondary', 'unreviewed', 'unchecked']) expect(ids(one[kind])).toEqual(ids(many[kind]));
+  });
+});
+
 describe('a language with nothing reviewed', () => {
   test('every word is unreviewed and in the set', async () => {
     const bare = { ...source, words: { p: w('p'), q: w('q') }, composites: [] };

@@ -122,19 +122,24 @@ A lesson's grammar box becomes `{ type: "grammar", pattern: "compare-bi" }`. The
 - **Author:** try the explorer and the Claude tools; say what's missing.
 
 ### Phase 2: Words (paraphrases, built/spelled, atoms)
-- [ ] Schema for `paraphrase` and `atom` (§3). check-data checks:
+- [x] Schema for `paraphrase` and `atom` (§3). check-data checks:
   - forms use dictionary words only, never the word itself or its senses;
   - no quoted sounds (X and Y are allowed);
   - it warns with a count of words still missing both, until the review is done, then fails.
-- [ ] Composite `kinds`, filled by rule; only the 220 uncertain entries are reviewed.
-- [ ] Review page modes:
+  - **Built:** `src/lib/paraphrase.js`. The gate fails on a missing mark once `PARAPHRASES_REQUIRED` is true; flip it after the review is applied.
+- [x] Composite `kinds`, filled by rule; only the Mandarin compounds the rule cannot decide are reviewed (`src/lib/form-kinds.js`).
+  - **Built:** 232 entries, not 220, in 3 batches of 100.
+- [x] Review page modes:
   - `?words=N`: approve, edit, mark clumsy, or mark as atom;
   - `?kinds=N`: built or spelled.
   
   Word batches follow the category order, so related words are reviewed together.
-- [ ] Claude's proposals: 3 word batches, seeded from the 22 existing self-free forms (zǒu = yòng jiǎo qù), the close-word phrases and the opposite phrases. Plus the kinds batch.
-- [ ] Refactor ops `paraphrase`, `atom` and `kinds`; refactor lists `refactors/W1–W3.ts` and `refactors/K1.ts`. The `setWord` key order gains the new fields.
-- [ ] `kb/rules/atoms.lp` sorts words three ways:
+  - **Built:** `review/words.html`, served by `vite-plugin-review.js`: `/__review/?words=1` (80 words per batch, 3 batches) and `/__review/?kinds=1` (3 batches). A live check in the editor, a bulk "approve the proposals that pass", and the word's own entry, antonyms and synonyms beside it. Decisions go to `review/decisions/words-N.json` and `kinds-N.json`.
+- [x] Claude's proposals: 3 word batches, seeded from the 22 existing self-free forms (zǒu = yòng jiǎo qù), the close-word phrases and the opposite phrases. Plus the kinds batch.
+  - **Built:** `review/proposals/words-1..3.mjs` (230 words: 192 paraphrases, 11 clumsy, 27 atoms) and `kinds-1..3.mjs` (232 compounds: 137 built, 95 spelled). Every form passes the gate; every proposal applies cleanly in memory. These are proposals, not decisions: the author's review is the next step.
+- [x] Refactor ops `paraphrase`, `atom` and `kinds`; refactor lists `refactors/W1–W3.ts` and `refactors/K1–K3.ts`. The `setWord` key order gains the new fields.
+  - **Built:** `node scripts/review-batch.js words|kinds N` turns the decisions into the list; apply it with `npm run refactor -- refactors/WN.ts --write`.
+- [x] `kb/rules/atoms.lp` sorts words three ways:
   - **true atoms:** marked atom, verdict clumsy, or in every smallest defining set;
   - **swappable:** in some smallest sets;
   - **secondary:** in none.
@@ -146,9 +151,10 @@ A lesson's grammar box becomes `{ type: "grammar", pattern: "compare-bi" }`. The
   - the hidden vocabulary count.
   
   Only fine paraphrases of built forms count as definitions.
-- [ ] Explorer "Atoms" panel; `kb_atoms` tool.
-- **Done when:** every word has a paraphrase or an atom mark, check-data requires it, and the atoms panel answers.
-- **Author:** 3 word batches + 1 kinds batch.
+  - **Built, and the way it asks changed once the words were reviewed:** with nothing reviewed every word is forced in and the question is trivial; with all 230 reviewed, clingo's default search and the listing of every smallest set (`optN`, brave, cautious) ran for minutes, and `-n 1` stopped at a first answer that was not proven smallest (83 against the true 60). Now the smallest size comes from core-guided search (`--opt-strategy=usc`, about 1 s), and "in some" and "in all" are asked one word at a time (is there a set as small without it? with it?), four at once on native clingo. The whole report takes about 45 s on the real data, has a deadline, and a word whose question does not finish is reported as `unchecked`, never guessed. Tests on both engines.
+- [x] Explorer "Atoms" panel; `kb_atoms` tool.
+- **Done when:** every word has a paraphrase or an atom mark, check-data requires it, and the atoms panel answers. (Not yet: the proposals wait for the author's review, then `PARAPHRASES_REQUIRED = true`.)
+- **Author:** 3 word batches + 3 kinds batches. With all the proposals taken as they are, the smallest set has 60 words, with 44 true atoms, 34 swappable and 152 secondary.
 
 ### Phase 3: Consequences, additions, swaps, scoreboard
 - [ ] Removal, all four kinds (K10):

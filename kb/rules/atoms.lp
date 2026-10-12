@@ -11,9 +11,12 @@
 %   in some of them         swappable: another word could take its place
 %   in none                 secondary: the others say it
 %
-% Run it with --opt-mode=optN to get only the smallest sets; add
-% --enum-mode=brave for the words in some of them, or --enum-mode=cautious for
-% the words in all of them (nothing here lists the sets: cycles make too many).
+% Run it with --opt-mode=opt --opt-strategy=usc (core-guided: it proves the
+% smallest size in about a second; the default branch and bound, and listing the
+% smallest sets with optN, can take minutes). Nothing here lists the sets:
+% cycles make too many. To tell "in some" from "in all", src/lib/kb/atoms.js
+% asks once per word, adding `:- base(W).` (is there a set as small without it?)
+% or `:- not base(W).` (with it?).
 %
 % Input: word/1 atom_mark/1 para_verdict/2 para/2 para_uses/3 (src/lib/kb/facts.js).
 

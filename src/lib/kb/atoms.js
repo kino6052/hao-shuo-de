@@ -21,7 +21,8 @@
 // first smallest set found; a swappable word may be said differently from
 // another smallest set.
 
-import { solve, tables } from './clingo.js';
+import { cpus } from 'os';
+import { engine, solve, sym, tables } from './clingo.js';
 import { readRules } from './rules.js';
 import { wordRefIds } from '../word-refs.js';
 import { formKinds } from '../form-kinds.js';
@@ -33,10 +34,15 @@ const OK = ['SATISFIABLE', 'OPTIMUM FOUND'];
 // -> the ids in the first column of a predicate's rows.
 const firstOf = (t, pred) => (t[pred] ?? []).map(([w]) => w);
 
-// -> the last model of a run of consequences (brave or cautious), as a table.
-const lastTable = (result) => tables(result.models.at(-1) ?? { atoms: [] });
+// Core-guided search proves the smallest size in about a second on the whole dictionary. Clingo's
+// default (branch and bound) and listing every smallest set (--opt-mode=optN) ran for minutes
+// with the words reviewed, and `-n 1` stops at the first answer without proving it smallest, so
+// all the questions ask for every improving answer (models 0) and take the last, the proven one.
+const SMALLEST = ['--opt-mode=opt', '--opt-strategy=usc'];
 
-// models: 1 for the best answer; 0 for all of them (with brave or cautious, that is the one set of consequences)
+// one question about a single word takes about a second; past this it is left unchecked
+const WORD_QUESTION_MS = 20_000;
+
 async function ask(program, options, models, timeoutMs) {
   const r = await solve(program, { models, options, timeoutMs });
   if (r.status === 'TIMEOUT') throw new Error(`the atoms question ran out of time (${timeoutMs} ms)`);
@@ -44,31 +50,80 @@ async function ask(program, options, models, timeoutMs) {
   return r;
 }
 
-export async function atoms(ctx, { timeoutMs = 60_000 } = {}) {
+// -> { inSome, inAll, secondary, unchecked }: sets of ids. The sets of the smallest size are
+// asked about one word at a time: forced out of the set (a set as small without it says it is not
+// in all) and forced in (a set as small with it says it is in some). Every answer found shows
+// the other words in some smallest set too, so most "in" questions are skipped. The words whose
+// question did not finish by the deadline are `unchecked`; the rest are decided and do not
+// depend on the order the questions ran in.
+async function classify({ program, chosen, marked, unreviewed, ids, deadline, parallel, questionMs }) {
+  const size = chosen.size;
+  const inSome = new Set(chosen);
+  const inAll = new Set([...marked, ...unreviewed]); // the rules force these into every set
+  const secondary = new Set();
+  const unchecked = new Set();
+
+  const questions = [
+    ...[...chosen].filter((id) => !inAll.has(id)).map((id) => ({ id, out: true, rule: `:- base(${sym(id)}).` })),
+    ...ids.filter((id) => !chosen.has(id)).map((id) => ({ id, out: false, rule: `:- not base(${sym(id)}).` })),
+  ];
+
+  // -> { size, base } of a smallest set under the rule, size Infinity when there is none, or null when it did not finish
+  const smallestWith = async (rule) => {
+    const timeoutMs = Math.min(questionMs, deadline - Date.now());
+    if (timeoutMs < 500) return null;
+    const r = await solve(`${program}\n${rule}`, { models: 0, options: SMALLEST, timeoutMs });
+    if (r.status === 'UNSATISFIABLE') return { size: Infinity, base: [] };
+    if (!OK.includes(r.status)) return null;
+    const base = firstOf(tables(r.models.at(-1)), 'base');
+    return { size: base.length, base };
+  };
+
+  const queue = [...questions];
+  const worker = async () => {
+    for (let q = queue.shift(); q; q = queue.shift()) {
+      if (!q.out && inSome.has(q.id)) continue;
+      const answer = await smallestWith(q.rule);
+      if (!answer) unchecked.add(q.id);
+      else if (answer.size > size) (q.out ? inAll : secondary).add(q.id);
+      else answer.base.forEach((id) => inSome.add(id));
+    }
+  };
+  await Promise.all(Array.from({ length: parallel }, worker));
+  // a word some other answer put in a smallest set is decided after all
+  for (const id of unchecked) if (inSome.has(id) && !chosen.has(id)) unchecked.delete(id);
+  return { inSome, inAll, secondary, unchecked };
+}
+
+// how many questions run at once: native clingo is a child process each; the wasm one is a single thread
+const defaultParallel = () => (engine().name === 'native' ? Math.max(1, Math.min(4, cpus().length - 1)) : 1);
+
+export async function atoms(ctx, { timeoutMs = 60_000, parallel = defaultParallel(), questionMs = WORD_QUESTION_MS } = {}) {
   const { source, facts } = ctx;
   const words = source.words;
   const ids = Object.keys(words);
   const program = `${facts.program}\n${readRules('atoms')}`;
+  const deadline = Date.now() + timeoutMs;
 
-  // one smallest set (and the kernel); the words in some of the smallest sets; in all of them
-  const first = await ask(`${program}\n${readRules('kernel')}`, ['--opt-mode=opt'], 1, timeoutMs);
-  const some = await ask(program, ['--opt-mode=optN', '--enum-mode=brave'], 0, timeoutMs);
-  const all = await ask(program, ['--opt-mode=optN', '--enum-mode=cautious'], 0, timeoutMs);
-
+  // one smallest set (and the kernel)
+  const first = await ask(`${program}\n${readRules('kernel')}`, SMALLEST, 0, timeoutMs);
   const one = tables(first.models.at(-1));
   const chosen = new Set(firstOf(one, 'base'));
   const marked = new Set(firstOf(one, 'marked'));
   const unreviewed = new Set(firstOf(one, 'unreviewed'));
-  const inSome = new Set(firstOf(lastTable(some), 'base'));
-  const inAll = new Set(firstOf(lastTable(all), 'base'));
   const kernel = firstOf(one, 'kernel');
   const core = firstOf(one, 'core');
+
+  // Which words are in some smallest set, and which in all. Listing the sets is endless (cycles
+  // make too many), so each word is asked about: is there a set as small without it? with it?
+  const { inSome, inAll, secondary, unchecked } = await classify({ program, chosen, marked, unreviewed, ids, deadline, parallel, questionMs });
 
   const pin = pinyinOf(words);
   const card = (id) => ({ id, term: words[id].term, hanzi: words[id].hanzi });
 
   const kindOf = (id) => {
     if (unreviewed.has(id)) return 'unreviewed';
+    if (unchecked.has(id)) return 'unchecked';
     if (marked.has(id) || inAll.has(id)) return 'atom';
     return inSome.has(id) ? 'swappable' : 'secondary';
   };
@@ -153,6 +208,7 @@ export async function atoms(ctx, { timeoutMs = 60_000 } = {}) {
     swappable: list('swappable'),
     secondary: list('secondary'),
     unreviewed: list('unreviewed'),
+    unchecked: list('unchecked'),
     kernel,
     core,
     chosen: [...chosen].sort(),
@@ -173,12 +229,13 @@ export async function atoms(ctx, { timeoutMs = 60_000 } = {}) {
   out.counts.swappable = out.swappable.length;
   out.counts.secondary = out.secondary.length;
   out.counts.unreviewed = out.unreviewed.length;
+  out.counts.unchecked = out.unchecked.length;
   return out;
 }
 
 // -> one word's line of the report: its sort, and how it is said when it is not an atom.
 export function atomWord(r, id) {
-  for (const kind of ['atoms', 'swappable', 'secondary', 'unreviewed']) {
+  for (const kind of ['atoms', 'swappable', 'secondary', 'unreviewed', 'unchecked']) {
     const hit = r[kind].find((x) => x.id === id);
     if (hit) return { ...hit, kind: kind === 'atoms' ? 'atom' : kind, definition: r.definitions[id] ?? null };
   }
@@ -192,6 +249,7 @@ const SORTS = {
   swappable: 'swappable: in some smallest sets and not others, so another word could take its place',
   secondary: 'secondary: the other words say it',
   unreviewed: 'not reviewed yet: no paraphrase and no atom mark, so it counts as in the set',
+  unchecked: 'not checked: the question about it did not finish in time, so its sort is open',
 };
 
 // -> one word's line as text; `line` comes from atomWord().
@@ -215,6 +273,7 @@ export function renderAtoms(r, { limit = 15 } = {}) {
   const terms = (id) => r.terms[id] ?? id;
   out.push(`Atoms: ${c.words} words, the smallest set that says the rest has ${r.smallest}.`);
   out.push(`  ${c.atoms} true atoms (${c.marked} marked, ${c.clumsy} clumsy), ${c.swappable} swappable, ${c.secondary} secondary, ${c.unreviewed} not reviewed yet.`);
+  if (c.unchecked) out.push(`  ${c.unchecked} word(s) not checked: their question did not finish in time (ask again with a longer time limit).`);
   if (c.unreviewed) out.push(`  Words with neither a paraphrase nor an atom mark count in the set but are not called atoms: review them first.`);
 
   const section = (title, rows, line) => {
