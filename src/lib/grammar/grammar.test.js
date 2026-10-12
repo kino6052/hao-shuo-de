@@ -16,9 +16,9 @@ const parser = createParser({ patterns: PATTERNS, words, composites });
 const items = new Set(coverage.groups.flatMap((g) => g.items.map((i) => `${g.key}:${i.key}`)));
 
 describe('the patterns', () => {
-  test('there are the nine, with distinct ids', () => {
+  test('there are the ten, with distinct ids', () => {
     expect(PATTERNS.map((p) => p.id).sort()).toEqual(
-      ['adverb-before-verb', 'bu-negation', 'de-modifier', 'hen-adjective', 'ma-question', 'shi-copula', 'stacked-modifiers', 'subject-predicate', 'svo'],
+      ['adverb-before-verb', 'bu-negation', 'de-modifier', 'hen-adjective', 'ma-question', 'measure-word', 'shi-copula', 'stacked-modifiers', 'subject-predicate', 'svo'],
     );
   });
 
@@ -78,6 +78,14 @@ describe('what the patterns do not allow', () => {
   test('bù can stack with an adverb phrase before it, and only before a predicate', () => {
     expect(ok('Wǒ bù hěn zǎo lái.')).toBe(true);
     expect(ok('Bù wǒ ài nǐ.')).toBe(false);
+  });
+
+  test('a pointer takes a counting word before its noun, and stays a pronoun elsewhere', () => {
+    expect(ok('Zhè-ge rén hěn hǎo.')).toBe(true);
+    expect(ok('Nà-xiē dòng-wù.')).toBe(true);
+    expect(ok('Zhè shì rén.')).toBe(true);
+    expect(ok('Wǒ-ge rén.')).toBe(false);
+    expect(ok('Zhè rén.')).toBe(false);
   });
 
   test('a sentence of several modifiers reads one way', () => {

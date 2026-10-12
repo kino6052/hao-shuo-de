@@ -6,7 +6,7 @@
 // separated by spaces (the conventions are in earley.js). Rule ids are
 // "<pattern>#<n>", so a tree node names the pattern that licensed it. A word
 // that a rule names (shi4, hen3, de) is "glue": it only matches by name, never
-// as "a verb" or "a particle" (earley.js). Errors are problems with the
+// as "a verb" or "a particle" (earley.js); =zhe4 names a word without that. Errors are problems with the
 // patterns themselves: a word that doesn't exist, a class nobody has, a
 // nonterminal no rule defines.
 
@@ -39,6 +39,8 @@ export function buildGrammar(patterns, { words = {}, composites = [] } = {}) {
         if (!defined.has(sym)) errors.push(`${r.id}: ${sym} has no rule`);
       } else if (sym.startsWith('@')) {
         if (!classes.has(sym.slice(1))) errors.push(`${r.id}: no word is ${sym}`);
+      } else if (sym.startsWith('=')) {
+        if (!Object.hasOwn(words, sym.slice(1))) errors.push(`${r.id}: "${sym.slice(1)}" is not a word`);
       } else {
         if (!Object.hasOwn(words, sym)) errors.push(`${r.id}: "${sym}" is not a word`);
         glue.add(sym);

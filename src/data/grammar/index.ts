@@ -5,10 +5,11 @@ import m1 from "./bu-negation.ts";
 import m2 from "./de-modifier.ts";
 import m3 from "./hen-adjective.ts";
 import m4 from "./ma-question.ts";
-import m5 from "./shi-copula.ts";
-import m6 from "./stacked-modifiers.ts";
-import m7 from "./subject-predicate.ts";
-import m8 from "./svo.ts";
+import m5 from "./measure-word.ts";
+import m6 from "./shi-copula.ts";
+import m7 from "./stacked-modifiers.ts";
+import m8 from "./subject-predicate.ts";
+import m9 from "./svo.ts";
 
 export const PATTERNS = [
   m0,
@@ -20,4 +21,5 @@ export const PATTERNS = [
   m6,
   m7,
   m8,
+  m9,
 ];

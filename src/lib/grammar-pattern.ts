@@ -16,6 +16,7 @@ export interface Bilingual {
  *  - A capital first letter is a part of a sentence (NP, VP, Utt, S, Q).
  *  - `@noun` is any word of that class (the word's `pos`); `@measure_word` for "measure word".
  *  - Anything else is that word by id: `shi4`, `hen3`. A word a rule names only matches by name.
+ *  - `=zhe4` is that word by id too, and it stays a pronoun for the rules that use `@pronoun`.
  */
 export interface PatternRule {
   lhs: string;

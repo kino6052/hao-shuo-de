@@ -10,6 +10,8 @@
 // symbols  An uppercase first letter is a nonterminal (NP, VP, Utt).
 //          @name is any word of that class (@noun, @adjective).
 //          anything else is that word, by id (shi4, hen3).
+//          =name is that word by id too, but it keeps its classes (=zhe4 is still a
+//          pronoun everywhere else): for a word that one rule needs by name.
 // glue     word ids that only match by name. The grammar names shi4, so shì is
 //          not "a verb" for @verb: a word the grammar names is only that word.
 // lattice  { n, edges } from lexicon.js: positions 0..n, edges between them.
@@ -34,6 +36,7 @@ export function makeGrammar(rules, { glue = new Set() } = {}) {
 
 const accepts = (sym, edge, glue) => {
   if (sym[0] === '@') return !(edge.id && glue.has(edge.id)) && edge.classes.has(sym.slice(1));
+  if (sym[0] === '=') return edge.id === sym.slice(1);
   return edge.id === sym;
 };
 
