@@ -32,7 +32,8 @@
     "check-example-runs": "node scripts/check-example-runs.js",
     "check-word-builder": "node scripts/check-word-builder.js",
     "check-passive": "node scripts/check-passive.js",
-    "report-heads": "node scripts/report-heads.js"
+    "report-heads": "node scripts/report-heads.js",
+    "kb": "node scripts/kb.js"
   },
   "dependencies": {
     "graphology": "^0.26.0",

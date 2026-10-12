@@ -10,6 +10,9 @@
 //      real words.
 //   4. Antonym/synonym pairs and phrases, and coverage items, name real words.
 //   5. Every composite file is named <toneless pinyin>-<hanzi>.ts.
+//   6. Every grammar pattern (src/data/grammar/) is named after its file, covers
+//      real coverage items, is taught in a real module, has rules that use only
+//      real words, and every example of it parses by that pattern.
 //
 //   npm run check-data
 
@@ -23,6 +26,12 @@ import { buildData } from './build-data.js';
 import { compositeFileName } from './data-files.js';
 import { dataFiles } from './build-data.js';
 import { wordRefIds } from '../src/lib/word-refs.js';
+import { PATTERNS } from '../src/data/grammar/index.ts';
+import { createParser, patternsOf } from '../src/lib/grammar/parser.js';
+import { pinyinToRefs } from '../src/lib/pinyin-refs.js';
+import { existsSync } from 'fs';
+import { resolve } from 'path';
+import { fileURLToPath } from 'url';
 
 const errors = [];
 const ids = new Set(Object.keys(WORDS));
@@ -105,9 +114,36 @@ ENTRIES.forEach((e, i) => {
   if (files[i] !== want) errors.push(`composites/${files[i]}: should be named ${want}`);
 });
 
+// 6. grammar patterns
+const patternFiles = dataFiles('grammar');
+const coverageItems = new Set(GROUPS.flatMap((g) => g.items.map((i) => `${g.key}:${i.key}`)));
+const LESSONS = fileURLToPath(new URL('../src/content/lessons/', import.meta.url));
+const parser = createParser({ patterns: PATTERNS, words: WORDS, composites: ENTRIES });
+for (const e of parser.errors) errors.push(`grammar/: ${e}`);
+PATTERNS.forEach((p, i) => {
+  const where = `grammar/${patternFiles[i]}`;
+  if (`${p.id}.ts` !== patternFiles[i]) errors.push(`${where}: pattern("${p.id}") doesn't match the file name`);
+  for (const l of ['eng', 'rus']) if (!p.meaning?.[l]) errors.push(`${where}: no meaning.${l}`);
+  for (const c of p.covers) if (!coverageItems.has(c)) errors.push(`${where}: covers "${c}", which is not a coverage item`);
+  if (p.taught && !existsSync(resolve(LESSONS, `${p.taught}.ts`))) errors.push(`${where}: taught in "${p.taught}", which is not a lesson module`);
+  for (const ref of wordRefIds(p.template.hsd)) if (!ids.has(ref)) errors.push(`${where}: template names unknown word ${ref}`);
+  if (!p.examples.length) errors.push(`${where}: no examples`);
+  for (const [pinyin] of p.examples) {
+    let r;
+    try {
+      r = parser.parse(pinyinToRefs(pinyin, WORDS));
+    } catch (err) {
+      errors.push(`${where}: example "${pinyin}": ${err.message}`);
+      continue;
+    }
+    if (!r.ok) errors.push(`${where}: example "${pinyin}" does not parse`);
+    else if (!r.trees.some((t) => patternsOf(t).includes(p.id))) errors.push(`${where}: example "${pinyin}" parses, but not by this pattern`);
+  }
+});
+
 if (errors.length) {
   for (const e of errors) console.error(`  ${e}`);
   console.error(`\ncheck-data: ${errors.length} problem(s).`);
   process.exit(1);
 }
-console.log(`check-data: OK -- ${ids.size} words, ${ENTRIES.length} composites, ${GROUPS.length} coverage groups.`);
+console.log(`check-data: OK -- ${ids.size} words, ${ENTRIES.length} composites, ${GROUPS.length} coverage groups, ${PATTERNS.length} grammar patterns.`);

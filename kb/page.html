@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hao-shuo-de Knowledge Base</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+SC:wght@600&display=swap">
+<style>
+/* The knowledge-base explorer, served by the dev server (vite-plugin-kb.js). It asks the same KB
+   as the command line and the Claude tools, so the answers are the same text. */
+:root {
+  --paper: #f3f5f2;
+  --card: #fbfcfa;
+  --ink: #1b2420;
+  --muted: #5d6a64;
+  --line: #d6ddd7;
+  --accent: #1d6f55;
+  --accent-ink: #ffffff;
+  --accent-soft: #dcece4;
+  --warn: #9a5b00;
+  --warn-soft: #f6e8d2;
+  --danger: #a3332b;
+  --danger-soft: #f5dedb;
+  --font-han: "Noto Serif SC", "Songti SC", "SimSun", serif;
+  --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #131916; --card: #1a221e; --ink: #e5ece8; --muted: #9aa8a1; --line: #2c3833;
+    --accent: #4fbf94; --accent-ink: #0d1a14; --accent-soft: #1f3a2f;
+    --warn: #e0a24a; --warn-soft: #3b2e19; --danger: #ef7a70; --danger-soft: #3d2320;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 15px/1.5 var(--font-body); }
+.wrap { max-width: 920px; margin: 0 auto; padding-inline: 16px; padding-block: 24px 64px; }
+header { display: grid; gap: 6px; margin-bottom: 18px; }
+.eyebrow { font: 500 12px/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1 { font-size: 26px; line-height: 1.2; margin: 0; text-wrap: balance; }
+.lede { margin: 0; color: var(--muted); max-width: 68ch; }
+.tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+.tab { font: 600 14px/1 var(--font-body); border: 1px solid var(--line); background: var(--card); color: var(--ink);
+  padding: 9px 14px; border-radius: 999px; cursor: pointer; }
+.tab[aria-selected="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.tab:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+form { display: grid; gap: 8px; margin-bottom: 16px; }
+.field { display: flex; gap: 8px; flex-wrap: wrap; }
+input, textarea { flex: 1 1 260px; min-width: 0; font: 400 16px/1.4 var(--font-body); color: var(--ink); background: var(--card);
+  border: 1px solid var(--line); border-radius: 8px; padding: 9px 12px; }
+textarea { min-height: 78px; resize: vertical; }
+button.go { font: 600 14px/1 var(--font-body); background: var(--accent); color: var(--accent-ink); border: 1px solid var(--accent);
+  border-radius: 8px; padding: 10px 16px; cursor: pointer; }
+button.link { font: inherit; background: none; border: 0; padding: 0; color: var(--accent); text-decoration: underline; cursor: pointer; }
+.hint { font-size: 13px; color: var(--muted); margin: 0; }
+.status { min-height: 1.5em; font-size: 14px; color: var(--muted); }
+.status.err { color: var(--danger); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; margin-bottom: 12px; }
+.title { display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; margin-bottom: 6px; }
+.han { font: 600 34px/1.1 var(--font-han); }
+.py { font-size: 22px; font-weight: 600; }
+.meta { font: 500 12px/1.4 var(--font-mono); color: var(--muted); }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+.chip { font: 600 13px/1 var(--font-body); border: 1px solid var(--line); border-radius: 999px; padding: 6px 10px; background: var(--card); font-variant-numeric: tabular-nums; }
+.chip.hit { background: var(--warn-soft); border-color: var(--warn); color: var(--warn); }
+.chip.zero { color: var(--muted); }
+pre.text { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font: 400 13.5px/1.55 var(--font-mono); }
+.sentence { display: grid; gap: 6px; }
+.sentence h3 { margin: 0; font-size: 17px; font-weight: 600; }
+.badge { font: 600 12px/1 var(--font-mono); letter-spacing: .04em; text-transform: uppercase; padding: 4px 8px; border-radius: 999px; }
+.badge.ok { background: var(--accent-soft); color: var(--accent); }
+.badge.bad { background: var(--danger-soft); color: var(--danger); }
+.row { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.label { font: 500 11px/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+details summary { cursor: pointer; color: var(--accent); font-size: 14px; }
+@media (max-width: 560px) { .han { font-size: 28px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Hao-shuo-de · knowledge base</div>
+    <h1>Explorer</h1>
+    <p class="lede">Ask the same questions Claude asks: what a word is and where it is used, what happens if we drop it, and whether a sentence fits the grammar patterns.</p>
+  </header>
+
+  <div class="tabs" role="tablist" aria-label="Question">
+    <button class="tab" role="tab" id="tab-word" data-mode="word" aria-selected="true">Word</button>
+    <button class="tab" role="tab" id="tab-remove" data-mode="remove" aria-selected="false">Drop a word</button>
+    <button class="tab" role="tab" id="tab-parse" data-mode="parse" aria-selected="false">Parse a sentence</button>
+  </div>
+
+  <form id="ask" autocomplete="off">
+    <div class="field" id="field-name">
+      <input id="name" list="suggest" aria-label="Word" placeholder="dēng, deng1 or 灯" spellcheck="false">
+      <datalist id="suggest"></datalist>
+      <button class="go" type="submit">Ask</button>
+    </div>
+    <div class="field" id="field-text" hidden>
+      <textarea id="text" aria-label="Sentence" placeholder="Wǒ shì rén. Zhè-ge rén hěn hǎo." spellcheck="false"></textarea>
+      <button class="go" type="submit">Ask</button>
+    </div>
+    <p class="hint" id="hint"></p>
+  </form>
+
+  <div class="status" id="status" role="status" aria-live="polite"></div>
+  <div id="out"></div>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const HINTS = {
+  word: 'One word, by its pinyin, its id (hao3) or its hanzi.',
+  remove: 'One or more words, separated by spaces or commas. Nothing is changed; this only shows what would have to change.',
+  parse: 'Plain pinyin ("Wǒ shì rén.") or text with word references. Several sentences are checked one by one.',
+};
+let mode = 'word';
+let seq = 0;
+
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+
+function setMode(m, { keep = false } = {}) {
+  mode = m;
+  for (const t of document.querySelectorAll('.tab')) t.setAttribute('aria-selected', String(t.dataset.mode === m));
+  $('field-name').hidden = m === 'parse';
+  $('field-text').hidden = m !== 'parse';
+  $('name').placeholder = m === 'remove' ? 'dēng, fàn …' : 'dēng, deng1 or 灯';
+  $('name').setAttribute('aria-label', m === 'remove' ? 'Words to drop' : 'Word');
+  $('hint').textContent = HINTS[m];
+  if (!keep) { $('out').innerHTML = ''; $('status').textContent = ''; $('status').className = 'status'; }
+}
+
+async function api(path, params) {
+  const r = await fetch(`/__kb/${path}?${new URLSearchParams(params)}`);
+  const data = await r.json();
+  if (!r.ok) throw new Error(data.error || r.statusText);
+  return data;
+}
+
+function say(message, bad = false) {
+  $('status').textContent = message;
+  $('status').className = bad ? 'status err' : 'status';
+}
+
+function wordCard(d) {
+  const c = d.card;
+  return `<section class="card">
+    <div class="title"><span class="han">${esc(c.hanzi)}</span><span class="py">${esc(c.term)}</span><span class="meta">${esc(c.id)} · ${esc(c.pos ?? '')} · necessity ${esc(c.necessity?.index ?? '?')}</span></div>
+    <div class="chips">
+      <span class="chip">${c.composites.usedBy} composites use it</span>
+      <span class="chip">${c.sentences.total} sentences</span>
+      <span class="chip">${c.taught.length ? 'taught in ' + esc(c.taught.map((t) => t.lesson + '/' + t.module).join(', ')) : 'not taught as a card'}</span>
+    </div>
+    <pre class="text">${esc(d.text)}</pre>
+    <p class="hint" style="margin-top:10px"><button class="link" data-remove="${esc(c.id)}">What happens if we drop ${esc(c.term)}?</button></p>
+  </section>`;
+}
+
+const COUNTS = [
+  ['redo', 'composites to redo'], ['loses', 'lose a form'], ['headLost', 'lose their head'], ['sentences', 'sentences to rewrite'],
+  ['cards', 'word cards'], ['lost', 'coverage lost'], ['touched', 'coverage touched'], ['definitions', 'definitions name it'],
+  ['senses', 'catch-all senses empty'], ['relations', 'pairs break'],
+];
+
+function removal(d) {
+  const c = d.report.counts;
+  const chips = COUNTS.map(([k, label]) => `<span class="chip ${c[k] ? 'hit' : 'zero'}">${c[k] ?? 0} ${esc(label)}</span>`).join('');
+  return `<section class="card"><div class="chips">${chips}</div><pre class="text">${esc(d.text)}</pre></section>`;
+}
+
+function parsed(d) {
+  if (d.view.error) return `<section class="card"><p>${esc(d.view.error)}</p></section>`;
+  return d.view.sentences.map((s) => `<section class="card sentence">
+    <div class="row"><h3>${esc(s.text)}</h3><span class="badge ${s.ok ? 'ok' : 'bad'}">${s.ok ? 'parses' : 'does not parse'}</span></div>
+    ${s.ok
+      ? `<div class="row"><span class="label">patterns</span><span>${s.patterns.map(esc).join(', ')}</span></div>
+         ${s.treeCount > 1 ? `<div class="hint">${s.treeCount > 20 ? 'many' : s.treeCount} readings; the first three are shown.</div>` : ''}
+         ${s.readings.map((r, i) => `<div class="row"><span class="label">reading ${i + 1}</span><code>${esc(r.bracket)}</code></div>${i === 0 ? `<details><summary>The structure, line by line</summary><pre class="text">${esc(r.outline)}</pre></details>` : ''}`).join('')}`
+      : `<div>${esc(s.explain)}</div>
+         ${s.problems.length ? `<div class="hint">${s.problems.map(esc).join('; ')}</div>` : ''}
+         ${s.pieces.length ? `<div class="row"><span class="label">pieces that fit</span><code>${s.pieces.map((p) => `[${esc(p.sym)} ${esc(p.text)}]`).join(' ')}</code></div>` : ''}`}
+  </section>`).join('');
+}
+
+async function ask() {
+  const my = ++seq;
+  const name = $('name').value.trim();
+  const text = $('text').value.trim();
+  if (mode !== 'parse' && !name) return say('Type a word.');
+  if (mode === 'parse' && !text) return say('Type a sentence.');
+  history.replaceState(null, '', `#${mode}=${encodeURIComponent(mode === 'parse' ? text : name)}`);
+  say(mode === 'remove' ? 'Working it out (clingo)…' : 'Looking…');
+  $('out').innerHTML = '';
+  try {
+    const d = mode === 'word' ? await api('word', { name }) : mode === 'remove' ? await api('remove', { names: name }) : await api('parse', { text });
+    if (my !== seq) return;
+    $('out').innerHTML = mode === 'word' ? wordCard(d) : mode === 'remove' ? removal(d) : parsed(d);
+    say('');
+  } catch (e) {
+    if (my === seq) say(e.message, true);
+  }
+}
+
+let timer;
+$('name').addEventListener('input', () => {
+  clearTimeout(timer);
+  const last = $('name').value.split(/[,\s]+/).pop();
+  if (!last) return;
+  timer = setTimeout(async () => {
+    try {
+      const hits = await api('find', { q: last });
+      const head = $('name').value.slice(0, $('name').value.length - last.length);
+      $('suggest').innerHTML = hits.map((h) => `<option value="${esc(head + h.id)}">${esc(h.term)} ${esc(h.hanzi)} · ${esc(h.pos ?? '')}</option>`).join('');
+    } catch { /* suggestions are a convenience */ }
+  }, 150);
+});
+
+$('ask').addEventListener('submit', (e) => { e.preventDefault(); ask(); });
+for (const t of document.querySelectorAll('.tab')) t.addEventListener('click', () => setMode(t.dataset.mode));
+$('out').addEventListener('click', (e) => {
+  const id = e.target.dataset?.remove;
+  if (!id) return;
+  setMode('remove');
+  $('name').value = id;
+  ask();
+});
+
+// #word=deng1, #remove=deng1,fan4, #parse=Wǒ shì rén.
+function fromHash() {
+  const m = /^#(word|remove|parse)=(.*)$/.exec(location.hash);
+  if (!m) return setMode('word');
+  setMode(m[1], { keep: true });
+  (m[1] === 'parse' ? $('text') : $('name')).value = decodeURIComponent(m[2]);
+  ask();
+}
+// ask() rewrites the hash with the same value, which does not fire this again
+addEventListener('hashchange', fromHash);
+fromHash();
+</script>
+</body>
+</html>

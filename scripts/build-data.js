@@ -4,6 +4,7 @@
 //   src/data/words/index.ts       every src/data/words/<id>.ts      (WORDS, WordId)
 //   src/data/composites/index.ts  every src/data/composites/*.ts    (ENTRIES)
 //   src/data/coverage/index.ts    every src/data/coverage/<group>.ts (GROUPS)
+//   src/data/grammar/index.ts     every src/data/grammar/<id>.ts     (PATTERNS)
 //
 // One list works everywhere (Vite, node scripts, bun tests), which
 // import.meta.glob wouldn't. The dev server reruns this when a file is added
@@ -62,6 +63,7 @@ export function indexFiles() {
     { path: resolve(DATA_DIR, 'words/index.ts'), text: wordsIndex() },
     { path: resolve(DATA_DIR, 'composites/index.ts'), text: listIndex('composites', ['meta.ts'], 'ENTRIES') },
     { path: resolve(DATA_DIR, 'coverage/index.ts'), text: listIndex('coverage', ['about.ts'], 'GROUPS') },
+    { path: resolve(DATA_DIR, 'grammar/index.ts'), text: listIndex('grammar', [], 'PATTERNS') },
   ];
 }
 

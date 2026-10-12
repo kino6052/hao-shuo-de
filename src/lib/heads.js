@@ -52,7 +52,9 @@ export function compositeHeads(dictionary, entries) {
 function headOf(e, words, compounds, byZh) {
   if (e.head) return words[e.head] ? { kind: 'word', id: e.head } : byZh.has(e.head) ? { kind: 'compound', zh: e.head } : null;
   if (!e.hsd) return null;
-  const main = e.hsd.split(' / ')[0];
+  // the first form that names a word: a form that is only a quoted sound ("ng") has none
+  const forms = e.hsd.split(' / ');
+  const main = forms.find((f) => wordRefIds(f).some((id) => words[id])) ?? forms[0];
   const ids = wordRefIds(main).filter((id) => words[id]);
   const content = ids.filter((id) => !GLUE.has(id));
   if (!content.length) return ids.length ? { kind: 'word', id: ids[0] } : null;

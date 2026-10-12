@@ -99,21 +99,25 @@ A lesson's grammar box becomes `{ type: "grammar", pattern: "compare-bi" }`. The
 ## 4. Phases
 
 ### Phase 1: Foundation (engine, facts, explorer, Claude tools, a thin slice of words and grammar)
-- [ ] `npm i -D clingo-wasm@0.6.0` (clingo 5.8.1), then `bun install` so bun.lock follows.
-- [ ] `src/lib/kb/clingo.js`: `solve(program, { models, options })` → models, costs, status, plus a parser that turns answer atoms into rows. Tests.
-- [ ] `src/lib/kb/facts.js`: words, senses, pos, necessity, categories, first lesson, composites (each form split into slots: word or sense, quoted sound, X/Y; head, fit, rank), coverage items and their forms, maps, and every sentence (lessons, examples, stories, phrase book) with the words it uses. Constants are word ids, and composites are their hanzi; all are valid clingo terms. Tests on a fixture.
-- [ ] `kb/rules/base.lp` and `whatif.lp`: the **remove** what-if for one or more words. Consequences in this slice: forms to redo, book to rewrite, and coverage items without a carrier.
-- [ ] Grammar slice: `src/lib/grammar/earley.js` (parse, all trees, partial parse for errors) and `src/lib/grammar-pattern.ts`. Then 8 patterns in `src/data/grammar/`: the Sentence Builder's rules (subject–verb–object, shì, hěn + adjective, -de modifier, stacked modifiers, adverb before verb), plus bù and ma. Word classes come from `pos` for now. Report: the parse rate on Lessons 1–4. Tests.
-- [ ] `/__kb` explorer (`vite-plugin-kb.js`, dev only, like the review page) with a search box and these panels:
+- [x] `npm i -D clingo-wasm@0.6.0` (clingo 5.8.1), then `bun install` so bun.lock follows.
+- [x] `src/lib/kb/clingo.js`: `solve(program, { models, options })` → models, costs, status, plus a parser that turns answer atoms into rows. Tests.
+- [x] `src/lib/kb/facts.js`: words, senses, pos, necessity, categories, first lesson, composites (each form split into slots: word or sense, quoted sound, X/Y; head, fit, rank), coverage items and their forms, maps, and every sentence (lessons, examples, stories, phrase book) with the words it uses. Constants are word ids, and composites are their hanzi; all are valid clingo terms. Tests on a fixture.
+  - **Built, with one limit:** clingo-wasm copies the program onto a 1 MB stack, so a program over about 1,000,000 bytes (hanzi count 3) fails. The facts are 1.8 MB, mostly the sentences, so they come in two tiers: the language (words, composites, coverage, about 650 KB, always loaded) and the text (sentences and mentions, written compactly and loaded only for the words a question names). `solve` refuses an oversize program with a clear message. If the language alone ever nears the limit, split it by question.
+- [x] `kb/rules/base.lp` and `whatif.lp`: the **remove** what-if for one or more words. Consequences in this slice: forms to redo, book to rewrite, and coverage items without a carrier.
+  - **Built, and a bit further than planned:** also definitions that name the word, catch-all senses left with no compound, and opposite/synonym pairs and phrases that break. `kb/rules/text.lp` holds the rules that need the text tier. A test checks the clingo answer against plain JavaScript loops on the real data.
+- [x] Grammar slice: `src/lib/grammar/earley.js` (parse, all trees, partial parse for errors) and `src/lib/grammar-pattern.ts`. Then 8 patterns in `src/data/grammar/`: the Sentence Builder's rules (subject–verb–object, shì, hěn + adjective, -de modifier, stacked modifiers, adverb before verb), plus bù and ma. Word classes come from `pos` for now. Report: the parse rate on Lessons 1–4. Tests.
+  - **Built:** 9 patterns (subject–predicate added as the frame). Lessons 1–4: 70 of 81 sentences parse (86%), report in `kb/reports/lessons-1-4-parse.md` (`npm run kb -- parse-report`). The 11 that don't are Lesson 4's measure word after a pointer (`zhè-ge rén`, 10) and plural `nà-xiē rén` (1): the next two patterns. Lesson 1 has no Hao-shuo-de sentences. `check-data` fails if a pattern's example stops parsing.
+- [x] `/__kb` explorer (`vite-plugin-kb.js`, dev only, like the review page) with a search box and these panels:
   - a word card (facts and relations);
   - remove what-if;
   - parse a sentence (tree, or where it fails).
-- [ ] MCP server `scripts/kb-mcp.js` (stdio), registered in `.mcp.json`. Tools:
+- [x] MCP server `scripts/kb-mcp.js` (stdio), registered in `.mcp.json`. Tools:
   - `kb_word`, `kb_remove`, `kb_parse`;
   - `kb_check_form` (plain pinyin → refs, dictionary words only, the compound rule, hanzi);
   - `kb_query` (raw rules, for Claude).
-- [ ] Thin `scripts/kb.js` that the tests and the MCP server share.
-- **Done when:** asking Claude "what happens if we drop dēng?" gets an answer from `kb_remove` and the explorer shows the same; Lessons 1–4 parse report exists; `bun test` and `npm run check` green.
+  - **Built:** hand-written JSON-RPC over stdio (no SDK). Tool calls run one at a time, and a `kb_query` stops at its `timeout_ms` (default 20 s, at most 60 s). Data is re-read whenever a file changed.
+- [x] Thin `scripts/kb.js` that the tests and the MCP server share.
+- **Done when (done 2026-10-12):** asking Claude "what happens if we drop dēng?" gets an answer from `kb_remove` and the explorer shows the same; Lessons 1–4 parse report exists; `bun test` and `npm run check` green.
 - **Author:** try the explorer and the Claude tools; say what's missing.
 
 ### Phase 2: Words (paraphrases, built/spelled, atoms)
