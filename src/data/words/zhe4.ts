@@ -15,4 +15,8 @@ export default word("zhe4", {
     rus: "Без него нельзя указать на то, что рядом: нет «это».",
   },
   maps: "ni",
+  atom: {
+    eng: "\"This\" is learned by pointing at what is near you; \"the near one\" already needs \"near\".",
+    rus: "«Этот» усваивают, показывая на то, что рядом; «ближний» уже требует «близко».",
+  },
 });

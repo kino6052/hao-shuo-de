@@ -27,4 +27,8 @@ export default word("bu4", {
       compounds: ["bu4 fen1", "bu4 men2"],
     },
   },
+  atom: {
+    eng: "The plain no; every other negation is built from it.",
+    rus: "Простое «нет»; любое другое отрицание строится из него.",
+  },
 });

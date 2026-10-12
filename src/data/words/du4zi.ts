@@ -14,4 +14,8 @@ export default word("du4zi", {
     eng: "The belly: where food goes, and it is the way to say fat or hungry.",
     rus: "Живот: куда идёт еда, и через него говорят «толстый» или «голодный».",
   },
+  atom: {
+    eng: "The belly is learned by pointing at it; \"where the food goes\" names its use only.",
+    rus: "Живот усваивают, показывая на него; «куда идёт еда» называет лишь его назначение.",
+  },
 });

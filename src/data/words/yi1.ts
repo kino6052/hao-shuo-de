@@ -11,4 +11,8 @@ export default word("yi1", {
     rus: "Один: первое число, а также «какой-то», как в {{word:yi1}}-ge {{word:ren2}}.",
   },
   maps: "wan",
+  atom: {
+    eng: "You learn \"one\" by holding up a single thing; every other number is built from it.",
+    rus: "«Один» усваивают на одном предмете; все остальные числа строятся из него.",
+  },
 });

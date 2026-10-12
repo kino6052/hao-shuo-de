@@ -15,4 +15,8 @@ export default word("le", {
     rus: "Говорит, что что-то случилось или изменилось: {{word:wo3}} {{word:chi1}} {{word:le}}. Без него ни прошлого, ни перемен.",
   },
   maps: "pini",
+  atom: {
+    eng: "Marks that something happened or changed; every way of saying it already needs the same idea.",
+    rus: "Показывает, что что-то случилось или изменилось; любой способ сказать это уже требует той же идеи.",
+  },
 });

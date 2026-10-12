@@ -15,4 +15,8 @@ export default word("jiao3", {
     rus: "Ступни и ноги: ходить, стоять, пинать. Основная часть тела без короткого описания.",
   },
   maps: "noka",
+  atom: {
+    eng: "The foot is learned by pointing at it; \"the part that walks\" only names what it does.",
+    rus: "Ступню усваивают, показывая на неё; «часть, которая ходит» называет лишь то, что она делает.",
+  },
 });

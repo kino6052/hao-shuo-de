@@ -70,7 +70,13 @@ export default {
   ti4: { forms: ['X bù zuò, wǒ zuò'], why: 'X does not do it, I do.' },
 
   // -- Relative position -----------------------------------------------------------------
-  hou4: { forms: ['yǎnjing kàn-bù-jiàn-de nà-biān'], why: 'The side the eyes cannot see.' },
+  hou4: {
+    atom: {
+      eng: 'Behind is learned from your own body, the side you cannot see; it stands beside qián, not under it.',
+      rus: '«Зад» узнают по своему телу — сторона, которую не видишь; hòu стоит рядом с qián, а не под ним.',
+    },
+    why: 'Learned from the body, with qián as its partner.',
+  },
   li3: {
     atom: {
       eng: 'Inside is learned from a box or a mouth: you put something in. Its opposite wài is "not lǐ".',
@@ -83,7 +89,13 @@ export default {
   bian1: { forms: ['bù shì zhōng-jiān-de dì-fang'], why: 'Not the middle.' },
   zhong1: { forms: ['zuì lǐ-miàn'], why: 'The most inside.' },
   jian1: { forms: ['zhōng'], why: 'Same as zhōng: the middle.' },
-  qian2: { forms: ['yǎnjing kàn-de nà-biān'], why: 'The side the eyes look to.' },
+  qian2: {
+    atom: {
+      eng: 'Front is learned from your own body, the side you face; "where the eyes look" needs eyes and looking.',
+      rus: '«Перед» узнают по своему телу — сторона, куда обращено лицо; «куда смотрят глаза» требует глаз и взгляда.',
+    },
+    why: 'Learned from the body, with hòu as its partner.',
+  },
   shang4: { forms: ['tóu-de nà-biān'], why: 'The head side.' },
   xia4: { forms: ['jiǎo-de nà-biān'], why: 'The foot side.' },
   wai4: { forms: ['bù zài lǐ-miàn'], why: 'Not inside.' },

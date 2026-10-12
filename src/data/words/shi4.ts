@@ -27,4 +27,8 @@ export default word("shi4", {
       },
     },
   },
+  atom: {
+    eng: "The \"is\" that joins a thing to what it is; every other verb says more than that.",
+    rus: "Это «есть», которое связывает вещь с тем, что она такое; любой другой глагол говорит больше.",
+  },
 });

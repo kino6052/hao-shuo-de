@@ -15,4 +15,8 @@ export default word("re4", {
     rus: "Горячий, жаркий: погода, еда, огонь. Ощущение, которое не описать другими словами.",
   },
   maps: "seli",
+  atom: {
+    eng: "Hot is felt on the skin; \"like fire\" needs something already hot, and its partner lěng is felt the same way.",
+    rus: "Горячее чувствуют кожей; «как огонь» уже предполагает горячее, а парное lěng чувствуется так же.",
+  },
 });

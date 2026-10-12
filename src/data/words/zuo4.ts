@@ -36,4 +36,8 @@ export default word("zuo4", {
       compounds: ["gong1 zuo4", "zuo4 zhe3", "zuo4 yong4", "dong4 zuo4", "xie3 zuo4"],
     },
   },
+  atom: {
+    eng: "\"Do\" is what is left when you take the how away from every action word.",
+    rus: "«Делать» — то, что остаётся, когда у каждого глагола действия убираешь «как».",
+  },
 });

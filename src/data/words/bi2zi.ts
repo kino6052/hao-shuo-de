@@ -11,4 +11,8 @@ export default word("bi2zi", {
     rus: "Нос, а с ним и запах: иначе о запахах не поговорить.",
   },
   maps: "nena",
+  atom: {
+    eng: "The nose is learned by pointing at it; \"where air goes in\" says what it does, not what it is.",
+    rus: "Нос усваивают, показывая на него; «куда входит воздух» говорит, что он делает, а не что это.",
+  },
 });

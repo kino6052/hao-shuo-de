@@ -155,6 +155,7 @@ A lesson's grammar box becomes `{ type: "grammar", pattern: "compare-bi" }`. The
 - [x] Explorer "Atoms" panel; `kb_atoms` tool.
 - **Done when:** every word has a paraphrase or an atom mark, check-data requires it, and the atoms panel answers. (Not yet: the proposals wait for the author's review, then `PARAPHRASES_REQUIRED = true`.)
 - **Author:** 3 word batches + 3 kinds batches. With all the proposals taken as they are, the smallest set has 60 words, with 44 true atoms, 34 swappable and 152 secondary.
+- **Atoms admitted (2026-10-12):** the author accepted the atom marks for now: the 27 first marked and 18 more (12 body parts, zhè/nà, rè/lěng, qián/hòu), 45 in all, applied from `refactors/W1–W3.ts` (45 word files). The other 185 words are not decided yet (176 proposed paraphrases and 9 proposed clumsy ones), so the atoms report shows `marked 45, unreviewed 185`. Whether each atom should stay is a Phase 3 question for the knowledge base to answer (what happens if it goes, what replaces it), once the composite vocabulary and its data points are more complete.
 
 ### Phase 3: Consequences, additions, swaps, scoreboard
 - [ ] Removal, all four kinds (K10):

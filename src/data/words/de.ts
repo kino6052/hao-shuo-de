@@ -15,4 +15,8 @@ export default word("de", {
     rus: "Соединяет описание с существительным: {{word:da4}}-{{word:de}} {{word:di4}}-{{light:fang1}}. Им пользуется каждое описание в Hǎo-shuō-de.",
   },
   maps: "pi",
+  atom: {
+    eng: "The little link between a describing part and the word it describes; it has no meaning apart from the link.",
+    rus: "Маленькая связка между описывающей частью и словом, которое она описывает; вне связки у неё нет значения.",
+  },
 });

@@ -15,4 +15,8 @@ export default word("you3", {
     rus: "Иметь, а также «есть, имеется». Без него ничего не существует и ни у кого ничего нет.",
   },
   maps: "jo, lon",
+  atom: {
+    eng: "\"Have\" and \"there is\" come before everything else you can say about a thing; zài and dé lean on it.",
+    rus: "«Иметь» и «есть» стоят раньше всего, что можно сказать о вещи; на него опираются zài и dé.",
+  },
 });

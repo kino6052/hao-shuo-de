@@ -15,4 +15,8 @@ export default word("da4", {
     rus: "Большой — один из самых базовых способов что-то описать. А ещё взрослый и важный.",
   },
   maps: "suli",
+  atom: {
+    eng: "Size is seen by comparing two things; nothing else gives the idea. Its opposite xiǎo is just \"bù dà\".",
+    rus: "Размер видят, сравнивая два предмета; иначе идею не передать. Противоположное xiǎo — просто «bù dà».",
+  },
 });

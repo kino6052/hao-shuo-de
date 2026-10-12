@@ -15,4 +15,8 @@ export default word("kou3", {
     rus: "Рот и любое отверстие: дверь, дыра. Без него не сказать про речь, еду и вход.",
   },
   maps: "lupa",
+  atom: {
+    eng: "The mouth is learned by pointing at it; eating and speaking are what it is for, not what it is.",
+    rus: "Рот усваивают, показывая на него; есть и говорить — для чего он нужен, а не что это.",
+  },
 });

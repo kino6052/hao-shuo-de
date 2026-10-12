@@ -27,4 +27,8 @@ export default word("li3", {
       },
     },
   },
+  atom: {
+    eng: "Inside is learned from a box or a mouth: you put something in. Its opposite wài is \"not lǐ\".",
+    rus: "Внутреннее узнают по коробке или рту: туда что-то кладут. Противоположное wài — «не lǐ».",
+  },
 });

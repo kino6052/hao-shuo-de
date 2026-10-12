@@ -14,4 +14,8 @@ export default word("huo2", {
     eng: "Live, alive. The pair to {{word:si3}}: life can't be described without it.",
     rus: "Жить, живой. Пара к {{word:si3}}: без него не описать жизнь.",
   },
+  atom: {
+    eng: "Alive is lived, not described; sǐ and shēng are measured from it.",
+    rus: "Живое проживают, а не описывают; sǐ и shēng отмеряют от него.",
+  },
 });

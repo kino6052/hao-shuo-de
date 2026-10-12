@@ -24,8 +24,20 @@ export default {
     note: 'It is an ending: the form says what it means but cannot take its place in wǒ-men.',
     why: 'An ending, not a thing; "more than one person" is its meaning, not a replacement.',
   },
-  na4: { forms: ['bù zài wǒ fùjìn-de'], why: 'The far one: not near me.' },
-  zhe4: { forms: ['zài wǒ fùjìn-de'], why: 'The near one: near me.' },
+  na4: {
+    atom: {
+      eng: '"That" is learned by pointing at what is away from you; it stands beside zhè, not under it.',
+      rus: '«Тот» усваивают, показывая на то, что вдали; nà стоит рядом с zhè, а не под ним.',
+    },
+    why: 'Pointing, with zhè as its partner.',
+  },
+  zhe4: {
+    atom: {
+      eng: '"This" is learned by pointing at what is near you; "the near one" already needs "near".',
+      rus: '«Этот» усваивают, показывая на то, что рядом; «ближний» уже требует «близко».',
+    },
+    why: 'Pointing, with nà as its partner.',
+  },
 
   // -- Places ----------------------------------------------------------------------------
   jia1: { forms: ['wǒ shuìjiào-de dì-fang', 'bàba māma hé wǒ'], why: 'Home is where I sleep; family is dad, mom and me.' },
@@ -44,23 +56,90 @@ export default {
   qi4: { forms: ['kàn-bù-jiàn, rén bù néng méi-yǒu-de dōng-xi'], why: 'The thing you cannot see and cannot live without.' },
 
   // -- Body ------------------------------------------------------------------------------
-  bi2zi: { forms: ['tóu-shàng, kǒu shàng-miàn, qì jìn chū-de bù-fen'], why: 'The part above the mouth where air goes in and out.' },
-  yan3jing: { forms: ['kàn-de bù-fen'], why: 'The part that sees (already a synonym phrase in the data).' },
-  jiao3: { forms: ['zǒu-lù-de bù-fen'], why: 'The part that walks.' },
-  kou3: { forms: ['tóu-shàng, chī hē hé shuō-huà-de bù-fen', 'néng jìn chū-de kōng dì-fang'], why: 'The face part for eating, drinking and speaking; also any opening.' },
-  shen1ti3: { forms: ['rén cóng tóu dào jiǎo'], why: 'A person from head to foot.' },
-  shou3: { forms: ['ná dōng-xi-de bù-fen'], why: 'The part that holds things.' },
-  tou2: { forms: ['shēntǐ zuì shàng-miàn-de bù-fen'], why: 'The top part of the body.' },
-  mao2: { forms: ['tóu-shàng, shēntǐ-shàng-de xiàn'], why: 'The threads on the head and the body.' },
-  xin1: {
-    forms: ['shēntǐ lǐ-miàn, bù néng bù dòng-de dōng-xi'],
-    verdict: 'clumsy',
-    note: 'It is also the mind (kāi-xīn, xiǎo-xīn), which no description of the organ carries.',
-    why: 'The organ is easy, the mind is not.',
+  bi2zi: {
+    atom: {
+      eng: 'The nose is learned by pointing at it; "where air goes in" says what it does, not what it is.',
+      rus: 'Нос усваивают, показывая на него; «куда входит воздух» говорит, что он делает, а не что это.',
+    },
+    why: 'A body part: pointed at, not described.',
   },
-  er3duo: { forms: ['tīng-de bù-fen'], why: 'The part that hears.' },
-  ya2: { forms: ['kǒu-lǐ, chī dōng-xi yòng-de, bái-de, yìng-de bù-fen'], why: 'White, hard parts in the mouth that we eat with.' },
-  du4zi: { forms: ['shēntǐ zhōng-jiān, chī-de dōng-xi qù-de dì-fang'], why: 'Where the food goes.' },
+  yan3jing: {
+    atom: {
+      eng: 'The eye is learned by pointing at it; "the part that sees" leans on kàn, which is said with the eyes.',
+      rus: 'Глаз усваивают, показывая на него; «часть, которая видит» опирается на kàn, а kàn объясняют через глаза.',
+    },
+    why: 'A body part: pointed at, not described.',
+  },
+  jiao3: {
+    atom: {
+      eng: 'The foot is learned by pointing at it; "the part that walks" only names what it does.',
+      rus: 'Ступню усваивают, показывая на неё; «часть, которая ходит» называет лишь то, что она делает.',
+    },
+    why: 'A body part: pointed at, not described.',
+  },
+  kou3: {
+    atom: {
+      eng: 'The mouth is learned by pointing at it; eating and speaking are what it is for, not what it is.',
+      rus: 'Рот усваивают, показывая на него; есть и говорить — для чего он нужен, а не что это.',
+    },
+    why: 'A body part: pointed at, not described.',
+  },
+  shen1ti3: {
+    atom: {
+      eng: 'The body is learned from your own; "a person from head to foot" already needs the head and the foot.',
+      rus: 'Тело узнают по своему собственному; «человек от головы до ног» уже требует головы и ног.',
+    },
+    why: 'A body part: pointed at, not described.',
+  },
+  shou3: {
+    atom: {
+      eng: 'The hand is learned by pointing at it; "the part that holds things" names its use only.',
+      rus: 'Руку усваивают, показывая на неё; «часть, которая держит вещи» называет лишь её применение.',
+    },
+    why: 'A body part: pointed at, not described.',
+  },
+  tou2: {
+    atom: {
+      eng: 'The head is learned by pointing at it; "the top of the body" needs the body.',
+      rus: 'Голову усваивают, показывая на неё; «верх тела» требует тела.',
+    },
+    why: 'A body part: pointed at, not described.',
+  },
+  mao2: {
+    atom: {
+      eng: 'Hair is learned by seeing and touching it; "threads on the head" is only a picture of it.',
+      rus: 'Волосы узнают, видя и трогая; «нити на голове» — лишь картинка.',
+    },
+    why: 'A body part: pointed at, not described.',
+  },
+  xin1: {
+    atom: {
+      eng: 'The heart is felt in the chest and is also the mind (kāi-xīn); no description of the organ carries both.',
+      rus: 'Сердце чувствуют в груди, и оно же — ум (kāi-xīn); ни одно описание органа не передаёт оба значения.',
+    },
+    why: 'Both the organ and the mind, so it stays an atom.',
+  },
+  er3duo: {
+    atom: {
+      eng: 'The ear is learned by pointing at it; "the part that hears" leans on tīng, which is said with the ears.',
+      rus: 'Ухо усваивают, показывая на него; «часть, которая слышит» опирается на tīng, а tīng объясняют через уши.',
+    },
+    why: 'A body part: pointed at, not described.',
+  },
+  ya2: {
+    atom: {
+      eng: 'Teeth are learned by pointing at them; "white, hard parts in the mouth" only says how they look.',
+      rus: 'Зубы усваивают, показывая на них; «белые твёрдые части во рту» говорят лишь об их виде.',
+    },
+    why: 'A body part: pointed at, not described.',
+  },
+  du4zi: {
+    atom: {
+      eng: 'The belly is learned by pointing at it; "where the food goes" names its use only.',
+      rus: 'Живот усваивают, показывая на него; «куда идёт еда» называет лишь его назначение.',
+    },
+    why: 'A body part: pointed at, not described.',
+  },
 
   // -- People & kinship ------------------------------------------------------------------
   ren2: { forms: ['néng shuō huà, néng xiě zì-de dòng-wù'], why: 'The animal that speaks and writes.' },

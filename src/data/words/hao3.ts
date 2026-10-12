@@ -15,4 +15,8 @@ export default word("hao3", {
     rus: "Хороший — самая базовая оценка чего угодно. С него начинаются многие составные слова.",
   },
   maps: "pona",
+  atom: {
+    eng: "Good is felt: what helps and what you like. Words like \"useful\" or \"nice\" are only neighbours.",
+    rus: "Хорошее чувствуют: то, что помогает и нравится. «Полезный» и «приятный» лишь соседи по смыслу.",
+  },
 });

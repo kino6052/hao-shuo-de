@@ -15,4 +15,8 @@ export default word("tian2", {
     rus: "Сладкий — единственный вкус, который можно назвать. Остальные — {{word:wei4}}-{{word:dao4}} {{word:hao3}} или {{word:bu4}} {{word:hao3}}.",
   },
   maps: "suwi",
+  atom: {
+    eng: "A taste: you learn sweet by tasting it; the other words only point back to that taste.",
+    rus: "Вкус: сладкое узнают, попробовав; другие слова лишь указывают на этот вкус.",
+  },
 });

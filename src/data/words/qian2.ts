@@ -15,4 +15,8 @@ export default word("qian2", {
     rus: "Впереди, а также «раньше»: {{word:qian2}}-{{word:mian4}} — впереди.",
   },
   maps: "sinpin",
+  atom: {
+    eng: "Front is learned from your own body, the side you face; \"where the eyes look\" needs eyes and looking.",
+    rus: "«Перед» узнают по своему телу — сторона, куда обращено лицо; «куда смотрят глаза» требует глаз и взгляда.",
+  },
 });

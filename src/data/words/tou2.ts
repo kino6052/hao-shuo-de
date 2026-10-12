@@ -15,4 +15,8 @@ export default word("tou2", {
     rus: "Голова и то, что в ней: {{word:luan4}} голова — спутанные мысли.",
   },
   maps: "lawa",
+  atom: {
+    eng: "The head is learned by pointing at it; \"the top of the body\" needs the body.",
+    rus: "Голову усваивают, показывая на неё; «верх тела» требует тела.",
+  },
 });

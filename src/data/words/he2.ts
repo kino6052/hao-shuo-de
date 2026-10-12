@@ -15,4 +15,8 @@ export default word("he2", {
     rus: "И, между существительными: {{word:ni3}} {{word:he2}} {{word:wo3}} — ты и я.",
   },
   maps: "en",
+  atom: {
+    eng: "Joins things in a list; it only works as a joint.",
+    rus: "Соединяет вещи в перечне; работает только как соединитель.",
+  },
 });

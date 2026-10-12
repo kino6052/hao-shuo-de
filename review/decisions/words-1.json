@@ -1,0 +1,106 @@
+{
+  "batch": 1,
+  "decisions": {
+    "wo3": {
+      "status": "atom",
+      "eng": "You learn it by pointing at yourself; any other way of saying \"I\" already needs a pointer.",
+      "rus": "Его усваивают, показывая на себя: любой другой способ сказать «я» уже требует указателя.",
+      "at": "2026-10-12T13:56:28.901Z"
+    },
+    "bi2zi": {
+      "status": "atom",
+      "eng": "The nose is learned by pointing at it; \"where air goes in\" says what it does, not what it is.",
+      "rus": "Нос усваивают, показывая на него; «куда входит воздух» говорит, что он делает, а не что это."
+    },
+    "yan3jing": {
+      "status": "atom",
+      "eng": "The eye is learned by pointing at it; \"the part that sees\" leans on kàn, which is said with the eyes.",
+      "rus": "Глаз усваивают, показывая на него; «часть, которая видит» опирается на kàn, а kàn объясняют через глаза."
+    },
+    "jiao3": {
+      "status": "atom",
+      "eng": "The foot is learned by pointing at it; \"the part that walks\" only names what it does.",
+      "rus": "Ступню усваивают, показывая на неё; «часть, которая ходит» называет лишь то, что она делает."
+    },
+    "kou3": {
+      "status": "atom",
+      "eng": "The mouth is learned by pointing at it; eating and speaking are what it is for, not what it is.",
+      "rus": "Рот усваивают, показывая на него; есть и говорить — для чего он нужен, а не что это."
+    },
+    "shen1ti3": {
+      "status": "atom",
+      "eng": "The body is learned from your own; \"a person from head to foot\" already needs the head and the foot.",
+      "rus": "Тело узнают по своему собственному; «человек от головы до ног» уже требует головы и ног."
+    },
+    "shou3": {
+      "status": "atom",
+      "eng": "The hand is learned by pointing at it; \"the part that holds things\" names its use only.",
+      "rus": "Руку усваивают, показывая на неё; «часть, которая держит вещи» называет лишь её применение."
+    },
+    "tou2": {
+      "status": "atom",
+      "eng": "The head is learned by pointing at it; \"the top of the body\" needs the body.",
+      "rus": "Голову усваивают, показывая на неё; «верх тела» требует тела."
+    },
+    "mao2": {
+      "status": "atom",
+      "eng": "Hair is learned by seeing and touching it; \"threads on the head\" is only a picture of it.",
+      "rus": "Волосы узнают, видя и трогая; «нити на голове» — лишь картинка."
+    },
+    "xin1": {
+      "status": "atom",
+      "eng": "The heart is felt in the chest and is also the mind (kāi-xīn); no description of the organ carries both.",
+      "rus": "Сердце чувствуют в груди, и оно же — ум (kāi-xīn); ни одно описание органа не передаёт оба значения."
+    },
+    "er3duo": {
+      "status": "atom",
+      "eng": "The ear is learned by pointing at it; \"the part that hears\" leans on tīng, which is said with the ears.",
+      "rus": "Ухо усваивают, показывая на него; «часть, которая слышит» опирается на tīng, а tīng объясняют через уши."
+    },
+    "ya2": {
+      "status": "atom",
+      "eng": "Teeth are learned by pointing at them; \"white, hard parts in the mouth\" only says how they look.",
+      "rus": "Зубы усваивают, показывая на них; «белые твёрдые части во рту» говорят лишь об их виде."
+    },
+    "du4zi": {
+      "status": "atom",
+      "eng": "The belly is learned by pointing at it; \"where the food goes\" names its use only.",
+      "rus": "Живот усваивают, показывая на него; «куда идёт еда» называет лишь его назначение."
+    },
+    "zhe4": {
+      "status": "atom",
+      "eng": "\"This\" is learned by pointing at what is near you; \"the near one\" already needs \"near\".",
+      "rus": "«Этот» усваивают, показывая на то, что рядом; «ближний» уже требует «близко»."
+    },
+    "na4": {
+      "status": "atom",
+      "eng": "\"That\" is learned by pointing at what is away from you; it stands beside zhè, not under it.",
+      "rus": "«Тот» усваивают, показывая на то, что вдали; nà стоит рядом с zhè, а не под ним."
+    },
+    "bi3": {
+      "status": "atom",
+      "eng": "A grammar word for comparing (\"X bǐ Y dà\"); any other way of comparing already needs a comparing word.",
+      "rus": "Служебное слово сравнения («X bǐ Y dà»); любой другой способ сравнить уже требует слова сравнения."
+    },
+    "ge4": {
+      "status": "atom",
+      "eng": "A counting word with no meaning of its own: it only joins a number to a thing, so nothing else can say it.",
+      "rus": "Счётное слово без собственного значения: оно только соединяет число с предметом, поэтому другим словом его не сказать."
+    },
+    "ci4": {
+      "status": "atom",
+      "eng": "A counting word for how often: it counts happenings the way gè counts things, and has no plainer wording.",
+      "rus": "Счётное слово для «сколько раз»: считает события так же, как gè считает предметы; проще его не сказать."
+    },
+    "yi1": {
+      "status": "atom",
+      "eng": "You learn \"one\" by holding up a single thing; every other number is built from it.",
+      "rus": "«Один» усваивают на одном предмете; все остальные числа строятся из него."
+    },
+    "hao4": {
+      "status": "atom",
+      "eng": "A marker that turns a number into a name or a date (èr-hào); it exists only inside that pattern.",
+      "rus": "Показатель, который превращает число в имя или дату (èr-hào); он существует только в этой конструкции."
+    }
+  }
+}

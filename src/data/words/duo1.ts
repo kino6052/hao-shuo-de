@@ -15,4 +15,8 @@ export default word("duo1", {
     rus: "Много. Без него не описать количество.",
   },
   maps: "mute",
+  atom: {
+    eng: "Many is felt by looking at a pile of things; its opposite shǎo is just \"bù duō\".",
+    rus: "Много чувствуют, глядя на кучу вещей; противоположное shǎo — просто «bù duō».",
+  },
 });

@@ -15,4 +15,8 @@ export default word("na4", {
     rus: "Без него нельзя указать на то, что далеко: нет «то».",
   },
   maps: "ni",
+  atom: {
+    eng: "\"That\" is learned by pointing at what is away from you; it stands beside zhè, not under it.",
+    rus: "«Тот» усваивают, показывая на то, что вдали; nà стоит рядом с zhè, а не под ним.",
+  },
 });

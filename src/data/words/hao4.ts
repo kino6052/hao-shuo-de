@@ -27,4 +27,8 @@ export default word("hao4", {
       },
     },
   },
+  atom: {
+    eng: "A marker that turns a number into a name or a date (èr-hào); it exists only inside that pattern.",
+    rus: "Показатель, который превращает число в имя или дату (èr-hào); он существует только в этой конструкции.",
+  },
 });

@@ -27,4 +27,8 @@ export default word("xin1", {
       alone: true,
     },
   },
+  atom: {
+    eng: "The heart is felt in the chest and is also the mind (kāi-xīn); no description of the organ carries both.",
+    rus: "Сердце чувствуют в груди, и оно же — ум (kāi-xīn); ни одно описание органа не передаёт оба значения.",
+  },
 });

@@ -27,4 +27,8 @@ export default word("hou4", {
       },
     },
   },
+  atom: {
+    eng: "Behind is learned from your own body, the side you cannot see; it stands beside qián, not under it.",
+    rus: "«Зад» узнают по своему телу — сторона, которую не видишь; hòu стоит рядом с qián, а не под ним.",
+  },
 });

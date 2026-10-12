@@ -14,4 +14,8 @@ export default word("mao2", {
     eng: "Hair and fur. {{word:xian4}} is close, but hair and fur come up often enough to keep it.",
     rus: "Волосы и шерсть. {{word:xian4}} близко, но волосы и шерсть встречаются достаточно часто.",
   },
+  atom: {
+    eng: "Hair is learned by seeing and touching it; \"threads on the head\" is only a picture of it.",
+    rus: "Волосы узнают, видя и трогая; «нити на голове» — лишь картинка.",
+  },
 });

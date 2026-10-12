@@ -11,4 +11,8 @@ export default word("shou3", {
     rus: "Руки: держать, трогать, давать. Самая нужная часть тела.",
   },
   maps: "luka",
+  atom: {
+    eng: "The hand is learned by pointing at it; \"the part that holds things\" names its use only.",
+    rus: "Руку усваивают, показывая на неё; «часть, которая держит вещи» называет лишь её применение.",
+  },
 });

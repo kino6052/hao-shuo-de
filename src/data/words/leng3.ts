@@ -15,4 +15,8 @@ export default word("leng3", {
     rus: "Холодный: погода, вода, еда. Ощущение, которое не описать другими словами.",
   },
   maps: "lete",
+  atom: {
+    eng: "Cold is felt on the skin and is not \"not hot\" (warm water is neither); it stands beside rè, not under it.",
+    rus: "Холодное чувствуют кожей, и это не «не горячее» (тёплая вода ни то ни другое); lěng стоит рядом с rè, а не под ним.",
+  },
 });

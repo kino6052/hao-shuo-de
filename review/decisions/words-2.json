@@ -1,0 +1,60 @@
+{
+  "batch": 2,
+  "decisions": {
+    "re4": {
+      "status": "atom",
+      "eng": "Hot is felt on the skin; \"like fire\" needs something already hot, and its partner lěng is felt the same way.",
+      "rus": "Горячее чувствуют кожей; «как огонь» уже предполагает горячее, а парное lěng чувствуется так же."
+    },
+    "leng3": {
+      "status": "atom",
+      "eng": "Cold is felt on the skin and is not \"not hot\" (warm water is neither); it stands beside rè, not under it.",
+      "rus": "Холодное чувствуют кожей, и это не «не горячее» (тёплая вода ни то ни другое); lěng стоит рядом с rè, а не под ним."
+    },
+    "duo1": {
+      "status": "atom",
+      "eng": "Many is felt by looking at a pile of things; its opposite shǎo is just \"bù duō\".",
+      "rus": "Много чувствуют, глядя на кучу вещей; противоположное shǎo — просто «bù duō»."
+    },
+    "hao3": {
+      "status": "atom",
+      "eng": "Good is felt: what helps and what you like. Words like \"useful\" or \"nice\" are only neighbours.",
+      "rus": "Хорошее чувствуют: то, что помогает и нравится. «Полезный» и «приятный» лишь соседи по смыслу."
+    },
+    "tian2": {
+      "status": "atom",
+      "eng": "A taste: you learn sweet by tasting it; the other words only point back to that taste.",
+      "rus": "Вкус: сладкое узнают, попробовав; другие слова лишь указывают на этот вкус."
+    },
+    "tong4": {
+      "status": "atom",
+      "eng": "A feeling in the body, learned by hurting; no description makes someone feel it.",
+      "rus": "Ощущение в теле, которое узнают, когда больно; никакое описание не даёт его почувствовать."
+    },
+    "da4": {
+      "status": "atom",
+      "eng": "Size is seen by comparing two things; nothing else gives the idea. Its opposite xiǎo is just \"bù dà\".",
+      "rus": "Размер видят, сравнивая два предмета; иначе идею не передать. Противоположное xiǎo — просто «bù dà»."
+    },
+    "yao4": {
+      "status": "atom",
+      "eng": "Wanting is felt from inside; xiǎng and jué-de lean on it, not the other way round.",
+      "rus": "Желание чувствуют изнутри; xiǎng и jué-de опираются на него, а не наоборот."
+    },
+    "jue2": {
+      "status": "atom",
+      "eng": "Feeling is inside the body or mind; the other words for it (xiǎng) point back to it.",
+      "rus": "Чувство — внутри тела или ума; другие слова для него (xiǎng) указывают обратно на него."
+    },
+    "zuo4": {
+      "status": "atom",
+      "eng": "\"Do\" is what is left when you take the how away from every action word.",
+      "rus": "«Делать» — то, что остаётся, когда у каждого глагола действия убираешь «как»."
+    },
+    "rang4": {
+      "status": "atom",
+      "eng": "\"Let\" and \"make\" join a person to what happens (ràng tā jìn-lái); jiào and bāng are special cases of it.",
+      "rus": "«Пусть» и «заставь» связывают человека с тем, что происходит (ràng tā jìn-lái); jiào и bāng — его частные случаи."
+    }
+  }
+}

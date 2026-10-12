@@ -14,4 +14,8 @@ export default word("er3duo", {
     eng: "The ear, as {{word:yan3jing}} is the eye: a part of the body is easier named than described.",
     rus: "Ухо, как {{word:yan3jing}} — глаз: часть тела проще назвать, чем описать.",
   },
+  atom: {
+    eng: "The ear is learned by pointing at it; \"the part that hears\" leans on tīng, which is said with the ears.",
+    rus: "Ухо усваивают, показывая на него; «часть, которая слышит» опирается на tīng, а tīng объясняют через уши.",
+  },
 });

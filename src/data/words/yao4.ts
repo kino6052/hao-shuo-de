@@ -15,4 +15,8 @@ export default word("yao4", {
     rus: "Хотеть, нужно. Без него ничего не попросить.",
   },
   maps: "wile",
+  atom: {
+    eng: "Wanting is felt from inside; xiǎng and jué-de lean on it, not the other way round.",
+    rus: "Желание чувствуют изнутри; xiǎng и jué-de опираются на него, а не наоборот.",
+  },
 });

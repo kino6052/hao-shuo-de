@@ -26,4 +26,8 @@ export default word("jue2", {
       },
     },
   },
+  atom: {
+    eng: "Feeling is inside the body or mind; the other words for it (xiǎng) point back to it.",
+    rus: "Чувство — внутри тела или ума; другие слова для него (xiǎng) указывают обратно на него.",
+  },
 });

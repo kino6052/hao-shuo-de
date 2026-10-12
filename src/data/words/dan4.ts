@@ -26,4 +26,8 @@ export default word("dan4", {
       },
     },
   },
+  atom: {
+    eng: "Says that what follows goes against what you expect; there is no plainer word.",
+    rus: "Говорит, что следующее противоречит ожидаемому; слова проще нет.",
+  },
 });

@@ -15,4 +15,8 @@ export default word("ge4", {
     rus: "Без него число или {{word:zhe4}} не могут стоять перед существительным: «этот», «два человека».",
   },
   maps: "",
+  atom: {
+    eng: "A counting word with no meaning of its own: it only joins a number to a thing, so nothing else can say it.",
+    rus: "Счётное слово без собственного значения: оно только соединяет число с предметом, поэтому другим словом его не сказать.",
+  },
 });

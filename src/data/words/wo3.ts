@@ -11,4 +11,8 @@ export default word("wo3", {
     rus: "Без него нельзя говорить о себе: нет «я», «меня», «мой».",
   },
   maps: "mi",
+  atom: {
+    eng: "You learn it by pointing at yourself; any other way of saying \"I\" already needs a pointer.",
+    rus: "Его усваивают, показывая на себя: любой другой способ сказать «я» уже требует указателя.",
+  },
 });

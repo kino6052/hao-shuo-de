@@ -50,12 +50,19 @@ export default {
   kuai4: { forms: ['hěn zǎo dào'], why: 'Arrives early.' },
 
   // -- Temperature & taste ---------------------------------------------------------------
-  re4: { forms: ['hé huǒ yī-yàng'], why: 'Like fire.' },
+  re4: {
+    atom: {
+      eng: 'Hot is felt on the skin; "like fire" needs something already hot, and its partner lěng is felt the same way.',
+      rus: 'Горячее чувствуют кожей; «как огонь» уже предполагает горячее, а парное lěng чувствуется так же.',
+    },
+    why: 'Felt, with lěng as its partner.',
+  },
   leng3: {
-    forms: ['hěn bù rè'],
-    verdict: 'clumsy',
-    note: 'Not hot is wider than cold: warm water is not hot and not cold.',
-    why: 'Cold is more than "not hot".',
+    atom: {
+      eng: 'Cold is felt on the skin and is not "not hot" (warm water is neither); it stands beside rè, not under it.',
+      rus: 'Холодное чувствуют кожей, и это не «не горячее» (тёплая вода ни то ни другое); lěng стоит рядом с rè, а не под ним.',
+    },
+    why: 'Felt, with rè as its partner.',
   },
   tian2: {
     atom: {

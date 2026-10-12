@@ -15,4 +15,8 @@ export default word("ba3", {
     rus: "Ставит вещь перед глаголом: {{word:ba3}} X {{word:fang4}} {{word:zai4}} …. Без него не сказать, куда что-то положили.",
   },
   maps: "",
+  atom: {
+    eng: "A grammar word that brings the thing forward before the verb (bǎ yīfu fàng zài dì-shàng); there is nothing to say it with.",
+    rus: "Служебное слово, которое выводит вещь вперёд перед глаголом (bǎ yīfu fàng zài dì-shàng); сказать его нечем.",
+  },
 });
