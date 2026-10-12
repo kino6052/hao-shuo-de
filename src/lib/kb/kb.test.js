@@ -65,6 +65,24 @@ describe('the word card', () => {
     expect(s).toMatchObject({ key: 'time', hanzi: '时', compounds: ['shí-jiān'] });
   });
 
+  test('a paraphrase or an atom mark is on the card, and absent when there is none', () => {
+    expect(card.paraphrase).toBeNull();
+    expect(card.atom).toBeNull();
+    const w = source.words;
+    const marked = createKb({
+      ...source,
+      words: {
+        ...w,
+        chi1: { ...w.chi1, atom: { eng: 'primitive', rus: 'первичное' } },
+        fan4: { ...w.fan4, paraphrase: { forms: ['{{word:chi1}} {{word:de}}'], verdict: 'clumsy', note: 'too long' } },
+      },
+    });
+    expect(marked.word('chī').atom).toEqual({ eng: 'primitive', rus: 'первичное' });
+    expect(marked.word('fàn').paraphrase).toEqual({ verdict: 'clumsy', forms: ['chī de'], note: 'too long' });
+    expect(renderCard(marked.word('chī'))).toContain('  Atom: primitive');
+    expect(renderCard(marked.word('fàn'))).toContain('  Paraphrase (clumsy): chī de — too long');
+  });
+
   test('the text version names the main things', () => {
     const text = renderCard(card);
     expect(text).toContain('chī 吃  (chi1; verb; necessity 5)');

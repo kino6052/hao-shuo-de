@@ -8,6 +8,7 @@
 //   kb.checkForm({ forms })    the form gates, for one proposal
 //   kb.query(program)          raw rules on top of the facts, for Claude
 //   kb.parse('Wǒ shì rén.')    does it parse, and by which patterns
+//   kb.atoms()                 which words are atoms (the report; kb.atoms('dēng') is one word's line)
 //
 // Names are lenient: an id (deng1), a term (dēng, deng) or a hanzi (灯).
 
@@ -18,12 +19,16 @@ import { checkForm } from './check-form.js';
 import { readRules } from './rules.js';
 import { solve, tables } from './clingo.js';
 import { makeParseText, renderParse, viewParse } from './parse.js';
+import { atoms, atomWord, renderAtoms, renderAtomWord } from './atoms.js';
 
 export function createKb(source, { rules = readRules('base', 'whatif') } = {}) {
   const facts = buildFacts(source);
   const index = buildIndex(source, facts);
   const ctx = { source, facts, rules, index };
   const words = source.words;
+
+  // the atoms report takes three solver runs; a KB is one version of the data, so it is asked once
+  let atomsReport = null;
 
   const parseText = makeParseText({ patterns: source.patterns ?? [], words, composites: source.composites });
 
@@ -40,6 +45,17 @@ export function createKb(source, { rules = readRules('base', 'whatif') } = {}) {
     parse: (text) => parseText(text),
     parser: parseText.parser,
 
+    // Which words are atoms. No name: the whole report. A name: that word's
+    // line (its sort, and how it is said), or null for a word that is not there.
+    async atoms(name, { timeoutMs } = {}) {
+      atomsReport ??= atoms(ctx, { timeoutMs }).catch((e) => {
+        atomsReport = null;
+        throw e;
+      });
+      const report = await atomsReport;
+      return name === undefined ? report : atomWord(report, resolveWord(words, name));
+    },
+
     // Raw rules, run together with the base rules and the facts. Answers
     // come back as rows per predicate; ask for them with `#show`.
     // text: the sentences and mentions to load with the language facts. false
@@ -55,4 +71,4 @@ export function createKb(source, { rules = readRules('base', 'whatif') } = {}) {
   };
 }
 
-export { renderCard, renderRemoval, renderParse, viewParse };
+export { renderCard, renderRemoval, renderParse, viewParse, renderAtoms, renderAtomWord };

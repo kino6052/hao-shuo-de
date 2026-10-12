@@ -12,13 +12,16 @@
 //                category(W,"leaf"). def_uses(V,W)   (V's text names W)
 //                sense(W,"k"). sense_hanzi(W,"k","冬"). sense_alone(W,"k").
 //                sense_compound(W,"k",N). sense_compound_uses(W,"k",N,V).
-//   lessons      lesson("id",Number). card(W,"lesson","module").
+//   paraphrases  atom_mark(W). para_verdict(W,fine|clumsy). para(W,N). para_len(W,N,Words).
+//                para_uses(W,N,V)   (form N of W's paraphrase names V)
+//   lessons     lesson("id",Number). card(W,"lesson","module").
 //                card_sense(W,"k","lesson","module").
 //                mention(W,"lesson","module",kind,Count)   kind: card example answer
 //                exercise faq prose info head
 //   composites   composite("飞机"). rank(C,488). en(C,"airplane"). cfit(C,natural).
 //                cpos(C,noun). head_word(C,W). head_comp(C,C2).
-//                form(C,F).  uses(C,F,Slot,W).  slot_sense(C,F,Slot,"k").
+//                form(C,F).  form_spelled(C,F). form_unknown(C,F).   (built is the default, K9)
+//                uses(C,F,Slot,W).  slot_sense(C,F,Slot,"k").
 //                slot_light(C,F,Slot).  slot_sound(C,F,Slot,"ng").  slot_blank(C,F,Slot,x).
 //                slot_chain(C,F,Slot,Chain).
 //   coverage     item("atoms:I"). item_group(I,atoms). carries(W,I).
@@ -44,6 +47,7 @@ import { str, sym } from './clingo.js';
 import { wordRefIds, wordRefRe, soleWordRef } from '../word-refs.js';
 import { refSenses } from '../senses.js';
 import { compositeHeads } from '../heads.js';
+import { formKinds } from '../form-kinds.js';
 
 // A hanzi or toned-pinyin word's part of speech as clingo constants:
 // "noun/measure word" -> noun, measure_word.
@@ -116,6 +120,16 @@ export function buildFacts(source) {
       (s.compounds ?? []).forEach((c, i) => {
         add(`sense_compound(${W},${str(key)},${i + 1}).`);
         for (const v of new Set(c.split(' '))) add(`sense_compound_uses(${W},${str(key)},${i + 1},${sym(v)}).`);
+      });
+    }
+    // how to say the word without it, or why that can't be done (phase 2)
+    if (w.atom) add(`atom_mark(${W}).`);
+    if (w.paraphrase) {
+      add(`para_verdict(${W},${w.paraphrase.verdict === 'clumsy' ? 'clumsy' : 'fine'}).`);
+      (w.paraphrase.forms ?? []).forEach((f, i) => {
+        const refs = wordRefIds(f);
+        add(`para(${W},${i + 1}).`, `para_len(${W},${i + 1},${refs.length}).`);
+        for (const v of new Set(refs)) if (known(v)) add(`para_uses(${W},${i + 1},${sym(v)}).`);
       });
     }
   }
@@ -216,9 +230,12 @@ export function buildFacts(source) {
     if (c.pos) add(`cpos(${C},${c.pos}).`);
     const h = heads.get(c.zh);
     if (h) add(h.kind === 'word' ? `head_word(${C},${sym(h.id)}).` : `head_comp(${C},${str(h.zh)}).`);
+    const kinds = formKinds(c);
     (c.hsd ? c.hsd.split(' / ') : []).forEach((form, fi) => {
       const F = fi + 1;
       add(`form(${C},${F}).`);
+      // built is the default; only the others are written (spelled: learned whole; unknown: not decided yet)
+      if (kinds[fi] !== 'built') add(`form_${kinds[fi]}(${C},${F}).`);
       formSlots(form, words).forEach((s, si) => {
         const S = si + 1;
         add(`slot_chain(${C},${F},${S},${s.chain}).`);

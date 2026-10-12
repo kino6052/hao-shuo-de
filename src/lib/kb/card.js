@@ -120,6 +120,9 @@ export function wordCard({ source, facts, index }, id, { limit = 15 } = {}) {
     classes: posClasses(w.pos?.eng),
     definition: { eng: pin(w.definition?.eng ?? ''), rus: pin(w.definition?.rus ?? '') },
     necessity: { index: w.necessity?.index, eng: pin(w.necessity?.eng ?? '') },
+    // how the word is said with other words, or why it cannot be (kb atoms has the sort it comes to)
+    paraphrase: w.paraphrase ? { verdict: w.paraphrase.verdict, forms: w.paraphrase.forms.map(pin), note: w.paraphrase.note ?? null } : null,
+    atom: w.atom ? { eng: w.atom.eng, rus: w.atom.rus } : null,
     category: index.categoryPath.get(id) ?? [],
     senses: Object.entries(w.senses ?? {}).map(([key, s]) => ({
       key,
@@ -155,6 +158,8 @@ export function renderCard(c) {
   out.push(`${c.term} ${c.hanzi}  (${c.id}; ${c.pos}; necessity ${c.necessity.index})`);
   out.push(`  ${c.definition.eng}`);
   out.push(`  Why the core needs it: ${c.necessity.eng}`);
+  if (c.atom) out.push(`  Atom: ${c.atom.eng}`);
+  if (c.paraphrase) out.push(`  Paraphrase (${c.paraphrase.verdict}): ${c.paraphrase.forms.join(' / ')}${c.paraphrase.note ? ` — ${c.paraphrase.note}` : ''}`);
   if (c.category.length) out.push(`  Category: ${c.category.join(' › ')}`);
   for (const s of c.senses) out.push(`  Sense ${s.key}: ${s.hanzi} ${s.eng}${s.alone ? ' (also on its own)' : ''} — in ${s.compounds.join(', ')}`);
   out.push(`  Taught: ${c.taught.length ? c.taught.map((t) => `${t.sense ? `${t.sense}: ` : ''}${t.lesson}/${t.module}`).join('; ') : 'no card'}`);

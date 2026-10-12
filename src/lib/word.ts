@@ -47,6 +47,29 @@ export interface Sense {
   alone?: boolean;
 }
 
+/**
+ * How to say the word without it (KB_PLAN.md K3): forms in dictionary words,
+ * best first, written like a composite's forms ({{word:id}} references, X and
+ * Y for the things the word links). Never the word itself or one of its
+ * senses, and no quoted sounds. The author's verdict (K8): "fine" if a
+ * learner can follow it, "clumsy" if it is hard to understand or so funny it
+ * isn't taken seriously, and then the word counts as an atom.
+ */
+export interface Paraphrase {
+  forms: string[];
+  verdict: "fine" | "clumsy";
+  note?: string;
+}
+
+/**
+ * A core word that the other core words can't describe honestly (K8): why
+ * there is no paraphrase. A word has exactly one of `paraphrase` and `atom`.
+ */
+export interface Atom {
+  eng: string;
+  rus: string;
+}
+
 export interface WordData {
   /** Pinyin with tone marks; unique across the dictionary (check-sounds). */
   term: string;
@@ -58,6 +81,9 @@ export interface WordData {
   /** The original-dictionary mapping, on the words that came from it. */
   maps?: unknown;
   senses?: Record<string, Sense>;
+  /** How to say it without the word, or (instead) why that can't be done: KB_PLAN.md phase 2. */
+  paraphrase?: Paraphrase;
+  atom?: Atom;
 }
 
 export interface Word extends WordData {

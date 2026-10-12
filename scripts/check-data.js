@@ -26,6 +26,8 @@ import { buildData } from './build-data.js';
 import { compositeFileName } from './data-files.js';
 import { dataFiles } from './build-data.js';
 import { wordRefIds } from '../src/lib/word-refs.js';
+import { paraphraseProblems, paraphraseCounts, paraphraseStatus, PARAPHRASES_REQUIRED } from '../src/lib/paraphrase.js';
+import { kindsProblems, undecidedForms } from '../src/lib/form-kinds.js';
 import { PATTERNS } from '../src/data/grammar/index.ts';
 import { createParser, patternsOf } from '../src/lib/grammar/parser.js';
 import { pinyinToRefs } from '../src/lib/pinyin-refs.js';
@@ -69,6 +71,14 @@ for (const [id, w] of Object.entries(WORDS)) {
     }
   }
   for (const r of wordRefIds(JSON.stringify([w.definition, w.necessity]))) if (!ids.has(r)) errors.push(`${where}: refers to unknown word ${r}`);
+  for (const p of paraphraseProblems(id, w, WORDS)) errors.push(`${where}: ${p}`);
+}
+
+// 2b. paraphrases: every word says itself without the word, or is marked an atom (K3)
+const counts = paraphraseCounts(WORDS);
+if (PARAPHRASES_REQUIRED && counts.none) {
+  const names = Object.entries(WORDS).filter(([, w]) => paraphraseStatus(w) === 'none').map(([id]) => id);
+  errors.push(`${counts.none} word(s) have neither a paraphrase nor an atom mark: ${names.slice(0, 12).join(', ')}${names.length > 12 ? ', ...' : ''}`);
 }
 
 // 3. categories
@@ -114,6 +124,13 @@ ENTRIES.forEach((e, i) => {
   if (files[i] !== want) errors.push(`composites/${files[i]}: should be named ${want}`);
 });
 
+// 5b. built or spelled (K9): an explicit `kinds` is well formed; the compounds the rule can't decide are counted
+let kindsToReview = 0;
+for (const e of ENTRIES) {
+  for (const p of kindsProblems(e)) errors.push(`composites/${compositeFileName(e)}: ${p}`);
+  if (undecidedForms(e).length) kindsToReview++;
+}
+
 // 6. grammar patterns
 const patternFiles = dataFiles('grammar');
 const coverageItems = new Set(GROUPS.flatMap((g) => g.items.map((i) => `${g.key}:${i.key}`)));
@@ -147,3 +164,9 @@ if (errors.length) {
   process.exit(1);
 }
 console.log(`check-data: OK -- ${ids.size} words, ${ENTRIES.length} composites, ${GROUPS.length} coverage groups, ${PATTERNS.length} grammar patterns.`);
+if (kindsToReview) console.log(`check-data: ${kindsToReview} composite(s) have a Mandarin compound still to be marked built or spelled (review: /__review/?kinds=1).`);
+if (counts.none) {
+  console.log(
+    `check-data: ${counts.none} of ${counts.total} words have neither a paraphrase nor an atom mark yet (${counts.paraphrase} paraphrased, ${counts.clumsy} clumsy, ${counts.atom} atoms); the gate fails on this once PARAPHRASES_REQUIRED (src/lib/paraphrase.js) is true.`,
+  );
+}

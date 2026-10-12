@@ -19,7 +19,7 @@
 import { readdirSync, readFileSync, writeFileSync, unlinkSync, existsSync, mkdirSync, statSync } from 'fs';
 import { resolve, dirname, relative, extname } from 'path';
 import { fileURLToPath } from 'url';
-import { tsLiteral, compositeFileName, compositeSource } from './data-files.js';
+import { tsLiteral, compositeFileName, compositeSource, WORD_KEYS } from './data-files.js';
 import { wordRefRe, wordRefIds, toneless } from '../src/lib/word-refs.js';
 import { compoundSplitter, compoundForm } from '../src/lib/compound-rule.js';
 import { LESSON_IDS } from '../src/content/book.js';
@@ -130,7 +130,7 @@ export class Workspace {
     return this.data(this.wordPath(id));
   }
   setWord(id, value) {
-    const order = ['term', 'hanzi', 'pos', 'definition', 'necessity', 'maps', 'senses'];
+    const order = WORD_KEYS;
     const out = {};
     for (const k of [...order, ...Object.keys(value).filter((k) => !order.includes(k))]) if (value[k] !== undefined) out[k] = value[k];
     this.set(this.wordPath(id), `import { word } from "../../lib/word.ts";\n\nexport default word(${JSON.stringify(id)}, ${tsLiteral(out)});\n`);

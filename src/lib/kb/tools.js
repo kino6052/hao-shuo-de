@@ -6,7 +6,7 @@
 //   TOOLS                         [{ name, description, inputSchema }]
 //   callTool(kb, name, args)      -> the answer as text (throws on a bad question)
 
-import { renderCard, renderRemoval, renderParse } from './kb.js';
+import { renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord } from './kb.js';
 
 // a Claude tool never runs longer than this, whatever the question
 export const MAX_QUERY_MS = 60_000;
@@ -68,6 +68,18 @@ export const TOOLS = [
     },
   },
   {
+    name: 'kb_atoms',
+    description:
+      'Which dictionary words are atoms: the words the others cannot be said from. Every word has a paraphrase (a way to say it with other words) or is marked as an atom; ' +
+      'the smallest set of words that says all the rest shows which are true atoms (in every smallest set), swappable (in some), or secondary (in none). ' +
+      'Without a name: the whole report, with the kernel and core of the paraphrase graph, the paraphrases that cost the most, and the hidden vocabulary (Mandarin compounds written with our words and learned whole). ' +
+      'With a name: that word\'s sort, how it is said, and what it rests on.',
+    inputSchema: {
+      type: 'object',
+      properties: { name: { type: 'string', description: 'A word, by pinyin, id or hanzi (optional; leave out for the whole report).' } },
+    },
+  },
+  {
     name: 'kb_query',
     description:
       'Raw clingo rules on top of the facts, for questions the other tools do not answer. Add `#show name/arity.` lines to choose what comes back. ' +
@@ -114,6 +126,10 @@ export async function callTool(kb, name, args = {}) {
     case 'kb_check_form': {
       const { forms, tts, zh, py } = args;
       return renderCheckForm(kb.checkForm({ forms: String(need(args, 'forms')), tts, zh, py }));
+    }
+    case 'kb_atoms': {
+      if (args.name === undefined || args.name === '') return renderAtoms(await kb.atoms());
+      return renderAtomWord(await kb.atoms(), await kb.atoms(String(args.name)));
     }
     case 'kb_query': {
       const timeoutMs = Math.min(Math.max(Number(args.timeout_ms) || 20_000, 100), MAX_QUERY_MS);

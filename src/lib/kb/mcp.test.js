@@ -45,14 +45,15 @@ describe('the protocol', () => {
     expect((await rpc('nope')).error.code).toBe(-32601);
   });
 
-  test('tools/list names the five tools, each with a description and a schema', async () => {
+  test('tools/list names the six tools, each with a description and a schema', async () => {
     const { tools } = (await rpc('tools/list')).result;
-    expect(tools.map((t) => t.name)).toEqual(['kb_word', 'kb_remove', 'kb_parse', 'kb_check_form', 'kb_query']);
+    expect(tools.map((t) => t.name)).toEqual(['kb_word', 'kb_remove', 'kb_parse', 'kb_check_form', 'kb_atoms', 'kb_query']);
     for (const t of TOOLS) {
       expect(t.description.length).toBeGreaterThan(40);
       expect(t.inputSchema.type).toBe('object');
-      expect(t.inputSchema.required.length).toBeGreaterThan(0);
-      for (const r of t.inputSchema.required) expect(t.inputSchema.properties[r]).toBeDefined();
+      // kb_atoms asks for nothing: no name is the whole report
+      if (t.name !== 'kb_atoms') expect(t.inputSchema.required.length).toBeGreaterThan(0);
+      for (const r of t.inputSchema.required ?? []) expect(t.inputSchema.properties[r]).toBeDefined();
     }
   });
 
@@ -85,6 +86,32 @@ describe('the tools answer with the text the command line prints', () => {
     const bad = textOf(await call('kb_check_form', { forms: 'chī fàn', tts: '吃饮' }));
     expect(bad).toMatch(/^problems:/);
     expect(bad).toContain("don't spell");
+  });
+
+  test('kb_atoms is the report, or one word\'s line', async () => {
+    // the fixture has no paraphrases, so every word is still to be reviewed
+    expect(textOf(await call('kb_atoms', {}))).toMatch(/^Atoms: 12 words, the smallest set that says the rest has 12\./);
+    expect(textOf(await call('kb_atoms', { name: 'chī' }))).toContain('is not reviewed yet');
+
+    // with one atom mark and one paraphrase
+    const w = source.words;
+    const reviewed = createKb({
+      ...source,
+      words: {
+        ...w,
+        chi1: { ...w.chi1, atom: { eng: 'primitive', rus: 'первичное' } },
+        fan4: { ...w.fan4, paraphrase: { forms: ['{{word:chi1}} {{word:de}}'], verdict: 'fine' } },
+      },
+    });
+    const other = createMcpServer({ openKb: async () => reviewed });
+    const ask = async (args) => (await other.handle({ jsonrpc: '2.0', id: 1, method: 'tools/call', params: { name: 'kb_atoms', arguments: args } })).result;
+    expect(textOf({ result: await ask({}) })).toMatch(/^Atoms: 12 words, the smallest set that says the rest has 11\.\n {2}1 true atoms \(1 marked, 0 clumsy\), 0 swappable, 1 secondary, 10 not reviewed yet\./);
+    const line = textOf({ result: await ask({ name: 'fàn' }) });
+    expect(line).toContain('fàn 饭 (fan4) is secondary');
+    expect(line).toContain('Said as: chī de (form 1, 1 step from the set), using chī, de; rests on chī, de.');
+    expect(textOf({ result: await ask({ name: 'chi1' }) })).toContain('Why: marked as an atom.');
+    const unknown = await ask({ name: 'zzzz' });
+    expect(unknown.isError).toBe(true);
   });
 
   test('kb_query runs raw rules on the facts and returns rows', async () => {
@@ -131,7 +158,7 @@ describe('the real server over stdio, on the real data', () => {
       expect(init.result.serverInfo.name).toBe('hao-shuo-de-kb');
       send({ jsonrpc: '2.0', method: 'notifications/initialized' });
       const list = await ask(2, 'tools/list', {});
-      expect(list.result.tools).toHaveLength(5);
+      expect(list.result.tools).toHaveLength(6);
       const drop = await ask(3, 'tools/call', { name: 'kb_remove', arguments: { words: 'dēng' } });
       const text = drop.result.content[0].text;
       expect(drop.result.isError).toBeUndefined();

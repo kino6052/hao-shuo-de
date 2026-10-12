@@ -67,6 +67,8 @@ function show(ws, q) {
   line('definition', w.definition.eng);
   line('necessity', `${w.necessity.index}: ${w.necessity.eng}`);
   for (const [k, s] of Object.entries(w.senses ?? {})) line(`sense ${k}`, `${s.hanzi} ${s.eng}: ${s.compounds.join(', ')}`);
+  if (w.paraphrase) line('paraphrase', `${w.paraphrase.verdict}: ${w.paraphrase.forms.join(' / ')}${w.paraphrase.note ? ` (${w.paraphrase.note})` : ''}`);
+  if (w.atom) line('atom', w.atom.eng);
 
   const cs = cards(ws).filter((c) => c.word === id);
   line('cards', cs.length ? cs.map((c) => `${c.lesson}/${c.module}${c.sense ? ` (${c.sense})` : ''}`).join(', ') : '(none)');

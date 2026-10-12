@@ -52,6 +52,13 @@ export interface Composite {
    */
   transparent?: boolean;
   /**
+   * Per form, in `hsd` order: "built" (the meaning comes from the parts, fēi-jī)
+   * or "spelled" (Mandarin's own word written with our words and learned whole,
+   * dōng-xi). src/lib/form-kinds.js fills the obvious ones by rule; this is the
+   * author's yes/no for the Mandarin compounds the rule can't decide (K9).
+   */
+  kinds?: ("built" | "spelled")[];
+  /**
    * Offered by the Word Builder as one ready-made word (a unit), with this
    * role: the split-up dōng-xi is still "thing", a noun. src/data/dictionary.ts
    * collects these into `units`, keyed by the hanzi.

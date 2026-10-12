@@ -6,6 +6,7 @@
 //   node scripts/kb.js check-form "chī fàn" [--tts 吃饭] [--zh 吃饭 --py chīfàn]
 //   node scripts/kb.js query "<rules>"
 //   node scripts/kb.js parse "Wǒ chī fàn."
+//   node scripts/kb.js atoms [word]
 //   node scripts/kb.js parse-report [--lessons 4] [--stdout]
 //   node scripts/kb.js engine
 //
@@ -21,7 +22,7 @@ import { mkdirSync, readdirSync, statSync, writeFileSync } from 'fs';
 import { resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { Worker } from 'worker_threads';
-import { createKb, renderCard, renderRemoval, renderParse } from '../src/lib/kb/kb.js';
+import { createKb, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord } from '../src/lib/kb/kb.js';
 import { parseReport, renderParseReport } from '../src/lib/kb/parse-report.js';
 import { renderCheckForm } from '../src/lib/kb/tools.js';
 import { engine } from '../src/lib/kb/clingo.js';
@@ -124,6 +125,15 @@ async function main(argv) {
       writeFileSync(file, `${text}\n`);
       return console.log(`${report.parsed} of ${report.total} sentences parse (${Math.round(report.rate * 100)}%); written to kb/reports/lessons-1-${n}-parse.md`);
     }
+    case 'atoms': {
+      // no name: the whole report; a name: that word's line
+      if (rest.length) {
+        const line = await kb.atoms(rest.join(' '));
+        return print(line, renderAtomWord(await kb.atoms(), line));
+      }
+      const r = await kb.atoms();
+      return print(r, renderAtoms(r));
+    }
     case 'engine': {
       const e = engine();
       const text =
@@ -133,7 +143,7 @@ async function main(argv) {
       return print(e, text);
     }
     default:
-      console.log('usage: node scripts/kb.js word|remove|check-form|query|parse|parse-report|engine …  (--json for data)');
+      console.log('usage: node scripts/kb.js word|remove|check-form|query|parse|atoms|parse-report|engine …  (--json for data)');
       process.exitCode = command ? 1 : 0;
   }
 }
