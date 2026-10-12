@@ -7,6 +7,7 @@
 //   node scripts/kb.js query "<rules>"
 //   node scripts/kb.js parse "Wǒ chī fàn."
 //   node scripts/kb.js atoms [word]
+//   node scripts/kb.js relations [kind] [--status proposed|accepted] [--limit N]
 //   node scripts/kb.js parse-report [--lessons 4] [--stdout]
 //   node scripts/kb.js scoreboard [--append] [--label "what changed"] [--no-atoms]
 //   node scripts/kb.js engine
@@ -27,7 +28,7 @@ import { mkdirSync, readdirSync, statSync, writeFileSync } from 'fs';
 import { resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { Worker } from 'worker_threads';
-import { createKb, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord } from '../src/lib/kb/kb.js';
+import { createKb, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations } from '../src/lib/kb/kb.js';
 import { parseReport, renderParseReport } from '../src/lib/kb/parse-report.js';
 import { renderCheckForm } from '../src/lib/kb/tools.js';
 import { engine } from '../src/lib/kb/clingo.js';
@@ -130,6 +131,12 @@ async function main(argv) {
       mkdirSync(resolve(ROOT, 'kb/reports'), { recursive: true });
       writeFileSync(file, `${text}\n`);
       return console.log(`${report.parsed} of ${report.total} sentences parse (${Math.round(report.rate * 100)}%); written to kb/reports/lessons-1-${n}-parse.md`);
+    }
+    case 'relations': {
+      const status = option(rest, '--status');
+      const limit = Number(option(rest, '--limit') ?? 8);
+      const report = kb.relations();
+      return print(report, renderRelations(report, { kind: rest[0], status, limit }));
     }
     case 'scoreboard': {
       const file = resolve(ROOT, 'kb/scoreboard.csv');

@@ -9,6 +9,7 @@
 //   kb.query(program)          raw rules on top of the facts, for Claude
 //   kb.parse('Wǒ shì rén.')    does it parse, and by which patterns
 //   kb.atoms()                 which words are atoms (the report; kb.atoms('dēng') is one word's line)
+//   kb.relations()             the relations the data states or implies (accepted and proposed)
 //
 // Names are lenient: an id (deng1), a term (dēng, deng) or a hanzi (灯).
 
@@ -20,6 +21,7 @@ import { readRules } from './rules.js';
 import { solve, tables } from './clingo.js';
 import { makeParseText, renderParse, viewParse } from './parse.js';
 import { atoms, atomWord, renderAtoms, renderAtomWord } from './atoms.js';
+import { relationReport, renderRelations } from './relations.js';
 
 export function createKb(source, { rules = readRules('base', 'whatif') } = {}) {
   const facts = buildFacts(source);
@@ -29,6 +31,7 @@ export function createKb(source, { rules = readRules('base', 'whatif') } = {}) {
 
   // the atoms report takes three solver runs; a KB is one version of the data, so it is asked once
   let atomsReport = null;
+  let relationsReport = null;
 
   const parseText = makeParseText({ patterns: source.patterns ?? [], words, composites: source.composites });
 
@@ -44,6 +47,9 @@ export function createKb(source, { rules = readRules('base', 'whatif') } = {}) {
     checkForm: (args) => checkForm(words, args),
     parse: (text) => parseText(text),
     parser: parseText.parser,
+
+    // The relations: stored ones are accepted, the ones a rule finds are proposed (see relations.js).
+    relations: () => (relationsReport ??= relationReport(source, facts)),
 
     // Which words are atoms. No name: the whole report. A name: that word's
     // line (its sort, and how it is said), or null for a word that is not there.
@@ -71,4 +77,4 @@ export function createKb(source, { rules = readRules('base', 'whatif') } = {}) {
   };
 }
 
-export { renderCard, renderRemoval, renderParse, viewParse, renderAtoms, renderAtomWord };
+export { renderCard, renderRemoval, renderParse, viewParse, renderAtoms, renderAtomWord, renderRelations };

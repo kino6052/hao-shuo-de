@@ -7,7 +7,7 @@
 //   callTool(kb, name, args)      -> the answer as text (throws on a bad question)
 
 import { fileURLToPath } from 'node:url';
-import { renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord } from './kb.js';
+import { renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations } from './kb.js';
 import { scoreboardRow, readScoreboard, renderScoreboard, renderHistory } from './scoreboard.js';
 
 // the stored rows (refactor --write adds one after every change)
@@ -85,6 +85,21 @@ export const TOOLS = [
     },
   },
   {
+    name: 'kb_relations',
+    description:
+      'The relations between words and between composites: opposites, close words, the same description, kind-of (a composite and its head), agents, categories, and phrases that stand in for a missing opposite. ' +
+      'Stored ones are accepted; the ones a rule finds in the data (composites that differ in one slot, shared descriptions, heads, paraphrases) are proposed, waiting for the author. ' +
+      'Without a kind: the counts per kind. With a kind: its relations, each with why it was found and where from.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        kind: { type: 'string', description: 'A kind (opposite, close, same-form, kind-of, agent, category, opposite-phrase, close-phrase, opposite-by-not, close-by-paraphrase); leave out for the counts.' },
+        status: { type: 'string', enum: ['accepted', 'proposed'], description: 'Only the accepted or only the proposed ones.' },
+        limit: { type: 'integer', description: 'How many to list (default 8).' },
+      },
+    },
+  },
+  {
     name: 'kb_scoreboard',
     description:
       'The numbers about the language as it is now (words, composites, average description length, words reviewed, the smallest defining set, true atoms, hidden vocabulary, coverage, parse rate, grammar patterns), ' +
@@ -147,6 +162,8 @@ export async function callTool(kb, name, args = {}, { scoreboardFile = SCOREBOAR
       if (args.name === undefined || args.name === '') return renderAtoms(await kb.atoms());
       return renderAtomWord(await kb.atoms(), await kb.atoms(String(args.name)));
     }
+    case 'kb_relations':
+      return renderRelations(kb.relations(), { kind: args.kind || undefined, status: args.status || undefined, limit: Number(args.limit) > 0 ? Number(args.limit) : 8 });
     case 'kb_scoreboard': {
       const rows = readScoreboard(scoreboardFile);
       if (args.history) return renderHistory(rows);

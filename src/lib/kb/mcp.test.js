@@ -49,14 +49,14 @@ describe('the protocol', () => {
     expect((await rpc('nope')).error.code).toBe(-32601);
   });
 
-  test('tools/list names the seven tools, each with a description and a schema', async () => {
+  test('tools/list names the eight tools, each with a description and a schema', async () => {
     const { tools } = (await rpc('tools/list')).result;
-    expect(tools.map((t) => t.name)).toEqual(['kb_word', 'kb_remove', 'kb_parse', 'kb_check_form', 'kb_atoms', 'kb_scoreboard', 'kb_query']);
+    expect(tools.map((t) => t.name)).toEqual(['kb_word', 'kb_remove', 'kb_parse', 'kb_check_form', 'kb_atoms', 'kb_relations', 'kb_scoreboard', 'kb_query']);
     for (const t of TOOLS) {
       expect(t.description.length).toBeGreaterThan(40);
       expect(t.inputSchema.type).toBe('object');
-      // kb_atoms and kb_scoreboard ask for nothing: no name is the whole report, no flag is the numbers now
-      if (!['kb_atoms', 'kb_scoreboard'].includes(t.name)) expect(t.inputSchema.required.length).toBeGreaterThan(0);
+      // kb_atoms, kb_relations and kb_scoreboard ask for nothing: no name is the whole report, no flag is the numbers now
+      if (!['kb_atoms', 'kb_relations', 'kb_scoreboard'].includes(t.name)) expect(t.inputSchema.required.length).toBeGreaterThan(0);
       for (const r of t.inputSchema.required ?? []) expect(t.inputSchema.properties[r]).toBeDefined();
     }
   });
@@ -105,6 +105,19 @@ describe('the tools answer with the text the command line prints', () => {
     expect(text).toContain('against the row of');
     expect(text).toMatch(/words\s+13\s+\(\+1\)/);
     expect(await callTool(kb, 'kb_scoreboard', { history: true }, { scoreboardFile })).toMatch(/before\s*$/);
+  });
+
+  test('kb_relations is the counts, or one kind with the reason for each', async () => {
+    const all = textOf(await call('kb_relations', {}));
+    expect(all).toMatch(/^Relations: \d+ \(\d+ accepted, \d+ proposed by a rule, waiting for review\)/);
+    expect(all).toContain('Name a kind');
+    const kind = textOf(await call('kb_relations', { kind: 'kind-of', status: 'proposed', limit: 2 }));
+    expect(kind).toContain('kind-of');
+    expect(kind).toContain('[proposed]');
+    // a wrong kind is an error that lists the kinds
+    const bad = await call('kb_relations', { kind: 'cousin' });
+    expect(bad.result.isError).toBe(true);
+    expect(textOf(bad)).toContain('the kinds are');
   });
 
   test('kb_atoms is the report, or one word\'s line', async () => {
@@ -177,7 +190,7 @@ describe('the real server over stdio, on the real data', () => {
       expect(init.result.serverInfo.name).toBe('hao-shuo-de-kb');
       send({ jsonrpc: '2.0', method: 'notifications/initialized' });
       const list = await ask(2, 'tools/list', {});
-      expect(list.result.tools).toHaveLength(7);
+      expect(list.result.tools).toHaveLength(8);
       const drop = await ask(3, 'tools/call', { name: 'kb_remove', arguments: { words: 'dēng' } });
       const text = drop.result.content[0].text;
       expect(drop.result.isError).toBeUndefined();
