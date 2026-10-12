@@ -35,7 +35,7 @@ export function createMcpServer({ openKb, name = 'hao-shuo-de-kb', version = '0.
             serverInfo: { name, version },
             instructions:
               'Ask this server about the Hao-shuo-de dictionary: kb_word (a word card), kb_remove (what changes if words are dropped), kb_parse (grammar), ' +
-              'kb_check_form (a proposed form), kb_query (raw clingo). It reads the data fresh and never changes it.',
+              'kb_check_form (a proposed form), kb_atoms (which words are atoms), kb_scoreboard (the numbers about the language), kb_query (raw clingo). It reads the data fresh and never changes it.',
           });
         case 'ping':
           return reply(id, {});

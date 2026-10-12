@@ -8,10 +8,15 @@
 //   node scripts/kb.js parse "Wǒ chī fàn."
 //   node scripts/kb.js atoms [word]
 //   node scripts/kb.js parse-report [--lessons 4] [--stdout]
+//   node scripts/kb.js scoreboard [--append] [--label "what changed"] [--no-atoms]
 //   node scripts/kb.js engine
 //
 // parse-report parses every Hao-shuo-de sentence of the first N lessons and
 // writes kb/reports/lessons-1-N-parse.md (--stdout prints it instead).
+//
+// scoreboard measures the language now and prints it against the last stored
+// row; --append stores the row in kb/scoreboard.csv (refactor --write does
+// that after every change). --no-atoms skips the solver.
 //
 // Add --json to print the data instead of the text.
 //
@@ -26,6 +31,7 @@ import { createKb, renderCard, renderRemoval, renderParse, renderAtoms, renderAt
 import { parseReport, renderParseReport } from '../src/lib/kb/parse-report.js';
 import { renderCheckForm } from '../src/lib/kb/tools.js';
 import { engine } from '../src/lib/kb/clingo.js';
+import { scoreboardRow, appendRow, readScoreboard, renderScoreboard } from '../src/lib/kb/scoreboard.js';
 
 const ROOT = resolve(fileURLToPath(new URL('.', import.meta.url)), '..');
 // what the answers depend on: the data, the book text, the dictionary helpers, the rules
@@ -124,6 +130,15 @@ async function main(argv) {
       mkdirSync(resolve(ROOT, 'kb/reports'), { recursive: true });
       writeFileSync(file, `${text}\n`);
       return console.log(`${report.parsed} of ${report.total} sentences parse (${Math.round(report.rate * 100)}%); written to kb/reports/lessons-1-${n}-parse.md`);
+    }
+    case 'scoreboard': {
+      const file = resolve(ROOT, 'kb/scoreboard.csv');
+      const label = option(rest, '--label') ?? '';
+      const append = rest.includes('--append');
+      const before = readScoreboard(file);
+      const row = await scoreboardRow(kb, { label, atoms: !rest.includes('--no-atoms'), atomsTimeoutMs: 90_000 });
+      if (append) appendRow(file, row);
+      return print({ row, stored: before.length + (append ? 1 : 0) }, `${renderScoreboard(row, before)}${append ? '\nStored in kb/scoreboard.csv.' : ''}`);
     }
     case 'atoms': {
       // no name: the whole report; a name: that word's line

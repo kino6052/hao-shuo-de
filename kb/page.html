@@ -74,6 +74,11 @@ pre.text { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font: 400 
 .badge { font: 600 12px/1 var(--font-mono); letter-spacing: .04em; text-transform: uppercase; padding: 4px 8px; border-radius: 999px; }
 .badge.ok { background: var(--accent-soft); color: var(--accent); }
 .badge.bad { background: var(--danger-soft); color: var(--danger); }
+.badge.flat { background: var(--paper); color: var(--muted); border: 1px solid var(--line); }
+.board { display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); gap: 10px; }
+.board-card { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; background: var(--paper); display: grid; gap: 4px; align-content: start; min-height: 106px; }
+.board-card .big { font: 600 24px/1.1 var(--font-body); font-variant-numeric: tabular-nums; }
+.board-card svg { display: block; max-width: 100%; }
 .row { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
 .label { font: 500 11px/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 details summary { cursor: pointer; color: var(--accent); font-size: 14px; }
@@ -93,6 +98,7 @@ details summary { cursor: pointer; color: var(--accent); font-size: 14px; }
     <button class="tab" role="tab" id="tab-remove" data-mode="remove" aria-selected="false">Drop a word</button>
     <button class="tab" role="tab" id="tab-parse" data-mode="parse" aria-selected="false">Parse a sentence</button>
     <button class="tab" role="tab" id="tab-atoms" data-mode="atoms" aria-selected="false">Atoms</button>
+    <button class="tab" role="tab" id="tab-scoreboard" data-mode="scoreboard" aria-selected="false">Scoreboard</button>
   </div>
 
   <form id="ask" autocomplete="off">
@@ -119,6 +125,7 @@ const HINTS = {
   remove: 'One or more words, separated by spaces or commas. Nothing is changed; this only shows what would have to change.',
   parse: 'Plain pinyin ("Wǒ shì rén.") or text with word references. Several sentences are checked one by one.',
   atoms: 'Which words the others cannot be said from. Leave the box empty for the whole report, or name a word to see where it stands and how it is said.',
+  scoreboard: 'The language\'s numbers now, charted against the rows stored after each change (kb/scoreboard.csv). Nothing to type.',
 };
 let mode = 'word';
 let seq = 0;
@@ -128,7 +135,7 @@ const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&l
 function setMode(m, { keep = false } = {}) {
   mode = m;
   for (const t of document.querySelectorAll('.tab')) t.setAttribute('aria-selected', String(t.dataset.mode === m));
-  $('field-name').hidden = m === 'parse';
+  $('field-name').hidden = m === 'parse' || m === 'scoreboard';
   $('field-text').hidden = m !== 'parse';
   $('name').placeholder = m === 'remove' ? 'dēng, fàn …' : m === 'atoms' ? 'a word (optional)' : 'dēng, deng1 or 灯';
   $('name').setAttribute('aria-label', m === 'remove' ? 'Words to drop' : 'Word');
@@ -191,6 +198,47 @@ function atomsReport(d) {
   return `<section class="card"><div class="chips">${chips}</div>${kind}<pre class="text">${esc(d.text)}</pre></section>`;
 }
 
+// the numbers charted: [column, label, good direction (+1 up, -1 down, 0 none)]
+const BOARD = [
+  ['words', 'words', 0], ['composites', 'composites', 0], ['avg_form_words', 'words per description', -1],
+  ['unreviewed', 'words not reviewed', -1], ['smallest_set', 'smallest defining set', -1], ['true_atoms', 'true atoms', 0],
+  ['swappable', 'swappable', 0], ['secondary', 'secondary', 0], ['core', 'core', 0], ['spelled', 'spelled forms', 0],
+  ['undecided_forms', 'compounds undecided', -1], ['items_with_form', 'coverage items sayable', 1], ['parse_rate', 'lessons 1-4 parse rate', 1], ['patterns', 'grammar patterns', 0],
+];
+
+// a small line over the stored rows, ending at the number now
+function spark(values) {
+  const w = 150, h = 38, pad = 4;
+  const ys = values.filter((v) => typeof v === 'number');
+  if (ys.length < 2) return '';
+  const lo = Math.min(...ys), hi = Math.max(...ys), span = hi - lo || 1;
+  const pts = values.map((v, i) => [pad + (i * (w - 2 * pad)) / (values.length - 1), typeof v === 'number' ? h - pad - ((v - lo) / span) * (h - 2 * pad) : null]);
+  const line = pts.filter((p) => p[1] !== null).map((p) => p.join(',')).join(' ');
+  const last = pts.filter((p) => p[1] !== null).at(-1);
+  return `<svg viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img" aria-label="${values.length - 1} stored rows, then now"><polyline points="${line}" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/><circle cx="${last[0]}" cy="${last[1]}" r="3" fill="var(--accent)"/></svg>`;
+}
+
+function scoreboard(d) {
+  const last = d.rows.at(-1);
+  const cards = BOARD.map(([key, label, good]) => {
+    const v = d.now[key];
+    const before = last?.[key];
+    const diff = typeof v === 'number' && typeof before === 'number' ? Math.round((v - before) * 1000) / 1000 : 0;
+    const tone = !diff || !good ? '' : diff * good > 0 ? 'ok' : 'bad';
+    const series = [...d.rows.map((r) => r[key]), v];
+    return `<div class="board-card" title="${esc(d.columns[key])}">
+      <div class="label">${esc(label)}</div>
+      <div class="row"><span class="big">${v === '' ? '-' : esc(v)}</span>${diff ? `<span class="badge ${tone || 'flat'}">${diff > 0 ? '+' : ''}${diff}</span>` : ''}</div>
+      ${spark(series)}
+    </div>`;
+  }).join('');
+  const note = d.rows.length
+    ? `Against the row of ${esc(last.date)}${last.label ? ` (${esc(last.label)})` : ''}; ${d.rows.length} stored row${d.rows.length === 1 ? '' : 's'}. Each line runs over the stored rows and ends at now.`
+    : 'No stored rows yet.';
+  return `<section class="card"><p class="hint">${note}</p><div class="board">${cards}</div></section>
+    <section class="card"><details><summary>The same as text</summary><pre class="text">${esc(d.text)}</pre></details></section>`;
+}
+
 function parsed(d) {
   if (d.view.error) return `<section class="card"><p>${esc(d.view.error)}</p></section>`;
   return d.view.sentences.map((s) => `<section class="card sentence">
@@ -209,15 +257,15 @@ async function ask() {
   const my = ++seq;
   const name = $('name').value.trim();
   const text = $('text').value.trim();
-  if (mode !== 'parse' && mode !== 'atoms' && !name) return say('Type a word.');
+  if (mode !== 'parse' && mode !== 'atoms' && mode !== 'scoreboard' && !name) return say('Type a word.');
   if (mode === 'parse' && !text) return say('Type a sentence.');
   history.replaceState(null, '', `#${mode}=${encodeURIComponent(mode === 'parse' ? text : name)}`);
-  say(mode === 'remove' || mode === 'atoms' ? 'Working it out (clingo)…' : 'Looking…');
+  say(mode === 'remove' || mode === 'atoms' || mode === 'scoreboard' ? 'Working it out (clingo)…' : 'Looking…');
   $('out').innerHTML = '';
   try {
-    const d = mode === 'word' ? await api('word', { name }) : mode === 'remove' ? await api('remove', { names: name }) : mode === 'atoms' ? await api('atoms', { name }) : await api('parse', { text });
+    const d = mode === 'word' ? await api('word', { name }) : mode === 'remove' ? await api('remove', { names: name }) : mode === 'atoms' ? await api('atoms', { name }) : mode === 'scoreboard' ? await api('scoreboard', {}) : await api('parse', { text });
     if (my !== seq) return;
-    $('out').innerHTML = mode === 'word' ? wordCard(d) : mode === 'remove' ? removal(d) : mode === 'atoms' ? atomsReport(d) : parsed(d);
+    $('out').innerHTML = mode === 'word' ? wordCard(d) : mode === 'remove' ? removal(d) : mode === 'atoms' ? atomsReport(d) : mode === 'scoreboard' ? scoreboard(d) : parsed(d);
     say('');
   } catch (e) {
     if (my === seq) say(e.message, true);
@@ -241,8 +289,8 @@ $('name').addEventListener('input', () => {
 $('ask').addEventListener('submit', (e) => { e.preventDefault(); ask(); });
 for (const t of document.querySelectorAll('.tab')) t.addEventListener('click', () => {
   setMode(t.dataset.mode);
-  // the atoms report needs no question, so it opens with its answer
-  if (t.dataset.mode === 'atoms') ask();
+  // the atoms report and the scoreboard need no question, so they open with their answer
+  if (t.dataset.mode === 'atoms' || t.dataset.mode === 'scoreboard') ask();
 });
 $('out').addEventListener('click', (e) => {
   const id = e.target.dataset?.remove;
@@ -252,9 +300,9 @@ $('out').addEventListener('click', (e) => {
   ask();
 });
 
-// #word=deng1, #remove=deng1,fan4, #parse=Wǒ shì rén., #atoms= or #atoms=deng1
+// #word=deng1, #remove=deng1,fan4, #parse=Wǒ shì rén., #atoms= or #atoms=deng1, #scoreboard=
 function fromHash() {
-  const m = /^#(word|remove|parse|atoms)=(.*)$/.exec(location.hash);
+  const m = /^#(word|remove|parse|atoms|scoreboard)=(.*)$/.exec(location.hash);
   if (!m) return setMode('word');
   setMode(m[1], { keep: true });
   (m[1] === 'parse' ? $('text') : $('name')).value = decodeURIComponent(m[2]);

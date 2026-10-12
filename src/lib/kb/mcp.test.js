@@ -4,7 +4,11 @@ import { createInterface } from 'readline';
 import { fileURLToPath } from 'url';
 import { createKb, renderCard } from './kb.js';
 import { createMcpServer } from './mcp.js';
-import { TOOLS } from './tools.js';
+import { TOOLS, callTool } from './tools.js';
+import { appendRow, scoreboardRow } from './scoreboard.js';
+import { mkdtempSync } from 'fs';
+import { tmpdir } from 'os';
+import { join } from 'path';
 import { source } from './fixture.js';
 
 const patterns = [
@@ -45,14 +49,14 @@ describe('the protocol', () => {
     expect((await rpc('nope')).error.code).toBe(-32601);
   });
 
-  test('tools/list names the six tools, each with a description and a schema', async () => {
+  test('tools/list names the seven tools, each with a description and a schema', async () => {
     const { tools } = (await rpc('tools/list')).result;
-    expect(tools.map((t) => t.name)).toEqual(['kb_word', 'kb_remove', 'kb_parse', 'kb_check_form', 'kb_atoms', 'kb_query']);
+    expect(tools.map((t) => t.name)).toEqual(['kb_word', 'kb_remove', 'kb_parse', 'kb_check_form', 'kb_atoms', 'kb_scoreboard', 'kb_query']);
     for (const t of TOOLS) {
       expect(t.description.length).toBeGreaterThan(40);
       expect(t.inputSchema.type).toBe('object');
-      // kb_atoms asks for nothing: no name is the whole report
-      if (t.name !== 'kb_atoms') expect(t.inputSchema.required.length).toBeGreaterThan(0);
+      // kb_atoms and kb_scoreboard ask for nothing: no name is the whole report, no flag is the numbers now
+      if (!['kb_atoms', 'kb_scoreboard'].includes(t.name)) expect(t.inputSchema.required.length).toBeGreaterThan(0);
       for (const r of t.inputSchema.required ?? []) expect(t.inputSchema.properties[r]).toBeDefined();
     }
   });
@@ -86,6 +90,21 @@ describe('the tools answer with the text the command line prints', () => {
     const bad = textOf(await call('kb_check_form', { forms: 'chī fàn', tts: '吃饮' }));
     expect(bad).toMatch(/^problems:/);
     expect(bad).toContain("don't spell");
+  });
+
+  test('kb_scoreboard measures now against the stored rows, or lists them', async () => {
+    const scoreboardFile = join(mkdtempSync(join(tmpdir(), 'kb-scoreboard-')), 'scoreboard.csv');
+    // nothing stored yet
+    expect(await callTool(kb, 'kb_scoreboard', {}, { scoreboardFile })).toContain('(no earlier row)');
+    expect(await callTool(kb, 'kb_scoreboard', { history: true }, { scoreboardFile })).toContain('No rows stored yet');
+
+    // one stored row; the data then gains a word, and the report shows the change
+    appendRow(scoreboardFile, await scoreboardRow(kb, { label: 'before', atoms: false }));
+    const more = createKb({ ...source, words: { ...source.words, extra: { ...source.words.ge4, term: 'zzz' } } });
+    const text = await callTool(more, 'kb_scoreboard', {}, { scoreboardFile });
+    expect(text).toContain('against the row of');
+    expect(text).toMatch(/words\s+13\s+\(\+1\)/);
+    expect(await callTool(kb, 'kb_scoreboard', { history: true }, { scoreboardFile })).toMatch(/before\s*$/);
   });
 
   test('kb_atoms is the report, or one word\'s line', async () => {
@@ -158,7 +177,7 @@ describe('the real server over stdio, on the real data', () => {
       expect(init.result.serverInfo.name).toBe('hao-shuo-de-kb');
       send({ jsonrpc: '2.0', method: 'notifications/initialized' });
       const list = await ask(2, 'tools/list', {});
-      expect(list.result.tools).toHaveLength(6);
+      expect(list.result.tools).toHaveLength(7);
       const drop = await ask(3, 'tools/call', { name: 'kb_remove', arguments: { words: 'dēng' } });
       const text = drop.result.content[0].text;
       expect(drop.result.isError).toBeUndefined();

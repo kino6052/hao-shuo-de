@@ -173,8 +173,10 @@ A lesson's grammar box becomes `{ type: "grammar", pattern: "compare-bi" }`. The
   - **removal:** ranked by least consequences, secondary words by default;
   - **addition:** Mandarin roots, phrases repeated across descriptions (graph-report), and concepts behind English gaps.
 - [ ] Swaps: clingo searches add X + remove Y within those candidate pools for the best net effect.
-- [ ] Scoreboard: core size, hidden vocabulary, coverage, yardstick sayability, average description length, grammar parse rate, number of patterns. `refactor --write` appends a row to `kb/scoreboard.csv`. The explorer charts it.
-- [ ] Explorer panels and tools `kb_add`, `kb_candidates`, `kb_swaps`, `kb_scoreboard`.
+- [x] Scoreboard: core size, hidden vocabulary, coverage, yardstick sayability, average description length, grammar parse rate, number of patterns. `refactor --write` appends a row to `kb/scoreboard.csv`. The explorer charts it.
+  - **Built (2026-10-12):** `src/lib/kb/scoreboard.js`, `node scripts/kb.js scoreboard [--append] [--label …] [--no-atoms]` (prints the numbers against the last stored row), the hook in `scripts/word.js` (after `--write`, never fails a refactor), the explorer's Scoreboard tab, and the `kb_scoreboard` tool. 22 columns: words, composites, descriptions and their average length, atoms (marked, paraphrased, unreviewed, smallest set, true atoms, swappable, secondary, unchecked, core), hidden vocabulary (spelled, built, undecided), coverage items and how many can be said, lessons 1-4 parse rate, patterns. A number that can't be measured yet is left empty; yardstick sayability joins in phase 6 (the CSV is rewritten with new columns, old rows keep their blanks). The first row is the baseline taken after the 45 atoms were admitted: 230 words, 185 unreviewed, smallest set 230 (nothing reviewed, so every word is in it), 232 compounds undecided, parse rate 0.864.
+  - **Why now:** the author will not review for the time being and will run the solvers later on more data. A row per change makes what more data does visible.
+- [ ] Explorer panels and tools `kb_add`, `kb_candidates`, `kb_swaps`, `kb_scoreboard`. (`kb_scoreboard` and its panel are built; the rest wait for the reports they show.)
 - **Done when:** the first audit (like D63) goes to the author, listing the words whose removal costs least, the best additions, and the best swaps.
 - **Author:** decide on the audit; changes go through refactor lists as always.
 

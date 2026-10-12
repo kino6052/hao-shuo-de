@@ -10,6 +10,8 @@
 //   GET /__kb/parse?text=         { view, text }: does it parse, and how
 //   GET /__kb/atoms?name=         { counts, hidden, line?, text }: which words are atoms; with a
 //                                 name, that word's line (its sort and how it is said)
+//   GET /__kb/scoreboard          { now, rows, columns, text }: the language's numbers now, and the stored
+//                                 rows (kb/scoreboard.csv) to chart them against
 //
 // The KB code is loaded by Node itself (not bundled with this config) so it
 // reads the .ts data files the way the command line does.
@@ -20,6 +22,7 @@ import { fileURLToPath, pathToFileURL } from 'url';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const PAGE = resolve(ROOT, 'kb', 'page.html');
+const SCOREBOARD = resolve(ROOT, 'kb', 'scoreboard.csv');
 
 const load = (file) => import(/* @vite-ignore */ pathToFileURL(resolve(ROOT, file)).href);
 
@@ -65,6 +68,12 @@ export default function kbPlugin() {
               if (!get('name')) return json(res, { counts, hidden, text: renderAtoms(report) });
               const line = await kb.atoms(get('name'));
               return json(res, { counts, hidden, line, text: renderAtomWord(report, line) });
+            }
+            case '/scoreboard': {
+              const { scoreboardRow, readScoreboard, renderScoreboard, COLUMNS } = await load('src/lib/kb/scoreboard.js');
+              const rows = readScoreboard(SCOREBOARD);
+              const now = await scoreboardRow(kb, { atomsTimeoutMs: 45_000 });
+              return json(res, { now, rows, columns: COLUMNS, text: renderScoreboard(now, rows) });
             }
             case '/parse': {
               const result = kb.parse(get('text'));

@@ -6,7 +6,12 @@
 //   TOOLS                         [{ name, description, inputSchema }]
 //   callTool(kb, name, args)      -> the answer as text (throws on a bad question)
 
+import { fileURLToPath } from 'node:url';
 import { renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord } from './kb.js';
+import { scoreboardRow, readScoreboard, renderScoreboard, renderHistory } from './scoreboard.js';
+
+// the stored rows (refactor --write adds one after every change)
+export const SCOREBOARD_FILE = fileURLToPath(new URL('../../../kb/scoreboard.csv', import.meta.url));
 
 // a Claude tool never runs longer than this, whatever the question
 export const MAX_QUERY_MS = 60_000;
@@ -80,6 +85,17 @@ export const TOOLS = [
     },
   },
   {
+    name: 'kb_scoreboard',
+    description:
+      'The numbers about the language as it is now (words, composites, average description length, words reviewed, the smallest defining set, true atoms, hidden vocabulary, coverage, parse rate, grammar patterns), ' +
+      'and how each changed since the last stored row in kb/scoreboard.csv. A row is stored after every refactor --write, so this shows what a change did, and what more data does when the solvers run again. ' +
+      'With history: true, the stored rows instead. A number that cannot be measured yet is shown as "-".',
+    inputSchema: {
+      type: 'object',
+      properties: { history: { type: 'boolean', description: 'Show the stored rows instead of measuring now.' } },
+    },
+  },
+  {
     name: 'kb_query',
     description:
       'Raw clingo rules on top of the facts, for questions the other tools do not answer. Add `#show name/arity.` lines to choose what comes back. ' +
@@ -115,7 +131,7 @@ const need = (args, key) => {
 
 // -> the answer as text. Throws Error for a question that can't be answered
 // (an unknown word, a bad program); the caller reports it as the tool's error.
-export async function callTool(kb, name, args = {}) {
+export async function callTool(kb, name, args = {}, { scoreboardFile = SCOREBOARD_FILE } = {}) {
   switch (name) {
     case 'kb_word':
       return renderCard(kb.word(String(need(args, 'name'))));
@@ -130,6 +146,11 @@ export async function callTool(kb, name, args = {}) {
     case 'kb_atoms': {
       if (args.name === undefined || args.name === '') return renderAtoms(await kb.atoms());
       return renderAtomWord(await kb.atoms(), await kb.atoms(String(args.name)));
+    }
+    case 'kb_scoreboard': {
+      const rows = readScoreboard(scoreboardFile);
+      if (args.history) return renderHistory(rows);
+      return renderScoreboard(await scoreboardRow(kb, { atomsTimeoutMs: 45_000 }), rows);
     }
     case 'kb_query': {
       const timeoutMs = Math.min(Math.max(Number(args.timeout_ms) || 20_000, 100), MAX_QUERY_MS);

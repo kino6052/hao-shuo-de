@@ -13,7 +13,7 @@
 //   npm run word -- remove <id>
 //
 // After --write it rebuilds the data indexes, the dictionary pages and
-// BOOK_PLAN.md §4b; run
+// BOOK_PLAN.md §4b, and adds a row to the scoreboard (kb/scoreboard.csv); run
 // `npm run check` to see the result.
 
 import { Workspace, applyOps, summary, cards, idSyllables, ROOT } from './refactor-lib.js';
@@ -156,6 +156,9 @@ export function run(ops, { write = false, diff = false, title = '' } = {}) {
   for (const script of scripts) {
     spawnSync(process.execPath, [`${ROOT}/scripts/${script}`], { stdio: 'inherit' });
   }
+  // a row on the scoreboard (kb/scoreboard.csv), measured on the data as it is now; it never fails a refactor
+  const board = spawnSync(process.execPath, [`${ROOT}/scripts/kb.js`, 'scoreboard', '--append', '--label', title.replace(/^refactor /, '')], { encoding: 'utf-8', timeout: 180_000 });
+  console.log(board.status === 0 ? '\nScoreboard: a row added to kb/scoreboard.csv (node scripts/kb.js scoreboard shows it).' : `\nScoreboard: no row added (${(board.stderr || board.error?.message || 'it did not finish').trim().split('\n')[0]}).`);
   console.log('\nWritten. Now run: npm run check');
 }
 
