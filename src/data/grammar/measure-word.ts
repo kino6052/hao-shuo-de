@@ -17,6 +17,7 @@ export default pattern("measure-word", {
     { lhs: "Count", hsd: "@number", eng: "a number says how many" },
     { lhs: "NP", hsd: "Count @measure_word", eng: "a pointer or number and a counting word: this one, two of them" },
     { lhs: "NP", hsd: "Count @measure_word @noun", eng: "a pointer or number, a counting word, and its noun" },
+    { lhs: "NP", hsd: "Count @measure_word ModNP", eng: "a pointer or number, a counting word, and a modified noun" },
   ],
   taught: "pointing/ge-is-universal",
   examples: [
@@ -24,5 +25,6 @@ export default pattern("measure-word", {
     ["Zhè-ge rén.", "This person."],
     ["Nà-xiē rén hěn hǎo.", "Those people are good."],
     ["Liǎng-ge rén.", "Two people."],
+    ["Wǒ yào nà-zhǒng cháng-de dōng-xi.", "I want that kind of long thing."],
   ],
 });

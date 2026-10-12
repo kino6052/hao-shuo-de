@@ -15,11 +15,13 @@ export default pattern("de-modifier", {
     { lhs: "ModNP", hsd: "Mod @noun", eng: "a modifier and its noun" },
     { lhs: "NP", hsd: "ModNP", eng: "a modified noun is a noun phrase" },
     { lhs: "NP", hsd: "NP de", eng: "an owner with -de, the noun left out: mine" },
+    { lhs: "NP", hsd: "AdjP de", eng: "a describing word with -de, the noun left out: the empty one" },
   ],
   taught: "modifying-nouns/before",
   examples: [
     ["Dà-de dì-fang.", "A big place."],
     ["Wǒ-de jiā.", "My home."],
     ["Zhè shì wǒ-de.", "This is mine."],
+    ["Zhè-ge bāo shì kōng-de.", "This bag is empty."],
   ],
 });

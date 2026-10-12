@@ -10,10 +10,12 @@ export default pattern("adverb-before-verb", {
   rules: [
     { lhs: "AdvP", hsd: "hen3 @adjective", eng: "hěn and a describing word" },
     { lhs: "VP", hsd: "AdvP VerbP", eng: "how it is done, then the verb" },
+    { lhs: "VP", hsd: "hen3 VerbP", eng: "hěn before a verb: very much" },
   ],
   taught: "how-much/very",
   examples: [
     ["Wǒ hěn zǎo lái.", "I come very early."],
     ["Tā hěn kuài zǒu.", "He walks very fast."],
+    ["Zhè-ge gōng-jù hěn yǒu jiàzhí.", "This tool is very valuable."],
   ],
 });
