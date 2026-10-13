@@ -78,6 +78,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "shi-copula",
     en: "NOUN + {{word:shi4}} + NOUN: {{Word:nv3}}-{{word:ren2}} {{word:shi4}} {{word:ren2}}. (A woman is a person.)",
     ru: "СУЩЕСТВИТЕЛЬНОЕ + {{word:shi4}} + СУЩЕСТВИТЕЛЬНОЕ: {{Word:nv3}}-{{word:ren2}} {{word:shi4}} {{word:ren2}}. (Женщина — человек.)",
   },
