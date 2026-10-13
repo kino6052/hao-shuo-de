@@ -205,7 +205,7 @@ A lesson's grammar box becomes `{ type: "grammar", pattern: "compare-bi" }`. The
   - Ambiguity is high and tolerated: of 4420 sentences about a fifth read one way, a third read 2 to 5 ways, and a quarter read more than 20 ways; the first reading can be an odd one. Ranking readings (a cost per pattern or rule, the readings that use fewer patterns first) is not done.
   - Taught-order notes: lesson 2's module "not" teaches bù shì, so `bu-shi-not` is taught there and `bu-negation` (lesson 5) is bù before a verb; lì-qì (lesson 15) has its own pattern `li-qi-strength`.
   - K6 class proposals the rules stand in for (recorded as `=word` rules, to become classes): duì as "correct", xià as a verb, tòng as a noun, miàn as a counting word, bǐ as a verb, hǎo and nán before a verb ("easy to", "hard to").
-- [ ] **Gate `check-grammar`** once the report is clean.
+- [x] **Gate `check-grammar`** (`scripts/check-grammar.js`, in `check-all`): every sentence parses, or is listed with a reason in `kb/grammar-gaps.json` (25 now: 17 that parse nowhere, 8 that use a pattern before it is taught). A new gap fails; a listed gap that parses now fails, so the list only shrinks. The report was not clean, so the gate is a ratchet; it becomes a plain "everything parses" when the list is empty.
 - [ ] Minimal patterns, measured four ways:
   - **cover the core:** clingo set cover of patterns over the 38 items, plus the NSM and Aristotle items that need grammar;
   - **combos:** a pattern whose examples still parse without it is built from the patterns that parse them;

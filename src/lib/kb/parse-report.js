@@ -95,6 +95,9 @@ export function slimReport(report) {
   };
 }
 
+// -> a sentence of word refs as a person reads it ("Wǒ shì rén.")
+export const sayText = (text, words = {}) => replaceWordRefs(text, (id, kind) => refTerm(words[id]?.term ?? id, kind));
+
 const pct = (n, d) => (d ? `${Math.round((100 * n) / d)}%` : '-');
 
 // -> markdown

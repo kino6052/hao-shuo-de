@@ -26,6 +26,7 @@ const GATES = [
   ['check-early-words', ['--summary']],
   ['check-word-use', ['--summary']],
   ['check-grammar-blocks', ['--summary']],
+  ['check-grammar', []],
   ['check-practice', ['--summary']],
   ['check-example-runs', ['--summary']],
   ['check-word-builder', []],
