@@ -14,7 +14,7 @@ import { makeGrammar, isNonterminal } from './earley.js';
 import { posClasses } from './lexicon.js';
 
 // classes the lexicon makes up itself
-const BUILT_IN = ['comma', 'quoted', 'unknown'];
+const BUILT_IN = ['comma', 'quoted', 'unknown', 'again'];
 
 export function buildGrammar(patterns, { words = {}, composites = [] } = {}) {
   const rules = [];

@@ -14,6 +14,10 @@
 //
 //   edge { from, to, id?, composite?, term, classes: Set }
 //
+// A word said twice in a row (rén-rén, hǎo-hǎo) gets the class "again" on its
+// second edge, and a bare light syllable that repeats the word before it
+// (kàn-kan, xiè-xie) is an "again" edge too, so a rule can say @verb @again.
+//
 // Nothing here knows grammar rules; the parser decides which reading fits.
 
 import { wordRefRe } from '../word-refs.js';
@@ -53,6 +57,9 @@ export function buildLexicon({ words, composites = [] }) {
 }
 
 const termOf = (words, id) => words[id]?.term ?? id;
+
+// a syllable without its tone marks, to tell whether a bare syllable repeats a word
+const plain = (s) => String(s).normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
 
 // -> { n, edges, tokens, problems } for one sentence (see the header).
 //    tokens[i] is the word at position i: { text, id?, kind } for showing it.
@@ -120,11 +127,16 @@ export function lex(text, lexicon) {
     if (it.kind === 'word') {
       const w = words[it.id];
       if (!w) problems.push(`"${it.id}" is not a word`);
+      const classes = new Set(posClasses(w?.pos?.eng));
+      if (tokens.at(-1)?.id === it.id) classes.add('again');
       tokens.push({ kind: 'word', id: it.id, text: termOf(words, it.id) });
-      edges.push({ from: i, to: i + 1, id: it.id, term: termOf(words, it.id), classes: new Set(posClasses(w?.pos?.eng)) });
+      edges.push({ from: i, to: i + 1, id: it.id, term: termOf(words, it.id), classes });
     } else if (it.kind === 'quoted') {
       tokens.push({ kind: 'quoted', text: `"${it.text}"` });
       edges.push({ from: i, to: i + 1, term: `"${it.text}"`, classes: new Set(['noun', 'quoted']) });
+    } else if (it.glued && tokens.at(-1)?.id && plain(termOf(words, tokens.at(-1).id)) === plain(it.text)) {
+      tokens.push({ kind: 'again', text: it.text });
+      edges.push({ from: i, to: i + 1, term: it.text, classes: new Set(['again']) });
     } else {
       problems.push(`"${it.text}" is not a word of the dictionary (a bare syllable, or English)`);
       tokens.push({ kind: 'unknown', text: it.text });

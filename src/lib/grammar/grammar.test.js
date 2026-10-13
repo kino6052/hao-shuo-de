@@ -88,6 +88,13 @@ describe('what the patterns do not allow', () => {
     expect(ok('Zhè rén.')).toBe(false);
   });
 
+  test('a word said twice is the same word again, even as a light syllable', () => {
+    expect(ok('Wǒ kàn-kan.')).toBe(true);
+    expect(ok('Xiè-xie nǐ.')).toBe(true);
+    expect(ok('Yuè yuán-yuán-de.')).toBe(true);
+    expect(ok('Yuè yuán-hǎo-de.')).toBe(false);
+  });
+
   test('a sentence of several modifiers reads one way', () => {
     const r = parser.parse(pinyinToRefs('Wǒ-de dà-de hǎo-de jiā.', words));
     expect(r.ok).toBe(true);

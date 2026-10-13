@@ -5,7 +5,8 @@
 // word, check-sounds); one without is a light syllable ({{light:..}}), the
 // word with that sound; miànr is miàn + an erhua r. Names and sounds in
 // quotes, X and Y, and refs written out ({{light:de2}} in jué-{{light:de2}},
-// where de would be 的) stay as they are. Words of more than one syllable are
+// where de would be 的) stay as they are. A light syllable that repeats the word
+// before it is that word again (xiè-xie, kàn-kan). Words of more than one syllable are
 // written as one: zhīdào, shēntǐ. Pure, for the app and the scripts.
 
 import { toneless } from './word-refs.js';
@@ -22,19 +23,24 @@ export function pinyinToRefs(text, words, { light = {} } = {}) {
     const t = toneless(term);
     byToneless.set(t, [...(byToneless.get(t) ?? []), id]);
   }
+  let prev = null; // the word the last token was
   return String(text)
     .normalize('NFC')
     .replace(/\{\{[^}]*\}\}|"[^"]*"|\p{L}+/gu, (tok) => {
-      if (tok.startsWith('{{') || tok.startsWith('"') || tok === 'X' || tok === 'Y') return tok;
+      if (tok.startsWith('{{') || tok.startsWith('"') || tok === 'X' || tok === 'Y') {
+        prev = null;
+        return tok;
+      }
       const cap = tok[0] !== tok[0].toLowerCase();
       const low = tok.toLowerCase();
       const ref = (id, isLight) => `{{${isLight ? (cap ? 'Light' : 'light') : cap ? 'Word' : 'word'}:${id}}}`;
-      if (byTerm.has(low)) return ref(byTerm.get(low), false);
-      if (low.endsWith('r') && byTerm.has(low.slice(0, -1))) return `${ref(byTerm.get(low.slice(0, -1)), false)}r`;
+      if (byTerm.has(low)) return ref((prev = byTerm.get(low)), false);
+      if (low.endsWith('r') && byTerm.has(low.slice(0, -1))) return `${ref((prev = byTerm.get(low.slice(0, -1))), false)}r`;
       if (toneless(low) === low) {
         const ids = byToneless.get(low) ?? [];
-        const pick = light[low] ?? LIGHT[low] ?? (ids.length === 1 ? ids[0] : null);
-        if (pick) return ref(pick, true);
+        const again = prev && toneless(words[prev].term.normalize('NFC')) === low ? prev : null;
+        const pick = again ?? light[low] ?? LIGHT[low] ?? (ids.length === 1 ? ids[0] : null);
+        if (pick) return ref((prev = pick), true);
         throw new Error(`"${tok}" in "${text}": a light syllable of ${ids.length ? ids.join(' or ') : 'no word'}`);
       }
       throw new Error(`"${tok}" in "${text}" isn't a word`);
