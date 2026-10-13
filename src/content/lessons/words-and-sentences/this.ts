@@ -31,6 +31,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "shi-copula",
     en: "{{word:zhe4}} {{word:shi4}} + NOUN, this is: {{Word:zhe4}} {{word:shi4}} {{word:ren2}}. (This is a person.)",
     ru: "{{word:zhe4}} {{word:shi4}} + СУЩЕСТВИТЕЛЬНОЕ — это: {{Word:zhe4}} {{word:shi4}} {{word:ren2}}. (Это человек.)",
   },
