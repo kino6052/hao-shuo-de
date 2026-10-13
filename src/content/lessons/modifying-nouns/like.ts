@@ -76,6 +76,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "hen-adjective",
     en: "NOUN + {{word:hen3}} + adjective: {{Word:shui3}} {{word:hen3}} {{word:hao3}}. (The water is good.)",
     ru: "СУЩЕСТВИТЕЛЬНОЕ + {{word:hen3}} + прилагательное: {{Word:shui3}} {{word:hen3}} {{word:hao3}}. (Вода хорошая.)",
   },

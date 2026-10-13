@@ -194,6 +194,7 @@ A lesson's grammar box becomes `{ type: "grammar", pattern: "compare-bi" }`. The
   - [x] words-and-sentences/is (2026-10-13): pattern `shi-copula`; the one-line box carries `pattern: "shi-copula"`, text unchanged.
   - [x] words-and-sentences/not (2026-10-13): pattern `bu-shi-not` (existing); the box carries `pattern: "bu-shi-not"`, text unchanged.
   - [x] words-and-sentences/this (2026-10-13): pattern `shi-copula` (shared with `is`); the box carries `pattern: "shi-copula"`, text unchanged. Next module: not named yet.
+  - [x] modifying-nouns/like (2026-10-13): pattern `hen-adjective` (existing); the one-line box carries `pattern: "hen-adjective"`, text unchanged. (sounds-and-symbols other boxes are notes.)
 - [~] Rules for every pattern. Then the report over all texts (K7):
   - [x] lesson sentences, including the early-patterns rule;
   - [x] composite examples;
