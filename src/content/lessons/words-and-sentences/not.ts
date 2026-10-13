@@ -32,6 +32,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "bu-shi-not",
     en: "NOUN + {{word:bu4}} {{word:shi4}} + NOUN: {{Word:dong4}}-{{word:wu4}} {{word:bu4}} {{word:shi4}} {{word:zhi2wu4}}. (An animal is not a plant.)",
     ru: "СУЩЕСТВИТЕЛЬНОЕ + {{word:bu4}} {{word:shi4}} + СУЩЕСТВИТЕЛЬНОЕ: {{Word:dong4}}-{{word:wu4}} {{word:bu4}} {{word:shi4}} {{word:zhi2wu4}}. (Животное — не растение.)",
   },
