@@ -11,6 +11,8 @@ export default pattern("why-how-question", {
     { lhs: "AskP", hsd: "=wei4 =shen2me", eng: "wèi-shénme, why" },
     { lhs: "AskP", hsd: "=zen3me", eng: "zěnme, how" },
     { lhs: "VP", hsd: "AskP VP", eng: "the question word, then what is said" },
+    { lhs: "Utt", hsd: "AskP", eng: "the question word alone: why?" },
+    { lhs: "Utt", hsd: "S @comma AskP", eng: "a sentence, then the question word" },
   ],
   taught: "questions/why-how",
   examples: [

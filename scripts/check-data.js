@@ -148,7 +148,7 @@ PATTERNS.forEach((p, i) => {
   for (const [pinyin] of p.examples) {
     let r;
     try {
-      r = parser.parse(pinyinToRefs(pinyin, WORDS));
+      r = parser.parse(pinyinToRefs(pinyin, WORDS), { maxTrees: 500 });
     } catch (err) {
       errors.push(`${where}: example "${pinyin}": ${err.message}`);
       continue;

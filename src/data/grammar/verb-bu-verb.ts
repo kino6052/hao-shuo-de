@@ -10,6 +10,8 @@ export default pattern("verb-bu-verb", {
   rules: [
     { lhs: "Either", hsd: "@verb bu4 @verb", eng: "a verb, bù, the verb again" },
     { lhs: "Either", hsd: "=you3 mei2 =you3", eng: "yǒu, méi, yǒu again" },
+    { lhs: "Either", hsd: "@adjective bu4 @adjective", eng: "a describing word, bù, the word again: kuài bù kuài" },
+    { lhs: "Either", hsd: "=dui4 bu4 =dui4", eng: "duì, bù, duì again" },
     { lhs: "VerbP", hsd: "Either NP", eng: "the either-or verb and what it is done to" },
     { lhs: "VerbP", hsd: "Either", eng: "the either-or verb on its own" },
   ],

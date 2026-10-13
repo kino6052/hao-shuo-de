@@ -9,6 +9,7 @@ export default pattern("gei-give", {
   template: { hsd: "Who + {{word:gei3}} + person + thing", eng: "Who gives the person the thing" },
   rules: [
     { lhs: "VerbP", hsd: "=gei3 NP NP", eng: "gěi, the person, and the thing" },
+    { lhs: "VerbP", hsd: "=gei3 le NP NP", eng: "gěi le, the person, and the thing: gave them it" },
     { lhs: "VP", hsd: "=gei3 NP VP", eng: "gěi, the person, then the verb: does it for them" },
   ],
   taught: "inside-a-sentence/give",

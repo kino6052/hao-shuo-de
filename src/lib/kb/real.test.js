@@ -108,7 +108,7 @@ describe('the explorer questions on the real data', () => {
 
 describe('the parse report on lessons 1-4', () => {
   const lessons = () => source.lessons.filter((l) => l.number <= 4).map(({ id, number }) => ({ id, number }));
-  const report = () => parseReport({ sentences: kb.facts.sentences, parseText: kb.parse, lessons: lessons() });
+  const report = () => parseReport({ sentences: kb.facts.sentences, parseText: kb.parse, parseLesson: kb.parseUpTo, patternLesson: kb.patternLesson, lessons: lessons() });
 
   test('lessons 2 and 3 parse completely; the gaps are all in lesson 4', () => {
     const r = report();
@@ -131,5 +131,33 @@ describe('the parse report on lessons 1-4', () => {
     expect(text).toMatch(/\d+ of \d+ sentences parse/);
     expect(text).toContain('## What does not parse');
     expect(text).toContain('| 2. words-and-sentences |');
+  });
+});
+
+describe('the early-patterns rule', () => {
+  test('a sentence parses with the patterns taught up to its lesson, and not with fewer', () => {
+    // bù before shì is taught in lesson 2; bù before a verb in lesson 5
+    expect(kb.parseUpTo(2)('Zhè bù shì zhíwù.').ok).toBe(true);
+    expect(kb.parseUpTo(2)('Wǒ bù ài nǐ.').ok).toBe(false);
+    expect(kb.parseUpTo(5)('Wǒ bù ài nǐ.').ok).toBe(true);
+    expect(kb.parse('Wǒ bù ài nǐ.').ok).toBe(true);
+  });
+
+  test('a pattern says which lesson teaches it; one with no lesson says nothing', () => {
+    expect(kb.patternLesson('bu-negation')).toBe(5);
+    expect(kb.patternLesson('shi-copula')).toBe(2);
+    expect(kb.patternLesson('no-such-pattern')).toBeUndefined();
+  });
+
+  test('a lesson sentence that needs a later pattern is reported with that pattern and its lesson', () => {
+    const lessons = source.lessons.map(({ id, number }) => ({ id, number }));
+    const r = parseReport({ sentences: kb.facts.sentences, parseText: kb.parse, parseLesson: kb.parseUpTo, patternLesson: kb.patternLesson, lessons });
+    expect(r.late.length).toBeGreaterThan(0);
+    for (const it of r.late) {
+      expect(it.piece.ok).toBe(false);
+      expect(it.late.every((p) => !p.lesson || p.lesson > source.lessons.find((l) => l.id === it.lesson).number)).toBe(true);
+    }
+    expect(r.parsed + r.late.length + r.failures.length).toBe(r.total);
+    expect(renderParseReport(r, source.words)).toContain('## Uses a pattern before it is taught');
   });
 });

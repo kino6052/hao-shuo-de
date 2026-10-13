@@ -10,6 +10,7 @@ export default pattern("doubled-every", {
   rules: [
     { lhs: "NP", hsd: "@noun @again", eng: "a noun said twice: every one" },
     { lhs: "NP", hsd: "@measure_word @again", eng: "a counting word said twice: every one" },
+    { lhs: "NP", hsd: "@measure_word @again @noun", eng: "a counting word twice and a noun: every person" },
     { lhs: "Time", hsd: "=tian1 @again", eng: "tiān-tiān: every day" },
     { lhs: "Time", hsd: "=nian2 @again", eng: "nián-nián: every year" },
   ],

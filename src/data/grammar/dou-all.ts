@@ -7,7 +7,10 @@ export default pattern("dou-all", {
   },
   covers: ["grammar:all"],
   template: { hsd: "People or things + {{word:dou1}} + verb", eng: "All of them do the verb" },
-  rules: [{ lhs: "VP", hsd: "=dou1 VP", eng: "dōu, then what is said" }],
+  rules: [
+    { lhs: "VP", hsd: "=dou1 VP", eng: "dōu, then what is said" },
+    { lhs: "VP", hsd: "=dou1 @adjective", eng: "dōu and a describing word: all good" },
+  ],
   taught: "also-and-all/all",
   examples: [
     ["Wǒ-men dōu chī.", "We all eat."],

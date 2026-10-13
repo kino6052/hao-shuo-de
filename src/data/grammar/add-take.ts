@@ -15,6 +15,7 @@ export default pattern("add-take", {
     { lhs: "VerbP", hsd: "@verb Together", eng: "a verb and together: put them together" },
     { lhs: "NP", hsd: "Num =li3 =mian4", eng: "a number and lǐ-miàn: inside it, from it" },
     { lhs: "Utt", hsd: "S @comma VP", eng: "a sentence, then what it comes to" },
+    { lhs: "Utt", hsd: "S @comma VP @comma VP", eng: "a sentence and two more actions" },
     { lhs: "Utt", hsd: "VP @comma VP", eng: "an action, then what it comes to" },
   ],
   taught: "numbers/add-take",

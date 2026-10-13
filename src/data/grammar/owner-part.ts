@@ -9,9 +9,9 @@ export default pattern("owner-part", {
   template: { hsd: "owner-{{word:de}} + part", eng: "The owner's part" },
   rules: [
     { lhs: "ModNP", hsd: "@noun @noun", eng: "two nouns, the owner first: the animal's body" },
-    { lhs: "ModNP", hsd: "=wo3 @noun", eng: "wǒ and a noun: my part" },
-    { lhs: "ModNP", hsd: "=ni3 @noun", eng: "nǐ and a noun: your part" },
-    { lhs: "ModNP", hsd: "=ta1 @noun", eng: "tā and a noun: his or her part" },
+    { lhs: "ModNP", hsd: "Person @noun", eng: "wǒ, nǐ, tā (or with men) and a noun: my part, your part, their part" },
+    { lhs: "ModNP", hsd: "@noun ModNP", eng: "an owner and a modified part: the animal's outside parts" },
+    { lhs: "ModNP", hsd: "Person ModNP", eng: "an owner and a modified part: my mother's body" },
   ],
   taught: "roles-of-a-word/parts",
   examples: [

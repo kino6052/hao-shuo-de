@@ -10,6 +10,8 @@
 // symbols  An uppercase first letter is a nonterminal (NP, VP, Utt).
 //          @name is any word of that class (@noun, @adjective).
 //          anything else is that word, by id (shi4, hen3).
+//          @name-id-id is a class without those words: @adjective-zhe4-na4 is every
+//          describing word but zhè and nà (which are pointers too).
 //          =name is that word by id too, but it keeps its classes (=zhe4 is still a
 //          pronoun everywhere else): for a word that one rule needs by name.
 // glue     word ids that only match by name. The grammar names shi4, so shì is
@@ -34,8 +36,23 @@ export function makeGrammar(rules, { glue = new Set() } = {}) {
   return { rules, byLhs, glue };
 }
 
+// "@adjective-zhe4-na4" -> { name: 'adjective', except: ['zhe4', 'na4'] }
+const classRefs = new Map();
+export function classRef(sym) {
+  let c = classRefs.get(sym);
+  if (!c) {
+    const [name, ...except] = sym.slice(1).split('-');
+    c = { name, except };
+    classRefs.set(sym, c);
+  }
+  return c;
+}
+
 const accepts = (sym, edge, glue) => {
-  if (sym[0] === '@') return !(edge.id && glue.has(edge.id)) && edge.classes.has(sym.slice(1));
+  if (sym[0] === '@') {
+    const { name, except } = classRef(sym);
+    return !(edge.id && (glue.has(edge.id) || except.includes(edge.id))) && edge.classes.has(name);
+  }
   if (sym[0] === '=') return edge.id === sym.slice(1);
   return edge.id === sym;
 };

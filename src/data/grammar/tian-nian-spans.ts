@@ -13,6 +13,8 @@ export default pattern("tian-nian-spans", {
     { lhs: "NP", hsd: "Span", eng: "days or years as a thing: a year has twelve months" },
     { lhs: "VerbP", hsd: "@verb Span", eng: "a verb and how long" },
     { lhs: "VerbP", hsd: "@verb le Span", eng: "a verb, le, and how long: waited three days" },
+    { lhs: "VerbP", hsd: "@verb NP Span", eng: "a verb, its thing, and how long: learn Chinese for three years" },
+    { lhs: "NP", hsd: "Mod Span", eng: "a part with de and a span: my day" },
     { lhs: "Time", hsd: "=jin1 =tian1", eng: "jīn-tiān, today" },
     { lhs: "Time", hsd: "=ming2 =tian1", eng: "míng-tiān, tomorrow" },
     { lhs: "Time", hsd: "=hou4 =tian1", eng: "hòu-tiān, the day after tomorrow" },

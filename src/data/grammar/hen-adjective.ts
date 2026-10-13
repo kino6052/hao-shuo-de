@@ -7,7 +7,10 @@ export default pattern("hen-adjective", {
   },
   covers: ["grammar:degree"],
   template: { hsd: "Subject {{word:hen3}} adjective", eng: "Subject is (very) adjective" },
-  rules: [{ lhs: "VP", hsd: "hen3 @adjective", eng: "hěn and a describing word" }],
+  rules: [
+    { lhs: "VP", hsd: "hen3 @adjective", eng: "hěn and a describing word" },
+    { lhs: "VP", hsd: "hen3 hen3 @adjective", eng: "hěn hěn and a describing word: extremely so" },
+  ],
   taught: "modifying-nouns/like",
   examples: [
     ["Shuǐ hěn hǎo.", "The water is good."],

@@ -10,7 +10,7 @@
 // patterns themselves: a word that doesn't exist, a class nobody has, a
 // nonterminal no rule defines.
 
-import { makeGrammar, isNonterminal } from './earley.js';
+import { makeGrammar, isNonterminal, classRef } from './earley.js';
 import { posClasses } from './lexicon.js';
 
 // classes the lexicon makes up itself
@@ -38,7 +38,9 @@ export function buildGrammar(patterns, { words = {}, composites = [] } = {}) {
       if (isNonterminal(sym)) {
         if (!defined.has(sym)) errors.push(`${r.id}: ${sym} has no rule`);
       } else if (sym.startsWith('@')) {
-        if (!classes.has(sym.slice(1))) errors.push(`${r.id}: no word is ${sym}`);
+        const { name, except } = classRef(sym);
+        if (!classes.has(name)) errors.push(`${r.id}: no word is @${name}`);
+        for (const id of except) if (!Object.hasOwn(words, id)) errors.push(`${r.id}: "${id}" is not a word`);
       } else if (sym.startsWith('=')) {
         if (!Object.hasOwn(words, sym.slice(1))) errors.push(`${r.id}: "${sym.slice(1)}" is not a word`);
       } else {

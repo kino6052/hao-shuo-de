@@ -8,6 +8,8 @@
 //   kb.checkForm({ forms })    the form gates, for one proposal
 //   kb.query(program)          raw rules on top of the facts, for Claude
 //   kb.parse('Wǒ shì rén.')    does it parse, and by which patterns
+//   kb.parseUpTo(5)('…')       the same with only the patterns taught up to lesson 5 (the early-patterns rule)
+//   kb.patternLesson(id)       the lesson number that teaches a pattern (undefined: no lesson teaches it)
 //   kb.atoms()                 which words are atoms (the report; kb.atoms('dēng') is one word's line)
 //   kb.relations()             the relations the data states or implies (accepted and proposed)
 //   kb.candidates()            what to drop, what to add and what to trade (see candidates.js; needs `freq` for Mandarin)
@@ -39,6 +41,20 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
 
   const parseText = makeParseText({ patterns: source.patterns ?? [], words, composites: source.composites });
 
+  // The early-patterns rule: a sentence in lesson N may only use patterns taught in lessons 1..N.
+  // A pattern with no `taught` is used only by texts outside the lessons.
+  const lessonNumber = Object.fromEntries((source.lessons ?? []).map((l) => [l.id, l.number]));
+  const taughtIn = (p) => (p.taught ? lessonNumber[p.taught.split('/')[0]] : undefined);
+  const patternById = new Map((source.patterns ?? []).map((p) => [p.id, p]));
+  const upTo = new Map();
+  const parseUpTo = (n) => {
+    if (!upTo.has(n)) {
+      const patterns = (source.patterns ?? []).filter((p) => (taughtIn(p) ?? Infinity) <= n);
+      upTo.set(n, makeParseText({ patterns, words, composites: source.composites }));
+    }
+    return upTo.get(n);
+  };
+
   const ids = (names) => (Array.isArray(names) ? names : String(names).split(/[,\s]+/)).filter(Boolean).map((n) => resolveWord(words, n));
 
   return {
@@ -49,7 +65,9 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
     word: (name, opts) => wordCard(ctx, resolveWord(words, name), opts),
     remove: async (names) => removal(ctx, ids(names)),
     checkForm: (args) => checkForm(words, args),
-    parse: (text) => parseText(text),
+    parse: parseText,
+    parseUpTo,
+    patternLesson: (id) => taughtIn(patternById.get(id) ?? {}),
     parser: parseText.parser,
 
     // The relations: stored ones are accepted, the ones a rule finds are proposed (see relations.js).

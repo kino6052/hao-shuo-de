@@ -10,6 +10,8 @@ export default pattern("bi-than", {
   rules: [
     { lhs: "VP", hsd: "=bi3 NP @adjective", eng: "bǐ, what it is set against, and a describing word" },
     { lhs: "VP", hsd: "=bi3 NP VerbP", eng: "bǐ, what it is set against, and a verb: worth more" },
+    { lhs: "VP", hsd: "=bi3 NP VP", eng: "bǐ, what it is set against, and what is said" },
+    { lhs: "VP", hsd: "=bi3 NP =hai2 @adjective", eng: "bǐ, the other, hái and a describing word: even better" },
   ],
   taught: "comparing/than",
   examples: [

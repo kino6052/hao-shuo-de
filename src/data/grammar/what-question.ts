@@ -7,7 +7,10 @@ export default pattern("what-question", {
   },
   covers: ["grammar:question-word"],
   template: { hsd: "Who + verb + {{word:shen2me}}?", eng: "Who does the verb to what?" },
-  rules: [{ lhs: "NP", hsd: "=shen2me @noun", eng: "shénme before a noun: what kind of" }],
+  rules: [
+    { lhs: "NP", hsd: "=shen2me @noun", eng: "shénme before a noun: what kind of" },
+    { lhs: "NP", hsd: "=shen2me ModNP", eng: "shénme before a modified noun: what kind of new thing" },
+  ],
   taught: "questions/what",
   examples: [
     ["Nǐ yǒu shénme gōng-jù?", "What tools do you have?"],

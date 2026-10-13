@@ -10,6 +10,7 @@ export default pattern("count-kinds", {
   rules: [
     { lhs: "NP", hsd: "Num =bu4 =fen1", eng: "a number and bù-fēn: some parts" },
     { lhs: "NP", hsd: "Num =bu4 =fen1 @noun", eng: "a number, bù-fēn, and its noun: some of the people" },
+    { lhs: "NP", hsd: "Mod Num =bu4 =fen1", eng: "a part with de, a number and bùfen: a part of the book" },
   ],
   taught: "numbers/count-kinds",
   examples: [

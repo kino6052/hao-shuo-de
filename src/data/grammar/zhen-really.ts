@@ -7,7 +7,10 @@ export default pattern("zhen-really", {
   },
   covers: [],
   template: { hsd: "Thing + {{word:zhen1}} + adjective", eng: "The thing is really that" },
-  rules: [{ lhs: "VP", hsd: "=zhen1 @adjective", eng: "zhēn and a describing word" }],
+  rules: [
+    { lhs: "VP", hsd: "=zhen1 @adjective", eng: "zhēn and a describing word" },
+    { lhs: "VP", hsd: "=zhen1 VP", eng: "zhēn and what is said: really does, really is not" },
+  ],
   taught: "how-much/really",
   examples: [
     ["Zhēn rè!", "It's really hot!"],

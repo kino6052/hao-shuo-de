@@ -10,6 +10,8 @@ export default pattern("bufen-part", {
   rules: [
     { lhs: "NP", hsd: "Pointer =bu4 =fen1", eng: "zhè or nà and bùfen: this part, that part" },
     { lhs: "NP", hsd: "=da4 NP @noun", eng: "dà, a part, and its noun: most of them" },
+    { lhs: "VP", hsd: "=da4 =bu4 =fen1 VP", eng: "dà bùfen and what is said: mostly so" },
+    { lhs: "VP", hsd: "=da4 =bu4 =fen1 @adjective", eng: "dà bùfen and a describing word: mostly the same" },
   ],
   taught: "also-and-all/part",
   examples: [

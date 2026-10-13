@@ -87,7 +87,7 @@ export function bracket(result, k = 0) {
 
 // a symbol as a reader would say it: @noun -> "a noun", shi4 -> "shì"
 export function sayExpected(sym, words) {
-  if (sym.startsWith('@')) return `a ${sym.slice(1).replace(/_/g, ' ')}`;
+  if (sym.startsWith('@')) return `a ${sym.slice(1).split('-')[0].replace(/_/g, ' ')}`;
   return words[sym]?.term ?? sym;
 }
 

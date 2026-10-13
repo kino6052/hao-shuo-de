@@ -11,6 +11,7 @@ export default pattern("yinwei-because", {
     { lhs: "Clause", hsd: "S", eng: "a sentence as one part of a longer one" },
     { lhs: "Clause", hsd: "VP", eng: "what is said, with no one named, as one part of a longer sentence" },
     { lhs: "Reason", hsd: "=yin1wei4 Clause", eng: "yīnwèi and the reason" },
+    { lhs: "Utt", hsd: "Reason", eng: "the reason alone, as an answer to why" },
     { lhs: "S", hsd: "Reason @comma S", eng: "the reason first, then the result" },
     { lhs: "S", hsd: "S @comma Reason", eng: "the result first, then the reason" },
   ],

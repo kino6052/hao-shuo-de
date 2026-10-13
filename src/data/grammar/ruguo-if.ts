@@ -8,8 +8,12 @@ export default pattern("ruguo-if", {
   covers: ["grammar:if"],
   template: { hsd: "{{word:ru2guo3}} X, the rest", eng: "If X, then the rest" },
   rules: [
-    { lhs: "Clause", hsd: "NP @adjective", eng: "a state with no hěn: nǐ lěng, you are cold" },
+    { lhs: "Clause", hsd: "State", eng: "a state with no hěn: nǐ lěng, you are cold" },
+    { lhs: "State", hsd: "NP @adjective", eng: "someone and a describing word: you are cold" },
     { lhs: "Cond", hsd: "=ru2guo3 Clause", eng: "rúguǒ and the if-part" },
+    { lhs: "Cond", hsd: "=yao4 shi4 Clause", eng: "yào-shì and the if-part" },
+    { lhs: "Clause", hsd: "@adjective", eng: "a describing word alone, with no one named: if cold" },
+    { lhs: "Cond", hsd: "=zhi3 =yao4 Clause", eng: "zhǐ-yào and the if-part: as long as" },
     { lhs: "S", hsd: "Cond @comma Clause", eng: "the if-part, a comma, and the rest" },
   ],
   taught: "linking-sentences/if",

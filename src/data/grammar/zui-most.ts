@@ -10,6 +10,9 @@ export default pattern("zui-most", {
   rules: [
     { lhs: "VP", hsd: "=zui4 @adjective", eng: "zuì and a describing word" },
     { lhs: "VP", hsd: "=zui4 VerbP", eng: "zuì and a verb: likes it the most" },
+    { lhs: "VP", hsd: "=zui4 =shao3 VP", eng: "zuì shǎo and a verb: at least" },
+    { lhs: "VP", hsd: "=zui4 =hao3 VP", eng: "zuì hǎo and a verb: had best" },
+    { lhs: "NP", hsd: "=zui4 @noun", eng: "zuì and a place: the very bottom" },
     { lhs: "Time", hsd: "=zui4 =hou4", eng: "zuì-hòu, last" },
   ],
   taught: "comparing/most",

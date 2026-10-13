@@ -47,7 +47,8 @@ describe('every example parses, and by its own pattern', () => {
   for (const p of PATTERNS) {
     for (const [pinyin] of p.examples) {
       test(`${p.id}: ${pinyin}`, () => {
-        const r = parser.parse(pinyinToRefs(pinyin, words));
+        // a long list of readings: look through all of them for the pattern's own
+        const r = parser.parse(pinyinToRefs(pinyin, words), { maxTrees: 500 });
         expect(r.problems).toEqual([]);
         expect(r.ok, JSON.stringify(r.failure)).toBe(true);
         // some reading of it uses this pattern's rules
@@ -93,6 +94,16 @@ describe('what the patterns do not allow', () => {
     expect(ok('Xiè-xie nǐ.')).toBe(true);
     expect(ok('Yuè yuán-yuán-de.')).toBe(true);
     expect(ok('Yuè yuán-hǎo-de.')).toBe(false);
+  });
+
+  test('a lone X is a thing the example leaves open', () => {
+    expect(ok('Wǒ yòng X zuò.')).toBe(true);
+  });
+
+  test('a describing word before a noun is not a pointer, and zhè and nà stay pointers', () => {
+    expect(ok('Wǒ yǒu yī-ge hǎo rén.')).toBe(true);
+    expect(ok('Zhè rén.')).toBe(false);
+    expect(ok('Nà rén.')).toBe(false);
   });
 
   test('a sentence of several modifiers reads one way', () => {

@@ -189,13 +189,22 @@ A lesson's grammar box becomes `{ type: "grammar", pattern: "compare-bi" }`. The
   - generate-grammar-overview reads the pattern files;
   - coverage grammar items list their patterns, and check-coverage checks both directions;
   - check-grammar-blocks requires a pattern per module.
-- [ ] Rules for every pattern. Then the report over all texts (K7):
-  - lesson sentences, including the early-patterns rule;
-  - composite examples;
-  - composite forms, matched against the Word Builder's reading of forms (`word-builder-parse.js`);
-  - stories, proverbs and the phrase book.
+- [~] Rules for every pattern. Then the report over all texts (K7):
+  - [x] lesson sentences, including the early-patterns rule;
+  - [x] composite examples;
+  - [ ] composite forms, matched against the Word Builder's reading of forms (`word-builder-parse.js`);
+  - [x] stories, proverbs and the phrase book.
   
   Each failure ends one of two ways: Claude fixes the rule, or the author reviews the flagged sentence.
+
+  **Built** (136 pattern files in `src/data/grammar/`, `node scripts/kb.js parse-report --lessons 24 --all`):
+  - Every lesson sentence parses with every pattern (1110 of 1110); 4403 of 4420 sentences in all texts. The 17 left are for the author, not loosened: "miàn r" (erhua, 4), "nà gè yě hǎo wèi dào", "wǒ ài zài yī qǐ de hěn duō rén", "lǎo rén shēntǐ de lì shǎo" (a bare describing word as the whole sentence), "wǒ dé le tòng" (tòng, a describing word, used as a noun), the quoted sound with zi (2), "yī miàn" (miàn as a counting word, 2), "bǐ de rén" (bǐ as a verb, 2), "wǒ bǎ fáng jiān gānjìng", and two story lines (the wolf's "zuò kōng qì" and the tortoise's "kàn shénme dòng wù zuì kuài dào nà gè dà zhíwù").
+  - **The early-patterns rule:** `kb.parseUpTo(N)` parses with only the patterns whose `taught` lesson is at most N; a pattern with no `taught` is left out. `parse-report` parses each lesson's sentences that way and re-parses the failures with every pattern: those that then parse go under "Uses a pattern before it is taught" (the patterns needed and their lessons), and the patterns that no lesson teaches are listed under "Patterns no lesson teaches". Result for lessons 1-24: 4395 parse, 8 use a later pattern (xiè-xie before doubled words, lesson 22 and 23; "ài tīng nǐ shuō" and "zhī-dào fā-shēng le shénme ma" before serial verbs; "tā yòu zài jiā le" before le-new-situation; "xīn-nián hǎo" before the greeting pattern), 17 do not parse. `node scripts/kb.js parse --lesson N "…"` tries one sentence. The scoreboard's `parse_rate` is now this restricted rate.
+  - A pattern with no `taught` takes the lesson of the coverage item it `covers` (the earliest); 16 patterns have neither and are listed in the report (the author may assign a lesson or leave them to the texts).
+  - Rule symbols: `=word` matches a word by id and keeps its classes; `@class-id-id` is a class without those words (`@adjective-zhe4-na4`); `@again` is a word repeated; a lone X, Y or Z is a noun of class `slot` (an example leaves a thing open).
+  - Ambiguity is high and tolerated: of 4420 sentences about a fifth read one way, a third read 2 to 5 ways, and a quarter read more than 20 ways; the first reading can be an odd one. Ranking readings (a cost per pattern or rule, the readings that use fewer patterns first) is not done.
+  - Taught-order notes: lesson 2's module "not" teaches bù shì, so `bu-shi-not` is taught there and `bu-negation` (lesson 5) is bù before a verb; lì-qì (lesson 15) has its own pattern `li-qi-strength`.
+  - K6 class proposals the rules stand in for (recorded as `=word` rules, to become classes): duì as "correct", xià as a verb, tòng as a noun, miàn as a counting word, bǐ as a verb, hǎo and nán before a verb ("easy to", "hard to").
 - [ ] **Gate `check-grammar`** once the report is clean.
 - [ ] Minimal patterns, measured four ways:
   - **cover the core:** clingo set cover of patterns over the 38 items, plus the NSM and Aristotle items that need grammar;

@@ -7,7 +7,14 @@ export default pattern("dan-shi-but", {
   },
   covers: ["grammar:but"],
   template: { hsd: "sentence, {{word:dan4}}-{{word:shi4}} + sentence", eng: "This, but that" },
-  rules: [{ lhs: "S", hsd: "S @comma =dan4 =shi4 Clause", eng: "a sentence, then dàn-shì and the other part: but" }],
+  rules: [
+    { lhs: "But", hsd: "=dan4 =shi4", eng: "dàn-shì, but" },
+    { lhs: "But", hsd: "=dan4", eng: "dàn, but" },
+    { lhs: "But", hsd: "=ke3 =shi4", eng: "kě-shì, but" },
+    { lhs: "But", hsd: "=bu4 =guo4", eng: "bù-guò, but" },
+    { lhs: "S", hsd: "S @comma But Clause", eng: "a sentence, then but and the other part" },
+    { lhs: "Utt", hsd: "But S", eng: "but and a sentence, said after something else" },
+  ],
   taught: "linking-sentences/but",
   examples: [
     ["Wǒ yào qù, dàn-shì wǒ méi yǒu jīn.", "I want to go, but I have no money."],

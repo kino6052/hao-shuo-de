@@ -5,7 +5,7 @@
 //   node scripts/kb.js remove dēng [fàn …]
 //   node scripts/kb.js check-form "chī fàn" [--tts 吃饭] [--zh 吃饭 --py chīfàn]
 //   node scripts/kb.js query "<rules>"
-//   node scripts/kb.js parse "Wǒ chī fàn."
+//   node scripts/kb.js parse "Wǒ chī fàn." [--lesson 5]
 //   node scripts/kb.js atoms [word]
 //   node scripts/kb.js relations [kind] [--status proposed|accepted] [--limit N]
 //   node scripts/kb.js candidates [remove|add] [--limit N]
@@ -17,7 +17,10 @@
 //   node scripts/kb.js engine
 //
 // parse-report parses every Hao-shuo-de sentence of the first N lessons and
-// writes kb/reports/lessons-1-N-parse.md (--stdout prints it instead).
+// writes kb/reports/lessons-1-N-parse.md (--stdout prints it instead). --all
+// adds the composite examples, the stories and the phrase book. A lesson's sentences
+// are parsed with the patterns taught up to that lesson (the early-patterns rule); one that
+// needs a later pattern is listed under "Uses a pattern before it is taught".
 //
 // candidates ranks the words that could go (cheapest first, with how each would be said
 // without it) or the roots that would complete the most Mandarin words; add says what one
@@ -43,7 +46,7 @@ import { Worker } from 'worker_threads';
 import { createKb, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps, renderAudit } from '../src/lib/kb/kb.js';
 import { loadFrequencyList } from './frequency-list.js';
 import { loadDrafts } from './kb-drafts.js';
-import { parseReport, renderParseReport } from '../src/lib/kb/parse-report.js';
+import { parseReport, renderParseReport, slimReport } from '../src/lib/kb/parse-report.js';
 import { renderCheckForm } from '../src/lib/kb/tools.js';
 import { engine } from '../src/lib/kb/clingo.js';
 import { scoreboardRow, appendRow, readScoreboard, renderScoreboard } from '../src/lib/kb/scoreboard.js';
@@ -132,21 +135,32 @@ async function main(argv) {
       return print(r, JSON.stringify(r, null, 2));
     }
     case 'parse': {
-      const r = kb.parse(rest.join(' '));
+      // --lesson N: only the patterns taught up to lesson N (the early-patterns rule)
+      const upTo = option(rest, '--lesson');
+      const r = (upTo ? kb.parseUpTo(Number(upTo)) : kb.parse)(rest.join(' '));
       return print(r, renderParse(r, kb.source.words));
     }
     case 'parse-report': {
       const n = Number(option(rest, '--lessons') ?? 4);
       const stdout = rest.includes('--stdout');
       const lessons = kb.source.lessons.filter((l) => l.number <= n).map(({ id, number }) => ({ id, number }));
-      const report = parseReport({ sentences: kb.facts.sentences, parseText: kb.parse, lessons });
-      const text = renderParseReport(report, kb.source.words, { title: `Parse report: lessons 1-${n}` });
-      if (json) return print({ ...report, byPattern: Object.fromEntries(report.byPattern) }, text);
+      // --all adds the other texts of the book (K7): composite examples, stories, the phrase book
+      const all = rest.includes('--all');
+      const groups = all
+        ? [
+            { id: 'composite-examples', title: 'composite examples', kinds: ['composite_example'] },
+            { id: 'stories', title: 'stories', kinds: ['story'] },
+            { id: 'phrase-book', title: 'phrase book', kinds: ['phrase_book'] },
+          ]
+        : [];
+      const report = parseReport({ sentences: kb.facts.sentences, parseText: kb.parse, parseLesson: kb.parseUpTo, patternLesson: kb.patternLesson, lessons, groups });
+      const text = renderParseReport(report, kb.source.words, { title: `Parse report: lessons 1-${n}${all ? ' and the other texts' : ''}` });
+      if (json) return print(slimReport(report), text);
       if (stdout) return console.log(text);
-      const file = resolve(ROOT, 'kb/reports', `lessons-1-${n}-parse.md`);
+      const file = resolve(ROOT, 'kb/reports', `lessons-1-${n}${all ? '-all' : ''}-parse.md`);
       mkdirSync(resolve(ROOT, 'kb/reports'), { recursive: true });
       writeFileSync(file, `${text}\n`);
-      return console.log(`${report.parsed} of ${report.total} sentences parse (${Math.round(report.rate * 100)}%); written to kb/reports/lessons-1-${n}-parse.md`);
+      return console.log(`${report.parsed} of ${report.total} sentences parse (${Math.round(report.rate * 100)}%); written to kb/reports/lessons-1-${n}${all ? '-all' : ''}-parse.md`);
     }
     case 'relations': {
       const status = option(rest, '--status');

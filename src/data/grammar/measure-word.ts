@@ -20,6 +20,8 @@ export default pattern("measure-word", {
     { lhs: "NP", hsd: "Count @measure_word", eng: "a pointer or number and a counting word: this one, two of them" },
     { lhs: "NP", hsd: "Count @measure_word @noun", eng: "a pointer or number, a counting word, and its noun" },
     { lhs: "NP", hsd: "Count @measure_word ModNP", eng: "a pointer or number, a counting word, and a modified noun" },
+    { lhs: "NP", hsd: "Count @measure_word Mod", eng: "a counting word and a describing part with de: a good one" },
+    { lhs: "NP", hsd: "Mod Count @measure_word", eng: "a part with de and a count: the one in the middle" },
   ],
   taught: "pointing/ge-is-universal",
   examples: [

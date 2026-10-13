@@ -10,6 +10,8 @@ export default pattern("hao-label", {
   rules: [
     { lhs: "NP", hsd: "Num =hao4", eng: "a number and hào: number two" },
     { lhs: "NP", hsd: "Num =hao4 @noun", eng: "a number, hào, and its noun: road number six" },
+    { lhs: "NP", hsd: "Num =hao4 ModNP", eng: "a number, hào, and a modified noun: number one small animal" },
+    { lhs: "ModNP", hsd: "Mod =hao4", eng: "a possessor and hào: your number" },
   ],
   taught: "numbers/label",
   examples: [

@@ -7,7 +7,10 @@ export default pattern("bu-adjective", {
   },
   covers: [],
   template: { hsd: "Thing + {{word:bu4}} + adjective", eng: "The thing is not that" },
-  rules: [{ lhs: "VP", hsd: "bu4 @adjective", eng: "bù and a describing word" }],
+  rules: [
+    { lhs: "VP", hsd: "bu4 @adjective", eng: "bù and a describing word" },
+    { lhs: "VP", hsd: "hen3 bu4 @adjective", eng: "hěn bù and a describing word: very not good" },
+  ],
   taught: "how-much/not",
   examples: [
     ["Shuǐ bù lěng.", "The water isn't cold."],

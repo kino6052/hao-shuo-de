@@ -18,6 +18,9 @@
 // second edge, and a bare light syllable that repeats the word before it
 // (kàn-kan, xiè-xie) is an "again" edge too, so a rule can say @verb @again.
 //
+// A lone X, Y or Z stands for a thing the example leaves open ("I do it with X"):
+// it is one noun, the class "slot".
+//
 // Nothing here knows grammar rules; the parser decides which reading fits.
 
 import { wordRefRe } from '../word-refs.js';
@@ -88,6 +91,8 @@ export function lex(text, lexicon) {
       items.push({ kind: 'word', word: true, id: ref[2], glued });
     } else if (tok.startsWith('"')) {
       items.push({ kind: 'quoted', word: true, text: tok.slice(1, -1), glued });
+    } else if (/^[XYZ]$/.test(tok)) {
+      items.push({ kind: 'slot', word: true, text: tok, glued });
     } else if (Object.hasOwn(BARE, tok.toLowerCase())) {
       items.push({ kind: 'word', word: true, id: BARE[tok.toLowerCase()], glued });
     } else {
@@ -131,6 +136,9 @@ export function lex(text, lexicon) {
       if (tokens.at(-1)?.id === it.id) classes.add('again');
       tokens.push({ kind: 'word', id: it.id, text: termOf(words, it.id) });
       edges.push({ from: i, to: i + 1, id: it.id, term: termOf(words, it.id), classes });
+    } else if (it.kind === 'slot') {
+      tokens.push({ kind: 'slot', text: it.text });
+      edges.push({ from: i, to: i + 1, term: it.text, classes: new Set(['noun', 'slot']) });
     } else if (it.kind === 'quoted') {
       tokens.push({ kind: 'quoted', text: `"${it.text}"` });
       edges.push({ from: i, to: i + 1, term: `"${it.text}"`, classes: new Set(['noun', 'quoted']) });

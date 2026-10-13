@@ -9,6 +9,7 @@ export default pattern("hao-ma-suggest", {
   template: { hsd: "…, {{word:hao3}} {{word:ma}}?", eng: "…, okay?" },
   rules: [
     { lhs: "Q", hsd: "S @comma =hao3 ma", eng: "a sentence, a comma, and hǎo ma: okay?" },
+    { lhs: "Q", hsd: "VP @comma =hao3 ma", eng: "an order or a request, then hǎo ma" },
     { lhs: "Utt", hsd: "=hao3", eng: "hǎo: okay" },
     { lhs: "Utt", hsd: "=hao3 @comma S", eng: "hǎo, then the sentence: okay, …" },
   ],
