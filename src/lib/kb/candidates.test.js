@@ -177,6 +177,15 @@ describe('Mandarin', () => {
     expect(renderAddition(withFreq.addition('器'))).toContain('Coverage items it would give a carrier: 0');
   });
 
+  test('English words: the glosses of the composites the root completes or lets be spelled', () => {
+    const src = { ...source, composites: [...source.composites, { zh: '机器', py: 'jīqì', en: 'machine', rank: 5, hsd: '{{word:ji1}}' }] };
+    const a = candidateModel(src, createKb(src).facts, { freq }).addition('器');
+    expect(a.english.map((x) => x.zh)).toEqual(['机器']);
+    expect(a.english[0].en).toBe('machine');
+    expect(renderAddition(a)).toContain('English words it would make sayable: 1');
+    expect(renderAddition(a)).toContain('English sentences it would make sayable: not known');
+  });
+
   test('a trade: the root in, the cheapest word out', () => {
     const r = withFreq.swaps({ k: 1 });
     expect(r.adds).toEqual(['器']);

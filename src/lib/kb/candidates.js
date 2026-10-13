@@ -373,7 +373,23 @@ export function candidateModel(source, facts, { freq = null, top = 6000 } = {}) 
     if (!freq) return { root: c, noFrequencies: true };
     const r = describeRoot(c);
     const phrases = rootPhrases(c, r.already);
-    return { ...r, shorter: shorterForms(c, phrases), carriers: coverageCarriers(phrases) };
+    return { ...r, shorter: shorterForms(c, phrases), carriers: coverageCarriers(phrases), english: englishWords(r) };
+  }
+
+  // The English words (the dictionary's glosses of the composites) that become sayable: the composites the root
+  // completes or lets be spelled. Only the glosses the dictionary already has; there is no English word list or
+  // sentence list in the repo yet (KB_PLAN phase 6), so no sentences.
+  const compositeOf = new Map((source.composites ?? []).map((x) => [x.zh, x]));
+  function englishWords(r) {
+    const seen = new Set();
+    const out = [];
+    for (const w of [...r.completes, ...r.spellable]) {
+      const x = compositeOf.get(w.zh);
+      if (!x?.en || seen.has(w.zh)) continue;
+      seen.add(w.zh);
+      out.push({ zh: w.zh, py: x.py, en: x.en, rank: w.rank ?? x.rank });
+    }
+    return out.sort((a, b) => a.rank - b.rank);
   }
 
   // The descriptions that would get shorter: the phrase the root would stand for is the form(s) of its own
@@ -582,6 +598,11 @@ export function renderAddition(r) {
   out.push(`  Coverage items it would give a carrier: ${cc.length}${cc.length ? ` (${cc.filter((x) => !x.alone).length} with no single-word form today)` : ''}`);
   for (const x of cc.slice(0, 12)) out.push(`    ${x.id} "${x.eng}" — ${x.forms.map((f) => `form ${f.n} ${f.text} (has "${f.phrase}", ${f.source})`).join('; ')}; now carried by ${x.carriers.join(', ') || 'no word'}${x.alone ? '' : ', no word alone'}`);
   if (cc.length > 12) out.push(`    … and ${cc.length - 12} more`);
+  const en = r.english ?? [];
+  out.push(`  English words it would make sayable: ${en.length}${en.length ? ' (glosses of the composites it completes or lets be spelled)' : ''}`);
+  for (const x of en.slice(0, 12)) out.push(`    "${x.en}" — ${x.zh} ${x.py} #${x.rank}`);
+  if (en.length > 12) out.push(`    … and ${en.length - 12} more`);
+  out.push('  English sentences it would make sayable: not known (no everyday-sentence list in the repo yet, KB_PLAN phase 6)');
   return out.join('\n');
 }
 
