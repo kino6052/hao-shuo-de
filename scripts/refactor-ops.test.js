@@ -128,3 +128,14 @@ describe('the grammar rules follow a word (K20)', () => {
     expect(note.text).toContain('replaced');
   });
 });
+
+describe('rename (K20)', () => {
+  test('a word whose own text names itself is renamed inside its own file too', () => {
+    const w = fresh();
+    const own = w.wordIds().find((id) => w.get(w.wordPath(id)).split(`{{word:${id}}}`).length > 2);
+    expect(own).toBeDefined();
+    applyOps(w, [{ op: 'rename', id: own, to: 'zzz9' }]);
+    expect(w.get(w.wordPath('zzz9'))).toContain('{{word:zzz9}}');
+    expect(w.get(w.wordPath('zzz9'))).not.toContain(`{{word:${own}}}`);
+  });
+});

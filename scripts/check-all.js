@@ -10,28 +10,10 @@
 import { spawnSync } from 'child_process';
 import { resolve } from 'path';
 import { fileURLToPath } from 'url';
+import { GATES } from './gates.js';
 
 const SCRIPTS = fileURLToPath(new URL('.', import.meta.url));
 const extra = process.argv.slice(2);
-
-// [script, default arguments]
-const GATES = [
-  ['check-data', []],
-  ['check-types', []],
-  ['check-book', []],
-  ['check-sounds', []],
-  ['check-coverage', []],
-  ['check-summaries', ['--over']],
-  ['check-jargon', ['--summary']],
-  ['check-early-words', ['--summary']],
-  ['check-word-use', ['--summary']],
-  ['check-grammar-blocks', ['--summary']],
-  ['check-grammar', []],
-  ['check-practice', ['--summary']],
-  ['check-example-runs', ['--summary']],
-  ['check-word-builder', []],
-  ['check-passive', []],
-];
 
 const results = [];
 for (const [name, args] of GATES) {

@@ -11,6 +11,7 @@
 //   npm run word -- rename <id> <new id>
 //   npm run word -- move <id> <lesson/module> [--sense <key>]
 //   npm run word -- remove <id>
+//   npm run word -- <any of these> --check    # try it on a copy: which gates fail, which numbers move
 //
 // After --write it rebuilds the data indexes, the dictionary pages and
 // BOOK_PLAN.md §4b, and adds a row to the scoreboard (kb/scoreboard.csv); run
@@ -19,6 +20,7 @@
 import { Workspace, applyOps, summary, cards, idSyllables, ROOT } from './refactor-lib.js';
 import { wordRefIds, toneless } from '../src/lib/word-refs.js';
 import { spawnSync } from 'child_process';
+import { checkInCopy, renderCheck } from './refactor-check.js';
 
 const argv = process.argv.slice(2);
 const flags = {};
@@ -143,12 +145,17 @@ function opFromArgs() {
   }
 }
 
-// Runs the ops, prints the dry run, and writes when asked. Exported for refactor.js.
-export function run(ops, { write = false, diff = false, title = '' } = {}) {
+// Runs the ops, prints the dry run, and writes when asked. `check` also tries the change on a copy of
+// the repo (refactor-check.js) and prints what would break. Exported for refactor.js.
+export async function run(ops, { write = false, diff = false, check = false, atoms = false, title = '' } = {}) {
   const ws = new Workspace();
   applyOps(ws, ops);
   console.log(`${title}${write ? '' : ' (dry run -- add --write to apply)'}\n`);
   console.log(summary(ws, { diff }));
+  if (check) {
+    console.log('\nTrying it on a copy of the repo (the real files stay as they are)...\n');
+    console.log(renderCheck(await checkInCopy(ws, { atoms })));
+  }
   if (!write) return;
   ws.write();
   // the grammar overview before word usage: "used in" counts it too
@@ -170,7 +177,7 @@ if (process.argv[1]?.endsWith('word.js')) {
       show(new Workspace(), args[0]);
     } else {
       const op = opFromArgs();
-      run([op], { write: !!flags.write, diff: !!flags.diff, title: `word ${cmd} ${args.join(' ')}` });
+      await run([op], { write: !!flags.write, diff: !!flags.diff, check: !!flags.check, atoms: !!flags.atoms, title: `word ${cmd} ${args.join(' ')}` });
     }
   } catch (e) {
     console.error(`word: ${e.message}`);

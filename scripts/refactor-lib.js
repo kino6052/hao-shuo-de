@@ -167,9 +167,10 @@ export class Workspace {
     return out.sort((a, b) => (a.path < b.path ? -1 : 1));
   }
 
-  write() {
+  // writes the changed files under `root` (a copy of the repo, for --check; the repo by default)
+  write(root = ROOT) {
     for (const { path, after } of this.changes()) {
-      const p = resolve(ROOT, path);
+      const p = resolve(root, path);
       if (after == null) {
         if (existsSync(p)) unlinkSync(p);
       } else {
@@ -957,8 +958,9 @@ const OPS = {
   rename(ws, op) {
     const { id, to } = op;
     if (ws.hasWord(to)) throw new Error(`rename ${id}: ${to} already exists`);
-    const w = ws.word(id);
+    ws.word(id); // refuses an id that is not a word
     rewriteAll(ws, id, (kind) => `{{${kind}:${to}}}`);
+    const w = ws.word(id); // read after the rewrite: the word's own text may point at itself
     for (const path of ws.files(LESSONS_DIR)) {
       const src = ws.get(path);
       const r = rewriteStrings(src, (v, s) => (s.key === 'word' && v === id && s.obj?.key === 'words' ? to : v));
