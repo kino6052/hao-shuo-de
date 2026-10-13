@@ -14,6 +14,7 @@
 //   node scripts/kb.js audit [--stdout]
 //   node scripts/kb.js parse-report [--lessons 4] [--stdout]
 //   node scripts/kb.js parse-diff [--ref HEAD] [--all] [--limit 12]
+//   node scripts/kb.js classes [--limit 20]
 //   node scripts/kb.js scoreboard [--append] [--label "what changed"] [--no-atoms]
 //   node scripts/kb.js move <lesson | lesson/module | pattern:id> <where>
 //   node scripts/kb.js engine
@@ -31,6 +32,10 @@
 // parse-diff compares how every lesson sentence parses at a git ref (HEAD) with the files as they are, so an
 // edited rule, a pattern moved to another lesson or a word that changed class shows the sentences that start or
 // stop parsing or read another way. --all adds the other texts. The half that runs at the ref is scripts/parse-snapshot.js.
+//
+// classes lists the word classes the parser proposes (K6): for every sentence of the book that does not parse,
+// the words that would make it parse by filling one more class, and the classes already in the data that wait
+// for the author. A refactor list (op `classes`) records one.
 //
 // candidates ranks the words that could go (cheapest first, with how each would be said
 // without it) or the roots that would complete the most Mandarin words; add says what one
@@ -59,6 +64,7 @@ import { loadDrafts } from './kb-drafts.js';
 import { loadLessons } from './lessons.js';
 import { moveEffects, parseSpec, renderMove } from './move-effects.js';
 import { snapshotAtRef } from './parse-diff.js';
+import { classProposals, classesWaiting, renderClassProposals } from '../src/lib/kb/class-proposals.js';
 import { OTHER_TEXTS, snapshotFor } from './parse-snapshot.js';
 import { diffSnapshots, renderParseDiff } from '../src/lib/kb/parse-diff.js';
 import { parseReport, renderParseReport, slimReport } from '../src/lib/kb/parse-report.js';
@@ -185,6 +191,15 @@ async function main(argv) {
       const d = diffSnapshots(await before, snapshotFor(kb, { all }));
       return print(d, renderParseDiff(d, kb.source.words, { limit, title: `Parse changes since ${ref}${all ? ' (all texts)' : ''}` }));
     }
+    case 'classes': {
+      const limit = Number(option(rest, '--limit') ?? 20);
+      const lessons = kb.source.lessons.map(({ id, number }) => ({ id, number }));
+      const report = parseReport({ sentences: kb.facts.sentences, parseText: kb.parse, parseLesson: kb.parseUpTo, patternLesson: kb.patternLesson, lessons, groups: OTHER_TEXTS });
+      const pieces = report.failures.filter((it) => it.piece).map((it) => ({ text: it.piece.text, where: `${it.lesson}${it.module ? `/${it.module}` : ''} ${it.key ?? ''}`.trim() }));
+      const r = classProposals({ parser: kb.parser, words: kb.source.words, pieces });
+      const waiting = classesWaiting(kb.source.words);
+      return print({ ...r, waiting }, renderClassProposals(r, kb.source.words, waiting, { limit }));
+    }
     case 'relations': {
       const status = option(rest, '--status');
       const limit = Number(option(rest, '--limit') ?? 8);
@@ -248,7 +263,7 @@ async function main(argv) {
       return print(e, text);
     }
     default:
-      console.log('usage: node scripts/kb.js word|remove|check-form|query|parse|atoms|relations|candidates|add|swaps|scoreboard|parse-report|parse-diff|move|engine …  (--json for data)');
+      console.log('usage: node scripts/kb.js word|remove|check-form|query|parse|atoms|relations|candidates|add|swaps|scoreboard|parse-report|parse-diff|classes|move|engine …  (--json for data)');
       process.exitCode = command ? 1 : 0;
   }
 }

@@ -806,6 +806,26 @@ const OPS = {
     ws.setWord(op.id, next);
   },
 
+  // { op: "classes", id, add: { <class>: { why: { eng, rus }, example, proposed? } | "main" }, remove?: [<class>] }
+  // -- the word classes a word fills besides its part of speech (KB_PLAN.md K6). The example is a sentence in
+  // plain pinyin that only parses with the class (scripts/check-classes.js checks it after the write).
+  classes(ws, op) {
+    const w = ws.word(op.id);
+    const classes = { ...(w.classes ?? {}) };
+    for (const c of op.remove ?? []) {
+      if (!(c in classes)) throw new Error(`classes ${op.id}: has no class "${c}" to remove`);
+      delete classes[c];
+    }
+    for (const [c, v] of Object.entries(op.add ?? {})) {
+      if (v !== 'main') {
+        for (const l of ['eng', 'rus']) if (!v?.why?.[l]) throw new Error(`classes ${op.id}: the class "${c}" needs why.${l}`);
+        if (!v.example) throw new Error(`classes ${op.id}: the class "${c}" needs an example sentence`);
+      }
+      classes[c] = v;
+    }
+    ws.setWord(op.id, { ...w, classes: Object.keys(classes).length ? classes : undefined });
+  },
+
   // { op: "kinds", zh, kinds: ["built", "spelled", ...] } or { op: "kinds", zh, as: "spelled" }
   // -- which forms of a composite build the meaning and which spell Mandarin's
   // own word (K9). `as` decides only the forms the rule left undecided.

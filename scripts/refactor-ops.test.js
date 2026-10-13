@@ -93,6 +93,35 @@ describe('the kinds op', () => {
   });
 });
 
+describe('the classes op (K6)', () => {
+  const why = { eng: 'a thing you get', rus: 'то, что получаешь' };
+
+  test('is a known op', () => {
+    expect(OP_NAMES).toContain('classes');
+  });
+
+  test('adds a class with why and an example, and keeps the ones the word has', () => {
+    const w = fresh();
+    applyOps(w, [{ op: 'classes', id: a, add: { noun: { why, example: 'Wǒ dé le tòng.', proposed: true } } }]);
+    expect(w.word(a).classes).toEqual({ noun: { why, example: 'Wǒ dé le tòng.', proposed: true } });
+    applyOps(w, [{ op: 'classes', id: a, add: { verb: { why, example: 'Tā bǐ yī-xià.' } } }]);
+    expect(Object.keys(w.word(a).classes)).toEqual(['noun', 'verb']);
+  });
+
+  test('a class needs a why in both languages and an example', () => {
+    expect(() => applyOps(fresh(), [{ op: 'classes', id: a, add: { noun: { why: { eng: 'x' }, example: 'e' } } }])).toThrow('why.rus');
+    expect(() => applyOps(fresh(), [{ op: 'classes', id: a, add: { noun: { why, example: '' } } }])).toThrow('example');
+  });
+
+  test('removes a class, and the last one takes the field away; a class it does not have is an error', () => {
+    const w = fresh();
+    applyOps(w, [{ op: 'classes', id: a, add: { noun: { why, example: 'e' } } }]);
+    applyOps(w, [{ op: 'classes', id: a, remove: ['noun'] }]);
+    expect(w.word(a).classes).toBeUndefined();
+    expect(() => applyOps(w, [{ op: 'classes', id: a, remove: ['noun'] }])).toThrow('no class "noun"');
+  });
+});
+
 describe('the grammar rules follow a word (K20)', () => {
   const GRAMMAR = 'src/data/grammar/';
 

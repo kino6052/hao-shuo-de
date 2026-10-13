@@ -11,7 +11,7 @@
 // nonterminal no rule defines.
 
 import { makeGrammar, isNonterminal, classRef } from './earley.js';
-import { posClasses } from './lexicon.js';
+import { classesOf, posClasses } from './lexicon.js';
 
 // -> the word ids a rule's right side names: a bare id, =id, and the ids a class leaves out
 //    ruleWords("hen3 =duo1 @adjective-zhe4-na4") -> ["hen3", "duo1", "zhe4", "na4"]
@@ -39,7 +39,7 @@ export function buildGrammar(patterns, { words = {}, composites = [] } = {}) {
   }
 
   const classes = new Set(BUILT_IN);
-  for (const w of Object.values(words)) posClasses(w.pos?.eng).forEach((c) => classes.add(c));
+  for (const w of Object.values(words)) classesOf(w).forEach((c) => classes.add(c));
   for (const c of composites) posClasses(c.pos).forEach((x) => classes.add(x));
   const defined = new Set(rules.map((r) => r.lhs));
   const glue = new Set();

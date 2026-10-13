@@ -83,6 +83,18 @@ describe('the word card', () => {
     expect(renderCard(marked.word('fàn'))).toContain('  Paraphrase (clumsy): chī de — too long');
   });
 
+  test('a word that lists a class besides its part of speech shows it, and whether it waits for the author', () => {
+    const w = source.words;
+    const listed = createKb({
+      ...source,
+      words: { ...w, fei1: { ...w.fei1, classes: { noun: { why: { eng: 'a thing you get', rus: 'x' }, example: 'Wǒ dé le fēi.', proposed: true } } } },
+    });
+    const card = listed.word('fēi');
+    expect(card.extraClasses).toEqual([{ cls: 'noun', why: 'a thing you get', example: 'Wǒ dé le fēi.', proposed: true }]);
+    expect(renderCard(card)).toContain('  Also noun (proposed, waiting for the author): a thing you get  e.g. Wǒ dé le fēi.');
+    expect(kb.word('fēi').extraClasses).toEqual([]);
+  });
+
   test('the text version names the main things', () => {
     const text = renderCard(card);
     expect(text).toContain('chī 吃  (chi1; verb; necessity 5)');

@@ -3,7 +3,7 @@
 //
 //   const parser = createParser({ patterns, words, composites });
 //   parser.errors                  problems in the patterns themselves
-//   parser.parse("{{Word:wo3}} {{word:shi4}} {{word:ren2}}.")
+//   parser.parse("{{Word:wo3}} {{word:shi4}} {{word:ren2}}.", { extra: { ren2: ['verb'] } })   extra: classes a word fills in this sentence only
 //     -> { text, tokens, problems, ok, trees, treeCount, patterns, failure }
 //   outline(result, 0)             the first tree as indented lines
 //   bracket(result, 0)             the first tree as [S [NP wǒ] [VP shì [NP rén]]]
@@ -22,8 +22,8 @@ export function createParser({ patterns, words, composites = [] }) {
     errors,
     rules,
     grammar,
-    parse(text, { maxTrees = 20 } = {}) {
-      const lattice = lex(text, lexicon);
+    parse(text, { maxTrees = 20, extra } = {}) {
+      const lattice = lex(text, lexicon, { extra });
       const result = parse(lattice, grammar, { maxTrees });
       const tokens = lattice.tokens;
       const piece = (p) => ({ ...p, text: tokens.slice(p.from, p.to).map((t) => t.text).join(' ') });

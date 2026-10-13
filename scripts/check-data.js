@@ -70,6 +70,13 @@ for (const [id, w] of Object.entries(WORDS)) {
       for (const p of parts) if (!ids.has(p)) errors.push(`${at}: compound "${c}" names unknown word ${p}`);
     }
   }
+  for (const [cls, c] of Object.entries(w.classes ?? {})) {
+    const at = `${where} class "${cls}"`;
+    if (c === 'main') continue;
+    for (const l of ['eng', 'rus']) if (!c?.why?.[l]) errors.push(`${at}: no why.${l}`);
+    if (!c?.example || typeof c.example !== 'string') errors.push(`${at}: no example sentence`);
+    if (c?.proposed !== undefined && typeof c.proposed !== 'boolean') errors.push(`${at}: proposed must be true or left out`);
+  }
   for (const r of wordRefIds(JSON.stringify([w.definition, w.necessity]))) if (!ids.has(r)) errors.push(`${where}: refers to unknown word ${r}`);
   for (const p of paraphraseProblems(id, w, WORDS)) errors.push(`${where}: ${p}`);
 }

@@ -2,7 +2,8 @@
 // (KB_PLAN.md phase 1, the grammar slice). Pure: runs in Node and in the browser.
 //
 //   buildLexicon({ words, composites }) -> the lexicon (once per data set)
-//   lex(text, lexicon)                  -> { n, edges, tokens, problems }
+//   lex(text, lexicon, { extra })       -> { n, edges, tokens, problems }; extra = { wordId: [class, ...] } lets a word
+//                                          fill more classes in this sentence only (the class proposals try that)
 //
 // The text is the form the book stores: word refs {{word:wo3}} {{Word:wo3}}
 // {{light:xi1}}, a bare "ge", quoted names, hyphens that glue a chain
@@ -32,6 +33,9 @@ export const posClasses = (eng) =>
     .split('/')
     .map((p) => p.trim().replace(/\s+/g, '_'))
     .filter(Boolean);
+
+// Every class a word fills: its part of speech and the classes it lists besides (K6).
+export const classesOf = (word) => [...new Set([...posClasses(word?.pos?.eng), ...Object.keys(word?.classes ?? {})])];
 
 // a bare syllable the book writes without a ref
 const BARE = { ge: 'ge4' };
@@ -66,7 +70,7 @@ const plain = (s) => String(s).normalize('NFD').replace(/\p{M}/gu, '').toLowerCa
 
 // -> { n, edges, tokens, problems } for one sentence (see the header).
 //    tokens[i] is the word at position i: { text, id?, kind } for showing it.
-export function lex(text, lexicon) {
+export function lex(text, lexicon, { extra = {} } = {}) {
   const { words, chains } = lexicon;
   const src = String(text).normalize('NFC');
   const items = [];
@@ -132,7 +136,7 @@ export function lex(text, lexicon) {
     if (it.kind === 'word') {
       const w = words[it.id];
       if (!w) problems.push(`"${it.id}" is not a word`);
-      const classes = new Set(posClasses(w?.pos?.eng));
+      const classes = new Set([...classesOf(w), ...(extra[it.id] ?? [])]);
       if (tokens.at(-1)?.id === it.id) classes.add('again');
       tokens.push({ kind: 'word', id: it.id, text: termOf(words, it.id) });
       edges.push({ from: i, to: i + 1, id: it.id, term: termOf(words, it.id), classes });

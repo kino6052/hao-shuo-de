@@ -15,4 +15,14 @@ export default word("mian4", {
     rus: "Сторона, лицо: превращает слова направления в места ({{word:li3}}-{{word:mian4}}, {{word:qian2}}-{{word:mian4}}).",
   },
   maps: "",
+  classes: {
+    measure_word: {
+      why: {
+        eng: "Counts the sides of a thing: yī-miàn is one side, one page of a thing.",
+        rus: "Считает стороны вещи: yī-miàn — одна сторона, одна страница вещи.",
+      },
+      example: "Wǒ kàn wǎng-shàng-de yī-miàn.",
+      proposed: true,
+    },
+  },
 });

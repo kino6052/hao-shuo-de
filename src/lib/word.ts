@@ -70,6 +70,19 @@ export interface Atom {
   rus: string;
 }
 
+/**
+ * A word class the word fills besides the ones its part of speech gives it
+ * (KB_PLAN.md K6): why the word may be used that way, and a sentence that
+ * needs it (check-classes). `proposed` marks a class the parser found and
+ * the author has not accepted yet; the parser uses it either way.
+ */
+export interface WordClass {
+  why: { eng: string; rus: string };
+  /** A Hao-shuo-de sentence in plain pinyin that only parses with this class. */
+  example: string;
+  proposed?: boolean;
+}
+
 export interface WordData {
   /** Pinyin with tone marks; unique across the dictionary (check-sounds). */
   term: string;
@@ -84,6 +97,8 @@ export interface WordData {
   /** How to say it without the word, or (instead) why that can't be done: KB_PLAN.md phase 2. */
   paraphrase?: Paraphrase;
   atom?: Atom;
+  /** The classes beyond `pos`, by class name (noun, verb, adjective, measure_word ...): K6. "main" repeats a class `pos` gives. */
+  classes?: Record<string, "main" | WordClass>;
 }
 
 export interface Word extends WordData {

@@ -118,6 +118,10 @@ export function wordCard({ source, facts, index }, id, { limit = 15 } = {}) {
     hanzi: w.hanzi,
     pos: w.pos?.eng,
     classes: posClasses(w.pos?.eng),
+    // the classes it lists besides its part of speech (K6)
+    extraClasses: Object.entries(w.classes ?? {})
+      .filter(([, c]) => c !== 'main')
+      .map(([cls, c]) => ({ cls, why: pin(c.why?.eng ?? ''), example: c.example ?? '', proposed: Boolean(c.proposed) })),
     definition: { eng: pin(w.definition?.eng ?? ''), rus: pin(w.definition?.rus ?? '') },
     necessity: { index: w.necessity?.index, eng: pin(w.necessity?.eng ?? '') },
     // how the word is said with other words, or why it cannot be (kb atoms has the sort it comes to)
@@ -158,6 +162,7 @@ export function renderCard(c) {
   out.push(`${c.term} ${c.hanzi}  (${c.id}; ${c.pos}; necessity ${c.necessity.index})`);
   out.push(`  ${c.definition.eng}`);
   out.push(`  Why the core needs it: ${c.necessity.eng}`);
+  for (const x of c.extraClasses) out.push(`  Also ${x.cls.replace(/_/g, ' ')}${x.proposed ? ' (proposed, waiting for the author)' : ''}: ${x.why}  e.g. ${x.example}`);
   if (c.atom) out.push(`  Atom: ${c.atom.eng}`);
   if (c.paraphrase) out.push(`  Paraphrase (${c.paraphrase.verdict}): ${c.paraphrase.forms.join(' / ')}${c.paraphrase.note ? ` — ${c.paraphrase.note}` : ''}`);
   if (c.category.length) out.push(`  Category: ${c.category.join(' › ')}`);

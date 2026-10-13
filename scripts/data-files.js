@@ -32,9 +32,9 @@ export function tsLiteral(v, ind = '') {
 export const wordPath = (id) => resolve(DATA_DIR, 'words', `${id}.ts`);
 
 // The keys of a word file, in the order they are written (the first five are required).
-export const WORD_KEYS = ['term', 'hanzi', 'pos', 'definition', 'necessity', 'maps', 'senses', 'paraphrase', 'atom'];
+export const WORD_KEYS = ['term', 'hanzi', 'pos', 'definition', 'necessity', 'maps', 'senses', 'classes', 'paraphrase', 'atom'];
 
-// data: { term, hanzi, pos, definition, necessity, maps?, senses?, paraphrase?, atom? }
+// data: { term, hanzi, pos, definition, necessity, maps?, senses?, classes?, paraphrase?, atom? }
 export function writeWord(id, data) {
   const body = tsLiteral(Object.fromEntries(WORD_KEYS.map((k) => [k, data[k]])));
   writeFileSync(wordPath(id), `import { word } from "../../lib/word.ts";\n\nexport default word(${JSON.stringify(id)}, ${body});\n`);
