@@ -152,6 +152,10 @@ export function renderRemoval(r, { limit = 12 } = {}) {
   for (const i of r.coverage.lost) out.push(`  LOST ${i.id} ${i.eng ?? ''}: no way left to say it`);
   for (const i of r.coverage.touched) out.push(`  touched ${i.id} ${i.eng ?? ''}: loses ${i.carriers.join(', ')}, can still be said`);
 
+  if (r.mandarin) {
+    section(`Mandarin lost: frequency words (top 6000) that could no longer be written, cost ${r.mandarin.cost}`, r.mandarin.words, (x) => `${x.zh} ${x.py} #${x.rank}${x.spelled ? ' (spelled compound)' : ''}`);
+  }
+
   section('Grammar patterns that name it', r.patterns ?? [], (x) => renderPatternUses([x])[0]);
   section('Other words whose text names it', r.definitions, (d) => `${d.term} (${d.word}) names ${d.names.join(', ')}`);
   section('Catch-all senses left with no compound', r.senses, (s) => `${s.term} ${s.hanzi} (${s.sense})`);

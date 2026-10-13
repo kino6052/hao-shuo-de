@@ -6,18 +6,12 @@ export default lessonModule({
   id: "pinyin-limits",
   prose: {
     en: [
-      "Even though pinyin attempts to capture how the words sound it is still not detailed enough to capture the details of the pronunciation, so it is important to learn exactly how each syllable is pronounced.",
-      "For this we have a dedicated rigorous pronunciation course that aims to train you in detailed understanding of the basic pronunciation.",
-      "Being able to understand the sounds of Chinese is the **MOST** fundamental and important skill in Chinese on which everything else will depend.",
-      "So don't overlook this.",
-      "Here is the [LINK]",
+      "**To say a word well**, listen to it.",
+      "Pinyin shows the sound only roughly.",
     ],
     ru: [
-      "Пиньинь старается передать, как звучат слова, но он недостаточно подробен, чтобы показать все тонкости произношения. Поэтому важно выучить, как именно произносится каждый слог.",
-      "Для этого у нас есть отдельный подробный курс произношения, который научит вас хорошо понимать основы китайских звуков.",
-      "Умение понимать звуки китайского языка — **САМЫЙ** главный и важный навык, от которого зависит всё остальное.",
-      "Так что не пропускайте его.",
-      "Вот ссылка: [LINK]",
+      "**Чтобы хорошо сказать слово**, послушайте его.",
+      "Пиньинь передаёт звучание лишь приблизительно.",
     ],
     tldr: {
       en: "Pinyin can't show every detail of how a word sounds.",

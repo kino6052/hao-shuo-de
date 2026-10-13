@@ -67,7 +67,8 @@ export function candidateModel(source, facts, { freq = null, top = 6000 } = {}) 
   const comps = [];
   for (const c of source.composites ?? []) {
     if (!c.hsd) continue;
-    comps.push({ zh: c.zh, rank: c.rank, w: rankWeight(c.rank), forms: c.hsd.split(' / ').map((f) => new Set(wordRefIds(f))) });
+    const texts = c.hsd.split(' / ');
+    comps.push({ zh: c.zh, py: c.py, en: c.en, rank: c.rank, w: rankWeight(c.rank), texts, seqs: texts.map(wordRefIds), forms: texts.map((f) => new Set(wordRefIds(f))) });
   }
   const compsOf = new Map(); // word id -> indexes of the composites with a form that names it
   comps.forEach((c, i) => {
@@ -370,7 +371,39 @@ export function candidateModel(source, facts, { freq = null, top = 6000 } = {}) 
     const c = [...String(char)][0];
     if (!c) throw new Error('usage: a hanzi');
     if (!freq) return { root: c, noFrequencies: true };
-    return describeRoot(c);
+    const r = describeRoot(c);
+    return { ...r, shorter: shorterForms(c, r.already) };
+  }
+
+  // The descriptions that would get shorter: the phrase the root would stand for is the form(s) of its own
+  // composite (the root as a composite), or the paraphrase of a word that already gives it; every other
+  // form that contains the phrase could use the one word instead. The saving is in words, no new weight.
+  function shorterForms(c, already) {
+    const phrases = [];
+    const seen = new Set();
+    const note = (ids, source) => {
+      if (ids.length < 2 || seen.has(ids.join(' '))) return;
+      seen.add(ids.join(' '));
+      phrases.push({ ids, source });
+    };
+    const own = comps.find((x) => x.zh === c);
+    for (const seq of own?.seqs ?? []) note(seq, `description of ${c}`);
+    for (const a of already ?? []) for (const f of words[a.id]?.paraphrase?.forms ?? []) note(wordRefIds(f), `paraphrase of ${a.term}`);
+    const at = (seq, ids) => {
+      for (let i = 0; i + ids.length <= seq.length; i++) if (ids.every((id, j) => seq[i + j] === id)) return true;
+      return false;
+    };
+    const out = [];
+    for (const x of comps) {
+      if (x.zh === c) continue;
+      const forms = [];
+      x.seqs.forEach((seq, i) => {
+        const hit = phrases.filter((p) => at(seq, p.ids)).sort((a, b) => b.ids.length - a.ids.length)[0];
+        if (hit) forms.push({ n: i + 1, text: pin(x.texts[i]), phrase: hit.ids.map(term).join(' '), source: hit.source, saves: hit.ids.length - 1, length: seq.length });
+      });
+      if (forms.length) out.push({ zh: x.zh, py: x.py, en: x.en, rank: x.rank, forms, saves: Math.max(...forms.map((f) => f.saves)) });
+    }
+    return out.sort((a, b) => a.rank - b.rank);
   }
 
   // -- swaps: K roots in, K words out ---------------------------------------------------------------------------------------
@@ -519,6 +552,10 @@ export function renderAddition(r) {
   out.push(`  Completes ${r.completes.length} Mandarin word(s), score ${r.score}: ${r.completes.slice(0, 20).map((w) => `${w.zh}${w.listed ? '' : '*'}`).join(' ') || 'none'}${r.completes.some((w) => !w.listed) ? '   (* not among the composites yet)' : ''}`);
   out.push(`  Still needs more roots: ${r.pending.length} word(s)${r.pending.length ? `, e.g. ${r.pending.slice(0, 8).map((w) => `${w.zh} (+${w.missing.join('')})`).join(' ')}` : ''}`);
   out.push(`  Composites it would let be spelled: ${r.spellable.length ? r.spellable.map((x) => x.zh).join(' ') : 'none'}`);
+  const sh = r.shorter ?? [];
+  out.push(`  Descriptions that get shorter: ${sh.length}${sh.length ? ` (${sh.reduce((a, x) => a + x.forms.length, 0)} form(s), words saved ${sh.reduce((a, x) => a + x.saves, 0)})` : ''}`);
+  for (const x of sh.slice(0, 12)) out.push(`    ${x.zh} ${x.py} #${x.rank} "${x.en}" — ${x.forms.map((f) => `form ${f.n} ${f.text} (has "${f.phrase}", ${f.source}; ${f.saves} word(s) shorter)`).join('; ')}`);
+  if (sh.length > 12) out.push(`    … and ${sh.length - 12} more`);
   return out.join('\n');
 }
 

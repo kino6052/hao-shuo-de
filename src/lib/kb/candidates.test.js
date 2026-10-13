@@ -144,6 +144,25 @@ describe('Mandarin', () => {
     expect(() => withFreq.addition('')).toThrow(/usage/);
   });
 
+  test('descriptions that get shorter: the forms that contain the phrase the root would replace', () => {
+    const phrase = '{{word:chi1}}-{{word:fan4}}';
+    const src = {
+      ...source,
+      composites: [
+        ...source.composites,
+        { zh: '器', py: 'qì', en: 'tool', rank: 10, hsd: phrase },
+        { zh: '工具', py: 'gōngjù', en: 'implement', rank: 20, hsd: `{{word:ji1}} / {{word:fei1}} ${phrase} {{word:ji1}}` },
+        { zh: '桌子', py: 'zhuōzi', en: 'table', rank: 30, hsd: '{{word:ji1}} {{word:fei1}}' },
+      ],
+    };
+    const m = candidateModel(src, createKb(src).facts, { freq });
+    const a = m.addition('器');
+    expect(a.shorter.map((x) => x.zh)).toEqual(['吃饭', '工具']); // 吃饭 already says it
+    expect(a.shorter[1]).toMatchObject({ saves: 1, forms: [{ n: 2, saves: 1, source: 'description of 器' }] });
+    expect(renderAddition(a)).toContain('Descriptions that get shorter: 2 (3 form(s), words saved 2)');
+    expect(renderAddition(withFreq.addition('器'))).toContain('Descriptions that get shorter: 0');
+  });
+
   test('a trade: the root in, the cheapest word out', () => {
     const r = withFreq.swaps({ k: 1 });
     expect(r.adds).toEqual(['器']);

@@ -78,12 +78,12 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "**Words are written solid**. When several syllables form one dictionary word, they are never split apart, no matter how long the word is — {{word:dong4}}-{{word:wu4}}, {{word:shui4jiao4}}, {{word:dan4}}-{{word:shi4}}.",
-            "Read the whole solid block as a single unit."
+            "**One word is written together**. The syllables of one word are never split apart: {{word:dong4}}-{{word:wu4}}, {{word:shui4jiao4}}, {{word:dan4}}-{{word:shi4}}.",
+            "Read the whole block as one word."
           ],
           "ru": [
-            "**Слова пишутся слитно**. Если несколько слогов составляют одно слово из словаря, их никогда не разделяют, какой бы длины ни было слово: {{word:dong4}}-{{word:wu4}}, {{word:shui4jiao4}}, {{word:dan4}}-{{word:shi4}}.",
-            "Читайте весь слитный блок как одно целое."
+            "**Одно слово пишется вместе**. Слоги одного слова никогда не разделяют: {{word:dong4}}-{{word:wu4}}, {{word:shui4jiao4}}, {{word:dan4}}-{{word:shi4}}.",
+            "Читайте весь блок как одно слово."
           ],
           "zh": []
         }
@@ -91,10 +91,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "**A hyphen joins words into one**. A hyphen glues a small word onto another word, so the two work as one word. Sometimes that gives the word a new job, like turning a verb into a describing word (an adjective)."
+            "**A hyphen joins words into one**. It glues a small word onto another word. Together they work as one word."
           ],
           "ru": [
-            "**Дефис соединяет слова в одно**. Дефис приклеивает маленькое слово к другому слову, и они работают как одно слово. Иногда так слово получает новую работу: например, глагол становится описательным словом (прилагательным)."
+            "**Дефис соединяет слова в одно**. Он приклеивает маленькое слово к другому слову. Вместе они работают как одно слово."
           ],
           "zh": []
         },
@@ -135,10 +135,10 @@ const content: Entry[] = [
           {
             "text": {
               "en": [
-                "A hyphen always shows that the parts it joins work together as a single word."
+                "A hyphen means: these parts work as one word."
               ],
               "ru": [
-                "Дефис всегда показывает, что части, которые он соединяет, работают вместе как одно слово."
+                "Дефис значит: эти части работают как одно слово."
               ],
               "zh": []
             }
@@ -148,10 +148,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "**Quotes set off the untranslatable**. Proper names and onomatopoeia — things that aren't really Hao-shuo-de vocabulary — are enclosed in quotes:"
+            "**Quotes mark a name or a sound**. Names and animal sounds go in quotes:"
           ],
           "ru": [
-            "**Кавычки выделяют то, что не переводится**. Имена и звукоподражания — то, что на самом деле не входит в словарь Hǎo-shuō-de, — пишутся в кавычках:"
+            "**Кавычки отмечают имя или звук**. Имена и звуки животных пишутся в кавычках:"
           ],
           "zh": []
         },
@@ -181,10 +181,10 @@ const content: Entry[] = [
           {
             "text": {
               "en": [
-                "If you see quotes, don't look the word up in the dictionary — it isn't a dictionary word."
+                "A word in quotes is not in the dictionary."
               ],
               "ru": [
-                "Если видите кавычки, не ищите слово в словаре — это не словарное слово."
+                "Слова в кавычках нет в словаре."
               ],
               "zh": []
             }

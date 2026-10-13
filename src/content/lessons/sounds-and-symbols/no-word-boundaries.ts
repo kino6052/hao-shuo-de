@@ -6,39 +6,39 @@ export default lessonModule({
   id: "no-word-boundaries",
   prose: {
     en: [
-      "In regular Chinese, sentences are built from syllables, with no spaces or extra notation that will help us to understand where words start and end.",
-      "To make the structure of Chinese clearer to us, Hao-shuo-de adds a few extra grammar rules on top.",
+      "**To see where a word starts and ends**, look at the spaces, hyphens, and quotes.",
+      "Chinese has no spaces, so the writing here adds them.",
     ],
     ru: [
-      "В обычном китайском предложения состоят из слогов, и в них нет пробелов или других знаков, которые помогли бы понять, где начинается и заканчивается слово.",
-      "Чтобы строение китайского было понятнее, Hǎo-shuō-de добавляет несколько своих правил письма.",
+      "**Чтобы увидеть, где слово начинается и заканчивается**, смотрите на пробелы, дефисы и кавычки.",
+      "В китайском нет пробелов, поэтому здесь они добавлены.",
     ],
     tldr: {
-      en: "Hao-shuo-de adds spaces, hyphens, and quotes to show where words start and end.",
-      ru: "Hǎo-shuō-de добавляет пробелы, дефисы и кавычки, чтобы показать границы слов.",
+      en: "Spaces, hyphens, and quotes show where words start and end.",
+      ru: "Пробелы, дефисы и кавычки показывают границы слов.",
     },
     necessity: {
-      en: "Chinese has no spaces, so these help you read.",
-      ru: "В китайском нет пробелов, а эти знаки помогают читать.",
+      en: "They help you read long strings of syllables.",
+      ru: "Они помогают читать длинные цепочки слогов.",
     },
   },
   info: {
-    title: { en: "Hao-shuo-de pinyin helpers", ru: "Подсказки пиньиня в Hǎo-shuō-de" },
+    title: { en: "How words are written", ru: "Как пишутся слова" },
     ordered: true,
     items: [
       {
         en: [
-          "**Words are written solid**. When several syllables form one dictionary word, they are never split apart, no matter how long the word is — {{word:dong4}}-{{word:wu4}}, {{word:shui4jiao4}}, {{word:dan4}}-{{word:shi4}}.",
-          "Read the whole solid block as a single unit.",
+          "**One word is written together**. The syllables of one word are never split apart: {{word:dong4}}-{{word:wu4}}, {{word:shui4jiao4}}, {{word:dan4}}-{{word:shi4}}.",
+          "Read the whole block as one word.",
         ],
         ru: [
-          "**Слова пишутся слитно**. Если несколько слогов составляют одно слово из словаря, их никогда не разделяют, какой бы длины ни было слово: {{word:dong4}}-{{word:wu4}}, {{word:shui4jiao4}}, {{word:dan4}}-{{word:shi4}}.",
-          "Читайте весь слитный блок как одно целое.",
+          "**Одно слово пишется вместе**. Слоги одного слова никогда не разделяют: {{word:dong4}}-{{word:wu4}}, {{word:shui4jiao4}}, {{word:dan4}}-{{word:shi4}}.",
+          "Читайте весь блок как одно слово.",
         ],
       },
       {
-        en: "**A hyphen joins words into one**. A hyphen glues a small word onto another word, so the two work as one word. Sometimes that gives the word a new job, like turning a verb into a describing word (an adjective).",
-        ru: "**Дефис соединяет слова в одно**. Дефис приклеивает маленькое слово к другому слову, и они работают как одно слово. Иногда так слово получает новую работу: например, глагол становится описательным словом (прилагательным).",
+        en: "**A hyphen joins words into one**. It glues a small word onto another word. Together they work as one word.",
+        ru: "**Дефис соединяет слова в одно**. Он приклеивает маленькое слово к другому слову. Вместе они работают как одно слово.",
         items: [
           {
             en: "{{word:zhe4}}-**ge** — this",
@@ -53,14 +53,14 @@ export default lessonModule({
             ru: "{{word:hen3}}-**{{word:da4}}-de** — очень большой",
           },
           {
-            en: "A hyphen always shows that the parts it joins work together as a single word.",
-            ru: "Дефис всегда показывает, что части, которые он соединяет, работают вместе как одно слово.",
+            en: "A hyphen means: these parts work as one word.",
+            ru: "Дефис значит: эти части работают как одно слово.",
           },
         ],
       },
       {
-        en: "**Quotes set off the untranslatable**. Proper names and onomatopoeia — things that aren't really Hao-shuo-de vocabulary — are enclosed in quotes:",
-        ru: "**Кавычки выделяют то, что не переводится**. Имена и звукоподражания — то, что на самом деле не входит в словарь Hǎo-shuō-de, — пишутся в кавычках:",
+        en: "**Quotes mark a name or a sound**. Names and animal sounds go in quotes:",
+        ru: "**Кавычки отмечают имя или звук**. Имена и звуки животных пишутся в кавычках:",
         items: [
           {
             en: "\"Beijing\" — Beijing",
@@ -71,8 +71,8 @@ export default lessonModule({
             ru: "{{word:jiao4}} \"wāng-wāng\" — лает «гав-гав»",
           },
           {
-            en: "If you see quotes, don't look the word up in the dictionary — it isn't a dictionary word.",
-            ru: "Если видите кавычки, не ищите слово в словаре — это не словарное слово.",
+            en: "A word in quotes is not in the dictionary.",
+            ru: "Слова в кавычках нет в словаре.",
           },
         ],
       },
@@ -80,11 +80,11 @@ export default lessonModule({
   },
   exercises: [
     {
-      en: "Is {{word:hen3}}-{{word:da4}}-de one dictionary word, or a word plus a bound grammar piece? How do you know from the punctuation alone?",
-      ru: "{{word:hen3}}-{{word:da4}}-de — это одно слово из словаря или слово плюс прикреплённая к нему грамматическая частичка? Как это понять только по знакам письма?",
+      en: "In {{word:hen3}}-{{word:da4}}-de, what does the hyphen tell you?",
+      ru: "Что говорит дефис в {{word:hen3}}-{{word:da4}}-de?",
       answer: {
-        en: "A word ({{word:da4}}, big) plus a bound grammar piece (-de) — the hyphen shows they're glued together, not a single solid dictionary word.",
-        ru: "Слово ({{word:da4}}, большой) плюс прикреплённая грамматическая частичка (-de): дефис показывает, что они склеены, а не составляют одно слитное слово из словаря.",
+        en: "The parts are glued together and work as one word.",
+        ru: "Части склеены и работают как одно слово.",
       },
     },
   ],

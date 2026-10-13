@@ -609,8 +609,7 @@ The word lists and limits live in `scripts/jargon.js` and `scripts/limits.js`.
 
 For each lesson: ☐ written to template ☐ `npm run check -- <lesson-id>` passes (every gate) ☐ exercises + answers ☐ **user approved** ☐ added to `scripts/finished-lessons.js`
 
-- [ ] L1 Sounds and Symbols
- — rewritten, passes every gate, on the finished list; **waiting for your review**
+- [ ] L1 Sounds and Symbols — rewritten, passes every gate, on the finished list; **waiting for your review**
 - [ ] L2 Words and Sentences
  — rewritten, passes every gate, on the finished list; **waiting for your review**
 - [ ] L3 Modifying Nouns

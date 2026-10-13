@@ -6,11 +6,13 @@ export default lessonModule({
   prose: {
     en: [
       "<h2>Tones</h2>",
-      "In pinyin, tone isn't decoration — it's part of the word.",
+      "**To say the right word**, use the right tone.",
+      "The tone is part of the word.",
     ],
     ru: [
       "<h2>Тоны</h2>",
-      "В пиньине тон — не украшение, а часть слова.",
+      "**Чтобы сказать нужное слово**, используйте нужный тон.",
+      "Тон — это часть слова.",
     ],
     tldr: { en: "The tone is part of the word.", ru: "Тон — это часть слова." },
     necessity: {
@@ -20,7 +22,7 @@ export default lessonModule({
   },
   info: {
     kind: "note",
-    title: { en: "Example", ru: "Пример" },
+    title: { en: "One sound, four words", ru: "Один звук, четыре слова" },
     items: [
       {
         en: "**mā** — mother",

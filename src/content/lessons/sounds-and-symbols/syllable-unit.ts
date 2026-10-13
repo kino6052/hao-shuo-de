@@ -6,30 +6,26 @@ export default lessonModule({
   id: "syllable-unit",
   prose: {
     en: [
-      "Chinese is very different from the western languages on many levels.",
-      "One such example is what the smallest piece in the written language is.",
-      "In western languages such smallest piece is a letter — we build words from letters, we can spell words from letters.",
-      "In Chinese it is not like that — the smallest piece is a syllable.",
+      "**To read pinyin**, read it one syllable at a time.",
+      "A syllable is the smallest piece, not a letter.",
     ],
     ru: [
-      "Китайский язык очень отличается от западных языков во многом.",
-      "Один из примеров — то, что считается самой маленькой частью письменного языка.",
-      "В западных языках самая маленькая часть — это буква: мы строим слова из букв и можем произнести слово по буквам.",
-      "В китайском всё не так: самая маленькая часть — это слог.",
+      "**Чтобы читать пиньинь**, читайте его по одному слогу.",
+      "Слог — самая маленькая часть, а не буква.",
     ],
     tldr: {
-      en: "Chinese is written one syllable at a time, not letter by letter.",
-      ru: "Китайский записывают по слогам, а не по буквам.",
+      en: "Read pinyin one syllable at a time.",
+      ru: "Читайте пиньинь по одному слогу.",
     },
-    necessity: { en: "You read pinyin one syllable at a time.", ru: "Пиньинь читают по одному слогу." },
+    necessity: { en: "Now you know where to start reading.", ru: "Теперь вы знаете, с чего начать чтение." },
   },
   info: {
     kind: "note",
-    title: { en: "Important!", ru: "Важно!" },
+    title: { en: "Syllables", ru: "Слоги" },
     items: [
       {
-        en: "Get in the habit of reading pinyin words syllable by syllable, not as one whole word (the way we do in our alphabetic languages).",
-        ru: "Привыкайте читать слова в пиньине по слогам, а не целиком (как мы привыкли в языках с алфавитом).",
+        en: "Read pinyin syllable by syllable, not letter by letter.",
+        ru: "Читайте пиньинь по слогам, а не по буквам.",
         items: [
           {
             en: "<i>Syllables</i>: <b>Zhōng</b> and <b>guó</b>",

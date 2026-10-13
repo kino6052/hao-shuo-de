@@ -6,12 +6,12 @@ export default lessonModule({
   id: "four-tones-intro",
   prose: {
     en: [
-      "All the words above are different, and are pronounced differently, because they use different tones.",
-      "Chinese has the following tones:",
+      "**To tell those four words apart**, learn the tones.",
+      "There are four tones, plus a light one.",
     ],
     ru: [
-      "Все слова выше разные и произносятся по-разному, потому что у них разные тоны.",
-      "В китайском есть такие тоны:",
+      "**Чтобы различать эти четыре слова**, выучите тоны.",
+      "Есть четыре тона и ещё один лёгкий.",
     ],
     tldr: {
       en: "Chinese has four tones, plus one light tone.",
@@ -44,14 +44,12 @@ export default lessonModule({
       },
       {
         en: [
-          "**a** — Neutral tone. It's written without a tone mark, just as a plain letter.",
-          "The neutral tone is shorter and unstressed.",
-          "In the word Hǎo-shuō-de, the final syllable de carries the neutral tone.",
+          "**a** — Light tone. It has no tone mark.",
+          "It is short and quiet.",
         ],
         ru: [
-          "**a** — нейтральный тон. Пишется без знака тона, просто буквой.",
-          "Нейтральный тон короче и без ударения.",
-          "В слове Hǎo-shuō-de последний слог de произносится нейтральным тоном.",
+          "**a** — лёгкий тон. У него нет знака тона.",
+          "Он короткий и тихий.",
         ],
       },
     ],
@@ -63,9 +61,9 @@ export default lessonModule({
       answer: { en: "Fourth tone — sharp and falling.", ru: "Четвёртый тон — резкий и падающий." },
     },
     {
-      en: "Rewrite {{Word:wo3}} {{word:hao3}} using tone-number notation instead of tone marks.",
-      ru: "Запишите {{Word:wo3}} {{word:hao3}}, обозначив тоны цифрами, а не знаками.",
-      answer: { en: "Wo3 hao3.", ru: "Wo3 hao3." },
+      en: "Write {{word:hao3}} with a tone number instead of a tone mark.",
+      ru: "Запишите {{word:hao3}}, обозначив тон цифрой, а не знаком.",
+      answer: { en: "hao3.", ru: "hao3." },
     },
   ],
   faq: [

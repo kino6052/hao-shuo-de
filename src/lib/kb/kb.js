@@ -66,7 +66,15 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
     index,
     find: (q) => findWords(words, q).map((id) => ({ id, term: words[id].term, hanzi: words[id].hanzi, pos: words[id].pos?.eng })),
     word: (name, opts) => wordCard(ctx, resolveWord(words, name), opts),
-    remove: async (names) => removal(ctx, ids(names)),
+    remove: async (names) => {
+      const r = await removal(ctx, ids(names));
+      // Mandarin lost: from the candidates' own count (top 6000 words of the frequency list); left out without `freq`
+      if (freq) {
+        const c = (candidates ??= candidateModel(source, facts, { freq })).consequences(r.words.map((w) => w.id), { detail: true });
+        r.mandarin = { count: c.counts.mandarin, cost: c.parts.mandarin, words: c.lists.mandarin.map((e) => ({ zh: e.zh, py: e.py, rank: e.rank, spelled: !!e.owner })).sort((a, b) => a.rank - b.rank) };
+      }
+      return r;
+    },
     checkForm: (args) => checkForm(words, args),
     parse: parseText,
     parseUpTo,

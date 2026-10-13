@@ -1,7 +1,7 @@
 // sounds-and-symbols ("Sounds and Symbols"): its modules, in reading order.
 // See src/lib/lesson.ts.
 //
-// Phase 2 (BOOK_PLAN.md): pinyin, tones, and the Hao-shuo-de pinyin helpers.
+// Rewritten in Phase 2 (BOOK_PLAN.md): syllables, pinyin, tones, the light tone, and how words are written.
 // No new words -- lesson 1 may show words as sound examples (§4a rule 2).
 // Plain words; passes every gate (npm run check -- sounds-and-symbols).
 import { lesson } from "../../../lib/lesson.ts";
@@ -21,12 +21,12 @@ export default lesson(meta.id, {
   title: { en: "Sounds and Symbols", ru: "Звуки и знаки" },
   summary: {
     en: [
-      "Before you can speak, you need to read the sounds.",
-      "In this lesson, you'll learn to read pinyin: Chinese sounds written with letters you know, and tone marks that show how each sound rises or falls.",
+      "To say a word, you first need to read it.",
+      "In this lesson, you'll be able to read pinyin and say each word with the right tone.",
     ],
     ru: [
-      "Прежде чем говорить, нужно научиться читать звуки.",
-      "В этом уроке вы научитесь читать пиньинь: китайские звуки, записанные знакомыми буквами, и знаки тонов, которые показывают, как звук поднимается или опускается.",
+      "Чтобы сказать слово, сначала нужно его прочитать.",
+      "В этом уроке вы научитесь читать пиньинь и говорить каждое слово с правильным тоном.",
     ],
   },
   modules: [

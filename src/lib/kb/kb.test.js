@@ -1,5 +1,6 @@
 import { describe, expect, test } from 'bun:test';
 import { createKb, renderCard } from './kb.js';
+import { renderRemoval } from './whatif.js';
 import { findWords, resolveWord } from './card.js';
 import { checkForm } from './check-form.js';
 import { source } from './fixture.js';
@@ -136,6 +137,17 @@ describe('kb.remove takes any names', () => {
   test('a comma list works too, and a bad name stops it', async () => {
     expect((await kb.remove('chī, fàn')).words.map((w) => w.id)).toEqual(['chi1', 'fan4']);
     await expect(kb.remove(['nope'])).rejects.toThrow(/no word "nope"/);
+  });
+});
+
+describe('kb.remove shows Mandarin lost', () => {
+  test('only with a frequency list, and the words match the candidates', async () => {
+    expect((await kb.remove('chī')).mandarin).toBeUndefined();
+    const withFreq = createKb(source, { freq: [{ zh: '吃', py: 'chī', rank: 16 }, { zh: '饭', py: 'fàn', rank: 40 }] });
+    const r = await withFreq.remove('chī');
+    expect(r.mandarin.words.map((x) => x.zh)).toEqual(['吃']);
+    expect(r.mandarin.count).toBe(withFreq.candidates().consequences(['chi1']).counts.mandarin);
+    expect(renderRemoval(r)).toContain('Mandarin lost');
   });
 });
 
