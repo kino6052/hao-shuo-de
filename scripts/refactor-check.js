@@ -16,11 +16,12 @@
 // The generated files of today's tree are taken as they are (run `npm run data` first when in doubt),
 // so a stale generated file shows up as a difference.
 
-import { cpSync, existsSync, mkdtempSync, rmSync, rmdirSync, symlinkSync } from 'fs';
-import { availableParallelism, tmpdir } from 'os';
+import { cpSync } from 'fs';
+import { availableParallelism } from 'os';
 import { basename, join, relative, sep } from 'path';
 import { spawn } from 'child_process';
 import { ROOT } from './refactor-lib.js';
+import { newCopy } from './temp-copy.js';
 import { GATES } from './gates.js';
 
 // not copied: big, rebuilt, or not read by a gate
@@ -113,10 +114,9 @@ export function compareBoards(before, after) {
 // -> { gates, board, copy } after applying `ws` to a copy of the repo and running the gates there and here.
 //    Options (for tests): gates, rebuild, scoreboard, keep.
 export async function checkInCopy(ws, { gates = GATES, rebuild = REBUILD, scoreboard = true, atoms = false, keep = false } = {}) {
-  const copy = mkdtempSync(join(tmpdir(), 'hsd-check-'));
-  const junction = join(copy, 'node_modules');
+  const tmp = newCopy('hsd-check-');
+  const copy = tmp.dir;
   const limit = Math.max(2, availableParallelism() - 2);
-  let linked = false;
   try {
     cpSync(ROOT, copy, {
       recursive: true,
@@ -125,7 +125,7 @@ export async function checkInCopy(ws, { gates = GATES, rebuild = REBUILD, scoreb
         return !SKIP_TOP.has(top) && basename(src) !== 'scoreboard.lock';
       },
     });
-    if (existsSync(join(ROOT, 'node_modules'))) (symlinkSync(join(ROOT, 'node_modules'), junction, 'junction'), (linked = true));
+    tmp.linkModules();
     ws.write(copy);
 
     const here = (async () => ({ gates: await runGates(ROOT, gates, limit), board: scoreboard ? await board(ROOT, atoms) : null }))();
@@ -135,18 +135,7 @@ export async function checkInCopy(ws, { gates = GATES, rebuild = REBUILD, scoreb
 
     return { ...compareGates(now.gates, there.gates), board: compareBoards(now.board, there.board), copy: keep ? copy : null };
   } finally {
-    if (!keep) {
-      // the link first: removing it must never reach into the real node_modules
-      let safe = true;
-      if (linked) {
-        try {
-          rmdirSync(junction);
-        } catch {
-          safe = false;
-        }
-      }
-      if (safe) rmSync(copy, { recursive: true, force: true });
-    }
+    if (!keep) tmp.remove();
   }
 }
 

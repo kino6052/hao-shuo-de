@@ -13,6 +13,7 @@
 //   node scripts/kb.js swaps [--k N]
 //   node scripts/kb.js audit [--stdout]
 //   node scripts/kb.js parse-report [--lessons 4] [--stdout]
+//   node scripts/kb.js parse-diff [--ref HEAD] [--all] [--limit 12]
 //   node scripts/kb.js scoreboard [--append] [--label "what changed"] [--no-atoms]
 //   node scripts/kb.js move <lesson | lesson/module | pattern:id> <where>
 //   node scripts/kb.js engine
@@ -26,6 +27,10 @@
 // move says what a change in the lesson order would do (scripts/move-effects.js): a lesson to place N,
 // a module to the end of another lesson, or a pattern taught in another lesson. It prints the words and
 // the patterns that would then be used before they are taught, against today. Nothing is changed.
+//
+// parse-diff compares how every lesson sentence parses at a git ref (HEAD) with the files as they are, so an
+// edited rule, a pattern moved to another lesson or a word that changed class shows the sentences that start or
+// stop parsing or read another way. --all adds the other texts. The half that runs at the ref is scripts/parse-snapshot.js.
 //
 // candidates ranks the words that could go (cheapest first, with how each would be said
 // without it) or the roots that would complete the most Mandarin words; add says what one
@@ -53,6 +58,9 @@ import { loadFrequencyList } from './frequency-list.js';
 import { loadDrafts } from './kb-drafts.js';
 import { loadLessons } from './lessons.js';
 import { moveEffects, parseSpec, renderMove } from './move-effects.js';
+import { snapshotAtRef } from './parse-diff.js';
+import { OTHER_TEXTS, snapshotFor } from './parse-snapshot.js';
+import { diffSnapshots, renderParseDiff } from '../src/lib/kb/parse-diff.js';
 import { parseReport, renderParseReport, slimReport } from '../src/lib/kb/parse-report.js';
 import { renderCheckForm } from '../src/lib/kb/tools.js';
 import { engine } from '../src/lib/kb/clingo.js';
@@ -153,13 +161,7 @@ async function main(argv) {
       const lessons = kb.source.lessons.filter((l) => l.number <= n).map(({ id, number }) => ({ id, number }));
       // --all adds the other texts of the book (K7): composite examples, stories, the phrase book
       const all = rest.includes('--all');
-      const groups = all
-        ? [
-            { id: 'composite-examples', title: 'composite examples', kinds: ['composite_example'] },
-            { id: 'stories', title: 'stories', kinds: ['story'] },
-            { id: 'phrase-book', title: 'phrase book', kinds: ['phrase_book'] },
-          ]
-        : [];
+      const groups = all ? OTHER_TEXTS : [];
       const report = parseReport({ sentences: kb.facts.sentences, parseText: kb.parse, parseLesson: kb.parseUpTo, patternLesson: kb.patternLesson, lessons, groups });
       const text = renderParseReport(report, kb.source.words, { title: `Parse report: lessons 1-${n}${all ? ' and the other texts' : ''}` });
       if (json) return print(slimReport(report), text);
@@ -174,6 +176,14 @@ async function main(argv) {
       const spec = parseSpec(what, where, { lessons: kb.source.lessons, patterns: kb.source.patterns });
       const r = await moveEffects({ kb, lessons: await loadLessons() }, spec);
       return print(r, renderMove(r, kb.source.words));
+    }
+    case 'parse-diff': {
+      const ref = option(rest, '--ref') ?? 'HEAD';
+      const all = rest.includes('--all');
+      const limit = Number(option(rest, '--limit') ?? 12);
+      const before = snapshotAtRef(ref, { all }); // runs in another process while this one parses
+      const d = diffSnapshots(await before, snapshotFor(kb, { all }));
+      return print(d, renderParseDiff(d, kb.source.words, { limit, title: `Parse changes since ${ref}${all ? ' (all texts)' : ''}` }));
     }
     case 'relations': {
       const status = option(rest, '--status');
@@ -238,7 +248,7 @@ async function main(argv) {
       return print(e, text);
     }
     default:
-      console.log('usage: node scripts/kb.js word|remove|check-form|query|parse|atoms|relations|candidates|add|swaps|scoreboard|parse-report|move|engine …  (--json for data)');
+      console.log('usage: node scripts/kb.js word|remove|check-form|query|parse|atoms|relations|candidates|add|swaps|scoreboard|parse-report|parse-diff|move|engine …  (--json for data)');
       process.exitCode = command ? 1 : 0;
   }
 }
