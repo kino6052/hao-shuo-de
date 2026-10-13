@@ -90,7 +90,7 @@ export function candidateModel(source, facts, { freq = null, top = 6000 } = {}) 
   // -- coverage -------------------------------------------------------------------------------------
   const items = [];
   for (const g of source.coverage ?? []) {
-    for (const it of g.items) items.push({ id: `${g.key}:${it.key}`, eng: it.eng, forms: (it.forms ?? []).map((f) => new Set(wordRefIds(f))), carriers: new Set(it.words ?? []) });
+    for (const it of g.items) items.push({ id: `${g.key}:${it.key}`, eng: it.eng, texts: it.forms ?? [], seqs: (it.forms ?? []).map(wordRefIds), forms: (it.forms ?? []).map((f) => new Set(wordRefIds(f))), carriers: new Set(it.words ?? []) });
   }
   const itemsOf = new Map(); // word id -> indexes of the items it carries or is used in
   items.forEach((it, i) => {
@@ -372,13 +372,14 @@ export function candidateModel(source, facts, { freq = null, top = 6000 } = {}) 
     if (!c) throw new Error('usage: a hanzi');
     if (!freq) return { root: c, noFrequencies: true };
     const r = describeRoot(c);
-    return { ...r, shorter: shorterForms(c, r.already) };
+    const phrases = rootPhrases(c, r.already);
+    return { ...r, shorter: shorterForms(c, phrases), carriers: coverageCarriers(phrases) };
   }
 
   // The descriptions that would get shorter: the phrase the root would stand for is the form(s) of its own
   // composite (the root as a composite), or the paraphrase of a word that already gives it; every other
   // form that contains the phrase could use the one word instead. The saving is in words, no new weight.
-  function shorterForms(c, already) {
+  function rootPhrases(c, already) {
     const phrases = [];
     const seen = new Set();
     const note = (ids, source) => {
@@ -389,10 +390,14 @@ export function candidateModel(source, facts, { freq = null, top = 6000 } = {}) 
     const own = comps.find((x) => x.zh === c);
     for (const seq of own?.seqs ?? []) note(seq, `description of ${c}`);
     for (const a of already ?? []) for (const f of words[a.id]?.paraphrase?.forms ?? []) note(wordRefIds(f), `paraphrase of ${a.term}`);
-    const at = (seq, ids) => {
-      for (let i = 0; i + ids.length <= seq.length; i++) if (ids.every((id, j) => seq[i + j] === id)) return true;
-      return false;
-    };
+    return phrases;
+  }
+  const at = (seq, ids) => {
+    for (let i = 0; i + ids.length <= seq.length; i++) if (ids.every((id, j) => seq[i + j] === id)) return true;
+    return false;
+  };
+
+  function shorterForms(c, phrases) {
     const out = [];
     for (const x of comps) {
       if (x.zh === c) continue;
@@ -404,6 +409,23 @@ export function candidateModel(source, facts, { freq = null, top = 6000 } = {}) 
       if (forms.length) out.push({ zh: x.zh, py: x.py, en: x.en, rank: x.rank, forms, saves: Math.max(...forms.map((f) => f.saves)) });
     }
     return out.sort((a, b) => a.rank - b.rank);
+  }
+
+  // The coverage items (primes, categories, grammar) the root would give a carrier: those with a form that
+  // holds the phrase the root would stand for, so the one word could say that form. The mirror of the
+  // removal's "coverage lost": same items and forms, no new weight. `sole` says the item has no
+  // single-word form today, i.e. no one word carries it alone.
+  function coverageCarriers(phrases) {
+    const out = [];
+    for (const it of items) {
+      const hit = [];
+      it.seqs.forEach((seq, i) => {
+        const p = phrases.filter((x) => at(seq, x.ids)).sort((a, b) => b.ids.length - a.ids.length)[0];
+        if (p) hit.push({ n: i + 1, text: pin(it.texts[i]), phrase: p.ids.map(term).join(' '), source: p.source });
+      });
+      if (hit.length) out.push({ id: it.id, eng: it.eng, forms: hit, alone: it.seqs.some((s) => s.length === 1), carriers: [...it.carriers].map(term) });
+    }
+    return out.sort((a, b) => a.alone - b.alone || a.id.localeCompare(b.id));
   }
 
   // -- swaps: K roots in, K words out ---------------------------------------------------------------------------------------
@@ -556,6 +578,10 @@ export function renderAddition(r) {
   out.push(`  Descriptions that get shorter: ${sh.length}${sh.length ? ` (${sh.reduce((a, x) => a + x.forms.length, 0)} form(s), words saved ${sh.reduce((a, x) => a + x.saves, 0)})` : ''}`);
   for (const x of sh.slice(0, 12)) out.push(`    ${x.zh} ${x.py} #${x.rank} "${x.en}" — ${x.forms.map((f) => `form ${f.n} ${f.text} (has "${f.phrase}", ${f.source}; ${f.saves} word(s) shorter)`).join('; ')}`);
   if (sh.length > 12) out.push(`    … and ${sh.length - 12} more`);
+  const cc = r.carriers ?? [];
+  out.push(`  Coverage items it would give a carrier: ${cc.length}${cc.length ? ` (${cc.filter((x) => !x.alone).length} with no single-word form today)` : ''}`);
+  for (const x of cc.slice(0, 12)) out.push(`    ${x.id} "${x.eng}" — ${x.forms.map((f) => `form ${f.n} ${f.text} (has "${f.phrase}", ${f.source})`).join('; ')}; now carried by ${x.carriers.join(', ') || 'no word'}${x.alone ? '' : ', no word alone'}`);
+  if (cc.length > 12) out.push(`    … and ${cc.length - 12} more`);
   return out.join('\n');
 }
 

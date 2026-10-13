@@ -163,6 +163,20 @@ describe('Mandarin', () => {
     expect(renderAddition(withFreq.addition('器'))).toContain('Descriptions that get shorter: 0');
   });
 
+  test('coverage carriers: items with a form that holds the phrase of the root', () => {
+    const phrase = '{{word:chi1}}-{{word:fan4}}';
+    const src = {
+      ...source,
+      composites: [...source.composites, { zh: '器', py: 'qì', en: 'tool', rank: 10, hsd: phrase }],
+      coverage: [{ key: 'atoms', items: [{ key: 'MEAL', eng: 'meal', words: ['chi1'], forms: [phrase] }, { key: 'EAT', eng: 'eat', words: ['chi1'], forms: ['{{word:chi1}}'] }] }, ...source.coverage],
+    };
+    const a = candidateModel(src, createKb(src).facts, { freq }).addition('器');
+    expect(a.carriers.map((x) => x.id)).toEqual(['atoms:MEAL', 'grammar:eat']);
+    expect(a.carriers.find((x) => x.id === 'atoms:MEAL')).toMatchObject({ alone: false, forms: [{ n: 1, source: 'description of 器' }] });
+    expect(renderAddition(a)).toContain('Coverage items it would give a carrier: 2');
+    expect(renderAddition(withFreq.addition('器'))).toContain('Coverage items it would give a carrier: 0');
+  });
+
   test('a trade: the root in, the cheapest word out', () => {
     const r = withFreq.swaps({ k: 1 });
     expect(r.adds).toEqual(['器']);
