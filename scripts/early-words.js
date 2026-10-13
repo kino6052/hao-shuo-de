@@ -75,22 +75,30 @@ function textsOf(entry) {
 // A catch-all word's sense counts as its own word: shí-jiān needs the card
 // for shí's "time" sense, a bare shí needs its main card (src/lib/senses.js).
 //
+// introductions(lessons) -> Map(id or id#sense -> { lesson, number, module }): where each card first appears
+// (the home lesson of findEarlyWords, also read by `kb add`).
+//
 // lessons: [{ id, number, entries: [{ key, ...assembled entry }] }] in order.
 // -> { home: Map(id or id#sense -> lesson number), problems: [{ lesson, key, kind, word, home?, text }] }
 //    kind 'early': a dictionary word used before its home lesson
 //    kind 'not-in-dictionary': a pinyin word the dictionary doesn't have
 //    kind 'never-introduced': a dictionary word no lesson introduces
-export function findEarlyWords(lessons, dictionary) {
-  const terms = termIndex(dictionary);
-  const home = new Map();
+export function introductions(lessons) {
+  const first = new Map();
   for (const lesson of lessons) {
     for (const entry of lesson.entries) {
       if (entry.type !== 'vocab') continue;
       const id = soleWordRef(entry.term);
       const key = id && senseKey(id, entry.sense);
-      if (key && !home.has(key)) home.set(key, lesson.number);
+      if (key && !first.has(key)) first.set(key, { lesson: lesson.id, number: lesson.number, module: entry.module ?? '' });
     }
   }
+  return first;
+}
+
+export function findEarlyWords(lessons, dictionary) {
+  const terms = termIndex(dictionary);
+  const home = new Map([...introductions(lessons)].map(([key, x]) => [key, x.number]));
   const problems = [];
   for (const lesson of lessons) {
     if (lesson.number === 1) continue;

@@ -26,6 +26,7 @@ import { wordRefIds, toneless } from '../word-refs.js';
 import { syllables } from '../pinyin-syllables.js';
 import { pinyinOf } from './whatif.js';
 import { patternIndex } from './grammar-uses.js';
+import { introductions } from '../../../scripts/early-words.js';
 
 // the common Mandarin words (and composites) count more
 export const rankWeight = (rank) => (rank <= 1000 ? 3 : rank <= 2000 ? 2 : 1);
@@ -373,7 +374,39 @@ export function candidateModel(source, facts, { freq = null, top = 6000 } = {}) 
     if (!freq) return { root: c, noFrequencies: true };
     const r = describeRoot(c);
     const phrases = rootPhrases(c, r.already);
-    return { ...r, shorter: shorterForms(c, phrases), carriers: coverageCarriers(phrases), english: englishWords(r), clashes: soundClashes(r) };
+    return { ...r, shorter: shorterForms(c, phrases), carriers: coverageCarriers(phrases), english: englishWords(r), clashes: soundClashes(r), lesson: lessonFor(r) };
+  }
+
+  // The lesson it would go in, from the lesson data the early-words gate reads (introductions in
+  // scripts/early-words.js): the root goes where the word it joins is introduced (the word that already gives
+  // the hanzi, or the word with its sound it would be a sense of); a new word is in no lesson yet. A composite
+  // the root completes or lets be spelled can first appear once all its other hanzi are introduced, and once
+  // the root is (so when the root is not in the book yet, it is shown as waiting for the root). No new weight.
+  const introduced = introductions(source.lessons ?? []);
+  const hanziHome = (h) => {
+    const keys = [];
+    for (const id of giver.get(h) ?? []) {
+      if (words[id].hanzi === h) keys.push(id);
+      for (const [k, x] of Object.entries(words[id].senses ?? {})) if (x.hanzi === h) keys.push(`${id}#${k}`);
+    }
+    return keys.map((k) => introduced.get(k)).filter(Boolean).sort((a, b) => a.number - b.number)[0] ?? null;
+  };
+  function lessonFor(r) {
+    let root;
+    if (r.already) root = { kind: 'already', of: r.already.map((a) => a.term), home: hanziHome(r.root) };
+    else if (r.as.kind === 'sense') root = { kind: 'sense', of: [r.as.term], home: introduced.get(r.as.of) ?? null };
+    else root = { kind: 'new', of: [], home: null };
+    const seen = new Set();
+    const composites = [];
+    for (const w of [...r.completes, ...r.spellable]) {
+      if (seen.has(w.zh)) continue;
+      seen.add(w.zh);
+      const others = [...new Set(w.zh)].filter((h) => h !== r.root).map((h) => ({ h, home: hanziHome(h) }));
+      const missing = others.filter((o) => !o.home).map((o) => o.h);
+      const homes = [...others.map((o) => o.home), root.home].filter(Boolean).sort((a, b) => b.number - a.number);
+      composites.push({ zh: w.zh, rank: w.rank, home: missing.length ? null : (homes[0] ?? null), missing, waitsForRoot: !missing.length && !root.home });
+    }
+    return { root, composites: composites.sort((a, b) => a.rank - b.rank) };
   }
 
   // The sound against what check-sounds looks at (scripts/check-sounds.js): the word with the same toned sound (one
@@ -633,6 +666,19 @@ export function renderAddition(r) {
     else out.push(`    sounds like the ${x.char} in ${x.term} ${x.hanzi}`);
   }
   if (cl.length > 12) out.push(`    … and ${cl.length - 12} more`);
+  const ls = r.lesson;
+  if (ls) {
+    const at = (h) => `${h.lesson} (lesson ${h.number}${h.module ? `, module ${h.module}` : ''})`;
+    const rl = ls.root;
+    out.push(`  Lesson it would go in: ${rl.home ? `${rl.kind === 'new' ? '' : 'with '}${rl.of.join(', ')} in ${at(rl.home)}` : rl.kind === 'sense' ? `not in the book yet (${rl.of.join(', ')}, the word it would join, is in no lesson)` : 'not in the book yet'}`);
+    const dated = new Map();
+    for (const x of ls.composites) if (x.home && !x.waitsForRoot) dated.set(x.home.number, { home: x.home, list: [...(dated.get(x.home.number)?.list ?? []), x] });
+    for (const { home, list } of [...dated.values()].sort((a, b) => a.home.number - b.home.number)) out.push(`    ${at(home)}: ${list.slice(0, 12).map((x) => x.zh).join(' ')}${list.length > 12 ? ` … (${list.length})` : ''}`);
+    const idle = ls.composites.filter((x) => x.waitsForRoot);
+    if (idle.length) out.push(`    once the root is taught (it is not in the book yet): ${idle.slice(0, 12).map((x) => `${x.zh}${x.home ? ` (its other hanzi are in by lesson ${x.home.number})` : ''}`).join(' ')}${idle.length > 12 ? ` … (${idle.length})` : ''}`);
+    const waiting = ls.composites.filter((x) => x.missing.length);
+    if (waiting.length) out.push(`    not in the book yet (a hanzi has no lesson): ${waiting.slice(0, 12).map((x) => `${x.zh}${x.missing.length ? ` (+${x.missing.join('')})` : ''}`).join(' ')}${waiting.length > 12 ? ` … (${waiting.length})` : ''}`);
+  }
   out.push('  English sentences it would make sayable: not known (no everyday-sentence list in the repo yet, KB_PLAN phase 6)');
   return out.join('\n');
 }
