@@ -42,6 +42,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "hao-label",
     en: "number + {{word:hao4}}, number …: {{Word:er4}}-{{word:hao4}} (number two). {{word:di4}} + number, the order: {{word:di4}}-{{word:yi1}} (first)",
     ru: "число + {{word:hao4}} — номер: {{Word:er4}}-{{word:hao4}} (номер два). {{word:di4}} + число — порядок: {{word:di4}}-{{word:yi1}} (первый)",
   },

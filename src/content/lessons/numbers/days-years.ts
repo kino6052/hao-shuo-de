@@ -51,6 +51,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "tian-nian-spans",
     en: "number + {{word:tian1}} / {{word:nian2}}: {{word:san1}} {{word:tian1}} (three days); {{word:ming2}}-{{word:tian1}} (tomorrow), {{word:qu4}}-{{word:nian2}} (last year)",
     ru: "число + {{word:tian1}} / {{word:nian2}}: {{word:san1}} {{word:tian1}} (три дня); {{word:ming2}}-{{word:tian1}} (завтра), {{word:qu4}}-{{word:nian2}} (в прошлом году)",
   },

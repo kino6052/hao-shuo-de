@@ -36,6 +36,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "dui-toward",
     en: "A {{word:dui4}} B + adjective, toward / for: {{Word:ta1}} {{word:dui4}} {{word:wo3}} {{word:hen3}} {{word:hao3}}. (He's good to me.)",
     ru: "A {{word:dui4}} B + прилагательное — к кому / для кого: {{Word:ta1}} {{word:dui4}} {{word:wo3}} {{word:hen3}} {{word:hao3}}. (Он ко мне хорошо относится.)",
   },

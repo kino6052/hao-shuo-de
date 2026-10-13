@@ -33,6 +33,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "measure-word",
     title: { en: "One Counting Word for Everything", ru: "Одно счётное слово для всего" },
     items: [
       {

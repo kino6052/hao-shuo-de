@@ -35,6 +35,7 @@ export default lessonModule({
     necessity: { en: "Now you can add and take away.", ru: "Теперь вы можете складывать и вычитать." },
   },
   info: {
+    pattern: "add-take",
     en: "A, B {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}, add: {{Word:san1}}, {{word:si4}} {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}, {{word:shi4}} {{word:qi1}}. (3 + 4 = 7) {{word:cong2}} A {{word:li3}}-{{word:mian4}} {{word:na2}} B, take away: {{Word:cong2}} {{word:qi1}} {{word:li3}}-{{word:mian4}} {{word:na2}} {{word:san1}}, {{word:shi4}} {{word:si4}}. (7 − 3 = 4)",
     ru: "A, B {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}} — сложить: {{Word:san1}}, {{word:si4}} {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}, {{word:shi4}} {{word:qi1}}. (3 + 4 = 7) {{word:cong2}} A {{word:li3}}-{{word:mian4}} {{word:na2}} B — отнять: {{Word:cong2}} {{word:qi1}} {{word:li3}}-{{word:mian4}} {{word:na2}} {{word:san1}}, {{word:shi4}} {{word:si4}}. (7 − 3 = 4)",
   },

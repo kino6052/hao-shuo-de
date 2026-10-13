@@ -36,6 +36,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "jiu-then",
     en: "who + {{word:jiu4}} + verb, then / right away: {{Word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:jiu4}} {{word:deng3}} {{word:ni3}}. (If you come, I'll wait for you.)",
     ru: "кто + {{word:jiu4}} + глагол — то / сразу: {{Word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:jiu4}} {{word:deng3}} {{word:ni3}}. (Если ты придёшь, то я тебя подожду.)",
   },

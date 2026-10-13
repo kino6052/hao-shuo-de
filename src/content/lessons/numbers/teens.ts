@@ -35,6 +35,7 @@ export default lessonModule({
     necessity: { en: "Now you can count past ten.", ru: "Теперь вы можете считать дальше десяти." },
   },
   info: {
+    pattern: "big-numbers",
     en: "Above ten: {{word:shi2}}-{{word:er4}} (12), {{word:er4}}-{{word:shi2}} (20)",
     ru: "Больше десяти: {{word:shi2}}-{{word:er4}} (12), {{word:er4}}-{{word:shi2}} (20)",
   },

@@ -36,6 +36,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "ci-times",
     en: "{{word:hen3}} {{word:duo1}} {{word:ci4}}, many times: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:hen3}} {{word:duo1}} {{word:ci4}}. (I've seen it many times.)",
     ru: "{{word:hen3}} {{word:duo1}} {{word:ci4}} — много раз: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:hen3}} {{word:duo1}} {{word:ci4}}. (Я видел это много раз.)",
   },

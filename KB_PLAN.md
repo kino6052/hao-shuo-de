@@ -195,6 +195,49 @@ A lesson's grammar box becomes `{ type: "grammar", pattern: "compare-bi" }`. The
   - [x] words-and-sentences/not (2026-10-13): pattern `bu-shi-not` (existing); the box carries `pattern: "bu-shi-not"`, text unchanged.
   - [x] words-and-sentences/this (2026-10-13): pattern `shi-copula` (shared with `is`); the box carries `pattern: "shi-copula"`, text unchanged. Next module: not named yet.
   - [x] modifying-nouns/like (2026-10-13): pattern `hen-adjective` (existing); the one-line box carries `pattern: "hen-adjective"`, text unchanged. (sounds-and-symbols other boxes are notes.)
+  - [x] also-and-all/all (2026-10-13): pattern `dou-all` (existing); the box carries `pattern: "dou-all"`, text unchanged.
+  - [x] also-and-all/also-do (2026-10-13): pattern `ye-also` (existing); the box carries `pattern: "ye-also"`, text unchanged.
+  - [x] also-and-all/part (2026-10-13): pattern `bufen-part` (existing); the box carries `pattern: "bufen-part"`, text unchanged.
+  - [x] around-an-action/after (2026-10-13): pattern `wan-hou-after` (existing); the box carries `pattern: "wan-hou-after"`, text unchanged.
+  - [x] around-an-action/again (2026-10-13): pattern `you-again` (existing); the box carries `pattern: "you-again"`, text unchanged.
+  - [x] around-an-action/finished (2026-10-13): pattern `wan-finished` (existing); the box carries `pattern: "wan-finished"`, text unchanged.
+  - [x] around-an-action/moment (2026-10-13): pattern `yi-xia-moment` (existing); the box carries `pattern: "yi-xia-moment"`, text unchanged.
+  - [x] around-an-action/start (2026-10-13): pattern `kaishi-start` (existing); the box carries `pattern: "kaishi-start"`, text unchanged.
+  - [x] around-an-action/times (2026-10-13): pattern `ci-times` (existing); the box carries `pattern: "ci-times"`, text unchanged.
+  - [x] around-an-action/when (2026-10-13): pattern `when-clause` (existing); the box carries `pattern: "when-clause"`, text unchanged.
+  - [x] becoming-and-making/ba (2026-10-13): pattern `ba-handle` (existing); the box carries `pattern: "ba-handle"`, text unchanged.
+  - [x] becoming-and-making/became (2026-10-13): pattern `bian-became` (existing); the box carries `pattern: "bian-became"`, text unchanged.
+  - [x] becoming-and-making/changed (2026-10-13): pattern `le-changed` (existing); the box carries `pattern: "le-changed"`, text unchanged.
+  - [x] comparing/most (2026-10-13): pattern `zui-most` (existing); the box carries `pattern: "zui-most"`, text unchanged.
+  - [x] comparing/same (2026-10-13): pattern `yi-yang-same` (existing); the box carries `pattern: "yi-yang-same"`, text unchanged.
+  - [x] comparing/than (2026-10-13): pattern `bi-than` (existing); the box carries `pattern: "bi-than"`, text unchanged.
+  - [x] doubling-words/describe (2026-10-13): pattern `doubled-adjective` (existing); the box carries `pattern: "doubled-adjective"`, text unchanged.
+  - [x] doubling-words/verbs (2026-10-13): pattern `doubled-verb` (existing); the box carries `pattern: "doubled-verb"`, text unchanged.
+  - [x] greetings-and-feelings/order (2026-10-13): pattern `order-dont` (existing); the box carries `pattern: "order-dont"`, text unchanged.
+  - [x] how-much/not (2026-10-13): pattern `bu-adjective` (existing); the box carries `pattern: "bu-adjective"`, text unchanged.
+  - [x] how-much/really (2026-10-13): pattern `zhen-really` (existing); the box carries `pattern: "zhen-really"`, text unchanged.
+  - [x] inside-a-sentence/toward (2026-10-13): pattern `dui-toward` (existing); the box carries `pattern: "dui-toward"`, text unchanged.
+  - [x] inside-a-sentence/with (2026-10-13): pattern `yong-with` (existing); the box carries `pattern: "yong-with"`, text unchanged.
+  - [x] linking-sentences/if (2026-10-13): pattern `ruguo-if` (existing); the box carries `pattern: "ruguo-if"`, text unchanged.
+  - [x] linking-sentences/then (2026-10-13): pattern `jiu-then` (existing); the box carries `pattern: "jiu-then"`, text unchanged.
+  - [x] modifying-nouns/before (2026-10-13): pattern `de-modifier` (existing); the box carries `pattern: "de-modifier"`, text unchanged.
+  - [x] moving/arrive (2026-10-13): pattern `le-new-situation` (existing); the box carries `pattern: "le-new-situation"`, text unchanged.
+  - [x] numbers/add-take (2026-10-13): pattern `add-take` (existing); the box carries `pattern: "add-take"`, text unchanged.
+  - [x] numbers/days-years (2026-10-13): pattern `tian-nian-spans` (existing); the box carries `pattern: "tian-nian-spans"`, text unchanged.
+  - [x] numbers/label (2026-10-13): pattern `hao-label` (existing); the box carries `pattern: "hao-label"`, text unchanged.
+  - [x] numbers/teens (2026-10-13): pattern `big-numbers` (existing); the box carries `pattern: "big-numbers"`, text unchanged.
+  - [x] pointing/plural-pointers (2026-10-13): pattern `men-plural` (existing); the box carries `pattern: "men-plural"`, text unchanged.
+  - [x] pointing/ge-is-universal (2026-10-13): pattern `measure-word` (existing); the box carries `pattern: "measure-word"`, text unchanged.
+  - [x] pre-verbs/can (2026-10-13): pattern `can-verb` (existing); the box carries `pattern: "can-verb"`, text unchanged.
+  - [x] pre-verbs/know-how (2026-10-13): pattern `know-how` (existing); the box carries `pattern: "know-how"`, text unchanged.
+  - [x] pre-verbs/learn (2026-10-13): pattern `learn-verb` (existing); the box carries `pattern: "learn-verb"`, text unchanged.
+  - [x] pre-verbs/maybe (2026-10-13): pattern `maybe-verb` (existing); the box carries `pattern: "maybe-verb"`, text unchanged.
+  - [x] roles-of-a-word/person (2026-10-13): pattern `verb-de-person` (existing); the box carries `pattern: "verb-de-person"`, text unchanged.
+  - [x] when-it-happens/before (2026-10-13): pattern `guo-before` (existing); the box carries `pattern: "guo-before"`, text unchanged.
+  - [x] when-it-happens/done (2026-10-13): pattern `le-done` (existing); the box carries `pattern: "le-done"`, text unchanged.
+  - [x] when-it-happens/time (2026-10-13): pattern `time-first` (existing); the box carries `pattern: "time-first"`, text unchanged.
+  - [x] when-it-happens/will (2026-10-13): pattern `hui-will` (existing); the box carries `pattern: "hui-will"`, text unchanged.
+  - Modules with an inline grammar box and no matching pattern (left without a pointer, no pattern file made): the rest of the non-note modules in all 24 lessons. Near misses (frame matches, box examples differ from the pattern's taught list): also-and-all/also-is, also-and-all/everything (adds na3-li3-dou1), becoming-and-making/make (adds liao4), becoming-and-making/strong (you3 li4 vs lì-qì), linking-sentences/because, linking-sentences/but, moving/from, moving/move, numbers/clock, numbers/count-kinds, numbers/little, numbers/times-share (divide example), pre-verbs/love, pre-verbs/want, questions/answer, roles-of-a-word/how, roles-of-a-word/thing, when-it-happens/now, where-it-is/where, where-it-is/middle, who-does-what/do, who-does-what/not, direction-and-result/can-cant, direction-and-result/result, doubling-words/every, everyday-patterns/help, how-much/hard-and-looks, how-much/very, greetings-and-feelings/hello, greetings-and-feelings/feel, greetings-and-feelings/heart, questions/why-how, numbers/aloud. A box spanning several patterns: inside-a-sentence/and-or, inside-a-sentence/give, questions/yes-no, questions/what, everyday-patterns/may-i, where-it-is/in-on-under. No pattern at all: the other modules (colors, direction words, have-someone, let-me, my-turn, teach, left-right, sides, where-question, count, count-alone, pointers, and so on).
 - [~] Rules for every pattern. Then the report over all texts (K7):
   - [x] lesson sentences, including the early-patterns rule;
   - [x] composite examples;

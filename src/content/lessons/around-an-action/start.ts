@@ -32,6 +32,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "kaishi-start",
     en: "{{word:kai1shi3}} + verb, start: {{Word:wo3}} {{word:kai1shi3}} {{word:wan2r}} {{word:le}}. (I started to play.)",
     ru: "{{word:kai1shi3}} + глагол — начать: {{Word:wo3}} {{word:kai1shi3}} {{word:wan2r}} {{word:le}}. (Я начал играть.)",
   },

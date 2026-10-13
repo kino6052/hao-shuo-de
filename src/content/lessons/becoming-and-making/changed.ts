@@ -37,6 +37,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "le-changed",
     en: "adjective + {{word:le}}, it changed: {{Word:shui3}} {{word:re4}} {{word:le}}. (The water got hot.)",
     ru: "прилагательное + {{word:le}} — изменилось: {{Word:shui3}} {{word:re4}} {{word:le}}. (Вода нагрелась.)",
   },

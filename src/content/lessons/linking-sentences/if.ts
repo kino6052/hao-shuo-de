@@ -38,6 +38,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "ruguo-if",
     en: "{{word:ru2guo3}} X, …, if: {{Word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:deng3}} {{word:ni3}}. (If you come, I'll wait for you.)",
     ru: "{{word:ru2guo3}} X, … — если: {{Word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:deng3}} {{word:ni3}}. (Если ты придёшь, я тебя подожду.)",
   },

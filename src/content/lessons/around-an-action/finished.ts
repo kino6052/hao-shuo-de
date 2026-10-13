@@ -36,6 +36,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "wan-finished",
     en: "verb-{{word:wan2}} {{word:le}}, finished: {{Word:wo3}} {{word:chi1}}-{{word:wan2}} {{word:le}}. (I finished eating.)",
     ru: "глагол-{{word:wan2}} {{word:le}} — закончил: {{Word:wo3}} {{word:chi1}}-{{word:wan2}} {{word:le}}. (Я доел.)",
   },

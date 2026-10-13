@@ -38,6 +38,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "zhen-really",
     en: "{{word:zhen1}} + adjective, really: {{Word:zhen1}} {{word:re4}}! (It's really hot!)",
     ru: "{{word:zhen1}} + прилагательное — правда: {{Word:zhen1}} {{word:re4}}! (Правда жарко!)",
   },

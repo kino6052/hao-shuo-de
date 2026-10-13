@@ -32,6 +32,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "ba-handle",
     en: "{{word:ba3}} + thing + {{word:zuo4}} + result: {{Word:wo3}} {{word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:zuo4}} {{word:hao3}} {{word:le}}. (I fixed the tool.)",
     ru: "{{word:ba3}} + вещь + {{word:zuo4}} + результат: {{Word:wo3}} {{word:ba3}} {{word:gong1}}-{{word:ju4}} {{word:zuo4}} {{word:hao3}} {{word:le}}. (Я починил инструмент.)",
   },

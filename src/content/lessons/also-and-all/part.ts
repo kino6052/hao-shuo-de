@@ -41,6 +41,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "bufen-part",
     en: "{{word:bu4}}-{{light:fen1}}, part: {{Word:zhe4}} {{word:bu4}}-{{light:fen1}} {{word:hen3}} {{word:hao3}}. (This part is good.) {{word:da4}} {{word:bu4}}-{{light:fen1}}: most.",
     ru: "{{word:bu4}}-{{light:fen1}} — часть: {{Word:zhe4}} {{word:bu4}}-{{light:fen1}} {{word:hen3}} {{word:hao3}}. (Эта часть хорошая.) {{word:da4}} {{word:bu4}}-{{light:fen1}} — большинство.",
   },

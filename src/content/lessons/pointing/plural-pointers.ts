@@ -36,6 +36,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "men-plural",
     en: "{{word:wo3}} / {{word:ni3}} / {{word:ta1}} + -{{word:men}}, more than one: {{Word:wo3}}-{{word:men}}. (We.)",
     ru: "{{word:wo3}} / {{word:ni3}} / {{word:ta1}} + -{{word:men}} — больше одного: {{Word:wo3}}-{{word:men}}. (Мы.)",
   },

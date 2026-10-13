@@ -63,6 +63,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "ye-also",
     en: "{{word:ye3}} + verb, also: {{Word:wo3}} {{word:ye3}} {{word:chi1}}. (I eat too.)",
     ru: "{{word:ye3}} + глагол — тоже: {{Word:wo3}} {{word:ye3}} {{word:chi1}}. (Я тоже ем.)",
   },

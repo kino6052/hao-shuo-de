@@ -36,6 +36,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "you-again",
     en: "{{word:you4}} + verb + {{word:le}}, again: {{Word:ta1}} {{word:you4}} {{word:chi1}} {{word:le}}. (He ate again.)",
     ru: "{{word:you4}} + глагол + {{word:le}} — опять: {{Word:ta1}} {{word:you4}} {{word:chi1}} {{word:le}}. (Он опять поел.)",
   },

@@ -36,6 +36,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "when-clause",
     en: "verb-{{word:de}} {{word:shi2}}-{{word:jian1}}, when: {{Word:wo3}} {{word:chi1}}-{{word:de}} {{word:shi2}}-{{word:jian1}}, {{word:wo3}} {{word:bu4}} {{word:shuo1}}. (When I eat, I don't talk.)",
     ru: "глагол-{{word:de}} {{word:shi2}}-{{word:jian1}} — когда: {{Word:wo3}} {{word:chi1}}-{{word:de}} {{word:shi2}}-{{word:jian1}}, {{word:wo3}} {{word:bu4}} {{word:shuo1}}. (Когда я ем, я не разговариваю.)",
   },

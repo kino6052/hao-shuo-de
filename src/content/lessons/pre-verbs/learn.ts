@@ -31,6 +31,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "learn-verb",
     en: "{{word:xue2}} + verb, learn to: {{Word:wo3}} {{word:xue2}} {{word:xie3}}. (I'm learning to write.)",
     ru: "{{word:xue2}} + глагол — учиться: {{Word:wo3}} {{word:xue2}} {{word:xie3}}. (Я учусь писать.)",
   },

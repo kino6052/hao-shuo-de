@@ -44,6 +44,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "yong-with",
     en: "{{word:yong4}} + thing + verb, with: {{Word:wo3}} {{word:yong4}} {{word:gong1}}-{{word:ju4}} {{word:xie3}}. (I write with a tool.)",
     ru: "{{word:yong4}} + вещь + глагол — чем: {{Word:wo3}} {{word:yong4}} {{word:gong1}}-{{word:ju4}} {{word:xie3}}. (Я пишу инструментом.)",
   },

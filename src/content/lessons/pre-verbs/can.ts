@@ -42,6 +42,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "can-verb",
     items: [
       {
         en: "{{word:neng2}} + verb, can: {{Word:wo3}} {{word:neng2}} {{word:ting1}}. (I can hear.)",

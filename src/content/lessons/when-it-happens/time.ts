@@ -51,6 +51,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "time-first",
     en: "Time first: {{Word:yue4}}-{{word:de}} {{word:shi2}}-{{word:jian1}}, {{word:wo3}} {{word:shui4jiao4}}. (At night, I sleep.) {{Word:xian4}}-{{word:zai4}}, … (Now, …)",
     ru: "Сначала время: {{Word:yue4}}-{{word:de}} {{word:shi2}}-{{word:jian1}}, {{word:wo3}} {{word:shui4jiao4}}. (Ночью я сплю.) {{Word:xian4}}-{{word:zai4}}, … (Сейчас …)",
   },

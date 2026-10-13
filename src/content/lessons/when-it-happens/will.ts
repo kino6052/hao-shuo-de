@@ -32,6 +32,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "hui-will",
     en: "{{word:hui4}} + verb, will: {{Word:wo3}} {{word:hui4}} {{word:chi1}}. (I will eat.)",
     ru: "{{word:hui4}} + глагол — будет: {{Word:wo3}} {{word:hui4}} {{word:chi1}}. (Я буду есть.)",
   },

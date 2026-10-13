@@ -49,6 +49,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "verb-de-person",
     en: "verb-{{word:de}} {{word:ren2}}, the one who: {{word:xie3}}-{{word:de}} {{word:ren2}} (the one who writes)",
     ru: "глагол-{{word:de}} {{word:ren2}} — тот, кто: {{word:xie3}}-{{word:de}} {{word:ren2}} (тот, кто пишет)",
   },

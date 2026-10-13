@@ -35,6 +35,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "know-how",
     en: "{{word:zhi1dao4}} {{word:zen3me}} + verb, know how to: {{Word:wo3}} {{word:zhi1dao4}} {{word:zen3me}} {{word:xie3}}. (I know how to write.)",
     ru: "{{word:zhi1dao4}} {{word:zen3me}} + глагол — уметь: {{Word:wo3}} {{word:zhi1dao4}} {{word:zen3me}} {{word:xie3}}. (Я умею писать.)",
   },

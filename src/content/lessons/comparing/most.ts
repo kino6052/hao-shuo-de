@@ -36,6 +36,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "zui-most",
     en: "{{word:zui4}} + adjective, the most: {{Word:zhe4}}-ge {{word:zui4}} {{word:da4}}. (This one is the biggest.)",
     ru: "{{word:zui4}} + прилагательное — самый: {{Word:zhe4}}-ge {{word:zui4}} {{word:da4}}. (Этот самый большой.)",
   },

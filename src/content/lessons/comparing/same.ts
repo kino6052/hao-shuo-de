@@ -32,6 +32,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "yi-yang-same",
     en: "{{word:yi1}}-{{word:yang4}}, the same: {{Word:ta1}}-{{word:men}} {{word:yi1}}-{{word:yang4}}. (They're the same.)",
     ru: "{{word:yi1}}-{{word:yang4}} — одинаковый: {{Word:ta1}}-{{word:men}} {{word:yi1}}-{{word:yang4}}. (Они одинаковые.)",
   },

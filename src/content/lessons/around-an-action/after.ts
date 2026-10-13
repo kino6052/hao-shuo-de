@@ -37,6 +37,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "wan-hou-after",
     en: "verb-{{word:wan2}} {{word:hou4}}, after: {{Word:chi1}}-{{word:wan2}} {{word:hou4}}, {{word:wo3}} {{word:shui4jiao4}}. (After eating, I sleep.)",
     ru: "глагол-{{word:wan2}} {{word:hou4}} — после: {{Word:chi1}}-{{word:wan2}} {{word:hou4}}, {{word:wo3}} {{word:shui4jiao4}}. (После еды я сплю.)",
   },

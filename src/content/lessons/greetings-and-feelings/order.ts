@@ -37,6 +37,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "order-dont",
     en: "A verb on its own is an order: {{Word:chi1}}! (Eat!) {{Word:bu4}} {{word:yao4}} + verb: don't.",
     ru: "Глагол сам по себе — просьба: {{Word:chi1}}! (Ешь!) {{Word:bu4}} {{word:yao4}} + глагол — не делай.",
   },

@@ -26,6 +26,7 @@ export default lessonModule({
     necessity: { en: "Now you can make a request softer.", ru: "Теперь вы можете сделать просьбу мягче." },
   },
   info: {
+    pattern: "doubled-verb",
     en: "verb-verb, a little: {{Word:wo3}} {{word:kan4}}-kan. (Let me have a look.)",
     ru: "глагол-глагол — немного: {{Word:wo3}} {{word:kan4}}-kan. (Дай-ка я посмотрю.)",
   },

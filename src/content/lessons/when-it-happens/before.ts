@@ -41,6 +41,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "guo-before",
     en: "verb-{{word:guo4}}, done before: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:zhe4}}-ge {{word:dong4}}-{{word:wu4}}. (I've seen this animal before.)",
     ru: "глагол-{{word:guo4}} — уже когда-то делал: {{Word:wo3}} {{word:kan4}}-{{word:guo4}} {{word:zhe4}}-ge {{word:dong4}}-{{word:wu4}}. (Я уже видел это животное.)",
   },

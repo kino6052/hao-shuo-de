@@ -33,6 +33,7 @@ export default lessonModule({
     necessity: { en: "Now you can say you're not sure.", ru: "Теперь вы можете сказать, что не уверены." },
   },
   info: {
+    pattern: "maybe-verb",
     en: "{{word:ke3}}-{{word:neng2}} + verb, maybe: {{Word:ta1}} {{word:ke3}}-{{word:neng2}} {{word:zhi1dao4}}. (He might know.)",
     ru: "{{word:ke3}}-{{word:neng2}} + глагол — может быть: {{Word:ta1}} {{word:ke3}}-{{word:neng2}} {{word:zhi1dao4}}. (Он, может быть, знает.)",
   },

@@ -30,6 +30,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "doubled-adjective",
     en: "adjective-adjective-{{word:de}}, stronger: {{Word:yue4}} {{word:yuan2}}-{{word:yuan2}}-{{word:de}}. (The moon is nice and round.) {{word:hao3}}-{{word:hao3}} + verb, well: {{Word:hao3}}-{{word:hao3}} {{word:xue2}}! (Study hard!)",
     ru: "прилагательное-прилагательное-{{word:de}} — сильнее: {{Word:yue4}} {{word:yuan2}}-{{word:yuan2}}-{{word:de}}. (Луна круглая-круглая.) {{word:hao3}}-{{word:hao3}} + глагол — как следует: {{Word:hao3}}-{{word:hao3}} {{word:xue2}}! (Учись хорошенько!)",
   },

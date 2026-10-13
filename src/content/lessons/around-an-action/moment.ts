@@ -41,6 +41,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "yi-xia-moment",
     en: "verb + {{word:yi1}}-{{word:xia4}}, for a moment: {{Word:deng3}} {{word:yi1}}-{{word:xia4}}! (Wait a moment!)",
     ru: "глагол + {{word:yi1}}-{{word:xia4}} — на минутку: {{Word:deng3}} {{word:yi1}}-{{word:xia4}}! (Подожди минутку!)",
   },

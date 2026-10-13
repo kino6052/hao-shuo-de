@@ -29,6 +29,7 @@ export default lessonModule({
     necessity: { en: "Now you can describe a change.", ru: "Теперь вы можете описать перемену." },
   },
   info: {
+    pattern: "bian-became",
     en: "{{word:bian4}} + adjective + {{word:le}}, became: {{Word:shui3}} {{word:bian4}} {{word:leng3}} {{word:le}}. (The water turned cold.)",
     ru: "{{word:bian4}} + прилагательное + {{word:le}} — стало: {{Word:shui3}} {{word:bian4}} {{word:leng3}} {{word:le}}. (Вода стала холодной.)",
   },

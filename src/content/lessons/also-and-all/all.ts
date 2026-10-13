@@ -36,6 +36,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "dou-all",
     en: "{{word:dou1}} + verb, all: {{Word:wo3}}-{{word:men}} {{word:dou1}} {{word:chi1}}. (We all eat.)",
     ru: "{{word:dou1}} + глагол — все: {{Word:wo3}}-{{word:men}} {{word:dou1}} {{word:chi1}}. (Мы все едим.)",
   },

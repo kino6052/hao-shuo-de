@@ -36,6 +36,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "de-modifier",
     en: "adjective + -{{word:de}} + NOUN: {{word:da4}}-{{word:de}} {{word:di4}}-{{light:fang1}} (a big place)",
     ru: "прилагательное + -{{word:de}} + СУЩЕСТВИТЕЛЬНОЕ: {{word:da4}}-{{word:de}} {{word:di4}}-{{light:fang1}} (большое место)",
   },

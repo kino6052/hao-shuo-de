@@ -52,6 +52,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "le-done",
     items: [
       {
         en: "verb + {{word:le}}, done: {{Word:wo3}} {{word:chi1}} {{word:le}}. (I ate.)",

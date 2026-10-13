@@ -61,6 +61,7 @@ export default lessonModule({
     necessity: { en: "Now you can compare two things.", ru: "Теперь вы можете сравнить две вещи." },
   },
   info: {
+    pattern: "bi-than",
     en: "A {{word:bi3}} B + adjective: {{Word:wo3}} {{word:bi3}} {{word:ni3}} {{word:da4}}. (I'm bigger than you.) No {{word:hen3}} here.",
     ru: "A {{word:bi3}} B + прилагательное: {{Word:wo3}} {{word:bi3}} {{word:ni3}} {{word:da4}}. (Я больше тебя.) Без {{word:hen3}}.",
   },

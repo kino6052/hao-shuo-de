@@ -25,6 +25,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "bu-adjective",
     en: "{{word:bu4}} / {{word:bu4}} {{word:hen3}} + adjective, not / not very: {{Word:shui3}} {{word:bu4}} {{word:leng3}}. (The water isn't cold.)",
     ru: "{{word:bu4}} / {{word:bu4}} {{word:hen3}} + прилагательное — не / не очень: {{Word:shui3}} {{word:bu4}} {{word:leng3}}. (Вода не холодная.)",
   },

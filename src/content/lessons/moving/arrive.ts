@@ -29,6 +29,7 @@ export default lessonModule({
     necessity: { en: "Now you can say you got there.", ru: "Теперь вы можете сказать, что добрались." },
   },
   info: {
+    pattern: "le-new-situation",
     en: "{{word:dao4}} + place, arrive: {{Word:wo3}} {{word:dao4}} {{word:jia1}} {{word:le}}. (I've arrived home.)",
     ru: "{{word:dao4}} + место — добраться: {{Word:wo3}} {{word:dao4}} {{word:jia1}} {{word:le}}. (Я пришёл домой.)",
   },
