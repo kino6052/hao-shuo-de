@@ -76,6 +76,8 @@ export interface InfoItem extends Localized {
  */
 export type Info = (Localized | { title?: Localized; ordered?: boolean; items: InfoItem[] }) & {
   kind?: "pattern" | "note";
+  /** The id of the pattern file (src/data/grammar/) this box shows; the box text stays as written. */
+  pattern?: string;
 };
 
 export interface Example extends Localized {
@@ -146,6 +148,7 @@ export function infoEntry(info: Info): Entry {
     items: infoItems(box.items),
   };
   if ("items" in info && info.title) entry.title = langs(info.title);
+  if (info.pattern) entry.pattern = info.pattern;
   return entry;
 }
 

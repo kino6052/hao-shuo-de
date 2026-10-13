@@ -14,6 +14,9 @@
 
 import { gatePolicy } from './finished-lessons.js';
 import { LESSON_IDS, importLessonFile } from './lessons.js';
+import { readdirSync } from 'fs';
+
+const PATTERN_IDS = new Set(readdirSync(new URL('../src/data/grammar/', import.meta.url)).filter((f) => f.endsWith('.ts') && f !== 'index.ts').map((f) => f.slice(0, -3)));
 
 const { blocking, named, scopeLabel, summary } = gatePolicy();
 
@@ -41,6 +44,7 @@ for (const id of LESSON_IDS) {
     for (const info of infos) {
       if (!hasEnglish(info)) problems.push({ lesson: id, text: `module "${m}": the info block is empty` });
       if (info.subtype === 'grammar') patterns++;
+      if (info.pattern && !PATTERN_IDS.has(info.pattern)) problems.push({ lesson: id, text: `module "${m}": the box points to pattern "${info.pattern}", which has no file in src/data/grammar/` });
     }
     const firstExample = mine.findIndex((e) => e.type === 'example');
     const infoAt = mine.findIndex((e) => e.type === 'info' || e.type === 'warning');

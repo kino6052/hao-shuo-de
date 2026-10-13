@@ -117,26 +117,27 @@ import m113 from "./what-question.ts";
 import m114 from "./when-clause.ts";
 import m115 from "./which-na.ts";
 import m116 from "./why-how-question.ts";
-import m117 from "./xia-fall.ts";
-import m118 from "./ye-also.ts";
-import m119 from "./yi-dian-little.ts";
-import m120 from "./yi-jiu-asap.ts";
-import m121 from "./yi-qi-together.ts";
-import m122 from "./yi-qian-before.ts";
-import m123 from "./yi-xia-moment.ts";
-import m124 from "./yi-yang-same.ts";
-import m125 from "./yinwei-because.ts";
-import m126 from "./yong-with.ts";
-import m127 from "./you-again.ts";
-import m128 from "./you-xie-some.ts";
-import m129 from "./zai-now.ts";
-import m130 from "./zai-place.ts";
-import m131 from "./zenme-yang-how.ts";
-import m132 from "./zhe-yang-this-way.ts";
-import m133 from "./zhen-really.ts";
-import m134 from "./zhi-only.ts";
-import m135 from "./zui-most.ts";
-import m136 from "./zuo-make.ts";
+import m117 from "./written-words.ts";
+import m118 from "./xia-fall.ts";
+import m119 from "./ye-also.ts";
+import m120 from "./yi-dian-little.ts";
+import m121 from "./yi-jiu-asap.ts";
+import m122 from "./yi-qi-together.ts";
+import m123 from "./yi-qian-before.ts";
+import m124 from "./yi-xia-moment.ts";
+import m125 from "./yi-yang-same.ts";
+import m126 from "./yinwei-because.ts";
+import m127 from "./yong-with.ts";
+import m128 from "./you-again.ts";
+import m129 from "./you-xie-some.ts";
+import m130 from "./zai-now.ts";
+import m131 from "./zai-place.ts";
+import m132 from "./zenme-yang-how.ts";
+import m133 from "./zhe-yang-this-way.ts";
+import m134 from "./zhen-really.ts";
+import m135 from "./zhi-only.ts";
+import m136 from "./zui-most.ts";
+import m137 from "./zuo-make.ts";
 
 export const PATTERNS = [
   m0,
@@ -276,4 +277,5 @@ export const PATTERNS = [
   m134,
   m135,
   m136,
+  m137,
 ];

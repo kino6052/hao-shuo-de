@@ -190,6 +190,7 @@ A lesson's grammar box becomes `{ type: "grammar", pattern: "compare-bi" }`. The
   - generate-grammar-overview reads the pattern files;
   - coverage grammar items list their patterns, and check-coverage checks both directions;
   - check-grammar-blocks requires a pattern per module.
+  - [x] sounds-and-symbols/no-word-boundaries (2026-10-13): pattern `written-words`; the box carries `pattern: "written-words"` (new optional `pattern` on a module's info, kept on the entry) and its text is unchanged; check-grammar-blocks fails a pointer to a missing file. Next module: words-and-sentences/is, not, this (their pattern files exist; the pointers are not set).
 - [~] Rules for every pattern. Then the report over all texts (K7):
   - [x] lesson sentences, including the early-patterns rule;
   - [x] composite examples;

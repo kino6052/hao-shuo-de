@@ -43,6 +43,8 @@ export interface InfoEntry {
   /** For an ordered list: the number of its first item (default 1). */
   start?: number;
   subtype?: 'grammar';
+  /** The pattern (src/data/grammar/<id>.ts) the box shows. */
+  pattern?: string;
   tag?: string;
   items: InfoItem[];
 }

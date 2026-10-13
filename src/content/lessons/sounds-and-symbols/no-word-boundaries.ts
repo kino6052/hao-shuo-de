@@ -23,6 +23,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "written-words",
     title: { en: "How words are written", ru: "Как пишутся слова" },
     ordered: true,
     items: [
