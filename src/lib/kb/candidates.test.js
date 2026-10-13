@@ -186,6 +186,16 @@ describe('Mandarin', () => {
     expect(renderAddition(a)).toContain('English sentences it would make sayable: not known');
   });
 
+  test('sound clashes: the word with the same sound, the words that differ by tone', () => {
+    const same = candidateModel(source, kb.facts, { freq: [{ zh: '飞鸡', py: 'fēijī', rank: 5 }] }).addition('鸡');
+    expect(same.clashes).toEqual([{ kind: 'same', id: 'ji1', term: 'jī', hanzi: '机' }]);
+    expect(renderAddition(same)).toContain('Sound clashes (check-sounds): 1');
+    expect(renderAddition(same)).toContain('same sound as jī 机');
+    const tone = candidateModel(source, kb.facts, { freq: [{ zh: '飞级', py: 'fēijí', rank: 5 }] }).addition('级');
+    expect(tone.clashes).toEqual([{ kind: 'tone', id: 'ji1', term: 'jī', hanzi: '机' }]);
+    expect(renderAddition(withFreq.addition('器'))).toContain('Sound clashes (check-sounds): 0');
+  });
+
   test('a trade: the root in, the cheapest word out', () => {
     const r = withFreq.swaps({ k: 1 });
     expect(r.adds).toEqual(['器']);

@@ -373,7 +373,30 @@ export function candidateModel(source, facts, { freq = null, top = 6000 } = {}) 
     if (!freq) return { root: c, noFrequencies: true };
     const r = describeRoot(c);
     const phrases = rootPhrases(c, r.already);
-    return { ...r, shorter: shorterForms(c, phrases), carriers: coverageCarriers(phrases), english: englishWords(r) };
+    return { ...r, shorter: shorterForms(c, phrases), carriers: coverageCarriers(phrases), english: englishWords(r), clashes: soundClashes(r) };
+  }
+
+  // The sound against what check-sounds looks at (scripts/check-sounds.js): the word with the same toned sound (one
+  // word per sound, so the root becomes a sense of it, and a lesson shows one sense of a word), the words that differ
+  // only by tone, and the longer words that have this syllable written with another hanzi. Same data, no new rule.
+  function soundClashes(r) {
+    if (!r.sound) return [];
+    const out = [];
+    const same = soundOf.get(r.sound);
+    if (same && words[same].hanzi !== r.root) out.push({ kind: 'same', id: same, term: term(same), hanzi: words[same].hanzi });
+    for (const [id, w] of Object.entries(words)) {
+      if (toneless(w.term) === toneless(r.sound) && w.term !== r.sound) out.push({ kind: 'tone', id, term: w.term, hanzi: w.hanzi });
+    }
+    const senseHanzi = new Set(Object.values(words[same]?.senses ?? {}).map((x) => x.hanzi));
+    for (const [id, w] of Object.entries(words)) {
+      const syl = syllables(w.term, w.hanzi);
+      if (!syl || syl.length < 2) continue;
+      const chars = [...w.hanzi];
+      syl.forEach((x, i) => {
+        if (x === r.sound && chars[i] && chars[i] !== r.root && chars[i] !== words[same]?.hanzi && !senseHanzi.has(chars[i])) out.push({ kind: 'inside', id, term: w.term, hanzi: w.hanzi, char: chars[i] });
+      });
+    }
+    return out;
   }
 
   // The English words (the dictionary's glosses of the composites) that become sayable: the composites the root
@@ -602,6 +625,14 @@ export function renderAddition(r) {
   out.push(`  English words it would make sayable: ${en.length}${en.length ? ' (glosses of the composites it completes or lets be spelled)' : ''}`);
   for (const x of en.slice(0, 12)) out.push(`    "${x.en}" — ${x.zh} ${x.py} #${x.rank}`);
   if (en.length > 12) out.push(`    … and ${en.length - 12} more`);
+  const cl = r.clashes ?? [];
+  out.push(`  Sound clashes (check-sounds): ${cl.length}`);
+  for (const x of cl.slice(0, 12)) {
+    if (x.kind === 'same') out.push(`    same sound as ${x.term} ${x.hanzi}: one word per sound, so ${r.root} must be a sense of it (with compounds that are real composites, and one sense per lesson)`);
+    else if (x.kind === 'tone') out.push(`    differs only by tone from ${x.term} ${x.hanzi}`);
+    else out.push(`    sounds like the ${x.char} in ${x.term} ${x.hanzi}`);
+  }
+  if (cl.length > 12) out.push(`    … and ${cl.length - 12} more`);
   out.push('  English sentences it would make sayable: not known (no everyday-sentence list in the repo yet, KB_PLAN phase 6)');
   return out.join('\n');
 }
