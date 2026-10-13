@@ -8,6 +8,7 @@
 //   node scripts/kb.js parse "Wǒ chī fàn." [--lesson 5]
 //   node scripts/kb.js atoms [word]
 //   node scripts/kb.js relations [kind] [--status proposed|accepted] [--limit N]
+//   node scripts/kb.js meaning [says|atoms|grounding|<word>] [--limit N]
 //   node scripts/kb.js candidates [remove|add] [--limit N]
 //   node scripts/kb.js add <hanzi>
 //   node scripts/kb.js swaps [--k N]
@@ -67,7 +68,7 @@ import { mkdirSync, readdirSync, statSync, writeFileSync } from 'fs';
 import { resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { Worker } from 'worker_threads';
-import { createKb, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps, renderAudit } from '../src/lib/kb/kb.js';
+import { createKb, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps, renderAudit } from '../src/lib/kb/kb.js';
 import { loadFrequencyList } from './frequency-list.js';
 import { loadDrafts } from './kb-drafts.js';
 import { loadLessons } from './lessons.js';
@@ -231,6 +232,16 @@ async function main(argv) {
       const report = kb.relations();
       return print(report, renderRelations(report, { kind: rest[0], status, limit }));
     }
+    case 'meaning': {
+      const limit = Number(option(rest, '--limit') ?? 12);
+      const what = rest.filter((a, i) => !a.startsWith('--') && rest[i - 1] !== '--limit').join(' ');
+      if (what && !['says', 'atoms', 'grounding'].includes(what)) {
+        const r = kb.meaning(what);
+        return print(r, [r.term, renderMeaningWord(r.line, kb.source.words)].join('\n'));
+      }
+      const report = kb.meaning();
+      return print(report, renderMeaning(report, kb.source.words, { section: what || 'all', limit }));
+    }
     case 'candidates': {
       const limit = Number(option(rest, '--limit') ?? 20);
       const which = rest[0] ?? 'remove';
@@ -288,7 +299,7 @@ async function main(argv) {
       return print(e, text);
     }
     default:
-      console.log('usage: node scripts/kb.js word|remove|check-form|query|parse|atoms|relations|candidates|add|swaps|scoreboard|parse-report|parse-diff|classes|patterns|forms|move|engine …  (--json for data)');
+      console.log('usage: node scripts/kb.js word|remove|check-form|query|parse|atoms|relations|meaning|candidates|add|swaps|scoreboard|parse-report|parse-diff|classes|patterns|forms|move|engine …  (--json for data)');
       process.exitCode = command ? 1 : 0;
   }
 }

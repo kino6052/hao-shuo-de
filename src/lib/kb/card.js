@@ -79,7 +79,7 @@ export function buildIndex(source, facts) {
   return { byZh, compositesByWord, headsOf, sentencesByWord, namedBy, categoryPath, items };
 }
 
-export function wordCard({ source, facts, index }, id, { limit = 15 } = {}) {
+export function wordCard({ source, facts, index, meaning }, id, { limit = 15 } = {}) {
   const words = source.words;
   const w = words[id];
   const pin = pinyinOf(words);
@@ -151,6 +151,8 @@ export function wordCard({ source, facts, index }, id, { limit = 15 } = {}) {
     },
     sentences: { total: sentences.length, byKind, sample: sentences.slice(0, 6).map((s) => ({ kind: s.kind, where: s.module ? `${s.lesson}/${s.module}` : (s.lesson ?? s.composite), pinyin: pin(s.pinyin), en: s.en })) },
     namedBy: (index.namedBy.get(id) ?? []).map(ref),
+    // what its description reaches of the primes (K19, meaning.js)
+    meaning: meaning ? (({ depth, direct, names }) => ({ depth, direct, names: names.length }))(meaning().lines[id]) : null,
     facts: factsAbout(facts.lines, id).slice(0, 80),
   };
 }
@@ -171,6 +173,12 @@ export function renderCard(c) {
   const rel = (name, r) => (r.words.length || r.phrases.length) && out.push(`  ${name}: ${[...r.words.map((x) => `${x.term} ${x.hanzi}`), ...r.phrases].join(', ')}`);
   rel('Opposite', c.antonyms);
   rel('Same as', c.synonyms);
+  if (c.meaning) {
+    const m = c.meaning;
+    const step = `${m.depth} step${m.depth === 1 ? '' : 's'}`;
+    const text = m.depth === undefined ? `no way down to a prime (${m.names ? `it names ${m.names} word${m.names === 1 ? '' : 's'}, none leading to one` : 'it names no other word'})` : m.depth === 0 ? 'it says a prime itself' : `the nearest prime is ${step} away${m.direct.length ? `; it names ${m.direct.join(', ')}` : ''}`;
+    out.push(`  Made of primes: ${text}`);
+  }
   for (const it of c.coverage) out.push(`  Carries ${it.id} "${it.eng}"${it.others.length ? ` (with ${it.others.join(', ')})` : ''}; forms: ${it.forms.join(' | ')}`);
   out.push(`  Composites: used in ${c.composites.usedBy}, heads ${c.composites.headOf}${c.composites.own.length ? `; its own entry: ${c.composites.own.map((x) => `${x.zh} ${x.en}`).join(', ')}` : ''}`);
   for (const x of c.composites.first) out.push(`    #${x.rank} ${x.zh} "${x.en}": ${x.forms.join(' / ')}`);

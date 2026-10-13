@@ -14,6 +14,8 @@
 //                                 and the best trades of 1, 2 and 3 (the audit, as data)
 //   GET /__kb/add?root=           { report, text }: what one hanzi would bring as a root
 //   GET /__kb/relations?kind=     { counts, kinds, text }: the relations the data states or implies
+//   GET /__kb/meaning?name=       { groups, atoms, text }: what the words say of the primes, categories and grammar items, and what
+//                                 their descriptions reach; a name is a word, or says / atoms / grounding for one part
 //   GET /__kb/scoreboard          { now, rows, columns, text }: the language's numbers now, and the stored
 //                                 rows (kb/scoreboard.csv) to chart them against
 //
@@ -90,6 +92,19 @@ export default function kbPlugin() {
               const limit = Number(get('limit')) > 0 ? Number(get('limit')) : 12;
               const text = renderRelations(report, { kind: get('kind') || undefined, status: get('status') || undefined, limit });
               return json(res, { counts: report.counts, kinds: report.kinds, text });
+            }
+            case '/meaning': {
+              const { renderMeaning, renderMeaningWord } = await load('src/lib/kb/meaning.js');
+              const name = get('name');
+              const words = kb.source.words;
+              const limit = Number(get('limit')) > 0 ? Number(get('limit')) : 12;
+              const report = kb.meaning();
+              const summary = { groups: report.groups, atoms: { marked: report.atoms.marked, markedPrime: report.atoms.markedPrime.length, primeNotMarked: report.atoms.primeNotMarked.length, primeDescribed: report.atoms.primeDescribed.length }, traced: report.totals.words - report.grounding.unreached.length - report.grounding.unreachedAtoms.length, words: report.totals.words };
+              if (name && !['says', 'atoms', 'grounding'].includes(name)) {
+                const one = kb.meaning(name);
+                return json(res, { ...summary, line: one.line, text: [one.term, renderMeaningWord(one.line, words)].join('\n') });
+              }
+              return json(res, { ...summary, text: renderMeaning(report, words, { section: name || 'all', limit }) });
             }
             case '/scoreboard': {
               const { scoreboardRow, readScoreboard, renderScoreboard, COLUMNS } = await load('src/lib/kb/scoreboard.js');

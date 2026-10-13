@@ -26,6 +26,15 @@ describe('the row', () => {
     expect(Object.keys(row)).toEqual(NAMES);
   });
 
+  test('the meaning columns: what is said, what is carried once, how many words trace down to a prime', async () => {
+    // the fixture has one coverage group, grammar, with two items
+    const row = await scoreboardRow(kb, { date, atoms: false });
+    expect(row).toMatchObject({ primes_said: '', primes_once: '', categories_said: '', grammar_said: 2, traced_words: 0 });
+    const withPrimes = createKb({ ...source, coverage: [{ key: 'atoms', items: [{ key: 'EAT', eng: 'eat', words: ['chi1'], forms: [] }] }, ...source.coverage] });
+    const r = await scoreboardRow(withPrimes, { date, atoms: false });
+    expect(r).toMatchObject({ primes_said: 1, primes_once: 1, grammar_said: 2, traced_words: 2 });
+  });
+
   test('with the solver, the atoms columns fill in; with nothing reviewed every word is in the set', async () => {
     const row = await scoreboardRow(kb, { date });
     expect(row.marked_atoms).toBe(0);

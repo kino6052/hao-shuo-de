@@ -40,6 +40,11 @@ export const COLUMNS = {
   items_with_form: 'coverage items with at least one way to say them',
   parse_rate: 'share of the lesson sentences that parse with the patterns taught so far',
   patterns: 'grammar patterns',
+  primes_said: 'NSM primes that a word or pattern carries',
+  primes_once: 'primes carried by one word or pattern only (fragile)',
+  categories_said: "Aristotle's categories that a word or pattern carries",
+  grammar_said: 'grammar items that a word or pattern carries',
+  traced_words: 'words whose description reaches a prime (or that say one)',
 };
 export const NAMES = Object.keys(COLUMNS);
 
@@ -64,6 +69,19 @@ export async function scoreboardRow(kb, { label = '', date = new Date(), atoms =
     items_with_form: items.filter((i) => (i.forms ?? []).length).length,
     patterns: (source.patterns ?? []).length,
   });
+
+  // meaning links (K19): what is said, and what can be traced down to a prime
+  if (kb.meaning) {
+    const m = kb.meaning();
+    const g = m.groups;
+    Object.assign(row, {
+      primes_said: g.atoms?.said ?? '',
+      primes_once: g.atoms?.once ?? '',
+      categories_said: g.categories?.said ?? '',
+      grammar_said: g.grammar?.said ?? '',
+      traced_words: m.totals.words - m.grounding.unreached.length - m.grounding.unreachedAtoms.length,
+    });
+  }
 
   if ((source.patterns ?? []).length) {
     const lessons = (source.lessons ?? []).filter((l) => l.number <= parseLessons).map(({ id, number }) => ({ id, number }));

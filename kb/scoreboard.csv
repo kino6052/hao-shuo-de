@@ -1,4 +1,5 @@
-date,label,words,composites,forms,avg_form_words,marked_atoms,paraphrased,unreviewed,smallest_set,true_atoms,swappable,secondary,unchecked,core,spelled,built,undecided_forms,items,items_with_form,parse_rate,patterns
-2026-10-12,"baseline: 45 atoms admitted, nothing else reviewed",230,1555,1912,2.99,45,0,185,230,45,0,0,0,0,0,1680,232,113,113,0.864,9
-2026-10-13,refactors/K6a.ts: 3 op(s),230,1555,1912,2.99,45,0,185,230,45,0,0,0,0,0,1680,232,113,113,0.993,136
-2026-10-13,refactors/K6b.ts: 1 op(s),230,1555,1912,2.99,45,0,185,230,45,0,0,0,0,0,1680,232,113,113,0.993,137
+date,label,words,composites,forms,avg_form_words,marked_atoms,paraphrased,unreviewed,smallest_set,true_atoms,swappable,secondary,unchecked,core,spelled,built,undecided_forms,items,items_with_form,parse_rate,patterns,primes_said,primes_once,categories_said,grammar_said,traced_words
+2026-10-12,"baseline: 45 atoms admitted, nothing else reviewed",230,1555,1912,2.99,45,0,185,230,45,0,0,0,0,0,1680,232,113,113,0.864,9,,,,,
+2026-10-13,refactors/K6a.ts: 3 op(s),230,1555,1912,2.99,45,0,185,230,45,0,0,0,0,0,1680,232,113,113,0.993,136,,,,,
+2026-10-13,refactors/K6b.ts: 1 op(s),230,1555,1912,2.99,45,0,185,230,45,0,0,0,0,0,1680,232,113,113,0.993,137,,,,,
+2026-10-13,"kb meaning: primes, categories and grammar said, words traced to a prime",230,1555,1912,2.99,45,0,185,230,45,0,0,0,0,0,1680,232,113,113,0.993,137,65,44,10,38,189

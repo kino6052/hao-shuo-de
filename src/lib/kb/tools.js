@@ -7,7 +7,7 @@
 //   callTool(kb, name, args)      -> the answer as text (throws on a bad question)
 
 import { fileURLToPath } from 'node:url';
-import { renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps } from './kb.js';
+import { renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps } from './kb.js';
 import { scoreboardRow, readScoreboard, renderScoreboard, renderHistory } from './scoreboard.js';
 
 // the stored rows (refactor --write adds one after every change)
@@ -96,6 +96,22 @@ export const TOOLS = [
         kind: { type: 'string', description: 'A kind (opposite, close, same-form, kind-of, agent, category, opposite-phrase, close-phrase, opposite-by-not, close-by-paraphrase); leave out for the counts.' },
         status: { type: 'string', enum: ['accepted', 'proposed'], description: 'Only the accepted or only the proposed ones.' },
         limit: { type: 'integer', description: 'How many to list (default 8).' },
+      },
+    },
+  },
+  {
+    name: 'kb_meaning',
+    description:
+      "What the dictionary says of the NSM primes, Aristotle's categories and the grammar items, and what the words are made of. " +
+      'Without a name: which words and patterns carry each item (the ones carried once are fragile), the atom marks against the primes ' +
+      '(words that say a prime but are not atoms, primes that still have a description), and how many words reach a prime through the words their description names. ' +
+      "With a name: that word's line (what it says, the primes its description names, the step to the nearest prime). The links are read from the data and are proposals until the author reviews them.",
+    inputSchema: {
+      type: 'object',
+      properties: {
+        name: { type: 'string', description: 'A word, by pinyin, id or hanzi (optional; leave out for the report).' },
+        section: { type: 'string', enum: ['says', 'atoms', 'grounding'], description: 'Only one part of the report (optional).' },
+        limit: { type: 'integer', description: 'How many to list in each part (default 12).' },
       },
     },
   },
@@ -200,6 +216,14 @@ export async function callTool(kb, name, args = {}, { scoreboardFile = SCOREBOAR
     }
     case 'kb_relations':
       return renderRelations(kb.relations(), { kind: args.kind || undefined, status: args.status || undefined, limit: Number(args.limit) > 0 ? Number(args.limit) : 8 });
+    case 'kb_meaning': {
+      if (args.name) {
+        const r = kb.meaning(String(args.name));
+        return [r.term, renderMeaningWord(r.line, kb.source.words)].join('\n');
+      }
+      if (args.section && !['says', 'atoms', 'grounding'].includes(args.section)) throw new Error('section is says, atoms or grounding');
+      return renderMeaning(kb.meaning(), kb.source.words, { section: args.section || 'all', limit: Number(args.limit) > 0 ? Number(args.limit) : 12 });
+    }
     case 'kb_candidates': {
       const limit = Number(args.limit) > 0 ? Number(args.limit) : 20;
       const model = kb.candidates();

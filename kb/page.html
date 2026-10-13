@@ -108,6 +108,7 @@ details summary { cursor: pointer; color: var(--accent); font-size: 14px; }
     <button class="tab" role="tab" id="tab-candidates" data-mode="candidates" aria-selected="false">Candidates</button>
     <button class="tab" role="tab" id="tab-add" data-mode="add" aria-selected="false">Add a root</button>
     <button class="tab" role="tab" id="tab-relations" data-mode="relations" aria-selected="false">Relations</button>
+    <button class="tab" role="tab" id="tab-meaning" data-mode="meaning" aria-selected="false">Meaning</button>
     <button class="tab" role="tab" id="tab-scoreboard" data-mode="scoreboard" aria-selected="false">Scoreboard</button>
   </div>
 
@@ -138,6 +139,7 @@ const HINTS = {
   candidates: 'The words that cost least to drop, the roots that would complete the most Mandarin words, and the best trades. Nothing to type. Worked out directly, not by the solver; the same lists as node scripts/kb.js audit.',
   add: 'One hanzi: the words it would complete, the ones that still need more roots, the composites it lets be spelled, and its sound against the words we have.',
   relations: 'The relations the data states or implies. Leave the box empty for the counts, or name a kind (opposite, close, same-form, kind-of, agent, category, ...) to see each with its reason.',
+  meaning: 'What the words say of the NSM primes, the categories and the grammar items, and which primes a description reaches. Leave the box empty for the report, name a word for its line, or say says, atoms or grounding for one part.',
   scoreboard: 'The language\'s numbers now, charted against the rows stored after each change (kb/scoreboard.csv). Nothing to type.',
 };
 let mode = 'word';
@@ -150,7 +152,7 @@ function setMode(m, { keep = false } = {}) {
   for (const t of document.querySelectorAll('.tab')) t.setAttribute('aria-selected', String(t.dataset.mode === m));
   $('field-name').hidden = m === 'parse' || m === 'scoreboard' || m === 'candidates';
   $('field-text').hidden = m !== 'parse';
-  $('name').placeholder = m === 'remove' ? 'dēng, fàn …' : m === 'atoms' ? 'a word (optional)' : m === 'add' ? 'a hanzi, e.g. 电' : m === 'relations' ? 'a kind (optional), e.g. opposite' : 'dēng, deng1 or 灯';
+  $('name').placeholder = m === 'remove' ? 'dēng, fàn …' : m === 'atoms' ? 'a word (optional)' : m === 'add' ? 'a hanzi, e.g. 电' : m === 'relations' ? 'a kind (optional), e.g. opposite' : m === 'meaning' ? 'a word, or says / atoms / grounding (optional)' : 'dēng, deng1 or 灯';
   $('name').setAttribute('aria-label', m === 'remove' ? 'Words to drop' : m === 'add' ? 'Root' : m === 'relations' ? 'Kind' : 'Word');
   $('hint').textContent = HINTS[m];
   if (!keep) { $('out').innerHTML = ''; $('status').textContent = ''; $('status').className = 'status'; }
@@ -280,6 +282,14 @@ function relationsReport(d) {
   return '<section class="card"><div class="chips">' + chips + '</div><pre class="text">' + esc(d.text) + '</pre></section>';
 }
 
+function meaningReport(d) {
+  const names = { atoms: 'primes', categories: 'categories', grammar: 'grammar items' };
+  const chips = Object.entries(d.groups).map(([k, g]) => '<span class="chip ' + (g.once ? 'zero' : 'hit') + '">' + esc(names[k] ?? k) + ' · ' + g.said + ' of ' + g.items.length + ' said, ' + g.once + ' carried once</span>').join('') +
+    '<span class="chip">' + d.traced + ' of ' + d.words + ' words reach a prime</span>' +
+    ['says', 'atoms', 'grounding'].map((s) => '<button class="chip link-chip" data-section="' + s + '">' + s + '</button>').join('');
+  return '<section class="card"><div class="chips">' + chips + '</div><pre class="text">' + esc(d.text) + '</pre></section>';
+}
+
 function parsed(d) {
   if (d.view.error) return `<section class="card"><p>${esc(d.view.error)}</p></section>`;
   return d.view.sentences.map((s) => `<section class="card sentence">
@@ -298,15 +308,15 @@ async function ask() {
   const my = ++seq;
   const name = $('name').value.trim();
   const text = $('text').value.trim();
-  if (mode !== 'parse' && mode !== 'atoms' && mode !== 'scoreboard' && mode !== 'candidates' && mode !== 'relations' && !name) return say(mode === 'add' ? 'Type a hanzi.' : 'Type a word.');
+  if (mode !== 'parse' && mode !== 'atoms' && mode !== 'scoreboard' && mode !== 'candidates' && mode !== 'relations' && mode !== 'meaning' && !name) return say(mode === 'add' ? 'Type a hanzi.' : 'Type a word.');
   if (mode === 'parse' && !text) return say('Type a sentence.');
   history.replaceState(null, '', `#${mode}=${encodeURIComponent(mode === 'parse' ? text : name)}`);
   say(mode === 'remove' || mode === 'atoms' || mode === 'scoreboard' ? 'Working it out (clingo)…' : mode === 'candidates' ? 'Working it out (a few seconds)…' : 'Looking…');
   $('out').innerHTML = '';
   try {
-    const d = mode === 'word' ? await api('word', { name }) : mode === 'remove' ? await api('remove', { names: name }) : mode === 'atoms' ? await api('atoms', { name }) : mode === 'scoreboard' ? await api('scoreboard', {}) : mode === 'candidates' ? await api('candidates', {}) : mode === 'add' ? await api('add', { root: name }) : mode === 'relations' ? await api('relations', { kind: name, limit: 40 }) : await api('parse', { text });
+    const d = mode === 'word' ? await api('word', { name }) : mode === 'remove' ? await api('remove', { names: name }) : mode === 'atoms' ? await api('atoms', { name }) : mode === 'scoreboard' ? await api('scoreboard', {}) : mode === 'candidates' ? await api('candidates', {}) : mode === 'add' ? await api('add', { root: name }) : mode === 'relations' ? await api('relations', { kind: name, limit: 40 }) : mode === 'meaning' ? await api('meaning', { name, limit: 40 }) : await api('parse', { text });
     if (my !== seq) return;
-    $('out').innerHTML = mode === 'word' ? wordCard(d) : mode === 'remove' ? removal(d) : mode === 'atoms' ? atomsReport(d) : mode === 'scoreboard' ? scoreboard(d) : mode === 'candidates' ? candidates(d) : mode === 'add' ? addition(d) : mode === 'relations' ? relationsReport(d) : parsed(d);
+    $('out').innerHTML = mode === 'word' ? wordCard(d) : mode === 'remove' ? removal(d) : mode === 'atoms' ? atomsReport(d) : mode === 'scoreboard' ? scoreboard(d) : mode === 'candidates' ? candidates(d) : mode === 'add' ? addition(d) : mode === 'relations' ? relationsReport(d) : mode === 'meaning' ? meaningReport(d) : parsed(d);
     say('');
   } catch (e) {
     if (my === seq) say(e.message, true);
@@ -331,19 +341,19 @@ $('ask').addEventListener('submit', (e) => { e.preventDefault(); ask(); });
 for (const t of document.querySelectorAll('.tab')) t.addEventListener('click', () => {
   setMode(t.dataset.mode);
   // these need no question, so they open with their answer
-  if (['atoms', 'scoreboard', 'candidates', 'relations'].includes(t.dataset.mode)) ask();
+  if (['atoms', 'scoreboard', 'candidates', 'relations', 'meaning'].includes(t.dataset.mode)) ask();
 });
 $('out').addEventListener('click', (e) => {
-  const { remove, add, kind } = e.target.dataset ?? {};
-  if (!remove && !add && !kind) return;
-  setMode(remove ? 'remove' : add ? 'add' : 'relations');
-  $('name').value = remove ?? add ?? kind;
+  const { remove, add, kind, section } = e.target.dataset ?? {};
+  if (!remove && !add && !kind && !section) return;
+  setMode(remove ? 'remove' : add ? 'add' : section ? 'meaning' : 'relations');
+  $('name').value = remove ?? add ?? kind ?? section;
   ask();
 });
 
-// #word=deng1, #remove=deng1,fan4, #parse=Wǒ shì rén., #atoms= or #atoms=deng1, #candidates=, #add=电, #relations=opposite, #scoreboard=
+// #word=deng1, #remove=deng1,fan4, #parse=Wǒ shì rén., #atoms= or #atoms=deng1, #candidates=, #add=电, #relations=opposite, #meaning= or #meaning=wo3 or #meaning=atoms, #scoreboard=
 function fromHash() {
-  const m = /^#(word|remove|parse|atoms|scoreboard|candidates|add|relations)=(.*)$/.exec(location.hash);
+  const m = /^#(word|remove|parse|atoms|scoreboard|candidates|add|relations|meaning)=(.*)$/.exec(location.hash);
   if (!m) return setMode('word');
   setMode(m[1], { keep: true });
   (m[1] === 'parse' ? $('text') : $('name')).value = decodeURIComponent(m[2]);

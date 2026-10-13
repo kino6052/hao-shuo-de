@@ -104,6 +104,28 @@ describe('the word card', () => {
   });
 });
 
+describe('the card says what the description is made of (K19)', () => {
+  test('a word that names no prime word cannot be traced down; the line is on the card', () => {
+    // in the fixture no coverage group is "atoms", so no word says a prime
+    expect(kb.word('chī').meaning).toMatchObject({ depth: undefined, direct: [] });
+    expect(renderCard(kb.word('chī'))).toContain('  Made of primes: no way down to a prime (it names no other word)');
+    expect(renderCard(kb.word('fàn'))).toContain('it names 2 words, none leading to one');
+  });
+
+  test('with a prime in the coverage, the nearest step and the primes named directly', () => {
+    const withPrime = createKb({ ...source, coverage: [{ key: 'atoms', items: [{ key: 'EAT', eng: 'eat', words: ['chi1'], forms: [] }] }, ...source.coverage] });
+    expect(renderCard(withPrime.word('chī'))).toContain('  Made of primes: it says a prime itself');
+    const text = renderCard(withPrime.word('fàn'));
+    expect(text).toContain('Made of primes: the nearest prime is 1 step away; it names EAT');
+  });
+
+  test("kb.meaning is the report, or one word's line", () => {
+    expect(kb.meaning().totals).toMatchObject({ words: 12 });
+    expect(kb.meaning('chī')).toMatchObject({ id: 'chi1', term: 'chī', line: { says: ['grammar:eat'] } });
+    expect(() => kb.meaning('nope')).toThrow('no word');
+  });
+});
+
 describe('kb.remove takes any names', () => {
   test('terms and ids mix, and the same words give the same report as the lower layer', async () => {
     const r = await kb.remove(['fēi', 'ji1']);

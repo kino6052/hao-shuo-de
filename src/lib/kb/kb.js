@@ -12,6 +12,7 @@
 //   kb.patternLesson(id)       the lesson number that teaches a pattern (undefined: no lesson teaches it)
 //   kb.atoms()                 which words are atoms (the report; kb.atoms('dēng') is one word's line)
 //   kb.relations()             the relations the data states or implies (accepted and proposed)
+//   kb.meaning([name])         what the words say of the primes, categories and grammar items, and the primes each description reaches (meaning.js)
 //   kb.candidates()            what to drop, what to add and what to trade (see candidates.js; needs `freq` for Mandarin)
 //
 // Names are lenient: an id (deng1), a term (dēng, deng) or a hanzi (灯).
@@ -25,13 +26,15 @@ import { solve, tables } from './clingo.js';
 import { makeParseText, renderParse, viewParse } from './parse.js';
 import { atoms, atomWord, renderAtoms, renderAtomWord } from './atoms.js';
 import { relationReport, renderRelations } from './relations.js';
+import { meaningReport, meaningWord, renderMeaning, renderMeaningWord } from './meaning.js';
 import { candidateModel, renderAddition, renderAudit, renderRemovalCandidates, renderRootCandidates, renderSwaps } from './candidates.js';
 
 // freq: the Mandarin frequency list [{ zh, py, rank }]; drafts: how words would be said without a stored paraphrase { id: { forms, verdict } }
 export function createKb(source, { rules = readRules('base', 'whatif'), freq = null, drafts = {} } = {}) {
+  let meaning = null; // the meaning links, asked once: a KB is one version of the data
   const facts = buildFacts(source);
   const index = buildIndex(source, facts);
-  const ctx = { source, facts, rules, index };
+  const ctx = { source, facts, rules, index, meaning: () => (meaning ??= meaningReport(source)) };
   const words = source.words;
 
   // the atoms report takes three solver runs; a KB is one version of the data, so it is asked once
@@ -73,6 +76,15 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
     // The relations: stored ones are accepted, the ones a rule finds are proposed (see relations.js).
     relations: () => (relationsReport ??= relationReport(source, facts)),
 
+    // Meaning links (K19): what the words say of the primes and categories, and which primes a description reaches.
+    // No name: the report. A name: that word's line, { id, term, line }.
+    meaning(name) {
+      const report = ctx.meaning();
+      if (name === undefined || name === '') return report;
+      const id = resolveWord(words, name);
+      return { id, term: words[id].term, line: meaningWord(report, id) };
+    },
+
     // The candidates: words to drop, roots to add, trades. Worked out in JS, not by the solver.
     candidates: () => (candidates ??= candidateModel(source, facts, { freq })),
     drafts,
@@ -103,4 +115,4 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
   };
 }
 
-export { renderCard, renderRemoval, renderParse, viewParse, renderAtoms, renderAtomWord, renderRelations, renderAddition, renderAudit, renderRemovalCandidates, renderRootCandidates, renderSwaps };
+export { meaningWord, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, viewParse, renderAtoms, renderAtomWord, renderRelations, renderAddition, renderAudit, renderRemovalCandidates, renderRootCandidates, renderSwaps };

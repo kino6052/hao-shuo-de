@@ -58,6 +58,14 @@ export const posClasses = (eng) =>
     .map((p) => p.trim().replace(/\s+/g, '_'))
     .filter(Boolean);
 
+// The dictionary words a word's own text names: its definition, its note on why it is needed, and what its senses say (def_uses).
+export function describedBy(id, w, known) {
+  const named = new Set();
+  const texts = [w.definition?.eng, w.necessity?.eng, ...Object.values(w.senses ?? {}).map((s) => `${s.eng ?? ''} ${s.why?.eng ?? ''}`)];
+  for (const text of texts) for (const v of wordRefIds(text ?? '')) if (v !== id && known(v)) named.add(v);
+  return named;
+}
+
 // The dictionary words a sentence uses: its word refs, and a bare "ge" (the
 // counting word is written plainly in some examples) as ge4.
 export function wordsOfText(text) {
@@ -110,13 +118,11 @@ export function buildFacts(source) {
     add(`word(${W}).`, `term(${W},${str(w.term)}).`, `hanzi(${W},${str(w.hanzi)}).`);
     if (w.necessity?.index) add(`necessity(${W},${w.necessity.index}).`);
     for (const p of posClasses(w.pos?.eng)) add(`pos(${W},${p}).`);
-    for (const text of [w.definition?.eng, w.necessity?.eng]) {
-      for (const v of new Set(wordRefIds(text ?? ''))) if (v !== id && known(v)) add(`def_uses(${W},${sym(v)}).`);
-    }
+    for (const v of describedBy(id, { definition: w.definition, necessity: w.necessity }, known)) add(`def_uses(${W},${sym(v)}).`);
     for (const [key, s] of Object.entries(w.senses ?? {})) {
       add(`sense(${W},${str(key)}).`, `sense_hanzi(${W},${str(key)},${str(s.hanzi)}).`);
       if (s.alone) add(`sense_alone(${W},${str(key)}).`);
-      for (const v of new Set(wordRefIds(`${s.eng ?? ''} ${s.why?.eng ?? ''}`))) if (v !== id && known(v)) add(`def_uses(${W},${sym(v)}).`);
+      for (const v of describedBy(id, { senses: { [key]: s } }, known)) add(`def_uses(${W},${sym(v)}).`);
       (s.compounds ?? []).forEach((c, i) => {
         add(`sense_compound(${W},${str(key)},${i + 1}).`);
         for (const v of new Set(c.split(' '))) add(`sense_compound_uses(${W},${str(key)},${i + 1},${sym(v)}).`);
