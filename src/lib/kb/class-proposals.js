@@ -5,7 +5,7 @@
 // Pure; it never changes data.
 //
 //   classProposals({ parser, words, pieces })   -> { proposals, unexplained }
-//     pieces       [{ text, where }] sentences that do not parse (word refs)
+//     pieces       [{ text, where, forms? }] sentences that do not parse (word refs); forms: true for a composite's description
 //     proposals    [{ id, term, pos, meaning, classes: [{ cls, reading }], sentences: [{ text, where }] }], most sentences first;
 //                  classes that fix the same sentences of the same word are one proposal (bǐ as a verb, a noun, an
 //                  adjective: which one is for the reader to say, with the meaning in view)
@@ -42,7 +42,7 @@ export function classProposals({ parser, words, pieces }) {
       const has = new Set(classesOf(words[id]));
       for (const cls of candidates) {
         if (has.has(cls)) continue;
-        const r = parser.parse(piece.text, { extra: { [id]: [cls] } });
+        const r = parser.parse(piece.text, { extra: { [id]: [cls] }, forms: piece.forms });
         if (!r.ok) continue;
         any = true;
         const byClass = found.get(id) ?? found.set(id, new Map()).get(id);

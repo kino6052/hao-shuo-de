@@ -15,4 +15,14 @@ export default word("bian1", {
     rus: "Сторона, край: {{word:zhe4}}-{{word:bian1}} — эта сторона, {{word:na4}}-{{word:bian1}} — там.",
   },
   maps: "",
+  classes: {
+    measure_word: {
+      why: {
+        eng: "Counts the sides of a flat shape: sān-biān is three sides, so sān-biān-de yàng-zi is a three-sided shape.",
+        rus: "Считает стороны плоской фигуры: sān-biān — три стороны, а sān-biān-de yàng-zi — трёхсторонняя фигура.",
+      },
+      example: "Wǒ yào sān-biān-de yàng-zi.",
+      proposed: true,
+    },
+  },
 });

@@ -22,9 +22,9 @@ export function createParser({ patterns, words, composites = [] }) {
     errors,
     rules,
     grammar,
-    parse(text, { maxTrees = 20, extra } = {}) {
-      const lattice = lex(text, lexicon, { extra });
-      const result = parse(lattice, grammar, { maxTrees });
+    parse(text, { maxTrees = 20, extra, start, forms } = {}) {
+      const lattice = lex(text, lexicon, { extra, forms });
+      const result = parse(lattice, grammar, { maxTrees, start });
       const tokens = lattice.tokens;
       const piece = (p) => ({ ...p, text: tokens.slice(p.from, p.to).map((t) => t.text).join(' ') });
       return {

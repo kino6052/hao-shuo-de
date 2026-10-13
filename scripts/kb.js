@@ -16,6 +16,7 @@
 //   node scripts/kb.js parse-diff [--ref HEAD] [--all] [--limit 12]
 //   node scripts/kb.js classes [--limit 20]
 //   node scripts/kb.js patterns [--limit 12] [--seconds 300]
+//   node scripts/kb.js forms [--pos noun] [--limit 20]
 //   node scripts/kb.js scoreboard [--append] [--label "what changed"] [--no-atoms]
 //   node scripts/kb.js move <lesson | lesson/module | pattern:id> <where>
 //   node scripts/kb.js engine
@@ -33,6 +34,9 @@
 // parse-diff compares how every lesson sentence parses at a git ref (HEAD) with the files as they are, so an
 // edited rule, a pattern moved to another lesson or a word that changed class shows the sentences that start or
 // stop parsing or read another way. --all adds the other texts. The half that runs at the ref is scripts/parse-snapshot.js.
+//
+// forms reads every description of the composite dictionary with the patterns and with the Word Builder: how many parse,
+// the ones that do not (a missing pattern, or a description to reword), and who reads what. The gate is check-forms.
 //
 // patterns is the minimal-patterns report (phase 4): the smallest set of patterns that carries the grammar items, the
 // sentences that stop parsing when a pattern is taken out, the examples that parse without their own pattern, and the
@@ -69,6 +73,8 @@ import { loadDrafts } from './kb-drafts.js';
 import { loadLessons } from './lessons.js';
 import { moveEffects, parseSpec, renderMove } from './move-effects.js';
 import { snapshotAtRef } from './parse-diff.js';
+import { formsOf } from './forms.js';
+import { renderFormReport } from '../src/lib/kb/form-report.js';
 import { bookSentences, patternReport, renderPatternReport } from '../src/lib/kb/pattern-report.js';
 import { classProposals, classesWaiting, renderClassProposals } from '../src/lib/kb/class-proposals.js';
 import { OTHER_TEXTS, snapshotFor } from './parse-snapshot.js';
@@ -197,6 +203,10 @@ async function main(argv) {
       const d = diffSnapshots(await before, snapshotFor(kb, { all }));
       return print(d, renderParseDiff(d, kb.source.words, { limit, title: `Parse changes since ${ref}${all ? ' (all texts)' : ''}` }));
     }
+    case 'forms': {
+      const report = formsOf(kb);
+      return print(report, renderFormReport(report, kb.source.words, { limit: Number(option(rest, '--limit') ?? 20), pos: option(rest, '--pos') }));
+    }
     case 'patterns': {
       const limit = Number(option(rest, '--limit') ?? 12);
       const seconds = Number(option(rest, '--seconds') ?? 300);
@@ -209,6 +219,8 @@ async function main(argv) {
       const lessons = kb.source.lessons.map(({ id, number }) => ({ id, number }));
       const report = parseReport({ sentences: kb.facts.sentences, parseText: kb.parse, parseLesson: kb.parseUpTo, patternLesson: kb.patternLesson, lessons, groups: OTHER_TEXTS });
       const pieces = report.failures.filter((it) => it.piece).map((it) => ({ text: it.piece.text, where: `${it.lesson}${it.module ? `/${it.module}` : ''} ${it.key ?? ''}`.trim() }));
+      // the descriptions of the composite dictionary that the patterns do not read (the sentence end of a form is part of it)
+      for (const f of formsOf(kb).forms) if (f.kind === 'phrase' && !f.ok) pieces.push({ text: f.form, where: `composite ${f.zh}`, forms: true });
       const r = classProposals({ parser: kb.parser, words: kb.source.words, pieces });
       const waiting = classesWaiting(kb.source.words);
       return print({ ...r, waiting }, renderClassProposals(r, kb.source.words, waiting, { limit }));
@@ -276,7 +288,7 @@ async function main(argv) {
       return print(e, text);
     }
     default:
-      console.log('usage: node scripts/kb.js word|remove|check-form|query|parse|atoms|relations|candidates|add|swaps|scoreboard|parse-report|parse-diff|classes|patterns|move|engine …  (--json for data)');
+      console.log('usage: node scripts/kb.js word|remove|check-form|query|parse|atoms|relations|candidates|add|swaps|scoreboard|parse-report|parse-diff|classes|patterns|forms|move|engine …  (--json for data)');
       process.exitCode = command ? 1 : 0;
   }
 }

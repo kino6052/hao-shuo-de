@@ -13,6 +13,7 @@ export const GATES = [
   ['check-grammar-blocks', ['--summary']],
   ['check-grammar', []],
   ['check-classes', []],
+  ['check-forms', []],
   ['check-practice', ['--summary']],
   ['check-example-runs', ['--summary']],
   ['check-word-builder', []],

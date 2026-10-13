@@ -2,8 +2,10 @@
 // (KB_PLAN.md phase 1, the grammar slice). Pure: runs in Node and in the browser.
 //
 //   buildLexicon({ words, composites }) -> the lexicon (once per data set)
-//   lex(text, lexicon, { extra })       -> { n, edges, tokens, problems }; extra = { wordId: [class, ...] } lets a word
-//                                          fill more classes in this sentence only (the class proposals try that)
+//   lex(text, lexicon, { extra, forms }) -> { n, edges, tokens, problems }; extra = { wordId: [class, ...] } lets a word
+//                                          fill more classes in this sentence only (the class proposals try that);
+//                                          forms: true reads a composite's description, where A, B, C and … stand for
+//                                          things the form leaves open, like X, Y and Z
 //
 // The text is the form the book stores: word refs {{word:wo3}} {{Word:wo3}}
 // {{light:xi1}}, a bare "ge", quoted names, hyphens that glue a chain
@@ -20,7 +22,9 @@
 // (kàn-kan, xiè-xie) is an "again" edge too, so a rule can say @verb @again.
 //
 // A lone X, Y or Z stands for a thing the example leaves open ("I do it with X"):
-// it is one noun, the class "slot".
+// it is one noun, the class "slot". In a composite's description (forms: true) so do A, B and C,
+// and … ("hé … yī-yàng"), which is a sentence end anywhere else; there a slot may also be a verb
+// (X-wán hòu, "after doing X").
 //
 // Nothing here knows grammar rules; the parser decides which reading fits.
 
@@ -70,7 +74,7 @@ const plain = (s) => String(s).normalize('NFD').replace(/\p{M}/gu, '').toLowerCa
 
 // -> { n, edges, tokens, problems } for one sentence (see the header).
 //    tokens[i] is the word at position i: { text, id?, kind } for showing it.
-export function lex(text, lexicon, { extra = {} } = {}) {
+export function lex(text, lexicon, { extra = {}, forms = false } = {}) {
   const { words, chains } = lexicon;
   const src = String(text).normalize('NFC');
   const items = [];
@@ -86,7 +90,9 @@ export function lex(text, lexicon, { extra = {} } = {}) {
     }
     const glued = joined && gap === '';
     joined = false;
-    if (/^[.!?…]+$/.test(tok)) {
+    if (forms && tok.startsWith('…')) {
+      items.push({ kind: 'slot', word: true, text: '…', glued });
+    } else if (/^[.!?…]+$/.test(tok)) {
       items.push({ kind: 'end', text: tok });
     } else if (/^[,;:]$/.test(tok)) {
       items.push({ kind: 'comma', text: tok, word: false });
@@ -95,7 +101,7 @@ export function lex(text, lexicon, { extra = {} } = {}) {
       items.push({ kind: 'word', word: true, id: ref[2], glued });
     } else if (tok.startsWith('"')) {
       items.push({ kind: 'quoted', word: true, text: tok.slice(1, -1), glued });
-    } else if (/^[XYZ]$/.test(tok)) {
+    } else if (forms ? /^[A-CX-Z]$/.test(tok) : /^[XYZ]$/.test(tok)) {
       items.push({ kind: 'slot', word: true, text: tok, glued });
     } else if (Object.hasOwn(BARE, tok.toLowerCase())) {
       items.push({ kind: 'word', word: true, id: BARE[tok.toLowerCase()], glued });
@@ -142,7 +148,8 @@ export function lex(text, lexicon, { extra = {} } = {}) {
       edges.push({ from: i, to: i + 1, id: it.id, term: termOf(words, it.id), classes });
     } else if (it.kind === 'slot') {
       tokens.push({ kind: 'slot', text: it.text });
-      edges.push({ from: i, to: i + 1, term: it.text, classes: new Set(['noun', 'slot']) });
+      // in a description a slot may also stand for what is done (X-wán hòu: after doing X)
+      edges.push({ from: i, to: i + 1, term: it.text, classes: new Set(forms ? ['noun', 'slot', 'verb'] : ['noun', 'slot']) });
     } else if (it.kind === 'quoted') {
       tokens.push({ kind: 'quoted', text: `"${it.text}"` });
       edges.push({ from: i, to: i + 1, term: `"${it.text}"`, classes: new Set(['noun', 'quoted']) });

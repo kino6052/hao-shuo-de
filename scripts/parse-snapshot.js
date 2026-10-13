@@ -21,7 +21,13 @@ export function snapshotFor(kb, { all = false } = {}) {
   return snapshotOf(report);
 }
 
+// no top-level await: kb.js imports this file too, and an entry that waits for kb.js while kb.js waits for the entry never settles
 if (process.argv[1]?.endsWith('parse-snapshot.js')) {
-  const { openKb } = await import('./kb.js');
-  console.log(JSON.stringify(snapshotFor(await openKb(), { all: process.argv.includes('--all') })));
+  import('./kb.js')
+    .then(({ openKb }) => openKb())
+    .then((kb) => console.log(JSON.stringify(snapshotFor(kb, { all: process.argv.includes('--all') }))))
+    .catch((e) => {
+      console.error(e.stack || e.message);
+      process.exit(1);
+    });
 }

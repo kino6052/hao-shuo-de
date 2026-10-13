@@ -1,0 +1,182 @@
+[
+  {
+    "zh": "百",
+    "form": "shí-ge shí",
+    "why": "a number said as ten tens (shí-ge shí): the book has no pattern for a number built from the word shí"
+  },
+  {
+    "zh": "被",
+    "form": "X ràng Y + verb",
+    "why": "the form names a part of speech in English (\"verb\"): it describes a frame, not Hao-shuo-de"
+  },
+  {
+    "zh": "所以",
+    "form": "yīnwèi zhè-ge",
+    "why": "yīnwèi and a pointer with nothing after: the start of a sentence, not a whole phrase"
+  },
+  {
+    "zh": "大家",
+    "form": "rén-rén dōu",
+    "why": "a frame that ends in dōu: what comes after dōu is left open, so it is not a whole phrase"
+  },
+  {
+    "zh": "纸",
+    "form": "xiě-de miànr",
+    "why": "a word and r (erhua): miànr, the face of a thing; no rule for the r (the same gap as in kb/grammar-gaps.json)"
+  },
+  {
+    "zh": "桌子",
+    "form": "fàng-dōng-xi-de miànr",
+    "why": "a word and r (erhua): miànr, the face of a thing; no rule for the r (the same gap as in kb/grammar-gaps.json)"
+  },
+  {
+    "zh": "马上",
+    "form": "xiàn-zài jiù",
+    "why": "xiàn-zài and jiù with no verb after them: a frame, not a whole phrase"
+  },
+  {
+    "zh": "千",
+    "form": "shí-ge shí-ge shí",
+    "why": "a number said as ten tens (shí-ge shí): the book has no pattern for a number built from the word shí"
+  },
+  {
+    "zh": "一直",
+    "form": "shénme shí-jiān dōu",
+    "why": "a frame that ends in dōu: what comes after dōu is left open, so it is not a whole phrase"
+  },
+  {
+    "zh": "今年",
+    "form": "xiàn-zài-de shí-èr-ge yuè",
+    "why": "a part with de before a counted span (the twelve months of now); the rule for qián and hòu before a span (qian-hou-span) takes no de part"
+  },
+  {
+    "zh": "总是",
+    "form": "shénme shí-jiān dōu",
+    "why": "a frame that ends in dōu: what comes after dōu is left open, so it is not a whole phrase"
+  },
+  {
+    "zh": "每",
+    "form": "gè-gè … dōu",
+    "why": "a frame that ends in dōu: what comes after dōu is left open, so it is not a whole phrase"
+  },
+  {
+    "zh": "着",
+    "form": "zài + verb",
+    "why": "the form names a part of speech in English (\"verb\"): it describes a frame, not Hao-shuo-de"
+  },
+  {
+    "zh": "游泳",
+    "form": "guò shuǐ qù X dì-fang",
+    "why": "guò as a verb (\"cross\"); the dictionary lists guò only as the \"have done it before\" word"
+  },
+  {
+    "zh": "不管",
+    "form": "shénme … dōu",
+    "why": "a frame that ends in dōu: what comes after dōu is left open, so it is not a whole phrase"
+  },
+  {
+    "zh": "代表",
+    "form": "tì X",
+    "why": "tì X (\"in X's place\") with no verb after it: a frame"
+  },
+  {
+    "zh": "任何",
+    "form": "shénme … dōu",
+    "why": "a frame that ends in dōu: what comes after dōu is left open, so it is not a whole phrase"
+  },
+  {
+    "zh": "总",
+    "form": "shénme shí-jiān dōu",
+    "why": "a frame that ends in dōu: what comes after dōu is left open, so it is not a whole phrase"
+  },
+  {
+    "zh": "虽然",
+    "form": "…, dàn-shì …",
+    "why": "a frame that starts with an open part and a comma, then dàn-shì; the patterns read dàn-shì after a whole sentence only"
+  },
+  {
+    "zh": "到处",
+    "form": "nǎ-lǐ dōu",
+    "why": "a frame that ends in dōu: what comes after dōu is left open, so it is not a whole phrase"
+  },
+  {
+    "zh": "常常",
+    "form": "hěn duō cì",
+    "why": "hěn duō cì (\"many times\") on its own: cì needs a verb before it in the patterns"
+  },
+  {
+    "zh": "社会",
+    "form": "zài-yī-qǐ-de hěn-duō rén",
+    "why": "zài-yī-qǐ-de, \"together\", as a describing part before hěn-duō rén (the same gap as in kb/grammar-gaps.json); reword"
+  },
+  {
+    "zh": "使",
+    "form": "ràng X + verb",
+    "why": "the form names a part of speech in English (\"verb\"): it describes a frame, not Hao-shuo-de"
+  },
+  {
+    "zh": "整个",
+    "form": "X dōu",
+    "why": "a frame that ends in dōu: what comes after dōu is left open, so it is not a whole phrase"
+  },
+  {
+    "zh": "不断",
+    "form": "shénme shí-jiān dōu",
+    "why": "a frame that ends in dōu: what comes after dōu is left open, so it is not a whole phrase"
+  },
+  {
+    "zh": "乘",
+    "form": "bǎ A fàng zài yī-qǐ B-cì",
+    "why": "a bǎ pattern the book does not teach (the same family as the gap in kb/grammar-gaps.json)"
+  },
+  {
+    "zh": "反正",
+    "form": "zěnme dōu",
+    "why": "a frame that ends in dōu: what comes after dōu is left open, so it is not a whole phrase"
+  },
+  {
+    "zh": "尽管",
+    "form": "…, dàn-shì …",
+    "why": "a frame that starts with an open part and a comma, then dàn-shì; the patterns read dàn-shì after a whole sentence only"
+  },
+  {
+    "zh": "整",
+    "form": "X dōu",
+    "why": "a frame that ends in dōu: what comes after dōu is left open, so it is not a whole phrase"
+  },
+  {
+    "zh": "永远",
+    "form": "shénme shí-jiān dōu",
+    "why": "a frame that ends in dōu: what comes after dōu is left open, so it is not a whole phrase"
+  },
+  {
+    "zh": "电器",
+    "form": "\"diàn\"-zi-de gōng-jù",
+    "why": "a quoted sound with zi inside a word (\"diàn\"-zi); no rule for a quoted sound in a word (the same gap as in kb/grammar-gaps.json)"
+  },
+  {
+    "zh": "随时",
+    "form": "shénme shí-jiān dōu",
+    "why": "a frame that ends in dōu: what comes after dōu is left open, so it is not a whole phrase"
+  },
+  {
+    "zh": "收拾",
+    "form": "bǎ X gānjìng",
+    "why": "a bǎ pattern the book does not teach (the same family as the gap in kb/grammar-gaps.json)"
+  },
+  {
+    "zh": "盒子",
+    "form": "liù-miàn-dōu-fāng-de dōng-xi",
+    "why": "dōu before a describing word with no hěn (all six faces square); the book teaches hěn first"
+  },
+  {
+    "zh": "除",
+    "form": "cóng C lǐ-miàn ná A, néng ná B-cì",
+    "why": "a long frame about taking things out in turn, with a count after the verb (B-cì); no pattern reads it"
+  },
+  {
+    "zh": "立方体",
+    "form": "liù-miàn-dōu-fāng-de dōng-xi",
+    "why": "dōu before a describing word with no hěn (all six faces square); the book teaches hěn first"
+  }
+]

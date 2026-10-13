@@ -89,6 +89,15 @@ describe('classProposals', () => {
     expect(verbs).not.toContain('verb');
   });
 
+  test('a piece of a composite description (forms) may have a slot; a sentence may not', () => {
+    const text = `A ${ref('kan4', 'tong4')}`.replace('.', '');
+    const asForm = classProposals({ parser: parser(), words, pieces: [{ text, where: 'composite 看', forms: true }] });
+    expect(asForm.proposals.find((p) => p.id === 'tong4')?.sentences.map((s) => s.where)).toEqual(['composite 看']);
+    const asSentence = classProposals({ parser: parser(), words, pieces: [{ text, where: 'l/m one' }] });
+    expect(asSentence.proposals.find((p) => p.id === 'tong4')).toBeUndefined();
+    expect(asSentence.unexplained.map((p) => p.where)).toEqual(['l/m one']);
+  });
+
   test('with the class listed, the sentence is no longer a piece to explain', () => {
     const listed = { ...words, tong4: w('tòng', 'adjective', { classes: { noun: { why: { eng: 'x', rus: 'x' }, example: 'e' } } }) };
     expect(parser(listed).parse(pieces[0].text).ok).toBe(true);
