@@ -14,6 +14,7 @@
 //   node scripts/kb.js audit [--stdout]
 //   node scripts/kb.js parse-report [--lessons 4] [--stdout]
 //   node scripts/kb.js scoreboard [--append] [--label "what changed"] [--no-atoms]
+//   node scripts/kb.js move <lesson | lesson/module | pattern:id> <where>
 //   node scripts/kb.js engine
 //
 // parse-report parses every Hao-shuo-de sentence of the first N lessons and
@@ -21,6 +22,10 @@
 // adds the composite examples, the stories and the phrase book. A lesson's sentences
 // are parsed with the patterns taught up to that lesson (the early-patterns rule); one that
 // needs a later pattern is listed under "Uses a pattern before it is taught".
+//
+// move says what a change in the lesson order would do (scripts/move-effects.js): a lesson to place N,
+// a module to the end of another lesson, or a pattern taught in another lesson. It prints the words and
+// the patterns that would then be used before they are taught, against today. Nothing is changed.
 //
 // candidates ranks the words that could go (cheapest first, with how each would be said
 // without it) or the roots that would complete the most Mandarin words; add says what one
@@ -46,6 +51,8 @@ import { Worker } from 'worker_threads';
 import { createKb, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps, renderAudit } from '../src/lib/kb/kb.js';
 import { loadFrequencyList } from './frequency-list.js';
 import { loadDrafts } from './kb-drafts.js';
+import { loadLessons } from './lessons.js';
+import { moveEffects, parseSpec, renderMove } from './move-effects.js';
 import { parseReport, renderParseReport, slimReport } from '../src/lib/kb/parse-report.js';
 import { renderCheckForm } from '../src/lib/kb/tools.js';
 import { engine } from '../src/lib/kb/clingo.js';
@@ -162,6 +169,12 @@ async function main(argv) {
       writeFileSync(file, `${text}\n`);
       return console.log(`${report.parsed} of ${report.total} sentences parse (${Math.round(report.rate * 100)}%); written to kb/reports/lessons-1-${n}${all ? '-all' : ''}-parse.md`);
     }
+    case 'move': {
+      const [what, where] = rest.filter((a) => !a.startsWith('--'));
+      const spec = parseSpec(what, where, { lessons: kb.source.lessons, patterns: kb.source.patterns });
+      const r = await moveEffects({ kb, lessons: await loadLessons() }, spec);
+      return print(r, renderMove(r, kb.source.words));
+    }
     case 'relations': {
       const status = option(rest, '--status');
       const limit = Number(option(rest, '--limit') ?? 8);
@@ -225,7 +238,7 @@ async function main(argv) {
       return print(e, text);
     }
     default:
-      console.log('usage: node scripts/kb.js word|remove|check-form|query|parse|atoms|relations|candidates|add|swaps|scoreboard|parse-report|engine …  (--json for data)');
+      console.log('usage: node scripts/kb.js word|remove|check-form|query|parse|atoms|relations|candidates|add|swaps|scoreboard|parse-report|move|engine …  (--json for data)');
       process.exitCode = command ? 1 : 0;
   }
 }
