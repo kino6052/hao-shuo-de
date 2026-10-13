@@ -6,6 +6,8 @@
 import { beforeAll, describe, expect, test } from 'bun:test';
 import { loadSource } from '../../../scripts/kb-source.js';
 import { createKb } from './kb.js';
+import { renderRemoval } from './whatif.js';
+import { ruleWords } from '../grammar/grammar.js';
 import { wordRefIds } from '../word-refs.js';
 import { wordsOfText } from './facts.js';
 import { findClingo } from './clingo.js';
@@ -159,5 +161,36 @@ describe('the early-patterns rule', () => {
     }
     expect(r.parsed + r.late.length + r.failures.length).toBe(r.total);
     expect(renderParseReport(r, source.words)).toContain('## Uses a pattern before it is taught');
+  });
+});
+
+describe('the grammar in a removal report (K20)', () => {
+  test('a word that a pattern rule names brings the pattern into the report, with what is left of it', async () => {
+    const r = await kb.remove(['bie2']);
+    const dont = r.patterns.find((p) => p.id === 'bie-dont');
+    expect(dont.rules.hit.length).toBe(dont.rules.total);
+    expect(dont.effect).toBe('no rules left');
+    expect(r.counts.patterns).toBe(r.patterns.length);
+    expect(renderRemoval(r)).toContain('Grammar patterns that name it');
+  });
+
+  test('a word no pattern names leaves the section empty', async () => {
+    const used = new Set(source.patterns.flatMap((p) => p.rules.flatMap((x) => ruleWords(x.hsd))));
+    const free = Object.keys(source.words).find((id) => !used.has(id) && !source.patterns.some((p) => p.examples.some(([py]) => py.toLowerCase().includes(source.words[id].term.toLowerCase()))));
+    const r = await kb.remove([free]);
+    expect(r.patterns).toEqual([]);
+  });
+});
+
+describe('the grammar in the candidates (K20)', () => {
+  test('the patterns a word carries cost the same in the candidates as in the removal report', async () => {
+    const model = kb.candidates();
+    for (const id of ['bie2', 'hen3', 'de', 'kuai4']) {
+      const c = model.consequences([id]);
+      const r = await kb.remove([id]);
+      expect(c.counts.patterns, id).toBe(r.counts.patterns);
+      expect(c.counts.patternsDead, id).toBe(r.patterns.filter((p) => p.effect === 'no rules left' || p.effect === 'no examples left').length);
+    }
+    expect(model.consequences(['bie2']).parts.pattern).toBeGreaterThan(0);
   });
 });

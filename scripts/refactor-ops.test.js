@@ -92,3 +92,39 @@ describe('the kinds op', () => {
     expect(() => applyOps(w, [{ op: 'kinds', zh: entry.zh }])).toThrow(/give kinds/);
   });
 });
+
+describe('the grammar rules follow a word (K20)', () => {
+  const GRAMMAR = 'src/data/grammar/';
+
+  test('rename rewrites the rules that name the word: =id, a bare id and a class that leaves it out', () => {
+    const w = fresh();
+    applyOps(w, [{ op: 'rename', id: 'bie2', to: 'bie9' }]);
+    expect(w.get(`${GRAMMAR}bie-dont.ts`)).toContain('hsd: "=bie9 VP"');
+    expect(w.get(`${GRAMMAR}bie-dont.ts`)).not.toContain('=bie2');
+    expect(w.notes.some((n) => n.kind === 'grammar' && n.text.includes('bie-dont.ts') && n.text.includes('bie2 -> bie9'))).toBe(true);
+
+    const v = fresh();
+    applyOps(v, [{ op: 'rename', id: 'zhe4', to: 'zhe9' }]);
+    expect(v.get(`${GRAMMAR}adjective-noun.ts`)).toContain('@adjective-zhe9-na4');
+    const u = fresh();
+    applyOps(u, [{ op: 'rename', id: 'hen3', to: 'hen9' }]);
+    expect(u.get(`${GRAMMAR}bu-adjective.ts`)).toContain('hsd: "hen9 bu4 @adjective"');
+  });
+
+  test('a rename leaves every rule naming a real word', () => {
+    const w = fresh();
+    applyOps(w, [{ op: 'rename', id: 'hen3', to: 'hen9' }]);
+    for (const path of w.files(GRAMMAR).filter((p) => !p.endsWith('/index.ts'))) {
+      expect(w.get(path), path).not.toMatch(/hsd: "[^"]*\bhen3\b/);
+    }
+  });
+
+  test('replace and remove name the rules that are left pointing at the word', () => {
+    const w = fresh();
+    applyOps(w, [{ op: 'replace', id: 'bie2', with: '{{word:bu4}} {{word:yao4}}' }]);
+    const note = w.notes.find((n) => n.kind === 'grammar');
+    expect(note.text).toContain('bie-dont.ts');
+    expect(note.text).toContain('=bie2 VP');
+    expect(note.text).toContain('replaced');
+  });
+});

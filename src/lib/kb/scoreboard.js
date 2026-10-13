@@ -38,7 +38,7 @@ export const COLUMNS = {
   undecided_forms: 'Mandarin compounds not marked built or spelled yet',
   items: 'coverage items',
   items_with_form: 'coverage items with at least one way to say them',
-  parse_rate: 'share of the first lessons\' sentences that parse with the patterns taught so far',
+  parse_rate: 'share of the lesson sentences that parse with the patterns taught so far',
   patterns: 'grammar patterns',
 };
 export const NAMES = Object.keys(COLUMNS);
@@ -46,7 +46,7 @@ export const NAMES = Object.keys(COLUMNS);
 const round = (n, places) => Math.round(n * 10 ** places) / 10 ** places;
 
 // -> one row. `atoms: false` skips the solver (those columns stay empty).
-export async function scoreboardRow(kb, { label = '', date = new Date(), atoms = true, parseLessons = 4, atomsTimeoutMs } = {}) {
+export async function scoreboardRow(kb, { label = '', date = new Date(), atoms = true, parseLessons = Infinity, atomsTimeoutMs } = {}) {
   const { source, facts } = kb;
   const composites = source.composites ?? [];
   const forms = composites.flatMap((c) => (c.hsd ? c.hsd.split(' / ') : []));

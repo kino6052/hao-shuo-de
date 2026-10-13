@@ -3,7 +3,8 @@
 // with the reason for every line, so the author can check any of it and
 // decide. It never changes data.
 //
-//   removal(ctx, ids)  -> the report (a plain object, all text resolved to pinyin)
+//   removal(ctx, ids)  -> the report (a plain object, all text resolved to pinyin); `patterns` are the
+//                         grammar patterns whose rules, template or examples name the words
 //   renderRemoval(r)   -> the report as text, for the CLI and the Claude tools
 //
 // ctx = { facts, source, rules }: buildFacts(source), the source, and the rule
@@ -11,6 +12,7 @@
 
 import { solve, tables, sym } from './clingo.js';
 import { replaceWordRefs, refTerm, wordRefIds } from '../word-refs.js';
+import { patternsCarrying, renderPatternUses } from './grammar-uses.js';
 
 const KINDS = ['lesson_example', 'lesson_answer', 'composite_example', 'story', 'phrase_book'];
 const KIND_NAMES = { lesson_example: 'lesson examples', lesson_answer: 'lesson answers', composite_example: 'composite examples', story: 'story lines', phrase_book: 'phrase-book lines' };
@@ -82,11 +84,15 @@ export async function removal(ctx, ids) {
     ...rowsOf('rel_phrase_hit').map(([kind, word, n]) => ({ kind, what: 'phrase', word, n, text: `${term(word)}: ${(source.maps?.[`${kind}s`]?.phrases?.[word]?.[n - 1] ?? '')}` })),
   ].map((r) => ({ ...r, text: pin(r.text) }));
 
+  // the grammar: the patterns whose rules, template or examples name it
+  const patterns = patternsCarrying(source.patterns ?? [], words, ids);
+
   return {
     words: ids.map((id) => ({ id, term: term(id), hanzi: words[id].hanzi, pos: words[id].pos?.eng, necessity: words[id].necessity?.index })),
     composites: { redo: sorted(redo), loses: sorted(loses), headLost: sorted(headLost) },
     book: { sentences, counts: bookCounts, cards, mentions },
     coverage: { lost, touched },
+    patterns,
     definitions,
     senses,
     relations,
@@ -99,6 +105,7 @@ export async function removal(ctx, ids) {
       mentions: mentions.reduce((a, m) => a + m.n, 0),
       lost: lost.length,
       touched: touched.length,
+      patterns: patterns.length,
       definitions: definitions.length,
       senses: senses.length,
       relations: relations.length,
@@ -145,6 +152,7 @@ export function renderRemoval(r, { limit = 12 } = {}) {
   for (const i of r.coverage.lost) out.push(`  LOST ${i.id} ${i.eng ?? ''}: no way left to say it`);
   for (const i of r.coverage.touched) out.push(`  touched ${i.id} ${i.eng ?? ''}: loses ${i.carriers.join(', ')}, can still be said`);
 
+  section('Grammar patterns that name it', r.patterns ?? [], (x) => renderPatternUses([x])[0]);
   section('Other words whose text names it', r.definitions, (d) => `${d.term} (${d.word}) names ${d.names.join(', ')}`);
   section('Catch-all senses left with no compound', r.senses, (s) => `${s.term} ${s.hanzi} (${s.sense})`);
   section('Opposites and synonyms that break', r.relations, (x) => `${x.kind} ${x.what}: ${x.text}`);

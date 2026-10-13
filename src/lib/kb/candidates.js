@@ -25,6 +25,7 @@
 import { wordRefIds, toneless } from '../word-refs.js';
 import { syllables } from '../pinyin-syllables.js';
 import { pinyinOf } from './whatif.js';
+import { patternIndex } from './grammar-uses.js';
 
 // the common Mandarin words (and composites) count more
 export const rankWeight = (rank) => (rank <= 1000 ? 3 : rank <= 2000 ? 2 : 1);
@@ -39,6 +40,8 @@ export const COSTS = {
   mention: 0.5, // another place that names it: prose, info, exercise, FAQ
   coverageLost: 10, // something the language could say and now cannot
   coverageTouched: 1, // something that loses one way of saying it
+  pattern: 2, // a grammar pattern left with no rules or no examples: redone, or dropped
+  patternLoses: 0.5, // a grammar pattern that loses some of its rules, examples or template
   definition: 1, // another word's text that names it
   sense: 2, // a catch-all sense left with no compound
   relation: 2, // an opposite or close pair that loses a half, a phrase that breaks
@@ -56,6 +59,9 @@ export function candidateModel(source, facts, { freq = null, top = 6000 } = {}) 
   const known = (id) => Object.hasOwn(words, id);
   const term = (id) => words[id]?.term ?? id;
   const pin = pinyinOf(words);
+
+  // -- grammar: the patterns whose rules, template or examples name a word
+  const patternWords = patternIndex(source.patterns ?? [], words);
 
   // -- composites: the forms, and who hangs under whom ----------------------------------------------
   const comps = [];
@@ -178,7 +184,7 @@ export function candidateModel(source, facts, { freq = null, top = 6000 } = {}) 
   // -> { counts, parts (the cost of each part), cost, costBase (without Mandarin), lists }
   function consequences(ids, { detail = false } = {}) {
     const gone = ids instanceof Set ? ids : new Set(ids);
-    const lists = { redo: [], loses: [], headLost: [], sentences: [], coverageLost: [], coverageTouched: [], definitions: [], senses: [], relations: [], mandarin: [] };
+    const lists = { redo: [], loses: [], headLost: [], sentences: [], coverageLost: [], coverageTouched: [], patterns: [], definitions: [], senses: [], relations: [], mandarin: [] };
     const n = {};
     const keep = (k, x) => detail && lists[k].push(x);
 
@@ -236,6 +242,13 @@ export function candidateModel(source, facts, { freq = null, top = 6000 } = {}) 
     n.coverageLost = coverageLost;
     n.coverageTouched = coverageTouched;
 
+    // grammar
+    const carried = patternWords.carrying(gone);
+    const patternsDead = carried.filter((x) => x.effect === 'no rules left' || x.effect === 'no examples left').length;
+    n.patterns = carried.length;
+    n.patternsDead = patternsDead;
+    if (detail) lists.patterns = carried;
+
     // the rest
     const named = new Set();
     for (const id of gone) for (const v of namedBy.get(id) ?? []) if (!gone.has(v)) named.add(v);
@@ -269,6 +282,8 @@ export function candidateModel(source, facts, { freq = null, top = 6000 } = {}) 
       mention: COSTS.mention * mentions,
       coverageLost: COSTS.coverageLost * coverageLost,
       coverageTouched: COSTS.coverageTouched * coverageTouched,
+      pattern: COSTS.pattern * patternsDead,
+      patternLoses: COSTS.patternLoses * (carried.length - patternsDead),
       definition: COSTS.definition * named.size,
       sense: COSTS.sense * dead,
       relation: COSTS.relation * relHit.size,
@@ -459,6 +474,8 @@ const SHORT = {
   mention: 'mentions',
   coverageLost: 'coverage lost',
   coverageTouched: 'coverage touched',
+  pattern: 'patterns',
+  patternLoses: 'pattern parts',
   definition: 'definitions',
   sense: 'senses',
   relation: 'relations',

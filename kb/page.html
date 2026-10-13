@@ -185,7 +185,7 @@ function wordCard(d) {
 const COUNTS = [
   ['redo', 'composites to redo'], ['loses', 'lose a form'], ['headLost', 'lose their head'], ['sentences', 'sentences to rewrite'],
   ['cards', 'word cards'], ['lost', 'coverage lost'], ['touched', 'coverage touched'], ['definitions', 'definitions name it'],
-  ['senses', 'catch-all senses empty'], ['relations', 'pairs break'],
+  ['senses', 'catch-all senses empty'], ['relations', 'pairs break'], ['patterns', 'patterns name it'],
 ];
 
 function removal(d) {
@@ -216,7 +216,7 @@ const BOARD = [
   ['words', 'words', 0], ['composites', 'composites', 0], ['avg_form_words', 'words per description', -1],
   ['unreviewed', 'words not reviewed', -1], ['smallest_set', 'smallest defining set', -1], ['true_atoms', 'true atoms', 0],
   ['swappable', 'swappable', 0], ['secondary', 'secondary', 0], ['core', 'core', 0], ['spelled', 'spelled forms', 0],
-  ['undecided_forms', 'compounds undecided', -1], ['items_with_form', 'coverage items sayable', 1], ['parse_rate', 'lessons 1-4 parse rate', 1], ['patterns', 'grammar patterns', 0],
+  ['undecided_forms', 'compounds undecided', -1], ['items_with_form', 'coverage items sayable', 1], ['parse_rate', 'lesson sentences that parse', 1], ['patterns', 'grammar patterns', 0],
 ];
 
 // a small line over the stored rows, ending at the number now
@@ -253,7 +253,7 @@ function scoreboard(d) {
 }
 
 // the parts of a cost, shortened for a table cell
-const PART_LABEL = { redo: 'redo', loses: 'loses form', headLost: 'head', lessonLine: 'lessons', compositeExample: 'examples', mention: 'mentions', coverageLost: 'coverage lost', coverageTouched: 'coverage touched', definition: 'definitions', sense: 'senses', relation: 'relations', mandarin: 'Mandarin' };
+const PART_LABEL = { redo: 'redo', loses: 'loses form', headLost: 'head', lessonLine: 'lessons', compositeExample: 'examples', mention: 'mentions', coverageLost: 'coverage lost', coverageTouched: 'coverage touched', pattern: 'patterns', patternLoses: 'pattern parts', definition: 'definitions', sense: 'senses', relation: 'relations', mandarin: 'Mandarin' };
 const costText = (parts) => Object.entries(parts).filter(([, v]) => v).map(([k, v]) => (PART_LABEL[k] ?? k) + ' ' + Math.round(v * 100) / 100).join(', ') || 'nothing';
 const round = (x) => Math.round(x * 100) / 100;
 

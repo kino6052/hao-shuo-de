@@ -14,7 +14,9 @@
 //     hanzi change. A vocabulary card is an object with `word: "<id>"`.
 //   - What it can't decide is collected as notes for a hand edit: changed
 //     sentences whose English/Russian may need a look, plain-text mentions
-//     of a removed word, dropped relations, id strings in code.
+//     of a removed word, dropped relations, id strings in code, and the grammar rules
+//     (src/data/grammar/) that name a word that is replaced or removed. A rename rewrites
+//     the rules itself.
 
 import { readdirSync, readFileSync, writeFileSync, unlinkSync, existsSync, mkdirSync, statSync } from 'fs';
 import { resolve, dirname, relative, extname } from 'path';
@@ -25,6 +27,7 @@ import { compoundSplitter, compoundForm } from '../src/lib/compound-rule.js';
 import { paraphraseProblems } from '../src/lib/paraphrase.js';
 import { FORM_KINDS, formKinds, kindsProblems } from '../src/lib/form-kinds.js';
 import { LESSON_IDS } from '../src/content/book.js';
+import { ruleWords } from '../src/lib/grammar/grammar.js';
 
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -619,6 +622,65 @@ function rewriteMentions(ws, id, term, to) {
   }
 }
 
+// -- grammar rules --------------------------------------------------------------------------
+// A pattern's rules name words by id (=bie2, a bare hen3, @adjective-zhe4-na4): they are not
+// {{word:…}} refs, so the ops above never see them. See src/lib/grammar/earley.js.
+
+const GRAMMAR_DIR = 'src/data/grammar/';
+const RULE_LINE = /\{ lhs: "[^"]*", hsd: "([^"]*)"/;
+
+// -> [{ path, line, hsd }]: the rules whose right side names the word
+function grammarRuleHits(ws, id) {
+  const hits = [];
+  for (const path of ws.files(GRAMMAR_DIR)) {
+    if (path.endsWith('/index.ts')) continue;
+    ws.get(path).split(LF).forEach((text, i) => {
+      const m = text.match(RULE_LINE);
+      if (m && ruleWords(m[1]).includes(id)) hits.push({ path, line: i + 1, hsd: m[1] });
+    });
+  }
+  return hits;
+}
+
+// one symbol of a rule's right side with the word renamed
+function renameSymbol(sym, id, to) {
+  if (sym.startsWith('=')) return sym.slice(1) === id ? `=${to}` : sym;
+  if (sym.startsWith('@')) {
+    const [name, ...except] = sym.slice(1).split('-');
+    return except.length ? `@${[name, ...except.map((x) => (x === id ? to : x))].join('-')}` : sym;
+  }
+  if (/^[A-Z]/.test(sym)) return sym;
+  return sym === id ? to : sym;
+}
+
+// rewrites the rules that name the word
+function renameInRules(ws, id, to) {
+  for (const path of ws.files(GRAMMAR_DIR)) {
+    if (path.endsWith('/index.ts')) continue;
+    const src = ws.get(path);
+    let n = 0;
+    const out = src
+      .split(LF)
+      .map((text) => {
+        const m = text.match(RULE_LINE);
+        if (!m || !ruleWords(m[1]).includes(id)) return text;
+        n++;
+        const hsd = m[1].trim().split(/\s+/).map((sym) => renameSymbol(sym, id, to)).join(' ');
+        return text.replace(`hsd: "${m[1]}"`, `hsd: "${hsd}"`);
+      })
+      .join(LF);
+    if (n) {
+      ws.set(path, out);
+      ws.note('grammar', `${path}: ${n} rule${n === 1 ? '' : 's'} renamed ${id} -> ${to}`);
+    }
+  }
+}
+
+// notes the rules that name a word that is going away
+function noteGrammar(ws, id, why) {
+  for (const h of grammarRuleHits(ws, id)) ws.note('grammar', `${h.path}:${h.line}: the rule "${h.hsd}" names ${id} (${why}); edit the rule, or the build fails ("not a word")`);
+}
+
 // Notes plain-text mentions of a word's term outside refs, and id strings in code.
 function noteMentions(ws, id, term, why) {
   const forms = [...new Set([term, toneless(term)])].filter((f) => f.length > 2);
@@ -870,6 +932,7 @@ const OPS = {
       editCategories(ws, (ids) => ids.filter((x) => x !== id));
       if (single) rewriteMentions(ws, id, old.term, ws.word(single).term);
       noteMentions(ws, id, old.term, `${id} was replaced`);
+      noteGrammar(ws, id, `${id} was replaced`);
       ws.remove(ws.wordPath(id));
     } else {
       ws.note('todo', `${id} is kept for reuse: change its file and card with edit/move ops`);
@@ -920,6 +983,7 @@ const OPS = {
       for (const s of Object.values(w.senses)) s.compounds = s.compounds.map((c) => c.split(' ').map((p) => (p === id ? to : p)).join(' '));
       ws.setWord(to, w);
     }
+    renameInRules(ws, id, to);
     noteMentions(ws, id, '', 'renamed');
   },
 
@@ -935,6 +999,7 @@ const OPS = {
     editRelations(ws, (p) => (p.includes(id) ? null : p), (k, f) => (k === id ? null : [k, f]), `${id} was removed`);
     editCoverageWords(ws, (words) => (words.includes(id) ? words.filter((x) => x !== id) : words));
     noteMentions(ws, id, w.term, `${id} was removed`);
+    noteGrammar(ws, id, `${id} was removed`);
     ws.remove(ws.wordPath(id));
   },
 

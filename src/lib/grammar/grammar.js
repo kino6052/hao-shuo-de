@@ -13,6 +13,18 @@
 import { makeGrammar, isNonterminal, classRef } from './earley.js';
 import { posClasses } from './lexicon.js';
 
+// -> the word ids a rule's right side names: a bare id, =id, and the ids a class leaves out
+//    ruleWords("hen3 =duo1 @adjective-zhe4-na4") -> ["hen3", "duo1", "zhe4", "na4"]
+export function ruleWords(hsd) {
+  const ids = [];
+  for (const sym of String(hsd).trim().split(/\s+/).filter(Boolean)) {
+    if (isNonterminal(sym)) continue;
+    if (sym.startsWith('@')) ids.push(...classRef(sym).except);
+    else ids.push(sym.startsWith('=') ? sym.slice(1) : sym);
+  }
+  return ids;
+}
+
 // classes the lexicon makes up itself
 const BUILT_IN = ['comma', 'quoted', 'unknown', 'again'];
 
