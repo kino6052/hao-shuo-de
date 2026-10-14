@@ -15,7 +15,7 @@
         "yá-de yánsè"
       ],
       "verdict": "clumsy",
-      "note": "bai allows to say a lot of other things",
+      "note": "Bái lets us say a lot of other things.",
       "at": "2026-10-13T23:38:22.857Z"
     },
     "bian4": {
@@ -24,7 +24,7 @@
         "hé yǐ-qián bù yī-yàng le"
       ],
       "verdict": "clumsy",
-      "note": "one of the most important words",
+      "note": "One of the most important words.",
       "at": "2026-10-14T00:06:23.835Z"
     },
     "chang2": {
@@ -33,7 +33,7 @@
         "cóng zhè-biān dào nà-biān hěn yuǎn"
       ],
       "verdict": "clumsy",
-      "note": "very useful word",
+      "note": "A very useful word.",
       "at": "2026-10-13T23:45:31.105Z"
     },
     "chi1": {
@@ -75,7 +75,7 @@
         "zài zhè-lǐ, yào tā lái, wǒ bù zǒu"
       ],
       "verdict": "clumsy",
-      "note": "a way to say it - spend a lot of time wanting something to happen, but that too clumsy",
+      "note": "One way to say it is \"spend a long time wanting something to happen\", but that is too clumsy.",
       "at": "2026-10-13T23:55:30.822Z"
     },
     "dong4": {
@@ -125,7 +125,7 @@
         "méi-yǒu huài dōng-xi zài shàng-miàn"
       ],
       "verdict": "clumsy",
-      "note": "too useful",
+      "note": "Too useful to drop.",
       "at": "2026-10-13T23:44:11.765Z"
     },
     "gao1": {
@@ -134,7 +134,7 @@
         "cóng dì dào shàng-miàn hěn cháng"
       ],
       "verdict": "clumsy",
-      "note": "very useful",
+      "note": "Very useful.",
       "at": "2026-10-13T23:45:11.689Z"
     },
     "gei3": {
@@ -143,7 +143,7 @@
         "ràng tā yǒu X"
       ],
       "verdict": "clumsy",
-      "note": "one of the most imortant words",
+      "note": "One of the most important words.",
       "at": "2026-10-14T00:07:17.876Z"
     },
     "hao3": {
@@ -173,7 +173,7 @@
         "huǒ-de yánsè"
       ],
       "verdict": "clumsy",
-      "note": "fire isn't really red",
+      "note": "Fire is not really red.",
       "at": "2026-10-13T23:39:09.340Z"
     },
     "hua4": {
@@ -235,7 +235,7 @@
         "yòng yǎnjing"
       ],
       "verdict": "clumsy",
-      "note": "to say that eyes do it - is too clumsy",
+      "note": "Saying that the eyes do it is too clumsy.",
       "at": "2026-10-13T23:51:56.186Z"
     },
     "kong1": {
@@ -244,7 +244,7 @@
         "lǐ-miàn méi-yǒu dōng-xi"
       ],
       "verdict": "clumsy",
-      "note": "allows to express other words",
+      "note": "Lets us express other words.",
       "at": "2026-10-13T23:41:44.731Z"
     },
     "kuai4": {
@@ -290,13 +290,13 @@
         "hé rì yī-yàng"
       ],
       "verdict": "clumsy",
-      "note": "very useful words",
+      "note": "A very useful word.",
       "at": "2026-10-13T23:43:21.223Z"
     },
     "mo1": {
       "status": "atom",
-      "eng": "related to fundamental perceptive mechanism unrelated to other senses",
-      "rus": "related to fundamental perceptive mechanism unrelated to other senses",
+      "eng": "Touch is a basic way of perceiving that has nothing to do with the other senses.",
+      "rus": "Осязание — основной способ восприятия, не связанный с остальными чувствами.",
       "at": "2026-10-14T00:08:19.327Z"
     },
     "nan2": {
@@ -317,7 +317,7 @@
         "hé dì yī-yàng"
       ],
       "verdict": "clumsy",
-      "note": "one of the most useful words",
+      "note": "One of the most useful words.",
       "at": "2026-10-13T23:44:26.032Z"
     },
     "qi3": {
@@ -376,7 +376,7 @@
         "yòng shù kàn yǒu duō-shǎo"
       ],
       "verdict": "clumsy",
-      "note": "very useful word",
+      "note": "A very useful word.",
       "at": "2026-10-13T23:50:07.974Z"
     },
     "tang3": {
@@ -398,7 +398,7 @@
         "yòng ěrduo"
       ],
       "verdict": "clumsy",
-      "note": "to say that ears do it - is clumsy",
+      "note": "Saying that the ears do it is clumsy.",
       "at": "2026-10-13T23:52:10.651Z"
     },
     "tong1": {
@@ -445,13 +445,13 @@
         "yào"
       ],
       "verdict": "clumsy",
-      "note": "potentially an atom (connect it to yao, juede relationship)",
+      "note": "Potentially an atom: connect it to yào and jué-de.",
       "at": "2026-10-13T23:50:46.206Z"
     },
     "xiao3": {
       "status": "atom",
-      "eng": "little isn't just bu da",
-      "rus": "little isn't just bu da",
+      "eng": "Little is not just \"not big\" (bù dà).",
+      "rus": "Маленький — это не просто «не большой» (bù dà).",
       "at": "2026-10-13T23:44:52.515Z"
     },
     "xiao4": {
@@ -469,7 +469,7 @@
         "yī-diǎn"
       ],
       "verdict": "clumsy",
-      "note": "zhe-xie sounds natural - zhe you-de or zhe-bu-duo-de sounds very clumsy",
+      "note": "Zhè-xiē sounds natural; zhè yǒu-de or zhè bù-duō-de sound very clumsy.",
       "at": "2026-10-13T23:36:32.189Z"
     },
     "xie3": {
@@ -494,7 +494,7 @@
         "cóng bié-rén nà-lǐ dé-dào zhīdào"
       ],
       "verdict": "clumsy",
-      "note": "note that xue and zhidao are circular",
+      "note": "Xué and zhī-dào are circular: each is said with the other.",
       "at": "2026-10-13T23:49:08.310Z"
     },
     "yan2se4": {
@@ -548,7 +548,7 @@
         "xué-guò, hái jì-de"
       ],
       "verdict": "clumsy",
-      "note": "relates to xue (we need to capture as much relationship in paraphrases between all the words in our core as we can)",
+      "note": "Relates to xué: the paraphrases should capture as many links between the core words as they can.",
       "at": "2026-10-13T23:48:49.511Z"
     },
     "zhi3": {
@@ -561,7 +561,7 @@
         "ná-qǐ-lái, yào hěn duō lì"
       ],
       "verdict": "clumsy",
-      "note": "allows to say important (zhong-yao), zhong-dian",
+      "note": "Lets us say \"important\" (zhòng-yào) and zhòng-diǎn.",
       "at": "2026-10-13T23:43:56.643Z"
     },
     "zou3": {
@@ -571,7 +571,7 @@
         "bù zài zhè-lǐ le"
       ],
       "verdict": "clumsy",
-      "note": "we need to connect relationships between qu zou fei tong dong dao and other similar -  Iwant to think of how we can express",
+      "note": "Connect it to qù, fēi, tōng, dòng, dào and similar words; how to express that is still open.",
       "at": "2026-10-14T00:06:06.792Z"
     },
     "zuo4": {

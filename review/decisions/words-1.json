@@ -15,7 +15,6 @@
         "shēng wǒ-de, bù shì nǚ-rén-de rén"
       ],
       "verdict": "fine",
-      "note": "capture connection to ren",
       "at": "2026-10-13T15:04:34.683Z"
     },
     "bao1": {
@@ -54,7 +53,6 @@
         "huà-lǐ zuì xiǎo-de bù-fen"
       ],
       "verdict": "clumsy",
-      "note": "connection to shuo and to hua",
       "at": "2026-10-13T15:06:50.467Z"
     },
     "ci4": {
@@ -95,7 +93,7 @@
         "zěnme zuò"
       ],
       "verdict": "clumsy",
-      "note": "to useful",
+      "note": "Too useful to drop.",
       "at": "2026-10-13T14:28:58.553Z"
     },
     "fan4": {
@@ -125,7 +123,7 @@
         "yòng lì zuò dōng-xi"
       ],
       "verdict": "clumsy",
-      "note": "very useful",
+      "note": "Very useful.",
       "at": "2026-10-13T14:29:42.221Z"
     },
     "guan1xi": {
@@ -134,7 +132,7 @@
         "X hé Y zenme bi"
       ],
       "verdict": "clumsy",
-      "note": "too fundamental. capture connection to bi",
+      "note": "Too fundamental to drop.",
       "at": "2026-10-13T15:04:20.282Z"
     },
     "guo2": {
@@ -143,7 +141,7 @@
         "hěn duō rén zài yī-qǐ-de dà dì-fang"
       ],
       "verdict": "clumsy",
-      "note": "disambiguation needed - many places can be called \"many people together\"",
+      "note": "Needs disambiguation: many places could be called \"a big place where many people are together\".",
       "at": "2026-10-13T14:08:37.699Z"
     },
     "guo3": {
@@ -152,7 +150,7 @@
         "zhíwù shēng-de, néng chī-de dōng-xi"
       ],
       "verdict": "fine",
-      "note": "very useful in CHinese - simplifies a lot",
+      "note": "Very useful in Chinese; it simplifies a lot.",
       "at": "2026-10-13T14:20:13.440Z"
     },
     "hao4": {
@@ -166,7 +164,7 @@
         "hěn rè, hěn míng, néng ràng dōng-xi biàn hēi-de dōng-xi"
       ],
       "verdict": "clumsy",
-      "note": "too clumsy",
+      "note": "Too clumsy.",
       "at": "2026-10-13T14:14:11.699Z"
     },
     "ji1": {
@@ -175,7 +173,7 @@
         "rén zuò-de, kāi le jiù dòng-de dōng-xi"
       ],
       "verdict": "clumsy",
-      "note": "too useful",
+      "note": "Too useful to drop.",
       "at": "2026-10-13T14:21:34.473Z"
     },
     "jia1": {
@@ -185,7 +183,7 @@
         "bàba māma hé wǒ"
       ],
       "verdict": "clumsy",
-      "note": "fundamental word that simplifies a lot of language",
+      "note": "A fundamental word that simplifies a lot of the language.",
       "at": "2026-10-13T14:08:04.742Z"
     },
     "jia4zhi2": {
@@ -194,7 +192,7 @@
         "mǎi tā yào gěi-de jīn-de duō-shǎo"
       ],
       "verdict": "fine",
-      "note": "ta zhong bu zhong4-yao",
+      "note": "The author's note, meaning to be confirmed: \"ta zhong bu zhong4-yao\".",
       "at": "2026-10-13T14:28:32.017Z"
     },
     "jiao3": {
@@ -224,7 +222,7 @@
         "yòng-de dōng-xi"
       ],
       "verdict": "clumsy",
-      "note": "too useful a word (gong-ju)",
+      "note": "Too useful a word to drop (gōng-jù).",
       "at": "2026-10-13T14:21:10.446Z"
     },
     "kou3": {
@@ -238,7 +236,6 @@
         "shēntǐ-lǐ, néng ná zhòng dōng-xi-de dōng-xi"
       ],
       "verdict": "clumsy",
-      "note": "connection to shenti",
       "at": "2026-10-13T15:07:04.750Z"
     },
     "liang3": {
@@ -263,7 +260,7 @@
         "méi-yǒu"
       ],
       "verdict": "clumsy",
-      "note": "very useful for counting",
+      "note": "Very useful for counting.",
       "at": "2026-10-13T14:36:48.760Z"
     },
     "liu4": {
@@ -280,7 +277,6 @@
         "shēng wǒ-de nǚ-rén"
       ],
       "verdict": "clumsy",
-      "note": "connection to baba and ren",
       "at": "2026-10-13T15:05:26.706Z"
     },
     "mao2": {
@@ -298,7 +294,7 @@
         "kāi hé guān-de, rén jìn chū-de dōng-xi"
       ],
       "verdict": "clumsy",
-      "note": "very basic word and potentially simplifies a lot - but we keep an eye on it - it might potentially go",
+      "note": "Very basic, and it simplifies a lot; keep an eye on it, it might go later.",
       "at": "2026-10-13T14:10:51.215Z"
     },
     "na4": {
@@ -308,8 +304,8 @@
     },
     "ni3": {
       "status": "atom",
-      "eng": "there is not honest paraphrase because \"person who listens to me\" can be \"he\" so there is need disambiguation",
-      "rus": "there is not honest paraphrase because \"person who listens to me\" can be \"he\" so there is need disambiguation",
+      "eng": "There is no honest paraphrase: \"the person who listens to me\" could just as well be \"he\", so it needs a pointer to tell them apart.",
+      "rus": "Честного описания нет: «человек, который меня слушает» может быть и «он», поэтому нужно указание, чтобы их различить.",
       "at": "2026-10-13T14:04:47.132Z"
     },
     "nv3": {
@@ -318,7 +314,7 @@
         "néng shēng hái-zi-de rén"
       ],
       "verdict": "clumsy",
-      "note": "we don't want to lose this level of expressivity. also need to capture connnection to ren",
+      "note": "We do not want to lose this level of expressiveness.",
       "at": "2026-10-13T15:03:49.831Z"
     },
     "qi1": {
@@ -335,7 +331,7 @@
         "kàn-bù-jiàn, rén bù néng méi-yǒu-de dōng-xi"
       ],
       "verdict": "clumsy",
-      "note": "very clumsy and ambiguous",
+      "note": "Very clumsy and ambiguous.",
       "at": "2026-10-13T14:14:41.023Z"
     },
     "qiu2": {
@@ -352,7 +348,7 @@
         "néng shuō huà, néng xiě zì-de dòng-wù"
       ],
       "verdict": "clumsy",
-      "note": "too important of a word. also need to capture connection to dongwu",
+      "note": "Too important a word to drop.",
       "at": "2026-10-13T15:04:03.523Z"
     },
     "ri4": {
@@ -361,7 +357,7 @@
         "tiān-shàng hěn míng, hěn rè-de dōng-xi"
       ],
       "verdict": "clumsy",
-      "note": "feels like this word simplifies a lot - we keep it for now and see later if we can do without it without losing expressiveness",
+      "note": "It seems to simplify a lot: keep it for now, and see later whether we can do without it without losing expressiveness.",
       "at": "2026-10-13T14:11:49.279Z"
     },
     "san1": {
@@ -379,8 +375,8 @@
     },
     "shen2me": {
       "status": "atom",
-      "eng": "zhe shi wo bu zhidao-de dongxi, stil doesn't ask a question",
-      "rus": "zhe shi wo bu zhidao-de dongxi, stil doesn't ask a question",
+      "eng": "\"The thing I do not know\" does not ask a question, so it cannot say shénme.",
+      "rus": "«Вещь, которую я не знаю» не задаёт вопроса, поэтому не может заменить shénme.",
       "at": "2026-10-13T14:06:28.938Z"
     },
     "sheng1yin1": {
@@ -389,7 +385,6 @@
         "ěrduo tīng-dào-de dōng-xi"
       ],
       "verdict": "clumsy",
-      "note": "connection to erduo and ting",
       "at": "2026-10-13T15:07:23.902Z"
     },
     "shi2": {
@@ -444,7 +439,7 @@
         "bù shì wǒ yě bù shì nǐ de dōng-xi"
       ],
       "verdict": "clumsy",
-      "note": "we should be adding core dictionary internal synonyms. for this one it is bie and buton etc",
+      "note": "Wants synonyms inside the core dictionary: bié, bù-tóng and the like.",
       "at": "2026-10-13T15:02:17.851Z"
     },
     "ti2": {
@@ -515,8 +510,8 @@
     },
     "yang4": {
       "status": "atom",
-      "eng": "because it is defined circularly with zhong",
-      "rus": "because it is defined circularly with zhong",
+      "eng": "Its description would be circular with zhǒng: each is said with the other.",
+      "rus": "Его описание получилось бы круговым с zhǒng: каждое объясняется через другое.",
       "at": "2026-10-13T14:32:25.281Z"
     },
     "yi1": {
@@ -538,7 +533,6 @@
         "zuò fàn yòng-de, hé shuǐ bù yī-yàng-de shuǐ"
       ],
       "verdict": "fine",
-      "note": "capture connection to shui",
       "at": "2026-10-13T15:05:57.924Z"
     },
     "yue4": {
@@ -547,7 +541,7 @@
         "wǎn-shang tiān-shàng míng-de dōng-xi"
       ],
       "verdict": "clumsy",
-      "note": "simplifies a lot of things (including calendar like ri too)",
+      "note": "Simplifies a lot of things (including the calendar, like rì).",
       "at": "2026-10-13T14:12:26.419Z"
     },
     "zhe4": {
@@ -561,7 +555,7 @@
         "huó-de, bù dòng-de dōng-xi"
       ],
       "verdict": "clumsy",
-      "note": "very important word",
+      "note": "A very important word.",
       "at": "2026-10-13T14:13:13.783Z"
     },
     "zhong3": {

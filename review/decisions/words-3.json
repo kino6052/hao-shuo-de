@@ -134,8 +134,8 @@
     },
     "hen3": {
       "status": "atom",
-      "eng": "fundamental",
-      "rus": "fundamental",
+      "eng": "A fundamental word.",
+      "rus": "Основное слово.",
       "at": "2026-10-14T00:18:02.664Z"
     },
     "hou4": {
@@ -221,8 +221,8 @@
     },
     "ma": {
       "status": "atom",
-      "eng": "important word",
-      "rus": "important word",
+      "eng": "An important word.",
+      "rus": "Важное слово.",
       "at": "2026-10-14T00:15:45.588Z"
     },
     "mai3": {
@@ -243,7 +243,7 @@
         "kàn-dào-de nà-yī-biān"
       ],
       "verdict": "clumsy",
-      "note": "to important of a word",
+      "note": "Too important a word to drop.",
       "at": "2026-10-14T00:13:21.627Z"
     },
     "na2": {
@@ -289,7 +289,7 @@
         "tóu-de nà-biān"
       ],
       "verdict": "clumsy",
-      "note": "to important",
+      "note": "Too important a word to drop.",
       "at": "2026-10-14T00:14:06.791Z"
     },
     "shei2": {
@@ -369,7 +369,7 @@
         "jiǎo-de nà-biān"
       ],
       "verdict": "clumsy",
-      "note": "to important",
+      "note": "Too important a word to drop.",
       "at": "2026-10-14T00:14:16.471Z"
     },
     "ye3": {
@@ -419,8 +419,8 @@
     },
     "zai4": {
       "status": "atom",
-      "eng": "fundamental location word",
-      "rus": "fundamental location word",
+      "eng": "A fundamental word for location.",
+      "rus": "Основное слово места.",
       "at": "2026-10-14T00:10:13.046Z"
     },
     "zao3": {
