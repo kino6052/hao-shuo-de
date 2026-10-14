@@ -96,6 +96,23 @@ describe('a rule proposes what the data implies', () => {
   });
 });
 
+describe('accepted rules and rejected pairs (kb/relation-rules.json)', () => {
+  const ruled = createKb({ ...source, words, composites, maps }, { relationRules: { accept: ['head rule', 'paraphrase'], rejected: [{ kind: 'kind-of', a: '飞机', b: 'ji1' }, { kind: 'opposite-by-not', a: 'fan4', b: 'chi1' }] } }).relations();
+  const got = (kind) => ruled.relations.filter((r) => r.kind === kind);
+
+  test('a source named in accept turns proposed into accepted; others stay proposed', () => {
+    expect(got('kind-of').every((r) => r.status === 'accepted')).toBe(true);
+    expect(got('close-by-paraphrase').every((r) => r.status === 'accepted')).toBe(true);
+    expect(got('same-form').every((r) => r.status === 'proposed')).toBe(true);
+  });
+
+  test('a rejected pair is left out and listed apart', () => {
+    expect(got('kind-of').some((r) => r.a === '飞机')).toBe(false);
+    expect(got('opposite-by-not').some((r) => r.a === 'fan4')).toBe(false);
+    expect(ruled.rejected.map((r) => r.kind).sort()).toEqual(['kind-of', 'opposite-by-not']);
+  });
+});
+
 describe('what the paraphrases name (the author asked for as many links between core words as they can capture)', () => {
   test('defined-by: every word a paraphrase names, once, with the form', () => {
     const by = of('defined-by').map((r) => [r.a, r.b]);

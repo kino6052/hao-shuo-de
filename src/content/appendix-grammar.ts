@@ -1251,6 +1251,17 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
+            "{{word:ba3}} + thing + describing word: {{Word:wo3}} {{word:ba3}} {{word:fang2}}-{{word:jian1}} {{word:gan1jing4}}. (I make the room clean.) The describing word says how the thing ends up."
+          ],
+          "ru": [
+            "{{word:ba3}} + вещь + слово-описание: {{Word:wo3}} {{word:ba3}} {{word:fang2}}-{{word:jian1}} {{word:gan1jing4}}. (Я делаю комнату чистой.) Слово-описание говорит, какой вещь станет."
+          ],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
             "{{word:ba3}} + thing + {{word:fang4}} {{word:zai4}} + place, put: {{Word:wo3}} {{word:ba3}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:di4}}-{{word:shang4}} {{word:le}}. (I put the clothes on the floor.)"
           ],
           "ru": [

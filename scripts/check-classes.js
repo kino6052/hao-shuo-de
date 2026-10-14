@@ -9,10 +9,10 @@
 //
 //   node scripts/check-classes.js
 
-import { openKb } from './kb.js';
+import { reloadSource } from './kb.js';
 import { classProblems, classesWaiting } from '../src/lib/kb/class-proposals.js';
 
-const { words, patterns, composites } = (await openKb()).source;
+const { words, patterns, composites } = await reloadSource();
 const { listed, errors } = classProblems({ words, patterns, composites });
 const waiting = classesWaiting(words);
 console.log(`check-classes: ${listed} listed class${listed === 1 ? '' : 'es'}${waiting.length ? `, ${waiting.length} waiting for the author` : ''}.`);

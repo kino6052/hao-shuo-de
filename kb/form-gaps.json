@@ -5,44 +5,14 @@
     "why": "a number said as ten tens (shí-ge shí): the book has no pattern for a number built from the word shí"
   },
   {
-    "zh": "所以",
-    "form": "yīnwèi zhè-ge",
-    "why": "yīnwèi and a pointer with nothing after: the start of a sentence, not a whole phrase"
-  },
-  {
-    "zh": "马上",
-    "form": "xiàn-zài jiù",
-    "why": "xiàn-zài and jiù with no verb after them: a frame, not a whole phrase"
-  },
-  {
     "zh": "千",
     "form": "shí-ge shí-ge shí",
     "why": "a number said as ten tens (shí-ge shí): the book has no pattern for a number built from the word shí"
   },
   {
-    "zh": "今年",
-    "form": "xiàn-zài-de shí-èr-ge yuè",
-    "why": "a part with de before a counted span (the twelve months of now); the rule for qián and hòu before a span (qian-hou-span) takes no de part"
-  },
-  {
-    "zh": "游泳",
-    "form": "guò shuǐ qù X dì-fang",
-    "why": "guò as a verb (\"cross\"); the dictionary lists guò only as the \"have done it before\" word"
-  },
-  {
-    "zh": "代表",
-    "form": "tì X",
-    "why": "tì X (\"in X's place\") with no verb after it: a frame"
-  },
-  {
     "zh": "虽然",
     "form": "…, dàn-shì …",
     "why": "a frame that starts with an open part and a comma, then dàn-shì; the patterns read dàn-shì after a whole sentence only"
-  },
-  {
-    "zh": "常常",
-    "form": "hěn duō cì",
-    "why": "hěn duō cì (\"many times\") on its own: cì needs a verb before it in the patterns"
   },
   {
     "zh": "乘",
@@ -53,25 +23,5 @@
     "zh": "尽管",
     "form": "…, dàn-shì …",
     "why": "a frame that starts with an open part and a comma, then dàn-shì; the patterns read dàn-shì after a whole sentence only"
-  },
-  {
-    "zh": "收拾",
-    "form": "bǎ X gānjìng",
-    "why": "a bǎ pattern the book does not teach (the same family as the gap in kb/grammar-gaps.json)"
-  },
-  {
-    "zh": "盒子",
-    "form": "liù-miàn-dōu-fāng-de dōng-xi",
-    "why": "dōu before a describing word with no hěn (all six faces square); the book teaches hěn first"
-  },
-  {
-    "zh": "除",
-    "form": "cóng C lǐ-miàn ná A, néng ná B-cì",
-    "why": "a long frame about taking things out in turn, with a count after the verb (B-cì); no pattern reads it"
-  },
-  {
-    "zh": "立方体",
-    "form": "liù-miàn-dōu-fāng-de dōng-xi",
-    "why": "dōu before a describing word with no hěn (all six faces square); the book teaches hěn first"
   }
 ]

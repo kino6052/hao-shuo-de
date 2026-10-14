@@ -57,7 +57,9 @@ const LIGHT_RUN = /(?:{{[Ww]ord:[a-z0-9_-]+(?:#[a-z]+)?}}-)+{{[Ll]ight:([a-z0-9_
 // the words of a slot list as comparable cells
 const cell = (s) => (s.kind === 'word' ? `w:${s.id}:${s.light ? 'l' : ''}` : `${s.kind}:${s.text}`);
 
-export function relationReport(source, facts) {
+// rules: { accept: [source, ...], rejected: [{ kind, a, b }] } (kb/relation-rules.json). A relation a rule found whose `source`
+// is in `accept` is accepted as a group (K25); one in `rejected` is left out and listed apart (`report.rejected`), so it does not come back.
+export function relationReport(source, facts, rules = {}) {
   const words = source.words;
   const term = (id) => words[id]?.term ?? id;
   const pin = pinyinOf(words);
@@ -193,12 +195,21 @@ export function relationReport(source, facts) {
     }
   }
 
+  const accept = new Set(rules.accept ?? []);
+  const refused = (rules.rejected ?? []).map((x) => `${x.kind}|${x.a}|${x.b ?? ""}`);
+  const rejected = [];
+  for (let i = relations.length - 1; i >= 0; i--) {
+    const r = relations[i];
+    if (r.status !== "proposed") continue;
+    if (refused.includes(`${r.kind}|${r.a}|${r.b ?? ""}`) || (SYMMETRIC.has(r.kind) && refused.includes(`${r.kind}|${r.b}|${r.a}`))) rejected.push(...relations.splice(i, 1));
+    else if (accept.has(r.source)) r.status = "accepted";
+  }
   const counts = {};
   for (const r of relations) {
     const c = (counts[r.kind] ??= { accepted: 0, proposed: 0 });
     c[r.status]++;
   }
-  return { relations, counts, kinds: KINDS.filter((k) => counts[k]) };
+  return { relations, rejected, counts, kinds: KINDS.filter((k) => counts[k]) };
 }
 
 // -> text. opts: { kind, status, limit } (limit per kind, default 8)

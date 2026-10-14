@@ -15,36 +15,73 @@ import { buildLexicon, lex } from './lexicon.js';
 import { buildGrammar } from './grammar.js';
 import { parse } from './earley.js';
 
-export function createParser({ patterns, words, composites = [] }) {
+// With a `memo` ({ get(key), set(key, value) }, see scripts/parse-memo.js) a parse is looked up before it is worked out,
+// and what comes back is the slim form of the result: the same fields, but `trees` are stand-ins that hold only the
+// patterns each reading uses (enough for patternsOf), and `tokens` hold only their text. That is what the gates read;
+// anything that draws a tree (outline, bracket) asks a parser made without a memo.
+export function createParser({ patterns, words, composites = [], memo = null }) {
   const lexicon = buildLexicon({ words, composites });
   const { grammar, rules, errors } = buildGrammar(patterns, { words, composites });
-  return {
-    errors,
-    rules,
-    grammar,
-    parse(text, { maxTrees = 20, extra, start, forms } = {}) {
-      const lattice = lex(text, lexicon, { extra, forms });
-      const result = parse(lattice, grammar, { maxTrees, start });
-      const tokens = lattice.tokens;
-      const piece = (p) => ({ ...p, text: tokens.slice(p.from, p.to).map((t) => t.text).join(' ') });
-      return {
-        text,
-        tokens,
-        problems: lattice.problems,
-        ok: result.ok,
-        trees: result.trees,
-        treeCount: result.treeCount,
-        patterns: result.trees[0] ? patternsOf(result.trees[0]) : [],
-        failure: result.failure && {
-          at: result.failure.at,
-          token: tokens[result.failure.at]?.text ?? null,
-          expected: result.failure.expected,
-          pieces: result.failure.pieces.map(piece),
-        },
-      };
-    },
+
+  const run = (text, { maxTrees = 20, extra, start, forms } = {}) => {
+    const lattice = lex(text, lexicon, { extra, forms });
+    const result = parse(lattice, grammar, { maxTrees, start });
+    const tokens = lattice.tokens;
+    const piece = (p) => ({ ...p, text: tokens.slice(p.from, p.to).map((t) => t.text).join(' ') });
+    return {
+      text,
+      tokens,
+      problems: lattice.problems,
+      ok: result.ok,
+      trees: result.trees,
+      treeCount: result.treeCount,
+      patterns: result.trees[0] ? patternsOf(result.trees[0]) : [],
+      failure: result.failure && {
+        at: result.failure.at,
+        token: tokens[result.failure.at]?.text ?? null,
+        expected: result.failure.expected,
+        pieces: result.failure.pieces.map(piece),
+      },
+    };
   };
+
+  const remembered = (text, options = {}) => {
+    const { maxTrees = 20, extra, start, forms } = options;
+    const key = `${maxTrees}|${start ?? ''}|${forms ? 1 : 0}|${extra ? JSON.stringify(extra) : ''}|${text}`;
+    let slim = memo.get(key);
+    if (!slim) {
+      slim = slimOf(run(text, options));
+      memo.set(key, slim);
+    }
+    return fromSlim(text, slim);
+  };
+
+  return { errors, rules, grammar, parse: memo ? remembered : run };
 }
+
+// -> the part of a parse result the gates read, as plain data that can be stored
+export const slimOf = (r) => ({
+  ok: r.ok,
+  n: r.treeCount,
+  p: r.patterns,
+  t: r.trees.map(patternsOf),
+  w: r.tokens.map((t) => t.text),
+  q: r.problems,
+  f: r.failure,
+});
+
+// -> a parse result from its slim form (see createParser)
+export const fromSlim = (text, s) => ({
+  text,
+  tokens: s.w.map((t) => ({ text: t })),
+  problems: s.q,
+  ok: s.ok,
+  trees: s.t.map((ids) => ({ sym: '?', children: ids.map((pattern) => ({ sym: '?', pattern })) })),
+  treeCount: s.n,
+  patterns: s.p,
+  failure: s.f,
+  slim: true,
+});
 
 // -> the pattern ids a tree uses, in order of appearance.
 export function patternsOf(tree) {

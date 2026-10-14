@@ -30,7 +30,7 @@ import { meaningReport, meaningWord, renderMeaning, renderMeaningWord } from './
 import { candidateModel, renderAddition, renderAudit, renderRemovalCandidates, renderRootCandidates, renderSwaps } from './candidates.js';
 
 // freq: the Mandarin frequency list [{ zh, py, rank }]; drafts: how words would be said without a stored paraphrase { id: { forms, verdict } }
-export function createKb(source, { rules = readRules('base', 'whatif'), freq = null, drafts = {} } = {}) {
+export function createKb(source, { rules = readRules('base', 'whatif'), freq = null, drafts = {}, parseMemo = null, relationRules = {} } = {}) {
   let meaning = null; // the meaning links, asked once: a KB is one version of the data
   const facts = buildFacts(source);
   const index = buildIndex(source, facts);
@@ -42,7 +42,7 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
   let relationsReport = null;
   let candidates = null;
 
-  const parseText = makeParseText({ patterns: source.patterns ?? [], words, composites: source.composites });
+  const parseText = makeParseText({ patterns: source.patterns ?? [], words, composites: source.composites, memo: parseMemo?.space({ patterns: source.patterns ?? [], words, composites: source.composites }) });
 
   // The early-patterns rule: a sentence in lesson N may only use patterns taught in lessons 1..N.
   // A pattern with no `taught` is used only by texts outside the lessons.
@@ -53,7 +53,7 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
   const parseUpTo = (n) => {
     if (!upTo.has(n)) {
       const patterns = (source.patterns ?? []).filter((p) => (taughtIn(p) ?? Infinity) <= n);
-      upTo.set(n, makeParseText({ patterns, words, composites: source.composites }));
+      upTo.set(n, makeParseText({ patterns, words, composites: source.composites, memo: parseMemo?.space({ patterns, words, composites: source.composites }) }));
     }
     return upTo.get(n);
   };
@@ -82,7 +82,7 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
     parser: parseText.parser,
 
     // The relations: stored ones are accepted, the ones a rule finds are proposed (see relations.js).
-    relations: () => (relationsReport ??= relationReport(source, facts)),
+    relations: () => (relationsReport ??= relationReport(source, facts, relationRules)),
 
     // Meaning links (K19): what the words say of the primes and categories, and which primes a description reaches.
     // No name: the report. A name: that word's line, { id, term, line }.

@@ -26,7 +26,7 @@ const lessonsOnly = args.includes('--lessons-only');
 const list = args.includes('--list');
 const update = args.includes('--update');
 
-const kb = await openKb();
+const kb = await openKb({ memo: true });
 const lessons = kb.source.lessons.map(({ id, number }) => ({ id, number }));
 const groups = lessonsOnly
   ? []

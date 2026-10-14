@@ -30,6 +30,7 @@ export function makeGrammar(rules, { glue = new Set() } = {}) {
   const byLhs = new Map();
   rules.forEach((r, i) => {
     if (!r.rhs.length) throw new Error(`rule ${r.id ?? i}: empty right side`);
+    if (r.rhs.length >= 64) throw new Error(`rule ${r.id ?? i}: right side too long (64 symbols at most)`);
     if (!byLhs.has(r.lhs)) byLhs.set(r.lhs, []);
     byLhs.get(r.lhs).push(i);
   });
@@ -57,21 +58,43 @@ const accepts = (sym, edge, glue) => {
   return edge.id === sym;
 };
 
+// which symbols of each rule are nonterminals, worked out once per grammar
+const shapes = new WeakMap();
+const shapeOf = (grammar) => {
+  let s = shapes.get(grammar);
+  if (!s) {
+    s = grammar.rules.map((r) => r.rhs.map(isNonterminal));
+    shapes.set(grammar, s);
+  }
+  return s;
+};
+
 export function parse(lattice, grammar, { start = 'Utt', maxTrees = 20, budget = 200_000 } = {}) {
   const { rules, byLhs, glue } = grammar;
+  const nt = shapeOf(grammar);
   const { n, edges } = lattice;
   const from = Array.from({ length: n + 1 }, () => []);
   for (const e of edges) from[e.from].push(e);
 
-  const chart = Array.from({ length: n + 1 }, () => ({ list: [], seen: new Map() }));
+  // Each column keeps its states in the order they were made (`list`), a number for each (rule, dot, origin) it has
+  // (`seen`), the nonterminals it already predicted, and the states waiting for each nonterminal (`waiting`), so
+  // finishing a rule looks at the states that want it, not at the whole column.
+  const chart = Array.from({ length: n + 1 }, () => ({ list: [], seen: new Map(), predicted: new Set(), waiting: new Map() }));
+  const width = n + 1;
   const add = (at, r, dot, origin, back) => {
-    const key = `${r}.${dot}.${origin}`;
+    const key = (r * 64 + dot) * width + origin;
     const col = chart[at];
     let s = col.seen.get(key);
     if (!s) {
       s = { r, dot, origin, at, backs: [] };
       col.seen.set(key, s);
       col.list.push(s);
+      if (nt[r][dot]) {
+        const sym = rules[r].rhs[dot];
+        const w = col.waiting.get(sym);
+        if (w) w.push(s);
+        else col.waiting.set(sym, [s]);
+      }
     }
     if (back) s.backs.push(back);
     return s;
@@ -85,14 +108,14 @@ export function parse(lattice, grammar, { start = 'Utt', maxTrees = 20, budget =
       const rule = rules[s.r];
       if (s.dot === rule.rhs.length) {
         // complete: every state waiting for this symbol at the origin moves on
-        for (const p of chart[s.origin].list) {
-          const pr = rules[p.r];
-          if (p.dot < pr.rhs.length && pr.rhs[p.dot] === rule.lhs) add(i, p.r, p.dot + 1, p.origin, { prev: p, child: s });
-        }
+        const waiting = chart[s.origin].waiting.get(rule.lhs);
+        if (waiting) for (const p of waiting) add(i, p.r, p.dot + 1, p.origin, { prev: p, child: s });
         continue;
       }
       const sym = rule.rhs[s.dot];
-      if (isNonterminal(sym)) {
+      if (nt[s.r][s.dot]) {
+        if (col.predicted.has(sym)) continue;
+        col.predicted.add(sym);
         for (const r of byLhs.get(sym) ?? []) add(i, r, 0, i, null);
       } else {
         for (const e of from[i]) if (accepts(sym, e, glue)) add(e.to, s.r, s.dot + 1, s.origin, { prev: s, edge: e, sym });

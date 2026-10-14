@@ -9,28 +9,17 @@
 //   - the composite 被 doesn't say its passive with {{word:rang4}}.
 //
 // Chinese glosses in the appendices (`zh:` lines of the stories) are the
-// original text and aren't scanned.
+// original text and aren't scanned. The rule itself is in scripts/passive.js
+// (scripts/check-quick.js uses it on one edited file).
 //
 //   npm run check-passive
 
 import { readFileSync, readdirSync, statSync } from 'fs';
-import { resolve, join, relative } from 'path';
+import { resolve, join } from 'path';
 import { fileURLToPath } from 'url';
+import { OWN, SCAN, ownProblem, passiveProblems, scanned } from './passive.js';
 
 const ROOT = resolve(fileURLToPath(new URL('.', import.meta.url)), '..');
-const SCAN = [
-  'src/content/lessons',
-  'src/content/sentence-builder.yaml',
-  'src/content/phrase-book.ts',
-  'src/data/composites',
-  'src/data/words',
-  'src/content/word-builder.yaml',
-  'src/lib/sentence-builder.js',
-  'src/lib/word-builder.js',
-  'src/lib/word-builder-parse.js',
-];
-const OWN = 'src/data/composites/bei-被.ts';
-const BAD = /被|\{\{[Ww]ord:bei4\}\}|(?<![\p{L}])bèi(?![\p{L}])/u;
 
 const files = [];
 const walk = (p) => {
@@ -43,16 +32,11 @@ for (const p of SCAN) walk(p);
 
 const errors = [];
 for (const f of files) {
-  if (f === OWN || f === 'src/data/composites/index.ts') continue;
-  const lines = readFileSync(join(ROOT, f), 'utf8').split('\n');
-  lines.forEach((line, i) => {
-    if (/^\s*zh:/.test(line)) return; // the Chinese gloss of a word's definition
-    if (BAD.test(line)) errors.push(`${f}:${i + 1}: passive with 被/bèi -- say it with ràng: ${line.trim().slice(0, 100)}`);
-  });
+  if (scanned(f)) errors.push(...passiveProblems(f, readFileSync(join(ROOT, f), 'utf8')));
 }
 
-const own = readFileSync(join(ROOT, OWN), 'utf8');
-if (!/hsd:\s*\[[^\]]*\{\{word:rang4\}\}/.test(own)) errors.push(`${OWN}: the passive must be written with {{word:rang4}}.`);
+const own = ownProblem(readFileSync(join(ROOT, OWN), 'utf8'));
+if (own) errors.push(own);
 
 console.log(`check-passive: ${files.length} file(s) scanned for 被 / bèi.`);
 if (errors.length) {

@@ -20,8 +20,8 @@ export const splitSentences = (text) =>
     .split(/(?<=[.!?…])\s+/)
     .filter(Boolean);
 
-export function makeParseText({ patterns, words, composites }) {
-  const parser = createParser({ patterns, words, composites });
+export function makeParseText({ patterns, words, composites, memo = null }) {
+  const parser = createParser({ patterns, words, composites, memo });
   const parseText = (text) => {
     let refs = String(text);
     if (!refs.includes('{{')) {

@@ -8,8 +8,8 @@ export default composite({
   en: "right away",
   ru: "сейчас же",
   pos: "adverb",
-  hsd: ["{{word:xian4}}-{{word:zai4}} {{word:jiu4}}"],
-  tts: ["现在就"],
+  hsd: ["{{word:xian4}}-{{word:zai4}} {{word:jiu4}} …"],
+  tts: ["现在就…"],
   literal: "right now",
   fit: "natural",
   examples: [

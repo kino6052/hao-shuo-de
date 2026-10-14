@@ -35,7 +35,7 @@ Rules that bite:
 - Do not edit between `<!-- generated:… -->` markers; change the comment they come from (see "This README").
 - Text with backslashes goes in with a file-writing tool, not a shell heredoc.
 
-Plans and decisions: [BOOK_PLAN.md](BOOK_PLAN.md) (book, decision log D1…), [KB_PLAN.md](KB_PLAN.md) (knowledge base, K1…), [BOOK_STRUCTURE.md](BOOK_STRUCTURE.md) (the tree). Search them by decision number (`grep -n "D63" BOOK_PLAN.md`).
+Plans and decisions: [BOOK_PLAN.md](BOOK_PLAN.md) (book, decision log D1…), [KB_PLAN.md](KB_PLAN.md) (knowledge base, K1…), [BOOK_STRUCTURE.md](BOOK_STRUCTURE.md) (the tree), [OPTIMIZATIONS.md](OPTIMIZATIONS.md) (why `npm run check` is quick, the caches, the switches). Search them by decision number (`grep -n "D63" BOOK_PLAN.md`).
 
 ## The language now
 
@@ -52,7 +52,7 @@ Plans and decisions: [BOOK_PLAN.md](BOOK_PLAN.md) (book, decision log D1…), [K
 | Lesson sentences that parse | 99.3 % |
 | Smallest set the others can be said from | 202 words; the other 28 have a fine paraphrase |
 | Gates (`npm run check`) | 17 |
-| Test files (`npm test`) | 39 |
+| Test files (`npm test`) | 41 |
 
 The language numbers are the last row of `kb/scoreboard.csv` (2026-10-14, refactors/C1.ts: 17 op(s)); a refactor adds a new row.
 <!-- /generated:facts -->

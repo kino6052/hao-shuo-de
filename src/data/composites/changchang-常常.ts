@@ -8,9 +8,9 @@ export default composite({
   en: "often",
   ru: "часто",
   pos: "adverb",
-  hsd: ["{{word:chang2}}-{{word:chang2}}", "{{word:hen3}} {{word:duo1}} {{word:ci4}}"],
-  tts: ["常常", "很多次"],
-  literal: "many times",
+  hsd: ["{{word:chang2}}-{{word:chang2}}", "{{word:zuo4}} {{word:hen3}} {{word:duo1}} {{word:ci4}}"],
+  tts: ["常常", "做很多次"],
+  literal: "do it many times",
   fit: "natural",
   examples: [
     {

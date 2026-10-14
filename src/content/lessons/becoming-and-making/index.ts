@@ -9,6 +9,7 @@ import changed from "./changed.ts";
 import became from "./became.ts";
 import make from "./make.ts";
 import ba from "./ba.ts";
+import baClean from "./ba-clean.ts";
 import fang from "./fang.ts";
 import strong from "./strong.ts";
 
@@ -34,6 +35,7 @@ export default lesson(meta.id, {
     became,
     make,
     ba,
+    baClean,
     fang,
     strong,
   ],

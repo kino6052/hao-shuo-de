@@ -23,7 +23,7 @@ const args = process.argv.slice(2);
 const list = args.includes('--list');
 const update = args.includes('--update');
 
-const kb = await openKb();
+const kb = await openKb({ memo: true });
 const report = formsOf(kb);
 const said = (f) => formText(f.form, kb.source.words);
 const key = (f) => `${f.zh} | ${said(f)}`;

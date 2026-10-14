@@ -10,10 +10,10 @@ export default composite({
   pos: "noun",
   hsd: [
     "{{word:jin1}}-{{word:nian2}}",
-    "{{word:xian4}}-{{word:zai4}}-{{word:de}} {{word:shi2}}-{{word:er4}}-ge {{word:yue4}}",
+    "{{word:xian4}}-{{word:zai4}}-{{word:de}} {{word:nian2}}",
   ],
-  tts: ["今年", "现在的十二个月"],
-  literal: "the twelve months of now",
+  tts: ["今年", "现在的年"],
+  literal: "the year of now",
   fit: "natural",
   examples: [
     {

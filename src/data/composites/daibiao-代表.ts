@@ -8,8 +8,8 @@ export default composite({
   en: "represent",
   ru: "представлять",
   pos: "noun",
-  hsd: ["{{word:ti4}} X {{word:shuo1}}-{{word:de}} {{word:ren2}}", "{{word:ti4}} X"],
-  tts: ["替X说的人", "替X"],
+  hsd: ["{{word:ti4}} X {{word:shuo1}}-{{word:de}} {{word:ren2}}", "{{word:ti4}} X …"],
+  tts: ["替X说的人", "替X…"],
   literal: "a person who speaks instead of X / stands in for X",
   fit: "plain",
   examples: [

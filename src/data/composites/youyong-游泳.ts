@@ -10,10 +10,10 @@ export default composite({
   pos: "verb",
   hsd: [
     "{{word:zai4}} {{word:shui3}}-{{word:li3}} {{word:wan2r}}",
-    "{{word:guo4}} {{word:shui3}} {{word:qu4}} X {{word:di4}}-{{light:fang1}}",
+    "{{word:zai4}} {{word:shui3}}-{{word:li3}} {{word:qu4}} X {{word:di4}}-{{light:fang1}}",
   ],
-  tts: ["在水里玩儿", "过水去X地方"],
-  literal: "play in the water / cross the water to a place",
+  tts: ["在水里玩儿", "在水里去X地方"],
+  literal: "play in the water / go to a place through the water",
   fit: "plain",
   examples: [
     {

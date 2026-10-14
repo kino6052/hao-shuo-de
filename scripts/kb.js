@@ -70,6 +70,9 @@ import { fileURLToPath, pathToFileURL } from 'url';
 import { Worker } from 'worker_threads';
 import { createKb, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps, renderAudit } from '../src/lib/kb/kb.js';
 import { loadFrequencyList } from './frequency-list.js';
+import { sourceStamp } from './source-cache.js';
+import { readCache, writeCache } from './cache.js';
+import { parseMemo } from './parse-memo.js';
 import { loadDrafts } from './kb-drafts.js';
 import { loadLessons } from './lessons.js';
 import { moveEffects, parseSpec, renderMove } from './move-effects.js';
@@ -106,26 +109,52 @@ export function fingerprint() {
   return sum;
 }
 
-// -> the source, read by a fresh worker so the module cache never goes stale.
-export function reloadSource() {
-  return new Promise((ok, fail) => {
-    const worker = new Worker(new URL('./kb-source-worker.js', import.meta.url));
-    worker.once('message', (m) => (m.ok ? ok(m.source) : fail(new Error(m.error))));
-    worker.once('error', fail);
-  });
+// -> the source. The first time in a process it is read right here (nothing has been imported yet, so the files are read
+// as they are); after that by a fresh worker, so the module cache never goes stale. Either way it takes seconds (every
+// data file is imported), so the result is kept in .cache/source.json with a stamp of the files it came from; the next
+// script, or the next call after nothing changed, reads that instead.
+let sourceRead = false;
+export async function reloadSource() {
+  const stamp = sourceStamp();
+  const kept = readCache('source.json');
+  if (kept?.stamp === stamp) return kept.source;
+  let source;
+  if (!sourceRead) {
+    sourceRead = true;
+    source = await (await import('./kb-source.js')).loadSource();
+  } else {
+    source = await new Promise((ok, fail) => {
+      const worker = new Worker(new URL('./kb-source-worker.js', import.meta.url));
+      worker.once('message', (m) => (m.ok ? ok(m.source) : fail(new Error(m.error))));
+      worker.once('error', fail);
+    });
+  }
+  writeCache('source.json', { stamp, source });
+  return source;
+}
+
+// the rule-found relations the author accepted, and the pairs rejected (kb/relation-rules.json)
+function loadRelationRules() {
+  try {
+    return JSON.parse(readFileSync(resolve(ROOT, "kb/relation-rules.json"), "utf8"));
+  } catch {
+    return {};
+  }
 }
 
 let cached = null;
+let memoStore = null; // the parse memory on disk (scripts/parse-memo.js), made when a caller asks for it
 let frequencies; // the Mandarin frequency list, read once (null when there is none)
 
-// -> the KB for the data as it is now. `force` rebuilds.
-export async function openKb({ force = false } = {}) {
+// -> the KB for the data as it is now. `force` rebuilds. `memo` keeps parse results on disk and gives slim ones
+// (no trees; see src/lib/grammar/parser.js): for the gates, which only ask whether a sentence parses.
+export async function openKb({ force = false, memo = false } = {}) {
   const stamp = fingerprint();
-  if (!force && cached && cached.stamp === stamp) return cached.kb;
+  if (!force && cached && cached.stamp === stamp && cached.memo === memo) return cached.kb;
   const source = await reloadSource();
   frequencies ??= loadFrequencyList();
-  const kb = createKb(source, { freq: frequencies, drafts: await loadDrafts(source) });
-  cached = { stamp, kb };
+  const kb = createKb(source, { freq: frequencies, drafts: await loadDrafts(source), relationRules: loadRelationRules(), parseMemo: memo ? (memoStore ??= parseMemo()) : null });
+  cached = { stamp, kb, memo };
   return kb;
 }
 
