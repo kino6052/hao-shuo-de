@@ -124,6 +124,7 @@ For each teaching point -- one module, one file (2–10 per lesson):
 | D61 | **Closer to Mandarin, by heads and naturalness (2026-10-05).** Every composite now hangs under its head (手机 under jī; src/lib/heads.js) and shows how close it is to Mandarin, from five dots (Mandarin's own word) to one (a description); `npm run report-heads` ranks the roots that would make the most composites Mandarin's own word. From it, 24 words join: ràng (let, make; jiào keeps tell, have), yǐ, hái, xiē, zhǐ, shéi, tóng, ér, zi, shū, zì, xiǎng, zǒu, fàn, wǎn, zuó, bǎi, zhòng, jiàn, tí, huà, cháng, fáng (fáng-jiān, a room) and gānjìng (clean: washing is yòng shuǐ ràng X gānjìng; alcohol is ràng-tóu-biàn-luàn-de shuǐ); new senses: 再 (zài-jiàn), 校 (xué-xiào), 实 (shì-shí ...), 新 (xīn-nián), 孩 (hái-zi), 卫 (wèi-shēng-jiān, bathroom), 名 also in míng-zi. gùnzi leaves: a stick is cháng-de dōng-xi. chī dōng-xi is chī fàn, shénme rén is shéi, hair is tóu-fā. The compound rule now also checks the sound (长 read zhǎng isn't cháng; 以为 yǐwéi isn't yǐ + wèi). 223 words; 457 composites say Mandarin's own word (was 387). Next: the composites are reviewed by hand in batches of 100. |
 | D62 | **bāo for containers; shapes as descriptions (2026-10-05).** bāo 包 (bag) replaces hézi 盒子 as the container word: it is the most useful container, and it builds shū-bāo (schoolbag) and miàn-bāo (bread). In the sentences, the box is a bag. Things hézi stood for that aren't bags got new forms (TV kàn-de jī, fridge lěng-de jī, cup hē-shuǐ-yòng-de dōng-xi). Shapes stay descriptions, because they make you think about what a thing looks like: shape is yàng-zi, a triangle sān-biān-de yàng-zi, a circle yuán-de yàng-zi, a cube (and a box) liù-miàn-dōu-fāng-de dōng-xi, a sphere nǎ-biān-dōu-yuán-de dōng-xi (refactors/D62, D62b). |
 | D63 | **Descriptions first: an audit of the core (2026-10-05).** A word earns its place only when a description would be clumsy, not merely because Mandarin has one. zuó leaves (yesterday is qián-yī-tiān, the day before); bǎi leaves and líng 零 (zero) joins, so big numbers are read digit by digit, as Mandarin reads years (èr-líng-líng, èr-líng-èr-liù nián); ér leaves (son, daughter: nán-hái-zi, nǚ-hái-zi); jiāo leaves (to teach is to help learn: bāng + person + xué + verb); qún leaves (a group is hěn-duō rén; the group module now teaches hěn-duō / zhè-xiē / nà-xiē, and company, team and boss got new descriptions). shū, shēngyīn, máo and dēng stay. 219 words (refactors/D63, D63b). |
+| D65 | **Book changes from the decisions preview (2026-10-14); the work queue is KB_PLAN §4a.** Claude writes the lessons and modules this needs, and the author reviews the result. (1) Sentences that do not parse are reworded: miànr is said with miàn, three sentences are reworded and sent for approval, and the wolf line gets a new sentence. (2) A quoted sound followed by zi counts as a word. (3) A small bǎ pattern (bǎ + a thing + a describing word, "make it clean") is taught in a later lesson, probably Becoming and making. (4) Patterns taught after a sentence that uses them move earlier, one at a time (serial verbs, the new-situation le, the greeting, doubled verbs), each with a preview of what else changes. (5) Every pattern gets a lesson: the lesson that first uses it, with a new module where none teaches it. (6) A spelled form needs a paraphrase (K23). No word is added or removed by this decision. |
 
 ---
 
@@ -609,45 +610,32 @@ The word lists and limits live in `scripts/jargon.js` and `scripts/limits.js`.
 
 For each lesson: ☐ written to template ☐ `npm run check -- <lesson-id>` passes (every gate) ☐ exercises + answers ☐ **user approved** ☐ added to `scripts/finished-lessons.js`
 
-- [ ] L1 Sounds and Symbols — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L2 Words and Sentences
- — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L3 Modifying Nouns
- — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L4 Pointing at People and Things
- — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L5 Verbs
- — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L6 Questions and Answers
- — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L7 Pre-Verbs — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L8 Time 1 — When it happens — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L9 Time 2 — Around an action
- — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L10 Space 1 — Where it is
- — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L11 Space 2 — Moving
- — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L12 Modifiers 1 — How much
- — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L13 Modifiers 2 — Comparing
- — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L14 Modifiers 3 — Also and all
- — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L15 Modifiers 4 — Becoming and making
- — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L16 Numbers
- — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L17 Colors
- — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L18 Changing the Role of a Word
- — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L19 Relationships 1 — Inside a sentence
- — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L20 Relationships 2 — Linking sentences
- — rewritten, passes every gate, on the finished list; **waiting for your review**
-- [ ] L21 Greetings and Feelings (takes in the old L22)
- — rewritten, passes every gate, on the finished list; **waiting for your review**
+The list follows the 24 lessons of §3 (the book grew from 21 to 24 with D43–D45). The order itself lives in `src/content/book.js`. Every lesson passes `npm run check`; the review is still yours.
+
+- [ ] L1 Sounds and Symbols — **waiting for your review**
+- [ ] L2 Words and Sentences — **waiting for your review**
+- [ ] L3 Modifying Nouns — **waiting for your review**
+- [ ] L4 Pointing at People and Things — **waiting for your review**
+- [ ] L5 Verbs 1 — Who does what — **waiting for your review**
+- [ ] L6 Questions and Answers — **waiting for your review**
+- [ ] L7 Pre-Verbs — **waiting for your review**
+- [ ] L8 Time 1 — When it happens — **waiting for your review**
+- [ ] L9 Time 2 — Around an action — **waiting for your review**
+- [ ] L10 Space 1 — Where it is — **waiting for your review**
+- [ ] L11 Space 2 — Moving — **waiting for your review**
+- [ ] L12 Modifiers 1 — How much — **waiting for your review**
+- [ ] L13 Modifiers 2 — Comparing — **waiting for your review**
+- [ ] L14 Modifiers 3 — Also and all — **waiting for your review**
+- [ ] L15 Modifiers 4 — Becoming and making — **waiting for your review**
+- [ ] L16 Verbs 2 — Direction and result — **waiting for your review**
+- [ ] L17 Numbers — **waiting for your review**
+- [ ] L18 Colors — **waiting for your review**
+- [ ] L19 Changing the Role of a Word — **waiting for your review**
+- [ ] L20 Relationships 1 — Inside a sentence — **waiting for your review**
+- [ ] L21 Relationships 2 — Linking sentences — **waiting for your review**
+- [ ] L22 Greetings and Feelings — **waiting for your review**
+- [ ] L23 Doubling Words — **waiting for your review**
+- [ ] L24 Everyday Patterns — **waiting for your review**
 
 ### Phase 3 — Intros and reference
 

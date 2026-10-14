@@ -1,0 +1,1 @@
+Git hooks. The pre-commit one refreshes the generated parts of the READMEs; npm run hooks turns it on.

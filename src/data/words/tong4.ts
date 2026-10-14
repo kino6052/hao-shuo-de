@@ -21,7 +21,6 @@ export default word("tong4", {
         rus: "Боль ещё и то, что получаешь: она у тебя есть, ты не только её чувствуешь.",
       },
       example: "Wǒ dé le tòng.",
-      proposed: true,
     },
   },
   atom: {

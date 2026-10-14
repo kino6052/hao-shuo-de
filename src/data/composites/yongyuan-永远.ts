@@ -8,7 +8,7 @@ export default composite({
   en: "forever",
   ru: "навсегда",
   pos: "adverb",
-  hsd: ["{{word:shen2me}} {{word:shi2}}-{{word:jian1}} {{word:dou1}}"],
+  hsd: ["{{word:shen2me}} {{word:shi2}}-{{word:jian1}} {{word:dou1}} …"],
   tts: ["什么时间都"],
   literal: "at any time",
   fit: "plain",

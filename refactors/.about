@@ -1,0 +1,1 @@
+Refactor lists: each change to the words as a list of ops, kept as the record of the decision.

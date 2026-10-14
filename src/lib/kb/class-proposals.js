@@ -4,7 +4,8 @@
 // parse, that (word, class) is a proposal. The author decides; a refactor list (op `classes`) records it.
 // Pure; it never changes data.
 //
-//   classProposals({ parser, words, pieces })   -> { proposals, unexplained }
+//   classProposals({ parser, words, pieces, rejected })   -> { proposals, unexplained }
+//     rejected     [{ id, cls?, why }] the author said no (kb/class-rejections.json): that word is not tried as that class (or as any, without cls), so the proposal does not come back
 //     pieces       [{ text, where, forms? }] sentences that do not parse (word refs); forms: true for a composite's description
 //     proposals    [{ id, term, pos, meaning, classes: [{ cls, reading }], sentences: [{ text, where }] }], most sentences first;
 //                  classes that fix the same sentences of the same word are one proposal (bǐ as a verb, a noun, an
@@ -31,8 +32,9 @@ export function ruleClasses(rules) {
   return [...out].filter((c) => !MADE_UP.has(c)).sort();
 }
 
-export function classProposals({ parser, words, pieces }) {
+export function classProposals({ parser, words, pieces, rejected = [] }) {
   const candidates = ruleClasses(parser.rules);
+  const refused = (id, cls) => rejected.some((r) => r.id === id && (!r.cls || r.cls === cls));
   const found = new Map(); // word -> class -> [{ text, where, reading }]
   const unexplained = [];
   for (const piece of pieces) {
@@ -41,7 +43,7 @@ export function classProposals({ parser, words, pieces }) {
       if (!words[id]) continue;
       const has = new Set(classesOf(words[id]));
       for (const cls of candidates) {
-        if (has.has(cls)) continue;
+        if (has.has(cls) || refused(id, cls)) continue;
         const r = parser.parse(piece.text, { extra: { [id]: [cls] }, forms: piece.forms });
         if (!r.ok) continue;
         any = true;

@@ -22,7 +22,6 @@ export default word("mian4", {
         rus: "Считает стороны вещи: yī-miàn — одна сторона, одна страница вещи.",
       },
       example: "Wǒ kàn wǎng-shàng-de yī-miàn.",
-      proposed: true,
     },
   },
   paraphrase: {

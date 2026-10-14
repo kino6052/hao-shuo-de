@@ -17,7 +17,6 @@ export default word("bi3", {
         rus: "Сравнивать две вещи: bǐ yī-xià — сравнить на мгновение; bǐ-de rén — люди, которые сравнивают.",
       },
       example: "Tā shì bǐ-de rén.",
-      proposed: true,
     },
   },
   atom: {

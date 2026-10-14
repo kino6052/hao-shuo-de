@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "node scripts/generate-grammar-overview.js && node scripts/check-all.js && node scripts/generate-word-usage.js && node scripts/generate-dictionary.js && vite build && node scripts/generate-pages.js",
     "preview": "vite preview",
-    "test": "bun test",
+    "test": "node scripts/test.js --fast",
+    "test:all": "node scripts/test.js",
     "typecheck": "tsc --noEmit",
     "data": "node scripts/build-data.js",
     "check-data": "node scripts/check-data.js",
@@ -34,7 +35,18 @@
     "check-word-builder": "node scripts/check-word-builder.js",
     "check-passive": "node scripts/check-passive.js",
     "report-heads": "node scripts/report-heads.js",
-    "kb": "node scripts/kb.js"
+    "kb": "node scripts/kb.js",
+    "readme": "node scripts/generate-readme.js",
+    "hooks": "node scripts/setup-hooks.js",
+    "prepare": "node scripts/setup-hooks.js"
+  },
+  "scriptNotes": {
+    "dev": "Starts the dev server with hot reload; it also serves the review pages (/__review/) and the KB explorer (/__kb/).",
+    "build": "Checks every gate, regenerates the grammar overview, word usage and dictionary pages, then builds the static site into docs/ with one page per route.",
+    "preview": "Serves the built site locally, to check it before it goes out.",
+    "test": "Runs the fast test files with bun, several at a time (under half a minute); the slow ones, which use the real data or copy the repo, wait for test:all.",
+    "test:all": "Runs every test file with bun, several at a time, the slow ones first.",
+    "typecheck": "Type-checks the whole project with tsc (the check-types gate runs the same)."
   },
   "dependencies": {
     "graphology": "^0.26.0",

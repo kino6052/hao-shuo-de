@@ -1,3 +1,8 @@
+// Rewrites the dictionary pages in src/content (the alphabetical and the categorical dictionary, in English, Russian
+// and Chinese) from the word data. Runs in `npm run build`; edit a word's file in src/data/words, never the pages.
+//
+//   node scripts/generate-dictionary.js
+
 import { readFileSync, writeFileSync } from 'fs';
 import { resolve } from 'path';
 import { fileURLToPath } from 'url';

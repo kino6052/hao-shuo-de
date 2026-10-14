@@ -8,7 +8,7 @@ export default composite({
   en: "(passive)",
   ru: "(пассив)",
   pos: "preposition",
-  hsd: ["X {{word:rang4}} Y + verb"],
+  hsd: ["X {{word:rang4}} Y …"],
   tts: ["X让Y…"],
   literal: "X lets Y do it",
   fit: "natural",

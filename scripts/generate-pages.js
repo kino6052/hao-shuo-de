@@ -1,3 +1,8 @@
+// Writes a static HTML page for every language and chapter route into docs/ after `vite build`, so direct links and
+// static hosting work without the single-page app loading first. The last step of `npm run build`.
+//
+//   node scripts/generate-pages.js
+
 import { readFileSync, mkdirSync, writeFileSync } from "fs";
 import { resolve, join } from "path";
 import { fileURLToPath, pathToFileURL } from "url";

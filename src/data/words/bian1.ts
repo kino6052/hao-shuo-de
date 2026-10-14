@@ -22,7 +22,6 @@ export default word("bian1", {
         rus: "Считает стороны плоской фигуры: sān-biān — три стороны, а sān-biān-de yàng-zi — трёхсторонняя фигура.",
       },
       example: "Wǒ yào sān-biān-de yàng-zi.",
-      proposed: true,
     },
   },
   paraphrase: {

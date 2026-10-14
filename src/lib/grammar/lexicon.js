@@ -26,6 +26,8 @@
 // and … ("hé … yī-yàng"), which is a sentence end anywhere else; there a slot may also be a verb
 // (X-wán hòu, "after doing X").
 //
+// A quoted sound followed by zi ("diàn"-zi) is a word: one noun edge over both, as for a chain that spells a composite.
+//
 // Nothing here knows grammar rules; the parser decides which reading fits.
 
 import { wordRefRe } from '../word-refs.js';
@@ -146,6 +148,9 @@ export function lex(text, lexicon, { extra = {}, forms = false } = {}) {
       if (tokens.at(-1)?.id === it.id) classes.add('again');
       tokens.push({ kind: 'word', id: it.id, text: termOf(words, it.id) });
       edges.push({ from: i, to: i + 1, id: it.id, term: termOf(words, it.id), classes });
+      if (it.id === 'zi' && it.glued && tokens.at(-2)?.kind === 'quoted') {
+        edges.push({ from: i - 1, to: i + 1, term: `${tokens.at(-2).text}-zi`, classes: new Set(['noun']) });
+      }
     } else if (it.kind === 'slot') {
       tokens.push({ kind: 'slot', text: it.text });
       // in a description a slot may also stand for what is done (X-wán hòu: after doing X)

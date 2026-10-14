@@ -82,6 +82,16 @@ describe('classProposals', () => {
     expect(tong[0].classes.map((c) => c.cls)).toEqual(expect.arrayContaining(['noun', 'pronoun']));
   });
 
+  test('a rejected word, or one class of it, does not come back as a proposal', () => {
+    const noun = classProposals({ parser: parser(), words, pieces, rejected: [{ id: 'tong4', cls: 'noun', why: 'no' }] });
+    const classes = noun.proposals.filter((p) => p.id === 'tong4').flatMap((p) => p.classes.map((c) => c.cls));
+    expect(classes).not.toContain('noun');
+    expect(classes).toContain('pronoun');
+    const all = classProposals({ parser: parser(), words, pieces, rejected: [{ id: 'tong4', why: 'no' }] });
+    expect(all.proposals.some((p) => p.id === 'tong4')).toBe(false);
+    expect(all.unexplained.map((p) => p.where)).toEqual(expect.arrayContaining(['l/m one', 'l/m two', 'l/m three']));
+  });
+
   test('a sentence no single class fixes is unexplained; a class the word has is not proposed again', () => {
     const r = classProposals({ parser: parser(), words, pieces });
     expect(r.unexplained.map((p) => p.where)).toEqual(['l/m three']);

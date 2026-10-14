@@ -96,6 +96,11 @@ describe('what the patterns do not allow', () => {
     expect(ok('Yuè yuán-hǎo-de.')).toBe(false);
   });
 
+  test('a quoted sound followed by zi is a word', () => {
+    expect(ok('Wǒ mǎi "diàn"-zi-de gōng-jù.')).toBe(true);
+    expect(ok('Zhè shì "diàn"-zi.')).toBe(true);
+  });
+
   test('a lone X is a thing the example leaves open', () => {
     expect(ok('Wǒ yòng X zuò.')).toBe(true);
   });

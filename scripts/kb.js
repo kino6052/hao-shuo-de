@@ -1,26 +1,26 @@
 // The KB for the command line, the explorer page and the Claude tools
 // (KB_PLAN.md phase 1). Shared by all three so they answer the same.
 //
-//   node scripts/kb.js word dēng
-//   node scripts/kb.js remove dēng [fàn …]
-//   node scripts/kb.js check-form "chī fàn" [--tts 吃饭] [--zh 吃饭 --py chīfàn]
-//   node scripts/kb.js query "<rules>"
-//   node scripts/kb.js parse "Wǒ chī fàn." [--lesson 5]
-//   node scripts/kb.js atoms [word]
-//   node scripts/kb.js relations [kind] [--status proposed|accepted] [--limit N]
-//   node scripts/kb.js meaning [says|atoms|grounding|<word>] [--limit N]
-//   node scripts/kb.js candidates [remove|add] [--limit N]
-//   node scripts/kb.js add <hanzi>
-//   node scripts/kb.js swaps [--k N]
-//   node scripts/kb.js audit [--stdout]
-//   node scripts/kb.js parse-report [--lessons 4] [--stdout]
-//   node scripts/kb.js parse-diff [--ref HEAD] [--all] [--limit 12]
-//   node scripts/kb.js classes [--limit 20]
-//   node scripts/kb.js patterns [--limit 12] [--seconds 300]
-//   node scripts/kb.js forms [--pos noun] [--limit 20]
-//   node scripts/kb.js scoreboard [--append] [--label "what changed"] [--no-atoms]
-//   node scripts/kb.js move <lesson | lesson/module | pattern:id> <where>
-//   node scripts/kb.js engine
+//   node scripts/kb.js word dēng  # one word's card: meaning, paraphrase or atom mark, forms, relations
+//   node scripts/kb.js remove dēng [fàn …]  # what dropping the words would cost
+//   node scripts/kb.js check-form "chī fàn" [--tts 吃饭] [--zh 吃饭 --py chīfàn]  # is a proposed form valid
+//   node scripts/kb.js query "<rules>"  # your own clingo rules, run against the facts
+//   node scripts/kb.js parse "Wǒ chī fàn." [--lesson 5]  # does a sentence parse; with --lesson, only the patterns taught up to it
+//   node scripts/kb.js atoms [word]  # the atoms report, or one word's line
+//   node scripts/kb.js relations [kind] [--status proposed|accepted] [--limit N]  # synonyms, opposites, connections and the rest
+//   node scripts/kb.js meaning [says|atoms|grounding|<word>] [--limit N]  # what the words say of the NSM primes, Aristotle's categories and grammar
+//   node scripts/kb.js candidates [remove|add] [--limit N]  # the cheapest words to drop and the best roots to add
+//   node scripts/kb.js add <hanzi>  # what one root would bring
+//   node scripts/kb.js swaps [--k N]  # the best trades of K roots in for K words out
+//   node scripts/kb.js audit [--stdout]  # writes kb/reports/candidates-audit.md
+//   node scripts/kb.js parse-report [--lessons 4] [--stdout]  # parses every sentence; writes kb/reports/lessons-1-N-parse.md
+//   node scripts/kb.js parse-diff [--ref HEAD] [--all] [--limit 12]  # sentences that parse differently now than at a git ref
+//   node scripts/kb.js classes [--limit 20]  # word classes that would make failing sentences parse
+//   node scripts/kb.js patterns [--limit 12] [--seconds 300]  # the minimal-patterns report
+//   node scripts/kb.js forms [--pos noun] [--limit 20]  # how the composites' descriptions parse
+//   node scripts/kb.js scoreboard [--append] [--label "what changed"] [--no-atoms]  # the language's numbers now, against the stored history
+//   node scripts/kb.js move <lesson | lesson/module | pattern:id> <where>  # what a change in the lesson order would do
+//   node scripts/kb.js engine  # which clingo is in use
 //
 // parse-report parses every Hao-shuo-de sentence of the first N lessons and
 // writes kb/reports/lessons-1-N-parse.md (--stdout prints it instead). --all
@@ -64,7 +64,7 @@
 // A long-running process asks `openKb()` each time; the KB is rebuilt when a
 // data, content or rule file changed since it was built.
 
-import { mkdirSync, readdirSync, statSync, writeFileSync } from 'fs';
+import { mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'fs';
 import { resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { Worker } from 'worker_threads';
@@ -222,7 +222,7 @@ async function main(argv) {
       const pieces = report.failures.filter((it) => it.piece).map((it) => ({ text: it.piece.text, where: `${it.lesson}${it.module ? `/${it.module}` : ''} ${it.key ?? ''}`.trim() }));
       // the descriptions of the composite dictionary that the patterns do not read (the sentence end of a form is part of it)
       for (const f of formsOf(kb).forms) if (f.kind === 'phrase' && !f.ok) pieces.push({ text: f.form, where: `composite ${f.zh}`, forms: true });
-      const r = classProposals({ parser: kb.parser, words: kb.source.words, pieces });
+      const r = classProposals({ parser: kb.parser, words: kb.source.words, pieces, rejected: JSON.parse(readFileSync(new URL('../kb/class-rejections.json', import.meta.url), 'utf8')) });
       const waiting = classesWaiting(kb.source.words);
       return print({ ...r, waiting }, renderClassProposals(r, kb.source.words, waiting, { limit }));
     }

@@ -4,6 +4,7 @@
 // Rewritten in Phase 2 (BOOK_PLAN.md): when (X-de shí-jiān), finished (verb-wán), after (verb-wán hòu), start (kāishǐ), for a moment (yī-xià), again (yòu), and how many times (cì, D41). liú (stay, keep) is only used in their examples.
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- around-an-action).
+// @teaches When (X-de shí-jiān), finished (verb-wán), after (verb-wán hòu), start (kāishǐ), for a moment (yī-xià), again (yòu), and how many times (cì).
 import { lesson } from "../../../lib/lesson.ts";
 import when from "./when.ts";
 import finished from "./finished.ts";

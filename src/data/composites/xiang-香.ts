@@ -20,9 +20,9 @@ export default composite({
       ru: "Приятно пахнет.",
     },
     {
-      pinyin: "{{Word:na4}}-{{light:ge4}} {{word:ye3}} {{word:hao3}} {{word:wei4}}-{{word:dao4}}.",
-      hanzi: "那个也好味道。",
-      en: "That smells good too.",
+      pinyin: "{{Word:na4}}-{{light:ge4}} {{word:ye3}} {{word:you3}} {{word:hao3}} {{word:wei4}}-{{word:dao4}}.",
+      hanzi: "那个也有好味道。",
+      en: "That has a good smell too.",
       ru: "Это тоже приятно пахнет.",
     },
   ],

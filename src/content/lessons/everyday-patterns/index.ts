@@ -7,6 +7,7 @@
 // New word: bāng.
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- everyday-patterns).
+// @teaches "Let" and "help" without a word for "let": wǒ lái (let me), gěi wǒ + verb + yī-xià (let me see), bāng (help), jiào + person + verb (have or let someone), néng … ma? (may I), and …, hǎo ma? (let's, please).
 import { lesson } from "../../../lib/lesson.ts";
 import letMe from "./let-me.ts";
 import myTurn from "./my-turn.ts";

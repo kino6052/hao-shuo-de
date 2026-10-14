@@ -8,7 +8,7 @@ export default composite({
   en: "everywhere",
   ru: "везде",
   pos: "adverb",
-  hsd: ["{{word:na3}}-{{word:li3}} {{word:dou1}}"],
+  hsd: ["{{word:na3}}-{{word:li3}} {{word:dou1}} …"],
   tts: ["哪里都"],
   literal: "wherever",
   fit: "natural",

@@ -8,7 +8,7 @@ export default composite({
   en: "whole",
   ru: "целый",
   pos: "adjective",
-  hsd: ["X {{word:dou1}}"],
+  hsd: ["X {{word:dou1}} …"],
   tts: ["X都"],
   literal: "all of X",
   fit: "plain",

@@ -8,7 +8,7 @@ export default composite({
   en: "no matter",
   ru: "неважно",
   pos: "conjunction",
-  hsd: ["{{word:shen2me}} … {{word:dou1}}"],
+  hsd: ["{{word:shen2me}} … {{word:dou1}} …"],
   tts: ["什么…都"],
   literal: "whatever … all",
   fit: "natural",

@@ -105,6 +105,16 @@ const diff = (before, after, keyOf) => {
   return { added: after.filter((x) => !had.has(keyOf(x))), fixed: before.filter((x) => !has.has(keyOf(x))) };
 };
 
+// The book as it is does not change between moves, so its two reports (the slow part: every lesson sentence is parsed) are made once per KB.
+const baselines = new WeakMap();
+function baseline(kb, lessons) {
+  const hit = baselines.get(kb);
+  if (hit?.lessons === lessons) return hit;
+  const made = { lessons, words: earlyWords(lessons, kb.source.words), report: patternReport(kb, kb.source.lessons) };
+  baselines.set(kb, made);
+  return made;
+}
+
 // -> the report. `kb` is the KB as it is; `lessons` the assembled lessons (for the words).
 export async function moveEffects({ kb, lessons }, spec) {
   const source = kb.source;
@@ -114,9 +124,10 @@ export async function moveEffects({ kb, lessons }, spec) {
   const movedKb = applyMove(source.lessons, source.patterns ?? [], spec);
   const after = createKb({ ...source, lessons: movedKb.lessons, patterns: movedKb.patterns });
 
-  const wordsBefore = earlyWords(lessons, dictionary);
+  const base = baseline(kb, lessons);
+  const wordsBefore = base.words;
   const wordsAfter = earlyWords(moved.lessons, dictionary);
-  const before = patternReport(kb, source.lessons);
+  const before = base.report;
   const now = patternReport(after, movedKb.lessons);
   const lateBefore = lateOf(before);
   const lateAfter = lateOf(now);

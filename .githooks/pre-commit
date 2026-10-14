@@ -1,0 +1,5 @@
+#!/bin/sh
+# Keeps the generated parts of the READMEs current on every commit (scripts/generate-readme.js).
+# It never blocks a commit: if the generator fails it says so and the commit goes on.
+node scripts/generate-readme.js --stage || echo "pre-commit: the README refresh failed (run 'npm run readme' to see why); committing anyway."
+exit 0

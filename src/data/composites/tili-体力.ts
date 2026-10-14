@@ -20,8 +20,8 @@ export default composite({
       ru: "У меня хорошая выносливость.",
     },
     {
-      pinyin: "{{Word:lao3}} {{word:ren2}} {{word:shen1ti3}}-{{word:de}} {{word:li4}} {{word:shao3}}.",
-      hanzi: "老人身体的力少。",
+      pinyin: "{{Word:lao3}} {{word:ren2}} {{word:shen1ti3}}-{{word:de}} {{word:li4}} {{word:hen3}} {{word:shao3}}.",
+      hanzi: "老人身体的力很少。",
       en: "Old people have little strength.",
       ru: "У стариков мало сил.",
     },

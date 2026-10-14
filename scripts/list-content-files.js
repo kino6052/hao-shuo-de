@@ -1,3 +1,6 @@
+// Lists every file under a content folder, lessons' subfolders included, with forward slashes on any OS.
+// The build scripts share it.
+
 import { readdirSync } from 'fs';
 import { join, relative } from 'path';
 

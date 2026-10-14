@@ -7,6 +7,7 @@
 // New words: ná (moved here from Numbers), jìn, chū, huí; tōng (go through, lead to) joined in D51.
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- direction-and-result).
+// @teaches What comes after a verb: which way it goes (ná-lái, ná-chū-lái), how it ends (zhǎo-dào, xué-huì), whether you can get there (kàn-bù-dào, kàn-de-dào), and qǐ-lái / xià-qù.
 import { lesson } from "../../../lib/lesson.ts";
 import towardAway from "./toward-away.ts";
 import inOut from "./in-out.ts";

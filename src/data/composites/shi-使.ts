@@ -8,7 +8,7 @@ export default composite({
   en: "make, cause",
   ru: "заставлять, вызывать",
   pos: "verb",
-  hsd: ["{{word:rang4}} X + verb"],
+  hsd: ["{{word:rang4}} X …"],
   tts: ["让X…"],
   literal: "let X do it",
   fit: "plain",

@@ -8,7 +8,7 @@ export default composite({
   en: "(ongoing action)",
   ru: "(длительность)",
   pos: "auxiliary",
-  hsd: ["{{word:zai4}} + verb"],
+  hsd: ["{{word:zai4}} …"],
   tts: ["在"],
   fit: "skip",
   note: "Use zài before the verb.",
