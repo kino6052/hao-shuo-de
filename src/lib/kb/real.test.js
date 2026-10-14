@@ -121,9 +121,12 @@ describe('the parse report on lessons 1-4', () => {
     expect(r.failures.every((f) => f.lesson === 'pointing')).toBe(true);
   });
 
+  // Lessons 1-4 no longer have such an answer (lesson 1's "Wo3 hao3." became "hao3."), so one is added here.
+  // It is written with word refs: plain English that is not pinyin cannot be read at all, and counts as a failure.
   test('an English answer that names a word or two is left out, not counted as a failure', () => {
-    const r = report();
-    expect(r.skipped.length).toBeGreaterThan(0);
+    const english = { kind: 'lesson_answer', lesson: 'sounds-and-symbols', key: 'test-english', pinyin: 'Write {{word:hao3}} with the number three after it.', en: '' };
+    const r = parseReport({ sentences: [...kb.facts.sentences, english], parseText: kb.parse, parseLesson: kb.parseUpTo, patternLesson: kb.patternLesson, lessons: lessons() });
+    expect(r.skipped.map((it) => it.key)).toContain('test-english');
     expect(r.failures.some((f) => f.lesson === 'sounds-and-symbols')).toBe(false);
   });
 
