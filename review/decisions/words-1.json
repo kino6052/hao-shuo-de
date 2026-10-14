@@ -1,106 +1,581 @@
 {
   "batch": 1,
   "decisions": {
-    "wo3": {
-      "status": "atom",
-      "eng": "You learn it by pointing at yourself; any other way of saying \"I\" already needs a pointer.",
-      "rus": "Его усваивают, показывая на себя: любой другой способ сказать «я» уже требует указателя.",
-      "at": "2026-10-12T13:56:28.901Z"
+    "ba1": {
+      "status": "edit",
+      "forms": [
+        "sì hé sì"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T14:36:08.729Z"
+    },
+    "ba4ba": {
+      "status": "edit",
+      "forms": [
+        "shēng wǒ-de, bù shì nǚ-rén-de rén"
+      ],
+      "verdict": "fine",
+      "note": "capture connection to ren",
+      "at": "2026-10-13T15:04:34.683Z"
+    },
+    "bao1": {
+      "status": "edit",
+      "forms": [
+        "lǐ-miàn néng fàng dōng-xi, néng ná-zǒu-de dōng-xi"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T14:22:50.905Z"
     },
     "bi2zi": {
       "status": "atom",
       "eng": "The nose is learned by pointing at it; \"where air goes in\" says what it does, not what it is.",
       "rus": "Нос усваивают, показывая на него; «куда входит воздух» говорит, что он делает, а не что это."
     },
-    "yan3jing": {
-      "status": "atom",
-      "eng": "The eye is learned by pointing at it; \"the part that sees\" leans on kàn, which is said with the eyes.",
-      "rus": "Глаз усваивают, показывая на него; «часть, которая видит» опирается на kàn, а kàn объясняют через глаза."
-    },
-    "jiao3": {
-      "status": "atom",
-      "eng": "The foot is learned by pointing at it; \"the part that walks\" only names what it does.",
-      "rus": "Ступню усваивают, показывая на неё; «часть, которая ходит» называет лишь то, что она делает."
-    },
-    "kou3": {
-      "status": "atom",
-      "eng": "The mouth is learned by pointing at it; eating and speaking are what it is for, not what it is.",
-      "rus": "Рот усваивают, показывая на него; есть и говорить — для чего он нужен, а не что это."
-    },
-    "shen1ti3": {
-      "status": "atom",
-      "eng": "The body is learned from your own; \"a person from head to foot\" already needs the head and the foot.",
-      "rus": "Тело узнают по своему собственному; «человек от головы до ног» уже требует головы и ног."
-    },
-    "shou3": {
-      "status": "atom",
-      "eng": "The hand is learned by pointing at it; \"the part that holds things\" names its use only.",
-      "rus": "Руку усваивают, показывая на неё; «часть, которая держит вещи» называет лишь её применение."
-    },
-    "tou2": {
-      "status": "atom",
-      "eng": "The head is learned by pointing at it; \"the top of the body\" needs the body.",
-      "rus": "Голову усваивают, показывая на неё; «верх тела» требует тела."
-    },
-    "mao2": {
-      "status": "atom",
-      "eng": "Hair is learned by seeing and touching it; \"threads on the head\" is only a picture of it.",
-      "rus": "Волосы узнают, видя и трогая; «нити на голове» — лишь картинка."
-    },
-    "xin1": {
-      "status": "atom",
-      "eng": "The heart is felt in the chest and is also the mind (kāi-xīn); no description of the organ carries both.",
-      "rus": "Сердце чувствуют в груди, и оно же — ум (kāi-xīn); ни одно описание органа не передаёт оба значения."
-    },
-    "er3duo": {
-      "status": "atom",
-      "eng": "The ear is learned by pointing at it; \"the part that hears\" leans on tīng, which is said with the ears.",
-      "rus": "Ухо усваивают, показывая на него; «часть, которая слышит» опирается на tīng, а tīng объясняют через уши."
-    },
-    "ya2": {
-      "status": "atom",
-      "eng": "Teeth are learned by pointing at them; \"white, hard parts in the mouth\" only says how they look.",
-      "rus": "Зубы усваивают, показывая на них; «белые твёрдые части во рту» говорят лишь об их виде."
-    },
-    "du4zi": {
-      "status": "atom",
-      "eng": "The belly is learned by pointing at it; \"where the food goes\" names its use only.",
-      "rus": "Живот усваивают, показывая на него; «куда идёт еда» называет лишь его назначение."
-    },
-    "zhe4": {
-      "status": "atom",
-      "eng": "\"This\" is learned by pointing at what is near you; \"the near one\" already needs \"near\".",
-      "rus": "«Этот» усваивают, показывая на то, что рядом; «ближний» уже требует «близко»."
-    },
-    "na4": {
-      "status": "atom",
-      "eng": "\"That\" is learned by pointing at what is away from you; it stands beside zhè, not under it.",
-      "rus": "«Тот» усваивают, показывая на то, что вдали; nà стоит рядом с zhè, а не под ним."
-    },
     "bi3": {
       "status": "atom",
       "eng": "A grammar word for comparing (\"X bǐ Y dà\"); any other way of comparing already needs a comparing word.",
       "rus": "Служебное слово сравнения («X bǐ Y dà»); любой другой способ сравнить уже требует слова сравнения."
     },
-    "ge4": {
-      "status": "atom",
-      "eng": "A counting word with no meaning of its own: it only joins a number to a thing, so nothing else can say it.",
-      "rus": "Счётное слово без собственного значения: оно только соединяет число с предметом, поэтому другим словом его не сказать."
+    "bie2": {
+      "status": "approve",
+      "at": "2026-10-13T14:35:07.849Z"
+    },
+    "che1": {
+      "status": "edit",
+      "forms": [
+        "rén zài lǐ-miàn, zài lù-shàng zǒu-de jī"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T14:21:59.780Z"
+    },
+    "ci2": {
+      "status": "edit",
+      "forms": [
+        "huà-lǐ zuì xiǎo-de bù-fen"
+      ],
+      "verdict": "clumsy",
+      "note": "connection to shuo and to hua",
+      "at": "2026-10-13T15:06:50.467Z"
     },
     "ci4": {
       "status": "atom",
       "eng": "A counting word for how often: it counts happenings the way gè counts things, and has no plainer wording.",
       "rus": "Счётное слово для «сколько раз»: считает события так же, как gè считает предметы; проще его не сказать."
     },
-    "yi1": {
+    "deng1": {
+      "status": "edit",
+      "forms": [
+        "jiā-lǐ-de xiǎo rì",
+        "kāi le jiù míng-de dōng-xi"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T14:21:49.433Z"
+    },
+    "du4zi": {
       "status": "atom",
-      "eng": "You learn \"one\" by holding up a single thing; every other number is built from it.",
-      "rus": "«Один» усваивают на одном предмете; все остальные числа строятся из него."
+      "eng": "The belly is learned by pointing at it; \"where the food goes\" names its use only.",
+      "rus": "Живот усваивают, показывая на него; «куда идёт еда» называет лишь его назначение."
+    },
+    "er3duo": {
+      "status": "atom",
+      "eng": "The ear is learned by pointing at it; \"the part that hears\" leans on tīng, which is said with the ears.",
+      "rus": "Ухо усваивают, показывая на него; «часть, которая слышит» опирается на tīng, а tīng объясняют через уши."
+    },
+    "er4": {
+      "status": "edit",
+      "forms": [
+        "liǎng"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T14:36:34.749Z"
+    },
+    "fa3": {
+      "status": "edit",
+      "forms": [
+        "zěnme zuò"
+      ],
+      "verdict": "clumsy",
+      "note": "to useful",
+      "at": "2026-10-13T14:28:58.553Z"
+    },
+    "fan4": {
+      "status": "approve",
+      "at": "2026-10-13T14:19:57.360Z"
+    },
+    "fang2": {
+      "status": "approve",
+      "at": "2026-10-13T14:09:28.666Z"
+    },
+    "fen1": {
+      "status": "edit",
+      "forms": [
+        "dōng-xi-de yī-diǎn"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T14:31:31.919Z"
+    },
+    "ge4": {
+      "status": "atom",
+      "eng": "A counting word with no meaning of its own: it only joins a number to a thing, so nothing else can say it.",
+      "rus": "Счётное слово без собственного значения: оно только соединяет число с предметом, поэтому другим словом его не сказать."
+    },
+    "gong1": {
+      "status": "edit",
+      "forms": [
+        "yòng lì zuò dōng-xi"
+      ],
+      "verdict": "clumsy",
+      "note": "very useful",
+      "at": "2026-10-13T14:29:42.221Z"
+    },
+    "guan1xi": {
+      "status": "edit",
+      "forms": [
+        "X hé Y zenme bi"
+      ],
+      "verdict": "clumsy",
+      "note": "too fundamental. capture connection to bi",
+      "at": "2026-10-13T15:04:20.282Z"
+    },
+    "guo2": {
+      "status": "edit",
+      "forms": [
+        "hěn duō rén zài yī-qǐ-de dà dì-fang"
+      ],
+      "verdict": "clumsy",
+      "note": "disambiguation needed - many places can be called \"many people together\"",
+      "at": "2026-10-13T14:08:37.699Z"
+    },
+    "guo3": {
+      "status": "edit",
+      "forms": [
+        "zhíwù shēng-de, néng chī-de dōng-xi"
+      ],
+      "verdict": "fine",
+      "note": "very useful in CHinese - simplifies a lot",
+      "at": "2026-10-13T14:20:13.440Z"
     },
     "hao4": {
       "status": "atom",
       "eng": "A marker that turns a number into a name or a date (èr-hào); it exists only inside that pattern.",
       "rus": "Показатель, который превращает число в имя или дату (èr-hào); он существует только в этой конструкции."
+    },
+    "huo3": {
+      "status": "edit",
+      "forms": [
+        "hěn rè, hěn míng, néng ràng dōng-xi biàn hēi-de dōng-xi"
+      ],
+      "verdict": "clumsy",
+      "note": "too clumsy",
+      "at": "2026-10-13T14:14:11.699Z"
+    },
+    "ji1": {
+      "status": "edit",
+      "forms": [
+        "rén zuò-de, kāi le jiù dòng-de dōng-xi"
+      ],
+      "verdict": "clumsy",
+      "note": "too useful",
+      "at": "2026-10-13T14:21:34.473Z"
+    },
+    "jia1": {
+      "status": "edit",
+      "forms": [
+        "wǒ shuìjiào-de dì-fang",
+        "bàba māma hé wǒ"
+      ],
+      "verdict": "clumsy",
+      "note": "fundamental word that simplifies a lot of language",
+      "at": "2026-10-13T14:08:04.742Z"
+    },
+    "jia4zhi2": {
+      "status": "edit",
+      "forms": [
+        "mǎi tā yào gěi-de jīn-de duō-shǎo"
+      ],
+      "verdict": "fine",
+      "note": "ta zhong bu zhong4-yao",
+      "at": "2026-10-13T14:28:32.017Z"
+    },
+    "jiao3": {
+      "status": "atom",
+      "eng": "The foot is learned by pointing at it; \"the part that walks\" only names what it does.",
+      "rus": "Ступню усваивают, показывая на неё; «часть, которая ходит» называет лишь то, что она делает."
+    },
+    "jin1": {
+      "status": "edit",
+      "forms": [
+        "mǎi dōng-xi yào gěi-de dōng-xi"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T14:23:18.088Z"
+    },
+    "jiu3": {
+      "status": "edit",
+      "forms": [
+        "bā hé yī"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T14:36:13.265Z"
+    },
+    "ju4": {
+      "status": "edit",
+      "forms": [
+        "yòng-de dōng-xi"
+      ],
+      "verdict": "clumsy",
+      "note": "too useful a word (gong-ju)",
+      "at": "2026-10-13T14:21:10.446Z"
+    },
+    "kou3": {
+      "status": "atom",
+      "eng": "The mouth is learned by pointing at it; eating and speaking are what it is for, not what it is.",
+      "rus": "Рот усваивают, показывая на него; есть и говорить — для чего он нужен, а не что это."
+    },
+    "li4": {
+      "status": "edit",
+      "forms": [
+        "shēntǐ-lǐ, néng ná zhòng dōng-xi-de dōng-xi"
+      ],
+      "verdict": "clumsy",
+      "note": "connection to shenti",
+      "at": "2026-10-13T15:07:04.750Z"
+    },
+    "liang3": {
+      "status": "edit",
+      "forms": [
+        "yī hé yī"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T14:35:36.387Z"
+    },
+    "liao4": {
+      "status": "edit",
+      "forms": [
+        "zuò dōng-xi yòng-de dōng-xi"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T14:23:01.624Z"
+    },
+    "ling2": {
+      "status": "edit",
+      "forms": [
+        "méi-yǒu"
+      ],
+      "verdict": "clumsy",
+      "note": "very useful for counting",
+      "at": "2026-10-13T14:36:48.760Z"
+    },
+    "liu4": {
+      "status": "edit",
+      "forms": [
+        "sān hé sān"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T14:36:00.190Z"
+    },
+    "ma1ma": {
+      "status": "edit",
+      "forms": [
+        "shēng wǒ-de nǚ-rén"
+      ],
+      "verdict": "clumsy",
+      "note": "connection to baba and ren",
+      "at": "2026-10-13T15:05:26.706Z"
+    },
+    "mao2": {
+      "status": "atom",
+      "eng": "Hair is learned by seeing and touching it; \"threads on the head\" is only a picture of it.",
+      "rus": "Волосы узнают, видя и трогая; «нити на голове» — лишь картинка."
+    },
+    "men": {
+      "status": "approve",
+      "at": "2026-10-13T14:06:39.605Z"
+    },
+    "men2": {
+      "status": "edit",
+      "forms": [
+        "kāi hé guān-de, rén jìn chū-de dōng-xi"
+      ],
+      "verdict": "clumsy",
+      "note": "very basic word and potentially simplifies a lot - but we keep an eye on it - it might potentially go",
+      "at": "2026-10-13T14:10:51.215Z"
+    },
+    "na4": {
+      "status": "atom",
+      "eng": "\"That\" is learned by pointing at what is away from you; it stands beside zhè, not under it.",
+      "rus": "«Тот» усваивают, показывая на то, что вдали; nà стоит рядом с zhè, а не под ним."
+    },
+    "ni3": {
+      "status": "atom",
+      "eng": "there is not honest paraphrase because \"person who listens to me\" can be \"he\" so there is need disambiguation",
+      "rus": "there is not honest paraphrase because \"person who listens to me\" can be \"he\" so there is need disambiguation",
+      "at": "2026-10-13T14:04:47.132Z"
+    },
+    "nv3": {
+      "status": "edit",
+      "forms": [
+        "néng shēng hái-zi-de rén"
+      ],
+      "verdict": "clumsy",
+      "note": "we don't want to lose this level of expressivity. also need to capture connnection to ren",
+      "at": "2026-10-13T15:03:49.831Z"
+    },
+    "qi1": {
+      "status": "edit",
+      "forms": [
+        "liù hé yī"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T14:36:04.476Z"
+    },
+    "qi4": {
+      "status": "edit",
+      "forms": [
+        "kàn-bù-jiàn, rén bù néng méi-yǒu-de dōng-xi"
+      ],
+      "verdict": "clumsy",
+      "note": "very clumsy and ambiguous",
+      "at": "2026-10-13T14:14:41.023Z"
+    },
+    "qiu2": {
+      "status": "edit",
+      "forms": [
+        "yuán-de, wánr yòng-de dōng-xi"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T14:26:03.228Z"
+    },
+    "ren2": {
+      "status": "edit",
+      "forms": [
+        "néng shuō huà, néng xiě zì-de dòng-wù"
+      ],
+      "verdict": "clumsy",
+      "note": "too important of a word. also need to capture connection to dongwu",
+      "at": "2026-10-13T15:04:03.523Z"
+    },
+    "ri4": {
+      "status": "edit",
+      "forms": [
+        "tiān-shàng hěn míng, hěn rè-de dōng-xi"
+      ],
+      "verdict": "clumsy",
+      "note": "feels like this word simplifies a lot - we keep it for now and see later if we can do without it without losing expressiveness",
+      "at": "2026-10-13T14:11:49.279Z"
+    },
+    "san1": {
+      "status": "edit",
+      "forms": [
+        "liǎng hé yī"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T14:35:45.554Z"
+    },
+    "shen1ti3": {
+      "status": "atom",
+      "eng": "The body is learned from your own; \"a person from head to foot\" already needs the head and the foot.",
+      "rus": "Тело узнают по своему собственному; «человек от головы до ног» уже требует головы и ног."
+    },
+    "shen2me": {
+      "status": "atom",
+      "eng": "zhe shi wo bu zhidao-de dongxi, stil doesn't ask a question",
+      "rus": "zhe shi wo bu zhidao-de dongxi, stil doesn't ask a question",
+      "at": "2026-10-13T14:06:28.938Z"
+    },
+    "sheng1yin1": {
+      "status": "edit",
+      "forms": [
+        "ěrduo tīng-dào-de dōng-xi"
+      ],
+      "verdict": "clumsy",
+      "note": "connection to erduo and ting",
+      "at": "2026-10-13T15:07:23.902Z"
+    },
+    "shi2": {
+      "status": "edit",
+      "forms": [
+        "wǔ hé wǔ"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T14:36:20.944Z"
+    },
+    "shou3": {
+      "status": "atom",
+      "eng": "The hand is learned by pointing at it; \"the part that holds things\" names its use only.",
+      "rus": "Руку усваивают, показывая на неё; «часть, которая держит вещи» называет лишь её применение."
+    },
+    "shu1": {
+      "status": "edit",
+      "forms": [
+        "xiě le hěn duō zì, kàn-de dōng-xi"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T14:25:18.937Z"
+    },
+    "shu4": {
+      "status": "edit",
+      "forms": [
+        "duō-shǎo"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T14:30:51.784Z"
+    },
+    "shui3": {
+      "status": "edit",
+      "forms": [
+        "méi yǒu yánsè, hē-de dōng-xi"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T14:19:04.752Z"
+    },
+    "si4": {
+      "status": "edit",
+      "forms": [
+        "liǎng hé liǎng"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T14:35:49.170Z"
+    },
+    "ta1": {
+      "status": "edit",
+      "forms": [
+        "bù shì wǒ yě bù shì nǐ de rén",
+        "bù shì wǒ yě bù shì nǐ de dōng-xi"
+      ],
+      "verdict": "clumsy",
+      "note": "we should be adding core dictionary internal synonyms. for this one it is bie and buton etc",
+      "at": "2026-10-13T15:02:17.851Z"
+    },
+    "ti2": {
+      "status": "edit",
+      "forms": [
+        "wèn-de dōng-xi"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T14:30:28.695Z"
+    },
+    "tong2": {
+      "status": "approve",
+      "at": "2026-10-13T14:35:20.346Z"
+    },
+    "tou2": {
+      "status": "atom",
+      "eng": "The head is learned by pointing at it; \"the top of the body\" needs the body.",
+      "rus": "Голову усваивают, показывая на неё; «верх тела» требует тела."
+    },
+    "wang3": {
+      "status": "edit",
+      "forms": [
+        "hěn duō xiàn yī-qǐ zuò-de dōng-xi, zhōng-jiān kōng-de"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T14:22:11.701Z"
+    },
+    "wo3": {
+      "status": "atom",
+      "eng": "You learn it by pointing at yourself; any other way of saying \"I\" already needs a pointer.",
+      "rus": "Его усваивают, показывая на себя: любой другой способ сказать «я» уже требует указателя.",
+      "at": "2026-10-12T13:56:28.901Z"
+    },
+    "wu3": {
+      "status": "edit",
+      "forms": [
+        "sì hé yī"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T14:35:55.199Z"
+    },
+    "wu4": {
+      "status": "approve",
+      "at": "2026-10-13T14:25:08.845Z"
+    },
+    "xian4": {
+      "status": "edit",
+      "forms": [
+        "hěn cháng, hěn xiǎo, néng jié-de dōng-xi"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T14:22:26.355Z"
+    },
+    "xin1": {
+      "status": "atom",
+      "eng": "The heart is felt in the chest and is also the mind (kāi-xīn); no description of the organ carries both.",
+      "rus": "Сердце чувствуют в груди, и оно же — ум (kāi-xīn); ни одно описание органа не передаёт оба значения."
+    },
+    "ya2": {
+      "status": "atom",
+      "eng": "Teeth are learned by pointing at them; \"white, hard parts in the mouth\" only says how they look.",
+      "rus": "Зубы усваивают, показывая на них; «белые твёрдые части во рту» говорят лишь об их виде."
+    },
+    "yan3jing": {
+      "status": "atom",
+      "eng": "The eye is learned by pointing at it; \"the part that sees\" leans on kàn, which is said with the eyes.",
+      "rus": "Глаз усваивают, показывая на него; «часть, которая видит» опирается на kàn, а kàn объясняют через глаза."
+    },
+    "yang4": {
+      "status": "atom",
+      "eng": "because it is defined circularly with zhong",
+      "rus": "because it is defined circularly with zhong",
+      "at": "2026-10-13T14:32:25.281Z"
+    },
+    "yi1": {
+      "status": "atom",
+      "eng": "You learn \"one\" by holding up a single thing; every other number is built from it.",
+      "rus": "«Один» усваивают на одном предмете; все остальные числа строятся из него."
+    },
+    "yi1fu": {
+      "status": "edit",
+      "forms": [
+        "shēntǐ-shàng, ràng shēntǐ bù lěng-de dōng-xi"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T14:23:26.559Z"
+    },
+    "you2": {
+      "status": "edit",
+      "forms": [
+        "zuò fàn yòng-de, hé shuǐ bù yī-yàng-de shuǐ"
+      ],
+      "verdict": "fine",
+      "note": "capture connection to shui",
+      "at": "2026-10-13T15:05:57.924Z"
+    },
+    "yue4": {
+      "status": "edit",
+      "forms": [
+        "wǎn-shang tiān-shàng míng-de dōng-xi"
+      ],
+      "verdict": "clumsy",
+      "note": "simplifies a lot of things (including calendar like ri too)",
+      "at": "2026-10-13T14:12:26.419Z"
+    },
+    "zhe4": {
+      "status": "atom",
+      "eng": "\"This\" is learned by pointing at what is near you; \"the near one\" already needs \"near\".",
+      "rus": "«Этот» усваивают, показывая на то, что рядом; «ближний» уже требует «близко»."
+    },
+    "zhi2wu4": {
+      "status": "edit",
+      "forms": [
+        "huó-de, bù dòng-de dōng-xi"
+      ],
+      "verdict": "clumsy",
+      "note": "very important word",
+      "at": "2026-10-13T14:13:13.783Z"
+    },
+    "zhong3": {
+      "status": "edit",
+      "forms": [
+        "yī-yàng-de dōng-xi",
+        "zhè-yàng-de"
+      ],
+      "verdict": "fine",
+      "at": "2026-10-13T14:34:14.534Z"
+    },
+    "zi4": {
+      "status": "approve",
+      "at": "2026-10-13T14:30:11.662Z"
     }
   }
 }

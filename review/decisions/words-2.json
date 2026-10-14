@@ -1,60 +1,583 @@
 {
   "batch": 2,
   "decisions": {
-    "re4": {
-      "status": "atom",
-      "eng": "Hot is felt on the skin; \"like fire\" needs something already hot, and its partner lěng is felt the same way.",
-      "rus": "Горячее чувствуют кожей; «как огонь» уже предполагает горячее, а парное lěng чувствуется так же."
+    "ai4": {
+      "status": "edit",
+      "forms": [
+        "hěn xiǎng ràng tā hǎo"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:46:17.587Z"
     },
-    "leng3": {
-      "status": "atom",
-      "eng": "Cold is felt on the skin and is not \"not hot\" (warm water is neither); it stands beside rè, not under it.",
-      "rus": "Холодное чувствуют кожей, и это не «не горячее» (тёплая вода ни то ни другое); lěng стоит рядом с rè, а не под ним."
+    "bai2": {
+      "status": "edit",
+      "forms": [
+        "yá-de yánsè"
+      ],
+      "verdict": "clumsy",
+      "note": "bai allows to say a lot of other things",
+      "at": "2026-10-13T23:38:22.857Z"
     },
-    "duo1": {
-      "status": "atom",
-      "eng": "Many is felt by looking at a pile of things; its opposite shǎo is just \"bù duō\".",
-      "rus": "Много чувствуют, глядя на кучу вещей; противоположное shǎo — просто «bù duō»."
+    "bian4": {
+      "status": "edit",
+      "forms": [
+        "hé yǐ-qián bù yī-yàng le"
+      ],
+      "verdict": "clumsy",
+      "note": "one of the most important words",
+      "at": "2026-10-14T00:06:23.835Z"
     },
-    "hao3": {
-      "status": "atom",
-      "eng": "Good is felt: what helps and what you like. Words like \"useful\" or \"nice\" are only neighbours.",
-      "rus": "Хорошее чувствуют: то, что помогает и нравится. «Полезный» и «приятный» лишь соседи по смыслу."
+    "chang2": {
+      "status": "edit",
+      "forms": [
+        "cóng zhè-biān dào nà-biān hěn yuǎn"
+      ],
+      "verdict": "clumsy",
+      "note": "very useful word",
+      "at": "2026-10-13T23:45:31.105Z"
     },
-    "tian2": {
-      "status": "atom",
-      "eng": "A taste: you learn sweet by tasting it; the other words only point back to that taste.",
-      "rus": "Вкус: сладкое узнают, попробовав; другие слова лишь указывают на этот вкус."
+    "chi1": {
+      "status": "edit",
+      "forms": [
+        "ná dōng-xi fàng-jìn kǒu-lǐ"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:55:46.199Z"
     },
-    "tong4": {
-      "status": "atom",
-      "eng": "A feeling in the body, learned by hurting; no description makes someone feel it.",
-      "rus": "Ощущение в теле, которое узнают, когда больно; никакое описание не даёт его почувствовать."
+    "chu1": {
+      "status": "approve",
+      "at": "2026-10-13T23:57:38.033Z"
+    },
+    "da3": {
+      "status": "edit",
+      "forms": [
+        "yòng lì ràng tā tòng"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:06:59.079Z"
     },
     "da4": {
       "status": "atom",
       "eng": "Size is seen by comparing two things; nothing else gives the idea. Its opposite xiǎo is just \"bù dà\".",
       "rus": "Размер видят, сравнивая два предмета; иначе идею не передать. Противоположное xiǎo — просто «bù dà»."
     },
-    "yao4": {
+    "dao4": {
+      "status": "edit",
+      "forms": [
+        "zǒu-wán lù, zài nà-lǐ le"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:56:33.648Z"
+    },
+    "deng3": {
+      "status": "edit",
+      "forms": [
+        "zài zhè-lǐ, yào tā lái, wǒ bù zǒu"
+      ],
+      "verdict": "clumsy",
+      "note": "a way to say it - spend a lot of time wanting something to happen, but that too clumsy",
+      "at": "2026-10-13T23:55:30.822Z"
+    },
+    "dong4": {
+      "status": "edit",
+      "forms": [
+        "bù zài yī-ge dì-fang"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:56:50.052Z"
+    },
+    "dou1": {
+      "status": "approve",
+      "at": "2026-10-13T23:34:28.038Z"
+    },
+    "duo1": {
       "status": "atom",
-      "eng": "Wanting is felt from inside; xiǎng and jué-de lean on it, not the other way round.",
-      "rus": "Желание чувствуют изнутри; xiǎng и jué-de опираются на него, а не наоборот."
+      "eng": "Many is felt by looking at a pile of things; its opposite shǎo is just \"bù duō\".",
+      "rus": "Много чувствуют, глядя на кучу вещей; противоположное shǎo — просто «bù duō»."
+    },
+    "fa1": {
+      "status": "edit",
+      "forms": [
+        "ràng X chū-qù"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:06:38.885Z"
+    },
+    "fang4": {
+      "status": "edit",
+      "forms": [
+        "ràng tā zài nà-lǐ"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:08:42.326Z"
+    },
+    "fei1": {
+      "status": "edit",
+      "forms": [
+        "zài tiān-shàng zǒu"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:58:55.547Z"
+    },
+    "gan1jing4": {
+      "status": "edit",
+      "forms": [
+        "méi-yǒu huài dōng-xi zài shàng-miàn"
+      ],
+      "verdict": "clumsy",
+      "note": "too useful",
+      "at": "2026-10-13T23:44:11.765Z"
+    },
+    "gao1": {
+      "status": "edit",
+      "forms": [
+        "cóng dì dào shàng-miàn hěn cháng"
+      ],
+      "verdict": "clumsy",
+      "note": "very useful",
+      "at": "2026-10-13T23:45:11.689Z"
+    },
+    "gei3": {
+      "status": "edit",
+      "forms": [
+        "ràng tā yǒu X"
+      ],
+      "verdict": "clumsy",
+      "note": "one of the most imortant words",
+      "at": "2026-10-14T00:07:17.876Z"
+    },
+    "hao3": {
+      "status": "atom",
+      "eng": "Good is felt: what helps and what you like. Words like \"useful\" or \"nice\" are only neighbours.",
+      "rus": "Хорошее чувствуют: то, что помогает и нравится. «Полезный» и «приятный» лишь соседи по смыслу."
+    },
+    "he1": {
+      "status": "edit",
+      "forms": [
+        "ràng shuǐ jìn kǒu-lǐ"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:55:52.037Z"
+    },
+    "hei1": {
+      "status": "edit",
+      "forms": [
+        "wǎn-shang tiān-de yánsè"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:38:57.460Z"
+    },
+    "hong2": {
+      "status": "edit",
+      "forms": [
+        "huǒ-de yánsè"
+      ],
+      "verdict": "clumsy",
+      "note": "fire isn't really red",
+      "at": "2026-10-13T23:39:09.340Z"
+    },
+    "hua4": {
+      "status": "approve",
+      "at": "2026-10-13T23:53:39.753Z"
+    },
+    "huai4": {
+      "status": "approve",
+      "at": "2026-10-13T23:37:07.259Z"
+    },
+    "hui2": {
+      "status": "edit",
+      "forms": [
+        "dào yǐ-qián zài-guò-de dì-fang"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:57:44.417Z"
+    },
+    "ji4": {
+      "status": "edit",
+      "forms": [
+        "hái zài xīn-lǐ"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:50:57.425Z"
+    },
+    "jian4": {
+      "status": "approve",
+      "at": "2026-10-13T23:52:17.825Z"
+    },
+    "jiao4": {
+      "status": "edit",
+      "forms": [
+        "yòng kǒu ràng tā lái"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:53:07.073Z"
+    },
+    "jin4": {
+      "status": "approve",
+      "at": "2026-10-13T23:57:34.623Z"
     },
     "jue2": {
       "status": "atom",
       "eng": "Feeling is inside the body or mind; the other words for it (xiǎng) point back to it.",
       "rus": "Чувство — внутри тела или ума; другие слова для него (xiǎng) указывают обратно на него."
     },
-    "zuo4": {
+    "kai1shi3": {
+      "status": "edit",
+      "forms": [
+        "cóng bù zuò dào zuò"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:54:26.412Z"
+    },
+    "kan4": {
+      "status": "edit",
+      "forms": [
+        "yòng yǎnjing"
+      ],
+      "verdict": "clumsy",
+      "note": "to say that eyes do it - is too clumsy",
+      "at": "2026-10-13T23:51:56.186Z"
+    },
+    "kong1": {
+      "status": "edit",
+      "forms": [
+        "lǐ-miàn méi-yǒu dōng-xi"
+      ],
+      "verdict": "clumsy",
+      "note": "allows to express other words",
+      "at": "2026-10-13T23:41:44.731Z"
+    },
+    "kuai4": {
+      "status": "edit",
+      "forms": [
+        "hěn zǎo dào"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:40:51.941Z"
+    },
+    "lai2": {
+      "status": "edit",
+      "forms": [
+        "dào wǒ zhè-lǐ"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:56:10.413Z"
+    },
+    "lao3": {
+      "status": "edit",
+      "forms": [
+        "hěn-duō-nián-de"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:40:31.329Z"
+    },
+    "leng3": {
       "status": "atom",
-      "eng": "\"Do\" is what is left when you take the how away from every action word.",
-      "rus": "«Делать» — то, что остаётся, когда у каждого глагола действия убираешь «как»."
+      "eng": "Cold is felt on the skin and is not \"not hot\" (warm water is neither); it stands beside rè, not under it.",
+      "rus": "Холодное чувствуют кожей, и это не «не горячее» (тёплая вода ни то ни другое); lěng стоит рядом с rè, а не под ним."
+    },
+    "luan4": {
+      "status": "edit",
+      "forms": [
+        "dōng-xi bù zài tā-de dì-fang"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:40:40.287Z"
+    },
+    "ming2": {
+      "status": "edit",
+      "forms": [
+        "hé rì yī-yàng"
+      ],
+      "verdict": "clumsy",
+      "note": "very useful words",
+      "at": "2026-10-13T23:43:21.223Z"
+    },
+    "mo1": {
+      "status": "atom",
+      "eng": "related to fundamental perceptive mechanism unrelated to other senses",
+      "rus": "related to fundamental perceptive mechanism unrelated to other senses",
+      "at": "2026-10-14T00:08:19.327Z"
+    },
+    "nan2": {
+      "status": "edit",
+      "forms": [
+        "bù hǎo zuò"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:37:19.300Z"
+    },
+    "pa4": {
+      "status": "approve",
+      "at": "2026-10-13T23:46:27.283Z"
+    },
+    "ping2": {
+      "status": "edit",
+      "forms": [
+        "hé dì yī-yàng"
+      ],
+      "verdict": "clumsy",
+      "note": "one of the most useful words",
+      "at": "2026-10-13T23:44:26.032Z"
+    },
+    "qi3": {
+      "status": "edit",
+      "forms": [
+        "cóng xià dào shàng"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:57:51.524Z"
+    },
+    "qu4": {
+      "status": "edit",
+      "forms": [
+        "dào nà-lǐ"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:56:16.155Z"
     },
     "rang4": {
       "status": "atom",
       "eng": "\"Let\" and \"make\" join a person to what happens (ràng tā jìn-lái); jiào and bāng are special cases of it.",
       "rus": "«Пусть» и «заставь» связывают человека с тем, что происходит (ràng tā jìn-lái); jiào и bāng — его частные случаи."
+    },
+    "re4": {
+      "status": "atom",
+      "eng": "Hot is felt on the skin; \"like fire\" needs something already hot, and its partner lěng is felt the same way.",
+      "rus": "Горячее чувствуют кожей; «как огонь» уже предполагает горячее, а парное lěng чувствуется так же."
+    },
+    "se4": {
+      "status": "approve",
+      "at": "2026-10-13T23:38:26.388Z"
+    },
+    "shao3": {
+      "status": "approve",
+      "at": "2026-10-13T23:35:13.018Z"
+    },
+    "shui4jiao4": {
+      "status": "edit",
+      "forms": [
+        "tǎng-xià, bù kàn bù tīng bù dòng"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:55:38.329Z"
+    },
+    "shuo1": {
+      "status": "edit",
+      "forms": [
+        "yòng kǒu ràng bié-rén tīng-dào cí"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:52:33.849Z"
+    },
+    "suan4": {
+      "status": "edit",
+      "forms": [
+        "yòng shù kàn yǒu duō-shǎo"
+      ],
+      "verdict": "clumsy",
+      "note": "very useful word",
+      "at": "2026-10-13T23:50:07.974Z"
+    },
+    "tang3": {
+      "status": "edit",
+      "forms": [
+        "shēntǐ píng zài dì-shàng"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:59:23.261Z"
+    },
+    "tian2": {
+      "status": "atom",
+      "eng": "A taste: you learn sweet by tasting it; the other words only point back to that taste.",
+      "rus": "Вкус: сладкое узнают, попробовав; другие слова лишь указывают на этот вкус."
+    },
+    "ting1": {
+      "status": "edit",
+      "forms": [
+        "yòng ěrduo"
+      ],
+      "verdict": "clumsy",
+      "note": "to say that ears do it - is clumsy",
+      "at": "2026-10-13T23:52:10.651Z"
+    },
+    "tong1": {
+      "status": "edit",
+      "forms": [
+        "cóng zhè-biān dào nà-biān dōu néng zǒu"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:59:37.713Z"
+    },
+    "tong4": {
+      "status": "atom",
+      "eng": "A feeling in the body, learned by hurting; no description makes someone feel it.",
+      "rus": "Ощущение в теле, которое узнают, когда больно; никакое описание не даёт его почувствовать."
+    },
+    "wan2": {
+      "status": "edit",
+      "forms": [
+        "méi-yǒu le"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:54:35.716Z"
+    },
+    "wan2r": {
+      "status": "edit",
+      "forms": [
+        "bù zuò gōng, zhǐ yào kāi-xīn"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:56:05.171Z"
+    },
+    "wen4": {
+      "status": "edit",
+      "forms": [
+        "shuō wǒ bù zhīdào-de, ràng tā shuō"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:52:56.149Z"
+    },
+    "xiang3": {
+      "status": "edit",
+      "forms": [
+        "zài xīn-lǐ zhǎo",
+        "yào"
+      ],
+      "verdict": "clumsy",
+      "note": "potentially an atom (connect it to yao, juede relationship)",
+      "at": "2026-10-13T23:50:46.206Z"
+    },
+    "xiao3": {
+      "status": "atom",
+      "eng": "little isn't just bu da",
+      "rus": "little isn't just bu da",
+      "at": "2026-10-13T23:44:52.515Z"
+    },
+    "xiao4": {
+      "status": "edit",
+      "forms": [
+        "kāi-xīn shí, kǒu kāi le, yǒu shēngyīn"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:47:01.067Z"
+    },
+    "xie1": {
+      "status": "edit",
+      "forms": [
+        "yǒu-de",
+        "yī-diǎn"
+      ],
+      "verdict": "clumsy",
+      "note": "zhe-xie sounds natural - zhe you-de or zhe-bu-duo-de sounds very clumsy",
+      "at": "2026-10-13T23:36:32.189Z"
+    },
+    "xie3": {
+      "status": "edit",
+      "forms": [
+        "yòng shǒu zuò zì"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:52:49.163Z"
+    },
+    "xie4": {
+      "status": "edit",
+      "forms": [
+        "shuō nǐ duì wǒ hǎo"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:47:11.022Z"
+    },
+    "xue2": {
+      "status": "edit",
+      "forms": [
+        "cóng bié-rén nà-lǐ dé-dào zhīdào"
+      ],
+      "verdict": "clumsy",
+      "note": "note that xue and zhidao are circular",
+      "at": "2026-10-13T23:49:08.310Z"
+    },
+    "yan2se4": {
+      "status": "approve",
+      "at": "2026-10-13T23:39:43.590Z"
+    },
+    "yao4": {
+      "status": "atom",
+      "eng": "Wanting is felt from inside; xiǎng and jué-de lean on it, not the other way round.",
+      "rus": "Желание чувствуют изнутри; xiǎng и jué-de опираются на него, а не наоборот."
+    },
+    "ying4": {
+      "status": "edit",
+      "forms": [
+        "yòng shǒu mō, tā bù biàn"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:41:14.371Z"
+    },
+    "yong4": {
+      "status": "edit",
+      "forms": [
+        "ná lái zuò"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:53:52.420Z"
+    },
+    "yuan2": {
+      "status": "approve",
+      "at": "2026-10-13T23:42:58.176Z"
+    },
+    "zhan4": {
+      "status": "edit",
+      "forms": [
+        "yòng jiǎo zài dì-shàng bù dòng"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-13T23:59:04.690Z"
+    },
+    "zhao3": {
+      "status": "edit",
+      "forms": [
+        "xiǎng kàn-jiàn tā, kàn lái kàn qù"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:08:32.619Z"
+    },
+    "zhi1dao4": {
+      "status": "edit",
+      "forms": [
+        "xué-guò, hái jì-de"
+      ],
+      "verdict": "clumsy",
+      "note": "relates to xue (we need to capture as much relationship in paraphrases between all the words in our core as we can)",
+      "at": "2026-10-13T23:48:49.511Z"
+    },
+    "zhi3": {
+      "status": "approve",
+      "at": "2026-10-13T23:36:41.978Z"
+    },
+    "zhong4": {
+      "status": "edit",
+      "forms": [
+        "ná-qǐ-lái, yào hěn duō lì"
+      ],
+      "verdict": "clumsy",
+      "note": "allows to say important (zhong-yao), zhong-dian",
+      "at": "2026-10-13T23:43:56.643Z"
+    },
+    "zou3": {
+      "status": "edit",
+      "forms": [
+        "yòng jiǎo qù",
+        "bù zài zhè-lǐ le"
+      ],
+      "verdict": "clumsy",
+      "note": "we need to connect relationships between qu zou fei tong dong dao and other similar -  Iwant to think of how we can express",
+      "at": "2026-10-14T00:06:06.792Z"
+    },
+    "zuo4": {
+      "status": "atom",
+      "eng": "\"Do\" is what is left when you take the how away from every action word.",
+      "rus": "«Делать» — то, что остаётся, когда у каждого глагола действия убираешь «как»."
     }
   }
 }

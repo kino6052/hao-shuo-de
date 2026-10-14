@@ -1,75 +1,480 @@
 {
   "batch": 3,
   "decisions": {
-    "qian2": {
-      "status": "atom",
-      "eng": "Front is learned from your own body, the side you face; \"where the eyes look\" needs eyes and looking.",
-      "rus": "«Перед» узнают по своему телу — сторона, куда обращено лицо; «куда смотрят глаза» требует глаз и взгляда."
-    },
-    "hou4": {
-      "status": "atom",
-      "eng": "Behind is learned from your own body, the side you cannot see; it stands beside qián, not under it.",
-      "rus": "«Зад» узнают по своему телу — сторона, которую не видишь; hòu стоит рядом с qián, а не под ним."
-    },
-    "shi4": {
-      "status": "atom",
-      "eng": "The \"is\" that joins a thing to what it is; every other verb says more than that.",
-      "rus": "Это «есть», которое связывает вещь с тем, что она такое; любой другой глагол говорит больше."
-    },
-    "you3": {
-      "status": "atom",
-      "eng": "\"Have\" and \"there is\" come before everything else you can say about a thing; zài and dé lean on it.",
-      "rus": "«Иметь» и «есть» стоят раньше всего, что можно сказать о вещи; на него опираются zài и dé."
-    },
-    "huo2": {
-      "status": "atom",
-      "eng": "Alive is lived, not described; sǐ and shēng are measured from it.",
-      "rus": "Живое проживают, а не описывают; sǐ и shēng отмеряют от него."
-    },
-    "tian1": {
-      "status": "atom",
-      "eng": "A day is the round of light and dark you live through; no other word frames it.",
-      "rus": "День — это круг света и темноты, который проживаешь; другое слово его не выразит."
-    },
-    "li3": {
-      "status": "atom",
-      "eng": "Inside is learned from a box or a mouth: you put something in. Its opposite wài is \"not lǐ\".",
-      "rus": "Внутреннее узнают по коробке или рту: туда что-то кладут. Противоположное wài — «не lǐ»."
-    },
     "ba3": {
       "status": "atom",
       "eng": "A grammar word that brings the thing forward before the verb (bǎ yīfu fàng zài dì-shàng); there is nothing to say it with.",
       "rus": "Служебное слово, которое выводит вещь вперёд перед глаголом (bǎ yīfu fàng zài dì-shàng); сказать его нечем."
     },
-    "de": {
-      "status": "atom",
-      "eng": "The little link between a describing part and the word it describes; it has no meaning apart from the link.",
-      "rus": "Маленькая связка между описывающей частью и словом, которое она описывает; вне связки у неё нет значения."
+    "bang1": {
+      "status": "edit",
+      "forms": [
+        "hé tā yī-qǐ zuò, ràng tā zuò-hǎo"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:09:32.553Z"
     },
-    "le": {
-      "status": "atom",
-      "eng": "Marks that something happened or changed; every way of saying it already needs the same idea.",
-      "rus": "Показывает, что что-то случилось или изменилось; любой способ сказать это уже требует той же идеи."
-    },
-    "zi": {
-      "status": "atom",
-      "eng": "A light ending that makes a thing word (hái-zi, yàng-zi); it carries no meaning of its own.",
-      "rus": "Лёгкое окончание, которое делает слово названием вещи (hái-zi, yàng-zi); собственного значения у него нет."
+    "bian1": {
+      "status": "edit",
+      "forms": [
+        "bù shì zhōng-jiān-de dì-fang"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:13:29.984Z"
     },
     "bu4": {
       "status": "atom",
       "eng": "The plain no; every other negation is built from it.",
       "rus": "Простое «нет»; любое другое отрицание строится из него."
     },
+    "cong2": {
+      "status": "approve",
+      "at": "2026-10-14T00:11:45.936Z"
+    },
     "dan4": {
       "status": "atom",
       "eng": "Says that what follows goes against what you expect; there is no plainer word.",
       "rus": "Говорит, что следующее противоречит ожидаемому; слова проще нет."
     },
+    "de": {
+      "status": "atom",
+      "eng": "The little link between a describing part and the word it describes; it has no meaning apart from the link.",
+      "rus": "Маленькая связка между описывающей частью и словом, которое она описывает; вне связки у неё нет значения."
+    },
+    "de2": {
+      "status": "edit",
+      "forms": [
+        "cóng méi-yǒu dào yǒu"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:10:27.813Z"
+    },
+    "di4": {
+      "status": "edit",
+      "forms": [
+        "jiǎo xià-miàn-de dōng-xi"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:11:59.611Z"
+    },
+    "dian3": {
+      "status": "edit",
+      "forms": [
+        "hěn xiǎo-de bù-fen"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:11:19.564Z"
+    },
+    "ding4": {
+      "status": "edit",
+      "forms": [
+        "bù biàn"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:17:49.533Z"
+    },
+    "dong1": {
+      "status": "edit",
+      "forms": [
+        "rì chū-lái-de nà-biān"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:15:15.680Z"
+    },
+    "dui4": {
+      "status": "edit",
+      "forms": [
+        "zhēn",
+        "wǒ-de qián-miàn shì tā"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:11:55.876Z"
+    },
+    "fang1": {
+      "status": "edit",
+      "forms": [
+        "biān"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:15:27.623Z"
+    },
+    "fu4jin4": {
+      "status": "approve",
+      "at": "2026-10-14T00:14:53.740Z"
+    },
+    "guan1": {
+      "status": "edit",
+      "forms": [
+        "ràng lǐ-miàn hé wài-miàn bù tōng"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:09:26.013Z"
+    },
+    "guo4": {
+      "status": "edit",
+      "forms": [
+        "yǐ-qián zuò le"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:15:52.087Z"
+    },
+    "hai2": {
+      "status": "edit",
+      "forms": [
+        "méi biàn",
+        "yě"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:16:54.077Z"
+    },
     "he2": {
       "status": "atom",
       "eng": "Joins things in a list; it only works as a joint.",
       "rus": "Соединяет вещи в перечне; работает только как соединитель."
+    },
+    "hen3": {
+      "status": "atom",
+      "eng": "fundamental",
+      "rus": "fundamental",
+      "at": "2026-10-14T00:18:02.664Z"
+    },
+    "hou4": {
+      "status": "atom",
+      "eng": "Behind is learned from your own body, the side you cannot see; it stands beside qián, not under it.",
+      "rus": "«Зад» узнают по своему телу — сторона, которую не видишь; hòu стоит рядом с qián, а не под ним."
+    },
+    "hui4": {
+      "status": "edit",
+      "forms": [
+        "yǐ-hòu",
+        "zhīdào zěnme zuò"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:17:31.255Z"
+    },
+    "huo2": {
+      "status": "atom",
+      "eng": "Alive is lived, not described; sǐ and shēng are measured from it.",
+      "rus": "Живое проживают, а не описывают; sǐ и shēng отмеряют от него."
+    },
+    "jian1": {
+      "status": "approve",
+      "at": "2026-10-14T00:13:51.688Z"
+    },
+    "jie2": {
+      "status": "edit",
+      "forms": [
+        "ràng xiàn zài yī-qǐ, bù néng kāi"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:09:57.211Z"
+    },
+    "jiu4": {
+      "status": "edit",
+      "forms": [
+        "hěn kuài"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:16:50.845Z"
+    },
+    "kai1": {
+      "status": "edit",
+      "forms": [
+        "ràng lǐ-miàn hé wài-miàn tōng"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:09:16.874Z"
+    },
+    "ke3": {
+      "status": "edit",
+      "forms": [
+        "néng"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:17:34.605Z"
+    },
+    "le": {
+      "status": "atom",
+      "eng": "Marks that something happened or changed; every way of saying it already needs the same idea.",
+      "rus": "Показывает, что что-то случилось или изменилось; любой способ сказать это уже требует той же идеи."
+    },
+    "li3": {
+      "status": "atom",
+      "eng": "Inside is learned from a box or a mouth: you put something in. Its opposite wài is \"not lǐ\".",
+      "rus": "Внутреннее узнают по коробке или рту: туда что-то кладут. Противоположное wài — «не lǐ»."
+    },
+    "liu2": {
+      "status": "edit",
+      "forms": [
+        "bù zǒu"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:10:20.443Z"
+    },
+    "lu4": {
+      "status": "edit",
+      "forms": [
+        "rén hé chē zǒu-de dì-fang"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:12:06.799Z"
+    },
+    "ma": {
+      "status": "atom",
+      "eng": "important word",
+      "rus": "important word",
+      "at": "2026-10-14T00:15:45.588Z"
+    },
+    "mai3": {
+      "status": "edit",
+      "forms": [
+        "gěi jīn dé dōng-xi"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:09:38.481Z"
+    },
+    "mei2": {
+      "status": "approve",
+      "at": "2026-10-14T00:16:09.232Z"
+    },
+    "mian4": {
+      "status": "edit",
+      "forms": [
+        "kàn-dào-de nà-yī-biān"
+      ],
+      "verdict": "clumsy",
+      "note": "to important of a word",
+      "at": "2026-10-14T00:13:21.627Z"
+    },
+    "na2": {
+      "status": "edit",
+      "forms": [
+        "ràng X zài wǒ shǒu-lǐ"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:09:07.963Z"
+    },
+    "na3": {
+      "status": "approve",
+      "at": "2026-10-14T00:17:06.224Z"
+    },
+    "neng2": {
+      "status": "edit",
+      "forms": [
+        "yǒu lì zuò"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:17:25.780Z"
+    },
+    "nian2": {
+      "status": "approve",
+      "at": "2026-10-14T00:11:06.643Z"
+    },
+    "pang2bian1": {
+      "status": "approve",
+      "at": "2026-10-14T00:13:05.285Z"
+    },
+    "qian2": {
+      "status": "atom",
+      "eng": "Front is learned from your own body, the side you face; \"where the eyes look\" needs eyes and looking.",
+      "rus": "«Перед» узнают по своему телу — сторона, куда обращено лицо; «куда смотрят глаза» требует глаз и взгляда."
+    },
+    "ru2guo3": {
+      "status": "approve",
+      "at": "2026-10-14T00:16:42.139Z"
+    },
+    "shang4": {
+      "status": "edit",
+      "forms": [
+        "tóu-de nà-biān"
+      ],
+      "verdict": "clumsy",
+      "note": "to important",
+      "at": "2026-10-14T00:14:06.791Z"
+    },
+    "shei2": {
+      "status": "approve",
+      "at": "2026-10-14T00:17:20.635Z"
+    },
+    "sheng1": {
+      "status": "edit",
+      "forms": [
+        "ràng X huó, cóng shēntǐ lǐ chū-lái"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:10:51.457Z"
+    },
+    "shi4": {
+      "status": "atom",
+      "eng": "The \"is\" that joins a thing to what it is; every other verb says more than that.",
+      "rus": "Это «есть», которое связывает вещь с тем, что она такое; любой другой глагол говорит больше."
+    },
+    "si3": {
+      "status": "edit",
+      "forms": [
+        "bù huó le"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:10:37.206Z"
+    },
+    "ti4": {
+      "status": "edit",
+      "forms": [
+        "X bù zuò, wǒ zuò"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:12:29.306Z"
+    },
+    "tian1": {
+      "status": "atom",
+      "eng": "A day is the round of light and dark you live through; no other word frames it.",
+      "rus": "День — это круг света и темноты, который проживаешь; другое слово его не выразит."
+    },
+    "wai4": {
+      "status": "edit",
+      "forms": [
+        "bù zài lǐ-miàn"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:14:33.244Z"
+    },
+    "wan3": {
+      "status": "edit",
+      "forms": [
+        "tiān-de hòu-miàn"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:11:26.480Z"
+    },
+    "wei4": {
+      "status": "edit",
+      "forms": [
+        "gěi",
+        "duì"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:12:20.105Z"
+    },
+    "xi1": {
+      "status": "edit",
+      "forms": [
+        "rì xià-qù-de nà-biān"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:15:19.263Z"
+    },
+    "xia4": {
+      "status": "edit",
+      "forms": [
+        "jiǎo-de nà-biān"
+      ],
+      "verdict": "clumsy",
+      "note": "to important",
+      "at": "2026-10-14T00:14:16.471Z"
+    },
+    "ye3": {
+      "status": "edit",
+      "forms": [
+        "hé bié-de yī-yàng"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:16:16.747Z"
+    },
+    "yi3": {
+      "status": "edit",
+      "forms": [
+        "yòng"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:17:42.005Z"
+    },
+    "yin1wei4": {
+      "status": "edit",
+      "forms": [
+        "Y shì X ràng-de"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:16:26.848Z"
+    },
+    "you3": {
+      "status": "atom",
+      "eng": "\"Have\" and \"there is\" come before everything else you can say about a thing; zài and dé lean on it.",
+      "rus": "«Иметь» и «есть» стоят раньше всего, что можно сказать о вещи; на него опираются zài и dé."
+    },
+    "you4": {
+      "status": "edit",
+      "forms": [
+        "dì-èr-cì"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:16:20.944Z"
+    },
+    "yuan3": {
+      "status": "edit",
+      "forms": [
+        "yào zǒu hěn duō lù"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:14:40.085Z"
+    },
+    "zai4": {
+      "status": "atom",
+      "eng": "fundamental location word",
+      "rus": "fundamental location word",
+      "at": "2026-10-14T00:10:13.046Z"
+    },
+    "zao3": {
+      "status": "edit",
+      "forms": [
+        "tiān-de qián-miàn"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:11:34.236Z"
+    },
+    "zen3me": {
+      "status": "edit",
+      "forms": [
+        "yòng shénme fǎ"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:16:58.387Z"
+    },
+    "zhe3": {
+      "status": "approve",
+      "at": "2026-10-14T00:15:56.312Z"
+    },
+    "zhen1": {
+      "status": "edit",
+      "forms": [
+        "shuō-de hé yǒu-de yī-yàng"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:17:46.117Z"
+    },
+    "zhong1": {
+      "status": "edit",
+      "forms": [
+        "zuì lǐ-miàn"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:13:34.321Z"
+    },
+    "zi": {
+      "status": "atom",
+      "eng": "A light ending that makes a thing word (hái-zi, yàng-zi); it carries no meaning of its own.",
+      "rus": "Лёгкое окончание, которое делает слово названием вещи (hái-zi, yàng-zi); собственного значения у него нет."
+    },
+    "zui4": {
+      "status": "approve",
+      "at": "2026-10-14T00:18:08.339Z"
+    },
+    "zuo3": {
+      "status": "edit",
+      "forms": [
+        "xīn zài-de nà-biān"
+      ],
+      "verdict": "clumsy",
+      "at": "2026-10-14T00:15:06.375Z"
     }
   }
 }
