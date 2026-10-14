@@ -15,4 +15,8 @@ export default word("xiao3", {
     rus: "Маленький — один из самых базовых способов что-то описать.",
   },
   maps: "lili",
+  atom: {
+    eng: "Little is not just \"not big\" (bù dà).",
+    rus: "Маленький — это не просто «не большой» (bù dà).",
+  },
 });

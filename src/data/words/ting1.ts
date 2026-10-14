@@ -15,4 +15,9 @@ export default word("ting1", {
     rus: "Слышать, слушать. Одно из пяти чувств: без него ни музыки, ни звуков, ни «слушаться».",
   },
   maps: "kute",
+  paraphrase: {
+    forms: ["{{word:yong4}} {{word:er3duo}}"],
+    verdict: "clumsy",
+    note: "Saying that the ears do it is clumsy.",
+  },
 });

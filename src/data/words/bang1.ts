@@ -14,4 +14,10 @@ export default word("bang1", {
     eng: "Help: {{word:bang1}} {{word:wo3}}! Asking for help can't wait for a description.",
     rus: "Помогать: {{word:bang1}} {{word:wo3}}! Просьба о помощи не ждёт описаний.",
   },
+  paraphrase: {
+    forms: [
+      "{{word:he2}} {{word:ta1}} {{word:yi1}}-{{word:qi3}} {{word:zuo4}}, {{word:rang4}} {{word:ta1}} {{word:zuo4}}-{{word:hao3}}",
+    ],
+    verdict: "clumsy",
+  },
 });

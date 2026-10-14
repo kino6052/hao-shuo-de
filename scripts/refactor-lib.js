@@ -498,7 +498,9 @@ function editCategories(ws, fn) {
 
 // Rewrites the antonym and synonym maps: pairs by pairFn([a, b]) -> pair | null,
 // phrases by phraseFn(id, forms) -> [id, forms] | null; refs are rewritten later.
-function editRelations(ws, pairFn, phraseFn, why) {
+// The connections (two or more words each) follow groupFn(words) -> words | null, the pair
+// function unless given; a connection left with fewer than two words goes.
+function editRelations(ws, pairFn, phraseFn, why, groupFn = pairFn) {
   for (const name of ['antonyms', 'synonyms']) {
     const path = `${MAPS}${name}.ts`;
     const r = ws.data(path);
@@ -515,6 +517,16 @@ function editRelations(ws, pairFn, phraseFn, why) {
       else ws.note('relation', `${name}: dropped the phrase for ${id} (${why})`);
     }
     ws.setData(path, { pairs, phrases });
+  }
+  const cpath = `${MAPS}connections.ts`;
+  if (ws.has(cpath)) {
+    const next = [];
+    for (const c of ws.data(cpath)) {
+      const words = [...new Set(groupFn(c.words) ?? [])];
+      if (words.length >= 2) next.push({ ...c, words });
+      else ws.note('relation', `connections: dropped [${c.words.join(', ')}] (${why}) -- re-add by hand if it still holds`);
+    }
+    ws.setData(cpath, next);
   }
 }
 
@@ -1018,7 +1030,7 @@ const OPS = {
     let c;
     while ((c = cards(ws).find((x) => x.word === id))) removeCard(ws, c);
     editCategories(ws, (ids) => ids.filter((x) => x !== id));
-    editRelations(ws, (p) => (p.includes(id) ? null : p), (k, f) => (k === id ? null : [k, f]), `${id} was removed`);
+    editRelations(ws, (p) => (p.includes(id) ? null : p), (k, f) => (k === id ? null : [k, f]), `${id} was removed`, (words) => words.filter((x) => x !== id));
     editCoverageWords(ws, (words) => (words.includes(id) ? words.filter((x) => x !== id) : words));
     noteMentions(ws, id, w.term, `${id} was removed`);
     noteGrammar(ws, id, `${id} was removed`);
@@ -1048,13 +1060,50 @@ const OPS = {
     appendCard(ws, moduleFile(ws, op.to), data);
   },
 
-  // { op: "relation", kind: "antonyms" | "synonyms", add?: [a, b], remove?: [a, b] }
+  // { op: "relation", kind: "antonyms" | "synonyms", add?: [a, b], remove?: [a, b],
+  //   addPhrase?: [id, form], removePhrase?: [id, form] }
   relation(ws, op) {
     const path = `${MAPS}${op.kind}.ts`;
     const r = ws.data(path);
     if (op.remove) r.pairs = r.pairs.filter((p) => !(p.includes(op.remove[0]) && p.includes(op.remove[1])));
-    if (op.add) r.pairs.push(op.add);
+    if (op.add) {
+      for (const id of op.add) ws.word(id); // refuses an id that is not a word
+      if (!r.pairs.some((p) => p.includes(op.add[0]) && p.includes(op.add[1]))) r.pairs.push(op.add);
+    }
+    if (op.removePhrase) {
+      const [id, form] = op.removePhrase;
+      const left = (r.phrases[id] ?? []).filter((f) => f !== form);
+      if (left.length) r.phrases[id] = left;
+      else delete r.phrases[id];
+    }
+    if (op.addPhrase) {
+      const [id, form] = op.addPhrase;
+      ws.word(id);
+      for (const ref of wordRefIds(form)) ws.word(ref);
+      if (!(r.phrases[id] ?? []).includes(form)) r.phrases[id] = [...(r.phrases[id] ?? []), form];
+    }
     ws.setData(path, r);
+  },
+
+  // { op: "connect", words: [a, b, ...], why, proposed? } -- the author's link between two or more words
+  // (maps/connections.ts); { op: "connect", remove: [a, b, ...] } takes that link away
+  connect(ws, op) {
+    const path = `${MAPS}connections.ts`;
+    const list = ws.data(path);
+    const same = (x, y) => x.length === y.length && [...x].sort().join(' ') === [...y].sort().join(' ');
+    if (op.remove) {
+      const left = list.filter((c) => !same(c.words, op.remove));
+      if (left.length === list.length) throw new Error(`no connection of ${op.remove.join(', ')}`);
+      ws.setData(path, left);
+      return;
+    }
+    const words = [...new Set(op.words ?? [])];
+    if (words.length < 2) throw new Error('a connection needs two or more different words');
+    for (const id of words) ws.word(id); // refuses an id that is not a word
+    if (!String(op.why ?? '').trim()) throw new Error('a connection needs a why');
+    if (list.some((c) => same(c.words, words))) throw new Error(`${words.join(', ')} are already connected`);
+    list.push({ words, why: op.why.trim(), ...(op.proposed ? { proposed: true } : {}) });
+    ws.setData(path, list);
   },
 
   // { op: "composite", zh, set?: { fit, role, transparent, ... }, addForm?: [form, hanzi], create?: { rank, phase, py, en, ru } }

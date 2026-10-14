@@ -14,4 +14,9 @@ export default word("ju4", {
     eng: "Implement: the second half of {{word:gong1}}-{{word:ju4}}, tool.",
     rus: "Орудие: вторая половина {{word:gong1}}-{{word:ju4}}, инструмент.",
   },
+  paraphrase: {
+    forms: ["{{word:yong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
+    verdict: "clumsy",
+    note: "Too useful a word to drop (gōng-jù).",
+  },
 });

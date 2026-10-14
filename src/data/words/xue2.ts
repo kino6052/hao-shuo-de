@@ -14,4 +14,11 @@ export default word("xue2", {
     eng: "Learn. You could say you want to {{word:zhi1dao4}}, but learning is a whole activity: school, students, practice.",
     rus: "Учиться. Можно сказать, что хочешь {{word:zhi1dao4}}, но учёба — целое занятие: школа, ученики, практика.",
   },
+  paraphrase: {
+    forms: [
+      "{{word:cong2}} {{word:bie2}}-{{word:ren2}} {{word:na4}}-{{word:li3}} {{word:de2}}-{{word:dao4}} {{word:zhi1dao4}}",
+    ],
+    verdict: "clumsy",
+    note: "Xué and zhī-dào are circular: each is said with the other.",
+  },
 });

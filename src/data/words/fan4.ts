@@ -14,4 +14,11 @@ export default word("fan4", {
     eng: "Meals: {{word:chi1}} {{word:fan4}} is how Mandarin says eating, and cooking is {{word:zuo4}} {{word:fan4}}.",
     rus: "Еда: {{word:chi1}} {{word:fan4}} — так по-китайски говорят «есть», а готовить — {{word:zuo4}} {{word:fan4}}.",
   },
+  paraphrase: {
+    forms: [
+      "{{word:chi1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+      "{{word:yi1}}-{{word:ci4}} {{word:chi1}}-{{word:de}}",
+    ],
+    verdict: "fine",
+  },
 });

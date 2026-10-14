@@ -26,4 +26,11 @@ export default word("ji1", {
       },
     },
   },
+  paraphrase: {
+    forms: [
+      "{{word:ren2}} {{word:zuo4}}-{{word:de}}, {{word:kai1}} {{word:le}} {{word:jiu4}} {{word:dong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+    ],
+    verdict: "clumsy",
+    note: "Too useful to drop.",
+  },
 });

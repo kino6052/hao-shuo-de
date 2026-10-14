@@ -14,4 +14,5 @@ export default word("zhe3", {
     eng: "The one who: after a verb it names who does it, as in {{word:xue2}}-{{word:zhe3}}.",
     rus: "Тот, кто: после глагола называет того, кто это делает, как в {{word:xue2}}-{{word:zhe3}}.",
   },
+  paraphrase: { forms: ["{{word:zuo4}} X-{{word:de}} {{word:ren2}}"], verdict: "fine" },
 });

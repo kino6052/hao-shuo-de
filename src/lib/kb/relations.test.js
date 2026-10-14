@@ -26,6 +26,10 @@ const composites = [
 const maps = {
   antonyms: { pairs: [['dong1', 'xi1']], phrases: { fei1: [`${ref('bu4')} ${ref('fei1')}`], dui4: [`${ref('chi1')} ${ref('dui4')}`] } },
   synonyms: { pairs: [['chi1', 'fei1']], phrases: { ji1: [`${ref('fan4')}-${ref('de')} ${ref('ji1')}`] } },
+  connections: [
+    { words: ['chi1', 'fan4'], why: 'you eat a meal' },
+    { words: ['fei1', 'dong1', 'xi1'], why: 'words of going', proposed: true },
+  ],
 };
 const kb = createKb({ ...source, words, composites, maps });
 const report = kb.relations();
@@ -39,6 +43,14 @@ describe('stored relations are accepted', () => {
     expect(of('opposite-by-not').filter((r) => r.status === 'accepted').map((r) => r.a)).toEqual(['fei1']);
     expect(of('opposite-phrase').map((r) => r.a)).toEqual(['dui4']);
     expect(of('close-phrase').map((r) => r.a)).toEqual(['ji1']);
+  });
+
+  test('a connection the author states is a group; a proposed one waits', () => {
+    expect(of('connected').map((r) => [r.members, r.status])).toEqual([
+      [['chi1', 'fan4'], 'accepted'],
+      [['fei1', 'dong1', 'xi1'], 'proposed'],
+    ]);
+    expect(of('connected')[0].why).toBe('chī, fàn: you eat a meal');
   });
 
   test('a category is a group', () => {
@@ -81,6 +93,44 @@ describe('a rule proposes what the data implies', () => {
   test('a relation that is already stored is not proposed again', () => {
     // the stored pair dong1/xi1 stays one relation, accepted
     expect(of('opposite').filter((r) => r.a === 'dong1' || r.b === 'dong1')).toHaveLength(1);
+  });
+});
+
+describe('what the paraphrases name (the author asked for as many links between core words as they can capture)', () => {
+  test('defined-by: every word a paraphrase names, once, with the form', () => {
+    const by = of('defined-by').map((r) => [r.a, r.b]);
+    expect(by).toContainEqual(['fan4', 'bu4']);
+    expect(by).toContainEqual(['fan4', 'chi1']);
+    expect(by).toContainEqual(['fei1', 'dong1']);
+    expect(of('defined-by').every((r) => r.status === 'accepted' && r.source === 'paraphrase')).toBe(true);
+    expect(of('defined-by').find((r) => r.a === 'fan4' && r.b === 'chi1').why).toBe('fàn is said "bù chī", which names chī');
+  });
+
+  test('a compound spelled with a light syllable is learned whole: its parts are not counted, a measure word is', () => {
+    const light = createKb({
+      ...source,
+      words: {
+        ...words,
+        fan4: { ...words.fan4, paraphrase: { forms: [`${ref('dong1')}-{{light:xi1}} ${ref('ji1')}`, `${ref('chi1')}-{{light:ge4}}`], verdict: 'clumsy' } },
+      },
+      composites,
+      maps,
+    }).relations();
+    const names = light.relations.filter((r) => r.kind === 'defined-by' && r.a === 'fan4').map((r) => r.b);
+    expect(names).toEqual(['ji1', 'chi1', 'ge4']);
+  });
+
+  test('circular: two words that name each other', () => {
+    const two = createKb({
+      ...source,
+      words: { ...words, chi1: { ...words.chi1, paraphrase: { forms: [ref('fan4')], verdict: 'fine' } }, fan4: { ...words.fan4, paraphrase: { forms: [ref('chi1')], verdict: 'fine' } } },
+      composites,
+      maps,
+    }).relations();
+    const circ = two.relations.filter((r) => r.kind === 'circular');
+    expect(circ).toHaveLength(1);
+    expect([circ[0].a, circ[0].b].sort()).toEqual(['chi1', 'fan4']);
+    expect(of('circular')).toEqual([]);
   });
 });
 

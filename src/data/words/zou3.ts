@@ -14,4 +14,12 @@ export default word("zou3", {
     eng: "Walking and leaving: {{word:qu4}} says where to, {{word:zou3}} says you're off.",
     rus: "Ходьба и уход: {{word:qu4}} говорит куда, {{word:zou3}} — что вы уходите.",
   },
+  paraphrase: {
+    forms: [
+      "{{word:yong4}} {{word:jiao3}} {{word:qu4}}",
+      "{{word:bu4}} {{word:zai4}} {{word:zhe4}}-{{word:li3}} {{word:le}}",
+    ],
+    verdict: "clumsy",
+    note: "Connect it to qù, fēi, tōng, dòng, dào and similar words; how to express that is still open.",
+  },
 });

@@ -14,4 +14,9 @@ export default word("ru2guo3", {
     eng: "If: without it, you can't say what would happen.",
     rus: "Если: без него не сказать, что было бы.",
   },
+  paraphrase: {
+    forms: ["X {{word:le}} {{word:jiu4}} Y"],
+    verdict: "clumsy",
+    note: "It shows the pattern (\"X le jiù Y\") but not the \"not yet, maybe\".",
+  },
 });

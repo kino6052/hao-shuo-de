@@ -15,4 +15,8 @@ export default word("mo1", {
     rus: "Трогать, щупать. У осязания нет другого слова.",
   },
   maps: "pilin",
+  atom: {
+    eng: "Touch is a basic way of perceiving that has nothing to do with the other senses.",
+    rus: "Осязание — основной способ восприятия, не связанный с остальными чувствами.",
+  },
 });

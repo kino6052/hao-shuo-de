@@ -15,4 +15,8 @@ export default word("de2", {
     rus: "Получать. Через него описывают выигрыш, заработок и болезнь.",
   },
   maps: "kama",
+  paraphrase: {
+    forms: ["{{word:cong2}} {{word:mei2}}-{{word:you3}} {{word:dao4}} {{word:you3}}"],
+    verdict: "clumsy",
+  },
 });

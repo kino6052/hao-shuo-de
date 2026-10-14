@@ -93,7 +93,7 @@ export const TOOLS = [
     inputSchema: {
       type: 'object',
       properties: {
-        kind: { type: 'string', description: 'A kind (opposite, close, same-form, kind-of, agent, category, opposite-phrase, close-phrase, opposite-by-not, close-by-paraphrase); leave out for the counts.' },
+        kind: { type: 'string', description: 'A kind (opposite, close, same-form, kind-of, agent, category, opposite-phrase, close-phrase, opposite-by-not, close-by-paraphrase, defined-by, circular, connected); leave out for the counts.' },
         status: { type: 'string', enum: ['accepted', 'proposed'], description: 'Only the accepted or only the proposed ones.' },
         limit: { type: 'integer', description: 'How many to list (default 8).' },
       },

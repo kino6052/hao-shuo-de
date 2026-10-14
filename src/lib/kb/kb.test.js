@@ -84,6 +84,29 @@ describe('the word card', () => {
     expect(renderCard(marked.word('fàn'))).toContain('  Paraphrase (clumsy): chī de — too long');
   });
 
+  test('a word with a paraphrase is potentially removable, and says how; a connection the author states is on both words', () => {
+    const w = source.words;
+    const plain = createKb({
+      ...source,
+      words: {
+        ...w,
+        chi1: { ...w.chi1, atom: { eng: 'primitive', rus: 'первичное' } },
+        fan4: { ...w.fan4, paraphrase: { forms: ['{{word:chi1}} {{word:de}}'], verdict: 'fine' } },
+        fei1: { ...w.fei1, paraphrase: { forms: ['{{word:chi1}} {{word:de}}'], verdict: 'clumsy' } },
+      },
+      maps: { ...source.maps, connections: [{ words: ['chi1', 'fan4', 'fei1'], why: 'you eat a meal', proposed: true }] },
+    });
+    expect(plain.word('chī').removable).toBeNull();
+    expect(plain.word('fàn').removable).toBe('fine');
+    expect(plain.word('fēi').removable).toBe('clumsy');
+    expect(renderCard(plain.word('chī'))).not.toContain('Potentially removable');
+    expect(renderCard(plain.word('fàn'))).toContain('  Potentially removable: its paraphrase is fine.');
+    expect(renderCard(plain.word('fēi'))).toContain('  Potentially removable: only if its clumsy paraphrase is accepted.');
+    expect(plain.word('chī').connections).toEqual([{ with: [expect.objectContaining({ id: 'fan4' }), expect.objectContaining({ id: 'fei1' })], why: 'you eat a meal', proposed: true }]);
+    expect(renderCard(plain.word('fàn'))).toContain('  Connected (proposed, waiting for the author) to chī 吃, fēi 飞: you eat a meal');
+    expect(kb.word('chī').connections).toEqual([]);
+  });
+
   test('a word that lists a class besides its part of speech shows it, and whether it waits for the author', () => {
     const w = source.words;
     const listed = createKb({

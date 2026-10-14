@@ -14,4 +14,5 @@ export default word("zao3", {
     eng: "Early, and the morning ({{word:zao3}}-{{light:shang4}}): the other end of {{word:wan3}}.",
     rus: "Ранний и утро ({{word:zao3}}-{{light:shang4}}): другой конец от {{word:wan3}}.",
   },
+  paraphrase: { forms: ["{{word:tian1}}-{{word:de}} {{word:qian2}}-{{word:mian4}}"], verdict: "clumsy" },
 });

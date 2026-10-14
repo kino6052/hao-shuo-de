@@ -10,4 +10,5 @@ export default word("si4", {
     eng: "Four. Numbers can't be described with other words.",
     rus: "Четыре. Числа не описать другими словами.",
   },
+  paraphrase: { forms: ["{{word:liang3}} {{word:he2}} {{word:liang3}}"], verdict: "clumsy" },
 });

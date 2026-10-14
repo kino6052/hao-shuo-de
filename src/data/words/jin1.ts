@@ -27,4 +27,10 @@ export default word("jin1", {
       },
     },
   },
+  paraphrase: {
+    forms: [
+      "{{word:mai3}} {{word:dong1}}-{{light:xi1}} {{word:yao4}} {{word:gei3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+    ],
+    verdict: "clumsy",
+  },
 });

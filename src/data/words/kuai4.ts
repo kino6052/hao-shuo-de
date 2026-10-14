@@ -14,4 +14,5 @@ export default word("kuai4", {
     eng: "Fast, and before a verb, \"quickly\": {{word:kuai4}} {{word:lai2}}! Slow is {{word:bu4}} {{word:kuai4}}.",
     rus: "Быстрый, а перед глаголом — «быстро»: {{word:kuai4}} {{word:lai2}}! Медленный — {{word:bu4}} {{word:kuai4}}.",
   },
+  paraphrase: { forms: ["{{word:hen3}} {{word:zao3}} {{word:dao4}}"], verdict: "clumsy" },
 });

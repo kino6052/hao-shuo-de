@@ -26,4 +26,8 @@ export default word("dong1", {
       },
     },
   },
+  paraphrase: {
+    forms: ["{{word:ri4}} {{word:chu1}}-{{word:lai2}}-{{word:de}} {{word:na4}}-{{word:bian1}}"],
+    verdict: "clumsy",
+  },
 });

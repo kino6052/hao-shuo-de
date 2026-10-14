@@ -14,4 +14,10 @@ export default word("hui2", {
     eng: "Go back: {{word:hui2}} {{word:jia1}}, go home. Returning has no other word.",
     rus: "Возвращаться: {{word:hui2}} {{word:jia1}} — пойти домой. У возвращения нет другого слова.",
   },
+  paraphrase: {
+    forms: [
+      "{{word:dao4}} {{word:yi3}}-{{word:qian2}} {{word:zai4}}-{{word:guo4}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
+    ],
+    verdict: "clumsy",
+  },
 });

@@ -14,4 +14,10 @@ export default word("tong1", {
     eng: "Go through, lead to: {{word:lu4}} {{word:tong1}}-{{word:dao4}} {{word:jia1}}. {{word:qu4}}-{{word:dao4}} covers part of it.",
     rus: "Проходить, вести куда-то: {{word:lu4}} {{word:tong1}}-{{word:dao4}} {{word:jia1}}. {{word:qu4}}-{{word:dao4}} покрывает лишь часть.",
   },
+  paraphrase: {
+    forms: [
+      "{{word:cong2}} {{word:zhe4}}-{{word:bian1}} {{word:dao4}} {{word:na4}}-{{word:bian1}} {{word:dou1}} {{word:neng2}} {{word:zou3}}",
+    ],
+    verdict: "clumsy",
+  },
 });

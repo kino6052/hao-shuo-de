@@ -39,6 +39,7 @@ export const categories = [
 export const maps = {
   antonyms: { pairs: [['dong1', 'xi1']], phrases: { dui4: ['{{word:chi1}} {{word:dui4}}'] } },
   synonyms: { pairs: [], phrases: {} },
+  connections: [],
 };
 
 const c = (rank, zh, py, en, hsd, extra = {}) => ({ rank, zh, py, en, hsd, tts: zh, ...extra });

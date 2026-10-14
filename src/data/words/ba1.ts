@@ -10,4 +10,5 @@ export default word("ba1", {
     eng: "Eight. Numbers can't be described with other words.",
     rus: "Восемь. Числа не описать другими словами.",
   },
+  paraphrase: { forms: ["{{word:si4}} {{word:he2}} {{word:si4}}"], verdict: "clumsy" },
 });

@@ -15,4 +15,8 @@ export default word("ying4", {
     rus: "Твёрдый, как камень: через него описывают камень, металл и стекло.",
   },
   maps: "kiwen",
+  paraphrase: {
+    forms: ["{{word:yong4}} {{word:shou3}} {{word:mo1}}, {{word:ta1}} {{word:bu4}} {{word:bian4}}"],
+    verdict: "clumsy",
+  },
 });

@@ -15,4 +15,5 @@ export default word("huai4", {
     rus: "Плохой, сломанный. {{word:bu4}} {{word:hao3}} — лишь «не хороший», а это значит, что что-то испортилось.",
   },
   maps: "ike, pakala",
+  paraphrase: { forms: ["{{word:bu4}} {{word:hao3}}"], verdict: "fine" },
 });

@@ -10,4 +10,5 @@ export default word("wu3", {
     eng: "Five. Numbers can't be described with other words.",
     rus: "Пять. Числа не описать другими словами.",
   },
+  paraphrase: { forms: ["{{word:si4}} {{word:he2}} {{word:yi1}}"], verdict: "clumsy" },
 });

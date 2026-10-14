@@ -15,4 +15,5 @@ export default word("liang3", {
     rus: "Два чего-то: {{word:liang3}}-ge {{word:ren2}}. Перед {{word:ge4}} в китайском говорят его, а не {{word:er4}}.",
   },
   maps: "tu",
+  paraphrase: { forms: ["{{word:yi1}} {{word:he2}} {{word:yi1}}"], verdict: "clumsy" },
 });

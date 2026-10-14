@@ -10,4 +10,5 @@ export default word("jiu3", {
     eng: "Nine. Numbers can't be described with other words.",
     rus: "Девять. Числа не описать другими словами.",
   },
+  paraphrase: { forms: ["{{word:ba1}} {{word:he2}} {{word:yi1}}"], verdict: "clumsy" },
 });

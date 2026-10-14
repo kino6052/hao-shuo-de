@@ -10,4 +10,11 @@ export default word("guo2", {
     eng: "A country. Nations, travel, and the news all need it.",
     rus: "Страна. Без неё не поговорить о народах, поездках и новостях.",
   },
+  paraphrase: {
+    forms: [
+      "{{word:hen3}} {{word:duo1}} {{word:ren2}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}-{{word:de}} {{word:da4}} {{word:di4}}-{{light:fang1}}",
+    ],
+    verdict: "clumsy",
+    note: "Needs disambiguation: many places could be called \"a big place where many people are together\".",
+  },
 });

@@ -14,4 +14,10 @@ export default word("shu1", {
     eng: "Books and reading ({{word:kan4}} {{word:shu1}}): before it, a book was \"the written thing\".",
     rus: "Книги и чтение ({{word:kan4}} {{word:shu1}}): раньше книга была «написанной вещью».",
   },
+  paraphrase: {
+    forms: [
+      "{{word:xie3}} {{word:le}} {{word:hen3}} {{word:duo1}} {{word:zi4}}, {{word:kan4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+    ],
+    verdict: "clumsy",
+  },
 });

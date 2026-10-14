@@ -11,4 +11,10 @@ export default word("ci2", {
     rus: "Слово. Без него нельзя говорить о самом языке: «как называется…?»",
   },
   maps: "",
+  paraphrase: {
+    forms: [
+      "{{word:hua4}}-{{word:li3}} {{word:zui4}} {{word:xiao3}}-{{word:de}} {{word:bu4}}-{{light:fen1}}",
+    ],
+    verdict: "clumsy",
+  },
 });

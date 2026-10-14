@@ -15,4 +15,10 @@ export default word("zhao3", {
     rus: "Искать, найти ({{word:zhao3}}-{{word:dao4}}). Искать что-то приходится каждый день.",
   },
   maps: "alasa",
+  paraphrase: {
+    forms: [
+      "{{word:xiang3}} {{word:kan4}}-{{word:jian4}} {{word:ta1}}, {{word:kan4}} {{word:lai2}} {{word:kan4}} {{word:qu4}}",
+    ],
+    verdict: "clumsy",
+  },
 });

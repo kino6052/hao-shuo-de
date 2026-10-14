@@ -44,12 +44,13 @@ describe('the paraphrase op', () => {
 
   test('a form that names itself, an unknown word or plain pinyin stops the run, with the op named', () => {
     const w = fresh();
+    const before = JSON.stringify(w.word(a));
     expect(() => applyOps(w, [{ op: 'paraphrase', id: a, forms: [ref(a, b)] }])).toThrow(/op 1 \(paraphrase .*uses the word itself/);
     expect(() => applyOps(w, [{ op: 'paraphrase', id: a, forms: [ref('nope9')] }])).toThrow(/not a word/);
     expect(() => applyOps(w, [{ op: 'paraphrase', id: a, forms: [`${ref(b)} chī`] }])).toThrow(/plain pinyin/);
     expect(() => applyOps(w, [{ op: 'atom', id: a, eng: '', rus: 'x' }])).toThrow(/no eng reason/);
-    // nothing was written to the word
-    expect(w.word(a).paraphrase).toBeUndefined();
+    // nothing was written to the word (the review has given every word a mark, so compare with what it had)
+    expect(JSON.stringify(w.word(a))).toBe(before);
   });
 
   test('a later op sees an earlier one: the second word may use the first', () => {
@@ -166,5 +167,58 @@ describe('rename (K20)', () => {
     applyOps(w, [{ op: 'rename', id: own, to: 'zzz9' }]);
     expect(w.get(w.wordPath('zzz9'))).toContain('{{word:zzz9}}');
     expect(w.get(w.wordPath('zzz9'))).not.toContain(`{{word:${own}}}`);
+  });
+});
+
+describe('the connect op and the phrases of the relation op', () => {
+  const connections = (w) => w.data('src/data/maps/connections.ts');
+  const has = (w, ids) => connections(w).some((x) => [...x.words].sort().join(' ') === [...ids].sort().join(' '));
+
+  test('is a known op', () => {
+    expect(OP_NAMES).toContain('connect');
+  });
+
+  test('adds a connection of two or more words with its why, and a proposed one says so', () => {
+    const w = fresh();
+    applyOps(w, [
+      { op: 'connect', words: [a, b], why: ' they go together ' },
+      { op: 'connect', words: [a, b, c], why: 'a family', proposed: true },
+    ]);
+    expect(connections(w).find((x) => x.words.length === 2 && x.words.includes(a) && x.words.includes(b) && x.why === 'they go together')).toEqual({ words: [a, b], why: 'they go together' });
+    expect(connections(w).find((x) => x.words.length === 3 && x.words.includes(c) && x.why === 'a family')).toEqual({ words: [a, b, c], why: 'a family', proposed: true });
+  });
+
+  test('one word, an unknown word, no why or the same connection twice stops the run', () => {
+    const w = fresh();
+    expect(() => applyOps(w, [{ op: 'connect', words: [a], why: 'x' }])).toThrow(/two or more different words/);
+    expect(() => applyOps(w, [{ op: 'connect', words: [a, 'nope9'], why: 'x' }])).toThrow();
+    expect(() => applyOps(w, [{ op: 'connect', words: [a, b], why: ' ' }])).toThrow(/needs a why/);
+    applyOps(w, [{ op: 'connect', words: [a, b], why: 'x' }]);
+    expect(() => applyOps(w, [{ op: 'connect', words: [b, a], why: 'y' }])).toThrow(/already connected/);
+  });
+
+  test('takes a connection away, and says when there is none', () => {
+    const w = fresh();
+    applyOps(w, [{ op: 'connect', words: [a, b], why: 'x' }]);
+    applyOps(w, [{ op: 'connect', remove: [b, a] }]);
+    expect(has(w, [a, b])).toBe(false);
+    expect(() => applyOps(w, [{ op: 'connect', remove: [a, b] }])).toThrow(/no connection/);
+  });
+
+  test('a rename follows the word into its connections', () => {
+    const w = fresh();
+    applyOps(w, [{ op: 'connect', words: [a, b, c], why: 'x' }, { op: 'rename', id: b, to: 'zz9' }]);
+    expect(has(w, [a, 'zz9', c])).toBe(true);
+    expect(has(w, [a, b, c])).toBe(false);
+  });
+
+  test('a phrase is added to and taken from the synonyms of a word, once', () => {
+    const w = fresh();
+    const form = ref(b);
+    applyOps(w, [{ op: 'relation', kind: 'synonyms', addPhrase: [a, form] }, { op: 'relation', kind: 'synonyms', addPhrase: [a, form] }]);
+    expect(w.data('src/data/maps/synonyms.ts').phrases[a].filter((f) => f === form)).toHaveLength(1);
+    applyOps(w, [{ op: 'relation', kind: 'synonyms', removePhrase: [a, form] }]);
+    expect(w.data('src/data/maps/synonyms.ts').phrases[a]?.includes(form) ?? false).toBe(false);
+    expect(() => applyOps(w, [{ op: 'relation', kind: 'synonyms', addPhrase: [a, ref('nope9')] }])).toThrow();
   });
 });

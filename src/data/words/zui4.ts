@@ -14,4 +14,5 @@ export default word("zui4", {
     eng: "Most: {{word:zui4}} {{word:da4}}, the biggest. {{word:bi3}} {{word:bie2}}-{{word:de}} {{word:dou1}} … would work, but it's long.",
     rus: "Самый: {{word:zui4}} {{word:da4}} — самый большой. Подошло бы {{word:bi3}} {{word:bie2}}-{{word:de}} {{word:dou1}} …, но это длинно.",
   },
+  paraphrase: { forms: ["{{word:bi3}} {{word:bie2}}-{{word:de}} {{word:dou1}}"], verdict: "fine" },
 });

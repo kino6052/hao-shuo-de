@@ -14,4 +14,5 @@ export default word("yi3", {
     eng: "Can and may ({{word:ke3}}-{{word:yi3}}), before and after ({{word:yi3}}-{{word:qian2}}, {{word:yi3}}-{{word:hou4}}) are built from it.",
     rus: "Из него строятся «можно» ({{word:ke3}}-{{word:yi3}}), «раньше» и «потом» ({{word:yi3}}-{{word:qian2}}, {{word:yi3}}-{{word:hou4}}).",
   },
+  paraphrase: { forms: ["{{word:yong4}}"], verdict: "clumsy" },
 });

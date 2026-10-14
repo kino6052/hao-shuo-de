@@ -36,4 +36,11 @@ export default word("qi4", {
       },
     },
   },
+  paraphrase: {
+    forms: [
+      "{{word:kan4}}-{{word:bu4}}-{{word:jian4}}, {{word:ren2}} {{word:bu4}} {{word:neng2}} {{word:mei2}}-{{word:you3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+    ],
+    verdict: "clumsy",
+    note: "Very clumsy and ambiguous.",
+  },
 });

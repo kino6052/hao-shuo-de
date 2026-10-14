@@ -11,4 +11,5 @@ export default word("wai4", {
     rus: "Снаружи, вне: {{word:wai4}}-{{word:mian4}} — снаружи. Пара к {{word:li3}}.",
   },
   maps: "weka",
+  paraphrase: { forms: ["{{word:bu4}} {{word:zai4}} {{word:li3}}-{{word:mian4}}"], verdict: "clumsy" },
 });

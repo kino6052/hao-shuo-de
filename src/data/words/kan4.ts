@@ -15,4 +15,9 @@ export default word("kan4", {
     rus: "Видеть, смотреть, читать. Одно из пяти чувств и один из самых нужных глаголов.",
   },
   maps: "lukin",
+  paraphrase: {
+    forms: ["{{word:yong4}} {{word:yan3jing}}"],
+    verdict: "clumsy",
+    note: "Saying that the eyes do it is too clumsy.",
+  },
 });

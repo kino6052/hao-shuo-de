@@ -15,4 +15,5 @@ export default word("wan2", {
     rus: "Закончить: {{word:chi1}}-{{word:wan2}} — доесть. Без него ничего не заканчивается.",
   },
   maps: "pini",
+  paraphrase: { forms: ["{{word:mei2}}-{{word:you3}} {{word:le}}"], verdict: "clumsy" },
 });

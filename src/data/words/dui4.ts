@@ -15,4 +15,11 @@ export default word("dui4", {
     rus: "К, для, по отношению к: {{word:dui4}} {{word:wo3}} {{word:hen3}} {{word:hao3}} — добр ко мне. А ещё «правильно» ({{word:bu4}} {{word:dui4}} — неверно).",
   },
   maps: "tawa",
+  paraphrase: {
+    forms: [
+      "{{word:zhen1}}",
+      "{{word:wo3}}-{{word:de}} {{word:qian2}}-{{word:mian4}} {{word:shi4}} {{word:ta1}}",
+    ],
+    verdict: "clumsy",
+  },
 });

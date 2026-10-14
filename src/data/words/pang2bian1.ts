@@ -15,4 +15,8 @@ export default word("pang2bian1", {
     rus: "Рядом, сбоку. Базовое положение, для которого нет другого слова.",
   },
   maps: "poka",
+  paraphrase: {
+    forms: ["{{word:zuo3}}-{{word:bian1}} {{word:he2}} {{word:you4}}-{{word:bian1}}"],
+    verdict: "fine",
+  },
 });

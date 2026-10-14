@@ -46,4 +46,5 @@ export default word("wei4", {
       compounds: ["wei4 sheng1", "wei4 sheng1 jian1"],
     },
   },
+  paraphrase: { forms: ["{{word:gei3}}", "{{word:dui4}}"], verdict: "clumsy" },
 });

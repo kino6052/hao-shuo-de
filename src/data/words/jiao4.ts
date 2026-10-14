@@ -27,4 +27,8 @@ export default word("jiao4", {
       },
     },
   },
+  paraphrase: {
+    forms: ["{{word:yong4}} {{word:kou3}} {{word:rang4}} {{word:ta1}} {{word:lai2}}"],
+    verdict: "clumsy",
+  },
 });

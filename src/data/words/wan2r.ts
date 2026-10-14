@@ -15,4 +15,10 @@ export default word("wan2r", {
     rus: "Играть, развлекаться. Через него описывают игры, игрушки и отдых.",
   },
   maps: "musi",
+  paraphrase: {
+    forms: [
+      "{{word:bu4}} {{word:zuo4}} {{word:gong1}}, {{word:zhi3}} {{word:yao4}} {{word:kai1}}-{{word:xin1}}",
+    ],
+    verdict: "clumsy",
+  },
 });

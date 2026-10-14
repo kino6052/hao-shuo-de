@@ -14,4 +14,9 @@ export default word("guan1xi", {
     eng: "A connection between people or things, and {{word:mei2}}-{{word:you3}} {{word:guan1xi}}, \"never mind\".",
     rus: "Связь между людьми или вещами, а также {{word:mei2}}-{{word:you3}} {{word:guan1xi}} — «ничего страшного».",
   },
+  paraphrase: {
+    forms: ["X {{word:he2}} Y {{light:zen3me}} {{light:bi3}}"],
+    verdict: "clumsy",
+    note: "Too fundamental to drop.",
+  },
 });

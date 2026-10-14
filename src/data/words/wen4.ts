@@ -11,4 +11,10 @@ export default word("wen4", {
     rus: "Спрашивать. Без него не рассказать о вопросах: «он спросил меня».",
   },
   maps: "",
+  paraphrase: {
+    forms: [
+      "{{word:shuo1}} {{word:wo3}} {{word:bu4}} {{word:zhi1dao4}}-{{word:de}}, {{word:rang4}} {{word:ta1}} {{word:shuo1}}",
+    ],
+    verdict: "clumsy",
+  },
 });

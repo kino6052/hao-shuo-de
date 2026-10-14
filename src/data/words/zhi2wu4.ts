@@ -15,4 +15,11 @@ export default word("zhi2wu4", {
     rus: "Растения — один из трёх видов живого, рядом с людьми и животными. Через него описывают фрукты.",
   },
   maps: "kasi",
+  paraphrase: {
+    forms: [
+      "{{word:huo2}}-{{word:de}}, {{word:bu4}} {{word:dong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+    ],
+    verdict: "clumsy",
+    note: "A very important word.",
+  },
 });

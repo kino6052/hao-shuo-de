@@ -273,6 +273,7 @@ export function renderAtoms(r, { limit = 15 } = {}) {
   const terms = (id) => r.terms[id] ?? id;
   out.push(`Atoms: ${c.words} words, the smallest set that says the rest has ${r.smallest}.`);
   out.push(`  ${c.atoms} true atoms (${c.marked} marked, ${c.clumsy} clumsy), ${c.swappable} swappable, ${c.secondary} secondary, ${c.unreviewed} not reviewed yet.`);
+  if (c.paraphrased + c.clumsy) out.push(`  Potentially removable: ${c.paraphrased + c.clumsy} words have a paraphrase (${c.paraphrased} fine, ${c.clumsy} clumsy). Nothing is removed by the audit; the clumsy ones count as atoms until their paraphrase is accepted.`);
   if (c.unchecked) out.push(`  ${c.unchecked} word(s) not checked: their question did not finish in time (ask again with a longer time limit).`);
   if (c.unreviewed) out.push(`  Words with neither a paraphrase nor an atom mark count in the set but are not called atoms: review them first.`);
 

@@ -14,4 +14,9 @@ export default word("suan4", {
     eng: "Calculate, count: the computer is {{word:suan4}}-{{word:de}} {{word:gong1}}-{{word:ju4}}, and sums use it.",
     rus: "Считать, вычислять: компьютер — {{word:suan4}}-{{word:de}} {{word:gong1}}-{{word:ju4}}, и примеры решают с ним.",
   },
+  paraphrase: {
+    forms: ["{{word:yong4}} {{word:shu4}} {{word:kan4}} {{word:you3}} {{word:duo1}}-{{word:shao3}}"],
+    verdict: "clumsy",
+    note: "A very useful word.",
+  },
 });

@@ -14,4 +14,5 @@ export default word("wu4", {
     eng: "Creature, thing: {{word:dong4}}-{{word:wu4}}, an animal, is a creature that moves.",
     rus: "Существо, вещь: {{word:dong4}}-{{word:wu4}}, животное, — существо, которое движется.",
   },
+  paraphrase: { forms: ["{{word:dong1}}-{{light:xi1}}"], verdict: "fine" },
 });

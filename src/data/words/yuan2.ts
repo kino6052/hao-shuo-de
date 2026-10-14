@@ -37,4 +37,5 @@ export default word("yuan2", {
       },
     },
   },
+  paraphrase: { forms: ["{{word:he2}} {{word:qiu2}} {{word:yi1}}-{{word:yang4}}"], verdict: "fine" },
 });

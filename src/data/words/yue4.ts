@@ -15,4 +15,11 @@ export default word("yue4", {
     rus: "Луна, а с ней и ночь: {{word:yue4}}-{{word:de}} {{word:shi2}}-{{word:jian1}} — «ночью».",
   },
   maps: "mun",
+  paraphrase: {
+    forms: [
+      "{{word:wan3}}-{{light:shang4}} {{word:tian1}}-{{word:shang4}} {{word:ming2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+    ],
+    verdict: "clumsy",
+    note: "Simplifies a lot of things (including the calendar, like rì).",
+  },
 });

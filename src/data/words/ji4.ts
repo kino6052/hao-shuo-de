@@ -14,4 +14,5 @@ export default word("ji4", {
     eng: "Remember: {{word:ji4}}-{{light:de2}} says you still have it in mind; {{word:bu4}} {{word:ji4}}-{{light:de2}} says you have lost it.",
     rus: "Помнить: {{word:ji4}}-{{light:de2}} говорит, что вы это ещё держите в памяти; {{word:bu4}} {{word:ji4}}-{{light:de2}} — что вы это потеряли.",
   },
+  paraphrase: { forms: ["{{word:hai2}} {{word:zai4}} {{word:xin1}}-{{word:li3}}"], verdict: "clumsy" },
 });

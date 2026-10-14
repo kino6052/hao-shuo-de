@@ -14,4 +14,10 @@ export default word("che1", {
     eng: "Cars and anything on wheels: buses, trains, taxis, and bikes are all described from it.",
     rus: "Машины и всё на колёсах: через него описывают автобусы, поезда, такси и велосипеды.",
   },
+  paraphrase: {
+    forms: [
+      "{{word:ren2}} {{word:zai4}} {{word:li3}}-{{word:mian4}}, {{word:zai4}} {{word:lu4}}-{{word:shang4}} {{word:zou3}}-{{word:de}} {{word:ji1}}",
+    ],
+    verdict: "clumsy",
+  },
 });

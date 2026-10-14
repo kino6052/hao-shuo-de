@@ -14,4 +14,8 @@ export default word("ma1ma", {
     eng: "Mom, and with {{word:ba4ba}}, the parents ({{word:ba4ba}}-{{word:ma1ma}}).",
     rus: "Мама, а с {{word:ba4ba}} — родители ({{word:ba4ba}}-{{word:ma1ma}}).",
   },
+  paraphrase: {
+    forms: ["{{word:sheng1}} {{word:wo3}}-{{word:de}} {{word:nv3}}-{{word:ren2}}"],
+    verdict: "clumsy",
+  },
 });

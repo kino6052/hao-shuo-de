@@ -38,4 +38,8 @@ export default word("di4", {
       ],
     },
   },
+  paraphrase: {
+    forms: ["{{word:jiao3}} {{word:xia4}}-{{word:mian4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
+    verdict: "clumsy",
+  },
 });

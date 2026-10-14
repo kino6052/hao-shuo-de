@@ -14,4 +14,8 @@ export default word("he1", {
     eng: "Drink: water, tea, anything you drink. {{word:chi1}} doesn't cover it in Mandarin.",
     rus: "Пить: воду, чай, что угодно. {{word:chi1}} в китайском этого не покрывает.",
   },
+  paraphrase: {
+    forms: ["{{word:rang4}} {{word:shui3}} {{word:jin4}} {{word:kou3}}-{{word:li3}}"],
+    verdict: "clumsy",
+  },
 });

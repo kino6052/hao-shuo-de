@@ -106,6 +106,11 @@ export function wordCard({ source, facts, index, meaning }, id, { limit = 15 } =
     };
   };
 
+  // the links the author states between this word and others (maps/connections.ts)
+  const connections = (source.maps?.connections ?? [])
+    .filter((c) => c.words.includes(id))
+    .map((c) => ({ with: c.words.filter((x) => x !== id).map(ref), why: c.why, proposed: Boolean(c.proposed) }));
+
   // where the word is taught: its card, and a card per catch-all sense
   const taught = facts.lines
     .filter((l) => l.startsWith(`card(${id},`) || l.startsWith(`card_sense(${id},`))
@@ -127,6 +132,8 @@ export function wordCard({ source, facts, index, meaning }, id, { limit = 15 } =
     // how the word is said with other words, or why it cannot be (kb atoms has the sort it comes to)
     paraphrase: w.paraphrase ? { verdict: w.paraphrase.verdict, forms: w.paraphrase.forms.map(pin), note: w.paraphrase.note ?? null } : null,
     atom: w.atom ? { eng: w.atom.eng, rus: w.atom.rus } : null,
+    // a word that has a paraphrase could in principle go; nothing is removed by saying so (fine: it can be said; clumsy: only if the clumsy way is accepted)
+    removable: w.paraphrase ? (w.paraphrase.verdict === 'clumsy' ? 'clumsy' : 'fine') : null,
     category: index.categoryPath.get(id) ?? [],
     senses: Object.entries(w.senses ?? {}).map(([key, s]) => ({
       key,
@@ -139,6 +146,7 @@ export function wordCard({ source, facts, index, meaning }, id, { limit = 15 } =
     taught,
     antonyms: rel('antonym'),
     synonyms: rel('synonym'),
+    connections,
     coverage: index.items
       .filter((it) => it.words.includes(id))
       .map((it) => ({ id: it.id, eng: it.eng, taught: it.taught ?? it.lesson, others: it.words.filter((x) => x !== id).map(term), forms: it.forms.map(pin) })),
@@ -167,12 +175,14 @@ export function renderCard(c) {
   for (const x of c.extraClasses) out.push(`  Also ${x.cls.replace(/_/g, ' ')}${x.proposed ? ' (proposed, waiting for the author)' : ''}: ${x.why}  e.g. ${x.example}`);
   if (c.atom) out.push(`  Atom: ${c.atom.eng}`);
   if (c.paraphrase) out.push(`  Paraphrase (${c.paraphrase.verdict}): ${c.paraphrase.forms.join(' / ')}${c.paraphrase.note ? ` — ${c.paraphrase.note}` : ''}`);
+  if (c.removable) out.push(c.removable === 'fine' ? '  Potentially removable: its paraphrase is fine.' : '  Potentially removable: only if its clumsy paraphrase is accepted.');
   if (c.category.length) out.push(`  Category: ${c.category.join(' › ')}`);
   for (const s of c.senses) out.push(`  Sense ${s.key}: ${s.hanzi} ${s.eng}${s.alone ? ' (also on its own)' : ''} — in ${s.compounds.join(', ')}`);
   out.push(`  Taught: ${c.taught.length ? c.taught.map((t) => `${t.sense ? `${t.sense}: ` : ''}${t.lesson}/${t.module}`).join('; ') : 'no card'}`);
   const rel = (name, r) => (r.words.length || r.phrases.length) && out.push(`  ${name}: ${[...r.words.map((x) => `${x.term} ${x.hanzi}`), ...r.phrases].join(', ')}`);
   rel('Opposite', c.antonyms);
   rel('Same as', c.synonyms);
+  for (const x of c.connections) out.push(`  Connected${x.proposed ? ' (proposed, waiting for the author)' : ''} to ${x.with.map((y) => `${y.term} ${y.hanzi}`).join(', ')}: ${x.why}`);
   if (c.meaning) {
     const m = c.meaning;
     const step = `${m.depth} step${m.depth === 1 ? '' : 's'}`;

@@ -15,4 +15,9 @@ export default word("gei3", {
     rus: "Давать, а также «кому», «для»: {{word:gei3}} {{word:wo3}}. Без него ничего не передать.",
   },
   maps: "pana, tawa",
+  paraphrase: {
+    forms: ["{{word:rang4}} {{word:ta1}} {{word:you3}} X"],
+    verdict: "clumsy",
+    note: "One of the most important words.",
+  },
 });

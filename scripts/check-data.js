@@ -22,6 +22,7 @@ import { GROUPS } from '../src/data/coverage/index.ts';
 import CATEGORIES from '../src/data/maps/categories.ts';
 import ANTONYMS from '../src/data/maps/antonyms.ts';
 import SYNONYMS from '../src/data/maps/synonyms.ts';
+import CONNECTIONS from '../src/data/maps/connections.ts';
 import { buildData } from './build-data.js';
 import { compositeFileName } from './data-files.js';
 import { dataFiles } from './build-data.js';
@@ -117,6 +118,19 @@ for (const [name, r] of [['antonyms', ANTONYMS], ['synonyms', SYNONYMS]]) {
   for (const [id, forms] of Object.entries(r.phrases)) {
     if (!ids.has(id)) errors.push(`maps/${name}.ts: phrases for unknown word ${id}`);
     for (const ref of wordRefIds(forms.join(' '))) if (!ids.has(ref)) errors.push(`maps/${name}.ts: ${id}'s phrase names unknown word ${ref}`);
+  }
+}
+// connections: two or more known words, a why, no connection written twice
+{
+  const seen = new Set();
+  for (const c of CONNECTIONS) {
+    const here = c.words.join(', ');
+    for (const w of c.words) if (!ids.has(w)) errors.push(`maps/connections.ts: [${here}] names unknown word ${w}`);
+    if (new Set(c.words).size < 2) errors.push(`maps/connections.ts: [${here}] needs two or more different words`);
+    if (!String(c.why ?? '').trim()) errors.push(`maps/connections.ts: [${here}] has no why`);
+    const k = [...new Set(c.words)].sort().join(' ');
+    if (seen.has(k)) errors.push(`maps/connections.ts: [${here}] written twice`);
+    seen.add(k);
   }
 }
 for (const g of GROUPS) for (const item of g.items) {

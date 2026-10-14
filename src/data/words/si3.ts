@@ -11,4 +11,5 @@ export default word("si3", {
     rus: "Умирать, мёртвый. Жизнь и смерть — одни из самых базовых понятий.",
   },
   maps: "moli",
+  paraphrase: { forms: ["{{word:bu4}} {{word:huo2}} {{word:le}}"], verdict: "clumsy" },
 });

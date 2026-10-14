@@ -15,4 +15,5 @@ export default word("lai2", {
     rus: "Приходить, к тебе. Вместе с {{word:qu4}} задаёт направление любому движению.",
   },
   maps: "kama",
+  paraphrase: { forms: ["{{word:dao4}} {{word:wo3}} {{word:zhe4}}-{{word:li3}}"], verdict: "clumsy" },
 });

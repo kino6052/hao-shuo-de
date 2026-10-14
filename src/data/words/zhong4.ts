@@ -14,4 +14,11 @@ export default word("zhong4", {
     eng: "Heavy, and important ({{word:zhong4}}-{{word:yao4}}).",
     rus: "«Тяжёлый» и «важный» ({{word:zhong4}}-{{word:yao4}}).",
   },
+  paraphrase: {
+    forms: [
+      "{{word:na2}}-{{word:qi3}}-{{word:lai2}}, {{word:yao4}} {{word:hen3}} {{word:duo1}} {{word:li4}}",
+    ],
+    verdict: "clumsy",
+    note: "Lets us say \"important\" (zhòng-yào) and zhòng-diǎn.",
+  },
 });

@@ -42,4 +42,5 @@ export default word("shi2", {
       compounds: ["shi4 shi2", "zhen1 shi2", "xian4 shi2"],
     },
   },
+  paraphrase: { forms: ["{{word:wu3}} {{word:he2}} {{word:wu3}}"], verdict: "clumsy" },
 });

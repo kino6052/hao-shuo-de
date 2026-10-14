@@ -15,4 +15,5 @@ export default word("yong4", {
     rus: "Использовать, а также «с помощью»: {{word:yong4}} {{word:shou3}} — рукой. Без него ни одного предложения про инструменты.",
   },
   maps: "kepeken",
+  paraphrase: { forms: ["{{word:na2}} {{word:lai2}} {{word:zuo4}}"], verdict: "clumsy" },
 });

@@ -27,4 +27,10 @@ export default word("xian4", {
       },
     },
   },
+  paraphrase: {
+    forms: [
+      "{{word:hen3}} {{word:chang2}}, {{word:hen3}} {{word:xiao3}}, {{word:neng2}} {{word:jie2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+    ],
+    verdict: "clumsy",
+  },
 });

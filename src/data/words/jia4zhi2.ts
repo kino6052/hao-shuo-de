@@ -14,4 +14,11 @@ export default word("jia4zhi2", {
     eng: "Value, worth: {{word:hen3}} {{word:you3}} {{word:jia4zhi2}}, valuable. Prices and judgments use it.",
     rus: "Ценность: {{word:hen3}} {{word:you3}} {{word:jia4zhi2}} — ценный. Им пользуются цены и оценки.",
   },
+  paraphrase: {
+    forms: [
+      "{{word:mai3}} {{word:ta1}} {{word:yao4}} {{word:gei3}}-{{word:de}} {{word:jin1}}-{{word:de}} {{word:duo1}}-{{word:shao3}}",
+    ],
+    verdict: "fine",
+    note: "The author's note, meaning to be confirmed: \"ta zhong bu zhong4-yao\".",
+  },
 });

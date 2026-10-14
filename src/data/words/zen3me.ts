@@ -11,4 +11,5 @@ export default word("zen3me", {
     rus: "Спрашивает «как?». Без него пришлось бы каждый раз спрашивать про {{word:fang1}}-{{word:fa3}}.",
   },
   maps: "",
+  paraphrase: { forms: ["{{word:yong4}} {{word:shen2me}} {{word:fa3}}"], verdict: "clumsy" },
 });

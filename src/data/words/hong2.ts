@@ -14,4 +14,9 @@ export default word("hong2", {
     eng: "Red: {{word:hong2}}-{{word:de}} on its own, {{word:hong2}}-{{word:se4}} as the colour.",
     rus: "Красный: {{word:hong2}}-{{word:de}} отдельно, {{word:hong2}}-{{word:se4}} — как цвет.",
   },
+  paraphrase: {
+    forms: ["{{word:huo3}}-{{word:de}} {{word:yan2se4}}"],
+    verdict: "clumsy",
+    note: "Fire is not really red.",
+  },
 });

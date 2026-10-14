@@ -14,4 +14,10 @@ export default word("luan4", {
     eng: "Messy. {{word:bu4}} {{word:hao3}} is too vague; tidy is {{word:bu4}} {{word:luan4}}.",
     rus: "Беспорядочный. {{word:bu4}} {{word:hao3}} слишком размыто; аккуратный — {{word:bu4}} {{word:luan4}}.",
   },
+  paraphrase: {
+    forms: [
+      "{{word:dong1}}-{{light:xi1}} {{word:bu4}} {{word:zai4}} {{word:ta1}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
+    ],
+    verdict: "clumsy",
+  },
 });

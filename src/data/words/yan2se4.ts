@@ -11,4 +11,9 @@ export default word("yan2se4", {
     rus: "Сам цвет: без него не спросить «какого это цвета?»",
   },
   maps: "kule",
+  paraphrase: {
+    forms: ["{{word:bai2}}, {{word:hei1}}, {{word:hong2}} {{word:zhe4}}-{{word:yang4}}-{{word:de}}"],
+    verdict: "clumsy",
+    note: "A list of examples cannot take its place; colour is the idea behind them.",
+  },
 });

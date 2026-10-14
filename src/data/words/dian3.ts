@@ -14,4 +14,8 @@ export default word("dian3", {
     eng: "O'clock ({{word:san1}}-{{word:dian3}}), and \"a little\" ({{word:yi1}}-{{word:dian3}}). Both come up all the time.",
     rus: "Час ({{word:san1}}-{{word:dian3}}) и «немного» ({{word:yi1}}-{{word:dian3}}). И то и другое нужно постоянно.",
   },
+  paraphrase: {
+    forms: ["{{word:hen3}} {{word:xiao3}}-{{word:de}} {{word:bu4}}-{{light:fen1}}"],
+    verdict: "clumsy",
+  },
 });

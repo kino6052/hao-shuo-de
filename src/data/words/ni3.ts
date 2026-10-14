@@ -11,4 +11,8 @@ export default word("ni3", {
     rus: "Без него нельзя обратиться к собеседнику: нет «ты», «твой».",
   },
   maps: "sina",
+  atom: {
+    eng: "There is no honest paraphrase: \"the person who listens to me\" could just as well be \"he\", so it needs a pointer to tell them apart.",
+    rus: "Честного описания нет: «человек, который меня слушает» может быть и «он», поэтому нужно указание, чтобы их различить.",
+  },
 });

@@ -26,4 +26,5 @@ export default word("hua4", {
       compounds: ["hua4 mian4"],
     },
   },
+  paraphrase: { forms: ["{{word:shuo1}}-{{word:de}} {{word:ci2}}"], verdict: "fine" },
 });

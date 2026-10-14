@@ -21,7 +21,12 @@
 //   category            words that share a category
 //   opposite-by-not     a word whose paraphrase is "not" + another word (from paraphrases)
 //   close-by-paraphrase a word whose paraphrase is one other word
+//   defined-by          a word whose paraphrase names another word (all of them, each with its form; a compound
+//                       spelled with a light syllable, dōng-xi, is learned whole and does not count its parts)
+//   circular            two words whose paraphrases name each other (neither can be said without the other)
+//   connected           words the author links (maps/connections.ts): a note on a review, a family of words
 
+import { wordRefIds } from '../word-refs.js';
 import { formSlots } from './facts.js';
 import { pinyinOf } from './whatif.js';
 
@@ -36,11 +41,18 @@ export const KIND_NOTES = {
   category: 'share a category',
   'opposite-by-not': 'paraphrased as "not" + a word',
   'close-by-paraphrase': 'paraphrased as one other word',
+  'defined-by': 'its paraphrase names the other word',
+  circular: 'each is said with the other',
+  connected: 'linked by the author',
 };
 export const KINDS = Object.keys(KIND_NOTES);
 
-const SYMMETRIC = new Set(['opposite', 'close', 'same-form', 'category']);
+const SYMMETRIC = new Set(['opposite', 'close', 'same-form', 'category', 'circular']);
 const BU = 'bu4';
+
+// A Mandarin compound spelled with a light syllable (dōng-xi, dì-fang, bù-fen) is learned whole: the
+// words it is spelled from are not what a form is built from. A measure word is the exception (yī-ge).
+const LIGHT_RUN = /(?:{{[Ww]ord:[a-z0-9_-]+(?:#[a-z]+)?}}-)+{{[Ll]ight:([a-z0-9_-]+)}}/g;
 
 // the words of a slot list as comparable cells
 const cell = (s) => (s.kind === 'word' ? `w:${s.id}:${s.light ? 'l' : ''}` : `${s.kind}:${s.text}`);
@@ -87,6 +99,12 @@ export function relationReport(source, facts) {
   };
   phrases(maps.antonyms, 'opposite-phrase', true);
   phrases(maps.synonyms, 'close-phrase', false);
+
+  for (const c of maps.connections ?? []) {
+    const members = c.words.filter((id) => words[id]);
+    if (members.length < 2) continue;
+    add({ kind: 'connected', status: c.proposed ? 'proposed' : 'accepted', source: 'maps/connections', ends: 'word', members, a: members[0], why: `${members.map(term).join(', ')}: ${c.why}` });
+  }
 
   const leaves = [];
   const walk = (c) => {
@@ -153,6 +171,25 @@ export function relationReport(source, facts) {
       const refs = [...f.matchAll(/\{\{(?:word|Word):([a-z0-9_-]+)\}\}/g)].map((m) => m[1]);
       if (refs.length === 2 && refs[0] === BU && refs[1] !== id) add({ kind: 'opposite-by-not', status: 'proposed', source: 'paraphrase', ends: 'word', a: id, b: refs[1], why: `${term(id)} is said "${pin(f)}"` });
       else if (refs.length === 1 && refs[0] !== id && !/[^\s{}]/.test(f.replace(/\{\{[^}]+\}\}/g, ''))) add({ kind: 'close-by-paraphrase', status: 'proposed', source: 'paraphrase', ends: 'word', a: id, b: refs[0], why: `${term(id)} is said "${pin(f)}"` });
+    }
+  }
+
+  // every word a paraphrase names, and the pairs that name each other (the author's own wording is the evidence)
+  const named = new Map(); // id -> Map(named id -> the form that names it)
+  for (const [id, w] of Object.entries(words)) {
+    for (const f of w.paraphrase?.forms ?? []) {
+      const built = f.replace(LIGHT_RUN, (run, last) => (words[last]?.pos?.eng === 'measure word' ? run : ''));
+      for (const ref of new Set(wordRefIds(built))) {
+        if (ref === id || !words[ref]) continue;
+        const m = named.get(id) ?? named.set(id, new Map()).get(id);
+        if (!m.has(ref)) m.set(ref, f);
+      }
+    }
+  }
+  for (const [id, m] of named) {
+    for (const [ref, f] of m) {
+      add({ kind: 'defined-by', status: 'accepted', source: 'paraphrase', ends: 'word', a: id, b: ref, why: `${term(id)} is said "${pin(f)}", which names ${term(ref)}` });
+      if (named.get(ref)?.has(id)) add({ kind: 'circular', status: 'accepted', source: 'paraphrase', ends: 'word', a: id, b: ref, why: `${term(id)} is said with ${term(ref)} and ${term(ref)} with ${term(id)}` });
     }
   }
 

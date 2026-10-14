@@ -14,4 +14,5 @@ export default word("shu4", {
     eng: "How many there are: {{word:ren2}}-{{word:de}} {{word:shu4}}. {{word:hao4}} only names things; {{word:shu4}} counts them.",
     rus: "Сколько чего-то: {{word:ren2}}-{{word:de}} {{word:shu4}}. {{word:hao4}} только называет, {{word:shu4}} считает.",
   },
+  paraphrase: { forms: ["{{word:duo1}}-{{word:shao3}}"], verdict: "clumsy" },
 });

@@ -15,4 +15,8 @@ export default word("shen2me", {
     rus: "Без него нельзя спросить «что?», а вместе с {{word:dou1}} оно даёт «всё».",
   },
   maps: "seme",
+  atom: {
+    eng: "\"The thing I do not know\" does not ask a question, so it cannot say shénme.",
+    rus: "«Вещь, которую я не знаю» не задаёт вопроса, поэтому не может заменить shénme.",
+  },
 });

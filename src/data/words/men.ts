@@ -14,4 +14,9 @@ export default word("men", {
     eng: "Without it, you can't say \"we\" or \"they\": {{word:wo3}}-{{word:men}} is the only way to show more than one person.",
     rus: "Без него нельзя сказать «мы» или «они»: {{word:wo3}}-{{word:men}} — единственный способ показать, что людей несколько.",
   },
+  paraphrase: {
+    forms: ["{{word:bu4}} {{word:zhi3}} {{word:yi1}}-{{light:ge4}} {{word:ren2}}"],
+    verdict: "clumsy",
+    note: "It is an ending: the form says what it means but cannot take its place in wǒ-men.",
+  },
 });

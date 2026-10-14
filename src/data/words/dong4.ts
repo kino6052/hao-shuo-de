@@ -10,4 +10,8 @@ export default word("dong4", {
     eng: "Move. Without it, nothing moves: {{word:bu4}} {{word:dong4}}, don't move.",
     rus: "Двигаться. Без него ничто не движется: {{word:bu4}} {{word:dong4}} — не двигайся.",
   },
+  paraphrase: {
+    forms: ["{{word:bu4}} {{word:zai4}} {{word:yi1}}-{{light:ge4}} {{word:di4}}-{{light:fang1}}"],
+    verdict: "clumsy",
+  },
 });

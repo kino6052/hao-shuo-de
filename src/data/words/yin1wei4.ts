@@ -11,4 +11,5 @@ export default word("yin1wei4", {
     rus: "Потому что: без него не объяснить причину.",
   },
   maps: "",
+  paraphrase: { forms: ["Y {{word:shi4}} X {{word:rang4}}-{{word:de}}"], verdict: "clumsy" },
 });

@@ -11,4 +11,11 @@ export default word("ren2", {
     rus: "Люди: «кто-то», «человек». Одно из самых базовых понятий.",
   },
   maps: "jan",
+  paraphrase: {
+    forms: [
+      "{{word:neng2}} {{word:shuo1}} {{word:hua4}}, {{word:neng2}} {{word:xie3}} {{word:zi4}}-{{word:de}} {{word:dong4}}-{{word:wu4}}",
+    ],
+    verdict: "clumsy",
+    note: "Too important a word to drop.",
+  },
 });

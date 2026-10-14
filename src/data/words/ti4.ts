@@ -14,4 +14,5 @@ export default word("ti4", {
     eng: "Instead of someone: {{word:ti4}} {{word:wo3}}. Without it, you can't act or speak in another's place.",
     rus: "Вместо кого-то: {{word:ti4}} {{word:wo3}}. Без него нельзя сделать или сказать что-то за другого.",
   },
+  paraphrase: { forms: ["X {{word:bu4}} {{word:zuo4}}, {{word:wo3}} {{word:zuo4}}"], verdict: "clumsy" },
 });

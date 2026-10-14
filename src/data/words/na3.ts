@@ -14,4 +14,5 @@ export default word("na3", {
     eng: "Which: {{word:na3}}-{{word:li3}} (where) and {{word:na3}}-ge (which one).",
     rus: "Какой: {{word:na3}}-{{word:li3}} (где) и {{word:na3}}-ge (который).",
   },
+  paraphrase: { forms: ["{{word:zhe4}} {{word:hai2}}-{{word:shi4}} {{word:na4}}"], verdict: "fine" },
 });

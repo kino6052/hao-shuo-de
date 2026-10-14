@@ -14,4 +14,5 @@ export default word("lao3", {
     eng: "Old, for living things; young is {{word:bu4}} {{word:lao3}}. Age comes up whenever you talk about people.",
     rus: "Старый, о живом; молодой — {{word:bu4}} {{word:lao3}}. О возрасте говорят всегда, когда речь о людях.",
   },
+  paraphrase: { forms: ["{{word:hen3}}-{{word:duo1}}-{{word:nian2}}-{{word:de}}"], verdict: "clumsy" },
 });

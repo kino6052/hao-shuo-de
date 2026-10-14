@@ -26,4 +26,5 @@ export default word("hai2", {
       compounds: ["hai2 zi"],
     },
   },
+  paraphrase: { forms: ["{{word:mei2}} {{word:bian4}}", "{{word:ye3}}"], verdict: "clumsy" },
 });

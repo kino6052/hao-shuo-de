@@ -15,4 +15,5 @@ export default word("neng2", {
     rus: "Мочь, можно. Без него не сказать, что возможно или разрешено.",
   },
   maps: "ken",
+  paraphrase: { forms: ["{{word:you3}} {{word:li4}} {{word:zuo4}}"], verdict: "clumsy" },
 });

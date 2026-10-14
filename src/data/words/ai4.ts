@@ -15,4 +15,8 @@ export default word("ai4", {
     rus: "Любить, а перед глаголом — «любить что-то делать». «Нравиться» — тоже {{word:ai4}}.",
   },
   maps: "olin",
+  paraphrase: {
+    forms: ["{{word:hen3}} {{word:xiang3}} {{word:rang4}} {{word:ta1}} {{word:hao3}}"],
+    verdict: "clumsy",
+  },
 });

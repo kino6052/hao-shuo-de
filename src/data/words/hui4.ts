@@ -15,4 +15,8 @@ export default word("hui4", {
     rus: "Будет, собирается. Время часто понятно из ситуации, но планам и прогнозам он нужен.",
   },
   maps: "",
+  paraphrase: {
+    forms: ["{{word:yi3}}-{{word:hou4}}", "{{word:zhi1dao4}} {{word:zen3me}} {{word:zuo4}}"],
+    verdict: "clumsy",
+  },
 });

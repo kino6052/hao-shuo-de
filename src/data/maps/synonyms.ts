@@ -9,11 +9,13 @@ export default relations({
     ["pang2bian1", "fu4jin4"],
     ["hen3", "zhen1"],
     ["mian4", "bian1"],
+    ["ta1", "bie2"],
   ],
   phrases: {
     yan3jing: ["{{word:kan4}}-{{word:de}} {{word:bu4}}-{{light:fen1}}"],
     deng1: ["{{word:jia1}}-{{word:li3}}-{{word:de}} {{word:xiao3}} {{word:ri4}}"],
     mai3: ["{{word:gei3}} {{word:jin1}} {{word:de2}} {{word:dong1}}-{{light:xi1}}"],
     zui4: ["{{word:bi3}} {{word:bie2}}-{{word:de}} {{word:dou1}}"],
+    ta1: ["{{word:bu4}}-{{word:tong2}}"],
   },
 });

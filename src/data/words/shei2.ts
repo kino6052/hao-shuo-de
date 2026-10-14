@@ -14,4 +14,5 @@ export default word("shei2", {
     eng: "Who: the question word for a person, said in one word.",
     rus: "«Кто»: вопросительное слово о человеке, одним словом.",
   },
+  paraphrase: { forms: ["{{word:shen2me}} {{word:ren2}}"], verdict: "fine" },
 });

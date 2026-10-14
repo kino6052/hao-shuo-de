@@ -14,4 +14,9 @@ export default word("ping2", {
     eng: "Flat, like the ground or water: {{word:ping2}}. It is in {{word:ping2}}-{{word:chang2}}, {{word:ping2}}-{{word:shi2}} and {{word:shui3}}-{{word:ping2}}.",
     rus: "Ровный, как земля или вода: {{word:ping2}}. Он есть в {{word:ping2}}-{{word:chang2}}, {{word:ping2}}-{{word:shi2}} и {{word:shui3}}-{{word:ping2}}.",
   },
+  paraphrase: {
+    forms: ["{{word:he2}} {{word:di4}} {{word:yi1}}-{{word:yang4}}"],
+    verdict: "clumsy",
+    note: "One of the most useful words.",
+  },
 });

@@ -14,4 +14,11 @@ export default word("deng1", {
     eng: "A lamp, a light. {{word:jia1}}-{{word:li3}}-{{word:de}} {{word:xiao3}} {{word:ri4}} would work, but lights are switched on every day.",
     rus: "Лампа, свет. Можно сказать {{word:jia1}}-{{word:li3}}-{{word:de}} {{word:xiao3}} {{word:ri4}}, но свет включают каждый день.",
   },
+  paraphrase: {
+    forms: [
+      "{{word:jia1}}-{{word:li3}}-{{word:de}} {{word:xiao3}} {{word:ri4}}",
+      "{{word:kai1}} {{word:le}} {{word:jiu4}} {{word:ming2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+    ],
+    verdict: "clumsy",
+  },
 });

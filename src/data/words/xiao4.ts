@@ -22,4 +22,10 @@ export default word("xiao4", {
       compounds: ["xue2 xiao4"],
     },
   },
+  paraphrase: {
+    forms: [
+      "{{word:kai1}}-{{word:xin1}} {{word:shi2}}, {{word:kou3}} {{word:kai1}} {{word:le}}, {{word:you3}} {{word:sheng1yin1}}",
+    ],
+    verdict: "clumsy",
+  },
 });

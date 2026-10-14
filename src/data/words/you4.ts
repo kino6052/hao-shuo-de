@@ -26,4 +26,5 @@ export default word("you4", {
       compounds: ["you4 bian1"],
     },
   },
+  paraphrase: { forms: ["{{word:di4}}-{{word:er4}}-{{word:ci4}}"], verdict: "clumsy" },
 });

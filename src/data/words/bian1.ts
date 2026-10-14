@@ -25,4 +25,10 @@ export default word("bian1", {
       proposed: true,
     },
   },
+  paraphrase: {
+    forms: [
+      "{{word:bu4}} {{word:shi4}} {{word:zhong1}}-{{word:jian1}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
+    ],
+    verdict: "clumsy",
+  },
 });

@@ -11,4 +11,9 @@ export default word("cong2", {
     rus: "Из, от: откуда что-то начинается. Без него у пути нет начала.",
   },
   maps: "",
+  paraphrase: {
+    forms: ["{{word:yi3}}-{{word:qian2}} {{word:zai4}} X"],
+    verdict: "clumsy",
+    note: "It gives the start of a move but not the move itself.",
+  },
 });

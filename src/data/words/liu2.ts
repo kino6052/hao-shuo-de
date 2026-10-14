@@ -15,4 +15,5 @@ export default word("liu2", {
     rus: "Оставаться, оставлять: остаться дома, оставить на потом.",
   },
   maps: "awen",
+  paraphrase: { forms: ["{{word:bu4}} {{word:zou3}}"], verdict: "clumsy" },
 });

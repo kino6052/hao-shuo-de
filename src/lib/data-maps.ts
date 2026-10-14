@@ -27,6 +27,21 @@ export interface Relations {
 
 export const relations = (r: Relations): Relations => r;
 
+/**
+ * A connection the author states between words that antonyms, synonyms and
+ * categories do not cover: a word and the words its meaning leans on or shares
+ * ground with (cí and shuō and huà; qù, zǒu, fēi and the other words of going).
+ * `words` has two or more ids; `why` says the link in plain words. A
+ * `proposed` connection waits for the author to confirm it.
+ */
+export interface Connection {
+  words: string[];
+  why: string;
+  proposed?: boolean;
+}
+
+export const connections = (c: Connection[]): Connection[] => c;
+
 // -> word id -> its forms: pair partners as {{word:id}}, then its phrases.
 export function relationLists(r: Relations): Map<string, string[]> {
   const out = new Map<string, string[]>();

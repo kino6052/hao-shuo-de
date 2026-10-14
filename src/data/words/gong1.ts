@@ -26,4 +26,9 @@ export default word("gong1", {
       },
     },
   },
+  paraphrase: {
+    forms: ["{{word:yong4}} {{word:li4}} {{word:zuo4}} {{word:dong1}}-{{light:xi1}}"],
+    verdict: "clumsy",
+    note: "Very useful.",
+  },
 });

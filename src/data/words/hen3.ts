@@ -15,4 +15,5 @@ export default word("hen3", {
     rus: "Очень, а также связка между вещью и прилагательным: {{word:shui3}} {{word:hen3}} {{word:hao3}}.",
   },
   maps: "mute",
+  atom: { eng: "A fundamental word.", rus: "Основное слово." },
 });

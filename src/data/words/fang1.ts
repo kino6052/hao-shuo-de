@@ -14,4 +14,5 @@ export default word("fang1", {
     eng: "Side, direction: {{word:di4}}-{{light:fang1}} (place) and {{word:fang1}}-{{word:fa3}} (method) are built on it.",
     rus: "Сторона, направление: на нём построены {{word:di4}}-{{light:fang1}} (место) и {{word:fang1}}-{{word:fa3}} (способ).",
   },
+  paraphrase: { forms: ["{{word:bian1}}"], verdict: "clumsy" },
 });

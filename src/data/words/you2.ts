@@ -14,4 +14,10 @@ export default word("you2", {
     eng: "Oil for cooking and for machines: {{word:you2}}. Without it, you can only say \"the liquid used to cook\".",
     rus: "Масло для еды и для машин: {{word:you2}}. Без него остаётся только «жидкость для готовки».",
   },
+  paraphrase: {
+    forms: [
+      "{{word:zuo4}} {{word:fan4}} {{word:yong4}}-{{word:de}}, {{word:he2}} {{word:shui3}} {{word:bu4}} {{word:yi1}}-{{word:yang4}}-{{word:de}} {{word:shui3}}",
+    ],
+    verdict: "fine",
+  },
 });

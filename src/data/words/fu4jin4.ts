@@ -14,4 +14,5 @@ export default word("fu4jin4", {
     eng: "Nearby. Distance is a basic idea; far is {{word:yuan3}}.",
     rus: "Поблизости. Расстояние — базовое понятие; далеко — {{word:yuan3}}.",
   },
+  paraphrase: { forms: ["{{word:bu4}} {{word:yuan3}}"], verdict: "fine" },
 });

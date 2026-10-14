@@ -25,4 +25,9 @@ export default word("mian4", {
       proposed: true,
     },
   },
+  paraphrase: {
+    forms: ["{{word:kan4}}-{{word:dao4}}-{{word:de}} {{word:na4}}-{{word:yi1}}-{{word:bian1}}"],
+    verdict: "clumsy",
+    note: "Too important a word to drop.",
+  },
 });

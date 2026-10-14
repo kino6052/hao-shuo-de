@@ -14,4 +14,8 @@ export default word("fen1", {
     eng: "Part, divide: {{word:da4}} {{word:bu4}}-{{light:fen1}} is most, and minutes and points are counted with it.",
     rus: "Часть, делить: {{word:da4}} {{word:bu4}}-{{light:fen1}} — большинство; им же считают минуты и очки.",
   },
+  paraphrase: {
+    forms: ["{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:yi1}}-{{word:dian3}}"],
+    verdict: "clumsy",
+  },
 });

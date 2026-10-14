@@ -11,4 +11,10 @@ export default word("zhen1", {
     rus: "Правда, действительно. {{word:hen3}} близко, но {{word:zhen1}} подчёркивает, что вы это серьёзно: {{word:zhen1}} {{word:hao3}}!",
   },
   maps: "lon",
+  paraphrase: {
+    forms: [
+      "{{word:shuo1}}-{{word:de}} {{word:he2}} {{word:you3}}-{{word:de}} {{word:yi1}}-{{word:yang4}}",
+    ],
+    verdict: "clumsy",
+  },
 });

@@ -15,4 +15,9 @@ export default word("mei2", {
     rus: "«Не» для {{word:you3}}: {{word:mei2}}-{{word:you3}} — нет, не имею. {{word:bu4}} эту работу не делает.",
   },
   maps: "",
+  paraphrase: {
+    forms: ["{{word:bu4}}"],
+    verdict: "clumsy",
+    note: "Méi is bù for yǒu and for the past: said with bù, it would be wrong Mandarin.",
+  },
 });

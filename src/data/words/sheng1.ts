@@ -14,4 +14,10 @@ export default word("sheng1", {
     eng: "Give birth, be born. Fruit, eggs, and birth itself are described with it.",
     rus: "Рожать, рождаться. Через него описывают фрукты, яйца и само рождение.",
   },
+  paraphrase: {
+    forms: [
+      "{{word:rang4}} X {{word:huo2}}, {{word:cong2}} {{word:shen1ti3}} {{word:li3}} {{word:chu1}}-{{word:lai2}}",
+    ],
+    verdict: "clumsy",
+  },
 });

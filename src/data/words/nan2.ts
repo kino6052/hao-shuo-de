@@ -26,4 +26,5 @@ export default word("nan2", {
       compounds: ["nan2 ren2", "nan2 sheng1", "nan2 hai2 zi"],
     },
   },
+  paraphrase: { forms: ["{{word:bu4}} {{word:hao3}} {{word:zuo4}}"], verdict: "clumsy" },
 });

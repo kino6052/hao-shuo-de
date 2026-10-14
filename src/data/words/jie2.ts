@@ -26,4 +26,10 @@ export default word("jie2", {
       compounds: ["jie2 guo3"],
     },
   },
+  paraphrase: {
+    forms: [
+      "{{word:rang4}} {{word:xian4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}, {{word:bu4}} {{word:neng2}} {{word:kai1}}",
+    ],
+    verdict: "clumsy",
+  },
 });

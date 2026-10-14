@@ -15,4 +15,11 @@ export default word("bian4", {
     rus: "Становиться, меняться: {{word:bian4}} {{word:hao3}} {{word:le}} — стало лучше. Без него ничего не меняется.",
   },
   maps: "kama",
+  paraphrase: {
+    forms: [
+      "{{word:he2}} {{word:yi3}}-{{word:qian2}} {{word:bu4}} {{word:yi1}}-{{word:yang4}} {{word:le}}",
+    ],
+    verdict: "clumsy",
+    note: "One of the most important words.",
+  },
 });

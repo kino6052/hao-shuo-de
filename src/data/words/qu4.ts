@@ -11,4 +11,5 @@ export default word("qu4", {
     rus: "Уходить, от тебя. Вместе с {{word:lai2}} задаёт направление любому движению.",
   },
   maps: "tawa",
+  paraphrase: { forms: ["{{word:dao4}} {{word:na4}}-{{word:li3}}"], verdict: "clumsy" },
 });

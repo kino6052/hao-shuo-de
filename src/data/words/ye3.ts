@@ -15,4 +15,8 @@ export default word("ye3", {
     rus: "Тоже, также: {{word:wo3}} {{word:ye3}} {{word:chi1}}. Без него ничего не добавить.",
   },
   maps: "",
+  paraphrase: {
+    forms: ["{{word:he2}} {{word:bie2}}-{{word:de}} {{word:yi1}}-{{word:yang4}}"],
+    verdict: "clumsy",
+  },
 });

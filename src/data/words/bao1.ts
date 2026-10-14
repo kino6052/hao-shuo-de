@@ -14,4 +14,10 @@ export default word("bao1", {
     eng: "The container: what holds things ({{word:bao1}}-{{word:li3}} {{word:you3}} {{word:shen2me}}?), and Mandarin's schoolbag, bread and bun.",
     rus: "Ёмкость: то, в чём лежат вещи ({{word:bao1}}-{{word:li3}} {{word:you3}} {{word:shen2me}}?), а ещё портфель, хлеб и булочка.",
   },
+  paraphrase: {
+    forms: [
+      "{{word:li3}}-{{word:mian4}} {{word:neng2}} {{word:fang4}} {{word:dong1}}-{{light:xi1}}, {{word:neng2}} {{word:na2}}-{{word:zou3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+    ],
+    verdict: "clumsy",
+  },
 });

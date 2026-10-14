@@ -15,4 +15,10 @@ export default word("shui4jiao4", {
     rus: "Спать: каждый день кончается сном, а короткого описания нет.",
   },
   maps: "lape",
+  paraphrase: {
+    forms: [
+      "{{word:tang3}}-{{word:xia4}}, {{word:bu4}} {{word:kan4}} {{word:bu4}} {{word:ting1}} {{word:bu4}} {{word:dong4}}",
+    ],
+    verdict: "clumsy",
+  },
 });

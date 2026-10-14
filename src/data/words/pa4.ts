@@ -15,4 +15,9 @@ export default word("pa4", {
     rus: "Бояться. Страх — базовое чувство, которое не покрыть другим словом.",
   },
   maps: "",
+  paraphrase: {
+    forms: ["{{word:bu4}} {{word:xiang3}} {{word:zai4}} {{word:ta1}} {{word:fu4jin4}}"],
+    verdict: "clumsy",
+    note: "It says what a frightened person does, not what the feeling is.",
+  },
 });

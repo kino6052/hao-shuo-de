@@ -15,4 +15,11 @@ export default word("huo3", {
     rus: "Огонь: жар, готовка, свет. Ничто другое в словаре его не опишет.",
   },
   maps: "seli",
+  paraphrase: {
+    forms: [
+      "{{word:hen3}} {{word:re4}}, {{word:hen3}} {{word:ming2}}, {{word:neng2}} {{word:rang4}} {{word:dong1}}-{{light:xi1}} {{word:bian4}} {{word:hei1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+    ],
+    verdict: "clumsy",
+    note: "Too clumsy.",
+  },
 });

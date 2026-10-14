@@ -15,4 +15,8 @@ export default word("da3", {
     rus: "Бить, а также начало многих действий: {{word:da3}}-{{word:kai1}} — открыть; {{word:da3}} {{word:che1}} — взять такси.",
   },
   maps: "utala",
+  paraphrase: {
+    forms: ["{{word:yong4}} {{word:li4}} {{word:rang4}} {{word:ta1}} {{word:tong4}}"],
+    verdict: "clumsy",
+  },
 });

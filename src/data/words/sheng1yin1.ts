@@ -11,4 +11,8 @@ export default word("sheng1yin1", {
     rus: "Звук, голос, шум. Через него описывают музыку и речь.",
   },
   maps: "kalama",
+  paraphrase: {
+    forms: ["{{word:er3duo}} {{word:ting1}}-{{word:dao4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
+    verdict: "clumsy",
+  },
 });

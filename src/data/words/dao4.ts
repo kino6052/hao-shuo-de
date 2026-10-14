@@ -26,4 +26,10 @@ export default word("dao4", {
       },
     },
   },
+  paraphrase: {
+    forms: [
+      "{{word:zou3}}-{{word:wan2}} {{word:lu4}}, {{word:zai4}} {{word:na4}}-{{word:li3}} {{word:le}}",
+    ],
+    verdict: "clumsy",
+  },
 });

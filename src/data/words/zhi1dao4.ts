@@ -15,4 +15,9 @@ export default word("zhi1dao4", {
     rus: "Знать и уметь. Без него не сказать, что ты знаешь, а что нет.",
   },
   maps: "sona",
+  paraphrase: {
+    forms: ["{{word:xue2}}-{{word:guo4}}, {{word:hai2}} {{word:ji4}}-{{word:de}}"],
+    verdict: "clumsy",
+    note: "Relates to xué: the paraphrases should capture as many links between the core words as they can.",
+  },
 });

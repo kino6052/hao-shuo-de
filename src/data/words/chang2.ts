@@ -26,4 +26,11 @@ export default word("chang2", {
       compounds: ["chang2 chang2", "ping2 chang2"],
     },
   },
+  paraphrase: {
+    forms: [
+      "{{word:cong2}} {{word:zhe4}}-{{word:bian1}} {{word:dao4}} {{word:na4}}-{{word:bian1}} {{word:hen3}} {{word:yuan3}}",
+    ],
+    verdict: "clumsy",
+    note: "A very useful word.",
+  },
 });

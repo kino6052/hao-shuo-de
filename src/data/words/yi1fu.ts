@@ -15,4 +15,10 @@ export default word("yi1fu", {
     rus: "Одежда и ткань. Носить, покупать и стирать её приходится каждый день.",
   },
   maps: "len",
+  paraphrase: {
+    forms: [
+      "{{word:shen1ti3}}-{{word:shang4}}, {{word:rang4}} {{word:shen1ti3}} {{word:bu4}} {{word:leng3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+    ],
+    verdict: "clumsy",
+  },
 });

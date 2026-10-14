@@ -15,4 +15,8 @@ export default word("kai1shi3", {
     rus: "Начинать. Без него не сказать, когда что-то начинается.",
   },
   maps: "open, kama",
+  paraphrase: {
+    forms: ["{{word:cong2}} {{word:bu4}} {{word:zuo4}} {{word:dao4}} {{word:zuo4}}"],
+    verdict: "clumsy",
+  },
 });

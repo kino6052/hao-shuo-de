@@ -22,4 +22,9 @@ export default word("ming2", {
       },
     },
   },
+  paraphrase: {
+    forms: ["{{word:he2}} {{word:ri4}} {{word:yi1}}-{{word:yang4}}"],
+    verdict: "clumsy",
+    note: "A very useful word.",
+  },
 });

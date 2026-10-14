@@ -15,4 +15,9 @@ export default word("shang4", {
     rus: "Вверх, на: {{word:bao1}}-{{word:shang4}} — на коробке. Без него ни положения, ни движения.",
   },
   maps: "",
+  paraphrase: {
+    forms: ["{{word:tou2}}-{{word:de}} {{word:na4}}-{{word:bian1}}"],
+    verdict: "clumsy",
+    note: "Too important a word to drop.",
+  },
 });

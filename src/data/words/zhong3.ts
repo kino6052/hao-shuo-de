@@ -14,4 +14,11 @@ export default word("zhong3", {
     eng: "Kind, type: {{word:zhe4}}-{{word:zhong3}}, this kind. Without it, you can't sort things.",
     rus: "Вид, сорт: {{word:zhe4}}-{{word:zhong3}} — такой. Без него ничего не разделить на виды.",
   },
+  paraphrase: {
+    forms: [
+      "{{word:yi1}}-{{word:yang4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+      "{{word:zhe4}}-{{word:yang4}}-{{word:de}}",
+    ],
+    verdict: "fine",
+  },
 });

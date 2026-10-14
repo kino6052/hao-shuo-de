@@ -15,4 +15,10 @@ export default word("chi1", {
     rus: "Есть, а с -{{word:de}} — еда ({{word:chi1}}-{{word:de}}). Из него выходят все слова про еду.",
   },
   maps: "moku",
+  paraphrase: {
+    forms: [
+      "{{word:na2}} {{word:dong1}}-{{light:xi1}} {{word:fang4}}-{{word:jin4}} {{word:kou3}}-{{word:li3}}",
+    ],
+    verdict: "clumsy",
+  },
 });

@@ -14,4 +14,9 @@ export default word("nv3", {
     eng: "Female: {{word:nv3}}-{{word:ren2}} is a woman.",
     rus: "Женский: {{word:nv3}}-{{word:ren2}} — женщина.",
   },
+  paraphrase: {
+    forms: ["{{word:neng2}} {{word:sheng1}} {{word:hai2}}-{{word:zi}}-{{word:de}} {{word:ren2}}"],
+    verdict: "clumsy",
+    note: "We do not want to lose this level of expressiveness.",
+  },
 });

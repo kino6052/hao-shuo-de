@@ -14,4 +14,8 @@ export default word("xi1", {
     eng: "West, and the second half of {{word:dong1}}-{{light:xi1}}, \"thing\".",
     rus: "Запад и вторая половина {{word:dong1}}-{{light:xi1}}, «вещь».",
   },
+  paraphrase: {
+    forms: ["{{word:ri4}} {{word:xia4}}-{{word:qu4}}-{{word:de}} {{word:na4}}-{{word:bian1}}"],
+    verdict: "clumsy",
+  },
 });

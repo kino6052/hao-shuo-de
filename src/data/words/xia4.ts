@@ -15,4 +15,9 @@ export default word("xia4", {
     rus: "Вниз, под: {{word:xia4}}-{{word:mian4}}, {{word:na2}}-{{word:xia4}}-{{word:lai2}}. Без него ни положения, ни движения.",
   },
   maps: "",
+  paraphrase: {
+    forms: ["{{word:jiao3}}-{{word:de}} {{word:na4}}-{{word:bian1}}"],
+    verdict: "clumsy",
+    note: "Too important a word to drop.",
+  },
 });

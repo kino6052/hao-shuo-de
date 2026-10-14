@@ -15,4 +15,10 @@ export default word("shui3", {
     rus: "Вода и любая жидкость: пить, мыть, дождь, море.",
   },
   maps: "telo",
+  paraphrase: {
+    forms: [
+      "{{word:mei2}} {{word:you3}} {{word:yan2se4}}, {{word:he1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+    ],
+    verdict: "clumsy",
+  },
 });

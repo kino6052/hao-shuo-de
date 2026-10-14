@@ -27,4 +27,5 @@ export default word("zai4", {
       compounds: ["zai4 jian4"],
     },
   },
+  atom: { eng: "A fundamental word for location.", rus: "Основное слово места." },
 });

@@ -15,4 +15,5 @@ export default word("qi3", {
     rus: "Подниматься: {{word:qi3}}-{{word:lai2}} — встать, а также начало действия.",
   },
   maps: "",
+  paraphrase: { forms: ["{{word:cong2}} {{word:xia4}} {{word:dao4}} {{word:shang4}}"], verdict: "clumsy" },
 });

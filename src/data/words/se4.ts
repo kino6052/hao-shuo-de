@@ -14,4 +14,5 @@ export default word("se4", {
     eng: "Colour: each colour word ends in it ({{word:hong2}}-{{word:se4}}, red).",
     rus: "Цвет: им кончается каждое слово цвета ({{word:hong2}}-{{word:se4}} — красный).",
   },
+  paraphrase: { forms: ["{{word:yan2se4}}"], verdict: "fine" },
 });

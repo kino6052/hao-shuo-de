@@ -15,4 +15,10 @@ export default word("shuo1", {
     rus: "Говорить, сказать. Без него не рассказать, кто что сказал.",
   },
   maps: "toki",
+  paraphrase: {
+    forms: [
+      "{{word:yong4}} {{word:kou3}} {{word:rang4}} {{word:bie2}}-{{word:ren2}} {{word:ting1}}-{{word:dao4}} {{word:ci2}}",
+    ],
+    verdict: "clumsy",
+  },
 });

@@ -14,4 +14,11 @@ export default word("men2", {
     eng: "Doors: opening and closing them ({{word:kai1}} {{word:men2}}, {{word:guan1}} {{word:men2}}), the doorway, and going out.",
     rus: "Двери: открыть и закрыть ({{word:kai1}} {{word:men2}}, {{word:guan1}} {{word:men2}}), вход и выход из дома.",
   },
+  paraphrase: {
+    forms: [
+      "{{word:kai1}} {{word:he2}} {{word:guan1}}-{{word:de}}, {{word:ren2}} {{word:jin4}} {{word:chu1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+    ],
+    verdict: "clumsy",
+    note: "Very basic, and it simplifies a lot; keep an eye on it, it might go later.",
+  },
 });

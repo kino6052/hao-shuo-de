@@ -14,4 +14,5 @@ export default word("chu1", {
     eng: "Go out: {{word:chu1}}-{{word:qu4}}, go out. The pair to {{word:jin4}}.",
     rus: "Выходить: {{word:chu1}}-{{word:qu4}} — выйти. Пара к {{word:jin4}}.",
   },
+  paraphrase: { forms: ["{{word:dao4}} {{word:wai4}}-{{word:mian4}} {{word:qu4}}"], verdict: "fine" },
 });

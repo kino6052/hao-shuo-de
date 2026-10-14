@@ -15,4 +15,11 @@ export default word("ri4", {
     rus: "Солнце, а с ним и день. День и ночь говорят через солнце и луну.",
   },
   maps: "suno",
+  paraphrase: {
+    forms: [
+      "{{word:tian1}}-{{word:shang4}} {{word:hen3}} {{word:ming2}}, {{word:hen3}} {{word:re4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+    ],
+    verdict: "clumsy",
+    note: "It seems to simplify a lot: keep it for now, and see later whether we can do without it without losing expressiveness.",
+  },
 });
