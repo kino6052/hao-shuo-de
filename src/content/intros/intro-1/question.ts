@@ -18,7 +18,7 @@ export default introSection({
       en: "Miao-miao the cat sits next to a huge tangle of black lines. One clean straight line leaves the tangle and runs away to the right.",
       ru: "Кошка Miao-miao сидит рядом с огромным клубком чёрных линий. Из клубка выходит одна чистая прямая линия и уходит вправо.",
     },
-    pinyin: "Nà ge hěn nán. Zhè ge bù nán.",
+    pinyin: "{{Word:na4}}-ge {{word:hen3}} {{word:nan2}}. {{Word:zhe4}}-ge {{word:bu4}} {{word:nan2}}.",
     hanzi: "那个很难。这个不难。",
     en: "That one is very hard. This one is not hard.",
     ru: "Тот очень трудный. Этот не трудный.",

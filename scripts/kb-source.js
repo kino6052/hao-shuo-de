@@ -16,6 +16,7 @@ import { existsSync } from 'fs';
 import { resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { loadLessons } from './lessons.js';
+import { INTRO_IDS, importIntroFile } from './intros.js';
 import { wordRefIds } from '../src/lib/word-refs.js';
 import dictionary from '../src/data/dictionary.ts';
 import compositesData from '../src/data/composites.ts';
@@ -35,7 +36,7 @@ function trim(e) {
   }
   if (e.pinyin) out.pinyin = e.pinyin;
   if (e.ttsText) out.hanzi = e.ttsText;
-  if (e.type === 'example' || e.type === 'story' || e.type === 'answer') out.en = e.en ?? [];
+  if (e.type === 'example' || e.type === 'story' || e.type === 'answer' || e.type === 'image') out.en = e.en ?? [];
   return out;
 }
 
@@ -45,6 +46,11 @@ export async function loadSource() {
   for (const id of ['phrase-book', 'appendix-stories']) {
     const mod = await import(pathToFileURL(resolve(ROOT, 'src/content', `${id}.ts`)).href);
     texts.push({ id, entries: mod.default.map((e, i) => ({ ...trim(e), key: `${id}.${i}` })) });
+  }
+  // The intros' examples and picture captions are sentences too (kind 'intro_example').
+  for (const id of INTRO_IDS) {
+    const entries = (await importIntroFile(id, 'index.ts')).filter((e) => e.type === 'example' || e.type === 'image');
+    texts.push({ id, entries: entries.map((e) => ({ ...trim(e), key: `${id}.${e.key}` })) });
   }
   const grammar = resolve(ROOT, 'src/data/grammar/index.ts');
   const patterns = existsSync(grammar) ? (await import(pathToFileURL(grammar).href)).PATTERNS : [];

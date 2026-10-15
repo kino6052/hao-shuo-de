@@ -40,7 +40,7 @@ export default introSection({
       en: "A simple ladder with five rungs. The third rung is broken in the middle and drawn in orange. Miao-miao sits beside it.",
       ru: "Простая лестница с пятью перекладинами. Третья перекладина сломана посередине и нарисована оранжевым. Рядом сидит Miao-miao.",
     },
-    pinyin: "Zhè ge huài le.",
+    pinyin: "{{Word:zhe4}}-ge {{word:huai4}} {{word:le}}.",
     hanzi: "这个坏了。",
     en: "This one is broken.",
     ru: "Этот сломан.",

@@ -205,7 +205,7 @@ export function buildFacts(source) {
           seen.set(key, { w, module, kind, n: (seen.get(key)?.n ?? 0) + 1 });
         }
       }
-      if ((e.type === 'example' || e.type === 'story') && e.pinyin) {
+      if ((e.type === 'example' || e.type === 'story' || e.type === 'image') && e.pinyin) {
         sentence({ kind: 'lesson_example', lesson: lesson.id, module, key: e.key, pinyin: e.pinyin, hanzi: e.hanzi, en: e.en?.[0] }, wordsOfText(e.pinyin));
       } else if (e.type === 'answer') {
         const text = e.en?.[0];
@@ -220,7 +220,7 @@ export function buildFacts(source) {
   }
   for (const t of source.texts ?? []) {
     for (const e of t.entries) {
-      if ((e.type === 'example' || e.type === 'story') && e.pinyin) {
+      if ((e.type === 'example' || e.type === 'story' || e.type === 'image') && e.pinyin) {
         sentence({ kind: t.id === 'phrase-book' ? 'phrase_book' : 'story', lesson: t.id, module: '', key: e.key, pinyin: e.pinyin, hanzi: e.hanzi, en: e.en?.[0] }, wordsOfText(e.pinyin));
       }
     }

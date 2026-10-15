@@ -33,7 +33,7 @@ export default introSection({
       en: "A winding path of stepping stones leads from Miao-miao, who sits on the first orange stone, to a plain door in the top right corner.",
       ru: "Извилистая дорожка из камней ведёт от Miao-miao, которая сидит на первом оранжевом камне, к простой двери в правом верхнем углу.",
     },
-    pinyin: "Wǒ zǒu lù.",
+    pinyin: "{{Word:wo3}} {{word:zou3}} {{word:lu4}}.",
     hanzi: "我走路。",
     en: "I walk.",
     ru: "Я иду.",

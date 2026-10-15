@@ -24,7 +24,7 @@ export default introSection({
       en: "Miao-miao the cat sits alone on a doorstep, a small white cat with two orange autumn leaves beside it.",
       ru: "Кошка Miao-miao сидит одна на пороге: маленькая белая кошка и два оранжевых осенних листа рядом.",
     },
-    pinyin: "Wǒ shì Miāo-miao.",
+    pinyin: "{{Word:wo3}} {{word:shi4}} \"Miāo-miao\".",
     hanzi: "我是喵喵。",
     en: "I am Miao-miao.",
     ru: "Я Miao-miao.",

@@ -36,7 +36,7 @@ export default lesson(meta.id, {
         en: "Miao-miao the cat sits on a suitcase and says one sound four times. Four speech bubbles above it each hold one line: flat, rising, dipping, falling. The student tilts their head and listens.",
         ru: "Кошка Miao-miao сидит на чемодане и четыре раза произносит один и тот же звук. В четырёх облачках над ней по одной линии: ровная, поднимающаяся, ныряющая, падающая. Студент наклоняет голову и слушает.",
       },
-      pinyin: "mā, má, mǎ, mà.",
+      pinyin: "\"mā\", \"má\", \"mǎ\", \"mà\".",
       hanzi: "妈，麻，马，骂。",
       en: "One sound, four tones, four words.",
       ru: "Один звук, четыре тона, четыре слова.",

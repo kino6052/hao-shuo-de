@@ -22,7 +22,7 @@ export default introSection({
       en: "A plain door with a note on it. On the step, a cup of tea sends up a thin orange wisp of steam. Nobody is there.",
       ru: "Простая дверь с запиской. На пороге чашка чая, от неё поднимается тонкая оранжевая струйка пара. Никого нет.",
     },
-    pinyin: "Mén shàng yǒu zì.",
+    pinyin: "{{Word:men2}} {{word:shang4}} {{word:you3}} {{word:zi4}}.",
     hanzi: "门上有字。",
     en: "There are characters on the door.",
     ru: "На двери есть иероглифы.",

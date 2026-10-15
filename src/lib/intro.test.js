@@ -5,7 +5,7 @@ const first = introSection({
   id: 'first',
   prose: { en: ['<h2>Hi</h2>', 'One.'], ru: ['<h2>Привет</h2>', 'Раз.'] },
   image: { file: 'intro-9-first', alt: { en: 'A cat.', ru: 'Кошка.' }, pinyin: 'miāo', hanzi: '喵', en: 'Meow.' },
-  examples: [{ pinyin: 'Nǐ hǎo ma?', en: 'How are you?' }],
+  examples: [{ pinyin: 'Nǐ hǎo ma?', hanzi: '你好吗？', en: 'How are you?' }],
 });
 const second = introSection({ id: 'second', prose: { en: 'Two.', tldr: { en: 'Two' }, necessity: { en: 'Because' } } });
 

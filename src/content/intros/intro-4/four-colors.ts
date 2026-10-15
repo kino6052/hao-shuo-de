@@ -22,7 +22,7 @@ export default introSection({
       en: "Four small pictures of the same street corner, one for each season, each with one color: orange, blue, pale green, yellow.",
       ru: "Четыре маленькие картинки одного и того же угла улицы, по одной на каждое время года, и у каждой свой цвет: оранжевый, синий, бледно-зелёный, жёлтый.",
     },
-    pinyin: "Yī nián.",
+    pinyin: "{{Word:yi1}} {{word:nian2}}.",
     hanzi: "一年。",
     en: "One year.",
     ru: "Один год.",

@@ -32,7 +32,7 @@ export default introSection({
       en: "A huge full sack stands next to Miao-miao. Miao-miao holds a very small bag with an orange tie, and looks content.",
       ru: "Рядом с Miao-miao стоит огромный полный мешок. В лапе у кошки совсем маленький мешочек с оранжевой завязкой, и она довольна.",
     },
-    pinyin: "Wǒ yào xiǎo de.",
+    pinyin: "{{Word:wo3}} {{word:yao4}} {{word:xiao3}}-{{word:de}}.",
     hanzi: "我要小的。",
     en: "I want the small one.",
     ru: "Я хочу маленький.",

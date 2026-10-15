@@ -14,8 +14,8 @@
 import type { Entry } from "./chapter-entry-types.ts";
 import { imageEntry, langs, type Example, type LessonImage, type Localized, type Prose } from "./lesson.ts";
 
-/** An example sentence in an intro; the hanzi is only needed when it should be read aloud. */
-export type IntroExample = Omit<Example, "hanzi"> & { hanzi?: string };
+/** An example sentence in an intro, written like a lesson example (check-intro-sentences gates it). */
+export type IntroExample = Example;
 
 export interface IntroSection {
   /** The section's file name, without .ts. */

@@ -26,7 +26,7 @@ export default introSection({
       en: "Miao-miao sits on a table and the student sits across from it. Each has a speech bubble with a small picture of a bowl; Miao-miao's bubble also has a smile.",
       ru: "Miao-miao сидит на столе, напротив сидит студент. У каждого облачко с маленькой картинкой миски; в облачке Miao-miao ещё и улыбка.",
     },
-    pinyin: "Wǒ yào chī fàn.",
+    pinyin: "{{Word:wo3}} {{word:yao4}} {{word:chi1}} {{word:fan4}}.",
     hanzi: "我要吃饭。",
     en: "I want to eat.",
     ru: "Я хочу есть.",

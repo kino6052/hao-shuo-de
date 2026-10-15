@@ -18,7 +18,8 @@ export default introSection({
   },
   examples: [
     {
-      pinyin: "Nǐ hǎo ma?",
+      pinyin: "{{Word:ni3}} {{word:hao3}} {{word:ma}}?",
+      hanzi: "你好吗？",
       en: [
         "Hello, how are you? (literally: \"you good?\")"
       ],
@@ -27,7 +28,8 @@ export default introSection({
       ],
     },
     {
-      pinyin: "Wǒ zhīdào Hǎo-shuō-de.",
+      pinyin: "{{Word:wo3}} {{word:zhi1dao4}} \"Hǎo-shuō-de\".",
+      hanzi: "我知道好说的。",
       en: [
         "I know Hǎo-shuō-de."
       ],
