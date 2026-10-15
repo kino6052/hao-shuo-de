@@ -46,6 +46,7 @@ export default lessonModule({
     necessity: { en: "Now you can ask the way.", ru: "Теперь вы можете спросить дорогу." },
   },
   info: {
+    pattern: "hen-duo-noun",
     en: "{{word:lu4}}, road, way: {{Word:ni3}} {{word:zhi1dao4}} {{word:lu4}} {{word:ma}}? (Do you know the way?) {{word:che1}}, car: {{Word:che1}} {{word:zai4}} {{word:lu4}}-{{word:shang4}}. (The car is on the road.)",
     ru: "{{word:lu4}} — дорога, путь: {{Word:ni3}} {{word:zhi1dao4}} {{word:lu4}} {{word:ma}}? (Ты знаешь дорогу?) {{word:che1}} — машина: {{Word:che1}} {{word:zai4}} {{word:lu4}}-{{word:shang4}}. (Машина на дороге.)",
   },

@@ -36,6 +36,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "he-and",
     en: "A {{word:he2}} B-{{word:de}} {{word:guan1xi}}, relationship: {{Word:wo3}} {{word:he2}} {{word:ta1}}-{{word:de}} {{word:guan1xi}} {{word:hen3}} {{word:hao3}}. (He and I get along well.) {{Word:mei2}}-{{word:you3}} {{word:guan1xi}}! (It doesn't matter!)",
     ru: "A {{word:he2}} B-{{word:de}} {{word:guan1xi}} — отношения: {{Word:wo3}} {{word:he2}} {{word:ta1}}-{{word:de}} {{word:guan1xi}} {{word:hen3}} {{word:hao3}}. (У нас с ним хорошие отношения.) {{Word:mei2}}-{{word:you3}} {{word:guan1xi}}! (Ничего страшного!)",
   },

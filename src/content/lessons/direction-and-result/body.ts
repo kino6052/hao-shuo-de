@@ -52,6 +52,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "svo",
     en: "{{word:zuo4}}-{{word:xia4}} / {{word:zhan4}}-{{word:qi3}}-{{word:lai2}} / {{word:tang3}}-{{word:xia4}}, sit down / stand up / lie down: {{Word:ni3}} {{word:zuo4}}-{{word:xia4}}! (Sit down!)",
     ru: "{{word:zuo4}}-{{word:xia4}} / {{word:zhan4}}-{{word:qi3}}-{{word:lai2}} / {{word:tang3}}-{{word:xia4}} — сесть / встать / лечь: {{Word:ni3}} {{word:zuo4}}-{{word:xia4}}! (Садись!)",
   },

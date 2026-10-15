@@ -51,6 +51,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "svo",
     en: "{{word:kai1}} / {{word:guan1}} {{word:deng1}}, light on / off: {{Word:kai1}} {{word:deng1}}! (Turn on the light!) {{word:hen3}} {{word:ming2}}, bright: {{Word:deng1}} {{word:hen3}} {{word:ming2}}. (The light is bright.)",
     ru: "{{word:kai1}} / {{word:guan1}} {{word:deng1}} — включить / выключить свет: {{Word:kai1}} {{word:deng1}}! (Включи свет!) {{word:hen3}} {{word:ming2}} — яркий: {{Word:deng1}} {{word:hen3}} {{word:ming2}}. (Свет яркий.)",
   },

@@ -30,6 +30,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "qi-lai-start",
     en: "verb-{{word:qi3}}-{{word:lai2}}, seems: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}. (This looks good.) verb-{{word:xia4}}-{{word:qu4}}, keep going: {{Word:shuo1}}-{{word:xia4}}-{{word:qu4}}! (Keep talking!)",
     ru: "глагол-{{word:qi3}}-{{word:lai2}} — кажется: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}. (Это выглядит хорошо.) глагол-{{word:xia4}}-{{word:qu4}} — продолжать: {{Word:shuo1}}-{{word:xia4}}-{{word:qu4}}! (Говори дальше!)",
   },

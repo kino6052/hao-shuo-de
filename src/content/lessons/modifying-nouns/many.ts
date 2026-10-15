@@ -46,6 +46,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "de-modifier",
     items: [
       {
         en: "{{word:hen3}}-{{word:duo1}}-{{word:de}} + NOUN: {{word:hen3}}-{{word:duo1}}-{{word:de}} {{word:ren2}} (many people)",

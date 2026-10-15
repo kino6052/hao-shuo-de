@@ -48,6 +48,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "verb-result",
     en: "{{word:qi3}}-{{word:lai2}} (get up), {{word:shang4}}-{{word:lai2}} (come up), {{word:xia4}}-{{word:lai2}} (come down); with {{word:qu4}} for going away.",
     ru: "{{word:qi3}}-{{word:lai2}} (вставать), {{word:shang4}}-{{word:lai2}} (подняться сюда), {{word:xia4}}-{{word:lai2}} (спуститься сюда); с {{word:qu4}} — движение от говорящего.",
   },

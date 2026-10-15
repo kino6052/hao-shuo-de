@@ -43,6 +43,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "yi-yang-same",
     items: [
       {
         en: "{{word:bu4}} {{word:yi1}}-{{word:yang4}}, different: {{Word:wo3}} {{word:yao4}} {{word:bu4}}-{{word:yi1}}-{{word:yang4}}-{{word:de}} {{word:yi1fu}}. (I want different clothes.)",

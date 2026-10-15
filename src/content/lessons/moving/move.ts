@@ -37,6 +37,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "svo",
     en: "{{word:dong4}}, move: {{Word:bu4}} {{word:yao4}} {{word:dong4}}! (Don't move!)",
     ru: "{{word:dong4}} — двигаться: {{Word:bu4}} {{word:yao4}} {{word:dong4}}! (Не двигайся!)",
   },
