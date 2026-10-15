@@ -35,7 +35,7 @@ Rules that bite:
 - Do not edit between `<!-- generated:… -->` markers; change the comment they come from (see "This README").
 - Text with backslashes goes in with a file-writing tool, not a shell heredoc.
 
-Plans and decisions: [BOOK_PLAN.md](BOOK_PLAN.md) (book, decision log D1…), [KB_PLAN.md](KB_PLAN.md) (knowledge base, K1…), [BOOK_STRUCTURE.md](BOOK_STRUCTURE.md) (the tree), [OPTIMIZATIONS.md](OPTIMIZATIONS.md) (why `npm run check` is quick, the caches, the switches). Search them by decision number (`grep -n "D63" BOOK_PLAN.md`).
+Plans and decisions: [BOOK_PLAN.md](BOOK_PLAN.md) (book, decision log D1…), [KB_PLAN.md](KB_PLAN.md) (knowledge base, K1…), [WRITING_PLAN.md](WRITING_PLAN.md) (writing texts in Hao-shuo-de, W1…), [BOOK_STRUCTURE.md](BOOK_STRUCTURE.md) (the tree), [OPTIMIZATIONS.md](OPTIMIZATIONS.md) (why `npm run check` is quick, the caches, the switches). Search them by decision number (`grep -n "D63" BOOK_PLAN.md`).
 
 ## The language now
 
@@ -54,7 +54,7 @@ Plans and decisions: [BOOK_PLAN.md](BOOK_PLAN.md) (book, decision log D1…), [K
 | Gates (`npm run check`) | 17 |
 | Test files (`npm test`) | 44 |
 
-The language numbers are the last row of `kb/scoreboard.csv` (2026-10-15, refactors/K4.ts: 20 op(s)); a refactor adds a new row.
+The language numbers are the last row of `kb/scoreboard.csv` (2026-10-15, refactors/K5.ts: 45 op(s)); a refactor adds a new row.
 <!-- /generated:facts -->
 
 ## The book
