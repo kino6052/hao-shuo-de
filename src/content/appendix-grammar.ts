@@ -496,6 +496,17 @@ const content: Entry[] = [
           ],
           "zh": []
         }
+      },
+      {
+        "text": {
+          "en": [
+            "Who + {{word:shuo1}} / {{word:wen4}}: what was said: {{Word:ta1}} {{word:wen4}}: {{Word:zhe4}} {{word:shi4}} {{word:shen2me}}? (She asks: What is this?)"
+          ],
+          "ru": [
+            "Кто + {{word:shuo1}} / {{word:wen4}}: что сказано: {{Word:ta1}} {{word:wen4}}: {{Word:zhe4}} {{word:shi4}} {{word:shen2me}}? (Она спрашивает: что это?)"
+          ],
+          "zh": []
+        }
       }
     ]
   },

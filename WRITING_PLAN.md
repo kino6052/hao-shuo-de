@@ -2,7 +2,7 @@
 
 How a program, or Claude as an agent, turns any text into Hao-shuo-de: first break the text into its simplest ideas, then find the words for each idea (or reword it until the words exist), then build sentences the grammar accepts, then read them back to check nothing was lost or added.
 
-Status: **decided, 2026-10-15** (W1–W14, asked one at a time). Next: the pilot text for lesson 11 (§6).
+Status: **decided, 2026-10-15** (W1–W18, asked one at a time). The pilot text for lesson 11 has been through all six steps and waits for the author's review (§6).
 
 ## 0. Decisions
 
@@ -22,6 +22,10 @@ Status: **decided, 2026-10-15** (W1–W14, asked one at a time). Next: the pilot
 | W12 | **Claude writes the English originals** (the author, 2026-10-15): for each lesson, a short English text (an everyday scene) built around that lesson's new words and patterns. The author approves the English before it goes through the steps. |
 | W13 | **A pilot text by hand comes first** (the author, 2026-10-15): Claude takes one lesson through all six steps with today's tools (`kb_parse`, `kb_check_form`, `kb_word`) and shows the sketch, the lookups, the text and the loss report. What was slow or guessed by hand decides which new tool is built first. |
 | W14 | **The pilot is lesson 11, Space 2 — Moving** (the author, 2026-10-15): mid-book, enough words for a small story about going somewhere and arriving, and still a real word limit, so descriptions and gaps show up. |
+| W15 | **The writer proposes the book structures a text needs** (the author, 2026-10-15: "when agent is working it needs to propose what structures from the book will be needed"). Between the sketch and the sentences, Claude lists for each idea the grammar pattern it will use, the lesson that teaches it, and the book phrasing it leans on. A structure taught after the text's lesson, or taught by no lesson, is flagged: the idea is reworded with an earlier structure, or the structure is proposed for the book (a lesson to teach it, K26). The list is shown with the draft and feeds the lesson map. |
+| W16 | **A person with no word is named, then described; a logged gap may come back weaker** (the author, 2026-10-15, pilot question 1). When a needed idea about a person or a place has no word at the text's level (a friend at lesson 11), the text gives a name in quotes and describes it once with allowed words ("Wǒ zhīdào 'Ānnà'. 'Ānnà' shì hǎo rén."); the name carries it after that (cast list). A needed idea may then come back "weaker" in the read-back, as long as it is logged as a gap (W9); this softens W11 for that case only. |
+| W17 | **Quoting speech is taught in lesson 6** (the author, 2026-10-15, pilot question 2): `speech-quote` (X shuō: … / X wèn: …) had no lesson, so dialogue failed at every level. Lesson 6 (questions) teaches wèn and answering, so it gets the pattern and a small module that Claude writes; the move is previewed first (K20, K26). |
+| W18 | **A blind reader for every text** (the author, 2026-10-15, pilot question 3): step 5's read-back is done by a subagent that sees only the Hao-shuo-de, the word-by-word gloss and the lesson, never the English or the sketch. Claude compares its reading with the sketch. One extra agent run per text. |
 
 ## 1. What is already here to build on
 
@@ -81,9 +85,11 @@ Each concept keeps every candidate with its tier, so the choice can be changed l
 
 Inside one text a thing is described fully the first time and named short after (dà huài dòng-wù, then huài dòng-wù or tā), like the stories do. The text keeps a **cast list** for this.
 
-### Step 3. Build the sentences
+### Step 3. Propose the structures, then build the sentences
 
-Each idea, or a few linked ideas, becomes one sentence:
+First the **structures list** (W15): for each idea, the pattern it will use, the lesson that teaches it, and the book phrasing it leans on. A pattern taught after the text's lesson, or by no lesson, is flagged before any sentence is written.
+
+Then each idea, or a few linked ideas, becomes one sentence:
 
 - choose a grammar pattern for the idea's shape (does, is, has, compares, because…), preferring the simplest and, for a learner text, only the ones taught by the chosen lesson;
 - put the words from step 2 in it;
@@ -150,7 +156,7 @@ The result is a **loss report** per text: which colour ideas came out weaker or 
 
 ## 6. Order of work
 
-- [ ] **Pilot, lesson 11** (W13, W14). Claude writes the English scene around the lesson's new words and patterns (W12); **author:** approves the English. Then Claude takes it through the six steps by hand and shows: the sketch, the lookups (with the tier each word came from), the text, the read-back and the loss report. Notes what was slow or guessed.
+- [ ] **Pilot, lesson 11** (W13, W14). Draft done 2026-10-15: [review/writing/moving-pilot.md](review/writing/moving-pilot.md) (21 lines; all of lesson 11's words and modules; "friend" comes back weaker, allowed by W16; dialogue needs `speech-quote`, which lesson 6 is to teach, W17). The three answers are in (W16–W18), the blind read is done and three lines were fixed after it. Waiting for the author's review of the text, the say-ask module and the questions at the end of the report. Claude writes the English scene around the lesson's new words and patterns (W12); **author:** approves the English. Then Claude takes it through the six steps by hand and shows: the sketch, the lookups (with the tier each word came from), the text, the read-back and the loss report. Notes what was slow or guessed.
 - [ ] **The first tool**, picked from the pilot's notes: `kb_lookup` (with tier 0, the book's phrasings), `kb_check_text` (with the lesson level), or `kb_gloss`.
 - [ ] **The reading module shape** (W10): the text in the book's format and the stored sketch next to it; the gates read it with the lesson.
 - [ ] **The stories test** (idea 1): the ten stories' English through the steps, compared with the book's lines, to tune the lookup and the read-back.

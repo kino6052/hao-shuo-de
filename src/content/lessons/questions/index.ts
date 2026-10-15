@@ -9,6 +9,7 @@ import yesNo from "./yes-no.ts";
 import what from "./what.ts";
 import whyHow from "./why-how.ts";
 import answer from "./answer.ts";
+import sayAsk from "./say-ask.ts";
 
 export const meta = {
   id: "questions",
@@ -32,5 +33,6 @@ export default lesson(meta.id, {
     what,
     whyHow,
     answer,
+    sayAsk,
   ],
 });

@@ -26,5 +26,9 @@
   {
     "text": "Xiè-xie nǐ gěi wǒ shuǐ.",
     "why": "lesson 22 uses a doubled verb (doubled words are taught in lesson 23); reword or move the pattern earlier"
+  },
+  {
+    "text": "Sān-ge dà dòng-wù zài yī-ge jiā-lǐ huó: yī-ge dà-de, yī-ge bù dà bù xiǎo-de, yī-ge xiǎo-de.",
+    "why": "the colon brings in a list, not speech; it parsed only while speech-quote let a quote end anywhere (tightened 2026-10-15); reword or add a list-after-a-colon pattern"
   }
 ]
