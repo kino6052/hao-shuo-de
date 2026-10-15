@@ -1,5 +1,26 @@
 #!/bin/sh
-# Keeps the generated parts of the READMEs current on every commit (scripts/generate-readme.js).
-# It never blocks a commit: if the generator fails it says so and the commit goes on.
+# What every commit does, in order:
+#   1. refreshes the generated parts of the READMEs (scripts/generate-readme.js) and stages them -- never blocks
+#   2. checks that src/data/*/index.ts matches the data files (scripts/check-data.js) -- about 3 s
+#   3. runs the quick tests (node scripts/test.js --fast): 640 tests over the fixture language, about 6 s
+# Together about 10 s. Everything slower waits: `node scripts/test.js` before a push (the solver and the real
+# data), `node scripts/test.js --all` when asked (a copy of the repo, a git ref, the server over stdio), and
+# `npm run check` for the 17 book gates.
+#
+# To commit without 2 and 3: git commit --no-verify
 node scripts/generate-readme.js --stage || echo "pre-commit: the README refresh failed (run 'npm run readme' to see why); committing anyway."
+
+if ! node scripts/check-data.js; then
+  echo ""
+  echo "pre-commit: the generated data is out of date -- run 'npm run data' and stage what it writes."
+  echo "            to commit anyway: git commit --no-verify"
+  exit 1
+fi
+
+if ! node scripts/test.js --fast; then
+  echo ""
+  echo "pre-commit: a quick test fails. Run 'npm test' to see it again."
+  echo "            to commit anyway: git commit --no-verify"
+  exit 1
+fi
 exit 0

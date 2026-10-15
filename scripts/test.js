@@ -1,15 +1,26 @@
-// Runs every test file, several at a time, the slowest first.
+// Runs the test files in three tiers: the quick ones on every commit, the rest before a push or when asked.
 //
-//   node scripts/test.js                  all test files, 4 at a time
-//   node scripts/test.js --fast           leave out the slow files (the ones in SLOW; about 20 s or more alone)
+//   node scripts/test.js --fast           every commit (the hook in .githooks/): the tests that only read
+//                                         fixtures and call no solver -- 640 of them, in one bun process
+//   node scripts/test.js                  before a push: those and the ones that ask the solver or use the
+//                                         real data, in a process each, 4 at a time
+//   node scripts/test.js --all            when asked: those and the ones that copy the repo, export a git
+//                                         ref or spawn a server
 //   node scripts/test.js --jobs 8         more at a time
-//   node scripts/test.js --serial         one at a time (the old `bun test`)
-//   node scripts/test.js <path or filter> only the files whose path contains it (e.g. kb, move-effects)
+//   node scripts/test.js --serial         one file at a time, each in its own process
+//   node scripts/test.js <path or filter> only the files whose path contains it (e.g. kb, move-effects);
+//                                         a filter runs the file whatever tier it is in
 //
-// `bun test` runs the files one after another, and a few of them (the real data through clingo, a
-// copy of the repo, the moves) take a minute each, so the whole run was the sum. Here the run takes
-// about as long as the slowest file. Files run in separate bun processes, so they cannot disturb
-// each other; each gets a long time limit because a busy machine slows every test down.
+// Why tiers: the cost is not spread evenly. 640 of the tests are plain functions over the fixture language
+// (src/lib/kb/fixture.js) and together take about five seconds; the other hundred-odd spawn clingo, parse the
+// whole book, copy the repo or start a server, and take two minutes. The slow ones do not catch the mistakes
+// an edit to the book or to a rule makes -- the quick ones do -- they catch a mistake in the KB's own
+// machinery, which changes far less often. So they wait for a push, or for `--all`.
+//
+// The quick tier shares one bun process (nothing in it writes files or spawns anything, so there is nothing to
+// keep apart, and 28 bun starts cost more than the tests). Everything else gets a process per file, so a test
+// that spawns clingo or copies the repo cannot disturb another, and a long time limit because a busy machine
+// slows every test down.
 //
 // Output: one line per file with its time; the log of a file only when it fails. Exit 1 if any fails.
 
@@ -20,9 +31,12 @@ import { join } from 'node:path';
 import { progress } from './progress.js';
 
 const SKIP = new Set(['node_modules', 'dist', 'tools', '.git', '.claude']);
-// Slow files, slowest first: they use the real data through clingo or copy the repo. `--fast` leaves them out.
-const SLOW = ['kb/real', 'refactor-check', 'move-effects', 'kb/mcp', 'refactor-ops', 'scripts/parse-diff', 'kb/clingo', 'kb/atoms', 'kb/candidates'];
-const SLOW_FIRST = [...SLOW, 'grammar/grammar'];
+// Files that ask clingo (even about the fixture: every answer is a spawned solver, about half a second) or
+// read the real data. `--fast` leaves them out.
+const SLOW = ['kb/real', 'kb/atoms', 'kb/candidates', 'kb/clingo', 'move-effects', 'kb/whatif', 'kb/kb.test', 'kb/mcp.test', 'kb/relations', 'kb/facts', 'kb/set-cover'];
+// A copy of the repo, a git ref, a server over stdio: only with `--all`.
+const ON_REQUEST = ['refactor-check', 'scripts/parse-diff', 'kb/mcp-server'];
+const SLOW_FIRST = [...ON_REQUEST, ...SLOW, 'refactor-ops', 'grammar/grammar'];
 const TIME_LIMIT_MS = 180_000;
 
 function testFiles(dir, out = []) {
@@ -45,15 +59,34 @@ const rank = (f) => {
   const i = SLOW_FIRST.findIndex((s) => f.includes(s));
   return i < 0 ? SLOW_FIRST.length : i;
 };
+// which tiers run: a filter names files itself, so it takes them whatever tier they are in
+const left = flag('--all') ? [] : flag('--fast') ? [...SLOW, ...ON_REQUEST] : ON_REQUEST;
 const files = testFiles('.')
   .map((f) => f.replace(/^\.\//, ''))
-  .filter((f) => !filters.length || filters.some((x) => f.includes(x)))
-  .filter((f) => !flag('--fast') || !SLOW.some((s) => f.includes(s)))
+  .filter((f) => (filters.length ? filters.some((x) => f.includes(x)) : !left.some((s) => f.includes(s))))
   .sort((a, b) => rank(a) - rank(b) || a.localeCompare(b));
 
 if (!files.length) {
   console.error('no test file matches', filters.join(' '));
   process.exit(1);
+}
+
+// the quick tier in one process: one `bun test` over every file. Only the count is printed (641 lines of
+// "(pass) ..." is what a commit hook must not say); a failure prints the whole log.
+if (flag('--fast') && !filters.length && !flag('--serial') && jobsAt < 0) {
+  const t = Date.now();
+  const bar = progress({ total: 1, label: 'files' });
+  bar.start(`${files.length} files in one process`);
+  const child = spawn('bun', ['test', ...files, '--timeout', String(TIME_LIMIT_MS)], { stdio: ['ignore', 'pipe', 'pipe'] });
+  let log = '';
+  child.stdout.on('data', (d) => (log += d));
+  child.stderr.on('data', (d) => (log += d));
+  const code = await new Promise((done) => (child.on('error', (e) => ((log += e.message), done(1))), child.on('close', done)));
+  bar.close();
+  if (code) console.log(log.trim());
+  const says = (re) => re.exec(log)?.[1] ?? '?';
+  console.log(`${files.length} files in ${((Date.now() - t) / 1000).toFixed(0)}s in one process: ${says(/(\d+) pass/)} pass, ${says(/(\d+) fail/)} fail (fixtures only; ${SLOW.length + ON_REQUEST.length} files wait for a push or --all)`);
+  process.exit(code ? 1 : 0);
 }
 
 const bar = progress({ total: files.length, label: 'files' });
@@ -86,5 +119,6 @@ bar.close();
 const failed = results.filter((r) => !r.ok);
 for (const r of failed) console.log(`\n━━ ${r.file} ━━\n${r.log.trim()}`);
 const count = (re) => results.reduce((n, r) => n + Number(re.exec(r.log)?.[1] ?? 0), 0);
-console.log(`\n${files.length} files in ${((Date.now() - t0) / 1000).toFixed(0)}s with ${jobs} at a time: ${count(/(\d+) pass/)} pass, ${count(/(\d+) fail/)} fail${failed.length ? `; failing files: ${failed.map((r) => r.file).join(', ')}` : ''}`);
+const tier = flag('--all') || filters.length ? '' : flag('--fast') ? ` (fixtures only; ${SLOW.length + ON_REQUEST.length} files wait for a push or --all)` : ` (${ON_REQUEST.length} files wait for --all)`;
+console.log(`\n${files.length} files in ${((Date.now() - t0) / 1000).toFixed(0)}s with ${jobs} at a time: ${count(/(\d+) pass/)} pass, ${count(/(\d+) fail/)} fail${failed.length ? `; failing files: ${failed.map((r) => r.file).join(', ')}` : ''}${tier}`);
 process.exit(failed.length ? 1 : 0);

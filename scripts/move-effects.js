@@ -122,7 +122,7 @@ export async function moveEffects({ kb, lessons }, spec) {
   const moved = applyMove(lessons, source.patterns ?? [], spec);
   // the KB's own lessons move the same way; its patterns are the ones whose `taught` may have changed
   const movedKb = applyMove(source.lessons, source.patterns ?? [], spec);
-  const after = createKb({ ...source, lessons: movedKb.lessons, patterns: movedKb.patterns });
+  const after = createKb({ ...source, lessons: movedKb.lessons, patterns: movedKb.patterns }, { parseMemo: kb.parseMemo });
 
   const base = baseline(kb, lessons);
   const wordsBefore = base.words;

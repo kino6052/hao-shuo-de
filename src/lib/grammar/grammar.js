@@ -25,8 +25,8 @@ export function ruleWords(hsd) {
   return ids;
 }
 
-// classes the lexicon makes up itself
-const BUILT_IN = ['comma', 'quoted', 'unknown', 'again'];
+// classes the lexicon makes up itself (slot: a letter or … that stands for something left open)
+const BUILT_IN = ['comma', 'quoted', 'unknown', 'again', 'slot'];
 
 export function buildGrammar(patterns, { words = {}, composites = [] } = {}) {
   const rules = [];

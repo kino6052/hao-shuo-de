@@ -6,6 +6,7 @@ import { applyMove, earlyWords, moveEffects, parseSpec, renderMove } from './mov
 import { loadSource } from './kb-source.js';
 import { loadLessons } from './lessons.js';
 import { createKb } from '../src/lib/kb/kb.js';
+import { parseMemo } from './parse-memo.js';
 
 const dictionary = { shi4: { term: 'shì' }, ren2: { term: 'rén' }, hao3: { term: 'hǎo' } };
 const vocab = (id, module) => ({ key: `v-${id}`, type: 'vocab', module, term: `{{word:${id}}}`, en: ['gloss'] });
@@ -87,7 +88,8 @@ describe('on the real book', () => {
   let kb;
   let lessons;
   beforeAll(async () => {
-    kb = createKb(await loadSource());
+    // the parse memory on disk (scripts/parse-memo.js): the reports only ask whether sentences parse
+    kb = createKb(await loadSource(), { parseMemo: parseMemo() });
     lessons = await loadLessons();
   }, 120_000);
 

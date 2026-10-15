@@ -78,6 +78,7 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
     checkForm: (args) => checkForm(words, args),
     parse: parseText,
     parseUpTo,
+    parseMemo, // the memory its parses use (null: none), for a KB made from this one
     patternLesson: (id) => taughtIn(patternById.get(id) ?? {}),
     parser: parseText.parser,
 

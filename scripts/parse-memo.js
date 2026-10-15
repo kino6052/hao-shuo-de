@@ -39,7 +39,13 @@ const wordFacts = (words) =>
 const compositeFacts = (cs) => cs.map((c) => [c.zh, c.py, c.pos ?? null, c.hsd ?? null]);
 const ruleFacts = (patterns) => patterns.map((p) => [p.id, p.rules.map((r) => [r.lhs, r.hsd])]);
 
-export function parseMemo({ dir = process.env.HSD_PARSE_MEMO_DIR || resolve(CACHE_DIR, 'parse-memo') } = {}) {
+// where the memory lives; a copy of the repo (refactor-check.js, parse-diff.js) is pointed here too, so what it
+// parses is remembered for the next copy and for this repo
+export const MEMO_DIR = process.env.HSD_PARSE_MEMO_DIR || resolve(CACHE_DIR, 'parse-memo');
+// -> the environment for a script run in a copy of the repo, so it shares this memory
+export const memoEnv = () => ({ ...process.env, HSD_PARSE_MEMO_DIR: MEMO_DIR });
+
+export function parseMemo({ dir = MEMO_DIR } = {}) {
   const spaces = new Map(); // name -> { entries: Map, fresh: Map }
   let flushed = false;
 

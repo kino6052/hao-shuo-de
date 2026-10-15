@@ -1,0 +1,323 @@
+# Same-form groups, sorted (rel-sameform)
+
+Claude's sort of the 303 groups of composites that share a description (2026-10-15). Data: `review/proposals/same-form-sort.json`.
+
+- **different** (24): the words mean different things, so one form misleads. **Author:** check these; each needs its own form (a composite batch) or a "keep".
+- **synonyms** (131): the same meaning. They can become synonym groups (src/data/maps/synonyms.ts).
+- **close** (146): one family, often under a catch-all root (zuò, yào): fine as long as each word has its own form too.
+- **senses** (2): not one form at all: the words are different senses with the same sound.
+
+## Different (24)
+
+- **zhēn**: 一定 certainly · 太 too · 真 true · 这么 so, like this · 非常 very · 其实 actually · 真实 true, real · 的确 indeed · 确实 indeed · 实在 really, honestly. two meanings: truly / indeed (真 真实 一定 其实 的确 确实 实在) and very / too / so (太 非常 这么); the intensifiers could take hěn or tài instead.
+- **duì**: 对 facing · 为 for · 往 toward · 嗯 uh-huh · 正确 correct · 准 accurate · 向 toward · 面对 face. two senses of duì: toward (对 往 向 为 面对) and right / yes (正确 准 嗯); mark the sense (duì#right) as for xīn#new.
+- **dōng-xi**: 事 matter, affair · 东西 thing · 事情 matter · 产品 product · 事物 thing · 物品 article, item. a thing you can hold (东西 产品 物品 事物) and a matter that happens (事 事情); Mandarin keeps them apart, shì could say the second.
+- **fāng-fǎ**: 方法 method, manner · 办法 way, solution · 主意 idea · 行为 behavior · 方式 way, method. way and method fit; 行为 (behavior) is how someone acts, not a way to do something; 主意 (idea) is closer to xiǎng-fǎ, which it also has.
+- **yī-xià**: 一下 a moment · 一会儿 a while · 突然 suddenly · 时刻 moment · 忽然 suddenly. a moment / a while (一下 一会儿 时刻) and suddenly (突然 忽然); suddenly needs its own form.
+- **wài-miàn**: 外面 outside · 自然 nature; naturally · 外边 outside · 表面 surface. outside and surface fit; 自然 (nature) is not "outside"; it could be the world no one made.
+- **néng zuò-de dōng-xi**: 权利 right · 作用 function, effect · 功能 function · 能力 ability. three meanings: what a thing is for (作用 功能), what a person can do (能力) and what a person may do (权利, a right).
+- **yuè**: 月 moon · 月亮 moon · 月份 month. the moon (月 月亮) and a month (月份); Mandarin uses 月 for both, but 月份 could be yuè-de shí-jiān.
+- **nán-hái-zi**: 儿子 son · 男孩儿 boy · 男孩子 boy; son. a son (儿子, family) and a boy (男孩儿, age); the kinship wording rule keeps family words apart.
+- **nǚ-hái-zi**: 女儿 daughter · 女孩儿 girl · 女孩子 girl; daughter. a daughter (女儿, family) and a girl (女孩儿, age); the kinship wording rule keeps family words apart.
+- **duō dà**: 年龄 age · 程度 degree, extent · 年纪 age. age (年龄 年纪) and degree (程度); duō dà fits age, degree is how much.
+- **dà**: 大 big · 重 heavy. big (大) and heavy (重); heavy could be hěn zhòng or nán ná.
+- **zhòng-yào**: 重要 important · 严重 serious. important (重要) and serious (严重); serious could be hěn huài.
+- **rì**: 太阳 sun · 日子 day; life. the sun (太阳) and a day (日子); rì is both, but 日子 could be tiān.
+- **jiǎo**: 脚 foot · 腿 leg. a foot (脚) and a leg (腿); the leg could be the part above the foot.
+- **zuò hǎo**: 准备 prepare · 修 repair. prepare (准备) and repair (修); make it good again is not get it ready.
+- **tián**: 可爱 cute, lovely · 甜 sweet. sweet (甜) and cute (可爱); cute is said as sweet only as a figure of speech.
+- **jué-de hǎo**: 满意 satisfied · 舒服 comfortable. satisfied (满意) and comfortable (舒服); satisfied is about how something turned out, comfortable about the body.
+- **guó-jiā-de jué-dìng-zhě**: 政府 government · 总统 president. a government (政府, a group) and a president (总统, one person).
+- **xué-wán le**: 毕业 graduate · 下课 class is over. graduate (毕业, school is over for good) and class is over (下课, for today).
+- **bù yào le**: 够 enough · 放弃 give up. enough (够) and give up (放弃); bù yào le fits give up, enough already has hǎo le.
+- **chī-de dōng-xi**: 面包 bread · 食品 food. food (食品) and bread (面包); bread needs its own form, like miàn zuò-de chī-de dōng-xi.
+- **hěn kāi-xīn**: 幸福 happiness, happy · 兴奋 excited. happiness (幸福, a lasting good life) and excited (兴奋, a burst of feeling).
+- **liù-miàn dōu shì fāng-de dōng-xi**: 盒子 box · 立方体 cube. a box (盒子) and a cube (立方体); not every box is square on all six faces.
+
+## Synonyms (131)
+
+- **dōu**: 都 all · 全 whole, all · 完全 completely · 全都 all · 全部 all, whole. all, whole, completely.
+- **yī-yàng**: 一样 same · 一致 consistent, the same · 同 same; together; with · 同样 same · 相同 same. same.
+- **lù**: 路 road · 街 street · 马路 road · 道 path, way · 道路 road. road, street, path.
+- **kāi-xīn**: 高兴 happy, glad · 开心 happy · 快乐 happy · 愉快 pleasant, cheerful. happy.
+- **"Zhōngguó" huà**: 中文 Chinese (language) · 汉语 Chinese (language) · 普通话 Mandarin · 语文 Chinese (school subject). the Chinese language; 语文 is the school subject.
+- **hǎo-kàn**: 好看 good-looking · 漂亮 beautiful · 美 beautiful · 美丽 beautiful. good-looking, beautiful.
+- **xiě-de kàn-de dōng-xi**: 画 draw; painting · 图 picture, drawing · 图片 picture, image · 图画 drawing. picture, drawing.
+- **yòu**: 再 again · 又 again · 重新 again, anew. again.
+- **néng**: 可以 can, may · 能 be able to · 能够 can, be able to. can.
+- **hé**: 和 and · 跟 with, and · 同 same; together; with. and, with.
+- **yī-qǐ**: 一起 together · 一块儿 together · 同 same; together; with. together.
+- **zǎo-shang**: 上午 morning · 早上 morning · 早晨 morning. morning.
+- **cóng**: 从 from · 由 by, from · 自 from. from.
+- **bié-de**: 其他 other · 别的 other · 另外 other; besides. other.
+- **jiào-de cí**: 名字 name · 名 name · 姓名 full name. name.
+- **nǚ-rén**: 女 female · 女人 woman · 妇女 woman. woman.
+- **hái-shì**: 还是 or (choosing) · 或 or · 或者 or. or.
+- **guó-jiā-lǐ-de dì-fang**: 城市 city · 城 city, town · 市 city. city.
+- **yǒu-de**: 一些 some · 些 some · 有的 some. some.
+- **cháng-cháng**: 常 often · 经常 often · 常常 often. often.
+- **wǎng-shàng**: 网上 online · 在线 online · 线上 online. online.
+- **chī-fàn-de dì-fang**: 餐厅 restaurant · 饭店 restaurant · 饭馆 restaurant. restaurant.
+- **wèi-shēng-jiān**: 卫生间 bathroom · 厕所 toilet · 洗手间 restroom. toilet, restroom.
+- **yī-qǐ shuō-huà**: 聊天儿 chat · 聊 chat · 谈话 talk, chat. chat.
+- **xiàn-zài-de yàng-zi**: 情况 situation · 状况 condition, situation · 状态 state. situation, condition, state.
+- **rén-rén dōu zhīdào-de**: 有名 famous · 知名 well-known · 著名 famous. famous.
+- **hǎo-hǎo kàn**: 查 check · 检查 inspect · 查看 check, look over. check, inspect.
+- **zhǒng**: 种 kind · 种类 kind, type · 类 category, kind. kind.
+- **hé bié-de yī-yàng**: 一般 ordinary · 普通 ordinary · 平常 usual, ordinary. ordinary.
+- **hěn duō cì zuò**: 练习 practice, exercise · 练 practice · 训练 train. practice, train.
+- **zhēn hǎo**: 棒 great; stick · 牛 cow; awesome · 优秀 excellent. great, excellent.
+- **xué**: 学 learn · 学习 study. learn, study.
+- **kāi**: 开 open · 打开 open. open.
+- **xiàn-zài**: 现在 now · 目前 at present. now.
+- **wèn**: 问 ask · 提问 ask a question. ask.
+- **hái-zi**: 孩子 child · 小孩儿 child. child.
+- **māma**: 妈妈 mom · 母亲 mother. mother.
+- **shí-jiān**: 时间 time · 时 time. time.
+- **suàn-de jī**: 电脑 computer · 计算机 computer. computer.
+- **yī-dìng**: 一定 certainly · 肯定 definitely. certainly.
+- **X qián**: 以前 before · 之前 before. before.
+- **X hòu**: 以后 after, later · 之后 after. after.
+- **nǎ-lǐ**: 哪里 where · 哪儿 where. where.
+- **shēngyīn**: 声音 sound · 声 sound. sound.
+- **zěnme**: 怎么 how · 怎样 how. how.
+- **zhǎo**: 找 hunt · 寻找 look for. look for.
+- **míng-bái**: 明白 understand · 懂 understand. understand.
+- **bù nán**: 简单 simple, easy · 容易 easy. easy.
+- **bāng-rén-xué-de rén**: 老师 teacher · 教师 teacher. teacher.
+- **shēntǐ**: 身体 body · 身 body. body.
+- **zhè-yàng**: 这么 so, like this · 这样 like this. like this.
+- **jìn**: 进 enter · 进入 enter. enter.
+- **nà-yàng**: 那么 then; so · 那样 like that. like that.
+- **nán**: 难 difficult · 困难 difficult; difficulty. difficult.
+- **yī-xià yǐ-qián**: 刚 just now · 刚才 just now. just now.
+- **bié-de rén**: 别人 other people · 人家 other people. other people.
+- **yǎnjing**: 眼睛 eye · 眼 eye. eye.
+- **kuài zǒu**: 跑 run · 跑步 run, jog. run.
+- **shì wǒ bù hǎo**: 对不起 sorry · 不好意思 sorry, excuse me. sorry.
+- **bàba**: 爸爸 dad · 父亲 father. father.
+- **lì**: 力 strength · 力量 strength. strength.
+- **wán**: 结束 end · 完 finish. finish, end.
+- **bù ràng X biàn huài**: 保护 protect · 保 protect. protect.
+- **hé rén yī-qǐ zuò**: 参加 take part · 参与 participate. take part.
+- **huí-huà**: 回答 answer · 答 answer. answer.
+- **duì wèn-de rén shuō**: 回答 answer · 答 answer. answer.
+- **qī-tiān**: 星期 week · 周 week. week.
+- **hěn bù yī-yàng**: 特别 special · 特殊 special. special.
+- **yánsè**: 颜色 color · 色彩 color. color.
+- **shí-wù**: 食物 food · 食品 food. food.
+- **yī-xiē**: 一些 some · 些 some. some.
+- **bù dòng**: 停 stop · 停止 stop. stop.
+- **yòu-biān**: 右 right (side) · 右边 right side. right side.
+- **jué-de yī-yàng**: 同意 agree · 赞成 approve, agree. agree.
+- **zuǒ-biān**: 左 left (side) · 左边 left side. left side.
+- **hǎo wánr**: 有意思 interesting, fun · 有趣 interesting. interesting, fun.
+- **kàn wài-miàn-de kǒu**: 窗户 window · 窗 window. window.
+- **hóng-sè**: 红 red · 红色 red. red.
+- **zài wǎng-shàng**: 网上 online · 在线 online. online.
+- **ná yī-ge**: 选 choose · 选择 choose. choose.
+- **nà-lǐ**: 那里 there · 那儿 there. there.
+- **lǐ-miàn**: 里面 inside · 内 inside. inside.
+- **hēi-sè**: 黑 black · 黑色 black. black.
+- **bù-yòng**: 不用 no need · 不必 need not. no need.
+- **chū-qù**: 出去 go out · 出门 go out. go out.
+- **zài shuǐ-lǐ wánr**: 游泳 swim · 游 swim. swim.
+- **zhè-biān**: 这边 here, this side · 这儿 here. here, this side.
+- **méi xiǎng-dào huì kàn-dào**: 遇见 meet · 遇到 come across. come across.
+- **nà-biān**: 那边 over there · 那儿 there. there, that side.
+- **hǎo-wánr**: 好玩儿 fun · 有趣 interesting. fun.
+- **méi-yǒu guānxi**: 没事 it's nothing · 没关系 never mind. never mind.
+- **yào zuò-dào-de dōng-xi**: 目的 purpose · 目标 goal. goal, purpose.
+- **yǒu-hěn-duō-de-cí-de shū**: 字典 dictionary · 词典 dictionary. dictionary.
+- **zuò-de bù yī-yàng**: 改变 change · 改 change, correct. change.
+- **huì lái-de shí-jiān**: 未来 future · 将来 future. future.
+- **wèi-lái**: 未来 future · 将来 future. future.
+- **…, dàn-shì …**: 虽然 although · 尽管 although. although.
+- **shuō-chū xīn-lǐ-de dōng-xi**: 表示 express · 表达 express. express.
+- **cí**: 词 word · 词语 word, phrase. word.
+- **wèn-de dōng-xi**: 题 question, problem · 题目 topic, question. question.
+- **gěi-dōng-xi-dé-jīn**: 卖 sell · 销售 sell. sell.
+- **wèi-dào**: 味道 taste, flavor · 味 taste, flavor. taste.
+- **xīn-lǐ-de yàng-zi**: 心情 mood · 情绪 mood. mood.
+- **bǎ X zuò hǎo**: 管 manage · 管理 manage. manage.
+- **bù kāi-xīn**: 伤心 sad · 难过 sad. sad.
+- **hǎo le**: 够 enough · 足够 enough. enough.
+- **cháng-de yǒu-shuǐ-de dì-fang**: 河 river · 河流 river. river.
+- **hěn-dà-de yǒu-shuǐ-de dì-fang**: 海 sea · 海洋 ocean. sea, ocean.
+- **bǎ X zuò qǐ-lái**: 建设 build up · 建立 establish, set up. build up, establish.
+- **duō-shǎo jīn**: 价格 price · 价钱 price. price.
+- **zuì yǒu zhòng-yào-de bù-fen**: 关键 crux, key · 重点 key point. key point.
+- **mǎi dōng-xi hé gěi-dōng-xi-dé-jīn**: 商业 commerce · 生意 business. business, commerce.
+- **néng-lì**: 才能 talent, ability · 能力 ability. ability.
+- **X dōu …**: 整个 whole, entire · 整 whole. whole.
+- **zhēn hǎo-de dì-fang**: 特点 feature · 特色 special feature. feature.
+- **zuò-guò-de dōng-xi**: 经验 experience · 经历 experience. experience.
+- **shuō-míng**: 解释 explain · 说明 explain. explain.
+- **yī-qǐ shuō**: 讨论 discuss · 商量 talk it over. discuss.
+- **hǎo-de dì-fang**: 优点 strong point · 好处 benefit. strong point, benefit.
+- **rén shǎo, zhíwù duō-de dì-fang**: 农村 countryside · 乡村 countryside. countryside.
+- **biàn shǎo**: 减少 reduce · 降低 lower, reduce. reduce.
+- **bù-yī-yàng-de dì-fang**: 区别 difference · 差别 difference. difference.
+- **zuò-dōng-xi-de dì-fang**: 厂 factory · 工厂 factory. factory.
+- **duì X hǎo**: 合适 suitable · 适合 suit, fit. suitable.
+- **kě-néng X**: 大约 about, roughly · 左右 left and right; about. about, roughly.
+- **huài-de dōng-xi bù huì fā-shēng**: 安全 safe · 平安 safe and sound. safe.
+- **xīn-lǐ zěnme jué-de**: 心态 mindset · 态度 attitude. attitude, mindset.
+- **hěn-duō rén**: 群 group, crowd · 人群 crowd. crowd.
+- **zuò-chē**: 乘坐 ride, take (a vehicle) · 坐车 ride (a car, bus, train). ride.
+- **nán-kàn**: 难看 ugly · 丑 ugly. ugly.
+- **kàn-qǐ-lái bù hǎo**: 难看 ugly · 丑 ugly. ugly.
+
+## Close (146)
+
+- **zuò**: 做 do, make · 工作 work · 干 do · 办 do, handle · 建 build · 进行 carry out · 举行 hold (an event) · 制作 make, produce · 制造 manufacture · 处理 handle, deal with · 行动 act, action · 造 make · 举办 hold, host (an event) · 办理 handle, process · 弄 do, make. the catch-all zuò (do); build, manufacture, hold an event and process are kinds of doing.
+- **yào**: 想 think; want · 要 want · 应该 should · 需要 need · 必须 must · 愿意 be willing · 打算 plan, intend · 该 should · 选 choose · 要求 demand · 应当 should · 需 need · 不得不 have to · 愿 wish, be willing. the catch-all yào: want, need, should, must, be willing, choose.
+- **yòng**: 用 use · 花 spend (money) · 使用 use · 应用 apply; app · 利用 use · 消费 consume, spend · 运用 apply, use · 花费 spend. use and spend: spending money is using it.
+- **shuō**: 说 communicate · 说话 talk · 表示 express · 讲 speak · 讲话 speak; speech · 谈 talk · 谈话 talk, chat. say, talk, speak, express.
+- **zhīdào**: 知道 know · 明白 understand · 了解 understand · 认识 know (a person) · 懂 understand · 理解 understand · 意识 realize; awareness. know, understand, realize.
+- **biàn**: 变 become · 化 change into, -ize · 变化 change · 成为 become · 改变 change · 形成 form, take shape · 转变 change, transform. change and become.
+- **jué-de**: 想 think; want · 觉得 feeling · 心里 in one's heart · 感觉 feel; feeling · 认为 think, believe · 感到 feel. feel and think.
+- **shénme shí-jiān dōu …**: 一直 always, all along · 总是 always · 总 always · 不断 constantly · 永远 forever · 随时 at any time. always, all along, forever, at any time.
+- **zuò-chū**: 产生 produce · 制定 draw up, set · 产 produce · 作出 make, put forward · 生产 produce · 发出 send out, give off. produce, make, send out, draw up.
+- **dì-fang**: 地方 a place · 位置 location · 区域 region · 区 district · 地点 location. place, location, region, district.
+- **jiù**: 就 just, then · 只 only · 正 exactly, just · 只有 only (if) · 只是 only, just. just, only, exactly.
+- **xiǎng**: 想 think; want · 希望 hope · 认为 think, believe · 以为 think (wrongly) · 思考 think, ponder. think, hope, think wrongly, ponder.
+- **gěi**: 给 give · 为 for · 送 give (as a gift) · 交 hand in · 提供 provide. give, give as a gift, hand in, provide, for.
+- **dàn-shì**: 但是 but · 但 but · 可是 but · 不过 but · 尽管 although. but; 尽管 (although) also has its own …, dàn-shì ….
+- **kě-néng**: 可能 maybe · 好像 seem · 大概 probably · 也许 maybe · 约 arrange; about. maybe, probably, seem, about.
+- **dòng**: 动 move · 移动 move · 移 move · 流 flow · 动作 movement, action. move, flow, movement.
+- **zhēn-de**: 真实 true, real · 实际 actual, reality · 现实 reality · 真正 real, truly · 到底 after all; finally. real, actual, reality, truly, after all.
+- **shénme**: 什么 what? which? · 哪 which · 哪个 which one · 哪些 which (ones). what and which.
+- **tā**: 他 he · 自己 oneself · 她 she · 它 it. he, she, it; 自己 (oneself) is said with the pronoun it points back to.
+- **jiā**: 家 home · 房子 house · 住房 housing · 房屋 house. home and house.
+- **X-de shí-jiān**: 时候 time, when · 当 serve as; when · 时代 era · 时期 period. time, when, era, period.
+- **ài**: 喜欢 like · 爱 love · 兴趣 interest · 感兴趣 be interested in. like, love, interest.
+- **bāng**: 帮助 help · 帮忙 help · 支持 support · 帮 help. help and support.
+- **ná**: 拿 take, hold · 接受 accept · 提 carry; mention · 取 take, fetch. take, hold, fetch, accept, carry.
+- **nán-rén**: 男 male · 男人 man · 先生 Mr., husband · 丈夫 husband. male, man, Mr., husband.
+- **kàn-dào**: 看见 see · 见 see · 见面 meet · 遇到 come across. see, meet, come across.
+- **shuìjiào**: 睡 sleep · 睡觉 sleep · 休息 rest · 睡眠 sleep. sleep and rest.
+- **zhè-lǐ**: 这里 here · 这儿 here · 当地 local · 本地 local. here and local.
+- **kǒu**: 嘴 mouth · 口 hole · 门口 doorway · 嘴巴 mouth. mouth and opening: kǒu is both in Mandarin.
+- **bù-fen**: 部分 part · 分 minute; part; divide · 方面 aspect · 部 part, department. part, aspect, department.
+- **dé**: 得到 get · 得 get · 受 receive, suffer · 获得 obtain. get, receive, obtain, suffer.
+- **huó**: 生活 life; live · 活 live · 生命 life · 命 life, fate. live, life, fate.
+- **jiā-lǐ-de rén**: 家人 family member · 家庭 family · 亲人 relatives · 亲戚 relative. family, family member, relatives.
+- **xiǎng-fǎ**: 意见 opinion · 主意 idea · 想法 idea, thought · 观点 viewpoint. idea, opinion, viewpoint.
+- **gěi rén kàn**: 展示 show, display · 显示 show, display · 表现 show, perform · 播放 play (a video or song). show, display, perform, play a video.
+- **le**: 了 perfective aspect marker · 已经 already · 已 already. done and already.
+- **rén**: 人 human being · 人物 person, character · 人类 humanity. person and humanity.
+- **zài**: 在 exist at · 存在 exist · 正在 in the middle of (doing). be at, exist, in the middle of.
+- **hǎo**: 好 good · 行 okay · 安 peaceful. good, okay, peaceful.
+- **shì**: 是 be · 就是 exactly · 等于 equal, equals. be, exactly, equals.
+- **yǒu**: 有 have · 存在 exist · 拥有 possess. have, exist, possess.
+- **kàn**: 看 look at · 读 read · 查看 check, look over. look, read, check.
+- **wèi-shénme**: 为什么 why · 原因 reason · 理由 reason. why and reason.
+- **yě**: 也 also · 还 still; also · 而且 moreover. also, moreover.
+- **dào**: 到 arrive · 到达 arrive · 达到 reach, achieve. arrive and reach.
+- **hěn**: 很 very · 非常 very · 相当 quite. very and quite.
+- **nà**: 那 that · 那么 then; so · 那些 those. that, those, then.
+- **yīfu**: 衣服 clothing · 服装 clothing · 布 cloth. clothing and cloth.
+- **xiě**: 写 write · 画 draw; painting · 写作 write. write and draw.
+- **gōng-zuò**: 工作 work · 事业 career · 职业 occupation. work, career, occupation.
+- **duō-shǎo**: 几 how many · 多少 how many, how much · 数量 quantity, amount. how many and quantity.
+- **dì**: 地 floor · 土 soil · 土地 land. floor, soil, land.
+- **rúguǒ**: 如果 if · 要是 if · 只要 as long as. if and as long as.
+- **bǐ**: 比 comparison · 比较 compare; rather · 更加 even more. compare and even more.
+- **chē**: 汽车 car · 车 vehicle · 出租车 taxi. car, vehicle, taxi.
+- **…, hǎo ma?**: 请 please · 怎么样 how about · 建议 suggest; suggestion. please, how about, suggest.
+- **zuò-xià**: 坐 sit · 乘坐 ride, take (a vehicle) · 坐下 sit down. sit, sit down, ride.
+- **xīn-lǐ**: 心里 in one's heart · 心理 psychology, mind · 情绪 mood. heart, mind, mood.
+- **pà**: 怕 fear · 担心 worry · 害怕 be afraid. fear and worry.
+- **chī-de zhíwù**: 菜 vegetable; dish · 蔬菜 vegetable · 粮食 grain, food crops. vegetable and grain.
+- **bù yào**: 不要 don't · 不用 no need · 别 don't. don't and no need.
+- **dà bù-fen**: 主要 main · 基本 basic; basically · 基本上 basically. main and basic.
+- **zhīdào-de dōng-xi**: 知识 knowledge · 信息 information · 资料 materials, data. knowledge, information, data.
+- **zuì-hòu**: 最后 last, final · 终于 finally · 到底 after all; finally. last and finally.
+- **gōng-jù**: 机器 machine · 工具 tool · 设备 equipment. machine, tool, equipment.
+- **xiǎng shì zhēn-de**: 相信 believe · 信 believe; letter · 信任 trust. believe and trust.
+- **qǐ-lái**: 起来 get up · 起床 get up · 醒 wake up. get up and wake up.
+- **dòng shēntǐ**: 运动 exercise; sport · 锻炼 exercise · 体育 sports, PE. exercise and sport.
+- **hǎo-tīng-de shēngyīn**: 音乐 music · 歌 song · 歌曲 song. music and song.
+- **yī-diǎn**: 一些 some · 些 some · 一点儿 a little. some and a little.
+- **mǎi-dōng-xi-de dì-fang**: 商店 shop · 店 shop · 超市 supermarket. shop and supermarket.
+- **kàn-qǐ-lái**: 好像 seem · 样子 appearance · 看来 it seems. seem and appearance.
+- **ná-dào**: 接 pick up, receive · 收 receive · 收到 receive. receive and pick up.
+- **yòng X**: 根据 according to · 按 press; according to · 以 with; in order to. according to and with.
+- **shēng**: 出生 be born · 生 give birth · 生产 produce. be born, give birth, produce.
+- **hěn yǒu lì**: 强 strong · 精神 spirit; lively · 厉害 impressive; severe. strong, lively, impressive.
+- **shuō hǎo**: 接受 accept · 答应 agree, promise · 约 arrange; about. accept, agree, arrange.
+- **fàng zài yī-qǐ**: 连 even; connect · 合 join, close · 组成 make up, form. connect, join, make up.
+- **yào zuò-de**: 项目 project · 业务 business, work · 任务 task. project, business, task.
+- **zhè**: 这 this · 这些 these. this and these.
+- **gè**: 个 universal classifier · 张 (counting word for flat things). counting words.
+- **nǐ**: 你 you · 自己 oneself. 自己 (oneself) is said with the pronoun it points back to.
+- **qù**: 去 go · 走 walk; leave. go and walk / leave.
+- **wǒ**: 我 I · 自己 oneself. 自己 (oneself) is said with the pronoun it points back to.
+- **xiě-de dōng-xi**: 书 book · 文件 document, file. book and document.
+- **hái**: 更 even more · 还 still; also. still and even more.
+- **zǒu**: 走 walk; leave · 离开 leave. walk and leave.
+- **jīn**: 钱 money · 现金 cash. money and cash.
+- **yuè-de shí-jiān**: 晚上 evening · 夜 night. evening and night.
+- **fàn**: 饭 meal, rice · 大米 rice (uncooked). a meal and uncooked rice.
+- **chī-de**: 饭 meal, rice · 食物 food. meal and food.
+- **nǐ hǎo**: 你好 hello · 喂 hello (on the phone). hello, and hello on the phone.
+- **guānxi**: 关系 relationship · 联系 connection; contact. relationship and contact.
+- **xiě-de cí**: 字 character (writing) · 文字 writing, script. character and writing.
+- **kāishǐ**: 开始 begin · 首先 first of all. begin and first of all.
+- **zuì**: 最 most · 尤其 especially. most and especially.
+- **xué-de dì-fang**: 学校 school · 校园 campus. school and campus.
+- **wèn-tí**: 问题 question; problem · 题目 topic, question. question, problem, topic.
+- **X-wán hòu, Y**: 先 first · 才 only then. first and only then: two sides of one frame.
+- **lǎo**: 老 old · 旧 old (thing). old (person) and old (thing).
+- **ràng**: 让 let · 允许 allow. let and allow.
+- **wánr**: 玩 play · 娱乐 entertainment. play and entertainment.
+- **xīn-"wén"**: 新闻 news · 消息 news, message. news and message.
+- **huà**: 语言 language · 话 words, speech. language and speech.
+- **dé-dào**: 得到 get · 收 receive. get and receive.
+- **shuō-de dōng-xi**: 故事 story · 话题 topic. story and topic.
+- **kàn-de dōng-xi**: 照片 photo · 图片 picture, image. photo and picture.
+- **bàba-māma**: 父母 parent · 家长 parent. parents and a parent at school.
+- **zhōng-jiān**: 中间 middle, between · 中心 center. middle and center.
+- **qián-miàn**: 前面 front · 面前 in front of. front and in front of.
+- **hào**: 号 sequence marker · 号码 number. number in a row and a number.
+- **kāi-huì**: 开会 have a meeting · 会议 meeting. have a meeting and a meeting.
+- **dǎ-suàn**: 打算 plan, intend · 安排 arrange. plan and arrange.
+- **yǒu-yòng**: 有用 useful · 有效 effective. useful and effective.
+- **wánr-de**: 游戏 game · 娱乐 entertainment. game and entertainment.
+- **shēntǐ bù hǎo**: 生病 get sick · 病 illness. get sick and illness.
+- **gōng-zuò-de tóu**: 老板 boss · 经理 manager. boss and manager.
+- **biān**: 边 side · 方 square; direction. side and direction.
+- **fùjìn**: 附近 nearby · 周围 surroundings. nearby and surroundings.
+- **xiǎo-xīn**: 小心 careful · 仔细 careful. careful and thorough.
+- **shénme … dōu …**: 不管 no matter · 任何 any. no matter and any.
+- **wǎng**: 互联网 Internet · 网络 network. the Internet and a network.
+- **kuài … le**: 几乎 almost · 快要 soon, about to. almost and about to.
+- **dì-yī**: 第 (ordinal) · 第一 first. the ordinal word and first.
+- **jié-guǒ**: 结果 result · 效果 effect, result. result and effect.
+- **xiǎng-xiǎng**: 考虑 consider · 思考 think, ponder. consider and ponder.
+- **bǐ X duō**: 超过 exceed · 以上 above, more than. exceed and more than.
+- **gěi yuǎn-de rén xiě-de dōng-xi**: 邮件 mail, email · 信 believe; letter. a letter and an email.
+- **xiǎng-de dōng-xi**: 想法 idea, thought · 观点 viewpoint. idea and viewpoint.
+- **shàng-qù**: 上去 go up · 升 rise. go up and rise.
+- **kàn-hǎo X**: 养 raise, keep (animals) · 照顾 take care of. raise (animals) and take care of.
+- **dǎ chē**: 出租车 taxi · 打车 take a taxi. a taxi and take a taxi.
+- **huí-qù**: 回去 go back · 退 go back, retreat. go back and retreat.
+- **gāo-míng**: 聪明 smart · 智能 smart, intelligent. smart (a person) and smart (a machine).
+- **bǐ bié-de rén hǎo**: 赢 win · 胜利 victory. win and victory.
+- **jìn-qù**: 进去 go in · 登录 log in. go in and log in.
+- **duì-miàn**: 对面 opposite side · 反 opposite. opposite side and opposite.
+- **hǎo-hǎo kàn, hǎo-hǎo xué**: 研究 research · 调查 investigate. research and investigate.
+- **yī-qǐ-zuò-de rén**: 组织 organize; organization · 团队 team. organization and team.
+- **fā-shēng-de dōng-xi**: 事件 incident · 状况 condition, situation. incident and situation.
+- **liú**: 保持 keep, maintain · 留 stay, keep. keep and stay.
+- **shuō-de**: 内容 content · 话 words, speech. content and speech.
+- **gōng-zuò-de rén**: 员工 employee · 工人 worker. employee and worker.
+- **píng-cháng**: 正常 normal · 平常 usual, ordinary. normal and usual.
+- **shuō-de shēngyīn**: 语音 speech sound, voice · 发音 pronunciation. voice and pronunciation.
+- **bù luàn**: 整齐 neat, tidy · 秩序 order. neat and order.
+
+## Senses (2)
+
+- **xīn**: 心 heart · 新 new · 精神 spirit; lively. not one form: 心 and 精神 use xīn (heart), 新 uses xīn#new; the report reads only the sound.
+- **yàng-zi**: 样子 appearance · 形状 shape. not one form: 样子 and 形状 use different senses of the words; the report reads only the sound.

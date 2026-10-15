@@ -22,6 +22,7 @@ import { basename, join, relative, sep } from 'path';
 import { spawn } from 'child_process';
 import { ROOT } from './refactor-lib.js';
 import { newCopy } from './temp-copy.js';
+import { memoEnv } from './parse-memo.js';
 import { GATES } from './gates.js';
 
 // not copied: big, rebuilt, or not read by a gate
@@ -33,7 +34,7 @@ export const REBUILD = ['build-data.js', 'generate-grammar-overview.js', 'genera
 // -> { status, out } with stdout and stderr in the order they arrived
 const exec = (cwd, script, args = [], timeout = 600_000) =>
   new Promise((done) => {
-    const child = spawn(process.execPath, [join(cwd, 'scripts', script), ...args], { cwd, stdio: ['ignore', 'pipe', 'pipe'] });
+    const child = spawn(process.execPath, [join(cwd, 'scripts', script), ...args], { cwd, env: memoEnv(), stdio: ['ignore', 'pipe', 'pipe'] });
     let out = '';
     const timer = setTimeout(() => child.kill(), timeout);
     child.stdout.on('data', (d) => (out += d));
@@ -121,8 +122,9 @@ export async function checkInCopy(ws, { gates = GATES, rebuild = REBUILD, scoreb
     cpSync(ROOT, copy, {
       recursive: true,
       filter: (src) => {
-        const top = relative(ROOT, src).split(sep)[0];
-        return !SKIP_TOP.has(top) && basename(src) !== 'scoreboard.lock';
+        const [top, sub] = relative(ROOT, src).split(sep);
+        // the parse memory is shared, not copied (memoEnv)
+        return !SKIP_TOP.has(top) && !(top === '.cache' && sub === 'parse-memo') && basename(src) !== 'scoreboard.lock';
       },
     });
     tmp.linkModules();

@@ -24,7 +24,7 @@ const list = args.includes('--list');
 const update = args.includes('--update');
 
 const kb = await openKb({ memo: true });
-const report = formsOf(kb);
+const report = await formsOf(kb);
 const said = (f) => formText(f.form, kb.source.words);
 const key = (f) => `${f.zh} | ${said(f)}`;
 const gaps = report.forms.filter((f) => f.kind === 'phrase' && !f.ok);

@@ -52,7 +52,7 @@ Plans and decisions: [BOOK_PLAN.md](BOOK_PLAN.md) (book, decision log D1…), [K
 | Lesson sentences that parse | 99.3 % |
 | Smallest set the others can be said from | 202 words; the other 28 have a fine paraphrase |
 | Gates (`npm run check`) | 17 |
-| Test files (`npm test`) | 41 |
+| Test files (`npm test`) | 43 |
 
 The language numbers are the last row of `kb/scoreboard.csv` (2026-10-14, refactors/C1.ts: 17 op(s)); a refactor adds a new row.
 <!-- /generated:facts -->
@@ -207,6 +207,7 @@ The shapes of the data are defined in TypeScript, so a mistake is a type error:
 | `npm run build` | Checks every gate, regenerates the grammar overview, word usage and dictionary pages, then builds the static site into docs/ with one page per route. |
 | `npm run preview` | Serves the built site locally, to check it before it goes out. |
 | `npm run test` | Runs the fast test files with bun, several at a time (under half a minute); the slow ones, which use the real data or copy the repo, wait for test:all. |
+| `npm run test:push` | Runs the test files in three tiers: the quick ones on every commit, the rest before a push or when asked. |
 | `npm run test:all` | Runs every test file with bun, several at a time, the slow ones first. |
 | `npm run typecheck` | Type-checks the whole project with tsc (the check-types gate runs the same). |
 | `npm run data` | Writes the index files of the data folders, so a word, a composite entry or a coverage group is added or removed by adding or deleting its file. |

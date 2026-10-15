@@ -8,20 +8,5 @@
     "zh": "千",
     "form": "shí-ge shí-ge shí",
     "why": "a number said as ten tens (shí-ge shí): the book has no pattern for a number built from the word shí"
-  },
-  {
-    "zh": "虽然",
-    "form": "…, dàn-shì …",
-    "why": "a frame that starts with an open part and a comma, then dàn-shì; the patterns read dàn-shì after a whole sentence only"
-  },
-  {
-    "zh": "乘",
-    "form": "bǎ A fàng zài yī-qǐ B-cì",
-    "why": "a bǎ pattern the book does not teach (the same family as the gap in kb/grammar-gaps.json)"
-  },
-  {
-    "zh": "尽管",
-    "form": "…, dàn-shì …",
-    "why": "a frame that starts with an open part and a comma, then dàn-shì; the patterns read dàn-shì after a whole sentence only"
   }
 ]

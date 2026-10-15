@@ -13,6 +13,7 @@ export default pattern("dan-shi-but", {
     { lhs: "But", hsd: "=ke3 =shi4", eng: "kě-shì, but" },
     { lhs: "But", hsd: "=bu4 =guo4", eng: "bù-guò, but" },
     { lhs: "S", hsd: "S @comma But Clause", eng: "a sentence, then but and the other part" },
+    { lhs: "S", hsd: "VP @comma But Clause", eng: "a part that names no one, then but and the other part: hěn lěng, dàn-shì wǒ bù pà" },
     { lhs: "Utt", hsd: "But S", eng: "but and a sentence, said after something else" },
   ],
   taught: "linking-sentences/but",

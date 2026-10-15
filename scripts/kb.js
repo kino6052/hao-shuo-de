@@ -172,7 +172,8 @@ async function main(argv) {
   if (json) args.splice(args.indexOf('--json'), 1);
   const [command, ...rest] = args;
   const print = (data, text) => console.log(json ? JSON.stringify(data, null, 2) : text);
-  const kb = await openKb();
+  // the commands that only ask whether sentences parse read the parse memory (slim results, no trees)
+  const kb = await openKb({ memo: ['scoreboard', 'parse-report', 'parse-diff', 'move'].includes(command) });
 
   switch (command) {
     case 'word': {
@@ -234,7 +235,7 @@ async function main(argv) {
       return print(d, renderParseDiff(d, kb.source.words, { limit, title: `Parse changes since ${ref}${all ? ' (all texts)' : ''}` }));
     }
     case 'forms': {
-      const report = formsOf(kb);
+      const report = await formsOf(kb);
       return print(report, renderFormReport(report, kb.source.words, { limit: Number(option(rest, '--limit') ?? 20), pos: option(rest, '--pos') }));
     }
     case 'patterns': {
@@ -250,7 +251,7 @@ async function main(argv) {
       const report = parseReport({ sentences: kb.facts.sentences, parseText: kb.parse, parseLesson: kb.parseUpTo, patternLesson: kb.patternLesson, lessons, groups: OTHER_TEXTS });
       const pieces = report.failures.filter((it) => it.piece).map((it) => ({ text: it.piece.text, where: `${it.lesson}${it.module ? `/${it.module}` : ''} ${it.key ?? ''}`.trim() }));
       // the descriptions of the composite dictionary that the patterns do not read (the sentence end of a form is part of it)
-      for (const f of formsOf(kb).forms) if (f.kind === 'phrase' && !f.ok) pieces.push({ text: f.form, where: `composite ${f.zh}`, forms: true });
+      for (const f of (await formsOf(kb)).forms) if (f.kind === 'phrase' && !f.ok) pieces.push({ text: f.form, where: `composite ${f.zh}`, forms: true });
       const r = classProposals({ parser: kb.parser, words: kb.source.words, pieces, rejected: JSON.parse(readFileSync(new URL('../kb/class-rejections.json', import.meta.url), 'utf8')) });
       const waiting = classesWaiting(kb.source.words);
       return print({ ...r, waiting }, renderClassProposals(r, kb.source.words, waiting, { limit }));

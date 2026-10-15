@@ -69,24 +69,37 @@ function splitData(text, path) {
 const LF = String.fromCharCode(10);
 const CRLF = String.fromCharCode(13, 10);
 
+// The files as they are on disk, read once per process: a workspace never writes to them (`write` is given a
+// folder), so every workspace in one run starts from the same texts. `reread()` forgets them.
+let onDisk = null;
+const readFiles = () => {
+  if (onDisk) return onDisk;
+  const text = new Map();
+  const crlf = new Set();
+  const files = [...walk(resolve(ROOT, 'src'), []), ...walk(resolve(ROOT, 'scripts'), []).filter((p) => p.endsWith('.test.js'))];
+  for (const p of files) {
+    const r = rel(p);
+    if (SKIP.has(r)) continue;
+    let t = readFileSync(p, 'utf-8');
+    if (t.includes(CRLF)) {
+      crlf.add(r);
+      t = t.split(CRLF).join(LF);
+    }
+    text.set(r, t);
+  }
+  return (onDisk = { text, crlf });
+};
+
+// -> forget the files read, so the next workspace reads them again (for a script that changed them itself)
+export const reread = () => (onDisk = null);
+
 export class Workspace {
   constructor() {
-    this.orig = new Map();
-    this.text = new Map();
+    const disk = readFiles();
+    this.orig = disk.text; // never changed: `set` and `remove` write to `this.text`
+    this.text = new Map(disk.text);
     // files are edited with LF line ends and written back with the ones they had
-    this.crlf = new Set();
-    const files = [...walk(resolve(ROOT, 'src'), []), ...walk(resolve(ROOT, 'scripts'), []).filter((p) => p.endsWith('.test.js'))];
-    for (const p of files) {
-      const r = rel(p);
-      if (SKIP.has(r)) continue;
-      let t = readFileSync(p, 'utf-8');
-      if (t.includes(CRLF)) {
-        this.crlf.add(r);
-        t = t.split(CRLF).join(LF);
-      }
-      this.orig.set(r, t);
-      this.text.set(r, t);
-    }
+    this.crlf = disk.crlf;
     this.notes = [];
   }
 
@@ -169,6 +182,7 @@ export class Workspace {
 
   // writes the changed files under `root` (a copy of the repo, for --check; the repo by default)
   write(root = ROOT) {
+    if (root === ROOT) reread(); // the files on disk are no longer the ones a workspace starts from
     for (const { path, after } of this.changes()) {
       const p = resolve(root, path);
       if (after == null) {

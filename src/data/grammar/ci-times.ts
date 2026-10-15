@@ -11,6 +11,7 @@ export default pattern("ci-times", {
     { lhs: "Times", hsd: "hen3 =duo1 =ci4", eng: "hěn duō cì, many times" },
     { lhs: "Times", hsd: "=duo1 =shao3 =ci4", eng: "duōshǎo cì, how many times" },
     { lhs: "Times", hsd: "Count =ci4", eng: "a number or zhè and cì: three times, this time" },
+    { lhs: "Times", hsd: "@slot =ci4", eng: "a letter that stands for a number, and cì: B times" },
     { lhs: "VerbP", hsd: "@verb Times", eng: "a verb and how many times" },
     { lhs: "VerbP", hsd: "@verb guo4 Times", eng: "a verb, guò, and how many times" },
     { lhs: "Time", hsd: "Times", eng: "this time, as a time said first" },

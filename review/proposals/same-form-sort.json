@@ -1,0 +1,6333 @@
+[
+  {
+    "form": "zuò",
+    "verdict": "close",
+    "note": "the catch-all zuò (do); build, manufacture, hold an event and process are kinds of doing",
+    "members": [
+      {
+        "zh": "做",
+        "py": "zuò",
+        "en": "do, make"
+      },
+      {
+        "zh": "工作",
+        "py": "gōngzuò",
+        "en": "work"
+      },
+      {
+        "zh": "干",
+        "py": "gàn",
+        "en": "do"
+      },
+      {
+        "zh": "办",
+        "py": "bàn",
+        "en": "do, handle"
+      },
+      {
+        "zh": "建",
+        "py": "jiàn",
+        "en": "build"
+      },
+      {
+        "zh": "进行",
+        "py": "jìnxíng",
+        "en": "carry out"
+      },
+      {
+        "zh": "举行",
+        "py": "jǔxíng",
+        "en": "hold (an event)"
+      },
+      {
+        "zh": "制作",
+        "py": "zhìzuò",
+        "en": "make, produce"
+      },
+      {
+        "zh": "制造",
+        "py": "zhìzào",
+        "en": "manufacture"
+      },
+      {
+        "zh": "处理",
+        "py": "chǔlǐ",
+        "en": "handle, deal with"
+      },
+      {
+        "zh": "行动",
+        "py": "xíngdòng",
+        "en": "act, action"
+      },
+      {
+        "zh": "造",
+        "py": "zào",
+        "en": "make"
+      },
+      {
+        "zh": "举办",
+        "py": "jǔbàn",
+        "en": "hold, host (an event)"
+      },
+      {
+        "zh": "办理",
+        "py": "bànlǐ",
+        "en": "handle, process"
+      },
+      {
+        "zh": "弄",
+        "py": "nòng",
+        "en": "do, make"
+      }
+    ]
+  },
+  {
+    "form": "yào",
+    "verdict": "close",
+    "note": "the catch-all yào: want, need, should, must, be willing, choose",
+    "members": [
+      {
+        "zh": "想",
+        "py": "xiǎng",
+        "en": "think; want"
+      },
+      {
+        "zh": "要",
+        "py": "yào",
+        "en": "want"
+      },
+      {
+        "zh": "应该",
+        "py": "yīnggāi",
+        "en": "should"
+      },
+      {
+        "zh": "需要",
+        "py": "xūyào",
+        "en": "need"
+      },
+      {
+        "zh": "必须",
+        "py": "bìxū",
+        "en": "must"
+      },
+      {
+        "zh": "愿意",
+        "py": "yuànyì",
+        "en": "be willing"
+      },
+      {
+        "zh": "打算",
+        "py": "dǎsuàn",
+        "en": "plan, intend"
+      },
+      {
+        "zh": "该",
+        "py": "gāi",
+        "en": "should"
+      },
+      {
+        "zh": "选",
+        "py": "xuǎn",
+        "en": "choose"
+      },
+      {
+        "zh": "要求",
+        "py": "yāoqiú",
+        "en": "demand"
+      },
+      {
+        "zh": "应当",
+        "py": "yīngdāng",
+        "en": "should"
+      },
+      {
+        "zh": "需",
+        "py": "xū",
+        "en": "need"
+      },
+      {
+        "zh": "不得不",
+        "py": "bùdébù",
+        "en": "have to"
+      },
+      {
+        "zh": "愿",
+        "py": "yuàn",
+        "en": "wish, be willing"
+      }
+    ]
+  },
+  {
+    "form": "zhēn",
+    "verdict": "different",
+    "note": "two meanings: truly / indeed (真 真实 一定 其实 的确 确实 实在) and very / too / so (太 非常 这么); the intensifiers could take hěn or tài instead",
+    "members": [
+      {
+        "zh": "一定",
+        "py": "yídìng",
+        "en": "certainly"
+      },
+      {
+        "zh": "太",
+        "py": "tài",
+        "en": "too"
+      },
+      {
+        "zh": "真",
+        "py": "zhēn",
+        "en": "true"
+      },
+      {
+        "zh": "这么",
+        "py": "zhème",
+        "en": "so, like this"
+      },
+      {
+        "zh": "非常",
+        "py": "fēicháng",
+        "en": "very"
+      },
+      {
+        "zh": "其实",
+        "py": "qíshí",
+        "en": "actually"
+      },
+      {
+        "zh": "真实",
+        "py": "zhēnshí",
+        "en": "true, real"
+      },
+      {
+        "zh": "的确",
+        "py": "díquè",
+        "en": "indeed"
+      },
+      {
+        "zh": "确实",
+        "py": "quèshí",
+        "en": "indeed"
+      },
+      {
+        "zh": "实在",
+        "py": "shízài",
+        "en": "really, honestly"
+      }
+    ]
+  },
+  {
+    "form": "duì",
+    "verdict": "different",
+    "note": "two senses of duì: toward (对 往 向 为 面对) and right / yes (正确 准 嗯); mark the sense (duì#right) as for xīn#new",
+    "members": [
+      {
+        "zh": "对",
+        "py": "duì",
+        "en": "facing"
+      },
+      {
+        "zh": "为",
+        "py": "wèi",
+        "en": "for"
+      },
+      {
+        "zh": "往",
+        "py": "wǎng",
+        "en": "toward"
+      },
+      {
+        "zh": "嗯",
+        "py": "ǹg",
+        "en": "uh-huh"
+      },
+      {
+        "zh": "正确",
+        "py": "zhèngquè",
+        "en": "correct"
+      },
+      {
+        "zh": "准",
+        "py": "zhǔn",
+        "en": "accurate"
+      },
+      {
+        "zh": "向",
+        "py": "xiàng",
+        "en": "toward"
+      },
+      {
+        "zh": "面对",
+        "py": "miànduì",
+        "en": "face"
+      }
+    ]
+  },
+  {
+    "form": "yòng",
+    "verdict": "close",
+    "note": "use and spend: spending money is using it",
+    "members": [
+      {
+        "zh": "用",
+        "py": "yòng",
+        "en": "use"
+      },
+      {
+        "zh": "花",
+        "py": "huā",
+        "en": "spend (money)"
+      },
+      {
+        "zh": "使用",
+        "py": "shǐyòng",
+        "en": "use"
+      },
+      {
+        "zh": "应用",
+        "py": "yìngyòng",
+        "en": "apply; app"
+      },
+      {
+        "zh": "利用",
+        "py": "lìyòng",
+        "en": "use"
+      },
+      {
+        "zh": "消费",
+        "py": "xiāofèi",
+        "en": "consume, spend"
+      },
+      {
+        "zh": "运用",
+        "py": "yùnyòng",
+        "en": "apply, use"
+      },
+      {
+        "zh": "花费",
+        "py": "huāfèi",
+        "en": "spend"
+      }
+    ]
+  },
+  {
+    "form": "shuō",
+    "verdict": "close",
+    "note": "say, talk, speak, express",
+    "members": [
+      {
+        "zh": "说",
+        "py": "shuō",
+        "en": "communicate"
+      },
+      {
+        "zh": "说话",
+        "py": "shuōhuà",
+        "en": "talk"
+      },
+      {
+        "zh": "表示",
+        "py": "biǎoshì",
+        "en": "express"
+      },
+      {
+        "zh": "讲",
+        "py": "jiǎng",
+        "en": "speak"
+      },
+      {
+        "zh": "讲话",
+        "py": "jiǎnghuà",
+        "en": "speak; speech"
+      },
+      {
+        "zh": "谈",
+        "py": "tán",
+        "en": "talk"
+      },
+      {
+        "zh": "谈话",
+        "py": "tánhuà",
+        "en": "talk, chat"
+      }
+    ]
+  },
+  {
+    "form": "zhīdào",
+    "verdict": "close",
+    "note": "know, understand, realize",
+    "members": [
+      {
+        "zh": "知道",
+        "py": "zhīdào",
+        "en": "know"
+      },
+      {
+        "zh": "明白",
+        "py": "míngbai",
+        "en": "understand"
+      },
+      {
+        "zh": "了解",
+        "py": "liǎojiě",
+        "en": "understand"
+      },
+      {
+        "zh": "认识",
+        "py": "rènshi",
+        "en": "know (a person)"
+      },
+      {
+        "zh": "懂",
+        "py": "dǒng",
+        "en": "understand"
+      },
+      {
+        "zh": "理解",
+        "py": "lǐjiě",
+        "en": "understand"
+      },
+      {
+        "zh": "意识",
+        "py": "yìshí",
+        "en": "realize; awareness"
+      }
+    ]
+  },
+  {
+    "form": "biàn",
+    "verdict": "close",
+    "note": "change and become",
+    "members": [
+      {
+        "zh": "变",
+        "py": "biàn",
+        "en": "become"
+      },
+      {
+        "zh": "化",
+        "py": "huà",
+        "en": "change into, -ize"
+      },
+      {
+        "zh": "变化",
+        "py": "biànhuà",
+        "en": "change"
+      },
+      {
+        "zh": "成为",
+        "py": "chéngwéi",
+        "en": "become"
+      },
+      {
+        "zh": "改变",
+        "py": "gǎibiàn",
+        "en": "change"
+      },
+      {
+        "zh": "形成",
+        "py": "xíngchéng",
+        "en": "form, take shape"
+      },
+      {
+        "zh": "转变",
+        "py": "zhuǎnbiàn",
+        "en": "change, transform"
+      }
+    ]
+  },
+  {
+    "form": "dōng-xi",
+    "verdict": "different",
+    "note": "a thing you can hold (东西 产品 物品 事物) and a matter that happens (事 事情); Mandarin keeps them apart, shì could say the second",
+    "members": [
+      {
+        "zh": "事",
+        "py": "shì",
+        "en": "matter, affair"
+      },
+      {
+        "zh": "东西",
+        "py": "dōngxi",
+        "en": "thing"
+      },
+      {
+        "zh": "事情",
+        "py": "shìqing",
+        "en": "matter"
+      },
+      {
+        "zh": "产品",
+        "py": "chǎnpǐn",
+        "en": "product"
+      },
+      {
+        "zh": "事物",
+        "py": "shìwù",
+        "en": "thing"
+      },
+      {
+        "zh": "物品",
+        "py": "wùpǐn",
+        "en": "article, item"
+      }
+    ]
+  },
+  {
+    "form": "jué-de",
+    "verdict": "close",
+    "note": "feel and think",
+    "members": [
+      {
+        "zh": "想",
+        "py": "xiǎng",
+        "en": "think; want"
+      },
+      {
+        "zh": "觉得",
+        "py": "juéde",
+        "en": "feeling"
+      },
+      {
+        "zh": "心里",
+        "py": "xīnli",
+        "en": "in one's heart"
+      },
+      {
+        "zh": "感觉",
+        "py": "gǎnjué",
+        "en": "feel; feeling"
+      },
+      {
+        "zh": "认为",
+        "py": "rènwéi",
+        "en": "think, believe"
+      },
+      {
+        "zh": "感到",
+        "py": "gǎndào",
+        "en": "feel"
+      }
+    ]
+  },
+  {
+    "form": "shénme shí-jiān dōu …",
+    "verdict": "close",
+    "note": "always, all along, forever, at any time",
+    "members": [
+      {
+        "zh": "一直",
+        "py": "yìzhí",
+        "en": "always, all along"
+      },
+      {
+        "zh": "总是",
+        "py": "zǒngshì",
+        "en": "always"
+      },
+      {
+        "zh": "总",
+        "py": "zǒng",
+        "en": "always"
+      },
+      {
+        "zh": "不断",
+        "py": "búduàn",
+        "en": "constantly"
+      },
+      {
+        "zh": "永远",
+        "py": "yǒngyuǎn",
+        "en": "forever"
+      },
+      {
+        "zh": "随时",
+        "py": "suíshí",
+        "en": "at any time"
+      }
+    ]
+  },
+  {
+    "form": "zuò-chū",
+    "verdict": "close",
+    "note": "produce, make, send out, draw up",
+    "members": [
+      {
+        "zh": "产生",
+        "py": "chǎnshēng",
+        "en": "produce"
+      },
+      {
+        "zh": "制定",
+        "py": "zhìdìng",
+        "en": "draw up, set"
+      },
+      {
+        "zh": "产",
+        "py": "chǎn",
+        "en": "produce"
+      },
+      {
+        "zh": "作出",
+        "py": "zuòchū",
+        "en": "make, put forward"
+      },
+      {
+        "zh": "生产",
+        "py": "shēngchǎn",
+        "en": "produce"
+      },
+      {
+        "zh": "发出",
+        "py": "fāchū",
+        "en": "send out, give off"
+      }
+    ]
+  },
+  {
+    "form": "dì-fang",
+    "verdict": "close",
+    "note": "place, location, region, district",
+    "members": [
+      {
+        "zh": "地方",
+        "py": "dìfang",
+        "en": "a place"
+      },
+      {
+        "zh": "位置",
+        "py": "wèizhì",
+        "en": "location"
+      },
+      {
+        "zh": "区域",
+        "py": "qūyù",
+        "en": "region"
+      },
+      {
+        "zh": "区",
+        "py": "qū",
+        "en": "district"
+      },
+      {
+        "zh": "地点",
+        "py": "dìdiǎn",
+        "en": "location"
+      }
+    ]
+  },
+  {
+    "form": "jiù",
+    "verdict": "close",
+    "note": "just, only, exactly",
+    "members": [
+      {
+        "zh": "就",
+        "py": "jiù",
+        "en": "just, then"
+      },
+      {
+        "zh": "只",
+        "py": "zhǐ",
+        "en": "only"
+      },
+      {
+        "zh": "正",
+        "py": "zhèng",
+        "en": "exactly, just"
+      },
+      {
+        "zh": "只有",
+        "py": "zhǐyǒu",
+        "en": "only (if)"
+      },
+      {
+        "zh": "只是",
+        "py": "zhǐshì",
+        "en": "only, just"
+      }
+    ]
+  },
+  {
+    "form": "xiǎng",
+    "verdict": "close",
+    "note": "think, hope, think wrongly, ponder",
+    "members": [
+      {
+        "zh": "想",
+        "py": "xiǎng",
+        "en": "think; want"
+      },
+      {
+        "zh": "希望",
+        "py": "xīwàng",
+        "en": "hope"
+      },
+      {
+        "zh": "认为",
+        "py": "rènwéi",
+        "en": "think, believe"
+      },
+      {
+        "zh": "以为",
+        "py": "yǐwéi",
+        "en": "think (wrongly)"
+      },
+      {
+        "zh": "思考",
+        "py": "sīkǎo",
+        "en": "think, ponder"
+      }
+    ]
+  },
+  {
+    "form": "gěi",
+    "verdict": "close",
+    "note": "give, give as a gift, hand in, provide, for",
+    "members": [
+      {
+        "zh": "给",
+        "py": "gěi",
+        "en": "give"
+      },
+      {
+        "zh": "为",
+        "py": "wèi",
+        "en": "for"
+      },
+      {
+        "zh": "送",
+        "py": "sòng",
+        "en": "give (as a gift)"
+      },
+      {
+        "zh": "交",
+        "py": "jiāo",
+        "en": "hand in"
+      },
+      {
+        "zh": "提供",
+        "py": "tígōng",
+        "en": "provide"
+      }
+    ]
+  },
+  {
+    "form": "dōu",
+    "verdict": "synonyms",
+    "note": "all, whole, completely",
+    "members": [
+      {
+        "zh": "都",
+        "py": "dōu",
+        "en": "all"
+      },
+      {
+        "zh": "全",
+        "py": "quán",
+        "en": "whole, all"
+      },
+      {
+        "zh": "完全",
+        "py": "wánquán",
+        "en": "completely"
+      },
+      {
+        "zh": "全都",
+        "py": "quándōu",
+        "en": "all"
+      },
+      {
+        "zh": "全部",
+        "py": "quánbù",
+        "en": "all, whole"
+      }
+    ]
+  },
+  {
+    "form": "dàn-shì",
+    "verdict": "close",
+    "note": "but; 尽管 (although) also has its own …, dàn-shì …",
+    "members": [
+      {
+        "zh": "但是",
+        "py": "dànshì",
+        "en": "but"
+      },
+      {
+        "zh": "但",
+        "py": "dàn",
+        "en": "but"
+      },
+      {
+        "zh": "可是",
+        "py": "kěshì",
+        "en": "but"
+      },
+      {
+        "zh": "不过",
+        "py": "búguò",
+        "en": "but"
+      },
+      {
+        "zh": "尽管",
+        "py": "jǐnguǎn",
+        "en": "although"
+      }
+    ]
+  },
+  {
+    "form": "kě-néng",
+    "verdict": "close",
+    "note": "maybe, probably, seem, about",
+    "members": [
+      {
+        "zh": "可能",
+        "py": "kěnéng",
+        "en": "maybe"
+      },
+      {
+        "zh": "好像",
+        "py": "hǎoxiàng",
+        "en": "seem"
+      },
+      {
+        "zh": "大概",
+        "py": "dàgài",
+        "en": "probably"
+      },
+      {
+        "zh": "也许",
+        "py": "yěxǔ",
+        "en": "maybe"
+      },
+      {
+        "zh": "约",
+        "py": "yuē",
+        "en": "arrange; about"
+      }
+    ]
+  },
+  {
+    "form": "yī-yàng",
+    "verdict": "synonyms",
+    "note": "same",
+    "members": [
+      {
+        "zh": "一样",
+        "py": "yíyàng",
+        "en": "same"
+      },
+      {
+        "zh": "一致",
+        "py": "yízhì",
+        "en": "consistent, the same"
+      },
+      {
+        "zh": "同",
+        "py": "tóng",
+        "en": "same; together; with"
+      },
+      {
+        "zh": "同样",
+        "py": "tóngyàng",
+        "en": "same"
+      },
+      {
+        "zh": "相同",
+        "py": "xiāngtóng",
+        "en": "same"
+      }
+    ]
+  },
+  {
+    "form": "dòng",
+    "verdict": "close",
+    "note": "move, flow, movement",
+    "members": [
+      {
+        "zh": "动",
+        "py": "dòng",
+        "en": "move"
+      },
+      {
+        "zh": "移动",
+        "py": "yídòng",
+        "en": "move"
+      },
+      {
+        "zh": "移",
+        "py": "yí",
+        "en": "move"
+      },
+      {
+        "zh": "流",
+        "py": "liú",
+        "en": "flow"
+      },
+      {
+        "zh": "动作",
+        "py": "dòngzuò",
+        "en": "movement, action"
+      }
+    ]
+  },
+  {
+    "form": "lù",
+    "verdict": "synonyms",
+    "note": "road, street, path",
+    "members": [
+      {
+        "zh": "路",
+        "py": "lù",
+        "en": "road"
+      },
+      {
+        "zh": "街",
+        "py": "jiē",
+        "en": "street"
+      },
+      {
+        "zh": "马路",
+        "py": "mǎlù",
+        "en": "road"
+      },
+      {
+        "zh": "道",
+        "py": "dào",
+        "en": "path, way"
+      },
+      {
+        "zh": "道路",
+        "py": "dàolù",
+        "en": "road"
+      }
+    ]
+  },
+  {
+    "form": "fāng-fǎ",
+    "verdict": "different",
+    "note": "way and method fit; 行为 (behavior) is how someone acts, not a way to do something; 主意 (idea) is closer to xiǎng-fǎ, which it also has",
+    "members": [
+      {
+        "zh": "方法",
+        "py": "fāngfǎ",
+        "en": "method, manner"
+      },
+      {
+        "zh": "办法",
+        "py": "bànfǎ",
+        "en": "way, solution"
+      },
+      {
+        "zh": "主意",
+        "py": "zhǔyi",
+        "en": "idea"
+      },
+      {
+        "zh": "行为",
+        "py": "xíngwéi",
+        "en": "behavior"
+      },
+      {
+        "zh": "方式",
+        "py": "fāngshì",
+        "en": "way, method"
+      }
+    ]
+  },
+  {
+    "form": "yī-xià",
+    "verdict": "different",
+    "note": "a moment / a while (一下 一会儿 时刻) and suddenly (突然 忽然); suddenly needs its own form",
+    "members": [
+      {
+        "zh": "一下",
+        "py": "yíxià",
+        "en": "a moment"
+      },
+      {
+        "zh": "一会儿",
+        "py": "yíhuìr",
+        "en": "a while"
+      },
+      {
+        "zh": "突然",
+        "py": "tūrán",
+        "en": "suddenly"
+      },
+      {
+        "zh": "时刻",
+        "py": "shíkè",
+        "en": "moment"
+      },
+      {
+        "zh": "忽然",
+        "py": "hūrán",
+        "en": "suddenly"
+      }
+    ]
+  },
+  {
+    "form": "zhēn-de",
+    "verdict": "close",
+    "note": "real, actual, reality, truly, after all",
+    "members": [
+      {
+        "zh": "真实",
+        "py": "zhēnshí",
+        "en": "true, real"
+      },
+      {
+        "zh": "实际",
+        "py": "shíjì",
+        "en": "actual, reality"
+      },
+      {
+        "zh": "现实",
+        "py": "xiànshí",
+        "en": "reality"
+      },
+      {
+        "zh": "真正",
+        "py": "zhēnzhèng",
+        "en": "real, truly"
+      },
+      {
+        "zh": "到底",
+        "py": "dàodǐ",
+        "en": "after all; finally"
+      }
+    ]
+  },
+  {
+    "form": "shénme",
+    "verdict": "close",
+    "note": "what and which",
+    "members": [
+      {
+        "zh": "什么",
+        "py": "shénme",
+        "en": "what? which?"
+      },
+      {
+        "zh": "哪",
+        "py": "nǎ",
+        "en": "which"
+      },
+      {
+        "zh": "哪个",
+        "py": "nǎge",
+        "en": "which one"
+      },
+      {
+        "zh": "哪些",
+        "py": "nǎxiē",
+        "en": "which (ones)"
+      }
+    ]
+  },
+  {
+    "form": "tā",
+    "verdict": "close",
+    "note": "he, she, it; 自己 (oneself) is said with the pronoun it points back to",
+    "members": [
+      {
+        "zh": "他",
+        "py": "tā",
+        "en": "he"
+      },
+      {
+        "zh": "自己",
+        "py": "zìjǐ",
+        "en": "oneself"
+      },
+      {
+        "zh": "她",
+        "py": "tā",
+        "en": "she"
+      },
+      {
+        "zh": "它",
+        "py": "tā",
+        "en": "it"
+      }
+    ]
+  },
+  {
+    "form": "jiā",
+    "verdict": "close",
+    "note": "home and house",
+    "members": [
+      {
+        "zh": "家",
+        "py": "jiā",
+        "en": "home"
+      },
+      {
+        "zh": "房子",
+        "py": "fángzi",
+        "en": "house"
+      },
+      {
+        "zh": "住房",
+        "py": "zhùfáng",
+        "en": "housing"
+      },
+      {
+        "zh": "房屋",
+        "py": "fángwū",
+        "en": "house"
+      }
+    ]
+  },
+  {
+    "form": "X-de shí-jiān",
+    "verdict": "close",
+    "note": "time, when, era, period",
+    "members": [
+      {
+        "zh": "时候",
+        "py": "shíhou",
+        "en": "time, when"
+      },
+      {
+        "zh": "当",
+        "py": "dāng",
+        "en": "serve as; when"
+      },
+      {
+        "zh": "时代",
+        "py": "shídài",
+        "en": "era"
+      },
+      {
+        "zh": "时期",
+        "py": "shíqī",
+        "en": "period"
+      }
+    ]
+  },
+  {
+    "form": "ài",
+    "verdict": "close",
+    "note": "like, love, interest",
+    "members": [
+      {
+        "zh": "喜欢",
+        "py": "xǐhuan",
+        "en": "like"
+      },
+      {
+        "zh": "爱",
+        "py": "ài",
+        "en": "love"
+      },
+      {
+        "zh": "兴趣",
+        "py": "xìngqù",
+        "en": "interest"
+      },
+      {
+        "zh": "感兴趣",
+        "py": "gǎn xìngqù",
+        "en": "be interested in"
+      }
+    ]
+  },
+  {
+    "form": "bāng",
+    "verdict": "close",
+    "note": "help and support",
+    "members": [
+      {
+        "zh": "帮助",
+        "py": "bāngzhù",
+        "en": "help"
+      },
+      {
+        "zh": "帮忙",
+        "py": "bāngmáng",
+        "en": "help"
+      },
+      {
+        "zh": "支持",
+        "py": "zhīchí",
+        "en": "support"
+      },
+      {
+        "zh": "帮",
+        "py": "bāng",
+        "en": "help"
+      }
+    ]
+  },
+  {
+    "form": "ná",
+    "verdict": "close",
+    "note": "take, hold, fetch, accept, carry",
+    "members": [
+      {
+        "zh": "拿",
+        "py": "ná",
+        "en": "take, hold"
+      },
+      {
+        "zh": "接受",
+        "py": "jiēshòu",
+        "en": "accept"
+      },
+      {
+        "zh": "提",
+        "py": "tí",
+        "en": "carry; mention"
+      },
+      {
+        "zh": "取",
+        "py": "qǔ",
+        "en": "take, fetch"
+      }
+    ]
+  },
+  {
+    "form": "nán-rén",
+    "verdict": "close",
+    "note": "male, man, Mr., husband",
+    "members": [
+      {
+        "zh": "男",
+        "py": "nán",
+        "en": "male"
+      },
+      {
+        "zh": "男人",
+        "py": "nánrén",
+        "en": "man"
+      },
+      {
+        "zh": "先生",
+        "py": "xiānsheng",
+        "en": "Mr., husband"
+      },
+      {
+        "zh": "丈夫",
+        "py": "zhàngfu",
+        "en": "husband"
+      }
+    ]
+  },
+  {
+    "form": "kàn-dào",
+    "verdict": "close",
+    "note": "see, meet, come across",
+    "members": [
+      {
+        "zh": "看见",
+        "py": "kànjiàn",
+        "en": "see"
+      },
+      {
+        "zh": "见",
+        "py": "jiàn",
+        "en": "see"
+      },
+      {
+        "zh": "见面",
+        "py": "jiànmiàn",
+        "en": "meet"
+      },
+      {
+        "zh": "遇到",
+        "py": "yùdào",
+        "en": "come across"
+      }
+    ]
+  },
+  {
+    "form": "shuìjiào",
+    "verdict": "close",
+    "note": "sleep and rest",
+    "members": [
+      {
+        "zh": "睡",
+        "py": "shuì",
+        "en": "sleep"
+      },
+      {
+        "zh": "睡觉",
+        "py": "shuìjiào",
+        "en": "sleep"
+      },
+      {
+        "zh": "休息",
+        "py": "xiūxi",
+        "en": "rest"
+      },
+      {
+        "zh": "睡眠",
+        "py": "shuìmián",
+        "en": "sleep"
+      }
+    ]
+  },
+  {
+    "form": "zhè-lǐ",
+    "verdict": "close",
+    "note": "here and local",
+    "members": [
+      {
+        "zh": "这里",
+        "py": "zhèlǐ",
+        "en": "here"
+      },
+      {
+        "zh": "这儿",
+        "py": "zhèr",
+        "en": "here"
+      },
+      {
+        "zh": "当地",
+        "py": "dāngdì",
+        "en": "local"
+      },
+      {
+        "zh": "本地",
+        "py": "běndì",
+        "en": "local"
+      }
+    ]
+  },
+  {
+    "form": "kǒu",
+    "verdict": "close",
+    "note": "mouth and opening: kǒu is both in Mandarin",
+    "members": [
+      {
+        "zh": "嘴",
+        "py": "zuǐ",
+        "en": "mouth"
+      },
+      {
+        "zh": "口",
+        "py": "kǒu",
+        "en": "hole"
+      },
+      {
+        "zh": "门口",
+        "py": "ménkǒu",
+        "en": "doorway"
+      },
+      {
+        "zh": "嘴巴",
+        "py": "zuǐba",
+        "en": "mouth"
+      }
+    ]
+  },
+  {
+    "form": "kāi-xīn",
+    "verdict": "synonyms",
+    "note": "happy",
+    "members": [
+      {
+        "zh": "高兴",
+        "py": "gāoxìng",
+        "en": "happy, glad"
+      },
+      {
+        "zh": "开心",
+        "py": "kāixīn",
+        "en": "happy"
+      },
+      {
+        "zh": "快乐",
+        "py": "kuàilè",
+        "en": "happy"
+      },
+      {
+        "zh": "愉快",
+        "py": "yúkuài",
+        "en": "pleasant, cheerful"
+      }
+    ]
+  },
+  {
+    "form": "\"Zhōngguó\" huà",
+    "verdict": "synonyms",
+    "note": "the Chinese language; 语文 is the school subject",
+    "members": [
+      {
+        "zh": "中文",
+        "py": "Zhōngwén",
+        "en": "Chinese (language)"
+      },
+      {
+        "zh": "汉语",
+        "py": "Hànyǔ",
+        "en": "Chinese (language)"
+      },
+      {
+        "zh": "普通话",
+        "py": "pǔtōnghuà",
+        "en": "Mandarin"
+      },
+      {
+        "zh": "语文",
+        "py": "yǔwén",
+        "en": "Chinese (school subject)"
+      }
+    ]
+  },
+  {
+    "form": "bù-fen",
+    "verdict": "close",
+    "note": "part, aspect, department",
+    "members": [
+      {
+        "zh": "部分",
+        "py": "bùfen",
+        "en": "part"
+      },
+      {
+        "zh": "分",
+        "py": "fēn",
+        "en": "minute; part; divide"
+      },
+      {
+        "zh": "方面",
+        "py": "fāngmiàn",
+        "en": "aspect"
+      },
+      {
+        "zh": "部",
+        "py": "bù",
+        "en": "part, department"
+      }
+    ]
+  },
+  {
+    "form": "dé",
+    "verdict": "close",
+    "note": "get, receive, obtain, suffer",
+    "members": [
+      {
+        "zh": "得到",
+        "py": "dédào",
+        "en": "get"
+      },
+      {
+        "zh": "得",
+        "py": "dé",
+        "en": "get"
+      },
+      {
+        "zh": "受",
+        "py": "shòu",
+        "en": "receive, suffer"
+      },
+      {
+        "zh": "获得",
+        "py": "huòdé",
+        "en": "obtain"
+      }
+    ]
+  },
+  {
+    "form": "huó",
+    "verdict": "close",
+    "note": "live, life, fate",
+    "members": [
+      {
+        "zh": "生活",
+        "py": "shēnghuó",
+        "en": "life; live"
+      },
+      {
+        "zh": "活",
+        "py": "huó",
+        "en": "live"
+      },
+      {
+        "zh": "生命",
+        "py": "shēngmìng",
+        "en": "life"
+      },
+      {
+        "zh": "命",
+        "py": "mìng",
+        "en": "life, fate"
+      }
+    ]
+  },
+  {
+    "form": "wài-miàn",
+    "verdict": "different",
+    "note": "outside and surface fit; 自然 (nature) is not \"outside\"; it could be the world no one made",
+    "members": [
+      {
+        "zh": "外面",
+        "py": "wàimiàn",
+        "en": "outside"
+      },
+      {
+        "zh": "自然",
+        "py": "zìrán",
+        "en": "nature; naturally"
+      },
+      {
+        "zh": "外边",
+        "py": "wàibian",
+        "en": "outside"
+      },
+      {
+        "zh": "表面",
+        "py": "biǎomiàn",
+        "en": "surface"
+      }
+    ]
+  },
+  {
+    "form": "hǎo-kàn",
+    "verdict": "synonyms",
+    "note": "good-looking, beautiful",
+    "members": [
+      {
+        "zh": "好看",
+        "py": "hǎokàn",
+        "en": "good-looking"
+      },
+      {
+        "zh": "漂亮",
+        "py": "piàoliang",
+        "en": "beautiful"
+      },
+      {
+        "zh": "美",
+        "py": "měi",
+        "en": "beautiful"
+      },
+      {
+        "zh": "美丽",
+        "py": "měilì",
+        "en": "beautiful"
+      }
+    ]
+  },
+  {
+    "form": "jiā-lǐ-de rén",
+    "verdict": "close",
+    "note": "family, family member, relatives",
+    "members": [
+      {
+        "zh": "家人",
+        "py": "jiārén",
+        "en": "family member"
+      },
+      {
+        "zh": "家庭",
+        "py": "jiātíng",
+        "en": "family"
+      },
+      {
+        "zh": "亲人",
+        "py": "qīnrén",
+        "en": "relatives"
+      },
+      {
+        "zh": "亲戚",
+        "py": "qīnqi",
+        "en": "relative"
+      }
+    ]
+  },
+  {
+    "form": "xiǎng-fǎ",
+    "verdict": "close",
+    "note": "idea, opinion, viewpoint",
+    "members": [
+      {
+        "zh": "意见",
+        "py": "yìjiàn",
+        "en": "opinion"
+      },
+      {
+        "zh": "主意",
+        "py": "zhǔyi",
+        "en": "idea"
+      },
+      {
+        "zh": "想法",
+        "py": "xiǎngfǎ",
+        "en": "idea, thought"
+      },
+      {
+        "zh": "观点",
+        "py": "guāndiǎn",
+        "en": "viewpoint"
+      }
+    ]
+  },
+  {
+    "form": "xiě-de kàn-de dōng-xi",
+    "verdict": "synonyms",
+    "note": "picture, drawing",
+    "members": [
+      {
+        "zh": "画",
+        "py": "huà",
+        "en": "draw; painting"
+      },
+      {
+        "zh": "图",
+        "py": "tú",
+        "en": "picture, drawing"
+      },
+      {
+        "zh": "图片",
+        "py": "túpiàn",
+        "en": "picture, image"
+      },
+      {
+        "zh": "图画",
+        "py": "túhuà",
+        "en": "drawing"
+      }
+    ]
+  },
+  {
+    "form": "néng zuò-de dōng-xi",
+    "verdict": "different",
+    "note": "three meanings: what a thing is for (作用 功能), what a person can do (能力) and what a person may do (权利, a right)",
+    "members": [
+      {
+        "zh": "权利",
+        "py": "quánlì",
+        "en": "right"
+      },
+      {
+        "zh": "作用",
+        "py": "zuòyòng",
+        "en": "function, effect"
+      },
+      {
+        "zh": "功能",
+        "py": "gōngnéng",
+        "en": "function"
+      },
+      {
+        "zh": "能力",
+        "py": "nénglì",
+        "en": "ability"
+      }
+    ]
+  },
+  {
+    "form": "gěi rén kàn",
+    "verdict": "close",
+    "note": "show, display, perform, play a video",
+    "members": [
+      {
+        "zh": "展示",
+        "py": "zhǎnshì",
+        "en": "show, display"
+      },
+      {
+        "zh": "显示",
+        "py": "xiǎnshì",
+        "en": "show, display"
+      },
+      {
+        "zh": "表现",
+        "py": "biǎoxiàn",
+        "en": "show, perform"
+      },
+      {
+        "zh": "播放",
+        "py": "bōfàng",
+        "en": "play (a video or song)"
+      }
+    ]
+  },
+  {
+    "form": "le",
+    "verdict": "close",
+    "note": "done and already",
+    "members": [
+      {
+        "zh": "了",
+        "py": "le",
+        "en": "perfective aspect marker"
+      },
+      {
+        "zh": "已经",
+        "py": "yǐjīng",
+        "en": "already"
+      },
+      {
+        "zh": "已",
+        "py": "yǐ",
+        "en": "already"
+      }
+    ]
+  },
+  {
+    "form": "rén",
+    "verdict": "close",
+    "note": "person and humanity",
+    "members": [
+      {
+        "zh": "人",
+        "py": "rén",
+        "en": "human being"
+      },
+      {
+        "zh": "人物",
+        "py": "rénwù",
+        "en": "person, character"
+      },
+      {
+        "zh": "人类",
+        "py": "rénlèi",
+        "en": "humanity"
+      }
+    ]
+  },
+  {
+    "form": "zài",
+    "verdict": "close",
+    "note": "be at, exist, in the middle of",
+    "members": [
+      {
+        "zh": "在",
+        "py": "zài",
+        "en": "exist at"
+      },
+      {
+        "zh": "存在",
+        "py": "cúnzài",
+        "en": "exist"
+      },
+      {
+        "zh": "正在",
+        "py": "zhèngzài",
+        "en": "in the middle of (doing)"
+      }
+    ]
+  },
+  {
+    "form": "hǎo",
+    "verdict": "close",
+    "note": "good, okay, peaceful",
+    "members": [
+      {
+        "zh": "好",
+        "py": "hǎo",
+        "en": "good"
+      },
+      {
+        "zh": "行",
+        "py": "xíng",
+        "en": "okay"
+      },
+      {
+        "zh": "安",
+        "py": "ān",
+        "en": "peaceful"
+      }
+    ]
+  },
+  {
+    "form": "shì",
+    "verdict": "close",
+    "note": "be, exactly, equals",
+    "members": [
+      {
+        "zh": "是",
+        "py": "shì",
+        "en": "be"
+      },
+      {
+        "zh": "就是",
+        "py": "jiùshì",
+        "en": "exactly"
+      },
+      {
+        "zh": "等于",
+        "py": "děngyú",
+        "en": "equal, equals"
+      }
+    ]
+  },
+  {
+    "form": "yǒu",
+    "verdict": "close",
+    "note": "have, exist, possess",
+    "members": [
+      {
+        "zh": "有",
+        "py": "yǒu",
+        "en": "have"
+      },
+      {
+        "zh": "存在",
+        "py": "cúnzài",
+        "en": "exist"
+      },
+      {
+        "zh": "拥有",
+        "py": "yōngyǒu",
+        "en": "possess"
+      }
+    ]
+  },
+  {
+    "form": "kàn",
+    "verdict": "close",
+    "note": "look, read, check",
+    "members": [
+      {
+        "zh": "看",
+        "py": "kàn",
+        "en": "look at"
+      },
+      {
+        "zh": "读",
+        "py": "dú",
+        "en": "read"
+      },
+      {
+        "zh": "查看",
+        "py": "chákàn",
+        "en": "check, look over"
+      }
+    ]
+  },
+  {
+    "form": "wèi-shénme",
+    "verdict": "close",
+    "note": "why and reason",
+    "members": [
+      {
+        "zh": "为什么",
+        "py": "wèi shénme",
+        "en": "why"
+      },
+      {
+        "zh": "原因",
+        "py": "yuányīn",
+        "en": "reason"
+      },
+      {
+        "zh": "理由",
+        "py": "lǐyóu",
+        "en": "reason"
+      }
+    ]
+  },
+  {
+    "form": "yě",
+    "verdict": "close",
+    "note": "also, moreover",
+    "members": [
+      {
+        "zh": "也",
+        "py": "yě",
+        "en": "also"
+      },
+      {
+        "zh": "还",
+        "py": "hái",
+        "en": "still; also"
+      },
+      {
+        "zh": "而且",
+        "py": "érqiě",
+        "en": "moreover"
+      }
+    ]
+  },
+  {
+    "form": "yòu",
+    "verdict": "synonyms",
+    "note": "again",
+    "members": [
+      {
+        "zh": "再",
+        "py": "zài",
+        "en": "again"
+      },
+      {
+        "zh": "又",
+        "py": "yòu",
+        "en": "again"
+      },
+      {
+        "zh": "重新",
+        "py": "chóngxīn",
+        "en": "again, anew"
+      }
+    ]
+  },
+  {
+    "form": "dào",
+    "verdict": "close",
+    "note": "arrive and reach",
+    "members": [
+      {
+        "zh": "到",
+        "py": "dào",
+        "en": "arrive"
+      },
+      {
+        "zh": "到达",
+        "py": "dàodá",
+        "en": "arrive"
+      },
+      {
+        "zh": "达到",
+        "py": "dádào",
+        "en": "reach, achieve"
+      }
+    ]
+  },
+  {
+    "form": "néng",
+    "verdict": "synonyms",
+    "note": "can",
+    "members": [
+      {
+        "zh": "可以",
+        "py": "kěyǐ",
+        "en": "can, may"
+      },
+      {
+        "zh": "能",
+        "py": "néng",
+        "en": "be able to"
+      },
+      {
+        "zh": "能够",
+        "py": "nénggòu",
+        "en": "can, be able to"
+      }
+    ]
+  },
+  {
+    "form": "hé",
+    "verdict": "synonyms",
+    "note": "and, with",
+    "members": [
+      {
+        "zh": "和",
+        "py": "hé",
+        "en": "and"
+      },
+      {
+        "zh": "跟",
+        "py": "gēn",
+        "en": "with, and"
+      },
+      {
+        "zh": "同",
+        "py": "tóng",
+        "en": "same; together; with"
+      }
+    ]
+  },
+  {
+    "form": "hěn",
+    "verdict": "close",
+    "note": "very and quite",
+    "members": [
+      {
+        "zh": "很",
+        "py": "hěn",
+        "en": "very"
+      },
+      {
+        "zh": "非常",
+        "py": "fēicháng",
+        "en": "very"
+      },
+      {
+        "zh": "相当",
+        "py": "xiāngdāng",
+        "en": "quite"
+      }
+    ]
+  },
+  {
+    "form": "nà",
+    "verdict": "close",
+    "note": "that, those, then",
+    "members": [
+      {
+        "zh": "那",
+        "py": "nà",
+        "en": "that"
+      },
+      {
+        "zh": "那么",
+        "py": "nàme",
+        "en": "then; so"
+      },
+      {
+        "zh": "那些",
+        "py": "nàxiē",
+        "en": "those"
+      }
+    ]
+  },
+  {
+    "form": "xīn",
+    "verdict": "senses",
+    "note": "not one form: 心 and 精神 use xīn (heart), 新 uses xīn#new; the report reads only the sound",
+    "members": [
+      {
+        "zh": "心",
+        "py": "xīn",
+        "en": "heart"
+      },
+      {
+        "zh": "新",
+        "py": "xīn",
+        "en": "new"
+      },
+      {
+        "zh": "精神",
+        "py": "jīngshen",
+        "en": "spirit; lively"
+      }
+    ]
+  },
+  {
+    "form": "yīfu",
+    "verdict": "close",
+    "note": "clothing and cloth",
+    "members": [
+      {
+        "zh": "衣服",
+        "py": "yīfu",
+        "en": "clothing"
+      },
+      {
+        "zh": "服装",
+        "py": "fúzhuāng",
+        "en": "clothing"
+      },
+      {
+        "zh": "布",
+        "py": "bù",
+        "en": "cloth"
+      }
+    ]
+  },
+  {
+    "form": "yuè",
+    "verdict": "different",
+    "note": "the moon (月 月亮) and a month (月份); Mandarin uses 月 for both, but 月份 could be yuè-de shí-jiān",
+    "members": [
+      {
+        "zh": "月",
+        "py": "yuè",
+        "en": "moon"
+      },
+      {
+        "zh": "月亮",
+        "py": "yuèliang",
+        "en": "moon"
+      },
+      {
+        "zh": "月份",
+        "py": "yuèfèn",
+        "en": "month"
+      }
+    ]
+  },
+  {
+    "form": "xiě",
+    "verdict": "close",
+    "note": "write and draw",
+    "members": [
+      {
+        "zh": "写",
+        "py": "xiě",
+        "en": "write"
+      },
+      {
+        "zh": "画",
+        "py": "huà",
+        "en": "draw; painting"
+      },
+      {
+        "zh": "写作",
+        "py": "xiězuò",
+        "en": "write"
+      }
+    ]
+  },
+  {
+    "form": "gōng-zuò",
+    "verdict": "close",
+    "note": "work, career, occupation",
+    "members": [
+      {
+        "zh": "工作",
+        "py": "gōngzuò",
+        "en": "work"
+      },
+      {
+        "zh": "事业",
+        "py": "shìyè",
+        "en": "career"
+      },
+      {
+        "zh": "职业",
+        "py": "zhíyè",
+        "en": "occupation"
+      }
+    ]
+  },
+  {
+    "form": "yī-qǐ",
+    "verdict": "synonyms",
+    "note": "together",
+    "members": [
+      {
+        "zh": "一起",
+        "py": "yìqǐ",
+        "en": "together"
+      },
+      {
+        "zh": "一块儿",
+        "py": "yíkuàir",
+        "en": "together"
+      },
+      {
+        "zh": "同",
+        "py": "tóng",
+        "en": "same; together; with"
+      }
+    ]
+  },
+  {
+    "form": "zǎo-shang",
+    "verdict": "synonyms",
+    "note": "morning",
+    "members": [
+      {
+        "zh": "上午",
+        "py": "shàngwǔ",
+        "en": "morning"
+      },
+      {
+        "zh": "早上",
+        "py": "zǎoshang",
+        "en": "morning"
+      },
+      {
+        "zh": "早晨",
+        "py": "zǎochen",
+        "en": "morning"
+      }
+    ]
+  },
+  {
+    "form": "cóng",
+    "verdict": "synonyms",
+    "note": "from",
+    "members": [
+      {
+        "zh": "从",
+        "py": "cóng",
+        "en": "from"
+      },
+      {
+        "zh": "由",
+        "py": "yóu",
+        "en": "by, from"
+      },
+      {
+        "zh": "自",
+        "py": "zì",
+        "en": "from"
+      }
+    ]
+  },
+  {
+    "form": "bié-de",
+    "verdict": "synonyms",
+    "note": "other",
+    "members": [
+      {
+        "zh": "其他",
+        "py": "qítā",
+        "en": "other"
+      },
+      {
+        "zh": "别的",
+        "py": "biéde",
+        "en": "other"
+      },
+      {
+        "zh": "另外",
+        "py": "lìngwài",
+        "en": "other; besides"
+      }
+    ]
+  },
+  {
+    "form": "duō-shǎo",
+    "verdict": "close",
+    "note": "how many and quantity",
+    "members": [
+      {
+        "zh": "几",
+        "py": "jǐ",
+        "en": "how many"
+      },
+      {
+        "zh": "多少",
+        "py": "duōshao",
+        "en": "how many, how much"
+      },
+      {
+        "zh": "数量",
+        "py": "shùliàng",
+        "en": "quantity, amount"
+      }
+    ]
+  },
+  {
+    "form": "jiào-de cí",
+    "verdict": "synonyms",
+    "note": "name",
+    "members": [
+      {
+        "zh": "名字",
+        "py": "míngzi",
+        "en": "name"
+      },
+      {
+        "zh": "名",
+        "py": "míng",
+        "en": "name"
+      },
+      {
+        "zh": "姓名",
+        "py": "xìngmíng",
+        "en": "full name"
+      }
+    ]
+  },
+  {
+    "form": "dì",
+    "verdict": "close",
+    "note": "floor, soil, land",
+    "members": [
+      {
+        "zh": "地",
+        "py": "dì",
+        "en": "floor"
+      },
+      {
+        "zh": "土",
+        "py": "tǔ",
+        "en": "soil"
+      },
+      {
+        "zh": "土地",
+        "py": "tǔdì",
+        "en": "land"
+      }
+    ]
+  },
+  {
+    "form": "nǚ-rén",
+    "verdict": "synonyms",
+    "note": "woman",
+    "members": [
+      {
+        "zh": "女",
+        "py": "nǚ",
+        "en": "female"
+      },
+      {
+        "zh": "女人",
+        "py": "nǚrén",
+        "en": "woman"
+      },
+      {
+        "zh": "妇女",
+        "py": "fùnǚ",
+        "en": "woman"
+      }
+    ]
+  },
+  {
+    "form": "rúguǒ",
+    "verdict": "close",
+    "note": "if and as long as",
+    "members": [
+      {
+        "zh": "如果",
+        "py": "rúguǒ",
+        "en": "if"
+      },
+      {
+        "zh": "要是",
+        "py": "yàoshi",
+        "en": "if"
+      },
+      {
+        "zh": "只要",
+        "py": "zhǐyào",
+        "en": "as long as"
+      }
+    ]
+  },
+  {
+    "form": "bǐ",
+    "verdict": "close",
+    "note": "compare and even more",
+    "members": [
+      {
+        "zh": "比",
+        "py": "bǐ",
+        "en": "comparison"
+      },
+      {
+        "zh": "比较",
+        "py": "bǐjiào",
+        "en": "compare; rather"
+      },
+      {
+        "zh": "更加",
+        "py": "gèngjiā",
+        "en": "even more"
+      }
+    ]
+  },
+  {
+    "form": "chē",
+    "verdict": "close",
+    "note": "car, vehicle, taxi",
+    "members": [
+      {
+        "zh": "汽车",
+        "py": "qìchē",
+        "en": "car"
+      },
+      {
+        "zh": "车",
+        "py": "chē",
+        "en": "vehicle"
+      },
+      {
+        "zh": "出租车",
+        "py": "chūzūchē",
+        "en": "taxi"
+      }
+    ]
+  },
+  {
+    "form": "…, hǎo ma?",
+    "verdict": "close",
+    "note": "please, how about, suggest",
+    "members": [
+      {
+        "zh": "请",
+        "py": "qǐng",
+        "en": "please"
+      },
+      {
+        "zh": "怎么样",
+        "py": "zěnmeyàng",
+        "en": "how about"
+      },
+      {
+        "zh": "建议",
+        "py": "jiànyì",
+        "en": "suggest; suggestion"
+      }
+    ]
+  },
+  {
+    "form": "hái-shì",
+    "verdict": "synonyms",
+    "note": "or",
+    "members": [
+      {
+        "zh": "还是",
+        "py": "háishi",
+        "en": "or (choosing)"
+      },
+      {
+        "zh": "或",
+        "py": "huò",
+        "en": "or"
+      },
+      {
+        "zh": "或者",
+        "py": "huòzhě",
+        "en": "or"
+      }
+    ]
+  },
+  {
+    "form": "zuò-xià",
+    "verdict": "close",
+    "note": "sit, sit down, ride",
+    "members": [
+      {
+        "zh": "坐",
+        "py": "zuò",
+        "en": "sit"
+      },
+      {
+        "zh": "乘坐",
+        "py": "chéngzuò",
+        "en": "ride, take (a vehicle)"
+      },
+      {
+        "zh": "坐下",
+        "py": "zuòxià",
+        "en": "sit down"
+      }
+    ]
+  },
+  {
+    "form": "xīn-lǐ",
+    "verdict": "close",
+    "note": "heart, mind, mood",
+    "members": [
+      {
+        "zh": "心里",
+        "py": "xīnli",
+        "en": "in one's heart"
+      },
+      {
+        "zh": "心理",
+        "py": "xīnlǐ",
+        "en": "psychology, mind"
+      },
+      {
+        "zh": "情绪",
+        "py": "qíngxù",
+        "en": "mood"
+      }
+    ]
+  },
+  {
+    "form": "pà",
+    "verdict": "close",
+    "note": "fear and worry",
+    "members": [
+      {
+        "zh": "怕",
+        "py": "pà",
+        "en": "fear"
+      },
+      {
+        "zh": "担心",
+        "py": "dānxīn",
+        "en": "worry"
+      },
+      {
+        "zh": "害怕",
+        "py": "hàipà",
+        "en": "be afraid"
+      }
+    ]
+  },
+  {
+    "form": "chī-de zhíwù",
+    "verdict": "close",
+    "note": "vegetable and grain",
+    "members": [
+      {
+        "zh": "菜",
+        "py": "cài",
+        "en": "vegetable; dish"
+      },
+      {
+        "zh": "蔬菜",
+        "py": "shūcài",
+        "en": "vegetable"
+      },
+      {
+        "zh": "粮食",
+        "py": "liángshi",
+        "en": "grain, food crops"
+      }
+    ]
+  },
+  {
+    "form": "bù yào",
+    "verdict": "close",
+    "note": "don't and no need",
+    "members": [
+      {
+        "zh": "不要",
+        "py": "búyào",
+        "en": "don't"
+      },
+      {
+        "zh": "不用",
+        "py": "búyòng",
+        "en": "no need"
+      },
+      {
+        "zh": "别",
+        "py": "bié",
+        "en": "don't"
+      }
+    ]
+  },
+  {
+    "form": "dà bù-fen",
+    "verdict": "close",
+    "note": "main and basic",
+    "members": [
+      {
+        "zh": "主要",
+        "py": "zhǔyào",
+        "en": "main"
+      },
+      {
+        "zh": "基本",
+        "py": "jīběn",
+        "en": "basic; basically"
+      },
+      {
+        "zh": "基本上",
+        "py": "jīběnshàng",
+        "en": "basically"
+      }
+    ]
+  },
+  {
+    "form": "guó-jiā-lǐ-de dì-fang",
+    "verdict": "synonyms",
+    "note": "city",
+    "members": [
+      {
+        "zh": "城市",
+        "py": "chéngshì",
+        "en": "city"
+      },
+      {
+        "zh": "城",
+        "py": "chéng",
+        "en": "city, town"
+      },
+      {
+        "zh": "市",
+        "py": "shì",
+        "en": "city"
+      }
+    ]
+  },
+  {
+    "form": "zhīdào-de dōng-xi",
+    "verdict": "close",
+    "note": "knowledge, information, data",
+    "members": [
+      {
+        "zh": "知识",
+        "py": "zhīshi",
+        "en": "knowledge"
+      },
+      {
+        "zh": "信息",
+        "py": "xìnxī",
+        "en": "information"
+      },
+      {
+        "zh": "资料",
+        "py": "zīliào",
+        "en": "materials, data"
+      }
+    ]
+  },
+  {
+    "form": "zuì-hòu",
+    "verdict": "close",
+    "note": "last and finally",
+    "members": [
+      {
+        "zh": "最后",
+        "py": "zuìhòu",
+        "en": "last, final"
+      },
+      {
+        "zh": "终于",
+        "py": "zhōngyú",
+        "en": "finally"
+      },
+      {
+        "zh": "到底",
+        "py": "dàodǐ",
+        "en": "after all; finally"
+      }
+    ]
+  },
+  {
+    "form": "gōng-jù",
+    "verdict": "close",
+    "note": "machine, tool, equipment",
+    "members": [
+      {
+        "zh": "机器",
+        "py": "jīqì",
+        "en": "machine"
+      },
+      {
+        "zh": "工具",
+        "py": "gōngjù",
+        "en": "tool"
+      },
+      {
+        "zh": "设备",
+        "py": "shèbèi",
+        "en": "equipment"
+      }
+    ]
+  },
+  {
+    "form": "xiǎng shì zhēn-de",
+    "verdict": "close",
+    "note": "believe and trust",
+    "members": [
+      {
+        "zh": "相信",
+        "py": "xiāngxìn",
+        "en": "believe"
+      },
+      {
+        "zh": "信",
+        "py": "xìn",
+        "en": "believe; letter"
+      },
+      {
+        "zh": "信任",
+        "py": "xìnrèn",
+        "en": "trust"
+      }
+    ]
+  },
+  {
+    "form": "qǐ-lái",
+    "verdict": "close",
+    "note": "get up and wake up",
+    "members": [
+      {
+        "zh": "起来",
+        "py": "qǐlái",
+        "en": "get up"
+      },
+      {
+        "zh": "起床",
+        "py": "qǐchuáng",
+        "en": "get up"
+      },
+      {
+        "zh": "醒",
+        "py": "xǐng",
+        "en": "wake up"
+      }
+    ]
+  },
+  {
+    "form": "dòng shēntǐ",
+    "verdict": "close",
+    "note": "exercise and sport",
+    "members": [
+      {
+        "zh": "运动",
+        "py": "yùndòng",
+        "en": "exercise; sport"
+      },
+      {
+        "zh": "锻炼",
+        "py": "duànliàn",
+        "en": "exercise"
+      },
+      {
+        "zh": "体育",
+        "py": "tǐyù",
+        "en": "sports, PE"
+      }
+    ]
+  },
+  {
+    "form": "hǎo-tīng-de shēngyīn",
+    "verdict": "close",
+    "note": "music and song",
+    "members": [
+      {
+        "zh": "音乐",
+        "py": "yīnyuè",
+        "en": "music"
+      },
+      {
+        "zh": "歌",
+        "py": "gē",
+        "en": "song"
+      },
+      {
+        "zh": "歌曲",
+        "py": "gēqǔ",
+        "en": "song"
+      }
+    ]
+  },
+  {
+    "form": "yǒu-de",
+    "verdict": "synonyms",
+    "note": "some",
+    "members": [
+      {
+        "zh": "一些",
+        "py": "yìxiē",
+        "en": "some"
+      },
+      {
+        "zh": "些",
+        "py": "xiē",
+        "en": "some"
+      },
+      {
+        "zh": "有的",
+        "py": "yǒude",
+        "en": "some"
+      }
+    ]
+  },
+  {
+    "form": "yī-diǎn",
+    "verdict": "close",
+    "note": "some and a little",
+    "members": [
+      {
+        "zh": "一些",
+        "py": "yìxiē",
+        "en": "some"
+      },
+      {
+        "zh": "些",
+        "py": "xiē",
+        "en": "some"
+      },
+      {
+        "zh": "一点儿",
+        "py": "yìdiǎnr",
+        "en": "a little"
+      }
+    ]
+  },
+  {
+    "form": "nán-hái-zi",
+    "verdict": "different",
+    "note": "a son (儿子, family) and a boy (男孩儿, age); the kinship wording rule keeps family words apart",
+    "members": [
+      {
+        "zh": "儿子",
+        "py": "érzi",
+        "en": "son"
+      },
+      {
+        "zh": "男孩儿",
+        "py": "nánháir",
+        "en": "boy"
+      },
+      {
+        "zh": "男孩子",
+        "py": "nánháizi",
+        "en": "boy; son"
+      }
+    ]
+  },
+  {
+    "form": "mǎi-dōng-xi-de dì-fang",
+    "verdict": "close",
+    "note": "shop and supermarket",
+    "members": [
+      {
+        "zh": "商店",
+        "py": "shāngdiàn",
+        "en": "shop"
+      },
+      {
+        "zh": "店",
+        "py": "diàn",
+        "en": "shop"
+      },
+      {
+        "zh": "超市",
+        "py": "chāoshì",
+        "en": "supermarket"
+      }
+    ]
+  },
+  {
+    "form": "nǚ-hái-zi",
+    "verdict": "different",
+    "note": "a daughter (女儿, family) and a girl (女孩儿, age); the kinship wording rule keeps family words apart",
+    "members": [
+      {
+        "zh": "女儿",
+        "py": "nǚ’ér",
+        "en": "daughter"
+      },
+      {
+        "zh": "女孩儿",
+        "py": "nǚháir",
+        "en": "girl"
+      },
+      {
+        "zh": "女孩子",
+        "py": "nǚháizi",
+        "en": "girl; daughter"
+      }
+    ]
+  },
+  {
+    "form": "kàn-qǐ-lái",
+    "verdict": "close",
+    "note": "seem and appearance",
+    "members": [
+      {
+        "zh": "好像",
+        "py": "hǎoxiàng",
+        "en": "seem"
+      },
+      {
+        "zh": "样子",
+        "py": "yàngzi",
+        "en": "appearance"
+      },
+      {
+        "zh": "看来",
+        "py": "kànlái",
+        "en": "it seems"
+      }
+    ]
+  },
+  {
+    "form": "cháng-cháng",
+    "verdict": "synonyms",
+    "note": "often",
+    "members": [
+      {
+        "zh": "常",
+        "py": "cháng",
+        "en": "often"
+      },
+      {
+        "zh": "经常",
+        "py": "jīngcháng",
+        "en": "often"
+      },
+      {
+        "zh": "常常",
+        "py": "chángcháng",
+        "en": "often"
+      }
+    ]
+  },
+  {
+    "form": "ná-dào",
+    "verdict": "close",
+    "note": "receive and pick up",
+    "members": [
+      {
+        "zh": "接",
+        "py": "jiē",
+        "en": "pick up, receive"
+      },
+      {
+        "zh": "收",
+        "py": "shōu",
+        "en": "receive"
+      },
+      {
+        "zh": "收到",
+        "py": "shōudào",
+        "en": "receive"
+      }
+    ]
+  },
+  {
+    "form": "wǎng-shàng",
+    "verdict": "synonyms",
+    "note": "online",
+    "members": [
+      {
+        "zh": "网上",
+        "py": "wǎngshang",
+        "en": "online"
+      },
+      {
+        "zh": "在线",
+        "py": "zàixiàn",
+        "en": "online"
+      },
+      {
+        "zh": "线上",
+        "py": "xiànshàng",
+        "en": "online"
+      }
+    ]
+  },
+  {
+    "form": "chī-fàn-de dì-fang",
+    "verdict": "synonyms",
+    "note": "restaurant",
+    "members": [
+      {
+        "zh": "餐厅",
+        "py": "cāntīng",
+        "en": "restaurant"
+      },
+      {
+        "zh": "饭店",
+        "py": "fàndiàn",
+        "en": "restaurant"
+      },
+      {
+        "zh": "饭馆",
+        "py": "fànguǎn",
+        "en": "restaurant"
+      }
+    ]
+  },
+  {
+    "form": "wèi-shēng-jiān",
+    "verdict": "synonyms",
+    "note": "toilet, restroom",
+    "members": [
+      {
+        "zh": "卫生间",
+        "py": "wèishēngjiān",
+        "en": "bathroom"
+      },
+      {
+        "zh": "厕所",
+        "py": "cèsuǒ",
+        "en": "toilet"
+      },
+      {
+        "zh": "洗手间",
+        "py": "xǐshǒujiān",
+        "en": "restroom"
+      }
+    ]
+  },
+  {
+    "form": "yī-qǐ shuō-huà",
+    "verdict": "synonyms",
+    "note": "chat",
+    "members": [
+      {
+        "zh": "聊天儿",
+        "py": "liáotiānr",
+        "en": "chat"
+      },
+      {
+        "zh": "聊",
+        "py": "liáo",
+        "en": "chat"
+      },
+      {
+        "zh": "谈话",
+        "py": "tánhuà",
+        "en": "talk, chat"
+      }
+    ]
+  },
+  {
+    "form": "yòng X",
+    "verdict": "close",
+    "note": "according to and with",
+    "members": [
+      {
+        "zh": "根据",
+        "py": "gēnjù",
+        "en": "according to"
+      },
+      {
+        "zh": "按",
+        "py": "àn",
+        "en": "press; according to"
+      },
+      {
+        "zh": "以",
+        "py": "yǐ",
+        "en": "with; in order to"
+      }
+    ]
+  },
+  {
+    "form": "shēng",
+    "verdict": "close",
+    "note": "be born, give birth, produce",
+    "members": [
+      {
+        "zh": "出生",
+        "py": "chūshēng",
+        "en": "be born"
+      },
+      {
+        "zh": "生",
+        "py": "shēng",
+        "en": "give birth"
+      },
+      {
+        "zh": "生产",
+        "py": "shēngchǎn",
+        "en": "produce"
+      }
+    ]
+  },
+  {
+    "form": "duō dà",
+    "verdict": "different",
+    "note": "age (年龄 年纪) and degree (程度); duō dà fits age, degree is how much",
+    "members": [
+      {
+        "zh": "年龄",
+        "py": "niánlíng",
+        "en": "age"
+      },
+      {
+        "zh": "程度",
+        "py": "chéngdù",
+        "en": "degree, extent"
+      },
+      {
+        "zh": "年纪",
+        "py": "niánjì",
+        "en": "age"
+      }
+    ]
+  },
+  {
+    "form": "hěn yǒu lì",
+    "verdict": "close",
+    "note": "strong, lively, impressive",
+    "members": [
+      {
+        "zh": "强",
+        "py": "qiáng",
+        "en": "strong"
+      },
+      {
+        "zh": "精神",
+        "py": "jīngshen",
+        "en": "spirit; lively"
+      },
+      {
+        "zh": "厉害",
+        "py": "lìhai",
+        "en": "impressive; severe"
+      }
+    ]
+  },
+  {
+    "form": "xiàn-zài-de yàng-zi",
+    "verdict": "synonyms",
+    "note": "situation, condition, state",
+    "members": [
+      {
+        "zh": "情况",
+        "py": "qíngkuàng",
+        "en": "situation"
+      },
+      {
+        "zh": "状况",
+        "py": "zhuàngkuàng",
+        "en": "condition, situation"
+      },
+      {
+        "zh": "状态",
+        "py": "zhuàngtài",
+        "en": "state"
+      }
+    ]
+  },
+  {
+    "form": "shuō hǎo",
+    "verdict": "close",
+    "note": "accept, agree, arrange",
+    "members": [
+      {
+        "zh": "接受",
+        "py": "jiēshòu",
+        "en": "accept"
+      },
+      {
+        "zh": "答应",
+        "py": "dāying",
+        "en": "agree, promise"
+      },
+      {
+        "zh": "约",
+        "py": "yuē",
+        "en": "arrange; about"
+      }
+    ]
+  },
+  {
+    "form": "rén-rén dōu zhīdào-de",
+    "verdict": "synonyms",
+    "note": "famous",
+    "members": [
+      {
+        "zh": "有名",
+        "py": "yǒumíng",
+        "en": "famous"
+      },
+      {
+        "zh": "知名",
+        "py": "zhīmíng",
+        "en": "well-known"
+      },
+      {
+        "zh": "著名",
+        "py": "zhùmíng",
+        "en": "famous"
+      }
+    ]
+  },
+  {
+    "form": "hǎo-hǎo kàn",
+    "verdict": "synonyms",
+    "note": "check, inspect",
+    "members": [
+      {
+        "zh": "查",
+        "py": "chá",
+        "en": "check"
+      },
+      {
+        "zh": "检查",
+        "py": "jiǎnchá",
+        "en": "inspect"
+      },
+      {
+        "zh": "查看",
+        "py": "chákàn",
+        "en": "check, look over"
+      }
+    ]
+  },
+  {
+    "form": "zhǒng",
+    "verdict": "synonyms",
+    "note": "kind",
+    "members": [
+      {
+        "zh": "种",
+        "py": "zhǒng",
+        "en": "kind"
+      },
+      {
+        "zh": "种类",
+        "py": "zhǒnglèi",
+        "en": "kind, type"
+      },
+      {
+        "zh": "类",
+        "py": "lèi",
+        "en": "category, kind"
+      }
+    ]
+  },
+  {
+    "form": "fàng zài yī-qǐ",
+    "verdict": "close",
+    "note": "connect, join, make up",
+    "members": [
+      {
+        "zh": "连",
+        "py": "lián",
+        "en": "even; connect"
+      },
+      {
+        "zh": "合",
+        "py": "hé",
+        "en": "join, close"
+      },
+      {
+        "zh": "组成",
+        "py": "zǔchéng",
+        "en": "make up, form"
+      }
+    ]
+  },
+  {
+    "form": "hé bié-de yī-yàng",
+    "verdict": "synonyms",
+    "note": "ordinary",
+    "members": [
+      {
+        "zh": "一般",
+        "py": "yìbān",
+        "en": "ordinary"
+      },
+      {
+        "zh": "普通",
+        "py": "pǔtōng",
+        "en": "ordinary"
+      },
+      {
+        "zh": "平常",
+        "py": "píngcháng",
+        "en": "usual, ordinary"
+      }
+    ]
+  },
+  {
+    "form": "hěn duō cì zuò",
+    "verdict": "synonyms",
+    "note": "practice, train",
+    "members": [
+      {
+        "zh": "练习",
+        "py": "liànxí",
+        "en": "practice, exercise"
+      },
+      {
+        "zh": "练",
+        "py": "liàn",
+        "en": "practice"
+      },
+      {
+        "zh": "训练",
+        "py": "xùnliàn",
+        "en": "train"
+      }
+    ]
+  },
+  {
+    "form": "zhēn hǎo",
+    "verdict": "synonyms",
+    "note": "great, excellent",
+    "members": [
+      {
+        "zh": "棒",
+        "py": "bàng",
+        "en": "great; stick"
+      },
+      {
+        "zh": "牛",
+        "py": "niú",
+        "en": "cow; awesome"
+      },
+      {
+        "zh": "优秀",
+        "py": "yōuxiù",
+        "en": "excellent"
+      }
+    ]
+  },
+  {
+    "form": "yào zuò-de",
+    "verdict": "close",
+    "note": "project, business, task",
+    "members": [
+      {
+        "zh": "项目",
+        "py": "xiàngmù",
+        "en": "project"
+      },
+      {
+        "zh": "业务",
+        "py": "yèwù",
+        "en": "business, work"
+      },
+      {
+        "zh": "任务",
+        "py": "rènwu",
+        "en": "task"
+      }
+    ]
+  },
+  {
+    "form": "dà",
+    "verdict": "different",
+    "note": "big (大) and heavy (重); heavy could be hěn zhòng or nán ná",
+    "members": [
+      {
+        "zh": "大",
+        "py": "dà",
+        "en": "big"
+      },
+      {
+        "zh": "重",
+        "py": "zhòng",
+        "en": "heavy"
+      }
+    ]
+  },
+  {
+    "form": "zhè",
+    "verdict": "close",
+    "note": "this and these",
+    "members": [
+      {
+        "zh": "这",
+        "py": "zhè",
+        "en": "this"
+      },
+      {
+        "zh": "这些",
+        "py": "zhèxiē",
+        "en": "these"
+      }
+    ]
+  },
+  {
+    "form": "gè",
+    "verdict": "close",
+    "note": "counting words",
+    "members": [
+      {
+        "zh": "个",
+        "py": "gè",
+        "en": "universal classifier"
+      },
+      {
+        "zh": "张",
+        "py": "zhāng",
+        "en": "(counting word for flat things)"
+      }
+    ]
+  },
+  {
+    "form": "nǐ",
+    "verdict": "close",
+    "note": "自己 (oneself) is said with the pronoun it points back to",
+    "members": [
+      {
+        "zh": "你",
+        "py": "nǐ",
+        "en": "you"
+      },
+      {
+        "zh": "自己",
+        "py": "zìjǐ",
+        "en": "oneself"
+      }
+    ]
+  },
+  {
+    "form": "qù",
+    "verdict": "close",
+    "note": "go and walk / leave",
+    "members": [
+      {
+        "zh": "去",
+        "py": "qù",
+        "en": "go"
+      },
+      {
+        "zh": "走",
+        "py": "zǒu",
+        "en": "walk; leave"
+      }
+    ]
+  },
+  {
+    "form": "wǒ",
+    "verdict": "close",
+    "note": "自己 (oneself) is said with the pronoun it points back to",
+    "members": [
+      {
+        "zh": "我",
+        "py": "wǒ",
+        "en": "I"
+      },
+      {
+        "zh": "自己",
+        "py": "zìjǐ",
+        "en": "oneself"
+      }
+    ]
+  },
+  {
+    "form": "xiě-de dōng-xi",
+    "verdict": "close",
+    "note": "book and document",
+    "members": [
+      {
+        "zh": "书",
+        "py": "shū",
+        "en": "book"
+      },
+      {
+        "zh": "文件",
+        "py": "wénjiàn",
+        "en": "document, file"
+      }
+    ]
+  },
+  {
+    "form": "xué",
+    "verdict": "synonyms",
+    "note": "learn, study",
+    "members": [
+      {
+        "zh": "学",
+        "py": "xué",
+        "en": "learn"
+      },
+      {
+        "zh": "学习",
+        "py": "xuéxí",
+        "en": "study"
+      }
+    ]
+  },
+  {
+    "form": "kāi",
+    "verdict": "synonyms",
+    "note": "open",
+    "members": [
+      {
+        "zh": "开",
+        "py": "kāi",
+        "en": "open"
+      },
+      {
+        "zh": "打开",
+        "py": "dǎkāi",
+        "en": "open"
+      }
+    ]
+  },
+  {
+    "form": "hái",
+    "verdict": "close",
+    "note": "still and even more",
+    "members": [
+      {
+        "zh": "更",
+        "py": "gèng",
+        "en": "even more"
+      },
+      {
+        "zh": "还",
+        "py": "hái",
+        "en": "still; also"
+      }
+    ]
+  },
+  {
+    "form": "xiàn-zài",
+    "verdict": "synonyms",
+    "note": "now",
+    "members": [
+      {
+        "zh": "现在",
+        "py": "xiànzài",
+        "en": "now"
+      },
+      {
+        "zh": "目前",
+        "py": "mùqián",
+        "en": "at present"
+      }
+    ]
+  },
+  {
+    "form": "zǒu",
+    "verdict": "close",
+    "note": "walk and leave",
+    "members": [
+      {
+        "zh": "走",
+        "py": "zǒu",
+        "en": "walk; leave"
+      },
+      {
+        "zh": "离开",
+        "py": "líkāi",
+        "en": "leave"
+      }
+    ]
+  },
+  {
+    "form": "jīn",
+    "verdict": "close",
+    "note": "money and cash",
+    "members": [
+      {
+        "zh": "钱",
+        "py": "qián",
+        "en": "money"
+      },
+      {
+        "zh": "现金",
+        "py": "xiànjīn",
+        "en": "cash"
+      }
+    ]
+  },
+  {
+    "form": "wèn",
+    "verdict": "synonyms",
+    "note": "ask",
+    "members": [
+      {
+        "zh": "问",
+        "py": "wèn",
+        "en": "ask"
+      },
+      {
+        "zh": "提问",
+        "py": "tíwèn",
+        "en": "ask a question"
+      }
+    ]
+  },
+  {
+    "form": "hái-zi",
+    "verdict": "synonyms",
+    "note": "child",
+    "members": [
+      {
+        "zh": "孩子",
+        "py": "háizi",
+        "en": "child"
+      },
+      {
+        "zh": "小孩儿",
+        "py": "xiǎoháir",
+        "en": "child"
+      }
+    ]
+  },
+  {
+    "form": "yuè-de shí-jiān",
+    "verdict": "close",
+    "note": "evening and night",
+    "members": [
+      {
+        "zh": "晚上",
+        "py": "wǎnshang",
+        "en": "evening"
+      },
+      {
+        "zh": "夜",
+        "py": "yè",
+        "en": "night"
+      }
+    ]
+  },
+  {
+    "form": "fàn",
+    "verdict": "close",
+    "note": "a meal and uncooked rice",
+    "members": [
+      {
+        "zh": "饭",
+        "py": "fàn",
+        "en": "meal, rice"
+      },
+      {
+        "zh": "大米",
+        "py": "dàmǐ",
+        "en": "rice (uncooked)"
+      }
+    ]
+  },
+  {
+    "form": "chī-de",
+    "verdict": "close",
+    "note": "meal and food",
+    "members": [
+      {
+        "zh": "饭",
+        "py": "fàn",
+        "en": "meal, rice"
+      },
+      {
+        "zh": "食物",
+        "py": "shíwù",
+        "en": "food"
+      }
+    ]
+  },
+  {
+    "form": "māma",
+    "verdict": "synonyms",
+    "note": "mother",
+    "members": [
+      {
+        "zh": "妈妈",
+        "py": "māma",
+        "en": "mom"
+      },
+      {
+        "zh": "母亲",
+        "py": "mǔqīn",
+        "en": "mother"
+      }
+    ]
+  },
+  {
+    "form": "nǐ hǎo",
+    "verdict": "close",
+    "note": "hello, and hello on the phone",
+    "members": [
+      {
+        "zh": "你好",
+        "py": "nǐ hǎo",
+        "en": "hello"
+      },
+      {
+        "zh": "喂",
+        "py": "wèi",
+        "en": "hello (on the phone)"
+      }
+    ]
+  },
+  {
+    "form": "guānxi",
+    "verdict": "close",
+    "note": "relationship and contact",
+    "members": [
+      {
+        "zh": "关系",
+        "py": "guānxì",
+        "en": "relationship"
+      },
+      {
+        "zh": "联系",
+        "py": "liánxì",
+        "en": "connection; contact"
+      }
+    ]
+  },
+  {
+    "form": "xiě-de cí",
+    "verdict": "close",
+    "note": "character and writing",
+    "members": [
+      {
+        "zh": "字",
+        "py": "zì",
+        "en": "character (writing)"
+      },
+      {
+        "zh": "文字",
+        "py": "wénzì",
+        "en": "writing, script"
+      }
+    ]
+  },
+  {
+    "form": "kāishǐ",
+    "verdict": "close",
+    "note": "begin and first of all",
+    "members": [
+      {
+        "zh": "开始",
+        "py": "kāishǐ",
+        "en": "begin"
+      },
+      {
+        "zh": "首先",
+        "py": "shǒuxiān",
+        "en": "first of all"
+      }
+    ]
+  },
+  {
+    "form": "shí-jiān",
+    "verdict": "synonyms",
+    "note": "time",
+    "members": [
+      {
+        "zh": "时间",
+        "py": "shíjiān",
+        "en": "time"
+      },
+      {
+        "zh": "时",
+        "py": "shí",
+        "en": "time"
+      }
+    ]
+  },
+  {
+    "form": "zuì",
+    "verdict": "close",
+    "note": "most and especially",
+    "members": [
+      {
+        "zh": "最",
+        "py": "zuì",
+        "en": "most"
+      },
+      {
+        "zh": "尤其",
+        "py": "yóuqí",
+        "en": "especially"
+      }
+    ]
+  },
+  {
+    "form": "zhòng-yào",
+    "verdict": "different",
+    "note": "important (重要) and serious (严重); serious could be hěn huài",
+    "members": [
+      {
+        "zh": "重要",
+        "py": "zhòngyào",
+        "en": "important"
+      },
+      {
+        "zh": "严重",
+        "py": "yánzhòng",
+        "en": "serious"
+      }
+    ]
+  },
+  {
+    "form": "xué-de dì-fang",
+    "verdict": "close",
+    "note": "school and campus",
+    "members": [
+      {
+        "zh": "学校",
+        "py": "xuéxiào",
+        "en": "school"
+      },
+      {
+        "zh": "校园",
+        "py": "xiàoyuán",
+        "en": "campus"
+      }
+    ]
+  },
+  {
+    "form": "suàn-de jī",
+    "verdict": "synonyms",
+    "note": "computer",
+    "members": [
+      {
+        "zh": "电脑",
+        "py": "diànnǎo",
+        "en": "computer"
+      },
+      {
+        "zh": "计算机",
+        "py": "jìsuànjī",
+        "en": "computer"
+      }
+    ]
+  },
+  {
+    "form": "wèn-tí",
+    "verdict": "close",
+    "note": "question, problem, topic",
+    "members": [
+      {
+        "zh": "问题",
+        "py": "wèntí",
+        "en": "question; problem"
+      },
+      {
+        "zh": "题目",
+        "py": "tímù",
+        "en": "topic, question"
+      }
+    ]
+  },
+  {
+    "form": "yī-dìng",
+    "verdict": "synonyms",
+    "note": "certainly",
+    "members": [
+      {
+        "zh": "一定",
+        "py": "yídìng",
+        "en": "certainly"
+      },
+      {
+        "zh": "肯定",
+        "py": "kěndìng",
+        "en": "definitely"
+      }
+    ]
+  },
+  {
+    "form": "X qián",
+    "verdict": "synonyms",
+    "note": "before",
+    "members": [
+      {
+        "zh": "以前",
+        "py": "yǐqián",
+        "en": "before"
+      },
+      {
+        "zh": "之前",
+        "py": "zhīqián",
+        "en": "before"
+      }
+    ]
+  },
+  {
+    "form": "X hòu",
+    "verdict": "synonyms",
+    "note": "after",
+    "members": [
+      {
+        "zh": "以后",
+        "py": "yǐhòu",
+        "en": "after, later"
+      },
+      {
+        "zh": "之后",
+        "py": "zhīhòu",
+        "en": "after"
+      }
+    ]
+  },
+  {
+    "form": "X-wán hòu, Y",
+    "verdict": "close",
+    "note": "first and only then: two sides of one frame",
+    "members": [
+      {
+        "zh": "先",
+        "py": "xiān",
+        "en": "first"
+      },
+      {
+        "zh": "才",
+        "py": "cái",
+        "en": "only then"
+      }
+    ]
+  },
+  {
+    "form": "nǎ-lǐ",
+    "verdict": "synonyms",
+    "note": "where",
+    "members": [
+      {
+        "zh": "哪里",
+        "py": "nǎlǐ",
+        "en": "where"
+      },
+      {
+        "zh": "哪儿",
+        "py": "nǎr",
+        "en": "where"
+      }
+    ]
+  },
+  {
+    "form": "shēngyīn",
+    "verdict": "synonyms",
+    "note": "sound",
+    "members": [
+      {
+        "zh": "声音",
+        "py": "shēngyīn",
+        "en": "sound"
+      },
+      {
+        "zh": "声",
+        "py": "shēng",
+        "en": "sound"
+      }
+    ]
+  },
+  {
+    "form": "rì",
+    "verdict": "different",
+    "note": "the sun (太阳) and a day (日子); rì is both, but 日子 could be tiān",
+    "members": [
+      {
+        "zh": "太阳",
+        "py": "tàiyáng",
+        "en": "sun"
+      },
+      {
+        "zh": "日子",
+        "py": "rìzi",
+        "en": "day; life"
+      }
+    ]
+  },
+  {
+    "form": "zěnme",
+    "verdict": "synonyms",
+    "note": "how",
+    "members": [
+      {
+        "zh": "怎么",
+        "py": "zěnme",
+        "en": "how"
+      },
+      {
+        "zh": "怎样",
+        "py": "zěnyàng",
+        "en": "how"
+      }
+    ]
+  },
+  {
+    "form": "zhǎo",
+    "verdict": "synonyms",
+    "note": "look for",
+    "members": [
+      {
+        "zh": "找",
+        "py": "zhǎo",
+        "en": "hunt"
+      },
+      {
+        "zh": "寻找",
+        "py": "xúnzhǎo",
+        "en": "look for"
+      }
+    ]
+  },
+  {
+    "form": "míng-bái",
+    "verdict": "synonyms",
+    "note": "understand",
+    "members": [
+      {
+        "zh": "明白",
+        "py": "míngbai",
+        "en": "understand"
+      },
+      {
+        "zh": "懂",
+        "py": "dǒng",
+        "en": "understand"
+      }
+    ]
+  },
+  {
+    "form": "bù nán",
+    "verdict": "synonyms",
+    "note": "easy",
+    "members": [
+      {
+        "zh": "简单",
+        "py": "jiǎndān",
+        "en": "simple, easy"
+      },
+      {
+        "zh": "容易",
+        "py": "róngyì",
+        "en": "easy"
+      }
+    ]
+  },
+  {
+    "form": "lǎo",
+    "verdict": "close",
+    "note": "old (person) and old (thing)",
+    "members": [
+      {
+        "zh": "老",
+        "py": "lǎo",
+        "en": "old"
+      },
+      {
+        "zh": "旧",
+        "py": "jiù",
+        "en": "old (thing)"
+      }
+    ]
+  },
+  {
+    "form": "bāng-rén-xué-de rén",
+    "verdict": "synonyms",
+    "note": "teacher",
+    "members": [
+      {
+        "zh": "老师",
+        "py": "lǎoshī",
+        "en": "teacher"
+      },
+      {
+        "zh": "教师",
+        "py": "jiàoshī",
+        "en": "teacher"
+      }
+    ]
+  },
+  {
+    "form": "ràng",
+    "verdict": "close",
+    "note": "let and allow",
+    "members": [
+      {
+        "zh": "让",
+        "py": "ràng",
+        "en": "let"
+      },
+      {
+        "zh": "允许",
+        "py": "yǔnxǔ",
+        "en": "allow"
+      }
+    ]
+  },
+  {
+    "form": "shēntǐ",
+    "verdict": "synonyms",
+    "note": "body",
+    "members": [
+      {
+        "zh": "身体",
+        "py": "shēntǐ",
+        "en": "body"
+      },
+      {
+        "zh": "身",
+        "py": "shēn",
+        "en": "body"
+      }
+    ]
+  },
+  {
+    "form": "zhè-yàng",
+    "verdict": "synonyms",
+    "note": "like this",
+    "members": [
+      {
+        "zh": "这么",
+        "py": "zhème",
+        "en": "so, like this"
+      },
+      {
+        "zh": "这样",
+        "py": "zhèyàng",
+        "en": "like this"
+      }
+    ]
+  },
+  {
+    "form": "jìn",
+    "verdict": "synonyms",
+    "note": "enter",
+    "members": [
+      {
+        "zh": "进",
+        "py": "jìn",
+        "en": "enter"
+      },
+      {
+        "zh": "进入",
+        "py": "jìnrù",
+        "en": "enter"
+      }
+    ]
+  },
+  {
+    "form": "nà-yàng",
+    "verdict": "synonyms",
+    "note": "like that",
+    "members": [
+      {
+        "zh": "那么",
+        "py": "nàme",
+        "en": "then; so"
+      },
+      {
+        "zh": "那样",
+        "py": "nàyàng",
+        "en": "like that"
+      }
+    ]
+  },
+  {
+    "form": "nán",
+    "verdict": "synonyms",
+    "note": "difficult",
+    "members": [
+      {
+        "zh": "难",
+        "py": "nán",
+        "en": "difficult"
+      },
+      {
+        "zh": "困难",
+        "py": "kùnnan",
+        "en": "difficult; difficulty"
+      }
+    ]
+  },
+  {
+    "form": "yī-xià yǐ-qián",
+    "verdict": "synonyms",
+    "note": "just now",
+    "members": [
+      {
+        "zh": "刚",
+        "py": "gāng",
+        "en": "just now"
+      },
+      {
+        "zh": "刚才",
+        "py": "gāngcái",
+        "en": "just now"
+      }
+    ]
+  },
+  {
+    "form": "bié-de rén",
+    "verdict": "synonyms",
+    "note": "other people",
+    "members": [
+      {
+        "zh": "别人",
+        "py": "biérén",
+        "en": "other people"
+      },
+      {
+        "zh": "人家",
+        "py": "rénjia",
+        "en": "other people"
+      }
+    ]
+  },
+  {
+    "form": "wánr",
+    "verdict": "close",
+    "note": "play and entertainment",
+    "members": [
+      {
+        "zh": "玩",
+        "py": "wán",
+        "en": "play"
+      },
+      {
+        "zh": "娱乐",
+        "py": "yúlè",
+        "en": "entertainment"
+      }
+    ]
+  },
+  {
+    "form": "yǎnjing",
+    "verdict": "synonyms",
+    "note": "eye",
+    "members": [
+      {
+        "zh": "眼睛",
+        "py": "yǎnjing",
+        "en": "eye"
+      },
+      {
+        "zh": "眼",
+        "py": "yǎn",
+        "en": "eye"
+      }
+    ]
+  },
+  {
+    "form": "jiǎo",
+    "verdict": "different",
+    "note": "a foot (脚) and a leg (腿); the leg could be the part above the foot",
+    "members": [
+      {
+        "zh": "脚",
+        "py": "jiǎo",
+        "en": "foot"
+      },
+      {
+        "zh": "腿",
+        "py": "tuǐ",
+        "en": "leg"
+      }
+    ]
+  },
+  {
+    "form": "kuài zǒu",
+    "verdict": "synonyms",
+    "note": "run",
+    "members": [
+      {
+        "zh": "跑",
+        "py": "pǎo",
+        "en": "run"
+      },
+      {
+        "zh": "跑步",
+        "py": "pǎobù",
+        "en": "run, jog"
+      }
+    ]
+  },
+  {
+    "form": "shì wǒ bù hǎo",
+    "verdict": "synonyms",
+    "note": "sorry",
+    "members": [
+      {
+        "zh": "对不起",
+        "py": "duìbuqǐ",
+        "en": "sorry"
+      },
+      {
+        "zh": "不好意思",
+        "py": "bù hǎoyìsi",
+        "en": "sorry, excuse me"
+      }
+    ]
+  },
+  {
+    "form": "bàba",
+    "verdict": "synonyms",
+    "note": "father",
+    "members": [
+      {
+        "zh": "爸爸",
+        "py": "bàba",
+        "en": "dad"
+      },
+      {
+        "zh": "父亲",
+        "py": "fùqīn",
+        "en": "father"
+      }
+    ]
+  },
+  {
+    "form": "lì",
+    "verdict": "synonyms",
+    "note": "strength",
+    "members": [
+      {
+        "zh": "力",
+        "py": "lì",
+        "en": "strength"
+      },
+      {
+        "zh": "力量",
+        "py": "lìliàng",
+        "en": "strength"
+      }
+    ]
+  },
+  {
+    "form": "xīn-\"wén\"",
+    "verdict": "close",
+    "note": "news and message",
+    "members": [
+      {
+        "zh": "新闻",
+        "py": "xīnwén",
+        "en": "news"
+      },
+      {
+        "zh": "消息",
+        "py": "xiāoxi",
+        "en": "news, message"
+      }
+    ]
+  },
+  {
+    "form": "wán",
+    "verdict": "synonyms",
+    "note": "finish, end",
+    "members": [
+      {
+        "zh": "结束",
+        "py": "jiéshù",
+        "en": "end"
+      },
+      {
+        "zh": "完",
+        "py": "wán",
+        "en": "finish"
+      }
+    ]
+  },
+  {
+    "form": "huà",
+    "verdict": "close",
+    "note": "language and speech",
+    "members": [
+      {
+        "zh": "语言",
+        "py": "yǔyán",
+        "en": "language"
+      },
+      {
+        "zh": "话",
+        "py": "huà",
+        "en": "words, speech"
+      }
+    ]
+  },
+  {
+    "form": "bù ràng X biàn huài",
+    "verdict": "synonyms",
+    "note": "protect",
+    "members": [
+      {
+        "zh": "保护",
+        "py": "bǎohù",
+        "en": "protect"
+      },
+      {
+        "zh": "保",
+        "py": "bǎo",
+        "en": "protect"
+      }
+    ]
+  },
+  {
+    "form": "zuò hǎo",
+    "verdict": "different",
+    "note": "prepare (准备) and repair (修); make it good again is not get it ready",
+    "members": [
+      {
+        "zh": "准备",
+        "py": "zhǔnbèi",
+        "en": "prepare"
+      },
+      {
+        "zh": "修",
+        "py": "xiū",
+        "en": "repair"
+      }
+    ]
+  },
+  {
+    "form": "hé rén yī-qǐ zuò",
+    "verdict": "synonyms",
+    "note": "take part",
+    "members": [
+      {
+        "zh": "参加",
+        "py": "cānjiā",
+        "en": "take part"
+      },
+      {
+        "zh": "参与",
+        "py": "cānyù",
+        "en": "participate"
+      }
+    ]
+  },
+  {
+    "form": "huí-huà",
+    "verdict": "synonyms",
+    "note": "answer",
+    "members": [
+      {
+        "zh": "回答",
+        "py": "huídá",
+        "en": "answer"
+      },
+      {
+        "zh": "答",
+        "py": "dá",
+        "en": "answer"
+      }
+    ]
+  },
+  {
+    "form": "duì wèn-de rén shuō",
+    "verdict": "synonyms",
+    "note": "answer",
+    "members": [
+      {
+        "zh": "回答",
+        "py": "huídá",
+        "en": "answer"
+      },
+      {
+        "zh": "答",
+        "py": "dá",
+        "en": "answer"
+      }
+    ]
+  },
+  {
+    "form": "dé-dào",
+    "verdict": "close",
+    "note": "get and receive",
+    "members": [
+      {
+        "zh": "得到",
+        "py": "dédào",
+        "en": "get"
+      },
+      {
+        "zh": "收",
+        "py": "shōu",
+        "en": "receive"
+      }
+    ]
+  },
+  {
+    "form": "shuō-de dōng-xi",
+    "verdict": "close",
+    "note": "story and topic",
+    "members": [
+      {
+        "zh": "故事",
+        "py": "gùshi",
+        "en": "story"
+      },
+      {
+        "zh": "话题",
+        "py": "huàtí",
+        "en": "topic"
+      }
+    ]
+  },
+  {
+    "form": "qī-tiān",
+    "verdict": "synonyms",
+    "note": "week",
+    "members": [
+      {
+        "zh": "星期",
+        "py": "xīngqī",
+        "en": "week"
+      },
+      {
+        "zh": "周",
+        "py": "zhōu",
+        "en": "week"
+      }
+    ]
+  },
+  {
+    "form": "kàn-de dōng-xi",
+    "verdict": "close",
+    "note": "photo and picture",
+    "members": [
+      {
+        "zh": "照片",
+        "py": "zhàopiàn",
+        "en": "photo"
+      },
+      {
+        "zh": "图片",
+        "py": "túpiàn",
+        "en": "picture, image"
+      }
+    ]
+  },
+  {
+    "form": "bàba-māma",
+    "verdict": "close",
+    "note": "parents and a parent at school",
+    "members": [
+      {
+        "zh": "父母",
+        "py": "fùmǔ",
+        "en": "parent"
+      },
+      {
+        "zh": "家长",
+        "py": "jiāzhǎng",
+        "en": "parent"
+      }
+    ]
+  },
+  {
+    "form": "hěn bù yī-yàng",
+    "verdict": "synonyms",
+    "note": "special",
+    "members": [
+      {
+        "zh": "特别",
+        "py": "tèbié",
+        "en": "special"
+      },
+      {
+        "zh": "特殊",
+        "py": "tèshū",
+        "en": "special"
+      }
+    ]
+  },
+  {
+    "form": "yánsè",
+    "verdict": "synonyms",
+    "note": "color",
+    "members": [
+      {
+        "zh": "颜色",
+        "py": "yánsè",
+        "en": "color"
+      },
+      {
+        "zh": "色彩",
+        "py": "sècǎi",
+        "en": "color"
+      }
+    ]
+  },
+  {
+    "form": "shí-wù",
+    "verdict": "synonyms",
+    "note": "food",
+    "members": [
+      {
+        "zh": "食物",
+        "py": "shíwù",
+        "en": "food"
+      },
+      {
+        "zh": "食品",
+        "py": "shípǐn",
+        "en": "food"
+      }
+    ]
+  },
+  {
+    "form": "yī-xiē",
+    "verdict": "synonyms",
+    "note": "some",
+    "members": [
+      {
+        "zh": "一些",
+        "py": "yìxiē",
+        "en": "some"
+      },
+      {
+        "zh": "些",
+        "py": "xiē",
+        "en": "some"
+      }
+    ]
+  },
+  {
+    "form": "zhōng-jiān",
+    "verdict": "close",
+    "note": "middle and center",
+    "members": [
+      {
+        "zh": "中间",
+        "py": "zhōngjiān",
+        "en": "middle, between"
+      },
+      {
+        "zh": "中心",
+        "py": "zhōngxīn",
+        "en": "center"
+      }
+    ]
+  },
+  {
+    "form": "bù dòng",
+    "verdict": "synonyms",
+    "note": "stop",
+    "members": [
+      {
+        "zh": "停",
+        "py": "tíng",
+        "en": "stop"
+      },
+      {
+        "zh": "停止",
+        "py": "tíngzhǐ",
+        "en": "stop"
+      }
+    ]
+  },
+  {
+    "form": "qián-miàn",
+    "verdict": "close",
+    "note": "front and in front of",
+    "members": [
+      {
+        "zh": "前面",
+        "py": "qiánmiàn",
+        "en": "front"
+      },
+      {
+        "zh": "面前",
+        "py": "miànqián",
+        "en": "in front of"
+      }
+    ]
+  },
+  {
+    "form": "tián",
+    "verdict": "different",
+    "note": "sweet (甜) and cute (可爱); cute is said as sweet only as a figure of speech",
+    "members": [
+      {
+        "zh": "可爱",
+        "py": "kě’ài",
+        "en": "cute, lovely"
+      },
+      {
+        "zh": "甜",
+        "py": "tián",
+        "en": "sweet"
+      }
+    ]
+  },
+  {
+    "form": "yòu-biān",
+    "verdict": "synonyms",
+    "note": "right side",
+    "members": [
+      {
+        "zh": "右",
+        "py": "yòu",
+        "en": "right (side)"
+      },
+      {
+        "zh": "右边",
+        "py": "yòubian",
+        "en": "right side"
+      }
+    ]
+  },
+  {
+    "form": "hào",
+    "verdict": "close",
+    "note": "number in a row and a number",
+    "members": [
+      {
+        "zh": "号",
+        "py": "hào",
+        "en": "sequence marker"
+      },
+      {
+        "zh": "号码",
+        "py": "hàomǎ",
+        "en": "number"
+      }
+    ]
+  },
+  {
+    "form": "jué-de yī-yàng",
+    "verdict": "synonyms",
+    "note": "agree",
+    "members": [
+      {
+        "zh": "同意",
+        "py": "tóngyì",
+        "en": "agree"
+      },
+      {
+        "zh": "赞成",
+        "py": "zànchéng",
+        "en": "approve, agree"
+      }
+    ]
+  },
+  {
+    "form": "zuǒ-biān",
+    "verdict": "synonyms",
+    "note": "left side",
+    "members": [
+      {
+        "zh": "左",
+        "py": "zuǒ",
+        "en": "left (side)"
+      },
+      {
+        "zh": "左边",
+        "py": "zuǒbian",
+        "en": "left side"
+      }
+    ]
+  },
+  {
+    "form": "kāi-huì",
+    "verdict": "close",
+    "note": "have a meeting and a meeting",
+    "members": [
+      {
+        "zh": "开会",
+        "py": "kāihuì",
+        "en": "have a meeting"
+      },
+      {
+        "zh": "会议",
+        "py": "huìyì",
+        "en": "meeting"
+      }
+    ]
+  },
+  {
+    "form": "dǎ-suàn",
+    "verdict": "close",
+    "note": "plan and arrange",
+    "members": [
+      {
+        "zh": "打算",
+        "py": "dǎsuàn",
+        "en": "plan, intend"
+      },
+      {
+        "zh": "安排",
+        "py": "ānpái",
+        "en": "arrange"
+      }
+    ]
+  },
+  {
+    "form": "hǎo wánr",
+    "verdict": "synonyms",
+    "note": "interesting, fun",
+    "members": [
+      {
+        "zh": "有意思",
+        "py": "yǒu yìsi",
+        "en": "interesting, fun"
+      },
+      {
+        "zh": "有趣",
+        "py": "yǒuqù",
+        "en": "interesting"
+      }
+    ]
+  },
+  {
+    "form": "yǒu-yòng",
+    "verdict": "close",
+    "note": "useful and effective",
+    "members": [
+      {
+        "zh": "有用",
+        "py": "yǒuyòng",
+        "en": "useful"
+      },
+      {
+        "zh": "有效",
+        "py": "yǒuxiào",
+        "en": "effective"
+      }
+    ]
+  },
+  {
+    "form": "wánr-de",
+    "verdict": "close",
+    "note": "game and entertainment",
+    "members": [
+      {
+        "zh": "游戏",
+        "py": "yóuxì",
+        "en": "game"
+      },
+      {
+        "zh": "娱乐",
+        "py": "yúlè",
+        "en": "entertainment"
+      }
+    ]
+  },
+  {
+    "form": "jué-de hǎo",
+    "verdict": "different",
+    "note": "satisfied (满意) and comfortable (舒服); satisfied is about how something turned out, comfortable about the body",
+    "members": [
+      {
+        "zh": "满意",
+        "py": "mǎnyì",
+        "en": "satisfied"
+      },
+      {
+        "zh": "舒服",
+        "py": "shūfu",
+        "en": "comfortable"
+      }
+    ]
+  },
+  {
+    "form": "shēntǐ bù hǎo",
+    "verdict": "close",
+    "note": "get sick and illness",
+    "members": [
+      {
+        "zh": "生病",
+        "py": "shēngbìng",
+        "en": "get sick"
+      },
+      {
+        "zh": "病",
+        "py": "bìng",
+        "en": "illness"
+      }
+    ]
+  },
+  {
+    "form": "kàn wài-miàn-de kǒu",
+    "verdict": "synonyms",
+    "note": "window",
+    "members": [
+      {
+        "zh": "窗户",
+        "py": "chuānghu",
+        "en": "window"
+      },
+      {
+        "zh": "窗",
+        "py": "chuāng",
+        "en": "window"
+      }
+    ]
+  },
+  {
+    "form": "hóng-sè",
+    "verdict": "synonyms",
+    "note": "red",
+    "members": [
+      {
+        "zh": "红",
+        "py": "hóng",
+        "en": "red"
+      },
+      {
+        "zh": "红色",
+        "py": "hóngsè",
+        "en": "red"
+      }
+    ]
+  },
+  {
+    "form": "zài wǎng-shàng",
+    "verdict": "synonyms",
+    "note": "online",
+    "members": [
+      {
+        "zh": "网上",
+        "py": "wǎngshang",
+        "en": "online"
+      },
+      {
+        "zh": "在线",
+        "py": "zàixiàn",
+        "en": "online"
+      }
+    ]
+  },
+  {
+    "form": "gōng-zuò-de tóu",
+    "verdict": "close",
+    "note": "boss and manager",
+    "members": [
+      {
+        "zh": "老板",
+        "py": "lǎobǎn",
+        "en": "boss"
+      },
+      {
+        "zh": "经理",
+        "py": "jīnglǐ",
+        "en": "manager"
+      }
+    ]
+  },
+  {
+    "form": "biān",
+    "verdict": "close",
+    "note": "side and direction",
+    "members": [
+      {
+        "zh": "边",
+        "py": "biān",
+        "en": "side"
+      },
+      {
+        "zh": "方",
+        "py": "fāng",
+        "en": "square; direction"
+      }
+    ]
+  },
+  {
+    "form": "ná yī-ge",
+    "verdict": "synonyms",
+    "note": "choose",
+    "members": [
+      {
+        "zh": "选",
+        "py": "xuǎn",
+        "en": "choose"
+      },
+      {
+        "zh": "选择",
+        "py": "xuǎnzé",
+        "en": "choose"
+      }
+    ]
+  },
+  {
+    "form": "nà-lǐ",
+    "verdict": "synonyms",
+    "note": "there",
+    "members": [
+      {
+        "zh": "那里",
+        "py": "nàlǐ",
+        "en": "there"
+      },
+      {
+        "zh": "那儿",
+        "py": "nàr",
+        "en": "there"
+      }
+    ]
+  },
+  {
+    "form": "lǐ-miàn",
+    "verdict": "synonyms",
+    "note": "inside",
+    "members": [
+      {
+        "zh": "里面",
+        "py": "lǐmiàn",
+        "en": "inside"
+      },
+      {
+        "zh": "内",
+        "py": "nèi",
+        "en": "inside"
+      }
+    ]
+  },
+  {
+    "form": "fùjìn",
+    "verdict": "close",
+    "note": "nearby and surroundings",
+    "members": [
+      {
+        "zh": "附近",
+        "py": "fùjìn",
+        "en": "nearby"
+      },
+      {
+        "zh": "周围",
+        "py": "zhōuwéi",
+        "en": "surroundings"
+      }
+    ]
+  },
+  {
+    "form": "hēi-sè",
+    "verdict": "synonyms",
+    "note": "black",
+    "members": [
+      {
+        "zh": "黑",
+        "py": "hēi",
+        "en": "black"
+      },
+      {
+        "zh": "黑色",
+        "py": "hēisè",
+        "en": "black"
+      }
+    ]
+  },
+  {
+    "form": "bù-yòng",
+    "verdict": "synonyms",
+    "note": "no need",
+    "members": [
+      {
+        "zh": "不用",
+        "py": "búyòng",
+        "en": "no need"
+      },
+      {
+        "zh": "不必",
+        "py": "búbì",
+        "en": "need not"
+      }
+    ]
+  },
+  {
+    "form": "chū-qù",
+    "verdict": "synonyms",
+    "note": "go out",
+    "members": [
+      {
+        "zh": "出去",
+        "py": "chūqù",
+        "en": "go out"
+      },
+      {
+        "zh": "出门",
+        "py": "chūmén",
+        "en": "go out"
+      }
+    ]
+  },
+  {
+    "form": "xiǎo-xīn",
+    "verdict": "close",
+    "note": "careful and thorough",
+    "members": [
+      {
+        "zh": "小心",
+        "py": "xiǎoxīn",
+        "en": "careful"
+      },
+      {
+        "zh": "仔细",
+        "py": "zǐxì",
+        "en": "careful"
+      }
+    ]
+  },
+  {
+    "form": "zài shuǐ-lǐ wánr",
+    "verdict": "synonyms",
+    "note": "swim",
+    "members": [
+      {
+        "zh": "游泳",
+        "py": "yóuyǒng",
+        "en": "swim"
+      },
+      {
+        "zh": "游",
+        "py": "yóu",
+        "en": "swim"
+      }
+    ]
+  },
+  {
+    "form": "zhè-biān",
+    "verdict": "synonyms",
+    "note": "here, this side",
+    "members": [
+      {
+        "zh": "这边",
+        "py": "zhèbiān",
+        "en": "here, this side"
+      },
+      {
+        "zh": "这儿",
+        "py": "zhèr",
+        "en": "here"
+      }
+    ]
+  },
+  {
+    "form": "méi xiǎng-dào huì kàn-dào",
+    "verdict": "synonyms",
+    "note": "come across",
+    "members": [
+      {
+        "zh": "遇见",
+        "py": "yùjiàn",
+        "en": "meet"
+      },
+      {
+        "zh": "遇到",
+        "py": "yùdào",
+        "en": "come across"
+      }
+    ]
+  },
+  {
+    "form": "nà-biān",
+    "verdict": "synonyms",
+    "note": "there, that side",
+    "members": [
+      {
+        "zh": "那边",
+        "py": "nàbiān",
+        "en": "over there"
+      },
+      {
+        "zh": "那儿",
+        "py": "nàr",
+        "en": "there"
+      }
+    ]
+  },
+  {
+    "form": "hǎo-wánr",
+    "verdict": "synonyms",
+    "note": "fun",
+    "members": [
+      {
+        "zh": "好玩儿",
+        "py": "hǎowánr",
+        "en": "fun"
+      },
+      {
+        "zh": "有趣",
+        "py": "yǒuqù",
+        "en": "interesting"
+      }
+    ]
+  },
+  {
+    "form": "méi-yǒu guānxi",
+    "verdict": "synonyms",
+    "note": "never mind",
+    "members": [
+      {
+        "zh": "没事",
+        "py": "méishì",
+        "en": "it's nothing"
+      },
+      {
+        "zh": "没关系",
+        "py": "méi guānxi",
+        "en": "never mind"
+      }
+    ]
+  },
+  {
+    "form": "guó-jiā-de jué-dìng-zhě",
+    "verdict": "different",
+    "note": "a government (政府, a group) and a president (总统, one person)",
+    "members": [
+      {
+        "zh": "政府",
+        "py": "zhèngfǔ",
+        "en": "government"
+      },
+      {
+        "zh": "总统",
+        "py": "zǒngtǒng",
+        "en": "president"
+      }
+    ]
+  },
+  {
+    "form": "yào zuò-dào-de dōng-xi",
+    "verdict": "synonyms",
+    "note": "goal, purpose",
+    "members": [
+      {
+        "zh": "目的",
+        "py": "mùdì",
+        "en": "purpose"
+      },
+      {
+        "zh": "目标",
+        "py": "mùbiāo",
+        "en": "goal"
+      }
+    ]
+  },
+  {
+    "form": "shénme … dōu …",
+    "verdict": "close",
+    "note": "no matter and any",
+    "members": [
+      {
+        "zh": "不管",
+        "py": "bùguǎn",
+        "en": "no matter"
+      },
+      {
+        "zh": "任何",
+        "py": "rènhé",
+        "en": "any"
+      }
+    ]
+  },
+  {
+    "form": "wǎng",
+    "verdict": "close",
+    "note": "the Internet and a network",
+    "members": [
+      {
+        "zh": "互联网",
+        "py": "hùliánwǎng",
+        "en": "Internet"
+      },
+      {
+        "zh": "网络",
+        "py": "wǎngluò",
+        "en": "network"
+      }
+    ]
+  },
+  {
+    "form": "kuài … le",
+    "verdict": "close",
+    "note": "almost and about to",
+    "members": [
+      {
+        "zh": "几乎",
+        "py": "jīhū",
+        "en": "almost"
+      },
+      {
+        "zh": "快要",
+        "py": "kuàiyào",
+        "en": "soon, about to"
+      }
+    ]
+  },
+  {
+    "form": "yǒu-hěn-duō-de-cí-de shū",
+    "verdict": "synonyms",
+    "note": "dictionary",
+    "members": [
+      {
+        "zh": "字典",
+        "py": "zìdiǎn",
+        "en": "dictionary"
+      },
+      {
+        "zh": "词典",
+        "py": "cídiǎn",
+        "en": "dictionary"
+      }
+    ]
+  },
+  {
+    "form": "zuò-de bù yī-yàng",
+    "verdict": "synonyms",
+    "note": "change",
+    "members": [
+      {
+        "zh": "改变",
+        "py": "gǎibiàn",
+        "en": "change"
+      },
+      {
+        "zh": "改",
+        "py": "gǎi",
+        "en": "change, correct"
+      }
+    ]
+  },
+  {
+    "form": "huì lái-de shí-jiān",
+    "verdict": "synonyms",
+    "note": "future",
+    "members": [
+      {
+        "zh": "未来",
+        "py": "wèilái",
+        "en": "future"
+      },
+      {
+        "zh": "将来",
+        "py": "jiānglái",
+        "en": "future"
+      }
+    ]
+  },
+  {
+    "form": "wèi-lái",
+    "verdict": "synonyms",
+    "note": "future",
+    "members": [
+      {
+        "zh": "未来",
+        "py": "wèilái",
+        "en": "future"
+      },
+      {
+        "zh": "将来",
+        "py": "jiānglái",
+        "en": "future"
+      }
+    ]
+  },
+  {
+    "form": "xué-wán le",
+    "verdict": "different",
+    "note": "graduate (毕业, school is over for good) and class is over (下课, for today)",
+    "members": [
+      {
+        "zh": "毕业",
+        "py": "bìyè",
+        "en": "graduate"
+      },
+      {
+        "zh": "下课",
+        "py": "xiàkè",
+        "en": "class is over"
+      }
+    ]
+  },
+  {
+    "form": "dì-yī",
+    "verdict": "close",
+    "note": "the ordinal word and first",
+    "members": [
+      {
+        "zh": "第",
+        "py": "dì",
+        "en": "(ordinal)"
+      },
+      {
+        "zh": "第一",
+        "py": "dìyī",
+        "en": "first"
+      }
+    ]
+  },
+  {
+    "form": "jié-guǒ",
+    "verdict": "close",
+    "note": "result and effect",
+    "members": [
+      {
+        "zh": "结果",
+        "py": "jiéguǒ",
+        "en": "result"
+      },
+      {
+        "zh": "效果",
+        "py": "xiàoguǒ",
+        "en": "effect, result"
+      }
+    ]
+  },
+  {
+    "form": "xiǎng-xiǎng",
+    "verdict": "close",
+    "note": "consider and ponder",
+    "members": [
+      {
+        "zh": "考虑",
+        "py": "kǎolǜ",
+        "en": "consider"
+      },
+      {
+        "zh": "思考",
+        "py": "sīkǎo",
+        "en": "think, ponder"
+      }
+    ]
+  },
+  {
+    "form": "…, dàn-shì …",
+    "verdict": "synonyms",
+    "note": "although",
+    "members": [
+      {
+        "zh": "虽然",
+        "py": "suīrán",
+        "en": "although"
+      },
+      {
+        "zh": "尽管",
+        "py": "jǐnguǎn",
+        "en": "although"
+      }
+    ]
+  },
+  {
+    "form": "shuō-chū xīn-lǐ-de dōng-xi",
+    "verdict": "synonyms",
+    "note": "express",
+    "members": [
+      {
+        "zh": "表示",
+        "py": "biǎoshì",
+        "en": "express"
+      },
+      {
+        "zh": "表达",
+        "py": "biǎodá",
+        "en": "express"
+      }
+    ]
+  },
+  {
+    "form": "cí",
+    "verdict": "synonyms",
+    "note": "word",
+    "members": [
+      {
+        "zh": "词",
+        "py": "cí",
+        "en": "word"
+      },
+      {
+        "zh": "词语",
+        "py": "cíyǔ",
+        "en": "word, phrase"
+      }
+    ]
+  },
+  {
+    "form": "bǐ X duō",
+    "verdict": "close",
+    "note": "exceed and more than",
+    "members": [
+      {
+        "zh": "超过",
+        "py": "chāoguò",
+        "en": "exceed"
+      },
+      {
+        "zh": "以上",
+        "py": "yǐshàng",
+        "en": "above, more than"
+      }
+    ]
+  },
+  {
+    "form": "gěi yuǎn-de rén xiě-de dōng-xi",
+    "verdict": "close",
+    "note": "a letter and an email",
+    "members": [
+      {
+        "zh": "邮件",
+        "py": "yóujiàn",
+        "en": "mail, email"
+      },
+      {
+        "zh": "信",
+        "py": "xìn",
+        "en": "believe; letter"
+      }
+    ]
+  },
+  {
+    "form": "wèn-de dōng-xi",
+    "verdict": "synonyms",
+    "note": "question",
+    "members": [
+      {
+        "zh": "题",
+        "py": "tí",
+        "en": "question, problem"
+      },
+      {
+        "zh": "题目",
+        "py": "tímù",
+        "en": "topic, question"
+      }
+    ]
+  },
+  {
+    "form": "gěi-dōng-xi-dé-jīn",
+    "verdict": "synonyms",
+    "note": "sell",
+    "members": [
+      {
+        "zh": "卖",
+        "py": "mài",
+        "en": "sell"
+      },
+      {
+        "zh": "销售",
+        "py": "xiāoshòu",
+        "en": "sell"
+      }
+    ]
+  },
+  {
+    "form": "wèi-dào",
+    "verdict": "synonyms",
+    "note": "taste",
+    "members": [
+      {
+        "zh": "味道",
+        "py": "wèidào",
+        "en": "taste, flavor"
+      },
+      {
+        "zh": "味",
+        "py": "wèi",
+        "en": "taste, flavor"
+      }
+    ]
+  },
+  {
+    "form": "xīn-lǐ-de yàng-zi",
+    "verdict": "synonyms",
+    "note": "mood",
+    "members": [
+      {
+        "zh": "心情",
+        "py": "xīnqíng",
+        "en": "mood"
+      },
+      {
+        "zh": "情绪",
+        "py": "qíngxù",
+        "en": "mood"
+      }
+    ]
+  },
+  {
+    "form": "xiǎng-de dōng-xi",
+    "verdict": "close",
+    "note": "idea and viewpoint",
+    "members": [
+      {
+        "zh": "想法",
+        "py": "xiǎngfǎ",
+        "en": "idea, thought"
+      },
+      {
+        "zh": "观点",
+        "py": "guāndiǎn",
+        "en": "viewpoint"
+      }
+    ]
+  },
+  {
+    "form": "yàng-zi",
+    "verdict": "senses",
+    "note": "not one form: 样子 and 形状 use different senses of the words; the report reads only the sound",
+    "members": [
+      {
+        "zh": "样子",
+        "py": "yàngzi",
+        "en": "appearance"
+      },
+      {
+        "zh": "形状",
+        "py": "xíngzhuàng",
+        "en": "shape"
+      }
+    ]
+  },
+  {
+    "form": "bǎ X zuò hǎo",
+    "verdict": "synonyms",
+    "note": "manage",
+    "members": [
+      {
+        "zh": "管",
+        "py": "guǎn",
+        "en": "manage"
+      },
+      {
+        "zh": "管理",
+        "py": "guǎnlǐ",
+        "en": "manage"
+      }
+    ]
+  },
+  {
+    "form": "shàng-qù",
+    "verdict": "close",
+    "note": "go up and rise",
+    "members": [
+      {
+        "zh": "上去",
+        "py": "shàngqù",
+        "en": "go up"
+      },
+      {
+        "zh": "升",
+        "py": "shēng",
+        "en": "rise"
+      }
+    ]
+  },
+  {
+    "form": "bù kāi-xīn",
+    "verdict": "synonyms",
+    "note": "sad",
+    "members": [
+      {
+        "zh": "伤心",
+        "py": "shāngxīn",
+        "en": "sad"
+      },
+      {
+        "zh": "难过",
+        "py": "nánguò",
+        "en": "sad"
+      }
+    ]
+  },
+  {
+    "form": "kàn-hǎo X",
+    "verdict": "close",
+    "note": "raise (animals) and take care of",
+    "members": [
+      {
+        "zh": "养",
+        "py": "yǎng",
+        "en": "raise, keep (animals)"
+      },
+      {
+        "zh": "照顾",
+        "py": "zhàogù",
+        "en": "take care of"
+      }
+    ]
+  },
+  {
+    "form": "dǎ chē",
+    "verdict": "close",
+    "note": "a taxi and take a taxi",
+    "members": [
+      {
+        "zh": "出租车",
+        "py": "chūzūchē",
+        "en": "taxi"
+      },
+      {
+        "zh": "打车",
+        "py": "dǎchē",
+        "en": "take a taxi"
+      }
+    ]
+  },
+  {
+    "form": "huí-qù",
+    "verdict": "close",
+    "note": "go back and retreat",
+    "members": [
+      {
+        "zh": "回去",
+        "py": "huíqù",
+        "en": "go back"
+      },
+      {
+        "zh": "退",
+        "py": "tuì",
+        "en": "go back, retreat"
+      }
+    ]
+  },
+  {
+    "form": "hǎo le",
+    "verdict": "synonyms",
+    "note": "enough",
+    "members": [
+      {
+        "zh": "够",
+        "py": "gòu",
+        "en": "enough"
+      },
+      {
+        "zh": "足够",
+        "py": "zúgòu",
+        "en": "enough"
+      }
+    ]
+  },
+  {
+    "form": "bù yào le",
+    "verdict": "different",
+    "note": "enough (够) and give up (放弃); bù yào le fits give up, enough already has hǎo le",
+    "members": [
+      {
+        "zh": "够",
+        "py": "gòu",
+        "en": "enough"
+      },
+      {
+        "zh": "放弃",
+        "py": "fàngqì",
+        "en": "give up"
+      }
+    ]
+  },
+  {
+    "form": "cháng-de yǒu-shuǐ-de dì-fang",
+    "verdict": "synonyms",
+    "note": "river",
+    "members": [
+      {
+        "zh": "河",
+        "py": "hé",
+        "en": "river"
+      },
+      {
+        "zh": "河流",
+        "py": "héliú",
+        "en": "river"
+      }
+    ]
+  },
+  {
+    "form": "hěn-dà-de yǒu-shuǐ-de dì-fang",
+    "verdict": "synonyms",
+    "note": "sea, ocean",
+    "members": [
+      {
+        "zh": "海",
+        "py": "hǎi",
+        "en": "sea"
+      },
+      {
+        "zh": "海洋",
+        "py": "hǎiyáng",
+        "en": "ocean"
+      }
+    ]
+  },
+  {
+    "form": "gāo-míng",
+    "verdict": "close",
+    "note": "smart (a person) and smart (a machine)",
+    "members": [
+      {
+        "zh": "聪明",
+        "py": "cōngmíng",
+        "en": "smart"
+      },
+      {
+        "zh": "智能",
+        "py": "zhìnéng",
+        "en": "smart, intelligent"
+      }
+    ]
+  },
+  {
+    "form": "bǐ bié-de rén hǎo",
+    "verdict": "close",
+    "note": "win and victory",
+    "members": [
+      {
+        "zh": "赢",
+        "py": "yíng",
+        "en": "win"
+      },
+      {
+        "zh": "胜利",
+        "py": "shènglì",
+        "en": "victory"
+      }
+    ]
+  },
+  {
+    "form": "jìn-qù",
+    "verdict": "close",
+    "note": "go in and log in",
+    "members": [
+      {
+        "zh": "进去",
+        "py": "jìnqù",
+        "en": "go in"
+      },
+      {
+        "zh": "登录",
+        "py": "dēnglù",
+        "en": "log in"
+      }
+    ]
+  },
+  {
+    "form": "chī-de dōng-xi",
+    "verdict": "different",
+    "note": "food (食品) and bread (面包); bread needs its own form, like miàn zuò-de chī-de dōng-xi",
+    "members": [
+      {
+        "zh": "面包",
+        "py": "miànbāo",
+        "en": "bread"
+      },
+      {
+        "zh": "食品",
+        "py": "shípǐn",
+        "en": "food"
+      }
+    ]
+  },
+  {
+    "form": "duì-miàn",
+    "verdict": "close",
+    "note": "opposite side and opposite",
+    "members": [
+      {
+        "zh": "对面",
+        "py": "duìmiàn",
+        "en": "opposite side"
+      },
+      {
+        "zh": "反",
+        "py": "fǎn",
+        "en": "opposite"
+      }
+    ]
+  },
+  {
+    "form": "bǎ X zuò qǐ-lái",
+    "verdict": "synonyms",
+    "note": "build up, establish",
+    "members": [
+      {
+        "zh": "建设",
+        "py": "jiànshè",
+        "en": "build up"
+      },
+      {
+        "zh": "建立",
+        "py": "jiànlì",
+        "en": "establish, set up"
+      }
+    ]
+  },
+  {
+    "form": "hǎo-hǎo kàn, hǎo-hǎo xué",
+    "verdict": "close",
+    "note": "research and investigate",
+    "members": [
+      {
+        "zh": "研究",
+        "py": "yánjiū",
+        "en": "research"
+      },
+      {
+        "zh": "调查",
+        "py": "diàochá",
+        "en": "investigate"
+      }
+    ]
+  },
+  {
+    "form": "yī-qǐ-zuò-de rén",
+    "verdict": "close",
+    "note": "organization and team",
+    "members": [
+      {
+        "zh": "组织",
+        "py": "zǔzhī",
+        "en": "organize; organization"
+      },
+      {
+        "zh": "团队",
+        "py": "tuánduì",
+        "en": "team"
+      }
+    ]
+  },
+  {
+    "form": "fā-shēng-de dōng-xi",
+    "verdict": "close",
+    "note": "incident and situation",
+    "members": [
+      {
+        "zh": "事件",
+        "py": "shìjiàn",
+        "en": "incident"
+      },
+      {
+        "zh": "状况",
+        "py": "zhuàngkuàng",
+        "en": "condition, situation"
+      }
+    ]
+  },
+  {
+    "form": "duō-shǎo jīn",
+    "verdict": "synonyms",
+    "note": "price",
+    "members": [
+      {
+        "zh": "价格",
+        "py": "jiàgé",
+        "en": "price"
+      },
+      {
+        "zh": "价钱",
+        "py": "jiàqián",
+        "en": "price"
+      }
+    ]
+  },
+  {
+    "form": "liú",
+    "verdict": "close",
+    "note": "keep and stay",
+    "members": [
+      {
+        "zh": "保持",
+        "py": "bǎochí",
+        "en": "keep, maintain"
+      },
+      {
+        "zh": "留",
+        "py": "liú",
+        "en": "stay, keep"
+      }
+    ]
+  },
+  {
+    "form": "zuì yǒu zhòng-yào-de bù-fen",
+    "verdict": "synonyms",
+    "note": "key point",
+    "members": [
+      {
+        "zh": "关键",
+        "py": "guānjiàn",
+        "en": "crux, key"
+      },
+      {
+        "zh": "重点",
+        "py": "zhòngdiǎn",
+        "en": "key point"
+      }
+    ]
+  },
+  {
+    "form": "shuō-de",
+    "verdict": "close",
+    "note": "content and speech",
+    "members": [
+      {
+        "zh": "内容",
+        "py": "nèiróng",
+        "en": "content"
+      },
+      {
+        "zh": "话",
+        "py": "huà",
+        "en": "words, speech"
+      }
+    ]
+  },
+  {
+    "form": "gōng-zuò-de rén",
+    "verdict": "close",
+    "note": "employee and worker",
+    "members": [
+      {
+        "zh": "员工",
+        "py": "yuángōng",
+        "en": "employee"
+      },
+      {
+        "zh": "工人",
+        "py": "gōngrén",
+        "en": "worker"
+      }
+    ]
+  },
+  {
+    "form": "mǎi dōng-xi hé gěi-dōng-xi-dé-jīn",
+    "verdict": "synonyms",
+    "note": "business, commerce",
+    "members": [
+      {
+        "zh": "商业",
+        "py": "shāngyè",
+        "en": "commerce"
+      },
+      {
+        "zh": "生意",
+        "py": "shēngyi",
+        "en": "business"
+      }
+    ]
+  },
+  {
+    "form": "hěn kāi-xīn",
+    "verdict": "different",
+    "note": "happiness (幸福, a lasting good life) and excited (兴奋, a burst of feeling)",
+    "members": [
+      {
+        "zh": "幸福",
+        "py": "xìngfú",
+        "en": "happiness, happy"
+      },
+      {
+        "zh": "兴奋",
+        "py": "xīngfèn",
+        "en": "excited"
+      }
+    ]
+  },
+  {
+    "form": "néng-lì",
+    "verdict": "synonyms",
+    "note": "ability",
+    "members": [
+      {
+        "zh": "才能",
+        "py": "cáinéng",
+        "en": "talent, ability"
+      },
+      {
+        "zh": "能力",
+        "py": "nénglì",
+        "en": "ability"
+      }
+    ]
+  },
+  {
+    "form": "X dōu …",
+    "verdict": "synonyms",
+    "note": "whole",
+    "members": [
+      {
+        "zh": "整个",
+        "py": "zhěnggè",
+        "en": "whole, entire"
+      },
+      {
+        "zh": "整",
+        "py": "zhěng",
+        "en": "whole"
+      }
+    ]
+  },
+  {
+    "form": "píng-cháng",
+    "verdict": "close",
+    "note": "normal and usual",
+    "members": [
+      {
+        "zh": "正常",
+        "py": "zhèngcháng",
+        "en": "normal"
+      },
+      {
+        "zh": "平常",
+        "py": "píngcháng",
+        "en": "usual, ordinary"
+      }
+    ]
+  },
+  {
+    "form": "zhēn hǎo-de dì-fang",
+    "verdict": "synonyms",
+    "note": "feature",
+    "members": [
+      {
+        "zh": "特点",
+        "py": "tèdiǎn",
+        "en": "feature"
+      },
+      {
+        "zh": "特色",
+        "py": "tèsè",
+        "en": "special feature"
+      }
+    ]
+  },
+  {
+    "form": "zuò-guò-de dōng-xi",
+    "verdict": "synonyms",
+    "note": "experience",
+    "members": [
+      {
+        "zh": "经验",
+        "py": "jīngyàn",
+        "en": "experience"
+      },
+      {
+        "zh": "经历",
+        "py": "jīnglì",
+        "en": "experience"
+      }
+    ]
+  },
+  {
+    "form": "shuō-míng",
+    "verdict": "synonyms",
+    "note": "explain",
+    "members": [
+      {
+        "zh": "解释",
+        "py": "jiěshì",
+        "en": "explain"
+      },
+      {
+        "zh": "说明",
+        "py": "shuōmíng",
+        "en": "explain"
+      }
+    ]
+  },
+  {
+    "form": "yī-qǐ shuō",
+    "verdict": "synonyms",
+    "note": "discuss",
+    "members": [
+      {
+        "zh": "讨论",
+        "py": "tǎolùn",
+        "en": "discuss"
+      },
+      {
+        "zh": "商量",
+        "py": "shāngliang",
+        "en": "talk it over"
+      }
+    ]
+  },
+  {
+    "form": "shuō-de shēngyīn",
+    "verdict": "close",
+    "note": "voice and pronunciation",
+    "members": [
+      {
+        "zh": "语音",
+        "py": "yǔyīn",
+        "en": "speech sound, voice"
+      },
+      {
+        "zh": "发音",
+        "py": "fāyīn",
+        "en": "pronunciation"
+      }
+    ]
+  },
+  {
+    "form": "hǎo-de dì-fang",
+    "verdict": "synonyms",
+    "note": "strong point, benefit",
+    "members": [
+      {
+        "zh": "优点",
+        "py": "yōudiǎn",
+        "en": "strong point"
+      },
+      {
+        "zh": "好处",
+        "py": "hǎochù",
+        "en": "benefit"
+      }
+    ]
+  },
+  {
+    "form": "rén shǎo, zhíwù duō-de dì-fang",
+    "verdict": "synonyms",
+    "note": "countryside",
+    "members": [
+      {
+        "zh": "农村",
+        "py": "nóngcūn",
+        "en": "countryside"
+      },
+      {
+        "zh": "乡村",
+        "py": "xiāngcūn",
+        "en": "countryside"
+      }
+    ]
+  },
+  {
+    "form": "biàn shǎo",
+    "verdict": "synonyms",
+    "note": "reduce",
+    "members": [
+      {
+        "zh": "减少",
+        "py": "jiǎnshǎo",
+        "en": "reduce"
+      },
+      {
+        "zh": "降低",
+        "py": "jiàngdī",
+        "en": "lower, reduce"
+      }
+    ]
+  },
+  {
+    "form": "bù-yī-yàng-de dì-fang",
+    "verdict": "synonyms",
+    "note": "difference",
+    "members": [
+      {
+        "zh": "区别",
+        "py": "qūbié",
+        "en": "difference"
+      },
+      {
+        "zh": "差别",
+        "py": "chābié",
+        "en": "difference"
+      }
+    ]
+  },
+  {
+    "form": "zuò-dōng-xi-de dì-fang",
+    "verdict": "synonyms",
+    "note": "factory",
+    "members": [
+      {
+        "zh": "厂",
+        "py": "chǎng",
+        "en": "factory"
+      },
+      {
+        "zh": "工厂",
+        "py": "gōngchǎng",
+        "en": "factory"
+      }
+    ]
+  },
+  {
+    "form": "duì X hǎo",
+    "verdict": "synonyms",
+    "note": "suitable",
+    "members": [
+      {
+        "zh": "合适",
+        "py": "héshì",
+        "en": "suitable"
+      },
+      {
+        "zh": "适合",
+        "py": "shìhé",
+        "en": "suit, fit"
+      }
+    ]
+  },
+  {
+    "form": "kě-néng X",
+    "verdict": "synonyms",
+    "note": "about, roughly",
+    "members": [
+      {
+        "zh": "大约",
+        "py": "dàyuē",
+        "en": "about, roughly"
+      },
+      {
+        "zh": "左右",
+        "py": "zuǒyòu",
+        "en": "left and right; about"
+      }
+    ]
+  },
+  {
+    "form": "huài-de dōng-xi bù huì fā-shēng",
+    "verdict": "synonyms",
+    "note": "safe",
+    "members": [
+      {
+        "zh": "安全",
+        "py": "ānquán",
+        "en": "safe"
+      },
+      {
+        "zh": "平安",
+        "py": "píng’ān",
+        "en": "safe and sound"
+      }
+    ]
+  },
+  {
+    "form": "xīn-lǐ zěnme jué-de",
+    "verdict": "synonyms",
+    "note": "attitude, mindset",
+    "members": [
+      {
+        "zh": "心态",
+        "py": "xīntài",
+        "en": "mindset"
+      },
+      {
+        "zh": "态度",
+        "py": "tàidù",
+        "en": "attitude"
+      }
+    ]
+  },
+  {
+    "form": "hěn-duō rén",
+    "verdict": "synonyms",
+    "note": "crowd",
+    "members": [
+      {
+        "zh": "群",
+        "py": "qún",
+        "en": "group, crowd"
+      },
+      {
+        "zh": "人群",
+        "py": "rénqún",
+        "en": "crowd"
+      }
+    ]
+  },
+  {
+    "form": "zuò-chē",
+    "verdict": "synonyms",
+    "note": "ride",
+    "members": [
+      {
+        "zh": "乘坐",
+        "py": "chéngzuò",
+        "en": "ride, take (a vehicle)"
+      },
+      {
+        "zh": "坐车",
+        "py": "zuòchē",
+        "en": "ride (a car, bus, train)"
+      }
+    ]
+  },
+  {
+    "form": "liù-miàn dōu shì fāng-de dōng-xi",
+    "verdict": "different",
+    "note": "a box (盒子) and a cube (立方体); not every box is square on all six faces",
+    "members": [
+      {
+        "zh": "盒子",
+        "py": "hézi",
+        "en": "box"
+      },
+      {
+        "zh": "立方体",
+        "py": "lìfāngtǐ",
+        "en": "cube"
+      }
+    ]
+  },
+  {
+    "form": "nán-kàn",
+    "verdict": "synonyms",
+    "note": "ugly",
+    "members": [
+      {
+        "zh": "难看",
+        "py": "nánkàn",
+        "en": "ugly"
+      },
+      {
+        "zh": "丑",
+        "py": "chǒu",
+        "en": "ugly"
+      }
+    ]
+  },
+  {
+    "form": "kàn-qǐ-lái bù hǎo",
+    "verdict": "synonyms",
+    "note": "ugly",
+    "members": [
+      {
+        "zh": "难看",
+        "py": "nánkàn",
+        "en": "ugly"
+      },
+      {
+        "zh": "丑",
+        "py": "chǒu",
+        "en": "ugly"
+      }
+    ]
+  },
+  {
+    "form": "bù luàn",
+    "verdict": "close",
+    "note": "neat and order",
+    "members": [
+      {
+        "zh": "整齐",
+        "py": "zhěngqí",
+        "en": "neat, tidy"
+      },
+      {
+        "zh": "秩序",
+        "py": "zhìxù",
+        "en": "order"
+      }
+    ]
+  }
+]

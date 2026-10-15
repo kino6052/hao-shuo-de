@@ -23,8 +23,11 @@ export function snapshotFor(kb, { all = false } = {}) {
 
 // no top-level await: kb.js imports this file too, and an entry that waits for kb.js while kb.js waits for the entry never settles
 if (process.argv[1]?.endsWith('parse-snapshot.js')) {
-  import('./kb.js')
-    .then(({ openKb }) => openKb())
+  // the parse memory gives slim results; a parser from before slim results kept the first reading's
+  // brackets (`first`) cannot print them, so at such a ref every sentence is parsed afresh
+  const keepsBrackets = import('../src/lib/grammar/parser.js').then(({ fromSlim }) => !!fromSlim && 'first' in fromSlim('', { w: [], q: [], t: [], p: [] }));
+  Promise.all([import('./kb.js'), keepsBrackets])
+    .then(([{ openKb }, memo]) => openKb({ memo }))
     .then((kb) => console.log(JSON.stringify(snapshotFor(kb, { all: process.argv.includes('--all') }))))
     .catch((e) => {
       console.error(e.stack || e.message);

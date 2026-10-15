@@ -68,6 +68,7 @@ export const slimOf = (r) => ({
   w: r.tokens.map((t) => t.text),
   q: r.problems,
   f: r.failure,
+  b: bracket(r, 0),
 });
 
 // -> a parse result from its slim form (see createParser)
@@ -80,6 +81,7 @@ export const fromSlim = (text, s) => ({
   treeCount: s.n,
   patterns: s.p,
   failure: s.f,
+  first: s.b ?? '',
   slim: true,
 });
 
@@ -116,6 +118,8 @@ export function outline(result, k = 0) {
 }
 
 export function bracket(result, k = 0) {
+  // a slim result (fromSlim) keeps only the first reading's brackets
+  if (result.slim) return k === 0 ? result.first : '';
   const tree = result.trees[k];
   if (!tree) return '';
   const walk = (t) => (t.children ? `[${t.sym} ${t.children.map(walk).join(' ')}]` : t.edge.composite ? spanText(result.tokens, t.from, t.to) : t.edge.term);

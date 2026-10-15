@@ -58,20 +58,39 @@ const accepts = (sym, edge, glue) => {
   return edge.id === sym;
 };
 
-// which symbols of each rule are nonterminals, worked out once per grammar
+// worked out once per grammar: which symbols of each rule are nonterminals (`nt`), and the words or classes a
+// nonterminal can start with (`firsts`: no right side is empty, so it is the first symbols, followed down)
 const shapes = new WeakMap();
 const shapeOf = (grammar) => {
   let s = shapes.get(grammar);
   if (!s) {
-    s = grammar.rules.map((r) => r.rhs.map(isNonterminal));
+    const { rules, byLhs } = grammar;
+    const nt = rules.map((r) => r.rhs.map(isNonterminal));
+    const firsts = new Map();
+    for (const lhs of byLhs.keys()) {
+      const seen = new Set([lhs]);
+      const out = new Set();
+      const todo = [lhs];
+      while (todo.length) {
+        for (const r of byLhs.get(todo.pop()) ?? []) {
+          const first = rules[r].rhs[0];
+          if (!nt[r][0]) out.add(first);
+          else if (!seen.has(first)) (seen.add(first), todo.push(first));
+        }
+      }
+      firsts.set(lhs, [...out]);
+    }
+    s = { nt, firsts };
     shapes.set(grammar, s);
   }
   return s;
 };
 
-export function parse(lattice, grammar, { start = 'Utt', maxTrees = 20, budget = 200_000 } = {}) {
+// `lookahead` (on unless asked): a rule is predicted only when the next word can start it. The trees and the
+// failure are the same (failure: the rules left out are found again from the nonterminals that were predicted).
+export function parse(lattice, grammar, { start = 'Utt', maxTrees = 20, budget = 200_000, lookahead = true } = {}) {
   const { rules, byLhs, glue } = grammar;
-  const nt = shapeOf(grammar);
+  const { nt, firsts } = shapeOf(grammar);
   const { n, edges } = lattice;
   const from = Array.from({ length: n + 1 }, () => []);
   for (const e of edges) from[e.from].push(e);
@@ -100,9 +119,31 @@ export function parse(lattice, grammar, { start = 'Utt', maxTrees = 20, budget =
     return s;
   };
 
-  for (const r of byLhs.get(start) ?? []) add(0, r, 0, 0, null);
+  // can a word at position i start this rule? (a word or class first: does a word fit it; a nonterminal: one of its firsts)
+  let fits = null;
+  let starts = null;
+  const fitsHere = (i, sym) => {
+    let f = fits.get(sym);
+    if (f === undefined) fits.set(sym, (f = from[i].some((e) => accepts(sym, e, glue))));
+    return f;
+  };
+  const canStart = (i, r) => {
+    const first = rules[r].rhs[0];
+    if (!nt[r][0]) return fitsHere(i, first);
+    let f = starts.get(first);
+    if (f === undefined) starts.set(first, (f = (firsts.get(first) ?? []).some((sym) => fitsHere(i, sym))));
+    return f;
+  };
+  const predict = (i, sym) => {
+    for (const r of byLhs.get(sym) ?? []) if (!lookahead || canStart(i, r)) add(i, r, 0, i, null);
+  };
+
+  fits = new Map();
+  starts = new Map();
+  predict(0, start);
   for (let i = 0; i <= n; i++) {
     const col = chart[i];
+    if (i > 0) (fits = new Map()), (starts = new Map());
     for (let k = 0; k < col.list.length; k++) {
       const s = col.list[k];
       const rule = rules[s.r];
@@ -116,7 +157,7 @@ export function parse(lattice, grammar, { start = 'Utt', maxTrees = 20, budget =
       if (nt[s.r][s.dot]) {
         if (col.predicted.has(sym)) continue;
         col.predicted.add(sym);
-        for (const r of byLhs.get(sym) ?? []) add(i, r, 0, i, null);
+        predict(i, sym);
       } else {
         for (const e of from[i]) if (accepts(sym, e, glue)) add(e.to, s.r, s.dot + 1, s.origin, { prev: s, edge: e, sym });
       }
@@ -128,15 +169,36 @@ export function parse(lattice, grammar, { start = 'Utt', maxTrees = 20, budget =
     const { trees, count } = enumerate(done, rules, maxTrees, budget);
     return { ok: true, trees, treeCount: count, failure: null };
   }
-  return { ok: false, trees: [], treeCount: 0, failure: failure(chart, rules, grammar, n) };
+  return { ok: false, trees: [], treeCount: 0, failure: failure(chart, rules, firsts, n) };
 }
 
 // -- trees -----------------------------------------------------------------------------------
 
+// The first `maxTrees` trees are built; the readings are counted without building them (up to maxTrees * 10 + 1:
+// past that "many" is all anyone reads). A reading that loops back to itself (a rule cycle) is not counted.
 function enumerate(done, rules, maxTrees, budget) {
+  const cap = maxTrees * 10 + 1;
+  const counts = new Map(); // state -> its readings, capped; -1 while it is being counted
+  const countOf = (state) => {
+    if (state.dot === 0) return 1;
+    const known = counts.get(state);
+    if (known !== undefined) return Math.max(known, 0);
+    counts.set(state, -1);
+    let total = 0;
+    for (const b of state.backs) {
+      const left = countOf(b.prev);
+      if (!left) continue;
+      total = Math.min(cap, total + left * (b.edge ? 1 : countOf(b.child)));
+      if (total === cap) break;
+    }
+    counts.set(state, total);
+    return total;
+  };
+  let count = 0;
+  for (const s of done) if ((count = Math.min(cap, count + countOf(s))) === cap) break;
+
   let steps = 0;
   const trees = [];
-  let count = 0;
   const kidsOf = function* (state) {
     if (state.dot === 0) {
       yield [];
@@ -156,9 +218,8 @@ function enumerate(done, rules, maxTrees, budget) {
   };
   for (const s of done) {
     for (const t of treesOf(s)) {
-      count++;
-      if (trees.length < maxTrees) trees.push(t);
-      if (count > maxTrees * 10 || steps > budget) return { trees, count };
+      if (trees.length >= maxTrees || steps > budget) return { trees, count };
+      trees.push(t);
     }
   }
   return { trees, count };
@@ -166,15 +227,17 @@ function enumerate(done, rules, maxTrees, budget) {
 
 // -- where it failed -------------------------------------------------------------------------
 
-function failure(chart, rules, grammar, n) {
+function failure(chart, rules, firsts, n) {
   let at = 0;
   for (let i = 0; i <= n; i++) if (chart[i].list.length) at = i;
-  // what could have come next at the furthest point
+  // what could have come next at the furthest point: the rules under way, and the first words of every rule of a
+  // nonterminal wanted there (the lookahead left out the ones the next word cannot start)
   const expected = new Set();
   for (const s of chart[at].list) {
     const rule = rules[s.r];
     if (s.dot < rule.rhs.length && !isNonterminal(rule.rhs[s.dot])) expected.add(rule.rhs[s.dot]);
   }
+  for (const sym of chart[at].predicted) for (const first of firsts.get(sym) ?? []) expected.add(first);
   // the biggest pieces that parsed, from the left
   const completes = [];
   for (let i = 0; i <= n; i++) {

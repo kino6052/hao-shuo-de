@@ -264,6 +264,10 @@ const content: Entry[] = [
     zh: ["两只小猪跑到石头房子里。"],
     ru: ["Два поросёнка убежали в каменный дом."],
   },
+  // [sent-wolf] Proposed for the author (KB_PLAN §4a), not applied: "blew and blew" as "blew, and blew again",
+  // like the story's own "yòu zuò kōng-qì" two lines up and Mandarin's 吹了又吹 (it parses):
+  //   Dà huài dòng-wù zuò kōng-qì, yòu zuò kōng-qì, dàn-shì yìng dōng-xi-de jiā bù dòng.
+  //   大坏动物做空气，又做空气，但是硬东西的家不动。
   {
     type: "story",
     pinyin: "{{Word:da4}} {{word:huai4}} {{word:dong4}}-{{word:wu4}} {{word:zuo4}} {{word:kong1}}-{{word:qi4}}, {{word:zuo4}} {{word:kong1}}-{{word:qi4}}, {{word:dan4}}-{{word:shi4}} {{word:ying4}} {{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:jia1}} {{word:bu4}} {{word:dong4}}.",

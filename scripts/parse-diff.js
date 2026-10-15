@@ -9,6 +9,7 @@ import { copyFileSync, mkdirSync, rmSync } from 'fs';
 import { join } from 'path';
 import { ROOT } from './refactor-lib.js';
 import { newCopy } from './temp-copy.js';
+import { memoEnv } from './parse-memo.js';
 
 // the two files copied into the export, so a ref from before they existed can be snapshotted too
 const OVERLAY = ['scripts/parse-snapshot.js', 'src/lib/kb/parse-diff.js'];
@@ -43,7 +44,7 @@ export async function snapshotAtRef(ref, { all = false } = {}) {
     }
     copy.linkModules();
     const out = await new Promise((done, fail) => {
-      const child = spawn(process.execPath, [join(copy.dir, 'scripts', 'parse-snapshot.js'), ...(all ? ['--all'] : [])], { cwd: copy.dir, stdio: ['ignore', 'pipe', 'pipe'] });
+      const child = spawn(process.execPath, [join(copy.dir, 'scripts', 'parse-snapshot.js'), ...(all ? ['--all'] : [])], { cwd: copy.dir, env: memoEnv(), stdio: ['ignore', 'pipe', 'pipe'] });
       let text = '';
       let err = '';
       child.stdout.on('data', (d) => (text += d));

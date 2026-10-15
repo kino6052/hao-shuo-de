@@ -139,6 +139,7 @@ node scripts/kb.js engine                                               # which 
 | `kb/reports/candidates-audit.md` | Candidates audit, 2026-10-13 |
 | `kb/reports/lessons-1-24-all-parse.md` | Parse report: lessons 1-24 and the other texts |
 | `kb/reports/lessons-1-4-parse.md` | Parse report: lessons 1-4 |
+| `kb/reports/same-form-sort.md` | Same-form groups, sorted (rel-sameform) |
 | `kb/scoreboard.csv` | The language's numbers after each change; the Scoreboard tab charts it. |
 <!-- /generated:kb-reports -->
 
