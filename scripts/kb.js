@@ -8,6 +8,7 @@
 //   node scripts/kb.js parse "Wǒ chī fàn." [--lesson 5]  # does a sentence parse; with --lesson, only the patterns taught up to it
 //   node scripts/kb.js atoms [word]  # the atoms report, or one word's line
 //   node scripts/kb.js relations [kind] [--status proposed|accepted] [--limit N]  # synonyms, opposites, connections and the rest
+//   node scripts/kb.js relations tree [word] [--limit N]  # what hangs under what: the kind-of tree of every word, or of one
 //   node scripts/kb.js meaning [says|atoms|grounding|<word>] [--limit N]  # what the words say of the NSM primes, Aristotle's categories and grammar
 //   node scripts/kb.js candidates [remove|add] [--limit N]  # the cheapest words to drop and the best roots to add
 //   node scripts/kb.js add <hanzi>  # what one root would bring
@@ -68,7 +69,7 @@ import { mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'f
 import { resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { Worker } from 'worker_threads';
-import { createKb, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps, renderAudit } from '../src/lib/kb/kb.js';
+import { createKb, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderKindTree, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps, renderAudit } from '../src/lib/kb/kb.js';
 import { loadFrequencyList } from './frequency-list.js';
 import { sourceStamp } from './source-cache.js';
 import { readCache, writeCache } from './cache.js';
@@ -273,6 +274,8 @@ async function main(argv) {
       const status = option(rest, '--status');
       const limit = Number(option(rest, '--limit') ?? 8);
       const report = kb.relations();
+      // `relations tree [word]`: what hangs under what, as a tree
+      if (rest[0] === 'tree') return print(report.relations.filter((r) => r.kind === 'kind-of'), renderKindTree(report, kb.source, { root: rest[1], limit: limit === 8 ? 10 : limit }));
       return print(report, renderRelations(report, { kind: rest[0], status, limit }));
     }
     case 'meaning': {

@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 // Writes the accepted relations the dictionaries show to the learner (KB_PLAN.md K18, phase 5):
-// opposites, words said the same way, close words, and wholes and their parts. A relation still proposed is not
+// opposites, words said the same way, close words, wholes and their parts, and what hangs under what (the head of
+// a composite, 手机 under jī). A relation still proposed is not
 // shown; it waits on the relations review page (/__review/?relations).
 //
 // Output: src/data/relations.json, structured as
-//   { composites: { <zh>: { opposite?, same?, close?, partOf?, parts? : [end, ...] } },
+//   { composites: { <zh>: { opposite?, same?, close?, partOf?, parts?, kindOf?, kinds? : [end, ...] } },
 //     words:      { <id>:  { ... the same keys ... } } }
 // where an end is a composite's hanzi or "word:<id>". Regenerate with `npm run relations`; the build does it.
 
@@ -36,6 +37,11 @@ export function relationsIndex(report, { words, composites }) {
     if (SYMMETRIC[r.kind]) {
       const members = r.members ?? [r.a, r.b];
       for (const a of members) for (const b of members) if (a !== b) put(a, SYMMETRIC[r.kind], b);
+    } else if (r.kind === 'kind-of') {
+      // a composite that is only its head's own hanzi (一 under yī) is no kind of anything
+      if (words[r.b]?.hanzi === r.a) continue;
+      put(r.a, 'kindOf', r.b);
+      put(r.b, 'kinds', r.a);
     } else if (r.kind === 'part-of' && r.ends !== 'composite-text') {
       put(r.a, 'partOf', r.b);
       put(r.b, 'parts', r.a);
@@ -49,7 +55,9 @@ export function relationsIndex(report, { words, composites }) {
 async function main() {
   const kb = await openKb();
   const index = relationsIndex(kb.relations(), { words: kb.source.words, composites: kb.source.composites });
-  const text = JSON.stringify(index, null, 1) + '\n';
+  // one line per entry: small to ship, and a change shows as the entries it touches
+  const block = (m) => `{\n${Object.entries(m).map(([k, v]) => `${JSON.stringify(k)}:${JSON.stringify(v)}`).join(',\n')}\n}`;
+  const text = `{\n"composites":${block(index.composites)},\n"words":${block(index.words)}\n}\n`;
   writeFileSync(OUT_PATH, text);
   console.log(`generate-relations: ${Object.keys(index.composites).length} composites and ${Object.keys(index.words).length} words with relations`);
 }

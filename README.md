@@ -221,7 +221,7 @@ The shapes of the data are defined in TypeScript, so a mistake is a type error:
 | `npm run report-roots` | Which roots would bring Hao-shuo-de closest to real Chinese: for every character the dictionary doesn't have yet, how many words of the frequency list it would complete… |
 | `npm run plan-4b` | Rewrites the §4b table of BOOK_PLAN.md (which words each lesson introduces) from the lessons themselves, so a word refactor never needs the table edited by hand. |
 | `npm run word-usage` | Cross-references every dictionary word against every lesson/appendix content file, so the dictionary UI can show "used in: Lesson 3, Lesson 5" next to each word -- and, just as importantly… |
-| `npm run relations` | Writes the accepted relations the dictionaries show to the learner (KB_PLAN.md K18, phase 5): opposites, words said the same way, close words, and wholes and their parts. |
+| `npm run relations` | Writes the accepted relations the dictionaries show to the learner (KB_PLAN.md K18, phase 5): opposites, words said the same way, close words, wholes and their parts, and what hangs under what… |
 | `npm run composite-examples` | Writes example sentences into the composite dictionary. The sentences are written by hand in plain pinyin, one file per review batch. |
 | `npm run grammar-overview` | Builds the grammar overview chapter (src/content/appendix-grammar.ts) from the lessons' patterns: every module's info block (src/lib/lesson.ts) that isn't a note (BOOK_PLAN.md §6… |
 | `npm run check` | Runs every book gate (BOOK_PLAN.md §6) -- the first step of `npm run build`. |

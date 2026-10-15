@@ -25,7 +25,7 @@ import { readRules } from './rules.js';
 import { solve, tables } from './clingo.js';
 import { makeParseText, renderParse, viewParse } from './parse.js';
 import { atoms, atomWord, renderAtoms, renderAtomWord } from './atoms.js';
-import { relationReport, renderRelations } from './relations.js';
+import { relationReport, renderRelations, renderKindTree } from './relations.js';
 import { meaningReport, meaningWord, renderMeaning, renderMeaningWord } from './meaning.js';
 import { restsOnModel } from './rests-on.js';
 import { candidateModel, renderAddition, renderAudit, renderRemovalCandidates, renderRootCandidates, renderSwaps } from './candidates.js';
@@ -126,4 +126,4 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
   };
 }
 
-export { meaningWord, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, viewParse, renderAtoms, renderAtomWord, renderRelations, renderAddition, renderAudit, renderRemovalCandidates, renderRootCandidates, renderSwaps };
+export { meaningWord, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, viewParse, renderAtoms, renderAtomWord, renderRelations, renderKindTree, renderAddition, renderAudit, renderRemovalCandidates, renderRootCandidates, renderSwaps };

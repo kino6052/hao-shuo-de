@@ -110,3 +110,33 @@ export interface Structure {
 }
 
 export const structure = (s: Structure): Structure => s;
+
+/**
+ * The NSM primes grouped into the families the literature gives them (src/data/maps/primes.ts), and the carriers of a prime
+ * that are one idea said two ways (the "I / me" kind, which NSM calls allolexes). A prime is a key of coverage/atoms.ts.
+ * `proposed` entries wait for the author to confirm.
+ *
+ *  - `families`: a family name, a note and its primes; every prime is in exactly one family.
+ *  - `alternates`: for one prime, the carriers that are its main way to say it and the ones that are its alternates, with why.
+ */
+export interface PrimeFamily {
+  name: string;
+  why: string;
+  primes: string[];
+  proposed?: boolean;
+}
+
+export interface PrimeAlternate {
+  prime: string;
+  main: string[];
+  alternates: string[];
+  why: string;
+  proposed?: boolean;
+}
+
+export interface Primes {
+  families: PrimeFamily[];
+  alternates: PrimeAlternate[];
+}
+
+export const primes = (p: Primes): Primes => p;

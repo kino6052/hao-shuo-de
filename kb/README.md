@@ -52,6 +52,7 @@ node scripts/kb.js query "<rules>"                                      # your o
 node scripts/kb.js parse "Wǒ chī fàn." [--lesson 5]                     # does a sentence parse; with --lesson, only the patterns taught up to it
 node scripts/kb.js atoms [word]                                         # the atoms report, or one word's line
 node scripts/kb.js relations [kind] [--status proposed|accepted] [--limit N]  # synonyms, opposites, connections and the rest
+node scripts/kb.js relations tree [word] [--limit N]                    # what hangs under what: the kind-of tree of every word, or of one
 node scripts/kb.js meaning [says|atoms|grounding|<word>] [--limit N]    # what the words say of the NSM primes, Aristotle's categories and grammar
 node scripts/kb.js candidates [remove|add] [--limit N]                  # the cheapest words to drop and the best roots to add
 node scripts/kb.js add <hanzi>                                          # what one root would bring

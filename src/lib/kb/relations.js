@@ -29,6 +29,8 @@
 //   set                 ends that exclude each other (the colors, the seasons)
 //   scale               ends in an order (small, big; the numbers)
 //   family              words of one idea that differ in one way each (the going and moving words), by facet
+//   prime-family        the words that carry the primes of one NSM family (maps/primes.ts: substantives, time, space ...)
+//   alternate           the main carrier of a prime and one of its alternates (liǎng and èr for TWO)
 //   place-of            a composite described as the place where something is done (xué-de dì-fang)
 //   tool-for            a composite described as the thing used for something (zuò-fàn-yòng-de dōng-xi)
 //   causes              a composite whose form is "ràng X …": it makes something happen
@@ -56,6 +58,8 @@ export const KIND_NOTES = {
   set: 'one of a set (they exclude each other)',
   scale: 'a scale, in order',
   family: 'a family of one idea, by facet',
+  'prime-family': 'the words of one family of NSM primes',
+  alternate: 'a main word of a prime and its alternate',
   'place-of': 'a place named by what is done there',
   'tool-for': 'a thing named by what it is used for',
   causes: 'a word that makes something happen',
@@ -141,6 +145,17 @@ export function relationReport(source, facts, rules = {}) {
   }
   for (const g of st.groups ?? []) {
     add({ kind: g.kind, status: proposed(g), source: 'maps/structure', ends: 'mixed', members: g.members, a: g.members[0], why: `${g.members.map(endName).join(g.kind === 'scale' ? ' < ' : ', ')}: ${g.why}` });
+  }
+  // the NSM families: the words that carry the primes of one family; an alternate is a carrier of a prime told from its main one
+  const primeItems = new Map((source.coverage ?? []).filter((g) => g.key === 'atoms').flatMap((g) => g.items.map((i) => [i.key, i])));
+  for (const f of maps.primes?.families ?? []) {
+    const members = [...new Set(f.primes.flatMap((k) => primeItems.get(k)?.words ?? []))].filter((id) => words[id]);
+    if (members.length > 1) add({ kind: 'prime-family', status: proposed(f), source: 'maps/primes', ends: 'word', members, a: f.name, why: `${f.name}: ${f.why} (${f.primes.join(', ')}; ${members.map(term).join(', ')})` });
+  }
+  for (const alt of maps.primes?.alternates ?? []) {
+    // a main way and its alternates are one group (a syllable-word like dì or nǎ is a part of the way, not a way)
+    const way = (ids) => ids.map(term).join('-');
+    add({ kind: 'alternate', status: proposed(alt), source: 'maps/primes', ends: 'word', members: [...alt.main, ...alt.alternates], a: alt.prime, sub: alt.prime, why: `${alt.prime}: ${way(alt.main)} is the main way, ${way(alt.alternates)} an alternate: ${alt.why}` });
   }
   for (const f of st.families ?? []) {
     const members = Object.values(f.facets).flat();
@@ -301,4 +316,48 @@ export function renderRelations(report, { kind, status, limit = 8 } = {}) {
   }
   if (!kind) out.push('', 'Name a kind to see its relations and why each was found.');
   return out.join('\n');
+}
+
+// -> the kind-of tree as text: every word (or composite) that other composites hang under, with what hangs under it, and
+// under those in turn (手机 under jī, 手机壳 under 手机). `root` (a word id, its term or hanzi, or a composite's hanzi)
+// shows that one tree in full; without it the `limit` widest trees are shown, each with its first few children.
+export function renderKindTree(report, source, { root, limit = 10, width = 12 } = {}) {
+  const words = source.words;
+  const entries = new Map(source.composites.map((c) => [c.zh, c]));
+  const name = (e) => (words[e] ? `${words[e].term} ${words[e].hanzi}` : entries.has(e) ? `${e} ${entries.get(e).py}` : e);
+  const children = new Map();
+  const childOf = new Set();
+  for (const r of report.relations) {
+    if (r.kind !== 'kind-of' || r.status !== 'accepted' || words[r.b]?.hanzi === r.a) continue;
+    (children.get(r.b) ?? children.set(r.b, []).get(r.b)).push(r.a);
+    childOf.add(r.a);
+  }
+  const size = (e, seen = new Set()) => {
+    if (seen.has(e)) return 0;
+    seen.add(e);
+    return (children.get(e) ?? []).reduce((n, c) => n + 1 + size(c, seen), 0);
+  };
+  const out = [];
+  const draw = (e, depth, shown) => {
+    const kids = children.get(e) ?? [];
+    const more = kids.length > width && !root;
+    const list = more ? kids.slice(0, width) : kids;
+    for (const c of list) {
+      if (shown.has(c)) continue;
+      shown.add(c);
+      const n = size(c);
+      out.push(`${'  '.repeat(depth)}- ${name(c)}${n ? ` (${n} under it)` : ''}`);
+      if (n && (root || depth < 2)) draw(c, depth + 1, shown);
+    }
+    if (more) out.push(`${'  '.repeat(depth)}  … and ${kids.length - width} more`);
+  };
+  const find = (q) => [...children.keys()].filter((e) => e === q || words[e]?.term === q || words[e]?.hanzi === q);
+  const roots = root ? find(root) : [...children.keys()].filter((e) => !childOf.has(e)).sort((a, b) => size(b) - size(a)).slice(0, limit);
+  if (!roots.length) throw new Error(root ? `nothing hangs under "${root}"` : 'no kind-of relations');
+  for (const e of roots) {
+    out.push(`${name(e)}  (${size(e)} under it)`);
+    draw(e, 1, new Set([e]));
+    out.push('');
+  }
+  return out.join('\n').trimEnd();
 }

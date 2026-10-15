@@ -89,7 +89,9 @@ const counts = composites.entries.reduce(
 // The accepted relations of an entry (src/data/relations.json, made by scripts/generate-relations.js): an end is a
 // composite's hanzi or "word:<id>", shown with its sound.
 const ENTRY_BY_ZH = new Map(composites.entries.map((e) => [e.zh, e]));
-const REL_KEYS = [["opposite", "relOpposite"], ["same", "relSame"], ["close", "relClose"], ["partOf", "relPartOf"], ["parts", "relParts"]];
+const REL_KEYS = [["opposite", "relOpposite"], ["same", "relSame"], ["close", "relClose"], ["partOf", "relPartOf"], ["parts", "relParts"], ["kindOf", "relKindOf"], ["kinds", "relKinds"]];
+// a long list shows its first few and the count
+const MAX_ENDS = 12;
 const endLabel = (end) => {
   if (end.startsWith("word:")) return dictionary.words[end.slice(5)]?.term ?? end;
   const e = ENTRY_BY_ZH.get(end);
@@ -103,7 +105,7 @@ function Relations({ zh, lang }) {
       {REL_KEYS.filter(([key]) => mine[key]).map(([key, label], i) => (
         <span key={key}>
           {i > 0 && " · "}
-          {t(lang, label)} {mine[key].map(endLabel).join(", ")}
+          {t(lang, label)} {mine[key].slice(0, MAX_ENDS).map(endLabel).join(", ")}{mine[key].length > MAX_ENDS && ` … (${mine[key].length})`}
         </span>
       ))}
     </div>

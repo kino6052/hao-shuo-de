@@ -24,6 +24,7 @@ import ANTONYMS from '../src/data/maps/antonyms.ts';
 import SYNONYMS from '../src/data/maps/synonyms.ts';
 import CONNECTIONS from '../src/data/maps/connections.ts';
 import STRUCTURE from '../src/data/maps/structure.ts';
+import PRIMES from '../src/data/maps/primes.ts';
 import { buildData } from './build-data.js';
 import { compositeFileName } from './data-files.js';
 import { dataFiles } from './build-data.js';
@@ -150,6 +151,27 @@ for (const [name, r] of [['antonyms', ANTONYMS], ['synonyms', SYNONYMS]]) {
     note(`${g.kind} [${g.members.slice(0, 3)}…]`, g.members, g.why);
   }
   for (const f of STRUCTURE.families) note(`family ${f.name}`, Object.values(f.facets).flat(), f.why);
+}
+// primes: every prime of coverage/atoms.ts is in exactly one family; an alternate is a carrier of its prime, never its own main one
+{
+  const items = new Map(GROUPS.find((g) => g.key === 'atoms').items.map((i) => [i.key, i]));
+  const home = new Map();
+  for (const f of PRIMES.families) {
+    if (!String(f.why ?? '').trim()) errors.push(`maps/primes.ts ${f.name}: no why`);
+    for (const k of f.primes) {
+      if (!items.has(k)) errors.push(`maps/primes.ts ${f.name}: "${k}" is not a prime of coverage/atoms.ts`);
+      if (home.has(k)) errors.push(`maps/primes.ts: "${k}" is in both "${home.get(k)}" and "${f.name}"`);
+      home.set(k, f.name);
+    }
+  }
+  for (const k of items.keys()) if (!home.has(k)) errors.push(`maps/primes.ts: the prime "${k}" is in no family`);
+  for (const a of PRIMES.alternates) {
+    const carriers = new Set(items.get(a.prime)?.words ?? []);
+    if (!items.has(a.prime)) errors.push(`maps/primes.ts alternate: "${a.prime}" is not a prime`);
+    if (!String(a.why ?? '').trim()) errors.push(`maps/primes.ts alternate ${a.prime}: no why`);
+    for (const id of [...a.main, ...a.alternates]) if (!carriers.has(id)) errors.push(`maps/primes.ts alternate ${a.prime}: ${id} does not carry it in coverage/atoms.ts`);
+    if (a.main.some((id) => a.alternates.includes(id))) errors.push(`maps/primes.ts alternate ${a.prime}: a word is both main and alternate`);
+  }
 }
 // connections: two or more known words, a why, no connection written twice
 {

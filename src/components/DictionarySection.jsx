@@ -24,6 +24,8 @@ function coverLabel(key, lang) {
 }
 // An end of a stored relation (src/data/relations.json): a word as its term, a composite as hanzi.
 const relationEnd = (end) => (end.startsWith('word:') ? dictionary.words[end.slice(5)]?.term ?? end : end);
+// a long list (the composites under rén) shows its first few and the count
+const MAX_ENDS = 12;
 // A sense's compound as the reader sees it: "shi2 jian1" -> shí-jiān.
 const compoundTerm = (c) => c.split(' ').map((id) => dictionary.words[id]?.term ?? id).join('-');
 // The reason a word is in the dictionary (necessity, 5 = no sentence without
@@ -42,9 +44,14 @@ function WordNotes({ word, lang }) {
       {word.covers && <div class={styles.related}>{t(lang, 'covers')} {word.covers.map((key) => coverLabel(key, lang)).join(' · ')}</div>}
       {word.antonyms && <div class={styles.related}>{t(lang, 'opposite')} {word.antonyms.map(refs).join(', ')}</div>}
       {word.synonyms && <div class={styles.related}>{t(lang, 'similar')} {word.synonyms.map(refs).join(', ')}</div>}
-      {[['partOf', 'relPartOf'], ['parts', 'relParts']].filter(([key]) => relations.words[word.id]?.[key]).map(([key, label]) => (
-        <div key={key} class={styles.related}>{t(lang, label)} {relations.words[word.id][key].map(relationEnd).join(', ')}</div>
-      ))}
+      {[['partOf', 'relPartOf'], ['parts', 'relParts'], ['kinds', 'relKinds']].filter(([key]) => relations.words[word.id]?.[key]).map(([key, label]) => {
+        const ends = relations.words[word.id][key];
+        return (
+          <div key={key} class={styles.related}>
+            {t(lang, label)} {ends.slice(0, MAX_ENDS).map(relationEnd).join(', ')}{ends.length > MAX_ENDS && ` … (${ends.length})`}
+          </div>
+        );
+      })}
       {Object.entries(word.senses ?? {}).map(([key, s]) => (
         <div key={key} class={styles.related}>
           {t(lang, 'alsoWritten')} {s.hanzi} ({s[lang === 'zh' ? 'eng' : lang] || s.eng}): {refs(s.why[lang] || s.why.eng)}{' '}

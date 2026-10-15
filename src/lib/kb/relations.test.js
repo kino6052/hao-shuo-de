@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'bun:test';
 import { createKb } from './kb.js';
-import { KINDS, relationKey, renderRelations } from './relations.js';
+import { KINDS, relationKey, renderKindTree, renderRelations } from './relations.js';
 import { source } from './fixture.js';
 
 const w = (term, hanzi, pos = 'noun', extra = {}) => ({ term, hanzi, pos: { eng: pos }, definition: { eng: `the word ${term}` }, necessity: { index: 3, eng: `why ${term}` }, ...extra });
@@ -230,6 +230,51 @@ describe('the decisions made on the review page', () => {
     expect(dropped.relations.some((r) => relationKey(r) === key)).toBe(false);
     expect(dropped.rejected.map(relationKey)).toEqual([key]);
     expect(dropped.relations.some((r) => r.a === 'dong1' && r.b === 'xi1')).toBe(true);
+  });
+});
+
+describe('prime families and alternates (maps/primes.ts)', () => {
+  const coverage = [{ key: 'atoms', items: [{ key: 'EAST', words: ['dong1'] }, { key: 'WEST', words: ['xi1'] }, { key: 'EAT', words: ['chi1', 'fan4'] }] }];
+  const primes = {
+    families: [{ name: 'Directions', why: 'where the sun is', primes: ['EAST', 'WEST'], proposed: true }, { name: 'Alone', why: 'one word only', primes: ['EAT'] }],
+    alternates: [{ prime: 'EAT', main: ['chi1'], alternates: ['fan4'], why: 'a meal is eaten', proposed: true }],
+  };
+  const made = createKb({ ...source, words, composites, coverage, maps: { ...maps, primes } }).relations();
+  const got = (kind) => made.relations.filter((r) => r.kind === kind);
+
+  test('a family is the words that carry its primes; a family not marked proposed is accepted', () => {
+    expect(got('prime-family').map((r) => [r.a, r.members, r.status])).toEqual([
+      ['Directions', ['dong1', 'xi1'], 'proposed'],
+      ['Alone', ['chi1', 'fan4'], 'accepted'],
+    ]);
+  });
+
+  test('an alternate is one group: the main way, then the alternates', () => {
+    expect(got('alternate')).toHaveLength(1);
+    expect(got('alternate')[0]).toMatchObject({ a: 'EAT', members: ['chi1', 'fan4'], sub: 'EAT', status: 'proposed' });
+    expect(got('alternate')[0].why).toContain('chī is the main way, fàn an alternate');
+  });
+});
+
+describe('the kind-of tree', () => {
+  const tree = {
+    relations: [
+      { kind: 'kind-of', status: 'accepted', a: '飞机', b: 'ji1' },
+      { kind: 'kind-of', status: 'accepted', a: '小飞机', b: '飞机' },
+      { kind: 'kind-of', status: 'accepted', a: '机', b: 'ji1' },
+      { kind: 'kind-of', status: 'proposed', a: '吃机', b: 'ji1' },
+    ],
+  };
+  const src = { words: { ji1: { term: 'jī', hanzi: '机' } }, composites: [{ zh: '飞机', py: 'fēijī' }, { zh: '小飞机', py: 'xiǎofēijī' }] };
+
+  test('what hangs under a word, and under that in turn; its own hanzi and a proposed one are left out', () => {
+    expect(renderKindTree(tree, src)).toBe(['jī 机  (2 under it)', '  - 飞机 fēijī (1 under it)', '    - 小飞机 xiǎofēijī'].join('\n'));
+  });
+
+  test('one tree by the word, its hanzi or a composite; a name nothing hangs under is an error', () => {
+    expect(renderKindTree(tree, src, { root: 'ji1' })).toBe(renderKindTree(tree, src, { root: '机' }));
+    expect(renderKindTree(tree, src, { root: '飞机' })).toContain('小飞机');
+    expect(() => renderKindTree(tree, src, { root: '路' })).toThrow(/nothing hangs under/);
   });
 });
 
