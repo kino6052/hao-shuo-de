@@ -58,6 +58,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "place-li-shang",
     en: "place-{{word:li3}} (in), place-{{word:shang4}} (on): {{Word:shui3}} {{word:zai4}} {{word:bao1}}-{{word:li3}}. (The water is in the bag.) {{word:wang3}}-{{word:shang4}}, online: {{Word:wo3}} {{word:zai4}} {{word:wang3}}-{{word:shang4}} {{word:zhao3}}. (I'm looking online.)",
     ru: "место-{{word:li3}} (в), место-{{word:shang4}} (на): {{Word:shui3}} {{word:zai4}} {{word:bao1}}-{{word:li3}}. (Вода в сумке.) {{word:wang3}}-{{word:shang4}} — в интернете: {{Word:wo3}} {{word:zai4}} {{word:wang3}}-{{word:shang4}} {{word:zhao3}}. (Я ищу в интернете.)",
   },

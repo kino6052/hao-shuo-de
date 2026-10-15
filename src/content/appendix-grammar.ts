@@ -25,11 +25,11 @@ const content: Entry[] = [
   {
     "type": "summary",
     "en": [
-      "Every pattern from the 24 lessons, in one place, in lesson order."
+      "Every pattern from the 26 lessons, in one place, in lesson order."
     ],
     "zh": [],
     "ru": [
-      "Все грамматические схемы из 24 уроков в одном месте, по порядку уроков."
+      "Все грамматические схемы из 26 уроков в одном месте, по порядку уроков."
     ]
   },
   {
@@ -1321,10 +1321,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:jin4}} / {{word:chu1}} / {{word:hui2}} + {{word:lai2}} / {{word:qu4}}, in / out / back: {{Word:ni3}} {{word:jin4}}-{{word:lai2}}! (Come in!) {{Word:wo3}} {{word:yao4}} {{word:hui2}} {{word:jia1}}. (I want to go home.)"
+            "{{word:jin4}} / {{word:chu1}} / {{word:hui2}} + {{word:lai2}} / {{word:qu4}}, in / out / back: {{Word:ni3}} {{word:jin4}}-{{word:lai2}}! (Come in!) {{Word:wo3}} {{word:yao4}} {{word:hui2}} {{word:jia1}}. (I want to go home.) {{word:tong1}}-{{word:guo4}} + place, go through; {{word:tong1}}-{{word:dao4}} + place, lead to: {{Word:zhe4}}-ge {{word:lu4}} {{word:tong1}}-{{word:dao4}} {{word:wo3}}-{{word:de}} {{word:jia1}}. (This road leads to my home.)"
           ],
           "ru": [
-            "{{word:jin4}} / {{word:chu1}} / {{word:hui2}} + {{word:lai2}} / {{word:qu4}} — внутрь / наружу / обратно: {{Word:ni3}} {{word:jin4}}-{{word:lai2}}! (Входи!) {{Word:wo3}} {{word:yao4}} {{word:hui2}} {{word:jia1}}. (Я хочу домой.)"
+            "{{word:jin4}} / {{word:chu1}} / {{word:hui2}} + {{word:lai2}} / {{word:qu4}} — внутрь / наружу / обратно: {{Word:ni3}} {{word:jin4}}-{{word:lai2}}! (Входи!) {{Word:wo3}} {{word:yao4}} {{word:hui2}} {{word:jia1}}. (Я хочу домой.) {{word:tong1}}-{{word:guo4}} + место — пройти через; {{word:tong1}}-{{word:dao4}} + место — вести туда: {{Word:zhe4}}-ge {{word:lu4}} {{word:tong1}}-{{word:dao4}} {{word:wo3}}-{{word:de}} {{word:jia1}}. (Эта дорога ведёт к моему дому.)"
           ],
           "zh": []
         }
@@ -1369,17 +1369,6 @@ const content: Entry[] = [
           ],
           "ru": [
             "глагол-{{word:de}}-результат / глагол-{{word:bu4}}-результат — получается / не получается: {{Word:wo3}}-{{word:de}} {{word:yan3jing}} {{word:bu4}} {{word:hao3}}, {{word:kan4}}-{{word:bu4}}-{{word:dao4}}. (У меня плохие глаза, мне не видно.)"
-          ],
-          "zh": []
-        }
-      },
-      {
-        "text": {
-          "en": [
-            "{{word:tong1}}-{{word:guo4}} + place, go through; {{word:tong1}}-{{word:dao4}} + place, lead to: {{Word:zhe4}}-ge {{word:lu4}} {{word:tong1}}-{{word:dao4}} {{word:wo3}}-{{word:de}} {{word:jia1}}. (This road leads to my home.)"
-          ],
-          "ru": [
-            "{{word:tong1}}-{{word:guo4}} + место — пройти через; {{word:tong1}}-{{word:dao4}} + место — вести туда: {{Word:zhe4}}-ge {{word:lu4}} {{word:tong1}}-{{word:dao4}} {{word:wo3}}-{{word:de}} {{word:jia1}}. (Эта дорога ведёт к моему дому.)"
           ],
           "zh": []
         }
@@ -1475,7 +1464,22 @@ const content: Entry[] = [
           ],
           "zh": []
         }
-      },
+      }
+    ]
+  },
+  {
+    "type": "info",
+    "subtype": "grammar",
+    "title": {
+      "en": [
+        "Lesson 18 · Numbers 2 — Time and sums"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 18 · Числа 2 — Время и вычисления"
+      ]
+    },
+    "items": [
       {
         "text": {
           "en": [
@@ -1538,11 +1542,11 @@ const content: Entry[] = [
     "subtype": "grammar",
     "title": {
       "en": [
-        "Lesson 18 · Colors"
+        "Lesson 19 · Colors"
       ],
       "zh": [],
       "ru": [
-        "Урок 18 · Цвета"
+        "Урок 19 · Цвета"
       ]
     },
     "items": [
@@ -1586,11 +1590,11 @@ const content: Entry[] = [
     "subtype": "grammar",
     "title": {
       "en": [
-        "Lesson 19 · Changing the Role of a Word"
+        "Lesson 20 · Changing the Role of a Word"
       ],
       "zh": [],
       "ru": [
-        "Урок 19 · Слово в новой роли"
+        "Урок 20 · Слово в новой роли"
       ]
     },
     "items": [
@@ -1656,11 +1660,11 @@ const content: Entry[] = [
     "subtype": "grammar",
     "title": {
       "en": [
-        "Lesson 20 · Relationships 1 — Inside a sentence"
+        "Lesson 21 · Relationships 1 — Inside a sentence"
       ],
       "zh": [],
       "ru": [
-        "Урок 20 · Связи 1 — Внутри предложения"
+        "Урок 21 · Связи 1 — Внутри предложения"
       ]
     },
     "items": [
@@ -1748,11 +1752,11 @@ const content: Entry[] = [
     "subtype": "grammar",
     "title": {
       "en": [
-        "Lesson 21 · Relationships 2 — Linking sentences"
+        "Lesson 22 · Relationships 2 — Linking sentences"
       ],
       "zh": [],
       "ru": [
-        "Урок 21 · Связи 2 — Как связать предложения"
+        "Урок 22 · Связи 2 — Как связать предложения"
       ]
     },
     "items": [
@@ -1807,11 +1811,11 @@ const content: Entry[] = [
     "subtype": "grammar",
     "title": {
       "en": [
-        "Lesson 22 · Greetings and Feelings"
+        "Lesson 23 · Greetings"
       ],
       "zh": [],
       "ru": [
-        "Урок 22 · Приветствия и чувства"
+        "Урок 23 · Приветствия"
       ]
     },
     "items": [
@@ -1858,7 +1862,22 @@ const content: Entry[] = [
           ],
           "zh": []
         }
-      },
+      }
+    ]
+  },
+  {
+    "type": "info",
+    "subtype": "grammar",
+    "title": {
+      "en": [
+        "Lesson 24 · Feelings"
+      ],
+      "zh": [],
+      "ru": [
+        "Урок 24 · Чувства"
+      ]
+    },
+    "items": [
       {
         "text": {
           "en": [
@@ -1932,11 +1951,11 @@ const content: Entry[] = [
     "subtype": "grammar",
     "title": {
       "en": [
-        "Lesson 23 · Doubling Words"
+        "Lesson 25 · Doubling Words"
       ],
       "zh": [],
       "ru": [
-        "Урок 23 · Удвоение слов"
+        "Урок 25 · Удвоение слов"
       ]
     },
     "items": [
@@ -1980,11 +1999,11 @@ const content: Entry[] = [
     "subtype": "grammar",
     "title": {
       "en": [
-        "Lesson 24 · Everyday Patterns"
+        "Lesson 26 · Everyday Patterns"
       ],
       "zh": [],
       "ru": [
-        "Урок 24 · Обороты на каждый день"
+        "Урок 26 · Обороты на каждый день"
       ]
     },
     "items": [

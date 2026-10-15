@@ -77,7 +77,11 @@ export default coverageGroup({
       eng: "State: what it has on, what it is in",
       rus: "Обладание: что на нём, в каком оно виде",
       words: ["you3"],
-      forms: ["X-{{word:shang4}} {{word:you3}} Y", "{{word:you3}}"],
+      forms: [
+        "X-{{word:shang4}} {{word:you3}} Y",
+        "{{word:you3}}",
+        "X {{word:zai4}} Y {{word:li3}}-{{word:mian4}}",
+      ],
       example: { eng: "There are clothes on him.", rus: "На нём одежда." },
       taught: "who-does-what/have",
     },

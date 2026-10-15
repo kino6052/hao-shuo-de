@@ -12,7 +12,7 @@ export default composite({
   tts: ["…、…放在一起"],
   literal: "put together",
   fit: "plain",
-  note: "sān, sì fàng zài yī-qǐ, shì qī: 3 + 4 = 7 (Lesson {{lesson:numbers}}).",
+  note: "sān, sì fàng zài yī-qǐ, shì qī: 3 + 4 = 7 (Lesson {{lesson:time-and-sums}}).",
   examples: [
     {
       pinyin: "{{Word:san1}}, {{word:si4}} {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}, {{word:shi4}} {{word:qi1}}.",

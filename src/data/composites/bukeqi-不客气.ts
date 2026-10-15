@@ -12,7 +12,7 @@ export default composite({
   tts: ["不用谢"],
   literal: "no need to thank",
   fit: "natural",
-  note: "Lesson {{lesson:greetings-and-feelings}}.",
+  note: "Lesson {{lesson:greetings}}.",
   examples: [
     {
       pinyin: "{{Word:xie4}}-{{word:xie4}}! {{Word:bu4}} {{word:yong4}} {{word:xie4}}.",

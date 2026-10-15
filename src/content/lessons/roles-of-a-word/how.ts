@@ -27,6 +27,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "verb-de-how",
     en: "verb-{{word:de}} + adjective, how: {{Word:ta1}} {{word:shuo1}}-{{word:de}} {{word:hao3}}. (She speaks well.)",
     ru: "глагол-{{word:de}} + прилагательное — как: {{Word:ta1}} {{word:shuo1}}-{{word:de}} {{word:hao3}}. (Она хорошо говорит.)",
   },

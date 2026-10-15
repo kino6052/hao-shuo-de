@@ -41,6 +41,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "result-can-cant",
     en: "verb-{{word:de}}-result / verb-{{word:bu4}}-result, can / can't: {{Word:wo3}}-{{word:de}} {{word:yan3jing}} {{word:bu4}} {{word:hao3}}, {{word:kan4}}-{{word:bu4}}-{{word:dao4}}. (My eyes are bad, I can't see.)",
     ru: "глагол-{{word:de}}-результат / глагол-{{word:bu4}}-результат — получается / не получается: {{Word:wo3}}-{{word:de}} {{word:yan3jing}} {{word:bu4}} {{word:hao3}}, {{word:kan4}}-{{word:bu4}}-{{word:dao4}}. (У меня плохие глаза, мне не видно.)",
   },

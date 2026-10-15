@@ -35,6 +35,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "love-verb",
     en: "{{word:ai4}} + verb, love to: {{Word:wo3}} {{word:ai4}} {{word:chi1}}. (I love to eat.)",
     ru: "{{word:ai4}} + глагол — любить: {{Word:wo3}} {{word:ai4}} {{word:chi1}}. (Я люблю поесть.)",
   },

@@ -132,7 +132,8 @@ export function lex(text, lexicon, { extra = {}, forms = false } = {}) {
     if (!it.word) {
       closeChain();
       tokens.push({ kind: 'comma', text: it.text });
-      edges.push({ from: tokens.length - 1, to: tokens.length, term: it.text, classes: new Set(['comma']) });
+      // a colon is a comma too, and also @colon: what was said comes only after a colon (speech-quote)
+      edges.push({ from: tokens.length - 1, to: tokens.length, term: it.text, classes: new Set(it.text === ':' ? ['comma', 'colon'] : ['comma']) });
       chainStart = tokens.length;
       continue;
     }

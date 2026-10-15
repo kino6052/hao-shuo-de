@@ -56,6 +56,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "what-question",
     en: "{{word:shen2me}} where the answer goes: {{Word:ni3}} {{word:zhao3}} {{word:shen2me}}? (What are you looking for?)",
     ru: "{{word:shen2me}} там, где стоит ответ: {{Word:ni3}} {{word:zhao3}} {{word:shen2me}}? (Что ты ищешь?)",
   },

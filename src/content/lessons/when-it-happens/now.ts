@@ -39,6 +39,7 @@ export default lessonModule({
     necessity: { en: "Now you can say what is going on.", ru: "Теперь вы можете сказать, что происходит." },
   },
   info: {
+    pattern: "zai-now",
     en: "{{word:zai4}} + verb, right now: {{Word:wo3}} {{word:zai4}} {{word:chi1}}. (I'm eating.)",
     ru: "{{word:zai4}} + глагол — как раз сейчас: {{Word:wo3}} {{word:zai4}} {{word:chi1}}. (Я как раз ем.)",
   },

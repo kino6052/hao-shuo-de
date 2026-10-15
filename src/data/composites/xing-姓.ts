@@ -12,7 +12,7 @@ export default composite({
   tts: ["家叫的"],
   literal: "what the family is called",
   fit: "plain",
-  note: "Lesson {{lesson:greetings-and-feelings}}: jiào \"…\".",
+  note: "Lesson {{lesson:greetings}}: jiào \"…\".",
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:jia1}} {{word:jiao4}}-{{word:de}} {{word:shi4}} \"Wáng\".",

@@ -60,8 +60,12 @@
       "label": "Everyday Patterns",
       "order": 999
     },
-    "greetings-and-feelings": {
-      "label": "Greetings and Feelings",
+    "feelings": {
+      "label": "Feelings",
+      "order": 999
+    },
+    "greetings": {
+      "label": "Greetings",
       "order": 999
     },
     "how-much": {
@@ -106,6 +110,10 @@
     },
     "sounds-and-symbols": {
       "label": "Sounds and Symbols",
+      "order": 999
+    },
+    "time-and-sums": {
+      "label": "Numbers 2 — Time and sums",
       "order": 999
     },
     "when-it-happens": {
@@ -155,7 +163,8 @@
       "direction-and-result",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "feelings",
+      "greetings",
       "how-much",
       "inside-a-sentence",
       "linking-sentences",
@@ -165,6 +174,7 @@
       "pre-verbs",
       "questions",
       "roles-of-a-word",
+      "time-and-sums",
       "when-it-happens",
       "where-it-is",
       "who-does-what"
@@ -181,7 +191,8 @@
       "direction-and-result",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "feelings",
+      "greetings",
       "how-much",
       "inside-a-sentence",
       "linking-sentences",
@@ -191,6 +202,7 @@
       "pre-verbs",
       "questions",
       "roles-of-a-word",
+      "time-and-sums",
       "when-it-happens",
       "where-it-is",
       "who-does-what"
@@ -207,7 +219,8 @@
       "direction-and-result",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "feelings",
+      "greetings",
       "how-much",
       "inside-a-sentence",
       "linking-sentences",
@@ -217,6 +230,7 @@
       "pre-verbs",
       "questions",
       "roles-of-a-word",
+      "time-and-sums",
       "when-it-happens",
       "where-it-is",
       "who-does-what"
@@ -231,12 +245,13 @@
       "colors",
       "comparing",
       "doubling-words",
-      "greetings-and-feelings",
+      "feelings",
+      "greetings",
       "moving",
-      "numbers",
       "pre-verbs",
       "questions",
       "roles-of-a-word",
+      "time-and-sums",
       "when-it-happens"
     ],
     "men": [
@@ -250,13 +265,13 @@
       "direction-and-result",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "greetings",
       "inside-a-sentence",
       "linking-sentences",
       "moving",
-      "numbers",
       "pointing",
       "questions",
+      "time-and-sums",
       "where-it-is",
       "who-does-what"
     ],
@@ -267,7 +282,7 @@
       "appendix-grammar",
       "also-and-all",
       "comparing",
-      "greetings-and-feelings",
+      "greetings",
       "how-much",
       "inside-a-sentence",
       "linking-sentences",
@@ -291,7 +306,8 @@
       "direction-and-result",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "feelings",
+      "greetings",
       "how-much",
       "inside-a-sentence",
       "linking-sentences",
@@ -302,6 +318,7 @@
       "questions",
       "roles-of-a-word",
       "sounds-and-symbols",
+      "time-and-sums",
       "when-it-happens",
       "where-it-is",
       "words-and-sentences"
@@ -319,12 +336,14 @@
       "direction-and-result",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "feelings",
+      "greetings",
       "linking-sentences",
       "moving",
       "numbers",
       "pointing",
       "roles-of-a-word",
+      "time-and-sums",
       "where-it-is"
     ],
     "guo2": [
@@ -356,8 +375,8 @@
       "also-and-all",
       "comparing",
       "doubling-words",
-      "greetings-and-feelings",
-      "numbers",
+      "feelings",
+      "time-and-sums",
       "when-it-happens"
     ],
     "zhi2wu4": [
@@ -384,7 +403,7 @@
       "also-and-all",
       "becoming-and-making",
       "doubling-words",
-      "greetings-and-feelings",
+      "feelings",
       "linking-sentences"
     ],
     "qi4": [
@@ -394,12 +413,11 @@
       "becoming-and-making",
       "direction-and-result",
       "linking-sentences",
-      "numbers"
+      "time-and-sums"
     ],
     "bi2zi": [
       "appendix-frontier",
       "appendix-grammar",
-      "greetings-and-feelings",
       "inside-a-sentence",
       "roles-of-a-word"
     ],
@@ -438,7 +456,7 @@
       "phrase-book",
       "becoming-and-making",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "feelings",
       "how-much",
       "inside-a-sentence",
       "pointing",
@@ -447,7 +465,7 @@
     "tou2": [
       "phrase-book",
       "appendix-stories",
-      "greetings-and-feelings",
+      "feelings",
       "how-much",
       "pointing",
       "roles-of-a-word"
@@ -465,8 +483,8 @@
       "appendix-grammar",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
-      "numbers"
+      "feelings",
+      "time-and-sums"
     ],
     "er3duo": [
       "direction-and-result"
@@ -487,7 +505,7 @@
       "comparing",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "feelings",
       "how-much",
       "inside-a-sentence",
       "modifying-nouns",
@@ -513,7 +531,7 @@
       "appendix-frontier",
       "appendix-grammar",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "feelings",
       "inside-a-sentence"
     ],
     "ba4ba": [
@@ -557,16 +575,17 @@
       "comparing",
       "direction-and-result",
       "doubling-words",
-      "greetings-and-feelings",
+      "feelings",
+      "greetings",
       "how-much",
       "inside-a-sentence",
       "linking-sentences",
       "modifying-nouns",
       "moving",
-      "numbers",
       "pre-verbs",
       "questions",
       "roles-of-a-word",
+      "time-and-sums",
       "where-it-is",
       "who-does-what"
     ],
@@ -578,6 +597,8 @@
       "linking-sentences",
       "numbers",
       "pre-verbs",
+      "questions",
+      "time-and-sums",
       "who-does-what"
     ],
     "guo3": [
@@ -633,9 +654,9 @@
       "comparing",
       "direction-and-result",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "greetings",
       "linking-sentences",
-      "numbers",
+      "time-and-sums",
       "when-it-happens"
     ],
     "bao1": [
@@ -671,8 +692,8 @@
       "direction-and-result",
       "doubling-words",
       "linking-sentences",
-      "numbers",
       "questions",
+      "time-and-sums",
       "where-it-is",
       "who-does-what"
     ],
@@ -697,7 +718,8 @@
       "colors",
       "direction-and-result",
       "doubling-words",
-      "greetings-and-feelings",
+      "feelings",
+      "greetings",
       "how-much",
       "inside-a-sentence",
       "modifying-nouns",
@@ -719,7 +741,7 @@
       "comparing"
     ],
     "ci2": [
-      "greetings-and-feelings",
+      "feelings",
       "linking-sentences",
       "roles-of-a-word"
     ],
@@ -733,7 +755,7 @@
     "sheng1yin1": [
       "appendix-stories",
       "appendix-grammar",
-      "greetings-and-feelings"
+      "feelings"
     ],
     "jia4zhi2": [
       "appendix-grammar",
@@ -823,8 +845,9 @@
       "appendix-grammar",
       "around-an-action",
       "doubling-words",
-      "greetings-and-feelings",
-      "numbers"
+      "feelings",
+      "numbers",
+      "time-and-sums"
     ],
     "yi1": [
       "phrase-book",
@@ -836,20 +859,23 @@
       "direction-and-result",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "feelings",
+      "greetings",
       "how-much",
       "inside-a-sentence",
       "linking-sentences",
       "moving",
       "numbers",
       "roles-of-a-word",
-      "sounds-and-symbols"
+      "sounds-and-symbols",
+      "time-and-sums"
     ],
     "liang3": [
       "appendix-stories",
       "appendix-grammar",
       "colors",
-      "numbers"
+      "numbers",
+      "time-and-sums"
     ],
     "hao4": [
       "appendix-stories",
@@ -862,22 +888,25 @@
       "phrase-book",
       "appendix-stories",
       "appendix-grammar",
-      "greetings-and-feelings",
+      "greetings",
       "inside-a-sentence",
-      "numbers"
+      "numbers",
+      "time-and-sums"
     ],
     "si4": [
       "appendix-grammar",
       "colors",
       "inside-a-sentence",
-      "numbers"
+      "numbers",
+      "time-and-sums"
     ],
     "wu3": [
       "appendix-stories",
       "appendix-grammar",
       "colors",
       "linking-sentences",
-      "numbers"
+      "numbers",
+      "time-and-sums"
     ],
     "liu4": [
       "phrase-book",
@@ -885,26 +914,30 @@
       "appendix-grammar",
       "colors",
       "inside-a-sentence",
-      "numbers"
+      "numbers",
+      "time-and-sums"
     ],
     "qi1": [
       "appendix-frontier",
       "appendix-grammar",
       "colors",
       "inside-a-sentence",
-      "numbers"
+      "numbers",
+      "time-and-sums"
     ],
     "ba1": [
       "appendix-grammar",
       "colors",
       "inside-a-sentence",
-      "numbers"
+      "numbers",
+      "time-and-sums"
     ],
     "jiu3": [
       "appendix-grammar",
       "inside-a-sentence",
       "linking-sentences",
-      "numbers"
+      "numbers",
+      "time-and-sums"
     ],
     "shi2": [
       "phrase-book",
@@ -913,20 +946,22 @@
       "appendix-grammar",
       "around-an-action",
       "doubling-words",
-      "greetings-and-feelings",
+      "feelings",
       "linking-sentences",
       "moving",
       "numbers",
       "roles-of-a-word",
+      "time-and-sums",
       "when-it-happens"
     ],
     "er4": [
       "phrase-book",
       "appendix-stories",
       "appendix-grammar",
-      "greetings-and-feelings",
+      "greetings",
       "linking-sentences",
-      "numbers"
+      "numbers",
+      "time-and-sums"
     ],
     "ling2": [
       "numbers"
@@ -943,7 +978,8 @@
       "modifying-nouns",
       "moving",
       "numbers",
-      "roles-of-a-word"
+      "roles-of-a-word",
+      "time-and-sums"
     ],
     "dou1": [
       "appendix-stories",
@@ -962,6 +998,7 @@
       "comparing",
       "modifying-nouns",
       "numbers",
+      "time-and-sums",
       "who-does-what"
     ],
     "xie1": [
@@ -986,15 +1023,16 @@
       "direction-and-result",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "feelings",
+      "greetings",
       "how-much",
       "inside-a-sentence",
       "linking-sentences",
       "modifying-nouns",
-      "numbers",
       "pointing",
       "roles-of-a-word",
-      "sounds-and-symbols"
+      "sounds-and-symbols",
+      "time-and-sums"
     ],
     "huai4": [
       "phrase-book",
@@ -1002,7 +1040,7 @@
       "appendix-frontier",
       "becoming-and-making",
       "direction-and-result",
-      "greetings-and-feelings",
+      "feelings",
       "linking-sentences",
       "roles-of-a-word"
     ],
@@ -1050,7 +1088,7 @@
       "appendix-stories",
       "appendix-grammar",
       "colors",
-      "greetings-and-feelings",
+      "feelings",
       "linking-sentences"
     ],
     "lao3": [
@@ -1083,7 +1121,7 @@
       "doubling-words",
       "how-much",
       "linking-sentences",
-      "numbers"
+      "time-and-sums"
     ],
     "leng3": [
       "phrase-book",
@@ -1093,11 +1131,12 @@
       "becoming-and-making",
       "direction-and-result",
       "doubling-words",
-      "greetings-and-feelings",
+      "feelings",
+      "greetings",
       "how-much",
       "inside-a-sentence",
       "linking-sentences",
-      "numbers"
+      "time-and-sums"
     ],
     "tian2": [
       "appendix-frontier",
@@ -1136,7 +1175,7 @@
       "also-and-all",
       "becoming-and-making",
       "linking-sentences",
-      "numbers"
+      "time-and-sums"
     ],
     "zhong4": [
       "comparing"
@@ -1156,14 +1195,14 @@
       "also-and-all",
       "direction-and-result",
       "doubling-words",
-      "greetings-and-feelings",
+      "feelings",
       "linking-sentences",
       "modifying-nouns",
       "moving",
-      "numbers",
       "pointing",
       "questions",
       "roles-of-a-word",
+      "time-and-sums",
       "when-it-happens",
       "where-it-is"
     ],
@@ -1186,6 +1225,7 @@
       "pointing",
       "roles-of-a-word",
       "sounds-and-symbols",
+      "time-and-sums",
       "when-it-happens",
       "where-it-is"
     ],
@@ -1215,7 +1255,8 @@
       "direction-and-result",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "feelings",
+      "greetings",
       "how-much",
       "inside-a-sentence",
       "linking-sentences",
@@ -1223,6 +1264,7 @@
       "numbers",
       "pre-verbs",
       "roles-of-a-word",
+      "time-and-sums",
       "when-it-happens"
     ],
     "ai4": [
@@ -1241,14 +1283,16 @@
       "appendix-frontier",
       "appendix-grammar",
       "everyday-patterns",
-      "greetings-and-feelings"
+      "feelings",
+      "greetings"
     ],
     "xiao4": [
       "appendix-stories",
       "appendix-grammar",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "feelings",
+      "greetings",
       "moving"
     ],
     "xie4": [
@@ -1256,7 +1300,7 @@
       "appendix-grammar",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings"
+      "greetings"
     ],
     "jue2": [
       "phrase-book",
@@ -1264,7 +1308,7 @@
       "appendix-frontier",
       "appendix-grammar",
       "doubling-words",
-      "greetings-and-feelings"
+      "feelings"
     ],
     "zhi1dao4": [
       "phrase-book",
@@ -1296,7 +1340,7 @@
     "suan4": [
       "everyday-patterns",
       "inside-a-sentence",
-      "numbers"
+      "time-and-sums"
     ],
     "xiang3": [
       "phrase-book",
@@ -1304,7 +1348,7 @@
     ],
     "ji4": [
       "appendix-grammar",
-      "greetings-and-feelings"
+      "feelings"
     ],
     "kan4": [
       "phrase-book",
@@ -1330,7 +1374,7 @@
       "direction-and-result",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "feelings",
       "how-much",
       "pre-verbs",
       "questions",
@@ -1339,7 +1383,7 @@
     ],
     "jian4": [
       "direction-and-result",
-      "greetings-and-feelings"
+      "greetings"
     ],
     "shuo1": [
       "phrase-book",
@@ -1350,7 +1394,7 @@
       "direction-and-result",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "greetings",
       "inside-a-sentence",
       "pre-verbs",
       "questions",
@@ -1375,6 +1419,7 @@
     ],
     "wen4": [
       "appendix-stories",
+      "appendix-grammar",
       "doubling-words",
       "everyday-patterns",
       "linking-sentences",
@@ -1387,7 +1432,7 @@
       "appendix-grammar",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "greetings",
       "sounds-and-symbols"
     ],
     "hua4": [
@@ -1399,14 +1444,14 @@
       "appendix-stories",
       "appendix-minimality",
       "appendix-grammar",
-      "greetings-and-feelings",
+      "greetings",
       "inside-a-sentence"
     ],
     "kai1shi3": [
       "appendix-stories",
       "appendix-grammar",
       "around-an-action",
-      "greetings-and-feelings"
+      "greetings"
     ],
     "wan2": [
       "phrase-book",
@@ -1427,10 +1472,10 @@
       "around-an-action",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "greetings",
       "linking-sentences",
-      "numbers",
       "pre-verbs",
+      "time-and-sums",
       "when-it-happens"
     ],
     "shui4jiao4": [
@@ -1441,8 +1486,8 @@
       "doubling-words",
       "everyday-patterns",
       "inside-a-sentence",
-      "numbers",
       "sounds-and-symbols",
+      "time-and-sums",
       "when-it-happens"
     ],
     "chi1": [
@@ -1453,7 +1498,7 @@
       "around-an-action",
       "direction-and-result",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "greetings",
       "how-much",
       "inside-a-sentence",
       "linking-sentences",
@@ -1462,6 +1507,7 @@
       "pre-verbs",
       "questions",
       "roles-of-a-word",
+      "time-and-sums",
       "when-it-happens",
       "where-it-is",
       "who-does-what"
@@ -1482,7 +1528,6 @@
       "word-builder",
       "appendix-grammar",
       "around-an-action",
-      "direction-and-result",
       "doubling-words",
       "everyday-patterns",
       "inside-a-sentence",
@@ -1501,7 +1546,8 @@
       "direction-and-result",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "feelings",
+      "greetings",
       "how-much",
       "inside-a-sentence",
       "linking-sentences",
@@ -1517,11 +1563,12 @@
       "direction-and-result",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "greetings",
       "inside-a-sentence",
       "linking-sentences",
       "moving",
-      "numbers"
+      "numbers",
+      "time-and-sums"
     ],
     "dao4": [
       "phrase-book",
@@ -1531,7 +1578,8 @@
       "appendix-grammar",
       "also-and-all",
       "direction-and-result",
-      "greetings-and-feelings",
+      "feelings",
+      "greetings",
       "how-much",
       "linking-sentences",
       "moving",
@@ -1548,7 +1596,8 @@
       "colors",
       "direction-and-result",
       "doubling-words",
-      "greetings-and-feelings",
+      "feelings",
+      "greetings",
       "how-much",
       "inside-a-sentence",
       "modifying-nouns",
@@ -1569,7 +1618,7 @@
       "direction-and-result",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings"
+      "greetings"
     ],
     "chu1": [
       "phrase-book",
@@ -1584,9 +1633,9 @@
       "appendix-stories",
       "appendix-grammar",
       "direction-and-result",
-      "greetings-and-feelings",
+      "greetings",
       "linking-sentences",
-      "numbers"
+      "time-and-sums"
     ],
     "qi3": [
       "appendix-stories",
@@ -1595,7 +1644,7 @@
       "everyday-patterns",
       "linking-sentences",
       "moving",
-      "numbers"
+      "time-and-sums"
     ],
     "fei1": [
       "phrase-book",
@@ -1604,7 +1653,7 @@
       "appendix-grammar",
       "colors",
       "direction-and-result",
-      "greetings-and-feelings",
+      "feelings",
       "roles-of-a-word"
     ],
     "zhan4": [
@@ -1618,8 +1667,8 @@
       "appendix-stories",
       "appendix-grammar",
       "direction-and-result",
-      "greetings-and-feelings",
-      "numbers"
+      "feelings",
+      "time-and-sums"
     ],
     "tong1": [
       "appendix-grammar",
@@ -1641,7 +1690,7 @@
     "fa1": [
       "appendix-grammar",
       "around-an-action",
-      "greetings-and-feelings",
+      "feelings",
       "roles-of-a-word",
       "when-it-happens"
     ],
@@ -1654,7 +1703,7 @@
       "becoming-and-making",
       "direction-and-result",
       "everyday-patterns",
-      "greetings-and-feelings"
+      "greetings"
     ],
     "rang4": [
       "appendix-frontier",
@@ -1672,14 +1721,13 @@
       "appendix-frontier",
       "appendix-grammar",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "greetings",
       "inside-a-sentence",
       "linking-sentences"
     ],
     "mo1": [
       "phrase-book",
       "everyday-patterns",
-      "greetings-and-feelings",
       "inside-a-sentence"
     ],
     "zhao3": [
@@ -1699,8 +1747,8 @@
       "becoming-and-making",
       "colors",
       "direction-and-result",
-      "greetings-and-feelings",
-      "numbers"
+      "feelings",
+      "time-and-sums"
     ],
     "na2": [
       "phrase-book",
@@ -1711,7 +1759,7 @@
       "direction-and-result",
       "everyday-patterns",
       "inside-a-sentence",
-      "numbers"
+      "time-and-sums"
     ],
     "kai1": [
       "phrase-book",
@@ -1722,7 +1770,7 @@
       "becoming-and-making",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings"
+      "feelings"
     ],
     "guan1": [
       "appendix-grammar",
@@ -1762,12 +1810,13 @@
       "direction-and-result",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "greetings",
       "inside-a-sentence",
       "linking-sentences",
       "moving",
       "numbers",
       "roles-of-a-word",
+      "time-and-sums",
       "when-it-happens",
       "where-it-is"
     ],
@@ -1778,7 +1827,7 @@
       "also-and-all",
       "colors",
       "doubling-words",
-      "greetings-and-feelings",
+      "greetings",
       "inside-a-sentence",
       "linking-sentences",
       "modifying-nouns",
@@ -1787,14 +1836,15 @@
       "questions",
       "roles-of-a-word",
       "sounds-and-symbols",
+      "time-and-sums",
       "when-it-happens",
       "words-and-sentences"
     ],
     "liu2": [
       "phrase-book",
       "around-an-action",
-      "greetings-and-feelings",
-      "numbers",
+      "greetings",
+      "time-and-sums",
       "where-it-is"
     ],
     "de2": [
@@ -1805,7 +1855,7 @@
       "appendix-grammar",
       "becoming-and-making",
       "doubling-words",
-      "greetings-and-feelings"
+      "feelings"
     ],
     "you3": [
       "phrase-book",
@@ -1819,7 +1869,7 @@
       "comparing",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "feelings",
       "how-much",
       "inside-a-sentence",
       "linking-sentences",
@@ -1827,26 +1877,27 @@
       "numbers",
       "questions",
       "roles-of-a-word",
+      "time-and-sums",
       "where-it-is",
       "who-does-what"
     ],
     "si3": [
       "appendix-stories",
       "doubling-words",
-      "greetings-and-feelings",
+      "feelings",
       "linking-sentences"
     ],
     "huo2": [
       "appendix-stories",
       "doubling-words",
-      "greetings-and-feelings",
+      "feelings",
       "linking-sentences"
     ],
     "sheng1": [
       "appendix-frontier",
       "appendix-grammar",
       "around-an-action",
-      "greetings-and-feelings",
+      "feelings",
       "roles-of-a-word",
       "when-it-happens",
       "where-it-is"
@@ -1857,15 +1908,15 @@
       "appendix-grammar",
       "colors",
       "doubling-words",
-      "numbers",
-      "roles-of-a-word"
+      "roles-of-a-word",
+      "time-and-sums"
     ],
     "nian2": [
       "appendix-frontier",
       "appendix-grammar",
       "doubling-words",
       "linking-sentences",
-      "numbers"
+      "time-and-sums"
     ],
     "dian3": [
       "phrase-book",
@@ -1873,13 +1924,13 @@
       "appendix-grammar",
       "colors",
       "doubling-words",
-      "numbers"
+      "time-and-sums"
     ],
     "wan3": [
-      "numbers"
+      "time-and-sums"
     ],
     "zao3": [
-      "numbers"
+      "time-and-sums"
     ],
     "cong2": [
       "phrase-book",
@@ -1887,9 +1938,9 @@
       "word-builder",
       "appendix-grammar",
       "direction-and-result",
-      "greetings-and-feelings",
+      "greetings",
       "moving",
-      "numbers"
+      "time-and-sums"
     ],
     "dui4": [
       "phrase-book",
@@ -1913,6 +1964,7 @@
       "modifying-nouns",
       "moving",
       "numbers",
+      "time-and-sums",
       "where-it-is"
     ],
     "lu4": [
@@ -1932,7 +1984,8 @@
       "appendix-stories",
       "appendix-frontier",
       "appendix-grammar",
-      "greetings-and-feelings",
+      "feelings",
+      "greetings",
       "how-much",
       "linking-sentences",
       "questions",
@@ -1950,7 +2003,7 @@
       "around-an-action",
       "comparing",
       "moving",
-      "numbers",
+      "time-and-sums",
       "where-it-is"
     ],
     "li3": [
@@ -1964,12 +2017,13 @@
       "colors",
       "comparing",
       "direction-and-result",
-      "greetings-and-feelings",
+      "greetings",
       "inside-a-sentence",
       "linking-sentences",
       "moving",
       "numbers",
       "roles-of-a-word",
+      "time-and-sums",
       "where-it-is"
     ],
     "pang2bian1": [
@@ -1990,6 +2044,7 @@
       "moving",
       "numbers",
       "roles-of-a-word",
+      "time-and-sums",
       "where-it-is"
     ],
     "bian1": [
@@ -2016,11 +2071,11 @@
       "becoming-and-making",
       "comparing",
       "doubling-words",
-      "greetings-and-feelings",
+      "feelings",
       "how-much",
       "inside-a-sentence",
       "moving",
-      "numbers",
+      "time-and-sums",
       "when-it-happens",
       "where-it-is"
     ],
@@ -2029,9 +2084,10 @@
       "appendix-stories",
       "appendix-grammar",
       "direction-and-result",
-      "greetings-and-feelings",
+      "feelings",
       "moving",
       "numbers",
+      "time-and-sums",
       "where-it-is"
     ],
     "shang4": [
@@ -2041,11 +2097,12 @@
       "colors",
       "direction-and-result",
       "doubling-words",
-      "greetings-and-feelings",
+      "feelings",
       "linking-sentences",
       "moving",
       "numbers",
       "roles-of-a-word",
+      "time-and-sums",
       "where-it-is"
     ],
     "xia4": [
@@ -2056,9 +2113,10 @@
       "direction-and-result",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "feelings",
+      "greetings",
       "moving",
-      "numbers",
+      "time-and-sums",
       "where-it-is"
     ],
     "wai4": [
@@ -2079,12 +2137,11 @@
       "comparing",
       "linking-sentences",
       "moving",
-      "numbers"
+      "time-and-sums"
     ],
     "fu4jin4": [
       "phrase-book",
       "appendix-grammar",
-      "direction-and-result",
       "inside-a-sentence",
       "moving"
     ],
@@ -2105,7 +2162,7 @@
       "colors",
       "comparing",
       "direction-and-result",
-      "greetings-and-feelings",
+      "greetings",
       "inside-a-sentence",
       "numbers",
       "pointing",
@@ -2122,7 +2179,7 @@
       "colors",
       "comparing",
       "direction-and-result",
-      "greetings-and-feelings",
+      "greetings",
       "inside-a-sentence",
       "numbers",
       "pointing",
@@ -2138,14 +2195,13 @@
       "also-and-all",
       "becoming-and-making",
       "comparing",
-      "direction-and-result",
       "everyday-patterns",
       "inside-a-sentence",
       "linking-sentences",
       "modifying-nouns",
       "moving",
-      "numbers",
-      "roles-of-a-word"
+      "roles-of-a-word",
+      "time-and-sums"
     ],
     "ba3": [
       "phrase-book",
@@ -2155,7 +2211,7 @@
       "becoming-and-making",
       "colors",
       "direction-and-result",
-      "numbers"
+      "time-and-sums"
     ],
     "de": [
       "phrase-book",
@@ -2172,7 +2228,8 @@
       "direction-and-result",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "feelings",
+      "greetings",
       "how-much",
       "inside-a-sentence",
       "linking-sentences",
@@ -2183,6 +2240,7 @@
       "pre-verbs",
       "questions",
       "roles-of-a-word",
+      "time-and-sums",
       "when-it-happens",
       "where-it-is",
       "who-does-what"
@@ -2199,11 +2257,13 @@
       "direction-and-result",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "feelings",
+      "greetings",
       "linking-sentences",
       "moving",
       "numbers",
       "roles-of-a-word",
+      "time-and-sums",
       "when-it-happens",
       "where-it-is"
     ],
@@ -2219,14 +2279,15 @@
       "comparing",
       "direction-and-result",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "feelings",
+      "greetings",
       "how-much",
       "inside-a-sentence",
       "moving",
-      "numbers",
       "pre-verbs",
       "questions",
       "roles-of-a-word",
+      "time-and-sums",
       "when-it-happens",
       "where-it-is"
     ],
@@ -2235,7 +2296,7 @@
       "appendix-grammar",
       "around-an-action",
       "direction-and-result",
-      "greetings-and-feelings",
+      "feelings",
       "how-much",
       "numbers",
       "when-it-happens"
@@ -2258,7 +2319,8 @@
       "direction-and-result",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "feelings",
+      "greetings",
       "how-much",
       "inside-a-sentence",
       "linking-sentences",
@@ -2280,7 +2342,7 @@
       "comparing",
       "direction-and-result",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "feelings",
       "inside-a-sentence",
       "linking-sentences",
       "questions",
@@ -2320,14 +2382,14 @@
       "appendix-frontier",
       "appendix-grammar",
       "doubling-words",
-      "greetings-and-feelings",
+      "feelings",
       "linking-sentences"
     ],
     "ru2guo3": [
       "appendix-stories",
       "appendix-grammar",
       "doubling-words",
-      "greetings-and-feelings",
+      "greetings",
       "linking-sentences"
     ],
     "jiu4": [
@@ -2335,13 +2397,13 @@
       "appendix-stories",
       "appendix-grammar",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "greetings",
       "linking-sentences"
     ],
     "hai2": [
       "appendix-grammar",
       "also-and-all",
-      "greetings-and-feelings",
+      "greetings",
       "inside-a-sentence",
       "linking-sentences",
       "roles-of-a-word"
@@ -2361,7 +2423,7 @@
       "also-and-all",
       "becoming-and-making",
       "comparing",
-      "greetings-and-feelings",
+      "greetings",
       "moving",
       "numbers",
       "roles-of-a-word",
@@ -2382,8 +2444,8 @@
       "inside-a-sentence",
       "linking-sentences",
       "moving",
-      "numbers",
       "pre-verbs",
+      "time-and-sums",
       "when-it-happens",
       "where-it-is"
     ],
@@ -2406,7 +2468,7 @@
     "yi3": [
       "appendix-stories",
       "appendix-grammar",
-      "greetings-and-feelings",
+      "feelings",
       "pre-verbs"
     ],
     "zhen1": [
@@ -2417,7 +2479,7 @@
       "how-much"
     ],
     "ding4": [
-      "greetings-and-feelings"
+      "feelings"
     ],
     "hen3": [
       "phrase-book",
@@ -2433,7 +2495,8 @@
       "direction-and-result",
       "doubling-words",
       "everyday-patterns",
-      "greetings-and-feelings",
+      "feelings",
+      "greetings",
       "how-much",
       "inside-a-sentence",
       "linking-sentences",
@@ -2443,6 +2506,7 @@
       "pointing",
       "roles-of-a-word",
       "sounds-and-symbols",
+      "time-and-sums",
       "when-it-happens",
       "where-it-is",
       "who-does-what"
@@ -2451,7 +2515,7 @@
       "appendix-stories",
       "appendix-grammar",
       "comparing",
-      "greetings-and-feelings",
+      "feelings",
       "numbers"
     ]
   }

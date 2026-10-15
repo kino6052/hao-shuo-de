@@ -32,6 +32,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "dan-shi-but",
     en: "…, {{word:dan4}}-{{word:shi4}} …, but: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4}}-{{word:shi4}} {{word:wei4}}-{{word:dao4}} {{word:bu4}} {{word:hao3}}. (It looks good, but it doesn't taste good.)",
     ru: "…, {{word:dan4}}-{{word:shi4}} … — но: {{Word:zhe4}}-ge {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:hao3}}, {{word:dan4}}-{{word:shi4}} {{word:wei4}}-{{word:dao4}} {{word:bu4}} {{word:hao3}}. (Выглядит хорошо, но невкусно.)",
   },

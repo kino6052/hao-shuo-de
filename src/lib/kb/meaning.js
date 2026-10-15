@@ -10,8 +10,10 @@
 // An item is a coverage item (src/data/coverage): a prime (group "atoms"), a category ("categories") or a
 // grammar item ("grammar"). Its carriers are the words that say it; a grammar pattern can carry it too (`covers`).
 //
-//   items      [{ id, group, key, eng, carriers, patterns, forms }]
-//   groups     { atoms|categories|grammar: { items, said, once, none } }       once: carried by one word or pattern in all
+//   items      [{ id, group, key, eng, carriers, patterns, forms, second }]   second: the forms that do not use the one carrier
+//   groups     { atoms|categories|grammar: { items, said, once, second, none } }
+//              once: carried by one word or pattern in all, with no second way; second: carried by one word, but a form
+//              that does not use it says the item too (K24, a second way to say a fragile prime)
 //   atoms      the atom marks against the primes:
 //              { marked, markedPrime, markedOther, primeNotMarked, primeDescribed: [{ id, names }] }
 //   grounding  the primes each description reaches through the words it names:
@@ -47,18 +49,23 @@ export function meaningReport(source) {
       const id = `${g.key}:${it.key}`;
       const carriers = [...new Set(it.words ?? [])].filter(known);
       const carrying = patterns.filter((p) => (p.covers ?? []).includes(id)).map((p) => p.id);
-      items.push({ id, group: g.key, key: it.key, eng: it.eng, carriers, patterns: carrying, forms: it.forms ?? [] });
+      // a second way (K24): when one word carries the item, a form that does not use that word says it too, so
+      // dropping the word does not cost the item
+      const forms = it.forms ?? [];
+      const second = carriers.length === 1 && !carrying.length ? forms.filter((f) => !wordRefIds(f).includes(carriers[0])) : [];
+      items.push({ id, group: g.key, key: it.key, eng: it.eng, carriers, patterns: carrying, forms, second });
       for (const w of carriers) says[w].push(id);
     }
   }
   const groups = {};
   for (const it of items) {
-    const g = (groups[it.group] ??= { items: [], said: 0, once: 0, none: 0 });
+    const g = (groups[it.group] ??= { items: [], said: 0, once: 0, second: 0, none: 0 });
     const n = it.carriers.length + it.patterns.length;
     g.items.push(it.id);
     if (n === 0) g.none++;
     else g.said++;
-    if (n === 1) g.once++;
+    if (n === 1 && it.second.length) g.second++;
+    else if (n === 1) g.once++;
   }
 
   // -- what a description names -----------------------------------------------------------------------
@@ -137,9 +144,10 @@ export function renderMeaning(report, words = {}, { section = 'all', limit = 12 
     out.push(`Meaning links: ${plural(report.totals.items, 'coverage item')} (${parts.join(', ')}); ${plural(report.totals.words, 'word')}.`);
     out.push('', 'Says: which words and patterns carry each item');
     for (const [k, v] of Object.entries(g)) {
-      out.push(`  ${groupName(k)}: ${v.said} of ${v.items.length} can be said; ${v.none} have no carrier; ${v.once} are carried once (take that carrier away and the item cannot be said).`);
+      const saved = v.second ? `; ${v.second} more are carried by one word but have a second way to say them` : '';
+      out.push(`  ${groupName(k)}: ${v.said} of ${v.items.length} can be said; ${v.none} have no carrier; ${v.once} are carried once (take that carrier away and the item cannot be said)${saved}.`);
     }
-    const once = report.items.filter((i) => i.carriers.length + i.patterns.length === 1);
+    const once = report.items.filter((i) => i.carriers.length + i.patterns.length === 1 && !i.second.length);
     if (once.length) {
       out.push('', `Carried once (${once.length}), the fragile ones`);
       for (const i of once.slice(0, limit * 2)) {

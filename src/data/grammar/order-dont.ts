@@ -11,7 +11,7 @@ export default pattern("order-dont", {
     { lhs: "VP", hsd: "bu4 =yao4 VP", eng: "bù yào and a verb: don't" },
     { lhs: "Utt", hsd: "Tally @comma VP", eng: "numbers counted out, then the order" },
   ],
-  taught: "greetings-and-feelings/order",
+  taught: "greetings/order",
   examples: [
     ["Bù yào shuō!", "Don't talk!"],
     ["Bù yào mō wǒ-de bízi!", "Don't touch my nose!"],

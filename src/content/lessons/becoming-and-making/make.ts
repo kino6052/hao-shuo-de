@@ -50,6 +50,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "zuo-make",
     en: "{{word:zuo4}} + result, make it so: {{Word:wo3}} {{word:zuo4}} {{word:hao3}} {{word:le}}. (I fixed it.) {{word:liao4}}, the stuff to make it from: {{word:zuo4}} {{word:fan4}} {{word:yao4}} {{word:liao4}}.",
     ru: "{{word:zuo4}} + результат — сделать таким: {{Word:wo3}} {{word:zuo4}} {{word:hao3}} {{word:le}}. (Я починил.) {{word:liao4}} — из чего делают: {{word:zuo4}} {{word:fan4}} {{word:yao4}} {{word:liao4}}.",
   },

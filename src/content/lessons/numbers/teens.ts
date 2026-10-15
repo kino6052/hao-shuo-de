@@ -83,10 +83,10 @@ export default lessonModule({
       ru: "Двести.",
     },
     {
-      pinyin: "{{Word:er4}}-{{word:ling2}}-{{word:er4}}-{{word:liu4}} {{word:nian2}}.",
-      hanzi: "二零二六年。",
-      en: "The year 2026.",
-      ru: "2026 год.",
+      pinyin: "{{Word:er4}}-{{word:ling2}}-{{word:er4}}-{{word:liu4}}.",
+      hanzi: "二零二六。",
+      en: "Two thousand twenty-six (digit by digit).",
+      ru: "Две тысячи двадцать шесть (по цифрам).",
     },
   ],
   exercises: [

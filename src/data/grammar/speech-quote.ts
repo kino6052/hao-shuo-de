@@ -2,16 +2,17 @@ import { pattern } from "../../lib/grammar-pattern.ts";
 
 export default pattern("speech-quote", {
   meaning: {
-    eng: "After shuō, wèn, xiào and other verbs of saying, a comma or a colon brings in what was said: tā shuō: nǐ hǎo. What was said runs to the end of the sentence, so its ma or le stays inside it.",
-    rus: "После shuō, wèn, xiào и других глаголов речи запятая или двоеточие вводит сказанное: tā shuō: nǐ hǎo. Сказанное идёт до конца предложения, поэтому его ma или le остаётся внутри.",
+    eng: "After shuō, wèn, xiào and other verbs of saying, a colon brings in what was said: tā shuō: nǐ hǎo. What was said runs to the end of the sentence, so its ma or le stays inside it.",
+    rus: "После shuō, wèn, xiào и других глаголов речи двоеточие вводит сказанное: tā shuō: nǐ hǎo. Сказанное идёт до конца предложения, поэтому его ma или le остаётся внутри.",
   },
   covers: [],
+  preferred: true,
   template: { hsd: "Who + verb: what was said", eng: "Who said: the words" },
   rules: [
     { lhs: "Utt", hsd: "NP Say", eng: "someone, a verb of saying, and what was said, to the end" },
     { lhs: "Utt", hsd: "Say", eng: "a verb of saying and what was said, with no one named" },
-    { lhs: "Say", hsd: "@verb @comma Utt", eng: "a verb, a colon, and what was said or asked, to the end" },
-    { lhs: "Say", hsd: "@verb @comma Hail @comma S", eng: "a verb, a colon, a call, and what was said: really, he has no clothes" },
+    { lhs: "Say", hsd: "@verb @colon Utt", eng: "a verb, a colon, and what was said or asked, to the end" },
+    { lhs: "Say", hsd: "@verb @colon Hail @comma S", eng: "a verb, a colon, a call, and what was said: really, he has no clothes" },
     { lhs: "Say", hsd: "VP @comma Say", eng: "an action, a comma, then the saying: lái le, shuō: …" },
     { lhs: "Say", hsd: "=you4 Say", eng: "yòu before the saying: said again" },
     { lhs: "Say", hsd: "=ye3 Say", eng: "yě before the saying: also said" },

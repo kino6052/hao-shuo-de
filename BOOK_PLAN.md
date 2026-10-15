@@ -128,7 +128,7 @@ For each teaching point -- one module, one file (2–10 per lesson):
 
 ---
 
-## 3. New table of contents (24 lessons)
+## 3. New table of contents (26 lessons)
 
 "Source" means where the raw material comes from in the **current** lessons.
 
@@ -162,14 +162,16 @@ For each teaching point -- one module, one file (2–10 per lesson):
 
 | New | Title                               | You'll be able to say…                                                            | Source                            |
 | --- | ----------------------------------- | --------------------------------------------------------------------------------- | --------------------------------- |
-| 17  | Numbers                             | "one person" / "two animals" / "number three" / "three o'clock" / "a little water" / "Three and four together is seven."                                  | L13                               |
-| 18  | Colors                              | "a red box" / "The water is blue." / "What color is it?"                                                  | L14                               |
-| 19  | Changing the Role of a Word         | "food (eat-de)" / "the one who writes" / "speak well" — every job of -de together | new (gathers de from L3–L4, L12)  |
-| 20  | Relationships 1 — Inside a sentence | "give it to me" / "write with a tool" / "you and me" / "this or that" / "for me…" | L07 gěi/yòng, L16 hé/duì          |
-| 21  | Relationships 2 — Linking sentences | "Because I'm cold, I'm not going." / "It looks good, but it doesn't taste good." / "If you come, I'll wait for you."                                                       | L07 yīnwèi, L08 conditions        |
-| 22  | Greetings and Feelings              | "Hello!" / "Thank you!" / "What's your name?" / "Eat!" / "I feel cold." / "I'm scared of fire." | L12, plus any L16 leftovers (D17) |
-| 23  | Doubling Words                      | "Let me have a look." / "The moon is nice and round." / "Everyone needs water." | new (D43) |
-| 24  | Everyday Patterns                   | "Let me do it!" / "Let me take a look." / "Help me!" / "My parents won't let me go out." / "Let's go out, okay?" | new (D45) |
+| 17  | Numbers                             | "one person" / "two animals" / "twelve" / "number three" | Phase 2 |
+| 18  | Numbers 2 — Time and sums           | "three o'clock" / "a little water" / "Three and four together is seven." | split from Numbers (section cap) |
+| 19  | Colors                              | "a red box" / "The water is blue." / "What color is it?"                                                  | L14                               |
+| 20  | Changing the Role of a Word         | "food (eat-de)" / "the one who writes" / "speak well" — every job of -de together | new (gathers de from L3–L4, L12)  |
+| 21  | Relationships 1 — Inside a sentence | "give it to me" / "write with a tool" / "you and me" / "this or that" / "for me…" | L07 gěi/yòng, L16 hé/duì          |
+| 22  | Relationships 2 — Linking sentences | "Because I'm cold, I'm not going." / "It looks good, but it doesn't taste good." / "If you come, I'll wait for you."                                                       | L07 yīnwèi, L08 conditions        |
+| 23  | Greetings                           | "Hello!" / "Thank you!" / "What's your name?" / "Eat!" / "Don't laugh!" | L12, plus any L16 leftover |
+| 24  | Feelings                            | "I feel cold." / "I'm scared of fire." | split from Greetings and Feelings (section cap) |
+| 25  | Doubling Words                      | "Let me have a look." / "The moon is nice and round." / "Everyone needs water." | new (D43) |
+| 26  | Everyday Patterns                   | "Let me do it!" / "Let me take a look." / "Help me!" / "My parents won't let me go out." / "Let's go out, okay?" | new (D45) |
 
 ### After the lessons — Content, Reference, Tools, Misc
 
@@ -234,16 +236,18 @@ Approved (D23). It can still be adjusted as each lesson is written, but the rule
 | comparing | Modifiers 2 — Comparing | bǐ | yìng, yuán, xiàn | cháng, qiú, zuì, yàng, bié, tóng, zhǒng, gāo, zhòng, píng | — | **14** | 138 / 230 | 60% |
 | also-and-all | Modifiers 3 — Also and all | yě | huǒ | kōng, qì, kāi, guān, dēng, míng, mén, hái, dōu, fēn | bù (part) | **12** | 150 / 230 | 65% |
 | becoming-and-making | Modifiers 4 — Becoming and making | biàn, dé, bǎ | huài | luàn, zuò, liào, fàng, lì | — | **9** | 159 / 230 | 69% |
-| direction-and-result | Verbs 2 | — | — | ná, jìn, chū, huí, zhàn, tǎng, fēi, jié, jiàn, yǎnjing, ěrduo, tōng | zuò (sit) | **12** | 171 / 230 | 74% |
-| numbers | Numbers | liǎng, hào | — | èr, sān, sì, wǔ, liù, qī, bā, jiǔ, shí, shù, líng, diǎn, wǎn, zǎo, tiān, nián, suàn | dì (order), xīn (new) | **19** | 190 / 230 | 83% |
+| direction-and-result | Verbs 2 | — | — | ná, jìn, chū, huí, tōng, zhàn, tǎng, fēi, jié, jiàn, yǎnjing, ěrduo | zuò (sit) | **12** | 171 / 230 | 74% |
+| numbers | Numbers | liǎng, hào | — | èr, sān, sì, wǔ, liù, qī, bā, jiǔ, shí, shù, líng | dì (order) | **13** | 184 / 230 | 80% |
+| time-and-sums | Numbers 2 — Time and sums | — | — | diǎn, wǎn, zǎo, tiān, nián, suàn | xīn (new) | **6** | 190 / 230 | 83% |
 | colors | Colors | yánsè | — | bái, sè, hēi, hóng | — | **5** | 195 / 230 | 85% |
 | roles-of-a-word | Changing the Role of a Word | cí | bízi | zi, zhě, fǎ, jī, guǒ, máo, yá, dùzi | hái (child), jié (result) | **10** | 205 / 230 | 89% |
 | inside-a-sentence | Relationships 1 | gěi, yòng, hé, duì | mō, dǎ | tì, guānxi | — | **8** | 213 / 230 | 93% |
 | linking-sentences | Relationships 2 | yīnwèi | sǐ | huó, dàn, rúguǒ, jiù | — | **6** | 219 / 230 | 95% |
-| greetings-and-feelings | Greetings and Feelings | jiào, pà | shēngyīn | xiè, xiào, jué, dìng, jì, xīn | zài (again) | **9** | 228 / 230 | 99% |
+| greetings | Greetings | jiào, pà | — | xiè, xiào | zài (again) | **4** | 223 / 230 | 97% |
+| feelings | Feelings | — | shēngyīn | jué, dìng, jì, xīn | — | **5** | 228 / 230 | 99% |
 | doubling-words | Doubling Words | — | — | — | — | **0** | 228 / 230 | 99% |
 | everyday-patterns | Everyday Patterns | — | — | bāng, ràng | — | **2** | 230 / 230 | 100% |
-| | **Total** | **65** | **32** | **133** | | **230** | | |
+| | **Total** | **63** | **31** | **136** | | **230** | | |
 
 **By section:**
 
@@ -610,7 +614,7 @@ The word lists and limits live in `scripts/jargon.js` and `scripts/limits.js`.
 
 For each lesson: ☐ written to template ☐ `npm run check -- <lesson-id>` passes (every gate) ☐ exercises + answers ☐ **user approved** ☐ added to `scripts/finished-lessons.js`
 
-The list follows the 24 lessons of §3 (the book grew from 21 to 24 with D43–D45). The order itself lives in `src/content/book.js`. Every lesson passes `npm run check`; the review is still yours.
+The list follows the 26 lessons of §3 (the book grew from 21 to 24 with D43–D45, and to 26 when Numbers and Greetings and Feelings were split). The order itself lives in `src/content/book.js`. Every lesson passes `npm run check`; the review is still yours.
 
 - [ ] L1 Sounds and Symbols — **waiting for your review**
 - [ ] L2 Words and Sentences — **waiting for your review**
@@ -629,13 +633,15 @@ The list follows the 24 lessons of §3 (the book grew from 21 to 24 with D43–D
 - [ ] L15 Modifiers 4 — Becoming and making — **waiting for your review**
 - [ ] L16 Verbs 2 — Direction and result — **waiting for your review**
 - [ ] L17 Numbers — **waiting for your review**
-- [ ] L18 Colors — **waiting for your review**
-- [ ] L19 Changing the Role of a Word — **waiting for your review**
-- [ ] L20 Relationships 1 — Inside a sentence — **waiting for your review**
-- [ ] L21 Relationships 2 — Linking sentences — **waiting for your review**
-- [ ] L22 Greetings and Feelings — **waiting for your review**
-- [ ] L23 Doubling Words — **waiting for your review**
-- [ ] L24 Everyday Patterns — **waiting for your review**
+- [ ] L18 Numbers 2 — Time and sums — **waiting for your review**
+- [ ] L19 Colors — **waiting for your review**
+- [ ] L20 Changing the Role of a Word — **waiting for your review**
+- [ ] L21 Relationships 1 — Inside a sentence — **waiting for your review**
+- [ ] L22 Relationships 2 — Linking sentences — **waiting for your review**
+- [ ] L23 Greetings — **waiting for your review**
+- [ ] L24 Feelings — **waiting for your review**
+- [ ] L25 Doubling Words — **waiting for your review**
+- [ ] L26 Everyday Patterns — **waiting for your review**
 
 ### Phase 3 — Intros and reference
 

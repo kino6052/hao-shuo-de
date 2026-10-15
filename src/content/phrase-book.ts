@@ -114,11 +114,19 @@ const content: Entry[] = [
   },
   {
     type: "example",
+    pinyin: "\"bai-bai\"!",
+    ttsText: "拜拜！",
+    en: ["Goodbye!"],
+    zh: ["再见！"],
+    ru: ["До свидания!"],
+  },
+  {
+    type: "example",
     pinyin: "{{Word:wo3}} {{word:qu4}} {{word:le}}, {{word:wo3}} {{word:hui4}} {{word:kan4}}-{{word:dao4}} {{word:ni3}}!",
     ttsText: "我去了，我会看到你！",
-    en: ["Goodbye, see you! (Literally: \"I'm going; I'll see you.\")"],
-    zh: ["再见！"],
-    ru: ["До свидания, увидимся! (Дословно: «я пошёл, я тебя увижу».)"],
+    en: ["I'm off, see you! (Literally: \"I'm going; I'll see you.\")"],
+    zh: ["我走了，再见！"],
+    ru: ["Я пошёл, увидимся! (Дословно: «я пошёл, я тебя увижу».)"],
   },
   {
     type: "prose",

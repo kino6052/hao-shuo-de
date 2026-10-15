@@ -61,10 +61,10 @@ export default lessonModule({
       ru: "Оставайся здесь!",
     },
     {
-      pinyin: "{{Word:bu4}} {{word:yao4}} {{word:mo1}} {{word:wo3}}-{{word:de}} {{word:bi2zi}}!",
-      hanzi: "不要摸我的鼻子！",
-      en: "Don't touch my nose!",
-      ru: "Не трогай мой нос!",
+      pinyin: "{{Word:bu4}} {{word:yao4}} {{word:pa4}}!",
+      hanzi: "不要怕！",
+      en: "Don't be scared!",
+      ru: "Не бойся!",
     },
     {
       pinyin: "{{Word:gei3}} {{word:wo3}} {{word:zuo4}}-{{word:hao3}} {{word:wei4}}-{{word:dao4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}!",
@@ -103,6 +103,18 @@ export default lessonModule({
       ru: "Я сейчас же приду!",
       answer: "{{Word:wo3}} {{word:xian4}}-{{word:zai4}} {{word:jiu4}} {{word:lai2}}!",
       hanzi: "我现在就来！",
+    },
+    {
+      en: "Don't be scared!",
+      ru: "Не бойся!",
+      answer: "{{Word:bu4}} {{word:yao4}} {{word:pa4}}!",
+      hanzi: "不要怕！",
+    },
+    {
+      en: "Don't laugh!",
+      ru: "Не смейся!",
+      answer: "{{Word:bu4}} {{word:yao4}} {{word:xiao4}}!",
+      hanzi: "不要笑！",
     },
   ],
 });

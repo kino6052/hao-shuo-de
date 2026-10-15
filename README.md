@@ -44,7 +44,7 @@ Plans and decisions: [BOOK_PLAN.md](BOOK_PLAN.md) (book, decision log D1…), [K
 
 | What | Now |
 | --- | --- |
-| Lessons | 24, in 3 sections (6 / 10 / 8), then 14 chapters to read, look things up in or build with |
+| Lessons | 26, in 3 sections (6 / 10 / 10), then 14 chapters to read, look things up in or build with |
 | Core words | 230: 53 atoms (no honest description) and 177 with a paraphrase, so potentially removable |
 | Composite words | 1555, with 1932 ways to say them (1822 built from their parts, 90 spelled whole, 20 waiting for the author to say which) |
 | Grammar patterns | 139, one file each in `src/data/grammar/` |
@@ -94,14 +94,16 @@ Lessons are named, not numbered: [src/content/book.js](src/content/book.js) is t
 
 | # | Lesson | What it teaches |
 | --- | --- | --- |
-| 17 | Numbers | Counting aloud (yī, èr, sān), number + gè + noun (liǎng for two things), above ten (shí-èr, èr-shí), number labels (hào), o'clock (diǎn), a little (yī-diǎn), and sums: add with fàng zài yī-qǐ, take away with ná, multiply and divide with cì. |
-| 18 | Colors | Color-de + noun, thing + shì + color-de, and asking shénme yánsè. |
-| 19 | Changing the Role of a Word | The jobs of -de: verb-de (the thing), verb-de rén (the one who), verb-de + adjective (how), and naming things with a description. |
-| 20 | Relationships 1 — Inside a sentence | Give / for (gěi), with (yòng), and / or (hé, hái-shì), and toward / for (duì), with qún, mō, dǎ. |
-| 21 | Relationships 2 — Linking sentences | Because (yīnwèi), but (dàn-shì), and if (rúguǒ), with yán, sǐ, and huó. |
-| 22 | Greetings and Feelings | Hello (nǐ hǎo), thank you (xiè-xie), names (jiào), orders (a bare verb, bù yào), feelings (jué-de, pà, xiào), and hearing sounds (shēngyīn). |
-| 23 | Doubling Words | Saying a word twice. A verb twice does it a little (kàn-kan), a describing word twice makes it stronger (yuán-yuán-de, hǎo-hǎo), and a few nouns and counting words twice mean every (rén-rén, gè-gè). |
-| 24 | Everyday Patterns | "Let" and "help" without a word for "let": wǒ lái (let me), gěi wǒ + verb + yī-xià (let me see), bāng (help), jiào + person + verb (have or let someone), néng … ma? (may I), and …, hǎo ma? (let's, please). |
+| 17 | Numbers | Counting aloud (yī, èr, sān), number + gè + noun (liǎng for two things), above ten (shí-èr, èr-shí), and number labels (hào). Split (section cap, 7 per lesson): the clock, days and years, a little, and sums moved to time-and-sums. |
+| 18 | Numbers 2 — Time and sums |  |
+| 19 | Colors | Color-de + noun, thing + shì + color-de, and asking shénme yánsè. |
+| 20 | Changing the Role of a Word | The jobs of -de: verb-de (the thing), verb-de rén (the one who), verb-de + adjective (how), and naming things with a description. |
+| 21 | Relationships 1 — Inside a sentence | Give / for (gěi), with (yòng), and / or (hé, hái-shì), and toward / for (duì), with qún, mō, dǎ. |
+| 22 | Relationships 2 — Linking sentences | Because (yīnwèi), but (dàn-shì), and if (rúguǒ), with yán, sǐ, and huó. |
+| 23 | Greetings | Hello (nǐ hǎo), thank you (xiè-xie), names (jiào), and orders (a bare verb, bù yào). Split off Greetings and Feelings (section cap, 7 per lesson): feelings moved to feelings. |
+| 24 | Feelings |  |
+| 25 | Doubling Words | Saying a word twice. A verb twice does it a little (kàn-kan), a describing word twice makes it stronger (yuán-yuán-de, hǎo-hǎo), and a few nouns and counting words twice mean every (rén-rén, gè-gè). |
+| 26 | Everyday Patterns | "Let" and "help" without a word for "let": wǒ lái (let me), gěi wǒ + verb + yī-xià (let me see), bāng (help), jiào + person + verb (have or let someone), néng … ma? (may I), and …, hǎo ma? (let's, please). |
 
 #### After the lessons
 

@@ -12,7 +12,7 @@ export default composite({
   tts: ["叫汪汪的动物"],
   literal: "the animal that says \"wang-wang\"",
   fit: "plain",
-  note: "Lesson {{lesson:greetings-and-feelings}}: animals by their sound.",
+  note: "Lesson {{lesson:feelings}}: animals by their sound.",
   examples: [
     {
       pinyin: "{{Word:jiao4}} \"wāng-wāng\"-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:zai4}} {{word:jia1}}-{{word:li3}}.",

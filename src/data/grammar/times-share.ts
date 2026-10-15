@@ -11,7 +11,7 @@ export default pattern("times-share", {
     eng: "A put together B times is C",
   },
   rules: [{ lhs: "VerbP", hsd: "@verb Together Times", eng: "a verb, together, and how many times" }],
-  taught: "numbers/times-share",
+  taught: "time-and-sums/times-share",
   examples: [
     ["Bǎ sì fàng zài yī-qǐ sān cì, shì shí-èr.", "Four put together three times is twelve."],
     ["Bǎ wǔ fàng zài yī-qǐ liǎng cì, shì shí.", "Five put together twice is ten."],

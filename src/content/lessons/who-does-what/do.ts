@@ -76,6 +76,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "svo",
     en: "Who + verb + what: {{Word:wo3}} {{word:he1}} {{word:shui3}}. (I drink water.)",
     ru: "Кто + глагол + что: {{Word:wo3}} {{word:he1}} {{word:shui3}}. (Я пью воду.)",
   },

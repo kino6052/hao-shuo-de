@@ -12,7 +12,7 @@ export default composite({
   tts: ["从…里面拿…"],
   literal: "take B from A",
   fit: "plain",
-  note: "7 − 3: cóng qī lǐ-miàn ná sān (Lesson {{lesson:numbers}}).",
+  note: "7 − 3: cóng qī lǐ-miàn ná sān (Lesson {{lesson:time-and-sums}}).",
   examples: [
     {
       pinyin: "{{Word:cong2}} {{word:shi2}} {{word:li3}}-{{word:mian4}} {{word:na2}} {{word:san1}}.",

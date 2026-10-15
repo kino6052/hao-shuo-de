@@ -38,6 +38,7 @@ export default lessonModule({
     necessity: { en: "Now you can say how you feel.", ru: "Теперь вы можете сказать, как себя чувствуете." },
   },
   info: {
+    pattern: "feel-state",
     items: [
       {
         en: "{{word:jue2}}-{{light:de2}} + adjective, feel: {{Word:wo3}} {{word:jue2}}-{{light:de2}} {{word:leng3}}. (I feel cold.)",

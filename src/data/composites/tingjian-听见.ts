@@ -13,7 +13,7 @@ export default composite({
   literal: "listen-arrive",
   fit: "natural",
   kinds: ["built", "built"],
-  note: "Lesson {{lesson:greetings-and-feelings}}.",
+  note: "Lesson {{lesson:feelings}}.",
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:ting1}}-{{word:jian4}} {{word:le}} {{word:ma}}?",

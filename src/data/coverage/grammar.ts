@@ -284,7 +284,7 @@ export default coverageGroup({
       rus: "Не делай!",
       words: ["bu4", "yao4"],
       forms: ["{{word:bu4}} {{word:yao4}} + verb"],
-      taught: "greetings-and-feelings/order",
+      taught: "greetings/order",
     },
     {
       key: "suggest",
@@ -315,8 +315,8 @@ export default coverageGroup({
       eng: "Names",
       rus: "Имена",
       words: ["jiao4"],
-      forms: ["{{word:jiao4}} X"],
-      taught: "greetings-and-feelings/name",
+      forms: ["{{word:jiao4}} X", "X-{{word:de}} {{word:ming2}}-{{word:zi}} {{word:shi4}} Y"],
+      taught: "greetings/name",
     },
   ],
 });

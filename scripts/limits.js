@@ -16,3 +16,7 @@ export function countWords(text) {
 
 // The most example sentences a lesson shows in a row (scripts/check-example-runs.js).
 export const MAX_EXAMPLES_IN_A_ROW = 8;
+
+// The most sections (modules) one lesson holds, so no lesson overloads the
+// student (scripts/check-book.js). A lesson over the cap is split in two.
+export const MAX_SECTIONS_PER_LESSON = 7;

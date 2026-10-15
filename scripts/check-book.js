@@ -13,6 +13,8 @@
 //   3. Every summary and tldr/necessity line (lessons and intros) is
 //      jargon-free (scripts/jargon.js) and within the limits in
 //      scripts/limits.js -- for every lesson, finished or not.
+//   3b. No lesson has more than MAX_SECTIONS_PER_LESSON sections (modules),
+//      so a student isn't overloaded (scripts/limits.js).
 //   4. (The dictionary's own files -- word files, categories, opposites,
 //      the data indexes -- are checked by scripts/check-data.js.)
 //   5. The grammar overview (src/content/appendix-grammar.ts) matches the
@@ -46,7 +48,7 @@ import { fileURLToPath, pathToFileURL } from 'url';
 import { LESSON_IDS, lessonNumber, lessonFolders, lessonFile } from './lessons.js';
 import { BACK_MATTER_IDS } from '../src/content/book.js';
 import { findJargon } from './jargon.js';
-import { SUMMARY_MAX_WORDS, TLDR_MAX_WORDS, countWords } from './limits.js';
+import { SUMMARY_MAX_WORDS, TLDR_MAX_WORDS, MAX_SECTIONS_PER_LESSON, countWords } from './limits.js';
 import { buildOverview, renderOverview } from './generate-grammar-overview.js';
 import { wordsIn, termIndex } from './early-words.js';
 import { wordHanzi } from '../src/lib/hanzi-map.js';
@@ -163,6 +165,14 @@ if (existsSync(PLAN_PATH)) {
     if ([...planned].sort().join() !== actual) {
       errors.push(`${lesson.id}: vocab [${lesson.vocab.join(', ')}] doesn't match BOOK_PLAN.md §4b [${planned.join(', ')}]`);
     }
+  }
+}
+
+// ---------- 3b. no lesson has too many sections ----------
+for (const lesson of lessons) {
+  const sections = new Set(lesson.entries.map((e) => e.module).filter((m) => m && m !== 'head'));
+  if (sections.size > MAX_SECTIONS_PER_LESSON) {
+    errors.push(`${lesson.id}: ${sections.size} sections, max ${MAX_SECTIONS_PER_LESSON} -- split the lesson in two (or merge two sections)`);
   }
 }
 

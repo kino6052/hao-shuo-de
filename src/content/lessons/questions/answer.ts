@@ -29,6 +29,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "short-answer",
     en: "verb. / {{word:bu4}} + verb., yes / no: {{Word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}}? {{Word:ting1}}. (Do you listen? Yes, I do.)",
     ru: "глагол. / {{word:bu4}} + глагол. — да / нет: {{Word:ni3}} {{word:ting1}}-{{word:bu4}}-{{word:ting1}}? {{Word:ting1}}. (Ты слушаешь? Да, слушаю.)",
   },

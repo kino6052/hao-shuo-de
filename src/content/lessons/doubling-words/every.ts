@@ -26,6 +26,7 @@ export default lessonModule({
     necessity: { en: "Now you can say every one of them.", ru: "Теперь вы можете сказать «каждый из них»." },
   },
   info: {
+    pattern: "doubled-every",
     en: "{{word:ren2}}-{{word:ren2}} / {{word:ge4}}-{{word:ge4}} + {{word:dou1}}, every: {{Word:ren2}}-{{word:ren2}} {{word:dou1}} {{word:yao4}} {{word:shui3}}. (Everyone needs water.)",
     ru: "{{word:ren2}}-{{word:ren2}} / {{word:ge4}}-{{word:ge4}} + {{word:dou1}} — каждый: {{Word:ren2}}-{{word:ren2}} {{word:dou1}} {{word:yao4}} {{word:shui3}}. (Всем людям нужна вода.)",
   },

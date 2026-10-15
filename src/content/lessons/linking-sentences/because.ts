@@ -43,6 +43,7 @@ export default lessonModule({
     necessity: { en: "Now you can give reasons.", ru: "Теперь вы можете объяснять причины." },
   },
   info: {
+    pattern: "yinwei-because",
     en: "{{word:yin1wei4}} + reason, result: {{Word:yin1wei4}} {{word:wo3}} {{word:hen3}} {{word:leng3}}, {{word:wo3}} {{word:bu4}} {{word:qu4}}. (Because I'm cold, I'm not going.)",
     ru: "{{word:yin1wei4}} + причина, результат: {{Word:yin1wei4}} {{word:wo3}} {{word:hen3}} {{word:leng3}}, {{word:wo3}} {{word:bu4}} {{word:qu4}}. (Так как мне холодно, я не пойду.)",
   },

@@ -38,6 +38,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "verb-result",
     en: "verb-result: {{Word:wo3}} {{word:zhao3}}-{{word:dao4}} {{word:le}}. (I found it.)",
     ru: "глагол-результат: {{Word:wo3}} {{word:zhao3}}-{{word:dao4}} {{word:le}}. (Я нашёл.)",
   },

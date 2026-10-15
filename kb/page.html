@@ -286,7 +286,7 @@ function relationsReport(d) {
 
 function meaningReport(d) {
   const names = { atoms: 'primes', categories: 'categories', grammar: 'grammar items' };
-  const chips = Object.entries(d.groups).map(([k, g]) => '<span class="chip ' + (g.once ? 'zero' : 'hit') + '">' + esc(names[k] ?? k) + ' · ' + g.said + ' of ' + g.items.length + ' said, ' + g.once + ' carried once</span>').join('') +
+  const chips = Object.entries(d.groups).map(([k, g]) => '<span class="chip ' + (g.once ? 'zero' : 'hit') + '">' + esc(names[k] ?? k) + ' · ' + g.said + ' of ' + g.items.length + ' said, ' + g.once + ' carried once' + (g.second ? ', ' + g.second + ' with a second way' : '') + '</span>').join('') +
     '<span class="chip">' + d.traced + ' of ' + d.words + ' words reach a prime</span>' +
     ['says', 'atoms', 'grounding'].map((s) => '<button class="chip link-chip" data-section="' + s + '">' + s + '</button>').join('');
   return '<section class="card"><div class="chips">' + chips + '</div><pre class="text">' + esc(d.text) + '</pre></section>';

@@ -36,6 +36,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "count-kinds",
     en: "number-{{word:zhong3}} / -{{word:ci4}} / -{{word:bu4}}-{{light:fen1}}, kinds / times / parts: {{Word:wo3}} {{word:qu4}}-{{word:guo4}} {{word:san1}}-{{word:ci4}}. (I've been there three times.) {{word:shu4}}, the number of: {{word:ren2}}-{{word:de}} {{word:shu4}}.",
     ru: "число-{{word:zhong3}} / -{{word:ci4}} / -{{word:bu4}}-{{light:fen1}} — виды / разы / части: {{Word:wo3}} {{word:qu4}}-{{word:guo4}} {{word:san1}}-{{word:ci4}}. (Я был там три раза.) {{word:shu4}} — число: {{word:ren2}}-{{word:de}} {{word:shu4}}.",
   },

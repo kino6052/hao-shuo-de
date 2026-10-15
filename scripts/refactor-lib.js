@@ -870,6 +870,23 @@ const OPS = {
     ws.setComposite(path, next);
   },
 
+  // { op: "coverageForm", item: "atoms:I", form: "<refs>", words?: [ids] }
+  // -- another way to say a coverage item (a prime, a category, a grammar item): the form is added after the
+  // ones it has. A second way that does not use the item's one carrier makes it less fragile (K24, `kb meaning`).
+  // `words` adds carriers; leave it out for a form that only says the item (the usual second way).
+  coverageForm(ws, op) {
+    const [group, key] = String(op.item ?? '').split(':');
+    const path = coverageFiles(ws).find((p) => ws.data(p).key === group);
+    const g = path && ws.data(path);
+    const item = g?.items.find((i) => i.key === key);
+    if (!item) throw new Error(`no coverage item ${op.item} (give group:KEY, e.g. atoms:I)`);
+    if (!String(op.form ?? '').trim()) throw new Error('coverageForm: give a form');
+    for (const w of op.words ?? []) ws.word(w); // refuses an id that is not a word
+    if (!item.forms.includes(op.form)) item.forms = [...item.forms, op.form];
+    if (op.words?.length) item.words = [...new Set([...(item.words ?? []), ...op.words])];
+    ws.setData(path, g);
+  },
+
   // { op: "category", id, to: "<leaf key>" }
   category(ws, op) {
     editCategories(ws, (ids) => ids.filter((x) => x !== op.id));

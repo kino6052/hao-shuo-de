@@ -18,7 +18,7 @@ export default pattern("add-take", {
     { lhs: "Utt", hsd: "S @comma VP @comma VP", eng: "a sentence and two more actions" },
     { lhs: "Utt", hsd: "VP @comma VP", eng: "an action, then what it comes to" },
   ],
-  taught: "numbers/add-take",
+  taught: "time-and-sums/add-take",
   examples: [
     ["Sān, sì fàng zài yī-qǐ, shì qī.", "Three and four put together is seven."],
     ["Cóng qī lǐ-miàn ná sān, shì sì.", "Take three from seven, and it's four."],

@@ -46,6 +46,12 @@ describe('lex', () => {
     expect(r.tokens.map((t) => t.text)).toEqual(['wǒ', 'gè', ',', 'rén']);
     expect(r.edges[1].id).toBe('ge4');
     expect(r.edges[2].classes.has('comma')).toBe(true);
+    expect(r.edges[2].classes.has('colon')).toBe(false);
+  });
+
+  test('a colon is a comma and a colon', () => {
+    const r = lex('{{Word:wo3}}: {{word:ren2}}.', lexicon);
+    expect([...r.edges[1].classes].sort()).toEqual(['colon', 'comma']);
   });
 
   test('a syllable that is not a word is a problem, and fits nothing', () => {
@@ -84,6 +90,25 @@ describe('the chart parser', () => {
     expect(r.ok).toBe(true);
     expect(r.treeCount).toBe(2);
     expect(r.trees).toHaveLength(2);
+  });
+
+  test('a reading that uses a preferred rule comes first, whichever rule it is', () => {
+    const uses = (t, id) => t.rule === id || (t.children ?? []).some((c) => uses(c, id));
+    for (const id of ['NP>NP PP', 'VP>VP PP']) {
+      const rules = [
+        rule('Utt', 'S'),
+        rule('S', 'NP VP'),
+        rule('NP', '@pronoun'),
+        rule('NP', '@noun'),
+        rule('NP', 'NP PP'),
+        rule('PP', 'yong4 NP'),
+        rule('VP', '@verb NP'),
+        rule('VP', 'VP PP'),
+      ].map((r) => (r.id === id ? { ...r, preferred: true } : r));
+      const r = parse(lat('wo3', 'kan4', 'ren2', 'yong4', 'wang4'), makeGrammar(rules, { glue: new Set(['yong4']) }));
+      expect(r.treeCount).toBe(2);
+      expect(uses(r.trees[0], id)).toBe(true);
+    }
   });
 
   test('N nouns in a row under NP -> NP NP has Catalan-many trees', () => {

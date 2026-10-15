@@ -57,6 +57,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "ma-question",
     items: [
       {
         en: "sentence + {{word:ma}}?, yes or no: {{Word:ni3}} {{word:you3}} {{word:gong1}}-{{word:ju4}} {{word:ma}}? (Do you have a tool?)",

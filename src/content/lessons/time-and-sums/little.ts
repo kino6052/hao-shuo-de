@@ -29,6 +29,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "yi-dian-little",
     en: "{{word:yi1}}-{{word:dian3}}, a little: {{Word:wo3}} {{word:yao4}} {{word:yi1}}-{{word:dian3}} {{word:shui3}}. (I want a little water.) {{Word:zhe4}}-ge {{word:da4}} {{word:yi1}}-{{word:dian3}}. (This one is a bit bigger.)",
     ru: "{{word:yi1}}-{{word:dian3}} — немного: {{Word:wo3}} {{word:yao4}} {{word:yi1}}-{{word:dian3}} {{word:shui3}}. (Я хочу немного воды.) {{Word:zhe4}}-ge {{word:da4}} {{word:yi1}}-{{word:dian3}}. (Этот чуть больше.)",
   },

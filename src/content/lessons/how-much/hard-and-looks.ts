@@ -46,6 +46,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "easy-hard-verb",
     en: "{{word:hen3}} {{word:nan2}}, difficult; {{word:hao3}}-{{word:kan4}} / {{word:nan2}}-{{word:kan4}}, beautiful / ugly: {{Word:ta1}} {{word:hen3}} {{word:hao3}}-{{word:kan4}}. (She's beautiful.)",
     ru: "{{word:hen3}} {{word:nan2}} — трудно; {{word:hao3}}-{{word:kan4}} / {{word:nan2}}-{{word:kan4}} — красивый / некрасивый: {{Word:ta1}} {{word:hen3}} {{word:hao3}}-{{word:kan4}}. (Она красивая.)",
   },

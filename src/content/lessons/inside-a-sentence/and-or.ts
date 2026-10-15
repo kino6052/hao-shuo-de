@@ -36,6 +36,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "he-and",
     items: [
       {
         en: "A {{word:he2}} B, and (nouns only): {{word:ni3}} {{word:he2}} {{word:wo3}} (you and me)",

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:xin1}}"],
   tts: ["心"],
   fit: "word",
-  note: "Lesson {{lesson:greetings-and-feelings}}.",
+  note: "Lesson {{lesson:feelings}}.",
   examples: [
     {
       pinyin: "{{Word:ta1}}-{{word:de}} {{word:xin1}} {{word:hen3}} {{word:hao3}}.",

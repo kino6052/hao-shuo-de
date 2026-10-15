@@ -36,6 +36,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "verb-de-thing",
     en: "verb-{{word:de}}, the thing: {{word:chi1}}-{{word:de}} (food, something to eat)",
     ru: "глагол-{{word:de}} — вещь: {{word:chi1}}-{{word:de}} (еда, то, что едят)",
   },

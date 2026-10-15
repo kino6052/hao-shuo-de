@@ -45,6 +45,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "de-modifier",
     en: "{{word:wo3}}-{{word:de}} / {{word:ni3}}-{{word:de}} + noun, whose: {{word:wo3}}-{{word:de}} {{word:zhi2wu4}} (my plant)",
     ru: "{{word:wo3}}-{{word:de}} / {{word:ni3}}-{{word:de}} + существительное — чей: {{word:wo3}}-{{word:de}} {{word:zhi2wu4}} (моё растение)",
   },

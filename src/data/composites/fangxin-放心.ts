@@ -13,7 +13,7 @@ export default composite({
   literal: "put the heart down",
   fit: "natural",
   kinds: ["built"],
-  note: "Lesson {{lesson:greetings-and-feelings}}.",
+  note: "Lesson {{lesson:feelings}}.",
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:fang4}}-{{word:xin1}} {{word:le}}.",

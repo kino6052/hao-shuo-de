@@ -14,5 +14,5 @@ export default composite({
   tts: ["从…里面拿…，能拿…次"],
   literal: "take A from C, B times",
   fit: "plain",
-  note: "12 ÷ 4: cóng shí-èr lǐ-miàn ná sì, néng ná sān-cì (Lesson {{lesson:numbers}}).",
+  note: "12 ÷ 4: cóng shí-èr lǐ-miàn ná sì, néng ná sān-cì (Lesson {{lesson:time-and-sums}}).",
 });

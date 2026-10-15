@@ -23,7 +23,7 @@ export default pattern("tian-nian-spans", {
     { lhs: "Time", hsd: "=jin1 =nian2", eng: "jīn-nián, this year" },
     { lhs: "Time", hsd: "=ming2 =nian2", eng: "míng-nián, next year" },
   ],
-  taught: "numbers/days-years",
+  taught: "time-and-sums/days-years",
   examples: [
     ["Wǒ děng le sān tiān.", "I waited three days."],
     ["Yī nián yǒu shí-èr ge yuè.", "A year has twelve months."],

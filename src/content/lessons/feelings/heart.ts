@@ -36,6 +36,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "feeling-then",
     en: "{{word:kai1}}-{{word:xin1}}, happy: {{Word:wo3}} {{word:hen3}} {{word:kai1}}-{{word:xin1}}. (I'm very happy.) {{Word:xiao3}}-{{word:xin1}}! (Be careful!)",
     ru: "{{word:kai1}}-{{word:xin1}} — радостный: {{Word:wo3}} {{word:hen3}} {{word:kai1}}-{{word:xin1}}. (Я очень рад.) {{Word:xiao3}}-{{word:xin1}}! (Осторожно!)",
   },
