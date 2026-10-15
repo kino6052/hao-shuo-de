@@ -11,6 +11,7 @@ export default composite({
   hsd: ["{{word:hui2}}-{{word:qu4}}"],
   tts: ["回去"],
   fit: "natural",
+  kinds: ["built"],
   note: "Lesson {{lesson:direction-and-result}}.",
   examples: [
     {

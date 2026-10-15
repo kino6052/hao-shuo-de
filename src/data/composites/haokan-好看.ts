@@ -12,6 +12,7 @@ export default composite({
   tts: ["好看"],
   literal: "good to look at",
   fit: "natural",
+  kinds: ["built"],
   examples: [
     {
       pinyin: "{{Word:ni3}}-{{word:de}} {{word:yi1fu}} {{word:hen3}} {{word:hao3}}-{{word:kan4}}.",

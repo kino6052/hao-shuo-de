@@ -12,6 +12,7 @@ export default composite({
   tts: ["分开", "不在一起"],
   literal: "not together anymore",
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:fen1}}-{{word:kai1}} {{word:le}}.",

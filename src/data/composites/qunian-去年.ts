@@ -12,6 +12,7 @@ export default composite({
   tts: ["去年", "前十二个月"],
   literal: "go-year / the twelve months before",
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:qu4}}-{{word:nian2}} {{word:wo3}} {{word:qu4}} {{word:le}} \"Zhōngguó\".",

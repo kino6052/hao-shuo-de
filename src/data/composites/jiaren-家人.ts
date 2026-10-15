@@ -12,6 +12,7 @@ export default composite({
   tts: ["家人", "家里的人"],
   literal: "home person / people in the home",
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:jia1}}-{{word:ren2}} {{word:dou1}} {{word:zai4}} {{word:jia1}}.",

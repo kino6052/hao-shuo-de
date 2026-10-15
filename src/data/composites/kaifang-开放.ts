@@ -12,6 +12,7 @@ export default composite({
   tts: ["开放"],
   literal: "open-put",
   fit: "natural",
+  kinds: ["built"],
   note: "Real Mandarin: 开放.",
   examples: [
     {

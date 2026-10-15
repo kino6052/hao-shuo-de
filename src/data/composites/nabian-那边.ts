@@ -12,6 +12,7 @@ export default composite({
   tts: ["那边"],
   literal: "that side",
   fit: "natural",
+  kinds: ["built"],
   note: "Real Mandarin: 那边.",
   examples: [
     {

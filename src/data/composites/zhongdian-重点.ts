@@ -15,6 +15,7 @@ export default composite({
   tts: ["最有重要的部分", "重点"],
   literal: "the most important part",
   fit: "natural",
+  kinds: ["built", "spelled"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:zhong4}}-{{word:dian3}}.",

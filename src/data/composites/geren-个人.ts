@@ -12,6 +12,7 @@ export default composite({
   tts: ["个人", "一个人"],
   literal: "one person / one person",
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:shi4}} {{word:wo3}} {{word:ge4}}-{{word:ren2}}-{{word:de}}.",

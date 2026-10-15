@@ -12,6 +12,7 @@ export default composite({
   tts: ["工作", "做", "做的"],
   literal: "do / what you do",
   fit: "natural",
+  kinds: ["built", "built", "built"],
   note: "As a verb, zuò. As a thing, zuò-de.",
   examples: [
     {

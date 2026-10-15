@@ -15,6 +15,7 @@ export default composite({
   tts: ["对不起", "是我不好"],
   literal: "facing, can't rise / it's my fault",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:dui4}}-{{word:bu4}}-{{word:qi3}}, {{word:wo3}} {{word:lai2}} {{word:wan3}} {{word:le}}.",

@@ -11,6 +11,7 @@ export default composite({
   hsd: ["{{word:ming2}}-{{word:bai2}}", "{{word:zhi1dao4}}"],
   tts: ["明白", "知道"],
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ming2}}-{{word:bai2}} {{word:le}}.",

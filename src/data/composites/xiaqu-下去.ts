@@ -11,6 +11,7 @@ export default composite({
   hsd: ["{{word:xia4}}-{{word:qu4}}"],
   tts: ["下去"],
   fit: "natural",
+  kinds: ["built"],
   note: "Lesson {{lesson:direction-and-result}}: shuō-xià-qù, keep talking.",
   examples: [
     {

@@ -15,6 +15,7 @@ export default composite({
   tts: ["最好", "比别的都好"],
   literal: "most good / better than all the others",
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:zui4}}-{{word:hao3}}.",

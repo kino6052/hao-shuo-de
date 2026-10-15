@@ -16,6 +16,7 @@ export default composite({
   tts: ["会来的时间", "未来", "后面的时间"],
   literal: "the time behind",
   fit: "natural",
+  kinds: ["built", "spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:hou4}}-{{word:mian4}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:you3}} {{word:shen2me}}?",

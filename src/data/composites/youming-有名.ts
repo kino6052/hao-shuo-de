@@ -15,6 +15,7 @@ export default composite({
   tts: ["有名", "人人都知道的"],
   literal: "everyone knows it",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:hen3}} {{word:you3}}-{{word:ming2}}.",

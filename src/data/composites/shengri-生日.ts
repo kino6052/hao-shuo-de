@@ -12,6 +12,7 @@ export default composite({
   tts: ["生日", "X的日"],
   literal: "birth day / your day",
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:jin1}}-{{word:tian1}} {{word:shi4}} {{word:wo3}}-{{word:de}} {{word:sheng1}}-{{word:ri4}}.",

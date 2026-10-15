@@ -15,6 +15,7 @@ export default composite({
   tts: ["同学", "一起学的人"],
   literal: "person who learns with you",
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:wo3}}-{{word:de}} {{word:tong2}}-{{word:xue2}}.",

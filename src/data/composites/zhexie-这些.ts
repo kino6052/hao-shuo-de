@@ -11,6 +11,7 @@ export default composite({
   hsd: ["{{word:zhe4}}-{{word:xie1}}", "{{word:zhe4}}"],
   tts: ["这些", "这"],
   fit: "natural",
+  kinds: ["built", "built"],
   note: "zhè means \"this\" and \"these\".",
   examples: [
     {

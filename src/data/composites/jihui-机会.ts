@@ -12,6 +12,7 @@ export default composite({
   tts: ["机会", "X的可能"],
   literal: "machine-will / the maybe of X",
   fit: "natural",
+  kinds: ["spelled", "built"],
   note: "Put what you could do first: qù-de kě-néng, a chance to go.",
   examples: [
     {

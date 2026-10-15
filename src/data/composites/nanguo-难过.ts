@@ -12,6 +12,7 @@ export default composite({
   tts: ["难过", "不开心"],
   literal: "hard to get through / not happy",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:hen3}} {{word:nan2}}-{{word:guo4}}.",

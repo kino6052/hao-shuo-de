@@ -12,6 +12,7 @@ export default composite({
   tts: ["常常", "做很多次"],
   literal: "do it many times",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:chang2}}-{{word:chang2}} {{word:lai2}}.",

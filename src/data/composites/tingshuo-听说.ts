@@ -12,6 +12,7 @@ export default composite({
   tts: ["听说", "听人说"],
   literal: "hear say / hear people say",
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ting1}}-{{word:shuo1}} {{word:ta1}} {{word:bu4}} {{word:lai2}} {{word:le}}.",

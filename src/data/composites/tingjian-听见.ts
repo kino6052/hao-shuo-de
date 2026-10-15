@@ -12,6 +12,7 @@ export default composite({
   tts: ["听见", "听到"],
   literal: "listen-arrive",
   fit: "natural",
+  kinds: ["built", "built"],
   note: "Lesson {{lesson:greetings-and-feelings}}.",
   examples: [
     {

@@ -8,10 +8,11 @@ export default composite({
   en: "happen",
   ru: "происходить",
   pos: "verb",
-  hsd: ["{{word:fa1}}-{{word:sheng1}}"],
-  tts: ["发生"],
+  hsd: ["{{word:fa1}}-{{word:sheng1}}", "{{word:chu1}} {{word:le}}"],
+  tts: ["发生", "出了"],
   literal: "send out, be born",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:fa1}}-{{word:sheng1}} {{word:le}} {{word:shen2me}}?",

@@ -11,6 +11,7 @@ export default composite({
   hsd: ["{{word:ke3}}-{{word:yi3}}", "{{word:neng2}}"],
   tts: ["可以", "能"],
   fit: "natural",
+  kinds: ["spelled", "built"],
   note: "\"Can\" and \"may\" are both néng (D19).",
   examples: [
     {

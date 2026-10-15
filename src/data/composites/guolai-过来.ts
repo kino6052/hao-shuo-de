@@ -12,6 +12,7 @@ export default composite({
   tts: ["过来", "来这边"],
   literal: "come across / come to this side",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:guo4}}-{{word:lai2}}.",

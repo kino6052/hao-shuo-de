@@ -12,6 +12,7 @@ export default composite({
   tts: ["放心"],
   literal: "put the heart down",
   fit: "natural",
+  kinds: ["built"],
   note: "Lesson {{lesson:greetings-and-feelings}}.",
   examples: [
     {

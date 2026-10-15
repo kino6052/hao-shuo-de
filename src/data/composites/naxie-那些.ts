@@ -11,6 +11,7 @@ export default composite({
   hsd: ["{{word:na4}}-{{word:xie1}}", "{{word:na4}}"],
   tts: ["那些", "那"],
   fit: "natural",
+  kinds: ["built", "built"],
   note: "nà-ge … dōu: all of those.",
   examples: [
     {

@@ -12,6 +12,7 @@ export default composite({
   tts: ["名字", "叫的词"],
   literal: "the word you're called",
   fit: "natural",
+  kinds: ["spelled", "built"],
   note: "Ask with nǐ jiào shénme?",
   examples: [
     {

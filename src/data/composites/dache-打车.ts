@@ -8,9 +8,10 @@ export default composite({
   en: "take a taxi",
   ru: "взять такси",
   pos: "verb",
-  hsd: ["{{word:da3}} {{word:che1}}"],
-  tts: ["打车"],
+  hsd: ["{{word:da3}} {{word:che1}}", "{{word:jiao4}} {{word:che1}}"],
+  tts: ["打车", "叫车"],
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yao4}} {{word:da3}} {{word:che1}}.",

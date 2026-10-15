@@ -8,9 +8,10 @@ export default composite({
   en: "in order to",
   ru: "чтобы",
   pos: "preposition",
-  hsd: ["{{word:wei4}}-{{word:le}}"],
-  tts: ["为了"],
+  hsd: ["{{word:wei4}}-{{word:le}}", "{{word:wei4}}"],
+  tts: ["为了", "为"],
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:wei4}}-{{word:le}} {{word:hai2}}-{{word:zi}}, {{word:ta1}} {{word:gong1}}-{{word:zuo4}}.",

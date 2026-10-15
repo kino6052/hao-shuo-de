@@ -34,6 +34,7 @@ export const COLUMNS = {
   unchecked: 'words whose question did not finish in time',
   core: 'the core (Harnad)',
   spelled: 'spelled forms (hidden vocabulary, learned whole)',
+  spelled_bare: 'composites with a spelled form and no built form (potentially dangerous, K23)',
   built: 'built forms',
   undecided_forms: 'Mandarin compounds not marked built or spelled yet',
   items: 'coverage items',
@@ -103,6 +104,7 @@ export async function scoreboardRow(kb, { label = '', date = new Date(), atoms =
       unchecked: c.unchecked,
       core: c.core,
       spelled: r.hidden.spelled.length,
+      spelled_bare: r.hidden.bare.length,
       built: r.hidden.built,
       undecided_forms: r.hidden.undecided.length,
     });

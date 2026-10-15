@@ -8,9 +8,13 @@ export default composite({
   en: "right side",
   ru: "справа",
   pos: "noun",
-  hsd: ["{{word:you4}}-{{word:bian1}}"],
-  tts: ["右边"],
+  hsd: [
+    "{{word:you4}}-{{word:bian1}}",
+    "{{word:bu4}} {{word:shi4}} {{word:zuo3}}-{{word:bian1}}-{{word:de}} {{word:bian1}}",
+  ],
+  tts: ["右边", "不是左边的边"],
   fit: "word",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:shu1}} {{word:zai4}} {{word:you4}}-{{word:bian1}}.",

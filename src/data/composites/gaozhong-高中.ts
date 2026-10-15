@@ -15,6 +15,7 @@ export default composite({
   tts: ["高中", "大学前的学校"],
   literal: "high middle / the school before university",
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:zai4}} {{word:gao1}}-{{word:zhong1}} {{word:xue2}}.",

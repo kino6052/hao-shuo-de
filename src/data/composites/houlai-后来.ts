@@ -11,6 +11,7 @@ export default composite({
   hsd: ["{{word:hou4}}-{{word:lai2}}"],
   tts: ["后来"],
   fit: "natural",
+  kinds: ["built"],
   note: "A real word: hòu + lái.",
   examples: [
     {

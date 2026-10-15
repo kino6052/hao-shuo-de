@@ -70,7 +70,7 @@ export default function kbPlugin() {
             case '/atoms': {
               const report = await kb.atoms();
               const counts = { ...report.counts, smallest: report.smallest };
-              const hidden = { spelled: report.hidden.spelled.length, undecided: report.hidden.undecided.length };
+              const hidden = { spelled: report.hidden.spelled.length, undecided: report.hidden.undecided.length, bare: report.hidden.bare.length };
               if (!get('name')) return json(res, { counts, hidden, text: renderAtoms(report) });
               const line = await kb.atoms(get('name'));
               return json(res, { counts, hidden, line, text: renderAtomWord(report, line) });

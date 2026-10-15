@@ -15,6 +15,7 @@ export default composite({
   tts: ["味道", "口里的样子"],
   literal: "the way it is in the mouth",
   fit: "natural",
+  kinds: ["spelled", "built"],
   note: "Lesson {{lesson:how-much}}. Good or not: wèi-dào hěn hǎo, wèi-dào bù hǎo.",
   examples: [
     {

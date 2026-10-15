@@ -11,6 +11,7 @@ export default composite({
   hsd: ["{{word:zhe4}}-{{word:li3}}"],
   tts: ["这里"],
   fit: "natural",
+  kinds: ["built"],
   examples: [
     {
       pinyin: "{{Word:lai2}} {{word:zhe4}}-{{word:li3}}!",

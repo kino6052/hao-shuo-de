@@ -12,6 +12,7 @@ export default composite({
   tts: ["开心"],
   literal: "open heart",
   fit: "natural",
+  kinds: ["built"],
   note: "Lesson {{lesson:greetings-and-feelings}}.",
   examples: [
     {

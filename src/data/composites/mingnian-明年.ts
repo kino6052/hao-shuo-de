@@ -12,6 +12,7 @@ export default composite({
   tts: ["明年", "后十二个月"],
   literal: "bright-year / the twelve months after",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:ming2}}-{{word:nian2}} {{word:wo3}} {{word:er4}}-{{word:shi2}}.",

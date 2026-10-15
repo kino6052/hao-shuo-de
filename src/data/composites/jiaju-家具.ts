@@ -15,6 +15,7 @@ export default composite({
   tts: ["家具", "家里用的东西"],
   literal: "home tool / the things used at home",
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:jia1}}-{{word:ju4}} {{word:hen3}} {{word:hao3}}.",

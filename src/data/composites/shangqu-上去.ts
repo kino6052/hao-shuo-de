@@ -11,6 +11,7 @@ export default composite({
   hsd: ["{{word:shang4}}-{{word:qu4}}"],
   tts: ["上去"],
   fit: "natural",
+  kinds: ["built"],
   note: "Lesson {{lesson:moving}}.",
   examples: [
     {

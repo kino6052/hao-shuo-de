@@ -12,6 +12,7 @@ export default composite({
   tts: ["有时", "有的时间"],
   literal: "some of the time",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}}-{{word:shi2}} {{word:lai2}}.",

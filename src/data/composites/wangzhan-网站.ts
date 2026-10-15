@@ -12,6 +12,7 @@ export default composite({
   tts: ["网站"],
   literal: "net station",
   fit: "natural",
+  kinds: ["built"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:wang3}}-{{word:zhan4}} {{word:hen3}} {{word:hao3}}.",

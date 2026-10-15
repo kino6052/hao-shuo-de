@@ -25,7 +25,7 @@ import { cpus } from 'os';
 import { engine, solve, sym, tables } from './clingo.js';
 import { readRules } from './rules.js';
 import { wordRefIds } from '../word-refs.js';
-import { formKinds } from '../form-kinds.js';
+import { formKinds, needsBuiltForm } from '../form-kinds.js';
 import { paraphraseStatus } from '../paraphrase.js';
 import { pinyinOf } from './whatif.js';
 
@@ -193,12 +193,14 @@ export async function atoms(ctx, { timeoutMs = 60_000, parallel = defaultParalle
     .sort((a, b) => b.cost - a.cost || a.id.localeCompare(b.id));
 
   // hidden vocabulary: spelled forms are Mandarin words written with ours and learned whole (K9)
-  const hidden = { spelled: [], undecided: [], built: 0 };
+  // `bare`: the entries with a spelled form and no built form to say the word without it (K23: they need one)
+  const hidden = { spelled: [], undecided: [], built: 0, bare: [] };
   for (const c of source.composites ?? []) {
     formKinds(c).forEach((k, i) => {
       if (k === 'built') hidden.built++;
       else (k === 'spelled' ? hidden.spelled : hidden.undecided).push({ zh: c.zh, py: c.py, rank: c.rank, form: i + 1 });
     });
+    if (needsBuiltForm(c)) hidden.bare.push({ zh: c.zh, py: c.py, rank: c.rank, en: c.en });
   }
 
   const list = (kind) => ids.filter((id) => kindOf(id) === kind).map((id) => ({ ...card(id), ...(kind === 'atom' ? { why: whyAtom(id) } : {}) }));
@@ -297,5 +299,10 @@ export function renderAtoms(r, { limit = 15 } = {}) {
   out.push('', `Hidden vocabulary: ${r.hidden.spelled.length} spelled form(s) learned whole; ${r.hidden.undecided.length} Mandarin compound(s) not marked built or spelled yet.`);
   for (const h of r.hidden.spelled.slice(0, limit)) out.push(`  ${h.zh} ${h.py} #${h.rank}`);
   if (r.hidden.spelled.length > limit) out.push(`  … and ${r.hidden.spelled.length - limit} more`);
+  if (r.hidden.bare?.length) {
+    out.push('', `Potentially dangerous (K23): ${r.hidden.bare.length} entr${r.hidden.bare.length === 1 ? 'y has' : 'ies have'} a spelled form and no built form, so the word can only be learned whole and needs a way to be said with our words.`);
+    for (const h of r.hidden.bare.slice(0, limit)) out.push(`  ${h.zh} ${h.py} #${h.rank} "${h.en}"`);
+    if (r.hidden.bare.length > limit) out.push(`  … and ${r.hidden.bare.length - limit} more`);
+  }
   return out.join('\n');
 }

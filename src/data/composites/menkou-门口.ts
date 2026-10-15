@@ -12,6 +12,7 @@ export default composite({
   tts: ["门口", "口"],
   literal: "opening",
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zai4}} {{word:men2}}-{{word:kou3}}.",

@@ -12,6 +12,7 @@ export default composite({
   tts: ["上学", "去学校"],
   literal: "go up to learn / go to school",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:hai2}}-{{word:zi}}-{{word:men}} {{word:qi1}} {{word:dian3}} {{word:qu4}} {{word:xue2}}-{{word:xiao4}}.",

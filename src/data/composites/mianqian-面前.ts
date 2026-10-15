@@ -12,6 +12,7 @@ export default composite({
   tts: ["面前", "前面"],
   literal: "face-front",
   fit: "natural",
+  kinds: ["built", "built"],
   note: "Lesson {{lesson:where-it-is}}.",
   examples: [
     {

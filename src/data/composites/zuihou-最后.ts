@@ -12,6 +12,7 @@ export default composite({
   tts: ["最后"],
   literal: "most behind",
   fit: "natural",
+  kinds: ["built"],
   note: "Lesson {{lesson:comparing}}.",
   examples: [
     {

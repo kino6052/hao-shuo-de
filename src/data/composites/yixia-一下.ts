@@ -8,10 +8,14 @@ export default composite({
   en: "a moment",
   ru: "мгновение",
   pos: "number",
-  hsd: ["{{word:yi1}}-{{word:xia4}}"],
-  tts: ["一下"],
+  hsd: [
+    "{{word:yi1}}-{{word:xia4}}",
+    "{{word:bu4}} {{word:chang2}}-{{word:de}} {{word:shi2}}-{{word:jian1}}",
+  ],
+  tts: ["一下", "不长的时间"],
   literal: "one-down",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:kan4}} {{word:yi1}}-{{word:xia4}}.",

@@ -11,6 +11,7 @@ export default composite({
   hsd: ["{{word:duo1}}-{{word:shao3}}"],
   tts: ["多少"],
   fit: "natural",
+  kinds: ["built"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:duo1}}-{{word:shao3}} {{word:jin1}}?",

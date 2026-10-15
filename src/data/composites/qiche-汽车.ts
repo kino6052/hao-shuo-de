@@ -11,6 +11,7 @@ export default composite({
   hsd: ["{{word:qi4}}-{{word:che1}}", "{{word:che1}}"],
   tts: ["汽车", "车"],
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:ta1}}-{{word:de}} {{word:qi4}}-{{word:che1}} {{word:hen3}} {{word:kuai4}}.",

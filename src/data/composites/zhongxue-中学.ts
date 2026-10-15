@@ -15,6 +15,7 @@ export default composite({
   tts: ["中学", "不大不小的人学的地方"],
   literal: "middle learning / where not-big, not-small people learn",
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:ta1}}-{{word:men}} {{word:zai4}} {{word:zhong1}}-{{word:xue2}} {{word:xue2}} {{word:zi4}}.",

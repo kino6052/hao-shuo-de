@@ -12,6 +12,7 @@ export default composite({
   tts: ["只要", "如果"],
   literal: "if",
   fit: "natural",
+  kinds: ["built", "built"],
   note: "rúguǒ X, jiù Y.",
   examples: [
     {

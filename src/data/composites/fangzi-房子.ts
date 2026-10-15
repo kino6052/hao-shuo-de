@@ -11,6 +11,7 @@ export default composite({
   hsd: ["{{word:fang2}}-{{light:zi}}", "{{word:jia1}}"],
   tts: ["房子", "家"],
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:ta1}}-{{word:de}} {{word:fang2}}-{{word:zi}} {{word:hen3}} {{word:da4}}.",

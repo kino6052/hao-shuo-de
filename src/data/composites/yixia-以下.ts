@@ -12,6 +12,7 @@ export default composite({
   tts: ["以下", "比X少"],
   literal: "less than X",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:you3}} {{word:liu4}}-{{light:ge4}} {{word:yi3}}-{{word:xia4}}.",

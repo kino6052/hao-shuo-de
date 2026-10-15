@@ -12,6 +12,7 @@ export default composite({
   tts: ["方面", "部分"],
   literal: "part",
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:zai4}} {{word:zhe4}}-{{light:ge4}} {{word:fang1}}-{{word:mian4}}, {{word:ta1}} {{word:hen3}} {{word:hao3}}.",

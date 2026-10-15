@@ -12,6 +12,7 @@ export default composite({
   tts: ["面包", "吃的东西"],
   literal: "food",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yao4}} {{word:chi1}} {{word:mian4}}-{{word:bao1}}.",

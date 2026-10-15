@@ -12,6 +12,7 @@ export default composite({
   tts: ["没事", "没有关系"],
   literal: "it doesn't matter",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:mei2}}-{{word:shi4}}, {{word:wo3}} {{word:hen3}} {{word:hao3}}.",

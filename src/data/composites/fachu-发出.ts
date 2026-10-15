@@ -12,6 +12,7 @@ export default composite({
   tts: ["发出", "做出"],
   literal: "send out-go out / make come out",
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:fa1}}-{{word:chu1}} {{word:sheng1yin1}}.",

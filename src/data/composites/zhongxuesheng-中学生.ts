@@ -15,6 +15,7 @@ export default composite({
   tts: ["中学生", "不大不小的学的人"],
   literal: "middle-learning student / a not-big, not-small learner",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:zhong1}}-{{word:xue2}}-{{word:sheng1}}.",

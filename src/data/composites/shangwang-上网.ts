@@ -8,10 +8,11 @@ export default composite({
   en: "go online",
   ru: "выходить в интернет",
   pos: "verb",
-  hsd: ["{{word:shang4}} {{word:wang3}}"],
-  tts: ["上网"],
+  hsd: ["{{word:shang4}} {{word:wang3}}", "{{word:jin4}} {{word:wang3}}"],
+  tts: ["上网", "进网"],
   literal: "go onto the net",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zai4}} {{word:shang4}} {{word:wang3}}.",

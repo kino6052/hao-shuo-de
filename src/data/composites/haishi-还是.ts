@@ -8,9 +8,10 @@ export default composite({
   en: "or (choosing)",
   ru: "или",
   pos: "adverb",
-  hsd: ["{{word:hai2}}-{{word:shi4}}"],
-  tts: ["还是"],
+  hsd: ["{{word:hai2}}-{{word:shi4}}", "X {{word:he2}} Y, {{word:na3}} {{word:yi1}}-{{light:ge4}}"],
+  tts: ["还是", "X和Y，哪一个"],
   fit: "natural",
+  kinds: ["spelled", "built"],
   note: "See the Lesson {{lesson:inside-a-sentence}} questions.",
   examples: [
     {

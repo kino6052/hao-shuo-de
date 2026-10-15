@@ -12,6 +12,7 @@ export default composite({
   tts: ["我们"],
   literal: "I + more people",
   fit: "natural",
+  kinds: ["built"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:yi1}}-{{word:qi3}} {{word:chi1}}-{{word:fan4}}.",

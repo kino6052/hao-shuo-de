@@ -12,6 +12,7 @@ export default composite({
   tts: ["现实", "真的"],
   literal: "what's real",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:xian4}}-{{word:shi2}}.",

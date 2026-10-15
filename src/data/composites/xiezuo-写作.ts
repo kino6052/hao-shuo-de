@@ -11,6 +11,7 @@ export default composite({
   hsd: ["{{word:xie3}}-{{word:zuo4}}", "{{word:xie3}}"],
   tts: ["写作", "写"],
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ai4}} {{word:xie3}}-{{word:zuo4}}.",

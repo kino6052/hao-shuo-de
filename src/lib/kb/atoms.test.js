@@ -164,6 +164,22 @@ describe('cost and hidden vocabulary', () => {
     expect(r.hidden.spelled).toEqual([{ zh: '东西', py: 'dōngxi', rank: 2, form: 1 }]);
     expect(r.hidden.undecided).toEqual([]);
   });
+
+  test('a spelled form with no built form beside it is bare (K23); one with a built form is covered', async () => {
+    const bare = { ...source, composites: [{ ...composites[1], kinds: ['spelled'] }] };
+    const r = await atoms({ source: bare, facts: buildFacts(bare) });
+    expect(r.hidden.bare).toEqual([{ zh: '东西', py: 'dōngxi', rank: 2, en: 'thing' }]);
+
+    const covered = { ...source, composites: [{ ...composites[1], hsd: `${ref('a')} / ${ref('b')}`, tts: '东 / 西', kinds: ['spelled', 'built'] }] };
+    const c = await atoms({ source: covered, facts: buildFacts(covered) });
+    expect(c.hidden.spelled.length).toBe(1);
+    expect(c.hidden.bare).toEqual([]);
+    expect(renderAtoms(r)).toContain('Potentially dangerous (K23): 1 entry has a spelled form and no built form');
+  });
+
+  test('nothing is bare when nothing is spelled', async () => {
+    expect((await run()).hidden.bare).toEqual([]);
+  });
 });
 
 describe('the text report', () => {

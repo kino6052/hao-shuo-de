@@ -11,6 +11,7 @@ export default composite({
   hsd: ["{{word:ren2}}-{{word:wu4}}", "{{word:ren2}}"],
   tts: ["人物", "人"],
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:hen3}} {{word:da4}}-{{word:de}} {{word:ren2}}-{{word:wu4}}.",

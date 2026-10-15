@@ -12,6 +12,7 @@ export default composite({
   tts: ["以前", "…前"],
   literal: "before X",
   fit: "natural",
+  kinds: ["spelled", "built"],
   note: "chī qián: before eating.",
   examples: [
     {

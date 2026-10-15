@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'bun:test';
-import { formKinds, isMandarinCompound, kindsProblems, undecidedForms } from './form-kinds.js';
+import { formKinds, isMandarinCompound, kindsProblems, needsBuiltForm, undecidedForms } from './form-kinds.js';
 
 // 东西: dōng-xi is Mandarin's own compound, wù is a description; 飞机 is built from its parts
 const dongxi = { zh: '东西', hsd: ['{{word:dong1}}-{{light:xi1}}', '{{word:wu4}}'], tts: ['东西', '物'] };
@@ -35,6 +35,22 @@ describe('the rule', () => {
 
   test('an entry with no forms has no kinds', () => {
     expect(formKinds({ zh: '你', py: 'nǐ' })).toEqual([]);
+  });
+});
+
+describe('K23: a spelled form needs a built form beside it', () => {
+  test('spelled alone is bare', () => {
+    expect(needsBuiltForm({ ...dongxi, kinds: ['spelled', 'spelled'] })).toBe(true);
+    expect(needsBuiltForm({ ...feiji, kinds: ['spelled'] })).toBe(true);
+  });
+  test('a built form beside it covers it, in either order', () => {
+    expect(needsBuiltForm({ ...dongxi, kinds: ['spelled', 'built'] })).toBe(false);
+    expect(needsBuiltForm({ ...dongxi, kinds: ['built', 'spelled'] })).toBe(false);
+  });
+  test('built only, undecided and empty entries are not bare', () => {
+    expect(needsBuiltForm(feiji)).toBe(false);
+    expect(needsBuiltForm(dongxi)).toBe(false);
+    expect(needsBuiltForm({ zh: '你', py: 'nǐ' })).toBe(false);
   });
 });
 

@@ -11,6 +11,7 @@ export default composite({
   hsd: ["{{word:zhen1}}-{{word:de}}", "{{word:zhen1}}-{{word:shi2}}", "{{word:zhen1}}"],
   tts: ["真的", "真实", "真"],
   fit: "natural",
+  kinds: ["built", "spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:zhen1}}-{{word:de}}.",

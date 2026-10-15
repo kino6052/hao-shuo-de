@@ -15,6 +15,7 @@ export default composite({
   tts: ["放学", "学完了，回家"],
   literal: "let learning go / finished learning, going home",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:fang4}}-{{word:xue2}} {{word:le}}.",

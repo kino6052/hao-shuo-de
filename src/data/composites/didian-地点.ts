@@ -12,6 +12,7 @@ export default composite({
   tts: ["地方", "地点"],
   literal: "ground point",
   fit: "natural",
+  kinds: ["built", "spelled"],
   note: "Real Mandarin: 地点.",
   examples: [
     {

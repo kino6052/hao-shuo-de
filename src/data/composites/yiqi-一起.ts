@@ -8,9 +8,10 @@ export default composite({
   en: "together",
   ru: "вместе",
   pos: "adverb",
-  hsd: ["{{word:yi1}}-{{word:qi3}}"],
-  tts: ["一起"],
+  hsd: ["{{word:yi1}}-{{word:qi3}}", "{{word:yi1}}-{{word:tong2}}"],
+  tts: ["一起", "一同"],
   fit: "natural",
+  kinds: ["spelled", "built"],
   note: "A fixed pair, like qǐ-lái.",
   examples: [
     {

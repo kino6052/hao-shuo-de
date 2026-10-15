@@ -12,6 +12,7 @@ export default composite({
   tts: ["不过", "但是"],
   literal: "not past",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:xiang3}} {{word:qu4}}, {{word:bu4}}-{{word:guo4}} {{word:wo3}} {{word:mei2}} {{word:you3}} {{word:jin1}}.",
