@@ -29,6 +29,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "measure-word",
     en: "number-ge, without the noun: {{Word:ta1}} {{word:yao4}} {{word:liu4}}-ge. (He wants six.)",
     ru: "число-ge без существительного: {{Word:ta1}} {{word:yao4}} {{word:liu4}}-ge. (Он хочет шесть.)",
   },

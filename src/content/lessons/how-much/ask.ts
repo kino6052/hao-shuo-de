@@ -33,6 +33,7 @@ export default lessonModule({
     necessity: { en: "Now you can ask how someone is.", ru: "Теперь вы можете спросить, как у кого-то дела." },
   },
   info: {
+    pattern: "ma-short",
     en: "adjective + {{word:ma}}?, asking: {{Word:ni3}} {{word:leng3}} {{word:ma}}? (Are you cold?)",
     ru: "прилагательное + {{word:ma}}? — вопрос: {{Word:ni3}} {{word:leng3}} {{word:ma}}? (Тебе холодно?)",
   },

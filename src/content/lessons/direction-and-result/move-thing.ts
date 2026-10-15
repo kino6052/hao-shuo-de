@@ -42,6 +42,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "ba-handle",
     en: "verb + direction words: {{Word:ta1}} {{word:ba3}} {{word:jin1}} {{word:na2}}-{{word:chu1}}-{{word:lai2}} {{word:le}}. (He took out the money.)",
     ru: "глагол + слова направления: {{Word:ta1}} {{word:ba3}} {{word:jin1}} {{word:na2}}-{{word:chu1}}-{{word:lai2}} {{word:le}}. (Он вынул деньги.)",
   },

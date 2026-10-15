@@ -38,6 +38,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "zai-place",
     en: "{{word:zuo3}}-{{word:bian1}} / {{word:you4}}-{{word:bian1}}, left / right: {{Word:bao1}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}. (The bag is on my left.)",
     ru: "{{word:zuo3}}-{{word:bian1}} / {{word:you4}}-{{word:bian1}} — слева / справа: {{Word:bao1}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:zuo3}}-{{word:bian1}}. (Сумка слева от меня.)",
   },

@@ -29,6 +29,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "bang-help",
     en: "{{word:bang1}} + person + {{word:xue2}} + verb, teach: {{Word:wo3}} {{word:bang1}} {{word:ni3}} {{word:xue2}} {{word:xie3}}. (I'll teach you to write.)",
     ru: "{{word:bang1}} + человек + {{word:xue2}} + глагол — научить: {{Word:wo3}} {{word:bang1}} {{word:ni3}} {{word:xue2}} {{word:xie3}}. (Я научу тебя писать.)",
   },

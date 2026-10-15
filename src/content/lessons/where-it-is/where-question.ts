@@ -49,6 +49,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "zai-place",
     en: "{{word:na3}}-{{word:li3}}, where: {{Word:ni3}} {{word:zai4}} {{word:na3}}-{{word:li3}}? (Where are you?)",
     ru: "{{word:na3}}-{{word:li3}} — где: {{Word:ni3}} {{word:zai4}} {{word:na3}}-{{word:li3}}? (Где ты?)",
   },

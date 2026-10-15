@@ -56,6 +56,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "verb-result",
     en: "{{word:jin4}} / {{word:chu1}} / {{word:hui2}} + {{word:lai2}} / {{word:qu4}}, in / out / back: {{Word:ni3}} {{word:jin4}}-{{word:lai2}}! (Come in!) {{Word:wo3}} {{word:yao4}} {{word:hui2}} {{word:jia1}}. (I want to go home.) {{word:tong1}}-{{word:guo4}} + place, go through; {{word:tong1}}-{{word:dao4}} + place, lead to: {{Word:zhe4}}-ge {{word:lu4}} {{word:tong1}}-{{word:dao4}} {{word:wo3}}-{{word:de}} {{word:jia1}}. (This road leads to my home.)",
     ru: "{{word:jin4}} / {{word:chu1}} / {{word:hui2}} + {{word:lai2}} / {{word:qu4}} — внутрь / наружу / обратно: {{Word:ni3}} {{word:jin4}}-{{word:lai2}}! (Входи!) {{Word:wo3}} {{word:yao4}} {{word:hui2}} {{word:jia1}}. (Я хочу домой.) {{word:tong1}}-{{word:guo4}} + место — пройти через; {{word:tong1}}-{{word:dao4}} + место — вести туда: {{Word:zhe4}}-ge {{word:lu4}} {{word:tong1}}-{{word:dao4}} {{word:wo3}}-{{word:de}} {{word:jia1}}. (Эта дорога ведёт к моему дому.)",
   },

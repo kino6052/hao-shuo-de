@@ -47,6 +47,7 @@ export default lessonModule({
     necessity: { en: "Now you have more to compare.", ru: "Теперь вам есть что ещё сравнивать." },
   },
   info: {
+    pattern: "hen-adjective",
     en: "Thing + {{word:hen3}} + {{word:ying4}} / {{word:yuan2}} / {{word:gao1}}, how it feels or looks: {{Word:yue4}} {{word:hen3}} {{word:yuan2}}. (The moon is round.)",
     ru: "Вещь + {{word:hen3}} + {{word:ying4}} / {{word:yuan2}} / {{word:gao1}} — какая она на ощупь или на вид: {{Word:yue4}} {{word:hen3}} {{word:yuan2}}. (Луна круглая.)",
   },

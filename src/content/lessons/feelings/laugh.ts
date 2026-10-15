@@ -24,6 +24,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "le-done",
     en: "Who + {{word:xiao4}}, laugh or smile: {{Word:ta1}} {{word:xiao4}} {{word:le}}. (She smiled.)",
     ru: "Кто + {{word:xiao4}} — смеяться или улыбаться: {{Word:ta1}} {{word:xiao4}} {{word:le}}. (Она улыбнулась.)",
   },

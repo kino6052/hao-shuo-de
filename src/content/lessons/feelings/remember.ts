@@ -35,6 +35,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "svo",
     en: "Who + {{word:ji4}}-{{light:de2}} + person or thing, remember: {{Word:wo3}} {{word:ji4}}-{{light:de2}} {{word:ni3}}. (I remember you.)",
     ru: "Кто + {{word:ji4}}-{{light:de2}} + человек или вещь — помнить: {{Word:wo3}} {{word:ji4}}-{{light:de2}} {{word:ni3}}. (Я помню тебя.)",
   },

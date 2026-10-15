@@ -28,6 +28,7 @@ export default lessonModule({
     necessity: { en: "Now you can point at things.", ru: "Теперь вы можете указывать на вещи." },
   },
   info: {
+    pattern: "subject-predicate",
     en: "{{word:zhe4}}, this; {{word:na4}}, that. They work like nouns: {{Word:zhe4}}. (This.)",
     ru: "{{word:zhe4}} — это, {{word:na4}} — то. Они работают как существительные: {{Word:zhe4}}. (Это.)",
   },

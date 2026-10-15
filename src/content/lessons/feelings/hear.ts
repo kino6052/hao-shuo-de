@@ -32,6 +32,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "svo",
     en: "{{word:ting1}}-{{word:dao4}} + {{word:sheng1yin1}}, hear a sound: {{Word:wo3}} {{word:ting1}}-{{word:dao4}} {{word:yi3}}-{{word:qian2}}-{{word:mei2}}-{{word:ting1}}-{{word:guo4}}-{{word:de}} {{word:sheng1yin1}}. (I hear a sound I've never heard before.)",
     ru: "{{word:ting1}}-{{word:dao4}} + {{word:sheng1yin1}} — слышать звук: {{Word:wo3}} {{word:ting1}}-{{word:dao4}} {{word:yi3}}-{{word:qian2}}-{{word:mei2}}-{{word:ting1}}-{{word:guo4}}-{{word:de}} {{word:sheng1yin1}}. (Я слышу звук, которого раньше не слышал.)",
   },

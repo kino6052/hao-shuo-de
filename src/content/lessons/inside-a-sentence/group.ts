@@ -26,6 +26,7 @@ export default lessonModule({
     necessity: { en: "Now you can talk about many at once.", ru: "Теперь вы можете говорить о многих сразу." },
   },
   info: {
+    pattern: "hen-duo-noun",
     en: "{{word:hen3}}-{{word:duo1}} / {{word:zhe4}}-{{word:xie1}} / {{word:na4}}-{{word:xie1}} + noun, many: {{Word:hen3}}-{{word:duo1}} {{word:ren2}} {{word:zai4}} {{word:wai4}}-{{word:mian4}}. (A lot of people are outside.)",
     ru: "{{word:hen3}}-{{word:duo1}} / {{word:zhe4}}-{{word:xie1}} / {{word:na4}}-{{word:xie1}} + существительное — много: {{Word:hen3}}-{{word:duo1}} {{word:ren2}} {{word:zai4}} {{word:wai4}}-{{word:mian4}}. (На улице много людей.)",
   },

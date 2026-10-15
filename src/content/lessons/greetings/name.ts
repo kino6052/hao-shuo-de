@@ -36,6 +36,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "jiao-name",
     en: "{{word:jiao4}} + \"name\": {{Word:wo3}} {{word:jiao4}} \"Lisa\". (My name is Lisa.) {{Word:ni3}} {{word:jiao4}} {{word:shen2me}}? (What's your name?)",
     ru: "{{word:jiao4}} + \"имя\": {{Word:wo3}} {{word:jiao4}} \"Lisa\". (Меня зовут Лиза.) {{Word:ni3}} {{word:jiao4}} {{word:shen2me}}? (Как тебя зовут?)",
   },

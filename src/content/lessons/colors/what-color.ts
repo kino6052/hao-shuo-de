@@ -29,6 +29,7 @@ export default lessonModule({
     necessity: { en: "Now you can ask about colors.", ru: "Теперь вы можете спрашивать о цветах." },
   },
   info: {
+    pattern: "shenme-yanse",
     en: "{{word:shen2me}} {{word:yan2se4}}, what color: {{Word:ni3}}-{{word:de}} {{word:yi1fu}} {{word:shi4}} {{word:shen2me}} {{word:yan2se4}}? (What color are your clothes?)",
     ru: "{{word:shen2me}} {{word:yan2se4}} — какого цвета: {{Word:ni3}}-{{word:de}} {{word:yi1fu}} {{word:shi4}} {{word:shen2me}} {{word:yan2se4}}? (Какого цвета твоя одежда?)",
   },

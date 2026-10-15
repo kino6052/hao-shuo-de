@@ -36,6 +36,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "verb-result",
     en: "verb-{{word:lai2}} / verb-{{word:qu4}}, toward you / away: {{Word:ba3}} {{word:shui3}} {{word:na2}}-{{word:lai2}}! (Bring the water!)",
     ru: "глагол-{{word:lai2}} / глагол-{{word:qu4}} — к вам / от вас: {{Word:ba3}} {{word:shui3}} {{word:na2}}-{{word:lai2}}! (Принеси воду!)",
   },

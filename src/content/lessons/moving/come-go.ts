@@ -38,6 +38,7 @@ export default lessonModule({
     necessity: { en: "Now you can say where you're going.", ru: "Теперь вы можете сказать, куда идёте." },
   },
   info: {
+    pattern: "svo",
     en: "{{word:lai2}} / {{word:qu4}} + place: {{Word:wo3}} {{word:qu4}} {{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:jia1}}. (I'm going to my parents' home.)",
     ru: "{{word:lai2}} / {{word:qu4}} + место: {{Word:wo3}} {{word:qu4}} {{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:jia1}}. (Я иду домой к родителям.)",
   },

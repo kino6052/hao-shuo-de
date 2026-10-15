@@ -59,6 +59,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "mei-you-not-have",
     en: "{{word:mei2}}-{{word:you3}}, for \"don't have\": {{Word:wo3}} {{word:mei2}}-{{word:you3}} {{word:jin1}}. (I don't have money.)",
     ru: "{{word:mei2}}-{{word:you3}} — «нет, не иметь»: {{Word:wo3}} {{word:mei2}}-{{word:you3}} {{word:jin1}}. (У меня нет денег.)",
   },

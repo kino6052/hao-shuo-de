@@ -26,6 +26,7 @@ export default lessonModule({
     necessity: { en: "Now you can describe what you see.", ru: "Теперь вы можете описать то, что видите." },
   },
   info: {
+    pattern: "verb-de-thing",
     en: "Thing + {{word:shi4}} + color-{{word:de}}: {{Word:bao1}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}. (The bag is red.)",
     ru: "Вещь + {{word:shi4}} + цвет-{{word:de}}: {{Word:bao1}} {{word:shi4}} {{word:hong2}}-{{word:se4}}-{{word:de}}. (Сумка красная.)",
   },

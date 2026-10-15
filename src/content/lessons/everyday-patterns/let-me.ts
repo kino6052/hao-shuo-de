@@ -28,6 +28,7 @@ export default lessonModule({
     necessity: { en: "Now you can offer to do something.", ru: "Теперь вы можете вызваться что-то сделать." },
   },
   info: {
+    pattern: "lai-let-me",
     en: "{{word:wo3}} {{word:lai2}} + verb, let me: {{Word:wo3}} {{word:lai2}} {{word:na2}}. (Let me carry it.)",
     ru: "{{word:wo3}} {{word:lai2}} + глагол — давай я: {{Word:wo3}} {{word:lai2}} {{word:na2}}. (Давай я понесу.)",
   },

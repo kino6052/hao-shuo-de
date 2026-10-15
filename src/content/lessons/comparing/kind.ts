@@ -32,6 +32,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "measure-word",
     en: "{{word:zhe4}}-{{word:zhong3}} + noun, this kind of: {{word:zhe4}}-{{word:zhong3}} {{word:zhi2wu4}} (this kind of plant)",
     ru: "{{word:zhe4}}-{{word:zhong3}} + существительное — такой вид: {{word:zhe4}}-{{word:zhong3}} {{word:zhi2wu4}} (такие растения)",
   },

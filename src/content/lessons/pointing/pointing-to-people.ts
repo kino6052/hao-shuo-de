@@ -41,6 +41,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "subject-predicate",
     en: "{{word:wo3}}, I; {{word:ni3}}, you; {{word:ta1}}, he or she. They work like nouns: {{Word:ni3}}. (You.)",
     ru: "{{word:wo3}} — я, {{word:ni3}} — ты, {{word:ta1}} — он или она. Они работают как существительные: {{Word:ni3}}. (Ты.)",
   },

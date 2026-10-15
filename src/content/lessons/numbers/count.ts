@@ -34,6 +34,7 @@ export default lessonModule({
     necessity: { en: "Now you can say how many.", ru: "Теперь вы можете сказать, сколько." },
   },
   info: {
+    pattern: "measure-word",
     en: "number + {{word:ge4}} + noun: {{Word:san1}}-ge {{word:ren2}} (three people). For two things, {{word:liang3}}-ge.",
     ru: "число + {{word:ge4}} + существительное: {{Word:san1}}-ge {{word:ren2}} (три человека). Для двух вещей — {{word:liang3}}-ge.",
   },

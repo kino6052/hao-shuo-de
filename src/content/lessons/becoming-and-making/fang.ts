@@ -29,6 +29,7 @@ export default lessonModule({
     necessity: { en: "Now you can say where things go.", ru: "Теперь вы можете сказать, куда что положить." },
   },
   info: {
+    pattern: "ba-handle",
     en: "{{word:ba3}} + thing + {{word:fang4}} {{word:zai4}} + place, put: {{Word:wo3}} {{word:ba3}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:di4}}-{{word:shang4}} {{word:le}}. (I put the clothes on the floor.)",
     ru: "{{word:ba3}} + вещь + {{word:fang4}} {{word:zai4}} + место — положить: {{Word:wo3}} {{word:ba3}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:di4}}-{{word:shang4}} {{word:le}}. (Я положил одежду на пол.)",
   },

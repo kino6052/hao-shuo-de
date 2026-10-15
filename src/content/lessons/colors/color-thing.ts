@@ -47,6 +47,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "de-modifier",
     en: "color-{{word:de}} + noun: {{word:hong2}}-{{word:se4}}-{{word:de}} {{word:bao1}} (a red bag)",
     ru: "цвет-{{word:de}} + существительное: {{word:hong2}}-{{word:se4}}-{{word:de}} {{word:bao1}} (красная сумка)",
   },

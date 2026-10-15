@@ -29,6 +29,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "gei-me-turn",
     en: "{{word:gei3}} {{word:wo3}} + verb + {{word:yi1}}-{{word:xia4}}, let me have a turn: {{Word:gei3}} {{word:wo3}} {{word:kan4}} {{word:yi1}}-{{word:xia4}}. (Let me take a look.)",
     ru: "{{word:gei3}} {{word:wo3}} + глагол + {{word:yi1}}-{{word:xia4}} — дай мне попробовать: {{Word:gei3}} {{word:wo3}} {{word:kan4}} {{word:yi1}}-{{word:xia4}}. (Дай посмотреть.)",
   },
