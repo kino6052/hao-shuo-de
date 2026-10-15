@@ -33,6 +33,7 @@
     "check-grammar": "node scripts/check-grammar.js",
     "check-practice": "node scripts/check-practice.js",
     "check-example-runs": "node scripts/check-example-runs.js",
+    "check-story-images": "node scripts/check-story-images.js",
     "check-word-builder": "node scripts/check-word-builder.js",
     "check-passive": "node scripts/check-passive.js",
     "report-heads": "node scripts/report-heads.js",

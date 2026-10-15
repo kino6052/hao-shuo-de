@@ -5,13 +5,14 @@ import { lessonNumber, BACK_MATTER_IDS } from '../content/book.js';
 
 const mdModules = import.meta.glob('../content/*.md', { eager: true });
 const chapterModules = import.meta.glob('../content/*.{yaml,yml}', { eager: true });
-// Lessons live one per folder (../content/lessons/<id>/index.ts), while
-// other *.ts chapters (intro-*) sit flat directly in content/. Only
+// Lessons live one per folder (../content/lessons/<id>/index.ts), and so do
+// the intros (../content/intros/<id>/index.ts); other *.ts chapters (the
+// appendices, the phrase book) sit flat directly in content/. Only
 // index.ts is a chapter module -- a lesson folder's module files and
 // practice.ts (see src/lib/lesson.ts) are its building blocks, not separate
 // chapters, so the glob must not also pick those up.
 const lessonModules = import.meta.glob('../content/lessons/*/index.ts', { eager: true });
-const flatTsModules = import.meta.glob('../content/*.ts', { eager: true });
+const flatTsModules = import.meta.glob(['../content/*.ts', '../content/intros/*/index.ts'], { eager: true });
 
 const TYPE_ORDER = { intro: 0, lesson: 1, dictionary: 3, "sentence-builder": 3.5, "word-builder": 3.6, "word-map": 3.7, appendix: 4 };
 const LANGS = ['eng', 'rus', 'zh'];

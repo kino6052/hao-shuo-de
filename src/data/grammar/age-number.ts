@@ -10,6 +10,7 @@ export default pattern("age-number", {
   rules: [
     { lhs: "S", hsd: "Person Num", eng: "a person and a number: I am twenty" },
   ],
+  taught: "time-and-sums/age",
   examples: [
     ["Jīn-nián wǒ èr-shí.", "I'm twenty this year."],
   ],

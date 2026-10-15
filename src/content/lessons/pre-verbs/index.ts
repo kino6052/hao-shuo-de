@@ -11,6 +11,7 @@ import learn from "./learn.ts";
 import knowHow from "./know-how.ts";
 import love from "./love.ts";
 import maybe from "./maybe.ts";
+import knowThat from "./know-that.ts";
 
 export const meta = {
   id: "pre-verbs",
@@ -34,6 +35,7 @@ export default lesson(meta.id, {
     can,
     learn,
     knowHow,
+    knowThat,
     love,
     maybe,
   ],

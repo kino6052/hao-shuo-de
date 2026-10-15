@@ -46,15 +46,15 @@ Plans and decisions: [BOOK_PLAN.md](BOOK_PLAN.md) (book, decision log D1…), [K
 | --- | --- |
 | Lessons | 26, in 3 sections (6 / 10 / 10), then 14 chapters to read, look things up in or build with |
 | Core words | 230: 53 atoms (no honest description) and 177 with a paraphrase, so potentially removable |
-| Composite words | 1555, with 1932 ways to say them (1822 built from their parts, 90 spelled whole, 20 waiting for the author to say which) |
+| Composite words | 1555, with 1933 ways to say them (1822 built from their parts, 90 spelled whole, 21 waiting for the author to say which) |
 | Grammar patterns | 139, one file each in `src/data/grammar/` |
 | Things the language must say | 113: 65 atoms of meaning, 10 categories, 38 grammar points |
 | Lesson sentences that parse | 99.3 % |
 | Smallest set the others can be said from | 202 words; the other 28 have a fine paraphrase |
-| Gates (`npm run check`) | 17 |
-| Test files (`npm test`) | 44 |
+| Gates (`npm run check`) | 18 |
+| Test files (`npm test`) | 45 |
 
-The language numbers are the last row of `kb/scoreboard.csv` (2026-10-15, refactors/K5.ts: 45 op(s)); a refactor adds a new row.
+The language numbers are the last row of `kb/scoreboard.csv` (2026-10-15, refactors/H1.ts: 2 op(s)); a refactor adds a new row.
 <!-- /generated:facts -->
 
 ## The book
@@ -169,6 +169,7 @@ While `dev` runs, two pages are served on the same address:
 | `src/` | The app: Preact components, the book's content, the language data and the shared libraries. |
 | `src/components/` | Preact components, each with its own .module.css. |
 | `src/content/` | The book: one folder per lesson, the intro and appendix chapters, and the dictionary pages. book.js sets the order. |
+| `src/content/intros/` | One folder per intro: index.ts lists its sections in reading order, and each section is one stretch of text, in every language, with its picture and examples. |
 | `src/content/lessons/` | One folder per lesson: index.ts lists its modules in reading order, and each module is one teaching point in every language. |
 | `src/data/` | The language itself and the source of truth: words, composites, coverage, grammar patterns and the maps between them. |
 | `src/data/composites/` | One file per composite word: its forms (best first), head, how close it is to Mandarin, and examples. |
@@ -194,6 +195,7 @@ The shapes of the data are defined in TypeScript, so a mistake is a type error:
 | `src/lib/coverage-kb.ts` | The coverage knowledge base (src/data/coverage/): what Hao-shuo-de must always be able to say, one file per group (atoms of meaning, Aristotle's categories… |
 | `src/lib/data-maps.ts` | The associative maps in src/data/maps/: how words relate, kept out of the word files so a relation change is one line here and a word change never has to sweep through them. |
 | `src/lib/grammar-pattern.ts` | A grammar pattern: one way of putting words together, written once as data (KB_PLAN.md §3). |
+| `src/lib/intro.ts` | Intros are built like lessons: a folder with an index.ts (title, summary, the sections in reading order) and one file per section. |
 | `src/lib/lesson.ts` | Lessons are assembled from small modules, one file each, so a point can be added, moved to another lesson, or dropped by touching one file and one line of its lesson's index.ts. |
 | `src/lib/word.ts` | A dictionary word: one file each, src/data/words/<id>.ts, holding only what the word itself is (its sound, hanzi, part of speech, definition, and why the core needs it). |
 <!-- /generated:shapes -->
@@ -254,6 +256,7 @@ The summaries come from the comment at the top of each script, which also shows 
 | `node scripts/check-forms.js` | Composite-description gate (KB_PLAN.md phase 4, K7): the patterns read every description of the composite dictionary that is more than one word. |
 | `npm run check-practice` | Practice gate: in every lesson, each word the lesson introduces appears in at least one of its example sentences AND in at least one exercise (its answer -- exercise prompts are English). |
 | `npm run check-example-runs` | Example-run gate: a lesson never shows more than MAX_EXAMPLES_IN_A_ROW example sentences in a row (scripts/limits.js), so a reader isn't buried in examples. |
+| `npm run check-story-images` | Story-picture gate (MASCOT_PLAN.md §5, §9): every picture of the book's story (an `image` entry in a lesson or an intro) is a real file in public/story/, is named after its chapter, has a caption… |
 | `npm run check-word-builder` | Word Builder gate for the composite dictionary (src/data/composites/): every description the Word Builder can read is written the way it writes it, with matching hanzi… |
 | `npm run check-passive` | Passive gate: Hao-shuo-de says the passive the spoken way, with ràng (X ràng Y + verb: wǒ-de bāo ràng tā ná-zǒu le), never with 被 / bèi (the author's rule, review batch 10). |
 <!-- /generated:gates -->

@@ -10,6 +10,7 @@ export default pattern("shuo-bu-say-no", {
   rules: [
     { lhs: "VerbP", hsd: "=shuo1 bu4", eng: "shuō bù, says no" },
   ],
+  taught: "questions/say-no",
   examples: [
     ["Tā shuō bù.", "He says no."],
   ],

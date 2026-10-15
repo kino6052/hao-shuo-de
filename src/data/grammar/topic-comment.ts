@@ -10,6 +10,7 @@ export default pattern("topic-comment", {
   rules: [
     { lhs: "S", hsd: "NP S", eng: "a topic, then a sentence about it" },
   ],
+  taught: "questions/thing-first",
   examples: [
     ["Wǒ bàba shēntǐ hěn hǎo.", "My dad is healthy."],
     ["Shénme wǒ dōu yào.", "No matter what, I want it."],

@@ -55,4 +55,21 @@ describe('lesson', () => {
   test('a module listed twice is an error', () => {
     expect(() => lesson('x', { title: { en: 'X' }, summary: { en: 'S' }, modules: [seems, seems] })).toThrow('listed twice');
   });
+
+  test('pictures: the first is named after the lesson and follows the summary; one marked "end" closes the lesson', () => {
+    const pic = { alt: { en: 'A cat.' }, pinyin: 'miāo', hanzi: '喵', en: 'Meow.' };
+    const out = lesson('greetings', {
+      title: { en: 'G' }, summary: { en: 'S.' },
+      images: [pic, { ...pic, file: 'greetings-tea', at: 'end' }],
+      modules: [seems],
+    });
+    expect(out.map((e) => e.key)).toEqual(['title', 'summary', 'image', 'seems.prose', 'seems.info', 'seems.exercise1', 'seems.answer1', 'image2']);
+    expect(out[2]).toMatchObject({ type: 'image', file: 'greetings', pinyin: 'miāo', ttsText: '喵', en: ['Meow.'], alt: { en: ['A cat.'], ru: [], zh: [] } });
+    expect(out[7]).toMatchObject({ type: 'image', file: 'greetings-tea' });
+  });
+
+  test('a second picture needs its own file name', () => {
+    const pic = { alt: { en: 'A.' }, pinyin: 'a', hanzi: '啊', en: 'Ah.' };
+    expect(() => lesson('x', { title: { en: 'X' }, summary: { en: 'S' }, images: [pic, pic], modules: [seems] })).toThrow('needs a file name');
+  });
 });

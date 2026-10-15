@@ -11,6 +11,7 @@ export default pattern("da-xiao-size", {
     { lhs: "NP", hsd: "=da4 =xiao3", eng: "dà-xiǎo, the size" },
     { lhs: "ModNP", hsd: "Mod =da4 =xiao3", eng: "whose size: the size of your body" },
   ],
+  taught: "comparing/size",
   examples: [
     ["Wǒ bù zhīdào wǒ shēntǐ de dà-xiǎo.", "I don't know the size of my body."],
   ],

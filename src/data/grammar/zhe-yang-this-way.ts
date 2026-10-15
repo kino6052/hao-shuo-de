@@ -10,6 +10,7 @@ export default pattern("zhe-yang-this-way", {
   rules: [
     { lhs: "Manner", hsd: "=zhe4 =yang4", eng: "zhè-yàng, in this way" },
   ],
+  taught: "roles-of-a-word/this-way",
   examples: [
     ["Nǐ zhè yàng zuò.", "Do it like this."],
   ],

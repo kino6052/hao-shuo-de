@@ -5,7 +5,9 @@
 // have, with the block and sentence it's in. The rules for what counts as
 // "using" a word are in scripts/early-words.js. It fails for problems in the
 // blocking lessons (scripts/finished-lessons.js: the finished lessons, or the
-// lessons you name, or every lesson with --strict), and reports the rest.
+// lessons you name, or every lesson with --strict), and reports the rest. The
+// intros are checked too: a pinyin word in one that is not in the dictionary
+// always fails.
 //
 //   npm run check-early-words                          # every lesson; fails for finished ones
 //   npm run check-early-words -- who-does-what questions   # only these lessons; fails for them
@@ -15,7 +17,8 @@
 import { readFileSync, readdirSync } from 'fs';
 import { resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
-import { findEarlyWords } from './early-words.js';
+import { findEarlyWords, findUnknownWordsInIntros } from './early-words.js';
+import { INTRO_IDS, importIntroFile } from './intros.js';
 import { gatePolicy } from './finished-lessons.js';
 import { LESSON_IDS, lessonNumber, importLessonFile } from './lessons.js';
 import dictionaryData from '../src/data/dictionary.ts';
@@ -43,6 +46,25 @@ if (unknown.length) {
 }
 const reported = lessons.filter((l) => named.length === 0 || named.includes(l.id));
 const { problems } = findEarlyWords(lessons, dictionary);
+
+// The intros come first, so nothing in them is "early", but a pinyin word that
+// is not in the dictionary is still a problem, and always blocks.
+const introsLoaded = [];
+for (const id of INTRO_IDS) introsLoaded.push({ id, entries: await importIntroFile(id, 'index.ts') });
+const introProblems = findUnknownWordsInIntros(introsLoaded, dictionary);
+if (named.length === 0) {
+  for (const intro of introsLoaded) {
+    const list = introProblems.filter((p) => p.lesson === intro.id);
+    if (!list.length) continue;
+    const words = [...new Set(list.map((p) => `${p.word} (not in the dictionary)`))];
+    console.log(`\n${intro.id}: ${list.length} use(s) of ${words.length} word(s) -- ${words.join(', ')}  ✗ blocking`);
+    for (const p of list) console.log(`  ${p.key}  [${p.word}]  "${p.text.replace(/\s+/g, ' ').slice(0, 110)}"`);
+  }
+  if (introProblems.length) {
+    console.error('\ncheck-early-words: pinyin words in an intro that are not in the dictionary.');
+    process.exit(1);
+  }
+}
 const mine = problems.filter((p) => reported.some((l) => l.id === p.lesson));
 
 const LABEL = {

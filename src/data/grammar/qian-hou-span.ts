@@ -14,6 +14,7 @@ export default pattern("qian-hou-span", {
     { lhs: "NP", hsd: "=qian2 Count @measure_word @noun", eng: "qián and a counted span: the one before" },
     { lhs: "NP", hsd: "=hou4 Count @measure_word @noun", eng: "hòu and a counted span: the one after" },
   ],
+  taught: "numbers/before-after",
   examples: [
     ["Wǒ qián yī-ge rì zài jiā.", "The day before, I was at home."],
     ["Hòu shí-èr-ge yuè wǒ huí jiā.", "In the twelve months after, I go home."],

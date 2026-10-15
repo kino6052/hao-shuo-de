@@ -350,9 +350,9 @@ const PARTS = {
     async 'book-tree'() {
       const { SECTIONS, BACK_MATTER, lessonNumber, titleOf, get } = await bookParts();
       const byId = chapterFiles();
-      const intros = files('src/content', /^intro-\d+\.ts$/).map((f) => f.replace(/\.ts$/, ''));
+      const intros = files('src/content/intros', /^intro-\d+$/).sort((a, b) => a.slice(6) - b.slice(6));
       const groups = [
-        { title: 'Introduction', items: intros.map((id, i) => [`${i + 1}. ${titleOf(id)}`, `${id}.ts`]) },
+        { title: 'Introduction', items: intros.map((id, i) => [`${i + 1}. ${titleOf(id)}`, `intros/${id}/`]) },
         ...SECTIONS.map((s, i) => ({
           title: `Section ${i + 1} — ${get(s.key)}`,
           items: s.lessons.map((id) => [`${lessonNumber(id)}. ${titleOf(id)}`, `lessons/${id}/`]),

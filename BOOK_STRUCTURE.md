@@ -10,9 +10,10 @@ The tree below is written by `npm run readme` from `book.js`, the chapters' titl
 ```
 Hǎo-shuō-de
 ├── Introduction
-│   ├── 1. intro-1                                          intro-1.ts
-│   ├── 2. intro-2                                          intro-2.ts
-│   └── 3. intro-3                                          intro-3.ts
+│   ├── 1. intro-1                                          intros/intro-1/
+│   ├── 2. intro-2                                          intros/intro-2/
+│   ├── 3. intro-3                                          intros/intro-3/
+│   └── 4. intro-4                                          intros/intro-4/
 │
 ├── Section 1 — Sounds, Words, and Simple Sentences
 │   ├── 1. Sounds and Symbols                               lessons/sounds-and-symbols/

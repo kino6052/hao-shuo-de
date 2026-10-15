@@ -10,6 +10,7 @@ export default pattern("mei-guanxi", {
   rules: [
     { lhs: "VP", hsd: "mei2 =guan1xi", eng: "méi guānxi, never mind" },
   ],
+  taught: "greetings/never-mind",
   examples: [
     ["Méi guānxi, wǒ bù pà.", "Never mind, I am not afraid."],
   ],

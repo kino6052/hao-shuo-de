@@ -16,6 +16,7 @@ import { fileURLToPath, pathToFileURL } from 'url';
 import { parse as parseYaml } from 'yaml';
 import { SUMMARY_MAX_WORDS, countWords } from './limits.js';
 import { LESSON_IDS, lessonNumber, importLessonFile } from './lessons.js';
+import { INTRO_IDS, importIntroFile } from './intros.js';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const CONTENT_DIR = resolve(__dirname, '../src/content');
@@ -33,6 +34,11 @@ for (const file of readdirSync(CONTENT_DIR).filter((f) => f.endsWith('.ts')).sor
   if (!wanted(id)) continue;
   const entries = (await import(pathToFileURL(resolve(CONTENT_DIR, file)))).default;
   const summary = entries.find((e) => e.type === 'summary');
+  chapters.push({ id, summary: summary ? summary.en.join(' ') : null, required: false });
+}
+for (const id of INTRO_IDS) {
+  if (!wanted(id)) continue;
+  const summary = (await importIntroFile(id)).find((e) => e.type === 'summary');
   chapters.push({ id, summary: summary ? summary.en.join(' ') : null, required: false });
 }
 for (const id of LESSON_IDS) {

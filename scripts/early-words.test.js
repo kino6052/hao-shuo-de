@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'bun:test';
-import { findEarlyWords, wordsIn, termIndex } from './early-words.js';
+import { findEarlyWords, findUnknownWordsInIntros, wordsIn, termIndex } from './early-words.js';
 
 // A tiny dictionary and book: lesson 2 introduces shì and rén, lesson 3
 // introduces hǎo and gè.
@@ -97,5 +97,15 @@ describe('wordsIn', () => {
   test('finds refs and tone-marked pinyin, skips sounds and names in pinyin fields', () => {
     const found = wordsIn('{{Word:ren2}} jiào "wang-wang", Lisa hǎo.', terms, { pinyinField: true });
     expect(found.map((f) => f.id ?? f.token)).toEqual(['ren2', 'jiào', 'hao3']);
+  });
+});
+
+describe('findUnknownWordsInIntros', () => {
+  const intros = (pinyin) => [{ id: 'intro-9', entries: [{ key: 'cat.image', type: 'image', pinyin, en: ['x'] }] }];
+  test('dictionary words, the names and refs are fine; any early use is fine too', () => {
+    expect(findUnknownWordsInIntros(intros('Wǒ shì Miāo-miao. Hǎo-shuō-de hǎo.'), { ...dictionary, wo3: { term: 'wǒ' } })).toEqual([]);
+  });
+  test('a pinyin word the dictionary lacks is flagged', () => {
+    expect(kinds(findUnknownWordsInIntros(intros('Wǒ shì māo.'), dictionary))).toEqual(['intro-9:not-in-dictionary:Wǒ', 'intro-9:not-in-dictionary:māo']);
   });
 });

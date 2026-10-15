@@ -271,6 +271,25 @@ describe('buildTsChapterView: flow', () => {
   });
 });
 
+describe('buildTsChapterView: image', () => {
+  const image = {
+    type: 'image', file: 'pointing', pinyin: 'zhè', en: ['This.'], ru: ['Это.'], zh: [],
+    alt: { en: ['A cat points.'], ru: ['Кошка показывает.'], zh: [] },
+  };
+
+  test('goes into the flow with its file, description and caption', () => {
+    const view = buildTsChapterView(meta, [image], 'eng');
+    expect(view.flow).toEqual([{ kind: 'image', items: [{ file: 'pointing', alt: 'A cat points.', pinyin: 'zhè', translation: 'This.', audioFile: undefined, ttsText: undefined }] }]);
+    expect(view.missingBlocks).toEqual([]);
+  });
+
+  test('without a description or caption in this language it is flagged, not shown', () => {
+    const view = buildTsChapterView(meta, [image], 'zh');
+    expect(view.flow).toEqual([]);
+    expect(view.missingBlocks).toEqual([0]);
+  });
+});
+
 describe('buildTsChapterView: unsupported entry type', () => {
   test('throws, naming the chapter id and the bad type', () => {
     const entries = [{ type: 'heading', en: ['x'], zh: [], ru: [] }];

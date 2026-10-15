@@ -11,6 +11,7 @@ import andOr from "./and-or.ts";
 import toward from "./toward.ts";
 import group from "./group.ts";
 import relation from "./relation.ts";
+import right from "./right.ts";
 
 export const meta = {
   id: "inside-a-sentence",
@@ -34,6 +35,7 @@ export default lesson(meta.id, {
     withPoint,
     andOr,
     toward,
+    right,
     group,
     relation,
   ],

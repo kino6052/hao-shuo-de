@@ -114,9 +114,27 @@ export interface Module {
   faq?: Faq[];
 }
 
+/**
+ * A story picture (public/story/<file>.webp). `pinyin` and `hanzi` are the
+ * caption in Hao-shuo-de, said by Miao-miao; the languages give its plain
+ * meaning; `alt` describes the picture. Without `file` the picture is named
+ * after the lesson. By default it sits right after the summary; `at: "end"`
+ * puts it after the last module.
+ */
+export interface LessonImage extends Localized {
+  alt: Localized;
+  pinyin: string;
+  hanzi: string;
+  file?: string;
+  at?: "start" | "end";
+  audioFile?: string;
+}
+
 export interface LessonParts {
   title: Localized;
   summary: Localized;
+  /** The lesson's story picture(s); the first one may leave out `file`. */
+  images?: LessonImage[];
   modules: Module[];
 }
 
@@ -128,7 +146,7 @@ export type LessonEntry = Entry & { module: string; key: string };
 export const lessonModule = (m: Module): Module => m;
 
 const list = (t: Text | undefined): string[] => (t === undefined ? [] : typeof t === "string" ? [t] : t);
-const langs = (t: Localized): LangText => ({ en: list(t.en), ru: list(t.ru), zh: list(t.zh) });
+export const langs = (t: Localized): LangText => ({ en: list(t.en), ru: list(t.ru), zh: list(t.zh) });
 
 function infoItems(items: InfoItem[]): EntryInfoItem[] {
   return items.map((item) => {
@@ -160,12 +178,24 @@ function answerText(ex: Exercise): LangText {
   return { en: q.en.length ? a : [], ru: q.ru.length ? a : [], zh: q.zh.length ? a : [] };
 }
 
+export function imageEntry(file: string, img: LessonImage): Entry {
+  return { type: "image", file, alt: langs(img.alt), pinyin: img.pinyin, audioFile: img.audioFile, ttsText: img.hanzi, ...langs(img) };
+}
+
 export function lesson(id: string, parts: LessonParts): LessonEntry[] {
   const out: LessonEntry[] = [];
   const add = (module: string, key: string, entry: Entry) => out.push({ ...entry, module, key });
 
   add("head", "title", { type: "title", ...langs(parts.title) });
   add("head", "summary", { type: "summary", ...langs(parts.summary) });
+
+  // The first picture is named after the lesson; any other names its own file.
+  const pictures = (parts.images ?? []).map((img, i) => {
+    const file = img.file ?? (i === 0 ? id : "");
+    if (!file) throw new Error(`lesson(${id}): picture ${i + 1} needs a file name`);
+    return { img, file, key: i === 0 ? "image" : `image${i + 1}` };
+  });
+  for (const p of pictures.filter((p) => p.img.at !== "end")) add("head", p.key, imageEntry(p.file, p.img));
 
   const seen = new Set<string>();
   for (const m of parts.modules) {
@@ -190,5 +220,6 @@ export function lesson(id: string, parts: LessonParts): LessonEntry[] {
     );
     (m.faq ?? []).forEach((f, i) => add(m.id, `${m.id}.faq${i + 1}`, { type: "faq", question: langs(f.question), ...langs(f) }));
   }
+  for (const p of pictures.filter((p) => p.img.at === "end")) add("head", p.key, imageEntry(p.file, p.img));
   return out;
 }

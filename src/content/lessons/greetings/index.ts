@@ -10,6 +10,8 @@ import hello from "./hello.ts";
 import thanks from "./thanks.ts";
 import name from "./name.ts";
 import order from "./order.ts";
+import calling from "./calling.ts";
+import neverMind from "./never-mind.ts";
 
 export const meta = {
   id: "greetings",
@@ -30,7 +32,9 @@ export default lesson(meta.id, {
   },
   modules: [
     hello,
+    calling,
     thanks,
+    neverMind,
     name,
     order,
   ],

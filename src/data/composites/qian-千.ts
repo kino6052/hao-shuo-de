@@ -10,10 +10,10 @@ export default composite({
   pos: "number",
   hsd: [
     "{{word:yi1}}-{{word:ling2}}-{{word:ling2}}-{{word:ling2}}",
-    "{{word:shi2}}-ge {{word:shi2}}-ge {{word:shi2}}",
+    "{{word:shi2}}-{{light:ge4}} {{word:shi2}}-{{light:ge4}}-{{word:de}} {{word:shi2}}-{{word:de}} {{word:shu4}}",
   ],
-  tts: ["一零零零", "十个十个十"],
-  literal: "one-zero-zero-zero / ten tens of tens",
+  tts: ["一零零零", "十个十个的十的数"],
+  literal: "one-zero-zero-zero / a number of ten tens of tens",
   fit: "plain",
   examples: [
     {
@@ -23,10 +23,10 @@ export default composite({
       ru: "Это стоит тысячу.",
     },
     {
-      pinyin: "{{Word:shi2}}-{{light:ge4}} {{word:shi2}}-{{light:ge4}} {{word:shi2}} {{word:shi4}} {{word:yi1}}-{{word:ling2}}-{{word:ling2}}-{{word:ling2}}.",
-      hanzi: "十个十个十是一零零零。",
-      en: "Ten tens of tens make a thousand.",
-      ru: "Десять раз по сто — это тысяча.",
+      pinyin: "{{Word:shi2}}-{{light:ge4}} {{word:shi2}}-{{light:ge4}}-{{word:de}} {{word:shi2}}-{{word:de}} {{word:shu4}} {{word:shi4}} {{word:yi1}}-{{word:ling2}}-{{word:ling2}}-{{word:ling2}}.",
+      hanzi: "十个十个的十的数是一零零零。",
+      en: "A number of ten tens of tens is a thousand.",
+      ru: "Число из десяти по десять десятков — это тысяча.",
     },
   ],
 });

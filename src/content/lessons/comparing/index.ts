@@ -11,6 +11,7 @@ import same from "./same.ts";
 import different from "./different.ts";
 import kind from "./kind.ts";
 import shapeFeel from "./shape-feel.ts";
+import size from "./size.ts";
 
 export const meta = {
   id: "comparing",
@@ -36,5 +37,6 @@ export default lesson(meta.id, {
     different,
     kind,
     shapeFeel,
+    size,
   ],
 });

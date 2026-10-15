@@ -10,6 +10,7 @@ export default pattern("you-xie-some", {
   rules: [
     { lhs: "NP", hsd: "=you3 =xie1 @noun", eng: "yǒu-xiē and a noun: some people" },
   ],
+  taught: "how-much/some",
   examples: [
     ["Yǒu-xiē rén bù lái.", "Some people aren't coming."],
   ],

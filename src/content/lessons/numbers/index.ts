@@ -12,6 +12,7 @@ import countAlone from "./count-alone.ts";
 import countKinds from "./count-kinds.ts";
 import teens from "./teens.ts";
 import label from "./label.ts";
+import beforeAfter from "./before-after.ts";
 
 export const meta = {
   id: "numbers",
@@ -37,5 +38,6 @@ export default lesson(meta.id, {
     countKinds,
     teens,
     label,
+    beforeAfter,
   ],
 });

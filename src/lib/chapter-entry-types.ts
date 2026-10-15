@@ -25,6 +25,21 @@ export interface ExampleEntry extends LangText {
   audioFile?: string;
   ttsText?: string;
 }
+/**
+ * A picture of the book's story (public/story/<file>.webp). The caption is a
+ * sentence the chapter teaches, written like an example: `pinyin` is Miao-miao's
+ * line in Hao-shuo-de, the languages are its plain meaning. `alt` describes the
+ * picture for a screen reader.
+ */
+export interface ImageEntry extends LangText {
+  type: 'image';
+  /** The file's name under public/story/, without .webp: the lesson id, or intro-N. */
+  file: string;
+  alt: LangText;
+  pinyin: string;
+  audioFile?: string;
+  ttsText?: string;
+}
 export interface ExerciseEntry extends LangText { type: 'exercise' }
 export interface AnswerEntry extends LangText {
   type: 'answer';
@@ -60,6 +75,7 @@ export type Entry =
   | ProseEntry
   | VocabEntry
   | ExampleEntry
+  | ImageEntry
   | ExerciseEntry
   | AnswerEntry
   | InfoEntry

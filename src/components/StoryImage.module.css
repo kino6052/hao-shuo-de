@@ -1,0 +1,44 @@
+.figure {
+  margin: 8px 0 20px;
+  padding: 0;
+}
+
+/* The pictures are black lines on white. Multiplying with the page lets the
+   page colour show through the white; the lines stay black. */
+.picture {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 12px;
+  mix-blend-mode: multiply;
+}
+
+/* Dark theme: turn the lines white and the paper black (the hue turn keeps the
+   accent colour its own colour), then screen it onto the page. */
+:global(:root[data-theme="dark"]) .picture {
+  filter: invert(1) hue-rotate(180deg);
+  mix-blend-mode: screen;
+}
+
+.caption {
+  max-width: 640px;
+  margin: 10px auto 0;
+}
+
+.caption > div > div {
+  margin-bottom: 0;
+}
+
+/* Paper is white: no inversion, no blending. */
+@media print {
+  .picture,
+  :global(:root[data-theme="dark"]) .picture {
+    filter: none;
+    mix-blend-mode: normal;
+  }
+  .figure {
+    break-inside: avoid;
+  }
+}

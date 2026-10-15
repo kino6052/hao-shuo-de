@@ -8,5 +8,6 @@ export default pattern("yi-qi-together", {
   covers: [],
   template: { hsd: "Who + {{word:yi1}}-{{word:qi3}} + verb", eng: "Who does the verb together" },
   rules: [{ lhs: "VP", hsd: "=yi1 =qi3 VP", eng: "yī-qǐ, then what is done: together" }],
+  taught: "also-and-all/together",
   examples: [["Wǒ-men yī-qǐ chī.", "We eat together."]],
 });

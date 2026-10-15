@@ -8,6 +8,7 @@ import { lesson } from "../../../lib/lesson.ts";
 import doPoint from "./do.ts";
 import not from "./not.ts";
 import have from "./have.ts";
+import hearSee from "./hear-see.ts";
 
 export const meta = {
   id: "who-does-what",
@@ -28,6 +29,7 @@ export default lesson(meta.id, {
   },
   modules: [
     doPoint,
+    hearSee,
     not,
     have,
   ],

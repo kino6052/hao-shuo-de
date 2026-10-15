@@ -9,6 +9,8 @@ import because from "./because.ts";
 import but from "./but.ts";
 import ifPoint from "./if.ts";
 import then from "./then.ts";
+import only from "./only.ts";
+import asSoonAs from "./as-soon-as.ts";
 
 export const meta = {
   id: "linking-sentences",
@@ -32,5 +34,7 @@ export default lesson(meta.id, {
     but,
     ifPoint,
     then,
+    only,
+    asSoonAs,
   ],
 });

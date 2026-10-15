@@ -10,6 +10,7 @@ export default pattern("yi-jiu-asap", {
   rules: [
     { lhs: "VP", hsd: "=yi1 VP =jiu4 VP", eng: "yī, a verb, jiù, and a verb" },
   ],
+  taught: "linking-sentences/as-soon-as",
   examples: [
     ["Nà-gè yī kàn jiù zhīdào.", "That is obvious."],
   ],

@@ -12,6 +12,7 @@ export default pattern("perceive-doing", {
     { lhs: "Sense", hsd: "=kan4", eng: "kàn, see" },
     { lhs: "VerbP", hsd: "Sense NP VP", eng: "hear or see someone, and what they do" },
   ],
+  taught: "who-does-what/hear-see",
   examples: [
     ["Wǒ tīng nǐ shuō.", "I hear you speak."],
     ["Wǒ ài tīng nǐ shuō.", "I love listening to you talk."],

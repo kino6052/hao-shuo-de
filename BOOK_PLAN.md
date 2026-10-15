@@ -1,6 +1,6 @@
 # Book Plan — Restructure to intro-3
 
-Living plan and checklist for rebuilding the lessons to match `src/content/intro-3.ts`. Tick boxes as work lands. `BOOK_STRUCTURE.md` describes the book as it _is_. This file describes where it's _going_.
+Living plan and checklist for rebuilding the lessons to match `src/content/intros/intro-3/`. Tick boxes as work lands. `BOOK_STRUCTURE.md` describes the book as it _is_. This file describes where it's _going_.
 
 ---
 
@@ -247,7 +247,7 @@ Approved (D23). It can still be adjusted as each lesson is written, but the rule
 | feelings | Feelings | — | shēngyīn | jué, dìng, jì, xīn | — | **5** | 228 / 230 | 99% |
 | doubling-words | Doubling Words | — | — | — | — | **0** | 228 / 230 | 99% |
 | everyday-patterns | Everyday Patterns | — | — | bāng, ràng | — | **2** | 230 / 230 | 100% |
-| | **Total** | **63** | **31** | **136** | | **230** | | |
+| | **Total** | **65** | **32** | **133** | | **230** | | |
 
 **By section:**
 

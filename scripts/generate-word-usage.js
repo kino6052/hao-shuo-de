@@ -33,14 +33,14 @@ const OUT_PATH = resolve(ROOT, 'src/data/word-usage.json');
 // Content that actually teaches/uses vocabulary. Intro chapters and the
 // dictionary's own pages are excluded -- they don't "use" words pedagogically,
 // and including the dictionary would make every word trivially self-referential.
-const EXCLUDE_PREFIXES = ['intro-', 'dictionary'];
+const EXCLUDE_PREFIXES = ['intros/', 'dictionary'];
 
 
 function isTrackedFile(filename) {
   if (!filename.endsWith('.md') && !filename.endsWith('.yaml') && !filename.endsWith('.yml') && !filename.endsWith('.ts')) return false;
   // A lesson folder's module files and practice.ts (see src/lib/lesson.ts)
   // are its building blocks, not separate chapters -- only index.ts (or a
-  // flat file like intro-1.ts) is one.
+  // flat file like phrase-book.ts) is one.
   if (filename.endsWith('.ts') && filename.includes('/') && !filename.endsWith('/index.ts')) return false;
   return !EXCLUDE_PREFIXES.some((prefix) => filename.startsWith(prefix));
 }

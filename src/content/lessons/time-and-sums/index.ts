@@ -10,6 +10,8 @@ import daysYears from "./days-years.ts";
 import little from "./little.ts";
 import addTake from "./add-take.ts";
 import timesShare from "./times-share.ts";
+import age from "./age.ts";
+import price from "./price.ts";
 
 export const meta = {
   id: "time-and-sums",
@@ -31,7 +33,9 @@ export default lesson(meta.id, {
   modules: [
     clock,
     daysYears,
+    age,
     little,
+    price,
     addTake,
     timesShare,
   ],

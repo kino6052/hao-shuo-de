@@ -21,8 +21,8 @@ import { wordRefIds, wordRefRe, soleWordRef } from '../src/lib/word-refs.js';
 import { refSenses, senseKey } from '../src/lib/senses.js';
 
 const TONE_MARK_RE = /[āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ]/i;
-// The book's own name is not vocabulary.
-const NAME_RE = /h[aǎ]o-shu[oō]-de/gi;
+// The book's own name and its mascot's are not vocabulary.
+const NAME_RE = /h[aǎ]o-shu[oō]-de|mi[aā]o-mi[aā]o/gi;
 // Toneless spellings of dictionary words, as they appear inside compounds.
 const TONELESS_FORMS = { ge: 'ge4' };
 // Toneless pinyin words that are real Mandarin but not in the dictionary, so
@@ -61,7 +61,7 @@ function textsOf(entry) {
   const add = (text, pinyinField = false) => { if (typeof text === 'string' && text) out.push({ text, pinyinField }); };
   const addAll = (arr, pinyinField = false) => (arr ?? []).forEach((t) => add(t, pinyinField));
   if (entry.type === 'vocab') { addAll(entry.en); return out; } // the term itself is the introduction
-  if (entry.type === 'example' || entry.type === 'story') add(entry.pinyin, true);
+  if (entry.type === 'example' || entry.type === 'story' || entry.type === 'image') add(entry.pinyin, true);
   addAll(entry.en, entry.type === 'answer');
   addAll(entry.tldr?.en);
   addAll(entry.necessity?.en);
@@ -94,6 +94,24 @@ export function introductions(lessons) {
     }
   }
   return first;
+}
+
+// The intros come before every lesson, so no dictionary word is "early" in
+// them; but any pinyin word in them (a caption, an example, a blurb) must
+// still be a dictionary word. -> [{ lesson, key, kind: 'not-in-dictionary', word, text }]
+export function findUnknownWordsInIntros(intros, dictionary) {
+  const terms = termIndex(dictionary);
+  const problems = [];
+  for (const intro of intros) {
+    for (const entry of intro.entries) {
+      for (const { text, pinyinField } of textsOf(entry)) {
+        for (const { id, token } of wordsIn(text, terms, { pinyinField })) {
+          if (!id || !dictionary[id]) problems.push({ lesson: intro.id, key: entry.key, kind: 'not-in-dictionary', word: id ?? token, text });
+        }
+      }
+    }
+  }
+  return problems;
 }
 
 export function findEarlyWords(lessons, dictionary) {

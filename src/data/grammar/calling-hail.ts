@@ -19,6 +19,7 @@ export default pattern("calling-hail", {
     { lhs: "Utt", hsd: "S @comma NP @comma S", eng: "a sentence, the thing it points at, and one more sentence" },
     { lhs: "Utt", hsd: "@quoted @comma S", eng: "a sound in quotes, then a sentence" },
   ],
+  taught: "greetings/calling",
   examples: [
     ["Māma, wǒ huí lái le!", "Mom, I'm back!"],
     ["Nǐ hǎo, nǐ shì xué-shēng ma?", "Hello, are you a student?"],

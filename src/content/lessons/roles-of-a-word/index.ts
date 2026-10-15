@@ -10,6 +10,7 @@ import person from "./person.ts";
 import how from "./how.ts";
 import name from "./name.ts";
 import parts from "./parts.ts";
+import thisWay from "./this-way.ts";
 
 export const meta = {
   id: "roles-of-a-word",
@@ -32,6 +33,7 @@ export default lesson(meta.id, {
     thing,
     person,
     how,
+    thisWay,
     name,
     parts,
   ],

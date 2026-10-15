@@ -29,6 +29,7 @@ import { parse as parseYaml } from 'yaml';
 import { findJargon, findCoreTerms } from './jargon.js';
 import { gatePolicy } from './finished-lessons.js';
 import { LESSON_IDS, lessonNumber, importLessonFile } from './lessons.js';
+import { INTRO_IDS, importIntroFile } from './intros.js';
 import dictionaryData from '../src/data/dictionary.ts';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
@@ -95,6 +96,13 @@ for (const file of readdirSync(CONTENT_DIR).filter((f) => f.endsWith('.ts')).sor
   checked.push(id);
   const entries = (await import(pathToFileURL(resolve(CONTENT_DIR, file)))).default;
   entries.forEach((entry, i) => walkEnglish(id, entry, `block ${i} (${entry.type})`));
+}
+
+// ---------- intros ----------
+for (const id of INTRO_IDS) {
+  if (!wanted(id)) continue;
+  checked.push(id);
+  (await importIntroFile(id)).forEach((entry, i) => walkEnglish(id, entry, `block ${i} (${entry.type})`));
 }
 
 // ---------- yaml chapters: appendices, sentence builder ----------

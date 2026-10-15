@@ -8,9 +8,12 @@ export default composite({
   en: "hundred",
   ru: "сто",
   pos: "number",
-  hsd: ["{{word:yi1}}-{{word:ling2}}-{{word:ling2}}", "{{word:shi2}}-ge {{word:shi2}}"],
-  tts: ["一零零", "十个十"],
-  literal: "one-zero-zero / ten tens",
+  hsd: [
+    "{{word:yi1}}-{{word:ling2}}-{{word:ling2}}",
+    "{{word:shi2}}-{{light:ge4}} {{word:shi2}}-{{word:de}} {{word:shu4}}",
+  ],
+  tts: ["一零零", "十个十的数"],
+  literal: "one-zero-zero / a number of ten tens",
   fit: "plain",
   examples: [
     {
@@ -20,10 +23,10 @@ export default composite({
       ru: "Это стоит сто.",
     },
     {
-      pinyin: "{{Word:shi2}}-{{light:ge4}} {{word:shi2}} {{word:shi4}} {{word:yi1}}-{{word:ling2}}-{{word:ling2}}.",
-      hanzi: "十个十是一零零。",
-      en: "Ten tens are a hundred.",
-      ru: "Десять десятков — это сто.",
+      pinyin: "{{Word:shi2}}-{{light:ge4}} {{word:shi2}}-{{word:de}} {{word:shu4}} {{word:shi4}} {{word:yi1}}-{{word:ling2}}-{{word:ling2}}.",
+      hanzi: "十个十的数是一零零。",
+      en: "A number of ten tens is a hundred.",
+      ru: "Число из десяти десятков — это сто.",
     },
   ],
 });

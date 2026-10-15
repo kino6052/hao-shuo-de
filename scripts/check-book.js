@@ -46,6 +46,7 @@ import { readFileSync, readdirSync, existsSync } from 'fs';
 import { resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { LESSON_IDS, lessonNumber, lessonFolders, lessonFile } from './lessons.js';
+import { INTRO_IDS, importIntroFile } from './intros.js';
 import { BACK_MATTER_IDS } from '../src/content/book.js';
 import { findJargon } from './jargon.js';
 import { SUMMARY_MAX_WORDS, TLDR_MAX_WORDS, MAX_SECTIONS_PER_LESSON, countWords } from './limits.js';
@@ -95,7 +96,7 @@ for (const id of LESSON_IDS.filter((id) => folders.includes(id))) {
 }
 
 {
-  const { LESSON_BLURBS, CHAPTER_BLURBS } = await import(pathToFileURL(resolve(CONTENT_DIR, 'intro-3.ts')));
+  const { LESSON_BLURBS, CHAPTER_BLURBS } = await import(pathToFileURL(resolve(CONTENT_DIR, 'intros/intro-3/index.ts')));
   for (const id of LESSON_IDS) if (!LESSON_BLURBS[id]?.en?.length) errors.push(`intro-3: no table-of-contents line for "${id}" (LESSON_BLURBS)`);
   for (const id of Object.keys(LESSON_BLURBS)) if (!LESSON_IDS.includes(id)) errors.push(`intro-3: LESSON_BLURBS has "${id}", which isn't in src/content/book.js`);
 
@@ -195,8 +196,9 @@ for (const lesson of lessons) {
     }
   });
 }
-for (const n of [1, 2, 3]) {
-  const entries = (await import(pathToFileURL(resolve(CONTENT_DIR, `intro-${n}.ts`)))).default;
+for (const id of INTRO_IDS) {
+  const n = id.replace('intro-', '');
+  const entries = await importIntroFile(id);
   entries.forEach((entry, i) => {
     if (entry.type === 'summary') checkShortLine(`intro-${n}`, 'summary', entry.en, SUMMARY_MAX_WORDS);
     if (entry.type === 'prose' && (entry.tldr || entry.necessity)) {

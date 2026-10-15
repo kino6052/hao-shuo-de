@@ -121,6 +121,7 @@ function renderInfoBlock(entry, lang, refs, onMissing) {
 //   { kind: 'html', items }        prose and info/warning blocks (HTML strings)
 //   { kind: 'examples', items }    example sentences
 //   { kind: 'story', items }       story lines
+//   { kind: 'image', items }       story pictures ({ file, alt, pinyin, translation, ... })
 //   { kind: 'exercise', start, questions, answers }
 //   { kind: 'faq', items }         questions and answers ({ question, answerHtml })
 // Answers pair with exercises by position across the whole chapter, so an
@@ -190,6 +191,20 @@ export function buildTsChapterView(meta, entries, lang, refs = {}) {
         if (entry.type === 'story') story.push(line);
         else examples.push(line);
         addToFlow(entry.type === 'story' ? 'story' : 'examples', line);
+        break;
+      }
+      case 'image': {
+        const translation = pick(entry, lang, refs);
+        const alt = pick(entry.alt, lang, refs);
+        if (translation === undefined || alt === undefined) { missingBlocks.push(index); break; }
+        addToFlow('image', {
+          file: entry.file,
+          alt,
+          pinyin: resolveField(entry.pinyin, refs),
+          translation,
+          audioFile: entry.audioFile,
+          ttsText: entry.ttsText,
+        });
         break;
       }
       case 'exercise': {

@@ -11,6 +11,7 @@ export default pattern("jiu-only", {
     { lhs: "VP", hsd: "=jiu4 NP", eng: "jiù and an amount: only one" },
     { lhs: "VP", hsd: "=jiu4 @adjective", eng: "jiù and a describing word: then it is fine" },
   ],
+  taught: "linking-sentences/only",
   examples: [
     ["Wǒ jiù yī-gè.", "I have only one."],
   ],

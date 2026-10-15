@@ -3,6 +3,7 @@ import { VocabGrid } from './VocabGrid.jsx';
 import { GrammarBlock } from './GrammarBlock.jsx';
 import { ExampleList } from './ExampleList.jsx';
 import { StoryBlock } from './StoryBlock.jsx';
+import { StoryImage } from './StoryImage.jsx';
 import { PracticeExercise } from './PracticeExercise.jsx';
 import { FaqSection } from './FaqSection.jsx';
 import styles from './LessonFlow.module.css';
@@ -20,6 +21,7 @@ export function LessonFlow({ flow, lang }) {
           {group.kind === 'html' && <GrammarBlock html={group.items.join('\n')} lang={lang} label={null} />}
           {group.kind === 'examples' && <ExampleList items={group.items} label={null} />}
           {group.kind === 'story' && <StoryBlock items={group.items} label={null} />}
+          {group.kind === 'image' && <StoryImage items={group.items} />}
           {group.kind === 'exercise' && (
             <PracticeExercise questions={group.questions} answers={group.answers} start={group.start} lang={lang} />
           )}

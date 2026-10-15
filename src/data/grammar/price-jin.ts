@@ -11,6 +11,7 @@ export default pattern("price-jin", {
     { lhs: "NP", hsd: "Num =jin1", eng: "a number and jīn: ten jīn" },
     { lhs: "NP", hsd: "hen3 =shao3 @noun", eng: "hěn shǎo and a noun: very little money" },
   ],
+  taught: "time-and-sums/price",
   examples: [
     ["Zhè-ge yào yī líng líng jīn.", "This costs a hundred."],
     ["Zhè-ge yào hěn shǎo jīn.", "This is cheap."],

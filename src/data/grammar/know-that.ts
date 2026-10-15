@@ -11,6 +11,7 @@ export default pattern("know-that", {
     { lhs: "VerbP", hsd: "=zhi1dao4 S", eng: "zhīdào and a whole sentence" },
     { lhs: "VerbP", hsd: "=zhi1dao4 VP", eng: "zhīdào and what happened, with no one named" },
   ],
+  taught: "pre-verbs/know-that",
   examples: [
     ["Wǒ zhīdào tā qù.", "I know he went."],
     ["Nǐ zhīdào fā-shēng le shénme ma?", "Do you know what happened?"],

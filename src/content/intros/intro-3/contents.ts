@@ -1,7 +1,7 @@
 // See src/lib/chapter-content.js for the schema this is transformed by.
 // zh intentionally blank -- not yet translated.
-import type { Entry, InfoEntry, LangText } from "../lib/chapter-entry-types.ts";
-import { SECTIONS, BACK_MATTER, lessonNumber } from "./book.js";
+import type { Entry, InfoEntry, LangText } from "../../../lib/chapter-entry-types.ts";
+import { SECTIONS, BACK_MATTER, lessonNumber } from "../../book.js";
 
 // The table of contents: one line per lesson, keyed by lesson id. The
 // sections, their order, the lesson numbers, and the titles all come from
@@ -134,9 +134,9 @@ export const LESSON_BLURBS: Record<string, LangText> = {
     ru: ["слово, сказанное дважды: чтобы сделать что-то совсем немного, усилить описательное слово и сказать «каждый»."],
   },
   "everyday-patterns": {
-    en: ["useful ways of saying things that don't fit anywhere else: let me (`wǒ lái`), let me see (`gěi wǒ kàn yī-xià`), help (bāng), letting someone (jiào), teaching (jiāo), may I, and let's."],
+    en: ["useful ways of saying things that don't fit anywhere else: let me (`wǒ lái`), let me see (`gěi wǒ kàn yī-xià`), help (bāng), letting someone (jiào), may I, and let's."],
     zh: [],
-    ru: ["полезные обороты, которые больше никуда не подошли: давай я (`wǒ lái`), дай посмотреть (`gěi wǒ kàn yī-xià`), помочь (bāng), разрешить кому-то (jiào), научить (jiāo), можно ли и давай."],
+    ru: ["полезные обороты, которые больше никуда не подошли: давай я (`wǒ lái`), дай посмотреть (`gěi wǒ kàn yī-xià`), помочь (bāng), разрешить кому-то (jiào), можно ли и давай."],
   },
 };
 
@@ -236,13 +236,13 @@ const tocLine = (id: string, blurb: LangText): LangText => ({
   ru: blurb.ru.length ? [`**{{title:${id}}}** — ${blurb.ru.join(" ")}`] : [],
 });
 
-const backMatter: InfoEntry[] = BACK_MATTER.map((group) => ({
+export const backMatter: InfoEntry[] = BACK_MATTER.map((group) => ({
   type: "info",
   title: GROUP_TITLES[group.key],
   items: group.chapters.map((id) => ({ text: tocLine(id, CHAPTER_BLURBS[id]) })),
 }));
 
-const tableOfContents: InfoEntry[] = SECTIONS.map((section) => ({
+export const tableOfContents: InfoEntry[] = SECTIONS.map((section) => ({
   type: "info",
   title: SECTION_TITLES[section.key],
   ordered: true,
@@ -250,58 +250,5 @@ const tableOfContents: InfoEntry[] = SECTIONS.map((section) => ({
   items: section.lessons.map((id) => ({ text: tocLine(id, LESSON_BLURBS[id]) })),
 }));
 
-export const meta = {
-  id: "intro-3",
-  type: "intro",
-  lessonNumber: 3,
-  order: 3,
-};
-
-const content: Entry[] = [
-  {
-    type: "title",
-    en: ["Simplified Chinese, Not Invented Chinese"],
-    zh: [],
-    ru: ["Упрощённый китайский, а не придуманный"],
-  },
-  {
-    type: "summary",
-    en: [
-      "Hao-shuo-de is real Chinese, made as simple as it can be. This chapter shows how the book is laid out.",
-    ],
-    zh: [],
-    ru: [
-      "Hǎo-shuō-de — это настоящий китайский, упрощённый настолько, насколько возможно. В этой главе показано, как устроена книга.",
-    ],
-  },
-  {
-    type: "prose",
-    en: [
-      "Toki Pona showed that a small, fixed set of words can still let you say almost anything.",
-      "Hao-shuo-de borrows that idea, but not the language itself.",
-      "Toki Pona invents its own grammar from scratch.",
-      "Hao-shuo-de does the opposite: every rule of grammar you'll learn here is ordinary, real Mandarin.",
-      "We are not building a Chinese-flavored Toki Pona.",
-      "We are taking real Chinese and making it as small as it can be: the fewest words and rules that a native speaker still understands.",
-      "Later, you can grow it into full Mandarin without starting over.",
-      "",
-      "The lessons are in three sections, and each one builds on the last. After them come four groups of everything that isn't a lesson: things to read, reference, tools, and extra articles.",
-    ],
-    zh: [],
-    ru: [
-      "Toki Pona показал, что даже с небольшим неизменным набором слов можно сказать почти что угодно.",
-      "Hǎo-shuō-de заимствует эту идею, но не сам язык.",
-      "Toki Pona придумывает свою грамматику с нуля.",
-      "Hǎo-shuō-de делает наоборот: каждое правило грамматики, которое вы здесь выучите, — обычный, настоящий китайский.",
-      "Мы не строим Toki Pona с китайским акцентом.",
-      "Мы берём настоящий китайский и делаем его как можно меньше: минимум слов и правил, при котором носитель языка всё ещё вас понимает.",
-      "Потом вы сможете дорастить его до полного китайского, не начиная заново.",
-      "",
-      "Уроки разделены на три раздела, и каждый опирается на предыдущий. После них идут четыре группы всего, что не является уроком: тексты для чтения, справочник, инструменты и дополнительные статьи.",
-    ],
-  },
-  ...tableOfContents,
-  ...backMatter,
-];
-
-export default content;
+// The two lists, in the order they follow the intro text.
+export const contents: Entry[] = [...tableOfContents, ...backMatter];

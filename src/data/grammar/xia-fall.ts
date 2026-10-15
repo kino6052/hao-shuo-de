@@ -10,6 +10,7 @@ export default pattern("xia-fall", {
   rules: [
     { lhs: "VerbP", hsd: "=xia4 NP", eng: "xià and what falls: it rains" },
   ],
+  taught: "everyday-patterns/rain",
   examples: [
     ["Tiān-shàng xià shuǐ le.", "It's raining."],
   ],

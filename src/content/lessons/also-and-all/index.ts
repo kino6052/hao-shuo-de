@@ -12,6 +12,7 @@ import alsoIs from "./also-is.ts";
 import all from "./all.ts";
 import everything from "./everything.ts";
 import part from "./part.ts";
+import together from "./together.ts";
 
 export const meta = {
   id: "also-and-all",
@@ -35,6 +36,7 @@ export default lesson(meta.id, {
     light,
     alsoIs,
     all,
+    together,
     everything,
     part,
   ],

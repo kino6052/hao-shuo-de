@@ -23,6 +23,9 @@ import { useTheme } from './lib/use-theme.js';
 function renderContent(s, lang) {
   const type = s.meta.type;
   if (type === 'intro') {
+    // An intro with pictures is shown in file order, like a lesson; one
+    // without keeps the plain text-then-examples layout.
+    if (s.flow?.some((g) => g.kind === 'image')) return <LessonFlow flow={s.flow} lang={lang} />;
     return (
       <>
         <div class="prose-body" dangerouslySetInnerHTML={{ __html: s.bodyHtml }} />

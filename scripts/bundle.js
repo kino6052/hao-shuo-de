@@ -24,11 +24,14 @@ export function entries() {
   for (const f of ['dictionary', 'composites', 'coverage']) add(`src/data/${f}.ts`);
   for (const d of ['words', 'composites', 'coverage', 'grammar']) add(`src/data/${d}/index.ts`);
   for (const f of readdirSync(resolve(ROOT, 'src/data/maps')).sort()) if (f.endsWith('.ts')) add(`src/data/maps/${f}`);
-  for (const f of ['phrase-book', 'appendix-stories', 'appendix-grammar', 'intro-1', 'intro-2', 'intro-3']) add(`src/content/${f}.ts`);
-  const lessons = resolve(ROOT, 'src/content/lessons');
-  for (const d of readdirSync(lessons).sort()) {
-    if (!statSync(resolve(lessons, d)).isDirectory()) continue;
-    for (const f of readdirSync(resolve(lessons, d)).sort()) if (f.endsWith('.ts')) out.push(resolve(lessons, d, f));
+  for (const f of ['phrase-book', 'appendix-stories', 'appendix-grammar']) add(`src/content/${f}.ts`);
+  // intros and lessons: one folder each, every .ts file in it
+  for (const group of ['intros', 'lessons']) {
+    const dir = resolve(ROOT, 'src/content', group);
+    for (const d of readdirSync(dir).sort()) {
+      if (!statSync(resolve(dir, d)).isDirectory()) continue;
+      for (const f of readdirSync(resolve(dir, d)).sort()) if (f.endsWith('.ts')) out.push(resolve(dir, d, f));
+    }
   }
   return out;
 }

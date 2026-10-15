@@ -16,6 +16,7 @@ export const GATES = [
   ['check-forms', []],
   ['check-practice', ['--summary']],
   ['check-example-runs', ['--summary']],
+  ['check-story-images', []],
   ['check-word-builder', []],
   ['check-passive', []],
 ];

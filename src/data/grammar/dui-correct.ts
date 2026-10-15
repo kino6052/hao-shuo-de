@@ -15,6 +15,7 @@ export default pattern("dui-correct", {
     { lhs: "VP", hsd: "=dui4 NP @adjective", eng: "duì someone good: good for him" },
     { lhs: "VP", hsd: "=dui4 NP", eng: "duì someone: point at him" },
   ],
+  taught: "inside-a-sentence/right",
   examples: [
     ["Nǐ shuō de duì.", "You're right."],
     ["Zhè shì bù duì de dōng-xi.", "This is a mistake."],
