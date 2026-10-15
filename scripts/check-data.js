@@ -23,6 +23,7 @@ import CATEGORIES from '../src/data/maps/categories.ts';
 import ANTONYMS from '../src/data/maps/antonyms.ts';
 import SYNONYMS from '../src/data/maps/synonyms.ts';
 import CONNECTIONS from '../src/data/maps/connections.ts';
+import STRUCTURE from '../src/data/maps/structure.ts';
 import { buildData } from './build-data.js';
 import { compositeFileName } from './data-files.js';
 import { dataFiles } from './build-data.js';
@@ -119,6 +120,36 @@ for (const [name, r] of [['antonyms', ANTONYMS], ['synonyms', SYNONYMS]]) {
     if (!ids.has(id)) errors.push(`maps/${name}.ts: phrases for unknown word ${id}`);
     for (const ref of wordRefIds(forms.join(' '))) if (!ids.has(ref)) errors.push(`maps/${name}.ts: ${id}'s phrase names unknown word ${ref}`);
   }
+}
+// structure: every end is a word or a composite, opposite kinds belong to real pairs, no group written twice
+{
+  const zhs = new Set(ENTRIES.map((e) => e.zh));
+  const known = (e) => ids.has(e) || zhs.has(e);
+  const KINDS = ['either-or', 'more-or-less', 'other-side', 'undoing', 'by-not'];
+  const pairs = new Set(ANTONYMS.pairs.map(([a, b]) => `${a}|${b}`));
+  for (const [k, kind] of Object.entries(STRUCTURE.oppositeKinds)) {
+    if (!pairs.has(k)) errors.push(`maps/structure.ts: opposite kind for "${k}", which is not a pair of antonyms.ts (in that order)`);
+    if (!KINDS.includes(kind)) errors.push(`maps/structure.ts: "${k}" has the unknown opposite kind "${kind}"`);
+  }
+  const seen = new Set();
+  const note = (where, ends, why) => {
+    for (const e of ends) if (!known(e)) errors.push(`maps/structure.ts ${where}: "${e}" is neither a word nor a composite`);
+    if (!String(why ?? '').trim()) errors.push(`maps/structure.ts ${where}: no why`);
+    if (new Set(ends).size !== ends.length) errors.push(`maps/structure.ts ${where}: an end is listed twice`);
+    const k = where + ' ' + [...ends].sort().join(' ');
+    if (seen.has(k)) errors.push(`maps/structure.ts ${where}: written twice`);
+    seen.add(k);
+  };
+  for (const o of STRUCTURE.opposites ?? []) {
+    note(`opposite ${o.a}|${o.b}`, [o.a, o.b], o.why);
+    if (!KINDS.includes(o.kind)) errors.push(`maps/structure.ts opposite ${o.a}|${o.b}: unknown kind "${o.kind}"`);
+  }
+  for (const p of STRUCTURE.parts) note(`part-of ${p.whole}`, [p.whole, ...p.parts], p.why);
+  for (const g of STRUCTURE.groups) {
+    if (g.members.length < 2) errors.push(`maps/structure.ts ${g.kind} [${g.members}]: needs two or more members`);
+    note(`${g.kind} [${g.members.slice(0, 3)}…]`, g.members, g.why);
+  }
+  for (const f of STRUCTURE.families) note(`family ${f.name}`, Object.values(f.facets).flat(), f.why);
 }
 // connections: two or more known words, a why, no connection written twice
 {

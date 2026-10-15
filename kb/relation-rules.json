@@ -1,4 +1,27 @@
 {
-  "accept": ["head rule", "head is rén", "paraphrase"],
-  "rejected": []
+  "accept": ["head rule", "head is rén", "paraphrase", "description"],
+  "rejected": [
+    { "kind": "opposite", "a": "这么", "b": "那样" },
+    { "kind": "opposite", "a": "那里", "b": "当地" },
+    { "kind": "opposite", "a": "那里", "b": "本地" },
+    { "kind": "opposite", "a": "那儿", "b": "当地" },
+    { "kind": "opposite", "a": "那儿", "b": "本地" },
+    { "kind": "opposite", "a": "高兴", "b": "关心" },
+    { "kind": "opposite", "a": "开心", "b": "关心" },
+    { "kind": "opposite", "a": "关心", "b": "快乐" },
+    { "kind": "opposite", "a": "关心", "b": "愉快" },
+    { "kind": "opposite", "a": "回来", "b": "退" },
+    { "kind": "opposite", "a": "继续", "b": "上去" },
+    { "kind": "opposite", "a": "继续", "b": "升" },
+    { "kind": "opposite", "a": "继续", "b": "下来" },
+    { "kind": "opposite", "a": "出去", "b": "登录" },
+    { "kind": "opposite", "a": "下去", "b": "升" },
+    { "kind": "opposite", "a": "上来", "b": "升" },
+    { "kind": "opposite", "a": "外面", "b": "内" },
+    { "kind": "opposite", "a": "里面", "b": "自然" },
+    { "kind": "opposite", "a": "内", "b": "自然" },
+    { "kind": "opposite", "a": "右", "b": "左边" },
+    { "kind": "opposite", "a": "进来", "b": "登录" },
+    { "kind": "opposite", "a": "增加", "b": "降低" }
+  ]
 }

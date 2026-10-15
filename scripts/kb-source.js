@@ -24,6 +24,7 @@ import coverage from '../src/data/coverage.ts';
 import ANTONYMS from '../src/data/maps/antonyms.ts';
 import SYNONYMS from '../src/data/maps/synonyms.ts';
 import CONNECTIONS from '../src/data/maps/connections.ts';
+import STRUCTURE from '../src/data/maps/structure.ts';
 
 const ROOT = resolve(fileURLToPath(new URL('.', import.meta.url)), '..');
 
@@ -57,7 +58,7 @@ export async function loadSource() {
   return {
     words: JSON.parse(JSON.stringify(dictionary.words)),
     categories: JSON.parse(JSON.stringify(dictionary.categories)),
-    maps: { antonyms: ANTONYMS, synonyms: SYNONYMS, connections: CONNECTIONS },
+    maps: { antonyms: ANTONYMS, synonyms: SYNONYMS, connections: CONNECTIONS, structure: STRUCTURE },
     composites: JSON.parse(JSON.stringify(compositesData.entries)),
     coverage: JSON.parse(JSON.stringify(coverage.groups)),
     lessons,

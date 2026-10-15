@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'bun:test';
 import { createKb } from './kb.js';
-import { KINDS, renderRelations } from './relations.js';
+import { KINDS, relationKey, renderRelations } from './relations.js';
 import { source } from './fixture.js';
 
 const w = (term, hanzi, pos = 'noun', extra = {}) => ({ term, hanzi, pos: { eng: pos }, definition: { eng: `the word ${term}` }, necessity: { index: 3, eng: `why ${term}` }, ...extra });
@@ -148,6 +148,88 @@ describe('what the paraphrases name (the author asked for as many links between 
     expect(circ).toHaveLength(1);
     expect([circ[0].a, circ[0].b].sort()).toEqual(['chi1', 'fan4']);
     expect(of('circular')).toEqual([]);
+  });
+});
+
+describe('structure: opposite kinds, wholes, sets, scales and families (maps/structure.ts)', () => {
+  const structure = {
+    oppositeKinds: { 'dong1|xi1': 'either-or' },
+    opposites: [
+      { a: '东机', b: '西机', kind: 'either-or', why: 'east and west', proposed: true },
+      { a: '吃饭', b: '吃饭2', kind: 'other-side', why: 'a made-up pair' },
+    ],
+    parts: [{ whole: 'ji1', parts: ['fei1', '吃机'], why: 'a machine has parts', proposed: true }],
+    groups: [
+      { kind: 'set', members: ['dong1', 'xi1'], why: 'the two ends' },
+      { kind: 'scale', members: ['chi1', 'fan4'], why: 'in order', proposed: true },
+    ],
+    families: [{ name: 'going', why: 'all move', facets: { means: ['fei1'], way: ['dong1', 'xi1'] }, proposed: true }],
+  };
+  const made = createKb({ ...source, words, composites, maps: { ...maps, structure } }).relations();
+  const got = (kind) => made.relations.filter((r) => r.kind === kind);
+
+  test('an opposite carries its kind; a composite pair of the map replaces the one a rule found', () => {
+    expect(got('opposite').find((r) => r.a === 'dong1').sub).toBe('either-or');
+    const pair = got('opposite').filter((r) => [r.a, r.b].includes('东机'));
+    expect(pair).toHaveLength(1);
+    expect(pair[0]).toMatchObject({ sub: 'either-or', source: 'maps/structure', status: 'proposed' });
+    expect(got('opposite').find((r) => r.a === '吃饭')).toMatchObject({ sub: 'other-side', status: 'accepted' });
+  });
+
+  test('"not" + a word is an opposite of the kind by-not', () => {
+    expect(got('opposite-by-not').every((r) => r.sub === 'by-not')).toBe(true);
+  });
+
+  test('parts, sets, scales and families are stored with their status', () => {
+    expect(got('part-of').map((r) => [r.a, r.b, r.status]).filter((x) => x[1] === 'ji1')).toEqual([
+      ['fei1', 'ji1', 'proposed'],
+      ['吃机', 'ji1', 'proposed'],
+    ]);
+    expect(got('set')[0]).toMatchObject({ members: ['dong1', 'xi1'], status: 'accepted' });
+    expect(got('scale')[0]).toMatchObject({ members: ['chi1', 'fan4'], status: 'proposed' });
+    expect(got('family')[0].facets).toEqual({ means: ['fei1'], way: ['dong1', 'xi1'] });
+    expect(got('family')[0].why).toContain('means: fēi; way: dōng, xī');
+  });
+});
+
+describe('the same-form sort and the descriptions', () => {
+  const place = c(20, '学处', 'xuéchù', 'study place', `${ref('chi1')}-${ref('de')} ${ref('di4')}-${ref('fang1')}`);
+  const part = c(21, '机头', 'jītóu', 'machine head', `${ref('ji1')}-${ref('de')} ${ref('bu4')}-${ref('fen1')}`);
+  const more = [...composites, place, part];
+  const extra = { di4: w('dì', '地'), fang1: w('fang', '方'), fen1: w('fen', '分') };
+  const run = (sameForm) => createKb({ ...source, words: { ...words, ...extra }, composites: more, maps }, { relationRules: { accept: ['description'], sameForm } }).relations();
+
+  test('a form the sort calls synonyms or close is accepted; the others stay proposed with the reason', () => {
+    const form = of('same-form')[0].a;
+    expect(run({}).relations.filter((r) => r.kind === 'same-form').map((r) => r.status)).toEqual(['proposed']);
+    const syn = run({ [form]: ['synonyms', 'one meaning'] }).relations.filter((r) => r.kind === 'same-form');
+    expect(syn[0]).toMatchObject({ status: 'accepted', source: 'same-form sort' });
+    expect(syn[0].why).toContain('synonyms (one meaning)');
+    const near = run({ [form]: ['close', 'one family'] }).relations;
+    expect(near.some((r) => r.kind === 'same-form')).toBe(false);
+    expect(near.find((r) => r.source === 'same-form sort')).toMatchObject({ kind: 'close', status: 'accepted' });
+    const diff = run({ [form]: ['different', 'two meanings'] }).relations.find((r) => r.kind === 'same-form');
+    expect(diff).toMatchObject({ status: 'proposed', sub: 'different' });
+    expect(diff.why).toContain('different meanings (two meanings)');
+  });
+
+  test('a composite described as a place or as a part of something', () => {
+    const r = run({}).relations;
+    expect(r.find((x) => x.kind === 'place-of' && x.a === '学处')).toMatchObject({ source: 'description', status: 'accepted' });
+    expect(r.find((x) => x.kind === 'part-of' && x.a === '机头')).toMatchObject({ source: 'description', status: 'accepted' });
+  });
+});
+
+describe('the decisions made on the review page', () => {
+  test('a proposed relation is accepted or dropped by its key; an accepted one is never touched', () => {
+    const keys = report.relations.filter((r) => r.status === 'proposed' && r.kind === 'opposite');
+    const key = relationKey(keys[0]);
+    const taken = createKb({ ...source, words, composites, maps }, { relationRules: { decided: { [key]: { status: 'accept' } } } }).relations();
+    expect(taken.relations.find((r) => relationKey(r) === key).status).toBe('accepted');
+    const dropped = createKb({ ...source, words, composites, maps }, { relationRules: { decided: { [key]: { status: 'reject' }, 'opposite|dong1|xi1': { status: 'reject' } } } }).relations();
+    expect(dropped.relations.some((r) => relationKey(r) === key)).toBe(false);
+    expect(dropped.rejected.map(relationKey)).toEqual([key]);
+    expect(dropped.relations.some((r) => r.a === 'dong1' && r.b === 'xi1')).toBe(true);
   });
 });
 

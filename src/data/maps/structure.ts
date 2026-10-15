@@ -1,0 +1,140 @@
+// How words and composites are built into wholes, sets and families (KB_PLAN.md K18, phase 5).
+// Drafted by Claude on 2026-10-15 from the dictionary; every entry is `proposed` until the author confirms it
+// on the relations review page. Ends are word ids or composite hanzi.
+import { structure } from "../../lib/data-maps.ts";
+
+export default structure({
+  // The kind of each opposite pair of antonyms.ts, keyed "a|b" in the order the pair is written there.
+  oppositeKinds: {
+    "ri4|yue4": "either-or",
+    "na4|zhe4": "either-or",
+    "duo1|shao3": "more-or-less",
+    "hao3|huai4": "more-or-less",
+    "re4|leng3": "more-or-less",
+    "xiao3|da4": "more-or-less",
+    "kai1shi3|wan2": "other-side",
+    "guan1|kai1": "undoing",
+    "lai2|qu4": "other-side",
+    "na2|gei3": "other-side",
+    "si3|huo2": "either-or",
+    "si3|sheng1": "either-or",
+    "qian2|hou4": "either-or",
+    "wai4|li3": "either-or",
+    "xia4|shang4": "either-or",
+    "yuan3|fu4jin4": "more-or-less",
+    "jin4|chu1": "other-side",
+    "bai2|hei1": "more-or-less",
+    "zuo3|you4": "either-or",
+  },
+
+  // Opposite pairs of composites, sorted by Claude from the "one slot differs" finds and the antonyms of batch 13.
+  // The pairs that only looked like opposites (那里 / 当地, 关心 / 高兴, 继续 / 上去 ...) are in kb/relation-rules.json.
+  opposites: [
+    { a: "这样", b: "那样", kind: "either-or", why: "Pointing near or far: like this, like that.", proposed: true },
+    { a: "这里", b: "那里", kind: "either-or", why: "Here and there.", proposed: true },
+    { a: "这里", b: "那儿", kind: "either-or", why: "Here and there (the spoken form).", proposed: true },
+    { a: "这儿", b: "那里", kind: "either-or", why: "Here (spoken) and there.", proposed: true },
+    { a: "这儿", b: "那儿", kind: "either-or", why: "Here and there, both spoken.", proposed: true },
+    { a: "这边", b: "那边", kind: "either-or", why: "This side and that side.", proposed: true },
+    { a: "这些", b: "那些", kind: "either-or", why: "These and those.", proposed: true },
+    { a: "以前", b: "以后", kind: "either-or", why: "Before and after.", proposed: true },
+    { a: "之前", b: "之后", kind: "either-or", why: "Before and after a point.", proposed: true },
+    { a: "以上", b: "以下", kind: "either-or", why: "Above and below a mark.", proposed: true },
+    { a: "上面", b: "下面", kind: "either-or", why: "The upper side and the lower side.", proposed: true },
+    { a: "前面", b: "后面", kind: "either-or", why: "The front side and the back side.", proposed: true },
+    { a: "外面", b: "里面", kind: "either-or", why: "Outside and inside.", proposed: true },
+    { a: "左边", b: "右边", kind: "either-or", why: "The left side and the right side.", proposed: true },
+    { a: "上去", b: "下去", kind: "either-or", why: "Going up and going down, away from the speaker.", proposed: true },
+    { a: "上来", b: "下来", kind: "either-or", why: "Coming up and coming down, toward the speaker.", proposed: true },
+    { a: "出去", b: "进去", kind: "either-or", why: "Going out and going in.", proposed: true },
+    { a: "出来", b: "进来", kind: "either-or", why: "Coming out and coming in.", proposed: true },
+    { a: "出来", b: "出去", kind: "other-side", why: "Out toward the speaker and out away from the speaker.", proposed: true },
+    { a: "回来", b: "回去", kind: "other-side", why: "Back toward the speaker and back away from the speaker.", proposed: true },
+    { a: "进来", b: "进去", kind: "other-side", why: "In toward the speaker and in away from the speaker.", proposed: true },
+    { a: "上来", b: "上去", kind: "other-side", why: "Up toward the speaker and up away from the speaker.", proposed: true },
+    { a: "下来", b: "下去", kind: "other-side", why: "Down toward the speaker and down away from the speaker.", proposed: true },
+    { a: "过来", b: "过去", kind: "other-side", why: "Over toward the speaker and over away from the speaker.", proposed: true },
+    { a: "大学", b: "小学", kind: "more-or-less", why: "The big school and the small school of the years of study.", proposed: true },
+    { a: "大学生", b: "小学生", kind: "more-or-less", why: "A student of the big school and of the small school.", proposed: true },
+    { a: "哥哥", b: "弟弟", kind: "more-or-less", why: "The older brother and the younger brother.", proposed: true },
+    { a: "姐姐", b: "妹妹", kind: "more-or-less", why: "The older sister and the younger sister.", proposed: true },
+    { a: "便宜", b: "贵", kind: "more-or-less", why: "Little money and much money.", proposed: true },
+    { a: "增加", b: "减少", kind: "more-or-less", why: "Getting more and getting less.", proposed: true },
+    { a: "足够", b: "不够", kind: "either-or", why: "Enough and not enough.", proposed: true },
+    { a: "上传", b: "下载", kind: "other-side", why: "Sending up to the net and taking down from it.", proposed: true },
+    { a: "优点", b: "缺点", kind: "either-or", why: "A good point and a bad point.", proposed: true },
+    { a: "反对", b: "同意", kind: "either-or", why: "Saying no to an idea and saying yes.", proposed: true },
+    { a: "反对", b: "赞成", kind: "either-or", why: "Saying no to an idea and agreeing with it.", proposed: true },
+    { a: "出发", b: "到达", kind: "other-side", why: "The start of a trip and its end.", proposed: true },
+    { a: "分开", b: "合", kind: "undoing", why: "Taking apart and putting together.", proposed: true },
+    { a: "农村", b: "城市", kind: "either-or", why: "The countryside and the city.", proposed: true },
+    { a: "停止", b: "开始", kind: "undoing", why: "Stopping what has begun, and beginning.", proposed: true },
+    { a: "同样", b: "不同", kind: "either-or", why: "The same and not the same.", proposed: true },
+  ],
+
+  parts: [
+    {
+      whole: "shen1ti3",
+      parts: ["tou2", "shou3", "jiao3", "du4zi", "xin1", "腿"],
+      why: "The body is made of a head, hands, feet, a belly, a heart and legs.",
+      proposed: true,
+    },
+    {
+      whole: "tou2",
+      parts: ["yan3jing", "er3duo", "bi2zi", "kou3", "脸", "头发"],
+      why: "The head has eyes, ears, a nose, a mouth, a face and hair.",
+      proposed: true,
+    },
+    { whole: "kou3", parts: ["ya2"], why: "Teeth are in the mouth.", proposed: true },
+    {
+      whole: "房子",
+      parts: ["房间", "门", "窗户", "墙"],
+      why: "A house has rooms, a door, windows and walls.",
+      proposed: true,
+    },
+    { whole: "zhi2wu4", parts: ["根"], why: "A root is the part of a plant under the ground.", proposed: true },
+    {
+      whole: "nian2",
+      parts: ["春天", "夏天", "秋天", "冬天"],
+      why: "A year is its four seasons, one after another.",
+      proposed: true,
+    },
+  ],
+
+  groups: [
+    {
+      kind: "scale",
+      members: ["ling2", "yi1", "er4", "san1", "si4", "wu3", "liu4", "qi1", "ba1", "jiu3", "shi2"],
+      why: "The numbers from nothing to ten, in order.",
+      proposed: true,
+    },
+    { kind: "scale", members: ["xiao3", "da4"], why: "Size, from small to big.", proposed: true },
+    { kind: "scale", members: ["leng3", "re4"], why: "Temperature, from cold to hot.", proposed: true },
+    { kind: "scale", members: ["shao3", "duo1"], why: "Amount, from little to much.", proposed: true },
+    { kind: "scale", members: ["fu4jin4", "yuan3"], why: "Distance, from near to far.", proposed: true },
+    { kind: "scale", members: ["zao3", "wan3"], why: "Time of day, from early to late.", proposed: true },
+    { kind: "scale", members: ["ri4", "yue4", "nian2"], why: "Stretches of time, from a day to a month to a year.", proposed: true },
+    { kind: "set", members: ["bai2", "hei1", "hong2"], why: "Colors: a thing is one of them.", proposed: true },
+    { kind: "set", members: ["春天", "夏天", "秋天", "冬天"], why: "The four seasons: it is one at a time.", proposed: true },
+    { kind: "set", members: ["wo3", "ni3", "ta1"], why: "The three persons: me, you and another.", proposed: true },
+    { kind: "set", members: ["zhe4", "na4"], why: "Pointing near or far.", proposed: true },
+    { kind: "set", members: ["ba4ba", "ma1ma"], why: "The two parents.", proposed: true },
+    { kind: "set", members: ["dong1", "xi1"], why: "East and west, the two ends of the sun's way.", proposed: true },
+  ],
+
+  // The going and moving words (the author asked how they could relate). Each differs from the others in one way:
+  // the means it goes by, the direction it takes, how it ends, or only that something moves.
+  families: [
+    {
+      name: "going and moving",
+      why: "Qù, zǒu, fēi, tōng, dòng, dào and their kin all say that something moves, and each adds one thing: how, which way, or how it ends.",
+      facets: {
+        "plain motion (something moves, nothing more)": ["dong4"],
+        "the means (how it goes)": ["zou3", "fei1", "che1"],
+        "the way (which direction)": ["lai2", "qu4", "jin4", "chu1", "hui2", "qi3", "shang4", "xia4"],
+        "the end (how it finishes)": ["dao4", "tong1", "guo4"],
+      },
+      proposed: true,
+    },
+  ],
+});

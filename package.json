@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/generate-grammar-overview.js && node scripts/check-all.js && node scripts/generate-word-usage.js && node scripts/generate-dictionary.js && vite build && node scripts/generate-pages.js",
+    "build": "node scripts/generate-grammar-overview.js && node scripts/check-all.js && node scripts/generate-word-usage.js && node scripts/generate-relations.js && node scripts/generate-dictionary.js && vite build && node scripts/generate-pages.js",
     "preview": "vite preview",
     "test": "node scripts/test.js --fast",
     "test:push": "node scripts/test.js",
@@ -20,6 +20,7 @@
     "report-roots": "node scripts/report-roots.js",
     "plan-4b": "node scripts/generate-plan-4b.js",
     "word-usage": "node scripts/generate-word-usage.js",
+    "relations": "node scripts/generate-relations.js",
     "composite-examples": "node scripts/composite-examples.js",
     "grammar-overview": "node scripts/generate-grammar-overview.js",
     "check": "node scripts/check-all.js",

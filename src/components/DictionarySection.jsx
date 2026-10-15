@@ -5,6 +5,7 @@ import { resolveWordRefs } from '../lib/word-refs.js';
 import { AudioButton } from './AudioButton.jsx';
 import { getUsageLabels } from '../lib/word-usage.js';
 import { t } from '../lib/i18n.js';
+import relations from '../data/relations.json';
 import styles from './DictionarySection.module.css';
 
 const idByTerm = new Map(Object.entries(dictionary.words).map(([id, w]) => [w.term, id]));
@@ -21,6 +22,8 @@ function coverLabel(key, lang) {
     : (item[lang] || item.eng).split(':')[0];
   return `${t(lang, COVER_GROUP[group])} ${name}`;
 }
+// An end of a stored relation (src/data/relations.json): a word as its term, a composite as hanzi.
+const relationEnd = (end) => (end.startsWith('word:') ? dictionary.words[end.slice(5)]?.term ?? end : end);
 // A sense's compound as the reader sees it: "shi2 jian1" -> shí-jiān.
 const compoundTerm = (c) => c.split(' ').map((id) => dictionary.words[id]?.term ?? id).join('-');
 // The reason a word is in the dictionary (necessity, 5 = no sentence without
@@ -39,6 +42,9 @@ function WordNotes({ word, lang }) {
       {word.covers && <div class={styles.related}>{t(lang, 'covers')} {word.covers.map((key) => coverLabel(key, lang)).join(' · ')}</div>}
       {word.antonyms && <div class={styles.related}>{t(lang, 'opposite')} {word.antonyms.map(refs).join(', ')}</div>}
       {word.synonyms && <div class={styles.related}>{t(lang, 'similar')} {word.synonyms.map(refs).join(', ')}</div>}
+      {[['partOf', 'relPartOf'], ['parts', 'relParts']].filter(([key]) => relations.words[word.id]?.[key]).map(([key, label]) => (
+        <div key={key} class={styles.related}>{t(lang, label)} {relations.words[word.id][key].map(relationEnd).join(', ')}</div>
+      ))}
       {Object.entries(word.senses ?? {}).map(([key, s]) => (
         <div key={key} class={styles.related}>
           {t(lang, 'alsoWritten')} {s.hanzi} ({s[lang === 'zh' ? 'eng' : lang] || s.eng}): {refs(s.why[lang] || s.why.eng)}{' '}

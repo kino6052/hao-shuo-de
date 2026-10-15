@@ -11,6 +11,7 @@ import { t } from "../lib/i18n.js";
 import { dictionaryBuilds, wordBuilderUrl, openInApp } from "../lib/builder-entries.js";
 import { compositeHeads, headHanzi } from "../lib/heads.js";
 import { naturalness, naturalnessSummary } from "../lib/naturalness.js";
+import relations from "../data/relations.json";
 import styles from "./CompositeDictionarySection.module.css";
 
 // The composite dictionary (src/data/composites/): for a common word in
@@ -85,6 +86,30 @@ const counts = composites.entries.reduce(
   },
 );
 
+// The accepted relations of an entry (src/data/relations.json, made by scripts/generate-relations.js): an end is a
+// composite's hanzi or "word:<id>", shown with its sound.
+const ENTRY_BY_ZH = new Map(composites.entries.map((e) => [e.zh, e]));
+const REL_KEYS = [["opposite", "relOpposite"], ["same", "relSame"], ["close", "relClose"], ["partOf", "relPartOf"], ["parts", "relParts"]];
+const endLabel = (end) => {
+  if (end.startsWith("word:")) return dictionary.words[end.slice(5)]?.term ?? end;
+  const e = ENTRY_BY_ZH.get(end);
+  return e ? `${end} ${e.py}` : end;
+};
+function Relations({ zh, lang }) {
+  const mine = relations.composites[zh];
+  if (!mine) return null;
+  return (
+    <div class={styles.note}>
+      {REL_KEYS.filter(([key]) => mine[key]).map(([key, label], i) => (
+        <span key={key}>
+          {i > 0 && " · "}
+          {t(lang, label)} {mine[key].map(endLabel).join(", ")}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 // `built`: the Word Builder can show how this entry's word is built.
 function Entry({ entry, lang, built }) {
   const source = (SOURCE[lang] ?? SOURCE.eng)(entry);
@@ -127,6 +152,7 @@ function Entry({ entry, lang, built }) {
         <span class={styles.fit}>{t(lang, "compositeProposed")}</span>
       )}
       {entry.note && <div class={styles.note}>{resolveLessonRefs(entry.note)}</div>}
+      <Relations zh={entry.zh} lang={lang} />
       {entry.examples?.length > 0 && (
         <ul class={styles.examples}>
           {entry.examples.map((x, i) => {

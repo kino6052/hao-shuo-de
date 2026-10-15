@@ -106,6 +106,13 @@ export function fingerprint() {
     }
   };
   for (const d of WATCHED) walk(resolve(ROOT, d));
+  // the relation rules and the decisions made on the relations review page change what kb.relations() says
+  for (const f of ['kb/relation-rules.json', 'kb/same-form-sort.json', 'review/decisions/relations-1.json']) {
+    try {
+      const s = statSync(resolve(ROOT, f));
+      sum += s.mtimeMs + s.size;
+    } catch {}
+  }
   return sum;
 }
 
@@ -133,13 +140,19 @@ export async function reloadSource() {
   return source;
 }
 
-// the rule-found relations the author accepted, and the pairs rejected (kb/relation-rules.json)
+// the rule-found relations the author accepted, and the pairs rejected (kb/relation-rules.json), and Claude's sort of the
+// same-form groups (kb/same-form-sort.json: form -> [verdict, note])
 function loadRelationRules() {
-  try {
-    return JSON.parse(readFileSync(resolve(ROOT, "kb/relation-rules.json"), "utf8"));
-  } catch {
-    return {};
-  }
+  const read = (file) => {
+    try {
+      return JSON.parse(readFileSync(resolve(ROOT, file), "utf8"));
+    } catch {
+      return {};
+    }
+  };
+  // the author's decisions on the relations review page (/__review/?relations)
+  const decided = read("review/decisions/relations-1.json").decisions ?? {};
+  return { ...read("kb/relation-rules.json"), sameForm: read("kb/same-form-sort.json"), decided };
 }
 
 let cached = null;

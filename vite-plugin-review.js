@@ -26,6 +26,12 @@
 //   POST /__review/words-check     { id, forms }  plain pinyin -> refs and the problems, for the editor
 //   POST /__review/words-decide    { batch, id, status, forms?, verdict?, eng?, rus?, note? }
 //   POST /__review/kinds-decide    { batch, zh, status, note? }   (status null clears the decision)
+//
+// Phase 5 adds the relations review (KB_PLAN.md K18, src/lib/kb/relations.js), served by review/relations.html:
+//
+//   GET  /__review/?relations       every relation a rule found or Claude drafted, waiting for a yes or a no
+//   GET  /__review/relations-data   { kinds, relations } (decisions: review/decisions/relations-1.json)
+//   POST /__review/relations-decide { key, status, note? }   (status accept | reject, null clears the decision)
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { resolve, dirname } from 'path';
@@ -190,7 +196,7 @@ export default function reviewPlugin() {
         try {
           const url = new URL(req.url ?? '/', 'http://localhost');
           if (req.method === 'GET' && (url.pathname === '/' || url.pathname === '')) {
-            const page = url.searchParams.has('words') || url.searchParams.has('kinds') ? 'words.html' : 'page.html';
+            const page = url.searchParams.has('relations') ? 'relations.html' : url.searchParams.has('words') || url.searchParams.has('kinds') ? 'words.html' : 'page.html';
             return send(res, 200, 'text/html; charset=utf-8', readFileSync(resolve(DIR, page), 'utf-8'));
           }
           const batchOf = () => Math.max(1, Number(url.searchParams.get('batch')) || 1);
@@ -226,6 +232,28 @@ export default function reviewPlugin() {
               }
             }
             writeDecisions(n, decisions, 'words');
+            return json(res, { decisions });
+          }
+          if (req.method === 'GET' && url.pathname === '/relations-data') {
+            const { relationKey, KIND_NOTES } = await loadNode('src/lib/kb/relations.js');
+            const { openKb } = await loadNode('scripts/kb.js');
+            const report = (await openKb()).relations();
+            const decisions = readDecisions(1, 'relations');
+            const waiting = report.relations.filter((r) => r.status === 'proposed');
+            // a decision made earlier is applied by the next load, so the page shows it as taken (accepted) or dropped
+            const decided = [...report.relations.filter((r) => decisions[relationKey(r)]), ...report.rejected.filter((r) => decisions[relationKey(r)])];
+            return json(res, { notes: KIND_NOTES, decisions, relations: [...waiting, ...decided].map((r) => ({ key: relationKey(r), ...r })) });
+          }
+          if (req.method === 'POST' && url.pathname === '/relations-decide') {
+            const { key, status, note } = await readBody(req);
+            if (!key) return json(res, { error: 'key is required' }, 400);
+            const decisions = readDecisions(1, 'relations');
+            if (!status) delete decisions[key];
+            else {
+              if (!['accept', 'reject'].includes(status)) return json(res, { error: `unknown status ${status}` }, 400);
+              decisions[key] = { status, ...(note ? { note } : {}), at: new Date().toISOString() };
+            }
+            writeDecisions(1, decisions, 'relations');
             return json(res, { decisions });
           }
           if (req.method === 'POST' && url.pathname === '/kinds-decide') {
