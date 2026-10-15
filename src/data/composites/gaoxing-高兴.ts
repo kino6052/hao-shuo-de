@@ -12,7 +12,7 @@ export default composite({
   tts: ["开心"],
   literal: "open heart",
   fit: "natural",
-  note: "Lesson {{lesson:greetings-and-feelings}}.",
+  note: "Lesson {{lesson:feelings}}.",
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:hen3}} {{word:kai1}}-{{word:xin1}} {{word:jian4}}-{{word:dao4}} {{word:ni3}}.",

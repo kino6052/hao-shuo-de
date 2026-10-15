@@ -12,6 +12,7 @@ export default composite({
   tts: ["说明"],
   literal: "say it clear",
   fit: "natural",
+  kinds: ["built"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:neng2}} {{word:shuo1}}-{{word:ming2}} {{word:ma}}?",

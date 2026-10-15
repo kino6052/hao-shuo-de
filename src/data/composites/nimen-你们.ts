@@ -11,6 +11,7 @@ export default composite({
   hsd: ["{{word:ni3}}-{{word:men}}"],
   tts: ["你们"],
   fit: "natural",
+  kinds: ["built"],
   examples: [
     {
       pinyin: "{{Word:ni3}}-{{word:men}} {{word:qu4}} {{word:na3}}-{{word:li3}}?",

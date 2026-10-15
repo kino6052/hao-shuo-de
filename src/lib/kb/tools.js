@@ -21,7 +21,7 @@ export const TOOLS = [
     name: 'kb_word',
     description:
       "The card for one dictionary word: its meaning, why the core needs it, its category, the lesson that teaches it, its opposites and synonyms, " +
-      "the composites that use it or hang under it, and a sample of the book's sentences. Ask before changing or relying on a word.",
+      "the atoms its paraphrase and its description come down to, the composites that use it or hang under it, and a sample of the book's sentences. Ask before changing or relying on a word.",
     inputSchema: {
       type: 'object',
       properties: { name: { type: 'string', description: 'The word: its pinyin (dēng or deng), its id (deng1) or its hanzi (灯).' } },
@@ -33,7 +33,7 @@ export const TOOLS = [
     description:
       'What happens if we drop one or more words from the core dictionary. Nothing is changed; it lists the consequences: composites left with no form (to redo), ' +
       'composites that lose a form or their head, the sentences, cards and mentions in the book to rewrite, coverage items without a carrier, ' +
-      'definitions that name the word, catch-all senses left empty, and opposite/synonym pairs that break.',
+      'definitions and paraphrase forms that name the word, words that rested on it as an atom (and now have no way to be said, or a longer one), catch-all senses left empty, and opposite/synonym pairs that break.',
     inputSchema: {
       type: 'object',
       properties: {

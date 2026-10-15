@@ -37,6 +37,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "zai-place",
     en: "{{word:zai4}} + place: {{Word:wo3}} {{word:zai4}} {{word:jia1}}. (I'm at home.)",
     ru: "{{word:zai4}} + место: {{Word:wo3}} {{word:zai4}} {{word:jia1}}. (Я дома.)",
   },

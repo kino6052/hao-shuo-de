@@ -8,9 +8,13 @@ export default composite({
   en: "the past",
   ru: "прошлое",
   pos: "noun",
-  hsd: ["{{word:guo4}}-{{word:qu4}}"],
-  tts: ["过去"],
+  hsd: [
+    "{{word:guo4}}-{{word:qu4}}",
+    "{{word:zou3}}-{{word:guo4}}-{{word:de}} {{word:shi2}}-{{word:jian1}}",
+  ],
+  tts: ["过去", "走过的时间"],
   fit: "natural",
+  kinds: ["spelled", "built"],
   note: "A fixed pair, like hòu-lái.",
   examples: [
     {

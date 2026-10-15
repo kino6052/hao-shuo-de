@@ -49,6 +49,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "fujin-near",
     en: "{{word:yuan3}} / {{word:fu4jin4}}, far / nearby: {{Word:wo3}}-{{word:de}} {{word:guo2}} {{word:hen3}} {{word:yuan3}}. (My country is far.) {{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:zai4}} {{word:fu4jin4}}. (My home is nearby.)",
     ru: "{{word:yuan3}} / {{word:fu4jin4}} — далеко / поблизости: {{Word:wo3}}-{{word:de}} {{word:guo2}} {{word:hen3}} {{word:yuan3}}. (Моя страна далеко.) {{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:zai4}} {{word:fu4jin4}}. (Мой дом поблизости.)",
   },

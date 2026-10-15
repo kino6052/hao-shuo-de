@@ -31,6 +31,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "shenme-dou",
     en: "{{word:shen2me}}-{{word:dou1}} + verb, everything: {{Word:wo3}} {{word:shen2me}}-{{word:dou1}} {{word:chi1}}. (I eat everything.) With {{word:bu4}}: nothing. {{word:na3}}-{{word:li3}}-{{word:dou1}}: everywhere.",
     ru: "{{word:shen2me}}-{{word:dou1}} + глагол — всё: {{Word:wo3}} {{word:shen2me}}-{{word:dou1}} {{word:chi1}}. (Я ем всё.) С {{word:bu4}} — ничего. {{word:na3}}-{{word:li3}}-{{word:dou1}} — везде.",
   },

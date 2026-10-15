@@ -12,6 +12,7 @@ export default composite({
   tts: ["有些", "一部分"],
   literal: "a part",
   fit: "natural",
+  kinds: ["built", "built"],
   note: "Lesson {{lesson:also-and-all}}.",
   examples: [
     {

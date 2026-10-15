@@ -10,14 +10,14 @@ export default lessonModule({
       "",
       "**verb-verb**",
       "",
-      "It's softer than the verb alone, like verb + {{word:yi1}}-{{word:xia4}} (Lesson {{lesson:around-an-action}}): {{Word:wo3}} {{word:kan4}}-kan is \"let me have a look\". You already know one: {{word:xie4}}-xie (Lesson {{lesson:greetings-and-feelings}}).",
+      "It's softer than the verb alone, like verb + {{word:yi1}}-{{word:xia4}} (Lesson {{lesson:around-an-action}}): {{Word:wo3}} {{word:kan4}}-kan is \"let me have a look\". You already know one: {{word:xie4}}-xie (Lesson {{lesson:greetings}}).",
     ],
     ru: [
       "**Чтобы сделать что-то немного или просто попробовать**, скажите глагол два раза. Второй раз — коротко и легко.",
       "",
       "**глагол-глагол**",
       "",
-      "Так мягче, чем один глагол, — как глагол + {{word:yi1}}-{{word:xia4}} (урок {{lesson:around-an-action}}): {{Word:wo3}} {{word:kan4}}-kan — «дай-ка я посмотрю». Одно такое слово вы уже знаете: {{word:xie4}}-xie (урок {{lesson:greetings-and-feelings}}).",
+      "Так мягче, чем один глагол, — как глагол + {{word:yi1}}-{{word:xia4}} (урок {{lesson:around-an-action}}): {{Word:wo3}} {{word:kan4}}-kan — «дай-ка я посмотрю». Одно такое слово вы уже знаете: {{word:xie4}}-xie (урок {{lesson:greetings}}).",
     ],
     tldr: {
       en: "Say a verb twice to do it a little: {{word:kan4}}-kan, have a look.",

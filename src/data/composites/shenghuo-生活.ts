@@ -12,6 +12,7 @@ export default composite({
   tts: ["生活", "活"],
   literal: "be born, live",
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:sheng1}}-{{word:huo2}} {{word:hen3}} {{word:hao3}}.",

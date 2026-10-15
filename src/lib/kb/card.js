@@ -8,6 +8,7 @@ import { toneless, wordRefIds } from '../word-refs.js';
 import { formSlots, factsAbout, wordsOfText, posClasses } from './facts.js';
 import { pinyinOf } from './whatif.js';
 import { parseAtom } from './clingo.js';
+import { renderRestsOn, restsOnWord } from './rests-on.js';
 
 const norm = (s) => String(s).normalize('NFC').toLowerCase().trim();
 
@@ -79,7 +80,7 @@ export function buildIndex(source, facts) {
   return { byZh, compositesByWord, headsOf, sentencesByWord, namedBy, categoryPath, items };
 }
 
-export function wordCard({ source, facts, index, meaning }, id, { limit = 15 } = {}) {
+export function wordCard({ source, facts, index, meaning, restsOn }, id, { limit = 15 } = {}) {
   const words = source.words;
   const w = words[id];
   const pin = pinyinOf(words);
@@ -93,6 +94,8 @@ export function wordCard({ source, facts, index, meaning }, id, { limit = 15 } =
   const compositeRow = (c) => ({ zh: c.zh, rank: c.rank, py: c.py, en: c.en, fit: c.fit, forms: c.hsd ? c.hsd.split(' / ').map(pin) : [], usedInForms: c.usedInForms });
   // the Chinese words that are this word on its own (a composite entry whose hanzi is the word's)
   const own = source.composites.filter((c) => c.zh === w.hanzi || Object.values(w.senses ?? {}).some((s) => s.hanzi === c.zh));
+
+  const rests = restsOn ? restsOnWord(restsOn(), id) : null;
 
   const sentences = index.sentencesByWord.get(id) ?? [];
   const byKind = {};
@@ -159,6 +162,8 @@ export function wordCard({ source, facts, index, meaning }, id, { limit = 15 } =
     },
     sentences: { total: sentences.length, byKind, sample: sentences.slice(0, 6).map((s) => ({ kind: s.kind, where: s.module ? `${s.lesson}/${s.module}` : (s.lesson ?? s.composite), pinyin: pin(s.pinyin), en: s.en })) },
     namedBy: (index.namedBy.get(id) ?? []).map(ref),
+    // the atoms its paraphrase and its description come down to (K24, rests-on.js); `lines` is the same as text
+    rests: rests && { ...rests, lines: renderRestsOn(rests, term) },
     // what its description reaches of the primes (K19, meaning.js)
     meaning: meaning ? (({ depth, direct, names }) => ({ depth, direct, names: names.length }))(meaning().lines[id]) : null,
     facts: factsAbout(facts.lines, id).slice(0, 80),
@@ -176,6 +181,7 @@ export function renderCard(c) {
   if (c.atom) out.push(`  Atom: ${c.atom.eng}`);
   if (c.paraphrase) out.push(`  Paraphrase (${c.paraphrase.verdict}): ${c.paraphrase.forms.join(' / ')}${c.paraphrase.note ? ` — ${c.paraphrase.note}` : ''}`);
   if (c.removable) out.push(c.removable === 'fine' ? '  Potentially removable: its paraphrase is fine.' : '  Potentially removable: only if its clumsy paraphrase is accepted.');
+  for (const l of c.rests?.lines ?? []) out.push(`  ${l}`);
   if (c.category.length) out.push(`  Category: ${c.category.join(' › ')}`);
   for (const s of c.senses) out.push(`  Sense ${s.key}: ${s.hanzi} ${s.eng}${s.alone ? ' (also on its own)' : ''} — in ${s.compounds.join(', ')}`);
   out.push(`  Taught: ${c.taught.length ? c.taught.map((t) => `${t.sense ? `${t.sense}: ` : ''}${t.lesson}/${t.module}`).join('; ') : 'no card'}`);

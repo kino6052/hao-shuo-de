@@ -12,6 +12,7 @@ export default composite({
   tts: ["打开", "开"],
   literal: "hit-open",
   fit: "natural",
+  kinds: ["spelled", "built"],
   note: "A real pair: dǎ + kāi.",
   examples: [
     {

@@ -16,6 +16,7 @@ export default composite({
   tts: ["关心", "怕X不好", "对X很好"],
   literal: "close-heart / worry X isn't well / be good to X",
   fit: "natural",
+  kinds: ["spelled", "built", "built"],
   examples: [
     {
       pinyin: "{{Word:ma1ma}} {{word:hen3}} {{word:guan1}}-{{word:xin1}} {{word:wo3}}.",

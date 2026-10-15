@@ -8,10 +8,11 @@ export default composite({
   en: "hour",
   ru: "час",
   pos: "noun",
-  hsd: ["{{word:xiao3}}-{{word:shi2}}"],
-  tts: ["小时"],
+  hsd: ["{{word:xiao3}}-{{word:shi2}}", "{{word:liu4}}-{{word:shi2}}-{{light:ge4}} {{word:fen1}}"],
+  tts: ["小时", "六十个分"],
   literal: "small time",
   fit: "natural",
+  kinds: ["spelled", "built"],
   note: "shí here is 时 (time). It sounds the same as shí (ten).",
   examples: [
     {

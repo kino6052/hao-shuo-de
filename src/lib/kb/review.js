@@ -231,6 +231,8 @@ export function kindsBatch(source, n, { proposals = {}, decisions = {} } = {}) {
       ru: c.ru,
       forms,
       now: forms.find((f) => f.mandarin)?.kind ?? 'unknown',
+      // K23: no form that builds the meaning yet, so a spelled compound here would be learned whole with nothing to fall back on
+      bare: !forms.some((f) => f.kind === 'built'),
       prop: proposals[c.zh] ? { as: proposals[c.zh].as, why: proposals[c.zh].why ?? null } : null,
     };
   });

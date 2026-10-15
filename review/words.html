@@ -381,6 +381,8 @@ function kindsActions(e, d) {
   if (d && state.editing !== e.zh) {
     const box = el("div", "decision " + (d.status === "spelled" ? "edit" : ""));
     box.appendChild(el("span", "what", d.status === "spelled" ? "Spelled: learned whole" : "Built: from its parts"));
+    // K23: a spelled form with no built form beside it is potentially dangerous and needs a paraphrase
+    if (d.status === "spelled" && e.bare) box.appendChild(el("span", "detail", "Potentially dangerous: no built form yet, so it needs a paraphrase (a way to say it with our words)."));
     wrap.appendChild(box);
     const change = el("button", null, "Change");
     change.onclick = () => { state.editing = e.zh; render(); };

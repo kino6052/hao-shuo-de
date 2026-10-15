@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:suan4}}"],
   tts: ["算"],
   fit: "word",
-  note: "Lesson {{lesson:numbers}}.",
+  note: "Lesson {{lesson:time-and-sums}}.",
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:suan4}} {{word:zhe4}}-{{light:ge4}}.",

@@ -12,6 +12,7 @@ export default composite({
   tts: ["女生", "学的女人"],
   literal: "a woman who learns",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:nv3}}-{{word:sheng1}}.",

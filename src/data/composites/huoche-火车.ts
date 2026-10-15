@@ -12,6 +12,7 @@ export default composite({
   tts: ["火车"],
   literal: "fire car",
   fit: "natural",
+  kinds: ["built"],
   examples: [
     {
       pinyin: "{{Word:huo3}}-{{word:che1}} {{word:lai2}} {{word:le}}.",

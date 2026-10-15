@@ -12,6 +12,7 @@ export default composite({
   tts: ["大家", "人人都"],
   literal: "big home / person-person all",
   fit: "natural",
+  kinds: ["spelled", "built"],
   note: "Lesson {{lesson:doubling-words}}.",
   examples: [
     {

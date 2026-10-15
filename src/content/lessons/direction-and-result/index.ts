@@ -4,7 +4,7 @@
 // Added after Phase 2 (BOOK_PLAN.md D44): what comes after a verb. Which way it goes (ná-lái,
 // jìn / chū / huí + lái / qù, ná-chū-lái), how it ends (zhǎo-dào, zuò-huài, xué-huì), whether
 // you can get there (kàn-bù-dào, kàn-de-dào), and qǐ-lái (seems, starts) / xià-qù (keep going).
-// New words: ná (moved here from Numbers), jìn, chū, huí; tōng (go through, lead to) joined in D51.
+// New words: ná (moved here from Numbers), jìn, chū, huí; tōng (go through, lead to) joined in D51 and now shares in-out.
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- direction-and-result).
 // @teaches What comes after a verb: which way it goes (ná-lái, ná-chū-lái), how it ends (zhǎo-dào, xué-huì), whether you can get there (kàn-bù-dào, kàn-de-dào), and qǐ-lái / xià-qù.
@@ -15,7 +15,6 @@ import body from "./body.ts";
 import moveThing from "./move-thing.ts";
 import result from "./result.ts";
 import canCant from "./can-cant.ts";
-import through from "./through.ts";
 import seems from "./seems.ts";
 
 export const meta = {
@@ -42,7 +41,6 @@ export default lesson(meta.id, {
     moveThing,
     result,
     canCant,
-    through,
     seems,
   ],
 });

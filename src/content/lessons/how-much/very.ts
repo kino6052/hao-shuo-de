@@ -85,6 +85,7 @@ export default lessonModule({
     necessity: { en: "Now you can say how something is.", ru: "Теперь вы можете сказать, какое что-то." },
   },
   info: {
+    pattern: "hen-adjective",
     items: [
       {
         en: "{{word:hen3}} + adjective, very: {{Word:shui3}} {{word:hen3}} {{word:re4}}. (The water is very hot.)",

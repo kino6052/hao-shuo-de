@@ -12,6 +12,7 @@ export default composite({
   tts: ["空间"],
   literal: "the empty between",
   fit: "natural",
+  kinds: ["built"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:jia1}} {{word:you3}} {{word:kong1}}-{{word:jian1}}.",

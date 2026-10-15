@@ -12,6 +12,7 @@ export default composite({
   tts: ["人数", "多少人"],
   literal: "how many people",
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:ren2}}-{{word:shu4}} {{word:hen3}} {{word:duo1}}.",

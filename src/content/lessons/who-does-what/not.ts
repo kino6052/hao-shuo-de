@@ -33,6 +33,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "bu-negation",
     en: "{{word:bu4}} + verb, for \"not\": {{Word:ta1}} {{word:bu4}} {{word:xie3}}. (She doesn't write.)",
     ru: "{{word:bu4}} + глагол — «не»: {{Word:ta1}} {{word:bu4}} {{word:xie3}}. (Она не пишет.)",
   },

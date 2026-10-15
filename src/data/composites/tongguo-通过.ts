@@ -8,10 +8,15 @@ export default composite({
   en: "pass through; by means of",
   ru: "через; посредством",
   pos: "verb",
-  hsd: ["{{word:tong1}}-{{word:guo4}}"],
-  tts: ["通过"],
+  hsd: [
+    "{{word:tong1}}-{{word:guo4}}",
+    "{{word:cong2}} X {{word:zou3}}-{{word:guo4}}",
+    "{{word:yong4}} X",
+  ],
+  tts: ["通过", "从X走过", "用X"],
   literal: "go through",
   fit: "natural",
+  kinds: ["spelled", "built", "built"],
   note: "Lesson {{lesson:direction-and-result}}.",
   examples: [
     {

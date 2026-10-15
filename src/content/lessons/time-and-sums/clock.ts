@@ -44,6 +44,7 @@ export default lessonModule({
     necessity: { en: "Now you can say what time it is.", ru: "Теперь вы можете сказать, который час." },
   },
   info: {
+    pattern: "dian-clock",
     en: "number + {{word:dian3}}, o'clock: {{Word:xian4}}-{{word:zai4}} {{word:shi4}} {{word:san1}}-{{word:dian3}}. (It's three o'clock now.)",
     ru: "число + {{word:dian3}} — час: {{Word:xian4}}-{{word:zai4}} {{word:shi4}} {{word:san1}}-{{word:dian3}}. (Сейчас три часа.)",
   },

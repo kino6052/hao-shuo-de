@@ -12,6 +12,7 @@ export default composite({
   tts: ["冬天", "冷的时间"],
   literal: "cold time",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:dong1}}-{{word:tian1}} {{word:hen3}} {{word:leng3}}.",

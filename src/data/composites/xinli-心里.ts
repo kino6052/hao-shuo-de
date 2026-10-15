@@ -12,6 +12,7 @@ export default composite({
   tts: ["心里", "觉得"],
   literal: "in the heart",
   fit: "natural",
+  kinds: ["built", "built"],
   note: "wǒ jué-de …: in my heart, I feel …",
   examples: [
     {

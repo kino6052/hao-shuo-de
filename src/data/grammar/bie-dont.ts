@@ -10,7 +10,7 @@ export default pattern("bie-dont", {
   rules: [
     { lhs: "VP", hsd: "=bie2 VP", eng: "bié and a verb: don't" },
   ],
-  taught: "greetings-and-feelings/order",
+  taught: "greetings/order",
   examples: [
     ["Bié pà!", "Don't be afraid!"],
     ["Bié mō huǒ!", "Don't touch the fire!"],

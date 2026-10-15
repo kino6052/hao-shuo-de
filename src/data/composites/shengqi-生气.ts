@@ -12,6 +12,7 @@ export default composite({
   tts: ["生气", "心里有火"],
   literal: "birth air / there's fire in the heart",
   fit: "natural",
+  kinds: ["built", "built"],
   note: "Real Mandarin: 生气.",
   examples: [
     {

@@ -3,7 +3,7 @@
 // scripts/kb-source.js) and it answers questions; it never changes data.
 //
 //   const kb = createKb(source);
-//   kb.word('dēng')            the word card
+//   kb.word('dēng')            the word card (with the atoms its paraphrase and its description come down to)
 //   kb.remove(['deng1'])       the remove what-if
 //   kb.checkForm({ forms })    the form gates, for one proposal
 //   kb.query(program)          raw rules on top of the facts, for Claude
@@ -27,6 +27,7 @@ import { makeParseText, renderParse, viewParse } from './parse.js';
 import { atoms, atomWord, renderAtoms, renderAtomWord } from './atoms.js';
 import { relationReport, renderRelations } from './relations.js';
 import { meaningReport, meaningWord, renderMeaning, renderMeaningWord } from './meaning.js';
+import { restsOnModel } from './rests-on.js';
 import { candidateModel, renderAddition, renderAudit, renderRemovalCandidates, renderRootCandidates, renderSwaps } from './candidates.js';
 
 // freq: the Mandarin frequency list [{ zh, py, rank }]; drafts: how words would be said without a stored paraphrase { id: { forms, verdict } }
@@ -34,7 +35,8 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
   let meaning = null; // the meaning links, asked once: a KB is one version of the data
   const facts = buildFacts(source);
   const index = buildIndex(source, facts);
-  const ctx = { source, facts, rules, index, meaning: () => (meaning ??= meaningReport(source)) };
+  let rests = null; // the atoms each word rests on (rests-on.js), plain code and quick
+  const ctx = { source, facts, rules, index, meaning: () => (meaning ??= meaningReport(source)), restsOn: () => (rests ??= restsOnModel(source)) };
   const words = source.words;
 
   // the atoms report takes three solver runs; a KB is one version of the data, so it is asked once

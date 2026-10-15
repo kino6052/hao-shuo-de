@@ -8,7 +8,7 @@ export default pattern("hello-greeting", {
   covers: [],
   template: { hsd: "{{word:ni3}} {{word:hao3}}!", eng: "Hello!" },
   rules: [{ lhs: "Utt", hsd: "NP =hao3", eng: "someone and hǎo: a greeting" }],
-  taught: "greetings-and-feelings/hello",
+  taught: "greetings/hello",
   examples: [
     ["Nǐ hǎo!", "Hello!"],
     ["Nǐ-men hǎo!", "Hello, everyone!"],

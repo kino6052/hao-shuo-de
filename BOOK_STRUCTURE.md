@@ -36,13 +36,15 @@ Hǎo-shuō-de
 │
 ├── Section 3 — Special Words and Concepts
 │   ├── 17. Numbers                                         lessons/numbers/
-│   ├── 18. Colors                                          lessons/colors/
-│   ├── 19. Changing the Role of a Word                     lessons/roles-of-a-word/
-│   ├── 20. Relationships 1 — Inside a sentence             lessons/inside-a-sentence/
-│   ├── 21. Relationships 2 — Linking sentences             lessons/linking-sentences/
-│   ├── 22. Greetings and Feelings                          lessons/greetings-and-feelings/
-│   ├── 23. Doubling Words                                  lessons/doubling-words/
-│   └── 24. Everyday Patterns                               lessons/everyday-patterns/
+│   ├── 18. Numbers 2 — Time and sums                       lessons/time-and-sums/
+│   ├── 19. Colors                                          lessons/colors/
+│   ├── 20. Changing the Role of a Word                     lessons/roles-of-a-word/
+│   ├── 21. Relationships 1 — Inside a sentence             lessons/inside-a-sentence/
+│   ├── 22. Relationships 2 — Linking sentences             lessons/linking-sentences/
+│   ├── 23. Greetings                                       lessons/greetings/
+│   ├── 24. Feelings                                        lessons/feelings/
+│   ├── 25. Doubling Words                                  lessons/doubling-words/
+│   └── 26. Everyday Patterns                               lessons/everyday-patterns/
 │
 ├── Content
 │   ├── Phrase Book                                         phrase-book.ts
@@ -79,7 +81,7 @@ To move a point to another lesson, move its file and its line in the two `index.
 
 ## Notes
 
-- **The restructure (September to October 2026).** The book went from 16 lessons to 21, and then grew to the 24 lessons `book.js` lists: Verbs split in two, a Doubling Words lesson and a last Everyday Patterns lesson were added. See `BOOK_PLAN.md` for every decision. All 24 lessons are written in plain words and pass every gate (`DRAFT_LESSONS` in `scripts/finished-lessons.js` is empty); the plan's checklist still waits for the author's review of each one.
+- **The restructure (September to October 2026).** The book went from 16 lessons to 21, and then grew to the 26 lessons `book.js` lists: Verbs split in two, a Doubling Words lesson and a last Everyday Patterns lesson were added, and Numbers and Greetings and Feelings were each split in two to keep every lesson at 7 sections or fewer (`MAX_SECTIONS_PER_LESSON` in `scripts/limits.js`, checked by `check-book`). See `BOOK_PLAN.md` for every decision. All 26 lessons are written in plain words and pass every gate (`DRAFT_LESSONS` in `scripts/finished-lessons.js` is empty); the plan's checklist still waits for the author's review of each one.
 - **Archives.** The 16-lesson layout is in `src/content/legacy/v2-16-lessons/`, and the 19-lesson curriculum before it is in `src/content/legacy/`. Both are excluded from the build, from `npm run typecheck`, and from the sidebar. They're reference material only.
 - **Reading order.** A lesson page shows its modules in the order `index.ts` lists them (the view's `flow`, built in `src/lib/chapter-content.js`), each as word cards, explanation, info block, examples, exercises, then its FAQ. Exercise numbers carry on across modules.
 - **Vocabulary.** The core words are one file each in `src/data/words/`. Each is introduced in exactly one lesson, as that lesson's word cards (`check-book` fails the build otherwise), and `BOOK_PLAN.md` §4b lists which lesson introduces which word. Words are added and taken away through refactor lists (`npm run word`, `npm run refactor`), never by hand.

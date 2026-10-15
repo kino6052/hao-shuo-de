@@ -49,6 +49,7 @@ export default lessonModule({
     necessity: { en: "Now you can say what you want.", ru: "Теперь вы можете сказать, чего хотите." },
   },
   info: {
+    pattern: "want-verb",
     en: "{{word:yao4}} + verb, want to: {{Word:wo3}} {{word:yao4}} {{word:chi1}}. (I want to eat.)",
     ru: "{{word:yao4}} + глагол — хотеть: {{Word:wo3}} {{word:yao4}} {{word:chi1}}. (Я хочу есть.)",
   },
@@ -138,8 +139,8 @@ export default lessonModule({
     // how do I say "don't want"? (wǒ bù yào chī; bù yào + verb alone is "don't!")
     {
       question: { en: "How do I say \"don't want\"?", ru: "Как сказать «не хочу»?" },
-      en: "Put {{word:bu4}} before {{word:yao4}}: {{Word:wo3}} {{word:bu4}} {{word:yao4}} {{word:chi1}} (I don't want to eat). Careful: with no who, {{Word:bu4}} {{word:yao4}} + verb means \"Don't …!\". Lesson {{lesson:greetings-and-feelings}} shows this.",
-      ru: "Поставьте {{word:bu4}} перед {{word:yao4}}: {{Word:wo3}} {{word:bu4}} {{word:yao4}} {{word:chi1}} (Я не хочу есть). Осторожно: если не сказано, кто, то {{Word:bu4}} {{word:yao4}} + глагол значит «Не …!». Об этом — в уроке {{lesson:greetings-and-feelings}}.",
+      en: "Put {{word:bu4}} before {{word:yao4}}: {{Word:wo3}} {{word:bu4}} {{word:yao4}} {{word:chi1}} (I don't want to eat). Careful: with no who, {{Word:bu4}} {{word:yao4}} + verb means \"Don't …!\". Lesson {{lesson:greetings}} shows this.",
+      ru: "Поставьте {{word:bu4}} перед {{word:yao4}}: {{Word:wo3}} {{word:bu4}} {{word:yao4}} {{word:chi1}} (Я не хочу есть). Осторожно: если не сказано, кто, то {{Word:bu4}} {{word:yao4}} + глагол значит «Не …!». Об этом — в уроке {{lesson:greetings}}.",
     },
   ],
 });

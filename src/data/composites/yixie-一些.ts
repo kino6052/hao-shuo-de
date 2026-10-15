@@ -11,6 +11,7 @@ export default composite({
   hsd: ["{{word:yi1}}-{{word:xie1}}", "{{word:you3}}-{{word:de}}", "{{word:yi1}}-{{word:dian3}}"],
   tts: ["一些", "有的", "一点"],
   fit: "natural",
+  kinds: ["built", "built", "built"],
   note: "yī-diǎn for a little of something: yī-diǎn shuǐ.",
   examples: [
     {

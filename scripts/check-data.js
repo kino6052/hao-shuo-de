@@ -28,7 +28,7 @@ import { compositeFileName } from './data-files.js';
 import { dataFiles } from './build-data.js';
 import { wordRefIds } from '../src/lib/word-refs.js';
 import { paraphraseProblems, paraphraseCounts, paraphraseStatus, PARAPHRASES_REQUIRED } from '../src/lib/paraphrase.js';
-import { kindsProblems, undecidedForms } from '../src/lib/form-kinds.js';
+import { kindsProblems, needsBuiltForm, undecidedForms, SPELLED_NEED_BUILT_FORM } from '../src/lib/form-kinds.js';
 import { PATTERNS } from '../src/data/grammar/index.ts';
 import { createParser, patternsOf } from '../src/lib/grammar/parser.js';
 import { pinyinToRefs } from '../src/lib/pinyin-refs.js';
@@ -147,10 +147,14 @@ ENTRIES.forEach((e, i) => {
 
 // 5b. built or spelled (K9): an explicit `kinds` is well formed; the compounds the rule can't decide are counted
 let kindsToReview = 0;
+const bareSpelled = [];
 for (const e of ENTRIES) {
   for (const p of kindsProblems(e)) errors.push(`composites/${compositeFileName(e)}: ${p}`);
   if (undecidedForms(e).length) kindsToReview++;
+  if (needsBuiltForm(e)) bareSpelled.push(e.zh);
 }
+// K23: a spelled form with no built form beside it is hidden vocabulary with nothing to fall back on (a failure since K4)
+if (SPELLED_NEED_BUILT_FORM && bareSpelled.length) errors.push(`${bareSpelled.length} composite(s) have a spelled form and no built form (K23): ${bareSpelled.slice(0, 12).join(', ')}${bareSpelled.length > 12 ? ', ...' : ''}`);
 
 // 6. grammar patterns
 const patternFiles = dataFiles('grammar');
@@ -185,6 +189,7 @@ if (errors.length) {
   process.exit(1);
 }
 console.log(`check-data: OK -- ${ids.size} words, ${ENTRIES.length} composites, ${GROUPS.length} coverage groups, ${PATTERNS.length} grammar patterns.`);
+if (bareSpelled.length) console.log(`check-data: ${bareSpelled.length} composite(s) have a spelled form and no built form (K23, potentially dangerous); set SPELLED_NEED_BUILT_FORM (src/lib/form-kinds.js) to true to make this a failure.`);
 if (kindsToReview) console.log(`check-data: ${kindsToReview} composite(s) have a Mandarin compound still to be marked built or spelled (review: /__review/?kinds=1).`);
 if (counts.none) {
   console.log(

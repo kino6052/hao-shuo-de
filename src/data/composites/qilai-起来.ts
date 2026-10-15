@@ -12,6 +12,7 @@ export default composite({
   tts: ["起来"],
   literal: "rise-come",
   fit: "natural",
+  kinds: ["built"],
   examples: [
     {
       pinyin: "{{Word:kuai4}} {{word:qi3}}-{{word:lai2}}!",

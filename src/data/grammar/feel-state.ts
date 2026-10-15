@@ -14,7 +14,7 @@ export default pattern("feel-state", {
     { lhs: "VerbP", hsd: "=yao4 State", eng: "yào and a state: want you well" },
     { lhs: "VP", hsd: "hen3 @adjective S", eng: "hěn, a feeling, and why: glad that you came" },
   ],
-  taught: "greetings-and-feelings/feel",
+  taught: "feelings/feel",
   examples: [
     ["Wǒ jué-dé hǎo.", "I feel good."],
     ["Wǒ jué-dé wǒ néng.", "I think I can."],

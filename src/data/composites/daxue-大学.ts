@@ -12,6 +12,7 @@ export default composite({
   tts: ["大学"],
   literal: "big learning",
   fit: "natural",
+  kinds: ["built"],
   note: "A real word: dà + xué.",
   examples: [
     {

@@ -8,13 +8,11 @@ export default composite({
   en: "this year",
   ru: "в этом году",
   pos: "noun",
-  hsd: [
-    "{{word:jin1}}-{{word:nian2}}",
-    "{{word:xian4}}-{{word:zai4}}-{{word:de}} {{word:nian2}}",
-  ],
+  hsd: ["{{word:jin1}}-{{word:nian2}}", "{{word:xian4}}-{{word:zai4}}-{{word:de}} {{word:nian2}}"],
   tts: ["今年", "现在的年"],
   literal: "the year of now",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:jin1}}-{{word:nian2}} {{word:wo3}} {{word:er4}}-{{word:shi2}}.",

@@ -12,6 +12,7 @@ export default composite({
   tts: ["以后", "…后"],
   literal: "after X",
   fit: "natural",
+  kinds: ["spelled", "built"],
   note: "Lesson {{lesson:around-an-action}}.",
   examples: [
     {

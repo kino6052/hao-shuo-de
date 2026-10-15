@@ -11,6 +11,7 @@ export default composite({
   hsd: ["{{word:kai1}} {{word:che1}}"],
   tts: ["开车"],
   fit: "natural",
+  kinds: ["built"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:kai1}} {{word:che1}} {{word:hui2}} {{word:jia1}}.",

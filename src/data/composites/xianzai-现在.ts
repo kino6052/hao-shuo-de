@@ -8,9 +8,10 @@ export default composite({
   en: "now",
   ru: "сейчас",
   pos: "noun",
-  hsd: ["{{word:xian4}}-{{word:zai4}}"],
-  tts: ["现在"],
+  hsd: ["{{word:xian4}}-{{word:zai4}}", "{{word:zhe4}}-{{light:ge4}} {{word:shi2}}-{{word:jian1}}"],
+  tts: ["现在", "这个时间"],
   fit: "word",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:xian4}}-{{word:zai4}} {{word:shi2}} {{word:dian3}}.",

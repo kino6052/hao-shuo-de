@@ -12,6 +12,7 @@ export default composite({
   tts: ["明天", "下一个日"],
   literal: "bright-day / the next day",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:ming2}}-{{word:tian1}} {{word:jian4}}!",

@@ -32,6 +32,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "cong-from",
     en: "{{word:cong2}} + place + {{word:lai2}}: {{Word:wo3}} {{word:cong2}} {{word:jia1}} {{word:lai2}}. (I come from home.)",
     ru: "{{word:cong2}} + место + {{word:lai2}}: {{Word:wo3}} {{word:cong2}} {{word:jia1}} {{word:lai2}}. (Я пришёл из дома.)",
   },

@@ -12,6 +12,7 @@ export default composite({
   tts: ["看来", "看起来"],
   literal: "look-come / it looks",
   fit: "natural",
+  kinds: ["built", "built"],
   note: "Lesson {{lesson:direction-and-result}}.",
   examples: [
     {

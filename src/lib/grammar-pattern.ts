@@ -36,6 +36,8 @@ export interface Pattern {
   rules: PatternRule[];
   /** How to say it without the pattern, when that is possible (phase 3). */
   without?: { forms: string[]; verdict: "fine" | "clumsy"; note?: string };
+  /** Readings that use this pattern come first when a sentence has several (speech-quote: a colon after a verb brings in what was said). */
+  preferred?: boolean;
   /** The lesson module that first teaches it, "lesson/module". */
   taught?: string;
   /** Sentences in plain pinyin with their English; each must parse and use this pattern. */

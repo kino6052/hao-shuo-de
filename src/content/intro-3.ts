@@ -89,9 +89,14 @@ export const LESSON_BLURBS: Record<string, LangText> = {
     ru: ["слова после глагола: куда направлено действие (принести, вынуть, войти, пойти домой), сидеть, стоять и лежать, чем оно кончается (найти, починить, сломать), получается ли (не видно, не доесть) и каким что-то кажется (выглядит хорошо)."],
   },
   "numbers": {
-    en: ["another type of noun: counting, saying how many, number one, number two, the time, a little, and simple sums."],
+    en: ["another type of noun: counting, saying how many, twelve and twenty, and number one, number two."],
     zh: [],
-    ru: ["ещё один вид существительных: счёт, сколько, номер один, номер два, время, немного и простые вычисления."],
+    ru: ["ещё один вид существительных: счёт, сколько, двенадцать и двадцать, номер один, номер два."],
+  },
+  "time-and-sums": {
+    en: ["numbers at work: the time, days and years, a little, and simple sums."],
+    zh: [],
+    ru: ["числа за работой: время, дни и годы, немного и простые вычисления."],
   },
   "colors": {
     en: ["special nouns: red, yellow, blue, black, and white, and asking what color something is."],
@@ -113,10 +118,15 @@ export const LESSON_BLURBS: Record<string, LangText> = {
     zh: [],
     ru: ["потому что, но и если (rúguǒ): как связать одно предложение с другим."],
   },
-  "greetings-and-feelings": {
-    en: ["another type of sentence: saying hello and thank you, saying your name, telling someone what to do, and saying how you feel: happy, scared, careful."],
+  "greetings": {
+    en: ["another type of sentence: saying hello and thank you, saying your name, and telling someone what to do."],
     zh: [],
-    ru: ["ещё один вид предложений: поздороваться и сказать спасибо, назвать своё имя, попросить кого-то что-то сделать и сказать, как вы себя чувствуете: радостно, страшно, осторожно."],
+    ru: ["ещё один вид предложений: поздороваться и сказать спасибо, назвать своё имя и попросить кого-то что-то сделать."],
+  },
+  "feelings": {
+    en: ["saying how you feel: happy, scared, careful, laughing, remembering, and hearing a sound."],
+    zh: [],
+    ru: ["как сказать, что вы чувствуете: радостно, страшно, осторожно, смеяться, помнить и слышать звук."],
   },
   "doubling-words": {
     en: ["saying a word twice: to do something just a little, to make a describing word stronger, and to say every one."],

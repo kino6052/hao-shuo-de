@@ -25,7 +25,7 @@ import { wordRefIds, replaceWordRefs, refTerm } from '../word-refs.js';
 import { splitSentences } from './parse.js';
 
 // the classes the rules ask for, except the ones the lexicon makes up itself
-const MADE_UP = new Set(['comma', 'quoted', 'unknown', 'again', 'slot']);
+const MADE_UP = new Set(['comma', 'colon', 'quoted', 'unknown', 'again', 'slot']);
 export function ruleClasses(rules) {
   const out = new Set();
   for (const r of rules) for (const sym of r.rhs) if (!isNonterminal(sym) && sym.startsWith('@')) out.add(classRef(sym).name);

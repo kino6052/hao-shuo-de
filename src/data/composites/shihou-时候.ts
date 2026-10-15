@@ -12,6 +12,7 @@ export default composite({
   tts: ["时候", "…的时间"],
   literal: "the time of X",
   fit: "natural",
+  kinds: ["spelled", "built"],
   note: "Hao-shuo-de uses shí-jiān (§4d).",
   examples: [
     {

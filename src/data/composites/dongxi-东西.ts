@@ -11,6 +11,7 @@ export default composite({
   hsd: ["{{word:dong1}}-{{light:xi1}}", "{{word:wu4}}"],
   tts: ["东西", "物"],
   fit: "natural",
+  kinds: ["spelled", "built"],
   role: "noun",
   examples: [
     {

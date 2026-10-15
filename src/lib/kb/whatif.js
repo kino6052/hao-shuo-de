@@ -4,7 +4,9 @@
 // decide. It never changes data.
 //
 //   removal(ctx, ids)  -> the report (a plain object, all text resolved to pinyin); `patterns` are the
-//                         grammar patterns whose rules, template or examples name the words
+//                         grammar patterns whose rules, template or examples name the words; `paraphrases` the words
+//                         with a paraphrase form that names them, `atoms` the words that rested on a dropped atom
+//                         or are said in more steps (rests-on.js, K24)
 //   renderRemoval(r)   -> the report as text, for the CLI and the Claude tools
 //
 // ctx = { facts, source, rules }: buildFacts(source), the source, and the rule
@@ -13,6 +15,7 @@
 import { solve, tables, sym } from './clingo.js';
 import { replaceWordRefs, refTerm, wordRefIds } from '../word-refs.js';
 import { patternsCarrying, renderPatternUses } from './grammar-uses.js';
+import { restsOnLoss, restsOnModel } from './rests-on.js';
 
 const KINDS = ['lesson_example', 'lesson_answer', 'composite_example', 'story', 'phrase_book'];
 const KIND_NAMES = { lesson_example: 'lesson examples', lesson_answer: 'lesson answers', composite_example: 'composite examples', story: 'story lines', phrase_book: 'phrase-book lines' };
@@ -87,6 +90,12 @@ export async function removal(ctx, ids) {
   // the grammar: the patterns whose rules, template or examples name it
   const patterns = patternsCarrying(source.patterns ?? [], words, ids);
 
+  // the paraphrases: forms that name a dropped word, and the words that rested on a dropped atom (K24)
+  const loss = restsOnLoss(ctx.restsOn?.() ?? restsOnModel(source), restsOnModel(source, { dropped: ids }), ids);
+  const paraphrases = loss.naming.map((x) => ({ word: x.id, term: term(x.id), forms: x.forms, left: x.left, clumsy: x.kind === 'clumsy' }));
+  const loseAtom = loss.lose.map((x) => ({ word: x.id, term: term(x.id), lost: x.lost.map(term), now: x.now ? x.now.map(term) : null }));
+  const longer = loss.longer.map((x) => ({ word: x.id, term: term(x.id), from: x.from, to: x.to }));
+
   return {
     words: ids.map((id) => ({ id, term: term(id), hanzi: words[id].hanzi, pos: words[id].pos?.eng, necessity: words[id].necessity?.index })),
     composites: { redo: sorted(redo), loses: sorted(loses), headLost: sorted(headLost) },
@@ -94,6 +103,8 @@ export async function removal(ctx, ids) {
     coverage: { lost, touched },
     patterns,
     definitions,
+    paraphrases,
+    atoms: { loseAtom, longer },
     senses,
     relations,
     counts: {
@@ -107,6 +118,9 @@ export async function removal(ctx, ids) {
       touched: touched.length,
       patterns: patterns.length,
       definitions: definitions.length,
+      paraphrases: paraphrases.length,
+      loseAtom: loseAtom.length,
+      longer: longer.length,
       senses: senses.length,
       relations: relations.length,
     },
@@ -158,6 +172,9 @@ export function renderRemoval(r, { limit = 12 } = {}) {
 
   section('Grammar patterns that name it', r.patterns ?? [], (x) => renderPatternUses([x])[0]);
   section('Other words whose text names it', r.definitions, (d) => `${d.term} (${d.word}) names ${d.names.join(', ')}`);
+  section('Paraphrases that name it: rewrite those forms', r.paraphrases ?? [], (p) => `${p.term} (${p.word}${p.clumsy ? ', clumsy' : ''}): form${p.forms.length === 1 ? '' : 's'} ${p.forms.join(', ')}${p.left ? ` (${p.left} other form${p.left === 1 ? '' : 's'} stay)` : ' (no other form)'}`);
+  section('Words that rested on it as an atom', r.atoms?.loseAtom ?? [], (x) => `${x.term} (${x.word}) rested on ${x.lost.join(', ')}; ${x.now ? `now rests on ${x.now.join(', ')}` : 'no way left to say it'}`);
+  section('Words said in more steps (a stand-in paraphrase fills in)', r.atoms?.longer ?? [], (x) => `${x.term} (${x.word}): ${x.from} step${x.from === 1 ? '' : 's'} → ${x.to}`);
   section('Catch-all senses left with no compound', r.senses, (s) => `${s.term} ${s.hanzi} (${s.sense})`);
   section('Opposites and synonyms that break', r.relations, (x) => `${x.kind} ${x.what}: ${x.text}`);
   return out.join('\n');

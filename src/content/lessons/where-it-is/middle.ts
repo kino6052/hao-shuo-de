@@ -36,6 +36,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "middle-of",
     en: "{{word:zai4}} {{word:zhong1}}-{{word:jian1}}, in the middle: {{Word:bao1}} {{word:zai4}} {{word:zhong1}}-{{word:jian1}}. (The bag is in the middle.)",
     ru: "{{word:zai4}} {{word:zhong1}}-{{word:jian1}} — посередине: {{Word:bao1}} {{word:zai4}} {{word:zhong1}}-{{word:jian1}}. (Сумка посередине.)",
   },

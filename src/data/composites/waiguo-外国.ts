@@ -12,6 +12,7 @@ export default composite({
   tts: ["外国"],
   literal: "outside country",
   fit: "natural",
+  kinds: ["built"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:qu4}} {{word:wai4}}-{{word:guo2}}.",

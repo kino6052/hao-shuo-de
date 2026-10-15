@@ -159,6 +159,14 @@ describe('the kinds page data and ops', () => {
     expect(b.entries.find((e) => e.zh === '东西').now).toBe('spelled');
   });
 
+  test('an entry with no built form beside its forms is marked bare (K23)', () => {
+    const decided = { ...fixture, composites: fixture.composites.map((c) => (c.zh === '东西' ? { ...c, kinds: ['spelled'] } : c)) };
+    const b = kindsBatch(decided, 1);
+    expect(b.entries.find((e) => e.zh === '东西').bare).toBe(true);
+    // 吃饭 has built forms of its own
+    expect(b.entries.find((e) => e.zh === '吃饭').bare).toBe(false);
+  });
+
   test('a proposal is shown with its reason', () => {
     const b = kindsBatch(fixture, 1, { proposals: { 东西: { as: 'spelled', why: 'east + west is not "thing"' } } });
     expect(b.entries.find((e) => e.zh === '东西').prop).toEqual({ as: 'spelled', why: 'east + west is not "thing"' });

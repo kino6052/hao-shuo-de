@@ -16,6 +16,7 @@ export default composite({
   tts: ["在线", "网上", "在网上"],
   literal: "on the line / on the net",
   fit: "natural",
+  kinds: ["built", "built", "built"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zai4}} {{word:wang3}}-{{word:shang4}}.",

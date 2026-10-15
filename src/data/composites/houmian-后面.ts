@@ -11,6 +11,7 @@ export default composite({
   hsd: ["{{word:hou4}}-{{word:mian4}}"],
   tts: ["后面"],
   fit: "natural",
+  kinds: ["built"],
   examples: [
     {
       pinyin: "{{Word:hou4}}-{{word:mian4}} {{word:you3}} {{word:ren2}}.",

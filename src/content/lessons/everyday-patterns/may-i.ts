@@ -29,6 +29,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "hao-ma-suggest",
     en: "{{word:neng2}} … {{word:ma}}?, may I: {{Word:wo3}} {{word:neng2}} {{word:jin4}}-{{word:lai2}} {{word:ma}}? (Can I come in?) …, {{word:hao3}} {{word:ma}}?, let's or please: {{Word:wo3}}-{{word:men}} {{word:chu1}}-{{word:qu4}} {{word:wan2r}}, {{word:hao3}} {{word:ma}}? (Let's go out and play, okay?)",
     ru: "{{word:neng2}} … {{word:ma}}? — можно ли: {{Word:wo3}} {{word:neng2}} {{word:jin4}}-{{word:lai2}} {{word:ma}}? (Можно войти?) …, {{word:hao3}} {{word:ma}}? — давай или пожалуйста: {{Word:wo3}}-{{word:men}} {{word:chu1}}-{{word:qu4}} {{word:wan2r}}, {{word:hao3}} {{word:ma}}? (Давай выйдем поиграть, хорошо?)",
   },

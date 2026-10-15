@@ -15,6 +15,7 @@ export default composite({
   tts: ["人生", "人活的时间"],
   literal: "a person's life / the time a person lives",
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:ren2}}-{{word:sheng1}} {{word:hen3}} {{word:chang2}}.",

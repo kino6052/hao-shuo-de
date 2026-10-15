@@ -12,6 +12,7 @@ export default composite({
   tts: ["作者", "写的人"],
   literal: "the one who writes",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:zuo4}}-{{word:zhe3}} {{word:shi4}} {{word:ta1}}.",

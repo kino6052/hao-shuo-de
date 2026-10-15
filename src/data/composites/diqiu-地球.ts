@@ -12,6 +12,7 @@ export default composite({
   tts: ["地球", "大圆地"],
   literal: "the big round ground",
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:zai4}} {{word:da4}} {{word:yuan2}} {{word:di4}}-{{word:shang4}}.",

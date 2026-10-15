@@ -8,9 +8,10 @@ export default composite({
   en: "feeling",
   ru: "чувство",
   pos: "verb",
-  hsd: ["{{word:jue2}}-{{light:de2}}"],
-  tts: ["觉得"],
+  hsd: ["{{word:jue2}}-{{light:de2}}", "{{word:xin1}}-{{word:li3}} {{word:xiang3}}"],
+  tts: ["觉得", "心里想"],
   fit: "word",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:jue2}}-{{light:de2}} {{word:zen3me}}-{{word:yang4}}?",

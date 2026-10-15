@@ -15,6 +15,7 @@ export default composite({
   tts: ["车站", "等车的地方"],
   literal: "car stand / where you wait for the car",
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:che1}}-{{word:zhan4}} {{word:hen3}} {{word:da4}}.",

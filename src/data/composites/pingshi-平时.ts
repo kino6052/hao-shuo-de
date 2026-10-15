@@ -15,6 +15,7 @@ export default composite({
   tts: ["平时", "大部分时间"],
   literal: "most of the time",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ping2}}-{{word:shi2}} {{word:zai4}} {{word:jia1}}.",

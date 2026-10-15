@@ -15,6 +15,7 @@ export default composite({
   tts: ["白天", "有日的时间"],
   literal: "the time when there's sun",
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:bai2}}-{{word:tian1}} {{word:hen3}} {{word:re4}}.",

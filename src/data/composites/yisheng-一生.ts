@@ -12,6 +12,7 @@ export default composite({
   tts: ["一生"],
   literal: "one life",
   fit: "natural",
+  kinds: ["built"],
   note: "Real Mandarin: 一生.",
   examples: [
     {

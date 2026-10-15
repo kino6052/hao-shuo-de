@@ -34,6 +34,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "ye-also",
     en: "{{word:ye3}} {{word:hen3}} + adjective: {{Word:ta1}} {{word:ye3}} {{word:hen3}} {{word:leng3}}. (She's cold too.)",
     ru: "{{word:ye3}} {{word:hen3}} + прилагательное: {{Word:ta1}} {{word:ye3}} {{word:hen3}} {{word:leng3}}. (Ей тоже холодно.)",
   },

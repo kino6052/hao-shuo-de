@@ -15,6 +15,7 @@ export default composite({
   tts: ["作用", "能做的东西"],
   literal: "what it can do",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:zuo4}}-{{word:yong4}} {{word:hen3}} {{word:da4}}.",

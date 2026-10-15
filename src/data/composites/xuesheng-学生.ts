@@ -12,6 +12,7 @@ export default composite({
   tts: ["学生", "学的人"],
   literal: "learn-born / one who learns",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{word:xie1}} {{word:xue2}}-{{word:sheng1}} {{word:hen3}} {{word:hao3}}.",

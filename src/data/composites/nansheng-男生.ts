@@ -12,6 +12,7 @@ export default composite({
   tts: ["男生", "学的男人"],
   literal: "a man who learns",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:nan2}}-{{word:sheng1}}.",

@@ -8,10 +8,11 @@ export default composite({
   en: "remember",
   ru: "помнить",
   pos: "verb",
-  hsd: ["{{word:ji4}}-{{light:de2}}"],
-  tts: ["记得"],
+  hsd: ["{{word:ji4}}-{{light:de2}}", "{{word:hai2}} {{word:zhi1dao4}}"],
+  tts: ["记得", "还知道"],
   literal: "remember-get",
   fit: "plain",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:ji4}}-{{light:de2}} {{word:ta1}}-{{word:de}} {{word:ming2}}-{{light:zi4}} {{word:ma}}?",

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:you3}} {{word:yi1}}-{{word:dian3}}"],
   tts: ["有一点"],
   fit: "natural",
-  note: "Lesson {{lesson:numbers}}: yǒu yī-diǎn lěng.",
+  note: "Lesson {{lesson:time-and-sums}}: yǒu yī-diǎn lěng.",
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:yi1}}-{{word:dian3}} {{word:leng3}}.",

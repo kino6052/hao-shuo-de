@@ -12,6 +12,7 @@ export default composite({
   tts: ["出去"],
   literal: "out-go",
   fit: "natural",
+  kinds: ["built"],
   note: "Lesson {{lesson:direction-and-result}}.",
   examples: [
     {

@@ -12,6 +12,7 @@ export default composite({
   tts: ["回来"],
   literal: "back-come",
   fit: "natural",
+  kinds: ["built"],
   note: "Lesson {{lesson:direction-and-result}}.",
   examples: [
     {

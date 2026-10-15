@@ -8,6 +8,6 @@ export default pattern("feeling-then", {
   covers: [],
   template: { hsd: "feeling + what it is about", eng: "Glad that it happened" },
   rules: [{ lhs: "S", hsd: "AdjP S", eng: "a feeling, then what it is about" }],
-  taught: "greetings-and-feelings/heart",
+  taught: "feelings/heart",
   examples: [["Hěn kāi-xīn nǐ lái le!", "I'm so glad you came!"]],
 });

@@ -15,6 +15,7 @@ export default composite({
   tts: ["卫生", "上面没有乱的东西"],
   literal: "nothing dirty on it",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:fang2}}-{{word:jian1}} {{word:hen3}} {{word:wei4}}-{{word:sheng1}}.",

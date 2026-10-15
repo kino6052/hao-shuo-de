@@ -12,6 +12,7 @@ export default composite({
   tts: ["头发", "头上的毛"],
   literal: "the fur on the head",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:ta1}}-{{word:de}} {{word:tou2}}-{{light:fa1}} {{word:hen3}} {{word:hei1}}.",

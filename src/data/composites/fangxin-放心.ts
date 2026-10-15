@@ -12,7 +12,8 @@ export default composite({
   tts: ["放心"],
   literal: "put the heart down",
   fit: "natural",
-  note: "Lesson {{lesson:greetings-and-feelings}}.",
+  kinds: ["built"],
+  note: "Lesson {{lesson:feelings}}.",
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:fang4}}-{{word:xin1}} {{word:le}}.",

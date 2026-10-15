@@ -12,6 +12,7 @@ export default composite({
   tts: ["对面"],
   literal: "facing side",
   fit: "natural",
+  kinds: ["built"],
   note: "Real Mandarin: 对面.",
   examples: [
     {

@@ -8,9 +8,10 @@ export default composite({
   en: "country",
   ru: "страна",
   pos: "noun",
-  hsd: ["{{word:guo2}}-{{word:jia1}}"],
-  tts: ["国家"],
+  hsd: ["{{word:guo2}}-{{word:jia1}}", "{{word:guo2}}"],
+  tts: ["国家", "国"],
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:qu4}} {{word:guo4}} {{word:na3}}-{{word:xie1}} {{word:guo2}}-{{word:jia1}}?",

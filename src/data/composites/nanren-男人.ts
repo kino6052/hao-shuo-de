@@ -8,9 +8,13 @@ export default composite({
   en: "man",
   ru: "мужчина",
   pos: "noun",
-  hsd: ["{{word:nan2}}-{{word:ren2}}"],
-  tts: ["男人"],
+  hsd: [
+    "{{word:nan2}}-{{word:ren2}}",
+    "{{word:bu4}} {{word:shi4}} {{word:nv3}}-{{word:de}} {{word:ren2}}",
+  ],
+  tts: ["男人", "不是女的人"],
   fit: "word",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:yi1}}-{{light:ge4}} {{word:hao3}} {{word:nan2}}-{{word:ren2}}.",

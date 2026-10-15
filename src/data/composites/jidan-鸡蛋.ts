@@ -15,6 +15,7 @@ export default composite({
   tts: ["鸡蛋", "飞的动物生的东西"],
   literal: "what flying animals give birth to",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:chi1}} {{word:ji1}}-{{word:dan4}}.",

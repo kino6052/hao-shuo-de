@@ -12,6 +12,7 @@ export default composite({
   tts: ["人口"],
   literal: "people's mouths",
   fit: "natural",
+  kinds: ["built"],
   note: "Real Mandarin: 人口.",
   examples: [
     {

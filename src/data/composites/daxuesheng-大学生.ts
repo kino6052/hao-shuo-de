@@ -15,6 +15,7 @@ export default composite({
   tts: ["大学生", "大的学的人"],
   literal: "big-learning student / a big learner",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:da4}}-{{word:xue2}}-{{word:sheng1}}.",

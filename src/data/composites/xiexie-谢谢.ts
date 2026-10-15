@@ -12,7 +12,7 @@ export default composite({
   tts: ["谢谢", "你对我很好"],
   literal: "thank-thank / you're very good to me",
   fit: "natural",
-  note: "Lesson {{lesson:greetings-and-feelings}}. Also: hǎo-hǎo jué-de, zhè bǎ wǒ jué-de hěn hǎo.",
+  note: "Lesson {{lesson:greetings}}. Also: hǎo-hǎo jué-de, zhè bǎ wǒ jué-de hěn hǎo.",
   examples: [
     {
       pinyin: "{{Word:xie4}}-{{light:xie4}} {{word:ni3}}!",

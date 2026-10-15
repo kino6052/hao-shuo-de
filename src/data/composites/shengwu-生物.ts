@@ -12,6 +12,7 @@ export default composite({
   tts: ["生物", "活的东西"],
   literal: "a living thing",
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:shui3}}-{{word:li3}} {{word:you3}} {{word:sheng1}}-{{word:wu4}}.",

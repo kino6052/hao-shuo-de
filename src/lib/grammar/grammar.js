@@ -26,7 +26,7 @@ export function ruleWords(hsd) {
 }
 
 // classes the lexicon makes up itself (slot: a letter or … that stands for something left open)
-const BUILT_IN = ['comma', 'quoted', 'unknown', 'again', 'slot'];
+const BUILT_IN = ['comma', 'colon', 'quoted', 'unknown', 'again', 'slot'];
 
 export function buildGrammar(patterns, { words = {}, composites = [] } = {}) {
   const rules = [];
@@ -34,7 +34,7 @@ export function buildGrammar(patterns, { words = {}, composites = [] } = {}) {
   for (const p of patterns) {
     p.rules.forEach((r, i) => {
       const rhs = String(r.hsd).trim().split(/\s+/).filter(Boolean);
-      rules.push({ lhs: r.lhs, rhs, id: `${p.id}#${i + 1}`, pattern: p.id, eng: r.eng });
+      rules.push({ lhs: r.lhs, rhs, id: `${p.id}#${i + 1}`, pattern: p.id, eng: r.eng, ...(p.preferred ? { preferred: true } : {}) });
     });
   }
 

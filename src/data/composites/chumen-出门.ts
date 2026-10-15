@@ -11,6 +11,7 @@ export default composite({
   hsd: ["{{word:chu1}}-{{word:men2}}", "{{word:chu1}}-{{word:qu4}}"],
   tts: ["出门", "出去"],
   fit: "natural",
+  kinds: ["built", "built"],
   note: "Lesson {{lesson:direction-and-result}}.",
   examples: [
     {

@@ -6,7 +6,8 @@
 //   makeGrammar(rules, { glue })      -> grammar
 //   parse(lattice, grammar, options)  -> { ok, trees, treeCount, failure }
 //
-// rules    [{ lhs, rhs: [symbol], id, pattern?, eng? }]; no empty right sides.
+// rules    [{ lhs, rhs: [symbol], id, pattern?, eng?, preferred? }]; no empty right sides.
+//          preferred: readings that use the rule come first (see enumerate).
 // symbols  An uppercase first letter is a nonterminal (NP, VP, Utt).
 //          @name is any word of that class (@noun, @adjective).
 //          anything else is that word, by id (shi4, hen3).
@@ -196,6 +197,26 @@ function enumerate(done, rules, maxTrees, budget) {
   };
   let count = 0;
   for (const s of done) if ((count = Math.min(cap, count + countOf(s))) === cap) break;
+
+  // Reading order: a reading that uses a preferred rule (from a pattern marked `preferred`) comes first. Each state's
+  // ways in (`backs`) are sorted so the ones that can reach a preferred rule are tried first; the first tree built is
+  // then one with a preferred rule whenever there is one. Otherwise the order is the search order.
+  const prefers = new Map(); // state -> 1 if some reading of it uses a preferred rule; -1 while it is being worked out
+  const prefersOf = (state) => {
+    if (state.dot === 0) return 0;
+    const known = prefers.get(state);
+    if (known !== undefined) return Math.max(known, 0);
+    prefers.set(state, -1);
+    const marks = new Map(state.backs.map((b) => [b, prefersOf(b.prev) || (b.child ? prefersOf(b.child) : 0)]));
+    state.backs.sort((a, b) => marks.get(b) - marks.get(a));
+    let p = Math.max(0, ...marks.values());
+    if (state.dot === rules[state.r].rhs.length && rules[state.r].preferred) p = 1;
+    prefers.set(state, p);
+    return p;
+  };
+  // (worked out for every state before sorting: sort never compares a list of one)
+  const marked = new Map(done.map((s) => [s, prefersOf(s)]));
+  done.sort((a, b) => marked.get(b) - marked.get(a));
 
   let steps = 0;
   const trees = [];

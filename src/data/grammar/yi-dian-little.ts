@@ -18,7 +18,7 @@ export default pattern("yi-dian-little", {
     { lhs: "VP", hsd: "=duo1 VerbP", eng: "duō and a verb: do it more" },
     { lhs: "VP", hsd: "=shao3 VerbP", eng: "shǎo and a verb: do it less" },
   ],
-  taught: "numbers/little",
+  taught: "time-and-sums/little",
   examples: [
     ["Zhè-ge dà yī diǎn.", "This one is a bit bigger."],
     ["Shuǐ yǒu yī diǎn lěng.", "The water is a bit cold."],

@@ -12,6 +12,7 @@ export default composite({
   tts: ["中心", "中间"],
   literal: "middle heart / the middle",
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{word:li3}} {{word:shi4}} {{word:zhong1}}-{{word:xin1}}.",

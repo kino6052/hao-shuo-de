@@ -12,6 +12,7 @@ export default composite({
   tts: ["外边", "外面"],
   literal: "the outside",
   fit: "natural",
+  kinds: ["built", "built"],
   note: "Lesson {{lesson:moving}}.",
   examples: [
     {

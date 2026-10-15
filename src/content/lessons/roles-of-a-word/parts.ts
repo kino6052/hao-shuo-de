@@ -51,6 +51,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "owner-part",
     en: "adjective-{{word:de}} + noun: {{word:hao3}}-{{word:de}} {{word:ren2}} (a good person). Whose: {{word:wo3}}-{{word:de}} {{word:bi2zi}} (my nose).",
     ru: "прилагательное-{{word:de}} + существительное: {{word:hao3}}-{{word:de}} {{word:ren2}} (хороший человек). Чьё: {{word:wo3}}-{{word:de}} {{word:bi2zi}} (мой нос).",
   },

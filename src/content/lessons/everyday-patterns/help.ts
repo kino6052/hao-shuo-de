@@ -36,6 +36,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "bang-help",
     en: "{{word:bang1}} + person + verb, help: {{Word:ni3}} {{word:bang1}} {{word:wo3}} {{word:na2}} {{word:yi1}}-{{word:xia4}}. (Could you hold this for me?)",
     ru: "{{word:bang1}} + человек + глагол — помочь: {{Word:ni3}} {{word:bang1}} {{word:wo3}} {{word:na2}} {{word:yi1}}-{{word:xia4}}. (Подержишь это за меня?)",
   },

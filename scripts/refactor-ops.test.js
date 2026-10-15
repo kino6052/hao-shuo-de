@@ -94,6 +94,38 @@ describe('the kinds op', () => {
   });
 });
 
+describe('the coverageForm op (K24)', () => {
+  const COVERAGE = 'src/data/coverage/atoms.ts';
+  const item = (w, key) => w.data(COVERAGE).items.find((i) => i.key === key);
+  const saying = ref('shuo1', 'hua4');
+
+  test('adds a form after the ones the item has and carries no new word', () => {
+    const w = fresh();
+    const before = item(w, 'I');
+    applyOps(w, [{ op: 'coverageForm', item: 'atoms:I', form: saying }]);
+    const after = item(w, 'I');
+    expect(after.forms).toEqual([...before.forms, saying]);
+    expect(after.words).toEqual(before.words);
+  });
+
+  test('the same form twice is one; words add carriers', () => {
+    const w = fresh();
+    applyOps(w, [
+      { op: 'coverageForm', item: 'atoms:I', form: saying },
+      { op: 'coverageForm', item: 'atoms:I', form: saying, words: ['shuo1'] },
+    ]);
+    expect(item(w, 'I').forms.filter((f) => f === saying)).toHaveLength(1);
+    expect(item(w, 'I').words).toContain('shuo1');
+  });
+
+  test('an unknown item, an empty form or an unknown word is refused', () => {
+    const w = fresh();
+    expect(() => applyOps(w, [{ op: 'coverageForm', item: 'atoms:NOPE', form: saying }])).toThrow(/no coverage item/);
+    expect(() => applyOps(w, [{ op: 'coverageForm', item: 'atoms:I', form: ' ' }])).toThrow(/give a form/);
+    expect(() => applyOps(w, [{ op: 'coverageForm', item: 'atoms:I', form: saying, words: ['nope9'] }])).toThrow();
+  });
+});
+
 describe('the classes op (K6)', () => {
   const why = { eng: 'a thing you get', rus: 'то, что получаешь' };
 

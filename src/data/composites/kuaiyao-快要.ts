@@ -12,6 +12,7 @@ export default composite({
   tts: ["快要", "快…了"],
   literal: "fast-want",
   fit: "natural",
+  kinds: ["built", "built"],
   note: "kuài lái le: almost here.",
   examples: [
     {

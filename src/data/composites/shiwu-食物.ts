@@ -12,6 +12,7 @@ export default composite({
   tts: ["食物", "吃的"],
   literal: "eaten thing",
   fit: "natural",
+  kinds: ["spelled", "built"],
   note: "Lesson {{lesson:roles-of-a-word}}.",
   examples: [
     {

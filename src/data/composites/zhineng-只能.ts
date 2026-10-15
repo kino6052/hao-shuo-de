@@ -15,6 +15,7 @@ export default composite({
   tts: ["只能", "X，没有别的方法"],
   literal: "X, there's no other way",
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zhi3}}-{{word:neng2}} {{word:zuo4}} {{word:zhe4}}-{{light:ge4}}.",

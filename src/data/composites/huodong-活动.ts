@@ -15,6 +15,7 @@ export default composite({
   tts: ["活动", "一起做的东西"],
   literal: "live-move / something done together",
   fit: "natural",
+  kinds: ["built", "built"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:yi1}}-{{word:qi3}} {{word:huo2}}-{{word:dong4}}.",

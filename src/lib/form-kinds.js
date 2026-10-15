@@ -7,12 +7,17 @@
 //   formKinds(entry)       -> ['built' | 'spelled' | 'unknown', …] one per form
 //   undecidedForms(entry)  -> the indexes of the forms still 'unknown'
 //   isMandarinCompound(entry, i)
+//   needsBuiltForm(entry)  -> true for an entry with a spelled form and no built form (K23)
 //
 // The rule fills the obvious ones: a form that is not Mandarin's own compound
 // is built (it is a description), and so is the compound of an entry marked
 // `transparent` (wǒ-men: I + plural). That leaves the compounds that need a
 // yes/no from the author, who writes them as `kinds: ["spelled", "built"]` on
 // the entry. An explicit `kinds` always wins.
+//
+// K23 (2026-10-14): a spelled form is potentially dangerous, because the learner has to know the whole word. It is
+// covered when the entry also has a built form, a way to say the same thing with our words only (東西 is spelled
+// dōng-xi, and built wù). An entry with a spelled form and no built form has nothing to fall back on, and needs one.
 //
 // Pure, no node APIs. Takes an entry with `hsd`/`tts` as lists (the data files)
 // or as " / "-joined strings (the assembled dictionary).
@@ -53,4 +58,14 @@ export function kindsProblems(entry) {
     if (!FORM_KINDS.includes(k)) out.push(`kinds[${i}] must be "built" or "spelled", not ${JSON.stringify(k)}`);
   });
   return out;
+}
+
+// True since K4 (2026-10-15) gave the 19 bare entries a built form (K23): check-data now fails for a new
+// entry with a spelled form and no built form, instead of counting it.
+export const SPELLED_NEED_BUILT_FORM = true;
+
+// -> true when the entry has a spelled form and no built form to say the word without it (K23).
+export function needsBuiltForm(entry) {
+  const kinds = formKinds(entry);
+  return kinds.includes('spelled') && !kinds.includes('built');
 }

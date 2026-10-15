@@ -77,7 +77,7 @@ node scripts/kb.js engine                                               # which 
 
 | Tool | What it answers |
 | --- | --- |
-| `kb_word` | The card for one dictionary word: its meaning, why the core needs it, its category, the lesson that teaches it, its opposites and synonyms, the composites that use it or hang under it… |
+| `kb_word` | The card for one dictionary word: its meaning, why the core needs it, its category, the lesson that teaches it, its opposites and synonyms, the atoms its paraphrase and its description come down to… |
 | `kb_remove` | What happens if we drop one or more words from the core dictionary. |
 | `kb_parse` | Does a sentence fit the grammar patterns (src/data/grammar/), and by which? |
 | `kb_check_form` | Check a proposed Hao-shuo-de form before it goes into the data: plain pinyin becomes word references, every syllable must be a dictionary word (names and sounds in quotes), the hanzi must spell the words… |
@@ -116,6 +116,7 @@ node scripts/kb.js engine                                               # which 
 | `src/lib/kb/parse.js` | "Does this sentence parse?" for the CLI, the explorer and the Claude tools (KB_PLAN.md phase 1, kb_parse). |
 | `src/lib/kb/pattern-report.js` | Minimal patterns (KB_PLAN.md phase 4): which grammar patterns the book and the dictionary really need, and in what order they are taught. |
 | `src/lib/kb/relations.js` | Relation candidates (KB_PLAN.md K18, phase 5): every relation the data already states or implies, with its kind, where it came from and why. |
+| `src/lib/kb/rests-on.js` | Which atoms a word rests on (KB_PLAN.md K24: "each word shows which atoms its paraphrase and its description come down to"). |
 | `src/lib/kb/review.js` | The word and kinds review (KB_PLAN.md phase 2): what the review pages show for a batch, and what the author's decisions turn into. |
 | `src/lib/kb/rules.js` | The rule files (kb/rules/*.lp), read from disk. Node and bun only: the learner pages never run the reasoner. |
 | `src/lib/kb/scoreboard.js` | The scoreboard (KB_PLAN.md phase 3): a few numbers about the language, one row per change, kept in kb/scoreboard.csv. |

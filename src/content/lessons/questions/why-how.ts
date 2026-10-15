@@ -41,6 +41,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "why-how-question",
     items: [
       {
         en: "{{word:wei4}}-{{word:shen2me}} + verb, why: {{Word:ni3}} {{word:wei4}}-{{word:shen2me}} {{word:bu4}} {{word:chi1}}? (Why don't you eat?)",

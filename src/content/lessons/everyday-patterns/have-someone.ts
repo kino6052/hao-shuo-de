@@ -17,7 +17,7 @@ export default lessonModule({
       "",
       "**Who + {{word:jiao4}} / {{word:rang4}} + person + verb**",
       "",
-      "You know {{word:jiao4}} as \"be called\" (Lesson {{lesson:greetings-and-feelings}}). With a person and a verb after it, it means \"tell, have\". {{word:rang4}} lets: {{Word:rang4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}}, let him in. {{word:bu4}} {{word:rang4}} is \"won't let\".",
+      "You know {{word:jiao4}} as \"be called\" (Lesson {{lesson:greetings}}). With a person and a verb after it, it means \"tell, have\". {{word:rang4}} lets: {{Word:rang4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}}, let him in. {{word:bu4}} {{word:rang4}} is \"won't let\".",
       "{{word:rang4}} also makes something happen to someone: {{Word:zhe4}} {{word:rang4}} {{word:wo3}} {{word:hen3}} {{word:pa4}}, this scares me.",
     ],
     ru: [
@@ -25,7 +25,7 @@ export default lessonModule({
       "",
       "**Кто + {{word:jiao4}} / {{word:rang4}} + человек + глагол**",
       "",
-      "{{word:jiao4}} вы знаете как «называться» (урок {{lesson:greetings-and-feelings}}). Если после него идут человек и глагол, оно значит «велеть». {{word:rang4}} позволяет: {{Word:rang4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}} — впусти его. {{word:bu4}} {{word:rang4}} — «не позволять».",
+      "{{word:jiao4}} вы знаете как «называться» (урок {{lesson:greetings}}). Если после него идут человек и глагол, оно значит «велеть». {{word:rang4}} позволяет: {{Word:rang4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}} — впусти его. {{word:bu4}} {{word:rang4}} — «не позволять».",
       "А ещё {{word:rang4}} значит «вызывать что-то у кого-то»: {{Word:zhe4}} {{word:rang4}} {{word:wo3}} {{word:hen3}} {{word:pa4}} — мне от этого страшно.",
     ],
     tldr: {

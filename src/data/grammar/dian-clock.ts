@@ -13,7 +13,7 @@ export default pattern("dian-clock", {
     { lhs: "Time", hsd: "=zao3 =shang4", eng: "zǎo-shàng, the morning" },
     { lhs: "Time", hsd: "Time Time", eng: "a part of the day, then the hour" },
   ],
-  taught: "numbers/clock",
+  taught: "time-and-sums/clock",
   examples: [
     ["Wǒ sān diǎn huí jiā.", "I go home at three."],
     ["Wǒ shí-èr diǎn chī fàn.", "I eat at twelve o'clock."],

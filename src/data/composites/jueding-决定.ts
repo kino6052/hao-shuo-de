@@ -15,6 +15,7 @@ export default composite({
   tts: ["决定", "来知道要做什么了"],
   literal: "come to know what to do",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:jue2}}-{{word:ding4}} {{word:qu4}} \"Zhōngguó\".",

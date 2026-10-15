@@ -38,6 +38,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "hello-greeting",
     en: "{{Word:ni3}} {{word:hao3}}!, hello. {{Word:ni3}} {{word:hao3}} {{word:ma}}?, how are you?",
     ru: "{{Word:ni3}} {{word:hao3}}! — привет. {{Word:ni3}} {{word:hao3}} {{word:ma}}? — как дела?",
   },

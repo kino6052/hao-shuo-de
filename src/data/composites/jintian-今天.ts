@@ -12,6 +12,7 @@ export default composite({
   tts: ["今天", "现在的日"],
   literal: "the day of now",
   fit: "natural",
+  kinds: ["spelled", "built"],
   note: "Understood, but not how people say it.",
   examples: [
     {

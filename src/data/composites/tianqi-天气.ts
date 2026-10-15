@@ -15,6 +15,7 @@ export default composite({
   tts: ["天气", "外面的空气"],
   literal: "day-air / the air outside",
   fit: "natural",
+  kinds: ["built", "built"],
   note: "wài-miàn-de kōng-qì hěn rè: the weather is hot.",
   examples: [
     {

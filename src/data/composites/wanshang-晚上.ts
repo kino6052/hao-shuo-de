@@ -12,6 +12,7 @@ export default composite({
   tts: ["晚上", "月的时间"],
   literal: "moon time",
   fit: "natural",
+  kinds: ["built", "built"],
   note: "Lesson {{lesson:when-it-happens}}.",
   examples: [
     {

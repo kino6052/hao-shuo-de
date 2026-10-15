@@ -8,9 +8,13 @@ export default composite({
   en: "have a meeting",
   ru: "проводить собрание",
   pos: "verb",
-  hsd: ["{{word:kai1}}-{{word:hui4}}"],
-  tts: ["开会"],
+  hsd: [
+    "{{word:kai1}}-{{word:hui4}}",
+    "{{word:hen3}}-{{word:duo1}}-{{word:de}} {{word:ren2}} {{word:yi1}}-{{word:qi3}} {{word:shuo1}} {{word:hua4}}",
+  ],
+  tts: ["开会", "很多的人一起说话"],
   fit: "natural",
+  kinds: ["spelled", "built"],
   note: "Real Mandarin: 开会.",
   examples: [
     {

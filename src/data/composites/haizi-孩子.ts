@@ -12,6 +12,7 @@ export default composite({
   tts: ["孩子", "小的人"],
   literal: "small person",
   fit: "natural",
+  kinds: ["spelled", "built"],
   note: "Keep -de: xiǎo rén means a mean person.",
   examples: [
     {

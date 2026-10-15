@@ -12,6 +12,7 @@ export default composite({
   tts: ["不得不", "要"],
   literal: "can't not",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:bu4}}-{{word:de2}}-{{word:bu4}} {{word:qu4}}.",

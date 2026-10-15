@@ -35,6 +35,7 @@ export default lessonModule({
     },
   },
   info: {
+    pattern: "li-qi-strength",
     en: "{{word:you3}} {{word:li4}}, strong: {{Word:ta1}} {{word:hen3}} {{word:you3}} {{word:li4}}. (He's very strong.)",
     ru: "{{word:you3}} {{word:li4}} — сильный: {{Word:ta1}} {{word:hen3}} {{word:you3}} {{word:li4}}. (Он очень сильный.)",
   },

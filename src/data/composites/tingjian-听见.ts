@@ -12,7 +12,8 @@ export default composite({
   tts: ["听见", "听到"],
   literal: "listen-arrive",
   fit: "natural",
-  note: "Lesson {{lesson:greetings-and-feelings}}.",
+  kinds: ["built", "built"],
+  note: "Lesson {{lesson:feelings}}.",
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:ting1}}-{{word:jian4}} {{word:le}} {{word:ma}}?",

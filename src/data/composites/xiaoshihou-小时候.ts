@@ -15,6 +15,7 @@ export default composite({
   tts: ["小时候", "小的时间"],
   literal: "the small time",
   fit: "natural",
+  kinds: ["spelled", "built"],
   note: "wǒ xiǎo-de shí-jiān: when I was little.",
   examples: [
     {

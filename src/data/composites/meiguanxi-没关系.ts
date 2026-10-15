@@ -12,6 +12,7 @@ export default composite({
   tts: ["没关系", "没有关系"],
   literal: "no connection",
   fit: "natural",
+  kinds: ["built", "built"],
   note: "Lesson {{lesson:inside-a-sentence}}.",
   examples: [
     {

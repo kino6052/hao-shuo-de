@@ -37,7 +37,7 @@ const wordFacts = (words) =>
     .sort()
     .map((id) => [id, words[id].term, words[id].pos?.eng ?? null, Object.keys(words[id].classes ?? {}).sort()]);
 const compositeFacts = (cs) => cs.map((c) => [c.zh, c.py, c.pos ?? null, c.hsd ?? null]);
-const ruleFacts = (patterns) => patterns.map((p) => [p.id, p.rules.map((r) => [r.lhs, r.hsd])]);
+const ruleFacts = (patterns) => patterns.map((p) => [p.id, p.rules.map((r) => [r.lhs, r.hsd]), p.preferred ?? false]);
 
 // where the memory lives; a copy of the repo (refactor-check.js, parse-diff.js) is pointed here too, so what it
 // parses is remembered for the next copy and for this repo

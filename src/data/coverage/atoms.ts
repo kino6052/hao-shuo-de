@@ -14,7 +14,7 @@ export default coverageGroup({
       eng: "I, me",
       rus: "я",
       words: ["wo3"],
-      forms: ["{{word:wo3}}"],
+      forms: ["{{word:wo3}}", "{{word:shuo1}}-{{word:hua4}}-{{word:de}} {{word:ren2}}"],
       lesson: "pointing",
     },
     {
@@ -22,7 +22,7 @@ export default coverageGroup({
       eng: "you",
       rus: "ты",
       words: ["ni3"],
-      forms: ["{{word:ni3}}"],
+      forms: ["{{word:ni3}}", "{{word:ting1}}-{{word:hua4}}-{{word:de}} {{word:ren2}}"],
       lesson: "pointing",
     },
     {
@@ -30,7 +30,7 @@ export default coverageGroup({
       eng: "someone",
       rus: "кто-то",
       words: ["ren2"],
-      forms: ["{{word:ren2}}"],
+      forms: ["{{word:ren2}}", "{{word:you3}} {{word:shei2}}"],
       lesson: "words-and-sentences",
     },
     {
@@ -46,7 +46,7 @@ export default coverageGroup({
       eng: "people",
       rus: "люди",
       words: ["ren2"],
-      forms: ["{{word:ren2}}"],
+      forms: ["{{word:ren2}}", "{{word:wo3}}-{{word:men}} {{word:he2}} {{word:ta1}}-{{word:men}}"],
       lesson: "words-and-sentences",
     },
     {
@@ -54,7 +54,10 @@ export default coverageGroup({
       eng: "body",
       rus: "тело",
       words: ["shen1ti3"],
-      forms: ["{{word:shen1ti3}}"],
+      forms: [
+        "{{word:shen1ti3}}",
+        "{{word:tou2}} {{word:he2}} {{word:shou3}} {{word:he2}} {{word:jiao3}} {{word:he2}} {{word:du4zi}}",
+      ],
       lesson: "how-much",
     },
     {
@@ -62,7 +65,10 @@ export default coverageGroup({
       eng: "kind",
       rus: "вид",
       words: ["zhong3"],
-      forms: ["{{word:zhong3}}"],
+      forms: [
+        "{{word:zhong3}}",
+        "{{word:yi1}}-{{word:yang4}}-{{word:de}} {{word:yi1}}-{{word:xie1}} {{word:dong1}}-{{light:xi1}}",
+      ],
       lesson: "comparing",
     },
     {
@@ -78,7 +84,7 @@ export default coverageGroup({
       eng: "this",
       rus: "этот",
       words: ["zhe4"],
-      forms: ["{{word:zhe4}}"],
+      forms: ["{{word:zhe4}}", "{{word:wo3}} {{word:fu4jin4}}-{{word:de}}"],
       lesson: "words-and-sentences",
     },
     {
@@ -102,7 +108,10 @@ export default coverageGroup({
       eng: "one",
       rus: "один",
       words: ["yi1"],
-      forms: ["{{word:yi1}}"],
+      forms: [
+        "{{word:yi1}}",
+        "{{word:zhi3}} {{word:you3}} {{word:zhe4}}-{{light:ge4}}, {{word:mei2}} {{word:you3}} {{word:bie2}}-{{word:de}}",
+      ],
       lesson: "numbers",
     },
     {
@@ -126,7 +135,7 @@ export default coverageGroup({
       eng: "all",
       rus: "все",
       words: ["dou1"],
-      forms: ["{{word:dou1}}"],
+      forms: ["{{word:dou1}}", "{{word:mei2}} {{word:you3}} {{word:bu4}} {{word:shi4}} X-{{word:de}}"],
       lesson: "also-and-all",
     },
     {
@@ -134,7 +143,7 @@ export default coverageGroup({
       eng: "much, many",
       rus: "много",
       words: ["duo1"],
-      forms: ["{{word:duo1}}"],
+      forms: ["{{word:duo1}}", "{{word:bu4}} {{word:shao3}}"],
       lesson: "modifying-nouns",
     },
     {
@@ -142,7 +151,7 @@ export default coverageGroup({
       eng: "little, few",
       rus: "мало",
       words: ["shao3"],
-      forms: ["{{word:shao3}}"],
+      forms: ["{{word:shao3}}", "{{word:bu4}} {{word:duo1}}"],
       lesson: "modifying-nouns",
     },
     {
@@ -150,7 +159,7 @@ export default coverageGroup({
       eng: "good",
       rus: "хороший",
       words: ["hao3"],
-      forms: ["{{word:hao3}}"],
+      forms: ["{{word:hao3}}", "{{word:bu4}} {{word:huai4}}"],
       lesson: "modifying-nouns",
     },
     {
@@ -158,7 +167,7 @@ export default coverageGroup({
       eng: "bad",
       rus: "плохой",
       words: ["huai4"],
-      forms: ["{{word:huai4}}"],
+      forms: ["{{word:huai4}}", "{{word:bu4}} {{word:hao3}}"],
       lesson: "becoming-and-making",
     },
     {
@@ -166,7 +175,7 @@ export default coverageGroup({
       eng: "big",
       rus: "большой",
       words: ["da4"],
-      forms: ["{{word:da4}}"],
+      forms: ["{{word:da4}}", "{{word:bu4}} {{word:xiao3}}"],
       lesson: "modifying-nouns",
     },
     {
@@ -174,7 +183,7 @@ export default coverageGroup({
       eng: "small",
       rus: "маленький",
       words: ["xiao3"],
-      forms: ["{{word:xiao3}}"],
+      forms: ["{{word:xiao3}}", "{{word:bu4}} {{word:da4}}"],
       lesson: "modifying-nouns",
     },
     {
@@ -183,14 +192,14 @@ export default coverageGroup({
       rus: "думать",
       words: ["jue2", "de2"],
       forms: ["{{word:jue2}}-{{light:de2}}"],
-      lesson: "greetings-and-feelings",
+      lesson: "feelings",
     },
     {
       key: "KNOW",
       eng: "know",
       rus: "знать",
       words: ["zhi1dao4"],
-      forms: ["{{word:zhi1dao4}}"],
+      forms: ["{{word:zhi1dao4}}", "{{word:ji4}}-{{word:de}}"],
       lesson: "pre-verbs",
     },
     {
@@ -198,7 +207,7 @@ export default coverageGroup({
       eng: "want",
       rus: "хотеть",
       words: ["yao4"],
-      forms: ["{{word:yao4}}"],
+      forms: ["{{word:yao4}}", "{{word:xiang3}}"],
       lesson: "pre-verbs",
     },
     {
@@ -215,14 +224,18 @@ export default coverageGroup({
       rus: "чувствовать",
       words: ["jue2", "de2"],
       forms: ["{{word:jue2}}-{{light:de2}}"],
-      lesson: "greetings-and-feelings",
+      lesson: "feelings",
     },
     {
       key: "SEE",
       eng: "see",
       rus: "видеть",
       words: ["kan4"],
-      forms: ["{{word:kan4}}", "{{word:kan4}}-{{word:dao4}}"],
+      forms: [
+        "{{word:kan4}}",
+        "{{word:kan4}}-{{word:dao4}}",
+        "{{word:yong4}} {{word:yan3jing}} {{word:jian4}}",
+      ],
       lesson: "who-does-what",
     },
     {
@@ -230,7 +243,7 @@ export default coverageGroup({
       eng: "hear",
       rus: "слышать",
       words: ["ting1"],
-      forms: ["{{word:ting1}}"],
+      forms: ["{{word:ting1}}", "{{word:sheng1yin1}} {{word:dao4}} {{word:er3duo}}"],
       lesson: "who-does-what",
     },
     {
@@ -238,7 +251,7 @@ export default coverageGroup({
       eng: "say",
       rus: "сказать",
       words: ["shuo1"],
-      forms: ["{{word:shuo1}}"],
+      forms: ["{{word:shuo1}}", "{{word:cong2}} {{word:kou3}} {{word:fa1}} {{word:ci2}}"],
       lesson: "who-does-what",
     },
     {
@@ -246,7 +259,7 @@ export default coverageGroup({
       eng: "words",
       rus: "слова",
       words: ["ci2"],
-      forms: ["{{word:ci2}}"],
+      forms: ["{{word:ci2}}", "{{word:hua4}}"],
       lesson: "roles-of-a-word",
     },
     {
@@ -254,7 +267,7 @@ export default coverageGroup({
       eng: "true",
       rus: "правда",
       words: ["zhen1"],
-      forms: ["{{word:zhen1}}"],
+      forms: ["{{word:zhen1}}", "{{word:dui4}}"],
       lesson: "how-much",
     },
     {
@@ -262,7 +275,7 @@ export default coverageGroup({
       eng: "do",
       rus: "делать",
       words: ["zuo4"],
-      forms: ["{{word:zuo4}}"],
+      forms: ["{{word:zuo4}}", "{{word:dong4}} {{word:shou3}}"],
       lesson: "becoming-and-making",
     },
     {
@@ -278,7 +291,7 @@ export default coverageGroup({
       eng: "move",
       rus: "двигаться",
       words: ["dong4"],
-      forms: ["{{word:dong4}}"],
+      forms: ["{{word:dong4}}", "{{word:zou3}}"],
       lesson: "moving",
     },
     {
@@ -286,7 +299,7 @@ export default coverageGroup({
       eng: "be (somewhere)",
       rus: "находиться",
       words: ["zai4"],
-      forms: ["{{word:zai4}}"],
+      forms: ["{{word:zai4}}", "{{word:liu2}} {{word:zhe4}}-{{word:li3}}"],
       lesson: "when-it-happens",
     },
     {
@@ -294,7 +307,7 @@ export default coverageGroup({
       eng: "there is",
       rus: "есть, имеется",
       words: ["you3"],
-      forms: ["{{word:you3}}"],
+      forms: ["{{word:you3}}", "{{word:neng2}} {{word:zhao3}}-{{word:dao4}}"],
       lesson: "who-does-what",
     },
     {
@@ -302,7 +315,7 @@ export default coverageGroup({
       eng: "be (someone, something)",
       rus: "быть (кем-то)",
       words: ["shi4"],
-      forms: ["{{word:shi4}}"],
+      forms: ["{{word:shi4}}", "X {{word:he2}} Y {{word:yi1}}-{{word:yang4}}"],
       lesson: "words-and-sentences",
     },
     {
@@ -310,7 +323,7 @@ export default coverageGroup({
       eng: "(is) mine",
       rus: "мой",
       words: ["de"],
-      forms: ["{{word:wo3}}-{{word:de}}"],
+      forms: ["{{word:wo3}}-{{word:de}}", "{{word:wo3}} {{word:you3}}"],
       lesson: "pointing",
     },
     {
@@ -318,7 +331,7 @@ export default coverageGroup({
       eng: "live",
       rus: "жить",
       words: ["huo2"],
-      forms: ["{{word:huo2}}"],
+      forms: ["{{word:huo2}}", "{{word:bu4}} {{word:si3}}"],
       lesson: "linking-sentences",
     },
     {
@@ -326,7 +339,7 @@ export default coverageGroup({
       eng: "die",
       rus: "умереть",
       words: ["si3"],
-      forms: ["{{word:si3}}"],
+      forms: ["{{word:si3}}", "{{word:bu4}} {{word:huo2}}"],
       lesson: "linking-sentences",
     },
     {
@@ -350,7 +363,7 @@ export default coverageGroup({
       eng: "before",
       rus: "до",
       words: ["qian2"],
-      forms: ["X {{word:qian2}}"],
+      forms: ["X {{word:qian2}}", "{{word:bi3}} X {{word:zao3}}"],
       lesson: "where-it-is",
     },
     {
@@ -358,7 +371,7 @@ export default coverageGroup({
       eng: "after",
       rus: "после",
       words: ["hou4"],
-      forms: ["X {{word:hou4}}"],
+      forms: ["X {{word:hou4}}", "{{word:bi3}} X {{word:wan3}}"],
       lesson: "around-an-action",
     },
     {
@@ -383,7 +396,7 @@ export default coverageGroup({
       rus: "какое-то время",
       words: ["dian3", "shi2", "jian1"],
       forms: ["{{word:yi1}}-{{word:dian3}} {{word:shi2}}-{{word:jian1}}"],
-      lesson: "numbers",
+      lesson: "time-and-sums",
     },
     {
       key: "MOMENT",
@@ -414,7 +427,7 @@ export default coverageGroup({
       eng: "above",
       rus: "над",
       words: ["shang4"],
-      forms: ["{{word:shang4}}-{{word:mian4}}"],
+      forms: ["{{word:shang4}}-{{word:mian4}}", "{{word:bi3}} X {{word:gao1}}"],
       lesson: "where-it-is",
     },
     {
@@ -422,7 +435,7 @@ export default coverageGroup({
       eng: "below",
       rus: "под",
       words: ["xia4"],
-      forms: ["{{word:xia4}}-{{word:mian4}}"],
+      forms: ["{{word:xia4}}-{{word:mian4}}", "{{word:bi3}} X {{word:bu4}} {{word:gao1}}"],
       lesson: "where-it-is",
     },
     {
@@ -430,7 +443,7 @@ export default coverageGroup({
       eng: "far",
       rus: "далеко",
       words: ["yuan3"],
-      forms: ["{{word:yuan3}}"],
+      forms: ["{{word:yuan3}}", "{{word:bu4}} {{word:fu4jin4}}"],
       lesson: "moving",
     },
     {
@@ -438,7 +451,7 @@ export default coverageGroup({
       eng: "near",
       rus: "близко",
       words: ["fu4jin4"],
-      forms: ["{{word:fu4jin4}}"],
+      forms: ["{{word:fu4jin4}}", "{{word:bu4}} {{word:yuan3}}"],
       lesson: "moving",
     },
     {
@@ -454,7 +467,7 @@ export default coverageGroup({
       eng: "inside",
       rus: "внутри",
       words: ["li3"],
-      forms: ["{{word:li3}}-{{word:mian4}}"],
+      forms: ["{{word:li3}}-{{word:mian4}}", "{{word:zhong1}}"],
       lesson: "where-it-is",
     },
     {
@@ -462,7 +475,10 @@ export default coverageGroup({
       eng: "touch",
       rus: "касаться",
       words: ["mo1"],
-      forms: ["{{word:mo1}}"],
+      forms: [
+        "{{word:mo1}}",
+        "{{word:ba3}} {{word:shou3}} {{word:fang4}} {{word:zai4}} X {{word:shang4}}",
+      ],
       lesson: "inside-a-sentence",
     },
     {
@@ -470,7 +486,7 @@ export default coverageGroup({
       eng: "not",
       rus: "не",
       words: ["bu4"],
-      forms: ["{{word:bu4}}"],
+      forms: ["{{word:bu4}}", "{{word:mei2}}"],
       lesson: "words-and-sentences",
     },
     {
@@ -486,7 +502,7 @@ export default coverageGroup({
       eng: "can",
       rus: "мочь",
       words: ["neng2"],
-      forms: ["{{word:neng2}}"],
+      forms: ["{{word:neng2}}", "{{word:ke3}}-{{word:yi3}}"],
       lesson: "pre-verbs",
     },
     {
@@ -494,7 +510,7 @@ export default coverageGroup({
       eng: "because",
       rus: "потому что",
       words: ["yin1wei4"],
-      forms: ["{{word:yin1wei4}}"],
+      forms: ["{{word:yin1wei4}}", "{{word:wei4}} X"],
       lesson: "linking-sentences",
     },
     {
@@ -502,7 +518,7 @@ export default coverageGroup({
       eng: "if",
       rus: "если",
       words: ["ru2guo3"],
-      forms: ["{{word:ru2guo3}}"],
+      forms: ["{{word:ru2guo3}}", "{{word:yao4}}-{{word:shi4}}"],
       lesson: "linking-sentences",
     },
     {
@@ -510,7 +526,7 @@ export default coverageGroup({
       eng: "very",
       rus: "очень",
       words: ["hen3"],
-      forms: ["{{word:hen3}}"],
+      forms: ["{{word:hen3}}", "{{word:zhen1}}"],
       lesson: "modifying-nouns",
     },
     {

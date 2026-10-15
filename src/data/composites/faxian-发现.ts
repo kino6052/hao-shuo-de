@@ -12,6 +12,7 @@ export default composite({
   tts: ["发现", "找到"],
   literal: "look-arrive",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:fa1}}-{{word:xian4}} {{word:ta1}} {{word:bu4}} {{word:zai4}} {{word:jia1}}.",

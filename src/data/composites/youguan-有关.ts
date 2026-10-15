@@ -12,6 +12,7 @@ export default composite({
   tts: ["有关", "有关系"],
   literal: "has to do with / has a connection",
   fit: "natural",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:he2}} {{word:wo3}} {{word:you3}}-{{word:guan1}}.",

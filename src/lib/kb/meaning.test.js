@@ -46,6 +46,26 @@ describe('says', () => {
     expect(report.groups.grammar).toMatchObject({ said: 2, once: 1, none: 1 });
   });
 
+  test('a second way (K24): one carrier, but a form that does not use it, is no longer fragile', () => {
+    const two = [{ key: 'atoms', items: [
+      { key: 'I', eng: 'I', words: ['wo3'], forms: [ref('wo3'), `${ref('ren2')} ${ref('men')}`] }, // second form avoids wo3
+      { key: 'YOU', eng: 'you', words: ['ni3'], forms: [ref('ni3'), `${ref('ni3')} ${ref('ren2')}`] }, // both use ni3
+      { key: 'BODY', eng: 'body', words: ['wo3', 'ni3'], forms: [ref('wo3')] },
+    ] }];
+    const r = meaningReport({ words, coverage: two, patterns: [] });
+    expect(r.items.find((i) => i.id === 'atoms:I').second).toEqual([`${ref('ren2')} ${ref('men')}`]);
+    expect(r.items.find((i) => i.id === 'atoms:YOU').second).toEqual([]);
+    expect(r.groups.atoms).toMatchObject({ said: 3, once: 1, second: 1 });
+    const text = renderMeaning(r, words, { section: 'says' });
+    expect(text).toContain('1 are carried once (take that carrier away and the item cannot be said); 1 more are carried by one word but have a second way');
+    expect(text).toContain('atoms:YOU (you)');
+    expect(text).not.toContain('atoms:I (I)');
+  });
+
+  test('a pattern carrier is not judged by its forms: still fragile', () => {
+    expect(item_('grammar:lone').second).toEqual([]);
+  });
+
   test('what a word says', () => {
     expect(meaningWord(report, 'wo3').says).toEqual(['atoms:I', 'atoms:BODY']);
     expect(meaningWord(report, 'zhi').says).toEqual(['grammar:say']);

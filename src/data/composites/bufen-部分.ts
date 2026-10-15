@@ -8,9 +8,10 @@ export default composite({
   en: "part",
   ru: "часть",
   pos: "noun",
-  hsd: ["{{word:bu4}}-{{light:fen1}}"],
-  tts: ["部分"],
+  hsd: ["{{word:bu4}}-{{light:fen1}}", "{{word:yi1}}-{{word:xie1}}"],
+  tts: ["部分", "一些"],
   fit: "word",
+  kinds: ["spelled", "built"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:yi1}} {{word:bu4}}-{{light:fen1}}.",

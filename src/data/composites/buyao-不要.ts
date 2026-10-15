@@ -11,6 +11,7 @@ export default composite({
   hsd: ["{{word:bu4}} {{word:yao4}}"],
   tts: ["不要"],
   fit: "natural",
+  kinds: ["built"],
   examples: [
     {
       pinyin: "{{Word:bu4}} {{word:yao4}} {{word:shuo1}}!",
