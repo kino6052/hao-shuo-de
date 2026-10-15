@@ -1,4 +1,6 @@
-const DIACRITICS = /[̀-ͯ]/g;
+import { assetUrl } from './asset-url.js';
+
+const DIACRITICS =/[̀-ͯ]/g;
 
 export function slugify(pinyin) {
   return pinyin
@@ -19,7 +21,7 @@ export function playAudio(pinyin, audioFile, ttsText) {
 
   const fallback = ttsText || pinyin;
   const slug = audioFile || slugify(pinyin);
-  const src = `${import.meta.env.BASE_URL}audio/${slug}.mp3`;
+  const src = assetUrl(`audio/${slug}.mp3`);
 
   const audio = new Audio(src);
   currentAudio = audio;

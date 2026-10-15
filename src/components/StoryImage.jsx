@@ -1,4 +1,5 @@
 import { ExampleList } from './ExampleList.jsx';
+import { assetUrl } from '../lib/asset-url.js';
 import styles from './StoryImage.module.css';
 
 // The book's story pictures (public/story/<file>.webp), each with its caption:
@@ -12,7 +13,7 @@ export function StoryImage({ items }) {
         <figure key={i} class={styles.figure}>
           <img
             class={styles.picture}
-            src={`${import.meta.env.BASE_URL}story/${img.file}.webp`}
+            src={assetUrl(`story/${img.file}.webp`)}
             alt={img.alt}
             decoding="async"
           />
