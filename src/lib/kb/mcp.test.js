@@ -48,12 +48,12 @@ describe('the protocol', () => {
 
   test('tools/list names the twelve tools, each with a description and a schema', async () => {
     const { tools } = (await rpc('tools/list')).result;
-    expect(tools.map((t) => t.name)).toEqual(['kb_word', 'kb_remove', 'kb_parse', 'kb_check_form', 'kb_atoms', 'kb_relations', 'kb_meaning', 'kb_candidates', 'kb_add', 'kb_swaps', 'kb_scoreboard', 'kb_query']);
+    expect(tools.map((t) => t.name)).toEqual(['kb_word', 'kb_remove', 'kb_parse', 'kb_check_form', 'kb_atoms', 'kb_relations', 'kb_english', 'kb_yardsticks', 'kb_meaning', 'kb_candidates', 'kb_add', 'kb_swaps', 'kb_scoreboard', 'kb_query']);
     for (const t of TOOLS) {
       expect(t.description.length).toBeGreaterThan(40);
       expect(t.inputSchema.type).toBe('object');
       // kb_atoms, kb_relations, kb_meaning, kb_candidates, kb_swaps and kb_scoreboard ask for nothing: no name is the whole report, no flag is the numbers now
-      if (!['kb_atoms', 'kb_relations', 'kb_meaning', 'kb_candidates', 'kb_swaps', 'kb_scoreboard'].includes(t.name)) expect(t.inputSchema.required.length).toBeGreaterThan(0);
+      if (!['kb_atoms', 'kb_relations', 'kb_yardsticks', 'kb_meaning', 'kb_candidates', 'kb_swaps', 'kb_scoreboard'].includes(t.name)) expect(t.inputSchema.required.length).toBeGreaterThan(0);
       for (const r of t.inputSchema.required ?? []) expect(t.inputSchema.properties[r]).toBeDefined();
     }
   });
@@ -115,6 +115,20 @@ describe('the tools answer with the text the command line prints', () => {
     const bad = await call('kb_relations', { kind: 'cousin' });
     expect(bad.result.isError).toBe(true);
     expect(textOf(bad)).toContain('the kinds are');
+  });
+
+  test('kb_english is the three tiers; without the index it says only the glosses answer', async () => {
+    const text = textOf(await call('kb_english', { word: 'eat' }));
+    expect(text).toMatch(/^English "eat"/);
+    expect(text).toContain('index is not built');
+    const none = await call('kb_english', {});
+    expect(none.result.isError).toBe(true);
+  });
+
+  test('kb_yardsticks names the three lists', async () => {
+    const text = textOf(await call('kb_yardsticks', {}));
+    expect(text).toContain('Yardsticks');
+    expect(text).toContain('Basic English');
   });
 
   test('kb_meaning is the report, a part of it, or one word', async () => {

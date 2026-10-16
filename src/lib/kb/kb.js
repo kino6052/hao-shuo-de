@@ -26,12 +26,14 @@ import { solve, tables } from './clingo.js';
 import { makeParseText, renderParse, viewParse } from './parse.js';
 import { atoms, atomWord, renderAtoms, renderAtomWord } from './atoms.js';
 import { relationReport, renderRelations, renderKindTree } from './relations.js';
+import { createEnglish, renderEnglish } from './english.js';
+import { renderYardsticks, yardstickReport } from './yardsticks.js';
 import { meaningReport, meaningWord, renderMeaning, renderMeaningWord } from './meaning.js';
 import { restsOnModel } from './rests-on.js';
 import { candidateModel, renderAddition, renderAudit, renderRemovalCandidates, renderRootCandidates, renderSwaps } from './candidates.js';
 
 // freq: the Mandarin frequency list [{ zh, py, rank }]; drafts: how words would be said without a stored paraphrase { id: { forms, verdict } }
-export function createKb(source, { rules = readRules('base', 'whatif'), freq = null, drafts = {}, parseMemo = null, relationRules = {} } = {}) {
+export function createKb(source, { rules = readRules('base', 'whatif'), freq = null, drafts = {}, parseMemo = null, relationRules = {}, englishData = null, yardstickData = null } = {}) {
   let meaning = null; // the meaning links, asked once: a KB is one version of the data
   const facts = buildFacts(source);
   const index = buildIndex(source, facts);
@@ -43,6 +45,10 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
   let atomsReport = null;
   let relationsReport = null;
   let candidates = null;
+  let yardsticks = null;
+  let englishModel = null; // English to entries (english.js); the WordNet files are read the first time it is asked
+
+  const englishOf = () => (englishModel ??= createEnglish({ composites: source.composites, ...(englishData?.() ?? {}) }));
 
   const parseText = makeParseText({ patterns: source.patterns ?? [], words, composites: source.composites, memo: parseMemo?.space({ patterns: source.patterns ?? [], words, composites: source.composites }) });
 
@@ -87,6 +93,14 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
     // The relations: stored ones are accepted, the ones a rule finds are proposed (see relations.js).
     relations: () => (relationsReport ??= relationReport(source, facts, relationRules)),
 
+    // English to entries, in three tiers (english.js): the gloss, the same WordNet sense, a kind of. `englishData` gives
+    // { links, index } (kb/wordnet/links.json, kb/cache/english-index.json); without it only the glosses answer.
+    english: (text) => englishOf().lookup(text),
+    englishSenses: (zh) => englishOf().senses(zh),
+
+    // How much of the yardsticks (kb/yardsticks/) the dictionary can say: Mandarin and English word lists, Basic English.
+    yardsticks: () => (yardsticks ??= yardstickReport({ composites: source.composites, english: englishOf(), ...(yardstickData?.() ?? {}) })),
+
     // Meaning links (K19): what the words say of the primes and categories, and which primes a description reaches.
     // No name: the report. A name: that word's line, { id, term, line }.
     meaning(name) {
@@ -126,4 +140,4 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
   };
 }
 
-export { meaningWord, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, viewParse, renderAtoms, renderAtomWord, renderRelations, renderKindTree, renderAddition, renderAudit, renderRemovalCandidates, renderRootCandidates, renderSwaps };
+export { meaningWord, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, viewParse, renderAtoms, renderAtomWord, renderRelations, renderKindTree, renderEnglish, renderYardsticks, renderAddition, renderAudit, renderRemovalCandidates, renderRootCandidates, renderSwaps };

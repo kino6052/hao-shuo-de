@@ -176,3 +176,7 @@ dist
 
 # native clingo for the knowledge base (a release unzipped here; see src/lib/kb/clingo.js)
 tools/clingo/
+.venv-kb/
+
+# English data built by the Python scripts (phase 6): the export for Python and the English index
+kb/cache/

@@ -7,7 +7,7 @@
 //   callTool(kb, name, args)      -> the answer as text (throws on a bad question)
 
 import { fileURLToPath } from 'node:url';
-import { renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps } from './kb.js';
+import { renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderEnglish, renderYardsticks, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps } from './kb.js';
 import { scoreboardRow, readScoreboard, renderScoreboard, renderHistory } from './scoreboard.js';
 
 // the stored rows (refactor --write adds one after every change)
@@ -98,6 +98,19 @@ export const TOOLS = [
         limit: { type: 'integer', description: 'How many to list (default 8).' },
       },
     },
+  },
+  {
+    name: 'kb_english',
+    description:
+      'Which dictionary entries say an English word, in three tiers: the entries whose gloss has the word, the entries that share a WordNet sense with it (its synonyms), and, when neither says it, the nearest entry on the way up "is a kind of", which offers "…-de X" as a starting description. ' +
+      'Without the English index (npm run wordnet) only the glosses answer.',
+    inputSchema: { type: 'object', properties: { word: { type: 'string', description: 'An English word or short phrase: "purchase", "to run".' } }, required: ['word'] },
+  },
+  {
+    name: 'kb_yardsticks',
+    description:
+      'How much of the word lists the dictionary can say: the common Mandarin words, the 3000 most common English words and Basic English, with the first 500, 1000 and 3000 apart and the most common words still missing.',
+    inputSchema: { type: 'object', properties: { limit: { type: 'integer', description: 'How many missing words to list per list (default 15).' } } },
   },
   {
     name: 'kb_meaning',
@@ -216,6 +229,12 @@ export async function callTool(kb, name, args = {}, { scoreboardFile = SCOREBOAR
     }
     case 'kb_relations':
       return renderRelations(kb.relations(), { kind: args.kind || undefined, status: args.status || undefined, limit: Number(args.limit) > 0 ? Number(args.limit) : 8 });
+    case 'kb_english': {
+      if (!args.word) throw new Error('word is required');
+      return renderEnglish(kb.english(String(args.word)));
+    }
+    case 'kb_yardsticks':
+      return renderYardsticks(kb.yardsticks(), { limit: Number(args.limit) > 0 ? Number(args.limit) : 15 });
     case 'kb_meaning': {
       if (args.name) {
         const r = kb.meaning(String(args.name));

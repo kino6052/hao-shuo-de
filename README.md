@@ -51,8 +51,8 @@ Plans and decisions: [BOOK_PLAN.md](BOOK_PLAN.md) (book, decision log D1…), [K
 | Things the language must say | 113: 65 atoms of meaning, 10 categories, 38 grammar points |
 | Lesson sentences that parse | 99.3 % |
 | Smallest set the others can be said from | 202 words; the other 28 have a fine paraphrase |
-| Gates (`npm run check`) | 19 |
-| Test files (`npm test`) | 48 |
+| Gates (`npm run check`) | 20 |
+| Test files (`npm test`) | 52 |
 
 The language numbers are the last row of `kb/scoreboard.csv` (2026-10-15, refactors/H1.ts: 2 op(s)); a refactor adds a new row.
 <!-- /generated:facts -->
@@ -222,6 +222,7 @@ The shapes of the data are defined in TypeScript, so a mistake is a type error:
 | `npm run plan-4b` | Rewrites the §4b table of BOOK_PLAN.md (which words each lesson introduces) from the lessons themselves, so a word refactor never needs the table edited by hand. |
 | `npm run word-usage` | Cross-references every dictionary word against every lesson/appendix content file, so the dictionary UI can show "used in: Lesson 3, Lesson 5" next to each word -- and, just as importantly… |
 | `npm run relations` | Writes the accepted relations the dictionaries show to the learner (KB_PLAN.md K18, phase 5): opposites, words said the same way, close words, wholes and their parts, and what hangs under what… |
+| `npm run wordnet` | Links the composites and words to WordNet (KB_PLAN.md phase 6): exports the entries, then runs the Python linker in the gitignored venv (.venv-kb). |
 | `npm run composite-examples` | Writes example sentences into the composite dictionary. The sentences are written by hand in plain pinyin, one file per review batch. |
 | `npm run grammar-overview` | Builds the grammar overview chapter (src/content/appendix-grammar.ts) from the lessons' patterns: every module's info block (src/lib/lesson.ts) that isn't a note (BOOK_PLAN.md §6… |
 | `npm run check` | Runs every book gate (BOOK_PLAN.md §6) -- the first step of `npm run build`. |
@@ -259,6 +260,7 @@ The summaries come from the comment at the top of each script, which also shows 
 | `npm run check-example-runs` | Example-run gate: a lesson never shows more than MAX_EXAMPLES_IN_A_ROW example sentences in a row (scripts/limits.js), so a reader isn't buried in examples. |
 | `npm run check-story-images` | Story-picture gate (MASCOT_PLAN.md §5, §9): every picture of the book's story (an `image` entry in a lesson or an intro) is a real file in public/story/, is named after its chapter, has a caption… |
 | `npm run check-intro-sentences` | Caption gate: the Hao-shuo-de sentences that stand outside a lesson's examples -- every example in an intro and every picture caption, in lessons and intros… |
+| `npm run check-story-plan` | Picture-plan gate (MASCOT_PLAN.md): the plan for the book's pictures lives in the lessons and intros themselves. |
 | `npm run check-word-builder` | Word Builder gate for the composite dictionary (src/data/composites/): every description the Word Builder can read is written the way it writes it, with matching hanzi… |
 | `npm run check-passive` | Passive gate: Hao-shuo-de says the passive the spoken way, with ràng (X ràng Y + verb: wǒ-de bāo ràng tā ná-zǒu le), never with 被 / bèi (the author's rule, review batch 10). |
 <!-- /generated:gates -->

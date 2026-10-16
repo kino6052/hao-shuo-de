@@ -32,6 +32,13 @@
 //   GET  /__review/?relations       every relation a rule found or Claude drafted, waiting for a yes or a no
 //   GET  /__review/relations-data   { kinds, relations } (decisions: review/decisions/relations-1.json)
 //   POST /__review/relations-decide { key, status, note? }   (status accept | reject, null clears the decision)
+//
+// Phase 6 adds the WordNet link review (KB_PLAN.md phase 6, scripts/python/link_wordnet.py), served by review/wordnet.html:
+//
+//   GET  /__review/?wordnet         the entries the Chinese and English WordNets did not settle, with their candidate synsets
+//   GET  /__review/wordnet-data     { counts, review, decisions } (review list: kb/wordnet/links.json; decisions: review/decisions/wordnet-1.json)
+//   POST /__review/wordnet-decide   { zh, ilis }   (ilis [] = no synset fits, null clears the decision)
+//   A decision takes effect when the linker runs again: npm run wordnet -- --links-only
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { resolve, dirname } from 'path';
@@ -196,7 +203,7 @@ export default function reviewPlugin() {
         try {
           const url = new URL(req.url ?? '/', 'http://localhost');
           if (req.method === 'GET' && (url.pathname === '/' || url.pathname === '')) {
-            const page = url.searchParams.has('relations') ? 'relations.html' : url.searchParams.has('words') || url.searchParams.has('kinds') ? 'words.html' : 'page.html';
+            const page = url.searchParams.has('relations') ? 'relations.html' : url.searchParams.has('wordnet') ? 'wordnet.html' : url.searchParams.has('words') || url.searchParams.has('kinds') ? 'words.html' : 'page.html';
             return send(res, 200, 'text/html; charset=utf-8', readFileSync(resolve(DIR, page), 'utf-8'));
           }
           const batchOf = () => Math.max(1, Number(url.searchParams.get('batch')) || 1);
@@ -243,6 +250,20 @@ export default function reviewPlugin() {
             // a decision made earlier is applied by the next load, so the page shows it as taken (accepted) or dropped
             const decided = [...report.relations.filter((r) => decisions[relationKey(r)]), ...report.rejected.filter((r) => decisions[relationKey(r)])];
             return json(res, { notes: KIND_NOTES, decisions, relations: [...waiting, ...decided].map((r) => ({ key: relationKey(r), ...r })) });
+          }
+          if (req.method === 'GET' && url.pathname === '/wordnet-data') {
+            const links = JSON.parse(readFileSync(resolve(ROOT, 'kb/wordnet/links.json'), 'utf-8'));
+            return json(res, { counts: links.counts, review: links.review, decisions: readDecisions(1, 'wordnet') });
+          }
+          if (req.method === 'POST' && url.pathname === '/wordnet-decide') {
+            const { zh, ilis } = await readBody(req);
+            if (!zh) return json(res, { error: 'zh is required' }, 400);
+            const decisions = readDecisions(1, 'wordnet');
+            if (ilis === null || ilis === undefined) delete decisions[zh];
+            else if (!Array.isArray(ilis)) return json(res, { error: 'ilis must be a list' }, 400);
+            else decisions[zh] = { ilis, at: new Date().toISOString() };
+            writeDecisions(1, decisions, 'wordnet');
+            return json(res, { decisions });
           }
           if (req.method === 'POST' && url.pathname === '/relations-decide') {
             const { key, status, note } = await readBody(req);

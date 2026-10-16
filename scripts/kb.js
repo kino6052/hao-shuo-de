@@ -9,6 +9,8 @@
 //   node scripts/kb.js atoms [word]  # the atoms report, or one word's line
 //   node scripts/kb.js relations [kind] [--status proposed|accepted] [--limit N]  # synonyms, opposites, connections and the rest
 //   node scripts/kb.js relations tree [word] [--limit N]  # what hangs under what: the kind-of tree of every word, or of one
+//   node scripts/kb.js english <word> [--json]  # which entries say an English word: by gloss, by WordNet sense, as a kind of
+//   node scripts/kb.js yardsticks [--limit N]  # how much of the Mandarin and English word lists and Basic English the dictionary can say
 //   node scripts/kb.js meaning [says|atoms|grounding|<word>] [--limit N]  # what the words say of the NSM primes, Aristotle's categories and grammar
 //   node scripts/kb.js candidates [remove|add] [--limit N]  # the cheapest words to drop and the best roots to add
 //   node scripts/kb.js add <hanzi>  # what one root would bring
@@ -69,7 +71,7 @@ import { mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'f
 import { resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { Worker } from 'worker_threads';
-import { createKb, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderKindTree, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps, renderAudit } from '../src/lib/kb/kb.js';
+import { createKb, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderKindTree, renderEnglish, renderYardsticks, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps, renderAudit } from '../src/lib/kb/kb.js';
 import { loadFrequencyList } from './frequency-list.js';
 import { sourceStamp } from './source-cache.js';
 import { readCache, writeCache } from './cache.js';
@@ -108,7 +110,7 @@ export function fingerprint() {
   };
   for (const d of WATCHED) walk(resolve(ROOT, d));
   // the relation rules and the decisions made on the relations review page change what kb.relations() says
-  for (const f of ['kb/relation-rules.json', 'kb/same-form-sort.json', 'review/decisions/relations-1.json']) {
+  for (const f of ['kb/relation-rules.json', 'kb/same-form-sort.json', 'kb/wordnet/links.json', 'kb/yardsticks/mandarin-frequency.json', 'kb/yardsticks/basic-english.json', 'kb/yardsticks/english-top3000.json', 'kb/yardsticks/sentences.json', 'review/decisions/relations-1.json']) {
     try {
       const s = statSync(resolve(ROOT, f));
       sum += s.mtimeMs + s.size;
@@ -156,6 +158,31 @@ function loadRelationRules() {
   return { ...read("kb/relation-rules.json"), sameForm: read("kb/same-form-sort.json"), decided };
 }
 
+// the WordNet links (committed) and the English index (built by scripts/python/link_wordnet.py, gitignored); the index is
+// 17 MB, so both are read only when English is asked. Either may be missing: english.js then answers with what it has.
+function loadEnglishData() {
+  const read = (file) => {
+    try {
+      return JSON.parse(readFileSync(resolve(ROOT, file), 'utf8'));
+    } catch {
+      return null;
+    }
+  };
+  return { links: read('kb/wordnet/links.json') ?? {}, index: read('kb/cache/english-index.json') };
+}
+
+// the word lists the language is measured against (kb/yardsticks/, committed); a list that is missing is left out
+function loadYardsticks() {
+  const read = (file) => {
+    try {
+      return JSON.parse(readFileSync(resolve(ROOT, 'kb/yardsticks', file), 'utf8'));
+    } catch {
+      return undefined;
+    }
+  };
+  return { mandarin: read('mandarin-frequency.json'), basic: read('basic-english.json'), top: read('english-top3000.json'), sentences: read('sentences.json') };
+}
+
 let cached = null;
 let memoStore = null; // the parse memory on disk (scripts/parse-memo.js), made when a caller asks for it
 let frequencies; // the Mandarin frequency list, read once (null when there is none)
@@ -167,7 +194,7 @@ export async function openKb({ force = false, memo = false } = {}) {
   if (!force && cached && cached.stamp === stamp && cached.memo === memo) return cached.kb;
   const source = await reloadSource();
   frequencies ??= loadFrequencyList();
-  const kb = createKb(source, { freq: frequencies, drafts: await loadDrafts(source), relationRules: loadRelationRules(), parseMemo: memo ? (memoStore ??= parseMemo()) : null });
+  const kb = createKb(source, { freq: frequencies, drafts: await loadDrafts(source), relationRules: loadRelationRules(), englishData: loadEnglishData, yardstickData: loadYardsticks, parseMemo: memo ? (memoStore ??= parseMemo()) : null });
   cached = { stamp, kb, memo };
   return kb;
 }
@@ -278,6 +305,15 @@ async function main(argv) {
       if (rest[0] === 'tree') return print(report.relations.filter((r) => r.kind === 'kind-of'), renderKindTree(report, kb.source, { root: rest[1], limit: limit === 8 ? 10 : limit }));
       return print(report, renderRelations(report, { kind: rest[0], status, limit }));
     }
+    case 'yardsticks': {
+      const limit = Number(option(rest, '--limit') ?? 15);
+      const r = kb.yardsticks();
+      return print(r, renderYardsticks(r, { limit }));
+    }
+    case 'english': {
+      const r = kb.english(rest.filter((a) => !a.startsWith('--')).join(' '));
+      return print(r, renderEnglish(r));
+    }
     case 'meaning': {
       const limit = Number(option(rest, '--limit') ?? 12);
       const what = rest.filter((a, i) => !a.startsWith('--') && rest[i - 1] !== '--limit').join(' ');
@@ -345,7 +381,7 @@ async function main(argv) {
       return print(e, text);
     }
     default:
-      console.log('usage: node scripts/kb.js word|remove|check-form|query|parse|atoms|relations|meaning|candidates|add|swaps|scoreboard|parse-report|parse-diff|classes|patterns|forms|move|engine …  (--json for data)');
+      console.log('usage: node scripts/kb.js word|remove|check-form|query|parse|atoms|relations|english|yardsticks|meaning|candidates|add|swaps|scoreboard|parse-report|parse-diff|classes|patterns|forms|move|engine …  (--json for data)');
       process.exitCode = command ? 1 : 0;
   }
 }

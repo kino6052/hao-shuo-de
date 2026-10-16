@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hao-shuo-de WordNet Review</title>
+<style>
+/* The WordNet link review, served by the dev server (vite-plugin-review.js, /__review/?wordnet).
+   The entries the Chinese and English WordNets did not settle on their own (KB_PLAN.md phase 6). Pick the synset(s) that
+   mean what the entry means, or "None fits". Answers are saved at once in review/decisions/wordnet-1.json and take effect
+   when the linker runs again: npm run wordnet -- --links-only */
+:root {
+  --paper: #f3f5f2; --card: #fbfcfa; --ink: #1b2420; --muted: #5d6a64; --line: #d6ddd7;
+  --accent: #1d6f55; --accent-ink: #ffffff; --accent-soft: #dcece4; --danger: #a3332b; --danger-soft: #f5dedb;
+  --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #131916; --card: #1a221e; --ink: #e5ece8; --muted: #9aa8a1; --line: #2c3833;
+    --accent: #4fbf94; --accent-ink: #0d1a14; --accent-soft: #1f3a2f; --danger: #ef7a70; --danger-soft: #3b1f1c;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 15px/1.5 var(--font-body); }
+.wrap { max-width: 960px; margin: 0 auto; padding: 24px 16px 64px; }
+h1 { font-size: 26px; line-height: 1.2; margin: 0 0 6px; }
+.lede { margin: 0 0 14px; color: var(--muted); max-width: 72ch; }
+.bar { position: sticky; top: 0; z-index: 2; background: var(--paper); border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 8px; padding-block: 10px; margin-bottom: 12px; align-items: center; }
+.chip { font: 600 13px/1 var(--font-body); border: 1px solid var(--line); background: var(--card); color: var(--ink); padding: 7px 10px; border-radius: 999px; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.status { font-size: 13px; color: var(--muted); }
+.status.err { color: var(--danger); }
+.note { margin: 6px 0 12px; font-size: 13px; color: var(--muted); max-width: 80ch; }
+.row { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; }
+.row.done { border-color: var(--accent); background: var(--accent-soft); }
+.head { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; margin-bottom: 6px; }
+.zh { font-size: 22px; font-weight: 600; }
+.en { color: var(--ink); }
+.meta { font: 400 12px/1.4 var(--font-mono); color: var(--muted); }
+.cands { display: grid; gap: 6px; }
+.cand { text-align: left; font: 400 14px/1.35 var(--font-body); padding: 8px 10px; border-radius: 6px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); cursor: pointer; }
+.cand b { font-weight: 600; }
+.cand small { color: var(--muted); display: block; font-size: 12px; }
+.cand[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.cand[aria-pressed="true"] small { color: var(--accent-ink); opacity: .85; }
+.cand.none[aria-pressed="true"] { background: var(--danger); border-color: var(--danger); color: #fff; }
+.pager { display: flex; gap: 8px; align-items: center; margin: 12px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>WordNet link review</h1>
+  <p class="lede">An English synset (a sense of an English word) is linked to each entry that the Chinese and English WordNets did not settle on their own. Pick every sense that means what the entry means, or "None fits". Answers are saved at once and take effect when the linker runs again.</p>
+  <div class="bar" id="bar"></div>
+  <p class="note" id="note"></p>
+  <div id="list" aria-live="polite"></div>
+  <div class="pager" id="pager"></div>
+</div>
+<script>
+const PAGE = 30;
+const WHY = {
+  ambiguous: 'Both WordNets know the entry, but more than one sense fits. Pick the ones it means.',
+  'no-english-match': 'The Chinese WordNet has senses for it, but none is among the senses of the English gloss. Pick one if it fits, else "None fits".',
+  'no-chinese': 'The Chinese WordNet does not have it; these are the senses of the English gloss. Pick the one it means.',
+  'no-synset': 'Neither WordNet offers a sense (grammar words, measure words, fixed phrases). "None fits" is usually right.',
+};
+const state = { data: null, why: null, page: 0, hideDone: true };
+const $ = (id) => document.getElementById(id);
+const el = (tag, props = {}, ...kids) => {
+  const n = Object.assign(document.createElement(tag), props);
+  for (const k of kids) n.append(k);
+  return n;
+};
+const say = (msg, err) => { const s = $('say'); if (s) { s.textContent = msg; s.className = 'status' + (err ? ' err' : ''); } };
+
+async function load() {
+  state.data = await (await fetch('wordnet-data')).json();
+  render();
+}
+
+async function save(zh, ilis) {
+  const res = await fetch('wordnet-decide', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ zh, ilis }) });
+  const body = await res.json();
+  if (!res.ok) return say(body.error ?? 'could not save', true);
+  state.data.decisions = body.decisions;
+  render();
+  say('saved');
+}
+
+function toggle(zh, ili) {
+  const now = state.data.decisions[zh]?.ilis ?? [];
+  save(zh, now.includes(ili) ? now.filter((i) => i !== ili) : [...now, ili]);
+}
+
+function render() {
+  const { review, decisions } = state.data;
+  const whys = [...new Set(review.map((r) => r.why))];
+  state.why ??= whys[0] ?? null;
+  const bar = $('bar');
+  bar.replaceChildren();
+  for (const w of whys) {
+    const all = review.filter((r) => r.why === w);
+    const left = all.filter((r) => !decisions[r.zh]).length;
+    const chip = el('button', { className: 'chip', type: 'button', textContent: `${w} ${left}/${all.length}` });
+    chip.setAttribute('aria-pressed', String(w === state.why));
+    chip.onclick = () => { state.why = w; state.page = 0; render(); };
+    bar.append(chip);
+  }
+  const hide = el('button', { className: 'chip', type: 'button', textContent: 'hide answered' });
+  hide.setAttribute('aria-pressed', String(state.hideDone));
+  hide.onclick = () => { state.hideDone = !state.hideDone; state.page = 0; render(); };
+  bar.append(hide, el('span', { id: 'say', className: 'status' }));
+  $('note').textContent = WHY[state.why] ?? '';
+  const rows = review.filter((r) => r.why === state.why && (!state.hideDone || !decisions[r.zh]));
+  const list = $('list');
+  list.replaceChildren();
+  if (!rows.length) list.append(el('p', { className: 'lede', textContent: 'Nothing waits here.' }));
+  const pages = Math.max(1, Math.ceil(rows.length / PAGE));
+  state.page = Math.min(state.page, pages - 1);
+  for (const r of rows.slice(state.page * PAGE, (state.page + 1) * PAGE)) {
+    const chosen = decisions[r.zh]?.ilis;
+    const row = el('div', { className: 'row' + (chosen ? ' done' : '') });
+    row.append(el('div', { className: 'head' }, el('span', { className: 'zh', textContent: r.zh }), el('span', { className: 'en', textContent: r.en }), el('span', { className: 'meta', textContent: r.pos })));
+    const cands = el('div', { className: 'cands' });
+    for (const c of r.candidates) {
+      const b = el('button', { type: 'button', className: 'cand' });
+      b.append(el('b', { textContent: c.lemmas.join(', ') }), ` (${c.pos}) ${c.def}`);
+      if (c.zh?.length) b.append(el('small', { textContent: '中文：' + c.zh.join('、') }));
+      b.setAttribute('aria-pressed', String(!!chosen?.includes(c.ili)));
+      b.onclick = () => toggle(r.zh, c.ili);
+      cands.append(b);
+    }
+    const none = el('button', { type: 'button', className: 'cand none', textContent: 'None fits' });
+    none.setAttribute('aria-pressed', String(!!chosen && chosen.length === 0));
+    none.onclick = () => save(r.zh, chosen && chosen.length === 0 ? null : []);
+    cands.append(none);
+    row.append(cands);
+    list.append(row);
+  }
+  const pager = $('pager');
+  pager.replaceChildren();
+  const prev = el('button', { className: 'chip', type: 'button', textContent: 'Previous', disabled: state.page === 0 });
+  const next = el('button', { className: 'chip', type: 'button', textContent: 'Next', disabled: state.page >= pages - 1 });
+  prev.onclick = () => { state.page--; render(); window.scrollTo(0, 0); };
+  next.onclick = () => { state.page++; render(); window.scrollTo(0, 0); };
+  pager.append(prev, el('span', { className: 'status', textContent: `page ${state.page + 1} of ${pages} (${rows.length} entries)` }), next);
+}
+load().catch((e) => { $('list').textContent = 'Could not load: ' + e.message; });
+</script>
+</body>
+</html>
