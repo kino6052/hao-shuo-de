@@ -19,6 +19,7 @@ export const meta = {
 };
 
 export default lesson(meta.id, {
+  story: "Summer, yellow accent. The joke: it is almost the end of the year and the student has never said hello and goodbye properly. Miao-miao says 'you forgot,' and they do it now with the girl. Cast: the girl, the student, Miao-miao.",
   title: { en: "Greetings", ru: "Приветствия" },
   summary: {
     en: [
@@ -30,6 +31,19 @@ export default lesson(meta.id, {
       "В этом уроке вы научитесь говорить «Привет!», «Спасибо!», «Как тебя зовут?», «Ешь!» и «Не смейся!»",
     ],
   },
+  // Summer, yellow (MASCOT_PLAN.md): "Hello!"; the student and the girl face each other and wave.
+  images: [
+    {
+      alt: {
+        en: "Summer. The student and the neighbor girl stand face to face and wave at each other. The girl holds a yellow flower, and Miao-miao sits on the ground between them.",
+        ru: "Лето. Студент и соседская девочка стоят лицом к лицу и машут друг другу. Девочка держит жёлтый цветок, а Miao-miao сидит на земле между ними.",
+      },
+      pinyin: "{{Word:ni3}} {{word:hao3}}!",
+      hanzi: "你好！",
+      en: "Hello!",
+      ru: "Привет!",
+    },
+  ],
   modules: [
     hello,
     calling,

@@ -12,6 +12,7 @@ export const meta = {
 };
 
 export default intro(meta.id, {
+  story: "Before the year starts, autumn orange again. Miao-miao shows how the language is simplified and what the book contains; the path of stepping stones stands for the lessons ahead, each stone a small step towards the door. Cast: Miao-miao and the student.",
   title: {
     en: [
       "Simplified Chinese, Not Invented Chinese"

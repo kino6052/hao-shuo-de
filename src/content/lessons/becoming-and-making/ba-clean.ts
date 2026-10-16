@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "ba-clean",
+  scene: "Acts out 'wǒ bǎ fáng-jiān gānjìng': the student sweeps the floor of a tidy room with a broom, a clean line of sunlight on the boards; Miao-miao sits on the one clean spot. Green: the broom.",
   words: [],
   prose: {
     en: [

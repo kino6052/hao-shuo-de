@@ -5,6 +5,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "sides",
+  scene: "Acts out 'wǒ zài nǐ-de pángbiān': the student sits close beside the girl on a bench, both looking at a snow scene, Miao-miao in front of their feet. Blue: the bench.",
   words: [
     {
       word: "qian2",

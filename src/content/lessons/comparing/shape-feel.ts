@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "shape-feel",
+  scene: "Acts out 'yuè hěn yuán': the student and the girl look up at a perfectly round moon in a winter sky, Miao-miao on the wall. Blue: the moon.",
   words: [
     {
       word: "gao1",

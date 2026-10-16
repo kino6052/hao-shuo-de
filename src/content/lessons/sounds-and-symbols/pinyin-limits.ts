@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "pinyin-limits",
+  scene: "Acts out 'to say a word well, listen': the student leans in close to Miao-miao's open mouth with a hand cupped behind one ear, a closed little book lying forgotten on the floor. Orange: three soft curves of sound leaving the cat's mouth.",
   prose: {
     en: [
       "**To say a word well**, listen to it.",

@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "move",
+  scene: "Acts out 'bù yào dòng!': the student freezes with one foot raised and a hand out, a tiny sparrow on a snowy branch ahead; Miao-miao crouches still. Blue: the branch.",
   words: [
     {
       word: "zou3",

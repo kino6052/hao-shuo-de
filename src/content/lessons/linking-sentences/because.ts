@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "because",
+  scene: "Acts out 'yīnwèi wǒ hěn lěng, wǒ bù qù wài-miàn': the student stays inside wrapped in a blanket, the girl at the window outside waving; a snowflake in the bubble. Yellow: the window.",
   words: [
     {
       word: "yin1wei4",

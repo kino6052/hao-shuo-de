@@ -5,6 +5,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "say-ask",
+  scene: "Acts out 'tā wèn: zhè shì shénme?': the girl speaks with a bubble that holds a picture of the fruit and a question mark, the student answers with a bubble holding the same fruit and a smile. Orange: the question mark.",
   prose: {
     en: [
       "**To say what someone said or asked**, put {{word:shuo1}} (say) or {{word:wen4}} (ask) after the person, then a colon, then their words.",

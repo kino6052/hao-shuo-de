@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "teach",
+  scene: "Acts out 'wǒ bāng nǐ xué xiě': the student guides the girl's hand holding a brush over a page, both looking down; Miao-miao on the corner of the page. Yellow: the brush.",
   prose: {
     en: [
       "**To teach someone to do something**, help them learn it: {{word:bang1}} and the person, then {{word:xue2}} and the verb.",

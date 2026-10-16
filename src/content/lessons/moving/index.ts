@@ -19,6 +19,7 @@ export const meta = {
 };
 
 export default lesson(meta.id, {
+  story: "Winter, blue accent. Snow, a bus, going to class and coming back. This scene matches the pilot text of lesson 11 (WRITING_PLAN.md): the student in the scarf steps out into the snow, and Miao-miao stays on the doorstep. Cast: the student, Miao-miao.",
   title: { en: "Space 2 — Moving", ru: "Пространство 2 — Движение" },
   summary: {
     en: [
@@ -30,6 +31,19 @@ export default lesson(meta.id, {
       "В этом уроке вы научитесь говорить «Откуда ты?», «Иди!», «Вставай!», «Я пришёл домой.» и «Я иду на улицу.»",
     ],
   },
+  // Winter, blue (MASCOT_PLAN.md): the student steps out into the snow; Miao-miao stays on the doorstep.
+  images: [
+    {
+      alt: {
+        en: "A snowy morning. The student, in a blue scarf and with a school bag, walks away from the open door across the snow and glances back. Footprints trail behind. Miao-miao stands on the doorstep and watches, and a bus waits in the distance.",
+        ru: "Снежное утро. Студент в синем шарфе и с рюкзаком уходит от открытой двери по снегу и оглядывается. За ним тянется цепочка следов. Miao-miao стоит на пороге и смотрит вслед, а вдали ждёт автобус.",
+      },
+      pinyin: "{{Word:wo3}} {{word:qu4}}.",
+      hanzi: "我去。",
+      en: "I'm going.",
+      ru: "Я иду.",
+    },
+  ],
   modules: [
     comeGo,
     from,

@@ -19,6 +19,7 @@ export const meta = {
 };
 
 export default lesson(meta.id, {
+  story: "Summer, yellow accent. A longer sentence with a thing inside it: Miao-miao shortens it to its core. The summer air is warm and the lessons grow slightly longer too. Cast: the student, the girl, Miao-miao.",
   title: { en: "Relationships 1 — Inside a sentence", ru: "Связи 1 — Внутри предложения" },
   summary: {
     en: [
@@ -30,6 +31,19 @@ export default lesson(meta.id, {
       "В этом уроке вы научитесь говорить «дай мне», «писать инструментом», «ты и я», «это или то» и «для меня».",
     ],
   },
+  // Summer, yellow (MASCOT_PLAN.md): "give it to me"; the girl puts a yellow tangerine in the student's hand.
+  images: [
+    {
+      alt: {
+        en: "Summer, under a big tree. The student holds out an open hand, and the neighbor girl smiles as she places a yellow tangerine in it.",
+        ru: "Лето, под большим деревом. Студент протягивает раскрытую ладонь, а соседская девочка с улыбкой кладёт в неё жёлтый мандарин.",
+      },
+      pinyin: "{{Word:gei3}} {{word:wo3}}.",
+      hanzi: "给我。",
+      en: "Give it to me.",
+      ru: "Дай мне.",
+    },
+  ],
   modules: [
     give,
     withPoint,

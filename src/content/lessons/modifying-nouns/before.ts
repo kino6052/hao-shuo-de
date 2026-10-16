@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "before",
+  scene: "Acts out 'dà-de dì-fāng': the student stands in a doorway looking out at a very wide courtyard, Miao-miao tiny in the middle of it. Orange: the leaf-covered ground of the courtyard.",
   words: [
     {
       word: "de",

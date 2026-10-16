@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "learn",
+  scene: "Acts out 'wǒ xué xiě': the student holds a brush over a page, tongue between the teeth, copying a simple stroke; Miao-miao sits on the page's corner watching. Orange: the brush tip.",
   words: [
     {
       word: "xue2",

@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "make",
+  scene: "Acts out 'wǒ zuò hǎo le': the student holds up a mended toy bird, a broken piece and glue beside it, the girl looking pleased. Green: the toy bird.",
   words: [
     {
       word: "de2",

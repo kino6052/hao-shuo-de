@@ -2,6 +2,7 @@ import { introSection } from "../../../lib/intro.ts";
 
 export default introSection({
   id: "neighbors",
+  scene: "Existing picture (intro-4-sheet). Acts out 'tā-men zài zhè-lǐ': the whole cast in a row: Miao-miao, the student, the girl next door, a mouse and a bird.",
   prose: {
     en: [
       "<h2>The neighbors</h2>",

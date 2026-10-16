@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "before",
+  scene: "Acts out 'wǒ kàn-guò yuè': the student looks up at a big round moon through the window with a dreamy face, remembering; a small bubble repeats the same moon a little darker. Blue: the moon.",
   words: [
     {
       word: "yue4",

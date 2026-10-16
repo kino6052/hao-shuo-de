@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "age",
+  scene: "Acts out 'wǒ èr-shí': the student holds up two hands with ten fingers, twice, to the girl, who nods; a small cake behind them. Green: the cake.",
   prose: {
     en: [
       "**To say how old someone is**, say the person (I, you, he or she) and a number. Nothing else is needed.",

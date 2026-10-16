@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "most",
+  scene: "Acts out 'zhè-ge zuì dà': three tea cups in a row on a table, small, medium and very large; the student points proudly at the largest, Miao-miao inside it. Blue: the biggest cup.",
   words: [
     {
       word: "zui4",

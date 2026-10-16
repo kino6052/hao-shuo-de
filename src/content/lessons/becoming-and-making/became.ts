@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "became",
+  scene: "Acts out 'shuǐ biàn lěng le': a cup of tea that no longer steams stands forgotten on the sill, the student looking at it sadly; a leaf lies beside it. Green: the leaf.",
   words: [
     {
       word: "bian4",

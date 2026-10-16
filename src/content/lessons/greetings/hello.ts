@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "hello",
+  scene: "Acts out 'nǐ hǎo!': the student waves a hand with a big smile at the girl, who waves back, a long awkward year behind them; Miao-miao slowly blinks. Yellow: the waving hand.",
   words: [
     {
       word: "zai4",

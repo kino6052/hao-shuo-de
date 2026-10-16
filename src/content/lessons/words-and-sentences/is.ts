@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "is",
+  scene: "Acts out 'zhè shì rén': the student sits at a table with Miao-miao and cuts a small stick figure, a plain simple person, out of orange paper with scissors, then holds it up; Miao-miao nods. Orange: the paper stick figure.",
   words: [
     {
       word: "shi4",

@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "come-go",
+  scene: "Acts out 'wǒ qù': snow outside an open door, the student in the scarf steps out; Miao-miao stays on the doorstep. Blue: the snow.",
   words: [
     {
       word: "lai2",

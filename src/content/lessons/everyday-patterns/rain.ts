@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "rain",
+  scene: "Acts out 'tiān-shàng xià shuǐ le': the finished note under the owner's door and a hand pouring tea at the step, rain starting to fall; Miao-miao leaves with the note. Yellow: the tea.",
   prose: {
     en: [
       "**To say it rains**, say that water falls from the sky: {{word:tian1}}-{{word:shang4}} {{word:xia4}} {{word:shui3}}.",

@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "and-or",
+  scene: "Acts out 'nǐ yào zhè-ge hái-shì nà-ge?': the girl holds out two tangerines, one in each hand, asking, while the student looks from one to the other. Yellow: the two tangerines.",
   words: [
     {
       word: "he2",

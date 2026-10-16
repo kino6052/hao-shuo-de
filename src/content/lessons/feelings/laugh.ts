@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "laugh",
+  scene: "Acts out 'tā xiào le': the girl laughs with her head thrown back, her hand over her mouth, the student smiling at the joke; Miao-miao puzzled. Yellow: the laughter marks.",
   prose: {
     en: [
       "**To say someone laughs or smiles**, use {{word:xiao4}}.",

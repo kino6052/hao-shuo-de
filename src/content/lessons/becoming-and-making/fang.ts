@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "fang",
+  scene: "Acts out 'wǒ bǎ yīfu fàng zài dì-shàng le': the student drops a heap of clothes in the middle of the floor with a sigh, the girl looking in from the door with raised eyebrows. Green: the clothes.",
   words: [
     {
       word: "fang4",

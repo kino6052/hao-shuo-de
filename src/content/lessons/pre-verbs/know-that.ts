@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "know-that",
+  scene: "Acts out 'tā zhīdào wǒ xiǎng chī': the girl slides a small bowl toward the student with a knowing smile; the student blushes and Miao-miao is not at all surprised. Orange: the small bowl.",
   prose: {
     en: [
       "**To say what someone knows**, put a whole sentence after {{word:zhi1dao4}}.",

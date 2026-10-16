@@ -17,6 +17,7 @@ export const meta = {
 };
 
 export default intro(meta.id, {
+  story: "Before the year starts, in autumn orange. Miao-miao is a cat who already speaks Chinese and finds it too complicated, so it is the honest guide: it sits beside the reader's problem (a huge tangle, a broken ladder) and offers the small way instead. Cast: Miao-miao and the reader's stand-in, the student, who is unnamed.",
   title: {
     en: [
       "Welcome to Hao-shuo-de!"

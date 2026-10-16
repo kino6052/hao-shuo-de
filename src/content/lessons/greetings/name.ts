@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "name",
+  scene: "Acts out 'nǐ jiào shénme?': the girl asks, the student answers with a bubble showing a small student figure with a backpack, since the student's name is the word for student; Miao-miao nods. Yellow: the bubble outline.",
   words: [
     {
       word: "jiao4",

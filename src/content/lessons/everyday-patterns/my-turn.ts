@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "my-turn",
+  scene: "Acts out 'gěi wǒ kàn yī-xià': the student holds out a hand for a small book the girl is reading, leaning in with curiosity; the girl smiles and hands it over. Yellow: the book.",
   prose: {
     en: [
       "**To ask for a turn**, say {{word:gei3}} {{word:wo3}} (give me), then the verb and {{word:yi1}}-{{word:xia4}} (a moment). It means \"let me … for a moment\".",

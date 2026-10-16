@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "do",
+  scene: "Acts out 'wǒ hē shuǐ': the girl drinks from a cup, and the student, sitting across from her, mimes drinking from an empty hand and looks hopeful. Orange: the girl's cup.",
   words: [
     {
       word: "chi1",

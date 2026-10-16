@@ -23,6 +23,7 @@ export const meta = {
 };
 
 export default lesson(meta.id, {
+  story: "Spring, pale green accent. A dropped bag, a kite, a ball: out, up, back, caught, lost. Things get taken, found and brought, and the student is always chasing something. Cast: the student, Miao-miao, the girl.",
   title: { en: "Verbs 2 — Direction and result", ru: "Глаголы 2 — Направление и результат" },
   summary: {
     en: [
@@ -34,6 +35,19 @@ export default lesson(meta.id, {
       "В этом уроке вы научитесь говорить «Входи!», «Он вынул деньги.», «Я нашёл.» и «Мне не видно.»",
     ],
   },
+  // Spring, pale green (MASCOT_PLAN.md): chasing the kite, falling down, being pulled back up.
+  images: [
+    {
+      alt: {
+        en: "A spring meadow. The student has fallen and sits on the grass with a rueful face, still holding the string of a pale green kite in the sky. The neighbor girl reaches out a hand to pull them up, and Miao-miao sits a little way off, watching.",
+        ru: "Весенний луг. Студент упал и сидит на траве с виноватым лицом, всё ещё держа верёвку бледно-зелёного воздушного змея в небе. Соседская девочка протягивает руку, чтобы поднять его, а Miao-miao сидит поодаль и смотрит.",
+      },
+      pinyin: "{{Word:wo3}} {{word:zuo4}}-{{word:zai4}} {{word:di4}}-{{word:shang4}}.",
+      hanzi: "我坐在地上。",
+      en: "I sit on the ground.",
+      ru: "Я сижу на земле.",
+    },
+  ],
   modules: [
     towardAway,
     inOut,

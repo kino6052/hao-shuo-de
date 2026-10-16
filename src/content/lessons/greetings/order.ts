@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "order",
+  scene: "Acts out 'bù yào shuō!': the student holds a finger to the lips in front of a sleeping Miao-miao in a sunny room, the girl tiptoeing in. Yellow: the finger.",
   words: [
     {
       word: "pa4",

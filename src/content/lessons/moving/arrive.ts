@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "arrive",
+  scene: "Acts out 'wǒ dào jiā le': the student reaches the door at the end of the snowy road with shoulders sagging, the door ajar with warm light; Miao-miao waits on the mat. Blue: the road.",
   words: [
     {
       word: "dao4",

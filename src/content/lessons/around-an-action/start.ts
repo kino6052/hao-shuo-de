@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "start",
+  scene: "Acts out 'wǒ kāishǐ wánr le': the student and the girl set up a game board, the first piece just placed, Miao-miao crouched ready to pounce on it. Blue: the first piece.",
   words: [
     {
       word: "kai1shi3",

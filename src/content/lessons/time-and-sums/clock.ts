@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "clock",
+  scene: "Acts out 'xiàn-zài shì sān-diǎn': a big round clock on the wall with its hands at three, the student pointing at it and Miao-miao asleep beneath it. Green: the clock hands.",
   words: [
     {
       word: "dian3",

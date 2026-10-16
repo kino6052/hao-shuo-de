@@ -20,6 +20,7 @@ export const meta = {
 };
 
 export default lesson(meta.id, {
+  story: "Spring, pale green accent. Counting what the student owns, what the girl has, and Miao-miao's one nap spot. All numbers are shown as dots and fingers: the pictures never carry digits. Cast: the student, the girl, Miao-miao, the bird.",
   title: { en: "Numbers", ru: "Числа" },
   summary: {
     en: [
@@ -31,6 +32,19 @@ export default lesson(meta.id, {
       "В этом уроке вы научитесь считать, говорить «два животных», «двенадцать» и «номер два».",
     ],
   },
+  // Spring, pale green (MASCOT_PLAN.md): counting three pebbles on the wall.
+  images: [
+    {
+      alt: {
+        en: "Spring. Three small pale green pebbles sit in a row on a low yard wall. The student touches them one by one with a finger, counting, while the neighbor girl holds up three fingers and smiles. Miao-miao sits at the foot of the wall.",
+        ru: "Весна. На низкой стене двора в ряд лежат три маленьких бледно-зелёных камешка. Студент трогает их по очереди пальцем и считает, а соседская девочка показывает три пальца и улыбается. У подножия стены сидит Miao-miao.",
+      },
+      pinyin: "{{Word:yi1}}, {{word:er4}}, {{word:san1}}!",
+      hanzi: "一，二，三！",
+      en: "One, two, three!",
+      ru: "Раз, два, три!",
+    },
+  ],
   modules: [
     aloud,
     count,

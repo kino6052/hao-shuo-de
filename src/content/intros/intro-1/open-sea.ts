@@ -2,6 +2,7 @@ import { introSection } from "../../../lib/intro.ts";
 
 export default introSection({
   id: "open-sea",
+  scene: "Acts out the feeling of an open sea: the student sits in a tiny rowing boat in the middle of a flat sea of wavy lines with no shore in sight, Miao-miao calm at the front of the boat holding a small oar. Orange: the boat's little flag.",
   prose: {
     en: [
       "One of the hardest parts of learning Chinese is that it feels like an open sea.",

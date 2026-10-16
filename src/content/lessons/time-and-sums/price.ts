@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "price",
+  scene: "Acts out 'zhè-gè yào shí jīn': at a stall the seller holds up ten fingers and points to a small bag, the student holds out an open hand of coins. Green: the coins.",
   prose: {
     en: [
       "**To say what something costs**, use {{word:yao4}}, a number and {{word:jin1}} (money).",

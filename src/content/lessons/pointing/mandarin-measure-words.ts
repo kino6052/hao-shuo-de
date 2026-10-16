@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "mandarin-measure-words",
+  scene: "Acts out 'a number cannot stand right before a noun': the bird tries to carry two apples and drops one; Miao-miao looks up with a patient face and the student holds a small basket under it. Orange: the basket.",
   prose: {
     en: [
       "In Chinese, you can't put a number or a pronoun right before a noun (you can't directly say \"this apple\"). A small counting word (measure word) goes in between.",

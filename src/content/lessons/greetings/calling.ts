@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "calling",
+  scene: "Acts out 'māma, wǒ huí lái le!': a child-like student comes through a gate calling toward a house where a mother figure is at the door with open arms; Miao-miao runs ahead. Yellow: the gate.",
   prose: {
     en: [
       "**To speak to someone, call them first**, then a comma and what you say.",

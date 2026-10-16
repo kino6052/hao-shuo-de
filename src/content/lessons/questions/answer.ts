@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "answer",
+  scene: "Acts out 'tīng. / bù tīng.': the girl cups a hand to her ear and the student nods yes in one picture-half, shakes the head no in the other; Miao-miao does neither. Orange: the nod and shake arrows.",
   prose: {
     en: [
       "**To answer yes or no**, repeat the verb for \"yes\", or put {{word:bu4}} before it for \"no\".",

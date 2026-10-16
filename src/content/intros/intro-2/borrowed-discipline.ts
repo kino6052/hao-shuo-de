@@ -2,6 +2,7 @@ import { introSection } from "../../../lib/intro.ts";
 
 export default introSection({
   id: "borrowed-discipline",
+  scene: "Acts out 'borrow the result, not the language': Miao-miao hands the student a small neat toolbox while an old heavy chest of another language stays shut in the corner, the student shaking their head politely. Orange: the toolbox handle.",
   prose: {
     en: [
       "<audio-example zh=\"好说的\">Hǎo-shuō-de</audio-example> borrows the result of that experiment, but not the language itself.",

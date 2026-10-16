@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "count-kinds",
+  scene: "Acts out 'wǒ yǒu sān-zhǒng zhíwù': three pots with three different plants on a windowsill, the student pointing at each in turn proudly. Green: the plants.",
   words: [
     {
       word: "shu4",

@@ -5,6 +5,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "in-out",
+  scene: "Acts out 'dòng-wù cóng bāo-lǐ chū-lái le': a small animal pops its head out of a bag on the floor, the student jumping back in surprise; Miao-miao sits calm. Green: the bag.",
   words: [
     {
       word: "jin4",

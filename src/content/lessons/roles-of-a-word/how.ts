@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "how",
+  scene: "Acts out 'tā shuō-de hǎo': the girl speaks to a small audience of Miao-miao, mouse and bird in a row, who all nod in approval. Green: the nodding heads.",
   prose: {
     en: [
       "**To say how someone does something**, put -{{word:de}} after the verb, then the adjective.",

@@ -16,6 +16,7 @@ export const meta = {
 };
 
 export default intro(meta.id, {
+  story: "The cast and the year. Autumn orange, winter blue, spring pale green and summer yellow follow one school year. Cast: Miao-miao the cat, the nameless exchange student, the girl next door who speaks only Chinese, a bird that talks too much, a mouse that does sums, and an owner nobody sees who leaves notes on the door.",
   title: {
     en: "Meet Miao-miao",
     ru: "Знакомьтесь: Miao-miao",

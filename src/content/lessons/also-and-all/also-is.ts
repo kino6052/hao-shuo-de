@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "also-is",
+  scene: "Acts out 'wǒ hěn lěng, tā yě hěn lěng': the student and the girl sit shivering side by side under one thin blanket, teeth chattering, Miao-miao between them. Green: the blanket.",
   words: [
     {
       word: "hai2",

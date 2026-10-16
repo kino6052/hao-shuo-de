@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "know-how",
+  scene: "Acts out 'wǒ zhīdào zěnme xiě': the student writes a first stroke with confidence while the girl peeks over their shoulder and nods; Miao-miao already asleep. Orange: the stroke.",
   words: [
     {
       word: "zhi1dao4",

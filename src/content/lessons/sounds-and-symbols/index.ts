@@ -18,6 +18,7 @@ export const meta = {
 };
 
 export default lesson(meta.id, {
+  story: "Autumn, orange accent. The first week: the student has just arrived with a suitcase, and the note on the door is in characters they cannot read. Miao-miao sits on the suitcase and says its own name, miāo, again and again in different tones until the student hears the difference. Cast: Miao-miao and the student.",
   title: { en: "Sounds and Symbols", ru: "Звуки и знаки" },
   summary: {
     en: [

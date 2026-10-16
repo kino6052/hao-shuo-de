@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "done",
+  scene: "Acts out 'wǒ chī le': the student sits back with a full tummy and an empty bowl in front of them, a cup of tea warming both hands; Miao-miao asleep on the sill. Blue: the empty bowl.",
   words: [
     {
       word: "le",

@@ -2,6 +2,7 @@ import { introSection } from "../../../lib/intro.ts";
 
 export default introSection({
   id: "how-it-helps",
+  scene: "Acts out 'it helps you cross': Miao-miao carries the student's suitcase over a small plank bridge across the sea of lines, the student walking behind with both arms free. Orange: the plank bridge.",
   prose: {
     en: [
       "<h2>How does Hao-shuo-de help, exactly?</h2>",

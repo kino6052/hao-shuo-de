@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "help",
+  scene: "Acts out 'bāng-bang wǒ!': the student holds a heavy bag with both arms, wobbling, one hand waving for help, the girl rushing over. Yellow: the bag.",
   words: [
     {
       word: "bang1",

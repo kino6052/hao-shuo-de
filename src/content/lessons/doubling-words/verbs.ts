@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "verbs",
+  scene: "Acts out 'wǒ kàn-kan': the student bends down to look at a small sleeping bird in the grass with a gentle curious face, the girl behind them; Miao-miao keeping its distance. Yellow: the grass.",
   prose: {
     en: [
       "**To do something a little, or just try it**, say the verb twice. The second one is short and light.",

@@ -5,6 +5,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "times-share",
+  scene: "Acts out 'bǎ sì fàng zài yī-qǐ sān-cì, shì shí-èr': the mouse arranges three rows of four pebbles in a neat block while the bird argues that it is wrong and the student counts. Green: the block of pebbles.",
   prose: {
     en: [
       "**To multiply**, put a number together many times. **To divide**, see how many times you can take it away.",

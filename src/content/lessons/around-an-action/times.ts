@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "times",
+  scene: "Acts out 'wǒ kàn-guò hěn duō cì': a wall with a row of small tally strokes, the student leaning on it looking weary, Miao-miao nonchalant on top. Blue: the strokes.",
   words: [
     {
       word: "ci4",

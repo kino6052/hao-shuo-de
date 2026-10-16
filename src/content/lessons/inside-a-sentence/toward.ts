@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "toward",
+  scene: "Acts out 'tā duì wǒ hěn hǎo': the girl wraps a scarf around the shivering student with a gentle smile, Miao-miao between them in a sunny scene. Yellow: the sun.",
   words: [
     {
       word: "dui4",

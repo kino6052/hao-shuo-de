@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "feel",
+  scene: "Acts out 'wǒ jué-dé lěng': the student stands on a summer street in a thick scarf shivering, other people in short sleeves looking; Miao-miao shades itself. Yellow: the sun.",
   words: [
     {
       word: "jue2",

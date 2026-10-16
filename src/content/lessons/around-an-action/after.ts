@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "after",
+  scene: "Acts out 'chī-wán hòu, wǒ shuìjiào': the student lies on a couch with a full tummy under a blanket right after supper; the empty bowl stands on the table in the background. Blue: the blanket.",
   words: [
     {
       word: "hou4",

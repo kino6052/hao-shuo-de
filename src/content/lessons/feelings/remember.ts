@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "remember",
+  scene: "Acts out 'wǒ jì-dé nǐ': the student sits by a packed suitcase, a thought bubble holds a tiny copy of the arrival scene; Miao-miao on the bed. Yellow: the thought bubble.",
   words: [
     {
       word: "ji4",

@@ -5,6 +5,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "hard-and-looks",
+  scene: "Acts out 'zhè hěn nán': the student frowns at a very tangled knot of string while the girl holds a hand to her mouth to hide a smile; Miao-miao already untied half of it. Blue: the string.",
   words: [
     {
       word: "nan2",

@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "middle",
+  scene: "Acts out 'bāo zài zhōng-jiān': a bag in the middle of a table between the student on the left and the girl on the right, both reaching for it, Miao-miao crossing between. Blue: the bag.",
   words: [
     {
       word: "zhong1",

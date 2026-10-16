@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "as-soon-as",
+  scene: "Acts out 'wǒ yī dào jiā jiù shuìjiào': the student drops through the door and lies down on the bed at once with the shoes still on; Miao-miao already curled on the pillow. Yellow: the bed.",
   prose: {
     en: [
       "**To say as soon as**, put {{word:yi1}} before the first verb and {{word:jiu4}} before the second.",

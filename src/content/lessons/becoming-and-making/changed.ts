@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "changed",
+  scene: "Acts out 'shuǐ rè le': a kettle on the stove has begun to steam hard, the student's eyes lit up as if surprised that the water changed; Miao-miao takes a step back. Green: the steam.",
   words: [
     {
       word: "huai4",

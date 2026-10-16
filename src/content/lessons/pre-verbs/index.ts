@@ -19,6 +19,7 @@ export const meta = {
 };
 
 export default lesson(meta.id, {
+  story: "Autumn, orange accent. The student wants noodles, cannot pay, and has to go. Miao-miao, lazily, teaches want, can and must by example, and when it is its turn it chooses no. Cast: the student, Miao-miao.",
   title: { en: "Pre-Verbs", ru: "Слова перед глаголом" },
   summary: {
     en: [
@@ -30,6 +31,19 @@ export default lesson(meta.id, {
       "В этом уроке вы научитесь говорить «Я хочу есть.», «Я могу слышать.», «Я учусь писать.», «Я умею писать.» и «Я люблю поесть.»",
     ],
   },
+  // Autumn, orange (MASCOT_PLAN.md): the student wants the noodles; Miao-miao sleeps at their feet.
+  images: [
+    {
+      alt: {
+        en: "The student stands at a noodle-shop window with one hand in an empty pocket, pointing at a steaming orange bowl of noodles. Miao-miao is curled up asleep on the floor by the student's feet.",
+        ru: "Студент стоит у окна лапшичной, одна рука в пустом кармане, другой показывает на дымящуюся оранжевую миску лапши. Miao-miao спит, свернувшись клубком, на полу у ног студента.",
+      },
+      pinyin: "{{Word:wo3}} {{word:yao4}} {{word:chi1}}.",
+      hanzi: "我要吃。",
+      en: "I want to eat.",
+      ru: "Я хочу есть.",
+    },
+  ],
   modules: [
     want,
     can,

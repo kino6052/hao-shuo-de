@@ -2,6 +2,7 @@ import { introSection } from "../../../lib/intro.ts";
 
 export default introSection({
   id: "cat",
+  scene: "Existing picture (intro-4-cover). Acts out 'wǒ shì Miāo-miao': a small white cat sits alone on a doorstep with two orange autumn leaves beside it.",
   prose: {
     en: [
       "<h2>A cat who likes it simple</h2>",

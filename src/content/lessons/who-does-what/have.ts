@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "have",
+  scene: "Acts out 'wǒ méi-yǒu jīn': the student turns out two empty pockets and shrugs, the girl sympathetic, Miao-miao peering into a pocket. Orange: the empty pockets.",
   words: [
     {
       word: "you3",

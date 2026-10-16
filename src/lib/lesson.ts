@@ -105,6 +105,19 @@ export interface Faq extends Localized {
 export interface Module {
   /** The module's file name, without .ts. */
   id: string;
+  /**
+   * The plan for the module's picture (MASCOT_PLAN.md): one or two plain
+   * English sentences saying what the picture shows, and which sentence of
+   * the module it acts out. An optional idea for a picture (the book has one
+   * picture per chapter, see LessonParts.images), never shown to the reader.
+   */
+  scene?: string;
+  /**
+   * The module's picture once it is made (public/story/<lesson>-<module>.webp
+   * unless `file` says otherwise). It sits after the info block, before the
+   * examples. `at` is ignored here.
+   */
+  image?: LessonImage;
   words?: Word[];
   prose: Prose;
   info: Info;
@@ -133,13 +146,24 @@ export interface LessonImage extends Localized {
 export interface LessonParts {
   title: Localized;
   summary: Localized;
+  /**
+   * The lesson's place in the year's story (MASCOT_PLAN.md): the season and
+   * its color, what happens to Miao-miao and the student, and who is in it.
+   * The plain-English brief behind the lesson's pictures; never shown to the
+   * reader. scripts/check-story-plan.js wants one in every lesson.
+   */
+  story?: string;
   /** The lesson's story picture(s); the first one may leave out `file`. */
   images?: LessonImage[];
   modules: Module[];
 }
 
-/** An assembled entry, with where it came from. */
-export type LessonEntry = Entry & { module: string; key: string };
+/**
+ * An assembled entry, with where it came from. `story` (on the title entry)
+ * and `scene` (on a module's prose entry) carry the picture plan through to
+ * the scripts; the reader's page ignores them.
+ */
+export type LessonEntry = Entry & { module: string; key: string; story?: string; scene?: string };
 
 // A typed identity helper, so a module file gets checked against the shapes
 // above as it's written.
@@ -186,7 +210,7 @@ export function lesson(id: string, parts: LessonParts): LessonEntry[] {
   const out: LessonEntry[] = [];
   const add = (module: string, key: string, entry: Entry) => out.push({ ...entry, module, key });
 
-  add("head", "title", { type: "title", ...langs(parts.title) });
+  add("head", "title", { type: "title", ...langs(parts.title), ...(parts.story ? { story: parts.story } : {}) });
   add("head", "summary", { type: "summary", ...langs(parts.summary) });
 
   // The first picture is named after the lesson; any other names its own file.
@@ -204,11 +228,13 @@ export function lesson(id: string, parts: LessonParts): LessonEntry[] {
     (m.words ?? []).forEach((w, i) =>
       add(m.id, `${m.id}.word${i + 1}`, { type: "vocab", term: `{{word:${w.word}}}`, ...(w.sense ? { sense: w.sense } : {}), audioFile: w.audioFile, ttsText: cardHanzi(w), ...langs(w) }),
     );
-    const prose: Entry = { type: "prose", ...langs(m.prose) };
+    const prose: Entry & { scene?: string } = { type: "prose", ...langs(m.prose) };
     if (m.prose.tldr) prose.tldr = langs(m.prose.tldr);
     if (m.prose.necessity) prose.necessity = langs(m.prose.necessity);
+    if (m.scene) prose.scene = m.scene;
     add(m.id, `${m.id}.prose`, prose);
     add(m.id, `${m.id}.info`, infoEntry(m.info));
+    if (m.image) add(m.id, `${m.id}.image`, imageEntry(m.image.file ?? `${id}-${m.id}`, m.image));
     (m.examples ?? []).forEach((ex, i) =>
       add(m.id, `${m.id}.example${i + 1}`, { type: "example", pinyin: ex.pinyin, audioFile: ex.audioFile, ttsText: ex.hanzi, ...langs(ex) }),
     );

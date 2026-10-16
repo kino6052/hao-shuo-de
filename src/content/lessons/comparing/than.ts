@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "than",
+  scene: "Acts out 'wǒ bǐ nǐ dà': the student and the girl stand back to back, the student a little taller; Miao-miao measures with a ruler held in its mouth. Blue: the ruler.",
   words: [
     {
       word: "bi3",

@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "ba",
+  scene: "Acts out 'tā bǎ bāo zuò huài le': the student stands guiltily next to a bag with a torn strap that dangles, hands behind back; Miao-miao looks innocent. Green: the strap.",
   words: [
     {
       word: "ba3",

@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "together",
+  scene: "Acts out 'wǒ-men yī-qǐ chī': the student and the girl share a single large bowl with two spoons, heads close together, Miao-miao in the girl's lap. Green: the shared bowl.",
   prose: {
     en: [
       "**To say people do something together**, put {{word:yi1}}-{{word:qi3}} before the verb.",

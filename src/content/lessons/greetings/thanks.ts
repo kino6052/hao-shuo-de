@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "thanks",
+  scene: "Acts out 'xiè-xie!': the student takes a cup from the girl with both hands and a small bow, the girl smiling; Miao-miao bows too. Yellow: the cup.",
   words: [
     {
       word: "xie4",

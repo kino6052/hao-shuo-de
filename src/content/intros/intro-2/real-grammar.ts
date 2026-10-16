@@ -2,6 +2,7 @@ import { introSection } from "../../../lib/intro.ts";
 
 export default introSection({
   id: "real-grammar",
+  scene: "Acts out 'nǐ hǎo ma?': at the door the student greets the girl next door and she answers at once, surprised and pleased because she understood; Miao-miao watches from the mat. Orange: the student's speech bubble outline.",
   prose: {
     en: [
       "And because the grammar is entirely real, a native speaker understands you from your very first sentence.",

@@ -17,6 +17,7 @@ export const meta = {
 };
 
 export default lesson(meta.id, {
+  story: "Summer, yellow accent. The year is ending: glad, sad, missing, tired. A few words are enough. Cast: the student, Miao-miao, the girl.",
   title: { en: "Feelings", ru: "Чувства" },
   summary: {
     en: [
@@ -28,6 +29,19 @@ export default lesson(meta.id, {
       "В этом уроке вы научитесь говорить «Мне холодно.» и «Я боюсь огня.»",
     ],
   },
+  // Summer, yellow (MASCOT_PLAN.md): glad because the cat came; the student remembers the day they arrived.
+  images: [
+    {
+      alt: {
+        en: "Summer evening in a room. The student sits on the edge of a bed with a yellow blanket, a packed suitcase on the floor beside it. Miao-miao sits in their lap with eyes closed, happy. In a thought bubble above, a tiny picture shows a boy and a small cat at a door.",
+        ru: "Летний вечер в комнате. Студент сидит на краю кровати с жёлтым одеялом, рядом на полу собранный чемодан. У него на коленях сидит Miao-miao с закрытыми глазами, довольная. В облачке мыслей над ними крошечная картинка: мальчик и маленькая кошка у двери.",
+      },
+      pinyin: "{{Word:wo3}} {{word:jue2}}-{{light:de2}} {{word:hen3}} {{word:hao3}}, {{word:yin1wei4}} {{word:ni3}} {{word:lai2}} {{word:le}}.",
+      hanzi: "我觉得很好，因为你来了。",
+      en: "I feel good, because you've come.",
+      ru: "Мне хорошо, потому что ты пришёл.",
+    },
+  ],
   modules: [
     feel,
     remember,

@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "thing-first",
+  scene: "Acts out 'zhè-ge wǒ bù chī': the student holds the strange fruit at arm's length with a polite smile and the other hand held up in refusal. Orange: the fruit.",
   prose: {
     en: [
       "**To talk about a thing, say the thing first**, then a whole sentence about it.",

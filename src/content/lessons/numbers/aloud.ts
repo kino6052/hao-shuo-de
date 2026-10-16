@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "aloud",
+  scene: "Acts out 'yī, èr, sān!': the student and the girl count aloud on their fingers, one raising one finger, the other three; the bird above them hops on its wire counting. Green: the raised fingers.",
   words: [
     {
       word: "er4",

@@ -68,6 +68,17 @@ describe('lesson', () => {
     expect(out[7]).toMatchObject({ type: 'image', file: 'greetings-tea' });
   });
 
+  test('a module can have a picture (after its info block, named lesson-module) and a scene plan that rides on its prose', () => {
+    const pic = { alt: { en: 'A cat.' }, pinyin: 'miāo', hanzi: '喵', en: 'Meow.' };
+    const withPic = { ...seems, scene: 'Miao-miao sits on a stool.', image: pic };
+    const out = lesson('greetings', { title: { en: 'G' }, summary: { en: 'S.' }, story: 'Autumn, orange.', modules: [withPic] });
+    expect(out.map((e) => e.key)).toEqual(['title', 'summary', 'seems.prose', 'seems.info', 'seems.image', 'seems.exercise1', 'seems.answer1']);
+    expect(out[0].story).toBe('Autumn, orange.');
+    expect(out[2].scene).toBe('Miao-miao sits on a stool.');
+    expect(out[4]).toMatchObject({ type: 'image', file: 'greetings-seems', module: 'seems', ttsText: '喵' });
+    expect(lesson('greetings', { title: { en: 'G' }, summary: { en: 'S.' }, modules: [{ ...withPic, image: { ...pic, file: 'greetings-tea' } }] })[4].file).toBe('greetings-tea');
+  });
+
   test('a second picture needs its own file name', () => {
     const pic = { alt: { en: 'A.' }, pinyin: 'a', hanzi: '啊', en: 'Ah.' };
     expect(() => lesson('x', { title: { en: 'X' }, summary: { en: 'S' }, images: [pic, pic], modules: [seems] })).toThrow('needs a file name');

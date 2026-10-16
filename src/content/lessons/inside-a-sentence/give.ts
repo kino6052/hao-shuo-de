@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "give",
+  scene: "Acts out 'gěi wǒ': the student holds out a hand and the girl puts a tangerine into it, Miao-miao looking up hoping for the peel. Yellow: the tangerine.",
   words: [
     {
       word: "gei3",

@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "say-no",
+  scene: "Acts out 'tā shuō bù': Miao-miao sits with a firm face and a paw raised in refusal in front of a bowl of vegetables, the student apologising to the girl. Orange: the raised paw.",
   prose: {
     en: [
       "**To answer no**, say {{word:shuo1}} {{word:bu4}}: to say \"no\".",

@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "size",
+  scene: "Acts out 'zhè-ge bāo-de dà-xiǎo hěn hǎo': the student fits a bag exactly into a small cupboard, hands on hips with pride; Miao-miao tries to squeeze in beside it. Blue: the bag.",
   prose: {
     en: [
       "**To name how big something is**, put {{word:da4}} and {{word:xiao3}} together: {{word:da4}}-{{word:xiao3}} is the size.",

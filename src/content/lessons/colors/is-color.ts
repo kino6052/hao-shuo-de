@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "is-color",
+  scene: "Acts out 'bāo shì hóng-sè-de': the girl holds up the bag to the student with a smile, a blue puddle beside her feet; both bag and puddle are in color, the rest in lines. Red and blue: the bag and the puddle.",
   prose: {
     en: [
       "**To say what color something is**, put {{word:shi4}} before the color, and -{{word:de}} after it.",

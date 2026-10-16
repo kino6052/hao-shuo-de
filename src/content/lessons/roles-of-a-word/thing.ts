@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "thing",
+  scene: "Acts out 'wǒ yào chī-de': the student holds an empty bowl and looks hopeful, the bubble shows an eating mouth with an arrow to the bowl (the thing you eat). Green: the arrow.",
   words: [
     {
       word: "ci2",

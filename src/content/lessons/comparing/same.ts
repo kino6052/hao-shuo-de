@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "same",
+  scene: "Acts out 'tā-men yī-yàng': Miao-miao sits between two identical tea cups, looking from one to the other and finding no difference. Blue: the cups.",
   words: [
     {
       word: "yang4",

@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "label",
+  scene: "Acts out 'wǒ-de jiā shì wǔ-hào': a short row of houses along a street with doors in a line, the student standing in front of the fifth with the key held up. Green: the fifth door.",
   words: [
     {
       word: "hao4",

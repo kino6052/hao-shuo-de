@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "teens",
+  scene: "Acts out 'shí-wǔ-ge dòng-wù zài zhè-lǐ': a meadow edge with many small animals in rows of ten and five; the student looks amazed, Miao-miao unimpressed. Green: the meadow.",
   words: [
     {
       word: "ling2",

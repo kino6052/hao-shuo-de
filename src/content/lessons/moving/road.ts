@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "road",
+  scene: "Acts out 'lù-shàng yǒu hěn duō rén': a busy snowy road with a bus, many bundled people walking both ways, the student in the middle holding Miao-miao. Blue: the bus.",
   words: [
     {
       word: "lu4",

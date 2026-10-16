@@ -3,6 +3,7 @@ import { contents } from "./contents.ts";
 
 export default introSection({
   id: "simplified",
+  scene: "Existing picture (intro-3-path). Acts out 'wǒ zǒu lù': a winding path of stepping stones leads from Miao-miao, sitting on the first orange stone, to a plain door in the top right corner.",
   prose: {
     en: [
       "Toki Pona showed that a small, fixed set of words can still let you say almost anything.",

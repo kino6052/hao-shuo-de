@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "only",
+  scene: "Acts out 'wǒ jiù yī-gè': the student looks sadly into a basket with one single apple in it; Miao-miao sniffs the empty rest. Yellow: the apple.",
   prose: {
     en: [
       "**To say only that many**, put {{word:jiu4}} before the number and the counting word.",

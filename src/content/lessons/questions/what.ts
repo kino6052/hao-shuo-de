@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "what",
+  scene: "Acts out 'zhè shì shénme?': the girl holds up a strange spiky fruit, the student's bubble shows the fruit and a question mark, the mouse peers from a corner. Orange: the fruit.",
   words: [
     {
       word: "shen2me",

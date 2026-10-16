@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "where",
+  scene: "Acts out 'wǒ zài jiā': the student sits in a cozy room by the heater with a cup of tea, a small house shape drawn warm around them; Miao-miao beside them. Blue: the window with snow.",
   words: [
     {
       word: "li3",

@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "parts",
+  scene: "Acts out 'dòng-wù-de bízi hěn xiǎo': a close-up of a tiny animal's nose and the student's finger pointing at it, Miao-miao's whiskers in the corner. Green: the nose.",
   words: [
     {
       word: "bi2zi",

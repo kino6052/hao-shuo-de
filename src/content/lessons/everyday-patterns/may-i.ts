@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "may-i",
+  scene: "Acts out 'wǒ néng jìn-lái ma?': the student stands at a half-open door, one foot raised, a polite questioning face; a hand inside is waving them in. Yellow: the door.",
   prose: {
     en: [
       "**To ask if you may**, put {{word:neng2}} (can) before the verb and {{word:ma}} at the end. **To suggest something, or to ask nicely**, add {{word:hao3}} {{word:ma}}? (okay?) at the end.",

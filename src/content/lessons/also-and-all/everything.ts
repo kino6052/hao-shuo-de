@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "everything",
+  scene: "Acts out 'wǒ shénme-dōu chī': the mouse sits happily in front of a heap of every kind of food with a bib on, the bird watching in disbelief. Green: the heap of food.",
   prose: {
     en: [
       "**To say everything**, put {{word:shen2me}}-{{word:dou1}} before the verb.",

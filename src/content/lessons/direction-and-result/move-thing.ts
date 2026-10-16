@@ -5,6 +5,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "move-thing",
+  scene: "Acts out 'bǎ yīfu fàng-jìn-qù!': the student stuffs clothes into an open suitcase while Miao-miao pulls one back out with a paw. Green: the suitcase.",
   words: [
     {
       word: "jie2",

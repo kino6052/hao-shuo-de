@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "possession-de",
+  scene: "Acts out 'wǒ-de zhíwù, nǐ-de jiā': the student hugs a small potted plant and points at it proudly, the girl points at her own doorway behind her; two things, two owners. Orange: the potted plant.",
   words: [
     {
       word: "jia1",

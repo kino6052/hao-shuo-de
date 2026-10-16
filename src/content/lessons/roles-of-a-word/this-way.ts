@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "this-way",
+  scene: "Acts out 'wǒ zhè-yàng zuò': the student bends and folds a paper boat slowly, demonstrating each fold to the girl who copies; the finished boat on a table. Green: the paper boat.",
   prose: {
     en: [
       "**To say how you do something, point at the way**: put {{word:zhe4}}-{{word:yang4}} (this way) before the verb.",

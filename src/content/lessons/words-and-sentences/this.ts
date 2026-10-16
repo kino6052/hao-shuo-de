@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "this",
+  scene: "Acts out 'zhè shì dòng-wù': the student holds Miao-miao up in both hands towards the reader like a trophy, the cat dangling and unimpressed; the student's bubble shows a small cat shape. Orange: the bubble outline.",
   words: [
     {
       word: "zhe4",

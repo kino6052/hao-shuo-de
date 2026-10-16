@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "with",
+  scene: "Acts out 'wǒ yòng gōng-jù xiě': the student writes with a brush held in a clamp tool, the girl watching with her chin in her hands. Yellow: the brush.",
   words: [
     {
       word: "yong4",

@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "heart",
+  scene: "Acts out 'wǒ hěn kāi-xīn': the student hugs Miao-miao in a bright room, a small heart above their chest; the cat tolerates it. Yellow: the heart.",
   words: [
     {
       word: "xin1",

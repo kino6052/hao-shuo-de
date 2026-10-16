@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "very",
+  scene: "Acts out 'shuǐ hěn rè': a pot of water boiling with a big cloud of steam, the student pulling back from the heat with wide eyes. Blue: the steam.",
   words: [
     {
       word: "zhen1",

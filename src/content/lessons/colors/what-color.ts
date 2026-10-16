@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "what-color",
+  scene: "Acts out 'nǐ-de yīfu shì shénme yánsè?': the girl points at the student's scarf with a question mark overhead, the student looking down at it; the scarf alone is colored. Green: the scarf.",
   words: [
     {
       word: "yan2se4",

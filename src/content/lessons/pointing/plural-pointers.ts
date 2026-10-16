@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "plural-pointers",
+  scene: "Acts out 'wǒ-men, nǐ-men, tā-men': the student and the girl stand together with arms linked for 'we', facing the bird and mouse across the courtyard for 'you all'. Orange: the linked arms.",
   words: [
     {
       word: "men",

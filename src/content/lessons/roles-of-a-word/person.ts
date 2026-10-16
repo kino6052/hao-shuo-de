@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "person",
+  scene: "Acts out 'xiě-de rén': the student sits at a desk with a brush; a pointing finger from the girl lands on the student, who looks up from the page. Green: the pointing finger.",
   words: [
     {
       word: "zi",

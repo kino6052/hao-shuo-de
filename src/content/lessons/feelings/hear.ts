@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "hear",
+  scene: "Acts out 'nǐ-de shēngyīn hěn hǎo': the student sits eyes closed with a hand cupped to the ear as the girl sings softly, Miao-miao purring; soft curves drift between them. Yellow: the curves.",
   words: [
     {
       word: "sheng1yin1",

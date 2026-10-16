@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "moment",
+  scene: "Acts out 'děng yī-xià!': the student holds up one finger in front of a half-open door while the girl, mid-step in the snow, stops; Miao-miao is already outside. Blue: the finger.",
   words: [
     {
       word: "yi1",

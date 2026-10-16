@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "like",
+  scene: "Acts out 'shuǐ hěn hǎo': the student drinks from a cup with a delighted face and a thumbs-up while Miao-miao eyes a bowl of water beside it. Orange: the cup.",
   words: [
     {
       word: "hen3",

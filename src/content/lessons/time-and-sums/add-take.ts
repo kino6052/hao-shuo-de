@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "add-take",
+  scene: "Acts out 'sān, sì fàng zài yī-qǐ, shì qī': the mouse lays out three pebbles and four pebbles, then pushes them together and counts seven; the others watch. Green: the pushed-together pebbles.",
   words: [
     {
       word: "suan4",

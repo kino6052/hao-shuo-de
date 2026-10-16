@@ -22,6 +22,8 @@ export interface IntroSection {
   id: string;
   /** The text, a sentence per line; an <h2> line makes a heading. */
   prose: Prose;
+  /** The plan for the section's picture, as for a lesson module (src/lib/lesson.ts). */
+  scene?: string;
   /** The section's picture: right after its text. Its file name is given in full ("intro-4-cover"). */
   image?: LessonImage & { file: string };
   examples?: IntroExample[];
@@ -32,10 +34,12 @@ export interface IntroSection {
 export interface IntroParts {
   title: Localized;
   summary: Localized;
+  /** The intro's place in the story, as for a lesson (src/lib/lesson.ts). */
+  story?: string;
   sections: IntroSection[];
 }
 
-export type IntroEntry = Entry & { module: string; key: string };
+export type IntroEntry = Entry & { module: string; key: string; story?: string; scene?: string };
 
 // A typed identity helper, so a section file is checked against the shape as it's written.
 export const introSection = (s: IntroSection): IntroSection => s;
@@ -44,14 +48,15 @@ export function intro(id: string, parts: IntroParts): IntroEntry[] {
   const out: IntroEntry[] = [];
   const add = (module: string, key: string, entry: Entry) => out.push({ ...entry, module, key });
 
-  add("head", "title", { type: "title", ...langs(parts.title) });
+  add("head", "title", { type: "title", ...langs(parts.title), ...(parts.story ? { story: parts.story } : {}) });
   add("head", "summary", { type: "summary", ...langs(parts.summary) });
 
   const seen = new Set<string>();
   for (const s of parts.sections) {
     if (seen.has(s.id)) throw new Error(`intro(${id}): section "${s.id}" is listed twice`);
     seen.add(s.id);
-    const prose: Entry = { type: "prose", ...langs(s.prose) };
+    const prose: Entry & { scene?: string } = { type: "prose", ...langs(s.prose) };
+    if (s.scene) prose.scene = s.scene;
     if (s.prose.tldr) prose.tldr = langs(s.prose.tldr);
     if (s.prose.necessity) prose.necessity = langs(s.prose.necessity);
     add(s.id, `${s.id}.prose`, prose);

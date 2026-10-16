@@ -5,6 +5,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "far",
+  scene: "Acts out 'nà-ge dì-fāng hěn yuǎn': a long snowy road stretching into the distance toward a tiny building, the student with a heavy backpack looking out; Miao-miao in the pack. Blue: the road.",
   words: [
     {
       word: "yuan3",

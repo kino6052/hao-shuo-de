@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "relation",
+  scene: "Acts out 'wǒ hé tā-de guānxi hěn hǎo': the student and the girl sit back to back on a bench in the summer sun, relaxed, each with a hand held out to Miao-miao in the middle. Yellow: the sun.",
   words: [
     {
       word: "guan1xi",

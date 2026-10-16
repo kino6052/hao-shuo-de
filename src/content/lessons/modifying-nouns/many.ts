@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "many",
+  scene: "Acts out 'hěn-duō-de rén': a courtyard crowded with many small round-headed people, Miao-miao on the student's shoulder with wide eyes, the bird on the wall counting. Orange: the student's scarf.",
   words: [
     {
       word: "duo1",

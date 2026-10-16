@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "again",
+  scene: "Acts out 'tā yòu chī le': Miao-miao sits by its empty bowl and looks up, the student holds the bowl, and the bird comments from the sill with a raised wing. Blue: the bowl.",
   words: [
     {
       word: "you4",

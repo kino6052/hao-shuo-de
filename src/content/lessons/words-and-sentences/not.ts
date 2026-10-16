@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "not",
+  scene: "Acts out 'dòng-wù bù shì zhíwù': Miao-miao sits next to a potted plant while the student's bubble shows a cat and a plant side by side with a bold orange slash across them. Orange: the slash.",
   words: [
     {
       word: "bu4",

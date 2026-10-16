@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "color-thing",
+  scene: "Acts out 'hóng-sè-de bāo': the student holds up a bag that is the only red thing in a black line scene; Miao-miao points at it with a paw. Red: the bag.",
   words: [
     {
       word: "bai2",

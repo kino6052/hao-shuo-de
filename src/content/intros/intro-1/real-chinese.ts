@@ -2,6 +2,7 @@ import { introSection } from "../../../lib/intro.ts";
 
 export default introSection({
   id: "real-chinese",
+  scene: "Acts out 'real Chinese, only smaller': Miao-miao pours tea from a small pot into the student's cup while a tall grand pot, held by nobody, tips into the same cup from the other side; one cup, the same tea. Orange: the steam rising from the cup.",
   prose: {
     en: [
       "Hao-shuo-de and Jiandanhua are complete languages, so anything can be translated into them: speech, movies, books.",

@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "kind",
+  scene: "Acts out 'zhè-zhǒng bǐ nà-zhǒng hǎo': a stall with two kinds of apples in two baskets, the student holding one of each and weighing them with a thoughtful face; the bird shouts from above. Blue: the better basket.",
   words: [
     {
       word: "zhong3",

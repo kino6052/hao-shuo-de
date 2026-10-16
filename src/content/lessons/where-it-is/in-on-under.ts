@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "in-on-under",
+  scene: "Acts out 'gōng-jù zài bāo-de xià-miàn': a tool lies under a bag on the floor, the student bending to look, the mouse peeking at it from a hole. Blue: the tool.",
   words: [
     {
       word: "shang4",

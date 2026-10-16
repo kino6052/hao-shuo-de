@@ -2,6 +2,7 @@ import { introSection } from "../../../lib/intro.ts";
 
 export default introSection({
   id: "toki-pona",
+  scene: "Existing picture (intro-2-bag). Acts out 'wǒ yào xiǎo-de': a huge full sack stands next to Miao-miao, who holds a very small bag with an orange tie and looks content.",
   prose: {
     en: [
       "In 2001, a linguist named Sonja Lang decided to find out.",

@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "different",
+  scene: "Acts out 'tā-men bù yī-yàng': two scarves side by side, one with stripes and one plain, the student holding one in each hand and comparing them; Miao-miao chooses the plain one. Blue: the striped scarf.",
   words: [
     {
       word: "bie2",

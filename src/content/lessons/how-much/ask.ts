@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "ask",
+  scene: "Acts out 'nǐ lěng ma?': the girl asks the shivering student, who hugs themselves; Miao-miao on the heater looks far too hot. Blue: the student's shiver lines.",
   words: [
     {
       word: "lao3",

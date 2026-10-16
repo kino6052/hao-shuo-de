@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "now",
+  scene: "Acts out 'wǒ zài chī': the student eats noodles from a steaming bowl mid-bite, snow outside the window, Miao-miao asleep beside the bowl. Blue: the frost on the window.",
   words: [
     {
       word: "zai4",

@@ -23,6 +23,7 @@ export const meta = {
 };
 
 export default lesson(meta.id, {
+  story: "Summer, yellow accent. The last lesson: the student writes a full note to the owner in Hao-shuo-de, in characters, and puts it on the door. A hand pours tea. Miao-miao leaves with the note. Cast: the student, Miao-miao, a hand.",
   title: { en: "Everyday Patterns", ru: "Обороты на каждый день" },
   summary: {
     en: [
@@ -34,6 +35,19 @@ export default lesson(meta.id, {
       "В этом уроке вы научитесь говорить «Давай я!», «Дай посмотреть.», «Помоги мне!», «Родители не пускают меня гулять.» и «Давай выйдем, хорошо?»",
     ],
   },
+  // Summer, yellow (MASCOT_PLAN.md): the last chapter; "Let's go out and play, okay?" at the open door.
+  images: [
+    {
+      alt: {
+        en: "Summer, at an open door with a blank note stuck on it. The student and the neighbor girl, who holds a small yellow basket, stand side by side looking out. Miao-miao is already on the path outside and looks back at them.",
+        ru: "Лето, у открытой двери, на которой висит пустая записка. Студент и соседская девочка с маленькой жёлтой корзинкой стоят рядом и смотрят наружу. Miao-miao уже на дорожке за дверью и оглядывается на них.",
+      },
+      pinyin: "{{Word:wo3}}-{{word:men}} {{word:chu1}}-{{word:qu4}} {{word:wan2r}}, {{word:hao3}} {{word:ma}}?",
+      hanzi: "我们出去玩儿，好吗？",
+      en: "Let's go out and play, okay?",
+      ru: "Давай выйдем поиграть, хорошо?",
+    },
+  ],
   modules: [
     letMe,
     myTurn,

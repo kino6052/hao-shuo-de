@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "why-how",
+  scene: "Acts out 'nǐ wèi-shénme bù chī?': the girl holds out a bowl and looks puzzled that the student is holding back; the student's bubble shows a bowl with a tiny worried cat, Miao-miao hiding under the table. Orange: the bowl.",
   words: [
     {
       word: "wei4",

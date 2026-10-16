@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "hear-see",
+  scene: "Acts out 'wǒ kàn tā chī': the student watches the girl eat a noodle from a bowl with wide eyes; Miao-miao on the table follows each noodle as it rises. Orange: the noodle.",
   prose: {
     en: [
       "**To say you hear or see someone do something**, put that person between {{word:ting1}} or {{word:kan4}} and what they do.",

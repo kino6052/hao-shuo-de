@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "pointing-to-people",
+  scene: "Acts out 'wǒ, nǐ, tā': three people in a line, the student pointing at their own chest, then at the girl, then at Miao-miao behind them; Miao-miao looks pleased to be 'he or she'. Orange: the student's pointing hand.",
   words: [
     {
       word: "wo3",

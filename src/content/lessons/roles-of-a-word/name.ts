@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "name",
+  scene: "Acts out 'zài-shuǐ-lǐ-de dòng-wù': a duck-like animal swims in a pond while the student points at it and rolls a hand to describe 'the one that lives in water'; the bird mixes it up in a second bubble. Green: the pond.",
   words: [
     {
       word: "fa3",

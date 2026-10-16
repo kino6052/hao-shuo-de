@@ -20,6 +20,7 @@ export const meta = {
 };
 
 export default lesson(meta.id, {
+  story: "Spring, pale green accent. A group scene, the one with the whole cast: the student, the girl, Miao-miao, the mouse and the bird all want the same thing. Also, all, together. Cast: all five.",
   title: { en: "Modifiers 3 — Also and all", ru: "Уточнения 3 — Тоже и все" },
   summary: {
     en: [
@@ -31,6 +32,19 @@ export default lesson(meta.id, {
       "В этом уроке вы научитесь говорить «Я тоже ем.», «Мы все едим.», «Я ем всё.», «Большинство людей любят животных.» и «Включи свет!»",
     ],
   },
+  // Spring, pale green (MASCOT_PLAN.md): the whole cast around one plate; everyone reaches for the same food.
+  images: [
+    {
+      alt: {
+        en: "Spring. The student and the neighbor girl sit on either side of a small round table. On it, a plate with a pale green rim holds hot steamed buns. Everyone reaches for them: the student, the girl, Miao-miao, a little mouse and a little bird.",
+        ru: "Весна. Студент и соседская девочка сидят по обе стороны маленького круглого стола. На столе тарелка с бледно-зелёным ободком, на ней горячие паровые булочки. Все тянутся к ним: студент, девочка, Miao-miao, маленькая мышь и маленькая птица.",
+      },
+      pinyin: "{{Word:wo3}}-{{word:men}} {{word:dou1}} {{word:chi1}}.",
+      hanzi: "我们都吃。",
+      en: "We all eat.",
+      ru: "Мы все едим.",
+    },
+  ],
   modules: [
     alsoDo,
     light,

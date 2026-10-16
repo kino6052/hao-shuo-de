@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "count-alone",
+  scene: "Acts out 'wǒ yào qī-ge': the student holds out cupped hands to a market seller who drops round buns into them, a row of seven buns on the counter; Miao-miao on the counter. Green: the buns.",
   prose: {
     en: [
       "**To leave the noun out**, when it's clear what you mean, say just the number and {{word:ge4}}.",

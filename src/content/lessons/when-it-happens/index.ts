@@ -17,6 +17,7 @@ export const meta = {
 };
 
 export default lesson(meta.id, {
+  story: "Winter, blue accent. A cold morning and a late start. Before, now and after: the student has eaten, is eating and will eat, and Miao-miao sleeps through all three. Cast: the student, Miao-miao.",
   title: { en: "Time 1 — When it happens", ru: "Время 1 — Когда это происходит" },
   summary: {
     en: [
@@ -28,6 +29,19 @@ export default lesson(meta.id, {
       "В этом уроке вы научитесь говорить «Я поел.», «Я как раз ем.», «Я буду есть.», «Я уже видел это животное.» и «Ночью я сплю.»",
     ],
   },
+  // Winter, blue (MASCOT_PLAN.md): a cold morning; the student has eaten, Miao-miao sleeps on.
+  images: [
+    {
+      alt: {
+        en: "A cold morning. The student sits at a table in a blue scarf, with an empty bowl and chopsticks in front of them, hand on a full stomach. Snow falls outside the window, and Miao-miao sleeps curled up on the windowsill.",
+        ru: "Холодное утро. Студент сидит за столом в синем шарфе, перед ним пустая миска и палочки, рука на сытом животе. За окном идёт снег, а Miao-miao спит, свернувшись клубком, на подоконнике.",
+      },
+      pinyin: "{{Word:wo3}} {{word:chi1}} {{word:le}}.",
+      hanzi: "我吃了。",
+      en: "I ate.",
+      ru: "Я поел.",
+    },
+  ],
   modules: [
     done,
     now,

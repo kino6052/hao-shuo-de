@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "little",
+  scene: "Acts out 'wǒ yào yī-diǎn shuǐ': the student holds out a cup and the girl pours just a little water from a jug, finger and thumb nearly touching. Green: the jug.",
   prose: {
     en: [
       "**To say a little**, say {{word:yi1}}-{{word:dian3}} (a little).",

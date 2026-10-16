@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "describe",
+  scene: "Acts out 'yuè yuán-yuán-de': night; the student, the girl and Miao-miao look up at a perfectly round moon from a rooftop. Yellow: the moon.",
   prose: {
     en: [
       "**To make a describing word stronger and livelier**, say it twice, then add -{{word:de}}.",

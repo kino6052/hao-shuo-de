@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "love",
+  scene: "Acts out 'wǒ ài chī': the student hugs a large bowl of noodles with closed eyes and a huge smile, little hearts around; Miao-miao looks on, mildly jealous. Orange: the hearts.",
   words: [
     {
       word: "ai4",

@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "will",
+  scene: "Acts out 'wǒ huì chī': the student stands by a stove with an empty bowl held out, ready, a pot beginning to steam; Miao-miao stretches one paw out lazily. Blue: the pot.",
   words: [
     {
       word: "hui4",

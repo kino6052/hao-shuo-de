@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "ge-is-universal",
+  scene: "Acts out 'zhè-ge rén, nà-ge dòng-wù': the girl points at Miao-miao beside her (this one) and at the bird on a wire far off (that one); the student points the same way. Orange: the girl's pointing arm.",
   words: [
     {
       word: "ge4",

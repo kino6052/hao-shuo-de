@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "not",
+  scene: "Acts out 'wǒ bù chī': the student pushes a bowl away with one hand held up like a stop sign, the girl surprised, Miao-miao sniffing the bowl with interest. Orange: the stop-sign hand.",
   words: [
     {
       word: "hua4",

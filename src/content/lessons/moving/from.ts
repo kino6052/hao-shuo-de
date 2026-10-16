@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "from",
+  scene: "Acts out 'wǒ cóng jiā lái': the student walks toward the reader along a snowy road, a small house far behind with a thin line of smoke; Miao-miao's prints follow. Blue: the footprints.",
   words: [
     {
       word: "cong2",

@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "part",
+  scene: "Acts out 'zhè bù-fēn hěn hǎo': the student holds up a sliced round cake and points at one slice with a smile, the rest on a plate; Miao-miao eyes a crumb. Green: the slice.",
   words: [
     {
       word: "bu4",

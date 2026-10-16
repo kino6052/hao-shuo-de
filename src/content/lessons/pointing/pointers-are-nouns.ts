@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "pointers-are-nouns",
+  scene: "Acts out 'zhè. nà.': the student points at a cup on the table close by, then at a plant far across the room, two pointing arms drawn clearly; Miao-miao looks from one to the other. Orange: the cup.",
   words: [
     {
       word: "na4",

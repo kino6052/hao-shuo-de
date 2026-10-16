@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "tones-heading",
+  scene: "Acts out 'the tones are four shapes': Miao-miao walks a short road of four stretches, flat, uphill, a small dip, then downhill, tail up, while the student walks behind it copying the steps. Orange: the road.",
   prose: {
     en: [
       "<h2>Tones</h2>",

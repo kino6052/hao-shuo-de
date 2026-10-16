@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "can-cant",
+  scene: "Acts out 'wǒ kàn-bù-dào': the student squints at something very far off with a hand over the eyes while the girl holds a small telescope; Miao-miao sees it fine. Green: the far-off dot.",
   words: [
     {
       word: "yan3jing",

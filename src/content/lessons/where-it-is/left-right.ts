@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "left-right",
+  scene: "Acts out 'bāo zài wǒ-de zuǒ-biān': the student sits with a bag at their left hand and a cup at their right, pointing with each hand; Miao-miao looks left and then right. Blue: the pointing hands.",
   words: [
     {
       word: "zuo3",

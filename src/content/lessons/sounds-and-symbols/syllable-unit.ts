@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "syllable-unit",
+  scene: "Acts out 'one syllable at a time': a row of pebbles on the path, each one a syllable; Miao-miao taps the pebbles one by one with a paw and the student points at the one being tapped. Orange: the pebble being tapped.",
   prose: {
     en: [
       "**To read pinyin**, read it one syllable at a time.",

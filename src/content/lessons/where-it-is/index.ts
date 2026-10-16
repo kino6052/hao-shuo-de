@@ -18,6 +18,7 @@ export const meta = {
 };
 
 export default lesson(meta.id, {
+  story: "Winter, blue accent. Where is Miao-miao? On the heater, under the table, in the bag. The student finds it only by asking and answering where. Cast: the student, Miao-miao, the mouse.",
   title: { en: "Space 1 — Where it is", ru: "Пространство 1 — Где это" },
   summary: {
     en: [
@@ -29,6 +30,19 @@ export default lesson(meta.id, {
       "В этом уроке вы научитесь говорить «Сумка на полу.», «в доме», «передо мной» и «Где это?»",
     ],
   },
+  // Winter, blue (MASCOT_PLAN.md): where is Miao-miao? In the bag; the mouse knows.
+  images: [
+    {
+      alt: {
+        en: "The student bends down and looks under a table, worried, searching. On the floor beside the table stands a big open blue backpack, and Miao-miao's head peeks out of it, looking pleased. A small mouse watches from the corner of the wall.",
+        ru: "Студент наклонился и встревоженно ищет что-то под столом. На полу рядом со столом стоит большой открытый синий рюкзак, из которого довольно выглядывает голова Miao-miao. Из угла стены наблюдает маленькая мышь.",
+      },
+      pinyin: "{{Word:ta1}} {{word:zai4}} {{word:bao1}}-{{word:li3}}.",
+      hanzi: "她在包里。",
+      en: "She is in the bag.",
+      ru: "Она в сумке.",
+    },
+  ],
   modules: [
     where,
     whereQuestion,

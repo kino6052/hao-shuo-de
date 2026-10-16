@@ -2,6 +2,7 @@ import { introSection } from "../../../lib/intro.ts";
 
 export default introSection({
   id: "question",
+  scene: "Existing picture (intro-1-tangle). Acts out 'nà-ge hěn nán, zhè-ge bù nán': Miao-miao sits beside a huge tangle of black lines while one clean straight line leaves the tangle and runs off to the right.",
   prose: {
     en: [
       "Whether you're just starting or have studied for years, you've probably wondered: what's the *best* way to learn Chinese?",

@@ -2,6 +2,7 @@ import { introSection } from "../../../lib/intro.ts";
 
 export default introSection({
   id: "you-arrive",
+  scene: "Existing picture (intro-4-arrival). Acts out 'nǐ hǎo! wǒ zài zhè-lǐ': in a hallway the student with an orange scarf and backpack stands at a door with a note on it, Miao-miao on the suitcase beside them.",
   prose: {
     en: [
       "<h2>You arrive</h2>",

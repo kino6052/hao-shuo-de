@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "right",
+  scene: "Acts out 'zhè-gè duì': the girl nods and the student holds a drawing of a cat that matches the real Miao-miao sitting beside it; a big nod arrow. Yellow: the nod arrow.",
   prose: {
     en: [
       "**On its own, {{word:dui4}} says something is right.** {{Word:bu4}} {{word:dui4}} says it is wrong.",

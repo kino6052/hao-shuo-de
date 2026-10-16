@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "but",
+  scene: "Acts out 'tā hěn xiǎo, dàn-shì hěn yǒu lì-qì': a very small mouse lifts a big acorn above its head with a defiant face, the bird looking astonished. Yellow: the acorn.",
   words: [
     {
       word: "dan4",

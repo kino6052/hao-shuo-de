@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "where-question",
+  scene: "Acts out 'bāo zài nǎ-lǐ?': the student stands in the middle of a room with arms spread and a question mark overhead, looking for the bag; Miao-miao's tail sticks out of the bag behind. Blue: the question mark.",
   words: [
     {
       word: "na3",

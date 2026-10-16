@@ -14,6 +14,7 @@ export const meta = {
 };
 
 export default intro(meta.id, {
+  story: "Before the year starts, still autumn orange. Miao-miao explains where the small language comes from: a question about how few words are enough, and an experiment that answered it. The tone is curious and unhurried; the student listens and Miao-miao keeps showing less rather than more. Cast: Miao-miao, the student, and the girl next door for one greeting.",
   title: {
     en: [
       "How small can a language be?"

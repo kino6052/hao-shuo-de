@@ -2,6 +2,7 @@ import { introSection } from "../../../lib/intro.ts";
 
 export default introSection({
   id: "hsk-broken",
+  scene: "Existing picture (intro-1-ladder). Acts out 'zhè-ge huài le': a plain ladder of five rungs, the third rung broken in the middle and drawn in orange, Miao-miao sitting beside it.",
   prose: {
     en: [
       "There's no single answer.",

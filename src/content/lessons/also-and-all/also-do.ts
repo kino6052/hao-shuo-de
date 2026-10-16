@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "also-do",
+  scene: "Acts out 'wǒ yě chī': the girl eats a bowl of noodles and the student, across the table, lifts a spoon and points at their own chest with a hopeful look. Green: the girl's bowl.",
   words: [
     {
       word: "ye3",

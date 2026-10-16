@@ -18,6 +18,7 @@ export const meta = {
 };
 
 export default lesson(meta.id, {
+  story: "Winter, blue accent. The market: how much, too much, a little. The girl asks the shivering student a question; Miao-miao, on the heater, looks too hot. Cast: the girl, the student, Miao-miao, the bird.",
   title: { en: "Modifiers 1 — How much", ru: "Уточнения 1 — Насколько" },
   summary: {
     en: [
@@ -29,6 +30,19 @@ export default lesson(meta.id, {
       "В этом уроке вы научитесь говорить «правда жарко», «очень холодно», «не очень странно», «Она красивая.» и «Тебе холодно?»",
     ],
   },
+  // Winter, blue (MASCOT_PLAN.md): the student is cold, Miao-miao is hot; the girl asks.
+  images: [
+    {
+      alt: {
+        en: "The student hugs their arms and shivers in a blue scarf. The neighbor girl stands beside them and tilts her head, asking with concern. Miao-miao lies on a radiator with her tongue out, far too hot.",
+        ru: "Студент обнимает себя руками и дрожит в синем шарфе. Рядом стоит соседская девочка и с участием наклоняет голову. Miao-miao лежит на батарее с высунутым языком, ей слишком жарко.",
+      },
+      pinyin: "{{Word:ni3}} {{word:leng3}} {{word:ma}}?",
+      hanzi: "你冷吗？",
+      en: "Are you cold?",
+      ru: "Тебе холодно?",
+    },
+  ],
   modules: [
     very,
     really,

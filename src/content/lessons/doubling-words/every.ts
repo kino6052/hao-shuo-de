@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "every",
+  scene: "Acts out 'rén-rén dōu yào shuǐ': a row of people of every size each holding a cup out for the girl with a jug, Miao-miao at the end of the line with a bowl. Yellow: the cups.",
   prose: {
     en: [
       "**To say every**, say a counting word, or one of a few nouns, twice. Put {{word:dou1}} before the verb.",

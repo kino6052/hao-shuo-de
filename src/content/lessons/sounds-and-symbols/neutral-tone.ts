@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "neutral-tone",
+  scene: "Acts out 'the light tone': Miao-miao walks across soft ground and leaves two paw prints, the first firm and deep, the second so light it hardly shows; the student tries the same walk behind it. Orange: the light print.",
   prose: {
     en: [
       "**To say a syllable lightly**, use the light tone.",

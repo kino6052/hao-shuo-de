@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "time",
+  scene: "Acts out 'yuè-de shí-jiān, wǒ shuìjiào': a night scene, the student in bed under a blanket, the moon in the window, Miao-miao curled at their feet. Blue: the moon.",
   words: [
     {
       word: "shi2",

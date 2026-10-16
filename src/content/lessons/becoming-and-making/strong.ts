@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "strong",
+  scene: "Acts out 'tā hěn yǒu lì-qì': the student lifts a heavy sack with both arms and a proud face while the girl claps; Miao-miao inside the sack. Green: the sack.",
   words: [
     {
       word: "li4",

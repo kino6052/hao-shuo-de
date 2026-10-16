@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "when",
+  scene: "Acts out 'wǒ chī-de shí-jiān, wǒ bù shuō': the student eats seriously with a full mouth while the girl tries to talk to them; the student holds up one finger for patience. Blue: the bowl.",
   words: [
     {
       word: "wan2r",

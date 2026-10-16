@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "can",
+  scene: "Acts out 'wǒ néng děng': the student sits patiently on a bench outside the shop with a small smile, hands in lap, while a queue moves slowly; Miao-miao yawns beside them. Orange: the bench.",
   words: [
     {
       word: "neng2",

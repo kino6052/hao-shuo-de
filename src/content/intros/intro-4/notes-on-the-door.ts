@@ -2,6 +2,7 @@ import { introSection } from "../../../lib/intro.ts";
 
 export default introSection({
   id: "notes-on-the-door",
+  scene: "Existing picture (intro-4-door). Acts out 'mén shàng yǒu zì': a plain door with a note on it and a cup of tea on the step sending up a thin orange wisp of steam; nobody is there.",
   prose: {
     en: [
       "<h2>The notes on the door</h2>",

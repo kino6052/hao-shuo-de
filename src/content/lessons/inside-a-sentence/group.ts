@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "group",
+  scene: "Acts out 'nà-xiē dòng-wù hěn dà': a crowd of big animals walking by on the far side of a field, the student and the girl in the front pointing at them. Yellow: the field.",
   prose: {
     en: [
       "**To talk about many at once**, say how many before the noun: {{word:hen3}}-{{word:duo1}} (a lot of), or {{word:zhe4}}-{{word:xie1}} / {{word:na4}}-{{word:xie1}} (these, those).",

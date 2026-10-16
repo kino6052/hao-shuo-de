@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "direction",
+  scene: "Acts out 'qǐ-lái!': Miao-miao pulls the blanket back from the student, who lies in bed; the student sits up with their eyes still shut. Blue: the blanket.",
   words: [
     {
       word: "qi3",

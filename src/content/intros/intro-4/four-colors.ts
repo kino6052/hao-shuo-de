@@ -2,6 +2,7 @@ import { introSection } from "../../../lib/intro.ts";
 
 export default introSection({
   id: "four-colors",
+  scene: "Existing picture (intro-4-seasons). Acts out 'yī nián': four small pictures of the same street corner, one for each season, with one color each: orange, blue, pale green, yellow.",
   prose: {
     en: [
       "<h2>One year, four colors</h2>",

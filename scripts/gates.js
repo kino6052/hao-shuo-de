@@ -18,6 +18,7 @@ export const GATES = [
   ['check-example-runs', ['--summary']],
   ['check-story-images', []],
   ['check-intro-sentences', []],
+  ['check-story-plan', []],
   ['check-word-builder', []],
   ['check-passive', []],
 ];

@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "count",
+  scene: "Acts out 'liǎng-ge dòng-wù': the cat and the bird side by side, two dots above them; the student counts on two fingers. Green: the dots.",
   words: [
     {
       word: "liang3",

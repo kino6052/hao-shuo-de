@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "no-word-boundaries",
+  scene: "Acts out 'spaces, hyphens, quotes show where a word starts and ends': a long string of beads, some joined by short ties and groups separated by gaps; Miao-miao points at the gaps while the student counts the groups. Orange: the ties.",
   prose: {
     en: [
       "**To see where a word starts and ends**, look at the spaces, hyphens, and quotes.",

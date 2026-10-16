@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "days-years",
+  scene: "Acts out 'wǒ děng le sān tiān': three sunrises and sunsets drawn in a row, the student sitting at the same bench in all three, a little more bored each time. Green: the suns.",
   words: [
     {
       word: "tian1",

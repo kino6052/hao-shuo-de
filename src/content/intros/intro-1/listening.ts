@@ -2,6 +2,7 @@ import { introSection } from "../../../lib/intro.ts";
 
 export default introSection({
   id: "listening",
+  scene: "Acts out 'no endless word drills': the student sits relaxed by an open window, listening to the street, while a pile of flashcards on the floor is used by Miao-miao as a cushion. Orange: the soft curves of sound drifting in through the window.",
   prose: {
     en: [
       "Because Hao-shuo-de is small, you skip endless word drills.",

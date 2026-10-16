@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "let-me",
+  scene: "Acts out 'wǒ lái!': Miao-miao reaches for the pen to write the note and the student takes it back, laughing. Yellow: the pen.",
   prose: {
     en: [
       "**To offer to do something**, say {{word:wo3}} {{word:lai2}} (I come), then the verb. It means \"let me do it\".",

@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "want",
+  scene: "Acts out 'wǒ yào chī': at a noodle-shop window the student looks hungrily at a steaming bowl, bubble: the student and the bowl; Miao-miao asleep on a stool wanting nothing. Orange: the steam.",
   words: [
     {
       word: "yao4",

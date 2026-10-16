@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "really",
+  scene: "Acts out 'zhēn rè!': Miao-miao stretched on top of a heater with a tongue out and wavy heat lines; the student fans it with a book. Blue: the heat waves.",
   words: [
     {
       word: "zhi3",

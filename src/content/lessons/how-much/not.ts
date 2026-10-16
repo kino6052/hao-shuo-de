@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "not",
+  scene: "Acts out 'shuǐ bù lěng': the student dips a toe into a basin of water with a content smile, a little steam; Miao-miao watches from a stool. Blue: the water.",
   prose: {
     en: [
       "**To say not, or not very**, put {{word:bu4}} or {{word:bu4}} {{word:hen3}} before the adjective.",

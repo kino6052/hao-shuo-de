@@ -5,6 +5,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "light",
+  scene: "Acts out 'kāi dēng!': the student reaches up to a lamp switch in a dim room at dusk, the room lighting up as Miao-miao's eyes glow. Green: the lamp's glow.",
   words: [
     {
       word: "deng1",

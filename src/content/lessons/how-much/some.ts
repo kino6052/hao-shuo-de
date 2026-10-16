@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "some",
+  scene: "Acts out 'yǒu-xiē rén bù lái': a street scene with a few people coming along the street and a few others at home, waving from windows; the student watches from the corner. Blue: the street.",
   prose: {
     en: [
       "**To say some of them**, put {{word:you3}}-{{word:xie1}} before the noun.",

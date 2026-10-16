@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "if",
+  scene: "Acts out 'rúguǒ nǐ lái, wǒ děng nǐ': the student waits at the campus gate under a tree, far down the road the girl is coming, Miao-miao on the wall. Yellow: the tree.",
   words: [
     {
       word: "ru2guo3",

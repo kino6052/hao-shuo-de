@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "all",
+  scene: "Acts out 'wǒ-men dōu chī': the whole cast at one round table, student, girl, Miao-miao, mouse and bird, every one eating from a bowl. Green: the steam above the bowls.",
   words: [
     {
       word: "dou1",

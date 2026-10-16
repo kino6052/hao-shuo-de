@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "body",
+  scene: "Acts out 'nǐ zuò-xià!': the girl pats the cushion beside her and the student sits down gingerly, Miao-miao already in the middle of the cushion. Green: the cushion.",
   words: [
     {
       word: "zhan4",

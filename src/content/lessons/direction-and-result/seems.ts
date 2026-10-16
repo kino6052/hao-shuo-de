@@ -5,6 +5,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "seems",
+  scene: "Acts out 'chī-qǐ-lái hěn tián': the student raises a fruit slice toward the mouth with an expecting smile; the bird on the sill watches with a skeptical look. Green: the fruit slice.",
   prose: {
     en: [
       "**To say how something seems**, put {{word:qi3}}-{{word:lai2}} after {{word:kan4}} (look), {{word:ting1}} (listen), or {{word:chi1}} (eat).",

@@ -2,6 +2,7 @@ import { introSection } from "../../../lib/intro.ts";
 
 export default introSection({
   id: "how-it-talks",
+  scene: "Existing picture (intro-4-bubbles). Acts out 'wǒ yào chī fàn': Miao-miao sits on a table and the student across from it, each with a bubble holding a small picture of a bowl, Miao-miao's with a smile too.",
   prose: {
     en: [
       "<h2>How Miao-miao talks</h2>",

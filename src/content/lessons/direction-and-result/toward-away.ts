@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "toward-away",
+  scene: "Acts out 'bǎ shuǐ ná-lái!': the girl at the far end of the room holds out a hand and the student carries a cup of water toward her carefully; Miao-miao follows. Green: the cup.",
   words: [
     {
       word: "na2",

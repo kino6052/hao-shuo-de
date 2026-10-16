@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "before-after",
+  scene: "Acts out 'qián yī-gè rì wǒ zài jiā': a calendar page torn off and lying on the floor, the student looking back over a shoulder at the day before; Miao-miao asleep on the day before. Green: the page.",
   prose: {
     en: [
       "**To name the day or month before or after**, put {{word:qian2}} (before) or {{word:hou4}} (after) in front of a counted span of time.",

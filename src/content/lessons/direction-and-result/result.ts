@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "result",
+  scene: "Acts out 'wǒ zhǎo-dào wǒ-de bāo le': the student kneels by the bed and pulls a lost shoe out from under it, Miao-miao's tail sticking out of the same spot. Green: the shoe.",
   words: [
     {
       word: "jian4",

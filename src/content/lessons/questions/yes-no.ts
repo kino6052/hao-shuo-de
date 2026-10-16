@@ -3,6 +3,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "yes-no",
+  scene: "Acts out 'zhè shì bāo ma?': the student holds up a bag and tilts their head, a question mark in the bubble above; the girl nods from a chair. Orange: the question mark.",
   words: [
     {
       word: "ma",

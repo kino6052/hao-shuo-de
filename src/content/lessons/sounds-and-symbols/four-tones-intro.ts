@@ -4,6 +4,7 @@ import { lessonModule } from "../../../lib/lesson.ts";
 
 export default lessonModule({
   id: "four-tones-intro",
+  scene: "Acts out 'mā, má, mǎ, mà are four different words': four small panels in a row, a mother holding a child, a coil of rope, a horse, an angry cat scolding a mouse; the student points at each in turn, Miao-miao nodding. Orange: the tone line above each panel.",
   prose: {
     en: [
       "**To tell those four words apart**, learn the tones.",
