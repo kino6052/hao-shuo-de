@@ -181,7 +181,6 @@ While `dev` runs, two pages are served on the same address:
 | `src/lib/grammar/` | The chart parser and the lexicon behind it; runs in Node and in the browser. |
 | `src/lib/kb/` | The knowledge base: facts, the clingo calls, the reports and the Claude tools. See kb/README.md. |
 | `tools/` | Local tools that are not part of the repo, such as the native clingo (git-ignored). |
-| `understand/` | Yes/no mode: learn what we are doing by asking an agent yes/no questions; the rules for the agent and how to use them. See understand/README.md. |
 <!-- /generated:layout -->
 
 The shapes of the data are defined in TypeScript, so a mistake is a type error:

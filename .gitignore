@@ -180,6 +180,3 @@ tools/clingo/
 
 # English data built by the Python scripts (phase 6): the export for Python and the English index
 kb/cache/
-
-# what the yes/no mode has settled so far, written by the agent for the side panel (understand/panel/)
-understand/state.json
