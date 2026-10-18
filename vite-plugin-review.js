@@ -36,11 +36,17 @@
 // Phase 6 adds the WordNet link review (KB_PLAN.md phase 6, scripts/python/link_wordnet.py), served by review/wordnet.html:
 //
 //   GET  /__review/?wordnet         the entries the Chinese and English WordNets did not settle, with their candidate synsets
-//   GET  /__review/wordnet-data     { counts, review, decisions } (review list: kb/wordnet/links.json; decisions: review/decisions/wordnet-1.json)
-//   POST /__review/wordnet-decide   { zh, ilis }   (ilis [] = no synset fits, null clears the decision)
+//   GET  /__review/wordnet-data     { counts, review, decisions, proposals, noSense } (review list and the entries WordNet has no sense for: kb/wordnet/links.json;
+//                                   decisions: review/decisions/wordnet-1.json; Claude's picks, shown preselected until the author confirms them:
+//                                   review/proposals/wordnet-1.mjs)
+//   POST /__review/wordnet-decide   { zh, ilis } or { items: [{ zh, ilis }, ...] }   (ilis [] = no synset fits, null clears the decision)
 //   A decision takes effect when the linker runs again: npm run wordnet -- --links-only
+//   GET  /__review/wordnet-search?q=<English word or phrase>   up to 12 senses of it, [{ ili, pos, def, lemmas }], the shape of a
+//                                   candidate; { q, senses, total, note? }. For the right sense when none is offered.
+//   GET  /__review/wordnet-search?ili=i1,i2   the same shape for senses already known by id (so a sense picked by hand still shows
+//                                   after a reload). Both read kb/cache/english-index.json (npm run wordnet); 503 without it.
 
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, statSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 
@@ -180,6 +186,59 @@ async function batchData(server, n) {
   };
 }
 
+// -- the WordNet sense search ------------------------------------------------------------------
+// The English index (17 MB) is read on the first search and again only when the file changes (npm run wordnet rebuilds it
+// while the dev server runs). Its words list their senses most common first.
+
+const INDEX_PATH = resolve(ROOT, 'kb/cache/english-index.json');
+const MAX_FOUND = 12;
+let englishIndex = null; // { mtime, index }
+
+function readEnglishIndex() {
+  if (!existsSync(INDEX_PATH)) return null;
+  const mtime = statSync(INDEX_PATH).mtimeMs;
+  if (englishIndex?.mtime !== mtime) englishIndex = { mtime, index: JSON.parse(readFileSync(INDEX_PATH, 'utf-8')) };
+  return englishIndex.index;
+}
+
+// a sense in the shape of a review candidate, or null for an id the index does not have
+function senseOf(index, ili) {
+  if (!Object.hasOwn(index.synsets, ili)) return null;
+  const s = index.synsets[ili];
+  return { ili, pos: s.p, def: s.d, lemmas: s.l.slice(0, 4) };
+}
+
+// -> { senses, total, note? } for an English word or phrase: the senses of the word itself (cats finds cat), else of the
+// longer phrases that have it as a part ("ice" -> "ice cream"), else of the last word of a phrase ("cooked rice" -> rice)
+async function findSenses(index, q) {
+  const { baseForms } = await loadNode('src/lib/kb/english.js');
+  // the index lowercases its words, so "ICE" (an engine) is also "ice": the senses that have the word as it is written come first
+  const own = (word) => {
+    for (const form of baseForms(word)) {
+      if (!Object.hasOwn(index.lemmas, form)) continue;
+      const plain = (i) => index.synsets[i]?.l.includes(form);
+      return [...index.lemmas[form]].sort((a, b) => Number(!!plain(b)) - Number(!!plain(a)));
+    }
+    return [];
+  };
+  const query = q.trim().toLowerCase().replace(/\s+/g, ' ');
+  const words = query.split(' ');
+  let ilis = own(query);
+  if (!ilis.length && words.length > 1 && /^(to|a|an|the)$/.test(words[0])) ilis = own(words.slice(1).join(' '));
+  let note;
+  if (!ilis.length) {
+    const longer = Object.keys(index.lemmas).filter((k) => (' ' + k + ' ').includes(' ' + query + ' ')).sort((a, b) => a.length - b.length);
+    ilis = [...new Set(longer.flatMap((k) => index.lemmas[k]))];
+    if (ilis.length) note = `No sense is named "${query}" itself; these are senses of longer phrases that have it in them.`;
+  }
+  if (!ilis.length && words.length > 1) {
+    ilis = own(words.at(-1));
+    if (ilis.length) note = `No sense is named "${query}"; these are the senses of its last word, "${words.at(-1)}".`;
+  }
+  if (!ilis.length) note = `WordNet has no sense for "${query}". Try a simpler word, or the singular.`;
+  return { senses: ilis.slice(0, MAX_FOUND).map((i) => senseOf(index, i)).filter(Boolean), total: ilis.length, ...(note ? { note } : {}) };
+}
+
 function send(res, status, type, body) {
   res.statusCode = status;
   res.setHeader('Content-Type', type);
@@ -253,15 +312,27 @@ export default function reviewPlugin() {
           }
           if (req.method === 'GET' && url.pathname === '/wordnet-data') {
             const links = JSON.parse(readFileSync(resolve(ROOT, 'kb/wordnet/links.json'), 'utf-8'));
-            return json(res, { counts: links.counts, review: links.review, decisions: readDecisions(1, 'wordnet') });
+            return json(res, { counts: links.counts, review: links.review, decisions: readDecisions(1, 'wordnet'), proposals: await proposalsFor('wordnet', 1), noSense: links.noSense ?? [] });
+          }
+          if (req.method === 'GET' && url.pathname === '/wordnet-search') {
+            const q = (url.searchParams.get('q') ?? '').trim();
+            const ilis = (url.searchParams.get('ili') ?? '').split(',').map((s) => s.trim()).filter(Boolean);
+            if (!q && !ilis.length) return json(res, { error: 'q or ili is required' }, 400);
+            const index = readEnglishIndex();
+            if (!index) return json(res, { error: 'The English word list is not built yet, so senses cannot be searched. Build it once with: npm run wordnet' }, 503);
+            if (ilis.length) return json(res, { senses: ilis.map((i) => senseOf(index, i)).filter(Boolean) });
+            return json(res, { q, ...(await findSenses(index, q)) });
           }
           if (req.method === 'POST' && url.pathname === '/wordnet-decide') {
-            const { zh, ilis } = await readBody(req);
-            if (!zh) return json(res, { error: 'zh is required' }, 400);
+            const body = await readBody(req);
+            const items = body.items ?? [body];
             const decisions = readDecisions(1, 'wordnet');
-            if (ilis === null || ilis === undefined) delete decisions[zh];
-            else if (!Array.isArray(ilis)) return json(res, { error: 'ilis must be a list' }, 400);
-            else decisions[zh] = { ilis, at: new Date().toISOString() };
+            for (const { zh, ilis } of items) {
+              if (!zh) return json(res, { error: 'zh is required' }, 400);
+              if (ilis === null || ilis === undefined) delete decisions[zh];
+              else if (!Array.isArray(ilis)) return json(res, { error: 'ilis must be a list' }, 400);
+              else decisions[zh] = { ilis, at: new Date().toISOString() };
+            }
             writeDecisions(1, decisions, 'wordnet');
             return json(res, { decisions });
           }

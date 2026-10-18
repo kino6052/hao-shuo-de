@@ -12,6 +12,7 @@
 //   kb.patternLesson(id)       the lesson number that teaches a pattern (undefined: no lesson teaches it)
 //   kb.atoms()                 which words are atoms (the report; kb.atoms('dēng') is one word's line)
 //   kb.relations()             the relations the data states or implies (accepted and proposed)
+//   kb.crossCheck()            those relations against WordNet's kinds, opposites and parts (cross-check.js)
 //   kb.meaning([name])         what the words say of the primes, categories and grammar items, and the primes each description reaches (meaning.js)
 //   kb.candidates()            what to drop, what to add and what to trade (see candidates.js; needs `freq` for Mandarin)
 //
@@ -27,6 +28,8 @@ import { makeParseText, renderParse, viewParse } from './parse.js';
 import { atoms, atomWord, renderAtoms, renderAtomWord } from './atoms.js';
 import { relationReport, renderRelations, renderKindTree } from './relations.js';
 import { createEnglish, renderEnglish } from './english.js';
+import { crossCheck, renderCrossCheck } from './cross-check.js';
+import { frontier, renderFrontier } from './frontier.js';
 import { renderYardsticks, yardstickReport } from './yardsticks.js';
 import { meaningReport, meaningWord, renderMeaning, renderMeaningWord } from './meaning.js';
 import { restsOnModel } from './rests-on.js';
@@ -47,8 +50,14 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
   let candidates = null;
   let yardsticks = null;
   let englishModel = null; // English to entries (english.js); the WordNet files are read the first time it is asked
+  let crossChecked = null;
+  let frontierReport = null;
+  let yardstickLists = null; // the word lists are read once (kb/yardsticks/)
+  const listsOf = () => (yardstickLists ??= yardstickData?.() ?? {});
+  const yardsticksOf = () => (yardsticks ??= yardstickReport({ composites: source.composites, english: englishOf(), ...listsOf() }));
 
   const englishOf = () => (englishModel ??= createEnglish({ composites: source.composites, ...(englishData?.() ?? {}) }));
+  const relationsOf = () => (relationsReport ??= relationReport(source, facts, relationRules));
 
   const parseText = makeParseText({ patterns: source.patterns ?? [], words, composites: source.composites, memo: parseMemo?.space({ patterns: source.patterns ?? [], words, composites: source.composites }) });
 
@@ -91,15 +100,22 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
     parser: parseText.parser,
 
     // The relations: stored ones are accepted, the ones a rule finds are proposed (see relations.js).
-    relations: () => (relationsReport ??= relationReport(source, facts, relationRules)),
+    relations: relationsOf,
 
     // English to entries, in three tiers (english.js): the gloss, the same WordNet sense, a kind of. `englishData` gives
     // { links, index } (kb/wordnet/links.json, kb/cache/english-index.json); without it only the glosses answer.
     english: (text) => englishOf().lookup(text),
     englishSenses: (zh) => englishOf().senses(zh),
 
+    // The dictionary's kind-of, opposite and part-of relations against WordNet's (cross-check.js): where they disagree,
+    // what WordNet states that the dictionary does not, and the entries without a head that WordNet could give one.
+    crossCheck: () => (crossChecked ??= crossCheck({ relations: relationsOf().relations, words, composites: source.composites, ...englishOf().data, startsFrom: englishOf().startsFrom })),
+
     // How much of the yardsticks (kb/yardsticks/) the dictionary can say: Mandarin and English word lists, Basic English.
-    yardsticks: () => (yardsticks ??= yardstickReport({ composites: source.composites, english: englishOf(), ...(yardstickData?.() ?? {}) })),
+    yardsticks: yardsticksOf,
+
+    // What the yardsticks cannot say yet and the Mandarin word that would fix each (frontier.js).
+    frontier: () => (frontierReport ??= frontier({ yardsticks: yardsticksOf(), english: englishOf(), composites: source.composites, words, mandarin: listsOf().mandarin ?? [] })),
 
     // Meaning links (K19): what the words say of the primes and categories, and which primes a description reaches.
     // No name: the report. A name: that word's line, { id, term, line }.
@@ -140,4 +156,4 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
   };
 }
 
-export { meaningWord, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, viewParse, renderAtoms, renderAtomWord, renderRelations, renderKindTree, renderEnglish, renderYardsticks, renderAddition, renderAudit, renderRemovalCandidates, renderRootCandidates, renderSwaps };
+export { meaningWord, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, viewParse, renderAtoms, renderAtomWord, renderRelations, renderKindTree, renderEnglish, renderCrossCheck, renderFrontier, renderYardsticks, renderAddition, renderAudit, renderRemovalCandidates, renderRootCandidates, renderSwaps };

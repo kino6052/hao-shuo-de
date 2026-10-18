@@ -5,13 +5,18 @@ Run from the repo root with the venv:  .venv-kb/Scripts/python scripts/python/li
 
 An entry is linked on its own when the Chinese WordNet (omw-cmn) and the English WordNet (OEWN) agree on exactly one
 synset: the synsets of its hanzi, and the synsets of the words in its English gloss, share one ILI. Everything else goes
-to review with its candidates and the reason (/__review/?wordnet). Decisions the author made on that page are read from
+to review with its candidates and the reason (/__review/?wordnet). An entry with no candidate at all, even after the search
+is widened (any part of speech, the adjective of an -ly adverb), is not a question: it goes to `noSense` (grammar words
+such as 了 and 因为, which WordNet leaves out, and fixed phrases) and stays unlinked. Decisions the author made on that page are read from
 review/decisions/wordnet-1.json: { "decisions": { "<zh>": { "ilis": ["i123", ...] } } } (an empty list means "no synset fits") and win over the
-automatic rule.
+automatic rule. The review list stays whole: a decided entry keeps its place there (counts.waiting is the part still undecided), so the
+page can show it again and the author can change the answer.
 
 Reads  kb/cache/english-in.json            (scripts/english-export.js)
 Writes kb/wordnet/links.json               (committed: the links, the review list)
-       kb/cache/english-index.json         (gitignored: English words -> ILIs, ILI -> definition and hypernyms)
+       kb/cache/english-index.json         (gitignored: English words -> ILIs, ILI -> definition, hypernyms (h), antonyms (a; ai: only
+                                            through a similar sense), the wholes it is a part of (w) and its Mandarin words (z);
+                                            and the irregular forms: took -> take)
 """
 
 import json
@@ -75,15 +80,30 @@ def main():
             en_cache[key] = found
         return en_cache[key]
 
-    linked, review, counts = {}, [], {"auto": 0, "decided": 0}
+    def widened(gloss_text):
+        """The senses of a gloss in any part of speech ('between' is an adverb here, the entry says noun), and for an
+        adverb in -ly the senses of its adjective ('suddenly' -> sudden). Used only when the strict search found nothing."""
+        found = {}
+        for g in glosses(gloss_text):
+            for ili, s in english_synsets(g, None).items():
+                found.setdefault(ili, s)
+        if not found:
+            for g in glosses(gloss_text):
+                stem = g[:-3] + "y" if g.endswith("ily") else g[:-2] if g.endswith("ly") else None
+                if stem and " " not in g:
+                    for ili, s in english_synsets(stem, None).items():
+                        found.setdefault(ili, s)
+        return found
+
+    linked, review, no_sense, counts = {}, [], [], {"auto": 0, "decided": 0}
     for c in data["composites"]:
         z, gloss_text, pos = c["zh"], c["en"], c["pos"]
         want = POS.get(pos)
-        if z in decisions:
+        decided = z in decisions  # a decision sets the link, but the entry stays in the review list so it can be looked at again
+        if decided:
             if decisions[z]["ilis"]:
                 linked[z] = decisions[z]["ilis"]
             counts["decided"] += 1
-            continue
         a = {}
         for s in zh.synsets(z):
             if s.ili and (not want or norm_pos(s.pos) == want):
@@ -98,8 +118,9 @@ def main():
                 b.setdefault(ili, s)
         common = [i for i in a if i in b]
         if len(common) == 1:
-            linked[z] = common
-            counts["auto"] += 1
+            if not decided:
+                linked[z] = common
+                counts["auto"] += 1
             continue
         entry = {"zh": z, "en": gloss_text, "pos": pos}
         if len(common) > 1:
@@ -108,12 +129,17 @@ def main():
         elif a:
             entry["why"] = "no-english-match"
             entry["candidates"] = [describe(e, a[i].lemmas()) for i in list(a)[:MAX_CANDIDATES] for e in en.synsets(ili=i)[:1]]
-        elif b and len(b) <= MAX_CANDIDATES:
+        elif b:
             entry["why"] = "no-chinese"
-            entry["candidates"] = [describe(s) for s in b.values()]
-        else:
-            entry["why"] = "no-chinese" if b else "no-synset"
             entry["candidates"] = [describe(s) for s in list(b.values())[:MAX_CANDIDATES]]
+        else:
+            wide = widened(gloss_text)
+            if not wide:  # nothing to choose from, so nothing to review: WordNet has no sense for it (grammar words, fixed phrases)
+                if not decided:
+                    no_sense.append({"zh": z, "en": gloss_text, "pos": pos})
+                continue
+            entry["why"] = "no-chinese"
+            entry["candidates"] = [describe(s) for s in list(wide.values())[:MAX_CANDIDATES]]
         review.append(entry)
 
     # the words take the links of the composite that has their hanzi
@@ -125,12 +151,13 @@ def main():
         why[r["why"]] = why.get(r["why"], 0) + 1
     out = {
         "about": "ILI links of composites and words (scripts/python/link_wordnet.py). Linked on their own when omw-cmn and OEWN "
-        "agree on one synset; the rest wait in `review` for /__review/?wordnet.",
+        "agree on one synset; the rest are in `review` for /__review/?wordnet (an entry the author decided keeps its place there).",
         "sources": {"english": "oewn:2025", "chinese": "omw-cmn:2.0"},
-        "counts": {"composites": len(data["composites"]), "linked": len(linked), "auto": counts["auto"], "decided": counts["decided"], "review": len(review), "reviewWhy": why, "words": len(words)},
+        "counts": {"composites": len(data["composites"]), "linked": len(linked), "auto": counts["auto"], "decided": counts["decided"], "review": len(review), "waiting": sum(1 for r in review if r["zh"] not in decisions), "reviewWhy": why, "noSense": len(no_sense), "words": len(words)},
         "linked": linked,
         "words": words,
         "review": review,
+        "noSense": no_sense,
     }
     # one entry per line: small to ship, and a change shows as the entries it touches
     def block(m):
@@ -144,6 +171,7 @@ def main():
             '"linked":' + block(linked),
             '"words":' + block(words),
             '"review":[\n' + ",\n".join(json.dumps(r, ensure_ascii=False) for r in review) + "\n]",
+            '"noSense":[\n' + ",\n".join(json.dumps(r, ensure_ascii=False) for r in no_sense) + "\n]",
         ]
     ) + "\n}\n"
     LINKS_PATH.write_text(text, encoding="utf-8")
@@ -152,11 +180,42 @@ def main():
     if "--links-only" in sys.argv:  # the index takes four minutes and only changes with the WordNet release
         return
     # the English index, for src/lib/kb/english.js
+    def antonym_ilis(s):
+        """Antonyms are a relation between senses of words ('large' / 'small'); the synset of each is what the index keeps."""
+        out = []
+        for sense in s.senses():
+            for a in sense.get_related("antonym"):
+                i = a.synset().ili
+                if i and i not in out:
+                    out.append(i)
+        return out
+
+    # the Chinese WordNet's words for each sense (42,000 of them): what a missing English word would be in Mandarin
+    chinese = {}
+    for s in zh.synsets():
+        if s.ili:
+            chinese[s.ili] = [re.sub(r"\+(的|地)$", "", l) for l in s.lemmas()[:4]]
+
     lemmas, synsets = {}, {}
     for s in en.synsets():
         if not s.ili:
             continue
-        synsets[s.ili] = {"p": norm_pos(s.pos), "d": s.definition() or "", "l": s.lemmas()[:8], "h": [h.ili for h in s.hypernyms() if h.ili]}
+        entry = {"p": norm_pos(s.pos), "d": s.definition() or "", "l": s.lemmas()[:8], "h": [h.ili for h in s.hypernyms() if h.ili]}
+        ant = antonym_ilis(s)
+        if ant:
+            entry["a"] = ant  # opposites of this very sense
+        elif norm_pos(s.pos) == "a":  # 'warm' has none of its own, but it is similar to 'hot', whose opposite is 'cold'
+            near = []
+            for sim in s.relations("similar").get("similar", []):
+                near += [i for i in antonym_ilis(sim) if i not in near]
+            if near:
+                entry["ai"] = near
+        wholes = [w.ili for w in s.relations("holo_part").get("holo_part", []) if w.ili]
+        if wholes:
+            entry["w"] = wholes  # the wholes this is a part of (finger -> hand)
+        if s.ili in chinese:
+            entry["z"] = chinese[s.ili]  # its Mandarin words, from omw-cmn
+        synsets[s.ili] = entry
         for lemma in s.lemmas():
             lemmas.setdefault(lemma.lower(), [])
             if s.ili not in lemmas[lemma.lower()]:
@@ -174,8 +233,16 @@ def main():
                 if s.ili and s.ili not in ordered:
                     ordered.append(s.ili)
         lemmas[lemma] = [i for i in ordered if i in lemmas[lemma]] + [i for i in lemmas[lemma] if i not in ordered]
+    # the irregular forms an entry lists (saw, seen -> see; took, taken -> take): the rules in english.js cannot guess them
+    forms = {}
+    for w in plain.words():
+        base = w.lemma().lower()
+        for f in w.forms()[1:]:
+            f = f.lower()
+            if f != base and " " not in f and base in lemmas and base not in forms.setdefault(f, []):
+                forms[f].append(base)
     INDEX_PATH.parent.mkdir(parents=True, exist_ok=True)
-    INDEX_PATH.write_text(json.dumps({"lemmas": lemmas, "synsets": synsets}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    INDEX_PATH.write_text(json.dumps({"lemmas": lemmas, "synsets": synsets, "forms": forms}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print(f"english index: {len(lemmas)} English words, {len(synsets)} synsets -> kb/cache/english-index.json")
 
 

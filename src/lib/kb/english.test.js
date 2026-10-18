@@ -52,8 +52,40 @@ describe('English lookup', () => {
     expect(r.kindOf[0]).toMatchObject({ zh: '鸟', steps: 1, start: '…-de niǎo', via: ['bird'] });
     expect(en.lookup('hawk').kindOf[0]).toMatchObject({ zh: '鸟', steps: 2, via: ['bird of prey', 'bird'] });
   });
+  test('tier 3 keeps a later sense only when it is no farther than the first that found an entry', () => {
+    const more = createEnglish({
+      composites: [c('狗', 'gǒu', 'dog'), c('人', 'rén', 'person'), c('鸟', 'niǎo', 'bird')],
+      links: { linked: { 狗: ['d1'], 人: ['p1'], 鸟: ['b1'] } },
+      index: {
+        lemmas: { puppy: ['d2', 'p2'], pigeon: ['b2', 'p3'] },
+        synsets: {
+          d1: { p: 'n', d: 'a domestic animal', l: ['dog'], h: [] },
+          d2: { p: 'n', d: 'a young dog', l: ['puppy'], h: ['d1'] },
+          p1: { p: 'n', d: 'a human being', l: ['person'], h: [] },
+          p2: { p: 'n', d: 'an inexperienced young person', l: ['puppy'], h: ['j1'] },
+          j1: { p: 'n', d: 'a young person', l: ['juvenile'], h: ['p1'] },
+          b1: { p: 'n', d: 'a feathered animal', l: ['bird'], h: [] },
+          b2: { p: 'n', d: 'a bird of cities', l: ['pigeon'], h: ['b1'] },
+          p3: { p: 'n', d: 'a person who is easily fooled', l: ['pigeon'], h: ['p1'] },
+        },
+      },
+    });
+    expect(more.lookup('puppy').kindOf.map((e) => e.zh)).toEqual(['狗']);
+    // an equally near second sense is kept
+    expect(more.lookup('pigeon').kindOf.map((e) => e.zh)).toEqual(['鸟', '人']);
+  });
   test('tier 3 stays quiet when a nearer tier answered', () => {
     expect(en.lookup('purchase').kindOf).toEqual([]);
+  });
+  test('an irregular form finds the entries of its base, next to its own senses', () => {
+    const irregular = createEnglish({
+      composites: [c('看', 'kàn', 'see', 'verb')],
+      links: { linked: { 看: ['v1'] } },
+      index: { lemmas: { see: ['v1'], saw: ['t1'] }, forms: { saw: ['see'], seen: ['see'] }, synsets: { v1: { p: 'v', d: 'perceive', l: ['see'], h: [] }, t1: { p: 'n', d: 'a cutting tool', l: ['saw'], h: [] } } },
+    });
+    expect(irregular.lookup('seen').sameSense[0].entries.map((e) => e.zh)).toEqual(['看']);
+    expect(irregular.lookup('saw').sameSense[0].entries.map((e) => e.zh)).toEqual(['看']);
+    expect(irregular.lookup('seen').note).toBeUndefined();
   });
   test('a word the WordNet does not know says so', () => {
     const r = en.lookup('zzyzx');

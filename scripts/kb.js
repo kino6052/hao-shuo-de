@@ -10,6 +10,8 @@
 //   node scripts/kb.js relations [kind] [--status proposed|accepted] [--limit N]  # synonyms, opposites, connections and the rest
 //   node scripts/kb.js relations tree [word] [--limit N]  # what hangs under what: the kind-of tree of every word, or of one
 //   node scripts/kb.js english <word> [--json]  # which entries say an English word: by gloss, by WordNet sense, as a kind of
+//   node scripts/kb.js cross-check [kindOf|opposites|parts|missing|headless] [--limit N]  # the dictionary's kind-of, opposite and part-of relations against WordNet's
+//   node scripts/kb.js frontier [words|mandarin|sentences] [--limit N]  # what the dictionary cannot say yet and the word that would fix each
 //   node scripts/kb.js yardsticks [--limit N]  # how much of the Mandarin and English word lists and Basic English the dictionary can say
 //   node scripts/kb.js meaning [says|atoms|grounding|<word>] [--limit N]  # what the words say of the NSM primes, Aristotle's categories and grammar
 //   node scripts/kb.js candidates [remove|add] [--limit N]  # the cheapest words to drop and the best roots to add
@@ -71,7 +73,7 @@ import { mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'f
 import { resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { Worker } from 'worker_threads';
-import { createKb, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderKindTree, renderEnglish, renderYardsticks, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps, renderAudit } from '../src/lib/kb/kb.js';
+import { createKb, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderKindTree, renderEnglish, renderCrossCheck, renderFrontier, renderYardsticks, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps, renderAudit } from '../src/lib/kb/kb.js';
 import { loadFrequencyList } from './frequency-list.js';
 import { sourceStamp } from './source-cache.js';
 import { readCache, writeCache } from './cache.js';
@@ -314,6 +316,16 @@ async function main(argv) {
       const r = kb.english(rest.filter((a) => !a.startsWith('--')).join(' '));
       return print(r, renderEnglish(r));
     }
+    case 'cross-check': {
+      const limit = Number(option(rest, '--limit') ?? 10);
+      const r = kb.crossCheck();
+      return print(r, renderCrossCheck(r, { section: rest.find((a, i) => !a.startsWith('--') && rest[i - 1] !== '--limit'), limit }));
+    }
+    case 'frontier': {
+      const limit = Number(option(rest, '--limit') ?? 12);
+      const r = kb.frontier();
+      return print(r, renderFrontier(r, { part: rest.find((a, i) => !a.startsWith('--') && rest[i - 1] !== '--limit'), limit }));
+    }
     case 'meaning': {
       const limit = Number(option(rest, '--limit') ?? 12);
       const what = rest.filter((a, i) => !a.startsWith('--') && rest[i - 1] !== '--limit').join(' ');
@@ -381,7 +393,7 @@ async function main(argv) {
       return print(e, text);
     }
     default:
-      console.log('usage: node scripts/kb.js word|remove|check-form|query|parse|atoms|relations|english|yardsticks|meaning|candidates|add|swaps|scoreboard|parse-report|parse-diff|classes|patterns|forms|move|engine …  (--json for data)');
+      console.log('usage: node scripts/kb.js word|remove|check-form|query|parse|atoms|relations|english|cross-check|frontier|yardsticks|meaning|candidates|add|swaps|scoreboard|parse-report|parse-diff|classes|patterns|forms|move|engine …  (--json for data)');
       process.exitCode = command ? 1 : 0;
   }
 }

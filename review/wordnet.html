@@ -6,9 +6,10 @@
 <title>Hao-shuo-de WordNet Review</title>
 <style>
 /* The WordNet link review, served by the dev server (vite-plugin-review.js, /__review/?wordnet).
-   The entries the Chinese and English WordNets did not settle on their own (KB_PLAN.md phase 6). Pick the synset(s) that
-   mean what the entry means, or "None fits". Answers are saved at once in review/decisions/wordnet-1.json and take effect
-   when the linker runs again: npm run wordnet -- --links-only */
+   The entries the Chinese and English WordNets did not settle on their own (KB_PLAN.md phase 6). Claude's picks
+   (review/proposals/wordnet-1.mjs) are shown preselected with a dashed outline; "Confirm" saves them as they are, or
+   change them first. Answers are saved at once in review/decisions/wordnet-1.json and take effect when the linker runs
+   again: npm run wordnet -- --links-only */
 :root {
   --paper: #f3f5f2; --card: #fbfcfa; --ink: #1b2420; --muted: #5d6a64; --line: #d6ddd7;
   --accent: #1d6f55; --accent-ink: #ffffff; --accent-soft: #dcece4; --danger: #a3332b; --danger-soft: #f5dedb;
@@ -30,16 +31,23 @@ h1 { font-size: 26px; line-height: 1.2; margin: 0 0 6px; }
 .bar { position: sticky; top: 0; z-index: 2; background: var(--paper); border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 8px; padding-block: 10px; margin-bottom: 12px; align-items: center; }
 .chip { font: 600 13px/1 var(--font-body); border: 1px solid var(--line); background: var(--card); color: var(--ink); padding: 7px 10px; border-radius: 999px; cursor: pointer; }
 .chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.chip.go { border-color: var(--accent); color: var(--accent); }
+.chip:disabled { opacity: .45; cursor: default; }
 button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .status { font-size: 13px; color: var(--muted); }
 .status.err { color: var(--danger); }
 .note { margin: 6px 0 12px; font-size: 13px; color: var(--muted); max-width: 80ch; }
 .row { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; }
 .row.done { border-color: var(--accent); background: var(--accent-soft); }
+.row.proposed { border-style: dashed; border-color: var(--accent); }
 .head { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; margin-bottom: 6px; }
 .zh { font-size: 22px; font-weight: 600; }
 .en { color: var(--ink); }
 .meta { font: 400 12px/1.4 var(--font-mono); color: var(--muted); }
+.push { margin-left: auto; display: flex; gap: 8px; align-items: baseline; }
+.tag { font-size: 12px; color: var(--muted); }
+.tag.unsure { color: var(--danger); }
+.pnote { margin: 0 0 6px; font-size: 13px; color: var(--muted); }
 .cands { display: grid; gap: 6px; }
 .cand { text-align: left; font: 400 14px/1.35 var(--font-body); padding: 8px 10px; border-radius: 6px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); cursor: pointer; }
 .cand b { font-weight: 600; }
@@ -47,14 +55,40 @@ button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .cand[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
 .cand[aria-pressed="true"] small { color: var(--accent-ink); opacity: .85; }
 .cand.none[aria-pressed="true"] { background: var(--danger); border-color: var(--danger); color: #fff; }
+.cand.proposed[aria-pressed="true"] { background: var(--accent-soft); color: var(--ink); border: 2px dashed var(--accent); }
+.cand.proposed[aria-pressed="true"] small { color: var(--muted); opacity: 1; }
+.cand.none.proposed[aria-pressed="true"] { background: var(--danger-soft); color: var(--ink); border: 2px dashed var(--danger); }
 .pager { display: flex; gap: 8px; align-items: center; margin: 12px 0; }
+.nosense { margin: 0 0 12px; font-size: 13px; color: var(--muted); max-width: 80ch; }
+.nosense summary { cursor: pointer; }
+.nosense ul { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 14px; }
+.nosense .zh { font-size: 15px; }
+.nosense .tools { margin: 8px 0 0; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.nosense li.open { flex-basis: 100%; }
+.nosense li.open > .row { margin: 6px 0 4px; }
+.nosense .pick { font: 400 13px/1.3 var(--font-body); border: 1px solid var(--line); background: var(--card); color: var(--ink); padding: 3px 8px; border-radius: 6px; cursor: pointer; }
+.nosense .pick .zh { font-size: 15px; }
+.nosense .pick.done { border-color: var(--accent); background: var(--accent-soft); }
+.nosense .pick[aria-expanded="true"] { border-color: var(--accent); }
+.nosense .row { font-size: 15px; color: var(--ink); }
+.nosense .row .zh { font-size: 22px; }
+input[type="search"] { font: 400 14px/1.3 var(--font-body); padding: 6px 9px; border: 1px solid var(--line); border-radius: 6px; background: var(--paper); color: var(--ink); min-width: 0; }
+input[type="search"]:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.finder { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; margin-top: 8px; }
+.finder label { font-size: 13px; color: var(--muted); }
+.finder input[type="search"] { width: 16em; max-width: 100%; }
+.found { margin-top: 6px; }
+.found .pnote { margin-bottom: 4px; }
+.found .pnote.err { color: var(--danger); }
 </style>
 </head>
 <body>
 <div class="wrap">
   <h1>WordNet link review</h1>
-  <p class="lede">An English synset (a sense of an English word) is linked to each entry that the Chinese and English WordNets did not settle on their own. Pick every sense that means what the entry means, or "None fits". Answers are saved at once and take effect when the linker runs again.</p>
+  <p class="lede">An English synset (a sense of an English word) is linked to each entry that the Chinese and English WordNets did not settle on their own. Claude's picks are already selected, with a dashed outline: press "Confirm" to keep a pick as it is, or change it first. Answers are saved at once and take effect when the linker runs again. If the right sense is not offered, type an English word under the entry and press "Find another sense".</p>
   <div class="bar" id="bar"></div>
+  <p class="note" id="sum"></p>
+  <details class="nosense" id="nosense"></details>
   <p class="note" id="note"></p>
   <div id="list" aria-live="polite"></div>
   <div class="pager" id="pager"></div>
@@ -65,9 +99,10 @@ const WHY = {
   ambiguous: 'Both WordNets know the entry, but more than one sense fits. Pick the ones it means.',
   'no-english-match': 'The Chinese WordNet has senses for it, but none is among the senses of the English gloss. Pick one if it fits, else "None fits".',
   'no-chinese': 'The Chinese WordNet does not have it; these are the senses of the English gloss. Pick the one it means.',
-  'no-synset': 'Neither WordNet offers a sense (grammar words, measure words, fixed phrases). "None fits" is usually right.',
 };
-const state = { data: null, why: null, page: 0, hideDone: true };
+// known: ili -> a sense found by hand (or looked up again after a reload); search: zh -> what the "Find another sense" box holds
+// and found; open: the entries WordNet has no sense for whose row is open; nsFilter: what the list of those is filtered by
+const state = { data: null, why: null, page: 0, hideDone: true, onlyUnsure: false, known: {}, search: {}, open: new Set(), nsFilter: '' };
 const $ = (id) => document.getElementById(id);
 const el = (tag, props = {}, ...kids) => {
   const n = Object.assign(document.createElement(tag), props);
@@ -76,34 +111,199 @@ const el = (tag, props = {}, ...kids) => {
 };
 const say = (msg, err) => { const s = $('say'); if (s) { s.textContent = msg; s.className = 'status' + (err ? ' err' : ''); } };
 
+// the saved answer; Claude's pick (null = not sure or none given); what a row shows as picked: the saved answer, else the pick
+const decisionOf = (zh) => state.data.decisions[zh];
+const proposalOf = (zh) => state.data.proposals?.[zh];
+const shownOf = (zh) => decisionOf(zh)?.ilis ?? proposalOf(zh)?.ilis ?? null;
+const waitingConfirm = (zh) => !decisionOf(zh) && proposalOf(zh)?.ilis != null;
+const unsure = (zh) => !decisionOf(zh) && proposalOf(zh)?.ilis == null;
+
+// every entry that can be answered: the review list, and the ones WordNet has no sense for (they start with no candidates)
+const allRows = () => [...state.data.review, ...state.data.noSense];
+// the senses shown as picked for a row that are not among its candidates: they were found by hand
+const outsideOf = (r) => (shownOf(r.zh) ?? []).filter((i) => !r.candidates.some((c) => c.ili === i));
+const lostSense = (ili) => ({ ili, pos: '?', def: 'details not available (the English word list is not built: npm run wordnet)', lemmas: [ili] });
+
+// the senses of an English word or phrase ({ q }), or the senses with these ids ({ ili }); each one is remembered
+async function ask(params) {
+  const res = await fetch('wordnet-search?' + new URLSearchParams(params));
+  const body = await res.json();
+  if (!res.ok) throw new Error(body.error ?? 'could not search');
+  for (const s of body.senses) state.known[s.ili] = s;
+  return body;
+}
+
 async function load() {
   state.data = await (await fetch('wordnet-data')).json();
+  state.data.noSense = (state.data.noSense ?? []).map((r) => ({ ...r, candidates: [] }));
+  // a sense picked by hand is saved as its id only: look its details up again
+  const missing = [...new Set(allRows().flatMap(outsideOf))];
+  if (missing.length) await ask({ ili: missing.join(',') }).catch(() => {});
   render();
 }
 
-async function save(zh, ilis) {
-  const res = await fetch('wordnet-decide', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ zh, ilis }) });
+async function find(zh, text) {
+  const s = (state.search[zh] ??= { q: '', found: [], note: '' });
+  s.q = text;
+  const q = text.trim();
+  if (!q) Object.assign(s, { found: [], note: '', err: false, for: '' });
+  else {
+    try {
+      const body = await ask({ q });
+      Object.assign(s, { found: body.senses, total: body.total, note: body.note ?? '', err: false, for: q });
+    } catch (e) {
+      Object.assign(s, { found: [], note: e.message, err: true, for: q });
+    }
+  }
+  render();
+  [...document.querySelectorAll('input[data-zh]')].find((i) => i.dataset.zh === zh)?.focus();
+}
+
+async function saveMany(items, msg = 'saved') {
+  const res = await fetch('wordnet-decide', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ items }) });
   const body = await res.json();
   if (!res.ok) return say(body.error ?? 'could not save', true);
   state.data.decisions = body.decisions;
   render();
-  say('saved');
+  say(msg);
 }
 
+const save = (zh, ilis) => saveMany([{ zh, ilis }]);
+const confirmItems = (rows) => rows.filter((r) => waitingConfirm(r.zh)).map((r) => ({ zh: r.zh, ilis: proposalOf(r.zh).ilis }));
+
 function toggle(zh, ili) {
-  const now = state.data.decisions[zh]?.ilis ?? [];
+  const now = shownOf(zh) ?? [];
   save(zh, now.includes(ili) ? now.filter((i) => i !== ili) : [...now, ili]);
 }
 
+// the entries neither WordNet has a sense for even after a wider search (grammar words, fixed phrases): nothing to choose, so not a
+// question. They stay unlinked unless the author opens one and finds a sense by hand (the same "Find another sense" as on a row).
+function noSense() {
+  const list = state.data.noSense;
+  const box = $('nosense');
+  box.hidden = !list.length;
+  const filter = el('input', { type: 'search', placeholder: 'Filter: 米饭 or rice' });
+  filter.setAttribute('aria-label', 'Filter these entries');
+  filter.oninput = () => { state.nsFilter = filter.value.trim().toLowerCase(); fillNoSense(); };
+  box.replaceChildren(
+    el('summary', { textContent: `WordNet has no sense for ${list.length} entries (grammar words, fixed phrases), so they stay unlinked unless you find a sense by hand. Show them` }),
+    el('div', { className: 'tools' }, filter, 'Press an entry to look for a sense of it.'),
+    el('ul', { id: 'nslist' }),
+  );
+}
+
+function fillNoSense() {
+  const ul = $('nslist');
+  if (!ul) return;
+  ul.replaceChildren();
+  for (const r of state.data.noSense) {
+    const open = state.open.has(r.zh);
+    if (state.nsFilter && !open && !r.zh.includes(state.nsFilter) && !r.en.toLowerCase().includes(state.nsFilter)) continue;
+    const d = decisionOf(r.zh);
+    const answer = d ? (d.ilis.length ? ` ✓ ${d.ilis.map((i) => state.known[i]?.lemmas[0] ?? i).join(', ')}` : ' ✓ none fits') : '';
+    const b = el('button', { type: 'button', className: 'pick' + (d ? ' done' : '') }, el('span', { className: 'zh', textContent: r.zh }), ` ${r.en}${answer}`);
+    b.setAttribute('aria-expanded', String(open));
+    b.onclick = () => { if (open) state.open.delete(r.zh); else state.open.add(r.zh); fillNoSense(); };
+    const li = el('li', { className: open ? 'open' : '' }, b);
+    if (open) li.append(rowEl(r, true));
+    ul.append(li);
+  }
+}
+
+// a sense as a button: picked or not picked, saved at once like the others; `found` marks one that was found by hand
+function senseButton(r, c, proposed, found = false) {
+  const b = el('button', { type: 'button', className: 'cand' + (proposed ? ' proposed' : '') });
+  b.append(el('b', { textContent: c.lemmas.join(', ') }), ` (${c.pos}) ${c.def}`);
+  if (c.zh?.length) b.append(el('small', { textContent: '中文：' + c.zh.join('、') }));
+  if (found) b.append(el('small', { textContent: 'found by search' }));
+  b.setAttribute('aria-pressed', String(!!shownOf(r.zh)?.includes(c.ili)));
+  b.onclick = () => toggle(r.zh, c.ili);
+  return b;
+}
+
+// "Find another sense": an English word or phrase, and the senses WordNet has for it as more buttons under the others
+function finder(r, results) {
+  const s = state.search[r.zh];
+  const input = el('input', { type: 'search', placeholder: 'an English word or phrase', value: s?.q ?? '' });
+  input.dataset.zh = r.zh;
+  input.oninput = () => { (state.search[r.zh] ??= { q: '', found: [], note: '' }).q = input.value; };
+  const form = el('form', { className: 'finder' }, el('label', {}, 'Find another sense ', input), el('button', { type: 'submit', className: 'chip', textContent: 'Search' }));
+  form.onsubmit = (e) => { e.preventDefault(); find(r.zh, input.value); };
+  const box = el('div', {}, form);
+  if (!s || (!s.note && !s.found.length)) return box;
+  const clear = el('button', { type: 'button', className: 'chip', textContent: 'Clear' });
+  clear.onclick = () => find(r.zh, '');
+  form.append(clear);
+  const found = el('div', { className: 'found' });
+  const more = s.total > s.found.length ? ` (the first ${s.found.length} of ${s.total})` : '';
+  const line = s.err || !s.found.length ? s.note : [s.note || `Senses found for "${s.for}".`, more.trim(), results.length ? '' : 'They are all listed above already.'].filter(Boolean).join(' ');
+  found.append(el('p', { className: 'pnote' + (s.err ? ' err' : ''), textContent: line }));
+  if (results.length) found.append(el('div', { className: 'cands' }, ...results.map((c) => senseButton(r, c, false))));
+  box.append(found);
+  return box;
+}
+
+// one entry: its candidates, the senses picked by hand, "None fits", and the finder. `plain` is an entry from the
+// "no sense" list: Claude made no pick for it, so there is nothing to confirm or be unsure about.
+function rowEl(r, plain = false) {
+  const d = decisionOf(r.zh);
+  const p = proposalOf(r.zh);
+  const shown = shownOf(r.zh);
+  const fromPick = waitingConfirm(r.zh);
+  const row = el('div', { className: 'row' + (d ? ' done' : fromPick ? ' proposed' : '') });
+  const head = el('div', { className: 'head' }, el('span', { className: 'zh', textContent: r.zh }), el('span', { className: 'en', textContent: r.en }), el('span', { className: 'meta', textContent: r.pos }));
+  const side = el('span', { className: 'push' });
+  if (fromPick) {
+    side.append(el('span', { className: 'tag', textContent: "Claude's pick" }));
+    const ok = el('button', { type: 'button', className: 'chip go', textContent: 'Confirm' });
+    ok.onclick = () => save(r.zh, p.ilis);
+    side.append(ok);
+  } else if (plain) {
+    const close = el('button', { type: 'button', className: 'chip', textContent: 'Close' });
+    close.onclick = () => { state.open.delete(r.zh); fillNoSense(); };
+    side.append(close);
+  } else if (unsure(r.zh)) side.append(el('span', { className: 'tag unsure', textContent: 'Claude is not sure' }));
+  head.append(side);
+  row.append(head);
+  if (p?.note && !d) row.append(el('p', { className: 'pnote', textContent: p.note }));
+  // what the last search found, without the senses the row offers anyway; a sense picked by hand stays listed with the
+  // candidates after a reload, unless the search results still show it
+  const results = (state.search[r.zh]?.found ?? []).filter((c) => !r.candidates.some((o) => o.ili === c.ili));
+  const cands = el('div', { className: 'cands' });
+  for (const c of r.candidates) cands.append(senseButton(r, c, fromPick));
+  for (const ili of outsideOf(r)) if (!results.some((c) => c.ili === ili)) cands.append(senseButton(r, state.known[ili] ?? lostSense(ili), fromPick, true));
+  const none = el('button', { type: 'button', className: 'cand none' + (fromPick ? ' proposed' : ''), textContent: 'None fits' });
+  none.setAttribute('aria-pressed', String(!!shown && shown.length === 0));
+  none.onclick = () => save(r.zh, d && d.ilis.length === 0 ? null : []);
+  cands.append(none);
+  row.append(cands, finder(r, results));
+  return row;
+}
+
+function summary(review) {
+  const waiting = review.filter((r) => waitingConfirm(r.zh));
+  const senses = waiting.filter((r) => proposalOf(r.zh).ilis.length).length;
+  const answered = review.filter((r) => decisionOf(r.zh)).length;
+  $('sum').textContent = `Claude's picks waiting for a confirm: ${waiting.length} (${senses} with senses, ${waiting.length - senses} "none fits"). Claude is not sure about: ${review.filter((r) => unsure(r.zh)).length}. Answered by you: ${answered} of ${review.length}.`;
+}
+
 function render() {
-  const { review, decisions } = state.data;
+  const { review } = state.data;
   const whys = [...new Set(review.map((r) => r.why))];
   state.why ??= whys[0] ?? null;
+  summary(review);
+  if (!$('nosense').childElementCount) noSense();
+  fillNoSense();
+  const rows = review.filter((r) => r.why === state.why && (!state.hideDone || !decisionOf(r.zh)) && (!state.onlyUnsure || unsure(r.zh)));
+  const pages = Math.max(1, Math.ceil(rows.length / PAGE));
+  state.page = Math.min(state.page, pages - 1);
+  const pageRows = rows.slice(state.page * PAGE, (state.page + 1) * PAGE);
+
   const bar = $('bar');
   bar.replaceChildren();
   for (const w of whys) {
     const all = review.filter((r) => r.why === w);
-    const left = all.filter((r) => !decisions[r.zh]).length;
+    const left = all.filter((r) => !decisionOf(r.zh)).length;
     const chip = el('button', { className: 'chip', type: 'button', textContent: `${w} ${left}/${all.length}` });
     chip.setAttribute('aria-pressed', String(w === state.why));
     chip.onclick = () => { state.why = w; state.page = 0; render(); };
@@ -112,34 +312,22 @@ function render() {
   const hide = el('button', { className: 'chip', type: 'button', textContent: 'hide answered' });
   hide.setAttribute('aria-pressed', String(state.hideDone));
   hide.onclick = () => { state.hideDone = !state.hideDone; state.page = 0; render(); };
-  bar.append(hide, el('span', { id: 'say', className: 'status' }));
+  const only = el('button', { className: 'chip', type: 'button', textContent: 'only the unsure' });
+  only.setAttribute('aria-pressed', String(state.onlyUnsure));
+  only.onclick = () => { state.onlyUnsure = !state.onlyUnsure; state.page = 0; render(); };
+  const pageItems = confirmItems(pageRows);
+  const groupItems = confirmItems(review.filter((r) => r.why === state.why));
+  const confirmPage = el('button', { className: 'chip go', type: 'button', textContent: `Confirm this page (${pageItems.length})`, disabled: !pageItems.length });
+  confirmPage.onclick = () => saveMany(pageItems, `confirmed ${pageItems.length}`);
+  const confirmGroup = el('button', { className: 'chip go', type: 'button', textContent: `Confirm this whole group (${groupItems.length})`, disabled: !groupItems.length });
+  confirmGroup.onclick = () => { if (confirm(`Save Claude's picks for all ${groupItems.length} waiting entries in "${state.why}" as your answers?`)) saveMany(groupItems, `confirmed ${groupItems.length}`); };
+  bar.append(hide, only, confirmPage, confirmGroup, el('span', { id: 'say', className: 'status' }));
   $('note').textContent = WHY[state.why] ?? '';
-  const rows = review.filter((r) => r.why === state.why && (!state.hideDone || !decisions[r.zh]));
+
   const list = $('list');
   list.replaceChildren();
   if (!rows.length) list.append(el('p', { className: 'lede', textContent: 'Nothing waits here.' }));
-  const pages = Math.max(1, Math.ceil(rows.length / PAGE));
-  state.page = Math.min(state.page, pages - 1);
-  for (const r of rows.slice(state.page * PAGE, (state.page + 1) * PAGE)) {
-    const chosen = decisions[r.zh]?.ilis;
-    const row = el('div', { className: 'row' + (chosen ? ' done' : '') });
-    row.append(el('div', { className: 'head' }, el('span', { className: 'zh', textContent: r.zh }), el('span', { className: 'en', textContent: r.en }), el('span', { className: 'meta', textContent: r.pos })));
-    const cands = el('div', { className: 'cands' });
-    for (const c of r.candidates) {
-      const b = el('button', { type: 'button', className: 'cand' });
-      b.append(el('b', { textContent: c.lemmas.join(', ') }), ` (${c.pos}) ${c.def}`);
-      if (c.zh?.length) b.append(el('small', { textContent: '中文：' + c.zh.join('、') }));
-      b.setAttribute('aria-pressed', String(!!chosen?.includes(c.ili)));
-      b.onclick = () => toggle(r.zh, c.ili);
-      cands.append(b);
-    }
-    const none = el('button', { type: 'button', className: 'cand none', textContent: 'None fits' });
-    none.setAttribute('aria-pressed', String(!!chosen && chosen.length === 0));
-    none.onclick = () => save(r.zh, chosen && chosen.length === 0 ? null : []);
-    cands.append(none);
-    row.append(cands);
-    list.append(row);
-  }
+  for (const r of pageRows) list.append(rowEl(r));
   const pager = $('pager');
   pager.replaceChildren();
   const prev = el('button', { className: 'chip', type: 'button', textContent: 'Previous', disabled: state.page === 0 });

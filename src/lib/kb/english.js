@@ -10,7 +10,8 @@
 // composites  the dictionary's entries [{ zh, py, en, pos }]
 // links       kb/wordnet/links.json: { linked: { zh: [ili] }, words: { id: [ili] } }
 // index       kb/cache/english-index.json, built by scripts/python/link_wordnet.py (gitignored):
-//             { lemmas: { word: [ili] }, synsets: { ili: { p, d, l, h } } }. Without it only tier 1 answers.
+//             { lemmas: { word: [ili] }, synsets: { ili: { p, d, l, h, ... } }, forms: { took: ['take'] } }. Without it only tier 1 answers.
+//             (cross-check.js and frontier.js read more of a synset: a antonyms, w wholes, z Mandarin words.)
 // A link or a hanzi that is not in the data is left out; nothing here changes data.
 
 const MAX_WALK = 6; // how far up "is a kind of" tier 3 climbs
@@ -70,20 +71,28 @@ export function createEnglish({ composites = [], links = {}, index = null } = {}
   const synset = (ili) => index?.synsets?.[ili];
   const ilisOf = (word) => {
     if (!index) return [];
+    // the word itself, or the base of its regular ending, then the base an entry lists for an irregular form (saw -> see)
+    let found = [];
     for (const form of baseForms(word)) {
-      const found = index.lemmas?.[form];
-      if (found?.length) return found;
+      if (index.lemmas?.[form]?.length) {
+        found = index.lemmas[form];
+        break;
+      }
     }
-    return [];
+    for (const base of index.forms?.[word.toLowerCase().trim()] ?? []) found = [...found, ...(index.lemmas?.[base] ?? []).filter((i) => !found.includes(i))];
+    return found;
   };
   const sense = (ili) => {
     const s = synset(ili);
     return s ? { ili, pos: s.p, definition: s.d, lemmas: s.l } : { ili };
   };
 
-  // tier 3: for each of the first senses of the word (the common ones), the first entries met on the way up, nearest first
+  // tier 3: for each of the first senses of the word (the common ones), the first entries met on the way up, nearest first.
+  // A later sense counts only when it is no farther away than the first one that found something: "puppy" is a young dog
+  // (dog, one step) before it is a young person (person, three steps), and the second would only mislead.
   const walkUp = (ilis) => {
     const out = [];
+    let nearest = Infinity;
     for (const start of ilis.slice(0, MAX_SENSES)) {
       const seen = new Set([start]);
       let layer = [{ ili: start, path: [] }];
@@ -101,6 +110,8 @@ export function createEnglish({ composites = [], links = {}, index = null } = {}
         }
         layer = next;
       }
+      if (!found.length || found[0].steps > nearest) continue;
+      nearest = found[0].steps;
       for (const f of found) if (!out.some((o) => o.zh === f.zh)) out.push(f);
     }
     return out.slice(0, MAX_PER_TIER);
@@ -108,6 +119,11 @@ export function createEnglish({ composites = [], links = {}, index = null } = {}
 
   return {
     ready: !!index,
+    data: { links, index }, // what the other checks (cross-check.js, frontier.js) read, so the 20 MB are read once
+    senseIds: ilisOf, // an English word's senses, the common ones first
+
+    // -> the entries met on the way up from an entry's own senses (what WordNet calls its kind), nearest first, as tier 3 gives them
+    startsFrom: (zh) => walkUp(linked[zh] ?? []).filter((f) => f.zh !== zh),
 
     // -> { query, glosses: [entry], sameSense: [{ sense, entries }], kindOf: [entry + via, steps, start], note? }
     lookup(text) {

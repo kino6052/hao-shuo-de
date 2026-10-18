@@ -7,7 +7,9 @@
 //   callTool(kb, name, args)      -> the answer as text (throws on a bad question)
 
 import { fileURLToPath } from 'node:url';
-import { renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderEnglish, renderYardsticks, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps } from './kb.js';
+import { SECTIONS } from './cross-check.js';
+import { PARTS } from './frontier.js';
+import { renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderEnglish, renderCrossCheck, renderFrontier, renderYardsticks, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps } from './kb.js';
 import { scoreboardRow, readScoreboard, renderScoreboard, renderHistory } from './scoreboard.js';
 
 // the stored rows (refactor --write adds one after every change)
@@ -107,10 +109,36 @@ export const TOOLS = [
     inputSchema: { type: 'object', properties: { word: { type: 'string', description: 'An English word or short phrase: "purchase", "to run".' } }, required: ['word'] },
   },
   {
+    name: 'kb_cross_check',
+    description:
+      "The dictionary's kind-of, opposite and part-of relations checked against WordNet's, for the entries that have a WordNet link: which relations WordNet agrees with, which it reads the other way round or not at all, what WordNet states between two entries that the dictionary does not, and the entries with no head that WordNet could give one (\"could start as …-de X\"). " +
+      'A disagreement is a question, not an error. Without the English index (npm run wordnet) nothing can be checked.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        section: { type: 'string', enum: ['kindOf', 'opposites', 'parts', 'missing', 'headless'], description: 'One part of the report in full; leave out for all of them.' },
+        limit: { type: 'integer', description: 'How many to list per verdict (default 10).' },
+      },
+    },
+  },
+  {
     name: 'kb_yardsticks',
     description:
       'How much of the word lists the dictionary can say: the common Mandarin words, the 3000 most common English words and Basic English, with the first 500, 1000 and 3000 apart and the most common words still missing.',
     inputSchema: { type: 'object', properties: { limit: { type: 'integer', description: 'How many missing words to list per list (default 15).' } } },
+  },
+  {
+    name: 'kb_frontier',
+    description:
+      'What the dictionary cannot say yet, with the fix for each: the common English words with no entry (is there an entry WordNet gives for it that is not linked, a common Mandarin word that would carry it, or does grammar say it), ' +
+      'the common Mandarin words with no entry and what they mean in English, and the everyday sentences one character away and the character that would unlock the most. Without the English index (npm run wordnet) nothing can be named.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        part: { type: 'string', enum: PARTS, description: 'One part only; leave out for all three.' },
+        limit: { type: 'integer', description: 'How many to list per kind of fix (default 12).' },
+      },
+    },
   },
   {
     name: 'kb_meaning',
@@ -232,6 +260,14 @@ export async function callTool(kb, name, args = {}, { scoreboardFile = SCOREBOAR
     case 'kb_english': {
       if (!args.word) throw new Error('word is required');
       return renderEnglish(kb.english(String(args.word)));
+    }
+    case 'kb_cross_check': {
+      if (args.section && !SECTIONS.includes(args.section)) throw new Error(`section is one of ${SECTIONS.join(', ')}`);
+      return renderCrossCheck(kb.crossCheck(), { section: args.section || undefined, limit: Number(args.limit) > 0 ? Number(args.limit) : 10 });
+    }
+    case 'kb_frontier': {
+      if (args.part && !PARTS.includes(args.part)) throw new Error(`part is one of ${PARTS.join(', ')}`);
+      return renderFrontier(kb.frontier(), { part: args.part || undefined, limit: Number(args.limit) > 0 ? Number(args.limit) : 12 });
     }
     case 'kb_yardsticks':
       return renderYardsticks(kb.yardsticks(), { limit: Number(args.limit) > 0 ? Number(args.limit) : 15 });

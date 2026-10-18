@@ -54,6 +54,8 @@ node scripts/kb.js atoms [word]                                         # the at
 node scripts/kb.js relations [kind] [--status proposed|accepted] [--limit N]  # synonyms, opposites, connections and the rest
 node scripts/kb.js relations tree [word] [--limit N]                    # what hangs under what: the kind-of tree of every word, or of one
 node scripts/kb.js english <word> [--json]                              # which entries say an English word: by gloss, by WordNet sense, as a kind of
+node scripts/kb.js cross-check [kindOf|opposites|parts|missing|headless] [--limit N]  # the dictionary's kind-of, opposite and part-of relations against WordNet's
+node scripts/kb.js frontier [words|mandarin|sentences] [--limit N]      # what the dictionary cannot say yet and the word that would fix each
 node scripts/kb.js yardsticks [--limit N]                               # how much of the Mandarin and English word lists and Basic English the dictionary can say
 node scripts/kb.js meaning [says|atoms|grounding|<word>] [--limit N]    # what the words say of the NSM primes, Aristotle's categories and grammar
 node scripts/kb.js candidates [remove|add] [--limit N]                  # the cheapest words to drop and the best roots to add
@@ -87,7 +89,9 @@ node scripts/kb.js engine                                               # which 
 | `kb_atoms` | Which dictionary words are atoms: the words the others cannot be said from. |
 | `kb_relations` | The relations between words and between composites: opposites, close words, the same description, kind-of (a composite and its head), agents, categories, and phrases that stand in for a missing opposite. |
 | `kb_english` | Which dictionary entries say an English word, in three tiers: the entries whose gloss has the word, the entries that share a WordNet sense with it (its synonyms), and, when neither says it… |
+| `kb_cross_check` | The dictionary's kind-of, opposite and part-of relations checked against WordNet's, for the entries that have a WordNet link: which relations WordNet agrees with, which it reads the other way round or not at all… |
 | `kb_yardsticks` | How much of the word lists the dictionary can say: the common Mandarin words, the 3000 most common English words and Basic English, with the first 500, 1000 and 3000 apart and the most common words still missing. |
+| `kb_frontier` | What the dictionary cannot say yet, with the fix for each: the common English words with no entry (is there an entry WordNet gives for it that is not linked, a common Mandarin word that would carry it… |
 | `kb_meaning` | What the dictionary says of the NSM primes, Aristotle's categories and the grammar items, and what the words are made of. |
 | `kb_candidates` | Which words could go, or which roots could be added. kind "remove" (the default): every word that is not marked as an atom, the cheapest to drop first, each with what dropping it costs (composites to redo… |
 | `kb_add` | What adding one hanzi as a root would bring: the Mandarin words it completes (the other hanzi of the word are already here), the ones that still need more roots, the composites it would let be spelled in hanzi… |
@@ -109,10 +113,12 @@ node scripts/kb.js engine                                               # which 
 | `src/lib/kb/check-form.js` | Checking a Hao-shuo-de form before it goes anywhere (KB_PLAN.md phase 1, `kb_check_form`): the same rules the book gates apply to composites… |
 | `src/lib/kb/class-proposals.js` | Word classes the parser can propose (KB_PLAN.md K6). A word lists the classes it fills: its part of speech, and the classes it lists besides (`classes` in its data, each with a why and an example). |
 | `src/lib/kb/clingo.js` | The reasoner (KB_PLAN.md K1): clingo, answer set programming. Two ways to run it, the same answers either way. |
+| `src/lib/kb/cross-check.js` | WordNet cross-checks (KB_PLAN.md phase 6, K28): the dictionary's own kind-of, opposite and part-of relations against what the English WordNet says about the same senses… |
 | `src/lib/kb/english.js` | English to Hao-shuo-de (KB_PLAN.md phase 6, K4, K15): given an English word, which entries say it, in three tiers. |
 | `src/lib/kb/facts.js` | The facts the reasoner works on (KB_PLAN.md K2): everything in src/data and the book, written as clingo facts. |
 | `src/lib/kb/fixture.js` | A tiny made-up language for the KB tests: twelve words, a few composites, one coverage group, two lessons. |
 | `src/lib/kb/form-report.js` | The composite dictionary against the grammar (KB_PLAN.md phase 4, K7): every description of a composite (src/data/composites) is a piece of Hao-shuo-de, so the patterns should read it. |
+| `src/lib/kb/frontier.js` | The frontier (KB_PLAN.md phase 6, K28): what the dictionary cannot say yet, and the word that would fix each. |
 | `src/lib/kb/grammar-uses.js` | "Which grammar patterns does a word carry?" (KB_PLAN.md K20). A pattern names a word in three places: the words in its rules (=bie2), the words in its template, and the words in its examples. |
 | `src/lib/kb/kb.js` | The one entry point the CLI, the explorer page and the Claude tools share (KB_PLAN.md phase 1, "thin scripts/kb.js"). |
 | `src/lib/kb/mcp.js` | The Model Context Protocol, the small part the KB needs: JSON-RPC 2.0, one message per line over stdio. |
