@@ -22,6 +22,16 @@
         "--strictPort"
       ],
       "port": 5174
+    },
+    {
+      "name": "understand-panel",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "understand/panel/serve.js",
+        "--port",
+        "5188"
+      ],
+      "port": 5188
     }
   ]
 }
