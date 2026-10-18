@@ -1,6 +1,6 @@
 ---
 name: understand
-description: Yes/no mode. The user asks how something works, then narrows it down with yes/no questions; the agent only answers Yes, No or Partly in short markdown with a progress percent, shows what is settled (a tree, optionally in a side panel) and what is open (each with a hint question), and a sceptical Critic adds one hard question every time. Start it only when the user types /understand.
+description: Yes/no mode. The user asks how something works, then narrows it down with yes/no questions; the agent only answers Yes, No or Partly in short markdown with a progress percent, shows what is settled (a tree, optionally in a side panel) and what is open (each with a hint question), a sceptical Critic adds one hard question every time, and "stuck" gives a ladder of questions with hints. Start it only when the user types /understand.
 argument-hint: what you want to understand
 disable-model-invocation: true
 ---

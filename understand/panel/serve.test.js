@@ -40,4 +40,9 @@ describe('the server', () => {
     expect(page()).toContain('renderCritic');
     expect(page()).toContain('answered');
   });
+  test('the page has an I feel stuck button that reveals the ladder one step at a time', () => {
+    expect(page()).toContain('id="stuck"');
+    expect(page()).toContain('renderLadder');
+    expect(page()).toContain('revealed + 1');
+  });
 });

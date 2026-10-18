@@ -45,6 +45,13 @@
   #open li::before { content: "?"; color: var(--accent); font-weight: 700; margin-right: 8px; }
   #open li.fresh { background: var(--new); }
   .hint { color: var(--muted); font-size: 13px; font-style: italic; margin: 1px 0 2px 20px; }
+  button.primary { font-size: 14px; padding: 6px 12px; border: 1px solid var(--accent); border-radius: 6px; margin: 2px 0 6px; }
+  button.primary:disabled { color: var(--muted); border-color: var(--line); cursor: default; }
+  #ladder { margin: 4px 0 0; padding-left: 22px; }
+  #ladder li.fresh { background: var(--new); }
+  #ladder .ask { font-weight: 600; }
+  #ladder summary { color: var(--accent); font-size: 13px; padding: 2px 0; }
+  #ladder .hint { margin-left: 0; }
   #critic li { display: flex; gap: 8px; }
   #critic .turn { flex: none; min-width: 26px; color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; padding-top: 2px; }
   #critic li.fresh { background: var(--new); }
@@ -68,6 +75,11 @@
   <section>
     <header><h2>Open</h2></header>
     <ul id="open"></ul>
+  </section>
+  <section>
+    <header><h2>Stuck?</h2><span><button id="hideSteps" hidden>Hide steps</button></span></header>
+    <button id="stuck" class="primary">I feel stuck</button>
+    <ol id="ladder"></ol>
   </section>
   <section>
     <header><h2>Critic <span class="muted" id="criticCount"></span></h2><span><button id="toggleAnswered">Hide answered</button></span></header>
@@ -139,8 +151,38 @@
     settled.replaceChildren(...((s.settled ?? []).length ? build(s.settled, []).childNodes : [el('li', 'empty', 'Nothing settled yet.')]));
     const open = $('open');
     open.replaceChildren(...((s.open ?? []).length ? s.open.map(openItem) : [el('li', 'empty', 'Nothing open.')]));
+    renderLadder(s);
     renderCritic(s);
   }
+
+  // the ladder: { ask, hint } steps the agent keeps current; the button shows them one at a time, hints folded.
+  // It works on its own, the agent never sees it pressed. A new ladder (a new answer) starts over.
+  let revealed = 0;
+  let ladderKey = '';
+  const hintsOpen = new Set();
+  function renderLadder(s) {
+    const steps = s.ladder ?? [];
+    const key = JSON.stringify(steps);
+    if (key !== ladderKey) { ladderKey = key; revealed = 0; hintsOpen.clear(); }
+    const btn = $('stuck');
+    btn.disabled = !steps.length || revealed >= steps.length;
+    btn.textContent = !steps.length ? 'Nothing to suggest yet' : revealed === 0 ? 'I feel stuck' : revealed >= steps.length ? 'That was the last step' : 'Another step';
+    $('hideSteps').hidden = revealed === 0;
+    $('ladder').replaceChildren(...steps.slice(0, revealed).map((st, i) => {
+      const li = el('li', i === revealed - 1 ? 'fresh' : '');
+      li.append(el('div', 'ask', st.ask));
+      if (st.hint) {
+        const d = el('details');
+        d.open = hintsOpen.has(i);
+        d.addEventListener('toggle', () => (d.open ? hintsOpen.add(i) : hintsOpen.delete(i)));
+        d.append(el('summary', '', 'Hint'), el('div', 'hint', st.hint));
+        li.append(d);
+      }
+      return li;
+    }));
+  }
+  $('stuck').onclick = () => { if (state) { revealed = Math.min(revealed + 1, (state.ladder ?? []).length); renderLadder(state); } };
+  $('hideSteps').onclick = () => { revealed = 0; if (state) renderLadder(state); };
 
   // the Critic's questions, newest first: { turn, text, new, answered }; the person can hide the ones already picked up
   let hideAnswered = false;

@@ -45,6 +45,15 @@ Short markdown, always in this order, nothing before or after:
 - **Open**: what is still unknown, each with its **hint**: one question that points at the gap in your picture without giving the answer. The chat shows the hint on items the latest answer opened or changed.
 - **Critic**: one hard question from the Critic. See below.
 
+## When you feel stuck
+
+Say **stuck** (or "I feel stuck", "help"), or press **I feel stuck** in the side panel. You get a **ladder**: a short chain of three to five questions, each with its own hint, that leads you toward the biggest gap without answering it.
+
+- It goes **wide to narrow**. The first step is the widest question that still helps (what kind of thing it is, one or several, what goes in, what comes out); each later step narrows what the one before cut. Each step still makes sense whatever the earlier answers were.
+- Each step is a yes/no question you could put to the agent, plus a hint that helps you see why it is worth asking. The steps ask about the shape of the unknown (kind, count, order, where it lives) before its content, and never give away the answer.
+- **In the chat**, the agent lists the steps with their hints and keeps the Critic quiet for that reply. Your progress and what is settled do not change.
+- **In the panel**, the button shows one step at a time and keeps each hint folded until you open it. It works on its own: the agent keeps the ladder current after every answer, so you do not have to wait for it. A new answer gives a new ladder, and the steps start over.
+
 ## What the agent answers
 
 | It says | It means |
@@ -57,7 +66,7 @@ Short markdown, always in this order, nothing before or after:
 
 ## The side panel
 
-The chat gets long. If you want it short, say **panel on** and a page opens beside the chat that shows the whole Settled tree, which you can fold and unfold, every open item with its hint, and every question the Critic has asked, plus the progress bar. The chat then shows only the first line, what changed and the Critic.
+The chat gets long. If you want it short, say **panel on** and a page opens beside the chat that shows the whole Settled tree, which you can fold and unfold, every open item with its hint, every question the Critic has asked and the **I feel stuck** button, plus the progress bar. The chat then shows only the first line, what changed and the Critic.
 
 - The agent starts the server (`understand-panel` in `.claude/launch.json`, or `node understand/panel/serve.js`, then http://localhost:5188) and writes `understand/state.json` before each reply. The page reads that file every second. The file is git-ignored and nothing else uses it.
 - Branches the latest answer touched open by themselves and the new points are shaded; older branches stay folded. What you fold or open by hand stays that way. **Expand all** and **Collapse all** are on the page.
@@ -66,7 +75,7 @@ The chat gets long. If you want it short, say **panel on** and a page opens besi
 
 ## The Critic
 
-The Critic is smart, sceptical and unfriendly. After every answer (not after the first reply, which is only the rules) the Critic asks one extra question, built to make not knowing uncomfortable: the kind you would rather not be asked.
+The Critic is smart, sceptical and unfriendly. After every answer (not after the first reply, which is only the rules, and not when you say you are stuck) the Critic asks one extra question, built to make not knowing uncomfortable: the kind you would rather not be asked.
 
 - It is **not the hint**. The hints help you; the Critic does not. It asks from an angle you did not think of: what if the opposite were true, a case that would break your picture, how you would know, the strange or empty input, how it could fail without anyone noticing, what if it did not exist, why this and not its neighbour, who is hurt if you are wrong. It never uses the same angle twice in a row.
 - It picks at what you have **settled** ("one yes and you call it settled") or at what is still open. It does not state facts about the thing, and it says nothing that is not so.
@@ -84,10 +93,11 @@ The Critic is smart, sceptical and unfriendly. After every answer (not after the
 | **where did you check?** | It names the file or the command it looked at. Otherwise it never names them. |
 | **summarize** | The Settled tree as plain sentences. |
 | **critic off** / **critic on** | Silence the Critic, or bring the Critic back. |
+| **stuck** (or "I feel stuck", "help") | A ladder of questions with hints to get you moving, without the answer. The panel has a button for it. |
 | **panel on** / **panel off** | Show the Settled tree and the open items in a side page, or put them back in the chat. |
 | **exit mode** | Back to a normal conversation. Critic, percent and panel gone too. |
 
-After five No or Partly answers in a row on one thread, the agent reminds you once that "just tell me" exists. It never offers the answer on its own.
+After five No or Partly answers in a row on one thread, the agent reminds you once that "just tell me" and "stuck" exist. It never offers the answer on its own.
 
 ## What the agent will not do
 

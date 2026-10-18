@@ -7,12 +7,14 @@
 // The state file (git-ignored) looks like this; settled points nest at most three deep, and a point added by the
 // latest answer carries "new": true (the page opens its branch and marks it; older branches fold). Each open item
 // carries its hint, a question that points at the gap without giving the answer. "critic" keeps every question the
-// Critic has asked, oldest first, so they can be looked up ("answered" once the person has taken one up):
+// Critic has asked, oldest first, so they can be looked up ("answered" once the person has taken one up). "ladder" is
+// the chain of questions behind the page's "I feel stuck" button, wide to narrow, each with a hint:
 //   { "topic": "kb english", "turn": 3, "progress": 35, "answer": "No", "cut": "big",
 //     "settled": [{ "text": "it works offline" }, { "text": "it reads more than one thing", "children": [{ "text": "…", "new": true }] }],
 //     "open": [{ "text": "what else it reads", "hint": "If a word is in no entry's English text, what else could still lead you to an entry?", "new": true }],
 //     "critic": [{ "turn": 2, "text": "One answer and you call it settled. What would you have noticed if it did use the internet?", "answered": true },
-//                { "turn": 3, "text": "So it reads more than one thing. Suppose they disagree. Which would you trust, and why?", "new": true }] }
+//                { "turn": 3, "text": "So it reads more than one thing. Suppose they disagree. Which would you trust, and why?", "new": true }],
+//     "ladder": [{ "ask": "Does the other thing live inside this project?", "hint": "It works offline. Where does a program keep what it reads when it cannot ask anyone?" }] }
 
 import { createServer } from 'node:http';
 import { readFileSync } from 'node:fs';
@@ -21,7 +23,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 export const STATE_FILE = resolve(HERE, '..', 'state.json');
-export const EMPTY = { topic: null, turn: 0, progress: 0, settled: [], open: [], critic: [] };
+export const EMPTY = { topic: null, turn: 0, progress: 0, settled: [], open: [], critic: [], ladder: [] };
 
 // -> a function that gives the state: the file as it reads now, the empty state when there is no file, and the last
 // good copy while the file is half written
