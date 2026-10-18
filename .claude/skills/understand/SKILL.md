@@ -1,6 +1,6 @@
 ---
 name: understand
-description: Yes/no mode. The user asks how something works, then narrows it down with yes/no questions; the agent only answers Yes, No or Partly, shows the cut, what is settled and what is open, and asks one question back. Start it only when the user types /understand.
+description: Yes/no mode. The user asks how something works, then narrows it down with yes/no questions; the agent only answers Yes, No or Partly, shows the cut, what is settled and what is open, asks one question back, and a sceptical Critic adds one hard question every time. Start it only when the user types /understand.
 argument-hint: what you want to understand
 disable-model-invocation: true
 ---

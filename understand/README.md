@@ -1,6 +1,6 @@
 # Yes/no mode: understand it by narrowing it down
 
-A way to ask an agent about something in this project without being told. You ask how a thing works, then ask yes/no questions. The agent answers Yes, No or Partly, shows how much each answer narrowed things down, and hints with a question, never with the answer. You do the understanding; the agent keeps you honest.
+A way to ask an agent about something in this project without being told. You ask how a thing works, then ask yes/no questions. The agent answers Yes, No or Partly, shows how much each answer narrowed things down, and hints with a question, never with the answer. You do the understanding; the agent keeps you honest. A sceptical **Critic** sits beside it and adds one hard question every time.
 
 It works like twenty questions. Each good question cuts what is left in half, so a few wide questions get you further than many small ones.
 
@@ -32,21 +32,34 @@ The agent answers only with the rules and waits. It does not look anything up un
 | **Can't tell** | It checked and the data does not say, or it could not check. It says which. |
 | **Your question takes something for granted that isn't so** | It names the assumption, nothing more. |
 
-After the answer word you see four lines:
+After the answer word you see five lines:
 
 - **Cut**: `big`, `medium`, `small` or `none`. How much the answer narrowed things down.
 - **Settled**: what your questions and its answers have established so far, in your words.
 - **Open**: what is still unknown, as bare names.
 - **Back**: one question that points at the gap in your picture. It is the hint.
+- **Critic**: one hard question from the Critic. See below.
+
+## The Critic
+
+The Critic is smart, sceptical and unfriendly. After every answer (not after the first reply, which is only the rules) the Critic asks one extra question, built to make not knowing uncomfortable: the kind you would rather not be asked.
+
+- It is **not the hint**. The Back line helps you; the Critic does not. It asks from an angle you did not think of: what if the opposite were true, a case that would break your picture, how you would know, the strange or empty input, how it could fail without anyone noticing, what if it did not exist, why this and not its neighbour, who is hurt if you are wrong. It never uses the same angle twice in a row.
+- It picks at what you have **settled** ("one yes and you call it settled") or at what is still open. It does not state facts about the thing, and it says nothing that is not so.
+- It is **fair**: you can answer it by thinking, or by asking the agent a yes/no question, or by a quick check.
+- It is **unfriendly, not cruel**: curt, dry, unimpressed. It calls your picture thin or unproven. It does not insult you, only your picture.
+- You do not have to answer. Ignore it twice in a row and it says so in a few words ("Still dodging."), once. Answer it, or turn it into a yes/no question, and the agent answers like any other question.
+- Its question never changes the Cut, and it does not add to Open unless you pick it up.
 
 ## Words you can say
 
 | You say | What happens |
 | --- | --- |
-| **just tell me** (or **reveal**) | You get the plain answer to the current question, with the why. Then it goes back to yes/no mode. |
+| **just tell me** (or **reveal**) | You get the plain answer to the current question, with the why. Then it goes back to yes/no mode, and the Critic asks you to say it back in your own words. |
 | **where did you check?** | It names the file or the command it looked at. Otherwise it never names them. |
 | **summarize** | The Settled list as plain sentences. |
-| **exit mode** | Back to a normal conversation. |
+| **critic off** / **critic on** | Silence the Critic, or bring the Critic back. |
+| **exit mode** | Back to a normal conversation, Critic gone too. |
 
 After five No or Partly answers in a row on one thread, the agent reminds you once that "just tell me" exists. It never offers the answer on its own.
 
@@ -57,6 +70,7 @@ After five No or Partly answers in a row on one thread, the agent reminds you on
 - Say "warm" or "close". The Cut word is the only measure.
 - Answer a "why" or "what is" question. It asks you to state your guess instead.
 - Guess. A Yes is always something it checked. If it could not check, it says "Can't tell".
+- Let the Critic say anything about the thing that is not so.
 
 One exception: if you are about to delete, change or publish something because of a mistake in your picture, it says so in one plain sentence and then goes back to the mode.
 
@@ -65,9 +79,9 @@ One exception: if you are about to delete, change or publish something because o
 > **You:** How does `kb english` work?
 > **Agent:** Yes/no mode on `kb english`. Ask me yes/no questions, wide ones first. (…the rules…)
 > **You:** Does it use the internet?
-> **Agent:** **No.** Cut: small. Settled: it works offline. Open: where its answers come from. Back: Where could the answers be kept, if not online?
+> **Agent:** **No.** Cut: small. Settled: it works offline. Open: where its answers come from. Back: Where could the answers be kept, if not online? Critic: One answer and you call it settled. What would you have noticed if it did use the internet?
 > **You:** Is that the only thing it looks at?
-> **Agent:** **No.** Cut: big. … Back: If a word is in no entry's English text, what else could still lead you to an entry?
+> **Agent:** **No.** Cut: big. … Back: If a word is in no entry's English text, what else could still lead you to an entry? Critic: So it reads more than one thing. Suppose they disagree. Which would you trust, and why?
 
 The full example is at the bottom of [PROMPT.md](PROMPT.md).
 
