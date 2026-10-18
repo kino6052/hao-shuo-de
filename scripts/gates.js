@@ -9,6 +9,8 @@ export const GATES = [
   ['check-summaries', ['--over']],
   ['check-jargon', ['--summary']],
   ['check-early-words', ['--summary']],
+  ['check-word-order', ['--summary']],
+  ['check-audio', []],
   ['check-word-use', ['--summary']],
   ['check-grammar-blocks', ['--summary']],
   ['check-grammar', []],

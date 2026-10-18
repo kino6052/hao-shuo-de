@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'bun:test';
-import { findEarlyWords, findUnknownWordsInIntros, wordsIn, termIndex } from './early-words.js';
+import { findEarlyWords, findUnknownWordsInIntros, findWordsBeforeCard, wordsIn, termIndex } from './early-words.js';
 
 // A tiny dictionary and book: lesson 2 introduces shì and rén, lesson 3
 // introduces hǎo and gè.
@@ -107,5 +107,42 @@ describe('findUnknownWordsInIntros', () => {
   });
   test('a pinyin word the dictionary lacks is flagged', () => {
     expect(kinds(findUnknownWordsInIntros(intros('Wǒ shì māo.'), dictionary))).toEqual(['intro-9:not-in-dictionary:Wǒ', 'intro-9:not-in-dictionary:māo']);
+  });
+});
+
+describe('findWordsBeforeCard', () => {
+  // lesson 3: a cover picture, a module that uses hǎo before its card (in the next module), then the card
+  const use = (key, module, id) => ({ key, module, type: 'example', pinyin: `{{Word:${id}}}.`, en: ['x'] });
+  const card = (key, module, id) => ({ key, module, type: 'vocab', term: `{{word:${id}}}`, en: ['gloss'] });
+  const lesson3 = (entries) => [
+    { id: 'lesson-02', number: 2, entries: [card('c1', 'is', 'shi4'), card('c2', 'is', 'ren2')] },
+    { id: 'lesson-03', number: 3, entries },
+  ];
+  const kindsOf = (entries) => findWordsBeforeCard(lesson3(entries), dictionary).problems.map((p) => `${p.kind}:${p.module}:${p.word}->${p.cardModule}`);
+
+  test('a word used in an earlier module than its card is flagged, with the module of the card', () => {
+    expect(kindsOf([use('a.example1', 'a', 'hao3'), card('b.card', 'b', 'hao3')])).toEqual(['before-card:a:hǎo->b']);
+  });
+
+  test('a word used earlier in its own module than its card is flagged too', () => {
+    expect(kindsOf([use('b.example1', 'b', 'hao3'), card('b.card', 'b', 'hao3')])).toEqual(['before-card:b:hǎo']
+      .map((x) => `${x}->b`));
+  });
+
+  test('a word used after its card, or in the card gloss itself, is fine', () => {
+    const own = { key: 'b.card', module: 'b', type: 'vocab', term: '{{word:hao3}}', en: ['{{word:hao3}} means good'] };
+    expect(kindsOf([own, use('b.example1', 'b', 'hao3')])).toEqual([]);
+  });
+
+  test('words from an earlier lesson are left to the lesson-order gate', () => {
+    expect(kindsOf([use('a.example1', 'a', 'shi4'), card('b.card', 'b', 'hao3')])).toEqual([]);
+  });
+
+  test('the cover sentence is reported apart', () => {
+    expect(kindsOf([use('head.image', 'head', 'hao3'), card('b.card', 'b', 'hao3')])).toEqual(['cover:head:hǎo->b']);
+  });
+
+  test('a word with no card in the lesson is left to check-early-words', () => {
+    expect(kindsOf([use('a.example1', 'a', 'hao3')])).toEqual([]);
   });
 });

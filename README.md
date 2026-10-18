@@ -51,8 +51,8 @@ Plans and decisions: [BOOK_PLAN.md](BOOK_PLAN.md) (book, decision log D1…), [K
 | Things the language must say | 113: 65 atoms of meaning, 10 categories, 38 grammar points |
 | Lesson sentences that parse | 99.3 % |
 | Smallest set the others can be said from | 202 words; the other 28 have a fine paraphrase |
-| Gates (`npm run check`) | 20 |
-| Test files (`npm test`) | 54 |
+| Gates (`npm run check`) | 22 |
+| Test files (`npm test`) | 55 |
 
 The language numbers are the last row of `kb/scoreboard.csv` (2026-10-15, refactors/H1.ts: 2 op(s)); a refactor adds a new row.
 <!-- /generated:facts -->
@@ -251,6 +251,8 @@ The summaries come from the comment at the top of each script, which also shows 
 | `npm run check-summaries` | Summary gate: every chapter summary is at most SUMMARY_MAX_WORDS (50) words (BOOK_PLAN.md §1, rule 7). |
 | `npm run check-jargon` | Jargon gate: the book uses no grammar jargon at all (BOOK_PLAN.md §1, rule 4). |
 | `npm run check-early-words` | Early-words gate: a lesson may only use words introduced in that lesson or an earlier one (BOOK_PLAN.md §4a, rule 2). |
+| `npm run check-word-order` | Word-order gate: inside one lesson, a word may not be used before the word card that introduces it ("new words"… |
+| `npm run check-audio` | Audio gate: every sentence with a play button has a pronunciation clip, and the clip still says what the sentence says. |
 | `npm run check-word-use` | Word-use gate: every dictionary word is actually used -- in at least one example sentence or answer in the lesson that introduces it, not just on its vocab card (BOOK_PLAN.md §4a, rule 7… |
 | `npm run check-grammar-blocks` | Info-block gate: a lesson is assembled from modules (src/lib/lesson.ts), and every module has exactly one info block -- the point's pattern in a line or a short box -- right after its explanation… |
 | `npm run check-grammar` | Grammar gate (KB_PLAN.md phase 4, K7): every Hao-shuo-de sentence of the book parses. |

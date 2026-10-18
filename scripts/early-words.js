@@ -86,14 +86,52 @@ function textsOf(entry) {
 export function introductions(lessons) {
   const first = new Map();
   for (const lesson of lessons) {
-    for (const entry of lesson.entries) {
-      if (entry.type !== 'vocab') continue;
+    lesson.entries.forEach((entry, index) => {
+      if (entry.type !== 'vocab') return;
       const id = soleWordRef(entry.term);
       const key = id && senseKey(id, entry.sense);
-      if (key && !first.has(key)) first.set(key, { lesson: lesson.id, number: lesson.number, module: entry.module ?? '' });
-    }
+      if (key && !first.has(key)) first.set(key, { lesson: lesson.id, number: lesson.number, module: entry.module ?? '', index, key: entry.key });
+    });
   }
   return first;
+}
+
+// The words used in one entry, in order: [{ id, token, sense, text }] (id is null for a pinyin word the
+// dictionary doesn't have). Shared by the two gates below.
+function usesIn(entry, terms, dictionary) {
+  const out = [];
+  for (const { text, pinyinField } of textsOf(entry)) {
+    // wordsIn lists the refs first, in order, so the i-th ref's sense is senses[i].
+    const senses = refSenses(text, dictionary);
+    wordsIn(text, terms, { pinyinField }).forEach(({ id, token }, i) => out.push({ id, token, sense: senses[i]?.sense, text }));
+  }
+  return out;
+}
+
+// Words used in a lesson before the card that introduces them in that same lesson (the order of the lesson,
+// not just the order of the lessons): a word may not show up in an earlier module, or earlier in its own, than
+// its card. The cover picture (the "head" module) previews what the lesson teaches, so its sentence is
+// reported apart (kind 'cover') and never counts as an early use. Lesson 1 is exempt, as in findEarlyWords.
+//
+// -> { problems: [{ lesson, key, module, kind: 'before-card' | 'cover', word, cardKey, cardModule, text }] }
+export function findWordsBeforeCard(lessons, dictionary) {
+  const terms = termIndex(dictionary);
+  const cards = introductions(lessons);
+  const problems = [];
+  for (const lesson of lessons) {
+    if (lesson.number === 1) continue;
+    lesson.entries.forEach((entry, index) => {
+      for (const { id, sense, text } of usesIn(entry, terms, dictionary)) {
+        if (!id || !dictionary[id]) continue; // check-early-words reports it
+        const card = cards.get(senseKey(id, sense));
+        if (!card || card.lesson !== lesson.id || card.index <= index) continue;
+        const word = `${dictionary[id].term}${sense ? ` (${sense})` : ''}`;
+        const kind = entry.module === 'head' ? 'cover' : 'before-card';
+        problems.push({ lesson: lesson.id, key: entry.key, module: entry.module ?? '', kind, word, cardKey: card.key, cardModule: card.module, text });
+      }
+    });
+  }
+  return { problems };
 }
 
 // The intros come before every lesson, so no dictionary word is "early" in
@@ -121,18 +159,13 @@ export function findEarlyWords(lessons, dictionary) {
   for (const lesson of lessons) {
     if (lesson.number === 1) continue;
     for (const entry of lesson.entries) {
-      for (const { text, pinyinField } of textsOf(entry)) {
-        // wordsIn lists the refs first, in order, so the i-th ref's sense is senses[i].
-        const senses = refSenses(text, dictionary);
-        wordsIn(text, terms, { pinyinField }).forEach(({ id, token }, i) => {
-          const base = { lesson: lesson.id, key: entry.key, text };
-          const sense = senses[i]?.sense;
-          const key = senseKey(id, sense);
-          const word = id && dictionary[id] ? `${dictionary[id].term}${sense ? ` (${sense})` : ''}` : null;
-          if (!id || !dictionary[id]) problems.push({ ...base, kind: 'not-in-dictionary', word: id ?? token });
-          else if (!home.has(key)) problems.push({ ...base, kind: 'never-introduced', word });
-          else if (home.get(key) > lesson.number) problems.push({ ...base, kind: 'early', word, home: home.get(key) });
-        });
+      for (const { id, token, sense, text } of usesIn(entry, terms, dictionary)) {
+        const base = { lesson: lesson.id, key: entry.key, text };
+        const key = senseKey(id, sense);
+        const word = id && dictionary[id] ? `${dictionary[id].term}${sense ? ` (${sense})` : ''}` : null;
+        if (!id || !dictionary[id]) problems.push({ ...base, kind: 'not-in-dictionary', word: id ?? token });
+        else if (!home.has(key)) problems.push({ ...base, kind: 'never-introduced', word });
+        else if (home.get(key) > lesson.number) problems.push({ ...base, kind: 'early', word, home: home.get(key) });
       }
     }
   }

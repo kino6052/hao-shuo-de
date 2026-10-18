@@ -29,6 +29,8 @@
     "check-coverage": "node scripts/check-coverage.js",
     "check-jargon": "node scripts/check-jargon.js",
     "check-early-words": "node scripts/check-early-words.js",
+    "check-word-order": "node scripts/check-word-order.js",
+    "check-audio": "node scripts/check-audio.js",
     "check-summaries": "node scripts/check-summaries.js",
     "check-word-use": "node scripts/check-word-use.js",
     "check-grammar-blocks": "node scripts/check-grammar-blocks.js",
