@@ -57,10 +57,11 @@ Short markdown, always in this order, nothing before or after:
 
 ## The side panel
 
-The chat gets long. If you want it short, say **panel on** and a page opens beside the chat that shows the whole Settled tree, which you can fold and unfold, and every open item with its hint, plus the progress bar. The chat then shows only the first line, what changed and the Critic.
+The chat gets long. If you want it short, say **panel on** and a page opens beside the chat that shows the whole Settled tree, which you can fold and unfold, every open item with its hint, and every question the Critic has asked, plus the progress bar. The chat then shows only the first line, what changed and the Critic.
 
 - The agent starts the server (`understand-panel` in `.claude/launch.json`, or `node understand/panel/serve.js`, then http://localhost:5188) and writes `understand/state.json` before each reply. The page reads that file every second. The file is git-ignored and nothing else uses it.
 - Branches the latest answer touched open by themselves and the new points are shaded; older branches stay folded. What you fold or open by hand stays that way. **Expand all** and **Collapse all** are on the page.
+- **The Critic list** is newest first, with the answer number beside each question. A question you have answered, or turned into a yes/no question, gets a tick; **Hide answered** leaves only the ones you have not picked up, so you can find what you dodged.
 - **panel off** puts the full lists back in the chat and stops the server. The panel is optional; everything works without it.
 
 ## The Critic
@@ -73,6 +74,7 @@ The Critic is smart, sceptical and unfriendly. After every answer (not after the
 - It is **unfriendly, not cruel**: curt, dry, unimpressed. It calls your picture thin or unproven. It does not insult you, only your picture.
 - You do not have to answer. Ignore it twice in a row and it says so in a few words ("Still dodging."), once. Answer it, or turn it into a yes/no question, and the agent answers like any other question.
 - Its question never changes the Cut or the Progress, and it does not add to Open unless you pick it up.
+- With the panel on, every question it asks is kept in the panel's Critic list, so you can look back at them.
 
 ## Words you can say
 

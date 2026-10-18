@@ -36,4 +36,8 @@ describe('the server', () => {
     expect(page()).toContain('item.hint');
     expect(page()).toContain("typeof o === 'string'");
   });
+  test('the page lists the Critic’s questions, newest first, and can hide the ones already picked up', () => {
+    expect(page()).toContain('renderCritic');
+    expect(page()).toContain('answered');
+  });
 });

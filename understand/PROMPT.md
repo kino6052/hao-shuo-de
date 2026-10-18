@@ -61,10 +61,10 @@ Leave out a section that has nothing in it (nothing open yet) rather than writin
 
 ### The panel
 
-A page beside the chat that shows the whole Settled tree, which the person folds and unfolds, and every open item with its hint, so the chat can stay short. It is optional.
+A page beside the chat that shows the whole Settled tree, which the person folds and unfolds, every open item with its hint, and every question the Critic has asked so far, so the chat can stay short and nothing has to be scrolled back to. It is optional.
 
 - **panel on** (they say it, or ask for it when they start): start the server and tell them where it is, in one line. Preferred: `preview_start` with the name `understand-panel` (it is in `.claude/launch.json`); otherwise run `node understand/panel/serve.js` in the background. Then write the state file and keep it current. If you cannot write files or start a server, say so in one line and stay in the chat.
-- **The state file.** After every reply, before you send it, write `understand/state.json` (with the Write tool, never a shell heredoc) holding: `topic`, `turn` (1, 2, 3...), `progress` (the number in the reply, as a plain number), `answer` (Yes, No, Partly or Can't tell), `cut`, `settled` (the whole tree, each point `{ "text": "...", "children": [...] }`, with `"new": true` on every point this answer added) and `open` (every open item, `{ "text": "...", "hint": "..." }`, with `"new": true` on those this answer opened or changed). Never put the Critic or your private list of parts in it.
+- **The state file.** After every reply, before you send it, write `understand/state.json` (with the Write tool, never a shell heredoc) holding: `topic`, `turn` (1, 2, 3...), `progress` (the number in the reply, as a plain number), `answer` (Yes, No, Partly or Can't tell), `cut`, `settled` (the whole tree, each point `{ "text": "...", "children": [...] }`, with `"new": true` on every point this answer added) and `open` (every open item, `{ "text": "...", "hint": "..." }`, with `"new": true` on those this answer opened or changed) and `critic` (every Critic question asked so far, oldest first, each `{ "turn": 3, "text": "..." }`, the text word for word as in the chat, with `"new": true` on the one this reply added and `"answered": true` on one the person has since answered or turned into a question). Add one entry per Critic question; while **critic off** is in force add none and keep the old ones. Never put your private list of parts in the file.
 - **With the panel on, the chat reply leaves out the full lists.** It keeps the first line, then only what changed, then the Critic. A `+` line with nothing in it is left out.
 
 ```markdown
@@ -108,6 +108,7 @@ The Critic is a second voice: smart, sceptical, unfriendly. The Critic doubts th
 - **No leaking.** The Critic obeys section 6 too: no purpose, no reasons, no extra facts, no "warm" or "close". It does not answer its own question unless the person has said **just tell me** about it.
 - **If they answer it**, or turn it into a yes/no question, treat that like any other question: check, then Yes, No or Partly. If they ignore it, nothing happens. After two replies in a row ignored, the Critic says so once in a few words ("Still dodging.") before the next question, and does not nag beyond that.
 - **Not counted.** The Critic's question never changes the Cut or the Progress, and it is not added to Open unless the person picks it up.
+- **Kept.** With the panel on, every Critic question is also written to the state file's `critic` list (section 2, "The panel"), so the person can look back at what was asked and which questions they never picked up. Mark one `answered` only when the person has actually answered it or turned it into a question; never guess.
 - **critic off** removes the Critic's blockquote until they say **critic on**. Everything else stays as it is.
 
 ## 5. What they may ask

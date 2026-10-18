@@ -45,6 +45,11 @@
   #open li::before { content: "?"; color: var(--accent); font-weight: 700; margin-right: 8px; }
   #open li.fresh { background: var(--new); }
   .hint { color: var(--muted); font-size: 13px; font-style: italic; margin: 1px 0 2px 20px; }
+  #critic li { display: flex; gap: 8px; }
+  #critic .turn { flex: none; min-width: 26px; color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; padding-top: 2px; }
+  #critic li.fresh { background: var(--new); }
+  #critic li.answered { color: var(--muted); }
+  #critic li.answered .q::after { content: " ✓"; color: var(--yes); }
   .empty, #status { color: var(--muted); font-size: 13px; }
   #status.bad { color: var(--no); }
 </style>
@@ -63,6 +68,10 @@
   <section>
     <header><h2>Open</h2></header>
     <ul id="open"></ul>
+  </section>
+  <section>
+    <header><h2>Critic <span class="muted" id="criticCount"></span></h2><span><button id="toggleAnswered">Hide answered</button></span></header>
+    <ul id="critic"></ul>
   </section>
   <p id="status">Connecting…</p>
 </main>
@@ -130,7 +139,25 @@
     settled.replaceChildren(...((s.settled ?? []).length ? build(s.settled, []).childNodes : [el('li', 'empty', 'Nothing settled yet.')]));
     const open = $('open');
     open.replaceChildren(...((s.open ?? []).length ? s.open.map(openItem) : [el('li', 'empty', 'Nothing open.')]));
+    renderCritic(s);
   }
+
+  // the Critic's questions, newest first: { turn, text, new, answered }; the person can hide the ones already picked up
+  let hideAnswered = false;
+  function renderCritic(s) {
+    const all = s.critic ?? [];
+    const shown = (hideAnswered ? all.filter((c) => c.answered !== true) : all).slice().reverse();
+    const left = all.filter((c) => c.answered !== true).length;
+    $('criticCount').textContent = all.length ? `(${all.length}, ${left} not picked up)` : '';
+    $('toggleAnswered').textContent = hideAnswered ? 'Show all' : 'Hide answered';
+    const items = shown.map((c) => {
+      const li = el('li', (c.new === true ? 'fresh ' : '') + (c.answered === true ? 'answered' : ''));
+      li.append(el('span', 'turn', c.turn ? `#${c.turn}` : ''), el('span', 'q', c.text));
+      return li;
+    });
+    $('critic').replaceChildren(...(items.length ? items : [el('li', 'empty', all.length ? 'Everything asked has been picked up.' : 'Nothing asked yet.')]));
+  }
+  $('toggleAnswered').onclick = () => { hideAnswered = !hideAnswered; if (state) renderCritic(state); };
 
   // an open item is { text, hint, new }; a bare string still shows, just without a hint
   function openItem(o) {
