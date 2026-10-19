@@ -1,0 +1,289 @@
+// Draft test lines behind miao-miao-stories-preview.md: one Hao-shuo-de line per row, then "|" and its plain English.
+// Each "## N" heading is a lesson; every line was parsed with only the words and patterns taught up to that lesson.
+## 2
+Zhè shì "Miāo-miao". | This is Miao-miao.
+Zhè bù shì zhíwù. | This is not a plant.
+## 3
+Zhè shì xiǎo dòng-wù. | This is a small animal. (the bird)
+"Miāo-miao" shì dà dòng-wù. | Miao-miao is a big animal.
+"Miāo-miao" hěn hǎo. | Miao-miao is very good.
+## 4
+Wǒ shì rén. | I am a person.
+Nà shì xiǎo nǚ-rén. | That is a small girl.
+Zhè-ge shì "Miāo-miao". | This one is Miao-miao.
+Nà-ge xiǎo dòng-wù shì "Jī-jī". | That small animal is Ji-ji (the bird).
+Wǒ-men shì rén. Tā-men shì dòng-wù. | We are people. They are animals.
+## 5
+Xiǎo nǚ-rén hē shuǐ. | The girl drinks water.
+Wǒ kàn tā. | I look at her.
+Wǒ méi-yǒu jīn. | I have no money.
+Wǒ méi-yǒu fàn. | I have no food.
+"Miāo-miao" chī fàn. | Miao-miao eats food.
+## 6
+Xiǎo nǚ-rén yǒu dōng-xi. | The girl has something.
+Wǒ wèn: Zhè shì shénme? | I ask: "What is this?"
+Tā shuō: Zhè shì fàn. | She says: "This is food."
+Nà shì "Zhī-zhī". | That is Zhi-zhi (the mouse).
+"Zhī-zhī" wèn: Nǐ yǒu jīn ma? | Zhi-zhi asks: "Do you have money?"
+Wǒ kàn zì. | I look at some characters.
+Zì wèn: Nǐ shì shéi? | The characters ask: "Who are you?"
+Wǒ shuō: Wǒ shì rén. | I say: "I am a person."
+## 7
+Wǒ kàn fàn. | I look at the food.
+Wǒ yào chī. | I want to eat.
+Wǒ méi-yǒu jīn. | I have no money.
+Wǒ bù néng chī. | I cannot eat.
+Wǒ zhīdào "Miāo-miao" bù yào chī. | I know Miao-miao does not want to eat.
+"Miāo-miao" ài kàn wǒ. | Miao-miao loves to watch me.
+Wǒ xué děng. | I learn to wait.
+## 8
+"Miāo-miao" shuìjiào. | Miao-miao sleeps.
+Wǒ huì chī fàn. | I will eat.
+Xiàn-zài wǒ zài chī fàn. | Now I am eating.
+"Miāo-miao" zài shuìjiào. | Miao-miao is sleeping.
+Fàn méi le. | The food is gone.
+Wǒ chī le fàn. | I ate.
+"Miāo-miao" shuìjiào le. | Miao-miao slept.
+Zì wèn: Nǐ chī le fàn ma? | The note asks: "Did you eat?"
+Wǒ shuō: Wǒ chī le. | I say: "I ate."
+## 9
+"Miāo-miao" chī-wán le. | Miao-miao finished eating.
+"Miāo-miao" kàn wǒ. | Miao-miao looks at me.
+Wǒ yǒu fàn. | I have food.
+"Miāo-miao" yòu chī le. | Miao-miao ate again.
+"Jī-jī" shuō: "Miāo-miao" yòu chī le! | Ji-ji says: "Miao-miao ate again!"
+"Miāo-miao" chī-wán hòu, kāishǐ shuìjiào. | After Miao-miao finished eating, it began to sleep.
+Wǒ děng yī-xià. | I wait a moment.
+Wǒ wánr yī-xià. | I play a moment.
+## 10
+Zì wèn: "Miāo-miao" zài nǎ-lǐ? | The note asks: "Where is Miao-miao?"
+Wǒ zhǎo "Miāo-miao". | I look for Miao-miao.
+"Miāo-miao" bù zài wǒ-de qián-miàn. | Miao-miao is not in front of me.
+"Miāo-miao" bù zài wǒ-de zuǒ-biān. | Miao-miao is not on my left.
+"Miāo-miao" bù zài wǒ-de yòu-biān. | Miao-miao is not on my right.
+Bāo zài dì-shàng. | The bag is on the floor.
+"Miāo-miao" zài bāo-lǐ. | Miao-miao is in the bag.
+"Zhī-zhī" zài bāo-de pángbiān. | Zhi-zhi is next to the bag.
+Wǒ shuō: "Miāo-miao" zài wǒ-de jiā. | I say: "Miao-miao is at my home."
+"Miāo-miao" zài wǒ-de bāo-lǐ shuìjiào. | Miao-miao is sleeping in my bag.
+## 11
+Wǒ qǐ-lái le. | I got up.
+Wǒ-de māma huì cóng wǒ-de guó lái wǒ-de jiā. | My mom will come to my home from my country.
+Wǒ-de guó hěn yuǎn. | My country is very far.
+Wǒ qù wài-miàn. | I go outside.
+"Miāo-miao" zài jiā-de kǒu. | Miao-miao stays at the door.
+Wǒ zài lù-de pángbiān děng māma. | I wait for Mom by the road.
+Hěn duō chē lái. Hěn duō chē qù. | Many cars come. Many cars go.
+Yī-ge hěn-duō-rén-de chē dào jiā fùjìn le. | A car full of people comes near my home.
+Chē bù dòng le. | The car stops.
+Māma cóng chē-shàng xià-lái le. | Mom gets out of the car.
+Wǒ shuō: Nǐ dào le! | I say: "You have arrived!"
+Māma shuō: Wǒ dào le. Lù hěn yuǎn. | Mom says: "I have arrived. It was a long way."
+Wǒ-men zǒu-lù dào jiā le. | We walk home.
+"Miāo-miao" kàn māma. | Miao-miao looks at Mom.
+## 12
+Wài-miàn zhēn lěng. | It is really cold outside.
+Wǒ hěn lěng. | I am very cold.
+Xiǎo nǚ-rén wèn: Nǐ lěng ma? | The girl asks: "Are you cold?"
+Wǒ shuō: Wǒ zhēn lěng. | I say: "I am really cold."
+"Miāo-miao" shēntǐ hěn rè. | Miao-miao's body is very hot.
+"Miāo-miao" bù lěng. | Miao-miao is not cold.
+"Miāo-miao" zhǐ shuìjiào. | Miao-miao only sleeps.
+Xiǎo nǚ-rén yǒu rè shuǐ. | The girl has hot water.
+Wǒ hē rè shuǐ. | I drink the hot water.
+Shuǐ hěn tián. | The water is sweet.
+Wǒ bù lěng le. | I am not cold now.
+Zì wèn: Nǐ-de shēntǐ hǎo ma? | The note asks: "Are you well?"
+Wǒ shuō: Wǒ-de shēntǐ hěn hǎo. | I say: "I am very well."
+## 13
+Wài-miàn bǐ jiā lěng. | It is colder outside than at home.
+Wǒ bǐ xiǎo nǚ-rén gāo. | I am taller than the girl.
+Xiǎo nǚ-rén méi-yǒu wǒ gāo. | The girl is not as tall as I am.
+"Miāo-miao" bǐ "Jī-jī" dà. | Miao-miao is bigger than Ji-ji.
+"Zhī-zhī" zuì xiǎo. | Zhi-zhi is the smallest.
+Wǒ kàn bāo. | I look at the bags.
+Zhè-xiē bāo yī-yàng. | These bags are the same.
+"Miāo-miao" zài yī-ge bāo-lǐ shuìjiào. | Miao-miao sleeps in one of them.
+Xiǎo nǚ-rén-de bāo bǐ wǒ-de bāo xiǎo. | The girl's bag is smaller than mine.
+Zì wèn: Shéi zuì ài shuìjiào? | The note asks: "Who loves sleeping the most?"
+Wǒ shuō: "Miāo-miao" zuì ài shuìjiào. | I say: "Miao-miao loves sleeping the most."
+## 14
+Wǒ kāi mén. | I open the door.
+Xiǎo nǚ-rén yě lái. | The girl comes too.
+"Miāo-miao" yě lái. | Miao-miao comes too.
+Wǒ-men yī-qǐ chī fàn. | We eat together.
+"Zhī-zhī" yě chī. | Zhi-zhi eats too.
+"Jī-jī" yě chī. | Ji-ji eats too.
+Wǒ-men dōu chī fàn. | We all eat.
+Dōu chī-wán le. | It is all eaten.
+Mén-shàng yǒu zì. | There are characters on the door.
+Zì shuō: Nǐ-men dōu hǎo ma? | The note says: "Are you all well?"
+Wǒ-men dōu hěn hǎo. | We are all very well.
+Wǒ guān dēng. | I turn off the light.
+"Miāo-miao" hái shuìjiào. | Miao-miao is still sleeping.
+## 15
+Wǒ-de jiā hěn luàn. | My home is very messy.
+Wǒ-de dōng-xi dōu zài dì-shàng. | All my things are on the floor.
+Wǒ bǎ dōng-xi fàng zài bāo-lǐ. | I put the things in the bag.
+Wǒ bǎ jiā zuò gānjìng le. | I made my home clean.
+Jiā gānjìng le. | The home is clean now.
+Xiǎo nǚ-rén-de wánr-jù huài le. | The girl's toy is broken.
+Wǒ bǎ wánr-jù zuò hǎo le. | I fixed the toy.
+Xiǎo nǚ-rén hěn ài tā-de wánr-jù. | The girl loves her toy.
+Wǒ yǒu zhíwù. | I have a plant.
+Zhíwù biàn dà le. | The plant has grown big.
+"Miāo-miao" yòu bǎ jiā zuò luàn le! | Miao-miao made the home messy again!
+## 16
+Wǒ-de bāo bù jiàn le. | My bag is gone.
+Wǒ zhǎo bāo. | I look for the bag.
+Wǒ zhǎo-bù-dào. | I cannot find it.
+"Jī-jī" fēi chū-qù le. | Ji-ji flew out.
+"Jī-jī" fēi huí-lái le. | Ji-ji flew back.
+"Miāo-miao" tǎng zài dì-shàng. | Miao-miao lies on the floor.
+Wǒ zhàn zài "Miāo-miao"-de qián-miàn. | I stand in front of Miao-miao.
+Wǒ kàn-jiàn bāo le. | I see the bag.
+Bāo zài "Miāo-miao"-de xià-miàn. | The bag is under Miao-miao.
+Wǒ ná bāo. | I take the bag.
+"Miāo-miao" bù dòng. | Miao-miao does not move.
+Wǒ zhǎo-dào le! | I found it!
+Wǒ-de ěrduo tīng-jiàn "Zhī-zhī". | My ears hear Zhi-zhi.
+Zì wèn: Nǐ yào qù nǎ-lǐ? | The note asks: "Where are you going?"
+Wǒ shuō: Wǒ yào chū-qù. | I say: "I am going out."
+## 17
+Wǒ shuō: Yī, èr, sān, sì, wǔ, liù, qī, bā, jiǔ, shí. | I count: one, two, ... ten.
+Wǒ yǒu liǎng-ge bāo. | I have two bags.
+Xiǎo nǚ-rén yǒu sān-ge wánr-jù. | The girl has three toys.
+"Miāo-miao" zhǐ yǒu yī-ge dì-fāng. | Miao-miao has only one place.
+Zhè-lǐ yǒu liǎng-ge dòng-wù. | Here are two animals.
+Yī-ge shì "Miāo-miao". Yī-ge shì "Jī-jī". | One is Miao-miao. One is Ji-ji.
+Wǒ-de jiā shì sì hào. | My home is number four.
+"Zhī-zhī" shuō: Yī, èr, sān. | Zhi-zhi counts: one, two, three.
+Wǒ-men shì wǔ-ge. | We are five.
+Shí-yī, shí-èr. | Eleven, twelve.
+Zhè shì dì-èr cì. | This is the second time.
+Zì wèn: Nǐ yǒu duō-shǎo jīn? | The note asks: "How much money do you have?"
+Wǒ shuō: Wǒ yǒu shí jīn. | I say: "I have ten."
+## 18
+Xiàn-zài shì qī diǎn. | It is seven o'clock.
+Wǒ qǐ-lái le. | I get up.
+Wǒ qǐ-lái hěn zǎo. | I get up early.
+"Miāo-miao" qǐ-lái hěn wǎn. | Miao-miao gets up late.
+Fàn shì sān jīn. Shuǐ shì sì jīn. | The food is three. The water is four.
+Wǒ yǒu qī jīn. | I have seven.
+Wǒ yào suàn. | I want to work it out.
+"Zhī-zhī" kuài suàn. | Zhi-zhi works it out fast.
+"Zhī-zhī" shuō: Sān, sì fàng zài yī-qǐ, shì qī. | Zhi-zhi says: "Three and four together is seven."
+Wǒ děng le liǎng tiān. | I waited two days.
+Zì wèn: Xiàn-zài shì duō-shǎo diǎn? | The note asks: "What time is it now?"
+Wǒ shuō: Xiàn-zài shì qī diǎn. | I say: "It is seven o'clock."
+## 19
+Zhè shì huà. | This is a picture.
+Huà zhǐ yǒu hēi sè. | The picture has only black.
+"Miāo-miao" shì bái sè. | Miao-miao is white.
+"Zhī-zhī" shì hēi sè. | Zhi-zhi is black.
+Wǒ-de bāo shì hóng sè. | My bag is red.
+Hóng sè hěn hǎo-kàn. | Red looks nice.
+Zhǐ yǒu yī-ge dōng-xi shì hóng sè. | Only one thing is red.
+Zì wèn: Nǐ-de bāo shì shénme yánsè? | The note asks: "What color is your bag?"
+Wǒ shuō: Wǒ-de bāo shì hóng sè. | I say: "My bag is red."
+## 20
+Wǒ yǒu chī-de. | I have something to eat.
+Wǒ yǒu hē-de. | I have something to drink.
+Xiǎo nǚ-rén ài chī-de. | The girl loves things to eat.
+"Jī-jī" shuō: Wǒ shì chī-de! | Ji-ji says: "I am food!"
+Wǒ shuō: Nǐ bù shì chī-de. Nǐ shì chī-de rén. | I say: "You are not food. You are one who eats."
+Wǒ shuō: Zhè-yàng shuō. | I say: "Say it this way."
+"Miāo-miao" shuō-de hěn shǎo. | Miao-miao says very little.
+Xiǎo nǚ-rén shuō-de hěn kuài. | The girl talks very fast.
+"Miāo-miao"-de máo hěn bái. | Miao-miao's fur is very white.
+"Miāo-miao"-de dùzi hěn dà. | Miao-miao's belly is big.
+"Zhī-zhī"-de yá hěn xiǎo. | Zhi-zhi's teeth are small.
+Wǒ-de bízi hěn lěng. | My nose is very cold.
+Wǒ ài chī guǒ. | I love eating fruit.
+Zhè-ge cí shì shénme? | What is this word?
+Wǒ xué cí. | I learn words.
+Zì shuō: Nǐ shì xué cí-de rén. | The note says: "You are a person who learns words."
+Wǒ shuō: Wǒ shì xué cí-de rén. | I say: "I am a person who learns words."
+## 21
+Xiǎo nǚ-rén gěi wǒ guǒ. | The girl gives me fruit.
+Wǒ yòng shǒu ná guǒ. | I take the fruit with my hand.
+Wǒ hé xiǎo nǚ-rén dōu chī guǒ. | The girl and I both eat fruit.
+Guǒ hěn tián. | The fruit is sweet.
+Wǒ gěi "Miāo-miao" fàn. | I give Miao-miao food.
+Wǒ mō "Miāo-miao". | I pat Miao-miao.
+Wǒ duì "Miāo-miao" hěn hǎo. | I am good to Miao-miao.
+"Miāo-miao" duì wǒ yě hěn hǎo. | Miao-miao is good to me too.
+Wǒ tì xiǎo nǚ-rén ná bāo. | I carry the bag for the girl.
+Wǒ wèi xiǎo nǚ-rén zuò fàn. | I make food for the girl.
+Nǐ chī guǒ hái-shi chī fàn? | Do you eat fruit or food?
+Wǒ shuō: Guǒ. | I say: "Fruit."
+Xiǎo nǚ-rén shuō: Duì! | The girl says: "Right!"
+Wǒ hé xiǎo nǚ-rén guānxi hěn hǎo. | The girl and I get along very well.
+Zì wèn: Nǐ hé "Miāo-miao" guānxi hǎo ma? | The note asks: "Are you and Miao-miao close?"
+Wǒ shuō: Hěn hǎo. | I say: "Very."
+## 22
+Wǒ lái-wǎn le. | I am late.
+Yīnwèi chē bù dòng le. | Because the car stopped.
+Xiǎo nǚ-rén děng wǒ. | The girl waits for me.
+Xiǎo nǚ-rén shuō: Rúguǒ nǐ lái, wǒ jiù děng nǐ. | The girl says: "If you come, I will wait for you."
+Wǒ lái le, dàn-shì xiǎo nǚ-rén bù zài. | I came, but the girl was not there.
+Zhè-ge zhíwù méi sǐ. | This plant did not die.
+Zhè-ge zhíwù huó le. | This plant is alive.
+Rúguǒ wǒ bù děng, wǒ jiù huí-qù. | If I do not wait, I go back.
+Yīnwèi wǒ děng, xiǎo nǚ-rén lái le. | Because I waited, the girl came.
+## 23
+Xiǎo nǚ-rén wèn: Nǐ jiào shénme? | The girl asks: "What are you called?"
+Wǒ shuō: Wǒ jiào xué-shēng. | I say: "I am called Student."
+"Miāo-miao" shuō: Nǐ méi shuō "Nǐ hǎo". | Miao-miao says: "You did not say hello."
+Wǒ shuō: Nǐ hǎo! | I say: "Hello!"
+Xiǎo nǚ-rén xiào le. | The girl laughed.
+Wǒ shuō: Xiè-xie. | I say: "Thank you."
+Xiǎo nǚ-rén shuō: Méi guānxi. | She says: "Never mind."
+Wǒ shuō: Zài-jiàn! | I say: "Goodbye!"
+Bié pà. | Do not be afraid.
+## 24
+Wǒ-de bāo zài dì-shàng. | My bag is on the floor.
+Wǒ yào huí-qù le. | I am going home soon.
+Wǒ hěn nán-guò. | I am very sad.
+Wǒ yě hěn kāi-xīn. | I am also very happy.
+Wǒ hěn nán-guò wǒ yào zǒu le. | I am sad that I have to go.
+Zì shuō: Hěn kāi-xīn nǐ lái le! | The note says: "So glad you came!"
+Wǒ jì-dé nǐ-de zì. | I remember your notes.
+Wǒ jué-dé wǒ-de jiā zài zhè-lǐ. | I feel my home is here.
+Wǒ tīng-jiàn xiǎo nǚ-rén-de shēngyīn. | I hear the girl's voice.
+Xiǎo nǚ-rén shuō: Nǐ kāi-xīn ma? | The girl says: "Are you happy?"
+Wǒ shuō: Wǒ kāi-xīn. | I say: "I am happy."
+"Miāo-miao" bù shuō. | Miao-miao says nothing.
+"Miāo-miao" shuìjiào. | Miao-miao sleeps.
+Zì wèn: Nǐ jì-dé wǒ ma? | The note asks: "Do you remember me?"
+Wǒ shuō: Wǒ jì-dé. | I say: "I remember."
+## 25
+Yuè hěn yuán. | The moon is very round.
+Yuè yuán-yuán-de, hǎo-hǎo-de. | The moon is nice and round.
+Wǒ kàn-kàn yuè. | I take a look at the moon.
+Rén-rén dōu kàn yuè. | Everyone looks at the moon.
+Gè-gè dōu hěn hǎo. | Each one is very good.
+Xiǎo nǚ-rén shuō: Nǐ kàn-kàn! | The girl says: "Take a look!"
+Wǒ děng-děng. | I wait a little.
+"Miāo-miao" kàn yuè, hái shuìjiào. | Miao-miao looks at the moon, still sleepy.
+"Miāo-miao" shì liǎng cì "miāo". | Miao-miao is "miao" two times.
+Zhè-yàng, "Miāo-miao" hěn hǎo shuō. | This way, Miao-miao is easy to say.
+## 26
+Wǒ yào xiě zì. | I want to write.
+Xiǎo nǚ-rén bāng wǒ xiě. | The girl helps me write.
+"Miāo-miao" shuō: Wǒ lái xiě! | Miao-miao says: "Let me write!"
+Wǒ shuō: Wǒ lái xiě. | I say: "I will write."
+Xiǎo nǚ-rén shuō: Gěi wǒ kàn yī-xià, hǎo ma? | The girl says: "Let me look, okay?"
+Wǒ xiě: Nǐ hǎo. | I write: "Hello."
+Wǒ xiě: Wǒ shì xué-shēng. | I write: "I am a student."
+Wǒ xiě: Wǒ xué le hěn duō cí. | I write: "I learned many words."
+Wǒ xiě: "Miāo-miao" zài wǒ-de jiā. "Miāo-miao" hěn hǎo. | I write: "Miao-miao is at my home. Miao-miao is very good."
+Wǒ xiě: Wǒ hěn kāi-xīn. | I write: "I am very happy."
+Wǒ xiě: Xiè-xie nǐ-de zì. | I write: "Thank you for your notes."
+Wǒ xiě: Wǒ yào huí-qù, dàn-shì wǒ huì zài lái. | I write: "I will go home, but I will come again."
+Wǒ xiě: Nǐ lái hē shuǐ, hǎo ma? | I write: "Come and have some water (tea), okay?"
+Wǒ bǎ zì fàng zài mén-shàng. | I put the note on the door.
+Yǒu yī-ge shǒu. | There is a hand.
+Shǒu ná rè shuǐ. | The hand brings hot water.
+"Miāo-miao" ná zì, zǒu le. | Miao-miao takes the note and goes.
+Wǒ xiào. | I smile.
