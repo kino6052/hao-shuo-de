@@ -19,4 +19,7 @@ export const MAX_EXAMPLES_IN_A_ROW = 8;
 
 // The most sections (modules) one lesson holds, so no lesson overloads the
 // student (scripts/check-book.js). A lesson over the cap is split in two.
+// The story at the end of a lesson (the module called READING_MODULE) is not a
+// point to learn, so it counts toward neither this cap nor the example runs.
+export const READING_MODULE = "reading";
 export const MAX_SECTIONS_PER_LESSON = 7;

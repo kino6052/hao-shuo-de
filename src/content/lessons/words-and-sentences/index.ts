@@ -8,6 +8,7 @@ import { lesson } from "../../../lib/lesson.ts";
 import is from "./is.ts";
 import thisPoint from "./this.ts";
 import not from "./not.ts";
+import reading from "./reading.ts";
 
 export const meta = {
   id: "words-and-sentences",
@@ -44,5 +45,6 @@ export default lesson(meta.id, {
     is,
     thisPoint,
     not,
+    reading,
   ],
 });

@@ -11,6 +11,7 @@ import inOnUnder from "./in-on-under.ts";
 import sides from "./sides.ts";
 import middle from "./middle.ts";
 import leftRight from "./left-right.ts";
+import reading from "./reading.ts";
 
 export const meta = {
   id: "where-it-is",
@@ -50,5 +51,6 @@ export default lesson(meta.id, {
     sides,
     middle,
     leftRight,
+    reading,
   ],
 });

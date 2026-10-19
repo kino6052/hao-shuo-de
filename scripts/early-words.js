@@ -21,8 +21,8 @@ import { wordRefIds, wordRefRe, soleWordRef } from '../src/lib/word-refs.js';
 import { refSenses, senseKey } from '../src/lib/senses.js';
 
 const TONE_MARK_RE = /[āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ]/i;
-// The book's own name and its mascot's are not vocabulary.
-const NAME_RE = /h[aǎ]o-shu[oō]-de|mi[aā]o-mi[aā]o/gi;
+// The book's own name, its mascot's, the story cast's (the bird and the mouse) and the quoted sound "miāo" are not vocabulary.
+const NAME_RE = /h[aǎ]o-shu[oō]-de|mi[aā]o-mi[aā]o|j[iī]-j[iī]|zh[iī]-zh[iī]|"mi[aā]o"/gi;
 // Toneless spellings of dictionary words, as they appear inside compounds.
 const TONELESS_FORMS = { ge: 'ge4' };
 // Toneless pinyin words that are real Mandarin but not in the dictionary, so

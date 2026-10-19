@@ -16,6 +16,7 @@ import teach from "./teach.ts";
 import haveSomeone from "./have-someone.ts";
 import mayI from "./may-i.ts";
 import rain from "./rain.ts";
+import reading from "./reading.ts";
 
 export const meta = {
   id: "everyday-patterns",
@@ -56,5 +57,6 @@ export default lesson(meta.id, {
     haveSomeone,
     mayI,
     rain,
+    reading,
   ],
 });

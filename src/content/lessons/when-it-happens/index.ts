@@ -10,6 +10,7 @@ import now from "./now.ts";
 import will from "./will.ts";
 import before from "./before.ts";
 import time from "./time.ts";
+import reading from "./reading.ts";
 
 export const meta = {
   id: "when-it-happens",
@@ -48,5 +49,6 @@ export default lesson(meta.id, {
     will,
     before,
     time,
+    reading,
   ],
 });

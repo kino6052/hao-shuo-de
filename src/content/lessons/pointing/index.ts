@@ -11,6 +11,7 @@ import geIsUniversal from "./ge-is-universal.ts";
 import pointingToPeople from "./pointing-to-people.ts";
 import pluralPointers from "./plural-pointers.ts";
 import possessionDe from "./possession-de.ts";
+import reading from "./reading.ts";
 
 export const meta = {
   id: "pointing",
@@ -50,5 +51,6 @@ export default lesson(meta.id, {
     pointingToPeople,
     pluralPointers,
     possessionDe,
+    reading,
   ],
 });

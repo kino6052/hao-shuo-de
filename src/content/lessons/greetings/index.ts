@@ -12,6 +12,7 @@ import name from "./name.ts";
 import order from "./order.ts";
 import calling from "./calling.ts";
 import neverMind from "./never-mind.ts";
+import reading from "./reading.ts";
 
 export const meta = {
   id: "greetings",
@@ -51,5 +52,6 @@ export default lesson(meta.id, {
     neverMind,
     name,
     order,
+    reading,
   ],
 });

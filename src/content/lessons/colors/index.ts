@@ -8,6 +8,7 @@ import { lesson } from "../../../lib/lesson.ts";
 import colorThing from "./color-thing.ts";
 import isColor from "./is-color.ts";
 import whatColor from "./what-color.ts";
+import reading from "./reading.ts";
 
 export const meta = {
   id: "colors",
@@ -44,5 +45,6 @@ export default lesson(meta.id, {
     colorThing,
     isColor,
     whatColor,
+    reading,
   ],
 });

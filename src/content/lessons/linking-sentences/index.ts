@@ -11,6 +11,7 @@ import ifPoint from "./if.ts";
 import then from "./then.ts";
 import only from "./only.ts";
 import asSoonAs from "./as-soon-as.ts";
+import reading from "./reading.ts";
 
 export const meta = {
   id: "linking-sentences",
@@ -50,5 +51,6 @@ export default lesson(meta.id, {
     then,
     only,
     asSoonAs,
+    reading,
   ],
 });

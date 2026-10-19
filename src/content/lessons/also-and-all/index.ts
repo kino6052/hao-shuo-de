@@ -13,6 +13,7 @@ import all from "./all.ts";
 import everything from "./everything.ts";
 import part from "./part.ts";
 import together from "./together.ts";
+import reading from "./reading.ts";
 
 export const meta = {
   id: "also-and-all",
@@ -53,5 +54,6 @@ export default lesson(meta.id, {
     together,
     everything,
     part,
+    reading,
   ],
 });

@@ -13,6 +13,7 @@ import countKinds from "./count-kinds.ts";
 import teens from "./teens.ts";
 import label from "./label.ts";
 import beforeAfter from "./before-after.ts";
+import reading from "./reading.ts";
 
 export const meta = {
   id: "numbers",
@@ -53,5 +54,6 @@ export default lesson(meta.id, {
     teens,
     label,
     beforeAfter,
+    reading,
   ],
 });

@@ -12,6 +12,7 @@ import addTake from "./add-take.ts";
 import timesShare from "./times-share.ts";
 import age from "./age.ts";
 import price from "./price.ts";
+import reading from "./reading.ts";
 
 export const meta = {
   id: "time-and-sums",
@@ -52,5 +53,6 @@ export default lesson(meta.id, {
     price,
     addTake,
     timesShare,
+    reading,
   ],
 });

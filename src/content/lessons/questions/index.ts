@@ -12,6 +12,7 @@ import answer from "./answer.ts";
 import sayAsk from "./say-ask.ts";
 import thingFirst from "./thing-first.ts";
 import sayNo from "./say-no.ts";
+import reading from "./reading.ts";
 
 export const meta = {
   id: "questions",
@@ -52,5 +53,6 @@ export default lesson(meta.id, {
     answer,
     sayNo,
     sayAsk,
+    reading,
   ],
 });

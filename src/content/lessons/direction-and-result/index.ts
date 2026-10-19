@@ -16,6 +16,7 @@ import moveThing from "./move-thing.ts";
 import result from "./result.ts";
 import canCant from "./can-cant.ts";
 import seems from "./seems.ts";
+import reading from "./reading.ts";
 
 export const meta = {
   id: "direction-and-result",
@@ -56,5 +57,6 @@ export default lesson(meta.id, {
     result,
     canCant,
     seems,
+    reading,
   ],
 });

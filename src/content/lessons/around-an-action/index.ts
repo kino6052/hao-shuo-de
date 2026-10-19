@@ -13,6 +13,7 @@ import start from "./start.ts";
 import moment from "./moment.ts";
 import again from "./again.ts";
 import times from "./times.ts";
+import reading from "./reading.ts";
 
 export const meta = {
   id: "around-an-action",
@@ -53,5 +54,6 @@ export default lesson(meta.id, {
     moment,
     again,
     times,
+    reading,
   ],
 });

@@ -12,6 +12,7 @@ import ba from "./ba.ts";
 import baClean from "./ba-clean.ts";
 import fang from "./fang.ts";
 import strong from "./strong.ts";
+import reading from "./reading.ts";
 
 export const meta = {
   id: "becoming-and-making",
@@ -52,5 +53,6 @@ export default lesson(meta.id, {
     baClean,
     fang,
     strong,
+    reading,
   ],
 });

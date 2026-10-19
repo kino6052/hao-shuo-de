@@ -10,6 +10,7 @@ import { lesson } from "../../../lib/lesson.ts";
 import verbs from "./verbs.ts";
 import describe from "./describe.ts";
 import every from "./every.ts";
+import reading from "./reading.ts";
 
 export const meta = {
   id: "doubling-words",
@@ -46,5 +47,6 @@ export default lesson(meta.id, {
     verbs,
     describe,
     every,
+    reading,
   ],
 });

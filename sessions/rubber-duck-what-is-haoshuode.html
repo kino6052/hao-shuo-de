@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rubber duck: what is haoshuode</title>
+<style>
+  :root {
+    --bg: #fbf9f4; --fg: #1d1b16; --muted: #6b665b; --line: #e3ddcf; --card: #ffffff;
+    --good: #2f7d4f; --part: #b36b00; --bad: #b3261e; --accent: #c4561a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17160f; --fg: #ece8dc; --muted: #a29c8c; --line: #332f24; --card: #201e16;
+      --good: #6fcf97; --part: #f2b24c; --bad: #f2837b; --accent: #f08c5a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17160f; --fg: #ece8dc; --muted: #a29c8c; --line: #332f24; --card: #201e16;
+    --good: #6fcf97; --part: #f2b24c; --bad: #f2837b; --accent: #f08c5a;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 Georgia, "Times New Roman", serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 80px; }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 4px; }
+  h2 { font-size: 1.35rem; margin: 48px 0 12px; padding-top: 16px; border-top: 1px solid var(--line); }
+  h3 { font-size: 1.05rem; margin: 0 0 10px; line-height: 1.4; }
+  h4 { margin: 0 0 2px; font-size: 1rem; }
+  .sub { color: var(--muted); margin: 0 0 24px; }
+  .rules { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 12px 20px; }
+  .rules li { margin: 4px 0; }
+  .q { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 16px 18px; margin: 14px 0; }
+  .q.open { border-style: dashed; }
+  .num { display: inline-block; min-width: 1.8em; color: var(--accent); font-family: ui-monospace, Consolas, monospace; }
+  .try { margin: 10px 0 0; }
+  .trynum { font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+  blockquote { margin: 4px 0 8px; padding: 2px 0 2px 14px; border-left: 3px solid var(--line); color: var(--fg); }
+  .verdict { margin: 0; font-size: .95rem; }
+  .verdict.correct strong { color: var(--good); }
+  .verdict.partly strong { color: var(--part); }
+  .verdict.incorrect strong { color: var(--bad); }
+  .skipped { color: var(--muted); font-style: italic; margin: 6px 0 0; }
+  .tag { font-size: .7rem; font-family: system-ui, sans-serif; background: var(--line); color: var(--muted); padding: 1px 7px; border-radius: 99px; vertical-align: middle; margin-left: 6px; white-space: nowrap; }
+  table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--line); border-radius: 8px; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+  th { width: 11em; font-weight: 600; color: var(--muted); font-size: .9rem; }
+  tr:last-child th, tr:last-child td { border-bottom: 0; }
+  ul.plain { padding-left: 20px; }
+  .ref { color: var(--muted); font-size: .9rem; }
+  .resolved { color: var(--good); margin: 2px 0 0; }
+  .contra li { margin-bottom: 14px; }
+  .contra p { margin: 2px 0; }
+  dl { margin: 0; }
+  dt { font-weight: 700; margin-top: 12px; }
+  dd { margin: 2px 0 0 0; color: var(--fg); }
+  .branch { margin: 14px 0; }
+  .says { margin: 0 0 4px; color: var(--muted); font-size: .95rem; }
+  ul.pieces { list-style: none; padding: 0; margin: 4px 0 0; }
+  ul.pieces li { display: flex; gap: 8px; align-items: baseline; font-size: .95rem; margin: 2px 0; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; flex: none; border: 2px solid var(--muted); }
+  li.held .dot { background: var(--good); border-color: var(--good); }
+  .toc { font-family: system-ui, sans-serif; font-size: .9rem; display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 16px 0 0; }
+  .toc a { color: var(--accent); text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+  .stat { font-family: system-ui, sans-serif; font-size: .9rem; color: var(--muted); }
+  @media (max-width: 520px) { th { width: 7em; } body { font-size: 16px; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Rubber duck: what is haoshuode?</h1>
+  <p class="sub">A session of explaining Hǎo-shuō-de to a duck that only asks questions. Saved 2026-10-18, paused at question 19 of the first stretch.</p>
+
+  <ul class="rules">
+    <li>I explain; the duck only asks. It never gives the right answer.</li>
+    <li>Each answer gets a verdict: correct, partly correct, incorrect, or can't tell.</li>
+    <li>One question at a time: a what, a why or a how.</li>
+    <li>The duck keeps a private breakdown of the topic, and a piece counts as held only when I have explained it in my own words.</li>
+  </ul>
+
+  <nav class="toc">
+    <a href="#questions">Questions and answers</a>
+    <a href="#essence">The essence so far</a>
+    <a href="#contradictions">Contradictions found</a>
+    <a href="#confusing">Confusing points</a>
+    <a href="#glossary">Glossary</a>
+    <a href="#pieces">What is held</a>
+  </nav>
+
+  <h2 id="questions">Questions and answers</h2>
+  
+    <section class="q" id="q1">
+      <h3><span class="num">1</span> What is haoshuode, and what does it do, as you would tell a friend?</h3>
+      
+      <div class="try">
+        
+        <blockquote>haoshuode is a language. it is a most minimal version of Mandarin. it has only 230 and grammar rules that allow you to say almost anything and allowing you transition to real mandarin in a fraction of time (because it is a bridge language)</blockquote>
+        <p class="verdict partly"><strong>Partly correct</strong> &middot; "Minimal version of Mandarin" and "bridge language" hold. "Only 230" does not say 230 of what. I could not check "a fraction of time".</p>
+      </div>
+    </section>
+    <section class="q" id="q2">
+      <h3><span class="num">2</span> What are the 230 you mentioned?</h3>
+      <p class="skipped">Not answered. The duck dropped this one because later questions covered it.</p>
+    </section>
+    <section class="q" id="q3">
+      <h3><span class="num">3</span> Why not just follow HSK? <span class="tag">proposed by me</span></h3>
+      
+      <div class="try">
+        
+        <blockquote>HSK is a Mandarin learning system that is supposed to teach you CHinese language systematically, it has levels, and vocab that you should know, but none of these levels allow you to have a "closed system" where you can express your thoughts and ideas and none of it really teaches you the real Chinese- it teaches you to write and read most of all - but even then you are scoped to graded readers</blockquote>
+        <p class="verdict partly"><strong>Partly correct</strong> &middot; "Levels", "vocab" and "graded readers" hold, and so does "not real Chinese". "Teaches you to write and read most" I could not check.</p>
+      </div>
+    </section>
+    <section class="q" id="q4">
+      <h3><span class="num">4</span> Why is this new? <span class="tag">proposed by me</span></h3>
+      
+      <div class="try">
+        
+        <blockquote>this is new because other methods always give you the real mandarin - just changing the approach slightly - either certain flash cards (like with apps that teach you hanzi by pictures) or ai conversations, or comprehensive input and so on - they only change the approach not the system itself - we treat it like engineers - we separate concerns - we ask ourselves what are the bottlenekcs, what are the layers of responsibility, where are the mixed, what is essence, what is accidents. this allows use simplify the system without losing its essence and fundamentally reword the problem. because this is a complete language (although not a Mandarin) it is still a speed ramp to mandarin, and because it is complete books and films can be translated to it</blockquote>
+        <p class="verdict partly"><strong>Partly correct</strong> &middot; "Other methods only change the approach" holds. "Not a Mandarin" does not sit with "minimal version of Mandarin" (question 1). "Complete" I could not check.</p>
+      </div>
+    </section>
+    <section class="q" id="q5">
+      <h3><span class="num">5</span> How can both hold: "minimal version of Mandarin" (question 1) and "not a Mandarin" (question 4)?</h3>
+      
+      <div class="try">
+        <div class="trynum">Try 1</div>
+        <blockquote>yes, although it is the most minimal version it can say almost anything this is because Mandarin has a lot of inessential words that could be expressed by more atomic ones</blockquote>
+        <p class="verdict partly"><strong>Partly correct</strong> &middot; "Inessential words expressed by more atomic ones" holds. It leaves "not a Mandarin" (question 4) untouched.</p>
+      </div>
+      <div class="try">
+        <div class="trynum">Try 2</div>
+        <blockquote>because it is a subset, subset !== whole</blockquote>
+        <p class="verdict correct"><strong>Correct</strong> &middot; "Subset, not whole" makes both statements fit.</p>
+      </div>
+    </section>
+    <section class="q" id="q6">
+      <h3><span class="num">6</span> What kind of words does haoshuode use?</h3>
+      
+      <div class="try">
+        
+        <blockquote>hoashuode uses 230 atomic words most of which are nouns and verbs + words with various purposes, everything else is created from these 230 words</blockquote>
+        <p class="verdict partly"><strong>Partly correct</strong> &middot; "Nouns and verbs" and "everything else is created from these" hold. "230 atomic words" does not hold.</p>
+      </div>
+    </section>
+    <section class="q" id="q7">
+      <h3><span class="num">7</span> What does "atomic" mean here, in the plainest words?</h3>
+      
+      <div class="try">
+        
+        <blockquote>atomic means you cannot break it down further / express it in other terms</blockquote>
+        <p class="verdict correct"><strong>Correct</strong> &middot; The meaning is there, in plain words: it cannot be broken down or put in other terms.</p>
+      </div>
+    </section>
+    <section class="q" id="q8">
+      <h3><span class="num">8</span> What follows if some of the 230 can be described by other words among the 230?</h3>
+      
+      <div class="try">
+        
+        <blockquote>it would mean that a word is not an atom. actually not every word in core is an atom - just minimal set of necessary words to express everything most naturally</blockquote>
+        <p class="verdict partly"><strong>Partly correct</strong> &middot; "Not every word in core is an atom" holds. "Minimal set of necessary words" does not sit with a word that others can describe.</p>
+      </div>
+    </section>
+    <section class="q" id="q9">
+      <h3><span class="num">9</span> Why is a word that other words can describe still among the 230?</h3>
+      
+      <div class="try">
+        
+        <blockquote>because without them we lose ability to express things more naturally that will be later carried into the real mandarin learning</blockquote>
+        <p class="verdict correct"><strong>Correct</strong> &middot; The reason is there: losing natural expression, and the carry-over into real Mandarin.</p>
+      </div>
+    </section>
+    <section class="q" id="q10">
+      <h3><span class="num">10</span> How is everything else created from the 230?</h3>
+      
+      <div class="try">
+        
+        <blockquote>it is important to undersand that within 230 some words are true atoms - cannot be described otherwise. everything else is created by combining these 230 following simple rules that outlined in haoshuode grammar rules</blockquote>
+        <p class="verdict partly"><strong>Partly correct</strong> &middot; "True atoms" and "combining by grammar rules" hold. "Combining" is as far as it goes: it does not show one thing being built.</p>
+      </div>
+    </section>
+    <section class="q" id="q11">
+      <h3><span class="num">11</span> How, step by step, would you say a thing that none of the 230 names?</h3>
+      
+      <div class="try">
+        
+        <blockquote>first, if it is a thing you need to find a closest matching thing that describes it - can only thing be used to desribe it? or maybe it is a tool, then we have to answer question what kind of tool? and build the descriptive part of this that solidiefies and concretefies the meaning</blockquote>
+        <p class="verdict correct"><strong>Correct</strong> &middot; The steps are there: find the closest matching thing, ask what kind, then build a descriptive part that makes it concrete.</p>
+      </div>
+    </section>
+    <section class="q" id="q12">
+      <h3><span class="num">12</span> What is the word you end up with, compared with the 230?</h3>
+      
+      <div class="try">
+        
+        <blockquote>the word becomes longer, sometimes much longer, yet it is clear and descriptive</blockquote>
+        <p class="verdict partly"><strong>Partly correct</strong> &middot; "Longer" and "clear and descriptive" hold. It does not say what the new word is to the 230.</p>
+      </div>
+    </section>
+    <section class="q" id="q13">
+      <h3><span class="num">13</span> What is the new word made of?</h3>
+      
+      <div class="try">
+        
+        <blockquote>new word made of 230 core words using the grammar rules</blockquote>
+        <p class="verdict correct"><strong>Correct</strong> &middot; "Made of the 230 core words under grammar rules" holds. Your word meanings are in the glossary; I could not check "closed system".</p>
+      </div>
+    </section>
+    <section class="q" id="q14">
+      <h3><span class="num">14</span> What can it not say? <span class="tag">proposed by me</span></h3>
+      
+      <div class="try">
+        
+        <blockquote>it cannot express scientific or other terminology that is highly specific and jargon-filled naturally because it would require describing each term as long text, wheras in full language words are shortcuts to such constructions</blockquote>
+        <p class="verdict correct"><strong>Correct</strong> &middot; The kind of thing and the reason are both there: a long description, where a full language has a shortcut word.</p>
+      </div>
+    </section>
+    <section class="q" id="q15">
+      <h3><span class="num">15</span> Why can so few words say so much?</h3>
+      
+      <div class="try">
+        
+        <blockquote>so few words can say so much is because our language and thinking is built from a few fundamental building blocks - this was expressed by aristotle and NSM and is corraborated by languages like toki-pona. because of this languages are highly compressable but unfortunately because we are used to say things one way - requires adjustment to such a more logic way of expression</blockquote>
+        <p class="verdict correct"><strong>Correct</strong> &middot; The reason is there: a few basic building blocks that thought and language rest on. "Needs adjustment" I could not check.</p>
+      </div>
+    </section>
+    <section class="q" id="q16">
+      <h3><span class="num">16</span> How is haoshuode connected to real Mandarin, word by word and rule by rule?</h3>
+      
+      <div class="try">
+        
+        <blockquote>haoshuode is real mandarin - it uses its rules and everything - but only the most basic 230 words, basic grammar about 100+ items, and only pinyin. no chengyu, culture, hanzi or other layers that complicate the learning and put you on a tangent</blockquote>
+        <p class="verdict partly"><strong>Partly correct</strong> &middot; "Real Mandarin", 230 words and 100+ grammar items hold. It does not sit with "not a Mandarin" (question 4). I could not check "no hanzi".</p>
+      </div>
+    </section>
+    <section class="q" id="q17">
+      <h3><span class="num">17</span> Why keep the words and rules real Mandarin?</h3>
+      
+      <div class="try">
+        
+        <blockquote>because we want to make sure that we are building a bridge toward real mandarin with a series of checkpoints - once you clear the checkpoint you mastered a full language - you can read books in it and watch content and talk to other learners or AI</blockquote>
+        <p class="verdict correct"><strong>Correct</strong> &middot; The reason is there: a bridge toward real Mandarin, so what you learn carries over. "Checkpoints" I could not check.</p>
+      </div>
+    </section>
+    <section class="q" id="q18">
+      <h3><span class="num">18</span> Why not build haoshuode on Toki Pona's rules instead of Mandarin's?</h3>
+      
+      <div class="try">
+        
+        <blockquote>toki pona is a fictional language - if we would use such made-up rules it will stop being Mandarin and will lose all the benefits as a learning tool (maybe only learning vocab) but the you will need to relearn all the grammer which will most likely be devastating as many habits will have to be unlearned almost making it similar to learning from scratch</blockquote>
+        <p class="verdict correct"><strong>Correct</strong> &middot; The reason and the cost are both there: made-up rules mean relearning the grammar, almost from scratch.</p>
+      </div>
+    </section>
+  
+    <section class="q open" id="q19">
+      <h3><span class="num">19</span> How do the grammar rules put the 230 words together into a sentence? <span class="tag">open</span></h3>
+      <p class="skipped">Not yet answered. The session is paused here.</p>
+    </section>
+
+  <h2 id="essence">The essence so far</h2>
+  <table><tr><th>What it is</th><td>It is a subset of Mandarin: real words and rules, but only 230 basic words, 100+ grammar items, and pinyin.</td></tr><tr><th>Why it exists</th><td>A few building blocks carry language and thought, so few words say much; it is a bridge toward real Mandarin, not invented rules.</td></tr><tr><th>How it works</th><td>Its core is a minimal set of words; a new thing is said by naming its kind, then adding a descriptive part, under grammar rules.</td></tr><tr><th>Input and output</th><td><em>Does not apply to a language.</em></td></tr><tr><th>What it relies on</th><td>It needs the 230 core words and the grammar rules; every new word is made of them.</td></tr><tr><th>Limits</th><td>It cannot say very specific jargon naturally: each term would need a long description, where a full language has a shortcut word.</td></tr><tr><th>How it fails</th><td><em>Does not apply to a language.</em></td></tr></table>
+
+  <h2 id="contradictions">Contradictions the duck found</h2>
+  <ul class="plain contra">
+    <li>
+      <p>&ldquo;it is a most minimal version of Mandarin&rdquo; <span class="ref">(question 1)</span></p>
+      <p>against &ldquo;a complete language (although not a Mandarin)&rdquo; <span class="ref">(question 4)</span></p>
+      <p class="resolved">Resolved by the answer to question 5: a subset is not the whole.</p>
+    </li>
+    <li>
+      <p>&ldquo;a word that other words can describe is not an atom&rdquo; <span class="ref">(question 8)</span></p>
+      <p>against &ldquo;the core is the minimal set of necessary words&rdquo; <span class="ref">(question 8)</span></p>
+      <p class="resolved">Resolved by the answer to question 9: a subset is not the whole.</p>
+    </li>
+    <li>
+      <p>&ldquo;a complete language (although not a Mandarin)&rdquo; <span class="ref">(question 4)</span></p>
+      <p>against &ldquo;haoshuode is real Mandarin&rdquo; <span class="ref">(question 16)</span></p>
+      <p class="resolved">Resolved by the answer to question 5: a subset is not the whole.</p>
+    </li></ul>
+
+  <h2 id="confusing">Confusing points</h2>
+  <ul class="plain"><li>What is the other small language it is not? <span class="ref">&mdash; People often mix it up with another small language.</span></li><li>What is an atom here? <span class="ref">&mdash; People often read core word and atom as the same thing.</span></li><li>What is a composite word? <span class="ref">&mdash; People often take a composite for a core word.</span></li><li>How can both hold: "minimal version of Mandarin" (question 1) and "not a Mandarin" (question 4)? <span class="tag">flagged by me</span></li><li>How do you put a describing word with its noun? <span class="ref">&mdash; People often put the describing word after the noun, as in English.</span></li></ul>
+
+  <h2 id="glossary">Glossary</h2>
+  <dl><dt>HSK</dt><dd>A ladder of Mandarin levels, each with a word list and an exam.</dd><dt>graded reader</dt><dd>A graded reader is a book written for one level of learners.</dd><dt>closed system</dt><dd>A small set of words and rules that lets you say anything you mean.</dd><dt>Toki Pona</dt><dd>Toki Pona is a small made-up language with its own grammar.</dd><dt>atomic</dt><dd>A word is atomic when other words cannot describe it.</dd><dt>core</dt><dd>The core is the fixed small set of words all other words are made from.</dd><dt>composite word</dt><dd>A composite is a word built only from core words.</dd><dt>NSM</dt><dd>NSM is a list of basic meanings that every language has words for.</dd><dt>chengyu</dt><dd>A chengyu is a fixed Chinese saying, usually four characters, with a set meaning.</dd><dt>-de</dt><dd>-de joins a describing word or an owner to the noun it goes with.</dd></dl>
+
+  <h2 id="pieces">What is held</h2>
+  <p class="stat">22 of 31 pieces held so far. Filled dot: explained in my own words.</p>
+  <div class="branch"><h4>real Mandarin, made small</h4><p class="says">It keeps Mandarin's own words and rules, but uses very few of them.</p><ul class="pieces"><li class="held"><span class="dot"></span>It is real Mandarin made as small as it can be.</li><li class="held"><span class="dot"></span>Every word in it is a real Mandarin word.</li><li class="held"><span class="dot"></span>Every rule in it is an ordinary Mandarin rule.</li><li class="held"><span class="dot"></span>It is made from Mandarin but is not all of Mandarin.</li><li class="notheld"><span class="dot"></span>A chengyu is a fixed Chinese saying, usually four characters.</li><li class="held"><span class="dot"></span>Then what you learn carries over into real Mandarin.</li><li class="held"><span class="dot"></span>Toki Pona is a small made-up language, and haoshuode is not it.</li><li class="held"><span class="dot"></span>Its rules differ from Chinese, so Mandarin speakers would find it odd.</li></ul></div><div class="branch"><h4>the core words</h4><p class="says">A fixed set of 230 small words that everything else is built from.</p><ul class="pieces"><li class="held"><span class="dot"></span>They are a fixed small set of words, 230 now.</li><li class="held"><span class="dot"></span>Many Mandarin words can be said with a few basic ones.</li><li class="held"><span class="dot"></span>An atom is a core word you cannot describe with other core words.</li><li class="held"><span class="dot"></span>They can be described with other core words, using a paraphrase.</li><li class="held"><span class="dot"></span>Other core words can already say what it says.</li></ul></div><div class="branch"><h4>describing what the core cannot name</h4><p class="says">When no core word names a thing, you describe it with core words.</p><ul class="pieces"><li class="held"><span class="dot"></span>You describe it using the core words you have.</li><li class="held"><span class="dot"></span>A composite is a word built only from core words.</li><li class="held"><span class="dot"></span>Composites put the few words together to say many things.</li><li class="notheld"><span class="dot"></span>NSM is a list of basic meanings that every language has words for.</li></ul></div><div class="branch"><h4>why not follow the usual ladder</h4><p class="says">The usual course ladder lists words but does not teach understanding.</p><ul class="pieces"><li class="held"><span class="dot"></span>HSK is a ladder of Mandarin levels, each with a word list and an exam.</li><li class="held"><span class="dot"></span>It lists words to know but does not teach understanding.</li><li class="held"><span class="dot"></span>A graded reader is a book written for one level of learners.</li><li class="notheld"><span class="dot"></span>A small set of words and rules that lets you say anything you mean.</li><li class="notheld"><span class="dot"></span>Haoshuode teaches the actual language from day one, not word lists.</li></ul></div><div class="branch"><h4>what is new about it</h4><p class="says">Small languages were made before, but this one keeps real Mandarin.</p><ul class="pieces"><li class="held"><span class="dot"></span>Others made small languages before, like Toki Pona and Basic English.</li><li class="held"><span class="dot"></span>They change how you learn real Mandarin, not Mandarin itself.</li><li class="held"><span class="dot"></span>It makes a real language small, not an invented one.</li></ul></div><div class="branch"><h4>where it stops</h4><p class="says">Some things are still hard to say, and a new word could fix them.</p><ul class="pieces"><li class="held"><span class="dot"></span>Some things are hard to say: descriptions get long or lose meaning.</li><li class="notheld"><span class="dot"></span>A new word for it would make it easy to say.</li></ul></div><div class="branch"><h4>the grammar</h4><p class="says">139 ordinary Mandarin patterns, each one a rule for building a sentence.</p><ul class="pieces"><li class="notheld"><span class="dot"></span>A pattern is one rule for building a kind of sentence.</li><li class="notheld"><span class="dot"></span>The order of the words shows who does what.</li><li class="notheld"><span class="dot"></span>The describing word goes before the noun and takes de.</li><li class="notheld"><span class="dot"></span>Patterns say how to put the words together.</li></ul></div><div class="branch"><h4>the book</h4><p class="says">26 lessons that teach it, each using only words taught before.</p><p class="skipped">Not yet split into pieces.</p></div><div class="branch"><h4>the knowledge base</h4><p class="says">A program that checks the data, answers questions about it, and never changes it.</p><p class="skipped">Not yet split into pieces.</p></div>
+</main>
+</body>
+</html>

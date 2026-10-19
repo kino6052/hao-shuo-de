@@ -8,6 +8,7 @@ import { lesson } from "../../../lib/lesson.ts";
 import like from "./like.ts";
 import before from "./before.ts";
 import many from "./many.ts";
+import reading from "./reading.ts";
 
 export const meta = {
   id: "modifying-nouns",
@@ -44,5 +45,6 @@ export default lesson(meta.id, {
     like,
     before,
     many,
+    reading,
   ],
 });

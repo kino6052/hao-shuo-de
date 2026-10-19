@@ -49,7 +49,7 @@ import { LESSON_IDS, lessonNumber, lessonFolders, lessonFile } from './lessons.j
 import { INTRO_IDS, importIntroFile } from './intros.js';
 import { BACK_MATTER_IDS } from '../src/content/book.js';
 import { findJargon } from './jargon.js';
-import { SUMMARY_MAX_WORDS, TLDR_MAX_WORDS, MAX_SECTIONS_PER_LESSON, countWords } from './limits.js';
+import { SUMMARY_MAX_WORDS, TLDR_MAX_WORDS, MAX_SECTIONS_PER_LESSON, READING_MODULE, countWords } from './limits.js';
 import { buildOverview, renderOverview } from './generate-grammar-overview.js';
 import { wordsIn, termIndex } from './early-words.js';
 import { wordHanzi } from '../src/lib/hanzi-map.js';
@@ -171,7 +171,7 @@ if (existsSync(PLAN_PATH)) {
 
 // ---------- 3b. no lesson has too many sections ----------
 for (const lesson of lessons) {
-  const sections = new Set(lesson.entries.map((e) => e.module).filter((m) => m && m !== 'head'));
+  const sections = new Set(lesson.entries.map((e) => e.module).filter((m) => m && m !== 'head' && m !== READING_MODULE));
   if (sections.size > MAX_SECTIONS_PER_LESSON) {
     errors.push(`${lesson.id}: ${sections.size} sections, max ${MAX_SECTIONS_PER_LESSON} -- split the lesson in two (or merge two sections)`);
   }

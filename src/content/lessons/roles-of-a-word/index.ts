@@ -11,6 +11,7 @@ import how from "./how.ts";
 import name from "./name.ts";
 import parts from "./parts.ts";
 import thisWay from "./this-way.ts";
+import reading from "./reading.ts";
 
 export const meta = {
   id: "roles-of-a-word",
@@ -50,5 +51,6 @@ export default lesson(meta.id, {
     thisWay,
     name,
     parts,
+    reading,
   ],
 });

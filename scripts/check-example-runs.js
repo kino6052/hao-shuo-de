@@ -12,7 +12,7 @@
 
 import { gatePolicy } from './finished-lessons.js';
 import { LESSON_IDS, importLessonFile } from './lessons.js';
-import { MAX_EXAMPLES_IN_A_ROW } from './limits.js';
+import { MAX_EXAMPLES_IN_A_ROW, READING_MODULE } from './limits.js';
 
 const { blocking, named, scopeLabel, summary } = gatePolicy();
 
@@ -28,7 +28,7 @@ for (const id of LESSON_IDS) {
   const runs = [];
   let start = -1;
   entries.forEach((e, i) => {
-    if (e.type === 'example') {
+    if (e.type === 'example' && e.module !== READING_MODULE) {
       if (start < 0) start = i;
     } else if (start >= 0) {
       runs.push([start, i - 1]);

@@ -11,6 +11,7 @@ import not from "./not.ts";
 import hardAndLooks from "./hard-and-looks.ts";
 import ask from "./ask.ts";
 import some from "./some.ts";
+import reading from "./reading.ts";
 
 export const meta = {
   id: "how-much",
@@ -50,5 +51,6 @@ export default lesson(meta.id, {
     some,
     hardAndLooks,
     ask,
+    reading,
   ],
 });

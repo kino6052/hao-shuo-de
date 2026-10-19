@@ -12,6 +12,7 @@ import direction from "./direction.ts";
 import move from "./move.ts";
 import far from "./far.ts";
 import road from "./road.ts";
+import reading from "./reading.ts";
 
 export const meta = {
   id: "moving",
@@ -52,5 +53,6 @@ export default lesson(meta.id, {
     move,
     far,
     road,
+    reading,
   ],
 });

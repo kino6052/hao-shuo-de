@@ -10,6 +10,7 @@ import remember from "./remember.ts";
 import laugh from "./laugh.ts";
 import heart from "./heart.ts";
 import hear from "./hear.ts";
+import reading from "./reading.ts";
 
 export const meta = {
   id: "feelings",
@@ -48,5 +49,6 @@ export default lesson(meta.id, {
     laugh,
     heart,
     hear,
+    reading,
   ],
 });

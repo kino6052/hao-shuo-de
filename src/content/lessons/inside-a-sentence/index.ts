@@ -12,6 +12,7 @@ import toward from "./toward.ts";
 import group from "./group.ts";
 import relation from "./relation.ts";
 import right from "./right.ts";
+import reading from "./reading.ts";
 
 export const meta = {
   id: "inside-a-sentence",
@@ -52,5 +53,6 @@ export default lesson(meta.id, {
     right,
     group,
     relation,
+    reading,
   ],
 });
