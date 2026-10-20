@@ -2,6 +2,7 @@ import { useState, useEffect } from "preact/hooks";
 import dictionary from "../data/dictionary.ts";
 import { t } from "../lib/i18n.js";
 import { AudioButton } from "./AudioButton.jsx";
+import { ShadowBox } from "./ShadowBox.jsx";
 import { WordPicker } from "./WordPicker.jsx";
 import { PhraseChip } from "./PhraseChip.jsx";
 import {
@@ -137,7 +138,7 @@ export function SentenceBuilder({ lang }) {
 
   return (
     <div class={styles.wrap}>
-      <div class={styles.output}>
+      <ShadowBox class={styles.output} pinyin={sentence}>
         {sentence ? (
           <>
             <div class={styles.sentenceRow}>
@@ -167,7 +168,7 @@ export function SentenceBuilder({ lang }) {
             {t(lang, "sbReset")}
           </button>
         </div>
-      </div>
+      </ShadowBox>
 
       <div class={styles.slots}>
         <SlotSection

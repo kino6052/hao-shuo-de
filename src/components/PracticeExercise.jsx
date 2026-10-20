@@ -1,6 +1,7 @@
 import { useState } from 'preact/hooks';
 import { t } from '../lib/i18n.js';
 import { AudioButton } from './AudioButton.jsx';
+import { ShadowBox } from './ShadowBox.jsx';
 import styles from './PracticeExercise.module.css';
 
 // `start` is the index of the first question, so numbering carries on when a
@@ -20,7 +21,7 @@ export function PracticeExercise({ questions, answers, lang, start = 0 }) {
         )}
       </div>
       {questions.map((q, i) => (
-        <div key={i} class={styles.item}>
+        <ShadowBox key={i} class={styles.item} pinyin={showAnswers && answers?.[i]?.text} audioFile={answers?.[i]?.audioFile}>
           <div class={styles.question}><b>{start + i + 1}.</b> {q}</div>
           {showAnswers && answers && answers[i] && (
             <div class={styles.answer}>
@@ -28,7 +29,7 @@ export function PracticeExercise({ questions, answers, lang, start = 0 }) {
               <AudioButton shadow pinyin={answers[i].text} audioFile={answers[i].audioFile} ttsText={answers[i].ttsText} />
             </div>
           )}
-        </div>
+        </ShadowBox>
       ))}
     </div>
   );

@@ -3,6 +3,24 @@
 import { playAudio, playRecording, slugify, stopPlayback } from './audio.js';
 
 const recordings = new Map(); // key -> blob URL
+
+// When each sentence was last practised, kept in the browser (key -> milliseconds).
+const PRACTICE_KEY = 'hsd-shadow-practice';
+const WEEK = 7 * 24 * 60 * 60 * 1000;
+const practised = (() => {
+  try { return JSON.parse(localStorage.getItem(PRACTICE_KEY)) || {}; } catch { return {}; }
+})();
+
+// null if never practised, else 0 (just now) up to 1 (a week or more ago).
+export function staleness(key) {
+  const at = practised[key];
+  return at ? Math.min(1, Math.max(0, (Date.now() - at) / WEEK)) : null;
+}
+
+function markPractised(key) {
+  practised[key] = Date.now();
+  try { localStorage.setItem(PRACTICE_KEY, JSON.stringify(practised)); } catch { /* private window */ }
+}
 const listeners = new Set();
 
 // phase: 'idle' | 'recording' | 'mine' (your voice playing) | 'original'
@@ -28,6 +46,7 @@ function set(next) {
 export async function playMineThenOriginal(key, pinyin, audioFile, ttsText) {
   const url = recordings.get(key);
   if (!url) return;
+  markPractised(key);
   const mine = ++token;
   set({ key, phase: 'mine', error: null });
   const finished = await playRecording(url);

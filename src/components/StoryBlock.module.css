@@ -9,7 +9,10 @@
 }
 
 .line {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
+  padding: 8px 14px;
+  border: 2px solid transparent;
+  border-radius: 12px;
 }
 
 @media print {
