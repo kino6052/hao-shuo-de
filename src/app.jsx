@@ -17,7 +17,11 @@ import { WordMap } from './components/WordMap.jsx';
 import { PageNav } from './components/PageNav.jsx';
 import { TldrSummary } from './components/TldrSummary.jsx';
 import { MissingTranslationBanner } from './components/MissingTranslationBanner.jsx';
+import { AdSlot } from './components/AdSlot.jsx';
+import { ConsentBanner } from './components/ConsentBanner.jsx';
 import { useAppRouter } from './lib/use-router.js';
+import { AD_SLOT_LESSON_END } from './lib/tracking-config.js';
+import { trackPageView } from './lib/tracking.js';
 import { useTheme } from './lib/use-theme.js';
 
 function renderContent(s, lang) {
@@ -109,6 +113,9 @@ export function App() {
     if (mainRef.current) mainRef.current.scrollTop = 0;
   }, [router.pageIndex]);
 
+  const pageId = router.sections[router.pageIndex]?.meta.id;
+  useEffect(() => { trackPageView(); }, [pageId, router.lang]);
+
   function handleSidebarNav(id) {
     const idx = router.sectionIds.indexOf(id);
     if (idx >= 0) router.goTo(idx);
@@ -142,6 +149,8 @@ export function App() {
             {renderContent(current, router.lang)}
           </Section>
 
+          {current.meta.type === 'lesson' && <AdSlot key={current.meta.id} slot={AD_SLOT_LESSON_END} />}
+
           <PageNav
             page={router.pageIndex}
             total={router.total}
@@ -151,6 +160,8 @@ export function App() {
           />
         </div>
       </main>
+
+      <ConsentBanner lang={router.lang} />
     </div>
   );
 }

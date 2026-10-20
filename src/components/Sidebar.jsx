@@ -1,6 +1,9 @@
 import { useState } from "preact/hooks";
 import { ProgressBar } from "./ProgressBar.jsx";
 import { FontSelector } from "./FontSelector.jsx";
+import { AccountBox } from "./AccountBox.jsx";
+import { AdSlot } from "./AdSlot.jsx";
+import { AD_SLOT_SIDEBAR } from "../lib/tracking-config.js";
 import { LANG_CONFIG, t } from "../lib/i18n.js";
 import { SECTIONS, BACK_MATTER, sectionKeyForLesson, groupKeyForChapter } from "../content/book.js";
 import styles from "./Sidebar.module.css";
@@ -146,6 +149,9 @@ export function Sidebar({
             {theme === "dark" ? "☀️" : "🌙"}
           </button>
         </div>
+
+        <AccountBox lang={lang} />
+        <AdSlot slot={AD_SLOT_SIDEBAR} />
 
         <div class={styles.tagline}>{t(lang, "tagline")}</div>
       </nav>

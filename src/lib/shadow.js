@@ -1,6 +1,7 @@
 // Shadowing practice: record yourself saying a sentence, hear it back at once, then hear the original.
 // Recordings are kept in memory (per sentence) until the page is closed.
 import { playAudio, playRecording, slugify, stopPlayback } from './audio.js';
+import { track } from './tracking.js';
 
 const recordings = new Map(); // key -> blob URL
 
@@ -47,6 +48,7 @@ export async function playMineThenOriginal(key, pinyin, audioFile, ttsText) {
   const url = recordings.get(key);
   if (!url) return;
   markPractised(key);
+  track('shadow_practice', { sentence: key });
   const mine = ++token;
   set({ key, phase: 'mine', error: null });
   const finished = await playRecording(url);
