@@ -142,7 +142,7 @@ export function SentenceBuilder({ lang }) {
           <>
             <div class={styles.sentenceRow}>
               <span class={styles.sentenceText}>{sentence}</span>
-              <AudioButton pinyin={sentence} ttsText={sentence} />
+              <AudioButton shadow pinyin={sentence} ttsText={sentence} />
             </div>
             {gloss && <div class={styles.gloss}>≈ {gloss}</div>}
           </>

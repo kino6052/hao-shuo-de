@@ -25,7 +25,7 @@ export function PracticeExercise({ questions, answers, lang, start = 0 }) {
           {showAnswers && answers && answers[i] && (
             <div class={styles.answer}>
               → {answers[i].text}
-              <AudioButton pinyin={answers[i].text} audioFile={answers[i].audioFile} ttsText={answers[i].ttsText} />
+              <AudioButton shadow pinyin={answers[i].text} audioFile={answers[i].audioFile} ttsText={answers[i].ttsText} />
             </div>
           )}
         </div>

@@ -20,3 +20,28 @@
 @media print {
   .btn { display: none !important; }
 }
+
+.group {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+.recording {
+  color: #d92d20;
+  background: var(--bg-accent-light);
+  animation: pulse 1s ease-in-out infinite;
+}
+@keyframes pulse {
+  50% { opacity: 0.55; }
+}
+.speed {
+  font-size: 12px;
+  font-weight: 600;
+  min-width: 28px;
+  line-height: 16px;
+}
+.error {
+  margin-left: 6px;
+  font-size: 12px;
+  color: #d92d20;
+}

@@ -12,7 +12,7 @@ export function ExampleList({ items, label = 'Examples' }) {
           <div key={i} class={styles.card}>
             <span class={styles.pinyin}>
               {ex.pinyin}
-              <AudioButton pinyin={ex.pinyin} audioFile={ex.audioFile} ttsText={ex.ttsText} />
+              <AudioButton shadow pinyin={ex.pinyin} audioFile={ex.audioFile} ttsText={ex.ttsText} />
             </span>
             <span class={styles.translation}> — {ex.translation}</span>
           </div>

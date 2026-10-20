@@ -11,7 +11,7 @@ export function StoryBlock({ items, label = 'Story' }) {
         <div key={i} class={styles.line}>
           <div class={styles.pinyin}>
             {line.pinyin}
-            <AudioButton pinyin={line.pinyin} audioFile={line.audioFile} ttsText={line.ttsText} />
+            <AudioButton shadow pinyin={line.pinyin} audioFile={line.audioFile} ttsText={line.ttsText} />
           </div>
           <div class={styles.translation}>({line.translation})</div>
         </div>
