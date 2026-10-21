@@ -143,6 +143,19 @@ export const TOOLS = [
     },
   },
   {
+    name: 'kb_constructions',
+    description:
+      'English ways of saying -> Hao-shuo-de grammar (TRANSLATOR_PLAN.md C3): the English constructions in a sentence (so, because, if, than, the one who, on the way, still, already, will, did …), each with the grammar patterns that say it (lesson, template, an example) and the grammar-word entries (their Hao-shuo-de form, never the Mandarin), plus a note on how it goes. ' +
+      'Matching looks at the words only, so a row is a hint: pick what the sentence means. No text: the whole table and the patterns no row names yet; id: one row.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        text: { type: 'string', description: 'An English sentence or text: "I forgot my umbrella, so I got wet."' },
+        id: { type: 'string', description: 'One row of the table by its id: "so-result", "the-one-who".' },
+      },
+    },
+  },
+  {
     name: 'kb_atoms',
     description:
       'Which dictionary words are atoms: the words the others cannot be said from. Every word has a paraphrase (a way to say it with other words) or is marked as an atom; ' +
@@ -466,6 +479,8 @@ export async function callTool(kb, name, args = {}, { scoreboardFile = SCOREBOAR
       return kb.lookup({ word: String(need(args, 'word')) }).text;
     case 'kb_memory':
       return kb.memory({ text: String(need(args, 'text')), limit: args.limit }).text;
+    case 'kb_constructions':
+      return kb.constructions({ text: args.text ? String(args.text) : undefined, id: args.id ? String(args.id) : undefined }).text;
     case 'kb_atoms': {
       if (args.name === undefined || args.name === '') return renderAtoms(await kb.atoms());
       return renderAtomWord(await kb.atoms(), await kb.atoms(String(args.name)));

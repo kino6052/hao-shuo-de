@@ -10,16 +10,26 @@
 //   renderRemoval(r)   -> the report as text, for the CLI and the Claude tools
 //
 // ctx = { facts, source, rules }: buildFacts(source), the source, and the rule
-// text to run (base + whatif).
+// text to run (base + whatif). The program holds only the facts those rules read (programFor in facts.js), so it
+// stays under clingo-wasm's 1 MB however many composites there are.
 
 import { solve, tables, sym } from './clingo.js';
+import { programFor } from './facts.js';
 import { replaceWordRefs, refTerm, wordRefIds } from '../word-refs.js';
 import { patternsCarrying, renderPatternUses } from './grammar-uses.js';
 import { restsOnLoss, restsOnModel } from './rests-on.js';
 import { LEAF_MIN } from '../tag-net.js';
 
-const KINDS = ['lesson_example', 'lesson_answer', 'composite_example', 'story', 'phrase_book'];
-const KIND_NAMES = { lesson_example: 'lesson examples', lesson_answer: 'lesson answers', composite_example: 'composite examples', story: 'story lines', phrase_book: 'phrase-book lines' };
+const KINDS = ['lesson_example', 'lesson_answer', 'lesson_inline', 'composite_example', 'story', 'phrase_book', 'extra_inline'];
+const KIND_NAMES = {
+  lesson_example: 'lesson examples',
+  lesson_answer: 'lesson answers',
+  lesson_inline: 'sentences in lesson text',
+  composite_example: 'composite examples',
+  story: 'story lines',
+  phrase_book: 'phrase-book lines',
+  extra_inline: 'sentences in the other texts',
+};
 
 // -> the pinyin of a form or sentence: {{word:id}} -> its term.
 export const pinyinOf = (words) => (text) => replaceWordRefs(text, (id, kind) => refTerm(words[id]?.term ?? id, kind));
@@ -28,8 +38,8 @@ export async function removal(ctx, ids) {
   const { source, facts } = ctx;
   const words = source.words;
   for (const id of ids) if (!Object.hasOwn(words, id)) throw new Error(`no word "${id}"`);
-  // the sentences and mentions of just these words: all of them would not fit in clingo
-  const program = [ctx.rules, facts.program, facts.textProgram(ids), ...ids.map((id) => `drop(${sym(id)}).`)].join('\n');
+  // the sentences and mentions of just these words, and only the facts the rules read: all of them would not fit in clingo-wasm
+  const program = [ctx.rules, programFor(ctx.rules, facts.program), programFor(ctx.rules, facts.textProgram(ids)), ...ids.map((id) => `drop(${sym(id)}).`)].join('\n');
   const result = await solve(program, { models: 1 });
   if (result.status !== 'SATISFIABLE') throw new Error(`the what-if has no answer (${result.status})`);
   const t = tables(result.models[0]);

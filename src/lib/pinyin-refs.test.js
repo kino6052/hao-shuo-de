@@ -42,6 +42,9 @@ describe('pinyinProblems names every unknown word, not just the first', () => {
     const hit = problems.find((p) => p.token === 'wàngjì');
     expect(hit).toBeDefined();
     expect(hit.suggestion).toMatchObject({ zh: '忘记' });
+    // shown as pinyin to read, kept as refs to write
+    expect(hit.suggestion.form).not.toContain('{{');
+    expect(hit.suggestion.refs).toContain('{{word:');
   });
 
   test('a sentence with no problems still converts', () => {

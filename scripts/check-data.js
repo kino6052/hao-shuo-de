@@ -29,6 +29,7 @@ import SYNONYMS from '../src/data/maps/synonyms.ts';
 import CONNECTIONS from '../src/data/maps/connections.ts';
 import STRUCTURE from '../src/data/maps/structure.ts';
 import PRIMES from '../src/data/maps/primes.ts';
+import CONSTRUCTIONS from '../src/data/maps/english-constructions.ts';
 import { buildData } from './build-data.js';
 import { compositeFileName } from './data-files.js';
 import { dataFiles } from './build-data.js';
@@ -152,6 +153,22 @@ for (const [name, r] of [['antonyms', ANTONYMS], ['synonyms', SYNONYMS]]) {
     note(`${g.kind} [${g.members.slice(0, 3)}…]`, g.members, g.why);
   }
   for (const f of STRUCTURE.families) note(`family ${f.name}`, Object.values(f.facets).flat(), f.why);
+}
+// English ways of saying: ids unique, every row matches something, and every pattern and entry it names exists
+{
+  const patternIds = new Set(PATTERNS.map((p) => p.id));
+  // an entry the language leaves out or cannot say yet (fit skip or gap) is no way of saying it
+  const said = new Set([...ENTRIES.filter((e) => e.fit !== 'skip' && e.fit !== 'gap').map((e) => e.zh), ...Object.values(WORDS).map((w) => w.hanzi)]);
+  const seen = new Set();
+  for (const c of CONSTRUCTIONS) {
+    const where = `maps/english-constructions.ts ${c.id}`;
+    if (seen.has(c.id)) errors.push(`${where}: id written twice`);
+    seen.add(c.id);
+    if (!String(c.en ?? '').trim() || !c.match?.length) errors.push(`${where}: needs its English and at least one match`);
+    if (!c.patterns.length && !c.entries.length) errors.push(`${where}: names no pattern and no entry`);
+    for (const p of c.patterns) if (!patternIds.has(p)) errors.push(`${where}: unknown pattern "${p}"`);
+    for (const e of c.entries) if (!said.has(e)) errors.push(`${where}: "${e}" is neither a word's hanzi nor a composite Hao-shuo-de says (fit skip and gap are left out)`);
+  }
 }
 // primes: every prime of coverage/atoms.ts is in exactly one family; an alternate is a carrier of its prime, never its own main one
 {

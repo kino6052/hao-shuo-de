@@ -25,7 +25,7 @@ import { replaceWordRefs, refTerm } from '../word-refs.js';
 import { smallestCover } from './set-cover.js';
 import { splitSentences } from './parse.js';
 
-const BOOK_KINDS = new Set(['lesson_example', 'lesson_answer', 'composite_example', 'story', 'phrase_book']);
+const BOOK_KINDS = new Set(['lesson_example', 'lesson_answer', 'lesson_inline', 'composite_example', 'story', 'phrase_book', 'extra_inline']);
 const TREES = 200;
 
 // -> the sentences of the book, as word refs, once each (the same sentence in two places is one)

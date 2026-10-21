@@ -149,12 +149,19 @@ export function buildPool({ sentences = [], patterns = [], words = {}, composite
     });
   };
 
+  // several sentences quoted in one entry of a text share its key: the second is <id>#2, the third <id>#3
+  const taken = new Map();
+  const once = (id) => {
+    const n = (taken.get(id) ?? 0) + 1;
+    taken.set(id, n);
+    return n === 1 ? id : `${id}#${n}`;
+  };
   for (const s of sentences) {
     if (s.kind === 'composite_example') {
       const it = sentenceItem(s, 'composite_example', { id: `sentence:composite_example:${s.id}`, lesson: null, module: '' });
       if (s.composite) it.about = s.composite; // the composite it shows, so a hint that finds the composite can lead to it
     } else {
-      sentenceItem(s, s.kind, { id: `sentence:${s.kind}:${s.lesson}/${s.key}`, lesson: number.has(s.lesson) ? s.lesson : null, module: s.module });
+      sentenceItem(s, s.kind, { id: once(`sentence:${s.kind}:${s.lesson}/${s.key}`), lesson: number.has(s.lesson) ? s.lesson : null, module: s.module });
     }
   }
   for (const p of patterns) {

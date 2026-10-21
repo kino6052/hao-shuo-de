@@ -7,6 +7,7 @@ import { describe, expect, test } from 'bun:test';
 import { spawn } from 'child_process';
 import { createInterface } from 'readline';
 import { fileURLToPath } from 'url';
+import { TOOLS } from './tools.js';
 
 describe('the real server over stdio, on the real data', () => {
   test('initialize, list, then ask what happens if we drop dēng', async () => {
@@ -30,13 +31,15 @@ describe('the real server over stdio, on the real data', () => {
       expect(init.result.serverInfo.name).toBe('hao-shuo-de-kb');
       send({ jsonrpc: '2.0', method: 'notifications/initialized' });
       const list = await ask(2, 'tools/list', {});
-      expect(list.result.tools).toHaveLength(28);
+      expect(list.result.tools).toHaveLength(TOOLS.length);
+      expect(list.result.tools.map((t) => t.name)).toEqual(TOOLS.map((t) => t.name));
       const drop = await ask(3, 'tools/call', { name: 'kb_remove', arguments: { words: 'dēng' } });
       const text = drop.result.content[0].text;
       expect(drop.result.isError).toBeUndefined();
       expect(text).toMatch(/^Remove: dēng 灯/);
-      expect(text).toContain('Composites left with no form: redo (2)');
-      expect(text).toContain('Book to rewrite: 12 sentence(s)');
+      // the counts grow with the dictionary, so check their shape: redo is listed with a positive count, and some book sentences must be rewritten
+      expect(text).toMatch(/Composites left with no form: redo \([1-9]\d*\)/);
+      expect(text).toMatch(/Book to rewrite: [1-9]\d* sentence\(s\)/);
       // a query that runs too long is stopped (the server runs under node, as .mcp.json starts it; bun can't stop clingo's worker), and the server recovers
       const slow = await ask(6, 'tools/call', { name: 'kb_query', arguments: { program: '{ pick(1..40) } = 20. #show pick/1.', models: 0, timeout_ms: 500 } });
       expect(slow.result.content[0].text).toMatch(/ran out of time/);

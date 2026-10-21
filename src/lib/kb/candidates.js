@@ -36,7 +36,7 @@ export const COSTS = {
   redo: 1, // a composite left with no form: a new description (x rank weight)
   loses: 0.25, // a composite that loses one of its forms (x rank weight)
   headLost: 0.5, // a composite that hangs under the word
-  lessonLine: 1, // a lesson example or answer, a story line, a phrase-book line
+  lessonLine: 1, // a lesson example or answer, a story line, a phrase-book line, a sentence quoted in a text
   compositeExample: 0.25, // an example sentence of a composite
   mention: 0.5, // another place that names it: prose, info, exercise, FAQ
   coverageLost: 10, // something the language could say and now cannot
@@ -52,7 +52,6 @@ const PARTS = Object.keys(COSTS);
 
 const push = (map, key, value) => (map.get(key) ?? map.set(key, []).get(key)).push(value);
 const add = (map, key, value) => (map.get(key) ?? map.set(key, new Set()).get(key)).add(value);
-const LESSON_LINES = new Set(['lesson_example', 'lesson_answer', 'story', 'phrase_book']);
 const NOT_COUNTED = new Set(['card', 'example', 'answer']); // what the sentences already cover
 
 export function candidateModel(source, facts, { freq = null, top = 6000 } = {}) {
@@ -218,8 +217,9 @@ export function candidateModel(source, facts, { freq = null, top = 6000 } = {}) 
       for (const s of sentencesOf.get(id) ?? []) {
         if (seen.has(s.id)) continue;
         seen.add(s.id);
-        if (LESSON_LINES.has(s.kind)) lessonLines++;
-        else compositeExamples++;
+        // every kind but the composite examples is a line of the book (a new kind counts as one)
+        if (s.kind === 'composite_example') compositeExamples++;
+        else lessonLines++;
         keep('sentences', s);
       }
     }

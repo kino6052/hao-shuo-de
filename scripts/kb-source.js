@@ -6,6 +6,7 @@
 //
 // words       the dictionary's words (src/data/dictionary.ts)
 // tags        { topics, kinds }: the two tag nets (maps/topics.ts, kinds.ts); the entries carry their `topics` and `isA`
+// maps        the relation maps, the NSM primes and the English ways of saying (maps/english-constructions.ts)
 // composites  the assembled entries (forms as one " / "-joined string)
 // lessons     [{ id, number, entries }] with each entry cut down to what the
 //             facts need: type, module, key, card term, sentence, and `refs`,
@@ -27,6 +28,7 @@ import SYNONYMS from '../src/data/maps/synonyms.ts';
 import CONNECTIONS from '../src/data/maps/connections.ts';
 import STRUCTURE from '../src/data/maps/structure.ts';
 import PRIMES from '../src/data/maps/primes.ts';
+import CONSTRUCTIONS from '../src/data/maps/english-constructions.ts';
 import TOPICS from '../src/data/maps/topics.ts';
 import KINDS from '../src/data/maps/kinds.ts';
 
@@ -77,7 +79,7 @@ export async function loadSource() {
     words: JSON.parse(JSON.stringify(dictionary.words)),
     categories: JSON.parse(JSON.stringify(dictionary.categories)),
     tags: JSON.parse(JSON.stringify({ topics: TOPICS, kinds: KINDS })),
-    maps: { antonyms: ANTONYMS, synonyms: SYNONYMS, connections: CONNECTIONS, structure: STRUCTURE, primes: PRIMES },
+    maps: { antonyms: ANTONYMS, synonyms: SYNONYMS, connections: CONNECTIONS, structure: STRUCTURE, primes: PRIMES, constructions: CONSTRUCTIONS },
     composites: JSON.parse(JSON.stringify(compositesData.entries)),
     coverage: JSON.parse(JSON.stringify(coverage.groups)),
     lessons,

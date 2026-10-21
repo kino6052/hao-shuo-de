@@ -109,4 +109,13 @@ describe('the Akinator pool', () => {
     expect([...s.features].some((f) => f.startsWith('pattern:'))).toBe(false);
     expect(s.features.has('word:ren2')).toBe(true);
   });
+
+  test('sentences quoted in one entry of a text each get their own id', () => {
+    const quoted = (id, pinyin) => ({ id, kind: 'lesson_inline', lesson: 'things', module: 'b', key: 'faq1', pinyin, hanzi: '', en: '', words: [] });
+    const three = [quoted(10, '{{Word:ren2}}.'), quoted(11, '{{Word:dao1}}.'), quoted(12, '{{Word:na2}}.')];
+    const p = buildPool({ sentences: three, words, topicNet, kindNet, lessons, wordLesson: (id) => wordLessons[id] });
+    const ids = p.items.filter((it) => it.id.startsWith('sentence:')).map((it) => it.id);
+    expect(ids).toEqual(['sentence:lesson_inline:things/faq1', 'sentence:lesson_inline:things/faq1#2', 'sentence:lesson_inline:things/faq1#3']);
+    expect(new Set(ids.map((id) => p.item(id))).size).toBe(3);
+  });
 });

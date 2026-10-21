@@ -88,6 +88,7 @@ node scripts/kb.js forms [--pos noun] [--limit 20]                      # how th
 node scripts/kb.js scoreboard [--append] [--label "what changed"] [--no-atoms]  # the language's numbers now, against the stored history
 node scripts/kb.js move <lesson | lesson/module | pattern:id> <where>   # what a change in the lesson order would do
 node scripts/kb.js engine                                               # which clingo is in use
+node scripts/kb.js tool <kb_name> ['{"text": "..."}']                   # any of the MCP server's tools (kb_check_text, kb_lookup, kb_constructions ...), with its arguments as JSON; no name lists them
 ```
 <!-- /generated:kb-commands -->
 
@@ -109,6 +110,7 @@ node scripts/kb.js engine                                               # which 
 | `kb_gloss` | Each word of a sentence, word by word in English, replaced by the first sense of its own dictionary definition (TRANSLATOR_PLAN.md B3): mechanical, no AI, no reading of the sentence as a whole. |
 | `kb_lookup` | An English word or phrase -> Hao-shuo-de forms straight away, never the Mandarin headword itself (TRANSLATOR_PLAN.md C1): each form with its tier (gloss, same sense, kind of), the lesson it can be read from… |
 | `kb_memory` | The translation memory (TRANSLATOR_PLAN.md C2): an English sentence -> the closest sentences the book already has, by their own English (Jaccard over the words, nothing about Hao-shuo-de or grammar)… |
+| `kb_constructions` | English ways of saying -> Hao-shuo-de grammar (TRANSLATOR_PLAN.md C3): the English constructions in a sentence (so, because, if, than, the one who, on the way, still, already, will, did …)… |
 | `kb_atoms` | Which dictionary words are atoms: the words the others cannot be said from. |
 | `kb_relations` | The relations between words and between composites: opposites, close words, the same description, kind-of (a composite and its head), agents, categories, and phrases that stand in for a missing opposite. |
 | `kb_tags` | The tag nets (TAGS_PLAN.md): every entry, core word or composite, sits under tags on two nets that can nest and a tag can have several parents. |
@@ -155,6 +157,7 @@ node scripts/kb.js engine                                               # which 
 | `src/lib/kb/check-text.js` | kb_check_text (TRANSLATOR_PLAN.md B1): a text and an optional lesson, checked in one call -- what the writer otherwise does by hand (review/writing/moving-pilot.md): for each sentence… |
 | `src/lib/kb/class-proposals.js` | Word classes the parser can propose (KB_PLAN.md K6). A word lists the classes it fills: its part of speech, and the classes it lists besides (`classes` in its data, each with a why and an example). |
 | `src/lib/kb/clingo.js` | The reasoner (KB_PLAN.md K1): clingo, answer set programming. Two ways to run it, the same answers either way. |
+| `src/lib/kb/constructions.js` | kb_constructions (TRANSLATOR_PLAN.md C3): an English sentence -> the English ways of saying in it (so, because, if, than, the one who, on the way, still, already, will, did …) and, for each… |
 | `src/lib/kb/cross-check.js` | Checks the dictionary's own kind-of, opposite and part-of relations against what the English WordNet says about the same senses. |
 | `src/lib/kb/english.js` | Finds the entries that say an English word, in three tiers: the gloss, the same WordNet sense, a kind of. |
 | `src/lib/kb/export.js` | Writes the dictionary as OntoLex-Lemon Turtle, a standard format that tools like Protégé can open and share. |
@@ -177,6 +180,7 @@ node scripts/kb.js engine                                               # which 
 | `src/lib/kb/parse-report.js` | "How much of the book's own text do the grammar patterns cover?" (KB_PLAN.md phase 1: the parse report on lessons 1-4.) Every Hao-shuo-de sentence in the chosen lessons is parsed… |
 | `src/lib/kb/parse.js` | "Does this sentence parse?" for the CLI, the explorer and the Claude tools (KB_PLAN.md phase 1, kb_parse). |
 | `src/lib/kb/pattern-report.js` | Minimal patterns (KB_PLAN.md phase 4): which grammar patterns the book and the dictionary really need, and in what order they are taught. |
+| `src/lib/kb/readability.js` | Readability numbers for one sentence (TRANSLATOR_PLAN.md B4): how many words it has, how deeply its phrases sit inside each other, and its longest description… |
 | `src/lib/kb/relations.js` | Relation candidates (KB_PLAN.md K18, phase 5): every relation the data already states or implies, with its kind, where it came from and why. |
 | `src/lib/kb/rests-on.js` | Which atoms a word rests on (KB_PLAN.md K24: "each word shows which atoms its paraphrase and its description come down to"). |
 | `src/lib/kb/review.js` | The word and kinds review (KB_PLAN.md phase 2): what the review pages show for a batch, and what the author's decisions turn into. |

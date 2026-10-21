@@ -125,6 +125,7 @@ For each teaching point -- one module, one file (2–10 per lesson):
 | D62 | **bāo for containers; shapes as descriptions (2026-10-05).** bāo 包 (bag) replaces hézi 盒子 as the container word: it is the most useful container, and it builds shū-bāo (schoolbag) and miàn-bāo (bread). In the sentences, the box is a bag. Things hézi stood for that aren't bags got new forms (TV kàn-de jī, fridge lěng-de jī, cup hē-shuǐ-yòng-de dōng-xi). Shapes stay descriptions, because they make you think about what a thing looks like: shape is yàng-zi, a triangle sān-biān-de yàng-zi, a circle yuán-de yàng-zi, a cube (and a box) liù-miàn-dōu-fāng-de dōng-xi, a sphere nǎ-biān-dōu-yuán-de dōng-xi (refactors/D62, D62b). |
 | D63 | **Descriptions first: an audit of the core (2026-10-05).** A word earns its place only when a description would be clumsy, not merely because Mandarin has one. zuó leaves (yesterday is qián-yī-tiān, the day before); bǎi leaves and líng 零 (zero) joins, so big numbers are read digit by digit, as Mandarin reads years (èr-líng-líng, èr-líng-èr-liù nián); ér leaves (son, daughter: nán-hái-zi, nǚ-hái-zi); jiāo leaves (to teach is to help learn: bāng + person + xué + verb); qún leaves (a group is hěn-duō rén; the group module now teaches hěn-duō / zhè-xiē / nà-xiē, and company, team and boss got new descriptions). shū, shēngyīn, máo and dēng stay. 219 words (refactors/D63, D63b). |
 | D65 | **Book changes from the decisions preview (2026-10-14); the work queue is KB_PLAN §4a.** Claude writes the lessons and modules this needs, and the author reviews the result. (1) Sentences that do not parse are reworded: miànr is said with miàn, three sentences are reworded and sent for approval, and the wolf line gets a new sentence. (2) A quoted sound followed by zi counts as a word. (3) A small bǎ pattern (bǎ + a thing + a describing word, "make it clean") is taught in a later lesson, probably Becoming and making. (4) Patterns taught after a sentence that uses them move earlier, one at a time (serial verbs, the new-situation le, the greeting, doubled verbs), each with a preview of what else changes. (5) Every pattern gets a lesson: the lesson that first uses it, with a new module where none teaches it. (6) A spelled form needs a paraphrase (K23). No word is added or removed by this decision. |
+| D66 | **Tests: one after every lesson, and a final exam at the end of the course (2026-10-21).** (1) Each lesson ends with a test the learner can take at any time and retake. Every try draws a different set of questions from a pool made for that lesson, so it never feels like the same quiz. (2) After the last lesson there is a page, the final exam, that tests everything: questions from all the lessons, balanced across them, with a result that says which lessons to read again. (3) The pools are generated from what the book already has (word cards, examples with their audio, exercises and answers, patterns), and a gate checks them: a test uses only words and patterns from its lesson or earlier ones, every question has exactly one right answer, and everything a lesson introduces is asked about. (4) Results stay in the learner's browser. The design is in §3, the work in §7 Phase 5, and the open choices in Q8–Q10. The same day the author set a requirement: the composite dictionary covers every yardstick word, English and Chinese, at 100%; that is KB_PLAN.md Phase 9 (K30), and the final exam can use its finished dictionary (Phase 5, last item). |
 
 ---
 
@@ -176,6 +177,38 @@ For each teaching point -- one module, one file (2–10 per lesson):
 ### After the lessons — Content, Reference, Tools, Misc
 
 Four groups, set in `src/content/book.js` (`BACK_MATTER`, D48): **Content** (proverbs, stories), **Reference** (pinyin, tone sandhi, grammar patterns), **Tools** (the three dictionaries, the sentence builder), and **Misc** (extra articles: why minimality works, not Toki Pona).
+
+### Tests and the final exam (D66)
+
+**After each lesson: the lesson test.**
+
+- It sits at the end of the lesson page, and the learner can take it at any time and as often as they like.
+- Each try shows 10 questions, drawn at random from the lesson's pool of at least 50, with no repeats in one try. The size is tuned in Q9.
+- Most questions are about this lesson's new words and points. About a quarter look back at earlier lessons, and words the learner missed before come up more often.
+- After a wrong answer the test shows the right one and links to the module that teaches it.
+- Question kinds, all made from data the book already has (428 exercises, the examples with hanzi, pinyin and audio, the word cards, the patterns):
+
+| Kind | What the learner does | Made from |
+| ---- | --------------------- | --------- |
+| Word and meaning | Pick the English for a word, or the word for an English meaning | word cards |
+| Listen and choose | Hear an example and pick the sentence or its meaning | examples with audio |
+| Fill the blank | An example with one word hidden: pick or type it | examples |
+| Put in order | An example cut into words: put it back together | examples |
+| Pick the translation | An English sentence and four Hao-shuo-de sentences: pick the right one | examples, with wrong ones from the KB |
+| Spot the mistake | Which sentence is right? The wrong ones make the mistakes a lesson warns about (word order, a missing le, bù and méi) | patterns |
+| The lesson's exercises | The exercises of the lesson, as typed or chosen answers | exercises and answers |
+| Sounds and tones | Pick the tone or the spelling of a word they hear | audio, word cards |
+
+- Wrong choices come from the knowledge base: words of the same kind (`kb_tags`, `kb_relations`), and wrong sentences checked with `kb_parse`, so a wrong choice is really wrong and a right one parses.
+- A try is drawn from a seed, so the same seed shows the same try again.
+
+**At the end of the course: the final exam.**
+
+- It is a page after the last lesson (Q8). It is not a lesson, so the book still has 26 lessons.
+- 60 questions, drawn from all the lessons' pools and balanced by lesson (more for lessons with more words) and by kind. Every try is different (the size and the pass mark are tuned in Q9).
+- The result shows the score, then how the learner did in each section and lesson, with links to read again the lessons that went worst, and the words they missed.
+- Across all the pools, every core word and every pattern is asked at least once. A gate checks it.
+- Later, once the dictionary says everything on the word lists (KB_PLAN.md Phase 9), an extra part can ask about the composite dictionary: "which description means *bus*?"
 
 ---
 
@@ -547,6 +580,12 @@ Q1–Q4 were answered on 2026-09-27. New questions go here.
 - **Q6 — di has no tone mark.** → **Now dì** (D30).
 - **Q7 — èr (二, "two").** → **Added** to L16 (D31).
 
+Questions from D66 (2026-10-21). Each has a proposed answer so the work can start; change what you disagree with.
+
+- **Q8 — Where does the final exam sit?** Proposed: a chapter `final-exam` right after the last lesson in the sidebar, outside the lesson numbers, so the book keeps its 26 lessons and `check-book` still matches intro-3. Alternative: the first entry of the Tools group.
+- **Q9 — How long, and what is a pass?** Proposed: 10 questions per lesson test with no pass mark (a score and what to read again); 60 questions in the final exam with a pass mark of 80%.
+- **Q10 — Are results kept, and where?** Proposed: in the learner's browser only (no accounts, nothing sent), so a learner on another device starts again.
+
 ---
 
 ## 6. Checks
@@ -664,3 +703,18 @@ The list follows the 26 lessons of §3 (the book grew from 21 to 24 with D43–D
 
 - [ ] ru: L1–L24, intros
 - [ ] zh: L1–L24, intros
+
+### Phase 5 — Tests and the final exam (added 2026-10-21, D66)
+
+Claude writes the generator, the question text and the pages; the author reviews a sample (the last item). The lessons are approved, so this can start now and does not wait for Phase 4: the questions come from the lesson data, so a lesson's ru and zh come with its translation. Design: §3.
+
+- [ ] **Question model and templates.** `src/lib/quiz/`: a question is data (its kind, the prompt in every language, the choices or the accepted answer, the lesson and module it tests, the words and patterns it uses). One template per kind in §3, so a new kind is one file. Tests on a small fixture lesson.
+- [ ] **A pool for each lesson.** Generated at build time from the lesson's modules (word cards, examples with audio, exercises and answers, patterns), with wrong choices from the KB. At least 50 questions per lesson, at least 4 kinds, every new word asked at least 3 times and every pattern at least twice. One data file per lesson, since many small files are slow to load (OPTIMIZATIONS.md).
+- [ ] **The draw.** A seeded draw of 10 questions: spread over kinds and modules, about a quarter from earlier lessons, missed words more likely, no repeats in a try.
+- [ ] **The lesson test on the lesson page.** Question by question, the right answer and a link to the module after a wrong one, a score at the end, and "try again" for a new set. Works with the keyboard and on a phone. English first (D13).
+- [ ] **The gate `check-tests`** (strict for finished lessons, §6; add it to `scripts/gates.js` and the §6 table): pool size and kinds per lesson; no word or pattern used before its lesson, in the questions or in their wrong choices (the early-words rule); exactly one right answer per question (a wrong choice that also parses and means the same fails); everything a lesson introduces is asked about; plain wording with no jargon (rule 4).
+- [ ] **The final exam page.** The `final-exam` chapter (`book.js`, the sidebar, intro-3), 60 questions drawn from all the pools, balanced by lesson and kind, with the result described in §3. Retakeable.
+- [ ] **Pool coverage.** Across all the pools every core word and every pattern is asked at least once (a gate), and a report lists the least-asked words, so a weak spot shows before a learner finds it.
+- [ ] **A record of progress.** Best score per lesson and the words missed, kept in the browser (Q10). A small mark on each lesson in the sidebar and a "to review" list on the final exam page.
+- [ ] **The author reads a sample:** 20 questions from each of the three sections and the final exam's mix, then settles Q8–Q10.
+- [ ] **Later, after KB_PLAN.md Phase 9:** an extra exam part that asks about the finished composite dictionary (which description means *bus*, say this with Hao-shuo-de words).

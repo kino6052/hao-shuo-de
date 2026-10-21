@@ -8,10 +8,13 @@
 //   askLookup(kb, { word }) -> { data, text }
 
 import { replaceWordRefs, refTerm } from '../word-refs.js';
+import { matchConstructions } from './constructions.js';
 
 const lessonIdOf = (lessons, n) => (n === null || n === undefined ? null : lessons.find((l) => l.number === n)?.id ?? null);
 
-const render = (kb, words, zh) => {
+// -> a word's or composite's Hao-shuo-de form: the readable one with the earliest lesson, then the fewest words
+export function formOf(kb, zh) {
+  const words = kb.source.words;
   const built = kb.built();
   const row = built.row(zh);
   if (row) {
@@ -28,7 +31,7 @@ const render = (kb, words, zh) => {
   const id = built.wordId(zh);
   const w = id ? words[id] : null;
   return w ? { pinyin: w.term, hanzi: w.hanzi, words: 1, lesson: lessonIdOf(kb.lessons(), kb.wordLesson(id)) } : null;
-};
+}
 
 const exampleOf = (kb, words, zh) => {
   const ex = (kb.source.composites ?? []).find((c) => c.zh === zh)?.examples?.[0];
@@ -38,7 +41,7 @@ const exampleOf = (kb, words, zh) => {
 };
 
 const toRow = (kb, words, tier, e) => {
-  const form = render(kb, words, e.zh);
+  const form = formOf(kb, e.zh);
   return form ? { tier, zh: e.zh, py: e.py, en: e.en, ...form, example: exampleOf(kb, words, e.zh) } : null;
 };
 
@@ -51,11 +54,14 @@ export function askLookup(kb, { word } = {}) {
     ...r.sameSense.flatMap((s) => s.entries.map((e) => toRow(kb, words, 'same-sense', e))),
     ...r.kindOf.map((e) => toRow(kb, words, 'kind-of', e)),
   ].filter(Boolean);
+  // a grammar word (so, than, still) is said by a pattern more often than by a word: name the rows kb_constructions has
+  const grammar = matchConstructions(kb.source.maps?.constructions ?? [], word).map((h) => h.row.id);
   const out = [`English "${r.query}": ${rows.length} form(s)`];
   if (!rows.length) out.push(r.note ?? 'Nothing says it yet.');
+  if (grammar.length) out.push(`Said by grammar too: kb_constructions ${grammar.map((g) => `"${g}"`).join(', ')}`);
   for (const row of rows) {
     out.push('', `[${row.tier}] ${row.pinyin}  ${row.hanzi}   (from ${row.zh} ${row.py}: ${row.en})`, `  ${row.words} word(s); lesson ${row.lesson ?? 'none'}`);
     if (row.example) out.push(`  e.g. ${row.example.pinyin}  "${row.example.en}"`);
   }
-  return { data: { query: r.query, rows, note: rows.length ? null : (r.note ?? null) }, text: out.join('\n') };
+  return { data: { query: r.query, rows, note: rows.length ? null : (r.note ?? null), constructions: grammar }, text: out.join('\n') };
 }

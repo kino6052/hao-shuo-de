@@ -7,6 +7,8 @@
 //
 //   const report = parseReport({ sentences, parseText, parseLesson, patternLesson, lessons: [{ id, number }], groups });
 //   renderParseReport(report, words) -> markdown
+//   splitGaps(report, knownGaps, words) -> { gaps, known, fresh, fixed }, the gaps against kb/grammar-gaps.json
+//                                          (the gate scripts/check-grammar.js and real-parse.test.js both use it)
 //
 // `sentences` is facts.sentences (kb.facts.sentences): the lesson examples and
 // answers that are written in Hao-shuo-de, plus any complete sentence written
@@ -99,6 +101,26 @@ export function slimReport(report) {
 
 // -> a sentence of word refs as a person reads it ("Wǒ shì rén.")
 export const sayText = (text, words = {}) => replaceWordRefs(text, (id, kind) => refTerm(words[id]?.term ?? id, kind));
+
+// -> the gaps of a report (the sentences that fail, and those that need a later pattern) split by the list of known gaps
+// (kb/grammar-gaps.json, [{ text, why }], the sentences as a person reads them). The list holds what the author knows does
+// not parse, a wrong example a lesson quotes on purpose among them, so it is not a failure of the grammar.
+//   gaps    every gap of the report
+//   known   the gaps on the list
+//   fresh   the gaps not on the list: the ones to look at
+//   fixed   the entries on the list that did not show up in the report (they parse now, or the report does not reach them)
+export function splitGaps(report, knownGaps, words = {}) {
+  const gaps = [...report.failures, ...report.late].filter((it) => it.piece);
+  const listed = new Set(knownGaps.map((k) => k.text));
+  const text = (it) => sayText(it.piece.text, words);
+  const seen = new Set(gaps.map(text));
+  return {
+    gaps,
+    known: gaps.filter((it) => listed.has(text(it))),
+    fresh: gaps.filter((it) => !listed.has(text(it))),
+    fixed: knownGaps.filter((k) => !seen.has(k.text)),
+  };
+}
 
 const pct = (n, d) => (d ? `${Math.round((100 * n) / d)}%` : '-');
 

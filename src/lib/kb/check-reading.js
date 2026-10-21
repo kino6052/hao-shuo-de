@@ -1,13 +1,15 @@
 // kb_check_reading (TRANSLATOR_PLAN.md B2): does a sentence have the reading Claude means? Claude gives the
 // reading as a number (its place among kb_parse's readings) or as the sentence in brackets (kb_parse's own
 // bracket notation); the answer is "means it", "means it, with N other readings" or "can't mean it" -- and
-// shows the readings it does have, so the right one can be picked instead.
+// shows the readings it does have, so the right one can be picked instead. A reading it means comes with its
+// readability (B4, readability.js): kb_check_text measures the first reading, this the one meant.
 //
 //   askReading(kb, { text, reading, lesson }) -> { data, text }
 
 import { pinyinProblems } from '../pinyin-refs.js';
 import { bracket, explainFailure } from '../grammar/parser.js';
 import { lessonOf } from './lesson-lookup.js';
+import { readability, renderReadability } from './readability.js';
 
 function findReadingIndex(readings, reading) {
   const want = String(reading).trim();
@@ -45,9 +47,11 @@ export function askReading(kb, { text, reading, lesson } = {}) {
     return { data, text: ["Can't mean it. The reading(s) it does have:", ...readings.map((b, i) => `  ${i + 1}. ${b}`)].join('\n') };
   }
   const others = readings.filter((_, k) => k !== idx);
-  const data = { ok: true, means: others.length ? 'yes-with-others' : 'yes', bracket: readings[idx], others };
+  const measured = readability({ refs, parse: result, words, reading: idx });
+  const data = { ok: true, means: others.length ? 'yes-with-others' : 'yes', bracket: readings[idx], others, readability: measured };
+  const meant = [`  ${readings[idx]}`, ...renderReadability(measured).map((line) => `  ${line}`)];
   const out = others.length
-    ? [`Means it, with ${others.length} other reading(s):`, `  ${readings[idx]}`, '', 'The others:', ...others.map((b, i) => `  ${i + 1}. ${b}`)].join('\n')
-    : `Means it.\n  ${readings[idx]}`;
+    ? [`Means it, with ${others.length} other reading(s):`, ...meant, '', 'The others:', ...others.map((b, i) => `  ${i + 1}. ${b}`)].join('\n')
+    : ['Means it.', ...meant].join('\n');
   return { data, text: out };
 }

@@ -20,7 +20,7 @@ import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { resolve } from 'path';
 import { fileURLToPath } from 'url';
 import { openKb } from './kb.js';
-import { parseReport, sayText } from '../src/lib/kb/parse-report.js';
+import { parseReport, sayText, splitGaps } from '../src/lib/kb/parse-report.js';
 
 const ROOT = resolve(fileURLToPath(new URL('.', import.meta.url)), '..');
 const FILE = resolve(ROOT, 'kb/grammar-gaps.json');
@@ -47,10 +47,9 @@ const where = (it) => `${it.lesson}${it.module ? `/${it.module}` : ''}`;
 const say = (it) => sayText(it.piece?.text ?? '', kb.source.words);
 const needs = (it) => (it.late ? ` -- needs ${it.late.map((p) => `${p.id} (${p.lesson ? `lesson ${p.lesson}` : 'no lesson'})`).join(' + ')}` : '');
 
-const gaps = [...report.failures, ...report.late].filter((it) => it.piece);
-const seen = new Set(gaps.map(say));
-const fresh = gaps.filter((it) => !knownText.has(say(it)));
-const fixed = lessonsOnly ? [] : known.filter((k) => !seen.has(k.text));
+const split = splitGaps(report, known, kb.source.words);
+const { gaps, fresh } = split;
+const fixed = lessonsOnly ? [] : split.fixed;
 
 if (update && fresh.length) {
   const add = [...new Map(fresh.map((it) => [say(it), { text: say(it), why: '' }])).values()];

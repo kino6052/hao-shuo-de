@@ -52,7 +52,7 @@ Plans and decisions: [BOOK_PLAN.md](BOOK_PLAN.md) (book, decision log D1…), [K
 | Lesson sentences that parse | 99.6 % |
 | Smallest set the others can be said from | 202 words; the other 28 have a fine paraphrase |
 | Gates (`npm run check`) | 22 |
-| Test files (`npm test`) | 81 |
+| Test files (`npm test`) | 86 |
 
 The language numbers are the last row of `kb/scoreboard.csv` (2026-10-21, refactors/K15.ts: 20 op(s)); a refactor adds a new row.
 <!-- /generated:facts -->
@@ -184,6 +184,7 @@ While `dev` runs, two pages are served on the same address:
 | `src/lib/` | Code shared by the app and the scripts: data shapes, routing, i18n, and the word, chapter and composite logic. |
 | `src/lib/grammar/` | The chart parser and the lexicon behind it; runs in Node and in the browser. |
 | `src/lib/kb/` | The knowledge base: facts, the clingo calls, the reports and the Claude tools. See kb/README.md. |
+| `src/lib/translator/` | The online translator: the daemon that runs one Claude session per request, and its in-memory store for tests. See TRANSLATOR_PLAN.md part S. |
 | `tools/` | Local tools that are not part of the repo, such as the native clingo (git-ignored). |
 <!-- /generated:layout -->
 

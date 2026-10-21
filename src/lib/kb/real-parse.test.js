@@ -4,14 +4,19 @@
 // sentence of the book, so `node scripts/test.js` runs it, not the commit hook.
 // The what-if answers on the real data are in real.test.js.
 
+import { readFileSync } from 'node:fs';
 import { beforeAll, describe, expect, test } from 'bun:test';
 import { loadSource } from '../../../scripts/kb-source.js';
 import { createKb } from './kb.js';
 import { parseMemo } from '../../../scripts/parse-memo.js';
-import { parseReport, renderParseReport } from './parse-report.js';
+import { parseReport, renderParseReport, splitGaps } from './parse-report.js';
 
 let kb;
 let source;
+
+// The gaps the author knows about (kb/grammar-gaps.json, the list scripts/check-grammar.js uses too): a lesson that quotes a wrong
+// sentence on purpose ("Why isn't it shuǐ shì hǎo?") or a picture caption of four sounds is on it, and is not a failure of the grammar.
+const knownGaps = () => JSON.parse(readFileSync(new URL('../../../kb/grammar-gaps.json', import.meta.url), 'utf8'));
 
 beforeAll(async () => {
   source = await loadSource();
@@ -23,22 +28,27 @@ describe('the parse report on lessons 1-4', () => {
   const lessons = () => source.lessons.filter((l) => l.number <= 4).map(({ id, number }) => ({ id, number }));
   const report = () => parseReport({ sentences: kb.facts.sentences, parseText: kb.parse, parseLesson: kb.parseUpTo, patternLesson: kb.patternLesson, lessons: lessons() });
 
-  test('lessons 2 and 3 parse completely; the gaps are all in lesson 4', () => {
+  // Every sentence the book quotes counts, a wrong one too, so a gap on the known list is set aside; any other gap must be in lesson 4.
+  test('lessons 2 and 3 parse completely apart from the known gaps; the other gaps are all in lesson 4', () => {
     const r = report();
+    const { known, fresh } = splitGaps(r, knownGaps(), source.words);
     const by = Object.fromEntries(r.lessons.map((l) => [l.number, l]));
-    expect(by[2].parsed).toBe(by[2].total);
-    expect(by[3].parsed).toBe(by[3].total);
+    const knownIn = (n) => known.filter((g) => g.lesson === by[n].id).length;
+    expect(by[2].parsed + knownIn(2)).toBe(by[2].total);
+    expect(by[3].parsed + knownIn(3)).toBe(by[3].total);
     expect(by[2].total + by[3].total).toBeGreaterThan(30);
-    expect(r.failures.every((f) => f.lesson === 'pointing')).toBe(true);
+    expect(fresh.every((f) => f.lesson === 'pointing')).toBe(true);
   });
 
   // Lessons 1-4 no longer have such an answer (lesson 1's "Wo3 hao3." became "hao3."), so one is added here.
   // It is written with word refs: plain English that is not pinyin cannot be read at all, and counts as a failure.
+  // Lesson 1 does have a failure, its picture caption of four quoted sounds, but that one is a known gap.
   test('an English answer that names a word or two is left out, not counted as a failure', () => {
     const english = { kind: 'lesson_answer', lesson: 'sounds-and-symbols', key: 'test-english', pinyin: 'Write {{word:hao3}} with the number three after it.', en: '' };
     const r = parseReport({ sentences: [...kb.facts.sentences, english], parseText: kb.parse, parseLesson: kb.parseUpTo, patternLesson: kb.patternLesson, lessons: lessons() });
     expect(r.skipped.map((it) => it.key)).toContain('test-english');
-    expect(r.failures.some((f) => f.lesson === 'sounds-and-symbols')).toBe(false);
+    expect(r.failures.some((f) => f.key === 'test-english')).toBe(false);
+    expect(splitGaps(r, knownGaps(), source.words).fresh.some((f) => f.lesson === 'sounds-and-symbols')).toBe(false);
   });
 
   test('it prints as markdown with the rate, the lessons, and what does not parse', () => {

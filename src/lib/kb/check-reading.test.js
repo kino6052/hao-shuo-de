@@ -66,4 +66,22 @@ describe('askReading', () => {
     expect(() => askReading(kb, { reading: '1' })).toThrow('text is required');
     expect(() => askReading(kb, { text: 'Wǒ duì.' })).toThrow('reading is required');
   });
+
+  test('the readability is the meant reading\'s, not the first\'s (B4)', () => {
+    // wǒ-de fàn as a description (one level) or flat (none): the same sentence, two depths
+    const twoWays = createKb({
+      ...source,
+      patterns: [
+        { id: 'svo', meaning: { eng: 'who does what' }, rules: [{ lhs: 'Utt', hsd: 'S' }, { lhs: 'S', hsd: 'NP VP' }, { lhs: 'NP', hsd: '@pronoun' }, { lhs: 'VP', hsd: '@verb NP' }] },
+        { id: 'describing', meaning: { eng: 'a modifier and its noun' }, rules: [{ lhs: 'Mod', hsd: 'NP de' }, { lhs: 'ModNP', hsd: 'Mod @noun' }, { lhs: 'NP', hsd: 'ModNP' }] },
+        { id: 'owner-flat', meaning: { eng: 'whose thing, flat' }, rules: [{ lhs: 'NP', hsd: '@pronoun de @noun' }] },
+      ],
+    });
+    const ask = (reading) => askReading(twoWays, { text: 'Wǒ chī wǒ-de fàn.', reading });
+    const both = ['1', '2'].map((n) => ask(n).data);
+    expect(both.map((r) => r.readability.depth).sort()).toEqual([0, 1]);
+    for (const r of both) expect(r.readability.depth).toBe(r.bracket.includes('ModNP') ? 1 : 0);
+    const described = both.findIndex((r) => r.readability.depth === 1) + 1;
+    expect(ask(String(described)).text).toContain('5 words, depth 1, longest description 3 words');
+  });
 });

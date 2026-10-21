@@ -44,6 +44,7 @@
 //   node scripts/kb.js scoreboard [--append] [--label "what changed"] [--no-atoms]  # the language's numbers now, against the stored history
 //   node scripts/kb.js move <lesson | lesson/module | pattern:id> <where>  # what a change in the lesson order would do
 //   node scripts/kb.js engine  # which clingo is in use
+//   node scripts/kb.js tool <kb_name> ['{"text": "..."}']  # any of the MCP server's tools (kb_check_text, kb_lookup, kb_constructions ...), with its arguments as JSON; no name lists them
 //
 // parse-report parses every Hao-shuo-de sentence of the first N lessons and
 // writes kb/reports/lessons-1-N-parse.md (--stdout prints it instead). --all
@@ -115,7 +116,7 @@ import { classProposals, classesWaiting, renderClassProposals } from '../src/lib
 import { OTHER_TEXTS, snapshotFor } from './parse-snapshot.js';
 import { diffSnapshots, renderParseDiff } from '../src/lib/kb/parse-diff.js';
 import { parseReport, renderParseReport, slimReport } from '../src/lib/kb/parse-report.js';
-import { renderCheckForm } from '../src/lib/kb/tools.js';
+import { renderCheckForm, TOOLS, callTool } from '../src/lib/kb/tools.js';
 import { engine } from '../src/lib/kb/clingo.js';
 import { scoreboardRow, appendRow, readScoreboard, renderScoreboard } from '../src/lib/kb/scoreboard.js';
 
@@ -523,6 +524,13 @@ Written to ${file} (${Math.round(turtle.length / 1024)} KB).`);
       const r = await kb.atoms();
       return print(r, renderAtoms(r));
     }
+    case 'tool': {
+      // the MCP server's own tools, for a script, a subagent or a session that has no MCP connection
+      const [name, given] = rest;
+      if (!name) return print(TOOLS.map((t) => t.name), TOOLS.map((t) => `${t.name}  ${t.description.split('. ')[0]}`).join('\n'));
+      if (!TOOLS.some((t) => t.name === name)) throw new Error(`no tool ${name}; node scripts/kb.js tool lists them`);
+      return console.log(await callTool(kb, name, given ? JSON.parse(given) : {}));
+    }
     case 'engine': {
       const e = engine();
       const text =
@@ -532,7 +540,7 @@ Written to ${file} (${Math.round(turtle.length / 1024)} KB).`);
       return print(e, text);
     }
     default:
-      console.log('usage: node scripts/kb.js word|remove|check-form|query|parse|atoms|relations|english|hints|export|cross-check|frontier|yardsticks|meaning|candidates|add|gains|swaps|scoreboard|parse-report|parse-diff|classes|patterns|forms|move|engine …  (--json for data)');
+      console.log('usage: node scripts/kb.js tool|word|remove|check-form|query|parse|atoms|relations|english|hints|export|cross-check|frontier|yardsticks|meaning|candidates|add|gains|swaps|scoreboard|parse-report|parse-diff|classes|patterns|forms|move|engine …  (--json for data)');
       process.exitCode = command ? 1 : 0;
   }
 }

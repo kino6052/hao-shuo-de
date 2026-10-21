@@ -16,7 +16,7 @@
 // wins over the bare particle, the same way the parser prefers a composite's
 // own chain over reading its words apart (TRANSLATOR_PLAN.md A1).
 
-import { toneless } from './word-refs.js';
+import { toneless, replaceWordRefs, refTerm } from './word-refs.js';
 import { buildLexicon } from './grammar/lexicon.js';
 
 // A light syllable more than one word could be: the one it usually is.
@@ -68,7 +68,10 @@ function convert(text, words, { light = {}, composites = [], onProblem } = {}) {
       const ref = (id, isLight) => `{{${isLight ? (cap ? 'Light' : 'light') : cap ? 'Word' : 'word'}:${id}}}`;
       const fail = (message) => {
         if (!onProblem) throw new Error(message);
-        onProblem({ token: tok, message, suggestion: bySuggestion.get(low)?.[0] ?? null });
+        // the suggested form as pinyin to read, and as refs to write
+        const s = bySuggestion.get(low)?.[0];
+        const suggestion = s ? { zh: s.zh, refs: s.form, form: replaceWordRefs(s.form, (id, kind) => refTerm(words[id]?.term ?? id, kind)) } : null;
+        onProblem({ token: tok, message, suggestion });
         prev = null;
         return tok;
       };
@@ -101,7 +104,8 @@ export function pinyinToRefs(text, words, opts = {}) {
 // text and listed in `problems`, each with the dictionary's own form for it
 // when a composite's pinyin names it exactly (kb_parse, TRANSLATOR_PLAN.md A2).
 //   pinyinProblems("Wǒ wàng le.", words, { composites })
-//     -> { refs: '{{Word:wo3}} wàng {{word:le}}.', problems: [{ token: 'wàng', message, suggestion: { zh, form } }] }
+//     -> { refs: '{{Word:wo3}} wàng {{word:le}}.', problems: [{ token: 'wàng', message, suggestion: { zh, form, refs } }] }
+//     (form is the pinyin to read, refs the same form as word refs)
 export function pinyinProblems(text, words, opts = {}) {
   const problems = [];
   const refs = convert(text, words, { ...opts, onProblem: (p) => problems.push(p) });

@@ -1,9 +1,11 @@
-// TRANSLATOR_PLAN.md B1, B5: kb_check_text on a tiny grammar of our own, so a word's and a pattern's lesson
-// are both known exactly (the fixture's own lessons do not teach every fixture word).
+// TRANSLATOR_PLAN.md B1, B4, B5: kb_check_text on a tiny grammar of our own, so a word's and a pattern's lesson
+// are both known exactly (the fixture's own lessons do not teach every fixture word). The readability numbers
+// themselves are tested in readability.test.js; here only that each sentence gets them.
 
 import { describe, expect, test } from 'bun:test';
 import { createKb } from './kb.js';
 import { askCheckText } from './check-text.js';
+import { MAX_WORDS } from './readability.js';
 import { source } from './fixture.js';
 
 const entry = (type, module, key, extra = {}) => ({ type, module, key, ...extra });
@@ -94,6 +96,29 @@ describe('askCheckText', () => {
     const r = askCheckText(kb, { text: 'Wǒ chī fàn. Wǒ fēi.', lesson: 1 }).data;
     expect(r.sentences).toHaveLength(2);
     expect(r.ok).toBe(true); // fēi is late but the sentence still parses; checkText's `ok` tracks parsing, not lateness
+  });
+
+  test('each sentence without unknown words gets its readability numbers (B4), and the text form shows them', () => {
+    const r = askCheckText(kb, { text: 'Wǒ chī fàn. Wǒ hdfkj.', lesson: 1 });
+    expect(r.data.sentences[0].readability).toEqual({ words: 3, depth: 0, longestDescription: { words: 0, text: '' }, warnings: [] });
+    expect(r.data.sentences[1].readability).toBeNull(); // an unknown word: nothing to measure
+    expect(r.text).toContain('   3 words, depth 0, no description');
+  });
+
+  test('a sentence over a limit gets a "too long" line', () => {
+    const r = askCheckText(kb, { text: `${'Wǒ '.repeat(MAX_WORDS + 1).trim()}.`, lesson: 1 }); // does not parse, but the words are counted
+    const s = r.data.sentences[0];
+    expect(s.ok).toBe(false);
+    expect(s.readability.words).toBe(MAX_WORDS + 1);
+    expect(s.readability.depth).toBeNull();
+    expect(r.text).toContain(`   too long: ${MAX_WORDS + 1} words (limit ${MAX_WORDS})`);
+  });
+
+  test('a sentence that parses only with a pattern taught later is measured on the whole grammar\'s reading', () => {
+    const s = askCheckText(kb, { text: 'Wǒ-de fàn.', lesson: 1 }).data.sentences[0];
+    expect(s.ok).toBe(false); // de-modifier is lesson 2's
+    expect(s.readability.words).toBe(3);
+    expect(s.readability.depth).toBe(0); // a number, so a reading was found
   });
 
   test('text is required; an unknown lesson is an error', () => {

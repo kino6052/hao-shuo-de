@@ -45,7 +45,8 @@
 //             mentions that name those words, with only those words in sent_uses
 //             (a what-if), `textProgram()` all of them. Both are written compactly with clingo pools:
 //             sent_uses(12,(wo3;chi1)).  sent_kind((1..40;55),story).
-// `lines` keeps every fact, one per line, for reading and `factsAbout`.
+// A question then takes only the facts its rules read: programFor(rules, text) drops the lines whose predicate the
+// rules do not name (the what-if does, whatif.js). `lines` keeps every fact, one per line, for reading and `factsAbout`.
 
 import { str, sym } from './clingo.js';
 import { wordRefIds, wordRefRe, soleWordRef } from '../word-refs.js';
@@ -340,6 +341,32 @@ function textProgram(sentences, mentions, about) {
   }
   for (const m of mentions) if (!want || want.has(m.w)) out.push(`mention(${sym(m.w)},${str(m.lesson)},${str(m.module)},${m.kind},${m.n}).`);
   return out.join('\n') + '\n';
+}
+
+// -- only the facts a question's rules read ------------------------------------------------------
+
+// The predicate names a rule text uses: `name(` or `name/arity` (in a #show). Whole names, so `uses` is not `def_uses`;
+// comments and quoted strings are skipped. A name used only as a term (`f(X)`) is counted too: it keeps facts, never drops one.
+export function predicatesOf(rules) {
+  const code = String(rules).replace(/"(?:[^"\\]|\\.)*"|%.*/g, (m) => (m[0] === '"' ? '""' : ''));
+  return new Set([...code.matchAll(/(?<![A-Za-z0-9_'])([a-z][A-Za-z0-9_']*)(?:\(|\/\d)/g)].map((m) => m[1]));
+}
+
+// -> the facts of `facts` (one per line, as `program` and `textProgram` write them) with a predicate the rules name.
+// A line that is not a `name(...)` fact stays. The what-if needs it: its program was 1,220,690 bytes for the eight commonest
+// words, over the 1,000,000 clingo-wasm takes (src/lib/kb/clingo.js), and the language tier alone is 978,371 of it, mostly
+// composite facts no what-if rule reads (slot_chain, en, cfit, cpos, composite, rank ...).
+// Cut to what base.lp and whatif.lp name, the same program is 566,832 bytes (language tier 381,800, text 180,695), and 486,679
+// for wǒ + de. The rules decide, so a new rule that reads a new predicate keeps its facts with no change here.
+export function programFor(rules, facts) {
+  const read = predicatesOf(rules);
+  return String(facts)
+    .split('\n')
+    .filter((line) => {
+      const m = /^([a-z][A-Za-z0-9_']*)\(/.exec(line);
+      return !m || read.has(m[1]);
+    })
+    .join('\n');
 }
 
 // -> the fact lines that name a constant (a word id, or a composite's hanzi).

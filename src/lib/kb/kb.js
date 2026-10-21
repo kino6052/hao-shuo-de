@@ -51,6 +51,7 @@ import { askReading } from './check-reading.js';
 import { askGloss } from './gloss.js';
 import { askLookup } from './lookup.js';
 import { askMemory } from './memory.js';
+import { askConstructions } from './constructions.js';
 import { TAGS as themeTags } from '../grammar-tags.ts';
 import { patternsOf } from '../grammar/parser.js';
 import { pinyinToRefs } from '../pinyin-refs.js';
@@ -230,6 +231,9 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
 
     // The translation memory: an English sentence -> the closest book sentences by their own English (TRANSLATOR_PLAN.md C2).
     memory: (opts) => askMemory(kbLike, opts),
+
+    // English ways of saying (so, because, than, the one who …) -> the patterns and grammar words that say them (TRANSLATOR_PLAN.md C3).
+    constructions: (opts) => askConstructions(kbLike, opts),
 
     // The relations: stored ones are accepted, the ones a rule finds are proposed (see relations.js).
     relations: relationsOf,

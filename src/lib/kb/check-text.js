@@ -2,8 +2,9 @@
 // otherwise does by hand (review/writing/moving-pilot.md): for each sentence, the words that aren't Hao-shuo-de
 // words (with a suggestion when one is a composite's own pinyin), the words and patterns used that are taught
 // after the lesson, whether it parses at that level and how many readings it has, the hanzi, and the structures
-// it uses (W15's list), each flagged late when the lesson does not teach it yet. No lesson: the whole dictionary
-// (Q2's default), nothing is "late".
+// it uses (W15's list), each flagged late when the lesson does not teach it yet, and its readability (B4, readability.js:
+// the words, the depth of nesting and the longest description, with a warning over a limit; only when every word is a
+// Hao-shuo-de word). No lesson: the whole dictionary (Q2's default), nothing is "late".
 //
 //   askCheckText(kb, { text, lesson }) -> { data, text }
 
@@ -12,6 +13,7 @@ import { replaceWordRefs, refTerm, wordRefIds } from '../word-refs.js';
 import { splitSentences } from './parse.js';
 import { explainFailure } from '../grammar/parser.js';
 import { lessonOf } from './lesson-lookup.js';
+import { readability, renderReadability } from './readability.js';
 
 const sayProblem = (p) => (p.suggestion ? `${p.message} -- try ${p.suggestion.form} (${p.suggestion.zh})` : p.message);
 
@@ -35,6 +37,8 @@ function checkSentence(kb, raw, l) {
   const lateWords = l
     ? usedWords.map((id) => ({ id, term: words[id]?.term, lesson: kb.wordLesson(id) ?? null })).filter((w) => w.lesson === null || w.lesson > l.number)
     : [];
+  // measured on the first reading at the lesson's level, or on the whole grammar's when that level has none
+  const reading = unknown.length ? null : atLevel.ok ? atLevel : full.ok ? full : atLevel;
   return {
     text: replaceWordRefs(refs, (id, kind) => refTerm(words[id]?.term ?? id, kind)),
     hanzi: replaceWordRefs(refs, (id) => words[id]?.hanzi ?? id),
@@ -44,6 +48,7 @@ function checkSentence(kb, raw, l) {
     readingCount: atLevel?.treeCount ?? 0,
     patterns,
     explain: unknown.length === 0 && atLevel && !atLevel.ok ? explainFailure(atLevel, words) : null,
+    readability: reading ? readability({ refs, parse: reading, words }) : null,
   };
 }
 
@@ -58,6 +63,7 @@ export function askCheckText(kb, { text, lesson } = {}) {
     if (s.unknown.length) out.push(...s.unknown.map((p) => `   not a word: ${sayProblem(p)}`));
     if (s.lateWords.length) out.push(`   taught later: ${s.lateWords.map((w) => `${w.term} (lesson ${w.lesson ?? 'none'})`).join(', ')}`);
     if (!s.unknown.length) out.push(s.ok ? `   parses at this level, ${s.readingCount} reading(s)` : `   does not parse at this level: ${s.explain}`);
+    if (s.readability) out.push(...renderReadability(s.readability).map((line) => `   ${line}`));
     if (s.patterns.length) out.push(`   structures: ${s.patterns.map((p) => `${p.id}${p.late ? ` [${p.lesson === null ? 'no lesson teaches it' : `lesson ${p.lesson}, too late`}]` : ''}`).join(', ')}`);
   });
   return { data, text: out.join('\n') };

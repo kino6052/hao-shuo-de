@@ -48,12 +48,12 @@ describe('the protocol', () => {
 
   test('tools/list names the tools, each with a description and a schema', async () => {
     const { tools } = (await rpc('tools/list')).result;
-    expect(tools.map((t) => t.name)).toEqual(['kb_word', 'kb_remove', 'kb_parse', 'kb_check_form', 'kb_check_text', 'kb_check_reading', 'kb_gloss', 'kb_lookup', 'kb_memory', 'kb_atoms', 'kb_relations', 'kb_tags', 'kb_built', 'kb_lesson', 'kb_patterns', 'kb_uses', 'kb_akinator', 'kb_english', 'kb_hints', 'kb_export', 'kb_cross_check', 'kb_yardsticks', 'kb_frontier', 'kb_meaning', 'kb_candidates', 'kb_add', 'kb_gains', 'kb_swaps', 'kb_scoreboard', 'kb_query']);
+    expect(tools.map((t) => t.name)).toEqual(['kb_word', 'kb_remove', 'kb_parse', 'kb_check_form', 'kb_check_text', 'kb_check_reading', 'kb_gloss', 'kb_lookup', 'kb_memory', 'kb_constructions', 'kb_atoms', 'kb_relations', 'kb_tags', 'kb_built', 'kb_lesson', 'kb_patterns', 'kb_uses', 'kb_akinator', 'kb_english', 'kb_hints', 'kb_export', 'kb_cross_check', 'kb_yardsticks', 'kb_frontier', 'kb_meaning', 'kb_candidates', 'kb_add', 'kb_gains', 'kb_swaps', 'kb_scoreboard', 'kb_query']);
     for (const t of TOOLS) {
       expect(t.description.length).toBeGreaterThan(40);
       expect(t.inputSchema.type).toBe('object');
       // kb_atoms, kb_relations, kb_export, kb_meaning, kb_candidates, kb_swaps and kb_scoreboard ask for nothing: no name is the whole report, no flag is the numbers now
-      if (!['kb_atoms', 'kb_relations', 'kb_export', 'kb_cross_check', 'kb_yardsticks', 'kb_frontier', 'kb_meaning', 'kb_candidates', 'kb_gains', 'kb_swaps', 'kb_scoreboard', 'kb_tags', 'kb_built', 'kb_lesson', 'kb_patterns', 'kb_uses', 'kb_akinator'].includes(t.name)) expect(t.inputSchema.required.length).toBeGreaterThan(0);
+      if (!['kb_atoms', 'kb_relations', 'kb_export', 'kb_cross_check', 'kb_yardsticks', 'kb_frontier', 'kb_meaning', 'kb_candidates', 'kb_gains', 'kb_swaps', 'kb_scoreboard', 'kb_tags', 'kb_built', 'kb_lesson', 'kb_patterns', 'kb_uses', 'kb_akinator', 'kb_constructions'].includes(t.name)) expect(t.inputSchema.required.length).toBeGreaterThan(0);
       for (const r of t.inputSchema.required ?? []) expect(t.inputSchema.properties[r]).toBeDefined();
     }
   });
@@ -123,6 +123,12 @@ describe('the tools answer with the text the command line prints', () => {
     expect(text).toContain('index is not built');
     const none = await call('kb_english', {});
     expect(none.result.isError).toBe(true);
+  });
+
+  test('kb_constructions with nothing is the whole table (none in the fixture); an unknown id is an error', async () => {
+    expect(textOf(await call('kb_constructions', {}))).toMatch(/^0 English ways of saying/);
+    expect(textOf(await call('kb_constructions', { text: 'So I ate.' }))).toMatch(/^0 English way\(s\) of saying found/);
+    expect((await call('kb_constructions', { id: 'nope' })).result.isError).toBe(true);
   });
 
   test('kb_hints says the English index is not built, and needs a word', async () => {

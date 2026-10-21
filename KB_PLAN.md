@@ -359,7 +359,7 @@ A lesson's grammar box becomes `{ type: "grammar", pattern: "compare-bi" }`. The
 - **Author:** the WordNet link review (almost done), the questions the cross-check raised (answered by Claude on 2026-10-21, change what you disagree with), the 114 proposed composites, and the five typed-in lists (`checked: false`).
 
 ### Phase 7: Comparisons, generation, export
-- [ ] Each pattern links to HSK points, UD relations, WALS features, NSM, its English construction, and Toki Pona and Basic English rules. **The lists these links point to are typed in (2026-10-21, see Phase 6, unchecked); the links from the patterns are not made yet.** Reports:
+- [ ] Each pattern links to HSK points, UD relations, WALS features, NSM, its English construction, and Toki Pona and Basic English rules. **The lists these links point to are typed in (2026-10-21, see Phase 6, unchecked); the links from the patterns are not made yet.** The English-construction link is made the other way round: 112 English ways of saying, each naming its patterns (`src/data/maps/english-constructions.ts`, `kb_constructions`, TRANSLATOR_PLAN.md C3, proposed for review); 6 patterns are named by no row yet. Reports:
   - which of HSK 1–3 grammar HSD covers, simplifies or leaves out;
   - how HSD compares on size and reach with Toki Pona and Basic English;
   - patterns that overlap within HSD (the same sentences parse two ways).
@@ -382,6 +382,8 @@ A lesson's grammar box becomes `{ type: "grammar", pattern: "compare-bi" }`. The
 
 Goal: the dictionary says every word of the Mandarin and English yardsticks, so the 1000-word core of jiandanhua has descriptions to read for everything a learner meets. The numbers below are from `node scripts/kb.js yardsticks` and `frontier` on 2026-10-21 (after K10–K14, 2169 composites).
 
+**2026-10-21: the author's requirement is that every yardstick word is covered, 100%.** The composite dictionary must cover the English and Chinese words of the yardsticks: the English top 3000, Basic English (829) and the 5329 Mandarin words of the frequency list (the everyday sentences are already at 100%). This phase is that work, and it is now a requirement, not only a plan. It is about the dictionary (the composites), not about translating the book. The author chose the word lists as the meaning of "all" (not every word of WordNet or of a full Mandarin dictionary, which would be a separate, much larger goal: tens of thousands of entries and a Mandarin word list we do not have). A word counts as covered in the four ways K30 sets out below: it has an entry, it is said by a pattern, it is on the checked list, or it is explained as "not an entry" with a reason. What the author still confirms is K30's details (what may be explained instead of given an entry). The course's final exam can use the finished dictionary for an extra part (BOOK_PLAN.md Phase 5, last item).
+
 **Where we stand (2026-10-21):**
 
 | Yardstick | Size | Said | Near (only as a kind of) | Missing |
@@ -392,7 +394,7 @@ Goal: the dictionary says every word of the Mandarin and English yardsticks, so 
 | Basic English | 829 | 608 | 151 | 70 |
 | Everyday sentences | 1000 | 1000 | 0 | 0 |
 
-**Decision K30 (proposed; the author confirms): what "finalized" means.**
+**Decision K30 (the goal is confirmed, 2026-10-21: every yardstick word at 100%; the author confirms the details): what "finalized" means.**
 1. **Mandarin, all 5329 words** have an entry. Names, particles and sound words get an entry too (fit `name`, or `skip` with a note), so the count is honest. The yardstick gets bands 4000 and 5329 (today it stops at 3000).
 2. **English 3000:** every word is said, or is a grammar word said by a pattern, or is on the checked list (`kb/cross-check-notes.json`, the sense is not the same so nothing to link). Names (york, adam, sam), swearing and inflected forms that share their base word's entry are listed as "not an entry" with a reason, so nothing stays unexplained.
 3. **English "near" words (526 in the 3000, 151 in Basic English):** each is upgraded to a full match when a Mandarin word of its own exists; the rest stay "kind of" and are named as such, so the yardstick shows no hidden gap.
@@ -427,7 +429,8 @@ About 2781 Mandarin words are left after R1, so R2 to R7 is six more rounds. Eng
 - [ ] Per-entry "why this word" (English gap, Mandarin rank, gains) saved on the review extras.
 
 **Order of work:**
-- [ ] The author confirms K30, the round table, and the `Other`-group question (keep formal and news words to close the yardstick, or swap in everyday words earlier).
+- [x] The author says where "all" stops: the yardstick word lists, at 100% (2026-10-21).
+- [ ] The author confirms K30's details (what may be explained instead of given an entry), the round table, and the `Other`-group question (keep formal and news words to close the yardstick, or swap in everyday words earlier).
 - [ ] R1 (implement `NEXT500_PROPOSAL.md`, with the 42 links).
 - [ ] The tools above.
 - [ ] R2 to R7, one per review cycle, the numbers in the table updated after each.

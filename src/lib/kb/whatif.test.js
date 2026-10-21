@@ -1,6 +1,7 @@
 import { describe, expect, test } from 'bun:test';
-import { buildFacts } from './facts.js';
+import { buildFacts, programFor } from './facts.js';
 import { readRules } from './rules.js';
+import { solve, sym } from './clingo.js';
 import { removal, renderRemoval } from './whatif.js';
 import { source } from './fixture.js';
 
@@ -29,13 +30,39 @@ describe('remove a word from the fixture language', () => {
     const r = await removal(ctx, ['chi1']);
     expect(zhs(r.composites.redo)).toEqual(['吃饭']);
     // lesson example, lesson answer, the composite example for 飞机, the phrase-book line
-    expect(r.book.counts).toEqual({ lesson_example: 1, lesson_answer: 1, composite_example: 1, story: 0, phrase_book: 1 });
+    expect(r.book.counts).toEqual({ lesson_example: 1, lesson_answer: 1, lesson_inline: 0, composite_example: 1, story: 0, phrase_book: 1, extra_inline: 0 });
     expect(r.book.cards).toEqual([{ word: 'chi1', lesson: 'basics', module: 'eat' }]);
     expect(r.book.mentions).toEqual([{ word: 'chi1', lesson: 'basics', module: 'eat', kind: 'prose', n: 1 }]);
     // "Eating" has two ways to be said and both use chī
     expect(r.coverage.lost.map((i) => i.id)).toEqual(['grammar:eat']);
     expect(r.definitions).toEqual([{ word: 'fan4', term: 'fàn', names: ['chī'] }]);
     expect(r.relations.map((x) => x.what)).toEqual(['phrase']);
+  });
+
+  test('a sentence quoted in a lesson text or in another text is counted by kind, and the kinds add up to the total', async () => {
+    const quote = (key, en) => ({ type: 'prose', module: 'eat', key, en: [en], refs: ['wo3', 'chi1'] });
+    const quoted = {
+      ...source,
+      lessons: source.lessons.map((l) => (l.id === 'basics' ? { ...l, entries: [...l.entries, quote('eat.prose1', 'Say {{Word:wo3}} {{word:chi1}} {{word:fan4}}.')] } : l)),
+      texts: source.texts.map((t) => (t.id === 'appendix-stories' ? { ...t, entries: [...t.entries, quote('st1', 'Then {{Word:wo3}} {{word:chi1}}!')] } : t)),
+    };
+    const r = await removal({ ...ctx, source: quoted, facts: buildFacts(quoted) }, ['chi1']);
+    expect(r.book.counts).toEqual({ lesson_example: 1, lesson_answer: 1, lesson_inline: 1, composite_example: 1, story: 0, phrase_book: 1, extra_inline: 1 });
+    expect(Object.values(r.book.counts).reduce((a, n) => a + n, 0)).toBe(r.book.sentences.length);
+    expect(renderRemoval(r)).toContain('sentences in lesson text 1');
+  });
+
+  // The program leaves out the facts the rules do not read (programFor). Every atom the rules derive must be the same with
+  // the whole fact text: a predicate dropped by mistake changes one of them.
+  test('the facts the rules do not read change nothing: the same atoms come out of the whole fact text', async () => {
+    const atoms = async (program) => (await solve(program, { models: 1 })).models[0].atoms.slice().sort();
+    for (const ids of [['ji1'], ['fan4'], ['chi1'], ['dong1'], ['jian1'], ['dui4'], ['fei1', 'ji1'], ['wo3', 'de']]) {
+      const drops = ids.map((id) => `drop(${sym(id)}).`);
+      const whole = [ctx.rules, ctx.facts.program, ctx.facts.textProgram(ids), ...drops].join('\n');
+      const cut = [ctx.rules, programFor(ctx.rules, ctx.facts.program), programFor(ctx.rules, ctx.facts.textProgram(ids)), ...drops].join('\n');
+      expect(cut.length).toBeLessThan(whole.length);
+      expect(await atoms(cut)).toEqual(await atoms(whole));
+    }
   });
 
   test('a coverage item with a second way to say it is only touched', async () => {

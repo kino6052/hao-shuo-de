@@ -169,3 +169,23 @@ export interface Primes {
 }
 
 export const primes = (p: Primes): Primes => p;
+
+/**
+ * English ways of saying (src/data/maps/english-constructions.ts, TRANSLATOR_PLAN.md C3): an English construction a
+ * translator meets, and the grammar patterns (src/data/grammar/) and the grammar-word entries (a word's hanzi or a
+ * composite's zh) that say it in Hao-shuo-de. `match` is how it shows in an English sentence: words in order, where
+ * `*` is any one word, `*ed` or `*ing` a word with that ending, `a|b` either word and `^` the start of a sentence.
+ * `note` says how the Hao-shuo-de goes when the patterns alone don't. `proposed` rows wait for the author.
+ */
+export interface Construction {
+  /** Lowercase words joined by hyphens; unique. */
+  id: string;
+  en: string;
+  match: string[];
+  patterns: string[];
+  entries: string[];
+  note?: string;
+  proposed?: boolean;
+}
+
+export const constructions = (c: Construction[]): Construction[] => c;
