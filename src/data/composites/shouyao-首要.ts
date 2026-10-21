@@ -5,7 +5,7 @@ export default composite({
   phase: 4,
   zh: "首要",
   py: "shǒuyào",
-  en: "of first importance; primary; chief",
+  en: "of first importance; primary; chief; prime",
   ru: "первоочередной; главный",
   pos: "adjective",
   hsd: [

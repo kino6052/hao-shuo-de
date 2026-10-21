@@ -5,7 +5,7 @@ export default composite({
   phase: 3,
   zh: "各种",
   py: "gèzhǒng",
-  en: "all kinds of",
+  en: "all kinds of; various",
   ru: "всевозможные",
   pos: "pronoun",
   hsd: ["{{word:hen3}} {{word:duo1}} {{word:zhong3}}"],

@@ -10,7 +10,7 @@
 // basic       Basic English [{ en, group, zh: [...] }]
 // top         the common English words ['the', 'be', ...], most common first
 // sentences   everyday sentences [{ zh, en }] (kb/yardsticks/sentences.json, from Tatoeba)
-// explained   kb/yardsticks/english-explained.json: { words: { the: { how, say?, base?, note } } }, the English words that
+// explained   kb/yardsticks/english-explained.json: { words: { the: { how, say?: [[pinyin, hanzi]], base?, note } } }, the English words that
 //             are not an entry, each with how the language says it or why it has none (K30)
 //
 // An English word is `said` when an entry's gloss has it or an entry shares its WordNet sense, `explained` when the
@@ -53,9 +53,10 @@ function sentenceReport(sentences, have) {
 
 // how one English word is said: 'said' | 'explained' | 'near' | 'missing'. An entry wins; then the explained list
 // (kb/yardsticks/english-explained.json: a grammar word, a name, an inflected form, with how it is said or why it has no
-// entry), which goes before a "kind of" because someone looked at the word
+// entry), which goes before a "kind of" because someone looked at the word. A note in brackets is the list's own
+// ("second (time)" is the word second), so the entry is looked up without it; the explained list keeps the whole word.
 export function englishVerdict(english, word, explained = {}) {
-  const r = english.lookup(word);
+  const r = english.lookup(String(word).replace(/\s*\([^)]*\)/g, '').trim() || word);
   if (r.glosses.length || r.sameSense.length) return 'said';
   if (explained[word]) return 'explained';
   return r.kindOf.length ? 'near' : 'missing';

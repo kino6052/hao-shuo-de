@@ -5,7 +5,7 @@ export default composite({
   phase: 3,
   zh: "反对",
   py: "fǎnduì",
-  en: "oppose",
+  en: "oppose; against (be against)",
   ru: "возражать, быть против",
   pos: "verb",
   hsd: ["{{word:shuo1}} {{word:bu4}}", "{{word:shuo1}} {{word:bu4}} {{word:dui4}}"],

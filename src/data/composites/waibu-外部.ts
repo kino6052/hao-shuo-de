@@ -5,7 +5,7 @@ export default composite({
   phase: 4,
   zh: "外部",
   py: "wàibù",
-  en: "outside; the outer part",
+  en: "outside; the outer part; external",
   ru: "внешняя часть; снаружи",
   pos: "noun",
   hsd: [

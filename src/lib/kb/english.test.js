@@ -22,6 +22,7 @@ describe('glosses', () => {
   test('cuts a gloss into the words it offers', () => {
     expect(glosses('to run (fast), sprint')).toEqual(['run', 'sprint']);
     expect(glosses('a quick; the fast one')).toEqual(['quick', 'fast one']);
+    expect(glosses('what? which?')).toEqual(['what', 'which']);
   });
   test('base forms of an English word', () => {
     expect(baseForms('cats')).toContain('cat');

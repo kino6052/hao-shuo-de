@@ -5,7 +5,7 @@ export default composite({
   phase: 1,
   zh: "每",
   py: "měi",
-  en: "every",
+  en: "every; per",
   ru: "каждый",
   pos: "pronoun",
   hsd: ["{{word:ren2}}-{{word:ren2}}", "{{word:ge4}}-{{word:ge4}} … {{word:dou1}} …"],

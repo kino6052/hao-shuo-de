@@ -5,7 +5,7 @@ export default composite({
   phase: 1,
   zh: "几",
   py: "jǐ",
-  en: "how many",
+  en: "how many; several; a few",
   ru: "сколько",
   pos: "pronoun",
   hsd: ["{{word:duo1}}-{{word:shao3}}"],

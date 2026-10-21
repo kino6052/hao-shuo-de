@@ -5,7 +5,7 @@ export default composite({
   phase: 2,
   zh: "别的",
   py: "biéde",
-  en: "other",
+  en: "other; else",
   ru: "другой",
   pos: "pronoun",
   hsd: ["{{word:bie2}}-{{word:de}}"],

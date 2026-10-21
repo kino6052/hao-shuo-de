@@ -38,7 +38,9 @@ for (const [en, x] of Object.entries(explained)) {
     else if (englishVerdict({ lookup: kb.english }, x.base) === 'missing') problems.push(`english-explained.json: "${en}" is a form of "${x.base}", which no entry says`);
   }
   if (x.say) {
-    const r = checkForm(words, { forms: x.say });
+    // [[pinyin, hanzi], ...], like a composite spec's forms
+    const say = [].concat(x.say).map((s) => [].concat(s));
+    const r = checkForm(words, { forms: say.map(([py]) => py), tts: say.map(([, hz]) => hz ?? '') });
     for (const p of r.problems) problems.push(`english-explained.json: "${en}" say: ${p}`);
     for (const f of r.forms) {
       if (!f.refs || isWordForm(f.refs) || /^"[^"]*"$/.test(f.plain)) continue;

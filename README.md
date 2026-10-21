@@ -46,15 +46,15 @@ Plans and decisions: [BOOK_PLAN.md](BOOK_PLAN.md) (book, decision log D1…), [K
 | --- | --- |
 | Lessons | 26, in 3 sections (6 / 10 / 10), then 16 chapters to read, look things up in or build with |
 | Core words | 230: 53 atoms (no honest description) and 177 with a paraphrase, so potentially removable |
-| Composite words | 5275, with 8202 ways to say them (7869 built from their parts, 90 spelled whole, 243 waiting for the author to say which) |
+| Composite words | 5490, with 8571 ways to say them (8227 built from their parts, 90 spelled whole, 254 waiting for the author to say which) |
 | Grammar patterns | 145, one file each in `src/data/grammar/` |
 | Things the language must say | 113: 65 atoms of meaning, 10 categories, 38 grammar points |
 | Lesson sentences that parse | 99.4 % |
 | Smallest set the others can be said from | 202 words; the other 28 have a fine paraphrase |
-| Gates (`npm run check`) | 22 |
+| Gates (`npm run check`) | 23 |
 | Test files (`npm test`) | 88 |
 
-The language numbers are the last row of `kb/scoreboard.csv` (2026-10-21, tmp-r3/R3.ts: 1717 op(s)); a refactor adds a new row.
+The language numbers are the last row of `kb/scoreboard.csv` (2026-10-21, .tmp-apply/all.ts: 31 op(s)); a refactor adds a new row.
 <!-- /generated:facts -->
 
 ## The book
@@ -275,6 +275,7 @@ The summaries come from the comment at the top of each script, which also shows 
 | `npm run check-story-plan` | Picture-plan gate (MASCOT_PLAN.md): the plan for the book's pictures lives in the lessons and intros themselves. |
 | `npm run check-word-builder` | Word Builder gate for the composite dictionary (src/data/composites/): every description the Word Builder can read is written the way it writes it, with matching hanzi… |
 | `npm run check-passive` | Passive gate: Hao-shuo-de says the passive the spoken way, with ràng (X ràng Y + verb: wǒ-de bāo ràng tā ná-zǒu le), never with 被 / bèi (the author's rule, review batch 10). |
+| `node scripts/check-yardsticks.js` | Yardstick gate: every word of the word lists is covered, the finish line of KB_PLAN.md Phase 9 (K30). |
 <!-- /generated:gates -->
 
 ## Changing the language

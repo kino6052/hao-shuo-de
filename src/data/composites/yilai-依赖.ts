@@ -5,7 +5,7 @@ export default composite({
   phase: 4,
   zh: "依赖",
   py: "yīlài",
-  en: "depend on; rely on",
+  en: "depend on; rely on; dependent (on)",
   ru: "зависеть; полагаться",
   pos: "verb",
   hsd: [

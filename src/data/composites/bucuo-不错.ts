@@ -5,7 +5,7 @@ export default composite({
   phase: 1,
   zh: "不错",
   py: "búcuò",
-  en: "not bad, pretty good",
+  en: "not bad, pretty good, nice",
   ru: "неплохо",
   pos: "adjective",
   hsd: ["{{word:bu4}} {{word:huai4}}"],

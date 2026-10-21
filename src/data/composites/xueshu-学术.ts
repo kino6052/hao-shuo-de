@@ -5,7 +5,7 @@ export default composite({
   phase: 4,
   zh: "学术",
   py: "xuéshù",
-  en: "scholarship, academic study",
+  en: "scholarship, academic study; academic",
   ru: "наука, учёность",
   pos: "noun",
   hsd: ["{{word:hen3}} {{word:gao1}}-{{word:de}} {{word:xue2}}"],

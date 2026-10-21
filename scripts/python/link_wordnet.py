@@ -45,7 +45,7 @@ def norm_pos(p):
 def glosses(en):
     """'quick, to run (fast)' -> ['quick', 'run']: the words a gloss offers WordNet."""
     out = []
-    for part in re.split(r"[,;/]", re.sub(r"\([^)]*\)", "", en)):
+    for part in re.split(r"[,;/?!]", re.sub(r"\([^)]*\)", "", en)):
         part = part.strip().lower()
         part = re.sub(r"^(to|a|an|the)\s+", "", part)
         if part and part not in out:

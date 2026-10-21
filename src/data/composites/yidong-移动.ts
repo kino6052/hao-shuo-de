@@ -5,7 +5,7 @@ export default composite({
   phase: 2,
   zh: "移动",
   py: "yídòng",
-  en: "move",
+  en: "move; mobile",
   ru: "двигать",
   pos: "verb",
   hsd: ["{{word:dong4}}"],

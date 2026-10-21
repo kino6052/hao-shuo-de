@@ -5,7 +5,7 @@ export default composite({
   phase: 3,
   zh: "通过",
   py: "tōngguò",
-  en: "pass through; by means of",
+  en: "pass through; through; by means of; via",
   ru: "через; посредством",
   pos: "verb",
   hsd: [

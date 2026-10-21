@@ -5,7 +5,7 @@ export default composite({
   phase: 1,
   zh: "大家",
   py: "dàjiā",
-  en: "everyone",
+  en: "everyone; everybody",
   ru: "все",
   pos: "pronoun",
   hsd: ["{{word:da4}}-{{word:jia1}}", "{{word:ren2}}-{{word:ren2}} {{word:dou1}} …"],

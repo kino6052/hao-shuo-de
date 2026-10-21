@@ -5,7 +5,7 @@ export default composite({
   phase: 4,
   zh: "破坏",
   py: "pòhuài",
-  en: "destroy; damage",
+  en: "destroy; damage; destruction",
   ru: "разрушать, портить",
   pos: "verb",
   hsd: ["{{word:ba3}} X {{word:zuo4}} {{word:huai4}}", "{{word:rang4}} X {{word:huai4}}"],

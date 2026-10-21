@@ -5,7 +5,7 @@ export default composite({
   phase: 4,
   zh: "创意",
   py: "chuàngyì",
-  en: "creativity; original idea",
+  en: "creativity; original idea; creative",
   ru: "творческая идея; креативность",
   pos: "noun",
   hsd: [

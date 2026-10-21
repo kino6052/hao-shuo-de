@@ -384,7 +384,27 @@ Goal: the dictionary says every word of the Mandarin and English yardsticks, so 
 
 **2026-10-21: the author's requirement is that every yardstick word is covered, 100%.** The composite dictionary must cover the English and Chinese words of the yardsticks: the English top 3000, Basic English (829) and the 5329 Mandarin words of the frequency list (the everyday sentences are already at 100%). This phase is that work, and it is now a requirement, not only a plan. It is about the dictionary (the composites), not about translating the book. The author chose the word lists as the meaning of "all" (not every word of WordNet or of a full Mandarin dictionary, which would be a separate, much larger goal: tens of thousands of entries and a Mandarin word list we do not have). A word counts as covered in the four ways K30 sets out below: it has an entry, it is said by a pattern, it is on the checked list, or it is explained as "not an entry" with a reason. What the author still confirms is K30's details (what may be explained instead of given an entry). The course's final exam can use the finished dictionary for an extra part (BOOK_PLAN.md Phase 5, last item).
 
-**Where we stand (2026-10-21):**
+**Where we stand (2026-10-22, finished): every yardstick word is covered, and `check-yardsticks` is a gate in `npm run check`.**
+
+| Yardstick | Size | Said | Explained (`kb/yardsticks/english-explained.json`) | Near (only as a kind of) | Missing |
+|---|---|---|---|---|---|
+| Mandarin, all words | 5329 | 5329 | | | 0 |
+| English 3000 | 3000 | 2572 | 124 | 304 | 0 |
+| Basic English | 829 | 736 | 16 (the grammar markers, the pronoun and preposition words) | 77 | 0 |
+
+The explained list holds 132 words: grammar 53, names 48, spellings 8 (gonna, im), abbreviations 7, foreign 6 (de, los), inflections 6 (women, larger), web 3, swearing 1. All 3321 new entries are `proposed: true`, in review batches 23 to 57, for the author. The explained list was written by Claude: each grammar word shows the pattern or core word that says it (`say`, checked by the gate: it must parse), each name its usual Mandarin sound in quotes, each inflection its base word that an entry says. The "near" words stay as a kind of (K30.3) until a Mandarin word of their own is found.
+
+**Rounds as run (2026-10-21 to 2026-10-22; bigger than planned, so four rounds instead of seven):**
+
+| Round | Refactors | Review batches | Entries | What |
+|---|---|---|---|---|
+| R1 | Y1–Y5 | 23–27 | 509 | English-gap words and Mandarin by frequency (`NEXT500_PROPOSAL.md`) |
+| R2 | Y6–Y14, YS1, YF1 | 28–36 | 880 | the rest of the first 3000 Mandarin words; senses kept to their compounds, form gaps closed |
+| R3 | Y15–Y32 | 37–54 | 1717 | Mandarin ranks 3000 to about 5000 |
+| R4 | Y33–Y34 | 55–56 | 207 | the last Mandarin words |
+| R5 | Y35, YL2 | 57 | 8 | English: protest, arch, screw, flat surface, umami, animal sound, gay, porn; 23 English glosses widened on existing entries (though, per, several, nice, various…); the explained list; the gate |
+
+**Where we stood (2026-10-21):**
 
 | Yardstick | Size | Said | Near (only as a kind of) | Missing |
 |---|---|---|---|---|
@@ -400,7 +420,7 @@ Goal: the dictionary says every word of the Mandarin and English yardsticks, so 
 3. **English "near" words (526 in the 3000, 151 in Basic English):** each is upgraded to a full match when a Mandarin word of its own exists; the rest stay "kind of" and are named as such, so the yardstick shows no hidden gap.
 4. **Basic English:** 100% said or grammar-said, with the author's Mandarin for each word.
 
-**Rounds (about 500 entries each; the first is proposed in `NEXT500_PROPOSAL.md`):**
+**Rounds as planned (2026-10-21; about 500 entries each; the first is proposed in `NEXT500_PROPOSAL.md`):**
 
 | Round | Content | Mandarin first-3000 missing after | Mandarin 3000+ missing after | English 3000 missing after |
 |---|---|---|---|---|
@@ -423,18 +443,18 @@ About 2781 Mandarin words are left after R1, so R2 to R7 is six more rounds. Eng
 6. **Review:** the author reviews the batches at `/__review/?batch=N` later; the entries stay `proposed` until then.
 
 **Tools to build first:**
-- [ ] Move the round pipeline out of the scratchpad into the repo (`scripts/round/`: spec library, batch maker, candidate picker, English lane list) so every round is the same few commands.
-- [ ] `yardsticks` bands 4000 and 5329, and `--next N`.
-- [ ] A gate `check-yardsticks` with the finish line from K30 (fails when a list item is neither said, grammar-said, checked, nor explained).
-- [ ] Per-entry "why this word" (English gap, Mandarin rank, gains) saved on the review extras.
+- [x] Move the round pipeline out of the scratchpad into the repo (`scripts/round/`: spec library, batch maker, candidate picker, English lane list) so every round is the same few commands. (Done for R2: `node scripts/round/round.js pick | ref | check | make`.)
+- [x] `yardsticks` bands 4000 and 5329, and `--next N`. (The bands are in; `round.js pick` lists the next words instead of `--next`.)
+- [x] A gate `check-yardsticks` with the finish line from K30 (fails when a list item is neither said, grammar-said, checked, nor explained).
+- [x] Per-entry "why this word" (English gap, Mandarin rank, gains) saved on the review extras. (A spec's `why`.)
 
 **Order of work:**
 - [x] The author says where "all" stops: the yardstick word lists, at 100% (2026-10-21).
 - [ ] The author confirms K30's details (what may be explained instead of given an entry), the round table, and the `Other`-group question (keep formal and news words to close the yardstick, or swap in everyday words earlier).
-- [ ] R1 (implement `NEXT500_PROPOSAL.md`, with the 42 links).
-- [ ] The tools above.
-- [ ] R2 to R7, one per review cycle, the numbers in the table updated after each.
-- [ ] Final: every yardstick at its finish line, `check-yardsticks` in `npm run check`, the scoreboard rows closed, and the gains ranking re-run on the finished dictionary to pick the 1000 core words with all descriptions in.
+- [x] R1 (implement `NEXT500_PROPOSAL.md`, with the 42 links).
+- [x] The tools above.
+- [x] R2 to R7, one per review cycle, the numbers in the table updated after each. (Run as R2 to R5 without waiting for reviews, 2026-10-22: the author asked for the whole yardstick in one go; the batches wait for review.)
+- [ ] Final: every yardstick at its finish line (done 2026-10-22), `check-yardsticks` in `npm run check` (done), the scoreboard rows closed, and the gains ranking re-run on the finished dictionary to pick the 1000 core words with all descriptions in.
 
 Risks: later rounds are rarer words (ranks 4000+), so more of them are names, technical terms and compounds the grammar already says, and the "explained, not an entry" list will grow; a description made only from 230 core words gets long for abstract words, so some entries will be paraphrases for the author to approve or turn into `gap`; and unreviewed volume piles up (about 3000 `proposed` entries), so the review batches may need a faster page (accept by theme) or a sampling rule.
 

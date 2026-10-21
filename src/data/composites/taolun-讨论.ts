@@ -5,7 +5,7 @@ export default composite({
   phase: 3,
   zh: "讨论",
   py: "tǎolùn",
-  en: "discuss",
+  en: "discuss; discussion",
   ru: "обсуждать",
   pos: "verb",
   hsd: ["{{word:yi1}}-{{word:qi3}} {{word:shuo1}}"],

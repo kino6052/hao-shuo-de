@@ -19,10 +19,10 @@ const MAX_WALK = 6; // how far up "is a kind of" tier 3 climbs
 const MAX_PER_TIER = 12;
 const MAX_SENSES = 3; // tier 3 follows only the first senses of the word: the rare ones lead nowhere useful
 
-// 'quick, to run (fast)' -> ['quick', 'run']: the same cut the Python linker makes
+// 'quick, to run (fast)' -> ['quick', 'run']: the same cut the Python linker makes ('what? which?' -> ['what', 'which'])
 export function glosses(en) {
   const out = [];
-  for (const part of String(en ?? '').replace(/\([^)]*\)/g, '').split(/[,;/]/)) {
+  for (const part of String(en ?? '').replace(/\([^)]*\)/g, '').split(/[,;/?!]/)) {
     const g = part.trim().toLowerCase().replace(/^(to|a|an|the)\s+/, '');
     if (g && !out.includes(g)) out.push(g);
   }

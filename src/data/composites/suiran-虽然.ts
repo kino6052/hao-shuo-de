@@ -5,7 +5,7 @@ export default composite({
   phase: 2,
   zh: "虽然",
   py: "suīrán",
-  en: "although",
+  en: "although; though",
   ru: "хотя",
   pos: "conjunction",
   hsd: ["…, {{word:dan4}}-{{word:shi4}} …"],

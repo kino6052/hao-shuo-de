@@ -25,6 +25,9 @@ describe('English verdicts', () => {
     expect(englishVerdict(english, 'sparrow')).toBe('near');
     expect(englishVerdict(english, 'zzyzx')).toBe('missing');
   });
+  test('a note in brackets is the list\'s own: "water (drink)" is the word water', () => {
+    expect(englishVerdict(english, 'water (drink)')).toBe('said');
+  });
   test('the explained list goes after an entry and before a kind of', () => {
     const explained = { the: { how: 'grammar' }, sparrow: { how: 'name' }, buy: { how: 'grammar' } };
     expect(englishVerdict(english, 'the', explained)).toBe('explained');

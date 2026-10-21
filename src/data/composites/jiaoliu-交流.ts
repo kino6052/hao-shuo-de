@@ -5,7 +5,7 @@ export default composite({
   phase: 3,
   zh: "交流",
   py: "jiāoliú",
-  en: "communicate, exchange",
+  en: "communicate, exchange; communication",
   ru: "общаться, обмениваться",
   pos: "verb",
   hsd: ["{{word:yi1}}-{{word:qi3}} {{word:shuo1}}, {{word:yi1}}-{{word:qi3}} {{word:ting1}}"],

@@ -23,4 +23,5 @@ export const GATES = [
   ['check-story-plan', []],
   ['check-word-builder', []],
   ['check-passive', []],
+  ['check-yardsticks', ['--summary']],
 ];

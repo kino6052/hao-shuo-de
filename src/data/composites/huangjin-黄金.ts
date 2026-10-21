@@ -5,7 +5,7 @@ export default composite({
   phase: 4,
   zh: "黄金",
   py: "huángjīn",
-  en: "gold",
+  en: "gold; golden",
   ru: "золото",
   pos: "noun",
   hsd: ["{{word:jin1}}"],

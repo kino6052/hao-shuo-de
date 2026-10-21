@@ -5,7 +5,7 @@ export default composite({
   phase: 4,
   zh: "清醒",
   py: "qīngxǐng",
-  en: "clear-headed; sober; wake up (come to)",
+  en: "clear-headed; sober; conscious; wake up (come to)",
   ru: "трезвый; ясный; прийти в себя",
   pos: "adjective",
   hsd: [

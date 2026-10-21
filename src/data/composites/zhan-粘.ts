@@ -5,7 +5,7 @@ export default composite({
   phase: 4,
   zh: "粘",
   py: "zhān",
-  en: "stick; glue; paste",
+  en: "stick; glue; paste; sticky",
   ru: "клеить; приклеивать",
   pos: "verb",
   hsd: [
