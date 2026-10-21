@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:deng1}}"],
   tts: ["灯"],
   fit: "word",
+  topics: ["home-electronics"],
+  isA: ["electric-device"],
   examples: [
     {
       pinyin: "{{Word:kai1}} {{word:deng1}}.",

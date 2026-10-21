@@ -13,6 +13,8 @@ export default composite({
   literal: "look-come / it looks",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["ideas-and-opinions"],
+  isA: ["adverb-word"],
   note: "Lesson {{lesson:direction-and-result}}.",
   examples: [
     {

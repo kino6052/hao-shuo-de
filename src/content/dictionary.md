@@ -26,17 +26,17 @@ cháng | adjective | long: {{word:hen3}} {{word:chang2}}, very long; {{word:chan
 chē | noun | car, vehicle; anything on wheels that carries people or things |
 chī | verb/noun | to eat, consume, ingest; food, meal, edible substance | moku
 chū | verb | to go out, come out, exit; after a verb, says it comes out (e.g. {{word:chu1}}-{{word:qu4}}, "go out"; {{word:na2}}-{{word:chu1}}-{{word:lai2}}, "take out") |
-cí | noun | word |
 cì | measure word | time, occurrence: counts how often something happens (e.g. {{word:liang3}}-{{word:ci4}}, "twice"; {{word:hen3}} {{word:duo1}} {{word:ci4}}, "many times") |
+cí | noun | word |
 cóng | preposition | from |
-dà | adjective | big, heavy, large, long, important, adult | suli
 dǎ | verb | to hit, fight, battle, challenge, compete against | utala
+dà | adjective | big, heavy, large, long, important, adult | suli
 dàn | conjunction | but; {{word:dan4}}-{{word:shi4}}, but |
 dào | verb/directional | to arrive, reach, go to; to (a place); after a verb, marks reaching the goal (e.g. {{word:ting1}}-{{word:dao4}}, "hear") |
 dé | verb | to get, obtain, acquire, come to have; combines with a de-nominalized verb phrase to express acquiring an abstract result (e.g. de zhidao-de, "to learn", literally "to obtain the known-thing") | kama
 de | particle | possessive marker, structural adjectival particle; used to bind modifiers and multi-word description structures onto target nouns | pi
-dēng | noun | lamp, light (e.g. {{word:kai1}} {{word:deng1}}, "turn on the light") |
 děng | verb | to wait |
+dēng | noun | lamp, light (e.g. {{word:kai1}} {{word:deng1}}, "turn on the light") |
 dì | noun | floor, horizontal surface, platform; before a number, the order: {{word:di4}}-{{word:yi1}}, first; {{word:di4}}-{{word:er4}}, second | supa
 diǎn | noun/measure word | o'clock, after a number ({{word:san1}}-{{word:dian3}}, "three o'clock"); a little: {{word:yi1}}-{{word:dian3}} ("a bit"), as in {{word:da4}} {{word:yi1}}-{{word:dian3}}, "a bit bigger" |
 dìng | adjective/verb | fixed, settled; to settle: {{word:yi1}}-{{word:ding4}}, surely; {{word:jue2}}-{{word:ding4}}, to decide |
@@ -48,11 +48,11 @@ duō | adjective | many, a lot, much, several, very, abundant; used contextually
 dùzi | noun | belly, stomach: {{word:wo3}}-{{word:de}} {{word:du4zi}} {{word:hen3}} {{word:da4}}, I have a big belly |
 èr | number | two, when counting aloud or naming a number (yī, èr, sān; èr-hào, "number two"; shí-èr, 12); before gè, two is liǎng |
 ěrduo | noun | ear: {{word:er3duo}} {{word:bu4}} {{word:hao3}}, {{word:ting1}}-{{word:bu4}}-{{word:dao4}}, the ears are bad, (I) can't hear |
-fǎ | noun | method, way; law: {{word:fang1}}-{{word:fa3}}, a method; {{word:kan4}}-{{word:fa3}}, a view; {{word:shuo1}}-{{word:fa3}}, a way of saying it |
 fā | verb | to send out, give off; to start (e.g. {{word:fa1}}-{{word:sheng1}}, "happen"; {{word:tou2}}-{{word:fa1}}, "hair"; {{word:chu1}}-{{word:fa1}}, "set out") |
+fǎ | noun | method, way; law: {{word:fang1}}-{{word:fa3}}, a method; {{word:kan4}}-{{word:fa3}}, a view; {{word:shuo1}}-{{word:fa3}}, a way of saying it |
 fàn | noun | meal; cooked rice: {{word:chi1}} {{word:fan4}}, eat (a meal); {{word:zuo4}} {{word:fan4}}, cook |
-fáng | noun | house, room: {{word:fang2}}-{{word:jian1}}, a room; {{word:fang2}}-{{light:zi}}, a house |
 fàng | verb | to put, place, set down; with bǎ, says where a thing goes (e.g. {{word:ba3}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:di4}}-{{word:shang4}}, "put the clothes on the floor") |
+fáng | noun | house, room: {{word:fang2}}-{{word:jian1}}, a room; {{word:fang2}}-{{light:zi}}, a house |
 fāng | noun | side, direction; way, method: {{word:di4}}-{{light:fang1}}, a place; {{word:fang1}}-{{word:fa3}}, a method |
 fēi | verb | to fly |
 fēn | noun | part, share; minute; to divide: {{word:bu4}}-{{light:fen1}}, a part; {{word:fen1}}-{{word:kai1}}, to separate |
@@ -64,8 +64,8 @@ gěi | verb/coverb | to give, send, emit, provide; to, for, from the perspective
 gōng | noun | work, labour: {{word:gong1}}-{{word:ju4}}, a tool; {{word:gong1}}-{{word:ren2}}, a worker |
 guān | verb | to close, shut; to turn off (e.g. {{word:guan1}} {{word:huo3}}, "turn off the fire") |
 guānxi | noun | relationship, connection; {{word:mei2}}-{{word:you3}} {{word:guan1xi}}, "it doesn't matter" |
-guó | noun | country, nation |
 guǒ | noun | fruit, what a plant bears; {{word:shui3}}-{{word:guo3}}, fruit to eat |
+guó | noun | country, nation |
 guò | particle | placed right after a verb to say you have done it at least once before (e.g. {{word:chi1}}-{{word:guo4}}, "have eaten before") |
 hái | adverb | still, also, yet: {{word:ta1}} {{word:hai2}} {{word:zai4}} {{word:jia1}}, he's still at home; {{word:hai2}}-{{word:shi4}}, or (in a question) |
 hào | particle | sequence marker, number identity, ordinal number prefix | nanpa
@@ -80,8 +80,8 @@ huà | noun | words, speech, what is said: {{word:shuo1}} {{word:hua4}}, talk; {
 huài | adjective/verb | bad, negative, broken, damaged, non-essential | ike, pakala
 huí | verb | to return, go back, come back; after a verb, says it goes back (e.g. {{word:hui2}} {{word:jia1}}, "go home"; {{word:hui2}}-{{word:lai2}}, "come back") |
 huì | auxiliary | will, going to (marks a predicted or future action); placed before a verb the same way {{word:neng2}} is; after {{word:xue2}}, {{word:xue2}}-{{word:hui4}} is "learn until you can" |
-huǒ | noun | fire, cooking element, chemical heat source | seli
 huó | verb/adjective | to live, be alive; alive, living; life. The opposite of {{word:si3}} |
+huǒ | noun | fire, cooking element, chemical heat source | seli
 jī | noun | machine (e.g. {{word:shou3}}-{{word:ji1}}, "phone"; {{word:fei1}}-{{word:ji1}}, "plane"; {{word:ji1}}-{{word:hui4}}, "chance") |
 jì | verb | to remember, keep in mind: {{word:ji4}}-{{light:de2}}, to remember; {{word:bu4}} {{word:ji4}}-{{light:de2}}, to have forgotten |
 jiā | noun | home, house, family, household | tomo
@@ -91,8 +91,8 @@ jiǎo | noun | foot, leg, organ of locomotion, bottom part | noka
 jiào | verb | to call, be named; to produce an animal vocalization under the Quote Partition; before a person and a verb, to tell, have, or let them do it (e.g. {{word:jiao4}} {{word:ta1}} {{word:jin4}}-{{word:lai2}}, "let him in"; {{word:bu4}} {{word:jiao4}}, "won't let") | nimi, mu
 jiàzhí | noun | value, worth; how much something is worth |
 jié | verb | to tie, knot, bind together: {{word:ba3}} {{word:xian4}} {{word:jie2}}-{{word:hao3}}, tie the thread up; in {{word:jie2}}-{{word:guo3}}, the result |
-jīn | noun | money, cash, savings, wealth | mani
 jìn | verb | to enter, go in, come in; after a verb, says it goes in (e.g. {{word:jin4}}-{{word:lai2}}, "come in"; {{word:fang4}}-{{word:jin4}}-{{word:qu4}}, "put in") |
+jīn | noun | money, cash, savings, wealth | mani
 jiǔ | number | nine |
 jiù | adverb | then, right away, just; right before the verb, after the who ({{word:ru2guo3}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:jiu4}} {{word:deng3}} {{word:ni3}}, "if you come, I will wait for you"; {{word:wo3}} {{word:xian4}}-{{word:zai4}} {{word:jiu4}} {{word:qu4}}, "I am going right now") |
 jù | noun | tool, thing to use, in words: {{word:gong1}}-{{word:ju4}}, a tool |
@@ -113,8 +113,8 @@ lǐ | noun/directional | inside, within; composes with other roots via a hyphen 
 liǎng | number | two; quantifies dual entities when coupled to the measure word (liang-ge) | tu
 liào | noun | material, ingredients, the stuff something is made from: {{word:zuo4}} {{word:fan4}} {{word:yao4}} {{word:liao4}}, cooking needs ingredients |
 líng | number | zero; big numbers are read digit by digit: {{word:er4}}-{{word:ling2}}-{{word:ling2}}, 200; {{word:er4}}-{{word:ling2}}-{{word:er4}}-{{word:liu4}} {{word:nian2}}, the year 2026 |
-liù | number | six |
 liú | verb | to stay, remain, keep, endure, protect | awen
+liù | number | six |
 lù | noun | road, path, street; the way to a place |
 luàn | adjective | messy, in a mess; {{word:zuo4}}-{{word:luan4}}, "make a mess" |
 ma | particle | final interrogative yes-or-no question marker |
@@ -122,14 +122,14 @@ mǎi | verb | to buy; {{word:mai3}} {{word:dong1}}-{{light:xi1}}-{{word:de}} {{w
 māma | noun | mom: {{word:ba4ba}}-{{word:ma1ma}}, mom and dad, parents |
 máo | noun | hair, fur, feathers; {{word:tou2}}-{{word:fa1}}, "hair on the head" |
 méi | particle | negative particle used exclusively to negate the verb you (to form meiyou) |
-men | particle | more than one person: after a pointer or a word for people, as in {{word:wo3}}-{{word:men}} ("we") |
 mén | noun | door: {{word:kai1}} {{word:men2}}, open the door; {{word:men2}}-{{word:kou3}}, doorway; {{word:chu1}}-{{word:men2}}, go out |
+men | particle | more than one person: after a pointer or a word for people, as in {{word:wo3}}-{{word:men}} ("we") |
 miàn | noun/suffix | side, face, surface; binds to a directional root via a hyphen to form a location noun (e.g. {{word:xia4}}-{{word:mian4}}, "below") |
 míng | adjective | bright, light, clear |
 mō | verb | to touch, feel, pet, perceive by contact | pilin
-nà | pronoun/adjective | that, those; syntactically binds as na-ge | ni
 ná | verb | to take, pick up, hold; take away (e.g. {{word:cong2}} {{word:qi1}} {{word:li3}}-{{word:mian4}} {{word:na2}} {{word:san1}}, "take three from seven") |
 nǎ | pronoun | which: {{word:na3}}-{{word:li3}}, where; {{word:na3}}-ge, which one |
+nà | pronoun/adjective | that, those; syntactically binds as na-ge | ni
 nán | adjective | difficult, hard to do; before {{word:kan4}}, {{word:ting1}} or {{word:chi1}}, unpleasant to see, hear or eat (e.g. {{word:nan2}}-{{word:kan4}}, "ugly") |
 néng | auxiliary | to be able to, be allowed to, can, may, possible | ken
 nǐ | pronoun | you | sina
@@ -138,9 +138,9 @@ nǚ | adjective/noun | female, woman: {{word:nv3}}-{{word:ren2}}, a woman |
 pà | verb/adjective | to fear, be afraid of; scared, frightened |
 pángbiān | noun | side, vicinity, area beside, hip | poka
 píng | adjective | flat, level, even: {{word:lu4}} {{word:hen3}} {{word:ping2}}, the road is flat; {{word:shui3}}-{{word:ping2}}, level |
+qǐ | verb/directional | to rise, get up; begin; composes with a verb via a hyphen to mark the start of an action (e.g. {{word:shuo1}}-{{word:qi3}}, "to bring up/mention") |
 qì | noun | air, gas, breath (in everyday Mandarin, air is {{word:kong1}}-{{word:qi4}}) |
 qī | number | seven |
-qǐ | verb/directional | to rise, get up; begin; composes with a verb via a hyphen to mark the start of an action (e.g. {{word:shuo1}}-{{word:qi3}}, "to bring up/mention") |
 qián | noun | front, face, foremost area, chest | sinpin
 qiú | noun | ball, sphere: {{word:wan2r}} {{word:qiu2}}, play with a ball; {{word:di4}}-{{word:qiu2}}, the Earth |
 qù | verb | to go, move toward, travel away | tawa
@@ -161,13 +161,13 @@ shēntǐ | noun | body, physical torso, physical state | sijelo
 shí | number | ten |
 shì | verb | to be, copula link between subjects and identity predicates |
 shǒu | noun | hand, arm, tactile organ | luka
-shū | noun | book: {{word:kan4}} {{word:shu1}}, read; {{word:xie3}} {{word:shu1}}, write a book |
 shù | noun | number, amount, count: {{word:ren2}}-{{word:de}} {{word:shu4}}, the number of people; {{word:hao3}}-{{word:huai4}}-{{word:de}} {{word:shu4}}, a score |
+shū | noun | book: {{word:kan4}} {{word:shu1}}, read; {{word:xie3}} {{word:shu1}}, write a book |
 shuǐ | noun | water, liquid, fluid, wet substance, beverage | telo
 shuìjiào | verb/adjective | to sleep, rest, be inactive; sleeping, asleep | lape
 shuō | verb/noun | to communicate, say, speak, talk, use language; language, speech | toki
-sì | number | four |
 sǐ | verb/adjective | to die; dead, dying | moli
+sì | number | four |
 suàn | verb | to calculate, count, work out; {{word:suan4}}-{{word:de}} {{word:gong1}}-{{word:ju4}}, "computer" |
 tā | pronoun | he, she, it, they, them; syntactically genderless and number-fluid | ona
 tǎng | verb | to lie (down); {{word:tang3}}-{{word:xia4}}, "lie down" |
@@ -176,13 +176,13 @@ tì | preposition | instead of, for (in someone's place): {{word:ti4}} {{word:wo
 tián | adjective | sweet, fragrant, cute, innocent, adorable | suwi
 tiān | noun | day; the sky (e.g. {{word:san1}} {{word:tian1}}, "three days"; {{word:ming2}}-{{word:tian1}}, "tomorrow"; {{word:tian1}}-{{word:qi4}}, "weather") |
 tīng | verb | to hear, listen, pay attention to, obey | kute
-tóng | adjective | same, together: {{word:bu4}}-{{word:tong2}}, different; {{word:tong2}}-{{word:xue2}}, classmate; {{word:tong2}}-{{word:yang4}}, the same way |
-tòng | adjective | pain, painful, to hurt: {{word:wo3}}-{{word:de}} {{word:tou2}} {{word:hen3}} {{word:tong4}}, my head hurts |
 tōng | verb | to go through, lead to; open, not blocked (e.g. {{word:tong1}}-{{word:guo4}} {{word:zhe4}}-ge {{word:di4}}-{{light:fang1}}, "go through this place"; {{word:lu4}} {{word:tong1}}-{{word:dao4}} {{word:jia1}}, "the road leads home"; {{word:lu4}} {{word:bu4}} {{word:tong1}}, "the road is blocked") |
+tòng | adjective | pain, painful, to hurt: {{word:wo3}}-{{word:de}} {{word:tou2}} {{word:hen3}} {{word:tong4}}, my head hurts |
+tóng | adjective | same, together: {{word:bu4}}-{{word:tong2}}, different; {{word:tong2}}-{{word:xue2}}, classmate; {{word:tong2}}-{{word:yang4}}, the same way |
 tóu | noun | head, mind, internal regulatory director | lawa
 wài | verb/adjective | away, outside | weka
-wán | verb complement | finish, be done, run out; binds directly after a verb via a hyphen to mark a resultative completion (chī-wán, "finish eating") | pini
 wǎn | adjective | late; evening: {{word:wan3}}-{{light:shang4}}, evening, night; {{word:hen3}} {{word:wan3}} {{word:le}}, it's late |
+wán | verb complement | finish, be done, run out; binds directly after a verb via a hyphen to mark a resultative completion (chī-wán, "finish eating") | pini
 wǎng | noun | net, web; the internet (e.g. {{word:zai4}} {{word:wang3}}-{{word:shang4}}, "online") |
 wánr | verb/adjective | to play, have fun, engage in recreation; playful, artistic, frivolous | musi
 wèi | preposition/coverb | for, for the sake of: {{word:wei4}}-{{word:shen2me}}, why ("for what") |
@@ -194,11 +194,11 @@ xī | noun | west; said lightly after {{word:dong1}}, {{word:dong1}}-{{light:xi1
 xià | noun/directional | down, below, under; composes with other roots via a hyphen (e.g. {{word:xia4}}-{{word:lai2}}, {{word:xia4}}-{{word:mian4}}) |
 xiàn | noun | line, rope, hair, thread, cord, flexible long thing | linja
 xiǎng | verb | to think; to want to, would like to (before a verb: {{word:wo3}} {{word:xiang3}} {{word:chi1}} {{word:fan4}}, I'd like to eat); to miss |
-xiǎo | adjective | little, small, short, few, young, a bit | lili
 xiào | verb | to laugh, to smile |
+xiǎo | adjective | little, small, short, few, young, a bit | lili
 xiē | measure word | some, a few (several of them): {{word:zhe4}}-{{word:xie1}}, these; {{word:na4}}-{{word:xie1}}, those; {{word:yi1}}-{{word:xie1}}, some |
-xiè | verb | to thank; doubled, {{word:xie4}}-xie is "thank you", and {{word:bu4}} {{word:yong4}} {{word:xie4}} is "you are welcome" |
 xiě | verb | to write, draw, represent with marks | sitelen
+xiè | verb | to thank; doubled, {{word:xie4}}-xie is "thank you", and {{word:bu4}} {{word:yong4}} {{word:xie4}} is "you are welcome" |
 xīn | noun | heart, mind; {{word:kai1}}-{{word:xin1}}, "happy"; {{word:xiao3}}-{{word:xin1}}, "careful"; {{word:fang4}}-{{word:xin1}}, "don't worry" |
 xué | verb | to learn, study; before a verb: learn to do it (e.g. {{word:wo3}} {{word:xue2}} {{word:xie3}}, "I'm learning to write") |
 yá | noun | tooth, teeth: {{word:wo3}}-{{word:de}} {{word:ya2}} {{word:hen3}} {{word:bai2}}, my teeth are white |
@@ -214,8 +214,8 @@ yìng | adjective/noun | hard, stone-like; rock, stone, metal | kiwen
 yīnwèi | conjunction/coverb | because, because of |
 yòng | verb/coverb | to use, utilize; with, by means of | kepeken
 yóu | noun | oil, cooking oil, fat: {{word:zuo4}} {{word:fan4}} {{word:yong4}} {{word:you2}}, cooking uses oil |
-yǒu | verb | to have, contain, carry, hold, exist, there is; must be negated with mei, never bu | jo, lon
 yòu | adverb | again: it happens once more; goes before the verb (e.g. {{word:ta1}} {{word:you4}} {{word:chi1}} {{word:le}}, "he ate again") |
+yǒu | verb | to have, contain, carry, hold, exist, there is; must be negated with mei, never bu | jo, lon
 yuán | adjective/noun | round, circular, spherical; ball, circle, wheel, cycle | sike
 yuǎn | adjective | far, distant |
 yuè | noun | moon, night sky object, star | mun

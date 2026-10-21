@@ -12,5 +12,7 @@ export default composite({
   tts: ["让X不能好好做"],
   literal: "make X unable to do it well",
   fit: "plain",
+  topics: ["manners"],
+  isA: ["social-action"],
   proposed: true,
 });

@@ -13,6 +13,8 @@ export default composite({
   literal: "people's mouths",
   fit: "natural",
   kinds: ["built"],
+  topics: ["groups-and-organisations"],
+  isA: ["amount-word"],
   note: "Real Mandarin: 人口.",
   examples: [
     {

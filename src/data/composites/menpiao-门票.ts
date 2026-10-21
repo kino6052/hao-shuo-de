@@ -14,5 +14,7 @@ export default composite({
   tts: ["让人进门的写的东西"],
   literal: "a written thing that lets a person through the door",
   fit: "plain",
+  topics: ["hobbies-and-outings"],
+  isA: ["paper-thing"],
   proposed: true,
 });

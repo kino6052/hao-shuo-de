@@ -12,6 +12,8 @@ export default composite({
   tts: ["不怕的心"],
   literal: "a heart that isn't afraid",
   fit: "plain",
+  topics: ["worry-and-fear"],
+  isA: ["feeling-name"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:you3}} {{word:bu4}} {{word:pa4}}-{{word:de}} {{word:xin1}}.",

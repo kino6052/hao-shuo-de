@@ -12,5 +12,7 @@ export default composite({
   tts: ["一个一个，不一起"],
   literal: "one by one, not together",
   fit: "plain",
+  topics: ["adverbs"],
+  isA: ["adverb-word"],
   proposed: true,
 });

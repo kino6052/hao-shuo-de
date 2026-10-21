@@ -14,6 +14,8 @@ export default word("qiu2", {
     eng: "A ball: {{word:qiu2}}. Games and the Earth ({{word:di4}}-{{word:qiu2}}) need it; \"the round thing\" is clumsy.",
     rus: "Мяч: {{word:qiu2}}. Он нужен играм и Земле ({{word:di4}}-{{word:qiu2}}); «круглая вещь» неуклюже.",
   },
+  topics: ["games-and-toys"],
+  isA: ["toy-or-game"],
   paraphrase: {
     forms: [
       "{{word:yuan2}}-{{word:de}}, {{word:wan2r}} {{word:yong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",

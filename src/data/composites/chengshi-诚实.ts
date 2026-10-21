@@ -12,6 +12,8 @@ export default composite({
   tts: ["说真的"],
   literal: "says what's true",
   fit: "plain",
+  topics: ["describing-people"],
+  isA: ["character-quality"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:shuo1}} {{word:zhen1}}-{{word:de}}.",

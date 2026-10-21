@@ -12,6 +12,8 @@ export default composite({
   tts: ["给别的人"],
   literal: "give to someone else",
   fit: "plain",
+  topics: ["taking-and-holding"],
+  isA: ["handling-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:gei3}} {{word:bie2}}-{{word:de}} {{word:ren2}} {{word:zhe4}}-{{light:ge4}}.",

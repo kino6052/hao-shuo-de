@@ -11,4 +11,6 @@ export default composite({
   hsd: ["{{word:ai4}}", "{{word:jue2}}-{{word:de}} X {{word:hao3}}"],
   tts: ["爱", "觉得X好"],
   fit: "word",
+  topics: ["liking-and-wanting"],
+  isA: ["feeling-and-wanting"],
 });

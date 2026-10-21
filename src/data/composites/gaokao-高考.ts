@@ -14,6 +14,8 @@ export default composite({
   tts: ["大的看你学了什么的东西"],
   literal: "the big exam",
   fit: "plain",
+  topics: ["exams-and-marks"],
+  isA: ["event"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yao4}} {{word:zuo4}} {{word:da4}}-{{word:de}} {{word:kan4}}-{{word:ni3}}-{{word:xue2}}-{{word:le}}-{{word:shen2me}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

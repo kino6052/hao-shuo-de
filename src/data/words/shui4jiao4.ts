@@ -14,6 +14,8 @@ export default word("shui4jiao4", {
     eng: "Sleep: every day ends with it, and no description is short.",
     rus: "Спать: каждый день кончается сном, а короткого описания нет.",
   },
+  topics: ["waking-and-sleeping"],
+  isA: ["body-action"],
   maps: "lape",
   paraphrase: {
     forms: [

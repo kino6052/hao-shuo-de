@@ -14,5 +14,7 @@ export default composite({
   tts: ["对人很好的样子"],
   literal: "a way of being good to people",
   fit: "plain",
+  topics: ["manners"],
+  isA: ["idea"],
   proposed: true,
 });

@@ -12,5 +12,7 @@ export default composite({
   tts: ["如果", "一样"],
   literal: "if / the same",
   fit: "plain",
+  topics: ["joining-words"],
+  isA: ["conjunction"],
   proposed: true,
 });

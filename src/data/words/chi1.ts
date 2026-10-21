@@ -14,6 +14,8 @@ export default word("chi1", {
     eng: "Eat, and with -{{word:de}}, food ({{word:chi1}}-{{word:de}}). Every meal and food word comes from it.",
     rus: "Есть, а с -{{word:de}} — еда ({{word:chi1}}-{{word:de}}). Из него выходят все слова про еду.",
   },
+  topics: ["eating-and-drinking"],
+  isA: ["eating-and-drinking-action"],
   maps: "moku",
   paraphrase: {
     forms: [

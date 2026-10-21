@@ -12,6 +12,8 @@ export default composite({
   tts: ["叫喵的动物"],
   literal: "the animal that says \"miao\"",
   fit: "plain",
+  topics: ["pets"],
+  isA: ["mammal"],
   examples: [
     {
       pinyin: "{{Word:jiao4}} \"miāo\"-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:hen3}} {{word:xiao3}}.",

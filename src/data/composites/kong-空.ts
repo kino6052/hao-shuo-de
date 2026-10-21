@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:kong1}}"],
   tts: ["空"],
   fit: "word",
+  topics: ["state-of-things"],
+  isA: ["condition-quality"],
   examples: [
     {
       pinyin: "{{Word:bao1}} {{word:hen3}} {{word:kong1}}.",

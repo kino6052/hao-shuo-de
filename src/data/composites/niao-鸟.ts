@@ -12,6 +12,8 @@ export default composite({
   tts: ["飞的动物"],
   literal: "a flying animal",
   fit: "plain",
+  topics: ["wild-animals"],
+  isA: ["bird"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:kan4}}-{{word:dao4}} {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}}.",

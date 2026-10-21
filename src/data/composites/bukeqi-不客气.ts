@@ -12,6 +12,8 @@ export default composite({
   tts: ["不用谢"],
   literal: "no need to thank",
   fit: "natural",
+  topics: ["greetings-and-thanks"],
+  isA: ["set-phrase"],
   note: "Lesson {{lesson:greetings}}.",
   examples: [
     {

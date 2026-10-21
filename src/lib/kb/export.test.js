@@ -152,3 +152,38 @@ describe('a fragment, the base IRI and the summary', () => {
     expect(text).toContain('kindOf 1');
   });
 });
+
+describe('the tag nets as SKOS (E4)', () => {
+  const t = (id, parents = []) => ({ id, title: { eng: id, rus: `${id}-ru`, zh: `${id}-zh` }, parents });
+  const tags = { topics: [t('home'), t('kitchen', ['home']), t('food'), t('cooking', ['kitchen', 'food'])], kinds: [t('thing'), t('tool', ['thing'])] };
+  const tagged = {
+    words: { ...words, wo3: { ...words.wo3, topics: ['cooking'], isA: ['tool', 'nonesuch'] } },
+    composites: composites.map((c) => (c.zh === '好人' ? { ...c, topics: ['home', 'ghost'] } : c)),
+  };
+  const out = () => parseTurtle(exportTurtle(model({ ...tagged, tags })));
+  const SKOS = 'http://www.w3.org/2004/02/skos/core#';
+  const BASE = 'https://haoshuode.example/';
+
+  test('each net is a concept scheme with its top concepts, and a tag with two parents has two skos:broader', () => {
+    const { triples } = out();
+    expect(has(triples, `${BASE}ns#topics`, 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type', `${SKOS}ConceptScheme`)).toBe(true);
+    expect(triples.filter(([s, p]) => s === `${BASE}ns#topics` && p === `${SKOS}hasTopConcept`).map((x) => x[2]).sort()).toEqual([`${BASE}topic/food`, `${BASE}topic/home`]);
+    expect(triples.filter(([s, p]) => s === `${BASE}topic/cooking` && p === `${SKOS}broader`).map((x) => x[2]).sort()).toEqual([`${BASE}topic/food`, `${BASE}topic/kitchen`]);
+    expect(has(triples, `${BASE}kind/tool`, `${SKOS}broader`, `${BASE}kind/thing`)).toBe(true);
+    expect(triples.filter(([s, p]) => s === `${BASE}topic/cooking` && p === `${SKOS}prefLabel`).map((x) => x[2]).sort()).toHaveLength(3);
+  });
+
+  test('an entry points at its pages and kinds; a tag that is not in the net is left out', () => {
+    const { triples } = out();
+    expect(has(triples, `${BASE}word/wo3`, 'http://purl.org/dc/terms/subject', `${BASE}topic/cooking`)).toBe(true);
+    expect(has(triples, `${BASE}word/wo3`, `${BASE}ns#isA`, `${BASE}kind/tool`)).toBe(true);
+    expect(triples.some(([, , o]) => o.endsWith('nonesuch') || o.endsWith('ghost'))).toBe(false);
+  });
+
+  test('the counts say how many tags and tagged entries; without tags nothing is added', () => {
+    const m = model({ ...tagged, tags });
+    expect(m.counts.tags).toEqual({ topics: 4, kinds: 2, tagged: 2 });
+    expect(renderExportSummary(m.counts)).toContain('tags (SKOS): 4 topics, 2 kinds, 2 entries tagged');
+    expect(exportTurtle(model())).not.toContain('skos:ConceptScheme');
+  });
+});

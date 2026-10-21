@@ -12,6 +12,8 @@ export default composite({
   tts: ["用脚动的车"],
   literal: "a car you move with your feet",
   fit: "plain",
+  topics: ["vehicles"],
+  isA: ["vehicle"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:kai1}} {{word:yong4}}-{{word:jiao3}}-{{word:dong4}}-{{word:de}} {{word:che1}} {{word:qu4}} {{word:xue2}}-{{word:xiao4}}.",

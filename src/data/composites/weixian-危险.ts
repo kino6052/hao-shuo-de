@@ -12,6 +12,8 @@ export default composite({
   tts: ["可能会死"],
   literal: "you might die",
   fit: "natural",
+  topics: ["police-and-safety"],
+  isA: ["condition-quality"],
   examples: [
     {
       pinyin: "{{Word:bie2}} {{word:qu4}} {{word:na4}}-{{word:li3}}, {{word:ke3}}-{{word:neng2}} {{word:hui4}} {{word:si3}}!",

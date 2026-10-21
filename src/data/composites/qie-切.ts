@@ -12,6 +12,8 @@ export default composite({
   tts: ["把X变小块"],
   literal: "make X into small pieces",
   fit: "plain",
+  topics: ["cooking-and-utensils"],
+  isA: ["handling-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ba3}} {{word:zhe4}}-{{light:ge4}} {{word:bian4}} {{word:xiao3}} \"kuài\".",

@@ -14,6 +14,8 @@ export default word("kan4", {
     eng: "See, look, read, watch. One of the five senses, and one of the most used verbs.",
     rus: "Видеть, смотреть, читать. Одно из пяти чувств и один из самых нужных глаголов.",
   },
+  topics: ["senses"],
+  isA: ["perceiving"],
   maps: "lukin",
   paraphrase: {
     forms: ["{{word:yong4}} {{word:yan3jing}}"],

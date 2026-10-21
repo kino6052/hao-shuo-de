@@ -15,6 +15,8 @@ export default composite({
   tts: ["道理", "为什么是对的"],
   literal: "why it's right",
   fit: "natural",
+  topics: ["ideas-and-opinions"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zhi1dao4}} {{word:wei4}}-{{word:shen2me}} {{word:shi4}} {{word:dui4}}-{{word:de}}.",

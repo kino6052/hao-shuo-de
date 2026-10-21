@@ -13,6 +13,8 @@ export default composite({
   literal: "good to eat",
   fit: "natural",
   kinds: ["built"],
+  topics: ["tastes"],
+  isA: ["taste-quality"],
   note: "Or: wèi-dào hěn hǎo, \"it tastes very good\".",
   examples: [
     {

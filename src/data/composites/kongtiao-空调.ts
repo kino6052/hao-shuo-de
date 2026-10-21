@@ -14,6 +14,8 @@ export default composite({
   tts: ["把空气做冷的工具"],
   literal: "the tool that makes the air cold",
   fit: "plain",
+  topics: ["home-electronics"],
+  isA: ["electric-device"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:ba3}} {{word:kong1}}-{{word:qi4}} {{word:zuo4}} {{word:leng3}}-{{word:de}} {{word:gong1}}-{{word:ju4}}.",

@@ -13,6 +13,8 @@ export default composite({
   literal: "you good",
   fit: "natural",
   kinds: ["built"],
+  topics: ["greetings-and-thanks"],
+  isA: ["set-phrase"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:hao3}}! {{Word:wo3}} {{word:jiao4}} \"Ānnà\".",

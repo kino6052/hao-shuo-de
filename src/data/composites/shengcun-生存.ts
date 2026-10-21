@@ -13,5 +13,7 @@ export default composite({
   literal: "stay alive",
   fit: "natural",
   transparent: true,
+  topics: ["birth-and-death"],
+  isA: ["life-change"],
   proposed: true,
 });

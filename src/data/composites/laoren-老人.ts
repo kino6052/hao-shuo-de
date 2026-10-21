@@ -13,6 +13,8 @@ export default composite({
   literal: "old person",
   fit: "natural",
   transparent: true,
+  topics: ["young-and-old"],
+  isA: ["person-by-age-or-sex"],
   examples: [
     {
       pinyin: "{{Word:bang1}} {{word:lao3}}-{{word:ren2}} {{word:na2}} {{word:dong1}}-{{light:xi1}}.",

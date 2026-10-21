@@ -12,6 +12,8 @@ export default composite({
   tts: ["进去"],
   literal: "go in",
   fit: "plain",
+  topics: ["phone-and-computer"],
+  isA: ["body-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:jin4}}-{{word:qu4}} {{word:le}}.",

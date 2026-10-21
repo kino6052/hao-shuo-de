@@ -6,6 +6,7 @@ export default pattern("shenme-dou", {
     rus: "Говорит «всё»: shénme-dōu стоит перед глаголом. С bù или méi оно значит «ничего».",
   },
   covers: [],
+  tags: ["all-also", "negation", "cat:quantity"],
   template: { hsd: "Who + {{word:shen2me}}-{{word:dou1}} + verb", eng: "Who does the verb to everything" },
   rules: [
     { lhs: "VP", hsd: "=shen2me =dou1 VP", eng: "shénme-dōu, then what is said" },

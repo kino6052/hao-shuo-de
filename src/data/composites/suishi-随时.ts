@@ -12,6 +12,8 @@ export default composite({
   tts: ["什么时间都"],
   literal: "at any time",
   fit: "plain",
+  topics: ["how-often"],
+  isA: ["frequency"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:shen2me}} {{word:shi2}}-{{word:jian1}} {{word:dou1}} {{word:neng2}} {{word:lai2}}.",

@@ -12,5 +12,7 @@ export default composite({
   tts: ["很高的学"],
   literal: "high learning",
   fit: "plain",
+  topics: ["studying"],
+  isA: ["idea"],
   proposed: true,
 });

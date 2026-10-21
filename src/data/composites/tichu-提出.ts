@@ -12,6 +12,8 @@ export default composite({
   tts: ["说出来"],
   literal: "say it out",
   fit: "plain",
+  topics: ["talking"],
+  isA: ["speaking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:shuo1}}-{{word:chu1}}-{{word:lai2}}.",

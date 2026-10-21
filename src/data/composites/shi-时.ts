@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:shi2}}-{{word:jian1}}"],
   tts: ["时间"],
   fit: "word",
+  topics: ["before-and-after"],
+  isA: ["time-point"],
   note: "Same as 时间.",
   examples: [
     {

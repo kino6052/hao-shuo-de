@@ -6,6 +6,7 @@ export default pattern("stacked-modifiers", {
     rus: "Несколько определений стоят подряд перед одним существительным, у каждого свой -de.",
   },
   covers: [],
+  tags: ["describe", "owner", "cat:quality"],
   template: { hsd: "modifier-{{word:de}} modifier-{{word:de}} noun", eng: "the first modifier's second modifier's noun" },
   rules: [{ lhs: "ModNP", hsd: "Mod ModNP", eng: "another modifier before a modified noun" }],
   taught: "pointing/possession-de",

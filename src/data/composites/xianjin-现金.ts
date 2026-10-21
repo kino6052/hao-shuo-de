@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:jin1}}"],
   tts: ["金"],
   fit: "word",
+  topics: ["money-and-paying"],
+  isA: ["money-thing"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:jin1}}.",

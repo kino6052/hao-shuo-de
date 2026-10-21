@@ -14,6 +14,8 @@ export default word("shen2me", {
     eng: "Without it, you can't ask \"what?\", and with {{word:dou1}} it makes \"everything\".",
     rus: "Без него нельзя спросить «что?», а вместе с {{word:dou1}} оно даёт «всё».",
   },
+  topics: ["question-words"],
+  isA: ["question-word-kind"],
   maps: "seme",
   atom: {
     eng: "\"The thing I do not know\" does not ask a question, so it cannot say shénme.",

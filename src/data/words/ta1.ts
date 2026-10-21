@@ -14,6 +14,8 @@ export default word("ta1", {
     eng: "Without it, you'd have to repeat a name every time: no \"he\", \"she\", \"it\", or \"they\".",
     rus: "Без него пришлось бы каждый раз повторять имя: нет «он», «она», «оно», «они».",
   },
+  topics: ["pointers"],
+  isA: ["pronoun"],
   maps: "ona",
   paraphrase: {
     forms: [

@@ -12,6 +12,8 @@ export default composite({
   tts: ["把身体做好"],
   literal: "make the body good",
   fit: "plain",
+  topics: ["at-the-hospital"],
+  isA: ["social-action"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:bang1}} {{word:wo3}} {{word:ba3}} {{word:shen1ti3}} {{word:zuo4}} {{word:hao3}}.",

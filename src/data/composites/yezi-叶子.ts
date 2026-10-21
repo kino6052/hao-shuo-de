@@ -14,5 +14,7 @@ export default composite({
   tts: ["植物上的平平的东西"],
   literal: "a flat thing on a plant",
   fit: "plain",
+  topics: ["trees-and-flowers"],
+  isA: ["plant"],
   proposed: true,
 });

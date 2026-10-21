@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:shao3}}"],
   tts: ["少"],
   fit: "word",
+  topics: ["much-and-little"],
+  isA: ["amount-word"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{word:li3}} {{word:ren2}} {{word:hen3}} {{word:shao3}}.",

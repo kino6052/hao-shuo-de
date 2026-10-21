@@ -12,6 +12,8 @@ export default composite({
   tts: ["写书的人"],
   literal: "a person who writes books",
   fit: "plain",
+  topics: ["writing"],
+  isA: ["worker"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:xie3}} {{word:shu1}}-{{word:de}} {{word:ren2}}.",

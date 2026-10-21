@@ -13,6 +13,8 @@ export default composite({
   literal: "if",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["joining-words"],
+  isA: ["conjunction"],
   note: "rúguǒ X, jiù Y.",
   examples: [
     {

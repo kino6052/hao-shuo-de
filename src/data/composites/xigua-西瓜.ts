@@ -14,5 +14,7 @@ export default composite({
   tts: ["很大的，圆的，里面红的，甜的果"],
   literal: "a big, round fruit, red inside and sweet",
   fit: "plain",
+  topics: ["fruit"],
+  isA: ["fruit-item"],
   proposed: true,
 });

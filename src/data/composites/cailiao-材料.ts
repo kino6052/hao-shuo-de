@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:liao4}}"],
   tts: ["料"],
   fit: "plain",
+  topics: ["materials"],
+  isA: ["material"],
   note: "材 is not a core character; liào alone says the stuff something is made from.",
   examples: [
     {

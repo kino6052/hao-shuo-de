@@ -13,6 +13,8 @@ export default composite({
   literal: "big learning",
   fit: "natural",
   kinds: ["built"],
+  topics: ["classroom"],
+  isA: ["building"],
   note: "A real word: dà + xué.",
   examples: [
     {

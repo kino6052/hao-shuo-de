@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:hao3}}-{{word:hao3}} {{word:kan4}}", "{{word:kan4}}"],
   tts: ["好好看", "看"],
   fit: "word",
+  topics: ["looking-and-checking"],
+  isA: ["perceiving"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:hao3}}-{{word:hao3}} {{word:kan4}}.",

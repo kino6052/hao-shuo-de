@@ -101,3 +101,43 @@ export const texts = [
 ];
 
 export const source = { words, categories, maps, composites, coverage, lessons, texts };
+
+// -- the tag nets for the tag tests (tags.test.js, tag-net.test.js): a made-up topic net and kind net over the same language --------
+// cooking-actions sits under two parents (kitchen and food); chi1 has two topics; dong1 has only a broad topic (vague); 饭机 writes
+// kitchen beside cookware (an extra tag); 飞机 has no tags yet.
+const tag = (id, eng, parents = [], extra = {}) => ({ id, title: { eng, rus: eng, zh: eng }, parents, ...extra });
+
+export const tagLists = {
+  topics: [
+    tag('home', 'Home'),
+    tag('kitchen', 'Kitchen', ['home']),
+    tag('kitchen-utensils', 'Kitchen utensils', ['kitchen']),
+    tag('cookware', 'Cookware', ['kitchen']),
+    tag('food', 'Food'),
+    tag('meals', 'Meals', ['food']),
+    tag('cooking-actions', 'Cooking actions', ['kitchen', 'food']),
+  ],
+  kinds: [
+    tag('thing', 'Thing'),
+    tag('made-thing', 'Made thing', ['thing']),
+    tag('tool', 'Tool', ['made-thing']),
+    tag('cutting-tool', 'Cutting tool', ['tool']),
+    tag('doing', 'Doing'),
+  ],
+};
+
+const tagged = (id, topics, isA) => ({ ...words[id], topics, isA });
+const tagWords = Object.fromEntries(Object.keys(words).map((id) => [id, { ...words[id], topics: ['meals'], isA: ['thing'] }]));
+Object.assign(tagWords, {
+  chi1: tagged('chi1', ['cooking-actions', 'meals'], ['doing']),
+  fan4: tagged('fan4', ['meals'], ['thing']),
+  ji1: tagged('ji1', ['cookware'], ['tool']),
+  dong1: tagged('dong1', ['home'], ['thing']),
+});
+
+export const tagSource = {
+  ...source,
+  tags: tagLists,
+  words: tagWords,
+  composites: composites.map((c) => (c.zh === '饭机' ? { ...c, topics: ['cookware', 'kitchen'], isA: ['tool'] } : c.zh === '吃饭' ? { ...c, topics: ['meals'], isA: ['doing'] } : c)),
+};

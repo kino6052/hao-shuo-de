@@ -12,6 +12,8 @@ export default composite({
   tts: ["房子", "家"],
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["house-and-doors"],
+  isA: ["building"],
   examples: [
     {
       pinyin: "{{Word:ta1}}-{{word:de}} {{word:fang2}}-{{word:zi}} {{word:hen3}} {{word:da4}}.",

@@ -98,7 +98,7 @@ describe('families (the real vocabulary)', () => {
   const leaf = (key) => [...wordCategories(dictionary)].filter(([id, c]) => c.leaf === key && dictionary.words[id]).map(([id]) => id);
 
   test('the numbers are one family', () => {
-    const nums = leaf('numbers-ordinals');
+    const nums = leaf('number-words');
     expect(nums.length).toBeGreaterThan(5);
     expect(new Set(nums.map((id) => a.parts.get(id))).size).toBe(1);
     expect(a.parts.get(nums[0])).toBeGreaterThanOrEqual(0);

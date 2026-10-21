@@ -6,6 +6,7 @@ export default pattern("when-clause", {
     rus: "Говорит, «когда» что-то происходит: «время» действия, то есть -de shíjiān после действия, потом запятая.",
   },
   covers: [],
+  tags: ["when", "cat:time"],
   template: { hsd: "Who + verb-{{word:de}} {{word:shi2}}-{{word:jian1}}, the rest", eng: "When who does the verb, the rest" },
   rules: [{ lhs: "Time", hsd: "S de =shi2 =jian1", eng: "a sentence and -de shíjiān: the time when it happens" }],
   taught: "around-an-action/when",

@@ -6,6 +6,7 @@ export default pattern("qi-lai-start", {
     rus: "Говорит, что что-то начинает становиться таким: qǐ-lái стоит после описывающего слова. После глагола оно говорит, каким предмет кажется на вид, вкус или слух: kàn-qǐ-lái hěn hǎo — выглядит хорошо. Xià-qù после глагола значит «продолжай».",
   },
   covers: [],
+  tags: ["change", "cat:quality", "cat:time"],
   template: { hsd: "Thing + adjective-{{word:qi3}}-{{word:lai2}}", eng: "The thing starts to get that way" },
   rules: [
     { lhs: "VP", hsd: "@adjective =qi3 =lai2", eng: "a describing word and qǐ-lái: starting to be so" },

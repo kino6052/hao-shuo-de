@@ -10,6 +10,8 @@ export default word("shou3", {
     eng: "Hands: holding, touching, giving. The most used body part.",
     rus: "Руки: держать, трогать, давать. Самая нужная часть тела.",
   },
+  topics: ["hands-and-feet"],
+  isA: ["body-part"],
   maps: "luka",
   atom: {
     eng: "The hand is learned by pointing at it; \"the part that holds things\" names its use only.",

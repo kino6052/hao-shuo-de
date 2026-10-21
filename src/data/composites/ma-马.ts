@@ -14,4 +14,6 @@ export default composite({
   tts: ["能让人在上面快走的动物"],
   literal: "an animal that lets a person go fast on top",
   fit: "plain",
+  topics: ["farm-animals"],
+  isA: ["mammal"],
 });

@@ -14,5 +14,7 @@ export default composite({
   tts: ["两边有很多家的路"],
   literal: "a road with many homes on both sides",
   fit: "plain",
+  topics: ["the-road"],
+  isA: ["outdoor-place"],
   proposed: true,
 });

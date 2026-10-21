@@ -12,5 +12,7 @@ export default composite({
   tts: ["X最外面的"],
   literal: "the outermost part of X",
   fit: "plain",
+  topics: ["trunk-and-skin"],
+  isA: ["body-part"],
   proposed: true,
 });

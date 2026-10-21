@@ -12,6 +12,8 @@ export default composite({
   tts: ["动物的身体"],
   literal: "animal body",
   fit: "plain",
+  topics: ["meat"],
+  isA: ["meat-item"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:bu4}} {{word:chi1}} {{word:dong4}}-{{word:wu4}}-{{word:de}} {{word:shen1ti3}}.",

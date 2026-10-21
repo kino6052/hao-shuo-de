@@ -16,6 +16,8 @@ export default composite({
   literal: "car stand / where you wait for the car",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["trains-and-stations"],
+  isA: ["building"],
   examples: [
     {
       pinyin: "{{Word:che1}}-{{word:zhan4}} {{word:hen3}} {{word:da4}}.",

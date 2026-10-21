@@ -14,5 +14,7 @@ export default composite({
   tts: ["衣服上放东西的地方"],
   literal: "the place on clothes for putting things",
   fit: "plain",
+  topics: ["everyday-clothes"],
+  isA: ["clothing"],
   proposed: true,
 });

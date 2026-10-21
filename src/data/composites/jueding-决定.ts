@@ -16,6 +16,8 @@ export default composite({
   literal: "come to know what to do",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["deciding"],
+  isA: ["thinking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:jue2}}-{{word:ding4}} {{word:qu4}} \"Zhōngguó\".",

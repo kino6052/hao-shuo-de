@@ -12,6 +12,8 @@ export default composite({
   tts: ["定", "不变了"],
   literal: "won't change anymore",
   fit: "word",
+  topics: ["deciding"],
+  isA: ["thinking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ding4}} {{word:le}}.",

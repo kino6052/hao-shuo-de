@@ -12,6 +12,8 @@ export default composite({
   tts: ["开始的时间"],
   literal: "at the start",
   fit: "plain",
+  topics: ["before-and-after"],
+  isA: ["time-order"],
   examples: [
     {
       pinyin: "{{Word:kai1shi3}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:ta1}} {{word:zai4}} {{word:jia1}}.",

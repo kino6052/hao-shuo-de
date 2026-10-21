@@ -14,5 +14,7 @@ export default composite({
   tts: ["手和身体中间的长的地方"],
   literal: "the long part between the hand and the body",
   fit: "plain",
+  topics: ["hands-and-feet"],
+  isA: ["body-part"],
   proposed: true,
 });

@@ -14,6 +14,8 @@ export default composite({
   tts: ["没有得到要的，不开心"],
   literal: "didn't get what you wanted, and unhappy",
   fit: "plain",
+  topics: ["sad-and-angry"],
+  isA: ["feeling-quality"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:mei2}}-{{word:you3}} {{word:de2}}-{{word:dao4}} {{word:yao4}}-{{word:de}}, {{word:bu4}} {{word:kai1}}-{{word:xin1}}.",

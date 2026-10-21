@@ -14,5 +14,7 @@ export default composite({
   tts: ["你真好，我也开心"],
   literal: "you are great, and I am happy too",
   fit: "plain",
+  topics: ["greetings-and-thanks"],
+  isA: ["set-phrase"],
   proposed: true,
 });

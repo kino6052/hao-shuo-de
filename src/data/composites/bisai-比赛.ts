@@ -12,6 +12,8 @@ export default composite({
   tts: ["看谁最好"],
   literal: "see who is best",
   fit: "plain",
+  topics: ["sports"],
+  isA: ["event"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:kan4}} {{word:shei2}} {{word:zui4}} {{word:hao3}}.",

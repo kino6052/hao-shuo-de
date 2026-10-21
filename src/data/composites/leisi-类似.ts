@@ -12,5 +12,7 @@ export default composite({
   tts: ["有一点一样"],
   literal: "a little the same",
   fit: "plain",
+  topics: ["same-and-different"],
+  isA: ["comparison"],
   proposed: true,
 });

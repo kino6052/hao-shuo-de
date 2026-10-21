@@ -13,6 +13,8 @@ export default composite({
   literal: "send out, be born",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["news-and-events"],
+  isA: ["happening"],
   examples: [
     {
       pinyin: "{{Word:fa1}}-{{word:sheng1}} {{word:le}} {{word:shen2me}}?",

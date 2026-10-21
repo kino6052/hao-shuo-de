@@ -14,6 +14,8 @@ export default composite({
   tts: ["看好玩儿的看的东西的地方"],
   literal: "the place where you watch fun things to watch",
   fit: "plain",
+  topics: ["films-and-media"],
+  isA: ["building"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:qu4}} {{word:kan4}} {{word:hao3}}-{{word:wan2r}}-{{word:de}} {{word:kan4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",

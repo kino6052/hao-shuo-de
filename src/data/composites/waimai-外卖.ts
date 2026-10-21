@@ -14,6 +14,8 @@ export default composite({
   tts: ["拿到家里的吃的东西"],
   literal: "food brought home",
   fit: "plain",
+  topics: ["at-a-restaurant"],
+  isA: ["trade-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yao4}} {{word:na2}} {{word:dao4}} {{word:jia1}}-{{word:li3}}-{{word:de}} {{word:chi1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

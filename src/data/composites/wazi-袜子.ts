@@ -14,5 +14,7 @@ export default composite({
   tts: ["脚上最里面的衣服"],
   literal: "the innermost clothing on the foot",
   fit: "plain",
+  topics: ["shoes-and-socks"],
+  isA: ["footwear"],
   proposed: true,
 });

@@ -14,5 +14,7 @@ export default composite({
   tts: ["给东西得到金的人"],
   literal: "a person who gives things and gets money",
   fit: "plain",
+  topics: ["shops"],
+  isA: ["social-role"],
   proposed: true,
 });

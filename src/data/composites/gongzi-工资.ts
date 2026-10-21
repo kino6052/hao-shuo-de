@@ -12,6 +12,8 @@ export default composite({
   tts: ["工作的金"],
   literal: "the money of work",
   fit: "plain",
+  topics: ["money-and-paying"],
+  isA: ["money-thing"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:gong1}}-{{word:zuo4}}-{{word:de}} {{word:jin1}} {{word:hen3}} {{word:duo1}}.",

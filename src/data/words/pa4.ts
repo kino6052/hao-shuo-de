@@ -14,6 +14,8 @@ export default word("pa4", {
     eng: "Be scared. Fear is a basic feeling no other word covers.",
     rus: "Бояться. Страх — базовое чувство, которое не покрыть другим словом.",
   },
+  topics: ["worry-and-fear"],
+  isA: ["feeling-and-wanting"],
   maps: "",
   paraphrase: {
     forms: ["{{word:bu4}} {{word:xiang3}} {{word:zai4}} {{word:ta1}} {{word:fu4jin4}}"],

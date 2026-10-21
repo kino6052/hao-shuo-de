@@ -12,5 +12,7 @@ export default composite({
   tts: ["说要怎么做的话"],
   literal: "words that say how to do it",
   fit: "plain",
+  topics: ["law-and-crime"],
+  isA: ["idea"],
   proposed: true,
 });

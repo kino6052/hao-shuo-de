@@ -12,6 +12,8 @@ export default composite({
   tts: ["十二点吃的饭"],
   literal: "the meal eaten at twelve",
   fit: "plain",
+  topics: ["breakfast-lunch-dinner"],
+  isA: ["dish"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:shi2}}-{{word:er4}}-{{word:dian3}}-{{word:chi1}}-{{word:de}} {{word:fan4}} {{word:yao4}} {{word:shen2me}}?",

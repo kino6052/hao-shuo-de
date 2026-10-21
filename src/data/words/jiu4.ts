@@ -14,5 +14,7 @@ export default word("jiu4", {
     eng: "Then, right away, just. Sentences work without it, but sound much more natural with it.",
     rus: "Тогда, сразу, именно. Без него предложения работают, но с ним звучат гораздо естественнее.",
   },
+  topics: ["adverbs"],
+  isA: ["adverb-word"],
   paraphrase: { forms: ["{{word:hen3}} {{word:kuai4}}"], verdict: "clumsy" },
 });

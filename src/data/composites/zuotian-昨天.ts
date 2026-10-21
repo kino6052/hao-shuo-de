@@ -12,6 +12,8 @@ export default composite({
   tts: ["前一天", "前一个日"],
   literal: "the day before / the sun before",
   fit: "plain",
+  topics: ["calendar"],
+  isA: ["time-point"],
   examples: [
     {
       pinyin: "{{Word:qian2}}-{{word:yi1}}-{{word:tian1}} {{word:wo3}} {{word:zai4}} {{word:jia1}}.",

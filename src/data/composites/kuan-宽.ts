@@ -12,4 +12,6 @@ export default composite({
   tts: ["两边很远"],
   literal: "the two sides are far apart",
   fit: "plain",
+  topics: ["size"],
+  isA: ["size-quality"],
 });

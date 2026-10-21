@@ -12,5 +12,7 @@ export default composite({
   tts: ["不工作，不学"],
   literal: "do not work, do not study",
   fit: "plain",
+  topics: ["holidays-and-festivals"],
+  isA: ["starting-and-stopping"],
   proposed: true,
 });

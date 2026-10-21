@@ -14,5 +14,7 @@ export default composite({
   tts: ["让人看到就知道X的东西"],
   literal: "a thing that lets people know X when they see it",
   fit: "plain",
+  topics: ["police-and-safety"],
+  isA: ["idea"],
   proposed: true,
 });

@@ -12,5 +12,7 @@ export default composite({
   tts: ["把X拿进来"],
   literal: "take X in",
   fit: "plain",
+  topics: ["body-needs"],
+  isA: ["body-action"],
   proposed: true,
 });

@@ -12,6 +12,8 @@ export default composite({
   tts: ["题", "问的东西"],
   literal: "something asked",
   fit: "word",
+  topics: ["studying"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:ti2}} {{word:hen3}} {{word:hao3}}.",

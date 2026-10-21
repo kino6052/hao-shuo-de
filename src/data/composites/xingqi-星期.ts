@@ -12,6 +12,8 @@ export default composite({
   tts: ["七天"],
   literal: "seven days",
   fit: "plain",
+  topics: ["calendar"],
+  isA: ["time-span"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:qu4}} \"Zhōngguó\" {{word:qi1}}-{{word:tian1}}.",

@@ -16,6 +16,8 @@ export default composite({
   literal: "middle-learning student / a not-big, not-small learner",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["classroom"],
+  isA: ["social-role"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:zhong1}}-{{word:xue2}}-{{word:sheng1}}.",

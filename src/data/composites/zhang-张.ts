@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:ge4}}"],
   tts: ["个"],
   fit: "word",
+  topics: ["counting-words"],
+  isA: ["counting-word"],
   note: "Hao-shuo-de uses gè for everything.",
   examples: [
     {

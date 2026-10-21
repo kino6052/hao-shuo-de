@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:fang2}}"],
   tts: ["房"],
   fit: "word",
+  topics: ["house-and-doors"],
+  isA: ["room"],
   proposed: true,
 });

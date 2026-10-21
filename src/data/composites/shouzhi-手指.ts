@@ -14,5 +14,7 @@ export default composite({
   tts: ["手上的五个长的东西"],
   literal: "five long things on the hand",
   fit: "plain",
+  topics: ["hands-and-feet"],
+  isA: ["body-part"],
   proposed: true,
 });

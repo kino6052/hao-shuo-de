@@ -10,6 +10,8 @@ export default word("wen4", {
     eng: "Ask. Without it, you can't talk about questions: \"he asked me\".",
     rus: "Спрашивать. Без него не рассказать о вопросах: «он спросил меня».",
   },
+  topics: ["asking-and-answering"],
+  isA: ["speaking-action"],
   maps: "",
   paraphrase: {
     forms: [

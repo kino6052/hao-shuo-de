@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:yue4}}"],
   tts: ["月"],
   fit: "word",
+  topics: ["calendar"],
+  isA: ["calendar-name"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:yue4}} {{word:hen3}} {{word:leng3}}.",

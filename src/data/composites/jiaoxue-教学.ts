@@ -12,5 +12,7 @@ export default composite({
   tts: ["帮人学"],
   literal: "help people learn",
   fit: "plain",
+  topics: ["classroom"],
+  isA: ["learning-and-teaching"],
   proposed: true,
 });

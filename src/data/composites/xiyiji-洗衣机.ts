@@ -14,5 +14,7 @@ export default composite({
   tts: ["用水让衣服干净的机"],
   literal: "a machine that makes clothes clean with water",
   fit: "plain",
+  topics: ["cleaning"],
+  isA: ["electric-device"],
   proposed: true,
 });

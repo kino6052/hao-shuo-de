@@ -14,6 +14,8 @@ export default word("tian2", {
     eng: "Sweet: the one taste you can name. Other tastes are {{word:wei4}}-{{word:dao4}} {{word:hao3}} or {{word:bu4}} {{word:hao3}}.",
     rus: "Сладкий — единственный вкус, который можно назвать. Остальные — {{word:wei4}}-{{word:dao4}} {{word:hao3}} или {{word:bu4}} {{word:hao3}}.",
   },
+  topics: ["tastes"],
+  isA: ["taste-quality"],
   maps: "suwi",
   atom: {
     eng: "A taste: you learn sweet by tasting it; the other words only point back to that taste.",

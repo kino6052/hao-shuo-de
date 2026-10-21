@@ -14,4 +14,6 @@ export default composite({
   tts: ["两个人要不一样的东西"],
   literal: "two people want different things",
   fit: "plain",
+  topics: ["war-and-peace"],
+  isA: ["event"],
 });

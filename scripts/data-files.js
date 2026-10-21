@@ -32,7 +32,7 @@ export function tsLiteral(v, ind = '') {
 export const wordPath = (id) => resolve(DATA_DIR, 'words', `${id}.ts`);
 
 // The keys of a word file, in the order they are written (the first five are required).
-export const WORD_KEYS = ['term', 'hanzi', 'pos', 'definition', 'necessity', 'maps', 'senses', 'classes', 'paraphrase', 'atom'];
+export const WORD_KEYS = ['term', 'hanzi', 'pos', 'definition', 'necessity', 'topics', 'isA', 'maps', 'senses', 'classes', 'paraphrase', 'atom'];
 
 // data: { term, hanzi, pos, definition, necessity, maps?, senses?, classes?, paraphrase?, atom? }
 export function writeWord(id, data) {
@@ -64,7 +64,7 @@ export function writeComposite(entry) {
 
 // A composite file's text, its keys in the usual order (undefined ones left out).
 export function compositeSource(c) {
-  const order = ['rank', 'phase', 'zh', 'py', 'en', 'ru', 'pos', 'head', 'hsd', 'tts', 'literal', 'fit', 'transparent', 'kinds', 'role', 'note', 'examples', 'proposed'];
+  const order = ['rank', 'phase', 'zh', 'py', 'en', 'ru', 'pos', 'head', 'hsd', 'tts', 'literal', 'fit', 'transparent', 'kinds', 'role', 'topics', 'isA', 'note', 'examples', 'proposed'];
   const out = {};
   for (const k of [...order, ...Object.keys(c).filter((k) => !order.includes(k))]) if (c[k] !== undefined) out[k] = c[k];
   return `import { composite } from "../../lib/composite.ts";\n\nexport default composite(${tsLiteral(out)});\n`;

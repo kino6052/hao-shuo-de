@@ -14,5 +14,7 @@ export default composite({
   tts: ["植物里面硬的东西"],
   literal: "the hard thing inside a plant",
   fit: "plain",
+  topics: ["materials"],
+  isA: ["wood-or-fibre"],
   proposed: true,
 });

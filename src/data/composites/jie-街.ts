@@ -12,6 +12,8 @@ export default composite({
   tts: ["路"],
   literal: "road",
   fit: "word",
+  topics: ["the-road"],
+  isA: ["outdoor-place"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:jia1}} {{word:zai4}} {{word:zhe4}}-{{light:ge4}} {{word:lu4}}-{{word:shang4}}.",

@@ -12,5 +12,7 @@ export default composite({
   tts: ["写出来"],
   literal: "write it out",
   fit: "plain",
+  topics: ["writing"],
+  isA: ["making"],
   proposed: true,
 });

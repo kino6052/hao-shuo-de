@@ -14,5 +14,7 @@ export default composite({
   tts: ["和我妈妈一样大的女人"],
   literal: "a woman as old as my mom",
   fit: "plain",
+  topics: ["relatives"],
+  isA: ["relative"],
   proposed: true,
 });

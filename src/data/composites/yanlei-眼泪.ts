@@ -12,5 +12,7 @@ export default composite({
   tts: ["眼睛里出来的水"],
   literal: "water that comes out of the eyes",
   fit: "plain",
+  topics: ["head-and-face"],
+  isA: ["body-part"],
   proposed: true,
 });

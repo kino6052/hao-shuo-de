@@ -12,6 +12,8 @@ export default composite({
   tts: ["为什么"],
   fit: "natural",
   transparent: true,
+  topics: ["question-words"],
+  isA: ["question-word-kind"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:wei4}}-{{word:shen2me}} {{word:bu4}} {{word:lai2}}?",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["早饭"],
   fit: "natural",
   transparent: true,
+  topics: ["breakfast-lunch-dinner"],
+  isA: ["dish"],
   examples: [
     {
       pinyin: "{{Word:zao3}}-{{word:fan4}} {{word:shi4}} {{word:shui3}}-{{word:guo3}}.",

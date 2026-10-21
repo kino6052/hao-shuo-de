@@ -12,5 +12,7 @@ export default composite({
   tts: ["不好玩儿"],
   literal: "not fun",
   fit: "plain",
+  topics: ["how-good"],
+  isA: ["value-quality"],
   proposed: true,
 });

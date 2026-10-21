@@ -6,6 +6,7 @@ export default pattern("le-new-situation", {
     rus: "Говорит, что это уже случилось: le стоит в конце сказанного.",
   },
   covers: [],
+  tags: ["done", "change", "cat:time", "cat:state"],
   template: { hsd: "Who + verb + place + {{word:le}}", eng: "Who has now done the verb at the place" },
   rules: [{ lhs: "VP", hsd: "VP le", eng: "what is said, and le: it has now happened" }],
   taught: "moving/arrive",

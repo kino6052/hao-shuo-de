@@ -14,6 +14,8 @@ export default composite({
   tts: ["圆的红色的水果"],
   literal: "a round red fruit",
   fit: "plain",
+  topics: ["fruit"],
+  isA: ["fruit-item"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yao4}} {{word:yuan2}}-{{word:de}} {{word:hong2}}-{{word:se4}}-{{word:de}} {{word:shui3}}-{{word:guo3}}.",

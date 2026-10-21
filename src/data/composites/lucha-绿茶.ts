@@ -14,5 +14,7 @@ export default composite({
   tts: ["颜色和植物一样的热水"],
   literal: "hot water the colour of a plant",
   fit: "plain",
+  topics: ["drinks"],
+  isA: ["drink"],
   proposed: true,
 });

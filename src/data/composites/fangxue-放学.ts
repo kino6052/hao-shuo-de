@@ -16,6 +16,8 @@ export default composite({
   literal: "let learning go / finished learning, going home",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["studying"],
+  isA: ["starting-and-stopping"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:fang4}}-{{word:xue2}} {{word:le}}.",

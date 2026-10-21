@@ -12,6 +12,8 @@ export default composite({
   tts: ["能做的东西"],
   literal: "what it can do",
   fit: "plain",
+  topics: ["farms-and-factories"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:neng2}} {{word:zuo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

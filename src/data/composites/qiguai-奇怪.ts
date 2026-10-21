@@ -17,6 +17,8 @@ export default composite({
   tts: ["以前没看过的", "难明白的", "难看的", "难听的"],
   literal: "never seen before / hard to understand / ugly / unpleasant to hear",
   fit: "plain",
+  topics: ["state-of-things"],
+  isA: ["condition-quality"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:yi3}}-{{word:qian2}}-{{word:mei2}}-{{word:kan4}}-{{word:guo4}}-{{word:de}} {{word:dong4}}-{{word:wu4}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["让牙干净的工具"],
   literal: "a tool that makes the teeth clean",
   fit: "plain",
+  topics: ["bathroom"],
+  isA: ["tool"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yao4}} {{word:rang4}} {{word:ya2}} {{word:gan1jing4}}-{{word:de}} {{word:gong1}}-{{word:ju4}}.",

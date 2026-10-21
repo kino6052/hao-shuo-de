@@ -16,6 +16,8 @@ export default composite({
   literal: "X, there's no other way",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["helping-words"],
+  isA: ["auxiliary"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zhi3}}-{{word:neng2}} {{word:zuo4}} {{word:zhe4}}-{{light:ge4}}.",

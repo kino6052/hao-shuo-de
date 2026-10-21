@@ -16,6 +16,7 @@ import { solve, tables, sym } from './clingo.js';
 import { replaceWordRefs, refTerm, wordRefIds } from '../word-refs.js';
 import { patternsCarrying, renderPatternUses } from './grammar-uses.js';
 import { restsOnLoss, restsOnModel } from './rests-on.js';
+import { LEAF_MIN } from '../tag-net.js';
 
 const KINDS = ['lesson_example', 'lesson_answer', 'composite_example', 'story', 'phrase_book'];
 const KIND_NAMES = { lesson_example: 'lesson examples', lesson_answer: 'lesson answers', composite_example: 'composite examples', story: 'story lines', phrase_book: 'phrase-book lines' };
@@ -96,6 +97,22 @@ export async function removal(ctx, ids) {
   const loseAtom = loss.lose.map((x) => ({ word: x.id, term: term(x.id), lost: x.lost.map(term), now: x.now ? x.now.map(term) : null }));
   const longer = loss.longer.map((x) => ({ word: x.id, term: term(x.id), from: x.from, to: x.to }));
 
+  // the topic pages that lose entries (TAGS_PLAN.md E3): how many each holds now and after, flagged when one is left empty or short
+  const pages = [];
+  if (source.tags?.topics?.length) {
+    const title = new Map(source.tags.topics.map((t) => [t.id, t.title.eng]));
+    const held = new Map();
+    for (const e of [...Object.values(words), ...(source.composites ?? [])]) for (const t of e.topics ?? []) held.set(t, (held.get(t) ?? 0) + 1);
+    const losing = new Map();
+    for (const id of ids) for (const t of words[id].topics ?? []) losing.set(t, [...(losing.get(t) ?? []), id]);
+    for (const [page, gone] of losing) {
+      const before = held.get(page) ?? 0;
+      const after = before - gone.length;
+      pages.push({ page, title: title.get(page) ?? page, before, after, words: gone.map(term), empty: after === 0, short: after > 0 && after < LEAF_MIN });
+    }
+    pages.sort((a, b) => a.after - b.after || a.page.localeCompare(b.page));
+  }
+
   return {
     words: ids.map((id) => ({ id, term: term(id), hanzi: words[id].hanzi, pos: words[id].pos?.eng, necessity: words[id].necessity?.index })),
     composites: { redo: sorted(redo), loses: sorted(loses), headLost: sorted(headLost) },
@@ -107,6 +124,7 @@ export async function removal(ctx, ids) {
     atoms: { loseAtom, longer },
     senses,
     relations,
+    pages,
     counts: {
       redo: redo.length,
       loses: loses.length,
@@ -123,6 +141,7 @@ export async function removal(ctx, ids) {
       longer: longer.length,
       senses: senses.length,
       relations: relations.length,
+      pagesEmpty: pages.filter((p) => p.empty).length,
     },
     status: result.status,
   };
@@ -177,5 +196,6 @@ export function renderRemoval(r, { limit = 12 } = {}) {
   section('Words said in more steps (a stand-in paraphrase fills in)', r.atoms?.longer ?? [], (x) => `${x.term} (${x.word}): ${x.from} step${x.from === 1 ? '' : 's'} → ${x.to}`);
   section('Catch-all senses left with no compound', r.senses, (s) => `${s.term} ${s.hanzi} (${s.sense})`);
   section('Opposites and synonyms that break', r.relations, (x) => `${x.kind} ${x.what}: ${x.text}`);
+  section('Topic pages that lose entries (the entry count before -> after)', r.pages ?? [], (p) => `${p.title} (${p.page}): ${p.before} -> ${p.after}${p.empty ? ' EMPTY: merge the page or give it a word' : p.short ? ' (under the page minimum)' : ''} -- loses ${p.words.join(', ')}`);
   return out.join('\n');
 }

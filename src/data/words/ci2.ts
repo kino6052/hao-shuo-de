@@ -10,6 +10,8 @@ export default word("ci2", {
     eng: "A word. Without it, you can't talk about language itself: \"what's the word for…?\"",
     rus: "Слово. Без него нельзя говорить о самом языке: «как называется…?»",
   },
+  topics: ["writing"],
+  isA: ["language-thing"],
   maps: "",
   paraphrase: {
     forms: [

@@ -12,6 +12,8 @@ export default composite({
   tts: ["用两个手拿"],
   literal: "hold with two hands",
   fit: "word",
+  topics: ["taking-and-holding"],
+  isA: ["handling-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yong4}} {{word:liang3}}-{{light:ge4}} {{word:shou3}} {{word:na2}} {{word:ta1}}.",

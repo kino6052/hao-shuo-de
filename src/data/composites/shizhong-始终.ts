@@ -12,5 +12,7 @@ export default composite({
   tts: ["从开始到完"],
   literal: "from the start to the end",
   fit: "plain",
+  topics: ["how-often"],
+  isA: ["frequency"],
   proposed: true,
 });

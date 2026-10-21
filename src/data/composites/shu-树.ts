@@ -12,6 +12,8 @@ export default composite({
   tts: ["大的植物"],
   literal: "big plant",
   fit: "plain",
+  topics: ["trees-and-flowers"],
+  isA: ["tree"],
   examples: [
     {
       pinyin: "{{Word:jia1}} {{word:qian2}}-{{word:mian4}} {{word:you3}} {{word:yi1}}-{{light:ge4}} {{word:da4}}-{{word:de}} {{word:zhi2wu4}}.",

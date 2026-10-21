@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:gan1jing4}}"],
   tts: ["干净"],
   fit: "word",
+  topics: ["cleaning"],
+  isA: ["condition-quality"],
   examples: [
     {
       pinyin: "{{Word:fang2}}-{{word:jian1}} {{word:hen3}} {{word:gan1jing4}}.",

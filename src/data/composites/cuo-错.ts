@@ -12,6 +12,8 @@ export default composite({
   tts: ["不对"],
   literal: "not right",
   fit: "natural",
+  topics: ["easy-hard-right-wrong"],
+  isA: ["truth-or-ease"],
   note: "duì also means \"right\".",
   examples: [
     {

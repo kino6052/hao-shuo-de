@@ -12,5 +12,7 @@ export default composite({
   tts: ["用毛做的衣服"],
   literal: "clothing made of wool",
   fit: "plain",
+  topics: ["everyday-clothes"],
+  isA: ["garment"],
   proposed: true,
 });

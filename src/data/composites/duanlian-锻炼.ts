@@ -12,6 +12,8 @@ export default composite({
   tts: ["动身体"],
   literal: "move the body",
   fit: "plain",
+  topics: ["healthy-habits"],
+  isA: ["body-action"],
   note: "Same as 运动.",
   examples: [
     {

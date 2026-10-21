@@ -6,6 +6,7 @@ export default pattern("shenme-yanse", {
     rus: "Shénme yánsè спрашивает о цвете: nǐ-de yīfu shì shénme yánsè? В ответе — цвет и de.",
   },
   covers: [],
+  tags: ["question", "describe", "cat:quality"],
   template: { hsd: "Thing + {{word:shi4}} + {{word:shen2me}} {{word:yan2se4}}?", eng: "What color is the thing?" },
   rules: [
     { lhs: "NP", hsd: "=shen2me =yan2se4", eng: "shénme yánsè: what color" },

@@ -12,6 +12,8 @@ export default composite({
   tts: ["飞机"],
   fit: "natural",
   transparent: true,
+  topics: ["planes-and-airports"],
+  isA: ["vehicle"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:fei1}}-{{word:ji1}} {{word:shi2}} {{word:dian3}} {{word:fei1}}.",

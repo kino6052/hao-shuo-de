@@ -12,5 +12,7 @@ export default composite({
   tts: ["有多高"],
   literal: "how high it is",
   fit: "plain",
+  topics: ["size"],
+  isA: ["size-quality"],
   proposed: true,
 });

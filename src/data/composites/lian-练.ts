@@ -12,6 +12,8 @@ export default composite({
   tts: ["很多次做"],
   literal: "do it many times",
   fit: "plain",
+  topics: ["studying"],
+  isA: ["learning-and-teaching"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:hen3}} {{word:duo1}} {{word:ci4}} {{word:zuo4}} {{word:na4}}-{{light:ge4}}.",

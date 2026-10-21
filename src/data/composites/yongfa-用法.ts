@@ -12,5 +12,7 @@ export default composite({
   tts: ["用法", "怎么用"],
   literal: "how to use it",
   fit: "plain",
+  topics: ["writing"],
+  isA: ["idea"],
   proposed: true,
 });

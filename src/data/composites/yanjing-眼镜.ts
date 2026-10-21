@@ -12,6 +12,8 @@ export default composite({
   tts: ["帮人看的东西"],
   literal: "a thing that helps a person see",
   fit: "plain",
+  topics: ["accessories"],
+  isA: ["headwear-or-accessory"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:bang1}} {{word:ren2}} {{word:kan4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

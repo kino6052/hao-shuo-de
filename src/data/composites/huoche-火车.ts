@@ -13,6 +13,8 @@ export default composite({
   literal: "fire car",
   fit: "natural",
   kinds: ["built"],
+  topics: ["trains-and-stations"],
+  isA: ["vehicle"],
   examples: [
     {
       pinyin: "{{Word:huo3}}-{{word:che1}} {{word:lai2}} {{word:le}}.",

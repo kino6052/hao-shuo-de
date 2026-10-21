@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:jue2}}"],
   tts: ["觉"],
   fit: "word",
+  topics: ["senses"],
+  isA: ["perceiving"],
   proposed: true,
 });

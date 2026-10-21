@@ -6,6 +6,7 @@ export default pattern("ruguo-if", {
     rus: "Rúguǒ начинает часть «если», затем запятая и остальное: rúguǒ ты придёшь, я тебя подожду.",
   },
   covers: ["grammar:if"],
+  tags: ["link", "cat:relation"],
   template: { hsd: "{{word:ru2guo3}} X, the rest", eng: "If X, then the rest" },
   rules: [
     { lhs: "Clause", hsd: "State", eng: "a state with no hěn: nǐ lěng, you are cold" },

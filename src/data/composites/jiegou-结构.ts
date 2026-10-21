@@ -12,5 +12,7 @@ export default composite({
   tts: ["X里面怎么放"],
   literal: "how things are put inside X",
   fit: "plain",
+  topics: ["shapes"],
+  isA: ["idea"],
   proposed: true,
 });

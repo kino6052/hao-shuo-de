@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:wen4}}"],
   tts: ["问"],
   fit: "word",
+  topics: ["asking-and-answering"],
+  isA: ["speaking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ke3}}-{{word:yi3}} {{word:wen4}} {{word:ni3}} {{word:yi1}}-{{light:ge4}} {{word:wen4}}-{{word:ti2}} {{word:ma}}?",

@@ -12,5 +12,7 @@ export default composite({
   tts: ["第六"],
   fit: "natural",
   transparent: true,
+  topics: ["ordinals"],
+  isA: ["ordinal"],
   proposed: true,
 });

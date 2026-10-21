@@ -14,6 +14,8 @@ export default composite({
   tts: ["植物变金的颜色的时间"],
   literal: "when plants turn yellow",
   fit: "plain",
+  topics: ["seasons"],
+  isA: ["calendar-name"],
   examples: [
     {
       pinyin: "{{Word:zhi2wu4}} {{word:bian4}} {{word:jin1}}-{{word:de}} {{word:yan2se4}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:hen3}} {{word:hao3}}.",

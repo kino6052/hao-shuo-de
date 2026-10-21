@@ -12,6 +12,8 @@ export default composite({
   tts: ["动的看的东西"],
   literal: "a moving thing to watch",
   fit: "plain",
+  topics: ["films-and-media"],
+  isA: ["work-of-art"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:dong4}}-{{word:de}} {{word:kan4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

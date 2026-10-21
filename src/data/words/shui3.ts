@@ -14,6 +14,8 @@ export default word("shui3", {
     eng: "Water and any liquid: drinking, washing, rain, the sea.",
     rus: "Вода и любая жидкость: пить, мыть, дождь, море.",
   },
+  topics: ["drinks"],
+  isA: ["drink"],
   maps: "telo",
   paraphrase: {
     forms: [

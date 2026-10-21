@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:jue2}}-{{light:de2}}"],
   tts: ["觉得"],
   fit: "word",
+  topics: ["happy-feelings"],
+  isA: ["feeling-and-wanting"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:jue2}}-{{word:de2}} {{word:hen3}} {{word:leng3}}.",

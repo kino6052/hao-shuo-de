@@ -12,6 +12,8 @@ export default composite({
   tts: ["拿", "说好"],
   literal: "take / say okay",
   fit: "plain",
+  topics: ["giving-and-getting"],
+  isA: ["handling-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:na2}} {{word:zhe4}}-{{light:ge4}}.",

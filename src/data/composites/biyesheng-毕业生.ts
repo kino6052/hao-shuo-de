@@ -12,6 +12,8 @@ export default composite({
   tts: ["学完的人"],
   literal: "someone who finished learning",
   fit: "plain",
+  topics: ["classroom"],
+  isA: ["social-role"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:xue2}}-{{word:wan2}}-{{word:de}} {{word:ren2}}.",

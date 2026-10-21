@@ -15,5 +15,7 @@ export default composite({
   tts: ["听话", "别人说什么就做什么"],
   literal: "do what others say",
   fit: "plain",
+  topics: ["manners"],
+  isA: ["character-quality"],
   proposed: true,
 });

@@ -13,6 +13,8 @@ export default composite({
   literal: "day",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["calendar"],
+  isA: ["time-span"],
   examples: [
     {
       pinyin: "{{Word:jin1}}-{{word:tian1}} {{word:shi4}} {{word:hao3}} {{word:ri4}}-{{word:zi}}.",

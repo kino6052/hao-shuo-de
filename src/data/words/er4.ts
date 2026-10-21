@@ -14,5 +14,7 @@ export default word("er4", {
     eng: "Two when counting: 12, 20, number two. {{word:liang3}} only works before {{word:ge4}}.",
     rus: "Два при счёте: 12, 20, номер два. {{word:liang3}} работает только перед {{word:ge4}}.",
   },
+  topics: ["number-words"],
+  isA: ["counting-number"],
   paraphrase: { forms: ["{{word:liang3}}"], verdict: "clumsy" },
 });

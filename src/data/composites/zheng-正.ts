@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:jiu4}}"],
   tts: ["就"],
   fit: "natural",
+  topics: ["adverbs"],
+  isA: ["adverb-word"],
   note: "jiù shì zhè-ge: that's exactly it.",
   examples: [
     {

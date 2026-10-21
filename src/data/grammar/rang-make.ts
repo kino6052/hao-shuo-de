@@ -6,6 +6,7 @@ export default pattern("rang-make", {
     rus: "Ràng и кто-то значат «сделать так, чтобы» или «позволить»: ràng shǒu gānjìng — сделать руки чистыми; ràng tā lái — пусть он придёт.",
   },
   covers: ["grammar:make"],
+  tags: ["make", "cat:action", "cat:affection"],
   template: { hsd: "{{word:rang4}} + who + describing word / verb", eng: "Make or let them be so / do it" },
   rules: [
     { lhs: "VP", hsd: "=rang4 NP @adjective", eng: "ràng, someone, and a describing word: make them so" },

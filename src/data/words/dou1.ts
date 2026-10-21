@@ -14,6 +14,8 @@ export default word("dou1", {
     eng: "All, every one: and with {{word:shen2me}}, everything; with {{word:na3}}-{{word:li3}}, everywhere.",
     rus: "Все, каждый, а с {{word:shen2me}} — «всё», с {{word:na3}}-{{word:li3}} — «везде».",
   },
+  topics: ["all-and-some"],
+  isA: ["amount-word"],
   paraphrase: {
     forms: ["{{word:mei2}}-{{word:you3}} {{word:yi1}}-{{light:ge4}} {{word:bu4}}"],
     verdict: "clumsy",

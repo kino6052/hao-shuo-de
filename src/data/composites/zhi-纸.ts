@@ -12,6 +12,8 @@ export default composite({
   tts: ["写的面"],
   literal: "the surface you write on",
   fit: "plain",
+  topics: ["writing"],
+  isA: ["paper-thing"],
   examples: [
     {
       pinyin: "{{Word:gei3}} {{word:wo3}} {{word:yi1}}-{{light:ge4}} {{word:xie3}}-{{word:de}} {{word:mian4}}.",

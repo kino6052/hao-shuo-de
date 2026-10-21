@@ -12,6 +12,8 @@ export default composite({
   tts: ["能力"],
   literal: "ability",
   fit: "natural",
+  topics: ["describing-people"],
+  isA: ["character-quality"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:neng2}}-{{word:li4}}.",

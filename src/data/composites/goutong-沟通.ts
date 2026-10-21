@@ -14,5 +14,7 @@ export default composite({
   tts: ["和人说话，让他知道"],
   literal: "talk with a person so that he knows",
   fit: "plain",
+  topics: ["chatting"],
+  isA: ["social-action"],
   proposed: true,
 });

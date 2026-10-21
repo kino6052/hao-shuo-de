@@ -14,5 +14,7 @@ export default word("jian4", {
     eng: "Seeing and hearing something ({{word:kan4}}-{{word:jian4}}, {{word:ting1}}-{{word:jian4}}), meeting, and goodbye ({{word:zai4}}-{{word:jian4}}).",
     rus: "Увидеть и услышать ({{word:kan4}}-{{word:jian4}}, {{word:ting1}}-{{word:jian4}}), встретиться и «до свидания» ({{word:zai4}}-{{word:jian4}}).",
   },
+  topics: ["senses"],
+  isA: ["perceiving"],
   paraphrase: { forms: ["{{word:kan4}}-{{word:dao4}}"], verdict: "fine" },
 });

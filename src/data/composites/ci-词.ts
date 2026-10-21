@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:ci2}}"],
   tts: ["词"],
   fit: "word",
+  topics: ["writing"],
+  isA: ["language-thing"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:ci2}} {{word:hen3}} {{word:hao3}}.",

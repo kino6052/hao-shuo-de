@@ -12,6 +12,8 @@ export default composite({
   tts: ["不好的地方"],
   literal: "the bad points",
   fit: "plain",
+  topics: ["describing-people"],
+  isA: ["value-quality"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:bu4}}-{{word:hao3}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",

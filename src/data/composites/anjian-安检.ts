@@ -14,5 +14,7 @@ export default composite({
   tts: ["看你有没有不好的东西"],
   literal: "see whether you have anything bad",
   fit: "plain",
+  topics: ["planes-and-airports"],
+  isA: ["event"],
   proposed: true,
 });

@@ -15,5 +15,7 @@ export default composite({
   tts: ["从小", "从很小的时候"],
   literal: "from a very small time",
   fit: "plain",
+  topics: ["babies-and-children"],
+  isA: ["time-span"],
   proposed: true,
 });

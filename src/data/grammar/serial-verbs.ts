@@ -6,6 +6,7 @@ export default pattern("serial-verbs", {
     rus: "Два действия могут идти одно за другим, в том порядке, в каком происходят: zǒu lù qù — идти пешком туда.",
   },
   covers: [],
+  tags: ["when", "basic", "cat:action"],
   template: { hsd: "Who + verb + verb", eng: "Who does one thing, then another" },
   rules: [{ lhs: "VP", hsd: "VerbP VP", eng: "an action, then another" }],
   taught: "moving/move",

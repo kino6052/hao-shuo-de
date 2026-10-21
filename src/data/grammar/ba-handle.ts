@@ -6,6 +6,7 @@ export default pattern("ba-handle", {
     rus: "Говорит, что вы делаете с вещью: bǎ и вещь стоят перед действием, которое заканчивается результатом.",
   },
   covers: [],
+  tags: ["make", "cat:action", "cat:affection"],
   template: { hsd: "Who + {{word:ba3}} + thing + {{word:zuo4}} + result", eng: "Who does the verb to the thing" },
   rules: [{ lhs: "VP", hsd: "ba3 NP VP", eng: "bǎ, the thing, then what is done to it" }],
   taught: "becoming-and-making/ba",

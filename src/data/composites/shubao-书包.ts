@@ -12,6 +12,8 @@ export default composite({
   tts: ["书包"],
   fit: "natural",
   transparent: true,
+  topics: ["classroom"],
+  isA: ["container"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:shu1}}-{{word:bao1}} {{word:hen3}} {{word:zhong4}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["一起说话"],
   literal: "talk together",
   fit: "plain",
+  topics: ["chatting"],
+  isA: ["speaking-action"],
   note: "Lesson {{lesson:doubling-words}}.",
   examples: [
     {

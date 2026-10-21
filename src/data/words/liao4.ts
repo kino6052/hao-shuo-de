@@ -14,6 +14,8 @@ export default word("liao4", {
     eng: "The stuff you make things from: {{word:liao4}}. Without it, you can't name what a thing is made of.",
     rus: "То, из чего всё делают: {{word:liao4}}. Без него не назвать, из чего что сделано.",
   },
+  topics: ["materials"],
+  isA: ["material"],
   paraphrase: {
     forms: [
       "{{word:zuo4}} {{word:dong1}}-{{light:xi1}} {{word:yong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",

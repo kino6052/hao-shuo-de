@@ -13,6 +13,8 @@ export default composite({
   literal: "little child",
   fit: "natural",
   transparent: true,
+  topics: ["babies-and-children"],
+  isA: ["person-by-age-or-sex"],
   examples: [
     {
       pinyin: "{{Word:xiao3}}-{{word:hai2}}-{{word:zi}} {{word:ai4}} {{word:wan2r}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["用地工作的人"],
   literal: "a person who works with the ground",
   fit: "plain",
+  topics: ["farms-and-factories"],
+  isA: ["worker"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:yong4}} {{word:di4}} {{word:gong1}}-{{word:zuo4}}-{{word:de}} {{word:ren2}}.",

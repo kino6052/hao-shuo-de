@@ -14,6 +14,8 @@ export default word("ma", {
     eng: "Turns a sentence into a yes-or-no question. Without it, you can't ask most questions.",
     rus: "Превращает предложение в вопрос «да или нет». Без него не задать большинство вопросов.",
   },
+  topics: ["particles"],
+  isA: ["particle"],
   maps: "",
   atom: { eng: "An important word.", rus: "Важное слово." },
 });

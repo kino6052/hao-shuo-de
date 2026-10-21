@@ -12,6 +12,8 @@ export default composite({
   tts: ["要得"],
   literal: "want to get",
   fit: "plain",
+  topics: ["deciding"],
+  isA: ["thinking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yao4}} {{word:de2}} {{word:zhe4}}-{{light:ge4}}.",

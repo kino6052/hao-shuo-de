@@ -14,5 +14,7 @@ export default composite({
   tts: ["两个长的，很硬的，身体下面的衣服"],
   literal: "two long, hard pieces of clothing below the body",
   fit: "plain",
+  topics: ["everyday-clothes"],
+  isA: ["garment"],
   proposed: true,
 });

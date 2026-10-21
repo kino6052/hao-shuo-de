@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:jin4}}"],
   tts: ["进"],
   fit: "natural",
+  topics: ["going-and-coming"],
+  isA: ["moving-action"],
   proposed: true,
 });

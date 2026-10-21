@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:zuo4}}-{{word:che1}}", "{{word:zuo4}}-{{word:xia4}}"],
   tts: ["坐车", "坐下"],
   fit: "word",
+  topics: ["vehicles"],
+  isA: ["moving-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zuo4}}-{{word:che1}} {{word:qu4}}.",

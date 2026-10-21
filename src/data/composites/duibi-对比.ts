@@ -15,5 +15,7 @@ export default composite({
   tts: ["对比", "把两个比一比"],
   literal: "compare the two",
   fit: "plain",
+  topics: ["same-and-different"],
+  isA: ["comparison"],
   proposed: true,
 });

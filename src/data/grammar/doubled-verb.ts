@@ -6,6 +6,7 @@ export default pattern("doubled-verb", {
     rus: "Скажите глагол дважды, чтобы сделать это немного или попробовать. Второй слог короткий и лёгкий: wǒ kàn-kan — дай-ка посмотрю; xiè-xie — спасибо.",
   },
   covers: [],
+  tags: ["doubling", "cat:action"],
   template: { hsd: "verb-verb", eng: "Do the verb a little" },
   rules: [
     { lhs: "VerbP", hsd: "@verb @again", eng: "a verb said twice: a little of it" },

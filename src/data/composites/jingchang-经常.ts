@@ -12,6 +12,8 @@ export default composite({
   tts: ["常常"],
   literal: "often",
   fit: "natural",
+  topics: ["how-often"],
+  isA: ["frequency"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:chang2}}-{{word:chang2}} {{word:yi1}}-{{word:qi3}} {{word:chi1}}-{{word:fan4}}.",

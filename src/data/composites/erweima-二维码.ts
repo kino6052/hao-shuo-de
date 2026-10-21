@@ -14,5 +14,7 @@ export default composite({
   tts: ["黑白的样子，用机看就知道X"],
   literal: "a black and white pattern; look with a machine and you know X",
   fit: "plain",
+  topics: ["phone-and-computer"],
+  isA: ["idea"],
   proposed: true,
 });

@@ -12,5 +12,7 @@ export default composite({
   tts: ["不难，心里很好"],
   literal: "not hard, the heart feels good",
   fit: "plain",
+  topics: ["healthy-habits"],
+  isA: ["feeling-quality"],
   proposed: true,
 });

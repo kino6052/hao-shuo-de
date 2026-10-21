@@ -14,6 +14,8 @@ export default composite({
   tts: ["他不要别人的帮就动"],
   literal: "it moves without anyone's help",
   fit: "plain",
+  topics: ["farms-and-factories"],
+  isA: ["adverb-word"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:che1}}, {{word:ta1}} {{word:bu4}} {{word:yao4}} {{word:bie2}} {{word:ren2}}-{{word:de}} {{word:bang1}} {{word:jiu4}} {{word:dong4}}.",

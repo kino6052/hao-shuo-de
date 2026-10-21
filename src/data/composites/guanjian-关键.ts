@@ -14,6 +14,8 @@ export default composite({
   tts: ["最有重要的部分"],
   literal: "the most important part",
   fit: "plain",
+  topics: ["ideas-and-opinions"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:zui4}} {{word:you3}} {{word:zhong4}}-{{word:yao4}}-{{word:de}} {{word:bu4}}-{{light:fen1}}.",

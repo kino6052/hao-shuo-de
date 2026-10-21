@@ -14,6 +14,8 @@ export default composite({
   tts: ["大的让人坐下的东西"],
   literal: "a big thing that lets a person sit down",
   fit: "plain",
+  topics: ["living-room"],
+  isA: ["furniture-item"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:jia1}} {{word:you3}} {{word:da4}}-{{word:de}} {{word:rang4}}-{{word:ren2}}-{{word:zuo4}}-{{word:xia4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

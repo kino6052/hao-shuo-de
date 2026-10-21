@@ -13,6 +13,8 @@ export default composite({
   literal: "one-fixed",
   fit: "natural",
   transparent: true,
+  topics: ["agreeing-and-praising"],
+  isA: ["speaking-action"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:yi1}}-{{word:ding4}} {{word:lai2}}.",

@@ -14,6 +14,8 @@ export default composite({
   tts: ["金的颜色的让头变乱的水"],
   literal: "the yellow water that makes your head messy",
   fit: "plain",
+  topics: ["drinks"],
+  isA: ["drink"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:he1}} {{word:jin1}}-{{word:de}} {{word:yan2se4}}-{{word:de}} {{word:rang4}}-{{word:tou2}}-{{word:bian4}}-{{word:luan4}}-{{word:de}} {{word:shui3}}.",

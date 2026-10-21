@@ -13,6 +13,8 @@ export default composite({
   literal: "birth air / there's fire in the heart",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["sad-and-angry"],
+  isA: ["feeling-quality"],
   note: "Real Mandarin: 生气.",
   examples: [
     {

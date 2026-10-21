@@ -12,5 +12,7 @@ export default composite({
   tts: ["动身体，让身体好"],
   literal: "move the body so the body is well",
   fit: "plain",
+  topics: ["healthy-habits"],
+  isA: ["body-action"],
   proposed: true,
 });

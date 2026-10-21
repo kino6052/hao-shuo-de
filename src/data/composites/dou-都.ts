@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:dou1}}"],
   tts: ["都"],
   fit: "word",
+  topics: ["all-and-some"],
+  isA: ["amount-word"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:dou1}} {{word:shi4}} {{word:xue2}}-{{word:sheng1}}.",

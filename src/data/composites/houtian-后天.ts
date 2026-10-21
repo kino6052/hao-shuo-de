@@ -13,6 +13,8 @@ export default composite({
   literal: "after-day / two days later",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["calendar"],
+  isA: ["time-point"],
   examples: [
     {
       pinyin: "{{Word:hou4}}-{{word:tian1}} {{word:wo3}} {{word:zai4}} {{word:jia1}}.",

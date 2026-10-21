@@ -12,6 +12,8 @@ export default composite({
   tts: ["脚的衣服"],
   literal: "leg clothes",
   fit: "plain",
+  topics: ["everyday-clothes"],
+  isA: ["garment"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:jiao3}}-{{word:de}} {{word:yi1fu}} {{word:shi4}} {{word:hei1}}-{{word:se4}}-{{word:de}}.",

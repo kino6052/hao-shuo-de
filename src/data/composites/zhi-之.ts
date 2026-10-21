@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:de}}"],
   tts: ["的"],
   fit: "natural",
+  topics: ["particles"],
+  isA: ["particle"],
   proposed: true,
 });

@@ -12,6 +12,8 @@ export default composite({
   tts: ["用力放下去"],
   literal: "put down with force",
   fit: "plain",
+  topics: ["pushing-and-pulling"],
+  isA: ["handling-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yong4}} {{word:li4}} {{word:fang4}}-{{word:xia4}}-{{word:qu4}}.",

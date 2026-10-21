@@ -12,6 +12,8 @@ export default composite({
   tts: ["到X的时间"],
   literal: "up to the time of X",
   fit: "plain",
+  topics: ["words-before-nouns"],
+  isA: ["preposition"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:deng3}} {{word:dao4}} {{word:ta1}} {{word:lai2}}-{{word:de}} {{word:shi2}}-{{word:jian1}}.",

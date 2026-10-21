@@ -12,6 +12,8 @@ export default composite({
   tts: ["想喝水"],
   literal: "would like to drink water",
   fit: "plain",
+  topics: ["body-needs"],
+  isA: ["bodily-state"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:xiang3}} {{word:he1}} {{word:shui3}}.",

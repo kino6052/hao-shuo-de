@@ -12,6 +12,8 @@ export default composite({
   tts: ["金的关系"],
   literal: "the relations of money",
   fit: "plain",
+  topics: ["business-and-economy"],
+  isA: ["abstract-thing"],
   examples: [
     {
       pinyin: "{{Word:jin1}}-{{word:de}} {{word:guan1xi}} {{word:hen3}} {{word:da4}}.",

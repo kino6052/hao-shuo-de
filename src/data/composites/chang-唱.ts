@@ -12,6 +12,8 @@ export default composite({
   tts: ["发好听的声音"],
   literal: "make a nice sound",
   fit: "plain",
+  topics: ["music"],
+  isA: ["playing"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:fa1}} {{word:hao3}}-{{word:ting1}}-{{word:de}} {{word:sheng1yin1}}.",

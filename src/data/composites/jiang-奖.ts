@@ -14,5 +14,7 @@ export default composite({
   tts: ["给做的好的人的东西"],
   literal: "a thing for the person who did well",
   fit: "plain",
+  topics: ["sports"],
+  isA: ["money-thing"],
   proposed: true,
 });

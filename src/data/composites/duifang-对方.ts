@@ -12,6 +12,8 @@ export default composite({
   tts: ["对方", "那边的人"],
   literal: "the person on the other side",
   fit: "natural",
+  topics: ["people-together"],
+  isA: ["person"],
   examples: [
     {
       pinyin: "{{Word:dui4}}-{{word:fang1}} {{word:bu4}} {{word:shuo1}}.",

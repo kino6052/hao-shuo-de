@@ -16,6 +16,8 @@ export default composite({
   tts: ["一下以前", "现在…了", "现在就…了"],
   literal: "now … has happened / right now … has happened",
   fit: "plain",
+  topics: ["before-and-after"],
+  isA: ["time-order"],
   note: "tā xiàn-zài lái le: he just came.",
   examples: [
     {

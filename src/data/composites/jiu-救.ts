@@ -12,6 +12,8 @@ export default composite({
   tts: ["帮X不死"],
   literal: "help X not die",
   fit: "plain",
+  topics: ["police-and-safety"],
+  isA: ["social-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:bang1}} {{word:ta1}} {{word:bu4}} {{word:si3}}.",

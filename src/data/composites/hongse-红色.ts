@@ -12,6 +12,8 @@ export default composite({
   tts: ["红色"],
   fit: "natural",
   transparent: true,
+  topics: ["colours-and-patterns"],
+  isA: ["colour-quality"],
   examples: [
     {
       pinyin: "{{Word:hong2}}-{{word:se4}} {{word:hen3}} {{word:hao3}}-{{word:kan4}}.",

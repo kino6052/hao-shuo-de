@@ -12,6 +12,8 @@ export default composite({
   tts: ["热爱", "很爱"],
   literal: "hot love / love very much",
   fit: "natural",
+  topics: ["liking-and-wanting"],
+  isA: ["feeling-and-wanting"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:re4}}-{{word:ai4}} {{word:wo3}}-{{word:de}} {{word:jia1}}.",

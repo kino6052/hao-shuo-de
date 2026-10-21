@@ -16,6 +16,8 @@ export default composite({
   literal: "a person's life / the time a person lives",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["young-and-old"],
+  isA: ["abstract-thing"],
   examples: [
     {
       pinyin: "{{Word:ren2}}-{{word:sheng1}} {{word:hen3}} {{word:chang2}}.",

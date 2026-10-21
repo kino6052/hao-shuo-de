@@ -14,6 +14,8 @@ export default composite({
   tts: ["很小的孩子玩儿和学的地方"],
   literal: "the place where very small children play and learn",
   fit: "plain",
+  topics: ["babies-and-children"],
+  isA: ["building"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:zai4}} {{word:hen3}} {{word:xiao3}}-{{word:de}} {{word:hai2}}-{{word:zi}} {{word:wan2r}} {{word:he2}} {{word:xue2}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",

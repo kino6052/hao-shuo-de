@@ -13,6 +13,8 @@ export default composite({
   literal: "bright-year / the twelve months after",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["calendar"],
+  isA: ["time-point"],
   examples: [
     {
       pinyin: "{{Word:ming2}}-{{word:nian2}} {{word:wo3}} {{word:er4}}-{{word:shi2}}.",

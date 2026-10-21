@@ -12,5 +12,7 @@ export default composite({
   tts: ["看X是不是对的"],
   literal: "check whether X is right",
   fit: "plain",
+  topics: ["deciding"],
+  isA: ["thinking-action"],
   proposed: true,
 });

@@ -14,6 +14,8 @@ export default word("gan1jing4", {
     eng: "Clean and dirty, and with it washing: use water to make it clean.",
     rus: "Чистый и грязный, а с ним и мытьё: водой сделать чистым.",
   },
+  topics: ["cleaning"],
+  isA: ["condition-quality"],
   paraphrase: {
     forms: [
       "{{word:mei2}}-{{word:you3}} {{word:huai4}} {{word:dong1}}-{{light:xi1}} {{word:zai4}} {{word:shang4}}-{{word:mian4}}",

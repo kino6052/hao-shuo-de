@@ -12,5 +12,7 @@ export default composite({
   tts: ["把结打开", "知道"],
   literal: "open the knot / know",
   fit: "plain",
+  topics: ["deciding"],
+  isA: ["thinking-action"],
   proposed: true,
 });

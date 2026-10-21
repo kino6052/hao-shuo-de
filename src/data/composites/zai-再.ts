@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:you4}}"],
   tts: ["又"],
   fit: "word",
+  topics: ["adverbs"],
+  isA: ["adverb-word"],
   note: "Hao-shuo-de says yòu for \"again\" (D41).",
   examples: [
     {

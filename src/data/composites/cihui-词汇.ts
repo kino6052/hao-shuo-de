@@ -12,5 +12,7 @@ export default composite({
   tts: ["很多词"],
   literal: "many words",
   fit: "plain",
+  topics: ["writing"],
+  isA: ["language-thing"],
   proposed: true,
 });

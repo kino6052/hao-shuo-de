@@ -12,4 +12,6 @@ export default composite({
   tts: ["X让X死"],
   literal: "X makes X die",
   fit: "plain",
+  topics: ["birth-and-death"],
+  isA: ["event"],
 });

@@ -14,5 +14,7 @@ export default composite({
   tts: ["买东西后给金的卡"],
   literal: "a card you pay with after you buy",
   fit: "plain",
+  topics: ["money-and-paying"],
+  isA: ["money-thing"],
   proposed: true,
 });

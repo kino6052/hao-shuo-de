@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:zai4}} …"],
   tts: ["在"],
   fit: "skip",
+  topics: ["particles"],
+  isA: ["particle"],
   note: "Use zài before the verb.",
   examples: [
     {

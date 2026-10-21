@@ -12,6 +12,8 @@ export default composite({
   tts: ["网上的一面"],
   literal: "a page on the net",
   fit: "plain",
+  topics: ["phone-and-computer"],
+  isA: ["computer-or-phone"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:kan4}} {{word:wang3}}-{{word:shang4}}-{{word:de}} {{word:yi1}}-{{word:mian4}}.",

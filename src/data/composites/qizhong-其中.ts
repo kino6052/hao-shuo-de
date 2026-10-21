@@ -12,6 +12,8 @@ export default composite({
   tts: ["X里面"],
   literal: "inside X",
   fit: "plain",
+  topics: ["all-and-some"],
+  isA: ["amount-word"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{word:xie1}} {{word:ren2}} {{word:li3}}-{{word:mian4}} {{word:you3}} {{word:wo3}}-{{word:de}} {{word:ba4ba}}.",

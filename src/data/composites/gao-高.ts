@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:gao1}}"],
   tts: ["高"],
   fit: "word",
+  topics: ["size"],
+  isA: ["size-quality"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:hen3}} {{word:gao1}}.",

@@ -14,5 +14,7 @@ export default composite({
   tts: ["别人想你说的是真的"],
   literal: "others think what you say is true",
   fit: "plain",
+  topics: ["bank-and-post"],
+  isA: ["abstract-thing"],
   proposed: true,
 });

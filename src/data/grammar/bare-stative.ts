@@ -6,6 +6,7 @@ export default pattern("bare-stative", {
     rus: "Существительное и описание без hěn могут описывать место или вещь перед de: rén shǎo, zhíwù duō de dì-fāng — место, где мало людей и много растений; или идти после приказа: chī shuǐ-guǒ, shēntǐ hǎo.",
   },
   covers: ["grammar:describe"],
+  tags: ["describe", "cat:quality"],
   template: { hsd: "noun + describing word ({{word:de}}) + noun", eng: "The noun that is so" },
   rules: [
     { lhs: "Stative", hsd: "@noun @adjective", eng: "a noun and a describing word: few people" },

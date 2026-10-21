@@ -12,6 +12,8 @@ export default composite({
   tts: ["开学"],
   literal: "open learning",
   fit: "natural",
+  topics: ["studying"],
+  isA: ["starting-and-stopping"],
   note: "Real Mandarin: 开学.",
   examples: [
     {

@@ -12,5 +12,7 @@ export default composite({
   tts: ["用"],
   literal: "use",
   fit: "natural",
+  topics: ["taking-and-holding"],
+  isA: ["handling-action"],
   proposed: true,
 });

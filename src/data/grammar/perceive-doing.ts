@@ -6,6 +6,7 @@ export default pattern("perceive-doing", {
     rus: "Говорит, что вы слышите или видите, как кто-то что-то делает: tīng или kàn, потом кто, потом что он делает.",
   },
   covers: [],
+  tags: ["feeling", "basic", "cat:action"],
   template: { hsd: "Who + {{word:ting1}} / {{word:kan4}} + who + verb", eng: "Who hears / sees someone do the verb" },
   rules: [
     { lhs: "Sense", hsd: "=ting1", eng: "tīng, hear" },

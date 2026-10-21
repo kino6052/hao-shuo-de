@@ -12,6 +12,8 @@ export default composite({
   tts: ["打车", "车"],
   literal: "take a car / the car",
   fit: "natural",
+  topics: ["vehicles"],
+  isA: ["vehicle"],
   note: "Same as 打车.",
   examples: [
     {

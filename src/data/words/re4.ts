@@ -14,6 +14,8 @@ export default word("re4", {
     eng: "Hot: weather, food, fire. A feeling you can't describe with other words.",
     rus: "Горячий, жаркий: погода, еда, огонь. Ощущение, которое не описать другими словами.",
   },
+  topics: ["how-it-feels"],
+  isA: ["touch-quality"],
   maps: "seli",
   atom: {
     eng: "Hot is felt on the skin; \"like fire\" needs something already hot, and its partner lěng is felt the same way.",

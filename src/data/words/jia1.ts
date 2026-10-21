@@ -10,6 +10,8 @@ export default word("jia1", {
     eng: "Home and family: the place you belong. No description says it as simply.",
     rus: "Дом и семья — место, где ты свой. Никакое описание не скажет это так же просто.",
   },
+  topics: ["housing"],
+  isA: ["place"],
   maps: "tomo",
   paraphrase: {
     forms: [

@@ -14,6 +14,8 @@ export default word("zhi1dao4", {
     eng: "Know, and know how. Without it, you can't say what you know or don't.",
     rus: "Знать и уметь. Без него не сказать, что ты знаешь, а что нет.",
   },
+  topics: ["knowing-and-understanding"],
+  isA: ["thinking-action"],
   maps: "sona",
   paraphrase: {
     forms: ["{{word:xue2}}-{{word:guo4}}, {{word:hai2}} {{word:ji4}}-{{word:de}}"],

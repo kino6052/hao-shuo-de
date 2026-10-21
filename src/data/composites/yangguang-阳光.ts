@@ -12,6 +12,8 @@ export default composite({
   tts: ["日发出的灯"],
   literal: "the light the sun gives off",
   fit: "plain",
+  topics: ["fire-light-and-heat"],
+  isA: ["fire-or-light"],
   note: "Same as 光.",
   examples: [
     {

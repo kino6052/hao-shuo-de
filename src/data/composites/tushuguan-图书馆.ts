@@ -14,6 +14,8 @@ export default composite({
   tts: ["有很多的书的地方"],
   literal: "the place with many books",
   fit: "plain",
+  topics: ["writing"],
+  isA: ["building"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:qu4}} {{word:you3}}-{{word:hen3}}-{{word:duo1}}-{{word:de}}-{{word:shu1}}-{{word:de}} {{word:di4}}-{{light:fang1}} {{word:kan4}} {{word:shu1}}.",

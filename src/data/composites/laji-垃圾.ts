@@ -15,6 +15,8 @@ export default composite({
   tts: ["不要的东西", "不干净的东西"],
   literal: "things nobody wants / unclean things",
   fit: "natural",
+  topics: ["cleaning"],
+  isA: ["thing"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:bu4}} {{word:yao4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

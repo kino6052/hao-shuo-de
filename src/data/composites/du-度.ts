@@ -14,5 +14,7 @@ export default composite({
   tts: ["多热，多高，多大的数"],
   literal: "the number for how hot, how tall, how big",
   fit: "plain",
+  topics: ["measures"],
+  isA: ["measure-unit"],
   proposed: true,
 });

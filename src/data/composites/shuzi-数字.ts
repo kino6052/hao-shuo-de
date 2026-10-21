@@ -12,6 +12,8 @@ export default composite({
   tts: ["数字"],
   fit: "natural",
   transparent: true,
+  topics: ["number-words"],
+  isA: ["counting-number"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ai4}} {{word:shu4}}-{{word:zi4}}.",

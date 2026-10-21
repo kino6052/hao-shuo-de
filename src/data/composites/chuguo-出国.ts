@@ -12,5 +12,7 @@ export default composite({
   tts: ["出国", "去别的国"],
   literal: "go to another country",
   fit: "plain",
+  topics: ["a-trip"],
+  isA: ["moving-action"],
   proposed: true,
 });

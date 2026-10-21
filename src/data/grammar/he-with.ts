@@ -6,6 +6,7 @@ export default pattern("he-with", {
     rus: "Hé перед человеком и глаголом говорит, с кем это делают: hé wǒ yī-qǐ wánr — играть вместе со мной.",
   },
   covers: ["grammar:with"],
+  tags: ["with-for", "cat:relation"],
   template: { hsd: "{{word:he2}} + who + verb", eng: "Do it with someone" },
   rules: [
     { lhs: "VP", hsd: "=he2 NP VP", eng: "hé, someone, and the verb: with him" },

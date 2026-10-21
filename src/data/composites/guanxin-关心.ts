@@ -17,6 +17,8 @@ export default composite({
   literal: "close-heart / worry X isn't well / be good to X",
   fit: "natural",
   kinds: ["spelled", "built", "built"],
+  topics: ["helping-and-sharing"],
+  isA: ["feeling-and-wanting"],
   examples: [
     {
       pinyin: "{{Word:ma1ma}} {{word:hen3}} {{word:guan1}}-{{word:xin1}} {{word:wo3}}.",

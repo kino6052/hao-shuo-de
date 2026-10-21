@@ -12,6 +12,8 @@ export default composite({
   tts: ["去的边"],
   literal: "the side you go to",
   fit: "plain",
+  topics: ["directions"],
+  isA: ["direction"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:qu4}}-{{word:de}} {{word:bian1}} {{word:hen3}} {{word:yuan3}}.",

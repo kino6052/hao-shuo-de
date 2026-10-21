@@ -12,5 +12,7 @@ export default composite({
   tts: ["开水", "很热的水"],
   literal: "very hot water",
   fit: "plain",
+  topics: ["drinks"],
+  isA: ["drink"],
   proposed: true,
 });

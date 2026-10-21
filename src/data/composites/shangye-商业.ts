@@ -14,6 +14,8 @@ export default composite({
   tts: ["买东西和给东西得金"],
   literal: "buying and selling",
   fit: "plain",
+  topics: ["business-and-economy"],
+  isA: ["abstract-thing"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:xue2}} {{word:mai3}} {{word:dong1}}-{{light:xi1}} {{word:he2}} {{word:gei3}}-{{word:dong1}}-{{light:xi1}}-{{word:de2}}-{{word:jin1}}.",

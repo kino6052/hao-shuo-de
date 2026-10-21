@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:zen3me}}"],
   tts: ["怎么"],
   fit: "word",
+  topics: ["question-words"],
+  isA: ["question-word-kind"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:zen3me}} {{word:zuo4}}?",

@@ -13,4 +13,6 @@ export default composite({
   literal: "no mess",
   fit: "natural",
   transparent: true,
+  topics: ["police-and-safety"],
+  isA: ["idea"],
 });

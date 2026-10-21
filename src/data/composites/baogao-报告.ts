@@ -12,6 +12,8 @@ export default composite({
   tts: ["说发生的东西"],
   literal: "tell what happened",
   fit: "plain",
+  topics: ["talking"],
+  isA: ["speaking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:shuo1}} {{word:fa1}}-{{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

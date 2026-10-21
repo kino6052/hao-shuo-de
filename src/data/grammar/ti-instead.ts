@@ -6,6 +6,7 @@ export default pattern("ti-instead", {
     rus: "Tì перед глаголом значит «вместо кого-то»: tā tì wǒ qù — он идёт вместо меня.",
   },
   covers: [],
+  tags: ["with-for", "cat:relation"],
   template: { hsd: "Who + {{word:ti4}} + person + verb", eng: "Who does it in the person's place" },
   rules: [{ lhs: "VP", hsd: "=ti4 NP VP", eng: "tì, the person, then the verb: does it in their place" }],
   taught: "inside-a-sentence/give",

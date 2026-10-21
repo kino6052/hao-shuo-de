@@ -12,6 +12,8 @@ export default composite({
   tts: ["眼睛出水"],
   literal: "water comes out of the eyes",
   fit: "plain",
+  topics: ["sad-and-angry"],
+  isA: ["body-action"],
   examples: [
     {
       pinyin: "{{Word:ta1}}-{{word:de}} {{word:yan3jing}} {{word:chu1}} {{word:shui3}} {{word:le}}.",

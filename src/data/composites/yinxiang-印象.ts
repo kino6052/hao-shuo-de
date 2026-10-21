@@ -14,6 +14,8 @@ export default composite({
   tts: ["心里留下的东西"],
   literal: "what stays in your heart",
   fit: "plain",
+  topics: ["ideas-and-opinions"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:zai4}} {{word:wo3}} {{word:xin1}}-{{word:li3}} {{word:liu2}}-{{word:xia4}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:hen3}} {{word:hao3}}.",

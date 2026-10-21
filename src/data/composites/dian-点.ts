@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:dian3}}"],
   tts: ["点"],
   fit: "word",
+  topics: ["clock"],
+  isA: ["time-point"],
   note: "Also \"a little\": yī-diǎn.",
   examples: [
     {

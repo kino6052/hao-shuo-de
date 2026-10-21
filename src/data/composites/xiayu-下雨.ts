@@ -12,6 +12,8 @@ export default composite({
   tts: ["天上下水"],
   literal: "the sky drops water",
   fit: "plain",
+  topics: ["weather"],
+  isA: ["weather-happening"],
   examples: [
     {
       pinyin: "{{Word:tian1}}-{{word:shang4}} {{word:xia4}} {{word:shui3}} {{word:le}}.",

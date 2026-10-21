@@ -12,6 +12,8 @@ export default composite({
   tts: ["身体要的吃的"],
   literal: "the food the body needs",
   fit: "plain",
+  topics: ["healthy-habits"],
+  isA: ["abstract-thing"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yao4}} {{word:shen1ti3}} {{word:yao4}}-{{word:de}} {{word:chi1}}-{{word:de}}.",

@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:suan4}}"],
   tts: ["算"],
   fit: "natural",
+  topics: ["sums"],
+  isA: ["thinking-action"],
   proposed: true,
 });

@@ -14,6 +14,8 @@ export default composite({
   tts: ["次次都做的东西"],
   literal: "something you do every time",
   fit: "plain",
+  topics: ["healthy-habits"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:ci4}}-{{word:ci4}} {{word:dou1}} {{word:zuo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

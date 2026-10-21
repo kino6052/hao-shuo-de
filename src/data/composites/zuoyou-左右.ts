@@ -15,6 +15,8 @@ export default composite({
   tts: ["左边和右边", "可能X"],
   literal: "left and right / maybe X",
   fit: "plain",
+  topics: ["all-and-some"],
+  isA: ["amount-word"],
   examples: [
     {
       pinyin: "{{Word:zuo3}}-{{word:bian1}} {{word:he2}} {{word:you4}}-{{word:bian1}} {{word:dou1}} {{word:you3}} {{word:ren2}}.",

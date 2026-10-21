@@ -13,6 +13,8 @@ export default composite({
   literal: "say it clear",
   fit: "natural",
   kinds: ["built"],
+  topics: ["talking"],
+  isA: ["speaking-action"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:neng2}} {{word:shuo1}}-{{word:ming2}} {{word:ma}}?",

@@ -16,6 +16,8 @@ export default composite({
   ],
   tts: ["一些", "些", "有的", "一点"],
   fit: "word",
+  topics: ["counting-words"],
+  isA: ["counting-word"],
   note: "yī-diǎn for a little of something.",
   examples: [
     {

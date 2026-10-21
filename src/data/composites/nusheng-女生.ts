@@ -13,6 +13,8 @@ export default composite({
   literal: "a woman who learns",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["classroom"],
+  isA: ["person-by-age-or-sex"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:nv3}}-{{word:sheng1}}.",

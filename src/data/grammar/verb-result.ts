@@ -6,6 +6,7 @@ export default pattern("verb-result", {
     rus: "Говорит, чем кончается действие: к глаголу присоединяется слово-результат, например kàn-dào («увидеть»), zuò-hǎo («починить») или xué-huì («выучиться»).",
   },
   covers: ["grammar:result"],
+  tags: ["done", "cat:action", "cat:affection"],
   template: { hsd: "Who + verb-result", eng: "Who does the verb through to the result" },
   rules: [
     { lhs: "Res", hsd: "@adjective", eng: "a describing word as the result: hǎo, huài" },

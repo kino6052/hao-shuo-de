@@ -12,5 +12,7 @@ export default composite({
   tts: ["很快就能吃的"],
   literal: "what you can eat very soon",
   fit: "plain",
+  topics: ["at-a-restaurant"],
+  isA: ["dish"],
   proposed: true,
 });

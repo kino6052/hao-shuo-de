@@ -12,6 +12,8 @@ export default composite({
   tts: ["对", "很对"],
   literal: "right / very right",
   fit: "plain",
+  topics: ["easy-hard-right-wrong"],
+  isA: ["truth-or-ease"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:shuo1}}-{{word:de}} {{word:hen3}} {{word:dui4}}.",

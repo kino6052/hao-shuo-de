@@ -12,6 +12,8 @@ export default composite({
   tts: ["还是"],
   fit: "natural",
   transparent: true,
+  topics: ["joining-words"],
+  isA: ["conjunction"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:he1}} {{word:shui3}} {{word:hai2}}-{{word:shi4}} {{word:chi1}} {{word:fan4}}?",

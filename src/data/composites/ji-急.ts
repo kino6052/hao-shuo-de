@@ -12,6 +12,8 @@ export default composite({
   tts: ["要快"],
   literal: "needs to be fast",
   fit: "plain",
+  topics: ["worry-and-fear"],
+  isA: ["feeling-quality"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yao4}} {{word:kuai4}}.",

@@ -14,6 +14,8 @@ export default word("zhan4", {
     eng: "Stand. With {{word:zuo4}}-{{word:xia4}} and {{word:tang3}}, one of the three ways a body rests.",
     rus: "Стоять. Вместе с {{word:zuo4}}-{{word:xia4}} и {{word:tang3}} — одна из трёх поз тела.",
   },
+  topics: ["posture"],
+  isA: ["body-position"],
   paraphrase: {
     forms: [
       "{{word:yong4}} {{word:jiao3}} {{word:zai4}} {{word:di4}}-{{word:shang4}} {{word:bu4}} {{word:dong4}}",

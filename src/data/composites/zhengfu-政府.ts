@@ -12,6 +12,8 @@ export default composite({
   tts: ["国家的决定者"],
   literal: "the country's decider",
   fit: "plain",
+  topics: ["government"],
+  isA: ["group-of-people"],
   examples: [
     {
       pinyin: "{{Word:guo2}}-{{word:jia1}}-{{word:de}} {{word:jue2}}-{{word:ding4}}-{{word:zhe3}} {{word:shuo1}} {{word:le}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["放进算的工具"],
   literal: "put it into the computer",
   fit: "plain",
+  topics: ["phone-and-computer"],
+  isA: ["body-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ba3}} {{word:zi4}} {{word:fang4}}-{{word:jin4}} {{word:suan4}}-{{word:de}} {{word:gong1}}-{{word:ju4}}.",

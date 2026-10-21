@@ -12,4 +12,6 @@ export default composite({
   tts: ["真不好"],
   literal: "really not good",
   fit: "plain",
+  topics: ["sad-and-angry"],
+  isA: ["feeling-quality"],
 });

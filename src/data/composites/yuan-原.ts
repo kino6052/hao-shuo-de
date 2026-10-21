@@ -12,5 +12,7 @@ export default composite({
   tts: ["最开始的"],
   literal: "the very first",
   fit: "plain",
+  topics: ["new-and-old"],
+  isA: ["age-or-newness"],
   proposed: true,
 });

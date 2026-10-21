@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:dan4}}", "{{word:dan4}}-{{word:shi4}}"],
   tts: ["但", "但是"],
   fit: "word",
+  topics: ["joining-words"],
+  isA: ["conjunction"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:hen3}} {{word:xiao3}}, {{word:dan4}} {{word:hen3}} {{word:you3}} {{word:li4}}.",

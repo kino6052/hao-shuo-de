@@ -12,6 +12,8 @@ export default composite({
   tts: ["真的", "真实", "真"],
   fit: "natural",
   kinds: ["built", "spelled", "built"],
+  topics: ["easy-hard-right-wrong"],
+  isA: ["truth-or-ease"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:zhen1}}-{{word:de}}.",

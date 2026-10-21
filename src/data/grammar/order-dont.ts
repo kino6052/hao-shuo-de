@@ -6,6 +6,7 @@ export default pattern("order-dont", {
     rus: "Глагол сам по себе — приказ: chī — ешь! Для «не надо» поставьте bù yào вперёд. Обратный отсчёт кончается приказом: yī, èr, sān, kāishǐ!",
   },
   covers: ["grammar:dont"],
+  tags: ["command", "negation", "cat:action"],
   template: { hsd: "verb! / {{word:bu4}} {{word:yao4}} + verb!", eng: "Do it! / Don't do it!" },
   rules: [
     { lhs: "VP", hsd: "bu4 =yao4 VP", eng: "bù yào and a verb: don't" },

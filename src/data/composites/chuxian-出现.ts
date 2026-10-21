@@ -13,6 +13,8 @@ export default composite({
   literal: "now there is",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["changing"],
+  isA: ["happening"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:chu1}}-{{word:xian4}} {{word:le}}.",

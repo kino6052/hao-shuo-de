@@ -10,6 +10,8 @@ export default word("wo3", {
     eng: "Without it, you can't talk about yourself: no \"I\", \"me\", or \"my\".",
     rus: "Без него нельзя говорить о себе: нет «я», «меня», «мой».",
   },
+  topics: ["pointers"],
+  isA: ["pronoun"],
   maps: "mi",
   atom: {
     eng: "You learn it by pointing at yourself; any other way of saying \"I\" already needs a pointer.",

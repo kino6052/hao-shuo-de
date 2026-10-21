@@ -13,6 +13,8 @@ export default composite({
   literal: "people's home / other people",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["pointers"],
+  isA: ["pronoun"],
   examples: [
     {
       pinyin: "{{Word:ren2}}-{{word:jia1}} {{word:you3}} {{word:shu1}}.",

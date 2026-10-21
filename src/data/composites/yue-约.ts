@@ -12,6 +12,8 @@ export default composite({
   tts: ["说好", "可能"],
   literal: "agree on it / maybe",
   fit: "plain",
+  topics: ["talking"],
+  isA: ["social-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:shuo1}} {{word:hao3}} {{word:le}}.",

@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:kuai4}} … {{word:le}}"],
   tts: ["快…了"],
   fit: "natural",
+  topics: ["degree-words"],
+  isA: ["degree-word"],
   note: "kuài wán le: almost finished.",
   examples: [
     {

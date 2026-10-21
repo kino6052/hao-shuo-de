@@ -11,6 +11,8 @@ export default composite({
   hsd: ["\"bai-bai\"", "{{word:zai4}}-{{word:jian4}}"],
   tts: ["拜拜", "再见"],
   fit: "natural",
+  topics: ["meeting-and-parting"],
+  isA: ["set-phrase"],
   note: "Goodbye is the sound \"bai-bai\", written in quotes like names and animal sounds (Lesson 1). Zài-jiàn (see you again) says the same thing with words.",
   examples: [
     { pinyin: "\"bai-bai\"!", hanzi: "拜拜！", en: "Goodbye!", ru: "До свидания!" },

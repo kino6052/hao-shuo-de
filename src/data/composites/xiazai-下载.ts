@@ -12,6 +12,8 @@ export default composite({
   tts: ["从网上拿下来"],
   literal: "take it down from the net",
   fit: "plain",
+  topics: ["phone-and-computer"],
+  isA: ["handling-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:cong2}} {{word:wang3}}-{{word:shang4}} {{word:na2}}-{{word:xia4}}-{{word:lai2}} {{word:shu1}}.",

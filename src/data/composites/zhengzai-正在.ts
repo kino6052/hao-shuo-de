@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:zai4}}"],
   tts: ["在"],
   fit: "word",
+  topics: ["adverbs"],
+  isA: ["adverb-word"],
   note: "Lesson {{lesson:when-it-happens}}: zài + verb.",
   examples: [
     {

@@ -12,6 +12,8 @@ export default composite({
   tts: ["想吃饭"],
   literal: "want to eat",
   fit: "plain",
+  topics: ["eating-and-drinking"],
+  isA: ["bodily-state"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:xiang3}} {{word:chi1}}-{{word:fan4}} {{word:le}}.",

@@ -14,5 +14,7 @@ export default composite({
   tts: ["毛很多，吃地上的植物的动物"],
   literal: "an animal with a lot of hair that eats plants on the ground",
   fit: "plain",
+  topics: ["farm-animals"],
+  isA: ["mammal"],
   proposed: true,
 });

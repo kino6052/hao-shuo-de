@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:ta1}}-{{word:de}}", "{{word:na4}}"],
   tts: ["他的", "那"],
   fit: "natural",
+  topics: ["pointers"],
+  isA: ["pronoun"],
   proposed: true,
 });

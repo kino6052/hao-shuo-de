@@ -85,6 +85,7 @@ th { font: 500 11px/1 var(--font-mono); letter-spacing: .08em; text-transform: u
 td.num { text-align: right; font-variant-numeric: tabular-nums; }
 .scroll { overflow-x: auto; }
 button.link-chip { cursor: pointer; }
+button.taglink { font: inherit; color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; }
 h3 { margin: 0 0 8px; font-size: 16px; }
 .row { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
 .label { font: 500 11px/1 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
@@ -109,6 +110,7 @@ details summary { cursor: pointer; color: var(--accent); font-size: 14px; }
     <button class="tab" role="tab" id="tab-add" data-mode="add" aria-selected="false">Add a root</button>
     <button class="tab" role="tab" id="tab-relations" data-mode="relations" aria-selected="false">Relations</button>
     <button class="tab" role="tab" id="tab-meaning" data-mode="meaning" aria-selected="false">Meaning</button>
+    <button class="tab" role="tab" id="tab-tags" data-mode="tags" aria-selected="false">Tags</button>
     <button class="tab" role="tab" id="tab-scoreboard" data-mode="scoreboard" aria-selected="false">Scoreboard</button>
   </div>
 
@@ -140,6 +142,7 @@ const HINTS = {
   add: 'One hanzi: the words it would complete, the ones that still need more roots, the composites it lets be spelled, and its sound against the words we have.',
   relations: 'The relations the data states or implies. Leave the box empty for the counts, or name a kind (opposite, close, same-form, kind-of, agent, category, ...) to see each with its reason.',
   meaning: 'What the words say of the NSM primes, the categories and the grammar items, and which primes a description reaches. Leave the box empty for the report, name a word for its line, or say says, atoms or grounding for one part.',
+  tags: 'The tag nets. Leave the box empty for the topic net (where you meet a word), say kinds for the kind net (what it is) or check for the checks. Name a tag to see what is in it; "of dāo" shows where an entry sits, "common dāo wǎn" what two share, "find knife" looks for a tag or an English word. Tag names in the answer are links.',
   scoreboard: 'The language\'s numbers now, charted against the rows stored after each change (kb/scoreboard.csv). Nothing to type.',
 };
 let mode = 'word';
@@ -152,7 +155,7 @@ function setMode(m, { keep = false } = {}) {
   for (const t of document.querySelectorAll('.tab')) t.setAttribute('aria-selected', String(t.dataset.mode === m));
   $('field-name').hidden = m === 'parse' || m === 'scoreboard' || m === 'candidates';
   $('field-text').hidden = m !== 'parse';
-  $('name').placeholder = m === 'remove' ? 'dēng, fàn …' : m === 'atoms' ? 'a word (optional)' : m === 'add' ? 'a hanzi, e.g. 电' : m === 'relations' ? 'a kind (optional), e.g. opposite' : m === 'meaning' ? 'a word, or says / atoms / grounding (optional)' : 'dēng, deng1 or 灯';
+  $('name').placeholder = m === 'remove' ? 'dēng, fàn …' : m === 'atoms' ? 'a word (optional)' : m === 'add' ? 'a hanzi, e.g. 电' : m === 'relations' ? 'a kind (optional), e.g. opposite' : m === 'meaning' ? 'a word, or says / atoms / grounding (optional)' : m === 'tags' ? 'a tag, kinds, check, of dāo, common dāo wǎn, find knife (optional)' : 'dēng, deng1 or 灯';
   $('name').setAttribute('aria-label', m === 'remove' ? 'Words to drop' : m === 'add' ? 'Root' : m === 'relations' ? 'Kind' : 'Word');
   $('hint').textContent = HINTS[m];
   if (!keep) { $('out').innerHTML = ''; $('status').textContent = ''; $('status').className = 'status'; }
@@ -295,6 +298,25 @@ function meaningReport(d) {
   return '<section class="card"><div class="chips">' + chips + '</div><pre class="text">' + esc(d.text) + '</pre></section>';
 }
 
+// the box says what to ask of the tag nets: a tag, or a mode word followed by what it needs
+function tagsQuery(text) {
+  const [head, ...rest] = text.split(/[\s,]+/).filter(Boolean);
+  if (!head) return {};
+  if (head === 'kinds' || head === 'check') return { [head]: '1' };
+  if (head === 'of') return { of: rest.join(' ') };
+  if (head === 'common') return { common: rest.slice(0, 2).join(',') };
+  if (head === 'find') return { find: rest.join(' ') };
+  return { tag: head };
+}
+
+function tagsReport(d) {
+  const ids = new Set(d.ids);
+  // a tag id in the answer opens that tag; ids are lowercase words with hyphens, so a plain word that is also a tag opens it too
+  const linked = esc(d.text).replace(/[a-z][a-z-]*/g, (w) => (ids.has(w) ? '<button class="taglink" data-tag="' + w + '">' + w + '</button>' : w));
+  const chips = [['', 'topic net'], ['kinds', 'kind net'], ['check', 'checks']].map(([q, label]) => '<button class="chip link-chip" data-tag="' + q + '">' + label + '</button>').join('');
+  return '<section class="card"><div class="chips">' + chips + '</div><pre class="text">' + linked + '</pre></section>';
+}
+
 function parsed(d) {
   if (d.view.error) return `<section class="card"><p>${esc(d.view.error)}</p></section>`;
   return d.view.sentences.map((s) => `<section class="card sentence">
@@ -313,15 +335,15 @@ async function ask() {
   const my = ++seq;
   const name = $('name').value.trim();
   const text = $('text').value.trim();
-  if (mode !== 'parse' && mode !== 'atoms' && mode !== 'scoreboard' && mode !== 'candidates' && mode !== 'relations' && mode !== 'meaning' && !name) return say(mode === 'add' ? 'Type a hanzi.' : 'Type a word.');
+  if (mode !== 'parse' && mode !== 'atoms' && mode !== 'scoreboard' && mode !== 'candidates' && mode !== 'relations' && mode !== 'meaning' && mode !== 'tags' && !name) return say(mode === 'add' ? 'Type a hanzi.' : 'Type a word.');
   if (mode === 'parse' && !text) return say('Type a sentence.');
   history.replaceState(null, '', `#${mode}=${encodeURIComponent(mode === 'parse' ? text : name)}`);
   say(mode === 'remove' || mode === 'atoms' || mode === 'scoreboard' ? 'Working it out (clingo)…' : mode === 'candidates' ? 'Working it out (a few seconds)…' : 'Looking…');
   $('out').innerHTML = '';
   try {
-    const d = mode === 'word' ? await api('word', { name }) : mode === 'remove' ? await api('remove', { names: name }) : mode === 'atoms' ? await api('atoms', { name }) : mode === 'scoreboard' ? await api('scoreboard', {}) : mode === 'candidates' ? await api('candidates', {}) : mode === 'add' ? await api('add', { root: name }) : mode === 'relations' ? await api('relations', { kind: name, limit: 40 }) : mode === 'meaning' ? await api('meaning', { name, limit: 40 }) : await api('parse', { text });
+    const d = mode === 'word' ? await api('word', { name }) : mode === 'remove' ? await api('remove', { names: name }) : mode === 'atoms' ? await api('atoms', { name }) : mode === 'scoreboard' ? await api('scoreboard', {}) : mode === 'candidates' ? await api('candidates', {}) : mode === 'add' ? await api('add', { root: name }) : mode === 'relations' ? await api('relations', { kind: name, limit: 40 }) : mode === 'meaning' ? await api('meaning', { name, limit: 40 }) : mode === 'tags' ? await api('tags', tagsQuery(name)) : await api('parse', { text });
     if (my !== seq) return;
-    $('out').innerHTML = mode === 'word' ? wordCard(d) : mode === 'remove' ? removal(d) : mode === 'atoms' ? atomsReport(d) : mode === 'scoreboard' ? scoreboard(d) : mode === 'candidates' ? candidates(d) : mode === 'add' ? addition(d) : mode === 'relations' ? relationsReport(d) : mode === 'meaning' ? meaningReport(d) : parsed(d);
+    $('out').innerHTML = mode === 'word' ? wordCard(d) : mode === 'remove' ? removal(d) : mode === 'atoms' ? atomsReport(d) : mode === 'scoreboard' ? scoreboard(d) : mode === 'candidates' ? candidates(d) : mode === 'add' ? addition(d) : mode === 'relations' ? relationsReport(d) : mode === 'meaning' ? meaningReport(d) : mode === 'tags' ? tagsReport(d) : parsed(d);
     say('');
   } catch (e) {
     if (my === seq) say(e.message, true);
@@ -346,19 +368,20 @@ $('ask').addEventListener('submit', (e) => { e.preventDefault(); ask(); });
 for (const t of document.querySelectorAll('.tab')) t.addEventListener('click', () => {
   setMode(t.dataset.mode);
   // these need no question, so they open with their answer
-  if (['atoms', 'scoreboard', 'candidates', 'relations', 'meaning'].includes(t.dataset.mode)) ask();
+  if (['atoms', 'scoreboard', 'candidates', 'relations', 'meaning', 'tags'].includes(t.dataset.mode)) ask();
 });
 $('out').addEventListener('click', (e) => {
-  const { remove, add, kind, section } = e.target.dataset ?? {};
+  const { remove, add, kind, section, tag } = e.target.dataset ?? {};
+  if (tag !== undefined) { setMode('tags'); $('name').value = tag; return ask(); }
   if (!remove && !add && !kind && !section) return;
   setMode(remove ? 'remove' : add ? 'add' : section ? 'meaning' : 'relations');
   $('name').value = remove ?? add ?? kind ?? section;
   ask();
 });
 
-// #word=deng1, #remove=deng1,fan4, #parse=Wǒ shì rén., #atoms= or #atoms=deng1, #candidates=, #add=电, #relations=opposite, #meaning= or #meaning=wo3 or #meaning=atoms, #scoreboard=
+// #word=deng1, #remove=deng1,fan4, #parse=Wǒ shì rén., #atoms= or #atoms=deng1, #candidates=, #add=电, #relations=opposite, #meaning= or #meaning=wo3 or #meaning=atoms, #tags= or #tags=kitchen or #tags=of dāo, #scoreboard=
 function fromHash() {
-  const m = /^#(word|remove|parse|atoms|scoreboard|candidates|add|relations|meaning)=(.*)$/.exec(location.hash);
+  const m = /^#(word|remove|parse|atoms|scoreboard|candidates|add|relations|meaning|tags)=(.*)$/.exec(location.hash);
   if (!m) return setMode('word');
   setMode(m[1], { keep: true });
   (m[1] === 'parse' ? $('text') : $('name')).value = decodeURIComponent(m[2]);

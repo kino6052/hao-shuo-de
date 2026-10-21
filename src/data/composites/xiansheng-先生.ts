@@ -12,6 +12,8 @@ export default composite({
   tts: ["男人"],
   literal: "man",
   fit: "plain",
+  topics: ["men-and-women"],
+  isA: ["social-role"],
   examples: [
     {
       pinyin: "{{Word:na4}}-{{light:ge4}} {{word:nan2}}-{{word:ren2}} {{word:hen3}} {{word:hao3}}.",

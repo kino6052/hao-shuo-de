@@ -13,6 +13,8 @@ export default composite({
   literal: "bright-day / the next day",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["calendar"],
+  isA: ["time-point"],
   examples: [
     {
       pinyin: "{{Word:ming2}}-{{word:tian1}} {{word:jian4}}!",

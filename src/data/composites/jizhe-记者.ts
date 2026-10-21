@@ -12,6 +12,8 @@ export default composite({
   tts: ["记者"],
   literal: "the one who remembers/records",
   fit: "plain",
+  topics: ["news-and-events"],
+  isA: ["worker"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:ji4}}-{{word:zhe3}}.",

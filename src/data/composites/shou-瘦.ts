@@ -12,5 +12,7 @@ export default composite({
   tts: ["身体不大，不重"],
   literal: "the body is not big and not heavy",
   fit: "plain",
+  topics: ["describing-people"],
+  isA: ["bodily-state"],
   proposed: true,
 });

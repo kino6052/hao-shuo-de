@@ -12,6 +12,8 @@ export default composite({
   tts: ["给金"],
   literal: "give money",
   fit: "natural",
+  topics: ["money-and-paying"],
+  isA: ["trade-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:gei3}} {{word:jin1}}.",

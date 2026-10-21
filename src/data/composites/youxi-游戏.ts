@@ -12,6 +12,8 @@ export default composite({
   tts: ["玩儿的"],
   literal: "what you play",
   fit: "plain",
+  topics: ["games-and-toys"],
+  isA: ["toy-or-game"],
   examples: [
     {
       pinyin: "{{Word:hai2}}-{{word:zi}}-{{word:men}} {{word:ai4}} {{word:zhe4}}-{{light:ge4}} {{word:wan2r}}-{{word:de}}.",

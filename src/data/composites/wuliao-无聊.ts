@@ -14,5 +14,7 @@ export default composite({
   tts: ["没有好玩儿的，没事做"],
   literal: "nothing fun, nothing to do",
   fit: "plain",
+  topics: ["how-good"],
+  isA: ["feeling-quality"],
   proposed: true,
 });

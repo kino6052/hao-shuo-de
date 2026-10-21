@@ -12,5 +12,7 @@ export default composite({
   tts: ["从生到死"],
   literal: "from birth to death",
   fit: "plain",
+  topics: ["young-and-old"],
+  isA: ["time-span"],
   proposed: true,
 });

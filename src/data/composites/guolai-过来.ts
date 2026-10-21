@@ -13,6 +13,8 @@ export default composite({
   literal: "come across / come to this side",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["going-and-coming"],
+  isA: ["moving-action"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:guo4}}-{{word:lai2}}.",

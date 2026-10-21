@@ -14,6 +14,8 @@ export default composite({
   tts: ["让人进去的写的东西"],
   literal: "a written thing that lets a person go in",
   fit: "plain",
+  topics: ["a-trip"],
+  isA: ["paper-thing"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:rang4}}-{{word:ren2}}-{{word:jin4}}-{{word:qu4}}-{{word:de}}-{{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

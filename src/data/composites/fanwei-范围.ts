@@ -12,6 +12,8 @@ export default composite({
   tts: ["到的地方"],
   literal: "how far it reaches",
   fit: "plain",
+  topics: ["much-and-little"],
+  isA: ["amount-word"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zhi1dao4}} {{word:dao4}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",

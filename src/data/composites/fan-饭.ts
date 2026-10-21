@@ -12,6 +12,8 @@ export default composite({
   tts: ["饭", "吃的"],
   literal: "what you eat",
   fit: "word",
+  topics: ["breakfast-lunch-dinner"],
+  isA: ["staple-food"],
   examples: [
     {
       pinyin: "{{Word:ma1ma}} {{word:zuo4}} {{word:fan4}}.",

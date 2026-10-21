@@ -12,4 +12,6 @@ export default composite({
   tts: ["说我要X"],
   literal: "say I want X",
   fit: "plain",
+  topics: ["government"],
+  isA: ["social-action"],
 });

@@ -12,5 +12,7 @@ export default composite({
   tts: ["她们"],
   fit: "natural",
   transparent: true,
+  topics: ["pointers"],
+  isA: ["pronoun"],
   proposed: true,
 });

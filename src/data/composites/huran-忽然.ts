@@ -12,6 +12,8 @@ export default composite({
   tts: ["一下"],
   literal: "in a moment",
   fit: "plain",
+  topics: ["how-often"],
+  isA: ["adverb-word"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:yi1}}-{{word:xia4}} {{word:lai2}} {{word:le}}.",

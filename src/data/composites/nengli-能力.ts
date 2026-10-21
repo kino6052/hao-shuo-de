@@ -16,6 +16,8 @@ export default composite({
   literal: "can-strength / what you can do",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["describing-people"],
+  isA: ["character-quality"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:you3}} {{word:neng2}}-{{word:li4}}.",

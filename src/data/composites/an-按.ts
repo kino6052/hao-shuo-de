@@ -12,6 +12,8 @@ export default composite({
   tts: ["用手做", "用X"],
   literal: "work it with your hand / using X",
   fit: "plain",
+  topics: ["pushing-and-pulling"],
+  isA: ["handling-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yong4}} {{word:shou3}} {{word:zuo4}} {{word:zhe4}}-{{light:ge4}}.",

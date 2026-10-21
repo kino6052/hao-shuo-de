@@ -12,6 +12,8 @@ export default composite({
   tts: ["快飞的空气"],
   literal: "air that flies fast",
   fit: "plain",
+  topics: ["weather"],
+  isA: ["weather-thing"],
   examples: [
     {
       pinyin: "{{Word:wai4}}-{{word:mian4}} {{word:kuai4}}-{{word:fei1}}-{{word:de}} {{word:kong1}}-{{word:qi4}} {{word:hen3}} {{word:da4}}.",

@@ -12,6 +12,7 @@
 //                category(W,"leaf"). def_uses(V,W)   (V's text names W)
 //                sense(W,"k"). sense_hanzi(W,"k","冬"). sense_alone(W,"k").
 //                sense_compound(W,"k",N). sense_compound_uses(W,"k",N,V).
+//   tags         tag("id",topic|kind). tag_parent("id","parent"). tagged(E,"id").   (E: a word id or a composite's hanzi; kb/rules/tags.lp)
 //   paraphrases  atom_mark(W). para_verdict(W,fine|clumsy). para(W,N). para_len(W,N,Words).
 //                para_uses(W,N,V)   (form N of W's paraphrase names V)
 //   lessons     lesson("id",Number). card(W,"lesson","module").
@@ -34,9 +35,10 @@
 //
 // The sentence texts themselves are not facts; they come back in `sentences`.
 //
-// Two tiers, because clingo-wasm takes a program of about 1 MB at most (it is
+// Three tiers, because clingo-wasm takes a program of about 1 MB at most (it is
 // handed over on a 1 MB stack) and the real facts are 1.8 MB, mostly the text:
-//   language  everything except sentences and mentions: `program`
+//   language  everything except sentences, mentions and tags: `program`
+//   tags      tag, tag_parent, tagged: `tagProgram`, which only the tag rules (kb_query with the base rules) read
 //   text      sent*, mention: `textProgram(words)` writes just the sentences and
 //             mentions that name those words, with only those words in sent_uses
 //             (a what-if), `textProgram()` all of them. Both are written compactly with clingo pools:
@@ -107,6 +109,8 @@ export function buildFacts(source) {
   const lang = new Set();
   const add = (...l) => l.forEach((x) => (lines.add(x), lang.add(x)));
   const addText = (...l) => l.forEach((x) => lines.add(x));
+  const tagTier = new Set(); // the tag facts: the what-if and the atoms do not read them, and they would push the program over clingo-wasm's 1 MB
+  const addTag = (...l) => l.forEach((x) => (lines.add(x), tagTier.add(x)));
   const sentences = [];
   const mentions = [];
   const words = source.words ?? {};
@@ -139,6 +143,14 @@ export function buildFacts(source) {
       });
     }
   }
+  // the tag nets (K31): the tags and their parents, then each entry's own tags (the ones it is under come from the rules)
+  for (const [axis, list] of [['topic', source.tags?.topics], ['kind', source.tags?.kinds]]) {
+    for (const t of list ?? []) {
+      addTag(`tag(${str(t.id)},${axis}).`);
+      for (const p of t.parents ?? []) addTag(`tag_parent(${str(t.id)},${str(p)}).`);
+    }
+  }
+  for (const [id, w] of Object.entries(words)) for (const t of [...(w.topics ?? []), ...(w.isA ?? [])]) addTag(`tagged(${sym(id)},${str(t)}).`);
   const walk = (c) => {
     for (const id of c.wordIds ?? []) if (known(id)) add(`category(${sym(id)},${str(c.key)}).`);
     (c.children ?? []).forEach(walk);
@@ -234,6 +246,7 @@ export function buildFacts(source) {
     add(`composite(${C}).`, `rank(${C},${c.rank}).`, `en(${C},${str(c.en ?? '')}).`);
     if (c.fit) add(`cfit(${C},${c.fit}).`);
     if (c.pos) add(`cpos(${C},${c.pos}).`);
+    for (const t of [...(c.topics ?? []), ...(c.isA ?? [])]) addTag(`tagged(${C},${str(t)}).`);
     const h = heads.get(c.zh);
     if (h) add(h.kind === 'word' ? `head_word(${C},${sym(h.id)}).` : `head_comp(${C},${str(h.zh)}).`);
     const kinds = formKinds(c);
@@ -261,6 +274,7 @@ export function buildFacts(source) {
   const list = [...lines];
   return {
     program: [...lang].join('\n') + '\n',
+    tagProgram: [...tagTier].join('\n') + '\n',
     textProgram: (about) => textProgram(sentences, mentions, about),
     lines: list,
     sentences,

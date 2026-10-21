@@ -14,5 +14,7 @@ export default composite({
   tts: ["两个不能一起对"],
   literal: "two things cannot both be right",
   fit: "plain",
+  topics: ["sad-and-angry"],
+  isA: ["idea"],
   proposed: true,
 });

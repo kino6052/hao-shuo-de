@@ -14,5 +14,7 @@ export default composite({
   tts: ["买让身体好的东西的地方"],
   literal: "a place to buy things that make the body well",
   fit: "plain",
+  topics: ["shops"],
+  isA: ["building"],
   proposed: true,
 });

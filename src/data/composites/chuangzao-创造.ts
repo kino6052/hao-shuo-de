@@ -12,5 +12,7 @@ export default composite({
   tts: ["做出新的东西"],
   literal: "make a new thing",
   fit: "plain",
+  topics: ["art-and-drawing"],
+  isA: ["making"],
   proposed: true,
 });

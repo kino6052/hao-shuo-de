@@ -6,6 +6,7 @@ export default pattern("guo-before", {
     rus: "Говорит, что вы уже делали это раньше: guò стоит сразу после глагола.",
   },
   covers: ["grammar:ever"],
+  tags: ["done", "when", "cat:time", "cat:action"],
   template: { hsd: "Who + verb-{{word:guo4}}", eng: "Who has done the verb before" },
   rules: [
     { lhs: "VerbP", hsd: "@verb guo4 NP", eng: "a verb, guò, and what it was done to" },

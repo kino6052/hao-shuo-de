@@ -14,5 +14,7 @@ export default composite({
   tts: ["把做完的给别人"],
   literal: "give what is finished to others",
   fit: "plain",
+  topics: ["office"],
+  isA: ["handling-action"],
   proposed: true,
 });

@@ -11,6 +11,8 @@ export default composite({
   hsd: ["\"ng\"", "{{word:dui4}}"],
   tts: ["嗯", "对"],
   fit: "natural",
+  topics: ["particles"],
+  isA: ["particle"],
   examples: [
     {
       pinyin: "\"ng\", {{word:wo3}} {{word:zhi1dao4}} {{word:le}}.",

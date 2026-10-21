@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:pa4}}"],
   tts: ["怕"],
   fit: "word",
+  topics: ["worry-and-fear"],
+  isA: ["feeling-and-wanting"],
   examples: [
     { pinyin: "{{Word:wo3}} {{word:pa4}}.", hanzi: "我怕。", en: "I'm afraid.", ru: "Мне страшно." },
     {

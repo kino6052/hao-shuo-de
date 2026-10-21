@@ -13,4 +13,6 @@ export default composite({
   literal: "the inside",
   fit: "natural",
   transparent: true,
+  topics: ["near-and-far"],
+  isA: ["place-word"],
 });

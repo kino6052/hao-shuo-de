@@ -12,6 +12,8 @@ export default composite({
   tts: ["书", "写的东西"],
   literal: "written thing",
   fit: "word",
+  topics: ["writing"],
+  isA: ["paper-thing"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ai4}} {{word:kan4}} {{word:shu1}}.",

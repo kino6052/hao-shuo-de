@@ -12,6 +12,8 @@ export default composite({
   tts: ["谁"],
   literal: "what person",
   fit: "natural",
+  topics: ["question-words"],
+  isA: ["question-word-kind"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:shei2}}?",

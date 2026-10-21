@@ -12,5 +12,7 @@ export default composite({
   tts: ["眼睛上面的毛"],
   literal: "the hair above the eyes",
   fit: "plain",
+  topics: ["head-and-face"],
+  isA: ["body-part"],
   proposed: true,
 });

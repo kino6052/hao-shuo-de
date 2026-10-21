@@ -12,6 +12,8 @@ export default composite({
   tts: ["算的机"],
   literal: "the calculating machine",
   fit: "plain",
+  topics: ["phone-and-computer"],
+  isA: ["computer-or-phone"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:suan4}}-{{word:de}} {{word:ji1}} {{word:hen3}} {{word:kuai4}}.",

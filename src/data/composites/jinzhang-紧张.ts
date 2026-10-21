@@ -12,5 +12,7 @@ export default composite({
   tts: ["怕做不好"],
   literal: "afraid of doing it badly",
   fit: "plain",
+  topics: ["worry-and-fear"],
+  isA: ["feeling-quality"],
   proposed: true,
 });

@@ -12,6 +12,8 @@ export default composite({
   tts: ["放金的地方"],
   literal: "place to put money",
   fit: "plain",
+  topics: ["bank-and-post"],
+  isA: ["building"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:qu4}} {{word:fang4}}-{{word:jin1}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",

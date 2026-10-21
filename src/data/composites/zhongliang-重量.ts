@@ -12,6 +12,8 @@ export default composite({
   tts: ["多重"],
   literal: "how heavy",
   fit: "plain",
+  topics: ["measures"],
+  isA: ["measure-unit"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:bu4}} {{word:zhi1dao4}} {{word:ta1}} {{word:duo1}} {{word:zhong4}}.",

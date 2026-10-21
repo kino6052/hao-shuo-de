@@ -12,6 +12,8 @@ export default composite({
   tts: ["一部分"],
   literal: "one part",
   fit: "plain",
+  topics: ["all-and-some"],
+  isA: ["amount-word"],
   note: "Not exactly half.",
   examples: [
     {

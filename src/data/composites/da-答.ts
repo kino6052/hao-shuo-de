@@ -15,6 +15,8 @@ export default composite({
   tts: ["回话", "对问的人说"],
   literal: "say to the one who asked",
   fit: "natural",
+  topics: ["asking-and-answering"],
+  isA: ["speaking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:hui2}}-{{word:hua4}} {{word:le}}.",

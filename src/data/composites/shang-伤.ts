@@ -12,6 +12,8 @@ export default composite({
   tts: ["身体坏的地方"],
   literal: "where the body is hurt",
   fit: "plain",
+  topics: ["injuries"],
+  isA: ["state-name"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:shen1ti3}} {{word:huai4}}-{{word:de}} {{word:di4}}-{{light:fang1}} {{word:hen3}} {{word:tong4}}.",

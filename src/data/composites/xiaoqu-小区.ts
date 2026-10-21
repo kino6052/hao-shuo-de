@@ -14,5 +14,7 @@ export default composite({
   tts: ["很多家在一起的地方"],
   literal: "a place where many homes are together",
   fit: "plain",
+  topics: ["housing"],
+  isA: ["outdoor-place"],
   proposed: true,
 });

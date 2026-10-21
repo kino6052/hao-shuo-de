@@ -12,6 +12,8 @@ export default composite({
   tts: ["身体的力"],
   literal: "the body's strength",
   fit: "plain",
+  topics: ["speed-and-strength"],
+  isA: ["speed-or-strength"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:shen1ti3}}-{{word:de}} {{word:li4}} {{word:hen3}} {{word:hao3}}.",

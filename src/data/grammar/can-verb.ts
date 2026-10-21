@@ -6,6 +6,7 @@ export default pattern("can-verb", {
     rus: "Говорит, что кто-то может сделать: néng стоит перед глаголом, а bù перед néng значит «не может». Kěyǐ значит «можно».",
   },
   covers: ["grammar:can"],
+  tags: ["ability", "cat:action"],
   template: { hsd: "Who + {{word:neng2}} + verb", eng: "Who can do the verb" },
   rules: [
     { lhs: "Can", hsd: "=neng2", eng: "néng, can" },

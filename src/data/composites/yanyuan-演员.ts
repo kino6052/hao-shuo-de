@@ -12,6 +12,8 @@ export default composite({
   tts: ["做给人看的人"],
   literal: "someone who acts for others to watch",
   fit: "plain",
+  topics: ["films-and-media"],
+  isA: ["worker"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:zuo4}}-{{word:gei3}}-{{word:ren2}}-{{word:kan4}}-{{word:de}} {{word:ren2}}.",

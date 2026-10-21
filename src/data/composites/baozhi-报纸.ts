@@ -14,6 +14,8 @@ export default composite({
   tts: ["说现在发生什么的写的东西"],
   literal: "a written thing that says what's happening now",
   fit: "plain",
+  topics: ["news-and-events"],
+  isA: ["paper-thing"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:kan4}} {{word:shuo1}}-{{word:xian4}}-{{word:zai4}}-{{word:fa1}}-{{word:sheng1}}-{{word:shen2me}}-{{word:de}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

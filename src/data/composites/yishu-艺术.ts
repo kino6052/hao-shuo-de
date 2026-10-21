@@ -12,6 +12,8 @@ export default composite({
   tts: ["做好看的东西"],
   literal: "making beautiful things",
   fit: "plain",
+  topics: ["art-and-drawing"],
+  isA: ["abstract-thing"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ai4}} {{word:zuo4}} {{word:hao3}}-{{word:kan4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

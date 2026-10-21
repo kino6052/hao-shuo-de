@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:ke3}}"],
   tts: ["可"],
   fit: "word",
+  topics: ["helping-words"],
+  isA: ["auxiliary"],
   proposed: true,
 });

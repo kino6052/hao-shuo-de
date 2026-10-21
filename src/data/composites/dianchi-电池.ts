@@ -12,6 +12,8 @@ export default composite({
   tts: ["电力的小的东西"],
   literal: "the small thing with electric power",
   fit: "plain",
+  topics: ["home-electronics"],
+  isA: ["made-thing"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} \"diàn\"-{{word:li4}}-{{word:de}} {{word:xiao3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

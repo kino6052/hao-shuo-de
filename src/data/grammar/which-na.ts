@@ -6,6 +6,7 @@ export default pattern("which-na", {
     rus: "Nǎ спрашивает «который»: nǎ-ge rén — какой человек; nǎ guó rén — из какой страны; nǎ tiān — какой день.",
   },
   covers: ["grammar:question-word"],
+  tags: ["question", "cat:substance"],
   template: { hsd: "{{word:na3}} + (counting word) + noun?", eng: "Which one?" },
   rules: [
     { lhs: "Pointer", hsd: "=na3", eng: "nǎ, which" },

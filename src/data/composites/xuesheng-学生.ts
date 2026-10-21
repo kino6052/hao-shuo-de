@@ -13,6 +13,8 @@ export default composite({
   literal: "learn-born / one who learns",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["classroom"],
+  isA: ["social-role"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{word:xie1}} {{word:xue2}}-{{word:sheng1}} {{word:hen3}} {{word:hao3}}.",

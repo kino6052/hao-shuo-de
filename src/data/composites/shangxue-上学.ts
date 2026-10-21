@@ -13,6 +13,8 @@ export default composite({
   literal: "go up to learn / go to school",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["studying"],
+  isA: ["social-action"],
   examples: [
     {
       pinyin: "{{Word:hai2}}-{{word:zi}}-{{word:men}} {{word:qi1}} {{word:dian3}} {{word:qu4}} {{word:xue2}}-{{word:xiao4}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["是X的"],
   literal: "is X's",
   fit: "plain",
+  topics: ["much-and-little"],
+  isA: ["belonging"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:shi4}} {{word:wo3}}-{{word:de}}.",

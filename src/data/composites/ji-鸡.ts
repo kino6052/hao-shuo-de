@@ -14,5 +14,7 @@ export default composite({
   tts: ["有两个脚，不能飞很远的动物"],
   literal: "an animal with two feet that cannot fly far",
   fit: "plain",
+  topics: ["farm-animals"],
+  isA: ["bird"],
   proposed: true,
 });

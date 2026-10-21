@@ -12,5 +12,7 @@ export default composite({
   tts: ["不长"],
   literal: "not long",
   fit: "plain",
+  topics: ["size"],
+  isA: ["size-quality"],
   proposed: true,
 });

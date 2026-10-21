@@ -12,6 +12,8 @@ export default composite({
   tts: ["好听的声音"],
   literal: "a nice-sounding sound",
   fit: "plain",
+  topics: ["music"],
+  isA: ["work-of-art"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ai4}} {{word:hao3}}-{{word:ting1}}-{{word:de}} {{word:sheng1yin1}}.",

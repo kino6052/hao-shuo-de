@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:shi4}}"],
   tts: ["是"],
   fit: "word",
+  topics: ["helping-words"],
+  isA: ["auxiliary"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:shi4}} {{word:xue2}}-{{word:sheng1}}.",

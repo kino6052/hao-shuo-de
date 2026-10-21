@@ -14,5 +14,7 @@ export default composite({
   tts: ["让水放在里面的东西"],
   literal: "a thing you put water in",
   fit: "plain",
+  topics: ["household-things"],
+  isA: ["container"],
   proposed: true,
 });

@@ -13,6 +13,8 @@ export default composite({
   literal: "water fruit",
   fit: "natural",
   transparent: true,
+  topics: ["fruit"],
+  isA: ["fruit-item"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ai4}} {{word:chi1}} {{word:shui3}}-{{word:guo3}}.",

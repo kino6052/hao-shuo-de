@@ -6,6 +6,7 @@ export default pattern("measure-word", {
     rus: "Счётное слово ставится после zhè, nà или числа: zhè-ge («вот этот»), zhè-ge rén («этот человек»), liǎng-ge rén («два человека»).",
   },
   covers: ["grammar:count"],
+  tags: ["count", "cat:quantity"],
   template: {
     hsd: "{{word:zhe4}} / {{word:na4}} / number + measure word (+ noun)",
     eng: "this / that / a number + counting word (+ noun)",

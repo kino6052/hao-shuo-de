@@ -6,6 +6,7 @@ export default pattern("result-can-cant", {
     rus: "Говорит, можно ли достичь результата: de («можно») или bù («нельзя») стоит между глаголом и результатом.",
   },
   covers: ["grammar:can-cant"],
+  tags: ["ability", "done", "cat:action"],
   template: { hsd: "verb-{{word:de}}-result / verb-{{word:bu4}}-result", eng: "Can / can't get the result" },
   rules: [
     { lhs: "VerbP", hsd: "@verb de Res", eng: "a verb, de, and the result: can" },

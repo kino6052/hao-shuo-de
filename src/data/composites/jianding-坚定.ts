@@ -12,4 +12,6 @@ export default composite({
   tts: ["不会变"],
   literal: "will not change",
   fit: "plain",
+  topics: ["deciding"],
+  isA: ["character-quality"],
 });

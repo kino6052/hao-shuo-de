@@ -14,6 +14,8 @@ export default composite({
   tts: ["十二点后的日的时间"],
   literal: "the daytime after twelve",
   fit: "plain",
+  topics: ["times-of-day"],
+  isA: ["time-of-day-word"],
   examples: [
     {
       pinyin: "{{Word:shi2}}-{{word:er4}}-{{word:dian3}} {{word:hou4}}-{{word:de}} {{word:ri4}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:wo3}} {{word:shui4jiao4}}.",

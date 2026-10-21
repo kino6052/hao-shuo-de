@@ -15,6 +15,8 @@ export default composite({
   tts: ["去左边还是右边", "圆圆地动"],
   literal: "go left or right / move round and round",
   fit: "plain",
+  topics: ["walking-and-running"],
+  isA: ["moving-action"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:qu4}} {{word:zuo3}}-{{word:bian1}} {{word:hai2}}-{{word:shi4}} {{word:you4}}-{{word:bian1}}?",

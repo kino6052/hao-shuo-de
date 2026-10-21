@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:fa1}}"],
   tts: ["发"],
   fit: "word",
+  topics: ["giving-and-getting"],
+  isA: ["handling-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:fa1}} {{word:gei3}} {{word:ni3}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["进去的口"],
   literal: "the door to go in",
   fit: "plain",
+  topics: ["the-road"],
+  isA: ["place-word"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:jin4}}-{{word:qu4}}-{{word:de}} {{word:kou3}}.",

@@ -11,6 +11,8 @@ export default composite({
   hsd: ["X {{word:qian2}}"],
   tts: ["X前"],
   fit: "natural",
+  topics: ["before-and-after"],
+  isA: ["time-order"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:chi1}}-{{word:fan4}} {{word:qian2}} {{word:he1}} {{word:shui3}}.",

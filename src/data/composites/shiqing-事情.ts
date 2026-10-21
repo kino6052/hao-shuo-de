@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:dong1}}-{{light:xi1}}"],
   tts: ["东西"],
   fit: "plain",
+  topics: ["news-and-events"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:dong1}}-{{light:xi1}} {{word:hen3}} {{word:zhong4}}-{{word:yao4}}.",

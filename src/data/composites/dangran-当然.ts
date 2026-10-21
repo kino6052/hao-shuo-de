@@ -12,6 +12,8 @@ export default composite({
   tts: ["不用说"],
   literal: "no need to say",
   fit: "natural",
+  topics: ["adverbs"],
+  isA: ["adverb-word"],
   examples: [
     {
       pinyin: "{{Word:bu4}} {{word:yong4}} {{word:shuo1}}, {{word:wo3}} {{word:hui4}} {{word:lai2}}.",

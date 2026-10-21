@@ -12,6 +12,8 @@ export default composite({
   tts: ["坐在X上去"],
   literal: "sit on X and go",
   fit: "plain",
+  topics: ["vehicles"],
+  isA: ["moving-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zuo4}}-{{word:zai4}} X-{{word:shang4}} {{word:qu4}}.",

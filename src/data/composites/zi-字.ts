@@ -12,6 +12,8 @@ export default composite({
   tts: ["字", "写的词"],
   literal: "written word",
   fit: "word",
+  topics: ["writing"],
+  isA: ["language-thing"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:zi4}} {{word:zen3me}} {{word:xie3}}?",

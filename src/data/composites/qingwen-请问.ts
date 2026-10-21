@@ -12,6 +12,8 @@ export default composite({
   tts: ["我能问吗？"],
   literal: "can I ask?",
   fit: "natural",
+  topics: ["asking-and-answering"],
+  isA: ["speaking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:neng2}} {{word:wen4}} {{word:ma}}? {{Word:zhe4}}-{{word:li3}} {{word:you3}} {{word:wei4}}-{{word:sheng1}}-{{word:jian1}} {{word:ma}}?",

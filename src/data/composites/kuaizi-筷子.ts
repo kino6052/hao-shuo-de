@@ -12,6 +12,8 @@ export default composite({
   tts: ["中国的吃的工具"],
   literal: "China's tool for eating",
   fit: "plain",
+  topics: ["tableware"],
+  isA: ["tool"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} \"Zhōngguó\"-{{word:de}} {{word:chi1}}-{{word:de}} {{word:gong1}}-{{word:ju4}}.",

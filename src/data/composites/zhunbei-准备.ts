@@ -12,6 +12,8 @@ export default composite({
   tts: ["做好", "可以开始了"],
   literal: "make it good / (ready:) can start now",
   fit: "plain",
+  topics: ["deciding"],
+  isA: ["making"],
   examples: [
     {
       pinyin: "{{Word:fan4}} {{word:zuo4}} {{word:hao3}} {{word:le}}.",

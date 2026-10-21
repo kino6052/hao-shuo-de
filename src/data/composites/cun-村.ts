@@ -14,5 +14,7 @@ export default composite({
   tts: ["很小的地方，有很多家"],
   literal: "a very small place with many homes",
   fit: "plain",
+  topics: ["crops-and-farming"],
+  isA: ["settlement"],
   proposed: true,
 });

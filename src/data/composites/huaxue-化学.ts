@@ -12,5 +12,7 @@ export default composite({
   tts: ["学东西怎么变"],
   literal: "study how things change",
   fit: "plain",
+  topics: ["studying"],
+  isA: ["idea"],
   proposed: true,
 });

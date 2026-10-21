@@ -12,6 +12,8 @@ export default composite({
   tts: ["后面"],
   fit: "natural",
   kinds: ["built"],
+  topics: ["near-and-far"],
+  isA: ["place-word"],
   examples: [
     {
       pinyin: "{{Word:hou4}}-{{word:mian4}} {{word:you3}} {{word:ren2}}.",

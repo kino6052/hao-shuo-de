@@ -12,6 +12,8 @@ export default composite({
   tts: ["最下面"],
   literal: "the lowest side",
   fit: "plain",
+  topics: ["near-and-far"],
+  isA: ["place-word"],
   examples: [
     {
       pinyin: "{{Word:shui3}} {{word:zai4}} {{word:zui4}} {{word:xia4}}-{{word:mian4}}.",

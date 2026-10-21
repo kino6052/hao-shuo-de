@@ -12,4 +12,6 @@ export default composite({
   tts: ["力很大"],
   literal: "the strength is big",
   fit: "plain",
+  topics: ["speed-and-strength"],
+  isA: ["speed-or-strength"],
 });

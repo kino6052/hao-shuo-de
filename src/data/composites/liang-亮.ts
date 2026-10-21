@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:ming2}}"],
   tts: ["明"],
   fit: "word",
+  topics: ["how-it-feels"],
+  isA: ["sound-or-light-quality"],
   examples: [
     {
       pinyin: "{{Word:yue4}} {{word:hen3}} {{word:ming2}}.",

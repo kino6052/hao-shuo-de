@@ -12,6 +12,8 @@ export default composite({
   tts: ["对问的说的"],
   literal: "what is said to the question",
   fit: "plain",
+  topics: ["asking-and-answering"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:zhi1dao4}} {{word:dui4}}-{{word:wen4}}-{{word:de}} {{word:shuo1}}-{{word:de}} {{word:ma}}?",

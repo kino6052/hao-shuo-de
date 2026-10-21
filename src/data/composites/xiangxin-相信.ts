@@ -12,6 +12,8 @@ export default composite({
   tts: ["想是真的"],
   literal: "think it's true",
   fit: "natural",
+  topics: ["knowing-and-understanding"],
+  isA: ["thinking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:xiang3}} {{word:shi4}} {{word:zhen1}}-{{word:de}}.",

@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:yuan2}}"],
   tts: ["圆"],
   fit: "word",
+  topics: ["shapes"],
+  isA: ["shape-quality"],
   examples: [
     {
       pinyin: "{{Word:yue4}} {{word:hen3}} {{word:yuan2}}.",

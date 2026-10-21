@@ -13,4 +13,6 @@ export default composite({
   literal: "big-small",
   fit: "natural",
   transparent: true,
+  topics: ["size"],
+  isA: ["size-quality"],
 });

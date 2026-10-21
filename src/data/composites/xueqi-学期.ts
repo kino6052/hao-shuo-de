@@ -12,6 +12,8 @@ export default composite({
   tts: ["学的时间"],
   literal: "study time",
   fit: "plain",
+  topics: ["studying"],
+  isA: ["time-span"],
   examples: [
     {
       pinyin: "{{Word:xue2}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:hen3}} {{word:chang2}}.",

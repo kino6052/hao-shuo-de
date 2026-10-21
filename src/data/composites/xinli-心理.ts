@@ -12,6 +12,8 @@ export default composite({
   tts: ["心里"],
   literal: "in the heart",
   fit: "natural",
+  topics: ["ideas-and-opinions"],
+  isA: ["idea"],
   note: "Real Mandarin: 心理.",
   examples: [
     {

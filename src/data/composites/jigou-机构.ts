@@ -14,5 +14,7 @@ export default composite({
   tts: ["很多人在一起工作的地方"],
   literal: "a place where many people work together",
   fit: "plain",
+  topics: ["groups-and-organisations"],
+  isA: ["group-of-people"],
   proposed: true,
 });

@@ -13,6 +13,8 @@ export default composite({
   literal: "what you think",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["ideas-and-opinions"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:ni3}}-{{word:de}} {{word:xiang3}}-{{word:fa3}} {{word:hen3}} {{word:hao3}}.",

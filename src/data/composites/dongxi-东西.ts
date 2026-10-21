@@ -13,6 +13,8 @@ export default composite({
   fit: "natural",
   kinds: ["spelled", "built"],
   role: "noun",
+  topics: ["household-things"],
+  isA: ["thing"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:mai3}} {{word:le}} {{word:shen2me}} {{word:dong1}}-{{light:xi1}}?",

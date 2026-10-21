@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:wang3}}"],
   tts: ["网"],
   fit: "word",
+  topics: ["phone-and-computer"],
+  isA: ["computer-or-phone"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:you3}} {{word:wang3}}.",

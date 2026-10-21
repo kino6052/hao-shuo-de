@@ -12,5 +12,7 @@ export default composite({
   tts: ["天上"],
   fit: "natural",
   transparent: true,
+  topics: ["sky-and-space"],
+  isA: ["place-word"],
   proposed: true,
 });

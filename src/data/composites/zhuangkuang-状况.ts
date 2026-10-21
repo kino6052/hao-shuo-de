@@ -15,6 +15,8 @@ export default composite({
   tts: ["现在的样子", "发生的东西"],
   literal: "what's happening",
   fit: "plain",
+  topics: ["state-of-things"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:xian4}}-{{word:zai4}}-{{word:de}} {{word:yang4}}-{{word:zi}} {{word:hen3}} {{word:hao3}}.",

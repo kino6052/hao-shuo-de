@@ -10,6 +10,8 @@ export default word("ren2", {
     eng: "People: \"someone\", \"a person\". One of the most basic ideas there is.",
     rus: "Люди: «кто-то», «человек». Одно из самых базовых понятий.",
   },
+  topics: ["men-and-women"],
+  isA: ["person"],
   maps: "jan",
   paraphrase: {
     forms: [

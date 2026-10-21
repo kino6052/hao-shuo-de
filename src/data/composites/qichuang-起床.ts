@@ -12,6 +12,8 @@ export default composite({
   tts: ["起来"],
   literal: "rise",
   fit: "natural",
+  topics: ["waking-and-sleeping"],
+  isA: ["body-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:qi1}}-{{word:dian3}} {{word:qi3}}-{{word:lai2}}.",

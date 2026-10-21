@@ -12,6 +12,8 @@ export default composite({
   tts: ["说好"],
   literal: "say okay",
   fit: "natural",
+  topics: ["agreeing-and-praising"],
+  isA: ["speaking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:shuo1}} {{word:hao3}}.",

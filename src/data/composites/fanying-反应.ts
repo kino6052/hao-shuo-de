@@ -12,6 +12,8 @@ export default composite({
   tts: ["看到X后做的"],
   literal: "what you do after seeing X",
   fit: "plain",
+  topics: ["changing"],
+  isA: ["happening"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:kan4}}-{{word:dao4}} {{word:ta1}} {{word:hou4}} {{word:zuo4}}-{{word:de}} {{word:hen3}} {{word:kuai4}}.",

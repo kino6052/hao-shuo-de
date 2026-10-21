@@ -12,6 +12,8 @@ export default composite({
   tts: ["把坏人拿去的人"],
   literal: "the one who takes bad people away",
   fit: "plain",
+  topics: ["police-and-safety"],
+  isA: ["worker"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:ba3}} {{word:huai4}} {{word:ren2}} {{word:na2}}-{{word:qu4}}-{{word:de}} {{word:ren2}}.",

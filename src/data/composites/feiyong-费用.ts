@@ -12,6 +12,8 @@ export default composite({
   tts: ["要的金"],
   literal: "the money it takes",
   fit: "plain",
+  topics: ["money-and-paying"],
+  isA: ["money-thing"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:yao4}}-{{word:de}} {{word:jin1}} {{word:hen3}} {{word:duo1}}.",

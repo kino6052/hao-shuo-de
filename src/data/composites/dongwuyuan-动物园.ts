@@ -12,5 +12,7 @@ export default composite({
   tts: ["看动物的地方"],
   literal: "a place to look at animals",
   fit: "plain",
+  topics: ["wild-animals"],
+  isA: ["outdoor-place"],
   proposed: true,
 });

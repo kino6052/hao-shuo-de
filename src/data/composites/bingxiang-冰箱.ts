@@ -14,6 +14,8 @@ export default composite({
   tts: ["让吃的东西冷的机"],
   literal: "the machine that makes food cold",
   fit: "plain",
+  topics: ["cooking-and-utensils"],
+  isA: ["electric-device"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:rang4}} {{word:chi1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:leng3}}-{{word:de}} {{word:ji1}} {{word:hen3}} {{word:da4}}.",

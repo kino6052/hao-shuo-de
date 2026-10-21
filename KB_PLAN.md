@@ -35,6 +35,7 @@ Status: built in phases since 2026-10-12 (the tick boxes below show where it sta
 | K27 | **Order of work: phase 6 data first, solvers after** (the author, 2026-10-14). The Phase 3 solvers (removal audit, swaps, atoms) run again after phase 6 has brought the data in. Each phase 6 download is asked in chat, one at a time. |
 | K28 | **The knowledge base is for Claude's understanding, not for translating** (the author, 2026-10-16: "we don't need to use it for full translations - we need it so that it is easy for you to understand words / relationships / check correctness / understand coverage"). It narrows K15: no whole-sentence translator and no learner page for now. What stays and grows: word lookups in both directions (`kb_english`, `kb_word`), checks of a proposed form (`kb_check_form`, `kb_parse`), the yardstick coverage numbers with their gap lists, and cross-checks of our relations and descriptions against WordNet. |
 | K29 | **The language is meant to grow into jiandanhua: from 230 words to about 1000 core entries that say everything more naturally** (the author, 2026-10-21). So the KB must rank which existing Chinese words would give the most if they became core entries. A word pays when it completes common Mandarin words (every piece is then a core entry), brings others one character from done, shortens the descriptions that contain its own description, and is part of composites. The ranking is `src/lib/kb/gains.js` (phase 8); its weights are a first guess to tune against the author's picks. |
+| K31 | **Decided and done (2026-10-21, TAGS_PLAN.md): every entry sits under one or more nested tags** (the author, 2026-10-21: "each word can be under at least one or multiple categories … one tag could be including another tag under it"). Then: "way more precise than what we have in categorical dict — more like what picture dictionaries do". Two kinds of tags: a **topic** (where you meet it, a picture-dictionary page of 8 to 30 entries: home > kitchen > kitchen utensils) and a **kind** (what it is: thing > made thing > tool > cutting tool; the top is Aristotle's ten). A tag can have several parents, so the tags form a net, not a tree. An entry lists only its most specific tags and is under everything above them. Core words and composites are both tagged and both shown. The KB holds the tags as facts and relations, and Claude queries them with `kb_tags` and a skill. The plan is TAGS_PLAN.md. |
 
 ## 1. Ground rules
 
@@ -375,6 +376,63 @@ A lesson's grammar box becomes `{ type: "grammar", pattern: "compare-bi" }`. The
 - [x] **500 more composites (2026-10-21, K10-K14, ranks 5554-6053, review batches 18-22, all `proposed`, made without the author's review at the author's request):** 31 core words that had no entry yet (房 日 果 油 金 ...), the very common gaps of the frequency list, roots (成 期 于 感 业 ...), the English 3000 gaps, and food, body, clothes and formal words, picked by the ranking. K15 marks 20 of them `transparent` (check-book). Synonym groups are in each batch's `synonyms` export. 32 short phrases the form patterns do not read yet are in `kb/form-gaps.json`. Review them at `/__review/?batch=18` to `22`.
 - [ ] **Picture dictionary (added 2026-10-21, not designed yet):** a dictionary where an entry is shown with a picture, so a learner sees the thing or action before reading its description. Open points to settle with the author: which entries get a picture (concrete nouns, body, food, clothes and actions first; the 500 new composites are full of them), where the pictures come from (the images made in Doubao for the mascot, see MASCOT_PLAN.md, or a licensed set), how they are stored and named (one file per entry, keyed by the word id or hanzi), whether a picture also appears in the Word Builder and the lessons, and a gate that lists entries that should have a picture but do not.
 - [ ] Keep growing: the ranking has 500 more descriptions to read now; run `node scripts/kb.js gains` again and take the next round.
+
+### Phase 9: Finalize the yardsticks (planned 2026-10-21, K30)
+
+Goal: the dictionary says every word of the Mandarin and English yardsticks, so the 1000-word core of jiandanhua has descriptions to read for everything a learner meets. The numbers below are from `node scripts/kb.js yardsticks` and `frontier` on 2026-10-21 (after K10–K14, 2169 composites).
+
+**Where we stand (2026-10-21):**
+
+| Yardstick | Size | Said | Near (only as a kind of) | Missing |
+|---|---|---|---|---|
+| Mandarin first 3000 | 3000 | 2050 | 0 | 950 |
+| Mandarin ranks 3000–5329 | 2329 | not reported yet (the yardstick has no band past 3000) | | about 2261 |
+| English 3000 | 3000 | 2107 | 526 | 367 (154 grammar, 105 none, 72 rare, 27 checked, 7 add, 2 link) |
+| Basic English | 829 | 608 | 151 | 70 |
+| Everyday sentences | 1000 | 1000 | 0 | 0 |
+
+**Decision K30 (proposed; the author confirms): what "finalized" means.**
+1. **Mandarin, all 5329 words** have an entry. Names, particles and sound words get an entry too (fit `name`, or `skip` with a note), so the count is honest. The yardstick gets bands 4000 and 5329 (today it stops at 3000).
+2. **English 3000:** every word is said, or is a grammar word said by a pattern, or is on the checked list (`kb/cross-check-notes.json`, the sense is not the same so nothing to link). Names (york, adam, sam), swearing and inflected forms that share their base word's entry are listed as "not an entry" with a reason, so nothing stays unexplained.
+3. **English "near" words (526 in the 3000, 151 in Basic English):** each is upgraded to a full match when a Mandarin word of its own exists; the rest stay "kind of" and are named as such, so the yardstick shows no hidden gap.
+4. **Basic English:** 100% said or grammar-said, with the author's Mandarin for each word.
+
+**Rounds (about 500 entries each; the first is proposed in `NEXT500_PROPOSAL.md`):**
+
+| Round | Content | Mandarin first-3000 missing after | Mandarin 3000+ missing after | English 3000 missing after |
+|---|---|---|---|---|
+| R1 | 109 English-gap words + 391 Mandarin by frequency (ranks 1616–2419); 42 English links | 546 | 2235 | about 35 |
+| R2 | the last 546 of the first 3000 (about 500 entries plus 46 folded into R3) and the "near" upgrades | 0 | 2235 | about 35 |
+| R3 | the 46 left of the first 3000, then ranks 3000–3500 | 0 | about 1780 | |
+| R4 | ranks 3500–4000 | 0 | about 1280 | |
+| R5 | ranks 4000–4500 | 0 | about 780 | |
+| R6 | ranks 4500–5000 | 0 | about 280 | |
+| R7 | ranks 5000–5329, the leftovers, and the final English check | 0 | 0 | 0 (the rest are explained) |
+
+About 2781 Mandarin words are left after R1, so R2 to R7 is six more rounds. English and Basic English close in R1 and R2; from R3 on the English side only gets "near" upgrades and checks.
+
+**Steps of one round (the pipeline used for K10–K14, to be made repeatable):**
+1. **Pick:** `node scripts/kb.js yardsticks --next 500` (to build) lists the candidates: English-gap words first (a hand-picked Mandarin word per English word, `eng-lane`), then the Mandarin gaps by frequency; names, particles and sound words are marked, not dropped; inflected forms and grammar phrases (更长, 有创造力) are left out with a reason.
+2. **Spec:** Claude writes each entry as a short description from core words (`S(zh, en, ru, pos, forms, literal, fit)`) plus its `topics` and `isA` (tag ids from `node scripts/kb.js tags`; K31, so no round adds an untagged entry: the gate `COMPOSITES_REQUIRED` in `src/lib/tag-net.js` fails the check otherwise), checks every form with `kb_check_form`, and writes the refactor list `refactors/K<n>.ts` and the review batch `review/proposals/batch-<n>.mjs`, all `proposed`.
+3. **Apply:** `npm run refactor -- refactors/K<n>.ts --write`; mark the synonym groups; fix what the gates ask for (`transparent`, `kb/form-gaps.json`, Word Builder rewrites); `npm run check` and `npm test` green.
+4. **Link:** the "link" English gaps get their English gloss or WordNet link on the existing entry (`kb_cross_check` notes), in the same round.
+5. **Measure:** `node scripts/kb.js yardsticks` and the scoreboard row show the new numbers; the round's plan row is ticked with them.
+6. **Review:** the author reviews the batches at `/__review/?batch=N` later; the entries stay `proposed` until then.
+
+**Tools to build first:**
+- [ ] Move the round pipeline out of the scratchpad into the repo (`scripts/round/`: spec library, batch maker, candidate picker, English lane list) so every round is the same few commands.
+- [ ] `yardsticks` bands 4000 and 5329, and `--next N`.
+- [ ] A gate `check-yardsticks` with the finish line from K30 (fails when a list item is neither said, grammar-said, checked, nor explained).
+- [ ] Per-entry "why this word" (English gap, Mandarin rank, gains) saved on the review extras.
+
+**Order of work:**
+- [ ] The author confirms K30, the round table, and the `Other`-group question (keep formal and news words to close the yardstick, or swap in everyday words earlier).
+- [ ] R1 (implement `NEXT500_PROPOSAL.md`, with the 42 links).
+- [ ] The tools above.
+- [ ] R2 to R7, one per review cycle, the numbers in the table updated after each.
+- [ ] Final: every yardstick at its finish line, `check-yardsticks` in `npm run check`, the scoreboard rows closed, and the gains ranking re-run on the finished dictionary to pick the 1000 core words with all descriptions in.
+
+Risks: later rounds are rarer words (ranks 4000+), so more of them are names, technical terms and compounds the grammar already says, and the "explained, not an entry" list will grow; a description made only from 230 core words gets long for abstract words, so some entries will be paraphrases for the author to approve or turn into `gap`; and unreviewed volume piles up (about 3000 `proposed` entries), so the review batches may need a faster page (accept by theme) or a sampling rule.
 
 ## 4a. Work queue: the decisions preview (answered 2026-10-14)
 

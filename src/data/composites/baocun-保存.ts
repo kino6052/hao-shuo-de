@@ -12,5 +12,7 @@ export default composite({
   tts: ["把X留下来"],
   literal: "leave X so that it stays",
   fit: "plain",
+  topics: ["taking-and-holding"],
+  isA: ["handling-action"],
   proposed: true,
 });

@@ -12,6 +12,8 @@ export default composite({
   tts: ["放在一起，是…"],
   literal: "put together, it is …",
   fit: "plain",
+  topics: ["much-and-little"],
+  isA: ["amount-word"],
   examples: [
     {
       pinyin: "{{Word:fang4}}-{{word:zai4}}-{{word:yi1}}-{{word:qi3}}, {{word:shi4}} {{word:wu3}}-{{light:ge4}}.",

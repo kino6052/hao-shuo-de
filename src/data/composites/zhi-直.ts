@@ -14,6 +14,8 @@ export default composite({
   tts: ["和长的东西一样"],
   literal: "like a stick",
   fit: "plain",
+  topics: ["shapes"],
+  isA: ["shape-quality"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:lu4}} {{word:he2}} {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:yi1}}-{{word:yang4}}.",

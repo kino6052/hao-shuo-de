@@ -12,6 +12,8 @@ export default composite({
   tts: ["X的时间"],
   literal: "the time of X",
   fit: "plain",
+  topics: ["how-often"],
+  isA: ["time-span"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:xiao3}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:hen3}} {{word:hao3}}.",

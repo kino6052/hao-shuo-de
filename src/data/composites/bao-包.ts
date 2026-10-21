@@ -12,6 +12,8 @@ export default composite({
   tts: ["包"],
   literal: "container",
   fit: "word",
+  topics: ["household-things"],
+  isA: ["container"],
   note: "bāo covers bags too.",
   examples: [
     {

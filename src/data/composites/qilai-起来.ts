@@ -13,6 +13,8 @@ export default composite({
   literal: "rise-come",
   fit: "natural",
   kinds: ["built"],
+  topics: ["waking-and-sleeping"],
+  isA: ["body-action"],
   examples: [
     {
       pinyin: "{{Word:kuai4}} {{word:qi3}}-{{word:lai2}}!",

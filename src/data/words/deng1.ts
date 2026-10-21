@@ -14,6 +14,8 @@ export default word("deng1", {
     eng: "A lamp, a light. {{word:jia1}}-{{word:li3}}-{{word:de}} {{word:xiao3}} {{word:ri4}} would work, but lights are switched on every day.",
     rus: "Лампа, свет. Можно сказать {{word:jia1}}-{{word:li3}}-{{word:de}} {{word:xiao3}} {{word:ri4}}, но свет включают каждый день.",
   },
+  topics: ["home-electronics"],
+  isA: ["electric-device"],
   paraphrase: {
     forms: [
       "{{word:jia1}}-{{word:li3}}-{{word:de}} {{word:xiao3}} {{word:ri4}}",

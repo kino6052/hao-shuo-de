@@ -13,6 +13,8 @@ export default composite({
   literal: "good to look at",
   fit: "natural",
   kinds: ["built"],
+  topics: ["describing-people"],
+  isA: ["sound-or-light-quality"],
   examples: [
     {
       pinyin: "{{Word:ni3}}-{{word:de}} {{word:yi1fu}} {{word:hen3}} {{word:hao3}}-{{word:kan4}}.",

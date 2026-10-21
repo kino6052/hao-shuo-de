@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:che1}}"],
   tts: ["车"],
   fit: "word",
+  topics: ["vehicles"],
+  isA: ["vehicle"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:che1}} {{word:zai4}} {{word:wai4}}-{{word:mian4}}.",

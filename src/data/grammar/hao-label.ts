@@ -6,6 +6,7 @@ export default pattern("hao-label", {
     rus: "Число и hào называют вещь по номеру: èr-hào — номер два. Dì перед числом задаёт порядок: dì-yī — первый.",
   },
   covers: [],
+  tags: ["count", "cat:quantity"],
   template: { hsd: "number + {{word:hao4}}", eng: "Number … (a thing named by its number)" },
   rules: [
     { lhs: "NP", hsd: "Num =hao4", eng: "a number and hào: number two" },

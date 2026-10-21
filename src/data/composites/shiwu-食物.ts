@@ -13,6 +13,8 @@ export default composite({
   literal: "eaten thing",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["eating-and-drinking"],
+  isA: ["food-thing"],
   note: "Lesson {{lesson:roles-of-a-word}}.",
   examples: [
     {

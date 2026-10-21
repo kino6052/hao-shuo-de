@@ -14,6 +14,8 @@ export default word("zhi3", {
     eng: "Only: without it, \"just this and nothing else\" takes a whole sentence.",
     rus: "«Только»: без него «это и больше ничего» требует целого предложения.",
   },
+  topics: ["adverbs"],
+  isA: ["adverb-word"],
   paraphrase: {
     forms: ["{{word:mei2}} {{word:you3}} {{word:bie2}}-{{word:de}}", "{{word:jiu4}}"],
     verdict: "fine",

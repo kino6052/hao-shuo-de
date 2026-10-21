@@ -6,6 +6,7 @@ export default pattern("hello-greeting", {
     rus: "Приветствие — это кто-то и hǎo: nǐ hǎo — здравствуй; nǐ-men hǎo — здравствуйте всем; xīn-nián hǎo — с Новым годом.",
   },
   covers: [],
+  tags: ["greet", "cat:relation"],
   template: { hsd: "{{word:ni3}} {{word:hao3}}!", eng: "Hello!" },
   rules: [{ lhs: "Utt", hsd: "NP =hao3", eng: "someone and hǎo: a greeting" }],
   taught: "greetings/hello",

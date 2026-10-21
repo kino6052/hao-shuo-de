@@ -12,6 +12,8 @@ export default composite({
   tts: ["没有力"],
   literal: "no strength",
   fit: "plain",
+  topics: ["speed-and-strength"],
+  isA: ["speed-or-strength"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:mei2}}-{{word:you3}} {{word:li4}}.",

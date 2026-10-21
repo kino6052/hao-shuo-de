@@ -12,6 +12,8 @@ export default composite({
   tts: ["快的做"],
   literal: "do it quickly",
   fit: "plain",
+  topics: ["pushing-and-pulling"],
+  isA: ["handling-action"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:kuai4}}-{{word:de}} {{word:zuo4}}.",

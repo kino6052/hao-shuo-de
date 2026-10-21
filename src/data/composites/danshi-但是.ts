@@ -12,6 +12,8 @@ export default composite({
   tts: ["但是"],
   fit: "natural",
   transparent: true,
+  topics: ["joining-words"],
+  isA: ["conjunction"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:xiang3}} {{word:qu4}}, {{word:dan4}}-{{word:shi4}} {{word:wo3}} {{word:mei2}}-{{word:you3}} {{word:shi2}}-{{word:jian1}}.",

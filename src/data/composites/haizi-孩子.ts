@@ -13,6 +13,8 @@ export default composite({
   literal: "small person",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["babies-and-children"],
+  isA: ["person-by-age-or-sex"],
   note: "Keep -de: xiǎo rén means a mean person.",
   examples: [
     {

@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:nan2}}-{{word:ren2}}"],
   tts: ["男人"],
   fit: "word",
+  topics: ["love-and-marriage"],
+  isA: ["relative"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:nan2}}-{{word:ren2}} {{word:hen3}} {{word:hao3}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["发出空气"],
   literal: "send out air",
   fit: "plain",
+  topics: ["pushing-and-pulling"],
+  isA: ["body-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:fa1}}-{{word:chu1}} {{word:kong1}}-{{word:qi4}}.",

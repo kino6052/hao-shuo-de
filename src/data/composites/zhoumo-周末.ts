@@ -14,6 +14,8 @@ export default composite({
   tts: ["七天的最后两天"],
   literal: "the last two of seven days",
   fit: "plain",
+  topics: ["calendar"],
+  isA: ["calendar-name"],
   examples: [
     {
       pinyin: "{{Word:qi1}}-{{word:tian1}}-{{word:de}} {{word:zui4}}-{{word:hou4}} {{word:liang3}}-{{word:tian1}}, {{word:wo3}} {{word:zai4}} {{word:jia1}}.",

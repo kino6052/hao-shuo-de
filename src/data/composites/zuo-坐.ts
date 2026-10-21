@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:zuo4}}-{{word:xia4}}"],
   tts: ["坐下"],
   fit: "word",
+  topics: ["posture"],
+  isA: ["body-position"],
   note: "Lesson {{lesson:direction-and-result}}: zuò-xià.",
   examples: [
     {

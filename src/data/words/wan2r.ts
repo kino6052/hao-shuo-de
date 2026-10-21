@@ -14,6 +14,8 @@ export default word("wan2r", {
     eng: "Play, have fun. Games, toys, and free time are described from it.",
     rus: "Играть, развлекаться. Через него описывают игры, игрушки и отдых.",
   },
+  topics: ["hobbies-and-outings"],
+  isA: ["playing"],
   maps: "musi",
   paraphrase: {
     forms: [

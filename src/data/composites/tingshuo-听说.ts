@@ -13,6 +13,8 @@ export default composite({
   literal: "hear say / hear people say",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["talking"],
+  isA: ["perceiving"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ting1}}-{{word:shuo1}} {{word:ta1}} {{word:bu4}} {{word:lai2}} {{word:le}}.",

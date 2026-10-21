@@ -14,6 +14,8 @@ export default word("jie2", {
     eng: "Tie, knot: {{word:jie2}}. It also ends things: {{word:jie2}}-{{word:guo3}}, the result.",
     rus: "Завязывать, узел: {{word:jie2}}. Им же всё заканчивается: {{word:jie2}}-{{word:guo3}} — результат.",
   },
+  topics: ["pushing-and-pulling"],
+  isA: ["handling-action"],
   senses: {
     result: {
       hanzi: "结",

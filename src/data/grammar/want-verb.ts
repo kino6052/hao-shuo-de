@@ -6,6 +6,7 @@ export default pattern("want-verb", {
     rus: "Говорит, что кто-то хочет сделать: yào («хотеть») или xiǎng («хотелось бы») стоит перед глаголом.",
   },
   covers: ["grammar:want"],
+  tags: ["want", "cat:action", "cat:state"],
   template: { hsd: "Who + {{word:yao4}} + verb", eng: "Who wants to do the verb" },
   rules: [
     { lhs: "Wish", hsd: "=yao4", eng: "yào, want" },

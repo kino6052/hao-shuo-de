@@ -12,6 +12,8 @@ export default composite({
   tts: ["爸爸的妈妈"],
   literal: "dad's mom",
   fit: "plain",
+  topics: ["relatives"],
+  isA: ["relative"],
   examples: [
     {
       pinyin: "{{Word:ba4ba}}-{{word:de}} {{word:ma1ma}} {{word:ai4}} {{word:wo3}}.",

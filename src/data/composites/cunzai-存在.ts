@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:you3}}", "{{word:zai4}}"],
   tts: ["有", "在"],
   fit: "word",
+  topics: ["helping-words"],
+  isA: ["owning"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:dong1}}-{{light:xi1}} {{word:zhen1}}-{{word:de}} {{word:you3}} {{word:ma}}?",

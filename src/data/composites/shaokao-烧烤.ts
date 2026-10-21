@@ -12,5 +12,7 @@ export default composite({
   tts: ["在火上做吃的"],
   literal: "make food over a fire",
   fit: "plain",
+  topics: ["meat"],
+  isA: ["dish"],
   proposed: true,
 });

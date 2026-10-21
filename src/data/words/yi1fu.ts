@@ -14,6 +14,8 @@ export default word("yi1fu", {
     eng: "Clothes and cloth. Wearing, buying, and washing them comes up every day.",
     rus: "Одежда и ткань. Носить, покупать и стирать её приходится каждый день.",
   },
+  topics: ["everyday-clothes"],
+  isA: ["garment"],
   maps: "len",
   paraphrase: {
     forms: [

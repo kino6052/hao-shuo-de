@@ -6,6 +6,7 @@ export default pattern("adjective-noun", {
     rus: "Описание прямо перед существительным, без de, относится к нему: lǎo nǚ-rén — старая женщина; dà huài dòng-wù — большой злой зверь; bié rén — другие люди.",
   },
   covers: ["grammar:describe"],
+  tags: ["describe", "cat:quality"],
   template: { hsd: "describing word + noun", eng: "The noun that is so" },
   rules: [
     { lhs: "ModNP", hsd: "@adjective-zhe4-na4 @noun", eng: "a describing word (not zhè or nà) and a noun: an old woman" },

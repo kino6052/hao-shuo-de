@@ -12,6 +12,8 @@ export default composite({
   tts: ["有很多的词的书"],
   literal: "a book with very many words",
   fit: "plain",
+  topics: ["writing"],
+  isA: ["paper-thing"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:you3}}-{{word:hen3}}-{{word:duo1}}-{{word:de}}-{{word:ci2}}-{{word:de}} {{word:shu1}}.",

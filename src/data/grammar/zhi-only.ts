@@ -6,6 +6,7 @@ export default pattern("zhi-only", {
     rus: "Говорит «только»: zhǐ стоит перед глаголом.",
   },
   covers: [],
+  tags: ["only-some", "cat:quantity"],
   template: { hsd: "Who + {{word:zhi3}} + verb", eng: "Who only does the verb" },
   rules: [{ lhs: "VP", hsd: "=zhi3 VP", eng: "zhǐ, then the verb" }],
   taught: "how-much/really",

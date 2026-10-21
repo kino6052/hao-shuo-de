@@ -12,4 +12,6 @@ export default composite({
   tts: ["头坏了"],
   literal: "the head went bad",
   fit: "plain",
+  topics: ["describing-people"],
+  isA: ["character-quality"],
 });

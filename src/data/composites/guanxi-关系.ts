@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:guan1xi}}"],
   tts: ["关系"],
   fit: "word",
+  topics: ["friends-and-neighbours"],
+  isA: ["social-tie"],
   note: "Lesson {{lesson:inside-a-sentence}}.",
   examples: [
     {

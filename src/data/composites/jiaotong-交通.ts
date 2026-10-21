@@ -12,6 +12,8 @@ export default composite({
   tts: ["路上的车和人"],
   literal: "the cars and people on the road",
   fit: "plain",
+  topics: ["the-road"],
+  isA: ["abstract-thing"],
   examples: [
     {
       pinyin: "{{Word:lu4}}-{{word:shang4}}-{{word:de}} {{word:che1}} {{word:he2}} {{word:ren2}} {{word:hen3}} {{word:duo1}}.",

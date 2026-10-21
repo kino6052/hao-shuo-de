@@ -12,5 +12,7 @@ export default composite({
   tts: ["把不对的变对"],
   literal: "turn what is wrong into right",
   fit: "plain",
+  topics: ["easy-hard-right-wrong"],
+  isA: ["handling-action"],
   proposed: true,
 });

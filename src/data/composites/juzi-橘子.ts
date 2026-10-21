@@ -12,5 +12,7 @@ export default composite({
   tts: ["金色的，甜的果"],
   literal: "a gold-coloured, sweet fruit",
   fit: "plain",
+  topics: ["fruit"],
+  isA: ["fruit-item"],
   proposed: true,
 });

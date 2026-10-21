@@ -12,6 +12,8 @@ export default composite({
   tts: ["放进去"],
   literal: "put it in",
   fit: "plain",
+  topics: ["taking-and-holding"],
+  isA: ["handling-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ba3}} {{word:shu1}} {{word:fang4}}-{{word:jin4}}-{{word:qu4}}.",

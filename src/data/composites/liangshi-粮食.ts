@@ -12,6 +12,8 @@ export default composite({
   tts: ["吃的植物"],
   literal: "plants we eat",
   fit: "plain",
+  topics: ["crops-and-farming"],
+  isA: ["crop"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:chi1}}-{{word:de}} {{word:zhi2wu4}}.",

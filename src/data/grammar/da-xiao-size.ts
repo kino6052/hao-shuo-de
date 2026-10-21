@@ -6,6 +6,7 @@ export default pattern("da-xiao-size", {
     rus: "Dà и xiǎo вместе называют размер: nǐ shēntǐ de dà-xiǎo — размер твоего тела.",
   },
   covers: [],
+  tags: ["describe", "count", "cat:quantity", "cat:quality"],
   template: { hsd: "{{word:da4}}-{{word:xiao3}}", eng: "The size" },
   rules: [
     { lhs: "NP", hsd: "=da4 =xiao3", eng: "dà-xiǎo, the size" },

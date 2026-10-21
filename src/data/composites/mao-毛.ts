@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:mao2}}"],
   tts: ["毛"],
   fit: "word",
+  topics: ["trunk-and-skin"],
+  isA: ["body-part"],
   note: "Lesson {{lesson:roles-of-a-word}}.",
 });

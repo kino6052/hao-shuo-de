@@ -13,6 +13,8 @@ export default composite({
   literal: "birth day / your day",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["parties-and-gifts"],
+  isA: ["event"],
   examples: [
     {
       pinyin: "{{Word:jin1}}-{{word:tian1}} {{word:shi4}} {{word:wo3}}-{{word:de}} {{word:sheng1}}-{{word:ri4}}.",

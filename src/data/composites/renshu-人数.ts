@@ -13,6 +13,8 @@ export default composite({
   literal: "how many people",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["much-and-little"],
+  isA: ["amount-word"],
   examples: [
     {
       pinyin: "{{Word:ren2}}-{{word:shu4}} {{word:hen3}} {{word:duo1}}.",

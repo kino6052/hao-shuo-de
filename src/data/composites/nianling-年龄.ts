@@ -12,6 +12,8 @@ export default composite({
   tts: ["多大"],
   literal: "how big",
   fit: "natural",
+  topics: ["young-and-old"],
+  isA: ["idea"],
   note: "nǐ duō dà? How old are you?",
   examples: [
     {

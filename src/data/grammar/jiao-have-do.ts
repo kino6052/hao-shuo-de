@@ -6,6 +6,7 @@ export default pattern("jiao-have-do", {
     rus: "Jiào, кто-то, затем глагол: велеть или попросить их сделать это. Работает как ràng; bù ràng — «не разрешать».",
   },
   covers: [],
+  tags: ["make", "command", "cat:action", "cat:affection"],
   template: { hsd: "Who + {{word:jiao4}} + person + verb", eng: "Who has the person do it" },
   rules: [
     { lhs: "VP", hsd: "=jiao4 NP VP", eng: "jiào, someone, then the verb: have them do it" },

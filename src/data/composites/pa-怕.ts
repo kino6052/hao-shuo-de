@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:pa4}}"],
   tts: ["怕"],
   fit: "word",
+  topics: ["worry-and-fear"],
+  isA: ["feeling-and-wanting"],
   examples: [
     {
       pinyin: "{{Word:hai2}}-{{word:zi}} {{word:pa4}} {{word:hei1}}.",

@@ -13,6 +13,8 @@ export default composite({
   literal: "the one who writes",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["writing"],
+  isA: ["worker"],
   examples: [
     {
       pinyin: "{{Word:zuo4}}-{{word:zhe3}} {{word:shi4}} {{word:ta1}}.",

@@ -12,4 +12,6 @@ export default composite({
   tts: ["国家里的人"],
   literal: "a person in the country",
   fit: "plain",
+  topics: ["government"],
+  isA: ["person"],
 });

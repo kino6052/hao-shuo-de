@@ -14,5 +14,7 @@ export default word("ling2", {
     eng: "Zero, and with it every number past ninety-nine, read digit by digit.",
     rus: "Ноль, а с ним и все числа больше девяноста девяти, прочитанные по цифрам.",
   },
+  topics: ["number-words"],
+  isA: ["counting-number"],
   paraphrase: { forms: ["{{word:mei2}}-{{word:you3}}"], verdict: "clumsy", note: "Very useful for counting." },
 });

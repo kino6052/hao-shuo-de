@@ -10,6 +10,8 @@ export default word("bi2zi", {
     eng: "The nose, and with it smell: there's no other way to talk about smelling.",
     rus: "Нос, а с ним и запах: иначе о запахах не поговорить.",
   },
+  topics: ["head-and-face"],
+  isA: ["body-part"],
   maps: "nena",
   atom: {
     eng: "The nose is learned by pointing at it; \"where air goes in\" says what it does, not what it is.",

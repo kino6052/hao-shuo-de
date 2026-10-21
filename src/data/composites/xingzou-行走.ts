@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:zou3}}"],
   tts: ["走"],
   fit: "natural",
+  topics: ["walking-and-running"],
+  isA: ["moving-action"],
   proposed: true,
 });

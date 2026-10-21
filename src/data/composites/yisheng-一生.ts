@@ -13,6 +13,8 @@ export default composite({
   literal: "one life",
   fit: "natural",
   kinds: ["built"],
+  topics: ["young-and-old"],
+  isA: ["time-span"],
   note: "Real Mandarin: 一生.",
   examples: [
     {

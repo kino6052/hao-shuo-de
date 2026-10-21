@@ -12,5 +12,7 @@ export default composite({
   tts: ["对人很热"],
   literal: "very hot toward people",
   fit: "plain",
+  topics: ["describing-people"],
+  isA: ["character-quality"],
   proposed: true,
 });

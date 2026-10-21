@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:you3}}"],
   tts: ["有"],
   fit: "natural",
+  topics: ["helping-words"],
+  isA: ["owning"],
   proposed: true,
 });

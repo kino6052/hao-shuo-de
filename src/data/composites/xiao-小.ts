@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:xiao3}}"],
   tts: ["小"],
   fit: "word",
+  topics: ["size"],
+  isA: ["size-quality"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:bao1}} {{word:hen3}} {{word:xiao3}}.",

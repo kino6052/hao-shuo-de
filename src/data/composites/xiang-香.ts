@@ -12,6 +12,8 @@ export default composite({
   tts: ["好味道"],
   literal: "a good taste/smell",
   fit: "plain",
+  topics: ["tastes"],
+  isA: ["taste-quality"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:hao3}} {{word:wei4}}-{{word:dao4}}.",

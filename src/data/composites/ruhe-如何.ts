@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:zen3me}}", "{{word:zen3me}}-{{word:yang4}}"],
   tts: ["怎么", "怎么样"],
   fit: "natural",
+  topics: ["question-words"],
+  isA: ["question-word-kind"],
   proposed: true,
 });

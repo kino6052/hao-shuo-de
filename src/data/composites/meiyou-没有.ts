@@ -12,6 +12,8 @@ export default composite({
   tts: ["没有"],
   fit: "natural",
   kinds: ["built"],
+  topics: ["helping-words"],
+  isA: ["owning"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:mei2}}-{{word:you3}} {{word:shou3}}-{{word:ji1}}.",

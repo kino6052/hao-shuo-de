@@ -15,5 +15,7 @@ export default composite({
   tts: ["点头", "头上下动，说对"],
   literal: "the head moves up and down, says yes",
   fit: "plain",
+  topics: ["head-and-face"],
+  isA: ["body-action"],
   proposed: true,
 });

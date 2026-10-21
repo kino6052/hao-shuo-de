@@ -13,6 +13,8 @@ export default composite({
   literal: "look-arrive",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["senses"],
+  isA: ["perceiving"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:kan4}}-{{word:jian4}} {{word:ta1}} {{word:le}}.",

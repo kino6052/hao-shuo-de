@@ -13,6 +13,8 @@ export default composite({
   literal: "listen-arrive",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["senses"],
+  isA: ["perceiving"],
   note: "Lesson {{lesson:feelings}}.",
   examples: [
     {

@@ -12,6 +12,8 @@ export default composite({
   tts: ["白色的饭"],
   literal: "white fàn",
   fit: "plain",
+  topics: ["grains-and-bread"],
+  isA: ["staple-food"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yao4}} {{word:bai2}}-{{word:se4}}-{{word:de}} {{word:fan4}}.",

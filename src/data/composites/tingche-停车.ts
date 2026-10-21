@@ -12,5 +12,7 @@ export default composite({
   tts: ["把车放好"],
   literal: "put the car away well",
   fit: "plain",
+  topics: ["vehicles"],
+  isA: ["handling-action"],
   proposed: true,
 });

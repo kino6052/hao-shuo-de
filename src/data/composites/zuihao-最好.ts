@@ -16,6 +16,8 @@ export default composite({
   literal: "most good / better than all the others",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["how-good"],
+  isA: ["value-quality"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:zui4}}-{{word:hao3}}.",

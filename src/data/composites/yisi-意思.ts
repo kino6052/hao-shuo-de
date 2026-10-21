@@ -12,6 +12,8 @@ export default composite({
   tts: ["…是什么？"],
   literal: "what is X?",
   fit: "plain",
+  topics: ["ideas-and-opinions"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:zi4}} {{word:shi4}} {{word:shen2me}}?",

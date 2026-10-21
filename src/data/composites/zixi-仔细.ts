@@ -12,6 +12,8 @@ export default composite({
   tts: ["小心"],
   literal: "small heart",
   fit: "natural",
+  topics: ["describing-people"],
+  isA: ["character-quality"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:yao4}} {{word:xiao3}}-{{word:xin1}} {{word:kan4}}.",

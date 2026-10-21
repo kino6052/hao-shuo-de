@@ -12,6 +12,8 @@ export default composite({
   tts: ["买东西的人"],
   literal: "a person who buys",
   fit: "plain",
+  topics: ["shopping"],
+  isA: ["social-role"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:mai3}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:ren2}}.",

@@ -6,6 +6,7 @@ export default pattern("duo-how", {
     rus: "Duō перед описанием спрашивает «насколько»: nǐ duō dà — сколько тебе лет; duō rè — насколько жарко. Duō-shǎo спрашивает «сколько».",
   },
   covers: ["grammar:question-word"],
+  tags: ["question", "how-much", "cat:quantity"],
   template: { hsd: "{{word:duo1}} + describing word? / {{word:duo1}}-{{word:shao3}}?", eng: "How big / how many?" },
   rules: [
     { lhs: "VP", hsd: "=duo1 @adjective", eng: "duō and a describing word: how big" },

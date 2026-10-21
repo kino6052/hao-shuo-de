@@ -12,5 +12,7 @@ export default composite({
   tts: ["做房子，做路"],
   literal: "make houses, make roads",
   fit: "plain",
+  topics: ["buildings"],
+  isA: ["making"],
   proposed: true,
 });

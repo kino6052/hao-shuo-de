@@ -13,6 +13,8 @@ export default composite({
   literal: "has to do with / has a connection",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["same-and-different"],
+  isA: ["comparison"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:he2}} {{word:wo3}} {{word:you3}}-{{word:guan1}}.",

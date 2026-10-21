@@ -14,5 +14,7 @@ export default composite({
   tts: ["走在别人前面的"],
   literal: "walking in front of others",
   fit: "plain",
+  topics: ["new-and-old"],
+  isA: ["age-or-newness"],
   proposed: true,
 });

@@ -12,5 +12,7 @@ export default composite({
   tts: ["脚放在X上"],
   literal: "put the foot on X",
   fit: "plain",
+  topics: ["hands-and-feet"],
+  isA: ["body-action"],
   proposed: true,
 });

@@ -12,6 +12,8 @@ export default composite({
   tts: ["在A和B中间"],
   literal: "in the middle of A and B",
   fit: "natural",
+  topics: ["near-and-far"],
+  isA: ["place-word"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:zai4}} {{word:wo3}} {{word:he2}} {{word:ni3}} {{word:zhong1}}-{{word:jian1}}.",

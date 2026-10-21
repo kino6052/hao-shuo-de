@@ -14,5 +14,7 @@ export default composite({
   tts: ["话和家一样的很多人"],
   literal: "many people with the same language and home",
   fit: "plain",
+  topics: ["history-and-culture"],
+  isA: ["group-of-people"],
   proposed: true,
 });

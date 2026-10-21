@@ -12,6 +12,8 @@ export default composite({
   tts: ["好的地方"],
   literal: "the good points",
   fit: "plain",
+  topics: ["how-good"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:you3}} {{word:hao3}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",

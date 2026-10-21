@@ -13,6 +13,8 @@ export default composite({
   literal: "good-many",
   fit: "natural",
   transparent: true,
+  topics: ["much-and-little"],
+  isA: ["amount-word"],
   note: "Real Mandarin: 好多.",
   examples: [
     {

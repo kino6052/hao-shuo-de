@@ -12,6 +12,8 @@ export default composite({
   tts: ["去找人看身体"],
   literal: "go find someone to look at the body",
   fit: "plain",
+  topics: ["at-the-doctor"],
+  isA: ["social-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:shen1ti3}} {{word:bu4}} {{word:hao3}}, {{word:wo3}} {{word:yao4}} {{word:qu4}} {{word:zhao3}} {{word:ren2}} {{word:kan4}} {{word:shen1ti3}}.",

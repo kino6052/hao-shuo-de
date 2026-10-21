@@ -6,6 +6,7 @@ export default pattern("know-how", {
     rus: "Говорит, что вы знаете, как что-то делать: zhīdào zěnme стоит перед глаголом.",
   },
   covers: [],
+  tags: ["ability", "cat:action"],
   template: { hsd: "Who + {{word:zhi1dao4}} {{word:zen3me}} + verb", eng: "Who knows how to do the verb" },
   rules: [{ lhs: "VP", hsd: "=zhi1dao4 =zen3me VP", eng: "zhīdào zěnme, then the verb" }],
   taught: "pre-verbs/know-how",

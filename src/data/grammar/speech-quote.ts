@@ -6,6 +6,7 @@ export default pattern("speech-quote", {
     rus: "После shuō, wèn, xiào и других глаголов речи двоеточие вводит сказанное: tā shuō: nǐ hǎo. Сказанное идёт до конца предложения, поэтому его ma или le остаётся внутри.",
   },
   covers: [],
+  tags: ["speech", "cat:action"],
   preferred: true,
   template: { hsd: "Who + verb: what was said", eng: "Who said: the words" },
   rules: [

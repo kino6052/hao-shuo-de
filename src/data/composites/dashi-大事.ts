@@ -14,5 +14,7 @@ export default composite({
   tts: ["很大，很重的东西"],
   literal: "a very big, very heavy thing",
   fit: "plain",
+  topics: ["news-and-events"],
+  isA: ["event"],
   proposed: true,
 });

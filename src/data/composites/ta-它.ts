@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:ta1}}"],
   tts: ["它"],
   fit: "word",
+  topics: ["pointers"],
+  isA: ["pronoun"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:dong4}}-{{word:wu4}} {{word:hen3}} {{word:xiao3}}, {{word:ta1}} {{word:ai4}} {{word:wan2r}}.",

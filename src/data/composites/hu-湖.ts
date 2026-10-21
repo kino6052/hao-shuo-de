@@ -14,5 +14,7 @@ export default composite({
   tts: ["很大的，不动的水"],
   literal: "big water that does not move",
   fit: "plain",
+  topics: ["land-and-water"],
+  isA: ["landform"],
   proposed: true,
 });

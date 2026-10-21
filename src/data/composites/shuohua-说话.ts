@@ -12,6 +12,8 @@ export default composite({
   tts: ["说话", "说"],
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["talking"],
+  isA: ["speaking-action"],
   examples: [
     {
       pinyin: "{{Word:bie2}} {{word:shuo1}}-{{word:hua4}}!",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["好看的外面"],
   literal: "the beautiful outdoors",
   fit: "plain",
+  topics: ["land-and-water"],
+  isA: ["sound-or-light-quality"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ai4}} {{word:kan4}} {{word:hao3}}-{{word:kan4}}-{{word:de}} {{word:wai4}}-{{word:mian4}}.",

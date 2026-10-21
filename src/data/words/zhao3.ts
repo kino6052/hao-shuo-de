@@ -14,6 +14,8 @@ export default word("zhao3", {
     eng: "Look for, find ({{word:zhao3}}-{{word:dao4}}). Searching for things comes up every day.",
     rus: "Искать, найти ({{word:zhao3}}-{{word:dao4}}). Искать что-то приходится каждый день.",
   },
+  topics: ["senses"],
+  isA: ["perceiving"],
   maps: "alasa",
   paraphrase: {
     forms: [

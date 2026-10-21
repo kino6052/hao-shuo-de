@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:zhen1}}"],
   tts: ["真"],
   fit: "plain",
+  topics: ["easy-hard-right-wrong"],
+  isA: ["truth-or-ease"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:zhen1}} {{word:bu4}} {{word:zhi1dao4}}.",

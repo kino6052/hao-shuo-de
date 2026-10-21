@@ -12,6 +12,8 @@ export default composite({
   tts: ["觉得好"],
   literal: "feel good",
   fit: "plain",
+  topics: ["how-it-feels"],
+  isA: ["bodily-state"],
   examples: [
     {
       pinyin: "{{Word:zai4}} {{word:jia1}} {{word:wo3}} {{word:jue2}}-{{light:de2}} {{word:hao3}}.",

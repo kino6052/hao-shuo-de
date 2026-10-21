@@ -6,6 +6,7 @@ export default pattern("verb-de-thing", {
     rus: "Глагол с -de называет вещь, о которой идёт действие: chī-de — еда, wǒ xiě de — то, что я написал.",
   },
   covers: [],
+  tags: ["describe", "cat:substance"],
   template: { hsd: "verb-{{word:de}}", eng: "The thing the verb is about" },
   rules: [
     { lhs: "NP", hsd: "VP de", eng: "an action and de: the thing it is about" },

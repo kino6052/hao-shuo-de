@@ -12,6 +12,8 @@ export default composite({
   tts: ["打车", "叫车"],
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["vehicles"],
+  isA: ["trade-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yao4}} {{word:da3}} {{word:che1}}.",

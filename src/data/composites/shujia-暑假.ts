@@ -12,6 +12,8 @@ export default composite({
   tts: ["热的时间不学"],
   literal: "no school in summer",
   fit: "plain",
+  topics: ["holidays-and-festivals"],
+  isA: ["time-span"],
   examples: [
     {
       pinyin: "{{Word:re4}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:bu4}} {{word:xue2}}.",

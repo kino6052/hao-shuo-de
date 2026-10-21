@@ -12,6 +12,8 @@ export default composite({
   tts: ["做的多快"],
   literal: "how fast you get it done",
   fit: "plain",
+  topics: ["working-life"],
+  isA: ["value-quality"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:zuo4}}-{{word:de}} {{word:duo1}} {{word:kuai4}}!",

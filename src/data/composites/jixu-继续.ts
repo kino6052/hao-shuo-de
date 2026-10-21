@@ -12,6 +12,8 @@ export default composite({
   tts: ["…下去"],
   literal: "keep going down",
   fit: "natural",
+  topics: ["changing"],
+  isA: ["starting-and-stopping"],
   note: "shuō-xià-qù: keep talking.",
   examples: [
     {

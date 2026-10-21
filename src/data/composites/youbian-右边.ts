@@ -15,6 +15,8 @@ export default composite({
   tts: ["右边", "不是左边的边"],
   fit: "word",
   kinds: ["spelled", "built"],
+  topics: ["directions"],
+  isA: ["direction"],
   examples: [
     {
       pinyin: "{{Word:shu1}} {{word:zai4}} {{word:you4}}-{{word:bian1}}.",

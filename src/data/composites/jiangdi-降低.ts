@@ -12,6 +12,8 @@ export default composite({
   tts: ["变少"],
   literal: "become less",
   fit: "plain",
+  topics: ["changing"],
+  isA: ["becoming"],
   examples: [
     {
       pinyin: "{{Word:che1}} {{word:bian4}} {{word:shao3}} {{word:le}}.",

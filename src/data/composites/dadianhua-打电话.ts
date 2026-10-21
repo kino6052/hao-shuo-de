@@ -12,6 +12,8 @@ export default composite({
   tts: ["打话机"],
   literal: "hit the talk machine",
   fit: "plain",
+  topics: ["phone-and-computer"],
+  isA: ["social-action"],
   examples: [
     {
       pinyin: "{{Word:wan3}}-{{light:shang4}} {{word:wo3}} {{word:da3}} {{word:hua4}}-{{word:ji1}} {{word:gei3}} {{word:ma1ma}}.",

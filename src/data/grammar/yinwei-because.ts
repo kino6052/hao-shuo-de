@@ -6,6 +6,7 @@ export default pattern("yinwei-because", {
     rus: "Yīnwèi начинает причину: yīnwèi холодно, я не иду на улицу. Причина может стоять и второй, после запятой.",
   },
   covers: ["grammar:because"],
+  tags: ["link", "cat:relation"],
   template: { hsd: "{{word:yin1wei4}} + reason, result", eng: "Because of the reason, the result" },
   rules: [
     { lhs: "Clause", hsd: "S", eng: "a sentence as one part of a longer one" },

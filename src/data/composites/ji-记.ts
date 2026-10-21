@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:ji4}}"],
   tts: ["记"],
   fit: "word",
+  topics: ["remembering-and-forgetting"],
+  isA: ["thinking-action"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:ji4}} {{word:wo3}} {{word:ma}}?",

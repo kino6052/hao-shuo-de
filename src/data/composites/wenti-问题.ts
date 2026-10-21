@@ -12,6 +12,8 @@ export default composite({
   tts: ["问题"],
   fit: "natural",
   transparent: true,
+  topics: ["asking-and-answering"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:you3}} {{word:wen4}}-{{word:ti2}} {{word:ma}}?",

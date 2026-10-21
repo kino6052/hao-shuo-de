@@ -6,6 +6,7 @@ export default pattern("easy-hard-verb", {
     rus: "Hǎo или nán перед глаголом говорит, что это хорошо или трудно делать: hǎo wánr — интересно играть; nán zuò — трудно делать.",
   },
   covers: ["grammar:describe"],
+  tags: ["describe", "cat:quality", "cat:action"],
   template: { hsd: "{{word:hao3}} / {{word:nan2}} + verb", eng: "Good or hard to do" },
   rules: [
     { lhs: "VP", hsd: "=hao3 @verb", eng: "hǎo and a verb: good to do" },

@@ -15,6 +15,8 @@ export default composite({
   tts: ["做X很长的时间的人", "知道很多的人"],
   literal: "a person who has done X for a long time / a person who knows a lot",
   fit: "plain",
+  topics: ["jobs"],
+  isA: ["worker"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:zhi1dao4}} {{word:hen3}}-{{word:duo1}}-{{word:de}} {{word:ren2}}.",

@@ -10,6 +10,8 @@ export default word("si3", {
     eng: "Die, dead. Life and death are among the most basic ideas.",
     rus: "Умирать, мёртвый. Жизнь и смерть — одни из самых базовых понятий.",
   },
+  topics: ["birth-and-death"],
+  isA: ["life-change"],
   maps: "moli",
   paraphrase: { forms: ["{{word:bu4}} {{word:huo2}} {{word:le}}"], verdict: "clumsy" },
 });

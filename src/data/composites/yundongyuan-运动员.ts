@@ -12,6 +12,8 @@ export default composite({
   tts: ["动身体的人"],
   literal: "a person who exercises",
   fit: "plain",
+  topics: ["sports"],
+  isA: ["worker"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:dong4}}-{{word:shen1ti3}}-{{word:de}} {{word:ren2}}.",

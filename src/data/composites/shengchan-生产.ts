@@ -12,6 +12,8 @@ export default composite({
   tts: ["做出", "生"],
   literal: "make come out / bring forth",
   fit: "plain",
+  topics: ["farms-and-factories"],
+  isA: ["making"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:zuo4}}-{{word:chu1}} {{word:hen3}} {{word:duo1}}.",

@@ -14,6 +14,8 @@ export default composite({
   tts: ["学的和做东西的方法"],
   literal: "science and the way of making things",
   fit: "plain",
+  topics: ["farms-and-factories"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ai4}} {{word:xue2}}-{{word:de}} {{word:he2}} {{word:zuo4}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:fang1}}-{{word:fa3}}.",

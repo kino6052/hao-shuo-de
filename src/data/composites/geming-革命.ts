@@ -14,4 +14,6 @@ export default composite({
   tts: ["很多人让国家变"],
   literal: "many people make the country change",
   fit: "plain",
+  topics: ["history-and-culture"],
+  isA: ["event"],
 });

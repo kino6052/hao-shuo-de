@@ -12,6 +12,8 @@ export default composite({
   tts: ["很要做"],
   literal: "very willing to do it",
   fit: "plain",
+  topics: ["describing-people"],
+  isA: ["character-quality"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:hen3}} {{word:yao4}} {{word:zuo4}}.",

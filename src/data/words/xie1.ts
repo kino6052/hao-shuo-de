@@ -14,6 +14,8 @@ export default word("xie1", {
     eng: "These and those for many things ({{word:zhe4}}-{{word:xie1}}, {{word:na4}}-{{word:xie1}}), and some ({{word:yi1}}-{{word:xie1}}).",
     rus: "«Эти» и «те» для многих вещей ({{word:zhe4}}-{{word:xie1}}, {{word:na4}}-{{word:xie1}}) и «некоторые» ({{word:yi1}}-{{word:xie1}}).",
   },
+  topics: ["much-and-little"],
+  isA: ["amount-word"],
   paraphrase: {
     forms: ["{{word:you3}}-{{word:de}}", "{{word:yi1}}-{{word:dian3}}"],
     verdict: "clumsy",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["高明"],
   literal: "high and bright",
   fit: "natural",
+  topics: ["phone-and-computer"],
+  isA: ["character-quality"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:hen3}} {{word:gao1}}-{{word:ming2}}.",

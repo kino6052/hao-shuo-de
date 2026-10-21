@@ -12,6 +12,8 @@ export default composite({
   tts: ["放在一起的词"],
   literal: "words put together",
   fit: "plain",
+  topics: ["languages"],
+  isA: ["language-thing"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:xie3}} {{word:le}} {{word:hen3}}-{{word:duo1}} {{word:fang4}}-{{word:zai4}}-{{word:yi1}}-{{word:qi3}}-{{word:de}} {{word:ci2}}.",

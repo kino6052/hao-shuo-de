@@ -12,6 +12,8 @@ export default composite({
   tts: ["别的"],
   fit: "natural",
   transparent: true,
+  topics: ["pointers"],
+  isA: ["pronoun"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yao4}} {{word:bie2}}-{{word:de}}.",

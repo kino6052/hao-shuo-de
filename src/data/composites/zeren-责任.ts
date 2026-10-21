@@ -12,6 +12,8 @@ export default composite({
   tts: ["把X做好的东西"],
   literal: "the thing of making X well done",
   fit: "plain",
+  topics: ["law-and-crime"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:ba3}} {{word:jia1}} {{word:zuo4}} {{word:hao3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

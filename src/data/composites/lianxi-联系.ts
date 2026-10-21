@@ -12,6 +12,8 @@ export default composite({
   tts: ["关系", "给X说"],
   literal: "a connection / talk to X",
   fit: "plain",
+  topics: ["friends-and-neighbours"],
+  isA: ["social-tie"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:gei3}} {{word:ta1}} {{word:shuo1}}.",

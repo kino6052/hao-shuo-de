@@ -12,6 +12,8 @@ export default composite({
   tts: ["在水里玩儿", "过水"],
   literal: "play in the water / cross the water",
   fit: "plain",
+  topics: ["sports"],
+  isA: ["moving-action"],
   note: "Same as 游泳.",
   examples: [
     {

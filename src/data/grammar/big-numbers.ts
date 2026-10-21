@@ -6,6 +6,7 @@ export default pattern("big-numbers", {
     rus: "Числа больше десяти: shí стоит перед другим числом для 11–19 (shí-èr) и после него для 20, 30 … (èr-shí). После 99 называют цифры по одной (yī-líng-líng — 100).",
   },
   covers: [],
+  tags: ["count", "cat:quantity"],
   template: {
     hsd: "{{word:shi2}} + number (11-19) / number + {{word:shi2}} (20, 30 …)",
     eng: "A number above ten",

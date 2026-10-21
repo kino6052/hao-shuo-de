@@ -14,4 +14,6 @@ export default composite({
   tts: ["以前很多年都这样做"],
   literal: "for many years before, it was done this way",
   fit: "plain",
+  topics: ["history-and-culture"],
+  isA: ["abstract-thing"],
 });

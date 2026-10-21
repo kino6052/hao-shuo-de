@@ -12,6 +12,8 @@ export default composite({
   tts: ["可爱", "甜"],
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["describing-people"],
+  isA: ["character-quality"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:hai2}}-{{word:zi}} {{word:zhen1}} {{word:ke3}}-{{word:ai4}}.",

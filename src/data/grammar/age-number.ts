@@ -6,6 +6,7 @@ export default pattern("age-number", {
     rus: "Число само по себе может быть сказуемым: jīn-nián wǒ èr-shí — в этом году мне двадцать.",
   },
   covers: [],
+  tags: ["count", "cat:quantity", "cat:time"],
   template: { hsd: "Person + number", eng: "The person is that old" },
   rules: [
     { lhs: "S", hsd: "Person Num", eng: "a person and a number: I am twenty" },

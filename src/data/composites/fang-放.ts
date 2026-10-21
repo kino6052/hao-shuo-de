@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:fang4}}"],
   tts: ["放"],
   fit: "word",
+  topics: ["taking-and-holding"],
+  isA: ["placing"],
   examples: [
     {
       pinyin: "{{Word:ba3}} {{word:shu1}} {{word:fang4}} {{word:zai4}} {{word:zhe4}}-{{word:li3}}.",

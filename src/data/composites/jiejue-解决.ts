@@ -12,6 +12,8 @@ export default composite({
   tts: ["把问题就没了"],
   literal: "the problem is gone",
   fit: "natural",
+  topics: ["deciding"],
+  isA: ["thinking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:ba3}} {{word:wen4}}-{{word:ti2}} {{word:jiu4}} {{word:mei2}} {{word:le}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["从Y到X很远"],
   literal: "from Y to X is far",
   fit: "natural",
+  topics: ["near-and-far"],
+  isA: ["distance"],
   examples: [
     {
       pinyin: "{{Word:cong2}} {{word:wo3}} {{word:jia1}} {{word:dao4}} {{word:xue2}}-{{word:xiao4}} {{word:hen3}} {{word:yuan3}}.",

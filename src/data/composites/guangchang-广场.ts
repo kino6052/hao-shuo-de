@@ -14,6 +14,8 @@ export default composite({
   tts: ["人多的空的地方"],
   literal: "an open place with many people",
   fit: "plain",
+  topics: ["places-in-town"],
+  isA: ["outdoor-place"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zai4}} {{word:ren2}}-{{word:duo1}}-{{word:de}} {{word:kong1}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",

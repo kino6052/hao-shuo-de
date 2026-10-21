@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:zhi1dao4}}"],
   tts: ["知道"],
   fit: "plain",
+  topics: ["remembering-and-forgetting"],
+  isA: ["thinking-action"],
   note: "Mandarin has its own word for knowing a person.",
   examples: [
     {

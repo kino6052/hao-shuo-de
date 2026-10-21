@@ -6,6 +6,7 @@ export default pattern("hen-duo-noun", {
     rus: "Говорит, что чего-то много: hěn duō стоит прямо перед существительным.",
   },
   covers: [],
+  tags: ["how-much", "cat:quantity"],
   template: { hsd: "{{word:hen3}} {{word:duo1}} + noun", eng: "Many of the noun" },
   rules: [
     { lhs: "NP", hsd: "hen3 =duo1 @noun", eng: "hěn duō and its noun: many of them" },

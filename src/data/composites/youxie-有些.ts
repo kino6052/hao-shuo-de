@@ -13,6 +13,8 @@ export default composite({
   literal: "a part",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["all-and-some"],
+  isA: ["amount-word"],
   note: "Lesson {{lesson:also-and-all}}.",
   examples: [
     {

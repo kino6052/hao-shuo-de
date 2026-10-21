@@ -12,6 +12,8 @@ export default composite({
   tts: ["年的第一部分"],
   literal: "the first part of the year",
   fit: "plain",
+  topics: ["seasons"],
+  isA: ["calendar-name"],
   examples: [
     {
       pinyin: "{{Word:nian2}}-{{word:de}} {{word:di4}}-{{word:yi1}}-{{word:bu4}}-{{light:fen1}} {{word:hen3}} {{word:hao3}}.",

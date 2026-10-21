@@ -12,6 +12,8 @@ export default composite({
   tts: ["男人的爱人"],
   literal: "the man one loves",
   fit: "plain",
+  topics: ["love-and-marriage"],
+  isA: ["social-tie"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:wo3}}-{{word:de}} {{word:nan2}}-{{word:ren2}}-{{word:de}} {{word:ai4}}-{{word:ren2}}.",

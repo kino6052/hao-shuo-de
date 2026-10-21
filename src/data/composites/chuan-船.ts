@@ -12,5 +12,7 @@ export default composite({
   tts: ["在水上走的车"],
   literal: "a car that goes on the water",
   fit: "plain",
+  topics: ["vehicles"],
+  isA: ["vehicle"],
   proposed: true,
 });

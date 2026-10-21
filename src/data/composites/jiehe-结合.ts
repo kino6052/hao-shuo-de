@@ -12,5 +12,7 @@ export default composite({
   tts: ["把X和Y放在一起"],
   literal: "put X and Y together",
   fit: "plain",
+  topics: ["taking-and-holding"],
+  isA: ["handling-action"],
   proposed: true,
 });

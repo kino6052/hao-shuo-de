@@ -12,5 +12,7 @@ export default composite({
   tts: ["可能会坏"],
   literal: "it may go bad",
   fit: "plain",
+  topics: ["police-and-safety"],
+  isA: ["idea"],
   proposed: true,
 });

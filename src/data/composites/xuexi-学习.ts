@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:xue2}}"],
   tts: ["学"],
   fit: "word",
+  topics: ["studying"],
+  isA: ["learning-and-teaching"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:tian1}}-{{word:tian1}} {{word:xue2}} \"Zhōngguó\" {{word:hua4}}.",

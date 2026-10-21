@@ -12,5 +12,7 @@ export default composite({
   tts: ["最后"],
   fit: "natural",
   transparent: true,
+  topics: ["before-and-after"],
+  isA: ["time-order"],
   proposed: true,
 });

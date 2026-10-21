@@ -14,6 +14,8 @@ export default composite({
   tts: ["我爸爸妈妈的男孩子"],
   literal: "my parents' boys",
   fit: "plain",
+  topics: ["parents-and-children"],
+  isA: ["relative"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:wo3}} {{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:nan2}}-{{word:hai2}}-{{word:zi}}.",

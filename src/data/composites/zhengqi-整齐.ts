@@ -13,4 +13,6 @@ export default composite({
   literal: "not messy",
   fit: "natural",
   transparent: true,
+  topics: ["cleaning"],
+  isA: ["condition-quality"],
 });

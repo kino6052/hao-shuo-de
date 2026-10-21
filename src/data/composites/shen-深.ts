@@ -12,6 +12,8 @@ export default composite({
   tts: ["下面很远"],
   literal: "the bottom is far",
   fit: "plain",
+  topics: ["size"],
+  isA: ["size-quality"],
   examples: [
     {
       pinyin: "{{Word:shui3}} {{word:xia4}}-{{word:mian4}} {{word:hen3}} {{word:yuan3}}.",

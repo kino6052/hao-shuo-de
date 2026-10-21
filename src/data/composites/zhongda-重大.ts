@@ -12,5 +12,7 @@ export default composite({
   tts: ["重大", "很大，很重"],
   literal: "very big, very heavy",
   fit: "plain",
+  topics: ["size"],
+  isA: ["size-quality"],
   proposed: true,
 });

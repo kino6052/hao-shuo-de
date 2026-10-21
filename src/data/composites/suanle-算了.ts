@@ -12,5 +12,7 @@ export default composite({
   tts: ["算了", "不做了"],
   literal: "do not do it any more",
   fit: "plain",
+  topics: ["adverbs"],
+  isA: ["set-phrase"],
   proposed: true,
 });

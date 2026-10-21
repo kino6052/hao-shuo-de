@@ -12,5 +12,7 @@ export default composite({
   tts: ["看X能不能做"],
   literal: "see whether X can do it",
   fit: "plain",
+  topics: ["exams-and-marks"],
+  isA: ["event"],
   proposed: true,
 });

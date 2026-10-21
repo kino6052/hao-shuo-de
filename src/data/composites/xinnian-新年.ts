@@ -12,6 +12,8 @@ export default composite({
   tts: ["新年"],
   fit: "natural",
   transparent: true,
+  topics: ["holidays-and-festivals"],
+  isA: ["calendar-name"],
   examples: [
     {
       pinyin: "{{Word:xin1}}-{{word:nian2}} {{word:hao3}}!",

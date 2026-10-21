@@ -12,5 +12,7 @@ export default composite({
   tts: ["让X怕"],
   literal: "make X afraid",
   fit: "plain",
+  topics: ["worry-and-fear"],
+  isA: ["being-affected"],
   proposed: true,
 });

@@ -13,6 +13,8 @@ export default composite({
   literal: "has use",
   fit: "natural",
   kinds: ["built"],
+  topics: ["how-good"],
+  isA: ["value-quality"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:hen3}} {{word:you3}}-{{word:yong4}}.",

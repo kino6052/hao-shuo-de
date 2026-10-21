@@ -10,6 +10,8 @@ export default word("qu4", {
     eng: "Go, away from you. With {{word:lai2}}, it gives every movement a direction.",
     rus: "Уходить, от тебя. Вместе с {{word:lai2}} задаёт направление любому движению.",
   },
+  topics: ["going-and-coming"],
+  isA: ["moving-action"],
   maps: "tawa",
   paraphrase: { forms: ["{{word:dao4}} {{word:na4}}-{{word:li3}}"], verdict: "clumsy" },
 });

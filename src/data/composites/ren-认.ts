@@ -12,6 +12,8 @@ export default composite({
   tts: ["看到就知道"],
   literal: "see it and know it",
   fit: "plain",
+  topics: ["looking-and-checking"],
+  isA: ["perceiving"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:kan4}}-{{word:dao4}} {{word:jiu4}} {{word:zhi1dao4}} {{word:ta1}}.",

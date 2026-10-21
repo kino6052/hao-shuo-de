@@ -12,6 +12,8 @@ export default composite({
   tts: ["变有力"],
   literal: "become stronger",
   fit: "plain",
+  topics: ["changing"],
+  isA: ["becoming"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:bian4}} {{word:you3}} {{word:li4}} {{word:le}}.",

@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:na3}}-{{word:li3}}"],
   tts: ["哪里"],
   fit: "word",
+  topics: ["question-words"],
+  isA: ["question-word-kind"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:qu4}} {{word:na3}}-{{word:li3}}?",

@@ -6,6 +6,7 @@ export default pattern("verb-bu-verb", {
     rus: "Ещё один способ спросить «да или нет»: глагол, bù и тот же глагол ещё раз.",
   },
   covers: ["grammar:yes-no"],
+  tags: ["question", "cat:action"],
   template: { hsd: "Subject verb-{{word:bu4}}-verb?", eng: "Does the subject do the verb or not?" },
   rules: [
     { lhs: "Either", hsd: "@verb bu4 @verb", eng: "a verb, bù, the verb again" },

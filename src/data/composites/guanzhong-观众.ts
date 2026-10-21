@@ -12,6 +12,8 @@ export default composite({
   tts: ["看的人"],
   literal: "the people watching",
   fit: "plain",
+  topics: ["films-and-media"],
+  isA: ["group-of-people"],
   examples: [
     {
       pinyin: "{{Word:kan4}}-{{word:de}} {{word:ren2}} {{word:hen3}} {{word:duo1}}.",

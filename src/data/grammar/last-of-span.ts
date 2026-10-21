@@ -6,6 +6,7 @@ export default pattern("last-of-span", {
     rus: "Промежуток дней, de и zuì-hòu называют его последние дни: qī tiān de zuì-hòu liǎng tiān — последние два из семи дней.",
   },
   covers: ["grammar:when"],
+  tags: ["when", "count", "cat:time"],
   template: { hsd: "span {{word:de}} {{word:zui4}}-{{word:hou4}} + span", eng: "The last days of that span" },
   rules: [
     { lhs: "Time", hsd: "NP de =zui4 =hou4 NP", eng: "a span, de, zuì-hòu, and the last part" },

@@ -12,6 +12,8 @@ export default composite({
   tts: ["拿一个"],
   literal: "take one",
   fit: "plain",
+  topics: ["deciding"],
+  isA: ["thinking-action"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:na2}} {{word:yi1}}-{{light:ge4}}.",

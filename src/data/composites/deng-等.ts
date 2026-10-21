@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:deng3}}"],
   tts: ["等"],
   fit: "word",
+  topics: ["meeting-and-parting"],
+  isA: ["starting-and-stopping"],
   examples: [
     {
       pinyin: "{{Word:deng3}} {{word:yi1}}-{{word:xia4}}!",

@@ -12,4 +12,6 @@ export default composite({
   tts: ["国家说的"],
   literal: "what the country says",
   fit: "plain",
+  topics: ["government"],
+  isA: ["condition-quality"],
 });

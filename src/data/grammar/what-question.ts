@@ -6,6 +6,7 @@ export default pattern("what-question", {
     rus: "Спрашивает «что?»: shénme стоит там, где был бы ответ. Перед существительным оно спрашивает, какой именно.",
   },
   covers: ["grammar:question-word"],
+  tags: ["question", "cat:substance"],
   template: { hsd: "Who + verb + {{word:shen2me}}?", eng: "Who does the verb to what?" },
   rules: [
     { lhs: "NP", hsd: "=shen2me @noun", eng: "shénme before a noun: what kind of" },

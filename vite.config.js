@@ -6,6 +6,7 @@ import typecheckPlugin from "./vite-plugin-typecheck.js";
 import dataPlugin from "./vite-plugin-data.js";
 import reviewPlugin from "./vite-plugin-review.js";
 import kbPlugin from "./vite-plugin-kb.js";
+import planPlugin from "./vite-plugin-plan.js";
 
 export default defineConfig({
   base: "./",
@@ -15,7 +16,7 @@ export default defineConfig({
   preview: {
     host: "127.0.0.1",
   },
-  plugins: [dataPlugin(), reviewPlugin(), kbPlugin(), markdownPlugin(), chapterYamlPlugin(), preact(), typecheckPlugin()],
+  plugins: [dataPlugin(), reviewPlugin(), kbPlugin(), planPlugin(),markdownPlugin(), chapterYamlPlugin(), preact(), typecheckPlugin()],
   build: {
     outDir: "docs",
     emptyOutDir: true,

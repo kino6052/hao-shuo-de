@@ -14,6 +14,8 @@ export default word("zai4", {
     eng: "Be at a place, and \"in the middle of doing\". Saying where anything is starts here.",
     rus: "Находиться где-то, а также «как раз делать». С него начинается любое «где».",
   },
+  topics: ["words-before-nouns"],
+  isA: ["preposition"],
   maps: "lon",
   senses: {
     again: {

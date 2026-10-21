@@ -12,6 +12,8 @@ export default composite({
   tts: ["变…"],
   literal: "become …",
   fit: "plain",
+  topics: ["degree-words"],
+  isA: ["degree-word"],
   note: "For \"more and more\", say biàn duō le, biàn dà le.",
   examples: [
     {

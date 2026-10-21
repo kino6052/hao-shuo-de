@@ -12,6 +12,8 @@ export default composite({
   tts: ["高明", "头很好"],
   literal: "a good head",
   fit: "natural",
+  topics: ["describing-people"],
+  isA: ["character-quality"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:tou2}} {{word:hen3}} {{word:hao3}}.",

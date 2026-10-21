@@ -6,6 +6,7 @@ export default pattern("bufen-part", {
     rus: "Говорит о части чего-то: bùfen стоит после zhè, nà или dà. Dà bùfen перед существительным значит «большинство».",
   },
   covers: [],
+  tags: ["only-some", "owner", "cat:quantity"],
   template: { hsd: "{{word:zhe4}} / {{word:na4}} / {{word:da4}} + {{word:bu4}}-{{word:fen1}}", eng: "This / that / the big part" },
   rules: [
     { lhs: "NP", hsd: "Pointer =bu4 =fen1", eng: "zhè or nà and bùfen: this part, that part" },

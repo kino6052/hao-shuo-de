@@ -12,6 +12,8 @@ export default composite({
   tts: ["可以", "能"],
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["helping-words"],
+  isA: ["auxiliary"],
   note: "\"Can\" and \"may\" are both néng (D19).",
   examples: [
     {

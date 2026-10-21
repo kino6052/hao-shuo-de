@@ -14,6 +14,8 @@ export default word("xiao3", {
     eng: "Small, little: one of the most basic ways to describe anything.",
     rus: "Маленький — один из самых базовых способов что-то описать.",
   },
+  topics: ["size"],
+  isA: ["size-quality"],
   maps: "lili",
   atom: {
     eng: "Little is not just \"not big\" (bù dà).",

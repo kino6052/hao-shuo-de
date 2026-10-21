@@ -14,5 +14,7 @@ export default composite({
   tts: ["有两个，把X变小的工具"],
   literal: "a tool with two parts that makes X smaller",
   fit: "plain",
+  topics: ["household-things"],
+  isA: ["cutting-tool"],
   proposed: true,
 });

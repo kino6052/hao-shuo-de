@@ -14,6 +14,8 @@ export default word("qi3", {
     eng: "Rise, up: {{word:qi3}}-{{word:lai2}}, get up, and a verb starting ({{word:lai2}}-{{word:qi3}}-{{word:lai2}}).",
     rus: "Подниматься: {{word:qi3}}-{{word:lai2}} — встать, а также начало действия.",
   },
+  topics: ["walking-and-running"],
+  isA: ["moving-action"],
   maps: "",
   paraphrase: { forms: ["{{word:cong2}} {{word:xia4}} {{word:dao4}} {{word:shang4}}"], verdict: "clumsy" },
 });

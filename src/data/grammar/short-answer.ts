@@ -6,6 +6,7 @@ export default pattern("short-answer", {
     rus: "Ответ может быть только тем, что говорится: глагол — «да», bù и глагол — «нет». В предложении можно не называть того, кто делает.",
   },
   covers: [],
+  tags: ["speech", "question", "cat:relation"],
   template: { hsd: "verb. / {{word:bu4}} + verb.", eng: "Yes. / No." },
   rules: [{ lhs: "Utt", hsd: "VP", eng: "what is said, with no one named" }],
   taught: "questions/answer",

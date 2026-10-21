@@ -14,4 +14,6 @@ export default composite({
   tts: ["让人做，人不想做"],
   literal: "make a person do it when they do not want to",
   fit: "plain",
+  topics: ["law-and-crime"],
+  isA: ["social-action"],
 });

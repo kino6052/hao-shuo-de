@@ -14,6 +14,8 @@ export default composite({
   tts: ["算的工具里的工具"],
   literal: "the tool inside the computer",
   fit: "plain",
+  topics: ["phone-and-computer"],
+  isA: ["computer-or-phone"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:suan4}}-{{word:de}}-{{word:gong1}}-{{word:ju4}}-{{word:li3}}-{{word:de}} {{word:gong1}}-{{word:ju4}}.",

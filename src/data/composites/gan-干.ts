@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:zuo4}}"],
   tts: ["做"],
   fit: "word",
+  topics: ["making-and-doing"],
+  isA: ["making"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:xiang3}} {{word:zuo4}} {{word:shen2me}}?",

@@ -14,5 +14,7 @@ export default word("wan3", {
     eng: "Evening and night ({{word:wan3}}-{{light:shang4}}), and being late.",
     rus: "Вечер и ночь ({{word:wan3}}-{{light:shang4}}) и опоздание.",
   },
+  topics: ["times-of-day"],
+  isA: ["time-of-day-word"],
   paraphrase: { forms: ["{{word:tian1}}-{{word:de}} {{word:hou4}}-{{word:mian4}}"], verdict: "clumsy" },
 });

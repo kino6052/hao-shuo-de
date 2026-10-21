@@ -12,5 +12,7 @@ export default composite({
   tts: ["叫的词"],
   literal: "the word it is called",
   fit: "plain",
+  topics: ["greetings-and-thanks"],
+  isA: ["language-thing"],
   proposed: true,
 });

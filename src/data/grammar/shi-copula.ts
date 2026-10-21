@@ -6,6 +6,7 @@ export default pattern("shi-copula", {
     rus: "Говорит, что одно есть другое: shì стоит между ними.",
   },
   covers: [],
+  tags: ["basic", "cat:substance"],
   template: { hsd: "A {{word:shi4}} B", eng: "A is B" },
   rules: [{ lhs: "VP", hsd: "shi4 NP", eng: "shì and what it is" }],
   taught: "words-and-sentences/is",

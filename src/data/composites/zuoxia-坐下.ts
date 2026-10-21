@@ -12,5 +12,7 @@ export default composite({
   tts: ["坐下"],
   fit: "natural",
   transparent: true,
+  topics: ["posture"],
+  isA: ["body-position"],
   proposed: true,
 });

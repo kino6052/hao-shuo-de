@@ -12,6 +12,8 @@ export default composite({
   tts: ["老了，不做了"],
   literal: "old, no longer working",
   fit: "plain",
+  topics: ["working-life"],
+  isA: ["life-change"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:lao3}} {{word:le}}, {{word:bu4}} {{word:zuo4}} {{word:le}}.",

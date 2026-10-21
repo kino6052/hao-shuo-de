@@ -12,5 +12,7 @@ export default composite({
   tts: ["睡觉的房间"],
   literal: "a room for sleeping",
   fit: "plain",
+  topics: ["bedroom"],
+  isA: ["room"],
   proposed: true,
 });

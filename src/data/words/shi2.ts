@@ -10,6 +10,8 @@ export default word("shi2", {
     eng: "Ten, and the base of every bigger number: {{word:shi2}}-{{word:er4}} is twelve.",
     rus: "Десять — основа всех чисел побольше: {{word:shi2}}-{{word:er4}} — двенадцать.",
   },
+  topics: ["number-words"],
+  isA: ["counting-number"],
   senses: {
     time: {
       hanzi: "时",

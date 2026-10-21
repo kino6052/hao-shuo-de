@@ -14,5 +14,7 @@ export default composite({
   tts: ["从…里面拿…，能拿…次"],
   literal: "take A from C, B times",
   fit: "plain",
+  topics: ["sums"],
+  isA: ["thinking-action"],
   note: "12 ÷ 4: cóng shí-èr lǐ-miàn ná sì, néng ná sān-cì (Lesson {{lesson:time-and-sums}}).",
 });

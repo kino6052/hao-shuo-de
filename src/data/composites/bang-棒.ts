@@ -12,6 +12,8 @@ export default composite({
   tts: ["真好", "长的东西"],
   literal: "really good / stick",
   fit: "natural",
+  topics: ["how-good"],
+  isA: ["value-quality"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:zhen1}} {{word:hao3}}.",

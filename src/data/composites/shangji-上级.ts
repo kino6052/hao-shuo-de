@@ -14,4 +14,6 @@ export default composite({
   tts: ["工作在我上面的人"],
   literal: "the person above me at work",
   fit: "plain",
+  topics: ["office"],
+  isA: ["worker"],
 });

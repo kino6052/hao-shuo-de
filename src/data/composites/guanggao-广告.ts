@@ -12,6 +12,8 @@ export default composite({
   tts: ["让人买的东西"],
   literal: "a thing that makes people buy",
   fit: "plain",
+  topics: ["business-and-economy"],
+  isA: ["work-of-art"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:kan4}} {{word:rang4}}-{{word:ren2}}-{{word:mai3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

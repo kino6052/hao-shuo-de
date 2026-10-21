@@ -12,5 +12,7 @@ export default composite({
   tts: ["分手", "不一起了"],
   literal: "not together any more",
   fit: "plain",
+  topics: ["love-and-marriage"],
+  isA: ["social-action"],
   proposed: true,
 });

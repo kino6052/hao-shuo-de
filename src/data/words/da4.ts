@@ -14,6 +14,8 @@ export default word("da4", {
     eng: "Big: one of the most basic ways to describe anything. Adults and important things too.",
     rus: "Большой — один из самых базовых способов что-то описать. А ещё взрослый и важный.",
   },
+  topics: ["size"],
+  isA: ["size-quality"],
   maps: "suli",
   atom: {
     eng: "Size is seen by comparing two things; nothing else gives the idea. Its opposite xiǎo is just \"bù dà\".",

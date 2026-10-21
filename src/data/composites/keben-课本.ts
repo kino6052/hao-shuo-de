@@ -12,6 +12,8 @@ export default composite({
   tts: ["学的书"],
   literal: "the book for studying",
   fit: "plain",
+  topics: ["classroom"],
+  isA: ["paper-thing"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:xue2}}-{{word:de}} {{word:shu1}} {{word:zai4}} {{word:jia1}}-{{word:li3}}.",

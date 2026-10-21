@@ -12,6 +12,8 @@ export default composite({
   tts: ["回去"],
   literal: "go back",
   fit: "natural",
+  topics: ["going-and-coming"],
+  isA: ["moving-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:hui2}}-{{word:qu4}}.",

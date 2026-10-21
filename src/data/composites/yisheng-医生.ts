@@ -12,6 +12,8 @@ export default composite({
   tts: ["帮身体不好的人"],
   literal: "the one who helps bodies that aren't well",
   fit: "plain",
+  topics: ["at-the-doctor"],
+  isA: ["worker"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:bang1}}-{{word:shen1ti3}}-{{word:bu4}}-{{word:hao3}}-{{word:de}} {{word:ren2}}.",

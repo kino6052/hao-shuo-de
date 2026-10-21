@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:bu4}} {{word:neng2}}", "{{word:bu4}} {{word:hao3}}"],
   tts: ["不能", "不好"],
   fit: "natural",
+  topics: ["no-and-not"],
+  isA: ["negation-word"],
   examples: [
     {
       pinyin: "{{Word:bu4}} {{word:neng2}}, {{word:ni3}} {{word:bu4}} {{word:neng2}} {{word:qu4}}.",

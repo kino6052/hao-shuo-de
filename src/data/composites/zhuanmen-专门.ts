@@ -12,6 +12,8 @@ export default composite({
   tts: ["就做这个"],
   literal: "just doing this",
   fit: "plain",
+  topics: ["degree-words"],
+  isA: ["adverb-word"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:jiu4}} {{word:zuo4}} {{word:zhe4}}-{{light:ge4}}.",

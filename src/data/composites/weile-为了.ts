@@ -12,6 +12,8 @@ export default composite({
   tts: ["为了", "为"],
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["words-before-nouns"],
+  isA: ["preposition"],
   examples: [
     {
       pinyin: "{{Word:wei4}}-{{word:le}} {{word:hai2}}-{{word:zi}}, {{word:ta1}} {{word:gong1}}-{{word:zuo4}}.",

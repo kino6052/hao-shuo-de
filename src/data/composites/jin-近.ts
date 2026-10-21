@@ -12,6 +12,8 @@ export default composite({
   tts: ["在附近"],
   literal: "be nearby",
   fit: "natural",
+  topics: ["near-and-far"],
+  isA: ["distance"],
   note: "fùjìn is a place word: zài fùjìn, not hěn fùjìn (Lesson {{lesson:moving}}).",
   examples: [
     {

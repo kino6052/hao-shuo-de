@@ -14,6 +14,8 @@ export default composite({
   tts: ["做看的东西的工具"],
   literal: "a tool that makes photos",
   fit: "plain",
+  topics: ["hobbies-and-outings"],
+  isA: ["machine"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:zuo4}}-{{word:kan4}}-{{word:de}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:gong1}}-{{word:ju4}}.",

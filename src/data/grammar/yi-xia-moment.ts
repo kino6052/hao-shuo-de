@@ -6,6 +6,7 @@ export default pattern("yi-xia-moment", {
     rus: "Говорит, что что-то делается ненадолго: yī-xià стоит после глагола. Оно же смягчает просьбу.",
   },
   covers: [],
+  tags: ["command", "how-much", "cat:action"],
   template: { hsd: "Who + verb + {{word:yi1}}-{{word:xia4}}", eng: "Who does the verb for a moment" },
   rules: [
     { lhs: "Moment", hsd: "=yi1 =xia4", eng: "yī-xià, a moment" },

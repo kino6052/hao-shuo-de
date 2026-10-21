@@ -13,6 +13,8 @@ export default composite({
   literal: "the colour of gold",
   fit: "natural",
   transparent: true,
+  topics: ["colours-and-patterns"],
+  isA: ["colour-quality"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:bao1}} {{word:shi4}} {{word:jin1}}-{{word:de}} {{word:yan2se4}}.",

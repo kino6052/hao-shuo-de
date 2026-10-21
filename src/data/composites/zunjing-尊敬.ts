@@ -12,6 +12,8 @@ export default composite({
   tts: ["觉得X很有价值"],
   literal: "feel X is very valuable",
   fit: "plain",
+  topics: ["liking-and-wanting"],
+  isA: ["feeling-and-wanting"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:jue2}}-{{word:de2}} {{word:ta1}} {{word:hen3}} {{word:you3}} {{word:jia4zhi2}}.",

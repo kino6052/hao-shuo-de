@@ -6,6 +6,7 @@ export default pattern("le-done", {
     rus: "Говорит, что что-то сделано: le стоит сразу после глагола. Сам глагол не меняется.",
   },
   covers: ["grammar:happened"],
+  tags: ["done", "cat:time", "cat:action"],
   template: { hsd: "Who + verb + {{word:le}}", eng: "Who did the verb" },
   rules: [
     { lhs: "VerbP", hsd: "@verb le NP", eng: "a verb, le, and what it was done to" },

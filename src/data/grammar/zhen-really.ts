@@ -6,6 +6,7 @@ export default pattern("zhen-really", {
     rus: "Говорит «действительно»: zhēn стоит перед описывающим словом. Само по себе оно — целое предложение.",
   },
   covers: [],
+  tags: ["how-much", "cat:quality"],
   template: { hsd: "Thing + {{word:zhen1}} + adjective", eng: "The thing is really that" },
   rules: [
     { lhs: "VP", hsd: "=zhen1 @adjective", eng: "zhēn and a describing word" },

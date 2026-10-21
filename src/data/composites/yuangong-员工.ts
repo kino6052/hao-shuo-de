@@ -12,6 +12,8 @@ export default composite({
   tts: ["工作的人"],
   literal: "the working person",
   fit: "plain",
+  topics: ["office"],
+  isA: ["worker"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:gong1}}-{{word:zuo4}}-{{word:de}} {{word:ren2}}.",

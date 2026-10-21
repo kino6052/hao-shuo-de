@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:yi1fu}}"],
   tts: ["衣服"],
   fit: "word",
+  topics: ["everyday-clothes"],
+  isA: ["garment"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:mai3}} {{word:yi1fu}}.",

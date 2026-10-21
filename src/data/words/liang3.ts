@@ -14,6 +14,8 @@ export default word("liang3", {
     eng: "Two of something: {{word:liang3}}-ge {{word:ren2}}. Mandarin uses it, not {{word:er4}}, before {{word:ge4}}.",
     rus: "Два чего-то: {{word:liang3}}-ge {{word:ren2}}. Перед {{word:ge4}} в китайском говорят его, а не {{word:er4}}.",
   },
+  topics: ["number-words"],
+  isA: ["counting-number"],
   maps: "tu",
   paraphrase: { forms: ["{{word:yi1}} {{word:he2}} {{word:yi1}}"], verdict: "clumsy" },
 });

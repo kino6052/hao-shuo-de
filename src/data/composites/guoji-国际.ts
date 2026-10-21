@@ -12,6 +12,8 @@ export default composite({
   tts: ["很多国的"],
   literal: "of many countries",
   fit: "plain",
+  topics: ["countries-and-cities"],
+  isA: ["place-relation"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:hen3}}-{{word:duo1}}-{{word:guo2}}-{{word:de}}.",

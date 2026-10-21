@@ -12,6 +12,8 @@ export default composite({
   tts: ["多大"],
   literal: "how big (it is)",
   fit: "plain",
+  topics: ["degree-words"],
+  isA: ["degree-word"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zhi1dao4}} {{word:duo1}} {{word:da4}}.",

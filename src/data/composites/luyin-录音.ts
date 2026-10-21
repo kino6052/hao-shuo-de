@@ -12,6 +12,8 @@ export default composite({
   tts: ["把声音留下来"],
   literal: "keep the sound",
   fit: "plain",
+  topics: ["films-and-media"],
+  isA: ["making"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ba3}} {{word:sheng1yin1}} {{word:liu2}}-{{word:xia4}}-{{word:lai2}}.",

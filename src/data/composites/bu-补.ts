@@ -12,5 +12,7 @@ export default composite({
   tts: ["让坏的变好"],
   literal: "make the broken part good",
   fit: "plain",
+  topics: ["repairs"],
+  isA: ["making"],
   proposed: true,
 });

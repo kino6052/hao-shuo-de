@@ -14,5 +14,7 @@ export default composite({
   tts: ["说X能做好，让X想做"],
   literal: "say X can do it well, make X want to do it",
   fit: "plain",
+  topics: ["helping-and-sharing"],
+  isA: ["speaking-action"],
   proposed: true,
 });

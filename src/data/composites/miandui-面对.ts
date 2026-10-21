@@ -12,6 +12,8 @@ export default composite({
   tts: ["面对", "对"],
   literal: "face toward",
   fit: "natural",
+  topics: ["near-and-far"],
+  isA: ["placing"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:mian4}}-{{word:dui4}} {{word:ta1}}.",

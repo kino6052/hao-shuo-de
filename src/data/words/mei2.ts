@@ -14,6 +14,8 @@ export default word("mei2", {
     eng: "\"Not\" for {{word:you3}}: {{word:mei2}}-{{word:you3}}, there isn't, I don't have. {{word:bu4}} can't do this job.",
     rus: "«Не» для {{word:you3}}: {{word:mei2}}-{{word:you3}} — нет, не имею. {{word:bu4}} эту работу не делает.",
   },
+  topics: ["no-and-not"],
+  isA: ["negation-word"],
   maps: "",
   paraphrase: {
     forms: ["{{word:bu4}}"],

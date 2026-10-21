@@ -14,6 +14,8 @@ export default composite({
   tts: ["做工作很好的人"],
   literal: "a person who works very well",
   fit: "plain",
+  topics: ["jobs"],
+  isA: ["worker"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:zuo4}} {{word:gong1}}-{{word:zuo4}} {{word:hen3}} {{word:hao3}}-{{word:de}} {{word:ren2}}.",

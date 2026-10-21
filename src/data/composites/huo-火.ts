@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:huo3}}"],
   tts: ["火"],
   fit: "word",
+  topics: ["fire-light-and-heat"],
+  isA: ["fire-or-light"],
   examples: [
     {
       pinyin: "{{Word:bie2}} {{word:mo1}} {{word:huo3}}!",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["用手对X"],
   literal: "aim your hand at X",
   fit: "plain",
+  topics: ["hands-and-feet"],
+  isA: ["body-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yong4}} {{word:shou3}} {{word:dui4}} {{word:ta1}}.",

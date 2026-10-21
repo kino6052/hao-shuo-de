@@ -12,4 +12,6 @@ export default composite({
   tts: ["让人不能看见"],
   literal: "make people unable to see it",
   fit: "plain",
+  topics: ["taking-and-holding"],
+  isA: ["handling-action"],
 });

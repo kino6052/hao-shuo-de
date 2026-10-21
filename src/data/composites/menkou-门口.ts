@@ -13,6 +13,8 @@ export default composite({
   literal: "opening",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["house-and-doors"],
+  isA: ["place-word"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zai4}} {{word:men2}}-{{word:kou3}}.",

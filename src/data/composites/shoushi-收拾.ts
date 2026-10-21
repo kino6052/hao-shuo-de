@@ -12,6 +12,8 @@ export default composite({
   tts: ["把X干净", "把X不乱"],
   literal: "make X clean / make X not messy",
   fit: "plain",
+  topics: ["cleaning"],
+  isA: ["cleaning-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ba3}} {{word:fang2}}-{{word:jian1}} {{word:gan1jing4}}.",

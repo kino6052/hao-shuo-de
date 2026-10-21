@@ -6,6 +6,7 @@ export default pattern("bie-dont", {
     rus: "Bié перед глаголом значит «не надо»: bié pà — не бойся; bié zǒu — не уходи.",
   },
   covers: ["grammar:dont"],
+  tags: ["command", "negation", "cat:action"],
   template: { hsd: "{{word:bie2}} + verb!", eng: "Don't do it!" },
   rules: [
     { lhs: "VP", hsd: "=bie2 VP", eng: "bié and a verb: don't" },

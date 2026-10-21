@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:liu2}}"],
   tts: ["留"],
   fit: "word",
+  topics: ["meeting-and-parting"],
+  isA: ["starting-and-stopping"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:yao4}} {{word:liu2}} {{word:zhe4}}-{{light:ge4}} {{word:ma}}?",

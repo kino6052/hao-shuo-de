@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:liao4}}"],
   tts: ["料"],
   fit: "word",
+  topics: ["materials"],
+  isA: ["material"],
   proposed: true,
 });

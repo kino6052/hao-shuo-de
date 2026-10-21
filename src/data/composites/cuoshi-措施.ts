@@ -12,5 +12,7 @@ export default composite({
   tts: ["为X做的方法"],
   literal: "a method made for X",
   fit: "plain",
+  topics: ["deciding"],
+  isA: ["idea"],
   proposed: true,
 });

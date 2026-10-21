@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:gei3}}"],
   tts: ["给"],
   fit: "word",
+  topics: ["giving-and-getting"],
+  isA: ["handling-action"],
   examples: [
     { pinyin: "{{Word:gei3}} {{word:ni3}}.", hanzi: "给你。", en: "Here you go.", ru: "Держи." },
     {

@@ -6,6 +6,7 @@ export default pattern("bi-than", {
     rus: "Говорит, что одно больше другого: bǐ («чем») стоит между ними, потом описывающее слово, без hěn.",
   },
   covers: ["grammar:compare"],
+  tags: ["compare", "cat:relation", "cat:quality"],
   template: { hsd: "A + {{word:bi3}} + B + adjective", eng: "A is more than B" },
   rules: [
     { lhs: "VP", hsd: "=bi3 NP @adjective", eng: "bǐ, what it is set against, and a describing word" },

@@ -14,6 +14,8 @@ export default word("you3", {
     eng: "Have, and \"there is\". Without it, nothing exists and nobody owns anything.",
     rus: "Иметь, а также «есть, имеется». Без него ничего не существует и ни у кого ничего нет.",
   },
+  topics: ["helping-words"],
+  isA: ["owning"],
   maps: "jo, lon",
   atom: {
     eng: "\"Have\" and \"there is\" come before everything else you can say about a thing; zài and dé lean on it.",

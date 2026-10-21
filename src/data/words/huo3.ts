@@ -14,6 +14,8 @@ export default word("huo3", {
     eng: "Fire: heat, cooking, light. Nothing else in the dictionary can describe it.",
     rus: "Огонь: жар, готовка, свет. Ничто другое в словаре его не опишет.",
   },
+  topics: ["fire-light-and-heat"],
+  isA: ["fire-or-light"],
   maps: "seli",
   paraphrase: {
     forms: [

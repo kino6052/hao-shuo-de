@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:zhi2wu4}}"],
   tts: ["植物"],
   fit: "word",
+  topics: ["trees-and-flowers"],
+  isA: ["plant"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:zhi2wu4}} {{word:hen3}} {{word:gao1}}.",

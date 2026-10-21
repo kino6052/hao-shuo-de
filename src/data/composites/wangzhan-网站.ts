@@ -13,6 +13,8 @@ export default composite({
   literal: "net station",
   fit: "natural",
   kinds: ["built"],
+  topics: ["phone-and-computer"],
+  isA: ["computer-or-phone"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:wang3}}-{{word:zhan4}} {{word:hen3}} {{word:hao3}}.",

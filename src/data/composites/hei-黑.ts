@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:hei1}}", "{{word:hei1}}-{{word:se4}}"],
   tts: ["黑", "黑色"],
   fit: "word",
+  topics: ["colours"],
+  isA: ["colour-quality"],
   examples: [
     {
       pinyin: "{{Word:wai4}}-{{word:mian4}} {{word:hen3}} {{word:hei1}}.",

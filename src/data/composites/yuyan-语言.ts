@@ -12,6 +12,8 @@ export default composite({
   tts: ["话"],
   literal: "speech",
   fit: "plain",
+  topics: ["languages"],
+  isA: ["language-thing"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:hui4}} {{word:shuo1}} {{word:shen2me}} {{word:hua4}}?",

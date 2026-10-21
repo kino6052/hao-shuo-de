@@ -13,6 +13,8 @@ export default composite({
   literal: "get-reach",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["giving-and-getting"],
+  isA: ["receiving"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:de2}}-{{word:dao4}} {{word:le}} {{word:gong1}}-{{word:zuo4}}.",

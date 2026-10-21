@@ -12,5 +12,7 @@ export default composite({
   tts: ["让很多人看，听"],
   literal: "let many people see and hear",
   fit: "plain",
+  topics: ["crops-and-farming"],
+  isA: ["handling-action"],
   proposed: true,
 });

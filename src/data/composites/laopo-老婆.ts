@@ -12,5 +12,7 @@ export default composite({
   tts: ["家里的女人"],
   literal: "the woman of the home",
   fit: "plain",
+  topics: ["love-and-marriage"],
+  isA: ["relative"],
   proposed: true,
 });

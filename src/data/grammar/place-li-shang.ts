@@ -6,6 +6,7 @@ export default pattern("place-li-shang", {
     rus: "Говорит «внутри» или «на»: lǐ («в») или shàng («на») присоединяется к месту.",
   },
   covers: [],
+  tags: ["where", "cat:place", "cat:position"],
   template: { hsd: "Thing + {{word:zai4}} + place-{{word:li3}} / place-{{word:shang4}}", eng: "The thing is in / on the place" },
   rules: [
     { lhs: "NP", hsd: "NP =li3", eng: "a place and lǐ: inside it" },

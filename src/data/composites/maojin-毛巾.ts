@@ -14,5 +14,7 @@ export default composite({
   tts: ["用水后用的，衣服一样的东西"],
   literal: "a clothlike thing used after using water",
   fit: "plain",
+  topics: ["bathroom"],
+  isA: ["made-thing"],
   proposed: true,
 });

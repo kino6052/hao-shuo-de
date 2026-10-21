@@ -12,6 +12,8 @@ export default composite({
   tts: ["部分", "一些"],
   fit: "word",
   kinds: ["spelled", "built"],
+  topics: ["all-and-some"],
+  isA: ["amount-word"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:yi1}} {{word:bu4}}-{{light:fen1}}.",

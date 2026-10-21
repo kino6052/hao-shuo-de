@@ -13,6 +13,8 @@ export default composite({
   literal: "no connection",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["manners"],
+  isA: ["set-phrase"],
   note: "Lesson {{lesson:inside-a-sentence}}.",
   examples: [
     {

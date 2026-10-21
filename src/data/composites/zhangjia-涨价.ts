@@ -12,6 +12,8 @@ export default composite({
   tts: ["要的金变多"],
   literal: "it costs more money",
   fit: "plain",
+  topics: ["shopping"],
+  isA: ["becoming"],
   examples: [
     {
       pinyin: "{{Word:yao4}}-{{word:de}} {{word:jin1}} {{word:bian4}} {{word:duo1}} {{word:le}}.",

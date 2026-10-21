@@ -15,5 +15,7 @@ export default composite({
   tts: ["打包", "把X放进包里"],
   literal: "put X into the bag",
   fit: "plain",
+  topics: ["at-a-restaurant"],
+  isA: ["handling-action"],
   proposed: true,
 });

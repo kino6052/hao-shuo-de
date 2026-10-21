@@ -13,6 +13,8 @@ export default composite({
   literal: "open heart",
   fit: "natural",
   kinds: ["built"],
+  topics: ["happy-feelings"],
+  isA: ["feeling-quality"],
   note: "Lesson {{lesson:feelings}}.",
   examples: [
     {

@@ -12,6 +12,8 @@ export default composite({
   tts: ["价值"],
   literal: "value",
   fit: "plain",
+  topics: ["ideas-and-opinions"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:jia4zhi2}} {{word:hen3}} {{word:da4}}.",

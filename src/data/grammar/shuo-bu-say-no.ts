@@ -6,6 +6,7 @@ export default pattern("shuo-bu-say-no", {
     rus: "Shuō bù значит «сказать нет»: tā shuō bù — он говорит «нет».",
   },
   covers: [],
+  tags: ["speech", "negation", "cat:action"],
   template: { hsd: "{{word:shuo1}} {{word:bu4}}", eng: "Say no" },
   rules: [
     { lhs: "VerbP", hsd: "=shuo1 bu4", eng: "shuō bù, says no" },

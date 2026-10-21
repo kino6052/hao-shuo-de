@@ -12,6 +12,8 @@ export default composite({
   tts: ["做看的东西"],
   literal: "make a picture",
   fit: "plain",
+  topics: ["hobbies-and-outings"],
+  isA: ["making"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yao4}} {{word:zuo4}} {{word:kan4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

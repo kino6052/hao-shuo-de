@@ -12,6 +12,8 @@ export default composite({
   tts: ["发生的地方"],
   literal: "the place where it happened",
   fit: "plain",
+  topics: ["news-and-events"],
+  isA: ["place"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:zai4}} {{word:fa1}}-{{word:sheng1}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",

@@ -14,5 +14,7 @@ export default composite({
   tts: ["头里面想的地方"],
   literal: "the place inside the head where thinking happens",
   fit: "plain",
+  topics: ["inside-the-body"],
+  isA: ["body-part"],
   proposed: true,
 });

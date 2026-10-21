@@ -15,6 +15,8 @@ export default composite({
   tts: ["不知道对不对", "可能对可能不对"],
   literal: "don't know if it's right or not / may be right, may be wrong",
   fit: "plain",
+  topics: ["asking-and-answering"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:bu4}} {{word:zhi1dao4}} {{word:dui4}} {{word:bu4}} {{word:dui4}}.",

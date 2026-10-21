@@ -12,6 +12,8 @@ export default composite({
   tts: ["放好"],
   literal: "put it away",
   fit: "plain",
+  topics: ["bank-and-post"],
+  isA: ["trade-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ba3}} {{word:jin1}} {{word:fang4}} {{word:hao3}}.",

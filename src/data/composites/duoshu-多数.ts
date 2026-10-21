@@ -12,5 +12,7 @@ export default composite({
   tts: ["多数", "大部分"],
   literal: "the big part",
   fit: "plain",
+  topics: ["all-and-some"],
+  isA: ["amount-word"],
   proposed: true,
 });

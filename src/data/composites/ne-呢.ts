@@ -11,6 +11,8 @@ export default composite({
   hsd: ["\"ne\""],
   tts: ["呢"],
   fit: "natural",
+  topics: ["particles"],
+  isA: ["particle"],
   note: "Leave it out; ask with ma or a question word.",
   examples: [
     {

@@ -12,6 +12,8 @@ export default composite({
   tts: ["最少"],
   literal: "least",
   fit: "natural",
+  topics: ["degree-words"],
+  isA: ["degree-word"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zui4}} {{word:shao3}} {{word:mai3}} {{word:san1}}-{{light:ge4}}.",

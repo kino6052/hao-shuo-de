@@ -12,6 +12,8 @@ export default composite({
   tts: ["看外面的口"],
   literal: "an opening for looking outside",
   fit: "plain",
+  topics: ["house-and-doors"],
+  isA: ["building-part"],
   note: "kǒu covers doors and windows.",
   examples: [
     {

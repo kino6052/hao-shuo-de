@@ -14,6 +14,8 @@ export default composite({
   tts: ["从水上通过去的路"],
   literal: "a road that goes over the water",
   fit: "plain",
+  topics: ["the-road"],
+  isA: ["building"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:cong2}} {{word:shui3}}-{{word:shang4}} {{word:tong1}}-{{word:guo4}}-{{word:qu4}}-{{word:de}} {{word:lu4}}.",

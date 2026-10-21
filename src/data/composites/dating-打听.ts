@@ -12,5 +12,7 @@ export default composite({
   tts: ["打听", "问X"],
   literal: "ask about X",
   fit: "plain",
+  topics: ["asking-and-answering"],
+  isA: ["speaking-action"],
   proposed: true,
 });

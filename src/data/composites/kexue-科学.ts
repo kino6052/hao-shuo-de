@@ -12,6 +12,8 @@ export default composite({
   tts: ["人怎么知道东西"],
   literal: "how people know things",
   fit: "plain",
+  topics: ["ideas-and-opinions"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:ren2}} {{word:zen3me}} {{word:zhi1dao4}} {{word:dong1}}-{{light:xi1}}?",

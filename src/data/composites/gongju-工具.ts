@@ -13,6 +13,8 @@ export default composite({
   fit: "natural",
   transparent: true,
   role: "noun",
+  topics: ["repairs"],
+  isA: ["tool"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:gong1}}-{{word:ju4}} {{word:hen3}} {{word:hao3}}.",

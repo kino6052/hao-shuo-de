@@ -12,6 +12,8 @@ export default composite({
   tts: ["飞机站的地方"],
   literal: "the place where planes stand",
   fit: "plain",
+  topics: ["planes-and-airports"],
+  isA: ["building"],
   examples: [
     {
       pinyin: "{{Word:fei1}}-{{word:ji1}} {{word:zhan4}}-{{word:de}} {{word:di4}}-{{light:fang1}} {{word:hen3}} {{word:da4}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["好看的地方"],
   literal: "a beautiful place",
   fit: "plain",
+  topics: ["a-trip"],
+  isA: ["place"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:hao3}}-{{word:kan4}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",

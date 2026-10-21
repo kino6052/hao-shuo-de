@@ -14,5 +14,7 @@ export default composite({
   tts: ["看到你的样子的东西"],
   literal: "a thing where you see your own look",
   fit: "plain",
+  topics: ["bathroom"],
+  isA: ["made-thing"],
   proposed: true,
 });

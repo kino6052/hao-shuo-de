@@ -14,6 +14,8 @@ export default composite({
   tts: ["做好味道的东西"],
   literal: "the thing that makes it taste good",
   fit: "plain",
+  topics: ["seasonings"],
+  isA: ["seasoning"],
   note: "Lesson {{lesson:greetings}}: gěi wǒ zuò-hǎo wèi-dào-de dōng-xi!",
   examples: [
     {

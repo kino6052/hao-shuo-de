@@ -14,5 +14,7 @@ export default word("ti2", {
     eng: "Questions and problems ({{word:wen4}}-{{word:ti2}}): \"no problem\" is {{word:mei2}}-{{word:you3}} {{word:wen4}}-{{word:ti2}}.",
     rus: "Вопросы и проблемы ({{word:wen4}}-{{word:ti2}}): «без проблем» — {{word:mei2}}-{{word:you3}} {{word:wen4}}-{{word:ti2}}.",
   },
+  topics: ["studying"],
+  isA: ["idea"],
   paraphrase: { forms: ["{{word:wen4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"], verdict: "clumsy" },
 });

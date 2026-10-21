@@ -15,6 +15,8 @@ export default composite({
   tts: ["让人看到的东西", "完了"],
   literal: "a thing that lets people see / used up",
   fit: "plain",
+  topics: ["fire-light-and-heat"],
+  isA: ["fire-or-light"],
   examples: [
     {
       pinyin: "{{Word:fang2}}-{{word:jian1}}-{{word:li3}} {{word:you3}} {{word:rang4}}-{{word:ren2}}-{{word:kan4}}-{{word:dao4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

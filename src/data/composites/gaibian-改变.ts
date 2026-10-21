@@ -12,6 +12,8 @@ export default composite({
   tts: ["变", "做的不一样"],
   literal: "make it different",
   fit: "natural",
+  topics: ["changing"],
+  isA: ["becoming"],
   note: "Lesson {{lesson:roles-of-a-word}}: verb-de + how.",
   examples: [
     {

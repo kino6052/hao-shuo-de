@@ -18,7 +18,9 @@
 //   same-form           composites that say it the same way (any form in common)
 //   kind-of             a composite and its head: a fēi-jī is a kind of jī
 //   agent               a composite that names a person by what they do (xué-de rén)
-//   category            words that share a category
+//   category            words that share a category (a leaf topic)
+//   tagged              an entry and one of its own tags (TAGS_PLAN.md): a = the entry, b = the tag id; `sub` is the axis, topic or kind
+//   tag-under           a tag and one of its parents on the same net: a = the tag, b = the parent; `sub` is the axis
 //   opposite-by-not     a word whose paraphrase is "not" + another word (from paraphrases)
 //   close-by-paraphrase a word whose paraphrase is one other word
 //   defined-by          a word whose paraphrase names another word (all of them, each with its form; a compound
@@ -49,6 +51,8 @@ export const KIND_NOTES = {
   'kind-of': 'a composite and its head',
   agent: 'a person named by what they do',
   category: 'share a category',
+  tagged: 'an entry and one of its tags',
+  'tag-under': 'a tag and its parent tag',
   'opposite-by-not': 'paraphrased as "not" + a word',
   'close-by-paraphrase': 'paraphrased as one other word',
   'defined-by': 'its paraphrase names the other word',
@@ -170,6 +174,14 @@ export function relationReport(source, facts, rules = {}) {
   };
   (source.categories ?? []).forEach(walk);
   for (const c of leaves) add({ kind: 'category', status: 'accepted', source: 'maps/categories', ends: 'word', members: c.wordIds.filter((id) => words[id]), a: c.key, why: `${c.key}: ${c.wordIds.map(term).join(', ')}` });
+
+  // -- the tag nets: stored, so accepted (the rule-found tags, TAGS_PLAN.md C2, will be proposed) ----------------------------------
+  const tagNets = [['topic', source.tags?.topics ?? [], 'topics', 'maps/topics'], ['kind', source.tags?.kinds ?? [], 'isA', 'maps/kinds']];
+  for (const [axis, list, field, from] of tagNets) {
+    for (const t of list) for (const p of t.parents ?? []) add({ kind: 'tag-under', status: 'accepted', source: from, ends: 'tag', a: t.id, b: p, sub: axis, why: `${t.id} is under ${p} on the ${axis} net` });
+    for (const [id, w] of Object.entries(words)) for (const t of w[field] ?? []) add({ kind: 'tagged', status: 'accepted', source: 'word file', ends: 'word-tag', a: id, b: t, sub: axis, why: `${term(id)} is tagged ${t} (${axis})` });
+    for (const c of composites) for (const t of c[field] ?? []) add({ kind: 'tagged', status: 'accepted', source: 'composite file', ends: 'composite-tag', a: c.zh, b: t, sub: axis, why: `${cname(c.zh)} is tagged ${t} (${axis})` });
+  }
 
   // -- composites that differ in one slot: opposites and close words ----------------------------------
   // two main forms of the same shape whose only difference is one word; if the two words are

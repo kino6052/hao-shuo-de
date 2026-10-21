@@ -14,5 +14,7 @@ export default composite({
   tts: ["让门不能开的东西"],
   literal: "a thing that keeps the door from opening",
   fit: "plain",
+  topics: ["house-and-doors"],
+  isA: ["tool"],
   proposed: true,
 });

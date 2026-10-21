@@ -12,6 +12,8 @@ export default composite({
   tts: ["帮人学的人"],
   literal: "the one who helps people learn",
   fit: "plain",
+  topics: ["classroom"],
+  isA: ["worker"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:bang1}}-{{word:ren2}}-{{word:xue2}}-{{word:de}} {{word:ren2}}.",

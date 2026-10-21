@@ -12,5 +12,7 @@ export default composite({
   tts: ["留在X"],
   literal: "stay at X",
   fit: "plain",
+  topics: ["posture"],
+  isA: ["body-position"],
   proposed: true,
 });

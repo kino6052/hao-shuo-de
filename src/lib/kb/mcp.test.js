@@ -48,12 +48,12 @@ describe('the protocol', () => {
 
   test('tools/list names the eighteen tools, each with a description and a schema', async () => {
     const { tools } = (await rpc('tools/list')).result;
-    expect(tools.map((t) => t.name)).toEqual(['kb_word', 'kb_remove', 'kb_parse', 'kb_check_form', 'kb_atoms', 'kb_relations', 'kb_english', 'kb_hints', 'kb_export', 'kb_cross_check', 'kb_yardsticks', 'kb_frontier', 'kb_meaning', 'kb_candidates', 'kb_add', 'kb_gains', 'kb_swaps', 'kb_scoreboard', 'kb_query']);
+    expect(tools.map((t) => t.name)).toEqual(['kb_word', 'kb_remove', 'kb_parse', 'kb_check_form', 'kb_atoms', 'kb_relations', 'kb_tags', 'kb_english', 'kb_hints', 'kb_export', 'kb_cross_check', 'kb_yardsticks', 'kb_frontier', 'kb_meaning', 'kb_candidates', 'kb_add', 'kb_gains', 'kb_swaps', 'kb_scoreboard', 'kb_query']);
     for (const t of TOOLS) {
       expect(t.description.length).toBeGreaterThan(40);
       expect(t.inputSchema.type).toBe('object');
       // kb_atoms, kb_relations, kb_export, kb_meaning, kb_candidates, kb_swaps and kb_scoreboard ask for nothing: no name is the whole report, no flag is the numbers now
-      if (!['kb_atoms', 'kb_relations', 'kb_export', 'kb_cross_check', 'kb_yardsticks', 'kb_frontier', 'kb_meaning', 'kb_candidates', 'kb_gains', 'kb_swaps', 'kb_scoreboard'].includes(t.name)) expect(t.inputSchema.required.length).toBeGreaterThan(0);
+      if (!['kb_atoms', 'kb_relations', 'kb_export', 'kb_cross_check', 'kb_yardsticks', 'kb_frontier', 'kb_meaning', 'kb_candidates', 'kb_gains', 'kb_swaps', 'kb_scoreboard', 'kb_tags'].includes(t.name)) expect(t.inputSchema.required.length).toBeGreaterThan(0);
       for (const r of t.inputSchema.required ?? []) expect(t.inputSchema.properties[r]).toBeDefined();
     }
   });

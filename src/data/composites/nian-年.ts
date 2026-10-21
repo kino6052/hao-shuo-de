@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:nian2}}"],
   tts: ["年"],
   fit: "word",
+  topics: ["calendar"],
+  isA: ["time-span"],
   note: "yuè is also \"month\".",
   examples: [
     {

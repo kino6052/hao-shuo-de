@@ -14,6 +14,8 @@ export default word("hao3", {
     eng: "Good: the most basic way to judge anything. Many composites start with it.",
     rus: "Хороший — самая базовая оценка чего угодно. С него начинаются многие составные слова.",
   },
+  topics: ["how-good"],
+  isA: ["value-quality"],
   maps: "pona",
   atom: {
     eng: "Good is felt: what helps and what you like. Words like \"useful\" or \"nice\" are only neighbours.",

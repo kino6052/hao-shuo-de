@@ -12,4 +12,6 @@ export default composite({
   tts: ["地的颜色"],
   literal: "the colour of the ground",
   fit: "plain",
+  topics: ["colours-and-patterns"],
+  isA: ["colour-quality"],
 });

@@ -12,6 +12,8 @@ export default composite({
   tts: ["快拿来的东西"],
   literal: "things brought fast",
   fit: "plain",
+  topics: ["bank-and-post"],
+  isA: ["trade-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:kuai4}} {{word:na2}}-{{word:lai2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

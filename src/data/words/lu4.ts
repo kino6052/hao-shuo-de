@@ -10,6 +10,8 @@ export default word("lu4", {
     eng: "A road, the way to a place. Asking the way needs it.",
     rus: "Дорога, путь куда-то. Без него не спросить дорогу.",
   },
+  topics: ["the-road"],
+  isA: ["outdoor-place"],
   paraphrase: {
     forms: [
       "{{word:ren2}} {{word:he2}} {{word:che1}} {{word:zou3}}-{{word:de}} {{word:di4}}-{{light:fang1}}",

@@ -10,5 +10,7 @@ export default word("liu4", {
     eng: "Six. Numbers can't be described with other words.",
     rus: "Шесть. Числа не описать другими словами.",
   },
+  topics: ["number-words"],
+  isA: ["counting-number"],
   paraphrase: { forms: ["{{word:san1}} {{word:he2}} {{word:san1}}"], verdict: "clumsy" },
 });

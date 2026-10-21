@@ -12,6 +12,8 @@ export default composite({
   tts: ["玩儿的说"],
   literal: "say in play",
   fit: "plain",
+  topics: ["chatting"],
+  isA: ["speaking-action"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:wan2r}}-{{word:de}} {{word:shuo1}}.",

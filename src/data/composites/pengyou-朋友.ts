@@ -12,6 +12,8 @@ export default composite({
   tts: ["好关系的人"],
   literal: "a person you have good relations with",
   fit: "plain",
+  topics: ["friends-and-neighbours"],
+  isA: ["social-role"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:wo3}} {{word:hao3}}-{{word:guan1xi}}-{{word:de}} {{word:ren2}}.",

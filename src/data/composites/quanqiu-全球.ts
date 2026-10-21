@@ -12,5 +12,7 @@ export default composite({
   tts: ["地球上都"],
   literal: "all over the Earth",
   fit: "plain",
+  topics: ["countries-and-cities"],
+  isA: ["place"],
   proposed: true,
 });

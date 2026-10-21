@@ -12,5 +12,7 @@ export default composite({
   tts: ["做饭的人"],
   literal: "a person who makes meals",
   fit: "plain",
+  topics: ["jobs"],
+  isA: ["worker"],
   proposed: true,
 });

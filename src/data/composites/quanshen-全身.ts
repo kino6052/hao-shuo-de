@@ -13,5 +13,7 @@ export default composite({
   literal: "from head to foot",
   fit: "natural",
   transparent: true,
+  topics: ["trunk-and-skin"],
+  isA: ["body-part"],
   proposed: true,
 });

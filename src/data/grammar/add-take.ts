@@ -6,6 +6,7 @@ export default pattern("add-take", {
     rus: "Чтобы сложить, соедините числа (fàng zài yī-qǐ). Чтобы вычесть, используйте ná. Ответ идёт после запятой с shì: shì qī — «получается семь».",
   },
   covers: [],
+  tags: ["count", "cat:quantity", "cat:action"],
   template: {
     hsd: "A, B {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}, {{word:shi4}} C",
     eng: "A and B put together is C",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["做出"],
   literal: "make",
   fit: "plain",
+  topics: ["deciding"],
+  isA: ["making"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zuo4}}-{{word:chu1}} {{word:fa3}}.",

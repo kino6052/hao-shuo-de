@@ -12,5 +12,7 @@ export default composite({
   tts: ["就算"],
   fit: "natural",
   transparent: true,
+  topics: ["joining-words"],
+  isA: ["conjunction"],
   proposed: true,
 });

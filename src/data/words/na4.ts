@@ -14,6 +14,8 @@ export default word("na4", {
     eng: "Without it, you can't point at what's over there: no \"that\".",
     rus: "Без него нельзя указать на то, что далеко: нет «то».",
   },
+  topics: ["pointers"],
+  isA: ["pronoun"],
   maps: "ni",
   atom: {
     eng: "\"That\" is learned by pointing at what is away from you; it stands beside zhè, not under it.",

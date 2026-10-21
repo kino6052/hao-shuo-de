@@ -6,6 +6,7 @@ export default pattern("yi-yang-same", {
     rus: "Говорит, что вещи одинаковы: yī-yàng стоит после вещей. Bù yī-yàng говорит, что они разные.",
   },
   covers: ["grammar:same"],
+  tags: ["compare", "cat:relation"],
   template: { hsd: "Things + {{word:yi1}}-{{word:yang4}}", eng: "The things are the same" },
   rules: [
     { lhs: "VP", hsd: "=yi1 =yang4", eng: "yī-yàng, the same" },

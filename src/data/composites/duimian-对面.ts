@@ -13,6 +13,8 @@ export default composite({
   literal: "facing side",
   fit: "natural",
   kinds: ["built"],
+  topics: ["near-and-far"],
+  isA: ["place-word"],
   note: "Real Mandarin: 对面.",
   examples: [
     {

@@ -12,6 +12,8 @@ export default composite({
   tts: ["工具上看的面"],
   literal: "the side of a tool you look at",
   fit: "plain",
+  topics: ["phone-and-computer"],
+  isA: ["computer-or-phone"],
   examples: [
     {
       pinyin: "{{Word:gong1}}-{{word:ju4}}-{{word:shang4}} {{word:kan4}}-{{word:de}} {{word:mian4}} {{word:hen3}} {{word:da4}}.",

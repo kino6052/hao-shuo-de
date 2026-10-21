@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:si4}}"],
   tts: ["四"],
   fit: "word",
+  topics: ["number-words"],
+  isA: ["counting-number"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:si4}} {{word:dian3}} {{word:qu4}}.",

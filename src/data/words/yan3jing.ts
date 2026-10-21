@@ -10,6 +10,8 @@ export default word("yan3jing", {
     eng: "The eyes. {{word:kan4}}-{{word:de}} {{word:bu4}}-{{light:fen1}} would work, but eyes come up too often for that.",
     rus: "Глаза. Можно сказать {{word:kan4}}-{{word:de}} {{word:bu4}}-{{light:fen1}}, но глаза нужны слишком часто.",
   },
+  topics: ["head-and-face"],
+  isA: ["body-part"],
   atom: {
     eng: "The eye is learned by pointing at it; \"the part that sees\" leans on kàn, which is said with the eyes.",
     rus: "Глаз усваивают, показывая на него; «часть, которая видит» опирается на kàn, а kàn объясняют через глаза.",

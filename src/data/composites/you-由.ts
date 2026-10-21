@@ -12,6 +12,8 @@ export default composite({
   tts: ["从"],
   literal: "from",
   fit: "plain",
+  topics: ["words-before-nouns"],
+  isA: ["preposition"],
   note: "For who did it, say it first: tā zuò-de.",
   examples: [
     {

@@ -12,5 +12,7 @@ export default composite({
   tts: ["在果里的水"],
   literal: "the water inside a fruit",
   fit: "plain",
+  topics: ["drinks"],
+  isA: ["drink"],
   proposed: true,
 });

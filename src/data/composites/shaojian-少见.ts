@@ -12,4 +12,6 @@ export default composite({
   tts: ["少见", "很少看见"],
   literal: "rarely seen",
   fit: "natural",
+  topics: ["how-often"],
+  isA: ["frequency"],
 });

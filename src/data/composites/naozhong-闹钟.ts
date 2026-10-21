@@ -14,5 +14,7 @@ export default composite({
   tts: ["叫你起来的工具"],
   literal: "a tool that calls you to get up",
   fit: "plain",
+  topics: ["clock"],
+  isA: ["made-thing"],
   proposed: true,
 });

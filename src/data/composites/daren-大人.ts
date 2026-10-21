@@ -13,6 +13,8 @@ export default composite({
   literal: "big person",
   fit: "natural",
   transparent: true,
+  topics: ["young-and-old"],
+  isA: ["person-by-age-or-sex"],
   note: "Real Mandarin: 大人.",
   examples: [
     {

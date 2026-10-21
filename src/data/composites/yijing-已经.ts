@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:le}}"],
   tts: ["了"],
   fit: "skip",
+  topics: ["adverbs"],
+  isA: ["adverb-word"],
   note: "le often does the job: wǒ chī le.",
   examples: [
     {

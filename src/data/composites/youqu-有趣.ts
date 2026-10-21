@@ -12,6 +12,8 @@ export default composite({
   tts: ["好玩儿", "好玩儿"],
   literal: "good to play",
   fit: "natural",
+  topics: ["how-good"],
+  isA: ["value-quality"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:hao3}}-{{word:wan2r}}.",

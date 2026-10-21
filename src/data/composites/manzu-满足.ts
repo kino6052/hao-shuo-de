@@ -12,6 +12,8 @@ export default composite({
   tts: ["给X要的"],
   literal: "give X what X wants",
   fit: "plain",
+  topics: ["happy-feelings"],
+  isA: ["feeling-and-wanting"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:gei3}} {{word:ta1}} {{word:yao4}}-{{word:de}}.",

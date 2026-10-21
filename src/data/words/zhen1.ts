@@ -10,6 +10,8 @@ export default word("zhen1", {
     eng: "Really, truly. {{word:hen3}} is close, but {{word:zhen1}} says you mean it: {{word:zhen1}} {{word:hao3}}!",
     rus: "Правда, действительно. {{word:hen3}} близко, но {{word:zhen1}} подчёркивает, что вы это серьёзно: {{word:zhen1}} {{word:hao3}}!",
   },
+  topics: ["easy-hard-right-wrong"],
+  isA: ["truth-or-ease"],
   maps: "lon",
   paraphrase: {
     forms: [

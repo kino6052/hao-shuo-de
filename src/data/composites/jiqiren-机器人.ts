@@ -15,6 +15,8 @@ export default composite({
   tts: ["机器人", "能做人做的东西的工具"],
   literal: "a tool that can do what people do",
   fit: "natural",
+  topics: ["farms-and-factories"],
+  isA: ["machine"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:ji1}}-{{word:qi4}}-{{word:ren2}}.",

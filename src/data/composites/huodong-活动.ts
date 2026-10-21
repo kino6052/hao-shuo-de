@@ -16,6 +16,8 @@ export default composite({
   literal: "live-move / something done together",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["hobbies-and-outings"],
+  isA: ["activity-name"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:yi1}}-{{word:qi3}} {{word:huo2}}-{{word:dong4}}.",

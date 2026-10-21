@@ -14,6 +14,8 @@ export default word("liu2", {
     eng: "Stay, keep: stay home, keep something for later.",
     rus: "Оставаться, оставлять: остаться дома, оставить на потом.",
   },
+  topics: ["meeting-and-parting"],
+  isA: ["starting-and-stopping"],
   maps: "awen",
   paraphrase: { forms: ["{{word:bu4}} {{word:zou3}}"], verdict: "clumsy" },
 });

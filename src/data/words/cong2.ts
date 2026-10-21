@@ -10,6 +10,8 @@ export default word("cong2", {
     eng: "From: where something starts. Without it, no journey has a beginning.",
     rus: "Из, от: откуда что-то начинается. Без него у пути нет начала.",
   },
+  topics: ["words-before-nouns"],
+  isA: ["preposition"],
   maps: "",
   paraphrase: {
     forms: ["{{word:yi3}}-{{word:qian2}} {{word:zai4}} X"],

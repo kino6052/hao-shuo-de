@@ -12,5 +12,7 @@ export default composite({
   tts: ["什么都"],
   literal: "whatever, all",
   fit: "plain",
+  topics: ["joining-words"],
+  isA: ["conjunction"],
   proposed: true,
 });

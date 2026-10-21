@@ -14,5 +14,7 @@ export default composite({
   tts: ["很多人一起吃，一起玩儿"],
   literal: "many people eat together and play together",
   fit: "plain",
+  topics: ["parties-and-gifts"],
+  isA: ["event"],
   proposed: true,
 });

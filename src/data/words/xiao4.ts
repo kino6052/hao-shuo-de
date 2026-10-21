@@ -10,6 +10,8 @@ export default word("xiao4", {
     eng: "Laugh, smile. No description captures it.",
     rus: "Смеяться, улыбаться. Никакое описание этого не передаст.",
   },
+  topics: ["happy-feelings"],
+  isA: ["body-action"],
   senses: {
     school: {
       hanzi: "校",

@@ -12,5 +12,7 @@ export default composite({
   tts: ["孩子玩儿的东西"],
   literal: "a thing children play with",
   fit: "plain",
+  topics: ["games-and-toys"],
+  isA: ["toy-or-game"],
   proposed: true,
 });

@@ -12,6 +12,8 @@ export default composite({
   tts: ["给别的人一点"],
   literal: "give others some",
   fit: "plain",
+  topics: ["helping-and-sharing"],
+  isA: ["social-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:gei3}} {{word:bie2}}-{{word:de}} {{word:ren2}} {{word:yi1}}-{{word:dian3}}.",

@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:bu4}}-{{light:fen1}}"],
   tts: ["部分"],
   fit: "word",
+  topics: ["office"],
+  isA: ["group-of-people"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:bu4}}-{{light:fen1}} {{word:hen3}} {{word:hao3}}.",

@@ -12,5 +12,7 @@ export default composite({
   tts: ["不怕做"],
   literal: "not afraid to do",
   fit: "plain",
+  topics: ["helping-words"],
+  isA: ["auxiliary"],
   proposed: true,
 });

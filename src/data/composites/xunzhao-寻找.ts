@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:zhao3}}"],
   tts: ["找"],
   fit: "word",
+  topics: ["senses"],
+  isA: ["perceiving"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zhao3}} {{word:ni3}}.",

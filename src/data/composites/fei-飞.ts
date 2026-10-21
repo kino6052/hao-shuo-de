@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:fei1}}"],
   tts: ["飞"],
   fit: "word",
+  topics: ["walking-and-running"],
+  isA: ["moving-action"],
   note: "Lesson {{lesson:direction-and-result}}.",
   examples: [
     {

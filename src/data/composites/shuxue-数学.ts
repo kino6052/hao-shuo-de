@@ -16,6 +16,8 @@ export default composite({
   literal: "the learning of putting together and taking away",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["studying"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ai4}} {{word:shu4}}-{{word:xue2}}.",

@@ -6,6 +6,7 @@ export default pattern("kuai-quick", {
     rus: "Kuài перед глаголом значит «быстро»: kuài lái — иди скорее. Kuài yào перед глаголом и le значит «вот-вот»: tā kuài yào lái le — он вот-вот придёт.",
   },
   covers: ["grammar:future"],
+  tags: ["future", "when", "cat:time"],
   template: { hsd: "{{word:kuai4}} + verb / {{word:kuai4}} {{word:yao4}} + verb {{word:le}}", eng: "Do it quickly / is about to do it" },
   rules: [
     { lhs: "VP", hsd: "=kuai4 VP", eng: "kuài and a verb: quickly" },

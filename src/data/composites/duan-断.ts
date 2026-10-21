@@ -12,6 +12,8 @@ export default composite({
   tts: ["变两个部分"],
   literal: "become two parts",
   fit: "plain",
+  topics: ["injuries"],
+  isA: ["being-affected"],
   examples: [
     {
       pinyin: "{{Word:che1}} {{word:bian4}} {{word:liang3}}-{{light:ge4}} {{word:bu4}}-{{light:fen1}} {{word:le}}.",

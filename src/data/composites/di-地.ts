@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:di4}}"],
   tts: ["地"],
   fit: "word",
+  topics: ["house-and-doors"],
+  isA: ["building-part"],
   examples: [
     {
       pinyin: "{{Word:shui3}} {{word:zai4}} {{word:di4}}-{{word:shang4}}.",

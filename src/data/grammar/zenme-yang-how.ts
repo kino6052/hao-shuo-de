@@ -6,6 +6,7 @@ export default pattern("zenme-yang-how", {
     rus: "Zěnme-yàng спрашивает «как»: jīn-tiān zěnme yàng — как сегодня.",
   },
   covers: ["grammar:question-word"],
+  tags: ["question", "describe", "cat:quality"],
   template: { hsd: "Thing + {{word:zen3me}} {{word:yang4}}?", eng: "How is it?" },
   rules: [
     { lhs: "VP", hsd: "=zen3me =yang4", eng: "zěnme yàng, how is it" },

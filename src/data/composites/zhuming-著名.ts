@@ -12,6 +12,8 @@ export default composite({
   tts: ["人人都知道的"],
   literal: "that everyone knows",
   fit: "plain",
+  topics: ["describing-people"],
+  isA: ["value-quality"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:ren2}}-{{word:ren2}} {{word:dou1}} {{word:zhi1dao4}}-{{word:de}} {{word:ren2}}.",

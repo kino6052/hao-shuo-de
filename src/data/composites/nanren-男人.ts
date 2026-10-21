@@ -15,6 +15,8 @@ export default composite({
   tts: ["男人", "不是女的人"],
   fit: "word",
   kinds: ["spelled", "built"],
+  topics: ["men-and-women"],
+  isA: ["person-by-age-or-sex"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:yi1}}-{{light:ge4}} {{word:hao3}} {{word:nan2}}-{{word:ren2}}.",

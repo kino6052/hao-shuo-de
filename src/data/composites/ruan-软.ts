@@ -12,6 +12,8 @@ export default composite({
   tts: ["不硬"],
   literal: "not hard",
   fit: "natural",
+  topics: ["how-it-feels"],
+  isA: ["touch-quality"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:bu4}} {{word:ying4}}.",

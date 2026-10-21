@@ -12,5 +12,7 @@ export default composite({
   tts: ["对不起"],
   fit: "natural",
   transparent: true,
+  topics: ["manners"],
+  isA: ["set-phrase"],
   proposed: true,
 });

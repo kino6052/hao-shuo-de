@@ -6,6 +6,7 @@ export default pattern("cong-from", {
     rus: "Говорит, откуда вы идёте: cóng стоит перед местом, потом глагол, lái.",
   },
   covers: ["grammar:from"],
+  tags: ["where", "cat:place"],
   template: { hsd: "Who + {{word:cong2}} + place + {{word:lai2}}", eng: "Who comes from the place" },
   rules: [{ lhs: "VP", hsd: "=cong2 NP VP", eng: "cóng, a place, then the verb" }],
   taught: "moving/from",

@@ -14,6 +14,8 @@ export default word("ba3", {
     eng: "Puts the thing before the verb: {{word:ba3}} X {{word:fang4}} {{word:zai4}} …. Needed to say where you put something.",
     rus: "Ставит вещь перед глаголом: {{word:ba3}} X {{word:fang4}} {{word:zai4}} …. Без него не сказать, куда что-то положили.",
   },
+  topics: ["particles"],
+  isA: ["particle"],
   maps: "",
   atom: {
     eng: "A grammar word that brings the thing forward before the verb (bǎ yīfu fàng zài dì-shàng); there is nothing to say it with.",

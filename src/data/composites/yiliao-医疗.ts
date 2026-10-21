@@ -12,4 +12,6 @@ export default composite({
   tts: ["帮人身体好"],
   literal: "help bodies be well",
   fit: "plain",
+  topics: ["at-the-doctor"],
+  isA: ["abstract-thing"],
 });

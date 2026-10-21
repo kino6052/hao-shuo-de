@@ -12,6 +12,8 @@ export default composite({
   tts: ["部分很多的"],
   literal: "with many parts",
   fit: "plain",
+  topics: ["easy-hard-right-wrong"],
+  isA: ["truth-or-ease"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:bu4}}-{{light:fen1}}-{{word:hen3}}-{{word:duo1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

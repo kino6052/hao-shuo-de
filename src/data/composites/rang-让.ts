@@ -17,6 +17,8 @@ export default composite({
   tts: ["让", "叫X…", "我来…", "给我…"],
   literal: "have X … / I come … / give me …",
   fit: "word",
+  topics: ["helping-and-sharing"],
+  isA: ["social-action"],
   note: "Lesson {{lesson:everyday-patterns}}: jiào tā jìn-lái (let him in), bù jiào (won't let), wǒ lái (let me), gěi wǒ kàn yī-xià (let me see).",
   examples: [
     {

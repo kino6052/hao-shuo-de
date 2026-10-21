@@ -9,6 +9,7 @@ import { fileURLToPath } from 'node:url';
 import { SECTIONS } from './cross-check.js';
 import { PARTS } from './frontier.js';
 import { renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderEnglish, renderHints, exportTurtle, exportFragment, renderExportSummary, renderCrossCheck, renderFrontier, renderYardsticks, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps, renderGains, renderGainExplain } from './kb.js';
+import { askTags } from './tags.js';
 import { scoreboardRow, readScoreboard, renderScoreboard, renderHistory } from './scoreboard.js';
 
 // the stored rows (refactor --write adds one after every change)
@@ -97,6 +98,27 @@ export const TOOLS = [
         kind: { type: 'string', description: 'A kind (opposite, close, same-form, kind-of, agent, category, opposite-phrase, close-phrase, opposite-by-not, close-by-paraphrase, defined-by, circular, connected); leave out for the counts.' },
         status: { type: 'string', enum: ['accepted', 'proposed'], description: 'Only the accepted or only the proposed ones.' },
         limit: { type: 'integer', description: 'How many to list (default 8).' },
+      },
+    },
+  },
+  {
+    name: 'kb_tags',
+    description:
+      'The tag nets (TAGS_PLAN.md): every entry, core word or composite, sits under tags on two nets that can nest and a tag can have several parents. A TOPIC says where you meet the word, like a picture-dictionary page (home > kitchen > kitchen-utensils); a KIND says what it is (thing > tool > cutting-tool). ' +
+      'Use it to pick words for a lesson text or a theme, to see where a new entry belongs, to find what two words share, or to check the nets. Modes, the first given wins: check (cycles, unknown tags, extra, empty, too big and too small leaves, vague and untagged entries), proposed (tags waiting for review), of (every path from one entry up to a top tag), common (the closest tags two entries share), ' +
+      'find (tags whose name has the text, and where the entries an English word leads to sit), tag (one tag: parents, subtags, members through subtags, core words marked). With nothing: the topic net as a tree with counts (kinds: true for the kind net).',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        tag: { type: 'string', description: 'A tag id, e.g. kitchen-utensils or cutting-tool (either net).' },
+        of: { type: 'string', description: 'An entry (id dao1, pinyin or hanzi): every path from it up to a top tag, on both nets.' },
+        common: { type: 'array', items: { type: 'string' }, description: 'Two entries: the closest tags both are under.' },
+        find: { type: 'string', description: 'Text to look for in tag names, or an English word to see where its entries sit.' },
+        check: { type: 'boolean', description: 'Check the nets and the entries.' },
+        proposed: { type: 'string', description: 'Tags waiting for review, under this tag (or "all").' },
+        kinds: { type: 'boolean', description: 'The kind net instead of the topic net (for the tree).' },
+        depth: { type: 'integer', description: 'How many levels of the tree to show.' },
+        limit: { type: 'integer', description: 'How many members to list for a tag (default 40).' },
       },
     },
   },
@@ -288,6 +310,12 @@ export async function callTool(kb, name, args = {}, { scoreboardFile = SCOREBOAR
     }
     case 'kb_relations':
       return renderRelations(kb.relations(), { kind: args.kind || undefined, status: args.status || undefined, limit: Number(args.limit) > 0 ? Number(args.limit) : 8 });
+    case 'kb_tags': {
+      const ask = { tag: args.tag || undefined, of: args.of || undefined, find: args.find || undefined, check: !!args.check, kinds: !!args.kinds, depth: args.depth, limit: args.limit };
+      if (Array.isArray(args.common) && args.common.length) ask.common = args.common.map(String);
+      if (args.proposed) ask.proposed = args.proposed === 'all' ? true : String(args.proposed);
+      return askTags(kb.tags(), ask).text;
+    }
     case 'kb_english': {
       if (!args.word) throw new Error('word is required');
       return renderEnglish(kb.english(String(args.word)));

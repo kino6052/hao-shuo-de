@@ -12,6 +12,8 @@ export default composite({
   tts: ["在要的时间"],
   literal: "at the time it's needed",
   fit: "plain",
+  topics: ["how-often"],
+  isA: ["adverb-word"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:zai4}} {{word:yao4}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:lai2}} {{word:le}}.",

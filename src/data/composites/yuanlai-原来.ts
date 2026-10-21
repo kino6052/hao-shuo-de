@@ -16,6 +16,8 @@ export default composite({
   literal: "at the start",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["before-and-after"],
+  isA: ["time-order"],
   examples: [
     {
       pinyin: "{{Word:zai4}} {{word:kai1shi3}}-{{word:de}} {{word:shi2}}-{{word:jian1}}, {{word:wo3}} {{word:zai4}} {{word:jia1}}.",

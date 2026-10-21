@@ -6,6 +6,7 @@ export default pattern("zui-most", {
     rus: "Говорит «самый»: zuì стоит перед описывающим словом или глаголом. Zuì-hòu значит «последний».",
   },
   covers: ["grammar:most"],
+  tags: ["compare", "how-much", "cat:relation", "cat:quality"],
   template: { hsd: "Thing + {{word:zui4}} + adjective", eng: "The thing is the most that" },
   rules: [
     { lhs: "VP", hsd: "=zui4 @adjective", eng: "zuì and a describing word" },

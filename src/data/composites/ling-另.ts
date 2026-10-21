@@ -12,5 +12,7 @@ export default composite({
   tts: ["别的"],
   fit: "natural",
   transparent: true,
+  topics: ["all-and-some"],
+  isA: ["amount-word"],
   proposed: true,
 });

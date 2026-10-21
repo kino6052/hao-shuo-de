@@ -14,6 +14,8 @@ export default word("neng2", {
     eng: "Can, may. Without it, you can't say what's possible or allowed.",
     rus: "Мочь, можно. Без него не сказать, что возможно или разрешено.",
   },
+  topics: ["helping-words"],
+  isA: ["auxiliary"],
   maps: "ken",
   paraphrase: { forms: ["{{word:you3}} {{word:li4}} {{word:zuo4}}"], verdict: "clumsy" },
 });

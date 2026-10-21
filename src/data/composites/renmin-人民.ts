@@ -12,6 +12,8 @@ export default composite({
   tts: ["国的人"],
   literal: "the country's people",
   fit: "plain",
+  topics: ["government"],
+  isA: ["group-of-people"],
   examples: [
     {
       pinyin: "{{Word:guo2}}-{{word:de}} {{word:ren2}} {{word:hen3}} {{word:duo1}}.",

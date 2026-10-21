@@ -14,6 +14,8 @@ export default word("wei4", {
     eng: "For: {{word:wei4}}-{{word:shen2me}}, why, is \"for what\".",
     rus: "Для: {{word:wei4}}-{{word:shen2me}} — почему, «для чего».",
   },
+  topics: ["words-before-nouns"],
+  isA: ["preposition"],
   senses: {
     taste: {
       hanzi: "味",

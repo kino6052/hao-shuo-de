@@ -6,6 +6,7 @@ export default pattern("men-plural", {
     rus: "Men после существительного делает множественное число для людей: hái-zi-men — дети. После wǒ, nǐ, tā оно даёт «мы», «вы», «они»; дальше могут идти число и счётное слово: wǒ-men sān-ge rén — нас трое.",
   },
   covers: ["grammar:more-people"],
+  tags: ["count", "cat:quantity"],
   template: { hsd: "noun + {{word:men}}", eng: "The people of that kind" },
   rules: [
     { lhs: "NP", hsd: "@noun =men", eng: "a noun and men: the children" },

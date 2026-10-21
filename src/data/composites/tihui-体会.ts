@@ -12,6 +12,8 @@ export default composite({
   tts: ["心里知道"],
   literal: "know it in your heart",
   fit: "plain",
+  topics: ["knowing-and-understanding"],
+  isA: ["thinking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:xin1}}-{{word:li3}} {{word:zhi1dao4}} {{word:le}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["走", "用脚去", "去"],
   literal: "go with your feet",
   fit: "word",
+  topics: ["walking-and-running"],
+  isA: ["moving-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yao4}} {{word:zou3}} {{word:le}}.",

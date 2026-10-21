@@ -12,6 +12,8 @@ export default composite({
   tts: ["上去"],
   literal: "go up",
   fit: "natural",
+  topics: ["changing"],
+  isA: ["becoming"],
   examples: [
     {
       pinyin: "{{Word:ri4}} {{word:shang4}}-{{word:qu4}} {{word:le}}.",

@@ -12,5 +12,7 @@ export default composite({
   tts: ["把X拿在手里"],
   literal: "hold X in the hand",
   fit: "plain",
+  topics: ["working-life"],
+  isA: ["working"],
   proposed: true,
 });

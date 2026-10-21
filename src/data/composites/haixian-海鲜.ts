@@ -14,5 +14,7 @@ export default composite({
   tts: ["水里的动物，吃的"],
   literal: "animals in the water, to eat",
   fit: "plain",
+  topics: ["meat"],
+  isA: ["meat-item"],
   proposed: true,
 });

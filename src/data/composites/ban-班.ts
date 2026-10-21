@@ -12,6 +12,8 @@ export default composite({
   tts: ["一起学的人"],
   literal: "the people who learn together",
   fit: "plain",
+  topics: ["classroom"],
+  isA: ["group-of-people"],
   examples: [
     {
       pinyin: "{{Word:ta1}}-{{word:men}} {{word:shi4}} {{word:yi1}}-{{word:qi3}}-{{word:xue2}}-{{word:de}} {{word:ren2}}.",

@@ -14,6 +14,8 @@ export default word("pang2bian1", {
     eng: "Beside, next to. A basic position with no other word.",
     rus: "Рядом, сбоку. Базовое положение, для которого нет другого слова.",
   },
+  topics: ["up-down-in-out"],
+  isA: ["place-relation"],
   maps: "poka",
   paraphrase: {
     forms: ["{{word:zuo3}}-{{word:bian1}} {{word:he2}} {{word:you4}}-{{word:bian1}}"],

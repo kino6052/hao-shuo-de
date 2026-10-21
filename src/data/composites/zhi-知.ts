@@ -11,4 +11,6 @@ export default composite({
   hsd: ["{{word:zhi1dao4}}"],
   tts: ["知道"],
   fit: "word",
+  topics: ["knowing-and-understanding"],
+  isA: ["thinking-action"],
 });

@@ -12,6 +12,8 @@ export default composite({
   tts: ["月的时间"],
   literal: "moon time",
   fit: "plain",
+  topics: ["times-of-day"],
+  isA: ["time-of-day-word"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zai4}} {{word:yue4}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:shui4jiao4}}.",

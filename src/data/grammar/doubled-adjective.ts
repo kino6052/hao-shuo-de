@@ -6,6 +6,7 @@ export default pattern("doubled-adjective", {
     rus: "Скажите описывающее слово дважды и добавьте -de, чтобы усилить его и оживить: yuán-yuán-de. Hěn не нужно. Перед глаголом hǎo-hǎo значит «как следует».",
   },
   covers: [],
+  tags: ["doubling", "describe", "cat:quality"],
   template: { hsd: "adjective-adjective-{{word:de}}", eng: "Nice and … (stronger)" },
   rules: [
     { lhs: "AdjP", hsd: "@adjective @again", eng: "a describing word said twice" },

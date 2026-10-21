@@ -70,6 +70,10 @@ export interface Composite {
    * Every reviewed entry has them (check-book).
    */
   examples?: CompositeExample[];
+  /** The most specific topic tags (src/data/maps/topics.ts): where you meet the word. TAGS_PLAN.md. */
+  topics?: string[];
+  /** The most specific kind tags (src/data/maps/kinds.ts): what the entry is. (`kinds` above is built or spelled.) */
+  isA?: string[];
   /** Written or changed by Claude, waiting for the author's review. */
   proposed?: boolean;
 }

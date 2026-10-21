@@ -15,6 +15,8 @@ export default composite({
   tts: ["写", "写的看的东西"],
   literal: "write / a drawn thing to look at",
   fit: "plain",
+  topics: ["art-and-drawing"],
+  isA: ["making"],
   note: "xiě covers drawing too.",
   examples: [
     {

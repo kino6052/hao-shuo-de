@@ -12,6 +12,8 @@ export default composite({
   tts: ["做一下"],
   literal: "do it for a moment",
   fit: "natural",
+  topics: ["deciding"],
+  isA: ["thinking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zuo4}} {{word:yi1}}-{{word:xia4}}.",

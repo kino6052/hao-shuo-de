@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:hao4}}"],
   tts: ["号"],
   fit: "word",
+  topics: ["ordinals"],
+  isA: ["ordinal"],
   examples: [
     {
       pinyin: "{{Word:jin1}}-{{word:tian1}} {{word:shi2}} {{word:hao4}}.",

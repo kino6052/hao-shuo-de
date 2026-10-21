@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:ju4}}"],
   tts: ["具"],
   fit: "word",
+  topics: ["repairs"],
+  isA: ["tool"],
   proposed: true,
 });

@@ -13,6 +13,8 @@ export default composite({
   literal: "not together anymore",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["meeting-and-parting"],
+  isA: ["social-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:fen1}}-{{word:kai1}} {{word:le}}.",

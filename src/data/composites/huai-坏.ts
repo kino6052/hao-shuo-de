@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:huai4}}"],
   tts: ["坏"],
   fit: "word",
+  topics: ["how-good"],
+  isA: ["value-quality"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:shou3}}-{{word:ji1}} {{word:huai4}} {{word:le}}.",

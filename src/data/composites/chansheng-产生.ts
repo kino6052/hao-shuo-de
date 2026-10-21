@@ -12,6 +12,8 @@ export default composite({
   tts: ["做出"],
   literal: "make come out",
   fit: "plain",
+  topics: ["changing"],
+  isA: ["becoming"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:zuo4}}-{{word:chu1}} {{word:yi1}}-{{light:ge4}} {{word:hao3}} {{word:xiang3}}-{{word:fa3}}.",

@@ -12,4 +12,6 @@ export default composite({
   tts: ["帮人用法的人"],
   literal: "a person who helps others use the law",
   fit: "plain",
+  topics: ["law-and-crime"],
+  isA: ["worker"],
 });

@@ -14,5 +14,7 @@ export default composite({
   tts: ["把衣服从身体上拿下来"],
   literal: "take the clothes down from the body",
   fit: "plain",
+  topics: ["washing-and-dressing"],
+  isA: ["wearing"],
   proposed: true,
 });

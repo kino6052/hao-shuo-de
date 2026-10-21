@@ -13,6 +13,8 @@ export default composite({
   literal: "middle heart / the middle",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["near-and-far"],
+  isA: ["place-word"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{word:li3}} {{word:shi4}} {{word:zhong1}}-{{word:xin1}}.",

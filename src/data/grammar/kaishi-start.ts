@@ -6,6 +6,7 @@ export default pattern("kaishi-start", {
     rus: "Говорит, что что-то начинается: kāishǐ стоит перед глаголом.",
   },
   covers: [],
+  tags: ["when", "cat:time", "cat:action"],
   template: { hsd: "Who + {{word:kai1shi3}} + verb", eng: "Who starts to do the verb" },
   rules: [{ lhs: "VP", hsd: "=kai1shi3 VP", eng: "kāishǐ, then the verb" }],
   taught: "around-an-action/start",

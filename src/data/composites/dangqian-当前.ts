@@ -12,5 +12,7 @@ export default composite({
   tts: ["现在的"],
   literal: "of now",
   fit: "plain",
+  topics: ["before-and-after"],
+  isA: ["time-point"],
   proposed: true,
 });

@@ -12,6 +12,8 @@ export default composite({
   tts: ["对的方法"],
   literal: "the right way",
   fit: "plain",
+  topics: ["ideas-and-opinions"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yong4}} {{word:dui4}}-{{word:de}} {{word:fang1}}-{{word:fa3}}.",

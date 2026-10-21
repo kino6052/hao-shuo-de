@@ -12,6 +12,8 @@ export default composite({
   tts: ["是X人的一部分"],
   literal: "be a part of X's people",
   fit: "plain",
+  topics: ["groups-and-organisations"],
+  isA: ["social-role"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:wo3}}-{{word:men}} {{word:ren2}}-{{word:de}} {{word:yi1}} {{word:bu4}}-{{light:fen1}}.",

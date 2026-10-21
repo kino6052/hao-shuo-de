@@ -13,6 +13,8 @@ export default composite({
   literal: "can't not",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["helping-words"],
+  isA: ["auxiliary"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:bu4}}-{{word:de2}}-{{word:bu4}} {{word:qu4}}.",

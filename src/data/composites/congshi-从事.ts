@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:zuo4}}"],
   tts: ["做"],
   fit: "natural",
+  topics: ["making-and-doing"],
+  isA: ["making"],
   proposed: true,
 });

@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:ping2}}"],
   tts: ["平"],
   fit: "word",
+  topics: ["shapes"],
+  isA: ["shape-quality"],
   proposed: true,
 });

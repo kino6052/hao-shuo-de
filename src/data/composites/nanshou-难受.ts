@@ -12,5 +12,7 @@ export default composite({
   tts: ["觉得不好"],
   literal: "feel not good",
   fit: "plain",
+  topics: ["illness"],
+  isA: ["bodily-state"],
   proposed: true,
 });

@@ -20,6 +20,9 @@
 //     members become an hsd:Group. Only accepted relations are exported unless `includeProposed`, and then each proposed
 //     one is marked by an owl:Axiom annotation (hsd:status "proposed");
 //   - an entry the author has not reviewed is marked hsd:status "proposed".
+//   - the tag nets (TAGS_PLAN.md E4, K31) are two SKOS concept schemes, hsd:topics and hsd:kinds: each tag a skos:Concept with
+//     skos:prefLabel in en, ru and zh-Hans and one skos:broader for each parent (a tag can have several); an entry points at its
+//     pages with dct:subject and at its kinds with hsd:isA. Pass `tags: { topics, kinds }` to include them.
 // The base IRI is a placeholder (https://haoshuode.example/): change it with `base` before publishing.
 
 import { wordRefIds } from '../word-refs.js';
@@ -69,20 +72,21 @@ const stmt = (subject, lines) => {
 };
 const plainGloss = (s) => String(s ?? '').replace(/\{\{[^}]*\}\}/g, '').replace(/\s+/g, ' ').trim();
 
-export function buildExport({ words = {}, composites = [], links = {}, relations = [], base = DEFAULT_BASE, includeProposed = false, date = new Date() } = {}) {
+export function buildExport({ words = {}, composites = [], links = {}, relations = [], tags = null, base = DEFAULT_BASE, includeProposed = false, date = new Date() } = {}) {
   const wIri = (id) => `hsdw:${encodeName(id)}`;
   const cIri = (zh) => `hsdc:${encodeName(zh)}`;
   const haveComposite = new Set(composites.map((c) => c.zh));
   const end = (x) => (typeof x === 'string' ? (words[x] ? wIri(x) : haveComposite.has(x) ? cIri(x) : null) : null);
 
-  const counts = { words: 0, composites: 0, senses: 0, linkedSenses: 0, proposedEntries: 0, relations: {}, groups: 0, proposedRelations: 0, skipped: {}, definedBy: 0 };
+  const nets = { topics: new Set((tags?.topics ?? []).map((t) => t.id)), kinds: new Set((tags?.kinds ?? []).map((t) => t.id)) };
+  const counts = { tags: { topics: nets.topics.size, kinds: nets.kinds.size, tagged: 0 }, words: 0, composites: 0, senses: 0, linkedSenses: 0, proposedEntries: 0, relations: {}, groups: 0, proposedRelations: 0, skipped: {}, definedBy: 0 };
   const skip = (why) => (counts.skipped[why] = (counts.skipped[why] ?? 0) + 1);
   const blocks = new Map(); // entry key -> text; the key is a word id or a hanzi
   const extra = new Map(); // the same key -> the relation statements whose subject is the entry
   const groups = [];
   const used = new Set(); // the properties actually used, to declare
 
-  const entryBlock = (key, iri, { label, py, pos, glosses, ilis, proposed, descriptions, uses, comment }) => {
+  const entryBlock = (key, iri, { label, py, pos, glosses, ilis, proposed, descriptions, uses, comment, topics = [], isA = [] }) => {
     const posParts = String(pos ?? '').split('/').map((p) => p.trim());
     const lexinfo = posParts.map((p) => POS[p]).find(Boolean);
     const head = [
@@ -96,7 +100,10 @@ export function buildExport({ words = {}, composites = [], links = {}, relations
       ...(comment ? [`rdfs:comment ${lit(comment, 'en')}`] : []),
       ...descriptions.map((d) => `hsd:description ${lit(d, 'cmn-Hans')}`),
       ...uses.map((u) => `hsd:definedBy ${u}`),
+      ...topics.filter((t) => nets.topics.has(t)).map((t) => `dct:subject hsdt:${encodeName(t)}`),
+      ...isA.filter((k) => nets.kinds.has(k)).map((k) => `hsd:isA hsdk:${encodeName(k)}`),
     ];
+    if (topics.some((t) => nets.topics.has(t)) || isA.some((k) => nets.kinds.has(k))) counts.tags.tagged++;
     const form = [`a ontolex:Form`, `ontolex:writtenRep ${[lit(label, 'cmn-Hans'), ...(py ? [lit(py, 'cmn-Latn-pinyin')] : [])].join(' , ')}`];
     const sense = [
       'a ontolex:LexicalSense',
@@ -124,6 +131,8 @@ export function buildExport({ words = {}, composites = [], links = {}, relations
       descriptions: [],
       uses: [],
       comment: null,
+      topics: w.topics,
+      isA: w.isA,
     });
   }
 
@@ -143,6 +152,8 @@ export function buildExport({ words = {}, composites = [], links = {}, relations
       descriptions: [].concat(c.tts ?? []).filter(Boolean),
       uses,
       comment: c.literal ? `literally: ${c.literal}` : null,
+      topics: c.topics,
+      isA: c.isA,
     });
   }
 
@@ -197,6 +208,8 @@ export function buildExport({ words = {}, composites = [], links = {}, relations
     ['hsdw', `${base}word/`],
     ['hsdc', `${base}entry/`],
     ['hsdg', `${base}group/`],
+    ['hsdt', `${base}topic/`],
+    ['hsdk', `${base}kind/`],
   ];
 
   const declared = [
@@ -207,6 +220,7 @@ export function buildExport({ words = {}, composites = [], links = {}, relations
     'hsd:Group a owl:Class ; rdfs:comment "Entries that belong together (a scale, a set, a family, the words of a prime)." .',
     'hsd:groupKind a owl:DatatypeProperty .',
     'hsd:member a owl:ObjectProperty .',
+    ...(nets.kinds.size ? ['hsd:isA a owl:ObjectProperty ; rdfs:comment "What the entry is: a kind tag (knife is a cutting tool, which is a tool)." .'] : []),
     ...[...used].filter((p) => p !== 'definedBy').sort().map((p) => `hsd:${p} a owl:ObjectProperty${SYMMETRIC.has(p) ? ', owl:SymmetricProperty' : ''} .`),
   ];
   const iso = date.toISOString().slice(0, 10);
@@ -222,7 +236,21 @@ export function buildExport({ words = {}, composites = [], links = {}, relations
     return text;
   });
 
-  return { prefixes, header, blocks, extra, groupBlocks, axioms, counts };
+  // the tag nets as SKOS concept schemes
+  const tagBlocks = [];
+  for (const [scheme, list, ns, title] of [['topics', tags?.topics ?? [], 'hsdt', 'Topics: where you meet a word'], ['kinds', tags?.kinds ?? [], 'hsdk', 'Kinds: what a word is']]) {
+    if (!list.length) continue;
+    const tops = list.filter((t) => !t.parents?.length).map((t) => `${ns}:${encodeName(t.id)}`);
+    tagBlocks.push(stmt(`hsd:${scheme}`, ['a skos:ConceptScheme', `dct:title ${lit(title, 'en')}`, ...(tops.length ? [`skos:hasTopConcept ${tops.join(' , ')}`] : [])]));
+    for (const t of list) {
+      const iri = `${ns}:${encodeName(t.id)}`;
+      const labels = [[t.title?.eng, 'en'], [t.title?.rus, 'ru'], [t.title?.zh, 'zh-Hans']].filter(([x]) => x).map(([x, l]) => lit(x, l));
+      const parents = (t.parents ?? []).filter((p) => list.some((o) => o.id === p)).map((p) => `${ns}:${encodeName(p)}`);
+      tagBlocks.push(stmt(iri, ['a skos:Concept', `skos:inScheme hsd:${scheme}`, ...(labels.length ? [`skos:prefLabel ${labels.join(' , ')}`] : []), ...(t.note ? [`skos:scopeNote ${lit(t.note, 'en')}`] : []), ...(parents.length ? [`skos:broader ${parents.join(' , ')}`] : [`skos:topConceptOf hsd:${scheme}`])]));
+    }
+  }
+
+  return { prefixes, header, blocks, extra, groupBlocks, tagBlocks, axioms, counts };
 }
 
 const prefixLines = (m) => m.prefixes.map(([p, iri]) => `@prefix ${p}: <${iri}> .`).join('\n');
@@ -235,7 +263,7 @@ const entryText = (m, key) => {
 export function exportTurtle(m) {
   const entries = [...m.blocks.keys()].map((k) => entryText(m, k));
   const lexicon = `hsd:lexicon lime:entry ${[...m.blocks.values()].map((b) => b.iri).join(' ,\n    ')} .\n`;
-  return [prefixLines(m), '', m.header, lexicon, ...entries, ...m.groupBlocks, ...m.axioms].join('\n') + '\n';
+  return [prefixLines(m), '', m.header, lexicon, ...entries, ...m.groupBlocks, ...m.tagBlocks, ...m.axioms].join('\n') + '\n';
 }
 
 // -> the prefixes and what one entry's block holds (a word id or a hanzi), or null when there is no such entry
@@ -252,6 +280,7 @@ export function renderExportSummary(counts) {
     `  entries: ${counts.words} core words, ${counts.composites} composites (${counts.proposedEntries} proposed)`,
     `  senses: ${counts.senses}, ${counts.linkedSenses} linked to WordNet (ontolex:reference to CILI)`,
     `  definedBy: ${counts.definedBy} links from a composite to a word its description uses`,
+    ...(counts.tags?.topics || counts.tags?.kinds ? [`  tags (SKOS): ${counts.tags.topics} topics, ${counts.tags.kinds} kinds, ${counts.tags.tagged} entries tagged`] : []),
     `  relations: ${rel}; ${counts.groups} groups; ${counts.proposedRelations} proposed relations marked`,
     `  left out: ${skipped}`,
   ].join('\n');

@@ -12,6 +12,8 @@ export default composite({
   tts: ["什么日"],
   literal: "which day",
   fit: "plain",
+  topics: ["calendar"],
+  isA: ["time-point"],
   examples: [
     {
       pinyin: "{{Word:jin1}}-{{word:tian1}} {{word:shi4}} {{word:shen2me}} {{word:ri4}}?",

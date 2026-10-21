@@ -12,6 +12,8 @@ export default composite({
   tts: ["电子的工具"],
   literal: "an electronic tool",
   fit: "plain",
+  topics: ["home-electronics"],
+  isA: ["electric-device"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} \"diàn\"-{{word:zi}}-{{word:de}} {{word:gong1}}-{{word:ju4}}.",

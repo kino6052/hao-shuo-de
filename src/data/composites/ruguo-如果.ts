@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:ru2guo3}}"],
   tts: ["如果"],
   fit: "word",
+  topics: ["joining-words"],
+  isA: ["conjunction"],
   note: "Lesson {{lesson:linking-sentences}}.",
   examples: [
     {

@@ -12,6 +12,8 @@ export default composite({
   tts: ["很开心你来了"],
   literal: "very happy you've come",
   fit: "natural",
+  topics: ["meeting-and-parting"],
+  isA: ["social-action"],
   examples: [
     {
       pinyin: "{{Word:hen3}} {{word:kai1}}-{{word:xin1}} {{word:ni3}} {{word:lai2}} {{word:le}}!",

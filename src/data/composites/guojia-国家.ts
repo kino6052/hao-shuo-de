@@ -12,6 +12,8 @@ export default composite({
   tts: ["国家", "国"],
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["countries-and-cities"],
+  isA: ["settlement"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:qu4}} {{word:guo4}} {{word:na3}}-{{word:xie1}} {{word:guo2}}-{{word:jia1}}?",

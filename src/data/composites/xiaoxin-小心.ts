@@ -13,6 +13,8 @@ export default composite({
   literal: "small heart",
   fit: "natural",
   kinds: ["built"],
+  topics: ["police-and-safety"],
+  isA: ["character-quality"],
   note: "Lesson {{lesson:feelings}}.",
   examples: [
     {

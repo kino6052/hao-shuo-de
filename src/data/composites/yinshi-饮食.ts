@@ -12,6 +12,8 @@ export default composite({
   tts: ["吃的和喝的"],
   literal: "what you eat and drink",
   fit: "plain",
+  topics: ["eating-and-drinking"],
+  isA: ["activity-name"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ai4}} {{word:chi1}}-{{word:de}} {{word:he2}} {{word:he1}}-{{word:de}}.",

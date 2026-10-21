@@ -12,6 +12,8 @@ export default composite({
   tts: ["很有力"],
   literal: "very powerful",
   fit: "plain",
+  topics: ["speed-and-strength"],
+  isA: ["speed-or-strength"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:hen3}} {{word:you3}} {{word:li4}}.",

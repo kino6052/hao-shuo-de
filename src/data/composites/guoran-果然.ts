@@ -12,5 +12,7 @@ export default composite({
   tts: ["和我想的一样"],
   literal: "the same as I thought",
   fit: "plain",
+  topics: ["adverbs"],
+  isA: ["adverb-word"],
   proposed: true,
 });

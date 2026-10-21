@@ -12,6 +12,8 @@ export default composite({
   tts: ["是X时间开始的"],
   literal: "it began at time X",
   fit: "plain",
+  topics: ["groups-and-organisations"],
+  isA: ["starting-and-stopping"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:shi4}} {{word:jin1}}-{{word:tian1}} {{word:shi2}}-{{word:jian1}} {{word:kai1shi3}}-{{word:de}}.",

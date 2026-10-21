@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:zuo4}}"],
   tts: ["做"],
   fit: "plain",
+  topics: ["making-and-doing"],
+  isA: ["making"],
   note: "Hao-shuo-de says zuò for any doing; Mandarin also has 弄 for handling and fixing.",
   examples: [
     {

@@ -12,5 +12,7 @@ export default composite({
   tts: ["不让X发生"],
   literal: "do not let X happen",
   fit: "plain",
+  topics: ["police-and-safety"],
+  isA: ["social-action"],
   proposed: true,
 });

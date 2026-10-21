@@ -14,5 +14,7 @@ export default composite({
   tts: ["两个人声音很大，说不好的话"],
   literal: "two people with loud voices say bad words",
   fit: "plain",
+  topics: ["sad-and-angry"],
+  isA: ["social-action"],
   proposed: true,
 });

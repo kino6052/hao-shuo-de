@@ -14,6 +14,8 @@ export default word("hao4", {
     eng: "Number in a series: the second one, number five, the 3rd of the month.",
     rus: "Номер по порядку: второй, номер пять, третье число месяца.",
   },
+  topics: ["ordinals"],
+  isA: ["ordinal"],
   maps: "nanpa",
   senses: {
     fond: {

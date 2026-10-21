@@ -14,5 +14,7 @@ export default word("nian2", {
     eng: "Years: last year ({{word:qu4}}-{{word:nian2}}), next year, ages, and counting years.",
     rus: "Годы: «в прошлом году» ({{word:qu4}}-{{word:nian2}}), «в следующем году», возраст и счёт лет.",
   },
+  topics: ["calendar"],
+  isA: ["time-span"],
   paraphrase: { forms: ["{{word:shi2}}-{{word:er4}}-{{light:ge4}} {{word:yue4}}"], verdict: "fine" },
 });

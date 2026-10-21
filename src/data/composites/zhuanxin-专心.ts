@@ -12,6 +12,8 @@ export default composite({
   tts: ["心在X上"],
   literal: "the heart on X",
   fit: "plain",
+  topics: ["studying"],
+  isA: ["character-quality"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:xin1}} {{word:zai4}} {{word:shu1}}-{{word:shang4}}.",

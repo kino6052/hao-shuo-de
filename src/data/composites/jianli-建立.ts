@@ -12,6 +12,8 @@ export default composite({
   tts: ["把X做起来"],
   literal: "make X come up",
   fit: "plain",
+  topics: ["groups-and-organisations"],
+  isA: ["making"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:ba3}} {{word:jia1}} {{word:zuo4}} {{word:qi3}}-{{word:lai2}} {{word:le}}.",

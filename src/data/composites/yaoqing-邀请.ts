@@ -12,6 +12,8 @@ export default composite({
   tts: ["叫X来"],
   literal: "ask X to come",
   fit: "plain",
+  topics: ["parties-and-gifts"],
+  isA: ["social-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:jiao4}} {{word:ni3}} {{word:lai2}}.",

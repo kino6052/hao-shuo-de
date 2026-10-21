@@ -12,6 +12,8 @@ export default composite({
   tts: ["看起来", "可能"],
   literal: "looks like / maybe",
   fit: "natural",
+  topics: ["same-and-different"],
+  isA: ["comparison"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:kan4}}-{{word:qi3}}-{{word:lai2}} {{word:hen3}} {{word:leng3}}.",

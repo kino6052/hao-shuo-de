@@ -13,6 +13,8 @@ export default composite({
   literal: "the fur on the head",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["trunk-and-skin"],
+  isA: ["body-part"],
   examples: [
     {
       pinyin: "{{Word:ta1}}-{{word:de}} {{word:tou2}}-{{light:fa1}} {{word:hen3}} {{word:hei1}}.",

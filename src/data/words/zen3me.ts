@@ -10,6 +10,8 @@ export default word("zen3me", {
     eng: "Asks \"how?\". Without it, you'd ask about the {{word:fang1}}-{{word:fa3}} every time.",
     rus: "Спрашивает «как?». Без него пришлось бы каждый раз спрашивать про {{word:fang1}}-{{word:fa3}}.",
   },
+  topics: ["question-words"],
+  isA: ["question-word-kind"],
   maps: "",
   paraphrase: { forms: ["{{word:yong4}} {{word:shen2me}} {{word:fa3}}"], verdict: "clumsy" },
 });

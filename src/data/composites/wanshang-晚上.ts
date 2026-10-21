@@ -13,6 +13,8 @@ export default composite({
   literal: "moon time",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["times-of-day"],
+  isA: ["time-of-day-word"],
   note: "Lesson {{lesson:when-it-happens}}.",
   examples: [
     {

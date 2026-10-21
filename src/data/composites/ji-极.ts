@@ -12,6 +12,8 @@ export default composite({
   tts: ["很很"],
   literal: "very very",
   fit: "plain",
+  topics: ["degree-words"],
+  isA: ["degree-word"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:hen3}}-{{word:hen3}} {{word:hao3}}.",

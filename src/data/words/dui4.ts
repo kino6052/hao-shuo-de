@@ -14,6 +14,8 @@ export default word("dui4", {
     eng: "Toward, to, for: {{word:dui4}} {{word:wo3}} {{word:hen3}} {{word:hao3}}, good to me. Also \"right\" ({{word:bu4}} {{word:dui4}}, wrong).",
     rus: "К, для, по отношению к: {{word:dui4}} {{word:wo3}} {{word:hen3}} {{word:hao3}} — добр ко мне. А ещё «правильно» ({{word:bu4}} {{word:dui4}} — неверно).",
   },
+  topics: ["words-before-nouns"],
+  isA: ["preposition"],
   maps: "tawa",
   paraphrase: {
     forms: [

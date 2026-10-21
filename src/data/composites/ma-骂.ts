@@ -12,5 +12,7 @@ export default composite({
   tts: ["说X不好的话"],
   literal: "say bad words about X",
   fit: "plain",
+  topics: ["sad-and-angry"],
+  isA: ["speaking-action"],
   proposed: true,
 });

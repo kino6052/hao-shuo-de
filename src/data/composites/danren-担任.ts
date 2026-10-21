@@ -12,5 +12,7 @@ export default composite({
   tts: ["做X的工作"],
   literal: "do the work of X",
   fit: "plain",
+  topics: ["jobs"],
+  isA: ["working"],
   proposed: true,
 });

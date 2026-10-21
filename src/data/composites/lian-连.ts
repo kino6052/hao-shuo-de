@@ -12,6 +12,8 @@ export default composite({
   tts: ["…也…", "放在一起"],
   literal: "also / put together",
   fit: "plain",
+  topics: ["words-before-nouns"],
+  isA: ["preposition"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shui3}} {{word:ye3}} {{word:bu4}} {{word:he1}}.",

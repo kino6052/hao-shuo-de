@@ -12,6 +12,8 @@ export default composite({
   tts: ["做新闻的人"],
   literal: "people who make the news",
   fit: "plain",
+  topics: ["films-and-media"],
+  isA: ["group-of-people"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:zuo4}} {{word:xin1#new}}-\"wén\"-{{word:de}} {{word:ren2}}.",

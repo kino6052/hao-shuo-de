@@ -12,6 +12,8 @@ export default composite({
   tts: ["我知道是对的"],
   literal: "I know it is right",
   fit: "plain",
+  topics: ["deciding"],
+  isA: ["truth-or-ease"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zhi1dao4}} {{word:shi4}} {{word:dui4}}-{{word:de}}.",

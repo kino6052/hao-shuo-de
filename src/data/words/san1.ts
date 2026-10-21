@@ -10,5 +10,7 @@ export default word("san1", {
     eng: "Three. Numbers can't be described with other words.",
     rus: "Три. Числа не описать другими словами.",
   },
+  topics: ["number-words"],
+  isA: ["counting-number"],
   paraphrase: { forms: ["{{word:liang3}} {{word:he2}} {{word:yi1}}"], verdict: "clumsy" },
 });

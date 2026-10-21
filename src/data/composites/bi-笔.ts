@@ -12,6 +12,8 @@ export default composite({
   tts: ["写的工具"],
   literal: "writing tool",
   fit: "plain",
+  topics: ["classroom"],
+  isA: ["writing-tool"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:you3}} {{word:xie3}}-{{word:de}} {{word:gong1}}-{{word:ju4}} {{word:ma}}?",

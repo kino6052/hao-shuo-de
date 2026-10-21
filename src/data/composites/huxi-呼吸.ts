@@ -12,6 +12,8 @@ export default composite({
   tts: ["气进气出"],
   literal: "air in, air out",
   fit: "plain",
+  topics: ["body-needs"],
+  isA: ["body-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:qi4}} {{word:jin4}} {{word:qi4}} {{word:chu1}}.",

@@ -12,5 +12,7 @@ export default composite({
   tts: ["让X明"],
   literal: "make X bright",
   fit: "plain",
+  topics: ["fire-light-and-heat"],
+  isA: ["handling-action"],
   proposed: true,
 });

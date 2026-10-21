@@ -104,3 +104,13 @@
   font-size: 12px;
   margin-top: 2px;
 }
+
+.compound {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 14px;
+}
+
+.hanzi {
+  color: var(--text-muted);
+}

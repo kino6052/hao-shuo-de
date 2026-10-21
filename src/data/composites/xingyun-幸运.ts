@@ -14,6 +14,8 @@ export default composite({
   tts: ["对X多好的东西发生了"],
   literal: "many good things happen to X",
   fit: "plain",
+  topics: ["news-and-events"],
+  isA: ["condition-quality"],
   examples: [
     {
       pinyin: "{{Word:dui4}} {{word:wo3}} {{word:duo1}} {{word:hao3}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:fa1}}-{{word:sheng1}} {{word:le}}.",

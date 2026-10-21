@@ -13,6 +13,8 @@ export default composite({
   literal: "cold time",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["seasons"],
+  isA: ["calendar-name"],
   examples: [
     {
       pinyin: "{{Word:dong1}}-{{word:tian1}} {{word:hen3}} {{word:leng3}}.",

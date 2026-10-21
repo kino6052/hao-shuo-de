@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:tong1}}"],
   tts: ["通"],
   fit: "word",
+  topics: ["going-and-coming"],
+  isA: ["moving-action"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:lu4}} {{word:tong1}}.",

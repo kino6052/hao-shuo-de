@@ -13,6 +13,8 @@ export default composite({
   literal: "send out-go out / make come out",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["giving-and-getting"],
+  isA: ["handling-action"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:fa1}}-{{word:chu1}} {{word:sheng1yin1}}.",

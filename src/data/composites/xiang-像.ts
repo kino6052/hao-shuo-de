@@ -12,6 +12,8 @@ export default composite({
   tts: ["和…一样"],
   literal: "the same as",
   fit: "natural",
+  topics: ["same-and-different"],
+  isA: ["comparison"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:he2}} {{word:ta1}} {{word:ba4ba}} {{word:yi1}}-{{word:yang4}}.",

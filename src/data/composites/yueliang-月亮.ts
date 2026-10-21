@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:yue4}}"],
   tts: ["月"],
   fit: "word",
+  topics: ["sky-and-space"],
+  isA: ["sky-body"],
   examples: [
     {
       pinyin: "{{Word:kan4}}, {{word:yue4}} {{word:chu1}}-{{word:lai2}} {{word:le}}!",

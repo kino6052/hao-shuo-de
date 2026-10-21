@@ -10,6 +10,8 @@ export default word("yin1wei4", {
     eng: "Because: without it, you can't give a reason.",
     rus: "Потому что: без него не объяснить причину.",
   },
+  topics: ["joining-words"],
+  isA: ["conjunction"],
   maps: "",
   paraphrase: { forms: ["Y {{word:shi4}} X {{word:rang4}}-{{word:de}}"], verdict: "clumsy" },
 });

@@ -12,6 +12,8 @@ export default composite({
   tts: ["植物的颜色"],
   literal: "the colour of plants",
   fit: "plain",
+  topics: ["colours-and-patterns"],
+  isA: ["colour-quality"],
   note: "Blue, green and yellow are named by an obvious thing: the sky, plants, gold.",
   examples: [
     {

@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:duo1}}-{{word:shao3}}"],
   tts: ["多少"],
   fit: "natural",
+  topics: ["question-words"],
+  isA: ["question-word-kind"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:you3}} {{word:duo1}}-{{word:shao3}} {{word:hai2}}-{{word:zi}}?",

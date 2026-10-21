@@ -6,6 +6,7 @@ export default pattern("bang-help", {
     rus: "Bāng, человек, затем глагол — помочь кому-то это сделать. Bāng, человек, затем xué и глагол — учить: вы помогаете ему учиться. Hěn huì говорит, что кто-то хорошо это умеет.",
   },
   covers: [],
+  tags: ["with-for", "command", "cat:action", "cat:relation"],
   template: { hsd: "Who + {{word:bang1}} + person + verb", eng: "Who helps the person do it" },
   rules: [
     { lhs: "VP", hsd: "=bang1 NP VP", eng: "bāng, the person, then the verb: helps them do it" },

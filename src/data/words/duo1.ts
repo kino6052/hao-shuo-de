@@ -14,6 +14,8 @@ export default word("duo1", {
     eng: "Many, much, a lot. Amounts can't be described without it.",
     rus: "Много. Без него не описать количество.",
   },
+  topics: ["much-and-little"],
+  isA: ["amount-word"],
   maps: "mute",
   atom: {
     eng: "Many is felt by looking at a pile of things; its opposite shǎo is just \"bù duō\".",

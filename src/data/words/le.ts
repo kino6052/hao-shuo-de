@@ -14,6 +14,8 @@ export default word("le", {
     eng: "Says it happened, or it changed: {{word:wo3}} {{word:chi1}} {{word:le}}. The past and changes need it.",
     rus: "Говорит, что что-то случилось или изменилось: {{word:wo3}} {{word:chi1}} {{word:le}}. Без него ни прошлого, ни перемен.",
   },
+  topics: ["particles"],
+  isA: ["particle"],
   maps: "pini",
   atom: {
     eng: "Marks that something happened or changed; every way of saying it already needs the same idea.",

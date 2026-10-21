@@ -12,6 +12,8 @@ export default composite({
   tts: ["给人看"],
   literal: "give people a look",
   fit: "plain",
+  topics: ["talking"],
+  isA: ["speaking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:gei3}} {{word:ren2}} {{word:kan4}} {{word:zhe4}}-{{light:ge4}}.",

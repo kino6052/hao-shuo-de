@@ -12,6 +12,8 @@ export default composite({
   tts: ["好好做！"],
   literal: "do it well!",
   fit: "natural",
+  topics: ["sports"],
+  isA: ["set-phrase"],
   examples: [
     {
       pinyin: "{{Word:hao3}}-{{word:hao3}} {{word:zuo4}}!",

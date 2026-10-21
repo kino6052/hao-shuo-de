@@ -6,6 +6,7 @@ export default pattern("jiao-name", {
     rus: "Jiào и имя говорят, как кого-то зовут: wǒ jiào \"Lisa\" — меня зовут Лиза. Nǐ jiào shénme? спрашивает имя.",
   },
   covers: [],
+  tags: ["greet", "cat:substance"],
   template: { hsd: "Who + {{word:jiao4}} + \"name\"", eng: "Who is called the name" },
   rules: [
     { lhs: "VP", hsd: "=jiao4 NP", eng: "jiào and a name: is called" },

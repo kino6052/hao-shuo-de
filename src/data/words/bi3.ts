@@ -10,6 +10,8 @@ export default word("bi3", {
     eng: "Than: A {{word:bi3}} B {{word:da4}}, A is bigger than B. Comparing two things needs it.",
     rus: "Чем: A {{word:bi3}} B {{word:da4}} — A больше, чем B. Без него не сравнить две вещи.",
   },
+  topics: ["words-before-nouns"],
+  isA: ["preposition"],
   classes: {
     verb: {
       why: {

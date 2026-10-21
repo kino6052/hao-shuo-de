@@ -13,6 +13,8 @@ export default composite({
   literal: "hard to get through / not happy",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["sad-and-angry"],
+  isA: ["feeling-quality"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:hen3}} {{word:nan2}}-{{word:guo4}}.",

@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:tian2}}"],
   tts: ["甜"],
   fit: "word",
+  topics: ["tastes"],
+  isA: ["taste-quality"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:hen3}} {{word:tian2}}.",

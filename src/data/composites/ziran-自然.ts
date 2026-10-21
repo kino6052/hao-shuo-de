@@ -16,6 +16,8 @@ export default composite({
   tts: ["外面", "有多植物的地方", "从以前就X"],
   literal: "outside / a place with many plants / since before, already X",
   fit: "plain",
+  topics: ["land-and-water"],
+  isA: ["abstract-thing"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ai4}} {{word:wai4}}-{{word:mian4}}.",

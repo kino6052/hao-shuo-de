@@ -12,6 +12,8 @@ export default composite({
   tts: ["老"],
   literal: "old",
   fit: "plain",
+  topics: ["new-and-old"],
+  isA: ["age-or-newness"],
   note: "lǎo works for old things too.",
   examples: [
     {

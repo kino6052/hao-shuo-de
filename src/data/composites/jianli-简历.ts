@@ -14,5 +14,7 @@ export default composite({
   tts: ["写你做过什么的面"],
   literal: "a page that says what you have done",
   fit: "plain",
+  topics: ["office"],
+  isA: ["paper-thing"],
   proposed: true,
 });

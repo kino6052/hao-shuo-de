@@ -16,6 +16,8 @@ export default composite({
   tts: ["方", "四个边一样的", "边"],
   literal: "with four equal sides / a side",
   fit: "word",
+  topics: ["directions"],
+  isA: ["direction"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:fang1}} {{word:hen3}} {{word:da4}}.",

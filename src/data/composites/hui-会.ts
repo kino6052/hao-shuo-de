@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:hui4}}"],
   tts: ["会"],
   fit: "word",
+  topics: ["helping-words"],
+  isA: ["auxiliary"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:hui4}} {{word:shuo1}} \"Zhōngguó\" {{word:hua4}}.",

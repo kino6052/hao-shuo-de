@@ -13,6 +13,8 @@ export default composite({
   literal: "learning place",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["classroom"],
+  isA: ["building"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:xue2}}-{{word:xiao4}} {{word:hen3}} {{word:da4}}.",

@@ -13,5 +13,7 @@ export default composite({
   literal: "get",
   fit: "natural",
   transparent: true,
+  topics: ["giving-and-getting"],
+  isA: ["receiving"],
   proposed: true,
 });

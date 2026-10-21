@@ -12,6 +12,8 @@ export default composite({
   tts: ["机器", "工具"],
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["farms-and-factories"],
+  isA: ["machine"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:ji1}}-{{word:qi4}} {{word:huai4}} {{word:le}}.",

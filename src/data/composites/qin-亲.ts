@@ -12,6 +12,8 @@ export default composite({
   tts: ["关系很好", "用口摸"],
   literal: "a very good connection / touch with the mouth",
   fit: "plain",
+  topics: ["relatives"],
+  isA: ["comparison"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:he2}} {{word:ta1}} {{word:guan1xi}} {{word:hen3}} {{word:hao3}}.",

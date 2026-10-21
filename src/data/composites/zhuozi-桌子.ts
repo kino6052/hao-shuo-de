@@ -12,6 +12,8 @@ export default composite({
   tts: ["放东西的面"],
   literal: "the surface you put things on",
   fit: "plain",
+  topics: ["living-room"],
+  isA: ["furniture-item"],
   examples: [
     {
       pinyin: "{{Word:shu1}} {{word:zai4}} {{word:fang4}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:mian4}}-{{word:shang4}}.",

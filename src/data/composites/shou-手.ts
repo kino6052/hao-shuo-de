@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:shou3}}"],
   tts: ["手"],
   fit: "word",
+  topics: ["hands-and-feet"],
+  isA: ["body-part"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:shou3}} {{word:hen3}} {{word:leng3}}.",

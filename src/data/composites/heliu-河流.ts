@@ -15,6 +15,8 @@ export default composite({
   tts: ["长的有水的地方", "动的水"],
   literal: "moving water",
   fit: "plain",
+  topics: ["land-and-water"],
+  isA: ["landform"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:jia1}} {{word:zai4}} {{word:chang2}}-{{word:de}} {{word:you3}}-{{word:shui3}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",

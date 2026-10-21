@@ -14,5 +14,7 @@ export default composite({
   tts: ["很多人做X的地方"],
   literal: "a place where many people do X",
   fit: "plain",
+  topics: ["hobbies-and-outings"],
+  isA: ["place"],
   proposed: true,
 });

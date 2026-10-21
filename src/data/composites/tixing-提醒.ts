@@ -12,6 +12,8 @@ export default composite({
   tts: ["又说"],
   literal: "say it again",
   fit: "plain",
+  topics: ["agreeing-and-praising"],
+  isA: ["speaking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you4}} {{word:shuo1}}.",

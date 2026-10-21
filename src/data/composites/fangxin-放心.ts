@@ -13,6 +13,8 @@ export default composite({
   literal: "put the heart down",
   fit: "natural",
   kinds: ["built"],
+  topics: ["worry-and-fear"],
+  isA: ["feeling-and-wanting"],
   note: "Lesson {{lesson:feelings}}.",
   examples: [
     {

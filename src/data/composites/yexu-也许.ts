@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:ke3}}-{{word:neng2}}"],
   tts: ["可能"],
   fit: "word",
+  topics: ["adverbs"],
+  isA: ["adverb-word"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:ke3}}-{{word:neng2}} {{word:lai2}}.",

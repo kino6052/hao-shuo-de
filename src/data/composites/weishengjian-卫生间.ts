@@ -12,6 +12,8 @@ export default composite({
   tts: ["卫生间"],
   fit: "natural",
   transparent: true,
+  topics: ["bathroom"],
+  isA: ["room"],
   note: "A polite way to say toilet.",
   examples: [
     {

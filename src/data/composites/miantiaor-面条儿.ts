@@ -13,6 +13,8 @@ export default composite({
   tts: ["面"],
   literal: "noodles",
   fit: "name",
+  topics: ["grains-and-bread"],
+  isA: ["staple-food"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:chi1}} \"miàn\".",

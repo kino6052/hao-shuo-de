@@ -12,6 +12,8 @@ export default composite({
   tts: ["开身体做好"],
   literal: "open the body to fix it",
   fit: "plain",
+  topics: ["at-the-hospital"],
+  isA: ["event"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ba4ba}} {{word:kai1}} {{word:shen1ti3}} {{word:zuo4}} {{word:hao3}} {{word:le}}.",

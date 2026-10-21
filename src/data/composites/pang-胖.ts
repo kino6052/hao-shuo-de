@@ -12,6 +12,8 @@ export default composite({
   tts: ["肚子很大"],
   literal: "the belly is very big",
   fit: "plain",
+  topics: ["describing-people"],
+  isA: ["bodily-state"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:du4zi}} {{word:hen3}} {{word:da4}}.",

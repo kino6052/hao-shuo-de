@@ -15,5 +15,7 @@ export default composite({
   tts: ["点心", "小小的吃的"],
   literal: "a little thing to eat",
   fit: "plain",
+  topics: ["sweets-and-snacks"],
+  isA: ["snack-or-sweet"],
   proposed: true,
 });

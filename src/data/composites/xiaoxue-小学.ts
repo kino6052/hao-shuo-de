@@ -16,6 +16,8 @@ export default composite({
   literal: "small learning / where small people learn",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["classroom"],
+  isA: ["building"],
   examples: [
     {
       pinyin: "{{Word:xiao3}}-{{word:hai2}}-{{word:zi}} {{word:zai4}} {{word:xiao3}}-{{word:xue2}}.",

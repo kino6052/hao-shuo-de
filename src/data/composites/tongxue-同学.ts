@@ -16,6 +16,8 @@ export default composite({
   literal: "person who learns with you",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["classroom"],
+  isA: ["social-role"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:wo3}}-{{word:de}} {{word:tong2}}-{{word:xue2}}.",

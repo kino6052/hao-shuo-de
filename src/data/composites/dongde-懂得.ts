@@ -12,5 +12,7 @@ export default composite({
   tts: ["知道"],
   literal: "know",
   fit: "natural",
+  topics: ["knowing-and-understanding"],
+  isA: ["thinking-action"],
   proposed: true,
 });

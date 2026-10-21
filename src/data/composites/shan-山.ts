@@ -12,6 +12,8 @@ export default composite({
   tts: ["高地"],
   literal: "high ground",
   fit: "plain",
+  topics: ["land-and-water"],
+  isA: ["landform"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:yao4}} {{word:qu4}} {{word:gao1}}-{{word:di4}}.",

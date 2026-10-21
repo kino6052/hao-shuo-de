@@ -12,6 +12,8 @@ export default composite({
   tts: ["动一动"],
   literal: "move a bit",
   fit: "plain",
+  topics: ["music"],
+  isA: ["playing"],
   examples: [
     {
       pinyin: "{{Word:nv3}}-{{word:hai2}}-{{word:zi}} {{word:dong4}}-{{word:yi1}}-{{word:dong4}}, {{word:hen3}} {{word:hao3}}-{{word:kan4}}.",

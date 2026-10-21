@@ -12,6 +12,8 @@ export default composite({
   tts: ["看好X"],
   literal: "watch over X",
   fit: "natural",
+  topics: ["helping-and-sharing"],
+  isA: ["social-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:kan4}}-{{word:hao3}} {{word:hai2}}-{{word:zi}}.",

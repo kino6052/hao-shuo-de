@@ -53,6 +53,13 @@ node scripts/kb.js parse "Wǒ chī fàn." [--lesson 5]                     # doe
 node scripts/kb.js atoms [word]                                         # the atoms report, or one word's line
 node scripts/kb.js relations [kind] [--status proposed|accepted] [--limit N]  # synonyms, opposites, connections and the rest
 node scripts/kb.js relations tree [word] [--limit N]                    # what hangs under what: the kind-of tree of every word, or of one
+node scripts/kb.js tags [--kinds] [--depth N]                           # the topic net (or the kind net) as a tree, with counts
+node scripts/kb.js tags <tag> [--limit N]                               # one tag: its parents, subtags and members (a tag under two parents is under both)
+node scripts/kb.js tags --of <entry>                                    # every path from an entry up to a top tag, on both axes
+node scripts/kb.js tags --common <a> <b>                                # the closest tags two entries share
+node scripts/kb.js tags --find <text>                                   # the tags whose name has the text, and the entries an English word leads to
+node scripts/kb.js tags --check                                         # cycles, unknown tags, extra, empty, too big and too small leaves, vague and untagged entries
+node scripts/kb.js tags --proposed [tag]                                # the tags waiting for review, and why each was proposed
 node scripts/kb.js english <word> [--json]                              # which entries say an English word: by gloss, by WordNet sense, as a kind of
 node scripts/kb.js hints <word> [--limit N]                             # WordNet hints for drafting a description of a word with no entry (English or Mandarin)
 node scripts/kb.js export [--all] [--base IRI] [--out FILE] [--stdout]  # the dictionary as OntoLex Turtle (to kb/cache/export/hao-shuo-de.ttl); --all adds the proposed relations
@@ -91,6 +98,7 @@ node scripts/kb.js engine                                               # which 
 | `kb_check_form` | Check a proposed Hao-shuo-de form before it goes into the data: plain pinyin becomes word references, every syllable must be a dictionary word (names and sounds in quotes), the hanzi must spell the words… |
 | `kb_atoms` | Which dictionary words are atoms: the words the others cannot be said from. |
 | `kb_relations` | The relations between words and between composites: opposites, close words, the same description, kind-of (a composite and its head), agents, categories, and phrases that stand in for a missing opposite. |
+| `kb_tags` | The tag nets (TAGS_PLAN.md): every entry, core word or composite, sits under tags on two nets that can nest and a tag can have several parents. |
 | `kb_english` | Which dictionary entries say an English word, in three tiers: the entries whose gloss has the word, the entries that share a WordNet sense with it (its synonyms), and, when neither says it… |
 | `kb_hints` | Hints for describing a word the dictionary does not say yet (English or Mandarin): what WordNet says it means and which entry to start from. |
 | `kb_export` | The dictionary as OntoLex-Lemon Turtle, the format Protégé opens: one entry alone, or the counts. |
@@ -142,6 +150,7 @@ node scripts/kb.js engine                                               # which 
 | `src/lib/kb/rules.js` | The rule files (kb/rules/*.lp), read from disk. Node and bun only: the learner pages never run the reasoner. |
 | `src/lib/kb/scoreboard.js` | The scoreboard: a few numbers about the language, one row per change, kept in kb/scoreboard.csv. |
 | `src/lib/kb/set-cover.js` | The smallest set of things that together carry every item (KB_PLAN.md phase 4, "cover the core"). |
+| `src/lib/kb/tags.js` | The tag nets as the KB asks about them (TAGS_PLAN.md, K31): where an entry sits on the topic net (where you meet it) and the kind net (what it is), what is under a tag, what two entries share… |
 | `src/lib/kb/tools.js` | The Claude tools of the KB: what each is called, what it asks for, and how it answers. |
 | `src/lib/kb/turtle-check.js` | A small Turtle reader the tests use to check that the exported file is valid. |
 | `src/lib/kb/typed-lists.js` | Reads and checks the five lists Claude typed in from memory (Universal Dependencies relations, WALS features, NSM sentences, Toki Pona rules and Basic English rules). |
@@ -151,6 +160,7 @@ node scripts/kb.js engine                                               # which 
 | `kb/rules/atoms.lp` | Which words are atoms (KB_PLAN.md K3, K8, phase 2: the smallest defining sets). |
 | `kb/rules/base.lp` | Relations every question uses (KB_PLAN.md phase 1). Read together with the facts from src/lib/kb/facts.js. |
 | `kb/rules/kernel.lp` | The kernel and the core of the paraphrase graph (KB_PLAN.md phase 2; after Harnad's work on dictionary graphs). |
+| `kb/rules/tags.lp` | The tag nets (TAGS_PLAN.md, K31). Read with the facts from src/lib/kb/facts.js: T is a string (the tag's id), E a word id or a composite's hanzi. |
 | `kb/rules/text.lp` | Rules that count over every sentence. |
 | `kb/rules/whatif.lp` | What happens if words leave the core (KB_PLAN.md K10, phase 1: remove). |
 <!-- /generated:kb-modules -->

@@ -12,6 +12,8 @@ export default composite({
   tts: ["想法", "想的东西"],
   literal: "what you think",
   fit: "plain",
+  topics: ["ideas-and-opinions"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ai4}} {{word:ta1}}-{{word:de}} {{word:xiang3}}-{{word:fa3}}.",

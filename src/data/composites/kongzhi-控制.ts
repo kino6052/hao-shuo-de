@@ -12,6 +12,8 @@ export default composite({
   tts: ["把X做Y"],
   literal: "make X do Y",
   fit: "plain",
+  topics: ["pushing-and-pulling"],
+  isA: ["handling-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ba3}} {{word:che1}} {{word:zuo4}} {{word:dong4}}.",

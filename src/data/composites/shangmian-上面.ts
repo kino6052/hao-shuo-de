@@ -12,6 +12,8 @@ export default composite({
   tts: ["上面"],
   fit: "natural",
   transparent: true,
+  topics: ["near-and-far"],
+  isA: ["place-word"],
   examples: [
     {
       pinyin: "{{Word:shang4}}-{{word:mian4}} {{word:you3}} {{word:shen2me}}?",

@@ -14,6 +14,8 @@ export default composite({
   tts: ["在把身体做好的地方帮人的人"],
   literal: "a person who helps at the hospital",
   fit: "plain",
+  topics: ["at-the-hospital"],
+  isA: ["worker"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:zai4}}-{{word:ba3}}-{{word:shen1ti3}}-{{word:zuo4}}-{{word:hao3}}-{{word:de}}-{{word:di4}}-{{light:fang1}} {{word:bang1}}-{{word:ren2}}-{{word:de}} {{word:ren2}}.",

@@ -15,6 +15,8 @@ export default composite({
   tts: ["想是真的", "给远的人写的东西"],
   literal: "think it's true / something written to someone far away",
   fit: "plain",
+  topics: ["bank-and-post"],
+  isA: ["paper-thing"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:xiang3}} {{word:shi4}} {{word:zhen1}}-{{word:de}}.",

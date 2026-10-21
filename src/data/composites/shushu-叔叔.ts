@@ -14,5 +14,7 @@ export default composite({
   tts: ["比我爸爸小的男人"],
   literal: "a man younger than my dad",
   fit: "plain",
+  topics: ["relatives"],
+  isA: ["relative"],
   proposed: true,
 });

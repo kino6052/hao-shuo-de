@@ -12,6 +12,8 @@ export default composite({
   tts: ["给金睡觉的地方"],
   literal: "a place you pay to sleep",
   fit: "plain",
+  topics: ["a-trip"],
+  isA: ["building"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:qu4}} {{word:gei3}} {{word:jin1}} {{word:shui4jiao4}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",

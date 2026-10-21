@@ -12,6 +12,8 @@ export default composite({
   tts: ["对人好"],
   literal: "good to people",
   fit: "plain",
+  topics: ["friends-and-neighbours"],
+  isA: ["character-quality"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:dui4}} {{word:ren2}} {{word:hao3}}.",

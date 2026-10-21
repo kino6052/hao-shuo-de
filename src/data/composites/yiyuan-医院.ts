@@ -14,6 +14,8 @@ export default composite({
   tts: ["把身体做好的地方"],
   literal: "the place that makes bodies good",
   fit: "plain",
+  topics: ["at-the-hospital"],
+  isA: ["building"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:zai4}} {{word:ba3}}-{{word:shen1ti3}}-{{word:zuo4}}-{{word:hao3}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",

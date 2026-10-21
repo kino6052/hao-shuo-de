@@ -13,6 +13,8 @@ export default composite({
   literal: "no use",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["no-and-not"],
+  isA: ["negation-word"],
   examples: [
     {
       pinyin: "{{Word:bu4}}-{{word:yong4}} {{word:xie4}}.",

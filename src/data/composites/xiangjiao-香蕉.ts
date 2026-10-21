@@ -12,6 +12,8 @@ export default composite({
   tts: ["金的颜色的水果"],
   literal: "the fruit of the golden colour",
   fit: "plain",
+  topics: ["fruit"],
+  isA: ["fruit-item"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:chi1}} {{word:jin1}}-{{word:de}} {{word:yan2se4}}-{{word:de}} {{word:shui3}}-{{word:guo3}}.",

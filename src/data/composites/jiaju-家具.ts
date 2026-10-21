@@ -16,6 +16,8 @@ export default composite({
   literal: "home tool / the things used at home",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["living-room"],
+  isA: ["furniture-item"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:jia1}}-{{word:ju4}} {{word:hen3}} {{word:hao3}}.",

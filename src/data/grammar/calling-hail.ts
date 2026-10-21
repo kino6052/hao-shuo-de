@@ -6,6 +6,7 @@ export default pattern("calling-hail", {
     rus: "Сначала можно позвать или поприветствовать, затем запятая и то, что говорят: māma, wǒ huí lái le — мама, я вернулся; nǐ hǎo, nǐ shì xué-shēng ma — здравствуйте, вы студент?",
   },
   covers: [],
+  tags: ["greet", "cat:relation"],
   template: { hsd: "Name, sentence", eng: "Someone, then what is said to them" },
   rules: [
     { lhs: "Hail", hsd: "NP", eng: "a name or a word for someone" },

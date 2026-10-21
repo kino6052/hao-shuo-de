@@ -12,6 +12,8 @@ export default composite({
   tts: ["给人看"],
   literal: "let people watch",
   fit: "plain",
+  topics: ["films-and-media"],
+  isA: ["playing"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:gei3}} {{word:ren2}} {{word:kan4}} {{word:zhe4}}-{{light:ge4}}.",

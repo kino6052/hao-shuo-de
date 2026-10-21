@@ -12,5 +12,7 @@ export default composite({
   tts: ["知道怎么做，能做好"],
   literal: "know how to do it and can do it well",
   fit: "plain",
+  topics: ["jobs"],
+  isA: ["idea"],
   proposed: true,
 });

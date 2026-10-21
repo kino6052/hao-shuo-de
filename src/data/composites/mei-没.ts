@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:mei2}}"],
   tts: ["没"],
   fit: "word",
+  topics: ["no-and-not"],
+  isA: ["negation-word"],
   proposed: true,
 });

@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:bai2}}", "{{word:bai2}}-{{word:se4}}"],
   tts: ["白", "白色"],
   fit: "word",
+  topics: ["colours"],
+  isA: ["colour-quality"],
   examples: [
     {
       pinyin: "{{Word:ta1}}-{{word:de}} {{word:yi1fu}} {{word:shi4}} {{word:bai2}}-{{word:se4}}-{{word:de}}.",

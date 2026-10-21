@@ -12,6 +12,8 @@ export default composite({
   tts: ["现在的"],
   literal: "of now",
   fit: "natural",
+  topics: ["history-and-culture"],
+  isA: ["time-point"],
   examples: [
     {
       pinyin: "{{Word:xian4}}-{{word:zai4}}-{{word:de}} {{word:ren2}} {{word:ai4}} {{word:wang3}}.",

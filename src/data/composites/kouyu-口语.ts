@@ -12,5 +12,7 @@ export default composite({
   tts: ["用口说的话"],
   literal: "words said with the mouth",
   fit: "plain",
+  topics: ["languages"],
+  isA: ["language-thing"],
   proposed: true,
 });

@@ -15,6 +15,8 @@ export default composite({
   tts: ["很不一样", "很不一样，也很好"],
   literal: "very different, and good too",
   fit: "natural",
+  topics: ["degree-words"],
+  isA: ["degree-word"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:di4}}-{{light:fang1}} {{word:hen3}} {{word:bu4}} {{word:yi1}}-{{word:yang4}}, {{word:ye3}} {{word:hen3}} {{word:hao3}}.",

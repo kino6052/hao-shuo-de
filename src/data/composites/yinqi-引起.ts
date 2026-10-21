@@ -12,6 +12,8 @@ export default composite({
   tts: ["让X发生"],
   literal: "let X happen",
   fit: "plain",
+  topics: ["causes-and-results"],
+  isA: ["cause-and-effect"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:rang4}} {{word:zhe4}} {{word:fa1}}-{{word:sheng1}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["用车拿去"],
   literal: "take it away by car",
   fit: "plain",
+  topics: ["walking-and-running"],
+  isA: ["handling-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yong4}} {{word:che1}} {{word:na2}}-{{word:qu4}} {{word:shu1}}.",

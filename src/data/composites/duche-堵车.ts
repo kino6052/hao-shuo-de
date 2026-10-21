@@ -12,5 +12,7 @@ export default composite({
   tts: ["车很多，走不动"],
   literal: "many cars, cannot move",
   fit: "plain",
+  topics: ["the-road"],
+  isA: ["happening"],
   proposed: true,
 });

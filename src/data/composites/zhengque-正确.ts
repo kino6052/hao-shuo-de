@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:dui4}}"],
   tts: ["对"],
   fit: "word",
+  topics: ["easy-hard-right-wrong"],
+  isA: ["truth-or-ease"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:dui4}}.",

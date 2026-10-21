@@ -12,5 +12,7 @@ export default composite({
   tts: ["看外面的口"],
   literal: "an opening for looking outside",
   fit: "plain",
+  topics: ["bank-and-post"],
+  isA: ["building-part"],
   proposed: true,
 });

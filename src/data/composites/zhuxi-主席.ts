@@ -12,6 +12,8 @@ export default composite({
   tts: ["决定者"],
   literal: "one who decides",
   fit: "plain",
+  topics: ["government"],
+  isA: ["worker"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:jue2}}-{{word:ding4}}-{{word:zhe3}}.",

@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:dong1}}-{{light:xi1}}"],
   tts: ["东西"],
   fit: "word",
+  topics: ["household-things"],
+  isA: ["thing"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:wo3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

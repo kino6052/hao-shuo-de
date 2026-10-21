@@ -12,6 +12,8 @@ export default composite({
   tts: ["不放心"],
   literal: "can't put the heart down",
   fit: "natural",
+  topics: ["worry-and-fear"],
+  isA: ["feeling-quality"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:bu4}} {{word:fang4}}-{{word:xin1}}, {{word:ta1}} {{word:hai2}} {{word:mei2}} {{word:lai2}}.",

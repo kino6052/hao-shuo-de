@@ -12,6 +12,8 @@ export default composite({
   tts: ["是我不好"],
   literal: "it's my fault",
   fit: "plain",
+  topics: ["manners"],
+  isA: ["set-phrase"],
   note: "Same as 对不起.",
   examples: [
     {

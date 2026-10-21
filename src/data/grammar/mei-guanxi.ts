@@ -6,6 +6,7 @@ export default pattern("mei-guanxi", {
     rus: "Méi guānxi значит «ничего страшного»: méi guānxi, wǒ bù pà — ничего, я не боюсь.",
   },
   covers: [],
+  tags: ["greet", "negation", "cat:relation"],
   template: { hsd: "{{word:mei2}} {{word:guan1xi}}", eng: "Never mind" },
   rules: [
     { lhs: "VP", hsd: "mei2 =guan1xi", eng: "méi guānxi, never mind" },

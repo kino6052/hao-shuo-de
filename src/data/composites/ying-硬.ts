@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:ying4}}"],
   tts: ["硬"],
   fit: "word",
+  topics: ["how-it-feels"],
+  isA: ["touch-quality"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:hen3}} {{word:ying4}}.",

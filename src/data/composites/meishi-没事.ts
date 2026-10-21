@@ -13,6 +13,8 @@ export default composite({
   literal: "it doesn't matter",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["manners"],
+  isA: ["set-phrase"],
   examples: [
     {
       pinyin: "{{Word:mei2}}-{{word:shi4}}, {{word:wo3}} {{word:hen3}} {{word:hao3}}.",

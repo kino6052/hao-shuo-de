@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:lao3}}"],
   tts: ["老"],
   fit: "word",
+  topics: ["new-and-old"],
+  isA: ["age-or-newness"],
   note: "Lesson {{lesson:how-much}}.",
   examples: [
     {

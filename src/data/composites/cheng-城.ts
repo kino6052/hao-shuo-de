@@ -12,6 +12,8 @@ export default composite({
   tts: ["国家里的地方"],
   literal: "a place in the country",
   fit: "plain",
+  topics: ["countries-and-cities"],
+  isA: ["settlement"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:zai4}} {{word:guo2}}-{{word:jia1}}-{{word:li3}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",

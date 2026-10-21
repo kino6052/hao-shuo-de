@@ -12,6 +12,8 @@ export default composite({
   tts: ["帮"],
   literal: "help",
   fit: "natural",
+  topics: ["helping-and-sharing"],
+  isA: ["social-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:bang1}} {{word:ni3}}.",

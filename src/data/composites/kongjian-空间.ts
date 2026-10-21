@@ -13,6 +13,8 @@ export default composite({
   literal: "the empty between",
   fit: "natural",
   kinds: ["built"],
+  topics: ["near-and-far"],
+  isA: ["place-word"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:jia1}} {{word:you3}} {{word:kong1}}-{{word:jian1}}.",

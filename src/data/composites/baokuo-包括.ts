@@ -12,6 +12,8 @@ export default composite({
   tts: ["X里面有Y", "X也有Y"],
   literal: "X has Y inside / X also has Y",
   fit: "plain",
+  topics: ["much-and-little"],
+  isA: ["comparison"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:li3}}-{{word:mian4}} {{word:you3}} {{word:ta1}}.",

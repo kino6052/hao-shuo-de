@@ -14,6 +14,8 @@ export default composite({
   tts: ["人少，植物多的地方"],
   literal: "a place with few people and many plants",
   fit: "plain",
+  topics: ["crops-and-farming"],
+  isA: ["place"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ai4}} {{word:ren2}} {{word:shao3}}, {{word:zhi2wu4}} {{word:duo1}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",

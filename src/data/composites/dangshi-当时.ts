@@ -12,6 +12,8 @@ export default composite({
   tts: ["那个时间"],
   literal: "that time",
   fit: "natural",
+  topics: ["before-and-after"],
+  isA: ["time-point"],
   examples: [
     {
       pinyin: "{{Word:na4}}-{{light:ge4}} {{word:shi2}}-{{word:jian1}} {{word:wo3}} {{word:zai4}} {{word:jia1}}.",

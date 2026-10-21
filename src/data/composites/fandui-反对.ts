@@ -12,6 +12,8 @@ export default composite({
   tts: ["说不", "说不对"],
   literal: "say no / say it's not right",
   fit: "plain",
+  topics: ["agreeing-and-praising"],
+  isA: ["social-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:shuo1}} {{word:bu4}}.",

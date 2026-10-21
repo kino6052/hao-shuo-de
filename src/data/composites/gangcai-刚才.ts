@@ -12,6 +12,8 @@ export default composite({
   tts: ["一下以前"],
   literal: "a moment before",
   fit: "plain",
+  topics: ["before-and-after"],
+  isA: ["time-order"],
   note: "Same as \"recently\".",
   examples: [
     {

@@ -12,6 +12,8 @@ export default composite({
   tts: ["看的机"],
   literal: "the watching machine",
   fit: "plain",
+  topics: ["films-and-media"],
+  isA: ["machine"],
   examples: [
     {
       pinyin: "{{Word:ba3}} {{word:kan4}}-{{word:de}} {{word:ji1}} {{word:guan1}} {{word:le}}.",

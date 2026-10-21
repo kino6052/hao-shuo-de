@@ -6,6 +6,7 @@ export default pattern("count-kinds", {
     rus: "Чтобы считать виды, разы или части, поставьте число перед zhǒng, cì или bù-fēn вместо gè: sān-zhǒng — три вида; yī bù-fēn rén — часть людей.",
   },
   covers: [],
+  tags: ["count", "cat:quantity"],
   template: { hsd: "number + {{word:zhong3}} / {{word:ci4}} / {{word:bu4}}-{{word:fen1}}", eng: "A number of kinds, times or parts" },
   rules: [
     { lhs: "NP", hsd: "Num =bu4 =fen1", eng: "a number and bù-fēn: some parts" },

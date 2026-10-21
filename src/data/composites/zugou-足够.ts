@@ -15,6 +15,8 @@ export default composite({
   tts: ["好了", "有了，不要多的了"],
   literal: "it is fine / I have it, I don't need more",
   fit: "plain",
+  topics: ["much-and-little"],
+  isA: ["amount-word"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:le}}, {{word:bu4}} {{word:yao4}} {{word:duo1}}-{{word:de}} {{word:le}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["难做", "有问题"],
   literal: "hard to do / has a problem",
   fit: "plain",
+  topics: ["worry-and-fear"],
+  isA: ["condition-quality"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:nan2}} {{word:zuo4}}.",

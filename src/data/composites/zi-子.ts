@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:zi}}"],
   tts: ["子"],
   fit: "word",
+  topics: ["particles"],
+  isA: ["particle"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:yang4}}-{{word:zi}} {{word:hen3}} {{word:hao3}}-{{word:kan4}}.",

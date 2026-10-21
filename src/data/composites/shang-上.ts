@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:shang4}}"],
   tts: ["上面"],
   fit: "word",
+  topics: ["up-down-in-out"],
+  isA: ["place-relation"],
   examples: [
     {
       pinyin: "{{Word:shu1}} {{word:zai4}} {{word:shang4}}-{{word:mian4}}.",

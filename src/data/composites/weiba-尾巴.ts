@@ -14,5 +14,7 @@ export default composite({
   tts: ["动物身体后面的长的东西"],
   literal: "the long thing at the back of an animal",
   fit: "plain",
+  topics: ["wild-animals"],
+  isA: ["body-part"],
   proposed: true,
 });

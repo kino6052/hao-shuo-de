@@ -12,6 +12,8 @@ export default composite({
   tts: ["大部分"],
   literal: "the big part",
   fit: "natural",
+  topics: ["degree-words"],
+  isA: ["adverb-word"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:da4}} {{word:bu4}}-{{light:fen1}} {{word:zhi1dao4}}.",

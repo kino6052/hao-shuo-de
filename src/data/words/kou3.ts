@@ -14,6 +14,8 @@ export default word("kou3", {
     eng: "The mouth, and any opening: a door, a hole. Speaking, eating, and going in all need it.",
     rus: "Рот и любое отверстие: дверь, дыра. Без него не сказать про речь, еду и вход.",
   },
+  topics: ["head-and-face"],
+  isA: ["body-part"],
   maps: "lupa",
   atom: {
     eng: "The mouth is learned by pointing at it; eating and speaking are what it is for, not what it is.",

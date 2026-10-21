@@ -12,6 +12,8 @@ export default composite({
   tts: ["一些", "有的", "一点"],
   fit: "natural",
   kinds: ["built", "built", "built"],
+  topics: ["all-and-some"],
+  isA: ["amount-word"],
   note: "yī-diǎn for a little of something: yī-diǎn shuǐ.",
   examples: [
     {

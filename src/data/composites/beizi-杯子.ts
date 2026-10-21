@@ -12,6 +12,8 @@ export default composite({
   tts: ["喝水用的东西"],
   literal: "what you drink water from",
   fit: "plain",
+  topics: ["tableware"],
+  isA: ["container"],
   note: "bāo covers cups and bowls too.",
   examples: [
     {

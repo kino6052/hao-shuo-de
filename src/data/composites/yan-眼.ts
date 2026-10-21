@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:yan3jing}}"],
   tts: ["眼睛"],
   fit: "word",
+  topics: ["head-and-face"],
+  isA: ["body-part"],
   note: "Same as 眼睛.",
   examples: [
     {

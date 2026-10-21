@@ -12,5 +12,7 @@ export default composite({
   tts: ["给国家的金"],
   literal: "money given to the country",
   fit: "plain",
+  topics: ["government"],
+  isA: ["money-thing"],
   proposed: true,
 });

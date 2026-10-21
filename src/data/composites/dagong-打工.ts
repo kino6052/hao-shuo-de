@@ -12,5 +12,7 @@ export default composite({
   tts: ["打工", "为金工作"],
   literal: "work for money",
   fit: "plain",
+  topics: ["working-life"],
+  isA: ["working"],
   proposed: true,
 });

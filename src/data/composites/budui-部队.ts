@@ -14,5 +14,7 @@ export default composite({
   tts: ["为国打的很多人"],
   literal: "many people who fight for the country",
   fit: "plain",
+  topics: ["war-and-peace"],
+  isA: ["group-of-people"],
   proposed: true,
 });

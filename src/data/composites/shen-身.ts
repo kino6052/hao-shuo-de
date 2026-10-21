@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:shen1ti3}}"],
   tts: ["身体"],
   fit: "word",
+  topics: ["trunk-and-skin"],
+  isA: ["body-part"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:shen1ti3}} {{word:hen3}} {{word:hao3}}.",

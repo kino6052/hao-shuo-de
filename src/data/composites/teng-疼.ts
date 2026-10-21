@@ -12,6 +12,8 @@ export default composite({
   tts: ["痛"],
   literal: "pain",
   fit: "word",
+  topics: ["illness"],
+  isA: ["bodily-state"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:tou2}} {{word:hen3}} {{word:tong4}}.",

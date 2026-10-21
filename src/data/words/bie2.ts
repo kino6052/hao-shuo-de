@@ -14,6 +14,8 @@ export default word("bie2", {
     eng: "Other: {{word:bie2}}-{{word:de}} {{word:ren2}}, other people.",
     rus: "Другой: {{word:bie2}}-{{word:de}} {{word:ren2}} — другие люди.",
   },
+  topics: ["no-and-not"],
+  isA: ["negation-word"],
   paraphrase: {
     forms: ["{{word:bu4}}-{{word:tong2}}-{{word:de}}", "{{word:bu4}} {{word:yao4}}"],
     verdict: "fine",

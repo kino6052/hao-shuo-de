@@ -12,6 +12,8 @@ export default composite({
   tts: ["少了"],
   literal: "it's short",
   fit: "natural",
+  topics: ["much-and-little"],
+  isA: ["amount-word"],
   examples: [
     {
       pinyin: "{{Word:shui3}} {{word:shao3}} {{word:le}}.",

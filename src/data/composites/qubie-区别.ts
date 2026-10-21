@@ -12,6 +12,8 @@ export default composite({
   tts: ["不一样的地方"],
   literal: "where they're different",
   fit: "plain",
+  topics: ["same-and-different"],
+  isA: ["comparison"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:zhi1dao4}} {{word:bu4}}-{{word:yi1}}-{{word:yang4}}-{{word:de}} {{word:di4}}-{{light:fang1}} {{word:ma}}?",

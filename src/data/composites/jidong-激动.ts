@@ -12,5 +12,7 @@ export default composite({
   tts: ["心动得很快"],
   literal: "the heart moves very fast",
   fit: "plain",
+  topics: ["happy-feelings"],
+  isA: ["feeling-quality"],
   proposed: true,
 });

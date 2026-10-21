@@ -12,5 +12,7 @@ export default composite({
   tts: ["头里面X的样子"],
   literal: "the look of X inside the head",
   fit: "plain",
+  topics: ["ideas-and-opinions"],
+  isA: ["idea"],
   proposed: true,
 });

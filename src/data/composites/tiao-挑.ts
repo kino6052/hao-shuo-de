@@ -12,5 +12,7 @@ export default composite({
   tts: ["找出最好的"],
   literal: "find the best one",
   fit: "plain",
+  topics: ["shopping"],
+  isA: ["thinking-action"],
   proposed: true,
 });

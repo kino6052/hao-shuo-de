@@ -6,6 +6,7 @@ export default pattern("know-that", {
     rus: "После zhīdào может идти целое предложение: то, что вы знаете, — это то, что случилось, или кто это сделал.",
   },
   covers: [],
+  tags: ["speech", "cat:state"],
   template: { hsd: "Who + {{word:zhi1dao4}} + sentence", eng: "Who knows what the sentence says" },
   rules: [
     { lhs: "VerbP", hsd: "=zhi1dao4 S", eng: "zhīdào and a whole sentence" },

@@ -12,5 +12,7 @@ export default composite({
   tts: ["变多"],
   literal: "become more",
   fit: "plain",
+  topics: ["changing"],
+  isA: ["becoming"],
   proposed: true,
 });

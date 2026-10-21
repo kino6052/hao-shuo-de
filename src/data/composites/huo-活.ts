@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:huo2}}"],
   tts: ["活"],
   fit: "word",
+  topics: ["birth-and-death"],
+  isA: ["life-change"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:huo2}} {{word:le}} {{word:jiu3}}-{{word:shi2}} {{word:nian2}}.",

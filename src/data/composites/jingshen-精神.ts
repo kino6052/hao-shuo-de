@@ -12,6 +12,8 @@ export default composite({
   tts: ["心", "很有力"],
   literal: "heart / full of strength",
   fit: "plain",
+  topics: ["happy-feelings"],
+  isA: ["feeling-name"],
   examples: [
     {
       pinyin: "{{Word:ta1}}-{{word:de}} {{word:xin1}} {{word:hen3}} {{word:hao3}}.",

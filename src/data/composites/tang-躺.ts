@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:tang3}}"],
   tts: ["躺"],
   fit: "word",
+  topics: ["posture"],
+  isA: ["body-position"],
   note: "Lesson {{lesson:direction-and-result}}: tǎng-xià.",
 });

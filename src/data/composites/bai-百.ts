@@ -15,6 +15,8 @@ export default composite({
   tts: ["一零零", "十个十的数"],
   literal: "one-zero-zero / a number of ten tens",
   fit: "plain",
+  topics: ["number-words"],
+  isA: ["counting-number"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:yao4}} {{word:yi1}}-{{word:ling2}}-{{word:ling2}} {{word:jin1}}.",

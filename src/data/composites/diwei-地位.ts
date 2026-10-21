@@ -14,5 +14,7 @@ export default composite({
   tts: ["在别人心里有多高"],
   literal: "how high you are in others’ hearts",
   fit: "plain",
+  topics: ["groups-and-organisations"],
+  isA: ["idea"],
   proposed: true,
 });

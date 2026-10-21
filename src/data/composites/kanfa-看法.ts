@@ -12,5 +12,7 @@ export default composite({
   tts: ["看法", "看X的方法"],
   literal: "the way of looking at X",
   fit: "plain",
+  topics: ["ideas-and-opinions"],
+  isA: ["idea"],
   proposed: true,
 });

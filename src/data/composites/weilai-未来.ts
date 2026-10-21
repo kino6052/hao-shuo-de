@@ -17,6 +17,8 @@ export default composite({
   literal: "the time behind",
   fit: "natural",
   kinds: ["built", "spelled", "built"],
+  topics: ["before-and-after"],
+  isA: ["time-order"],
   examples: [
     {
       pinyin: "{{Word:hou4}}-{{word:mian4}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:you3}} {{word:shen2me}}?",

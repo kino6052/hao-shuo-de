@@ -12,6 +12,8 @@ export default composite({
   tts: ["做好了"],
   literal: "got it done",
   fit: "plain",
+  topics: ["deciding"],
+  isA: ["starting-and-stopping"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:zuo4}} {{word:hao3}} {{word:le}}!",

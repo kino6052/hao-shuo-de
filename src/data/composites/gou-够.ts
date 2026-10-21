@@ -12,6 +12,8 @@ export default composite({
   tts: ["好了", "不要了"],
   literal: "that's good / no more needed",
   fit: "natural",
+  topics: ["much-and-little"],
+  isA: ["amount-word"],
   examples: [
     { pinyin: "{{Word:hao3}} {{word:le}}.", hanzi: "好了。", en: "That's enough.", ru: "Хватит." },
     {

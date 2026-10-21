@@ -6,6 +6,7 @@ export default pattern("yi-qi-together", {
     rus: "Yī-qǐ перед глаголом говорит, что это делают вместе: wǒ-men yī-qǐ chī — мы едим вместе.",
   },
   covers: [],
+  tags: ["with-for", "all-also", "cat:relation"],
   template: { hsd: "Who + {{word:yi1}}-{{word:qi3}} + verb", eng: "Who does the verb together" },
   rules: [{ lhs: "VP", hsd: "=yi1 =qi3 VP", eng: "yī-qǐ, then what is done: together" }],
   taught: "also-and-all/together",

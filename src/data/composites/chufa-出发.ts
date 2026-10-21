@@ -13,6 +13,8 @@ export default composite({
   literal: "go out-send out / start going",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["a-trip"],
+  isA: ["moving-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:jin1}}-{{word:tian1}} {{word:chu1}}-{{word:fa1}}.",

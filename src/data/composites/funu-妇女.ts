@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:nv3}}-{{word:ren2}}"],
   tts: ["女人"],
   fit: "word",
+  topics: ["men-and-women"],
+  isA: ["person-by-age-or-sex"],
   examples: [
     {
       pinyin: "{{Word:na4}}-{{light:ge4}} {{word:nv3}}-{{word:ren2}} {{word:zai4}} {{word:wo3}} {{word:jia1}}.",

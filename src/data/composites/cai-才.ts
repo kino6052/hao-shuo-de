@@ -12,6 +12,8 @@ export default composite({
   tts: ["X完后，Y"],
   literal: "after finishing X, Y",
   fit: "skip",
+  topics: ["adverbs"],
+  isA: ["adverb-word"],
   examples: [
     {
       pinyin: "{{Word:chi1}}-{{word:wan2}} {{word:hou4}}, {{word:ni3}} {{word:qu4}} {{word:wan2r}}.",

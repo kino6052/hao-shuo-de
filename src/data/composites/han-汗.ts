@@ -14,5 +14,7 @@ export default composite({
   tts: ["热的时候从身体出来的水"],
   literal: "water that comes out of the body when it is hot",
   fit: "plain",
+  topics: ["trunk-and-skin"],
+  isA: ["body-part"],
   proposed: true,
 });

@@ -6,6 +6,7 @@ export default pattern("le-changed", {
     rus: "Говорит, что что-то изменилось: le стоит после описывающего слова, без hěn.",
   },
   covers: [],
+  tags: ["change", "cat:quality"],
   template: { hsd: "Thing + adjective + {{word:le}}", eng: "The thing became that" },
   rules: [{ lhs: "VP", hsd: "@adjective le", eng: "a describing word and le: it changed" }],
   taught: "becoming-and-making/changed",

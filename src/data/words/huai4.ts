@@ -14,6 +14,8 @@ export default word("huai4", {
     eng: "Bad, broken. {{word:bu4}} {{word:hao3}} is only \"not good\": this says something went wrong.",
     rus: "Плохой, сломанный. {{word:bu4}} {{word:hao3}} — лишь «не хороший», а это значит, что что-то испортилось.",
   },
+  topics: ["how-good"],
+  isA: ["value-quality"],
   maps: "ike, pakala",
   paraphrase: { forms: ["{{word:bu4}} {{word:hao3}}"], verdict: "fine" },
 });

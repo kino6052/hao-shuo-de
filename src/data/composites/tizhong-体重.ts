@@ -12,6 +12,8 @@ export default composite({
   tts: ["身体的大小"],
   literal: "how big the body is",
   fit: "plain",
+  topics: ["body-needs"],
+  isA: ["measure-unit"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:shen1ti3}}-{{word:de}} {{word:da4}}-{{word:xiao3}} {{word:shi4}} {{word:duo1}}-{{word:shao3}}?",

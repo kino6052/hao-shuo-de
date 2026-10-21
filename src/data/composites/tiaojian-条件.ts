@@ -12,6 +12,8 @@ export default composite({
   tts: ["要的东西"],
   literal: "what's needed",
   fit: "plain",
+  topics: ["state-of-things"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:wo3}} {{word:yao4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

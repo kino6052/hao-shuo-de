@@ -12,5 +12,7 @@ export default composite({
   tts: ["看得到，摸得到"],
   literal: "can be seen, can be touched",
   fit: "plain",
+  topics: ["easy-hard-right-wrong"],
+  isA: ["truth-or-ease"],
   proposed: true,
 });

@@ -6,6 +6,7 @@ export default pattern("zai-now", {
     rus: "Говорит, что это происходит прямо сейчас: zài стоит перед глаголом, как -ing в английском.",
   },
   covers: ["grammar:ongoing"],
+  tags: ["ongoing", "cat:time"],
   template: { hsd: "Who + {{word:zai4}} + verb", eng: "Who is doing the verb" },
   rules: [{ lhs: "VP", hsd: "=zai4 VP", eng: "zài, then the verb" }],
   taught: "when-it-happens/now",

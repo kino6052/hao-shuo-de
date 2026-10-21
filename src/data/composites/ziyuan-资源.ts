@@ -12,6 +12,8 @@ export default composite({
   tts: ["有用的东西"],
   literal: "useful things",
   fit: "plain",
+  topics: ["business-and-economy"],
+  isA: ["material"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:you3}}-{{word:yong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

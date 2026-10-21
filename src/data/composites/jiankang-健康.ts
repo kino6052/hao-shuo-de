@@ -12,6 +12,8 @@ export default composite({
   tts: ["身体好"],
   literal: "body good",
   fit: "natural",
+  topics: ["healthy-habits"],
+  isA: ["bodily-state"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ba4ba}} {{word:shen1ti3}} {{word:hen3}} {{word:hao3}}.",

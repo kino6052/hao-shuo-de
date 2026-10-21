@@ -14,6 +14,8 @@ export default composite({
   tts: ["有很多东西要做"],
   literal: "have a lot to do",
   fit: "plain",
+  topics: ["working-life"],
+  isA: ["condition-quality"],
   examples: [
     {
       pinyin: "{{Word:jin1}}-{{word:tian1}} {{word:wo3}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:dong1}}-{{light:xi1}} {{word:yao4}} {{word:zuo4}}.",

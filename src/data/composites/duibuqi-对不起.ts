@@ -16,6 +16,8 @@ export default composite({
   literal: "facing, can't rise / it's my fault",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["greetings-and-thanks"],
+  isA: ["set-phrase"],
   examples: [
     {
       pinyin: "{{Word:dui4}}-{{word:bu4}}-{{word:qi3}}, {{word:wo3}} {{word:lai2}} {{word:wan3}} {{word:le}}.",

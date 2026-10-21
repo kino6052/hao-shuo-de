@@ -14,6 +14,8 @@ export default composite({
   tts: ["身体不好的人吃的东西"],
   literal: "what a person whose body isn't well eats",
   fit: "plain",
+  topics: ["at-the-doctor"],
+  isA: ["made-thing"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:shen1ti3}}-{{word:bu4}}-{{word:hao3}}-{{word:de}}-{{word:ren2}}-{{word:chi1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

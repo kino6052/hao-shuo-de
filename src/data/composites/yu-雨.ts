@@ -12,6 +12,8 @@ export default composite({
   tts: ["从天下来的水"],
   literal: "water that comes down from the sky",
   fit: "plain",
+  topics: ["weather"],
+  isA: ["weather-thing"],
   examples: [
     {
       pinyin: "{{Word:cong2}}-{{word:tian1}}-{{word:xia4}}-{{word:lai2}}-{{word:de}} {{word:shui3}} {{word:hen3}} {{word:leng3}}.",

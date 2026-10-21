@@ -12,6 +12,8 @@ export default composite({
   tts: ["新闻"],
   literal: "new + wén",
   fit: "name",
+  topics: ["news-and-events"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:kan4}} {{word:le}} {{word:jin1}}-{{word:tian1}}-{{word:de}} {{word:xin1#new}}-\"wén\" {{word:ma}}?",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["高的房子"],
   literal: "a tall house",
   fit: "plain",
+  topics: ["buildings"],
+  isA: ["building"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:zai4}} {{word:na4}}-{{light:ge4}} {{word:gao1}}-{{word:de}} {{word:fang2}}-{{word:zi}}-{{word:li3}} {{word:gong1}}-{{word:zuo4}}.",

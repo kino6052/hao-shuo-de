@@ -12,6 +12,8 @@ export default composite({
   tts: ["为什么"],
   literal: "why",
   fit: "plain",
+  topics: ["ideas-and-opinions"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:bu4}} {{word:zhi1dao4}} {{word:wei4}}-{{word:shen2me}}.",

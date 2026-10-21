@@ -14,6 +14,8 @@ export default composite({
   tts: ["在天上的小的日"],
   literal: "a small sun in the sky",
   fit: "plain",
+  topics: ["sky-and-space"],
+  isA: ["sky-body"],
   note: "yuè covers stars too.",
   examples: [
     {

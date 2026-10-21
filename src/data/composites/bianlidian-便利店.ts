@@ -14,5 +14,7 @@ export default composite({
   tts: ["小的买东西的地方，晚上也开"],
   literal: "a small place to buy things, open at night too",
   fit: "plain",
+  topics: ["shops"],
+  isA: ["building"],
   proposed: true,
 });

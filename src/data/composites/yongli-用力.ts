@@ -12,5 +12,7 @@ export default composite({
   tts: ["用力"],
   fit: "natural",
   transparent: true,
+  topics: ["speed-and-strength"],
+  isA: ["body-action"],
   proposed: true,
 });

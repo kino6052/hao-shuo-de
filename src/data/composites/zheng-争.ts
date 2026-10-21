@@ -12,6 +12,8 @@ export default composite({
   tts: ["两个人都要"],
   literal: "both want it",
   fit: "plain",
+  topics: ["sports"],
+  isA: ["social-action"],
   examples: [
     {
       pinyin: "{{Word:liang3}}-{{light:ge4}} {{word:ren2}} {{word:dou1}} {{word:yao4}} {{word:zhe4}}-{{light:ge4}}.",

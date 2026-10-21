@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:shui4jiao4}}"],
   tts: ["睡觉"],
   fit: "word",
+  topics: ["waking-and-sleeping"],
+  isA: ["body-action"],
   examples: [
     {
       pinyin: "{{Word:hai2}}-{{word:zi}} {{word:zai4}} {{word:shui4jiao4}}.",

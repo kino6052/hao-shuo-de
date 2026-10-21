@@ -12,6 +12,8 @@ export default composite({
   tts: ["不动，不变"],
   literal: "doesn't move or change",
   fit: "plain",
+  topics: ["state-of-things"],
+  isA: ["condition-quality"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:bu4}} {{word:dong4}}, {{word:bu4}} {{word:bian4}}.",

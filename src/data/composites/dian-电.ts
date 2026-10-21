@@ -12,6 +12,8 @@ export default composite({
   tts: ["让机器动的力"],
   literal: "the force that makes machines move",
   fit: "plain",
+  topics: ["home-electronics"],
+  isA: ["fire-or-light"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{word:li3}} {{word:mei2}}-{{word:you3}} {{word:rang4}}-{{word:ji1}}-{{word:qi4}}-{{word:dong4}}-{{word:de}} {{word:li4}}.",

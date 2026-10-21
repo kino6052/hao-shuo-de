@@ -6,6 +6,7 @@ export default pattern("ci-times", {
     rus: "Говорит, сколько раз: cì стоит после hěn duō или duōshǎo, после числа или после zhè («этот раз»).",
   },
   covers: [],
+  tags: ["count", "cat:quantity", "cat:time"],
   template: { hsd: "Who + verb + {{word:hen3}} {{word:duo1}} {{word:ci4}}", eng: "Who does the verb many times" },
   rules: [
     { lhs: "Times", hsd: "hen3 =duo1 =ci4", eng: "hěn duō cì, many times" },

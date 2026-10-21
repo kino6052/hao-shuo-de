@@ -16,6 +16,8 @@ export default composite({
   tts: ["里面的东西", "看的", "说的"],
   literal: "what is inside / what you watch / what is said",
   fit: "plain",
+  topics: ["writing"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:kan4}} {{word:li3}}-{{word:mian4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

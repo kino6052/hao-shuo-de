@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:bi3}}"],
   tts: ["比"],
   fit: "word",
+  topics: ["words-before-nouns"],
+  isA: ["preposition"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:bi3}} {{word:wo3}} {{word:gao1}}.",

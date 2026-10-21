@@ -12,6 +12,8 @@ export default composite({
   tts: ["家里的人"],
   literal: "a person of the family",
   fit: "natural",
+  topics: ["relatives"],
+  isA: ["relative"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:wo3}} {{word:jia1}}-{{word:li3}}-{{word:de}} {{word:ren2}}.",

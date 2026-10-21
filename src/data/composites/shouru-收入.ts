@@ -12,4 +12,6 @@ export default composite({
   tts: ["进来的金"],
   literal: "the money coming in",
   fit: "plain",
+  topics: ["money-and-paying"],
+  isA: ["money-thing"],
 });

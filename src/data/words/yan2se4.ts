@@ -10,6 +10,8 @@ export default word("yan2se4", {
     eng: "Color itself: without it, you can't ask \"what color is it?\"",
     rus: "Сам цвет: без него не спросить «какого это цвета?»",
   },
+  topics: ["colours"],
+  isA: ["colour-quality"],
   maps: "kule",
   paraphrase: {
     forms: ["{{word:bai2}}, {{word:hei1}}, {{word:hong2}} {{word:zhe4}}-{{word:yang4}}-{{word:de}}"],

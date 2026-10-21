@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:yan3jing}}"],
   tts: ["眼睛"],
   fit: "word",
+  topics: ["head-and-face"],
+  isA: ["body-part"],
   examples: [
     {
       pinyin: "{{Word:ba3}} {{word:yan3jing}} {{word:guan1}}-{{word:shang4}}.",

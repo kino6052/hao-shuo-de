@@ -16,6 +16,8 @@ export default composite({
   literal: "the small time",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["babies-and-children"],
+  isA: ["time-span"],
   note: "wǒ xiǎo-de shí-jiān: when I was little.",
   examples: [
     {

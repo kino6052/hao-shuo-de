@@ -6,6 +6,7 @@ export default pattern("wan-finished", {
     rus: "Говорит, что вы закончили что-то делать: wán присоединяется к глаголу, а затем идёт le.",
   },
   covers: [],
+  tags: ["done", "cat:time", "cat:action"],
   template: { hsd: "Who + verb-{{word:wan2}} {{word:le}}", eng: "Who finished the verb" },
   rules: [{ lhs: "VerbP", hsd: "@verb =wan2 le", eng: "a verb, wán, and le" }],
   taught: "around-an-action/finished",

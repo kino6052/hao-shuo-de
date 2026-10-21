@@ -14,5 +14,7 @@ export default composite({
   tts: ["看了X，点一下，说好"],
   literal: "see X, tap once, say it is good",
   fit: "plain",
+  topics: ["phone-and-computer"],
+  isA: ["social-action"],
   proposed: true,
 });

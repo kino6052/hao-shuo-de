@@ -12,6 +12,8 @@ export default composite({
   tts: ["大地方"],
   literal: "big place",
   fit: "plain",
+  topics: ["countries-and-cities"],
+  isA: ["place"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:yi1}}-{{light:ge4}} {{word:da4}} {{word:di4}}-{{light:fang1}}.",

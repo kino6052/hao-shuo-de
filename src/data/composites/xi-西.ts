@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:xi1}}"],
   tts: ["西"],
   fit: "word",
+  topics: ["directions"],
+  isA: ["direction"],
   proposed: true,
 });

@@ -12,6 +12,8 @@ export default composite({
   tts: ["头的前面"],
   literal: "the front of the head",
   fit: "plain",
+  topics: ["head-and-face"],
+  isA: ["body-part"],
   examples: [
     {
       pinyin: "{{Word:ta1}}-{{word:de}} {{word:tou2}}-{{word:de}} {{word:qian2}}-{{word:mian4}} {{word:hen3}} {{word:hong2}}.",

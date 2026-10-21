@@ -12,5 +12,7 @@ export default composite({
   tts: ["头上用的衣服"],
   literal: "clothing used on the head",
   fit: "plain",
+  topics: ["accessories"],
+  isA: ["headwear-or-accessory"],
   proposed: true,
 });

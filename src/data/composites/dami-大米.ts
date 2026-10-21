@@ -12,6 +12,8 @@ export default composite({
   tts: ["饭"],
   literal: "rice (a meal)",
   fit: "word",
+  topics: ["grains-and-bread"],
+  isA: ["staple-food"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:fan4}}.",

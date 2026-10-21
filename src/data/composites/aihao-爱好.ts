@@ -16,6 +16,8 @@ export default composite({
   literal: "love-good / something you love doing",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["hobbies-and-outings"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:ai4}}-{{word:hao4}} {{word:shi4}} {{word:shu1}}.",

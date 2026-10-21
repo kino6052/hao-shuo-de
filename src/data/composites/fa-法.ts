@@ -12,6 +12,8 @@ export default composite({
   tts: ["法"],
   literal: "law",
   fit: "word",
+  topics: ["ideas-and-opinions"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zhi1dao4}} {{word:fa3}}.",

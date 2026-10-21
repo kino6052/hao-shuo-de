@@ -12,6 +12,8 @@ export default composite({
   tts: ["十二点"],
   literal: "twelve o'clock",
   fit: "plain",
+  topics: ["times-of-day"],
+  isA: ["time-of-day-word"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:shi2}}-{{word:er4}}-{{word:dian3}} {{word:chi1}}-{{word:fan4}}.",

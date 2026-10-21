@@ -12,6 +12,8 @@ export default composite({
   tts: ["动物的白色的水"],
   literal: "animals' white water",
   fit: "plain",
+  topics: ["meat"],
+  isA: ["drink"],
   examples: [
     {
       pinyin: "{{Word:hai2}}-{{word:zi}} {{word:he1}} {{word:dong4}}-{{word:wu4}}-{{word:de}} {{word:bai2}}-{{word:se4}}-{{word:de}} {{word:shui3}}.",

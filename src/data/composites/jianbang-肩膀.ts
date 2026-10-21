@@ -14,5 +14,7 @@ export default composite({
   tts: ["头和手中间的地方"],
   literal: "the place between the head and the arm",
   fit: "plain",
+  topics: ["trunk-and-skin"],
+  isA: ["body-part"],
   proposed: true,
 });

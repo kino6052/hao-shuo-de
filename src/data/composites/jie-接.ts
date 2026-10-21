@@ -12,6 +12,8 @@ export default composite({
   tts: ["拿到"],
   literal: "take-reach",
   fit: "plain",
+  topics: ["taking-and-holding"],
+  isA: ["handling-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:na2}}-{{word:dao4}} {{word:le}} {{word:ni3}}-{{word:de}} {{word:shu1}}.",

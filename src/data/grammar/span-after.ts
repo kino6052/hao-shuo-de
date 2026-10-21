@@ -6,6 +6,7 @@ export default pattern("span-after", {
     rus: "Промежуток времени и hòu или qián говорят, через сколько или сколько назад: sān tiān hòu — через три дня.",
   },
   covers: ["grammar:when"],
+  tags: ["when", "count", "cat:time"],
   template: { hsd: "span + {{word:hou4}} / {{word:qian2}}", eng: "After / before that long" },
   rules: [
     { lhs: "Time", hsd: "Span =hou4", eng: "a span and hòu: after three days" },

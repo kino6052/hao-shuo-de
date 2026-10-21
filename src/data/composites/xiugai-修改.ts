@@ -12,6 +12,8 @@ export default composite({
   tts: ["把X变一点"],
   literal: "change X a little",
   fit: "plain",
+  topics: ["writing"],
+  isA: ["handling-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ba3}} {{word:zhe4}}-{{light:ge4}} {{word:bian4}} {{word:yi1}}-{{word:dian3}}.",

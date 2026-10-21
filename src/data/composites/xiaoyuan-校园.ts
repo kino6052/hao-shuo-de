@@ -12,6 +12,8 @@ export default composite({
   tts: ["学的地方"],
   literal: "the place for learning",
   fit: "plain",
+  topics: ["classroom"],
+  isA: ["outdoor-place"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zai4}} {{word:xue2}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",

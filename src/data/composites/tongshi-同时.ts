@@ -12,6 +12,8 @@ export default composite({
   tts: ["一样的时间"],
   literal: "at the same time",
   fit: "plain",
+  topics: ["before-and-after"],
+  isA: ["time-order"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:zai4}} {{word:yi1}}-{{word:yang4}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:lai2}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["很多"],
   literal: "very many",
   fit: "natural",
+  topics: ["much-and-little"],
+  isA: ["amount-word"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:shu1}}.",

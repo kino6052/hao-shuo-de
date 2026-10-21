@@ -6,6 +6,7 @@ export default pattern("wan-hou-after", {
     rus: "Говорит «после того, как что-то сделано»: hòu стоит после законченного действия, потом запятая и остальное.",
   },
   covers: [],
+  tags: ["when", "cat:time"],
   template: { hsd: "verb-{{word:wan2}} {{word:hou4}}, the rest", eng: "After the verb, the rest" },
   rules: [
     { lhs: "Time", hsd: "@verb =wan2 =hou4", eng: "a verb, wán, and hòu: after it is done" },

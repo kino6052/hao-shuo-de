@@ -14,5 +14,7 @@ export default composite({
   tts: ["睡觉的地方上的衣服"],
   literal: "the cloth on the sleeping place",
   fit: "plain",
+  topics: ["bedroom"],
+  isA: ["furniture-item"],
   proposed: true,
 });

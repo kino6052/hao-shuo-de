@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:qiu2}}"],
   tts: ["球"],
   fit: "word",
+  topics: ["games-and-toys"],
+  isA: ["toy-or-game"],
   proposed: true,
 });

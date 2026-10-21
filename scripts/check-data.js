@@ -6,20 +6,23 @@
 //   1. The generated index files match their folders (scripts/build-data.js).
 //   2. Every word file is valid: its id matches its file name, its fields are
 //      filled in (a `word add` TODO fails here), its senses are complete.
-//   3. Every word sits in exactly one category leaf, and every leaf names
-//      real words.
+//   3. The topic and kind nets (maps/topics.ts, kinds.ts) are sound, every
+//      entry names real tags, and every core word has a topic (TAGS_PLAN.md).
 //   4. Antonym/synonym pairs and phrases, and coverage items, name real words.
 //   5. Every composite file is named <toneless pinyin>-<hanzi>.ts.
 //   6. Every grammar pattern (src/data/grammar/) is named after its file, covers
-//      real coverage items, is taught in a real module, has rules that use only
-//      real words, and every example of it parses by that pattern.
+//      real coverage items, is taught in a real module, has only known tags
+//      (src/lib/grammar-tags.ts), has rules that use only real words, and every
+//      example of it parses by that pattern.
 //
 //   npm run check-data
 
 import { WORDS } from '../src/data/words/index.ts';
 import { ENTRIES } from '../src/data/composites/index.ts';
 import { GROUPS } from '../src/data/coverage/index.ts';
-import CATEGORIES from '../src/data/maps/categories.ts';
+import TOPICS from '../src/data/maps/topics.ts';
+import KINDS from '../src/data/maps/kinds.ts';
+import { tagReport, LEAF_MAX, LEAF_MIN } from '../src/lib/tag-net.js';
 import ANTONYMS from '../src/data/maps/antonyms.ts';
 import SYNONYMS from '../src/data/maps/synonyms.ts';
 import CONNECTIONS from '../src/data/maps/connections.ts';
@@ -32,6 +35,7 @@ import { wordRefIds } from '../src/lib/word-refs.js';
 import { paraphraseProblems, paraphraseCounts, paraphraseStatus, PARAPHRASES_REQUIRED } from '../src/lib/paraphrase.js';
 import { kindsProblems, needsBuiltForm, undecidedForms, SPELLED_NEED_BUILT_FORM } from '../src/lib/form-kinds.js';
 import { PATTERNS } from '../src/data/grammar/index.ts';
+import { tagProblems } from '../src/lib/grammar-tags.ts';
 import { createParser, patternsOf } from '../src/lib/grammar/parser.js';
 import { pinyinToRefs } from '../src/lib/pinyin-refs.js';
 import { existsSync } from 'fs';
@@ -91,22 +95,9 @@ if (PARAPHRASES_REQUIRED && counts.none) {
   errors.push(`${counts.none} word(s) have neither a paraphrase nor an atom mark: ${names.slice(0, 12).join(', ')}${names.length > 12 ? ', ...' : ''}`);
 }
 
-// 3. categories
-const placed = new Map();
-const walk = (c, path) => {
-  const here = [...path, c.key];
-  for (const w of c.wordIds ?? []) {
-    if (!ids.has(w)) errors.push(`maps/categories.ts ${here.join(' > ')}: unknown word ${w}`);
-    placed.set(w, [...(placed.get(w) ?? []), here.join(' > ')]);
-  }
-  for (const ch of c.children ?? []) walk(ch, here);
-};
-CATEGORIES.forEach((c) => walk(c, []));
-for (const id of ids) {
-  const at = placed.get(id) ?? [];
-  if (!at.length) errors.push(`words/${id}.ts: in no category -- add it to a leaf in maps/categories.ts`);
-  else if (at.length > 1) errors.push(`words/${id}.ts: in ${at.length} categories (${at.join('; ')})`);
-}
+// 3. tags (K31): the topic and kind nets are sound, every entry names real tags, every core word has a topic
+const tagCheck = tagReport({ topics: TOPICS, kinds: KINDS, words: WORDS, composites: ENTRIES });
+errors.push(...tagCheck.errors);
 
 // 4. relations and coverage
 for (const [name, r] of [['antonyms', ANTONYMS], ['synonyms', SYNONYMS]]) {
@@ -220,6 +211,7 @@ PATTERNS.forEach((p, i) => {
   if (`${p.id}.ts` !== patternFiles[i]) errors.push(`${where}: pattern("${p.id}") doesn't match the file name`);
   for (const l of ['eng', 'rus']) if (!p.meaning?.[l]) errors.push(`${where}: no meaning.${l}`);
   for (const c of p.covers) if (!coverageItems.has(c)) errors.push(`${where}: covers "${c}", which is not a coverage item`);
+  for (const t of tagProblems(p)) errors.push(`${where}: ${t}`);
   if (p.taught && !existsSync(resolve(LESSONS, `${p.taught}.ts`))) errors.push(`${where}: taught in "${p.taught}", which is not a lesson module`);
   for (const ref of wordRefIds(p.template.hsd)) if (!ids.has(ref)) errors.push(`${where}: template names unknown word ${ref}`);
   if (!p.examples.length) errors.push(`${where}: no examples`);
@@ -244,6 +236,13 @@ if (errors.length) {
 console.log(`check-data: OK -- ${ids.size} words, ${ENTRIES.length} composites, ${GROUPS.length} coverage groups, ${PATTERNS.length} grammar patterns.`);
 if (bareSpelled.length) console.log(`check-data: ${bareSpelled.length} composite(s) have a spelled form and no built form (K23, potentially dangerous); set SPELLED_NEED_BUILT_FORM (src/lib/form-kinds.js) to true to make this a failure.`);
 if (kindsToReview) console.log(`check-data: ${kindsToReview} composite(s) have a Mandarin compound still to be marked built or spelled (review: /__review/?kinds=1).`);
+{
+  const c = tagCheck.counts;
+  console.log(`check-data: ${c.topics} topics (${c.topLeaves} leaves, ${c.depth} deep), ${c.kinds} kinds; ${c.withTwoTopics} entries under two or more topics.`);
+  if (c.coreNoKind) console.log(`check-data: ${c.coreNoKind} core word(s) have no kind yet (isA); the gate fails on this once KINDS_REQUIRED (src/lib/tag-net.js) is true.`);
+  if (c.big || c.small || c.emptyLeaves) console.log(`check-data: leaf topics outside ${LEAF_MIN} to ${LEAF_MAX} entries: ${c.big} too big, ${c.small} too small, ${c.emptyLeaves} empty (node scripts/kb.js tags --check lists them).`);
+  if (c.extra) console.log(`check-data: ${c.extra} extra tag(s): written beside a tag under them (node scripts/kb.js tags --check).`);
+}
 if (counts.none) {
   console.log(
     `check-data: ${counts.none} of ${counts.total} words have neither a paraphrase nor an atom mark yet (${counts.paraphrase} paraphrased, ${counts.clumsy} clumsy, ${counts.atom} atoms); the gate fails on this once PARAPHRASES_REQUIRED (src/lib/paraphrase.js) is true.`,

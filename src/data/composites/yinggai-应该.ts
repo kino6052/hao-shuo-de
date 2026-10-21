@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:yao4}}"],
   tts: ["要"],
   fit: "word",
+  topics: ["liking-and-wanting"],
+  isA: ["feeling-and-wanting"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:yao4}} {{word:duo1}} {{word:he1}} {{word:shui3}}.",

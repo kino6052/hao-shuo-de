@@ -12,6 +12,8 @@ export default composite({
   tts: ["学的部分"],
   literal: "learning part",
   fit: "plain",
+  topics: ["classroom"],
+  isA: ["activity-name"],
   examples: [
     {
       pinyin: "{{Word:jin1}}-{{word:tian1}}-{{word:de}} {{word:xue2}}-{{word:de}} {{word:bu4}}-{{light:fen1}} {{word:hen3}} {{word:nan2}}.",

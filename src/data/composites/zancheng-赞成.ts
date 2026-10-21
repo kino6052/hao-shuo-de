@@ -12,6 +12,8 @@ export default composite({
   tts: ["觉得一样"],
   literal: "feel the same",
   fit: "plain",
+  topics: ["agreeing-and-praising"],
+  isA: ["speaking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:jue2}}-{{word:de2}} {{word:yi1}}-{{word:yang4}}.",

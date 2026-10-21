@@ -16,6 +16,8 @@ export default composite({
   tts: ["工作的人", "工人", "做的人"],
   literal: "a person who works",
   fit: "natural",
+  topics: ["farms-and-factories"],
+  isA: ["worker"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ba4ba}} {{word:shi4}} {{word:gong1}}-{{word:ren2}}.",

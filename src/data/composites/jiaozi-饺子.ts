@@ -14,5 +14,7 @@ export default composite({
   tts: ["包了东西的，很小的吃的"],
   literal: "small food with something wrapped inside",
   fit: "plain",
+  topics: ["grains-and-bread"],
+  isA: ["staple-food"],
   proposed: true,
 });

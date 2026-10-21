@@ -12,5 +12,7 @@ export default composite({
   tts: ["一个比一个高"],
   literal: "each one higher than the one before",
   fit: "plain",
+  topics: ["exams-and-marks"],
+  isA: ["idea"],
   proposed: true,
 });

@@ -6,6 +6,7 @@ export default pattern("ma-short", {
     rus: "Короткий вопрос «да или нет»: yǒu … ma — есть ли …; yuǎn ma — далеко ли.",
   },
   covers: ["grammar:yes-no"],
+  tags: ["question", "cat:substance"],
   template: { hsd: "verb phrase / describing word + {{word:ma}}?", eng: "Is it so?" },
   rules: [
     { lhs: "Q", hsd: "VP ma", eng: "what is said with no one named, and ma" },

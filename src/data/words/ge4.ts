@@ -14,6 +14,8 @@ export default word("ge4", {
     eng: "Without it, a number or {{word:zhe4}} can't stand before a noun: \"this one\", \"two people\".",
     rus: "Без него число или {{word:zhe4}} не могут стоять перед существительным: «этот», «два человека».",
   },
+  topics: ["counting-words"],
+  isA: ["counting-word"],
   maps: "",
   atom: {
     eng: "A counting word with no meaning of its own: it only joins a number to a thing, so nothing else can say it.",

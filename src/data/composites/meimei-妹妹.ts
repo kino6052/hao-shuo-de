@@ -14,6 +14,8 @@ export default composite({
   tts: ["我爸爸妈妈的比我小的女孩子"],
   literal: "my parents' girl, smaller than me",
   fit: "plain",
+  topics: ["parents-and-children"],
+  isA: ["relative"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:bi3}}-{{word:wo3}}-{{word:xiao3}}-{{word:de}} {{word:nv3}}-{{word:hai2}}-{{word:zi}} {{word:zai4}} {{word:shui4jiao4}}.",

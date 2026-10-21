@@ -12,6 +12,8 @@ export default composite({
   tts: ["在水里的动物"],
   literal: "animal in the water",
   fit: "plain",
+  topics: ["meat"],
+  isA: ["meat-item"],
   note: "Lesson {{lesson:roles-of-a-word}}.",
   examples: [
     {

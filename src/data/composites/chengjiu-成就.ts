@@ -14,5 +14,7 @@ export default composite({
   tts: ["做好了很大的东西"],
   literal: "made something big well",
   fit: "plain",
+  topics: ["causes-and-results"],
+  isA: ["cause-and-effect"],
   proposed: true,
 });

@@ -12,6 +12,8 @@ export default composite({
   tts: ["人物", "人"],
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["history-and-culture"],
+  isA: ["person"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:hen3}} {{word:da4}}-{{word:de}} {{word:ren2}}-{{word:wu4}}.",

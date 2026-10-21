@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:lu4}}"],
   tts: ["路"],
   fit: "word",
+  topics: ["the-road"],
+  isA: ["outdoor-place"],
   note: "Lesson {{lesson:moving}}. A way of doing something is fāng-fǎ.",
   examples: [
     {

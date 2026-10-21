@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:dao4}}"],
   tts: ["到"],
   fit: "word",
+  topics: ["going-and-coming"],
+  isA: ["moving-action"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:dao4}} {{word:le}} {{word:zui4}} {{word:gao1}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",

@@ -15,6 +15,8 @@ export default composite({
   tts: ["真好的地方", "因为X人知道这个"],
   literal: "a really good place / people know this because of X",
   fit: "plain",
+  topics: ["describing-people"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:jia1}} {{word:you3}} {{word:zhen1}} {{word:hao3}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",

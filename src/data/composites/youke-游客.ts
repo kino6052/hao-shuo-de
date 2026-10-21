@@ -14,5 +14,7 @@ export default composite({
   tts: ["去别的地方玩儿的人"],
   literal: "a person who goes to another place to play",
   fit: "plain",
+  topics: ["a-trip"],
+  isA: ["social-role"],
   proposed: true,
 });

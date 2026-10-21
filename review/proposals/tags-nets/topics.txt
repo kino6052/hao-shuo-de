@@ -1,0 +1,222 @@
+# The topic net, proposed (TAGS_PLAN.md C1). Where you meet a word: the pages of a picture dictionary.
+# One line per tag: id | English | Russian | Chinese. Indent = under the line above that is one step less indented.
+# "+ a, b" at the end of a line = the tag is also under those tags (a tag with two parents).
+# A tag with nothing under it is a page (a leaf); entries are tagged with pages. About 8 to 30 entries each.
+
+people | People | Люди | 人
+  body | The body | Тело | 身体
+    head-and-face | Head and face | Голова и лицо | 头和脸
+    hands-and-feet | Arms, hands, legs and feet | Руки и ноги | 手和脚
+    trunk-and-skin | Trunk, hair and skin | Туловище, волосы и кожа | 躯干和皮肤
+    senses | Seeing, hearing, smelling, tasting, touching | Органы чувств | 感官
+    inside-the-body | Inside the body | Внутри тела | 体内 + health
+  family | Family | Семья | 家人
+    parents-and-children | Parents, children, brothers and sisters | Родители, дети, братья и сёстры | 父母子女
+    relatives | Relatives | Родственники | 亲戚
+    love-and-marriage | Love and marriage | Любовь и брак | 爱情和婚姻
+  life-stages | Life stages | Возрасты жизни | 人生阶段
+    babies-and-children | Babies and children | Младенцы и дети | 婴儿和孩子
+    young-and-old | Young people and old people | Молодые и пожилые | 年轻人和老人
+    birth-and-death | Birth and death | Рождение и смерть | 出生和死亡
+  kinds-of-people | Kinds of people | Какие бывают люди | 各种人
+    men-and-women | Men, women and people | Мужчины, женщины, люди | 男人和女人
+    friends-and-neighbours | Friends, neighbours and strangers | Друзья, соседи, чужие | 朋友和邻居
+    people-together | People together: a crowd, a team | Люди вместе | 人群
+  feelings | Feelings | Чувства | 感情
+    happy-feelings | Happy feelings | Радость | 高兴
+    sad-and-angry | Sad and angry feelings | Грусть и гнев | 难过和生气
+    worry-and-fear | Worry and fear | Тревога и страх | 担心和害怕
+    liking-and-wanting | Liking, loving and wanting | Любить и хотеть | 喜欢和想要
+  character | Character and manners | Характер и манеры | 性格和礼貌
+    describing-people | Describing people | Описание человека | 形容人
+    manners | Good and bad manners | Манеры | 礼貌
+  body-actions | What the body does | Что делает тело | 身体的动作
+    moving | Going, coming, walking, running | Движение | 走和跑
+      going-and-coming | Going and coming: in, out, up, down, back | Приходить и уходить | 来和去
+      walking-and-running | Walking, running, jumping, flying | Ходить и бегать | 走、跑、跳、飞
+    posture | Standing, sitting, lying | Позы | 站坐躺
+    handling | Taking, giving, putting, holding | Брать, давать, класть | 拿和放
+      taking-and-holding | Taking, holding, putting | Брать, держать, класть | 拿、拿着、放
+      pushing-and-pulling | Pushing, pulling, opening, closing | Толкать, тянуть, открывать | 推、拉、开、关
+      making-and-doing | Making, doing, taking care of things | Делать и заниматься | 做、办
+      giving-and-getting | Giving, sending, getting | Давать и получать | 给和得到
+    body-needs | Sleeping, washing, breathing, laughing, crying | Сон, умывание, смех, плач | 睡觉洗脸笑哭
+  doing-together | Doing things with others | Действия с другими | 人与人之间
+    helping-and-sharing | Helping and sharing | Помогать и делиться | 帮助和分享
+    meeting-and-parting | Meeting, visiting and saying goodbye | Встречи и прощания | 见面和告别
+  daily-routine | Daily routine | Распорядок дня | 日常生活
+    waking-and-sleeping | Waking up and going to sleep | Сон и пробуждение | 起床和睡觉
+    washing-and-dressing | Washing and getting dressed | Умывание и одевание | 洗漱和穿衣
+
+home | Home | Дом | 家
+  the-house | The house | Здание | 房子
+    house-and-doors | Door, window, wall, roof, floor, stairs | Дом, дверь, окно, стена | 门窗墙地
+    living-room | Living room | Гостиная | 客厅
+    bedroom | Bedroom | Спальня | 卧室
+    bathroom | Bathroom | Ванная | 浴室
+  kitchen | Kitchen | Кухня | 厨房
+    cooking-and-utensils | Cooking and kitchen things | Готовка и кухонные вещи | 做饭和厨具
+    tableware | Bowls, plates, cups and chopsticks | Посуда | 餐具
+  things-at-home | Things at home | Домашние вещи | 家里的东西
+    home-electronics | Electric things at home | Электроприборы | 家用电器
+    household-things | Lamps, clocks, keys, bags and other things | Предметы быта | 日用品
+  housework | Housework | Домашние дела | 家务
+    cleaning | Cleaning | Уборка | 打扫
+    repairs | Repairs | Ремонт | 修理 + trades-and-tools
+  housing | Housing: renting, moving, neighbours | Жильё | 住房
+
+food | Food | Еда | 食物
+  fruit | Fruit | Фрукты | 水果
+  vegetables | Vegetables | Овощи | 蔬菜
+  meat | Meat, fish, eggs and milk | Мясо, рыба, яйца, молочное | 肉蛋奶鱼
+  grains-and-bread | Rice, noodles, bread and dumplings | Крупы, лапша, хлеб | 米面主食
+  drinks | Drinks and alcohol | Напитки и алкоголь | 饮料和酒
+  sweets-and-snacks | Sweets and snacks | Сладости и закуски | 甜食和小吃
+  seasonings | Salt, sauce, oil and spices | Приправы | 调料
+  tastes | Tastes | Вкусы | 味道 + describing-things
+  meals | Meals | Приёмы пищи | 饭
+    breakfast-lunch-dinner | Breakfast, lunch and dinner | Завтрак, обед, ужин | 早饭午饭晚饭
+    at-a-restaurant | At a restaurant | В ресторане | 在餐馆
+    eating-and-drinking | Eating and drinking | Есть и пить | 吃和喝
+
+clothes | Clothes | Одежда | 衣服
+  everyday-clothes | Everyday clothes | Повседневная одежда | 日常衣服
+  shoes-and-socks | Shoes and socks | Обувь и носки | 鞋和袜子
+  accessories | Hats, scarves, glasses, watches | Аксессуары | 配饰
+  colours-and-patterns | Colours and patterns | Цвета и узоры | 颜色和花样 + describing-things
+
+health | Health | Здоровье | 健康
+  illness | Illness | Болезнь | 生病
+  injuries | Injuries | Травмы | 受伤
+  at-the-doctor | At the doctor's | У врача | 看医生
+  at-the-hospital | At the hospital | В больнице | 医院
+  healthy-habits | Healthy habits: exercise and rest | Здоровый образ жизни | 健康习惯
+
+town | Town | Город | 城镇
+  places-in-town | Places in town: street, park, square, bridge | Места в городе | 城里的地方
+  buildings | Buildings | Здания | 建筑物
+  shops | Shops and markets | Магазины и рынки | 商店和市场
+  shopping | Shopping | Покупки | 买东西
+  money-and-paying | Money and paying | Деньги и оплата | 钱和付钱
+  bank-and-post | Bank and post office | Банк и почта | 银行和邮局
+  police-and-safety | Police, fire and safety | Полиция и безопасность | 警察和安全
+
+travel | Travel | Путешествия | 出行
+  vehicles | Cars, bikes and buses | Транспорт | 交通工具
+  the-road | The road | Дорога | 马路
+  trains-and-stations | Trains and stations | Поезда и вокзалы | 火车和车站
+  planes-and-airports | Planes and airports | Самолёты и аэропорты | 飞机和机场
+  directions | Finding the way | Как пройти | 问路和方向
+  a-trip | A trip: tickets, hotel, luggage | Поездка | 旅行
+  countries-and-cities | Countries and cities | Страны и города | 国家和城市 + society
+
+nature | Nature | Природа | 自然
+  weather | Weather | Погода | 天气
+  seasons | Seasons | Времена года | 季节 + time-and-numbers
+  land-and-water | Land and water | Суша и вода | 山川河海
+  sky-and-space | Sky and space | Небо и космос | 天空和宇宙
+  fire-light-and-heat | Fire, light and heat | Огонь, свет и тепло | 火光和热
+  materials | Stone, metal, wood and other materials | Материалы | 材料
+  plants | Plants | Растения | 植物
+    trees-and-flowers | Trees and flowers | Деревья и цветы | 树和花
+    crops-and-farming | Crops and farming | Урожай и земледелие | 庄稼和农活
+  animals | Animals | Животные | 动物
+    pets | Pets | Домашние питомцы | 宠物
+    farm-animals | Farm animals | Животные на ферме | 家畜
+    wild-animals | Wild animals, birds, insects and sea life | Дикие животные, птицы, насекомые | 野生动物、鸟、昆虫、海洋生物
+
+time-and-numbers | Time and numbers | Время и числа | 时间和数字
+  clock | The clock | Часы | 钟点
+  calendar | The calendar | Календарь | 日历
+  times-of-day | Times of day | Время суток | 一天中的时间
+  when-words | Now, before, after, always, never | Когда | 什么时候
+    before-and-after | Now, before, after, soon | Раньше и позже | 现在、以前、以后
+    how-often | How often and how long: always, often, never | Как часто и как долго | 多久、常常
+  numbers | Numbers | Числа | 数字
+    number-words | One, two, three ... a hundred | Количественные числа | 一二三
+    ordinals | First, second, third; numbers of things | Порядковые числа | 第几
+    sums | Adding, taking away, multiplying, dividing | Арифметика | 加减乘除
+  counting-and-amounts | Counting and amounts | Счёт и количество | 数量
+    counting-words | Counting words and units: ge, ben, jian | Счётные слова | 量词
+    all-and-some | All, every, some, each | Все, каждый, некоторые | 全、每、有些
+    much-and-little | Much, little, enough, how many | Много, мало, достаточно | 多、少、够
+  measures | Measuring: length, weight, volume | Измерения | 度量
+  shapes | Shapes | Формы | 形状 + describing-things
+
+work-and-school | Work and school | Работа и школа | 工作和学校
+  school | School | Школа | 学校
+    classroom | The classroom | Класс | 教室
+    studying | Studying and learning | Учёба | 学习
+    exams-and-marks | Exams and marks | Экзамены и оценки | 考试和成绩
+  jobs | Jobs | Профессии | 职业
+  office | The office | Офис | 办公室
+  working-life | Working life: boss, pay, meeting | Рабочая жизнь | 工作生活
+  trades-and-tools | Trades and their tools | Ремесло и инструменты | 手艺和工具
+  farms-and-factories | Farms and factories | Фермы и заводы | 农场和工厂
+
+free-time | Free time | Свободное время | 业余时间
+  sports | Sports | Спорт | 运动
+  games-and-toys | Games and toys | Игры и игрушки | 游戏和玩具
+  music | Music | Музыка | 音乐
+  art-and-drawing | Art and drawing | Искусство и рисование | 美术
+  films-and-media | Films, television and radio | Кино и телевидение | 电影电视
+  books-and-reading | Books and reading | Книги и чтение | 书和阅读
+  phone-and-computer | Phone and computer | Телефон и компьютер | 手机和电脑
+  holidays-and-festivals | Holidays and festivals | Праздники | 节日
+  parties-and-gifts | Visiting, parties and gifts | Гости, вечеринки, подарки | 做客聚会送礼
+  hobbies-and-outings | Hobbies and outings | Хобби и прогулки | 爱好和郊游
+
+society | Society | Общество | 社会
+  government | Government | Государство | 政府
+  law-and-crime | Law and crime | Право и преступность | 法律和犯罪
+  news-and-events | News and events | Новости и события | 新闻和事件
+  business-and-economy | Business and the economy | Бизнес и экономика | 经济和生意
+  groups-and-organisations | Groups and organisations | Организации | 团体和组织
+  belief-and-customs | Belief and customs | Верования и обычаи | 信仰和习俗
+  history-and-culture | History and culture | История и культура | 历史和文化
+  war-and-peace | War and peace | Война и мир | 战争与和平
+
+language-and-mind | Language and mind | Язык и мышление | 语言和思想
+  speaking | Speaking and listening | Говорить и слушать | 说和听
+    chatting | Chatting and discussing | Беседа и обсуждение | 聊天和讨论
+    talking | Saying, telling, discussing | Говорить, рассказывать | 说、讲、谈
+    languages | Languages, words and sentences | Языки, слова, предложения | 语言、话、句子
+    agreeing-and-praising | Agreeing, refusing, praising, criticising | Соглашаться, хвалить, критиковать | 同意、拒绝、表扬、批评
+  asking-and-answering | Asking and answering | Вопросы и ответы | 问和答
+  writing | Writing | Письмо | 写字 + books-and-reading
+  thinking | Thinking and knowing | Мышление и знание | 想和知道
+    remembering-and-forgetting | Remembering, forgetting, knowing someone | Помнить и забывать | 记得和忘记
+    knowing-and-understanding | Knowing, understanding, remembering, believing | Знать, понимать, помнить | 知道、懂、记得
+    ideas-and-opinions | Ideas, reasons, methods, opinions | Идеи, причины, способы | 想法、原因、办法
+    looking-and-checking | Noticing, observing, checking | Замечать, проверять | 观察、检查
+  deciding | Deciding and trying | Решения и попытки | 决定和尝试
+  greetings-and-thanks | Greetings, thanks and sorry | Приветствия и благодарность | 问候和道谢
+  question-words | Question words | Вопросительные слова | 疑问词
+  function-words | Grammar words | Служебные слова | 语法词
+    pointers | Pointers: I, you, this, that | Указатели | 指代词
+    little-words | Little words: le, de, ma | Частицы | 小词
+      particles | Particles: le, de, ma, ba | Частицы в конце фразы | 助词
+      no-and-not | No and not: bu, mei, bie | Отрицание | 不、没、别
+      adverbs | Little adverbs: also, still, already | Наречия | 也、还、已经
+    joining-words | Joining words: and, but, because | Союзы | 连接词
+    words-before-nouns | Words before a noun: in, at, from, for | Предлоги | 介词
+    helping-words | Helping words: can, will, must | Вспомогательные слова | 帮助词
+
+describing-things | Describing things | Описание вещей | 形容事物
+  size | Size | Размер | 大小
+  colours | Colours | Цвета | 颜色
+  how-it-feels | How things feel: hard, soft, hot, cold | Ощущения | 摸起来怎样
+  how-good | Good and bad | Хорошо и плохо | 好坏
+  speed-and-strength | Fast, slow, strong, weak | Скорость и сила | 快慢和强弱
+  new-and-old | New, old, young | Новое и старое | 新旧
+  condition | Condition: clean, dirty, full, empty, open, closed | Состояние | 状态
+    same-and-different | Same, different, like, more than | Одинаковый, разный | 一样、不同
+    state-of-things | State: normal, special, strange | Какое оно: обычное, особенное | 什么样
+  easy-hard-right-wrong | Easy, hard, right, wrong | Лёгкое, трудное, правильное | 难易对错
+  changes | Becoming and changing | Становиться и меняться | 变化
+    changing | Becoming, growing, getting better or worse | Становиться, расти | 变化、增加
+    causes-and-results | Cause, effect and result | Причина и результат | 原因和结果
+  where-things-are | Here, there, up, down, near, far | Где что находится | 位置
+    up-down-in-out | Up, down, in, out, front, back | Верх, низ, внутри, снаружи | 上下里外前后
+    near-and-far | Here, there, near, far | Здесь, там, близко, далеко | 这里、那里、近、远
+  degree-words | Very, too, a bit | Степень | 程度

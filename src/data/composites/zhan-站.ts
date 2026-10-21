@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:zhan4}}"],
   tts: ["站"],
   fit: "word",
+  topics: ["posture"],
+  isA: ["body-position"],
   note: "Lesson {{lesson:direction-and-result}}: zhàn-qǐ-lái.",
   examples: [
     {

@@ -14,5 +14,7 @@ export default composite({
   tts: ["家里有的，很大的，吃很多的动物"],
   literal: "a big animal at home that eats a lot",
   fit: "plain",
+  topics: ["farm-animals"],
+  isA: ["mammal"],
   proposed: true,
 });

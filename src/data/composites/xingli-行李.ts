@@ -14,6 +14,8 @@ export default composite({
   tts: ["去远的地方拿的东西"],
   literal: "what you take when you go far",
   fit: "plain",
+  topics: ["a-trip"],
+  isA: ["container"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:qu4}} {{word:yuan3}}-{{word:de}} {{word:di4}}-{{light:fang1}} {{word:na2}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:hen3}} {{word:da4}}.",

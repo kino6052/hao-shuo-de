@@ -12,6 +12,8 @@ export default composite({
   tts: ["做过的东西"],
   literal: "things you've done before",
   fit: "plain",
+  topics: ["ideas-and-opinions"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:zuo4}}-{{word:guo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

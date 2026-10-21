@@ -12,5 +12,7 @@ export default composite({
   tts: ["说定"],
   literal: "say it is settled",
   fit: "plain",
+  topics: ["talking"],
+  isA: ["idea"],
   proposed: true,
 });

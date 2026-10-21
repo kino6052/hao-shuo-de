@@ -14,6 +14,8 @@ export default word("zhi2wu4", {
     eng: "Plants: one of the three kinds of living things, with people and animals. Fruit is described from it.",
     rus: "Растения — один из трёх видов живого, рядом с людьми и животными. Через него описывают фрукты.",
   },
+  topics: ["trees-and-flowers"],
+  isA: ["plant"],
   maps: "kasi",
   paraphrase: {
     forms: [

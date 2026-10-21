@@ -6,6 +6,7 @@ export default pattern("adverb-before-verb", {
     rus: "Как или насколько кто-то это делает: hěn и описывающее слово стоят перед глаголом.",
   },
   covers: [],
+  tags: ["how-much", "describe", "cat:quality", "cat:action"],
   template: { hsd: "Subject {{word:hen3}} adjective verb", eng: "Subject does the verb very adjectively" },
   rules: [
     { lhs: "AdvP", hsd: "hen3 @adjective", eng: "hěn and a describing word" },

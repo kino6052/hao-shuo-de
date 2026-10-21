@@ -15,5 +15,7 @@ export default composite({
   tts: ["国家的头", "国家决定的地方"],
   literal: "the head of the country / the place where the country decides",
   fit: "plain",
+  topics: ["countries-and-cities"],
+  isA: ["settlement"],
   proposed: true,
 });

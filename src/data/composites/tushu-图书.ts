@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:shu1}}"],
   tts: ["书"],
   fit: "natural",
+  topics: ["writing"],
+  isA: ["paper-thing"],
   proposed: true,
 });

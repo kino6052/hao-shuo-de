@@ -12,6 +12,8 @@ export default composite({
   tts: ["把…放在一起…次"],
   literal: "put A together B times",
   fit: "plain",
+  topics: ["sums"],
+  isA: ["thinking-action"],
   note: "3 × 4: bǎ sì fàng zài yī-qǐ sān-cì (Lesson {{lesson:time-and-sums}}).",
   examples: [
     {

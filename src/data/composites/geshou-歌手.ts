@@ -14,5 +14,7 @@ export default composite({
   tts: ["发好听的声音的人"],
   literal: "a person who makes a good sound",
   fit: "plain",
+  topics: ["music"],
+  isA: ["worker"],
   proposed: true,
 });

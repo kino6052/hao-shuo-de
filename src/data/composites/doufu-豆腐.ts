@@ -14,5 +14,7 @@ export default composite({
   tts: ["植物做的，白的，不硬的吃的"],
   literal: "white soft food made from a plant",
   fit: "plain",
+  topics: ["vegetables"],
+  isA: ["dish"],
   proposed: true,
 });

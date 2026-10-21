@@ -12,5 +12,7 @@ export default composite({
   tts: ["问X能不能给我"],
   literal: "ask whether X can give it to me",
   fit: "plain",
+  topics: ["asking-and-answering"],
+  isA: ["speaking-action"],
   proposed: true,
 });

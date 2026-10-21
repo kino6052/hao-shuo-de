@@ -12,6 +12,8 @@ export default composite({
   tts: ["给新闻"],
   literal: "give the news",
   fit: "plain",
+  topics: ["news-and-events"],
+  isA: ["speaking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ai4}} {{word:kan4}} {{word:ta1}} {{word:gei3}} {{word:xin1#new}}-\"wén\".",

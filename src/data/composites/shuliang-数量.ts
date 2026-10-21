@@ -12,6 +12,8 @@ export default composite({
   tts: ["多少"],
   literal: "how many",
   fit: "plain",
+  topics: ["much-and-little"],
+  isA: ["amount-word"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:duo1}}-{{word:shao3}} {{word:hen3}} {{word:da4}}.",

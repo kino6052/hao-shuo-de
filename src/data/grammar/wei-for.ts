@@ -6,6 +6,7 @@ export default pattern("wei-for", {
     rus: "Wèi перед человеком и глаголом говорит, для кого: wǒ wèi nǐ zuò le fàn — я приготовил для тебя. Wèi-le начинает цель: wèi-le hái-zi, tā gōng-zuò — ради детей он работает.",
   },
   covers: ["grammar:for"],
+  tags: ["with-for", "cat:relation"],
   template: { hsd: "{{word:wei4}} + who + verb / {{word:wei4}}-{{word:le}} + reason, sentence", eng: "Do it for someone / for the sake of" },
   rules: [
     { lhs: "VP", hsd: "=wei4 NP VP", eng: "wèi, someone, and a verb: for him" },

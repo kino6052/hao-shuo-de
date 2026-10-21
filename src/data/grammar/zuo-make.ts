@@ -6,6 +6,7 @@ export default pattern("zuo-make", {
     rus: "Говорит, что вы делаете что-то таким: zuò стоит перед результатом. Zuò hǎo — «починить», zuò huài — «сломать».",
   },
   covers: ["grammar:make"],
+  tags: ["make", "cat:affection", "cat:quality"],
   template: { hsd: "Who + {{word:zuo4}} + result", eng: "Who makes it so" },
   rules: [{ lhs: "VerbP", hsd: "=zuo4 @adjective", eng: "zuò and the result" }],
   taught: "becoming-and-making/make",

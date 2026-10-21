@@ -12,4 +12,6 @@ export default composite({
   tts: ["得不好的关系"],
   literal: "get a bad connection",
   fit: "plain",
+  topics: ["injuries"],
+  isA: ["being-affected"],
 });

@@ -12,5 +12,7 @@ export default composite({
   tts: ["家里的工作"],
   literal: "the work in the home",
   fit: "plain",
+  topics: ["cleaning"],
+  isA: ["activity-name"],
   proposed: true,
 });

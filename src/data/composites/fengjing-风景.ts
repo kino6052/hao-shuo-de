@@ -14,5 +14,7 @@ export default composite({
   tts: ["外面好看的东西"],
   literal: "good-looking things outside",
   fit: "plain",
+  topics: ["land-and-water"],
+  isA: ["sound-or-light-quality"],
   proposed: true,
 });

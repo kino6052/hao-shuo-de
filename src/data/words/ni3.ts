@@ -10,6 +10,8 @@ export default word("ni3", {
     eng: "Without it, you can't talk to anyone: no \"you\" or \"your\".",
     rus: "Без него нельзя обратиться к собеседнику: нет «ты», «твой».",
   },
+  topics: ["pointers"],
+  isA: ["pronoun"],
   maps: "sina",
   atom: {
     eng: "There is no honest paraphrase: \"the person who listens to me\" could just as well be \"he\", so it needs a pointer to tell them apart.",

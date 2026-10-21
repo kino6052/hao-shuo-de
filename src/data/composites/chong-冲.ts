@@ -15,5 +15,7 @@ export default composite({
   tts: ["很快走到X", "用水让X干净"],
   literal: "go to X very fast / make X clean with water",
   fit: "plain",
+  topics: ["cleaning"],
+  isA: ["handling-action"],
   proposed: true,
 });

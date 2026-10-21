@@ -14,5 +14,7 @@ export default composite({
   tts: ["学校里动身体的地方"],
   literal: "a place in the school to move the body",
   fit: "plain",
+  topics: ["classroom"],
+  isA: ["outdoor-place"],
   proposed: true,
 });

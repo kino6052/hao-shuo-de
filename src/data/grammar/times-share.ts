@@ -6,6 +6,7 @@ export default pattern("times-share", {
     rus: "Чтобы умножить, соедините число много раз (fàng zài yī-qǐ sān cì). Чтобы разделить, скажите, сколько раз можно его взять (néng ná sān cì).",
   },
   covers: [],
+  tags: ["count", "cat:quantity"],
   template: {
     hsd: "{{word:ba3}} A {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}} B-{{word:ci4}}, {{word:shi4}} C",
     eng: "A put together B times is C",

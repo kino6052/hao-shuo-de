@@ -12,6 +12,8 @@ export default composite({
   tts: ["小的写的东西"],
   literal: "a small written thing",
   fit: "plain",
+  topics: ["phone-and-computer"],
+  isA: ["paper-thing"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:xiao3}}-{{word:de}} {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

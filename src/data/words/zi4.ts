@@ -14,5 +14,7 @@ export default word("zi4", {
     eng: "Characters, and names ({{word:ming2}}-{{light:zi4}}).",
     rus: "Иероглифы и имена ({{word:ming2}}-{{light:zi4}}).",
   },
+  topics: ["writing"],
+  isA: ["language-thing"],
   paraphrase: { forms: ["{{word:xie3}}-{{word:de}} {{word:ci2}}"], verdict: "fine" },
 });

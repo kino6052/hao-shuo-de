@@ -12,6 +12,8 @@ export default composite({
   tts: ["发生好的东西"],
   literal: "good things happening",
   fit: "plain",
+  topics: ["news-and-events"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:jin1}}-{{word:tian1}} {{word:fa1}}-{{word:sheng1}} {{word:hao3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

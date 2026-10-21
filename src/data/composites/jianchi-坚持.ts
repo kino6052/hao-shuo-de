@@ -15,6 +15,8 @@ export default composite({
   tts: ["最后把X做下去", "做到最后"],
   literal: "carry X on to the end",
   fit: "plain",
+  topics: ["deciding"],
+  isA: ["thinking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zui4}} {{word:hou4}} {{word:ba3}} {{word:zhe4}}-{{light:ge4}} {{word:zuo4}} {{word:xia4}}-{{word:qu4}}.",

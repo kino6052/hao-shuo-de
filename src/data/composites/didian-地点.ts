@@ -13,6 +13,8 @@ export default composite({
   literal: "ground point",
   fit: "natural",
   kinds: ["built", "spelled"],
+  topics: ["near-and-far"],
+  isA: ["place-word"],
   note: "Real Mandarin: 地点.",
   examples: [
     {

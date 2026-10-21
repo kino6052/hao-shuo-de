@@ -6,6 +6,7 @@ export default pattern("verb-de-person", {
     rus: "Глагол с -de перед существительным называет того или то, что это делает: xiě-de rén — пишущий; wǒ xiě de shū — книга, которую я написал.",
   },
   covers: [],
+  tags: ["describe", "cat:substance"],
   template: { hsd: "verb-{{word:de}} {{word:ren2}}", eng: "The one who does the verb" },
   rules: [
     { lhs: "Mod", hsd: "VP de", eng: "an action and de: describes the noun after it" },

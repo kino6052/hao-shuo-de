@@ -12,5 +12,7 @@ export default composite({
   tts: ["定好时间做"],
   literal: "fix the time and do it",
   fit: "plain",
+  topics: ["how-often"],
+  isA: ["frequency"],
   proposed: true,
 });

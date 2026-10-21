@@ -15,6 +15,8 @@ export default composite({
   tts: ["妈妈", "爸爸妈妈里的女人"],
   literal: "the woman of the parents",
   fit: "word",
+  topics: ["parents-and-children"],
+  isA: ["relative"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ma1ma}} {{word:zai4}} {{word:jia1}}.",

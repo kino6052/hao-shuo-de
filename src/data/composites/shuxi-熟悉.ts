@@ -12,6 +12,8 @@ export default composite({
   tts: ["很知道"],
   literal: "know well",
   fit: "plain",
+  topics: ["remembering-and-forgetting"],
+  isA: ["thinking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:hen3}} {{word:zhi1dao4}} {{word:zhe4}}-{{word:li3}}.",

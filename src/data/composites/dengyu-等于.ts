@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:shi4}}"],
   tts: ["是"],
   fit: "word",
+  topics: ["helping-words"],
+  isA: ["auxiliary"],
   note: "sān, sì fàng zài yī-qǐ, shì qī.",
   examples: [
     {

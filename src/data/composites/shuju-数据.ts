@@ -12,6 +12,8 @@ export default composite({
   tts: ["数据"],
   literal: "numbers",
   fit: "name",
+  topics: ["phone-and-computer"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:shu4}}-\"jù\".",

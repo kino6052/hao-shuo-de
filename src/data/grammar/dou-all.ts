@@ -6,6 +6,7 @@ export default pattern("dou-all", {
     rus: "Говорит, что все это делают: dōu стоит прямо перед глаголом, после людей или вещей. Перед существительным оно не стоит.",
   },
   covers: ["grammar:all"],
+  tags: ["all-also", "cat:quantity"],
   template: { hsd: "People or things + {{word:dou1}} + verb", eng: "All of them do the verb" },
   rules: [
     { lhs: "VP", hsd: "=dou1 VP", eng: "dōu, then what is said" },

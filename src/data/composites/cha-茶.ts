@@ -12,6 +12,8 @@ export default composite({
   tts: ["植物的热水"],
   literal: "plant hot water",
   fit: "plain",
+  topics: ["drinks"],
+  isA: ["drink"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:he1}} {{word:zhi2wu4}}-{{word:de}} {{word:re4}}-{{word:shui3}} {{word:ma}}?",

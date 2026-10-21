@@ -14,5 +14,7 @@ export default composite({
   tts: ["没有别人在中间"],
   literal: "nobody else is in the middle",
   fit: "plain",
+  topics: ["degree-words"],
+  isA: ["adverb-word"],
   proposed: true,
 });

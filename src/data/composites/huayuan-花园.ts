@@ -14,5 +14,7 @@ export default composite({
   tts: ["家旁边有植物的地方"],
   literal: "a place with plants next to the home",
   fit: "plain",
+  topics: ["house-and-doors"],
+  isA: ["outdoor-place"],
   proposed: true,
 });

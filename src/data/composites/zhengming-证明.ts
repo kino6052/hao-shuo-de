@@ -12,6 +12,8 @@ export default composite({
   tts: ["让人知道是真的"],
   literal: "make people know it is true",
   fit: "plain",
+  topics: ["knowing-and-understanding"],
+  isA: ["speaking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:rang4}} {{word:ren2}} {{word:zhi1dao4}} {{word:shi4}} {{word:zhen1}}-{{word:de}}.",

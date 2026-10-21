@@ -12,6 +12,8 @@ export default composite({
   tts: ["现在就…"],
   literal: "right now",
   fit: "natural",
+  topics: ["before-and-after"],
+  isA: ["time-order"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:xian4}}-{{word:zai4}} {{word:jiu4}} {{word:lai2}}.",

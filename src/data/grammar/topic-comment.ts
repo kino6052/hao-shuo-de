@@ -6,6 +6,7 @@ export default pattern("topic-comment", {
     rus: "Вещь может стоять первой как тема, а затем целое предложение о ней: wǒ bàba shēntǐ hěn hǎo — что до моего папы, у него здоровье хорошее; shénme wǒ dōu yào — что бы это ни было, я хочу.",
   },
   covers: [],
+  tags: ["basic", "cat:substance"],
   template: { hsd: "Topic + sentence", eng: "As for the topic: the sentence" },
   rules: [
     { lhs: "S", hsd: "NP S", eng: "a topic, then a sentence about it" },

@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:tong4}}"],
   tts: ["痛"],
   fit: "word",
+  topics: ["illness"],
+  isA: ["bodily-state"],
   proposed: true,
 });

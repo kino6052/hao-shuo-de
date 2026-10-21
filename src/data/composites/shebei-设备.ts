@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:gong1}}-{{word:ju4}}"],
   tts: ["工具"],
   fit: "word",
+  topics: ["farms-and-factories"],
+  isA: ["tool"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:mai3}} {{word:gong1}}-{{word:ju4}}.",

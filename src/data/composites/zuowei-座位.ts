@@ -12,6 +12,8 @@ export default composite({
   tts: ["坐下的地方"],
   literal: "a place to sit",
   fit: "plain",
+  topics: ["classroom"],
+  isA: ["furniture-item"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:zuo4}}-{{word:xia4}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",

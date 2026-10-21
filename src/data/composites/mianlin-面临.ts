@@ -12,5 +12,7 @@ export default composite({
   tts: ["面对X"],
   literal: "face X",
   fit: "plain",
+  topics: ["near-and-far"],
+  isA: ["placing"],
   proposed: true,
 });

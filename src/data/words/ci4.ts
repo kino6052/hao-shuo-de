@@ -14,6 +14,8 @@ export default word("ci4", {
     eng: "Times, as in \"twice\": without it, you can't say how often something happens.",
     rus: "Раз, как в «дважды»: без него нельзя сказать, как часто что-то бывает.",
   },
+  topics: ["counting-words"],
+  isA: ["counting-word"],
   atom: {
     eng: "A counting word for how often: it counts happenings the way gè counts things, and has no plainer wording.",
     rus: "Счётное слово для «сколько раз»: считает события так же, как gè считает предметы; проще его не сказать.",

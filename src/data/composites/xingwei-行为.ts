@@ -16,6 +16,8 @@ export default composite({
   tts: ["做法", "生活方法", "方法"],
   literal: "the way of doing / the way of living / the way",
   fit: "plain",
+  topics: ["manners"],
+  isA: ["activity-name"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:kan4}} {{word:ta1}}-{{word:de}} {{word:zuo4}}-{{word:fa3}}.",

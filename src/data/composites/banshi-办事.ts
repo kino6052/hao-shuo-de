@@ -12,6 +12,8 @@ export default composite({
   tts: ["做东西"],
   literal: "do things",
   fit: "natural",
+  topics: ["working-life"],
+  isA: ["working"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zuo4}} {{word:dong1}}-{{light:xi1}}.",

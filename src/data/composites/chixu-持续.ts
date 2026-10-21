@@ -12,5 +12,7 @@ export default composite({
   tts: ["还在做"],
   literal: "still doing it",
   fit: "plain",
+  topics: ["changing"],
+  isA: ["starting-and-stopping"],
   proposed: true,
 });

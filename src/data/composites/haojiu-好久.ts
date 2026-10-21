@@ -12,5 +12,7 @@ export default composite({
   tts: ["很长的时间"],
   literal: "a very long time",
   fit: "plain",
+  topics: ["how-often"],
+  isA: ["time-span"],
   proposed: true,
 });

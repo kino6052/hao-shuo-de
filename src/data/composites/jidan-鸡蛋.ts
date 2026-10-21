@@ -16,6 +16,8 @@ export default composite({
   literal: "what flying animals give birth to",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["meat"],
+  isA: ["dairy-or-egg"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:chi1}} {{word:ji1}}-{{word:dan4}}.",

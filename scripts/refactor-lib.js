@@ -28,6 +28,7 @@ import { paraphraseProblems } from '../src/lib/paraphrase.js';
 import { FORM_KINDS, formKinds, kindsProblems } from '../src/lib/form-kinds.js';
 import { LESSON_IDS } from '../src/content/book.js';
 import { ruleWords } from '../src/lib/grammar/grammar.js';
+import { TAG_OPS } from './tag-ops.js';
 
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -486,28 +487,17 @@ function newCard(ws, id, sense) {
 const MAPS = 'src/data/maps/';
 const COVERAGE = 'src/data/coverage/';
 
-function walkCategories(cats, fn) {
-  for (const c of cats) {
-    fn(c);
-    walkCategories(c.children ?? [], fn);
-  }
-}
-
+// A word's topics live on the word (K31); the topic net (maps/topics.ts) only keeps a display-order hint, `order`, which
+// names word ids and so follows a rename, a removal or a split.
 function categoryOf(ws, id) {
-  let leaf = null;
-  walkCategories(ws.data(`${MAPS}categories.ts`), (c) => {
-    if ((c.wordIds ?? []).includes(id)) leaf = c.key;
-  });
-  return leaf;
+  return ws.word(id).topics?.[0] ?? null;
 }
 
-// Rewrites every leaf's word list with fn(ids) -> ids.
+// Rewrites every topic's `order` list with fn(ids) -> ids.
 function editCategories(ws, fn) {
-  const cats = ws.data(`${MAPS}categories.ts`);
-  walkCategories(cats, (c) => {
-    if (c.wordIds) c.wordIds = fn(c.wordIds, c);
-  });
-  ws.setData(`${MAPS}categories.ts`, cats);
+  const tags = ws.data(`${MAPS}topics.ts`);
+  for (const t of tags) if (t.order) t.order = fn(t.order, t);
+  ws.setData(`${MAPS}topics.ts`, tags);
 }
 
 // Rewrites the antonym and synonym maps: pairs by pairFn([a, b]) -> pair | null,
@@ -778,13 +768,14 @@ function hanziIn(ws, id, compound) {
 }
 
 const OPS = {
+  ...TAG_OPS,
   // { op: "add", id, hanzi, term?, pos?, definition?, necessity?, senses?, category }
   add(ws, op) {
     if (ws.hasWord(op.id)) throw new Error(`${op.id} already exists`);
     if (!op.hanzi) throw new Error(`add ${op.id}: give its hanzi`);
     ws.setWord(op.id, newWordData(op.id, op));
     if (op.category) placeInCategory(ws, op.id, op.category);
-    else ws.note('todo', `${op.id}: put it in a category (maps/categories.ts) -- check-data fails until then`);
+    else ws.note('todo', `${op.id}: give it a topic (topics in its word file, tags in maps/topics.ts) -- check-data fails until then`);
     if (!op.definition || !op.pos || !op.necessity) ws.note('todo', `${op.id}: fill in its definition, part of speech and necessity (TODO in ${ws.wordPath(op.id)})`);
   },
 
@@ -887,9 +878,8 @@ const OPS = {
     ws.setData(path, g);
   },
 
-  // { op: "category", id, to: "<leaf key>" }
+  // { op: "category", id, to: "<topic id>" } -- the word's topics become just this one
   category(ws, op) {
-    editCategories(ws, (ids) => ids.filter((x) => x !== op.id));
     placeInCategory(ws, op.id, op.to);
   },
 
@@ -953,10 +943,10 @@ const OPS = {
     }
     // maps and coverage
     const leaf = categoryOf(ws, id);
-    const placed = new Set();
-    walkCategories(ws.data(`${MAPS}categories.ts`), (c) => (c.wordIds ?? []).forEach((w) => placed.add(w)));
+    const placed = new Set(into.filter((p) => ws.word(p).topics?.length));
     editCategories(ws, (ids) => ids.flatMap((x) => (x === id ? into.filter((p) => !placed.has(p)) : [x])));
-    if (!leaf) ws.note('todo', `${id} had no category; place its new parts`);
+    for (const p of into) if (!placed.has(p) && old.topics?.length) ws.setWord(p, { ...ws.word(p), topics: old.topics });
+    if (!leaf) ws.note('todo', `${id} had no topic; give its new parts one`);
     editRelations(ws, (p) => (p.includes(id) ? null : p), (w, forms) => (w === id ? null : [w, forms]), `${id} was split`);
     editCoverageWords(ws, (words) => (words.includes(id) ? words.flatMap((w) => (w === id ? into : [w])) : words));
     // the composite that was the word itself
@@ -1199,14 +1189,9 @@ const OPS = {
   },
 };
 
-function placeInCategory(ws, id, leafKey) {
-  let found = false;
-  editCategories(ws, (ids, c) => {
-    if (c.key !== leafKey) return ids;
-    found = true;
-    return ids.includes(id) ? ids : [...ids, id];
-  });
-  if (!found) throw new Error(`no category leaf "${leafKey}"`);
+function placeInCategory(ws, id, topic) {
+  if (!ws.data(`${MAPS}topics.ts`).some((t) => t.id === topic)) throw new Error(`no topic "${topic}" in maps/topics.ts`);
+  ws.setWord(id, { ...ws.word(id), topics: [topic] });
 }
 
 export const OP_NAMES = Object.keys(OPS);
@@ -1267,6 +1252,7 @@ export function summary(ws, { diff = false } = {}) {
     composite: 'Composites',
     mention: 'Plain-text mentions (edit by hand)',
     code: 'Ids in code (check by hand)',
+    tags: 'Tags',
   };
   for (const [kind, list] of byKind) {
     out.push(`\n${TITLES[kind] ?? kind}:`);

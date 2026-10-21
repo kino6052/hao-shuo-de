@@ -12,5 +12,7 @@ export default composite({
   tts: ["站在X旁边，用X"],
   literal: "stand by X and use X",
   fit: "plain",
+  topics: ["posture"],
+  isA: ["body-position"],
   proposed: true,
 });

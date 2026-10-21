@@ -14,5 +14,7 @@ export default composite({
   tts: ["热的，有东西的水"],
   literal: "hot water with things in it",
   fit: "plain",
+  topics: ["meat"],
+  isA: ["dish"],
   proposed: true,
 });

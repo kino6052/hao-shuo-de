@@ -14,5 +14,7 @@ export default composite({
   tts: ["让人上飞机的写的东西"],
   literal: "a written thing that lets a person board a plane",
   fit: "plain",
+  topics: ["planes-and-airports"],
+  isA: ["paper-thing"],
   proposed: true,
 });

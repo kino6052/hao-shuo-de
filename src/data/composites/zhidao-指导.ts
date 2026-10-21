@@ -12,6 +12,8 @@ export default composite({
   tts: ["帮X做"],
   literal: "help X do it",
   fit: "plain",
+  topics: ["studying"],
+  isA: ["learning-and-teaching"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:bang1}} {{word:wo3}} {{word:zuo4}}.",

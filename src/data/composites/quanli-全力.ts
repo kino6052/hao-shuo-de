@@ -12,5 +12,7 @@ export default composite({
   tts: ["把力都用"],
   literal: "use all the strength",
   fit: "plain",
+  topics: ["speed-and-strength"],
+  isA: ["speed-or-strength"],
   proposed: true,
 });

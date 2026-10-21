@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:wei4}}", "{{word:gei3}}", "{{word:dui4}}"],
   tts: ["为", "给", "对"],
   fit: "word",
+  topics: ["words-before-nouns"],
+  isA: ["preposition"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:wei4}} {{word:ni3}} {{word:zuo4}} {{word:le}} {{word:fan4}}.",

@@ -14,5 +14,7 @@ export default composite({
   tts: ["写的，看你学得多好的东西"],
   literal: "a written thing that shows how well you studied",
   fit: "plain",
+  topics: ["exams-and-marks"],
+  isA: ["event"],
   proposed: true,
 });

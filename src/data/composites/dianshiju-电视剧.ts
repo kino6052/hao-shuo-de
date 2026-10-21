@@ -14,5 +14,7 @@ export default composite({
   tts: ["在家看的，人演的，很长的东西"],
   literal: "something long, acted by people, that you watch at home",
   fit: "plain",
+  topics: ["films-and-media"],
+  isA: ["work-of-art"],
   proposed: true,
 });

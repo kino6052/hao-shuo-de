@@ -16,6 +16,8 @@ export default composite({
   literal: "one-down",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["how-often"],
+  isA: ["time-span"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:kan4}} {{word:yi1}}-{{word:xia4}}.",

@@ -13,6 +13,8 @@ export default composite({
   literal: "up in the sky",
   fit: "natural",
   transparent: true,
+  topics: ["sky-and-space"],
+  isA: ["sky-body"],
   examples: [
     {
       pinyin: "{{Word:tian1}}-{{word:shang4}} {{word:you3}} {{word:ri4}} {{word:he2}} {{word:yue4}}.",

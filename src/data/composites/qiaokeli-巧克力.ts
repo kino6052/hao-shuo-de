@@ -12,5 +12,7 @@ export default composite({
   tts: ["黑色的甜的吃的"],
   literal: "black sweet food",
   fit: "plain",
+  topics: ["sweets-and-snacks"],
+  isA: ["snack-or-sweet"],
   proposed: true,
 });

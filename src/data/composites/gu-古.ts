@@ -14,5 +14,7 @@ export default composite({
   tts: ["很长的时间以前的"],
   literal: "of a very long time ago",
   fit: "plain",
+  topics: ["new-and-old"],
+  isA: ["age-or-newness"],
   proposed: true,
 });

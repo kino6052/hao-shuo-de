@@ -12,5 +12,7 @@ export default composite({
   tts: ["说对不起"],
   literal: "say sorry",
   fit: "plain",
+  topics: ["manners"],
+  isA: ["speaking-action"],
   proposed: true,
 });

@@ -6,6 +6,7 @@ export default pattern("he-and", {
     rus: "Hé соединяет два существительных: nǐ hé wǒ — ты и я. Оно соединяет только существительные, а не целые предложения.",
   },
   covers: ["grammar:and"],
+  tags: ["link", "cat:relation"],
   template: { hsd: "A {{word:he2}} B", eng: "A and B" },
   rules: [{ lhs: "NP", hsd: "NP =he2 NP", eng: "two nouns joined by hé: you and me" }],
   taught: "inside-a-sentence/and-or",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["对X好"],
   literal: "good for X",
   fit: "plain",
+  topics: ["how-good"],
+  isA: ["value-quality"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:dui4}} {{word:wo3}} {{word:hao3}}.",

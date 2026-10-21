@@ -15,6 +15,8 @@ export default composite({
   tts: ["在网上的地方", "高的地"],
   literal: "a place online / raised ground",
   fit: "plain",
+  topics: ["phone-and-computer"],
+  isA: ["computer-or-phone"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:zai4}} {{word:wang3}}-{{word:shang4}}-{{word:de}} {{word:di4}}-{{light:fang1}} {{word:kan4}}.",

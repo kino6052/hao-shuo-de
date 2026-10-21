@@ -12,6 +12,8 @@ export default composite({
   tts: ["对人很好"],
   literal: "good to people",
   fit: "plain",
+  topics: ["manners"],
+  isA: ["character-quality"],
   note: "不客气 is bù yòng xiè.",
   examples: [
     {

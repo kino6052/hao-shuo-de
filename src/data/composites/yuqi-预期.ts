@@ -12,4 +12,6 @@ export default composite({
   tts: ["想X会发生"],
   literal: "think X will happen",
   fit: "plain",
+  topics: ["knowing-and-understanding"],
+  isA: ["thinking-action"],
 });

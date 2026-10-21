@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live Plan</title>
+<style>
+/* The live plan page, served by the dev server (vite-plugin-plan.js, /__plan/). A *_PLAN.md checklist as a tree
+   with its progress; it reads the file again every two seconds and marks what changed, so the author can watch
+   Claude work through it. Nothing here writes: Claude edits the file, the page follows. */
+:root {
+  --paper: #f3f5f2; --card: #fbfcfa; --ink: #1b2420; --muted: #5d6a64; --line: #d6ddd7;
+  --accent: #1d6f55; --accent-ink: #ffffff; --accent-soft: #dcece4;
+  --doing: #b5650d; --doing-soft: #f8ead6; --wait: #4b54b8; --wait-soft: #e3e5f7; --todo: #8a968f;
+  --danger: #a3332b; --flash: #fff1b8;
+  --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #131916; --card: #1a221e; --ink: #e5ece8; --muted: #9aa8a1; --line: #2c3833;
+    --accent: #4fbf94; --accent-ink: #0d1a14; --accent-soft: #1f3a2f;
+    --doing: #f0a54a; --doing-soft: #3a2a15; --wait: #9aa2ff; --wait-soft: #262a4a; --todo: #6b7972;
+    --danger: #ef7a70; --flash: #4a4220;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 15px/1.5 var(--font-body); }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 20px 16px 64px; }
+header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px; margin-bottom: 6px; }
+h1 { font-size: 26px; line-height: 1.2; margin: 0; }
+.live { font: 500 12px/1 var(--font-mono); color: var(--muted); display: inline-flex; align-items: center; gap: 6px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+.live.stale .dot { background: var(--danger); }
+.live.tick .dot { animation: ping .6s ease-out; }
+@keyframes ping { from { box-shadow: 0 0 0 0 var(--accent); } to { box-shadow: 0 0 0 7px transparent; } }
+select { font: 500 13px/1 var(--font-body); padding: 5px 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--card); color: var(--ink); }
+.lede { margin: 0 0 6px; color: var(--muted); max-width: 90ch; }
+code { font: 400 0.88em/1 var(--font-mono); background: var(--accent-soft); padding: 1px 4px; border-radius: 4px; overflow-wrap: anywhere; }
+a { color: var(--accent); }
+
+.layout { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 20px; align-items: start; margin-top: 14px; }
+aside { position: sticky; top: 12px; display: grid; gap: 12px; }
+/* narrow: Now and Progress above the tree, Changes and Log below it */
+@media (max-width: 980px) {
+  .layout { grid-template-columns: 1fr; gap: 12px; }
+  aside { display: contents; }
+  aside > .panel { order: -1; }
+  aside > .panel.late { order: 1; }
+}
+.panel { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+.panel h2 { margin: 0 0 8px; font: 600 12px/1.2 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.now { border-color: var(--doing); background: var(--doing-soft); }
+.now p { margin: 0; font-size: 16px; font-weight: 600; }
+.big { font: 700 30px/1 var(--font-body); }
+.big small { font: 500 14px/1 var(--font-body); color: var(--muted); margin-left: 6px; }
+.bar { display: flex; height: 10px; border-radius: 999px; overflow: hidden; background: var(--line); margin: 10px 0 8px; }
+.bar.thin { height: 6px; margin: 0; width: 120px; flex: none; }
+.bar span { display: block; height: 100%; transition: width .4s; }
+.bar .done { background: var(--accent); } .bar .doing { background: var(--doing); } .bar .waiting { background: var(--wait); }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 13px; color: var(--muted); }
+.legend b { color: var(--ink); }
+.changes, .log { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 13px; }
+.changes li { display: grid; grid-template-columns: auto 1fr; gap: 2px 8px; }
+.changes time, .log time { font: 400 11px/1.6 var(--font-mono); color: var(--muted); }
+.log li { border-left: 2px solid var(--line); padding-left: 8px; }
+.empty { color: var(--muted); font-size: 13px; margin: 0; }
+
+.tools { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 10px; }
+.chip { font: 600 13px/1 var(--font-body); border: 1px solid var(--line); background: var(--card); color: var(--ink); padding: 7px 10px; border-radius: 999px; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.chip.plain { border-radius: 6px; }
+button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.section { background: var(--card); border: 1px solid var(--line); border-radius: 10px; margin-bottom: 12px; }
+.section > .head { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+.section > .head h2 { margin: 0; font-size: 17px; flex: 1; min-width: 0; }
+.section .sub { margin: 0 14px 10px; border: 1px dashed var(--line); border-radius: 8px; }
+.section .sub > .head { display: flex; align-items: center; gap: 10px; padding: 8px 12px; }
+.section .sub > .head h3 { margin: 0; font-size: 15px; flex: 1; }
+.count { font: 500 12px/1 var(--font-mono); color: var(--muted); white-space: nowrap; }
+.note { margin: 6px 14px; color: var(--muted); font-size: 14px; }
+.body { padding: 6px 6px 8px; }
+ul.tree { list-style: none; margin: 0; padding: 0; }
+ul.tree ul.tree { margin-left: 22px; border-left: 1px solid var(--line); padding-left: 6px; }
+.item { border-radius: 6px; transition: background 1.2s; }
+.item.flash > .row { background: var(--flash); }
+.row { display: grid; grid-template-columns: 20px 22px minmax(0, 1fr) auto; align-items: start; gap: 2px 4px; padding: 4px 6px; border-radius: 6px; }
+.row:hover { background: color-mix(in srgb, var(--accent-soft) 45%, transparent); }
+.twist { width: 20px; height: 22px; border: 0; background: none; color: var(--muted); cursor: pointer; padding: 0; font-size: 11px; transition: transform .15s; }
+.twist[aria-expanded="true"] { transform: rotate(90deg); }
+.twist:disabled { visibility: hidden; }
+.mark { width: 18px; height: 18px; margin-top: 2px; border-radius: 5px; display: grid; place-items: center; font: 700 12px/1 var(--font-body); border: 1.5px solid var(--todo); color: var(--todo); }
+.mark.x { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.mark.doing { border-color: var(--doing); color: var(--doing); border-radius: 50%; }
+.mark.doing::after { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--doing); animation: pulse 1.4s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: .25; transform: scale(.7); } }
+.mark.wait { border-color: var(--wait); color: var(--wait); background: var(--wait-soft); }
+.mark.drop { border-style: dashed; }
+.mark.plain { border: 0; }
+.mark.plain::after { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--muted); }
+.text { overflow-wrap: anywhere; }
+.item.x > .row .text { color: var(--muted); }
+.item.drop > .row .text { color: var(--muted); text-decoration: line-through; }
+.item.doing > .row { background: var(--doing-soft); }
+.item.doing > .row .text { font-weight: 600; }
+.notes { grid-column: 3 / 5; margin: 0; color: var(--muted); font-size: 13px; }
+.pill { font: 500 11px/1 var(--font-mono); color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 3px 7px; margin-top: 2px; white-space: nowrap; }
+.pill.full { color: var(--accent); border-color: var(--accent); }
+.hidden { display: none; }
+.err { color: var(--danger); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1 id="title">Plan</h1>
+    <span class="live" id="live"><span class="dot"></span><span id="liveText">connecting…</span></span>
+    <select id="file" aria-label="Plan file"></select>
+  </header>
+  <div id="intro"></div>
+  <div class="layout">
+    <main>
+      <div class="tools" id="tools"></div>
+      <div id="sections"></div>
+    </main>
+    <aside>
+      <div class="panel now" id="nowPanel"><h2>Now</h2><p id="now">…</p></div>
+      <div class="panel">
+        <h2>Progress</h2>
+        <div class="big" id="pct">0%<small></small></div>
+        <div class="bar" id="bar"></div>
+        <div class="legend" id="legend"></div>
+      </div>
+      <div class="panel late"><h2>Changed while this page was open</h2><ul class="changes" id="changes"></ul></div>
+      <div class="panel late"><h2>Log</h2><ul class="log" id="log"></ul></div>
+    </aside>
+  </div>
+</div>
+<script>
+const POLL_MS = 2000;
+const POLL_HIDDEN_MS = 6000;
+const FLASH_MS = 6000;
+const params = new URLSearchParams(location.search);
+const state = {
+  file: params.get('file') || 'AKINATOR_PLAN.md',
+  mtime: null, tree: null, readAt: 0, ok: false,
+  filter: 'all',
+  open: new Map(), // key -> true / false, the author's own clicks; the rest follow the defaults
+  marks: null,     // key -> mark at the last read
+  flash: new Map(), // key -> time it changed
+  changes: [],
+};
+const $ = (id) => document.getElementById(id);
+const el = (tag, props = {}, ...kids) => {
+  const n = Object.assign(document.createElement(tag), props);
+  for (const k of kids) if (k != null) n.append(k);
+  return n;
+};
+const store = {
+  get(k) { try { return JSON.parse(localStorage.getItem(k)); } catch { return null; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
+};
+const openKey = () => `plan-open:${state.file}`;
+state.open = new Map(store.get(openKey()) || []);
+
+// the few bits of Markdown the plans use: `code`, **bold**, [text](url)
+function inline(text) {
+  const esc = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  return esc
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (m, t, u) => /^(https?:|\/|\.|#|[\w-]+\.)/.test(u) ? `<a href="${u}" target="_blank" rel="noopener">${t}</a>` : m)
+    .replace(/(^|[\s(])(https?:\/\/[^\s)<]+)/g, '$1<a href="$2" target="_blank" rel="noopener">$2</a>');
+}
+const html = (tag, text, props = {}) => { const n = el(tag, props); n.innerHTML = inline(text); return n; };
+
+const MARKS = { 'x': ['x', '✓', 'done'], '~': ['doing', '', 'doing now'], '?': ['wait', '?', 'waits for the author'], '-': ['drop', '–', 'dropped'], ' ': ['todo', '', 'to do'] };
+const markClass = (m) => (m === null ? 'plain' : MARKS[m][0]);
+
+const pct = (c) => (c.total ? Math.round((100 * c.done) / c.total) : 0);
+function bar(c, thin) {
+  const b = el('div', { className: thin ? 'bar thin' : 'bar' });
+  for (const k of ['done', 'doing', 'waiting']) {
+    const s = el('span', { className: k });
+    s.style.width = c.total ? `${(100 * c[k]) / c.total}%` : '0';
+    b.append(s);
+  }
+  return b;
+}
+
+// what to show under each filter: an item shows if it or anything under it matches
+const FILTERS = [
+  ['all', 'All', () => true],
+  ['open', 'Open', (m) => m === ' ' || m === '~' || m === '?'],
+  ['doing', 'Doing now', (m) => m === '~'],
+  ['waiting', 'Waits for the author', (m) => m === '?'],
+  ['done', 'Done', (m) => m === 'x'],
+];
+const matches = (item) => FILTERS.find((f) => f[0] === state.filter)[2](item.mark) || item.children.some(matches);
+
+// by default a branch is open while it has open work, and shut once it is all done or dropped
+function isOpen(item) {
+  if (state.open.has(item.key)) return state.open.get(item.key);
+  if (state.filter !== 'all') return true;
+  const c = item.counts;
+  return c.done < c.total || hasDoing(item);
+}
+const hasDoing = (item) => item.mark === '~' || item.children.some(hasDoing);
+
+function renderItem(item) {
+  const [cls, glyph, label] = item.mark === null ? ['plain', '', 'note'] : MARKS[item.mark];
+  const li = el('li', { className: `item ${cls}` });
+  li.dataset.key = item.key;
+  if (state.flash.has(item.key)) li.classList.add('flash');
+  const branch = item.children.length > 0;
+  const open = branch && isOpen(item);
+  const twist = el('button', { className: 'twist', textContent: '▶', disabled: !branch, title: open ? 'Close' : 'Open' });
+  twist.setAttribute('aria-expanded', String(open));
+  twist.setAttribute('aria-label', `${open ? 'Close' : 'Open'} ${item.text.replace(/\*\*/g, '').slice(0, 40)}`);
+  twist.onclick = () => {
+    state.open.set(item.key, !open);
+    store.set(openKey(), [...state.open]);
+    render();
+  };
+  const mark = el('span', { className: `mark ${cls}`, textContent: glyph, title: label });
+  const text = html('span', item.text, { className: 'text', title: `line ${item.line}` });
+  const c = item.counts;
+  const pill = branch && c.total ? el('span', { className: `pill${c.done === c.total ? ' full' : ''}`, textContent: `${c.done}/${c.total}` }) : el('span');
+  const row = el('div', { className: 'row' }, twist, mark, text, pill);
+  if (item.notes.length) row.append(html('p', item.notes.join(' '), { className: 'notes' }));
+  li.append(row);
+  if (open) {
+    const kids = item.children.filter(matches);
+    if (kids.length) li.append(el('ul', { className: 'tree' }, ...kids.map(renderItem)));
+  }
+  return li;
+}
+
+function sectionHead(s, tag) {
+  const all = s.counts;
+  return el('div', { className: 'head' },
+    html(tag, s.title),
+    all.total ? bar(all, true) : null,
+    el('span', { className: 'count', textContent: all.total ? `${all.done}/${all.total} · ${pct(all)}%` : '' }));
+}
+
+function renderSection(s, subs) {
+  const total = { ...s.counts };
+  for (const sub of subs) for (const k of Object.keys(total)) total[k] += sub.counts[k];
+  const box = el('section', { className: 'section' }, sectionHead({ ...s, counts: total }, 'h2'));
+  for (const n of s.notes) box.append(html('p', n, { className: 'note' }));
+  const items = s.items.filter(matches);
+  if (items.length) box.append(el('div', { className: 'body' }, el('ul', { className: 'tree' }, ...items.map(renderItem))));
+  for (const sub of subs) {
+    const subItems = sub.items.filter(matches);
+    const sb = el('div', { className: 'sub' }, sectionHead(sub, 'h3'));
+    for (const n of sub.notes) sb.append(html('p', n, { className: 'note' }));
+    if (subItems.length) sb.append(el('div', { className: 'body' }, el('ul', { className: 'tree' }, ...subItems.map(renderItem))));
+    if (subItems.length || state.filter === 'all') box.append(sb);
+  }
+  return items.length || subs.length || state.filter === 'all' ? box : null;
+}
+
+function renderTools() {
+  const tools = $('tools');
+  tools.replaceChildren(
+    ...FILTERS.map(([key, label]) => {
+      const b = el('button', { className: 'chip', textContent: label });
+      b.setAttribute('aria-pressed', String(state.filter === key));
+      b.onclick = () => { state.filter = key; render(); };
+      return b;
+    }),
+    el('button', { className: 'chip plain', textContent: 'Open all', onclick: () => setAll(true) }),
+    el('button', { className: 'chip plain', textContent: 'Close all', onclick: () => setAll(false) }),
+    el('button', { className: 'chip plain', textContent: 'Reset', title: 'Back to the defaults: open while there is work', onclick: () => { state.open.clear(); store.set(openKey(), []); render(); } }),
+  );
+}
+function setAll(v) {
+  const walk = (items) => items.forEach((i) => { if (i.children.length) { state.open.set(i.key, v); walk(i.children); } });
+  state.tree.sections.forEach((s) => walk(s.items));
+  store.set(openKey(), [...state.open]);
+  render();
+}
+
+function render() {
+  const t = state.tree;
+  if (!t) return;
+  document.title = `${t.title || 'Plan'} · ${pct(t.counts)}%`;
+  $('title').textContent = t.title || state.file;
+  $('intro').replaceChildren(...t.intro.map((p) => html('p', p, { className: 'lede' })));
+  $('now').innerHTML = t.now ? inline(t.now) : 'Nothing in progress.';
+  const c = t.counts;
+  $('pct').replaceChildren(`${pct(c)}%`, el('small', { textContent: `${c.done} of ${c.total} steps done` }));
+  $('bar').replaceWith(Object.assign(bar(c), { id: 'bar' }));
+  $('legend').replaceChildren(
+    ...[['done', 'done'], ['doing', 'doing now'], ['waiting', 'waits for the author'], ['todo', 'to do'], ['dropped', 'dropped']]
+      .filter(([k]) => c[k] || k !== 'dropped')
+      .map(([k, label]) => el('span', {}, el('b', { textContent: String(c[k]) }), ` ${label}`)),
+  );
+  renderTools();
+  const out = [];
+  t.sections.forEach((s, i) => {
+    if (s.level !== 2) return;
+    const subs = [];
+    for (let j = i + 1; j < t.sections.length && t.sections[j].level > 2; j++) subs.push(t.sections[j]);
+    out.push(renderSection(s, subs));
+  });
+  $('sections').replaceChildren(...out.filter(Boolean));
+  $('log').replaceChildren(...(t.log.length ? t.log.map((l) => logLine(l)) : [el('p', { className: 'empty', textContent: 'No entries yet.' })]));
+  renderChanges();
+}
+
+function logLine(text) {
+  const m = /^(\d{4}-\d{2}-\d{2}(?:[ T]\d{2}:\d{2})?)\s+(.*)$/.exec(text);
+  return m ? el('li', {}, el('time', { textContent: m[1] }), html('div', m[2])) : el('li', {}, html('div', text));
+}
+
+const clock = (t) => new Date(t).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+function renderChanges() {
+  const list = $('changes');
+  if (!state.changes.length) return list.replaceChildren(el('p', { className: 'empty', textContent: 'Nothing yet. Steps light up here as they change.' }));
+  list.replaceChildren(...state.changes.slice(0, 12).map((ch) => el('li', {}, el('time', { textContent: clock(ch.at) }), html('div', ch.text))));
+}
+
+// what changed between two reads: marks, new steps, the Now line
+function diff(tree) {
+  const marks = new Map();
+  const names = new Map();
+  const walk = (items) => items.forEach((i) => { marks.set(i.key, i.mark); names.set(i.key, i.text); walk(i.children); });
+  tree.sections.forEach((s) => walk(s.items));
+  const now = Date.now();
+  if (state.marks) {
+    const short = (k) => names.get(k).replace(/\*\*/g, '').replace(/\s+\(.*$/, '').slice(0, 70);
+    for (const [k, m] of marks) {
+      const was = state.marks.get(k);
+      if (was === undefined && !state.marks.has(k)) {
+        state.flash.set(k, now);
+        state.changes.unshift({ at: now, text: `New: ${short(k)}` });
+      } else if (was !== m) {
+        state.flash.set(k, now);
+        state.changes.unshift({ at: now, text: `${short(k)} → **${m === null ? 'note' : MARKS[m][2]}**` });
+      }
+    }
+    if (state.tree && state.tree.now !== tree.now && tree.now) state.changes.unshift({ at: now, text: `Now: ${tree.now}` });
+  }
+  state.marks = marks;
+}
+
+async function poll() {
+  try {
+    const q = new URLSearchParams({ file: state.file });
+    if (state.mtime != null) q.set('since', String(state.mtime));
+    const r = await fetch(`/__plan/data?${q}`, { cache: 'no-store' });
+    const data = await r.json();
+    if (!r.ok) throw new Error(data.error || r.statusText);
+    state.readAt = Date.now();
+    state.ok = true;
+    if (!data.same) {
+      diff(data.tree);
+      state.tree = data.tree;
+      state.mtime = data.mtime;
+      render();
+      const live = $('live');
+      live.classList.remove('tick'); void live.offsetWidth; live.classList.add('tick');
+    }
+  } catch (e) {
+    state.ok = false;
+    $('liveText').textContent = `not reached: ${e.message}`;
+  }
+  setTimeout(poll, document.hidden ? POLL_HIDDEN_MS : POLL_MS);
+}
+
+// the "read n s ago" line and the end of each flash
+setInterval(() => {
+  const live = $('live');
+  live.classList.toggle('stale', !state.ok);
+  if (state.ok) {
+    const ago = Math.round((Date.now() - state.readAt) / 1000);
+    const changed = state.mtime ? `file changed ${clock(state.mtime)}` : '';
+    $('liveText').textContent = `live · read ${ago}s ago · ${changed}`;
+  }
+  const now = Date.now();
+  let gone = false;
+  for (const [k, t] of state.flash) if (now - t > FLASH_MS) { state.flash.delete(k); gone = true; }
+  if (gone) document.querySelectorAll('.item.flash').forEach((n) => { if (!state.flash.has(n.dataset.key)) n.classList.remove('flash'); });
+}, 1000);
+
+async function files() {
+  const sel = $('file');
+  try {
+    const list = await (await fetch('/__plan/files', { cache: 'no-store' })).json();
+    sel.replaceChildren(...list.map((f) => el('option', { value: f, textContent: f, selected: f === state.file })));
+  } catch { sel.replaceChildren(el('option', { textContent: state.file })); }
+  sel.onchange = () => { location.search = `?file=${encodeURIComponent(sel.value)}`; };
+}
+
+files();
+poll();
+</script>
+</body>
+</html>

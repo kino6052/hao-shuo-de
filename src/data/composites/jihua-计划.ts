@@ -12,6 +12,8 @@ export default composite({
   tts: ["要做的方法"],
   literal: "the way you're going to do it",
   fit: "plain",
+  topics: ["deciding"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:yao4}} {{word:zuo4}}-{{word:de}} {{word:fang1}}-{{word:fa3}}.",

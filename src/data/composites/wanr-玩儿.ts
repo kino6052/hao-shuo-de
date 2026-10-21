@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:wan2r}}"],
   tts: ["玩儿"],
   fit: "word",
+  topics: ["hobbies-and-outings"],
+  isA: ["playing"],
   proposed: true,
 });

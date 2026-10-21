@@ -12,6 +12,8 @@ export default composite({
   tts: ["国的日"],
   literal: "the country's day",
   fit: "plain",
+  topics: ["holidays-and-festivals"],
+  isA: ["calendar-name"],
   examples: [
     {
       pinyin: "{{Word:jin1}}-{{word:tian1}} {{word:shi4}} {{word:guo2}}-{{word:de}} {{word:ri4}}.",

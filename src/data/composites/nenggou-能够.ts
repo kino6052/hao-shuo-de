@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:neng2}}"],
   tts: ["能"],
   fit: "word",
+  topics: ["helping-words"],
+  isA: ["auxiliary"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:neng2}} {{word:zuo4}}.",

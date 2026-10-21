@@ -12,6 +12,8 @@ export default composite({
   tts: ["不做，玩儿一下"],
   literal: "stop working and play a bit",
   fit: "plain",
+  topics: ["healthy-habits"],
+  isA: ["body-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:bu4}} {{word:zuo4}}, {{word:wan2r}} {{word:yi1}}-{{word:xia4}}.",

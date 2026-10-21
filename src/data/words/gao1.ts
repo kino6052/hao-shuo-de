@@ -10,6 +10,8 @@ export default word("gao1", {
     eng: "Tall, high. {{word:da4}} covers size, but not height: mountains, buildings, and people need it.",
     rus: "Высокий. {{word:da4}} говорит о размере, но не о высоте: она нужна для гор, домов и людей.",
   },
+  topics: ["size"],
+  isA: ["size-quality"],
   paraphrase: {
     forms: [
       "{{word:cong2}} {{word:di4}} {{word:dao4}} {{word:shang4}}-{{word:mian4}} {{word:hen3}} {{word:chang2}}",

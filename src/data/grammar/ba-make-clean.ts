@@ -6,6 +6,7 @@ export default pattern("ba-make-clean", {
     rus: "Говорит, какой вы делаете вещь: bǎ, вещь, затем слово-описание того, какой она станет (сделать комнату чистой).",
   },
   covers: [],
+  tags: ["make", "cat:affection", "cat:quality"],
   template: { hsd: "Who + {{word:ba3}} + thing + describing word", eng: "Who makes the thing so" },
   rules: [{ lhs: "VP", hsd: "ba3 NP @adjective", eng: "bǎ, the thing, then how it ends up" }],
   taught: "becoming-and-making/ba-clean",

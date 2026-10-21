@@ -6,6 +6,7 @@ export default pattern("qian-hou-span", {
     rus: "Qián и hòu перед посчитанным промежутком времени называют предыдущий или следующий: qián yī-ge rì — день до, hòu shí-èr-ge yuè — двенадцать месяцев после.",
   },
   covers: [],
+  tags: ["when", "count", "cat:time"],
   template: {
     hsd: "{{word:qian2}} / {{word:hou4}} + number + measure word + span",
     eng: "The span before / after",

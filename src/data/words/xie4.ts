@@ -14,6 +14,8 @@ export default word("xie4", {
     eng: "Thank: {{word:xie4}}-xie. Politeness can't wait for a description.",
     rus: "Благодарить: {{word:xie4}}-xie. Вежливость не ждёт описаний.",
   },
+  topics: ["greetings-and-thanks"],
+  isA: ["speaking-action"],
   paraphrase: {
     forms: ["{{word:shuo1}} {{word:ni3}} {{word:dui4}} {{word:wo3}} {{word:hao3}}"],
     verdict: "clumsy",

@@ -12,5 +12,7 @@ export default composite({
   tts: ["想睡觉"],
   literal: "want to sleep",
   fit: "plain",
+  topics: ["body-needs"],
+  isA: ["bodily-state"],
   proposed: true,
 });

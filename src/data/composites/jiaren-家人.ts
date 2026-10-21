@@ -13,6 +13,8 @@ export default composite({
   literal: "home person / people in the home",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["parents-and-children"],
+  isA: ["relative"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:jia1}}-{{word:ren2}} {{word:dou1}} {{word:zai4}} {{word:jia1}}.",

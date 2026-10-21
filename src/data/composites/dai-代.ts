@@ -12,5 +12,7 @@ export default composite({
   tts: ["替", "很长的时间"],
   literal: "instead of / a long time",
   fit: "plain",
+  topics: ["young-and-old"],
+  isA: ["time-span"],
   proposed: true,
 });

@@ -6,6 +6,7 @@ export default pattern("time-first", {
     rus: "Говорит, когда: сначала время, потом запятая, потом остальное. Время может стоять и сразу после того, кто делает.",
   },
   covers: ["grammar:when"],
+  tags: ["when", "cat:time"],
   template: { hsd: "Time, who + verb", eng: "When, who does the verb" },
   rules: [
     { lhs: "Time", hsd: "=xian4 =zai4", eng: "xiànzài, now" },

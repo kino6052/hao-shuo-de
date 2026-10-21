@@ -12,5 +12,7 @@ export default composite({
   tts: ["让身体变不重"],
   literal: "make the body not heavy",
   fit: "plain",
+  topics: ["healthy-habits"],
+  isA: ["body-action"],
   proposed: true,
 });

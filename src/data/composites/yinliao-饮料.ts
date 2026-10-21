@@ -12,6 +12,8 @@ export default composite({
   tts: ["喝的东西"],
   literal: "a thing to drink",
   fit: "plain",
+  topics: ["drinks"],
+  isA: ["drink"],
   note: "chī covers drinking too.",
   examples: [
     {

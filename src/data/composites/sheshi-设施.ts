@@ -14,5 +14,7 @@ export default composite({
   tts: ["为人做好的东西"],
   literal: "things made ready for people",
   fit: "plain",
+  topics: ["buildings"],
+  isA: ["made-thing"],
   proposed: true,
 });

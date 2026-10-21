@@ -12,6 +12,8 @@ export default composite({
   tts: ["哪些", "什么"],
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["question-words"],
+  isA: ["question-word-kind"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:yao4}} {{word:na3}}-{{word:xie1}}?",

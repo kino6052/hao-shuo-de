@@ -12,6 +12,8 @@ export default composite({
   tts: ["快走", "走得很快"],
   literal: "walk very fast",
   fit: "plain",
+  topics: ["sports"],
+  isA: ["body-action"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:zou3}}-{{word:de}} {{word:hen3}} {{word:kuai4}}.",

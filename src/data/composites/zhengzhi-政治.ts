@@ -12,6 +12,8 @@ export default composite({
   tts: ["国家里面的关系"],
   literal: "the relations inside a country",
   fit: "plain",
+  topics: ["government"],
+  isA: ["abstract-thing"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:xiang3}} {{word:zhi1dao4}} {{word:guo2}}-{{word:jia1}} {{word:li3}}-{{word:mian4}}-{{word:de}} {{word:guan1xi}}.",

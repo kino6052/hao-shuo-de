@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:na2}}"],
   tts: ["拿"],
   fit: "word",
+  topics: ["taking-and-holding"],
+  isA: ["handling-action"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:na2}} {{word:zhe4}}-{{light:ge4}}.",

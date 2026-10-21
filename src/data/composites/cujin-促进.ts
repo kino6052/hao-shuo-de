@@ -12,5 +12,7 @@ export default composite({
   tts: ["帮X变好，变快"],
   literal: "help X get better and faster",
   fit: "plain",
+  topics: ["causes-and-results"],
+  isA: ["cause-and-effect"],
   proposed: true,
 });

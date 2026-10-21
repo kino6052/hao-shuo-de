@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:kuai4}}"],
   tts: ["快"],
   fit: "word",
+  topics: ["speed-and-strength"],
+  isA: ["speed-or-strength"],
   note: "Lesson {{lesson:how-much}}.",
   examples: [
     {

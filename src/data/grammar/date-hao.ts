@@ -6,6 +6,7 @@ export default pattern("date-hao", {
     rus: "Слово времени и число с hào называют дату: jīn-tiān shí hào — сегодня десятое.",
   },
   covers: ["grammar:when"],
+  tags: ["when", "count", "cat:time"],
   template: { hsd: "time word + number {{word:hao4}}", eng: "The date is that" },
   rules: [
     { lhs: "S", hsd: "Time NP", eng: "a time word and what it is: today, the tenth" },

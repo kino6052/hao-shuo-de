@@ -14,6 +14,8 @@ export default word("fang4", {
     eng: "Put, place: {{word:ba3}} X {{word:fang4}} {{word:zai4}} … says where something goes.",
     rus: "Класть, ставить: {{word:ba3}} X {{word:fang4}} {{word:zai4}} … говорит, куда что-то кладут.",
   },
+  topics: ["taking-and-holding"],
+  isA: ["placing"],
   paraphrase: {
     forms: ["{{word:rang4}} {{word:ta1}} {{word:zai4}} {{word:na4}}-{{word:li3}}"],
     verdict: "clumsy",

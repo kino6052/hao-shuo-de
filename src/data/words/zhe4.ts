@@ -14,6 +14,8 @@ export default word("zhe4", {
     eng: "Without it, you can't point at what's here: no \"this\".",
     rus: "Без него нельзя указать на то, что рядом: нет «это».",
   },
+  topics: ["pointers"],
+  isA: ["pronoun"],
   maps: "ni",
   atom: {
     eng: "\"This\" is learned by pointing at what is near you; \"the near one\" already needs \"near\".",

@@ -13,6 +13,8 @@ export default composite({
   literal: "in the heart",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["inside-the-body"],
+  isA: ["body-part"],
   note: "wǒ jué-de …: in my heart, I feel …",
   examples: [
     {

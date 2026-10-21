@@ -14,6 +14,8 @@ export default word("xian4", {
     eng: "A line, a thread, a rope: anything long and thin.",
     rus: "Линия, нитка, верёвка — всё длинное и тонкое.",
   },
+  topics: ["materials"],
+  isA: ["material"],
   maps: "linja",
   senses: {
     now: {

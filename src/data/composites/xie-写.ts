@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:xie3}}"],
   tts: ["写"],
   fit: "word",
+  topics: ["writing"],
+  isA: ["making"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:hui4}} {{word:xie3}} {{word:zhe4}}-{{light:ge4}} {{word:zi4}} {{word:ma}}?",

@@ -6,6 +6,7 @@ export default pattern("hao-ma-suggest", {
     rus: "Hǎo ma в конце, после запятой, делает предложение или вежливую просьбу: wǒ-men chū-qù wánr, hǎo ma? Hǎo само по себе значит «хорошо».",
   },
   covers: ["grammar:suggest"],
+  tags: ["command", "question", "cat:action"],
   template: { hsd: "…, {{word:hao3}} {{word:ma}}?", eng: "…, okay?" },
   rules: [
     { lhs: "Q", hsd: "S @comma =hao3 ma", eng: "a sentence, a comma, and hǎo ma: okay?" },

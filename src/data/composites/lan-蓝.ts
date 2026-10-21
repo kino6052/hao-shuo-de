@@ -12,6 +12,8 @@ export default composite({
   tts: ["天的颜色"],
   literal: "the colour of the sky",
   fit: "word",
+  topics: ["colours-and-patterns"],
+  isA: ["colour-quality"],
   examples: [
     {
       pinyin: "{{Word:shui3}} {{word:shi4}} {{word:tian1}}-{{word:de}} {{word:yan2se4}}.",

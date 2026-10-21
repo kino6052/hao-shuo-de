@@ -12,5 +12,7 @@ export default composite({
   tts: ["不快地走，玩儿"],
   literal: "walk not fast, for fun",
   fit: "plain",
+  topics: ["healthy-habits"],
+  isA: ["moving-action"],
   proposed: true,
 });

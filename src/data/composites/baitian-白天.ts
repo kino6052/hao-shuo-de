@@ -16,6 +16,8 @@ export default composite({
   literal: "the time when there's sun",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["times-of-day"],
+  isA: ["time-of-day-word"],
   examples: [
     {
       pinyin: "{{Word:bai2}}-{{word:tian1}} {{word:hen3}} {{word:re4}}.",

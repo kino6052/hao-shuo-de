@@ -14,6 +14,8 @@ export default word("fang2", {
     eng: "Rooms and houses ({{word:fang2}}-{{word:jian1}}, {{word:fang2}}-{{light:zi}}): where people live, room by room.",
     rus: "Комнаты и дома ({{word:fang2}}-{{word:jian1}}, {{word:fang2}}-{{light:zi}}): где живут люди, комната за комнатой.",
   },
+  topics: ["house-and-doors"],
+  isA: ["room"],
   paraphrase: {
     forms: [
       "{{word:jia1}}-{{word:li3}}-{{word:de}} {{word:yi1}}-{{light:ge4}} {{word:di4}}-{{light:fang1}}",

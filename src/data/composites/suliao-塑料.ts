@@ -12,5 +12,7 @@ export default composite({
   tts: ["用油做的料"],
   literal: "a material made from oil",
   fit: "plain",
+  topics: ["materials"],
+  isA: ["material"],
   proposed: true,
 });

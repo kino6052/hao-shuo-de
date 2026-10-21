@@ -13,6 +13,8 @@ export default composite({
   literal: "a true thing",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["ideas-and-opinions"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:shi4}} {{word:shi4}}-{{word:shi2}}.",

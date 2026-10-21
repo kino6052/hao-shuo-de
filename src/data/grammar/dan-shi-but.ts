@@ -6,6 +6,7 @@ export default pattern("dan-shi-but", {
     rus: "Dàn-shì начинает вторую часть и значит «но»: выглядит хорошо, но на вкус нехорошо.",
   },
   covers: ["grammar:but"],
+  tags: ["link", "cat:relation"],
   template: { hsd: "sentence, {{word:dan4}}-{{word:shi4}} + sentence", eng: "This, but that" },
   rules: [
     { lhs: "But", hsd: "=dan4 =shi4", eng: "dàn-shì, but" },

@@ -12,6 +12,8 @@ export default composite({
   tts: ["身体里的红色水"],
   literal: "the red water in the body",
   fit: "plain",
+  topics: ["inside-the-body"],
+  isA: ["body-part"],
   examples: [
     {
       pinyin: "{{Word:shen1ti3}}-{{word:li3}}-{{word:de}} {{word:hong2}}-{{word:se4}} {{word:shui3}} {{word:shi4}} {{word:re4}}-{{word:de}}.",

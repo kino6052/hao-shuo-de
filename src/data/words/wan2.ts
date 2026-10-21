@@ -14,6 +14,8 @@ export default word("wan2", {
     eng: "Finish, be done: {{word:chi1}}-{{word:wan2}}, finish eating. Without it, nothing ever ends.",
     rus: "Закончить: {{word:chi1}}-{{word:wan2}} — доесть. Без него ничего не заканчивается.",
   },
+  topics: ["deciding"],
+  isA: ["starting-and-stopping"],
   maps: "pini",
   paraphrase: { forms: ["{{word:mei2}}-{{word:you3}} {{word:le}}"], verdict: "clumsy" },
 });

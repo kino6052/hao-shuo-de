@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:zhong3}}"],
   tts: ["种"],
   fit: "word",
+  topics: ["counting-words"],
+  isA: ["counting-word"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:ai4}} {{word:na3}} {{word:yi1}}-{{word:zhong3}}?",

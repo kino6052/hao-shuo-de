@@ -12,5 +12,7 @@ export default composite({
   tts: ["坐车"],
   fit: "natural",
   transparent: true,
+  topics: ["vehicles"],
+  isA: ["moving-action"],
   proposed: true,
 });

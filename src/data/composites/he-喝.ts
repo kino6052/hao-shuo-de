@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:he1}}"],
   tts: ["喝"],
   fit: "word",
+  topics: ["eating-and-drinking"],
+  isA: ["eating-and-drinking-action"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:he1}} {{word:shui3}} {{word:ma}}?",

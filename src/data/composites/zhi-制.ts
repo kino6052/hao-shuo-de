@@ -12,5 +12,7 @@ export default composite({
   tts: ["做", "法"],
   literal: "make / law",
   fit: "plain",
+  topics: ["making-and-doing"],
+  isA: ["making"],
   proposed: true,
 });

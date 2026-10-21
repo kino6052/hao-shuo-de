@@ -12,6 +12,8 @@ export default composite({
   tts: ["做好"],
   literal: "make it good",
   fit: "plain",
+  topics: ["repairs"],
+  isA: ["making"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:neng2}} {{word:zuo4}} {{word:hao3}}.",

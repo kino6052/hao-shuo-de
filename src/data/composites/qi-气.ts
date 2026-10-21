@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:qi4}}"],
   tts: ["气"],
   fit: "word",
+  topics: ["weather"],
+  isA: ["liquid-or-gas"],
   note: "For anger, say shēng-qì.",
   examples: [
     {

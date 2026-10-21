@@ -12,5 +12,7 @@ export default composite({
   tts: ["以后会怎么变"],
   literal: "how it will change later",
   fit: "plain",
+  topics: ["causes-and-results"],
+  isA: ["idea"],
   proposed: true,
 });

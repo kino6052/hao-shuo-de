@@ -14,6 +14,8 @@ export default word("mian4", {
     eng: "Side, face: it turns the direction words into places ({{word:li3}}-{{word:mian4}}, {{word:qian2}}-{{word:mian4}}).",
     rus: "Сторона, лицо: превращает слова направления в места ({{word:li3}}-{{word:mian4}}, {{word:qian2}}-{{word:mian4}}).",
   },
+  topics: ["up-down-in-out"],
+  isA: ["place-relation"],
   maps: "",
   classes: {
     measure_word: {

@@ -12,4 +12,6 @@ export default composite({
   tts: ["走了，不回来了"],
   literal: "gone, not coming back",
   fit: "plain",
+  topics: ["birth-and-death"],
+  isA: ["life-change"],
 });

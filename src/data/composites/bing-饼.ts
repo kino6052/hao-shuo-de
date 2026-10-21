@@ -12,5 +12,7 @@ export default composite({
   tts: ["圆的，平的吃的"],
   literal: "round and flat food",
   fit: "plain",
+  topics: ["grains-and-bread"],
+  isA: ["staple-food"],
   proposed: true,
 });

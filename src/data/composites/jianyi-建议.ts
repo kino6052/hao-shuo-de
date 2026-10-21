@@ -12,6 +12,8 @@ export default composite({
   tts: ["…，好吗？"],
   literal: "…, okay?",
   fit: "natural",
+  topics: ["agreeing-and-praising"],
+  isA: ["speaking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:yi1}}-{{word:qi3}} {{word:qu4}}, {{word:hao3}} {{word:ma}}?",

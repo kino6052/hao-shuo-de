@@ -6,6 +6,7 @@ export default pattern("bu-negation", {
     rus: "Говорит «нет»: bù стоит перед глаголом, shì или описывающим словом.",
   },
   covers: ["grammar:not"],
+  tags: ["negation", "cat:action"],
   template: { hsd: "Subject {{word:bu4}} verb", eng: "Subject does not do the verb" },
   rules: [{ lhs: "VP", hsd: "bu4 VP", eng: "bù before what is said" }],
   taught: "who-does-what/not",

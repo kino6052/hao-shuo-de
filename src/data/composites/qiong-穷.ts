@@ -12,4 +12,6 @@ export default composite({
   tts: ["没有金"],
   literal: "has no money",
   fit: "plain",
+  topics: ["business-and-economy"],
+  isA: ["condition-quality"],
 });

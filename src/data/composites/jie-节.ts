@@ -14,5 +14,7 @@ export default composite({
   tts: ["很多人一起玩儿的日"],
   literal: "a day when many people play together",
   fit: "plain",
+  topics: ["holidays-and-festivals"],
+  isA: ["counting-word"],
   proposed: true,
 });

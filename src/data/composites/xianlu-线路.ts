@@ -15,5 +15,7 @@ export default composite({
   tts: ["线路", "线一样的路"],
   literal: "a road like a line",
   fit: "plain",
+  topics: ["the-road"],
+  isA: ["place"],
   proposed: true,
 });

@@ -12,6 +12,8 @@ export default composite({
   tts: ["买东西的地方"],
   literal: "the place to buy things",
   fit: "natural",
+  topics: ["shops"],
+  isA: ["building"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:mai3}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}} {{word:hen3}} {{word:xiao3}}.",

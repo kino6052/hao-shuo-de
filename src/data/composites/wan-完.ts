@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:wan2}}"],
   tts: ["完"],
   fit: "word",
+  topics: ["deciding"],
+  isA: ["starting-and-stopping"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:chi1}}-{{word:wan2}} {{word:le}}.",

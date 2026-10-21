@@ -12,6 +12,8 @@ export default composite({
   tts: ["不要了"],
   literal: "not wanting it anymore",
   fit: "plain",
+  topics: ["deciding"],
+  isA: ["starting-and-stopping"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:bu4}} {{word:yao4}} {{word:le}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["学完了"],
   literal: "finished learning",
   fit: "natural",
+  topics: ["studying"],
+  isA: ["life-change"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:xue2}}-{{word:wan2}} {{word:le}}.",

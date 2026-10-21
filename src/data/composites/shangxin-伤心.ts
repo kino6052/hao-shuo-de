@@ -12,6 +12,8 @@ export default composite({
   tts: ["不开心"],
   literal: "not happy",
   fit: "natural",
+  topics: ["sad-and-angry"],
+  isA: ["feeling-quality"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:bu4}} {{word:kai1}}-{{word:xin1}}.",

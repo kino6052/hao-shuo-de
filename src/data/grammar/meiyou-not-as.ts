@@ -6,6 +6,7 @@ export default pattern("meiyou-not-as", {
     rus: "Méi yǒu перед другим и описанием значит «не так … как»: wǒ méi yǒu tā hǎo — я не так хорош, как он.",
   },
   covers: ["grammar:compare"],
+  tags: ["compare", "negation", "cat:relation"],
   template: { hsd: "A {{word:mei2}} {{word:you3}} B + adjective", eng: "A is not as good as B" },
   rules: [
     { lhs: "VP", hsd: "mei2 =you3 NP @adjective", eng: "méi yǒu, the other, and a describing word" },

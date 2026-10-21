@@ -12,6 +12,8 @@ export default composite({
   tts: ["…，好吗？"],
   literal: "…, okay?",
   fit: "plain",
+  topics: ["manners"],
+  isA: ["speaking-action"],
   note: "Lesson {{lesson:everyday-patterns}}.",
   examples: [
     {

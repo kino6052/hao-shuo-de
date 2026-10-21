@@ -12,6 +12,8 @@ export default composite({
   tts: ["爱"],
   literal: "love",
   fit: "plain",
+  topics: ["liking-and-wanting"],
+  isA: ["feeling-name"],
   note: "wǒ ài kàn: I'm interested in looking.",
   examples: [
     {

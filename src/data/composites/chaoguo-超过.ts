@@ -12,6 +12,8 @@ export default composite({
   tts: ["比X多"],
   literal: "more than X",
   fit: "natural",
+  topics: ["same-and-different"],
+  isA: ["comparison"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:bi3}} {{word:wo3}} {{word:duo1}}.",

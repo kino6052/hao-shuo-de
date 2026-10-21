@@ -12,4 +12,6 @@ export default composite({
   tts: ["国和国打"],
   literal: "country and country fight",
   fit: "plain",
+  topics: ["war-and-peace"],
+  isA: ["event"],
 });

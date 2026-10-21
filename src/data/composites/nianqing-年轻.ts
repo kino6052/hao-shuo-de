@@ -12,6 +12,8 @@ export default composite({
   tts: ["不老"],
   literal: "not old",
   fit: "natural",
+  topics: ["young-and-old"],
+  isA: ["age-or-newness"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:hai2}} {{word:bu4}} {{word:lao3}}.",

@@ -15,6 +15,8 @@ export default composite({
   tts: ["叫哞的动物", "真好"],
   literal: "the animal that says \"mou\" / really good",
   fit: "plain",
+  topics: ["farm-animals"],
+  isA: ["mammal"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:jiao4}} \"mōu\"-{{word:de}} {{word:dong4}}-{{word:wu4}}.",

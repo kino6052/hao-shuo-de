@@ -12,6 +12,8 @@ export default composite({
   tts: ["好看"],
   literal: "good to look at",
   fit: "natural",
+  topics: ["describing-people"],
+  isA: ["sound-or-light-quality"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:zhen1}} {{word:hao3}}-{{word:kan4}}.",

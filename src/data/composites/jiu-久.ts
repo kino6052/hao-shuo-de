@@ -12,6 +12,8 @@ export default composite({
   tts: ["很多时间"],
   literal: "a lot of time",
   fit: "natural",
+  topics: ["how-often"],
+  isA: ["time-span"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:deng3}} {{word:le}} {{word:hen3}} {{word:duo1}} {{word:shi2}}-{{word:jian1}}.",

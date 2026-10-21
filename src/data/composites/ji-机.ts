@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:ji1}}"],
   tts: ["机"],
   fit: "word",
+  topics: ["home-electronics"],
+  isA: ["machine"],
   proposed: true,
 });

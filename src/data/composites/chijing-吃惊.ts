@@ -14,5 +14,7 @@ export default composite({
   tts: ["没想到，心动了一下"],
   literal: "did not think of it, the heart moved once",
   fit: "plain",
+  topics: ["worry-and-fear"],
+  isA: ["feeling-quality"],
   proposed: true,
 });

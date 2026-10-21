@@ -9,5 +9,7 @@ export default composite({
   ru: "(служебное слово перед глаголом; также для школ)",
   pos: "auxiliary",
   fit: "skip",
+  topics: ["particles"],
+  isA: ["particle"],
   note: "Leave it out: what you think is just nǐ xiǎng-de.",
 });

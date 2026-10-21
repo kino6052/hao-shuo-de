@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:leng3}}"],
   tts: ["冷"],
   fit: "word",
+  topics: ["how-it-feels"],
+  isA: ["touch-quality"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:hen3}} {{word:leng3}}.",

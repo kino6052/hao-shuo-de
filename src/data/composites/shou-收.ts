@@ -12,6 +12,8 @@ export default composite({
   tts: ["拿到", "得到"],
   literal: "get-reach",
   fit: "natural",
+  topics: ["giving-and-getting"],
+  isA: ["receiving"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:de2}}-{{word:dao4}} {{word:le}} {{word:ni3}} {{word:fa1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

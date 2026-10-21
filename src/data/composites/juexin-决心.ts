@@ -12,6 +12,8 @@ export default composite({
   tts: ["在心里的力"],
   literal: "strength in the heart",
   fit: "plain",
+  topics: ["deciding"],
+  isA: ["feeling-name"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:zai4}} {{word:xin1}}-{{word:li3}}-{{word:de}} {{word:li4}}.",

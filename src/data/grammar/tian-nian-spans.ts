@@ -6,6 +6,7 @@ export default pattern("tian-nian-spans", {
     rus: "Число стоит прямо перед tiān («день») или nián («год»), без gè: sān tiān — три дня. Сколько длится действие — после глагола. Míng-tiān («завтра»), hòu-tiān, qù-nián («прошлый год»), míng-nián — это время, оно идёт первым.",
   },
   covers: [],
+  tags: ["count", "when", "cat:time", "cat:quantity"],
   template: { hsd: "number + {{word:tian1}} / {{word:nian2}}", eng: "A number of days or years" },
   rules: [
     { lhs: "Span", hsd: "Num =tian1", eng: "a number and tiān: days" },

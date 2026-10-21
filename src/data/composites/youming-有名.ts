@@ -16,6 +16,8 @@ export default composite({
   literal: "everyone knows it",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["describing-people"],
+  isA: ["value-quality"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:hen3}} {{word:you3}}-{{word:ming2}}.",

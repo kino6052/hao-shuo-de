@@ -12,6 +12,8 @@ export default composite({
   tts: ["第一"],
   literal: "first",
   fit: "natural",
+  topics: ["ordinals"],
+  isA: ["ordinal"],
   note: "dì in front of a number puts it in order: dì-yī, first; dì-èr, second.",
   examples: [
     {

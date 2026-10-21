@@ -12,6 +12,8 @@ export default composite({
   tts: ["用水让身体干净"],
   literal: "use water to make the body clean",
   fit: "plain",
+  topics: ["washing-and-dressing"],
+  isA: ["cleaning-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yao4}} {{word:yong4}} {{word:shui3}} {{word:rang4}} {{word:shen1ti3}} {{word:gan1jing4}}.",

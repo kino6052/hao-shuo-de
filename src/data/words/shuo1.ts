@@ -14,6 +14,8 @@ export default word("shuo1", {
     eng: "Say, speak. Without it, you can't talk about talking.",
     rus: "Говорить, сказать. Без него не рассказать, кто что сказал.",
   },
+  topics: ["talking"],
+  isA: ["speaking-action"],
   maps: "toki",
   paraphrase: {
     forms: [

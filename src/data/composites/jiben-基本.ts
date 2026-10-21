@@ -12,6 +12,8 @@ export default composite({
   tts: ["大部分"],
   literal: "for the most part",
   fit: "natural",
+  topics: ["degree-words"],
+  isA: ["degree-word"],
   examples: [
     {
       pinyin: "{{Word:da4}} {{word:bu4}}-{{light:fen1}} {{word:ren2}} {{word:dou1}} {{word:lai2}}.",

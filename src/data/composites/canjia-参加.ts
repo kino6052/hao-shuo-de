@@ -15,6 +15,8 @@ export default composite({
   tts: ["和人一起做", "和人一起玩儿"],
   literal: "do it together with people / play together with people",
   fit: "plain",
+  topics: ["meeting-and-parting"],
+  isA: ["social-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:he2}} {{word:ren2}} {{word:yi1}}-{{word:qi3}} {{word:zuo4}}.",

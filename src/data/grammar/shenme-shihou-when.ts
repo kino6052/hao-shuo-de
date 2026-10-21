@@ -6,6 +6,7 @@ export default pattern("shenme-shihou-when", {
     rus: "Shénme shí-hòu спрашивает «когда»: nǐ shénme shí-hòu lái — когда ты придёшь?",
   },
   covers: ["grammar:when"],
+  tags: ["question", "when", "cat:time"],
   template: { hsd: "{{word:shen2me}} {{word:shi2}}-{{word:hou4}}", eng: "When?" },
   rules: [
     { lhs: "Time", hsd: "=shen2me =shi2 =hou4", eng: "shénme shí-hòu, when" },

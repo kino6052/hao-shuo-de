@@ -12,6 +12,8 @@ export default composite({
   tts: ["很不一样"],
   literal: "very different",
   fit: "natural",
+  topics: ["state-of-things"],
+  isA: ["condition-quality"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:hen3}} {{word:bu4}} {{word:yi1}}-{{word:yang4}}.",

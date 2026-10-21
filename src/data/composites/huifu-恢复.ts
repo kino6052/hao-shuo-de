@@ -12,4 +12,6 @@ export default composite({
   tts: ["又好了"],
   literal: "good again",
   fit: "plain",
+  topics: ["changing"],
+  isA: ["becoming"],
 });

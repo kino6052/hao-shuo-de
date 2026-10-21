@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:dong4}}"],
   tts: ["动"],
   fit: "word",
+  topics: ["walking-and-running"],
+  isA: ["moving-action"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:dong4}} {{word:zhe4}}-{{light:ge4}}.",

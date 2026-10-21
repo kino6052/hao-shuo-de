@@ -13,6 +13,8 @@ export default composite({
   literal: "really",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["degree-words"],
+  isA: ["adverb-word"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:yi1}}-{{word:ding4}} {{word:hui4}} {{word:lai2}}.",

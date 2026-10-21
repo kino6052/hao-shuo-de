@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:wan2r}}"],
   tts: ["玩儿"],
   fit: "word",
+  topics: ["hobbies-and-outings"],
+  isA: ["playing"],
   examples: [
     {
       pinyin: "{{Word:hai2}}-{{word:zi}}-{{word:men}} {{word:zai4}} {{word:wai4}}-{{word:mian4}} {{word:wan2r}}.",

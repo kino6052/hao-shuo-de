@@ -14,6 +14,8 @@ export default composite({
   tts: ["让人知道你是谁的写的东西"],
   literal: "a written thing that lets people know who you are",
   fit: "plain",
+  topics: ["police-and-safety"],
+  isA: ["paper-thing"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:rang4}}-{{word:ren2}}-{{word:zhi1dao4}}-{{word:ni3}}-{{word:shi4}}-{{word:shei2}}-{{word:de}}-{{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

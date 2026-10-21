@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:hui4}}", "{{word:ba3}}"],
   tts: ["会", "把"],
   fit: "natural",
+  topics: ["helping-words"],
+  isA: ["auxiliary"],
   proposed: true,
 });

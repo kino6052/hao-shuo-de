@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:shuo1}}"],
   tts: ["说"],
   fit: "word",
+  topics: ["chatting"],
+  isA: ["speaking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:shuo1}} {{word:yi1}}-{{word:xia4}}.",

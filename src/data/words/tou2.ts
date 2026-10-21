@@ -14,6 +14,8 @@ export default word("tou2", {
     eng: "The head, and what's in it: a head that's {{word:luan4}} is a confused mind.",
     rus: "Голова и то, что в ней: {{word:luan4}} голова — спутанные мысли.",
   },
+  topics: ["head-and-face"],
+  isA: ["body-part"],
   maps: "lawa",
   atom: {
     eng: "The head is learned by pointing at it; \"the top of the body\" needs the body.",

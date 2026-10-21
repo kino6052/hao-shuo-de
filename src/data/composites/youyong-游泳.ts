@@ -15,6 +15,8 @@ export default composite({
   tts: ["在水里玩儿", "在水里去X地方"],
   literal: "play in the water / go to a place through the water",
   fit: "plain",
+  topics: ["sports"],
+  isA: ["activity-name"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:zai4}} {{word:shui3}}-{{word:li3}} {{word:wan2r}}.",

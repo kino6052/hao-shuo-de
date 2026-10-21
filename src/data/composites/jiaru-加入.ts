@@ -12,6 +12,8 @@ export default composite({
   tts: ["进到X里"],
   literal: "go into X",
   fit: "plain",
+  topics: ["groups-and-organisations"],
+  isA: ["social-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:jin4}}-{{word:dao4}} {{word:zhe4}}-{{light:ge4}} {{word:jia1}}-{{word:li3}} {{word:le}}.",

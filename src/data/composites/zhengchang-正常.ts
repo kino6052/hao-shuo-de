@@ -12,6 +12,8 @@ export default composite({
   tts: ["平常"],
   literal: "usual",
   fit: "natural",
+  topics: ["state-of-things"],
+  isA: ["condition-quality"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:hen3}} {{word:ping2}}-{{word:chang2}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["还"],
   literal: "still, even",
   fit: "plain",
+  topics: ["adverbs"],
+  isA: ["adverb-word"],
   note: "In a comparison Mandarin itself says 还 for even more: tā bǐ wǒ hái gāo, he is even taller than me.",
   examples: [
     {

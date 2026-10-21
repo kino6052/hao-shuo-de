@@ -12,6 +12,8 @@ export default composite({
   tts: ["去看看"],
   literal: "go and have a look",
   fit: "natural",
+  topics: ["hobbies-and-outings"],
+  isA: ["social-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:qu4}} {{word:kan4}}-{{light:kan4}}.",

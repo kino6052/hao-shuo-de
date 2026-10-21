@@ -12,6 +12,8 @@ export default composite({
   tts: ["什么都能做"],
   literal: "can do anything",
   fit: "plain",
+  topics: ["law-and-crime"],
+  isA: ["truth-or-ease"],
   examples: [
     {
       pinyin: "{{Word:shen2me}} {{word:wo3}} {{word:dou1}} {{word:neng2}} {{word:zuo4}}.",

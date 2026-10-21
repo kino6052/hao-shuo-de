@@ -6,6 +6,7 @@ export default pattern("comma-clauses", {
     rus: "Два предложения можно соединить запятой: это холодное, и то тоже.",
   },
   covers: [],
+  tags: ["link", "all-also", "cat:relation"],
   template: { hsd: "Sentence, sentence", eng: "One thing, and another" },
   rules: [{ lhs: "S", hsd: "S @comma S", eng: "two sentences with a comma between" }],
   taught: "also-and-all/also-do",

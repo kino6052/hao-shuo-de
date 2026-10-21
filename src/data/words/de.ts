@@ -14,6 +14,8 @@ export default word("de", {
     eng: "Joins a describing word to a noun: {{word:da4}}-{{word:de}} {{word:di4}}-{{light:fang1}}. Every description in Hao-shuo-de uses it.",
     rus: "Соединяет описание с существительным: {{word:da4}}-{{word:de}} {{word:di4}}-{{light:fang1}}. Им пользуется каждое описание в Hǎo-shuō-de.",
   },
+  topics: ["particles"],
+  isA: ["particle"],
   maps: "pi",
   atom: {
     eng: "The little link between a describing part and the word it describes; it has no meaning apart from the link.",

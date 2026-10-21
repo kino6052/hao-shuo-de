@@ -12,6 +12,8 @@ export default composite({
   tts: ["坐在"],
   fit: "natural",
   transparent: true,
+  topics: ["posture"],
+  isA: ["body-position"],
   note: "Verb + zài, listed so zuò keeps its sense sit here.",
   proposed: true,
 });

@@ -6,6 +6,7 @@ export default pattern("why-how-question", {
     rus: "Спрашивает «почему?» или «как?»: wèi-shénme или zěnme стоит перед глаголом, а wèi-shénme ещё и перед bù.",
   },
   covers: ["grammar:question-word"],
+  tags: ["question", "cat:relation", "cat:quality"],
   template: { hsd: "Who + {{word:wei4}}-{{word:shen2me}} / {{word:zen3me}} + verb?", eng: "Why / how does who do it?" },
   rules: [
     { lhs: "AskP", hsd: "=wei4 =shen2me", eng: "wèi-shénme, why" },

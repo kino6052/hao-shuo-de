@@ -12,5 +12,7 @@ export default composite({
   tts: ["给X力，让X能动"],
   literal: "give X strength so X can move",
   fit: "plain",
+  topics: ["home-electronics"],
+  isA: ["handling-action"],
   proposed: true,
 });

@@ -12,6 +12,8 @@ export default composite({
   tts: ["时间", "年月日点"],
   fit: "word",
   kinds: ["spelled", "built"],
+  topics: ["clock"],
+  isA: ["time-span"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:mei2}}-{{word:you3}} {{word:shi2}}-{{word:jian1}}.",

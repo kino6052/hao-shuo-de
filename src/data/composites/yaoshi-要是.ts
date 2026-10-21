@@ -13,6 +13,8 @@ export default composite({
   literal: "want-is",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["joining-words"],
+  isA: ["conjunction"],
   examples: [
     {
       pinyin: "{{Word:yao4}}-{{word:shi4}} {{word:ni3}} {{word:lai2}}, {{word:wo3}} {{word:jiu4}} {{word:qu4}}.",

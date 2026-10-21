@@ -12,6 +12,8 @@ export default composite({
   tts: ["吃饭的地方"],
   literal: "the place to eat",
   fit: "plain",
+  topics: ["at-a-restaurant"],
+  isA: ["building"],
   examples: [
     {
       pinyin: "{{Word:fu4jin4}} {{word:you3}} {{word:chi1}}-{{word:fan4}}-{{word:de}} {{word:di4}}-{{light:fang1}} {{word:ma}}?",

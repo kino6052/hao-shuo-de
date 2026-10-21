@@ -12,5 +12,7 @@ export default composite({
   tts: ["用手和脚上去"],
   literal: "go up with hands and feet",
   fit: "plain",
+  topics: ["walking-and-running"],
+  isA: ["moving-action"],
   proposed: true,
 });

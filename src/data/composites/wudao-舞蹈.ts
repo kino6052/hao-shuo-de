@@ -12,5 +12,7 @@ export default composite({
   tts: ["好看的动"],
   literal: "a good-looking movement",
   fit: "plain",
+  topics: ["music"],
+  isA: ["activity-name"],
   proposed: true,
 });

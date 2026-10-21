@@ -14,5 +14,7 @@ export default composite({
   tts: ["对X很好的东西发生了"],
   literal: "something very good happened to X",
   fit: "plain",
+  topics: ["news-and-events"],
+  isA: ["idea"],
   proposed: true,
 });

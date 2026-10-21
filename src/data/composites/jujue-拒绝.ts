@@ -12,6 +12,8 @@ export default composite({
   tts: ["说不要"],
   literal: "say \"don't want\"",
   fit: "plain",
+  topics: ["agreeing-and-praising"],
+  isA: ["speaking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:shuo1}} {{word:bu4}} {{word:yao4}}.",

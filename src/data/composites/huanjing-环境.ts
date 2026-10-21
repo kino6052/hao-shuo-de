@@ -14,6 +14,8 @@ export default composite({
   tts: ["在我们旁边的东西"],
   literal: "the things around us",
   fit: "plain",
+  topics: ["land-and-water"],
+  isA: ["abstract-thing"],
   examples: [
     {
       pinyin: "{{Word:zai4}} {{word:wo3}}-{{word:men}} {{word:pang2bian1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:hen3}} {{word:gan1jing4}}.",

@@ -12,5 +12,7 @@ export default composite({
   tts: ["叫", "看X有多重"],
   literal: "call / see how heavy X is",
   fit: "plain",
+  topics: ["talking"],
+  isA: ["speaking-action"],
   proposed: true,
 });

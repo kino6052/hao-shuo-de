@@ -6,6 +6,7 @@ export default pattern("yi-jiu-asap", {
     rus: "Yī, глагол, jiù и ещё глагол значат «как только»: yī kàn jiù zhīdào — как только посмотришь, поймёшь.",
   },
   covers: [],
+  tags: ["link", "when", "cat:time", "cat:relation"],
   template: { hsd: "{{word:yi1}} + verb + {{word:jiu4}} + verb", eng: "As soon as one, the other" },
   rules: [
     { lhs: "VP", hsd: "=yi1 VP =jiu4 VP", eng: "yī, a verb, jiù, and a verb" },

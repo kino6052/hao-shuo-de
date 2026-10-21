@@ -14,5 +14,7 @@ export default composite({
   tts: ["在地里面生出来的，圆圆的吃的"],
   literal: "round food that is born inside the ground",
   fit: "plain",
+  topics: ["vegetables"],
+  isA: ["vegetable-item"],
   proposed: true,
 });

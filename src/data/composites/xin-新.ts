@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:xin1#new}}"],
   tts: ["新"],
   fit: "word",
+  topics: ["new-and-old"],
+  isA: ["age-or-newness"],
   note: "xīn on its own: the heart as a thing, new when it describes one.",
   examples: [
     {

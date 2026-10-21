@@ -12,6 +12,8 @@ export default composite({
   tts: ["是说X的"],
   literal: "what it is about",
   fit: "plain",
+  topics: ["talking"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:shuo1}} {{word:jia1}}-{{word:de}}.",

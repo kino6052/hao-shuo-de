@@ -6,6 +6,7 @@ export default pattern("bu-adjective", {
     rus: "Говорит, что это не так: bù стоит перед описывающим словом, без hěn. Bù hěn значит «не очень».",
   },
   covers: [],
+  tags: ["negation", "describe", "cat:quality"],
   template: { hsd: "Thing + {{word:bu4}} + adjective", eng: "The thing is not that" },
   rules: [
     { lhs: "VP", hsd: "bu4 @adjective", eng: "bù and a describing word" },

@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:zuo3}}", "{{word:zuo3}}-{{word:bian1}}"],
   tts: ["左", "左边"],
   fit: "word",
+  topics: ["directions"],
+  isA: ["direction"],
   note: "Lesson {{lesson:where-it-is}}.",
   examples: [
     {

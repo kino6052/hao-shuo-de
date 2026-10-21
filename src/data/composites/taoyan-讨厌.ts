@@ -12,6 +12,8 @@ export default composite({
   tts: ["不爱"],
   literal: "not love",
   fit: "natural",
+  topics: ["liking-and-wanting"],
+  isA: ["feeling-and-wanting"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:bu4}} {{word:ai4}} {{word:zhe4}}-{{light:ge4}}.",

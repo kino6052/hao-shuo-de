@@ -13,6 +13,8 @@ export default composite({
   literal: "hand machine",
   fit: "natural",
   transparent: true,
+  topics: ["phone-and-computer"],
+  isA: ["computer-or-phone"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:shou3}}-{{word:ji1}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",

@@ -14,5 +14,7 @@ export default word("shao3", {
     eng: "Few, little. The pair to {{word:duo1}}: amounts need both.",
     rus: "Мало. Пара к {{word:duo1}}: для количества нужны оба.",
   },
+  topics: ["much-and-little"],
+  isA: ["amount-word"],
   paraphrase: { forms: ["{{word:bu4}} {{word:duo1}}"], verdict: "fine" },
 });

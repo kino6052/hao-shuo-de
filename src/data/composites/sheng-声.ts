@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:sheng1yin1}}"],
   tts: ["声音"],
   fit: "word",
+  topics: ["senses"],
+  isA: ["state-name"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ting1}}-{{word:dao4}} {{word:sheng1yin1}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["你多大？"],
   literal: "how big are you?",
   fit: "natural",
+  topics: ["young-and-old"],
+  isA: ["counting-word"],
   note: "The answer is just the number: wǒ èr-shí.",
   examples: [
     {

@@ -12,6 +12,8 @@ export default composite({
   tts: ["玩儿", "玩儿的"],
   literal: "play / of play",
   fit: "word",
+  topics: ["hobbies-and-outings"],
+  isA: ["playing"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ai4}} {{word:wan2r}}.",

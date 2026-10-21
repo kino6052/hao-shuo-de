@@ -12,5 +12,7 @@ export default composite({
   tts: ["用地工作"],
   literal: "work with the land",
   fit: "plain",
+  topics: ["crops-and-farming"],
+  isA: ["abstract-thing"],
   proposed: true,
 });

@@ -13,6 +13,8 @@ export default composite({
   literal: "a living thing",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["wild-animals"],
+  isA: ["living-thing"],
   examples: [
     {
       pinyin: "{{Word:shui3}}-{{word:li3}} {{word:you3}} {{word:sheng1}}-{{word:wu4}}.",

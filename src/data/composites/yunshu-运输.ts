@@ -14,4 +14,6 @@ export default composite({
   tts: ["把东西拿到别的地方"],
   literal: "take things to another place",
   fit: "plain",
+  topics: ["vehicles"],
+  isA: ["trade-action"],
 });

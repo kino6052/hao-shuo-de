@@ -6,6 +6,7 @@ export default pattern("ma-question", {
     rus: "Задаёт вопрос «да или нет»: ma стоит в конце предложения.",
   },
   covers: ["grammar:yes-no"],
+  tags: ["question", "cat:substance"],
   template: { hsd: "sentence {{word:ma}}", eng: "Is it so?" },
   rules: [
     { lhs: "Q", hsd: "S ma", eng: "a sentence with ma" },

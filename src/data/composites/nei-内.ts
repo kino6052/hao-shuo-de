@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:li3}}-{{word:mian4}}"],
   tts: ["里面"],
   fit: "natural",
+  topics: ["near-and-far"],
+  isA: ["place-word"],
   note: "Lesson {{lesson:where-it-is}}.",
   examples: [
     {

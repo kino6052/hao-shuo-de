@@ -13,6 +13,8 @@ export default composite({
   literal: "outside country",
   fit: "natural",
   kinds: ["built"],
+  topics: ["countries-and-cities"],
+  isA: ["place"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:qu4}} {{word:wai4}}-{{word:guo2}}.",

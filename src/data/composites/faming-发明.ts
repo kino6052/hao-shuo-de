@@ -15,5 +15,7 @@ export default composite({
   tts: ["发明", "做出新的东西"],
   literal: "make a new thing",
   fit: "plain",
+  topics: ["farms-and-factories"],
+  isA: ["making"],
   proposed: true,
 });

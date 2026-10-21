@@ -12,6 +12,8 @@ export default composite({
   tts: ["做前，想怎么做"],
   literal: "before making it, think how",
   fit: "plain",
+  topics: ["art-and-drawing"],
+  isA: ["making"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zuo4}} {{word:qian2}}, {{word:xiang3}} {{word:zen3me}} {{word:zuo4}}.",

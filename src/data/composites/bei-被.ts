@@ -12,6 +12,8 @@ export default composite({
   tts: ["X让Y…"],
   literal: "X lets Y do it",
   fit: "natural",
+  topics: ["words-before-nouns"],
+  isA: ["preposition"],
   note: "Spoken Mandarin uses 让 for the passive too: wǒ-de bāo ràng tā ná-zǒu le, my bag got taken by him.",
   examples: [
     {

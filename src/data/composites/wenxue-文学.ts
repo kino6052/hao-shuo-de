@@ -12,6 +12,8 @@ export default composite({
   tts: ["文学"],
   literal: "literature",
   fit: "name",
+  topics: ["writing"],
+  isA: ["work-of-art"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:kan4}} \"wén\"-{{word:xue2}}.",

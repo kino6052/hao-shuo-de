@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:yi1}}-{{word:dian3}}"],
   tts: ["一点"],
   fit: "natural",
+  topics: ["much-and-little"],
+  isA: ["amount-word"],
   note: "Lesson {{lesson:time-and-sums}}.",
   examples: [
     {

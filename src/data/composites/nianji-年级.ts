@@ -12,6 +12,8 @@ export default composite({
   tts: ["学的结果"],
   literal: "the result of study",
   fit: "plain",
+  topics: ["studying"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:ta1}}-{{word:de}} {{word:xue2}}-{{word:de}} {{word:jie2}}-{{word:guo3}} {{word:shi4}} {{word:san1}}.",

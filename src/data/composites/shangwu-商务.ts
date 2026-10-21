@@ -14,5 +14,7 @@ export default composite({
   tts: ["买东西，给东西得金的工作"],
   literal: "the work of buying things and giving things for money",
   fit: "plain",
+  topics: ["business-and-economy"],
+  isA: ["abstract-thing"],
   proposed: true,
 });

@@ -12,6 +12,8 @@ export default composite({
   tts: ["妈妈"],
   literal: "mom",
   fit: "plain",
+  topics: ["parents-and-children"],
+  isA: ["relative"],
   note: "Same as 妈妈.",
   examples: [
     {

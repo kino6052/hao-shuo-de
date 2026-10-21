@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:fu4jin4}}"],
   tts: ["附近"],
   fit: "word",
+  topics: ["up-down-in-out"],
+  isA: ["place-relation"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:jia1}} {{word:fu4jin4}} {{word:you3}} {{word:shu1}}.",

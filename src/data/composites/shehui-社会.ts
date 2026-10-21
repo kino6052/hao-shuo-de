@@ -12,6 +12,8 @@ export default composite({
   tts: ["很多在一起的人"],
   literal: "many people together",
   fit: "plain",
+  topics: ["groups-and-organisations"],
+  isA: ["group-of-people"],
   examples: [
     {
       pinyin: "{{Word:hen3}}-{{word:duo1}} {{word:zai4}}-{{word:yi1}}-{{word:qi3}}-{{word:de}} {{word:ren2}} {{word:hen3}} {{word:hao3}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["女孩子"],
   literal: "girl (said of your daughter)",
   fit: "plain",
+  topics: ["parents-and-children"],
+  isA: ["relative"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:nv3}}-{{word:hai2}}-{{word:zi}} {{word:hen3}} {{word:ke3}}-{{word:ai4}}.",

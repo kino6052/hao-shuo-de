@@ -12,6 +12,8 @@ export default composite({
   tts: ["心里的样子"],
   literal: "the way things are in the heart",
   fit: "natural",
+  topics: ["happy-feelings"],
+  isA: ["feeling-name"],
   note: "xīn-lǐ hěn hǎo: in a good mood.",
   examples: [
     {

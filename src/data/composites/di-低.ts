@@ -12,6 +12,8 @@ export default composite({
   tts: ["不高"],
   literal: "not high",
   fit: "plain",
+  topics: ["size"],
+  isA: ["size-quality"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:bu4}} {{word:gao1}}.",

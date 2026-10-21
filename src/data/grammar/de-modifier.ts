@@ -6,6 +6,7 @@ export default pattern("de-modifier", {
     rus: "Описывающее слово или владелец стоит перед существительным и получает -de.",
   },
   covers: ["grammar:describe", "grammar:owner"],
+  tags: ["describe", "owner", "cat:quality", "cat:relation"],
   template: { hsd: "modifier-{{word:de}} noun", eng: "the modifier's noun" },
   rules: [
     { lhs: "AdjP", hsd: "@adjective", eng: "a describing word" },

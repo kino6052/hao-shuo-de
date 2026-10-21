@@ -14,5 +14,7 @@ export default composite({
   tts: ["一个后面又一个"],
   literal: "one after another",
   fit: "plain",
+  topics: ["how-often"],
+  isA: ["frequency"],
   proposed: true,
 });

@@ -12,6 +12,8 @@ export default composite({
   tts: ["能做的东西"],
   literal: "what you may do",
   fit: "plain",
+  topics: ["law-and-crime"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:neng2}} {{word:zuo4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

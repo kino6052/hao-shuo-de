@@ -14,6 +14,8 @@ export default word("shi4", {
     eng: "Be: \"this is a person\". The simplest sentence can't be made without it.",
     rus: "Быть, являться: «это человек». Без него не построить самое простое предложение.",
   },
+  topics: ["helping-words"],
+  isA: ["auxiliary"],
   maps: "",
   senses: {
     matter: {

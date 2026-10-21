@@ -12,6 +12,8 @@ export default composite({
   hsd: ["{{word:ba4ba}}-{{word:ma1ma}}"],
   tts: ["爸爸妈妈"],
   fit: "word",
+  topics: ["parents-and-children"],
+  isA: ["relative"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:ba4ba}}-{{word:ma1ma}} {{word:zai4}} {{word:jia1}}.",

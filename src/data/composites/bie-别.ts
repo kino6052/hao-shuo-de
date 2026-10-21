@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:bu4}} {{word:yao4}}", "{{word:bie2}}"],
   tts: ["不要", "别"],
   fit: "word",
+  topics: ["no-and-not"],
+  isA: ["negation-word"],
   note: "Lesson {{lesson:greetings}}: bù yào xiào!",
   examples: [
     { pinyin: "{{Word:bie2}} {{word:zou3}}!", hanzi: "别走！", en: "Don't go!", ru: "Не уходи!" },

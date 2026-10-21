@@ -16,6 +16,8 @@ export default composite({
   literal: "the way it is in the mouth",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["tastes"],
+  isA: ["taste-quality"],
   note: "Lesson {{lesson:how-much}}. Good or not: wèi-dào hěn hǎo, wèi-dào bù hǎo.",
   examples: [
     {

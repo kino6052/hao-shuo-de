@@ -15,5 +15,7 @@ export default composite({
   tts: ["路口", "路和路在一起的地方"],
   literal: "the place where roads meet",
   fit: "plain",
+  topics: ["the-road"],
+  isA: ["outdoor-place"],
   proposed: true,
 });

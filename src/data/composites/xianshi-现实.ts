@@ -13,6 +13,8 @@ export default composite({
   literal: "what's real",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["easy-hard-right-wrong"],
+  isA: ["truth-or-ease"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:xian4}}-{{word:shi2}}.",

@@ -6,6 +6,7 @@ export default pattern("doubled-every", {
     rus: "Скажите счётное слово или одно из немногих существительных дважды — получится «каждый»; dōu ставится перед глаголом: rén-rén dōu — все; cì-cì dōu — каждый раз.",
   },
   covers: [],
+  tags: ["doubling", "all-also", "cat:quantity"],
   template: { hsd: "{{word:ge4}}-{{word:ge4}} / {{word:ren2}}-{{word:ren2}} + {{word:dou1}} + verb", eng: "Every one does the verb" },
   rules: [
     { lhs: "NP", hsd: "@noun @again", eng: "a noun said twice: every one" },

@@ -14,6 +14,8 @@ export default word("hei1", {
     eng: "Black: {{word:hei1}}-{{word:de}} on its own, {{word:hei1}}-{{word:se4}} as the colour.",
     rus: "Чёрный: {{word:hei1}}-{{word:de}} отдельно, {{word:hei1}}-{{word:se4}} — как цвет.",
   },
+  topics: ["colours"],
+  isA: ["colour-quality"],
   paraphrase: {
     forms: ["{{word:wan3}}-{{light:shang4}} {{word:tian1}}-{{word:de}} {{word:yan2se4}}"],
     verdict: "clumsy",

@@ -14,6 +14,8 @@ export default word("tong4", {
     eng: "Pain: {{word:tong4}}. A feeling the body has and no other word describes. A doctor needs it first.",
     rus: "Боль: {{word:tong4}}. Ощущение тела, которое не описать другими словами. Врачу оно нужно в первую очередь.",
   },
+  topics: ["illness"],
+  isA: ["bodily-state"],
   classes: {
     noun: {
       why: {

@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:hong2}}", "{{word:hong2}}-{{word:se4}}"],
   tts: ["红", "红色"],
   fit: "word",
+  topics: ["colours"],
+  isA: ["colour-quality"],
   examples: [
     {
       pinyin: "{{Word:ta1}}-{{word:de}} {{word:tou2}}-{{word:de}} {{word:qian2}}-{{word:mian4}} {{word:hong2}} {{word:le}}.",

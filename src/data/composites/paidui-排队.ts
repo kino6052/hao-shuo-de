@@ -14,5 +14,7 @@ export default composite({
   tts: ["一个在一个后面站"],
   literal: "stand one behind the other",
   fit: "plain",
+  topics: ["shopping"],
+  isA: ["social-action"],
   proposed: true,
 });

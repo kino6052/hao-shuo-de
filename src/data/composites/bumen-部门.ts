@@ -16,6 +16,8 @@ export default composite({
   literal: "the people who work together",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["office"],
+  isA: ["group-of-people"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:shi4}} {{word:yi1}}-{{word:qi3}}-{{word:gong1}}-{{word:zuo4}}-{{word:de}} {{word:ren2}}.",

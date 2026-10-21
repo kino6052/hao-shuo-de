@@ -12,5 +12,7 @@ export default composite({
   tts: ["到了，做好了"],
   literal: "arrived, done well",
   fit: "plain",
+  topics: ["deciding"],
+  isA: ["starting-and-stopping"],
   proposed: true,
 });

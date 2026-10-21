@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:da3}}"],
   tts: ["打"],
   fit: "word",
+  topics: ["pushing-and-pulling"],
+  isA: ["handling-action"],
   examples: [
     {
       pinyin: "{{Word:bu4}} {{word:yao4}} {{word:da3}} {{word:ren2}}!",

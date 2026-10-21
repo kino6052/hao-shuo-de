@@ -12,5 +12,7 @@ export default composite({
   tts: ["身体中间"],
   literal: "the middle of the body",
   fit: "plain",
+  topics: ["trunk-and-skin"],
+  isA: ["body-part"],
   proposed: true,
 });

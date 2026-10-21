@@ -6,6 +6,7 @@ export default pattern("you-again", {
     rus: "Говорит, что это происходит снова: yòu стоит перед глаголом, а le после него.",
   },
   covers: [],
+  tags: ["all-also", "when", "cat:time"],
   template: { hsd: "Who + {{word:you4}} + verb + {{word:le}}", eng: "Who did the verb again" },
   rules: [{ lhs: "VP", hsd: "=you4 VP", eng: "yòu, then the verb" }],
   taught: "around-an-action/again",

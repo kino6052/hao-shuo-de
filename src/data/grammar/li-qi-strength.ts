@@ -6,6 +6,7 @@ export default pattern("li-qi-strength", {
     rus: "Lì-qì («сила-воздух») — сила тела: tā hěn yǒu lì-qì — он очень сильный.",
   },
   covers: [],
+  tags: ["describe", "cat:quality"],
   template: { hsd: "{{word:li4}}-{{word:qi4}}", eng: "Strength" },
   rules: [
     { lhs: "NP", hsd: "=li4 =qi4", eng: "lì-qì, the strength of a body" },

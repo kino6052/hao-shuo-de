@@ -14,6 +14,8 @@ export default composite({
   tts: ["年里最热的时间"],
   literal: "the hottest time of the year",
   fit: "plain",
+  topics: ["seasons"],
+  isA: ["calendar-name"],
   examples: [
     {
       pinyin: "{{Word:nian2}}-{{word:li3}} {{word:zui4}} {{word:re4}}-{{word:de}} {{word:shi2}}-{{word:jian1}}, {{word:wo3}} {{word:xiang3}} {{word:he1}} {{word:shui3}}.",

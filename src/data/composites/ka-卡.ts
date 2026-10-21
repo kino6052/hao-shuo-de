@@ -11,5 +11,7 @@ export default composite({
   hsd: ["\"kǎ\""],
   tts: ["卡"],
   fit: "natural",
+  topics: ["money-and-paying"],
+  isA: ["money-thing"],
   proposed: true,
 });

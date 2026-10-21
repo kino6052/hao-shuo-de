@@ -12,5 +12,7 @@ export default composite({
   tts: ["前进", "走到前面"],
   literal: "go to the front",
   fit: "plain",
+  topics: ["going-and-coming"],
+  isA: ["moving-action"],
   proposed: true,
 });

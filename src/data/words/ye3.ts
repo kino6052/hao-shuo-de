@@ -14,6 +14,8 @@ export default word("ye3", {
     eng: "Also, too: {{word:wo3}} {{word:ye3}} {{word:chi1}}. Without it, you can't add one more.",
     rus: "Тоже, также: {{word:wo3}} {{word:ye3}} {{word:chi1}}. Без него ничего не добавить.",
   },
+  topics: ["adverbs"],
+  isA: ["adverb-word"],
   maps: "",
   paraphrase: {
     forms: ["{{word:he2}} {{word:bie2}}-{{word:de}} {{word:yi1}}-{{word:yang4}}"],

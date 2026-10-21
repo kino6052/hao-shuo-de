@@ -12,6 +12,8 @@ export default composite({
   tts: ["想"],
   literal: "feel, think",
   fit: "plain",
+  topics: ["knowing-and-understanding"],
+  isA: ["thinking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:xiang3}} {{word:ta1}} {{word:zai4}} {{word:jia1}}.",

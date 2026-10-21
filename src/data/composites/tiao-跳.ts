@@ -14,6 +14,8 @@ export default composite({
   tts: ["用脚从地上起来"],
   literal: "rise off the ground with your feet",
   fit: "plain",
+  topics: ["walking-and-running"],
+  isA: ["moving-action"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:yong4}} {{word:jiao3}} {{word:cong2}} {{word:di4}}-{{word:shang4}} {{word:qi3}}-{{word:lai2}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["X不算"],
   literal: "X doesn't count",
   fit: "natural",
+  topics: ["words-before-nouns"],
+  isA: ["preposition"],
   examples: [
     {
       pinyin: "X {{word:bu4}} {{word:suan4}}, {{word:wo3}}-{{word:men}} {{word:dou1}} {{word:qu4}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["用很多力气"],
   literal: "use a lot of strength",
   fit: "plain",
+  topics: ["working-life"],
+  isA: ["working"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:yong4}} {{word:hen3}}-{{word:duo1}} {{word:li4}}-{{light:qi4}} {{word:xue2}} \"Zhōngguó\" {{word:hua4}}.",

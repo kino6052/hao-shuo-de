@@ -15,6 +15,8 @@ export default composite({
   tts: ["最下面的部分", "从零开始"],
   literal: "the lowest part / start from zero",
   fit: "plain",
+  topics: ["ideas-and-opinions"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:zui4}} {{word:xia4}}-{{word:mian4}}-{{word:de}} {{word:bu4}}-{{light:fen1}} {{word:hen3}} {{word:da4}}.",

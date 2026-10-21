@@ -12,6 +12,8 @@ export default composite({
   tts: ["空气"],
   fit: "natural",
   kinds: ["built"],
+  topics: ["weather"],
+  isA: ["liquid-or-gas"],
   examples: [
     {
       pinyin: "{{Word:kong1}}-{{word:qi4}} {{word:hen3}} {{word:leng3}}.",

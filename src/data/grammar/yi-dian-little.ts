@@ -6,6 +6,7 @@ export default pattern("yi-dian-little", {
     rus: "Yī diǎn значит «немного». После описывающего слова — чуть больше (dà yī diǎn); после yǒu и перед описывающим словом — «чуть-чуть» (yǒu yī diǎn lěng); после глагола — «немного» (chī yī diǎn).",
   },
   covers: [],
+  tags: ["how-much", "cat:quantity"],
   template: {
     hsd: "adjective + {{word:yi1}}-{{word:dian3}} / {{word:you3}} {{word:yi1}}-{{word:dian3}} + adjective",
     eng: "A bit more / a bit",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["爱", "觉得X好"],
   literal: "love / find X good",
   fit: "word",
+  topics: ["liking-and-wanting"],
+  isA: ["feeling-and-wanting"],
   note: "ài is strong for everyday liking; jué-de X hǎo (find X good) is the softer, everyday like.",
   examples: [
     {

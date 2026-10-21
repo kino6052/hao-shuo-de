@@ -12,6 +12,8 @@ export default composite({
   tts: ["地面"],
   literal: "ground surface",
   fit: "natural",
+  topics: ["house-and-doors"],
+  isA: ["building-part"],
   note: "Real Mandarin: 地面.",
   examples: [
     {

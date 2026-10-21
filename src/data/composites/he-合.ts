@@ -12,6 +12,8 @@ export default composite({
   tts: ["放在一起"],
   literal: "put together",
   fit: "plain",
+  topics: ["pushing-and-pulling"],
+  isA: ["handling-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ba3}} {{word:shu1}} {{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}.",

@@ -13,6 +13,8 @@ export default composite({
   literal: "good to play",
   fit: "natural",
   transparent: true,
+  topics: ["hobbies-and-outings"],
+  isA: ["feeling-quality"],
   note: "Real Mandarin: 好玩儿.",
   examples: [
     {

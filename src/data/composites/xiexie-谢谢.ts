@@ -12,6 +12,8 @@ export default composite({
   tts: ["谢谢", "你对我很好"],
   literal: "thank-thank / you're very good to me",
   fit: "natural",
+  topics: ["greetings-and-thanks"],
+  isA: ["set-phrase"],
   note: "Lesson {{lesson:greetings}}. Also: hǎo-hǎo jué-de, zhè bǎ wǒ jué-de hěn hǎo.",
   examples: [
     {

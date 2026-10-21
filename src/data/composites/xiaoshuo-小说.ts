@@ -12,6 +12,8 @@ export default composite({
   tts: ["小说"],
   literal: "small talk",
   fit: "natural",
+  topics: ["writing"],
+  isA: ["work-of-art"],
   note: "Real Mandarin: 小说.",
   examples: [
     {

@@ -14,6 +14,8 @@ export default word("zuo3", {
     eng: "Left: {{word:zuo3}}-{{word:bian1}}, the left side.",
     rus: "Левый: {{word:zuo3}}-{{word:bian1}} — левая сторона.",
   },
+  topics: ["directions"],
+  isA: ["direction"],
   paraphrase: {
     forms: ["{{word:xin1}} {{word:zai4}}-{{word:de}} {{word:na4}}-{{word:bian1}}"],
     verdict: "clumsy",

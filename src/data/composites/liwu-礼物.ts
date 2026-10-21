@@ -12,6 +12,8 @@ export default composite({
   tts: ["给你的东西"],
   literal: "a thing for you",
   fit: "plain",
+  topics: ["parties-and-gifts"],
+  isA: ["made-thing"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:gei3}}-{{word:ni3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

@@ -12,5 +12,7 @@ export default composite({
   tts: ["把X分开看"],
   literal: "look at X taken apart",
   fit: "plain",
+  topics: ["knowing-and-understanding"],
+  isA: ["thinking-action"],
   proposed: true,
 });

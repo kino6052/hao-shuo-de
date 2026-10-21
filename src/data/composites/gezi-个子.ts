@@ -12,5 +12,7 @@ export default composite({
   tts: ["个子", "身体有多高"],
   literal: "how tall the body is",
   fit: "plain",
+  topics: ["describing-people"],
+  isA: ["idea"],
   proposed: true,
 });

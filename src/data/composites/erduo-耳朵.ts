@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:er3duo}}"],
   tts: ["耳朵"],
   fit: "word",
+  topics: ["head-and-face"],
+  isA: ["body-part"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:er3duo}} {{word:hen3}} {{word:leng3}}.",

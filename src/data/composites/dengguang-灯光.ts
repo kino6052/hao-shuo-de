@@ -12,5 +12,7 @@ export default composite({
   tts: ["灯的明"],
   literal: "the brightness of a lamp",
   fit: "plain",
+  topics: ["fire-light-and-heat"],
+  isA: ["fire-or-light"],
   proposed: true,
 });

@@ -12,6 +12,8 @@ export default composite({
   tts: ["觉得很重"],
   literal: "feel that it is heavy",
   fit: "plain",
+  topics: ["worry-and-fear"],
+  isA: ["feeling-name"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:jue2}}-{{word:de2}} {{word:hen3}} {{word:zhong4}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["甜的东西"],
   literal: "a sweet thing",
   fit: "plain",
+  topics: ["sweets-and-snacks"],
+  isA: ["snack-or-sweet"],
   note: "Like salt, zuò-hǎo wèi-dào-de dōng-xi.",
   examples: [
     {

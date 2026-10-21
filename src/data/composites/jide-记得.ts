@@ -13,6 +13,8 @@ export default composite({
   literal: "remember-get",
   fit: "plain",
   kinds: ["spelled", "built"],
+  topics: ["remembering-and-forgetting"],
+  isA: ["thinking-action"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:ji4}}-{{light:de2}} {{word:ta1}}-{{word:de}} {{word:ming2}}-{{light:zi4}} {{word:ma}}?",

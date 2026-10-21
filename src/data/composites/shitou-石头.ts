@@ -14,5 +14,7 @@ export default composite({
   tts: ["又硬又重的东西"],
   literal: "a hard and heavy thing",
   fit: "plain",
+  topics: ["materials"],
+  isA: ["stone-or-earth"],
   proposed: true,
 });

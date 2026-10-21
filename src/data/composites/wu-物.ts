@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:wu4}}"],
   tts: ["物"],
   fit: "word",
+  topics: ["household-things"],
+  isA: ["thing"],
   proposed: true,
 });

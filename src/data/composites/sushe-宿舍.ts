@@ -14,6 +14,8 @@ export default composite({
   tts: ["学的人睡觉的地方"],
   literal: "where students sleep",
   fit: "plain",
+  topics: ["housing"],
+  isA: ["building"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zai4}} {{word:xue2}}-{{word:de}} {{word:ren2}} {{word:shui4jiao4}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",

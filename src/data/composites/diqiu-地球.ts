@@ -13,6 +13,8 @@ export default composite({
   literal: "the big round ground",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["sky-and-space"],
+  isA: ["sky-body"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:zai4}} {{word:da4}} {{word:yuan2}} {{word:di4}}-{{word:shang4}}.",

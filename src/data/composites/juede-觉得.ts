@@ -12,6 +12,8 @@ export default composite({
   tts: ["觉得", "心里想"],
   fit: "word",
   kinds: ["spelled", "built"],
+  topics: ["knowing-and-understanding"],
+  isA: ["thinking-action"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:jue2}}-{{light:de2}} {{word:zen3me}}-{{word:yang4}}?",

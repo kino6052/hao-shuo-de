@@ -16,6 +16,8 @@ export default composite({
   tts: ["不睡觉了", "起来", "起来了"],
   literal: "no longer asleep / get up",
   fit: "natural",
+  topics: ["waking-and-sleeping"],
+  isA: ["body-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:bu4}} {{word:shui4jiao4}} {{word:le}}.",

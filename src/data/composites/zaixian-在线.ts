@@ -17,6 +17,8 @@ export default composite({
   literal: "on the line / on the net",
   fit: "natural",
   kinds: ["built", "built", "built"],
+  topics: ["phone-and-computer"],
+  isA: ["adverb-word"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zai4}} {{word:wang3}}-{{word:shang4}}.",

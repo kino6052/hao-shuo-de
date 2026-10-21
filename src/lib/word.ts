@@ -99,6 +99,10 @@ export interface WordData {
   atom?: Atom;
   /** The classes beyond `pos`, by class name (noun, verb, adjective, measure_word ...): K6. "main" repeats a class `pos` gives. */
   classes?: Record<string, "main" | WordClass>;
+  /** The most specific topic tags (src/data/maps/topics.ts): where you meet the word. TAGS_PLAN.md. */
+  topics?: string[];
+  /** The most specific kind tags (src/data/maps/kinds.ts): what the word is. */
+  isA?: string[];
 }
 
 export interface Word extends WordData {

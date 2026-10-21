@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:ren2}}"],
   tts: ["人"],
   fit: "word",
+  topics: ["men-and-women"],
+  isA: ["person"],
   note: "rén covers people in general.",
   examples: [
     {

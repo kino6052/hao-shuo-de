@@ -12,5 +12,7 @@ export default composite({
   tts: ["月的时间", "晚上"],
   literal: "the time of the moon",
   fit: "plain",
+  topics: ["times-of-day"],
+  isA: ["time-of-day-word"],
   proposed: true,
 });

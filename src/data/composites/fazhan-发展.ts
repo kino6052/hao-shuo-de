@@ -15,6 +15,8 @@ export default composite({
   tts: ["一点一点变好", "变大，变好"],
   literal: "get better little by little / get bigger, get better",
   fit: "plain",
+  topics: ["changing"],
+  isA: ["becoming"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:yi1}}-{{word:dian3}} {{word:yi1}}-{{word:dian3}} {{word:bian4}} {{word:hao3}}.",

@@ -6,6 +6,7 @@ export default pattern("owner-part", {
     rus: "Владелец прямо перед своей частью показывает, чья это часть, с -de или без него: dòng-wù shēntǐ — тело животного; tā shēntǐ-de wài-miàn — наружная сторона его тела.",
   },
   covers: [],
+  tags: ["owner", "cat:relation"],
   template: { hsd: "owner-{{word:de}} + part", eng: "The owner's part" },
   rules: [
     { lhs: "ModNP", hsd: "@noun @noun", eng: "two nouns, the owner first: the animal's body" },

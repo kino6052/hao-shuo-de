@@ -12,5 +12,7 @@ export default composite({
   tts: ["让家干净"],
   literal: "make the home clean",
   fit: "plain",
+  topics: ["cleaning"],
+  isA: ["cleaning-action"],
   proposed: true,
 });

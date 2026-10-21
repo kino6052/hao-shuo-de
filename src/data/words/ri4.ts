@@ -14,6 +14,8 @@ export default word("ri4", {
     eng: "The sun, and with it the day. Day and night are said with the sun and the moon.",
     rus: "Солнце, а с ним и день. День и ночь говорят через солнце и луну.",
   },
+  topics: ["sky-and-space"],
+  isA: ["sky-body"],
   maps: "suno",
   paraphrase: {
     forms: [

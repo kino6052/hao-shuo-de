@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:ti4}}"],
   tts: ["替"],
   fit: "word",
+  topics: ["words-before-nouns"],
+  isA: ["preposition"],
   proposed: true,
 });

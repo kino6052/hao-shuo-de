@@ -15,5 +15,7 @@ export default composite({
   tts: ["最爱的东西", "我最爱的人"],
   literal: "the thing I love most / the person I love most",
   fit: "plain",
+  topics: ["babies-and-children"],
+  isA: ["person"],
   proposed: true,
 });

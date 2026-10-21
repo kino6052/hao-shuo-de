@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:di4}}"],
   tts: ["地"],
   fit: "word",
+  topics: ["land-and-water"],
+  isA: ["stone-or-earth"],
   examples: [
     {
       pinyin: "{{Word:di4}} {{word:hen3}} {{word:ying4}}.",

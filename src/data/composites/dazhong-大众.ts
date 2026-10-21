@@ -12,5 +12,7 @@ export default composite({
   tts: ["很多很多人"],
   literal: "very many people",
   fit: "plain",
+  topics: ["groups-and-organisations"],
+  isA: ["group-of-people"],
   proposed: true,
 });

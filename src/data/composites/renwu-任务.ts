@@ -12,6 +12,8 @@ export default composite({
   tts: ["要做的"],
   literal: "what is to be done",
   fit: "plain",
+  topics: ["working-life"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:yao4}} {{word:zuo4}}-{{word:de}}.",

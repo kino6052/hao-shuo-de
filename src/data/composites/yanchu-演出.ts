@@ -12,5 +12,7 @@ export default composite({
   tts: ["做X给别人看"],
   literal: "do X for others to see",
   fit: "plain",
+  topics: ["films-and-media"],
+  isA: ["event"],
   proposed: true,
 });

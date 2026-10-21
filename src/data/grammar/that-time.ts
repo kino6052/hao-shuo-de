@@ -6,6 +6,7 @@ export default pattern("that-time", {
     rus: "Nà-gè shí-jiān — в то время: nà-gè shí-jiān wǒ zài jiā — в то время я был дома.",
   },
   covers: ["grammar:when"],
+  tags: ["when", "cat:time"],
   template: { hsd: "{{word:na4}}-{{word:ge4}} {{word:shi2}}-{{word:jian1}}", eng: "At that time" },
   rules: [
     { lhs: "Time", hsd: "Count @measure_word =shi2 =jian1", eng: "a pointer, a counting word, and shí-jiān" },

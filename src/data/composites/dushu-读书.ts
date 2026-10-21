@@ -13,6 +13,8 @@ export default composite({
   literal: "look at books",
   fit: "natural",
   transparent: true,
+  topics: ["studying"],
+  isA: ["learning-and-teaching"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:kan4}} {{word:shu1}}.",

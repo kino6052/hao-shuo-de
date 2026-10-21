@@ -6,6 +6,7 @@ export default pattern("bu-shi-not", {
     rus: "Bù перед shì говорит, что одно не есть другое: dòng-wù bù shì zhíwù — животное не растение.",
   },
   covers: ["grammar:not"],
+  tags: ["negation", "basic", "cat:substance"],
   template: { hsd: "A {{word:bu4}} {{word:shi4}} B", eng: "A is not B" },
   rules: [
     { lhs: "VP", hsd: "bu4 shi4 NP", eng: "bù shì and what it is not" },

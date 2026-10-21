@@ -12,5 +12,7 @@ export default composite({
   tts: ["让人看到，知道"],
   literal: "let people see and know",
   fit: "plain",
+  topics: ["talking"],
+  isA: ["speaking-action"],
   proposed: true,
 });

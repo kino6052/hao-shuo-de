@@ -12,6 +12,8 @@ export default composite({
   tts: ["很多颜色的"],
   literal: "many-colored",
   fit: "plain",
+  topics: ["colours-and-patterns"],
+  isA: ["colour-quality"],
   examples: [
     {
       pinyin: "{{Word:ta1}}-{{word:de}} {{word:yi1fu}} {{word:shi4}} {{word:hen3}}-{{word:duo1}}-{{word:yan2se4}}-{{word:de}}.",

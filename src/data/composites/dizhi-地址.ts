@@ -12,6 +12,8 @@ export default composite({
   tts: ["地方的号"],
   literal: "the place's number",
   fit: "plain",
+  topics: ["bank-and-post"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:ni3}}-{{word:de}} {{word:di4}}-{{light:fang1}}-{{word:de}} {{word:hao4}} {{word:shi4}} {{word:shen2me}}?",

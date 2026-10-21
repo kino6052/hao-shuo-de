@@ -12,6 +12,8 @@ export default composite({
   tts: ["叫的词", "你叫什么"],
   literal: "the word it is called / what are you called",
   fit: "plain",
+  topics: ["greetings-and-thanks"],
+  isA: ["language-thing"],
   examples: [
     {
       pinyin: "{{Word:ni3}}-{{word:de}} {{word:jiao4}}-{{word:de}} {{word:ci2}} {{word:shi4}} {{word:shen2me}}?",

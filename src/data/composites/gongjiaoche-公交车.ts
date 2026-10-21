@@ -12,6 +12,8 @@ export default composite({
   tts: ["很多人的车"],
   literal: "many people's car",
   fit: "plain",
+  topics: ["vehicles"],
+  isA: ["vehicle"],
   examples: [
     {
       pinyin: "{{Word:hen3}}-{{word:duo1}}-{{word:ren2}}-{{word:de}} {{word:che1}} {{word:lai2}} {{word:le}}.",

@@ -14,5 +14,7 @@ export default word("guo4", {
     eng: "Have done it before: {{word:kan4}}-{{word:guo4}}, have seen. Experience has no other way to be said.",
     rus: "Уже когда-то делал: {{word:kan4}}-{{word:guo4}} — видел. Опыт иначе не выразить.",
   },
+  topics: ["particles"],
+  isA: ["particle"],
   paraphrase: { forms: ["{{word:yi3}}-{{word:qian2}} {{word:zuo4}} {{word:le}}"], verdict: "clumsy" },
 });

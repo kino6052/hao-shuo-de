@@ -14,5 +14,7 @@ export default composite({
   tts: ["给远的人东西的地方"],
   literal: "a place to give things to people far away",
   fit: "plain",
+  topics: ["bank-and-post"],
+  isA: ["building"],
   proposed: true,
 });

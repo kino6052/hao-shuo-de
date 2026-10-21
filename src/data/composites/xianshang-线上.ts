@@ -12,6 +12,8 @@ export default composite({
   tts: ["线上", "网上"],
   literal: "on the line / on the net",
   fit: "natural",
+  topics: ["phone-and-computer"],
+  isA: ["place-word"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zai4}} {{word:wang3}}-{{word:shang4}}.",

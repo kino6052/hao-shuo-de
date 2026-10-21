@@ -14,5 +14,7 @@ export default word("ke3", {
     eng: "Can, may: {{word:ke3}}-{{word:neng2}} is maybe, and before a verb it makes \"worth doing\".",
     rus: "Можно: {{word:ke3}}-{{word:neng2}} — может быть, а перед глаголом — «стоит сделать».",
   },
+  topics: ["helping-words"],
+  isA: ["auxiliary"],
   paraphrase: { forms: ["{{word:neng2}}"], verdict: "clumsy" },
 });

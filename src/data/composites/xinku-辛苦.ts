@@ -14,5 +14,7 @@ export default composite({
   tts: ["做得很多，没有力了"],
   literal: "did a lot, no strength left",
   fit: "plain",
+  topics: ["working-life"],
+  isA: ["feeling-quality"],
   proposed: true,
 });

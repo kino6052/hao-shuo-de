@@ -13,6 +13,8 @@ export default composite({
   literal: "looks",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["describing-people"],
+  isA: ["idea"],
   note: "Lesson {{lesson:direction-and-result}}: X kàn-qǐ-lái hěn hǎo.",
   examples: [
     {

@@ -12,6 +12,8 @@ export default composite({
   tts: ["路上"],
   fit: "natural",
   kinds: ["built"],
+  topics: ["the-road"],
+  isA: ["place-word"],
   note: "Lesson {{lesson:moving}}.",
   examples: [
     {

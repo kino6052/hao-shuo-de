@@ -13,6 +13,8 @@ export default composite({
   literal: "machine-will / the maybe of X",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["news-and-events"],
+  isA: ["idea"],
   note: "Put what you could do first: qù-de kě-néng, a chance to go.",
   examples: [
     {

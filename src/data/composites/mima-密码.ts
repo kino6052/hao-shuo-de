@@ -12,6 +12,8 @@ export default composite({
   tts: ["进去要的号"],
   literal: "the number you need to get in",
   fit: "plain",
+  topics: ["phone-and-computer"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:bu4}} {{word:zhi1dao4}} {{word:jin4}}-{{word:qu4}} {{word:yao4}}-{{word:de}} {{word:hao4}}.",

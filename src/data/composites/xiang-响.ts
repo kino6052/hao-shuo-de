@@ -12,6 +12,8 @@ export default composite({
   tts: ["声音很大"],
   literal: "the sound is big",
   fit: "natural",
+  topics: ["music"],
+  isA: ["sound-or-light-quality"],
   examples: [
     {
       pinyin: "{{Word:sheng1yin1}} {{word:hen3}} {{word:da4}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["左边"],
   fit: "natural",
   transparent: true,
+  topics: ["directions"],
+  isA: ["direction"],
   examples: [
     {
       pinyin: "{{Word:shu1}} {{word:zai4}} {{word:zuo3}}-{{word:bian1}}.",

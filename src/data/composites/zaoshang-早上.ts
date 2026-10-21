@@ -12,6 +12,8 @@ export default composite({
   tts: ["早上"],
   fit: "natural",
   transparent: true,
+  topics: ["times-of-day"],
+  isA: ["time-of-day-word"],
   examples: [
     {
       pinyin: "{{Word:zao3}}-{{light:shang4}} {{word:wo3}} {{word:he1}} {{word:shui3}}.",

@@ -31,6 +31,8 @@ export interface Pattern {
   meaning: Bilingual;
   /** The coverage items ("group:key", src/data/coverage/) this pattern carries. */
   covers: string[];
+  /** What it helps you say: theme tags and `cat:<category>` tags, all listed in src/lib/grammar-tags.ts. */
+  tags: string[];
   /** The pattern as a learner sees it: {{word:..}} refs in `hsd`. */
   template: { hsd: string; eng: string };
   rules: PatternRule[];

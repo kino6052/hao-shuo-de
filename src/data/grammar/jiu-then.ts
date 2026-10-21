@@ -6,6 +6,7 @@ export default pattern("jiu-then", {
     rus: "Jiù стоит прямо перед глаголом. После rúguǒ оно значит «тогда»; само по себе — «сразу» или «только»: wǒ jiù qù — я иду сразу.",
   },
   covers: [],
+  tags: ["link", "when", "cat:time", "cat:relation"],
   template: { hsd: "(ru2guo3 X,) who + {{word:jiu4}} + verb", eng: "(If X,) then who does the verb right away" },
   rules: [
     { lhs: "VP", hsd: "=jiu4 VP", eng: "jiù, then what is done: right away, then" },

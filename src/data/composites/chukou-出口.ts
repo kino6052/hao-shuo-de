@@ -12,6 +12,8 @@ export default composite({
   tts: ["出口"],
   literal: "out-door",
   fit: "natural",
+  topics: ["the-road"],
+  isA: ["place-word"],
   note: "Real Mandarin: 出口.",
   examples: [
     {

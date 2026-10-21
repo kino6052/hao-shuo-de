@@ -12,4 +12,6 @@ export default composite({
   tts: ["只有一个"],
   literal: "only one",
   fit: "plain",
+  topics: ["all-and-some"],
+  isA: ["amount-word"],
 });

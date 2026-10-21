@@ -12,6 +12,8 @@ export default composite({
   tts: ["得到的东西"],
   literal: "what you got",
   fit: "plain",
+  topics: ["crops-and-farming"],
+  isA: ["receiving"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:de2}}-{{word:dao4}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:hen3}} {{word:duo1}}.",

@@ -6,6 +6,7 @@ export default pattern("zhe-yang-this-way", {
     rus: "Zhè-yàng перед глаголом значит «вот так»: nǐ zhè-yàng zuò — делай вот так.",
   },
   covers: [],
+  tags: ["describe", "cat:quality"],
   template: { hsd: "{{word:zhe4}} {{word:yang4}} + verb", eng: "Do it this way" },
   rules: [
     { lhs: "Manner", hsd: "=zhe4 =yang4", eng: "zhè-yàng, in this way" },

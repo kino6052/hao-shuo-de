@@ -12,6 +12,8 @@ export default composite({
   tts: ["把衣服放在身体上"],
   literal: "put clothes on the body",
   fit: "plain",
+  topics: ["everyday-clothes"],
+  isA: ["wearing"],
   note: "Lesson {{lesson:becoming-and-making}}.",
   examples: [
     {

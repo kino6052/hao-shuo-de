@@ -13,6 +13,8 @@ export default composite({
   literal: "the day of now",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["calendar"],
+  isA: ["time-point"],
   note: "Understood, but not how people say it.",
   examples: [
     {

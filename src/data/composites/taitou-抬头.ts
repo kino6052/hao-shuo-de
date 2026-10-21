@@ -12,5 +12,7 @@ export default composite({
   tts: ["把头放高"],
   literal: "put the head higher",
   fit: "plain",
+  topics: ["head-and-face"],
+  isA: ["body-action"],
   proposed: true,
 });

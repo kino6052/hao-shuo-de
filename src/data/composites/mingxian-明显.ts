@@ -12,6 +12,8 @@ export default composite({
   tts: ["一看就知道"],
   literal: "you look and you know",
   fit: "plain",
+  topics: ["easy-hard-right-wrong"],
+  isA: ["truth-or-ease"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:yi1}} {{word:kan4}} {{word:jiu4}} {{word:zhi1dao4}}.",

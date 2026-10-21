@@ -12,5 +12,7 @@ export default composite({
   tts: ["好好"],
   fit: "natural",
   transparent: true,
+  topics: ["degree-words"],
+  isA: ["adverb-word"],
   proposed: true,
 });

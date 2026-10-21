@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:yan2se4}}"],
   tts: ["颜色"],
   fit: "word",
+  topics: ["colours"],
+  isA: ["colour-quality"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:ai4}} {{word:shen2me}} {{word:yan2se4}}?",

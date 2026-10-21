@@ -12,5 +12,7 @@ export default composite({
   tts: ["找到工作"],
   literal: "find work",
   fit: "plain",
+  topics: ["working-life"],
+  isA: ["starting-and-stopping"],
   proposed: true,
 });

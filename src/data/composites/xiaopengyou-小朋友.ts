@@ -14,6 +14,8 @@ export default composite({
   tts: ["和我一起玩儿的小孩子"],
   literal: "a little child who plays with me",
   fit: "plain",
+  topics: ["babies-and-children"],
+  isA: ["person-by-age-or-sex"],
   examples: [
     {
       pinyin: "{{Word:he2}} {{word:wo3}} {{word:yi1}}-{{word:qi3}} {{word:wan2r}}-{{word:de}} {{word:xiao3}}-{{word:hai2}}-{{word:zi}} {{word:hen3}} {{word:kai1}}-{{word:xin1}}.",

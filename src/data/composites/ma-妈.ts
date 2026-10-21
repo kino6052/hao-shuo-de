@@ -11,4 +11,6 @@ export default composite({
   hsd: ["{{word:ma1ma}}"],
   tts: ["妈妈"],
   fit: "word",
+  topics: ["parents-and-children"],
+  isA: ["relative"],
 });

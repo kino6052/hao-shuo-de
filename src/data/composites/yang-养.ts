@@ -12,6 +12,8 @@ export default composite({
   tts: ["在家里有", "看好X"],
   literal: "have at home / look after well",
   fit: "plain",
+  topics: ["pets"],
+  isA: ["handling-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zai4}} {{word:jia1}}-{{word:li3}} {{word:you3}} {{word:dong4}}-{{word:wu4}}.",

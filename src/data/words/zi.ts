@@ -14,6 +14,8 @@ export default word("zi", {
     eng: "Many everyday nouns end in it: child, son, looks, days.",
     rus: "Им кончаются многие обычные существительные: ребёнок, сын, вид, дни.",
   },
+  topics: ["particles"],
+  isA: ["particle"],
   atom: {
     eng: "A light ending that makes a thing word (hái-zi, yàng-zi); it carries no meaning of its own.",
     rus: "Лёгкое окончание, которое делает слово названием вещи (hái-zi, yàng-zi); собственного значения у него нет.",

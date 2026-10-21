@@ -12,6 +12,8 @@ export default composite({
   tts: ["中国的金"],
   literal: "China's money",
   fit: "name",
+  topics: ["money-and-paying"],
+  isA: ["money-thing"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} \"Zhōngguó\"-{{word:de}} {{word:jin1}}.",

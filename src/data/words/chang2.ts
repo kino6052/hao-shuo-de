@@ -14,6 +14,8 @@ export default word("chang2", {
     eng: "Long things and a long time: before it, long was just {{word:da4}}.",
     rus: "Длинные вещи и долгое время: раньше «длинный» было просто {{word:da4}}.",
   },
+  topics: ["size"],
+  isA: ["size-quality"],
   senses: {
     often: {
       hanzi: "常",

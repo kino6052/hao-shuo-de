@@ -12,6 +12,8 @@ export default composite({
   tts: ["拿", "说起"],
   literal: "take / bring up",
   fit: "natural",
+  topics: ["taking-and-holding"],
+  isA: ["handling-action"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shuo1}}-{{word:qi3}} {{word:ni3}} {{word:le}}.",

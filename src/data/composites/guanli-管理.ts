@@ -12,6 +12,8 @@ export default composite({
   tts: ["把X做好"],
   literal: "keep X in good order",
   fit: "plain",
+  topics: ["office"],
+  isA: ["working"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ba3}} {{word:jia1}} {{word:zuo4}} {{word:hao3}}.",

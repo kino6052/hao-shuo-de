@@ -14,5 +14,7 @@ export default composite({
   tts: ["金色的，有很多小小的吃的植物"],
   literal: "a gold-coloured plant with many small things to eat",
   fit: "plain",
+  topics: ["crops-and-farming"],
+  isA: ["crop"],
   proposed: true,
 });

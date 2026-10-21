@@ -14,6 +14,8 @@ export default composite({
   tts: ["和现在不远的时间"],
   literal: "a time not far from now",
   fit: "plain",
+  topics: ["before-and-after"],
+  isA: ["time-order"],
   note: "jìn now means \"go in\", so \"near\" here is bù yuǎn.",
   examples: [
     {

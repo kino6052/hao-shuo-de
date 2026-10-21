@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:pa4}}"],
   tts: ["怕"],
   fit: "natural",
+  topics: ["worry-and-fear"],
+  isA: ["feeling-and-wanting"],
   note: "wǒ pà tā bù lái: I'm worried he won't come.",
   examples: [
     {

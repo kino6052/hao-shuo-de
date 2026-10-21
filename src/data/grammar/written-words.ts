@@ -6,6 +6,7 @@ export default pattern("written-words", {
     rus: "Как слово выглядит на письме: слоги одного слова стоят вместе (dòng-wù), дефис приклеивает маленькое слово к другому, и вместе они работают как одно слово (zhè-ge, hěn-dà-de), а кавычки отмечают имя или звук (\"wāng-wāng\").",
   },
   covers: [],
+  tags: ["spelling", "cat:substance"],
   template: {
     hsd: "word-word / \"name or sound\"",
     eng: "a hyphen joins words into one / quotes mark a name or a sound",

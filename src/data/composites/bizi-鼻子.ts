@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:bi2zi}}"],
   tts: ["鼻子"],
   fit: "word",
+  topics: ["head-and-face"],
+  isA: ["body-part"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:bi2zi}} {{word:hen3}} {{word:xiao3}}.",

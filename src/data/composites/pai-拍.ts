@@ -12,5 +12,7 @@ export default composite({
   tts: ["用手打一下"],
   literal: "hit once with the hand",
   fit: "plain",
+  topics: ["hands-and-feet"],
+  isA: ["body-action"],
   proposed: true,
 });

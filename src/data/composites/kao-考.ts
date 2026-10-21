@@ -12,6 +12,8 @@ export default composite({
   tts: ["看你学了什么"],
   literal: "see what you learned",
   fit: "plain",
+  topics: ["exams-and-marks"],
+  isA: ["learning-and-teaching"],
   examples: [
     {
       pinyin: "{{Word:kan4}} {{word:ni3}} {{word:xue2}}-{{word:le}} {{word:shen2me}}.",

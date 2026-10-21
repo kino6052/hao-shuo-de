@@ -10,6 +10,8 @@ export default word("ming2", {
     eng: "Bright; dark is {{word:bu4}} {{word:ming2}}. {{word:you3}} {{word:ri4}}-{{word:de}} would work only for sunlight.",
     rus: "Яркий; тёмный — {{word:bu4}} {{word:ming2}}. {{word:you3}} {{word:ri4}}-{{word:de}} подошло бы только для солнца.",
   },
+  topics: ["how-it-feels"],
+  isA: ["sound-or-light-quality"],
   senses: {
     name: {
       hanzi: "名",

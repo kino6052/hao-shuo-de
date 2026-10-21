@@ -180,3 +180,9 @@ tools/clingo/
 
 # English data built by the Python scripts (phase 6): the export for Python and the English index
 kb/cache/
+
+# The Chinese thesaurus Cilin (TAGS_PLAN.md Q6): licence unclear, so the data is local only; kb/cilin/README.md says where it came from
+kb/cilin/*
+!kb/cilin/README.md
+kb/picture-dict/*
+!kb/picture-dict/README.md

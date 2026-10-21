@@ -12,5 +12,7 @@ export default composite({
   tts: ["从X里拿出来"],
   literal: "take it out of X",
   fit: "plain",
+  topics: ["pushing-and-pulling"],
+  isA: ["handling-action"],
   proposed: true,
 });

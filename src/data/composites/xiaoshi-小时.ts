@@ -13,6 +13,8 @@ export default composite({
   literal: "small time",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["clock"],
+  isA: ["time-span"],
   note: "shí here is 时 (time). It sounds the same as shí (ten).",
   examples: [
     {

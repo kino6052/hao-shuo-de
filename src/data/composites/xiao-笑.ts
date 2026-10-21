@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:xiao4}}"],
   tts: ["笑"],
   fit: "word",
+  topics: ["happy-feelings"],
+  isA: ["body-action"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:xiao4}} {{word:le}}.",

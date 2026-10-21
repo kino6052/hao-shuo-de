@@ -57,3 +57,13 @@ describe('the export of the real dictionary', () => {
     expect(kept + left).toBe(kb.relations().relations.length);
   });
 });
+
+describe('the tag nets of the real dictionary (E4)', () => {
+  test('every topic and kind is a SKOS concept and every parent link is a skos:broader', () => {
+    const SKOS_NS = 'http://www.w3.org/2004/02/skos/core#';
+    const concepts = parsed.triples.filter(([, p, o]) => p === TYPE && o === `${SKOS_NS}Concept`).length;
+    expect(concepts).toBe(kb.source.tags.topics.length + kb.source.tags.kinds.length);
+    const links = [...kb.source.tags.topics, ...kb.source.tags.kinds].reduce((n, t) => n + t.parents.length, 0);
+    expect(parsed.triples.filter(([, p]) => p === `${SKOS_NS}broader`).length).toBe(links);
+  });
+});

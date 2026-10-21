@@ -10,6 +10,8 @@ export default word("deng3", {
     eng: "Wait. Without it, you can't say \"wait a moment\" ({{word:deng3}} {{word:yi1}}-{{word:xia4}}).",
     rus: "Ждать. Без него не сказать «подожди минутку» ({{word:deng3}} {{word:yi1}}-{{word:xia4}}).",
   },
+  topics: ["meeting-and-parting"],
+  isA: ["starting-and-stopping"],
   maps: "",
   paraphrase: {
     forms: [

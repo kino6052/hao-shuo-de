@@ -15,5 +15,7 @@ export default composite({
   tts: ["过年", "和家人一起吃饭，玩儿"],
   literal: "eat and play with the family",
   fit: "plain",
+  topics: ["holidays-and-festivals"],
+  isA: ["event"],
   proposed: true,
 });

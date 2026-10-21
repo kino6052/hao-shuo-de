@@ -12,5 +12,7 @@ export default composite({
   tts: ["打到X一下"],
   literal: "hit X once",
   fit: "plain",
+  topics: ["pushing-and-pulling"],
+  isA: ["handling-action"],
   proposed: true,
 });

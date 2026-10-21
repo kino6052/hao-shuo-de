@@ -15,6 +15,8 @@ export default composite({
   tts: ["心动", "让心觉得很好"],
   literal: "the heart moves / make the heart feel very good",
   fit: "plain",
+  topics: ["happy-feelings"],
+  isA: ["feeling-quality"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:xin1}}-{{word:dong4}} {{word:le}}.",

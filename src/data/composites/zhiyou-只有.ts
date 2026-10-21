@@ -13,6 +13,8 @@ export default composite({
   literal: "just",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["joining-words"],
+  isA: ["conjunction"],
   examples: [
     {
       pinyin: "{{Word:zhi3}} {{word:you3}} {{word:wo3}} {{word:lai2}}.",

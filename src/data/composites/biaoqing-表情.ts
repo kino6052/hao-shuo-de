@@ -12,5 +12,7 @@ export default composite({
   tts: ["面上的心"],
   literal: "the heart on the face",
   fit: "plain",
+  topics: ["head-and-face"],
+  isA: ["idea"],
   proposed: true,
 });

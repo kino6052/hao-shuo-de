@@ -12,4 +12,6 @@ export default composite({
   tts: ["别人都不能做"],
   literal: "nobody else can do it",
   fit: "plain",
+  topics: ["how-good"],
+  isA: ["value-quality"],
 });

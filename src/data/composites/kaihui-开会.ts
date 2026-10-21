@@ -15,6 +15,8 @@ export default composite({
   tts: ["开会", "很多的人一起说话"],
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["office"],
+  isA: ["social-action"],
   note: "Real Mandarin: 开会.",
   examples: [
     {

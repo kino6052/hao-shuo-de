@@ -15,6 +15,8 @@ export default composite({
   tts: ["把一种说的变别的说的", "把一种话变别的话"],
   literal: "turn one kind of speech into another",
   fit: "plain",
+  topics: ["talking"],
+  isA: ["speaking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ba3}} {{word:yi1}}-{{word:zhong3}} {{word:shuo1}}-{{word:de}} {{word:bian4}} {{word:bie2}}-{{word:de}} {{word:shuo1}}-{{word:de}}.",

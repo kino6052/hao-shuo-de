@@ -12,6 +12,8 @@ export default composite({
   tts: ["要很多金"],
   literal: "needs a lot of money",
   fit: "plain",
+  topics: ["shopping"],
+  isA: ["value-quality"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:yao4}} {{word:hen3}} {{word:duo1}} {{word:jin1}}.",

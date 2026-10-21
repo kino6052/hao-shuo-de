@@ -14,5 +14,7 @@ export default composite({
   tts: ["把X放在别人看不到的地方"],
   literal: "put X where others cannot see it",
   fit: "plain",
+  topics: ["taking-and-holding"],
+  isA: ["handling-action"],
   proposed: true,
 });

@@ -12,4 +12,6 @@ export default composite({
   tts: ["用颜色写的人"],
   literal: "a person who writes with colours",
   fit: "plain",
+  topics: ["art-and-drawing"],
+  isA: ["worker"],
 });

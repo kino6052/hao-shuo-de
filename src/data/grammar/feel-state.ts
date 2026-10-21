@@ -6,6 +6,7 @@ export default pattern("feel-state", {
     rus: "Jué-dé говорит «чувствовать» или «думать», затем как оно или целая мысль: wǒ jué-dé hǎo — мне хорошо; wǒ jué-dé wǒ néng — я думаю, что смогу. Shuō и yào тоже берут человека и hǎo: wǒ shuō nǐ hǎo — я говорю «здравствуй».",
   },
   covers: [],
+  tags: ["feeling", "cat:state"],
   template: { hsd: "Who {{word:jue2}}-{{word:de2}} + how / thought", eng: "Who feels that" },
   rules: [
     { lhs: "VerbP", hsd: "=jue2 =de2 @adjective", eng: "jué-dé and a describing word: feel good" },

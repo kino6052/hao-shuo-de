@@ -16,6 +16,8 @@
 //   GET /__kb/relations?kind=     { counts, kinds, text }: the relations the data states or implies
 //   GET /__kb/meaning?name=       { groups, atoms, text }: what the words say of the primes, categories and grammar items, and what
 //                                 their descriptions reach; a name is a word, or says / atoms / grounding for one part
+//   GET /__kb/tags?tag=|of=|common=a,b|find=|check=1|kinds=1   { text, ids }: the tag nets (topic and kind): the tree, one tag's
+//                                 members, where an entry sits, what two share; ids are every tag id, to make links
 //   GET /__kb/scoreboard          { now, rows, columns, text }: the language's numbers now, and the stored
 //                                 rows (kb/scoreboard.csv) to chart them against
 //
@@ -106,6 +108,13 @@ export default function kbPlugin() {
               }
               return json(res, { ...summary, text: renderMeaning(report, words, { section: name || 'all', limit }) });
             }
+            case '/tags': {
+              const { askTags } = await load('src/lib/kb/tags.js');
+              const m = kb.tags();
+              const ask = { tag: get('tag') || undefined, of: get('of') || undefined, common: get('common') ? get('common').split(',') : undefined, find: get('find') || undefined, check: get('check') === '1', kinds: get('kinds') === '1', limit: Number(get('limit')) || 100 };
+              const { text } = askTags(m, ask);
+              return json(res, { text, ids: [...m.nets.topic.ids, ...m.nets.kind.ids] });
+            }
             case '/scoreboard': {
               const { scoreboardRow, readScoreboard, renderScoreboard, COLUMNS } = await load('src/lib/kb/scoreboard.js');
               const rows = readScoreboard(SCOREBOARD);
@@ -120,7 +129,7 @@ export default function kbPlugin() {
           json(res, { error: 'not found' }, 404);
         } catch (e) {
           // a mistyped word is a 400 with its message; anything else is logged
-          const known = /no word|could be|usage|nothing|unknown/i.test(String(e.message));
+          const known = /no word|no entry|no (topic|kind) tag|could be|usage|nothing|unknown|two entries/i.test(String(e.message));
           if (!known) server.config.logger.error(`kb: ${e.stack ?? e}`);
           json(res, { error: String(e.message ?? e) }, known ? 400 : 500);
         }

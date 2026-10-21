@@ -12,6 +12,8 @@ export default composite({
   tts: ["有X的人"],
   literal: "the person who has X",
   fit: "plain",
+  topics: ["parties-and-gifts"],
+  isA: ["social-role"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:shi4}} {{word:you3}} {{word:zhe4}}-{{light:ge4}} {{word:jia1}}-{{word:de}} {{word:ren2}}.",

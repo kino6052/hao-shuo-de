@@ -12,6 +12,8 @@ export default composite({
   tts: ["工作的地方"],
   literal: "the place where you work",
   fit: "plain",
+  topics: ["business-and-economy"],
+  isA: ["group-of-people"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:gong1}}-{{word:zuo4}}-{{word:de}} {{word:di4}}-{{light:fang1}} {{word:hen3}} {{word:yuan3}}.",

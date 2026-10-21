@@ -13,5 +13,7 @@ export default composite({
   literal: "sometimes",
   fit: "natural",
   transparent: true,
+  topics: ["how-often"],
+  isA: ["frequency"],
   proposed: true,
 });

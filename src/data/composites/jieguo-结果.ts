@@ -12,6 +12,8 @@ export default composite({
   tts: ["结果"],
   fit: "natural",
   transparent: true,
+  topics: ["causes-and-results"],
+  isA: ["cause-and-effect"],
   examples: [
     {
       pinyin: "{{Word:jie2}}-{{word:guo3}} {{word:hen3}} {{word:hao3}}.",

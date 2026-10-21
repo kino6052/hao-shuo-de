@@ -12,6 +12,8 @@ export default composite({
   tts: ["买东西的地方"],
   literal: "the place to buy things",
   fit: "natural",
+  topics: ["business-and-economy"],
+  isA: ["place"],
   note: "Lesson {{lesson:inside-a-sentence}}.",
   examples: [
     {

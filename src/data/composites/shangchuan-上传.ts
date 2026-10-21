@@ -12,6 +12,8 @@ export default composite({
   tts: ["放到网上"],
   literal: "put it on the net",
   fit: "plain",
+  topics: ["phone-and-computer"],
+  isA: ["handling-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:fang4}}-{{word:dao4}} {{word:wang3}}-{{word:shang4}} {{word:le}}.",

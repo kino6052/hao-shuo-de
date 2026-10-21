@@ -12,6 +12,8 @@ export default composite({
   tts: ["身体坏了"],
   literal: "the body got hurt",
   fit: "plain",
+  topics: ["injuries"],
+  isA: ["being-affected"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:shen1ti3}} {{word:huai4}} {{word:le}}.",

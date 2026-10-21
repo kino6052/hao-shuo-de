@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:na3}}", "{{word:shen2me}}"],
   tts: ["哪", "什么"],
   fit: "word",
+  topics: ["question-words"],
+  isA: ["question-word-kind"],
   note: "shénme also means \"which\".",
   examples: [
     {

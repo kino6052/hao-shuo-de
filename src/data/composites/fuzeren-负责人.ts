@@ -12,6 +12,8 @@ export default composite({
   tts: ["要把X做好的人"],
   literal: "the person who has to make X good",
   fit: "plain",
+  topics: ["office"],
+  isA: ["worker"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:yao4}} {{word:ba3}} {{word:zhe4}}-{{light:ge4}} {{word:zuo4}} {{word:hao3}}-{{word:de}} {{word:ren2}}.",

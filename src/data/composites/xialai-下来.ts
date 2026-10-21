@@ -12,6 +12,8 @@ export default composite({
   tts: ["下来"],
   fit: "natural",
   kinds: ["built"],
+  topics: ["going-and-coming"],
+  isA: ["moving-action"],
   note: "Lesson {{lesson:moving}}.",
   examples: [
     {

@@ -12,6 +12,8 @@ export default composite({
   tts: ["早上"],
   fit: "natural",
   transparent: true,
+  topics: ["times-of-day"],
+  isA: ["time-of-day-word"],
   note: "Same as 早上.",
   examples: [
     {

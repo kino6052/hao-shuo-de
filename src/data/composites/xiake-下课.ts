@@ -12,6 +12,8 @@ export default composite({
   tts: ["学完了"],
   literal: "finished learning",
   fit: "natural",
+  topics: ["classroom"],
+  isA: ["starting-and-stopping"],
   examples: [
     {
       pinyin: "{{Word:xue2}}-{{word:wan2}} {{word:le}}.",

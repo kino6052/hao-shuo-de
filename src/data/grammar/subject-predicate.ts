@@ -8,6 +8,7 @@ export default pattern("subject-predicate", {
     rus: "Предложение называет кого-то или что-то и говорит об этом.",
   },
   covers: [],
+  tags: ["basic", "cat:substance"],
   template: { hsd: "Subject + Predicate", eng: "Who or what, then what is said about it" },
   rules: [
     { lhs: "Utt", hsd: "S", eng: "a sentence" },

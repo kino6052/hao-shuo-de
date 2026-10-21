@@ -14,5 +14,7 @@ export default composite({
   tts: ["在房子里上下的路"],
   literal: "a road for going up and down inside the house",
   fit: "plain",
+  topics: ["house-and-doors"],
+  isA: ["building-part"],
   proposed: true,
 });

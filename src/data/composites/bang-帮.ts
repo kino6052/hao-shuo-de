@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:bang1}}"],
   tts: ["帮"],
   fit: "word",
+  topics: ["helping-and-sharing"],
+  isA: ["social-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:bang1}} {{word:ni3}}.",

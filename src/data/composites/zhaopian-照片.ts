@@ -12,6 +12,8 @@ export default composite({
   tts: ["看的东西"],
   literal: "a thing to look at",
   fit: "plain",
+  topics: ["hobbies-and-outings"],
+  isA: ["work-of-art"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:wo3}} {{word:jia1}}-{{word:ren2}}-{{word:de}} {{word:kan4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

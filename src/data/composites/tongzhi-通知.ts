@@ -12,6 +12,8 @@ export default composite({
   tts: ["叫人知道"],
   literal: "let people know",
   fit: "plain",
+  topics: ["news-and-events"],
+  isA: ["speaking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:jiao4}} {{word:ren2}} {{word:zhi1dao4}}.",

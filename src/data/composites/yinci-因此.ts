@@ -12,5 +12,7 @@ export default composite({
   tts: ["因为这样"],
   literal: "because of this",
   fit: "plain",
+  topics: ["joining-words"],
+  isA: ["conjunction"],
   proposed: true,
 });

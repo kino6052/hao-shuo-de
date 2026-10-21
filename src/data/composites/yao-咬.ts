@@ -12,5 +12,7 @@ export default composite({
   tts: ["用牙拿X"],
   literal: "hold X with the teeth",
   fit: "plain",
+  topics: ["head-and-face"],
+  isA: ["body-action"],
   proposed: true,
 });

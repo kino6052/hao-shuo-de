@@ -13,6 +13,8 @@ export default composite({
   literal: "talk machine",
   fit: "natural",
   transparent: true,
+  topics: ["phone-and-computer"],
+  isA: ["machine"],
   examples: [
     {
       pinyin: "{{Word:hua4}}-{{word:ji1}} {{word:zai4}} {{word:na3}}-{{word:li3}}?",

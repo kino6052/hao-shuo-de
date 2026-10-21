@@ -12,6 +12,8 @@ export default composite({
   tts: ["到地上"],
   literal: "reach the floor",
   fit: "plain",
+  topics: ["walking-and-running"],
+  isA: ["moving-action"],
   examples: [
     {
       pinyin: "{{Word:shu1}} {{word:dao4}} {{word:di4}}-{{word:shang4}} {{word:le}}.",

@@ -16,6 +16,8 @@ export default composite({
   literal: "the most important part",
   fit: "natural",
   kinds: ["built", "spelled"],
+  topics: ["ideas-and-opinions"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:zhong4}}-{{word:dian3}}.",

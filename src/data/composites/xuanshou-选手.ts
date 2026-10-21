@@ -12,6 +12,8 @@ export default composite({
   tts: ["比的人"],
   literal: "the one competing",
   fit: "plain",
+  topics: ["sports"],
+  isA: ["worker"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:bi3}}-{{word:de}} {{word:ren2}}.",

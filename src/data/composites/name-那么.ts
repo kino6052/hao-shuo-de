@@ -12,6 +12,8 @@ export default composite({
   tts: ["那", "那样"],
   literal: "well then / like that",
   fit: "natural",
+  topics: ["pointers"],
+  isA: ["pronoun"],
   note: "Nà, …: \"Well then, …\".",
   examples: [
     {

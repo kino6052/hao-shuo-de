@@ -6,6 +6,7 @@ export default pattern("jiu-only", {
     rus: "Jiù перед числом и счётным словом значит «только»: wǒ jiù yī-gè — у меня только один.",
   },
   covers: [],
+  tags: ["only-some", "count", "cat:quantity"],
   template: { hsd: "{{word:jiu4}} + number + counting word", eng: "Only that many" },
   rules: [
     { lhs: "VP", hsd: "=jiu4 NP", eng: "jiù and an amount: only one" },

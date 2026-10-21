@@ -12,6 +12,8 @@ export default composite({
   tts: ["变真"],
   literal: "become real",
   fit: "plain",
+  topics: ["deciding"],
+  isA: ["starting-and-stopping"],
   examples: [
     {
       pinyin: "{{Word:ni3}}-{{word:de}} {{word:hua4}} {{word:bian4}} {{word:zhen1}} {{word:le}}.",

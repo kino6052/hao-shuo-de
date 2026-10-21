@@ -6,6 +6,7 @@ export default pattern("dui-toward", {
     rus: "Duì и человек перед описывающим словом говорят, каков кто-то или что-то по отношению к нему: tā duì wǒ hěn hǎo. Duì X lái shuō значит «для X».",
   },
   covers: ["grammar:for"],
+  tags: ["with-for", "describe", "cat:relation"],
   template: { hsd: "A + {{word:dui4}} + B + adjective", eng: "A is that way toward B" },
   rules: [
     { lhs: "VP", hsd: "=dui4 NP VP", eng: "duì, the person, then how it is: good to them" },

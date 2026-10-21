@@ -12,6 +12,8 @@ export default composite({
   tts: ["不明"],
   literal: "not bright",
   fit: "plain",
+  topics: ["how-it-feels"],
+  isA: ["sound-or-light-quality"],
   examples: [
     {
       pinyin: "{{Word:fang2}}-{{word:jian1}} {{word:bu4}} {{word:ming2}}.",

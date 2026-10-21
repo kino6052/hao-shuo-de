@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:ta1}}"],
   tts: ["她"],
   fit: "word",
+  topics: ["pointers"],
+  isA: ["pronoun"],
   note: "Sounds the same as \"he\".",
   examples: [
     {

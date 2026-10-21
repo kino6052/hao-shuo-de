@@ -12,6 +12,8 @@ export default composite({
   tts: ["睡觉的地方"],
   literal: "sleeping place",
   fit: "plain",
+  topics: ["bedroom"],
+  isA: ["furniture-item"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:shui4jiao4}}-{{word:de}} {{word:di4}}-{{light:fang1}} {{word:hen3}} {{word:da4}}.",

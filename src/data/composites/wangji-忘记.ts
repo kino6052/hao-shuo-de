@@ -12,6 +12,8 @@ export default composite({
   tts: ["现在不记得了"],
   literal: "now don't remember anymore",
   fit: "plain",
+  topics: ["remembering-and-forgetting"],
+  isA: ["thinking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:xian4}}-{{word:zai4}} {{word:bu4}} {{word:ji4}}-{{light:de2}} {{word:lu4}} {{word:le}}.",

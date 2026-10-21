@@ -12,6 +12,8 @@ export default composite({
   tts: ["动身体"],
   literal: "move the body",
   fit: "plain",
+  topics: ["sports"],
+  isA: ["activity-name"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ai4}} {{word:dong4}} {{word:shen1ti3}}.",

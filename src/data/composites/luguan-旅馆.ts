@@ -14,5 +14,7 @@ export default composite({
   tts: ["去别的地方的人睡觉的地方"],
   literal: "where people who go to other places sleep",
   fit: "plain",
+  topics: ["a-trip"],
+  isA: ["building"],
   proposed: true,
 });

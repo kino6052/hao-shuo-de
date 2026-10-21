@@ -16,6 +16,8 @@ export default composite({
   literal: "what it can do",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["causes-and-results"],
+  isA: ["cause-and-effect"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:zuo4}}-{{word:yong4}} {{word:hen3}} {{word:da4}}.",

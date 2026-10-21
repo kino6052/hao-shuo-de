@@ -14,6 +14,8 @@ export default composite({
   tts: ["拿金用的小东西"],
   literal: "a small thing for taking out money",
   fit: "plain",
+  topics: ["bank-and-post"],
+  isA: ["money-thing"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:na2}}-{{word:jin1}}-{{word:yong4}}-{{word:de}} {{word:xiao3}} {{word:dong1}}-{{light:xi1}}.",

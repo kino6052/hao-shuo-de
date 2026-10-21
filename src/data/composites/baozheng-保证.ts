@@ -12,6 +12,8 @@ export default composite({
   tts: ["说X是真的"],
   literal: "say that X is true",
   fit: "plain",
+  topics: ["agreeing-and-praising"],
+  isA: ["speaking-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:shuo1}} {{word:zhe4}}-{{light:ge4}} {{word:shi4}} {{word:zhen1}}-{{word:de}}.",

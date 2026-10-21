@@ -6,6 +6,7 @@ export default pattern("dui-correct", {
     rus: "Duì само по себе значит «верно»: nǐ shuō-de duì — то, что ты сказал, верно. Bù duì — неверно.",
   },
   covers: [],
+  tags: ["describe", "cat:quality"],
   template: { hsd: "{{word:dui4}} / {{word:bu4}} {{word:dui4}}", eng: "Right / not right" },
   rules: [
     { lhs: "VP", hsd: "=dui4", eng: "duì, right" },

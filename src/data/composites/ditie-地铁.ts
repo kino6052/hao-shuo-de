@@ -12,6 +12,8 @@ export default composite({
   tts: ["地下的车"],
   literal: "the underground car",
   fit: "plain",
+  topics: ["trains-and-stations"],
+  isA: ["vehicle"],
   examples: [
     {
       pinyin: "{{Word:di4}}-{{word:xia4}}-{{word:de}} {{word:che1}} {{word:hen3}} {{word:kuai4}}.",

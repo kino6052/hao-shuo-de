@@ -6,6 +6,7 @@ export default pattern("dian-clock", {
     rus: "Число и diǎn называют час и стоят перед глаголом: wǒ sān diǎn huí jiā. Вечер или утро могут идти раньше: wǎn-shàng qī diǎn.",
   },
   covers: [],
+  tags: ["when", "count", "cat:time"],
   template: { hsd: "number + {{word:dian3}}", eng: "The time of day" },
   rules: [
     { lhs: "Time", hsd: "Num =dian3", eng: "a number and diǎn: the hour" },

@@ -12,6 +12,8 @@ export default composite({
   tts: ["人人都知道的人"],
   literal: "a person everyone knows",
   fit: "natural",
+  topics: ["men-and-women"],
+  isA: ["social-role"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:ren2}}-{{word:ren2}} {{word:dou1}} {{word:zhi1dao4}}-{{word:de}} {{word:ren2}}.",

@@ -12,4 +12,6 @@ export default composite({
   tts: ["在X有家的人"],
   literal: "a person who has a home in X",
   fit: "plain",
+  topics: ["groups-and-organisations"],
+  isA: ["person"],
 });

@@ -13,6 +13,8 @@ export default composite({
   fit: "natural",
   transparent: true,
   role: "noun",
+  topics: ["wild-animals"],
+  isA: ["animal"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:ai4}} {{word:shen2me}} {{word:dong4}}-{{word:wu4}}?",

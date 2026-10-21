@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:di4}}-{{light:fang1}}"],
   tts: ["地方"],
   fit: "word",
+  topics: ["countries-and-cities"],
+  isA: ["place"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:di4}}-{{light:fang1}} {{word:hen3}} {{word:da4}}.",

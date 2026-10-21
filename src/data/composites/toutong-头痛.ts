@@ -12,5 +12,7 @@ export default composite({
   tts: ["头痛"],
   fit: "natural",
   transparent: true,
+  topics: ["illness"],
+  isA: ["state-name"],
   proposed: true,
 });

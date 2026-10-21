@@ -14,6 +14,8 @@ export default word("hui4", {
     eng: "Will, is going to. Context often says when, but plans and predictions need it.",
     rus: "Будет, собирается. Время часто понятно из ситуации, но планам и прогнозам он нужен.",
   },
+  topics: ["helping-words"],
+  isA: ["auxiliary"],
   maps: "",
   paraphrase: {
     forms: ["{{word:yi3}}-{{word:hou4}}", "{{word:zhi1dao4}} {{word:zen3me}} {{word:zuo4}}"],

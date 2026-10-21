@@ -13,6 +13,8 @@ export default composite({
   literal: "make food",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["cooking-and-utensils"],
+  isA: ["making"],
   examples: [
     {
       pinyin: "{{Word:ba4ba}} {{word:zai4}} {{word:zuo4}}-{{word:fan4}}.",

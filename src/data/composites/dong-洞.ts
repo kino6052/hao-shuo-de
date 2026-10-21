@@ -12,5 +12,7 @@ export default composite({
   tts: ["口", "空的地方"],
   literal: "an empty place",
   fit: "plain",
+  topics: ["shapes"],
+  isA: ["shape-quality"],
   proposed: true,
 });

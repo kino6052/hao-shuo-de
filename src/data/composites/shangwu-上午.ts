@@ -15,6 +15,8 @@ export default composite({
   tts: ["早上", "日起来的时间"],
   literal: "the time the sun gets up",
   fit: "plain",
+  topics: ["times-of-day"],
+  isA: ["time-of-day-word"],
   examples: [
     {
       pinyin: "{{Word:ri4}} {{word:qi3}}-{{word:lai2}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:wo3}} {{word:xue2}} \"Zhōngguó\" {{word:hua4}}.",

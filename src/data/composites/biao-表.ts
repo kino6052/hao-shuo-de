@@ -12,6 +12,8 @@ export default composite({
   tts: ["看点用的工具"],
   literal: "a tool used for looking at the time",
   fit: "plain",
+  topics: ["clock"],
+  isA: ["measuring-tool"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:kan4}}-{{word:dian3}}-{{word:yong4}}-{{word:de}} {{word:gong1}}-{{word:ju4}}.",

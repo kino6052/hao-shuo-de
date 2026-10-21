@@ -12,4 +12,6 @@ export default composite({
   tts: ["只有一定的数"],
   literal: "only a set amount",
   fit: "plain",
+  topics: ["much-and-little"],
+  isA: ["amount-word"],
 });

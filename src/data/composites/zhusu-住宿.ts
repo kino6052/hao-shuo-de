@@ -12,6 +12,8 @@ export default composite({
   tts: ["在外面睡觉"],
   literal: "sleep away from home",
   fit: "plain",
+  topics: ["housing"],
+  isA: ["body-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zai4}} {{word:wai4}}-{{word:mian4}} {{word:shui4jiao4}}.",

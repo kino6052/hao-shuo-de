@@ -15,6 +15,8 @@ export default composite({
   tts: ["房间的硬的面", "硬的边"],
   literal: "the hard face of a room / a hard edge",
   fit: "plain",
+  topics: ["house-and-doors"],
+  isA: ["building-part"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:mo1}} {{word:fang2}}-{{word:jian1}}-{{word:de}} {{word:ying4}}-{{word:de}} {{word:mian4}}.",

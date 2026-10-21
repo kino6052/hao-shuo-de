@@ -12,5 +12,7 @@ export default composite({
   tts: ["工作"],
   fit: "natural",
   transparent: true,
+  topics: ["working-life"],
+  isA: ["working"],
   proposed: true,
 });

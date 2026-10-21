@@ -12,6 +12,8 @@ export default composite({
   tts: ["最后", "真的"],
   literal: "at last / really",
   fit: "plain",
+  topics: ["adverbs"],
+  isA: ["adverb-word"],
   examples: [
     {
       pinyin: "{{Word:zui4}}-{{word:hou4}} {{word:wo3}} {{word:qu4}} {{word:le}}.",

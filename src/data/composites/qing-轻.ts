@@ -12,5 +12,7 @@ export default composite({
   tts: ["不重"],
   literal: "not heavy",
   fit: "plain",
+  topics: ["how-it-feels"],
+  isA: ["touch-quality"],
   proposed: true,
 });

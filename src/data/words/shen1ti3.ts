@@ -14,6 +14,8 @@ export default word("shen1ti3", {
     eng: "The body, and health: {{word:shen1ti3}} {{word:bu4}} {{word:hao3}} is \"unwell\". Needed for every illness and feeling.",
     rus: "Тело и здоровье: {{word:shen1ti3}} {{word:bu4}} {{word:hao3}} — «нездоровится». Нужно для любой болезни и самочувствия.",
   },
+  topics: ["trunk-and-skin"],
+  isA: ["body-part"],
   maps: "sijelo",
   atom: {
     eng: "The body is learned from your own; \"a person from head to foot\" already needs the head and the foot.",

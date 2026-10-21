@@ -12,5 +12,7 @@ export default composite({
   tts: ["让X变新"],
   literal: "make X new",
   fit: "plain",
+  topics: ["new-and-old"],
+  isA: ["becoming"],
   proposed: true,
 });

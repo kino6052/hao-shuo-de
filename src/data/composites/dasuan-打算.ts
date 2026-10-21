@@ -13,6 +13,8 @@ export default composite({
   literal: "hit-calculate",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["deciding"],
+  isA: ["thinking-action"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:da3}}-{{word:suan4}} {{word:zuo4}} {{word:shen2me}}?",

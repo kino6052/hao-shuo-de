@@ -12,6 +12,8 @@ export default composite({
   tts: ["多热"],
   literal: "how hot",
   fit: "plain",
+  topics: ["weather"],
+  isA: ["measure-unit"],
   examples: [
     {
       pinyin: "{{Word:jin1}}-{{word:tian1}} {{word:duo1}} {{word:re4}}?",

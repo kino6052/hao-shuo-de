@@ -14,6 +14,8 @@ export default composite({
   tts: ["写中国话声音的方法"],
   literal: "the way to write the sounds of Chinese",
   fit: "plain",
+  topics: ["writing"],
+  isA: ["language-thing"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:xie3}}-\"Zhōngguó\"-{{word:hua4}} {{word:sheng1yin1}}-{{word:de}} {{word:fang1}}-{{word:fa3}}.",

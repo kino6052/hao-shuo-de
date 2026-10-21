@@ -12,6 +12,8 @@ export default composite({
   tts: ["吃的植物"],
   literal: "plants you eat",
   fit: "plain",
+  topics: ["vegetables"],
+  isA: ["vegetable-item"],
   examples: [
     {
       pinyin: "{{Word:chi1}}-{{word:de}} {{word:zhi2wu4}} {{word:hen3}} {{word:hao3}}.",

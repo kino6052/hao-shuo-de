@@ -12,6 +12,8 @@ export default composite({
   tts: ["那些", "那"],
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["pointers"],
+  isA: ["pronoun"],
   note: "nà-ge … dōu: all of those.",
   examples: [
     {

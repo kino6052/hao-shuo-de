@@ -14,5 +14,7 @@ export default composite({
   tts: ["把写的东西变好"],
   literal: "make the written thing better",
   fit: "plain",
+  topics: ["writing"],
+  isA: ["worker"],
   proposed: true,
 });

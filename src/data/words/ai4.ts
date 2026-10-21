@@ -14,6 +14,8 @@ export default word("ai4", {
     eng: "Love, and before a verb, \"love to\". Liking is {{word:ai4}} too.",
     rus: "Любить, а перед глаголом — «любить что-то делать». «Нравиться» — тоже {{word:ai4}}.",
   },
+  topics: ["liking-and-wanting"],
+  isA: ["feeling-and-wanting"],
   maps: "olin",
   paraphrase: {
     forms: ["{{word:hen3}} {{word:xiang3}} {{word:rang4}} {{word:ta1}} {{word:hao3}}"],

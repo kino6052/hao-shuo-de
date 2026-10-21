@@ -12,6 +12,8 @@ export default composite({
   tts: ["做的不一样"],
   literal: "make it different",
   fit: "natural",
+  topics: ["changing"],
+  isA: ["becoming"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ba3}} {{word:zhe4}}-{{light:ge4}} {{word:zuo4}}-{{word:de}} {{word:bu4}} {{word:yi1}}-{{word:yang4}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["对面"],
   literal: "the facing side",
   fit: "natural",
+  topics: ["same-and-different"],
+  isA: ["comparison"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:zai4}} {{word:wo3}}-{{word:de}} {{word:dui4}}-{{word:mian4}}.",

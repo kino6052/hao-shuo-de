@@ -12,6 +12,8 @@ export default composite({
   tts: ["工作的房间"],
   literal: "the room for work",
   fit: "plain",
+  topics: ["office"],
+  isA: ["room"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zai4}} {{word:gong1}}-{{word:zuo4}}-{{word:de}} {{word:fang2}}-{{word:jian1}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["话", "说的"],
   literal: "what's said",
   fit: "word",
+  topics: ["languages"],
+  isA: ["language-thing"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ai4}} {{word:ting1}} {{word:ni3}}-{{word:de}} {{word:hua4}}.",

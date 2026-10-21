@@ -14,6 +14,8 @@ export default word("bai2", {
     eng: "White: {{word:bai2}}-{{word:de}} on its own, {{word:bai2}}-{{word:se4}} as the colour.",
     rus: "Белый: {{word:bai2}}-{{word:de}} отдельно, {{word:bai2}}-{{word:se4}} — как цвет.",
   },
+  topics: ["colours"],
+  isA: ["colour-quality"],
   paraphrase: {
     forms: ["{{word:ya2}}-{{word:de}} {{word:yan2se4}}"],
     verdict: "clumsy",

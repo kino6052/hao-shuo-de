@@ -14,6 +14,8 @@ export default word("mai3", {
     eng: "Buy. {{word:gei3}} {{word:jin1}} {{word:de2}} {{word:dong1}}-{{light:xi1}} would work, but shopping is everyday life.",
     rus: "Покупать. Подошло бы {{word:gei3}} {{word:jin1}} {{word:de2}} {{word:dong1}}-{{light:xi1}}, но покупки — часть каждого дня.",
   },
+  topics: ["shopping"],
+  isA: ["trade-action"],
   paraphrase: {
     forms: ["{{word:gei3}} {{word:jin1}} {{word:de2}} {{word:dong1}}-{{light:xi1}}"],
     verdict: "clumsy",

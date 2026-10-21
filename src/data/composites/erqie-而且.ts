@@ -12,6 +12,8 @@ export default composite({
   tts: ["也"],
   literal: "also",
   fit: "natural",
+  topics: ["adverbs"],
+  isA: ["adverb-word"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:hen3}} {{word:hao3}}, {{word:ye3}} {{word:hen3}} {{word:gao1}}.",

@@ -12,5 +12,7 @@ export default composite({
   tts: ["把心放在X上"],
   literal: "put the heart on X",
   fit: "plain",
+  topics: ["knowing-and-understanding"],
+  isA: ["thinking-action"],
   proposed: true,
 });

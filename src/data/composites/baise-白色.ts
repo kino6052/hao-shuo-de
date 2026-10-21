@@ -12,5 +12,7 @@ export default composite({
   tts: ["白色"],
   fit: "natural",
   transparent: true,
+  topics: ["colours-and-patterns"],
+  isA: ["colour-quality"],
   proposed: true,
 });

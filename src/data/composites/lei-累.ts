@@ -12,6 +12,8 @@ export default composite({
   tts: ["没有力了", "想睡觉"],
   literal: "no strength left / would like to sleep",
   fit: "plain",
+  topics: ["body-needs"],
+  isA: ["bodily-state"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zou3}} {{word:le}} {{word:hen3}} {{word:duo1}} {{word:lu4}}, {{word:mei2}}-{{word:you3}} {{word:li4}} {{word:le}}.",

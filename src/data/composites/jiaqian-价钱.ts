@@ -12,6 +12,8 @@ export default composite({
   tts: ["多少金"],
   literal: "how much money",
   fit: "plain",
+  topics: ["money-and-paying"],
+  isA: ["money-thing"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:duo1}}-{{word:shao3}} {{word:jin1}}?",

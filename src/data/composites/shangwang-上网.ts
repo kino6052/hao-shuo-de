@@ -13,6 +13,8 @@ export default composite({
   literal: "go onto the net",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["phone-and-computer"],
+  isA: ["body-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zai4}} {{word:shang4}} {{word:wang3}}.",

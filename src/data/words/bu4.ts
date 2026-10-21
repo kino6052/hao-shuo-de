@@ -14,6 +14,8 @@ export default word("bu4", {
     eng: "Not. Without it, you can't say no.",
     rus: "Не. Без него нельзя ничего отрицать.",
   },
+  topics: ["no-and-not"],
+  isA: ["negation-word"],
   maps: "ala",
   senses: {
     part: {

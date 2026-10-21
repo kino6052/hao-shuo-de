@@ -12,6 +12,8 @@ export default composite({
   tts: ["用的人"],
   literal: "the one who uses it",
   fit: "plain",
+  topics: ["phone-and-computer"],
+  isA: ["social-role"],
   examples: [
     {
       pinyin: "{{Word:yong4}}-{{word:de}} {{word:ren2}} {{word:hen3}} {{word:duo1}}.",

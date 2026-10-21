@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:dui4}}"],
   tts: ["对"],
   fit: "natural",
+  topics: ["words-before-nouns"],
+  isA: ["preposition"],
   proposed: true,
 });

@@ -12,6 +12,8 @@ export default composite({
   tts: ["那里", "那边"],
   literal: "that side",
   fit: "natural",
+  topics: ["near-and-far"],
+  isA: ["place-word"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:zai4}} {{word:na4}}-{{word:bian1}}.",

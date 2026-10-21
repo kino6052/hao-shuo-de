@@ -10,6 +10,8 @@ export default word("yi1", {
     eng: "One: the first number, and \"a\" as in {{word:yi1}}-ge {{word:ren2}}, a person.",
     rus: "Один: первое число, а также «какой-то», как в {{word:yi1}}-ge {{word:ren2}}.",
   },
+  topics: ["number-words"],
+  isA: ["counting-number"],
   maps: "wan",
   atom: {
     eng: "You learn \"one\" by holding up a single thing; every other number is built from it.",

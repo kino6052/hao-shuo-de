@@ -12,6 +12,8 @@ export default composite({
   tts: ["把X放在身体上"],
   literal: "put X on the body",
   fit: "plain",
+  topics: ["accessories"],
+  isA: ["wearing"],
   note: "Same as 穿.",
   examples: [
     {

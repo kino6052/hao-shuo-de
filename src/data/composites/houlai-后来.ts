@@ -12,6 +12,8 @@ export default composite({
   tts: ["后来"],
   fit: "natural",
   kinds: ["built"],
+  topics: ["before-and-after"],
+  isA: ["time-order"],
   note: "A real word: hòu + lái.",
   examples: [
     {

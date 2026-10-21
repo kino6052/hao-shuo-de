@@ -14,6 +14,8 @@ export default composite({
   tts: ["过去发生的东西"],
   literal: "what happened in the past",
   fit: "plain",
+  topics: ["history-and-culture"],
+  isA: ["abstract-thing"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ai4}} {{word:kan4}} {{word:guo4}}-{{word:qu4}} {{word:fa1}}-{{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

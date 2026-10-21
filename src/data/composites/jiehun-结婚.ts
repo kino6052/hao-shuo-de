@@ -12,6 +12,8 @@ export default composite({
   tts: ["两个人变一个家"],
   literal: "two people become one family",
   fit: "plain",
+  topics: ["love-and-marriage"],
+  isA: ["life-change"],
   examples: [
     {
       pinyin: "{{Word:ta1}}-{{word:men}} {{word:liang3}}-{{light:ge4}} {{word:ren2}} {{word:bian4}} {{word:yi1}}-{{light:ge4}} {{word:jia1}} {{word:le}}.",

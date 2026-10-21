@@ -13,6 +13,8 @@ export default composite({
   literal: "go-year / the twelve months before",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["calendar"],
+  isA: ["time-point"],
   examples: [
     {
       pinyin: "{{Word:qu4}}-{{word:nian2}} {{word:wo3}} {{word:qu4}} {{word:le}} \"Zhōngguó\".",

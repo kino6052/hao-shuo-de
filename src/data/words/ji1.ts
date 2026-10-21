@@ -14,6 +14,8 @@ export default word("ji1", {
     eng: "Machines: the phone ({{word:shou3}}-{{word:ji1}}), the plane ({{word:fei1}}-{{word:ji1}}), and a chance ({{word:ji1}}-{{word:hui4}}).",
     rus: "Машины: телефон ({{word:shou3}}-{{word:ji1}}), самолёт ({{word:fei1}}-{{word:ji1}}) и возможность ({{word:ji1}}-{{word:hui4}}).",
   },
+  topics: ["home-electronics"],
+  isA: ["machine"],
   senses: {
     chicken: {
       hanzi: "鸡",

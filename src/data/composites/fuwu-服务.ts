@@ -12,6 +12,8 @@ export default composite({
   tts: ["帮人的工作"],
   literal: "the work of helping people",
   fit: "plain",
+  topics: ["helping-and-sharing"],
+  isA: ["social-action"],
   examples: [
     {
       pinyin: "{{Word:ta1}}-{{word:men}} {{word:zuo4}} {{word:bang1}}-{{word:ren2}}-{{word:de}} {{word:gong1}}-{{word:zuo4}}.",

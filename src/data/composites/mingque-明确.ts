@@ -12,5 +12,7 @@ export default composite({
   tts: ["很明，不乱"],
   literal: "very clear, not messy",
   fit: "plain",
+  topics: ["easy-hard-right-wrong"],
+  isA: ["truth-or-ease"],
   proposed: true,
 });

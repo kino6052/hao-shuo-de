@@ -12,6 +12,8 @@ export default composite({
   tts: ["回家学的东西"],
   literal: "things to learn at home",
   fit: "plain",
+  topics: ["studying"],
+  isA: ["paper-thing"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:hui2}} {{word:jia1}} {{word:xue2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

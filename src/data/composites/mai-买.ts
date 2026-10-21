@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:mai3}}"],
   tts: ["买"],
   fit: "word",
+  topics: ["shopping"],
+  isA: ["trade-action"],
   note: "Lesson {{lesson:questions}}.",
   examples: [
     {

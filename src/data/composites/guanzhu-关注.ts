@@ -12,6 +12,8 @@ export default composite({
   tts: ["看X怎么样"],
   literal: "see how X is doing",
   fit: "plain",
+  topics: ["looking-and-checking"],
+  isA: ["perceiving"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:kan4}} {{word:ta1}} {{word:zen3me}} {{word:yang4}}.",

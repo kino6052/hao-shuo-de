@@ -12,6 +12,8 @@ export default composite({
   tts: ["家在附近的人"],
   literal: "people whose homes are nearby",
   fit: "plain",
+  topics: ["groups-and-organisations"],
+  isA: ["group-of-people"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ai4}} {{word:jia1}} {{word:zai4}} {{word:fu4jin4}}-{{word:de}} {{word:ren2}}.",

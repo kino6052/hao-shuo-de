@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:fen1}}"],
   tts: ["分"],
   fit: "natural",
+  topics: ["counting-words"],
+  isA: ["measure-unit"],
   proposed: true,
 });

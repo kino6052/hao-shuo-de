@@ -12,6 +12,8 @@ export default composite({
   tts: ["说X的"],
   literal: "that talks about X",
   fit: "plain",
+  topics: ["words-before-nouns"],
+  isA: ["preposition"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:shuo1}} {{word:shui3}}-{{word:guo3}}-{{word:de}} {{word:hua4}}.",

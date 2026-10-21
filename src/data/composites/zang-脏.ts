@@ -12,6 +12,8 @@ export default composite({
   tts: ["不干净"],
   literal: "not clean",
   fit: "natural",
+  topics: ["cleaning"],
+  isA: ["condition-quality"],
   note: "The opposite of clean.",
   examples: [
     {

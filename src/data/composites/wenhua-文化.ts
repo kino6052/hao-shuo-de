@@ -12,6 +12,8 @@ export default composite({
   tts: ["生活的方法"],
   literal: "the way of life",
   fit: "plain",
+  topics: ["history-and-culture"],
+  isA: ["abstract-thing"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:shi4}} {{word:zhe4}}-{{word:xie1}} {{word:ren2}} {{word:sheng1}}-{{word:huo2}}-{{word:de}} {{word:fang1}}-{{word:fa3}}.",

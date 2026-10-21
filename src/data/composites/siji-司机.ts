@@ -12,6 +12,8 @@ export default composite({
   tts: ["开车的人"],
   literal: "a person who drives",
   fit: "plain",
+  topics: ["jobs"],
+  isA: ["worker"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:kai1}}-{{word:che1}}-{{word:de}} {{word:ren2}}.",

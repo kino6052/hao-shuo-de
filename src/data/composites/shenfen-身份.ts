@@ -12,6 +12,8 @@ export default composite({
   tts: ["是谁"],
   literal: "who someone is",
   fit: "plain",
+  topics: ["police-and-safety"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:bu4}} {{word:zhi1dao4}} {{word:ta1}} {{word:shi4}} {{word:shei2}}.",

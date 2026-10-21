@@ -14,5 +14,7 @@ export default composite({
   tts: ["把X的样子放进机里"],
   literal: "put the look of X into the machine",
   fit: "plain",
+  topics: ["hobbies-and-outings"],
+  isA: ["making"],
   proposed: true,
 });

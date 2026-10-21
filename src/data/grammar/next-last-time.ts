@@ -6,6 +6,7 @@ export default pattern("next-last-time", {
     rus: "Xià-gè и shàng-gè перед словом времени значат «следующий» и «прошлый»: xià-gè yuè — в следующем месяце. Xià yī gè rè-de shí-jiān — следующим летом.",
   },
   covers: ["grammar:when"],
+  tags: ["when", "cat:time"],
   template: { hsd: "{{word:xia4}}-{{word:ge4}} / {{word:shang4}}-{{word:ge4}} + time word", eng: "Next / last time" },
   rules: [
     { lhs: "Next", hsd: "=xia4 =ge4", eng: "xià-gè, next" },

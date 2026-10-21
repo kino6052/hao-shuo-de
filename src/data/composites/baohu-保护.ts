@@ -12,6 +12,8 @@ export default composite({
   tts: ["不让X变坏"],
   literal: "not let X go bad",
   fit: "plain",
+  topics: ["police-and-safety"],
+  isA: ["social-action"],
   examples: [
     {
       pinyin: "{{Word:bu4}} {{word:rang4}} {{word:shui3}}-{{word:guo3}} {{word:bian4}} {{word:huai4}}.",

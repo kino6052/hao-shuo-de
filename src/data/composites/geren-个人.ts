@@ -13,6 +13,8 @@ export default composite({
   literal: "one person / one person",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["men-and-women"],
+  isA: ["person"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:shi4}} {{word:wo3}} {{word:ge4}}-{{word:ren2}}-{{word:de}}.",

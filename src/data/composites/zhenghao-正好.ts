@@ -12,6 +12,8 @@ export default composite({
   tts: ["不多不少"],
   literal: "not too much, not too little",
   fit: "plain",
+  topics: ["how-good"],
+  isA: ["value-quality"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:bu4}} {{word:duo1}} {{word:bu4}} {{word:shao3}}.",

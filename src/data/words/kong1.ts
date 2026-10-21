@@ -14,6 +14,8 @@ export default word("kong1", {
     eng: "Empty, and the first half of {{word:kong1}}-{{word:qi4}} (air) and {{word:kong1}}-{{word:jian1}} (space).",
     rus: "Пустой, а также первая половина слов {{word:kong1}}-{{word:qi4}} (воздух) и {{word:kong1}}-{{word:jian1}} (пространство).",
   },
+  topics: ["state-of-things"],
+  isA: ["condition-quality"],
   paraphrase: {
     forms: ["{{word:li3}}-{{word:mian4}} {{word:mei2}}-{{word:you3}} {{word:dong1}}-{{light:xi1}}"],
     verdict: "clumsy",

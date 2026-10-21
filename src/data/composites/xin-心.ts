@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:xin1}}"],
   tts: ["心"],
   fit: "word",
+  topics: ["inside-the-body"],
+  isA: ["body-part"],
   note: "Lesson {{lesson:feelings}}.",
   examples: [
     {

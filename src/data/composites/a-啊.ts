@@ -11,6 +11,8 @@ export default composite({
   hsd: ["\"a\""],
   tts: ["啊"],
   fit: "natural",
+  topics: ["particles"],
+  isA: ["particle"],
   note: "A sound, written in quotes like names and animal sounds (Lesson 1).",
   examples: [
     {

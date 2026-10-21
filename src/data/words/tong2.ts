@@ -14,5 +14,7 @@ export default word("tong2", {
     eng: "Different ({{word:bu4}}-{{word:tong2}}) and the people you share something with ({{word:tong2}}-{{word:xue2}}) are built from it.",
     rus: "Из него строятся «разный» ({{word:bu4}}-{{word:tong2}}) и те, с кем что-то делишь ({{word:tong2}}-{{word:xue2}}).",
   },
+  topics: ["same-and-different"],
+  isA: ["comparison"],
   paraphrase: { forms: ["{{word:yi1}}-{{word:yang4}}", "{{word:yi1}}-{{word:qi3}}"], verdict: "fine" },
 });

@@ -14,5 +14,7 @@ export default composite({
   tts: ["路上让车走，让车不走的灯"],
   literal: "the lamp on the road that lets cars go and makes them stop",
   fit: "plain",
+  topics: ["the-road"],
+  isA: ["machine"],
   proposed: true,
 });

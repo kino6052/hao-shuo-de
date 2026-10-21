@@ -12,6 +12,8 @@ export default composite({
   tts: ["中国的字"],
   literal: "China's characters",
   fit: "plain",
+  topics: ["writing"],
+  isA: ["language-thing"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ai4}} \"Zhōngguó\"-{{word:de}} {{word:zi4}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["不要别的人帮"],
   literal: "needs no one's help",
   fit: "plain",
+  topics: ["describing-people"],
+  isA: ["character-quality"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:bu4}} {{word:yao4}} {{word:bie2}}-{{word:de}} {{word:ren2}} {{word:bang1}}.",

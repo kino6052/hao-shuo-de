@@ -12,6 +12,8 @@ export default composite({
   tts: ["很不难明白"],
   literal: "very easy to understand",
   fit: "plain",
+  topics: ["easy-hard-right-wrong"],
+  isA: ["truth-or-ease"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:shuo1}}-{{word:de}} {{word:hen3}}-{{word:bu4}}-{{word:nan2}} {{word:ming2}}-{{word:bai2}}.",

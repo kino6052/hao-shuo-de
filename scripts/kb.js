@@ -9,6 +9,13 @@
 //   node scripts/kb.js atoms [word]  # the atoms report, or one word's line
 //   node scripts/kb.js relations [kind] [--status proposed|accepted] [--limit N]  # synonyms, opposites, connections and the rest
 //   node scripts/kb.js relations tree [word] [--limit N]  # what hangs under what: the kind-of tree of every word, or of one
+//   node scripts/kb.js tags [--kinds] [--depth N]  # the topic net (or the kind net) as a tree, with counts
+//   node scripts/kb.js tags <tag> [--limit N]  # one tag: its parents, subtags and members (a tag under two parents is under both)
+//   node scripts/kb.js tags --of <entry>  # every path from an entry up to a top tag, on both axes
+//   node scripts/kb.js tags --common <a> <b>  # the closest tags two entries share
+//   node scripts/kb.js tags --find <text>  # the tags whose name has the text, and the entries an English word leads to
+//   node scripts/kb.js tags --check  # cycles, unknown tags, extra, empty, too big and too small leaves, vague and untagged entries
+//   node scripts/kb.js tags --proposed [tag]  # the tags waiting for review, and why each was proposed
 //   node scripts/kb.js english <word> [--json]  # which entries say an English word: by gloss, by WordNet sense, as a kind of
 //   node scripts/kb.js hints <word> [--limit N]  # WordNet hints for drafting a description of a word with no entry (English or Mandarin)
 //   node scripts/kb.js export [--all] [--base IRI] [--out FILE] [--stdout]   # the dictionary as OntoLex Turtle (to kb/cache/export/hao-shuo-de.ttl); --all adds the proposed relations
@@ -81,6 +88,7 @@ import { dirname, resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { Worker } from 'worker_threads';
 import { createKb, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderKindTree, renderEnglish, renderHints, exportTurtle, renderExportSummary, renderCrossCheck, renderFrontier, renderYardsticks, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps, renderAudit, renderGains, renderGainExplain } from '../src/lib/kb/kb.js';
+import { askTags } from '../src/lib/kb/tags.js';
 import { loadFrequencyList } from './frequency-list.js';
 import { sourceStamp } from './source-cache.js';
 import { readCache, writeCache } from './cache.js';
@@ -319,6 +327,24 @@ async function main(argv) {
       const limit = Number(option(rest, '--limit') ?? 15);
       const r = kb.yardsticks();
       return print(r, renderYardsticks(r, { limit }));
+    }
+    case 'tags': {
+      const flag = (name) => rest.includes(name);
+      const take = (name, n) => { const i = rest.indexOf(name); return i < 0 ? undefined : rest.splice(i, 1 + n).slice(1); };
+      const limit = option(rest, '--limit');
+      const depth = option(rest, '--depth');
+      const ask = { limit, depth, kinds: flag('--kinds'), check: flag('--check') };
+      const of = take('--of', 1);
+      const common = take('--common', 2);
+      const find = take('--find', 1);
+      const pi = rest.indexOf('--proposed');
+      if (of) ask.of = of[0];
+      else if (common) ask.common = common;
+      else if (find) ask.find = find[0];
+      if (pi >= 0) ask.proposed = rest[pi + 1] && !rest[pi + 1].startsWith('--') ? rest[pi + 1] : true;
+      else ask.tag = rest.find((a) => !a.startsWith('--'));
+      const r = askTags(kb.tags(), ask);
+      return print(r.data, r.text);
     }
     case 'english': {
       const r = kb.english(rest.filter((a) => !a.startsWith('--')).join(' '));

@@ -14,6 +14,8 @@ export default word("yong4", {
     eng: "Use, and \"with\": {{word:yong4}} {{word:shou3}}, with your hand. Every tool sentence needs it.",
     rus: "Использовать, а также «с помощью»: {{word:yong4}} {{word:shou3}} — рукой. Без него ни одного предложения про инструменты.",
   },
+  topics: ["taking-and-holding"],
+  isA: ["handling-action"],
   maps: "kepeken",
   paraphrase: { forms: ["{{word:na2}} {{word:lai2}} {{word:zuo4}}"], verdict: "clumsy" },
 });

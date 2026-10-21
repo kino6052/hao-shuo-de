@@ -13,5 +13,7 @@ export default composite({
   literal: "sleep well",
   fit: "natural",
   transparent: true,
+  topics: ["waking-and-sleeping"],
+  isA: ["set-phrase"],
   proposed: true,
 });

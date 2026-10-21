@@ -12,6 +12,8 @@ export default composite({
   tts: ["叫汪汪的动物"],
   literal: "the animal that says \"wang-wang\"",
   fit: "plain",
+  topics: ["pets"],
+  isA: ["mammal"],
   note: "Lesson {{lesson:feelings}}: animals by their sound.",
   examples: [
     {

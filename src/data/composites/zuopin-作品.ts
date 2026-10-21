@@ -12,6 +12,8 @@ export default composite({
   tts: ["做出来的东西"],
   literal: "a thing someone made",
   fit: "plain",
+  topics: ["art-and-drawing"],
+  isA: ["work-of-art"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:ta1}} {{word:zuo4}}-{{word:chu1}}-{{word:lai2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

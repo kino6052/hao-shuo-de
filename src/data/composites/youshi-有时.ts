@@ -13,6 +13,8 @@ export default composite({
   literal: "some of the time",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["how-often"],
+  isA: ["frequency"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}}-{{word:shi2}} {{word:lai2}}.",

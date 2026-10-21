@@ -11,6 +11,8 @@ export default composite({
   hsd: ["\"ba\""],
   tts: ["吧"],
   fit: "natural",
+  topics: ["particles"],
+  isA: ["particle"],
   note: "For a suggestion, end with …, hǎo ma?",
   examples: [
     {

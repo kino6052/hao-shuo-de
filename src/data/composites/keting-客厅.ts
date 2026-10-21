@@ -14,5 +14,7 @@ export default composite({
   tts: ["一家人一起玩儿的房间"],
   literal: "the room where the family plays together",
   fit: "plain",
+  topics: ["living-room"],
+  isA: ["room"],
   proposed: true,
 });

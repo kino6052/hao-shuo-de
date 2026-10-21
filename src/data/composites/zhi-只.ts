@@ -12,6 +12,8 @@ export default composite({
   tts: ["只", "就"],
   literal: "just",
   fit: "word",
+  topics: ["adverbs"],
+  isA: ["adverb-word"],
   note: "wǒ jiù yǒu yī-ge: I only have one.",
   examples: [
     {

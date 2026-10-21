@@ -13,6 +13,8 @@ export default composite({
   literal: "that kind",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["pointers"],
+  isA: ["pronoun"],
   examples: [
     {
       pinyin: "{{Word:bie2}} {{word:na4}}-{{word:yang4}} {{word:shuo1}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["不用给金"],
   literal: "no need to pay",
   fit: "plain",
+  topics: ["shopping"],
+  isA: ["value-quality"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:bu4}} {{word:yong4}} {{word:gei3}} {{word:jin1}}.",

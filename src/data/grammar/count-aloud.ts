@@ -6,6 +6,7 @@ export default pattern("count-aloud", {
     rus: "Числа можно называть подряд, через запятую, и они могут быть самостоятельными вещами: sān bǐ èr duō — три больше двух.",
   },
   covers: [],
+  tags: ["count", "cat:quantity"],
   template: { hsd: "number, number, number …", eng: "Counting out loud" },
   rules: [
     { lhs: "Tally", hsd: "Num @comma Num", eng: "two numbers with a comma between" },

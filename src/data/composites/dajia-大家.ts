@@ -13,6 +13,8 @@ export default composite({
   literal: "big home / person-person all",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["pointers"],
+  isA: ["pronoun"],
   note: "Lesson {{lesson:doubling-words}}.",
   examples: [
     {

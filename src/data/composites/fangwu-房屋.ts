@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:jia1}}"],
   tts: ["家"],
   fit: "word",
+  topics: ["housing"],
+  isA: ["place"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:jia1}} {{word:hen3}} {{word:da4}}.",

@@ -13,6 +13,8 @@ export default composite({
   literal: "the word you're called",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["languages"],
+  isA: ["language-thing"],
   note: "Ask with nǐ jiào shénme?",
   examples: [
     {

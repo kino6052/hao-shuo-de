@@ -12,5 +12,7 @@ export default composite({
   tts: ["和X一起"],
   literal: "be together with X",
   fit: "plain",
+  topics: ["helping-and-sharing"],
+  isA: ["social-action"],
   proposed: true,
 });

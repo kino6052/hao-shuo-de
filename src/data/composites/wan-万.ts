@@ -12,6 +12,8 @@ export default composite({
   tts: ["一零零零零"],
   literal: "one-zero-zero-zero-zero",
   fit: "plain",
+  topics: ["number-words"],
+  isA: ["counting-number"],
   note: "Numbers go up to what shí can build.",
   examples: [
     {

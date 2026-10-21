@@ -12,6 +12,8 @@ export default composite({
   tts: ["要做的"],
   literal: "what is to be done",
   fit: "plain",
+  topics: ["business-and-economy"],
+  isA: ["activity-name"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:wo3}} {{word:yao4}} {{word:zuo4}}-{{word:de}}.",

@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:men2}}"],
   tts: ["门"],
   fit: "word",
+  topics: ["house-and-doors"],
+  isA: ["building-part"],
   examples: [
     {
       pinyin: "{{Word:men2}} {{word:kai1}} {{word:le}}.",

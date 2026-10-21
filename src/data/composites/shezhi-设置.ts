@@ -12,5 +12,7 @@ export default composite({
   tts: ["把X放好，定好"],
   literal: "put X in place and fix it",
   fit: "plain",
+  topics: ["phone-and-computer"],
+  isA: ["making"],
   proposed: true,
 });

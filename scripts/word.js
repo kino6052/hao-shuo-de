@@ -11,12 +11,18 @@
 //   npm run word -- rename <id> <new id>
 //   npm run word -- move <id> <lesson/module> [--sense <key>]
 //   npm run word -- remove <id>
+//   npm run word -- tag <word id | hanzi> [--topics a,b] [--isA x,y]     (an entry's tags, TAGS_PLAN.md E2)
+//   npm run word -- tag-rename <topic|kind> <tag> <new id>
+//   npm run word -- tag-move <topic|kind> <tag> <parent,parent>
+//   npm run word -- tag-merge <topic|kind> <tag> <into>
+//   (splitting a tag and adding one are ops for a refactor list: tagSplit, tagAdd)
 //   npm run word -- <any of these> --check    # try it on a copy: which gates fail, which numbers move
 //
 // After --write it rebuilds the data indexes, the dictionary pages and
 // BOOK_PLAN.md §4b, and adds a row to the scoreboard (kb/scoreboard.csv); run
 // `npm run check` to see the result.
 
+import { tagNet } from '../src/lib/tag-net.js';
 import { Workspace, applyOps, summary, cards, idSyllables, ROOT } from './refactor-lib.js';
 import { wordRefIds, toneless } from '../src/lib/word-refs.js';
 import { spawnSync } from 'child_process';
@@ -38,7 +44,7 @@ const [cmd, ...args] = pos;
 
 function usage() {
   console.error(
-    'usage: npm run word -- show <id|term|hanzi> | add <id> <hanzi> | split <id> <parts...> | replace <id> --with "<form>" | rename <id> <to> | move <id> <lesson/module> | remove <id>  [--write] [--diff]',
+    'usage: npm run word -- show <id|term|hanzi> | add <id> <hanzi> | split <id> <parts...> | replace <id> --with "<form>" | rename <id> <to> | move <id> <lesson/module> | remove <id> | tag <entry> --topics a,b | tag-rename|tag-move|tag-merge <topic|kind> <tag> <...>  [--write] [--diff]',
   );
   process.exit(1);
 }
@@ -95,13 +101,10 @@ function show(ws, q) {
   }
   line('coverage', cov.join(', ') || '(none)');
 
-  let leaf = null;
-  const walk = (cs2, path) => cs2.forEach((c) => {
-    if ((c.wordIds ?? []).includes(id)) leaf = [...path, c.key].join(' > ');
-    walk(c.children ?? [], [...path, c.key]);
-  });
-  walk(ws.data('src/data/maps/categories.ts'), []);
-  line('category', leaf ?? '(none)');
+  const net = tagNet(ws.data('src/data/maps/topics.ts'));
+  const topics = (ws.word(id).topics ?? []).map((t) => net.paths(t).map((path) => [...path].reverse().join(' > ')).join('; '));
+  line('topics', topics.join('; ') || '(none)');
+  line('is a', (ws.word(id).isA ?? []).join(', ') || '(none)');
   for (const kind of ['antonyms', 'synonyms']) {
     const r = ws.data(`src/data/maps/${kind}.ts`);
     const pairs = r.pairs.filter((p) => p.includes(id)).map((p) => p.find((x) => x !== id));
@@ -140,6 +143,18 @@ function opFromArgs() {
     case 'remove':
       if (args.length < 1) usage();
       return { op: 'remove', id: args[0] };
+    case 'tag':
+      if (args.length < 1 || (flags.topics === undefined && flags.isA === undefined)) usage();
+      return { op: 'tag', entry: args[0], ...(flags.topics !== undefined ? { topics: list(flags.topics) } : {}), ...(flags.isA !== undefined ? { isA: list(flags.isA) } : {}) };
+    case 'tag-rename':
+      if (args.length < 3) usage();
+      return { op: 'tagRename', net: args[0], id: args[1], to: args[2] };
+    case 'tag-move':
+      if (args.length < 3) usage();
+      return { op: 'tagMove', net: args[0], id: args[1], parents: list(args[2]) };
+    case 'tag-merge':
+      if (args.length < 3) usage();
+      return { op: 'tagMerge', net: args[0], id: args[1], into: args[2] };
     default:
       return usage();
   }

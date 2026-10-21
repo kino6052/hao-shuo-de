@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:hou4}}"],
   tts: ["后"],
   fit: "word",
+  topics: ["up-down-in-out"],
+  isA: ["place-relation"],
   examples: [
     {
       pinyin: "{{Word:chi1}}-{{word:fan4}} {{word:hou4}}, {{word:wo3}} {{word:shui4jiao4}}.",

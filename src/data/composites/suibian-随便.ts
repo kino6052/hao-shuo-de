@@ -12,6 +12,8 @@ export default composite({
   tts: ["就可以"],
   literal: "then it's fine",
   fit: "natural",
+  topics: ["describing-people"],
+  isA: ["character-quality"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:jiu4}} {{word:ke3}}-{{word:yi3}}.",

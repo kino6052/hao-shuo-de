@@ -16,6 +16,8 @@ export default composite({
   literal: "nothing dirty on it",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["cleaning"],
+  isA: ["condition-quality"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:fang2}}-{{word:jian1}} {{word:hen3}} {{word:wei4}}-{{word:sheng1}}.",

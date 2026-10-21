@@ -12,6 +12,8 @@ export default composite({
   tts: ["身体不好"],
   literal: "body not good",
   fit: "plain",
+  topics: ["illness"],
+  isA: ["state-name"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ma1ma}} {{word:shen1ti3}} {{word:bu4}} {{word:hao3}}.",

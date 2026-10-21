@@ -13,6 +13,8 @@ export default composite({
   literal: "this side",
   fit: "natural",
   kinds: ["built"],
+  topics: ["near-and-far"],
+  isA: ["place-word"],
   note: "Real Mandarin: 这边.",
   examples: [
     {

@@ -14,6 +14,8 @@ export default composite({
   tts: ["做吃的东西的地方"],
   literal: "the place where you make food",
   fit: "plain",
+  topics: ["cooking-and-utensils"],
+  isA: ["room"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zai4}} {{word:zuo4}}-{{word:chi1}}-{{word:de}}-{{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",

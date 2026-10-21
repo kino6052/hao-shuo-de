@@ -374,7 +374,22 @@ export function candidateModel(source, facts, { freq = null, top = 6000 } = {}) 
     if (!freq) return { root: c, noFrequencies: true };
     const r = describeRoot(c);
     const phrases = rootPhrases(c, r.already);
-    return { ...r, shorter: shorterForms(c, phrases), carriers: coverageCarriers(phrases), english: englishWords(r), clashes: soundClashes(r), lesson: lessonFor(r) };
+    return { ...r, shorter: shorterForms(c, phrases), carriers: coverageCarriers(phrases), english: englishWords(r), clashes: soundClashes(r), lesson: lessonFor(r), pages: pagesFor(r) };
+  }
+
+  // The topic pages it touches (TAGS_PLAN.md E3): the pages the root sits on now if it is already a composite, and the pages of
+  // the composites it completes or lets be spelled, with how many each would gain a way to be said. Reads only the tags that exist.
+  function pagesFor(r) {
+    if (!source.tags?.topics?.length) return null;
+    const title = new Map(source.tags.topics.map((t) => [t.id, t.title.eng]));
+    const byZh = new Map((source.composites ?? []).map((x) => [x.zh, x]));
+    const name = (id) => ({ page: id, title: title.get(id) ?? id });
+    const count = new Map();
+    for (const w of new Set([...r.completes, ...r.spellable].map((x) => x.zh))) for (const t of byZh.get(w)?.topics ?? []) count.set(t, (count.get(t) ?? 0) + 1);
+    return {
+      own: (byZh.get(r.root)?.topics ?? []).map(name),
+      fills: [...count].map(([page, n]) => ({ ...name(page), n })).sort((a, b) => b.n - a.n || a.page.localeCompare(b.page)),
+    };
   }
 
   // The lesson it would go in, from the lesson data the early-words gate reads (introductions in
@@ -666,6 +681,11 @@ export function renderAddition(r) {
     else out.push(`    sounds like the ${x.char} in ${x.term} ${x.hanzi}`);
   }
   if (cl.length > 12) out.push(`    … and ${cl.length - 12} more`);
+  const pg = r.pages;
+  if (pg) {
+    out.push(`  Topic pages: ${pg.own.length ? `${r.root} is a composite on ${pg.own.map((p) => p.title).join(', ')} and would be a core word there` : `${r.root} has no page yet (give it \`topics\` and \`isA\` when it is added; the check fails without them)`}`);
+    out.push(`    pages of the words it completes or spells: ${pg.fills.length ? pg.fills.slice(0, 8).map((p) => `${p.title} ${p.n}`).join(', ') : 'none'}${pg.fills.length > 8 ? ` … (${pg.fills.length})` : ''}`);
+  }
   const ls = r.lesson;
   if (ls) {
     const at = (h) => `${h.lesson} (lesson ${h.number}${h.module ? `, module ${h.module}` : ''})`;

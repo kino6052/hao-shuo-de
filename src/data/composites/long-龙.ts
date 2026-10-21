@@ -14,5 +14,7 @@ export default composite({
   tts: ["很长的，能飞的动物"],
   literal: "a very long animal that can fly",
   fit: "plain",
+  topics: ["wild-animals"],
+  isA: ["animal"],
   proposed: true,
 });

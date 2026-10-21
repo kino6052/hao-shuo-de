@@ -12,6 +12,8 @@ export default composite({
   tts: ["觉得我能"],
   literal: "feel \"I can\"",
   fit: "plain",
+  topics: ["happy-feelings"],
+  isA: ["feeling-name"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:jue2}}-{{word:de2}} {{word:wo3}} {{word:neng2}}.",

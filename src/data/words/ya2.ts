@@ -14,6 +14,8 @@ export default word("ya2", {
     eng: "Teeth: a part of the body that needs its own word.",
     rus: "Зубы: часть тела, которой нужно своё слово.",
   },
+  topics: ["head-and-face"],
+  isA: ["body-part"],
   atom: {
     eng: "Teeth are learned by pointing at them; \"white, hard parts in the mouth\" only says how they look.",
     rus: "Зубы усваивают, показывая на них; «белые твёрдые части во рту» говорят лишь об их виде.",

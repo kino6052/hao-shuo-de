@@ -12,6 +12,8 @@ export default composite({
   tts: ["在X后面去"],
   literal: "go behind X",
   fit: "plain",
+  topics: ["walking-and-running"],
+  isA: ["moving-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zai4}} {{word:ta1}} {{word:hou4}}-{{word:mian4}} {{word:qu4}}.",

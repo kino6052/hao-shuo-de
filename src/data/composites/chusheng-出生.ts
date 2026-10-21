@@ -13,6 +13,8 @@ export default composite({
   literal: "come out, be born",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["birth-and-death"],
+  isA: ["life-change"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zai4}} {{word:zhe4}}-{{word:li3}} {{word:chu1}}-{{word:sheng1}}.",

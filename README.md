@@ -52,7 +52,7 @@ Plans and decisions: [BOOK_PLAN.md](BOOK_PLAN.md) (book, decision log D1…), [K
 | Lesson sentences that parse | 99.6 % |
 | Smallest set the others can be said from | 202 words; the other 28 have a fine paraphrase |
 | Gates (`npm run check`) | 22 |
-| Test files (`npm test`) | 61 |
+| Test files (`npm test`) | 67 |
 
 The language numbers are the last row of `kb/scoreboard.csv` (2026-10-21, refactors/K15.ts: 20 op(s)); a refactor adds a new row.
 <!-- /generated:facts -->
@@ -197,6 +197,7 @@ The shapes of the data are defined in TypeScript, so a mistake is a type error:
 | `src/lib/coverage-kb.ts` | The coverage knowledge base (src/data/coverage/): what Hao-shuo-de must always be able to say, one file per group (atoms of meaning, Aristotle's categories… |
 | `src/lib/data-maps.ts` | The associative maps in src/data/maps/: how words relate, kept out of the word files so a relation change is one line here and a word change never has to sweep through them. |
 | `src/lib/grammar-pattern.ts` | A grammar pattern: one way of putting words together, written once as data (KB_PLAN.md §3). |
+| `src/lib/grammar-tags.ts` | The tags a grammar pattern can carry (WRITING_PLAN.md W22). A tag says what the pattern helps you say, in a few plain words, so a question can ask about it (AKINATOR_PLAN.md A1). |
 | `src/lib/intro.ts` | Intros are built like lessons: a folder with an index.ts (title, summary, the sections in reading order) and one file per section. |
 | `src/lib/lesson.ts` | Lessons are assembled from small modules, one file each, so a point can be added, moved to another lesson, or dropped by touching one file and one line of its lesson's index.ts. |
 | `src/lib/word.ts` | A dictionary word: one file each, src/data/words/<id>.ts, holding only what the word itself is (its sound, hanzi, part of speech, definition, and why the core needs it). |

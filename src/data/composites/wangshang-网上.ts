@@ -13,6 +13,8 @@ export default composite({
   literal: "on the net",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["phone-and-computer"],
+  isA: ["place-word"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:zai4}} {{word:wang3}}-{{word:shang4}} {{word:mai3}} {{word:dong1}}-{{light:xi1}}.",

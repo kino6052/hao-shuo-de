@@ -6,6 +6,7 @@ export default pattern("learn-verb", {
     rus: "Говорит, что кто-то учится что-то делать: xué стоит перед глаголом.",
   },
   covers: [],
+  tags: ["ability", "cat:action"],
   template: { hsd: "Who + {{word:xue2}} + verb", eng: "Who learns to do the verb" },
   rules: [{ lhs: "VP", hsd: "=xue2 VP", eng: "xué, then the verb" }],
   taught: "pre-verbs/learn",

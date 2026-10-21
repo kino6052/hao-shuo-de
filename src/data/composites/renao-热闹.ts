@@ -14,5 +14,7 @@ export default composite({
   tts: ["很多人在一起，声音很大"],
   literal: "many people together, the sound is big",
   fit: "plain",
+  topics: ["holidays-and-festivals"],
+  isA: ["condition-quality"],
   proposed: true,
 });

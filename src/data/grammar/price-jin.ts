@@ -6,6 +6,7 @@ export default pattern("price-jin", {
     rus: "Число и jīn говорят, сколько денег: shí jīn — десять; hěn shǎo jīn — очень мало денег.",
   },
   covers: [],
+  tags: ["count", "cat:quantity"],
   template: { hsd: "number + {{word:jin1}}", eng: "That much money" },
   rules: [
     { lhs: "NP", hsd: "Num =jin1", eng: "a number and jīn: ten jīn" },

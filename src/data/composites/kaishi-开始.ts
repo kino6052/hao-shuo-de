@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:kai1shi3}}"],
   tts: ["开始"],
   fit: "word",
+  topics: ["deciding"],
+  isA: ["starting-and-stopping"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:kai1shi3}} {{word:le}}.",

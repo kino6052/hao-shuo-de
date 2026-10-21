@@ -13,6 +13,8 @@ export default composite({
   literal: "just is",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["adverbs"],
+  isA: ["adverb-word"],
   examples: [
     {
       pinyin: "{{Word:jiu4}}-{{word:shi4}} {{word:ta1}}!",

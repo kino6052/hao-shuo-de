@@ -6,6 +6,7 @@ export default pattern("gei-give", {
     rus: "Gěi — «давать»: сначала человек, потом вещь. Перед глаголом gěi значит «для» или «кому»: wǒ gěi nǐ xiě — я пишу тебе.",
   },
   covers: ["grammar:for"],
+  tags: ["with-for", "cat:action", "cat:relation"],
   template: { hsd: "Who + {{word:gei3}} + person + thing", eng: "Who gives the person the thing" },
   rules: [
     { lhs: "VerbP", hsd: "=gei3 NP NP", eng: "gěi, the person, and the thing" },

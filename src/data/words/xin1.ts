@@ -14,6 +14,8 @@ export default word("xin1", {
     eng: "The heart: feelings live here ({{word:kai1}}-{{word:xin1}}, happy; {{word:xiao3}}-{{word:xin1}}, careful).",
     rus: "Сердце: в нём живут чувства ({{word:kai1}}-{{word:xin1}} — радостный, {{word:xiao3}}-{{word:xin1}} — осторожный).",
   },
+  topics: ["inside-the-body"],
+  isA: ["body-part"],
   senses: {
     new: {
       hanzi: "新",

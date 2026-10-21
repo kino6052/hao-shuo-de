@@ -13,6 +13,8 @@ export default composite({
   literal: "late meal",
   fit: "natural",
   transparent: true,
+  topics: ["breakfast-lunch-dinner"],
+  isA: ["dish"],
   examples: [
     {
       pinyin: "{{Word:wan3}}-{{word:fan4}} {{word:you3}} {{word:shui3}}-{{word:guo3}}.",

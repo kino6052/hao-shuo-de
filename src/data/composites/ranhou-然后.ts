@@ -12,6 +12,8 @@ export default composite({
   tts: ["…完后"],
   literal: "after finishing X",
   fit: "plain",
+  topics: ["joining-words"],
+  isA: ["conjunction"],
   examples: [
     {
       pinyin: "{{Word:chi1}}-{{word:wan2}} {{word:hou4}}, {{word:wo3}}-{{word:men}} {{word:qu4}} {{word:wan2r}}.",

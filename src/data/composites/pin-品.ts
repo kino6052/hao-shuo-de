@@ -12,5 +12,7 @@ export default composite({
   tts: ["买的东西"],
   literal: "things to buy",
   fit: "plain",
+  topics: ["shopping"],
+  isA: ["made-thing"],
   proposed: true,
 });

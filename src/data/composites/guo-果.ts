@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:guo3}}"],
   tts: ["果"],
   fit: "word",
+  topics: ["fruit"],
+  isA: ["fruit-item"],
   proposed: true,
 });

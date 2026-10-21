@@ -14,5 +14,7 @@ export default composite({
   tts: ["放东西的，不硬的东西"],
   literal: "a soft thing for putting things in",
   fit: "plain",
+  topics: ["household-things"],
+  isA: ["container"],
   proposed: true,
 });

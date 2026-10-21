@@ -14,6 +14,8 @@ export default word("hua4", {
     eng: "Talk ({{word:shuo1}} {{word:hua4}}): what is said, as a thing.",
     rus: "Разговор ({{word:shuo1}} {{word:hua4}}): сказанное как вещь.",
   },
+  topics: ["languages"],
+  isA: ["language-thing"],
   senses: {
     draw: {
       hanzi: "画",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["做决定的人"],
   literal: "a person who makes the decisions",
   fit: "plain",
+  topics: ["office"],
+  isA: ["worker"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:zuo4}} {{word:jue2}}-{{word:ding4}}-{{word:de}} {{word:ren2}}.",

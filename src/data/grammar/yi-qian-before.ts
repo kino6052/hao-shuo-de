@@ -6,6 +6,7 @@ export default pattern("yi-qian-before", {
     rus: "Yǐ-qián значит «раньше», yǐ-hòu — «потом»: yǐ-qián wǒ zài \"Zhōngguó\" — раньше я был в Китае. Xiǎo shí-hòu — в детстве; xīn-nián — Новый год.",
   },
   covers: ["grammar:when"],
+  tags: ["when", "cat:time"],
   template: { hsd: "{{word:yi3}}-{{word:qian2}} / {{word:yi3}}-{{word:hou4}}", eng: "Before / after" },
   rules: [
     { lhs: "Time", hsd: "=yi3 =qian2", eng: "yǐ-qián, before" },

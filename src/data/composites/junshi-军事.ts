@@ -12,4 +12,6 @@ export default composite({
   tts: ["为国打的"],
   literal: "of fighting for the country",
   fit: "plain",
+  topics: ["war-and-peace"],
+  isA: ["abstract-thing"],
 });

@@ -6,6 +6,7 @@ export default pattern("gei-me-turn", {
     rus: "Gěi wǒ и глагол просят очередь: дай мне это сделать. Yī-xià после глагола делает это быстрой попыткой.",
   },
   covers: [],
+  tags: ["command", "cat:action"],
   template: { hsd: "{{word:gei3}} {{word:wo3}} + verb + {{word:yi1}}-{{word:xia4}}", eng: "Let me do it for a moment" },
   rules: [
     { lhs: "VP", hsd: "=gei3 =wo3 VP", eng: "gěi wǒ, then the verb: let me do it" },

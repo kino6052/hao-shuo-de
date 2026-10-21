@@ -17,6 +17,8 @@ export default composite({
   tts: ["睡觉", "坐下一下", "躺下一下", "不动一下"],
   literal: "sleep / sit down a while / lie down a while / not move a while",
   fit: "plain",
+  topics: ["waking-and-sleeping"],
+  isA: ["body-action"],
   note: "Resting can be sleep, or just sitting, lying down or standing still for a while.",
   examples: [
     {

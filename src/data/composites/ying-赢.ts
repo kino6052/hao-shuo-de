@@ -12,6 +12,8 @@ export default composite({
   tts: ["比别的人好"],
   literal: "do better than the others",
   fit: "plain",
+  topics: ["sports"],
+  isA: ["starting-and-stopping"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:bi3}} {{word:bie2}}-{{word:de}} {{word:ren2}} {{word:hao3}}.",

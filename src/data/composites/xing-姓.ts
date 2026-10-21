@@ -12,6 +12,8 @@ export default composite({
   tts: ["家叫的"],
   literal: "what the family is called",
   fit: "plain",
+  topics: ["greetings-and-thanks"],
+  isA: ["language-thing"],
   note: "Lesson {{lesson:greetings}}: jiào \"…\".",
   examples: [
     {

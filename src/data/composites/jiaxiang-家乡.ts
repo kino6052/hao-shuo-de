@@ -12,6 +12,8 @@ export default composite({
   tts: ["生的地方"],
   literal: "the place you were born",
   fit: "plain",
+  topics: ["countries-and-cities"],
+  isA: ["place"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:wo3}} {{word:sheng1}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",

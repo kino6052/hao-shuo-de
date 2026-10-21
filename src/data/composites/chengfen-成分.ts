@@ -12,5 +12,7 @@ export default composite({
   tts: ["里面有的东西"],
   literal: "the things that are inside",
   fit: "plain",
+  topics: ["materials"],
+  isA: ["idea"],
   proposed: true,
 });

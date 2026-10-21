@@ -12,5 +12,7 @@ export default composite({
   tts: ["还没坏"],
   literal: "not yet bad",
   fit: "plain",
+  topics: ["new-and-old"],
+  isA: ["age-or-newness"],
   proposed: true,
 });

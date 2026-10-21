@@ -12,6 +12,8 @@ export default composite({
   tts: ["年的一部分"],
   literal: "a part of the year",
   fit: "plain",
+  topics: ["seasons"],
+  isA: ["time-span"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ai4}} {{word:nian2}}-{{word:de}} {{word:yi1}} {{word:bu4}}-{{light:fen1}}.",

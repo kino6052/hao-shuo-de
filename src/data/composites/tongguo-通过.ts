@@ -17,6 +17,8 @@ export default composite({
   literal: "go through",
   fit: "natural",
   kinds: ["spelled", "built", "built"],
+  topics: ["words-before-nouns"],
+  isA: ["preposition"],
   note: "Lesson {{lesson:direction-and-result}}.",
   examples: [
     {

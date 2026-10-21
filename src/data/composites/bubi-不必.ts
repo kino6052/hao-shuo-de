@@ -12,6 +12,8 @@ export default composite({
   tts: ["不用", "不用"],
   literal: "no need",
   fit: "natural",
+  topics: ["helping-words"],
+  isA: ["auxiliary"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:bu4}}-{{word:yong4}} {{word:qu4}}.",

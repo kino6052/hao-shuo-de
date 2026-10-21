@@ -13,6 +13,8 @@ export default composite({
   literal: "see",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["meeting-and-parting"],
+  isA: ["social-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:ming2}}-{{word:tian1}} {{word:jian4}}-{{word:mian4}}.",

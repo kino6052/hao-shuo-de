@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:bi3}}"],
   tts: ["比"],
   fit: "skip",
+  topics: ["degree-words"],
+  isA: ["degree-word"],
   note: "Use bǐ: A bǐ B dà.",
   examples: [
     {

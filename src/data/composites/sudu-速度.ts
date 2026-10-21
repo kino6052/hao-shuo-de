@@ -12,6 +12,8 @@ export default composite({
   tts: ["快不快"],
   literal: "how fast",
   fit: "natural",
+  topics: ["speed-and-strength"],
+  isA: ["speed-or-strength"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:kuai4}} {{word:bu4}} {{word:kuai4}}?",

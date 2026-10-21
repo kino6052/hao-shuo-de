@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:se4}}"],
   tts: ["色"],
   fit: "word",
+  topics: ["colours"],
+  isA: ["colour-quality"],
   proposed: true,
 });

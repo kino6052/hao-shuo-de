@@ -12,6 +12,8 @@ export default composite({
   tts: ["用脚打"],
   literal: "hit with the foot",
   fit: "plain",
+  topics: ["sports"],
+  isA: ["body-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yong4}} {{word:jiao3}} {{word:da3}}.",

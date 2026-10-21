@@ -12,4 +12,6 @@ export default composite({
   tts: ["打X"],
   literal: "hit X",
   fit: "natural",
+  topics: ["war-and-peace"],
+  isA: ["social-action"],
 });

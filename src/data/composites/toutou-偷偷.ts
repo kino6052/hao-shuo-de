@@ -12,5 +12,7 @@ export default composite({
   tts: ["不让别人知道"],
   literal: "not letting others know",
   fit: "plain",
+  topics: ["degree-words"],
+  isA: ["adverb-word"],
   proposed: true,
 });

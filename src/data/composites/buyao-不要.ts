@@ -12,6 +12,8 @@ export default composite({
   tts: ["不要"],
   fit: "natural",
   kinds: ["built"],
+  topics: ["no-and-not"],
+  isA: ["negation-word"],
   examples: [
     {
       pinyin: "{{Word:bu4}} {{word:yao4}} {{word:shuo1}}!",

@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:dong1}}-{{light:xi1}}"],
   tts: ["东西"],
   fit: "plain",
+  topics: ["news-and-events"],
+  isA: ["idea"],
   note: "dōng-xi covers it. Mandarin keeps 东西 for objects.",
   examples: [
     {

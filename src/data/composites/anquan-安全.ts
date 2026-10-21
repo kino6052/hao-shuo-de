@@ -14,6 +14,8 @@ export default composite({
   tts: ["坏的东西不会发生"],
   literal: "nothing bad will happen",
   fit: "plain",
+  topics: ["police-and-safety"],
+  isA: ["condition-quality"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:jia1}} {{word:huai4}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:bu4}} {{word:hui4}} {{word:fa1}}-{{word:sheng1}}.",

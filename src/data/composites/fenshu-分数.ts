@@ -13,6 +13,8 @@ export default composite({
   literal: "the good-or-bad number",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["exams-and-marks"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:hao3}}-{{word:huai4}}-{{word:de}} {{word:shu4}} {{word:hen3}} {{word:gao1}}.",

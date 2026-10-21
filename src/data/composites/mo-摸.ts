@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:mo1}}"],
   tts: ["摸"],
   fit: "word",
+  topics: ["senses"],
+  isA: ["perceiving"],
   proposed: true,
 });

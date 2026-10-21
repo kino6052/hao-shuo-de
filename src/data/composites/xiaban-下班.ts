@@ -12,6 +12,8 @@ export default composite({
   tts: ["做完了，回家"],
   literal: "finished working, going home",
   fit: "plain",
+  topics: ["working-life"],
+  isA: ["working"],
   examples: [
     {
       pinyin: "{{Word:zuo4}}-{{word:wan2}} {{word:le}}, {{word:hui2}} {{word:jia1}}.",

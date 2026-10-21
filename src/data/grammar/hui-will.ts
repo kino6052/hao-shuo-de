@@ -6,6 +6,7 @@ export default pattern("hui-will", {
     rus: "Говорит, что это произойдёт: huì стоит перед глаголом.",
   },
   covers: ["grammar:future"],
+  tags: ["future", "cat:time", "cat:action"],
   template: { hsd: "Who + {{word:hui4}} + verb", eng: "Who will do the verb" },
   rules: [{ lhs: "VP", hsd: "=hui4 VP", eng: "huì, then the verb" }],
   taught: "when-it-happens/will",

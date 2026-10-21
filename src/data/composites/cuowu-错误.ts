@@ -12,6 +12,8 @@ export default composite({
   tts: ["不对的东西"],
   literal: "something wrong",
   fit: "plain",
+  topics: ["easy-hard-right-wrong"],
+  isA: ["truth-or-ease"],
   examples: [
     {
       pinyin: "{{Word:zhe4}} {{word:shi4}} {{word:bu4}} {{word:dui4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",

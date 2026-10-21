@@ -14,5 +14,7 @@ export default composite({
   tts: ["学校里吃饭的地方"],
   literal: "a place to eat in the school",
   fit: "plain",
+  topics: ["at-a-restaurant"],
+  isA: ["building"],
   proposed: true,
 });

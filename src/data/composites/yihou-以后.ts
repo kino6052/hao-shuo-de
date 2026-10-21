@@ -13,6 +13,8 @@ export default composite({
   literal: "after X",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["before-and-after"],
+  isA: ["time-order"],
   note: "Lesson {{lesson:around-an-action}}.",
   examples: [
     {

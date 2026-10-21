@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:chu1}}"],
   tts: ["出"],
   fit: "word",
+  topics: ["going-and-coming"],
+  isA: ["moving-action"],
   note: "Lesson {{lesson:direction-and-result}}: chū-qù, ná-chū-lái.",
   examples: [
     {

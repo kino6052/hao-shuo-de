@@ -12,6 +12,8 @@ export default composite({
   tts: ["…的家在…"],
   literal: "X's home is at",
   fit: "plain",
+  topics: ["housing"],
+  isA: ["body-action"],
   note: "wǒ-de jiā zài nà-lǐ.",
   examples: [
     {

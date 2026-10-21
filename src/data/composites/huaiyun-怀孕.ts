@@ -12,4 +12,6 @@ export default composite({
   tts: ["肚子里有孩子"],
   literal: "there is a child in the belly",
   fit: "plain",
+  topics: ["birth-and-death"],
+  isA: ["state-name"],
 });

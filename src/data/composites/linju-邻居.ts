@@ -12,6 +12,8 @@ export default composite({
   tts: ["在家附近的人"],
   literal: "a person who is near home",
   fit: "plain",
+  topics: ["friends-and-neighbours"],
+  isA: ["social-role"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:zai4}}-{{word:jia1}}-{{word:fu4jin4}}-{{word:de}} {{word:ren2}}.",

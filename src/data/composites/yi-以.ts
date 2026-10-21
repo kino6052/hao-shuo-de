@@ -12,6 +12,8 @@ export default composite({
   tts: ["以", "用X"],
   literal: "using X",
   fit: "word",
+  topics: ["words-before-nouns"],
+  isA: ["preposition"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yong4}} X {{word:zuo4}}.",

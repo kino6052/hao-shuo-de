@@ -12,6 +12,8 @@ export default composite({
   tts: ["好好看", "看看"],
   literal: "have a look",
   fit: "natural",
+  topics: ["looking-and-checking"],
+  isA: ["perceiving"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:kan4}}-{{light:kan4}}.",

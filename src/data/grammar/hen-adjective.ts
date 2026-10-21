@@ -6,6 +6,7 @@ export default pattern("hen-adjective", {
     rus: "Говорит, каково что-то: hěn стоит перед описывающим словом.",
   },
   covers: ["grammar:degree"],
+  tags: ["describe", "how-much", "cat:quality"],
   template: { hsd: "Subject {{word:hen3}} adjective", eng: "Subject is (very) adjective" },
   rules: [
     { lhs: "VP", hsd: "hen3 @adjective", eng: "hěn and a describing word" },

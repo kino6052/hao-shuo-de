@@ -12,6 +12,8 @@ export default composite({
   tts: ["说到"],
   literal: "speak of",
   fit: "natural",
+  topics: ["talking"],
+  isA: ["speaking-action"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shuo1}}-{{word:dao4}} {{word:ni3}}.",

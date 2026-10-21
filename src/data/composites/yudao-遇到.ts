@@ -15,6 +15,8 @@ export default composite({
   tts: ["没想到会看到", "看到"],
   literal: "see",
   fit: "natural",
+  topics: ["meeting-and-parting"],
+  isA: ["social-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:kan4}}-{{word:dao4}} {{word:ta1}}.",

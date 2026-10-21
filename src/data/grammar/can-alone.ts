@@ -6,6 +6,7 @@ export default pattern("can-alone", {
     rus: "Néng само по себе, или с bù, отвечает, можно ли это сделать: bù néng — нет, нельзя.",
   },
   covers: ["grammar:can"],
+  tags: ["ability", "cat:action"],
   template: { hsd: "{{word:neng2}} / {{word:bu4}} {{word:neng2}}", eng: "Can / cannot" },
   rules: [
     { lhs: "VP", hsd: "Can", eng: "can on its own" },

@@ -14,6 +14,8 @@ export default composite({
   tts: ["比别的人好的部分"],
   literal: "the part that's better than others",
   fit: "plain",
+  topics: ["how-good"],
+  isA: ["value-quality"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:you3}} {{word:bi3}} {{word:bie2}}-{{word:de}} {{word:ren2}} {{word:hao3}}-{{word:de}} {{word:bu4}}-{{light:fen1}}.",

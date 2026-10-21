@@ -14,4 +14,6 @@ export default composite({
   tts: ["是男人还是女人"],
   literal: "is it a man or a woman",
   fit: "plain",
+  topics: ["men-and-women"],
+  isA: ["abstract-thing"],
 });

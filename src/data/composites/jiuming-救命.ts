@@ -12,5 +12,7 @@ export default composite({
   tts: ["让X不死"],
   literal: "make X not die",
   fit: "plain",
+  topics: ["police-and-safety"],
+  isA: ["set-phrase"],
   proposed: true,
 });

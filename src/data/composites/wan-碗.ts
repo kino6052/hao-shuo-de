@@ -14,6 +14,8 @@ export default composite({
   tts: ["让饭放在里面的东西"],
   literal: "a thing that lets food be put inside",
   fit: "plain",
+  topics: ["tableware"],
+  isA: ["container"],
   note: "bāo covers bowls too.",
   examples: [
     {

@@ -12,5 +12,7 @@ export default composite({
   tts: ["要的金少一点"],
   literal: "the money asked for is a little less",
   fit: "plain",
+  topics: ["shopping"],
+  isA: ["trade-action"],
   proposed: true,
 });

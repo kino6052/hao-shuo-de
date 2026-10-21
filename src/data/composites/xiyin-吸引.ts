@@ -12,6 +12,8 @@ export default composite({
   tts: ["让人想来"],
   literal: "make people want to come",
   fit: "plain",
+  topics: ["liking-and-wanting"],
+  isA: ["feeling-and-wanting"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:di4}}-{{light:fang1}} {{word:rang4}} {{word:ren2}} {{word:xiang3}} {{word:lai2}}.",

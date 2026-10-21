@@ -14,6 +14,8 @@ export default word("jiao3", {
     eng: "Feet and legs: walking, standing, kicking. A basic body part with no short description.",
     rus: "Ступни и ноги: ходить, стоять, пинать. Основная часть тела без короткого описания.",
   },
+  topics: ["hands-and-feet"],
+  isA: ["body-part"],
   maps: "noka",
   atom: {
     eng: "The foot is learned by pointing at it; \"the part that walks\" only names what it does.",

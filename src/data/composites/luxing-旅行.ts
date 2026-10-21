@@ -12,6 +12,8 @@ export default composite({
   tts: ["去别的地方玩儿"],
   literal: "go to another place to play",
   fit: "natural",
+  topics: ["a-trip"],
+  isA: ["activity-name"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:qu4}} {{word:bie2}}-{{word:de}} {{word:di4}}-{{light:fang1}} {{word:wan2r}}.",

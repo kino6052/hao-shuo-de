@@ -12,6 +12,8 @@ export default composite({
   tts: ["身体很热"],
   literal: "the body is very hot",
   fit: "natural",
+  topics: ["illness"],
+  isA: ["state-name"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:shen1ti3}} {{word:hen3}} {{word:re4}}.",

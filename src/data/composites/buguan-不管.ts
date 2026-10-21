@@ -12,6 +12,8 @@ export default composite({
   tts: ["什么…都"],
   literal: "whatever … all",
   fit: "natural",
+  topics: ["joining-words"],
+  isA: ["conjunction"],
   examples: [
     {
       pinyin: "{{Word:shen2me}} {{word:wo3}} {{word:dou1}} {{word:yao4}}.",

@@ -12,5 +12,7 @@ export default composite({
   tts: ["想X很好"],
   literal: "want X to be very good",
   fit: "plain",
+  topics: ["greetings-and-thanks"],
+  isA: ["speaking-action"],
   proposed: true,
 });

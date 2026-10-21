@@ -6,6 +6,7 @@ export default pattern("you-xie-some", {
     rus: "Yǒu-xiē перед существительным значит «некоторые»: yǒu-xiē rén bù lái — некоторые не придут.",
   },
   covers: [],
+  tags: ["only-some", "cat:quantity"],
   template: { hsd: "{{word:you3}}-{{word:xie1}} + noun", eng: "Some of them" },
   rules: [
     { lhs: "NP", hsd: "=you3 =xie1 @noun", eng: "yǒu-xiē and a noun: some people" },

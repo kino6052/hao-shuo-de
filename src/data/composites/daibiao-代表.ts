@@ -12,6 +12,8 @@ export default composite({
   tts: ["替X说的人", "替X…"],
   literal: "a person who speaks instead of X / stands in for X",
   fit: "plain",
+  topics: ["groups-and-organisations"],
+  isA: ["social-role"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:ti4}} {{word:wo3}}-{{word:men}} {{word:shuo1}}-{{word:de}} {{word:ren2}} {{word:zai4}} {{word:zhe4}}-{{word:li3}}.",

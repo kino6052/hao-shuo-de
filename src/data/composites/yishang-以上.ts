@@ -13,6 +13,8 @@ export default composite({
   literal: "more than X",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["all-and-some"],
+  isA: ["amount-word"],
   examples: [
     {
       pinyin: "{{Word:you3}} {{word:shi2}}-{{light:ge4}} {{word:yi3}}-{{word:shang4}}.",

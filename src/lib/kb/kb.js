@@ -14,6 +14,7 @@
 //   kb.crossCheck()            those relations against WordNet's kinds, opposites and parts (cross-check.js)
 //   kb.meaning([name])         what the words say of the primes, categories and grammar items, and the primes each description reaches (meaning.js)
 //   kb.candidates()            what to drop, what to add and what to trade (see candidates.js; needs `freq` for Mandarin)
+//   kb.tags()                  the tag nets: topic (where you meet a word) and kind (what it is), their members and checks (tags.js)
 //   kb.gains()                 the Chinese words to promote to core entries, best first, for growing to about 1000 (see gains.js; needs `freq`)
 //
 // Names are lenient: an id (deng1), a term (dēng, deng) or a hanzi (灯).
@@ -38,6 +39,7 @@ import { restsOnModel } from './rests-on.js';
 import { candidateModel, renderAddition, renderAudit, renderRemovalCandidates, renderRootCandidates, renderSwaps } from './candidates.js';
 import { gainModel, renderGainExplain, renderGains } from './gains.js';
 import { wordEntries } from './word-entries.js';
+import { tagModel, renderTree, renderTag, renderOf, renderCommon, renderFind, renderCheck, renderProposed } from './tags.js';
 
 // freq: the Mandarin frequency list [{ zh, py, rank }]; drafts: how words would be said without a stored paraphrase { id: { forms, verdict } }
 export function createKb(source, { rules = readRules('base', 'whatif'), freq = null, drafts = {}, parseMemo = null, relationRules = {}, englishData = null, yardstickData = null } = {}) {
@@ -71,6 +73,8 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
   const yardsticksOf = () => (yardsticks ??= yardstickReport({ composites: countedOf().entries, english: englishOf(), ...listsOf() }));
 
   const englishOf = () => (englishModel ??= createEnglish({ ...countedOf().data, composites: countedOf().entries, links: countedOf().links }));
+  let tagsModel = null; // the tag nets over the entries (tags.js), plain code and quick
+  const tagsOf = () => (tagsModel ??= tagModel(source, { entryZhs: (text) => { const r = englishOf().lookup(text); return [...new Set([...r.glosses, ...r.sameSense.flatMap((s) => s.entries)].map((e) => e.zh))]; } }));
   const relationsOf = () => (relationsReport ??= relationReport(source, facts, relationRules));
 
   const parseText = makeParseText({ patterns: source.patterns ?? [], words, composites: source.composites, memo: parseMemo?.space({ patterns: source.patterns ?? [], words, composites: source.composites }) });
@@ -116,6 +120,9 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
     // The relations: stored ones are accepted, the ones a rule finds are proposed (see relations.js).
     relations: relationsOf,
 
+    // The tag nets (TAGS_PLAN.md, K31): where an entry sits on the topic and kind nets, what is under a tag, what two entries share, the checks.
+    tags: tagsOf,
+
     // English to entries, in three tiers (english.js): the gloss, the same WordNet sense, a kind of. `englishData` gives
     // { links, index } (kb/wordnet/links.json, kb/cache/english-index.json); without it only the glosses answer.
     english: (text) => englishOf().lookup(text),
@@ -127,7 +134,7 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
 
     // The dictionary as OntoLex-Lemon in Turtle (export.js): the words, the entries with their WordNet links, the relations.
     // -> { prefixes, header, blocks, counts }; export.js turns it into the file, or one entry's fragment.
-    exportModel: (opts) => buildExport({ words, composites: source.composites, links: countedOf().data.links ?? {}, relations: relationsOf().relations, ...opts }),
+    exportModel: (opts) => buildExport({ words, composites: source.composites, links: countedOf().data.links ?? {}, relations: relationsOf().relations, tags: source.tags ?? null, ...opts }),
 
     // The dictionary's kind-of, opposite and part-of relations against WordNet's (cross-check.js): where they disagree,
     // what WordNet states that the dictionary does not, and the entries without a head that WordNet could give one.
@@ -174,11 +181,11 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
     // clingo.js).
     async query(program, { models = 1, timeoutMs = 20_000, withBase = true, text = false } = {}) {
       const extra = text === true ? facts.textProgram() : Array.isArray(text) ? facts.textProgram(ids(text)) : '';
-      const full = [withBase ? readRules('base') : '', facts.program, extra, program].join('\n');
+      const full = [withBase ? readRules('base', 'tags') : '', facts.program, withBase ? facts.tagProgram : '', extra, program].join('\n');
       const result = await solve(full, { models, timeoutMs });
       return { status: result.status, models: result.models.map((m) => tables(m)) };
     },
   };
 }
 
-export { meaningWord, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, viewParse, renderAtoms, renderAtomWord, renderRelations, renderKindTree, renderEnglish, renderHints, exportTurtle, exportFragment, renderExportSummary, renderCrossCheck, renderFrontier, renderYardsticks, renderAddition, renderAudit, renderRemovalCandidates, renderRootCandidates, renderSwaps, renderGains, renderGainExplain };
+export { renderTree, renderTag, renderOf, renderCommon, renderFind, renderCheck, renderProposed, meaningWord, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, viewParse, renderAtoms, renderAtomWord, renderRelations, renderKindTree, renderEnglish, renderHints, exportTurtle, exportFragment, renderExportSummary, renderCrossCheck, renderFrontier, renderYardsticks, renderAddition, renderAudit, renderRemovalCandidates, renderRootCandidates, renderSwaps, renderGains, renderGainExplain };

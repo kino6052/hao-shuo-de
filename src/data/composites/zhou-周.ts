@@ -13,6 +13,8 @@ export default composite({
   literal: "seven days",
   fit: "natural",
   transparent: true,
+  topics: ["calendar"],
+  isA: ["time-span"],
   note: "Same as 星期.",
   examples: [
     {

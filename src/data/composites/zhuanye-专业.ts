@@ -15,6 +15,8 @@ export default composite({
   tts: ["学的东西", "知道很多的"],
   literal: "what you study / knowing a lot",
   fit: "plain",
+  topics: ["studying"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:xue2}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:hen3}} {{word:hao3}}.",

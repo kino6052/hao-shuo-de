@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:cong2}}"],
   tts: ["从"],
   fit: "word",
+  topics: ["words-before-nouns"],
+  isA: ["preposition"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:cong2}} {{word:na3}}-{{word:li3}} {{word:lai2}}?",

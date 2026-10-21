@@ -12,6 +12,8 @@ export default composite({
   tts: ["来家里的人"],
   literal: "someone who comes to your home",
   fit: "plain",
+  topics: ["parties-and-gifts"],
+  isA: ["social-role"],
   examples: [
     {
       pinyin: "{{Word:lai2}} {{word:jia1}}-{{word:li3}}-{{word:de}} {{word:ren2}} {{word:hen3}} {{word:duo1}}.",

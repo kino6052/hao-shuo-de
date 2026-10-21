@@ -12,6 +12,8 @@ export default composite({
   tts: ["怎么做？"],
   literal: "how to do it?",
   fit: "natural",
+  topics: ["asking-and-answering"],
+  isA: ["set-phrase"],
   examples: [
     {
       pinyin: "{{Word:zen3me}} {{word:zuo4}}? {{Word:wo3}} {{word:bu4}} {{word:zhi1dao4}}.",

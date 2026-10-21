@@ -14,6 +14,8 @@ export default word("di4", {
     eng: "The floor, the ground. Mountains, soil, and \"down there\" are described from it. Before a number it gives the order: {{word:di4}}-{{word:yi1}}, first.",
     rus: "Пол, земля. Через него описывают горы, почву и «внизу». Перед числом он задаёт порядок: {{word:di4}}-{{word:yi1}} — первый.",
   },
+  topics: ["house-and-doors"],
+  isA: ["building-part"],
   maps: "supa",
   senses: {
     order: {

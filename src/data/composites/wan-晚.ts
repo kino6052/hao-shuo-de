@@ -12,6 +12,8 @@ export default composite({
   tts: ["晚", "比…后"],
   literal: "after …",
   fit: "word",
+  topics: ["times-of-day"],
+  isA: ["time-of-day-word"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:lai2}} {{word:wan3}} {{word:le}}.",

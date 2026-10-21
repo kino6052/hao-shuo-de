@@ -12,6 +12,8 @@ export default composite({
   tts: ["去学"],
   literal: "go learn",
   fit: "plain",
+  topics: ["classroom"],
+  isA: ["learning-and-teaching"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yao4}} {{word:qu4}} {{word:xue2}} {{word:le}}.",

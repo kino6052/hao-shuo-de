@@ -14,6 +14,8 @@ export default word("bian4", {
     eng: "Become, change: {{word:bian4}} {{word:hao3}} {{word:le}}, it got better. Without it, things can't change.",
     rus: "Становиться, меняться: {{word:bian4}} {{word:hao3}} {{word:le}} — стало лучше. Без него ничего не меняется.",
   },
+  topics: ["changing"],
+  isA: ["becoming"],
   maps: "kama",
   paraphrase: {
     forms: [

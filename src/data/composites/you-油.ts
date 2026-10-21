@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:you2}}"],
   tts: ["油"],
   fit: "word",
+  topics: ["seasonings"],
+  isA: ["seasoning"],
   proposed: true,
 });

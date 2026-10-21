@@ -14,6 +14,8 @@ export default word("qian2", {
     eng: "In front, and before (in time): {{word:qian2}}-{{word:mian4}}, in front.",
     rus: "Впереди, а также «раньше»: {{word:qian2}}-{{word:mian4}} — впереди.",
   },
+  topics: ["up-down-in-out"],
+  isA: ["place-relation"],
   maps: "sinpin",
   atom: {
     eng: "Front is learned from your own body, the side you face; \"where the eyes look\" needs eyes and looking.",

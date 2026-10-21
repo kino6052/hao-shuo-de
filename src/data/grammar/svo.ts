@@ -6,6 +6,7 @@ export default pattern("svo", {
     rus: "Кто что делает: сначала тот, кто делает, потом действие, потом то, на что оно направлено.",
   },
   covers: [],
+  tags: ["basic", "cat:action", "cat:affection"],
   template: { hsd: "Subject + verb + Object", eng: "Subject does the verb to the object" },
   rules: [
     { lhs: "VerbP", hsd: "@verb NP", eng: "a verb and what it is done to" },

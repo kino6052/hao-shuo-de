@@ -12,6 +12,8 @@ export default composite({
   tts: ["工作"],
   literal: "work",
   fit: "plain",
+  topics: ["jobs"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ai4}} {{word:wo3}}-{{word:de}} {{word:gong1}}-{{word:zuo4}}.",

@@ -12,6 +12,8 @@ export default composite({
   tts: ["看不到了"],
   literal: "can't be seen anymore",
   fit: "plain",
+  topics: ["changing"],
+  isA: ["happening"],
   examples: [
     {
       pinyin: "{{Word:che1}} {{word:kan4}}-{{word:bu4}}-{{word:dao4}} {{word:le}}.",

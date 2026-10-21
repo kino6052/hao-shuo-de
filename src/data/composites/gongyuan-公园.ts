@@ -16,6 +16,8 @@ export default composite({
   literal: "place with plants",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["places-in-town"],
+  isA: ["outdoor-place"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:qu4}} {{word:gong1}}-{{word:yuan2}} {{word:wan2r}}.",

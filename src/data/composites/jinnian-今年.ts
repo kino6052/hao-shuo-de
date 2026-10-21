@@ -13,6 +13,8 @@ export default composite({
   literal: "the year of now",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["calendar"],
+  isA: ["time-point"],
   examples: [
     {
       pinyin: "{{Word:jin1}}-{{word:nian2}} {{word:wo3}} {{word:er4}}-{{word:shi2}}.",

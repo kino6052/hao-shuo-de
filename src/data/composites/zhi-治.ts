@@ -15,5 +15,7 @@ export default composite({
   tts: ["让X好", "决定X怎么做"],
   literal: "make X well / decide how X goes",
   fit: "plain",
+  topics: ["at-the-hospital"],
+  isA: ["social-action"],
   proposed: true,
 });

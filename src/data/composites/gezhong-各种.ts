@@ -12,6 +12,8 @@ export default composite({
   tts: ["很多种"],
   literal: "many kinds",
   fit: "plain",
+  topics: ["all-and-some"],
+  isA: ["amount-word"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{word:li3}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:zhong3}} {{word:chi1}}-{{word:de}}.",

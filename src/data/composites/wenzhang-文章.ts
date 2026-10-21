@@ -12,6 +12,8 @@ export default composite({
   tts: ["写的话"],
   literal: "talk that is written",
   fit: "plain",
+  topics: ["writing"],
+  isA: ["work-of-art"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ai4}} {{word:kan4}} {{word:ta1}} {{word:xie3}}-{{word:de}} {{word:hua4}}.",

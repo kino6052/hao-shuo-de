@@ -12,5 +12,7 @@ export default composite({
   tts: ["和X在一起，爱X"],
   literal: "be with X and love X",
   fit: "plain",
+  topics: ["love-and-marriage"],
+  isA: ["state-name"],
   proposed: true,
 });

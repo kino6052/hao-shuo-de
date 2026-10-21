@@ -12,6 +12,8 @@ export default composite({
   tts: ["你看，X"],
   literal: "look, X",
   fit: "plain",
+  topics: ["joining-words"],
+  isA: ["conjunction"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:kan4}}, X.",

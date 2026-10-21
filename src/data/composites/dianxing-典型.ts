@@ -12,4 +12,6 @@ export default composite({
   tts: ["很多都是这样"],
   literal: "many are like this",
   fit: "plain",
+  topics: ["state-of-things"],
+  isA: ["condition-quality"],
 });

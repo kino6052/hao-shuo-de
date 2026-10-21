@@ -14,6 +14,8 @@ export default word("jue2", {
     eng: "Feel: {{word:jue2}}-{{light:de2}} says what you feel or think.",
     rus: "Чувствовать: {{word:jue2}}-{{light:de2}} говорит, что вы чувствуете или думаете.",
   },
+  topics: ["senses"],
+  isA: ["perceiving"],
   senses: {
     decide: {
       hanzi: "决",

@@ -14,6 +14,8 @@ export default composite({
   tts: ["拿别的人的，后来给他"],
   literal: "take someone else's, give it back later",
   fit: "plain",
+  topics: ["helping-and-sharing"],
+  isA: ["handling-action"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:na2}} {{word:bie2}}-{{word:de}} {{word:ren2}}-{{word:de}} {{word:shu1}}, {{word:hou4}}-{{word:lai2}} {{word:gei3}} {{word:ta1}}.",

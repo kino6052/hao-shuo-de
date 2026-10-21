@@ -12,4 +12,6 @@ export default composite({
   tts: ["很多人打"],
   literal: "many people fight",
   fit: "plain",
+  topics: ["war-and-peace"],
+  isA: ["event"],
 });

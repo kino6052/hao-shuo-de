@@ -14,5 +14,7 @@ export default composite({
   tts: ["帮人看好看的地方的人"],
   literal: "a person who helps people see good places",
   fit: "plain",
+  topics: ["a-trip"],
+  isA: ["worker"],
   proposed: true,
 });

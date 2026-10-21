@@ -12,6 +12,8 @@ export default composite({
   tts: ["写的看的东西"],
   literal: "a drawn thing to look at",
   fit: "plain",
+  topics: ["art-and-drawing"],
+  isA: ["work-of-art"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:xie3}}-{{word:de}} {{word:kan4}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:hen3}} {{word:hao3}}-{{word:kan4}}.",

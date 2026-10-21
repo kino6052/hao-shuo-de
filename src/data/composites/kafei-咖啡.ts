@@ -12,6 +12,8 @@ export default composite({
   tts: ["热的黑色的水"],
   literal: "black hot water",
   fit: "plain",
+  topics: ["drinks"],
+  isA: ["drink"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:he1}} {{word:re4}}-{{word:de}} {{word:hei1}}-{{word:se4}}-{{word:de}} {{word:shui3}}.",

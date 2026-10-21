@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:li4}}"],
   tts: ["力"],
   fit: "word",
+  topics: ["speed-and-strength"],
+  isA: ["state-name"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:hen3}} {{word:you3}} {{word:li4}}.",

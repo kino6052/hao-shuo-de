@@ -14,5 +14,7 @@ export default composite({
   tts: ["很多人一起吃，在热水里做的吃的"],
   literal: "many people eat together, food cooked in hot water",
   fit: "plain",
+  topics: ["at-a-restaurant"],
+  isA: ["dish"],
   proposed: true,
 });

@@ -14,6 +14,8 @@ export default word("mo1", {
     eng: "Touch, feel with your hand. The sense of touch has no other word.",
     rus: "Трогать, щупать. У осязания нет другого слова.",
   },
+  topics: ["senses"],
+  isA: ["perceiving"],
   maps: "pilin",
   atom: {
     eng: "Touch is a basic way of perceiving that has nothing to do with the other senses.",

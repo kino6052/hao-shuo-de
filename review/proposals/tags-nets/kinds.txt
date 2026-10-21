@@ -1,0 +1,170 @@
+# The kind net, proposed (TAGS_PLAN.md C1). What a word is: a thing, a quality, a kind of doing.
+# Same format as topics.txt. The ten tops are Aristotle's categories in plain names, plus grammar words.
+# Things go about four levels deep (thing > made-thing > tool > cutting-tool); doing and qualities go two or three.
+# An id never repeats a topic id (a kind is singular, a topic a page), so "colour" the quality is not "colours" the page.
+
+thing | Thing | Вещь | 事物
+  living-thing | Living thing | Живое существо | 生物
+    person | Person | Человек | 人
+      relative | Family member | Родственник | 亲属
+      worker | Person with a job | Работник | 职业人员
+      social-role | Friend, neighbour, guest, customer | Социальная роль | 社会角色
+      person-by-age-or-sex | Man, woman, child, old person | Мужчина, женщина, ребёнок | 男女老少
+    animal | Animal | Животное | 动物
+      mammal | Mammal | Млекопитающее | 兽
+      bird | Bird | Птица | 鸟
+      fish | Fish and sea animal | Рыба | 鱼
+      insect | Insect and small animal | Насекомое | 虫
+    plant | Plant | Растение | 植物
+      tree | Tree | Дерево | 树
+      flower | Flower | Цветок | 花
+      crop | Crop and grass | Культура и трава | 庄稼和草
+  body-part | Body part | Часть тела | 身体部位
+  natural-thing | Natural thing | Природное | 自然物
+    material | Material | Материал | 材料
+      metal | Metal | Металл | 金属
+      stone-or-earth | Stone and earth | Камень и земля | 石头和土
+      wood-or-fibre | Wood and fibre | Дерево и волокно | 木头和纤维
+    liquid-or-gas | Liquid and gas | Жидкость и газ | 液体和气体
+    weather-thing | Weather | Погода | 天气现象
+    landform | Mountain, river, sea, land | Форма рельефа | 地形
+    sky-body | Sun, moon and star | Небесное тело | 天体
+    fire-or-light | Fire, light and heat | Огонь и свет | 火和光
+  food-thing | Food and drink | Еда и напитки | 食品
+    fruit-item | Fruit | Фрукт | 水果
+    vegetable-item | Vegetable | Овощ | 蔬菜
+    meat-item | Meat | Мясо | 肉类
+    staple-food | Rice, noodles, bread | Основная еда | 主食
+    dairy-or-egg | Milk food and egg | Молочное и яйца | 奶蛋
+    drink | Drink | Напиток | 饮品
+    seasoning | Seasoning | Приправа | 调味品
+    snack-or-sweet | Snack and sweet | Закуска и сладость | 小吃和甜食
+    dish | Cooked dish | Блюдо | 菜肴
+  made-thing | Made thing | Изделие | 人造物
+    tool | Tool | Инструмент | 工具
+      cutting-tool | Cutting tool | Режущий инструмент | 切割工具
+      hand-tool | Hand tool | Ручной инструмент | 手工具
+      cooking-tool | Cooking tool | Кухонный инструмент | 厨具
+      measuring-tool | Measuring tool | Измерительный прибор | 量具
+      writing-tool | Writing and drawing tool | Пишущий инструмент | 文具
+    machine | Machine and device | Машина и прибор | 机器和设备
+      electric-device | Electric device | Электроприбор | 电器
+      computer-or-phone | Computer and phone | Компьютер и телефон | 电脑和手机
+    vehicle | Vehicle | Транспортное средство | 交通工具
+    container | Container | Ёмкость | 容器
+    clothing | Clothing | Одежда | 衣物
+      garment | Garment | Предмет одежды | 衣服
+      footwear | Footwear | Обувь | 鞋袜
+      headwear-or-accessory | Hat, scarf and other accessories | Головной убор и аксессуар | 帽子和配饰
+    furniture-item | Furniture | Мебель | 家具
+    building-part | Part of a building | Часть здания | 建筑部件
+    paper-thing | Written or printed thing | Бумажные вещи | 文字物品
+    instrument | Musical instrument | Музыкальный инструмент | 乐器
+    toy-or-game | Toy and game | Игрушка и игра | 玩具和游戏
+    money-thing | Money | Деньги | 钱币
+    work-of-art | Picture, film, song, story | Произведение | 作品
+  place | Place | Место | 场所
+    room | Room | Комната | 房间
+    building | Building | Здание | 建筑物
+    outdoor-place | Outdoor place | Место на улице | 户外场所
+    settlement | City, village, country | Город, страна | 城市和国家
+  group-of-people | Group and organisation | Группа и организация | 团体
+  abstract-thing | Idea, event or state | Понятие, событие, состояние | 抽象事物
+    idea | Idea or fact | Мысль или факт | 想法和事实
+    event | Event or occasion | Событие | 事件
+    activity-name | Activity | Занятие | 活动
+    state-name | State or problem | Состояние или проблема | 状况和问题
+    feeling-name | A feeling | Чувство | 情感
+    language-thing | Word, sentence, language | Слово, фраза, язык | 词语和语言
+
+how-much | How much | Сколько | 数量
+  number | Number | Число | 数字
+    counting-number | Counting number | Количественное число | 基数
+    ordinal | Ordinal: first, second | Порядковое число | 序数
+  amount-word | Amount word: many, few, all, half | Слово количества | 数量词语
+  measure-unit | Unit of measure | Единица измерения | 度量单位
+  counting-word | Counting word | Счётное слово | 量词 + grammar-words
+  degree-word | Degree word: very, too, a bit | Степень | 程度词
+
+what-kind | What kind | Какой | 性质
+  size-quality | Size: big, small, long, short | Размер | 大小
+  shape-quality | Shape: round, flat, straight | Форма | 形状
+  colour-quality | Colour | Цвет | 颜色
+  touch-quality | Feel: hard, soft, hot, cold | На ощупь | 触感
+  taste-quality | Taste | Вкус | 味道
+  sound-or-light-quality | Sound and light: loud, quiet, bright | Звук и свет | 声光
+  speed-or-strength | Speed and strength | Скорость и сила | 快慢和强弱
+  age-or-newness | New, old, young | Новый, старый, молодой | 新旧和年龄
+  value-quality | Good, bad, nice | Хороший, плохой | 好坏
+  condition-quality | Clean, full, open, ready | Состояние | 状态
+  character-quality | Character: kind, clever, lazy | Характер | 性格
+  bodily-state | Tired, hungry, ill, well | Состояние тела | 身体状态
+  feeling-quality | Happy, sad, angry, afraid | Эмоциональное состояние | 心情
+  truth-or-ease | Right, wrong, easy, hard | Правильность и трудность | 对错和难易
+
+relation | Relation | Отношение | 关系
+  comparison | Comparison: than, same, different | Сравнение | 比较
+  belonging | Belonging, part and whole | Принадлежность | 所属
+  family-tie | Family tie | Родство | 亲属关系
+  social-tie | Social tie | Социальная связь | 社会关系
+  cause-and-effect | Cause and effect | Причина и следствие | 因果
+
+where | Where | Где | 地点
+  place-word | Here, there, where | Здесь, там, где | 地点词
+  direction | Direction: up, down, left, right | Направление | 方向
+  distance | Near and far | Близко и далеко | 远近
+  place-relation | Inside, outside, above, below | Расположение | 方位
+
+when | When | Когда | 时间
+  time-point | Moment: now, today, yesterday | Момент | 时刻
+  time-span | Stretch: hour, week, year | Промежуток | 时段
+  time-of-day-word | Morning, noon, night | Время суток | 一天中的时间
+  frequency | How often | Как часто | 频率
+  time-order | Before, after, first, then | До, после | 先后
+  calendar-name | Day, month and date names | Названия дней и месяцев | 日期名称
+
+position | Position | Положение | 姿势
+  body-position | Stand, sit, lie, kneel | Поза | 站坐躺
+  placing | Put, hang, lay | Положить, повесить | 放置
+
+having | Having | Обладание | 拥有
+  owning | Have, own | Иметь | 有
+  wearing | Wear, put on | Носить | 穿戴
+  holding | Hold, carry | Держать, нести | 拿着
+
+doing | Doing | Действие | 做
+  moving-action | Moving: go, come, walk, run | Движение | 移动
+  handling-action | Handling: take, give, throw, push | Обращение с предметами | 拿放
+  making | Making and fixing | Создавать и чинить | 制作和修理
+  cleaning-action | Cleaning | Чистить | 清洁
+  eating-and-drinking-action | Eating and drinking | Есть и пить | 吃喝
+  speaking-action | Speaking | Говорить | 说话
+  thinking-action | Thinking and knowing | Думать | 思考
+  perceiving | Seeing, hearing, smelling | Воспринимать | 感知
+  feeling-and-wanting | Liking, loving, wanting | Чувствовать и хотеть | 感受和想要
+  social-action | Acting with others | Действия с другими | 社交
+  trade-action | Buying, selling, paying | Купля и продажа | 买卖
+  body-action | Body action: sleep, wash, laugh, cry | Действия тела | 身体动作
+  learning-and-teaching | Learning and teaching | Учиться и учить | 学和教
+  working | Working | Работать | 工作
+  starting-and-stopping | Starting, stopping, trying | Начинать, заканчивать | 开始和结束
+  playing | Playing, singing, dancing | Играть, петь, танцевать | 玩乐
+
+undergoing | Undergoing | Претерпевание | 受
+  life-change | Being born, growing up, dying | Рождаться, расти, умирать | 生老病死
+  becoming | Becoming and changing | Становиться | 变成
+  happening | Happening | Случаться | 发生
+  weather-happening | Rain, snow, wind blowing | Явления природы | 自然现象
+  being-affected | Being hurt, being ill | Страдать | 受影响
+  receiving | Getting, receiving, losing | Получать и терять | 得到和失去
+
+grammar-words | Grammar words | Служебные слова | 语法词
+  pronoun | Pointer: I, you, this, that | Местоимение | 代词
+  question-word-kind | Question word | Вопросительное слово | 疑问词
+  particle | Little word: le, de, ma | Частица | 助词
+  conjunction | Joining word: and, but, because | Союз | 连词
+  preposition | Word before a noun: in, at, from | Предлог | 介词
+  auxiliary | Helping word: can, will, must | Вспомогательное слово | 助动词
+  negation-word | Not, no | Отрицание | 否定词
+  adverb-word | Also, only, again, already | Наречие | 副词
+  set-phrase | Set phrase: hello, thanks, sorry | Устойчивое выражение | 惯用语

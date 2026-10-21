@@ -12,5 +12,7 @@ export default composite({
   tts: ["真的，不玩儿的"],
   literal: "real, not for play",
   fit: "plain",
+  topics: ["state-of-things"],
+  isA: ["condition-quality"],
   proposed: true,
 });

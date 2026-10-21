@@ -14,5 +14,7 @@ export default composite({
   tts: ["男人工作的时候用的衣服"],
   literal: "the cloth a man uses when he works",
   fit: "plain",
+  topics: ["everyday-clothes"],
+  isA: ["garment"],
   proposed: true,
 });

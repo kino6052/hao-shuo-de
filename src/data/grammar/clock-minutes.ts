@@ -6,6 +6,7 @@ export default pattern("clock-minutes", {
     rus: "После часа число и fēn называют минуты: sān diǎn wǔ fēn — пять минут четвёртого.",
   },
   covers: ["grammar:when"],
+  tags: ["when", "count", "cat:time"],
   template: { hsd: "number {{word:dian3}} number {{word:fen1}}", eng: "Hours and minutes" },
   rules: [
     { lhs: "Time", hsd: "Time Num =fen1", eng: "a time, then minutes" },

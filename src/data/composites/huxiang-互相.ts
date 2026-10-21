@@ -12,5 +12,7 @@ export default composite({
   tts: ["你对他，他也对你"],
   literal: "you to him, and he to you",
   fit: "plain",
+  topics: ["helping-and-sharing"],
+  isA: ["adverb-word"],
   proposed: true,
 });

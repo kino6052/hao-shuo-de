@@ -6,6 +6,7 @@ export default pattern("hai-shi-or", {
     rus: "Hái-shì предлагает выбор: A или B? Оно просит собеседника выбрать, поэтому стоит в вопросе.",
   },
   covers: ["grammar:or"],
+  tags: ["question", "link", "cat:relation"],
   template: { hsd: "A {{word:hai2}}-{{word:shi4}} B", eng: "A or B?" },
   rules: [{ lhs: "NP", hsd: "NP =hai2 =shi4 NP", eng: "two nouns with hái-shì between: A or B" }],
   taught: "inside-a-sentence/and-or",

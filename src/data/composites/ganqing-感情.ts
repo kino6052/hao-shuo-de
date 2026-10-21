@@ -12,6 +12,8 @@ export default composite({
   tts: ["在心里的东西"],
   literal: "what's in the heart",
   fit: "plain",
+  topics: ["happy-feelings"],
+  isA: ["feeling-name"],
   examples: [
     {
       pinyin: "{{Word:zai4}}-{{word:xin1}}-{{word:li3}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:hen3}} {{word:zhong4}}-{{word:yao4}}.",

@@ -14,6 +14,8 @@ export default word("shang4", {
     eng: "Up, on, above: {{word:bao1}}-{{word:shang4}}, on the box. Position and movement need it.",
     rus: "Вверх, на: {{word:bao1}}-{{word:shang4}} — на коробке. Без него ни положения, ни движения.",
   },
+  topics: ["up-down-in-out"],
+  isA: ["place-relation"],
   maps: "",
   paraphrase: {
     forms: ["{{word:tou2}}-{{word:de}} {{word:na4}}-{{word:bian1}}"],

@@ -12,6 +12,8 @@ export default composite({
   tts: ["怎么都"],
   literal: "whichever way",
   fit: "plain",
+  topics: ["adverbs"],
+  isA: ["adverb-word"],
   examples: [
     {
       pinyin: "{{Word:zen3me}} {{word:dou1}} {{word:hao3}}.",

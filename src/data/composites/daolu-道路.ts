@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:lu4}}"],
   tts: ["路"],
   fit: "word",
+  topics: ["the-road"],
+  isA: ["outdoor-place"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:jia1}} {{word:qian2}}-{{word:mian4}} {{word:you3}} {{word:lu4}}.",

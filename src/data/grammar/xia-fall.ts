@@ -6,6 +6,7 @@ export default pattern("xia-fall", {
     rus: "Xià перед вещью может значить «падает»: xià shuǐ — идёт дождь.",
   },
   covers: [],
+  tags: ["basic", "cat:action"],
   template: { hsd: "{{word:xia4}} + thing", eng: "The thing falls" },
   rules: [
     { lhs: "VerbP", hsd: "=xia4 NP", eng: "xià and what falls: it rains" },

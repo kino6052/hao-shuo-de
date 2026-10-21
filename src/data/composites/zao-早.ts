@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:zao3}}"],
   tts: ["早"],
   fit: "word",
+  topics: ["times-of-day"],
+  isA: ["time-of-day-word"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:lai2}}-{{word:de}} {{word:hen3}} {{word:zao3}}.",

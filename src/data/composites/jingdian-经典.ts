@@ -14,5 +14,7 @@ export default composite({
   tts: ["很老的，都说好的"],
   literal: "very old, and everyone says it is good",
   fit: "plain",
+  topics: ["history-and-culture"],
+  isA: ["value-quality"],
   proposed: true,
 });

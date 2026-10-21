@@ -14,5 +14,7 @@ export default composite({
   tts: ["在家里用的，脚上的衣服"],
   literal: "clothing for the feet used at home",
   fit: "plain",
+  topics: ["shoes-and-socks"],
+  isA: ["footwear"],
   proposed: true,
 });

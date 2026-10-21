@@ -12,6 +12,8 @@ export default composite({
   tts: ["比前做好一点"],
   literal: "do it a bit better than before",
   fit: "natural",
+  topics: ["changing"],
+  isA: ["becoming"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yao4}} {{word:bi3}} {{word:qian2}} {{word:zuo4}}-{{word:hao3}} {{word:yi1}}-{{word:dian3}}.",

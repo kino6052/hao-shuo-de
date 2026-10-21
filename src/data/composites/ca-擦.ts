@@ -12,6 +12,8 @@ export default composite({
   tts: ["用衣服做好"],
   literal: "clean it with cloth",
   fit: "plain",
+  topics: ["cleaning"],
+  isA: ["cleaning-action"],
   note: "yīfu covers cloth.",
   examples: [
     {

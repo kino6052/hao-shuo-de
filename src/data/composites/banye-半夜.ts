@@ -12,5 +12,7 @@ export default composite({
   tts: ["晚上很晚"],
   literal: "the evening, very late",
   fit: "plain",
+  topics: ["times-of-day"],
+  isA: ["time-of-day-word"],
   proposed: true,
 });

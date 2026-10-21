@@ -12,6 +12,8 @@ export default composite({
   tts: ["房间"],
   fit: "natural",
   transparent: true,
+  topics: ["house-and-doors"],
+  isA: ["room"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:fang2}}-{{word:jian1}} {{word:hen3}} {{word:xiao3}}.",

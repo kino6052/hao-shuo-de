@@ -16,6 +16,35 @@ export interface Category {
 export const categories = (c: Category[]): Category[] => c;
 
 /**
+ * A tag of the tag nets (TAGS_PLAN.md, K31): src/data/maps/topics.ts (where you
+ * meet a word: home > kitchen > kitchen utensils, a picture-dictionary page)
+ * and src/data/maps/kinds.ts (what it is: thing > tool > cutting tool). A tag
+ * can sit under several parents, so the tags form a net, not a tree. An entry
+ * (a word or a composite) lists only its most specific tags, in `topics` and
+ * `isA`, and is under everything above them. A tag with no parents is a top
+ * tag. The order of the file is the display order.
+ */
+export interface Tag {
+  /** Lowercase words joined by hyphens; unique across both files. */
+  id: string;
+  title: { eng: string; rus: string; zh: string };
+  parents: string[];
+  /** Why the tag is there, or what belongs in it and what does not. */
+  note?: string;
+  /** Anchors into WordNet synset ids and Cilin class codes, for proposing tags by rule (TAGS_PLAN.md C2). */
+  wordnet?: string[];
+  cilin?: string[];
+  /** The tag's name in Hao-shuo-de, once it has one. */
+  hsd?: string;
+  /** Shown without a heading of its own (the old "general" leaf of the category tree). */
+  bare?: true;
+  /** Temporary: members to list first, in this order (keeps the old tree's order until the page is rebuilt, D1). */
+  order?: string[];
+}
+
+export const tags = (t: Tag[]): Tag[] => t;
+
+/**
  * Antonyms or synonyms. `pairs` link two words both ways and are written
  * once; `phrases` give a word a longer Hao-shuo-de form ({{word:}} refs),
  * which isn't a word and so isn't linked back.

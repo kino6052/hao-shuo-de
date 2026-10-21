@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:ye3}}"],
   tts: ["也"],
   fit: "word",
+  topics: ["adverbs"],
+  isA: ["adverb-word"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:ye3}} {{word:yao4}}.",

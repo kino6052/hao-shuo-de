@@ -12,5 +12,7 @@ export default composite({
   tts: ["把X放在火里"],
   literal: "put X in the fire",
   fit: "plain",
+  topics: ["cooking-and-utensils"],
+  isA: ["making"],
   proposed: true,
 });

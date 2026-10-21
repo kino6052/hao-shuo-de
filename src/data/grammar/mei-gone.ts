@@ -6,6 +6,7 @@ export default pattern("mei-gone", {
     rus: "Méi le говорит «нет больше»: wèn-tí jiù méi le — проблемы больше нет. Wán le говорит «кончилось»: shuǐ wán le — вода кончилась.",
   },
   covers: ["grammar:happened"],
+  tags: ["done", "negation", "cat:state", "cat:time"],
   template: { hsd: "Thing {{word:mei2}} {{word:le}}", eng: "The thing is gone" },
   rules: [
     { lhs: "VP", hsd: "mei2 le", eng: "méi le, gone" },

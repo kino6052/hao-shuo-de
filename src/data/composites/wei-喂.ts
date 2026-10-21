@@ -12,6 +12,8 @@ export default composite({
   tts: ["你好"],
   literal: "hello",
   fit: "natural",
+  topics: ["greetings-and-thanks"],
+  isA: ["set-phrase"],
   examples: [
     { pinyin: "{{Word:ni3}} {{word:hao3}}!", hanzi: "你好！", en: "Hello!", ru: "Алло!" },
     {

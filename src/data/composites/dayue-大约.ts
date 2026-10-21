@@ -12,6 +12,8 @@ export default composite({
   tts: ["可能X"],
   literal: "maybe X",
   fit: "plain",
+  topics: ["degree-words"],
+  isA: ["adverb-word"],
   examples: [
     {
       pinyin: "{{Word:ke3}}-{{word:neng2}} {{word:shi2}}-{{light:ge4}} {{word:ren2}} {{word:lai2}}.",

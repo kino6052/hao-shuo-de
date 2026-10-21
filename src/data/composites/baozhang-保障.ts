@@ -12,5 +12,7 @@ export default composite({
   tts: ["说一定会好"],
   literal: "say it will surely be good",
   fit: "plain",
+  topics: ["police-and-safety"],
+  isA: ["social-action"],
   proposed: true,
 });

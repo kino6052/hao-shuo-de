@@ -15,6 +15,8 @@ export default composite({
   tts: ["国家里的地方", "有很多的家的地方"],
   literal: "the place with very many homes",
   fit: "plain",
+  topics: ["countries-and-cities"],
+  isA: ["settlement"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:men}} {{word:qu4}} {{word:you3}}-{{word:hen3}}-{{word:duo1}}-{{word:de}}-{{word:jia1}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",

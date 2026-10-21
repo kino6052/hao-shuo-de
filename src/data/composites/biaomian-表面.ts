@@ -12,6 +12,8 @@ export default composite({
   tts: ["面儿", "外面"],
   literal: "surface / the outside",
   fit: "natural",
+  topics: ["shapes"],
+  isA: ["place-word"],
   examples: [
     {
       pinyin: "{{Word:zhe4}}-{{light:ge4}} {{word:wai4}}-{{word:mian4}} {{word:hen3}} {{word:hao3}}.",

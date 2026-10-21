@@ -12,6 +12,8 @@ export default composite({
   tts: ["通看的料"],
   literal: "material you can see through",
   fit: "plain",
+  topics: ["materials"],
+  isA: ["material"],
   examples: [
     {
       pinyin: "{{Word:tong1}}-{{word:kan4}}-{{word:de}} {{word:liao4}} {{word:hen3}} {{word:da4}}.",

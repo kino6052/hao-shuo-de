@@ -13,6 +13,8 @@ export default composite({
   literal: "…, okay?",
   fit: "natural",
   kinds: ["built", "built"],
+  topics: ["question-words"],
+  isA: ["question-word-kind"],
   examples: [
     {
       pinyin: "{{Word:ni3}}-{{word:de}} {{word:fang2}}-{{word:jian1}} {{word:zen3me}}-{{word:yang4}}?",

@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:suan4}}"],
   tts: ["算"],
   fit: "word",
+  topics: ["sums"],
+  isA: ["thinking-action"],
   note: "Lesson {{lesson:time-and-sums}}.",
   examples: [
     {

@@ -12,6 +12,8 @@ export default composite({
   tts: ["心里怎么觉得"],
   literal: "how you feel inside",
   fit: "plain",
+  topics: ["ideas-and-opinions"],
+  isA: ["idea"],
   examples: [
     {
       pinyin: "{{Word:ni3}} {{word:xin1}}-{{word:li3}} {{word:zen3me}} {{word:jue2}}-{{word:de2}}?",

@@ -14,6 +14,8 @@ export default composite({
   tts: ["手上看点用的工具"],
   literal: "the tool on the hand used for looking at the time",
   fit: "plain",
+  topics: ["accessories"],
+  isA: ["headwear-or-accessory"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:shou3}}-{{word:shang4}} {{word:kan4}}-{{word:dian3}}-{{word:yong4}}-{{word:de}} {{word:gong1}}-{{word:ju4}} {{word:hen3}} {{word:hao3}}.",

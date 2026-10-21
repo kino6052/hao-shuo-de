@@ -12,5 +12,7 @@ export default composite({
   tts: ["一定要"],
   literal: "it is fixed that it is needed",
   fit: "plain",
+  topics: ["helping-words"],
+  isA: ["auxiliary"],
   proposed: true,
 });

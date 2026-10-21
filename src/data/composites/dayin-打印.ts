@@ -12,6 +12,8 @@ export default composite({
   tts: ["用工具写出来"],
   literal: "have a tool write it out",
   fit: "plain",
+  topics: ["office"],
+  isA: ["making"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yong4}} {{word:gong1}}-{{word:ju4}} {{word:xie3}}-{{word:chu1}}-{{word:lai2}}.",

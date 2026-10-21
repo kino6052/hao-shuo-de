@@ -13,6 +13,8 @@ export default composite({
   literal: "food",
   fit: "natural",
   kinds: ["spelled", "built"],
+  topics: ["grains-and-bread"],
+  isA: ["staple-food"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yao4}} {{word:chi1}} {{word:mian4}}-{{word:bao1}}.",

@@ -11,6 +11,8 @@ export default composite({
   hsd: ["{{word:bian4}}"],
   tts: ["变"],
   fit: "word",
+  topics: ["changing"],
+  isA: ["becoming"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:bian4}} {{word:hao3}} {{word:le}}.",

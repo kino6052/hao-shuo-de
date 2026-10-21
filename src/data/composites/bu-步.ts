@@ -12,6 +12,8 @@ export default composite({
   tts: ["脚动一次"],
   literal: "one move of the foot",
   fit: "plain",
+  topics: ["walking-and-running"],
+  isA: ["counting-word"],
   examples: [
     {
       pinyin: "{{Word:wo3}}-{{word:de}} {{word:jiao3}} {{word:dong4}} {{word:yi1}}-{{word:ci4}}.",

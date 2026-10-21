@@ -11,5 +11,7 @@ export default composite({
   hsd: ["{{word:zai4}}", "{{word:dao4}}"],
   tts: ["在", "到"],
   fit: "natural",
+  topics: ["words-before-nouns"],
+  isA: ["preposition"],
   proposed: true,
 });

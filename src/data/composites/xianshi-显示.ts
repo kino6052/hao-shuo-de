@@ -12,6 +12,8 @@ export default composite({
   tts: ["给人看"],
   literal: "give people a look",
   fit: "plain",
+  topics: ["phone-and-computer"],
+  isA: ["perceiving"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:gei3}} {{word:ren2}} {{word:kan4}}.",

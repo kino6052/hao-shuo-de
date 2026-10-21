@@ -12,6 +12,8 @@ export default composite({
   tts: ["不动", "不做了"],
   literal: "not moving / not doing it any more",
   fit: "plain",
+  topics: ["going-and-coming"],
+  isA: ["starting-and-stopping"],
   examples: [
     {
       pinyin: "{{Word:che1}} {{word:bu4}} {{word:dong4}} {{word:le}}.",

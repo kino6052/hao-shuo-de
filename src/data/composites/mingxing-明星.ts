@@ -12,6 +12,8 @@ export default composite({
   tts: ["有名的人"],
   literal: "a person with a name (a famous person)",
   fit: "plain",
+  topics: ["films-and-media"],
+  isA: ["social-role"],
   examples: [
     {
       pinyin: "{{Word:ta1}} {{word:shi4}} {{word:you3}}-{{word:ming2}}-{{word:de}} {{word:ren2}}.",

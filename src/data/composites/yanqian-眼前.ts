@@ -12,5 +12,7 @@ export default composite({
   tts: ["眼睛的前面"],
   literal: "in front of the eyes",
   fit: "plain",
+  topics: ["near-and-far"],
+  isA: ["place-word"],
   proposed: true,
 });

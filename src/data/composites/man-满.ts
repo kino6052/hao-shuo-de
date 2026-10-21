@@ -12,6 +12,8 @@ export default composite({
   tts: ["没有地方了"],
   literal: "no room left",
   fit: "natural",
+  topics: ["much-and-little"],
+  isA: ["condition-quality"],
   examples: [
     {
       pinyin: "{{Word:mei2}} {{word:you3}} {{word:di4}}-{{light:fang1}} {{word:le}}.",

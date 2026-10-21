@@ -12,6 +12,8 @@ export default composite({
   tts: ["用手玩儿的球"],
   literal: "the ball you play with your hands",
   fit: "plain",
+  topics: ["sports"],
+  isA: ["toy-or-game"],
   examples: [
     {
       pinyin: "{{Word:wo3}} {{word:yao4}} {{word:yong4}}-{{word:shou3}}-{{word:wan2r}}-{{word:de}} {{word:qiu2}}.",

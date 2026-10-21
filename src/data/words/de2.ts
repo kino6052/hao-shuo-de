@@ -14,6 +14,8 @@ export default word("de2", {
     eng: "Get, receive. Winning, earning, and getting sick are described with it.",
     rus: "Получать. Через него описывают выигрыш, заработок и болезнь.",
   },
+  topics: ["giving-and-getting"],
+  isA: ["receiving"],
   maps: "kama",
   paraphrase: {
     forms: ["{{word:cong2}} {{word:mei2}}-{{word:you3}} {{word:dao4}} {{word:you3}}"],
