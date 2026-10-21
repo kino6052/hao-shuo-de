@@ -120,7 +120,7 @@ Lessons are named, not numbered: [src/content/book.js](src/content/book.js) is t
 | Tools | Sentence Builder | `src/content/sentence-builder.yaml` |
 | Tools | Word Builder | `src/content/word-builder.yaml` |
 | Tools | Word Map | `src/content/word-map.yaml` |
-| Tools | akinator | `src/content/akinator.yaml` |
+| Tools | Find How to Say It | `src/content/akinator.yaml` |
 | Misc | Why Minimality Works | `src/content/appendix-minimality.yaml` |
 | Misc | The Frontier | `src/content/appendix-frontier.ts` |
 | Misc | Hao-shuo-de is not toki pona | `src/content/appendix-toki-pona.yaml` |

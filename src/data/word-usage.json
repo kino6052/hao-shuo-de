@@ -1,5 +1,9 @@
 {
   "chapters": {
+    "akinator": {
+      "label": "Find How to Say It",
+      "order": 3
+    },
     "appendix-frontier": {
       "label": "The Frontier",
       "order": 2.2

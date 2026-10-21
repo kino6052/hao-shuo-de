@@ -63,7 +63,7 @@ Hǎo-shuō-de
 │   ├── Sentence Builder                                    sentence-builder.yaml
 │   ├── Word Builder                                        word-builder.yaml
 │   ├── Word Map                                            word-map.yaml
-│   └── akinator                                            akinator.yaml
+│   └── Find How to Say It                                  akinator.yaml
 │
 └── Misc
     ├── Why Minimality Works                                appendix-minimality.yaml
