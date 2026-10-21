@@ -14,7 +14,7 @@ export default composite({
   tts: ["让心里的东西出来"],
   literal: "let what is in the heart come out",
   fit: "plain",
-  topics: ["causes-and-results"],
+  topics: ["causing-and-leading-to"],
   isA: ["doing"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["帮人想怎么做的人", "知道很多，可以问的人"],
   literal: "a person who helps people think how to do it / a person who knows a lot and can be asked",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["posts-and-pay"],
   isA: ["worker"],
   proposed: true,
 });

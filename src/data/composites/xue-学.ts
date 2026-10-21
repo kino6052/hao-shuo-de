@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:xue2}}"],
   tts: ["学"],
   fit: "word",
-  topics: ["studying"],
+  topics: ["studying-and-practising"],
   isA: ["learning-and-teaching"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["从左边到右边", "和地一样平"],
   literal: "from left to right / as flat as the ground",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["flat-straight-curved"],
   isA: ["shape-quality"],
   proposed: true,
 });

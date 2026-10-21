@@ -15,7 +15,7 @@ export default composite({
   tts: ["开始有", "新的东西开始出现"],
   literal: "begin to exist / new things begin to appear",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["appearing-and-developing"],
   isA: ["becoming"],
   proposed: true,
 });

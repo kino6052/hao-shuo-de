@@ -15,7 +15,7 @@ export default composite({
   tts: ["生动", "和活的一样"],
   literal: "born and moving / the same as something alive",
   fit: "natural",
-  topics: ["state-of-things"],
+  topics: ["special-and-strange"],
   isA: ["value-quality"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["用脚玩儿的球"],
   literal: "the ball you play with your feet",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["ball-sports"],
   isA: ["toy-or-game"],
   examples: [
     {

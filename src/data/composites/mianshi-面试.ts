@@ -14,7 +14,7 @@ export default composite({
   tts: ["面对面说话，看你能不能做工作"],
   literal: "talk face to face, to see if you can do the work",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["jobs-and-hiring"],
   isA: ["social-action"],
   proposed: true,
 });

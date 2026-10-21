@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:yuan3}}"],
   tts: ["远"],
   fit: "word",
-  topics: ["near-and-far"],
+  topics: ["near-far-and-distance"],
   isA: ["distance"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["多了，不好", "比可以的多"],
   literal: "too many, not good",
   fit: "plain",
-  topics: ["degree-words"],
+  topics: ["too-much-and-completely"],
   isA: ["degree-word"],
   proposed: true,
 });

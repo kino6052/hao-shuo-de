@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X和Y放在一起，不能分开", "乱"],
   literal: "put X and Y together so that they cannot be separated / messy",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["becoming-and-turning-into"],
   isA: ["becoming"],
   proposed: true,
 });

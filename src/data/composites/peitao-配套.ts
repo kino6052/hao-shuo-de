@@ -15,7 +15,7 @@ export default composite({
   tts: ["让X和Y一起用", "把X和Y放在一起用"],
   literal: "make X and Y used together / put X and Y together to use",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["goods-and-customers"],
   isA: ["handling-action"],
   proposed: true,
 });

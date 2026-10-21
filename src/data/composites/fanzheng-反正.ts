@@ -12,7 +12,7 @@ export default composite({
   tts: ["怎么都"],
   literal: "whichever way",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["after-all-anyway-unexpectedly"],
   isA: ["adverb-word"],
   examples: [
     {

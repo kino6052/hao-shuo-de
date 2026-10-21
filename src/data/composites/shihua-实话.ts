@@ -12,7 +12,7 @@ export default composite({
   tts: ["真的话"],
   literal: "true words",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["saying-and-calling"],
   isA: ["language-thing"],
   proposed: true,
 });

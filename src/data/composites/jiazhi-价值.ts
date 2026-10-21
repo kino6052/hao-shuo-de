@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:jia4zhi2}}"],
   tts: ["价值"],
   fit: "word",
-  topics: ["business-and-economy"],
+  topics: ["money-wealth-and-value"],
   isA: ["idea"],
   proposed: true,
 });

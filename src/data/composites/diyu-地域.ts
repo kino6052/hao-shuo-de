@@ -15,7 +15,7 @@ export default composite({
   tts: ["大地方", "一个地方"],
   literal: "a big place / a place",
   fit: "plain",
-  topics: ["countries-and-cities"],
+  topics: ["cities-towns-and-provinces"],
   isA: ["place"],
   proposed: true,
 });

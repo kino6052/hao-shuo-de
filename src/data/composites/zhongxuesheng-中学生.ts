@@ -16,7 +16,7 @@ export default composite({
   literal: "middle-learning student / a not-big, not-small learner",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["classroom"],
+  topics: ["teachers-and-students"],
   isA: ["social-role"],
   examples: [
     {

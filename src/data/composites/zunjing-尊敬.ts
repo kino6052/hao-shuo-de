@@ -12,7 +12,7 @@ export default composite({
   tts: ["觉得X很有价值"],
   literal: "feel X is very valuable",
   fit: "plain",
-  topics: ["liking-and-wanting"],
+  topics: ["respect-and-cherishing"],
   isA: ["feeling-and-wanting"],
   examples: [
     {

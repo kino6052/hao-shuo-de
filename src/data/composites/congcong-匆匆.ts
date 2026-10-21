@@ -15,7 +15,7 @@ export default composite({
   tts: ["时间很少，很快", "快快的"],
   literal: "very little time, very fast / quick-quick",
   fit: "plain",
-  topics: ["speed-and-strength"],
+  topics: ["fast-slow-and-in-a-hurry"],
   isA: ["speed-or-strength"],
   proposed: true,
 });

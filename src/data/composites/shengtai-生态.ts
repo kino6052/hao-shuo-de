@@ -14,7 +14,7 @@ export default composite({
   tts: ["活的东西和他们旁边的东西的关系"],
   literal: "the connection between living things and the things beside them",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["nature-and-environment"],
   isA: ["idea"],
   proposed: true,
 });

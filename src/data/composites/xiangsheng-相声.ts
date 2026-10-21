@@ -14,7 +14,7 @@ export default composite({
   tts: ["两个人说让人笑的话"],
   literal: "two people say words that make people laugh",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["films-and-shows"],
   isA: ["work-of-art"],
   proposed: true,
 });

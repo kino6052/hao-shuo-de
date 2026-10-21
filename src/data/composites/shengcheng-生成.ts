@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:sheng1}}-{{word:chu1}}-{{word:lai2}}", "{{word:zuo4}}-{{word:chu1}}-{{word:lai2}}"],
   tts: ["生出来", "做出来"],
   fit: "natural",
-  topics: ["making-and-doing"],
+  topics: ["building-and-producing"],
   isA: ["making"],
   proposed: true,
 });

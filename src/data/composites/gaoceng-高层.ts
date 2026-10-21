@@ -15,7 +15,7 @@ export default composite({
   tts: ["最上面做决定的人", "很高的地方"],
   literal: "the people at the very top who make the decisions / a very high place",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["posts-and-pay"],
   isA: ["group-of-people"],
   proposed: true,
 });

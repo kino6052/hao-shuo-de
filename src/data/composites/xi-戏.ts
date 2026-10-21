@@ -15,7 +15,7 @@ export default composite({
   tts: ["给人看的东西", "做给人看的东西"],
   literal: "a thing for people to look at / a thing made for people to look at",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["films-and-shows"],
   isA: ["work-of-art"],
   examples: [
     {

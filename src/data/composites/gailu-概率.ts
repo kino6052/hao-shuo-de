@@ -15,7 +15,7 @@ export default composite({
   tts: ["X发生的可能有多大", "一零零次里，X发生多少次"],
   literal: "how big the chance is that X happens / out of a hundred times, how many times X happens",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["totals-and-parts"],
   isA: ["how-much"],
   proposed: true,
 });

@@ -12,6 +12,6 @@ export default composite({
   tts: ["说会让人痛"],
   literal: "say it will make people hurt",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["crimes-and-criminals"],
   isA: ["idea"],
 });

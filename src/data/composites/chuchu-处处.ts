@@ -13,7 +13,7 @@ export default composite({
   literal: "every place …",
   fit: "natural",
   transparent: true,
-  topics: ["near-and-far"],
+  topics: ["here-there-everywhere"],
   isA: ["place-word"],
   proposed: true,
 });

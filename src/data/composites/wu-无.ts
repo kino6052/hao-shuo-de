@@ -12,7 +12,7 @@ export default composite({
   tts: ["没有"],
   fit: "natural",
   transparent: true,
-  topics: ["much-and-little"],
+  topics: ["enough-and-lacking"],
   isA: ["owning"],
   proposed: true,
 });

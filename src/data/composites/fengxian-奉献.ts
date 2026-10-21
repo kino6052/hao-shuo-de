@@ -14,7 +14,7 @@ export default composite({
   tts: ["把我有的都给别人"],
   literal: "give all that I have to other people",
   fit: "plain",
-  topics: ["helping-and-sharing"],
+  topics: ["sharing-and-giving"],
   isA: ["social-action"],
   proposed: true,
 });

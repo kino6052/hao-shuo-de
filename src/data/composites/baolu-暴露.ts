@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X放在外面，让人看见", "让以前看不见的，人看见了"],
   literal: "put X outside so people can see it / what could not be seen before, people see",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["appearing-and-scenes"],
   isA: ["perceiving"],
   proposed: true,
 });

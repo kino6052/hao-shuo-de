@@ -12,7 +12,7 @@ export default composite({
   tts: ["生的地方"],
   literal: "the place you were born",
   fit: "plain",
-  topics: ["countries-and-cities"],
+  topics: ["cities-towns-and-provinces"],
   isA: ["place"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["把动的看的东西留下来", "用机把X的样子留下来"],
   literal: "keep what moves and can be seen / use a machine to keep how X looks",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["filming-and-recording"],
   isA: ["making"],
   proposed: true,
 });

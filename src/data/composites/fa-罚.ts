@@ -15,7 +15,7 @@ export default composite({
   tts: ["让X得到坏的结果", "让X给金"],
   literal: "make X get a bad result / make X pay money",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["punishing-and-forbidding"],
   isA: ["social-action"],
   proposed: true,
 });

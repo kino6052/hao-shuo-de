@@ -12,7 +12,7 @@ export default composite({
   tts: ["写的面"],
   literal: "the surface you write on",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["books-and-paper"],
   isA: ["paper-thing"],
   examples: [
     {

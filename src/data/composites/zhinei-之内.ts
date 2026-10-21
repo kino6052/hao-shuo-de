@@ -11,7 +11,7 @@ export default composite({
   hsd: ["X {{word:li3}}-{{word:mian4}}", "X {{word:li3}}"],
   tts: ["X里面", "X里"],
   fit: "natural",
-  topics: ["up-down-in-out"],
+  topics: ["inside-and-outside"],
   isA: ["place-relation"],
   proposed: true,
 });

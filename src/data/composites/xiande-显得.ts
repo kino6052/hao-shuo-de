@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["看起来", "看起来是这样"],
   fit: "natural",
-  topics: ["looking-and-checking"],
+  topics: ["appearing-and-scenes"],
   isA: ["perceiving"],
   proposed: true,
 });

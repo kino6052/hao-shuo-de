@@ -15,7 +15,7 @@ export default composite({
   ],
   tts: ["前后", "前面和后面", "X前和X后"],
   fit: "natural",
-  topics: ["up-down-in-out"],
+  topics: ["front-and-back"],
   isA: ["place-relation"],
   proposed: true,
 });

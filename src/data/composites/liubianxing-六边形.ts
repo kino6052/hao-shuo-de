@@ -12,7 +12,7 @@ export default composite({
   tts: ["六边的样子"],
   literal: "the six-sided shape",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["circles-squares-cubes"],
   isA: ["shape-quality"],
   proposed: true,
 });

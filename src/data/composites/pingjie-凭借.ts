@@ -12,7 +12,7 @@ export default composite({
   tts: ["用X", "因为有X"],
   literal: "use X / because there is X",
   fit: "plain",
-  topics: ["causes-and-results"],
+  topics: ["reasons-sources-and-conditions"],
   isA: ["cause-and-effect"],
   proposed: true,
 });

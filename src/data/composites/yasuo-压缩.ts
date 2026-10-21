@@ -15,7 +15,7 @@ export default composite({
   tts: ["用力让X变小", "让X变小"],
   literal: "use force to make X smaller / make X smaller",
   fit: "plain",
-  topics: ["pushing-and-pulling"],
+  topics: ["pushing-pulling-and-pressing"],
   isA: ["handling-action"],
   proposed: true,
 });

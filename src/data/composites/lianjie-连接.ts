@@ -14,6 +14,6 @@ export default composite({
   tts: ["让两个东西在一起"],
   literal: "make two things be together",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["typing-clicking-and-downloading"],
   isA: ["handling-action"],
 });

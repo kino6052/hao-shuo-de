@@ -15,7 +15,7 @@ export default composite({
   tts: ["没有金", "没有金买吃的东西"],
   literal: "have no money / have no money to buy food",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["rich-poor-and-worth"],
   isA: ["condition-quality"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["水变高，X在水里面", "让水在X上面"],
   literal: "the water gets high, X is inside the water / let the water be above X",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["rivers-lakes-and-floods"],
   isA: ["happening"],
   proposed: true,
 });

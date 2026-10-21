@@ -15,7 +15,7 @@ export default composite({
   tts: ["最后的部分", "要完的时候"],
   literal: "the last part / the time when it is about to be finished",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["stories-poems-and-essays"],
   isA: ["language-thing"],
   proposed: true,
 });

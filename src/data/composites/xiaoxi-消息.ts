@@ -15,7 +15,7 @@ export default composite({
   tts: ["新闻", "现在发生的"],
   literal: "what is happening now",
   fit: "plain",
-  topics: ["news-and-events"],
+  topics: ["news-and-press"],
   isA: ["idea"],
   note: "Same as 新闻.",
   examples: [

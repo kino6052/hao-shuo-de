@@ -15,7 +15,7 @@ export default composite({
   tts: ["一定会发生", "不能不发生"],
   literal: "will surely happen / cannot not happen",
   fit: "plain",
-  topics: ["causes-and-results"],
+  topics: ["reasons-sources-and-conditions"],
   isA: ["cause-and-effect"],
   proposed: true,
 });

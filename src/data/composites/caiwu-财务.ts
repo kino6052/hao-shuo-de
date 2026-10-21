@@ -12,7 +12,7 @@ export default composite({
   tts: ["金的工作"],
   literal: "the work of money",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["money-wealth-and-value"],
   isA: ["abstract-thing"],
   proposed: true,
 });

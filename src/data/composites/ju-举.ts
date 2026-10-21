@@ -12,7 +12,7 @@ export default composite({
   tts: ["拿起来", "把X起来"],
   literal: "pick up / make X come up",
   fit: "plain",
-  topics: ["pushing-and-pulling"],
+  topics: ["pushing-pulling-and-pressing"],
   isA: ["handling-action"],
   examples: [
     {

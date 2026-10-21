@@ -12,7 +12,7 @@ export default composite({
   tts: ["有名的人"],
   literal: "a person with a name (a famous person)",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["acting-and-roles"],
   isA: ["social-role"],
   examples: [
     {

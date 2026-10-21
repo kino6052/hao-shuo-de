@@ -12,7 +12,7 @@ export default composite({
   tts: ["很不一样"],
   literal: "very different",
   fit: "natural",
-  topics: ["state-of-things"],
+  topics: ["special-and-strange"],
   isA: ["condition-quality"],
   examples: [
     {

@@ -12,7 +12,7 @@ export default composite({
   tts: ["用很多力气"],
   literal: "use a lot of strength",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["work-and-effort"],
   isA: ["working"],
   examples: [
     {

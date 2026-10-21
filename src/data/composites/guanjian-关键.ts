@@ -14,7 +14,7 @@ export default composite({
   tts: ["最有重要的部分"],
   literal: "the most important part",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["key-points-and-principles"],
   isA: ["idea"],
   examples: [
     {

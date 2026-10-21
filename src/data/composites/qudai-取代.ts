@@ -12,7 +12,7 @@ export default composite({
   tts: ["替X做", "用Y替X做"],
   literal: "do it in X's place / use Y to do it in X's place",
   fit: "plain",
-  topics: ["giving-and-getting"],
+  topics: ["losing-and-possessing"],
   isA: ["social-action"],
   proposed: true,
 });

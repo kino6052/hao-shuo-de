@@ -15,7 +15,7 @@ export default composite({
   tts: ["真热", "热到不想动"],
   literal: "really hot / so hot one doesn't want to move",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["hot-and-cold-weather"],
   isA: ["touch-quality"],
   proposed: true,
 });

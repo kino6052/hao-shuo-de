@@ -15,7 +15,7 @@ export default composite({
   tts: ["金很多", "有很多的金"],
   literal: "has a lot of money",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["rich-poor-and-worth"],
   isA: ["condition-quality"],
   proposed: true,
 });

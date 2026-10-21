@@ -14,7 +14,7 @@ export default composite({
   tts: ["用话机的线给远的人的写的东西"],
   literal: "a written thing given to a far-away person by the phone's line",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["phone-calls-and-messages"],
   isA: ["paper-thing"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["一个一个来"],
   literal: "come one by one",
   fit: "plain",
-  topics: ["how-often"],
+  topics: ["again-and-again"],
   isA: ["frequency"],
   proposed: true,
 });

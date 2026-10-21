@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["动作", "人做的动作"],
   fit: "natural",
-  topics: ["making-and-doing"],
+  topics: ["doing-and-carrying-out"],
   isA: ["activity-name"],
   proposed: true,
 });

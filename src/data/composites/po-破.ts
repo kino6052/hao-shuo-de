@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:huai4}}", "{{word:bian4}} {{word:huai4}}"],
   tts: ["坏", "变坏"],
   fit: "natural",
-  topics: ["how-good"],
+  topics: ["good-bad-and-okay"],
   isA: ["condition-quality"],
   proposed: true,
 });

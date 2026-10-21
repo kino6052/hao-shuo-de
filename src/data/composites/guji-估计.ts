@@ -15,7 +15,7 @@ export default composite({
   tts: ["想是…", "算一下，可能是…"],
   literal: "think it is …; work it out a bit, it may be …",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["opinions-and-guesses"],
   isA: ["thinking-action"],
   proposed: true,
 });

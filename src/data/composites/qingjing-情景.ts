@@ -15,7 +15,7 @@ export default composite({
   tts: ["看到的样子", "眼睛前面的样子"],
   literal: "the look of what is seen / the look in front of the eyes",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["appearing-and-scenes"],
   isA: ["idea"],
   proposed: true,
 });

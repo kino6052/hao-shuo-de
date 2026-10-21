@@ -15,7 +15,7 @@ export default composite({
   tts: ["从两边用力，让X不能动", "把X放在两个东西中间"],
   literal: "push hard from the two sides so X cannot move / put X between two things",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["carrying-and-holding"],
   isA: ["handling-action"],
   proposed: true,
 });

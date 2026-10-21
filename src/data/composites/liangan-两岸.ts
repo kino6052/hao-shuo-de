@@ -15,7 +15,7 @@ export default composite({
   tts: ["水两边的地", "水的左边和右边"],
   literal: "the land on the two sides of the water / the left side and the right side of the water",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["sea-coast-and-islands"],
   isA: ["landform"],
   proposed: true,
 });

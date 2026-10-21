@@ -15,7 +15,7 @@ export default composite({
   tts: ["日在天上，很明", "天上没有东西，很明"],
   literal: "the sun is in the sky, very bright / nothing in the sky, very bright",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["weather-and-clouds"],
   isA: ["sound-or-light-quality"],
   proposed: true,
 });

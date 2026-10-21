@@ -13,7 +13,7 @@ export default composite({
   literal: "not afraid",
   fit: "natural",
   transparent: true,
-  topics: ["describing-people"],
+  topics: ["brave-calm-and-lively"],
   isA: ["character-quality"],
   proposed: true,
 });

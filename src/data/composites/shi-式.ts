@@ -12,7 +12,7 @@ export default composite({
   tts: ["X的样子", "X的方法"],
   literal: "the look of X / the way of X",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["features-and-forms"],
   isA: ["idea"],
   proposed: true,
 });

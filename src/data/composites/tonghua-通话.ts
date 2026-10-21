@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["通话", "用话机说话"],
   fit: "natural",
-  topics: ["phone-and-computer"],
+  topics: ["phone-calls-and-messages"],
   isA: ["speaking-action"],
   proposed: true,
 });

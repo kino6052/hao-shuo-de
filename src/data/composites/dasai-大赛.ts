@@ -15,7 +15,7 @@ export default composite({
   tts: ["很多人一起看谁最好", "大的，看谁最好"],
   literal: "very many people together see who is the best / a big one, to see who is the best",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["matches-and-contests"],
   isA: ["event"],
   proposed: true,
 });

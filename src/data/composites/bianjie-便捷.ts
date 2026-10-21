@@ -12,7 +12,7 @@ export default composite({
   tts: ["很好用，很快"],
   literal: "very easy to use, very fast",
   fit: "plain",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["easy-and-convenient"],
   isA: ["truth-or-ease"],
   proposed: true,
 });

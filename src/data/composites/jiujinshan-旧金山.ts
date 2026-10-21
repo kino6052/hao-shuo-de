@@ -12,7 +12,7 @@ export default composite({
   tts: ["旧金山", "美国的大地方"],
   literal: "a big place of Měiguó",
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-cities-and-states"],
   isA: ["settlement"],
   proposed: true,
 });

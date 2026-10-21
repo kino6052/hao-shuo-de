@@ -12,7 +12,7 @@ export default composite({
   tts: ["X完后", "还做下去"],
   literal: "after X is finished / still go on doing it",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["after-later-and-future"],
   isA: ["time-order"],
   proposed: true,
 });

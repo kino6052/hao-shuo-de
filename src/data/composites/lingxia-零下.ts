@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:ling2}}-{{word:xia4}}", "{{word:bi3}} {{word:ling2}} {{word:hai2}} {{word:leng3}}"],
   tts: ["零下", "比零还冷"],
   fit: "natural",
-  topics: ["weather"],
+  topics: ["hot-and-cold-weather"],
   isA: ["touch-quality"],
   proposed: true,
 });

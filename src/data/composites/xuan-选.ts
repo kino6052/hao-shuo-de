@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:na2}} {{word:yi1}}-ge", "{{word:yao4}}"],
   tts: ["拿一个", "要"],
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["choosing-and-deciding"],
   isA: ["thinking-action"],
   note: "wǒ yào zhè-ge: I'll take this one.",
   examples: [

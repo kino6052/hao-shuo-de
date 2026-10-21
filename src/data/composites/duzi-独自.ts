@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["一个人", "不和别人在一起"],
   fit: "natural",
-  topics: ["adverbs"],
+  topics: ["quietly-together-step-by-step"],
   isA: ["adverb-word"],
   proposed: true,
 });

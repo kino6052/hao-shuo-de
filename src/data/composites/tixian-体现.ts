@@ -15,7 +15,7 @@ export default composite({
   tts: ["给人看", "让人看到X"],
   literal: "show to people / let people see X",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["appearing-and-scenes"],
   isA: ["social-action"],
   proposed: true,
 });

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:bian1}}"],
   tts: ["边"],
   fit: "word",
-  topics: ["up-down-in-out"],
+  topics: ["beside-and-around"],
   isA: ["place-relation"],
   examples: [
     {

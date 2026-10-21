@@ -14,7 +14,7 @@ export default composite({
   tts: ["看不到，摸不到，只能想"],
   literal: "cannot be seen, cannot be touched, can only be thought",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["knowledge-and-meaning"],
   isA: ["condition-quality"],
   proposed: true,
 });

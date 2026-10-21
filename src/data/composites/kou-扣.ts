@@ -15,7 +15,7 @@ export default composite({
   tts: ["从X里拿走一些", "衣服上让衣服不开的小东西"],
   literal: "take some away from X / the small thing on clothes that keeps the clothes from opening",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["paying-and-spending"],
   isA: ["handling-action"],
   proposed: true,
 });

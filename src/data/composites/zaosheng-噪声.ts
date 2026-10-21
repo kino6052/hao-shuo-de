@@ -15,7 +15,7 @@ export default composite({
   tts: ["很大的，难听的声音", "难听的声音"],
   literal: "a very loud, unpleasant-to-hear sound / an unpleasant-to-hear sound",
   fit: "plain",
-  topics: ["senses"],
+  topics: ["hearing-and-sounds"],
   isA: ["idea"],
   proposed: true,
 });

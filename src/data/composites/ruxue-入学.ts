@@ -15,7 +15,7 @@ export default composite({
   tts: ["进学校学", "开始在学校学"],
   literal: "enter school to learn / start learning at school",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-days-and-years"],
   isA: ["learning-and-teaching"],
   proposed: true,
 });

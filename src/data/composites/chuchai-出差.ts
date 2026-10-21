@@ -15,7 +15,7 @@ export default composite({
   tts: ["去别的地方工作", "为工作去远的地方"],
   literal: "go to another place to work / go to a far place for work",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["work-days-and-busy"],
   isA: ["working"],
   proposed: true,
 });

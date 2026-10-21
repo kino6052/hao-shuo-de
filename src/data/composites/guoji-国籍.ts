@@ -12,7 +12,7 @@ export default composite({
   tts: ["哪个国的人"],
   literal: "which country's person",
   fit: "plain",
-  topics: ["countries-and-cities"],
+  topics: ["country-and-nation"],
   isA: ["idea"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["是说X的"],
   literal: "what it is about",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["topics-and-examples"],
   isA: ["idea"],
   examples: [
     {

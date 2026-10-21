@@ -15,7 +15,7 @@ export default composite({
   tts: ["做一个新工作的地方", "把一个新工作的地方做起来"],
   literal: "make a new place for work / build up a new place for work",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["companies-and-products"],
   isA: ["working"],
   proposed: true,
 });

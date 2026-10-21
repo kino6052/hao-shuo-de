@@ -16,7 +16,7 @@ export default composite({
   literal: "at the start",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["before-and-after"],
+  topics: ["in-the-past"],
   isA: ["time-order"],
   examples: [
     {

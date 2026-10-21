@@ -15,7 +15,7 @@ export default composite({
   tts: ["两个东西在一起", "X通到Y"],
   literal: "two things are together / X goes through to Y",
   fit: "plain",
-  topics: ["near-and-far"],
+  topics: ["near-far-and-distance"],
   isA: ["place-relation"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["不想X，但X了", "没想就X了"],
   literal: "did not want to X, but X-ed / X-ed without thinking",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["after-all-anyway-unexpectedly"],
   isA: ["adverb-word"],
   proposed: true,
 });

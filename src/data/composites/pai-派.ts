@@ -15,7 +15,7 @@ export default composite({
   tts: ["让X去Y", "想法一样的人"],
   literal: "make X go to Y / people whose thoughts are the same",
   fit: "plain",
-  topics: ["giving-and-getting"],
+  topics: ["sending-and-delivering"],
   isA: ["handling-action"],
   proposed: true,
 });

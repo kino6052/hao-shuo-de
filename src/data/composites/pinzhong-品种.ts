@@ -14,7 +14,7 @@ export default composite({
   tts: ["一种东西里不同的种"],
   literal: "the different kinds inside one kind of thing",
   fit: "plain",
-  topics: ["same-and-different"],
+  topics: ["different-and-varied"],
   isA: ["idea"],
   proposed: true,
 });

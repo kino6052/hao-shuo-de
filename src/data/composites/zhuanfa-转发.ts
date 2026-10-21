@@ -12,7 +12,7 @@ export default composite({
   tts: ["把X又给别人"],
   literal: "give X to others again",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["typing-clicking-and-downloading"],
   isA: ["handling-action"],
   proposed: true,
 });

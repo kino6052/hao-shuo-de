@@ -12,7 +12,7 @@ export default composite({
   tts: ["给", "给X，不要金"],
   literal: "give / give to X, not asking for money",
   fit: "plain",
-  topics: ["giving-and-getting"],
+  topics: ["giving-and-gifts"],
   isA: ["handling-action"],
   proposed: true,
 });

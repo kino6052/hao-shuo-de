@@ -15,7 +15,7 @@ export default composite({
   ],
   tts: ["上进", "想变好", "想比以前好"],
   fit: "natural",
-  topics: ["describing-people"],
+  topics: ["careful-hardworking-and-lazy"],
   isA: ["character-quality"],
   proposed: true,
 });

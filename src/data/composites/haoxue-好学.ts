@@ -12,7 +12,7 @@ export default composite({
   tts: ["爱学", "很想学"],
   literal: "love to learn / really want to learn",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["studying-and-practising"],
   isA: ["character-quality"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["两边一样", "左边和右边一样"],
   literal: "the two sides are the same / the left side and the right side are the same",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["flat-straight-curved"],
   isA: ["shape-quality"],
   proposed: true,
 });

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:bie2}}-{{word:de}}", "{{word:liu2}}-{{word:xia4}}-{{word:lai2}}-{{word:de}}"],
   tts: ["别的", "留下来的"],
   fit: "natural",
-  topics: ["all-and-some"],
+  topics: ["some-most-and-few"],
   isA: ["amount-word"],
   proposed: true,
 });

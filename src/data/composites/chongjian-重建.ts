@@ -15,7 +15,7 @@ export default composite({
   tts: ["把坏了的X又做一次", "把坏了的X做一个新的"],
   literal: "make the broken X one more time / make a new one of the broken X",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["building-and-producing"],
   isA: ["making"],
   proposed: true,
 });

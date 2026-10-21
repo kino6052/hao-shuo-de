@@ -15,7 +15,7 @@ export default composite({
   tts: ["把两个手打在一起", "用两个手发声音"],
   literal: "hit the two hands together / use two hands to make a sound",
   fit: "plain",
-  topics: ["agreeing-and-praising"],
+  topics: ["praising-and-applause"],
   isA: ["social-action"],
   proposed: true,
 });

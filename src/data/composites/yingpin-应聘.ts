@@ -15,7 +15,7 @@ export default composite({
   tts: ["去X找工作", "对X说我想工作"],
   literal: "go to X to look for work / tell X I want to work",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["jobs-and-hiring"],
   isA: ["working"],
   proposed: true,
 });

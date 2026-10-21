@@ -15,7 +15,7 @@ export default composite({
   tts: ["不要金，帮大家的工作", "帮很多人的活动"],
   literal: "work that helps everyone and wants no money / an activity that helps many people",
   fit: "plain",
-  topics: ["helping-and-sharing"],
+  topics: ["sharing-and-giving"],
   isA: ["activity-name"],
   proposed: true,
 });

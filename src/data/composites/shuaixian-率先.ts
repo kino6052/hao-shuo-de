@@ -15,7 +15,7 @@ export default composite({
   tts: ["第一个", "比别人早"],
   literal: "the first one / earlier than the others",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["quietly-together-step-by-step"],
   isA: ["adverb-word"],
   proposed: true,
 });

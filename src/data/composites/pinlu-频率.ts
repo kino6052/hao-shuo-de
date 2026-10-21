@@ -15,7 +15,7 @@ export default composite({
   tts: ["多少次", "一个时间里有多少次"],
   literal: "how many times / how many times in one stretch of time",
   fit: "plain",
-  topics: ["how-often"],
+  topics: ["often-and-usually"],
   isA: ["frequency"],
   proposed: true,
 });

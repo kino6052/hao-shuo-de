@@ -14,7 +14,7 @@ export default word("hui2", {
     eng: "Go back: {{word:hui2}} {{word:jia1}}, go home. Returning has no other word.",
     rus: "Возвращаться: {{word:hui2}} {{word:jia1}} — пойти домой. У возвращения нет другого слова.",
   },
-  topics: ["going-and-coming"],
+  topics: ["go-come-and-return"],
   isA: ["moving-action"],
   paraphrase: {
     forms: [

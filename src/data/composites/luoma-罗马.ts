@@ -11,7 +11,7 @@ export default composite({
   hsd: ["\"Luómǎ\"", "\"Luómǎ\"-{{word:de}}"],
   tts: ["罗马", "罗马的"],
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-cities-and-states"],
   isA: ["settlement"],
   proposed: true,
 });

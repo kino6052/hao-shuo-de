@@ -12,7 +12,7 @@ export default composite({
   tts: ["学的房间"],
   literal: "the learning room",
   fit: "plain",
-  topics: ["classroom"],
+  topics: ["school-buildings-and-grounds"],
   isA: ["room"],
   examples: [
     {

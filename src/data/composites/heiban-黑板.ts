@@ -14,7 +14,7 @@ export default composite({
   tts: ["学校里写字的黑的平的东西"],
   literal: "a black, flat thing in a school that one writes on",
   fit: "plain",
-  topics: ["classroom"],
+  topics: ["pens-books-and-school-bags"],
   isA: ["made-thing"],
   proposed: true,
 });

@@ -13,7 +13,7 @@ export default composite({
   literal: "most behind",
   fit: "natural",
   kinds: ["built"],
-  topics: ["before-and-after"],
+  topics: ["first-next-and-last"],
   isA: ["time-order"],
   note: "Lesson {{lesson:comparing}}.",
   examples: [

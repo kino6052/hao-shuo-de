@@ -12,6 +12,6 @@ export default composite({
   tts: ["别人不能用的"],
   literal: "other people cannot use it",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["normal-and-ordinary"],
   isA: ["condition-quality"],
 });

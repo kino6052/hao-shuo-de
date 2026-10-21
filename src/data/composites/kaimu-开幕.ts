@@ -12,7 +12,7 @@ export default composite({
   tts: ["活动开始"],
   literal: "the event begins",
   fit: "plain",
-  topics: ["news-and-events"],
+  topics: ["events-and-luck"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["让人站不好", "在X上面快动"],
   literal: "makes people unable to stand well / move fast on top of X",
   fit: "plain",
-  topics: ["how-it-feels"],
+  topics: ["comfortable-smooth-wet-dry"],
   isA: ["touch-quality"],
   proposed: true,
 });

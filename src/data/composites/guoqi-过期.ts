@@ -14,7 +14,7 @@ export default composite({
   tts: ["时间到了，不能用了"],
   literal: "the time has come, can't be used any more",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["situations-and-needs"],
   isA: ["happening"],
   proposed: true,
 });

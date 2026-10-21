@@ -13,7 +13,7 @@ export default composite({
   literal: "look at books",
   fit: "natural",
   transparent: true,
-  topics: ["studying"],
+  topics: ["studying-and-practising"],
   isA: ["learning-and-teaching"],
   examples: [
     {

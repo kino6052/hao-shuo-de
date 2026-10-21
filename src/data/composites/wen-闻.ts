@@ -15,7 +15,7 @@ export default composite({
   tts: ["用鼻子觉得味道", "用鼻子觉得X的味道"],
   literal: "use the nose to feel the taste / use the nose to feel X's taste",
   fit: "plain",
-  topics: ["senses"],
+  topics: ["smell-taste-touch-and-feeling"],
   isA: ["perceiving"],
   proposed: true,
 });

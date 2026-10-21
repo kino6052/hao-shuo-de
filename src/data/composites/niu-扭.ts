@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X圆圆地动", "让X的一边动，一边不动"],
   literal: "move X round and round / let one side of X move and the other side not move",
   fit: "plain",
-  topics: ["pushing-and-pulling"],
+  topics: ["tying-twisting-and-shaking"],
   isA: ["handling-action"],
   proposed: true,
 });

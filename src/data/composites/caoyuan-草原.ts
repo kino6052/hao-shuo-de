@@ -14,7 +14,7 @@ export default composite({
   tts: ["有很多小的植物的，很大的平的地方"],
   literal: "a very big flat place with many small plants",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["land-soil-and-the-earth"],
   isA: ["landform"],
   proposed: true,
 });

@@ -13,7 +13,7 @@ export default composite({
   literal: "this kind",
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["pointers"],
+  topics: ["this-that-such"],
   isA: ["pronoun"],
   examples: [
     {

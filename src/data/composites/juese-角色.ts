@@ -14,7 +14,7 @@ export default composite({
   tts: ["给人看的东西里的人"],
   literal: "the person in a thing shown to people",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["acting-and-roles"],
   isA: ["person"],
   proposed: true,
 });

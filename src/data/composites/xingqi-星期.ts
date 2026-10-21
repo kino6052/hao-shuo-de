@@ -12,7 +12,7 @@ export default composite({
   tts: ["七天"],
   literal: "seven days",
   fit: "plain",
-  topics: ["calendar"],
+  topics: ["weeks-months-and-deadlines"],
   isA: ["time-span"],
   examples: [
     {

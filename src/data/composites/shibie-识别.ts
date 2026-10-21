@@ -15,7 +15,7 @@ export default composite({
   tts: ["看到就知道", "知道X和Y不一样"],
   literal: "know it when you see it / know that X and Y are not the same",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["noticing-and-observing"],
   isA: ["thinking-action"],
   proposed: true,
 });

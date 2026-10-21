@@ -14,7 +14,7 @@ export default word("xia4", {
     eng: "Down, under, below: {{word:xia4}}-{{word:mian4}}, {{word:na2}}-{{word:xia4}}-{{word:lai2}}. Position and movement need it.",
     rus: "Вниз, под: {{word:xia4}}-{{word:mian4}}, {{word:na2}}-{{word:xia4}}-{{word:lai2}}. Без него ни положения, ни движения.",
   },
-  topics: ["up-down-in-out"],
+  topics: ["above-and-below"],
   isA: ["place-relation"],
   maps: "",
   paraphrase: {

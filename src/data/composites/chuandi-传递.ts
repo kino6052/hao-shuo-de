@@ -15,7 +15,7 @@ export default composite({
   tts: ["给别的人", "把X从一个人给别人"],
   literal: "give to other people",
   fit: "plain",
-  topics: ["giving-and-getting"],
+  topics: ["sending-and-delivering"],
   isA: ["handling-action"],
   proposed: true,
 });

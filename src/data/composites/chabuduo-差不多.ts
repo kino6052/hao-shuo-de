@@ -12,7 +12,7 @@ export default composite({
   tts: ["大部分一样"],
   literal: "mostly the same",
   fit: "plain",
-  topics: ["same-and-different"],
+  topics: ["like-and-similar"],
   isA: ["comparison"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["还放一点", "让X多一点"],
   literal: "put a bit more / make X a bit more",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["joining-adding-replacing"],
   isA: ["handling-action"],
   proposed: true,
 });

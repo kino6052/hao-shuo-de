@@ -12,7 +12,7 @@ export default composite({
   tts: ["俄亥俄", "美国的一部分"],
   literal: "one part of Měiguó",
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-cities-and-states"],
   isA: ["place"],
   proposed: true,
 });

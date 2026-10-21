@@ -15,7 +15,7 @@ export default composite({
   tts: ["想的能力", "有多高明"],
   literal: "the ability to think / how smart one is",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["wisdom-secrets-and-lessons"],
   isA: ["state-name"],
   proposed: true,
 });

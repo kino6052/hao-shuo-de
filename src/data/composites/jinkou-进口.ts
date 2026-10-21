@@ -15,7 +15,7 @@ export default composite({
   tts: ["进口", "从外国买进来"],
   literal: "go-in opening / from a foreign country buy and bring in",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["buying-supplying-and-launching"],
   isA: ["trade-action"],
   proposed: true,
 });

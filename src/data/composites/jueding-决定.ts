@@ -16,7 +16,7 @@ export default composite({
   literal: "come to know what to do",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["deciding"],
+  topics: ["choosing-and-deciding"],
   isA: ["thinking-action"],
   examples: [
     {

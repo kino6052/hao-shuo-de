@@ -15,7 +15,7 @@ export default composite({
   tts: ["好好看，好好学", "好好看，找真的"],
   literal: "look carefully, study carefully / look carefully, find what is true",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["thinking-and-researching"],
   isA: ["thinking-action"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["找出是谁做的", "问是谁做的，说他不对"],
   literal: "find out who did it / ask who did it, say he is wrong",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["courts-and-trials"],
   isA: ["social-action"],
   proposed: true,
 });

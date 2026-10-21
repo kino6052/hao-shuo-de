@@ -15,7 +15,7 @@ export default composite({
   tts: ["做重要的决定", "重要的决定"],
   literal: "make an important decision / an important decision",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["choosing-and-deciding"],
   isA: ["thinking-action"],
   proposed: true,
 });

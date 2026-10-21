@@ -15,7 +15,7 @@ export default composite({
   tts: ["身体又好了", "身体从不好变好"],
   literal: "the body is good again / the body goes from not good to good",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["fever-colds-and-diseases"],
   isA: ["becoming"],
   proposed: true,
 });

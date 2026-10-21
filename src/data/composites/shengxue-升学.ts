@@ -15,7 +15,7 @@ export default composite({
   tts: ["学完了，进比以前高的学校", "去高一点的学校学"],
   literal: "finished studying, go into a school higher than before / go to a bit higher school to study",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-days-and-years"],
   isA: ["learning-and-teaching"],
   proposed: true,
 });

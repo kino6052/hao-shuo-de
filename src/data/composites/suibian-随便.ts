@@ -12,7 +12,7 @@ export default composite({
   tts: ["就可以"],
   literal: "then it's fine",
   fit: "natural",
-  topics: ["describing-people"],
+  topics: ["brave-calm-and-lively"],
   isA: ["character-quality"],
   examples: [
     {

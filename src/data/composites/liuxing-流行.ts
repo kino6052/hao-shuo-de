@@ -12,6 +12,6 @@ export default composite({
   tts: ["很多人都爱"],
   literal: "many people love it",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["television-radio-and-media"],
   isA: ["condition-quality"],
 });

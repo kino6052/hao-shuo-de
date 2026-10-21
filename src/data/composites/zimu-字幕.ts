@@ -15,7 +15,7 @@ export default composite({
   tts: ["写在下面的话", "看的东西下面的字"],
   literal: "the words written at the bottom / the characters under the thing you watch",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["filming-and-recording"],
   isA: ["language-thing"],
   proposed: true,
 });

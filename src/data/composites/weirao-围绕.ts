@@ -15,7 +15,7 @@ export default composite({
   tts: ["在X的四边都有", "在X的外面走圆的路"],
   literal: "be on all four sides of X",
   fit: "plain",
-  topics: ["up-down-in-out"],
+  topics: ["beside-and-around"],
   isA: ["place-relation"],
   proposed: true,
 });

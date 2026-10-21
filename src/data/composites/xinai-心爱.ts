@@ -15,7 +15,7 @@ export default composite({
   ],
   tts: ["心爱", "心里很爱的", "最爱的"],
   fit: "natural",
-  topics: ["liking-and-wanting"],
+  topics: ["liking-loving-and-missing"],
   isA: ["feeling-quality"],
   proposed: true,
 });

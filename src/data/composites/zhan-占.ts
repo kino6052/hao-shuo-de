@@ -15,7 +15,7 @@ export default composite({
   tts: ["把地方用了", "是X的一部分"],
   literal: "use up the space",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["totals-and-parts"],
   isA: ["owning"],
   proposed: true,
 });

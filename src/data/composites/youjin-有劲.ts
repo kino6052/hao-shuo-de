@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:you3}}-{{word:li4}}", "{{word:li4}} {{word:hen3}} {{word:da4}}"],
   tts: ["有力", "力很大"],
   fit: "natural",
-  topics: ["speed-and-strength"],
+  topics: ["strong-and-weak-body-and-force"],
   isA: ["speed-or-strength"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["帮X学我能做的", "把我的做法给X"],
   literal: "help X learn what I can do / give my way of doing it to X",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["teaching-homework-and-questions"],
   isA: ["learning-and-teaching"],
   proposed: true,
 });

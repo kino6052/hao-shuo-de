@@ -15,7 +15,7 @@ export default composite({
   tts: ["两个地方有多远", "多远"],
   literal: "how far there is between two places",
   fit: "plain",
-  topics: ["near-and-far"],
+  topics: ["near-far-and-distance"],
   isA: ["distance"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["关坏人的地方"],
   literal: "the place that shuts in bad people",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["punishing-and-forbidding"],
   isA: ["building"],
   proposed: true,
 });

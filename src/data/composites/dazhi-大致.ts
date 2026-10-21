@@ -15,7 +15,7 @@ export default composite({
   tts: ["大部分一样", "可能X"],
   literal: "mostly the same / maybe X",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["totals-and-parts"],
   isA: ["amount-word"],
   proposed: true,
 });

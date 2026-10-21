@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:kuai4}}", "{{word:hen3}} {{word:kuai4}}"],
   tts: ["快", "很快"],
   fit: "natural",
-  topics: ["adverbs"],
+  topics: ["quietly-together-step-by-step"],
   isA: ["adverb-word"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["想的方法", "头里面怎么想"],
   literal: "the way of thinking / how the head thinks",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["thinking-and-researching"],
   isA: ["idea"],
   proposed: true,
 });

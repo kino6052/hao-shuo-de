@@ -15,7 +15,7 @@ export default composite({
   tts: ["帮人学动身体的人", "帮人很多次做，变好的人"],
   literal: "the person who helps people learn to move the body / the person who helps people do it many times and get better",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["athletes-and-sports-grounds"],
   isA: ["worker"],
   proposed: true,
 });

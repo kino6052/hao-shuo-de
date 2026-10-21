@@ -12,7 +12,7 @@ export default composite({
   tts: ["在心里的力"],
   literal: "strength in the heart",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["trying-and-persisting"],
   isA: ["feeling-name"],
   examples: [
     {

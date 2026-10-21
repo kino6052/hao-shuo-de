@@ -15,7 +15,7 @@ export default composite({
   tts: ["很难，但最后做到了", "用了很大的力"],
   literal: "very hard, but in the end it was done / used a lot of strength",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["just-then-and-finally"],
   isA: ["adverb-word"],
   proposed: true,
 });

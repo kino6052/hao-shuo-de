@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:bian4}} {{word:xiao3}}", "{{word:rang4}} X {{word:bian4}} {{word:xiao3}}"],
   tts: ["变小", "让X变小"],
   fit: "natural",
-  topics: ["changing"],
+  topics: ["decreasing-and-breaking-down"],
   isA: ["becoming"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["不发声音", "用很小的声音"],
   literal: "not give off a sound / with a very small sound",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["quietly-together-step-by-step"],
   isA: ["adverb-word"],
   proposed: true,
 });

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:chang2}}-{{word:chang2}}", "{{word:zuo4}} {{word:hen3}} {{word:duo1}} {{word:ci4}}"],
   tts: ["常常", "做很多次"],
   fit: "natural",
-  topics: ["how-often"],
+  topics: ["often-and-usually"],
   isA: ["frequency"],
   proposed: true,
 });

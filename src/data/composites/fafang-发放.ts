@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["发放", "把X给很多人"],
   fit: "natural",
-  topics: ["giving-and-getting"],
+  topics: ["giving-and-gifts"],
   isA: ["handling-action"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["很好看，让人爱"],
   literal: "very good to look at, makes people love it",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["looks-and-build"],
   isA: ["value-quality"],
   proposed: true,
 });

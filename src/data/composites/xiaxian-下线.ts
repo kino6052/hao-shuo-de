@@ -15,7 +15,7 @@ export default composite({
   tts: ["下线", "从网上出来"],
   literal: "come out of the net",
   fit: "natural",
-  topics: ["phone-and-computer"],
+  topics: ["internet-and-websites"],
   isA: ["happening"],
   proposed: true,
 });

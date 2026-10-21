@@ -15,7 +15,7 @@ export default composite({
   tts: ["不在家里的", "在外面活的"],
   literal: "not in the home / living outside",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["natural-and-man-made"],
   isA: ["condition-quality"],
   proposed: true,
 });

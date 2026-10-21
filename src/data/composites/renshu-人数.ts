@@ -13,7 +13,7 @@ export default composite({
   literal: "how many people",
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["much-and-little"],
+  topics: ["totals-and-parts"],
   isA: ["amount-word"],
   examples: [
     {

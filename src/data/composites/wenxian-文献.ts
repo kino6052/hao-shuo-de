@@ -14,7 +14,7 @@ export default composite({
   tts: ["写下来的重要的东西"],
   literal: "the important things that were written down",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["books-and-paper"],
   isA: ["paper-thing"],
   proposed: true,
 });

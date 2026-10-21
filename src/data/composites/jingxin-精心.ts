@@ -15,7 +15,7 @@ export default composite({
   tts: ["很用心", "好好想，好好做"],
   literal: "very attentive / think it through well, do it well",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["careful-hardworking-and-lazy"],
   isA: ["character-quality"],
   proposed: true,
 });

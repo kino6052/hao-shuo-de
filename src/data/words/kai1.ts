@@ -14,7 +14,7 @@ export default word("kai1", {
     eng: "Open, turn on: doors, boxes, lights, cars ({{word:kai1}} {{word:che1}}, drive).",
     rus: "Открыть, включить: двери, коробки, свет, машины ({{word:kai1}} {{word:che1}} — водить).",
   },
-  topics: ["pushing-and-pulling"],
+  topics: ["opening-and-closing"],
   isA: ["handling-action"],
   paraphrase: {
     forms: [

@@ -12,7 +12,7 @@ export default composite({
   tts: ["就"],
   literal: "then",
   fit: "natural",
-  topics: ["joining-words"],
+  topics: ["but-and-although"],
   isA: ["conjunction"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["一看就知道", "很大，一看就知道"],
   literal: "you know at one look / very big, you know at one look",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["special-and-strange"],
   isA: ["condition-quality"],
   proposed: true,
 });

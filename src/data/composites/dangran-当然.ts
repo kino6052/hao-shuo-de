@@ -12,7 +12,7 @@ export default composite({
   tts: ["不用说"],
   literal: "no need to say",
   fit: "natural",
-  topics: ["adverbs"],
+  topics: ["maybe-of-course-obviously"],
   isA: ["adverb-word"],
   examples: [
     {

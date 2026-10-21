@@ -12,7 +12,7 @@ export default composite({
   tts: ["人和人中间的"],
   literal: "between person and person",
   fit: "plain",
-  topics: ["people-together"],
+  topics: ["gathering-and-getting-along"],
   isA: ["social-tie"],
   proposed: true,
 });

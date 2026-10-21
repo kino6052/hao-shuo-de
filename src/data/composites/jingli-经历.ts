@@ -15,7 +15,7 @@ export default composite({
   tts: ["做过的东西", "发生过的东西"],
   literal: "things that have happened to you",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["knowledge-and-meaning"],
   isA: ["being-affected"],
   examples: [
     {

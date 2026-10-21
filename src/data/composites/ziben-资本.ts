@@ -14,7 +14,7 @@ export default composite({
   tts: ["做东西要用的金"],
   literal: "the money needed to make things",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["money-wealth-and-value"],
   isA: ["money-thing"],
   proposed: true,
 });

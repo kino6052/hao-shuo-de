@@ -12,7 +12,7 @@ export default composite({
   tts: ["有用", "有用"],
   literal: "has use",
   fit: "natural",
-  topics: ["how-good"],
+  topics: ["useful-and-harmful"],
   isA: ["value-quality"],
   examples: [
     {

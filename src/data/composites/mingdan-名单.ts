@@ -14,7 +14,7 @@ export default composite({
   tts: ["写了很多人的名字的东西"],
   literal: "a thing with many people's names written on it",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["books-and-paper"],
   isA: ["paper-thing"],
   proposed: true,
 });

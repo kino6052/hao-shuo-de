@@ -14,7 +14,7 @@ export default composite({
   tts: ["一点一点变到次次都做"],
   literal: "little by little, become something you do every time",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["continuing-and-adapting"],
   isA: ["becoming"],
   proposed: true,
 });

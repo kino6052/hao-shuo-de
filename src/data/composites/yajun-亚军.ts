@@ -15,7 +15,7 @@ export default composite({
   tts: ["第二号的人", "只有一个人比他好"],
   literal: "the number-two person / only one person is better than him",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["medals-and-champions"],
   isA: ["person"],
   proposed: true,
 });

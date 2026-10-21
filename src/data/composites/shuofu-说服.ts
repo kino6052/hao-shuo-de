@@ -15,7 +15,7 @@ export default composite({
   tts: ["说到X想做", "说，让X觉得对"],
   literal: "talk until X wants to do it",
   fit: "plain",
-  topics: ["agreeing-and-praising"],
+  topics: ["advising-and-promising"],
   isA: ["speaking-action"],
   proposed: true,
 });

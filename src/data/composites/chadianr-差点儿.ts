@@ -12,7 +12,7 @@ export default composite({
   tts: ["只有一点不到"],
   literal: "only a little short",
   fit: "plain",
-  topics: ["degree-words"],
+  topics: ["almost-and-probably"],
   isA: ["adverb-word"],
   proposed: true,
 });

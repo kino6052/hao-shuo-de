@@ -15,7 +15,7 @@ export default composite({
   tts: ["后面的时间", "时间的最后一部分"],
   literal: "the time at the back / the last part of the time",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["moments-and-stages"],
   isA: ["time-span"],
   proposed: true,
 });

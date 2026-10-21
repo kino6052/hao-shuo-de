@@ -15,7 +15,7 @@ export default composite({
   tts: ["天天都有的", "天天都做的"],
   literal: "had every day / done every day",
   fit: "plain",
-  topics: ["how-often"],
+  topics: ["often-and-usually"],
   isA: ["frequency"],
   proposed: true,
 });

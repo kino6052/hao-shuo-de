@@ -12,7 +12,7 @@ export default composite({
   tts: ["结果"],
   fit: "natural",
   transparent: true,
-  topics: ["causes-and-results"],
+  topics: ["results-and-effects"],
   isA: ["cause-and-effect"],
   examples: [
     {

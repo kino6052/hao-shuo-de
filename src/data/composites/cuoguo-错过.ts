@@ -15,7 +15,7 @@ export default composite({
   tts: ["晚了，没到", "没得到"],
   literal: "was late, did not arrive / did not get",
   fit: "plain",
-  topics: ["giving-and-getting"],
+  topics: ["losing-and-possessing"],
   isA: ["receiving"],
   proposed: true,
 });

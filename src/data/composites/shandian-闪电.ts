@@ -15,7 +15,7 @@ export default composite({
   tts: ["天上快明一下的东西", "天上明一下的火"],
   literal: "the thing in the sky that is quickly bright for a moment / the fire in the sky that is bright for a moment",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["air-wind-and-storms"],
   isA: ["weather-thing"],
   proposed: true,
 });

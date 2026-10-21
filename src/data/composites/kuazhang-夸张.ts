@@ -12,7 +12,7 @@ export default composite({
   tts: ["说的比真的大"],
   literal: "what is said is bigger than the real thing",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["explaining-and-describing"],
   isA: ["condition-quality"],
   proposed: true,
 });

@@ -10,7 +10,7 @@ export default word("sheng1yin1", {
     eng: "Sound, voice, noise. Music and speech are described from it.",
     rus: "Звук, голос, шум. Через него описывают музыку и речь.",
   },
-  topics: ["senses"],
+  topics: ["hearing-and-sounds"],
   isA: ["state-name"],
   maps: "kalama",
   paraphrase: {

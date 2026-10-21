@@ -15,7 +15,7 @@ export default composite({
   tts: ["要学的东西", "学校里要学的东西"],
   literal: "the things that are to be learned",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-subjects-and-courses"],
   isA: ["activity-name"],
   proposed: true,
 });

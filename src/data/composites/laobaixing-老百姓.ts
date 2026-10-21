@@ -15,7 +15,7 @@ export default composite({
   tts: ["平常的人", "国里平常的人"],
   literal: "ordinary people / ordinary people in the country",
   fit: "plain",
-  topics: ["people-together"],
+  topics: ["peoples-and-generations"],
   isA: ["group-of-people"],
   proposed: true,
 });

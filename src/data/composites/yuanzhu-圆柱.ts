@@ -12,7 +12,7 @@ export default composite({
   tts: ["圆的长的东西"],
   literal: "a round long thing",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["circles-squares-cubes"],
   isA: ["shape-quality"],
   proposed: true,
 });

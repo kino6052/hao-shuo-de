@@ -15,7 +15,7 @@ export default composite({
   tts: ["放好，以后用", "把X放好，以后用"],
   literal: "put it away, use it later / put X away, use it later",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["gathering-keeping-and-storing"],
   isA: ["placing"],
   proposed: true,
 });

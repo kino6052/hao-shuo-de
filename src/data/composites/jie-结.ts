@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:jie2}}"],
   tts: ["结"],
   fit: "word",
-  topics: ["pushing-and-pulling"],
+  topics: ["tying-twisting-and-shaking"],
   isA: ["handling-action"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["没有完", "没有完的时候"],
   literal: "there is no finishing / there is no time of finishing",
   fit: "plain",
-  topics: ["how-often"],
+  topics: ["again-and-again"],
   isA: ["frequency"],
   proposed: true,
 });

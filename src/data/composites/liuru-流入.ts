@@ -15,7 +15,7 @@ export default composite({
   tts: ["动进X里面", "从外面动到里面"],
   literal: "move into the inside of X / move from the outside to the inside",
   fit: "plain",
-  topics: ["going-and-coming"],
+  topics: ["going-in-and-coming-out"],
   isA: ["moving-action"],
   proposed: true,
 });

@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["机会", "好的时候，好的机会"],
   fit: "natural",
-  topics: ["state-of-things"],
+  topics: ["situations-and-needs"],
   isA: ["idea"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["网上地方的名字", "网站的名字"],
   literal: "the name of a place on the net / the name of a website",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["internet-and-websites"],
   isA: ["language-thing"],
   proposed: true,
 });

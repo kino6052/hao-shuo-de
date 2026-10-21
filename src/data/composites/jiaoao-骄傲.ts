@@ -12,6 +12,6 @@ export default composite({
   tts: ["想我最好"],
   literal: "think I am the best",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["kind-honest-and-mean"],
   isA: ["character-quality"],
 });

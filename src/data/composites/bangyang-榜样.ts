@@ -15,7 +15,7 @@ export default composite({
   tts: ["别人想学的人", "人人都想学的人"],
   literal: "a person everyone wants to learn from; a person others want to learn from",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["clever-skilled-and-famous"],
   isA: ["person"],
   proposed: true,
 });

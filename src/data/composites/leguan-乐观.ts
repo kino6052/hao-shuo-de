@@ -15,7 +15,7 @@ export default composite({
   tts: ["觉得以后会变好", "想好的"],
   literal: "feel that later it will become good / think the good",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["brave-calm-and-lively"],
   isA: ["character-quality"],
   proposed: true,
 });

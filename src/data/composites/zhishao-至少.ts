@@ -12,7 +12,7 @@ export default composite({
   tts: ["最少"],
   literal: "least",
   fit: "natural",
-  topics: ["degree-words"],
+  topics: ["a-little-and-rather"],
   isA: ["degree-word"],
   examples: [
     {

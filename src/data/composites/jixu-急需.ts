@@ -15,7 +15,7 @@ export default composite({
   tts: ["现在就要", "不能等，要"],
   literal: "want it right now / cannot wait, need it",
   fit: "plain",
-  topics: ["liking-and-wanting"],
+  topics: ["wanting-needing-and-should"],
   isA: ["feeling-and-wanting"],
   proposed: true,
 });

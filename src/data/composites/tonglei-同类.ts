@@ -15,7 +15,7 @@ export default composite({
   tts: ["是一样的种", "一样的种"],
   literal: "is the same kind / the same kind",
   fit: "plain",
-  topics: ["same-and-different"],
+  topics: ["same-and-equal"],
   isA: ["comparison"],
   proposed: true,
 });

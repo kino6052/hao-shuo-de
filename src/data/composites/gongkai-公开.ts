@@ -15,7 +15,7 @@ export default composite({
   tts: ["让很多人都知道", "很多人都可以看到"],
   literal: "let very many people all know / very many people can all see it",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["introducing-and-passing-on"],
   isA: ["speaking-action"],
   proposed: true,
 });

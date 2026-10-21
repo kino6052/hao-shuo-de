@@ -12,7 +12,7 @@ export default composite({
   tts: ["把X做坏", "让X变坏"],
   literal: "make X bad (broken) / make X become broken",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["breaking-and-taking-apart"],
   isA: ["making"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["让X做难的东西，看X能不能做好", "让X做很难的东西"],
   literal: "make X do hard things, see whether X can do it well / make X do very hard things",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["checking-and-testing"],
   isA: ["thinking-action"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["放在一起，是…", "一起"],
   literal: "put together, it is …",
   fit: "plain",
-  topics: ["all-and-some"],
+  topics: ["half-both-and-only-one"],
   isA: ["amount-word"],
   proposed: true,
 });

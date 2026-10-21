@@ -13,7 +13,7 @@ export default composite({
   literal: "hit-open",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["pushing-and-pulling"],
+  topics: ["opening-and-closing"],
   isA: ["handling-action"],
   note: "A real pair: dǎ + kāi.",
   examples: [

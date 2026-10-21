@@ -15,7 +15,7 @@ export default composite({
   tts: ["前面的时间", "时间最前面的部分"],
   literal: "the earlier time / the very front part of a time",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["moments-and-stages"],
   isA: ["time-span"],
   proposed: true,
 });

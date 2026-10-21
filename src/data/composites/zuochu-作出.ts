@@ -12,7 +12,7 @@ export default composite({
   tts: ["做出"],
   literal: "make come out",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["choosing-and-deciding"],
   isA: ["making"],
   examples: [
     {

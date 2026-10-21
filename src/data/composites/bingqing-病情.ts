@@ -15,7 +15,7 @@ export default composite({
   tts: ["身体不好的现在的样子", "身体不好的人现在多好，多坏"],
   literal: "the way the not-good body is now / how good, how bad a person with a not-good body is now",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["fever-colds-and-diseases"],
   isA: ["state-name"],
   proposed: true,
 });

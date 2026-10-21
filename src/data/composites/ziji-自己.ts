@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:wo3}}", "{{word:ni3}}", "{{word:ta1}}"],
   tts: ["我", "你", "他"],
   fit: "word",
-  topics: ["pointers"],
+  topics: ["self-and-others"],
   isA: ["pronoun"],
   note: "Just the pointer, depending on who: wǒ kàn wǒ.",
   examples: [

@@ -14,7 +14,7 @@ export default composite({
   tts: ["在国里的大的地方"],
   literal: "a big place inside a country",
   fit: "plain",
-  topics: ["countries-and-cities"],
+  topics: ["named-cities-and-states"],
   isA: ["settlement"],
   proposed: true,
 });

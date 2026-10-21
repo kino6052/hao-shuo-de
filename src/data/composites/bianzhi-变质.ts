@@ -12,7 +12,7 @@ export default composite({
   tts: ["变坏，不能吃了"],
   literal: "become bad, it can no longer be eaten",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["becoming-and-turning-into"],
   isA: ["becoming"],
   proposed: true,
 });

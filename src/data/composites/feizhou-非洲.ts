@@ -11,7 +11,7 @@ export default composite({
   hsd: ["\"Fēizhōu\""],
   tts: ["非洲"],
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["world-and-continents"],
   isA: ["place"],
   note: "Names go in quotes.",
 });

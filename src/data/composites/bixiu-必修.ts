@@ -15,7 +15,7 @@ export default composite({
   tts: ["一定要学的", "不能不学的"],
   literal: "surely must be learned / cannot not be learned",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-subjects-and-courses"],
   isA: ["condition-quality"],
   proposed: true,
 });

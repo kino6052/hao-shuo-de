@@ -14,7 +14,7 @@ export default composite({
   tts: ["学的时间和地方"],
   literal: "the time and place of learning",
   fit: "plain",
-  topics: ["classroom"],
+  topics: ["lessons-and-classes"],
   isA: ["room"],
   proposed: true,
 });

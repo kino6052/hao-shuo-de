@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X说给人听", "说X是怎么发生的"],
   literal: "say X to people to hear / say how X happened",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["explaining-and-describing"],
   isA: ["speaking-action"],
   proposed: true,
 });

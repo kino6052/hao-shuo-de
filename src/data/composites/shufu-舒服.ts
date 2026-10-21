@@ -12,7 +12,7 @@ export default composite({
   tts: ["觉得好"],
   literal: "feel good",
   fit: "plain",
-  topics: ["how-it-feels"],
+  topics: ["comfortable-smooth-wet-dry"],
   isA: ["bodily-state"],
   examples: [
     {

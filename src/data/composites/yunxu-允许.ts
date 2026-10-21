@@ -12,7 +12,7 @@ export default composite({
   tts: ["让"],
   literal: "let",
   fit: "plain",
-  topics: ["helping-and-sharing"],
+  topics: ["letting-and-leading"],
   isA: ["social-action"],
   note: "bù jiào: won't let.",
   examples: [

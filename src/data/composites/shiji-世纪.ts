@@ -15,7 +15,7 @@ export default composite({
   tts: ["一零零年", "十个十年的时间"],
   literal: "one-zero-zero years / the time of ten tens of years",
   fit: "plain",
-  topics: ["calendar"],
+  topics: ["years-and-centuries"],
   isA: ["time-span"],
   proposed: true,
 });

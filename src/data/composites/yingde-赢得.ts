@@ -15,7 +15,7 @@ export default composite({
   tts: ["比别的人好", "比别的人好，得到X"],
   literal: "better than the other people / better than the other people, get X",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["winning-losing-and-scores"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["用一下，看好不好", "用一下"],
   literal: "use it for a moment and see if it is good",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["trying-and-persisting"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

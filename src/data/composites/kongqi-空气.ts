@@ -12,7 +12,7 @@ export default composite({
   tts: ["空气"],
   fit: "natural",
   kinds: ["built"],
-  topics: ["weather"],
+  topics: ["air-wind-and-storms"],
   isA: ["liquid-or-gas"],
   examples: [
     {

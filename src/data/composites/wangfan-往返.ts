@@ -15,7 +15,7 @@ export default composite({
   tts: ["去和回来", "去了又回来"],
   literal: "go and come back / went and came back again",
   fit: "plain",
-  topics: ["going-and-coming"],
+  topics: ["go-come-and-return"],
   isA: ["moving-action"],
   proposed: true,
 });

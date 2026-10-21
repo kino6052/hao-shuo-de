@@ -12,7 +12,7 @@ export default composite({
   tts: ["英国", "在欧洲的国"],
   literal: "a country in Ōuzhōu",
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-countries"],
   isA: ["settlement"],
   proposed: true,
 });

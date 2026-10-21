@@ -15,7 +15,7 @@ export default composite({
   tts: ["好好看X，说X是什么", "看X，说X里面是什么"],
   literal: "look closely at X, say what X is / look at X, say what is inside X",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["knowing-and-grasping"],
   isA: ["thinking-action"],
   proposed: true,
 });

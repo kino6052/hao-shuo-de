@@ -15,7 +15,7 @@ export default composite({
   tts: ["学很长时间后能做好的东西", "\"中国\"的打法"],
   literal: "what you can do well after learning for a long time / the Chinese way of fighting",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["exercise-and-kinds-of-sport"],
   isA: ["activity-name"],
   proposed: true,
 });

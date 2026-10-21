@@ -12,7 +12,7 @@ export default composite({
   tts: ["说不", "说不对"],
   literal: "say no / say it's not right",
   fit: "plain",
-  topics: ["agreeing-and-praising"],
+  topics: ["refusing-and-criticising"],
   isA: ["social-action"],
   examples: [
     {

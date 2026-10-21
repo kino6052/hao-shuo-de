@@ -15,6 +15,6 @@ export default composite({
   tts: ["外来", "从外面来的"],
   literal: "coming from outside",
   fit: "plain",
-  topics: ["countries-and-cities"],
+  topics: ["country-and-nation"],
   isA: ["condition-quality"],
 });

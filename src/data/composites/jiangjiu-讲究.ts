@@ -15,7 +15,7 @@ export default composite({
   tts: ["小地方也要好", "对小的地方很小心"],
   literal: "even small places must be good / very careful with small places",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["careful-hardworking-and-lazy"],
   isA: ["character-quality"],
   proposed: true,
 });

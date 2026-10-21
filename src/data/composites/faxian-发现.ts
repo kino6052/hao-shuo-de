@@ -13,7 +13,7 @@ export default composite({
   literal: "look-arrive",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["looking-and-checking"],
+  topics: ["noticing-and-observing"],
   isA: ["perceiving"],
   examples: [
     {

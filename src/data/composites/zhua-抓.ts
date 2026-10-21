@@ -12,7 +12,7 @@ export default composite({
   tts: ["用手拿"],
   literal: "take with your hand",
   fit: "plain",
-  topics: ["pushing-and-pulling"],
+  topics: ["pushing-pulling-and-pressing"],
   isA: ["handling-action"],
   examples: [
     {

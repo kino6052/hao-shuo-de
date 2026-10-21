@@ -12,7 +12,7 @@ export default composite({
   tts: ["一个一个地"],
   literal: "one by one",
   fit: "plain",
-  topics: ["all-and-some"],
+  topics: ["all-and-every"],
   isA: ["amount-word"],
   proposed: true,
 });

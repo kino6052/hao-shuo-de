@@ -12,7 +12,7 @@ export default composite({
   tts: ["不要别的人帮"],
   literal: "needs no one's help",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["brave-calm-and-lively"],
   isA: ["character-quality"],
   examples: [
     {

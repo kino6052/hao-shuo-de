@@ -12,7 +12,7 @@ export default composite({
   tts: ["看了X，说好"],
   literal: "see X, tap once, say it is good",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["typing-clicking-and-downloading"],
   isA: ["social-action"],
   proposed: true,
 });

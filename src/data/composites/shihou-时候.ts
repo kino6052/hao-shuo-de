@@ -13,7 +13,7 @@ export default composite({
   literal: "the time of X",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["before-and-after"],
+  topics: ["moments-and-stages"],
   isA: ["time-point"],
   note: "Hao-shuo-de uses shí-jiān (§4d).",
   examples: [

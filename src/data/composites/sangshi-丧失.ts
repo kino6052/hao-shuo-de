@@ -15,7 +15,7 @@ export default composite({
   tts: ["以前有X，现在没有了", "有的东西没了"],
   literal: "had X before, do not have it now / the thing one had is gone",
   fit: "plain",
-  topics: ["giving-and-getting"],
+  topics: ["losing-and-possessing"],
   isA: ["receiving"],
   proposed: true,
 });

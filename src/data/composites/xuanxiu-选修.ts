@@ -15,7 +15,7 @@ export default composite({
   tts: ["学我想学的", "我决定学什么，就学什么"],
   literal: "study what I want to study / I decide what to study, and study that",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-subjects-and-courses"],
   isA: ["learning-and-teaching"],
   proposed: true,
 });

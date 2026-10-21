@@ -14,7 +14,7 @@ export default word("ying4", {
     eng: "Hard, like stone: rock, metal, and glass are described from it.",
     rus: "Твёрдый, как камень: через него описывают камень, металл и стекло.",
   },
-  topics: ["how-it-feels"],
+  topics: ["hard-soft-heavy-light"],
   isA: ["touch-quality"],
   maps: "kiwen",
   paraphrase: {

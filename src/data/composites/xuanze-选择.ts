@@ -12,7 +12,7 @@ export default composite({
   tts: ["拿一个"],
   literal: "take one",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["choosing-and-deciding"],
   isA: ["thinking-action"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["和别的比", "面对面"],
   literal: "compared with the others; face to face",
   fit: "plain",
-  topics: ["same-and-different"],
+  topics: ["more-and-less-than"],
   isA: ["comparison"],
   proposed: true,
 });

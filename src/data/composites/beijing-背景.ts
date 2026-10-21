@@ -15,7 +15,7 @@ export default composite({
   tts: ["X后面的东西", "X以前发生的东西"],
   literal: "the things behind X / the things that happened before X",
   fit: "plain",
-  topics: ["up-down-in-out"],
+  topics: ["front-and-back"],
   isA: ["idea"],
   proposed: true,
 });

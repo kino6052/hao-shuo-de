@@ -14,7 +14,7 @@ export default composite({
   tts: ["写我的名字和工作的小卡"],
   literal: "a small card with my name and my work written on it",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["posts-and-pay"],
   isA: ["paper-thing"],
   proposed: true,
 });

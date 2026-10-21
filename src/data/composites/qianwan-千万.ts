@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:yi1}}-{{word:ding4}}", "{{word:yi1}}-{{word:ding4}} {{word:yao4}}"],
   tts: ["一定", "一定要"],
   fit: "natural",
-  topics: ["adverbs"],
+  topics: ["maybe-of-course-obviously"],
   isA: ["adverb-word"],
   proposed: true,
 });

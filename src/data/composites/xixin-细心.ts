@@ -15,7 +15,7 @@ export default composite({
   tts: ["小心", "小的部分都看"],
   literal: "careful / look at even the small parts",
   fit: "natural",
-  topics: ["describing-people"],
+  topics: ["careful-hardworking-and-lazy"],
   isA: ["character-quality"],
   proposed: true,
 });

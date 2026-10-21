@@ -15,7 +15,7 @@ export default composite({
   tts: ["用力做出X", "做出很好的X"],
   literal: "make X with effort / make a very good X",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["building-and-producing"],
   isA: ["making"],
   proposed: true,
 });

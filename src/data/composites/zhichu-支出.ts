@@ -15,7 +15,7 @@ export default composite({
   tts: ["出去的金", "用了的金"],
   literal: "the money that goes out / the money that was used",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["paying-and-spending"],
   isA: ["money-thing"],
   proposed: true,
 });

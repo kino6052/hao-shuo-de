@@ -15,7 +15,7 @@ export default composite({
   tts: ["心里的样子，别人能看出来", "一个人让别人觉得怎么样"],
   literal: "the look of the heart, others can see it / how a person makes others feel",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["strong-and-weak-points"],
   isA: ["character-quality"],
   proposed: true,
 });

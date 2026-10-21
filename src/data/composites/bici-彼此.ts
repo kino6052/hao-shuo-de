@@ -15,7 +15,7 @@ export default composite({
   tts: ["你对他，他也对你", "我对你，你也对我"],
   literal: "you to him, he also to you / I to you, you also to me",
   fit: "plain",
-  topics: ["pointers"],
+  topics: ["self-and-others"],
   isA: ["pronoun"],
   proposed: true,
 });

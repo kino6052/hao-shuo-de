@@ -15,7 +15,7 @@ export default composite({
   tts: ["国家里的小的地方", "比有很多的家的地方小的地方"],
   literal: "a small place in the country",
   fit: "plain",
-  topics: ["countries-and-cities"],
+  topics: ["cities-towns-and-provinces"],
   isA: ["settlement"],
   proposed: true,
 });

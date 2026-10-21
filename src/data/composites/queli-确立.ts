@@ -15,7 +15,7 @@ export default composite({
   tts: ["定下来", "决定，不变"],
   literal: "settle it down / decide, don't change",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["solving-and-making-sure"],
   isA: ["making"],
   proposed: true,
 });

@@ -14,7 +14,7 @@ export default composite({
   tts: ["让人看不到远的白色的气"],
   literal: "white air that makes people unable to see far",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["air-wind-and-storms"],
   isA: ["weather-thing"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["只有X有"],
   literal: "only X has it",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["special-and-strange"],
   isA: ["condition-quality"],
   proposed: true,
 });

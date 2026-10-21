@@ -12,7 +12,7 @@ export default composite({
   tts: ["让X知道做不对了"],
   literal: "what you learn from a matter done wrong / make X know it was done wrong",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["wisdom-secrets-and-lessons"],
   isA: ["idea"],
   proposed: true,
 });

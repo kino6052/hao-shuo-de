@@ -13,7 +13,7 @@ export default composite({
   literal: "very fast",
   fit: "natural",
   transparent: true,
-  topics: ["speed-and-strength"],
+  topics: ["fast-slow-and-in-a-hurry"],
   isA: ["speed-or-strength"],
   proposed: true,
 });

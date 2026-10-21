@@ -12,7 +12,7 @@ export default composite({
   tts: ["这样", "真"],
   literal: "like this / really",
   fit: "natural",
-  topics: ["pointers"],
+  topics: ["this-that-such"],
   isA: ["pronoun"],
   note: "zhè-yàng zuò: do it like this. zhēn dà: so big.",
   examples: [

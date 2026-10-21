@@ -12,7 +12,7 @@ export default composite({
   tts: ["你对他，他也对你"],
   literal: "you to him, and he to you too",
   fit: "plain",
-  topics: ["same-and-different"],
+  topics: ["related-and-matching"],
   isA: ["adverb-word"],
   proposed: true,
 });

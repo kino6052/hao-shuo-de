@@ -13,7 +13,7 @@ export default composite({
   literal: "not past",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["joining-words"],
+  topics: ["but-and-although"],
   isA: ["conjunction"],
   examples: [
     {

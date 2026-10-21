@@ -12,7 +12,7 @@ export default composite({
   tts: ["在水旁边的地"],
   literal: "the ground next to the water",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["sea-coast-and-islands"],
   isA: ["landform"],
   proposed: true,
 });

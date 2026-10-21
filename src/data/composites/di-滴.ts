@@ -15,7 +15,7 @@ export default composite({
   tts: ["一点一点下来", "很小的一点水"],
   literal: "come down a little at a time / a very small bit of water",
   fit: "plain",
-  topics: ["going-and-coming"],
+  topics: ["climbing-and-falling"],
   isA: ["moving-action"],
   proposed: true,
 });

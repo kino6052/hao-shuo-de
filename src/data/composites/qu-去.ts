@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:qu4}}"],
   tts: ["去"],
   fit: "word",
-  topics: ["going-and-coming"],
+  topics: ["go-come-and-return"],
   isA: ["moving-action"],
   examples: [
     {

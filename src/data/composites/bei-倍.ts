@@ -12,7 +12,7 @@ export default composite({
   tts: ["把X放在一起Y次"],
   literal: "put X together Y times",
   fit: "plain",
-  topics: ["counting-words"],
+  topics: ["times-rounds-and-minutes"],
   isA: ["counting-word"],
   proposed: true,
 });

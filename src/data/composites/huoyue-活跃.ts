@@ -15,7 +15,7 @@ export default composite({
   tts: ["很爱动", "让很多人爱动"],
   literal: "very fond of moving / make many people fond of moving",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["brave-calm-and-lively"],
   isA: ["character-quality"],
   proposed: true,
 });

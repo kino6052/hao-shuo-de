@@ -15,7 +15,7 @@ export default composite({
   tts: ["X不好，Y比X好", "X没有Y好"],
   literal: "X is not good, Y is better than X / X is not as good as Y",
   fit: "plain",
-  topics: ["joining-words"],
+  topics: ["but-and-although"],
   isA: ["conjunction"],
   proposed: true,
 });

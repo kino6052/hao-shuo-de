@@ -12,7 +12,7 @@ export default composite({
   tts: ["眼睛看不见的人"],
   literal: "a person whose eyes can't see",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["pain-and-feeling-unwell"],
   isA: ["person"],
   proposed: true,
 });

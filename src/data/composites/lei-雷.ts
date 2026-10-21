@@ -12,7 +12,7 @@ export default composite({
   tts: ["天上很大的声音"],
   literal: "the very big sound in the sky",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["air-wind-and-storms"],
   isA: ["weather-thing"],
   proposed: true,
 });

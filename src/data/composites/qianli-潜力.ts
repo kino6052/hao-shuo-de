@@ -15,7 +15,7 @@ export default composite({
   tts: ["以后能有的力", "还没用出来的力"],
   literal: "the strength one can have later / the strength not yet used",
   fit: "plain",
-  topics: ["speed-and-strength"],
+  topics: ["energy-and-intensity"],
   isA: ["idea"],
   proposed: true,
 });

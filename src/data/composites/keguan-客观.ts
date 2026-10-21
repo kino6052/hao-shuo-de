@@ -15,7 +15,7 @@ export default composite({
   tts: ["不是我觉得，是真的", "人人看到的都一样"],
   literal: "not what I feel, but what is true / what everyone sees is the same",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["opinions-and-views"],
   isA: ["truth-or-ease"],
   proposed: true,
 });

@@ -14,7 +14,7 @@ export default composite({
   tts: ["一起做的人，人不多"],
   literal: "people who do it together, not many people",
   fit: "plain",
-  topics: ["people-together"],
+  topics: ["teams-and-clubs"],
   isA: ["group-of-people"],
   proposed: true,
 });

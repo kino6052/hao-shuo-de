@@ -12,7 +12,7 @@ export default composite({
   tts: ["放进去"],
   literal: "put it in",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["putting-and-placing"],
   isA: ["handling-action"],
   examples: [
     {

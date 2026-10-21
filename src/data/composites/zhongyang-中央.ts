@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:zhong1}}-{{word:xin1}}", "{{word:zhong1}}-{{word:jian1}}"],
   tts: ["中心", "中间"],
   fit: "natural",
-  topics: ["up-down-in-out"],
+  topics: ["middle-and-among"],
   isA: ["place-relation"],
   proposed: true,
 });

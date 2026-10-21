@@ -15,7 +15,7 @@ export default composite({
   tts: ["在水上动", "在水上面，不下去"],
   literal: "move on the water / be on top of the water, not go down",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["rivers-lakes-and-floods"],
   isA: ["moving-action"],
   proposed: true,
 });

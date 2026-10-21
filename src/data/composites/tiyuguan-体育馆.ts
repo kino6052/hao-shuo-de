@@ -15,7 +15,7 @@ export default composite({
   tts: ["动身体的大房子", "动身体的地方"],
   literal: "the big house for moving the body / a place to move the body",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["athletes-and-sports-grounds"],
   isA: ["building"],
   proposed: true,
 });

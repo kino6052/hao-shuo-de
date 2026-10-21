@@ -12,7 +12,7 @@ export default composite({
   tts: ["开始学", "第一次学"],
   literal: "begin to learn / learn for the first time",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["studying-and-practising"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

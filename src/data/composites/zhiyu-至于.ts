@@ -12,7 +12,7 @@ export default composite({
   tts: ["说到X"],
   fit: "natural",
   transparent: true,
-  topics: ["joining-words"],
+  topics: ["then-for-example-in-short"],
   isA: ["preposition"],
   proposed: true,
 });

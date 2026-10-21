@@ -12,7 +12,7 @@ export default composite({
   tts: ["日本", "日本国"],
   literal: "the country of Rìběn",
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-countries"],
   isA: ["settlement"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["让人明白", "让人明白的东西"],
   literal: "make people understand / a thing that makes people understand",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["wisdom-secrets-and-lessons"],
   isA: ["idea"],
   proposed: true,
 });

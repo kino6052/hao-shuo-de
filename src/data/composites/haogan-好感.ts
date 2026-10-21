@@ -15,7 +15,7 @@ export default composite({
   tts: ["觉得别人很好", "心里对他很好"],
   literal: "feeling that another person is very good / in the heart being very good toward him",
   fit: "plain",
-  topics: ["liking-and-wanting"],
+  topics: ["liking-loving-and-missing"],
   isA: ["feeling-name"],
   proposed: true,
 });

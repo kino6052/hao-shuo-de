@@ -15,7 +15,7 @@ export default composite({
   tts: ["想最大的问题的学的", "想为什么的学的"],
   literal: "the science of thinking about the biggest questions / the science of thinking about why",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["knowledge-and-meaning"],
   isA: ["idea"],
   proposed: true,
 });

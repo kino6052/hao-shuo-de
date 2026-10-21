@@ -14,7 +14,7 @@ export default composite({
   tts: ["人人都在的地方"],
   literal: "the place where everyone is",
   fit: "plain",
-  topics: ["countries-and-cities"],
+  topics: ["world-and-continents"],
   isA: ["place"],
   examples: [
     {

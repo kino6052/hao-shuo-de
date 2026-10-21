@@ -12,7 +12,7 @@ export default composite({
   tts: ["坏到让人怕"],
   literal: "so bad that people are afraid",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["kind-honest-and-mean"],
   isA: ["character-quality"],
   proposed: true,
 });

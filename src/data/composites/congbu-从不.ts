@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["从不", "什么时间都不…"],
   fit: "natural",
-  topics: ["how-often"],
+  topics: ["sometimes-rarely-and-never"],
   isA: ["frequency"],
   proposed: true,
 });

@@ -12,6 +12,6 @@ export default composite({
   tts: ["要用的金"],
   literal: "money to be used",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["money-wealth-and-value"],
   isA: ["money-thing"],
 });

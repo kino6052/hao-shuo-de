@@ -12,7 +12,7 @@ export default composite({
   tts: ["有多难"],
   literal: "how hard it is",
   fit: "plain",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["hard-and-difficult"],
   isA: ["idea"],
   proposed: true,
 });

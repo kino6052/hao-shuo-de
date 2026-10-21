@@ -15,7 +15,7 @@ export default composite({
   tts: ["能工作的人", "工作的人的力"],
   literal: "people who can work / the strength of the working people",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["work-and-effort"],
   isA: ["group-of-people"],
   proposed: true,
 });

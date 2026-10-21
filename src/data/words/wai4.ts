@@ -10,7 +10,7 @@ export default word("wai4", {
     eng: "Outside, out: {{word:wai4}}-{{word:mian4}}, outside. The pair to {{word:li3}}.",
     rus: "Снаружи, вне: {{word:wai4}}-{{word:mian4}} — снаружи. Пара к {{word:li3}}.",
   },
-  topics: ["up-down-in-out"],
+  topics: ["inside-and-outside"],
   isA: ["place-relation"],
   maps: "weka",
   paraphrase: { forms: ["{{word:bu4}} {{word:zai4}} {{word:li3}}-{{word:mian4}}"], verdict: "clumsy" },

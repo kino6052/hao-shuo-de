@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:kong1}}"],
   tts: ["空"],
   fit: "word",
-  topics: ["state-of-things"],
+  topics: ["empty-messy-clear"],
   isA: ["condition-quality"],
   examples: [
     {

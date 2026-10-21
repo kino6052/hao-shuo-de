@@ -14,7 +14,7 @@ export default composite({
   tts: ["做说好要做的东西"],
   literal: "do the thing that was agreed to be done",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["managing-and-progress"],
   isA: ["working"],
   proposed: true,
 });

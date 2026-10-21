@@ -12,7 +12,7 @@ export default composite({
   tts: ["做"],
   literal: "do",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["doing-and-carrying-out"],
   isA: ["making"],
   examples: [
     {

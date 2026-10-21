@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X从地上拿起来", "拿地上的X"],
   literal: "take X up from the ground / take the X on the ground",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["taking-picking-up-and-using"],
   isA: ["handling-action"],
   proposed: true,
 });

@@ -13,7 +13,7 @@ export default composite({
   literal: "a man who learns",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["classroom"],
+  topics: ["teachers-and-students"],
   isA: ["person-by-age-or-sex"],
   examples: [
     {

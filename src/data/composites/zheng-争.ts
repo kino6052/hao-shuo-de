@@ -12,7 +12,7 @@ export default composite({
   tts: ["两个人都要"],
   literal: "both want it",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["matches-and-contests"],
   isA: ["social-action"],
   examples: [
     {

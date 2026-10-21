@@ -12,7 +12,7 @@ export default composite({
   tts: ["是X的", "在X里"],
   literal: "be X's / be in X",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["totals-and-parts"],
   isA: ["belonging"],
   proposed: true,
 });

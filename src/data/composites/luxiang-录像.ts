@@ -15,7 +15,7 @@ export default composite({
   tts: ["把动的看的东西留下来", "留下来的动的看的东西"],
   literal: "keep the moving thing to look at / the kept moving thing to look at",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["filming-and-recording"],
   isA: ["making"],
   proposed: true,
 });

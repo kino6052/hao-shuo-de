@@ -15,7 +15,7 @@ export default composite({
   tts: ["帮很多人，不要金", "心很好，做很多对的东西"],
   literal: "help many people, want no money / a very good heart, do many right things",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["kind-honest-and-mean"],
   isA: ["character-quality"],
   proposed: true,
 });

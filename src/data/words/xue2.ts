@@ -14,7 +14,7 @@ export default word("xue2", {
     eng: "Learn. You could say you want to {{word:zhi1dao4}}, but learning is a whole activity: school, students, practice.",
     rus: "Учиться. Можно сказать, что хочешь {{word:zhi1dao4}}, но учёба — целое занятие: школа, ученики, практика.",
   },
-  topics: ["studying"],
+  topics: ["studying-and-practising"],
   isA: ["learning-and-teaching"],
   paraphrase: {
     forms: [

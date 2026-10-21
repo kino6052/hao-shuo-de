@@ -15,7 +15,7 @@ export default composite({
   tts: ["因为冷，身体不好", "冷了，身体不好"],
   literal: "because of the cold, the body is not good / it got cold, the body is not good",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["pain-and-feeling-unwell"],
   isA: ["being-affected"],
   proposed: true,
 });

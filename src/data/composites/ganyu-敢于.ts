@@ -12,7 +12,7 @@ export default composite({
   tts: ["不怕做"],
   literal: "not afraid to do it",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["willing-daring-and-forced"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

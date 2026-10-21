@@ -15,7 +15,7 @@ export default composite({
   tts: ["地动", "地在动，房子坏了"],
   literal: "the ground moves; the ground is moving, houses are broken",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["land-soil-and-the-earth"],
   isA: ["happening"],
   proposed: true,
 });

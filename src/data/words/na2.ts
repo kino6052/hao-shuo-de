@@ -14,7 +14,7 @@ export default word("na2", {
     eng: "Take, hold, bring: {{word:na2}}-{{word:lai2}}, bring it. Also subtraction.",
     rus: "Брать, держать, нести: {{word:na2}}-{{word:lai2}} — принести. А ещё вычитание.",
   },
-  topics: ["taking-and-holding"],
+  topics: ["taking-picking-up-and-using"],
   isA: ["handling-action"],
   paraphrase: {
     forms: ["{{word:rang4}} X {{word:zai4}} {{word:wo3}} {{word:shou3}}-{{word:li3}}"],

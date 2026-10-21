@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:xiang3}}", "{{word:jue2}}-{{light:de2}}", "{{word:yao4}}"],
   tts: ["想", "觉得", "要"],
   fit: "word",
-  topics: ["knowing-and-understanding"],
+  topics: ["thinking-and-researching"],
   isA: ["thinking-action"],
   note: "\"Think\" is jué-de, \"want\" is yào.",
   examples: [

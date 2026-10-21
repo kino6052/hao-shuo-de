@@ -15,7 +15,7 @@ export default composite({
   tts: ["用说话的方法写的话", "和说话一样的写的话"],
   literal: "words written the way people talk / written words just like talking",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["stories-poems-and-essays"],
   isA: ["language-thing"],
   proposed: true,
 });

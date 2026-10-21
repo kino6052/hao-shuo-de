@@ -15,7 +15,7 @@ export default composite({
   tts: ["很难不发生", "不可能不发生"],
   literal: "very hard for it not to happen / it cannot be that it does not happen",
   fit: "plain",
-  topics: ["causes-and-results"],
+  topics: ["reasons-sources-and-conditions"],
   isA: ["condition-quality"],
   proposed: true,
 });

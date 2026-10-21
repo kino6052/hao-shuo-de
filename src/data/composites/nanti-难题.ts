@@ -15,7 +15,7 @@ export default composite({
   tts: ["难题", "很难的东西"],
   literal: "something very difficult",
   fit: "natural",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["hard-and-difficult"],
   isA: ["idea"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["圆的部分很大", "摸起来不平"],
   literal: "its round part is big / it is not flat to the touch",
   fit: "plain",
-  topics: ["how-it-feels"],
+  topics: ["comfortable-smooth-wet-dry"],
   isA: ["touch-quality"],
   proposed: true,
 });

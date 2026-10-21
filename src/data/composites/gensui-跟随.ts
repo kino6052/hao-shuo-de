@@ -15,7 +15,7 @@ export default composite({
   tts: ["在X后面去", "和X一起走，在X后面"],
   literal: "go behind X / walk together with X, behind X",
   fit: "plain",
-  topics: ["going-and-coming"],
+  topics: ["go-come-and-return"],
   isA: ["moving-action"],
   proposed: true,
 });

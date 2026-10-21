@@ -15,7 +15,7 @@ export default composite({
   tts: ["热了就变水", "不硬了，变水了"],
   literal: "when it gets hot, it becomes water / not hard any more, became water",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["becoming-and-turning-into"],
   isA: ["becoming"],
   proposed: true,
 });

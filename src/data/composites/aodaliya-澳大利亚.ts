@@ -12,7 +12,7 @@ export default composite({
   tts: ["澳大利亚", "澳大利亚国"],
   literal: "the country of Àodàlìyà",
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-countries"],
   isA: ["settlement"],
   proposed: true,
 });

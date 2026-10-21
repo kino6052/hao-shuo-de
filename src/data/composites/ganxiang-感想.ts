@@ -15,7 +15,7 @@ export default composite({
   tts: ["心里想的话", "看了听了以后，心里想的"],
   literal: "the words the heart thinks / what the heart thinks after seeing and hearing",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["opinions-and-views"],
   isA: ["idea"],
   proposed: true,
 });

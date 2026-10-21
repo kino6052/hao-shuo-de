@@ -15,7 +15,7 @@ export default composite({
   tts: ["很快，也好用", "很快，不难"],
   literal: "fast, and also easy to use / fast, not hard",
   fit: "plain",
-  topics: ["speed-and-strength"],
+  topics: ["fast-slow-and-in-a-hurry"],
   isA: ["speed-or-strength"],
   proposed: true,
 });

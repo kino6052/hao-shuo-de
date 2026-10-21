@@ -14,7 +14,7 @@ export default composite({
   tts: ["用来让人知道X的小样子"],
   literal: "a small shape used to let people know X",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["words-and-characters"],
   isA: ["language-thing"],
   proposed: true,
 });

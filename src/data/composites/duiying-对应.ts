@@ -15,7 +15,7 @@ export default composite({
   tts: ["一个对一个", "X和Y一个对一个"],
   literal: "one to one / X and Y one to one",
   fit: "natural",
-  topics: ["same-and-different"],
+  topics: ["related-and-matching"],
   isA: ["comparison"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["很多人买", "很快就买完了"],
   literal: "many people buy it / it is all bought very soon",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["buying-and-selling"],
   isA: ["trade-action"],
   proposed: true,
 });

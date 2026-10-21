@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:yi1}}-{{word:xia4}}"],
   tts: ["一下"],
   fit: "word",
-  topics: ["before-and-after"],
+  topics: ["moments-and-stages"],
   isA: ["time-point"],
   examples: [
     {

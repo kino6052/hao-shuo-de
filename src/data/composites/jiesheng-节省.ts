@@ -12,7 +12,7 @@ export default composite({
   tts: ["用少一点", "少用X"],
   literal: "use a little less / use less X",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["extra-and-limits"],
   isA: ["handling-action"],
   proposed: true,
 });

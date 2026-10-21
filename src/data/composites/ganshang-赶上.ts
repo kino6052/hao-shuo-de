@@ -15,7 +15,7 @@ export default composite({
   tts: ["到了，不晚", "走到X的旁边"],
   literal: "arrived, not late / walk to the side of X",
   fit: "plain",
-  topics: ["how-often"],
+  topics: ["suddenly-and-on-time"],
   isA: ["moving-action"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["做过的东西"],
   literal: "things you've done before",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["knowledge-and-meaning"],
   isA: ["idea"],
   examples: [
     {

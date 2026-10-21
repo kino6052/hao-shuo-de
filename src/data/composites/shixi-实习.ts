@@ -15,7 +15,7 @@ export default composite({
   tts: ["学生在工作的地方学", "一边工作，一边学"],
   literal: "a student learns at the place of work",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["studying-and-practising"],
   isA: ["learning-and-teaching"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["有用的东西"],
   literal: "useful things",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["money-wealth-and-value"],
   isA: ["material"],
   examples: [
     {

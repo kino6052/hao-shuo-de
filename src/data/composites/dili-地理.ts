@@ -15,7 +15,7 @@ export default composite({
   tts: ["地球上地方的样子", "学地球上地方的学的"],
   literal: "the look of the places on the earth / the science that studies places on the earth",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-subjects-and-courses"],
   isA: ["idea"],
   proposed: true,
 });

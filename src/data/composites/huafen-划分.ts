@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["分开", "把X分出不同的部分"],
   fit: "natural",
-  topics: ["making-and-doing"],
+  topics: ["breaking-and-taking-apart"],
   isA: ["handling-action"],
   proposed: true,
 });

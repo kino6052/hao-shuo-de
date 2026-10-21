@@ -14,7 +14,7 @@ export default composite({
   tts: ["一个月中间的十天"],
   literal: "the ten days in the middle of a month",
   fit: "plain",
-  topics: ["calendar"],
+  topics: ["weeks-months-and-deadlines"],
   isA: ["time-span"],
   proposed: true,
 });

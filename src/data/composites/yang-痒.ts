@@ -15,7 +15,7 @@ export default composite({
   tts: ["很想用手摸", "让人想用手摸"],
   literal: "really wants to be touched by the hand / makes one want to touch it with the hand",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["pain-and-feeling-unwell"],
   isA: ["bodily-state"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["年年都Y", "很多年都Y"],
   literal: "every year, all Y / many years, all Y",
   fit: "plain",
-  topics: ["how-often"],
+  topics: ["always-and-all-along"],
   isA: ["frequency"],
   proposed: true,
 });

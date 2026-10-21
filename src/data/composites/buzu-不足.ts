@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:shao3}} {{word:le}}", "{{word:shao3}}-{{word:de}} {{word:bu4}}-{{light:fen1}}"],
   tts: ["少了", "少的部分"],
   fit: "natural",
-  topics: ["much-and-little"],
+  topics: ["enough-and-lacking"],
   isA: ["amount-word"],
   proposed: true,
 });

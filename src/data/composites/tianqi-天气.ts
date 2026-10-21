@@ -16,7 +16,7 @@ export default composite({
   literal: "day-air / the air outside",
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["weather"],
+  topics: ["weather-and-clouds"],
   isA: ["weather-thing"],
   note: "wài-miàn-de kōng-qì hěn rè: the weather is hot.",
   examples: [

@@ -15,7 +15,7 @@ export default composite({
   tts: ["把平的X变圆", "变圆的平的东西"],
   literal: "make a flat X round / a flat thing that has become round",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["throwing-spilling-and-cutting"],
   isA: ["handling-action"],
   proposed: true,
 });

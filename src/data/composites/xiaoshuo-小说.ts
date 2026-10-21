@@ -12,7 +12,7 @@ export default composite({
   tts: ["小说"],
   literal: "small talk",
   fit: "natural",
-  topics: ["writing"],
+  topics: ["stories-poems-and-essays"],
   isA: ["work-of-art"],
   note: "Real Mandarin: 小说.",
   examples: [

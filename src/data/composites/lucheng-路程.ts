@@ -15,7 +15,7 @@ export default composite({
   tts: ["从X到Y的路", "路有多远"],
   literal: "the road from X to Y / how far the road is",
   fit: "plain",
-  topics: ["near-and-far"],
+  topics: ["near-far-and-distance"],
   isA: ["distance"],
   proposed: true,
 });

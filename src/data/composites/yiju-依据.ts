@@ -15,7 +15,7 @@ export default composite({
   tts: ["用X", "决定的时候用的东西"],
   literal: "use X / the thing used when deciding",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["reasons-and-logic"],
   isA: ["idea"],
   proposed: true,
 });

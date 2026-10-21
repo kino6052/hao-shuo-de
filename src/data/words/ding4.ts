@@ -14,7 +14,7 @@ export default word("ding4", {
     eng: "Settled: {{word:yi1}}-{{word:ding4}} (surely) and {{word:jue2}}-{{word:ding4}} (decide).",
     rus: "Решённый: {{word:yi1}}-{{word:ding4}} (обязательно) и {{word:jue2}}-{{word:ding4}} (решить).",
   },
-  topics: ["deciding"],
+  topics: ["choosing-and-deciding"],
   isA: ["thinking-action"],
   paraphrase: { forms: ["{{word:bu4}} {{word:bian4}}"], verdict: "clumsy" },
 });

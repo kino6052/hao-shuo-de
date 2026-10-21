@@ -15,7 +15,7 @@ export default composite({
   tts: ["做X做得很好", "做X，比别的人好"],
   literal: "do X, do it very well / do X, better than other people",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["clever-skilled-and-famous"],
   isA: ["character-quality"],
   proposed: true,
 });

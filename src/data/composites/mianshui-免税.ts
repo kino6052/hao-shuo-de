@@ -15,7 +15,7 @@ export default composite({
   tts: ["不用给国家金", "没有要给国家的金"],
   literal: "no need to give the country money / there is no money to give the country",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["paying-and-spending"],
   isA: ["trade-action"],
   proposed: true,
 });

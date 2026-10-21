@@ -12,7 +12,7 @@ export default composite({
   tts: ["比X多", "到X的外面"],
   literal: "more than X / go to the outside of X",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["extra-and-limits"],
   isA: ["comparison"],
   proposed: true,
 });

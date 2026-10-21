@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:bang1}}", "{{word:dui4}} X {{word:hen3}} {{word:hao3}}"],
   tts: ["帮", "对X很好"],
   fit: "natural",
-  topics: ["helping-and-sharing"],
+  topics: ["helping-and-supporting"],
   isA: ["social-action"],
   proposed: true,
 });

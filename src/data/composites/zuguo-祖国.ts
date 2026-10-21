@@ -15,7 +15,7 @@ export default composite({
   tts: ["我们的国", "我的家在的国"],
   literal: "our country / the country where my home is",
   fit: "plain",
-  topics: ["countries-and-cities"],
+  topics: ["country-and-nation"],
   isA: ["settlement"],
   proposed: true,
 });

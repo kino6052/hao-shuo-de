@@ -15,7 +15,7 @@ export default composite({
   tts: ["只做X，不想别的", "只想X"],
   literal: "only do X, don't think about other things / only think of X",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["only-even-and-more"],
   isA: ["adverb-word"],
   proposed: true,
 });

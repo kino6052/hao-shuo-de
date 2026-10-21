@@ -15,7 +15,7 @@ export default composite({
   tts: ["在发生的地方", "在那里"],
   literal: "be at the place where it happens / be there",
   fit: "plain",
-  topics: ["near-and-far"],
+  topics: ["place-location-and-space"],
   isA: ["place-word"],
   proposed: true,
 });

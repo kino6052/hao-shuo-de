@@ -11,7 +11,7 @@ export default composite({
   hsd: ["X {{word:le}}, {{word:jiu4}} Y", "{{word:jiu4}}"],
   tts: ["X了，就Y", "就"],
   fit: "natural",
-  topics: ["joining-words"],
+  topics: ["then-for-example-in-short"],
   isA: ["conjunction"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X拿好", "觉得一定能做好"],
   literal: "hold X well / feel it can surely be done well",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["knowing-and-grasping"],
   isA: ["thinking-action"],
   proposed: true,
 });

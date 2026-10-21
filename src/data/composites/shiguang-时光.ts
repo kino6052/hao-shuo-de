@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:shi2}}-{{word:jian1}}", "{{word:ri4}}-{{word:zi}}"],
   tts: ["时间", "日子"],
   fit: "natural",
-  topics: ["before-and-after"],
+  topics: ["moments-and-stages"],
   isA: ["time-span"],
   proposed: true,
 });

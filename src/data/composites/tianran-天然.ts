@@ -15,7 +15,7 @@ export default composite({
   tts: ["不是人做的", "原来就有的"],
   literal: "not made by people / there from the start",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["natural-and-man-made"],
   isA: ["condition-quality"],
   proposed: true,
 });

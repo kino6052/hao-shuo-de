@@ -15,7 +15,7 @@ export default composite({
   tts: ["还做别的工作", "有两个工作"],
   literal: "also do other work / have two jobs",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["jobs-and-hiring"],
   isA: ["working"],
   proposed: true,
 });

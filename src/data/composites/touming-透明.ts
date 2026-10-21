@@ -15,7 +15,7 @@ export default composite({
   tts: ["能看到里面", "能从这边看到那边"],
   literal: "can see what is inside / can see from this side to that side",
   fit: "plain",
-  topics: ["how-it-feels"],
+  topics: ["bright-dark-quiet-noisy"],
   isA: ["sound-or-light-quality"],
   proposed: true,
 });

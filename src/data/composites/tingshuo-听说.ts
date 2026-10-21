@@ -13,7 +13,7 @@ export default composite({
   literal: "hear say / hear people say",
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["talking"],
+  topics: ["saying-and-calling"],
   isA: ["perceiving"],
   examples: [
     {

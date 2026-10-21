@@ -15,7 +15,7 @@ export default composite({
   tts: ["在水里下去", "很重"],
   literal: "go down in the water / very heavy",
   fit: "plain",
-  topics: ["up-down-in-out"],
+  topics: ["above-and-below"],
   isA: ["moving-action"],
   proposed: true,
 });

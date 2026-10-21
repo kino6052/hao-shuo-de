@@ -12,7 +12,7 @@ export default composite({
   tts: ["…，但是…", "但是"],
   literal: "but",
   fit: "plain",
-  topics: ["joining-words"],
+  topics: ["but-and-although"],
   isA: ["conjunction"],
   note: "Say it with dàn-shì: X, dàn-shì Y.",
   examples: [

@@ -15,7 +15,7 @@ export default composite({
   tts: ["在做X的时候也做Y", "一边做X，一边做Y"],
   literal: "when doing X, also do Y / one side do X, one side do Y",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["quietly-together-step-by-step"],
   isA: ["adverb-word"],
   proposed: true,
 });

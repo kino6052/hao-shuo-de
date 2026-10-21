@@ -14,7 +14,7 @@ export default composite({
   tts: ["在空的地方写字"],
   literal: "write characters in the empty place",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["writing-things-down"],
   isA: ["making"],
   proposed: true,
 });

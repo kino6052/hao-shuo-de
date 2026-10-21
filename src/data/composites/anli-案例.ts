@@ -15,7 +15,7 @@ export default composite({
   tts: ["真的发生过的东西", "让人学的真的东西"],
   literal: "a real thing that happened / a real thing that lets people learn",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-subjects-and-courses"],
   isA: ["event"],
   proposed: true,
 });

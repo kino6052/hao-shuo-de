@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["什么…都…", "哪个都可以"],
   fit: "natural",
-  topics: ["all-and-some"],
+  topics: ["all-and-every"],
   isA: ["amount-word"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["觉得X最好，想和X一样", "很爱X，觉得X很高明"],
   literal: "feel X is the best, want to be like X / love X very much, feel X is very smart",
   fit: "plain",
-  topics: ["liking-and-wanting"],
+  topics: ["respect-and-cherishing"],
   isA: ["feeling-and-wanting"],
   proposed: true,
 });

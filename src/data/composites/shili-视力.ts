@@ -15,7 +15,7 @@ export default composite({
   tts: ["眼睛看的能力", "眼睛能看多好"],
   literal: "the ability of the eyes to see / how well the eyes can see",
   fit: "plain",
-  topics: ["senses"],
+  topics: ["seeing-and-looking"],
   isA: ["state-name"],
   proposed: true,
 });

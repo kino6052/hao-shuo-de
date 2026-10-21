@@ -16,7 +16,7 @@ export default composite({
   literal: "middle learning / where not-big, not-small people learn",
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["classroom"],
+  topics: ["school-buildings-and-grounds"],
   isA: ["building"],
   examples: [
     {

@@ -13,7 +13,7 @@ export default composite({
   literal: "arrive late",
   fit: "natural",
   transparent: true,
-  topics: ["how-often"],
+  topics: ["suddenly-and-on-time"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

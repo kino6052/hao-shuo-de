@@ -15,7 +15,7 @@ export default composite({
   tts: ["人做的", "人做出来的"],
   literal: "made by people / made out by people",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["natural-and-man-made"],
   isA: ["condition-quality"],
   proposed: true,
 });

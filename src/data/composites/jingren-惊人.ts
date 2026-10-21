@@ -15,7 +15,7 @@ export default composite({
   tts: ["让人没想到", "大到让人心动一下"],
   literal: "people had not thought of it / so big that the heart of a person jumps for a moment",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["special-and-strange"],
   isA: ["condition-quality"],
   proposed: true,
 });

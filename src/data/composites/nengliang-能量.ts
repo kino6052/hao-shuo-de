@@ -15,7 +15,7 @@ export default composite({
   tts: ["能用的力", "让X能动的东西"],
   literal: "strength that can be used / the thing that lets X move",
   fit: "plain",
-  topics: ["speed-and-strength"],
+  topics: ["energy-and-intensity"],
   isA: ["speed-or-strength"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X和Y放在一起", "让两个变一个"],
   literal: "put X and Y together / make two become one",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["joining-adding-replacing"],
   isA: ["making"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["写的书", "写出来的东西"],
   literal: "a book that is written / the thing that was written out",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["books-and-paper"],
   isA: ["paper-thing"],
   proposed: true,
 });

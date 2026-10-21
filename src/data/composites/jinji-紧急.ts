@@ -15,7 +15,7 @@ export default composite({
   tts: ["要快", "要很快做的"],
   literal: "must be fast / must be done very fast",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["situations-and-needs"],
   isA: ["condition-quality"],
   proposed: true,
 });

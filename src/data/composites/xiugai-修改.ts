@@ -12,7 +12,7 @@ export default composite({
   tts: ["把X变一点"],
   literal: "change X a little",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["authors-and-publishing"],
   isA: ["handling-action"],
   examples: [
     {

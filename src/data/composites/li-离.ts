@@ -12,7 +12,7 @@ export default composite({
   tts: ["从Y到X很远"],
   literal: "from Y to X is far",
   fit: "natural",
-  topics: ["near-and-far"],
+  topics: ["near-far-and-distance"],
   isA: ["distance"],
   examples: [
     {

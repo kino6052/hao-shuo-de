@@ -15,7 +15,7 @@ export default composite({
   tts: ["让X不动", "把X放好，不让它动"],
   literal: "make X not move",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["putting-and-placing"],
   isA: ["placing"],
   proposed: true,
 });

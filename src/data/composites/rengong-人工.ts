@@ -16,7 +16,7 @@ export default composite({
   tts: ["人工", "人做的", "用手做"],
   literal: "made by people / done with the hands",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["natural-and-man-made"],
   isA: ["condition-quality"],
   proposed: true,
 });

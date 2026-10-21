@@ -14,7 +14,7 @@ export default composite({
   tts: ["一定要做的东西"],
   literal: "a thing you surely must do",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["rights-duties-and-agreements"],
   isA: ["idea"],
   proposed: true,
 });

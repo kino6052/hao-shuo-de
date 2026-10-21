@@ -15,7 +15,7 @@ export default composite({
   tts: ["在网上的地方", "高的地"],
   literal: "a place online / raised ground",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["internet-and-websites"],
   isA: ["computer-or-phone"],
   examples: [
     {

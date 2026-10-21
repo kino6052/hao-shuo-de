@@ -15,7 +15,7 @@ export default composite({
   tts: ["学者", "学很多的人"],
   literal: "a person who studies a lot",
   fit: "plain",
-  topics: ["classroom"],
+  topics: ["teachers-and-students"],
   isA: ["social-role"],
   proposed: true,
 });

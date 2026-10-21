@@ -15,7 +15,7 @@ export default composite({
   tts: ["觉得一样", "觉得我和他一样"],
   literal: "feel the same / feel I am the same as him",
   fit: "plain",
-  topics: ["agreeing-and-praising"],
+  topics: ["agreeing-and-allowing"],
   isA: ["thinking-action"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["人怎么知道东西"],
   literal: "how people know things",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["knowledge-and-meaning"],
   isA: ["idea"],
   examples: [
     {

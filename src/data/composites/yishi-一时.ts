@@ -15,7 +15,7 @@ export default composite({
   tts: ["不长的时间", "一下"],
   literal: "a not long time / a moment",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["moments-and-stages"],
   isA: ["time-span"],
   proposed: true,
 });

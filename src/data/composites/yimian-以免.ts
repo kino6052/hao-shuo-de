@@ -12,7 +12,7 @@ export default composite({
   tts: ["怕X", "不想让X发生"],
   literal: "afraid of X / do not want X to happen",
   fit: "plain",
-  topics: ["joining-words"],
+  topics: ["because-and-so"],
   isA: ["conjunction"],
   proposed: true,
 });

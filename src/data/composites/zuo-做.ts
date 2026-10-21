@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:zuo4}}"],
   tts: ["做"],
   fit: "word",
-  topics: ["making-and-doing"],
+  topics: ["doing-and-carrying-out"],
   isA: ["making"],
   note: "Hao-shuo-de says zuò for \"do\" and \"make\".",
   examples: [

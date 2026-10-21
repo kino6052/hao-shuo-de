@@ -12,7 +12,7 @@ export default composite({
   tts: ["面儿", "外面"],
   literal: "surface / the outside",
   fit: "natural",
-  topics: ["shapes"],
+  topics: ["form-and-structure"],
   isA: ["place-word"],
   examples: [
     {

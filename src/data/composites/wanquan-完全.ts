@@ -12,7 +12,7 @@ export default composite({
   tts: ["都"],
   literal: "all",
   fit: "natural",
-  topics: ["all-and-some"],
+  topics: ["whole-complete-and-widespread"],
   isA: ["amount-word"],
   examples: [
     {

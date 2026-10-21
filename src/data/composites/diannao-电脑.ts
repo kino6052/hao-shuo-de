@@ -12,7 +12,7 @@ export default composite({
   tts: ["算的机"],
   literal: "the calculating machine",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["computers-and-gadgets"],
   isA: ["computer-or-phone"],
   examples: [
     {

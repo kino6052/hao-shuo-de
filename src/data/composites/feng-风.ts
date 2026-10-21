@@ -12,7 +12,7 @@ export default composite({
   tts: ["快飞的空气"],
   literal: "air that flies fast",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["air-wind-and-storms"],
   isA: ["weather-thing"],
   examples: [
     {

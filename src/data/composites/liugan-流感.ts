@@ -15,7 +15,7 @@ export default composite({
   tts: ["别人也会有的身体不好", "身体很热，头痛的身体不好"],
   literal: "the body-not-well that other people can get too / the body-not-well with a hot body and a sore head",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["fever-colds-and-diseases"],
   isA: ["state-name"],
   proposed: true,
 });

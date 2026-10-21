@@ -15,7 +15,7 @@ export default composite({
   tts: ["变好", "不坏了，变好"],
   literal: "become good / no longer bad, become good",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["improving-and-reforming"],
   isA: ["becoming"],
   proposed: true,
 });

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:rang4}} X …", "{{word:jiao4}} X …"],
   tts: ["让X…", "叫X…"],
   fit: "natural",
-  topics: ["causes-and-results"],
+  topics: ["causing-and-leading-to"],
   isA: ["cause-and-effect"],
   proposed: true,
 });

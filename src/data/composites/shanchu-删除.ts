@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X拿出去", "让X没有了"],
   literal: "take X out / make X be gone",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["typing-clicking-and-downloading"],
   isA: ["handling-action"],
   proposed: true,
 });

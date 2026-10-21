@@ -14,7 +14,7 @@ export default composite({
   tts: ["有很多东西要做"],
   literal: "have a lot of things to do",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["work-days-and-busy"],
   isA: ["condition-quality"],
   proposed: true,
 });

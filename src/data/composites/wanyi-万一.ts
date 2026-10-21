@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["如果", "如果有一天，X就Y"],
   fit: "natural",
-  topics: ["joining-words"],
+  topics: ["if-unless-and-even-if"],
   isA: ["conjunction"],
   proposed: true,
 });

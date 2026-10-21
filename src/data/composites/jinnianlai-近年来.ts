@@ -15,7 +15,7 @@ export default composite({
   tts: ["这一些年", "从一些年以前到现在"],
   literal: "these some years / from some years ago until now",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["now-and-recently"],
   isA: ["time-span"],
   proposed: true,
 });

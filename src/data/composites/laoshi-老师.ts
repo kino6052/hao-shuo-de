@@ -12,7 +12,7 @@ export default composite({
   tts: ["帮人学的人"],
   literal: "the one who helps people learn",
   fit: "plain",
-  topics: ["classroom"],
+  topics: ["teachers-and-students"],
   isA: ["worker"],
   examples: [
     {

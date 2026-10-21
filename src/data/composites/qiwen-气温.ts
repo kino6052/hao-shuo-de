@@ -15,7 +15,7 @@ export default composite({
   tts: ["空气的多热", "天气的多热"],
   literal: "how hot the air is; how hot the weather is",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["weather-and-clouds"],
   isA: ["weather-thing"],
   proposed: true,
 });

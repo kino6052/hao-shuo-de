@@ -12,7 +12,7 @@ export default composite({
   tts: ["你看，X"],
   literal: "look, X",
   fit: "plain",
-  topics: ["joining-words"],
+  topics: ["then-for-example-in-short"],
   isA: ["conjunction"],
   examples: [
     {

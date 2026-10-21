@@ -15,7 +15,7 @@ export default composite({
   tts: ["在很多地方找，把找到的放在一起", "哪里都找"],
   literal: "look in many places, put what you found together / look everywhere",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["gathering-keeping-and-storing"],
   isA: ["handling-action"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["最后还是X"],
   literal: "in the end it is still",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["after-all-anyway-unexpectedly"],
   isA: ["adverb-word"],
   proposed: true,
 });

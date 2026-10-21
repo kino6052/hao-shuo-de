@@ -12,7 +12,7 @@ export default composite({
   tts: ["外国的话"],
   literal: "foreign speech",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-subjects-and-courses"],
   isA: ["language-thing"],
   examples: [
     {

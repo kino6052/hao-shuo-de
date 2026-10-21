@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X拿起来，让X飞到Y", "把X放进Y"],
   literal: "pick X up and make it fly to Y",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["throwing-spilling-and-cutting"],
   isA: ["handling-action"],
   proposed: true,
 });

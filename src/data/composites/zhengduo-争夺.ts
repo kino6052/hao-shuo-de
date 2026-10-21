@@ -15,7 +15,7 @@ export default composite({
   tts: ["和别人打，要得X", "都要得X，不让别人得"],
   literal: "fight with others, wanting to get X / all want to get X, not letting others get it",
   fit: "plain",
-  topics: ["giving-and-getting"],
+  topics: ["losing-and-possessing"],
   isA: ["social-action"],
   proposed: true,
 });

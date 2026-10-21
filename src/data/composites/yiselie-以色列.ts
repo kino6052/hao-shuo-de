@@ -12,7 +12,7 @@ export default composite({
   tts: ["以色列", "以色列国"],
   literal: "the country of Yǐsèliè",
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-countries"],
   isA: ["settlement"],
   proposed: true,
 });

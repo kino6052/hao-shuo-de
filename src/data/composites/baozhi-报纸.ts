@@ -14,7 +14,7 @@ export default composite({
   tts: ["说现在发生什么的写的东西"],
   literal: "a written thing that says what's happening now",
   fit: "plain",
-  topics: ["news-and-events"],
+  topics: ["news-and-press"],
   isA: ["paper-thing"],
   examples: [
     {

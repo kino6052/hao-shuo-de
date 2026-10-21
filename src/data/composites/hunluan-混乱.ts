@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:luan4}}", "{{word:hen3}} {{word:luan4}}", "{{word:dou1}} {{word:luan4}} {{word:le}}"],
   tts: ["乱", "很乱", "都乱了"],
   fit: "natural",
-  topics: ["state-of-things"],
+  topics: ["empty-messy-clear"],
   isA: ["condition-quality"],
   proposed: true,
 });

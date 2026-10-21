@@ -12,7 +12,7 @@ export default composite({
   tts: ["动的看的东西"],
   literal: "a moving thing to watch",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["television-radio-and-media"],
   isA: ["work-of-art"],
   examples: [
     {

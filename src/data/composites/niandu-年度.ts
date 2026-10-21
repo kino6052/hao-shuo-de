@@ -15,7 +15,7 @@ export default composite({
   tts: ["一年的时间", "一年的"],
   literal: "a year's time / of one year",
   fit: "plain",
-  topics: ["calendar"],
+  topics: ["years-and-centuries"],
   isA: ["time-span"],
   proposed: true,
 });

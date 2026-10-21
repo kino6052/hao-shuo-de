@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:he2}} X {{word:you3}} {{word:guan1xi}}", "{{word:guan1xi}} {{word:dao4}} X"],
   tts: ["和X有关系", "关系到X"],
   fit: "natural",
-  topics: ["ideas-and-opinions"],
+  topics: ["key-points-and-principles"],
   isA: ["relation"],
   proposed: true,
 });

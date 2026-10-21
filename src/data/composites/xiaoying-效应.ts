@@ -15,7 +15,7 @@ export default composite({
   tts: ["做X后得到的结果", "X发生了，Y就发生"],
   literal: "the result got after doing X / X happened, then Y happens",
   fit: "plain",
-  topics: ["causes-and-results"],
+  topics: ["results-and-effects"],
   isA: ["cause-and-effect"],
   proposed: true,
 });

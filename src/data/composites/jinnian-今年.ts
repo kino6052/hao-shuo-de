@@ -13,7 +13,7 @@ export default composite({
   literal: "the year of now",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["calendar"],
+  topics: ["years-and-centuries"],
   isA: ["time-point"],
   examples: [
     {

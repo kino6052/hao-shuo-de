@@ -15,7 +15,7 @@ export default composite({
   tts: ["放好", "把X留下来，以后用"],
   literal: "put it away / keep X, to use later",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["gathering-keeping-and-storing"],
   isA: ["placing"],
   proposed: true,
 });

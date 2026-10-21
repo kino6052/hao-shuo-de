@@ -15,7 +15,7 @@ export default composite({
   tts: ["没想好就做", "没想就做"],
   literal: "do it before it has been thought through / do it without thinking",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["brave-calm-and-lively"],
   isA: ["character-quality"],
   proposed: true,
 });

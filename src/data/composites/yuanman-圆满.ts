@@ -15,7 +15,7 @@ export default composite({
   tts: ["什么都好", "没有不好的地方"],
   literal: "everything is good / there is no not-good place",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["quality-and-top-class"],
   isA: ["value-quality"],
   proposed: true,
 });

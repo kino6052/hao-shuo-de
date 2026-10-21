@@ -12,7 +12,7 @@ export default composite({
   tts: ["让X做Y", "让X想做Y"],
   literal: "make X do Y / make X want to do Y",
   fit: "plain",
-  topics: ["causes-and-results"],
+  topics: ["causing-and-leading-to"],
   isA: ["cause-and-effect"],
   proposed: true,
 });

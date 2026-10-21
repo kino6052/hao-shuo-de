@@ -12,7 +12,7 @@ export default composite({
   tts: ["做好的结果"],
   literal: "the result that was done well",
   fit: "plain",
-  topics: ["causes-and-results"],
+  topics: ["results-and-effects"],
   isA: ["cause-and-effect"],
   proposed: true,
 });

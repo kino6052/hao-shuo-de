@@ -15,7 +15,7 @@ export default composite({
   tts: ["好听的写的话", "好看的，好听的话"],
   literal: "good-sounding written words / pretty, good-sounding words",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["stories-poems-and-essays"],
   isA: ["work-of-art"],
   proposed: true,
 });

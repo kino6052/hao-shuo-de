@@ -13,7 +13,7 @@ export default composite({
   literal: "very valuable",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["how-good"],
+  topics: ["important-and-interesting"],
   isA: ["value-quality"],
   examples: [
     {

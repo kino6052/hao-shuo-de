@@ -12,7 +12,7 @@ export default composite({
   tts: ["把X拿给Y", "用手给"],
   literal: "take X and give it to Y / give with the hand",
   fit: "plain",
-  topics: ["giving-and-getting"],
+  topics: ["sending-and-delivering"],
   isA: ["handling-action"],
   proposed: true,
 });

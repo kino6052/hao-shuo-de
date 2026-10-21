@@ -15,7 +15,7 @@ export default composite({
   tts: ["最开始", "最开始的时候"],
   literal: "the most beginning / the time of the very start",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["first-next-and-last"],
   isA: ["time-order"],
   proposed: true,
 });

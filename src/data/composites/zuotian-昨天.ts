@@ -12,7 +12,7 @@ export default composite({
   tts: ["前一天", "前一个日"],
   literal: "the day before / the sun before",
   fit: "plain",
-  topics: ["calendar"],
+  topics: ["days-and-dates"],
   isA: ["time-point"],
   examples: [
     {

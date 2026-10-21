@@ -13,7 +13,7 @@ export default composite({
   literal: "what you think",
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["ideas-and-opinions"],
+  topics: ["opinions-and-views"],
   isA: ["idea"],
   examples: [
     {

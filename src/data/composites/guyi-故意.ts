@@ -15,7 +15,7 @@ export default composite({
   tts: ["想好了这样做", "想好了，就这样做"],
   literal: "having thought it through, do it this way / having thought it through, then do it this way",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["willing-daring-and-forced"],
   isA: ["adverb-word"],
   proposed: true,
 });

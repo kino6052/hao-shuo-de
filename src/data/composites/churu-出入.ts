@@ -15,7 +15,7 @@ export default composite({
   tts: ["两个东西不一样的地方", "出去和进来"],
   literal: "the places where two things are not the same / going out and coming in",
   fit: "plain",
-  topics: ["same-and-different"],
+  topics: ["different-and-varied"],
   isA: ["idea"],
   proposed: true,
 });

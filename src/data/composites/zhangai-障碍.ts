@@ -15,7 +15,7 @@ export default composite({
   tts: ["让X不能走过去的东西", "在X前面，让X不能走"],
   literal: "a thing that makes X unable to get past / be in front of X so that X cannot go",
   fit: "plain",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["hard-and-difficult"],
   isA: ["state-name"],
   proposed: true,
 });

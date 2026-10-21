@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["中华", "中国的别的名字"],
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-countries"],
   isA: ["settlement"],
   proposed: true,
 });

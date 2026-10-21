@@ -14,7 +14,7 @@ export default composite({
   tts: ["天上发很大的声音"],
   literal: "the sky gives off a very big sound",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["air-wind-and-storms"],
   isA: ["weather-happening"],
   proposed: true,
 });

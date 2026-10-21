@@ -15,7 +15,7 @@ export default composite({
   tts: ["很多很多从天下来的水", "天上下来的很大的水"],
   literal: "very, very much water coming down from the sky / the very big water coming down from the sky",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["rain-and-snow"],
   isA: ["weather-thing"],
   proposed: true,
 });

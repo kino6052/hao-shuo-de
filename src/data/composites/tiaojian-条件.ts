@@ -12,7 +12,7 @@ export default composite({
   tts: ["要的东西"],
   literal: "what's needed",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["situations-and-needs"],
   isA: ["idea"],
   examples: [
     {

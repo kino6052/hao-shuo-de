@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X来回动", "来回动"],
   literal: "move X back and forth / move back and forth",
   fit: "plain",
-  topics: ["pushing-and-pulling"],
+  topics: ["tying-twisting-and-shaking"],
   isA: ["handling-action"],
   proposed: true,
 });

@@ -14,7 +14,7 @@ export default composite({
   tts: ["给一个国的金，能得到多少别的国的金"],
   literal: "give one country's money, how much of another country's money you can get",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["money-and-cards"],
   isA: ["idea"],
   proposed: true,
 });

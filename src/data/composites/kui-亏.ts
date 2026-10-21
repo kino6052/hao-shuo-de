@@ -15,7 +15,7 @@ export default composite({
   tts: ["得到的比给的少", "用的金比得到的金多"],
   literal: "what you get is less than what you give / the money used is more than the money got",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["profit-loss-and-bankruptcy"],
   isA: ["trade-action"],
   proposed: true,
 });

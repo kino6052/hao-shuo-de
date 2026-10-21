@@ -12,7 +12,7 @@ export default composite({
   tts: ["很难想是真的"],
   literal: "very hard to think it is true",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["special-and-strange"],
   isA: ["truth-or-ease"],
   proposed: true,
 });

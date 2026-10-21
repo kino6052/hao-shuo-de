@@ -12,7 +12,7 @@ export default composite({
   tts: ["最后说的话"],
   literal: "the words said at the end",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["reasons-and-logic"],
   isA: ["idea"],
   proposed: true,
 });

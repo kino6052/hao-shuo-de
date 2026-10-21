@@ -15,7 +15,7 @@ export default composite({
   tts: ["很多人一起动身体的日子", "很多人一起动身体，看谁最好的日子"],
   literal: "the days when many people move their bodies together; the days when many people move their bodies to see who is best",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["matches-and-contests"],
   isA: ["event"],
   proposed: true,
 });

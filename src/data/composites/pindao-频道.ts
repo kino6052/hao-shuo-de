@@ -14,7 +14,7 @@ export default composite({
   tts: ["看的机上不同的看的东西"],
   literal: "the different things to watch on the watching machine",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["television-radio-and-media"],
   isA: ["idea"],
   proposed: true,
 });

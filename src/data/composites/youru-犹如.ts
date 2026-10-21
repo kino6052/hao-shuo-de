@@ -15,7 +15,7 @@ export default composite({
   tts: ["和X一样", "就和X一样"],
   literal: "the same as X / just the same as X",
   fit: "plain",
-  topics: ["same-and-different"],
+  topics: ["like-and-similar"],
   isA: ["comparison"],
   proposed: true,
 });

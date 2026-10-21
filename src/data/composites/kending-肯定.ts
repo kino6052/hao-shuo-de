@@ -13,7 +13,7 @@ export default composite({
   literal: "one-fixed",
   fit: "natural",
   transparent: true,
-  topics: ["agreeing-and-praising"],
+  topics: ["advising-and-promising"],
   isA: ["speaking-action"],
   examples: [
     {

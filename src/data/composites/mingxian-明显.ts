@@ -12,7 +12,7 @@ export default composite({
   tts: ["一看就知道"],
   literal: "you look and you know",
   fit: "plain",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["exact-clear-and-obvious"],
   isA: ["truth-or-ease"],
   examples: [
     {

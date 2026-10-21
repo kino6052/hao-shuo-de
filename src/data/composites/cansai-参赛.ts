@@ -14,7 +14,7 @@ export default composite({
   tts: ["和别人一起看谁最好"],
   literal: "together with others see who is best",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["matches-and-contests"],
   isA: ["social-action"],
   proposed: true,
 });

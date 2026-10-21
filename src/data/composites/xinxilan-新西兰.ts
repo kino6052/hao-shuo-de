@@ -12,7 +12,7 @@ export default composite({
   tts: ["新西兰", "新西兰国"],
   literal: "the country of Xīnxīlán",
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-countries"],
   isA: ["settlement"],
   proposed: true,
 });

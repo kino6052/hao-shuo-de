@@ -15,7 +15,7 @@ export default composite({
   tts: ["为得到X，要给出去的东西", "为做X，没有了的东西"],
   literal: "the thing you have to give away to get X / the thing that is gone because of doing X",
   fit: "plain",
-  topics: ["causes-and-results"],
+  topics: ["harm-and-bad-results"],
   isA: ["idea"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["学的时间"],
   literal: "study time",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-days-and-years"],
   isA: ["time-span"],
   examples: [
     {

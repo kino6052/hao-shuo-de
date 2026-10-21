@@ -15,7 +15,7 @@ export default composite({
   tts: ["心里知道", "不用别人说就做"],
   literal: "know in the heart / do it without others having to say so",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["believing-hoping-and-caring"],
   isA: ["thinking-action"],
   proposed: true,
 });

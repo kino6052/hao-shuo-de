@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["能力", "比别人能做好的力"],
   fit: "natural",
-  topics: ["describing-people"],
+  topics: ["clever-skilled-and-famous"],
   isA: ["idea"],
   proposed: true,
 });

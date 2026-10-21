@@ -12,7 +12,7 @@ export default composite({
   tts: ["我", "这个人"],
   literal: "I / this person",
   fit: "natural",
-  topics: ["pointers"],
+  topics: ["self-and-others"],
   isA: ["pronoun"],
   proposed: true,
 });

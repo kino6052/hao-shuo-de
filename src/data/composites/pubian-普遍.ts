@@ -12,7 +12,7 @@ export default composite({
   tts: ["很多人都有"],
   literal: "many people have it",
   fit: "plain",
-  topics: ["all-and-some"],
+  topics: ["whole-complete-and-widespread"],
   isA: ["amount-word"],
   proposed: true,
 });

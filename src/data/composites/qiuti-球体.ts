@@ -14,7 +14,7 @@ export default composite({
   tts: ["哪边都圆的东西"],
   literal: "a thing round on every side",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["circles-squares-cubes"],
   isA: ["shape-quality"],
   proposed: true,
 });

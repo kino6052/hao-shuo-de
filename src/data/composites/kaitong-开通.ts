@@ -15,7 +15,7 @@ export default composite({
   tts: ["开通", "让X可以用了"],
   literal: "let X be used now",
   fit: "plain",
-  topics: ["pushing-and-pulling"],
+  topics: ["opening-and-closing"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

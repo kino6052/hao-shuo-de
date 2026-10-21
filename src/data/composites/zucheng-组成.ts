@@ -12,7 +12,7 @@ export default composite({
   tts: ["放在一起"],
   literal: "put together",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["totals-and-parts"],
   isA: ["making"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["一个在一个上面，不同的地方", "上面和下面不同的地方"],
   literal: "places that are different, one above another / the different places above and below",
   fit: "plain",
-  topics: ["up-down-in-out"],
+  topics: ["above-and-below"],
   isA: ["place-relation"],
   proposed: true,
 });

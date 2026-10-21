@@ -12,7 +12,7 @@ export default composite({
   tts: ["用的人"],
   literal: "the one who uses it",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["software-files-and-accounts"],
   isA: ["social-role"],
   examples: [
     {

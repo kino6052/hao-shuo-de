@@ -12,7 +12,7 @@ export default composite({
   tts: ["就是X", "要看X"],
   literal: "it is just X / it depends on X",
   fit: "plain",
-  topics: ["causes-and-results"],
+  topics: ["reasons-sources-and-conditions"],
   isA: ["cause-and-effect"],
   proposed: true,
 });

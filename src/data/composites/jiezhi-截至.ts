@@ -15,7 +15,7 @@ export default composite({
   tts: ["到X的时间", "到X就完了"],
   literal: "up to the time of X / up to X and then it is over",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["now-and-recently"],
   isA: ["time-order"],
   proposed: true,
 });

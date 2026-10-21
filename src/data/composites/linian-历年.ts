@@ -15,7 +15,7 @@ export default composite({
   tts: ["很多以前的年", "过去的年"],
   literal: "many years of before / the years of the past",
   fit: "plain",
-  topics: ["calendar"],
+  topics: ["years-and-centuries"],
   isA: ["time-span"],
   proposed: true,
 });

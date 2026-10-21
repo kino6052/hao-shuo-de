@@ -15,7 +15,7 @@ export default composite({
   tts: ["和现在不远的时间", "这些天"],
   literal: "the time that is not far from now / these days",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["now-and-recently"],
   isA: ["time-point"],
   proposed: true,
 });

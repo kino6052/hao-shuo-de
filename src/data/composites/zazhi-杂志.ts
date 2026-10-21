@@ -14,7 +14,7 @@ export default composite({
   tts: ["一次又一次出来的书"],
   literal: "the book that comes out again and again",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["books-and-paper"],
   isA: ["paper-thing"],
   proposed: true,
 });

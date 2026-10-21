@@ -14,7 +14,7 @@ export default composite({
   tts: ["天上很多颜色的圆的线"],
   literal: "a round line in the sky with many colours",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["rain-and-snow"],
   isA: ["weather-thing"],
   proposed: true,
 });

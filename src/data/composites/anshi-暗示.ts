@@ -15,7 +15,7 @@ export default composite({
   tts: ["不说出来，让人知道", "不说，让人想到"],
   literal: "do not say it out, let people know / do not say it, let people think of it",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["introducing-and-passing-on"],
   isA: ["speaking-action"],
   proposed: true,
 });

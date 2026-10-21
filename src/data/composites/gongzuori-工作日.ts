@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["工作日", "工作的日"],
   fit: "natural",
-  topics: ["calendar"],
+  topics: ["weeks-months-and-deadlines"],
   isA: ["calendar-name"],
   proposed: true,
 });

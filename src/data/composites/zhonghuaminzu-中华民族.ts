@@ -11,7 +11,7 @@ export default composite({
   hsd: ["\"Zhōnghuá Mínzú\"", "\"Zhōngguó\"-{{word:de}} {{word:ren2}}"],
   tts: ["中华民族", "中国的人"],
   fit: "name",
-  topics: ["people-together"],
+  topics: ["peoples-and-generations"],
   isA: ["group-of-people"],
   proposed: true,
 });

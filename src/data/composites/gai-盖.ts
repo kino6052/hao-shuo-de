@@ -16,7 +16,7 @@ export default composite({
   tts: ["把X放在Y上，让Y看不见", "把X放在Y上面", "把包关上的东西"],
   literal: "put X on Y so that Y cannot be seen / put X on top of Y / the thing that closes the container",
   fit: "plain",
-  topics: ["pushing-and-pulling"],
+  topics: ["opening-and-closing"],
   isA: ["placing"],
   proposed: true,
 });

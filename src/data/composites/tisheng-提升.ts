@@ -12,7 +12,7 @@ export default composite({
   tts: ["让X变高"],
   literal: "make X higher",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["increasing-and-rising"],
   isA: ["becoming"],
   proposed: true,
 });

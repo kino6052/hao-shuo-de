@@ -15,7 +15,7 @@ export default composite({
   tts: ["用手打X，发声音", "用手打门，让人听到"],
   literal: "hit X with the hand, give out a sound / hit the door with the hand so that people hear",
   fit: "plain",
-  topics: ["pushing-and-pulling"],
+  topics: ["hitting-and-bumping"],
   isA: ["handling-action"],
   proposed: true,
 });

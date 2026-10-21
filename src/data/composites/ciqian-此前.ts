@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["以前", "这个时间以前"],
   fit: "natural",
-  topics: ["before-and-after"],
+  topics: ["in-the-past"],
   isA: ["time-order"],
   proposed: true,
 });

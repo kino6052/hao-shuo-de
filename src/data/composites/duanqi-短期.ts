@@ -15,7 +15,7 @@ export default composite({
   tts: ["不长的时间", "时间不长"],
   literal: "a time that is not long",
   fit: "plain",
-  topics: ["how-often"],
+  topics: ["long-and-short-time"],
   isA: ["time-span"],
   proposed: true,
 });

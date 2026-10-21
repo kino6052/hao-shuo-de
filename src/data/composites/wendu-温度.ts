@@ -12,7 +12,7 @@ export default composite({
   tts: ["多热"],
   literal: "how hot",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["weather-and-clouds"],
   isA: ["measure-unit"],
   examples: [
     {

@@ -12,7 +12,7 @@ export default composite({
   tts: ["不一样"],
   literal: "not the same",
   fit: "plain",
-  topics: ["degree-words"],
+  topics: ["especially-and-in-person"],
   isA: ["degree-word"],
   proposed: true,
 });

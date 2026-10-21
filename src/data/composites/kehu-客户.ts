@@ -15,7 +15,7 @@ export default composite({
   tts: ["买东西的人", "买帮人的工作的人"],
   literal: "a person who buys things / a person who buys the work of helping",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["goods-and-customers"],
   isA: ["social-role"],
   proposed: true,
 });

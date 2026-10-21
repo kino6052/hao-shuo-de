@@ -15,7 +15,7 @@ export default composite({
   tts: ["做一下，觉得怎么样", "用身体觉得"],
   literal: "do it and feel how it is",
   fit: "plain",
-  topics: ["senses"],
+  topics: ["smell-taste-touch-and-feeling"],
   isA: ["perceiving"],
   proposed: true,
 });

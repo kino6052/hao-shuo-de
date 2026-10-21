@@ -15,7 +15,7 @@ export default composite({
   tts: ["高地最上面的部分", "高地最高的地方"],
   literal: "the very top part of the high ground / the highest place of the high ground",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["mountains-and-slopes"],
   isA: ["landform"],
   proposed: true,
 });

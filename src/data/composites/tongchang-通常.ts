@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["平时", "大部分时间"],
   fit: "natural",
-  topics: ["how-often"],
+  topics: ["often-and-usually"],
   isA: ["frequency"],
   proposed: true,
 });

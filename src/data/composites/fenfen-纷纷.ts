@@ -15,7 +15,7 @@ export default composite({
   tts: ["一个在一个后面", "很多人一个一个来"],
   literal: "one behind another / very many people come one by one",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["quietly-together-step-by-step"],
   isA: ["adverb-word"],
   proposed: true,
 });

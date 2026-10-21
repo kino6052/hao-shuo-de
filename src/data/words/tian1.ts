@@ -14,7 +14,7 @@ export default word("tian1", {
     eng: "Days and the sky: tomorrow ({{word:ming2}}-{{word:tian1}}), the weather ({{word:tian1}}-{{word:qi4}}), and counting days all need it.",
     rus: "Дни и небо: без него нет «завтра» ({{word:ming2}}-{{word:tian1}}), «погоды» ({{word:tian1}}-{{word:qi4}}) и счёта дней.",
   },
-  topics: ["calendar"],
+  topics: ["days-and-dates"],
   isA: ["time-span"],
   atom: {
     eng: "A day is the round of light and dark you live through; no other word frames it.",

@@ -15,7 +15,7 @@ export default composite({
   tts: ["帮人把东西放好", "把X留在这里，不让X变坏"],
   literal: "help a person put things away well / keep X here, not let X go bad",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["doing-and-carrying-out"],
   isA: ["making"],
   proposed: true,
 });

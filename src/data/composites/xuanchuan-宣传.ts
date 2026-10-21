@@ -14,7 +14,7 @@ export default composite({
   tts: ["让很多人知道X，觉得X好"],
   literal: "let many people know X and feel X is good",
   fit: "plain",
-  topics: ["news-and-events"],
+  topics: ["announcing-and-spreading"],
   isA: ["social-action"],
   proposed: true,
 });

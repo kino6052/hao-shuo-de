@@ -14,7 +14,7 @@ export default composite({
   tts: ["水里有很多东西"],
   literal: "there are many things in the water",
   fit: "plain",
-  topics: ["how-it-feels"],
+  topics: ["comfortable-smooth-wet-dry"],
   isA: ["touch-quality"],
   proposed: true,
 });

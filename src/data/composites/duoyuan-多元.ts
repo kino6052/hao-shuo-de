@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["多样", "有很多不同的样子"],
   fit: "natural",
-  topics: ["same-and-different"],
+  topics: ["different-and-varied"],
   isA: ["comparison"],
   proposed: true,
 });

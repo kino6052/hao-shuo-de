@@ -15,7 +15,7 @@ export default composite({
   tts: ["不笑，不玩儿", "不笑，看起来很重要"],
   literal: "not laughing, not playing",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["brave-calm-and-lively"],
   isA: ["character-quality"],
   proposed: true,
 });

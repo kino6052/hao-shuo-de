@@ -16,7 +16,7 @@ export default composite({
   tts: ["热点", "很多人都在说的东西", "很多人都想去的地方"],
   literal: "hot-point / what many people are talking about / a place many people want to go to",
   fit: "natural",
-  topics: ["news-and-events"],
+  topics: ["news-and-press"],
   isA: ["event"],
   proposed: true,
 });

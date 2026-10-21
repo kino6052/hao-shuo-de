@@ -15,7 +15,7 @@ export default composite({
   tts: ["做过很多次，能做好", "很知道怎么做"],
   literal: "has done it many times, can do it well",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["clever-skilled-and-famous"],
   isA: ["character-quality"],
   proposed: true,
 });

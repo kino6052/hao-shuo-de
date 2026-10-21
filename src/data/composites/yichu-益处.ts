@@ -15,7 +15,7 @@ export default composite({
   tts: ["好的地方", "得到的好的东西"],
   literal: "the good part / the good thing you get",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["useful-and-harmful"],
   isA: ["idea"],
   proposed: true,
 });

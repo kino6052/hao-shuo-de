@@ -15,7 +15,7 @@ export default composite({
   tts: ["写字用的工具", "写字用的东西"],
   literal: "tools used to write characters / things used to write characters",
   fit: "plain",
-  topics: ["classroom"],
+  topics: ["pens-books-and-school-bags"],
   isA: ["writing-tool"],
   proposed: true,
 });

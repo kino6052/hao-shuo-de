@@ -14,7 +14,7 @@ export default word("dan4", {
     eng: "But: {{word:dan4}} or {{word:dan4}}-{{word:shi4}} turns a sentence against the one before.",
     rus: "Но: {{word:dan4}} или {{word:dan4}}-{{word:shi4}} противопоставляет предложение предыдущему.",
   },
-  topics: ["joining-words"],
+  topics: ["but-and-although"],
   isA: ["conjunction"],
   senses: {
     egg: {

@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["这样就Y", "X，这样就Y"],
   fit: "natural",
-  topics: ["joining-words"],
+  topics: ["because-and-so"],
   isA: ["conjunction"],
   proposed: true,
 });

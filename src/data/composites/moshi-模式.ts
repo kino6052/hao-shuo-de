@@ -15,7 +15,7 @@ export default composite({
   tts: ["常常一样的做法", "不变的方法"],
   literal: "a way of doing that is often the same / a way that does not change",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["ways-and-methods"],
   isA: ["idea"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["心在X上", "只想X"],
   literal: "the heart is on X / think only of X",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["careful-hardworking-and-lazy"],
   isA: ["character-quality"],
   proposed: true,
 });

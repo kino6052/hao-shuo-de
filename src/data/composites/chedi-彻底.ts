@@ -15,7 +15,7 @@ export default composite({
   tts: ["什么都做完", "一点都没留下"],
   literal: "everything is finished / not a bit is left behind",
   fit: "plain",
-  topics: ["degree-words"],
+  topics: ["too-much-and-completely"],
   isA: ["degree-word"],
   proposed: true,
 });

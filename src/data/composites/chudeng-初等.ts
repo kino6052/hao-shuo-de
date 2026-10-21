@@ -12,7 +12,7 @@ export default composite({
   tts: ["最开始的", "开始学的"],
   literal: "the very first / what one begins to learn",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-days-and-years"],
   isA: ["condition-quality"],
   proposed: true,
 });

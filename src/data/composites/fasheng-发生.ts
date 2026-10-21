@@ -13,7 +13,7 @@ export default composite({
   literal: "send out, be born",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["news-and-events"],
+  topics: ["events-and-luck"],
   isA: ["happening"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["不怕难，一定要做完", "很硬，不怕难"],
   literal: "not afraid of the hard, surely wants to finish it / very hard, not afraid of the hard",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["brave-calm-and-lively"],
   isA: ["character-quality"],
   proposed: true,
 });

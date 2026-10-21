@@ -12,7 +12,7 @@ export default composite({
   tts: ["定", "不变了"],
   literal: "won't change anymore",
   fit: "word",
-  topics: ["deciding"],
+  topics: ["choosing-and-deciding"],
   isA: ["thinking-action"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["一次又一次做", "很多次做"],
   literal: "do it once and again / do it many times",
   fit: "plain",
-  topics: ["how-often"],
+  topics: ["again-and-again"],
   isA: ["frequency"],
   proposed: true,
 });

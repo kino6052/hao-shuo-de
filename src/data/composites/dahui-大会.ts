@@ -15,7 +15,7 @@ export default composite({
   tts: ["大会", "很多人一起开的会"],
   literal: "a meeting that many people hold together",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["managing-and-progress"],
   isA: ["event"],
   proposed: true,
 });

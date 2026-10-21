@@ -15,7 +15,7 @@ export default composite({
   tts: ["第二好的人得到的，白色的小东西", "\"银\"-\"牌\""],
   literal: "a small white thing which the second best person gets / yin-pai",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["medals-and-champions"],
   isA: ["made-thing"],
   proposed: true,
 });

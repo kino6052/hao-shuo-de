@@ -15,7 +15,7 @@ export default composite({
   tts: ["让X变不难", "把X的难的部分拿走"],
   literal: "make X become not hard / take away the hard parts of X",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["becoming-and-turning-into"],
   isA: ["making"],
   proposed: true,
 });

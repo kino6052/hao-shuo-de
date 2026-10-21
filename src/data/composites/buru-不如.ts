@@ -12,7 +12,7 @@ export default composite({
   tts: ["没有X好"],
   literal: "not as good as X",
   fit: "plain",
-  topics: ["same-and-different"],
+  topics: ["more-and-less-than"],
   isA: ["comparison"],
   examples: [
     {

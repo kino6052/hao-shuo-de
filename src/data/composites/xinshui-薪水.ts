@@ -12,7 +12,7 @@ export default composite({
   tts: ["工作的金"],
   literal: "the money of work",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["earning-and-compensation"],
   isA: ["money-thing"],
   proposed: true,
 });

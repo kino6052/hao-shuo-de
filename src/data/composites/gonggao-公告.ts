@@ -15,7 +15,7 @@ export default composite({
   tts: ["写出来，让大家知道", "写给大家看的话"],
   literal: "write it out so that everyone knows / words written for everyone to read",
   fit: "plain",
-  topics: ["news-and-events"],
+  topics: ["announcing-and-spreading"],
   isA: ["paper-thing"],
   proposed: true,
 });

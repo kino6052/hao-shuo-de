@@ -14,7 +14,7 @@ export default composite({
   tts: ["地下的硬的东西和地的样子"],
   literal: "the hard things under the ground and the look of the ground",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["land-soil-and-the-earth"],
   isA: ["stone-or-earth"],
   proposed: true,
 });

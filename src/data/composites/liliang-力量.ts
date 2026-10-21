@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:li4}}"],
   tts: ["力"],
   fit: "word",
-  topics: ["speed-and-strength"],
+  topics: ["strong-and-weak-body-and-force"],
   isA: ["state-name"],
   examples: [
     {

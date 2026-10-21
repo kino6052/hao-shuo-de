@@ -12,7 +12,7 @@ export default composite({
   tts: ["就一个"],
   literal: "just one",
   fit: "plain",
-  topics: ["all-and-some"],
+  topics: ["half-both-and-only-one"],
   isA: ["amount-word"],
   examples: [
     {

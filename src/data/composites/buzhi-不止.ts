@@ -12,7 +12,7 @@ export default composite({
   tts: ["比X多", "不只有X"],
   literal: "more than X / there is not only X",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["extra-and-limits"],
   isA: ["amount-word"],
   proposed: true,
 });

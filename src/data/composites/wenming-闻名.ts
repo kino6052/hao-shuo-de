@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:you3}}-{{word:ming2}}", "{{word:ren2}}-{{word:ren2}} {{word:dou1}} {{word:zhi1dao4}}"],
   tts: ["有名", "人人都知道"],
   fit: "natural",
-  topics: ["state-of-things"],
+  topics: ["special-and-strange"],
   isA: ["condition-quality"],
   proposed: true,
 });

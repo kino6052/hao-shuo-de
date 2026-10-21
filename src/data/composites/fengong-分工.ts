@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["分工", "把工作分开，人人做一部分"],
   fit: "natural",
-  topics: ["working-life"],
+  topics: ["managing-and-progress"],
   isA: ["working"],
   proposed: true,
 });

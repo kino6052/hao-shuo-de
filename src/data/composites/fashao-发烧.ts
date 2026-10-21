@@ -12,7 +12,7 @@ export default composite({
   tts: ["身体很热"],
   literal: "the body is very hot",
   fit: "natural",
-  topics: ["illness"],
+  topics: ["fever-colds-and-diseases"],
   isA: ["state-name"],
   examples: [
     {

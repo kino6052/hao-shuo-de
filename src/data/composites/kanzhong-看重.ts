@@ -15,7 +15,7 @@ export default composite({
   tts: ["看重", "觉得X很重要"],
   literal: "look-heavy / feel that X is very important",
   fit: "natural",
-  topics: ["liking-and-wanting"],
+  topics: ["respect-and-cherishing"],
   isA: ["feeling-and-wanting"],
   proposed: true,
 });

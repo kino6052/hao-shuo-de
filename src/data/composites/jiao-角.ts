@@ -14,7 +14,7 @@ export default composite({
   tts: ["两边在一起的地方"],
   literal: "where two sides meet",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["flat-straight-curved"],
   isA: ["shape-quality"],
   proposed: true,
 });

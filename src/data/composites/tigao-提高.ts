@@ -12,7 +12,7 @@ export default composite({
   tts: ["比前做好一点"],
   literal: "do it a bit better than before",
   fit: "natural",
-  topics: ["changing"],
+  topics: ["increasing-and-rising"],
   isA: ["becoming"],
   examples: [
     {

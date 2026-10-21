@@ -12,7 +12,7 @@ export default composite({
   tts: ["小的部分"],
   literal: "a small part",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["key-points-and-principles"],
   isA: ["idea"],
   proposed: true,
 });

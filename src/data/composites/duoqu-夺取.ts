@@ -15,7 +15,7 @@ export default composite({
   tts: ["很快把X拿走", "用力从别人手里拿走X"],
   literal: "quickly take X away / use force to take X away from another's hand",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["taking-picking-up-and-using"],
   isA: ["handling-action"],
   proposed: true,
 });

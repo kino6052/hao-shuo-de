@@ -15,7 +15,7 @@ export default composite({
   tts: ["发出的，火和人都发出的气很少", "发出的气很少"],
   literal: "what it gives off, the gas that fire and people both give off, is little / the gas it gives off is little",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["natural-and-man-made"],
   isA: ["condition-quality"],
   proposed: true,
 });

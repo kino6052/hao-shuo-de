@@ -15,7 +15,7 @@ export default composite({
   tts: ["小心看好X，不让X变坏", "爱X，不让X变坏"],
   literal: "carefully look after X so X does not go bad / love X, don't let X go bad",
   fit: "plain",
-  topics: ["liking-and-wanting"],
+  topics: ["respect-and-cherishing"],
   isA: ["feeling-and-wanting"],
   proposed: true,
 });

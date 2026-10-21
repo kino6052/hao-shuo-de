@@ -15,7 +15,7 @@ export default composite({
   tts: ["学别人的方法", "看别人怎么做，学他"],
   literal: "learn other people's way / see how others do it, learn from them",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["studying-and-practising"],
   isA: ["learning-and-teaching"],
   proposed: true,
 });

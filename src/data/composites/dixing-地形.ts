@@ -15,7 +15,7 @@ export default composite({
   tts: ["地面的样子", "地上有高的地方，有平的地方"],
   literal: "the look of the ground surface / on the ground there are high places and flat places",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["mountains-and-slopes"],
   isA: ["landform"],
   proposed: true,
 });

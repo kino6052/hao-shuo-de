@@ -14,7 +14,7 @@ export default composite({
   tts: ["把X从别的地方拿进来"],
   literal: "take X in from another place",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["buying-supplying-and-launching"],
   isA: ["trade-action"],
   proposed: true,
 });

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:chu1}}-{{word:li4}}", "{{word:yong4}}-{{word:li4}} {{word:zuo4}}"],
   tts: ["出力", "用力做"],
   fit: "natural",
-  topics: ["making-and-doing"],
+  topics: ["using-things-and-effort"],
   isA: ["working"],
   proposed: true,
 });

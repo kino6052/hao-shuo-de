@@ -15,7 +15,7 @@ export default composite({
   tts: ["X附近的大地方", "大的地方"],
   literal: "the big place near X / a big place",
   fit: "plain",
-  topics: ["near-and-far"],
+  topics: ["place-location-and-space"],
   isA: ["place"],
   proposed: true,
 });

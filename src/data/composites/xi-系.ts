@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:jie2}}", "{{word:ba3}} X {{word:jie2}}-{{word:hao3}}"],
   tts: ["结", "把X结好"],
   fit: "natural",
-  topics: ["taking-and-holding"],
+  topics: ["putting-and-placing"],
   isA: ["handling-action"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["工作的地方"],
   literal: "the place where you work",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["companies-and-products"],
   isA: ["group-of-people"],
   examples: [
     {

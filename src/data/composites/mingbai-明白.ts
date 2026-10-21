@@ -12,7 +12,7 @@ export default composite({
   tts: ["明白", "知道"],
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["knowing-and-understanding"],
+  topics: ["knowing-and-grasping"],
   isA: ["thinking-action"],
   examples: [
     {

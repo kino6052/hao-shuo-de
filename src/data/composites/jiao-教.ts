@@ -12,7 +12,7 @@ export default composite({
   tts: ["帮X学"],
   literal: "help X learn",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["teaching-homework-and-questions"],
   isA: ["learning-and-teaching"],
   note: "Lesson {{lesson:everyday-patterns}}.",
   examples: [

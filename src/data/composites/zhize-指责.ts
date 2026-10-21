@@ -15,7 +15,7 @@ export default composite({
   tts: ["说X做坏了", "说X不对"],
   literal: "say X did it badly / say X is wrong",
   fit: "plain",
-  topics: ["agreeing-and-praising"],
+  topics: ["refusing-and-criticising"],
   isA: ["speaking-action"],
   proposed: true,
 });

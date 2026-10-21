@@ -15,7 +15,7 @@ export default composite({
   tts: ["比别的人不好", "把东西拿到远的地方"],
   literal: "not as good as the other person / take things to a far place",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["winning-losing-and-scores"],
   isA: ["receiving"],
   proposed: true,
 });

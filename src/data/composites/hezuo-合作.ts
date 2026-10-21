@@ -12,7 +12,7 @@ export default composite({
   tts: ["一起做"],
   literal: "do it together",
   fit: "plain",
-  topics: ["helping-and-sharing"],
+  topics: ["together-and-cooperating"],
   isA: ["social-action"],
   examples: [
     {

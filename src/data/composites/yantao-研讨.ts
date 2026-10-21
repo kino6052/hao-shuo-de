@@ -15,7 +15,7 @@ export default composite({
   tts: ["一起说", "一起说和想"],
   literal: "say together / say and think together",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["talks-discussion-and-orders"],
   isA: ["speaking-action"],
   proposed: true,
 });

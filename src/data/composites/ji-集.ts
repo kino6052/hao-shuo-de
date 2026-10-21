@@ -14,7 +14,7 @@ export default composite({
   tts: ["把很多X放在一起"],
   literal: "put many X together",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["gathering-keeping-and-storing"],
   isA: ["handling-action"],
   proposed: true,
 });

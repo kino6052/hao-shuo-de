@@ -14,7 +14,7 @@ export default composite({
   tts: ["用大声音叫大家做"],
   literal: "use a loud voice to tell everyone to do it",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["talks-discussion-and-orders"],
   isA: ["speaking-action"],
   proposed: true,
 });

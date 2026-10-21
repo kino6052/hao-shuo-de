@@ -15,7 +15,7 @@ export default composite({
   tts: ["去别的国有新的家", "在别的国有新的家的人"],
   literal: "go to another country and have a new home / a person who has a new home in another country",
   fit: "plain",
-  topics: ["countries-and-cities"],
+  topics: ["country-and-nation"],
   isA: ["moving-action"],
   proposed: true,
 });

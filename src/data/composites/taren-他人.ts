@@ -15,7 +15,7 @@ export default composite({
   ],
   tts: ["他人", "别人", "别的人"],
   fit: "natural",
-  topics: ["pointers"],
+  topics: ["self-and-others"],
   isA: ["pronoun"],
   proposed: true,
 });

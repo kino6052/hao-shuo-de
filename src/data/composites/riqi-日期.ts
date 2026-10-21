@@ -12,7 +12,7 @@ export default composite({
   tts: ["什么日"],
   literal: "which day",
   fit: "plain",
-  topics: ["calendar"],
+  topics: ["days-and-dates"],
   isA: ["time-point"],
   examples: [
     {

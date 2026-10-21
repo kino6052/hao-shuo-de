@@ -15,7 +15,7 @@ export default composite({
   ],
   tts: ["一口气", "中间不等", "一下就做完"],
   fit: "natural",
-  topics: ["adverbs"],
+  topics: ["quietly-together-step-by-step"],
   isA: ["adverb-word"],
   proposed: true,
 });

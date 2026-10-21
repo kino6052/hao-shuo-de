@@ -12,7 +12,7 @@ export default composite({
   tts: ["一起", "一同"],
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["helping-and-sharing"],
+  topics: ["together-and-cooperating"],
   isA: ["adverb-word"],
   note: "A fixed pair, like qǐ-lái.",
   examples: [

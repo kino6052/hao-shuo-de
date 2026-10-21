@@ -16,7 +16,7 @@ export default composite({
   tts: ["最下面的部分", "最重要的部分", "一点也没有"],
   literal: "the very bottom part / the most important part / not even a bit there",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["key-points-and-principles"],
   isA: ["idea"],
   proposed: true,
 });

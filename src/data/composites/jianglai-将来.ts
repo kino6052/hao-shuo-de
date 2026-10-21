@@ -15,7 +15,7 @@ export default composite({
   tts: ["会来的时间", "未来"],
   literal: "the time that will come / not yet come",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["after-later-and-future"],
   isA: ["time-order"],
   examples: [
     {

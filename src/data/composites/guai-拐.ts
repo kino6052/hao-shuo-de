@@ -15,7 +15,7 @@ export default composite({
   tts: ["走到别的路上", "脚不好，走路不好"],
   literal: "walk onto another road / the leg is not good, walking is not good",
   fit: "plain",
-  topics: ["going-and-coming"],
+  topics: ["passing-through-and-across"],
   isA: ["moving-action"],
   proposed: true,
 });

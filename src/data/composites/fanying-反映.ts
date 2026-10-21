@@ -14,7 +14,7 @@ export default composite({
   tts: ["让人看到X的样子"],
   literal: "let people see the look of X",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["introducing-and-passing-on"],
   isA: ["speaking-action"],
   proposed: true,
 });

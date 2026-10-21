@@ -12,7 +12,7 @@ export default composite({
   tts: ["不能动"],
   literal: "cannot move",
   fit: "plain",
-  topics: ["how-it-feels"],
+  topics: ["hard-soft-heavy-light"],
   isA: ["touch-quality"],
   proposed: true,
 });

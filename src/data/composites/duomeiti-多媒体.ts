@@ -14,7 +14,7 @@ export default composite({
   tts: ["用很多不同的方法给人看和听的东西"],
   literal: "a thing that gives people something to see and hear in many different ways",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["television-radio-and-media"],
   isA: ["work-of-art"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["卡罗来纳", "美国的两部分"],
   literal: "two parts of Měiguó",
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-cities-and-states"],
   isA: ["place"],
   proposed: true,
 });

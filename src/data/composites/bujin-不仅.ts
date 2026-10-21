@@ -13,7 +13,7 @@ export default composite({
   literal: "not only",
   fit: "natural",
   transparent: true,
-  topics: ["joining-words"],
+  topics: ["and-or-and-also"],
   isA: ["conjunction"],
   proposed: true,
 });

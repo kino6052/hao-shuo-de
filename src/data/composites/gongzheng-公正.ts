@@ -15,7 +15,7 @@ export default composite({
   tts: ["对人人都一样", "对大家都好"],
   literal: "the same for everyone / good for everyone",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["suitable-and-fair"],
   isA: ["value-quality"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["做给人看", "做给别人看，让他们学"],
   literal: "do it for people to see / do it for others to see, let them learn",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["teaching-homework-and-questions"],
   isA: ["learning-and-teaching"],
   proposed: true,
 });

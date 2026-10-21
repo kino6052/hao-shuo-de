@@ -15,7 +15,7 @@ export default composite({
   tts: ["很想学别人的", "不觉得我最好"],
   literal: "wants very much to learn what others have / does not feel I am the best",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["kind-honest-and-mean"],
   isA: ["character-quality"],
   proposed: true,
 });

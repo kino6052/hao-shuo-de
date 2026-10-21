@@ -14,7 +14,7 @@ export default composite({
   tts: ["对的，对人人都好的东西"],
   literal: "what is right, what is good for everyone",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["rights-duties-and-agreements"],
   isA: ["idea"],
   proposed: true,
 });

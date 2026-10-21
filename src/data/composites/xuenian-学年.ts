@@ -15,7 +15,7 @@ export default composite({
   tts: ["学年", "学校的一年"],
   literal: "learn-year / one year of school",
   fit: "plain",
-  topics: ["calendar"],
+  topics: ["years-and-centuries"],
   isA: ["time-span"],
   proposed: true,
 });

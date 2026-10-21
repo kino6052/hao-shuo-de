@@ -14,7 +14,7 @@ export default word("tong1", {
     eng: "Go through, lead to: {{word:lu4}} {{word:tong1}}-{{word:dao4}} {{word:jia1}}. {{word:qu4}}-{{word:dao4}} covers part of it.",
     rus: "Проходить, вести куда-то: {{word:lu4}} {{word:tong1}}-{{word:dao4}} {{word:jia1}}. {{word:qu4}}-{{word:dao4}} покрывает лишь часть.",
   },
-  topics: ["going-and-coming"],
+  topics: ["passing-through-and-across"],
   isA: ["moving-action"],
   paraphrase: {
     forms: [

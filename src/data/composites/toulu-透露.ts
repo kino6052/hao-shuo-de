@@ -15,7 +15,7 @@ export default composite({
   tts: ["让人知道没有人知道的东西", "把X说给人听"],
   literal: "let people know what nobody knew / tell X to people",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["introducing-and-passing-on"],
   isA: ["speaking-action"],
   proposed: true,
 });

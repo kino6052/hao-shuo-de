@@ -15,7 +15,7 @@ export default composite({
   tts: ["做别的时候，也做一下", "一下就做，不用等"],
   literal: "when doing other things, also do it for a moment / do it at once, no need to wait",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["quietly-together-step-by-step"],
   isA: ["adverb-word"],
   proposed: true,
 });

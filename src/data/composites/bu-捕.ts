@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X拿到，让X不能走", "拿到X"],
   literal: "get hold of X, let X not be able to leave / get X in the hand",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["taking-picking-up-and-using"],
   isA: ["handling-action"],
   proposed: true,
 });

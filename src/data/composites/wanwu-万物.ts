@@ -15,7 +15,7 @@ export default composite({
   tts: ["活的和不活的东西", "什么都"],
   literal: "living and not living things / everything",
   fit: "plain",
-  topics: ["all-and-some"],
+  topics: ["all-and-every"],
   isA: ["thing"],
   proposed: true,
 });

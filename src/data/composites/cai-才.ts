@@ -12,7 +12,7 @@ export default composite({
   tts: ["X完后，Y"],
   literal: "after finishing X, Y",
   fit: "skip",
-  topics: ["adverbs"],
+  topics: ["just-then-and-finally"],
   isA: ["adverb-word"],
   examples: [
     {

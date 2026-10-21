@@ -12,7 +12,7 @@ export default composite({
   tts: ["好好做！"],
   literal: "do it well!",
   fit: "natural",
-  topics: ["sports"],
+  topics: ["matches-and-contests"],
   isA: ["set-phrase"],
   examples: [
     {

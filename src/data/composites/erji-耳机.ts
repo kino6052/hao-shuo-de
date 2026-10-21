@@ -14,7 +14,7 @@ export default composite({
   tts: ["放在耳朵上听声音的机"],
   literal: "a machine you put on the ears to hear sound",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["computers-and-gadgets"],
   isA: ["electric-device"],
   proposed: true,
 });

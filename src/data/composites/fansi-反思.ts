@@ -15,7 +15,7 @@ export default composite({
   tts: ["想我做的对不对", "回头想我做的对不对"],
   literal: "think whether what I did was right / look back and think whether what I did was right",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["noticing-and-observing"],
   isA: ["thinking-action"],
   proposed: true,
 });

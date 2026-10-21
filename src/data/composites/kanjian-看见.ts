@@ -13,7 +13,7 @@ export default composite({
   literal: "look-arrive",
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["senses"],
+  topics: ["seeing-and-looking"],
   isA: ["perceiving"],
   examples: [
     {

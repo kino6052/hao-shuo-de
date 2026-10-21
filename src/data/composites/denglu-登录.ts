@@ -12,7 +12,7 @@ export default composite({
   tts: ["进去"],
   literal: "go in",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["typing-clicking-and-downloading"],
   isA: ["body-action"],
   examples: [
     {

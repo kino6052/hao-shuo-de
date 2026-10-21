@@ -12,7 +12,7 @@ export default composite({
   tts: ["在看的机上看"],
   literal: "look on the looking-machine",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["television-radio-and-media"],
   isA: ["perceiving"],
   proposed: true,
 });

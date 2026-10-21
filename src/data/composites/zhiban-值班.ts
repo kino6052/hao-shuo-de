@@ -14,7 +14,7 @@ export default composite({
   tts: ["别人不在的时候工作"],
   literal: "wait at the workplace, do it if something comes up / work when the others are not there",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["work-days-and-busy"],
   isA: ["working"],
   proposed: true,
 });

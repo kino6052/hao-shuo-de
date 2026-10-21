@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:bu4}} {{word:nan2}}", "{{word:bu4}} {{word:nan2}} X"],
   tts: ["不难", "不难X"],
   fit: "natural",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["easy-and-convenient"],
   isA: ["truth-or-ease"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["开始以前，把X要的东西做好", "为X做好"],
   literal: "before it starts, make ready the things X needs / make ready for X",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["doing-and-carrying-out"],
   isA: ["making"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["把很多东西放在一起给人看的大会", "很多人来看，来买东西的大会"],
   literal: "a big meeting where many things are put together to show people / a big meeting where many people come to look and come to buy things",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["companies-and-products"],
   isA: ["event"],
   proposed: true,
 });

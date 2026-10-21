@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X写下来", "一个一个写"],
   literal: "write X down / write one by one",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["writing-things-down"],
   isA: ["making"],
   proposed: true,
 });

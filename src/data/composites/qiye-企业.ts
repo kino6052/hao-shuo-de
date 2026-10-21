@@ -15,7 +15,7 @@ export default composite({
   tts: ["工作的地方", "很多人一起工作得金的地方"],
   literal: "the place where you work / the place where many people work together and get money",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["companies-and-products"],
   isA: ["group-of-people"],
   proposed: true,
 });

@@ -14,7 +14,7 @@ export default composite({
   tts: ["算的工具的写的部分"],
   literal: "the writing part of a computer",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["computers-and-gadgets"],
   isA: ["computer-or-phone"],
   examples: [
     {

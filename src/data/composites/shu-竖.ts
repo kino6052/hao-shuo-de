@@ -15,7 +15,7 @@ export default composite({
   tts: ["从上到下的", "让X站起来"],
   literal: "from top to bottom / make X stand up",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["flat-straight-curved"],
   isA: ["shape-quality"],
   proposed: true,
 });

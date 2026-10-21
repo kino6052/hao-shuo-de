@@ -15,7 +15,7 @@ export default composite({
   tts: ["写下说定的话", "两个人说好的东西"],
   literal: "the words written down that were settled; a thing two people agreed",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["rights-duties-and-agreements"],
   isA: ["paper-thing"],
   proposed: true,
 });

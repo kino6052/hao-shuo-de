@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["为这个做X", "为了这个做X"],
   fit: "natural",
-  topics: ["joining-words"],
+  topics: ["because-and-so"],
   isA: ["conjunction"],
   proposed: true,
 });

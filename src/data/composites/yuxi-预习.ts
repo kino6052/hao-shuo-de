@@ -15,7 +15,7 @@ export default composite({
   tts: ["早一点学X", "在别人说X以前，学X"],
   literal: "learn X a bit earlier / before others say X, learn X",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["studying-and-practising"],
   isA: ["learning-and-teaching"],
   proposed: true,
 });

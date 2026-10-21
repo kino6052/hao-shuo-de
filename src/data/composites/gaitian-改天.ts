@@ -15,7 +15,7 @@ export default composite({
   tts: ["以后的一天", "别的天"],
   literal: "a day after now / another day",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["after-later-and-future"],
   isA: ["time-order"],
   proposed: true,
 });

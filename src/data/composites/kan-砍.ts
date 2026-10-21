@@ -15,7 +15,7 @@ export default composite({
   tts: ["用工具从上面用力打下去", "用工具用力打X，让X变小"],
   literal: "use a tool to hit down hard from above / use a tool to hit X hard, make X become small",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["breaking-and-taking-apart"],
   isA: ["handling-action"],
   proposed: true,
 });

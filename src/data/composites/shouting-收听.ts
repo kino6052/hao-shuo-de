@@ -15,7 +15,7 @@ export default composite({
   tts: ["听给很多人听的声音", "用听的机听"],
   literal: "listen to the sound given to many people to hear / listen with the machine for listening",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["television-radio-and-media"],
   isA: ["perceiving"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["里外", "里面和外面"],
   literal: "inside-outside / the inside and the outside",
   fit: "natural",
-  topics: ["up-down-in-out"],
+  topics: ["inside-and-outside"],
   isA: ["place-relation"],
   proposed: true,
 });

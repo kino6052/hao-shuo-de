@@ -12,7 +12,7 @@ export default composite({
   tts: ["长方的样子"],
   literal: "the long square shape",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["circles-squares-cubes"],
   isA: ["shape-quality"],
   proposed: true,
 });

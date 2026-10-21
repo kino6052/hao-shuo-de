@@ -12,7 +12,7 @@ export default composite({
   tts: ["高地"],
   literal: "high ground",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["mountains-and-slopes"],
   isA: ["landform"],
   examples: [
     {

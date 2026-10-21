@@ -15,7 +15,7 @@ export default composite({
   tts: ["又回到开始的地方", "一次又一次走圆的路"],
   literal: "come back again to where it began / walk a round road, again and again",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["becoming-and-turning-into"],
   isA: ["happening"],
   proposed: true,
 });

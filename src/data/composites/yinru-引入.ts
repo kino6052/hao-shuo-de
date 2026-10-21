@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X拿进来", "让X进来"],
   literal: "take X in / let X come in",
   fit: "plain",
-  topics: ["giving-and-getting"],
+  topics: ["sending-and-delivering"],
   isA: ["handling-action"],
   proposed: true,
 });

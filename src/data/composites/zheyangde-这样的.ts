@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:zhe4}}-{{word:yang4}}-{{word:de}}", "{{word:zhe4}}-{{word:zhong3}}"],
   tts: ["这样的", "这种"],
   fit: "natural",
-  topics: ["pointers"],
+  topics: ["this-that-such"],
   isA: ["pronoun"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["东西从X动到Y", "东西在人和人中间动"],
   literal: "things move from X to Y / things move between people",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["buying-supplying-and-launching"],
   isA: ["moving-action"],
   proposed: true,
 });

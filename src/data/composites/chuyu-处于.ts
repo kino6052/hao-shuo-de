@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:zai4}} X-{{word:li3}}", "{{word:zai4}}"],
   tts: ["在X里", "在"],
   fit: "natural",
-  topics: ["up-down-in-out"],
+  topics: ["inside-and-outside"],
   isA: ["place-relation"],
   proposed: true,
 });

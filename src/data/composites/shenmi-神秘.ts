@@ -15,7 +15,7 @@ export default composite({
   tts: ["很难知道", "没有人知道是什么"],
   literal: "very hard to know",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["special-and-strange"],
   isA: ["condition-quality"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["但", "和想的不一样"],
   literal: "but / not the same as what one thought",
   fit: "natural",
-  topics: ["adverbs"],
+  topics: ["after-all-anyway-unexpectedly"],
   isA: ["adverb-word"],
   proposed: true,
 });

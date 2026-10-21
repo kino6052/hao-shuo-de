@@ -14,7 +14,7 @@ export default composite({
   tts: ["让人知道你是谁的号"],
   literal: "the number that lets people know who you are",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["software-files-and-accounts"],
   isA: ["idea"],
   proposed: true,
 });

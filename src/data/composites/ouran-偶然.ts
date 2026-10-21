@@ -15,7 +15,7 @@ export default composite({
   tts: ["不是想好要做的", "没想到就发生的"],
   literal: "not thought out to be done / happening without being thought of",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["special-and-strange"],
   isA: ["condition-quality"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["不只有X，还有Y"],
   literal: "there is not only X, there is also Y",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["only-even-and-more"],
   isA: ["adverb-word"],
   proposed: true,
 });

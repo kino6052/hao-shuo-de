@@ -15,7 +15,7 @@ export default composite({
   tts: ["用两个手拿", "用两个手拿X，爱X"],
   literal: "use two hands to hold / use two hands to hold X, love X",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["carrying-and-holding"],
   isA: ["handling-action"],
   proposed: true,
 });

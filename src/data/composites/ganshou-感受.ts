@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:jue2}}-{{word:de}}", "{{word:xin1}}-{{word:li3}}-{{word:de}} {{word:jue2}}-{{word:de}}"],
   tts: ["觉得", "心里的觉得"],
   fit: "natural",
-  topics: ["senses"],
+  topics: ["smell-taste-touch-and-feeling"],
   isA: ["perceiving"],
   proposed: true,
 });

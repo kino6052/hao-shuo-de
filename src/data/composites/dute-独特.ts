@@ -15,7 +15,7 @@ export default composite({
   tts: ["只有一个，很不一样", "别的都没有"],
   literal: "there is only one, very different / the others do not have it",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["special-and-strange"],
   isA: ["condition-quality"],
   proposed: true,
 });

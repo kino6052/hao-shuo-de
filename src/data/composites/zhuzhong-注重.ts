@@ -12,7 +12,7 @@ export default composite({
   tts: ["觉得X很重要"],
   literal: "feel X is very important",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["opinions-and-views"],
   isA: ["thinking-action"],
   proposed: true,
 });

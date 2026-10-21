@@ -12,7 +12,7 @@ export default composite({
   tts: ["想"],
   literal: "would like",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["believing-hoping-and-caring"],
   isA: ["thinking-action"],
   examples: [
     {

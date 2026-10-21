@@ -12,7 +12,7 @@ export default composite({
   tts: ["买东西要的金"],
   literal: "the money needed to buy things",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["prices-and-costs"],
   isA: ["money-thing"],
   proposed: true,
 });

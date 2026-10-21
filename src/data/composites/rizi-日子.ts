@@ -13,7 +13,7 @@ export default composite({
   literal: "day",
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["calendar"],
+  topics: ["days-and-dates"],
   isA: ["time-span"],
   examples: [
     {

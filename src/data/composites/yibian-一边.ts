@@ -12,7 +12,7 @@ export default composite({
   tts: ["一边"],
   fit: "natural",
   transparent: true,
-  topics: ["helping-and-sharing"],
+  topics: ["together-and-cooperating"],
   isA: ["adverb-word"],
   proposed: true,
 });

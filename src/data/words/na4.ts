@@ -14,7 +14,7 @@ export default word("na4", {
     eng: "Without it, you can't point at what's over there: no \"that\".",
     rus: "Без него нельзя указать на то, что далеко: нет «то».",
   },
-  topics: ["pointers"],
+  topics: ["this-that-such"],
   isA: ["pronoun"],
   maps: "ni",
   atom: {

@@ -14,7 +14,7 @@ export default composite({
   tts: ["把写好的X做出别的样子"],
   literal: "make a written X into another shape",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["authors-and-publishing"],
   isA: ["making"],
   proposed: true,
 });

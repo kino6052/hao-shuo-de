@@ -12,7 +12,7 @@ export default composite({
   tts: ["法不让做的"],
   literal: "what the law does not let you do",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["laws-and-rules"],
   isA: ["condition-quality"],
   proposed: true,
 });

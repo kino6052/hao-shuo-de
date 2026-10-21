@@ -15,7 +15,7 @@ export default composite({
   tts: ["以后还Y", "X完以后，还Y"],
   literal: "afterwards also Y / after X is done, also Y",
   fit: "plain",
-  topics: ["joining-words"],
+  topics: ["then-for-example-in-short"],
   isA: ["conjunction"],
   proposed: true,
 });

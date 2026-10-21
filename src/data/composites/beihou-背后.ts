@@ -15,7 +15,7 @@ export default composite({
   tts: ["后面", "后面的地方"],
   literal: "the back side / the place at the back",
   fit: "natural",
-  topics: ["near-and-far"],
+  topics: ["inside-outside-front-back"],
   isA: ["place-word"],
   proposed: true,
 });

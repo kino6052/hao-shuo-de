@@ -15,7 +15,7 @@ export default composite({
   tts: ["大学里第一个学的东西", "在大学学四年"],
   literal: "the first thing studied at university; four years of study at university",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-days-and-years"],
   isA: ["idea"],
   proposed: true,
 });

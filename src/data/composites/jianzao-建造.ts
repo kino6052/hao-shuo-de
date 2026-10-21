@@ -12,7 +12,7 @@ export default composite({
   tts: ["做", "把X做起来"],
   literal: "make / make X up",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["building-and-producing"],
   isA: ["making"],
   proposed: true,
 });

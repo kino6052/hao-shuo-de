@@ -14,7 +14,7 @@ export default composite({
   tts: ["让天上下来的水不到身体上的东西"],
   literal: "a thing that keeps water from the sky off the body",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["rain-and-snow"],
   isA: ["made-thing"],
   proposed: true,
 });

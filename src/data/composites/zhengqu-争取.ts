@@ -12,7 +12,7 @@ export default composite({
   tts: ["要得"],
   literal: "want to get",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["trying-and-persisting"],
   isA: ["thinking-action"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["很多人到一个地方", "从不同的地方来到一起"],
   literal: "many people to one place / come together from different places",
   fit: "plain",
-  topics: ["people-together"],
+  topics: ["gathering-and-getting-along"],
   isA: ["social-action"],
   proposed: true,
 });

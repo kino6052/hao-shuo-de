@@ -15,7 +15,7 @@ export default composite({
   tts: ["一起做X的人的头", "一起做X的人里做决定的人"],
   literal: "the head of the people who do X together / the one who decides among the people who do X together",
   fit: "plain",
-  topics: ["people-together"],
+  topics: ["teams-and-clubs"],
   isA: ["person"],
   proposed: true,
 });

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:xian4}}-{{word:zai4}} {{word:jiu4}} …", "{{word:bu4}} {{word:deng3}}"],
   tts: ["现在就…", "不等"],
   fit: "natural",
-  topics: ["before-and-after"],
+  topics: ["soon-early-and-late"],
   isA: ["time-order"],
   proposed: true,
 });

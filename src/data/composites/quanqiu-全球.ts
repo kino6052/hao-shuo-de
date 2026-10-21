@@ -12,7 +12,7 @@ export default composite({
   tts: ["地球上的人人"],
   literal: "all over the Earth",
   fit: "plain",
-  topics: ["countries-and-cities"],
+  topics: ["world-and-continents"],
   isA: ["place"],
   proposed: true,
 });

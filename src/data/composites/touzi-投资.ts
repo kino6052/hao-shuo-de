@@ -15,7 +15,7 @@ export default composite({
   tts: ["把金放进去，想让它变多", "放进去想变多的金"],
   literal: "put money in, want it to become more / the money put in to become more",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["stocks-and-investing"],
   isA: ["trade-action"],
   proposed: true,
 });

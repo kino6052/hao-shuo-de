@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X一起拿去", "拿在我旁边"],
   literal: "take X along / keep it beside me",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["carrying-and-holding"],
   isA: ["holding"],
   proposed: true,
 });

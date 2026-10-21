@@ -14,7 +14,7 @@ export default composite({
   tts: ["用机把字写出很多次"],
   literal: "use a machine to write the characters out many times",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["authors-and-publishing"],
   isA: ["making"],
   proposed: true,
 });

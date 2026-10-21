@@ -15,7 +15,7 @@ export default composite({
   tts: ["国里和国外", "这个国和外国"],
   literal: "inside the country and outside the country / this country and foreign countries",
   fit: "plain",
-  topics: ["countries-and-cities"],
+  topics: ["country-and-nation"],
   isA: ["place"],
   proposed: true,
 });

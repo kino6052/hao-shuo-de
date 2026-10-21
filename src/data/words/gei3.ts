@@ -14,7 +14,7 @@ export default word("gei3", {
     eng: "Give, and \"to\" or \"for\": {{word:gei3}} {{word:wo3}}. Without it, nothing passes between people.",
     rus: "Давать, а также «кому», «для»: {{word:gei3}} {{word:wo3}}. Без него ничего не передать.",
   },
-  topics: ["giving-and-getting"],
+  topics: ["giving-and-gifts"],
   isA: ["handling-action"],
   maps: "pana, tawa",
   paraphrase: {

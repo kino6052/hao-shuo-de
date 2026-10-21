@@ -13,7 +13,7 @@ export default composite({
   literal: "on the net",
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["phone-and-computer"],
+  topics: ["internet-and-websites"],
   isA: ["place-word"],
   examples: [
     {

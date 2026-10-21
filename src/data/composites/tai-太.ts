@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:zhen1}}"],
   tts: ["真"],
   fit: "plain",
-  topics: ["degree-words"],
+  topics: ["too-much-and-completely"],
   isA: ["degree-word"],
   note: "There's no word for \"too\" (§4d).",
   examples: [

@@ -15,7 +15,7 @@ export default composite({
   tts: ["很多人", "很多平常的人"],
   literal: "many people / many ordinary people",
   fit: "plain",
-  topics: ["people-together"],
+  topics: ["crowds-and-the-public"],
   isA: ["group-of-people"],
   proposed: true,
 });

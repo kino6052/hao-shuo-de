@@ -14,7 +14,7 @@ export default composite({
   tts: ["两边的人一起说，决定怎么做"],
   literal: "people on both sides talk together and decide what to do",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["talks-discussion-and-orders"],
   isA: ["social-action"],
   proposed: true,
 });

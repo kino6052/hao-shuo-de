@@ -14,7 +14,7 @@ export default composite({
   tts: ["记得很好，想得很多"],
   literal: "remembered well, thought about a lot",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["mind-and-imagination"],
   isA: ["value-quality"],
   proposed: true,
 });

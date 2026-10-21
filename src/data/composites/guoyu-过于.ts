@@ -12,7 +12,7 @@ export default composite({
   tts: ["真", "X到不好"],
   literal: "really / X to the point of not good",
   fit: "plain",
-  topics: ["degree-words"],
+  topics: ["too-much-and-completely"],
   isA: ["degree-word"],
   proposed: true,
 });

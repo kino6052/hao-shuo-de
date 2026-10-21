@@ -12,7 +12,7 @@ export default composite({
   tts: ["快走", "走得很快"],
   literal: "walk very fast",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["exercise-and-kinds-of-sport"],
   isA: ["body-action"],
   examples: [
     {

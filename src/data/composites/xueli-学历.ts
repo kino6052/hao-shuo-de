@@ -14,7 +14,7 @@ export default composite({
   tts: ["在学校学完的东西"],
   literal: "what you finished studying at school",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-days-and-years"],
   isA: ["idea"],
   proposed: true,
 });

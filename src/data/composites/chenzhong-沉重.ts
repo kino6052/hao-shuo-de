@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:hen3}} {{word:zhong4}}", "{{word:xin1}}-{{word:li3}} {{word:hen3}} {{word:zhong4}}"],
   tts: ["很重", "心里很重"],
   fit: "natural",
-  topics: ["how-it-feels"],
+  topics: ["hard-soft-heavy-light"],
   isA: ["touch-quality"],
   proposed: true,
 });

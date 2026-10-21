@@ -12,7 +12,7 @@ export default composite({
   tts: ["变高", "上去"],
   literal: "become high / go up",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["increasing-and-rising"],
   isA: ["becoming"],
   proposed: true,
 });

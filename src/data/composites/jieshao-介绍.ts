@@ -12,7 +12,7 @@ export default composite({
   tts: ["让X知道"],
   literal: "let X know",
   fit: "natural",
-  topics: ["talking"],
+  topics: ["introducing-and-passing-on"],
   isA: ["speaking-action"],
   examples: [
     {

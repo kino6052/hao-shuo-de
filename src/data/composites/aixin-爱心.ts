@@ -15,7 +15,7 @@ export default composite({
   tts: ["爱心", "想帮人的心"],
   literal: "love-heart / a heart that wants to help people",
   fit: "natural",
-  topics: ["helping-and-sharing"],
+  topics: ["caring-and-comforting"],
   isA: ["feeling-name"],
   proposed: true,
 });

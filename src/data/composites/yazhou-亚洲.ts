@@ -11,7 +11,7 @@ export default composite({
   hsd: ["\"Yàzhōu\""],
   tts: ["亚洲"],
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["world-and-continents"],
   isA: ["place"],
   proposed: true,
 });

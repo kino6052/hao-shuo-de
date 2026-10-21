@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:ting1}}"],
   tts: ["听"],
   fit: "word",
-  topics: ["senses"],
+  topics: ["hearing-and-sounds"],
   isA: ["perceiving"],
   examples: [
     { pinyin: "{{Word:ni3}} {{word:ting1}}!", hanzi: "你听！", en: "Listen!", ru: "Послушай!" },

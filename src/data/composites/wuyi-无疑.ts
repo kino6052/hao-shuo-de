@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["一定", "我知道是对的"],
   fit: "natural",
-  topics: ["adverbs"],
+  topics: ["maybe-of-course-obviously"],
   isA: ["adverb-word"],
   proposed: true,
 });

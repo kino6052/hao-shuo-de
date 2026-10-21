@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:yi3}}-{{word:hou4}} {{word:shuo1}}", "{{word:hai2}} {{word:you3}}"],
   tts: ["以后说", "还有"],
   fit: "natural",
-  topics: ["joining-words"],
+  topics: ["then-for-example-in-short"],
   isA: ["conjunction"],
   proposed: true,
 });

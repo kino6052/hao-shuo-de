@@ -15,7 +15,7 @@ export default composite({
   tts: ["中间有东西", "在中间放东西"],
   literal: "there is something in the middle; put something in the middle",
   fit: "plain",
-  topics: ["near-and-far"],
+  topics: ["near-far-and-distance"],
   isA: ["place-relation"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["变真"],
   literal: "become real",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["beginning-and-finishing"],
   isA: ["starting-and-stopping"],
   examples: [
     {

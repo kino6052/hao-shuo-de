@@ -13,7 +13,7 @@ export default composite({
   literal: "before X",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["before-and-after"],
+  topics: ["in-the-past"],
   isA: ["time-order"],
   note: "chī qián: before eating.",
   examples: [

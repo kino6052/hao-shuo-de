@@ -15,7 +15,7 @@ export default composite({
   tts: ["坐车的时候头很乱", "在车上的时候身体不好"],
   literal: "when sitting in a car the head is very messy / when sitting in a car the body is not well",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["pain-and-feeling-unwell"],
   isA: ["being-affected"],
   proposed: true,
 });

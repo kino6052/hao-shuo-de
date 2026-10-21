@@ -15,7 +15,7 @@ export default composite({
   tts: ["很不一样", "很不一样，也很好"],
   literal: "very different, and good too",
   fit: "natural",
-  topics: ["degree-words"],
+  topics: ["especially-and-in-person"],
   isA: ["degree-word"],
   examples: [
     {

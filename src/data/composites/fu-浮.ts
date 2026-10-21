@@ -15,7 +15,7 @@ export default composite({
   tts: ["在水上，不下去", "在上面，不下来"],
   literal: "on the water, not going down / above, not coming down",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["rivers-lakes-and-floods"],
   isA: ["happening"],
   proposed: true,
 });

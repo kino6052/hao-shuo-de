@@ -15,7 +15,7 @@ export default composite({
   tts: ["一起玩儿的很多人", "很多人一起玩儿的地方"],
   literal: "many people who play together / a place where many people play together",
   fit: "plain",
-  topics: ["people-together"],
+  topics: ["teams-and-clubs"],
   isA: ["group-of-people"],
   proposed: true,
 });

@@ -14,7 +14,7 @@ export default word("fa1", {
     eng: "Happen is {{word:fa1}}-{{word:sheng1}}; it also gives hair ({{word:tou2}}-{{word:fa1}}) and setting out ({{word:chu1}}-{{word:fa1}}).",
     rus: "«Случаться» — это {{word:fa1}}-{{word:sheng1}}; ещё из него волосы ({{word:tou2}}-{{word:fa1}}) и «отправляться» ({{word:chu1}}-{{word:fa1}}).",
   },
-  topics: ["giving-and-getting"],
+  topics: ["sending-and-delivering"],
   isA: ["handling-action"],
   paraphrase: { forms: ["{{word:rang4}} X {{word:chu1}}-{{word:qu4}}"], verdict: "clumsy" },
 });

@@ -15,7 +15,7 @@ export default composite({
   ],
   tts: ["现在", "这个时间", "现在就…"],
   fit: "natural",
-  topics: ["before-and-after"],
+  topics: ["now-and-recently"],
   isA: ["time-point"],
   proposed: true,
 });

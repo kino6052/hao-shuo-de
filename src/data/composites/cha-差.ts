@@ -15,7 +15,7 @@ export default composite({
   tts: ["不好", "要的比有的多"],
   literal: "not good / what is needed is more than what there is",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["good-bad-and-okay"],
   isA: ["value-quality"],
   proposed: true,
 });

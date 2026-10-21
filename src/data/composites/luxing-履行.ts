@@ -15,7 +15,7 @@ export default composite({
   tts: ["做说过要做的", "做要做的东西"],
   literal: "do what one has said one would do / do the things that are to be done",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["solving-and-making-sure"],
   isA: ["working"],
   proposed: true,
 });

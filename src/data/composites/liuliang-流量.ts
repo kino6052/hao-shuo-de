@@ -15,7 +15,7 @@ export default composite({
   tts: ["动的东西有多少", "网上用了多少"],
   literal: "how much of the moving thing there is / how much was used on the net",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["internet-and-websites"],
   isA: ["how-much"],
   proposed: true,
 });

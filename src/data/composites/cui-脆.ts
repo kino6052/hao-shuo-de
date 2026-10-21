@@ -15,7 +15,7 @@ export default composite({
   tts: ["很硬，一用力就变两个部分", "一用力就分开"],
   literal: "very hard, as soon as force is used it becomes two parts / as soon as force is used it comes apart",
   fit: "plain",
-  topics: ["how-it-feels"],
+  topics: ["hard-soft-heavy-light"],
   isA: ["touch-quality"],
   proposed: true,
 });

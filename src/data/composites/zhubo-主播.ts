@@ -15,7 +15,7 @@ export default composite({
   tts: ["说话给很多人看、听的人", "在前面说话，让很多人看、听"],
   literal: "a person who speaks for many people to see and hear / speak in front so many people see and hear",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["television-radio-and-media"],
   isA: ["worker"],
   proposed: true,
 });

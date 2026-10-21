@@ -12,7 +12,7 @@ export default composite({
   tts: ["题", "问的东西"],
   literal: "something asked",
   fit: "word",
-  topics: ["studying"],
+  topics: ["teaching-homework-and-questions"],
   isA: ["idea"],
   examples: [
     {

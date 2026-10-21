@@ -12,7 +12,7 @@ export default composite({
   tts: ["口头", "用口说的"],
   literal: "said with the mouth",
   fit: "natural",
-  topics: ["talking"],
+  topics: ["saying-and-calling"],
   isA: ["condition-quality"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["走出去，不在X了", "不和X一起做了"],
   literal: "walk out, no longer be in X",
   fit: "plain",
-  topics: ["going-and-coming"],
+  topics: ["leaving-stopping-and-retreating"],
   isA: ["moving-action"],
   proposed: true,
 });

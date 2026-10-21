@@ -15,7 +15,7 @@ export default composite({
   tts: ["做决定，别人听他的", "做最重要的决定"],
   literal: "make the decision, others listen to him / make the most important decision",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["managing-and-progress"],
   isA: ["social-action"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["给人看"],
   literal: "let people watch",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["television-radio-and-media"],
   isA: ["playing"],
   examples: [
     {

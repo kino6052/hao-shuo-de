@@ -14,7 +14,7 @@ export default composite({
   tts: ["用黑色的水写的工具"],
   literal: "a tool for writing with black water",
   fit: "plain",
-  topics: ["classroom"],
+  topics: ["pens-books-and-school-bags"],
   isA: ["writing-tool"],
   proposed: true,
 });

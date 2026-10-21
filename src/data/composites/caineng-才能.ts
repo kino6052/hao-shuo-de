@@ -12,7 +12,7 @@ export default composite({
   tts: ["能力"],
   literal: "ability",
   fit: "natural",
-  topics: ["describing-people"],
+  topics: ["clever-skilled-and-famous"],
   isA: ["character-quality"],
   examples: [
     {

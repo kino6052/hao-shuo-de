@@ -12,7 +12,7 @@ export default composite({
   tts: ["得到"],
   fit: "natural",
   transparent: true,
-  topics: ["giving-and-getting"],
+  topics: ["getting-and-receiving"],
   isA: ["receiving"],
   proposed: true,
 });

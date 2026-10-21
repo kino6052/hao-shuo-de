@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:hen3}}", "{{word:zhen1}}"],
   tts: ["很", "真"],
   fit: "word",
-  topics: ["degree-words"],
+  topics: ["very-and-most"],
   isA: ["degree-word"],
   examples: [
     {

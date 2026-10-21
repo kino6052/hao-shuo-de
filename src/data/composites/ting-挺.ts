@@ -15,7 +15,7 @@ export default composite({
   tts: ["很", "觉得难，但不走"],
   literal: "very / feel it is hard, but not leave",
   fit: "natural",
-  topics: ["degree-words"],
+  topics: ["a-little-and-rather"],
   isA: ["degree-word"],
   proposed: true,
 });

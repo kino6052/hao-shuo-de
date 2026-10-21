@@ -12,7 +12,7 @@ export default composite({
   tts: ["有为什么的"],
   literal: "having a why",
   fit: "plain",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["right-wrong-and-mistakes"],
   isA: ["truth-or-ease"],
   proposed: true,
 });

@@ -13,7 +13,7 @@ export default composite({
   literal: "less than X",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["all-and-some"],
+  topics: ["half-both-and-only-one"],
   isA: ["amount-word"],
   examples: [
     {

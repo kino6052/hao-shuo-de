@@ -14,7 +14,7 @@ export default composite({
   tts: ["六面都是方的东西"],
   literal: "a thing square on all six faces",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["circles-squares-cubes"],
   isA: ["shape-quality"],
   proposed: true,
 });

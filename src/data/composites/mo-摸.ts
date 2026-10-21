@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:mo1}}"],
   tts: ["摸"],
   fit: "word",
-  topics: ["senses"],
+  topics: ["smell-taste-touch-and-feeling"],
   isA: ["perceiving"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["从前", "很多年以前"],
   literal: "many years ago",
   fit: "natural",
-  topics: ["before-and-after"],
+  topics: ["in-the-past"],
   isA: ["time-order"],
   proposed: true,
 });

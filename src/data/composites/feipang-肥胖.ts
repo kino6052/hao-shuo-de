@@ -12,7 +12,7 @@ export default composite({
   tts: ["肚子很大"],
   literal: "the belly is very big",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["looks-and-build"],
   isA: ["bodily-state"],
   proposed: true,
 });

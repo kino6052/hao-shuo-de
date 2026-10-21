@@ -15,7 +15,7 @@ export default composite({
   tts: ["大学后还学的人", "学的比大学生多，比学最多的人少"],
   literal: "a person who still studies after university / a person who has studied more than a college student and less than the one who studied most",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-days-and-years"],
   isA: ["person"],
   proposed: true,
 });

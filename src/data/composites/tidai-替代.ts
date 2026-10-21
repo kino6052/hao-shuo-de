@@ -15,7 +15,7 @@ export default composite({
   tts: ["用Y替X做", "可以替X做的东西"],
   literal: "use Y to do it in X's place / a thing that can do it in X's place",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["becoming-and-turning-into"],
   isA: ["handling-action"],
   proposed: true,
 });

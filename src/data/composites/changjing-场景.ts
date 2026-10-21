@@ -15,7 +15,7 @@ export default composite({
   tts: ["在一个地方发生的东西", "看到的地方和在那里发生的东西"],
   literal: "what happens in one place / the place you see and what happens there",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["acting-and-roles"],
   isA: ["event"],
   proposed: true,
 });

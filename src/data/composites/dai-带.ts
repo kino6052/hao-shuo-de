@@ -12,7 +12,7 @@ export default composite({
   tts: ["拿来", "拿去"],
   literal: "take-come / take-go",
   fit: "natural",
-  topics: ["taking-and-holding"],
+  topics: ["carrying-and-holding"],
   isA: ["handling-action"],
   note: "Lesson {{lesson:direction-and-result}}.",
   examples: [

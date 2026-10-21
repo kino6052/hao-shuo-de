@@ -16,7 +16,7 @@ export default composite({
   tts: ["变冷", "不热了", "让X变冷"],
   literal: "become cold / no longer hot / make X become cold",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["hot-and-cold-weather"],
   isA: ["becoming"],
   proposed: true,
 });

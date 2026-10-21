@@ -15,7 +15,7 @@ export default composite({
   tts: ["定买X要给多少金", "买X要给的金"],
   literal: "settle how much money must be given to buy X / the money that must be given to buy X",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["prices-and-discounts"],
   isA: ["trade-action"],
   proposed: true,
 });

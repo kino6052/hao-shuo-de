@@ -13,7 +13,7 @@ export default composite({
   literal: "want-is",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["joining-words"],
+  topics: ["if-unless-and-even-if"],
   isA: ["conjunction"],
   examples: [
     {

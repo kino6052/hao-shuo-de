@@ -15,7 +15,7 @@ export default composite({
   tts: ["让X不能好好做", "让X不能做完"],
   literal: "make X unable to do it properly / make X unable to finish",
   fit: "plain",
-  topics: ["helping-and-sharing"],
+  topics: ["letting-and-leading"],
   isA: ["social-action"],
   proposed: true,
 });

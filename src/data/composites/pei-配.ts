@@ -15,7 +15,7 @@ export default composite({
   tts: ["X和Y放在一起很好", "X和Y一起用很好"],
   literal: "X and Y put together are very good / X and Y used together are very good",
   fit: "plain",
-  topics: ["same-and-different"],
+  topics: ["related-and-matching"],
   isA: ["comparison"],
   proposed: true,
 });

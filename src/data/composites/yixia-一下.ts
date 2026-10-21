@@ -16,7 +16,7 @@ export default composite({
   literal: "one-down",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["how-often"],
+  topics: ["long-and-short-time"],
   isA: ["time-span"],
   examples: [
     {

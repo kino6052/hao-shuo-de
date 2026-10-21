@@ -15,7 +15,7 @@ export default composite({
   tts: ["让人想看的力", "让人爱的地方"],
   literal: "the force that makes people want to look / the place that makes people love",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["strong-and-weak-points"],
   isA: ["idea"],
   proposed: true,
 });

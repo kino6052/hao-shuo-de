@@ -14,7 +14,7 @@ export default word("rang4", {
     eng: "Let and make: without it, letting someone do something, or making them feel something, takes a roundabout phrase.",
     rus: "«Позволять» и «заставлять»: без него, чтобы кому-то что-то позволить или вызвать чувство, нужна длинная фраза.",
   },
-  topics: ["helping-and-sharing"],
+  topics: ["letting-and-leading"],
   isA: ["social-action"],
   atom: {
     eng: "\"Let\" and \"make\" join a person to what happens (ràng tā jìn-lái); jiào and bāng are special cases of it.",

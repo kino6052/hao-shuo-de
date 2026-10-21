@@ -12,7 +12,7 @@ export default composite({
   tts: ["平的部分", "个"],
   literal: "a flat part",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["form-and-structure"],
   isA: ["thing"],
   proposed: true,
 });

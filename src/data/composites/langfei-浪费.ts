@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X用比要的多", "用了很多，但没有用"],
   literal: "use X more than is wanted; used a lot, but it was of no use",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["paying-and-spending"],
   isA: ["trade-action"],
   proposed: true,
 });

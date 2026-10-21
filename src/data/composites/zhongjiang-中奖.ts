@@ -15,7 +15,7 @@ export default composite({
   tts: ["没做什么就得到很好的东西", "说的号对了，就得到东西"],
   literal: "get a very good thing without doing anything / the number said was right, so get something",
   fit: "plain",
-  topics: ["giving-and-getting"],
+  topics: ["getting-and-receiving"],
   isA: ["receiving"],
   proposed: true,
 });

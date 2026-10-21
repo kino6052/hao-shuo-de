@@ -15,7 +15,7 @@ export default composite({
   tts: ["不能没有的东西", "要有的东西"],
   literal: "a thing that cannot be without / a thing that must be there",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["key-points-and-principles"],
   isA: ["idea"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["里面真的东西", "真的东西"],
   literal: "the real thing inside / the real thing",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["key-points-and-principles"],
   isA: ["idea"],
   proposed: true,
 });

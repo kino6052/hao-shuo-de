@@ -12,7 +12,7 @@ export default composite({
   tts: ["五边的样子"],
   literal: "the five-sided shape",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["circles-squares-cubes"],
   isA: ["shape-quality"],
   proposed: true,
 });

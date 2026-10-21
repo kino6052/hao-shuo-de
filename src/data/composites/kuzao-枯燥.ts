@@ -15,7 +15,7 @@ export default composite({
   tts: ["不好玩儿", "不好玩儿，让人想睡觉"],
   literal: "not fun / not fun, makes people want to sleep",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["brave-calm-and-lively"],
   isA: ["condition-quality"],
   proposed: true,
 });

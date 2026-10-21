@@ -12,7 +12,7 @@ export default composite({
   tts: ["要", "心里想做"],
   literal: "want / in the heart want to do",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["willing-daring-and-forced"],
   isA: ["feeling-and-wanting"],
   proposed: true,
 });

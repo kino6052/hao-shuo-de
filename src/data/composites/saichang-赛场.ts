@@ -14,7 +14,7 @@ export default composite({
   tts: ["看谁最好的地方"],
   literal: "the place where we see who is best",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["athletes-and-sports-grounds"],
   isA: ["outdoor-place"],
   proposed: true,
 });

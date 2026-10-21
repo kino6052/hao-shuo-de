@@ -15,7 +15,7 @@ export default composite({
   tts: ["让X没有了", "把有的X拿走"],
   literal: "let X be gone / take away the X that there is",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["breaking-and-taking-apart"],
   isA: ["doing"],
   proposed: true,
 });

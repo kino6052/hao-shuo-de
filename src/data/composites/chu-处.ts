@@ -12,7 +12,7 @@ export default composite({
   tts: ["地方"],
   fit: "natural",
   transparent: true,
-  topics: ["near-and-far"],
+  topics: ["place-location-and-space"],
   isA: ["place-word"],
   proposed: true,
 });

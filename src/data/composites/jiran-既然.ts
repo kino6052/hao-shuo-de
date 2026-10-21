@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:yin1wei4}}", "X {{word:le}}, {{word:jiu4}} Y"],
   tts: ["因为", "X了，就Y"],
   fit: "natural",
-  topics: ["joining-words"],
+  topics: ["because-and-so"],
   isA: ["conjunction"],
   proposed: true,
 });

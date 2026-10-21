@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:tong4}}", "{{word:hen3}} {{word:tong4}}"],
   tts: ["痛", "很痛"],
   fit: "natural",
-  topics: ["illness"],
+  topics: ["pain-and-feeling-unwell"],
   isA: ["bodily-state"],
   proposed: true,
 });

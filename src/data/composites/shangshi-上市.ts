@@ -15,7 +15,7 @@ export default composite({
   tts: ["让人买工作的地方的一部分", "开始让人买"],
   literal: "let people buy a part of a place of work / begin to let people buy",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["buying-supplying-and-launching"],
   isA: ["trade-action"],
   proposed: true,
 });

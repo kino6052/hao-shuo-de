@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["哪里都…", "地上都有X"],
   fit: "natural",
-  topics: ["near-and-far"],
+  topics: ["here-there-everywhere"],
   isA: ["place-word"],
   proposed: true,
 });

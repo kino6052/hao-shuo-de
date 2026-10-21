@@ -15,7 +15,7 @@ export default composite({
   tts: ["对面的", "一点都不一样"],
   literal: "of the other side / not the same at all",
   fit: "plain",
-  topics: ["same-and-different"],
+  topics: ["different-and-varied"],
   isA: ["comparison"],
   proposed: true,
 });

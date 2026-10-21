@@ -12,7 +12,7 @@ export default composite({
   tts: ["用手打手的声音"],
   literal: "the sound of hitting hand with hand",
   fit: "plain",
-  topics: ["agreeing-and-praising"],
+  topics: ["praising-and-applause"],
   isA: ["idea"],
   proposed: true,
 });

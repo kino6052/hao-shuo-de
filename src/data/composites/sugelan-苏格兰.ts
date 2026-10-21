@@ -11,7 +11,7 @@ export default composite({
   hsd: ["\"Sūgélán\"", "\"Sūgélán\" {{word:guo2}}"],
   tts: ["苏格兰", "苏格兰国"],
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-countries"],
   isA: ["settlement"],
   proposed: true,
 });

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:ai4}}"],
   tts: ["爱"],
   fit: "word",
-  topics: ["liking-and-wanting"],
+  topics: ["liking-loving-and-missing"],
   isA: ["feeling-and-wanting"],
   examples: [
     {

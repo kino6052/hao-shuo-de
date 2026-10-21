@@ -15,7 +15,7 @@ export default composite({
   tts: ["用很多力气学", "学的时间很长"],
   literal: "use a lot of strength to learn / the time of learning is long",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["studying-and-practising"],
   isA: ["character-quality"],
   proposed: true,
 });

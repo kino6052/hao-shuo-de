@@ -12,7 +12,7 @@ export default composite({
   tts: ["不在X附近", "走远"],
   literal: "not be near X / walk far away",
   fit: "plain",
-  topics: ["near-and-far"],
+  topics: ["near-far-and-distance"],
   isA: ["moving-action"],
   proposed: true,
 });

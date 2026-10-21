@@ -14,7 +14,7 @@ export default composite({
   tts: ["写要记的东西的书"],
   literal: "a book for writing the things one needs to remember",
   fit: "plain",
-  topics: ["classroom"],
+  topics: ["pens-books-and-school-bags"],
   isA: ["paper-thing"],
   proposed: true,
 });

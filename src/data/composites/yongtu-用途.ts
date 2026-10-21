@@ -12,7 +12,7 @@ export default composite({
   tts: ["X用来做什么"],
   literal: "what X is used to do",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["reasons-and-logic"],
   isA: ["idea"],
   proposed: true,
 });

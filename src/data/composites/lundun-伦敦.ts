@@ -12,7 +12,7 @@ export default composite({
   tts: ["伦敦", "英国的头"],
   literal: "the head of Yīngguó",
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-cities-and-states"],
   isA: ["settlement"],
   proposed: true,
 });

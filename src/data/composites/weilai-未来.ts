@@ -17,7 +17,7 @@ export default composite({
   literal: "the time behind",
   fit: "natural",
   kinds: ["built", "spelled", "built"],
-  topics: ["before-and-after"],
+  topics: ["after-later-and-future"],
   isA: ["time-order"],
   examples: [
     {

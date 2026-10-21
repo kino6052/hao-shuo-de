@@ -15,7 +15,7 @@ export default composite({
   tts: ["大家一起用", "和别人一起有"],
   literal: "everyone uses it together",
   fit: "plain",
-  topics: ["helping-and-sharing"],
+  topics: ["sharing-and-giving"],
   isA: ["social-action"],
   proposed: true,
 });

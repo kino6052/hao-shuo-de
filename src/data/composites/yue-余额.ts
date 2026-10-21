@@ -15,7 +15,7 @@ export default composite({
   tts: ["用了以后还有的金", "还有的金"],
   literal: "the money still there after using / the money that is still there",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["prices-and-costs"],
   isA: ["money-thing"],
   proposed: true,
 });

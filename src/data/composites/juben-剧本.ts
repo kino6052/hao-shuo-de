@@ -14,7 +14,7 @@ export default composite({
   tts: ["写了演的人要说的话的书"],
   literal: "the book in which the words the acting people will say are written",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["acting-and-roles"],
   isA: ["paper-thing"],
   proposed: true,
 });

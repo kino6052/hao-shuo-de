@@ -15,7 +15,7 @@ export default composite({
   tts: ["人和东西和金都很多", "一天比一天好"],
   literal: "people and things and money are all many / each day better than the one before",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["profit-loss-and-bankruptcy"],
   isA: ["condition-quality"],
   proposed: true,
 });

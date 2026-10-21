@@ -12,7 +12,7 @@ export default composite({
   tts: ["记者"],
   literal: "the one who remembers/records",
   fit: "plain",
-  topics: ["news-and-events"],
+  topics: ["news-and-press"],
   isA: ["worker"],
   examples: [
     {

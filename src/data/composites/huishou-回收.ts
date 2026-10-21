@@ -15,7 +15,7 @@ export default composite({
   tts: ["把用过的东西拿回来", "把用过的东西拿回来，又用"],
   literal: "take back the things that were used / take back the used things, use them again",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["joining-adding-replacing"],
   isA: ["making"],
   proposed: true,
 });

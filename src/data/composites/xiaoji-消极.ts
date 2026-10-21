@@ -15,7 +15,7 @@ export default composite({
   tts: ["什么都不想做，觉得都不好", "想的都是不好的"],
   literal: "does not want to do anything, feels everything is not good",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["careful-hardworking-and-lazy"],
   isA: ["character-quality"],
   proposed: true,
 });

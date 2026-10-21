@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:qian2}}-{{word:lai2}}", "{{word:lai2}}-{{word:dao4}} {{word:zhe4}}-{{word:li3}}"],
   tts: ["前来", "来到这里"],
   fit: "natural",
-  topics: ["going-and-coming"],
+  topics: ["go-come-and-return"],
   isA: ["moving-action"],
   proposed: true,
 });

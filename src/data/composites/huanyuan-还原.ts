@@ -15,7 +15,7 @@ export default composite({
   tts: ["变回以前的样子", "让X变回以前的样子"],
   literal: "change back to the way it was before / let X change back to the way it was before",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["becoming-and-turning-into"],
   isA: ["becoming"],
   proposed: true,
 });

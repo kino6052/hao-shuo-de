@@ -12,7 +12,7 @@ export default composite({
   tts: ["从X以后"],
   literal: "from after X",
   fit: "plain",
-  topics: ["joining-words"],
+  topics: ["then-for-example-in-short"],
   isA: ["conjunction"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["能做很多种东西", "很多种东西都能做好"],
   literal: "can make many kinds of things / many kinds of things all can be done well",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["clever-skilled-and-famous"],
   isA: ["character-quality"],
   proposed: true,
 });

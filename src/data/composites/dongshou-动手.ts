@@ -16,7 +16,7 @@ export default composite({
   tts: ["动手", "开始做", "用手做"],
   literal: "move the hand / start to do / do it with the hands",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["doing-and-carrying-out"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

@@ -14,7 +14,7 @@ export default composite({
   tts: ["在看的机看的东西"],
   literal: "the thing watched on the watching machine",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["films-and-shows"],
   isA: ["work-of-art"],
   note: "TV is kàn-de bāo.",
   examples: [

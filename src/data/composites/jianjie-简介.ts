@@ -15,7 +15,7 @@ export default composite({
   tts: ["用很少的话让人知道X", "不长的，让人知道X的话"],
   literal: "use very few words to let people know X / the not-long words that let people know X",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["introducing-and-passing-on"],
   isA: ["speaking-action"],
   proposed: true,
 });

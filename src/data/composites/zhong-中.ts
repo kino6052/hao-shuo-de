@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:zhong1}}"],
   tts: ["中"],
   fit: "word",
-  topics: ["up-down-in-out"],
+  topics: ["middle-and-among"],
   isA: ["place-relation"],
   examples: [
     {

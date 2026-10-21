@@ -12,7 +12,7 @@ export default composite({
   tts: ["放进算的工具"],
   literal: "put it into the computer",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["typing-clicking-and-downloading"],
   isA: ["body-action"],
   examples: [
     {

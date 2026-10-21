@@ -12,7 +12,7 @@ export default composite({
   tts: ["发生的东西"],
   literal: "something that happened",
   fit: "plain",
-  topics: ["news-and-events"],
+  topics: ["events-and-luck"],
   isA: ["event"],
   examples: [
     {

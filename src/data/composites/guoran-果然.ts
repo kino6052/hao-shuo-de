@@ -12,7 +12,7 @@ export default composite({
   tts: ["和我想的一样"],
   literal: "the same as I thought",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["maybe-of-course-obviously"],
   isA: ["adverb-word"],
   proposed: true,
 });

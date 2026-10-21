@@ -15,7 +15,7 @@ export default composite({
   tts: ["一种工作", "很多人都做的一种工作"],
   literal: "a kind of work / a kind of work that many people do",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["companies-and-products"],
   isA: ["activity-name"],
   proposed: true,
 });

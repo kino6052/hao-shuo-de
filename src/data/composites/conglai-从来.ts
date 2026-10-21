@@ -15,7 +15,7 @@ export default composite({
   tts: ["从来", "从以前到现在，什么时间都…"],
   literal: "from before until now, at any time …",
   fit: "natural",
-  topics: ["how-often"],
+  topics: ["always-and-all-along"],
   isA: ["frequency"],
   proposed: true,
 });

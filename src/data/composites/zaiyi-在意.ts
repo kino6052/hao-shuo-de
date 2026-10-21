@@ -12,6 +12,6 @@ export default composite({
   tts: ["关心"],
   literal: "close-heart (as in 关心)",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["believing-hoping-and-caring"],
   isA: ["feeling-and-wanting"],
 });

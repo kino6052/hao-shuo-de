@@ -15,7 +15,7 @@ export default composite({
   tts: ["很有价值", "很少，很好"],
   literal: "very valuable",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["important-and-interesting"],
   isA: ["value-quality"],
   proposed: true,
 });

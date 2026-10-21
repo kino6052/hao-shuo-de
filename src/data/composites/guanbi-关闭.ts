@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:guan1}}"],
   tts: ["关"],
   fit: "natural",
-  topics: ["pushing-and-pulling"],
+  topics: ["opening-and-closing"],
   isA: ["handling-action"],
   proposed: true,
 });

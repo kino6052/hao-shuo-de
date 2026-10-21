@@ -15,7 +15,7 @@ export default composite({
   tts: ["很长时间天上不下水", "地上没有水"],
   literal: "for a long time no water comes down from the sky / there is no water on the ground",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["weather-and-clouds"],
   isA: ["condition-quality"],
   proposed: true,
 });

@@ -14,7 +14,7 @@ export default word("zhong1", {
     eng: "Middle: with {{word:jian1}}, {{word:zhong1}}-{{word:jian1}}, in the middle. China and many composites use it.",
     rus: "Середина: с {{word:jian1}} — {{word:zhong1}}-{{word:jian1}}, посередине. Его используют Китай и многие составные слова.",
   },
-  topics: ["up-down-in-out"],
+  topics: ["middle-and-among"],
   isA: ["place-relation"],
   paraphrase: { forms: ["{{word:zui4}} {{word:li3}}-{{word:mian4}}"], verdict: "clumsy" },
 });

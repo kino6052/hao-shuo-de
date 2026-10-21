@@ -12,7 +12,7 @@ export default composite({
   tts: ["做好", "可以开始了"],
   literal: "make it good / (ready:) can start now",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["plans-and-goals"],
   isA: ["making"],
   examples: [
     {

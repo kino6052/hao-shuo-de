@@ -15,7 +15,7 @@ export default composite({
   tts: ["让很多人都知道", "让很多人都用"],
   literal: "let very many people all know / let very many people all use",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["appearing-and-developing"],
   isA: ["becoming"],
   proposed: true,
 });

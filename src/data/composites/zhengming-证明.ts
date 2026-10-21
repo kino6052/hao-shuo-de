@@ -12,7 +12,7 @@ export default composite({
   tts: ["让人知道是真的"],
   literal: "make people know it is true",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["thinking-and-researching"],
   isA: ["speaking-action"],
   examples: [
     {

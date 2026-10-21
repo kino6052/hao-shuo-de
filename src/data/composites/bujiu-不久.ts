@@ -15,7 +15,7 @@ export default composite({
   tts: ["不长的时间后", "很快"],
   literal: "after a not long time / very quickly",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["soon-early-and-late"],
   isA: ["time-order"],
   proposed: true,
 });

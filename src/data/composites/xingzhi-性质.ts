@@ -14,7 +14,7 @@ export default composite({
   tts: ["什么时间都不变的样子"],
   literal: "the way it is that does not change at any time",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["features-and-forms"],
   isA: ["idea"],
   proposed: true,
 });

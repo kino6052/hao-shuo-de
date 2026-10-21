@@ -15,7 +15,7 @@ export default composite({
   tts: ["分在很多地方", "在很多地方都有"],
   literal: "divided among many places / is there in many places",
   fit: "plain",
-  topics: ["all-and-some"],
+  topics: ["whole-complete-and-widespread"],
   isA: ["placing"],
   proposed: true,
 });

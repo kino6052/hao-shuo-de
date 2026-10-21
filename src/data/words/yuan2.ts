@@ -14,7 +14,7 @@ export default word("yuan2", {
     eng: "Round: balls, wheels, the earth, and circles are described from it.",
     rus: "Круглый: через него описывают мячи, колёса, Землю и круги.",
   },
-  topics: ["shapes"],
+  topics: ["circles-squares-cubes"],
   isA: ["shape-quality"],
   maps: "sike",
   senses: {

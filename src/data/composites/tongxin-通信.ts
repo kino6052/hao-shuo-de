@@ -15,7 +15,7 @@ export default composite({
   tts: ["和远的人说话", "用手机和远的人说话"],
   literal: "talk with people who are far away / use a phone to talk with people far away",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["phone-calls-and-messages"],
   isA: ["speaking-action"],
   proposed: true,
 });

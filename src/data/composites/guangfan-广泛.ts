@@ -15,7 +15,7 @@ export default composite({
   tts: ["很多地方都有", "很多人都有"],
   literal: "many places all have it / many people all have it",
   fit: "plain",
-  topics: ["all-and-some"],
+  topics: ["whole-complete-and-widespread"],
   isA: ["amount-word"],
   proposed: true,
 });

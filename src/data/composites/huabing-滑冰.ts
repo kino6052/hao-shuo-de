@@ -14,7 +14,7 @@ export default composite({
   tts: ["在变硬的冷水上快动"],
   literal: "move fast on cold water that has turned hard",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["exercise-and-kinds-of-sport"],
   isA: ["playing"],
   proposed: true,
 });

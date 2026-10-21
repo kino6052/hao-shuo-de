@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X放出去", "把X放到外面"],
   literal: "put X out / put X outside",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["throwing-spilling-and-cutting"],
   isA: ["handling-action"],
   proposed: true,
 });

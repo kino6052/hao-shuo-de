@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X做好", "让乱的X变好"],
   literal: "do X well / let the messy X get better",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["doing-and-carrying-out"],
   isA: ["making"],
   proposed: true,
 });

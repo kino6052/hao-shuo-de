@@ -15,7 +15,7 @@ export default composite({
   tts: ["不多不少", "不大不小"],
   literal: "not many, not few / not big, not small",
   fit: "plain",
-  topics: ["degree-words"],
+  topics: ["a-little-and-rather"],
   isA: ["condition-quality"],
   proposed: true,
 });

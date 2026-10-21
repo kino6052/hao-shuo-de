@@ -12,7 +12,7 @@ export default composite({
   tts: ["什么时间都"],
   literal: "at any time",
   fit: "natural",
-  topics: ["how-often"],
+  topics: ["always-and-all-along"],
   isA: ["frequency"],
   examples: [
     {

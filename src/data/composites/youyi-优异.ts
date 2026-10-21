@@ -15,7 +15,7 @@ export default composite({
   tts: ["真好", "比别人都好"],
   literal: "really good / better than all the others",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["quality-and-top-class"],
   isA: ["value-quality"],
   proposed: true,
 });

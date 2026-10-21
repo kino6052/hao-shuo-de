@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["后者", "两个中后面说的那个"],
   fit: "natural",
-  topics: ["pointers"],
+  topics: ["this-that-such"],
   isA: ["pronoun"],
   proposed: true,
 });

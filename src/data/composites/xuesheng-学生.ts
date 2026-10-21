@@ -13,7 +13,7 @@ export default composite({
   literal: "learn-born / one who learns",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["classroom"],
+  topics: ["teachers-and-students"],
   isA: ["social-role"],
   examples: [
     {

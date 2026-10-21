@@ -15,7 +15,7 @@ export default composite({
   tts: ["过去", "走过的时间"],
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["before-and-after"],
+  topics: ["in-the-past"],
   isA: ["time-order"],
   note: "A fixed pair, like hòu-lái.",
   examples: [

@@ -15,7 +15,7 @@ export default composite({
   tts: ["说X怎么发生的", "从开始说到完"],
   literal: "say how X happened / tell it from the start to the end",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["explaining-and-describing"],
   isA: ["speaking-action"],
   proposed: true,
 });

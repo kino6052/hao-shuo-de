@@ -15,7 +15,7 @@ export default composite({
   tts: ["不怕可能会坏，就去做", "要做，但可能会坏"],
   literal: "not afraid it may go bad, just go and do it / want to do it, but it may go bad",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["willing-daring-and-forced"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

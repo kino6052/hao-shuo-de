@@ -12,7 +12,7 @@ export default composite({
   tts: ["看不到了"],
   literal: "can't be seen anymore",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["decreasing-and-breaking-down"],
   isA: ["happening"],
   examples: [
     {

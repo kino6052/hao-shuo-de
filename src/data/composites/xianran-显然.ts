@@ -15,7 +15,7 @@ export default composite({
   tts: ["一看就知道", "不难看出来"],
   literal: "you know it at one look / not hard to see",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["maybe-of-course-obviously"],
   isA: ["adverb-word"],
   proposed: true,
 });

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:hao3}}", "{{word:hen3}} {{word:hao3}}"],
   tts: ["好", "很好"],
   fit: "word",
-  topics: ["how-good"],
+  topics: ["good-bad-and-okay"],
   isA: ["value-quality"],
   proposed: true,
 });

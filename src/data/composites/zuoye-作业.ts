@@ -14,7 +14,7 @@ export default composite({
   tts: ["学校给的，回家做的东西"],
   literal: "things the school gives, to be done at home",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["teaching-homework-and-questions"],
   isA: ["activity-name"],
   proposed: true,
 });

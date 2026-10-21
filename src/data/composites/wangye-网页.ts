@@ -12,7 +12,7 @@ export default composite({
   tts: ["网上的一面"],
   literal: "a page on the net",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["internet-and-websites"],
   isA: ["computer-or-phone"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["里面都是X", "很多X在里面"],
   literal: "inside, all is X / a lot of X is inside",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["enough-and-lacking"],
   isA: ["condition-quality"],
   proposed: true,
 });

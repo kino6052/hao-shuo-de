@@ -15,7 +15,7 @@ export default composite({
   tts: ["很难", "很难，很不好"],
   literal: "very hard / very hard, very bad",
   fit: "plain",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["hard-and-difficult"],
   isA: ["truth-or-ease"],
   proposed: true,
 });

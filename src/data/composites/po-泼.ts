@@ -15,7 +15,7 @@ export default composite({
   tts: ["用力把水放出去", "把水打在X上面"],
   literal: "with force put the water out / hit the water onto X",
   fit: "plain",
-  topics: ["pushing-and-pulling"],
+  topics: ["throwing-spilling-and-cutting"],
   isA: ["handling-action"],
   proposed: true,
 });

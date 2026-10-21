@@ -12,7 +12,7 @@ export default composite({
   tts: ["让X死"],
   literal: "make X die",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["crimes-and-criminals"],
   isA: ["social-action"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["买的东西上的名字", "买的东西上的字，说是谁做的"],
   literal: "the name on a thing that is bought / the characters on a thing that is bought, saying who made it",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["goods-and-customers"],
   isA: ["idea"],
   proposed: true,
 });

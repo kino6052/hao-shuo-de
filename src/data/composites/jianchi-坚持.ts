@@ -15,7 +15,7 @@ export default composite({
   tts: ["最后把X做下去", "做到最后"],
   literal: "carry X on to the end",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["trying-and-persisting"],
   isA: ["thinking-action"],
   examples: [
     {

@@ -14,7 +14,7 @@ export default word("hou4", {
     eng: "Behind, and after (in time): {{word:hou4}}-{{word:mian4}}, behind.",
     rus: "Сзади, а также «после»: {{word:hou4}}-{{word:mian4}} — сзади.",
   },
-  topics: ["up-down-in-out"],
+  topics: ["front-and-back"],
   isA: ["place-relation"],
   maps: "",
   senses: {

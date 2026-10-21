@@ -12,7 +12,7 @@ export default composite({
   tts: ["看远的地方", "看"],
   literal: "look at a far place / look",
   fit: "plain",
-  topics: ["senses"],
+  topics: ["seeing-and-looking"],
   isA: ["perceiving"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["用手帮X站好", "用手帮X走"],
   literal: "use the hand to help X stand well / use the hand to help X walk",
   fit: "plain",
-  topics: ["helping-and-sharing"],
+  topics: ["helping-and-supporting"],
   isA: ["handling-action"],
   proposed: true,
 });

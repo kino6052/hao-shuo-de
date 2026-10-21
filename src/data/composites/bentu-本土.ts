@@ -15,7 +15,7 @@ export default composite({
   tts: ["这个国里的地方", "不是外国，是这个国"],
   literal: "the places inside this country / not a foreign country, this country",
   fit: "plain",
-  topics: ["countries-and-cities"],
+  topics: ["country-and-nation"],
   isA: ["settlement"],
   proposed: true,
 });

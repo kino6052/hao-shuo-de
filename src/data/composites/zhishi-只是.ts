@@ -13,7 +13,7 @@ export default composite({
   literal: "just",
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["adverbs"],
+  topics: ["only-even-and-more"],
   isA: ["adverb-word"],
   examples: [
     {

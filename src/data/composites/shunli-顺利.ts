@@ -15,7 +15,7 @@ export default composite({
   tts: ["没有难的地方", "一点都不难"],
   literal: "there is no hard place / not hard at all",
   fit: "plain",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["easy-and-convenient"],
   isA: ["truth-or-ease"],
   proposed: true,
 });

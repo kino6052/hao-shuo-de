@@ -15,7 +15,7 @@ export default composite({
   tts: ["买的人和给东西的人都说好", "两边都说好，买到了"],
   literal: "the person who buys and the person who gives the thing both say good / both sides say good, it is bought",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["buying-and-selling"],
   isA: ["trade-action"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["很用力", "天天都很用力"],
   literal: "very strong in effort / every day very strong in effort",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["careful-hardworking-and-lazy"],
   isA: ["character-quality"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["个个地方", "很多不同的地方"],
   literal: "every place / many different places",
   fit: "natural",
-  topics: ["near-and-far"],
+  topics: ["here-there-everywhere"],
   isA: ["place-word"],
   proposed: true,
 });

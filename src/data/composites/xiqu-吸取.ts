@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X拿进来", "从X学到东西"],
   literal: "take X in / learn something from X",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["taking-picking-up-and-using"],
   isA: ["handling-action"],
   proposed: true,
 });

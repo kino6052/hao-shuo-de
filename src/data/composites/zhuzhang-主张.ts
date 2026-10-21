@@ -15,7 +15,7 @@ export default composite({
   tts: ["说我想要X", "说我觉得要做X"],
   literal: "say I want X / say I feel X must be done",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["opinions-and-views"],
   isA: ["speaking-action"],
   proposed: true,
 });

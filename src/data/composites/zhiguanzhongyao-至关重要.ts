@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["很很重要", "最重要"],
   fit: "natural",
-  topics: ["state-of-things"],
+  topics: ["situations-and-needs"],
   isA: ["value-quality"],
   proposed: true,
 });

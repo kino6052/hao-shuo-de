@@ -15,7 +15,7 @@ export default composite({
   tts: ["说很多话，让人想做", "说话让人不做"],
   literal: "say many words so that the person wants to do it / speak so that the person does not do it",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["talks-discussion-and-orders"],
   isA: ["speaking-action"],
   proposed: true,
 });

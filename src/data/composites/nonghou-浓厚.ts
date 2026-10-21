@@ -15,7 +15,7 @@ export default composite({
   tts: ["很多，很重", "很多很多"],
   literal: "very much, very heavy / very much, very much",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["enough-and-lacking"],
   isA: ["amount-word"],
   proposed: true,
 });

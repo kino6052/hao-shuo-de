@@ -12,7 +12,7 @@ export default composite({
   tts: ["心里知道"],
   literal: "know it in your heart",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["knowing-and-grasping"],
   isA: ["thinking-action"],
   examples: [
     {

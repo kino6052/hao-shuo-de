@@ -14,7 +14,7 @@ export default composite({
   tts: ["不说就拿别人的东西"],
   literal: "take another person’s things without saying",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["crimes-and-criminals"],
   isA: ["social-action"],
   proposed: true,
 });

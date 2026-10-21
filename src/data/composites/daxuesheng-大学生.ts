@@ -16,7 +16,7 @@ export default composite({
   literal: "big-learning student / a big learner",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["classroom"],
+  topics: ["teachers-and-students"],
   isA: ["social-role"],
   examples: [
     {

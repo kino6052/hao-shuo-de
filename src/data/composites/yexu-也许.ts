@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:ke3}}-{{word:neng2}}"],
   tts: ["可能"],
   fit: "word",
-  topics: ["adverbs"],
+  topics: ["maybe-of-course-obviously"],
   isA: ["adverb-word"],
   examples: [
     {

@@ -12,6 +12,6 @@ export default composite({
   tts: ["想怎么做就怎么做"],
   literal: "do however you like",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["brave-calm-and-lively"],
   isA: ["character-quality"],
 });

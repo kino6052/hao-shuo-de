@@ -14,7 +14,7 @@ export default composite({
   tts: ["学者写的长的话"],
   literal: "long words written by a scholar",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-subjects-and-courses"],
   isA: ["paper-thing"],
   proposed: true,
 });

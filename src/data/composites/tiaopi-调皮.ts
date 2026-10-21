@@ -12,7 +12,7 @@ export default composite({
   tts: ["很爱玩儿，不听话"],
   literal: "love to play very much, not obedient",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["brave-calm-and-lively"],
   isA: ["character-quality"],
   proposed: true,
 });

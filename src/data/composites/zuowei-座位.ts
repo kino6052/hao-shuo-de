@@ -12,7 +12,7 @@ export default composite({
   tts: ["坐下的地方"],
   literal: "a place to sit",
   fit: "plain",
-  topics: ["classroom"],
+  topics: ["lessons-and-classes"],
   isA: ["furniture-item"],
   examples: [
     {

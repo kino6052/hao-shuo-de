@@ -15,7 +15,7 @@ export default composite({
   tts: ["工作的地方的一部分，买了以后能得到金", "买了就有工作的地方的一部分的写的东西"],
   literal: "a part of a place of work; after buying it one can get money / a written thing that, once bought, gives one a part of a place of work",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["stocks-and-investing"],
   isA: ["money-thing"],
   proposed: true,
 });

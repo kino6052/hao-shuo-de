@@ -12,7 +12,7 @@ export default composite({
   tts: ["做给人看的人"],
   literal: "someone who acts for others to watch",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["acting-and-roles"],
   isA: ["worker"],
   examples: [
     {

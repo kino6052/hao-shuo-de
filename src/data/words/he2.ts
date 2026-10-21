@@ -14,7 +14,7 @@ export default word("he2", {
     eng: "And, between nouns: {{word:ni3}} {{word:he2}} {{word:wo3}}, you and me.",
     rus: "И, между существительными: {{word:ni3}} {{word:he2}} {{word:wo3}} — ты и я.",
   },
-  topics: ["joining-words"],
+  topics: ["and-or-and-also"],
   isA: ["conjunction"],
   maps: "en",
   atom: {

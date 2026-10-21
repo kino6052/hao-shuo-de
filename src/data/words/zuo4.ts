@@ -14,7 +14,7 @@ export default word("zuo4", {
     eng: "Do, make: the all-purpose action. Most work and making verbs are described with it.",
     rus: "Делать — универсальное действие. Через него описывают почти любую работу.",
   },
-  topics: ["making-and-doing"],
+  topics: ["doing-and-carrying-out"],
   isA: ["making"],
   senses: {
     sit: {

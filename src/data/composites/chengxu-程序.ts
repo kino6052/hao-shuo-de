@@ -15,7 +15,7 @@ export default composite({
   tts: ["第一做什么，第二做什么", "让算的机知道怎么做的话"],
   literal: "first do what, second do what / the words that let the computer know how to do it",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["software-files-and-accounts"],
   isA: ["idea"],
   proposed: true,
 });

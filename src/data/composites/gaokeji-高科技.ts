@@ -15,7 +15,7 @@ export default composite({
   tts: ["很高的做东西的方法", "不老的做东西的方法"],
   literal: "very high ways of making things",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["smart-and-digital-technology"],
   isA: ["idea"],
   proposed: true,
 });

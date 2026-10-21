@@ -15,7 +15,7 @@ export default composite({
   tts: ["圆的线", "圆的，空的东西"],
   literal: "a round line / a round, empty thing",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["circles-squares-cubes"],
   isA: ["made-thing"],
   proposed: true,
 });

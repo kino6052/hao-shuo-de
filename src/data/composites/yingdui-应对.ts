@@ -12,7 +12,7 @@ export default composite({
   tts: ["找方法对X"],
   literal: "find a way to face X",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["solving-and-making-sure"],
   isA: ["making"],
   proposed: true,
 });

@@ -14,7 +14,7 @@ export default composite({
   tts: ["算的工具里的工具"],
   literal: "the tool inside the computer",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["software-files-and-accounts"],
   isA: ["computer-or-phone"],
   examples: [
     {

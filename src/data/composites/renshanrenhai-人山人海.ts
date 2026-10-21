@@ -15,7 +15,7 @@ export default composite({
   tts: ["人很多很多", "哪里都是人"],
   literal: "people are very very many / everywhere is people",
   fit: "plain",
-  topics: ["people-together"],
+  topics: ["crowds-and-the-public"],
   isA: ["amount-word"],
   proposed: true,
 });

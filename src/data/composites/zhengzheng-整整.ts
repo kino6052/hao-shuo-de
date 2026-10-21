@@ -15,7 +15,7 @@ export default composite({
   tts: ["一点都不少", "都有，没有少"],
   literal: "not a bit less / all there, none missing",
   fit: "plain",
-  topics: ["all-and-some"],
+  topics: ["whole-complete-and-widespread"],
   isA: ["amount-word"],
   proposed: true,
 });

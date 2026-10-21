@@ -15,7 +15,7 @@ export default composite({
   tts: ["走在前面，让X来", "让X来"],
   literal: "walk in front, let X come / let X come",
   fit: "plain",
-  topics: ["going-and-coming"],
+  topics: ["go-come-and-return"],
   isA: ["moving-action"],
   proposed: true,
 });

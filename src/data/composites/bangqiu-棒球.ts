@@ -14,7 +14,7 @@ export default composite({
   tts: ["用长的东西打的球"],
   literal: "the ball hit with a long thing",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["ball-sports"],
   isA: ["toy-or-game"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["别的"],
   fit: "natural",
   transparent: true,
-  topics: ["pointers"],
+  topics: ["self-and-others"],
   isA: ["pronoun"],
   examples: [
     {

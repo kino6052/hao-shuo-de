@@ -14,7 +14,7 @@ export default composite({
   tts: ["现在和以后的样子"],
   literal: "the way it is now and later",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["situations-and-needs"],
   isA: ["idea"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   ],
   tts: ["长远", "很长的时间", "很远的以后"],
   fit: "natural",
-  topics: ["how-often"],
+  topics: ["long-and-short-time"],
   isA: ["time-span"],
   proposed: true,
 });

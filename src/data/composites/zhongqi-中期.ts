@@ -15,7 +15,7 @@ export default composite({
   tts: ["中间的时间", "不早也不晚的时间"],
   literal: "the time in the middle / the time that is not early and not late",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["moments-and-stages"],
   isA: ["time-span"],
   proposed: true,
 });

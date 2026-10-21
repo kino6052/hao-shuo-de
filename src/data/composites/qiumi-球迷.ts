@@ -14,7 +14,7 @@ export default composite({
   tts: ["很爱看玩儿球的人"],
   literal: "a person who loves watching ball play",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["athletes-and-sports-grounds"],
   isA: ["person"],
   proposed: true,
 });

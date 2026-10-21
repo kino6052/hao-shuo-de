@@ -15,7 +15,7 @@ export default composite({
   tts: ["真的能做", "不是想的，是真的"],
   literal: "really can be done / not just thought up, but real",
   fit: "plain",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["true-real-and-fake"],
   isA: ["truth-or-ease"],
   proposed: true,
 });

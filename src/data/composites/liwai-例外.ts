@@ -15,7 +15,7 @@ export default composite({
   tts: ["别的都一样，只有他不一样", "不和别的一样"],
   literal: "all the others are the same, only it is not the same / not the same as the others",
   fit: "plain",
-  topics: ["same-and-different"],
+  topics: ["different-and-varied"],
   isA: ["comparison"],
   proposed: true,
 });

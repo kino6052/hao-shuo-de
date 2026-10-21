@@ -12,7 +12,7 @@ export default composite({
   tts: ["下一个"],
   fit: "natural",
   transparent: true,
-  topics: ["before-and-after"],
+  topics: ["first-next-and-last"],
   isA: ["time-order"],
   proposed: true,
 });

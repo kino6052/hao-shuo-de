@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:ye3}}-{{word:hao3}}", "{{word:ye3}} {{word:ke3}}-{{word:yi3}}"],
   tts: ["也好", "也可以"],
   fit: "natural",
-  topics: ["agreeing-and-praising"],
+  topics: ["agreeing-and-allowing"],
   isA: ["set-phrase"],
   proposed: true,
 });

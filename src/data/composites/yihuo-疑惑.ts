@@ -15,7 +15,7 @@ export default composite({
   tts: ["不知道对不对", "觉得可能不是真的"],
   literal: "not know if it is right / feel it may not be true",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["opinions-and-guesses"],
   isA: ["thinking-action"],
   proposed: true,
 });

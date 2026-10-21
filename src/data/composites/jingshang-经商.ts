@@ -15,7 +15,7 @@ export default composite({
   tts: ["买东西，给别人得金", "做买东西和给东西得金的工作"],
   literal: "buy things, give them to others and get money / do the work of buying things and giving things for money",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["trade-and-the-market"],
   isA: ["trade-action"],
   proposed: true,
 });

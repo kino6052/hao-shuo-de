@@ -12,7 +12,7 @@ export default composite({
   tts: ["找", "想得到X"],
   literal: "look for / want to get X",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["searching-and-clues"],
   isA: ["perceiving"],
   proposed: true,
 });

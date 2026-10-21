@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:shui3}}-{{word:mian4}}", "{{word:shui3}}-{{word:de}} {{word:shang4}}-{{word:mian4}}"],
   tts: ["水面", "水的上面"],
   fit: "natural",
-  topics: ["land-and-water"],
+  topics: ["rivers-lakes-and-floods"],
   isA: ["natural-thing"],
   proposed: true,
 });

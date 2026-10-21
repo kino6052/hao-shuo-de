@@ -16,7 +16,7 @@ export default composite({
   literal: "everyone knows it",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["describing-people"],
+  topics: ["clever-skilled-and-famous"],
   isA: ["value-quality"],
   examples: [
     {

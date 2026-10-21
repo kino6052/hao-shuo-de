@@ -15,7 +15,7 @@ export default composite({
   ],
   tts: ["重心", "最重要的地方", "重的中心"],
   fit: "natural",
-  topics: ["ideas-and-opinions"],
+  topics: ["key-points-and-principles"],
   isA: ["idea"],
   proposed: true,
 });

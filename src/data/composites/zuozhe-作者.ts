@@ -13,7 +13,7 @@ export default composite({
   literal: "the one who writes",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["writing"],
+  topics: ["authors-and-publishing"],
   isA: ["worker"],
   examples: [
     {

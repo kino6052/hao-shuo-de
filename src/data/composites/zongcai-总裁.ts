@@ -15,7 +15,7 @@ export default composite({
   tts: ["工作的地方最大的决定者", "工作的最大的头"],
   literal: "the biggest decider of the place of work / the biggest head of the work",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["posts-and-pay"],
   isA: ["worker"],
   proposed: true,
 });

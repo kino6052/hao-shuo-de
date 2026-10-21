@@ -12,7 +12,7 @@ export default composite({
   tts: ["不要了"],
   literal: "not wanting it anymore",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["beginning-and-finishing"],
   isA: ["starting-and-stopping"],
   examples: [
     {

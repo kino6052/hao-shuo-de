@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:shang4}}"],
   tts: ["上面"],
   fit: "word",
-  topics: ["up-down-in-out"],
+  topics: ["above-and-below"],
   isA: ["place-relation"],
   examples: [
     {

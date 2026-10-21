@@ -12,7 +12,7 @@ export default composite({
   tts: ["同一天", "那一天"],
   literal: "the same day / that one day",
   fit: "plain",
-  topics: ["calendar"],
+  topics: ["days-and-dates"],
   isA: ["time-point"],
   proposed: true,
 });

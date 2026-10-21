@@ -15,7 +15,7 @@ export default composite({
   tts: ["东西走了，留下的样子", "能让人看出以前有X的东西"],
   literal: "the thing has gone, the look it left behind / what lets people see that X was there before",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["searching-and-clues"],
   isA: ["idea"],
   proposed: true,
 });

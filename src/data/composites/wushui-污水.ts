@@ -15,7 +15,7 @@ export default composite({
   tts: ["不干净的水", "用过的不干净的水"],
   literal: "water that is not clean / used water that is not clean",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["rivers-lakes-and-floods"],
   isA: ["liquid-or-gas"],
   proposed: true,
 });

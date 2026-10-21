@@ -15,7 +15,7 @@ export default composite({
   tts: ["到了一年", "有一年了"],
   literal: "one year has been reached / it has been one year",
   fit: "plain",
-  topics: ["calendar"],
+  topics: ["years-and-centuries"],
   isA: ["event"],
   proposed: true,
 });

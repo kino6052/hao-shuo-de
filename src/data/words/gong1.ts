@@ -14,7 +14,7 @@ export default word("gong1", {
     eng: "Work: {{word:gong1}}-{{word:ju4}} (tool) and {{word:gong1}}-{{word:ren2}} (worker) are built on it.",
     rus: "Работа: на нём построены {{word:gong1}}-{{word:ju4}} (инструмент) и {{word:gong1}}-{{word:ren2}} (рабочий).",
   },
-  topics: ["working-life"],
+  topics: ["work-and-effort"],
   isA: ["activity-name"],
   senses: {
     public: {

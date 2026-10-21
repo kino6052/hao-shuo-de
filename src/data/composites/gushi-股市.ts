@@ -14,7 +14,7 @@ export default composite({
   tts: ["买工作的地方的一部分的地方"],
   literal: "the place to buy a part of a place of work",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["stocks-and-investing"],
   isA: ["place"],
   proposed: true,
 });

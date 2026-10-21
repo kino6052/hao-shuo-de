@@ -14,7 +14,7 @@ export default composite({
   tts: ["写出来给很多人看"],
   literal: "write it out for many people to see",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["authors-and-publishing"],
   isA: ["speaking-action"],
   proposed: true,
 });

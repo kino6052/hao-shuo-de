@@ -15,7 +15,7 @@ export default composite({
   tts: ["买的东西", "给东西得金的东西"],
   literal: "things that are bought; things that are sold",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["goods-and-customers"],
   isA: ["made-thing"],
   proposed: true,
 });

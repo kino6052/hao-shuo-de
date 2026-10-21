@@ -12,7 +12,7 @@ export default composite({
   tts: ["书写", "写"],
   literal: "book-write / write",
   fit: "natural",
-  topics: ["writing"],
+  topics: ["writing-things-down"],
   isA: ["making"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["想不到的好东西", "不可能的东西发生了"],
   literal: "a good thing one could not have thought of / an impossible thing happened",
   fit: "plain",
-  topics: ["news-and-events"],
+  topics: ["events-and-luck"],
   isA: ["event"],
   proposed: true,
 });

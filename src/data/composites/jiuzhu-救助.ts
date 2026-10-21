@@ -15,7 +15,7 @@ export default composite({
   tts: ["帮X不死", "帮有问题的人"],
   literal: "help X not die / help people who have a problem",
   fit: "plain",
-  topics: ["helping-and-sharing"],
+  topics: ["helping-and-supporting"],
   isA: ["social-action"],
   proposed: true,
 });

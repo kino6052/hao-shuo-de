@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:mei2}}-{{word:fa3}}", "{{word:mei2}}-{{word:you3}} {{word:fang1}}-{{word:fa3}}"],
   tts: ["没法", "没有方法"],
   fit: "natural",
-  topics: ["ideas-and-opinions"],
+  topics: ["ways-and-methods"],
   isA: ["state-name"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["最爱", "比别的都爱"],
   literal: "love most / love more than all the others",
   fit: "plain",
-  topics: ["liking-and-wanting"],
+  topics: ["liking-loving-and-missing"],
   isA: ["feeling-and-wanting"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["想想"],
   literal: "think a little",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["thinking-and-researching"],
   isA: ["thinking-action"],
   note: "wǒ kàn-kan: let me think about it.",
   examples: [

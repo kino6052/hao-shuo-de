@@ -16,7 +16,7 @@ export default composite({
   tts: ["后果", "不好的结果", "以后发生的东西"],
   literal: "a bad result",
   fit: "plain",
-  topics: ["causes-and-results"],
+  topics: ["results-and-effects"],
   isA: ["cause-and-effect"],
   proposed: true,
 });

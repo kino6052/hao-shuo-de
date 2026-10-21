@@ -15,7 +15,7 @@ export default composite({
   tts: ["一个一个做", "人人都做，不一起做"],
   literal: "one by one do it / everyone does it, not doing it together",
   fit: "plain",
-  topics: ["helping-and-sharing"],
+  topics: ["together-and-cooperating"],
   isA: ["social-action"],
   proposed: true,
 });

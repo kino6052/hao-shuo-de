@@ -13,7 +13,7 @@ export default composite({
   literal: "good to look at",
   fit: "natural",
   kinds: ["built"],
-  topics: ["describing-people"],
+  topics: ["looks-and-build"],
   isA: ["sound-or-light-quality"],
   examples: [
     {

@@ -12,7 +12,7 @@ export default composite({
   tts: ["X里面", "X中间"],
   literal: "inside X",
   fit: "plain",
-  topics: ["up-down-in-out"],
+  topics: ["middle-and-among"],
   isA: ["place-relation"],
   proposed: true,
 });

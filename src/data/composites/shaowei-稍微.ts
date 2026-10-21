@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:yi1}}-{{word:dian3}}", "{{word:you3}} {{word:yi1}}-{{word:dian3}}"],
   tts: ["一点", "有一点"],
   fit: "natural",
-  topics: ["degree-words"],
+  topics: ["a-little-and-rather"],
   isA: ["degree-word"],
   proposed: true,
 });

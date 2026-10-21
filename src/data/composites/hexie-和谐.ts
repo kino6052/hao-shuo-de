@@ -15,7 +15,7 @@ export default composite({
   tts: ["大家在一起，都很好", "大家在一起，没有人不开心"],
   literal: "everyone together, all is very good / everyone together, no one is unhappy",
   fit: "plain",
-  topics: ["people-together"],
+  topics: ["gathering-and-getting-along"],
   isA: ["condition-quality"],
   proposed: true,
 });

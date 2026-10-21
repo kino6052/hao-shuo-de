@@ -12,7 +12,7 @@ export default composite({
   tts: ["把X放在Y", "把X放好"],
   literal: "put X at Y / put X well",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["putting-and-placing"],
   isA: ["placing"],
   proposed: true,
 });

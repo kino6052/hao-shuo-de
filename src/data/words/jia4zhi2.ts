@@ -14,7 +14,7 @@ export default word("jia4zhi2", {
     eng: "Value, worth: {{word:hen3}} {{word:you3}} {{word:jia4zhi2}}, valuable. Prices and judgments use it.",
     rus: "Ценность: {{word:hen3}} {{word:you3}} {{word:jia4zhi2}} — ценный. Им пользуются цены и оценки.",
   },
-  topics: ["business-and-economy"],
+  topics: ["money-wealth-and-value"],
   isA: ["idea"],
   paraphrase: {
     forms: [

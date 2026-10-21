@@ -15,7 +15,7 @@ export default composite({
   tts: ["最后的部分", "最后"],
   literal: "the last part / the last",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["first-next-and-last"],
   isA: ["time-order"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["把做好的东西打坏，拿走", "把X打坏，拿走"],
   literal: "break the thing that was made and take it away / break X and take it away",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["breaking-and-taking-apart"],
   isA: ["making"],
   proposed: true,
 });

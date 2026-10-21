@@ -12,7 +12,7 @@ export default composite({
   tts: ["开学"],
   literal: "open learning",
   fit: "natural",
-  topics: ["studying"],
+  topics: ["school-days-and-years"],
   isA: ["starting-and-stopping"],
   note: "Real Mandarin: 开学.",
   examples: [

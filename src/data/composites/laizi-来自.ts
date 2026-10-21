@@ -12,7 +12,7 @@ export default composite({
   tts: ["从X来"],
   literal: "come from X",
   fit: "natural",
-  topics: ["countries-and-cities"],
+  topics: ["country-and-nation"],
   isA: ["place-relation"],
   examples: [
     {

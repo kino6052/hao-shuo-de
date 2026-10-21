@@ -15,7 +15,7 @@ export default composite({
   tts: ["和人一样能想的算的机", "高明的算的机"],
   literal: "a counting machine that can think like a person / a smart counting machine",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["smart-and-digital-technology"],
   isA: ["computer-or-phone"],
   proposed: true,
 });

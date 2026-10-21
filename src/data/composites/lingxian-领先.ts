@@ -12,7 +12,7 @@ export default composite({
   tts: ["在别人前面"],
   literal: "in front of the others",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["winning-losing-and-scores"],
   isA: ["social-action"],
   proposed: true,
 });

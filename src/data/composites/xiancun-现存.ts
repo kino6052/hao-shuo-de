@@ -15,7 +15,7 @@ export default composite({
   tts: ["现在还有", "现在还在"],
   literal: "still there now / still here now",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["now-and-recently"],
   isA: ["owning"],
   proposed: true,
 });

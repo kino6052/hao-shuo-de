@@ -14,7 +14,7 @@ export default composite({
   tts: ["家里平常的东西"],
   literal: "the ordinary things at home",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["normal-and-ordinary"],
   isA: ["state-name"],
   proposed: true,
 });

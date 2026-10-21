@@ -15,7 +15,7 @@ export default composite({
   tts: ["最好的结果", "比别人都好的结果"],
   literal: "the best result",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["medals-and-champions"],
   isA: ["idea"],
   proposed: true,
 });

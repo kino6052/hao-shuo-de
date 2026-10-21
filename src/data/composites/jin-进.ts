@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:jin4}}"],
   tts: ["进"],
   fit: "word",
-  topics: ["going-and-coming"],
+  topics: ["going-in-and-coming-out"],
   isA: ["moving-action"],
   note: "Lesson {{lesson:direction-and-result}}: jìn-lái!",
   examples: [

@@ -15,7 +15,7 @@ export default composite({
   tts: ["让X在地上到我这边来", "拿X走，让X在地上动"],
   literal: "let X come to my side along the floor / take X and go, let X move on the floor",
   fit: "plain",
-  topics: ["pushing-and-pulling"],
+  topics: ["pushing-pulling-and-pressing"],
   isA: ["handling-action"],
   proposed: true,
 });

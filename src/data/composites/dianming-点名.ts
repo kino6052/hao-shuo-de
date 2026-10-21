@@ -14,7 +14,7 @@ export default composite({
   tts: ["一个一个叫名字"],
   literal: "call the names one by one",
   fit: "plain",
-  topics: ["classroom"],
+  topics: ["lessons-and-classes"],
   isA: ["speaking-action"],
   proposed: true,
 });

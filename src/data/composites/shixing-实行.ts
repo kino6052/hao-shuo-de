@@ -12,7 +12,7 @@ export default composite({
   tts: ["开始做X", "把X真的做"],
   literal: "start doing X / really do X",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["doing-and-carrying-out"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

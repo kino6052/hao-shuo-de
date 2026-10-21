@@ -15,7 +15,7 @@ export default composite({
   tts: ["一次一次看X，把看到的写下来", "什么时间都在看X"],
   literal: "look at X time after time, write down what you saw / look at X at all times",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["checking-and-testing"],
   isA: ["perceiving"],
   proposed: true,
 });

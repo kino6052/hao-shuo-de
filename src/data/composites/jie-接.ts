@@ -12,7 +12,7 @@ export default composite({
   tts: ["拿到"],
   literal: "take-reach",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["taking-picking-up-and-using"],
   isA: ["handling-action"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["最重要的", "比谁都重要"],
   literal: "the most important / more important than anyone or anything",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["situations-and-needs"],
   isA: ["value-quality"],
   proposed: true,
 });

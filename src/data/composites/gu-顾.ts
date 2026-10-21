@@ -15,7 +15,7 @@ export default composite({
   tts: ["看好X", "帮X，不让X坏"],
   literal: "watch over X well / help X, not let X go bad",
   fit: "natural",
-  topics: ["helping-and-sharing"],
+  topics: ["caring-and-comforting"],
   isA: ["social-action"],
   proposed: true,
 });

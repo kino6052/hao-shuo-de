@@ -15,7 +15,7 @@ export default composite({
   tts: ["走到后面", "走回去"],
   literal: "walk to the back / walk back",
   fit: "plain",
-  topics: ["going-and-coming"],
+  topics: ["leaving-stopping-and-retreating"],
   isA: ["moving-action"],
   proposed: true,
 });

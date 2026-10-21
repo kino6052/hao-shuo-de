@@ -14,7 +14,7 @@ export default composite({
   tts: ["把能做的都做出来"],
   literal: "do everything you can do",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["work-and-effort"],
   isA: ["working"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["没有很多好看的东西", "用的金很少"],
   literal: "without many beautiful things / the money used is very little",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["normal-and-ordinary"],
   isA: ["condition-quality"],
   proposed: true,
 });

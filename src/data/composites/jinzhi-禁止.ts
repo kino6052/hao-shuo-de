@@ -12,7 +12,7 @@ export default composite({
   tts: ["不让X", "说不能X"],
   literal: "do not let X",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["punishing-and-forbidding"],
   isA: ["social-action"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["找到X的线", "帮你找到X的小东西"],
   literal: "the thread to finding X / the small thing that helps you find X",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["searching-and-clues"],
   isA: ["idea"],
   proposed: true,
 });

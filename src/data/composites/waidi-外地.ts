@@ -12,7 +12,7 @@ export default composite({
   tts: ["外地", "别的地方"],
   literal: "outside place / another place",
   fit: "natural",
-  topics: ["near-and-far"],
+  topics: ["here-there-everywhere"],
   isA: ["place-word"],
   proposed: true,
 });

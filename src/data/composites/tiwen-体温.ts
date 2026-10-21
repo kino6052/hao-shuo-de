@@ -15,7 +15,7 @@ export default composite({
   tts: ["身体多热", "身体多热的数"],
   literal: "how hot the body is / the number of how hot the body is",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["fever-colds-and-diseases"],
   isA: ["state-name"],
   proposed: true,
 });

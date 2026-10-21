@@ -15,7 +15,7 @@ export default composite({
   tts: ["决定是X", "说是X，不是别的"],
   literal: "decide it is X / say it is X, not another",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["choosing-and-deciding"],
   isA: ["thinking-action"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["让X动起来", "让X一下动"],
   literal: "make X start moving / make X move all at once",
   fit: "plain",
-  topics: ["causes-and-results"],
+  topics: ["causing-and-leading-to"],
   isA: ["cause-and-effect"],
   proposed: true,
 });

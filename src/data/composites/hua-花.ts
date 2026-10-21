@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:yong4}}"],
   tts: ["用"],
   fit: "natural",
-  topics: ["giving-and-getting"],
+  topics: ["spending-trading-and-returning"],
   isA: ["handling-action"],
   note: "yòng jīn: spend money.",
   examples: [

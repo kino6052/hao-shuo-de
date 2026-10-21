@@ -14,7 +14,7 @@ export default word("jian1", {
     eng: "Between: {{word:zhong1}}-{{word:jian1}} (middle) and {{word:kong1}}-{{word:jian1}} (space) need it.",
     rus: "Между: без него нет {{word:zhong1}}-{{word:jian1}} (середина) и {{word:kong1}}-{{word:jian1}} (пространство).",
   },
-  topics: ["up-down-in-out"],
+  topics: ["middle-and-among"],
   isA: ["place-relation"],
   paraphrase: { forms: ["{{word:zhong1}}"], verdict: "fine" },
 });

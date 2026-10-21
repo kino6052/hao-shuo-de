@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:ti4}}", "{{word:yong4}} Y {{word:ti4}} X {{word:zuo4}}"],
   tts: ["替", "用Y替X做"],
   fit: "natural",
-  topics: ["helping-and-sharing"],
+  topics: ["helping-and-supporting"],
   isA: ["social-action"],
   proposed: true,
 });

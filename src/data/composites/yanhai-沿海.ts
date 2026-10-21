@@ -15,7 +15,7 @@ export default composite({
   tts: ["地和很大的水见面的地方", "很大的有水的地方的边"],
   literal: "the place where land and the very big water meet / the edge of the very big place with water",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["sea-coast-and-islands"],
   isA: ["landform"],
   proposed: true,
 });

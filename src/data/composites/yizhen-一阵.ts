@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["一下", "不长的时间"],
   fit: "natural",
-  topics: ["counting-words"],
+  topics: ["times-rounds-and-minutes"],
   isA: ["counting-word"],
   proposed: true,
 });

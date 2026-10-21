@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:zhao3}}"],
   tts: ["找"],
   fit: "word",
-  topics: ["senses"],
+  topics: ["seeing-and-looking"],
   isA: ["perceiving"],
   examples: [
     {

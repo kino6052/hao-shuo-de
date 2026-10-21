@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:xian4}}-{{word:xia4}}", "{{word:bu4}} {{word:zai4}} {{word:wang3}}-{{word:shang4}}"],
   tts: ["线下", "不在网上"],
   fit: "natural",
-  topics: ["phone-and-computer"],
+  topics: ["internet-and-websites"],
   isA: ["condition-quality"],
   proposed: true,
 });

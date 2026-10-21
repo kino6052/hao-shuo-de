@@ -14,7 +14,7 @@ export default composite({
   tts: ["大学后还在学的人"],
   literal: "the person who is still learning after university",
   fit: "plain",
-  topics: ["classroom"],
+  topics: ["teachers-and-students"],
   isA: ["social-role"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["说X是真的"],
   literal: "say that X is true",
   fit: "plain",
-  topics: ["agreeing-and-praising"],
+  topics: ["advising-and-promising"],
   isA: ["speaking-action"],
   examples: [
     {

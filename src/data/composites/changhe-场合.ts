@@ -15,7 +15,7 @@ export default composite({
   tts: ["时间，地方和人在一起的样子", "这样的时间和地方"],
   literal: "the way time, place and people come together / a time and place like this",
   fit: "plain",
-  topics: ["news-and-events"],
+  topics: ["events-and-luck"],
   isA: ["event"],
   proposed: true,
 });

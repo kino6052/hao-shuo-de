@@ -12,7 +12,7 @@ export default composite({
   tts: ["用手拿，不让X动"],
   literal: "take with the hand, not let X move",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["carrying-and-holding"],
   isA: ["holding"],
   proposed: true,
 });

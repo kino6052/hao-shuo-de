@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["出色", "比别人都好"],
   fit: "natural",
-  topics: ["how-good"],
+  topics: ["quality-and-top-class"],
   isA: ["value-quality"],
   proposed: true,
 });

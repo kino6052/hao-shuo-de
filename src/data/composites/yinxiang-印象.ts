@@ -14,7 +14,7 @@ export default composite({
   tts: ["心里留下的东西"],
   literal: "what stays in your heart",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["mind-and-imagination"],
   isA: ["idea"],
   examples: [
     {

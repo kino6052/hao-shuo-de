@@ -17,7 +17,7 @@ export default composite({
   literal: "close-heart / worry X isn't well / be good to X",
   fit: "natural",
   kinds: ["spelled", "built", "built"],
-  topics: ["helping-and-sharing"],
+  topics: ["caring-and-comforting"],
   isA: ["feeling-and-wanting"],
   examples: [
     {

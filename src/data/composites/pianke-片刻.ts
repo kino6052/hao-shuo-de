@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["一下", "不长的时间"],
   fit: "natural",
-  topics: ["before-and-after"],
+  topics: ["moments-and-stages"],
   isA: ["time-span"],
   proposed: true,
 });

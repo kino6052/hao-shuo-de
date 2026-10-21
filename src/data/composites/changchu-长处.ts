@@ -15,7 +15,7 @@ export default composite({
   tts: ["好的地方", "能做好的东西"],
   literal: "the good part / what one can do well",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["strong-and-weak-points"],
   isA: ["idea"],
   proposed: true,
 });

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:hao3}}-{{word:yong4}}", "{{word:bu4}} {{word:nan2}} {{word:yong4}}"],
   tts: ["好用", "不难用"],
   fit: "natural",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["easy-and-convenient"],
   isA: ["truth-or-ease"],
   proposed: true,
 });

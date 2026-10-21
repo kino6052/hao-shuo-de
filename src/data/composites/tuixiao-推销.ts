@@ -15,7 +15,7 @@ export default composite({
   tts: ["说X好，让人买", "让人买X"],
   literal: "say X is good, make people buy / make people buy X",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["buying-and-selling"],
   isA: ["trade-action"],
   proposed: true,
 });

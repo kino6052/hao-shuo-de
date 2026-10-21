@@ -15,7 +15,7 @@ export default composite({
   tts: ["头不快", "想东西不快"],
   literal: "the head is not fast / slow at thinking things",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["clever-skilled-and-famous"],
   isA: ["character-quality"],
   proposed: true,
 });

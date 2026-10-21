@@ -12,7 +12,7 @@ export default composite({
   tts: ["为X很用力做"],
   literal: "work very hard for X",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["trying-and-persisting"],
   isA: ["working"],
   proposed: true,
 });

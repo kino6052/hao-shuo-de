@@ -12,7 +12,7 @@ export default composite({
   tts: ["以前", "现在以前"],
   literal: "before / before now",
   fit: "natural",
-  topics: ["before-and-after"],
+  topics: ["in-the-past"],
   isA: ["time-order"],
   proposed: true,
 });

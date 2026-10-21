@@ -15,7 +15,7 @@ export default composite({
   tts: ["现在的样子", "现在的X"],
   literal: "how X is now",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["situations-and-needs"],
   isA: ["state-name"],
   examples: [
     {

@@ -12,7 +12,7 @@ export default composite({
   tts: ["给东西得金"],
   literal: "give things, get money",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["buying-and-selling"],
   isA: ["trade-action"],
   examples: [
     {

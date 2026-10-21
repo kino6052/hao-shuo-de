@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X打坏", "比以前最好的还好"],
   literal: "hit X until it is broken / still better than the best before",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["breaking-and-taking-apart"],
   isA: ["handling-action"],
   proposed: true,
 });

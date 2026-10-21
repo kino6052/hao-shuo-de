@@ -12,7 +12,7 @@ export default composite({
   tts: ["让X到我这边来"],
   literal: "make X come to my side",
   fit: "plain",
-  topics: ["pushing-and-pulling"],
+  topics: ["pushing-pulling-and-pressing"],
   isA: ["handling-action"],
   proposed: true,
 });

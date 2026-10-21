@@ -15,7 +15,7 @@ export default composite({
   tts: ["没想到，一下发生", "一下很大的发生"],
   literal: "did not think of it, all at once it happens / a very big happening all at once",
   fit: "plain",
-  topics: ["news-and-events"],
+  topics: ["events-and-luck"],
   isA: ["happening"],
   proposed: true,
 });

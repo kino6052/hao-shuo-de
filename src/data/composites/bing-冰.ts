@@ -15,7 +15,7 @@ export default composite({
   tts: ["变硬的冷水", "因为冷，水变硬"],
   literal: "cold water that has become hard / because it is cold, the water becomes hard",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["hot-and-cold-weather"],
   isA: ["weather-thing"],
   proposed: true,
 });

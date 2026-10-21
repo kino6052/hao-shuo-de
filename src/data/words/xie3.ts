@@ -14,7 +14,7 @@ export default word("xie3", {
     eng: "Write: books, letters, and signs are all {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
     rus: "Писать: книги, письма и вывески — всё это {{word:xie3}}-{{word:de}} {{word:dong1}}-{{light:xi1}}.",
   },
-  topics: ["writing"],
+  topics: ["writing-things-down"],
   isA: ["making"],
   maps: "sitelen",
   paraphrase: { forms: ["{{word:yong4}} {{word:shou3}} {{word:zuo4}} {{word:zi4}}"], verdict: "clumsy" },

@@ -12,7 +12,7 @@ export default composite({
   tts: ["第一年的以前"],
   literal: "the time before the first year",
   fit: "plain",
-  topics: ["calendar"],
+  topics: ["years-and-centuries"],
   isA: ["calendar-name"],
   proposed: true,
 });

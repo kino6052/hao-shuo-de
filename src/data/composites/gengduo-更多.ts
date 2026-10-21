@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:bi3}} X {{word:duo1}}", "{{word:bi3}} X {{word:hai2}} {{word:duo1}}"],
   tts: ["比X多", "比X还多"],
   fit: "natural",
-  topics: ["much-and-little"],
+  topics: ["many-and-few"],
   isA: ["amount-word"],
   proposed: true,
 });

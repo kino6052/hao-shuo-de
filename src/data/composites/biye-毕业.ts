@@ -12,7 +12,7 @@ export default composite({
   tts: ["学完了"],
   literal: "finished learning",
   fit: "natural",
-  topics: ["studying"],
+  topics: ["school-days-and-years"],
   isA: ["life-change"],
   examples: [
     {

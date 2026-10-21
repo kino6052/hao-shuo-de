@@ -14,7 +14,7 @@ export default word("jin1", {
     eng: "Money: buying, paying, price. Daily life needs it, and no description is short.",
     rus: "Деньги: покупать, платить, цена. Без них не обойтись в жизни, а короткого описания нет.",
   },
-  topics: ["money-and-paying"],
+  topics: ["money-and-cards"],
   isA: ["money-thing"],
   maps: "mani",
   senses: {

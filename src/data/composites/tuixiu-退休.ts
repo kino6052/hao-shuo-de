@@ -12,7 +12,7 @@ export default composite({
   tts: ["老了，不做了"],
   literal: "old, no longer working",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["work-days-and-busy"],
   isA: ["life-change"],
   examples: [
     {

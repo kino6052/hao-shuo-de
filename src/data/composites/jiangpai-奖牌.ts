@@ -14,7 +14,7 @@ export default composite({
   tts: ["最好的人得到的小的圆的东西"],
   literal: "the small round thing that the best person gets",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["medals-and-champions"],
   isA: ["made-thing"],
   proposed: true,
 });

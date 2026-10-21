@@ -12,7 +12,7 @@ export default composite({
   tts: ["从开始到完的路"],
   literal: "the road from start to finish",
   fit: "plain",
-  topics: ["causes-and-results"],
+  topics: ["reasons-sources-and-conditions"],
   isA: ["idea"],
   examples: [
     {

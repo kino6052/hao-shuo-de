@@ -12,7 +12,7 @@ export default composite({
   tts: ["为什么"],
   literal: "why",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["reasons-and-logic"],
   isA: ["idea"],
   examples: [
     {

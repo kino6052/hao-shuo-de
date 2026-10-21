@@ -15,7 +15,7 @@ export default composite({
   tts: ["身体不好", "身体有X的问题"],
   literal: "the body is not well / the body has the problem of X",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["fever-colds-and-diseases"],
   isA: ["being-affected"],
   proposed: true,
 });

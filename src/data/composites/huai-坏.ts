@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:huai4}}"],
   tts: ["坏"],
   fit: "word",
-  topics: ["how-good"],
+  topics: ["good-bad-and-okay"],
   isA: ["value-quality"],
   examples: [
     {

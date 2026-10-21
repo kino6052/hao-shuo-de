@@ -14,7 +14,7 @@ export default composite({
   tts: ["用很多力气去得到"],
   literal: "use a lot of strength to go and get",
   fit: "plain",
-  topics: ["liking-and-wanting"],
+  topics: ["wishes-hopes-and-longing"],
   isA: ["feeling-and-wanting"],
   proposed: true,
 });

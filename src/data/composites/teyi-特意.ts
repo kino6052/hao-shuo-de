@@ -15,7 +15,7 @@ export default composite({
   tts: ["就做这个", "想好了，只为X做"],
   literal: "just do this / thought it through, do it only for X",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["quietly-together-step-by-step"],
   isA: ["adverb-word"],
   proposed: true,
 });

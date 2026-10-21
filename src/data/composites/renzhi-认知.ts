@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:zhi1dao4}}", "{{word:xin1}}-{{word:li3}} {{word:zhi1dao4}}"],
   tts: ["知道", "心里知道"],
   fit: "natural",
-  topics: ["knowing-and-understanding"],
+  topics: ["knowing-and-grasping"],
   isA: ["thinking-action"],
   proposed: true,
 });

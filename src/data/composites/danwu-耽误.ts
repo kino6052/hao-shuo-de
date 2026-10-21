@@ -15,7 +15,7 @@ export default composite({
   tts: ["让X晚了", "把X的时间用完"],
   literal: "make X late / use up X's time",
   fit: "plain",
-  topics: ["causes-and-results"],
+  topics: ["harm-and-bad-results"],
   isA: ["becoming"],
   proposed: true,
 });

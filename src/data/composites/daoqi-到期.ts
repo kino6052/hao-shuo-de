@@ -12,7 +12,7 @@ export default composite({
   tts: ["时间到了"],
   literal: "the time has come / it can't be used again",
   fit: "plain",
-  topics: ["calendar"],
+  topics: ["weeks-months-and-deadlines"],
   isA: ["happening"],
   proposed: true,
 });

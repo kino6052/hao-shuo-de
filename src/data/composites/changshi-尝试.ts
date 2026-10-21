@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["做一下", "做一下，看看"],
   fit: "natural",
-  topics: ["deciding"],
+  topics: ["trying-and-persisting"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

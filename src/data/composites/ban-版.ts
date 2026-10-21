@@ -15,7 +15,7 @@ export default composite({
   tts: ["X的一个不同的样子", "书做出来的一次"],
   literal: "one different look of X / one time a book is made",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["books-and-paper"],
   isA: ["paper-thing"],
   proposed: true,
 });

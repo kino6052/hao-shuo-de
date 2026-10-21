@@ -15,7 +15,7 @@ export default composite({
   tts: ["结果不好的，给人看的东西", "让人很难过的东西"],
   literal: "a thing shown to people whose ending is not good / a thing that makes people very sad",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["films-and-shows"],
   isA: ["work-of-art"],
   proposed: true,
 });

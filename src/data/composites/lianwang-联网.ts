@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X结在网上", "让X可以上网"],
   literal: "tie X onto the net / let X be able to go online",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["internet-and-websites"],
   isA: ["making"],
   proposed: true,
 });

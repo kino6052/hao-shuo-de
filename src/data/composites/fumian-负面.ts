@@ -15,7 +15,7 @@ export default composite({
   tts: ["不好的一面", "坏的"],
   literal: "the not-good side / the bad",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["useful-and-harmful"],
   isA: ["value-quality"],
   proposed: true,
 });

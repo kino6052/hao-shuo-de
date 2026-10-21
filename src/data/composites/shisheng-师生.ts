@@ -14,7 +14,7 @@ export default composite({
   tts: ["帮人学的人和学的人"],
   literal: "the people who help people learn and the people who learn",
   fit: "plain",
-  topics: ["classroom"],
+  topics: ["teachers-and-students"],
   isA: ["group-of-people"],
   proposed: true,
 });

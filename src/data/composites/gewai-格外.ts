@@ -12,7 +12,7 @@ export default composite({
   tts: ["最", "比平常还…"],
   literal: "the most / even more than usual",
   fit: "plain",
-  topics: ["degree-words"],
+  topics: ["especially-and-in-person"],
   isA: ["degree-word"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["两个东西不一样的多少", "X和Y中间有多远"],
   literal: "how much two things are different / how far there is between X and Y",
   fit: "plain",
-  topics: ["same-and-different"],
+  topics: ["different-and-varied"],
   isA: ["comparison"],
   proposed: true,
 });

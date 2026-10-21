@@ -12,7 +12,7 @@ export default composite({
   tts: ["对X做", "还有"],
   literal: "do to X / and also there is",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["doing-and-carrying-out"],
   isA: ["handling-action"],
   proposed: true,
 });

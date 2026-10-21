@@ -12,7 +12,7 @@ export default composite({
   tts: ["很有力"],
   literal: "has a lot of strength",
   fit: "natural",
-  topics: ["speed-and-strength"],
+  topics: ["strong-and-weak-body-and-force"],
   isA: ["speed-or-strength"],
   note: "Lesson {{lesson:becoming-and-making}}.",
   examples: [

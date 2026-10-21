@@ -15,7 +15,7 @@ export default composite({
   ],
   tts: ["用心", "把心放在X上", "好好"],
   fit: "natural",
-  topics: ["describing-people"],
+  topics: ["careful-hardworking-and-lazy"],
   isA: ["character-quality"],
   proposed: true,
 });

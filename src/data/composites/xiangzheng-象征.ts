@@ -15,7 +15,7 @@ export default composite({
   tts: ["让人想到X", "让人想到X的东西"],
   literal: "make people think of X / a thing that makes people think of X",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["mind-and-imagination"],
   isA: ["idea"],
   proposed: true,
 });

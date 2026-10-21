@@ -15,7 +15,7 @@ export default composite({
   tts: ["有一点不对", "说X不对"],
   literal: "a little wrong / say X is wrong",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["special-and-strange"],
   isA: ["condition-quality"],
   proposed: true,
 });

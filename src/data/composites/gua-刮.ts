@@ -15,7 +15,7 @@ export default composite({
   tts: ["空气快动", "用工具把X上面拿走"],
   literal: "the air moves fast / use a tool to take away the top of X",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["air-wind-and-storms"],
   isA: ["weather-happening"],
   proposed: true,
 });

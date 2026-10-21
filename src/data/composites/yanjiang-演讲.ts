@@ -15,7 +15,7 @@ export default composite({
   tts: ["在大家前面说话", "在很多的人前面说话"],
   literal: "speak in front of everyone",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["talks-discussion-and-orders"],
   isA: ["speaking-action"],
   proposed: true,
 });

@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["天下", "人人都在的地方"],
   fit: "natural",
-  topics: ["countries-and-cities"],
+  topics: ["world-and-continents"],
   isA: ["place"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["要X，但没有", "X很少"],
   literal: "need X but do not have / X is very little",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["enough-and-lacking"],
   isA: ["owning"],
   proposed: true,
 });

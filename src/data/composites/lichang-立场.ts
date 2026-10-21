@@ -15,7 +15,7 @@ export default composite({
   tts: ["站在哪一边的想法", "站在哪一边"],
   literal: "the view of which side one stands on / which side one stands on",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["opinions-and-views"],
   isA: ["idea"],
   proposed: true,
 });

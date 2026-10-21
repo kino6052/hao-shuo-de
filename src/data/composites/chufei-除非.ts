@@ -15,7 +15,7 @@ export default composite({
   tts: ["只有X", "如果不是X，就没有Y"],
   literal: "only X / if it is not X, then there is no Y",
   fit: "plain",
-  topics: ["joining-words"],
+  topics: ["if-unless-and-even-if"],
   isA: ["conjunction"],
   proposed: true,
 });

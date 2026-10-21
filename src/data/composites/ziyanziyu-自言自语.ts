@@ -15,7 +15,7 @@ export default composite({
   tts: ["一个人说话，没有人听", "一个人在说话"],
   literal: "one person talks, nobody listens / one person is talking",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["saying-and-calling"],
   isA: ["speaking-action"],
   proposed: true,
 });

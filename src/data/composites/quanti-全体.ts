@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:da4}}-{{word:jia1}}", "{{word:dou1}} {{word:zai4}}-{{word:de}} {{word:ren2}}"],
   tts: ["大家", "都在的人"],
   fit: "natural",
-  topics: ["all-and-some"],
+  topics: ["whole-complete-and-widespread"],
   isA: ["amount-word"],
   proposed: true,
 });

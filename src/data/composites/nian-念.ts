@@ -15,7 +15,7 @@ export default composite({
   tts: ["说出写的东西", "心里有X"],
   literal: "say what's written / X is in your heart",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["studying-and-practising"],
   isA: ["speaking-action"],
   examples: [
     {

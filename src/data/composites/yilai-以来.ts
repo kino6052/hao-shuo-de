@@ -12,7 +12,7 @@ export default composite({
   tts: ["以来", "从X到现在"],
   literal: "by-come / from X until now",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["now-and-recently"],
   isA: ["time-order"],
   proposed: true,
 });

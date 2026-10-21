@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:wan3}}", "{{word:bu4}} {{word:zao3}}"],
   tts: ["晚", "不早"],
   fit: "natural",
-  topics: ["before-and-after"],
+  topics: ["soon-early-and-late"],
   isA: ["time-order"],
   proposed: true,
 });

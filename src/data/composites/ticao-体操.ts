@@ -14,7 +14,7 @@ export default composite({
   tts: ["动身体，做很难很好看的样子"],
   literal: "move the body, make very hard, very good-looking shapes",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["exercise-and-kinds-of-sport"],
   isA: ["activity-name"],
   proposed: true,
 });

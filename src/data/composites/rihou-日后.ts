@@ -15,7 +15,7 @@ export default composite({
   ],
   tts: ["日后", "以后", "以后的日子"],
   fit: "natural",
-  topics: ["before-and-after"],
+  topics: ["after-later-and-future"],
   isA: ["time-order"],
   proposed: true,
 });

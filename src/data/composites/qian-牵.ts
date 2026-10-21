@@ -14,7 +14,7 @@ export default composite({
   tts: ["用手拿X，让X和我一起走"],
   literal: "hold X with the hand, let X walk with me",
   fit: "plain",
-  topics: ["pushing-and-pulling"],
+  topics: ["pushing-pulling-and-pressing"],
   isA: ["handling-action"],
   proposed: true,
 });

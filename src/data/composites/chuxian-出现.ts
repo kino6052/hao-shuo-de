@@ -13,7 +13,7 @@ export default composite({
   literal: "now there is",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["changing"],
+  topics: ["appearing-and-developing"],
   isA: ["happening"],
   examples: [
     {

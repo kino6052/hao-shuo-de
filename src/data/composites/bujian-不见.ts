@@ -15,7 +15,7 @@ export default composite({
   ],
   tts: ["不见", "看不到了", "没有了"],
   fit: "natural",
-  topics: ["going-and-coming"],
+  topics: ["leaving-stopping-and-retreating"],
   isA: ["becoming"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["好看的外面", "一个地方的外面的样子"],
   literal: "the beautiful outdoors / the look of the outside of a place",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["nature-and-environment"],
   isA: ["natural-thing"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["高明"],
   literal: "high and bright",
   fit: "natural",
-  topics: ["phone-and-computer"],
+  topics: ["smart-and-digital-technology"],
   isA: ["character-quality"],
   examples: [
     {

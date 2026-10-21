@@ -11,7 +11,7 @@ export default composite({
   hsd: ["\"Dàyángzhōu\""],
   tts: ["大洋洲"],
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["world-and-continents"],
   isA: ["settlement"],
   proposed: true,
 });

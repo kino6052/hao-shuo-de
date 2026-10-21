@@ -14,6 +14,6 @@ export default composite({
   tts: ["X有了，后来没有了"],
   literal: "had it, then did not",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["decreasing-and-breaking-down"],
   isA: ["being-affected"],
 });

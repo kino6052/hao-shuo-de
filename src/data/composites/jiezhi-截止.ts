@@ -15,7 +15,7 @@ export default composite({
   tts: ["到X就完了", "到X就没有了"],
   literal: "at X it is finished / at X there is no more",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["now-and-recently"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

@@ -14,7 +14,7 @@ export default composite({
   tts: ["用手做算的工具的小的东西"],
   literal: "the small thing your hand runs the computer with",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["computers-and-gadgets"],
   isA: ["computer-or-phone"],
   examples: [
     {

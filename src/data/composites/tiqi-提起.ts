@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:shuo1}}-{{word:qi3}}", "{{word:shuo1}}-{{word:dao4}}"],
   tts: ["说起", "说到"],
   fit: "natural",
-  topics: ["talking"],
+  topics: ["introducing-and-passing-on"],
   isA: ["speaking-action"],
   proposed: true,
 });

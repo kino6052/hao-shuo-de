@@ -14,7 +14,7 @@ export default composite({
   tts: ["从很大的水上来的，很大的快飞的空气"],
   literal: "a very big fast-flying air that comes from the very big water",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["air-wind-and-storms"],
   isA: ["weather-thing"],
   proposed: true,
 });

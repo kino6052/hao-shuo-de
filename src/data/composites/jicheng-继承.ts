@@ -14,7 +14,7 @@ export default composite({
   tts: ["拿死了的人留下来的东西"],
   literal: "take the things left by a person who died",
   fit: "plain",
-  topics: ["giving-and-getting"],
+  topics: ["getting-and-receiving"],
   isA: ["receiving"],
   proposed: true,
 });

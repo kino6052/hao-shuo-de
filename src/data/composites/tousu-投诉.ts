@@ -15,7 +15,7 @@ export default composite({
   tts: ["对上面的人说X不好", "去对做决定的人说X不好"],
   literal: "tell the people above that X is not good / go tell the person who decides that X is not good",
   fit: "plain",
-  topics: ["agreeing-and-praising"],
+  topics: ["refusing-and-criticising"],
   isA: ["speaking-action"],
   proposed: true,
 });

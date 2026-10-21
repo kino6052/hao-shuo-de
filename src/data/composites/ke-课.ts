@@ -12,7 +12,7 @@ export default composite({
   tts: ["学的部分"],
   literal: "learning part",
   fit: "plain",
-  topics: ["classroom"],
+  topics: ["lessons-and-classes"],
   isA: ["activity-name"],
   examples: [
     {

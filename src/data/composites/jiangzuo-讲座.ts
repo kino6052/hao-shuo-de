@@ -15,7 +15,7 @@ export default composite({
   tts: ["帮很多人学的话", "一个人对很多人说的话"],
   literal: "words that help many people learn / words one person says to many people",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-subjects-and-courses"],
   isA: ["event"],
   proposed: true,
 });

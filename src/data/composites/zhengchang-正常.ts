@@ -12,7 +12,7 @@ export default composite({
   tts: ["平常"],
   literal: "usual",
   fit: "natural",
-  topics: ["state-of-things"],
+  topics: ["normal-and-ordinary"],
   isA: ["condition-quality"],
   examples: [
     {

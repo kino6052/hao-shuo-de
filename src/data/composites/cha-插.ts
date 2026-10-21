@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X放进Y里", "把长的X放进Y"],
   literal: "put X into Y / put a long X into Y",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["putting-and-placing"],
   isA: ["placing"],
   proposed: true,
 });

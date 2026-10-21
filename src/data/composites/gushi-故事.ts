@@ -12,7 +12,7 @@ export default composite({
   tts: ["说的东西"],
   literal: "a told thing",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["stories-poems-and-essays"],
   isA: ["work-of-art"],
   examples: [
     {

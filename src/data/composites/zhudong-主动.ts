@@ -15,7 +15,7 @@ export default composite({
   tts: ["不用别人叫，就做", "不等别人叫就做"],
   literal: "no need for others to call, then do it / not wait for others to call, then do it",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["careful-hardworking-and-lazy"],
   isA: ["character-quality"],
   proposed: true,
 });

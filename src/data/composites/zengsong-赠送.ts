@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:gei3}}", "{{word:gei3}} X, {{word:bu4}} {{word:yao4}} {{word:jin1}}"],
   tts: ["给", "给X，不要金"],
   fit: "natural",
-  topics: ["giving-and-getting"],
+  topics: ["giving-and-gifts"],
   isA: ["handling-action"],
   proposed: true,
 });

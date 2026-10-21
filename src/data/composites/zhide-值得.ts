@@ -12,7 +12,7 @@ export default composite({
   tts: ["有价值"],
   literal: "have value",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["useful-and-harmful"],
   isA: ["value-quality"],
   proposed: true,
 });

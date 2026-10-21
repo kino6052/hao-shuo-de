@@ -15,7 +15,7 @@ export default composite({
   tts: ["在算的机里的写的东西", "在算的机上写的东西"],
   literal: "the written thing inside a computer / a written thing on a computer",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["software-files-and-accounts"],
   isA: ["paper-thing"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["比方", "你看，X"],
   literal: "compare-way / look, X",
   fit: "natural",
-  topics: ["talking"],
+  topics: ["topics-and-examples"],
   isA: ["speaking-action"],
   proposed: true,
 });

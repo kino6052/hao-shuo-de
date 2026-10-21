@@ -15,7 +15,7 @@ export default composite({
   tts: ["一个人在工作的地方要做的工作", "一个人的工作"],
   literal: "the work one person has to do at the place of work / one person's work",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["posts-and-pay"],
   isA: ["idea"],
   proposed: true,
 });

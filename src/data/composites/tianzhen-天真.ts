@@ -16,7 +16,7 @@ export default composite({
   tts: ["天真", "和小孩子一样，不知道坏的东西", "不知道坏的东西"],
   literal: "the same as a small child, not knowing bad things / not knowing bad things",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["brave-calm-and-lively"],
   isA: ["character-quality"],
   proposed: true,
 });

@@ -16,7 +16,7 @@ export default composite({
   literal: "the most important part",
   fit: "natural",
   kinds: ["built", "spelled"],
-  topics: ["ideas-and-opinions"],
+  topics: ["key-points-and-principles"],
   isA: ["idea"],
   examples: [
     {

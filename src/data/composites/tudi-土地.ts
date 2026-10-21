@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:di4}}"],
   tts: ["地"],
   fit: "word",
-  topics: ["land-and-water"],
+  topics: ["land-soil-and-the-earth"],
   isA: ["landform"],
   examples: [
     {

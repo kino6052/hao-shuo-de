@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:ting1}}-{{word:shuo1}}", "{{word:ting1}} {{word:ren2}} {{word:shuo1}}"],
   tts: ["听说", "听人说"],
   fit: "natural",
-  topics: ["talking"],
+  topics: ["saying-and-calling"],
   isA: ["perceiving"],
   proposed: true,
 });

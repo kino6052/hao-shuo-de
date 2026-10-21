@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:ting1}}-{{word:li4}}", "{{word:ting1}}-{{word:de}} {{word:neng2}}-{{word:li4}}"],
   tts: ["听力", "听的能力"],
   fit: "natural",
-  topics: ["senses"],
+  topics: ["hearing-and-sounds"],
   isA: ["state-name"],
   proposed: true,
 });

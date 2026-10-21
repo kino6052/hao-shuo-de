@@ -12,7 +12,7 @@ export default composite({
   tts: ["X的时间"],
   literal: "the time of X",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["just-then-and-finally"],
   isA: ["auxiliary"],
   examples: [
     {

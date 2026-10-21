@@ -14,7 +14,7 @@ export default composite({
   tts: ["发生的时间给人看"],
   literal: "show it while it happens",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["television-radio-and-media"],
   isA: ["speaking-action"],
   examples: [
     {

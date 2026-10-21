@@ -12,7 +12,7 @@ export default composite({
   tts: ["把问题就没了"],
   literal: "the problem is gone",
   fit: "natural",
-  topics: ["deciding"],
+  topics: ["solving-and-making-sure"],
   isA: ["thinking-action"],
   examples: [
     {

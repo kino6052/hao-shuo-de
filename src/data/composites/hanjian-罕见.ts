@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:shao3}}-{{word:jian4}}", "{{word:hen3}} {{word:shao3}} {{word:kan4}}-{{word:jian4}}"],
   tts: ["少见", "很少看见"],
   fit: "natural",
-  topics: ["how-often"],
+  topics: ["sometimes-rarely-and-never"],
   isA: ["frequency"],
   proposed: true,
 });

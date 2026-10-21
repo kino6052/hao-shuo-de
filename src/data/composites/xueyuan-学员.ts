@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:xue2}}-{{word:sheng1}}", "{{word:xue2}}-{{word:de}} {{word:ren2}}"],
   tts: ["学生", "学的人"],
   fit: "natural",
-  topics: ["classroom"],
+  topics: ["teachers-and-students"],
   isA: ["person"],
   proposed: true,
 });

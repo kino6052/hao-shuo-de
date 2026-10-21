@@ -14,7 +14,7 @@ export default composite({
   tts: ["东西里面怎么动的方法"],
   literal: "the way a thing moves on the inside",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["ways-and-methods"],
   isA: ["idea"],
   proposed: true,
 });

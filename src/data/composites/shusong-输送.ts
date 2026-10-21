@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X拿到别的地方", "把X从这里给到那里"],
   literal: "take X to another place / give X from here to there",
   fit: "plain",
-  topics: ["giving-and-getting"],
+  topics: ["sending-and-delivering"],
   isA: ["handling-action"],
   proposed: true,
 });

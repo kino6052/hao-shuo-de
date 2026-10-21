@@ -15,7 +15,7 @@ export default composite({
   tts: ["不怕等", "很长时间都能等"],
   literal: "not afraid to wait / can wait even a long time",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["careful-hardworking-and-lazy"],
   isA: ["character-quality"],
   proposed: true,
 });

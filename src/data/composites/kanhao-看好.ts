@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:kan4}}-{{word:hao3}}", "{{word:jue2}}-{{word:de}} X {{word:hui4}} {{word:hao3}}"],
   tts: ["看好", "觉得X会好"],
   fit: "natural",
-  topics: ["ideas-and-opinions"],
+  topics: ["opinions-and-views"],
   isA: ["thinking-action"],
   proposed: true,
 });

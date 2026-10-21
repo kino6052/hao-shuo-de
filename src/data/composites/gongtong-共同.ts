@@ -12,6 +12,6 @@ export default composite({
   tts: ["大家一起有"],
   literal: "everyone has it together",
   fit: "plain",
-  topics: ["helping-and-sharing"],
+  topics: ["together-and-cooperating"],
   isA: ["comparison"],
 });

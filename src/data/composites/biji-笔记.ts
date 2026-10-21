@@ -15,7 +15,7 @@ export default composite({
   tts: ["写下来要记的东西", "记下来的东西"],
   literal: "things written down that one needs to remember / things recorded down",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["studying-and-practising"],
   isA: ["paper-thing"],
   proposed: true,
 });

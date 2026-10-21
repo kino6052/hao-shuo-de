@@ -14,7 +14,7 @@ export default composite({
   tts: ["为工作买很多东西"],
   literal: "buy many things for work",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["buying-supplying-and-launching"],
   isA: ["trade-action"],
   proposed: true,
 });

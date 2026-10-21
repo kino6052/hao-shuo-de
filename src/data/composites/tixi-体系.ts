@@ -15,7 +15,7 @@ export default composite({
   tts: ["有多部分的东西", "很多部分一起工作的东西"],
   literal: "a thing that has many parts / a thing whose many parts work together",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["knowledge-and-meaning"],
   isA: ["idea"],
   proposed: true,
 });

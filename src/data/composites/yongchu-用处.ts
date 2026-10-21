@@ -15,7 +15,7 @@ export default composite({
   tts: ["用X能做什么", "有用的地方"],
   literal: "what can one do by using X / the place where it is useful",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["reasons-and-logic"],
   isA: ["idea"],
   proposed: true,
 });

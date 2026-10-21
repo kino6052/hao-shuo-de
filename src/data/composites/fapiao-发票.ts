@@ -14,7 +14,7 @@ export default composite({
   tts: ["买东西后得到的，写多少金的东西"],
   literal: "what you get after buying things, a written thing saying how much money",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["prices-and-costs"],
   isA: ["paper-thing"],
   proposed: true,
 });

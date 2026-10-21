@@ -15,7 +15,7 @@ export default composite({
   tts: ["一起用的一些东西", "把X放在Y外面"],
   literal: "some things that are used together / put X on the outside of Y",
   fit: "plain",
-  topics: ["counting-words"],
+  topics: ["kinds-sets-and-groups"],
   isA: ["counting-word"],
   proposed: true,
 });

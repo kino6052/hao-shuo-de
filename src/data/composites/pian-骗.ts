@@ -14,7 +14,7 @@ export default composite({
   tts: ["对X说不是真的话"],
   literal: "tell X words that are not true",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["crimes-and-criminals"],
   isA: ["social-action"],
   proposed: true,
 });

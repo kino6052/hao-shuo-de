@@ -12,7 +12,7 @@ export default composite({
   tts: ["要做的"],
   literal: "what is to be done",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["managing-and-progress"],
   isA: ["idea"],
   examples: [
     {

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:hai2}} {{word:you3}}", "{{word:hai2}} {{word:you3}} {{word:bie2}}-{{word:de}}"],
   tts: ["还有", "还有别的"],
   fit: "natural",
-  topics: ["joining-words"],
+  topics: ["and-or-and-also"],
   isA: ["conjunction"],
   proposed: true,
 });

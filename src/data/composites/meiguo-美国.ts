@@ -11,7 +11,7 @@ export default composite({
   hsd: ["\"Měiguó\""],
   tts: ["美国"],
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-countries"],
   isA: ["settlement"],
   proposed: true,
 });

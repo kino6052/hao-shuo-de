@@ -15,7 +15,7 @@ export default composite({
   tts: ["路过", "从X旁边走过"],
   literal: "road-pass / walk past X's side",
   fit: "plain",
-  topics: ["going-and-coming"],
+  topics: ["passing-through-and-across"],
   isA: ["moving-action"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["看好X"],
   literal: "watch over X",
   fit: "natural",
-  topics: ["helping-and-sharing"],
+  topics: ["caring-and-comforting"],
   isA: ["social-action"],
   examples: [
     {

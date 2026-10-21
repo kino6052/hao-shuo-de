@@ -12,7 +12,7 @@ export default composite({
   tts: ["一下"],
   literal: "a moment",
   fit: "natural",
-  topics: ["how-often"],
+  topics: ["long-and-short-time"],
   isA: ["time-span"],
   examples: [
     {

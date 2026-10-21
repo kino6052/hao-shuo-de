@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:fang1}}-{{word:fa3}}"],
   tts: ["方法"],
   fit: "word",
-  topics: ["ideas-and-opinions"],
+  topics: ["ways-and-methods"],
   isA: ["idea"],
   examples: [
     {

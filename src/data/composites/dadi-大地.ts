@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["大地", "人在上面走的很大的地"],
   fit: "natural",
-  topics: ["land-and-water"],
+  topics: ["land-soil-and-the-earth"],
   isA: ["landform"],
   proposed: true,
 });

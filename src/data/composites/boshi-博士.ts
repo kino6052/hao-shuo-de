@@ -12,7 +12,7 @@ export default composite({
   tts: ["学最多的人"],
   literal: "the person who has studied the most",
   fit: "plain",
-  topics: ["classroom"],
+  topics: ["teachers-and-students"],
   isA: ["social-role"],
   proposed: true,
 });

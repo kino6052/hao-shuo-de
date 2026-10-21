@@ -14,7 +14,7 @@ export default word("ting1", {
     eng: "Hear, listen. One of the five senses: music, sound, and obeying all need it.",
     rus: "Слышать, слушать. Одно из пяти чувств: без него ни музыки, ни звуков, ни «слушаться».",
   },
-  topics: ["senses"],
+  topics: ["hearing-and-sounds"],
   isA: ["perceiving"],
   maps: "kute",
   paraphrase: {

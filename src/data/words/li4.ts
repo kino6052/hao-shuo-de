@@ -14,7 +14,7 @@ export default word("li4", {
     eng: "Strength: {{word:you3}} {{word:li4}} is strong, and ability ({{word:neng2}}-{{word:li4}}) and effort ({{word:yong4}}-{{word:li4}}) are built from it.",
     rus: "Сила: {{word:you3}} {{word:li4}} — сильный, а из него строятся «способность» ({{word:neng2}}-{{word:li4}}) и «стараться» ({{word:yong4}}-{{word:li4}}).",
   },
-  topics: ["speed-and-strength"],
+  topics: ["strong-and-weak-body-and-force"],
   isA: ["state-name"],
   paraphrase: {
     forms: [

@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X放平", "把X平平地放在Y上"],
   literal: "put X flat / lay X flat on Y",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["putting-and-placing"],
   isA: ["placing"],
   proposed: true,
 });

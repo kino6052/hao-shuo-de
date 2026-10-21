@@ -12,7 +12,7 @@ export default composite({
   tts: ["用脚打"],
   literal: "hit with the foot",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["ball-sports"],
   isA: ["body-action"],
   examples: [
     {

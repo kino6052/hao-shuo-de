@@ -15,7 +15,7 @@ export default composite({
   tts: ["从X想到Y", "看到X，想到Y"],
   literal: "go from X to thinking of Y / see X, think of Y",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["thinking-and-researching"],
   isA: ["thinking-action"],
   proposed: true,
 });

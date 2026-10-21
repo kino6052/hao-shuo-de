@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["空地", "没有人用的地"],
   fit: "natural",
-  topics: ["land-and-water"],
+  topics: ["land-soil-and-the-earth"],
   isA: ["outdoor-place"],
   proposed: true,
 });

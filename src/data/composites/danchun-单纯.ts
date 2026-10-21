@@ -15,7 +15,7 @@ export default composite({
   tts: ["部分很少的", "没有别的，只有一个"],
   literal: "with very few parts / nothing else, only one",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["natural-and-man-made"],
   isA: ["condition-quality"],
   proposed: true,
 });

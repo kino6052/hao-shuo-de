@@ -14,7 +14,7 @@ export default composite({
   tts: ["做书给很多人看"],
   literal: "make books for many people to read",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["authors-and-publishing"],
   isA: ["making"],
   proposed: true,
 });

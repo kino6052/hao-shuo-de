@@ -15,7 +15,7 @@ export default composite({
   ],
   tts: ["只好", "只能", "没有别的方法"],
   fit: "natural",
-  topics: ["adverbs"],
+  topics: ["after-all-anyway-unexpectedly"],
   isA: ["adverb-word"],
   proposed: true,
 });

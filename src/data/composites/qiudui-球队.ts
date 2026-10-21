@@ -15,7 +15,7 @@ export default composite({
   tts: ["一起玩儿球的人", "一起打球的人"],
   literal: "the people who play ball together / the people who hit the ball together",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["athletes-and-sports-grounds"],
   isA: ["group-of-people"],
   proposed: true,
 });

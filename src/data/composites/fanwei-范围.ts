@@ -12,7 +12,7 @@ export default composite({
   tts: ["到的地方"],
   literal: "how far it reaches",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["totals-and-parts"],
   isA: ["amount-word"],
   examples: [
     {

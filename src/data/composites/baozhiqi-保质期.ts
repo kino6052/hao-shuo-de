@@ -15,7 +15,7 @@ export default composite({
   tts: ["吃的东西不坏的时间", "吃的东西能留多长"],
   literal: "the time food does not go bad / how long food can be kept",
   fit: "plain",
-  topics: ["how-often"],
+  topics: ["long-and-short-time"],
   isA: ["time-span"],
   proposed: true,
 });

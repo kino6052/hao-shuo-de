@@ -15,7 +15,7 @@ export default composite({
   tts: ["因为X帮了我", "X帮了我，谢谢X"],
   literal: "because X helped me / X helped me, thank you X",
   fit: "plain",
-  topics: ["helping-and-sharing"],
+  topics: ["helping-and-supporting"],
   isA: ["social-action"],
   proposed: true,
 });

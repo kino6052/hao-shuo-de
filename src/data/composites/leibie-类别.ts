@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:zhong3}}"],
   tts: ["种"],
   fit: "natural",
-  topics: ["same-and-different"],
+  topics: ["different-and-varied"],
   isA: ["idea"],
   proposed: true,
 });

@@ -13,7 +13,7 @@ export default composite({
   literal: "open-put",
   fit: "natural",
   kinds: ["built"],
-  topics: ["changing"],
+  topics: ["appearing-and-developing"],
   isA: ["starting-and-stopping"],
   note: "Real Mandarin: 开放.",
   examples: [

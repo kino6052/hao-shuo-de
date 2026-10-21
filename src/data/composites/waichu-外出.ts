@@ -12,7 +12,7 @@ export default composite({
   tts: ["外出", "出门", "出去"],
   fit: "natural",
   transparent: true,
-  topics: ["going-and-coming"],
+  topics: ["go-come-and-return"],
   isA: ["moving-action"],
   proposed: true,
 });

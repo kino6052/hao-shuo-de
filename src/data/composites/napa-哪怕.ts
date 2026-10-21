@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:na3}}-{{word:pa4}}", "{{word:jiu4}}-{{word:suan4}}"],
   tts: ["哪怕", "就算"],
   fit: "natural",
-  topics: ["joining-words"],
+  topics: ["if-unless-and-even-if"],
   isA: ["conjunction"],
   proposed: true,
 });

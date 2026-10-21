@@ -12,7 +12,7 @@ export default composite({
   tts: ["说好"],
   literal: "say okay",
   fit: "natural",
-  topics: ["agreeing-and-praising"],
+  topics: ["agreeing-and-allowing"],
   isA: ["speaking-action"],
   examples: [
     {

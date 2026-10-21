@@ -15,7 +15,7 @@ export default composite({
   tts: ["肚子不好，想让吃的东西出来", "让人肚子不好"],
   literal: "the belly is not good, wanting the eaten things to come out / makes people's bellies not good",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["pain-and-feeling-unwell"],
   isA: ["bodily-state"],
   proposed: true,
 });

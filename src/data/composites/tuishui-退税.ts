@@ -15,7 +15,7 @@ export default composite({
   tts: ["把给国家的金拿回来", "国家把你给他的金给回来"],
   literal: "take back the money given to the state / the state gives back the money you gave it",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["buying-supplying-and-launching"],
   isA: ["trade-action"],
   proposed: true,
 });

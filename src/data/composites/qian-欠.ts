@@ -15,7 +15,7 @@ export default composite({
   tts: ["要给X，但还没给", "没给的"],
   literal: "should give X but still have not given / not given",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["paying-and-spending"],
   isA: ["owning"],
   proposed: true,
 });

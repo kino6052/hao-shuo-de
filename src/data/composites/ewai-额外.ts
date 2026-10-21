@@ -12,7 +12,7 @@ export default composite({
   tts: ["多出来的"],
   literal: "the more that has come out",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["extra-and-limits"],
   isA: ["amount-word"],
   proposed: true,
 });

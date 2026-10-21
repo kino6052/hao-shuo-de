@@ -12,7 +12,7 @@ export default composite({
   tts: ["书包"],
   fit: "natural",
   transparent: true,
-  topics: ["classroom"],
+  topics: ["pens-books-and-school-bags"],
   isA: ["container"],
   examples: [
     {

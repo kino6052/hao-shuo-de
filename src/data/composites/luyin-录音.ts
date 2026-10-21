@@ -12,7 +12,7 @@ export default composite({
   tts: ["把声音留下来"],
   literal: "keep the sound",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["filming-and-recording"],
   isA: ["making"],
   examples: [
     {

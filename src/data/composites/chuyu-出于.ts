@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:yin1wei4}}", "{{word:wei4}}"],
   tts: ["因为", "为"],
   fit: "natural",
-  topics: ["causes-and-results"],
+  topics: ["reasons-sources-and-conditions"],
   isA: ["cause-and-effect"],
   proposed: true,
 });

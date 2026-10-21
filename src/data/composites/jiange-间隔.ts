@@ -15,7 +15,7 @@ export default composite({
   tts: ["X和Y中间的空间", "把X和Y分开"],
   literal: "the space between X and Y / separate X and Y",
   fit: "plain",
-  topics: ["near-and-far"],
+  topics: ["near-far-and-distance"],
   isA: ["distance"],
   proposed: true,
 });

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:liu2}}", "{{word:rang4}} X {{word:bu4}} {{word:bian4}}"],
   tts: ["留", "让X不变"],
   fit: "natural",
-  topics: ["changing"],
+  topics: ["continuing-and-adapting"],
   isA: ["holding"],
   proposed: true,
 });

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:lai2}}"],
   tts: ["来"],
   fit: "word",
-  topics: ["going-and-coming"],
+  topics: ["go-come-and-return"],
   isA: ["moving-action"],
   examples: [
     { pinyin: "{{Word:ni3}} {{word:lai2}}!", hanzi: "你来！", en: "Come here!", ru: "Иди сюда!" },

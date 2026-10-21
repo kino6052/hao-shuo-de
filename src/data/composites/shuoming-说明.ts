@@ -13,7 +13,7 @@ export default composite({
   literal: "say it clear",
   fit: "natural",
   kinds: ["built"],
-  topics: ["talking"],
+  topics: ["explaining-and-describing"],
   isA: ["speaking-action"],
   examples: [
     {

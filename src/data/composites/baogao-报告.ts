@@ -12,7 +12,7 @@ export default composite({
   tts: ["说发生的东西"],
   literal: "tell what happened",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["talks-discussion-and-orders"],
   isA: ["speaking-action"],
   examples: [
     {

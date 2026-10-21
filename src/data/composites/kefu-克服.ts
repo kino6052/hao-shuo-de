@@ -12,7 +12,7 @@ export default composite({
   tts: ["把难的做好"],
   literal: "do the hard thing well",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["solving-and-making-sure"],
   isA: ["thinking-action"],
   proposed: true,
 });

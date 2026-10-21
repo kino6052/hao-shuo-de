@@ -16,7 +16,7 @@ export default composite({
   tts: ["里面的东西", "看的", "说的"],
   literal: "what is inside / what you watch / what is said",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["stories-poems-and-essays"],
   isA: ["idea"],
   examples: [
     {

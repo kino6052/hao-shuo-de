@@ -16,7 +16,7 @@ export default composite({
   literal: "can-strength / what you can do",
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["describing-people"],
+  topics: ["clever-skilled-and-famous"],
   isA: ["character-quality"],
   examples: [
     {

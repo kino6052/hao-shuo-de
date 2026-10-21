@@ -15,7 +15,7 @@ export default composite({
   tts: ["还在做", "还没完了"],
   literal: "still doing it / not yet finished",
   fit: "plain",
-  topics: ["how-often"],
+  topics: ["long-and-short-time"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

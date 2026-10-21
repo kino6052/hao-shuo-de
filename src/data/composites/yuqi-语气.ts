@@ -15,7 +15,7 @@ export default composite({
   tts: ["说话的声音的样子", "说话的样子"],
   literal: "the way the voice sounds when speaking",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["saying-and-calling"],
   isA: ["language-thing"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["很多次用的", "大家都用的"],
   literal: "used many times / used by everyone",
   fit: "plain",
-  topics: ["how-often"],
+  topics: ["often-and-usually"],
   isA: ["frequency"],
   proposed: true,
 });

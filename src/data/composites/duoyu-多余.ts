@@ -15,7 +15,7 @@ export default composite({
   tts: ["多出来，不用", "多出来的"],
   literal: "more than enough, not needed / the extra one",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["extra-and-limits"],
   isA: ["condition-quality"],
   proposed: true,
 });

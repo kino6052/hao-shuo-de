@@ -12,7 +12,7 @@ export default composite({
   tts: ["一定做到X"],
   literal: "surely get X done",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["solving-and-making-sure"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

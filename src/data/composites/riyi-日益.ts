@@ -15,7 +15,7 @@ export default composite({
   tts: ["一天比一天", "一天一天变"],
   literal: "one day more than the one day before / change day by day",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["only-even-and-more"],
   isA: ["adverb-word"],
   proposed: true,
 });

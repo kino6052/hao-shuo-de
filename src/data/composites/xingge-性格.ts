@@ -14,7 +14,7 @@ export default composite({
   tts: ["人心里不变的样子"],
   literal: "the unchanging look of a person's heart",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["strong-and-weak-points"],
   isA: ["idea"],
   proposed: true,
 });

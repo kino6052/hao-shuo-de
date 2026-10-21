@@ -15,7 +15,7 @@ export default composite({
   tts: ["不长的", "不长的时间"],
   literal: "not long / a not long time",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["situations-and-needs"],
   isA: ["condition-quality"],
   proposed: true,
 });

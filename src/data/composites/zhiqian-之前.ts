@@ -11,7 +11,7 @@ export default composite({
   hsd: ["X {{word:qian2}}"],
   tts: ["X前"],
   fit: "natural",
-  topics: ["before-and-after"],
+  topics: ["in-the-past"],
   isA: ["time-order"],
   examples: [
     {

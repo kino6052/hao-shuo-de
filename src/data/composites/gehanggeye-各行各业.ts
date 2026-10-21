@@ -12,7 +12,7 @@ export default composite({
   tts: ["很多种工作"],
   literal: "many kinds of work",
   fit: "plain",
-  topics: ["all-and-some"],
+  topics: ["all-and-every"],
   isA: ["amount-word"],
   proposed: true,
 });

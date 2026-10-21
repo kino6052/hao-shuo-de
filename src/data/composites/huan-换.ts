@@ -12,7 +12,7 @@ export default composite({
   tts: ["给X，拿Y"],
   literal: "give X, take Y",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["mixing-passing-on-and-changing"],
   isA: ["handling-action"],
   examples: [
     {

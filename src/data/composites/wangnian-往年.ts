@@ -15,7 +15,7 @@ export default composite({
   tts: ["过去的年", "去年和去年以前"],
   literal: "the years that have gone / last year and before last year",
   fit: "plain",
-  topics: ["calendar"],
+  topics: ["years-and-centuries"],
   isA: ["time-span"],
   proposed: true,
 });

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:ge4}}"],
   tts: ["个"],
   fit: "word",
-  topics: ["counting-words"],
+  topics: ["ge-and-general-counting-words"],
   isA: ["counting-word"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["帮买东西的人的工作", "帮买东西的人工作的人"],
   literal: "the work of helping the people who buy / the person who works helping the people who buy",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["goods-and-customers"],
   isA: ["activity-name"],
   proposed: true,
 });

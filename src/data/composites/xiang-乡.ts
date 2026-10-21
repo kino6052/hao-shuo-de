@@ -14,7 +14,7 @@ export default composite({
   tts: ["人少，植物多的地方"],
   literal: "a place with few people and many plants",
   fit: "plain",
-  topics: ["countries-and-cities"],
+  topics: ["cities-towns-and-provinces"],
   isA: ["settlement"],
   proposed: true,
 });

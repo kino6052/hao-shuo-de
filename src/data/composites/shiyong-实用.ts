@@ -12,7 +12,7 @@ export default composite({
   tts: ["真有用", "有用"],
   literal: "really useful",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["useful-and-harmful"],
   isA: ["value-quality"],
   proposed: true,
 });

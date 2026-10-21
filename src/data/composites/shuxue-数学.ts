@@ -16,7 +16,7 @@ export default composite({
   literal: "the learning of putting together and taking away",
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["studying"],
+  topics: ["school-subjects-and-courses"],
   isA: ["idea"],
   examples: [
     {

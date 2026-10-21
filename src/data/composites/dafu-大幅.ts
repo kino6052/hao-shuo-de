@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:da4}}-{{word:da4}}", "{{word:hen3}} {{word:duo1}}"],
   tts: ["大大", "很多"],
   fit: "natural",
-  topics: ["degree-words"],
+  topics: ["too-much-and-completely"],
   isA: ["degree-word"],
   proposed: true,
 });

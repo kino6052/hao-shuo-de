@@ -15,7 +15,7 @@ export default composite({
   tts: ["把别人的X都买下来", "一次买很多"],
   literal: "buy all of someone else's X / buy a lot at one time",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["buying-supplying-and-launching"],
   isA: ["trade-action"],
   proposed: true,
 });

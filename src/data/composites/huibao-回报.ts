@@ -15,7 +15,7 @@ export default composite({
   tts: ["他帮了你，你也帮他", "给帮过你的人东西"],
   literal: "he helped you, you help him too / give things to the person who has helped you",
   fit: "plain",
-  topics: ["helping-and-sharing"],
+  topics: ["sharing-and-giving"],
   isA: ["social-action"],
   proposed: true,
 });

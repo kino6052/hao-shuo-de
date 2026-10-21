@@ -15,7 +15,7 @@ export default composite({
   tts: ["一边比一边高的地", "高地的一边"],
   literal: "ground where one side is higher than the other / one side of the high ground",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["mountains-and-slopes"],
   isA: ["landform"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["从孩子变大人", "一点一点变大"],
   literal: "from a child become an adult",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["appearing-and-developing"],
   isA: ["life-change"],
   proposed: true,
 });

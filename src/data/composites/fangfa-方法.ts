@@ -13,7 +13,7 @@ export default composite({
   fit: "natural",
   transparent: true,
   role: "noun",
-  topics: ["ideas-and-opinions"],
+  topics: ["ways-and-methods"],
   isA: ["idea"],
   note: "The way something is done. A way to a place is lù.",
   examples: [

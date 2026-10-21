@@ -12,7 +12,7 @@ export default composite({
   tts: ["大部分"],
   literal: "for the most part",
   fit: "natural",
-  topics: ["degree-words"],
+  topics: ["almost-and-probably"],
   isA: ["degree-word"],
   examples: [
     {

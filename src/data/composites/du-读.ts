@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:kan4}}"],
   tts: ["看"],
   fit: "word",
-  topics: ["senses"],
+  topics: ["books-and-paper"],
   isA: ["perceiving"],
   examples: [
     {

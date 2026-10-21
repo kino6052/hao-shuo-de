@@ -12,7 +12,7 @@ export default composite({
   tts: ["真好", "很很好"],
   literal: "really good / very very good",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["wonderful-and-beautiful"],
   isA: ["value-quality"],
   proposed: true,
 });

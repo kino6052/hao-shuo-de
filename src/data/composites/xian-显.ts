@@ -15,7 +15,7 @@ export default composite({
   tts: ["能看出来", "让人看出来"],
   literal: "can be seen / let people see it",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["appearing-and-scenes"],
   isA: ["perceiving"],
   proposed: true,
 });

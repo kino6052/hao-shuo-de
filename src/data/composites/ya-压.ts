@@ -12,7 +12,7 @@ export default composite({
   tts: ["用力放下去"],
   literal: "put down with force",
   fit: "plain",
-  topics: ["pushing-and-pulling"],
+  topics: ["pushing-pulling-and-pressing"],
   isA: ["handling-action"],
   examples: [
     {

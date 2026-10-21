@@ -12,7 +12,7 @@ export default composite({
   tts: ["高明", "头很好"],
   literal: "a good head",
   fit: "natural",
-  topics: ["describing-people"],
+  topics: ["clever-skilled-and-famous"],
   isA: ["character-quality"],
   examples: [
     {

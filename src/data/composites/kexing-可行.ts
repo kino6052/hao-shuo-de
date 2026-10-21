@@ -12,7 +12,7 @@ export default composite({
   tts: ["能做", "可以做"],
   literal: "can be done / may be done",
   fit: "plain",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["easy-and-convenient"],
   isA: ["truth-or-ease"],
   proposed: true,
 });

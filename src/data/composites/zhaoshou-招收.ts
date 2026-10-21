@@ -15,7 +15,7 @@ export default composite({
   tts: ["叫人来，让他进来", "叫人来工作和学"],
   literal: "call people and let them in / call people to come and work or study",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["jobs-and-hiring"],
   isA: ["social-action"],
   proposed: true,
 });

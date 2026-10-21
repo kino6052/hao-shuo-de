@@ -15,7 +15,7 @@ export default composite({
   tts: ["都是一样的", "不好玩儿，都一样"],
   literal: "all the same / not fun, all alike",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["normal-and-ordinary"],
   isA: ["condition-quality"],
   proposed: true,
 });

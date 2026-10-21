@@ -15,7 +15,7 @@ export default composite({
   tts: ["把金放进卡里", "给卡放金"],
   literal: "put money into the card / put money in for the card",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["paying-and-spending"],
   isA: ["trade-action"],
   proposed: true,
 });

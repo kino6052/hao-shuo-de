@@ -14,7 +14,7 @@ export default word("wang3", {
     eng: "A net, and the internet: online, websites, and downloads are all described from it.",
     rus: "Сеть и интернет: через него описывают «онлайн», сайты и загрузки.",
   },
-  topics: ["phone-and-computer"],
+  topics: ["internet-and-websites"],
   isA: ["computer-or-phone"],
   paraphrase: {
     forms: [

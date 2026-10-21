@@ -12,7 +12,7 @@ export default composite({
   tts: ["学的地方的头"],
   literal: "the head of the school",
   fit: "plain",
-  topics: ["classroom"],
+  topics: ["teachers-and-students"],
   isA: ["worker"],
   examples: [
     {

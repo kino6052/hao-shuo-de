@@ -12,7 +12,7 @@ export default composite({
   tts: ["有多X", "X的样子"],
   literal: "how X it is / the look of X",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["features-and-forms"],
   isA: ["state-name"],
   proposed: true,
 });

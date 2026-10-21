@@ -10,7 +10,7 @@ export default word("ni3", {
     eng: "Without it, you can't talk to anyone: no \"you\" or \"your\".",
     rus: "Без него нельзя обратиться к собеседнику: нет «ты», «твой».",
   },
-  topics: ["pointers"],
+  topics: ["i-you-he-she"],
   isA: ["pronoun"],
   maps: "sina",
   atom: {

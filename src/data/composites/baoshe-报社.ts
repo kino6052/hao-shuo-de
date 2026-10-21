@@ -15,7 +15,7 @@ export default composite({
   tts: ["写新\"闻\"的地方", "写新\"闻\"的工作的地方"],
   literal: "a place where the news is written / a place where the work of writing the news is done",
   fit: "plain",
-  topics: ["news-and-events"],
+  topics: ["news-and-press"],
   isA: ["place"],
   proposed: true,
 });

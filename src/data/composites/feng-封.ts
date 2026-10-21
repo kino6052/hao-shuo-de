@@ -12,7 +12,7 @@ export default composite({
   tts: ["个", "把口关上"],
   literal: "gè / shut the opening",
   fit: "natural",
-  topics: ["counting-words"],
+  topics: ["counting-books-and-papers"],
   isA: ["counting-word"],
   proposed: true,
 });

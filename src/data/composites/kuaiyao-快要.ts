@@ -13,7 +13,7 @@ export default composite({
   literal: "fast-want",
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["before-and-after"],
+  topics: ["soon-early-and-late"],
   isA: ["time-order"],
   note: "kuài lái le: almost here.",
   examples: [

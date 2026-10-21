@@ -15,7 +15,7 @@ export default composite({
   tts: ["变很多小的部分", "变小，分开"],
   literal: "become many small parts / become small, come apart",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["decreasing-and-breaking-down"],
   isA: ["condition-quality"],
   proposed: true,
 });

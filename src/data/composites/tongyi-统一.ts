@@ -15,7 +15,7 @@ export default composite({
   tts: ["把很多X变一个", "把X都变一样"],
   literal: "make many Xs one / make all the Xs the same",
   fit: "plain",
-  topics: ["same-and-different"],
+  topics: ["same-and-equal"],
   isA: ["making"],
   proposed: true,
 });

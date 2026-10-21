@@ -12,7 +12,7 @@ export default composite({
   tts: ["把X做好的东西"],
   literal: "the thing of making X well done",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["rights-duties-and-agreements"],
   isA: ["idea"],
   examples: [
     {

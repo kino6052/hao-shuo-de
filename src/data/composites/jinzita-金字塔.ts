@@ -14,7 +14,7 @@ export default composite({
   tts: ["下面方上面小的东西"],
   literal: "a thing square below and small on top",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["circles-squares-cubes"],
   isA: ["shape-quality"],
   proposed: true,
 });

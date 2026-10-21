@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["样子", "看起来的样子"],
   fit: "natural",
-  topics: ["describing-people"],
+  topics: ["looks-and-build"],
   isA: ["idea"],
   proposed: true,
 });

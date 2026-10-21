@@ -12,7 +12,7 @@ export default composite({
   tts: ["为什么"],
   fit: "natural",
   transparent: true,
-  topics: ["joining-words"],
+  topics: ["because-and-so"],
   isA: ["conjunction"],
   proposed: true,
 });

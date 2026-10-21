@@ -12,7 +12,7 @@ export default composite({
   tts: ["写书的人"],
   literal: "a person who writes books",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["authors-and-publishing"],
   isA: ["worker"],
   examples: [
     {

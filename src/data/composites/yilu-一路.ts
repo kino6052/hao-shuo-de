@@ -15,7 +15,7 @@ export default composite({
   tts: ["一路", "从X到Y的路上都…"],
   literal: "one road / on the whole road from X to Y …",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["quietly-together-step-by-step"],
   isA: ["adverb-word"],
   proposed: true,
 });

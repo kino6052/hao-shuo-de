@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:zhen1}}"],
   tts: ["真"],
   fit: "plain",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["true-real-and-fake"],
   isA: ["truth-or-ease"],
   examples: [
     {

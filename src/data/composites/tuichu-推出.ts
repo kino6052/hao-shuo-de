@@ -14,7 +14,7 @@ export default composite({
   tts: ["把做好的东西拿出来给人看"],
   literal: "take the finished thing out to show people",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["buying-supplying-and-launching"],
   isA: ["social-action"],
   proposed: true,
 });

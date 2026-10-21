@@ -15,7 +15,7 @@ export default composite({
   tts: ["到上面去", "去高的地方"],
   literal: "go to above / go to a high place",
   fit: "plain",
-  topics: ["up-down-in-out"],
+  topics: ["above-and-below"],
   isA: ["direction"],
   proposed: true,
 });

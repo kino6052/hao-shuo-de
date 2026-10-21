@@ -12,6 +12,6 @@ export default composite({
   tts: ["说X最好"],
   literal: "say X is the best",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["believing-hoping-and-caring"],
   isA: ["thinking-action"],
 });

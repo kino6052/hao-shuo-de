@@ -15,7 +15,7 @@ export default composite({
   tts: ["把金和力拿出来", "给金"],
   literal: "take out money and strength",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["paying-and-spending"],
   isA: ["trade-action"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["一个人好不好的地方", "人的真的样子"],
   literal: "the places where a person is good or not / a person's real way",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["strong-and-weak-points"],
   isA: ["character-quality"],
   proposed: true,
 });

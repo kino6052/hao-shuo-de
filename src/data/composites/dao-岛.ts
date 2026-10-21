@@ -15,7 +15,7 @@ export default composite({
   tts: ["四边都是水的地", "水中间的地方"],
   literal: "land with water on all four sides / a place in the middle of water",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["sea-coast-and-islands"],
   isA: ["landform"],
   proposed: true,
 });

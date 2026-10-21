@@ -15,7 +15,7 @@ export default composite({
   tts: ["X和Y中间有…", "X和Y有多远"],
   literal: "between X and Y there is … / how far X and Y are",
   fit: "plain",
-  topics: ["near-and-far"],
+  topics: ["near-far-and-distance"],
   isA: ["distance"],
   proposed: true,
 });

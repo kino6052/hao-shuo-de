@@ -15,7 +15,7 @@ export default composite({
   tts: ["我们国做的", "在这个国做的"],
   literal: "made by our country / made in this country",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["goods-and-customers"],
   isA: ["condition-quality"],
   proposed: true,
 });

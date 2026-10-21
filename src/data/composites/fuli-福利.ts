@@ -15,7 +15,7 @@ export default composite({
   tts: ["工作的地方也给人的好的东西", "工作的地方给人的别的好东西"],
   literal: "the good things the workplace gives people besides / the other good things the workplace gives people",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["posts-and-pay"],
   isA: ["idea"],
   proposed: true,
 });

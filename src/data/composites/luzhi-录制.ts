@@ -16,7 +16,7 @@ export default composite({
   tts: ["记下来", "把声音放进机里", "把看的东西留下来"],
   literal: "remember it down / put the sound into a machine / keep what you see",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["filming-and-recording"],
   isA: ["making"],
   proposed: true,
 });

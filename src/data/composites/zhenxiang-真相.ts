@@ -15,7 +15,7 @@ export default composite({
   tts: ["真的发生的东西", "真的东西"],
   literal: "the thing that really happened / the true thing",
   fit: "plain",
-  topics: ["news-and-events"],
+  topics: ["news-and-press"],
   isA: ["idea"],
   proposed: true,
 });

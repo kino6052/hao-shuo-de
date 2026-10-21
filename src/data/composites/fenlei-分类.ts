@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X分开，一样的放在一起", "把一样的X放在一起"],
   literal: "separate X, put the same ones together / put the same Xs together",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["noticing-and-observing"],
   isA: ["thinking-action"],
   proposed: true,
 });

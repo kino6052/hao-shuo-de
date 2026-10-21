@@ -15,7 +15,7 @@ export default composite({
   tts: ["不想把X给别人", "不想和X分开"],
   literal: "do not want to give X to other people / do not want to be separated from X",
   fit: "plain",
-  topics: ["liking-and-wanting"],
+  topics: ["liking-loving-and-missing"],
   isA: ["feeling-and-wanting"],
   proposed: true,
 });

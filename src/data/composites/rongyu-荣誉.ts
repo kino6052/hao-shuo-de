@@ -15,7 +15,7 @@ export default composite({
   tts: ["大家对你说的好听的话", "让你有名的好东西"],
   literal: "the nice words everyone says to you / a good thing that makes you famous",
   fit: "plain",
-  topics: ["agreeing-and-praising"],
+  topics: ["comments-and-recommending"],
   isA: ["idea"],
   proposed: true,
 });

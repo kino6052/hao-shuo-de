@@ -15,7 +15,7 @@ export default composite({
   tts: ["一点不同都没有", "都一样"],
   literal: "not even a bit of difference / all the same",
   fit: "plain",
-  topics: ["same-and-different"],
+  topics: ["same-and-equal"],
   isA: ["comparison"],
   proposed: true,
 });

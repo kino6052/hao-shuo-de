@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["前年", "去年的去年"],
   fit: "natural",
-  topics: ["calendar"],
+  topics: ["years-and-centuries"],
   isA: ["time-point"],
   proposed: true,
 });

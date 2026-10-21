@@ -15,7 +15,7 @@ export default composite({
   tts: ["什么时间都一样", "从以前到现在都一样"],
   literal: "at any time all the same / from before until now, all the same",
   fit: "plain",
-  topics: ["how-often"],
+  topics: ["always-and-all-along"],
   isA: ["frequency"],
   proposed: true,
 });

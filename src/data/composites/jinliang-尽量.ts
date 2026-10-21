@@ -15,7 +15,7 @@ export default composite({
   tts: ["能多做就多做", "把能做的都做"],
   literal: "if it can be more, do more / do everything that can be done",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["quietly-together-step-by-step"],
   isA: ["adverb-word"],
   proposed: true,
 });

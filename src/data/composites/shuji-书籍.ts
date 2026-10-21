@@ -12,7 +12,7 @@ export default composite({
   tts: ["书", "很多书"],
   literal: "book / many books",
   fit: "natural",
-  topics: ["writing"],
+  topics: ["books-and-paper"],
   isA: ["paper-thing"],
   proposed: true,
 });

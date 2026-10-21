@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:you3}}", "X {{word:you3}}, {{word:bie2}}-{{word:ren2}} {{word:mei2}}-{{word:you3}}"],
   tts: ["有", "X有，别人没有"],
   fit: "natural",
-  topics: ["giving-and-getting"],
+  topics: ["losing-and-possessing"],
   isA: ["owning"],
   proposed: true,
 });

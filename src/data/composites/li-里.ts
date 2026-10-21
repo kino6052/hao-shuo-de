@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:li3}}"],
   tts: ["里"],
   fit: "word",
-  topics: ["up-down-in-out"],
+  topics: ["inside-and-outside"],
   isA: ["place-relation"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["小的金", "买小东西用的金"],
   literal: "small money / the money used to buy small things",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["money-and-cards"],
   isA: ["money-thing"],
   proposed: true,
 });

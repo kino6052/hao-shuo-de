@@ -14,7 +14,7 @@ export default composite({
   tts: ["用手打到网那边的球"],
   literal: "the ball you hit with the hand to the other side of the net",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["ball-sports"],
   isA: ["toy-or-game"],
   proposed: true,
 });

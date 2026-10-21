@@ -15,7 +15,7 @@ export default composite({
   tts: ["下的时间不长的，从天上下来的水", "很快就没有的，从天上下来的水"],
   literal: "the water that comes down from the sky, not falling for long / the water that comes down from the sky and is soon gone",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["rain-and-snow"],
   isA: ["weather-thing"],
   proposed: true,
 });

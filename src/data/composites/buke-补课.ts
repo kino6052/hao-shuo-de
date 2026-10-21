@@ -14,7 +14,7 @@ export default composite({
   tts: ["把没学的部分学好"],
   literal: "learn well the part not yet learned",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["studying-and-practising"],
   isA: ["learning-and-teaching"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["没有东西要做"],
   literal: "have nothing to do",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["work-days-and-busy"],
   isA: ["condition-quality"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["从后面走到前面，让大家看到", "走出来让人看"],
   literal: "walk from the back to the front so everyone sees / walk out so people can look",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["acting-and-roles"],
   isA: ["moving-action"],
   proposed: true,
 });

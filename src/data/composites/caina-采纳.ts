@@ -15,7 +15,7 @@ export default composite({
   tts: ["用别人的看法", "觉得别人的看法好，就用"],
   literal: "use another person's view / feel that another person's view is good, then use it",
   fit: "plain",
-  topics: ["agreeing-and-praising"],
+  topics: ["agreeing-and-allowing"],
   isA: ["social-action"],
   proposed: true,
 });

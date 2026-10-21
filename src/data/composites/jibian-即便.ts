@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["就算", "如果你不来，我也去"],
   fit: "natural",
-  topics: ["joining-words"],
+  topics: ["if-unless-and-even-if"],
   isA: ["conjunction"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["用很大的声音说", "用很大的声音叫"],
   literal: "say with a very big voice / call with a very big voice",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["saying-and-calling"],
   isA: ["speaking-action"],
   proposed: true,
 });

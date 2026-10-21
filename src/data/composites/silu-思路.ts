@@ -15,7 +15,7 @@ export default composite({
   tts: ["想的路", "头里想的路"],
   literal: "the road of thinking / the road thought in the head",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["ways-and-methods"],
   isA: ["idea"],
   proposed: true,
 });

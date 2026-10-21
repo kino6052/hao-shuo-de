@@ -15,7 +15,7 @@ export default composite({
   tts: ["很明，不乱", "很不难明白"],
   literal: "very bright, not messy / very not hard to understand",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["empty-messy-clear"],
   isA: ["condition-quality"],
   proposed: true,
 });

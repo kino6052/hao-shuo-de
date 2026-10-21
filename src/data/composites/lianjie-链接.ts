@@ -16,7 +16,7 @@ export default composite({
   tts: ["让两个东西在一起", "把X结在Y上", "在网上的路"],
   literal: "make two things be together / tie X onto Y / a road on the net",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["typing-clicking-and-downloading"],
   isA: ["making"],
   proposed: true,
 });

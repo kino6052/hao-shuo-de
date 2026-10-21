@@ -15,7 +15,7 @@ export default composite({
   tts: ["一年的开始", "一年开始的时候"],
   literal: "the start of the year / the time when the year starts",
   fit: "plain",
-  topics: ["calendar"],
+  topics: ["years-and-centuries"],
   isA: ["time-point"],
   proposed: true,
 });

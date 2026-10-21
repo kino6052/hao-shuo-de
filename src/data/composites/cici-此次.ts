@@ -12,7 +12,7 @@ export default composite({
   tts: ["这次"],
   fit: "natural",
   transparent: true,
-  topics: ["how-often"],
+  topics: ["again-and-again"],
   isA: ["frequency"],
   proposed: true,
 });

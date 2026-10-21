@@ -15,7 +15,7 @@ export default composite({
   tts: ["把水放在很多地方", "让水从X里面出来，到地上"],
   literal: "put the water in many places / let water come out of X, onto the floor",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["throwing-spilling-and-cutting"],
   isA: ["handling-action"],
   proposed: true,
 });

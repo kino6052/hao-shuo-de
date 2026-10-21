@@ -14,7 +14,7 @@ export default composite({
   tts: ["把X放在Y上，让X不动"],
   literal: "put X on Y and make X not move",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["joining-adding-replacing"],
   isA: ["making"],
   proposed: true,
 });

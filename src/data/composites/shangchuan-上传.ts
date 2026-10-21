@@ -12,7 +12,7 @@ export default composite({
   tts: ["放到网上"],
   literal: "put it on the net",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["typing-clicking-and-downloading"],
   isA: ["handling-action"],
   examples: [
     {

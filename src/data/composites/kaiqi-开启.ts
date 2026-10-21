@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:da3}}-{{word:kai1}}", "{{word:rang4}} X {{word:kai1shi3}}"],
   tts: ["打开", "让X开始"],
   fit: "natural",
-  topics: ["pushing-and-pulling"],
+  topics: ["opening-and-closing"],
   isA: ["handling-action"],
   proposed: true,
 });

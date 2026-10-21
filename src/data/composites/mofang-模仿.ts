@@ -15,7 +15,7 @@ export default composite({
   tts: ["学别人做", "做的和别人一样"],
   literal: "learn from another person's doing / what is done is the same as another person's",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["studying-and-practising"],
   isA: ["learning-and-teaching"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["吃了可能会死的东西", "让身体坏的东西"],
   literal: "a thing that might make you die when you eat it / a thing that makes the body go bad",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["germs-poison-and-allergy"],
   isA: ["thing"],
   proposed: true,
 });

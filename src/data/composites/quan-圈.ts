@@ -15,7 +15,7 @@ export default composite({
   tts: ["圆的线", "写圆的线"],
   literal: "a round line / write a round line",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["circles-squares-cubes"],
   isA: ["shape-quality"],
   proposed: true,
 });

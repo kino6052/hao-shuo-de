@@ -12,7 +12,7 @@ export default composite({
   tts: ["现在就…"],
   literal: "right now",
   fit: "natural",
-  topics: ["before-and-after"],
+  topics: ["soon-early-and-late"],
   isA: ["time-order"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X拿起来", "用手让X变高"],
   literal: "take X up / use the hand to make X become high",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["carrying-and-holding"],
   isA: ["handling-action"],
   proposed: true,
 });

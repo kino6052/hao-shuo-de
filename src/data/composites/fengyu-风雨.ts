@@ -15,7 +15,7 @@ export default composite({
   tts: ["快飞的空气和从天下来的水", "很难的时候"],
   literal: "fast-flying air and water that comes down from the sky / a very hard time",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["air-wind-and-storms"],
   isA: ["weather-thing"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["新的好想法", "别人没有的好想法"],
   literal: "a new good idea / a good idea that others do not have",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["mind-and-imagination"],
   isA: ["idea"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["有地方能动", "让X能动"],
   literal: "there is room to move / let X be able to move",
   fit: "plain",
-  topics: ["how-it-feels"],
+  topics: ["hard-soft-heavy-light"],
   isA: ["touch-quality"],
   proposed: true,
 });

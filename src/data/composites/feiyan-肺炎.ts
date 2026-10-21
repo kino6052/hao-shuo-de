@@ -14,7 +14,7 @@ export default composite({
   tts: ["气进去出来的地方的身体不好"],
   literal: "the unwellness of the place where air goes in and comes out",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["fever-colds-and-diseases"],
   isA: ["state-name"],
   proposed: true,
 });

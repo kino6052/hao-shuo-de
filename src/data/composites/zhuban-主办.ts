@@ -12,7 +12,7 @@ export default composite({
   tts: ["做X，让很多人来"],
   literal: "do X and let many people come",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["managing-and-progress"],
   isA: ["working"],
   proposed: true,
 });

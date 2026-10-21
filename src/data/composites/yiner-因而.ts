@@ -12,7 +12,7 @@ export default composite({
   tts: ["X，就Y", "这样，就Y"],
   literal: "X, then Y / like this, then Y",
   fit: "plain",
-  topics: ["joining-words"],
+  topics: ["because-and-so"],
   isA: ["conjunction"],
   proposed: true,
 });

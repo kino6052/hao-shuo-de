@@ -15,7 +15,7 @@ export default composite({
   tts: ["很爱，不想做别的", "找不到路"],
   literal: "love it a lot and not want to do anything else / cannot find the road",
   fit: "plain",
-  topics: ["liking-and-wanting"],
+  topics: ["interest-and-enjoying"],
   isA: ["feeling-and-wanting"],
   proposed: true,
 });

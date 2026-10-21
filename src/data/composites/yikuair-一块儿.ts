@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:yi1}}-{{word:qi3}}"],
   tts: ["一起"],
   fit: "natural",
-  topics: ["helping-and-sharing"],
+  topics: ["together-and-cooperating"],
   isA: ["adverb-word"],
   examples: [
     {

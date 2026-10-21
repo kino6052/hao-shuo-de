@@ -14,7 +14,7 @@ export default composite({
   tts: ["用手机看黑白的样子"],
   literal: "use the phone to look at the black-and-white pattern",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["smart-and-digital-technology"],
   isA: ["handling-action"],
   proposed: true,
 });

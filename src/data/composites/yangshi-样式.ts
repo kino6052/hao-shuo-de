@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:yang4}}-{{word:zi}}", "{{word:yang4}}"],
   tts: ["样子", "样"],
   fit: "natural",
-  topics: ["state-of-things"],
+  topics: ["features-and-forms"],
   isA: ["idea"],
   proposed: true,
 });

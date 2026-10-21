@@ -15,7 +15,7 @@ export default composite({
   tts: ["让X不能说下去", "在他说话的时候，说话"],
   literal: "make X unable to go on talking / speak while he is speaking",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["saying-and-calling"],
   isA: ["speaking-action"],
   proposed: true,
 });

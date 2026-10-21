@@ -15,7 +15,7 @@ export default composite({
   tts: ["用手叫X来", "叫人来工作"],
   literal: "use the hand to call X over / call people to come and work",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["jobs-and-hiring"],
   isA: ["social-action"],
   proposed: true,
 });

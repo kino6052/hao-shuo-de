@@ -12,7 +12,7 @@ export default composite({
   tts: ["…完后"],
   literal: "after finishing X",
   fit: "plain",
-  topics: ["joining-words"],
+  topics: ["then-for-example-in-short"],
   isA: ["conjunction"],
   examples: [
     {

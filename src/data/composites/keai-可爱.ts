@@ -12,7 +12,7 @@ export default composite({
   tts: ["可爱", "甜"],
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["describing-people"],
+  topics: ["looks-and-build"],
   isA: ["character-quality"],
   examples: [
     {

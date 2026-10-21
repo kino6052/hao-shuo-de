@@ -15,7 +15,7 @@ export default composite({
   tts: ["走在前面，让X来", "去拿X"],
   literal: "walk in front so X follows / go and get X",
   fit: "plain",
-  topics: ["giving-and-getting"],
+  topics: ["getting-and-receiving"],
   isA: ["receiving"],
   proposed: true,
 });

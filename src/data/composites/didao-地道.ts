@@ -15,7 +15,7 @@ export default composite({
   tts: ["和那里的人做的一样", "很真"],
   literal: "the same as what the people there make / very real",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["natural-and-man-made"],
   isA: ["condition-quality"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["不好好用X", "对X很坏"],
   literal: "do not use X properly / be very bad to X",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["using-things-and-effort"],
   isA: ["doing"],
   proposed: true,
 });

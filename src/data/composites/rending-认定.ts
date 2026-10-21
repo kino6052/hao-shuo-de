@@ -15,7 +15,7 @@ export default composite({
   tts: ["觉得一定是X", "说X一定是Y"],
   literal: "feel it is surely X / say X is surely Y",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["choosing-and-deciding"],
   isA: ["thinking-action"],
   proposed: true,
 });

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:guo2}}"],
   tts: ["国"],
   fit: "word",
-  topics: ["countries-and-cities"],
+  topics: ["country-and-nation"],
   isA: ["settlement"],
   examples: [
     {

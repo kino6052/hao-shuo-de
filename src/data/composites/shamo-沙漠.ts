@@ -15,7 +15,7 @@ export default composite({
   tts: ["没有水的大地方", "没有水和植物的大地方"],
   literal: "a big place without water / a big place without water and plants",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["land-soil-and-the-earth"],
   isA: ["landform"],
   proposed: true,
 });

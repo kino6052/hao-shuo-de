@@ -15,7 +15,7 @@ export default composite({
   tts: ["说的东西里发生的东西", "从开始到完发生的东西"],
   literal: "the things that happen inside a told thing / the things that happen from start to end",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["acting-and-roles"],
   isA: ["event"],
   proposed: true,
 });

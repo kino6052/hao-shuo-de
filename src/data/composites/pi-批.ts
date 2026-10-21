@@ -12,7 +12,7 @@ export default composite({
   tts: ["一起的一些"],
   literal: "some together",
   fit: "plain",
-  topics: ["counting-words"],
+  topics: ["kinds-sets-and-groups"],
   isA: ["counting-word"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["给要的金", "吃完，给金"],
   literal: "give the money that is asked for / finish eating, give money",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["paying-and-spending"],
   isA: ["trade-action"],
   proposed: true,
 });

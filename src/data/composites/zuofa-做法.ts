@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:zuo4}}-{{word:fa3}}", "{{word:zuo4}}-{{word:de}} {{word:fang1}}-{{word:fa3}}"],
   tts: ["做法", "做的方法"],
   fit: "natural",
-  topics: ["ideas-and-opinions"],
+  topics: ["ways-and-methods"],
   isA: ["idea"],
   proposed: true,
 });

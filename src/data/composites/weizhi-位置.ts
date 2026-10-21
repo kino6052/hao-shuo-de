@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:di4}}-{{light:fang1}}"],
   tts: ["地方"],
   fit: "word",
-  topics: ["near-and-far"],
+  topics: ["place-location-and-space"],
   isA: ["place-word"],
   examples: [
     {

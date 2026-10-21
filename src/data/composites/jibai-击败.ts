@@ -12,7 +12,7 @@ export default composite({
   tts: ["打得比X好", "比X好"],
   literal: "fight better than X / better than X",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["winning-losing-and-scores"],
   isA: ["playing"],
   proposed: true,
 });

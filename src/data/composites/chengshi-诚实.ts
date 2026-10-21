@@ -12,7 +12,7 @@ export default composite({
   tts: ["说真的"],
   literal: "says what's true",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["kind-honest-and-mean"],
   isA: ["character-quality"],
   examples: [
     {

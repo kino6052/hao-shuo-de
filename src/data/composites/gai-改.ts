@@ -12,7 +12,7 @@ export default composite({
   tts: ["做的不一样"],
   literal: "make it different",
   fit: "natural",
-  topics: ["changing"],
+  topics: ["becoming-and-turning-into"],
   isA: ["becoming"],
   examples: [
     {

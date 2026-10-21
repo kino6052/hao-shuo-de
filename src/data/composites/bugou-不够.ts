@@ -12,7 +12,7 @@ export default composite({
   tts: ["少了"],
   literal: "it's short",
   fit: "natural",
-  topics: ["much-and-little"],
+  topics: ["enough-and-lacking"],
   isA: ["amount-word"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["写X是什么样子", "说X是什么样子"],
   literal: "write what X looks like / say what X looks like",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["writing-things-down"],
   isA: ["speaking-action"],
   proposed: true,
 });

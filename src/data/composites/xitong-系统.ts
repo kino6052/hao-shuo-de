@@ -14,7 +14,7 @@ export default composite({
   tts: ["有多部分的东西"],
   literal: "a thing with many parts",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["software-files-and-accounts"],
   isA: ["idea"],
   examples: [
     {

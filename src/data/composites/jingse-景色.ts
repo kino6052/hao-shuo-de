@@ -12,7 +12,7 @@ export default composite({
   tts: ["好看的外面"],
   literal: "the beautiful outdoors",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["nature-and-environment"],
   isA: ["sound-or-light-quality"],
   examples: [
     {

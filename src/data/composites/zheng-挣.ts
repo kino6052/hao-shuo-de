@@ -12,7 +12,7 @@ export default composite({
   tts: ["得金"],
   literal: "get money",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["earning-and-compensation"],
   isA: ["trade-action"],
   examples: [
     {

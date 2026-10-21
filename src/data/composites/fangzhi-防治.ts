@@ -14,7 +14,7 @@ export default composite({
   tts: ["不让X发生，发生了就让X好"],
   literal: "do not let X happen, and when it happens make X well",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["germs-poison-and-allergy"],
   isA: ["doing"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["部分很多的"],
   literal: "with many parts",
   fit: "plain",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["hard-and-difficult"],
   isA: ["truth-or-ease"],
   examples: [
     {

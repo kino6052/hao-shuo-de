@@ -15,7 +15,7 @@ export default composite({
   tts: ["人和人说不一样，很不开心", "人和人有的问题，都说别人不对"],
   literal: "people say different things, very unhappy / a problem between people where each says the other is wrong",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["courts-and-trials"],
   isA: ["state-name"],
   proposed: true,
 });

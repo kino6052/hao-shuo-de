@@ -13,7 +13,7 @@ export default composite({
   literal: "do / what you do",
   fit: "natural",
   kinds: ["built", "built", "built"],
-  topics: ["working-life"],
+  topics: ["work-and-effort"],
   isA: ["working"],
   note: "As a verb, zuò. As a thing, zuò-de.",
   examples: [

@@ -15,7 +15,7 @@ export default composite({
   tts: ["真的，不玩儿的", "不乱做，对的做法"],
   literal: "real, not for play / not done in a mess, the right way",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["normal-and-ordinary"],
   isA: ["condition-quality"],
   proposed: true,
 });

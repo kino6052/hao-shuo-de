@@ -15,7 +15,7 @@ export default composite({
   tts: ["空气里有多少水", "有多少水"],
   literal: "how much water there is in the air / how much water there is",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["weather-and-clouds"],
   isA: ["weather-thing"],
   proposed: true,
 });

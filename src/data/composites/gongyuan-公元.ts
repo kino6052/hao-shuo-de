@@ -15,7 +15,7 @@ export default composite({
   tts: ["从耶稣生的年开始算的年", "第一年后面的年"],
   literal: "the years counted from the year Jesus was born / the years after the first year",
   fit: "plain",
-  topics: ["calendar"],
+  topics: ["years-and-centuries"],
   isA: ["calendar-name"],
   proposed: true,
 });

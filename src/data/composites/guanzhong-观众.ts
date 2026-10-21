@@ -12,7 +12,7 @@ export default composite({
   tts: ["看的人"],
   literal: "the people watching",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["acting-and-roles"],
   isA: ["group-of-people"],
   examples: [
     {

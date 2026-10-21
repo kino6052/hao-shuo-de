@@ -15,7 +15,7 @@ export default composite({
   tts: ["一点一点变好", "变大，变好"],
   literal: "get better little by little / get bigger, get better",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["appearing-and-developing"],
   isA: ["becoming"],
   examples: [
     {

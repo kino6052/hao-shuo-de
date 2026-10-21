@@ -15,7 +15,7 @@ export default composite({
   tts: ["别人买了多少", "给东西得金的多少"],
   literal: "how much other people bought / how much of giving things for money",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["trade-and-the-market"],
   isA: ["idea"],
   proposed: true,
 });

@@ -13,7 +13,7 @@ export default composite({
   literal: "people's home / other people",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["pointers"],
+  topics: ["self-and-others"],
   isA: ["pronoun"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["只看一面", "只说一面"],
   literal: "only look at one side / only say one side",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["opinions-and-views"],
   isA: ["truth-or-ease"],
   proposed: true,
 });

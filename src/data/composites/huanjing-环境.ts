@@ -14,7 +14,7 @@ export default composite({
   tts: ["在我们旁边的东西"],
   literal: "the things around us",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["nature-and-environment"],
   isA: ["abstract-thing"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["把我的X给别人", "让X不是我的，是别人的"],
   literal: "give my X to other people / make X not mine but other people's",
   fit: "plain",
-  topics: ["giving-and-getting"],
+  topics: ["spending-trading-and-returning"],
   isA: ["handling-action"],
   proposed: true,
 });

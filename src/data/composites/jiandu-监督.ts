@@ -12,7 +12,7 @@ export default composite({
   tts: ["看X做，让X做好"],
   literal: "watch X do it, and let X do it well",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["managing-and-progress"],
   isA: ["working"],
   proposed: true,
 });

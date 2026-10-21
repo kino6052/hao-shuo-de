@@ -15,7 +15,7 @@ export default composite({
   tts: ["不说就拿别人的东西的人", "拿别人的东西的坏人"],
   literal: "a person who takes other people's things without saying / a bad person who takes other people's things",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["crimes-and-criminals"],
   isA: ["person"],
   proposed: true,
 });

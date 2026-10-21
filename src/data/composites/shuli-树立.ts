@@ -15,7 +15,7 @@ export default composite({
   tts: ["让X站起来", "做出X，让人看到"],
   literal: "make X stand up / make X, let people see it",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["building-and-producing"],
   isA: ["making"],
   proposed: true,
 });

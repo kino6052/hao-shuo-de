@@ -15,7 +15,7 @@ export default composite({
   tts: ["让X变好", "把X变一点"],
   literal: "make X better / change X a little",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["improving-and-reforming"],
   isA: ["making"],
   proposed: true,
 });

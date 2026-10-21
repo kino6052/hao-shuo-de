@@ -12,7 +12,7 @@ export default composite({
   tts: ["西班牙", "西班牙国"],
   literal: "the country of Xībānyá",
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-countries"],
   isA: ["settlement"],
   proposed: true,
 });

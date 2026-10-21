@@ -15,7 +15,7 @@ export default composite({
   tts: ["我想做，没有人叫我做", "不是别人叫我做的，是我想做"],
   literal: "I want to do it, nobody told me to do it / it is not that other people told me to do it, it is that I want to do it",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["willing-daring-and-forced"],
   isA: ["feeling-and-wanting"],
   proposed: true,
 });

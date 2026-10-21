@@ -15,7 +15,7 @@ export default composite({
   tts: ["北极", "地球最上面最冷的地方"],
   literal: "\"Běijí\" / the coldest place at the very top of the Earth",
   fit: "name",
-  topics: ["land-and-water"],
+  topics: ["land-soil-and-the-earth"],
   isA: ["outdoor-place"],
   proposed: true,
 });

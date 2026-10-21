@@ -12,7 +12,7 @@ export default composite({
   tts: ["国家", "国"],
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["countries-and-cities"],
+  topics: ["country-and-nation"],
   isA: ["settlement"],
   examples: [
     {

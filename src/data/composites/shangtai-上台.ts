@@ -15,7 +15,7 @@ export default composite({
   tts: ["走上给人看的高的地方", "去上面给人看"],
   literal: "walk up onto the high place made for people to look at / go up there to be looked at",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["acting-and-roles"],
   isA: ["moving-action"],
   proposed: true,
 });

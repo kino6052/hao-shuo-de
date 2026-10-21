@@ -12,7 +12,7 @@ export default composite({
   tts: ["下面"],
   fit: "natural",
   transparent: true,
-  topics: ["near-and-far"],
+  topics: ["inside-outside-front-back"],
   isA: ["place-word"],
   proposed: true,
 });

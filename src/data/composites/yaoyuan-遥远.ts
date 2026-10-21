@@ -12,7 +12,7 @@ export default composite({
   tts: ["很远"],
   fit: "natural",
   transparent: true,
-  topics: ["near-and-far"],
+  topics: ["near-far-and-distance"],
   isA: ["distance"],
   proposed: true,
 });

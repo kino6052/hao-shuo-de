@@ -15,7 +15,7 @@ export default composite({
   tts: ["让做了不对的人给金", "法让你给的金"],
   literal: "make the person who did wrong give money; the money the law makes you give",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["punishing-and-forbidding"],
   isA: ["trade-action"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["热到身体不好", "热到头很乱，身体不好"],
   literal: "so hot that the body is not well / so hot that the head is very confused and the body is not well",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["pain-and-feeling-unwell"],
   isA: ["being-affected"],
   proposed: true,
 });

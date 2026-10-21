@@ -15,7 +15,7 @@ export default composite({
   tts: ["要把X做好的人", "做决定的人"],
   literal: "the person who must do X well / the person who makes decisions",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["posts-and-pay"],
   isA: ["worker"],
   proposed: true,
 });

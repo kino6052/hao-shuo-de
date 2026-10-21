@@ -12,7 +12,7 @@ export default composite({
   tts: ["把X做Y"],
   literal: "make X do Y",
   fit: "plain",
-  topics: ["pushing-and-pulling"],
+  topics: ["blocking-and-controlling"],
   isA: ["handling-action"],
   examples: [
     {

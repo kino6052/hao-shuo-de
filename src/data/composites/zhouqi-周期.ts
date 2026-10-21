@@ -15,7 +15,7 @@ export default composite({
   tts: ["一次从开始到最后的时间", "一次又一次一样的时间"],
   literal: "the time of one go from the start to the end / the same time again and again",
   fit: "plain",
-  topics: ["how-often"],
+  topics: ["often-and-usually"],
   isA: ["time-span"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["白白", "做了，但还是一样"],
   literal: "white-white / did it, but it is still the same",
   fit: "natural",
-  topics: ["adverbs"],
+  topics: ["quietly-together-step-by-step"],
   isA: ["adverb-word"],
   proposed: true,
 });

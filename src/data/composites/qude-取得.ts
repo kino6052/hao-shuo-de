@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:de2}}-{{word:dao4}}", "{{word:de2}}"],
   tts: ["得到", "得"],
   fit: "natural",
-  topics: ["giving-and-getting"],
+  topics: ["getting-and-receiving"],
   isA: ["receiving"],
   proposed: true,
 });

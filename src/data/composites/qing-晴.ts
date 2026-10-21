@@ -12,7 +12,7 @@ export default composite({
   tts: ["日在天上，很明"],
   literal: "the sun is in the sky, very bright",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["weather-and-clouds"],
   isA: ["weather-thing"],
   proposed: true,
 });

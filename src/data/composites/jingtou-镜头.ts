@@ -14,7 +14,7 @@ export default composite({
   tts: ["做看的东西的工具前面的通看的料"],
   literal: "the see-through material at the front of the tool that makes what can be looked at",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["computers-and-gadgets"],
   isA: ["made-thing"],
   proposed: true,
 });

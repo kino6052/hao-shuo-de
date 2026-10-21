@@ -15,7 +15,7 @@ export default composite({
   tts: ["给学好的学生的金", "学校给学生的金"],
   literal: "money given to students who learn well; money the school gives students",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-days-and-years"],
   isA: ["money-thing"],
   proposed: true,
 });

@@ -9,7 +9,7 @@ export default composite({
   ru: "даже",
   pos: "adverb",
   fit: "skip",
-  topics: ["adverbs"],
+  topics: ["only-even-and-more"],
   isA: ["adverb-word"],
   note: "Say the first part, then yě: X, yě Y.",
   proposed: true,

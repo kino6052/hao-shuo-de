@@ -11,7 +11,7 @@ export default composite({
   hsd: ["X {{word:hou4}}"],
   tts: ["X后"],
   fit: "natural",
-  topics: ["before-and-after"],
+  topics: ["after-later-and-future"],
   isA: ["time-order"],
   note: "Lesson {{lesson:around-an-action}}: chī-wán hòu.",
   examples: [

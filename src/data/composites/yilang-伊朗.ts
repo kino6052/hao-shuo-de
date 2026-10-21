@@ -12,7 +12,7 @@ export default composite({
   tts: ["伊朗", "伊朗国"],
   literal: "the country of Yīlǎng",
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-countries"],
   isA: ["settlement"],
   proposed: true,
 });

@@ -14,7 +14,7 @@ export default word("xiang3", {
     eng: "Think and would like to: one of the most used verbs in Mandarin.",
     rus: "«Думать» и «хотеть»: один из самых частых глаголов китайского.",
   },
-  topics: ["knowing-and-understanding"],
+  topics: ["thinking-and-researching"],
   isA: ["thinking-action"],
   paraphrase: {
     forms: ["{{word:zai4}} {{word:xin1}}-{{word:li3}} {{word:zhao3}}", "{{word:yao4}}"],

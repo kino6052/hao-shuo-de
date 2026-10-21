@@ -15,7 +15,7 @@ export default composite({
   tts: ["在中间不做了", "让X在中间不动"],
   literal: "stop doing it in the middle / make X not move in the middle",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["breaking-and-taking-apart"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

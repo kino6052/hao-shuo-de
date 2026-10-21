@@ -15,7 +15,7 @@ export default composite({
   tts: ["手里有X", "把X留在手里"],
   literal: "X is in the hand / keep X in the hand",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["carrying-and-holding"],
   isA: ["holding"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["好笑", "知道怎么让人笑"],
   literal: "funny / know how to make people laugh",
   fit: "natural",
-  topics: ["describing-people"],
+  topics: ["brave-calm-and-lively"],
   isA: ["character-quality"],
   proposed: true,
 });

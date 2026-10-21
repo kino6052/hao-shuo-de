@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["口号", "用口叫，让大家听的话"],
   fit: "natural",
-  topics: ["talking"],
+  topics: ["topics-and-examples"],
   isA: ["language-thing"],
   proposed: true,
 });

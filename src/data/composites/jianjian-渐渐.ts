@@ -12,7 +12,7 @@ export default composite({
   tts: ["一点一点"],
   literal: "a little, a little",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["quietly-together-step-by-step"],
   isA: ["adverb-word"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["真好的地方", "X比Y很不一样"],
   literal: "a really good place / X is very different from Y",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["strong-and-weak-points"],
   isA: ["idea"],
   examples: [
     {

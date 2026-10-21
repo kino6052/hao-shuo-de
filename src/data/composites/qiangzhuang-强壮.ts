@@ -15,7 +15,7 @@ export default composite({
   tts: ["身体很有力", "让身体变有力"],
   literal: "the body is very strong / make the body become strong",
   fit: "plain",
-  topics: ["speed-and-strength"],
+  topics: ["strong-and-weak-body-and-force"],
   isA: ["bodily-state"],
   proposed: true,
 });

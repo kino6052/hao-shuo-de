@@ -12,7 +12,7 @@ export default composite({
   tts: ["不好的地方"],
   literal: "the bad points",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["strong-and-weak-points"],
   isA: ["value-quality"],
   examples: [
     {

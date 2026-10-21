@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:yong4}}-{{word:lai2}}", "{{word:yong4}} X {{word:zuo4}}"],
   tts: ["用来", "用X做"],
   fit: "natural",
-  topics: ["making-and-doing"],
+  topics: ["using-things-and-effort"],
   isA: ["making"],
   proposed: true,
 });

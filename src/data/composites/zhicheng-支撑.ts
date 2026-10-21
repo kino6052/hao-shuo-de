@@ -15,7 +15,7 @@ export default composite({
   tts: ["用X让Y不下来", "在Y下面不让Y到地上"],
   literal: "use X to keep Y from coming down / under Y, not let Y reach the ground",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["carrying-and-holding"],
   isA: ["holding"],
   proposed: true,
 });

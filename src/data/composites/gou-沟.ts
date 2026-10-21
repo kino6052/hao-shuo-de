@@ -15,7 +15,7 @@ export default composite({
   tts: ["地上让水走的长的路", "地上长的空的地方"],
   literal: "a long road on the ground that lets the water go / a long empty place on the ground",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["rivers-lakes-and-floods"],
   isA: ["landform"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["变大", "一点一点变大"],
   literal: "become big",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["appearing-and-developing"],
   isA: ["life-change"],
   proposed: true,
 });

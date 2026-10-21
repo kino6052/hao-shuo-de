@@ -15,7 +15,7 @@ export default composite({
   tts: ["让X不重", "让X变小"],
   literal: "make X not heavy; make X smaller",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["decreasing-and-breaking-down"],
   isA: ["making"],
   proposed: true,
 });

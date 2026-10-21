@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:ci4}}", "{{word:ge4}}"],
   tts: ["次", "个"],
   fit: "natural",
-  topics: ["counting-words"],
+  topics: ["times-rounds-and-minutes"],
   isA: ["counting-word"],
   proposed: true,
 });

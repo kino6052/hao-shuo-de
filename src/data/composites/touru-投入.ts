@@ -15,7 +15,7 @@ export default composite({
   tts: ["把力气和金放进去", "心都在X上"],
   literal: "put strength and money in / the whole heart is on X",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["stocks-and-investing"],
   isA: ["handling-action"],
   proposed: true,
 });

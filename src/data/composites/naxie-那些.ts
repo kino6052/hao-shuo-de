@@ -12,7 +12,7 @@ export default composite({
   tts: ["那些", "那"],
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["pointers"],
+  topics: ["this-that-such"],
   isA: ["pronoun"],
   note: "nà-ge … dōu: all of those.",
   examples: [

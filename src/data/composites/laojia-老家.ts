@@ -15,7 +15,7 @@ export default composite({
   tts: ["老家", "我小的时候在的家"],
   literal: "the home I was in since I was small",
   fit: "plain",
-  topics: ["countries-and-cities"],
+  topics: ["cities-towns-and-provinces"],
   isA: ["place"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["得分", "得到分"],
   literal: "get points",
   fit: "natural",
-  topics: ["sports"],
+  topics: ["winning-losing-and-scores"],
   isA: ["receiving"],
   proposed: true,
 });

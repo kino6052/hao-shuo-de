@@ -15,7 +15,7 @@ export default composite({
   tts: ["从来没有", "从以前到现在都没有"],
   literal: "from-always not-have / from before until now none at all",
   fit: "natural",
-  topics: ["how-often"],
+  topics: ["sometimes-rarely-and-never"],
   isA: ["frequency"],
   proposed: true,
 });

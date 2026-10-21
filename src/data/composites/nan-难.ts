@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:nan2}}"],
   tts: ["难"],
   fit: "word",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["hard-and-difficult"],
   isA: ["truth-or-ease"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["X对Y做，Y也对X做", "一起说，一起做"],
   literal: "X does to Y, Y also does to X",
   fit: "plain",
-  topics: ["helping-and-sharing"],
+  topics: ["together-and-cooperating"],
   isA: ["social-action"],
   proposed: true,
 });

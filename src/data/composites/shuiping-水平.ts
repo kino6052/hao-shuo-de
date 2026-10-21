@@ -13,7 +13,7 @@ export default composite({
   literal: "how good",
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["how-good"],
+  topics: ["quality-and-top-class"],
   isA: ["value-quality"],
   examples: [
     {

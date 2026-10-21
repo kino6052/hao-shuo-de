@@ -15,7 +15,7 @@ export default composite({
   tts: ["最多的人走的路", "最多的人都做的"],
   literal: "the road the most people walk / what the most people all do",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["key-points-and-principles"],
   isA: ["idea"],
   proposed: true,
 });

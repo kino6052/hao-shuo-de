@@ -15,7 +15,7 @@ export default composite({
   tts: ["要做到的东西", "要到的地方"],
   literal: "where you want to get to",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["plans-and-goals"],
   isA: ["idea"],
   examples: [
     {

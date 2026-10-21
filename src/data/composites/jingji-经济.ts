@@ -12,7 +12,7 @@ export default composite({
   tts: ["金的关系"],
   literal: "the relations of money",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["trade-and-the-market"],
   isA: ["abstract-thing"],
   examples: [
     {

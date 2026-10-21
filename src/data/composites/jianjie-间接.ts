@@ -15,7 +15,7 @@ export default composite({
   tts: ["有别人在中间", "有别的东西在中间"],
   literal: "someone else is in the middle / something else is in the middle",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["empty-messy-clear"],
   isA: ["condition-quality"],
   proposed: true,
 });

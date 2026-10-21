@@ -15,7 +15,7 @@ export default composite({
   tts: ["觉得不好", "身体觉得不好"],
   literal: "feel not good / the body feels not good",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["pain-and-feeling-unwell"],
   isA: ["bodily-state"],
   proposed: true,
 });

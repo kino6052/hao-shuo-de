@@ -15,7 +15,7 @@ export default composite({
   tts: ["日记", "一天一天写下的东西"],
   literal: "day-remember / what is written down day by day",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["books-and-paper"],
   isA: ["paper-thing"],
   proposed: true,
 });

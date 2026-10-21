@@ -12,7 +12,7 @@ export default composite({
   tts: ["不好用", "金不多"],
   literal: "not easy to use / not much money",
   fit: "plain",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["easy-and-convenient"],
   isA: ["truth-or-ease"],
   proposed: true,
 });

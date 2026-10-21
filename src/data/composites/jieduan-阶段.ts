@@ -14,7 +14,7 @@ export default composite({
   tts: ["X的时间的一部分"],
   literal: "a part of the time of X",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["moments-and-stages"],
   isA: ["time-span"],
   proposed: true,
 });

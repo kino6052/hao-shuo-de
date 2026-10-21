@@ -14,7 +14,7 @@ export default word("ge4", {
     eng: "Without it, a number or {{word:zhe4}} can't stand before a noun: \"this one\", \"two people\".",
     rus: "Без него число или {{word:zhe4}} не могут стоять перед существительным: «этот», «два человека».",
   },
-  topics: ["counting-words"],
+  topics: ["ge-and-general-counting-words"],
   isA: ["counting-word"],
   maps: "",
   atom: {

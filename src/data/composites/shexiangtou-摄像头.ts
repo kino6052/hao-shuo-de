@@ -15,7 +15,7 @@ export default composite({
   tts: ["机的眼睛", "让机能看见的眼睛"],
   literal: "the machine's eye / an eye that lets the machine see",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["computers-and-gadgets"],
   isA: ["machine"],
   proposed: true,
 });

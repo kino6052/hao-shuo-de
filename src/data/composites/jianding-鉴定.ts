@@ -15,7 +15,7 @@ export default composite({
   tts: ["看X是不是真的", "看X是真的还是不真的"],
   literal: "look whether X is real / look whether X is real or not real",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["checking-and-testing"],
   isA: ["thinking-action"],
   proposed: true,
 });

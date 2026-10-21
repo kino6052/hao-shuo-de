@@ -15,7 +15,7 @@ export default composite({
   tts: ["说X很好的话", "人说X好"],
   literal: "words that say X is very good",
   fit: "plain",
-  topics: ["agreeing-and-praising"],
+  topics: ["comments-and-recommending"],
   isA: ["language-thing"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["最后", "真的"],
   literal: "at last / really",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["after-all-anyway-unexpectedly"],
   isA: ["adverb-word"],
   examples: [
     {

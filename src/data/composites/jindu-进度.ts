@@ -15,7 +15,7 @@ export default composite({
   tts: ["做了多少", "做到哪里了"],
   literal: "how much has been done / how far it has been done",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["managing-and-progress"],
   isA: ["idea"],
   proposed: true,
 });

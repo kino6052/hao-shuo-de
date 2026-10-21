@@ -12,7 +12,7 @@ export default composite({
   tts: ["对面"],
   literal: "the facing side",
   fit: "natural",
-  topics: ["same-and-different"],
+  topics: ["different-and-varied"],
   isA: ["comparison"],
   examples: [
     {

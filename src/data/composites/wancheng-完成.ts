@@ -12,7 +12,7 @@ export default composite({
   tts: ["做完"],
   literal: "do-finish",
   fit: "natural",
-  topics: ["deciding"],
+  topics: ["beginning-and-finishing"],
   isA: ["starting-and-stopping"],
   examples: [
     {

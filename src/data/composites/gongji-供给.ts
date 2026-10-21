@@ -15,7 +15,7 @@ export default composite({
   tts: ["给人他要的东西", "让人要X就有X"],
   literal: "give people the things they need / let people have X when they want X",
   fit: "plain",
-  topics: ["giving-and-getting"],
+  topics: ["giving-and-gifts"],
   isA: ["handling-action"],
   proposed: true,
 });

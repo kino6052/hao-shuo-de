@@ -12,7 +12,7 @@ export default composite({
   tts: ["走"],
   literal: "leave",
   fit: "natural",
-  topics: ["going-and-coming"],
+  topics: ["leaving-stopping-and-retreating"],
   isA: ["moving-action"],
   examples: [
     {

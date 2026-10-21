@@ -15,7 +15,7 @@ export default composite({
   tts: ["让X可以做Y", "说可以"],
   literal: "let X be able to do Y / say it is allowed",
   fit: "plain",
-  topics: ["agreeing-and-praising"],
+  topics: ["agreeing-and-allowing"],
   isA: ["social-action"],
   proposed: true,
 });

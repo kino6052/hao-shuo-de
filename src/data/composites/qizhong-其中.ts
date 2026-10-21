@@ -12,7 +12,7 @@ export default composite({
   tts: ["X里面"],
   literal: "inside X",
   fit: "plain",
-  topics: ["all-and-some"],
+  topics: ["some-most-and-few"],
   isA: ["amount-word"],
   examples: [
     {

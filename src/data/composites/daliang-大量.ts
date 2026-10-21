@@ -13,6 +13,6 @@ export default composite({
   literal: "a lot",
   fit: "natural",
   transparent: true,
-  topics: ["much-and-little"],
+  topics: ["many-and-few"],
   isA: ["amount-word"],
 });

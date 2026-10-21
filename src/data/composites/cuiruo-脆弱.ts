@@ -15,7 +15,7 @@ export default composite({
   tts: ["一打就坏", "很快就坏"],
   literal: "break at one hit / break very quickly",
   fit: "plain",
-  topics: ["how-it-feels"],
+  topics: ["hard-soft-heavy-light"],
   isA: ["touch-quality"],
   proposed: true,
 });

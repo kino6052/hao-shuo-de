@@ -12,7 +12,7 @@ export default composite({
   tts: ["X完后，Y", "Y前，X"],
   literal: "after finishing X, Y / before Y, X",
   fit: "skip",
-  topics: ["before-and-after"],
+  topics: ["first-next-and-last"],
   isA: ["time-order"],
   note: "Say the first action first.",
   examples: [

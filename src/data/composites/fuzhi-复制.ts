@@ -15,7 +15,7 @@ export default composite({
   tts: ["做一个一样的", "把X做一个一样的"],
   literal: "make one that is the same",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["joining-adding-replacing"],
   isA: ["making"],
   proposed: true,
 });

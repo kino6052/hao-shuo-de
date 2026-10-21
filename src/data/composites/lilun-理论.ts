@@ -14,7 +14,7 @@ export default composite({
   tts: ["用头想出来的道理"],
   literal: "a reason thought out with the head",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["knowledge-and-meaning"],
   isA: ["idea"],
   proposed: true,
 });

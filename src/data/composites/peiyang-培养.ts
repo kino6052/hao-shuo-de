@@ -15,7 +15,7 @@ export default composite({
   tts: ["帮X一点一点变好", "帮X变大，变好"],
   literal: "help X get better little by little / help X get bigger and better",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["teaching-homework-and-questions"],
   isA: ["learning-and-teaching"],
   proposed: true,
 });

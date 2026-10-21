@@ -15,7 +15,7 @@ export default composite({
   tts: ["学校里写的话", "把想法写下来"],
   literal: "the words written at school / write the thoughts down",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["stories-poems-and-essays"],
   isA: ["language-thing"],
   proposed: true,
 });

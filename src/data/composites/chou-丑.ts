@@ -15,7 +15,7 @@ export default composite({
   tts: ["难看", "看起来不好"],
   literal: "hard to look at / looks not good",
   fit: "natural",
-  topics: ["describing-people"],
+  topics: ["looks-and-build"],
   isA: ["sound-or-light-quality"],
   proposed: true,
 });

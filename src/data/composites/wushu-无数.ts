@@ -15,7 +15,7 @@ export default composite({
   tts: ["很多很多", "多到没有人知道多少"],
   literal: "very many, very many / so many that nobody knows how many",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["many-and-few"],
   isA: ["amount-word"],
   proposed: true,
 });

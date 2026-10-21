@@ -13,7 +13,7 @@ export default composite({
   literal: "really",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["degree-words"],
+  topics: ["almost-and-probably"],
   isA: ["adverb-word"],
   examples: [
     {

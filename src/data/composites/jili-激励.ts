@@ -15,7 +15,7 @@ export default composite({
   tts: ["让人心里有力", "让人想做"],
   literal: "let people have strength in the heart / let people want to do it",
   fit: "plain",
-  topics: ["helping-and-sharing"],
+  topics: ["caring-and-comforting"],
   isA: ["social-action"],
   proposed: true,
 });

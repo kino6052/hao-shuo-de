@@ -15,7 +15,7 @@ export default composite({
   tts: ["很长很长", "很很长"],
   literal: "very long, very long / very-very long",
   fit: "plain",
-  topics: ["how-often"],
+  topics: ["long-and-short-time"],
   isA: ["size-quality"],
   proposed: true,
 });

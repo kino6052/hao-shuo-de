@@ -12,6 +12,6 @@ export default composite({
   tts: ["让人知道的东西"],
   literal: "a thing that lets people know",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["phone-calls-and-messages"],
   isA: ["idea"],
 });

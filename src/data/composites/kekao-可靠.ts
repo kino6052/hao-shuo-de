@@ -15,7 +15,7 @@ export default composite({
   tts: ["一定会做好", "不会坏"],
   literal: "will surely do it well / will not break",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["suitable-and-fair"],
   isA: ["value-quality"],
   proposed: true,
 });

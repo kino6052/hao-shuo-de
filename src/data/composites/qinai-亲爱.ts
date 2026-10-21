@@ -12,7 +12,7 @@ export default composite({
   tts: ["我很爱的"],
   literal: "whom I love very much",
   fit: "plain",
-  topics: ["liking-and-wanting"],
+  topics: ["liking-loving-and-missing"],
   isA: ["feeling-quality"],
   proposed: true,
 });

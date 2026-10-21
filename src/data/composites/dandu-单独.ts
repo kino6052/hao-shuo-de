@@ -15,7 +15,7 @@ export default composite({
   tts: ["一个人", "一个人，没有别人"],
   literal: "one person / one person, there are no others",
   fit: "natural",
-  topics: ["helping-and-sharing"],
+  topics: ["together-and-cooperating"],
   isA: ["adverb-word"],
   proposed: true,
 });

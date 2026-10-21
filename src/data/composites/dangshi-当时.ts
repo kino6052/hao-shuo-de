@@ -12,7 +12,7 @@ export default composite({
   tts: ["那个时间"],
   literal: "that time",
   fit: "natural",
-  topics: ["before-and-after"],
+  topics: ["in-the-past"],
   isA: ["time-point"],
   examples: [
     {

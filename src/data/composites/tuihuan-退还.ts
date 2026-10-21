@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X给回去", "把金给回去"],
   literal: "give X back / give the money back",
   fit: "plain",
-  topics: ["giving-and-getting"],
+  topics: ["spending-trading-and-returning"],
   isA: ["handling-action"],
   proposed: true,
 });

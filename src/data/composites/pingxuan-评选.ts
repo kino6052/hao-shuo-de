@@ -15,7 +15,7 @@ export default composite({
   tts: ["看谁最好，就要谁", "很多人看以后，说谁最好"],
   literal: "see who is the best, then take that one / after many people look, they say who is the best",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["choosing-and-deciding"],
   isA: ["thinking-action"],
   proposed: true,
 });

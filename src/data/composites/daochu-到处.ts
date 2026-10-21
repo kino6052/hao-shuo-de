@@ -12,7 +12,7 @@ export default composite({
   tts: ["哪里都"],
   literal: "wherever",
   fit: "natural",
-  topics: ["near-and-far"],
+  topics: ["here-there-everywhere"],
   isA: ["place-word"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["用身体做的工作", "用力工作"],
   literal: "the work done with the body / work with effort",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["work-and-effort"],
   isA: ["working"],
   proposed: true,
 });

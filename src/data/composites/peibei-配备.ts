@@ -15,7 +15,7 @@ export default composite({
   tts: ["把要用的东西放在X那里", "X有的工具"],
   literal: "put the things that are needed at X's place / the tools X has",
   fit: "plain",
-  topics: ["giving-and-getting"],
+  topics: ["giving-and-gifts"],
   isA: ["handling-action"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["X里面有Y", "Y在X里面"],
   literal: "inside X there is Y / Y is inside X",
   fit: "plain",
-  topics: ["up-down-in-out"],
+  topics: ["inside-and-outside"],
   isA: ["belonging"],
   proposed: true,
 });

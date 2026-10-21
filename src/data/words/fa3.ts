@@ -14,7 +14,7 @@ export default word("fa3", {
     eng: "Way, method: after a verb it says the way it's done ({{word:kan4}}-{{word:fa3}}, a view; {{word:yong4}}-{{word:fa3}}, how to use it).",
     rus: "Способ: после глагола — как это делают ({{word:kan4}}-{{word:fa3}} — взгляд; {{word:yong4}}-{{word:fa3}} — как этим пользоваться).",
   },
-  topics: ["ideas-and-opinions"],
+  topics: ["ways-and-methods"],
   isA: ["idea"],
   paraphrase: { forms: ["{{word:zen3me}} {{word:zuo4}}"], verdict: "clumsy", note: "Too useful to drop." },
 });

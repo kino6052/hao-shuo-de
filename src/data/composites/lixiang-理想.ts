@@ -15,7 +15,7 @@ export default composite({
   tts: ["心里想的最好的样子", "想的最好的"],
   literal: "the best way you picture it in your heart",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["mind-and-imagination"],
   isA: ["idea"],
   proposed: true,
 });

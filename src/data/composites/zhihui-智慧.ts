@@ -14,7 +14,7 @@ export default composite({
   tts: ["高明的想法和做过的东西"],
   literal: "clever ideas and the things one has done",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["wisdom-secrets-and-lessons"],
   isA: ["idea"],
   proposed: true,
 });

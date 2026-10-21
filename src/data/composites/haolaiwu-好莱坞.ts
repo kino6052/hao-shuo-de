@@ -15,7 +15,7 @@ export default composite({
   tts: ["好莱坞", "做好玩儿的看的东西的地方"],
   literal: "the place that makes fun things to watch",
   fit: "name",
-  topics: ["films-and-media"],
+  topics: ["films-and-shows"],
   isA: ["place"],
   proposed: true,
 });

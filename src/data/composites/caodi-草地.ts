@@ -15,7 +15,7 @@ export default composite({
   tts: ["有很多小的植物的地", "地上有小的植物的地方"],
   literal: "ground with many small plants / a place where the ground has small plants",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["land-soil-and-the-earth"],
   isA: ["outdoor-place"],
   proposed: true,
 });

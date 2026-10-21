@@ -15,7 +15,7 @@ export default composite({
   tts: ["用了以后还有", "还没用完的"],
   literal: "still there after using it / not yet used up",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["extra-and-limits"],
   isA: ["owning"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["在心里看"],
   literal: "see it in your heart",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["thinking-and-researching"],
   isA: ["thinking-action"],
   examples: [
     {

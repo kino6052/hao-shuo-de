@@ -15,7 +15,7 @@ export default composite({
   tts: ["现在的样子", "发生的东西"],
   literal: "what's happening",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["situations-and-needs"],
   isA: ["idea"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["替我把X给Y", "把X拿给Y"],
   literal: "in my place, give X to Y / take X and give it to Y",
   fit: "plain",
-  topics: ["giving-and-getting"],
+  topics: ["sending-and-delivering"],
   isA: ["handling-action"],
   proposed: true,
 });

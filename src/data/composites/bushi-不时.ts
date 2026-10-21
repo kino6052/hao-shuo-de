@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:you3}}-{{word:shi2}}", "{{word:you3}} {{word:shi2}}-{{light:hou4}}"],
   tts: ["有时", "有时候"],
   fit: "natural",
-  topics: ["how-often"],
+  topics: ["sometimes-rarely-and-never"],
   isA: ["frequency"],
   proposed: true,
 });

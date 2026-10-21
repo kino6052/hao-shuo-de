@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:da4}}-{{word:duo1}}", "{{word:da4}} {{word:bu4}}-{{light:fen1}}"],
   tts: ["大多", "大部分"],
   fit: "natural",
-  topics: ["all-and-some"],
+  topics: ["some-most-and-few"],
   isA: ["amount-word"],
   proposed: true,
 });

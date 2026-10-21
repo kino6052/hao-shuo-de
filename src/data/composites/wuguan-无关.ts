@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["没有关系", "和X没有关系"],
   fit: "natural",
-  topics: ["same-and-different"],
+  topics: ["related-and-matching"],
   isA: ["relation"],
   proposed: true,
 });

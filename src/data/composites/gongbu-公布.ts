@@ -14,7 +14,7 @@ export default composite({
   tts: ["把X说给很多人听"],
   literal: "tell X to many people",
   fit: "plain",
-  topics: ["news-and-events"],
+  topics: ["announcing-and-spreading"],
   isA: ["speaking-action"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["网球", "在网两边打的球"],
   literal: "net ball / the ball hit on the two sides of a net",
   fit: "natural",
-  topics: ["sports"],
+  topics: ["ball-sports"],
   isA: ["activity-name"],
   proposed: true,
 });

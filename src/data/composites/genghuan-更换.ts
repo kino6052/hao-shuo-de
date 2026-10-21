@@ -15,7 +15,7 @@ export default composite({
   tts: ["给X，拿Y", "把X拿下，放上Y"],
   literal: "give X, take Y / take X off, put Y on",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["joining-adding-replacing"],
   isA: ["making"],
   proposed: true,
 });

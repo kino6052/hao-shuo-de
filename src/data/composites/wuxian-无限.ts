@@ -15,7 +15,7 @@ export default composite({
   tts: ["没有最后", "不能走到最后"],
   literal: "there is no last one / you cannot walk to the last",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["extra-and-limits"],
   isA: ["amount-word"],
   proposed: true,
 });

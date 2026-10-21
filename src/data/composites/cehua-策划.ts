@@ -15,7 +15,7 @@ export default composite({
   tts: ["想好要怎么做", "想好怎么做，就去做"],
   literal: "think out how it is to be done / think out how to do it, then go and do it",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["plans-and-goals"],
   isA: ["thinking-action"],
   proposed: true,
 });

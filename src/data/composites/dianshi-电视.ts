@@ -12,7 +12,7 @@ export default composite({
   tts: ["看的机"],
   literal: "the watching machine",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["television-radio-and-media"],
   isA: ["machine"],
   examples: [
     {

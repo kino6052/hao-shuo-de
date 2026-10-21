@@ -13,7 +13,7 @@ export default composite({
   literal: "a little faster",
   fit: "natural",
   transparent: true,
-  topics: ["how-often"],
+  topics: ["suddenly-and-on-time"],
   isA: ["adverb-word"],
   proposed: true,
 });

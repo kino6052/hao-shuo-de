@@ -15,7 +15,7 @@ export default composite({
   tts: ["很长时间一点一点变好", "动物和植物一点一点变好"],
   literal: "get better little by little over a long time / animals and plants get better little by little",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["appearing-and-developing"],
   isA: ["becoming"],
   proposed: true,
 });

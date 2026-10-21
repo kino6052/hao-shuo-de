@@ -15,7 +15,7 @@ export default composite({
   tts: ["给人看的东西里最重要的人", "最重要的人"],
   literal: "the most important person in a thing made for people to watch / the most important person",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["acting-and-roles"],
   isA: ["person"],
   proposed: true,
 });

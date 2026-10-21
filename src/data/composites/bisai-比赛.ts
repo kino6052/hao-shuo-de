@@ -12,7 +12,7 @@ export default composite({
   tts: ["看谁最好"],
   literal: "see who is best",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["matches-and-contests"],
   isA: ["event"],
   examples: [
     {

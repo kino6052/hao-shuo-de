@@ -14,7 +14,7 @@ export default composite({
   tts: ["写的东西里说的东西"],
   literal: "the things talked about inside what is written",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["stories-poems-and-essays"],
   isA: ["idea"],
   proposed: true,
 });

@@ -16,7 +16,7 @@ export default composite({
   tts: ["变两个部分", "让X变两个部分", "把X的一边放在X上面"],
   literal: "become two parts / make X become two parts / put one side of X on top of X",
   fit: "plain",
-  topics: ["pushing-and-pulling"],
+  topics: ["tying-twisting-and-shaking"],
   isA: ["handling-action"],
   proposed: true,
 });

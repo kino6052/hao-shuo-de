@@ -15,7 +15,7 @@ export default composite({
   ],
   tts: ["变动", "变", "不一样了"],
   fit: "natural",
-  topics: ["changing"],
+  topics: ["becoming-and-turning-into"],
   isA: ["becoming"],
   proposed: true,
 });

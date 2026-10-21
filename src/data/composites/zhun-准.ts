@@ -12,7 +12,7 @@ export default composite({
   tts: ["对", "很对"],
   literal: "right / very right",
   fit: "plain",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["exact-clear-and-obvious"],
   isA: ["truth-or-ease"],
   examples: [
     {

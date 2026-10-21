@@ -14,7 +14,7 @@ export default composite({
   tts: ["去问，去找想知道的东西"],
   literal: "go ask, go look for what you want to know",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["checking-and-testing"],
   isA: ["thinking-action"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["说出来"],
   literal: "say it out",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["introducing-and-passing-on"],
   isA: ["speaking-action"],
   examples: [
     {

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:duo1}}"],
   tts: ["多"],
   fit: "word",
-  topics: ["much-and-little"],
+  topics: ["many-and-few"],
   isA: ["amount-word"],
   examples: [
     {

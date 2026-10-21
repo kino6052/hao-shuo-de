@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:zui4}}"],
   tts: ["最"],
   fit: "word",
-  topics: ["degree-words"],
+  topics: ["very-and-most"],
   isA: ["degree-word"],
   note: "Lesson {{lesson:comparing}}.",
   examples: [

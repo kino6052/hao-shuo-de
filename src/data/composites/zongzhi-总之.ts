@@ -15,7 +15,7 @@ export default composite({
   tts: ["只说最重要的，…", "不多说，…"],
   literal: "say only the most important, …; not saying more, …",
   fit: "plain",
-  topics: ["joining-words"],
+  topics: ["then-for-example-in-short"],
   isA: ["conjunction"],
   proposed: true,
 });

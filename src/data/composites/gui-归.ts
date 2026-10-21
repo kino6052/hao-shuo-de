@@ -12,7 +12,7 @@ export default composite({
   tts: ["回", "是X的", "是X做的"],
   literal: "go back / be X's / be what X does",
   fit: "plain",
-  topics: ["going-and-coming"],
+  topics: ["go-come-and-return"],
   isA: ["moving-action"],
   proposed: true,
 });

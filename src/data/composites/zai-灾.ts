@@ -15,7 +15,7 @@ export default composite({
   tts: ["让很多人很不好的东西", "很坏的东西"],
   literal: "a thing that is very bad for many people / a very bad thing",
   fit: "plain",
-  topics: ["news-and-events"],
+  topics: ["events-and-luck"],
   isA: ["event"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["别人也会得的身体不好", "会给别人的身体不好"],
   literal: "the unwellness that others will also get / the unwellness that is given to others",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["fever-colds-and-diseases"],
   isA: ["state-name"],
   proposed: true,
 });

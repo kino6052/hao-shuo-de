@@ -15,7 +15,7 @@ export default composite({
   tts: ["不知道怎么做", "让X很难做"],
   literal: "do not know how to do it / make it very hard for X to do",
   fit: "plain",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["hard-and-difficult"],
   isA: ["truth-or-ease"],
   proposed: true,
 });

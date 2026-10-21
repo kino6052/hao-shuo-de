@@ -15,7 +15,7 @@ export default composite({
   tts: ["从X来", "是从X开始的"],
   literal: "come from X / started from X",
   fit: "plain",
-  topics: ["causes-and-results"],
+  topics: ["reasons-sources-and-conditions"],
   isA: ["cause-and-effect"],
   proposed: true,
 });

@@ -13,7 +13,7 @@ export default composite({
   literal: "send out-go out / make come out",
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["giving-and-getting"],
+  topics: ["sending-and-delivering"],
   isA: ["handling-action"],
   examples: [
     {

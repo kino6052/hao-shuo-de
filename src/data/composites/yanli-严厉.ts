@@ -15,7 +15,7 @@ export default composite({
   tts: ["不让人想怎么做就怎么做", "要人把X做对，不对就很不开心"],
   literal: "not letting people do as they like / want people to do X right, if not right then very unhappy",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["kind-honest-and-mean"],
   isA: ["character-quality"],
   proposed: true,
 });

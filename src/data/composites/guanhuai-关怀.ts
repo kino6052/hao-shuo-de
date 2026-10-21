@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["关心", "对X很好，怕X不好"],
   fit: "natural",
-  topics: ["helping-and-sharing"],
+  topics: ["caring-and-comforting"],
   isA: ["feeling-and-wanting"],
   proposed: true,
 });

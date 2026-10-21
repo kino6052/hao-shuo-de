@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["南极洲", "地球上最冷的大地方"],
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["world-and-continents"],
   isA: ["place"],
   proposed: true,
 });

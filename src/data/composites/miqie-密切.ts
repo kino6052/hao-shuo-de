@@ -12,7 +12,7 @@ export default composite({
   tts: ["很有关系", "不分开"],
   literal: "has a strong connection / not apart",
   fit: "plain",
-  topics: ["near-and-far"],
+  topics: ["near-far-and-distance"],
   isA: ["distance"],
   proposed: true,
 });

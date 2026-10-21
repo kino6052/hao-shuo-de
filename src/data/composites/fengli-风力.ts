@@ -15,7 +15,7 @@ export default composite({
   tts: ["快飞的空气的力", "空气在动，有多大的力"],
   literal: "the strength of fast-flying air / the air is moving, how big its strength is",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["air-wind-and-storms"],
   isA: ["weather-thing"],
   proposed: true,
 });

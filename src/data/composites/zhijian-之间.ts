@@ -12,7 +12,7 @@ export default composite({
   tts: ["在A和B中间"],
   literal: "in the middle of A and B",
   fit: "natural",
-  topics: ["near-and-far"],
+  topics: ["inside-outside-front-back"],
   isA: ["place-word"],
   examples: [
     {

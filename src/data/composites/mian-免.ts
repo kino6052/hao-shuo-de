@@ -15,7 +15,7 @@ export default composite({
   tts: ["不用做", "让X不用做Y"],
   literal: "no need to do / let X not need to do Y",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["willing-daring-and-forced"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

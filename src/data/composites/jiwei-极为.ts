@@ -12,7 +12,7 @@ export default composite({
   tts: ["很很"],
   literal: "very-very",
   fit: "plain",
-  topics: ["degree-words"],
+  topics: ["very-and-most"],
   isA: ["degree-word"],
   proposed: true,
 });

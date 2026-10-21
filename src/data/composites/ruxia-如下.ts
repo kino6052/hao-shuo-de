@@ -12,7 +12,7 @@ export default composite({
   tts: ["下面是…"],
   fit: "natural",
   transparent: true,
-  topics: ["writing"],
+  topics: ["writing-things-down"],
   isA: ["speaking-action"],
   proposed: true,
 });

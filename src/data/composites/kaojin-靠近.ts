@@ -15,7 +15,7 @@ export default composite({
   tts: ["到X附近", "走到X的旁边"],
   literal: "get to near X / walk to the side of X",
   fit: "plain",
-  topics: ["near-and-far"],
+  topics: ["near-far-and-distance"],
   isA: ["moving-action"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["只能在X里", "不能出X"],
   literal: "can only be in X / can't go out of X",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["situations-and-needs"],
   isA: ["state-name"],
   proposed: true,
 });

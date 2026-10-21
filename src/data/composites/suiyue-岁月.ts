@@ -15,7 +15,7 @@ export default composite({
   tts: ["很多年的时间", "走过的时间"],
   literal: "the time of many years / the time that has gone by",
   fit: "plain",
-  topics: ["how-often"],
+  topics: ["long-and-short-time"],
   isA: ["time-span"],
   proposed: true,
 });

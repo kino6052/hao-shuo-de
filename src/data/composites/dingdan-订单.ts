@@ -15,7 +15,7 @@ export default composite({
   tts: ["说要买什么的写的东西", "买的人写的，说要买什么，买多少"],
   literal: "a written thing that says what is to be bought / written by the buyer: what is to be bought, how much to buy",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["buying-and-selling"],
   isA: ["paper-thing"],
   proposed: true,
 });

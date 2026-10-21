@@ -15,7 +15,7 @@ export default composite({
   tts: ["圆圆地动", "让X圆圆的动"],
   literal: "move in a round way / make X move in a round way",
   fit: "plain",
-  topics: ["pushing-and-pulling"],
+  topics: ["tying-twisting-and-shaking"],
   isA: ["moving-action"],
   proposed: true,
 });

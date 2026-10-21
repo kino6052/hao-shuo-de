@@ -12,7 +12,7 @@ export default composite({
   tts: ["不明"],
   literal: "not bright",
   fit: "plain",
-  topics: ["how-it-feels"],
+  topics: ["bright-dark-quiet-noisy"],
   isA: ["sound-or-light-quality"],
   examples: [
     {

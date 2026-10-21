@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X做出来", "X的部分怎么放在一起"],
   literal: "make X come out / how the parts of X are put together",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["building-and-producing"],
   isA: ["making"],
   proposed: true,
 });

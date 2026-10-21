@@ -16,7 +16,7 @@ export default composite({
   tts: ["想是真的", "想X说的是真的", "觉得X一定会帮我"],
   literal: "think it is true / think what X says is true / feel X will surely help me",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["believing-hoping-and-caring"],
   isA: ["thinking-action"],
   proposed: true,
 });

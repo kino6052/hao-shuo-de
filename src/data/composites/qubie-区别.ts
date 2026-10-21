@@ -12,7 +12,7 @@ export default composite({
   tts: ["不一样的地方"],
   literal: "where they're different",
   fit: "plain",
-  topics: ["same-and-different"],
+  topics: ["different-and-varied"],
   isA: ["comparison"],
   examples: [
     {

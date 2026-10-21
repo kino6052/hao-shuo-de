@@ -15,7 +15,7 @@ export default composite({
   tts: ["第一个做", "第一个做出新的东西"],
   literal: "be the first to do it / be the first to make a new thing",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["building-and-producing"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

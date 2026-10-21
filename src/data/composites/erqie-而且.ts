@@ -12,7 +12,7 @@ export default composite({
   tts: ["也"],
   literal: "also",
   fit: "natural",
-  topics: ["adverbs"],
+  topics: ["only-even-and-more"],
   isA: ["adverb-word"],
   examples: [
     {

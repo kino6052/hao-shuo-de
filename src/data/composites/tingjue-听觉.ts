@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["听觉", "耳朵听的能力"],
   fit: "natural",
-  topics: ["senses"],
+  topics: ["hearing-and-sounds"],
   isA: ["perceiving"],
   proposed: true,
 });

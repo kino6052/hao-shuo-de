@@ -15,7 +15,7 @@ export default composite({
   tts: ["不好的口，别人能从这里进来", "坏的口"],
   literal: "a bad opening, other people can come in from here / a bad opening",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["situations-and-needs"],
   isA: ["state-name"],
   proposed: true,
 });

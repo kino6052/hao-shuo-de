@@ -15,7 +15,7 @@ export default composite({
   tts: ["难听", "听起来不好"],
   literal: "hard to hear / it sounds not good",
   fit: "natural",
-  topics: ["senses"],
+  topics: ["hearing-and-sounds"],
   isA: ["sound-or-light-quality"],
   proposed: true,
 });

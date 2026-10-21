@@ -15,7 +15,7 @@ export default composite({
   tts: ["替X做X要做的", "替X做"],
   literal: "do in X's place what X has to do / do in X's place",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["managing-and-progress"],
   isA: ["working"],
   proposed: true,
 });

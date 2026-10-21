@@ -14,7 +14,7 @@ export default word("you4", {
     eng: "Again: it happened once more. {{word:zai4}} is taken, so \"again\" needs its own word.",
     rus: "Опять: это случилось ещё раз. {{word:zai4}} уже занято, поэтому «снова» — отдельное слово.",
   },
-  topics: ["adverbs"],
+  topics: ["also-again-still-already"],
   isA: ["adverb-word"],
   senses: {
     right: {

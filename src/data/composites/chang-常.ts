@@ -12,7 +12,7 @@ export default composite({
   tts: ["常常"],
   literal: "often",
   fit: "natural",
-  topics: ["how-often"],
+  topics: ["often-and-usually"],
   isA: ["frequency"],
   examples: [
     {

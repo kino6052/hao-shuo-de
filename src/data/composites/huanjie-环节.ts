@@ -15,7 +15,7 @@ export default composite({
   tts: ["一个部分", "X中间的部分"],
   literal: "one part / the part in the middle of X",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["ways-and-methods"],
   isA: ["idea"],
   proposed: true,
 });

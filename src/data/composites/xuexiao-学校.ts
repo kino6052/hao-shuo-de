@@ -13,7 +13,7 @@ export default composite({
   literal: "learning place",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["classroom"],
+  topics: ["school-buildings-and-grounds"],
   isA: ["building"],
   examples: [
     {

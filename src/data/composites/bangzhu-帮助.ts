@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:bang1}}"],
   tts: ["帮"],
   fit: "word",
-  topics: ["helping-and-sharing"],
+  topics: ["helping-and-supporting"],
   isA: ["social-action"],
   note: "Lesson {{lesson:everyday-patterns}}: nǐ bāng wǒ ná yī-xià.",
   examples: [

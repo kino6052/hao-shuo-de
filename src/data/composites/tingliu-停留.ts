@@ -15,7 +15,7 @@ export default composite({
   tts: ["留在X", "在一个地方不动"],
   literal: "stay at X",
   fit: "plain",
-  topics: ["going-and-coming"],
+  topics: ["leaving-stopping-and-retreating"],
   isA: ["moving-action"],
   proposed: true,
 });

@@ -14,7 +14,7 @@ export default composite({
   tts: ["别人有好的，我也想有"],
   literal: "other people have something good, I want to have it too",
   fit: "plain",
-  topics: ["liking-and-wanting"],
+  topics: ["respect-and-cherishing"],
   isA: ["feeling-and-wanting"],
   proposed: true,
 });

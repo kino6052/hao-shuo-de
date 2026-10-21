@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:kuai4}} … {{word:le}}", "{{word:kuai4}} {{word:dao4}} X {{word:le}}"],
   tts: ["快…了", "快到X了"],
   fit: "natural",
-  topics: ["adverbs"],
+  topics: ["just-then-and-finally"],
   isA: ["adverb-word"],
   proposed: true,
 });

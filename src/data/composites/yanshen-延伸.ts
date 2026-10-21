@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["变长", "变长，到远的地方"],
   fit: "natural",
-  topics: ["changing"],
+  topics: ["increasing-and-rising"],
   isA: ["becoming"],
   proposed: true,
 });

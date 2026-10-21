@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:da4}}-{{word:jia1}}", "{{word:ren2}}-{{word:ren2}}"],
   tts: ["大家", "人人"],
   fit: "natural",
-  topics: ["people-together"],
+  topics: ["crowds-and-the-public"],
   isA: ["pronoun"],
   proposed: true,
 });

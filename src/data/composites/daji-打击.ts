@@ -12,7 +12,7 @@ export default composite({
   tts: ["用力打", "让X变坏"],
   literal: "hit with strength / make X go bad",
   fit: "plain",
-  topics: ["pushing-and-pulling"],
+  topics: ["hitting-and-bumping"],
   isA: ["handling-action"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["最后"],
   literal: "last of all",
   fit: "natural",
-  topics: ["before-and-after"],
+  topics: ["first-next-and-last"],
   isA: ["time-order"],
   examples: [
     {

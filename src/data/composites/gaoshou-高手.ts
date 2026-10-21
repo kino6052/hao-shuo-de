@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["高手", "做X最好的人"],
   fit: "natural",
-  topics: ["describing-people"],
+  topics: ["clever-skilled-and-famous"],
   isA: ["person"],
   proposed: true,
 });

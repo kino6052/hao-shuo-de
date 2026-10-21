@@ -12,7 +12,7 @@ export default composite({
   tts: ["很快", "要快做"],
   literal: "very fast / must do it fast",
   fit: "natural",
-  topics: ["speed-and-strength"],
+  topics: ["fast-slow-and-in-a-hurry"],
   isA: ["speed-or-strength"],
   proposed: true,
 });

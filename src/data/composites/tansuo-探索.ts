@@ -15,7 +15,7 @@ export default composite({
   tts: ["找不知道的东西", "去看不知道的地方"],
   literal: "look for things one doesn't know / go and see places one doesn't know",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["searching-and-clues"],
   isA: ["thinking-action"],
   proposed: true,
 });

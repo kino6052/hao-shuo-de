@@ -15,7 +15,7 @@ export default composite({
   tts: ["分很多次给金", "买东西，一次给一点金"],
   literal: "split into many times and pay money / buy something, pay a little money each time",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["paying-and-spending"],
   isA: ["trade-action"],
   proposed: true,
 });

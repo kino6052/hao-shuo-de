@@ -12,7 +12,7 @@ export default composite({
   tts: ["用心听", "好好听"],
   literal: "listen with the heart / listen well",
   fit: "plain",
-  topics: ["senses"],
+  topics: ["hearing-and-sounds"],
   isA: ["perceiving"],
   proposed: true,
 });

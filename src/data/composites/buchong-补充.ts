@@ -16,7 +16,7 @@ export default composite({
   tts: ["多给一点", "多放一点", "多说一点"],
   literal: "give a bit more",
   fit: "plain",
-  topics: ["giving-and-getting"],
+  topics: ["giving-and-gifts"],
   isA: ["handling-action"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["很多年都让X变", "很多年都很重要"],
   literal: "for very many years it makes X change / for very many years it is still important",
   fit: "plain",
-  topics: ["causes-and-results"],
+  topics: ["results-and-effects"],
   isA: ["condition-quality"],
   proposed: true,
 });

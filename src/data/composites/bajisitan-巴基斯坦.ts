@@ -12,7 +12,7 @@ export default composite({
   tts: ["巴基斯坦", "巴基斯坦国"],
   literal: "the country of Bājīsītǎn",
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-countries"],
   isA: ["settlement"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["上面说的", "前面说的"],
   literal: "what was said above / what was said in front",
   fit: "plain",
-  topics: ["up-down-in-out"],
+  topics: ["above-and-below"],
   isA: ["place-relation"],
   proposed: true,
 });

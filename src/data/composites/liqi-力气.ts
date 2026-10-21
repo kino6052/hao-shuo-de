@@ -12,7 +12,7 @@ export default composite({
   tts: ["力气", "力"],
   literal: "strength",
   fit: "natural",
-  topics: ["speed-and-strength"],
+  topics: ["strong-and-weak-body-and-force"],
   isA: ["speed-or-strength"],
   proposed: true,
 });

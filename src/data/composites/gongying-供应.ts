@@ -15,7 +15,7 @@ export default composite({
   tts: ["给人他要的东西", "让人要X就有X"],
   literal: "give people what they need / let people have X when they want X",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["buying-supplying-and-launching"],
   isA: ["trade-action"],
   proposed: true,
 });

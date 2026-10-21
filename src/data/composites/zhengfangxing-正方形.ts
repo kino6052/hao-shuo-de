@@ -14,7 +14,7 @@ export default composite({
   tts: ["四边一样长的样子"],
   literal: "the shape with four equally long sides",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["circles-squares-cubes"],
   isA: ["shape-quality"],
   proposed: true,
 });

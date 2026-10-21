@@ -12,7 +12,7 @@ export default composite({
   tts: ["现在的样子"],
   literal: "the way it is now",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["situations-and-needs"],
   isA: ["idea"],
   proposed: true,
 });

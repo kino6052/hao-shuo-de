@@ -12,7 +12,7 @@ export default composite({
   tts: ["老家", "生的地方"],
   literal: "the old home; the place where one was born",
   fit: "plain",
-  topics: ["countries-and-cities"],
+  topics: ["cities-towns-and-provinces"],
   isA: ["settlement"],
   proposed: true,
 });

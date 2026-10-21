@@ -15,7 +15,7 @@ export default composite({
   tts: ["在别人前面怕说话", "见到别的人，心里有一点怕"],
   literal: "afraid to speak in front of other people / on meeting other people, a little afraid in the heart",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["brave-calm-and-lively"],
   isA: ["character-quality"],
   proposed: true,
 });

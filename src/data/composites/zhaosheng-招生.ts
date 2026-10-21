@@ -15,7 +15,7 @@ export default composite({
   tts: ["叫人来学校学", "让学生进来"],
   literal: "call people to come and study at the school / let students come in",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-days-and-years"],
   isA: ["social-action"],
   proposed: true,
 });

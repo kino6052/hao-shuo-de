@@ -15,7 +15,7 @@ export default composite({
   tts: ["只有一个", "写X的面"],
   literal: "only one / the page where X is written",
   fit: "plain",
-  topics: ["all-and-some"],
+  topics: ["half-both-and-only-one"],
   isA: ["amount-word"],
   proposed: true,
 });

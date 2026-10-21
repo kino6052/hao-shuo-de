@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X拿起来，让X飞", "不要X了，拿出去"],
   literal: "pick X up, let X fly / do not want X any more, take it out",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["throwing-spilling-and-cutting"],
   isA: ["handling-action"],
   proposed: true,
 });

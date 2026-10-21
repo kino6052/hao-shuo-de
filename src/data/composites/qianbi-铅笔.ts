@@ -12,7 +12,7 @@ export default composite({
   tts: ["写的黑的工具"],
   literal: "a black tool for writing",
   fit: "plain",
-  topics: ["classroom"],
+  topics: ["pens-books-and-school-bags"],
   isA: ["writing-tool"],
   proposed: true,
 });

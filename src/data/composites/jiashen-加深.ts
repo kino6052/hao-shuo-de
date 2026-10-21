@@ -15,7 +15,7 @@ export default composite({
   tts: ["让X下面比以前远", "让X变多"],
   literal: "let X's lower part be farther than before / let X become more",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["increasing-and-rising"],
   isA: ["becoming"],
   proposed: true,
 });

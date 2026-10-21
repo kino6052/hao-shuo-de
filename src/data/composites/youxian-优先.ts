@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X放在第一", "把X放在最前面"],
   literal: "put X first / put X at the very front",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["choosing-and-deciding"],
   isA: ["placing"],
   proposed: true,
 });

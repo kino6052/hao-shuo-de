@@ -15,7 +15,7 @@ export default composite({
   tts: ["人力", "工作的人的力"],
   literal: "the strength of the people who work",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["posts-and-pay"],
   isA: ["idea"],
   proposed: true,
 });

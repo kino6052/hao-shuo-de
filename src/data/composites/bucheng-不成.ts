@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:bu4}} {{word:neng2}}", "{{word:bu4}} {{word:hao3}}"],
   tts: ["不能", "不好"],
   fit: "natural",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["hard-and-difficult"],
   isA: ["truth-or-ease"],
   proposed: true,
 });

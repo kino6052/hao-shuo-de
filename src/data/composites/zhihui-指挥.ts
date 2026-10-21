@@ -15,7 +15,7 @@ export default composite({
   tts: ["叫X做什么", "用手让人知道做什么"],
   literal: "tell X what to do / use the hand to let people know what to do",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["managing-and-progress"],
   isA: ["social-action"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["分", "部分"],
   literal: "part",
   fit: "word",
-  topics: ["counting-words"],
+  topics: ["times-rounds-and-minutes"],
   isA: ["measure-unit"],
   note: "A minute is a small part of an hour, xiǎo-shí.",
   examples: [

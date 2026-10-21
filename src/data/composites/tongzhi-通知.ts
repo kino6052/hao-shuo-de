@@ -12,7 +12,7 @@ export default composite({
   tts: ["叫人知道"],
   literal: "let people know",
   fit: "plain",
-  topics: ["news-and-events"],
+  topics: ["announcing-and-spreading"],
   isA: ["speaking-action"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["很多在线上的小东西", "有很多X在上面的线"],
   literal: "many small things on a line / a line with many X on it",
   fit: "plain",
-  topics: ["counting-words"],
+  topics: ["counting-plants-vehicles-and-buildings"],
   isA: ["counting-word"],
   proposed: true,
 });

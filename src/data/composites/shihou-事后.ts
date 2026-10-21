@@ -12,7 +12,7 @@ export default composite({
   tts: ["做完以后"],
   literal: "after it is done",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["after-later-and-future"],
   isA: ["time-order"],
   proposed: true,
 });

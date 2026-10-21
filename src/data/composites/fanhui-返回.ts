@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:hui2}}", "{{word:hui2}}-{{word:qu4}}"],
   tts: ["回", "回去"],
   fit: "natural",
-  topics: ["going-and-coming"],
+  topics: ["go-come-and-return"],
   isA: ["moving-action"],
   proposed: true,
 });

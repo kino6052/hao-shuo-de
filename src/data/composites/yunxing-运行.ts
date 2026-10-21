@@ -12,7 +12,7 @@ export default composite({
   tts: ["在工作", "在动"],
   literal: "be working / be moving",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["using-things-and-effort"],
   isA: ["working"],
   proposed: true,
 });

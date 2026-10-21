@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:wo3}}-{{word:men}}", "{{word:wo3}} {{word:he2}} {{word:ni3}}"],
   tts: ["我们", "我和你"],
   fit: "natural",
-  topics: ["pointers"],
+  topics: ["i-you-he-she"],
   isA: ["pronoun"],
   proposed: true,
 });

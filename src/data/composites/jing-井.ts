@@ -15,7 +15,7 @@ export default composite({
   tts: ["把地下的水拿出来的地方", "地上的口，下面有水"],
   literal: "a place for taking the water under the ground out / a hole in the ground with water below",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["rivers-lakes-and-floods"],
   isA: ["outdoor-place"],
   proposed: true,
 });

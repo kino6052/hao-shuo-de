@@ -15,7 +15,7 @@ export default composite({
   tts: ["用完", "用最大的力"],
   literal: "use it up / use the biggest strength",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["extra-and-limits"],
   isA: ["doing"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["X来做"],
   literal: "X does it",
   fit: "plain",
-  topics: ["degree-words"],
+  topics: ["especially-and-in-person"],
   isA: ["adverb-word"],
   examples: [
     {

@@ -12,7 +12,7 @@ export default composite({
   tts: ["让X开始动", "把机开"],
   literal: "let X begin to move / turn the machine on",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["computers-and-gadgets"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

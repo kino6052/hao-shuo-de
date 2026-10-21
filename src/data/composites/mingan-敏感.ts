@@ -15,7 +15,7 @@ export default composite({
   tts: ["很小的东西也能觉得", "一点就觉得很多"],
   literal: "can feel even very small things / feels a lot from a little",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["brave-calm-and-lively"],
   isA: ["character-quality"],
   proposed: true,
 });

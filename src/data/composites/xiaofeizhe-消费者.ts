@@ -12,7 +12,7 @@ export default composite({
   tts: ["买东西的人"],
   literal: "a person who buys things",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["goods-and-customers"],
   isA: ["social-role"],
   proposed: true,
 });

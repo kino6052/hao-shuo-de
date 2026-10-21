@@ -15,7 +15,7 @@ export default composite({
   tts: ["不小心打到X", "很用力打到X"],
   literal: "not carefully hit X / hit X with great effort",
   fit: "plain",
-  topics: ["pushing-and-pulling"],
+  topics: ["hitting-and-bumping"],
   isA: ["handling-action"],
   proposed: true,
 });

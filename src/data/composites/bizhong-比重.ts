@@ -16,7 +16,7 @@ export default composite({
   tts: ["比重", "X在Y里面的多少", "X是Y的多少部分"],
   literal: "how much of X is inside Y / X is how many parts of Y",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["totals-and-parts"],
   isA: ["amount-word"],
   proposed: true,
 });

@@ -16,7 +16,7 @@ export default composite({
   tts: ["X把Y变", "X对Y好", "X对Y不好"],
   literal: "X changes Y / X is good for Y / X is bad for Y",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["appearing-and-developing"],
   isA: ["becoming"],
   examples: [
     {

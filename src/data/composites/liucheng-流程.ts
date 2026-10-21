@@ -15,7 +15,7 @@ export default composite({
   tts: ["第一做什么，第二做什么", "一点一点做的方法"],
   literal: "first do what, second do what / the way of doing it little by little",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["managing-and-progress"],
   isA: ["idea"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["站在X旁边，用X", "没有X就不能做"],
   literal: "stand next to X, use X / without X one cannot do it",
   fit: "plain",
-  topics: ["helping-and-sharing"],
+  topics: ["helping-and-supporting"],
   isA: ["social-action"],
   proposed: true,
 });

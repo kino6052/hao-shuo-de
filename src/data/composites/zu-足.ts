@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["好了", "有了，不要多的了"],
   fit: "natural",
-  topics: ["much-and-little"],
+  topics: ["enough-and-lacking"],
   isA: ["amount-word"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["声音很大"],
   literal: "the sound is very big",
   fit: "plain",
-  topics: ["how-it-feels"],
+  topics: ["bright-dark-quiet-noisy"],
   isA: ["sound-or-light-quality"],
   proposed: true,
 });

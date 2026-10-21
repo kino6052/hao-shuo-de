@@ -12,7 +12,7 @@ export default composite({
   tts: ["要做到的东西"],
   literal: "the thing you want to get done",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["plans-and-goals"],
   isA: ["idea"],
   examples: [
     {

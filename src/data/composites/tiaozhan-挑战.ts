@@ -15,7 +15,7 @@ export default composite({
   tts: ["说我要和X打", "很难做的东西"],
   literal: "say I will compete with X",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["matches-and-contests"],
   isA: ["social-action"],
   proposed: true,
 });

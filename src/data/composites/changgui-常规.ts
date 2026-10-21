@@ -12,7 +12,7 @@ export default composite({
   tts: ["平常的做法"],
   literal: "the normal way of doing it",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["normal-and-ordinary"],
   isA: ["idea"],
   proposed: true,
 });

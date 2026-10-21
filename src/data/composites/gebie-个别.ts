@@ -15,7 +15,7 @@ export default composite({
   ],
   tts: ["个别", "很少的", "有的，很少"],
   fit: "natural",
-  topics: ["all-and-some"],
+  topics: ["some-most-and-few"],
   isA: ["amount-word"],
   proposed: true,
 });

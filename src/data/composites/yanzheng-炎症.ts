@@ -15,7 +15,7 @@ export default composite({
   tts: ["身体有的地方很红，很热，很痛", "身体的一点地方不好，很痛"],
   literal: "some place on the body is very red, very hot and very painful / a little place on the body is not well, very painful",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["fever-colds-and-diseases"],
   isA: ["state-name"],
   proposed: true,
 });

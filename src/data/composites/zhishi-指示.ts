@@ -15,7 +15,7 @@ export default composite({
   tts: ["叫人做X", "叫人做什么的话"],
   literal: "tell people to do X / the words telling people what to do",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["talks-discussion-and-orders"],
   isA: ["speaking-action"],
   proposed: true,
 });

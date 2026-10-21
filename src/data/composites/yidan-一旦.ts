@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:ru2guo3}}"],
   tts: ["如果"],
   fit: "natural",
-  topics: ["joining-words"],
+  topics: ["if-unless-and-even-if"],
   isA: ["conjunction"],
   proposed: true,
 });

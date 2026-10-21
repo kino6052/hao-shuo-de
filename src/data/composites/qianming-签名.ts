@@ -12,7 +12,7 @@ export default composite({
   tts: ["写你的名字"],
   literal: "write your name",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["writing-things-down"],
   isA: ["writing-tool"],
   proposed: true,
 });

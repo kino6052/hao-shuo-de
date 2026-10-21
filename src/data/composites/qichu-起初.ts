@@ -15,7 +15,7 @@ export default composite({
   tts: ["在开始的时间", "一开始"],
   literal: "at the time of the start / at the start",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["first-next-and-last"],
   isA: ["time-order"],
   proposed: true,
 });

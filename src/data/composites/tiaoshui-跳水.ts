@@ -14,7 +14,7 @@ export default composite({
   tts: ["从高的地方快进水里"],
   literal: "from a high place quickly go into the water",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["exercise-and-kinds-of-sport"],
   isA: ["playing"],
   proposed: true,
 });

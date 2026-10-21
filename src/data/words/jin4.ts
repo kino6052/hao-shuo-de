@@ -14,7 +14,7 @@ export default word("jin4", {
     eng: "Go in: {{word:jin4}}-{{word:lai2}}, come in! The pair to {{word:chu1}}.",
     rus: "Входить: {{word:jin4}}-{{word:lai2}} — входи! Пара к {{word:chu1}}.",
   },
-  topics: ["going-and-coming"],
+  topics: ["going-in-and-coming-out"],
   isA: ["moving-action"],
   paraphrase: { forms: ["{{word:dao4}} {{word:li3}}-{{word:mian4}} {{word:qu4}}"], verdict: "fine" },
 });

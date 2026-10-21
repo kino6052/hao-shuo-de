@@ -12,7 +12,7 @@ export default composite({
   tts: ["让X走到前面"],
   literal: "make X go to the front",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["improving-and-reforming"],
   isA: ["becoming"],
   proposed: true,
 });

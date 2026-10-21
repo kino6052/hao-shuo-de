@@ -15,7 +15,7 @@ export default composite({
   tts: ["只有X有的样子", "X和别的不一样的地方"],
   literal: "the way that only X has / the place where X is not the same as the others",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["features-and-forms"],
   isA: ["idea"],
   proposed: true,
 });

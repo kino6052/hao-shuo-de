@@ -10,7 +10,7 @@ export default word("yuan3", {
     eng: "Far. Distance is a basic idea; near is {{word:fu4jin4}}.",
     rus: "Далеко. Расстояние — базовое понятие; близко — {{word:fu4jin4}}.",
   },
-  topics: ["near-and-far"],
+  topics: ["near-far-and-distance"],
   isA: ["distance"],
   paraphrase: {
     forms: ["{{word:yao4}} {{word:zou3}} {{word:hen3}} {{word:duo1}} {{word:lu4}}"],

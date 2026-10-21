@@ -12,7 +12,7 @@ export default composite({
   tts: ["一定", "不会变的"],
   literal: "surely / will not change",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["maybe-of-course-obviously"],
   isA: ["adverb-word"],
   proposed: true,
 });

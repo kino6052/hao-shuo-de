@@ -15,7 +15,7 @@ export default composite({
   tts: ["什么都可能会坏的时候", "可能会死的时候"],
   literal: "the time when everything may go bad / the time when one may die",
   fit: "plain",
-  topics: ["news-and-events"],
+  topics: ["events-and-luck"],
   isA: ["state-name"],
   proposed: true,
 });

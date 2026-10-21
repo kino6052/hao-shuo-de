@@ -12,7 +12,7 @@ export default composite({
   tts: ["一种东西的号"],
   literal: "the number of one kind of thing",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["goods-and-customers"],
   isA: ["idea"],
   proposed: true,
 });

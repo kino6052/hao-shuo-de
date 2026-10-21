@@ -15,7 +15,7 @@ export default composite({
   tts: ["那个时间", "以前开始的时候"],
   literal: "that time / the time long ago when it began",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["in-the-past"],
   isA: ["time-point"],
   proposed: true,
 });

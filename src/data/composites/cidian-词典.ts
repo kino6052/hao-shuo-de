@@ -15,7 +15,7 @@ export default composite({
   tts: ["有很多的词的书", "说词是什么的写的东西"],
   literal: "a written thing that says what words mean",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["words-and-characters"],
   isA: ["paper-thing"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["因为X做不对，让X觉得不好", "因为X做不对，给X不好的东西"],
   literal: "because X did it wrong, make X feel bad / because X did it wrong, give X something bad",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["punishing-and-forbidding"],
   isA: ["social-action"],
   proposed: true,
 });

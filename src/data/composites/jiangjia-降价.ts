@@ -12,7 +12,7 @@ export default composite({
   tts: ["要的金变少"],
   literal: "the money asked for becomes less",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["prices-and-discounts"],
   isA: ["trade-action"],
   proposed: true,
 });

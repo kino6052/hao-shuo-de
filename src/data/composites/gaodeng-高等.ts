@@ -16,7 +16,7 @@ export default composite({
   tts: ["高等", "比别的高", "高的"],
   literal: "higher than the others / high",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["quality-and-top-class"],
   isA: ["value-quality"],
   proposed: true,
 });

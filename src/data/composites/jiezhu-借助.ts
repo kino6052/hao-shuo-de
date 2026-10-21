@@ -12,7 +12,7 @@ export default composite({
   tts: ["用X", "用X帮我"],
   literal: "use X / use X to help me",
   fit: "plain",
-  topics: ["helping-and-sharing"],
+  topics: ["helping-and-supporting"],
   isA: ["social-action"],
   proposed: true,
 });

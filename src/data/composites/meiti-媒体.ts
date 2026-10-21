@@ -12,7 +12,7 @@ export default composite({
   tts: ["做新闻的人"],
   literal: "people who make the news",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["television-radio-and-media"],
   isA: ["group-of-people"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["晚点", "比说好的时间晚"],
   literal: "late (o'clock) / later than the time that was agreed",
   fit: "natural",
-  topics: ["before-and-after"],
+  topics: ["soon-early-and-late"],
   isA: ["time-order"],
   proposed: true,
 });

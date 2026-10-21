@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X做好，让很多人买", "把X给很多人看"],
   literal: "make X ready, let many people buy / give X to many people to see",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["buying-supplying-and-launching"],
   isA: ["trade-action"],
   proposed: true,
 });

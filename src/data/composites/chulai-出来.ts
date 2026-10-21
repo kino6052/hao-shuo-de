@@ -13,7 +13,7 @@ export default composite({
   literal: "out-come",
   fit: "natural",
   kinds: ["built"],
-  topics: ["going-and-coming"],
+  topics: ["going-in-and-coming-out"],
   isA: ["moving-action"],
   note: "Lesson {{lesson:direction-and-result}}.",
   examples: [

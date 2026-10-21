@@ -14,7 +14,7 @@ export default composite({
   tts: ["部分都在一起的东西"],
   literal: "the thing whose parts are all together",
   fit: "plain",
-  topics: ["all-and-some"],
+  topics: ["whole-complete-and-widespread"],
   isA: ["amount-word"],
   proposed: true,
 });

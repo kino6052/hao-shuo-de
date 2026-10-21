@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:zhong1}}-{{word:wai4}}", "\"Zhōngguó\" {{word:he2}} {{word:wai4}}-{{word:guo2}}"],
   tts: ["中外", "中国和外国"],
   fit: "natural",
-  topics: ["countries-and-cities"],
+  topics: ["country-and-nation"],
   isA: ["settlement"],
   proposed: true,
 });

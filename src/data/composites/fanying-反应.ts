@@ -12,7 +12,7 @@ export default composite({
   tts: ["看到X后做的"],
   literal: "what you do after seeing X",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["appearing-and-developing"],
   isA: ["happening"],
   examples: [
     {

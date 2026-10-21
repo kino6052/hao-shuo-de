@@ -15,7 +15,7 @@ export default composite({
   tts: ["一下发生", "不知道就发生了"],
   literal: "happen all at once / happen before anyone knew",
   fit: "plain",
-  topics: ["news-and-events"],
+  topics: ["events-and-luck"],
   isA: ["happening"],
   proposed: true,
 });

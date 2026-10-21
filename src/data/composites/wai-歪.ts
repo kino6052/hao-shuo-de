@@ -15,7 +15,7 @@ export default composite({
   tts: ["一边比别的边高", "不平"],
   literal: "one side is higher than the other sides / not level",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["flat-straight-curved"],
   isA: ["shape-quality"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["还没坏", "新的，没坏"],
   literal: "has not gone bad yet / new, not gone bad",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["natural-and-man-made"],
   isA: ["condition-quality"],
   proposed: true,
 });

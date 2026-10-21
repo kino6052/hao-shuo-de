@@ -15,7 +15,7 @@ export default composite({
   tts: ["做了法说不能做的", "法说他不对"],
   literal: "did what the law says one must not do / the law says he is wrong",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["courts-and-trials"],
   isA: ["condition-quality"],
   proposed: true,
 });

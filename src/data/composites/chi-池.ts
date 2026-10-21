@@ -15,7 +15,7 @@ export default composite({
   tts: ["放水的地方", "有水，不大的地方"],
   literal: "a place to put water / a place with water, not big",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["rivers-lakes-and-floods"],
   isA: ["landform"],
   proposed: true,
 });

@@ -16,7 +16,7 @@ export default composite({
   tts: ["X的前面", "X的旁边", "X的附近"],
   literal: "in front of X / beside X / near X",
   fit: "plain",
-  topics: ["near-and-far"],
+  topics: ["in-front-of-beside-around"],
   isA: ["distance"],
   proposed: true,
 });

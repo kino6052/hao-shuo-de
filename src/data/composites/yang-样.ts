@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:yang4}}"],
   tts: ["样"],
   fit: "word",
-  topics: ["ideas-and-opinions"],
+  topics: ["ways-and-methods"],
   isA: ["idea"],
   proposed: true,
 });

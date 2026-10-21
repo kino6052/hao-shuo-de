@@ -12,7 +12,7 @@ export default composite({
   tts: ["比别人高"],
   literal: "higher than others",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["quality-and-top-class"],
   isA: ["value-quality"],
   proposed: true,
 });

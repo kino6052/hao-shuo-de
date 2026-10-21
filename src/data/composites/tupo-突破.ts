@@ -15,7 +15,7 @@ export default composite({
   tts: ["做到以前不能做的", "打开不通的路"],
   literal: "manage to do what could not be done before / open a road that was blocked",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["improving-and-reforming"],
   isA: ["making"],
   proposed: true,
 });

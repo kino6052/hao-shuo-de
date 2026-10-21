@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:yue4}}"],
   tts: ["月"],
   fit: "word",
-  topics: ["calendar"],
+  topics: ["weeks-months-and-deadlines"],
   isA: ["calendar-name"],
   examples: [
     {

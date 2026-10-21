@@ -15,7 +15,7 @@ export default composite({
   tts: ["只为这个定的", "定好的"],
   literal: "set only for this one / already settled",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["choosing-and-deciding"],
   isA: ["condition-quality"],
   proposed: true,
 });

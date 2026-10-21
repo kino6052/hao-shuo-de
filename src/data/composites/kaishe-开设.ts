@@ -15,7 +15,7 @@ export default composite({
   tts: ["开一个X", "做一个X，让人可以来"],
   literal: "open an X / make an X so that people can come",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["managing-and-progress"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["不想做，但还是做", "让X做，X不想做"],
   literal: "do not want to do it, but still do it / make X do it, X does not want to",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["willing-daring-and-forced"],
   isA: ["feeling-and-wanting"],
   proposed: true,
 });

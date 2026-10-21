@@ -15,7 +15,7 @@ export default composite({
   tts: ["对人很好，不硬", "对人好，说话声音很小"],
   literal: "very good to people, not hard / good to people, the voice is small when talking",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["kind-honest-and-mean"],
   isA: ["character-quality"],
   proposed: true,
 });

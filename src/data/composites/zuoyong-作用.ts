@@ -16,7 +16,7 @@ export default composite({
   literal: "what it can do",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["causes-and-results"],
+  topics: ["results-and-effects"],
   isA: ["cause-and-effect"],
   examples: [
     {

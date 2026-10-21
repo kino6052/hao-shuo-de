@@ -12,7 +12,7 @@ export default composite({
   tts: ["工具上看的面"],
   literal: "the side of a tool you look at",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["computers-and-gadgets"],
   isA: ["computer-or-phone"],
   examples: [
     {

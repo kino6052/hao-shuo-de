@@ -12,7 +12,7 @@ export default composite({
   tts: ["一起学的人"],
   literal: "people who learn together",
   fit: "plain",
-  topics: ["classroom"],
+  topics: ["lessons-and-classes"],
   isA: ["group-of-people"],
   proposed: true,
 });

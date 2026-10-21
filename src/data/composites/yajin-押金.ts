@@ -14,7 +14,7 @@ export default composite({
   tts: ["以前给，以后可能回来的金"],
   literal: "money given before that may come back later",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["prices-and-costs"],
   isA: ["money-thing"],
   proposed: true,
 });

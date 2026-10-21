@@ -15,7 +15,7 @@ export default composite({
   tts: ["吃了让身体坏的东西", "身体进了让身体坏的东西"],
   literal: "ate a thing that makes the body bad / a thing that makes the body bad got into the body",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["germs-poison-and-allergy"],
   isA: ["being-affected"],
   proposed: true,
 });

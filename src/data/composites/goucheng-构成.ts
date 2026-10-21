@@ -15,7 +15,7 @@ export default composite({
   tts: ["放在一起", "X和Y放在一起，变一个东西"],
   literal: "put together / X and Y put together become one thing",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["building-and-producing"],
   isA: ["making"],
   proposed: true,
 });

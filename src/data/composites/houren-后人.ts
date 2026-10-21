@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:hou4}}-{{word:ren2}}", "{{word:yi3}}-{{word:hou4}}-{{word:de}} {{word:ren2}}"],
   tts: ["后人", "以后的人"],
   fit: "natural",
-  topics: ["people-together"],
+  topics: ["peoples-and-generations"],
   isA: ["group-of-people"],
   proposed: true,
 });

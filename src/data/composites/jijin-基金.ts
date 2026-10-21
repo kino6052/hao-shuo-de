@@ -15,7 +15,7 @@ export default composite({
   tts: ["为X放好的金", "放好，以后为X用的金"],
   literal: "money put away for X / money put away to be used later for X",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["money-and-cards"],
   isA: ["money-thing"],
   proposed: true,
 });

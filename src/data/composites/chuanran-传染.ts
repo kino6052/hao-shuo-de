@@ -15,7 +15,7 @@ export default composite({
   tts: ["让别人的身体也不好", "把身体不好给别人"],
   literal: "make other people's bodies unwell too / give the unwell body to other people",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["germs-poison-and-allergy"],
   isA: ["happening"],
   proposed: true,
 });

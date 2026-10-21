@@ -15,7 +15,7 @@ export default composite({
   tts: ["水和气用力出来", "把水和气用力放出来"],
   literal: "water and air come out with force / let water and air out with force",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["rivers-lakes-and-floods"],
   isA: ["happening"],
   proposed: true,
 });

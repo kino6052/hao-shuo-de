@@ -12,7 +12,7 @@ export default composite({
   tts: ["国家里的地方"],
   literal: "a place in the country",
   fit: "plain",
-  topics: ["countries-and-cities"],
+  topics: ["cities-towns-and-provinces"],
   isA: ["settlement"],
   examples: [
     {

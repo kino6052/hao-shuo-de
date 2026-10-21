@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:fang1}}-{{word:mian4}}", "{{word:yi1}}-{{light:ge4}} {{word:fang1}}-{{word:mian4}}"],
   tts: ["方面", "一个方面"],
   fit: "natural",
-  topics: ["ideas-and-opinions"],
+  topics: ["key-points-and-principles"],
   isA: ["idea"],
   proposed: true,
 });

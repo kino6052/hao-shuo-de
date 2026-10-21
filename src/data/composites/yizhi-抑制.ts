@@ -15,7 +15,7 @@ export default composite({
   tts: ["不让X出来", "不让X变大"],
   literal: "do not let X come out / do not let X grow bigger",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["decreasing-and-breaking-down"],
   isA: ["making"],
   proposed: true,
 });

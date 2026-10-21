@@ -12,7 +12,7 @@ export default composite({
   tts: ["东西怎么动的学"],
   literal: "the study of how things move",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-subjects-and-courses"],
   isA: ["idea"],
   proposed: true,
 });

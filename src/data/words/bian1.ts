@@ -14,7 +14,7 @@ export default word("bian1", {
     eng: "Side, edge: {{word:zhe4}}-{{word:bian1}}, this side; {{word:na4}}-{{word:bian1}}, over there.",
     rus: "Сторона, край: {{word:zhe4}}-{{word:bian1}} — эта сторона, {{word:na4}}-{{word:bian1}} — там.",
   },
-  topics: ["up-down-in-out"],
+  topics: ["beside-and-around"],
   isA: ["place-relation"],
   maps: "",
   classes: {

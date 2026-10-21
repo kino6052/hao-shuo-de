@@ -14,7 +14,7 @@ export default word("jue2", {
     eng: "Feel: {{word:jue2}}-{{light:de2}} says what you feel or think.",
     rus: "Чувствовать: {{word:jue2}}-{{light:de2}} говорит, что вы чувствуете или думаете.",
   },
-  topics: ["senses"],
+  topics: ["smell-taste-touch-and-feeling"],
   isA: ["perceiving"],
   senses: {
     decide: {

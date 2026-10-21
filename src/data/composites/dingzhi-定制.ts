@@ -15,7 +15,7 @@ export default composite({
   tts: ["做人要的样子", "给X做他要的样子"],
   literal: "make the look a person wants / make X the look he wants",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["building-and-producing"],
   isA: ["making"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["做东西"],
   literal: "do things",
   fit: "natural",
-  topics: ["working-life"],
+  topics: ["work-and-effort"],
   isA: ["working"],
   examples: [
     {

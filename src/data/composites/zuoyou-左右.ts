@@ -15,7 +15,7 @@ export default composite({
   tts: ["左边和右边", "可能X"],
   literal: "left and right / maybe X",
   fit: "plain",
-  topics: ["all-and-some"],
+  topics: ["half-both-and-only-one"],
   isA: ["amount-word"],
   examples: [
     {

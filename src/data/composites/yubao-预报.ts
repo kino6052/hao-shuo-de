@@ -14,7 +14,7 @@ export default composite({
   tts: ["说以后会发生什么"],
   literal: "say what will happen later",
   fit: "plain",
-  topics: ["news-and-events"],
+  topics: ["announcing-and-spreading"],
   isA: ["speaking-action"],
   proposed: true,
 });

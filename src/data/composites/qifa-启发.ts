@@ -15,7 +15,7 @@ export default composite({
   tts: ["让人想到", "让人想到新的想法"],
   literal: "make people think of it / make people think of a new idea",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["mind-and-imagination"],
   isA: ["thinking-action"],
   proposed: true,
 });

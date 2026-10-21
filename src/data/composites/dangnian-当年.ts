@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:na4}}-{{word:nian2}}", "{{word:na4}}-{{light:ge4}} {{word:shi2}}-{{light:hou4}}"],
   tts: ["那年", "那个时候"],
   fit: "natural",
-  topics: ["before-and-after"],
+  topics: ["in-the-past"],
   isA: ["time-point"],
   proposed: true,
 });

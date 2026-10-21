@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X看做Y", "觉得X就是Y"],
   literal: "see X as Y",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["opinions-and-views"],
   isA: ["thinking-action"],
   proposed: true,
 });

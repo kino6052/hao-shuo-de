@@ -12,7 +12,7 @@ export default composite({
   tts: ["变快", "让X变快"],
   literal: "become fast / make X become fast",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["increasing-and-rising"],
   isA: ["becoming"],
   proposed: true,
 });

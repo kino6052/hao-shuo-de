@@ -12,6 +12,6 @@ export default composite({
   tts: ["没想到"],
   literal: "did not think of it",
   fit: "plain",
-  topics: ["news-and-events"],
+  topics: ["events-and-luck"],
   isA: ["event"],
 });

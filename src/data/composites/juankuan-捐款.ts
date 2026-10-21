@@ -15,7 +15,7 @@ export default composite({
   tts: ["把金给X，帮X", "帮人的金"],
   literal: "give money to X to help X / money to help people",
   fit: "plain",
-  topics: ["helping-and-sharing"],
+  topics: ["sharing-and-giving"],
   isA: ["social-action"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["很远的", "在很远的地方做"],
   literal: "very far / done from a very far place",
   fit: "plain",
-  topics: ["near-and-far"],
+  topics: ["near-far-and-distance"],
   isA: ["distance"],
   proposed: true,
 });

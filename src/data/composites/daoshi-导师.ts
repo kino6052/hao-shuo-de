@@ -15,7 +15,7 @@ export default composite({
   tts: ["帮你学，帮你做好的人", "帮人学的人"],
   literal: "a person who helps you learn and do well / the one who helps people learn",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["teaching-homework-and-questions"],
   isA: ["worker"],
   proposed: true,
 });

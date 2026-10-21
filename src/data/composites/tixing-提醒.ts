@@ -12,7 +12,7 @@ export default composite({
   tts: ["又说"],
   literal: "say it again",
   fit: "plain",
-  topics: ["agreeing-and-praising"],
+  topics: ["advising-and-promising"],
   isA: ["speaking-action"],
   examples: [
     {

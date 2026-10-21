@@ -15,7 +15,7 @@ export default composite({
   tts: ["到地上", "从上面下来到地上"],
   literal: "get to the ground / come down from above to the ground",
   fit: "plain",
-  topics: ["going-and-coming"],
+  topics: ["climbing-and-falling"],
   isA: ["moving-action"],
   proposed: true,
 });

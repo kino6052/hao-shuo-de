@@ -12,7 +12,7 @@ export default composite({
   tts: ["说不要"],
   literal: "say \"don't want\"",
   fit: "plain",
-  topics: ["agreeing-and-praising"],
+  topics: ["refusing-and-criticising"],
   isA: ["speaking-action"],
   examples: [
     {

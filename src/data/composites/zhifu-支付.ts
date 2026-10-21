@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:gei3}} {{word:jin1}}", "{{word:gei3}} X {{word:jin1}}"],
   tts: ["给金", "给X金"],
   fit: "natural",
-  topics: ["money-and-paying"],
+  topics: ["paying-and-spending"],
   isA: ["trade-action"],
   proposed: true,
 });

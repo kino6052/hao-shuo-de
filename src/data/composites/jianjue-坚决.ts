@@ -12,6 +12,6 @@ export default composite({
   tts: ["一定要做"],
   literal: "must do it",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["trying-and-persisting"],
   isA: ["character-quality"],
 });

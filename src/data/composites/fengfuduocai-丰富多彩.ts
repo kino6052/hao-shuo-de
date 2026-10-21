@@ -15,7 +15,7 @@ export default composite({
   tts: ["很多，也很好", "有很多不同的颜色"],
   literal: "very many, and also very good / has many different colours",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["wonderful-and-beautiful"],
   isA: ["value-quality"],
   proposed: true,
 });

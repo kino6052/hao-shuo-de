@@ -12,7 +12,7 @@ export default composite({
   tts: ["没想到"],
   literal: "did not think it would come",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["after-all-anyway-unexpectedly"],
   isA: ["adverb-word"],
   proposed: true,
 });

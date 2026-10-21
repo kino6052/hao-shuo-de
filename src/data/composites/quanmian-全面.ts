@@ -15,7 +15,7 @@ export default composite({
   tts: ["什么都有", "没有少什么"],
   literal: "everything is there / nothing is missing",
   fit: "plain",
-  topics: ["all-and-some"],
+  topics: ["whole-complete-and-widespread"],
   isA: ["condition-quality"],
   proposed: true,
 });

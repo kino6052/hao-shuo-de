@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["好看", "看起来很好"],
   fit: "natural",
-  topics: ["how-good"],
+  topics: ["wonderful-and-beautiful"],
   isA: ["value-quality"],
   proposed: true,
 });

@@ -14,7 +14,7 @@ export default composite({
   tts: ["不想工作，不想动"],
   literal: "does not want to work or move",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["careful-hardworking-and-lazy"],
   isA: ["character-quality"],
   proposed: true,
 });

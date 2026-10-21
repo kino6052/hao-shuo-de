@@ -15,7 +15,7 @@ export default composite({
   tts: ["又很快，又很好", "做很快，结果也很好"],
   literal: "both very fast and very good / do it very fast, the result is very good too",
   fit: "plain",
-  topics: ["speed-and-strength"],
+  topics: ["fast-slow-and-in-a-hurry"],
   isA: ["speed-or-strength"],
   proposed: true,
 });

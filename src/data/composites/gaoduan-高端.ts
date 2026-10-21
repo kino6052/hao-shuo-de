@@ -15,7 +15,7 @@ export default composite({
   tts: ["很好，要很多金", "最高的"],
   literal: "very good, wanting a lot of money / the highest",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["quality-and-top-class"],
   isA: ["value-quality"],
   proposed: true,
 });

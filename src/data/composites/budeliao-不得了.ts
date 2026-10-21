@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["不得了", "很坏，很重"],
   fit: "natural",
-  topics: ["state-of-things"],
+  topics: ["special-and-strange"],
   isA: ["condition-quality"],
   proposed: true,
 });

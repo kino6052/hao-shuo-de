@@ -15,7 +15,7 @@ export default composite({
   tts: ["有一点圆", "让X变圆一点"],
   literal: "a little round / make X a little rounder",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["flat-straight-curved"],
   isA: ["shape-quality"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["想做X，但不知道能不能", "想做一下"],
   literal: "want to do X, but not know if one can / want to try doing it",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["trying-and-persisting"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

@@ -14,7 +14,7 @@ export default composite({
   tts: ["做东西的高明的方法"],
   literal: "a smart way of doing things",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["ways-and-methods"],
   isA: ["idea"],
   proposed: true,
 });

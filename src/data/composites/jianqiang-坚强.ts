@@ -15,7 +15,7 @@ export default composite({
   tts: ["不怕难的", "心里很有力"],
   literal: "not afraid of hard things; strong in the heart",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["brave-calm-and-lively"],
   isA: ["character-quality"],
   proposed: true,
 });

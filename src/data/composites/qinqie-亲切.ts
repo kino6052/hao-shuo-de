@@ -15,7 +15,7 @@ export default composite({
   tts: ["对人好，和家人一样", "对人很热"],
   literal: "good to people, like family / very warm to people",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["kind-honest-and-mean"],
   isA: ["character-quality"],
   proposed: true,
 });

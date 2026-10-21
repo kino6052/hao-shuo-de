@@ -15,7 +15,7 @@ export default composite({
   tts: ["走在前面，让X知道路", "帮X知道怎么走"],
   literal: "walk in front and let X know the way / help X know how to go",
   fit: "plain",
-  topics: ["helping-and-sharing"],
+  topics: ["letting-and-leading"],
   isA: ["social-action"],
   proposed: true,
 });

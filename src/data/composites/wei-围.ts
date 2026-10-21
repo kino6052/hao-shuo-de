@@ -15,7 +15,7 @@ export default composite({
   tts: ["站在X的四边", "在X的四边"],
   literal: "stand at the four sides of X / be at the four sides of X",
   fit: "plain",
-  topics: ["up-down-in-out"],
+  topics: ["beside-and-around"],
   isA: ["place-relation"],
   proposed: true,
 });

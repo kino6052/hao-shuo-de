@@ -12,7 +12,7 @@ export default composite({
   tts: ["如果不是这样，…"],
   literal: "if it is not like this, …",
   fit: "plain",
-  topics: ["joining-words"],
+  topics: ["if-unless-and-even-if"],
   isA: ["conjunction"],
   proposed: true,
 });

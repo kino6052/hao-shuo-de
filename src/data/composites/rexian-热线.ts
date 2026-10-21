@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["热线", "天天都有人帮你的话机"],
   fit: "natural",
-  topics: ["phone-and-computer"],
+  topics: ["phone-calls-and-messages"],
   isA: ["computer-or-phone"],
   proposed: true,
 });

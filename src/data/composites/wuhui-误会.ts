@@ -15,7 +15,7 @@ export default composite({
   tts: ["想不对了", "想是X，但不是X"],
   literal: "thought it wrongly / thought it was X, but it is not X",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["knowing-and-grasping"],
   isA: ["thinking-action"],
   proposed: true,
 });

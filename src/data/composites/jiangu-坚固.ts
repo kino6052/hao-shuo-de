@@ -15,7 +15,7 @@ export default composite({
   tts: ["很硬，不会坏", "很难打坏"],
   literal: "very hard, will not break / very hard to break",
   fit: "plain",
-  topics: ["how-it-feels"],
+  topics: ["hard-soft-heavy-light"],
   isA: ["touch-quality"],
   proposed: true,
 });

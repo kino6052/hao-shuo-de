@@ -15,7 +15,7 @@ export default composite({
   tts: ["不多不少", "不早不晚"],
   literal: "not more not less / not early not late",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["just-then-and-finally"],
   isA: ["adverb-word"],
   proposed: true,
 });

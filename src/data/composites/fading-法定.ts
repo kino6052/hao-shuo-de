@@ -16,7 +16,7 @@ export default composite({
   tts: ["法定", "国家的法决定的", "法说要这样的"],
   literal: "what the law of the country has decided / what the law says must be so",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["laws-and-rules"],
   isA: ["condition-quality"],
   proposed: true,
 });

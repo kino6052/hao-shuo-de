@@ -15,7 +15,7 @@ export default composite({
   tts: ["不让别人知道的东西", "只有很少的人知道的东西"],
   literal: "a thing you do not let other people know / a thing only very few people know",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["wisdom-secrets-and-lessons"],
   isA: ["idea"],
   proposed: true,
 });

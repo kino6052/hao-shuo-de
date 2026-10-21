@@ -12,7 +12,7 @@ export default composite({
   tts: ["上去"],
   literal: "go up",
   fit: "natural",
-  topics: ["changing"],
+  topics: ["increasing-and-rising"],
   isA: ["becoming"],
   examples: [
     {

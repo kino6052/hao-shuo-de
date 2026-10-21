@@ -15,7 +15,7 @@ export default composite({
   tts: ["把少了的部分放回去", "把不好的做好"],
   literal: "put back the part that is missing / do the not-good part well",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["joining-adding-replacing"],
   isA: ["making"],
   proposed: true,
 });

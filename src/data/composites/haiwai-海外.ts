@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["国外", "不在我们的国"],
   fit: "natural",
-  topics: ["countries-and-cities"],
+  topics: ["country-and-nation"],
   isA: ["place"],
   proposed: true,
 });

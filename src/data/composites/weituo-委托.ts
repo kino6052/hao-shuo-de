@@ -15,7 +15,7 @@ export default composite({
   tts: ["让别人替我做", "把X给Y做"],
   literal: "let someone else do it in my place / give X to Y to do",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["managing-and-progress"],
   isA: ["social-action"],
   proposed: true,
 });

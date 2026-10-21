@@ -14,7 +14,7 @@ export default composite({
   tts: ["七个日的最后一个日"],
   literal: "the last of the seven days",
   fit: "plain",
-  topics: ["calendar"],
+  topics: ["weeks-months-and-deadlines"],
   isA: ["calendar-name"],
   examples: [
     {

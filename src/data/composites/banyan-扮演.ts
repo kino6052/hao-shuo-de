@@ -15,7 +15,7 @@ export default composite({
   tts: ["做X的样子给别人看", "做X的样子"],
   literal: "make the look of X for other people to see / make the look of X",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["acting-and-roles"],
   isA: ["playing"],
   proposed: true,
 });

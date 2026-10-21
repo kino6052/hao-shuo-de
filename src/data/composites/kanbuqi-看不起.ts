@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["看不起", "觉得X不好"],
   fit: "natural",
-  topics: ["agreeing-and-praising"],
+  topics: ["refusing-and-criticising"],
   isA: ["feeling-and-wanting"],
   proposed: true,
 });

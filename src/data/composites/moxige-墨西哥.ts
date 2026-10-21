@@ -12,7 +12,7 @@ export default composite({
   tts: ["墨西哥", "墨西哥国"],
   literal: "the country of Mòxīgē",
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-countries"],
   isA: ["settlement"],
   proposed: true,
 });

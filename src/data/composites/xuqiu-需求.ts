@@ -15,7 +15,7 @@ export default composite({
   tts: ["人要的东西", "要的数"],
   literal: "what people want; how many are wanted",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["trade-and-the-market"],
   isA: ["idea"],
   proposed: true,
 });

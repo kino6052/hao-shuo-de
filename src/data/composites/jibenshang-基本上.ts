@@ -12,7 +12,7 @@ export default composite({
   tts: ["大部分"],
   literal: "the big part",
   fit: "natural",
-  topics: ["degree-words"],
+  topics: ["almost-and-probably"],
   isA: ["adverb-word"],
   examples: [
     {

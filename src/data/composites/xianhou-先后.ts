@@ -15,7 +15,7 @@ export default composite({
   tts: ["一个在前，一个在后", "一个一个的"],
   literal: "one in front, one behind",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["first-next-and-last"],
   isA: ["time-order"],
   proposed: true,
 });

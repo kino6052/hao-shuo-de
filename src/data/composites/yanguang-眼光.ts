@@ -15,7 +15,7 @@ export default composite({
   tts: ["看X好不好的能力", "看X的方法"],
   literal: "the ability to see whether X is good / the way of looking at X",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["noticing-and-observing"],
   isA: ["idea"],
   proposed: true,
 });

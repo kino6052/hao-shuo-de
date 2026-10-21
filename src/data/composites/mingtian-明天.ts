@@ -13,7 +13,7 @@ export default composite({
   literal: "bright-day / the next day",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["calendar"],
+  topics: ["days-and-dates"],
   isA: ["time-point"],
   examples: [
     {

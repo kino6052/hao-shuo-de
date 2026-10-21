@@ -15,7 +15,7 @@ export default composite({
   tts: ["不难", "部分很少的"],
   literal: "not hard / with few parts",
   fit: "natural",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["easy-and-convenient"],
   isA: ["truth-or-ease"],
   note: "bù nán for easy; the parts description for not complicated.",
   examples: [

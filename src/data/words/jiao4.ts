@@ -14,7 +14,7 @@ export default word("jiao4", {
     eng: "Call, be named, and \"have someone do it\". Names can't be asked about without it.",
     rus: "Называть(ся), а также «велеть кому-то». Без него не спросить, как кого зовут.",
   },
-  topics: ["talking"],
+  topics: ["saying-and-calling"],
   isA: ["speaking-action"],
   maps: "nimi, mu",
   senses: {

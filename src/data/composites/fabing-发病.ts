@@ -15,7 +15,7 @@ export default composite({
   tts: ["开始身体不好", "身体变不好"],
   literal: "begin: the body is not good / the body becomes not good",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["fever-colds-and-diseases"],
   isA: ["being-affected"],
   proposed: true,
 });

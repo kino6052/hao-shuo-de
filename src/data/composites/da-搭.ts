@@ -14,7 +14,7 @@ export default composite({
   tts: ["把很多X放在一起做起来"],
   literal: "put many X together and make it stand up",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["joining-adding-replacing"],
   isA: ["making"],
   proposed: true,
 });

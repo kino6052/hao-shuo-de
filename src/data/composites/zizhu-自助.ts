@@ -15,7 +15,7 @@ export default composite({
   tts: ["不用别人帮，我做", "我帮我"],
   literal: "no need for others to help, I do it / I help me",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["using-things-and-effort"],
   isA: ["working"],
   proposed: true,
 });

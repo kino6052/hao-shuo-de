@@ -15,7 +15,7 @@ export default composite({
   tts: ["工作里的地方", "工作的名字"],
   literal: "a place in the work / the name of the job",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["posts-and-pay"],
   isA: ["idea"],
   proposed: true,
 });

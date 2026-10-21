@@ -15,7 +15,7 @@ export default composite({
   tts: ["做东西的力气", "心和身体的力"],
   literal: "the strength for doing things / the strength of heart and body",
   fit: "plain",
-  topics: ["speed-and-strength"],
+  topics: ["energy-and-intensity"],
   isA: ["speed-or-strength"],
   proposed: true,
 });

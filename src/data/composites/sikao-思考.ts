@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:xiang3}}-{{word:xiang3}}", "{{word:xiang3}}"],
   tts: ["想想", "想"],
   fit: "word",
-  topics: ["knowing-and-understanding"],
+  topics: ["thinking-and-researching"],
   isA: ["thinking-action"],
   examples: [
     {

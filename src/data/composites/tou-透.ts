@@ -15,7 +15,7 @@ export default composite({
   tts: ["从这边通到那边", "都"],
   literal: "lead from this side to that side / all",
   fit: "plain",
-  topics: ["going-and-coming"],
+  topics: ["passing-through-and-across"],
   isA: ["moving-action"],
   proposed: true,
 });

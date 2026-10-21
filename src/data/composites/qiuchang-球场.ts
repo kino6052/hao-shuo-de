@@ -12,7 +12,7 @@ export default composite({
   tts: ["玩儿球的地方"],
   literal: "a place to play ball",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["athletes-and-sports-grounds"],
   isA: ["outdoor-place"],
   proposed: true,
 });

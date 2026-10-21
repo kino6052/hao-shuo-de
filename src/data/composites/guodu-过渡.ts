@@ -14,7 +14,7 @@ export default composite({
   tts: ["一点一点变到别的样子"],
   literal: "little by little become another way",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["becoming-and-turning-into"],
   isA: ["becoming"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["X也在里面", "把X也算"],
   literal: "X is inside too / count X too",
   fit: "plain",
-  topics: ["all-and-some"],
+  topics: ["whole-complete-and-widespread"],
   isA: ["amount-word"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["很好，也很不平常", "让人想不到的好"],
   literal: "very good, and very not normal / the good that people did not think of",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["wonderful-and-beautiful"],
   isA: ["value-quality"],
   proposed: true,
 });

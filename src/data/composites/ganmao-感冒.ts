@@ -12,7 +12,7 @@ export default composite({
   tts: ["鼻子不好"],
   literal: "a bad nose",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["fever-colds-and-diseases"],
   isA: ["state-name"],
   examples: [
     {

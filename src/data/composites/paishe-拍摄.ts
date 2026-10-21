@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X的样子放进机里", "用机把X的样子留下来"],
   literal: "put X's look into a machine / use a machine to keep X's look",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["filming-and-recording"],
   isA: ["making"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["新的让大家知道新闻的方法", "在网上看的新闻"],
   literal: "the new way to let everyone know the news / the news you see online",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["television-radio-and-media"],
   isA: ["idea"],
   proposed: true,
 });

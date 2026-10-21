@@ -12,7 +12,7 @@ export default composite({
   tts: ["心里要的东西"],
   literal: "what your heart wants",
   fit: "plain",
-  topics: ["liking-and-wanting"],
+  topics: ["wishes-hopes-and-longing"],
   isA: ["feeling-name"],
   examples: [
     {

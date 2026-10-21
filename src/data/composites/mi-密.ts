@@ -15,7 +15,7 @@ export default composite({
   tts: ["东西和东西中间空的地方很少", "很多东西在一起"],
   literal: "between thing and thing the empty place is very little / very many things together",
   fit: "plain",
-  topics: ["near-and-far"],
+  topics: ["near-far-and-distance"],
   isA: ["distance"],
   proposed: true,
 });

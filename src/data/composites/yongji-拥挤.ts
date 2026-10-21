@@ -15,7 +15,7 @@ export default composite({
   tts: ["人很多，没有空的地方", "很多人在一起"],
   literal: "many people, no empty place / many people together",
   fit: "plain",
-  topics: ["people-together"],
+  topics: ["crowds-and-the-public"],
   isA: ["condition-quality"],
   proposed: true,
 });

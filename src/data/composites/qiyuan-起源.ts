@@ -15,7 +15,7 @@ export default composite({
   tts: ["从哪里开始", "开始的地方"],
   literal: "where it starts from / the place where it started",
   fit: "plain",
-  topics: ["causes-and-results"],
+  topics: ["reasons-sources-and-conditions"],
   isA: ["idea"],
   proposed: true,
 });

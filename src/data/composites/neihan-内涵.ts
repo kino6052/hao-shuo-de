@@ -15,7 +15,7 @@ export default composite({
   tts: ["话里面的东西", "里面的东西"],
   literal: "the thing inside the words / the thing inside",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["key-points-and-principles"],
   isA: ["idea"],
   proposed: true,
 });

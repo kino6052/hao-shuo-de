@@ -12,7 +12,7 @@ export default composite({
   tts: ["和X在一起"],
   literal: "be together with X",
   fit: "plain",
-  topics: ["pushing-and-pulling"],
+  topics: ["hitting-and-bumping"],
   isA: ["handling-action"],
   proposed: true,
 });

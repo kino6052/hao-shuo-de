@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:shao3}}"],
   tts: ["少"],
   fit: "word",
-  topics: ["much-and-little"],
+  topics: ["many-and-few"],
   isA: ["amount-word"],
   examples: [
     {

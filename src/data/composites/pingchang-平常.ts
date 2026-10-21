@@ -15,7 +15,7 @@ export default composite({
   tts: ["平常", "和别的一样"],
   literal: "like the others",
   fit: "natural",
-  topics: ["state-of-things"],
+  topics: ["normal-and-ordinary"],
   isA: ["condition-quality"],
   examples: [
     {

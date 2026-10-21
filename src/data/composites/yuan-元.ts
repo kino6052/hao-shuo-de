@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:ge4}}", "\"yuán\""],
   tts: ["个", "元"],
   fit: "natural",
-  topics: ["money-and-paying"],
+  topics: ["money-and-cards"],
   isA: ["measure-unit"],
   proposed: true,
 });

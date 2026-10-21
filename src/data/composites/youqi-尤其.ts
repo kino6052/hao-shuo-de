@@ -12,7 +12,7 @@ export default composite({
   tts: ["最"],
   literal: "most",
   fit: "plain",
-  topics: ["degree-words"],
+  topics: ["especially-and-in-person"],
   isA: ["degree-word"],
   examples: [
     {

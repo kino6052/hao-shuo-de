@@ -15,7 +15,7 @@ export default composite({
   tts: ["很早就X", "很早以前就X了"],
   literal: "very early already X / very long ago already X",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["also-again-still-already"],
   isA: ["adverb-word"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["做出和真的一样的", "不是真的，但和真的一样"],
   literal: "make something just like the real one / not real, but the same as the real one",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["joining-adding-replacing"],
   isA: ["making"],
   proposed: true,
 });

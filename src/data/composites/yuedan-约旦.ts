@@ -12,7 +12,7 @@ export default composite({
   tts: ["约旦", "约旦国"],
   literal: "the country of Yuēdàn",
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-countries"],
   isA: ["settlement"],
   proposed: true,
 });

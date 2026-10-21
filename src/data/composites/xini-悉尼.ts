@@ -12,7 +12,7 @@ export default composite({
   tts: ["悉尼", "澳大利亚的大地方"],
   literal: "a big place of Àodàlìyà",
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-cities-and-states"],
   isA: ["settlement"],
   proposed: true,
 });

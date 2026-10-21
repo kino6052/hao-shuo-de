@@ -12,7 +12,7 @@ export default composite({
   tts: ["三个月"],
   literal: "three months",
   fit: "plain",
-  topics: ["calendar"],
+  topics: ["weeks-months-and-deadlines"],
   isA: ["time-span"],
   proposed: true,
 });

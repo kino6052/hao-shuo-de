@@ -12,7 +12,7 @@ export default composite({
   tts: ["做出新的东西"],
   literal: "make a new thing",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["improving-and-reforming"],
   isA: ["making"],
   proposed: true,
 });

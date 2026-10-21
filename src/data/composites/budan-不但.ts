@@ -9,7 +9,7 @@ export default composite({
   ru: "не только",
   pos: "conjunction",
   fit: "skip",
-  topics: ["joining-words"],
+  topics: ["and-or-and-also"],
   isA: ["conjunction"],
   note: "Say the first part, then yě: X, yě Y.",
   examples: [

@@ -15,7 +15,7 @@ export default composite({
   tts: ["以后会是什么样子", "以后好不好"],
   literal: "what it will look like later / whether it will be good later",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["after-later-and-future"],
   isA: ["idea"],
   proposed: true,
 });

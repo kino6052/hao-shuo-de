@@ -15,7 +15,7 @@ export default composite({
   tts: ["很长时间不变", "长时间还在"],
   literal: "does not change for a very long time / still there after a long time",
   fit: "plain",
-  topics: ["how-often"],
+  topics: ["long-and-short-time"],
   isA: ["frequency"],
   proposed: true,
 });

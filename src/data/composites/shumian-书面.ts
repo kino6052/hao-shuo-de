@@ -16,7 +16,7 @@ export default composite({
   tts: ["书面", "写的", "用写的，不用说的"],
   literal: "book side / written / done by writing, not by speaking",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["writing-things-down"],
   isA: ["condition-quality"],
   proposed: true,
 });

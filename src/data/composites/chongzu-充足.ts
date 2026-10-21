@@ -15,7 +15,7 @@ export default composite({
   tts: ["好了", "有了，不要多的了"],
   literal: "it is good now / there is some, no more is needed",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["enough-and-lacking"],
   isA: ["amount-word"],
   proposed: true,
 });

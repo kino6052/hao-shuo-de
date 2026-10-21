@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:jian1}}"],
   tts: ["间"],
   fit: "word",
-  topics: ["up-down-in-out"],
+  topics: ["middle-and-among"],
   isA: ["place-relation"],
   proposed: true,
 });

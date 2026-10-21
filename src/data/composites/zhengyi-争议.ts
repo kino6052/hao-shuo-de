@@ -15,7 +15,7 @@ export default composite({
   tts: ["觉得不一样，说来说去", "和X说不一样的话"],
   literal: "feel differently and keep on talking / say different words from X",
   fit: "plain",
-  topics: ["agreeing-and-praising"],
+  topics: ["comments-and-recommending"],
   isA: ["speaking-action"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["一个月的第一天到第十天", "一个月的前面的十天"],
   literal: "from the first day to the tenth day of a month / the first ten days of a month",
   fit: "plain",
-  topics: ["calendar"],
+  topics: ["weeks-months-and-deadlines"],
   isA: ["time-span"],
   proposed: true,
 });

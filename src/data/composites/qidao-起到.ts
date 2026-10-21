@@ -16,7 +16,7 @@ export default composite({
   tts: ["起到", "做X的工作", "有用"],
   literal: "rise to / do the job of X / be of use",
   fit: "natural",
-  topics: ["causes-and-results"],
+  topics: ["causing-and-leading-to"],
   isA: ["happening"],
   proposed: true,
 });

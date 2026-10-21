@@ -15,7 +15,7 @@ export default composite({
   tts: ["只是一个人这样想", "是我觉得，不一定是真的"],
   literal: "only one person thinks it this way / it is what I feel, not surely true",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["opinions-and-views"],
   isA: ["truth-or-ease"],
   proposed: true,
 });

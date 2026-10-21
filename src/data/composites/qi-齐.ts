@@ -15,7 +15,7 @@ export default composite({
   tts: ["都一样，不乱", "都在"],
   literal: "all the same, not messy / all there",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["empty-messy-clear"],
   isA: ["condition-quality"],
   proposed: true,
 });

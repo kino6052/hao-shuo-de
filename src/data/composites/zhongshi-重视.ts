@@ -15,7 +15,7 @@ export default composite({
   tts: ["觉得X很重要", "对X很用心"],
   literal: "feel that X is very important",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["opinions-and-views"],
   isA: ["thinking-action"],
   proposed: true,
 });

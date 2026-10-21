@@ -15,7 +15,7 @@ export default composite({
   tts: ["让X变硬，不会坏", "很硬，不会坏"],
   literal: "make X become hard so that it does not break / very hard, will not break",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["continuing-and-adapting"],
   isA: ["becoming"],
   proposed: true,
 });

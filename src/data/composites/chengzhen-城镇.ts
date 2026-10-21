@@ -15,7 +15,7 @@ export default composite({
   tts: ["有很多的家的地方", "人多，房子多的地方"],
   literal: "a place with very many homes / a place with many people and many houses",
   fit: "plain",
-  topics: ["countries-and-cities"],
+  topics: ["cities-towns-and-provinces"],
   isA: ["settlement"],
   proposed: true,
 });

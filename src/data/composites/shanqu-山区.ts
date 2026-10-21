@@ -14,7 +14,7 @@ export default composite({
   tts: ["高地很多的地方"],
   literal: "a place where the high ground is very much",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["mountains-and-slopes"],
   isA: ["outdoor-place"],
   proposed: true,
 });

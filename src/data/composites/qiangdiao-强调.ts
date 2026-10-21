@@ -15,7 +15,7 @@ export default composite({
   tts: ["说X很重要", "很多次说X"],
   literal: "say X is very important / say X many times",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["explaining-and-describing"],
   isA: ["speaking-action"],
   proposed: true,
 });

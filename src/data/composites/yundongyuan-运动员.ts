@@ -12,7 +12,7 @@ export default composite({
   tts: ["动身体的人"],
   literal: "a person who exercises",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["athletes-and-sports-grounds"],
   isA: ["worker"],
   examples: [
     {

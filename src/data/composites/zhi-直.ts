@@ -14,7 +14,7 @@ export default composite({
   tts: ["和长的东西一样"],
   literal: "like a stick",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["flat-straight-curved"],
   isA: ["shape-quality"],
   examples: [
     {

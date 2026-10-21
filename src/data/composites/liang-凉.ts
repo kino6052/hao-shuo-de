@@ -12,7 +12,7 @@ export default composite({
   tts: ["不热，有一点冷"],
   literal: "not hot, a little cold",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["hot-and-cold-weather"],
   isA: ["touch-quality"],
   proposed: true,
 });

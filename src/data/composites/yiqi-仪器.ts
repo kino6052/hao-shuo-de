@@ -14,7 +14,7 @@ export default composite({
   tts: ["做学的工作用的工具"],
   literal: "the tool used when doing the work of science",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-subjects-and-courses"],
   isA: ["tool"],
   proposed: true,
 });

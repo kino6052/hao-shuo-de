@@ -15,7 +15,7 @@ export default composite({
   tts: ["得到的金", "得到的好的东西"],
   literal: "the money one gets / the good things one gets",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["earning-and-compensation"],
   isA: ["idea"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["用数字写X", "让X只有数字"],
   literal: "write X with numbers / make X only numbers",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["smart-and-digital-technology"],
   isA: ["becoming"],
   proposed: true,
 });

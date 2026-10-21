@@ -15,7 +15,7 @@ export default composite({
   tts: ["说这是真的", "说是我做的"],
   literal: "say this is true / say it was I who did it",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["introducing-and-passing-on"],
   isA: ["speaking-action"],
   proposed: true,
 });

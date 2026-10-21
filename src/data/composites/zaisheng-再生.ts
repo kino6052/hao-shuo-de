@@ -15,7 +15,7 @@ export default composite({
   tts: ["又活过来", "把用过的X又用"],
   literal: "come alive again / use the used X again",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["becoming-and-turning-into"],
   isA: ["becoming"],
   proposed: true,
 });

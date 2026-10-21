@@ -12,7 +12,7 @@ export default composite({
   tts: ["可是", "但是"],
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["joining-words"],
+  topics: ["but-and-although"],
   isA: ["conjunction"],
   examples: [
     {

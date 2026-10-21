@@ -12,7 +12,7 @@ export default composite({
   tts: ["想X", "如果X，就好了"],
   literal: "want X to be so / if X, that would be good",
   fit: "plain",
-  topics: ["liking-and-wanting"],
+  topics: ["wishes-hopes-and-longing"],
   isA: ["feeling-and-wanting"],
   proposed: true,
 });

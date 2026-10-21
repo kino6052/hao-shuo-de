@@ -14,7 +14,7 @@ export default composite({
   tts: ["把手放进X里面，把东西拿出来"],
   literal: "put your hand into X and take the thing out",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["taking-picking-up-and-using"],
   isA: ["handling-action"],
   proposed: true,
 });

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:re4}}"],
   tts: ["热"],
   fit: "word",
-  topics: ["how-it-feels"],
+  topics: ["hot-cold-and-warm"],
   isA: ["touch-quality"],
   examples: [
     {

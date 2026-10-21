@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X放在很多不同的地方", "把X分开放到地上"],
   literal: "put X in many different places / split X up and put it on the ground",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["throwing-spilling-and-cutting"],
   isA: ["handling-action"],
   proposed: true,
 });

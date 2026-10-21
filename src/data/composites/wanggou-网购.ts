@@ -12,7 +12,7 @@ export default composite({
   tts: ["在网上买东西"],
   literal: "buy things on the net",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["buying-and-selling"],
   isA: ["trade-action"],
   proposed: true,
 });

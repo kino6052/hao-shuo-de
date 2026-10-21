@@ -14,7 +14,7 @@ export default composite({
   tts: ["做出新东西的人得到的，别人不能用的写的东西"],
   literal: "the written thing the maker of a new thing gets, which others cannot use",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["rights-duties-and-agreements"],
   isA: ["idea"],
   proposed: true,
 });

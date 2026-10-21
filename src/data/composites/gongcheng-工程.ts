@@ -15,7 +15,7 @@ export default composite({
   tts: ["很大的工作", "做房子，做路的工作"],
   literal: "a very big job / the job of making houses and roads",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["work-and-effort"],
   isA: ["activity-name"],
   proposed: true,
 });

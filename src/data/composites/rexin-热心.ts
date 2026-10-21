@@ -12,7 +12,7 @@ export default composite({
   tts: ["热心", "很想帮人"],
   literal: "warm heart / want very much to help people",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["kind-honest-and-mean"],
   isA: ["character-quality"],
   proposed: true,
 });

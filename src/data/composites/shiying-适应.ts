@@ -15,7 +15,7 @@ export default composite({
   tts: ["变到对X好", "一点一点觉得X好"],
   literal: "become good for X / little by little feel X is fine",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["continuing-and-adapting"],
   isA: ["becoming"],
   proposed: true,
 });

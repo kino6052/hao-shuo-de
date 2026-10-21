@@ -12,6 +12,6 @@ export default composite({
   tts: ["说给很多人听"],
   literal: "say it for many people to hear",
   fit: "plain",
-  topics: ["news-and-events"],
+  topics: ["announcing-and-spreading"],
   isA: ["speaking-action"],
 });

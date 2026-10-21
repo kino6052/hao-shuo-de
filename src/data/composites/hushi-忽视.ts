@@ -15,7 +15,7 @@ export default composite({
   tts: ["不看X，不想X", "觉得X不重要"],
   literal: "do not look at X, do not think of X / feel X is not important",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["noticing-and-observing"],
   isA: ["thinking-action"],
   proposed: true,
 });

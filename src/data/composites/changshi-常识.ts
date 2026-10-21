@@ -14,7 +14,7 @@ export default composite({
   tts: ["人人都知道的东西"],
   literal: "a thing everyone knows",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["wisdom-secrets-and-lessons"],
   isA: ["idea"],
   proposed: true,
 });

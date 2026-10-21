@@ -12,7 +12,7 @@ export default composite({
   tts: ["很少", "一点"],
   literal: "very few / a little",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["many-and-few"],
   isA: ["amount-word"],
   proposed: true,
 });

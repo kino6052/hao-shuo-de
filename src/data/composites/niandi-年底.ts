@@ -15,7 +15,7 @@ export default composite({
   tts: ["年的最后", "最后一个月"],
   literal: "the last of the year; the last month",
   fit: "plain",
-  topics: ["calendar"],
+  topics: ["years-and-centuries"],
   isA: ["time-point"],
   proposed: true,
 });

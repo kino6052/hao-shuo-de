@@ -12,7 +12,7 @@ export default composite({
   tts: ["心在X上"],
   literal: "the heart on X",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["studying-and-practising"],
   isA: ["character-quality"],
   examples: [
     {

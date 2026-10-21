@@ -12,7 +12,7 @@ export default composite({
   tts: ["学的书"],
   literal: "a book for learning",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-subjects-and-courses"],
   isA: ["paper-thing"],
   proposed: true,
 });

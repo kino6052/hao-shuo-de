@@ -12,7 +12,7 @@ export default composite({
   tts: ["好好看"],
   literal: "look carefully",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["noticing-and-observing"],
   isA: ["perceiving"],
   proposed: true,
 });

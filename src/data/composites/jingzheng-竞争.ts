@@ -14,6 +14,6 @@ export default composite({
   tts: ["和别人打，看谁最好"],
   literal: "fight with others to see who is best",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["trade-and-the-market"],
   isA: ["social-action"],
 });

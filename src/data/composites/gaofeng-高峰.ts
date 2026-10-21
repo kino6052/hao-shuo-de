@@ -16,7 +16,7 @@ export default composite({
   tts: ["最高的地方", "最好的时候", "人最多的时候"],
   literal: "the highest place / the best time / the time with the most people",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["mountains-and-slopes"],
   isA: ["landform"],
   proposed: true,
 });

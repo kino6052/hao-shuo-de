@@ -12,7 +12,7 @@ export default composite({
   tts: ["把X做完", "要给的"],
   literal: "get X done / what must be given",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["doing-and-carrying-out"],
   isA: ["making"],
   proposed: true,
 });

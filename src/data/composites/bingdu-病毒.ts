@@ -14,7 +14,7 @@ export default composite({
   tts: ["让身体不好的很小的东西"],
   literal: "a very small thing that makes the body not well",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["germs-poison-and-allergy"],
   isA: ["natural-thing"],
   proposed: true,
 });

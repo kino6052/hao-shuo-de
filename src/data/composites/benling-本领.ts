@@ -15,7 +15,7 @@ export default composite({
   tts: ["能力", "能做好的力"],
   literal: "ability / the strength to do things well",
   fit: "natural",
-  topics: ["describing-people"],
+  topics: ["clever-skilled-and-famous"],
   isA: ["character-quality"],
   proposed: true,
 });

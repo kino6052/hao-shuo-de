@@ -14,7 +14,7 @@ export default composite({
   tts: ["把很多东西放在一起"],
   literal: "put many things together",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["thinking-and-researching"],
   isA: ["thinking-action"],
   proposed: true,
 });

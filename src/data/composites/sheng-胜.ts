@@ -14,7 +14,7 @@ export default composite({
   tts: ["拿到比别人好的结果"],
   literal: "get a result better than other people's",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["winning-losing-and-scores"],
   isA: ["starting-and-stopping"],
   examples: [
     {

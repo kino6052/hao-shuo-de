@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:xian4}}-{{word:zai4}}", "{{word:zhe4}}-{{word:xie1}} {{word:nian2}}"],
   tts: ["现在", "这些年"],
   fit: "natural",
-  topics: ["before-and-after"],
+  topics: ["now-and-recently"],
   isA: ["time-point"],
   proposed: true,
 });

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:yong4}}"],
   tts: ["用"],
   fit: "word",
-  topics: ["taking-and-holding"],
+  topics: ["taking-picking-up-and-using"],
   isA: ["handling-action"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["还没做完，只开始了", "第一次做的，还没做好"],
   literal: "not yet done, only started / done for the first time, not yet done well",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["first-next-and-last"],
   isA: ["time-order"],
   proposed: true,
 });

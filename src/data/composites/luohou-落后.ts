@@ -15,7 +15,7 @@ export default composite({
   tts: ["在别人后面", "比别人不好"],
   literal: "behind other people / not as good as other people",
   fit: "plain",
-  topics: ["same-and-different"],
+  topics: ["more-and-less-than"],
   isA: ["condition-quality"],
   proposed: true,
 });

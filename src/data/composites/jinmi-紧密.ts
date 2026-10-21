@@ -15,7 +15,7 @@ export default composite({
   tts: ["在一起，不能分开", "不远，不能分开"],
   literal: "together, cannot be separated / not far, cannot be separated",
   fit: "plain",
-  topics: ["near-and-far"],
+  topics: ["near-far-and-distance"],
   isA: ["distance"],
   proposed: true,
 });

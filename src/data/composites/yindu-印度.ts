@@ -12,7 +12,7 @@ export default composite({
   tts: ["印度", "印度国"],
   literal: "the country of Yìndù",
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-countries"],
   isA: ["settlement"],
   proposed: true,
 });

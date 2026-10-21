@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:gong1}}"],
   tts: ["工"],
   fit: "word",
-  topics: ["working-life"],
+  topics: ["work-and-effort"],
   isA: ["activity-name"],
   proposed: true,
 });

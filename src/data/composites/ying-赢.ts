@@ -12,7 +12,7 @@ export default composite({
   tts: ["比别的人好"],
   literal: "do better than the others",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["winning-losing-and-scores"],
   isA: ["starting-and-stopping"],
   examples: [
     {

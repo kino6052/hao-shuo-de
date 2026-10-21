@@ -15,7 +15,7 @@ export default composite({
   tts: ["在网上买东西和给东西得金", "网上买东西的地方"],
   literal: "buy things and sell things on the net; a place on the net to buy things",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["companies-and-products"],
   isA: ["activity-name"],
   proposed: true,
 });

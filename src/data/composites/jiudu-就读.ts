@@ -12,7 +12,7 @@ export default composite({
   tts: ["在学校学", "在X学"],
   literal: "study at school / study at X",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-days-and-years"],
   isA: ["learning-and-teaching"],
   proposed: true,
 });

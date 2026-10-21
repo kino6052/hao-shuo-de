@@ -14,7 +14,7 @@ export default composite({
   tts: ["看对不对，好不好"],
   literal: "see whether it is right, whether it is good",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["checking-and-testing"],
   isA: ["thinking-action"],
   proposed: true,
 });

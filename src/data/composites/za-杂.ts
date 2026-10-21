@@ -15,7 +15,7 @@ export default composite({
   tts: ["有很多不同的东西在一起", "乱"],
   literal: "many different things are together / messy",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["empty-messy-clear"],
   isA: ["condition-quality"],
   proposed: true,
 });

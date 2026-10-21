@@ -15,7 +15,7 @@ export default composite({
   tts: ["很很", "很好，很不一样"],
   literal: "very-very / very good, very different",
   fit: "plain",
-  topics: ["degree-words"],
+  topics: ["very-and-most"],
   isA: ["degree-word"],
   proposed: true,
 });

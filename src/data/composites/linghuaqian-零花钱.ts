@@ -14,7 +14,7 @@ export default composite({
   tts: ["给孩子，买小东西用的金"],
   literal: "money given to a child, used for buying small things",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["money-and-cards"],
   isA: ["money-thing"],
   proposed: true,
 });

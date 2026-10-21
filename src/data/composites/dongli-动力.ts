@@ -15,7 +15,7 @@ export default composite({
   ],
   tts: ["动力", "让东西动起来的力", "让人想做的力"],
   fit: "natural",
-  topics: ["speed-and-strength"],
+  topics: ["energy-and-intensity"],
   isA: ["speed-or-strength"],
   proposed: true,
 });

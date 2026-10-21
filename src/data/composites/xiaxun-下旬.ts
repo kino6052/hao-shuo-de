@@ -15,7 +15,7 @@ export default composite({
   tts: ["一个月的第二十一天到最后一天", "一个月的最后十天"],
   literal: "from the twenty-first day to the last day of a month / the last ten days of a month",
   fit: "plain",
-  topics: ["calendar"],
+  topics: ["weeks-months-and-deadlines"],
   isA: ["time-span"],
   proposed: true,
 });

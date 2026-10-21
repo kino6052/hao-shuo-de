@@ -12,7 +12,7 @@ export default composite({
   tts: ["可用", "能用的"],
   literal: "can be used",
   fit: "natural",
-  topics: ["state-of-things"],
+  topics: ["situations-and-needs"],
   isA: ["condition-quality"],
   proposed: true,
 });

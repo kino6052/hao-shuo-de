@@ -15,7 +15,7 @@ export default composite({
   tts: ["不好的地方", "不好的结果"],
   literal: "the not-good part / the not-good result",
   fit: "plain",
-  topics: ["causes-and-results"],
+  topics: ["harm-and-bad-results"],
   isA: ["idea"],
   proposed: true,
 });

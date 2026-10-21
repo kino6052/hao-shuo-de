@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:bu4}}-{{word:liao4}}", "{{word:mei2}} {{word:xiang3}} {{word:dao4}}"],
   tts: ["不料", "没想到"],
   fit: "natural",
-  topics: ["joining-words"],
+  topics: ["then-for-example-in-short"],
   isA: ["conjunction"],
   proposed: true,
 });

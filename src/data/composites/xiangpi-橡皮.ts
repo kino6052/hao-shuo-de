@@ -14,7 +14,7 @@ export default composite({
   tts: ["把写的字拿走的工具"],
   literal: "the tool that takes away what was written",
   fit: "plain",
-  topics: ["classroom"],
+  topics: ["pens-books-and-school-bags"],
   isA: ["writing-tool"],
   proposed: true,
 });

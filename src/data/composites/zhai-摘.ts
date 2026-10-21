@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X从植物上拿下来", "把X拿下来"],
   literal: "take X down from the plant / take X down",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["taking-picking-up-and-using"],
   isA: ["handling-action"],
   proposed: true,
 });

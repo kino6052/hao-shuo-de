@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["心里", "在心里的东西"],
   fit: "natural",
-  topics: ["ideas-and-opinions"],
+  topics: ["mind-and-imagination"],
   isA: ["idea"],
   proposed: true,
 });

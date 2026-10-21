@@ -15,7 +15,7 @@ export default composite({
   tts: ["分开去不同的地方", "不在一起了"],
   literal: "separate and go to different places / no longer together",
   fit: "plain",
-  topics: ["going-and-coming"],
+  topics: ["leaving-stopping-and-retreating"],
   isA: ["moving-action"],
   proposed: true,
 });

@@ -14,7 +14,7 @@ export default composite({
   tts: ["看的，说真的发生的东西"],
   literal: "something to watch that tells what really happened",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["films-and-shows"],
   isA: ["work-of-art"],
   proposed: true,
 });

@@ -14,7 +14,7 @@ export default word("yang4", {
     eng: "Look, way: {{word:yi1}}-{{word:yang4}} (the same) and {{word:zhe4}}-{{word:yang4}} (like this) are built on it.",
     rus: "Вид, образ: на нём построены {{word:yi1}}-{{word:yang4}} (одинаковый) и {{word:zhe4}}-{{word:yang4}} (так).",
   },
-  topics: ["much-and-little"],
+  topics: ["totals-and-parts"],
   isA: ["idea"],
   atom: {
     eng: "Its description would be circular with zhǒng: each is said with the other.",

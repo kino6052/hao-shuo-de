@@ -16,7 +16,7 @@ export default composite({
   tts: ["平等", "都一样", "人和人一样"],
   literal: "all the same / people and people the same",
   fit: "natural",
-  topics: ["same-and-different"],
+  topics: ["same-and-equal"],
   isA: ["comparison"],
   proposed: true,
 });

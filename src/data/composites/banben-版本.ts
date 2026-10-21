@@ -15,7 +15,7 @@ export default composite({
   tts: ["X的一个不同的样子", "新的X和老的X不同"],
   literal: "one different look of X / the new X and the old X differ",
   fit: "plain",
-  topics: ["same-and-different"],
+  topics: ["different-and-varied"],
   isA: ["idea"],
   proposed: true,
 });

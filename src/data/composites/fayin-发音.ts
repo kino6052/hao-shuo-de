@@ -12,7 +12,7 @@ export default composite({
   tts: ["说的声音"],
   literal: "the sound of speaking",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["saying-and-calling"],
   isA: ["speaking-action"],
   examples: [
     {

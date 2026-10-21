@@ -15,7 +15,7 @@ export default composite({
   tts: ["还要多一点", "比现在还多"],
   literal: "a bit more again / even more than now",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["only-even-and-more"],
   isA: ["adverb-word"],
   proposed: true,
 });

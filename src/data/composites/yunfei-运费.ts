@@ -14,7 +14,7 @@ export default composite({
   tts: ["把东西拿到别的地方要给的金"],
   literal: "the money you must give to take things to another place",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["prices-and-costs"],
   isA: ["money-thing"],
   proposed: true,
 });

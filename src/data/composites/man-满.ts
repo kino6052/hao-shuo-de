@@ -12,7 +12,7 @@ export default composite({
   tts: ["没有地方了"],
   literal: "no room left",
   fit: "natural",
-  topics: ["much-and-little"],
+  topics: ["enough-and-lacking"],
   isA: ["condition-quality"],
   examples: [
     {

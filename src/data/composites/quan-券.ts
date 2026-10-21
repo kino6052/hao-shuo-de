@@ -15,7 +15,7 @@ export default composite({
   tts: ["让你少给金的写的东西", "有了它就能拿东西的写的东西"],
   literal: "a written thing that lets you pay less money / a written thing with which you can take things",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["prices-and-discounts"],
   isA: ["paper-thing"],
   proposed: true,
 });

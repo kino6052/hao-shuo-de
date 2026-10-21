@@ -15,7 +15,7 @@ export default composite({
   tts: ["很大的有水的地方的一部分", "在很大的水里面的地方"],
   literal: "a part of the very big place with water / a place inside the very big water",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["sea-coast-and-islands"],
   isA: ["landform"],
   proposed: true,
 });

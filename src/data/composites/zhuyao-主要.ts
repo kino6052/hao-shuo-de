@@ -12,7 +12,7 @@ export default composite({
   tts: ["大部分", "最重要"],
   literal: "most / most important",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["important-and-interesting"],
   isA: ["value-quality"],
   examples: [
     {

@@ -14,7 +14,7 @@ export default composite({
   tts: ["做一下，看会发生什么"],
   literal: "do it and see what happens",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["thinking-and-researching"],
   isA: ["thinking-action"],
   examples: [
     {

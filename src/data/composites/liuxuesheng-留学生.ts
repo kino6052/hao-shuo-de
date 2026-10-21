@@ -15,7 +15,7 @@ export default composite({
   tts: ["留学生", "在外国学的人"],
   literal: "a person who learns in a foreign country",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-days-and-years"],
   isA: ["person"],
   proposed: true,
 });

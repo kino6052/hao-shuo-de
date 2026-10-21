@@ -15,7 +15,7 @@ export default composite({
   tts: ["眼睛看不远", "远的东西看不见"],
   literal: "the eyes can't see far / can't see far things",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["pain-and-feeling-unwell"],
   isA: ["bodily-state"],
   proposed: true,
 });

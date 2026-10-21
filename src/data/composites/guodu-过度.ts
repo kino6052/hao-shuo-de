@@ -15,7 +15,7 @@ export default composite({
   tts: ["多了，不好", "比可以的多"],
   literal: "there is too much, it is not good / more than is allowed",
   fit: "plain",
-  topics: ["degree-words"],
+  topics: ["too-much-and-completely"],
   isA: ["degree-word"],
   proposed: true,
 });

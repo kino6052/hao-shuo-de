@@ -15,7 +15,7 @@ export default composite({
   tts: ["觉得好", "身体和心里都觉得好"],
   literal: "feel good / body and heart both feel good",
   fit: "plain",
-  topics: ["how-it-feels"],
+  topics: ["comfortable-smooth-wet-dry"],
   isA: ["bodily-state"],
   proposed: true,
 });

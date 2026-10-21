@@ -15,7 +15,7 @@ export default composite({
   tts: ["学的和想没有的东西", "说学的能做出什么的话"],
   literal: "science and thinking of things that are not there / words about what science can make",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["films-and-shows"],
   isA: ["work-of-art"],
   proposed: true,
 });

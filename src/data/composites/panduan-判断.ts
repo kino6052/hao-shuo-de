@@ -15,7 +15,7 @@ export default composite({
   tts: ["说X对不对", "想X是不是对"],
   literal: "say whether X is right or not",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["reasons-and-logic"],
   isA: ["thinking-action"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["比别人都好", "比别的部分多出来"],
   literal: "better than everyone else",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["special-and-strange"],
   isA: ["condition-quality"],
   proposed: true,
 });

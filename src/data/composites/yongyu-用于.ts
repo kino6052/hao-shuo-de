@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["用在X上", "用来做X"],
   fit: "natural",
-  topics: ["making-and-doing"],
+  topics: ["using-things-and-effort"],
   isA: ["doing"],
   proposed: true,
 });

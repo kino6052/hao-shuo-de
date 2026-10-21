@@ -15,7 +15,7 @@ export default composite({
   tts: ["心里不乱", "头不乱"],
   literal: "not messy in the heart; the head is not messy",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["brave-calm-and-lively"],
   isA: ["character-quality"],
   proposed: true,
 });

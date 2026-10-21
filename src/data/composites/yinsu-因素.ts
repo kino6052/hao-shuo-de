@@ -12,7 +12,7 @@ export default composite({
   tts: ["为什么的一部分"],
   literal: "one part of the why",
   fit: "plain",
-  topics: ["causes-and-results"],
+  topics: ["reasons-sources-and-conditions"],
   isA: ["cause-and-effect"],
   proposed: true,
 });

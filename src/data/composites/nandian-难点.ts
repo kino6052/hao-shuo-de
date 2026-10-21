@@ -16,7 +16,7 @@ export default composite({
   tts: ["难点", "难的地方", "最难的部分"],
   literal: "hard-point / the hard place / the hardest part",
   fit: "natural",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["hard-and-difficult"],
   isA: ["state-name"],
   proposed: true,
 });

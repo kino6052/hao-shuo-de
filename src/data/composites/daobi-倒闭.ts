@@ -15,7 +15,7 @@ export default composite({
   tts: ["工作的地方没有金了，关门了", "没有金，不能做了"],
   literal: "the place of work has no money any more, it closes its door / no money, cannot do it any more",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["profit-loss-and-bankruptcy"],
   isA: ["happening"],
   proposed: true,
 });

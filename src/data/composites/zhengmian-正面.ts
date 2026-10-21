@@ -12,7 +12,7 @@ export default composite({
   tts: ["前面", "好的一面"],
   literal: "the front / the good side",
   fit: "plain",
-  topics: ["up-down-in-out"],
+  topics: ["front-and-back"],
   isA: ["place-relation"],
   proposed: true,
 });

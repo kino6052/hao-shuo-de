@@ -15,7 +15,7 @@ export default composite({
   tts: ["把金看好", "看好金，让金变多"],
   literal: "look after the money well / look after the money and make it become more",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["rich-poor-and-worth"],
   isA: ["trade-action"],
   proposed: true,
 });

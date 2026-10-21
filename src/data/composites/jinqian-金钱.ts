@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:jin1}}"],
   tts: ["金"],
   fit: "natural",
-  topics: ["money-and-paying"],
+  topics: ["money-and-cards"],
   isA: ["money-thing"],
   proposed: true,
 });

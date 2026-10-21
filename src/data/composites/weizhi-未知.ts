@@ -12,7 +12,7 @@ export default composite({
   tts: ["不知道的"],
   literal: "not known",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["wisdom-secrets-and-lessons"],
   isA: ["condition-quality"],
   proposed: true,
 });

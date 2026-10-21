@@ -15,7 +15,7 @@ export default composite({
   tts: ["在变的样子", "在动的，在变的"],
   literal: "the way it is changing / moving and changing",
   fit: "plain",
-  topics: ["news-and-events"],
+  topics: ["news-and-press"],
   isA: ["idea"],
   proposed: true,
 });

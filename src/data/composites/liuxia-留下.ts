@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["留下", "把X放在这里，人走了"],
   fit: "natural",
-  topics: ["taking-and-holding"],
+  topics: ["gathering-keeping-and-storing"],
   isA: ["placing"],
   proposed: true,
 });

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:tong2}}-{{word:yi1}}", "{{word:yi1}}-{{word:yang4}}"],
   tts: ["同一", "一样"],
   fit: "natural",
-  topics: ["same-and-different"],
+  topics: ["same-and-equal"],
   isA: ["comparison"],
   proposed: true,
 });

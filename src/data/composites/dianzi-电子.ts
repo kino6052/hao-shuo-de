@@ -11,7 +11,7 @@ export default composite({
   hsd: ["\"diàn\"-{{word:zi}}"],
   tts: ["电子"],
   fit: "natural",
-  topics: ["phone-and-computer"],
+  topics: ["smart-and-digital-technology"],
   isA: ["idea"],
   proposed: true,
 });

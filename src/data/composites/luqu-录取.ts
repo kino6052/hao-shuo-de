@@ -12,7 +12,7 @@ export default composite({
   tts: ["说你可以进来"],
   literal: "say you may come in",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-days-and-years"],
   isA: ["social-action"],
   proposed: true,
 });

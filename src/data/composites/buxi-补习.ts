@@ -14,7 +14,7 @@ export default composite({
   tts: ["在学校外面多学"],
   literal: "learn more outside the school",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["studying-and-practising"],
   isA: ["learning-and-teaching"],
   proposed: true,
 });

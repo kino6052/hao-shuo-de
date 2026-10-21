@@ -15,7 +15,7 @@ export default composite({
   tts: ["很有价值", "要很多金，很重要"],
   literal: "very valuable / needs much money, very important",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["rich-poor-and-worth"],
   isA: ["value-quality"],
   proposed: true,
 });

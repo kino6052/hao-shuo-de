@@ -12,7 +12,7 @@ export default composite({
   tts: ["让人想来"],
   literal: "make people want to come",
   fit: "plain",
-  topics: ["liking-and-wanting"],
+  topics: ["interest-and-enjoying"],
   isA: ["feeling-and-wanting"],
   examples: [
     {

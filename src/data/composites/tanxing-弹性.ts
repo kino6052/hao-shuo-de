@@ -15,7 +15,7 @@ export default composite({
   tts: ["变了样子后，能回到以前的样子的力", "用手把X变小，X又变大的力"],
   literal: "the strength to go back to the old shape after the shape changed / the strength by which X, made small by hand, becomes big again",
   fit: "plain",
-  topics: ["how-it-feels"],
+  topics: ["hard-soft-heavy-light"],
   isA: ["touch-quality"],
   proposed: true,
 });

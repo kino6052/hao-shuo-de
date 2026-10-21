@@ -15,7 +15,7 @@ export default composite({
   tts: ["用机看X，把X放进算的机", "用机一点一点看X"],
   literal: "look at X with a machine and put X into a computer / look at X little by little with a machine",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["smart-and-digital-technology"],
   isA: ["perceiving"],
   proposed: true,
 });

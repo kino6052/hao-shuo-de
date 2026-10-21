@@ -15,7 +15,7 @@ export default composite({
   tts: ["看起来是X", "看起来和X一样"],
   literal: "looks like it is / looks the same as X",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["appearing-and-scenes"],
   isA: ["perceiving"],
   proposed: true,
 });

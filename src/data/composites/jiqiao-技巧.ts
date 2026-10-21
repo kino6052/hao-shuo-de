@@ -15,7 +15,7 @@ export default composite({
   tts: ["做好东西的方法", "知道怎么做好"],
   literal: "the way of doing things well / knowing how to do it well",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["building-and-producing"],
   isA: ["idea"],
   proposed: true,
 });

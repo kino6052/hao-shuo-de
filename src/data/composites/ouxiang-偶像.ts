@@ -15,7 +15,7 @@ export default composite({
   tts: ["很多人爱的人", "很多人爱的有名的人"],
   literal: "a person many people love / a famous person many people love",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["acting-and-roles"],
   isA: ["person"],
   proposed: true,
 });

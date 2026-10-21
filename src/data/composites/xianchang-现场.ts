@@ -12,7 +12,7 @@ export default composite({
   tts: ["发生的地方"],
   literal: "the place where it happened",
   fit: "plain",
-  topics: ["news-and-events"],
+  topics: ["events-and-luck"],
   isA: ["place"],
   examples: [
     {

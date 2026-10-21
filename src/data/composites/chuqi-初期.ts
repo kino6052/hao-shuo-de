@@ -15,7 +15,7 @@ export default composite({
   tts: ["开始的时候", "最早的时间"],
   literal: "the time of beginning / the earliest time",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["moments-and-stages"],
   isA: ["time-span"],
   proposed: true,
 });

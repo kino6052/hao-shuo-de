@@ -14,7 +14,7 @@ export default composite({
   tts: ["比别的人好的部分"],
   literal: "the part that's better than others",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["useful-and-harmful"],
   isA: ["value-quality"],
   examples: [
     {

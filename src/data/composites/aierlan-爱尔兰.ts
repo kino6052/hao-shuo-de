@@ -12,7 +12,7 @@ export default composite({
   tts: ["爱尔兰", "爱尔兰国"],
   literal: "the country of Ài'ěrlán",
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-countries"],
   isA: ["settlement"],
   proposed: true,
 });

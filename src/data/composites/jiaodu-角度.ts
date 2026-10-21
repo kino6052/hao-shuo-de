@@ -15,7 +15,7 @@ export default composite({
   tts: ["两边在一起的样子", "站在哪里看"],
   literal: "the look of two sides coming together / where you stand to look",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["flat-straight-curved"],
   isA: ["shape-quality"],
   proposed: true,
 });

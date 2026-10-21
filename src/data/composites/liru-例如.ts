@@ -12,7 +12,7 @@ export default composite({
   tts: ["你看，X", "有一个，是X"],
   literal: "look, X",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["topics-and-examples"],
   isA: ["set-phrase"],
   proposed: true,
 });

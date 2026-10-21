@@ -15,7 +15,7 @@ export default composite({
   tts: ["还在的", "没用完的"],
   literal: "what is still there / what is not used up",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["extra-and-limits"],
   isA: ["amount-word"],
   proposed: true,
 });

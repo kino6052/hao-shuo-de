@@ -14,7 +14,7 @@ export default composite({
   tts: ["在放东西的面上打的小球"],
   literal: "the small ball hit on the surface where things are put",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["ball-sports"],
   isA: ["activity-name"],
   proposed: true,
 });

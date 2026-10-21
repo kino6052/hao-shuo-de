@@ -15,7 +15,7 @@ export default composite({
   tts: ["买的东西", "要拿到别的地方的东西"],
   literal: "things that are bought / things to be taken to another place",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["goods-and-customers"],
   isA: ["made-thing"],
   proposed: true,
 });

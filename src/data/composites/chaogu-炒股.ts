@@ -14,7 +14,7 @@ export default composite({
   tts: ["买工作的地方的一部分，想让金变多"],
   literal: "buy a part of a place of work, wanting money to become more",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["stocks-and-investing"],
   isA: ["trade-action"],
   proposed: true,
 });

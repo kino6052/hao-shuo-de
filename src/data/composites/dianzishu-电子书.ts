@@ -15,7 +15,7 @@ export default composite({
   tts: ["\"电\"子书", "用\"电\"子的机看的书"],
   literal: "a book read with an electronic machine",
   fit: "natural",
-  topics: ["phone-and-computer"],
+  topics: ["software-files-and-accounts"],
   isA: ["made-thing"],
   proposed: true,
 });

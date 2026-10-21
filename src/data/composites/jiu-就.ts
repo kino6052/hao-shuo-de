@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:jiu4}}"],
   tts: ["就"],
   fit: "word",
-  topics: ["adverbs"],
+  topics: ["just-then-and-finally"],
   isA: ["adverb-word"],
   note: "Lesson {{lesson:linking-sentences}}: rúguǒ nǐ lái, wǒ jiù děng nǐ.",
   examples: [

@@ -15,7 +15,7 @@ export default composite({
   tts: ["没有声音", "没有很大的声音"],
   literal: "there is no sound / there is no loud sound",
   fit: "plain",
-  topics: ["senses"],
+  topics: ["hearing-and-sounds"],
   isA: ["sound-or-light-quality"],
   proposed: true,
 });

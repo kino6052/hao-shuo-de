@@ -15,7 +15,7 @@ export default composite({
   tts: ["道理", "为什么是对的"],
   literal: "why it's right",
   fit: "natural",
-  topics: ["ideas-and-opinions"],
+  topics: ["reasons-and-logic"],
   isA: ["idea"],
   examples: [
     {

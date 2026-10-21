@@ -15,7 +15,7 @@ export default composite({
   tts: ["一定不可以X", "谁都不能X"],
   literal: "surely not allowed to X / nobody can X",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["punishing-and-forbidding"],
   isA: ["social-action"],
   proposed: true,
 });

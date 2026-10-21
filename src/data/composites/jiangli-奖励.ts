@@ -14,7 +14,7 @@ export default composite({
   tts: ["给做好的人东西"],
   literal: "give things to the person who did well",
   fit: "plain",
-  topics: ["giving-and-getting"],
+  topics: ["giving-and-gifts"],
   isA: ["handling-action"],
   proposed: true,
 });

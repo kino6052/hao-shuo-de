@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:fu4jin4}}", "{{word:pang2bian1}}"],
   tts: ["附近", "旁边"],
   fit: "natural",
-  topics: ["near-and-far"],
+  topics: ["in-front-of-beside-around"],
   isA: ["place-word"],
   proposed: true,
 });

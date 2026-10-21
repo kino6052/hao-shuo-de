@@ -15,7 +15,7 @@ export default composite({
   tts: ["用很大的力打到X上", "很快打到X，让X动"],
   literal: "hit X with a very big force / quickly hit X and make X move",
   fit: "plain",
-  topics: ["pushing-and-pulling"],
+  topics: ["hitting-and-bumping"],
   isA: ["handling-action"],
   proposed: true,
 });

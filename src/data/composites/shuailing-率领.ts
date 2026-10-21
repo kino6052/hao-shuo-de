@@ -15,7 +15,7 @@ export default composite({
   tts: ["走在前面，让X一起去", "做人们的头"],
   literal: "walk in front, let X go together / be the head of the people",
   fit: "plain",
-  topics: ["people-together"],
+  topics: ["teams-and-clubs"],
   isA: ["social-action"],
   proposed: true,
 });

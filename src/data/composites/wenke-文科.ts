@@ -14,7 +14,7 @@ export default composite({
   tts: ["学话和过去发生的东西"],
   literal: "learning about words and what happened in the past",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-subjects-and-courses"],
   isA: ["activity-name"],
   proposed: true,
 });

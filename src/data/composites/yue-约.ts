@@ -12,7 +12,7 @@ export default composite({
   tts: ["说好", "可能"],
   literal: "agree on it / maybe",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["talks-discussion-and-orders"],
   isA: ["social-action"],
   examples: [
     {

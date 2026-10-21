@@ -12,7 +12,7 @@ export default composite({
   tts: ["在身体后面拿"],
   literal: "carry behind your body",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["carrying-and-holding"],
   isA: ["handling-action"],
   examples: [
     {

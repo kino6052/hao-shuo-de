@@ -12,7 +12,7 @@ export default composite({
   tts: ["最下面"],
   literal: "the lowest side",
   fit: "plain",
-  topics: ["near-and-far"],
+  topics: ["inside-outside-front-back"],
   isA: ["place-word"],
   examples: [
     {

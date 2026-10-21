@@ -12,7 +12,7 @@ export default composite({
   tts: ["多边的样子"],
   literal: "the many-sided shape",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["circles-squares-cubes"],
   isA: ["shape-quality"],
   proposed: true,
 });

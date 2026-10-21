@@ -14,7 +14,7 @@ export default composite({
   tts: ["做看的机看的东西的地方"],
   literal: "the place that makes what is watched on the look-machine",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["television-radio-and-media"],
   isA: ["building"],
   proposed: true,
 });

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:you3}}"],
   tts: ["有"],
   fit: "natural",
-  topics: ["state-of-things"],
+  topics: ["features-and-forms"],
   isA: ["owning"],
   proposed: true,
 });

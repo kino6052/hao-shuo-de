@@ -15,7 +15,7 @@ export default composite({
   tts: ["小学以后的学校", "小学以后，高中以前的学校"],
   literal: "the school after primary school / the school after primary school and before high school",
   fit: "plain",
-  topics: ["classroom"],
+  topics: ["school-buildings-and-grounds"],
   isA: ["building"],
   proposed: true,
 });

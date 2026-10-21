@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:kan4}}-{{word:qi3}}-{{word:lai2}}", "{{word:ke3}}-{{word:neng2}}"],
   tts: ["看起来", "可能"],
   fit: "natural",
-  topics: ["adverbs"],
+  topics: ["maybe-of-course-obviously"],
   isA: ["adverb-word"],
   proposed: true,
 });

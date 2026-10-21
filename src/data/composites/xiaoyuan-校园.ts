@@ -12,7 +12,7 @@ export default composite({
   tts: ["学的地方"],
   literal: "the place for learning",
   fit: "plain",
-  topics: ["classroom"],
+  topics: ["school-buildings-and-grounds"],
   isA: ["outdoor-place"],
   examples: [
     {

@@ -12,7 +12,7 @@ export default composite({
   tts: ["多大"],
   literal: "how big (it is)",
   fit: "plain",
-  topics: ["degree-words"],
+  topics: ["a-little-and-rather"],
   isA: ["degree-word"],
   examples: [
     {

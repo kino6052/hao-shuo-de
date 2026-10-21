@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:hao3}}-{{word:hao3}}"],
   tts: ["好好"],
   fit: "natural",
-  topics: ["describing-people"],
+  topics: ["careful-hardworking-and-lazy"],
   isA: ["character-quality"],
   note: "Lesson {{lesson:doubling-words}}: hǎo-hǎo xué!",
   examples: [

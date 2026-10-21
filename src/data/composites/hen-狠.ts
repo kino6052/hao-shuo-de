@@ -15,7 +15,7 @@ export default composite({
   tts: ["心很硬", "不怕让人痛"],
   literal: "the heart is very hard / not afraid to make people hurt",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["kind-honest-and-mean"],
   isA: ["character-quality"],
   proposed: true,
 });

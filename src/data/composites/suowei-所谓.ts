@@ -15,7 +15,7 @@ export default composite({
   tts: ["别人说的", "别人叫X的"],
   literal: "what other people say / what other people call X",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["opinions-and-views"],
   isA: ["idea"],
   proposed: true,
 });

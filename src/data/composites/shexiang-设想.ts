@@ -15,7 +15,7 @@ export default composite({
   tts: ["在心里看", "想可能会怎么样"],
   literal: "see it in the heart / think about how it may turn out",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["mind-and-imagination"],
   isA: ["thinking-action"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["看有没有问题"],
   literal: "see whether there is a problem",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["checking-and-testing"],
   isA: ["thinking-action"],
   proposed: true,
 });

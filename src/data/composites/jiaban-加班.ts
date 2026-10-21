@@ -14,7 +14,7 @@ export default composite({
   tts: ["在不工作的时间还工作"],
   literal: "still work in the time when one does not work",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["work-days-and-busy"],
   isA: ["working"],
   proposed: true,
 });

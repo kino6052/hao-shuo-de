@@ -15,7 +15,7 @@ export default composite({
   tts: ["在发生以前", "在做以前"],
   literal: "before it happens",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["soon-early-and-late"],
   isA: ["time-order"],
   proposed: true,
 });

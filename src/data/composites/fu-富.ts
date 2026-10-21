@@ -12,6 +12,6 @@ export default composite({
   tts: ["金很多"],
   literal: "has a lot of money",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["money-wealth-and-value"],
   isA: ["condition-quality"],
 });

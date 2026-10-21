@@ -11,7 +11,7 @@ export default composite({
   hsd: ["\"Zhōngguó\""],
   tts: ["中国"],
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-countries"],
   isA: ["settlement"],
   note: "Names go in quotes.",
   examples: [

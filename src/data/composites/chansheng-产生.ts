@@ -12,7 +12,7 @@ export default composite({
   tts: ["做出"],
   literal: "make come out",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["appearing-and-developing"],
   isA: ["becoming"],
   examples: [
     {

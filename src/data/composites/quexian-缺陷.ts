@@ -15,7 +15,7 @@ export default composite({
   tts: ["不好的地方", "坏的部分"],
   literal: "the not-good place / the broken part",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["useful-and-harmful"],
   isA: ["state-name"],
   proposed: true,
 });

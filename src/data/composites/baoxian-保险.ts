@@ -15,7 +15,7 @@ export default composite({
   tts: ["坏的东西发生后给你金的东西", "坏的东西不会发生"],
   literal: "a thing that gives you money after a bad thing happens",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["stocks-and-investing"],
   isA: ["abstract-thing"],
   proposed: true,
 });

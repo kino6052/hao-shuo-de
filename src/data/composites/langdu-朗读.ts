@@ -14,7 +14,7 @@ export default composite({
   tts: ["把字说出来，声音很大"],
   literal: "say the characters out loud, with a big voice",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["studying-and-practising"],
   isA: ["speaking-action"],
   proposed: true,
 });

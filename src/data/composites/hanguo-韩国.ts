@@ -12,7 +12,7 @@ export default composite({
   tts: ["韩国", "中国旁边的国"],
   literal: "the country next to Zhōngguó",
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-countries"],
   isA: ["settlement"],
   proposed: true,
 });

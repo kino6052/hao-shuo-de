@@ -15,7 +15,7 @@ export default composite({
   tts: ["动的写的看的东西", "给人看的，动的写的东西"],
   literal: "a moving written thing to look at / a moving written thing made for people to look at",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["films-and-shows"],
   isA: ["work-of-art"],
   proposed: true,
 });

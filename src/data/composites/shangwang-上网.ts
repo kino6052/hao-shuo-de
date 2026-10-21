@@ -13,7 +13,7 @@ export default composite({
   literal: "go onto the net",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["phone-and-computer"],
+  topics: ["internet-and-websites"],
   isA: ["body-action"],
   examples: [
     {

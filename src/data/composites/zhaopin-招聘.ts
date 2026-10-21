@@ -12,7 +12,7 @@ export default composite({
   tts: ["找人来工作"],
   literal: "look for people to come and work",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["jobs-and-hiring"],
   isA: ["social-action"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["都一样", "都"],
   literal: "all the same / all",
   fit: "plain",
-  topics: ["all-and-some"],
+  topics: ["all-and-every"],
   isA: ["amount-word"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["用手让机动", "用机做东西"],
   literal: "make the machine move with the hand / make things with a machine",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["using-things-and-effort"],
   isA: ["handling-action"],
   proposed: true,
 });

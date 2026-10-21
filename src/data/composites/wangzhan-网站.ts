@@ -13,7 +13,7 @@ export default composite({
   literal: "net station",
   fit: "natural",
   kinds: ["built"],
-  topics: ["phone-and-computer"],
+  topics: ["internet-and-websites"],
   isA: ["computer-or-phone"],
   examples: [
     {

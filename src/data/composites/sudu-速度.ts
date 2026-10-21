@@ -12,7 +12,7 @@ export default composite({
   tts: ["快不快"],
   literal: "how fast",
   fit: "natural",
-  topics: ["speed-and-strength"],
+  topics: ["fast-slow-and-in-a-hurry"],
   isA: ["speed-or-strength"],
   examples: [
     {

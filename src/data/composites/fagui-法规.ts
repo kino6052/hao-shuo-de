@@ -14,7 +14,7 @@ export default composite({
   tts: ["国家的法，说要怎么做的话"],
   literal: "the law of the country, the words that say how to do it",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["laws-and-rules"],
   isA: ["idea"],
   proposed: true,
 });

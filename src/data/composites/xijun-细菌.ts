@@ -15,7 +15,7 @@ export default composite({
   tts: ["很小很小的活的东西", "眼睛看不见的活的东西"],
   literal: "a very very small living thing / a living thing the eye cannot see",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["germs-poison-and-allergy"],
   isA: ["living-thing"],
   proposed: true,
 });

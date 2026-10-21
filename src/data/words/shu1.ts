@@ -14,7 +14,7 @@ export default word("shu1", {
     eng: "Books and reading ({{word:kan4}} {{word:shu1}}): before it, a book was \"the written thing\".",
     rus: "Книги и чтение ({{word:kan4}} {{word:shu1}}): раньше книга была «написанной вещью».",
   },
-  topics: ["writing"],
+  topics: ["books-and-paper"],
   isA: ["paper-thing"],
   paraphrase: {
     forms: [

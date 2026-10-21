@@ -15,7 +15,7 @@ export default composite({
   tts: ["让人知道是真的", "看出X是真的"],
   literal: "let people know it is true / see that X is true",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["checking-and-testing"],
   isA: ["thinking-action"],
   proposed: true,
 });

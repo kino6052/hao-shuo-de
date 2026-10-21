@@ -15,7 +15,7 @@ export default composite({
   tts: ["想对的方法", "让想法对的方法"],
   literal: "the way to think correctly / the way to make thoughts right",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["reasons-and-logic"],
   isA: ["idea"],
   proposed: true,
 });

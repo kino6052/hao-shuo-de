@@ -12,7 +12,7 @@ export default composite({
   tts: ["出门", "出去"],
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["going-and-coming"],
+  topics: ["go-come-and-return"],
   isA: ["moving-action"],
   note: "Lesson {{lesson:direction-and-result}}.",
   examples: [

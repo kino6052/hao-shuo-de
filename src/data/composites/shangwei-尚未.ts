@@ -12,7 +12,7 @@ export default composite({
   tts: ["还没有"],
   fit: "natural",
   transparent: true,
-  topics: ["adverbs"],
+  topics: ["also-again-still-already"],
   isA: ["adverb-word"],
   proposed: true,
 });

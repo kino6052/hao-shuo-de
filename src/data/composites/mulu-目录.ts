@@ -14,7 +14,7 @@ export default composite({
   tts: ["书最前面的字，说书里有什么"],
   literal: "the words at the very front of a book that say what is in the book",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["books-and-paper"],
   isA: ["paper-thing"],
   proposed: true,
 });

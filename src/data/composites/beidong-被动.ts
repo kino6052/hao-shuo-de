@@ -15,7 +15,7 @@ export default composite({
   tts: ["别人动了，我就动", "不是我想做，是别人让我做"],
   literal: "other people move, then I move / it is not that I want to do it, other people make me do it",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["careful-hardworking-and-lazy"],
   isA: ["character-quality"],
   proposed: true,
 });

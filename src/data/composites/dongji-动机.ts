@@ -15,7 +15,7 @@ export default composite({
   ],
   tts: ["动机", "做X的为什么", "心里为什么要做X"],
   fit: "natural",
-  topics: ["ideas-and-opinions"],
+  topics: ["reasons-and-logic"],
   isA: ["idea"],
   proposed: true,
 });

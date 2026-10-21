@@ -12,7 +12,7 @@ export default composite({
   tts: ["变", "做好了"],
   literal: "change into / done well",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["becoming-and-turning-into"],
   isA: ["becoming"],
   proposed: true,
 });

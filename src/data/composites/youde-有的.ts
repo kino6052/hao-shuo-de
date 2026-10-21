@@ -12,7 +12,7 @@ export default composite({
   tts: ["有的"],
   literal: "some",
   fit: "natural",
-  topics: ["all-and-some"],
+  topics: ["some-most-and-few"],
   isA: ["amount-word"],
   note: "Real Mandarin: 有的.",
   examples: [

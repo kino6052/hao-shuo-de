@@ -12,7 +12,7 @@ export default composite({
   tts: ["X里面有Y", "X也有Y"],
   literal: "X has Y inside / X also has Y",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["totals-and-parts"],
   isA: ["comparison"],
   examples: [
     {

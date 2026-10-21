@@ -15,7 +15,7 @@ export default composite({
   tts: ["好好学，做出别人没有的东西", "好好学，做出新的东西"],
   literal: "study well, make something other people do not have / study well, make a new thing",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["building-and-producing"],
   isA: ["making"],
   proposed: true,
 });

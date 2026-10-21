@@ -15,7 +15,7 @@ export default composite({
   tts: ["只能在X", "不能到X外面"],
   literal: "can only be in X / cannot go outside X",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["extra-and-limits"],
   isA: ["belonging"],
   proposed: true,
 });

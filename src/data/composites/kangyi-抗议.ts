@@ -14,7 +14,7 @@ export default composite({
   tts: ["很多人一起说X不对"],
   literal: "many people together say X is wrong",
   fit: "plain",
-  topics: ["agreeing-and-praising"],
+  topics: ["refusing-and-criticising"],
   isA: ["speaking-action"],
   proposed: true,
 });

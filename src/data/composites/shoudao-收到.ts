@@ -12,7 +12,7 @@ export default composite({
   tts: ["拿到"],
   literal: "take and reach",
   fit: "natural",
-  topics: ["giving-and-getting"],
+  topics: ["getting-and-receiving"],
   isA: ["receiving"],
   note: "Lesson {{lesson:direction-and-result}}: verb-result.",
   examples: [

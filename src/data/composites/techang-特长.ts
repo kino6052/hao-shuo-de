@@ -15,7 +15,7 @@ export default composite({
   tts: ["比别人好的能力", "我比别人做好的东西"],
   literal: "an ability better than other people's / the thing I do better than other people",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["clever-skilled-and-famous"],
   isA: ["idea"],
   proposed: true,
 });

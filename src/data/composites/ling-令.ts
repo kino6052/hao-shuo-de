@@ -12,7 +12,7 @@ export default composite({
   tts: ["叫X做", "让X…"],
   literal: "tell X to do it / make X …",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["talks-discussion-and-orders"],
   isA: ["speaking-action"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["加拿大", "加拿大国"],
   literal: "the country of Jiānádà",
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-countries"],
   isA: ["settlement"],
   proposed: true,
 });

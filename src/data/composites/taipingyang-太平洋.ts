@@ -15,7 +15,7 @@ export default composite({
   tts: ["太平洋", "最大的有水的地方"],
   literal: "the biggest place that has water",
   fit: "name",
-  topics: ["land-and-water"],
+  topics: ["sea-coast-and-islands"],
   isA: ["landform"],
   proposed: true,
 });

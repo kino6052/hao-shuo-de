@@ -13,7 +13,7 @@ export default composite({
   literal: "part",
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["near-and-far"],
+  topics: ["place-location-and-space"],
   isA: ["place-word"],
   examples: [
     {

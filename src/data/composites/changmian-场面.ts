@@ -15,7 +15,7 @@ export default composite({
   tts: ["看到的大的样子", "发生的时候看到的样子"],
   literal: "the big look of what is seen / the look of what is seen when it happens",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["appearing-and-scenes"],
   isA: ["idea"],
   proposed: true,
 });

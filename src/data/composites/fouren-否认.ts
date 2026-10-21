@@ -15,7 +15,7 @@ export default composite({
   tts: ["说这不是真的", "说不是我做的"],
   literal: "say this is not true / say it was not done by me",
   fit: "plain",
-  topics: ["agreeing-and-praising"],
+  topics: ["refusing-and-criticising"],
   isA: ["speaking-action"],
   proposed: true,
 });

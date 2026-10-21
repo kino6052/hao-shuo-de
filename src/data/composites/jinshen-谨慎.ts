@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:xiao3}}-{{word:xin1}}", "{{word:bu4}} {{word:luan4}} {{word:dong4}}"],
   tts: ["小心", "不乱动"],
   fit: "natural",
-  topics: ["describing-people"],
+  topics: ["brave-calm-and-lively"],
   isA: ["character-quality"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["笑话", "让人笑的话"],
   literal: "words that make people laugh",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["topics-and-examples"],
   isA: ["work-of-art"],
   proposed: true,
 });

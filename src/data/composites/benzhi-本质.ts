@@ -15,7 +15,7 @@ export default composite({
   tts: ["X真是什么", "X最里面的东西"],
   literal: "what X really is / the innermost thing of X",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["key-points-and-principles"],
   isA: ["idea"],
   proposed: true,
 });

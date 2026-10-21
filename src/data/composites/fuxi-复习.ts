@@ -12,7 +12,7 @@ export default composite({
   tts: ["又学", "又看一下"],
   literal: "learn again / look again for a moment",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["studying-and-practising"],
   isA: ["learning-and-teaching"],
   examples: [
     {

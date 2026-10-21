@@ -15,7 +15,7 @@ export default composite({
   tts: ["用法决定谁对的人", "知道法，决定谁对的人"],
   literal: "the person who decides with the law who is right / the person who knows the law and decides who is right",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["courts-and-trials"],
   isA: ["worker"],
   proposed: true,
 });

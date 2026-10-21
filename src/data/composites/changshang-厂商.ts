@@ -16,7 +16,7 @@ export default composite({
   tts: ["做东西的工作的地方", "做东西给人买的地方", "做东西给人买的人"],
   literal: "the working place that makes things / a place that makes things for people to buy / a person who makes things for people to buy",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["companies-and-products"],
   isA: ["group-of-people"],
   proposed: true,
 });

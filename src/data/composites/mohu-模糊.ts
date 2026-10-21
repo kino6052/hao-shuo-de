@@ -15,7 +15,7 @@ export default composite({
   tts: ["很难明白", "看不好，不知道是什么"],
   literal: "very hard to understand / cannot see it well, do not know what it is",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["empty-messy-clear"],
   isA: ["condition-quality"],
   proposed: true,
 });

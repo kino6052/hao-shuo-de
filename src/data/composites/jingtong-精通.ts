@@ -15,7 +15,7 @@ export default composite({
   tts: ["对X知道的很多", "X都知道，都能做"],
   literal: "know a lot about X / know all about X, can do all of it",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["knowing-and-grasping"],
   isA: ["thinking-action"],
   proposed: true,
 });

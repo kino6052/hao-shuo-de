@@ -10,7 +10,7 @@ export default word("guo2", {
     eng: "A country. Nations, travel, and the news all need it.",
     rus: "Страна. Без неё не поговорить о народах, поездках и новостях.",
   },
-  topics: ["countries-and-cities"],
+  topics: ["country-and-nation"],
   isA: ["settlement"],
   paraphrase: {
     forms: [

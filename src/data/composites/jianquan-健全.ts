@@ -15,7 +15,7 @@ export default composite({
   tts: ["要的都有，都很好", "都有，都好"],
   literal: "everything that is needed is there, all very good / all there, all good",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["quality-and-top-class"],
   isA: ["condition-quality"],
   proposed: true,
 });

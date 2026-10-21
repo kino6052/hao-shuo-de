@@ -15,7 +15,7 @@ export default composite({
   tts: ["把水留下来的大的地方", "放很多的水的大的地方"],
   literal: "a big place that keeps the water / a big place where much water is put",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["rivers-lakes-and-floods"],
   isA: ["outdoor-place"],
   proposed: true,
 });

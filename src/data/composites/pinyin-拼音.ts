@@ -14,7 +14,7 @@ export default composite({
   tts: ["写中国话声音的方法"],
   literal: "the way to write the sounds of Chinese",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["words-and-characters"],
   isA: ["language-thing"],
   examples: [
     {

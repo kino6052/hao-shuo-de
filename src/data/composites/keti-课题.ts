@@ -15,7 +15,7 @@ export default composite({
   tts: ["要好好学的问题", "学者要想的题"],
   literal: "a problem that is to be studied carefully / a question a scholar has to think about",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-subjects-and-courses"],
   isA: ["idea"],
   proposed: true,
 });

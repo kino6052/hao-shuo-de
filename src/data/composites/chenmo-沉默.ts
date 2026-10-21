@@ -12,7 +12,7 @@ export default composite({
   tts: ["不说话", "不说"],
   literal: "not say words / not say",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["saying-and-calling"],
   isA: ["speaking-action"],
   proposed: true,
 });

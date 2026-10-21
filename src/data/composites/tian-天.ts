@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:tian1}}"],
   tts: ["天"],
   fit: "word",
-  topics: ["calendar"],
+  topics: ["days-and-dates"],
   isA: ["time-span"],
   note: "rì is the sun, and the day.",
   examples: [

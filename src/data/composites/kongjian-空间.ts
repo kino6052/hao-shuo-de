@@ -13,7 +13,7 @@ export default composite({
   literal: "the empty between",
   fit: "natural",
   kinds: ["built"],
-  topics: ["near-and-far"],
+  topics: ["place-location-and-space"],
   isA: ["place-word"],
   examples: [
     {

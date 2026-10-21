@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:hai2}}", "{{word:he2}} {{word:yi3}}-{{word:qian2}} {{word:yi1}}-{{word:yang4}}"],
   tts: ["还", "和以前一样"],
   fit: "natural",
-  topics: ["adverbs"],
+  topics: ["also-again-still-already"],
   isA: ["adverb-word"],
   proposed: true,
 });

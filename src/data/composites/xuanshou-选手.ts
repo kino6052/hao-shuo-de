@@ -12,7 +12,7 @@ export default composite({
   tts: ["比的人"],
   literal: "the one competing",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["athletes-and-sports-grounds"],
   isA: ["worker"],
   examples: [
     {

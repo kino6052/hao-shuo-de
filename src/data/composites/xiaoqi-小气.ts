@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["小气", "不爱给人东西"],
   fit: "natural",
-  topics: ["describing-people"],
+  topics: ["kind-honest-and-mean"],
   isA: ["character-quality"],
   proposed: true,
 });

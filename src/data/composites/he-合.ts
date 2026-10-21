@@ -12,7 +12,7 @@ export default composite({
   tts: ["放在一起"],
   literal: "put together",
   fit: "plain",
-  topics: ["pushing-and-pulling"],
+  topics: ["opening-and-closing"],
   isA: ["handling-action"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["觉得X很高明", "觉得X比我好"],
   literal: "feel X is very smart / feel X is better than me",
   fit: "plain",
-  topics: ["liking-and-wanting"],
+  topics: ["respect-and-cherishing"],
   isA: ["feeling-and-wanting"],
   proposed: true,
 });

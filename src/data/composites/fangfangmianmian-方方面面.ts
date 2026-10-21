@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["方方面面", "一个一个的方面"],
   fit: "natural",
-  topics: ["all-and-some"],
+  topics: ["all-and-every"],
   isA: ["idea"],
   proposed: true,
 });

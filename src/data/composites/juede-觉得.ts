@@ -12,7 +12,7 @@ export default composite({
   tts: ["觉得", "心里想"],
   fit: "word",
   kinds: ["spelled", "built"],
-  topics: ["knowing-and-understanding"],
+  topics: ["opinions-and-guesses"],
   isA: ["thinking-action"],
   examples: [
     {

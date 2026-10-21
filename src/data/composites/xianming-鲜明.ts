@@ -15,7 +15,7 @@ export default composite({
   tts: ["一看就知道", "很明，很不同"],
   literal: "know it at one look / bright and very different",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["special-and-strange"],
   isA: ["condition-quality"],
   proposed: true,
 });

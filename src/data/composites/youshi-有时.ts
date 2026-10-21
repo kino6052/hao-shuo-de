@@ -13,7 +13,7 @@ export default composite({
   literal: "some of the time",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["how-often"],
+  topics: ["sometimes-rarely-and-never"],
   isA: ["frequency"],
   examples: [
     {

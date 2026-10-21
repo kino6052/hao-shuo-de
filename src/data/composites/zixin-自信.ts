@@ -15,7 +15,7 @@ export default composite({
   tts: ["觉得我能", "觉得我能做好"],
   literal: "feel that I can / feel that I can do it well",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["brave-calm-and-lively"],
   isA: ["character-quality"],
   proposed: true,
 });

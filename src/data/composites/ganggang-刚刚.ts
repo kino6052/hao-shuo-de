@@ -14,7 +14,7 @@ export default composite({
   tts: ["很不长的时间以前"],
   literal: "a very short time ago",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["now-and-recently"],
   isA: ["time-order"],
   proposed: true,
 });

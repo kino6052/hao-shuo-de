@@ -12,7 +12,7 @@ export default composite({
   tts: ["做一下"],
   literal: "do it for a moment",
   fit: "natural",
-  topics: ["deciding"],
+  topics: ["trying-and-persisting"],
   isA: ["thinking-action"],
   examples: [
     {

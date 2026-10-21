@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X说给做决定的人听", "对做决定的人说X"],
   literal: "tell X to the leader to hear / say X to the leader",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["managing-and-progress"],
   isA: ["speaking-action"],
   proposed: true,
 });

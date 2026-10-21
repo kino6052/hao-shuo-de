@@ -15,7 +15,7 @@ export default composite({
   tts: ["帮X变好，变快", "用力让X动"],
   literal: "help X get better and faster / make X move with force",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["improving-and-reforming"],
   isA: ["making"],
   proposed: true,
 });

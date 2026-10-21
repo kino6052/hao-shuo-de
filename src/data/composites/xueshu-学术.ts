@@ -12,7 +12,7 @@ export default composite({
   tts: ["很高的学"],
   literal: "high learning",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-subjects-and-courses"],
   isA: ["idea"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["俄罗斯", "俄罗斯国"],
   literal: "the country of Éluósī",
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-countries"],
   isA: ["settlement"],
   proposed: true,
 });

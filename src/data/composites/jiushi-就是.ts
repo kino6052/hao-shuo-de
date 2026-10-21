@@ -13,7 +13,7 @@ export default composite({
   literal: "just is",
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["adverbs"],
+  topics: ["just-then-and-finally"],
   isA: ["adverb-word"],
   examples: [
     {

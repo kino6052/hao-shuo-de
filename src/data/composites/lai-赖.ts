@@ -15,7 +15,7 @@ export default composite({
   tts: ["不好", "说不好的东西是X做的"],
   literal: "not good / say the bad thing was done by X",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["good-bad-and-okay"],
   isA: ["value-quality"],
   proposed: true,
 });

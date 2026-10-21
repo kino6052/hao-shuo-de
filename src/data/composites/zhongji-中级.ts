@@ -14,7 +14,7 @@ export default composite({
   tts: ["在高和不高中间"],
   literal: "between high and not high",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-days-and-years"],
   isA: ["condition-quality"],
   proposed: true,
 });

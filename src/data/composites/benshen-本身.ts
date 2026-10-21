@@ -12,7 +12,7 @@ export default composite({
   tts: ["X，不是别的"],
   literal: "X, not another",
   fit: "plain",
-  topics: ["pointers"],
+  topics: ["self-and-others"],
   isA: ["pronoun"],
   proposed: true,
 });

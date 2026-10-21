@@ -12,7 +12,7 @@ export default composite({
   tts: ["不好", "会让X变坏"],
   literal: "not good / will make X go bad",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["good-bad-and-okay"],
   isA: ["value-quality"],
   proposed: true,
 });

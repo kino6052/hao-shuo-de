@@ -12,7 +12,7 @@ export default composite({
   tts: ["法"],
   literal: "law",
   fit: "word",
-  topics: ["ideas-and-opinions"],
+  topics: ["key-points-and-principles"],
   isA: ["idea"],
   examples: [
     {

@@ -12,7 +12,7 @@ export default composite({
   tts: ["有多少"],
   literal: "how much there is",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["totals-and-parts"],
   isA: ["amount-word"],
   proposed: true,
 });

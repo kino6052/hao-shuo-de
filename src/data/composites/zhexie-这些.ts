@@ -12,7 +12,7 @@ export default composite({
   tts: ["这些", "这"],
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["pointers"],
+  topics: ["this-that-such"],
   isA: ["pronoun"],
   note: "zhè means \"this\" and \"these\".",
   examples: [

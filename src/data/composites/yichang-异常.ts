@@ -15,7 +15,7 @@ export default composite({
   tts: ["不平常", "和平常的样子不一样"],
   literal: "not usual / not the same as the usual way",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["special-and-strange"],
   isA: ["condition-quality"],
   proposed: true,
 });

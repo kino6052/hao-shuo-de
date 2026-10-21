@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["说明书", "说怎么用的书"],
   fit: "natural",
-  topics: ["writing"],
+  topics: ["books-and-paper"],
   isA: ["paper-thing"],
   proposed: true,
 });

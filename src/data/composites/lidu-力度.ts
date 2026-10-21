@@ -15,7 +15,7 @@ export default composite({
   tts: ["力有多大", "用多大的力"],
   literal: "how big the force is / how big a force is used",
   fit: "plain",
-  topics: ["speed-and-strength"],
+  topics: ["energy-and-intensity"],
   isA: ["speed-or-strength"],
   proposed: true,
 });

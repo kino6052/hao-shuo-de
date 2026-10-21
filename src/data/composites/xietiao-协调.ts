@@ -15,7 +15,7 @@ export default composite({
   tts: ["让X一起好好做", "一起好好做的"],
   literal: "make X work well together / working well together",
   fit: "plain",
-  topics: ["helping-and-sharing"],
+  topics: ["together-and-cooperating"],
   isA: ["social-action"],
   proposed: true,
 });

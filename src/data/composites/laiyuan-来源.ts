@@ -15,7 +15,7 @@ export default composite({
   tts: ["X从哪里来的地方", "从哪里来"],
   literal: "the place X comes from / where it comes from",
   fit: "plain",
-  topics: ["causes-and-results"],
+  topics: ["reasons-sources-and-conditions"],
   isA: ["cause-and-effect"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["不难", "不用很大的力"],
   literal: "not hard / without needing much strength",
   fit: "plain",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["easy-and-convenient"],
   isA: ["truth-or-ease"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["X的旁边"],
   literal: "next to X",
   fit: "plain",
-  topics: ["near-and-far"],
+  topics: ["in-front-of-beside-around"],
   isA: ["place-word"],
   proposed: true,
 });

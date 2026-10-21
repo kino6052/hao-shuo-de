@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X变大", "把X变大，变多"],
   literal: "make X bigger / make X bigger and more",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["increasing-and-rising"],
   isA: ["making"],
   proposed: true,
 });

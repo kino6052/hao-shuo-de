@@ -15,7 +15,7 @@ export default composite({
   tts: ["多得到的金", "得到的金比给出的金多的部分"],
   literal: "the extra money got / the part where the money got is more than the money given out",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["profit-loss-and-bankruptcy"],
   isA: ["money-thing"],
   proposed: true,
 });

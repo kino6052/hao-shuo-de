@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:kan4}}", "{{word:kan4}} {{word:yi1}}-{{word:xia4}}"],
   tts: ["看", "看一下"],
   fit: "natural",
-  topics: ["senses"],
+  topics: ["seeing-and-looking"],
   isA: ["perceiving"],
   proposed: true,
 });

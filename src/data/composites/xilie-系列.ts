@@ -15,7 +15,7 @@ export default composite({
   tts: ["一个一个的", "一个后面有一个"],
   literal: "one by one / one, and another one behind it",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["totals-and-parts"],
   isA: ["amount-word"],
   proposed: true,
 });

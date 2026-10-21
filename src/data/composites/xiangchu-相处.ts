@@ -15,7 +15,7 @@ export default composite({
   tts: ["和X一起生活", "和X一起工作"],
   literal: "live together with X / work together with X",
   fit: "plain",
-  topics: ["people-together"],
+  topics: ["gathering-and-getting-along"],
   isA: ["social-action"],
   proposed: true,
 });

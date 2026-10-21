@@ -16,7 +16,7 @@ export default composite({
   tts: ["晚一点做", "不快做", "现在不做，后来做"],
   literal: "do it a bit later / do it not fast / not do it now, do it later",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["beginning-and-finishing"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

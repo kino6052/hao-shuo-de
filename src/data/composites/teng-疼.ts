@@ -12,7 +12,7 @@ export default composite({
   tts: ["痛"],
   literal: "pain",
   fit: "word",
-  topics: ["illness"],
+  topics: ["pain-and-feeling-unwell"],
   isA: ["bodily-state"],
   examples: [
     {

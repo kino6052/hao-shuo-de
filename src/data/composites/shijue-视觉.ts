@@ -15,7 +15,7 @@ export default composite({
   tts: ["用眼睛看的觉得", "眼睛的觉得"],
   literal: "the feeling of looking with the eyes / the eyes' feeling",
   fit: "plain",
-  topics: ["senses"],
+  topics: ["seeing-and-looking"],
   isA: ["feeling-name"],
   proposed: true,
 });

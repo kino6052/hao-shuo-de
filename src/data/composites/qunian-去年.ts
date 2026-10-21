@@ -13,7 +13,7 @@ export default composite({
   literal: "go-year / the twelve months before",
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["calendar"],
+  topics: ["years-and-centuries"],
   isA: ["time-point"],
   examples: [
     {

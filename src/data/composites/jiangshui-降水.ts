@@ -15,7 +15,7 @@ export default composite({
   tts: ["天上下水", "从天上下来的水"],
   literal: "the sky lets water fall / water that comes down from the sky",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["rain-and-snow"],
   isA: ["weather-happening"],
   proposed: true,
 });

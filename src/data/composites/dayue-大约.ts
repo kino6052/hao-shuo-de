@@ -12,7 +12,7 @@ export default composite({
   tts: ["可能X"],
   literal: "maybe X",
   fit: "plain",
-  topics: ["degree-words"],
+  topics: ["almost-and-probably"],
   isA: ["adverb-word"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["网上说话的地方", "很多人一起说X的地方"],
   literal: "a place to talk on the net / a place where many people talk about X together",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["internet-and-websites"],
   isA: ["place"],
   proposed: true,
 });

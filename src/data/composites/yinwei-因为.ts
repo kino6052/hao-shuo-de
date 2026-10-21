@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:yin1wei4}}"],
   tts: ["因为"],
   fit: "word",
-  topics: ["joining-words"],
+  topics: ["because-and-so"],
   isA: ["conjunction"],
   examples: [
     {

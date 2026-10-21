@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:shen2me}}-{{word:dou1}}"],
   tts: ["什么都"],
   fit: "natural",
-  topics: ["all-and-some"],
+  topics: ["all-and-every"],
   isA: ["amount-word"],
   note: "Lesson {{lesson:also-and-all}}.",
   examples: [

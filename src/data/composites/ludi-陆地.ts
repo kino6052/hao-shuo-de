@@ -15,7 +15,7 @@ export default composite({
   tts: ["不是水的地", "没有水的地"],
   literal: "the ground that is not water / the ground without water",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["land-soil-and-the-earth"],
   isA: ["landform"],
   proposed: true,
 });

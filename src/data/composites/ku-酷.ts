@@ -15,7 +15,7 @@ export default composite({
   tts: ["很好看，让人想学", "人人都觉得很好"],
   literal: "very good to look at, makes people want to copy / everyone feels it is very good",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["good-bad-and-okay"],
   isA: ["value-quality"],
   proposed: true,
 });

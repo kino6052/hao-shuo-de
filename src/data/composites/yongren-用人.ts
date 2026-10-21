@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["用人", "给人金让他工作"],
   fit: "natural",
-  topics: ["working-life"],
+  topics: ["jobs-and-hiring"],
   isA: ["working"],
   proposed: true,
 });

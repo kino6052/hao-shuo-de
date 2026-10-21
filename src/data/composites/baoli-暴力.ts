@@ -15,7 +15,7 @@ export default composite({
   tts: ["打人的力", "用力打人"],
   literal: "the strength that hits people / use strength to hit people",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["crimes-and-criminals"],
   isA: ["activity-name"],
   proposed: true,
 });

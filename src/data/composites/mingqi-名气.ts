@@ -14,7 +14,7 @@ export default composite({
   tts: ["很多人知道X的名字"],
   literal: "many people know X's name",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["clever-skilled-and-famous"],
   isA: ["idea"],
   proposed: true,
 });

@@ -13,7 +13,7 @@ export default composite({
   literal: "talk machine",
   fit: "natural",
   transparent: true,
-  topics: ["phone-and-computer"],
+  topics: ["phone-calls-and-messages"],
   isA: ["machine"],
   examples: [
     {

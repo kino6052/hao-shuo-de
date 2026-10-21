@@ -12,7 +12,7 @@ export default composite({
   tts: ["最开始"],
   literal: "the very beginning",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["first-next-and-last"],
   isA: ["time-order"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["把工作的地方做好", "让X天天都在做"],
   literal: "keep the place of work in good order / let X be at work every day",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["managing-and-progress"],
   isA: ["working"],
   proposed: true,
 });

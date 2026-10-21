@@ -14,7 +14,7 @@ export default composite({
   tts: ["从天下来的冷的白的东西"],
   literal: "a white cold thing that comes down from the sky",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["rain-and-snow"],
   isA: ["weather-thing"],
   proposed: true,
 });

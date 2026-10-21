@@ -14,7 +14,7 @@ export default composite({
   tts: ["X和Y很用力打到一起"],
   literal: "X and Y hit each other with great force",
   fit: "plain",
-  topics: ["pushing-and-pulling"],
+  topics: ["hitting-and-bumping"],
   isA: ["handling-action"],
   proposed: true,
 });

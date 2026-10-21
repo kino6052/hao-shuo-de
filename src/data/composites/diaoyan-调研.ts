@@ -15,7 +15,7 @@ export default composite({
   tts: ["好好看，好好学", "去看，去问，找真的"],
   literal: "look well, learn well / go and look, go and ask, look for what is true",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["searching-and-clues"],
   isA: ["thinking-action"],
   proposed: true,
 });

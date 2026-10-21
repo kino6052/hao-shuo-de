@@ -15,7 +15,7 @@ export default composite({
   tts: ["看X有多好", "说X有多好"],
   literal: "see how good X is / say how good X is",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["checking-and-testing"],
   isA: ["thinking-action"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["平面", "平的面"],
   literal: "flat face",
   fit: "natural",
-  topics: ["shapes"],
+  topics: ["flat-straight-curved"],
   isA: ["abstract-thing"],
   proposed: true,
 });

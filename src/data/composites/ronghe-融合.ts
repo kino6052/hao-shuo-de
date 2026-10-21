@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X和Y放在一起，让他们不能分开", "X和Y在一起，不能分开"],
   literal: "put X and Y together so that they can't be parted / X and Y are together, can't be parted",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["mixing-passing-on-and-changing"],
   isA: ["making"],
   proposed: true,
 });

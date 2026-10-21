@@ -15,7 +15,7 @@ export default composite({
   tts: ["去那里好好看", "去那里好好看，好好学"],
   literal: "go there and look carefully / go there and look carefully, study carefully",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["checking-and-testing"],
   isA: ["thinking-action"],
   proposed: true,
 });

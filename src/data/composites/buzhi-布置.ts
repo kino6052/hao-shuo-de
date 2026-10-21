@@ -15,7 +15,7 @@ export default composite({
   tts: ["把东西放好", "把房间做好看"],
   literal: "put things away well",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["joining-adding-replacing"],
   isA: ["making"],
   proposed: true,
 });

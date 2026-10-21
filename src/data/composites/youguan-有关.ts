@@ -13,7 +13,7 @@ export default composite({
   literal: "has to do with / has a connection",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["same-and-different"],
+  topics: ["related-and-matching"],
   isA: ["comparison"],
   examples: [
     {

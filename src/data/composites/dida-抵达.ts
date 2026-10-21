@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:dao4}}", "{{word:qu4}}-{{word:dao4}} X"],
   tts: ["到", "去到X"],
   fit: "natural",
-  topics: ["going-and-coming"],
+  topics: ["arriving-and-reaching"],
   isA: ["moving-action"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["想帮人的人", "帮人，不要金的人"],
   literal: "a person who wants to help people / a person who helps people and does not want money",
   fit: "plain",
-  topics: ["helping-and-sharing"],
+  topics: ["helping-and-supporting"],
   isA: ["social-role"],
   proposed: true,
 });

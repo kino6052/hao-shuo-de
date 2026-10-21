@@ -16,7 +16,7 @@ export default composite({
   literal: "most of the time",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["how-often"],
+  topics: ["often-and-usually"],
   isA: ["frequency"],
   examples: [
     {

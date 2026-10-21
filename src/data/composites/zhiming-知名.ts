@@ -12,7 +12,7 @@ export default composite({
   tts: ["人人都知道的"],
   literal: "that everyone knows",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["clever-skilled-and-famous"],
   isA: ["value-quality"],
   examples: [
     {

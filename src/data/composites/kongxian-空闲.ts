@@ -15,7 +15,7 @@ export default composite({
   tts: ["没有东西要做", "没有东西要做的时间"],
   literal: "nothing to do / the time when there is nothing to do",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["work-days-and-busy"],
   isA: ["condition-quality"],
   proposed: true,
 });

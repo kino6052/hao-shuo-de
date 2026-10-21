@@ -15,7 +15,7 @@ export default composite({
   tts: ["心在一起", "人人想法一样"],
   literal: "the hearts are together / everyone's thoughts are the same",
   fit: "plain",
-  topics: ["people-together"],
+  topics: ["gathering-and-getting-along"],
   isA: ["social-action"],
   proposed: true,
 });

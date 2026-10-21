@@ -12,7 +12,7 @@ export default composite({
   tts: ["说X好", "觉得X很好"],
   literal: "say X is good / feel that X is very good",
   fit: "plain",
-  topics: ["agreeing-and-praising"],
+  topics: ["praising-and-applause"],
   isA: ["speaking-action"],
   proposed: true,
 });

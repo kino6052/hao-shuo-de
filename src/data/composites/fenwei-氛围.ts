@@ -15,7 +15,7 @@ export default composite({
   tts: ["一个地方给人的觉得", "大家在一起的时候心里的样子"],
   literal: "the feeling a place gives people / how hearts are when everyone is together",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["situations-and-needs"],
   isA: ["feeling-name"],
   proposed: true,
 });

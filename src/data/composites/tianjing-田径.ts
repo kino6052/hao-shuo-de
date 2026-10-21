@@ -14,7 +14,7 @@ export default composite({
   tts: ["快走和用脚从地上起来，看谁最好"],
   literal: "fast walking and using the feet to rise from the ground, see who is best",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["exercise-and-kinds-of-sport"],
   isA: ["activity-name"],
   proposed: true,
 });

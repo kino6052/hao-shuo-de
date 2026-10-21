@@ -12,7 +12,7 @@ export default composite({
   tts: ["比较", "比"],
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["same-and-different"],
+  topics: ["more-and-less-than"],
   isA: ["comparison"],
   examples: [
     {

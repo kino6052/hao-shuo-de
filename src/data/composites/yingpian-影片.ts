@@ -14,7 +14,7 @@ export default composite({
   tts: ["好玩儿的看的东西"],
   literal: "a fun thing to watch",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["films-and-shows"],
   isA: ["work-of-art"],
   proposed: true,
 });

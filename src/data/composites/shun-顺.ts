@@ -15,7 +15,7 @@ export default composite({
   tts: ["不难，不乱", "在X旁边走"],
   literal: "not hard, not messy",
   fit: "plain",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["easy-and-convenient"],
   isA: ["truth-or-ease"],
   proposed: true,
 });

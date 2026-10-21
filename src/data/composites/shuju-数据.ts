@@ -12,7 +12,7 @@ export default composite({
   tts: ["数据"],
   literal: "numbers",
   fit: "name",
-  topics: ["phone-and-computer"],
+  topics: ["software-files-and-accounts"],
   isA: ["idea"],
   examples: [
     {

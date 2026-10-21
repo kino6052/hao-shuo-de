@@ -15,7 +15,7 @@ export default composite({
   tts: ["写下来", "写在书里"],
   literal: "write it down / write it in a book",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["writing-things-down"],
   isA: ["making"],
   proposed: true,
 });

@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["看得起", "觉得X很好"],
   fit: "natural",
-  topics: ["agreeing-and-praising"],
+  topics: ["praising-and-applause"],
   isA: ["feeling-and-wanting"],
   proposed: true,
 });

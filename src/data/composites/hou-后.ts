@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:hou4}}"],
   tts: ["后"],
   fit: "word",
-  topics: ["up-down-in-out"],
+  topics: ["front-and-back"],
   isA: ["place-relation"],
   examples: [
     {

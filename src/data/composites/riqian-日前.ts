@@ -15,7 +15,7 @@ export default composite({
   tts: ["日前", "不长的时间以前"],
   literal: "day-before / a not long time ago",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["now-and-recently"],
   isA: ["time-point"],
   proposed: true,
 });

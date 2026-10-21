@@ -15,7 +15,7 @@ export default composite({
   tts: ["前天", "两个天以前"],
   literal: "two days before",
   fit: "plain",
-  topics: ["calendar"],
+  topics: ["days-and-dates"],
   isA: ["time-point"],
   proposed: true,
 });

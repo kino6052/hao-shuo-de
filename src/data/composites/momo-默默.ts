@@ -12,7 +12,7 @@ export default composite({
   tts: ["不说话", "没有声音"],
   literal: "not speaking / without sound",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["quietly-together-step-by-step"],
   isA: ["adverb-word"],
   proposed: true,
 });

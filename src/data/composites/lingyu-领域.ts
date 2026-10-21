@@ -14,7 +14,7 @@ export default composite({
   tts: ["学的和工作的地方"],
   literal: "the place of study and of work",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-subjects-and-courses"],
   isA: ["idea"],
   proposed: true,
 });

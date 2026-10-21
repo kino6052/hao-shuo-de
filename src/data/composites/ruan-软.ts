@@ -12,7 +12,7 @@ export default composite({
   tts: ["不硬"],
   literal: "not hard",
   fit: "natural",
-  topics: ["how-it-feels"],
+  topics: ["hard-soft-heavy-light"],
   isA: ["touch-quality"],
   examples: [
     {

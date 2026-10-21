@@ -12,7 +12,7 @@ export default composite({
   tts: ["热爱", "很爱"],
   literal: "hot love / love very much",
   fit: "natural",
-  topics: ["liking-and-wanting"],
+  topics: ["liking-loving-and-missing"],
   isA: ["feeling-and-wanting"],
   examples: [
     {

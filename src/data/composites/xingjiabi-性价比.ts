@@ -15,7 +15,7 @@ export default composite({
   tts: ["金少，东西好的样子", "给的金和得到的东西的比"],
   literal: "little money, good thing / the compare of the money given and the thing got",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["prices-and-discounts"],
   isA: ["idea"],
   proposed: true,
 });

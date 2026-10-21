@@ -15,7 +15,7 @@ export default composite({
   tts: ["想以后会怎么样", "在X发生以前，想X会怎么样"],
   literal: "think how it will be later / before X happens, think how X will be",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["opinions-and-guesses"],
   isA: ["thinking-action"],
   proposed: true,
 });

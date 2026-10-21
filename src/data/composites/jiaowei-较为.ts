@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:bi3}}-{{word:jiao4}}", "{{word:bi3}}"],
   tts: ["比较", "比"],
   fit: "natural",
-  topics: ["degree-words"],
+  topics: ["a-little-and-rather"],
   isA: ["degree-word"],
   proposed: true,
 });

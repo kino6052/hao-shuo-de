@@ -12,7 +12,7 @@ export default composite({
   tts: ["在要的时间"],
   literal: "at the time it's needed",
   fit: "plain",
-  topics: ["how-often"],
+  topics: ["suddenly-and-on-time"],
   isA: ["adverb-word"],
   examples: [
     {

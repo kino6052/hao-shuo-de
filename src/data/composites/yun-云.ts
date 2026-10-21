@@ -14,7 +14,7 @@ export default composite({
   tts: ["天上的白色东西"],
   literal: "the white thing up in the sky",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["weather-and-clouds"],
   isA: ["weather-thing"],
   examples: [
     {

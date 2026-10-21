@@ -15,7 +15,7 @@ export default composite({
   tts: ["东西能做多好", "机能做什么，做多好"],
   literal: "how well a thing can do / what a machine can do, how well",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["quality-and-top-class"],
   isA: ["idea"],
   proposed: true,
 });

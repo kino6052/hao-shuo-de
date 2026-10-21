@@ -16,7 +16,7 @@ export default composite({
   literal: "most good / better than all the others",
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["how-good"],
+  topics: ["good-bad-and-okay"],
   isA: ["value-quality"],
   examples: [
     {

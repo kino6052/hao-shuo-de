@@ -12,7 +12,7 @@ export default composite({
   tts: ["给做好的人的金"],
   literal: "the money given to people who did well",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["posts-and-pay"],
   isA: ["money-thing"],
   proposed: true,
 });

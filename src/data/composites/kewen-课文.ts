@@ -12,7 +12,7 @@ export default composite({
   tts: ["学的写的东西"],
   literal: "a written thing to learn",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-subjects-and-courses"],
   isA: ["paper-thing"],
   examples: [
     {

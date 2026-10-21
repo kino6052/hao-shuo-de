@@ -12,7 +12,7 @@ export default composite({
   tts: ["定好的时间"],
   literal: "a time that was fixed",
   fit: "plain",
-  topics: ["calendar"],
+  topics: ["weeks-months-and-deadlines"],
   isA: ["time-span"],
   proposed: true,
 });

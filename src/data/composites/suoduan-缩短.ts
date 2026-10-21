@@ -12,7 +12,7 @@ export default composite({
   tts: ["让X变不长"],
   literal: "make X become not long",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["decreasing-and-breaking-down"],
   isA: ["becoming"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["写好听的话的人", "诗人"],
   literal: "a person who writes good-sounding words / a \"shī\" person",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["authors-and-publishing"],
   isA: ["worker"],
   proposed: true,
 });

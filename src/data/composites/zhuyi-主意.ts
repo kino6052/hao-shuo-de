@@ -12,7 +12,7 @@ export default composite({
   tts: ["想法", "方法"],
   literal: "way",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["plans-and-goals"],
   isA: ["idea"],
   examples: [
     {

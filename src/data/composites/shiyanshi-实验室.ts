@@ -12,7 +12,7 @@ export default composite({
   tts: ["看X怎么变的房间"],
   literal: "a room to see how X changes",
   fit: "plain",
-  topics: ["classroom"],
+  topics: ["school-buildings-and-grounds"],
   isA: ["room"],
   proposed: true,
 });

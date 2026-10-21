@@ -15,7 +15,7 @@ export default composite({
   tts: ["生下来就有很大的能力的人", "比别人高明很多的人"],
   literal: "a person who has great ability from birth / a person much smarter than other people",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["clever-skilled-and-famous"],
   isA: ["person"],
   proposed: true,
 });

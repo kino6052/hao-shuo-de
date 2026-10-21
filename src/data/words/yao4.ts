@@ -14,7 +14,7 @@ export default word("yao4", {
     eng: "Want, need. Without it, you can't ask for anything.",
     rus: "Хотеть, нужно. Без него ничего не попросить.",
   },
-  topics: ["liking-and-wanting"],
+  topics: ["wanting-needing-and-should"],
   isA: ["feeling-and-wanting"],
   maps: "wile",
   atom: {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["用手和脚打的方法", "用身体打的方法"],
   literal: "the way of fighting with hands and feet / the way of fighting with the body",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["exercise-and-kinds-of-sport"],
   isA: ["activity-name"],
   proposed: true,
 });

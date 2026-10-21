@@ -14,7 +14,7 @@ export default composite({
   tts: ["有很多的书的地方"],
   literal: "the place with many books",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["places-in-town"],
   isA: ["building"],
   examples: [
     {

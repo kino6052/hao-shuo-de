@@ -12,7 +12,7 @@ export default composite({
   tts: ["关机", "把机关"],
   literal: "turn the machine off",
   fit: "natural",
-  topics: ["phone-and-computer"],
+  topics: ["computers-and-gadgets"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

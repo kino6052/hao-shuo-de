@@ -15,7 +15,7 @@ export default composite({
   tts: ["用少金买好东西", "真的好的地方"],
   literal: "use little money to buy good things / the really good part",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["prices-and-discounts"],
   isA: ["value-quality"],
   proposed: true,
 });

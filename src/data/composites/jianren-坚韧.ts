@@ -12,7 +12,7 @@ export default composite({
   tts: ["不怕难的"],
   literal: "not afraid of hard things",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["brave-calm-and-lively"],
   isA: ["character-quality"],
   proposed: true,
 });

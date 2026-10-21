@@ -15,7 +15,7 @@ export default composite({
   tts: ["帮发生很大的坏东西的人", "大坏东西发生后帮人"],
   literal: "help the people to whom a very big bad thing happened / help people after a big bad thing happens",
   fit: "plain",
-  topics: ["helping-and-sharing"],
+  topics: ["helping-and-supporting"],
   isA: ["social-action"],
   proposed: true,
 });

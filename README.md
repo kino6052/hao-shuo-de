@@ -54,7 +54,7 @@ Plans and decisions: [BOOK_PLAN.md](BOOK_PLAN.md) (book, decision log D1…), [K
 | Gates (`npm run check`) | 23 |
 | Test files (`npm test`) | 88 |
 
-The language numbers are the last row of `kb/scoreboard.csv` (2026-10-21, .tmp-apply/all.ts: 31 op(s)); a refactor adds a new row.
+The language numbers are the last row of `kb/scoreboard.csv` (2026-10-21, refactors/YT2.ts: 4 op(s)); a refactor adds a new row.
 <!-- /generated:facts -->
 
 ## The book

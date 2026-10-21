@@ -12,7 +12,7 @@ export default composite({
   tts: ["小心"],
   literal: "small heart",
   fit: "natural",
-  topics: ["describing-people"],
+  topics: ["careful-hardworking-and-lazy"],
   isA: ["character-quality"],
   examples: [
     {

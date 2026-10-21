@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:kuai4}}", "{{word:hen3}} {{word:kuai4}}"],
   tts: ["快", "很快"],
   fit: "natural",
-  topics: ["speed-and-strength"],
+  topics: ["fast-slow-and-in-a-hurry"],
   isA: ["speed-or-strength"],
   proposed: true,
 });

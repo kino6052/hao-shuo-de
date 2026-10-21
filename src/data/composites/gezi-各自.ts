@@ -14,7 +14,7 @@ export default composite({
   tts: ["一个一个地，不在一起"],
   literal: "one by one, not together",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["quietly-together-step-by-step"],
   isA: ["adverb-word"],
   proposed: true,
 });

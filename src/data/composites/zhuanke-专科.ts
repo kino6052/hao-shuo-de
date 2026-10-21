@@ -15,7 +15,7 @@ export default composite({
   tts: ["只学一种东西的学校", "只做一种东西的部分"],
   literal: "a school that studies only one kind of thing / the part that does only one kind of thing",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-days-and-years"],
   isA: ["place"],
   proposed: true,
 });

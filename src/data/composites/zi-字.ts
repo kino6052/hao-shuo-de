@@ -12,7 +12,7 @@ export default composite({
   tts: ["字", "写的词"],
   literal: "written word",
   fit: "word",
-  topics: ["writing"],
+  topics: ["words-and-characters"],
   isA: ["language-thing"],
   examples: [
     {

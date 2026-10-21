@@ -15,7 +15,7 @@ export default composite({
   tts: ["最远的一边", "很很"],
   literal: "the farthest side / very very",
   fit: "plain",
-  topics: ["degree-words"],
+  topics: ["very-and-most"],
   isA: ["degree-word"],
   proposed: true,
 });

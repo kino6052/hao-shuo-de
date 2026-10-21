@@ -15,7 +15,7 @@ export default composite({
   tts: ["比别的人不好", "打了，没有比别人好"],
   literal: "not as good as the others / fought, and was not better than others",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["winning-losing-and-scores"],
   isA: ["receiving"],
   proposed: true,
 });

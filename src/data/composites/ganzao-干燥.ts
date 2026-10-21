@@ -12,7 +12,7 @@ export default composite({
   tts: ["水很少", "没有水"],
   literal: "very little water / there is no water",
   fit: "plain",
-  topics: ["how-it-feels"],
+  topics: ["comfortable-smooth-wet-dry"],
   isA: ["touch-quality"],
   proposed: true,
 });

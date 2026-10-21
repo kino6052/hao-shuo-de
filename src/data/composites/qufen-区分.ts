@@ -15,7 +15,7 @@ export default composite({
   tts: ["看出X和Y不同", "把X和Y分开看"],
   literal: "see that X and Y differ / look at X and Y apart",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["noticing-and-observing"],
   isA: ["thinking-action"],
   proposed: true,
 });

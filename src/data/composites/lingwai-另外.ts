@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:bie2}}-{{word:de}}"],
   tts: ["别的"],
   fit: "word",
-  topics: ["joining-words"],
+  topics: ["and-or-and-also"],
   isA: ["conjunction"],
   note: "Besides is yě.",
   examples: [

@@ -12,7 +12,7 @@ export default composite({
   tts: ["很多年的天气"],
   literal: "the weather of many years",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["weather-and-clouds"],
   isA: ["weather-thing"],
   proposed: true,
 });

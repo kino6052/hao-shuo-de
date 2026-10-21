@@ -12,7 +12,7 @@ export default composite({
   tts: ["不对的东西"],
   literal: "something wrong",
   fit: "plain",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["right-wrong-and-mistakes"],
   isA: ["truth-or-ease"],
   examples: [
     {

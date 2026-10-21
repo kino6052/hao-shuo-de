@@ -15,7 +15,7 @@ export default composite({
   tts: ["工作的时候给的金和好的东西", "别人对我的做法"],
   literal: "the money and good things given when one works / the way other people act toward me",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["posts-and-pay"],
   isA: ["idea"],
   proposed: true,
 });

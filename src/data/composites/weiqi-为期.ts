@@ -15,7 +15,7 @@ export default composite({
   tts: ["时间是X", "有X的时间"],
   literal: "the time is X / has X of time",
   fit: "plain",
-  topics: ["how-often"],
+  topics: ["long-and-short-time"],
   isA: ["time-span"],
   proposed: true,
 });

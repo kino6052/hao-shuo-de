@@ -15,7 +15,7 @@ export default composite({
   tts: ["把结果和看法说给X", "把X的结果说回去"],
   literal: "tell X the result and the view / tell the result of X back",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["introducing-and-passing-on"],
   isA: ["speaking-action"],
   proposed: true,
 });

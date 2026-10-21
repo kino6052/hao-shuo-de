@@ -13,7 +13,7 @@ export default composite({
   literal: "face-front",
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["near-and-far"],
+  topics: ["in-front-of-beside-around"],
   isA: ["place-word"],
   note: "Lesson {{lesson:where-it-is}}.",
   examples: [

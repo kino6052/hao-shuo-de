@@ -15,7 +15,7 @@ export default composite({
   tts: ["人很多的大地方", "有很多的家的大的地方"],
   literal: "a big place with very many people / a big place with very many homes",
   fit: "plain",
-  topics: ["countries-and-cities"],
+  topics: ["cities-towns-and-provinces"],
   isA: ["settlement"],
   proposed: true,
 });

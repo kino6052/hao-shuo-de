@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:jia1}}-{{word:jia1}}", "{{word:jia1}}-{{word:jia1}} {{word:dou1}} …"],
   tts: ["家家", "家家都…"],
   fit: "natural",
-  topics: ["all-and-some"],
+  topics: ["all-and-every"],
   isA: ["amount-word"],
   proposed: true,
 });

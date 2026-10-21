@@ -12,7 +12,7 @@ export default composite({
   tts: ["大地方"],
   literal: "big place",
   fit: "plain",
-  topics: ["countries-and-cities"],
+  topics: ["cities-towns-and-provinces"],
   isA: ["place"],
   examples: [
     {

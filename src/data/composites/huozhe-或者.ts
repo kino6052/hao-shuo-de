@@ -12,7 +12,7 @@ export default composite({
   tts: ["还是"],
   fit: "natural",
   transparent: true,
-  topics: ["joining-words"],
+  topics: ["and-or-and-also"],
   isA: ["conjunction"],
   examples: [
     {

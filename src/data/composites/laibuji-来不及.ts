@@ -15,7 +15,7 @@ export default composite({
   tts: ["晚了，不能做了", "没有时间了"],
   literal: "it is late, cannot do it any more / there is no time left",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["soon-early-and-late"],
   isA: ["time-order"],
   proposed: true,
 });

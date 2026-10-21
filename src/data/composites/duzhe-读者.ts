@@ -15,7 +15,7 @@ export default composite({
   tts: ["看书的人", "看写的东西的人"],
   literal: "a person who reads books",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["authors-and-publishing"],
   isA: ["person"],
   proposed: true,
 });

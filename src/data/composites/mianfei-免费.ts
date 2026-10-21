@@ -12,7 +12,7 @@ export default composite({
   tts: ["不用给金"],
   literal: "no need to pay",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["prices-and-discounts"],
   isA: ["value-quality"],
   examples: [
     {

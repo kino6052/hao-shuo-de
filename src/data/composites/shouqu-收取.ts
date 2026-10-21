@@ -15,7 +15,7 @@ export default composite({
   tts: ["拿到", "要人给我X，我拿到"],
   literal: "get / ask someone to give me X, and I get it",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["earning-and-compensation"],
   isA: ["receiving"],
   proposed: true,
 });

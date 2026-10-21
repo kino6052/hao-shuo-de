@@ -15,7 +15,7 @@ export default composite({
   tts: ["不让X过去", "不让X走"],
   literal: "not let X pass / not let X go",
   fit: "plain",
-  topics: ["pushing-and-pulling"],
+  topics: ["blocking-and-controlling"],
   isA: ["handling-action"],
   proposed: true,
 });

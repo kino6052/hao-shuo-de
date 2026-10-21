@@ -12,7 +12,7 @@ export default composite({
   tts: ["人人", "个个…都"],
   literal: "person-person / one-one … all",
   fit: "natural",
-  topics: ["all-and-some"],
+  topics: ["all-and-every"],
   isA: ["amount-word"],
   note: "Lesson {{lesson:doubling-words}}: rén-rén dōu yào shuǐ.",
   examples: [

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:qian2}}-{{word:fang1}}", "{{word:qian2}}-{{word:mian4}}"],
   tts: ["前方", "前面"],
   fit: "natural",
-  topics: ["up-down-in-out"],
+  topics: ["front-and-back"],
   isA: ["place-relation"],
   proposed: true,
 });

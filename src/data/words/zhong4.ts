@@ -14,7 +14,7 @@ export default word("zhong4", {
     eng: "Heavy, and important ({{word:zhong4}}-{{word:yao4}}).",
     rus: "«Тяжёлый» и «важный» ({{word:zhong4}}-{{word:yao4}}).",
   },
-  topics: ["how-it-feels"],
+  topics: ["hard-soft-heavy-light"],
   isA: ["touch-quality"],
   paraphrase: {
     forms: [

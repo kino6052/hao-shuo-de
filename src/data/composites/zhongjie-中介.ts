@@ -14,7 +14,7 @@ export default composite({
   tts: ["在两个人中间帮人的人"],
   literal: "the person who helps in between two people",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["companies-and-products"],
   isA: ["worker"],
   proposed: true,
 });

@@ -14,7 +14,7 @@ export default composite({
   tts: ["看到的发生的东西"],
   literal: "a thing that happens that you see",
   fit: "plain",
-  topics: ["news-and-events"],
+  topics: ["events-and-luck"],
   isA: ["event"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["做X要有的东西"],
   literal: "what you must have to do X",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["jobs-and-hiring"],
   isA: ["idea"],
   proposed: true,
 });

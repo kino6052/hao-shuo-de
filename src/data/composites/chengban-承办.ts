@@ -15,7 +15,7 @@ export default composite({
   tts: ["我来做X", "把X拿在手里做"],
   literal: "I will do X / take X in hand and do it",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["managing-and-progress"],
   isA: ["working"],
   proposed: true,
 });

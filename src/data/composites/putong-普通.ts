@@ -12,7 +12,7 @@ export default composite({
   tts: ["和别的一样"],
   literal: "like the others",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["normal-and-ordinary"],
   isA: ["condition-quality"],
   examples: [
     {

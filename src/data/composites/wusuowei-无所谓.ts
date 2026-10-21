@@ -15,7 +15,7 @@ export default composite({
   tts: ["怎么都好", "怎么都可以"],
   literal: "any way is good / any way is fine",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["opinions-and-views"],
   isA: ["thinking-action"],
   proposed: true,
 });

@@ -16,7 +16,7 @@ export default composite({
   tts: ["开头", "开始", "最前面的部分"],
   literal: "open-head / begin / the very front part",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["first-next-and-last"],
   isA: ["time-order"],
   proposed: true,
 });

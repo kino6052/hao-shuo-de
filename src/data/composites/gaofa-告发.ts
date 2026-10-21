@@ -14,6 +14,6 @@ export default composite({
   tts: ["说X做了法说不能做的"],
   literal: "say X did what the law says cannot be done",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["courts-and-trials"],
   isA: ["speaking-action"],
 });

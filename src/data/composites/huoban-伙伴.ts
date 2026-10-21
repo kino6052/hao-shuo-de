@@ -15,7 +15,7 @@ export default composite({
   tts: ["一起做X的人", "一起玩儿的人"],
   literal: "a person who does X together / a person who plays together",
   fit: "plain",
-  topics: ["people-together"],
+  topics: ["teams-and-clubs"],
   isA: ["social-role"],
   proposed: true,
 });

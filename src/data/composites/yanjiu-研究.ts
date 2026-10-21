@@ -12,7 +12,7 @@ export default composite({
   tts: ["好好看，好好学"],
   literal: "look carefully, learn carefully",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["thinking-and-researching"],
   isA: ["thinking-action"],
   examples: [
     {

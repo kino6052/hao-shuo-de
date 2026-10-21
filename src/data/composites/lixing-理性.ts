@@ -15,7 +15,7 @@ export default composite({
   tts: ["用头想，不用心", "用头想的能力"],
   literal: "think with the head, not with the heart / the ability to think with the head",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["brave-calm-and-lively"],
   isA: ["character-quality"],
   proposed: true,
 });

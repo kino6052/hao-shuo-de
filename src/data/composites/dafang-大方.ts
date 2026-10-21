@@ -16,7 +16,7 @@ export default composite({
   tts: ["大方", "爱给人东西", "不怕人看"],
   literal: "big-square / loves to give people things / not afraid of people looking",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["kind-honest-and-mean"],
   isA: ["character-quality"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["上面有水", "空气里有很多水"],
   literal: "there is water on top / there is a lot of water in the air",
   fit: "plain",
-  topics: ["how-it-feels"],
+  topics: ["comfortable-smooth-wet-dry"],
   isA: ["touch-quality"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["坏了", "很不硬"],
   literal: "gone bad / very not hard",
   fit: "plain",
-  topics: ["how-it-feels"],
+  topics: ["comfortable-smooth-wet-dry"],
   isA: ["condition-quality"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["心里的大想法", "做东西的时候心里有的想法"],
   literal: "a big idea in the heart / the idea one has in the heart when doing things",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["opinions-and-views"],
   isA: ["idea"],
   proposed: true,
 });

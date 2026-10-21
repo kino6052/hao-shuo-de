@@ -13,7 +13,7 @@ export default composite({
   literal: "hit-calculate",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["deciding"],
+  topics: ["choosing-and-deciding"],
   isA: ["thinking-action"],
   examples: [
     {

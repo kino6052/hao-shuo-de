@@ -15,7 +15,7 @@ export default composite({
   tts: ["心里不变的想法", "心里一定的想法"],
   literal: "an idea in the heart that does not change / a sure idea in the heart",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["believing-hoping-and-caring"],
   isA: ["idea"],
   proposed: true,
 });

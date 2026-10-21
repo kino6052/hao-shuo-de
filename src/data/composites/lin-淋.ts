@@ -15,7 +15,7 @@ export default composite({
   tts: ["把水从上面放到X上", "让天上下来的水到身体上"],
   literal: "put water from above onto X / let the water coming down from the sky reach the body",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["rain-and-snow"],
   isA: ["weather-happening"],
   proposed: true,
 });

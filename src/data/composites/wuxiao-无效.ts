@@ -15,7 +15,7 @@ export default composite({
   tts: ["没有用", "做了也不变"],
   literal: "has no use / done, and still nothing changes",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["useful-and-harmful"],
   isA: ["value-quality"],
   proposed: true,
 });

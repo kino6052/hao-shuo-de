@@ -12,7 +12,7 @@ export default composite({
   tts: ["新闻"],
   literal: "new + wén",
   fit: "name",
-  topics: ["news-and-events"],
+  topics: ["news-and-press"],
   isA: ["idea"],
   examples: [
     {

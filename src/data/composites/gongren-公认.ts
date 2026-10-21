@@ -15,7 +15,7 @@ export default composite({
   tts: ["大家都说这是真的", "大家都觉得好"],
   literal: "everyone says this is true / everyone feels it is good",
   fit: "plain",
-  topics: ["agreeing-and-praising"],
+  topics: ["comments-and-recommending"],
   isA: ["thinking-action"],
   proposed: true,
 });

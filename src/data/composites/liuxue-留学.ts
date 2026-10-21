@@ -12,7 +12,7 @@ export default composite({
   tts: ["留学", "去外国学"],
   literal: "go to a foreign country to learn",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-days-and-years"],
   isA: ["learning-and-teaching"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["大家觉得对和不对的东西", "大家觉得什么对，什么不对"],
   literal: "what everyone feels is right and not right / what everyone feels is right, what is not right",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["key-points-and-principles"],
   isA: ["idea"],
   proposed: true,
 });

@@ -14,7 +14,7 @@ export default composite({
   tts: ["让X出现在眼睛前面"],
   literal: "let X appear in front of the eyes",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["explaining-and-describing"],
   isA: ["speaking-action"],
   proposed: true,
 });

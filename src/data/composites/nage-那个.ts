@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:na4}}-ge"],
   tts: ["那个"],
   fit: "natural",
-  topics: ["pointers"],
+  topics: ["this-that-such"],
   isA: ["pronoun"],
   examples: [
     {

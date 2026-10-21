@@ -15,7 +15,7 @@ export default composite({
   tts: ["不冷不热", "对人很好，说话很好听"],
   literal: "not cold not hot / very good to people, speaks in a pleasant way",
   fit: "plain",
-  topics: ["how-it-feels"],
+  topics: ["hot-cold-and-warm"],
   isA: ["touch-quality"],
   proposed: true,
 });

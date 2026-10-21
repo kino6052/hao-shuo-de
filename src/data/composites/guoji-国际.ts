@@ -12,7 +12,7 @@ export default composite({
   tts: ["很多国的"],
   literal: "of many countries",
   fit: "plain",
-  topics: ["countries-and-cities"],
+  topics: ["country-and-nation"],
   isA: ["place-relation"],
   examples: [
     {

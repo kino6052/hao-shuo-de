@@ -12,6 +12,6 @@ export default composite({
   tts: ["不会变"],
   literal: "will not change",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["trying-and-persisting"],
   isA: ["character-quality"],
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["真的", "真实", "真"],
   fit: "natural",
   kinds: ["built", "spelled", "built"],
-  topics: ["easy-hard-right-wrong"],
+  topics: ["true-real-and-fake"],
   isA: ["truth-or-ease"],
   examples: [
     {

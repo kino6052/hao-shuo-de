@@ -12,7 +12,7 @@ export default composite({
   tts: ["不乱"],
   fit: "natural",
   transparent: true,
-  topics: ["state-of-things"],
+  topics: ["empty-messy-clear"],
   isA: ["condition-quality"],
   proposed: true,
 });

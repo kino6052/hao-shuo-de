@@ -12,7 +12,7 @@ export default composite({
   tts: ["动的水", "水在动"],
   literal: "moving water / the water is moving",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["rivers-lakes-and-floods"],
   isA: ["liquid-or-gas"],
   proposed: true,
 });

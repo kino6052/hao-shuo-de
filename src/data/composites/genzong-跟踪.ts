@@ -15,7 +15,7 @@ export default composite({
   tts: ["在X后面走，记下X去哪里", "看X去哪里"],
   literal: "walk behind X and write down where X goes / watch where X goes",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["noticing-and-observing"],
   isA: ["perceiving"],
   proposed: true,
 });

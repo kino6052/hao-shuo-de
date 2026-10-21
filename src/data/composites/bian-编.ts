@@ -15,7 +15,7 @@ export default composite({
   tts: ["把线结在一起", "把写的东西放在一起"],
   literal: "tie threads together",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["joining-adding-replacing"],
   isA: ["making"],
   proposed: true,
 });

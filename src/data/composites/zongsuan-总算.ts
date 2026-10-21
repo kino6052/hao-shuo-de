@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["最后", "很长的时间后"],
   fit: "natural",
-  topics: ["adverbs"],
+  topics: ["just-then-and-finally"],
   isA: ["adverb-word"],
   proposed: true,
 });

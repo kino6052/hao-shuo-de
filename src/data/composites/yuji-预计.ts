@@ -14,7 +14,7 @@ export default composite({
   tts: ["算一下以后会是多少"],
   literal: "work out how much it will be later",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["opinions-and-guesses"],
   isA: ["thinking-action"],
   proposed: true,
 });

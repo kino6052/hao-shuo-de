@@ -14,7 +14,7 @@ export default composite({
   tts: ["想是X做的，但还不知道"],
   literal: "think it was X who did it, but still do not know",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["courts-and-trials"],
   isA: ["state-name"],
   proposed: true,
 });

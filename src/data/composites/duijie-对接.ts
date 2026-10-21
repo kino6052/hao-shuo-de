@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X和Y的头放在一起", "把两个东西的头放在一起"],
   literal: "put the head of X and the head of Y together / put the heads of two things together",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["mixing-passing-on-and-changing"],
   isA: ["handling-action"],
   proposed: true,
 });

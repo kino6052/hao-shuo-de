@@ -15,7 +15,7 @@ export default composite({
   tts: ["晚一点做", "把时间变晚"],
   literal: "do it a bit later / make the time later",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["soon-early-and-late"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

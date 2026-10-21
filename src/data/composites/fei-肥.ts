@@ -15,7 +15,7 @@ export default composite({
   tts: ["肚子很大", "有很多的油"],
   literal: "the belly is very big / has a lot of oil",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["looks-and-build"],
   isA: ["bodily-state"],
   proposed: true,
 });

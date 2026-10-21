@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X的地方用了", "在X里面，不让别人在"],
   literal: "use up the place of X / be in X so that others cannot be",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["carrying-and-holding"],
   isA: ["owning"],
   proposed: true,
 });

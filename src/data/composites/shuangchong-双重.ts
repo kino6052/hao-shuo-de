@@ -12,7 +12,7 @@ export default composite({
   tts: ["有两个的"],
   literal: "having two",
   fit: "plain",
-  topics: ["all-and-some"],
+  topics: ["half-both-and-only-one"],
   isA: ["amount-word"],
   proposed: true,
 });

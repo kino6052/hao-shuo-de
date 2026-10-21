@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X上面变到下面", "把X里面的东西拿出来找"],
   literal: "change X's top to the bottom / take the things out of X to look for something",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["mixing-passing-on-and-changing"],
   isA: ["handling-action"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["想知道", "心里很想知道"],
   literal: "want to know / want very much in the heart to know",
   fit: "plain",
-  topics: ["liking-and-wanting"],
+  topics: ["interest-and-enjoying"],
   isA: ["feeling-quality"],
   proposed: true,
 });

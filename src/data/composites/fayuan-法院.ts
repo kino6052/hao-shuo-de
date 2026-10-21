@@ -14,7 +14,7 @@ export default composite({
   tts: ["用法决定谁对的地方"],
   literal: "a place that decides with the law who is right",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["courts-and-trials"],
   isA: ["building"],
   proposed: true,
 });

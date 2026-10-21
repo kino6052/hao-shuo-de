@@ -12,7 +12,7 @@ export default composite({
   tts: ["写你叫什么"],
   literal: "write what you're called",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-days-and-years"],
   isA: ["social-action"],
   examples: [
     {

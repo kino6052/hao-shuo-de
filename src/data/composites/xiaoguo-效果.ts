@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:jie2}}-{{word:guo3}}"],
   tts: ["结果"],
   fit: "plain",
-  topics: ["causes-and-results"],
+  topics: ["results-and-effects"],
   isA: ["cause-and-effect"],
   examples: [
     {

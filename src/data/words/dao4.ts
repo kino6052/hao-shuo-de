@@ -14,7 +14,7 @@ export default word("dao4", {
     eng: "Arrive, to: {{word:qu4}}-{{word:dao4}} … , and a result reached ({{word:zhao3}}-{{word:dao4}}, found).",
     rus: "Добраться, до: {{word:qu4}}-{{word:dao4}} …, а также достигнутый результат ({{word:zhao3}}-{{word:dao4}} — нашёл).",
   },
-  topics: ["going-and-coming"],
+  topics: ["arriving-and-reaching"],
   isA: ["moving-action"],
   senses: {
     way: {

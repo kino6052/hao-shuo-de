@@ -15,7 +15,7 @@ export default composite({
   tts: ["变大变好了", "有很多好的东西"],
   literal: "has become bigger and better",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["appearing-and-developing"],
   isA: ["value-quality"],
   proposed: true,
 });

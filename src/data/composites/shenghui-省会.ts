@@ -15,7 +15,7 @@ export default composite({
   tts: ["在国里的大的地方的头", "在国里的大的地方决定的地方"],
   literal: "the head of a big place in the country",
   fit: "plain",
-  topics: ["countries-and-cities"],
+  topics: ["cities-towns-and-provinces"],
   isA: ["settlement"],
   proposed: true,
 });

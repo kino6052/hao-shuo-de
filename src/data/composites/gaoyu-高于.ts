@@ -12,7 +12,7 @@ export default composite({
   tts: ["比X高", "比X多"],
   literal: "taller than X / more than X",
   fit: "plain",
-  topics: ["same-and-different"],
+  topics: ["more-and-less-than"],
   isA: ["comparison"],
   proposed: true,
 });

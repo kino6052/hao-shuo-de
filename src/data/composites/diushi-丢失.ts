@@ -14,7 +14,7 @@ export default composite({
   tts: ["东西没了，找不到"],
   literal: "the thing is gone, cannot be found",
   fit: "plain",
-  topics: ["giving-and-getting"],
+  topics: ["losing-and-possessing"],
   isA: ["receiving"],
   proposed: true,
 });

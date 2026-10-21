@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["要不", "如果不是这样，…"],
   fit: "natural",
-  topics: ["joining-words"],
+  topics: ["if-unless-and-even-if"],
   isA: ["conjunction"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["把眼睛打开", "把眼睛开"],
   literal: "open the eyes / make the eyes open",
   fit: "plain",
-  topics: ["senses"],
+  topics: ["seeing-and-looking"],
   isA: ["body-action"],
   proposed: true,
 });

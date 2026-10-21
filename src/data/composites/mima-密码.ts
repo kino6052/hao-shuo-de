@@ -12,7 +12,7 @@ export default composite({
   tts: ["进去要的号"],
   literal: "the number you need to get in",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["software-files-and-accounts"],
   isA: ["idea"],
   examples: [
     {

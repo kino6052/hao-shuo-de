@@ -15,7 +15,7 @@ export default composite({
   tts: ["天上很长时间不下水的坏东西", "没有水的大坏东西"],
   literal: "the bad thing when for a long time no water comes down from the sky / a big bad thing with no water",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["weather-and-clouds"],
   isA: ["event"],
   proposed: true,
 });

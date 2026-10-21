@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X放在包里", "X外面的包"],
   literal: "put X in a bag / the bag outside X",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["goods-and-customers"],
   isA: ["handling-action"],
   proposed: true,
 });

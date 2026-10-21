@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X打在Y上，留下X的样子", "打在Y上留下名字的工具"],
   literal: "press X onto Y and leave the look of X / a tool that leaves a name when pressed onto Y",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["authors-and-publishing"],
   isA: ["making"],
   proposed: true,
 });

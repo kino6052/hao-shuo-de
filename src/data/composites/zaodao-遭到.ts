@@ -15,7 +15,7 @@ export default composite({
   tts: ["得到坏的东西", "得到不好的东西"],
   literal: "get a bad thing / get something not good",
   fit: "plain",
-  topics: ["causes-and-results"],
+  topics: ["harm-and-bad-results"],
   isA: ["being-affected"],
   proposed: true,
 });

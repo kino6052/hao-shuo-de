@@ -15,7 +15,7 @@ export default composite({
   tts: ["对人说不是真的话的人", "用不是真的话得别人的金的人"],
   literal: "a person who tells people what is not true / a person who uses untrue words to get other people's money",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["crimes-and-criminals"],
   isA: ["person"],
   proposed: true,
 });

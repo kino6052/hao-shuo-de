@@ -12,7 +12,7 @@ export default composite({
   tts: ["让人买的东西"],
   literal: "a thing that makes people buy",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["companies-and-products"],
   isA: ["work-of-art"],
   examples: [
     {

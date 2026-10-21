@@ -15,7 +15,7 @@ export default composite({
   tts: ["把东西放进空的地方", "写在空的地方"],
   literal: "put things into the empty place",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["putting-and-placing"],
   isA: ["placing"],
   proposed: true,
 });

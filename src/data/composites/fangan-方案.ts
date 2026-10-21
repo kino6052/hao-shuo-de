@@ -12,7 +12,7 @@ export default composite({
   tts: ["要做的方法"],
   literal: "the way you are going to do it",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["plans-and-goals"],
   isA: ["idea"],
   proposed: true,
 });

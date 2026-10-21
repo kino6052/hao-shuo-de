@@ -13,7 +13,7 @@ export default composite({
   literal: "if",
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["joining-words"],
+  topics: ["if-unless-and-even-if"],
   isA: ["conjunction"],
   note: "rúguǒ X, jiù Y.",
   examples: [

@@ -12,7 +12,7 @@ export default composite({
   tts: ["文学"],
   literal: "literature",
   fit: "name",
-  topics: ["writing"],
+  topics: ["stories-poems-and-essays"],
   isA: ["work-of-art"],
   examples: [
     {

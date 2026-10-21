@@ -15,7 +15,7 @@ export default composite({
   tts: ["在上面给人看的高的地", "给人看的高的地方"],
   literal: "the high floor on which one shows things to people / a high place for showing things to people",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["acting-and-roles"],
   isA: ["building-part"],
   proposed: true,
 });

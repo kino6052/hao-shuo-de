@@ -15,7 +15,7 @@ export default composite({
   tts: ["把别人写的字又写一次", "写和别人一样的字"],
   literal: "write again once what another person wrote / write the same characters as another person",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["writing-things-down"],
   isA: ["making"],
   proposed: true,
 });

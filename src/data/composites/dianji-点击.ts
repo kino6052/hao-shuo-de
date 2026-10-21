@@ -12,7 +12,7 @@ export default composite({
   tts: ["用手打一下X"],
   literal: "hit X once with the hand",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["typing-clicking-and-downloading"],
   isA: ["handling-action"],
   proposed: true,
 });

@@ -13,7 +13,7 @@ export default composite({
   literal: "buy things",
   fit: "natural",
   transparent: true,
-  topics: ["shopping"],
+  topics: ["buying-and-selling"],
   isA: ["trade-action"],
   proposed: true,
 });

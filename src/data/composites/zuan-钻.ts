@@ -15,7 +15,7 @@ export default composite({
   tts: ["从很小的口进去", "在X上做一个口"],
   literal: "go in through a very small opening / make an opening in X",
   fit: "plain",
-  topics: ["going-and-coming"],
+  topics: ["going-in-and-coming-out"],
   isA: ["moving-action"],
   proposed: true,
 });

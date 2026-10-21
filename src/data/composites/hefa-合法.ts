@@ -15,7 +15,7 @@ export default composite({
   tts: ["法让做的", "国家的法说可以的"],
   literal: "what the law lets one do / what the country's law says is allowed",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["laws-and-rules"],
   isA: ["condition-quality"],
   proposed: true,
 });

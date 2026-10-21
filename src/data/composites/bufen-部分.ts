@@ -12,7 +12,7 @@ export default composite({
   tts: ["部分", "一些"],
   fit: "word",
   kinds: ["spelled", "built"],
-  topics: ["all-and-some"],
+  topics: ["some-most-and-few"],
   isA: ["amount-word"],
   examples: [
     {

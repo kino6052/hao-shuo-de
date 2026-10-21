@@ -12,7 +12,7 @@ export default composite({
   tts: ["一下"],
   literal: "in a moment",
   fit: "plain",
-  topics: ["how-often"],
+  topics: ["suddenly-and-on-time"],
   isA: ["adverb-word"],
   examples: [
     {

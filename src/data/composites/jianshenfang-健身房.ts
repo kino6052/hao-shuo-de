@@ -15,7 +15,7 @@ export default composite({
   tts: ["动身体的房间", "让身体有力的地方"],
   literal: "a room for moving the body / a place that makes the body strong",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["athletes-and-sports-grounds"],
   isA: ["room"],
   proposed: true,
 });

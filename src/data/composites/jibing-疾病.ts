@@ -12,7 +12,7 @@ export default composite({
   tts: ["身体不好"],
   literal: "the body is not good",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["fever-colds-and-diseases"],
   isA: ["state-name"],
   proposed: true,
 });

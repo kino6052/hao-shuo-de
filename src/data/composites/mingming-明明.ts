@@ -12,7 +12,7 @@ export default composite({
   tts: ["明明", "一看就知道"],
   literal: "clear-clear / know it at one look",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["maybe-of-course-obviously"],
   isA: ["adverb-word"],
   proposed: true,
 });

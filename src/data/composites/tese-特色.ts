@@ -15,7 +15,7 @@ export default composite({
   tts: ["真好的地方", "因为X人知道这个"],
   literal: "a really good place / people know this because of X",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["strong-and-weak-points"],
   isA: ["idea"],
   examples: [
     {

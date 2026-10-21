@@ -15,7 +15,7 @@ export default composite({
   tts: ["把学的东西说给很多人听", "让很多人知道学的东西"],
   literal: "tell what science is to many people / let many people know what science is",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["explaining-and-describing"],
   isA: ["speaking-action"],
   proposed: true,
 });

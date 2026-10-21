@@ -12,7 +12,7 @@ export default composite({
   tts: ["用两个手拿"],
   literal: "hold with two hands",
   fit: "word",
-  topics: ["taking-and-holding"],
+  topics: ["carrying-and-holding"],
   isA: ["handling-action"],
   examples: [
     {

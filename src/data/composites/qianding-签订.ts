@@ -15,7 +15,7 @@ export default composite({
   tts: ["在说定的话上写名字", "写名字，说好"],
   literal: "write a name on the agreed words / write the name, say it is settled",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["buying-supplying-and-launching"],
   isA: ["social-action"],
   proposed: true,
 });

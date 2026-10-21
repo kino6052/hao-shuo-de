@@ -15,7 +15,7 @@ export default composite({
   tts: ["动", "从一个地方动到别的地方"],
   literal: "move / move from one place to another",
   fit: "plain",
-  topics: ["going-and-coming"],
+  topics: ["passing-through-and-across"],
   isA: ["moving-action"],
   proposed: true,
 });

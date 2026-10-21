@@ -15,7 +15,7 @@ export default composite({
   tts: ["不是人做的东西", "天和地，植物和动物"],
   literal: "things that people did not make / the sky and the ground, plants and animals",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["nature-and-environment"],
   isA: ["natural-thing"],
   proposed: true,
 });

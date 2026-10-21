@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["通用", "大家都能用"],
   fit: "natural",
-  topics: ["all-and-some"],
+  topics: ["whole-complete-and-widespread"],
   isA: ["condition-quality"],
   proposed: true,
 });

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:kai1}}"],
   tts: ["开"],
   fit: "word",
-  topics: ["pushing-and-pulling"],
+  topics: ["opening-and-closing"],
   isA: ["handling-action"],
   examples: [
     {

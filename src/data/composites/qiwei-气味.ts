@@ -12,7 +12,7 @@ export default composite({
   tts: ["鼻子知道的味道"],
   literal: "the taste the nose knows",
   fit: "plain",
-  topics: ["senses"],
+  topics: ["smell-taste-touch-and-feeling"],
   isA: ["taste-quality"],
   proposed: true,
 });

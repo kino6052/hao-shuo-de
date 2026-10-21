@@ -15,7 +15,7 @@ export default composite({
   tts: ["想是真的", "想X说的是真的"],
   literal: "think it is true / think what X says is true",
   fit: "plain",
-  topics: ["liking-and-wanting"],
+  topics: ["respect-and-cherishing"],
   isA: ["feeling-and-wanting"],
   examples: [
     {

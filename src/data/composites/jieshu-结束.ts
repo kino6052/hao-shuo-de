@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:wan2}}"],
   tts: ["完"],
   fit: "word",
-  topics: ["deciding"],
+  topics: ["beginning-and-finishing"],
   isA: ["starting-and-stopping"],
   note: "wán le: it's over.",
   examples: [

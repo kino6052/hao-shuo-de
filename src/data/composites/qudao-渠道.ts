@@ -15,7 +15,7 @@ export default composite({
   tts: ["得到东西的路", "让水走的路"],
   literal: "the road to getting things / the road that lets water go",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["trade-and-the-market"],
   isA: ["idea"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["对的方法", "说要怎么做的话"],
   literal: "the right way / the words that say how to do it",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["key-points-and-principles"],
   isA: ["idea"],
   proposed: true,
 });

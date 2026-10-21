@@ -12,7 +12,7 @@ export default composite({
   tts: ["打话机"],
   literal: "hit the talk machine",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["phone-calls-and-messages"],
   isA: ["social-action"],
   examples: [
     {

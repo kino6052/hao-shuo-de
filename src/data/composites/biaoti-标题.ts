@@ -14,7 +14,7 @@ export default composite({
   tts: ["写在最上面的题"],
   literal: "the topic written at the very top",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["stories-poems-and-essays"],
   isA: ["language-thing"],
   proposed: true,
 });

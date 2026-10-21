@@ -12,7 +12,7 @@ export default composite({
   tts: ["不好的地方"],
   literal: "the not-good place",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["useful-and-harmful"],
   isA: ["idea"],
   proposed: true,
 });

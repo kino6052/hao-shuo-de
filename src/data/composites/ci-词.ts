@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:ci2}}"],
   tts: ["词"],
   fit: "word",
-  topics: ["writing"],
+  topics: ["words-and-characters"],
   isA: ["language-thing"],
   examples: [
     {

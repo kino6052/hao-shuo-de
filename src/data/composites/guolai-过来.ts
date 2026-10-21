@@ -13,7 +13,7 @@ export default composite({
   literal: "come across / come to this side",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["going-and-coming"],
+  topics: ["go-come-and-return"],
   isA: ["moving-action"],
   examples: [
     {

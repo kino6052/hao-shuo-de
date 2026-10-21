@@ -14,7 +14,7 @@ export default composite({
   tts: ["在从天下来的冷的白的东西上快动"],
   literal: "move fast on the cold white stuff that comes down from the sky",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["exercise-and-kinds-of-sport"],
   isA: ["playing"],
   proposed: true,
 });

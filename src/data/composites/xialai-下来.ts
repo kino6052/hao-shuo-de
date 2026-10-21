@@ -12,7 +12,7 @@ export default composite({
   tts: ["下来"],
   fit: "natural",
   kinds: ["built"],
-  topics: ["going-and-coming"],
+  topics: ["climbing-and-falling"],
   isA: ["moving-action"],
   note: "Lesson {{lesson:moving}}.",
   examples: [

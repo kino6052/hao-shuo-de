@@ -14,7 +14,7 @@ export default composite({
   tts: ["有很多家和买东西的地方的小地方"],
   literal: "a small place with many homes and places to buy things",
   fit: "plain",
-  topics: ["countries-and-cities"],
+  topics: ["cities-towns-and-provinces"],
   isA: ["settlement"],
   proposed: true,
 });

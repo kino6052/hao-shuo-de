@@ -15,7 +15,7 @@ export default composite({
   tts: ["让人心里好一点", "说好听的话给X听"],
   literal: "make a person feel a little better in the heart / say nice words for X to hear",
   fit: "plain",
-  topics: ["helping-and-sharing"],
+  topics: ["caring-and-comforting"],
   isA: ["social-action"],
   proposed: true,
 });

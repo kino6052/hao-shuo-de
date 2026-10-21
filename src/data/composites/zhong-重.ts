@@ -12,7 +12,7 @@ export default composite({
   tts: ["重", "大"],
   literal: "big",
   fit: "word",
-  topics: ["how-it-feels"],
+  topics: ["hard-soft-heavy-light"],
   isA: ["touch-quality"],
   note: "ná-bù-dòng: too heavy to lift.",
   examples: [

@@ -12,7 +12,7 @@ export default composite({
   tts: ["X，就Y", "因为这个…"],
   literal: "X, then Y / because of this",
   fit: "natural",
-  topics: ["joining-words"],
+  topics: ["because-and-so"],
   isA: ["conjunction"],
   note: "Mandarin often says so with 就 alone: tā lěng le, jiù huí jiā le.",
   examples: [

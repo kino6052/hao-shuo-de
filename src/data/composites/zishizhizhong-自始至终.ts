@@ -15,7 +15,7 @@ export default composite({
   tts: ["从开始到最后", "从开始到完"],
   literal: "from the start to the last / from the start to the end",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["first-next-and-last"],
   isA: ["time-order"],
   proposed: true,
 });

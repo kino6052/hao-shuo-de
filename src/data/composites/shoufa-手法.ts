@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["手法", "做东西的方法"],
   fit: "natural",
-  topics: ["ideas-and-opinions"],
+  topics: ["ways-and-methods"],
   isA: ["idea"],
   proposed: true,
 });

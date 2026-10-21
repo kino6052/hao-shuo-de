@@ -15,7 +15,7 @@ export default composite({
   tts: ["圆圆地动", "在一个地方圆圆的动"],
   literal: "move in a round way / move in a round way in one place",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["becoming-and-turning-into"],
   isA: ["happening"],
   proposed: true,
 });

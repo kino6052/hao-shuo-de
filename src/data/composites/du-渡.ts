@@ -15,7 +15,7 @@ export default composite({
   tts: ["坐在水上走的车里，到水的那边", "从水的这边到那边"],
   literal: "sit in the vehicle that goes on the water, arrive at the other side of the water / from this side of the water to that side",
   fit: "plain",
-  topics: ["going-and-coming"],
+  topics: ["passing-through-and-across"],
   isA: ["moving-action"],
   proposed: true,
 });

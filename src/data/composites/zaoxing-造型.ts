@@ -15,7 +15,7 @@ export default composite({
   tts: ["样子", "让X有好看的样子"],
   literal: "the look / make X have a good-looking look",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["form-and-structure"],
   isA: ["idea"],
   proposed: true,
 });

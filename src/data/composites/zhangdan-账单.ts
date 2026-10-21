@@ -14,7 +14,7 @@ export default composite({
   tts: ["写了要给多少金的东西"],
   literal: "a thing that has written on it how much money must be given",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["prices-and-costs"],
   isA: ["paper-thing"],
   proposed: true,
 });

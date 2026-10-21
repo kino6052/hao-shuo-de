@@ -15,7 +15,7 @@ export default composite({
   tts: ["用很少的话说很多", "说最重要的部分"],
   literal: "use very few words to say a lot / say the most important part",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["explaining-and-describing"],
   isA: ["speaking-action"],
   proposed: true,
 });

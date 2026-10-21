@@ -15,7 +15,7 @@ export default composite({
   tts: ["有一点圆", "有一点圆的样子"],
   literal: "a bit round / having a bit of a round look",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["flat-straight-curved"],
   isA: ["shape-quality"],
   proposed: true,
 });

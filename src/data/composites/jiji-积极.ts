@@ -12,7 +12,7 @@ export default composite({
   tts: ["很要做"],
   literal: "very willing to do it",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["careful-hardworking-and-lazy"],
   isA: ["character-quality"],
   examples: [
     {

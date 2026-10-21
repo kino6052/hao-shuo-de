@@ -15,7 +15,7 @@ export default composite({
   tts: ["用脚从地上起来，看能到多远", "用脚从地上起来，到很远的地方"],
   literal: "rise from the ground with the feet and see how far one can get / rise from the ground with the feet to a very far place",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["exercise-and-kinds-of-sport"],
   isA: ["moving-action"],
   proposed: true,
 });

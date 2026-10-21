@@ -14,7 +14,7 @@ export default composite({
   tts: ["写字用的空的书"],
   literal: "an empty book used for writing characters",
   fit: "plain",
-  topics: ["classroom"],
+  topics: ["pens-books-and-school-bags"],
   isA: ["paper-thing"],
   proposed: true,
 });

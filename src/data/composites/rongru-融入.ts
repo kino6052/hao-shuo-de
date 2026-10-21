@@ -15,7 +15,7 @@ export default composite({
   tts: ["进到X里，和X一样", "进去，和他们在一起"],
   literal: "go into X and be the same as X / go in and be together with them",
   fit: "plain",
-  topics: ["people-together"],
+  topics: ["gathering-and-getting-along"],
   isA: ["social-action"],
   proposed: true,
 });

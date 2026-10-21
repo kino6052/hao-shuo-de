@@ -15,7 +15,7 @@ export default composite({
   tts: ["问可以不来吗", "说我要不工作，不学"],
   literal: "ask whether one may not come / say I want to not work, not study",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["work-days-and-busy"],
   isA: ["social-action"],
   proposed: true,
 });

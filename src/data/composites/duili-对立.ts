@@ -15,7 +15,7 @@ export default composite({
   tts: ["两边想的不一样", "一边说好，一边说不好"],
   literal: "the two sides think differently / one side says good, one side says not good",
   fit: "plain",
-  topics: ["same-and-different"],
+  topics: ["different-and-varied"],
   isA: ["comparison"],
   proposed: true,
 });

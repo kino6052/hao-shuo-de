@@ -15,7 +15,7 @@ export default composite({
   tts: ["味道很坏", "鼻子觉得不好"],
   literal: "the smell is very bad / the nose feels it is not good",
   fit: "plain",
-  topics: ["senses"],
+  topics: ["smell-taste-touch-and-feeling"],
   isA: ["taste-quality"],
   proposed: true,
 });

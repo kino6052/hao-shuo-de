@@ -13,7 +13,7 @@ export default composite({
   literal: "get-reach",
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["giving-and-getting"],
+  topics: ["getting-and-receiving"],
   isA: ["receiving"],
   examples: [
     {

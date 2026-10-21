@@ -16,7 +16,7 @@ export default composite({
   literal: "person who learns with you",
   fit: "natural",
   kinds: ["built", "built"],
-  topics: ["classroom"],
+  topics: ["teachers-and-students"],
   isA: ["social-role"],
   examples: [
     {

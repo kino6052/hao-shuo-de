@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:xue2}}-{{word:wen4}}", "{{word:zhi1dao4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}"],
   tts: ["学问", "知道的东西"],
   fit: "natural",
-  topics: ["studying"],
+  topics: ["studying-and-practising"],
   isA: ["idea"],
   proposed: true,
 });

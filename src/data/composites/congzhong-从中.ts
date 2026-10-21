@@ -12,7 +12,7 @@ export default composite({
   tts: ["从中"],
   fit: "natural",
   transparent: true,
-  topics: ["up-down-in-out"],
+  topics: ["middle-and-among"],
   isA: ["place-relation"],
   proposed: true,
 });

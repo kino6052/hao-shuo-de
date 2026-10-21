@@ -12,7 +12,7 @@ export default composite({
   tts: ["发出空气"],
   literal: "send out air",
   fit: "plain",
-  topics: ["pushing-and-pulling"],
+  topics: ["tying-twisting-and-shaking"],
   isA: ["body-action"],
   examples: [
     {

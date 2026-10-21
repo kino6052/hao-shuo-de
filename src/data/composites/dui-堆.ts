@@ -14,6 +14,6 @@ export default composite({
   tts: ["很多东西在一起"],
   literal: "many things together",
   fit: "plain",
-  topics: ["counting-words"],
+  topics: ["kinds-sets-and-groups"],
   isA: ["counting-word"],
 });

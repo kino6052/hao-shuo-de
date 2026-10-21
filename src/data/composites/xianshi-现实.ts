@@ -13,7 +13,7 @@ export default composite({
   literal: "what's real",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["easy-hard-right-wrong"],
+  topics: ["true-real-and-fake"],
   isA: ["truth-or-ease"],
   examples: [
     {

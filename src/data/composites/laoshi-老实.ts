@@ -15,7 +15,7 @@ export default composite({
   tts: ["说真的", "说真的话，听话"],
   literal: "say what is true / say true words, obey",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["kind-honest-and-mean"],
   isA: ["character-quality"],
   proposed: true,
 });

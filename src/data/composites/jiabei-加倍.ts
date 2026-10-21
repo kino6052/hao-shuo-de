@@ -15,7 +15,7 @@ export default composite({
   tts: ["一个变两个", "比以前多一样多"],
   literal: "one becomes two / more than before by as much again",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["extra-and-limits"],
   isA: ["becoming"],
   proposed: true,
 });

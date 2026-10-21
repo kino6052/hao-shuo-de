@@ -12,7 +12,7 @@ export default composite({
   tts: ["心的样子"],
   literal: "the shape of a heart",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["circles-squares-cubes"],
   isA: ["shape-quality"],
   proposed: true,
 });

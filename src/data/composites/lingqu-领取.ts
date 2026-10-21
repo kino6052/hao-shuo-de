@@ -12,7 +12,7 @@ export default composite({
   tts: ["去拿X", "拿到"],
   literal: "go take X / get hold of",
   fit: "plain",
-  topics: ["giving-and-getting"],
+  topics: ["getting-and-receiving"],
   isA: ["receiving"],
   proposed: true,
 });

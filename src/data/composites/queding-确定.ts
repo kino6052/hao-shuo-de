@@ -12,7 +12,7 @@ export default composite({
   tts: ["我知道是对的"],
   literal: "I know it is right",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["solving-and-making-sure"],
   isA: ["truth-or-ease"],
   examples: [
     {

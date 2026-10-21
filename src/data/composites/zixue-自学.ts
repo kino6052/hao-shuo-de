@@ -14,7 +14,7 @@ export default composite({
   tts: ["不要人帮，一个人学"],
   literal: "no need for people to help, learn alone",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["studying-and-practising"],
   isA: ["learning-and-teaching"],
   proposed: true,
 });

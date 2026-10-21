@@ -15,7 +15,7 @@ export default composite({
   tts: ["一边很小", "最小的那一边"],
   literal: "one side is very small / the smallest side",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["flat-straight-curved"],
   isA: ["shape-quality"],
   proposed: true,
 });

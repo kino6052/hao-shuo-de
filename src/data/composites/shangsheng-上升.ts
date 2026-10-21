@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:shang4}}-{{word:qu4}}", "{{word:bian4}} {{word:gao1}}"],
   tts: ["上去", "变高"],
   fit: "natural",
-  topics: ["changing"],
+  topics: ["increasing-and-rising"],
   isA: ["becoming"],
   proposed: true,
 });

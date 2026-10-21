@@ -12,7 +12,7 @@ export default composite({
   tts: ["很有力", "很大"],
   literal: "very strong / very big",
   fit: "plain",
-  topics: ["speed-and-strength"],
+  topics: ["energy-and-intensity"],
   isA: ["speed-or-strength"],
   proposed: true,
 });

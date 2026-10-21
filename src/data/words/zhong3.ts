@@ -14,7 +14,7 @@ export default word("zhong3", {
     eng: "Kind, type: {{word:zhe4}}-{{word:zhong3}}, this kind. Without it, you can't sort things.",
     rus: "Вид, сорт: {{word:zhe4}}-{{word:zhong3}} — такой. Без него ничего не разделить на виды.",
   },
-  topics: ["counting-words"],
+  topics: ["kinds-sets-and-groups"],
   isA: ["counting-word"],
   paraphrase: {
     forms: [

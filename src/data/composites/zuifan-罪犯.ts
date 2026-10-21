@@ -14,7 +14,7 @@ export default composite({
   tts: ["做了法说不能做的东西的人"],
   literal: "a person who did what the law says cannot be done",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["crimes-and-criminals"],
   isA: ["person"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["看一下这个，看一下那个", "快快看"],
   literal: "look at this a moment, look at that a moment / look quickly",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["typing-clicking-and-downloading"],
   isA: ["perceiving"],
   proposed: true,
 });

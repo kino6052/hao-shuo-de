@@ -14,7 +14,7 @@ export default composite({
   tts: ["写好的，要给人看的话"],
   literal: "words that are written, meant for people to read",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["books-and-paper"],
   isA: ["paper-thing"],
   proposed: true,
 });

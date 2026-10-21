@@ -15,7 +15,7 @@ export default composite({
   tts: ["很快很快", "和飞一样快"],
   literal: "very fast very fast / as fast as flying",
   fit: "plain",
-  topics: ["speed-and-strength"],
+  topics: ["fast-slow-and-in-a-hurry"],
   isA: ["speed-or-strength"],
   proposed: true,
 });

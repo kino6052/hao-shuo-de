@@ -15,7 +15,7 @@ export default composite({
   tts: ["一下", "就在那个时候"],
   literal: "in one moment / right at that time",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["soon-early-and-late"],
   isA: ["adverb-word"],
   proposed: true,
 });

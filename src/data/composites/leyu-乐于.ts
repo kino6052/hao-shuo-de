@@ -15,7 +15,7 @@ export default composite({
   tts: ["开心去做", "很想做"],
   literal: "happily go and do it / really want to do it",
   fit: "plain",
-  topics: ["liking-and-wanting"],
+  topics: ["wanting-needing-and-should"],
   isA: ["feeling-and-wanting"],
   proposed: true,
 });

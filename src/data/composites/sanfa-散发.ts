@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:fa1}}-{{word:chu1}}", "{{word:gei3}} {{word:hen3}} {{word:duo1}} {{word:ren2}}"],
   tts: ["发出", "给很多人"],
   fit: "natural",
-  topics: ["giving-and-getting"],
+  topics: ["sending-and-delivering"],
   isA: ["handling-action"],
   proposed: true,
 });

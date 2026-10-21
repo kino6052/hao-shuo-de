@@ -14,7 +14,7 @@ export default word("ru2guo3", {
     eng: "If: without it, you can't say what would happen.",
     rus: "Если: без него не сказать, что было бы.",
   },
-  topics: ["joining-words"],
+  topics: ["if-unless-and-even-if"],
   isA: ["conjunction"],
   paraphrase: {
     forms: ["X {{word:le}} {{word:jiu4}} Y"],

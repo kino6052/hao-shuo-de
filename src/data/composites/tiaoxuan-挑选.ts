@@ -15,7 +15,7 @@ export default composite({
   tts: ["找出最好的", "拿一个"],
   literal: "find out the best one",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["choosing-and-deciding"],
   isA: ["thinking-action"],
   proposed: true,
 });

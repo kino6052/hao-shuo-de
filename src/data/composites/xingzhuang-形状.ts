@@ -15,7 +15,7 @@ export default composite({
   tts: ["样子", "外面的样子"],
   literal: "the look / the look of its outside",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["form-and-structure"],
   isA: ["shape-quality"],
   proposed: true,
 });

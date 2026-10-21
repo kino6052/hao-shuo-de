@@ -12,7 +12,7 @@ export default composite({
   tts: ["手工", "用手做的"],
   literal: "hand work / made with the hand",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["building-and-producing"],
   isA: ["activity-name"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["两边一样重", "让两边一样重"],
   literal: "both sides equally heavy / make both sides equally heavy",
   fit: "plain",
-  topics: ["same-and-different"],
+  topics: ["same-and-equal"],
   isA: ["condition-quality"],
   proposed: true,
 });

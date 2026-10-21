@@ -12,6 +12,6 @@ export default composite({
   tts: ["X有的东西"],
   literal: "the things X has",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["money-wealth-and-value"],
   isA: ["money-thing"],
 });

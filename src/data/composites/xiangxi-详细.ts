@@ -15,7 +15,7 @@ export default composite({
   tts: ["一点一点都说到", "小的部分也都有"],
   literal: "every little bit is said / even the small parts are all there",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["checking-and-testing"],
   isA: ["condition-quality"],
   proposed: true,
 });

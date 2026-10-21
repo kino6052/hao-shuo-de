@@ -14,7 +14,7 @@ export default composite({
   tts: ["长的有水的地方"],
   literal: "a long place with water",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["rivers-lakes-and-floods"],
   isA: ["landform"],
   examples: [
     {

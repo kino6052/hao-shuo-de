@@ -15,7 +15,7 @@ export default composite({
   tts: ["地上很多很多的水", "水多到路和房子都在水里"],
   literal: "very very much water on the ground / so much water that the roads and houses are all in the water",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["rivers-lakes-and-floods"],
   isA: ["weather-thing"],
   proposed: true,
 });

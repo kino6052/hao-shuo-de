@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:you4}}", "{{word:you4}} {{word:zuo4}} {{word:yi1}}-{{word:ci4}}"],
   tts: ["又", "又做一次"],
   fit: "natural",
-  topics: ["adverbs"],
+  topics: ["also-again-still-already"],
   isA: ["adverb-word"],
   proposed: true,
 });

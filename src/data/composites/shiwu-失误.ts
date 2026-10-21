@@ -15,7 +15,7 @@ export default composite({
   tts: ["不对的东西", "做不对了"],
   literal: "a thing that is not right / did it not right",
   fit: "plain",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["right-wrong-and-mistakes"],
   isA: ["state-name"],
   proposed: true,
 });

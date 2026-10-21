@@ -12,7 +12,7 @@ export default composite({
   tts: ["做不对", "晚了"],
   literal: "do it not right / it is late",
   fit: "plain",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["right-wrong-and-mistakes"],
   isA: ["happening"],
   proposed: true,
 });

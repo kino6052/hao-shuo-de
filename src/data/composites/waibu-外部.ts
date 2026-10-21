@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["外面", "外面的部分"],
   fit: "natural",
-  topics: ["up-down-in-out"],
+  topics: ["inside-and-outside"],
   isA: ["place-relation"],
   proposed: true,
 });

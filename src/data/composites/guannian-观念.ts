@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["想法", "很长时间都有的想法"],
   fit: "natural",
-  topics: ["ideas-and-opinions"],
+  topics: ["opinions-and-views"],
   isA: ["idea"],
   proposed: true,
 });

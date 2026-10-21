@@ -12,7 +12,7 @@ export default composite({
   tts: ["一些金", "一种X"],
   literal: "some money / a kind of X",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["money-and-cards"],
   isA: ["money-thing"],
   proposed: true,
 });

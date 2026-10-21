@@ -13,7 +13,7 @@ export default composite({
   literal: "outside country",
   fit: "natural",
   kinds: ["built"],
-  topics: ["countries-and-cities"],
+  topics: ["country-and-nation"],
   isA: ["place"],
   examples: [
     {

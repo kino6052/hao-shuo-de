@@ -15,7 +15,7 @@ export default composite({
   tts: ["不让X想做什么就做什么", "让X不能乱做"],
   literal: "not let X do whatever X wants / make X unable to do things carelessly",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["punishing-and-forbidding"],
   isA: ["social-action"],
   proposed: true,
 });

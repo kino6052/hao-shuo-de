@@ -15,7 +15,7 @@ export default composite({
   tts: ["得金", "得到的金比给出的金多"],
   literal: "get money / the money got is more than the money given out",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["earning-and-compensation"],
   isA: ["trade-action"],
   proposed: true,
 });

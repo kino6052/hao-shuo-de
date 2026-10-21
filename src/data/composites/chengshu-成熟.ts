@@ -16,7 +16,7 @@ export default composite({
   tts: ["大了，可以用了", "可以吃了", "不小了"],
   literal: "has grown, can be used",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["appearing-and-developing"],
   isA: ["condition-quality"],
   proposed: true,
 });

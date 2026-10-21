@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X放在Y上，让X不动", "把X放在Y里"],
   literal: "put X on Y and make X not move / put X in Y",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["typing-clicking-and-downloading"],
   isA: ["handling-action"],
   proposed: true,
 });

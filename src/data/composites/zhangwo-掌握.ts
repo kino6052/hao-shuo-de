@@ -12,7 +12,7 @@ export default composite({
   tts: ["知道很好"],
   literal: "know it well",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["knowing-and-grasping"],
   isA: ["thinking-action"],
   examples: [
     {

@@ -12,7 +12,7 @@ export default composite({
   tts: ["留话给X"],
   literal: "leave words for X",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["phone-calls-and-messages"],
   isA: ["speaking-action"],
   proposed: true,
 });

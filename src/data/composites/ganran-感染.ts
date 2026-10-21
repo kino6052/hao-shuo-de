@@ -15,7 +15,7 @@ export default composite({
   tts: ["从别人得到身体不好", "别人让我的心也变"],
   literal: "get unwellness from another person / another person makes my heart change too",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["germs-poison-and-allergy"],
   isA: ["being-affected"],
   proposed: true,
 });

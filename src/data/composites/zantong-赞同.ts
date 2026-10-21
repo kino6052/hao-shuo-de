@@ -15,7 +15,7 @@ export default composite({
   tts: ["觉得一样", "觉得X说的对"],
   literal: "feel the same / feel that what X says is right",
   fit: "plain",
-  topics: ["agreeing-and-praising"],
+  topics: ["agreeing-and-allowing"],
   isA: ["social-action"],
   proposed: true,
 });

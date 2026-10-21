@@ -13,7 +13,7 @@ export default composite({
   literal: "after X",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["before-and-after"],
+  topics: ["after-later-and-future"],
   isA: ["time-order"],
   note: "Lesson {{lesson:around-an-action}}.",
   examples: [

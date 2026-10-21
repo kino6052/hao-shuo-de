@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:ci4}}-{{word:shu4}}", "{{word:duo1}}-{{word:shao3}} {{word:ci4}}"],
   tts: ["次数", "多少次"],
   fit: "natural",
-  topics: ["much-and-little"],
+  topics: ["totals-and-parts"],
   isA: ["amount-word"],
   proposed: true,
 });

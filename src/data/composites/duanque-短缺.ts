@@ -15,7 +15,7 @@ export default composite({
   tts: ["要的比有的多", "东西很少，要的人很多"],
   literal: "what is wanted is more than what there is / there are few things, many people want them",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["enough-and-lacking"],
   isA: ["condition-quality"],
   proposed: true,
 });

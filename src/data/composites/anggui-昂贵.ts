@@ -15,7 +15,7 @@ export default composite({
   tts: ["要很多金", "要很很多金"],
   literal: "it needs a lot of money / it needs very, very much money",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["prices-and-discounts"],
   isA: ["condition-quality"],
   proposed: true,
 });

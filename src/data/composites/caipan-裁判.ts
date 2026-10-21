@@ -15,7 +15,7 @@ export default composite({
   tts: ["决定谁最好的人", "决定谁对的人"],
   literal: "the person who decides who is best / the person who decides who is right",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["athletes-and-sports-grounds"],
   isA: ["worker"],
   proposed: true,
 });

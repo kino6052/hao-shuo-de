@@ -16,7 +16,7 @@ export default composite({
   tts: ["打算", "把东西放好", "把东西放在好的地方"],
   literal: "plan / put the things right / put the things in good places",
   fit: "natural",
-  topics: ["deciding"],
+  topics: ["plans-and-goals"],
   isA: ["making"],
   examples: [
     {

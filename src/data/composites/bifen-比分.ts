@@ -15,7 +15,7 @@ export default composite({
   tts: ["比分", "看谁最好的分"],
   literal: "the points that show who is best",
   fit: "natural",
-  topics: ["sports"],
+  topics: ["winning-losing-and-scores"],
   isA: ["idea"],
   proposed: true,
 });

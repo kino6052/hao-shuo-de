@@ -12,7 +12,7 @@ export default composite({
   tts: ["美国人", "家在美国的人"],
   literal: "a person whose home is in Měiguó",
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-countries"],
   isA: ["person"],
   proposed: true,
 });

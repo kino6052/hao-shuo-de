@@ -12,7 +12,7 @@ export default composite({
   tts: ["做出", "想好怎么做"],
   literal: "make out; think through how to do it",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["plans-and-goals"],
   isA: ["making"],
   proposed: true,
 });

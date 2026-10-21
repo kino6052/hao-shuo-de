@@ -12,7 +12,7 @@ export default composite({
   tts: ["到现在"],
   fit: "natural",
   transparent: true,
-  topics: ["before-and-after"],
+  topics: ["now-and-recently"],
   isA: ["time-order"],
   proposed: true,
 });

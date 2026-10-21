@@ -14,7 +14,7 @@ export default composite({
   tts: ["对X说别做Y，做了就会不好"],
   literal: "say to X do not do Y, if you do it, it will be bad",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["talks-discussion-and-orders"],
   isA: ["speaking-action"],
   proposed: true,
 });

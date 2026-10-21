@@ -15,7 +15,7 @@ export default composite({
   tts: ["不动一下", "不做了，等一下"],
   literal: "do not move for a moment / not doing it, wait a moment",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["beginning-and-finishing"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

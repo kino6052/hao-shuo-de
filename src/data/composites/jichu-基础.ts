@@ -15,7 +15,7 @@ export default composite({
   tts: ["最下面的部分", "从零开始"],
   literal: "the lowest part / start from zero",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["key-points-and-principles"],
   isA: ["idea"],
   examples: [
     {

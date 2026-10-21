@@ -12,7 +12,7 @@ export default composite({
   tts: ["中国的字"],
   literal: "China's characters",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["words-and-characters"],
   isA: ["language-thing"],
   examples: [
     {

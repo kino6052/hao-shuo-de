@@ -15,7 +15,7 @@ export default composite({
   tts: ["不怕，很快进去", "不等别人让我进去，就进去"],
   literal: "not afraid, go in very fast / not wait for others to let me in, just go in",
   fit: "plain",
-  topics: ["going-and-coming"],
+  topics: ["going-in-and-coming-out"],
   isA: ["moving-action"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["把不好的拿走", "不要不好的"],
   literal: "take away the ones that are not good / not want the ones that are not good",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["choosing-and-deciding"],
   isA: ["handling-action"],
   proposed: true,
 });

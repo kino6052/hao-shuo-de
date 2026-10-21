@@ -15,7 +15,7 @@ export default composite({
   tts: ["比较想要X", "想去的那边"],
   literal: "rather want X / the side one wants to go to",
   fit: "plain",
-  topics: ["liking-and-wanting"],
+  topics: ["wanting-needing-and-should"],
   isA: ["feeling-and-wanting"],
   proposed: true,
 });

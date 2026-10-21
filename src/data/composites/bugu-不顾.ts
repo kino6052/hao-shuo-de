@@ -15,7 +15,7 @@ export default composite({
   tts: ["不怕X，就做", "不想X，就做"],
   literal: "not afraid of X, just do it / not thinking of X, just do it",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["willing-daring-and-forced"],
   isA: ["thinking-action"],
   proposed: true,
 });

@@ -10,7 +10,7 @@ export default word("wo3", {
     eng: "Without it, you can't talk about yourself: no \"I\", \"me\", or \"my\".",
     rus: "Без него нельзя говорить о себе: нет «я», «меня», «мой».",
   },
-  topics: ["pointers"],
+  topics: ["i-you-he-she"],
   isA: ["pronoun"],
   maps: "mi",
   atom: {

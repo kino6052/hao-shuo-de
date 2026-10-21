@@ -13,7 +13,7 @@ export default composite({
   literal: "I + more people",
   fit: "natural",
   kinds: ["built"],
-  topics: ["pointers"],
+  topics: ["i-you-he-she"],
   isA: ["pronoun"],
   examples: [
     {

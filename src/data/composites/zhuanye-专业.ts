@@ -15,7 +15,7 @@ export default composite({
   tts: ["学的东西", "知道很多的"],
   literal: "what you study / knowing a lot",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-subjects-and-courses"],
   isA: ["idea"],
   examples: [
     {

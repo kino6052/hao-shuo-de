@@ -12,7 +12,7 @@ export default composite({
   tts: ["什么…都…"],
   fit: "natural",
   transparent: true,
-  topics: ["joining-words"],
+  topics: ["if-unless-and-even-if"],
   isA: ["conjunction"],
   proposed: true,
 });

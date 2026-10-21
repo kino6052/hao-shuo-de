@@ -15,7 +15,7 @@ export default composite({
   tts: ["让X快一点", "对X说快一点"],
   literal: "make X a bit faster / say to X: a bit faster",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["talks-discussion-and-orders"],
   isA: ["speaking-action"],
   proposed: true,
 });

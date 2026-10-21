@@ -15,7 +15,7 @@ export default composite({
   tts: ["说出心里的东西", "说"],
   literal: "say",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["explaining-and-describing"],
   isA: ["speaking-action"],
   examples: [
     {

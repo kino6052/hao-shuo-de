@@ -15,7 +15,7 @@ export default composite({
   tts: ["觉得X很好", "做X，很开心"],
   literal: "feel X is very good / do X, very happy",
   fit: "plain",
-  topics: ["liking-and-wanting"],
+  topics: ["interest-and-enjoying"],
   isA: ["feeling-and-wanting"],
   proposed: true,
 });

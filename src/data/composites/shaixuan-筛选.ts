@@ -15,7 +15,7 @@ export default composite({
   tts: ["把好的找出来", "把不好的拿走，留好的"],
   literal: "find out the good ones / take away the not-good ones, keep the good ones",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["checking-and-testing"],
   isA: ["handling-action"],
   proposed: true,
 });

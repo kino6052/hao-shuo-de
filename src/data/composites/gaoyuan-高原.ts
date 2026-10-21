@@ -15,7 +15,7 @@ export default composite({
   tts: ["很高的平的地方", "高的平地"],
   literal: "a very high flat place / high flat ground",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["mountains-and-slopes"],
   isA: ["landform"],
   proposed: true,
 });

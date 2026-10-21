@@ -12,7 +12,7 @@ export default composite({
   tts: ["意大利", "意大利国"],
   literal: "the country of Yìdàlì",
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-countries"],
   isA: ["settlement"],
   proposed: true,
 });

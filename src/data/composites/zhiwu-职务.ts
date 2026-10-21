@@ -15,7 +15,7 @@ export default composite({
   tts: ["工作里要做的东西", "X的工作"],
   literal: "what is to be done in the work / X's work",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["posts-and-pay"],
   isA: ["idea"],
   proposed: true,
 });

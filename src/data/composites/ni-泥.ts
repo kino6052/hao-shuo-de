@@ -15,7 +15,7 @@ export default composite({
   tts: ["地和水放在一起的东西", "有水的，很不硬的地"],
   literal: "earth and water put together / the ground with water, very not hard",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["land-soil-and-the-earth"],
   isA: ["stone-or-earth"],
   proposed: true,
 });

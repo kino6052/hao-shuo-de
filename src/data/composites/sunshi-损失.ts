@@ -12,7 +12,7 @@ export default composite({
   tts: ["有的东西没了"],
   literal: "what you had is gone",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["profit-loss-and-bankruptcy"],
   isA: ["being-affected"],
   proposed: true,
 });

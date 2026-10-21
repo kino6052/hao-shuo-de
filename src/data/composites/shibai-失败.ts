@@ -12,7 +12,7 @@ export default composite({
   tts: ["没做好"],
   literal: "did not do well",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["beginning-and-finishing"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

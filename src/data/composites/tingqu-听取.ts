@@ -12,7 +12,7 @@ export default composite({
   tts: ["听", "好好听X说"],
   literal: "listen / listen well to what X says",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["saying-and-calling"],
   isA: ["perceiving"],
   proposed: true,
 });

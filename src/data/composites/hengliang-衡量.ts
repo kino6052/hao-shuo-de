@@ -15,7 +15,7 @@ export default composite({
   tts: ["比一比，看X多好", "把X和Y比一比"],
   literal: "compare, and see how good X is / compare X with Y",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["checking-and-testing"],
   isA: ["thinking-action"],
   proposed: true,
 });

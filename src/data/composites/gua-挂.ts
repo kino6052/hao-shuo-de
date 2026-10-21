@@ -14,7 +14,7 @@ export default composite({
   tts: ["把X放在高的地方"],
   literal: "put X in a high place",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["putting-and-placing"],
   isA: ["handling-action"],
   proposed: true,
 });

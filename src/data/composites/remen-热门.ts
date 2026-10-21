@@ -15,7 +15,7 @@ export default composite({
   tts: ["热门", "很多人都爱的东西"],
   literal: "a thing that very many people all love",
   fit: "natural",
-  topics: ["news-and-events"],
+  topics: ["news-and-press"],
   isA: ["idea"],
   proposed: true,
 });

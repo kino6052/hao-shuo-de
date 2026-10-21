@@ -12,7 +12,7 @@ export default composite({
   tts: ["说到"],
   literal: "speak of",
   fit: "natural",
-  topics: ["talking"],
+  topics: ["introducing-and-passing-on"],
   isA: ["speaking-action"],
   examples: [
     {

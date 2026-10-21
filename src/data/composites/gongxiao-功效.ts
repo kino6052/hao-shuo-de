@@ -15,7 +15,7 @@ export default composite({
   tts: ["用了以后好的结果", "X能做的好东西"],
   literal: "the good result after using it / the good things X can make",
   fit: "plain",
-  topics: ["causes-and-results"],
+  topics: ["results-and-effects"],
   isA: ["cause-and-effect"],
   proposed: true,
 });

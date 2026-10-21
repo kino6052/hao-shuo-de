@@ -15,7 +15,7 @@ export default composite({
   tts: ["一样老的人", "同一个时间的人"],
   literal: "people of the same age",
   fit: "plain",
-  topics: ["people-together"],
+  topics: ["peoples-and-generations"],
   isA: ["group-of-people"],
   proposed: true,
 });

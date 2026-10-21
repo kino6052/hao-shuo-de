@@ -15,7 +15,7 @@ export default composite({
   tts: ["人们中间", "不是国家的，是人们的"],
   literal: "among the people / not the country's, the people's",
   fit: "plain",
-  topics: ["people-together"],
+  topics: ["peoples-and-generations"],
   isA: ["group-of-people"],
   proposed: true,
 });

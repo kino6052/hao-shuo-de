@@ -15,7 +15,7 @@ export default composite({
   tts: ["开始做，一点一点变大", "开始做，让做的人变多"],
   literal: "begin to do it, get bigger little by little / begin to do it, make the people who do it more",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["appearing-and-developing"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["给人看一个", "说一个"],
   literal: "show people one; say one",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["topics-and-examples"],
   isA: ["speaking-action"],
   proposed: true,
 });

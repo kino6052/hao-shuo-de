@@ -12,7 +12,7 @@ export default composite({
   tts: ["不动，不变"],
   literal: "doesn't move or change",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["normal-and-ordinary"],
   isA: ["condition-quality"],
   examples: [
     {

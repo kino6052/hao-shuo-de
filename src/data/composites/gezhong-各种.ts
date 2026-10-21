@@ -12,7 +12,7 @@ export default composite({
   tts: ["很多种"],
   literal: "many kinds",
   fit: "plain",
-  topics: ["all-and-some"],
+  topics: ["all-and-every"],
   isA: ["amount-word"],
   examples: [
     {

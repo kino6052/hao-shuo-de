@@ -15,7 +15,7 @@ export default composite({
   tts: ["看在网上的东西的工具", "在算的工具里看网的工具"],
   literal: "a tool for looking at things on the net / a tool for looking at the net inside a computer",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["internet-and-websites"],
   isA: ["computer-or-phone"],
   proposed: true,
 });

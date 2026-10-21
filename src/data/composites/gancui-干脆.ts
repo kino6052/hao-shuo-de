@@ -15,7 +15,7 @@ export default composite({
   tts: ["不等，就做", "不想很多，就做"],
   literal: "do not wait, just do it / do not think a lot, just do it",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["after-all-anyway-unexpectedly"],
   isA: ["adverb-word"],
   proposed: true,
 });

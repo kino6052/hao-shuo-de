@@ -12,7 +12,7 @@ export default composite({
   tts: ["不高明", "头不好"],
   literal: "not smart / the head is not good",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["clever-skilled-and-famous"],
   isA: ["character-quality"],
   proposed: true,
 });

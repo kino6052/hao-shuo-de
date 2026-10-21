@@ -14,7 +14,7 @@ export default composite({
   tts: ["身体里的气很快从口出来，发声音"],
   literal: "the air in the body comes out of the mouth very fast and makes a sound",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["pain-and-feeling-unwell"],
   isA: ["body-action"],
   proposed: true,
 });

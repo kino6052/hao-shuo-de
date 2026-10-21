@@ -15,7 +15,7 @@ export default composite({
   tts: ["中国的老的做给人看的东西", "有好听的声音的给人看的东西"],
   literal: "the old thing of China that is made for people to look at / a thing for people to look at that has good sounds",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["films-and-shows"],
   isA: ["work-of-art"],
   proposed: true,
 });

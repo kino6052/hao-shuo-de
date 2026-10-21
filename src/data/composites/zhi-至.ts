@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:dao4}}"],
   tts: ["到"],
   fit: "natural",
-  topics: ["going-and-coming"],
+  topics: ["arriving-and-reaching"],
   isA: ["moving-action"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["很多人"],
   literal: "many people",
   fit: "plain",
-  topics: ["people-together"],
+  topics: ["crowds-and-the-public"],
   isA: ["group-of-people"],
   examples: [
     {

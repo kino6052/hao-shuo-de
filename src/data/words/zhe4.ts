@@ -14,7 +14,7 @@ export default word("zhe4", {
     eng: "Without it, you can't point at what's here: no \"this\".",
     rus: "Без него нельзя указать на то, что рядом: нет «это».",
   },
-  topics: ["pointers"],
+  topics: ["this-that-such"],
   isA: ["pronoun"],
   maps: "ni",
   atom: {

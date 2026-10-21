@@ -12,7 +12,7 @@ export default composite({
   tts: ["想说什么就说什么"],
   literal: "say whatever you want to say",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["kind-honest-and-mean"],
   isA: ["character-quality"],
   proposed: true,
 });

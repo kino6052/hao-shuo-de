@@ -15,7 +15,7 @@ export default composite({
   tts: ["在很长时间里走过X", "很多次有过X"],
   literal: "walk through X over a long time / have had X many times",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["moments-and-stages"],
   isA: ["happening"],
   proposed: true,
 });

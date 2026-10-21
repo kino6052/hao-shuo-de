@@ -15,7 +15,7 @@ export default composite({
   tts: ["给X，拿Y", "你给我，我也给你"],
   literal: "give X, take Y / you give me, I also give you",
   fit: "plain",
-  topics: ["giving-and-getting"],
+  topics: ["spending-trading-and-returning"],
   isA: ["handling-action"],
   proposed: true,
 });

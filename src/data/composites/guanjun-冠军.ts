@@ -12,6 +12,6 @@ export default composite({
   tts: ["第一号的人"],
   literal: "the person who is number one",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["medals-and-champions"],
   isA: ["social-role"],
 });

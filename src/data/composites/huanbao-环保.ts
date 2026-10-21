@@ -14,7 +14,7 @@ export default composite({
   tts: ["不把空气和水做坏"],
   literal: "not spoiling the air and water",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["nature-and-environment"],
   isA: ["abstract-thing"],
   examples: [
     {

@@ -14,7 +14,7 @@ export default word("ye3", {
     eng: "Also, too: {{word:wo3}} {{word:ye3}} {{word:chi1}}. Without it, you can't add one more.",
     rus: "Тоже, также: {{word:wo3}} {{word:ye3}} {{word:chi1}}. Без него ничего не добавить.",
   },
-  topics: ["adverbs"],
+  topics: ["also-again-still-already"],
   isA: ["adverb-word"],
   maps: "",
   paraphrase: {

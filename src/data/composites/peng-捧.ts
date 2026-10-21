@@ -15,7 +15,7 @@ export default composite({
   tts: ["用两手拿", "两手能拿的多少"],
   literal: "hold with two hands / as much as two hands can hold",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["carrying-and-holding"],
   isA: ["holding"],
   proposed: true,
 });

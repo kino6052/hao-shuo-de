@@ -12,7 +12,7 @@ export default composite({
   tts: ["说不定", "有可能"],
   fit: "natural",
   transparent: true,
-  topics: ["adverbs"],
+  topics: ["maybe-of-course-obviously"],
   isA: ["adverb-word"],
   proposed: true,
 });

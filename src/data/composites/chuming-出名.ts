@@ -15,7 +15,7 @@ export default composite({
   tts: ["有名", "人人都知道的"],
   literal: "having a name / what everybody knows",
   fit: "natural",
-  topics: ["state-of-things"],
+  topics: ["special-and-strange"],
   isA: ["condition-quality"],
   proposed: true,
 });

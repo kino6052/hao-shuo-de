@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:cong2}} X {{word:lai2}}", "{{word:cong2}} X {{word:chu1}}-{{word:lai2}}"],
   tts: ["从X来", "从X出来"],
   fit: "natural",
-  topics: ["going-and-coming"],
+  topics: ["going-in-and-coming-out"],
   isA: ["moving-action"],
   proposed: true,
 });

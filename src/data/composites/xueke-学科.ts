@@ -15,7 +15,7 @@ export default composite({
   tts: ["学的一部分", "一种学的东西"],
   literal: "one part of what is studied; one kind of thing studied",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-subjects-and-courses"],
   isA: ["idea"],
   proposed: true,
 });

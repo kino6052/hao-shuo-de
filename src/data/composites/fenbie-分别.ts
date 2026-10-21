@@ -15,7 +15,7 @@ export default composite({
   tts: ["分别", "一个一个地"],
   literal: "one by one",
   fit: "plain",
-  topics: ["adverbs"],
+  topics: ["quietly-together-step-by-step"],
   isA: ["adverb-word"],
   proposed: true,
 });

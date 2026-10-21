@@ -15,7 +15,7 @@ export default composite({
   tts: ["从里面出来", "不怕可能会坏，就去做"],
   literal: "come out from inside / not afraid it may go bad, just go and do it",
   fit: "plain",
-  topics: ["going-and-coming"],
+  topics: ["going-in-and-coming-out"],
   isA: ["moving-action"],
   proposed: true,
 });

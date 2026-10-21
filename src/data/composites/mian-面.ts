@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:mian4}}"],
   tts: ["面"],
   fit: "word",
-  topics: ["up-down-in-out"],
+  topics: ["front-and-back"],
   isA: ["place-relation"],
   examples: [
     {

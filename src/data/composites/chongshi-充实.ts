@@ -15,7 +15,7 @@ export default composite({
   tts: ["里面不空，有很多东西", "有很多东西要做，很好"],
   literal: "not empty inside, there are many things / there are many things to be done, which is good",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["empty-messy-clear"],
   isA: ["condition-quality"],
   proposed: true,
 });

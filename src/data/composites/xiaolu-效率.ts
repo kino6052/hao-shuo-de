@@ -12,7 +12,7 @@ export default composite({
   tts: ["做的多快"],
   literal: "how fast you get it done",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["managing-and-progress"],
   isA: ["value-quality"],
   examples: [
     {

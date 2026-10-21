@@ -15,7 +15,7 @@ export default composite({
   tts: ["一次一次都一样的样子", "让人知道以后的东西"],
   literal: "the look that is the same every time / a thing that lets people know what comes after",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["features-and-forms"],
   isA: ["idea"],
   proposed: true,
 });

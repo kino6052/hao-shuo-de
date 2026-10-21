@@ -15,7 +15,7 @@ export default composite({
   tts: ["和X一起给的别的东西", "和X一起来的东西"],
   literal: "another thing given together with X / a thing that comes together with X",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["software-files-and-accounts"],
   isA: ["made-thing"],
   proposed: true,
 });

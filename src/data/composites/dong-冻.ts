@@ -15,7 +15,7 @@ export default composite({
   tts: ["冷到变硬", "冷到不能动"],
   literal: "so cold it turns hard / so cold it cannot move",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["hot-and-cold-weather"],
   isA: ["becoming"],
   proposed: true,
 });

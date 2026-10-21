@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:da3}}"],
   tts: ["打"],
   fit: "word",
-  topics: ["pushing-and-pulling"],
+  topics: ["hitting-and-bumping"],
   isA: ["handling-action"],
   examples: [
     {

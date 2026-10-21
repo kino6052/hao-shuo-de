@@ -14,7 +14,7 @@ export default word("li3", {
     eng: "Inside, in: {{word:bao1}}-{{word:li3}}, in the box. The most used place word.",
     rus: "Внутри, в: {{word:bao1}}-{{word:li3}} — в коробке. Самое частое слово места.",
   },
-  topics: ["up-down-in-out"],
+  topics: ["inside-and-outside"],
   isA: ["place-relation"],
   maps: "",
   senses: {

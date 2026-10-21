@@ -15,7 +15,7 @@ export default composite({
   tts: ["看谁最好", "和别人打，看谁最好"],
   literal: "see who is the best / fight with others, see who is the best",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["matches-and-contests"],
   isA: ["event"],
   proposed: true,
 });

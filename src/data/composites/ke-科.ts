@@ -12,7 +12,7 @@ export default composite({
   tts: ["学的一部分"],
   literal: "one part of what is learned",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-subjects-and-courses"],
   isA: ["idea"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["心里很好"],
   literal: "good in the heart",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["kind-honest-and-mean"],
   isA: ["character-quality"],
   proposed: true,
 });

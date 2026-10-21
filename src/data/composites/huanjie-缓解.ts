@@ -15,7 +15,7 @@ export default composite({
   tts: ["让X变好一点", "让坏的变好一点"],
   literal: "make X become a little better / make the bad become a little better",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["decreasing-and-breaking-down"],
   isA: ["becoming"],
   proposed: true,
 });

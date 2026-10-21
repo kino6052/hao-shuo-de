@@ -12,7 +12,7 @@ export default composite({
   tts: ["用的金", "用金"],
   literal: "the money used / use money",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["prices-and-costs"],
   isA: ["money-thing"],
   proposed: true,
 });

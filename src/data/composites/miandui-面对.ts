@@ -12,7 +12,7 @@ export default composite({
   tts: ["面对", "对"],
   literal: "face toward",
   fit: "natural",
-  topics: ["near-and-far"],
+  topics: ["in-front-of-beside-around"],
   isA: ["placing"],
   examples: [
     {

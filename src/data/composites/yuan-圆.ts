@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:yuan2}}"],
   tts: ["圆"],
   fit: "word",
-  topics: ["shapes"],
+  topics: ["circles-squares-cubes"],
   isA: ["shape-quality"],
   examples: [
     {

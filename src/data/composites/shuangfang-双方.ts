@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:liang3}}-{{word:bian1}}", "{{word:liang3}}-{{word:bian1}}-{{word:de}} {{word:ren2}}"],
   tts: ["两边", "两边的人"],
   fit: "natural",
-  topics: ["all-and-some"],
+  topics: ["half-both-and-only-one"],
   isA: ["amount-word"],
   proposed: true,
 });

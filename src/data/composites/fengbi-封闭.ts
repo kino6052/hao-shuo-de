@@ -14,7 +14,7 @@ export default composite({
   tts: ["关起来，不让进，不让出"],
   literal: "shut it up, do not let anyone in, do not let anyone out",
   fit: "plain",
-  topics: ["pushing-and-pulling"],
+  topics: ["opening-and-closing"],
   isA: ["handling-action"],
   proposed: true,
 });

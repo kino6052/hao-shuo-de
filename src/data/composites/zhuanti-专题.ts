@@ -15,7 +15,7 @@ export default composite({
   tts: ["只说一个题的东西", "只说一个大题的话"],
   literal: "a thing that speaks of only one topic / words on only one big topic",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["topics-and-examples"],
   isA: ["language-thing"],
   proposed: true,
 });

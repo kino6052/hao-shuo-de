@@ -15,7 +15,7 @@ export default composite({
   tts: ["水平很高", "能力很高"],
   literal: "the level is very high / the ability is very high",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["clever-skilled-and-famous"],
   isA: ["character-quality"],
   proposed: true,
 });

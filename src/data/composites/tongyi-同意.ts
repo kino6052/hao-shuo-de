@@ -12,7 +12,7 @@ export default composite({
   tts: ["觉得一样"],
   literal: "think the same",
   fit: "plain",
-  topics: ["agreeing-and-praising"],
+  topics: ["agreeing-and-allowing"],
   isA: ["speaking-action"],
   examples: [
     {

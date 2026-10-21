@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X放好，一个在一个后面", "让X一个在一个后面"],
   literal: "put X in good order, one behind another / let X be one behind another",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["putting-and-placing"],
   isA: ["placing"],
   proposed: true,
 });

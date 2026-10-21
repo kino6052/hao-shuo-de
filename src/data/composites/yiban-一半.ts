@@ -14,7 +14,7 @@ export default composite({
   tts: ["两部分里的一部分"],
   literal: "one of two parts",
   fit: "plain",
-  topics: ["all-and-some"],
+  topics: ["half-both-and-only-one"],
   isA: ["amount-word"],
   examples: [
     {

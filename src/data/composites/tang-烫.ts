@@ -15,7 +15,7 @@ export default composite({
   tts: ["很热，让人痛", "热到让人不能摸"],
   literal: "very hot, makes people hurt / so hot people can't touch it",
   fit: "plain",
-  topics: ["how-it-feels"],
+  topics: ["hot-cold-and-warm"],
   isA: ["touch-quality"],
   proposed: true,
 });

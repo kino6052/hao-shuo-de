@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["没想到", "真没想到"],
   fit: "natural",
-  topics: ["adverbs"],
+  topics: ["after-all-anyway-unexpectedly"],
   isA: ["adverb-word"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["还不晚", "还有时间，能做"],
   literal: "still not late / there is still time, can do it",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["soon-early-and-late"],
   isA: ["time-order"],
   proposed: true,
 });

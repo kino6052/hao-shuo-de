@@ -15,7 +15,7 @@ export default composite({
   tts: ["不让X比Y多", "不让X做"],
   literal: "not let X be more than Y; not let X do it",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["punishing-and-forbidding"],
   isA: ["social-action"],
   proposed: true,
 });

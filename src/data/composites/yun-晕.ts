@@ -15,7 +15,7 @@ export default composite({
   tts: ["头很乱，想躺下", "头乱了，什么都不知道"],
   literal: "the head is very messy, I want to lie down / the head went messy, I know nothing",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["pain-and-feeling-unwell"],
   isA: ["bodily-state"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["学的结果"],
   literal: "the result of study",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-days-and-years"],
   isA: ["idea"],
   examples: [
     {

@@ -12,7 +12,7 @@ export default composite({
   tts: ["…下去"],
   literal: "keep going down",
   fit: "natural",
-  topics: ["changing"],
+  topics: ["continuing-and-adapting"],
   isA: ["starting-and-stopping"],
   note: "shuō-xià-qù: keep talking.",
   examples: [

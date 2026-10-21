@@ -14,7 +14,7 @@ export default composite({
   tts: ["让人知道这是真的东西"],
   literal: "a thing that lets people know this is real",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["courts-and-trials"],
   isA: ["idea"],
   proposed: true,
 });

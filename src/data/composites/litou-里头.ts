@@ -12,7 +12,7 @@ export default composite({
   tts: ["里头", "里面"],
   literal: "in-head / inside",
   fit: "plain",
-  topics: ["up-down-in-out"],
+  topics: ["inside-and-outside"],
   isA: ["place-relation"],
   proposed: true,
 });

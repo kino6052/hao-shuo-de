@@ -15,7 +15,7 @@ export default composite({
   tts: ["变小，变没有力", "让X变小，变没有力"],
   literal: "become small, become without strength / let X become small, become without strength",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["decreasing-and-breaking-down"],
   isA: ["becoming"],
   proposed: true,
 });

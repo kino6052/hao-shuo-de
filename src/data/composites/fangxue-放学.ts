@@ -16,7 +16,7 @@ export default composite({
   literal: "let learning go / finished learning, going home",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["studying"],
+  topics: ["school-days-and-years"],
   isA: ["starting-and-stopping"],
   examples: [
     {

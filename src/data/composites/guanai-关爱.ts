@@ -16,7 +16,7 @@ export default composite({
   tts: ["关爱", "爱X，帮X", "对X很好，想帮X"],
   literal: "close-love / love X, help X / be very good to X, want to help X",
   fit: "natural",
-  topics: ["helping-and-sharing"],
+  topics: ["caring-and-comforting"],
   isA: ["feeling-and-wanting"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   ],
   tts: ["得了", "好了", "可以了"],
   fit: "natural",
-  topics: ["agreeing-and-praising"],
+  topics: ["agreeing-and-allowing"],
   isA: ["set-phrase"],
   proposed: true,
 });

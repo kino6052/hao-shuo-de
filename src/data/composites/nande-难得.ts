@@ -15,7 +15,7 @@ export default composite({
   ],
   tts: ["难得", "少见", "很少有"],
   fit: "natural",
-  topics: ["how-often"],
+  topics: ["sometimes-rarely-and-never"],
   isA: ["frequency"],
   proposed: true,
 });

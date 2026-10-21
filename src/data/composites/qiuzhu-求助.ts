@@ -15,7 +15,7 @@ export default composite({
   tts: ["叫人帮我", "问人能不能帮我"],
   literal: "call a person to help me / ask people whether they can help me",
   fit: "plain",
-  topics: ["helping-and-sharing"],
+  topics: ["helping-and-supporting"],
   isA: ["social-action"],
   proposed: true,
 });

@@ -14,7 +14,7 @@ export default word("pang2bian1", {
     eng: "Beside, next to. A basic position with no other word.",
     rus: "Рядом, сбоку. Базовое положение, для которого нет другого слова.",
   },
-  topics: ["up-down-in-out"],
+  topics: ["beside-and-around"],
   isA: ["place-relation"],
   maps: "poka",
   paraphrase: {

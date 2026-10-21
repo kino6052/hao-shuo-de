@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["还有", "把X和Y放在一起"],
   fit: "natural",
-  topics: ["joining-words"],
+  topics: ["and-or-and-also"],
   isA: ["conjunction"],
   proposed: true,
 });

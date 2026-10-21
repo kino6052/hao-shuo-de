@@ -14,7 +14,7 @@ export default composite({
   tts: ["要的金变少，让人多买"],
   literal: "the money asked becomes less, make people buy more",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["buying-and-selling"],
   isA: ["trade-action"],
   proposed: true,
 });

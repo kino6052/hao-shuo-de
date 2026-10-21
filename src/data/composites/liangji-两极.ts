@@ -15,7 +15,7 @@ export default composite({
   tts: ["地球最上面和最下面的冷的地方", "地球两边最冷的地方"],
   literal: "the cold places at the very top and the very bottom of the Earth / the coldest places on the two sides of the Earth",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["land-soil-and-the-earth"],
   isA: ["landform"],
   proposed: true,
 });

@@ -14,7 +14,7 @@ export default word("leng3", {
     eng: "Cold: weather, water, food. A feeling you can't describe with other words.",
     rus: "Холодный: погода, вода, еда. Ощущение, которое не описать другими словами.",
   },
-  topics: ["how-it-feels"],
+  topics: ["hot-cold-and-warm"],
   isA: ["touch-quality"],
   maps: "lete",
   atom: {

@@ -12,7 +12,7 @@ export default composite({
   tts: ["下来", "走下去"],
   literal: "come down; walk down",
   fit: "plain",
-  topics: ["going-and-coming"],
+  topics: ["climbing-and-falling"],
   isA: ["moving-action"],
   proposed: true,
 });

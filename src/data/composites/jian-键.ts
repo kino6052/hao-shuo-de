@@ -15,7 +15,7 @@ export default composite({
   tts: ["机上用手打的小的东西", "打字的小的东西"],
   literal: "a small thing on a machine that you hit with the hand; a small thing for typing",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["computers-and-gadgets"],
   isA: ["made-thing"],
   proposed: true,
 });

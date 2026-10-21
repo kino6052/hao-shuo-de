@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:gei3}}"],
   tts: ["给"],
   fit: "word",
-  topics: ["giving-and-getting"],
+  topics: ["giving-and-gifts"],
   isA: ["handling-action"],
   examples: [
     {

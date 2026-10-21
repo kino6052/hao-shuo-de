@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:hai2}}"],
   tts: ["还"],
   fit: "natural",
-  topics: ["adverbs"],
+  topics: ["also-again-still-already"],
   isA: ["adverb-word"],
   proposed: true,
 });

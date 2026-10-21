@@ -15,7 +15,7 @@ export default composite({
   tts: ["声音很大", "发很大的声音"],
   literal: "the sound is very loud / give off a very loud sound",
   fit: "plain",
-  topics: ["senses"],
+  topics: ["hearing-and-sounds"],
   isA: ["sound-or-light-quality"],
   proposed: true,
 });

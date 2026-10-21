@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:kan4}} {{word:shu1}}", "{{word:zai4}} {{word:xue2}}-{{word:xiao4}} {{word:xue2}}"],
   tts: ["看书", "在学校学"],
   fit: "natural",
-  topics: ["studying"],
+  topics: ["studying-and-practising"],
   isA: ["learning-and-teaching"],
   proposed: true,
 });

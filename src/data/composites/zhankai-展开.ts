@@ -12,7 +12,7 @@ export default composite({
   tts: ["把X打开"],
   literal: "open X out",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["putting-and-placing"],
   isA: ["handling-action"],
   proposed: true,
 });

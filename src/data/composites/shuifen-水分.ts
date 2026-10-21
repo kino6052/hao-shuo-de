@@ -15,7 +15,7 @@ export default composite({
   tts: ["东西里面的水", "水的部分"],
   literal: "the water inside a thing / the water part",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["rivers-lakes-and-floods"],
   isA: ["liquid-or-gas"],
   proposed: true,
 });

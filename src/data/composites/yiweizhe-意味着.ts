@@ -12,7 +12,7 @@ export default composite({
   tts: ["X就是Y"],
   literal: "X is just Y",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["knowing-and-grasping"],
   isA: ["thinking-action"],
   proposed: true,
 });

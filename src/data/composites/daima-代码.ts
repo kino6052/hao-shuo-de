@@ -14,7 +14,7 @@ export default composite({
   tts: ["写给算的机看的词"],
   literal: "the words written for the counting machine to read",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["software-files-and-accounts"],
   isA: ["language-thing"],
   proposed: true,
 });

@@ -14,7 +14,7 @@ export default composite({
   tts: ["口里觉得味道的能力"],
   literal: "the ability of the mouth to feel taste",
   fit: "plain",
-  topics: ["senses"],
+  topics: ["smell-taste-touch-and-feeling"],
   isA: ["perceiving"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["动身体"],
   literal: "move the body",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["exercise-and-kinds-of-sport"],
   isA: ["activity-name"],
   examples: [
     {

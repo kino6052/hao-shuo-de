@@ -14,7 +14,7 @@ export default composite({
   tts: ["对X多好的东西发生了"],
   literal: "many good things happen to X",
   fit: "plain",
-  topics: ["news-and-events"],
+  topics: ["events-and-luck"],
   isA: ["condition-quality"],
   examples: [
     {

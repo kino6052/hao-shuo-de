@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:dong1}}-{{light:xi1}}"],
   tts: ["东西"],
   fit: "word",
-  topics: ["ideas-and-opinions"],
+  topics: ["knowledge-and-meaning"],
   isA: ["thing"],
   examples: [
     {

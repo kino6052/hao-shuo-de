@@ -15,7 +15,7 @@ export default composite({
   tts: ["对X说一定会做Y", "说一定会做的话"],
   literal: "say to X that one will surely do Y / the words that say one will surely do it",
   fit: "plain",
-  topics: ["agreeing-and-praising"],
+  topics: ["advising-and-promising"],
   isA: ["speaking-action"],
   proposed: true,
 });

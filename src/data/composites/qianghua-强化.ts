@@ -15,7 +15,7 @@ export default composite({
   tts: ["让X有力", "让X变有力"],
   literal: "make X strong / make X become strong",
   fit: "plain",
-  topics: ["speed-and-strength"],
+  topics: ["energy-and-intensity"],
   isA: ["making"],
   proposed: true,
 });

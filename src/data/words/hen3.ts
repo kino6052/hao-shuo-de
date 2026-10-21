@@ -14,7 +14,7 @@ export default word("hen3", {
     eng: "Very, and the link between a thing and its adjective: {{word:shui3}} {{word:hen3}} {{word:hao3}}.",
     rus: "Очень, а также связка между вещью и прилагательным: {{word:shui3}} {{word:hen3}} {{word:hao3}}.",
   },
-  topics: ["degree-words"],
+  topics: ["very-and-most"],
   isA: ["degree-word"],
   maps: "mute",
   atom: { eng: "A fundamental word.", rus: "Основное слово." },

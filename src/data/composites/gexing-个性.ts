@@ -15,7 +15,7 @@ export default composite({
   tts: ["一个人和别人不一样的地方", "一个人的样子"],
   literal: "the place where one person is not the same as other people",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["strong-and-weak-points"],
   isA: ["idea"],
   proposed: true,
 });

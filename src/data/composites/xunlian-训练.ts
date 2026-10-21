@@ -12,7 +12,7 @@ export default composite({
   tts: ["很多次做"],
   literal: "do it many times",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["exercise-and-kinds-of-sport"],
   isA: ["learning-and-teaching"],
   examples: [
     {

@@ -15,7 +15,7 @@ export default composite({
   tts: ["拿出来让人看", "把X拿出来给人看"],
   literal: "take it out and let people look / take X out and show it to people",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["mixing-passing-on-and-changing"],
   isA: ["handling-action"],
   proposed: true,
 });

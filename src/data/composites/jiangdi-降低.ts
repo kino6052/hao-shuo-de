@@ -12,7 +12,7 @@ export default composite({
   tts: ["变少"],
   literal: "become less",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["decreasing-and-breaking-down"],
   isA: ["becoming"],
   examples: [
     {

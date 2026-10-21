@@ -14,7 +14,7 @@ export default composite({
   tts: ["第一做什么，第二做什么"],
   literal: "first do what, second do what",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["ways-and-methods"],
   isA: ["idea"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["一边很高，一边不高", "让X一边很高，一边不高"],
   literal: "one side is very high, one side is not high / make X high on one side and not on the other",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["flat-straight-curved"],
   isA: ["shape-quality"],
   proposed: true,
 });

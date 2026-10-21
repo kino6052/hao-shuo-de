@@ -13,7 +13,7 @@ export default composite({
   literal: "go up to learn / go to school",
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["studying"],
+  topics: ["school-days-and-years"],
   isA: ["social-action"],
   examples: [
     {

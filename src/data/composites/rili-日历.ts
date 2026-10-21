@@ -15,7 +15,7 @@ export default composite({
   tts: ["看今天是哪一天的东西", "把一年的日子写出来的东西"],
   literal: "the thing you look at to see which day today is / the thing that writes out the days of a year",
   fit: "plain",
-  topics: ["calendar"],
+  topics: ["days-and-dates"],
   isA: ["paper-thing"],
   proposed: true,
 });

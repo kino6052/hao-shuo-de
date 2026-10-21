@@ -15,7 +15,7 @@ export default composite({
   tts: ["不能决定", "想了又想，还不决定"],
   literal: "cannot decide / thought and thought, still not deciding",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["willing-daring-and-forced"],
   isA: ["feeling-quality"],
   proposed: true,
 });

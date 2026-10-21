@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:bian4}}", "{{word:cong2}} X {{word:bian4}} {{word:dao4}} Y"],
   tts: ["变", "从X变到Y"],
   fit: "natural",
-  topics: ["changing"],
+  topics: ["becoming-and-turning-into"],
   isA: ["becoming"],
   proposed: true,
 });

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:luan4}}"],
   tts: ["乱"],
   fit: "word",
-  topics: ["state-of-things"],
+  topics: ["empty-messy-clear"],
   isA: ["condition-quality"],
   note: "Lesson {{lesson:becoming-and-making}}.",
   examples: [

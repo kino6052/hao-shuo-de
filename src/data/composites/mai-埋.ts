@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X放在地里面", "把X放在地下"],
   literal: "put X inside the ground / put X under the ground",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["putting-and-placing"],
   isA: ["placing"],
   proposed: true,
 });

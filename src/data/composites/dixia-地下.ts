@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:di4}}-{{word:xia4}}", "{{word:di4}}-{{word:de}} {{word:xia4}}-{{word:mian4}}"],
   tts: ["地下", "地的下面"],
   fit: "natural",
-  topics: ["up-down-in-out"],
+  topics: ["above-and-below"],
   isA: ["place-relation"],
   proposed: true,
 });

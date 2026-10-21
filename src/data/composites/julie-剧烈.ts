@@ -15,7 +15,7 @@ export default composite({
   tts: ["很有力，很快", "很大，很重"],
   literal: "very strong, very fast / very big, very heavy",
   fit: "plain",
-  topics: ["speed-and-strength"],
+  topics: ["energy-and-intensity"],
   isA: ["speed-or-strength"],
   proposed: true,
 });

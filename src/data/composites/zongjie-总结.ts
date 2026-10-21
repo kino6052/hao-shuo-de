@@ -14,7 +14,7 @@ export default composite({
   tts: ["做完后，说都做了什么"],
   literal: "after doing it, say what was done",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["thinking-and-researching"],
   isA: ["thinking-action"],
   proposed: true,
 });

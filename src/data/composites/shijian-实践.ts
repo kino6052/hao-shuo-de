@@ -15,7 +15,7 @@ export default composite({
   tts: ["真的去做", "不是想，是做"],
   literal: "really go and do it / not think, do",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["doing-and-carrying-out"],
   isA: ["working"],
   proposed: true,
 });

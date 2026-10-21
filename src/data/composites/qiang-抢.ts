@@ -15,7 +15,7 @@ export default composite({
   tts: ["很快把X拿走", "不等给，就拿"],
   literal: "quickly take X away / not wait to be given, just take",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["taking-picking-up-and-using"],
   isA: ["handling-action"],
   proposed: true,
 });

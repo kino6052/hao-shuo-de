@@ -12,7 +12,7 @@ export default composite({
   tts: ["对方", "那边的人"],
   literal: "the person on the other side",
   fit: "natural",
-  topics: ["people-together"],
+  topics: ["gathering-and-getting-along"],
   isA: ["person"],
   examples: [
     {

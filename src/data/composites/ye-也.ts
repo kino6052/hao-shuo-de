@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:ye3}}"],
   tts: ["也"],
   fit: "word",
-  topics: ["adverbs"],
+  topics: ["also-again-still-already"],
   isA: ["adverb-word"],
   examples: [
     {

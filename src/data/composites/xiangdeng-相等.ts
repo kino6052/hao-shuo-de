@@ -15,7 +15,7 @@ export default composite({
   ],
   tts: ["一样", "一样多", "一样大"],
   fit: "natural",
-  topics: ["same-and-different"],
+  topics: ["same-and-equal"],
   isA: ["comparison"],
   proposed: true,
 });

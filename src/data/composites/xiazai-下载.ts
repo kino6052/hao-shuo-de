@@ -12,7 +12,7 @@ export default composite({
   tts: ["从网上拿下来"],
   literal: "take it down from the net",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["typing-clicking-and-downloading"],
   isA: ["handling-action"],
   examples: [
     {

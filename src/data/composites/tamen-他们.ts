@@ -12,7 +12,7 @@ export default composite({
   tts: ["他们"],
   fit: "natural",
   kinds: ["built"],
-  topics: ["pointers"],
+  topics: ["i-you-he-she"],
   isA: ["pronoun"],
   examples: [
     {

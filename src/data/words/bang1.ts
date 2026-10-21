@@ -14,7 +14,7 @@ export default word("bang1", {
     eng: "Help: {{word:bang1}} {{word:wo3}}! Asking for help can't wait for a description.",
     rus: "Помогать: {{word:bang1}} {{word:wo3}}! Просьба о помощи не ждёт описаний.",
   },
-  topics: ["helping-and-sharing"],
+  topics: ["helping-and-supporting"],
   isA: ["social-action"],
   paraphrase: {
     forms: [

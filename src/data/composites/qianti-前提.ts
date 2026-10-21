@@ -15,7 +15,7 @@ export default composite({
   tts: ["做X以前要有的东西", "这个没有，就不能做X"],
   literal: "what must be there before doing X / if this is missing, X can't be done",
   fit: "plain",
-  topics: ["causes-and-results"],
+  topics: ["reasons-sources-and-conditions"],
   isA: ["cause-and-effect"],
   proposed: true,
 });

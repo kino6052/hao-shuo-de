@@ -12,7 +12,7 @@ export default composite({
   tts: ["要的金变多"],
   literal: "it costs more money",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["prices-and-discounts"],
   isA: ["becoming"],
   examples: [
     {

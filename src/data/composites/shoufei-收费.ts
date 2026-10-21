@@ -15,7 +15,7 @@ export default composite({
   tts: ["要人给金", "用的人要给金"],
   literal: "want people to give money / the people who use it must give money",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["earning-and-compensation"],
   isA: ["trade-action"],
   proposed: true,
 });

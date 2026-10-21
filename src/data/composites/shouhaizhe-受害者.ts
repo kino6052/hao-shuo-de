@@ -14,7 +14,7 @@ export default composite({
   tts: ["别人对他很坏的人"],
   literal: "the person others are very bad to",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["crimes-and-criminals"],
   isA: ["person"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["不工作了", "不在X工作了"],
   literal: "not working any more / not working at X any more",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["jobs-and-hiring"],
   isA: ["working"],
   proposed: true,
 });

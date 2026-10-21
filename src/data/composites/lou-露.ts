@@ -15,7 +15,7 @@ export default composite({
   tts: ["让人看见X", "让X出来"],
   literal: "let people see X / let X come out",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["appearing-and-scenes"],
   isA: ["handling-action"],
   proposed: true,
 });

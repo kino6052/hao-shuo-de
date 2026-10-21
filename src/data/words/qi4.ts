@@ -14,7 +14,7 @@ export default word("qi4", {
     eng: "Air, which you can't see or touch. With {{word:kong1}} it's the everyday word, {{word:kong1}}-{{word:qi4}}.",
     rus: "Воздух, которого не видно и не потрогать. С {{word:kong1}} — обычное слово {{word:kong1}}-{{word:qi4}}.",
   },
-  topics: ["weather"],
+  topics: ["air-wind-and-storms"],
   isA: ["liquid-or-gas"],
   senses: {
     device: {

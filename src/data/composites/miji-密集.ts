@@ -15,7 +15,7 @@ export default composite({
   tts: ["很多东西在一个小地方", "很多X在一起，中间没有空的地方"],
   literal: "many things in one small place / many X together with no empty place in between",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["many-and-few"],
   isA: ["amount-word"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["最上面的部分", "最高的地方"],
   literal: "the very top part / the highest place",
   fit: "plain",
-  topics: ["up-down-in-out"],
+  topics: ["above-and-below"],
   isA: ["place-relation"],
   proposed: true,
 });

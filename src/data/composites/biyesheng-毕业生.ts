@@ -12,7 +12,7 @@ export default composite({
   tts: ["学完的人"],
   literal: "someone who finished learning",
   fit: "plain",
-  topics: ["classroom"],
+  topics: ["teachers-and-students"],
   isA: ["social-role"],
   examples: [
     {

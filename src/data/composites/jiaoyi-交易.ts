@@ -14,7 +14,7 @@ export default composite({
   tts: ["买东西和给东西得金"],
   literal: "buying and selling",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["trade-and-the-market"],
   isA: ["activity-name"],
   proposed: true,
 });

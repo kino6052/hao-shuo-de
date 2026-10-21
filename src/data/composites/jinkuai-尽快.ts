@@ -15,7 +15,7 @@ export default composite({
   tts: ["能多快就多快", "最快"],
   literal: "as fast as it can be, that fast / the fastest",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["soon-early-and-late"],
   isA: ["time-order"],
   proposed: true,
 });

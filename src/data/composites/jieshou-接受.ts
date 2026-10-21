@@ -12,7 +12,7 @@ export default composite({
   tts: ["拿", "说好"],
   literal: "take / say okay",
   fit: "plain",
-  topics: ["giving-and-getting"],
+  topics: ["getting-and-receiving"],
   isA: ["handling-action"],
   examples: [
     {

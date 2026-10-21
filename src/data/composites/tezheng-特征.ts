@@ -14,7 +14,7 @@ export default composite({
   tts: ["和别的不一样的地方"],
   literal: "the place that is not the same as the others",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["features-and-forms"],
   isA: ["idea"],
   proposed: true,
 });

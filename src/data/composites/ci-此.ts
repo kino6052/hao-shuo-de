@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:zhe4}}"],
   tts: ["这"],
   fit: "natural",
-  topics: ["pointers"],
+  topics: ["this-that-such"],
   isA: ["pronoun"],
   proposed: true,
 });

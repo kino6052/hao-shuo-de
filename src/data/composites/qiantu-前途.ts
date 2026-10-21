@@ -12,7 +12,7 @@ export default composite({
   tts: ["以后的路"],
   literal: "the road after",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["after-later-and-future"],
   isA: ["idea"],
   proposed: true,
 });

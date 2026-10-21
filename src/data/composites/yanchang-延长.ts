@@ -12,6 +12,6 @@ export default composite({
   tts: ["把X变长"],
   literal: "make X long",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["increasing-and-rising"],
   isA: ["becoming"],
 });

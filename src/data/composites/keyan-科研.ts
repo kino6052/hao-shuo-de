@@ -12,7 +12,7 @@ export default composite({
   tts: ["学的工作"],
   literal: "the work of science",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["knowledge-and-meaning"],
   isA: ["activity-name"],
   proposed: true,
 });

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:hua4}}", "{{word:shuo1}}-{{word:de}} {{word:hua4}}"],
   tts: ["话", "说的话"],
   fit: "natural",
-  topics: ["talking"],
+  topics: ["saying-and-calling"],
   isA: ["language-thing"],
   proposed: true,
 });

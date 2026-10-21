@@ -12,7 +12,7 @@ export default composite({
   tts: ["今天"],
   fit: "natural",
   transparent: true,
-  topics: ["calendar"],
+  topics: ["days-and-dates"],
   isA: ["time-point"],
   proposed: true,
 });

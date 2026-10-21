@@ -15,7 +15,7 @@ export default composite({
   tts: ["让X还坏", "让坏的，还坏"],
   literal: "make X even worse / make the bad even worse",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["increasing-and-rising"],
   isA: ["becoming"],
   proposed: true,
 });

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:dan4}}", "{{word:dan4}}-{{word:shi4}}"],
   tts: ["但", "但是"],
   fit: "word",
-  topics: ["joining-words"],
+  topics: ["but-and-although"],
   isA: ["conjunction"],
   examples: [
     {

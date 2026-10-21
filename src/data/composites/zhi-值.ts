@@ -12,7 +12,7 @@ export default composite({
   tts: ["有价值", "价值是X金"],
   literal: "have value / the value is X money",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["rich-poor-and-worth"],
   isA: ["owning"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["一个，不和别的在一起", "只有一个的"],
   literal: "one, not together with others / only one",
   fit: "plain",
-  topics: ["people-together"],
+  topics: ["crowds-and-the-public"],
   isA: ["idea"],
   proposed: true,
 });

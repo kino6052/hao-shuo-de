@@ -15,7 +15,7 @@ export default composite({
   tts: ["说别人", "大家说X的话"],
   literal: "talk about other people / the words everyone says about X",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["talks-discussion-and-orders"],
   isA: ["speaking-action"],
   proposed: true,
 });

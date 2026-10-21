@@ -14,7 +14,7 @@ export default composite({
   tts: ["别人在用话机，我打不进去"],
   literal: "someone else is using the phone, I cannot get in",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["phone-calls-and-messages"],
   isA: ["happening"],
   proposed: true,
 });

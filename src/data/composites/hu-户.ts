@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:jia1}}"],
   tts: ["家"],
   fit: "natural",
-  topics: ["counting-words"],
+  topics: ["counting-plants-vehicles-and-buildings"],
   isA: ["counting-word"],
   proposed: true,
 });

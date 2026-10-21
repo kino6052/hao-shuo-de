@@ -12,7 +12,7 @@ export default composite({
   tts: ["买的东西"],
   literal: "things to buy",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["goods-and-customers"],
   isA: ["made-thing"],
   proposed: true,
 });

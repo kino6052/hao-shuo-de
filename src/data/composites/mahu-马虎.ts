@@ -15,7 +15,7 @@ export default composite({
   tts: ["不小心", "不好好做"],
   literal: "not careful / not doing it well",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["careful-hardworking-and-lazy"],
   isA: ["character-quality"],
   proposed: true,
 });

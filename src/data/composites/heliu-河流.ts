@@ -15,7 +15,7 @@ export default composite({
   tts: ["长的有水的地方", "动的水"],
   literal: "moving water",
   fit: "plain",
-  topics: ["land-and-water"],
+  topics: ["rivers-lakes-and-floods"],
   isA: ["landform"],
   examples: [
     {

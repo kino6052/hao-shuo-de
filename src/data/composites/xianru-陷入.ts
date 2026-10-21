@@ -15,7 +15,7 @@ export default composite({
   tts: ["进去了，出不来", "不能从X里面出来"],
   literal: "went in and cannot come out / cannot come out of X",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["decreasing-and-breaking-down"],
   isA: ["becoming"],
   proposed: true,
 });

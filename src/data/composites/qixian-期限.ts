@@ -15,7 +15,7 @@ export default composite({
   tts: ["要做完的最后一天", "最晚的时间"],
   literal: "the last day by which it must be finished / the latest time",
   fit: "plain",
-  topics: ["calendar"],
+  topics: ["weeks-months-and-deadlines"],
   isA: ["time-point"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["用工具把地打开", "用工具把地里的东西拿出来"],
   literal: "use a tool to open up the ground / use a tool to take out the things in the ground",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["breaking-and-taking-apart"],
   isA: ["handling-action"],
   proposed: true,
 });

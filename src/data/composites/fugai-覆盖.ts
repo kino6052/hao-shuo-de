@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X放在Y上，让Y看不见", "把X放在Y上面"],
   literal: "put X on Y so that Y cannot be seen / put X on top of Y",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["putting-and-placing"],
   isA: ["placing"],
   proposed: true,
 });

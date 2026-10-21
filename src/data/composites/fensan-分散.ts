@@ -15,7 +15,7 @@ export default composite({
   tts: ["分开到不同的地方", "不在一起"],
   literal: "separate into different places / not together",
   fit: "plain",
-  topics: ["same-and-different"],
+  topics: ["different-and-varied"],
   isA: ["handling-action"],
   proposed: true,
 });

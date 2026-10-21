@@ -15,7 +15,7 @@ export default composite({
   tts: ["把数写出来的东西", "用线写的数"],
   literal: "the thing where numbers are written out / numbers written with lines",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-subjects-and-courses"],
   isA: ["paper-thing"],
   proposed: true,
 });

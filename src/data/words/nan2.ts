@@ -14,7 +14,7 @@ export default word("nan2", {
     eng: "Difficult, and before a verb, unpleasant: {{word:nan2}}-{{word:kan4}} is ugly. A description would need a long sentence.",
     rus: "Трудный, а перед глаголом — неприятный: {{word:nan2}}-{{word:kan4}} — некрасивый. Описание вышло бы длинным.",
   },
-  topics: ["easy-hard-right-wrong"],
+  topics: ["hard-and-difficult"],
   isA: ["truth-or-ease"],
   senses: {
     male: {

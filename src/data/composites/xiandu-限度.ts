@@ -15,7 +15,7 @@ export default composite({
   tts: ["最多能到的地方", "能到的最大的数"],
   literal: "the place one can reach at most / the biggest number one can reach",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["extra-and-limits"],
   isA: ["idea"],
   proposed: true,
 });

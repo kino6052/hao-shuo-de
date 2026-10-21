@@ -12,7 +12,7 @@ export default composite({
   tts: ["英格兰", "英国的一部分"],
   literal: "one part of Yīngguó",
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["named-countries"],
   isA: ["settlement"],
   proposed: true,
 });

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:yang4}}-{{word:zi}}", "{{word:yi1}}-{{word:zhong3}} X"],
   tts: ["样子", "一种X"],
   fit: "natural",
-  topics: ["shopping"],
+  topics: ["goods-and-customers"],
   isA: ["idea"],
   proposed: true,
 });

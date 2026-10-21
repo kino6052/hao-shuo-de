@@ -17,7 +17,7 @@ export default composite({
   literal: "on the line / on the net",
   fit: "natural",
   kinds: ["built", "built", "built"],
-  topics: ["phone-and-computer"],
+  topics: ["internet-and-websites"],
   isA: ["adverb-word"],
   examples: [
     {

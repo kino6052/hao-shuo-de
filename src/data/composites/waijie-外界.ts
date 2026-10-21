@@ -15,7 +15,7 @@ export default composite({
   tts: ["外面的人和地方", "我们这里外面的东西"],
   literal: "the people and places outside / the things outside our place",
   fit: "plain",
-  topics: ["up-down-in-out"],
+  topics: ["inside-and-outside"],
   isA: ["place"],
   proposed: true,
 });

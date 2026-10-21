@@ -12,7 +12,7 @@ export default composite({
   tts: ["用"],
   literal: "use",
   fit: "natural",
-  topics: ["giving-and-getting"],
+  topics: ["spending-trading-and-returning"],
   isA: ["handling-action"],
   examples: [
     {

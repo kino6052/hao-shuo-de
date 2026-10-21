@@ -15,7 +15,7 @@ export default composite({
   tts: ["新的样子", "新做的一种X"],
   literal: "a new look / a newly made kind of X",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["goods-and-customers"],
   isA: ["idea"],
   proposed: true,
 });

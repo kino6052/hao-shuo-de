@@ -12,7 +12,7 @@ export default composite({
   tts: ["能决定的力"],
   literal: "the strength to decide",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["rights-duties-and-agreements"],
   isA: ["idea"],
   proposed: true,
 });

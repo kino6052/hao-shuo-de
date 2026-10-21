@@ -12,7 +12,7 @@ export default composite({
   tts: ["看到就知道"],
   literal: "see it and know it",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["noticing-and-observing"],
   isA: ["perceiving"],
   examples: [
     {

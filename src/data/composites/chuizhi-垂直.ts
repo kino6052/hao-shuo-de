@@ -15,7 +15,7 @@ export default composite({
   tts: ["从上到下的", "和站起来的人一样"],
   literal: "going from top to bottom / the same as a person who has stood up",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["flat-straight-curved"],
   isA: ["shape-quality"],
   proposed: true,
 });

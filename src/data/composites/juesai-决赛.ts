@@ -14,7 +14,7 @@ export default composite({
   tts: ["最后一次看谁最好"],
   literal: "the last time of seeing who is best",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["matches-and-contests"],
   isA: ["event"],
   proposed: true,
 });

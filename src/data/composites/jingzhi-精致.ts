@@ -15,7 +15,7 @@ export default composite({
   tts: ["做得很好，很好看", "小心做的"],
   literal: "made very well, very good to look at / made with care",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["wonderful-and-beautiful"],
   isA: ["value-quality"],
   proposed: true,
 });

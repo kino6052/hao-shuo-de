@@ -15,7 +15,7 @@ export default composite({
   tts: ["听人说，知道了", "看到，知道了"],
   literal: "hear people say it and come to know / see it and come to know",
   fit: "plain",
-  topics: ["knowing-and-understanding"],
+  topics: ["knowing-and-grasping"],
   isA: ["thinking-action"],
   proposed: true,
 });

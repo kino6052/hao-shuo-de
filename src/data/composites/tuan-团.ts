@@ -15,7 +15,7 @@ export default composite({
   tts: ["圆圆的东西", "一起的人"],
   literal: "a round thing / people who are together",
   fit: "plain",
-  topics: ["shapes"],
+  topics: ["form-and-structure"],
   isA: ["thing"],
   proposed: true,
 });

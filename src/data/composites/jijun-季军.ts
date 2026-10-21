@@ -12,7 +12,7 @@ export default composite({
   tts: ["第三号的人"],
   literal: "the number-three person",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["medals-and-champions"],
   isA: ["person"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["做法很高明", "很高明"],
   literal: "the way of doing it is very smart / very smart",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["wonderful-and-beautiful"],
   isA: ["character-quality"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["很长时间要做的方法", "想好很长时间要怎么做"],
   literal: "the way to be done over a very long time / think through how to do it over a long time",
   fit: "plain",
-  topics: ["deciding"],
+  topics: ["plans-and-goals"],
   isA: ["idea"],
   proposed: true,
 });

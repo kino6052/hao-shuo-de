@@ -15,7 +15,7 @@ export default composite({
   tts: ["别人心里的样子", "看起来的样子"],
   literal: "the way one is in other people's hearts; the way one looks",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["strong-and-weak-points"],
   isA: ["idea"],
   proposed: true,
 });

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["\"Běiměizhōu\""],
   tts: ["北美洲"],
   fit: "name",
-  topics: ["countries-and-cities"],
+  topics: ["world-and-continents"],
   isA: ["settlement"],
   proposed: true,
 });

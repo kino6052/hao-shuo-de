@@ -15,7 +15,7 @@ export default composite({
   tts: ["不怕把X给别人", "不怕用很多金"],
   literal: "not afraid to give X to others / not afraid to use a lot of money",
   fit: "plain",
-  topics: ["giving-and-getting"],
+  topics: ["giving-and-gifts"],
   isA: ["handling-action"],
   proposed: true,
 });

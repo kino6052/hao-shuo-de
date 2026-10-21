@@ -14,7 +14,7 @@ export default word("kai1shi3", {
     eng: "Begin, start. Without it, you can't say when something starts.",
     rus: "Начинать. Без него не сказать, когда что-то начинается.",
   },
-  topics: ["deciding"],
+  topics: ["beginning-and-finishing"],
   isA: ["starting-and-stopping"],
   maps: "open, kama",
   paraphrase: {

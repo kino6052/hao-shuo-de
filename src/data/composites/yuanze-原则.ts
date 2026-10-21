@@ -12,7 +12,7 @@ export default composite({
   tts: ["不能变的法"],
   literal: "a rule that cannot change",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["key-points-and-principles"],
   isA: ["idea"],
   proposed: true,
 });

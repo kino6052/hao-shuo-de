@@ -15,7 +15,7 @@ export default composite({
   tts: ["奥运会", "四年一次，很多国的人动身体看谁最好"],
   literal: "once every four years, people of many countries move the body to see who is best",
   fit: "name",
-  topics: ["sports"],
+  topics: ["matches-and-contests"],
   isA: ["event"],
   proposed: true,
 });

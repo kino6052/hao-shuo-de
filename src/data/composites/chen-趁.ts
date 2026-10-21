@@ -15,7 +15,7 @@ export default composite({
   tts: ["在X还在的时候", "有机会的时候，就做"],
   literal: "at the time when X is still there / when there is a chance, then do it",
   fit: "plain",
-  topics: ["before-and-after"],
+  topics: ["soon-early-and-late"],
   isA: ["time-order"],
   proposed: true,
 });

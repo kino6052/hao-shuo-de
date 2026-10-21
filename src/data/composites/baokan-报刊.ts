@@ -15,7 +15,7 @@ export default composite({
   tts: ["一次又一次出来的写的东西", "说现在发生什么的写的东西，和一次又一次出来的书"],
   literal: "written things that come out again and again / written things that say what is happening now, and books that come out again and again",
   fit: "plain",
-  topics: ["news-and-events"],
+  topics: ["news-and-press"],
   isA: ["paper-thing"],
   proposed: true,
 });

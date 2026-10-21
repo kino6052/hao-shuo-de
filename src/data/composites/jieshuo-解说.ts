@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["说明", "说给人明白"],
   fit: "natural",
-  topics: ["talking"],
+  topics: ["explaining-and-describing"],
   isA: ["speaking-action"],
   proposed: true,
 });

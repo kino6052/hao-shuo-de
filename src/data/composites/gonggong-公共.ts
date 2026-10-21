@@ -15,7 +15,7 @@ export default composite({
   tts: ["大家都能用的", "大家的"],
   literal: "everyone can use it",
   fit: "plain",
-  topics: ["people-together"],
+  topics: ["crowds-and-the-public"],
   isA: ["belonging"],
   proposed: true,
 });

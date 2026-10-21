@@ -12,7 +12,7 @@ export default composite({
   tts: ["把X变小"],
   literal: "make X smaller",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["throwing-spilling-and-cutting"],
   isA: ["handling-action"],
   proposed: true,
 });

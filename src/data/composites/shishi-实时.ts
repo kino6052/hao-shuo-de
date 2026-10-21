@@ -14,7 +14,7 @@ export default composite({
   ],
   tts: ["现在就…", "一发生就…"],
   fit: "natural",
-  topics: ["before-and-after"],
+  topics: ["now-and-recently"],
   isA: ["adverb-word"],
   proposed: true,
 });

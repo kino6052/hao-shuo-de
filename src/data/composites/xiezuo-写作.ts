@@ -12,7 +12,7 @@ export default composite({
   tts: ["写作", "写"],
   fit: "natural",
   kinds: ["spelled", "built"],
-  topics: ["writing"],
+  topics: ["writing-things-down"],
   isA: ["making"],
   examples: [
     {

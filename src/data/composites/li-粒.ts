@@ -15,7 +15,7 @@ export default composite({
   tts: ["很小的圆的东西", "个"],
   literal: "a very small round thing / (counting word)",
   fit: "plain",
-  topics: ["counting-words"],
+  topics: ["counting-plants-vehicles-and-buildings"],
   isA: ["counting-word"],
   proposed: true,
 });

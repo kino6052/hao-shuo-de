@@ -15,7 +15,7 @@ export default composite({
   tts: ["对手", "和你打的人"],
   literal: "the person who plays or fights against you",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["athletes-and-sports-grounds"],
   isA: ["person"],
   proposed: true,
 });

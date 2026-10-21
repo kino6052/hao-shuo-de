@@ -15,7 +15,7 @@ export default composite({
   tts: ["不早不晚", "时间真好"],
   literal: "not early and not late / the time is really good",
   fit: "plain",
-  topics: ["state-of-things"],
+  topics: ["special-and-strange"],
   isA: ["condition-quality"],
   proposed: true,
 });

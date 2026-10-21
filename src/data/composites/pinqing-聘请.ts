@@ -15,7 +15,7 @@ export default composite({
   tts: ["给X金，叫X来工作", "叫人来工作"],
   literal: "give X money, have X come to work / have a person come to work",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["jobs-and-hiring"],
   isA: ["working"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["不让别人知道的东西", "只有我知道的东西"],
   literal: "things one does not let other people know / things only I know",
   fit: "plain",
-  topics: ["ideas-and-opinions"],
+  topics: ["mind-and-imagination"],
   isA: ["idea"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["金都没了，不能工作了", "一起工作的地方没有金了"],
   literal: "all the money is gone, cannot work any more / the place where people work together has no money any more",
   fit: "plain",
-  topics: ["business-and-economy"],
+  topics: ["profit-loss-and-bankruptcy"],
   isA: ["being-affected"],
   proposed: true,
 });

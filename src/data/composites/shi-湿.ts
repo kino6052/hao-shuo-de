@@ -12,6 +12,6 @@ export default composite({
   tts: ["上面有水"],
   literal: "there is water on it",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["weather-and-clouds"],
   isA: ["touch-quality"],
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["写回去", "写回去的东西"],
   literal: "write it back / the thing written back",
   fit: "plain",
-  topics: ["writing"],
+  topics: ["writing-things-down"],
   isA: ["speaking-action"],
   proposed: true,
 });

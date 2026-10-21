@@ -15,7 +15,7 @@ export default composite({
   tts: ["一下出来很多", "一下出现很多"],
   literal: "many come out all at once / many appear all at once",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["appearing-and-developing"],
   isA: ["happening"],
   proposed: true,
 });

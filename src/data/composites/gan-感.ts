@@ -12,7 +12,7 @@ export default composite({
   tts: ["觉得"],
   fit: "natural",
   transparent: true,
-  topics: ["senses"],
+  topics: ["smell-taste-touch-and-feeling"],
   isA: ["perceiving"],
   proposed: true,
 });

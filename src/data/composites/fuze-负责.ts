@@ -12,7 +12,7 @@ export default composite({
   tts: ["把X做好的人"],
   literal: "the one who makes X good",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["managing-and-progress"],
   isA: ["working"],
   examples: [
     {

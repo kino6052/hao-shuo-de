@@ -12,7 +12,7 @@ export default composite({
   tts: ["等到"],
   fit: "natural",
   transparent: true,
-  topics: ["before-and-after"],
+  topics: ["soon-early-and-late"],
   isA: ["time-order"],
   proposed: true,
 });

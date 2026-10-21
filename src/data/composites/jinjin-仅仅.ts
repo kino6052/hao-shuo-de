@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:zhi3}}", "{{word:jiu4}}"],
   tts: ["只", "就"],
   fit: "natural",
-  topics: ["adverbs"],
+  topics: ["only-even-and-more"],
   isA: ["adverb-word"],
   proposed: true,
 });

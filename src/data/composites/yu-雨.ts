@@ -12,7 +12,7 @@ export default composite({
   tts: ["从天下来的水"],
   literal: "water that comes down from the sky",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["rain-and-snow"],
   isA: ["weather-thing"],
   examples: [
     {

@@ -12,7 +12,7 @@ export default composite({
   tts: ["让人看到"],
   literal: "make people see it",
   fit: "plain",
-  topics: ["talking"],
+  topics: ["introducing-and-passing-on"],
   isA: ["speaking-action"],
   examples: [
     {

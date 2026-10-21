@@ -15,7 +15,7 @@ export default composite({
   tts: ["说我要买X", "在网上说我要买X"],
   literal: "say I want to buy X / say online that I want to buy X",
   fit: "plain",
-  topics: ["shopping"],
+  topics: ["buying-and-selling"],
   isA: ["trade-action"],
   proposed: true,
 });

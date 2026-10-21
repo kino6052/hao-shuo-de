@@ -15,7 +15,7 @@ export default composite({
   tts: ["金的数", "金有多少"],
   literal: "the number of the money / how much money there is",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["prices-and-costs"],
   isA: ["idea"],
   proposed: true,
 });

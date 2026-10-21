@@ -14,7 +14,7 @@ export default word("hai2", {
     eng: "Still and yet: without it, \"it's still going on\" and \"or?\" in a question have no word.",
     rus: "«Ещё» и «всё ещё»: без него не сказать «это всё ещё идёт» и «или?» в вопросе.",
   },
-  topics: ["adverbs"],
+  topics: ["also-again-still-already"],
   isA: ["adverb-word"],
   senses: {
     child: {

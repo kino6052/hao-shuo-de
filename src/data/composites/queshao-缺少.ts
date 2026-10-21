@@ -15,7 +15,7 @@ export default composite({
   tts: ["要有，但没有", "少了X"],
   literal: "it should be there but isn't / X is missing",
   fit: "plain",
-  topics: ["much-and-little"],
+  topics: ["enough-and-lacking"],
   isA: ["owning"],
   proposed: true,
 });

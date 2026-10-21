@@ -15,7 +15,7 @@ export default composite({
   tts: ["少用", "少用金和东西"],
   literal: "use less; use less money and things",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["paying-and-spending"],
   isA: ["trade-action"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["不动"],
   literal: "not move",
   fit: "plain",
-  topics: ["going-and-coming"],
+  topics: ["leaving-stopping-and-retreating"],
   isA: ["starting-and-stopping"],
   examples: [
     {

@@ -14,7 +14,7 @@ export default composite({
   tts: ["说怎么做好玩儿的看的东西的人"],
   literal: "the person who says how to make the fun thing to watch",
   fit: "plain",
-  topics: ["films-and-media"],
+  topics: ["acting-and-roles"],
   isA: ["worker"],
   proposed: true,
 });

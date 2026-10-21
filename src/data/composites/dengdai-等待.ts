@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:deng3}}"],
   tts: ["等"],
   fit: "natural",
-  topics: ["before-and-after"],
+  topics: ["soon-early-and-late"],
   isA: ["starting-and-stopping"],
   proposed: true,
 });

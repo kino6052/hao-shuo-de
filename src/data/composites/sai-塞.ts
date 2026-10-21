@@ -15,7 +15,7 @@ export default composite({
   tts: ["用力把X放进Y里", "把X放进很小的地方"],
   literal: "with force put X into Y / put X into a very small place",
   fit: "plain",
-  topics: ["taking-and-holding"],
+  topics: ["putting-and-placing"],
   isA: ["handling-action"],
   proposed: true,
 });

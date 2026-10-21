@@ -15,7 +15,7 @@ export default composite({
   tts: ["活力", "用不完的力气"],
   literal: "strength that cannot be used up",
   fit: "natural",
-  topics: ["speed-and-strength"],
+  topics: ["energy-and-intensity"],
   isA: ["speed-or-strength"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["做X不让做的", "不做X说要做的"],
   literal: "do what X does not let you do / not do what X says to do",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["laws-and-rules"],
   isA: ["doing"],
   proposed: true,
 });

@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:hui2}}"],
   tts: ["回"],
   fit: "word",
-  topics: ["going-and-coming"],
+  topics: ["go-come-and-return"],
   isA: ["moving-action"],
   note: "Lesson {{lesson:direction-and-result}}: huí jiā, huí-lái.",
   examples: [

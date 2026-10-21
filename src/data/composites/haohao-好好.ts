@@ -12,7 +12,7 @@ export default composite({
   tts: ["好好"],
   fit: "natural",
   transparent: true,
-  topics: ["degree-words"],
+  topics: ["especially-and-in-person"],
   isA: ["adverb-word"],
   proposed: true,
 });

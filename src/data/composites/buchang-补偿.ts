@@ -15,7 +15,7 @@ export default composite({
   tts: ["把没了的东西给X", "给X金，让X不少"],
   literal: "give X the things that are gone / give X money, so X does not have less",
   fit: "plain",
-  topics: ["money-and-paying"],
+  topics: ["earning-and-compensation"],
   isA: ["trade-action"],
   proposed: true,
 });

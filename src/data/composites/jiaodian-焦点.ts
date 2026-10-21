@@ -15,7 +15,7 @@ export default composite({
   tts: ["大家都看的地方", "大家最想看的地方"],
   literal: "the place everyone looks at / the place everyone most wants to look at",
   fit: "plain",
-  topics: ["looking-and-checking"],
+  topics: ["noticing-and-observing"],
   isA: ["idea"],
   proposed: true,
 });

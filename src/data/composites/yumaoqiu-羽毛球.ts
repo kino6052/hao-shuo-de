@@ -15,7 +15,7 @@ export default composite({
   tts: ["有飞的动物的毛的球", "在网两边打有毛的球"],
   literal: "a ball with the hair of a flying animal / hit a ball with hair on the two sides of a net",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["ball-sports"],
   isA: ["activity-name"],
   proposed: true,
 });

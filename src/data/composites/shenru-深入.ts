@@ -15,7 +15,7 @@ export default composite({
   tts: ["进到里面很远", "好好看，好好想"],
   literal: "go in, far inside / look well, think well",
   fit: "plain",
-  topics: ["up-down-in-out"],
+  topics: ["inside-and-outside"],
   isA: ["moving-action"],
   proposed: true,
 });

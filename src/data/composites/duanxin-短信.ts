@@ -12,7 +12,7 @@ export default composite({
   tts: ["小的写的东西"],
   literal: "a small written thing",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["phone-calls-and-messages"],
   isA: ["paper-thing"],
   examples: [
     {

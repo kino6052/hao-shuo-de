@@ -12,7 +12,7 @@ export default composite({
   tts: ["不难"],
   literal: "not difficult",
   fit: "natural",
-  topics: ["easy-hard-right-wrong"],
+  topics: ["easy-and-convenient"],
   isA: ["truth-or-ease"],
   examples: [
     {

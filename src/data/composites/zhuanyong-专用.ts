@@ -15,7 +15,7 @@ export default composite({
   tts: ["只给X用", "只有X能用"],
   literal: "only for X to use / only X can use",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["using-things-and-effort"],
   isA: ["handling-action"],
   proposed: true,
 });

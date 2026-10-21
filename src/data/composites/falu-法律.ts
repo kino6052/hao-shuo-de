@@ -12,7 +12,7 @@ export default composite({
   tts: ["国家的法"],
   literal: "the law of the country",
   fit: "plain",
-  topics: ["law-and-crime"],
+  topics: ["laws-and-rules"],
   isA: ["abstract-thing"],
   proposed: true,
 });

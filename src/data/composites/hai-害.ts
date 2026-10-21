@@ -15,7 +15,7 @@ export default composite({
   tts: ["让X变坏", "不好的东西"],
   literal: "make X become bad / a not-good thing",
   fit: "plain",
-  topics: ["causes-and-results"],
+  topics: ["harm-and-bad-results"],
   isA: ["making"],
   proposed: true,
 });

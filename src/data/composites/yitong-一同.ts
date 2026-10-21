@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:yi1}}-{{word:tong2}}", "{{word:yi1}}-{{word:qi3}}"],
   tts: ["一同", "一起"],
   fit: "natural",
-  topics: ["adverbs"],
+  topics: ["quietly-together-step-by-step"],
   isA: ["adverb-word"],
   proposed: true,
 });

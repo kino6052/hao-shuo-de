@@ -14,7 +14,7 @@ export default composite({
   tts: ["把很多小的部分放在一起，做出新的东西"],
   literal: "put many small parts together and make a new thing",
   fit: "plain",
-  topics: ["making-and-doing"],
+  topics: ["building-and-producing"],
   isA: ["making"],
   proposed: true,
 });

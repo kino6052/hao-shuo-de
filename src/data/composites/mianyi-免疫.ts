@@ -15,7 +15,7 @@ export default composite({
   tts: ["身体不会得X", "身体不怕X"],
   literal: "the body will not get X / the body does not fear X",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["germs-poison-and-allergy"],
   isA: ["state-name"],
   proposed: true,
 });

@@ -15,7 +15,7 @@ export default composite({
   tts: ["最好的人得到的，金的颜色的小东西", "金\"牌\""],
   literal: "a small thing in the colour of gold, which the best person gets / gold-\"pai\"",
   fit: "plain",
-  topics: ["sports"],
+  topics: ["medals-and-champions"],
   isA: ["made-thing"],
   proposed: true,
 });

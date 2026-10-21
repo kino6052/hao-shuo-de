@@ -15,7 +15,7 @@ export default composite({
   tts: ["身体的一部分变红，很痛", "身体的一部分红了，痛"],
   literal: "a part of the body turns red, very painful / a part of the body is red, hurts",
   fit: "plain",
-  topics: ["illness"],
+  topics: ["fever-colds-and-diseases"],
   isA: ["being-affected"],
   proposed: true,
 });

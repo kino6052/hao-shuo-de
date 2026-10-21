@@ -12,7 +12,7 @@ export default composite({
   tts: ["天上没有日"],
   literal: "there is no sun in the sky",
   fit: "plain",
-  topics: ["weather"],
+  topics: ["weather-and-clouds"],
   isA: ["weather-thing"],
   proposed: true,
 });

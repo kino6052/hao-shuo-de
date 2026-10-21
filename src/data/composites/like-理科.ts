@@ -15,7 +15,7 @@ export default composite({
   tts: ["学数和植物和动物的学的", "学校里学数和植物的东西"],
   literal: "the science of numbers and plants and animals / what is learnt at school about numbers and plants",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["school-subjects-and-courses"],
   isA: ["activity-name"],
   proposed: true,
 });

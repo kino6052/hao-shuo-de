@@ -15,7 +15,7 @@ export default composite({
   tts: ["不好的地方", "没有力的地方"],
   literal: "the not-good place / the place without strength",
   fit: "plain",
-  topics: ["describing-people"],
+  topics: ["strong-and-weak-points"],
   isA: ["state-name"],
   proposed: true,
 });

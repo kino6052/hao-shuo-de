@@ -15,7 +15,7 @@ export default composite({
   tts: ["用很多时间和力气", "用很长时间好好做"],
   literal: "use a lot of time and strength / use a long time to do it well",
   fit: "plain",
-  topics: ["studying"],
+  topics: ["studying-and-practising"],
   isA: ["working"],
   proposed: true,
 });

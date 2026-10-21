@@ -12,7 +12,7 @@ export default composite({
   tts: ["对X好"],
   literal: "good for X",
   fit: "plain",
-  topics: ["how-good"],
+  topics: ["suitable-and-fair"],
   isA: ["value-quality"],
   proposed: true,
 });

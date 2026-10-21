@@ -11,7 +11,7 @@ export default composite({
   hsd: ["{{word:he2}}"],
   tts: ["和"],
   fit: "natural",
-  topics: ["joining-words"],
+  topics: ["and-or-and-also"],
   isA: ["conjunction"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["东西"],
   literal: "a thing",
   fit: "word",
-  topics: ["business-and-economy"],
+  topics: ["companies-and-products"],
   isA: ["made-thing"],
   examples: [
     {

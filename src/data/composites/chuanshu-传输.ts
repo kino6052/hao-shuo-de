@@ -15,7 +15,7 @@ export default composite({
   tts: ["把X从一个地方拿到别的地方", "把X从这里给到那里"],
   literal: "take X from one place to another place / give X from here to there",
   fit: "plain",
-  topics: ["phone-and-computer"],
+  topics: ["typing-clicking-and-downloading"],
   isA: ["handling-action"],
   proposed: true,
 });

@@ -12,7 +12,7 @@ export default composite({
   tts: ["帮人学怎么工作"],
   literal: "help people learn how to work",
   fit: "plain",
-  topics: ["working-life"],
+  topics: ["jobs-and-hiring"],
   isA: ["learning-and-teaching"],
   proposed: true,
 });

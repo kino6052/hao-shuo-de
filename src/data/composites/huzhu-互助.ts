@@ -15,7 +15,7 @@ export default composite({
   tts: ["X帮Y，Y也帮X", "你帮我，我也帮你"],
   literal: "X helps Y, Y also helps X / you help me, I also help you",
   fit: "plain",
-  topics: ["helping-and-sharing"],
+  topics: ["helping-and-supporting"],
   isA: ["social-action"],
   proposed: true,
 });

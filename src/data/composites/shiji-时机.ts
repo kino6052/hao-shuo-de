@@ -15,7 +15,7 @@ export default composite({
   tts: ["好时候", "做X最好的时间"],
   literal: "time-machine (time-chance) / a good time / the best time to do X",
   fit: "natural",
-  topics: ["before-and-after"],
+  topics: ["moments-and-stages"],
   isA: ["time-point"],
   proposed: true,
 });

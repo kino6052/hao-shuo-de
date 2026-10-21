@@ -16,7 +16,7 @@ export default composite({
   tts: ["让X还重一点", "让X变重", "让X还坏"],
   literal: "make X a bit heavier still / make X become heavy / make X even worse",
   fit: "plain",
-  topics: ["changing"],
+  topics: ["increasing-and-rising"],
   isA: ["becoming"],
   proposed: true,
 });
