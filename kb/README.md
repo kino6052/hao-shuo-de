@@ -62,6 +62,7 @@ node scripts/kb.js yardsticks [--limit N]                               # how mu
 node scripts/kb.js meaning [says|atoms|grounding|<word>] [--limit N]    # what the words say of the NSM primes, Aristotle's categories and grammar
 node scripts/kb.js candidates [remove|add] [--limit N]                  # the cheapest words to drop and the best roots to add
 node scripts/kb.js add <hanzi>                                          # what one root would bring
+node scripts/kb.js gains [alone] [--target N] [--limit N] | gains <word>  # the Chinese words to make core entries when growing to about 1000, best first; or what one word would bring
 node scripts/kb.js swaps [--k N]                                        # the best trades of K roots in for K words out
 node scripts/kb.js audit [--stdout]                                     # writes kb/reports/candidates-audit.md
 node scripts/kb.js parse-report [--lessons 4] [--stdout]                # parses every sentence; writes kb/reports/lessons-1-N-parse.md
@@ -99,6 +100,7 @@ node scripts/kb.js engine                                               # which 
 | `kb_meaning` | What the dictionary says of the NSM primes, Aristotle's categories and the grammar items, and what the words are made of. |
 | `kb_candidates` | Which words could go, or which roots could be added. kind "remove" (the default): every word that is not marked as an atom, the cheapest to drop first, each with what dropping it costs (composites to redo… |
 | `kb_add` | What adding one hanzi as a root would bring: the Mandarin words it completes (the other hanzi of the word are already here), the ones that still need more roots, the composites it would let be spelled in hanzi… |
+| `kb_gains` | Which Chinese words to make core entries when the language grows from 230 words to about 1000 (the follow-up project). |
 | `kb_swaps` | The best trade of K roots in for K words out, so the core keeps its size: the value is the Mandarin words that become writable less everything dropping the words costs (see kb_candidates). |
 | `kb_scoreboard` | The numbers about the language as it is now (words, composites, average description length, words reviewed, the smallest defining set, true atoms, hidden vocabulary, coverage, parse rate, grammar patterns)… |
 | `kb_query` | Raw clingo rules on top of the facts, for questions the other tools do not answer. |
@@ -124,6 +126,7 @@ node scripts/kb.js engine                                               # which 
 | `src/lib/kb/fixture.js` | A tiny made-up language for the KB tests: twelve words, a few composites, one coverage group, two lessons. |
 | `src/lib/kb/form-report.js` | The composite dictionary against the grammar (KB_PLAN.md phase 4, K7): every description of a composite (src/data/composites) is a piece of Hao-shuo-de, so the patterns should read it. |
 | `src/lib/kb/frontier.js` | Lists what the dictionary cannot say yet, and the Mandarin word that would fix each. |
+| `src/lib/kb/gains.js` | Ranks Chinese words by what making each one a core entry would bring, for growing Hao-shuo-de from 230 words to about 1000 core entries (the follow-up project, jiandanhua; KB_PLAN.md phase 8, K29). |
 | `src/lib/kb/grammar-uses.js` | "Which grammar patterns does a word carry?" (KB_PLAN.md K20). A pattern names a word in three places: the words in its rules (=bie2), the words in its template, and the words in its examples. |
 | `src/lib/kb/hints.js` | Hints for describing a new word: for an English or Mandarin word, what WordNet says it means and which entry the description can start from. |
 | `src/lib/kb/kb.js` | The one place the command line, the explorer page and the Claude tools all ask their questions through. |

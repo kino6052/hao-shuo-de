@@ -1,0 +1,18 @@
+import { composite } from "../../lib/composite.ts";
+
+export default composite({
+  rank: 5599,
+  phase: 4,
+  zh: "省",
+  py: "shěng",
+  en: "province",
+  ru: "провинция",
+  pos: "noun",
+  hsd: [
+    "{{word:zai4}}-{{word:guo2}}-{{word:li3}}-{{word:de}} {{word:da4}}-{{word:de}} {{word:di4}}-{{light:fang1}}",
+  ],
+  tts: ["在国里的大的地方"],
+  literal: "a big place inside the country",
+  fit: "plain",
+  proposed: true,
+});

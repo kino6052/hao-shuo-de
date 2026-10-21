@@ -1,0 +1,16 @@
+import { composite } from "../../lib/composite.ts";
+
+export default composite({
+  rank: 5831,
+  phase: 4,
+  zh: "老婆",
+  py: "lǎopo",
+  en: "wife",
+  ru: "жена",
+  pos: "noun",
+  hsd: ["{{word:jia1}} {{word:li3}}-{{word:de}} {{word:nv3}}-{{word:ren2}}"],
+  tts: ["家里的女人"],
+  literal: "the woman of the home",
+  fit: "plain",
+  proposed: true,
+});

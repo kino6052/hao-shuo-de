@@ -8,7 +8,7 @@
 import { fileURLToPath } from 'node:url';
 import { SECTIONS } from './cross-check.js';
 import { PARTS } from './frontier.js';
-import { renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderEnglish, renderHints, exportTurtle, exportFragment, renderExportSummary, renderCrossCheck, renderFrontier, renderYardsticks, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps } from './kb.js';
+import { renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderEnglish, renderHints, exportTurtle, exportFragment, renderExportSummary, renderCrossCheck, renderFrontier, renderYardsticks, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps, renderGains, renderGainExplain } from './kb.js';
 import { scoreboardRow, readScoreboard, renderScoreboard, renderHistory } from './scoreboard.js';
 
 // the stored rows (refactor --write adds one after every change)
@@ -198,6 +198,22 @@ export const TOOLS = [
     },
   },
   {
+    name: 'kb_gains',
+    description:
+      'Which Chinese words to make core entries when the language grows from 230 words to about 1000 (the follow-up project). A word pays when it completes common Mandarin words (every piece of the word is then a core entry), ' +
+      'brings others one character from done, shortens the descriptions that contain its own description, and is part of composites. mode "path" (the default): promote the best word, measure again, repeat until the core reaches the target, ' +
+      'so a word that pays only after its partner is in comes in its turn. mode "alone": every word against today\'s core only. With word: what promoting that one word would bring, and what it needs first. The weights are GAINS in gains.js.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        mode: { type: 'string', enum: ['path', 'alone'], description: 'path (default): in order, each measured after the earlier ones. alone: each against today\'s core.' },
+        target: { type: 'integer', description: 'How many core entries to grow to (default 1000); path only.' },
+        limit: { type: 'integer', description: 'How many to list (default 30).' },
+        word: { type: 'string', description: 'One Chinese word (hanzi): explain what promoting it would bring.' },
+      },
+    },
+  },
+  {
     name: 'kb_swaps',
     description:
       'The best trade of K roots in for K words out, so the core keeps its size: the value is the Mandarin words that become writable less everything dropping the words costs (see kb_candidates). ' +
@@ -314,6 +330,14 @@ export async function callTool(kb, name, args = {}, { scoreboardFile = SCOREBOAR
     }
     case 'kb_add':
       return renderAddition(kb.candidates().addition(String(need(args, 'root'))));
+    case 'kb_gains': {
+      const model = kb.gains();
+      if (args.word) return renderGainExplain(model.explain(String(args.word)));
+      if (args.mode && !['path', 'alone'].includes(args.mode)) throw new Error('mode is path or alone');
+      const limit = Number(args.limit) > 0 ? Number(args.limit) : 30;
+      const target = Number(args.target) > 0 ? Number(args.target) : 1000;
+      return renderGains(model.rank({ target, mode: args.mode || 'path', limit }), { limit });
+    }
     case 'kb_swaps': {
       const k = Math.min(Math.max(Math.floor(Number(args.k)) || 1, 1), 10);
       return renderSwaps(kb.candidates().swaps({ k, drafts: kb.drafts }));

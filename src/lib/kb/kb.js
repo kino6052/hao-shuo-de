@@ -14,6 +14,7 @@
 //   kb.crossCheck()            those relations against WordNet's kinds, opposites and parts (cross-check.js)
 //   kb.meaning([name])         what the words say of the primes, categories and grammar items, and the primes each description reaches (meaning.js)
 //   kb.candidates()            what to drop, what to add and what to trade (see candidates.js; needs `freq` for Mandarin)
+//   kb.gains()                 the Chinese words to promote to core entries, best first, for growing to about 1000 (see gains.js; needs `freq`)
 //
 // Names are lenient: an id (deng1), a term (dēng, deng) or a hanzi (灯).
 
@@ -35,6 +36,7 @@ import { renderYardsticks, yardstickReport } from './yardsticks.js';
 import { meaningReport, meaningWord, renderMeaning, renderMeaningWord } from './meaning.js';
 import { restsOnModel } from './rests-on.js';
 import { candidateModel, renderAddition, renderAudit, renderRemovalCandidates, renderRootCandidates, renderSwaps } from './candidates.js';
+import { gainModel, renderGainExplain, renderGains } from './gains.js';
 import { wordEntries } from './word-entries.js';
 
 // freq: the Mandarin frequency list [{ zh, py, rank }]; drafts: how words would be said without a stored paraphrase { id: { forms, verdict } }
@@ -50,6 +52,7 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
   let atomsReport = null;
   let relationsReport = null;
   let candidates = null;
+  let gains = null;
   let yardsticks = null;
   let englishModel = null; // English to entries (english.js); the WordNet files are read the first time it is asked
   let crossChecked = null;
@@ -147,6 +150,9 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
 
     // The candidates: words to drop, roots to add, trades. Worked out in JS, not by the solver.
     candidates: () => (candidates ??= candidateModel(source, facts, { freq })),
+
+    // Which Chinese words to make core entries when the language grows from 230 words to about 1000 (gains.js).
+    gains: () => (gains ??= gainModel(source, { freq })),
     drafts,
 
     // Which words are atoms. No name: the whole report. A name: that word's
@@ -175,4 +181,4 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
   };
 }
 
-export { meaningWord, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, viewParse, renderAtoms, renderAtomWord, renderRelations, renderKindTree, renderEnglish, renderHints, exportTurtle, exportFragment, renderExportSummary, renderCrossCheck, renderFrontier, renderYardsticks, renderAddition, renderAudit, renderRemovalCandidates, renderRootCandidates, renderSwaps };
+export { meaningWord, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, viewParse, renderAtoms, renderAtomWord, renderRelations, renderKindTree, renderEnglish, renderHints, exportTurtle, exportFragment, renderExportSummary, renderCrossCheck, renderFrontier, renderYardsticks, renderAddition, renderAudit, renderRemovalCandidates, renderRootCandidates, renderSwaps, renderGains, renderGainExplain };

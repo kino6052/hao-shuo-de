@@ -18,6 +18,7 @@
 //   node scripts/kb.js meaning [says|atoms|grounding|<word>] [--limit N]  # what the words say of the NSM primes, Aristotle's categories and grammar
 //   node scripts/kb.js candidates [remove|add] [--limit N]  # the cheapest words to drop and the best roots to add
 //   node scripts/kb.js add <hanzi>  # what one root would bring
+//   node scripts/kb.js gains [alone] [--target N] [--limit N] | gains <word>  # the Chinese words to make core entries when growing to about 1000, best first; or what one word would bring
 //   node scripts/kb.js swaps [--k N]  # the best trades of K roots in for K words out
 //   node scripts/kb.js audit [--stdout]  # writes kb/reports/candidates-audit.md
 //   node scripts/kb.js parse-report [--lessons 4] [--stdout]  # parses every sentence; writes kb/reports/lessons-1-N-parse.md
@@ -59,6 +60,10 @@
 // root would bring; swaps finds the best trade of K roots in for K words out. The Mandarin
 // numbers need the frequency list (scripts/frequency-list.js).
 //
+// gains is for growing from 230 words to about 1000 core entries (the follow-up project): it ranks Chinese words by
+// what making each a core entry would bring, in order, each measured after the earlier ones (alone: each against
+// today's core only); gains <word> says what one word would bring and what it needs first.
+//
 // audit writes kb/reports/candidates-audit.md: the words that cost least to drop, the best roots
 // to add and the best trades, for the author to read.
 //
@@ -75,7 +80,7 @@ import { mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'f
 import { dirname, resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { Worker } from 'worker_threads';
-import { createKb, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderKindTree, renderEnglish, renderHints, exportTurtle, renderExportSummary, renderCrossCheck, renderFrontier, renderYardsticks, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps, renderAudit } from '../src/lib/kb/kb.js';
+import { createKb, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderKindTree, renderEnglish, renderHints, exportTurtle, renderExportSummary, renderCrossCheck, renderFrontier, renderYardsticks, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps, renderAudit, renderGains, renderGainExplain } from '../src/lib/kb/kb.js';
 import { loadFrequencyList } from './frequency-list.js';
 import { sourceStamp } from './source-cache.js';
 import { readCache, writeCache } from './cache.js';
@@ -372,6 +377,17 @@ Written to ${file} (${Math.round(turtle.length / 1024)} KB).`);
       const r = kb.candidates().addition(rest[0]);
       return print(r, renderAddition(r));
     }
+    case 'gains': {
+      const limit = Number(option(rest, '--limit') ?? 30);
+      const target = Number(option(rest, '--target') ?? 1000);
+      const word = rest.find((a) => !a.startsWith('--') && a !== 'alone');
+      if (word) {
+        const r = kb.gains().explain(word);
+        return print(r, renderGainExplain(r));
+      }
+      const r = kb.gains().rank({ target, mode: rest.includes('alone') ? 'alone' : 'path', limit });
+      return print(r, renderGains(r, { limit }));
+    }
     case 'swaps': {
       const k = Number(option(rest, '--k') ?? 1);
       const r = kb.candidates().swaps({ k, drafts: kb.drafts });
@@ -411,7 +427,7 @@ Written to ${file} (${Math.round(turtle.length / 1024)} KB).`);
       return print(e, text);
     }
     default:
-      console.log('usage: node scripts/kb.js word|remove|check-form|query|parse|atoms|relations|english|hints|export|cross-check|frontier|yardsticks|meaning|candidates|add|swaps|scoreboard|parse-report|parse-diff|classes|patterns|forms|move|engine …  (--json for data)');
+      console.log('usage: node scripts/kb.js word|remove|check-form|query|parse|atoms|relations|english|hints|export|cross-check|frontier|yardsticks|meaning|candidates|add|gains|swaps|scoreboard|parse-report|parse-diff|classes|patterns|forms|move|engine …  (--json for data)');
       process.exitCode = command ? 1 : 0;
   }
 }

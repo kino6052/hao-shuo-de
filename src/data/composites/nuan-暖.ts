@@ -1,0 +1,16 @@
+import { composite } from "../../lib/composite.ts";
+
+export default composite({
+  rank: 5834,
+  phase: 4,
+  zh: "暖",
+  py: "nuǎn",
+  en: "warm",
+  ru: "тёплый",
+  pos: "adjective",
+  hsd: ["{{word:bu4}} {{word:leng3}}, {{word:ye3}} {{word:bu4}} {{word:hen3}} {{word:re4}}"],
+  tts: ["不冷，也不很热"],
+  literal: "not cold, and not very hot",
+  fit: "plain",
+  proposed: true,
+});
