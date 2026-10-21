@@ -5,7 +5,7 @@ export default composite({
   phase: 4,
   zh: "高度",
   py: "gāodù",
-  en: "height; a high degree",
+  en: "height; a high degree; highly",
   ru: "высота; высокая степень",
   pos: "noun",
   hsd: ["{{word:you3}} {{word:duo1}} {{word:gao1}}"],

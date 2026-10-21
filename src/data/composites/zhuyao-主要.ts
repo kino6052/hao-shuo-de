@@ -5,7 +5,7 @@ export default composite({
   phase: 1,
   zh: "主要",
   py: "zhǔyào",
-  en: "main",
+  en: "main; mainly",
   ru: "главный",
   pos: "adjective",
   hsd: ["{{word:da4}} {{word:bu4}}-{{light:fen1}}", "{{word:zui4}} {{word:zhong4}}-{{word:yao4}}"],

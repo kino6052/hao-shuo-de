@@ -5,7 +5,7 @@ export default composite({
   phase: 3,
   zh: "相当",
   py: "xiāngdāng",
-  en: "quite",
+  en: "quite; pretty; fairly",
   ru: "довольно",
   pos: "verb",
   hsd: ["{{word:hen3}}"],

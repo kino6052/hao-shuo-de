@@ -5,7 +5,7 @@ export default composite({
   phase: 2,
   zh: "一般",
   py: "yìbān",
-  en: "ordinary",
+  en: "ordinary; generally",
   ru: "обычный",
   pos: "adjective",
   hsd: ["{{word:he2}} {{word:bie2}}-{{word:de}} {{word:yi1}}-{{word:yang4}}"],

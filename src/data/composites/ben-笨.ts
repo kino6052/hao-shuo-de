@@ -5,7 +5,7 @@ export default composite({
   phase: 4,
   zh: "笨",
   py: "bèn",
-  en: "stupid",
+  en: "stupid; dumb",
   ru: "глупый",
   pos: "adjective",
   hsd: ["{{word:tou2}} {{word:bu4}} {{word:hao3}}"],

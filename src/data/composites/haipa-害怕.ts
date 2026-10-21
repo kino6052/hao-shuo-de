@@ -5,7 +5,7 @@ export default composite({
   phase: 2,
   zh: "害怕",
   py: "hàipà",
-  en: "be afraid",
+  en: "be afraid; scared",
   ru: "бояться",
   pos: "verb",
   hsd: ["{{word:pa4}}"],

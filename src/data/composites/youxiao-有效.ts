@@ -5,7 +5,7 @@ export default composite({
   phase: 3,
   zh: "有效",
   py: "yǒuxiào",
-  en: "effective",
+  en: "effective; effectively",
   ru: "действенный",
   pos: "verb",
   hsd: ["{{word:you3}}-{{word:yong4}}", "{{word:you3}} {{word:yong4}}"],

@@ -5,7 +5,7 @@ export default composite({
   phase: 3,
   zh: "本地",
   py: "běndì",
-  en: "local",
+  en: "local; native",
   ru: "местный",
   pos: "noun",
   hsd: ["{{word:zhe4}}-{{word:li3}}"],

@@ -5,7 +5,7 @@ export default composite({
   phase: 2,
   zh: "认真",
   py: "rènzhēn",
-  en: "earnest, careful",
+  en: "earnest, careful; seriously",
   ru: "серьёзный",
   pos: "adjective",
   hsd: ["{{word:hao3}}-{{word:hao3}}"],

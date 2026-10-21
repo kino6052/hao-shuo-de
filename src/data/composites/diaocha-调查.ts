@@ -5,7 +5,7 @@ export default composite({
   phase: 3,
   zh: "调查",
   py: "diàochá",
-  en: "investigate",
+  en: "investigate; survey",
   ru: "расследовать",
   pos: "verb",
   hsd: [

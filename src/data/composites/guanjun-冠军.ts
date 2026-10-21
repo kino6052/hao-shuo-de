@@ -5,7 +5,7 @@ export default composite({
   phase: 4,
   zh: "冠军",
   py: "guànjūn",
-  en: "champion",
+  en: "champion; winner",
   ru: "чемпион",
   pos: "noun",
   hsd: ["{{word:di4}}-{{word:yi1}}-{{word:hao4}}-{{word:de}} {{word:ren2}}"],

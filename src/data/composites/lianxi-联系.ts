@@ -5,7 +5,7 @@ export default composite({
   phase: 3,
   zh: "联系",
   py: "liánxì",
-  en: "connection; contact",
+  en: "connection; contact; link",
   ru: "связь; связаться",
   pos: "verb",
   hsd: ["{{word:guan1xi}}", "{{word:gei3}} X {{word:shuo1}}"],

@@ -5,7 +5,7 @@ export default composite({
   phase: 2,
   zh: "嗯",
   py: "ǹg",
-  en: "uh-huh",
+  en: "uh-huh; yeah",
   ru: "угу",
   pos: "interjection",
   hsd: ["\"ng\"", "{{word:dui4}}"],

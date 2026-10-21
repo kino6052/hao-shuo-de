@@ -5,7 +5,7 @@ export default composite({
   phase: 4,
   zh: "官方",
   py: "guānfāng",
-  en: "official (from the authorities)",
+  en: "official (from the authorities); officially",
   ru: "официальный",
   pos: "adjective",
   hsd: ["{{word:guo2}}-{{word:jia1}} {{word:shuo1}}-{{word:de}}"],

@@ -5,7 +5,7 @@ export default composite({
   phase: 1,
   zh: "可能",
   py: "kěnéng",
-  en: "maybe",
+  en: "maybe; likely",
   ru: "может быть",
   pos: "adjective",
   hsd: ["{{word:ke3}}-{{word:neng2}}"],

@@ -5,7 +5,7 @@ export default composite({
   phase: 4,
   zh: "可惜",
   py: "kěxī",
-  en: "what a pity",
+  en: "what a pity; unfortunately",
   ru: "жаль",
   pos: "adjective",
   hsd: ["{{word:zhen1}} {{word:bu4}} {{word:hao3}}"],

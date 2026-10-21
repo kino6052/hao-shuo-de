@@ -5,7 +5,7 @@ export default composite({
   phase: 1,
   zh: "关心",
   py: "guānxīn",
-  en: "care about",
+  en: "care about; concerned",
   ru: "заботиться",
   pos: "verb",
   hsd: [

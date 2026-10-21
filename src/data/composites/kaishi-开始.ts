@@ -5,7 +5,7 @@ export default composite({
   phase: 1,
   zh: "开始",
   py: "kāishǐ",
-  en: "begin",
+  en: "begin; start",
   ru: "начинать",
   pos: "verb",
   hsd: ["{{word:kai1shi3}}"],

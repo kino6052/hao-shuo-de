@@ -5,7 +5,7 @@ export default composite({
   phase: 1,
   zh: "特别",
   py: "tèbié",
-  en: "special",
+  en: "special; specifically",
   ru: "особенный",
   pos: "adjective",
   hsd: [

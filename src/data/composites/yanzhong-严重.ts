@@ -5,7 +5,7 @@ export default composite({
   phase: 3,
   zh: "严重",
   py: "yánzhòng",
-  en: "serious",
+  en: "serious; heavily",
   ru: "серьёзный",
   pos: "adjective",
   hsd: ["{{word:zhong4}}-{{word:yao4}}", "{{word:dui4}} X {{word:hen3}} {{word:zhong4}}-{{word:yao4}}"],

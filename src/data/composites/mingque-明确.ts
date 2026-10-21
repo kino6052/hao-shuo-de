@@ -5,7 +5,7 @@ export default composite({
   phase: 4,
   zh: "明确",
   py: "míngquè",
-  en: "clear, definite",
+  en: "clear, definite; defined",
   ru: "ясный, чёткий",
   pos: "adjective",
   hsd: ["{{word:hen3}} {{word:ming2}}, {{word:bu4}} {{word:luan4}}"],

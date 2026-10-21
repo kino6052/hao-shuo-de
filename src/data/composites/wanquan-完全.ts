@@ -5,7 +5,7 @@ export default composite({
   phase: 2,
   zh: "完全",
   py: "wánquán",
-  en: "completely",
+  en: "completely; fully",
   ru: "полностью",
   pos: "adjective",
   hsd: ["{{word:dou1}}"],

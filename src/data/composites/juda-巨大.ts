@@ -5,7 +5,7 @@ export default composite({
   phase: 4,
   zh: "巨大",
   py: "jùdà",
-  en: "huge",
+  en: "huge; massive",
   ru: "огромный",
   pos: "adjective",
   hsd: ["{{word:hen3}} {{word:hen3}} {{word:da4}}"],

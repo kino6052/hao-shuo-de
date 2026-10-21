@@ -5,7 +5,7 @@ export default composite({
   phase: 1,
   zh: "听",
   py: "tīng",
-  en: "hear",
+  en: "hear; listen",
   ru: "слышать",
   pos: "verb",
   hsd: ["{{word:ting1}}"],

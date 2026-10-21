@@ -5,7 +5,7 @@ export default composite({
   phase: 4,
   zh: "首都",
   py: "shǒudū",
-  en: "capital city",
+  en: "capital city; capital",
   ru: "столица",
   pos: "noun",
   hsd: [

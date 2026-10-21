@@ -5,7 +5,7 @@ export default composite({
   phase: 1,
   zh: "中间",
   py: "zhōngjiān",
-  en: "middle, between",
+  en: "middle, between; mid",
   ru: "посередине",
   pos: "noun",
   hsd: ["{{word:zhong1}}-{{word:jian1}}"],

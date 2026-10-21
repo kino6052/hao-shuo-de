@@ -5,7 +5,7 @@ export default composite({
   phase: 4,
   zh: "完美",
   py: "wánměi",
-  en: "perfect",
+  en: "perfect; perfectly",
   ru: "совершенный, идеальный",
   pos: "adjective",
   hsd: ["{{word:dou1}} {{word:hao3}}, {{word:mei2}} {{word:you3}} {{word:huai4}}-{{word:de}}"],

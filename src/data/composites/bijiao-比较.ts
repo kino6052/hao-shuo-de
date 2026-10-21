@@ -5,7 +5,7 @@ export default composite({
   phase: 1,
   zh: "比较",
   py: "bǐjiào",
-  en: "compare; rather",
+  en: "compare; rather; relatively",
   ru: "сравнивать; довольно",
   pos: "verb",
   hsd: ["{{word:bi3}}-{{word:jiao4}}", "{{word:bi3}}"],

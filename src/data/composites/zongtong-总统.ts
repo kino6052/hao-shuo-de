@@ -5,7 +5,7 @@ export default composite({
   phase: 3,
   zh: "总统",
   py: "zǒngtǒng",
-  en: "president",
+  en: "president; presidential",
   ru: "президент",
   pos: "noun",
   hsd: ["{{word:guo2}}-{{word:jia1}}-{{word:de}} {{word:jue2}}-{{word:ding4}}-{{word:zhe3}}"],

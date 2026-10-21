@@ -5,7 +5,7 @@ export default composite({
   phase: 3,
   zh: "目前",
   py: "mùqián",
-  en: "at present",
+  en: "at present; currently",
   ru: "в настоящее время",
   pos: "noun",
   hsd: ["{{word:xian4}}-{{word:zai4}}"],

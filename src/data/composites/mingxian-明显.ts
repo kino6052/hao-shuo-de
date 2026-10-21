@@ -5,7 +5,7 @@ export default composite({
   phase: 3,
   zh: "明显",
   py: "míngxiǎn",
-  en: "obvious",
+  en: "obvious; obviously; marked",
   ru: "очевидный",
   pos: "adjective",
   hsd: ["{{word:yi1}} {{word:kan4}} {{word:jiu4}} {{word:zhi1dao4}}"],

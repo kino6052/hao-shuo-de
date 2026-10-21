@@ -5,7 +5,7 @@ export default composite({
   phase: 2,
   zh: "自由",
   py: "zìyóu",
-  en: "free; freedom",
+  en: "free; freedom; liberal",
   ru: "свободный; свобода",
   pos: "adjective",
   hsd: ["{{word:shen2me}} {{word:dou1}} {{word:neng2}} {{word:zuo4}}"],

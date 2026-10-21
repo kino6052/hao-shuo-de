@@ -5,7 +5,7 @@ export default composite({
   phase: 3,
   zh: "受伤",
   py: "shòushāng",
-  en: "get hurt",
+  en: "get hurt; injured",
   ru: "получить травму",
   pos: "verb",
   hsd: ["{{word:shen1ti3}} {{word:huai4}} {{word:le}}"],

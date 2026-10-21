@@ -5,7 +5,7 @@ export default composite({
   phase: 1,
   zh: "以前",
   py: "yǐqián",
-  en: "before",
+  en: "before; previous",
   ru: "до, раньше",
   pos: "noun",
   hsd: ["{{word:yi3}}-{{word:qian2}}", "X {{word:qian2}}"],

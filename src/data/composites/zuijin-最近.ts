@@ -5,7 +5,7 @@ export default composite({
   phase: 1,
   zh: "最近",
   py: "zuìjìn",
-  en: "recently",
+  en: "recently; recent",
   ru: "недавно",
   pos: "noun",
   hsd: [
