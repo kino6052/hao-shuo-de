@@ -64,9 +64,11 @@ describe('sayability', () => {
     expect(sayability(report)).toEqual({
       said_mandarin_1000: 0.8,
       said_mandarin_3000: 0.5,
+      said_mandarin_all: 0.5,
       said_english_500: 0.8,
       said_english_1000: 0.7,
       said_english_3000: 0.66,
+      covered_english_3000: 0.66,
       said_basic_english: 0.51,
       said_sentences: 0.875,
     });

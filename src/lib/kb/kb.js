@@ -277,6 +277,8 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
 
     // How much of the yardsticks (kb/yardsticks/) the dictionary can say: Mandarin and English word lists, Basic English.
     yardsticks: yardsticksOf,
+    // the word lists themselves (kb/yardsticks/): { mandarin, basic, top, sentences, explained }
+    yardstickLists: listsOf,
 
     // What the yardsticks cannot say yet and the Mandarin word that would fix each (frontier.js).
     frontier: () => (frontierReport ??= frontier({ yardsticks: yardsticksOf(), english: englishOf(), composites: countedOf().entries, words, mandarin: listsOf().mandarin ?? [] })),

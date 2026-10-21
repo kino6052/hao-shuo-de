@@ -139,7 +139,7 @@ export function fingerprint() {
   };
   for (const d of WATCHED) walk(resolve(ROOT, d));
   // the relation rules and the decisions made on the relations review page change what kb.relations() says
-  for (const f of ['kb/relation-rules.json', 'kb/same-form-sort.json', 'kb/wordnet/links.json', 'kb/cross-check-notes.json', 'kb/yardsticks/mandarin-frequency.json', 'kb/yardsticks/basic-english.json', 'kb/yardsticks/english-top3000.json', 'kb/yardsticks/sentences.json', 'review/decisions/relations-1.json']) {
+  for (const f of ['kb/relation-rules.json', 'kb/same-form-sort.json', 'kb/wordnet/links.json', 'kb/cross-check-notes.json', 'kb/yardsticks/mandarin-frequency.json', 'kb/yardsticks/basic-english.json', 'kb/yardsticks/english-top3000.json', 'kb/yardsticks/sentences.json', 'kb/yardsticks/english-explained.json', 'review/decisions/relations-1.json']) {
     try {
       const s = statSync(resolve(ROOT, f));
       sum += s.mtimeMs + s.size;
@@ -210,7 +210,7 @@ function loadYardsticks() {
       return undefined;
     }
   };
-  return { mandarin: read('mandarin-frequency.json'), basic: read('basic-english.json'), top: read('english-top3000.json'), sentences: read('sentences.json') };
+  return { mandarin: read('mandarin-frequency.json'), basic: read('basic-english.json'), top: read('english-top3000.json'), sentences: read('sentences.json'), explained: read('english-explained.json') };
 }
 
 let cached = null;

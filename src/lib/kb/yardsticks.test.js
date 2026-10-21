@@ -25,6 +25,12 @@ describe('English verdicts', () => {
     expect(englishVerdict(english, 'sparrow')).toBe('near');
     expect(englishVerdict(english, 'zzyzx')).toBe('missing');
   });
+  test('the explained list goes after an entry and before a kind of', () => {
+    const explained = { the: { how: 'grammar' }, sparrow: { how: 'name' }, buy: { how: 'grammar' } };
+    expect(englishVerdict(english, 'the', explained)).toBe('explained');
+    expect(englishVerdict(english, 'sparrow', explained)).toBe('explained');
+    expect(englishVerdict(english, 'buy', explained)).toBe('said');
+  });
 });
 
 describe('sentence coverage', () => {
@@ -69,6 +75,12 @@ describe('yardstick report', () => {
     expect(b.map((x) => x.upTo)).toEqual([500, 1000, 3000, 4000, 4500]);
     expect(b.map((x) => x.said)).toEqual([0, 0, 0, 1, 1]);
     expect(yardstickReport({ composites, english, mandarin: long.slice(0, 3000) }).mandarin.bands.map((x) => x.upTo)).toEqual([500, 1000, 3000]);
+  });
+  test('explained words count apart, and one an entry now says is named as stale', () => {
+    const x = yardstickReport({ composites, english, basic, top: ['buy', 'water', 'sparrow', 'eat'], explained: { words: { eat: { how: 'grammar' }, water: { how: 'name' } } } });
+    expect(x.englishTop.bands[0]).toMatchObject({ said: 2, explained: 1, near: 1, missing: 0 });
+    expect(x.englishTop.stale).toEqual(['water']);
+    expect(x.basic).toMatchObject({ said: 1, explained: 1, missing: 0 });
   });
   test('Basic English: the verdicts, and whether the authors Mandarin is an entry', () => {
     expect(r.basic).toMatchObject({ total: 3, said: 1, near: 1, missing: 1, zhSaid: 1 });

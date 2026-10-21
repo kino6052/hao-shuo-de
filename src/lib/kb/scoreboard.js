@@ -47,9 +47,11 @@ export const COLUMNS = {
   traced_words: 'words whose description reaches a prime (or that say one)',
   said_mandarin_1000: 'share of the 1000 most common Mandarin words that have an entry (yardsticks.js)',
   said_mandarin_3000: 'share of the 3000 most common Mandarin words that have an entry',
+  said_mandarin_all: 'share of the whole Mandarin word list (5329) that has an entry; K30 finishes it',
   said_english_500: 'share of the 500 most common English words an entry says (gloss or same WordNet sense)',
   said_english_1000: 'share of the 1000 most common English words an entry says',
   said_english_3000: 'share of the 3000 most common English words an entry says',
+  covered_english_3000: 'share of them said, explained (english-explained.json) or said as a kind of; K30 finishes it',
   said_basic_english: 'share of the Basic English words an entry says',
   said_sentences: 'share of the everyday sentences whose every character an entry covers (grammar not checked)',
 };
@@ -65,12 +67,22 @@ export function sayability(y) {
     const b = list.bands.find((x) => x.upTo === upTo && x.total === upTo);
     return b ? share(b.said, b.total) : '';
   };
+  const whole = (list) => {
+    const b = list.bands.at(-1);
+    return b ? share(b.said, b.total) : '';
+  };
+  const covered = (list, upTo) => {
+    const b = list.bands.find((x) => x.upTo === upTo && x.total === upTo);
+    return b ? share(b.said + (b.explained ?? 0) + b.near, b.total) : '';
+  };
   return {
     said_mandarin_1000: band(y.mandarin, 1000),
     said_mandarin_3000: band(y.mandarin, 3000),
+    said_mandarin_all: whole(y.mandarin),
     said_english_500: band(y.englishTop, 500),
     said_english_1000: band(y.englishTop, 1000),
     said_english_3000: band(y.englishTop, 3000),
+    covered_english_3000: covered(y.englishTop, 3000),
     said_basic_english: share(y.basic.said, y.basic.total),
     said_sentences: share(y.sentences.said, y.sentences.total),
   };
