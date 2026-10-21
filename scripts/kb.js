@@ -1,5 +1,5 @@
-// The KB for the command line, the explorer page and the Claude tools
-// (KB_PLAN.md phase 1). Shared by all three so they answer the same.
+// The command line of the KB. The explorer page and the Claude tools use the same code, so all three answer the same.
+// KB_PLAN.md phase 1.
 //
 //   node scripts/kb.js word dēng  # one word's card: meaning, paraphrase or atom mark, forms, relations
 //   node scripts/kb.js remove dēng [fàn …]  # what dropping the words would cost
@@ -10,6 +10,8 @@
 //   node scripts/kb.js relations [kind] [--status proposed|accepted] [--limit N]  # synonyms, opposites, connections and the rest
 //   node scripts/kb.js relations tree [word] [--limit N]  # what hangs under what: the kind-of tree of every word, or of one
 //   node scripts/kb.js english <word> [--json]  # which entries say an English word: by gloss, by WordNet sense, as a kind of
+//   node scripts/kb.js hints <word> [--limit N]  # WordNet hints for drafting a description of a word with no entry (English or Mandarin)
+//   node scripts/kb.js export [--all] [--base IRI] [--out FILE] [--stdout]   # the dictionary as OntoLex Turtle (to kb/cache/export/hao-shuo-de.ttl); --all adds the proposed relations
 //   node scripts/kb.js cross-check [kindOf|opposites|parts|missing|headless] [--limit N]  # the dictionary's kind-of, opposite and part-of relations against WordNet's
 //   node scripts/kb.js frontier [words|mandarin|sentences] [--limit N]  # what the dictionary cannot say yet and the word that would fix each
 //   node scripts/kb.js yardsticks [--limit N]  # how much of the Mandarin and English word lists and Basic English the dictionary can say
@@ -70,10 +72,10 @@
 // data, content or rule file changed since it was built.
 
 import { mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'fs';
-import { resolve } from 'path';
+import { dirname, resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { Worker } from 'worker_threads';
-import { createKb, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderKindTree, renderEnglish, renderCrossCheck, renderFrontier, renderYardsticks, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps, renderAudit } from '../src/lib/kb/kb.js';
+import { createKb, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderKindTree, renderEnglish, renderHints, exportTurtle, renderExportSummary, renderCrossCheck, renderFrontier, renderYardsticks, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps, renderAudit } from '../src/lib/kb/kb.js';
 import { loadFrequencyList } from './frequency-list.js';
 import { sourceStamp } from './source-cache.js';
 import { readCache, writeCache } from './cache.js';
@@ -112,7 +114,7 @@ export function fingerprint() {
   };
   for (const d of WATCHED) walk(resolve(ROOT, d));
   // the relation rules and the decisions made on the relations review page change what kb.relations() says
-  for (const f of ['kb/relation-rules.json', 'kb/same-form-sort.json', 'kb/wordnet/links.json', 'kb/yardsticks/mandarin-frequency.json', 'kb/yardsticks/basic-english.json', 'kb/yardsticks/english-top3000.json', 'kb/yardsticks/sentences.json', 'review/decisions/relations-1.json']) {
+  for (const f of ['kb/relation-rules.json', 'kb/same-form-sort.json', 'kb/wordnet/links.json', 'kb/cross-check-notes.json', 'kb/yardsticks/mandarin-frequency.json', 'kb/yardsticks/basic-english.json', 'kb/yardsticks/english-top3000.json', 'kb/yardsticks/sentences.json', 'review/decisions/relations-1.json']) {
     try {
       const s = statSync(resolve(ROOT, f));
       sum += s.mtimeMs + s.size;
@@ -170,7 +172,8 @@ function loadEnglishData() {
       return null;
     }
   };
-  return { links: read('kb/wordnet/links.json') ?? {}, index: read('kb/cache/english-index.json') };
+  // kb/cross-check-notes.json: what the cross-check already understands about a disagreement with WordNet, each with its reason
+  return { links: read('kb/wordnet/links.json') ?? {}, index: read('kb/cache/english-index.json'), notes: read('kb/cross-check-notes.json') ?? {} };
 }
 
 // the word lists the language is measured against (kb/yardsticks/, committed); a list that is missing is left out
@@ -316,6 +319,21 @@ async function main(argv) {
       const r = kb.english(rest.filter((a) => !a.startsWith('--')).join(' '));
       return print(r, renderEnglish(r));
     }
+    case 'hints': {
+      const limit = Number(option(rest, '--limit') ?? 4);
+      const r = kb.hints(rest.filter((a, i) => !a.startsWith('--') && rest[i - 1] !== '--limit').join(' '), { limit });
+      return print(r, renderHints(r));
+    }
+    case 'export': {
+      const model = kb.exportModel({ includeProposed: rest.includes('--all'), ...(option(rest, '--base') ? { base: option(rest, '--base') } : {}) });
+      const turtle = exportTurtle(model);
+      if (rest.includes('--stdout')) return console.log(turtle);
+      const file = resolve(ROOT, option(rest, '--out') ?? 'kb/cache/export/hao-shuo-de.ttl');
+      mkdirSync(dirname(file), { recursive: true });
+      writeFileSync(file, turtle);
+      return print({ file, counts: model.counts }, `${renderExportSummary(model.counts)}
+Written to ${file} (${Math.round(turtle.length / 1024)} KB).`);
+    }
     case 'cross-check': {
       const limit = Number(option(rest, '--limit') ?? 10);
       const r = kb.crossCheck();
@@ -393,7 +411,7 @@ async function main(argv) {
       return print(e, text);
     }
     default:
-      console.log('usage: node scripts/kb.js word|remove|check-form|query|parse|atoms|relations|english|cross-check|frontier|yardsticks|meaning|candidates|add|swaps|scoreboard|parse-report|parse-diff|classes|patterns|forms|move|engine …  (--json for data)');
+      console.log('usage: node scripts/kb.js word|remove|check-form|query|parse|atoms|relations|english|hints|export|cross-check|frontier|yardsticks|meaning|candidates|add|swaps|scoreboard|parse-report|parse-diff|classes|patterns|forms|move|engine …  (--json for data)');
       process.exitCode = command ? 1 : 0;
   }
 }

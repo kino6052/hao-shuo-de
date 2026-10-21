@@ -47,6 +47,14 @@ describe('English words the dictionary cannot say', () => {
     expect(fixOf(run(), 'liquid')).toMatchObject({ fix: 'link', sense: 'liquid: a fluid' });
     expect(fixOf(run(), 'liquid').zh[0]).toMatchObject({ zh: '水', have: true });
   });
+  test('a link that was looked at and is not the same sense is checked, with its reason, and no longer a link to make', () => {
+    const noted = createEnglish({ composites, links: { linked: {} }, index, notes: { notLinked: { liquid: 'water is the drink, not any fluid' } } });
+    const r = run({ english: noted });
+    expect(fixOf(r, 'liquid')).toMatchObject({ fix: 'checked', why: 'water is the drink, not any fluid', sense: 'liquid: a fluid' });
+    expect(r.words.counts.link).toBeUndefined();
+    expect(renderFrontier(r, { part: 'words' })).toContain('not the same: water is the drink, not any fluid');
+    expect(fixOf(run(), 'liquid').fix).toBe('link'); // without the note nothing changes
+  });
   test('a function word, a word with no sense, or one the author’s own Mandarin entry says: grammar, not a word to add', () => {
     expect(fixOf(run(), 'the').fix).toBe('grammar');
     expect(fixOf(run(), 'will')).toMatchObject({ fix: 'grammar', zh: [], best: undefined }); // its first sense (a wish, 意志) would only mislead

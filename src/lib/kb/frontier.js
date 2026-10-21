@@ -1,5 +1,5 @@
-// The frontier (KB_PLAN.md phase 6, K28): what the dictionary cannot say yet, and the word that would fix each. The yardsticks
-// (yardsticks.js) count the gaps; this names a fix for them, using the Mandarin words WordNet gives each English sense.
+// Lists what the dictionary cannot say yet, and the Mandarin word that would fix each. The yardsticks (yardsticks.js) count
+// the gaps; this names a fix for them, using the Mandarin words WordNet gives each English sense (KB_PLAN.md phase 6, K28).
 // Nothing here changes data.
 //
 //   frontier({ yardsticks, english, composites, words, mandarin }) -> { ready, words, mandarin, sentences }
@@ -17,6 +17,8 @@
 //   grammar   WordNet has no sense for it, or the author's own Mandarin for it is an entry (of: 的): said by grammar, not by a word
 //   rare      WordNet gives only Mandarin words that are not in the common list
 //   none      WordNet has senses but no Mandarin word for them
+//   checked   a `link` that was looked at and is not the same sense (the entry is another word: 别 is "don't", not "another");
+//             the reason is in kb/cross-check-notes.json, `notLinked: { english word: why }`, which english.data.notes carries
 // A common Mandarin word the dictionary lacks shows its English meaning and whether the dictionary already says that meaning.
 // A sentence one character away shows the character and the words that carry it.
 
@@ -34,6 +36,7 @@ export const PARTS = ['words', 'mandarin', 'sentences'];
 export function frontier({ yardsticks, english, composites = [], words = {}, mandarin = [] }) {
   const index = english?.data?.index;
   if (!yardsticks || !index) return { ready: false };
+  const notLinked = english?.data?.notes?.notLinked ?? {}; // kb/cross-check-notes.json: English word -> why the entry is not that sense
   const have = new Map(composites.map((c) => [c.zh, c]));
   const byZh = new Map(mandarin.map((m) => [m.zh, m]));
   const synset = (ili) => index.synsets?.[ili];
@@ -63,6 +66,8 @@ export function frontier({ yardsticks, english, composites = [], words = {}, man
     else if (!ilis.length || authors?.zhSaid) fix = 'grammar';
     else if (zh.length) fix = 'rare';
     else fix = 'none';
+    const why = fix === 'link' ? notLinked[en] : undefined; // looked at: the entry WordNet offers is not the same sense
+    if (why) fix = 'checked';
     // the entries first, then the common words (most common first), then the rest, shortest first
     zh.sort((a, b) => Number(b.have) - Number(a.have) || (a.rank ?? Infinity) - (b.rank ?? Infinity) || a.zh.length - b.zh.length);
     const isFunction = FUNCTION_WORDS.has(en); // WordNet's Mandarin for a function word ("an": a nursing diploma) is not worth showing
@@ -73,7 +78,8 @@ export function frontier({ yardsticks, english, composites = [], words = {}, man
       zh: isFunction ? [] : zh.slice(0, MAX_CANDIDATES),
       best: best && !isFunction ? name(best.zh) : undefined,
       author: authors?.zh,
-      sense: senseText(fix === 'link' ? linkable.ili : ilis[0]),
+      sense: senseText(fix === 'link' || fix === 'checked' ? linkable.ili : ilis[0]),
+      ...(why ? { why } : {}),
     };
   });
   const tally = (list) => list.reduce((t, x) => ({ ...t, [x.fix]: (t[x.fix] ?? 0) + 1 }), {});
@@ -126,6 +132,7 @@ const FIX_NOTES = {
   grammar: 'said by grammar (or WordNet has no sense for it)',
   rare: 'WordNet gives only Mandarin words outside the common list',
   none: 'WordNet has senses but no Mandarin word for them',
+  checked: 'looked at: the entry WordNet offers is not the same sense (kb/cross-check-notes.json, notLinked), so nothing to link',
 };
 
 export function renderFrontier(r, { part, limit = 12 } = {}) {
@@ -135,13 +142,13 @@ export function renderFrontier(r, { part, limit = 12 } = {}) {
   if (want('words')) {
     const c = r.words.counts;
     out.push(`English words in the common 3000 the dictionary cannot say: ${r.words.items.length} (${Object.entries(c).map(([k, n]) => `${n} ${k}`).join(', ')})`);
-    for (const fix of ['link', 'add', 'grammar', 'rare', 'none']) {
+    for (const fix of ['link', 'add', 'grammar', 'rare', 'none', 'checked']) {
       const items = r.words.items.filter((i) => i.fix === fix);
       if (!items.length) continue;
       out.push(`  ${fix}: ${FIX_NOTES[fix]}`);
       for (const i of items.slice(0, limit)) {
         const zh = i.zh.map((x) => `${x.zh}${x.py ? ` ${x.py}` : ''}${x.have ? ' (entry)' : x.rank ? ` (rank ${x.rank})` : ''}`).join(', ');
-        out.push(`    ${i.en} (#${i.rank})${zh ? `: ${zh}` : ''}${i.author ? `; the author's Mandarin: ${i.author.join('/')}` : ''}${i.sense && (!zh || fix === 'link') ? `; sense ${i.sense}` : ''}`);
+        out.push(`    ${i.en} (#${i.rank})${zh ? `: ${zh}` : ''}${i.author ? `; the author's Mandarin: ${i.author.join('/')}` : ''}${i.sense && (!zh || fix === 'link') ? `; sense ${i.sense}` : ''}${i.why ? `; not the same: ${i.why}` : ''}`);
       }
       if (items.length > limit) out.push(`    … ${items.length - limit} more`);
     }

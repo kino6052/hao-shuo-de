@@ -8,6 +8,7 @@ export default composite({
   en: "noodles",
   ru: "лапша",
   pos: "noun",
+  head: "食物",
   hsd: ["\"miàn\""],
   tts: ["面"],
   literal: "noodles",

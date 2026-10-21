@@ -63,9 +63,12 @@
     },
     "一般": {
       "ilis": [
-        "i110211"
+        "i110211",
+        "i6058"
       ],
-      "at": "2026-10-18T02:43:04.749Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i6058 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "一起": {
       "ilis": [],
@@ -138,9 +141,12 @@
     },
     "不同": {
       "ilis": [
-        "i34997"
+        "i34997",
+        "i7695"
       ],
-      "at": "2026-10-18T02:12:07.846Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i7695 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "不好意思": {
       "ilis": [
@@ -149,8 +155,12 @@
       "at": "2026-10-18T02:08:15.712Z"
     },
     "不断": {
-      "ilis": [],
-      "at": "2026-10-18T02:43:04.753Z"
+      "ilis": [
+        "i3305"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i3305 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "不用": {
       "ilis": [],
@@ -221,9 +231,12 @@
     "个人": {
       "ilis": [
         "i90684",
-        "i35562"
+        "i35562",
+        "i9698"
       ],
-      "at": "2026-10-18T02:11:17.603Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i9698 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "中国": {
       "ilis": [],
@@ -270,9 +283,12 @@
     },
     "主要": {
       "ilis": [
-        "i6975"
+        "i6975",
+        "i18187"
       ],
-      "at": "2026-10-18T01:57:35.307Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i18187 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "主题": {
       "ilis": [
@@ -796,9 +812,12 @@
     },
     "健康": {
       "ilis": [
-        "i112933"
+        "i112933",
+        "i14097"
       ],
-      "at": "2026-10-18T02:43:04.748Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i14097 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "像": {
       "ilis": [
@@ -817,9 +836,12 @@
       "ilis": [
         "i33850",
         "i25687",
-        "i25686"
+        "i25686",
+        "i71636"
       ],
-      "at": "2026-10-18T02:11:38.404Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i71636 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "兄弟": {
       "ilis": [
@@ -878,9 +900,12 @@
     },
     "公司": {
       "ilis": [
-        "i79556"
+        "i79556",
+        "i17039"
       ],
-      "at": "2026-10-18T01:57:38.450Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i17039 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "六": {
       "ilis": [
@@ -922,9 +947,12 @@
     "关系": {
       "ilis": [
         "i110138",
-        "i109329"
+        "i109329",
+        "i109327"
       ],
-      "at": "2026-10-18T02:10:16.932Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i109327 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "关键": {
       "ilis": [
@@ -1106,9 +1134,12 @@
         "i31892",
         "i31896",
         "i33886",
-        "i34058"
+        "i34058",
+        "i3166"
       ],
-      "at": "2026-10-18T02:11:38.404Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i3166 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "切": {
       "ilis": [],
@@ -1162,8 +1193,12 @@
       "at": "2026-10-18T02:11:27.449Z"
     },
     "前": {
-      "ilis": [],
-      "at": "2026-10-18T02:12:07.846Z"
+      "ilis": [
+        "i9484"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i9484 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "力": {
       "ilis": [
@@ -1287,9 +1322,12 @@
     "历史": {
       "ilis": [
         "i70694",
-        "i116663"
+        "i116663",
+        "i16629"
       ],
-      "at": "2026-10-18T02:11:27.449Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i16629 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "厉害": {
       "ilis": [
@@ -1368,9 +1406,12 @@
     "反对": {
       "ilis": [
         "i33650",
-        "i25568"
+        "i25568",
+        "i36469"
       ],
-      "at": "2026-10-18T02:11:38.404Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i36469 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "反应": {
       "ilis": [
@@ -1401,8 +1442,13 @@
       "at": "2026-10-18T02:11:38.404Z"
     },
     "发展": {
-      "ilis": [],
-      "at": "2026-10-18T02:43:04.749Z"
+      "ilis": [
+        "i107495",
+        "i107621"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i107495, i107621 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "发烧": {
       "ilis": [
@@ -1532,9 +1578,12 @@
       "ilis": [
         "i34964",
         "i35005",
-        "i35346"
+        "i35346",
+        "i10311"
       ],
-      "at": "2026-10-18T02:43:04.753Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i10311 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "同": {
       "ilis": [
@@ -1672,9 +1721,12 @@
     "唯一": {
       "ilis": [
         "i12239",
-        "i11820"
+        "i11820",
+        "i12240"
       ],
-      "at": "2026-10-18T02:08:21.049Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i12240 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "商品": {
       "ilis": [
@@ -1790,9 +1842,12 @@
     },
     "地区": {
       "ilis": [
-        "i81710"
+        "i81710",
+        "i16321"
       ],
-      "at": "2026-10-18T02:11:17.604Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i16321 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "地址": {
       "ilis": [
@@ -1848,9 +1903,12 @@
     "基本": {
       "ilis": [
         "i10194",
-        "i5537"
+        "i5537",
+        "i4935"
       ],
-      "at": "2026-10-18T01:59:52.708Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i4935 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "基础": {
       "ilis": [
@@ -1880,9 +1938,12 @@
     "处理": {
       "ilis": [
         "i34283",
-        "i33908"
+        "i33908",
+        "i41351"
       ],
-      "at": "2026-10-18T02:11:27.449Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i41351 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "复习": {
       "ilis": [
@@ -1973,8 +2034,12 @@
       "at": "2026-10-18T01:54:32.109Z"
     },
     "太阳": {
-      "ilis": [],
-      "at": "2026-10-18T02:12:07.846Z"
+      "ilis": [
+        "i15848"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i15848 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "失望": {
       "ilis": [
@@ -2013,9 +2078,12 @@
         "i6163",
         "i340",
         "i8696",
-        "i6195"
+        "i6195",
+        "i11402"
       ],
-      "at": "2026-10-18T01:40:13.599Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i11402 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "好像": {
       "ilis": [
@@ -2133,9 +2201,13 @@
     },
     "完全": {
       "ilis": [
-        "i113005"
+        "i113005",
+        "i18194",
+        "i22"
       ],
-      "at": "2026-10-18T02:43:04.749Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i18194, i22 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "完成": {
       "ilis": [
@@ -2185,15 +2257,21 @@
     },
     "害怕": {
       "ilis": [
-        "i30635"
+        "i30635",
+        "i409"
       ],
-      "at": "2026-10-18T02:43:04.749Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i409 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "家": {
       "ilis": [
-        "i54960"
+        "i54960",
+        "i16625"
       ],
-      "at": "2026-10-18T02:12:07.846Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i16625 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "家乡": {
       "ilis": [
@@ -2208,8 +2286,12 @@
       "at": "2026-10-18T02:08:49.704Z"
     },
     "容易": {
-      "ilis": [],
-      "at": "2026-10-18T02:43:04.748Z"
+      "ilis": [
+        "i4147"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i4147 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "对": {
       "ilis": [],
@@ -2366,9 +2448,12 @@
     },
     "帮助": {
       "ilis": [
-        "i34433"
+        "i34433",
+        "i41723"
       ],
-      "at": "2026-10-18T02:10:22.897Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i41723 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "帮忙": {
       "ilis": [
@@ -2437,9 +2522,12 @@
     "乡村": {
       "ilis": [
         "i80343",
-        "i82391"
+        "i82391",
+        "i11247"
       ],
-      "at": "2026-10-18T02:43:04.754Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i11247 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "幼儿园": {
       "ilis": [
@@ -2609,9 +2697,12 @@
     },
     "心理": {
       "ilis": [
-        "i69092"
+        "i69092",
+        "i16493"
       ],
-      "at": "2026-10-18T02:43:04.750Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i16493 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "必要": {
       "ilis": [
@@ -2628,9 +2719,13 @@
     },
     "快": {
       "ilis": [
-        "i5342"
+        "i5342",
+        "i5356",
+        "i18804"
       ],
-      "at": "2026-10-18T01:55:07.520Z"
+      "at": "2026-10-21T00:57:57.271Z",
+      "by": "claude",
+      "why": "frontier: also says i5356, i18804 (quick (accomplished rapidly) and quickly: WordNet has no Chinese for these senses, 快 is the word; judged by Claude 2026-10-21)"
     },
     "快乐": {
       "ilis": [
@@ -2754,9 +2849,12 @@
     },
     "慢": {
       "ilis": [
-        "i5362"
+        "i5362",
+        "i19235"
       ],
-      "at": "2026-10-18T01:58:57.251Z"
+      "at": "2026-10-21T00:57:57.271Z",
+      "by": "claude",
+      "why": "frontier: also says i19235 (slowly (without speed): WordNet gives Chinese only for the music sense (lento); 慢 before a verb is the word; judged by Claude 2026-10-21)"
     },
     "戏": {
       "ilis": [
@@ -3074,9 +3172,12 @@
       "ilis": [
         "i63904",
         "i72263",
-        "i109085"
+        "i109085",
+        "i15231"
       ],
-      "at": "2026-10-18T02:11:27.449Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i15231 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "数据": {
       "ilis": [
@@ -3218,9 +3319,12 @@
     "时间": {
       "ilis": [
         "i116704",
-        "i117493"
+        "i117493",
+        "i63542"
       ],
-      "at": "2026-10-18T02:10:16.932Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i63542 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "明天": {
       "ilis": [
@@ -3343,9 +3447,12 @@
     "有关": {
       "ilis": [
         "i35043",
-        "i35288"
+        "i35288",
+        "i10825"
       ],
-      "at": "2026-10-18T02:11:17.604Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i10825 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "有名": {
       "ilis": [
@@ -3394,9 +3501,12 @@
     "服务": {
       "ilis": [
         "i34405",
-        "i34650"
+        "i34650",
+        "i41723"
       ],
-      "at": "2026-10-18T02:11:17.604Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i41723 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "服装": {
       "ilis": [
@@ -3793,9 +3903,12 @@
     },
     "熟悉": {
       "ilis": [
-        "i67450"
+        "i67450",
+        "i5290"
       ],
-      "at": "2026-10-18T02:43:04.754Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i5290 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "爱好": {
       "ilis": [
@@ -3896,9 +4009,12 @@
     "环境": {
       "ilis": [
         "i82005",
-        "i110170"
+        "i110170",
+        "i16779"
       ],
-      "at": "2026-10-18T02:11:17.603Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i16779 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "现代": {
       "ilis": [],
@@ -3963,9 +4079,13 @@
     },
     "生": {
       "ilis": [
-        "i22058"
+        "i22058",
+        "i3448",
+        "i75158"
       ],
-      "at": "2026-10-18T01:59:52.708Z"
+      "at": "2026-10-21T00:24:06.458Z",
+      "by": "claude",
+      "why": "give birth, raw, and birth (the event of being born): 死 / 生 is death / birth; found when 死 gained the noun 'death' (frontier links, 2026-10-21)"
     },
     "生命": {
       "ilis": [
@@ -4064,9 +4184,12 @@
     },
     "病": {
       "ilis": [
-        "i110874"
+        "i110874",
+        "i14100"
       ],
-      "at": "2026-10-18T02:43:04.749Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i14100 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "痛苦": {
       "ilis": [
@@ -4404,8 +4527,12 @@
       "at": "2026-10-18T01:59:52.708Z"
     },
     "简单": {
-      "ilis": [],
-      "at": "2026-10-18T02:14:41.590Z"
+      "ilis": [
+        "i4147"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i4147 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "算": {
       "ilis": [
@@ -4642,9 +4769,12 @@
     "聪明": {
       "ilis": [
         "i2474",
-        "i7282"
+        "i7282",
+        "i14261"
       ],
-      "at": "2026-10-18T02:08:15.712Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i14261 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "肚子": {
       "ilis": [
@@ -4723,9 +4853,12 @@
     },
     "自动": {
       "ilis": [
-        "i980"
+        "i980",
+        "i18183"
       ],
-      "at": "2026-10-18T02:43:04.753Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i18183 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "自由": {
       "ilis": [
@@ -4827,9 +4960,12 @@
     "表现": {
       "ilis": [
         "i32451",
-        "i32440"
+        "i32440",
+        "i35917"
       ],
-      "at": "2026-10-18T02:11:27.449Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i35917 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "表达": {
       "ilis": [
@@ -4847,9 +4983,12 @@
     "要求": {
       "ilis": [
         "i25472",
-        "i34813"
+        "i34813",
+        "i40975"
       ],
-      "at": "2026-10-18T02:11:17.604Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i40975 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "见": {
       "ilis": [
@@ -5027,9 +5166,12 @@
     "负责": {
       "ilis": [
         "i35404",
-        "i33929"
+        "i33929",
+        "i10932"
       ],
-      "at": "2026-10-18T02:43:04.749Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i10932 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "责任": {
       "ilis": [
@@ -5416,9 +5558,12 @@
     },
     "重要": {
       "ilis": [
-        "i35053"
+        "i35053",
+        "i11879"
       ],
-      "at": "2026-10-18T02:12:07.846Z"
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i11879 (English words the entry carries; judged by Claude 2026-10-21)"
     },
     "金字塔": {
       "ilis": [
@@ -5650,6 +5795,1017 @@
         "i63075"
       ],
       "at": "2026-10-18T02:08:15.712Z"
+    },
+    "上": {
+      "ilis": [],
+      "at": "2026-10-20T23:57:57.305Z",
+      "by": "claude"
+    },
+    "外": {
+      "ilis": [],
+      "at": "2026-10-20T23:57:57.305Z",
+      "by": "claude"
+    },
+    "对不起": {
+      "ilis": [],
+      "at": "2026-10-20T23:57:57.305Z",
+      "by": "claude"
+    },
+    "上面": {
+      "ilis": [],
+      "at": "2026-10-20T23:57:57.305Z",
+      "by": "claude"
+    },
+    "人": {
+      "ilis": [
+        "i35562",
+        "i15445"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "the auto link was 'homo' (the species); the entry means a person; frontier: also says i15445 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "地方": {
+      "ilis": [
+        "i82501",
+        "i35580"
+      ],
+      "at": "2026-10-21T00:06:35.341Z",
+      "by": "claude",
+      "why": "topographic point, and location (a point or extent in space): regions, areas and positions hang under it"
+    },
+    "国家": {
+      "ilis": [
+        "i80079",
+        "i17061"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i17061 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "社会": {
+      "ilis": [
+        "i79181",
+        "i15844"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i15844 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "死": {
+      "ilis": [
+        "i32310",
+        "i75348"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i75348 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "人类": {
+      "ilis": [
+        "i48658",
+        "i15445"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i15445 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "政治": {
+      "ilis": [
+        "i109654",
+        "i9968"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i9968 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "经济": {
+      "ilis": [
+        "i81079",
+        "i15257"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i15257 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "增加": {
+      "ilis": [
+        "i22491",
+        "i107658"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i107658 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "身体": {
+      "ilis": [
+        "i64381",
+        "i9759"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i9759 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "成功": {
+      "ilis": [
+        "i34330",
+        "i12911"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i12911 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "商业": {
+      "ilis": [
+        "i41123",
+        "i2725"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i2725 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "建议": {
+      "ilis": [
+        "i25997",
+        "i71545"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i71545 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "文化": {
+      "ilis": [
+        "i69084",
+        "i16494"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i16494 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "科技": {
+      "ilis": [
+        "i15917"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i15917 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "干": {
+      "ilis": [
+        "i34500",
+        "i14155"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i14155 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "电": {
+      "ilis": [
+        "i97763",
+        "i16029"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i16029 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "怕": {
+      "ilis": [
+        "i30635",
+        "i409"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i409 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "科学": {
+      "ilis": [
+        "i68339",
+        "i15808"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i15808 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "感情": {
+      "ilis": [
+        "i76043",
+        "i10568"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i10568 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "城市": {
+      "ilis": [
+        "i81847",
+        "i11257"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i11257 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "飞机": {
+      "ilis": [
+        "i49901",
+        "i49876"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i49876 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "讨论": {
+      "ilis": [
+        "i25733",
+        "i74188"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i74188 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "担心": {
+      "ilis": [
+        "i30573",
+        "i13620"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i13620 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "教育": {
+      "ilis": [
+        "i40040",
+        "i16798"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i16798 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "农村": {
+      "ilis": [
+        "i82392",
+        "i11247"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i11247 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "寻找": {
+      "ilis": [
+        "i28263",
+        "i40381"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i40381 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "海洋": {
+      "ilis": [
+        "i85897",
+        "i16427"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i16427 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "退休": {
+      "ilis": [
+        "i33655",
+        "i110268"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i110268 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "第二": {
+      "ilis": [
+        "i109680",
+        "i10182"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i10182 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "治疗": {
+      "ilis": [
+        "i22166",
+        "i38900"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i38900 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "音乐": {
+      "ilis": [
+        "i73566",
+        "i16296"
+      ],
+      "at": "2026-10-21T00:21:56.421Z",
+      "by": "claude",
+      "why": "frontier: also says i16296 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "医学": {
+      "ilis": [
+        "i38643",
+        "i15569"
+      ],
+      "at": "2026-10-21T00:57:57.271Z",
+      "by": "claude",
+      "why": "frontier: also says i15569 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "欧洲": {
+      "ilis": [
+        "i16932"
+      ],
+      "at": "2026-10-21T00:57:57.271Z",
+      "by": "claude",
+      "why": "frontier: also says i16932 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "传统": {
+      "ilis": [
+        "i66700",
+        "i3387"
+      ],
+      "at": "2026-10-21T00:57:57.271Z",
+      "by": "claude",
+      "why": "frontier: also says i3387 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "批评": {
+      "ilis": [
+        "i3599"
+      ],
+      "at": "2026-10-21T00:57:57.271Z",
+      "by": "claude",
+      "why": "frontier: also says i3599 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "非洲": {
+      "ilis": [
+        "i16770"
+      ],
+      "at": "2026-10-21T00:57:57.271Z",
+      "by": "claude",
+      "why": "frontier: also says i16770 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "民主": {
+      "ilis": [
+        "i3967"
+      ],
+      "at": "2026-10-21T00:57:57.271Z",
+      "by": "claude",
+      "why": "frontier: also says i3967 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "堆": {
+      "ilis": [
+        "i109294"
+      ],
+      "at": "2026-10-21T00:57:57.271Z",
+      "by": "claude",
+      "why": "frontier: also says i109294 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "运输": {
+      "ilis": [
+        "i37071"
+      ],
+      "at": "2026-10-21T00:57:57.271Z",
+      "by": "claude",
+      "why": "frontier: also says i37071 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "上级": {
+      "ilis": [
+        "i12961"
+      ],
+      "at": "2026-10-21T00:57:57.271Z",
+      "by": "claude",
+      "why": "frontier: also says i12961 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "工业": {
+      "ilis": [
+        "i40263",
+        "i15481"
+      ],
+      "at": "2026-10-21T00:57:57.271Z",
+      "by": "claude",
+      "why": "frontier: also says i15481 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "愤怒": {
+      "ilis": [
+        "i601"
+      ],
+      "at": "2026-10-21T00:57:57.271Z",
+      "by": "claude",
+      "why": "frontier: also says i601 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "恢复": {
+      "ilis": [
+        "i107435"
+      ],
+      "at": "2026-10-21T00:57:57.271Z",
+      "by": "claude",
+      "why": "frontier: also says i107435 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "竞争": {
+      "ilis": [
+        "i26951",
+        "i2878"
+      ],
+      "at": "2026-10-21T00:57:57.271Z",
+      "by": "claude",
+      "why": "frontier: also says i2878 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "可惜": {
+      "ilis": [
+        "i75080"
+      ],
+      "at": "2026-10-21T00:57:57.271Z",
+      "by": "claude",
+      "why": "frontier: also says i75080 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "扩大": {
+      "ilis": [
+        "i22919",
+        "i37334"
+      ],
+      "at": "2026-10-21T00:57:57.271Z",
+      "by": "claude",
+      "why": "frontier: also says i37334 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "宽": {
+      "ilis": [
+        "i14204"
+      ],
+      "at": "2026-10-21T00:57:57.271Z",
+      "by": "claude",
+      "why": "frontier: also says i14204 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "隐藏": {
+      "ilis": [
+        "i11450"
+      ],
+      "at": "2026-10-21T00:57:57.271Z",
+      "by": "claude",
+      "why": "frontier: also says i11450 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "活": {
+      "ilis": [
+        "i34743",
+        "i496"
+      ],
+      "at": "2026-10-21T00:57:57.271Z",
+      "by": "claude",
+      "why": "frontier: also says i496 (alive (possessing life): omw-cmn has 活着 for it; 活 is the word, alive or to live; judged by Claude 2026-10-21)"
+    },
+    "金融": {
+      "ilis": [
+        "i41346",
+        "i16172"
+      ],
+      "at": "2026-10-21T01:00:03.814Z",
+      "by": "claude",
+      "why": "frontier: also says i16172 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "一流": {
+      "ilis": [
+        "i12969"
+      ],
+      "at": "2026-10-21T01:00:03.814Z",
+      "by": "claude",
+      "why": "frontier: also says i12969 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "幻想": {
+      "ilis": [
+        "i67830",
+        "i10636"
+      ],
+      "at": "2026-10-21T01:00:03.814Z",
+      "by": "claude",
+      "why": "frontier: also says i10636 (English words the entry carries; judged by Claude 2026-10-21)"
+    },
+    "流行": {
+      "ilis": [
+        "i9977",
+        "i5316"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): popular, and in the current fashion; chosen from the WordNet candidates by Claude 2026-10-21"
+    },
+    "温暖": {
+      "ilis": [
+        "i14028",
+        "i14038"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): warm, comfortable heat; and warm in feeling"
+    },
+    "笨": {
+      "ilis": [
+        "i2478",
+        "i7288"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): stupid, lacking intelligence"
+    },
+    "烟": {
+      "ilis": [
+        "i107952",
+        "i98071"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): smoke (vapor with carbon), and a cloud of fine particles"
+    },
+    "湿": {
+      "ilis": [
+        "i14134"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): wet, covered or soaked with liquid"
+    },
+    "糟糕": {
+      "ilis": [
+        "i6173",
+        "i8306",
+        "i6174"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): bad, terrible, awful"
+    },
+    "好笑": {
+      "ilis": [
+        "i6914",
+        "i5301"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): funny, amusing; and funny as odd"
+    },
+    "采用": {
+      "ilis": [
+        "i33472",
+        "i33473"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): adopt, take up and practise; choose and follow"
+    },
+    "参考": {
+      "ilis": [
+        "i74815",
+        "i26006",
+        "i42032"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): a reference point; consult; the act of consulting"
+    },
+    "财产": {
+      "ilis": [
+        "i106242",
+        "i106754"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): property and assets"
+    },
+    "连接": {
+      "ilis": [
+        "i28468",
+        "i34784"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): connect, fasten; be joined"
+    },
+    "内部": {
+      "ilis": [
+        "i82110",
+        "i5197"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): the inside; internal"
+    },
+    "宣布": {
+      "ilis": [
+        "i26426",
+        "i26463"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): announce publicly"
+    },
+    "延长": {
+      "ilis": [
+        "i35057"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): lengthen or extend in duration or space"
+    },
+    "医疗": {
+      "ilis": [
+        "i38885"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): medical care"
+    },
+    "有限": {
+      "ilis": [
+        "i10962",
+        "i7721"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): limited, subject to limits; small in range"
+    },
+    "大量": {
+      "ilis": [
+        "i109304",
+        "i109295"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): a great amount (much); a large indefinite quantity"
+    },
+    "共同": {
+      "ilis": [
+        "i11816",
+        "i11817"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): shared; common to two or more"
+    },
+    "登记": {
+      "ilis": [
+        "i34074"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): register (enroll); omw-cmn gives 注册 and 登记 for it"
+    },
+    "发言": {
+      "ilis": [
+        "i72040"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): a remark, a comment"
+    },
+    "富": {
+      "ilis": [
+        "i11080"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): rich, possessing material wealth"
+    },
+    "巨大": {
+      "ilis": [
+        "i7552"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): huge, immense, vast"
+    },
+    "失去": {
+      "ilis": [
+        "i7924",
+        "i33170",
+        "i33171"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): lost, no longer in your possession; lose; fail to keep"
+    },
+    "强大": {
+      "ilis": [
+        "i10027",
+        "i10055"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): powerful, having great power; great influence"
+    },
+    "私人": {
+      "ilis": [
+        "i10205",
+        "i9701"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): private, confined to persons; concerning one person"
+    },
+    "完美": {
+      "ilis": [
+        "i9602",
+        "i112999"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): perfect, without defect; perfection"
+    },
+    "意外": {
+      "ilis": [
+        "i75057",
+        "i75056",
+        "i75041"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): accident, chance, a sudden unexpected event"
+    },
+    "画家": {
+      "ilis": [
+        "i91823",
+        "i88315"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): a painter; an artist"
+    },
+    "了不起": {
+      "ilis": [
+        "i13069",
+        "i9194"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): amazing, remarkable"
+    },
+    "随意": {
+      "ilis": [
+        "i10552"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): random, without a definite plan"
+    },
+    "广大": {
+      "ilis": [
+        "i7552",
+        "i7548",
+        "i2950"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): vast; extensive; broad in scope"
+    },
+    "单一": {
+      "ilis": [
+        "i12236",
+        "i2774"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): single, existing alone; individual"
+    },
+    "疯狂": {
+      "ilis": [
+        "i13236",
+        "i11367"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): mad, uncontrolled; crazy, affected with madness"
+    },
+    "少见": {
+      "ilis": [
+        "i2749",
+        "i5851"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): rare, not widely known; recurring only at long intervals"
+    },
+    "投票": {
+      "ilis": [
+        "i34026",
+        "i34031"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): vote, express a preference or choice"
+    },
+    "战斗": {
+      "ilis": [
+        "i40416",
+        "i41538"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): a battle; the act of fighting"
+    },
+    "战争": {
+      "ilis": [
+        "i41872"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): war, an active struggle between competing entities"
+    },
+    "罪": {
+      "ilis": [
+        "i39442",
+        "i39414"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): crime; sin"
+    },
+    "怀孕": {
+      "ilis": [
+        "i934",
+        "i110746"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): pregnant; pregnancy"
+    },
+    "棕色": {
+      "ilis": [
+        "i2050"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): brown"
+    },
+    "冲突": {
+      "ilis": [
+        "i110406"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): a conflict, a state of opposition"
+    },
+    "攻击": {
+      "ilis": [
+        "i27194",
+        "i27197"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): attack, assail"
+    },
+    "强迫": {
+      "ilis": [
+        "i34247",
+        "i34239"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): force, compel"
+    },
+    "典型": {
+      "ilis": [
+        "i13681",
+        "i1983",
+        "i67970"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): typical; distinctive; a model example"
+    },
+    "官方": {
+      "ilis": [
+        "i8934",
+        "i10731",
+        "i88364"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): official; the authorities"
+    },
+    "坚定": {
+      "ilis": [
+        "i10902",
+        "i4620"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): firm, steadfast; strong and sure"
+    },
+    "坚决": {
+      "ilis": [
+        "i10900",
+        "i25755"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): determined; insist, take a firm stand"
+    },
+    "纯": {
+      "ilis": [
+        "i10448"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): pure, free of extraneous elements"
+    },
+    "外来": {
+      "ilis": [
+        "i5667",
+        "i11600"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): foreign, from another place; introduced from outside"
+    },
+    "杰出": {
+      "ilis": [
+        "i12980",
+        "i12973"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): outstanding; brilliant"
+    },
+    "军事": {
+      "ilis": [
+        "i15602",
+        "i80225",
+        "i8325"
+      ],
+      "at": "2026-10-21T01:04:44.686Z",
+      "by": "claude",
+      "why": "new entry (K8): military, of the study of warfare; the armed forces"
+    },
+    "马": {
+      "ilis": [
+        "i48054"
+      ],
+      "at": "2026-10-21T01:13:38.257Z",
+      "by": "claude",
+      "why": "new entry (K9): horse"
+    },
+    "去世": {
+      "ilis": [
+        "i23529"
+      ],
+      "at": "2026-10-21T01:13:38.257Z",
+      "by": "claude",
+      "why": "new entry (K9): pass from physical life; die, decease"
+    },
+    "在乎": {
+      "ilis": [
+        "i25322"
+      ],
+      "at": "2026-10-21T01:13:38.257Z",
+      "by": "claude",
+      "why": "new entry (K9): be concerned with or about; mind"
+    },
+    "在意": {
+      "ilis": [
+        "i30840"
+      ],
+      "at": "2026-10-21T01:13:38.257Z",
+      "by": "claude",
+      "why": "new entry (K9): feel concern or interest; care"
+    },
+    "告发": {
+      "ilis": [
+        "i25857"
+      ],
+      "at": "2026-10-21T01:13:38.257Z",
+      "by": "claude",
+      "why": "new entry (K9): bring an accusation against"
+    },
+    "告": {
+      "ilis": [
+        "i25857",
+        "i34593"
+      ],
+      "at": "2026-10-21T01:13:38.257Z",
+      "by": "claude",
+      "why": "new entry (K9): accuse; institute legal proceedings, sue"
+    },
+    "妈": {
+      "ilis": [
+        "i91123"
+      ],
+      "at": "2026-10-21T01:13:38.257Z",
+      "by": "claude",
+      "why": "new entry (K9): informal word for a mother"
+    },
+    "应得": {
+      "ilis": [
+        "i34900"
+      ],
+      "at": "2026-10-21T01:13:38.257Z",
+      "by": "claude",
+      "why": "new entry (K9): deserve"
+    },
+    "知": {
+      "ilis": [
+        "i24736"
+      ],
+      "at": "2026-10-21T01:13:38.257Z",
+      "by": "claude",
+      "why": "new entry (K9): be aware of a fact; know"
     }
   }
 }

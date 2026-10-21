@@ -281,7 +281,7 @@ function row(e) {
   const f = el("div", "forms");
   f.appendChild(formBlock("now", e.now.forms, e.now.tts, e.now.score, null, e.now.same));
   if (e.prop) f.appendChild(formBlock("prop", e.prop.forms, e.prop.tts, e.prop.score, e.prop.why, e.prop.same));
-  if (e.carried) f.appendChild(el("p", "why", "Carried over from an earlier batch: " + e.carried));
+  if (e.carried) f.appendChild(el("p", "why", (state.batch.carriedLabel || "Carried over from an earlier batch") + ": " + e.carried));
   if (e.syn?.length) f.appendChild(synonymBlock(e.syn));
   if (e.ant?.length) f.appendChild(antonymBlock(e.ant));
   if (e.examples?.list.length) f.appendChild(examplesBlock(e.examples));
@@ -364,7 +364,7 @@ for (const c of document.querySelectorAll(".chip")) c.onclick = () => { state.fi
     document.title = `Review batch ${N} · Hao-shuo-de`;
     $("#eyebrow").textContent = `Composite review · batch ${N} of ${B.batches}`;
     const carried = B.entries.filter((e) => e.carried).length;
-    $("#title").textContent = `Ranks ${B.from}–${B.to}${carried ? ` + ${carried} carried over` : ""}: ${B.entries.filter((e) => e.prop).length} proposed changes`;
+    $("#title").textContent = B.title || `Ranks ${B.from}–${B.to}${carried ? ` + ${carried} carried over` : ""}: ${B.entries.filter((e) => e.prop).length} proposed changes`;
     const prev = $("#prev"), next = $("#next");
     if (N > 1) prev.href = `?batch=${N - 1}`; else prev.hidden = true;
     if (N < B.batches) next.href = `?batch=${N + 1}`; else next.hidden = true;

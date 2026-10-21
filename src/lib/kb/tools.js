@@ -1,7 +1,6 @@
-// The Claude tools of the KB (KB_PLAN.md phase 1): what each is called, what it
-// asks for, and how it answers. Pure apart from the KB it is given; the
-// protocol is in mcp.js and the process in scripts/kb-mcp.js. Every answer is
-// the same text the command line prints.
+// The Claude tools of the KB: what each is called, what it asks for, and how it answers.
+// Pure apart from the KB it is given; the protocol is in mcp.js and the process in scripts/kb-mcp.js.
+// Every answer is the same text the command line prints (KB_PLAN.md phase 1).
 //
 //   TOOLS                         [{ name, description, inputSchema }]
 //   callTool(kb, name, args)      -> the answer as text (throws on a bad question)
@@ -9,7 +8,7 @@
 import { fileURLToPath } from 'node:url';
 import { SECTIONS } from './cross-check.js';
 import { PARTS } from './frontier.js';
-import { renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderEnglish, renderCrossCheck, renderFrontier, renderYardsticks, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps } from './kb.js';
+import { renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderEnglish, renderHints, exportTurtle, exportFragment, renderExportSummary, renderCrossCheck, renderFrontier, renderYardsticks, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps } from './kb.js';
 import { scoreboardRow, readScoreboard, renderScoreboard, renderHistory } from './scoreboard.js';
 
 // the stored rows (refactor --write adds one after every change)
@@ -107,6 +106,22 @@ export const TOOLS = [
       'Which dictionary entries say an English word, in three tiers: the entries whose gloss has the word, the entries that share a WordNet sense with it (its synonyms), and, when neither says it, the nearest entry on the way up "is a kind of", which offers "…-de X" as a starting description. ' +
       'Without the English index (npm run wordnet) only the glosses answer.',
     inputSchema: { type: 'object', properties: { word: { type: 'string', description: 'An English word or short phrase: "purchase", "to run".' } }, required: ['word'] },
+  },
+  {
+    name: 'kb_hints',
+    description:
+      'Hints for describing a word the dictionary does not say yet (English or Mandarin): what WordNet says it means and which entry to start from. ' +
+      'Each sense comes with its definition, the Mandarin words WordNet gives, the entry it can start from ("…-de X"), the entries for its opposite and its whole, and a draft line for how to begin. ' +
+      'A hint is a starting point, never a description: write it with dictionary words only and check it with kb_check_form. Without the English index (npm run wordnet) there are no hints.',
+    inputSchema: { type: 'object', properties: { word: { type: 'string', description: 'An English word ("shot") or a Mandarin word ("枪") with no entry yet.' }, limit: { type: 'integer', description: 'How many senses to show (default 4).' } }, required: ['word'] },
+  },
+  {
+    name: 'kb_export',
+    description:
+      'The dictionary as OntoLex-Lemon Turtle, the format Protégé opens: one entry alone, or the counts. ' +
+      'With a word id or a hanzi it returns that entry (its form, its sense with the WordNet link, the words its description uses, its relations); with nothing it returns the counts. ' +
+      'The whole file is written by the command line (node scripts/kb.js export). Only accepted relations are included unless proposed is true.',
+    inputSchema: { type: 'object', properties: { entry: { type: 'string', description: 'A word id ("wo3") or a hanzi entry ("战争"). Leave out for the counts.' }, proposed: { type: 'boolean', description: 'Also include the relations nobody has reviewed yet (default false).' } } },
   },
   {
     name: 'kb_cross_check',
@@ -260,6 +275,17 @@ export async function callTool(kb, name, args = {}, { scoreboardFile = SCOREBOAR
     case 'kb_english': {
       if (!args.word) throw new Error('word is required');
       return renderEnglish(kb.english(String(args.word)));
+    }
+    case 'kb_hints': {
+      if (!args.word) throw new Error('word is required');
+      return renderHints(kb.hints(String(args.word), { limit: Number(args.limit) > 0 ? Number(args.limit) : undefined }));
+    }
+    case 'kb_export': {
+      const model = kb.exportModel({ includeProposed: !!args.proposed });
+      if (!args.entry) return renderExportSummary(model.counts);
+      const fragment = exportFragment(model, String(args.entry));
+      if (!fragment) throw new Error(`no entry "${args.entry}": give a word id such as wo3 or a hanzi entry such as 战争`);
+      return fragment;
     }
     case 'kb_cross_check': {
       if (args.section && !SECTIONS.includes(args.section)) throw new Error(`section is one of ${SECTIONS.join(', ')}`);

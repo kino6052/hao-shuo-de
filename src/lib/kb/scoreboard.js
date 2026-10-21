@@ -1,6 +1,5 @@
-// The scoreboard (KB_PLAN.md phase 3): a few numbers about the language, one
-// row per change, kept in kb/scoreboard.csv. The point is to see what a change
-// did, and what more data did when the solvers are run again later.
+// The scoreboard: a few numbers about the language, one row per change, kept in kb/scoreboard.csv.
+// The point is to see what a change did, and what more data did when the solvers are run again later (KB_PLAN.md phase 3).
 //
 //   scoreboardRow(kb, opts)        -> one row (an object keyed by COLUMNS)
 //   appendRow(file, row)           add a row to the CSV (the header is rewritten if the columns changed)
@@ -46,10 +45,36 @@ export const COLUMNS = {
   categories_said: "Aristotle's categories that a word or pattern carries",
   grammar_said: 'grammar items that a word or pattern carries',
   traced_words: 'words whose description reaches a prime (or that say one)',
+  said_mandarin_1000: 'share of the 1000 most common Mandarin words that have an entry (yardsticks.js)',
+  said_mandarin_3000: 'share of the 3000 most common Mandarin words that have an entry',
+  said_english_500: 'share of the 500 most common English words an entry says (gloss or same WordNet sense)',
+  said_english_1000: 'share of the 1000 most common English words an entry says',
+  said_english_3000: 'share of the 3000 most common English words an entry says',
+  said_basic_english: 'share of the Basic English words an entry says',
+  said_sentences: 'share of the everyday sentences whose every character an entry covers (grammar not checked)',
 };
 export const NAMES = Object.keys(COLUMNS);
 
 const round = (n, places) => Math.round(n * 10 ** places) / 10 ** places;
+
+const share = (said, of) => (of ? round(said / of, 3) : '');
+
+// -> the sayability columns from a yardstick report: the share said in each band, as a fraction like parse_rate
+export function sayability(y) {
+  const band = (list, upTo) => {
+    const b = list.bands.find((x) => x.upTo === upTo && x.total === upTo);
+    return b ? share(b.said, b.total) : '';
+  };
+  return {
+    said_mandarin_1000: band(y.mandarin, 1000),
+    said_mandarin_3000: band(y.mandarin, 3000),
+    said_english_500: band(y.englishTop, 500),
+    said_english_1000: band(y.englishTop, 1000),
+    said_english_3000: band(y.englishTop, 3000),
+    said_basic_english: share(y.basic.said, y.basic.total),
+    said_sentences: share(y.sentences.said, y.sentences.total),
+  };
+}
 
 // -> one row. `atoms: false` skips the solver (those columns stay empty).
 export async function scoreboardRow(kb, { label = '', date = new Date(), atoms = true, parseLessons = Infinity, atomsTimeoutMs } = {}) {
@@ -83,6 +108,9 @@ export async function scoreboardRow(kb, { label = '', date = new Date(), atoms =
       traced_words: m.totals.words - m.grounding.unreached.length - m.grounding.unreachedAtoms.length,
     });
   }
+
+  // sayability against the word lists (yardsticks.js); a list that is not there leaves its columns empty
+  if (kb.yardsticks) Object.assign(row, sayability(kb.yardsticks()));
 
   if ((source.patterns ?? []).length) {
     const lessons = (source.lessons ?? []).filter((l) => l.number <= parseLessons).map(({ id, number }) => ({ id, number }));

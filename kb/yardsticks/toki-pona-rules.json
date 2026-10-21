@@ -1,0 +1,30 @@
+{
+  "name": "Toki Pona rules",
+  "typedIn": true,
+  "by": "Claude",
+  "on": "2026-10-21",
+  "checked": false,
+  "source": "Toki Pona by Sonja Lang (Toki Pona: The Language of Good, 2014; the 120 words of the first book, 137 with the 2021 dictionary). Typed in from Claude's memory of the grammar; the examples are Claude's own and short. Not checked against the book.",
+  "use": "Phase 7: sets Hao-shuo-de beside another minimal language on the same points (word order, how a sentence is joined, how a question is asked). The `hsd` field says what Hao-shuo-de does, left empty for the author.",
+  "items": [
+    { "id": "no-inflection", "rule": "Words never change: no plural, no tense, no case.", "example": { "tp": "jan li pona.", "en": "The person is good. / The people are good." }, "hsd": null },
+    { "id": "word-order", "rule": "Subject, verb, object, in that order.", "example": { "tp": "mi moku e kili.", "en": "I eat fruit." }, "hsd": null },
+    { "id": "li", "rule": "The word li comes between the subject and the verb, except when the subject is exactly mi (I, we) or sina (you).", "example": { "tp": "ona li pona. mi pona.", "en": "She is good. I am good." }, "hsd": null },
+    { "id": "e", "rule": "The word e marks the object.", "example": { "tp": "jan li moku e kili.", "en": "The person eats fruit." }, "hsd": null },
+    { "id": "modifier-after", "rule": "A describing word follows the word it describes; adjectives and nouns are not told apart.", "example": { "tp": "tomo suli.", "en": "A big house." }, "hsd": null },
+    { "id": "pi", "rule": "The word pi groups a longer describing phrase so it modifies the head as a whole.", "example": { "tp": "tomo pi telo nasa.", "en": "A house of strange water (a bar)." }, "hsd": null },
+    { "id": "preposition", "rule": "A short list of words used before a noun to say place, direction, tool, likeness or cause: lon, tawa, tan, kepeken, sama.", "example": { "tp": "mi moku kepeken ilo.", "en": "I eat using a tool." }, "hsd": null },
+    { "id": "la", "rule": "The word la ends a context phrase (time, condition) and starts the main sentence.", "example": { "tp": "tenpo ni la mi pona.", "en": "At this time I am fine." }, "hsd": null },
+    { "id": "ala-negation", "rule": "The word ala after a word makes it negative.", "example": { "tp": "mi moku ala.", "en": "I do not eat." }, "hsd": null },
+    { "id": "yes-no-question", "rule": "A yes/no question repeats the verb with ala between: X ala X.", "example": { "tp": "sina pona ala pona?", "en": "Are you well?" }, "hsd": null },
+    { "id": "content-question", "rule": "A question word (seme) goes in the place of the answer, not moved to the front.", "example": { "tp": "sina wile e seme?", "en": "What do you want?" }, "hsd": null },
+    { "id": "o-command", "rule": "The word o marks a command or a wish.", "example": { "tp": "o moku e kili.", "en": "Eat the fruit!" }, "hsd": null },
+    { "id": "number", "rule": "A few number words (ala 0, wan 1, tu 2, luka 5, mute 20, ale 100) are added up; a number follows the noun it counts.", "example": { "tp": "jan tu.", "en": "Two people." }, "hsd": null },
+    { "id": "en-anu", "rule": "The word en joins subjects, anu means 'or'; the word taso is 'but'.", "example": { "tp": "mi en sina li pona.", "en": "You and I are well." }, "hsd": null },
+    { "id": "word-class-free", "rule": "A word does the work of noun, verb or adjective by its place in the sentence.", "example": { "tp": "moku li pona. mi moku.", "en": "The food is good. I eat." }, "hsd": null },
+    { "id": "pronoun", "rule": "Three pronouns: mi, sina, ona; the number is told by context or by mute.", "example": { "tp": "mi mute li pona.", "en": "We are well." }, "hsd": null },
+    { "id": "names", "rule": "A name follows a common word and is written with a capital; it is the one thing that is not a Toki Pona word.", "example": { "tp": "jan Mawi li pona.", "en": "Mawi is good." }, "hsd": null },
+    { "id": "tense-by-word", "rule": "Time is said with a time word in a context phrase, never on the verb.", "example": { "tp": "tenpo pini la mi tawa.", "en": "In the past I went." }, "hsd": null },
+    { "id": "vocabulary", "rule": "About 120 words in the first book (137 in the 2021 dictionary); new ideas are said by joining the words.", "example": { "tp": "tomo telo.", "en": "Bathroom (house of water)." }, "hsd": null }
+  ]
+}

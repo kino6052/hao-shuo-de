@@ -614,34 +614,34 @@ The word lists and limits live in `scripts/jargon.js` and `scripts/limits.js`.
 
 For each lesson: ☐ written to template ☐ `npm run check -- <lesson-id>` passes (every gate) ☐ exercises + answers ☐ **user approved** ☐ added to `scripts/finished-lessons.js`
 
-The list follows the 26 lessons of §3 (the book grew from 21 to 24 with D43–D45, and to 26 when Numbers and Greetings and Feelings were split). The order itself lives in `src/content/book.js`. Every lesson passes `npm run check`; the review is still yours.
+The list follows the 26 lessons of §3 (the book grew from 21 to 24 with D43–D45, and to 26 when Numbers and Greetings and Feelings were split). The order itself lives in `src/content/book.js`. Every lesson passes `npm run check`; the author approved all 26 on 2026-10-21.
 
-- [ ] L1 Sounds and Symbols — **waiting for your review**
-- [ ] L2 Words and Sentences — **waiting for your review**
-- [ ] L3 Modifying Nouns — **waiting for your review**
-- [ ] L4 Pointing at People and Things — **waiting for your review**
-- [ ] L5 Verbs 1 — Who does what — **waiting for your review**
-- [ ] L6 Questions and Answers — **waiting for your review**
-- [ ] L7 Pre-Verbs — **waiting for your review**
-- [ ] L8 Time 1 — When it happens — **waiting for your review**
-- [ ] L9 Time 2 — Around an action — **waiting for your review**
-- [ ] L10 Space 1 — Where it is — **waiting for your review**
-- [ ] L11 Space 2 — Moving — **waiting for your review**
-- [ ] L12 Modifiers 1 — How much — **waiting for your review**
-- [ ] L13 Modifiers 2 — Comparing — **waiting for your review**
-- [ ] L14 Modifiers 3 — Also and all — **waiting for your review**
-- [ ] L15 Modifiers 4 — Becoming and making — **waiting for your review**
-- [ ] L16 Verbs 2 — Direction and result — **waiting for your review**
-- [ ] L17 Numbers — **waiting for your review**
-- [ ] L18 Numbers 2 — Time and sums — **waiting for your review**
-- [ ] L19 Colors — **waiting for your review**
-- [ ] L20 Changing the Role of a Word — **waiting for your review**
-- [ ] L21 Relationships 1 — Inside a sentence — **waiting for your review**
-- [ ] L22 Relationships 2 — Linking sentences — **waiting for your review**
-- [ ] L23 Greetings — **waiting for your review**
-- [ ] L24 Feelings — **waiting for your review**
-- [ ] L25 Doubling Words — **waiting for your review**
-- [ ] L26 Everyday Patterns — **waiting for your review**
+- [x] L1 Sounds and Symbols — **approved by the author, 2026-10-21**
+- [x] L2 Words and Sentences — **approved by the author, 2026-10-21**
+- [x] L3 Modifying Nouns — **approved by the author, 2026-10-21**
+- [x] L4 Pointing at People and Things — **approved by the author, 2026-10-21**
+- [x] L5 Verbs 1 — Who does what — **approved by the author, 2026-10-21**
+- [x] L6 Questions and Answers — **approved by the author, 2026-10-21**
+- [x] L7 Pre-Verbs — **approved by the author, 2026-10-21**
+- [x] L8 Time 1 — When it happens — **approved by the author, 2026-10-21**
+- [x] L9 Time 2 — Around an action — **approved by the author, 2026-10-21**
+- [x] L10 Space 1 — Where it is — **approved by the author, 2026-10-21**
+- [x] L11 Space 2 — Moving — **approved by the author, 2026-10-21**
+- [x] L12 Modifiers 1 — How much — **approved by the author, 2026-10-21**
+- [x] L13 Modifiers 2 — Comparing — **approved by the author, 2026-10-21**
+- [x] L14 Modifiers 3 — Also and all — **approved by the author, 2026-10-21**
+- [x] L15 Modifiers 4 — Becoming and making — **approved by the author, 2026-10-21**
+- [x] L16 Verbs 2 — Direction and result — **approved by the author, 2026-10-21**
+- [x] L17 Numbers — **approved by the author, 2026-10-21**
+- [x] L18 Numbers 2 — Time and sums — **approved by the author, 2026-10-21**
+- [x] L19 Colors — **approved by the author, 2026-10-21**
+- [x] L20 Changing the Role of a Word — **approved by the author, 2026-10-21**
+- [x] L21 Relationships 1 — Inside a sentence — **approved by the author, 2026-10-21**
+- [x] L22 Relationships 2 — Linking sentences — **approved by the author, 2026-10-21**
+- [x] L23 Greetings — **approved by the author, 2026-10-21**
+- [x] L24 Feelings — **approved by the author, 2026-10-21**
+- [x] L25 Doubling Words — **approved by the author, 2026-10-21**
+- [x] L26 Everyday Patterns — **approved by the author, 2026-10-21**
 
 ### Phase 3 — Intros and reference
 
@@ -658,7 +658,7 @@ The list follows the 26 lessons of §3 (the book grew from 21 to 24 with D43–D
 - [x] Grammar terms allowed in the lessons, plain name first (D34); `scripts/jargon.js` updated
 - [x] dōu replaces quánbù everywhere, with shénme-dōu for "everything" (D35)
 - [x] 13 new words (NSM atoms + value) in the dictionary, each taught in its lesson and reused in two later ones (D36)
-- [ ] Your review of the new points: L3 few, L7 maybe, L8 now / happen, L9 a moment, L11 move / far / near, L12 value, L13 other / kind, L14 all / everything / part, L20 live
+- [x] Your review of the new points: L3 few, L7 maybe, L8 now / happen, L9 a moment, L11 move / far / near, L12 value, L13 other / kind, L14 all / everything / part, L20 live -- approved by the author, 2026-10-21
 
 ### Phase 4 — Translation (after all English is approved)
 

@@ -22,6 +22,7 @@
     { "kind": "opposite", "a": "内", "b": "自然" },
     { "kind": "opposite", "a": "右", "b": "左边" },
     { "kind": "opposite", "a": "进来", "b": "登录" },
-    { "kind": "opposite", "a": "增加", "b": "降低" }
+    { "kind": "opposite", "a": "增加", "b": "降低" },
+    { "kind": "opposite", "a": "内部", "b": "自然" }
   ]
 }

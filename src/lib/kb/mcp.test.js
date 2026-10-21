@@ -46,14 +46,14 @@ describe('the protocol', () => {
     expect((await rpc('nope')).error.code).toBe(-32601);
   });
 
-  test('tools/list names the sixteen tools, each with a description and a schema', async () => {
+  test('tools/list names the eighteen tools, each with a description and a schema', async () => {
     const { tools } = (await rpc('tools/list')).result;
-    expect(tools.map((t) => t.name)).toEqual(['kb_word', 'kb_remove', 'kb_parse', 'kb_check_form', 'kb_atoms', 'kb_relations', 'kb_english', 'kb_cross_check', 'kb_yardsticks', 'kb_frontier', 'kb_meaning', 'kb_candidates', 'kb_add', 'kb_swaps', 'kb_scoreboard', 'kb_query']);
+    expect(tools.map((t) => t.name)).toEqual(['kb_word', 'kb_remove', 'kb_parse', 'kb_check_form', 'kb_atoms', 'kb_relations', 'kb_english', 'kb_hints', 'kb_export', 'kb_cross_check', 'kb_yardsticks', 'kb_frontier', 'kb_meaning', 'kb_candidates', 'kb_add', 'kb_swaps', 'kb_scoreboard', 'kb_query']);
     for (const t of TOOLS) {
       expect(t.description.length).toBeGreaterThan(40);
       expect(t.inputSchema.type).toBe('object');
-      // kb_atoms, kb_relations, kb_meaning, kb_candidates, kb_swaps and kb_scoreboard ask for nothing: no name is the whole report, no flag is the numbers now
-      if (!['kb_atoms', 'kb_relations', 'kb_cross_check', 'kb_yardsticks', 'kb_frontier', 'kb_meaning', 'kb_candidates', 'kb_swaps', 'kb_scoreboard'].includes(t.name)) expect(t.inputSchema.required.length).toBeGreaterThan(0);
+      // kb_atoms, kb_relations, kb_export, kb_meaning, kb_candidates, kb_swaps and kb_scoreboard ask for nothing: no name is the whole report, no flag is the numbers now
+      if (!['kb_atoms', 'kb_relations', 'kb_export', 'kb_cross_check', 'kb_yardsticks', 'kb_frontier', 'kb_meaning', 'kb_candidates', 'kb_swaps', 'kb_scoreboard'].includes(t.name)) expect(t.inputSchema.required.length).toBeGreaterThan(0);
       for (const r of t.inputSchema.required ?? []) expect(t.inputSchema.properties[r]).toBeDefined();
     }
   });
@@ -123,6 +123,21 @@ describe('the tools answer with the text the command line prints', () => {
     expect(text).toContain('index is not built');
     const none = await call('kb_english', {});
     expect(none.result.isError).toBe(true);
+  });
+
+  test('kb_hints says the English index is not built, and needs a word', async () => {
+    expect(textOf(await call('kb_hints', { word: 'sparrow' }))).toContain('index is not built');
+    expect((await call('kb_hints', {})).result.isError).toBe(true);
+  });
+
+  test('kb_export gives the counts with no entry, one entry as Turtle, and an error for a name it does not know', async () => {
+    expect(textOf(await call('kb_export', {}))).toContain('core words');
+    const entry = textOf(await call('kb_export', { entry: 'wo3' }));
+    expect(entry).toContain('@prefix');
+    expect(entry).toContain('我');
+    const unknown = await call('kb_export', { entry: 'nope' });
+    expect(unknown.result.isError).toBe(true);
+    expect(textOf(unknown)).toContain('no entry "nope"');
   });
 
   test('kb_yardsticks names the three lists', async () => {

@@ -135,7 +135,47 @@ describe('entries without a head', () => {
     expect(r.headless.withHead).toBe(1);
     expect(r.headless.suggested.map((s) => s.entry)).toEqual(['桌子 zhuōzi']);
     expect(r.headless.suggested[0].kinds[0]).toMatchObject({ name: '家具 jiājù', start: '…-de jiājù' });
-    expect(r.headless.none).toBe(r.headless.linked - 1 - 1);
+    expect(r.headless.roots).toBe(4); // 大, 小, 人, 鸟 are core words, not gaps
+    expect(r.headless.none).toBe(r.headless.linked - 1 - 4 - 1);
+  });
+  test('a core word is a root: counted apart even when WordNet names a kind for it', () => {
+    const near = (zh) => (zh === '人' ? [{ zh: '生物', py: 'shēngwù', steps: 1, via: ['organism'], start: '…-de shēngwù' }] : startsFrom(zh));
+    const r = run([rel('kind-of', '麻雀', '鸟')], { startsFrom: near });
+    expect(r.headless.suggested.map((s) => s.entry)).toEqual(['桌子 zhuōzi']);
+    expect(r.headless.rootKinds.map((s) => s.entry)).toEqual(['人 rén']);
+    expect(renderCrossCheck(r, { section: 'headless' })).toContain('core words, with the kind WordNet would give them');
+  });
+});
+
+describe('notes (kb/cross-check-notes.json)', () => {
+  test('a wider head counts its disagreeing entries apart, and an entry that agrees stays agree', () => {
+    const notes = { wider: { 鸟: 'any bird or flying thing' } };
+    const r = run([rel('kind-of', '手指', '鸟'), rel('kind-of', '动物', '鸟'), rel('kind-of', '麻雀', '鸟')], { notes });
+    expect(r.kindOf.verdicts).toMatchObject({ wider: 2, agree: 1, unrelated: 0, reversed: 0 });
+    expect(r.kindOf.items.find((i) => i.verdict === 'wider').detail).toContain('any bird or flying thing (WordNet: ');
+    expect(r.kindOf.byHead).toEqual([]); // nothing left to ask the author about
+    expect(r.notes.wider).toEqual([{ head: '鸟', why: 'any bird or flying thing', entries: 2 }]);
+    expect(r.notes.unused).toEqual([]);
+  });
+  test('an accepted pair is told apart from a plain disagreement, for kind-of, opposites and parts', () => {
+    const notes = { accepted: { kindOf: [{ a: '动物', b: '鸟', why: 'near-synonyms' }], opposites: [{ a: '冷', b: '大', why: 'checked by hand' }], parts: [{ a: '鸟', b: '手', why: 'wings are hands here' }] } };
+    const r = run([rel('kind-of', '动物', '鸟'), rel('kind-of', '手指', '鸟'), rel('opposite', '大', '冷'), rel('part-of', '鸟', '手')], { notes });
+    expect(r.kindOf.verdicts).toMatchObject({ accepted: 1, unrelated: 1 });
+    expect(r.opposites.verdicts.accepted).toBe(1); // the pair is the same in either order
+    expect(r.parts.verdicts.accepted).toBe(1);
+    expect(r.kindOf.items.find((i) => i.verdict === 'accepted')).toMatchObject({ was: 'reversed' });
+    expect(r.notes.unused).toEqual([]);
+  });
+  test('a note that matches nothing is listed, and the report says so', () => {
+    const notes = { wider: { 山: 'a mountain is wide' }, accepted: { kindOf: [{ a: '山', b: '鸟', why: 'x' }] } };
+    const r = run([rel('kind-of', '动物', '鸟')], { notes });
+    expect(r.notes.unused).toEqual(['wider: 山', 'kindOf: 山 / 鸟']);
+    expect(renderCrossCheck(r)).toContain('match nothing now');
+  });
+  test('without notes nothing changes', () => {
+    const r = run([rel('kind-of', '动物', '鸟')]);
+    expect(r.kindOf.verdicts).toMatchObject({ reversed: 1, wider: 0, accepted: 0 });
+    expect(r.notes).toEqual({ wider: [], unused: [] });
   });
 });
 

@@ -1,14 +1,20 @@
-// WordNet cross-checks (KB_PLAN.md phase 6, K28): the dictionary's own kind-of, opposite and part-of relations against
-// what the English WordNet says about the same senses, for Claude to find what looks wrong and what is missing.
+// Checks the dictionary's own kind-of, opposite and part-of relations against what the English WordNet says about the
+// same senses. It is for Claude to find what looks wrong and what is missing (KB_PLAN.md phase 6, K28).
 // Nothing here changes data. A disagreement is a question, not an error: WordNet counts things differently, and an
 // entry may be linked to a sense that is close but not the same.
 //
-//   crossCheck({ relations, words, composites, links, index, startsFrom }) -> report
+//   crossCheck({ relations, words, composites, links, index, startsFrom, notes }) -> report
 //   renderCrossCheck(report, { section, limit }) -> the report as text
 //
 // relations   the relation list of relations.js (kb.relations().relations)
 // words       the dictionary's words { id: { term, hanzi } }; composites [{ zh, py }]
 // links       kb/wordnet/links.json: { linked: { zh: [ili] }, words: { id: [ili] } }
+// notes       kb/cross-check-notes.json: what is already understood about a disagreement, each with its reason.
+//             { wider: { head: why } }: a head used more widely than the sense WordNet has for it (東西 is any thing, WordNet's
+//               "thing" is an object), so the entries under it are counted apart as `wider`, not as disagreements;
+//             { accepted: { kindOf: [{ a, b, why }], opposites: [{ a, b, why }], parts: [{ a, b, why }] } }: one pair whose
+//               difference from WordNet was looked at and is fine (verdict `accepted`). A pair that agrees stays `agree`.
+//             A note that matches nothing is listed in report.notes.unused, so a stale one shows.
 // index       kb/cache/english-index.json: { synsets: { ili: { p, d, l, h, a, ai, w } } } (h kinds, a antonyms, ai antonyms through a
 //             similar sense, w wholes it is a part of). Without it the report is empty and says so.
 // startsFrom  english.js: the entries met on the way up from an entry's own senses
@@ -22,7 +28,8 @@
 //             other opposites), silent (WordNet records none for either)
 //   parts     "a is a part of b": agree, reversed, differs, silent (WordNet knows no wholes for a)
 //   missing   pairs WordNet states between two linked entries that the dictionary does not: opposites and parts
-//   headless  linked entries without a head, with the nearest entry WordNet calls their kind ("could start as …-de X")
+//   headless  linked entries without a head, with the nearest entry WordNet calls their kind ("could start as …-de X");
+//             a core word (the entry that is a word's own hanzi) is a root with no head by design, so it is counted apart
 
 import { formKinds } from '../form-kinds.js';
 import { wordRefIds } from '../word-refs.js';
@@ -35,7 +42,7 @@ const MAX_WHOLES = 3; // part-of climbs wholes (finger -> hand -> arm) this far
 
 export const SECTIONS = ['kindOf', 'opposites', 'parts', 'missing', 'headless'];
 
-export function crossCheck({ relations = [], words = {}, composites = [], links = {}, index = null, startsFrom = () => [] } = {}) {
+export function crossCheck({ relations = [], words = {}, composites = [], links = {}, index = null, startsFrom = () => [], notes = {} } = {}) {
   const synsets = index?.synsets ?? {};
   const byZh = new Map(composites.map((c) => [c.zh, c]));
   const linked = links.linked ?? {};
@@ -89,7 +96,29 @@ export function crossCheck({ relations = [], words = {}, composites = [], links 
   if (!index) return report;
 
   const section = (verdicts) => ({ total: 0, unchecked: 0, verdicts: Object.fromEntries(verdicts.map((v) => [v, 0])), items: [] });
-  const note = (sec, item) => {
+
+  // What the notes already explain (kb/cross-check-notes.json). `at` is the pair being judged, set at the top of each loop.
+  const widerNotes = new Map(Object.entries(notes.wider ?? {}));
+  const acceptedNotes = { kindOf: new Map(), opposites: new Map(), parts: new Map() };
+  for (const [name, list] of Object.entries(notes.accepted ?? {})) for (const n of list) acceptedNotes[name]?.set(name === 'opposites' ? pairKey(n.a, n.b) : `${n.a}|${n.b}`, n);
+  const usedNotes = new Set();
+  const AGREEING = { kindOf: ['agree', 'same-sense'], opposites: ['agree', 'indirect'], parts: ['agree'] };
+  let at = null;
+  const explained = (item) => {
+    if (!at || AGREEING[at.name].includes(item.verdict)) return item;
+    const said = acceptedNotes[at.name].get(at.key);
+    if (said) {
+      usedNotes.add(`${at.name}|${at.key}`);
+      return { ...item, verdict: 'accepted', was: item.verdict, detail: `${said.why} (WordNet: ${item.verdict}, ${item.detail})` };
+    }
+    if (at.name === 'kindOf' && widerNotes.has(at.head)) {
+      usedNotes.add(`wider|${at.head}`);
+      return { ...item, verdict: 'wider', was: item.verdict, detail: `${widerNotes.get(at.head)} (WordNet: ${item.verdict}, ${item.detail})` };
+    }
+    return item;
+  };
+  const note = (sec, raw) => {
+    const item = explained(raw);
     sec.total++;
     sec.verdicts[item.verdict]++;
     sec.items.push(item);
@@ -130,7 +159,7 @@ export function crossCheck({ relations = [], words = {}, composites = [], links 
     altCache.set(zh, out);
     return out;
   };
-  const kindOf = { ...section(['agree', 'other-sense', 'same-sense', 'reversed', 'sibling', 'unrelated']), spelled: 0 };
+  const kindOf = { ...section(['agree', 'other-sense', 'same-sense', 'reversed', 'sibling', 'unrelated', 'wider', 'accepted']), spelled: 0 };
   for (const r of relations) {
     if (r.kind !== 'kind-of' || hanziOf(r.b) === r.a) continue; // 一 under yī is the word itself, not a kind
     if (!mainFormIsBuilt(byZh.get(r.a))) {
@@ -145,6 +174,7 @@ export function crossCheck({ relations = [], words = {}, composites = [], links 
       continue;
     }
     const base = { a: nameOf(r.a), b: nameOf(r.b), status: r.status, head: r.b, pos: byZh.get(r.a)?.pos };
+    at = { name: 'kindOf', key: `${hanziOf(r.a)}|${hanziOf(r.b)}`, head: hanziOf(r.b) };
     const upA = climb(A, MAX_UP);
     const up = meets(upA, B, 1);
     if (up) {
@@ -180,6 +210,7 @@ export function crossCheck({ relations = [], words = {}, composites = [], links 
   // by head: a generic head (人, 地方, 东西) carries many entries, so one wrong link on it shows in all of them
   const heads = new Map();
   for (const i of kindOf.items) {
+    if (i.verdict === 'wider' || i.verdict === 'accepted') continue; // already understood: not a question for the author
     const h = heads.get(i.head) ?? heads.set(i.head, { head: i.b, linked: lemmas(ilisOf(i.head)), n: 0, agree: 0, off: 0, other: new Map() }).get(i.head);
     h.n++;
     if (i.verdict === 'agree' || i.verdict === 'same-sense') h.agree++;
@@ -192,7 +223,7 @@ export function crossCheck({ relations = [], words = {}, composites = [], links 
     .sort((x, y) => y.other.reduce((s, o) => s + o.n, 0) + y.off - (x.other.reduce((s, o) => s + o.n, 0) + x.off));
 
   // -- opposites ---------------------------------------------------------------------------------
-  const opposites = section(['agree', 'indirect', 'other-sense', 'same-sense', 'differs', 'silent']);
+  const opposites = section(['agree', 'indirect', 'other-sense', 'same-sense', 'differs', 'silent', 'accepted']);
   const opposite = new Set(); // every pair the dictionary calls opposite, by hanzi
   const antonyms = (ili) => synset(ili)?.a ?? [];
   const indirect = (ili) => synset(ili)?.ai ?? [];
@@ -207,6 +238,7 @@ export function crossCheck({ relations = [], words = {}, composites = [], links 
       continue;
     }
     const base = { a: nameOf(r.a), b: nameOf(r.b), status: r.status, sub: r.sub };
+    at = { name: 'opposites', key: pairKey(hanziOf(r.a), hanziOf(r.b)) };
     const direct = A.some((x) => antonyms(x).some((i) => B.includes(i))) || B.some((x) => antonyms(x).some((i) => A.includes(i)));
     if (direct) note(opposites, { ...base, verdict: 'agree', detail: `WordNet: ${lemmas(A)} is the opposite of ${lemmas(B)}` });
     else if (A.some((x) => indirect(x).some((i) => B.includes(i))) || B.some((x) => indirect(x).some((i) => A.includes(i)))) {
@@ -233,7 +265,7 @@ export function crossCheck({ relations = [], words = {}, composites = [], links 
   }
 
   // -- parts -------------------------------------------------------------------------------------
-  const parts = section(['agree', 'reversed', 'differs', 'silent']);
+  const parts = section(['agree', 'reversed', 'differs', 'silent', 'accepted']);
   const partPairs = new Set();
   // the wholes of some senses: of the senses and the kinds above them (a thumb is part of what a finger is part of), and of those wholes in turn
   const wholesOf = (ilis) => {
@@ -263,6 +295,7 @@ export function crossCheck({ relations = [], words = {}, composites = [], links 
       continue;
     }
     const base = { a: nameOf(r.a), b: nameOf(r.b), status: r.status };
+    at = { name: 'parts', key: `${hanziOf(r.a)}|${hanziOf(r.b)}` };
     const wholes = wholesOf(A);
     const upB = climb(B, 2);
     const hit = [...wholes.keys()].find((w) => upB.has(w) || B.includes(w));
@@ -307,7 +340,10 @@ export function crossCheck({ relations = [], words = {}, composites = [], links 
 
   // -- entries without a head ------------------------------------------------------------------
   const hung = new Set(relations.filter((r) => r.kind === 'kind-of' && hanziOf(r.b) !== r.a).map((r) => r.a));
-  const headless = { linked: 0, withHead: 0, suggested: [], none: 0 };
+  // A core word (the entry that is a word's own hanzi) has no description to start with a head: it is a root, not a gap.
+  // Roots are counted apart; WordNet's kind for one is a hint about its category, not something to write down.
+  const rootZh = new Set(Object.values(words).map((w) => w.hanzi).filter(Boolean));
+  const headless = { linked: 0, withHead: 0, suggested: [], none: 0, roots: 0, rootKinds: [] };
   for (const zh of Object.keys(linked)) {
     if (!byZh.has(zh)) continue;
     headless.linked++;
@@ -316,12 +352,24 @@ export function crossCheck({ relations = [], words = {}, composites = [], links 
       continue;
     }
     const found = startsFrom(zh);
-    if (!found.length) headless.none++;
-    else headless.suggested.push({ entry: nameOf(zh), en: byZh.get(zh).en, pos: byZh.get(zh).pos, kinds: found.map((f) => ({ name: `${f.zh} ${f.py}`, steps: f.steps, via: f.via, start: f.start })) });
+    const item = found.length ? { entry: nameOf(zh), en: byZh.get(zh).en, pos: byZh.get(zh).pos, kinds: found.map((f) => ({ name: `${f.zh} ${f.py}`, steps: f.steps, via: f.via, start: f.start })) } : null;
+    if (rootZh.has(zh)) {
+      headless.roots++;
+      if (item) headless.rootKinds.push(item);
+    } else if (item) headless.suggested.push(item);
+    else headless.none++;
   }
 
   headless.suggested.sort((x, y) => (y.pos === 'noun') - (x.pos === 'noun')); // a kind is clearest for things
-  return { ...report, kindOf, opposites, parts, missing, headless };
+  headless.rootKinds.sort((x, y) => (y.pos === 'noun') - (x.pos === 'noun'));
+
+  // the notes at work: each wider head with the entries it explains, and the notes that matched nothing
+  const wider = [...widerNotes].map(([head, why]) => ({ head, why, entries: kindOf.items.filter((i) => i.verdict === 'wider' && hanziOf(i.head) === head).length }));
+  const unused = [
+    ...[...widerNotes.keys()].filter((h) => !usedNotes.has(`wider|${h}`)).map((h) => `wider: ${h}`),
+    ...Object.entries(acceptedNotes).flatMap(([name, m]) => [...m.keys()].filter((k) => !usedNotes.has(`${name}|${k}`)).map((k) => `${name}: ${k.replace('|', ' / ')}`)),
+  ];
+  return { ...report, kindOf, opposites, parts, missing, headless, notes: { wider, unused } };
 }
 
 const SHOWN = { kindOf: ['reversed', 'sibling', 'unrelated'], opposites: ['other-sense', 'differs', 'same-sense'], parts: ['reversed', 'differs'] };
@@ -346,6 +394,9 @@ export function renderCrossCheck(r, { section, limit = 10 } = {}) {
       for (const i of items.slice(0, limit)) out.push(`    ${i.a}  ->  ${i.b}${i.status === 'proposed' ? ' (proposed)' : ''}: ${i.detail}`);
       if (items.length > limit) out.push(`    … ${items.length - limit} more`);
     }
+    if (name === 'kindOf' && r.notes?.wider.length) {
+      out.push(`  heads used more widely than WordNet's sense (kb/cross-check-notes.json), counted apart: ${r.notes.wider.map((w) => `${w.head} (${w.entries})`).join(', ')}`);
+    }
     if (name === 'kindOf' && s.byHead.length) {
       out.push('  heads whose WordNet link may need another sense (or whose entries WordNet does not read as kinds of it):');
       for (const h of s.byHead.slice(0, limit)) {
@@ -367,9 +418,15 @@ export function renderCrossCheck(r, { section, limit = 10 } = {}) {
   }
   if (want('headless')) {
     const h = r.headless;
-    out.push(`Entries with a WordNet link: ${h.linked}; ${h.withHead} hang under a head; ${h.suggested.length} have none but WordNet names a kind that is an entry; ${h.none} have neither`);
+    out.push(`Entries with a WordNet link: ${h.linked}; ${h.withHead} hang under a head; ${h.roots} are core words (roots, no head by design; WordNet names a kind that is an entry for ${h.rootKinds.length}); ${h.suggested.length} have none but WordNet names a kind that is an entry; ${h.none} have neither`);
     for (const i of h.suggested.slice(0, limit)) out.push(`    ${i.entry} (${i.en}): could start as ${i.kinds.slice(0, 2).map((k) => `${k.start} (${k.via.join(' < ')})`).join(' or ')}`);
     if (h.suggested.length > limit) out.push(`    … ${h.suggested.length - limit} more`);
+    if (section === 'headless' && h.rootKinds.length) {
+      out.push('  core words, with the kind WordNet would give them (a hint about the root\'s category):');
+      for (const i of h.rootKinds.slice(0, limit)) out.push(`    ${i.entry} (${i.en}): ${i.kinds.slice(0, 2).map((k) => `${k.start} (${k.via.join(' < ')})`).join(' or ')}`);
+      if (h.rootKinds.length > limit) out.push(`    … ${h.rootKinds.length - limit} more`);
+    }
   }
+  if (r.notes?.unused.length) out.push('', `Notes in kb/cross-check-notes.json that match nothing now (out of date?): ${r.notes.unused.join('; ')}`);
   return out.join('\n').trimEnd();
 }

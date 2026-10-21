@@ -33,7 +33,7 @@ import { progress } from './progress.js';
 const SKIP = new Set(['node_modules', 'dist', 'tools', '.git', '.claude']);
 // Files that ask clingo (even about the fixture: every answer is a spawned solver, about half a second) or
 // read the real data. `--fast` leaves them out.
-const SLOW = ['kb/real', 'kb/atoms', 'kb/candidates', 'kb/clingo', 'move-effects', 'kb/whatif', 'kb/kb.test', 'kb/mcp.test', 'kb/relations', 'kb/facts', 'kb/set-cover'];
+const SLOW = ['kb/real', 'kb/atoms', 'kb/candidates', 'kb/clingo', 'move-effects', 'kb/whatif', 'kb/kb.test', 'kb/mcp.test', 'kb/relations', 'kb/facts', 'kb/set-cover', 'kb/export-real'];
 // A copy of the repo, a git ref, a server over stdio: only with `--all`.
 const ON_REQUEST = ['refactor-check', 'scripts/parse-diff', 'kb/mcp-server'];
 const SLOW_FIRST = [...ON_REQUEST, ...SLOW, 'refactor-ops', 'grammar/grammar'];

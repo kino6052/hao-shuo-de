@@ -46,15 +46,15 @@ Plans and decisions: [BOOK_PLAN.md](BOOK_PLAN.md) (book, decision log D1…), [K
 | --- | --- |
 | Lessons | 26, in 3 sections (6 / 10 / 10), then 14 chapters to read, look things up in or build with |
 | Core words | 230: 53 atoms (no honest description) and 177 with a paraphrase, so potentially removable |
-| Composite words | 1555, with 1933 ways to say them (1822 built from their parts, 90 spelled whole, 21 waiting for the author to say which) |
-| Grammar patterns | 139, one file each in `src/data/grammar/` |
+| Composite words | 1669, with 2049 ways to say them (1935 built from their parts, 90 spelled whole, 24 waiting for the author to say which) |
+| Grammar patterns | 145, one file each in `src/data/grammar/` |
 | Things the language must say | 113: 65 atoms of meaning, 10 categories, 38 grammar points |
-| Lesson sentences that parse | 99.3 % |
+| Lesson sentences that parse | 99.6 % |
 | Smallest set the others can be said from | 202 words; the other 28 have a fine paraphrase |
 | Gates (`npm run check`) | 22 |
-| Test files (`npm test`) | 55 |
+| Test files (`npm test`) | 60 |
 
-The language numbers are the last row of `kb/scoreboard.csv` (2026-10-15, refactors/H1.ts: 2 op(s)); a refactor adds a new row.
+The language numbers are the last row of `kb/scoreboard.csv` (2026-10-21, sayability columns added); a refactor adds a new row.
 <!-- /generated:facts -->
 
 ## The book
@@ -159,6 +159,8 @@ While `dev` runs, two pages are served on the same address:
 | `kb/` | The knowledge base's own files: rules, reports, the explorer page and the scoreboard. See kb/README.md. |
 | `kb/reports/` | Reports the KB writes for the author to read. |
 | `kb/rules/` | The clingo rules the questions are asked with. |
+| `kb/wordnet/` | Which WordNet sense each entry says (links.json, decided by the author or by Claude) and the notice for the outside WordNet data (CREDITS.md). |
+| `kb/yardsticks/` | The word lists and rule lists the language is measured against (Mandarin and English frequency, Basic English, everyday sentences, HSK grammar, and five lists typed in by Claude). CREDITS.md says where each comes from. |
 | `public/` | Static files copied as they are into the site; pronunciation clips go in audio/. |
 | `refactors/` | Refactor lists: each change to the words as a list of ops, kept as the record of the decision. |
 | `review/` | Material for the review pages: Claude's proposals, the author's decisions and the example sentences. |
@@ -227,7 +229,7 @@ The shapes of the data are defined in TypeScript, so a mistake is a type error:
 | `npm run grammar-overview` | Builds the grammar overview chapter (src/content/appendix-grammar.ts) from the lessons' patterns: every module's info block (src/lib/lesson.ts) that isn't a note (BOOK_PLAN.md §6… |
 | `npm run check` | Runs every book gate (BOOK_PLAN.md §6) -- the first step of `npm run build`. |
 | `npm run report-heads` | Rebalancing the vocabulary by heads and naturalness: where the composites hang (src/lib/heads.js), how close they are to Mandarin (src/lib/ naturalness.js), and which roots would bring them closer. |
-| `npm run kb` | The KB for the command line, the explorer page and the Claude tools (KB_PLAN.md phase 1). |
+| `npm run kb` | The command line of the KB. The explorer page and the Claude tools use the same code, so all three answer the same. |
 | `npm run readme` | Rewrites the generated parts of the READMEs from the code itself, so they never go stale: the comment at the top of each file (its summary and its usage lines), package.json, the gate list… |
 | `npm run hooks` | Points git at .githooks/, so every commit refreshes the generated parts of the READMEs (scripts/generate-readme.js). |
 <!-- /generated:commands -->

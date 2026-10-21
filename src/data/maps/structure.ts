@@ -101,6 +101,9 @@ export default structure({
     { a: "挣", b: "花费", kind: "other-side", why: "Earning money and spending it.", proposed: true },
     { a: "平常", b: "特别", kind: "either-or", why: "Ordinary and special.", proposed: true },
     { a: "普通", b: "特别", kind: "either-or", why: "Ordinary and special.", proposed: true },
+    { a: "近", b: "远", kind: "more-or-less", why: "Near and far (WordNet pairs them; added by Claude on 2026-10-21 beside 远 / 附近).", proposed: true },
+    { a: "富", b: "穷", kind: "more-or-less", why: "Rich and poor: a lot of money and none (WordNet pairs them; added by Claude on 2026-10-21 with the two new entries).", proposed: true },
+    { a: "聪明", b: "笨", kind: "more-or-less", why: "Smart and stupid: the head is good and the head is not good (added by Claude on 2026-10-21 with the new entry 笨).", proposed: true },
   ],
 
   parts: [

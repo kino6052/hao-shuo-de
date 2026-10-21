@@ -5,7 +5,7 @@ import { join } from 'node:path';
 import { createKb } from './kb.js';
 import { source } from './fixture.js';
 import { wordRefIds } from '../word-refs.js';
-import { NAMES, appendRow, readScoreboard, renderScoreboard, scoreboardRow } from './scoreboard.js';
+import { NAMES, appendRow, readScoreboard, renderScoreboard, sayability, scoreboardRow } from './scoreboard.js';
 
 const kb = createKb(source);
 const date = new Date('2026-10-12T10:00:00Z');
@@ -48,6 +48,38 @@ describe('the row', () => {
     const row = await scoreboardRow(kb, { date, atoms: false });
     expect(row.patterns).toBe(0);
     expect(row.parse_rate).toBe('');
+  });
+});
+
+describe('sayability', () => {
+  const band = (upTo, said, total = upTo) => ({ upTo, said, near: 0, missing: total - said, total });
+  const report = {
+    mandarin: { bands: [band(500, 450), band(1000, 800), band(3000, 1500)] },
+    englishTop: { bands: [band(500, 400), band(1000, 700), band(3000, 1980)] },
+    basic: { said: 51, total: 100 },
+    sentences: { said: 7, total: 8 },
+  };
+
+  test('each band is the share said, as a fraction like parse_rate', () => {
+    expect(sayability(report)).toEqual({
+      said_mandarin_1000: 0.8,
+      said_mandarin_3000: 0.5,
+      said_english_500: 0.8,
+      said_english_1000: 0.7,
+      said_english_3000: 0.66,
+      said_basic_english: 0.51,
+      said_sentences: 0.875,
+    });
+  });
+
+  test('a list too short for a band, or no list at all, leaves that column empty', () => {
+    const short = { ...report, mandarin: { bands: [band(300, 250)] }, basic: { said: 0, total: 0 }, sentences: { said: 0, total: 0 } };
+    expect(sayability(short)).toMatchObject({ said_mandarin_1000: '', said_mandarin_3000: '', said_basic_english: '', said_sentences: '', said_english_500: 0.8 });
+  });
+
+  test('the row carries them; the fixture has no word lists, so they stay empty', async () => {
+    const row = await scoreboardRow(kb, { date, atoms: false });
+    for (const n of Object.keys(sayability(report))) expect(row[n]).toBe('');
   });
 });
 

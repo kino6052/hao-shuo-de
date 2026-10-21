@@ -1,0 +1,26 @@
+{
+  "name": "Basic English rules",
+  "typedIn": true,
+  "by": "Claude",
+  "on": "2026-10-21",
+  "checked": false,
+  "source": "C. K. Ogden, Basic English: A General Introduction with Rules and Grammar (1930). Typed in from Claude's memory of the system: the numbers (850 words; 600 things, 150 qualities, 100 operations; 18 verbs) are the ones commonly quoted, but the details of the rules may differ from the book. Not checked against it.",
+  "use": "Phase 7: sets Hao-shuo-de beside another small vocabulary on size and reach. The word list itself is kb/yardsticks/basic-english.json (the author's trimmed copy, 829 words, not Ogden's 850). The `hsd` field says what Hao-shuo-de does, left empty for the author.",
+  "items": [
+    { "id": "size", "rule": "850 words: 600 things (400 general, 200 that can be pictured), 150 qualities (100 general, 50 opposites), 100 operations (the words that do the work of verbs, prepositions, pronouns and the like).", "example": "table, quick, up", "hsd": null },
+    { "id": "eighteen-verbs", "rule": "Only 18 words work as verbs: be, do, have, say, see, seem, may, will, come, get, give, go, keep, let, make, put, send, take.", "example": "put, take, give", "hsd": null },
+    { "id": "verb-with-direction", "rule": "Other actions are said with one of those verbs and a direction word (up, down, in, out, off, over).", "example": "take off", "hsd": null },
+    { "id": "verb-and-noun", "rule": "An action can also be said with a verb and a noun for the act.", "example": "make a test (not 'test')", "hsd": null },
+    { "id": "plural", "rule": "A noun makes its plural by adding -s or -es.", "example": "book, books", "hsd": null },
+    { "id": "derived-nouns", "rule": "Add -er, -ing or -ed to a thing-word to make a new word with the same stem.", "example": "farm, farmer, farming", "hsd": null },
+    { "id": "adverb-by-ly", "rule": "A quality-word gives its adverb by adding -ly.", "example": "quick, quickly", "hsd": null },
+    { "id": "opposite-by-un", "rule": "Opposites of a quality can be made with un-.", "example": "happy, unhappy", "hsd": null },
+    { "id": "degree", "rule": "More and most go before a quality to say how much.", "example": "more beautiful", "hsd": null },
+    { "id": "questions", "rule": "A question puts the helper verb first, as in ordinary English; the 'do' helper is used when there is no other.", "example": "Do you see the cat?", "hsd": null },
+    { "id": "compound", "rule": "Two thing-words can be joined into a new one.", "example": "tooth-brush, rain-coat", "hsd": null },
+    { "id": "pronouns-inflect", "rule": "Pronouns and the verb be keep their ordinary English forms.", "example": "I, me, my, mine", "hsd": null },
+    { "id": "numbers-and-names", "rule": "Numbers, days, months, money and measures are used as in English and are not counted in the 850.", "example": "ninety, Monday", "hsd": null },
+    { "id": "international", "rule": "About 50 international words (hotel, radio, telephone) are allowed.", "example": "radio", "hsd": null },
+    { "id": "special-lists", "rule": "A field adds its own list of about 100 words (science, trade) to the 850 and 50 more for a narrower field.", "example": "chemistry words", "hsd": null }
+  ]
+}

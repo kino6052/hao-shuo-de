@@ -1,10 +1,10 @@
-// How much of the yardsticks the dictionary can say (KB_PLAN.md phase 6, K12): the word lists in kb/yardsticks/ against the
-// dictionary. Nothing here changes data.
+// Measures how much of the word lists in kb/yardsticks/ (Mandarin, English, Basic English, everyday sentences) the dictionary can say.
+// KB_PLAN.md phase 6, K12. Nothing here changes data.
 //
 //   yardstickReport({ composites, english, mandarin, basic, top }) -> { mandarin, englishTop, basic }
 //   renderYardsticks(report, { limit }) -> the report as text
 //
-// composites  the dictionary's entries [{ zh, ... }]
+// composites  the dictionary's entries [{ zh, ... }]: the composites and the core words no composite repeats (word-entries.js)
 // english     the English lookup (english.js): lookup(word) -> { glosses, sameSense, kindOf }
 // mandarin    the common Mandarin words [{ zh, py, rank }], most common first
 // basic       Basic English [{ en, group, zh: [...] }]

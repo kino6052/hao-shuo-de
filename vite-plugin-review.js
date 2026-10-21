@@ -7,7 +7,9 @@
 // makes is written at once to review/decisions/batch-<n>.json, which Claude
 // reads to apply the batch. A proposals file may also export `extras` (rank ->
 // why), entries of earlier batches that were never decided or reviewed; they
-// are shown with the batch, marked "carried over".
+// are shown with the batch, marked "carried over". A proposals file past the last rank
+// window (batch-17.mjs: the new proposed composites) is a batch of its own that holds only
+// its `extras`, with its own `title` and `carriedLabel`.
 //
 //   GET  /__review/                 the page
 //   GET  /__review/data?batch=n     the batch: entries, proposals, decisions
@@ -46,7 +48,7 @@
 //   GET  /__review/wordnet-search?ili=i1,i2   the same shape for senses already known by id (so a sense picked by hand still shows
 //                                   after a reload). Both read kb/cache/english-index.json (npm run wordnet); 503 without it.
 
-import { readFileSync, writeFileSync, existsSync, mkdirSync, statSync } from 'fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, statSync, readdirSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 
@@ -55,6 +57,14 @@ const DIR = resolve(ROOT, 'review');
 export const BATCH_SIZE = 100;
 // the review covers the frequency phases (ranks up to 1600)
 const LAST_RANK = 1600;
+
+// A proposals file past the last rank window (review/proposals/batch-17.mjs) makes a batch of its own: the entries the
+// frequency phases did not have (the new proposed composites), listed in its `extras`, with an optional `title` and `carriedLabel`.
+function lastBatch() {
+  const dir = resolve(DIR, 'proposals');
+  const named = existsSync(dir) ? readdirSync(dir).map((f) => /^batch-(\d+)\.mjs$/.exec(f)?.[1]).filter(Boolean).map(Number) : [];
+  return Math.max(Math.ceil(LAST_RANK / BATCH_SIZE), ...named);
+}
 
 // the composite review's files are batch-<n>.json; the words and kinds reviews' are words-<n>.json, kinds-<n>.json
 const decisionsPath = (n, prefix = 'batch') => resolve(DIR, 'decisions', `${prefix}-${n}.json`);
@@ -130,8 +140,10 @@ async function batchData(server, n) {
   // example sentences waiting to go in (plain pinyin), for entries without any yet
   const exampleDrafts = await fresh(resolve(DIR, 'examples', `batch-${n}.mjs`));
   const py = (f) => resolveWordRefs(f, idx);
-  const from = (n - 1) * BATCH_SIZE + 1;
-  const to = n * BATCH_SIZE;
+  // a batch past the rank windows has only its extras
+  const windowed = n <= Math.ceil(LAST_RANK / BATCH_SIZE);
+  const from = windowed ? (n - 1) * BATCH_SIZE + 1 : 0;
+  const to = windowed ? n * BATCH_SIZE : -1;
   // every composite that says it the same way (any form in common), so the
   // synonyms can be seen and kept consistent: form text -> [entry]
   const byForm = new Map();
@@ -179,7 +191,9 @@ async function batchData(server, n) {
     n,
     from,
     to,
-    batches: Math.ceil(LAST_RANK / BATCH_SIZE),
+    batches: lastBatch(),
+    ...(proposalModule.title ? { title: proposalModule.title } : {}),
+    ...(proposalModule.carriedLabel ? { carriedLabel: proposalModule.carriedLabel } : {}),
     scale: Object.fromEntries(Object.entries(NATURALNESS).map(([k, v]) => [k, v.eng])),
     entries,
     decisions: readDecisions(n),

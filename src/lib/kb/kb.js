@@ -1,6 +1,5 @@
-// The one entry point the CLI, the explorer page and the Claude tools share
-// (KB_PLAN.md phase 1, "thin scripts/kb.js"). Give it the `source` (see
-// scripts/kb-source.js) and it answers questions; it never changes data.
+// The one place the command line, the explorer page and the Claude tools all ask their questions through.
+// Give it the `source` (see scripts/kb-source.js) and it answers questions; it never changes data (KB_PLAN.md phase 1).
 //
 //   const kb = createKb(source);
 //   kb.word('dēng')            the word card (with the atoms its paraphrase and its description come down to)
@@ -28,12 +27,15 @@ import { makeParseText, renderParse, viewParse } from './parse.js';
 import { atoms, atomWord, renderAtoms, renderAtomWord } from './atoms.js';
 import { relationReport, renderRelations, renderKindTree } from './relations.js';
 import { createEnglish, renderEnglish } from './english.js';
+import { hintReport, renderHints } from './hints.js';
+import { buildExport, exportFragment, exportTurtle, renderExportSummary } from './export.js';
 import { crossCheck, renderCrossCheck } from './cross-check.js';
 import { frontier, renderFrontier } from './frontier.js';
 import { renderYardsticks, yardstickReport } from './yardsticks.js';
 import { meaningReport, meaningWord, renderMeaning, renderMeaningWord } from './meaning.js';
 import { restsOnModel } from './rests-on.js';
 import { candidateModel, renderAddition, renderAudit, renderRemovalCandidates, renderRootCandidates, renderSwaps } from './candidates.js';
+import { wordEntries } from './word-entries.js';
 
 // freq: the Mandarin frequency list [{ zh, py, rank }]; drafts: how words would be said without a stored paraphrase { id: { forms, verdict } }
 export function createKb(source, { rules = readRules('base', 'whatif'), freq = null, drafts = {}, parseMemo = null, relationRules = {}, englishData = null, yardstickData = null } = {}) {
@@ -54,9 +56,18 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
   let frontierReport = null;
   let yardstickLists = null; // the word lists are read once (kb/yardsticks/)
   const listsOf = () => (yardstickLists ??= yardstickData?.() ?? {});
-  const yardsticksOf = () => (yardsticks ??= yardstickReport({ composites: source.composites, english: englishOf(), ...listsOf() }));
+  // The entries the English and Mandarin checks count: the composites, and the core words no composite repeats (球, 东, 没).
+  let counted = null;
+  const countedOf = () => {
+    if (!counted) {
+      const data = englishData?.() ?? {};
+      counted = { data, ...wordEntries({ words, composites: source.composites, links: data.links ?? {} }) };
+    }
+    return counted;
+  };
+  const yardsticksOf = () => (yardsticks ??= yardstickReport({ composites: countedOf().entries, english: englishOf(), ...listsOf() }));
 
-  const englishOf = () => (englishModel ??= createEnglish({ composites: source.composites, ...(englishData?.() ?? {}) }));
+  const englishOf = () => (englishModel ??= createEnglish({ ...countedOf().data, composites: countedOf().entries, links: countedOf().links }));
   const relationsOf = () => (relationsReport ??= relationReport(source, facts, relationRules));
 
   const parseText = makeParseText({ patterns: source.patterns ?? [], words, composites: source.composites, memo: parseMemo?.space({ patterns: source.patterns ?? [], words, composites: source.composites }) });
@@ -107,6 +118,14 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
     english: (text) => englishOf().lookup(text),
     englishSenses: (zh) => englishOf().senses(zh),
 
+    // WordNet hints for drafting a description of a word with no entry (hints.js): its senses, the entry each can start from,
+    // the opposite and the whole. English or Mandarin.
+    hints: (text, opts) => hintReport(englishOf(), text, opts),
+
+    // The dictionary as OntoLex-Lemon in Turtle (export.js): the words, the entries with their WordNet links, the relations.
+    // -> { prefixes, header, blocks, counts }; export.js turns it into the file, or one entry's fragment.
+    exportModel: (opts) => buildExport({ words, composites: source.composites, links: countedOf().data.links ?? {}, relations: relationsOf().relations, ...opts }),
+
     // The dictionary's kind-of, opposite and part-of relations against WordNet's (cross-check.js): where they disagree,
     // what WordNet states that the dictionary does not, and the entries without a head that WordNet could give one.
     crossCheck: () => (crossChecked ??= crossCheck({ relations: relationsOf().relations, words, composites: source.composites, ...englishOf().data, startsFrom: englishOf().startsFrom })),
@@ -115,7 +134,7 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
     yardsticks: yardsticksOf,
 
     // What the yardsticks cannot say yet and the Mandarin word that would fix each (frontier.js).
-    frontier: () => (frontierReport ??= frontier({ yardsticks: yardsticksOf(), english: englishOf(), composites: source.composites, words, mandarin: listsOf().mandarin ?? [] })),
+    frontier: () => (frontierReport ??= frontier({ yardsticks: yardsticksOf(), english: englishOf(), composites: countedOf().entries, words, mandarin: listsOf().mandarin ?? [] })),
 
     // Meaning links (K19): what the words say of the primes and categories, and which primes a description reaches.
     // No name: the report. A name: that word's line, { id, term, line }.
@@ -156,4 +175,4 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
   };
 }
 
-export { meaningWord, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, viewParse, renderAtoms, renderAtomWord, renderRelations, renderKindTree, renderEnglish, renderCrossCheck, renderFrontier, renderYardsticks, renderAddition, renderAudit, renderRemovalCandidates, renderRootCandidates, renderSwaps };
+export { meaningWord, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, viewParse, renderAtoms, renderAtomWord, renderRelations, renderKindTree, renderEnglish, renderHints, exportTurtle, exportFragment, renderExportSummary, renderCrossCheck, renderFrontier, renderYardsticks, renderAddition, renderAudit, renderRemovalCandidates, renderRootCandidates, renderSwaps };

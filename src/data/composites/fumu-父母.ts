@@ -8,6 +8,7 @@ export default composite({
   en: "parent",
   ru: "родитель",
   pos: "noun",
+  head: "ren2",
   hsd: ["{{word:ba4ba}}-{{word:ma1ma}}"],
   tts: ["爸爸妈妈"],
   fit: "word",

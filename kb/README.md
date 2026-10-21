@@ -54,6 +54,8 @@ node scripts/kb.js atoms [word]                                         # the at
 node scripts/kb.js relations [kind] [--status proposed|accepted] [--limit N]  # synonyms, opposites, connections and the rest
 node scripts/kb.js relations tree [word] [--limit N]                    # what hangs under what: the kind-of tree of every word, or of one
 node scripts/kb.js english <word> [--json]                              # which entries say an English word: by gloss, by WordNet sense, as a kind of
+node scripts/kb.js hints <word> [--limit N]                             # WordNet hints for drafting a description of a word with no entry (English or Mandarin)
+node scripts/kb.js export [--all] [--base IRI] [--out FILE] [--stdout]  # the dictionary as OntoLex Turtle (to kb/cache/export/hao-shuo-de.ttl); --all adds the proposed relations
 node scripts/kb.js cross-check [kindOf|opposites|parts|missing|headless] [--limit N]  # the dictionary's kind-of, opposite and part-of relations against WordNet's
 node scripts/kb.js frontier [words|mandarin|sentences] [--limit N]      # what the dictionary cannot say yet and the word that would fix each
 node scripts/kb.js yardsticks [--limit N]                               # how much of the Mandarin and English word lists and Basic English the dictionary can say
@@ -89,6 +91,8 @@ node scripts/kb.js engine                                               # which 
 | `kb_atoms` | Which dictionary words are atoms: the words the others cannot be said from. |
 | `kb_relations` | The relations between words and between composites: opposites, close words, the same description, kind-of (a composite and its head), agents, categories, and phrases that stand in for a missing opposite. |
 | `kb_english` | Which dictionary entries say an English word, in three tiers: the entries whose gloss has the word, the entries that share a WordNet sense with it (its synonyms), and, when neither says it… |
+| `kb_hints` | Hints for describing a word the dictionary does not say yet (English or Mandarin): what WordNet says it means and which entry to start from. |
+| `kb_export` | The dictionary as OntoLex-Lemon Turtle, the format Protégé opens: one entry alone, or the counts. |
 | `kb_cross_check` | The dictionary's kind-of, opposite and part-of relations checked against WordNet's, for the entries that have a WordNet link: which relations WordNet agrees with, which it reads the other way round or not at all… |
 | `kb_yardsticks` | How much of the word lists the dictionary can say: the common Mandarin words, the 3000 most common English words and Basic English, with the first 500, 1000 and 3000 apart and the most common words still missing. |
 | `kb_frontier` | What the dictionary cannot say yet, with the fix for each: the common English words with no entry (is there an entry WordNet gives for it that is not linked, a common Mandarin word that would carry it… |
@@ -113,14 +117,16 @@ node scripts/kb.js engine                                               # which 
 | `src/lib/kb/check-form.js` | Checking a Hao-shuo-de form before it goes anywhere (KB_PLAN.md phase 1, `kb_check_form`): the same rules the book gates apply to composites… |
 | `src/lib/kb/class-proposals.js` | Word classes the parser can propose (KB_PLAN.md K6). A word lists the classes it fills: its part of speech, and the classes it lists besides (`classes` in its data, each with a why and an example). |
 | `src/lib/kb/clingo.js` | The reasoner (KB_PLAN.md K1): clingo, answer set programming. Two ways to run it, the same answers either way. |
-| `src/lib/kb/cross-check.js` | WordNet cross-checks (KB_PLAN.md phase 6, K28): the dictionary's own kind-of, opposite and part-of relations against what the English WordNet says about the same senses… |
-| `src/lib/kb/english.js` | English to Hao-shuo-de (KB_PLAN.md phase 6, K4, K15): given an English word, which entries say it, in three tiers. |
+| `src/lib/kb/cross-check.js` | Checks the dictionary's own kind-of, opposite and part-of relations against what the English WordNet says about the same senses. |
+| `src/lib/kb/english.js` | Finds the entries that say an English word, in three tiers: the gloss, the same WordNet sense, a kind of. |
+| `src/lib/kb/export.js` | Writes the dictionary as OntoLex-Lemon Turtle, a standard format that tools like Protégé can open and share. |
 | `src/lib/kb/facts.js` | The facts the reasoner works on (KB_PLAN.md K2): everything in src/data and the book, written as clingo facts. |
 | `src/lib/kb/fixture.js` | A tiny made-up language for the KB tests: twelve words, a few composites, one coverage group, two lessons. |
 | `src/lib/kb/form-report.js` | The composite dictionary against the grammar (KB_PLAN.md phase 4, K7): every description of a composite (src/data/composites) is a piece of Hao-shuo-de, so the patterns should read it. |
-| `src/lib/kb/frontier.js` | The frontier (KB_PLAN.md phase 6, K28): what the dictionary cannot say yet, and the word that would fix each. |
+| `src/lib/kb/frontier.js` | Lists what the dictionary cannot say yet, and the Mandarin word that would fix each. |
 | `src/lib/kb/grammar-uses.js` | "Which grammar patterns does a word carry?" (KB_PLAN.md K20). A pattern names a word in three places: the words in its rules (=bie2), the words in its template, and the words in its examples. |
-| `src/lib/kb/kb.js` | The one entry point the CLI, the explorer page and the Claude tools share (KB_PLAN.md phase 1, "thin scripts/kb.js"). |
+| `src/lib/kb/hints.js` | Hints for describing a new word: for an English or Mandarin word, what WordNet says it means and which entry the description can start from. |
+| `src/lib/kb/kb.js` | The one place the command line, the explorer page and the Claude tools all ask their questions through. |
 | `src/lib/kb/mcp.js` | The Model Context Protocol, the small part the KB needs: JSON-RPC 2.0, one message per line over stdio. |
 | `src/lib/kb/meaning.js` | Meaning links (KB_PLAN.md K19, phase 5): what the words say of the NSM primes, Aristotle's categories and the grammar items, and which primes each description reaches. |
 | `src/lib/kb/parse-diff.js` | "What did my edit do to the parses?" (KB_PLAN.md K20). |
@@ -131,11 +137,14 @@ node scripts/kb.js engine                                               # which 
 | `src/lib/kb/rests-on.js` | Which atoms a word rests on (KB_PLAN.md K24: "each word shows which atoms its paraphrase and its description come down to"). |
 | `src/lib/kb/review.js` | The word and kinds review (KB_PLAN.md phase 2): what the review pages show for a batch, and what the author's decisions turn into. |
 | `src/lib/kb/rules.js` | The rule files (kb/rules/*.lp), read from disk. Node and bun only: the learner pages never run the reasoner. |
-| `src/lib/kb/scoreboard.js` | The scoreboard (KB_PLAN.md phase 3): a few numbers about the language, one row per change, kept in kb/scoreboard.csv. |
+| `src/lib/kb/scoreboard.js` | The scoreboard: a few numbers about the language, one row per change, kept in kb/scoreboard.csv. |
 | `src/lib/kb/set-cover.js` | The smallest set of things that together carry every item (KB_PLAN.md phase 4, "cover the core"). |
-| `src/lib/kb/tools.js` | The Claude tools of the KB (KB_PLAN.md phase 1): what each is called, what it asks for, and how it answers. |
+| `src/lib/kb/tools.js` | The Claude tools of the KB: what each is called, what it asks for, and how it answers. |
+| `src/lib/kb/turtle-check.js` | A small Turtle reader the tests use to check that the exported file is valid. |
+| `src/lib/kb/typed-lists.js` | Reads and checks the five lists Claude typed in from memory (Universal Dependencies relations, WALS features, NSM sentences, Toki Pona rules and Basic English rules). |
 | `src/lib/kb/whatif.js` | "What if we drop these words?" (KB_PLAN.md K10). |
-| `src/lib/kb/yardsticks.js` | How much of the yardsticks the dictionary can say (KB_PLAN.md phase 6, K12): the word lists in kb/yardsticks/ against the dictionary. |
+| `src/lib/kb/word-entries.js` | Counts a core word as an entry in the English and Mandarin checks (yardsticks.js, english.js, frontier.js). |
+| `src/lib/kb/yardsticks.js` | Measures how much of the word lists in kb/yardsticks/ (Mandarin, English, Basic English, everyday sentences) the dictionary can say. |
 | `kb/rules/atoms.lp` | Which words are atoms (KB_PLAN.md K3, K8, phase 2: the smallest defining sets). |
 | `kb/rules/base.lp` | Relations every question uses (KB_PLAN.md phase 1). Read together with the facts from src/lib/kb/facts.js. |
 | `kb/rules/kernel.lp` | The kernel and the core of the paraphrase graph (KB_PLAN.md phase 2; after Harnad's work on dictionary graphs). |

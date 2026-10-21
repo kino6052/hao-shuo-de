@@ -1,11 +1,12 @@
-// English to Hao-shuo-de (KB_PLAN.md phase 6, K4, K15): given an English word, which entries say it, in three tiers.
+// Finds the entries that say an English word, in three tiers: the gloss, the same WordNet sense, a kind of. KB_PLAN.md phase 6, K4, K15.
 //
 //   1. glosses    an entry whose English gloss has the word ("quick, to run" has "quick" and "run")
 //   2. same sense an entry linked to a WordNet synset the word belongs to: its synonyms ("buy" finds the gloss of 买)
 //   3. kind of    nothing in 1 and 2: walk up "is a kind of" from the word's senses to the first entry on the way, which
 //                 offers "…-de X" as a starting description ("sparrow" -> bird -> "…-de niǎo")
 //
-//   createEnglish({ composites, links, index }) -> { lookup(text), senses(zh), ready }
+//   createEnglish({ composites, links, index }) -> { lookup(text), senses(zh), entriesFor(ili), kindFrom(ili), sensesOfMandarin(zh), ready }
+//   (entriesFor, kindFrom and sensesOfMandarin work one sense at a time, for hints.js)
 //
 // composites  the dictionary's entries [{ zh, py, en, pos }]
 // links       kb/wordnet/links.json: { linked: { zh: [ili] }, words: { id: [ili] } }
@@ -50,7 +51,14 @@ export function baseForms(word) {
   return out;
 }
 
-export function createEnglish({ composites = [], links = {}, index = null } = {}) {
+// Mandarin word -> [ili] over the synsets' Mandarin words (z)
+function buildZhIndex(index) {
+  const out = new Map();
+  for (const [ili, s] of Object.entries(index?.synsets ?? {})) for (const zh of s.z ?? []) out.set(zh, [...(out.get(zh) ?? []), ili]);
+  return out;
+}
+
+export function createEnglish({ composites = [], links = {}, index = null, notes = {} } = {}) {
   const byZh = new Map(composites.map((c) => [c.zh, c]));
   const linked = links.linked ?? {};
   // the entries behind each synset
@@ -69,6 +77,7 @@ export function createEnglish({ composites = [], links = {}, index = null } = {}
     return { zh, py: c.py, en: c.en, pos: c.pos };
   };
   const synset = (ili) => index?.synsets?.[ili];
+  let zhIndex = null; // Mandarin word -> senses, built the first time a Mandarin word is asked
   const ilisOf = (word) => {
     if (!index) return [];
     // the word itself, or the base of its regular ending, then the base an entry lists for an irregular form (saw -> see)
@@ -119,7 +128,7 @@ export function createEnglish({ composites = [], links = {}, index = null } = {}
 
   return {
     ready: !!index,
-    data: { links, index }, // what the other checks (cross-check.js, frontier.js) read, so the 20 MB are read once
+    data: { links, index, notes }, // what the other checks (cross-check.js, frontier.js) read, so the 20 MB are read once
     senseIds: ilisOf, // an English word's senses, the common ones first
 
     // -> the entries met on the way up from an entry's own senses (what WordNet calls its kind), nearest first, as tier 3 gives them
@@ -147,6 +156,15 @@ export function createEnglish({ composites = [], links = {}, index = null } = {}
       if (!ilis.length && !out.glosses.length) out.note = `"${query}" is not in the English WordNet.`;
       return out;
     },
+
+    // -> the entries linked to one WordNet sense (what already says it)
+    entriesFor: (ili) => (byIli.get(ili) ?? []).map(entry),
+
+    // -> the first entries met on the way up from one sense, nearest first (tier 3 for a single sense)
+    kindFrom: (ili) => walkUp([ili]),
+
+    // -> the WordNet senses that list a Mandarin word as a translation (omw-cmn), for a word with no entry
+    sensesOfMandarin: (zh) => (zhIndex ??= buildZhIndex(index)).get(zh) ?? [],
 
     // -> an entry's WordNet senses, for its card: [{ ili, pos, definition, lemmas, kindOf: [lemma] }]
     senses(zh) {
