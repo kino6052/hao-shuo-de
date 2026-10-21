@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'bun:test';
-import { buildFacts, programFor } from './facts.js';
+import { buildFacts, compositesAbout, programFor } from './facts.js';
 import { readRules } from './rules.js';
 import { solve, sym } from './clingo.js';
 import { removal, renderRemoval } from './whatif.js';
@@ -52,14 +52,15 @@ describe('remove a word from the fixture language', () => {
     expect(renderRemoval(r)).toContain('sentences in lesson text 1');
   });
 
-  // The program leaves out the facts the rules do not read (programFor). Every atom the rules derive must be the same with
-  // the whole fact text: a predicate dropped by mistake changes one of them.
+  // The program leaves out the facts the rules do not read (programFor) and the composites the words do not touch
+  // (compositesAbout). Every atom the rules show must be the same with the whole fact text: a predicate or a composite
+  // dropped by mistake changes one of them.
   test('the facts the rules do not read change nothing: the same atoms come out of the whole fact text', async () => {
     const atoms = async (program) => (await solve(program, { models: 1 })).models[0].atoms.slice().sort();
     for (const ids of [['ji1'], ['fan4'], ['chi1'], ['dong1'], ['jian1'], ['dui4'], ['fei1', 'ji1'], ['wo3', 'de']]) {
       const drops = ids.map((id) => `drop(${sym(id)}).`);
       const whole = [ctx.rules, ctx.facts.program, ctx.facts.textProgram(ids), ...drops].join('\n');
-      const cut = [ctx.rules, programFor(ctx.rules, ctx.facts.program), programFor(ctx.rules, ctx.facts.textProgram(ids)), ...drops].join('\n');
+      const cut = [ctx.rules, programFor(ctx.rules, compositesAbout(ctx.facts.program, ids)), programFor(ctx.rules, ctx.facts.textProgram(ids)), ...drops].join('\n');
       expect(cut.length).toBeLessThan(whole.length);
       expect(await atoms(cut)).toEqual(await atoms(whole));
     }

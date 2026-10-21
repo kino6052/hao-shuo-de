@@ -369,6 +369,36 @@ export function programFor(rules, facts) {
     .join('\n');
 }
 
+// -> `facts` with only the composite facts a removal of `ids` can change: the uses of the words, the forms of the
+// composites that use one of them, the heads that are one of the words or one of those composites. A composite that uses
+// none of them keeps every form, so it is never to redo and loses no form; a use of another word breaks no form. The
+// what-if needs this since the yardstick rounds: with 5,490 composites its program was 1,597,071 bytes for the eight
+// commonest words, 1,054,518 of it `uses`. (So in_composite and composite_uses of base.lp only see the words dropped.)
+export function compositesAbout(facts, ids) {
+  const words = new Set(ids.map(sym));
+  const lines = String(facts).split('\n');
+  const args = (line) => /^[a-z_]+\(("(?:[^"\\]|\\.)*"),(.*)\)\.$/.exec(line);
+  const usesWord = (m) => words.has(m[2].slice(m[2].lastIndexOf(',') + 1));
+  const hit = new Set();
+  for (const line of lines) {
+    if (!line.startsWith('uses(')) continue;
+    const m = args(line);
+    if (m && usesWord(m)) hit.add(m[1]);
+  }
+  return lines
+    .filter((line) => {
+      const p = /^(uses|form|head_word|head_comp)\(/.exec(line)?.[1];
+      if (!p) return true;
+      const m = args(line);
+      if (!m) return true;
+      if (p === 'uses') return usesWord(m);
+      if (p === 'form') return hit.has(m[1]);
+      if (p === 'head_word') return words.has(m[2]);
+      return hit.has(m[2]);
+    })
+    .join('\n');
+}
+
 // -> the fact lines that name a constant (a word id, or a composite's hanzi).
 export function factsAbout(lines, name) {
   const needle = /^[a-z][A-Za-z0-9_']*$/.test(name) ? name : str(name);

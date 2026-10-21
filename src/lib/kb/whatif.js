@@ -10,11 +10,12 @@
 //   renderRemoval(r)   -> the report as text, for the CLI and the Claude tools
 //
 // ctx = { facts, source, rules }: buildFacts(source), the source, and the rule
-// text to run (base + whatif). The program holds only the facts those rules read (programFor in facts.js), so it
-// stays under clingo-wasm's 1 MB however many composites there are.
+// text to run (base + whatif). The program holds only the facts those rules read (programFor in facts.js), and of the
+// composites only those the words touch (compositesAbout), so it stays under clingo-wasm's 1 MB however many composites
+// there are.
 
 import { solve, tables, sym } from './clingo.js';
-import { programFor } from './facts.js';
+import { compositesAbout, programFor } from './facts.js';
 import { replaceWordRefs, refTerm, wordRefIds } from '../word-refs.js';
 import { patternsCarrying, renderPatternUses } from './grammar-uses.js';
 import { restsOnLoss, restsOnModel } from './rests-on.js';
@@ -38,8 +39,8 @@ export async function removal(ctx, ids) {
   const { source, facts } = ctx;
   const words = source.words;
   for (const id of ids) if (!Object.hasOwn(words, id)) throw new Error(`no word "${id}"`);
-  // the sentences and mentions of just these words, and only the facts the rules read: all of them would not fit in clingo-wasm
-  const program = [ctx.rules, programFor(ctx.rules, facts.program), programFor(ctx.rules, facts.textProgram(ids)), ...ids.map((id) => `drop(${sym(id)}).`)].join('\n');
+  // the sentences, mentions and composites of just these words, and only the facts the rules read: all of them would not fit in clingo-wasm
+  const program = [ctx.rules, programFor(ctx.rules, compositesAbout(facts.program, ids)), programFor(ctx.rules, facts.textProgram(ids)), ...ids.map((id) => `drop(${sym(id)}).`)].join('\n');
   const result = await solve(program, { models: 1 });
   if (result.status !== 'SATISFIABLE') throw new Error(`the what-if has no answer (${result.status})`);
   const t = tables(result.models[0]);
