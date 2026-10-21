@@ -11,9 +11,11 @@
 // links       the same links, with `linked[hanzi]` filled from `words[id]` for those new entries
 
 // 'to love, have compassion for, show deep affection to; ...' -> 'to love, have compassion for': the first clause is its gloss
+// ('what? which?; ...' -> 'what, which': a question mark ends a gloss word like a comma does)
 function glossOf(text) {
-  const clean = String(text ?? '').replace(/\{\{[^}]*\}\}/g, '').replace(/\([^)]*\)/g, '');
-  return clean.split(/[;:.]/)[0].split(',').slice(0, 3).join(',').replace(/\s+/g, ' ').trim();
+  const clean = String(text ?? '').replace(/\{\{[^}]*\}\}/g, '').replace(/\([^)]*\)/g, '').replace(/[?!]/g, ',');
+  const parts = clean.split(/[;:.]/)[0].split(',').map((p) => p.replace(/\s+/g, ' ').trim()).filter(Boolean);
+  return parts.slice(0, 3).join(', ');
 }
 
 export function wordEntries({ words = {}, composites = [], links = {} } = {}) {

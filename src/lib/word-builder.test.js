@@ -92,6 +92,11 @@ describe("render: nouns", () => {
     const n = node("东西", { where: word(node("bao1"), { position: "under" }) });
     expect(render(n, py)).toBe("zài-bāo-xià-miàn-de dōng-xi");
   });
+
+  test("a place that has its own where says zài once", () => {
+    const road = node("lu4", { where: word(node("shui3")) });
+    expect(render(node("东西", { where: word(road) }), hz)).toBe("在水里的路里的东西");
+  });
 });
 
 describe("render: verbs", () => {

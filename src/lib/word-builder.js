@@ -279,6 +279,13 @@ function renderWay(node, sys) {
   return sys.hyphen([renderAdj(node, sys), sys.wayDe]);
 }
 
+// A place whose noun has its own where, and nothing before it, is drawn
+// starting with zài already (zài-guó-lǐ-de dà-de dì-fang): no second zài.
+const startsWithZai = (answer) => {
+  const a = answer.node.answers ?? {};
+  return Boolean(a.where && !a.from && !a.to);
+};
+
 function renderNoun(node, sys) {
   const a = node.answers;
   const de = sys.word("de");
@@ -286,7 +293,7 @@ function renderNoun(node, sys) {
   return sys.space([
     a.from && part([sys.word("cong2"), renderPlace(a.from, sys), sys.word("lai2"), de]),
     a.to && part([sys.word(a.to.via || DEFAULT_VIA), renderPlace(a.to, sys), de]),
-    a.where && part([sys.word("zai4"), renderPlace(a.where, sys), de]),
+    a.where && part([!startsWithZai(a.where) && sys.word("zai4"), renderPlace(a.where, sys), de]),
     a.does && sys.hyphen([sys.glue(draw(a.does.node, sys)), de]),
     a.kind && sys.hyphen([renderAdj(a.kind.node, sys), de]),
     a.color && sys.hyphen([sys.word(a.color.node.id), de]),

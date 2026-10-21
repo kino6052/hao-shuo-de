@@ -16,6 +16,10 @@ describe('word entries', () => {
     expect(entries.find((e) => e.zh === '球')).toMatchObject({ py: 'qiú', en: 'ball, sphere', pos: 'noun', word: 'qiu2' });
     expect(entries.find((e) => e.zh === '孩')).toMatchObject({ en: 'child', word: 'hai2' }); // a sense counts too
   });
+  test('a question word’s gloss drops the question marks', () => {
+    const shen2me = { term: 'shénme', hanzi: '什么', definition: { eng: 'what? which?; it stays where the thing would be' } };
+    expect(wordEntries({ words: { shen2me } }).entries[0].en).toBe('what, which');
+  });
   test('the word’s links reach the new entry, and an entry keeps its own links', () => {
     const { links: out } = wordEntries({ words, composites, links });
     expect(out.linked).toEqual({ 人: ['person'], 球: ['ball1'] });
