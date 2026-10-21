@@ -272,7 +272,7 @@ const PARTS = {
       // the gates have their own table, and `prepare` is `hooks` run by the package manager
       const shown = Object.entries(pkg.scripts).filter(([name]) => !gates.has(name) && name !== 'prepare');
       const rows = shown.map(([name, command]) => {
-        const file = /scripts\/([\w.-]+\.js)/.exec(command)?.[1];
+        const file = /scripts\/([\w./-]+\.js)/.exec(command)?.[1];
         const summary = notes[name] ?? (file ? summaryOf(`scripts/${file}`) : '');
         if (!summary) missing.push(`package.json script "${name}"`);
         return [`\`npm run ${name}\``, summary ?? ''];

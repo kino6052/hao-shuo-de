@@ -52,7 +52,7 @@ Plans and decisions: [BOOK_PLAN.md](BOOK_PLAN.md) (book, decision log D1…), [K
 | Lesson sentences that parse | 99.6 % |
 | Smallest set the others can be said from | 202 words; the other 28 have a fine paraphrase |
 | Gates (`npm run check`) | 22 |
-| Test files (`npm test`) | 86 |
+| Test files (`npm test`) | 87 |
 
 The language numbers are the last row of `kb/scoreboard.csv` (2026-10-21, refactors/K15.ts: 20 op(s)); a refactor adds a new row.
 <!-- /generated:facts -->
@@ -170,6 +170,7 @@ While `dev` runs, two pages are served on the same address:
 | `review/examples/` | Example sentences for the composite review batches. |
 | `review/proposals/` | Claude's proposals for each review batch. |
 | `scripts/` | Command-line tools: the gates (check-*), the generators, the word and refactor tools, and the KB command line. |
+| `scripts/round/` | The yardstick rounds: check composite specs, then write the refactor list and the review batch (KB_PLAN.md Phase 9). |
 | `src/` | The app: Preact components, the book's content, the language data and the shared libraries. |
 | `src/components/` | Preact components, each with its own .module.css. |
 | `src/content/` | The book: one folder per lesson, the intro and appendix chapters, and the dictionary pages. book.js sets the order. |
@@ -223,6 +224,7 @@ The shapes of the data are defined in TypeScript, so a mistake is a type error:
 | `npm run data` | Writes the index files of the data folders, so a word, a composite entry or a coverage group is added or removed by adding or deleting its file. |
 | `npm run word` | One word at a time: look a word up, or change it everywhere it's used. |
 | `npm run refactor` | Applies a refactor list: a file in refactors/ whose default export is a list of word ops (see scripts/refactor-lib.js for each op's fields), in order. |
+| `npm run round` | Runs one yardstick round, from picking the missing words to writing the review batch. |
 | `npm run graph-report` | What the vocabulary graph says (src/lib/graph.js), as text that can be compared before and after a refactor. |
 | `npm run report-roots` | Which roots would bring Hao-shuo-de closest to real Chinese: for every character the dictionary doesn't have yet, how many words of the frequency list it would complete… |
 | `npm run plan-4b` | Rewrites the §4b table of BOOK_PLAN.md (which words each lesson introduces) from the lessons themselves, so a word refactor never needs the table edited by hand. |

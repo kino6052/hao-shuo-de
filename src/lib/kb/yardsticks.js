@@ -14,9 +14,9 @@
 // An English word is `said` when an entry's gloss has it or an entry shares its WordNet sense, `near` when only a walk up
 // "is a kind of" finds a starting point (…-de X), `missing` when nothing does. A Mandarin word is said when the dictionary has
 // an entry for it. A sentence is said when entries cover every one of its characters (longest entry first; grammar is not
-// checked here), and each character no entry covers is shown with the sentences it alone holds back. The bands (first 500, 1000, 3000) show whether the gaps are among the common words or only far down.
+// checked here), and each character no entry covers is shown with the sentences it alone holds back. The bands (first 500, 1000, 3000, 4000, and the whole list) show whether the gaps are among the common words or only far down (K30 finishes all 5329 Mandarin words).
 
-const BANDS = [500, 1000, 3000];
+const BANDS = [500, 1000, 3000, 4000];
 const MAX_ENTRY = 6; // the longest entry the cut looks for, in characters
 const PUNCTUATION = /[，。！？、；：“”‘’…—\s]/;
 
@@ -56,7 +56,9 @@ export function englishVerdict(english, word) {
 }
 
 function bands(items, verdictOf) {
-  const out = BANDS.filter((n) => n <= items.length || n === BANDS.at(-1)).map((n) => ({ upTo: Math.min(n, items.length), said: 0, near: 0, missing: 0, total: 0 }));
+  // the bands under the list's length, then the whole list
+  const cuts = [...new Set([...BANDS.filter((n) => n < items.length), items.length])];
+  const out = cuts.map((n) => ({ upTo: n, said: 0, near: 0, missing: 0, total: 0 }));
   const verdicts = items.map(verdictOf);
   for (const b of out) {
     for (let i = 0; i < b.upTo; i++) {

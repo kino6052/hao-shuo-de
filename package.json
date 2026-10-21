@@ -16,6 +16,7 @@
     "check-sounds": "node scripts/check-sounds.js",
     "word": "node scripts/word.js",
     "refactor": "node scripts/refactor.js",
+    "round": "node scripts/round/round.js",
     "graph-report": "node scripts/graph-report.js",
     "report-roots": "node scripts/report-roots.js",
     "plan-4b": "node scripts/generate-plan-4b.js",

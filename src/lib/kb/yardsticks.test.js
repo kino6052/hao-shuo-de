@@ -63,6 +63,13 @@ describe('yardstick report', () => {
     expect(r.englishTop.missing).toEqual(['eat']);
     expect(r.englishTop.near).toEqual(['sparrow']);
   });
+  test('the bands under the list, then the whole list once (K30 finishes all of it)', () => {
+    const long = Array.from({ length: 4500 }, (_, i) => ({ zh: i === 3999 ? '水' : `词${i}`, py: '', rank: i + 1 }));
+    const b = yardstickReport({ composites, english, mandarin: long }).mandarin.bands;
+    expect(b.map((x) => x.upTo)).toEqual([500, 1000, 3000, 4000, 4500]);
+    expect(b.map((x) => x.said)).toEqual([0, 0, 0, 1, 1]);
+    expect(yardstickReport({ composites, english, mandarin: long.slice(0, 3000) }).mandarin.bands.map((x) => x.upTo)).toEqual([500, 1000, 3000]);
+  });
   test('Basic English: the verdicts, and whether the authors Mandarin is an entry', () => {
     expect(r.basic).toMatchObject({ total: 3, said: 1, near: 1, missing: 1, zhSaid: 1 });
     expect(r.basic.words).toEqual([{ en: 'eat', group: 'operations', zh: ['吃'], zhSaid: false }]);
