@@ -115,6 +115,7 @@ The other units, roughly: **people** (body, face, family, life stages, jobs, fee
 ## D. The book
 
 - [x] **D1. The categorical dictionary** (`src/components/CategoricalDictionarySection.jsx`) is built from the topic net, like the pages of a picture dictionary: units, then topics, then the entries of each page, core words marked, closed by default. An entry under two topics shows in both, with an "also under …" line. A switch shows the kind net.
+  - Changed 2026-10-21 (the author: every entry must be a Hao-shuo-de word): a composite is listed as its Hao-shuo-de description (pinyin of its forms, then the Mandarin hanzi and the gloss), never as the Mandarin word's own pinyin. `src/lib/categorical-entries.js` decides what may be listed (fit not skip or gap, a description, every word known, no loose text except ge, A/B/X/Y, quoted sounds, doubled syllables); check-data fails when another composite cannot be listed. The 10 composites with fit skip (不但, 才, 更加 ...) stay tagged but off the page.
   - Done 2026-10-21: the page lists core words in full, then each page's composites one line each (a composite that is a core word is shown once, as the core word); everything is closed by default, at every depth; the counts per branch include composites; the intro is rewritten in en, ru and zh. No entry sits under two pages yet, so no "also under" line was needed. The kind-net switch is not built yet.
 - [ ] **D2. Move the old readers** (WordMap, graph.js, coverage-kb, generate-readme, check-jargon) to the tags and remove the view from A4.
 - [x] **D3. Russian and Chinese titles** for every tag; the plain-language gates run on the titles.
@@ -142,6 +143,10 @@ The other units, roughly: **people** (body, face, family, life stages, jobs, fee
 - [ ] **F2.** README marker blocks refresh on commit (header comments of the new files).
 - [x] **F3.** Numbers recorded here: topics and kinds, depth, leaf sizes, entries under two or more topics, untagged entries (target 0).
   - 204 topics (14 units, 159 pages, 4 levels deep), 155 kinds (130 leaves, 4 levels); 230 core words and 2,169 composites, all with a page and a kind; entries under two or more pages: 0; pages outside 3 to 40 entries: "measures" (2) and "belief-and-customs" (empty); kinds with no entry yet: 7.
+- [x] **F4. Easy for Claude to query:** the tags are in the KB (a separate fact tier so the what-if stays small), on the word card (`kb word dāo` shows Topic and Is a paths; a composite by its hanzi or pinyin gets its own card with the Hao-shuo-de form), in the export, and `kb tags <tag> --and <tag>` (kb_tags `and`) lists the entries under a topic and a kind together. The tags skill (.claude/skills/tags/SKILL.md) has the recipes for "which words are about X".
+  - Done 2026-10-21.
+- [x] **F5. Search on the dictionary pages:** the categorical page and the core dictionary page have a search box (src/components/SearchBox.jsx, src/lib/dictionary-search.js): pinyin with or without tones, hanzi, English or Russian meaning, a composite's Hao-shuo-de description; on the categorical page a topic or group name keeps the whole page, matches open their groups, and a count shows.
+  - Done 2026-10-21; checked in the preview (English and Russian).
 
 ## Order of work
 

@@ -52,7 +52,7 @@ Plans and decisions: [BOOK_PLAN.md](BOOK_PLAN.md) (book, decision log D1…), [K
 | Lesson sentences that parse | 99.6 % |
 | Smallest set the others can be said from | 202 words; the other 28 have a fine paraphrase |
 | Gates (`npm run check`) | 22 |
-| Test files (`npm test`) | 67 |
+| Test files (`npm test`) | 69 |
 
 The language numbers are the last row of `kb/scoreboard.csv` (2026-10-21, refactors/K15.ts: 20 op(s)); a refactor adds a new row.
 <!-- /generated:facts -->

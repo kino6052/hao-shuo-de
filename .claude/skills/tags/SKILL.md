@@ -1,6 +1,6 @@
 ---
 name: tags
-description: Query and edit the Hao-shuo-de tag nets (TAGS_PLAN.md, K31). Every dictionary entry, core word or composite, sits under tags on two nets that nest and can have several parents - a topic net (where you meet the word, like a picture-dictionary page: home > kitchen > kitchen-utensils) and a kind net (what it is: thing > tool > cutting-tool). Use it to pick words for a lesson text or a theme, to see where a new entry belongs, to find what two words share, to check a description against its tags, to write Akinator questions, and to add or change a tag. Ask it through the kb_tags tool or node scripts/kb.js tags.
+description: Find words by category, topic, theme or kind in the Hao-shuo-de dictionary, and edit the tag nets (TAGS_PLAN.md, K31). Use it whenever the question is "which words are about X", "what is in category/topic/page Y", "what kind of thing is this word", "where does this word sit", "which tools / animals / feelings do we have", or "what do these two words share"; also to pick words for a lesson text or a theme, to place a new entry, to check a description against its tags, to write Akinator questions, and to add or change a tag. Every entry, core word or composite, sits under tags on two nets that nest and can have several parents - a topic net (where you meet the word, like a picture-dictionary page: home > kitchen > kitchen-utensils) and a kind net (what it is: thing > tool > cutting-tool). Ask through the kb_tags tool (or kb_word for one word's card) or node scripts/kb.js tags.
 ---
 
 # Tags: where an entry sits
@@ -27,7 +27,9 @@ Ask with the `kb_tags` tool, or `node scripts/kb.js tags ...` (same answers; add
 | the whole topic net, with counts | `tags` (`--depth 2` for the top levels) |
 | the kind net | `tags --kinds` |
 | everything in a tag (through subtags), core words marked | `tags kitchen` (`--limit 100` for more) |
+| the entries under a topic AND a kind (an intersection; repeat `--and` for more) | `tags kitchen --and cutting-tool` (kb_tags: `tag` + `and: [...]`) |
 | where one entry sits, on both nets, every way up | `tags --of dāo` |
+| the card of one word or composite: description, topic and kind paths, lesson | `word 刀` (kb_word; a composite by its hanzi or pinyin gives its Hao-shuo-de form, head, uses and tags) |
 | what two entries share | `tags --common dāo wǎn` (closest topic: kitchen) |
 | a tag by its name, or where the words for an English word sit | `tags --find knife` |
 | what is wrong with the nets | `tags --check` |
@@ -37,6 +39,20 @@ Ask with the `kb_tags` tool, or `node scripts/kb.js tags ...` (same answers; add
 The dev server's explorer (`npm run dev`, then `/__kb/`, tab Tags) shows the same answers with tag names as links.
 
 The relation kinds `tagged` (an entry and its tag) and `tag-under` (a tag and its parent) are in `kb_relations`.
+
+## Query recipes (words by category)
+
+Say it in the user's words, then ask:
+
+- **"Which words are about food / the kitchen / feelings?"** `tags --find food` for the tag ids, then `tags <id> --limit 100`. A page lists its subtags with counts and every entry below, core words marked `*`.
+- **"What do we have in category X?"** The same: categories are the two nets. A word's old single `category` field is kept only for old readers; the topic is the answer.
+- **"All the tools in the kitchen"**, "animals at the farm": a topic and a kind together, `tags <topic> --and <kind>`. Several kinds or topics: more `--and`.
+- **"What is this word?"** `word <name>`: its topic and kind paths come with the meaning and the lesson. For the *whole* picture of an unknown word use `tags --find <english word>`: it lists the tags with that name and where the words for it sit.
+- **"What do dāo and wǎn share?"** `tags --common dāo wǎn`.
+- **Counting or exotic questions** (how many composites are tools but not in the kitchen): `kb_query` with `in_tag(Entry, Tag)` and `tagged/2` (the rules are loaded; see the table above).
+- **What the learner sees**: the categorical dictionary page lists, per topic page, the core words and then the composites as their Hao-shuo-de description (never the Mandarin word). A composite with fit `skip` or `gap`, no description, or a description with an unknown word is off the page (`check-data` section 3b lists them) but still has tags in the KB.
+
+Names accepted for an entry: id (`dao1`), pinyin with or without tones (`dāo`, `dao`), hanzi (`刀`). A name that fits two words is an error that lists them.
 
 ## Using it
 
@@ -61,4 +77,4 @@ The relation kinds `tagged` (an entry and its tag) and `tag-under` (a tag and it
 
 ## State of the data
 
-Done 2026-10-21 (TAGS_PLAN.md C): 204 topics in 14 units (159 pages, 4 levels deep) and 155 kinds. Every entry, the 230 core words and all 2,169 composites, has one page (topic) and one kind (isA); no entry sits under two pages. Composites that are a core word or a synonym of one took its tags and were checked by hand; the rest were tagged by Claude in batches, using Cilin codes and a picture dictionary as hints, with no author review (the author asked for none). So treat a single tag as a good guess, not a verdict: a composite filed under a broad page ("thinking", "handling") may be better under a new narrower one. Pages are 3 to 40 entries, with two exceptions ("measures" has 2, "belief-and-customs" has none yet); `tags --check` lists them.
+Done 2026-10-21 (TAGS_PLAN.md C): 204 topics in 14 units (159 pages, 4 levels deep) and 155 kinds. Every entry, the 230 core words and all 2,169 composites, has one page (topic) and one kind (isA); no entry sits under two pages. Composites that are a core word or a synonym of one took its tags and were checked by hand; the rest were tagged by Claude in batches, using Cilin codes and a picture dictionary as hints, with no author review (the author asked for none). So treat a single tag as a good guess, not a verdict: a composite filed under a broad page ("thinking", "handling") may be better under a new narrower one. Pages are 3 to 40 entries, with two exceptions ("measures" has 2, "belief-and-customs" has none yet); `tags --check` lists them. The tags are also in the KB facts (a separate tier, so the what-if stays small), in the word card, and in `kb export` as SKOS schemes (`dct:subject` for the topic, `hsd:isA` for the kind).

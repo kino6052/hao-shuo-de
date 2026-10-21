@@ -3,6 +3,9 @@ import dictionary from "../data/dictionary.ts";
 import composites from "../data/composites.ts";
 import { AudioButton } from "./AudioButton.jsx";
 import { getUsageLabels } from "../lib/word-usage.js";
+import { categoricalPages } from "../lib/categorical-entries.js";
+import { matcher, filterTree } from "../lib/dictionary-search.js";
+import { SearchBox } from "./SearchBox.jsx";
 import { t } from "../lib/i18n.js";
 import styles from "./CategoricalDictionarySection.module.css";
 
@@ -39,19 +42,25 @@ function WordEntry({ id, lang }) {
   );
 }
 
-// The composites on each page (TAGS_PLAN.md D1): a page lists its core words first, then the composites tagged with it. A composite
-// that is just a core word (八 is both) is shown once, as the core word.
+// The composites on each page (TAGS_PLAN.md D1): a page lists its core words first, then the composites tagged with it, each as
+// its Hao-shuo-de description (src/lib/categorical-entries.js lists only entries made of core words; check-data gates it). A
+// composite that is just a core word (八 is both) is shown once, as the core word.
 const CORE_HANZI = new Set(Object.values(dictionary.words).map((w) => w.hanzi));
-const ON_PAGE = new Map();
-for (const e of composites.entries) {
-  if (CORE_HANZI.has(e.zh)) continue;
-  for (const topic of e.topics ?? []) ON_PAGE.set(topic, [...(ON_PAGE.get(topic) ?? []), e]);
-}
-const pageComposites = (node) => ON_PAGE.get(node.key) ?? [];
+const { pages: ON_PAGE } = categoricalPages(composites.entries, CORE_HANZI, (id) => dictionary.words[id]?.term);
+const pageComposites = (node) => node.entries ?? ON_PAGE.get(node.key) ?? [];
 const memberCount = (node) =>
   node.children
     ? node.children.reduce((sum, child) => sum + memberCount(child), 0)
     : node.wordIds.length + pageComposites(node).length;
+
+// The search (src/lib/dictionary-search.js): a core word by its pinyin, hanzi, either meaning or the other spellings it has; a
+// composite by its description, its hanzi or its meaning; a page or group by its name in any language.
+const wordMatches = (match) => (id) => {
+  const w = dictionary.words[id];
+  return Boolean(w) && match(w.term, w.hanzi, w.definition?.eng, w.definition?.rus, w.maps, ...Object.values(w.senses ?? {}).map((x) => x.hanzi));
+};
+const entryMatches = (match) => (e) => match(...e.forms, e.zh, e.en, e.ru);
+const titleMatches = (match) => (node) => match(...Object.values(node.title ?? {}));
 
 function allPaths(nodes, base = "") {
   return nodes.flatMap((n) => {
@@ -64,7 +73,7 @@ function CompositeEntry({ entry, lang }) {
   const gloss = lang === "rus" ? entry.ru : entry.en;
   return (
     <div class={`${styles.entry} ${styles.compound}`}>
-      <span class={styles.term}>{entry.py}</span>
+      <span class={styles.term}>{entry.forms.join(" / ")}</span>
       <span class={styles.hanzi}> {entry.zh}</span>
       <span class={styles.def}> — {gloss}</span>
     </div>
@@ -75,9 +84,9 @@ function generatePath(path, key) {
   return `${path}>${key}`;
 }
 
-function CategoryNode({ node, lang, depth, path, collapsed, onToggle }) {
+function CategoryNode({ node, lang, depth, path, collapsed, onToggle, searching }) {
   const title = node.title?.[lang];
-  const isOpen = !collapsed.has(path);
+  const isOpen = searching || !collapsed.has(path);
 
   return (
     <div class={depth === 0 ? styles.node : `${styles.node} ${styles.nested}`}>
@@ -109,6 +118,7 @@ function CategoryNode({ node, lang, depth, path, collapsed, onToggle }) {
                   path={generatePath(path, child.key)}
                   collapsed={collapsed}
                   onToggle={onToggle}
+                  searching={searching}
                 />
               ))
             : [
@@ -126,6 +136,17 @@ export function CategoricalDictionarySection({ lang }) {
     new Set(allPaths(dictionary.categories)),
   );
 
+  const [query, setQuery] = useState("");
+  const match = matcher(query);
+  const tree = match
+    ? filterTree(dictionary.categories, {
+        titleMatches: titleMatches(match),
+        wordMatches: wordMatches(match),
+        pageEntries: pageComposites,
+        entryMatches: entryMatches(match),
+      })
+    : dictionary.categories;
+
   function onToggle(path) {
     setCollapsed((prev) => {
       const next = new Set(prev);
@@ -137,7 +158,13 @@ export function CategoricalDictionarySection({ lang }) {
 
   return (
     <div class={styles.tree}>
-      {dictionary.categories.map((category) => (
+      <SearchBox
+        lang={lang}
+        query={query}
+        onQuery={setQuery}
+        found={match ? tree.reduce((sum, node) => sum + memberCount(node), 0) : null}
+      />
+      {tree.map((category) => (
         <CategoryNode
           key={category.key}
           node={category}
@@ -146,6 +173,7 @@ export function CategoricalDictionarySection({ lang }) {
           path={category.key}
           collapsed={collapsed}
           onToggle={onToggle}
+          searching={Boolean(match)}
         />
       ))}
     </div>

@@ -1,0 +1,25 @@
+.box {
+  margin: 4px 0 14px;
+}
+
+.input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 14px;
+  font: inherit;
+  font-size: 15px;
+  color: var(--text-body);
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-card);
+  border-radius: 10px;
+}
+.input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.note {
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--text-muted);
+}

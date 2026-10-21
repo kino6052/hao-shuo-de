@@ -20,7 +20,7 @@
 // Names are lenient: an id (deng1), a term (dēng, deng) or a hanzi (灯).
 
 import { buildFacts } from './facts.js';
-import { buildIndex, findWords, resolveWord, wordCard, renderCard } from './card.js';
+import { buildIndex, findWords, findComposite, resolveWord, wordCard, compositeCard, renderCard } from './card.js';
 import { removal, renderRemoval } from './whatif.js';
 import { checkForm } from './check-form.js';
 import { readRules } from './rules.js';
@@ -100,7 +100,14 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
     facts,
     index,
     find: (q) => findWords(words, q).map((id) => ({ id, term: words[id].term, hanzi: words[id].hanzi, pos: words[id].pos?.eng })),
-    word: (name, opts) => wordCard(ctx, resolveWord(words, name), opts),
+    // a core word's card; a name that is no core word but a composite (刀, dāo) gets the composite's card
+    word: (name, opts) => {
+      if (!findWords(words, name).length) {
+        const c = findComposite(source, name);
+        if (c) return compositeCard(ctx, c);
+      }
+      return wordCard(ctx, resolveWord(words, name), opts);
+    },
     remove: async (names) => {
       const r = await removal(ctx, ids(names));
       // Mandarin lost: from the candidates' own count (top 6000 words of the frequency list); left out without `freq`

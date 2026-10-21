@@ -23,6 +23,7 @@ import { GROUPS } from '../src/data/coverage/index.ts';
 import TOPICS from '../src/data/maps/topics.ts';
 import KINDS from '../src/data/maps/kinds.ts';
 import { tagReport, LEAF_MAX, LEAF_MIN } from '../src/lib/tag-net.js';
+import { categoricalPages } from '../src/lib/categorical-entries.js';
 import ANTONYMS from '../src/data/maps/antonyms.ts';
 import SYNONYMS from '../src/data/maps/synonyms.ts';
 import CONNECTIONS from '../src/data/maps/connections.ts';
@@ -98,6 +99,15 @@ if (PARAPHRASES_REQUIRED && counts.none) {
 // 3. tags (K31): the topic and kind nets are sound, every entry names real tags, every core word has a topic
 const tagCheck = tagReport({ topics: TOPICS, kinds: KINDS, words: WORDS, composites: ENTRIES });
 errors.push(...tagCheck.errors);
+
+// 3b. the categorical dictionary lists only Hao-shuo-de words: a core word, or a composite described with core words only.
+// A composite the language says another way or leaves out (fit skip, gap) stays off the page; any other composite that cannot
+// be listed is an error.
+const listing = categoricalPages(ENTRIES, new Set(Object.values(WORDS).map((w) => w.hanzi)), (id) => WORDS[id]?.term);
+const notListed = listing.hidden.filter((h) => h.fit !== 'skip' && h.fit !== 'gap');
+if (notListed.length) errors.push(`${notListed.length} composite(s) cannot be listed in the categorical dictionary (not made of core words): ${notListed.slice(0, 8).map((h) => `${h.zh} (${h.reasons[0]})`).join('; ')}${notListed.length > 8 ? '; ...' : ''}`);
+const listedForms = [...listing.pages.values()].flat();
+if (listedForms.some((e) => !e.forms.length || e.forms.some((f) => f.includes('{{')))) errors.push('the categorical dictionary lists an entry with an unresolved form');
 
 // 4. relations and coverage
 for (const [name, r] of [['antonyms', ANTONYMS], ['synonyms', SYNONYMS]]) {

@@ -22,7 +22,7 @@ export const TOOLS = [
   {
     name: 'kb_word',
     description:
-      "The card for one dictionary word: its meaning, why the core needs it, its category, the lesson that teaches it, its opposites and synonyms, " +
+      "The card for one dictionary word (or one composite, by its hanzi or pinyin: how Hao-shuo-de says it, and its topic and kind paths): its meaning, why the core needs it, its category, the lesson that teaches it, its opposites and synonyms, " +
       "the atoms its paraphrase and its description come down to, the composites that use it or hang under it, and a sample of the book's sentences. Ask before changing or relying on a word.",
     inputSchema: {
       type: 'object',
@@ -106,11 +106,12 @@ export const TOOLS = [
     description:
       'The tag nets (TAGS_PLAN.md): every entry, core word or composite, sits under tags on two nets that can nest and a tag can have several parents. A TOPIC says where you meet the word, like a picture-dictionary page (home > kitchen > kitchen-utensils); a KIND says what it is (thing > tool > cutting-tool). ' +
       'Use it to pick words for a lesson text or a theme, to see where a new entry belongs, to find what two words share, or to check the nets. Modes, the first given wins: check (cycles, unknown tags, extra, empty, too big and too small leaves, vague and untagged entries), proposed (tags waiting for review), of (every path from one entry up to a top tag), common (the closest tags two entries share), ' +
-      'find (tags whose name has the text, and where the entries an English word leads to sit), tag (one tag: parents, subtags, members through subtags, core words marked). With nothing: the topic net as a tree with counts (kinds: true for the kind net).',
+      'find (tags whose name has the text, and where the entries an English word leads to sit), tag (one tag: parents, subtags, members through subtags, core words marked; with and: the entries under all the tags, a topic and a kind together). With nothing: the topic net as a tree with counts (kinds: true for the kind net).',
     inputSchema: {
       type: 'object',
       properties: {
         tag: { type: 'string', description: 'A tag id, e.g. kitchen-utensils or cutting-tool (either net).' },
+        and: { type: 'array', items: { type: 'string' }, description: 'With tag: more tags (either net); lists only the entries under all of them, e.g. tag kitchen + and [cutting-tool] = the cutting tools of the kitchen.' },
         of: { type: 'string', description: 'An entry (id dao1, pinyin or hanzi): every path from it up to a top tag, on both nets.' },
         common: { type: 'array', items: { type: 'string' }, description: 'Two entries: the closest tags both are under.' },
         find: { type: 'string', description: 'Text to look for in tag names, or an English word to see where its entries sit.' },
@@ -313,6 +314,7 @@ export async function callTool(kb, name, args = {}, { scoreboardFile = SCOREBOAR
     case 'kb_tags': {
       const ask = { tag: args.tag || undefined, of: args.of || undefined, find: args.find || undefined, check: !!args.check, kinds: !!args.kinds, depth: args.depth, limit: args.limit };
       if (Array.isArray(args.common) && args.common.length) ask.common = args.common.map(String);
+      if (Array.isArray(args.and) && args.and.length) ask.and = args.and.map(String);
       if (args.proposed) ask.proposed = args.proposed === 'all' ? true : String(args.proposed);
       return askTags(kb.tags(), ask).text;
     }

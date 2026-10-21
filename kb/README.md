@@ -92,7 +92,7 @@ node scripts/kb.js engine                                               # which 
 
 | Tool | What it answers |
 | --- | --- |
-| `kb_word` | The card for one dictionary word: its meaning, why the core needs it, its category, the lesson that teaches it, its opposites and synonyms, the atoms its paraphrase and its description come down to… |
+| `kb_word` | The card for one dictionary word (or one composite, by its hanzi or pinyin: how Hao-shuo-de says it, and its topic and kind paths): its meaning, why the core needs it, its category, the lesson that teaches it… |
 | `kb_remove` | What happens if we drop one or more words from the core dictionary. |
 | `kb_parse` | Does a sentence fit the grammar patterns (src/data/grammar/), and by which? |
 | `kb_check_form` | Check a proposed Hao-shuo-de form before it goes into the data: plain pinyin becomes word references, every syllable must be a dictionary word (names and sounds in quotes), the hanzi must spell the words… |

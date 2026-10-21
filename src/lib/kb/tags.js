@@ -176,6 +176,14 @@ export function renderTag(model, axis, tag, { limit = 40 } = {}) {
   return out.join('\n');
 }
 
+export function renderBoth(tags, list, { limit = 40 } = {}) {
+  const out = [`Entries under all of: ${tags.join(' + ')}  (${list.length}; * = a core word)`];
+  out.push(...list.slice(0, limit).map((e) => `    ${nameOf(e)}  ${e.en.slice(0, 50)}`));
+  if (list.length > limit) out.push(`    ... ${list.length - limit} more (limit ${limit})`);
+  if (!list.length) out.push('    none: no entry is under all of them');
+  return out.join('\n');
+}
+
 export function renderOf(r) {
   const e = r.entry;
   const out = [`${nameOf(e)}  ${e.en.slice(0, 70)}`];
@@ -227,7 +235,7 @@ export function renderProposed(model, tag) {
 
 // -- one question, as the command line and the Claude tool both ask it --------------------------------------------------------
 
-// ask: { tag?, kinds?, of?, common?: [a, b], find?, check?, proposed?, limit?, depth? } -> { data, text }
+// ask: { tag?, and?: [tag...], kinds?, of?, common?: [a, b], find?, check?, proposed?, limit?, depth? } -> { data, text }
 // The mode is the first of check, proposed, of, common, find, tag; with none, the net as a tree (`kinds` for the kind net).
 // A tag id is looked up on both nets (ids are unique across them).
 export function askTags(model, ask = {}) {
@@ -251,6 +259,16 @@ export function askTags(model, ask = {}) {
   if (ask.find) {
     const r = model.find(ask.find);
     return { data: r, text: renderFind(r) };
+  }
+  if (ask.tag && ask.and?.length) {
+    // the entries under all of the tags (either net): "tools that are used in the kitchen" = kitchen + tool
+    const tags = [ask.tag, ...[].concat(ask.and)];
+    const lists = tags.map((t) => ({ tag: t, axis: axisOf(t), members: model.members(axisOf(t), t) }));
+    for (const l of lists) if (!model.nets[l.axis].has(l.tag)) throw new Error(`no tag "${l.tag}" (node scripts/kb.js tags --find <text> looks tags up)`);
+    const keep = new Set(lists[0].members.map((e) => e.key));
+    for (const l of lists.slice(1)) { const here = new Set(l.members.map((e) => e.key)); for (const k of [...keep]) if (!here.has(k)) keep.delete(k); }
+    const members = lists[0].members.filter((e) => keep.has(e.key));
+    return { data: { tags, members }, text: renderBoth(tags, members, { limit }) };
   }
   if (ask.tag) {
     const axis = axisOf(ask.tag);

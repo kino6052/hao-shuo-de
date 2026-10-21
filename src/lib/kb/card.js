@@ -9,6 +9,7 @@ import { formSlots, factsAbout, wordsOfText, posClasses } from './facts.js';
 import { pinyinOf } from './whatif.js';
 import { parseAtom } from './clingo.js';
 import { renderRestsOn, restsOnWord } from './rests-on.js';
+import { tagNet } from '../tag-net.js';
 
 const norm = (s) => String(s).normalize('NFC').toLowerCase().trim();
 
@@ -75,9 +76,49 @@ export function buildIndex(source, facts) {
     (c.children ?? []).forEach((ch) => walk(ch, here));
   };
   (source.categories ?? []).forEach((c) => walk(c, []));
+  // the tag nets (K31): every way up from a tag, top first, as titles
+  const nets = { topics: tagNet(source.tags?.topics ?? []), kinds: tagNet(source.tags?.kinds ?? []) };
+  const titles = { topics: new Map((source.tags?.topics ?? []).map((t) => [t.id, t.title?.eng ?? t.id])), kinds: new Map((source.tags?.kinds ?? []).map((t) => [t.id, t.title?.eng ?? t.id])) };
+  const tagPaths = (net) => (ids) => (ids ?? []).filter((t) => nets[net].has(t)).map((t) => nets[net].paths(t).map((p) => [...p].reverse().map((x) => titles[net].get(x))));
+  const topicPaths = tagPaths('topics');
+  const kindPaths = tagPaths('kinds');
   const items = [];
   for (const g of source.coverage ?? []) for (const it of g.items) items.push({ id: `${g.key}:${it.key}`, group: g.key, ...it });
-  return { byZh, compositesByWord, headsOf, sentencesByWord, namedBy, categoryPath, items };
+  return { byZh, compositesByWord, headsOf, sentencesByWord, namedBy, categoryPath, topicPaths, kindPaths, items };
+}
+
+// -> the composite a name means (its hanzi, or its pinyin with or without tones), or null; several at once is an error
+export function findComposite(source, query) {
+  const q = norm(query);
+  const hits = source.composites.filter((c) => c.zh === String(query).trim() || norm(c.py) === q || toneless(norm(c.py)) === toneless(q));
+  if (hits.length > 1) throw new Error(`"${query}" could be: ${hits.map((c) => `${c.zh} ${c.py}`).join(', ')}`);
+  return hits[0] ?? null;
+}
+
+// The card of a composite: the Mandarin word, how Hao-shuo-de says it, and where it sits on the tag nets.
+export function compositeCard({ source, facts, index }, c) {
+  const words = source.words;
+  const pin = pinyinOf(words);
+  const forms = (c.hsd ? String(c.hsd).split(' / ') : []).map(pin);
+  const head = facts.heads.get(c.zh);
+  return {
+    composite: true,
+    zh: c.zh,
+    py: c.py,
+    en: c.en,
+    ru: c.ru,
+    pos: c.pos,
+    rank: c.rank,
+    fit: c.fit,
+    literal: c.literal ?? null,
+    forms,
+    tts: c.tts ?? null,
+    uses: [...new Set((c.hsd ? wordRefIds(c.hsd) : []).filter((id) => words[id]))].map((id) => ({ id, term: words[id].term, hanzi: words[id].hanzi })),
+    head: head ? (head.kind === 'word' ? { word: head.id, term: words[head.id]?.term } : { composite: head.zh }) : null,
+    tags: { topics: index.topicPaths(c.topics).flat(), kinds: index.kindPaths(c.isA).flat() },
+    examples: (c.examples ?? []).length,
+    proposed: Boolean(c.proposed),
+  };
 }
 
 export function wordCard({ source, facts, index, meaning, restsOn }, id, { limit = 15 } = {}) {
@@ -138,6 +179,8 @@ export function wordCard({ source, facts, index, meaning, restsOn }, id, { limit
     // a word that has a paraphrase could in principle go; nothing is removed by saying so (fine: it can be said; clumsy: only if the clumsy way is accepted)
     removable: w.paraphrase ? (w.paraphrase.verdict === 'clumsy' ? 'clumsy' : 'fine') : null,
     category: index.categoryPath.get(id) ?? [],
+    // where it sits on the two tag nets: a list of ways up, each from the top tag down to the tag it has
+    tags: { topics: index.topicPaths(w.topics).flat(), kinds: index.kindPaths(w.isA).flat() },
     senses: Object.entries(w.senses ?? {}).map(([key, s]) => ({
       key,
       hanzi: s.hanzi,
@@ -173,6 +216,7 @@ export function wordCard({ source, facts, index, meaning, restsOn }, id, { limit
 // -- as text ---------------------------------------------------------------------------------
 
 export function renderCard(c) {
+  if (c.composite) return renderCompositeCard(c);
   const out = [];
   out.push(`${c.term} ${c.hanzi}  (${c.id}; ${c.pos}; necessity ${c.necessity.index})`);
   out.push(`  ${c.definition.eng}`);
@@ -182,7 +226,8 @@ export function renderCard(c) {
   if (c.paraphrase) out.push(`  Paraphrase (${c.paraphrase.verdict}): ${c.paraphrase.forms.join(' / ')}${c.paraphrase.note ? ` — ${c.paraphrase.note}` : ''}`);
   if (c.removable) out.push(c.removable === 'fine' ? '  Potentially removable: its paraphrase is fine.' : '  Potentially removable: only if its clumsy paraphrase is accepted.');
   for (const l of c.rests?.lines ?? []) out.push(`  ${l}`);
-  if (c.category.length) out.push(`  Category: ${c.category.join(' › ')}`);
+  if (c.category.length && !c.tags?.topics.length) out.push(`  Category: ${c.category.join(' › ')}`);
+  for (const [label, paths] of [['Topic', c.tags?.topics], ['Is a', c.tags?.kinds]]) for (const p of paths ?? []) out.push(`  ${label}: ${p.join(' › ')}`);
   for (const s of c.senses) out.push(`  Sense ${s.key}: ${s.hanzi} ${s.eng}${s.alone ? ' (also on its own)' : ''} — in ${s.compounds.join(', ')}`);
   out.push(`  Taught: ${c.taught.length ? c.taught.map((t) => `${t.sense ? `${t.sense}: ` : ''}${t.lesson}/${t.module}`).join('; ') : 'no card'}`);
   const rel = (name, r) => (r.words.length || r.phrases.length) && out.push(`  ${name}: ${[...r.words.map((x) => `${x.term} ${x.hanzi}`), ...r.phrases].join(', ')}`);
@@ -202,5 +247,19 @@ export function renderCard(c) {
   out.push(`  Sentences: ${c.sentences.total}${kinds ? ` (${kinds})` : ''}`);
   for (const s of c.sentences.sample) out.push(`    ${s.pinyin}${s.en ? `  (${s.en})` : ''}`);
   if (c.namedBy.length) out.push(`  Named in the text of: ${c.namedBy.map((x) => x.term).join(', ')}`);
+  return out.join('\n');
+}
+
+function renderCompositeCard(c) {
+  const out = [];
+  out.push(`${c.zh} ${c.py}  (composite #${c.rank}; ${c.pos ?? 'no part of speech'}; fit ${c.fit}${c.proposed ? '; proposed' : ''})`);
+  out.push(`  ${c.en}${c.ru ? ` / ${c.ru}` : ''}`);
+  if (c.forms.length) c.forms.forEach((f, i) => out.push(`  Hao-shuo-de${c.forms.length > 1 ? ` ${i + 1}` : ''}: ${f}`));
+  else out.push('  Hao-shuo-de: no description (the language says it another way or leaves it out)');
+  if (c.literal) out.push(`  Literally: ${c.literal}`);
+  if (c.head) out.push(`  Head: ${c.head.word ? `${c.head.term} (${c.head.word})` : c.head.composite}`);
+  if (c.uses.length) out.push(`  Uses: ${c.uses.map((u) => `${u.term} ${u.hanzi}`).join(', ')}`);
+  for (const [label, paths] of [['Topic', c.tags.topics], ['Is a', c.tags.kinds]]) for (const p of paths) out.push(`  ${label}: ${p.join(' › ')}`);
+  if (c.examples) out.push(`  Example sentences: ${c.examples}`);
   return out.join('\n');
 }

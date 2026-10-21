@@ -337,12 +337,15 @@ async function main(argv) {
       const of = take('--of', 1);
       const common = take('--common', 2);
       const find = take('--find', 1);
+      const ands = [];
+      for (let a = take('--and', 1); a; a = take('--and', 1)) ands.push(a[0]);
       const pi = rest.indexOf('--proposed');
       if (of) ask.of = of[0];
       else if (common) ask.common = common;
       else if (find) ask.find = find[0];
       if (pi >= 0) ask.proposed = rest[pi + 1] && !rest[pi + 1].startsWith('--') ? rest[pi + 1] : true;
       else ask.tag = rest.find((a) => !a.startsWith('--'));
+      if (ands.length) ask.and = ands;
       const r = askTags(kb.tags(), ask);
       return print(r.data, r.text);
     }

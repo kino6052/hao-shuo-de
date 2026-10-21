@@ -5,6 +5,9 @@ import { resolveWordRefs } from '../lib/word-refs.js';
 import { AudioButton } from './AudioButton.jsx';
 import { getUsageLabels } from '../lib/word-usage.js';
 import { t } from '../lib/i18n.js';
+import { matcher } from '../lib/dictionary-search.js';
+import { SearchBox } from './SearchBox.jsx';
+import { useState } from 'preact/hooks';
 import relations from '../data/relations.json';
 import styles from './DictionarySection.module.css';
 
@@ -62,11 +65,23 @@ function WordNotes({ word, lang }) {
   );
 }
 
+// The words that match a query: by the term as the page shows it, the hanzi, the meaning in any language, or another spelling of it.
+function matching(items, match) {
+  if (!match) return items;
+  return items.filter((e) => {
+    const w = dictionary.words[idByTerm.get(e.term)];
+    return match(e.term, e.definition, e.maps, w?.hanzi, w?.definition?.eng, w?.definition?.rus, ...Object.values(w?.senses ?? {}).map((x) => x.hanzi));
+  });
+}
+
 export function DictionarySection({ items, lang }) {
+  const [query, setQuery] = useState('');
   if (!items || items.length === 0) return null;
 
+  const match = matcher(query);
+  const shown = matching(items, match);
   const grouped = {};
-  for (const entry of items) {
+  for (const entry of shown) {
     const key = (entry.term[0] || '?').toUpperCase();
     if (!grouped[key]) grouped[key] = [];
     grouped[key].push(entry);
@@ -74,6 +89,7 @@ export function DictionarySection({ items, lang }) {
 
   return (
     <div class={styles.dict}>
+      <SearchBox lang={lang} query={query} onQuery={setQuery} found={match ? shown.length : null} />
       {Object.entries(grouped).map(([label, entries]) => (
         <div key={label}>
           <h3 class={styles.letter}>{label}</h3>

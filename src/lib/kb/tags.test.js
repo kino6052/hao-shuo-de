@@ -170,6 +170,24 @@ describe('one question, two askers', () => {
     expect(() => askTags(m, { common: ['fan4'] })).toThrow(/two entries/);
   });
 
+  test('and: the entries under all the tags, a topic and a kind together', () => {
+    expect(ids(askTags(m, { tag: 'kitchen', and: ['tool'] }).data.members)).toEqual(['ji1', '饭机']);
+    expect(ids(askTags(m, { tag: 'kitchen', and: 'doing' }).data.members)).toEqual(['chi1']);
+    expect(askTags(m, { tag: 'kitchen', and: ['tool'] }).text).toContain('kitchen + tool');
+    expect(askTags(m, { tag: 'meals', and: ['tool'] }).text).toContain('none');
+    expect(() => askTags(m, { tag: 'kitchen', and: ['nope'] })).toThrow(/no .*tag "nope"/);
+  });
+
+  test('a composite has a card with its Hao-shuo-de form and its tag paths', () => {
+    const kb = createKb(tagSource);
+    const card = kb.word('饭机');
+    expect(card).toMatchObject({ composite: true, zh: '饭机', forms: ['fàn-de X'] });
+    expect(card.tags.topics).toContainEqual(['Home', 'Kitchen', 'Cookware']);
+    expect(card.tags.kinds).toEqual([['Thing', 'Made thing', 'Tool']]);
+    expect(kb.word('fànjī').zh).toBe('饭机');
+    expect(kb.word('jī').tags.kinds.length).toBeGreaterThan(0);
+  });
+
   test('nothing is waiting for review until the rule proposals run', () => {
     expect(askTags(m, { proposed: true }).text).toContain('No tags are waiting');
     const proposed = tagModel({ ...tagSource, tagProposals: [{ entry: 'ji1', tag: 'cookware', axis: 'topic', why: 'test' }] });
