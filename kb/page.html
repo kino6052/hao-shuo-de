@@ -350,7 +350,9 @@ function akinator(d) {
   const top = '<div class="chips">' + taken + (ak.answers.length ? '<button class="chip link-chip" data-ak-reset="1">Start over</button>' : '') + '</div>';
   const hint = ak.hint ? '<p class="hint">' + (d.hintMatched.length ? 'The hint "' + esc(ak.hint) + '" starts with: ' + esc(d.hintMatched.slice(0, 8).join(' ')) : 'The hint "' + esc(ak.hint) + '" matched nothing.') + '</p>' : '';
   if (d.stage === 'first') {
-    return '<section class="card">' + hint + '<p class="akq">What do you want to say?</p><div class="choices">' + d.question.choices.map((c, i) => '<button data-ak-choice="' + i + '">' + esc(c.label) + '</button>').join('') + '</div></section>';
+    // a hint already found things: show them before the questions
+    const found = d.found ? '<h3>Found from the hint</h3>' + [['Example sentences', 'sentences'], ['Words', 'words'], ['Composites', 'composites'], ['Patterns', 'patterns']].filter(([, k]) => d.found[k].length).map(([title, k]) => '<p class="label" style="margin:10px 0 4px">' + title + '</p>' + akList(d.found[k])).join('') + '<p class="hint" style="margin:12px 0">Not it? Answer the questions to narrow it down:</p>' : '';
+    return '<section class="card">' + hint + found + '<p class="akq">What do you want to say?</p><div class="choices">' + d.question.choices.map((c, i) => '<button data-ak-choice="' + i + '">' + esc(c.label) + '</button>').join('') + '</div></section>';
   }
   if (d.stage === 'question') {
     const q = d.question;

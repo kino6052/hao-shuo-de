@@ -13,6 +13,7 @@
 //     answers    [{ feature, answer }] in the order given; answer is yes | probably | unknown | probably-not | no
 //                (short forms y p ? pn n are read too). The first question is a choice: its answer is "yes" to the feature picked.
 //     finish     true: give the result now ("show me what you have")
+//   ak.describe(feature), ak.first   the question words and the first choices it was made with (the export carries them to the browser)
 //   a step is { stage, asked, question, result, leaders, effective }
 //     stage      'first' (no answers yet) | 'question' (ask `question`) | 'result' (done, or asked to finish)
 //     question   { feature, text, hint, choices? } the next question, or null
@@ -34,6 +35,9 @@ const KEEP = { yes: [1, 0.05], probably: [1, 0.3], unknown: [1, 1], 'probably-no
 // the families a question may come from, and how much each counts against a better split (lesson, form, made, reach,
 // module, grammar, coverage, type and source describe where an item sits in the book, not what is meant)
 export const FAMILY_FACTORS = { kind: 1, topic: 1, theme: 1, cat: 1, pattern: 0.8, word: 0.5 };
+// an item below this share of the best weight is out of the questions (it can still come back in the result);
+// above 1/BOOST (0.1), so what a hint found keeps the questions on its topic
+export const IN_PLAY = 0.15;
 export const GAP_BELOW = 0.25; // the best item keeps less weight than this: nothing fits
 export const CLEAR_LEADER = 6; // this few items still counting is an answer
 const NOTHING_SPLITS = 0.02; // the best question splits less than this (bits)
@@ -133,9 +137,12 @@ export function createAkinator(pool, { describe = (f) => ({ text: f }), prior = 
 
   function resultOf(order, fit, list, limit) {
     const groups = { sentences: [], patterns: [], words: [], composites: [] };
+    // no answers yet: only the hint ranks the items, so what it did not find is padding, not a fit
+    const hintOnly = Boolean(prior) && !list.length;
     for (const i of order) {
       // only what fits: an item that disagrees with an answer is shown in `closest`, not here
       if (fit[i] < GAP_BELOW) continue;
+      if (hintOnly && start[i] <= 1) continue;
       const g = groups[GROUPS[items[i].type]];
       if (g.length < limit) g.push(view(i, fit, list));
       if (Object.values(groups).every((x) => x.length >= limit)) break;
@@ -152,6 +159,8 @@ export function createAkinator(pool, { describe = (f) => ({ text: f }), prior = 
     items,
     features,
     ANSWERS,
+    describe,
+    first: choices,
     step(answers = [], { finish = false, limit = 6 } = {}) {
       // an answer repeated for a feature counts once, the last one (so an answer is changed by giving it again)
       const latest = new Map();
@@ -161,12 +170,16 @@ export function createAkinator(pool, { describe = (f) => ({ text: f }), prior = 
         return { stage: 'first', asked: 0, question: { feature: null, text: null, choices }, leaders: [], result: null, effective: n };
       }
       const { fit, weight } = weigh(list);
-      const total = weight.reduce((a, b) => a + b, 0);
-      const squares = weight.reduce((a, b) => a + b * b, 0);
+      // the items still in play: a thousand items at 5% each must not outweigh the ten that fit, so what
+      // is asked next, and how many "still count", look only at items within a tenth of the best weight
+      const top = weight.reduce((a, b) => Math.max(a, b), 0);
+      const alive = weight.map((w) => (w >= top * IN_PLAY ? w : 0));
+      const total = alive.reduce((a, b) => a + b, 0);
+      const squares = alive.reduce((a, b) => a + b * b, 0);
       const effective = squares > 0 ? Number(((total * total) / squares).toFixed(1)) : 0;
       const order = ranked(weight);
       const leaders = order.slice(0, 3).map((i) => view(i, fit, list));
-      const question = finish || list.length >= cap || effective <= clearLeader ? null : nextQuestion(weight, new Set(list.map((a) => a.f)));
+      const question = finish || list.length >= cap || effective <= clearLeader ? null : nextQuestion(alive, new Set(list.map((a) => a.f)));
       if (question) return { stage: 'question', asked: list.length, question, leaders, result: null, effective };
       return { stage: 'result', asked: list.length, question: null, leaders, result: resultOf(order, fit, list, limit), effective };
     },

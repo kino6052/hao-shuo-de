@@ -2,8 +2,9 @@ import { describe, expect, test } from 'bun:test';
 import { createAkinator, normalizeAnswer } from './akinator.js';
 import { makeDescribe, firstChoices, STRINGS } from './akinator-questions.js';
 import { selfPlay, pickTargets } from './akinator-selfplay.js';
-import { askAkinator, parseAnswers, priorFromHint } from './akinator-ask.js';
+import { askAkinator, parseAnswers, priorFromHint, startFeature } from './akinator-ask.js';
 import { tagNet } from '../tag-net.js';
+import { findJargon } from '../../../scripts/jargon.js';
 
 // a small pool: eight sentences and a pattern, each with a few features
 const make = (id, type, features, number = 1) => ({ id, type, source: type, text: { py: id, zh: '', en: id }, lesson: null, number, words: [], features: new Set([...features, `type:${type}`, ...(type === 'sentence' && !features.some((f) => f.startsWith('theme:')) ? ['theme:basic'] : [])]) });
@@ -183,6 +184,22 @@ describe('asking it (command line and tool)', () => {
     expect(prior.has('aloud')).toBe(false);
   });
 
+  test('a start word is a kind, a topic, a theme or part of a tag name; a stranger is an error that says what is allowed', () => {
+    expect(startFeature(wpool, 'situation')).toBe('type:sentence');
+    expect(startFeature(wpool, 'tool')).toBe('kind:tool');
+    expect(startFeature(wpool, 'Kitchen')).toBe('topic:kitchen');
+    expect(startFeature(wpool, 'count')).toBe('theme:count');
+    expect(startFeature(wpool, 'anim')).toBe('kind:animal'); // part of a name
+    expect(() => startFeature(wpool, 'zzz')).toThrow(/no start "zzz"/);
+    expect(askAkinator(kb, { start: 'kitchen' }).data.stage).toBe('question');
+  });
+
+  test('a yes to a small tag leaves only its members in play, not a crowd at five percent', () => {
+    const r = createAkinator(pool).step([{ feature: 'theme:compare', answer: 'yes' }]);
+    const members = pool.byFeature.get('theme:compare').length;
+    expect(r.effective).toBeLessThanOrEqual(members);
+  });
+
   test('a gap says so and names the answers nothing agrees with', () => {
     const r = askAkinator(kb, { answers: ['kind:doing=yes', 'theme:compare=yes', 'kind:animal=yes'], finish: true });
     expect(r.text).toContain('Nothing fits well yet');
@@ -221,5 +238,19 @@ describe('the words of the questions', () => {
     const c = firstChoices({ kindNet, strings: STRINGS.en });
     expect(c.map((x) => x.feature)).toEqual(['kind:thing', 'kind:doing', 'type:sentence']);
     expect(c[0].label).toBe('A thing, a person or a place');
+  });
+});
+
+describe('plain words on the page', () => {
+  const walk = (v, out = []) => (typeof v === 'string' ? out.push(v) : v && typeof v === 'object' && Object.values(v).forEach((x) => walk(x, out)), out);
+
+  test('the strings table uses no grammar jargon (BOOK_PLAN.md rule 4)', () => {
+    const hits = walk(STRINGS.en).flatMap((text) => findJargon(text).map((h) => `${h.term}: ${text}`));
+    expect(hits).toEqual([]);
+  });
+
+  test('every page sentence the Akinator shows is in the table, so a language is one more table (D5b)', () => {
+    expect(Object.keys(STRINGS.en.ui).length).toBeGreaterThan(20);
+    for (const key of ['firstQuestion', 'kind', 'topic', 'theme', 'category', 'pattern', 'word', 'type', 'answers', 'ui']) expect(STRINGS.en[key]).toBeTruthy();
   });
 });

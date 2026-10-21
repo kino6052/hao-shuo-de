@@ -1,0 +1,27 @@
+id: akinator
+type: akinator
+order: 3
+title:
+  eng: "Find How to Say It"
+  rus: ""
+  zh: ""
+
+summary:
+  eng: "Not sure how to say something? Answer a few questions and the book shows the words, sentence patterns and example sentences that fit, each with the lesson that teaches it."
+  rus: ""
+  zh: ""
+
+blocks:
+  - type: prose
+    text:
+      eng: "Pick what you want to say, or type a few English words first. Then answer each question with Yes, Probably, Don't know, Probably not or No. A soft answer only makes the other choices less likely, so a wrong answer is never final: tap one of your answers to take it back. You can stop at any time and ask to see what fits now. If nothing fits well, Hao-shuo-de cannot say it yet, and the page tells you which of your answers nothing matched."
+      rus: ""
+      zh: ""
+    tldr:
+      eng: "Answer a few questions to find the words and patterns for an idea."
+      rus: ""
+      zh: ""
+    necessity:
+      eng: "It turns an idea in your head into the words, patterns and sentences of the lessons, and shows where the language has a gap."
+      rus: ""
+      zh: ""

@@ -186,3 +186,6 @@ kb/cilin/*
 !kb/cilin/README.md
 kb/picture-dict/*
 !kb/picture-dict/README.md
+
+# The pool the Akinator page searches: generated (npm run akinator-data), built into docs/assets by vite
+src/data/akinator-pool.json

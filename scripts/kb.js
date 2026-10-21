@@ -21,7 +21,9 @@
 //   node scripts/kb.js grammar [<id>] [--tag compare|cat:action|lesson:comparing] [--lesson L] [--up-to N] [--limit N]  # the grammar patterns: all, by tag, by lesson; an id gives one in full with its examples and users
 //   node scripts/kb.js uses <word> [--limit N]  # the sentences and composite descriptions that use a core word, by lesson (its senses: kb word)
 //   node scripts/kb.js similar <sentence id or some of its text> [--limit N]  # sentences like one, by shared words and patterns
-//   node scripts/kb.js akinator [--start doing|when|where|situation ...] [--hint "I am hungrier than you"] [--finish] [--limit N] [kind:doing=yes theme:compare=probably ...]  # find how to say an idea by questions (W27): the answers so far in, the next question or what fits out; nothing is kept between calls, to take an answer back leave it out
+//   node scripts/kb.js pool  # what the Akinator searches: items by type and source, features by family (A3)
+//   node scripts/kb.js selfplay [--mode sure|soft|noisy] [--per N]  # the Akinator plays against the pool: how often it finds each target (B7)
+//   node scripts/kb.js akinator [--start doing|when|situation|food|kitchen ... (a kind, topic or theme name)] [--hint "I am hungrier than you"] [--finish] [--limit N] [kind:doing=yes theme:compare=probably ...]  # find how to say an idea by questions (W27): the answers so far in, the next question or what fits out; nothing is kept between calls, to take an answer back leave it out
 //   node scripts/kb.js english <word> [--json]  # which entries say an English word: by gloss, by WordNet sense, as a kind of
 //   node scripts/kb.js hints <word> [--limit N]  # WordNet hints for drafting a description of a word with no entry (English or Mandarin)
 //   node scripts/kb.js export [--all] [--base IRI] [--out FILE] [--stdout]   # the dictionary as OntoLex Turtle (to kb/cache/export/hao-shuo-de.ttl); --all adds the proposed relations
@@ -241,7 +243,7 @@ async function main(argv) {
   const [command, ...rest] = args;
   const print = (data, text) => console.log(json ? JSON.stringify(data, null, 2) : text);
   // the commands that only ask whether sentences parse read the parse memory (slim results, no trees)
-  const kb = await openKb({ memo: ['scoreboard', 'parse-report', 'parse-diff', 'move', 'built', 'akinator', 'lesson', 'grammar', 'uses', 'similar'].includes(command) });
+  const kb = await openKb({ memo: ['scoreboard', 'parse-report', 'parse-diff', 'move', 'built', 'akinator', 'pool', 'selfplay', 'lesson', 'grammar', 'uses', 'similar'].includes(command) });
 
   switch (command) {
     case 'word': {
@@ -393,6 +395,30 @@ async function main(argv) {
       const limit = option(rest, '--limit');
       const r = askSimilar(kb.pool(), kb.lessons(), { sentence: rest.filter((a) => !a.startsWith('--')).join(' '), limit });
       return print(r.data, r.text);
+    }
+    case 'pool': {
+      // what the Akinator searches: the items by type and source, the features by family (A3)
+      const pool = kb.pool();
+      const count = (list, key) => list.reduce((m, x) => m.set(key(x), (m.get(key(x)) ?? 0) + 1), new Map());
+      const types = count(pool.items, (i) => i.type);
+      const sources = count(pool.items, (i) => `${i.type}/${i.source}`);
+      const families = count([...pool.byFeature.keys()], (f) => f.slice(0, f.indexOf(':')));
+      const big = [...pool.byFeature].map(([f, list]) => [f, list.length]).sort((a, b) => b[1] - a[1]).slice(0, 12);
+      const data = { items: pool.items.length, types: Object.fromEntries(types), sources: Object.fromEntries(sources), featureFamilies: Object.fromEntries(families), features: pool.byFeature.size, biggest: big };
+      const text = [`${data.items} items, ${data.features} features`, `  by type: ${[...types].map(([k, v]) => `${k} ${v}`).join(', ')}`, `  by source: ${[...sources].map(([k, v]) => `${k} ${v}`).join(', ')}`, `  features by family: ${[...families].map(([k, v]) => `${k} ${v}`).join(', ')}`, `  on the most items: ${big.map(([f, n]) => `${f} (${n})`).join(', ')}`].join('\n');
+      return print(data, text);
+    }
+    case 'selfplay': {
+      // the Akinator plays against the pool: every target answered for it, see how often it is found (B7)
+      const { selfPlay, pickTargets } = await import('../src/lib/kb/akinator-selfplay.js');
+      const mode = option(rest, '--mode');
+      const per = Number(option(rest, '--per')) || undefined;
+      const ak = kb.akinator();
+      const targets = pickTargets(kb.pool(), per ? { sentence: per, composite: Math.ceil(per / 3), word: Math.ceil(per / 6), pattern: Math.ceil(per / 6) } : undefined);
+      const modes = mode ? [mode] : ['sure', 'soft', 'noisy'];
+      const runs = modes.map((m) => selfPlay(ak, { targets, mode: m }));
+      const text = runs.map((r) => `${r.mode}: ${r.found} of ${r.targets} found (${Math.round(r.foundRate * 100)}%), ${r.near} near, ${r.asked} answers on average${Object.entries(r.byType).map(([t, v]) => `; ${t} ${v.found}/${v.targets}`).join('')}`).join('\n');
+      return print(runs.map(({ rows, ...rest2 }) => rest2), text);
     }
     case 'akinator': {
       // answers are the arguments that look like feature=answer; nothing is kept between calls (B6)

@@ -32,6 +32,19 @@ import KINDS from '../src/data/maps/kinds.ts';
 
 const ROOT = resolve(fileURLToPath(new URL('.', import.meta.url)), '..');
 
+// an info/warning box's text, title and nested items included, in reading order
+function infoText(e) {
+  const lines = [...(e.title?.en ?? [])];
+  const walk = (items) => {
+    for (const item of items ?? []) {
+      lines.push(...(item.text?.en ?? []));
+      walk(item.items);
+    }
+  };
+  walk(e.items);
+  return lines;
+}
+
 // An entry cut down to what the facts and the parser read.
 function trim(e) {
   const out = { type: e.type, module: e.module, key: e.key, refs: wordRefIds(JSON.stringify(e)) };
@@ -41,14 +54,15 @@ function trim(e) {
   }
   if (e.pinyin) out.pinyin = e.pinyin;
   if (e.ttsText) out.hanzi = e.ttsText;
-  if (e.type === 'example' || e.type === 'story' || e.type === 'answer' || e.type === 'image') out.en = e.en ?? [];
+  out.en = e.type === 'info' || e.type === 'warning' ? infoText(e) : e.en ?? [];
+  if (e.type === 'faq' && e.question?.en) out.question = e.question.en;
   return out;
 }
 
 export async function loadSource() {
   const lessons = (await loadLessons()).map((l) => ({ id: l.id, number: l.number, entries: l.entries.map(trim) }));
   const texts = [];
-  for (const id of ['phrase-book', 'appendix-stories']) {
+  for (const id of ['phrase-book', 'appendix-stories', 'appendix-frontier']) {
     const mod = await import(pathToFileURL(resolve(ROOT, 'src/content', `${id}.ts`)).href);
     texts.push({ id, entries: mod.default.map((e, i) => ({ ...trim(e), key: `${id}.${i}` })) });
   }

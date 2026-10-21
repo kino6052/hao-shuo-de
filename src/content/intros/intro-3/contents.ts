@@ -204,6 +204,11 @@ export const CHAPTER_BLURBS: Record<string, LangText> = {
     zh: [],
     ru: ["карта всех слов: что возглавляет каждое и какие семьи они образуют."],
   },
+  akinator: {
+    en: ["a tool for finding how to say an idea, by answering a few questions."],
+    zh: [],
+    ru: ["инструмент, чтобы найти, как сказать мысль, отвечая на несколько вопросов."],
+  },
   "appendix-minimality": {
     en: ["why so few words can say so much."],
     zh: [],

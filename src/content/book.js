@@ -67,7 +67,7 @@ export const BACK_MATTER = [
   { key: "sectionReference", chapters: ["appendix-pinyin", "appendix-sandhi", "appendix-grammar"] },
   {
     key: "sectionTools",
-    chapters: ["dictionary", "categorical-dictionary", "composite-dictionary", "sentence-builder", "word-builder", "word-map"],
+    chapters: ["dictionary", "categorical-dictionary", "composite-dictionary", "sentence-builder", "word-builder", "word-map", "akinator"],
   },
   { key: "sectionMisc", chapters: ["appendix-minimality", "appendix-frontier", "appendix-toki-pona", "appendix-resources"] },
 ];

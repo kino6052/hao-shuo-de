@@ -26,5 +26,29 @@
   {
     "text": "\"mā\", \"má\", \"mǎ\", \"mà\".",
     "why": "lesson 1 picture caption: four quoted sounds, not a sentence"
+  },
+  {
+    "text": "shuǐ shì hǎo?",
+    "why": "modifying-nouns/like FAQ: the question itself is \"why isn't it X?\" -- X is cited as wrong on purpose, so it should not parse"
+  },
+  {
+    "text": "hěn fùjìn.",
+    "why": "moving/far prose: \"say zài fùjìn, not hěn fùjìn\" -- cited as the wrong way to say it, so it should not parse"
+  },
+  {
+    "text": "hěn bù?",
+    "why": "how-much/not FAQ: the question asks \"is bù hěn the same as hěn bù?\", naming the two orderings as bare phrases, not asking a question in Hao-shuo-de"
+  },
+  {
+    "text": "Shí-ge shí.",
+    "why": "appendix-frontier example: \"a hundred (literally: ten tens)\", a bare numeral phrase, not a sentence; newly checked now the frontier is read by the KB"
+  },
+  {
+    "text": "Shí-ge shí-ge shí.",
+    "why": "appendix-frontier example: \"a thousand\", the same bare numeral phrase as shí-ge shí"
+  },
+  {
+    "text": "wǒ jiā.",
+    "why": "pointing/possession-de FAQ: cites what Mandarin speakers say informally, dropping -de; the FAQ's own answer says Hao-shuo-de always keeps -de, so this is the form it does not use (it does parse with owner-part, lesson 20's body/kinship pattern, which is taught after this lesson)"
   }
 ]

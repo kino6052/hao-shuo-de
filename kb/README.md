@@ -65,7 +65,9 @@ node scripts/kb.js lesson [<id or number>] [--kind words|patterns|composites|sen
 node scripts/kb.js grammar [<id>] [--tag compare|cat:action|lesson:comparing] [--lesson L] [--up-to N] [--limit N]  # the grammar patterns: all, by tag, by lesson; an id gives one in full with its examples and users
 node scripts/kb.js uses <word> [--limit N]                              # the sentences and composite descriptions that use a core word, by lesson (its senses: kb word)
 node scripts/kb.js similar <sentence id or some of its text> [--limit N]  # sentences like one, by shared words and patterns
-node scripts/kb.js akinator [--start doing|when|where|situation ...] [--hint "I am hungrier than you"] [--finish] [--limit N] [kind:doing=yes theme:compare=probably ...]  # find how to say an idea by questions (W27): the answers so far in, the next question or what fits out; nothing is kept between calls, to take an answer back leave it out
+node scripts/kb.js pool                                                 # what the Akinator searches: items by type and source, features by family (A3)
+node scripts/kb.js selfplay [--mode sure|soft|noisy] [--per N]          # the Akinator plays against the pool: how often it finds each target (B7)
+node scripts/kb.js akinator [--start doing|when|situation|food|kitchen ... (a kind, topic or theme name)] [--hint "I am hungrier than you"] [--finish] [--limit N] [kind:doing=yes theme:compare=probably ...]  # find how to say an idea by questions (W27): the answers so far in, the next question or what fits out; nothing is kept between calls, to take an answer back leave it out
 node scripts/kb.js english <word> [--json]                              # which entries say an English word: by gloss, by WordNet sense, as a kind of
 node scripts/kb.js hints <word> [--limit N]                             # WordNet hints for drafting a description of a word with no entry (English or Mandarin)
 node scripts/kb.js export [--all] [--base IRI] [--out FILE] [--stdout]  # the dictionary as OntoLex Turtle (to kb/cache/export/hao-shuo-de.ttl); --all adds the proposed relations
@@ -102,6 +104,11 @@ node scripts/kb.js engine                                               # which 
 | `kb_remove` | What happens if we drop one or more words from the core dictionary. |
 | `kb_parse` | Does a sentence fit the grammar patterns (src/data/grammar/), and by which? |
 | `kb_check_form` | Check a proposed Hao-shuo-de form before it goes into the data: plain pinyin becomes word references, every syllable must be a dictionary word (names and sounds in quotes), the hanzi must spell the words… |
+| `kb_check_text` | A text checked at a lesson's level, in one call (TRANSLATOR_PLAN.md B1): for each sentence, the words that are not Hao-shuo-de words (with a suggestion when one matches a composite's own pinyin)… |
+| `kb_check_reading` | Does a sentence have the reading Claude means (TRANSLATOR_PLAN.md B2)? |
+| `kb_gloss` | Each word of a sentence, word by word in English, replaced by the first sense of its own dictionary definition (TRANSLATOR_PLAN.md B3): mechanical, no AI, no reading of the sentence as a whole. |
+| `kb_lookup` | An English word or phrase -> Hao-shuo-de forms straight away, never the Mandarin headword itself (TRANSLATOR_PLAN.md C1): each form with its tier (gloss, same sense, kind of), the lesson it can be read from… |
+| `kb_memory` | The translation memory (TRANSLATOR_PLAN.md C2): an English sentence -> the closest sentences the book already has, by their own English (Jaccard over the words, nothing about Hao-shuo-de or grammar)… |
 | `kb_atoms` | Which dictionary words are atoms: the words the others cannot be said from. |
 | `kb_relations` | The relations between words and between composites: opposites, close words, the same description, kind-of (a composite and its head), agents, categories, and phrases that stand in for a missing opposite. |
 | `kb_tags` | The tag nets (TAGS_PLAN.md): every entry, core word or composite, sits under tags on two nets that can nest and a tag can have several parents. |
@@ -133,6 +140,8 @@ node scripts/kb.js engine                                               # which 
 | File | What it does |
 | --- | --- |
 | `src/lib/kb/akinator-ask.js` | One Akinator question as the command line and the Claude tool both ask it (AKINATOR_PLAN.md C1, C2): the answers so far in, the next question or the result out, as { data, text }. |
+| `src/lib/kb/akinator-browser.js` | The Akinator in the browser (AKINATOR_PLAN.md D2): the exported pool in, a function that asks one question out. |
+| `src/lib/kb/akinator-export.js` | The pool as one small file for the browser (AKINATOR_PLAN.md D1). Pure: the pool goes in, plain data comes out, and back. |
 | `src/lib/kb/akinator-pool.js` | The pool the Akinator searches (AKINATOR_PLAN.md A3): one list of everything a learner could be thinking of, each item with its features. |
 | `src/lib/kb/akinator-questions.js` | The words of the Akinator: the plain question for each feature, and the choices of the fixed first question (AKINATOR_PLAN.md B1, A4). |
 | `src/lib/kb/akinator-selfplay.js` | Self-play for the Akinator (AKINATOR_PLAN.md B7): for each item of the pool an answerer who knows that item answers from its features… |
@@ -142,6 +151,8 @@ node scripts/kb.js engine                                               # which 
 | `src/lib/kb/candidates.js` | What a change would cost and what it would buy (KB_PLAN.md phase 3): which words to drop, which roots to add, which trades to make. |
 | `src/lib/kb/card.js` | Looking a word up: find it by any name, and gather everything the KB knows about it (KB_PLAN.md phase 1, "a word card: facts and relations"). |
 | `src/lib/kb/check-form.js` | Checking a Hao-shuo-de form before it goes anywhere (KB_PLAN.md phase 1, `kb_check_form`): the same rules the book gates apply to composites… |
+| `src/lib/kb/check-reading.js` | kb_check_reading (TRANSLATOR_PLAN.md B2): does a sentence have the reading Claude means? |
+| `src/lib/kb/check-text.js` | kb_check_text (TRANSLATOR_PLAN.md B1): a text and an optional lesson, checked in one call -- what the writer otherwise does by hand (review/writing/moving-pilot.md): for each sentence… |
 | `src/lib/kb/class-proposals.js` | Word classes the parser can propose (KB_PLAN.md K6). A word lists the classes it fills: its part of speech, and the classes it lists besides (`classes` in its data, each with a why and an example). |
 | `src/lib/kb/clingo.js` | The reasoner (KB_PLAN.md K1): clingo, answer set programming. Two ways to run it, the same answers either way. |
 | `src/lib/kb/cross-check.js` | Checks the dictionary's own kind-of, opposite and part-of relations against what the English WordNet says about the same senses. |
@@ -152,12 +163,16 @@ node scripts/kb.js engine                                               # which 
 | `src/lib/kb/form-report.js` | The composite dictionary against the grammar (KB_PLAN.md phase 4, K7): every description of a composite (src/data/composites) is a piece of Hao-shuo-de, so the patterns should read it. |
 | `src/lib/kb/frontier.js` | Lists what the dictionary cannot say yet, and the Mandarin word that would fix each. |
 | `src/lib/kb/gains.js` | Ranks Chinese words by what making each one a core entry would bring, for growing Hao-shuo-de from 230 words to about 1000 core entries (the follow-up project, jiandanhua; KB_PLAN.md phase 8, K29). |
+| `src/lib/kb/gloss.js` | kb_gloss (TRANSLATOR_PLAN.md B3): each word of a sentence, replaced by the first sense of its own dictionary definition -- mechanical, from the word meanings, no AI. |
 | `src/lib/kb/grammar-uses.js` | "Which grammar patterns does a word carry?" (KB_PLAN.md K20). A pattern names a word in three places: the words in its rules (=bie2), the words in its template, and the words in its examples. |
 | `src/lib/kb/hints.js` | Hints for describing a new word: for an English or Mandarin word, what WordNet says it means and which entry the description can start from. |
+| `src/lib/kb/inline-sentences.js` | Finds a complete Hao-shuo-de sentence written inline inside otherwise-English text -- a FAQ answer, a prose paragraph, an info box (KB_PLAN.md K7: every sentence of the book parses… |
 | `src/lib/kb/kb.js` | The one place the command line, the explorer page and the Claude tools all ask their questions through. |
 | `src/lib/kb/lesson-lookup.js` | The lesson lookups of the writer (AKINATOR_PLAN.md A2, WRITING_PLAN.md W21): words, composites, patterns and sentences of a lesson; the grammar patterns (all, by tag, by lesson)… |
+| `src/lib/kb/lookup.js` | kb_lookup (TRANSLATOR_PLAN.md C1): an English word or phrase -> Hao-shuo-de forms straight away (never the Mandarin headword itself), each with its tier (gloss, same sense, kind of)… |
 | `src/lib/kb/mcp.js` | The Model Context Protocol, the small part the KB needs: JSON-RPC 2.0, one message per line over stdio. |
 | `src/lib/kb/meaning.js` | Meaning links (KB_PLAN.md K19, phase 5): what the words say of the NSM primes, Aristotle's categories and the grammar items, and which primes each description reaches. |
+| `src/lib/kb/memory.js` | kb_memory, the translation memory (TRANSLATOR_PLAN.md C2): an English sentence -> the closest book sentences by their own English, from the Akinator's pool… |
 | `src/lib/kb/parse-diff.js` | "What did my edit do to the parses?" (KB_PLAN.md K20). |
 | `src/lib/kb/parse-report.js` | "How much of the book's own text do the grammar patterns cover?" (KB_PLAN.md phase 1: the parse report on lessons 1-4.) Every Hao-shuo-de sentence in the chosen lessons is parsed… |
 | `src/lib/kb/parse.js` | "Does this sentence parse?" for the CLI, the explorer and the Claude tools (KB_PLAN.md phase 1, kb_parse). |

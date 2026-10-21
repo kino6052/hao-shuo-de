@@ -2,7 +2,7 @@ import { pattern } from "../../lib/grammar-pattern.ts";
 
 export default pattern("men-plural", {
   meaning: {
-    eng: "Men after a noun makes it plural for people: hái-zi-men, the children. After wǒ, nǐ or tā it makes we, you all or they; a number and a counting word can follow: wǒ-men sān-ge rén, the three of us.",
+    eng: "Men after a noun means more than one person: hái-zi-men, the children. After wǒ, nǐ or tā it makes we, you all or they; a number and a counting word can follow: wǒ-men sān-ge rén, the three of us.",
     rus: "Men после существительного делает множественное число для людей: hái-zi-men — дети. После wǒ, nǐ, tā оно даёт «мы», «вы», «они»; дальше могут идти число и счётное слово: wǒ-men sān-ge rén — нас трое.",
   },
   covers: ["grammar:more-people"],

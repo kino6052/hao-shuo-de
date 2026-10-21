@@ -46,6 +46,11 @@ import { buildModel, makeRowBuilder } from './build-tags.js';
 import { buildPool } from './akinator-pool.js';
 import { createAkinator } from './akinator.js';
 import { makeDescribe, firstChoices } from './akinator-questions.js';
+import { askCheckText } from './check-text.js';
+import { askReading } from './check-reading.js';
+import { askGloss } from './gloss.js';
+import { askLookup } from './lookup.js';
+import { askMemory } from './memory.js';
 import { TAGS as themeTags } from '../grammar-tags.ts';
 import { patternsOf } from '../grammar/parser.js';
 import { pinyinToRefs } from '../pinyin-refs.js';
@@ -165,6 +170,20 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
 
   const ids = (names) => (Array.isArray(names) ? names : String(names).split(/[,\s]+/)).filter(Boolean).map((n) => resolveWord(words, n));
 
+  // what B1-B3's and C1's tools need of a kb: the same names, built from this function's own closures (not the
+  // public object below), so they need no self-reference.
+  const kbLike = {
+    source,
+    parse: parseText,
+    parseUpTo,
+    lessons: () => builtOptions.lessons,
+    wordLesson,
+    patternLesson: (id) => taughtIn(patternById.get(id) ?? {}),
+    english: (text) => englishOf().lookup(text),
+    built: builtOf,
+    pool: poolOf,
+  };
+
   return {
     source,
     facts,
@@ -195,6 +214,22 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
     wordLesson, // the number of the lesson that first teaches a core word
     lessons: () => builtOptions.lessons, // [{ id, number }] in teaching order
     parser: parseText.parser,
+
+    // A text at a lesson's level, in one call (TRANSLATOR_PLAN.md B1): unknown words, words and structures taught
+    // later, whether it parses at that level, the hanzi. No lesson: the whole dictionary.
+    checkText: (opts) => askCheckText(kbLike, opts),
+
+    // Does a sentence have the reading Claude means (TRANSLATOR_PLAN.md B2)?
+    checkReading: (opts) => askReading(kbLike, opts),
+
+    // Each word of a sentence, word by word in English, from its own definition (TRANSLATOR_PLAN.md B3).
+    gloss: (opts) => askGloss(kbLike, opts),
+
+    // An English word or phrase -> Hao-shuo-de forms, by tier, with the lesson and a book sentence (TRANSLATOR_PLAN.md C1).
+    lookup: (opts) => askLookup(kbLike, opts),
+
+    // The translation memory: an English sentence -> the closest book sentences by their own English (TRANSLATOR_PLAN.md C2).
+    memory: (opts) => askMemory(kbLike, opts),
 
     // The relations: stored ones are accepted, the ones a rule finds are proposed (see relations.js).
     relations: relationsOf,

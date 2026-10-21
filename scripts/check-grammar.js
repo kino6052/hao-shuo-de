@@ -3,7 +3,10 @@
 //
 //   1. Every lesson sentence parses with the patterns taught up to its lesson (the early-patterns
 //      rule: kb.parseUpTo). One that parses only with a later pattern, or not at all, is a gap.
-//   2. Every sentence of the other texts (composite examples, stories, the phrase book) parses.
+//      This includes a complete sentence written inline in a lesson's prose, info box or FAQ --
+//      not only the ones in an examples/exercises array (lesson_inline, src/lib/kb/inline-sentences.js).
+//   2. Every sentence of the other texts (composite examples, stories, the phrase book, the
+//      frontier) parses, inline sentences in their prose and info boxes included (extra_inline).
 //
 // A gap the author knows about is listed in kb/grammar-gaps.json ({ text, why }); it does not fail.
 // A new gap fails. A listed gap that now parses fails too, so the list only shrinks: remove it.
@@ -34,6 +37,7 @@ const groups = lessonsOnly
       { id: 'composite-examples', title: 'composite examples', kinds: ['composite_example'] },
       { id: 'stories', title: 'stories', kinds: ['story'] },
       { id: 'phrase-book', title: 'phrase book', kinds: ['phrase_book'] },
+      { id: 'extra-inline', title: 'inline sentences outside the lessons', kinds: ['extra_inline'] },
     ];
 const report = parseReport({ sentences: kb.facts.sentences, parseText: kb.parse, parseLesson: kb.parseUpTo, patternLesson: kb.patternLesson, lessons, groups });
 

@@ -12,6 +12,7 @@ export const OTHER_TEXTS = [
   { id: 'composite-examples', title: 'composite examples', kinds: ['composite_example'] },
   { id: 'stories', title: 'stories', kinds: ['story'] },
   { id: 'phrase-book', title: 'phrase book', kinds: ['phrase_book'] },
+  { id: 'extra-inline', title: 'inline sentences outside the lessons', kinds: ['extra_inline'] },
 ];
 
 // -> the snapshot of the KB `kb`

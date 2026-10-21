@@ -78,6 +78,71 @@ export const TOOLS = [
     },
   },
   {
+    name: 'kb_check_text',
+    description:
+      'A text checked at a lesson\'s level, in one call (TRANSLATOR_PLAN.md B1): for each sentence, the words that are not Hao-shuo-de words (with a suggestion when one matches a composite\'s own pinyin), the words and grammar structures it uses that are taught only after the lesson, whether it parses with the patterns taught by then and how many readings it has, the hanzi, ' +
+      'and W15\'s structures list (the patterns it uses, each with the lesson that teaches it, flagged late). No lesson: checked against the whole dictionary, and nothing is "late". Several sentences are checked one by one.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        text: { type: 'string', description: 'Plain pinyin or text with {{word:id}} references; several sentences at once.' },
+        lesson: { type: 'string', description: 'A lesson id or number: only its words and patterns, and the ones before it, count as "known". Leave out for the whole dictionary.' },
+      },
+      required: ['text'],
+    },
+  },
+  {
+    name: 'kb_check_reading',
+    description:
+      'Does a sentence have the reading Claude means (TRANSLATOR_PLAN.md B2)? Give the reading as its place among kb_parse\'s readings (a number) or as the sentence in brackets (kb_parse\'s own notation, e.g. "[Utt [S [NP wǒ] [VP shì [NP rén]]]]"). ' +
+      'Answers "means it", "means it, with N other readings" (and shows them, so an ambiguous sentence can be reworded), or "can\'t mean it" (and shows the reading(s) it does have instead, or why it does not parse at all).',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        text: { type: 'string', description: 'Plain pinyin or text with {{word:id}} references; one sentence.' },
+        reading: { type: 'string', description: 'The reading meant: a number (1 = the first of kb_parse\'s readings), or the exact bracket text of one.' },
+        lesson: { type: 'string', description: 'A lesson id or number: only readings its grammar allows. Leave out for the whole dictionary.' },
+      },
+      required: ['text', 'reading'],
+    },
+  },
+  {
+    name: 'kb_gloss',
+    description:
+      'Each word of a sentence, word by word in English, replaced by the first sense of its own dictionary definition (TRANSLATOR_PLAN.md B3): mechanical, no AI, no reading of the sentence as a whole. ' +
+      'For the blind reader (W18), who otherwise sees no English; and for Claude, to catch a word used for the wrong sense before checking the reading (kb_check_reading).',
+    inputSchema: {
+      type: 'object',
+      properties: { text: { type: 'string', description: 'Plain pinyin or text with {{word:id}} references; several sentences at once.' } },
+      required: ['text'],
+    },
+  },
+  {
+    name: 'kb_lookup',
+    description:
+      'An English word or phrase -> Hao-shuo-de forms straight away, never the Mandarin headword itself (TRANSLATOR_PLAN.md C1): each form with its tier (gloss, same sense, kind of), the lesson it can be read from, its length in words, and a book sentence that uses it, when one exists. ' +
+      'Wraps kb_english\'s three tiers, kb_built\'s own descriptions of a composite, and the dictionary words directly for the few core words no composite repeats.',
+    inputSchema: {
+      type: 'object',
+      properties: { word: { type: 'string', description: 'An English word or short phrase: "purchase", "to run".' } },
+      required: ['word'],
+    },
+  },
+  {
+    name: 'kb_memory',
+    description:
+      'The translation memory (TRANSLATOR_PLAN.md C2): an English sentence -> the closest sentences the book already has, by their own English (Jaccard over the words, nothing about Hao-shuo-de or grammar), each with its Hao-shuo-de, hanzi and lesson. ' +
+      'Searches every sentence in the dictionary (lesson examples and answers, composite examples, story lines, the phrase book).',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        text: { type: 'string', description: 'An English sentence.' },
+        limit: { type: 'integer', description: 'How many matches to show (default 10).' },
+      },
+      required: ['text'],
+    },
+  },
+  {
     name: 'kb_atoms',
     description:
       'Which dictionary words are atoms: the words the others cannot be said from. Every word has a paraphrase (a way to say it with other words) or is marked as an atom; ' +
@@ -391,6 +456,16 @@ export async function callTool(kb, name, args = {}, { scoreboardFile = SCOREBOAR
       const { forms, tts, zh, py } = args;
       return renderCheckForm(kb.checkForm({ forms: String(need(args, 'forms')), tts, zh, py }));
     }
+    case 'kb_check_text':
+      return kb.checkText({ text: String(need(args, 'text')), lesson: args.lesson }).text;
+    case 'kb_check_reading':
+      return kb.checkReading({ text: String(need(args, 'text')), reading: String(need(args, 'reading')), lesson: args.lesson }).text;
+    case 'kb_gloss':
+      return kb.gloss({ text: String(need(args, 'text')) }).text;
+    case 'kb_lookup':
+      return kb.lookup({ word: String(need(args, 'word')) }).text;
+    case 'kb_memory':
+      return kb.memory({ text: String(need(args, 'text')), limit: args.limit }).text;
     case 'kb_atoms': {
       if (args.name === undefined || args.name === '') return renderAtoms(await kb.atoms());
       return renderAtomWord(await kb.atoms(), await kb.atoms(String(args.name)));

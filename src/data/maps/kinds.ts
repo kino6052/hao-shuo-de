@@ -80,7 +80,7 @@ export default tags([
   { id: "how-much", title: { eng: "How much", rus: "Сколько", zh: "数量" }, parents: [], note: "numbers, amounts, measures, counting words" },
   { id: "number", title: { eng: "Number", rus: "Число", zh: "数字" }, parents: ["how-much"] },
   { id: "counting-number", title: { eng: "Counting number", rus: "Количественное число", zh: "基数" }, parents: ["number"] },
-  { id: "ordinal", title: { eng: "Ordinal: first, second", rus: "Порядковое число", zh: "序数" }, parents: ["number"] },
+  { id: "ordinal", title: { eng: "Order numbers: first, second", rus: "Порядковое число", zh: "序数" }, parents: ["number"] },
   { id: "amount-word", title: { eng: "Amount word: many, few, all, half", rus: "Слово количества", zh: "数量词语" }, parents: ["how-much"] },
   { id: "measure-unit", title: { eng: "Unit of measure", rus: "Единица измерения", zh: "度量单位" }, parents: ["how-much"] },
   { id: "counting-word", title: { eng: "Counting word", rus: "Счётное слово", zh: "量词" }, parents: ["how-much", "grammar-words"] },
@@ -158,5 +158,5 @@ export default tags([
   { id: "auxiliary", title: { eng: "Helping word: can, will, must", rus: "Вспомогательное слово", zh: "助动词" }, parents: ["grammar-words"] },
   { id: "negation-word", title: { eng: "Not, no", rus: "Отрицание", zh: "否定词" }, parents: ["grammar-words"] },
   { id: "adverb-word", title: { eng: "Also, only, again, already", rus: "Наречие", zh: "副词" }, parents: ["grammar-words"] },
-  { id: "set-phrase", title: { eng: "Set phrase: hello, thanks, sorry", rus: "Устойчивое выражение", zh: "惯用语" }, parents: ["grammar-words"] },
+  { id: "set-phrase", title: { eng: "Ready-made sayings: hello, thanks, sorry", rus: "Устойчивое выражение", zh: "惯用语" }, parents: ["grammar-words"] },
 ]);

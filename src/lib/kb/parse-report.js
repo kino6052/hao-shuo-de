@@ -9,9 +9,11 @@
 //   renderParseReport(report, words) -> markdown
 //
 // `sentences` is facts.sentences (kb.facts.sentences): the lesson examples and
-// answers that are written in Hao-shuo-de. `parseText` is kb.parse. `groups` adds
-// the other texts after the lessons (K7): [{ id, title, kinds }], for example the
-// composite examples, the stories and the phrase book.
+// answers that are written in Hao-shuo-de, plus any complete sentence written
+// inline in a lesson's prose, info box or FAQ (lesson_inline). `parseText` is
+// kb.parse. `groups` adds the other texts after the lessons (K7): [{ id, title,
+// kinds }], for example the composite examples, the stories, the phrase book,
+// and the same inline sentences found outside the lessons (extra_inline).
 //
 // The early-patterns rule: with `parseLesson` (kb.parseUpTo) a lesson's sentences are parsed with
 // only the patterns taught up to that lesson. One that parses only with later patterns is not a
@@ -21,7 +23,7 @@
 import { explainFailure, bracket, patternsOf } from '../grammar/parser.js';
 import { replaceWordRefs, refTerm } from '../word-refs.js';
 
-const KINDS = new Set(['lesson_example', 'lesson_answer']);
+const KINDS = new Set(['lesson_example', 'lesson_answer', 'lesson_inline']);
 
 // An answer in English that names a word or two ("A word (dà, big) plus ...")
 // is not a Hao-shuo-de sentence: most of its pieces are not dictionary words.

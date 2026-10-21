@@ -10,7 +10,7 @@
 //   viewParse(result, words)   -> plain JSON for the explorer page and the Claude tool
 
 import { createParser, outline, bracket, explainFailure } from '../grammar/parser.js';
-import { pinyinToRefs } from '../pinyin-refs.js';
+import { pinyinProblems } from '../pinyin-refs.js';
 import { replaceWordRefs, refTerm } from '../word-refs.js';
 
 // "A b. C d?" -> ["A b.", "C d?"]; refs and quotes contain no sentence ends
@@ -20,16 +20,16 @@ export const splitSentences = (text) =>
     .split(/(?<=[.!?…])\s+/)
     .filter(Boolean);
 
+const say = (p) => (p.suggestion ? `${p.message} -- try ${p.suggestion.form} (${p.suggestion.zh})` : p.message);
+
 export function makeParseText({ patterns, words, composites, memo = null }) {
   const parser = createParser({ patterns, words, composites, memo });
   const parseText = (text) => {
     let refs = String(text);
     if (!refs.includes('{{')) {
-      try {
-        refs = pinyinToRefs(refs, words);
-      } catch (e) {
-        return { text, refs: null, ok: false, error: String(e.message), sentences: [] };
-      }
+      const { refs: converted, problems } = pinyinProblems(refs, words, { composites });
+      if (problems.length) return { text, refs: null, ok: false, error: problems.map(say).join('; '), sentences: [] };
+      refs = converted;
     }
     const sentences = splitSentences(refs).map((s) => parser.parse(s));
     return { text, refs, ok: sentences.length > 0 && sentences.every((s) => s.ok), sentences };

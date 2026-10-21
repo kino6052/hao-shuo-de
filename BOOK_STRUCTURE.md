@@ -62,7 +62,8 @@ Hǎo-shuō-de
 │   ├── The Composite Dictionary                            dictionary-composites.md
 │   ├── Sentence Builder                                    sentence-builder.yaml
 │   ├── Word Builder                                        word-builder.yaml
-│   └── Word Map                                            word-map.yaml
+│   ├── Word Map                                            word-map.yaml
+│   └── akinator                                            akinator.yaml
 │
 └── Misc
     ├── Why Minimality Works                                appendix-minimality.yaml

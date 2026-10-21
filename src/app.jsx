@@ -14,6 +14,7 @@ import { CompositeDictionarySection } from './components/CompositeDictionarySect
 import { SentenceBuilder } from './components/SentenceBuilder.jsx';
 import { WordBuilder } from './components/WordBuilder.jsx';
 import { WordMap } from './components/WordMap.jsx';
+import { Akinator } from './components/Akinator.jsx';
 import { PageNav } from './components/PageNav.jsx';
 import { TldrSummary } from './components/TldrSummary.jsx';
 import { MissingTranslationBanner } from './components/MissingTranslationBanner.jsx';
@@ -69,6 +70,14 @@ function renderContent(s, lang) {
       <>
         {s.bodyHtml && <div class="prose-body" dangerouslySetInnerHTML={{ __html: s.bodyHtml }} />}
         <WordMap lang={lang} />
+      </>
+    );
+  }
+  if (type === 'akinator') {
+    return (
+      <>
+        {s.bodyHtml && <div class="prose-body" dangerouslySetInnerHTML={{ __html: s.bodyHtml }} />}
+        <Akinator lang={lang} />
       </>
     );
   }

@@ -44,7 +44,7 @@ Plans and decisions: [BOOK_PLAN.md](BOOK_PLAN.md) (book, decision log D1…), [K
 
 | What | Now |
 | --- | --- |
-| Lessons | 26, in 3 sections (6 / 10 / 10), then 15 chapters to read, look things up in or build with |
+| Lessons | 26, in 3 sections (6 / 10 / 10), then 16 chapters to read, look things up in or build with |
 | Core words | 230: 53 atoms (no honest description) and 177 with a paraphrase, so potentially removable |
 | Composite words | 2169, with 2603 ways to say them (2457 built from their parts, 90 spelled whole, 56 waiting for the author to say which) |
 | Grammar patterns | 145, one file each in `src/data/grammar/` |
@@ -52,7 +52,7 @@ Plans and decisions: [BOOK_PLAN.md](BOOK_PLAN.md) (book, decision log D1…), [K
 | Lesson sentences that parse | 99.6 % |
 | Smallest set the others can be said from | 202 words; the other 28 have a fine paraphrase |
 | Gates (`npm run check`) | 22 |
-| Test files (`npm test`) | 73 |
+| Test files (`npm test`) | 81 |
 
 The language numbers are the last row of `kb/scoreboard.csv` (2026-10-21, refactors/K15.ts: 20 op(s)); a refactor adds a new row.
 <!-- /generated:facts -->
@@ -120,6 +120,7 @@ Lessons are named, not numbered: [src/content/book.js](src/content/book.js) is t
 | Tools | Sentence Builder | `src/content/sentence-builder.yaml` |
 | Tools | Word Builder | `src/content/word-builder.yaml` |
 | Tools | Word Map | `src/content/word-map.yaml` |
+| Tools | akinator | `src/content/akinator.yaml` |
 | Misc | Why Minimality Works | `src/content/appendix-minimality.yaml` |
 | Misc | The Frontier | `src/content/appendix-frontier.ts` |
 | Misc | Hao-shuo-de is not toki pona | `src/content/appendix-toki-pona.yaml` |
@@ -226,10 +227,12 @@ The shapes of the data are defined in TypeScript, so a mistake is a type error:
 | `npm run plan-4b` | Rewrites the §4b table of BOOK_PLAN.md (which words each lesson introduces) from the lessons themselves, so a word refactor never needs the table edited by hand. |
 | `npm run word-usage` | Cross-references every dictionary word against every lesson/appendix content file, so the dictionary UI can show "used in: Lesson 3, Lesson 5" next to each word -- and, just as importantly… |
 | `npm run relations` | Writes the accepted relations the dictionaries show to the learner (KB_PLAN.md K18, phase 5): opposites, words said the same way, close words, wholes and their parts, and what hangs under what… |
+| `npm run akinator-data` | Writes the pool the book page of the Akinator searches (AKINATOR_PLAN.md D1): the 7,000-odd words, composites, patterns and sentences with the features a question can ask about, as one compact file… |
 | `npm run wordnet` | Links the composites and words to WordNet (KB_PLAN.md phase 6): exports the entries, then runs the Python linker in the gitignored venv (.venv-kb). |
 | `npm run composite-examples` | Writes example sentences into the composite dictionary. The sentences are written by hand in plain pinyin, one file per review batch. |
 | `npm run grammar-overview` | Builds the grammar overview chapter (src/content/appendix-grammar.ts) from the lessons' patterns: every module's info block (src/lib/lesson.ts) that isn't a note (BOOK_PLAN.md §6… |
 | `npm run check` | Runs every book gate (BOOK_PLAN.md §6) -- the first step of `npm run build`. |
+| `npm run check-akinator` | Sanity check for the Akinator (AKINATOR_PLAN.md B7): simple, everyday things must be easy to find. |
 | `npm run report-heads` | Rebalancing the vocabulary by heads and naturalness: where the composites hang (src/lib/heads.js), how close they are to Mandarin (src/lib/ naturalness.js), and which roots would bring them closer. |
 | `npm run kb` | The command line of the KB. The explorer page and the Claude tools use the same code, so all three answer the same. |
 | `npm run readme` | Rewrites the generated parts of the READMEs from the code itself, so they never go stale: the comment at the top of each file (its summary and its usage lines), package.json, the gate list… |

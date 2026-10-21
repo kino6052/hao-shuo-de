@@ -13,7 +13,7 @@
 
 const norm = (s) => String(s ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
 
-function lessonOf(lessons, q) {
+export function lessonOf(lessons, q) {
   const text = String(q).trim();
   const byNumber = /^\d+$/.test(text) ? lessons.find((l) => l.number === Number(text)) : null;
   const hit = byNumber ?? lessons.find((l) => l.id === text) ?? lessons.find((l) => l.id.startsWith(text));

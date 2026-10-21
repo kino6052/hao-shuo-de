@@ -32,6 +32,8 @@
 //   sentences    sent(Id). sent_kind(Id,kind). sent_at(Id,"lesson","module").
 //                sent_of(Id,C). sent_uses(Id,W).
 //                kind: lesson_example lesson_answer composite_example story phrase_book
+//                      lesson_inline (a sentence inline in a lesson's prose, info box or FAQ)
+//                      extra_inline (the same, in a text after the lessons: the frontier, a story, ...)
 //
 // The sentence texts themselves are not facts; they come back in `sentences`.
 //
@@ -50,6 +52,7 @@ import { wordRefIds, wordRefRe, soleWordRef } from '../word-refs.js';
 import { refSenses } from '../senses.js';
 import { compositeHeads } from '../heads.js';
 import { formKinds } from '../form-kinds.js';
+import { inlineSentences } from './inline-sentences.js';
 
 // A hanzi or toned-pinyin word's part of speech as clingo constants:
 // "noun/measure word" -> noun, measure_word.
@@ -223,6 +226,11 @@ export function buildFacts(source) {
         const text = e.en?.[0];
         // an answer in Hao-shuo-de has word refs; one in English doesn't
         if (text && wordRefRe().test(text)) sentence({ kind: 'lesson_answer', lesson: lesson.id, module, key: e.key, pinyin: text }, wordsOfText(text));
+      } else {
+        // a complete sentence written inline in prose, an info box or a FAQ (not in an examples/exercises array)
+        for (const line of [...(e.en ?? []), ...(e.question ?? [])]) {
+          for (const s of inlineSentences(line)) sentence({ kind: 'lesson_inline', lesson: lesson.id, module, key: e.key, pinyin: s }, wordsOfText(s));
+        }
       }
     }
     for (const { w, module, kind, n } of seen.values()) {
@@ -234,6 +242,10 @@ export function buildFacts(source) {
     for (const e of t.entries) {
       if ((e.type === 'example' || e.type === 'story' || e.type === 'image') && e.pinyin) {
         sentence({ kind: t.id === 'phrase-book' ? 'phrase_book' : 'story', lesson: t.id, module: '', key: e.key, pinyin: e.pinyin, hanzi: e.hanzi, en: e.en?.[0] }, wordsOfText(e.pinyin));
+      } else if (e.type !== 'answer') {
+        for (const line of [...(e.en ?? []), ...(e.question ?? [])]) {
+          for (const s of inlineSentences(line)) sentence({ kind: 'extra_inline', lesson: t.id, module: '', key: e.key, pinyin: s }, wordsOfText(s));
+        }
       }
     }
   }

@@ -30,7 +30,7 @@ describe('the real server over stdio, on the real data', () => {
       expect(init.result.serverInfo.name).toBe('hao-shuo-de-kb');
       send({ jsonrpc: '2.0', method: 'notifications/initialized' });
       const list = await ask(2, 'tools/list', {});
-      expect(list.result.tools).toHaveLength(12);
+      expect(list.result.tools).toHaveLength(28);
       const drop = await ask(3, 'tools/call', { name: 'kb_remove', arguments: { words: 'dēng' } });
       const text = drop.result.content[0].text;
       expect(drop.result.isError).toBeUndefined();

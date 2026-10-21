@@ -49,6 +49,34 @@ export const STRINGS = {
     },
     types: { word: 'a single word', composite: 'a word made from the core words', pattern: 'a way of building a sentence', sentence: 'a whole sentence' },
     answers: { yes: 'Yes', probably: 'Probably', unknown: "Don't know", 'probably-not': 'Probably not', no: 'No' },
+    // the book page around the questions (Akinator.jsx); {n} and {lesson} are filled in
+    ui: {
+      loading: 'Getting the finder ready…',
+      missing: 'The finder has no data yet. Build it with: npm run akinator-data',
+      failed: 'The finder could not load its data. Reload the page to try again.',
+      hintLabel: 'Say it in English first (optional)',
+      hintPlaceholder: 'for example: I am hungrier than you',
+      hintGo: 'Look it up',
+      hintFound: 'Found from what you wrote. Pick one of the choices below to narrow it down.',
+      hintNothing: 'Nothing matched what you wrote. Pick one of the choices.',
+      or: 'or pick what you want to say',
+      question: 'Question {n}',
+      still: '{n} still fit',
+      showNow: 'Show me what fits now',
+      startAgain: 'Start again',
+      takeBack: 'Take back the last answer',
+      yourAnswers: 'Your answers (tap one to take it back)',
+      leading: 'Fitting best so far',
+      fits: 'What fits',
+      gapTitle: 'Nothing fits well yet',
+      gapNote: 'Hao-shuo-de cannot say this yet. These are the closest:',
+      noMatch: 'Your answers that none of them match:',
+      groups: { sentences: 'Example sentences', patterns: 'Ways to build a sentence', words: 'Words', composites: 'Words made from the core words' },
+      lessonIn: 'Lesson {lesson}',
+      lessonNeeds: 'Needs lesson {lesson}',
+      outside: 'Outside the lessons',
+      keys: 'Keys: 1 to 5 answer, Backspace takes the last answer back.',
+    },
   },
 };
 
@@ -72,7 +100,8 @@ export function makeDescribe({ topicNet, kindNet, patterns = [], words = {}, the
       case 'cat':
         return { text: fill(strings.category, { description: strings.categories[id] ?? id }) };
       case 'pattern':
-        return { text: fill(strings.pattern, { meaning: plain(patternById.get(id)?.meaning?.eng ?? id) }) };
+        // the meaning before its examples (after the colon): a question is one short line
+        return { text: fill(strings.pattern, { meaning: plain(patternById.get(id)?.meaning?.eng ?? id).split(':')[0].trim() }) };
       case 'word':
         return { text: fill(strings.word, { term: words[id]?.term ?? id, hanzi: words[id]?.hanzi ?? '' }) };
       case 'type':
