@@ -8,8 +8,10 @@ export default composite({
   en: "each on their own",
   ru: "каждый сам по себе",
   pos: "adverb",
-  hsd: ["{{word:yi1}}-{{word:ge4}} {{word:yi1}}-{{word:ge4}}, {{word:bu4}} {{word:yi1}}-{{word:qi3}}"],
-  tts: ["一个一个，不一起"],
+  hsd: [
+    "{{word:yi1}}-{{light:ge4}} {{word:yi1}}-{{light:ge4}}-{{word:de}}, {{word:bu4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}",
+  ],
+  tts: ["一个一个地，不在一起"],
   literal: "one by one, not together",
   fit: "plain",
   topics: ["adverbs"],

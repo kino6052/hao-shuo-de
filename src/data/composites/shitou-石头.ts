@@ -9,9 +9,9 @@ export default composite({
   ru: "камень",
   pos: "noun",
   hsd: [
-    "{{word:you4}} {{word:ying4}} {{word:you4}} {{word:zhong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+    "{{word:hen3}} {{word:ying4}} {{word:hen3}} {{word:zhong4}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],
-  tts: ["又硬又重的东西"],
+  tts: ["很硬很重的东西"],
   literal: "a hard and heavy thing",
   fit: "plain",
   topics: ["materials"],

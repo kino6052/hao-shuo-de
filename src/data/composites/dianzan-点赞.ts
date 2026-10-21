@@ -8,10 +8,8 @@ export default composite({
   en: "like (online)",
   ru: "ставить лайк",
   pos: "verb",
-  hsd: [
-    "{{word:kan4}} {{word:le}} X, {{word:dian3}} {{word:yi1}} {{word:xia4}}, {{word:shuo1}} {{word:hao3}}",
-  ],
-  tts: ["看了X，点一下，说好"],
+  hsd: ["{{word:kan4}} {{word:le}} X, {{word:shuo1}} {{word:hao3}}"],
+  tts: ["看了X，说好"],
   literal: "see X, tap once, say it is good",
   fit: "plain",
   topics: ["phone-and-computer"],

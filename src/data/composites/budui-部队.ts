@@ -8,10 +8,8 @@ export default composite({
   en: "troops, army unit",
   ru: "войска, часть",
   pos: "noun",
-  hsd: [
-    "{{word:wei4}} {{word:guo2}} {{word:da3}}-{{word:de}} {{word:hen3}} {{word:duo1}} {{word:ren2}}",
-  ],
-  tts: ["为国打的很多人"],
+  hsd: ["{{word:wei4}} {{word:guo2}} {{word:da3}}-{{word:de}} {{word:ren2}}"],
+  tts: ["为国打的人"],
   literal: "many people who fight for the country",
   fit: "plain",
   topics: ["war-and-peace"],

@@ -9,9 +9,9 @@ export default composite({
   ru: "джинсы",
   pos: "noun",
   hsd: [
-    "{{word:liang3}} {{word:ge4}} {{word:chang2}}-{{word:de}}, {{word:hen3}} {{word:ying4}}-{{word:de}}, {{word:shen1ti3}} {{word:xia4}}-{{word:mian4}}-{{word:de}} {{word:yi1fu}}",
+    "{{word:zai4}}-{{word:shen1ti3}}-{{word:xia4}}-{{word:mian4}}-{{word:de}} {{word:hen3}}-{{word:ying4}}-{{word:de}} {{word:yi1fu}}",
   ],
-  tts: ["两个长的，很硬的，身体下面的衣服"],
+  tts: ["在身体下面的很硬的衣服"],
   literal: "two long, hard pieces of clothing below the body",
   fit: "plain",
   topics: ["everyday-clothes"],

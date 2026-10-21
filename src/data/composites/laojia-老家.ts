@@ -10,9 +10,9 @@ export default composite({
   pos: "noun",
   hsd: [
     "{{word:lao3}}-{{word:jia1}}",
-    "{{word:wo3}} {{word:cong2}} {{word:xiao3}} {{word:zai4}}-{{word:de}} {{word:jia1}}",
+    "{{word:wo3}} {{word:xiao3}}-{{word:de}} {{word:shi2}}-{{light:hou4}} {{word:zai4}}-{{word:de}} {{word:jia1}}",
   ],
-  tts: ["老家", "我从小在的家"],
+  tts: ["老家", "我小的时候在的家"],
   literal: "the home I was in since I was small",
   fit: "plain",
   topics: ["countries-and-cities"],

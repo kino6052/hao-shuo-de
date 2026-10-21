@@ -25,7 +25,7 @@
 import { checkForm } from '../../src/lib/kb/check-form.js';
 import { isWordForm } from '../../src/lib/kb/form-report.js';
 import { compositeProblems } from '../../src/lib/categorical-entries.js';
-import { wordRefIds } from '../../src/lib/word-refs.js';
+import { wordRefIds, wordRefRe } from '../../src/lib/word-refs.js';
 import { refSenses } from '../../src/lib/senses.js';
 
 export const POS = ['noun', 'verb', 'adjective', 'adverb', 'pronoun', 'number', 'classifier', 'conjunction', 'preposition', 'auxiliary', 'phrase', 'suffix', 'prefix', 'interjection'];
@@ -73,6 +73,13 @@ export function specProblems(s, { words, have, parse, topicNet, kindNet }) {
     if (!p.ok) out.push(`"${forms[i][0]}" does not parse -- ${p.why}`);
   });
   if (new Set(refs).size !== refs.length) out.push('a form is written twice');
+  // check-sounds: a sense of a word that is not marked alone lives only in its compounds (zài "again" in zài-jiàn)
+  for (const r of refs) {
+    for (const [full, , id, key] of r.matchAll(wordRefRe())) {
+      const sense = key && words[id]?.senses?.[key];
+      if (sense && !sense.alone) out.push(`${full} is used only in its compounds (${(sense.compounds ?? []).join(', ')}): say it with another word`);
+    }
+  }
   if (s.fit === 'plain' && !String(s.literal ?? '').trim()) out.push('a plain description needs its literal English');
 
   // check-book: a colloquial form alone (two words, or a word in one of its senses) needs a constructive one after it

@@ -24,11 +24,12 @@ const BAD = /被|\{\{[Ww]ord:bei4\}\}|(?<![\p{L}])bèi(?![\p{L}])/u;
 // -> whether the rule looks at this file (a repo path with forward slashes)
 export const scanned = (rel) => !SKIP.has(rel) && SCAN.some((p) => rel === p || rel.startsWith(`${p}/`));
 
-// -> one line per use of 被 / bèi in the file. A word's Chinese gloss (a `zh:` line) is the original text and is not scanned.
+// -> one line per use of 被 / bèi in the file. A word's Chinese gloss (a `zh:` line) and its Mandarin reading (`py:`, 倍 is
+// bèi) are the original text and are not scanned.
 export function passiveProblems(rel, source) {
   const out = [];
   source.split('\n').forEach((line, i) => {
-    if (/^\s*zh:/.test(line)) return;
+    if (/^\s*(zh|py):/.test(line)) return;
     if (BAD.test(line)) out.push(`${rel}:${i + 1}: passive with 被/bèi -- say it with ràng: ${line.trim().slice(0, 100)}`);
   });
   return out;

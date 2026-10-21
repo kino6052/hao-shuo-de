@@ -8,8 +8,11 @@ export default composite({
   en: "separately; to part",
   ru: "по отдельности; расставаться",
   pos: "adverb",
-  hsd: ["{{word:fen1}}-{{word:bie2}}", "{{word:yi1}}-{{word:ge4}} {{word:yi1}}-{{word:ge4}}"],
-  tts: ["分别", "一个一个"],
+  hsd: [
+    "{{word:fen1}}-{{word:bie2}}",
+    "{{word:yi1}}-{{light:ge4}} {{word:yi1}}-{{light:ge4}}-{{word:de}}",
+  ],
+  tts: ["分别", "一个一个地"],
   literal: "one by one",
   fit: "plain",
   topics: ["adverbs"],

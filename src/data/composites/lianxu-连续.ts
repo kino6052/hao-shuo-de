@@ -9,9 +9,9 @@ export default composite({
   ru: "непрерывный",
   pos: "adjective",
   hsd: [
-    "{{word:yi1}} {{word:ge4}} {{word:hou4}}-{{word:mian4}} {{word:you4}} {{word:yi1}} {{word:ge4}}",
+    "{{word:yi1}}-{{light:ge4}} {{word:hou4}}-{{word:mian4}} {{word:you4}} {{word:you3}} {{word:yi1}}-{{light:ge4}}",
   ],
-  tts: ["一个后面又一个"],
+  tts: ["一个后面又有一个"],
   literal: "one after another",
   fit: "plain",
   topics: ["how-often"],

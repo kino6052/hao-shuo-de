@@ -9,9 +9,9 @@ export default composite({
   ru: "телесериал",
   pos: "noun",
   hsd: [
-    "{{word:zai4}} {{word:jia1}} {{word:kan4}}-{{word:de}}, {{word:ren2}} \"yǎn\"-{{word:de}}, {{word:hen3}} {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
+    "{{word:zai4}} {{word:jia1}} {{word:kan4}}-{{word:de}}, {{word:ren2}} \"yǎn\"-{{word:de}} {{word:hen3}} {{word:chang2}}-{{word:de}} {{word:dong1}}-{{light:xi1}}",
   ],
-  tts: ["在家看的，人演的，很长的东西"],
+  tts: ["在家看的，人演的很长的东西"],
   literal: "something long, acted by people, that you watch at home",
   fit: "plain",
   topics: ["films-and-media"],
