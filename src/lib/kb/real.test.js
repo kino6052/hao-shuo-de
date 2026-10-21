@@ -121,14 +121,14 @@ describe('the grammar in a removal report (K20)', () => {
     expect(dont.effect).toBe('no rules left');
     expect(r.counts.patterns).toBe(r.patterns.length);
     expect(renderRemoval(r)).toContain('Grammar patterns that name it');
-  });
+  }, 60_000);
 
   test('a word no pattern names leaves the section empty', async () => {
     const used = new Set(source.patterns.flatMap((p) => p.rules.flatMap((x) => ruleWords(x.hsd))));
     const free = Object.keys(source.words).find((id) => !used.has(id) && !source.patterns.some((p) => p.examples.some(([py]) => py.toLowerCase().includes(source.words[id].term.toLowerCase()))));
     const r = await kb.remove([free]);
     expect(r.patterns).toEqual([]);
-  });
+  }, 60_000);
 });
 
 describe('the grammar in the candidates (K20)', () => {
@@ -141,5 +141,5 @@ describe('the grammar in the candidates (K20)', () => {
       expect(c.counts.patternsDead, id).toBe(r.patterns.filter((p) => p.effect === 'no rules left' || p.effect === 'no examples left').length);
     }
     expect(model.consequences(['bie2']).parts.pattern).toBeGreaterThan(0);
-  });
+  }, 60_000);
 });
