@@ -12,5 +12,4 @@ export default composite({
   tts: ["帮人身体好"],
   literal: "help bodies be well",
   fit: "plain",
-  proposed: true,
 });

@@ -12,5 +12,4 @@ export default composite({
   tts: ["为国打的人"],
   literal: "a person who fights for the country",
   fit: "plain",
-  proposed: true,
 });

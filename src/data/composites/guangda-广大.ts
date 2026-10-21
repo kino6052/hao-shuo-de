@@ -12,5 +12,4 @@ export default composite({
   tts: ["很很大"],
   literal: "very very big",
   fit: "plain",
-  proposed: true,
 });

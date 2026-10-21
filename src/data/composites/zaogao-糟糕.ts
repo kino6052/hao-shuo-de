@@ -12,5 +12,4 @@ export default composite({
   tts: ["很坏"],
   literal: "very bad",
   fit: "plain",
-  proposed: true,
 });

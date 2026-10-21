@@ -12,5 +12,4 @@ export default composite({
   tts: ["写X的名字"],
   literal: "write X’s name",
   fit: "plain",
-  proposed: true,
 });

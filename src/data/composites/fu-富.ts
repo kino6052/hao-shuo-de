@@ -12,5 +12,4 @@ export default composite({
   tts: ["金很多"],
   literal: "has a lot of money",
   fit: "plain",
-  proposed: true,
 });

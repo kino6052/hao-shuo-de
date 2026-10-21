@@ -12,5 +12,4 @@ export default composite({
   tts: ["要用的金"],
   literal: "money to be used",
   fit: "plain",
-  proposed: true,
 });

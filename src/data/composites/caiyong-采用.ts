@@ -12,5 +12,4 @@ export default composite({
   tts: ["拿X来用"],
   literal: "take X and use it",
   fit: "plain",
-  proposed: true,
 });

@@ -12,5 +12,4 @@ export default composite({
   tts: ["没想到"],
   literal: "did not think of it",
   fit: "plain",
-  proposed: true,
 });

@@ -12,5 +12,4 @@ export default composite({
   tts: ["火里出来的黑气"],
   literal: "the black air that comes out of a fire",
   fit: "plain",
-  proposed: true,
 });

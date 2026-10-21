@@ -12,5 +12,4 @@ export default composite({
   tts: ["心里有很大的火"],
   literal: "a big fire in the heart",
   fit: "plain",
-  proposed: true,
 });

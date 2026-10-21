@@ -15,5 +15,4 @@ export default composite({
   tts: ["外来", "从外面来的"],
   literal: "coming from outside",
   fit: "plain",
-  proposed: true,
 });

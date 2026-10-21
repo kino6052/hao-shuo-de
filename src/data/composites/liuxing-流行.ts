@@ -12,5 +12,4 @@ export default composite({
   tts: ["很多人都爱"],
   literal: "many people love it",
   fit: "plain",
-  proposed: true,
 });

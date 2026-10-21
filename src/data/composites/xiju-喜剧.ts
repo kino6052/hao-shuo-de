@@ -14,5 +14,4 @@ export default composite({
   tts: ["让人笑的看的东西"],
   literal: "a thing to watch that makes people laugh",
   fit: "plain",
-  proposed: true,
 });

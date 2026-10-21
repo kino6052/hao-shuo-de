@@ -14,5 +14,4 @@ export default composite({
   tts: ["为国家工作的人"],
   literal: "a person who works for the country",
   fit: "plain",
-  proposed: true,
 });

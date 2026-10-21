@@ -14,5 +14,4 @@ export default composite({
   tts: ["X有了，后来没有了"],
   literal: "had it, then did not",
   fit: "plain",
-  proposed: true,
 });

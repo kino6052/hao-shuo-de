@@ -12,5 +12,4 @@ export default composite({
   tts: ["力很大"],
   literal: "the strength is big",
   fit: "plain",
-  proposed: true,
 });

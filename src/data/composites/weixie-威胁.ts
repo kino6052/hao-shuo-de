@@ -12,5 +12,4 @@ export default composite({
   tts: ["说会让人痛"],
   literal: "say it will make people hurt",
   fit: "plain",
-  proposed: true,
 });

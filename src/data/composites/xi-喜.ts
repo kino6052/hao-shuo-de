@@ -10,5 +10,4 @@ export default composite({
   pos: "verb",
   fit: "skip",
   note: "Only inside a longer word. To ask, say ài bù ài, or ài ma.",
-  proposed: true,
 });

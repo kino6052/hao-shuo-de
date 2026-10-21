@@ -8,9 +8,8 @@ export default composite({
   en: "champion",
   ru: "чемпион",
   pos: "noun",
-  hsd: ["{{word:di4}}-{{word:yi1}}-{{word:de}} {{word:ren2}}"],
-  tts: ["第一的人"],
-  literal: "the first person",
+  hsd: ["{{word:di4}}-{{word:yi1}}-{{word:hao4}}-{{word:de}} {{word:ren2}}"],
+  tts: ["第一号的人"],
+  literal: "the person who is number one",
   fit: "plain",
-  proposed: true,
 });

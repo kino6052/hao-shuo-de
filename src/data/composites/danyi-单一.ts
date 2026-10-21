@@ -12,5 +12,4 @@ export default composite({
   tts: ["只有一个"],
   literal: "only one",
   fit: "plain",
-  proposed: true,
 });

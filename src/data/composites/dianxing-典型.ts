@@ -12,5 +12,4 @@ export default composite({
   tts: ["很多都是这样"],
   literal: "many are like this",
   fit: "plain",
-  proposed: true,
 });

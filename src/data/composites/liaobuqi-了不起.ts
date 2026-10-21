@@ -12,5 +12,4 @@ export default composite({
   tts: ["别人都不能做"],
   literal: "nobody else can do it",
   fit: "plain",
-  proposed: true,
 });

@@ -14,5 +14,4 @@ export default composite({
   tts: ["用机器做很多东西"],
   literal: "using machines to make many things",
   fit: "plain",
-  proposed: true,
 });

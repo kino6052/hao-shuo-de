@@ -12,5 +12,4 @@ export default composite({
   tts: ["对X说的话"],
   literal: "words said about X",
   fit: "plain",
-  proposed: true,
 });

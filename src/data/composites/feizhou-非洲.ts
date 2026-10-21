@@ -12,5 +12,4 @@ export default composite({
   tts: ["非洲"],
   fit: "name",
   note: "Names go in quotes.",
-  proposed: true,
 });

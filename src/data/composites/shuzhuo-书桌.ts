@@ -12,5 +12,4 @@ export default composite({
   tts: ["放书的面"],
   literal: "the surface for books",
   fit: "plain",
-  proposed: true,
 });

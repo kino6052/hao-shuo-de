@@ -10,5 +10,4 @@ export default composite({
   pos: "auxiliary",
   fit: "skip",
   note: "Leave it out: what you think is just nǐ xiǎng-de.",
-  proposed: true,
 });

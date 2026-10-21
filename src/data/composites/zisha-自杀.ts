@@ -12,5 +12,4 @@ export default composite({
   tts: ["X让X死"],
   literal: "X makes X die",
   fit: "plain",
-  proposed: true,
 });

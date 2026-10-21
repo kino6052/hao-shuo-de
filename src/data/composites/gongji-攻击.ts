@@ -12,5 +12,4 @@ export default composite({
   tts: ["打X"],
   literal: "hit X",
   fit: "natural",
-  proposed: true,
 });

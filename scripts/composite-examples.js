@@ -24,6 +24,8 @@ import { resolveWordRefs } from '../src/lib/word-refs.js';
 import { buildWordIndex } from '../src/lib/dictionary-stats.js';
 import { writeComposite } from './data-files.js';
 
+const BATCH_SIZE = 100; // review batches, as in vite-plugin-review.js
+const LAST_RANK = 1600;
 const file = process.argv.slice(2).find((a) => !a.startsWith('--'));
 const write = process.argv.includes('--write');
 if (!file) {
@@ -35,7 +37,8 @@ const source = mod.default;
 // Written before the batch is reviewed, the sentences may use a proposed form
 // (review/proposals/batch-<n>.mjs) rather than the current one: both count.
 const proposalFile = resolve(file).replace(/examples([\\/])batch-/, 'proposals$1batch-');
-const proposals = proposalFile !== resolve(file) && existsSync(proposalFile) ? (await import(pathToFileURL(proposalFile).href)).default : {};
+const proposalModule = proposalFile !== resolve(file) && existsSync(proposalFile) ? await import(pathToFileURL(proposalFile).href) : {};
+const proposals = proposalModule.default ?? {};
 const withProposal = (entry) => {
   const p = proposals[entry.zh];
   return p ? { ...entry, hsd: [entry.hsd, ...p.hsd].filter(Boolean).join(' / ') } : entry;
@@ -73,10 +76,15 @@ for (const [zh, list] of Object.entries(source)) {
   out.set(zh, examples);
 }
 
-// entries of the batch's ranks the file leaves out
+// entries of the batch's ranks the file leaves out; a batch past the last rank window
+// (batch 17: the new composites) has no ranks of its own, only the `extras` of its proposals
+// (the same rule as vite-plugin-review.js)
 const n = Number(file.match(/batch-(\d+)/)?.[1]);
 if (n) {
-  const missing = composites.entries.filter((e) => e.rank > (n - 1) * 100 && e.rank <= n * 100 && !source[e.zh] && !e.examples?.length);
+  const windowed = n <= LAST_RANK / BATCH_SIZE;
+  const extraRanks = new Set(Object.keys(proposalModule.extras ?? {}).map(Number));
+  const inBatch = (e) => (windowed ? e.rank > (n - 1) * BATCH_SIZE && e.rank <= n * BATCH_SIZE : extraRanks.has(e.rank));
+  const missing = composites.entries.filter((e) => inBatch(e) && !source[e.zh] && !e.examples?.length);
   if (missing.length) problems.push(`without examples: ${missing.map((e) => `${e.rank} ${e.zh}`).join(', ')}`);
 }
 

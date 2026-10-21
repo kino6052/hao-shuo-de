@@ -12,5 +12,4 @@ export default composite({
   tts: ["法说不能做的"],
   literal: "what the law says cannot be done",
   fit: "plain",
-  proposed: true,
 });

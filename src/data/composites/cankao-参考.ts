@@ -12,5 +12,4 @@ export default composite({
   tts: ["看X，知道怎么做"],
   literal: "look at X to know how to do it",
   fit: "plain",
-  proposed: true,
 });

@@ -12,5 +12,4 @@ export default composite({
   tts: ["没想到，坏了"],
   literal: "no one expected it; it went bad",
   fit: "plain",
-  proposed: true,
 });

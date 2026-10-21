@@ -12,5 +12,4 @@ export default composite({
   tts: ["冷天用的大衣服"],
   literal: "the big clothes for cold days",
   fit: "plain",
-  proposed: true,
 });

@@ -12,5 +12,4 @@ export default composite({
   tts: ["不会变"],
   literal: "will not change",
   fit: "plain",
-  proposed: true,
 });

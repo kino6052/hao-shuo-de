@@ -12,5 +12,4 @@ export default composite({
   tts: ["想没有的东西"],
   literal: "think of things that are not there",
   fit: "plain",
-  proposed: true,
 });

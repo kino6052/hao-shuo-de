@@ -13,5 +13,4 @@ export default composite({
   literal: "big-small",
   fit: "natural",
   transparent: true,
-  proposed: true,
 });

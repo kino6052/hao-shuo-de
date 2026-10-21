@@ -8,9 +8,8 @@ export default composite({
   en: "care about, mind",
   ru: "заботиться, обращать внимание",
   pos: "verb",
-  hsd: ["{{word:ba3}} X {{word:fang4}} {{word:zai4}} {{word:xin1}}-{{word:li3}}"],
-  tts: ["把X放在心里"],
-  literal: "put X in the heart",
+  hsd: ["{{word:guan1}}-{{word:xin1}}"],
+  tts: ["关心"],
+  literal: "close-heart (as in 关心)",
   fit: "plain",
-  proposed: true,
 });

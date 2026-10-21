@@ -12,5 +12,4 @@ export default composite({
   tts: ["让声音大的东西"],
   literal: "a thing that makes the sound big",
   fit: "plain",
-  proposed: true,
 });

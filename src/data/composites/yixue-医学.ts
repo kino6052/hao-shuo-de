@@ -12,5 +12,4 @@ export default composite({
   tts: ["帮人身体好的学"],
   literal: "the study of helping bodies be well",
   fit: "plain",
-  proposed: true,
 });

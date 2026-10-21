@@ -1176,15 +1176,19 @@ const OPS = {
   },
 
   // { op: "reviewed", from, to } -- the author has reviewed the composites
-  // ranked from..to (one review batch): their "proposed" marks go
+  // ranked from..to (one review batch): their "proposed" marks go.
+  // { op: "reviewed", zh: [...] } does the same for the named composites (a batch whose entries
+  // do not share a rank range, such as the new composites of batch 17).
   reviewed(ws, op) {
+    const named = op.zh ? new Set(op.zh) : null;
+    if (named) for (const zh of named) if (!ws.composites().some(({ entry }) => entry.zh === zh)) throw new Error(`reviewed: no composite "${zh}"`);
     let n = 0;
     for (const { path, entry } of ws.composites()) {
-      if (entry.rank < op.from || entry.rank > op.to || !entry.proposed) continue;
+      if (!entry.proposed || (named ? !named.has(entry.zh) : entry.rank < op.from || entry.rank > op.to)) continue;
       ws.setComposite(path, { ...entry, proposed: undefined });
       n++;
     }
-    ws.note('composite', `ranks ${op.from}-${op.to} reviewed: ${n} proposed mark(s) cleared`);
+    ws.note('composite', `${named ? `${named.size} named composite(s)` : `ranks ${op.from}-${op.to}`} reviewed: ${n} proposed mark(s) cleared`);
   },
 
   // { op: "text", file, from, to, all? } -- a hand edit kept in the list

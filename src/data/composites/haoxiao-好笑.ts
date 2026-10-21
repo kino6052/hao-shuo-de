@@ -12,5 +12,4 @@ export default composite({
   tts: ["好笑", "让人笑"],
   literal: "good to laugh at",
   fit: "natural",
-  proposed: true,
 });

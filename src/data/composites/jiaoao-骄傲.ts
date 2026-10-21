@@ -12,5 +12,4 @@ export default composite({
   tts: ["想我最好"],
   literal: "think I am the best",
   fit: "plain",
-  proposed: true,
 });

@@ -13,5 +13,4 @@ export default composite({
   literal: "a lot",
   fit: "natural",
   transparent: true,
-  proposed: true,
 });

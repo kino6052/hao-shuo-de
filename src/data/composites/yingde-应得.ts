@@ -12,5 +12,4 @@ export default composite({
   tts: ["不得到不对"],
   literal: "it is wrong if X does not get it",
   fit: "plain",
-  proposed: true,
 });

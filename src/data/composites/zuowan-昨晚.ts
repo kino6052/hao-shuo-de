@@ -12,5 +12,4 @@ export default composite({
   tts: ["前一天晚上"],
   literal: "the evening of the day before",
   fit: "plain",
-  proposed: true,
 });

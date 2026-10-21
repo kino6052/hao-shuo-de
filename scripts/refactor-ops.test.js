@@ -94,6 +94,35 @@ describe('the kinds op', () => {
   });
 });
 
+describe('the reviewed op', () => {
+  // the real content may have no proposed entries left, so the test marks two itself
+  const withTwoProposed = () => {
+    const w = fresh();
+    const [x, y] = w.composites().slice(0, 2);
+    for (const { path, entry } of [x, y]) w.setComposite(path, { ...entry, proposed: true });
+    return { w, zhs: [x.entry.zh, y.entry.zh] };
+  };
+  const proposed = (w, zh) => w.composites().find((c) => c.entry.zh === zh).entry.proposed;
+
+  test('zh: clears the mark of the named entries only', () => {
+    const { w, zhs } = withTwoProposed();
+    expect(zhs.map((zh) => proposed(w, zh))).toEqual([true, true]);
+    applyOps(w, [{ op: 'reviewed', zh: [zhs[0]] }]);
+    expect(proposed(w, zhs[0])).toBeUndefined();
+    expect(proposed(w, zhs[1])).toBe(true);
+  });
+
+  test('from..to still clears a whole rank window', () => {
+    const { w, zhs } = withTwoProposed();
+    applyOps(w, [{ op: 'reviewed', from: 0, to: 1e9 }]);
+    expect(zhs.map((zh) => proposed(w, zh))).toEqual([undefined, undefined]);
+  });
+
+  test('an unknown entry is refused', () => {
+    expect(() => applyOps(fresh(), [{ op: 'reviewed', zh: ['不存在'] }])).toThrow(/no composite/);
+  });
+});
+
 describe('the coverageForm op (K24)', () => {
   const COVERAGE = 'src/data/coverage/atoms.ts';
   const item = (w, key) => w.data(COVERAGE).items.find((i) => i.key === key);

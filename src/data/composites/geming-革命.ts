@@ -14,5 +14,4 @@ export default composite({
   tts: ["很多人让国家变"],
   literal: "many people make the country change",
   fit: "plain",
-  proposed: true,
 });

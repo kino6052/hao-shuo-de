@@ -12,5 +12,4 @@ export default composite({
   tts: ["帮我工作的人"],
   literal: "a person who helps me work",
   fit: "plain",
-  proposed: true,
 });

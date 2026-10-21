@@ -12,5 +12,4 @@ export default composite({
   tts: ["没有别的东西"],
   literal: "there is nothing else in it",
   fit: "plain",
-  proposed: true,
 });

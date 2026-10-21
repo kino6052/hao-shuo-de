@@ -12,5 +12,4 @@ export default composite({
   tts: ["又好了"],
   literal: "good again",
   fit: "plain",
-  proposed: true,
 });

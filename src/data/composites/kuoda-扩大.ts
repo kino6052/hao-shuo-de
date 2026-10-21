@@ -12,5 +12,4 @@ export default composite({
   tts: ["把X变大"],
   literal: "make X big",
   fit: "plain",
-  proposed: true,
 });

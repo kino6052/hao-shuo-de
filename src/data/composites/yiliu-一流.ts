@@ -12,5 +12,4 @@ export default composite({
   tts: ["比别人都好"],
   literal: "better than everyone else",
   fit: "plain",
-  proposed: true,
 });

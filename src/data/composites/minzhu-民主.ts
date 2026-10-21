@@ -12,5 +12,4 @@ export default composite({
   tts: ["人人都能决定"],
   literal: "everyone can decide",
   fit: "plain",
-  proposed: true,
 });
