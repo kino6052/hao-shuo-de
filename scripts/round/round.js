@@ -124,6 +124,8 @@ async function main() {
     const lines = ['# The core words (write forms with these only; X, Y, Z stand for a thing, "quotes" for a name or sound)', ''];
     for (const w of Object.values(words).sort((a, b) => a.term.localeCompare(b.term))) {
       lines.push(`${w.term} ${w.hanzi} (${w.pos?.eng ?? ''}): ${plain(w.definition?.eng)}${w.necessity?.eng ? ` -- ${plain(w.necessity.eng)}` : ''}`);
+      // a sense is written with its own hanzi (xīn-de as 新的), and the checker then reads the word in that sense
+      for (const s of Object.values(w.senses ?? {})) lines.push(`  ${w.term} written ${s.hanzi}: ${s.eng}`);
     }
     const net = tagNet(topics);
     lines.push('', '# Pages: the leaf topics (`topics`, one id; the path above it in brackets)', '');
