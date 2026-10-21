@@ -67,7 +67,8 @@ Hǎo-shuō-de
 └── Misc
     ├── Why Minimality Works                                appendix-minimality.yaml
     ├── The Frontier                                        appendix-frontier.ts
-    └── Hao-shuo-de is not toki pona                        appendix-toki-pona.yaml
+    ├── Hao-shuo-de is not toki pona                        appendix-toki-pona.yaml
+    └── Extra Resources                                     appendix-resources.ts
 ```
 <!-- /generated:book-tree -->
 

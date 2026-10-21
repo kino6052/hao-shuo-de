@@ -15,6 +15,9 @@
 //   kb.meaning([name])         what the words say of the primes, categories and grammar items, and the primes each description reaches (meaning.js)
 //   kb.candidates()            what to drop, what to add and what to trade (see candidates.js; needs `freq` for Mandarin)
 //   kb.tags()                  the tag nets: topic (where you meet a word) and kind (what it is), their members and checks (tags.js)
+//   kb.built()                 the build tags of the composites: the patterns, words and lesson each description is made from (build-tags.js)
+//   kb.akinator()              the Akinator engine over the pool: .step(answers) gives the next question or the result (akinator.js)
+//   kb.pool()                  the Akinator's pool: words, composites, patterns and sentences with their features (akinator-pool.js)
 //   kb.gains()                 the Chinese words to promote to core entries, best first, for growing to about 1000 (see gains.js; needs `freq`)
 //
 // Names are lenient: an id (deng1), a term (dēng, deng) or a hanzi (灯).
@@ -39,6 +42,14 @@ import { restsOnModel } from './rests-on.js';
 import { candidateModel, renderAddition, renderAudit, renderRemovalCandidates, renderRootCandidates, renderSwaps } from './candidates.js';
 import { gainModel, renderGainExplain, renderGains } from './gains.js';
 import { wordEntries } from './word-entries.js';
+import { buildModel, makeRowBuilder } from './build-tags.js';
+import { buildPool } from './akinator-pool.js';
+import { createAkinator } from './akinator.js';
+import { makeDescribe, firstChoices } from './akinator-questions.js';
+import { TAGS as themeTags } from '../grammar-tags.ts';
+import { patternsOf } from '../grammar/parser.js';
+import { pinyinToRefs } from '../pinyin-refs.js';
+import { wordRefIds } from '../word-refs.js';
 import { tagModel, renderTree, renderTag, renderOf, renderCommon, renderFind, renderCheck, renderProposed } from './tags.js';
 
 // freq: the Mandarin frequency list [{ zh, py, rank }]; drafts: how words would be said without a stored paraphrase { id: { forms, verdict } }
@@ -47,7 +58,7 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
   const facts = buildFacts(source);
   const index = buildIndex(source, facts);
   let rests = null; // the atoms each word rests on (rests-on.js), plain code and quick
-  const ctx = { source, facts, rules, index, meaning: () => (meaning ??= meaningReport(source)), restsOn: () => (rests ??= restsOnModel(source)) };
+  const ctx = { source, facts, rules, index, meaning: () => (meaning ??= meaningReport(source)), restsOn: () => (rests ??= restsOnModel(source)), builtRow: (c) => builtRowOf()(c) };
   const words = source.words;
 
   // the atoms report takes three solver runs; a KB is one version of the data, so it is asked once
@@ -76,6 +87,65 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
   let tagsModel = null; // the tag nets over the entries (tags.js), plain code and quick
   const tagsOf = () => (tagsModel ??= tagModel(source, { entryZhs: (text) => { const r = englishOf().lookup(text); return [...new Set([...r.glosses, ...r.sameSense.flatMap((s) => s.entries)].map((e) => e.zh))]; } }));
   const relationsOf = () => (relationsReport ??= relationReport(source, facts, relationRules));
+
+  // The lesson that first teaches each core word: the earliest card (or catch-all sense card) of the book
+  let firstLesson = null;
+  const wordLesson = (id) => {
+    if (!firstLesson) {
+      const number = Object.fromEntries((source.lessons ?? []).map((l) => [l.id, l.number]));
+      firstLesson = new Map();
+      for (const line of facts.lines) {
+        const m = /^card\(([^,]+),"([^"]+)",/.exec(line) ?? /^card_sense\(([^,]+),"[^"]*","([^"]+)",/.exec(line);
+        const n = m ? number[m[2]] : undefined;
+        if (n !== undefined && n < (firstLesson.get(m[1]) ?? Infinity)) firstLesson.set(m[1], n);
+      }
+    }
+    return firstLesson.get(id);
+  };
+  let builtModelCache = null; // the build tags of the composites (build-tags.js): every description is parsed once
+  const builtOptions = {
+    patterns: source.patterns ?? [],
+    lessons: (source.lessons ?? []).map(({ id, number }) => ({ id, number })),
+    parse: (form) => parseText.parser.parse(form, { maxTrees: 1, forms: true }),
+    parseAt: (n) => (form) => parseUpTo(n).parser.parse(form, { maxTrees: 1, forms: true }),
+    wordLesson,
+    patternLesson: (id) => taughtIn(patternById.get(id) ?? {}),
+  };
+  let poolCache = null; // the Akinator's pool (akinator-pool.js)
+  // what a sentence uses: the patterns of its first reading and the words it names (plain pinyin or text with word refs)
+  const readText = (text) => {
+    let refs = String(text);
+    if (!refs.includes('{{')) {
+      try {
+        refs = pinyinToRefs(refs, words);
+      } catch {
+        return { patterns: [], words: [] };
+      }
+    }
+    const used = new Set();
+    for (const s of refs.trim().split(/(?<=[.!?…])\s+/).filter(Boolean)) {
+      const r = parseText.parser.parse(s, { maxTrees: 1 });
+      if (r.ok) for (const p of patternsOf(r.trees[0])) used.add(p);
+    }
+    return { patterns: [...used], words: wordRefIds(refs) };
+  };
+  let akinatorCache = null; // the engine over the pool (akinator.js)
+  const poolOf = () =>
+    (poolCache ??= buildPool({
+      sentences: facts.sentences,
+      patterns: source.patterns ?? [],
+      words,
+      composites: source.composites,
+      topicNet: tagsOf().nets.topic,
+      kindNet: tagsOf().nets.kind,
+      built: builtOf(),
+      lessons: builtOptions.lessons,
+      wordLesson,
+      readText,
+    }));
+  let builtRow = null;
+  const builtRowOf = () => (builtRow ??= makeRowBuilder(builtOptions));
+  const builtOf = () => (builtModelCache ??= buildModel({ composites: source.composites, words, lessons: builtOptions.lessons, rowOf: builtRowOf() }));
 
   const parseText = makeParseText({ patterns: source.patterns ?? [], words, composites: source.composites, memo: parseMemo?.space({ patterns: source.patterns ?? [], words, composites: source.composites }) });
 
@@ -122,10 +192,29 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
     parseUpTo,
     parseMemo, // the memory its parses use (null: none), for a KB made from this one
     patternLesson: (id) => taughtIn(patternById.get(id) ?? {}),
+    wordLesson, // the number of the lesson that first teaches a core word
+    lessons: () => builtOptions.lessons, // [{ id, number }] in teaching order
     parser: parseText.parser,
 
     // The relations: stored ones are accepted, the ones a rule finds are proposed (see relations.js).
     relations: relationsOf,
+
+    // The build tags of the composites (AKINATOR_PLAN.md A5): which patterns, words and lesson each description is made from.
+    built: builtOf,
+
+    // The pool the Akinator searches (AKINATOR_PLAN.md A3, akinator-pool.js): the words, composites, patterns and sentences,
+    // each with its features. The sentences are read once (patterns and words); the parse memory makes a rebuild 0.4 s.
+    pool: poolOf,
+
+    // The Akinator (AKINATOR_PLAN.md part B, akinator.js): ak.step(answers) -> the next question or the result. `prior` is an
+    // optional Map(item id -> weight) from an English hint; with one the engine is made fresh, without one it is kept.
+    akinator: ({ prior = null, ...options } = {}) => {
+      const make = () => {
+        const nets = { topicNet: tagsOf().nets.topic, kindNet: tagsOf().nets.kind };
+        return createAkinator(poolOf(), { describe: makeDescribe({ ...nets, patterns: source.patterns ?? [], words, themes: themeTags }), first: firstChoices(nets), prior, ...options });
+      };
+      return prior || Object.keys(options).length ? make() : (akinatorCache ??= make());
+    },
 
     // The tag nets (TAGS_PLAN.md, K31): where an entry sits on the topic and kind nets, what is under a tag, what two entries share, the checks.
     tags: tagsOf,

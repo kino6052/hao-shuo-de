@@ -60,6 +60,12 @@ node scripts/kb.js tags --common <a> <b>                                # the cl
 node scripts/kb.js tags --find <text>                                   # the tags whose name has the text, and the entries an English word leads to
 node scripts/kb.js tags --check                                         # cycles, unknown tags, extra, empty, too big and too small leaves, vague and untagged entries
 node scripts/kb.js tags --proposed [tag]                                # the tags waiting for review, and why each was proposed
+node scripts/kb.js built [<composite>] [--pattern ba-handle] [--theme compare] [--word bǎ] [--form chain|phrase|unread] [--made built|spelled] [--reach <lesson>] [--up-to N] [--limit N]  # what each composite's description is made from: the patterns, words and lesson (A5); a composite by name gives its whole build, filters join
+node scripts/kb.js lesson [<id or number>] [--kind words|patterns|composites|sentences] [--limit N]  # what a lesson teaches: new words, patterns, composites that become readable, sentences; no lesson lists them all (W21)
+node scripts/kb.js grammar [<id>] [--tag compare|cat:action|lesson:comparing] [--lesson L] [--up-to N] [--limit N]  # the grammar patterns: all, by tag, by lesson; an id gives one in full with its examples and users
+node scripts/kb.js uses <word> [--limit N]                              # the sentences and composite descriptions that use a core word, by lesson (its senses: kb word)
+node scripts/kb.js similar <sentence id or some of its text> [--limit N]  # sentences like one, by shared words and patterns
+node scripts/kb.js akinator [--start doing|when|where|situation ...] [--hint "I am hungrier than you"] [--finish] [--limit N] [kind:doing=yes theme:compare=probably ...]  # find how to say an idea by questions (W27): the answers so far in, the next question or what fits out; nothing is kept between calls, to take an answer back leave it out
 node scripts/kb.js english <word> [--json]                              # which entries say an English word: by gloss, by WordNet sense, as a kind of
 node scripts/kb.js hints <word> [--limit N]                             # WordNet hints for drafting a description of a word with no entry (English or Mandarin)
 node scripts/kb.js export [--all] [--base IRI] [--out FILE] [--stdout]  # the dictionary as OntoLex Turtle (to kb/cache/export/hao-shuo-de.ttl); --all adds the proposed relations
@@ -99,6 +105,11 @@ node scripts/kb.js engine                                               # which 
 | `kb_atoms` | Which dictionary words are atoms: the words the others cannot be said from. |
 | `kb_relations` | The relations between words and between composites: opposites, close words, the same description, kind-of (a composite and its head), agents, categories, and phrases that stand in for a missing opposite. |
 | `kb_tags` | The tag nets (TAGS_PLAN.md): every entry, core word or composite, sits under tags on two nets that can nest and a tag can have several parents. |
+| `kb_built` | What each composite's Hao-shuo-de description is made from (AKINATOR_PLAN.md A5): the grammar patterns its parse uses (bǎ is pattern ba-handle, doubling is doubled-verb), what those patterns are for (theme: compare… |
+| `kb_lesson` | What a lesson teaches (WRITING_PLAN.md W21): its new words (the lesson that first teaches them), the patterns taught, the composites that become readable by then (grammar and words taught so far… |
+| `kb_patterns` | The grammar patterns: all of them, by tag (a theme such as compare, a category such as cat:action, lesson:comparing, grammar:…), by lesson, or taught by lesson N at the latest (up_to). |
+| `kb_uses` | Where a word is used, or sentences like one. With `word`: the sentences of the book (by lesson), pattern examples and composite descriptions that use a core word; its senses are on its card (kb_word). |
+| `kb_akinator` | Finds how to say an idea in Hao-shuo-de by asking questions, like the Akinator game (AKINATOR_PLAN.md W27). |
 | `kb_english` | Which dictionary entries say an English word, in three tiers: the entries whose gloss has the word, the entries that share a WordNet sense with it (its synonyms), and, when neither says it… |
 | `kb_hints` | Hints for describing a word the dictionary does not say yet (English or Mandarin): what WordNet says it means and which entry to start from. |
 | `kb_export` | The dictionary as OntoLex-Lemon Turtle, the format Protégé opens: one entry alone, or the counts. |
@@ -121,7 +132,13 @@ node scripts/kb.js engine                                               # which 
 
 | File | What it does |
 | --- | --- |
+| `src/lib/kb/akinator-ask.js` | One Akinator question as the command line and the Claude tool both ask it (AKINATOR_PLAN.md C1, C2): the answers so far in, the next question or the result out, as { data, text }. |
+| `src/lib/kb/akinator-pool.js` | The pool the Akinator searches (AKINATOR_PLAN.md A3): one list of everything a learner could be thinking of, each item with its features. |
+| `src/lib/kb/akinator-questions.js` | The words of the Akinator: the plain question for each feature, and the choices of the fixed first question (AKINATOR_PLAN.md B1, A4). |
+| `src/lib/kb/akinator-selfplay.js` | Self-play for the Akinator (AKINATOR_PLAN.md B7): for each item of the pool an answerer who knows that item answers from its features… |
+| `src/lib/kb/akinator.js` | The Akinator engine (AKINATOR_PLAN.md part B): given the answers so far, which question to ask next, or what fits. |
 | `src/lib/kb/atoms.js` | Which words are atoms (KB_PLAN.md K3, K8, phase 2). |
+| `src/lib/kb/build-tags.js` | Build tags of the composites (AKINATOR_PLAN.md A5): what each composite's description is made from. |
 | `src/lib/kb/candidates.js` | What a change would cost and what it would buy (KB_PLAN.md phase 3): which words to drop, which roots to add, which trades to make. |
 | `src/lib/kb/card.js` | Looking a word up: find it by any name, and gather everything the KB knows about it (KB_PLAN.md phase 1, "a word card: facts and relations"). |
 | `src/lib/kb/check-form.js` | Checking a Hao-shuo-de form before it goes anywhere (KB_PLAN.md phase 1, `kb_check_form`): the same rules the book gates apply to composites… |
@@ -138,6 +155,7 @@ node scripts/kb.js engine                                               # which 
 | `src/lib/kb/grammar-uses.js` | "Which grammar patterns does a word carry?" (KB_PLAN.md K20). A pattern names a word in three places: the words in its rules (=bie2), the words in its template, and the words in its examples. |
 | `src/lib/kb/hints.js` | Hints for describing a new word: for an English or Mandarin word, what WordNet says it means and which entry the description can start from. |
 | `src/lib/kb/kb.js` | The one place the command line, the explorer page and the Claude tools all ask their questions through. |
+| `src/lib/kb/lesson-lookup.js` | The lesson lookups of the writer (AKINATOR_PLAN.md A2, WRITING_PLAN.md W21): words, composites, patterns and sentences of a lesson; the grammar patterns (all, by tag, by lesson)… |
 | `src/lib/kb/mcp.js` | The Model Context Protocol, the small part the KB needs: JSON-RPC 2.0, one message per line over stdio. |
 | `src/lib/kb/meaning.js` | Meaning links (KB_PLAN.md K19, phase 5): what the words say of the NSM primes, Aristotle's categories and the grammar items, and which primes each description reaches. |
 | `src/lib/kb/parse-diff.js` | "What did my edit do to the parses?" (KB_PLAN.md K20). |

@@ -17,7 +17,7 @@ import { explainFailure } from '../grammar/parser.js';
 import { replaceWordRefs, refTerm } from '../word-refs.js';
 
 // a description of one word or one hyphen chain of words: no space, comma, slot or ellipsis once the refs are taken out
-const isWordForm = (form) => !/[\s,…A-CX-Z"]/.test(String(form).replace(/\{\{[^}]*\}\}/g, 'w'));
+export const isWordForm = (form) => !/[\s,…A-CX-Z"]/.test(String(form).replace(/\{\{[^}]*\}\}/g, 'w'));
 
 export const formText = (form, words = {}) => replaceWordRefs(form, (id, kind) => refTerm(words[id]?.term ?? id, kind));
 

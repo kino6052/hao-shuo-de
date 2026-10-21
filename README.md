@@ -44,7 +44,7 @@ Plans and decisions: [BOOK_PLAN.md](BOOK_PLAN.md) (book, decision log D1…), [K
 
 | What | Now |
 | --- | --- |
-| Lessons | 26, in 3 sections (6 / 10 / 10), then 14 chapters to read, look things up in or build with |
+| Lessons | 26, in 3 sections (6 / 10 / 10), then 15 chapters to read, look things up in or build with |
 | Core words | 230: 53 atoms (no honest description) and 177 with a paraphrase, so potentially removable |
 | Composite words | 2169, with 2603 ways to say them (2457 built from their parts, 90 spelled whole, 56 waiting for the author to say which) |
 | Grammar patterns | 145, one file each in `src/data/grammar/` |
@@ -52,7 +52,7 @@ Plans and decisions: [BOOK_PLAN.md](BOOK_PLAN.md) (book, decision log D1…), [K
 | Lesson sentences that parse | 99.6 % |
 | Smallest set the others can be said from | 202 words; the other 28 have a fine paraphrase |
 | Gates (`npm run check`) | 22 |
-| Test files (`npm test`) | 69 |
+| Test files (`npm test`) | 73 |
 
 The language numbers are the last row of `kb/scoreboard.csv` (2026-10-21, refactors/K15.ts: 20 op(s)); a refactor adds a new row.
 <!-- /generated:facts -->
@@ -123,6 +123,7 @@ Lessons are named, not numbered: [src/content/book.js](src/content/book.js) is t
 | Misc | Why Minimality Works | `src/content/appendix-minimality.yaml` |
 | Misc | The Frontier | `src/content/appendix-frontier.ts` |
 | Misc | Hao-shuo-de is not toki pona | `src/content/appendix-toki-pona.yaml` |
+| Misc | Extra Resources | `src/content/appendix-resources.ts` |
 <!-- /generated:book -->
 
 ## Requirements

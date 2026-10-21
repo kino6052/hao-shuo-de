@@ -175,7 +175,7 @@ The result is a **loss report** per text: which colour ideas came out weaker or 
 - [ ] **Gaps** (W9): the descriptions logged across texts go to `kb_candidates` / `kb_add` as proposals.
 
 - [ ] **Rework of the text generation** (W19–W25, 2026-10-21), in this order:
-  - [~] **Tag the 145 grammar patterns** from their lessons, plus extra tags (W22). Done 2026-10-21: lesson and module tags come from `taught`, 28 theme tags and `cat:` tags are stored on every pattern (src/lib/grammar-tags.ts), check-data guards them; the author's read of the extra tags is still to do (AKINATOR_PLAN.md A1).
+  - [x] **Tag the 145 grammar patterns** from their lessons, plus extra tags (W22). Done 2026-10-21: lesson and module tags come from `taught`, 28 theme tags and `cat:` tags are stored on every pattern (src/lib/grammar-tags.ts), check-data guards them; the author read the extra tags and approved them the same day (AKINATOR_PLAN.md A1).
   - [ ] **The KB skill and its lookups** (W21): patterns (all, by tag, by lesson), words and composites by lesson, similar sentences and senses. The first tool of the old list (`kb_lookup`, `kb_check_text`, `kb_gloss`) is built as part of it.
   - [ ] **A sentence bank with stable ids** (W25): every lesson sentence and composite example gets an id the texts can point at; the text format stores source id plus swaps; the build renders it; a gate stops the build on a reference that no longer resolves or a swap that no longer fits.
   - [ ] **Change steps 3 and 5** (W19, W20, W24): step 3 looks for the closest source first and records where each sentence came from; the output of step 6 shows the sources next to the text for the author.

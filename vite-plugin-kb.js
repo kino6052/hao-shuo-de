@@ -18,6 +18,9 @@
 //                                 their descriptions reach; a name is a word, or says / atoms / grounding for one part
 //   GET /__kb/tags?tag=|of=|common=a,b|find=|check=1|kinds=1   { text, ids }: the tag nets (topic and kind): the tree, one tag's
 //                                 members, where an entry sits, what two share; ids are every tag id, to make links
+//   GET /__kb/akinator?answers=a=yes,b=no&hint=&finish=1   the Akinator (src/lib/kb/akinator-ask.js): the stage (first, question
+//                                 or result), the question with its choices, the leaders or the result, and the text
+//   GET /__kb/lessons?cmd=lesson|grammar|uses|similar|built&arg=   { cmd, text }: the lesson lookups (A2) and the build tags (A5)
 //   GET /__kb/scoreboard          { now, rows, columns, text }: the language's numbers now, and the stored
 //                                 rows (kb/scoreboard.csv) to chart them against
 //
@@ -57,8 +60,31 @@ export default function kbPlugin() {
 
           const { openKb } = await load('scripts/kb.js');
           const { renderCard, renderRemoval, renderParse, viewParse, renderAtoms, renderAtomWord, renderRelations, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps } = await load('src/lib/kb/kb.js');
-          const kb = await openKb();
+          // the Akinator and the lesson lookups read sentences by the thousand, so they use the parse memory (slim parses);
+          // the cache is kept per mode, so switching between these tabs and the others rebuilds once
+          const kb = await openKb({ memo: url.pathname === '/akinator' || url.pathname === '/lessons' });
           switch (url.pathname) {
+            case '/akinator': {
+              const { askAkinator } = await load('src/lib/kb/akinator-ask.js');
+              const r = askAkinator(kb, { answers: get('answers'), hint: get('hint') || undefined, finish: get('finish') === '1', limit: Number(get('limit')) || 6 });
+              return json(res, { ...r.data, text: r.text });
+            }
+            case '/lessons': {
+              const { askLesson, askPatterns, askSimilar, askUses } = await load('src/lib/kb/lesson-lookup.js');
+              const { askBuilt } = await load('src/lib/kb/build-tags.js');
+              const cmd = get('cmd') || 'lesson';
+              const arg = get('arg').trim() || undefined;
+              const limit = Number(get('limit')) || undefined;
+              const pool = () => kb.pool();
+              const r = cmd === 'lesson' ? askLesson(pool(), kb.lessons(), { lesson: arg, limit })
+                : cmd === 'grammar' ? askPatterns(pool(), kb.lessons(), arg && /^(cat|theme|lesson|grammar):/.test(arg) ? { tag: arg, limit } : { id: arg, limit })
+                : cmd === 'uses' ? askUses(pool(), kb.lessons(), { word: arg, limit })
+                : cmd === 'similar' ? askSimilar(pool(), kb.lessons(), { sentence: arg, limit })
+                : cmd === 'built' ? askBuilt(kb.built(), arg ? { name: arg, limit } : { limit })
+                : null;
+              if (!r) return json(res, { error: `unknown command "${cmd}" (lesson, grammar, uses, similar or built)` }, 400);
+              return json(res, { cmd, text: r.text });
+            }
             case '/find':
               return json(res, kb.find(get('q')).slice(0, 12));
             case '/word': {

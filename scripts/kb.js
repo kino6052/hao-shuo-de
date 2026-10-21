@@ -16,6 +16,12 @@
 //   node scripts/kb.js tags --find <text>  # the tags whose name has the text, and the entries an English word leads to
 //   node scripts/kb.js tags --check  # cycles, unknown tags, extra, empty, too big and too small leaves, vague and untagged entries
 //   node scripts/kb.js tags --proposed [tag]  # the tags waiting for review, and why each was proposed
+//   node scripts/kb.js built [<composite>] [--pattern ba-handle] [--theme compare] [--word bǎ] [--form chain|phrase|unread] [--made built|spelled] [--reach <lesson>] [--up-to N] [--limit N]  # what each composite's description is made from: the patterns, words and lesson (A5); a composite by name gives its whole build, filters join
+//   node scripts/kb.js lesson [<id or number>] [--kind words|patterns|composites|sentences] [--limit N]  # what a lesson teaches: new words, patterns, composites that become readable, sentences; no lesson lists them all (W21)
+//   node scripts/kb.js grammar [<id>] [--tag compare|cat:action|lesson:comparing] [--lesson L] [--up-to N] [--limit N]  # the grammar patterns: all, by tag, by lesson; an id gives one in full with its examples and users
+//   node scripts/kb.js uses <word> [--limit N]  # the sentences and composite descriptions that use a core word, by lesson (its senses: kb word)
+//   node scripts/kb.js similar <sentence id or some of its text> [--limit N]  # sentences like one, by shared words and patterns
+//   node scripts/kb.js akinator [--start doing|when|where|situation ...] [--hint "I am hungrier than you"] [--finish] [--limit N] [kind:doing=yes theme:compare=probably ...]  # find how to say an idea by questions (W27): the answers so far in, the next question or what fits out; nothing is kept between calls, to take an answer back leave it out
 //   node scripts/kb.js english <word> [--json]  # which entries say an English word: by gloss, by WordNet sense, as a kind of
 //   node scripts/kb.js hints <word> [--limit N]  # WordNet hints for drafting a description of a word with no entry (English or Mandarin)
 //   node scripts/kb.js export [--all] [--base IRI] [--out FILE] [--stdout]   # the dictionary as OntoLex Turtle (to kb/cache/export/hao-shuo-de.ttl); --all adds the proposed relations
@@ -89,6 +95,9 @@ import { fileURLToPath, pathToFileURL } from 'url';
 import { Worker } from 'worker_threads';
 import { createKb, renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderKindTree, renderEnglish, renderHints, exportTurtle, renderExportSummary, renderCrossCheck, renderFrontier, renderYardsticks, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps, renderAudit, renderGains, renderGainExplain } from '../src/lib/kb/kb.js';
 import { askTags } from '../src/lib/kb/tags.js';
+import { askBuilt } from '../src/lib/kb/build-tags.js';
+import { askAkinator } from '../src/lib/kb/akinator-ask.js';
+import { askLesson, askPatterns, askSimilar, askUses } from '../src/lib/kb/lesson-lookup.js';
 import { loadFrequencyList } from './frequency-list.js';
 import { sourceStamp } from './source-cache.js';
 import { readCache, writeCache } from './cache.js';
@@ -232,7 +241,7 @@ async function main(argv) {
   const [command, ...rest] = args;
   const print = (data, text) => console.log(json ? JSON.stringify(data, null, 2) : text);
   // the commands that only ask whether sentences parse read the parse memory (slim results, no trees)
-  const kb = await openKb({ memo: ['scoreboard', 'parse-report', 'parse-diff', 'move'].includes(command) });
+  const kb = await openKb({ memo: ['scoreboard', 'parse-report', 'parse-diff', 'move', 'built', 'akinator', 'lesson', 'grammar', 'uses', 'similar'].includes(command) });
 
   switch (command) {
     case 'word': {
@@ -347,6 +356,47 @@ async function main(argv) {
       else ask.tag = rest.find((a) => !a.startsWith('--'));
       if (ands.length) ask.and = ands;
       const r = askTags(kb.tags(), ask);
+      return print(r.data, r.text);
+    }
+    case 'built': {
+      const ask = {};
+      for (const [flag, key] of [['--pattern', 'pattern'], ['--theme', 'theme'], ['--word', 'word'], ['--form', 'form'], ['--made', 'made'], ['--reach', 'reach'], ['--up-to', 'upTo'], ['--tag', 'tag'], ['--limit', 'limit']]) {
+        const v = option(rest, flag);
+        if (v !== undefined) ask[key] = v;
+      }
+      const name = rest.filter((a) => !a.startsWith('--')).join(' ');
+      if (name) ask.name = name;
+      const r = askBuilt(kb.built(), ask);
+      return print(r.data, r.text);
+    }
+    case 'lesson': {
+      // option() takes its flag out of rest, so read every flag first, then the plain arguments
+      const kind = option(rest, '--kind');
+      const limit = option(rest, '--limit');
+      const r = askLesson(kb.pool(), kb.lessons(), { lesson: rest.find((a) => !a.startsWith('--')), kind, limit });
+      return print(r.data, r.text);
+    }
+    case 'grammar': {
+      const tag = option(rest, '--tag');
+      const lesson = option(rest, '--lesson');
+      const upTo = option(rest, '--up-to');
+      const limit = option(rest, '--limit');
+      const r = askPatterns(kb.pool(), kb.lessons(), { id: rest.find((a) => !a.startsWith('--')), tag, lesson, upTo, limit });
+      return print(r.data, r.text);
+    }
+    case 'uses': {
+      const limit = option(rest, '--limit');
+      const r = askUses(kb.pool(), kb.lessons(), { word: rest.find((a) => !a.startsWith('--')), limit });
+      return print(r.data, r.text);
+    }
+    case 'similar': {
+      const limit = option(rest, '--limit');
+      const r = askSimilar(kb.pool(), kb.lessons(), { sentence: rest.filter((a) => !a.startsWith('--')).join(' '), limit });
+      return print(r.data, r.text);
+    }
+    case 'akinator': {
+      // answers are the arguments that look like feature=answer; nothing is kept between calls (B6)
+      const r = askAkinator(kb, { answers: rest.filter((a) => /^[a-z]+:[^=\s]+=/.test(a)), start: option(rest, '--start'), hint: option(rest, '--hint'), finish: rest.includes('--finish'), limit: option(rest, '--limit') });
       return print(r.data, r.text);
     }
     case 'english': {

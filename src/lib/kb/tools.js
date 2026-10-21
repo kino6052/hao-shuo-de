@@ -10,6 +10,9 @@ import { SECTIONS } from './cross-check.js';
 import { PARTS } from './frontier.js';
 import { renderMeaning, renderMeaningWord, renderCard, renderRemoval, renderParse, renderAtoms, renderAtomWord, renderRelations, renderEnglish, renderHints, exportTurtle, exportFragment, renderExportSummary, renderCrossCheck, renderFrontier, renderYardsticks, renderAddition, renderRemovalCandidates, renderRootCandidates, renderSwaps, renderGains, renderGainExplain } from './kb.js';
 import { askTags } from './tags.js';
+import { askBuilt } from './build-tags.js';
+import { askAkinator } from './akinator-ask.js';
+import { askLesson, askPatterns, askSimilar, askUses } from './lesson-lookup.js';
 import { scoreboardRow, readScoreboard, renderScoreboard, renderHistory } from './scoreboard.js';
 
 // the stored rows (refactor --write adds one after every change)
@@ -120,6 +123,89 @@ export const TOOLS = [
         kinds: { type: 'boolean', description: 'The kind net instead of the topic net (for the tree).' },
         depth: { type: 'integer', description: 'How many levels of the tree to show.' },
         limit: { type: 'integer', description: 'How many members to list for a tag (default 40).' },
+      },
+    },
+  },
+  {
+    name: 'kb_built',
+    description:
+      "What each composite's Hao-shuo-de description is made from (AKINATOR_PLAN.md A5): the grammar patterns its parse uses (bǎ is pattern ba-handle, doubling is doubled-verb), what those patterns are for (theme: compare, when, make), the dictionary words, " +
+      'whether it is a hyphen chain, a phrase the patterns read or one they cannot read yet, built or spelled, and `reach`: the first lesson after which a learner can read it with only the patterns taught so far. ' +
+      'Use it to find composites that use a pattern, to pick words a lesson text may use (up_to), or to see how one composite is built (name). Filters join; with nothing it counts every tag. The tags come from the description each time, so they are never stale.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        name: { type: 'string', description: 'One composite (hanzi or pinyin): its forms, patterns, words and reach.' },
+        pattern: { type: 'string', description: 'A pattern id such as ba-handle, doubled-verb, bi-than.' },
+        theme: { type: 'string', description: 'What a pattern is for: compare, when, where, count, make, question, negation, doubling and more (src/lib/grammar-tags.ts).' },
+        word: { type: 'string', description: 'A dictionary word the description uses (id, pinyin or hanzi).' },
+        form: { type: 'string', description: 'chain, phrase, unread or none.' },
+        made: { type: 'string', description: 'built or spelled (Mandarin spelled with our words, to be learned whole).' },
+        reach: { type: 'string', description: 'A lesson id (becoming-and-making) or its number: the composites that become readable exactly then.' },
+        up_to: { type: 'integer', description: 'A lesson number: the composites readable by then at the latest.' },
+        limit: { type: 'integer', description: 'How many to list (default 25).' },
+      },
+    },
+  },
+  {
+    name: 'kb_lesson',
+    description:
+      'What a lesson teaches (WRITING_PLAN.md W21): its new words (the lesson that first teaches them), the patterns taught, the composites that become readable by then (grammar and words taught so far, see kb_built) and its sentences. The lesson is the main key. ' +
+      'With no lesson it lists all of them with counts. Use it to know what a text for lesson N may use.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        lesson: { type: 'string', description: 'A lesson id (comparing) or its number.' },
+        kind: { type: 'string', description: 'Only one list: words, patterns, composites or sentences.' },
+        limit: { type: 'integer', description: 'How many to list per kind (default 30).' },
+      },
+    },
+  },
+  {
+    name: 'kb_patterns',
+    description:
+      'The grammar patterns: all of them, by tag (a theme such as compare, a category such as cat:action, lesson:comparing, grammar:…), by lesson, or taught by lesson N at the latest (up_to). ' +
+      'An id gives one pattern in full: meaning, form, tags, examples, and the sentences and composite descriptions that use it.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        id: { type: 'string', description: 'A pattern id such as ba-handle: the whole pattern.' },
+        tag: { type: 'string', description: 'A theme (compare, when, make ...), cat:<category>, lesson:<id> or grammar:<item>.' },
+        lesson: { type: 'string', description: 'Patterns taught in this lesson (id or number).' },
+        up_to: { type: 'integer', description: 'Patterns taught by this lesson number at the latest.' },
+        limit: { type: 'integer', description: 'How many to list (default 40).' },
+      },
+    },
+  },
+  {
+    name: 'kb_uses',
+    description:
+      'Where a word is used, or sentences like one. With `word`: the sentences of the book (by lesson), pattern examples and composite descriptions that use a core word; its senses are on its card (kb_word). ' +
+      'With `similar`: the sentences that share the most words and patterns with a given sentence (its id, or some of its pinyin, hanzi or English).',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        word: { type: 'string', description: 'A core word (id, pinyin or hanzi).' },
+        similar: { type: 'string', description: 'A sentence id or some of its text.' },
+        limit: { type: 'integer', description: 'How many to list (default 12).' },
+      },
+    },
+  },
+  {
+    name: 'kb_akinator',
+    description:
+      'Finds how to say an idea in Hao-shuo-de by asking questions, like the Akinator game (AKINATOR_PLAN.md W27). It keeps nothing: you pass every answer so far and get the next question, or what fits. ' +
+      'With no answers it shows the fixed first question (what do you want to say?) and its choices. Then answer each question as feature=yes | probably | unknown | probably-not | no, and call again with the whole list. ' +
+      'A wrong answer is undone by leaving it out, or changed by giving the feature again. `start` picks the first choice by word (doing, when, where, situation ...). `hint` is an optional English hint ("I am hungrier than you") that sets the starting weights. `finish` shows what fits now. ' +
+      'The result is example sentences, patterns, words and composites, each with its lesson as a label (never a filter), or "Nothing fits well yet" with the three closest and the answers none agree with: a gap. The tool saves nothing.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        answers: { type: 'array', items: { type: 'string' }, description: 'The answers so far, in order: "kind:doing=yes", "theme:compare=probably-not". The feature is the one the last question named.' },
+        start: { type: 'string', description: 'The first question\'s choice as a word instead of an answer: thing, how-much, what-kind, relation, where, when, position, having, doing, undergoing, grammar-words or situation.' },
+        hint: { type: 'string', description: 'An optional English hint for the idea.' },
+        finish: { type: 'boolean', description: 'Show what fits now, whatever is left to ask.' },
+        limit: { type: 'integer', description: 'How many items to show per group in the result (default 6).' },
       },
     },
   },
@@ -317,6 +403,21 @@ export async function callTool(kb, name, args = {}, { scoreboardFile = SCOREBOAR
       if (Array.isArray(args.and) && args.and.length) ask.and = args.and.map(String);
       if (args.proposed) ask.proposed = args.proposed === 'all' ? true : String(args.proposed);
       return askTags(kb.tags(), ask).text;
+    }
+    case 'kb_built': {
+      const ask = { name: args.name || undefined, pattern: args.pattern || undefined, theme: args.theme || undefined, word: args.word || undefined, form: args.form || undefined, made: args.made || undefined, reach: args.reach || undefined, upTo: args.up_to, limit: args.limit };
+      return askBuilt(kb.built(), ask).text;
+    }
+    case 'kb_lesson':
+      return askLesson(kb.pool(), kb.lessons(), { lesson: args.lesson, kind: args.kind || undefined, limit: args.limit }).text;
+    case 'kb_patterns':
+      return askPatterns(kb.pool(), kb.lessons(), { id: args.id || undefined, tag: args.tag || undefined, lesson: args.lesson, upTo: args.up_to, limit: args.limit }).text;
+    case 'kb_uses': {
+      if (args.similar) return askSimilar(kb.pool(), kb.lessons(), { sentence: args.similar, limit: args.limit }).text;
+      return askUses(kb.pool(), kb.lessons(), { word: args.word, limit: args.limit }).text;
+    }
+    case 'kb_akinator': {
+      return askAkinator(kb, { answers: args.answers ?? [], start: args.start || undefined, hint: args.hint || undefined, finish: !!args.finish, limit: args.limit }).text;
     }
     case 'kb_english': {
       if (!args.word) throw new Error('word is required');

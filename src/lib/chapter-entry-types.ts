@@ -68,6 +68,17 @@ export interface FaqEntry extends LangText {
   type: 'faq';
   question: LangText;
 }
+/**
+ * A video from another site, shown in the page. The languages are its
+ * caption; `embed` is the player's address and `link` the video's own page.
+ */
+export interface VideoEntry extends LangText {
+  type: 'video';
+  embed: string;
+  link: string;
+  /** What the video is, for a screen reader (the frame's title). */
+  alt: LangText;
+}
 
 export type Entry =
   | TitleEntry
@@ -79,4 +90,5 @@ export type Entry =
   | ExerciseEntry
   | AnswerEntry
   | InfoEntry
-  | FaqEntry;
+  | FaqEntry
+  | VideoEntry;

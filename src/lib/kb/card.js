@@ -95,8 +95,11 @@ export function findComposite(source, query) {
   return hits[0] ?? null;
 }
 
+// what the card says of a composite's build (build-tags.js): the patterns, what they are for and the lesson that makes it readable
+const builtSummary = (r) => ({ reach: r.reach, forms: r.forms.map((f) => ({ shape: f.shape, made: f.made, patterns: f.patterns, themes: f.themes, reach: f.reach, reachBy: f.reachBy })) });
+
 // The card of a composite: the Mandarin word, how Hao-shuo-de says it, and where it sits on the tag nets.
-export function compositeCard({ source, facts, index }, c) {
+export function compositeCard({ source, facts, index, builtRow = null }, c) {
   const words = source.words;
   const pin = pinyinOf(words);
   const forms = (c.hsd ? String(c.hsd).split(' / ') : []).map(pin);
@@ -116,6 +119,7 @@ export function compositeCard({ source, facts, index }, c) {
     uses: [...new Set((c.hsd ? wordRefIds(c.hsd) : []).filter((id) => words[id]))].map((id) => ({ id, term: words[id].term, hanzi: words[id].hanzi })),
     head: head ? (head.kind === 'word' ? { word: head.id, term: words[head.id]?.term } : { composite: head.zh }) : null,
     tags: { topics: index.topicPaths(c.topics).flat(), kinds: index.kindPaths(c.isA).flat() },
+    built: builtRow ? builtSummary(builtRow(c)) : null,
     examples: (c.examples ?? []).length,
     proposed: Boolean(c.proposed),
   };
@@ -260,6 +264,11 @@ function renderCompositeCard(c) {
   if (c.head) out.push(`  Head: ${c.head.word ? `${c.head.term} (${c.head.word})` : c.head.composite}`);
   if (c.uses.length) out.push(`  Uses: ${c.uses.map((u) => `${u.term} ${u.hanzi}`).join(', ')}`);
   for (const [label, paths] of [['Topic', c.tags.topics], ['Is a', c.tags.kinds]]) for (const p of paths) out.push(`  ${label}: ${p.join(' › ')}`);
+  for (const b of c.built?.forms ?? []) {
+    const reach = b.reach !== null ? `; readable from lesson number ${b.reach}, set by ${b.reachBy}` : '';
+    if (b.patterns.length) out.push(`  Built from: ${b.patterns.join(', ')}${b.themes.length ? ` (for: ${b.themes.join(', ')})` : ''}${reach}`);
+    else out.push(`  Built from: ${b.shape === 'chain' ? 'a chain of words' : b.shape === 'unread' ? 'a description the patterns cannot read yet' : 'no pattern'}${reach}`);
+  }
   if (c.examples) out.push(`  Example sentences: ${c.examples}`);
   return out.join('\n');
 }

@@ -63,6 +63,8 @@ function resolveField(text, { wordIndex, wordCount } = {}) {
   return wordIndex ? resolveWordRefs(text, wordIndex, wordCount) : text;
 }
 
+const escapeAttr = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+
 // Renders one level of an info/warning entry's nested items, recursing into
 // child `items` arrays -- ported as-is from vite-plugin-chapter.js's
 // renderInfoItems/renderInfoBlock, just swapped to this module's pick().
@@ -118,7 +120,7 @@ function renderInfoBlock(entry, lang, refs, onMissing) {
 // before the point that teaches it, and an info box or a few exercises
 // anywhere. Neighbouring blocks of one kind share a group:
 //   { kind: 'vocab', items }       word cards
-//   { kind: 'html', items }        prose and info/warning blocks (HTML strings)
+//   { kind: 'html', items }        prose, info/warning and video blocks (HTML strings)
 //   { kind: 'examples', items }    example sentences
 //   { kind: 'story', items }       story lines
 //   { kind: 'image', items }       story pictures ({ file, alt, pinyin, translation, ... })
@@ -232,6 +234,24 @@ export function buildTsChapterView(meta, entries, lang, refs = {}) {
         if (entry.type === 'info' && entry.subtype === 'grammar' && html) {
           grammarRules.push({ tag: entry.tag, title: blockTitle, html });
         }
+        break;
+      }
+      case 'video': {
+        const caption = pick(entry, lang, refs);
+        const alt = pick(entry.alt, lang, refs);
+        if (caption === undefined || alt === undefined) { missingBlocks.push(index); break; }
+        const html = (
+          `<figure class="video-embed">` +
+            `<div class="video-embed-frame">` +
+              `<iframe src="${escapeAttr(entry.embed)}" title="${escapeAttr(alt)}" loading="lazy" ` +
+              `allow="fullscreen; picture-in-picture" allowfullscreen ` +
+              `sandbox="allow-scripts allow-same-origin allow-popups allow-presentation"></iframe>` +
+            `</div>` +
+            `<figcaption>${marked.parseInline(caption)} <a href="${escapeAttr(entry.link)}" target="_blank" rel="noopener">↗</a></figcaption>` +
+          `</figure>`
+        );
+        proseHtmlParts.push(html);
+        addToFlow('html', html);
         break;
       }
       case 'faq': {

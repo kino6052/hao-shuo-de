@@ -290,6 +290,33 @@ describe('buildTsChapterView: image', () => {
   });
 });
 
+describe('buildTsChapterView: video', () => {
+  const video = {
+    type: 'video',
+    embed: 'https://player.example/?id=1&autoplay=0',
+    link: 'https://video.example/1',
+    alt: { en: ['A song'], zh: [], ru: [] },
+    en: ['The **song**.'],
+    zh: [],
+    ru: [],
+  };
+
+  test('renders a framed player with its caption and a link to the video, in the html flow', () => {
+    const view = buildTsChapterView(meta, [video], 'eng');
+    expect(view.flow.map((g) => g.kind)).toEqual(['html']);
+    const html = view.flow[0].items[0];
+    expect(html).toContain('<iframe src="https://player.example/?id=1&amp;autoplay=0" title="A song"');
+    expect(html).toContain('<figcaption>The <strong>song</strong>. <a href="https://video.example/1"');
+    expect(view.missingBlocks).toEqual([]);
+  });
+
+  test('without a caption or description in this language it is flagged, not shown', () => {
+    const view = buildTsChapterView(meta, [video], 'zh');
+    expect(view.flow).toEqual([]);
+    expect(view.missingBlocks).toEqual([0]);
+  });
+});
+
 describe('buildTsChapterView: unsupported entry type', () => {
   test('throws, naming the chapter id and the bad type', () => {
     const entries = [{ type: 'heading', en: ['x'], zh: [], ru: [] }];

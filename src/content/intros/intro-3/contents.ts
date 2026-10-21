@@ -219,6 +219,11 @@ export const CHAPTER_BLURBS: Record<string, LangText> = {
     zh: [],
     ru: ["чем Hǎo-shuō-de отличается от Toki Pona."],
   },
+  "appendix-resources": {
+    en: ["videos and songs from elsewhere, like a song that sings through pinyin."],
+    zh: [],
+    ru: ["видео и песни из других мест, например песня, которая пропевает пиньинь."],
+  },
 };
 
 const GROUP_TITLES: Record<string, LangText> = {

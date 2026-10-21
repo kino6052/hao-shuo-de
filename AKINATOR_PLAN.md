@@ -2,7 +2,7 @@
 
 A tool that helps find how to say an idea in Hao-shuo-de by asking questions, like the Akinator game. The first question is fixed (what kind of idea is it); each next question is the one that best splits what is left. The answer is the examples, patterns and words that fit, each with its lesson as a label, or a gap with the closest candidates. It never writes the sentence and saves nothing. Decided in WRITING_PLAN.md W27 (2026-10-21); this file is its living checklist.
 
-**Now:** part 0 is done. All six questions are decided. A1 (pattern tags) is built; only your read of the tags is left. Next is A2 (lesson lookups).
+**Now:** The engine works and Claude can use it: `node scripts/kb.js akinator`, the `kb_akinator` tool and the akinator skill. The lesson lookups work too (`lesson`, `grammar`, `uses`, `similar`; tools `kb_lesson`, `kb_patterns`, `kb_uses`). A1 and A5 are read and approved. Next: try more ideas (C5), then C4 (the tab, which also holds A2 and A5) and part D (the book page).
 
 **Live view:** `npm run dev`, then http://127.0.0.1:5173/__plan/ (the page reads this file again every 2 seconds and marks what changed).
 
@@ -30,7 +30,7 @@ A tool that helps find how to say an idea in Hao-shuo-de by asking questions, li
 
 ## A. Groundwork (shared with WRITING_PLAN.md §6, ticked in both)
 
-- [~] **A1. Pattern tags (W22)** (all stored and guarded 2026-10-21; waits only for the author's read)
+- [x] **A1. Pattern tags (W22)** (stored and guarded 2026-10-21; read and approved by the author the same day)
   - [x] Read the 145 patterns in src/data/grammar: id, meaning, `covers`, `taught` (lesson/module), examples
   - [x] Lesson tags: derived from `taught` when read (`lesson:<lesson>`, `module:<lesson>/<module>`), not stored, so they cannot drift (`patternTags` in src/lib/grammar-tags.ts)
   - [x] Extra tags by Claude, one batch
@@ -41,65 +41,96 @@ A tool that helps find how to say an idea in Hao-shuo-de by asking questions, li
   - [x] A tag list in one file, so a typo is caught (src/lib/grammar-tags.ts)
   - [x] A gate: every pattern has a theme tag, a category tag, a lesson and only known tags (check-data; the rule itself is tested in the fast pass)
   - [x] Tests (src/lib/grammar-tags.test.js, in npm test)
-  - [?] The author reads the extra tags (one batch): easiest once A2's `patterns` command lists each pattern with its tags; until then the `tags:` line of each src/data/grammar file
-- [ ] **A2. Lesson lookups (W21)**
-  - [ ] A lesson index in the KB: per lesson, its words, composites, patterns and sentences (the lesson is the main key)
-  - [ ] Patterns: all, by tag, by lesson
-  - [ ] Similar sentences: by shared words and patterns
-  - [ ] The senses and uses of a word, with their sentences
-  - [ ] Command line `node scripts/kb.js lesson | patterns`, tools `kb_lesson` and `kb_patterns`, a tab in /__kb/
-  - [ ] Tests
-- [ ] **A3. What it searches (the pool)**
-  - [ ] One list of items, each with an id, a kind (lesson sentence, composite example, pattern example, pattern, word, composite), its text (Hao-shuo-de, hanzi, English) and its lesson label
-  - [ ] Stable ids: the W25 sentence ids once they exist; until then source file plus position, marked as temporary
-  - [ ] For each sentence: the words and patterns it uses (from the parser, cached)
-  - [ ] Count and time it: how many items, how long it takes to build (must fit the fast pass)
-- [ ] **A4. What the questions ask about (features)**
-  - [ ] The ten categories for every word and composite (the open K19 point)
-    - [ ] Claude drafts from part of speech, the categorical dictionary groups and the description
-    - [?] The author reads them in batches of 100
-  - [ ] Pattern tags (A1) and the coverage items each pattern carries
+  - [x] The author read the extra tags (one batch, in chat) and approved them as they are (lgtm, 2026-10-21). Seven patterns Claude flagged as unsure stay as tagged: xia-fall, hao-label, perceive-doing, mei-guanxi, jiao-name, written-words, add-take.
+- [~] **A2. Lesson lookups (W21)**
+  - [x] A lesson index in the KB: per lesson, its words, composites, patterns and sentences (the lesson is the main key); `kb.lessons()`, `src/lib/kb/lesson-lookup.js`
+  - [x] Patterns: all, by tag, by lesson, by the lesson they are taught by at the latest; an id gives one in full
+  - [x] Similar sentences: by shared words and patterns (Jaccard, at least a quarter)
+  - [x] The uses of a word, with their sentences by lesson (the senses stay on the word card)
+  - [~] Command line `node scripts/kb.js lesson | grammar | uses | similar` (`patterns` was taken by the minimal-patterns report), tools `kb_lesson`, `kb_patterns` and `kb_uses` (also similar sentences); the tab in /__kb/ is still open (shared with C4)
+  - [x] Tests (`lesson-lookup.test.js`, 6)
+- [~] **A3. What it searches (the pool)** (built 2026-10-21: src/lib/kb/akinator-pool.js, `kb.pool()`)
+  - [x] One list of items, each with an id, a type (word, composite, pattern, sentence), a source (lesson example, lesson answer, phrase book, story, composite example, pattern example), its text (Hao-shuo-de, hanzi, English) and its lesson label (`lesson`, and `number`: the lesson a learner needs)
+  - [x] Features of an item, as a set of `family:value` strings: words and composites get their topic and kind tags with every tag above them (K31), composites also their build tags (A5), patterns their A1 tags, a sentence the union of its words' features and the themes and categories of the patterns it uses
+  - [x] Stable ids: `word:<id>`, `composite:<zh>`, `pattern:<id>`, `sentence:<source>:<lesson>/<key>`, `sentence:composite_example:<n>`, `sentence:pattern_example:<pattern>/<n>`. The two numbered kinds are temporary (a position, not a name) until the W25 sentence ids exist.
+  - [x] For each sentence: the words and patterns it uses (first reading of the parser; 2 pieces do not parse and carry words only)
+  - [x] Count and time it: 7,679 items (230 words, 2,169 composites, 145 patterns, 4,820 sentences, 315 of them pattern examples) with 1,054 different features; 12.7 s the first time (it parses every sentence), 0.4 s with the parse memory, 2.4 s through `kb.pool()` with the tag and build models; 8 fixture tests in the fast pass
+  - [x] Known: `theme:basic` and `pattern:subject-predicate` are on most sentences; they split nothing, so the engine (B) must rank questions by how well they split, not by name
+  - [ ] Ask it from the command line (`kb pool`, counts per feature) — with the engine in C1
+- [~] **A4. What the questions ask about (features)**, now mostly from the K31 tag nets (2026-10-21)
+  - [x] The ten categories for every word and composite: already there as the top of the kind net (src/data/maps/kinds.ts, `isA`), so Claude does not draft them and the author does not read them again here (the author's review of the nets is TAGS_PLAN.md). This closes the open K19 point.
+  - [x] Kind questions: a kind tag is a yes/no question; an item has the tag and every tag above it, so "yes" to a broad kind keeps everything under it (`kind:` features, asked by the engine)
+  - [x] Topic questions: the same on the topic net (`topic:` features)
+  - [x] Pattern tags (A1): `theme:` and `cat:` features on patterns and on the sentences that use them, `pattern:<id>` as a question too. The coverage items (`grammar:`, `coverage:`) are on the pattern items but are not asked as questions: they say what the book covers, not what the person means.
+  - [x] Build tags of composites (A5): the patterns, words and lesson a composite's description is made from
   - [ ] The primes a word says or reaches (the `kb_meaning` lines)
   - [ ] Word relations: kind of, part of, opposite (the K18 store)
   - [ ] English keywords (`kb_english`)
-  - [ ] A sentence's features: those of its words and patterns together
-  - [ ] A plain question for each feature ("Is it about comparing two things?"), checked by check-jargon
+  - [x] A sentence's features: those of its words and patterns together (A3)
+  - [~] A plain question for each feature (src/lib/kb/akinator-questions.js, one strings table, English): kind, topic, theme, category, pattern, word and type are written ("Do you meet it when talking about “Kitchen”?", "Is it for comparing things?"). Build tags (`form:`, `made:`, `reach:`) and the lesson and coverage tags are not asked on purpose. Not yet run through check-jargon (it reads the data, not this table).
+- [~] **A5. Build tags of composites: how each one is made** (the author, 2026-10-21: does it use bǎ? does it use doubling? which chapters' logic?)
+  - [x] What a build tag says, for every form of a composite's description (hsd)
+    - [x] `form:chain` a hyphen chain of words (fāng-fǎ), `form:phrase` a description read by the grammar, `form:unread` a description the patterns cannot read yet, `form:none` no description
+    - [x] `made:built` or `made:spelled` (K9, from form-kinds.js; `made:unknown` where the author has not decided)
+    - [x] `pattern:<id>` for every pattern the parse uses (bǎ is `pattern:ba-handle`, doubling is `pattern:doubled-verb`), and `theme:<tag>` for its A1 tags (compare, when, make and so on)
+    - [x] `word:<id>` for every word the description uses
+    - [x] `reach:<lesson>`: the first lesson after which the description reads with only the patterns taught so far (the early-patterns rule, found by halving over `kb.parseUpTo`) and its words are taught; the form readable soonest decides. This is also the simplest reading, so the pattern tags show the grammar a learner has at that point, not a later one.
+  - [x] Derived from the description every time, not stored in the 2,169 files, so a word that moves (K20) cannot leave a stale tag. Not a separate cache file: the parse memory (kb/cache) already makes a rebuild 0.35 s, 7.6 s the first time.
+  - [x] Word to lesson: the earliest card (or catch-all sense card) of each core word, from the KB facts
+  - [x] Code: src/lib/kb/build-tags.js (pure) with fixture tests (src/lib/kb/build-tags.test.js: bǎ, doubling, a chain, an unread form, the reach rule, filters), in npm test
+  - [x] Run on the real data (2026-10-21): 2,169 composites; 1,399 have a phrase read by the grammar, 952 a chain (some have both), 35 an unread description, 4 none; 90 spelled; 118 patterns, 27 themes and 25 reach lessons appear as tags
+  - [~] Ask it
+    - [x] Command line `node scripts/kb.js built [composite] [--pattern] [--theme] [--word] [--form] [--made] [--reach] [--up-to N]`
+    - [x] A "Built from" line on a composite's word card (`kb word 刀`), worked out for that one composite
+    - [x] Claude tool `kb_built` (same text as the command line)
+    - [ ] A tab in /__kb/
+    - [x] Say it in the skill (C3): "which composites may a text for lesson N use" is `built --up-to N`
+  - [x] The author read the sample in chat (ba-handle 56, doubled-verb 3, the 35 unread) and approved it (lgtm, 2026-10-21); no change asked. Still true, and left open on purpose: the parser takes one reading per description, so a pattern that reads too widely shows up as a tag (doubled-verb on "ràng rén zuò, rén bù xiǎng zuò"); these are worth fixing in the pattern, not in the tag.
 
 ## B. The engine (src/lib/kb/akinator.js, plain code, no solver)
 
-- [ ] **B1. The first question, fixed:** what do you want to express
-  - [ ] Choices from the ten categories in plain words: a thing, how much, what it is like, how it relates to something, where, when, how it is placed, what it has on, doing something, something done to it
-  - [ ] Plus "a whole situation" for a full sentence
-- [ ] **B2. Picking the next question**
-  - [ ] Weight every item by how well it agrees with the answers so far
-  - [ ] Score each question not yet asked by how evenly it splits the weight
-  - [ ] Soft answers change weights and never drop an item for good, so one wrong answer can be undone
-  - [ ] Ties broken in a fixed order: the same answers always give the same question
-- [ ] **B3. When to stop**
-  - [ ] A clear leader, no question left that splits, or a cap (start at 20 questions)
-  - [ ] "Show me what you have" works at any step
-- [ ] **B4. The result**
-  - [ ] Grouped: example sentences, patterns, words and composites, each with its lesson as a label
-  - [ ] Why each one fits: the answers it agrees with
-  - [ ] No lesson filter (W27), only the label
-- [ ] **B5. Gaps**
-  - [ ] When the best fit is weak: say it is a gap and give the closest candidates
-  - [ ] Name what is missing: the answers no item agrees with
-  - [ ] Claude may pass a gap on to `kb_candidates` (W9); the tool itself saves nothing
-- [ ] **B6. No memory:** the input is the list of answers; nothing is stored between sessions
-- [ ] **B7. Tests**
-  - [ ] Fixture tests on a small pool (fast, in npm test)
-  - [ ] Replays: given answers, the expected next question and result
-  - [ ] Self-play: for each sentence in the pool, an answerer that answers from its features; how often it is found and in how many questions (a row in the scoreboard)
-  - [ ] Speed: one step under 50 ms on the full pool
+- [x] **B1. The first question, fixed:** what do you want to express (built 2026-10-21)
+  - [x] Choices from the top of the kind net, the ten categories (K31), in plain words, and one for the little words that hold a sentence together (the net's eleventh top tag); the wording is in the strings table
+  - [x] Plus "a whole situation" for a full sentence (the feature `type:sentence`)
+- [x] **B2. Picking the next question** (src/lib/kb/akinator.js, `kb.akinator()`)
+  - [x] Weight every item by how well it agrees with the answers so far
+  - [x] Score each question not yet asked by how evenly it splits the weight (times a factor per family: words count half, patterns four fifths)
+  - [x] Soft answers change weights and never drop an item for good, so one wrong answer can be undone (an item that disagrees keeps 5% for yes/no, 30% for probably)
+  - [x] Ties broken in a fixed order (the feature that sorts first): the same answers always give the same question
+- [x] **B3. When to stop**
+  - [x] A clear leader (6 or fewer items still count), no question left that splits, or a cap (20 answers)
+  - [x] "Show me what you have" works at any step (`finish`)
+- [x] **B4. The result**
+  - [x] Grouped: example sentences, patterns, words and composites, each with its lesson as a label
+  - [x] Why each one fits: the answers it agrees with, and the ones it does not
+  - [x] No lesson filter (W27), only the label
+- [~] **B5. Gaps**
+  - [x] When the best fit is weak (the best item kept under a quarter of its weight): say it is a gap and give the closest three
+  - [x] Name what is missing: the answers none of the closest agree with
+  - [ ] Claude may pass a gap on to `kb_candidates` (W9); the tool itself saves nothing (goes in the skill, C3)
+- [x] **B6. No memory:** the input is the list of answers; nothing is stored between sessions. An English hint (Q3) is an optional `prior` of starting weights, built by the caller; the lookup from English to the prior is still to do (C2)
+- [~] **B7. Tests**
+  - [x] Fixture tests on a small pool (src/lib/kb/akinator.test.js, in npm test)
+  - [ ] Replays: given answers, the expected next question and result, on the real pool (waits until the data is steady)
+  - [~] Self-play (src/lib/kb/akinator-selfplay.js): an answerer who knows an item and answers from its features. Numbers on the real pool, 250 targets (150 sentences, 50 composites, 25 words, 25 patterns), found among the top six of their group: sure answers 100% (12.4 questions on average), probably / probably not 99% (18.4), every seventh answer wrong 0% found but 19% among the closest three of the gap (47 of 250). A wrong answer sinks the item to 5%, so the result says "nothing fits well yet" and names, per close item, the answer it disagrees with; the person takes that answer back. Two fixes made on the way: a pattern now takes the kind and topic features of its examples (before, every kind answer sank the patterns: 23 of 25 found), and an answer repeated for a feature counts once.
+  - [ ] Try a softer penalty (10% instead of 5% for yes / no) and a "which one answer, if dropped, gives a good fit" line in the gap
+  - [ ] A row in the scoreboard for the self-play numbers
+  - [x] Speed: the slowest step on the full pool was 47 ms (about 12 ms on average); a test for it waits for the push tier
 
 ## C. Claude's side
 
-- [ ] **C1. Command line:** `node scripts/kb.js akinator [answers]` prints the next question or the result
-- [ ] **C2. The tool `kb_akinator`** in src/lib/kb/tools.js: the answers so far in; the next question with its choices, the top candidates, or the result out
-- [ ] **C3. A skill** (.claude/skills/akinator/SKILL.md): when to use it (writing texts, step 3 of the writer), how to answer, what to do with a gap
-- [ ] **C4. A tab in /__kb/** so the author can play it
-- [ ] **C5. Try it in a session:** find 10 ideas from the lesson 11 pilot text with it; note what was slow or missing
+- [x] **C1. Command line:** `node scripts/kb.js akinator [--start doing] [--hint "..."] [--finish] [--limit N] [kind:doing=yes ...]` prints the next question or the result (src/lib/kb/akinator-ask.js; `--json` gives the data)
+- [x] **C2. The tool `kb_akinator`** in src/lib/kb/tools.js: the answers so far in; the next question with its choices, the leaders, or the result out. The English hint (Q3) looks the words up with `kb_english` and starts the matching composites, words and the sentences using those words at 25 times the weight. Tests with a stand-in KB in akinator.test.js; the MCP tool list test is updated.
+- [x] **C3. A skill** (.claude/skills/akinator/SKILL.md): when to use it (writing texts, step 3 of the writer), how to answer, how to read the lesson labels, what to do with a gap; also says "which composites may a text for lesson N use" is `kb_built` with `up_to` (closes the A5 skill line)
+- [~] **C4. A tab in /__kb/** so the author can play it
+  - [x] Written (not yet seen working): `/__kb/akinator` and `/__kb/lessons` routes in vite-plugin-kb.js; tabs "Akinator" (hint box, answer buttons, take-back chips, leaders, result) and "Lessons" (lesson, grammar, uses, similar, built) in kb/page.html
+  - [ ] Check it in the browser: the dev server on 5174 refused connections after the plugin file changed (it probably restarted or stopped); start it again (`dev-5174`), open `/__kb/#akinator=hungrier than you`, play a game, check phone width and the console
+- [~] **C5. Try it in a session:** find 10 ideas from the lesson 11 pilot text with it; note what was slow or missing
+  - [x] First idea tried by hand, "go home by bus" (hint, doing, housing probably, travel yes): after four answers the leaders were "We walk home" and "My mom will come to my home from my country", both in lesson moving. Useful.
+  - [x] Two things found and fixed: a hint word under three letters was dropped, so "go" was lost (now two letters count, with a short list of small words left out; the hint then also matches 去 and 动, plus a little noise such as 合适); a theme question read badly ("Is it for whose it is, or which part?"), now "Is it about …?"
+  - [x] Seven more ideas tried with a hint and "a whole situation" (hungrier than you, meet at the station tomorrow, forgot to bring the key, please do not tell anyone, how long does it take to walk, I have never been there, she is as tall as her brother). Found: a hint never reached a pattern ("than" should lead to bǐ) and a hint's weight of 25 let a word the author had ruled out ("a whole situation" = no) lead the list. Fixed: the hint also finds a pattern by a rare word of its meaning (the part before the colon), and its weight is 10 (under 1/0.05, so a "no" still wins); one more test, 953 pass.
+  - [x] A hint that found only composites (station, key) did nothing for a "whole situation" start. Fixed: a composite's own example sentences are boosted too (the pool item keeps `about`). Now "meet" leads to "I came across him" and "forgot" to "His name? I've forgotten."
+  - [ ] The other two ideas (the pilot text is to be rewritten from scratch, W23, so use ideas from its new sketch)
 
 ## D. The book's side (learners)
 
@@ -134,3 +165,12 @@ A tool that helps find how to say an idea in Hao-shuo-de by asking questions, li
 - 2026-10-21 Q5 decided: its own book page next to the Sentence Builder.
 - 2026-10-21 Q6 decided: English for now, other languages later (strings in one table; D5b added).
 - 2026-10-21 A1 built: 145 patterns tagged (28 themes plus ten categories), lesson tags derived from `taught`, gate in check-data, 5 tests; check-data and the fast pass are green.
+- 2026-10-21 Plan adjusted for the K31 tag nets (kinds and topics replace the ten-categories draft in A4) and the author's request for build tags (A5).
+- 2026-10-21 A5 built: composites tagged by form, patterns, themes, words and reach lesson (derived, kb built / kb_built / card line); 10 tests; fast pass green.
+- 2026-10-21 A3 built: the pool of 7,679 items (words, composites, patterns, sentences) with features from the tag nets, the build tags and the parser; `kb.pool()`; 8 tests; fast pass green (925).
+- 2026-10-21 Engine built (B1 to B6, most of B7): `kb.akinator().step(answers)`, plain questions in one strings table, self-play on 250 targets finds 99% with sure answers, 95% with soft ones, 47% when every seventh answer is wrong; 16 tests; fast pass green (941).
+- 2026-10-21 C1 and C2 built: `kb akinator` and `kb_akinator` (answers in, next question or result out, English hint); patterns take their examples' kind and topic; self-play 100% with sure answers, 99% with soft ones; fast pass green (946).
+- 2026-10-21 The author read the A1 tags and the A5 sample in chat and approved both (lgtm).
+- 2026-10-21 C3 built: the akinator skill. First trial by hand ("go home by bus") works; two things to fix are noted under C5.
+- 2026-10-21 C5: seven more ideas tried; the hint now finds patterns by a rare word of their meaning and weighs 10 instead of 25; one weak spot left (composite-only hints).
+- 2026-10-21 A2 built: lessons, patterns, uses and similar sentences from the pool (CLI and three tools); the tab waits for C4; 6 tests; fast pass green (952).

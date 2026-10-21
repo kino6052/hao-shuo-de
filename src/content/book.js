@@ -69,7 +69,7 @@ export const BACK_MATTER = [
     key: "sectionTools",
     chapters: ["dictionary", "categorical-dictionary", "composite-dictionary", "sentence-builder", "word-builder", "word-map"],
   },
-  { key: "sectionMisc", chapters: ["appendix-minimality", "appendix-frontier", "appendix-toki-pona"] },
+  { key: "sectionMisc", chapters: ["appendix-minimality", "appendix-frontier", "appendix-toki-pona", "appendix-resources"] },
 ];
 
 // Every back-matter chapter id, in reading order.
