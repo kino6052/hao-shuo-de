@@ -6,7 +6,7 @@
 // (Section, VocabGrid, GrammarBlock, ...) render either format unmodified.
 //
 // TS chapter schema: a `meta` export (`{ id, type }` for a lesson, whose
-// number and order src/lib/content-registry.js adds from src/content/book.js;
+// number and order src/lib/chapter-view.js adds from src/content/book.js;
 // `{ id, type, lessonNumber, order }` for an intro) plus a default-exported
 // flat array of entries. Each entry is one prose
 // unit (a title, a summary, a paragraph, ...) -- a `type` tag
@@ -114,6 +114,19 @@ function renderInfoBlock(entry, lang, refs, onMissing) {
   return { html, title };
 }
 
+// -> a TS chapter's title in one language: its last title entry with text in
+// that language, or its id. The page and the book's outline
+// (scripts/book-outline.js) both take it from here.
+export function chapterTitle(meta, entries, lang, refs = {}) {
+  let title = meta.id;
+  for (const entry of entries) {
+    if (entry.type !== 'title') continue;
+    const text = pick(entry, lang, refs);
+    if (text !== undefined) title = text;
+  }
+  return title;
+}
+
 // Besides the per-type buckets (vocab, bodyHtml, examples, ...), the view has
 // a `flow`: the same blocks in the order the chapter lists them, so a lesson
 // page can show a point's examples right after the point, a word card right
@@ -146,15 +159,12 @@ export function buildTsChapterView(meta, entries, lang, refs = {}) {
     else flow.push({ kind, items: [item] });
   };
 
-  let title = meta.id;
+  const title = chapterTitle(meta, entries, lang, refs);
 
   entries.forEach((entry, index) => {
     switch (entry.type) {
-      case 'title': {
-        const text = pick(entry, lang, refs);
-        if (text !== undefined) title = text;
+      case 'title':
         break;
-      }
       case 'summary': {
         const text = pick(entry, lang, refs);
         if (text !== undefined) tldrSummary.push({ tldr: text, necessity: undefined, isOverview: true });

@@ -15,6 +15,8 @@ import { MissingTranslationBanner } from './components/MissingTranslationBanner.
 import { AdSlot } from './components/AdSlot.jsx';
 import { ConsentBanner } from './components/ConsentBanner.jsx';
 import { useAppRouter } from './lib/use-router.js';
+import { useChapter } from './lib/use-chapter.js';
+import { t } from './lib/i18n.js';
 import { AD_SLOT_LESSON_END } from './lib/tracking-config.js';
 import { trackPageView } from './lib/tracking.js';
 import { useTheme } from './lib/use-theme.js';
@@ -133,7 +135,9 @@ export function App() {
     if (idx >= 0) router.goTo(idx);
   }
 
+  // the outline's entry (enough for the heading) at once, the chapter's text when it is fetched
   const current = router.sections[router.pageIndex];
+  const { view, failed } = useChapter(router.lang, current?.meta, router.sections[router.pageIndex + 1]?.meta);
   if (!current) return null;
 
   const showHero = router.pageIndex === 0;
@@ -157,8 +161,8 @@ export function App() {
         <div class="page-inner">
           {showHero && <HeroSection lang={router.lang} />}
 
-          <Section data={current} lang={router.lang}>
-            {renderContent(current, router.lang)}
+          <Section data={view ?? current} lang={router.lang}>
+            {view ? renderContent(view, router.lang) : <p class="page-loading">{t(router.lang, failed ? 'pageLoadFailed' : 'pageLoading')}</p>}
           </Section>
 
           {current.meta.type === 'lesson' && <AdSlot key={current.meta.id} slot={AD_SLOT_LESSON_END} />}

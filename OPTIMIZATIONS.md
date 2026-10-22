@@ -166,7 +166,7 @@ keystroke of its search. Measured 2026-10-22 in the dev server, same machine:
 | its elements on the page | 120,667 | 1,511 |
 | one keystroke in its search | 1,446 ms | 10 to 20 ms; the results 0.12 s after the last key |
 | one keystroke in the categorical dictionary's search | up to 1,601 ms, 27,634 elements for "a" | 1 to 6 ms, 684 elements |
-| the app's first script (`vite build`, on disk) | 4,652 KB | 1,504 KB; the composites are a 2,720 KB chunk of their own, the relations 278 KB |
+| the app's first script (`vite build`, on disk) | 4,652 KB | 397 KB (119 KB over the wire); the composites are a 2,720 KB chunk of their own, the relations 278 KB, each lesson 6 to 39 KB |
 
 What was done:
 
@@ -187,8 +187,16 @@ What was done:
 5. **One module for the composites in dev** (`vite-plugin-data.js`): `composites/index.ts` is served with every entry file bundled
    in by esbuild (about a second, kept until a file in the folder changes). The browser fetched the 5,490 files one by one.
 
-Still open: the lessons (687 KB) and the other book content (340 KB) are in the first chunk, because the table of contents is built
-from them; splitting them needs the titles apart from the texts.
+6. **A chapter's text comes when it opens** (`src/lib/content-registry.js`). The first chunk carries the book's outline only
+   (`virtual:book-outline`, 22 KB: every chapter's id, type, title, number and file per language), worked out at build time by
+   `scripts/book-outline.js` with the same title code the pages use; `vite-plugin-outline.js` serves it and, in dev, works it out
+   again when a title can have changed. The sidebar, the router and a page's heading need nothing more; the text (each lesson,
+   intro, appendix and dictionary page a chunk of its own, 1,027 KB in all) and the chapter builder with `marked` (43 KB) are
+   fetched when a chapter opens, and the next chapter right after, so "next" opens at once. Every chapter's view in all three
+   languages was checked equal to the one the old eager registry built (136 of them).
+
+Still open: the 230 core words (203 KB), the category, opposite and synonym maps (67 KB) and the coverage groups (25 KB) are still
+in the first chunk, and only `src/lib/i18n.js` keeps them there: it imports the whole dictionary to fill in the word count.
 
 ## The tests: what a commit and a push wait for
 
