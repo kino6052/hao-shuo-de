@@ -1,0 +1,3 @@
+const e={meta:{id:"composite-dictionary",title:"Словарь составных слов",type:"dictionary",layout:"composites",order:3,language:"rus"},vocab:[],examples:[],exercise:[],answers:[],story:[],dict:[],bodyHtml:`<p>В Hǎo-shuō-de 230 слов. Всё остальное говорят, соединяя их: книга — это xiě-de dōng-xi («написанная вещь»), а учитель — bāng-rén-xué-de rén («человек, который помогает людям учиться»).</p>
+<p>Список охватывает 1000 самых частых китайских слов и показывает, как каждое из них сказать на Hǎo-shuō-de. Слова идут по алфавиту. Пояснения к записям пока на английском. Список будет расти по этапам.</p>
+`};export{e as default};

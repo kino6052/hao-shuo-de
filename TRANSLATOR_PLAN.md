@@ -252,6 +252,7 @@ People on a list sign in with Google, type a text, and get the translation back.
   Done (2026-10-22): `setScore` and Q8's bar; `npm run translator -- score` prints them again from the saved results, and `test` stores them in `kb/translation-score.json`, which the scoreboard reads into four columns (`translation_texts`, `translation_hsd_only`, `translation_meant`, `translation_kept`), empty until the set has run.
 - [x] **F3. The round trip** (WRITING_PLAN idea 6): Hao-shuo-de → English → Hao-shuo-de should come back the same; when it doesn't, one of the two steps is unclear.
   Done (2026-10-22): `test --round-trip` translates the blind reader's English back and gives the share of words the two Hao-shuo-de texts share; a story also gives its share with the book's own text. Not run yet, for the same reason as F1.
+- [ ] **F4. The stress battery:** [STRESS_PLAN.md](STRESS_PLAN.md). F1 measures quality against Q8's bar; the battery hunts for failures: sibling sets that differ in one point, a frozen answer key, readers that don't lean on Mandarin, planted faults and a held-out part.
 
 ## S. Online access (Firebase)
 
@@ -332,3 +333,4 @@ People on a list sign in with Google, type a text, and get the translation back.
   - Grammar found for the author's review: xiàn-zài (now) reads only as xiàn (line) + zài (at), never as now; "Yīnwèi zhè-ge, …" (因此, so) does not parse with the comma, and without it zhè-ge goes into the reason; "Zài huí jiā-de lù shàng, …" at the start of a sentence reads only as calling out to the road, in all 500 readings; many readings have the same brackets as another.
   - Waiting for the author: the saved Claude login has expired, so no real session has run (`claude setup-token`, then `node scripts/translator-daemon.js set-token`); then `npm run translator -- test` scores the test set. The Firebase project (S0) and going live (S10) stay the author's.
 - 2026-10-22 The ten stories translated by hand with subagents (F1): the set passes Q8's bar (91% of sentences keep every needed idea), one story passes on its own. Found and fixed along the way: `kb_memory` handed the test its own answers (now hidden while the test runs), and `kb_gloss` read shí-jiān as "ten-between" (B3). Also done: `kb_frontier` reads the translation gaps (E2), and every page screen was checked in dark mode (S8).
+- 2026-10-22 F4 added: the stress battery has its own plan, STRESS_PLAN.md, from a battery the author brought.

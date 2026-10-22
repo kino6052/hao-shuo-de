@@ -1,4 +1,4 @@
-import{i as p,r as e}from"./index.esm-CxUEY-zp.js";import{F as _,S as t,D as n,_ as m,a as v,b as A,c as g,d as E,e as b,f as d,g as f}from"./index.esm-CxUEY-zp.js";var r="firebase",s="13.0.0";/**
+import{i as p,r as e}from"./index.esm-B82kxUNv.js";import{F as _,S as n,D as t,_ as m,a as v,b as A,c as g,d as E,e as S,f as b,g as c,h as d}from"./index.esm-B82kxUNv.js";var r="firebase",s="13.0.0";/**
  * @license
  * Copyright 2020 Google LLC
  *
@@ -13,4 +13,4 @@ import{i as p,r as e}from"./index.esm-CxUEY-zp.js";import{F as _,S as t,D as n,_
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */e(r,s,"app");export{_ as FirebaseError,t as SDK_VERSION,n as _DEFAULT_ENTRY_NAME,m as _addComponent,v as _apps,A as _components,g as _getProvider,E as _isFirebaseServerApp,b as _registerComponent,d as _serverApps,f as getApp,p as initializeApp,e as registerVersion};
+ */e(r,s,"app");export{_ as FirebaseError,n as SDK_VERSION,t as _DEFAULT_ENTRY_NAME,m as _addComponent,v as _apps,A as _components,g as _getProvider,E as _isFirebaseServerApp,S as _registerComponent,b as _removeServiceInstance,c as _serverApps,d as getApp,p as initializeApp,e as registerVersion};

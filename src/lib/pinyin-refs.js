@@ -38,10 +38,18 @@ function suggestionsByPy(composites) {
   return byPy;
 }
 
-// Shared by both functions below. `onProblem`, given, is called instead of
-// throwing, with the unresolved token left as plain text so the rest of the
-// sentence still converts.
-function convert(text, words, { light = {}, composites = [], onProblem } = {}) {
+// The indexes convert needs depend only on the words and the composites, not
+// on the text, so they are built once per pair of objects and reused (the
+// translator's checks call convert several times per sentence; rebuilding them
+// was most of its time). Keyed by object identity, and also by the number of
+// words and composites, so a list grown in place is indexed again.
+const indexMemo = new WeakMap(); // words -> WeakMap(composites -> index)
+function indexesOf(words, composites) {
+  let byComposites = indexMemo.get(words);
+  if (!byComposites) indexMemo.set(words, (byComposites = new WeakMap()));
+  const nWords = Object.keys(words).length;
+  const hit = byComposites.get(composites);
+  if (hit && hit.nWords === nWords && hit.nComposites === composites.length) return hit;
   const byTerm = new Map();
   const byToneless = new Map();
   for (const [id, w] of Object.entries(words)) {
@@ -51,7 +59,18 @@ function convert(text, words, { light = {}, composites = [], onProblem } = {}) {
     byToneless.set(t, [...(byToneless.get(t) ?? []), id]);
   }
   const { chains } = buildLexicon({ words, composites });
-  const bySuggestion = onProblem ? suggestionsByPy(composites) : null;
+  const index = { nWords, nComposites: composites.length, byTerm, byToneless, chains, bySuggestion: null };
+  byComposites.set(composites, index);
+  return index;
+}
+
+// Shared by both functions below. `onProblem`, given, is called instead of
+// throwing, with the unresolved token left as plain text so the rest of the
+// sentence still converts.
+function convert(text, words, { light = {}, composites = [], onProblem } = {}) {
+  const index = indexesOf(words, composites);
+  const { byTerm, byToneless, chains } = index;
+  const bySuggestion = onProblem ? (index.bySuggestion ??= suggestionsByPy(composites)) : null;
   let prev = null; // the word the last token was
   let prevEnd = 0; // where it ended, to tell a hyphen (glued) from a space
   return String(text)

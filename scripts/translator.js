@@ -4,7 +4,7 @@
 // back without the English, a judge compares. Each session is a `claude -p` with its own login (the daemon's `set-token`).
 //
 //   npm run translator -- translate "<English>" [--lesson N] [--no-blind] [--repairs 1] [--save] [--json]
-//   npm run translator -- test [--stories] [--sentences] [--limit 100] [--round-trip] [--fresh]
+//   npm run translator -- test [--stories] [--sentences] [--limit 100] [--round-trip] [--fresh] [--jobs 4]
 //   npm run translator -- score [--dir review/translations/test]
 //   npm run translator -- gaps
 //   npm run translator -- allow <email> [note] [--owner] | remove <email> | list
@@ -14,7 +14,7 @@
 // translate --save writes review/translations/<date>-<first words>.md (to review) and .json (the result).
 // test runs the test set (Q8: the ten stories and the first 100 everyday sentences; both when neither is named) into
 // review/translations/test/<id>.json, skipping the ones already there unless --fresh (the stories' own lines hidden from
-// kb_memory while it runs), and stores the set's numbers in
+// kb_memory while it runs; --jobs texts at a time, 4 by default), and stores the set's numbers in
 // kb/translation-score.json (the scoreboard's translator columns). --round-trip translates the blind reader's English back
 // and says how many words the two Hao-shuo-de texts share (F3); a story also says how many it shares with the book's own.
 // score prints those numbers again from the saved results; gaps gathers their gaps into kb/translation-gaps.json (E2).
@@ -52,6 +52,7 @@ const { values, positionals } = parseArgs({
     limit: { type: 'string', default: '100' },
     'round-trip': { type: 'boolean' },
     fresh: { type: 'boolean' },
+    jobs: { type: 'string', default: '4' },
     dir: { type: 'string' },
     owner: { type: 'boolean' },
     model: { type: 'string', default: 'opus' },
@@ -163,12 +164,16 @@ switch (command) {
     const { openKb } = await import('./kb.js');
     const { source } = await openKb();
     const idsOf = (text) => wordIdsOf(text, source.words, source.composites);
-    const results = [];
-    for (const [i, item] of items.entries()) {
+    // The texts are independent, so --jobs of them run at a time (each is its own chain of sessions); the results keep
+    // the order of the items.
+    const results = new Array(items.length);
+    const jobs = Math.max(1, Number.parseInt(values.jobs, 10) || 1);
+    let next = 0;
+    const one = async (i, item) => {
       const file = join(TEST_DIR, `${item.id}.json`);
       if (existsSync(file) && !values.fresh) {
-        results.push(JSON.parse(readFileSync(file, 'utf8')));
-        continue;
+        results[i] = JSON.parse(readFileSync(file, 'utf8'));
+        return;
       }
       console.error(`[${i + 1}/${items.length}] ${item.id}${item.title ? ` (${item.title})` : ''}`);
       const result = await run({ id: item.id, text: item.english, lesson: '' });
@@ -181,10 +186,16 @@ switch (command) {
       }
       writeJson(file, result);
       writeFileSync(file.replace(/\.json$/, '.md'), renderMarkdown(result));
-      results.push(result);
+      results[i] = result;
       const s = scoreOf(result);
-      console.error(`  ${s.pass ? 'passes' : 'does not pass'}: ${s.sentences} sentences, kept ${s.kept === null ? '-' : `${Math.round(s.kept * 100)}%`}`);
-    }
+      console.error(`  ${item.id} ${s.pass ? 'passes' : 'does not pass'}: ${s.sentences} sentences, kept ${s.kept === null ? '-' : `${Math.round(s.kept * 100)}%`}`);
+    };
+    await Promise.all(Array.from({ length: Math.min(jobs, items.length) }, async () => {
+      while (next < items.length) {
+        const i = next++;
+        await one(i, items[i]);
+      }
+    }));
     const score = { date: new Date().toISOString().slice(0, 10), model: values.model, ...fullScore(results) };
     writeJson(SCORE_FILE, score);
     console.log(sayScore(score));
