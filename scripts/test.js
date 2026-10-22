@@ -38,8 +38,8 @@ const SKIP = new Set(['node_modules', 'dist', 'tools', '.git', '.claude']);
 const SLOW = ['kb/real', 'kb/atoms', 'kb/candidates', 'kb/clingo', 'move-effects', 'kb/whatif', 'kb/kb.test', 'kb/mcp.test', 'kb/relations', 'kb/facts', 'kb/set-cover', 'kb/export-real', 'kb/tags-rules', 'kb/rests-on',
   // these read all 5,490 composites (or the Workspace over the repo), which grew too slow for a commit
   'scripts/tag-ops', 'scripts/refactor-ops', 'word-builder-parse', 'lib/heads', 'grammar/grammar', 'lib/pinyin-refs'];
-// A copy of the repo, a git ref, a server over stdio: only with `--all`.
-const ON_REQUEST = ['refactor-check', 'scripts/parse-diff', 'kb/mcp-server'];
+// A copy of the repo, a git ref, a server over stdio, the Firestore emulator (skipped without one): only with `--all`.
+const ON_REQUEST = ['refactor-check', 'scripts/parse-diff', 'kb/mcp-server', 'translator/rules'];
 const SLOW_FIRST = [...ON_REQUEST, ...SLOW, 'refactor-ops', 'grammar/grammar'];
 const TIME_LIMIT_MS = 180_000;
 

@@ -20,6 +20,16 @@ describe('askGloss', () => {
     expect(r.sentences[0].gloss).toBe('meal.');
   });
 
+  test('a sense ends at ":" too, and a word reference left in it is shown as pinyin, never as {{word:…}}', () => {
+    const words = {
+      ...source.words,
+      fan4: { ...source.words.fan4, definition: { eng: 'meal: {{word:chi1}}-{{word:fan4}}, eating' } },
+      chi1: { ...source.words.chi1, definition: { eng: 'to eat {{word:fan4}}' } },
+    };
+    const r = askGloss(createKb({ ...source, words }), { text: 'Wǒ chī fàn.' }).data;
+    expect(r.sentences[0].gloss).toBe('the word wǒ to eat fàn meal.');
+  });
+
   test('several sentences are glossed one by one', () => {
     const r = askGloss(kb, { text: 'Wǒ chī fàn. Fàn.' }).data;
     expect(r.sentences).toHaveLength(2);

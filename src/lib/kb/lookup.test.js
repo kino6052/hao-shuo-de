@@ -73,4 +73,13 @@ describe('askLookup', () => {
     expect(t).toContain('[gloss] fēi-jī');
     expect(t).toContain('e.g. Wǒ chī fàn.');
   });
+
+  test('the glossary (E1) comes first: the form a translation chose, its why, and the lesson of its latest word', () => {
+    const glossary = [{ en: 'plane', form: 'fēi-jī', zh: '飞机', why: 'the short name the story used', proposed: true }];
+    const withGlossary = createKb({ ...source, maps: { ...source.maps, glossary } });
+    const r = askLookup(withGlossary, { word: ' Plane ' }).data;
+    expect(r.rows[0]).toMatchObject({ tier: 'glossary', pinyin: 'fēi-jī', hanzi: '飞-机', words: 2, zh: '飞机', proposed: true, lesson: null });
+    expect(askLookup(withGlossary, { word: 'plane' }).text).toContain('[glossary, proposed] fēi-jī');
+    expect(askLookup(withGlossary, { word: 'airplane' }).data.rows.map((x) => x.tier)).toEqual(['gloss']); // only its own English
+  });
 });

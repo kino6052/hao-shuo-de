@@ -54,6 +54,10 @@ export const COLUMNS = {
   covered_english_3000: 'share of them said, explained (english-explained.json) or said as a kind of; K30 finishes it',
   said_basic_english: 'share of the Basic English words an entry says',
   said_sentences: 'share of the everyday sentences whose every character an entry covers (grammar not checked)',
+  translation_texts: "texts in the translator's test set at its last run (kb/translation-score.json, TRANSLATOR_PLAN.md F2)",
+  translation_hsd_only: 'share of its sentences written in Hao-shuo-de words only',
+  translation_meant: 'share of its sentences that can have the reading meant',
+  translation_kept: 'share of its sentences that kept every needed idea (the bar, Q8, is 0.9)',
 };
 export const NAMES = Object.keys(COLUMNS);
 
@@ -88,8 +92,24 @@ export function sayability(y) {
   };
 }
 
-// -> one row. `atoms: false` skips the solver (those columns stay empty).
-export async function scoreboardRow(kb, { label = '', date = new Date(), atoms = true, parseLessons = Infinity, atomsTimeoutMs } = {}) {
+// -> the translator columns from the numbers `npm run translator -- test` stored last (setScore in
+// src/lib/translator/test-set.js); none stored leaves them empty
+export const translationColumns = (score) =>
+  score
+    ? { translation_texts: score.texts ?? '', translation_hsd_only: score.hsdOnly ?? '', translation_meant: score.meant ?? '', translation_kept: score.sentencesKept ?? '' }
+    : {};
+
+// -> the stored translator numbers, or null when the test set has not been run (or the file is not JSON)
+export function readTranslationScore(file) {
+  try {
+    return JSON.parse(readFileSync(file, 'utf-8'));
+  } catch {
+    return null;
+  }
+}
+
+// -> one row. `atoms: false` skips the solver (those columns stay empty). `translation` is readTranslationScore's result.
+export async function scoreboardRow(kb, { label = '', date = new Date(), atoms = true, parseLessons = Infinity, atomsTimeoutMs, translation = null } = {}) {
   const { source, facts } = kb;
   const composites = source.composites ?? [];
   const forms = composites.flatMap((c) => (c.hsd ? c.hsd.split(' / ') : []));
@@ -123,6 +143,7 @@ export async function scoreboardRow(kb, { label = '', date = new Date(), atoms =
 
   // sayability against the word lists (yardsticks.js); a list that is not there leaves its columns empty
   if (kb.yardsticks) Object.assign(row, sayability(kb.yardsticks()));
+  Object.assign(row, translationColumns(translation));
 
   if ((source.patterns ?? []).length) {
     const lessons = (source.lessons ?? []).filter((l) => l.number <= parseLessons).map(({ id, number }) => ({ id, number }));

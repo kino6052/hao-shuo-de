@@ -1,0 +1,219 @@
+/* The translator page: one column, phone width first; the book's colours and fonts (app.css) in light and dark. */
+.page {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+  color: var(--text-body);
+  line-height: 1.55;
+}
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.title {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  font-size: 2rem;
+  margin: 0;
+}
+.intro {
+  color: var(--text-tertiary);
+}
+.heading {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  font-size: 1.35rem;
+  margin: 28px 0 8px;
+}
+.subheading {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin: 16px 0 4px;
+}
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 14px;
+  padding: 16px;
+  margin: 12px 0;
+  min-width: 0;
+}
+.card p {
+  margin: 6px 0;
+}
+.notice {
+  background: var(--bg-callout);
+  border: 1px solid var(--border-callout);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+.muted {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+.error {
+  color: var(--accent-text);
+  font-weight: 600;
+}
+.who {
+  color: var(--text-tertiary);
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.label {
+  display: block;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 10px 0 4px;
+}
+.textarea,
+.input {
+  width: 100%;
+  font: inherit;
+  color: var(--text-primary);
+  background: var(--bg-page);
+  border: 1px solid var(--border-card);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+.input {
+  max-width: 10rem;
+}
+.textarea:focus,
+.input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+.primary,
+.secondary {
+  font: inherit;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 9px 16px;
+  cursor: pointer;
+}
+.primary {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  box-shadow: 0 2px 0 var(--accent-shadow);
+}
+.primary:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.secondary {
+  background: transparent;
+  color: var(--accent-text);
+  border: 1px solid var(--border-card);
+  padding: 6px 12px;
+  font-size: 0.9rem;
+}
+.link,
+.linkButton {
+  color: var(--accent-text);
+  font: inherit;
+}
+.linkButton {
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: currentColor;
+  flex: none;
+}
+.on {
+  background: var(--green-bg);
+  color: var(--green);
+}
+.off {
+  background: var(--bg-practice);
+  color: var(--text-muted);
+}
+.chip {
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.queued {
+  background: var(--bg-practice);
+  color: var(--text-tertiary);
+}
+.working {
+  background: var(--blue-bg);
+  color: var(--blue);
+}
+.done {
+  background: var(--green-bg);
+  color: var(--green);
+}
+.failed {
+  background: var(--bg-accent-light);
+  color: var(--accent-text);
+}
+.english {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: var(--text-primary);
+}
+.step {
+  color: var(--blue);
+  font-weight: 600;
+}
+.result {
+  border-top: 1px solid var(--border-card);
+  margin-top: 12px;
+  padding-top: 8px;
+}
+.pinyin {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.hanzi {
+  font-size: 1.1rem;
+  color: var(--text-tertiary);
+  overflow-wrap: anywhere;
+}
+.meaning {
+  margin-top: 10px;
+}
+.sentences {
+  padding-left: 1.4em;
+}
+.sentence {
+  margin: 12px 0;
+}
+.sentence p {
+  margin: 2px 0;
+}
+.list {
+  margin: 4px 0;
+  padding-left: 1.2em;
+}

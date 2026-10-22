@@ -21,5 +21,7 @@ export default defineConfig({
   build: {
     outDir: "docs",
     emptyOutDir: true,
+    // the book, and the translator page (TRANSLATOR_PLAN.md S8) with its own sign-in
+    rollupOptions: { input: { main: "index.html", translator: "translator/index.html" } },
   },
 });

@@ -189,3 +189,22 @@ export interface Construction {
 }
 
 export const constructions = (c: Construction[]): Construction[] => c;
+
+/**
+ * The translator's glossary (src/data/maps/translation-glossary.ts, TRANSLATOR_PLAN.md E1, Q7): an English idea and the
+ * Hao-shuo-de form a translation chose for it, with why. kb_lookup gives these first, so a choice made once is reused
+ * everywhere; a text may still differ, with a note. `form` is plain pinyin of dictionary words only (check-data parses
+ * it). `zh` is the entry the form says, when there is one. `proposed` rows wait for the author.
+ */
+export interface GlossaryEntry {
+  /** The English idea in lowercase: a word or a short phrase, as kb_lookup is asked it. */
+  en: string;
+  form: string;
+  zh?: string;
+  why: string;
+  /** Where it was chosen: a translation's file in review/translations/, or "the author". */
+  source?: string;
+  proposed?: boolean;
+}
+
+export const glossary = (g: GlossaryEntry[]): GlossaryEntry[] => g;

@@ -5,7 +5,7 @@ import { join } from 'node:path';
 import { createKb } from './kb.js';
 import { source } from './fixture.js';
 import { wordRefIds } from '../word-refs.js';
-import { NAMES, appendRow, readScoreboard, renderScoreboard, sayability, scoreboardRow } from './scoreboard.js';
+import { NAMES, appendRow, readScoreboard, readTranslationScore, renderScoreboard, sayability, scoreboardRow, translationColumns } from './scoreboard.js';
 
 const kb = createKb(source);
 const date = new Date('2026-10-12T10:00:00Z');
@@ -82,6 +82,27 @@ describe('sayability', () => {
   test('the row carries them; the fixture has no word lists, so they stay empty', async () => {
     const row = await scoreboardRow(kb, { date, atoms: false });
     for (const n of Object.keys(sayability(report))) expect(row[n]).toBe('');
+  });
+});
+
+describe('the translator columns (TRANSLATOR_PLAN.md F2)', () => {
+  const score = { texts: 20, sentences: 64, hsdOnly: 1, parses: 1, meant: 0.984, kept: 0.95, sentencesKept: 0.922, added: 0, passes: 17, pass: true };
+
+  test('the row carries the stored test-set numbers', async () => {
+    const row = await scoreboardRow(kb, { date, atoms: false, translation: score });
+    expect(row).toMatchObject({ translation_texts: 20, translation_hsd_only: 1, translation_meant: 0.984, translation_kept: 0.922 });
+    expect(Object.keys(row)).toEqual(NAMES);
+  });
+
+  test('no stored numbers, or a file that is not there, leaves them empty', async () => {
+    const row = await scoreboardRow(kb, { date, atoms: false, translation: readTranslationScore(join(tmpdir(), 'no-such-translation-score.json')) });
+    for (const n of Object.keys(translationColumns(score))) expect(row[n]).toBe('');
+  });
+
+  test('the stored file is read back as written', () => {
+    const file = join(mkdtempSync(join(tmpdir(), 'translation-score-')), 'translation-score.json');
+    writeFileSync(file, JSON.stringify(score));
+    expect(readTranslationScore(file)).toEqual(score);
   });
 });
 

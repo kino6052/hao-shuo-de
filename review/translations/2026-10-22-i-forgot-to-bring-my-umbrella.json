@@ -1,0 +1,265 @@
+{
+  "version": 1,
+  "text": "I forgot to bring my umbrella, so I got wet on the way home. My mother made me a cup of hot tea. Now I am warm again.",
+  "lesson": null,
+  "model": "claude-opus-5-5 (by hand, in a session)",
+  "sentences": [
+    {
+      "pinyin": "Wǒ yǒu yī-ge dōng-xi.",
+      "english": "I have a thing.",
+      "literally": "I have one thing.",
+      "reading": "1",
+      "source": "built from the grammar (svo, measure-word); the first sentence of the umbrella's cast entry (Q4: a description over 6 words gets a sentence of its own)",
+      "ideas": [
+        "i1"
+      ],
+      "refs": "{{Word:wo3}} {{word:you3}} {{word:yi1}}-{{light:ge4}} {{word:dong1}}-{{light:xi1}}.",
+      "hanzi": "我 有 一-个 东-西.",
+      "gloss": "I to have one-universal classifier east-west.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 8,
+        "means": "yes-with-others",
+        "words": 6,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "I have a thing."
+    },
+    {
+      "pinyin": "Tā ràng tiān shàng xià-lái-de shuǐ bù dào shēntǐ shàng.",
+      "english": "It keeps the rain off you.",
+      "literally": "It makes the water that comes down from the sky not reach the body.",
+      "reading": "265",
+      "source": "the dictionary's own form of 伞 (umbrella, kb_lookup gloss tier, lesson everyday-patterns) with tā before it",
+      "ideas": [
+        "i1"
+      ],
+      "refs": "{{Word:ta1}} {{word:rang4}} {{word:tian1}} {{word:shang4}} {{word:xia4}}-{{word:lai2}}-{{word:de}} {{word:shui3}} {{word:bu4}} {{word:dao4}} {{word:shen1ti3}} {{word:shang4}}.",
+      "hanzi": "他 让 天 上 下-来-的 水 不 到 身体 上.",
+      "gloss": "he to let day up down-to come-possessive marker water not to arrive body up.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 501,
+        "means": "yes-with-others",
+        "words": 12,
+        "depth": 1,
+        "late": [],
+        "warnings": [
+          "too long: 12 words (limit 10)"
+        ]
+      },
+      "blind": "It keeps the water that comes down from the sky from reaching the body; this thing is an umbrella."
+    },
+    {
+      "pinyin": "Wǒ bù jì-de ná zhè-ge dōng-xi.",
+      "english": "I forgot to bring it.",
+      "literally": "I did not remember to take this thing.",
+      "reading": "49",
+      "source": "built: bù jì-de (from the form of 忘记, lesson feelings) and ná (the form of 带, bring, is ná-lái), then the cast's short name",
+      "ideas": [
+        "i2"
+      ],
+      "refs": "{{Word:wo3}} {{word:bu4}} {{word:ji4}}-{{light:de2}} {{word:na2}} {{word:zhe4}}-{{light:ge4}} {{word:dong1}}-{{light:xi1}}.",
+      "hanzi": "我 不 记-得 拿 这-个 东-西.",
+      "gloss": "I not to remember-to get to take this-universal classifier east-west.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 104,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "I did not remember to take this thing with me (I forgot the umbrella)."
+    },
+    {
+      "pinyin": "Wǒ huí jiā-de shí-jiān, shēntǐ shàng jiù yǒu shuǐ le.",
+      "english": "So on the way home I got wet.",
+      "literally": "When I went home, then there was water on the body.",
+      "reading": "145",
+      "source": "the when-clause pattern (Wǒ chī-de shí-jiān, wǒ bù shuō., lesson around-an-action) and the form of 湿 (wet: shàng-miàn yǒu shuǐ), with jiù for the result",
+      "ideas": [
+        "i3",
+        "i4"
+      ],
+      "refs": "{{Word:wo3}} {{word:hui2}} {{word:jia1}}-{{word:de}} {{word:shi2}}-{{word:jian1}}, {{word:shen1ti3}} {{word:shang4}} {{word:jiu4}} {{word:you3}} {{word:shui3}} {{word:le}}.",
+      "hanzi": "我 回 家-的 十-间, 身体 上 就 有 水 了.",
+      "gloss": "I to return home-possessive marker ten-between, body up then to have water perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 252,
+        "means": "yes-with-others",
+        "words": 12,
+        "depth": 1,
+        "late": [],
+        "warnings": [
+          "too long: 12 words (limit 10)"
+        ]
+      },
+      "blind": "When I went home, I already had water on my body (I got wet)."
+    },
+    {
+      "pinyin": "Wǒ māma gěi wǒ zhíwù-de rè-shuǐ.",
+      "english": "My mother made me a cup of hot tea.",
+      "literally": "My mother gives me plant hot-water.",
+      "reading": "12",
+      "source": "gei-give (lesson inside-a-sentence) and the form of 茶 (tea, lesson how-much: Nǐ hē zhíwù-de rè-shuǐ ma?)",
+      "ideas": [
+        "i5"
+      ],
+      "refs": "{{Word:wo3}} {{word:ma1ma}} {{word:gei3}} {{word:wo3}} {{word:zhi2wu4}}-{{word:de}} {{word:re4}}-{{word:shui3}}.",
+      "hanzi": "我 妈妈 给 我 植物-的 热-水.",
+      "gloss": "I mom to give I plant-possessive marker hot-water.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 18,
+        "means": "yes-with-others",
+        "words": 8,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "My mom gives me hot water made with plants, that is, tea."
+    },
+    {
+      "pinyin": "Wǒ bù lěng le.",
+      "english": "Now I am warm again.",
+      "literally": "I am not cold any more.",
+      "reading": "1",
+      "source": "the book's own sentence, as it is (lesson how-much, \"I am not cold now\", kb_memory 43% shared)",
+      "ideas": [
+        "i7"
+      ],
+      "refs": "{{Word:wo3}} {{word:bu4}} {{word:leng3}} {{word:le}}.",
+      "hanzi": "我 不 冷 了.",
+      "gloss": "I not cold perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 2,
+        "means": "yes-with-others",
+        "words": 4,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "I am not cold any more."
+    }
+  ],
+  "sketch": [
+    {
+      "id": "i1",
+      "idea": "I have an umbrella (my umbrella)",
+      "needed": true,
+      "links": "",
+      "verdict": "kept",
+      "why": "named as an umbrella (or a raincoat, unsure)"
+    },
+    {
+      "id": "i2",
+      "idea": "I forgot to bring it",
+      "needed": true,
+      "links": "but, after i1",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i3",
+      "idea": "I got wet",
+      "needed": true,
+      "links": "so, because of i2",
+      "verdict": "kept",
+      "why": "the \"so\" comes back as order and jiù; the whole reading puts it as a sequence; it adds \"in the rain\", which the English implies too"
+    },
+    {
+      "id": "i4",
+      "idea": "on the way home",
+      "needed": true,
+      "links": "when and where i3 happened",
+      "verdict": "kept",
+      "why": "unsure between on the way home and on getting home"
+    },
+    {
+      "id": "i5",
+      "idea": "my mother made me hot tea",
+      "needed": true,
+      "links": "then, after i3",
+      "verdict": "kept",
+      "why": "gave rather than made"
+    },
+    {
+      "id": "i6",
+      "idea": "a cup of",
+      "needed": false,
+      "links": "how much tea in i5",
+      "verdict": "lost",
+      "why": "colour, not said"
+    },
+    {
+      "id": "i7",
+      "idea": "now I am warm again",
+      "needed": true,
+      "links": "because of i5",
+      "verdict": "weaker",
+      "why": "not cold any more, not warm again"
+    }
+  ],
+  "cast": [
+    {
+      "thing": "umbrella",
+      "description": "ràng tiān shàng xià-lái-de shuǐ bù dào shēntǐ shàng",
+      "short": "zhè-ge dōng-xi"
+    }
+  ],
+  "castProblems": [],
+  "structures": [
+    {
+      "idea": "i1",
+      "pattern": "svo, measure-word; rang-make",
+      "lesson": "who-does-what, pointing; becoming-and-making"
+    },
+    {
+      "idea": "i2",
+      "pattern": "bu-negation, serial-verbs",
+      "lesson": "who-does-what, moving"
+    },
+    {
+      "idea": "i3",
+      "pattern": "when-clause, jiu-then, le-new-situation",
+      "lesson": "around-an-action, linking-sentences, moving"
+    },
+    {
+      "idea": "i5",
+      "pattern": "gei-give, de-modifier",
+      "lesson": "inside-a-sentence, modifying-nouns"
+    },
+    {
+      "idea": "i7",
+      "pattern": "bu-adjective, le-new-situation",
+      "lesson": "how-much, moving"
+    }
+  ],
+  "gaps": [
+    {
+      "idea": "umbrella",
+      "description": "ràng tiān shàng xià-lái-de shuǐ bù dào shēntǐ shàng-de dōng-xi",
+      "note": "the dictionary's own form is 14 words, so it gets a sentence of its own (the cast list)"
+    }
+  ],
+  "added": [],
+  "blind": {
+    "whole": "The writer owns an umbrella but forgot to take it. On the way home they got wet in the rain. Their mother gave them tea (a hot drink made from plants), and now they are not cold any more.",
+    "unsure": "tā read as \"it\"; the thing could also be a raincoat; bù jì-de ná could be \"I don't remember taking it\"; huí jiā-de shí-jiān could be \"while going home\" or \"when I got home\"; plant hot-water could be another herbal drink, and gives or gave; that they were cold before is inferred from being wet."
+  },
+  "notes": "Translated by hand in a session following the translate skill (2026-10-22), as D5's prerequisite. Not said, by choice: \"a cup of\" (colour), \"again\" (Wǒ bù lěng le already says the cold is over); \"made\" became gěi (gave), the simpler verb. Tried and dropped: \"Yīnwèi zhè-ge, …\" (因此, so) does not parse with the comma, and without it every reading takes zhè-ge into the reason (\"because this body of mine has water\"), never \"because of this\"; \"Xiàn-zài wǒ bù lěng le.\" reads only as xiàn (line) + zài (at), never as xiàn-zài (now), so now is said by le alone; \"Zài huí jiā-de lù shàng, …\" reads only as calling out to the road (calling-hail), in all 500 readings.",
+  "problems": [],
+  "timing": {}
+}

@@ -14,5 +14,9 @@ export const FIREBASE_CONFIG = {
   appId: "",
 };
 
+// false: only the translator page (/translator/, TRANSLATOR_PLAN.md Q9) signs people in, and the book shows no sign-in
+// box and treats everyone as signed out. true: the sidebar's sign-in box and the members' no-ads come on too.
+export const SIGN_IN_EVERYWHERE = false;
+
 // Any of: "google", "apple", "microsoft", "github", "facebook".
 export const SIGN_IN_PROVIDERS = ["google", "apple", "github"];

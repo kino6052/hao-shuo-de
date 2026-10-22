@@ -1,0 +1,67 @@
+rules_version = '2';
+
+// The translator's rules (TRANSLATOR_PLAN.md §3a, S2). "On the list" means: signed in, the email verified, and
+// allowed/<that email, lowercase> exists. Only the daemon writes the list, the daemon's fields and the presence, through
+// the Admin SDK, which these rules do not hold back. Tested against the emulator in src/lib/translator/rules.test.js.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function myEmail() {
+      return request.auth.token.email.lower();
+    }
+
+    function verified() {
+      return signedIn() && request.auth.token.email != null && request.auth.token.email_verified == true;
+    }
+
+    function entry() {
+      return /databases/$(database)/documents/allowed/$(myEmail());
+    }
+
+    function onList() {
+      return verified() && exists(entry());
+    }
+
+    // the author's account sees every request (Q12)
+    function owner() {
+      return onList() && get(entry()).data.get('owner', false) == true;
+    }
+
+    // a person reads only their own entry, to know whether they are on the list; no page writes it
+    match /allowed/{who} {
+      allow read: if verified() && who == myEmail();
+      allow write: if false;
+    }
+
+    // a person on the list adds a request as themselves, with only the page's fields, a text of 1 to 2,000 characters
+    // and the server's time; they read only their own; no page changes or deletes one
+    match /requests/{id} {
+      allow create: if onList()
+        && request.resource.data.keys().hasOnly(['uid', 'email', 'text', 'lesson', 'createdAt'])
+        && request.resource.data.keys().hasAll(['uid', 'email', 'text', 'createdAt'])
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.email == request.auth.token.email
+        && request.resource.data.text is string
+        && request.resource.data.text.size() > 0
+        && request.resource.data.text.size() <= 2000
+        && (!('lesson' in request.resource.data) || (request.resource.data.lesson is string && request.resource.data.lesson.size() <= 40))
+        && request.resource.data.createdAt == request.time;
+      allow read: if onList() && (resource.data.uid == request.auth.uid || owner());
+      allow update, delete: if false;
+    }
+
+    // the daemon's heartbeat, for the page's online pill
+    match /presence/{doc} {
+      allow read: if onList();
+      allow write: if false;
+    }
+
+    // everything else (the setup script's throwaway check included) is the Admin SDK's only
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

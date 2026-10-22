@@ -8,7 +8,9 @@ import { pinyinProblems } from '../pinyin-refs.js';
 import { replaceWordRefs, refTerm } from '../word-refs.js';
 import { splitSentences } from './parse.js';
 
-const firstSense = (w) => String(w?.definition?.eng ?? w?.hanzi ?? '?').split(/[,;]/)[0].trim();
+// "mom: {{word:ba4ba}}-{{word:ma1ma}}, mom and dad" -> "mom"; a word reference left in the sense is shown as its pinyin
+const firstSense = (w, words) =>
+  replaceWordRefs(String(w?.definition?.eng ?? w?.hanzi ?? '?'), (id, kind) => refTerm(words[id]?.term ?? id, kind)).split(/[,;:]/)[0].trim();
 
 export function askGloss(kb, { text } = {}) {
   if (!text) throw new Error('text is required');
@@ -23,7 +25,7 @@ export function askGloss(kb, { text } = {}) {
     }
     return {
       text: replaceWordRefs(refs, (id, kind) => refTerm(words[id]?.term ?? id, kind)),
-      gloss: replaceWordRefs(refs, (id) => firstSense(words[id])),
+      gloss: replaceWordRefs(refs, (id) => firstSense(words[id], words)),
       unknown,
     };
   });

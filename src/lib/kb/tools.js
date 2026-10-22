@@ -13,10 +13,12 @@ import { askTags } from './tags.js';
 import { askBuilt } from './build-tags.js';
 import { askAkinator } from './akinator-ask.js';
 import { askLesson, askPatterns, askSimilar, askUses } from './lesson-lookup.js';
-import { scoreboardRow, readScoreboard, renderScoreboard, renderHistory } from './scoreboard.js';
+import { scoreboardRow, readScoreboard, readTranslationScore, renderScoreboard, renderHistory } from './scoreboard.js';
 
 // the stored rows (refactor --write adds one after every change)
 export const SCOREBOARD_FILE = fileURLToPath(new URL('../../../kb/scoreboard.csv', import.meta.url));
+// the translator's test set, as `npm run translator -- test` stored it last (the scoreboard's translation columns)
+export const TRANSLATION_SCORE_FILE = fileURLToPath(new URL('../../../kb/translation-score.json', import.meta.url));
 
 // a Claude tool never runs longer than this, whatever the question
 export const MAX_QUERY_MS = 60_000;
@@ -95,12 +97,13 @@ export const TOOLS = [
     name: 'kb_check_reading',
     description:
       'Does a sentence have the reading Claude means (TRANSLATOR_PLAN.md B2)? Give the reading as its place among kb_parse\'s readings (a number) or as the sentence in brackets (kb_parse\'s own notation, e.g. "[Utt [S [NP wǒ] [VP shì [NP rén]]]]"). ' +
-      'Answers "means it", "means it, with N other readings" (and shows them, so an ambiguous sentence can be reworded), or "can\'t mean it" (and shows the reading(s) it does have instead, or why it does not parse at all).',
+      'Answers "means it", "means it, with N other readings" (and shows the first 20 by their own numbers, so an ambiguous sentence can be reworded), or "can\'t mean it" (and shows the reading(s) it does have instead, or why it does not parse at all). ' +
+      'A piece of a bracket ("[VP ràng [NP [ModNP") picks the first reading that has it, and says how many have it.',
     inputSchema: {
       type: 'object',
       properties: {
         text: { type: 'string', description: 'Plain pinyin or text with {{word:id}} references; one sentence.' },
-        reading: { type: 'string', description: 'The reading meant: a number (1 = the first of kb_parse\'s readings), or the exact bracket text of one.' },
+        reading: { type: 'string', description: 'The reading meant: a number (1 = the first of kb_parse\'s readings), the exact bracket text of one, or a piece of a bracket (the first reading that has it).' },
         lesson: { type: 'string', description: 'A lesson id or number: only readings its grammar allows. Leave out for the whole dictionary.' },
       },
       required: ['text', 'reading'],
@@ -457,7 +460,7 @@ const need = (args, key) => {
 
 // -> the answer as text. Throws Error for a question that can't be answered
 // (an unknown word, a bad program); the caller reports it as the tool's error.
-export async function callTool(kb, name, args = {}, { scoreboardFile = SCOREBOARD_FILE } = {}) {
+export async function callTool(kb, name, args = {}, { scoreboardFile = SCOREBOARD_FILE, translationScoreFile = TRANSLATION_SCORE_FILE } = {}) {
   switch (name) {
     case 'kb_word':
       return renderCard(kb.word(String(need(args, 'name'))));
@@ -566,7 +569,7 @@ export async function callTool(kb, name, args = {}, { scoreboardFile = SCOREBOAR
     case 'kb_scoreboard': {
       const rows = readScoreboard(scoreboardFile);
       if (args.history) return renderHistory(rows);
-      return renderScoreboard(await scoreboardRow(kb, { atomsTimeoutMs: 45_000 }), rows);
+      return renderScoreboard(await scoreboardRow(kb, { atomsTimeoutMs: 45_000, translation: readTranslationScore(translationScoreFile) }), rows);
     }
     case 'kb_query': {
       const timeoutMs = Math.min(Math.max(Number(args.timeout_ms) || 20_000, 100), MAX_QUERY_MS);

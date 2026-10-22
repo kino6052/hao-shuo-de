@@ -52,7 +52,7 @@ Plans and decisions: [BOOK_PLAN.md](BOOK_PLAN.md) (book, decision log D1…), [K
 | Lesson sentences that parse | 99.4 % |
 | Smallest set the others can be said from | 202 words; the other 28 have a fine paraphrase |
 | Gates (`npm run check`) | 23 |
-| Test files (`npm test`) | 93 |
+| Test files (`npm test`) | 99 |
 
 The language numbers are the last row of `kb/scoreboard.csv` (2026-10-21, refactors/YT2.ts: 4 op(s)); a refactor adds a new row.
 <!-- /generated:facts -->
@@ -239,6 +239,7 @@ The shapes of the data are defined in TypeScript, so a mistake is a type error:
 | `npm run check-akinator` | Sanity check for the Akinator (AKINATOR_PLAN.md B7): simple, everyday things must be easy to find. |
 | `npm run report-heads` | Rebalancing the vocabulary by heads and naturalness: where the composites hang (src/lib/heads.js), how close they are to Mandarin (src/lib/ naturalness.js), and which roots would bring them closer. |
 | `npm run kb` | The command line of the KB. The explorer page and the Claude tools use the same code, so all three answer the same. |
+| `npm run translator` | The translator from the command line: translate a text, run the test set and its scores, gather the gaps, and keep the list of people who may use the online page (TRANSLATOR_PLAN.md). |
 | `npm run readme` | Rewrites the generated parts of the READMEs from the code itself, so they never go stale: the comment at the top of each file (its summary and its usage lines), package.json, the gate list… |
 | `npm run hooks` | Points git at .githooks/, so every commit refreshes the generated parts of the READMEs (scripts/generate-readme.js). |
 <!-- /generated:commands -->

@@ -30,6 +30,7 @@ import CONNECTIONS from '../src/data/maps/connections.ts';
 import STRUCTURE from '../src/data/maps/structure.ts';
 import PRIMES from '../src/data/maps/primes.ts';
 import CONSTRUCTIONS from '../src/data/maps/english-constructions.ts';
+import GLOSSARY from '../src/data/maps/translation-glossary.ts';
 import { buildData } from './build-data.js';
 import { compositeFileName } from './data-files.js';
 import { dataFiles } from './build-data.js';
@@ -39,7 +40,7 @@ import { kindsProblems, needsBuiltForm, undecidedForms, SPELLED_NEED_BUILT_FORM 
 import { PATTERNS } from '../src/data/grammar/index.ts';
 import { tagProblems } from '../src/lib/grammar-tags.ts';
 import { createParser, patternsOf } from '../src/lib/grammar/parser.js';
-import { pinyinToRefs } from '../src/lib/pinyin-refs.js';
+import { pinyinToRefs, pinyinProblems } from '../src/lib/pinyin-refs.js';
 import { existsSync } from 'fs';
 import { resolve } from 'path';
 import { fileURLToPath } from 'url';
@@ -169,6 +170,22 @@ for (const [name, r] of [['antonyms', ANTONYMS], ['synonyms', SYNONYMS]]) {
     if (!c.patterns.length && !c.entries.length) errors.push(`${where}: names no pattern and no entry`);
     for (const p of c.patterns) if (!patternIds.has(p)) errors.push(`${where}: unknown pattern "${p}"`);
     for (const e of c.entries) if (!said.has(e)) errors.push(`${where}: "${e}" is neither a word's hanzi nor a composite Hao-shuo-de says (fit skip and gap are left out)`);
+  }
+}
+// the translator's glossary: each English idea once, a why, a form of dictionary words only, and an entry that exists
+{
+  const said = new Set([...ENTRIES.map((e) => e.zh), ...Object.values(WORDS).map((w) => w.hanzi)]);
+  const seen = new Set();
+  for (const g of GLOSSARY) {
+    const where = `maps/translation-glossary.ts "${g.en}"`;
+    if (g.en !== String(g.en ?? '').trim().toLowerCase() || !g.en) errors.push(`${where}: the English must be lowercase, with no spaces around it`);
+    if (seen.has(g.en)) errors.push(`${where}: written twice`);
+    seen.add(g.en);
+    if (!String(g.why ?? '').trim()) errors.push(`${where}: no why`);
+    if (g.zh && !said.has(g.zh)) errors.push(`${where}: "${g.zh}" is neither a word's hanzi nor a composite`);
+    const { problems } = pinyinProblems(String(g.form ?? ''), WORDS, { composites: ENTRIES });
+    if (!String(g.form ?? '').trim()) errors.push(`${where}: no form`);
+    for (const p of problems) errors.push(`${where}: ${p.message}`);
   }
 }
 // primes: every prime of coverage/atoms.ts is in exactly one family; an alternate is a carrier of its prime, never its own main one

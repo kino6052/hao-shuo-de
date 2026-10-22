@@ -1,0 +1,8 @@
+/* The book's app.css fixes the page to the window and scrolls inside it; this page scrolls as a whole. */
+body {
+  overflow: auto;
+  height: auto;
+}
+#app {
+  height: auto;
+}

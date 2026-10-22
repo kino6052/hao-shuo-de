@@ -189,3 +189,8 @@ kb/picture-dict/*
 
 # The pool the Akinator page searches: generated (npm run akinator-data), built into docs/assets by vite
 src/data/akinator-pool.json
+
+# the Firebase emulators' logs (TRANSLATOR_PLAN.md S9)
+firebase-debug.log
+firestore-debug.log
+ui-debug.log

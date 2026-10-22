@@ -62,6 +62,38 @@ describe('askReading', () => {
     expect(r.means).toBeNull();
   });
 
+  // X -> X X: six pronouns in a row have 42 ways to pair up, each with its own bracket
+  const many = createKb({ ...source, patterns: [{ id: 'pairs', meaning: { eng: 'pairs' }, rules: [{ lhs: 'Utt', hsd: 'X' }, { lhs: 'X', hsd: 'X X' }, { lhs: 'X', hsd: '@pronoun' }] }] });
+  const six = 'Wǒ wǒ wǒ wǒ wǒ wǒ.';
+
+  test('a piece of a bracket picks the first reading that has it, by its own number', () => {
+    const seventh = askReading(many, { text: six, reading: '7' }).data;
+    const r = askReading(many, { text: six, reading: seventh.bracket.slice('[Utt '.length) });
+    expect(r.data.number).toBe(7);
+    expect(r.text).toContain(`  7. ${seventh.bracket}`);
+    expect(r.text).not.toContain('readings with that piece');
+    const all = askReading(many, { text: six, reading: '[Utt [nothing' }).data.readings;
+    const piece = '[X [X wǒ] [X wǒ]]';
+    const shared = askReading(many, { text: six, reading: piece });
+    expect(all.filter((b) => b.includes(piece)).length).toBeGreaterThan(1);
+    expect(shared.text).toContain(`(the first of ${all.filter((b) => b.includes(piece)).length} readings with that piece)`);
+    expect(shared.data.number).toBe(all.findIndex((b) => b.includes(piece)) + 1);
+  });
+
+  test('500 readings: the text shows 20 others by their numbers and how many more; data has them all', () => {
+    const r = askReading(many, { text: six, reading: '3' });
+    expect(r.data.others).toHaveLength(41);
+    expect(r.text).toContain('Means it, with 41 other reading(s):');
+    expect(r.text).toMatch(/\n {2}3\. \[Utt/);
+    expect(r.text).not.toMatch(/\n {2}3\. .*\n[\s\S]*\n {2}3\. /); // the meant one is not listed again
+    expect(r.text).toMatch(/\n {2}21\. \[Utt/);
+    expect(r.text).not.toMatch(/\n {2}22\. \[Utt/);
+    expect(r.text).toContain('... and 21 more');
+    const no = askReading(many, { text: six, reading: '[Utt [nothing' });
+    expect(no.text).toContain("Can't mean it. The 42 reading(s) it does have:");
+    expect(no.text).toContain('... and 22 more');
+  });
+
   test('text and reading are required', () => {
     expect(() => askReading(kb, { reading: '1' })).toThrow('text is required');
     expect(() => askReading(kb, { text: 'Wǒ duì.' })).toThrow('reading is required');

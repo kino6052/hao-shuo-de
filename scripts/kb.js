@@ -118,7 +118,7 @@ import { diffSnapshots, renderParseDiff } from '../src/lib/kb/parse-diff.js';
 import { parseReport, renderParseReport, slimReport } from '../src/lib/kb/parse-report.js';
 import { renderCheckForm, TOOLS, callTool } from '../src/lib/kb/tools.js';
 import { engine } from '../src/lib/kb/clingo.js';
-import { scoreboardRow, appendRow, readScoreboard, renderScoreboard } from '../src/lib/kb/scoreboard.js';
+import { scoreboardRow, appendRow, readScoreboard, readTranslationScore, renderScoreboard } from '../src/lib/kb/scoreboard.js';
 
 const ROOT = resolve(fileURLToPath(new URL('.', import.meta.url)), '..');
 // what the answers depend on: the data, the book text, the dictionary helpers, the rules
@@ -511,7 +511,8 @@ Written to ${file} (${Math.round(turtle.length / 1024)} KB).`);
       const label = option(rest, '--label') ?? '';
       const append = rest.includes('--append');
       const before = readScoreboard(file);
-      const row = await scoreboardRow(kb, { label, atoms: !rest.includes('--no-atoms'), atomsTimeoutMs: 90_000 });
+      const translation = readTranslationScore(resolve(ROOT, 'kb/translation-score.json'));
+      const row = await scoreboardRow(kb, { label, atoms: !rest.includes('--no-atoms'), atomsTimeoutMs: 90_000, translation });
       if (append) appendRow(file, row);
       return print({ row, stored: before.length + (append ? 1 : 0) }, `${renderScoreboard(row, before)}${append ? '\nStored in kb/scoreboard.csv.' : ''}`);
     }
