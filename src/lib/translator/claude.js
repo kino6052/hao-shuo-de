@@ -12,6 +12,8 @@
 //     Promise<{ answer, text, sessionId, cost, turns, tools: [name], denied: [name] }>
 //   sessionRunner({ claude, cwd, model, effort, env, onLine }) -> run(prompt, { schema, tools, onStep, signal })
 //     what pipeline.js calls a session: tools 'kb' gives the kb server and TRANSLATOR_TOOLS, 'none' no tool at all
+//   startSession({ claude, cwd, system, model, effort, env, spawn }) -> { ask(prompt) -> Promise<{ text, cost: Promise }>, close() }
+//     a session started now and asked later, one message at a time (the quick translation, quick.js)
 //
 // A failed session throws an Error; one that looks like a login problem has `login: true` and a `userMessage` for the
 // person, since the daemon shows a userMessage as it is (daemon.js).
@@ -134,6 +136,14 @@ export function answerOf(result) {
   return null;
 }
 
+// a session that ended without an answer; a login problem says so to the person (userMessage)
+function sessionError(code, result, errText) {
+  const said = `${result?.result ?? ''} ${errText}`;
+  const e = new Error(`claude ended with ${code}${result?.terminal_reason ? ` (${result.terminal_reason})` : ''}: ${said.replace(/\s+/g, ' ').trim().slice(0, 400)}`);
+  if (looksLikeLoginFailure(said)) Object.assign(e, { login: true, userMessage: LOGIN_MESSAGE });
+  return e;
+}
+
 export function runClaude({ claude, cwd, prompt, schema, model, effort, mcp, allow, env = process.env, signal, onStep = () => {}, onLine = () => {}, spawn = nodeSpawn } = {}) {
   return new Promise((resolve, reject) => {
     if (signal?.aborted) return reject(new Error('stopped before it started'));
@@ -190,12 +200,7 @@ export function runClaude({ claude, cwd, prompt, schema, model, effort, mcp, all
     child.on('error', (e) => done(reject, new Error(`could not start claude (${claude}): ${e.message}`)));
     child.on('close', (code) => {
       if (buffer.trim()) hear(buffer.trim());
-      const said = `${result?.result ?? ''} ${errText}`;
-      if (!result || result.is_error || code !== 0) {
-        const e = new Error(`claude ended with ${code}${result?.terminal_reason ? ` (${result.terminal_reason})` : ''}: ${said.replace(/\s+/g, ' ').trim().slice(0, 400)}`);
-        if (looksLikeLoginFailure(said)) Object.assign(e, { login: true, userMessage: LOGIN_MESSAGE });
-        return done(reject, e);
-      }
+      if (!result || result.is_error || code !== 0) return done(reject, sessionError(code, result, errText));
       done(resolve, {
         answer: answerOf(result),
         text: String(result.result ?? ''),
@@ -209,6 +214,96 @@ export function runClaude({ claude, cwd, prompt, schema, model, effort, mcp, all
     child.stdin.on('error', () => {}); // a session that dies at once closes stdin under us
     child.stdin.end(prompt);
   });
+}
+
+// A session started ahead of its first message, for the quick translation (quick.js). A fresh `claude -p` spends 3 to
+// 10 s starting before it reads anything (INSTANT_TRANSLATION_PLAN.md §1), so the caller starts this first and does its
+// own work meanwhile. The messages go in on stdin (--input-format stream-json); system is the standing prompt, in place of
+// Claude Code's own (--system-prompt). No tool and no MCP server at all.
+//
+// An answer is taken when its message stops (--include-partial-messages gives that event), not at the turn's result:
+// the CLI writes a post-turn summary first, which held every result back by about 1.8 s (measured 2026-10-23). The cost
+// comes with the result, so ask gives it as a promise.
+export function sessionArgs({ system, model, effort } = {}) {
+  return [...claudeArgs({ model, effort }), '--input-format', 'stream-json', '--include-partial-messages', ...(system ? ['--system-prompt', system] : [])];
+}
+
+export function startSession({ claude, cwd, system, model, effort, env = process.env, spawn = nodeSpawn } = {}) {
+  const child = spawn(claude, sessionArgs({ system, model, effort }), { cwd, env, stdio: ['pipe', 'pipe', 'pipe'], windowsHide: true });
+  let buffer = '';
+  let errText = '';
+  // the messages sent and not yet settled by a result, oldest first: { resolve, reject, settle, cost, text, answered }
+  const queue = [];
+  let ended = null; // the Error once the session is gone
+  const answering = () => queue.find((q) => !q.answered);
+  const fail = (e) => {
+    ended ??= e;
+    for (const q of queue.splice(0)) {
+      q.settle(null);
+      if (!q.answered) q.reject(ended);
+    }
+  };
+  const hear = (e) => {
+    if (e.type === 'assistant') {
+      const q = answering();
+      for (const c of e.message?.content ?? []) if (q && c.type === 'text') q.text += c.text;
+    } else if (e.type === 'stream_event' && e.event?.type === 'message_stop') {
+      // a login failure comes as text too; that one waits for its result, which says it is an error
+      const q = answering();
+      if (!q?.text.trim() || looksLikeLoginFailure(q.text)) return;
+      q.answered = true;
+      q.resolve({ text: q.text, cost: q.cost });
+    } else if (e.type === 'result') {
+      const q = queue.shift();
+      if (!q) return;
+      q.settle(e.total_cost_usd ?? null);
+      if (q.answered) return;
+      q.answered = true;
+      if (e.is_error) q.reject(sessionError(0, e, errText));
+      else q.resolve({ text: String(e.result ?? ''), cost: q.cost });
+    }
+  };
+  child.stdout.on('data', (chunk) => {
+    buffer += chunk.toString('utf8');
+    let at;
+    while ((at = buffer.indexOf('\n')) >= 0) {
+      const line = buffer.slice(0, at).trim();
+      buffer = buffer.slice(at + 1);
+      let e;
+      try {
+        e = JSON.parse(line);
+      } catch {
+        continue; // not an event: the CLI's own noise
+      }
+      hear(e);
+    }
+  });
+  child.stderr.on('data', (chunk) => {
+    errText = (errText + chunk.toString('utf8')).slice(-2000);
+  });
+  child.on('error', (e) => fail(new Error(`could not start claude (${claude}): ${e.message}`)));
+  child.on('close', (code) => fail(sessionError(code, null, errText)));
+  child.stdin.on('error', () => {}); // a session that dies at once closes stdin under us
+  return {
+    // -> Promise<{ text, cost: Promise<dollars | null> }>; a second message may go before the first is answered
+    ask(prompt) {
+      if (ended) return Promise.reject(ended);
+      return new Promise((resolve, reject) => {
+        const q = { resolve, reject, text: '', answered: false };
+        q.cost = new Promise((settle) => (q.settle = settle));
+        queue.push(q);
+        child.stdin.write(`${JSON.stringify({ type: 'user', message: { role: 'user', content: prompt } })}\n`);
+      });
+    },
+    get alive() {
+      return !ended;
+    },
+    close() {
+      ended ??= new Error('the session was closed');
+      child.stdin.end();
+      child.kill();
+    },
+  };
 }
 
 export function sessionRunner({ claude, cwd, model, effort, env, onLine, spawn } = {}) {

@@ -71,6 +71,8 @@ Then the sketch, the cast list (each description exactly as it stands in the tex
 
 Another agent that is not a session in this repo can get all of this in one call: `kb_translate` (scripts/translator-mcp.js, D5).
 
+When only a quick draft is needed, not this walk-through: `npm run translator -- translate "<English>"` prints only the Hao-shuo-de, in about 5 s for a line once its server runs (INSTANT_TRANSLATION_PLAN.md S). It is checked by the tools but not read back blind; `--verbose` shows the checks, and `--full` runs the whole pipeline.
+
 ## Pitfalls seen so far
 
 - **The first reading is not the meaning.** "Tiān shàng xià shuǐ." reads first as a thing, not as "water comes down from the sky": check the reading you mean (step 7), never only that it parses.

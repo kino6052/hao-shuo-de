@@ -1,11 +1,11 @@
 // TRANSLATOR_PLAN.md S1, S6, S7: the session runner with a fake `claude` process -- the arguments it is started with
 // (no built-in tool, only the named MCP server, only the allowed tools, nothing saved), the steps its events become,
-// its answer, and what a failed or stopped session does.
+// its answer, and what a failed or stopped session does; and the quick translation's running session (startSession).
 
 import { describe, expect, test } from 'bun:test';
 import { EventEmitter } from 'node:events';
 import { PassThrough } from 'node:stream';
-import { answerOf, claudeArgs, looksLikeLoginFailure, runClaude, sessionRunner, stepOf, TRANSLATOR_TOOLS, LOGIN_MESSAGE } from './claude.js';
+import { answerOf, claudeArgs, looksLikeLoginFailure, runClaude, sessionArgs, sessionRunner, startSession, stepOf, TRANSLATOR_TOOLS, LOGIN_MESSAGE } from './claude.js';
 
 // A child process that prints the given events (one JSON per line) and exits with `code`.
 function fakeSpawn(events, { code = 0, stderr = '', hold = false } = {}) {
@@ -144,5 +144,93 @@ describe('sessionRunner', () => {
     expect(kb[kb.indexOf('--allowedTools') + 1].split(',')).toHaveLength(TRANSLATOR_TOOLS.length);
     expect(none).not.toContain('--mcp-config');
     expect(none).not.toContain('--allowedTools');
+  });
+});
+
+// A running session: each message written to stdin (one JSON per line) gets the events reply(content) gives, the
+// result `resultMs` later (the CLI's post-turn summary sits between the two).
+function sessionSpawn(reply, { resultMs = 30 } = {}) {
+  const calls = [];
+  const spawn = (cmd, args, opts) => {
+    const child = new EventEmitter();
+    child.stdout = new PassThrough();
+    child.stderr = new PassThrough();
+    child.stdin = new PassThrough();
+    child.kill = () => setTimeout(() => child.emit('close', null), 0);
+    let buffer = '';
+    child.stdin.on('data', (c) => {
+      buffer += c;
+      let at;
+      while ((at = buffer.indexOf('\n')) >= 0) {
+        const message = JSON.parse(buffer.slice(0, at));
+        buffer = buffer.slice(at + 1);
+        const { events, result: last } = reply(message.message.content, child);
+        for (const e of events) child.stdout.write(`${JSON.stringify(e)}\n`);
+        if (last) setTimeout(() => child.stdout.write(`${JSON.stringify(last)}\n`), resultMs);
+      }
+    });
+    calls.push({ cmd, args, opts, child });
+    return child;
+  };
+  return { spawn, calls };
+}
+
+const said = (text) => ({ type: 'assistant', message: { content: [{ type: 'text', text }] } });
+const stopped = { type: 'stream_event', event: { type: 'message_stop' } };
+
+describe('startSession', () => {
+  test('started with the standing prompt, messages on stdin, the message events, and no tool at all', () => {
+    const args = sessionArgs({ system: 'RULES', model: 'sonnet', effort: 'low' });
+    const after = (flag) => args[args.indexOf(flag) + 1];
+    expect(after('--input-format')).toBe('stream-json');
+    expect(after('--system-prompt')).toBe('RULES');
+    expect(args).toContain('--include-partial-messages');
+    expect(after('--tools')).toBe('');
+    expect(args).not.toContain('--mcp-config');
+    expect(after('--model')).toBe('sonnet');
+  });
+
+  test('an answer is taken when its message stops, before the result; the cost comes with the result', async () => {
+    let resultSent = false;
+    const { spawn } = sessionSpawn((content) => ({ events: [said(`[${JSON.stringify(content)}]`), stopped], result: result({ total_cost_usd: 0.03 }) }), { resultMs: 60 });
+    const session = startSession({ claude: 'c', system: 'RULES', spawn });
+    setTimeout(() => (resultSent = true), 60);
+    const r = await session.ask('hello');
+    expect(r.text).toBe('["hello"]');
+    expect(resultSent).toBe(false);
+    expect(await r.cost).toBe(0.03);
+    session.close();
+  });
+
+  test('two messages are answered in turn, each with its own cost', async () => {
+    let n = 0;
+    const { spawn } = sessionSpawn((content) => ({ events: [said(content), stopped], result: result({ total_cost_usd: ++n / 100 }) }), { resultMs: 5 });
+    const session = startSession({ claude: 'c', spawn });
+    const [a, b] = await Promise.all([session.ask('one'), session.ask('two')]);
+    expect([a.text, b.text]).toEqual(['one', 'two']);
+    expect(await Promise.all([a.cost, b.cost])).toEqual([0.01, 0.02]);
+    session.close();
+  });
+
+  test('a login failure waits for its result and says so to the person', async () => {
+    const { spawn } = sessionSpawn(() => ({ events: [said('Failed to authenticate. Please run /login'), stopped], result: result({ is_error: true, result: 'Failed to authenticate. Please run /login' }) }));
+    const session = startSession({ claude: 'c', spawn });
+    const e = await session.ask('x').catch((x) => x);
+    expect(e).toMatchObject({ login: true, userMessage: LOGIN_MESSAGE });
+    session.close();
+  });
+
+  test('a session that ends fails the message it holds and every later one; close kills it', async () => {
+    const { spawn, calls } = sessionSpawn((content, child) => {
+      setTimeout(() => child.emit('close', 1), 0);
+      return { events: [] };
+    });
+    const session = startSession({ claude: 'c', spawn });
+    expect(session.alive).toBe(true);
+    expect((await session.ask('x').catch((e) => e)).message).toContain('claude ended with 1');
+    expect(session.alive).toBe(false);
+    await expect(session.ask('y')).rejects.toThrow('claude ended with 1');
+    session.close();
+    expect(calls).toHaveLength(1);
   });
 });

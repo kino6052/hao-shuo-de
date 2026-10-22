@@ -1,17 +1,28 @@
 #!/usr/bin/env node
-// The translator from the command line (TRANSLATOR_PLAN.md D3, E2, F1-F3, S3). The same pipeline the online daemon runs
-// (src/lib/translator/pipeline.js): a session translates with the kb tools only, the tools check it, a blind reader reads it
-// back without the English, a judge compares. Each session is a `claude -p` with its own login (the daemon's `set-token`).
+// The translator from the command line (TRANSLATOR_PLAN.md D3, E2, F1-F3, S3). Each session is a `claude -p` with its own
+// login (the daemon's `set-token`).
 //
-//   npm run translator -- translate "<English>" [--lesson N] [--no-blind] [--repairs 1] [--save] [--json]
+//   npm run translator -- translate "<English>" [-v|--verbose] [--lesson N] [--repairs 1] [--save] [--json] [--no-server]
+//   npm run translator -- translate "<English>" --full [--no-blind] ...
+//   npm run translator -- serve | stop
 //   npm run translator -- test [--stories] [--sentences] [--limit 100] [--round-trip] [--fresh] [--jobs 4]
 //   npm run translator -- score [--dir review/translations/test]
 //   npm run translator -- gaps
 //   npm run translator -- allow <email> [note] [--owner] | remove <email> | list
 //
-//   --model opus --effort high --claude PATH   for every command that runs a session
+//   --model M --effort E --claude PATH   for every command that runs a session (the quick translation: sonnet, low; the
+//                                        rest: opus, high)
 //
-// translate --save writes review/translations/<date>-<first words>.md (to review) and .json (the result).
+// translate prints the Hao-shuo-de and nothing else; --verbose adds the steps (on stderr) and the full report (each
+// sentence's checks, gloss and hanzi, the time and the cost), --json the result as JSON. By default it is the quick
+// translation (src/lib/translator/quick.js): the KB breaks the English into word and grammar pieces, one request to a
+// session started at once stitches them, the tools check the answer and one repair follows if they fail; seconds, not
+// minutes. It asks the quick translator kept running (serve, src/lib/translator/quick-server.js: the KB open, a session
+// waiting) and, when none runs, translates on its own and starts one after printing; --no-server does neither. stop ends
+// it; it also ends after half an hour with no request, or when the code changes.
+// --full runs the pipeline the online daemon runs (src/lib/translator/pipeline.js): a session translates with
+// the kb tools, the tools check it, a blind reader reads it back without the English, a judge compares; a minute or more.
+// --save writes review/translations/<date>-<first words>.md (to review) and .json (the result).
 // test runs the test set (Q8: the ten stories and the first 100 everyday sentences; both when neither is named) into
 // review/translations/test/<id>.json, skipping the ones already there unless --fresh (the stories' own lines hidden from
 // kb_memory while it runs; --jobs texts at a time, 4 by default), and stores the set's numbers in
@@ -21,12 +32,16 @@
 // allow, remove and list change the list of people who may use the online translator (Firestore `allowed`, Q11), with the
 // service-account key setup put in %USERPROFILE%\.haoshuode-translator.
 
-import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
+import { spawn } from 'node:child_process';
+import { appendFileSync, existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { join, relative, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { parseArgs } from 'node:util';
-import { findClaude, sessionRunner } from '../src/lib/translator/claude.js';
+import { findClaude, sessionRunner, startSession } from '../src/lib/translator/claude.js';
 import { translate } from '../src/lib/translator/pipeline.js';
+import { QUICK_SYSTEM, quickTranslate } from '../src/lib/translator/quick.js';
+import { askServer, codeStamp, serve, stopServer } from '../src/lib/translator/quick-server.js';
 import { renderMarkdown, scoreOf, slugOf } from '../src/lib/translator/output.js';
 import { STORY_LINES, overlap, sentenceItems, setScore, storyItems, wordIdsOf } from '../src/lib/translator/test-set.js';
 import { MEMORY_SKIP_ENV } from '../src/lib/kb/memory.js';
@@ -43,6 +58,9 @@ const { values, positionals } = parseArgs({
   allowPositionals: true,
   options: {
     lesson: { type: 'string' },
+    verbose: { type: 'boolean', short: 'v' },
+    full: { type: 'boolean' },
+    'no-server': { type: 'boolean' },
     'no-blind': { type: 'boolean' },
     repairs: { type: 'string', default: '1' },
     save: { type: 'boolean' },
@@ -55,12 +73,17 @@ const { values, positionals } = parseArgs({
     jobs: { type: 'string', default: '4' },
     dir: { type: 'string' },
     owner: { type: 'boolean' },
-    model: { type: 'string', default: 'opus' },
-    effort: { type: 'string', default: 'high' },
+    model: { type: 'string' },
+    effort: { type: 'string' },
     claude: { type: 'string' },
   },
 });
 const [command, ...args] = positionals;
+// the quick translation's own defaults: thinking as little as the CLI allows, and Sonnet, whose first answers pass the
+// checks (6 of 6 texts on 2026-10-23, Haiku 3 of 6): a repair costs more than Haiku's quicker start saves
+const quickMode = (command === 'translate' && !values.full) || command === 'serve';
+values.model ??= quickMode ? 'sonnet' : 'opus';
+values.effort ??= quickMode ? 'low' : 'high';
 
 const rel = (file) => relative(ROOT, file).replaceAll('\\', '/');
 const fail = (message) => {
@@ -82,29 +105,61 @@ const readJsonFiles = (dir) => {
   return out;
 };
 
+const repairs = Number.parseInt(values.repairs, 10) || 0;
+// the steps go to stderr for test (a long run) and under --verbose; a plain translate is silent until its answer
+const onStep = command === 'test' || values.verbose ? (step) => process.stderr.write(`  ${step}\n`) : () => {};
+const sessionEnv = (extraEnv = {}) => {
+  const token = readClaudeToken();
+  return { token, env: { ...process.env, ...extraEnv, ...(token && { [CLAUDE_TOKEN_ENV]: token }) } };
+};
+const failed = (token) => (e) => {
+  if (e.login) fail(`Claude is not logged in for the translator${token ? ' (the saved token was refused)' : ''}: run \`claude setup-token\`, then \`node scripts/translator-daemon.js set-token\`.`);
+  fail(e.userMessage ?? e.stack ?? String(e));
+};
+
 // One runner for every session of a command: the kb, claude and the login are looked up once. extraEnv reaches the
 // sessions and the kb server they start.
 async function pipeline(extraEnv = {}) {
   const { openKb } = await import('./kb.js');
   const kb = await openKb();
   const claude = findClaude({ given: values.claude });
-  const token = readClaudeToken();
-  const env = { ...process.env, ...extraEnv, ...(token && { [CLAUDE_TOKEN_ENV]: token }) };
+  const { token, env } = sessionEnv(extraEnv);
   const run = sessionRunner({ claude, cwd: ROOT, model: values.model, effort: values.effort, env });
-  const repairs = Number.parseInt(values.repairs, 10) || 0;
   return (request, over = {}) =>
-    translate(request, {
-      kb,
-      run,
-      onStep: (step) => process.stderr.write(`  ${step}\n`),
-      blind: !values['no-blind'],
-      repairs,
-      model: values.model,
-      ...over,
-    }).catch((e) => {
-      if (e.login) fail(`Claude is not logged in for the translator${token ? ' (the saved token was refused)' : ''}: run \`claude setup-token\`, then \`node scripts/translator-daemon.js set-token\`.`);
-      fail(e.userMessage ?? e.stack ?? String(e));
-    });
+    translate(request, { kb, run, onStep, blind: !values['no-blind'], repairs, model: values.model, ...over }).catch(failed(token));
+}
+
+// The quick translation's session: in a folder of its own (no project instructions to read), with the standing prompt
+// and the login as they are now (a new token reaches the next session without a restart)
+let claudePath;
+const quickSession = ({ model = values.model, effort = values.effort } = {}) =>
+  startSession({ claude: (claudePath ??= findClaude({ given: values.claude })), cwd: tmpdir(), system: QUICK_SYSTEM, model, effort, env: sessionEnv().env });
+const withCost = Boolean(values.verbose || values.json || values.save);
+
+// The quick translation in this process, when no server runs (quick-server.js). The session starts first, as starting
+// is its slowest part. The KB opens meanwhile with the parse memory, which makes the first lookup take a second instead
+// of half a minute; the checks use the same KB, except under --verbose: the memory keeps no parse trees, so a sentence's
+// depth and readability warnings need a KB without it, opened while the session writes.
+async function quick(request) {
+  const session = quickSession();
+  try {
+    const { openKb } = await import('./kb.js');
+    const kb = await openKb({ memo: true });
+    const checkKb = values.verbose ? () => openKb() : kb;
+    const result = await quickTranslate(request, { kb, checkKb, session, onStep, repairs, model: values.model, withCost });
+    session.close();
+    return result;
+  } catch (e) {
+    session.close();
+    return failed(readClaudeToken())(e);
+  }
+}
+
+// The server for the next translations, started apart from this process so it outlives it (quick-server.js stops it
+// when it has been idle for half an hour)
+function startServer() {
+  const args = [fileURLToPath(import.meta.url), 'serve', '--model', values.model, '--effort', values.effort, ...(values.claude ? ['--claude', values.claude] : [])];
+  spawn(process.execPath, args, { cwd: ROOT, detached: true, stdio: 'ignore', windowsHide: true }).unref();
 }
 
 const pinyinOf = (result) => (result.sentences ?? []).map((s) => s.pinyin).join(' ');
@@ -141,18 +196,49 @@ async function allowList() {
 switch (command) {
   case 'translate': {
     const text = args.join(' ').trim();
-    if (!text) fail('usage: npm run translator -- translate "<English>" [--lesson N] [--save]');
-    const run = await pipeline();
-    const result = await run({ id: 'cli', text, lesson: values.lesson ?? '' });
+    if (!text) fail('usage: npm run translator -- translate "<English>" [-v|--verbose] [--full] [--lesson N] [--save] [--json]');
+    const request = { id: 'cli', text, lesson: values.lesson ?? '' };
+    let result = null;
+    let served = false;
+    if (values.full) result = await (await pipeline())(request);
+    else {
+      if (!values['no-server']) {
+        const ask = { ...request, code: codeStamp(ROOT), repairs, verbose: Boolean(values.verbose), withCost, model: values.model, effort: values.effort };
+        // a login problem or the person's own mistake is the answer; any other failure of the server is retried here
+        result = await askServer(ask, { root: ROOT, onStep }).catch((e) => (e.login || e.userMessage ? failed(readClaudeToken())(e) : null));
+        served = Boolean(result);
+      }
+      if (!served) onStep(values['no-server'] ? 'Translating here (--no-server)' : 'No quick translator running: translating here, and starting one for the next time');
+      result ??= await quick(request);
+    }
     if (values.save) {
       const slug = slugOf(text);
       writeJson(join(SAVED, `${slug}.json`), result);
       writeFileSync(join(SAVED, `${slug}.md`), renderMarkdown(result));
-      console.error(`Saved to review/translations/${slug}.md and .json`);
+      if (values.verbose) console.error(`Saved to review/translations/${slug}.md and .json`);
     }
-    console.log(values.json ? JSON.stringify(result, null, 2) : renderMarkdown(result));
+    const out = values.json ? JSON.stringify(result, null, 2) : values.verbose ? renderMarkdown(result) : pinyinOf(result);
+    if (!values.full && !served && !values['no-server']) startServer();
+    // out at once, without waiting for the killed session's process to be reaped
+    process.stdout.write(`${out}\n`, () => process.exit(0));
     break;
   }
+
+  case 'serve': {
+    const { openKb } = await import('./kb.js');
+    const logFile = join(ROOT, '.cache', 'translator-server.log');
+    const log = (line) => {
+      try {
+        appendFileSync(logFile, `${new Date().toISOString()} ${line}\n`);
+      } catch {}
+    };
+    await serve({ root: ROOT, code: codeStamp(ROOT), openKb, startSession: quickSession, model: values.model, effort: values.effort, log });
+    process.exit(0);
+  }
+
+  case 'stop':
+    console.log((await stopServer({ root: ROOT })) ? 'Stopped the quick translator.' : 'No quick translator was running.');
+    break;
 
   case 'test': {
     const both = !values.stories && !values.sentences;
@@ -244,5 +330,5 @@ switch (command) {
   }
 
   default:
-    fail('usage: npm run translator -- translate "<English>" | test | score | gaps | allow <email> [note] | remove <email> | list');
+    fail('usage: npm run translator -- translate "<English>" | serve | stop | test | score | gaps | allow <email> [note] | remove <email> | list');
 }

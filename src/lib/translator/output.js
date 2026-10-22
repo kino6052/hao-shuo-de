@@ -237,6 +237,9 @@ export function renderMarkdown(result) {
   out.push(`- **English:** ${result.text.replace(/\s+/g, ' ').trim()}`);
   out.push(`- **Level:** ${result.lesson ? `lesson ${result.lesson.number} (${result.lesson.id})` : 'the whole dictionary'}`);
   if (result.model) out.push(`- **Model:** ${result.model}`);
+  if (result.mode === 'quick') out.push('- **Mode:** quick: one request stitched the pieces the tools found; no blind reader or judge (`--full` runs them)');
+  const { total, ...laps } = result.timing ?? {};
+  if (total !== undefined) out.push(`- **Time:** ${total} s${Object.keys(laps).length ? ` (${Object.entries(laps).map(([k, v]) => `${k} ${v} s`).join(', ')})` : ''}${result.cost ? `; cost $${result.cost}` : ''}`);
   out.push(`- **Form:** Hao-shuo-de words only in ${Math.round(s.hsdOnly * s.sentences)} of ${s.sentences} sentences; ${Math.round(s.parses * s.sentences)} parse; the meant reading found in ${Math.round(s.meant * s.sentences)}`);
   out.push(`- **Meaning:** ${s.kept === null ? 'no blind reader' : `${Math.round(s.kept * s.needed)} of ${s.needed} needed ideas kept, ${s.added} added`}`);
   out.push(`- **Passes the bar (Q8):** ${yesNo(s.pass)}`);

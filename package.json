@@ -61,7 +61,7 @@
     "test": "Runs the fast test files with bun, several at a time (under half a minute); the slow ones, which use the real data or copy the repo, wait for test:all.",
     "test:all": "Runs every test file with bun, several at a time, the slow ones first.",
     "typecheck": "Type-checks the whole project with tsc (the check-types gate runs the same).",
-    "translator": "The translator from the command line: translate a text, run the test set and its scores, gather the gaps, and keep the list of people who may use the online page (TRANSLATOR_PLAN.md)."
+    "translator": "The translator from the command line: translate a text (only the Hao-shuo-de, in seconds, through a server it keeps running; --verbose for the report, --full for the whole pipeline), run the test set and its scores, gather the gaps, and keep the list of people who may use the online page (TRANSLATOR_PLAN.md)."
   },
   "dependencies": {
     "firebase": "^13.0.0",

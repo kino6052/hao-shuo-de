@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // kb_translate over stdio (TRANSLATOR_PLAN.md D5): the translator as one MCP tool, for an AI agent outside this repo.
-// The tool is in src/lib/translator/mcp.js; each call runs the same pipeline as the daemon and `npm run translator`
-// (src/lib/translator/pipeline.js), with the same login (`node scripts/translator-daemon.js set-token`).
+// The tool is in src/lib/translator/mcp.js; each call runs the same pipeline as the daemon and `npm run translator --
+// translate --full` (src/lib/translator/pipeline.js), with the same login (`node scripts/translator-daemon.js set-token`).
 //
 //   claude mcp add hao-shuo-de-translator -- node C:/Repos/jiandanhua-dictionary/haoshuode-app/scripts/translator-mcp.js
 //   node scripts/translator-mcp.js [--model opus] [--effort high] [--claude PATH]

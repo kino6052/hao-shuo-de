@@ -214,7 +214,7 @@ function loadYardsticks() {
   return { mandarin: read('mandarin-frequency.json'), basic: read('basic-english.json'), top: read('english-top3000.json'), sentences: read('sentences.json'), explained: read('english-explained.json'), translationGaps: read('kb/translation-gaps.json') };
 }
 
-let cached = null;
+const cached = new Map(); // memo -> { stamp, kb }: a process that uses both (the quick translator) keeps both
 let memoStore = null; // the parse memory on disk (scripts/parse-memo.js), made when a caller asks for it
 let frequencies; // the Mandarin frequency list, read once (null when there is none)
 
@@ -222,11 +222,12 @@ let frequencies; // the Mandarin frequency list, read once (null when there is n
 // (no trees; see src/lib/grammar/parser.js): for the gates, which only ask whether a sentence parses.
 export async function openKb({ force = false, memo = false } = {}) {
   const stamp = fingerprint();
-  if (!force && cached && cached.stamp === stamp && cached.memo === memo) return cached.kb;
+  const kept = cached.get(Boolean(memo));
+  if (!force && kept?.stamp === stamp) return kept.kb;
   const source = await reloadSource();
   frequencies ??= loadFrequencyList();
   const kb = createKb(source, { freq: frequencies, drafts: await loadDrafts(source), relationRules: loadRelationRules(), englishData: loadEnglishData, yardstickData: loadYardsticks, parseMemo: memo ? (memoStore ??= parseMemo()) : null });
-  cached = { stamp, kb, memo };
+  cached.set(Boolean(memo), { stamp, kb });
   return kb;
 }
 

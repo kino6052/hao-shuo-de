@@ -18,14 +18,25 @@ export const memorySkip = (env = process.env) => String(env[MEMORY_SKIP_ENV] ?? 
 const stem = (w) => w.replace(/'s$|s$/, '');
 const tokens = (s) => new Set(String(s ?? '').toLowerCase().match(/[a-z']+/g)?.map(stem) ?? []);
 
+// the pool's sentences with their tokens, kept per pool (a pool is made again only when the data changes), so a caller
+// that asks once per sentence (the quick translator) tokenizes the 5,000-odd sentences once, not every time
+const keptTokens = new WeakMap();
+function poolSentences(pool) {
+  let list = keptTokens.get(pool);
+  if (!list) {
+    list = pool.items.filter((i) => i.type === 'sentence' && i.source !== 'pattern_example' && i.text.en).map((it) => ({ it, t: tokens(it.text.en) }));
+    keptTokens.set(pool, list);
+  }
+  return list;
+}
+
 export function askMemory(kb, { text, limit = 10, skip = [] } = {}) {
   if (!text) throw new Error('text is required (an English sentence)');
   const q = tokens(text);
   if (!q.size) throw new Error('nothing to match: give an English sentence');
-  const sentences = kb.pool().items.filter((i) => i.type === 'sentence' && i.source !== 'pattern_example' && i.text.en && !skip.some((p) => i.id.startsWith(p)));
+  const sentences = poolSentences(kb.pool()).filter(({ it }) => !skip.some((p) => it.id.startsWith(p)));
   const scored = sentences
-    .map((it) => {
-      const t = tokens(it.text.en);
+    .map(({ it, t }) => {
       const shared = [...q].filter((w) => t.has(w)).length;
       return { it, shared, score: shared / (q.size + t.size - shared || 1) };
     })
