@@ -85,6 +85,7 @@ function makeProvider(auth, name) {
 }
 
 export async function signIn(name) {
+  if (state.error) set({ error: null }); // a new try clears the last one's message
   try {
     const { auth, handle } = await load();
     // the emulator's made-up accounts by redirect, so a browser that opens pop-ups as tabs can try the page too

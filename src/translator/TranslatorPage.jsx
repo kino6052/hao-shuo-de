@@ -28,12 +28,25 @@ export function TranslatorPage() {
         <div class={styles.card}>
           <p>{TEXT.signInWhy}</p>
           <button class={styles.primary} onClick={() => signIn('google')}>{TEXT.signIn}</button>
-          {error && <p class={styles.error}>{TEXT.signInError}</p>}
+          {error && <SignInError code={error} />}
         </div>
       ) : (
         <SignedIn user={user} />
       )}
     </main>
+  );
+}
+
+// The dev server prints 127.0.0.1, which a new Firebase project does not list (it lists localhost): the pop-up opens and
+// closes at once, so say where it works instead of "try again".
+function SignInError({ code }) {
+  if (code !== 'auth/unauthorized-domain') return <p class={styles.error}>{TEXT.signInError}</p>;
+  const { hostname, host, href } = window.location;
+  return (
+    <p class={styles.error}>
+      {say('signInAddress', { host })}{' '}
+      {hostname === '127.0.0.1' && <a class={styles.link} href={href.replace('//127.0.0.1', '//localhost')}>{TEXT.signInLocalhost}</a>}
+    </p>
   );
 }
 

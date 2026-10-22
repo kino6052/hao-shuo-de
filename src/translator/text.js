@@ -10,6 +10,9 @@ export const TEXT = {
   signInWhy: 'Sign in with Google to use the translator. Only people on the list can send texts.',
   signIn: 'Sign in with Google',
   signInError: 'Signing in did not work. Please try again.',
+  // Firebase signs people in only at the addresses on its list (Authentication > Settings > Authorized domains)
+  signInAddress: 'Signing in does not work at {host}: it is not on the Firebase project\'s list of addresses.',
+  signInLocalhost: 'Open this page at localhost instead',
   signOut: 'Sign out',
   signedInAs: 'Signed in as {email}',
   checkingList: 'Checking the list…',
