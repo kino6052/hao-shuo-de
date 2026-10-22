@@ -1,7 +1,8 @@
 // The translator's store in Firestore (TRANSLATOR_PLAN.md S3, S5), through the Firebase Admin SDK and the service-account
 // key in %USERPROFILE%\.haoshuode-translator (home.js). The Admin SDK passes the security rules: the rules keep pages out
 // of what only the daemon may write, and this file is the daemon's side. The same calls as memory-store.js (the store
-// interface at the top of daemon.js), plus the list of people for `npm run translator -- allow | remove | list`.
+// interface at the top of daemon.js), plus the list of people for `npm run translator -- allow | remove | list` and a
+// request sent from the command line for `npm run translator -- online` (addRequest, watchRequest, getPresence).
 //
 //   connectFirestore({ serviceAccountPath, name }) -> store (+ close())
 //   createFirestoreStore(db, { watchDays, retryMs, log }) -> store
@@ -58,6 +59,18 @@ export function createFirestoreStore(db, { watchDays = 7, retryMs = 30_000, log 
       const snap = await requests.where('uid', '==', uid).where('createdAt', '>=', ms(from)).where('createdAt', '<', ms(to)).count().get();
       return snap.data().count;
     },
+
+    // ---- the command line's request (`npm run translator -- online`): written as the page writes one, then watched ----
+
+    async addRequest({ uid, email, text, lesson }) {
+      const ref = requests.doc();
+      await ref.set({ uid, email, text, ...(lesson && { lesson }), createdAt: FieldValue ? FieldValue.serverTimestamp() : ms(now()) });
+      return ref.id;
+    },
+
+    watchRequest: (id, onDoc, onError) => requests.doc(id).onSnapshot((d) => onDoc(d.data() ?? null), onError),
+
+    getPresence: async (name) => (await db.collection('presence').doc(name).get()).data() ?? null,
 
     // ---- the list (S3) ----
 

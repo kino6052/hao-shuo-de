@@ -159,6 +159,9 @@ export function parseAnswer(text) {
   return lines.length ? lines : null;
 }
 
+// what quickTranslate says it is doing, in order (the daemon passes the page only the steps that take time)
+export const QUICK_STEP = { pieces: 'Breaking the English into words and grammar', writing: 'Writing', checking: 'Checking', repairing: 'Repairing' };
+
 const seconds = (ms) => Math.round(ms / 100) / 10;
 // the sentences that fail, the measure the repair has to beat
 const failing = (verified) => verified.sentences.filter((s) => s.check.unknown.length || !s.check.parses || s.check.late.length).length + (verified.problems.some((p) => /no pinyin|no sentences/.test(p)) ? 1 : 0);
@@ -173,12 +176,12 @@ export async function quickTranslate(request, { kb, checkKb = kb, session, onSte
     throw e;
   }
   const { lesson } = levelOf(kb, request.lesson);
-  onStep('Breaking the English into words and grammar');
+  onStep(QUICK_STEP.pieces);
   let t = Date.now();
   const pieces = english.map((s) => piecesOf(kb, s, { skip }));
   timing.pieces = seconds(Date.now() - t);
   const answerOf = (list) => ({ sketch: [], sentences: english.map((en, i) => ({ pinyin: list?.[i] ?? '', english: en, literally: '', reading: '', source: 'quick', ideas: [] })), cast: [], structures: [], gaps: [], notes: '' });
-  onStep('Writing');
+  onStep(QUICK_STEP.writing);
   t = Date.now();
   const asked = session.ask(quickPrompt(english, pieces, { lesson, words: kb.source.words }));
   asked.catch(() => {}); // awaited below, after the checks' KB is open
@@ -186,11 +189,11 @@ export async function quickTranslate(request, { kb, checkKb = kb, session, onSte
   const first = await asked;
   timing.writing = seconds(Date.now() - t);
   const costs = [first.cost];
-  onStep('Checking');
+  onStep(QUICK_STEP.checking);
   let answer = answerOf(parseAnswer(first.text));
   let verified = verifyAnswer(checks, answer, { lesson });
   for (let round = 0; round < repairs && failing(verified) > 0; round++) {
-    onStep('Repairing');
+    onStep(QUICK_STEP.repairing);
     t = Date.now();
     const again = await session.ask(repairPrompt(english, answer.sentences.map((s) => s.pinyin), verified));
     timing[`repair${round + 1}`] = seconds(Date.now() - t);

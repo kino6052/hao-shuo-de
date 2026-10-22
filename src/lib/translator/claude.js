@@ -14,6 +14,7 @@
 //     what pipeline.js calls a session: tools 'kb' gives the kb server and TRANSLATOR_TOOLS, 'none' no tool at all
 //   startSession({ claude, cwd, system, model, effort, env, spawn }) -> { ask(prompt) -> Promise<{ text, cost: Promise }>, close() }
 //     a session started now and asked later, one message at a time (the quick translation, quick.js)
+//   sessionPool(start) -> { take(model, effort), refill(model, effort), close() }   one session waiting per model and effort
 //
 // A failed session throws an Error; one that looks like a login problem has `login: true` and a `userMessage` for the
 // person, since the daemon shows a userMessage as it is (daemon.js).
@@ -302,6 +303,32 @@ export function startSession({ claude, cwd, system, model, effort, env = process
       ended ??= new Error('the session was closed');
       child.stdin.end();
       child.kill();
+    },
+  };
+}
+
+// Sessions started ahead: one waits per model and effort, a request takes it and a new one starts behind it, so no
+// request waits the ~3 s a session takes to start. One that died waiting is replaced.
+export function sessionPool(start) {
+  const waiting = new Map();
+  const keyOf = (model, effort) => `${model}|${effort}`;
+  return {
+    take(model, effort) {
+      const s = waiting.get(keyOf(model, effort));
+      waiting.delete(keyOf(model, effort));
+      if (s && s.alive !== false) return s;
+      s?.close();
+      return start({ model, effort });
+    },
+    refill(model, effort) {
+      const s = waiting.get(keyOf(model, effort));
+      if (s && s.alive !== false) return; // one waits already
+      s?.close();
+      waiting.set(keyOf(model, effort), start({ model, effort }));
+    },
+    close() {
+      for (const s of waiting.values()) s.close();
+      waiting.clear();
     },
   };
 }

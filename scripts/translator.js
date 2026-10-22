@@ -9,6 +9,7 @@
 //   npm run translator -- score [--dir review/translations/test]
 //   npm run translator -- gaps
 //   npm run translator -- allow <email> [note] [--owner] | remove <email> | list
+//   npm run translator -- online "<English>" [-v|--verbose] [--lesson N] [--json]
 //
 //   --model M --effort E --claude PATH   for every command that runs a session (the quick translation: sonnet, low; the
 //                                        rest: opus, high)
@@ -31,6 +32,9 @@
 // score prints those numbers again from the saved results; gaps gathers their gaps into kb/translation-gaps.json (E2).
 // allow, remove and list change the list of people who may use the online translator (Firestore `allowed`, Q11), with the
 // service-account key setup put in %USERPROFILE%\.haoshuode-translator.
+// online sends the text to the daemon the way the page does (a Firestore request from "command line", which counts toward
+// that name's 20 a day) and prints its answer as translate does; --verbose adds the daemon's steps and how long the round
+// trip took. It stops at once when the daemon is off.
 
 import { spawn } from 'node:child_process';
 import { appendFileSync, existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
@@ -186,7 +190,7 @@ function fullScore(results) {
   return { ...s, ...(roundTrip !== undefined && { roundTrip }), ...(book !== undefined && { book }) };
 }
 
-async function allowList() {
+async function firestoreStore() {
   const { connectFirestore } = await import('../src/lib/translator/firestore-store.js');
   const path = homeFile('serviceAccount');
   if (!existsSync(path)) fail(`No service-account key at ${path}: run scripts/translator-setup.js first (TRANSLATOR_PLAN.md S0a).`);
@@ -304,10 +308,53 @@ switch (command) {
     break;
   }
 
+  case 'online': {
+    const text = args.join(' ').trim();
+    if (!text) fail('usage: npm run translator -- online "<English>" [-v|--verbose] [--lesson N] [--json]');
+    const store = await firestoreStore();
+    let doc;
+    const sent = Date.now();
+    const laps = {};
+    try {
+      // the daemon writes its presence every 30 s; none for 2 minutes means it is off, and nothing would answer
+      const presence = await store.getPresence('daemon');
+      if (!presence || Date.now() - Number(presence.lastSeen) > 2 * 60_000) fail('The translator daemon is off: start it with `node scripts/translator-daemon.js`.');
+      const id = await store.addRequest({ uid: 'cli', email: 'command line', text, lesson: values.lesson });
+      laps.written = Date.now() - sent;
+      doc = await new Promise((done, broke) => {
+        let lastStep = '';
+        // the daemon ends any request within 20 minutes (its --full limit); longer means it died
+        const limit = setTimeout(() => (stop(), broke(new Error('no answer from the daemon in 21 minutes'))), 21 * 60_000);
+        const stop = store.watchRequest(
+          id,
+          (d) => {
+            if (d?.status === 'working') laps.started ??= Date.now() - sent;
+            if (d?.step && d.step !== lastStep) onStep((lastStep = d.step));
+            if (d?.status === 'done' || d?.status === 'failed') {
+              clearTimeout(limit);
+              stop();
+              done(d);
+            }
+          },
+          (e) => (clearTimeout(limit), broke(e)),
+        );
+      });
+    } finally {
+      await store.close().catch(() => {});
+    }
+    laps.done = Date.now() - sent;
+    if (doc.status === 'failed') fail(doc.error ?? 'The daemon could not translate it.');
+    const s = (ms) => (ms / 1000).toFixed(1);
+    if (values.verbose) process.stderr.write(`  Through the daemon in ${s(laps.done)} s: written ${s(laps.written)} s, started ${s(laps.started ?? laps.done)} s, translated in ${doc.result.timing?.total ?? '?'} s\n`);
+    const out = values.json ? JSON.stringify(doc.result, null, 2) : values.verbose ? renderMarkdown(doc.result) : pinyinOf(doc.result);
+    process.stdout.write(`${out}\n`, () => process.exit(0));
+    break;
+  }
+
   case 'allow':
   case 'remove':
   case 'list': {
-    const store = await allowList();
+    const store = await firestoreStore();
     try {
       if (command === 'list') {
         const rows = await store.listAllowed();
@@ -330,5 +377,5 @@ switch (command) {
   }
 
   default:
-    fail('usage: npm run translator -- translate "<English>" | serve | stop | test | score | gaps | allow <email> [note] | remove <email> | list');
+    fail('usage: npm run translator -- translate "<English>" | online "<English>" | serve | stop | test | score | gaps | allow <email> [note] | remove <email> | list');
 }

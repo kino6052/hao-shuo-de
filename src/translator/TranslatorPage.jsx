@@ -199,13 +199,17 @@ function Result({ result }) {
   };
   const lesson = result.lesson;
 
+  // the translation and a copy button; the rest (hanzi, each sentence, the checks) only when asked for
   return (
     <div class={styles.result}>
       <p class={styles.pinyin} lang="zh-Latn-pinyin">{pinyin}</p>
-      <p class={styles.hanzi} lang="zh-Hans">{sentences.map((s) => s.hanzi ?? '').join('')}</p>
       <div class={styles.row}>
         <button class={styles.secondary} onClick={copy}>{copied ? TEXT.copied : TEXT.copy}</button>
-        <span class={styles.muted}>
+      </div>
+      <details class={styles.details}>
+        <summary>{TEXT.details}</summary>
+        <p class={styles.hanzi} lang="zh-Hans">{sentences.map((s) => s.hanzi ?? '').join('')}</p>
+        <p class={styles.muted}>
           {say('level', { level: lesson ? say('lessonN', { n: lesson.number }) : TEXT.wholeDictionary })}
           {lesson && (
             <>
@@ -213,33 +217,35 @@ function Result({ result }) {
               <a class={styles.link} href={`../en/${lesson.id}`}>→</a>
             </>
           )}
-        </span>
-      </div>
-      <p class={styles.meaning}>
-        <strong>{TEXT.meaning}:</strong> {judged ? say('kept', { kept: needed.filter((s) => s.verdict === 'kept').length, needed: needed.length }) : TEXT.noReader}
-      </p>
-      <ol class={styles.sentences}>
-        {sentences.map((s, i) => (
-          <li key={i} class={styles.sentence}>
-            <p class={styles.pinyin} lang="zh-Latn-pinyin">{s.pinyin}</p>
-            <p class={styles.hanzi} lang="zh-Hans">{s.hanzi}</p>
-            <p>{s.english}</p>
-            <p class={styles.muted}>{TEXT.literally}: {s.literally}</p>
-            {s.blind && <p class={styles.muted}>{TEXT.readBack}: {s.blind}</p>}
-            <p class={styles.muted}>{TEXT.check}: {checkLine(s.check)}</p>
-          </li>
-        ))}
-      </ol>
-      {lost.length > 0 && <List title={TEXT.lost} items={lost.map((s) => `${s.idea}${s.why ? ` (${s.why})` : ''}`)} />}
-      {(result.added ?? []).length > 0 && <List title={TEXT.added} items={result.added} />}
-      {(result.gaps ?? []).length > 0 && <List title={TEXT.gaps} items={result.gaps.map((g) => `${g.idea}${g.description ? `: ${g.description}` : ''}`)} />}
-      {(result.problems ?? []).length > 0 && <List title={TEXT.problems} items={result.problems} />}
-      {result.notes && (
-        <>
-          <h3 class={styles.subheading}>{TEXT.notes}</h3>
-          <p>{result.notes}</p>
-        </>
-      )}
+        </p>
+        {judged && (
+          <p class={styles.meaning}>
+            <strong>{TEXT.meaning}:</strong> {say('kept', { kept: needed.filter((s) => s.verdict === 'kept').length, needed: needed.length })}
+          </p>
+        )}
+        <ol class={styles.sentences}>
+          {sentences.map((s, i) => (
+            <li key={i} class={styles.sentence}>
+              <p class={styles.pinyin} lang="zh-Latn-pinyin">{s.pinyin}</p>
+              <p class={styles.hanzi} lang="zh-Hans">{s.hanzi}</p>
+              <p>{s.english}</p>
+              {s.literally && <p class={styles.muted}>{TEXT.literally}: {s.literally}</p>}
+              {s.blind && <p class={styles.muted}>{TEXT.readBack}: {s.blind}</p>}
+              <p class={styles.muted}>{TEXT.check}: {checkLine(s.check)}</p>
+            </li>
+          ))}
+        </ol>
+        {lost.length > 0 && <List title={TEXT.lost} items={lost.map((s) => `${s.idea}${s.why ? ` (${s.why})` : ''}`)} />}
+        {(result.added ?? []).length > 0 && <List title={TEXT.added} items={result.added} />}
+        {(result.gaps ?? []).length > 0 && <List title={TEXT.gaps} items={result.gaps.map((g) => `${g.idea}${g.description ? `: ${g.description}` : ''}`)} />}
+        {(result.problems ?? []).length > 0 && <List title={TEXT.problems} items={result.problems} />}
+        {result.notes && (
+          <>
+            <h3 class={styles.subheading}>{TEXT.notes}</h3>
+            <p>{result.notes}</p>
+          </>
+        )}
+      </details>
     </div>
   );
 }

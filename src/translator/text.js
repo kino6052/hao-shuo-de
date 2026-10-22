@@ -3,7 +3,7 @@
 
 export const TEXT = {
   title: 'Translator',
-  intro: 'Write a text in English and get it back in Hao-shuo-de: only the words of the book, checked by the book\'s own tools and read back by a second reader who never sees your English.',
+  intro: 'Write a text in English and get it back in Hao-shuo-de in a few seconds: only the words of the book, checked by the book\'s own tools.',
   bookLink: 'Back to the book',
   notSwitchedOn: 'The online translator is not switched on yet.',
   loading: 'Loading…',
@@ -50,9 +50,9 @@ export const TEXT = {
   checkUnknown: 'words that are not in the book: {words}',
   checkNoParse: 'the grammar does not read it',
   checkNotMeant: 'the grammar reads it, but not as meant',
+  details: 'Details',
   meaning: 'Meaning',
   kept: '{kept} of {needed} main ideas came through',
-  noReader: 'not read back',
   lost: 'Lost or weaker',
   added: 'Added by the reading',
   gaps: 'Things the book has no short word for',

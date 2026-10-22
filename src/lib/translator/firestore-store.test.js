@@ -28,6 +28,10 @@ function fakeDb() {
     async delete() {
       data.delete(`${col}/${id}`);
     },
+    onSnapshot(onNext) {
+      onNext({ data: () => data.get(`${col}/${id}`) });
+      return () => calls.push(['unwatch', col, id]);
+    },
   });
   const docsOf = (col) => [...data].filter(([k]) => k.startsWith(`${col}/`)).map(([k, doc]) => ({ id: k.slice(col.length + 1), data: () => doc }));
   const queryOf = (col, filters = []) => ({
@@ -48,11 +52,25 @@ function fakeDb() {
     },
     get: async () => ({ docs: docsOf(col) }),
   });
-  const db = { data, calls, listeners: [], collection: (col) => ({ ...queryOf(col), doc: (id) => docRef(col, id) }) };
+  const db = { data, calls, listeners: [], collection: (col) => ({ ...queryOf(col), doc: (id = `auto-${data.size + 1}`) => docRef(col, id) }) };
   return db;
 }
 
 describe('the store', () => {
+  test("the command line's request: written as the page writes one (no lesson when empty), watched; the daemon's presence", async () => {
+    const db = fakeDb();
+    const store = createFirestoreStore(db, { now: () => 5_000 });
+    const id = await store.addRequest({ uid: 'cli', email: 'command line', text: 'I eat.', lesson: '' });
+    expect(db.data.get(`requests/${id}`)).toEqual({ uid: 'cli', email: 'command line', text: 'I eat.', createdAt: new Date(5_000) });
+    const seen = [];
+    store.watchRequest(id, (d) => seen.push(d), () => {})();
+    expect(seen).toEqual([db.data.get(`requests/${id}`)]);
+    expect(db.calls).toContainEqual(['unwatch', 'requests', id]);
+    expect(await store.getPresence('daemon')).toBeNull();
+    await db.collection('presence').doc('daemon').set({ lastSeen: 4_000 });
+    expect(await store.getPresence('daemon')).toEqual({ lastSeen: 4_000 });
+  });
+
   test('requests: watched from a week back, updated, counted per person and day', async () => {
     const db = fakeDb();
     const store = createFirestoreStore(db, { now: () => 10 * 86_400_000 });

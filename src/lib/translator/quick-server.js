@@ -20,6 +20,7 @@ import { readdirSync, statSync, unlinkSync } from 'node:fs';
 import net from 'node:net';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
+import { sessionPool } from './claude.js';
 import { piecesOf, quickTranslate } from './quick.js';
 
 export const IDLE_MS = 30 * 60 * 1000;
@@ -106,19 +107,7 @@ export function stopServer({ root } = {}) {
 }
 
 export async function serve({ root, code, openKb, startSession, model, effort, idleMs = IDLE_MS, log = () => {} }) {
-  // one session waiting per model and effort; a request takes it and a new one starts behind it
-  const waiting = new Map();
-  const keyOf = (m, e) => `${m}|${e}`;
-  const refill = (m, e) => {
-    const k = keyOf(m, e);
-    if (waiting.get(k)?.alive !== false && waiting.has(k)) return; // one waits already
-    waiting.set(k, startSession({ model: m, effort: e }));
-  };
-  const take = (m, e) => {
-    const s = waiting.get(keyOf(m, e));
-    waiting.delete(keyOf(m, e));
-    return s && s.alive !== false ? s : startSession({ model: m, effort: e }); // one that died waiting is replaced
-  };
+  const sessions = sessionPool(startSession);
   const path = pipePath(root);
   // a socket file left by a server that crashed would refuse the listen; one that answers belongs to a live server
   if (process.platform !== 'win32') {
@@ -135,7 +124,7 @@ export async function serve({ root, code, openKb, startSession, model, effort, i
   }
   // a session waiting, and the KB's lazy parts (the English index, the composites' descriptions, the pool) built now,
   // not on the first request, which waits for them if it comes first
-  refill(model, effort);
+  sessions.refill(model, effort);
   const ready = openKb({ memo: true }).then((kb) => {
     piecesOf(kb, 'Warm up the dictionary.');
     log(`ready on ${path}`);
@@ -146,8 +135,7 @@ export async function serve({ root, code, openKb, startSession, model, effort, i
     let idle;
     const stop = () => {
       clearTimeout(idle);
-      for (const s of waiting.values()) s.close();
-      waiting.clear();
+      sessions.close();
       server.close();
       log('stopped');
       stopped();
@@ -173,7 +161,7 @@ export async function serve({ root, code, openKb, startSession, model, effort, i
         }
         const m = request.model ?? model;
         const e = request.effort ?? effort;
-        const session = take(m, e);
+        const session = sessions.take(m, e);
         try {
           await ready;
           // openKb gives the KB it holds unless the data changed (its stamp walks the data folders: about 0.3 s)
@@ -193,7 +181,7 @@ export async function serve({ root, code, openKb, startSession, model, effort, i
           send(socket, { error: { message: err.message, userMessage: err.userMessage, login: err.login } });
         } finally {
           session.close();
-          refill(m, e);
+          sessions.refill(m, e);
           socket.end();
         }
       });

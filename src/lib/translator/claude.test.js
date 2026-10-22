@@ -1,11 +1,12 @@
 // TRANSLATOR_PLAN.md S1, S6, S7: the session runner with a fake `claude` process -- the arguments it is started with
 // (no built-in tool, only the named MCP server, only the allowed tools, nothing saved), the steps its events become,
-// its answer, and what a failed or stopped session does; and the quick translation's running session (startSession).
+// its answer, and what a failed or stopped session does; and the quick translation's running session (startSession) and
+// the sessions it keeps waiting (sessionPool).
 
 import { describe, expect, test } from 'bun:test';
 import { EventEmitter } from 'node:events';
 import { PassThrough } from 'node:stream';
-import { answerOf, claudeArgs, looksLikeLoginFailure, runClaude, sessionArgs, sessionRunner, startSession, stepOf, TRANSLATOR_TOOLS, LOGIN_MESSAGE } from './claude.js';
+import { answerOf, claudeArgs, looksLikeLoginFailure, runClaude, sessionArgs, sessionPool, sessionRunner, startSession, stepOf, TRANSLATOR_TOOLS, LOGIN_MESSAGE } from './claude.js';
 
 // A child process that prints the given events (one JSON per line) and exits with `code`.
 function fakeSpawn(events, { code = 0, stderr = '', hold = false } = {}) {
@@ -232,5 +233,41 @@ describe('startSession', () => {
     await expect(session.ask('y')).rejects.toThrow('claude ended with 1');
     session.close();
     expect(calls).toHaveLength(1);
+  });
+});
+
+describe('sessionPool', () => {
+  const pool = () => {
+    const started = [];
+    const start = ({ model, effort }) => {
+      const s = { model, effort, alive: true, closed: false, close: () => ((s.closed = true), (s.alive = false)) };
+      started.push(s);
+      return s;
+    };
+    return { started, sessions: sessionPool(start) };
+  };
+
+  test('take gives the waiting session; refill starts one behind it, never two', () => {
+    const { started, sessions } = pool();
+    sessions.refill('sonnet', 'low');
+    sessions.refill('sonnet', 'low');
+    expect(started).toHaveLength(1);
+    expect(sessions.take('sonnet', 'low')).toBe(started[0]);
+    sessions.refill('sonnet', 'low');
+    expect(started).toHaveLength(2);
+  });
+
+  test('one per model and effort; a session that died waiting is replaced; close ends the waiting ones', () => {
+    const { started, sessions } = pool();
+    sessions.refill('sonnet', 'low');
+    expect(sessions.take('opus', 'high')).toMatchObject({ model: 'opus', effort: 'high' }); // none waited: started now
+    started[0].alive = false;
+    const next = sessions.take('sonnet', 'low');
+    expect(next).not.toBe(started[0]);
+    expect(started[0].closed).toBe(true);
+    sessions.refill('sonnet', 'low');
+    sessions.close();
+    expect(started.at(-1).closed).toBe(true);
+    expect(next.closed).toBe(false); // a session taken is the taker's to close
   });
 });

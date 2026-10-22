@@ -204,6 +204,14 @@
 .meaning {
   margin-top: 10px;
 }
+.details {
+  margin-top: 10px;
+}
+.details summary {
+  cursor: pointer;
+  color: var(--text-tertiary);
+  font-size: 0.9rem;
+}
 .sentences {
   padding-left: 1.4em;
 }
