@@ -1,0 +1,167 @@
+# Composite paraphrases, batch 1 (W7)
+
+Claude's drafts (2026-10-22) for the first 100 composites whose forms are all one word: the 23 with a spelled form first (K23), then by rank. Nothing is applied: `refactors/P1.ts` adds the 61 paraphrases once you approve them (edit or drop any line first). Every form passes `kb_check_form` with the entry's own forms before it, and `npm run refactor -- refactors/P1.ts --check` finds no gate that would fail.
+
+## Paraphrases (61)
+
+- **国家** (country; now guó-jiā / guó) → **hěn-duō-rén-yòng-yī-ge-fǎ-de dà dì** · 很多人用一个法的大地 · "a big land where many people use one law"
+  - I avoided hěn-duō-rén-de dà jiā because 大家 reads as 'everybody'. The plain 'big place where many people live' would clash with the city paraphrase (guó-jiā-lǐ-de dì-fang / yǒu-hěn-duō-de-jiā-de dì-fang), so the one law is what tells a country apart.
+- **一定** (certainly; now yī-dìng / zhēn) → **bù kě-néng bù X** · 不可能不X · "cannot possibly not X"
+  - Mandarin's own double negative (他不可能不来). The 'must' reading (一定要) fits bù néng bù X, which is also the 不得不 paraphrase.
+- **一起** (together; now yī-qǐ / yī-tóng) → **zài yī-ge dì-fang** · 在一个地方 · "in one place"
+  - Wǒ-men zài yī-ge dì-fang chī fàn. If the 'with others' side matters more, use hé bié-rén (with others).
+- **明白** (understand; now míng-bái / zhīdào) → **zhīdào X-shuō-de shì shénme** · 知道X说的是什么 · "know what X says (what X means)"
+  - This fits understanding a person or what they said (yì-si is not a word). To understand a situation, zhīdào wèi-shénme (know why) fits better.
+- **汽车** (car; now qì-chē / chē) → **ràng-rén-zuò-zài-lǐ-miàn-zài-lù-shang-zǒu-de dōng-xi** · 让人坐在里面在路上走的东西 · "a thing that lets people sit inside and go along the road"
+  - Sit is zuò-zài, like the book's ride (zuò-zài X-shàng qù); the check takes the syllable as zuò 做. The road part tells a car apart from a plane or a boat. It is long (11 words). A shorter option is zài-lù-shang-zǒu-de chē, but that leans on chē.
+- **为了** (in order to; now wèi-le / wèi) → **yīnwèi xiǎng X** · 因为想X · "because (one) wants X"
+  - Wèi-le chī fàn tā gōng-zuò becomes Yīnwèi xiǎng chī fàn, tā gōng-zuò. For a plan rather than a wish, yīnwèi yào X also works.
+- **发现** (discover, find; now fā-xiàn / zhǎo-dào) → **dì-yī-cì zhīdào X** · 第一次知道X · "know X for the first time"
+  - For the 'catch sight of' reading, dì-yī-cì kàn-dào X.
+- **机器** (machine; now jī-qì / gōng-jù) → **ràng-gōng-zuò-bù-nán-de dà dōng-xi** · 让工作不难的大东西 · "a big thing that makes work not hard"
+  - diàn (electricity) and zì-jǐ (by itself) are not words, so 'works by itself' cannot be said. I used the brief's bù nán for easy.
+- **打开** (open; now dǎ-kāi / kāi) → **ràng rén néng kàn-dào X-de lǐ-miàn** · 让人能看到X的里面 · "make it so people can see the inside of X"
+  - This fits a box, a book or a bag. For a door, ràng rén néng jìn-qù (let people go in). It does not cover 'turn on' (打开灯).
+- **打算** (plan, intend; now dǎ-suàn / yào) → **xiǎng-hǎo yǐ-hòu zuò X** · 想好以后做X · "have thought it through to do X later"
+  - Xiǎng-hǎo is Mandarin's own 想好 (made up one's mind).
+- **比较** (compare; rather; relatively; now bǐ-jiào / bǐ) → **kàn X hé Y bù-yī-yàng-de dì-fang** · 看X和Y不一样的地方 · "look at where X and Y are not the same"
+  - Only the 'compare' sense. The first draft, kàn X hé Y, nǎ yī-ge hǎo (which one is good), does not parse: a question inside a sentence has no pattern yet. The 'rather, fairly' sense (比较好) needs a separate paraphrase if you want one.
+- **真实** (true, real; now zhēn-de / zhēn-shí / zhēn) → **bù-shì-xiǎng-chū-lái-de** · 不是想出来的 · "not thought up (not made up)"
+  - This takes the 'real, not made up' reading. TRUE is an NSM prime, so if the entry is meant as plain 'true', mark it atom-like instead.
+- **写作** (write; now xiě-zuò / xiě) → **bǎ xīn-lǐ-xiǎng-de xiě-xià-lái** · 把心里想的写下来 · "write down what you think in your heart"
+  - Tells writing (composing) apart from plain xiě (writing characters). Shorter: bǎ xiǎng-de xiě-xià-lái.
+- **现实** (reality; now xiàn-shí / zhēn-de) → **zhēn-yǒu-de dōng-xi** · 真有的东西 · "the things that really exist"
+  - 'Not a dream' cannot be said (mèng is not a word).
+- **不得不** (have to; now bù-dé-bù / yào) → **bù néng bù X** · 不能不X · "cannot not X"
+  - Mandarin's own 不能不. It describes the obligation better than yào.
+- **事** (matter, affair; now dōng-xi) → **rén-yào-zuò-de hái-shì fā-shēng-de dōng-xi** · 人要做的还是发生的东西 · "something a person has to do, or something that happens"
+  - There are two readings: 我有事 (something to do) and 发生了一件事 (something happened). The author may keep only one half. The gloss reads yào as 'want', but 'must' is meant.
+- **工作** (work; now gōng-zuò / zuò / zuò-de) → **wèi jīn zuò dōng-xi** · 为金做东西 · "do things for money"
+  - zuò-de already says what one does; this adds the paid sense. zuò dōng-xi reads as do things, since 事情 = dōng-xī here
+- **问题** (question; problem; now wèn-tí) → **wèn-de huà** · 问的话 · "words you ask"
+  - covers the question sense; for the problem sense, bù zhīdào zěnme zuò-de dōng-xi (a thing you do not know how to do) also checks ok
+- **事情** (matter; now dōng-xi) → **fā-shēng-de dōng-xi** · 发生的东西 · "a thing that happens"
+  - dōng-xī alone also says objects; this keeps the affair/event sense. The other sense, a thing to do (我有事情), would be yào zuò-de dōng-xi. Atom-like (SOMETHING) is also defensible
+- **动物** (animal; now dòng-wù) → **huì dòng-de huó dōng-xi** · 会动的活东西 · "a living thing that can move"
+  - plants live but do not move, so they stay out; people fit too, add bú-shì rén if the author wants them out
+- **女** (female; now nǚ / nǚ-rén) → **néng-shēng-hái-zi-de** · 能生孩子的 · "that can give birth to children"
+  - the kind meaning, so girls and old women count; for a female animal hái-zi stretches a little. hái-zi is a spelled form (孩子)
+- **女人** (woman; now nǚ-rén) → **néng-shēng-hái-zi-de dà-rén** · 能生孩子的大人 · "a grown-up who can give birth to children"
+  - the same description as 女 plus dà-rén (adult); note bàba's paraphrase rests on nǚ-rén, so this keeps the pair from going in a circle
+- **房子** (house; now fáng-zi / jiā) → **rén zài lǐ-miàn shuìjiào-de dì-fang** · 人在里面睡觉的地方 · "a place people sleep inside"
+  - zhù (to live in) is not a word, so shuìjiào stands in; a hotel fits too. shuìjiào is one word, not shuì-jiào
+- **手机** (mobile phone; now shǒu-jī) → **ná zài shǒu-lǐ hé yuǎn-de rén shuō-huà-de dōng-xi** · 拿在手里和远的人说话的东西 · "a thing you hold in your hand to talk with far-away people"
+  - keeps the core use; phones do more now. Pairs with 电话 below
+- **水果** (fruit; now shuǐ-guǒ) → **zhíwù shēng-de tián dōng-xi** · 植物生的甜东西 · "a sweet thing a plant brings forth"
+  - guǒ's own paraphrase is zhíwù shēng-de, néng chī-de dōng-xi; tián sets the eating fruit apart from vegetables and nuts. shù is number, not tree
+- **注意** (pay attention; now kàn-hǎo / tīng-hǎo) → **bǎ xīn fàng zài X shàng** · 把心放在X上 · "put your heart on X"
+  - Mandarin's own 把心放在…上; near-synonym xiǎo-xīn (careful)
+- **电话** (telephone; now huà-jī) → **ràng-rén hé yuǎn-de rén shuō-huà-de dōng-xi** · 让人和远的人说话的东西 · "a thing that lets people talk with far-away people"
+  - follows the chair pattern ràng-rén ... -de dōng-xi
+- **男** (male; now nán-rén) → **bù shì nǚ-de** · 不是女的 · "not female"
+  - The same description the author already gave 男人 (bù shì nǚ-de rén). A positive alternative, also checked ok: bàba nà-yàng-de (of dad's kind).
+- **这里** (here; now zhè-lǐ) → **zhè-ge dì-fang** · 这个地方 · "this place"
+  - HERE is an NSM prime, so this could also be marked atom-like; kept because 这个地方 is everyday Mandarin.
+- **坐** (sit; now zuò-xià) → **shēntǐ zài X shàng, bù zhàn yě bù tǎng** · 身体在X上，不站也不躺 · "the body is on X, neither standing nor lying"
+  - zuò, zhàn and tǎng are the core's three ways a body rests, so the author may prefer atom-like; this mirrors tǎng's own paraphrase (shēntǐ píng zài dì-shàng). X should not be yǐ-zi, since chair is defined by sitting.
+- **心里** (in one's heart; now xīn-lǐ / jué-de) → **rén lǐ-miàn, bié-rén kàn-bù-jiàn-de dì-fang** · 人里面，别人看不见的地方 · "inside a person, the place other people cannot see"
+  - Shorter, also checked ok: rén lǐ-miàn xiǎng-de dì-fang (the place inside a person where one thinks). kàn-bù-jiàn uses jiàn 'see'.
+- **早上** (morning; now zǎo-shang) → **rì chū-lái-de shí-jiān** · 日出来的时间 · "the time when the sun comes out"
+  - Echoes the book's 'Rì chū-lái le.' Another reading, also checked ok: yī-tiān kāishǐ-de shí-jiān (the time the day begins).
+- **高兴** (happy, glad; now kāi-xīn) → **xīn-lǐ jué-dé hěn hǎo** · 心里觉得很好 · "feel very good inside"
+  - Synonym of 开心 (both kāi-xīn), so both get the same paraphrase. xīn-lǐ stops jué-dé hěn hǎo from reading as 'I think it's fine'; drop it if that risk is acceptable.
+- **开心** (happy; now kāi-xīn) → **xīn-lǐ jué-dé hěn hǎo** · 心里觉得很好 · "feel very good inside"
+  - Synonym of 高兴; same paraphrase.
+- **原因** (reason; now wèi-shénme) → **ràng X fā-shēng-de dōng-xi** · 让X发生的东西 · "the thing that makes X happen"
+  - BECAUSE is an NSM prime, so atom-like is possible too. dōng-xi stands for 事 here, the way the dictionary already says 事 / 事情.
+- **大学** (university; now dà-xué) → **dà-rén qù xué-de dì-fang** · 大人去学的地方 · "the place grown-ups go to learn"
+- **完成** (complete; now zuò-wán) → **bǎ X zuò dào méi-yǒu yào zuò-de** · 把X做到没有要做的 · "do X until nothing is left to do"
+  - Shorter, also checked ok: bǎ X dōu zuò-hǎo (do all of X).
+- **方法** (method, manner; now fāng-fǎ) → **zěnme zuò X** · 怎么做X · "how to do X"
+  - The idea of Mandarin's own 做法 (already a form, zuò-fǎ).
+- **网站** (website; now wǎng-zhàn) → **zài wǎng shàng kàn-de dì-fang** · 在网上看的地方 · "a place you look at on the internet"
+- **办法** (way, solution; now fāng-fǎ) → **kě-yǐ zěnme zuò** · 可以怎么做 · "how one can do it"
+  - Synonym of 方法 (both fāng-fǎ); this one leans to 'a way out': 没办法 = bù zhīdào kě-yǐ zěnme zuò (checked ok).
+- **就是** (exactly; now jiù-shì / shì) → **shì X, bù shì bié-de** · 是X，不是别的 · "it is X, not something else"
+  - Covers 'exactly, precisely' only; the other uses of 就是 ('that is to say', 'even if') are not covered.
+- **得到** (get; now dé-dào / dé) → **kāishǐ yǒu X** · 开始有X · "begin to have X"
+  - Mandarin also says yǒu-le X (now have X), which checks ok.
+- **最后** (last, final; now zuì-hòu) → **hòu-miàn méi-yǒu bié-de** · 后面没有别的 · "nothing else comes after it"
+- **父母** (parent; now bàba-māma) → **shēng-nǐ-de liǎng-ge rén** · 生你的两个人 · "the two people who gave birth to you"
+  - Leaves out parents who raise a child without giving birth to it; there is no word for 'raise' or 'grow up' to add (成长 is yī-diǎn yī-diǎn biàn dà).
+- **生活** (life; live; now shēng-huó / huó) → **rén tiān-tiān zuò-de dōng-xi** · 人天天做的东西 · "the things people do every day"
+  - Says 'daily life'; the 'to live' sense stays with huó. měi (every) is not a word, but tiān-tiān is. On its own, shì (事) is only a sense inside méi-shì and shì-shí, so the paraphrase uses dōng-xi, as the book's 忙 does (yǒu hěn duō dōng-xi yào zuò).
+- **起来** (get up; now qǐ-lái) → **cóng tǎng hái-shì zuò-xià biàn zhàn** · 从躺还是坐下变站 · "go from lying or sitting to standing"
+  - zuò-xià, not zuò alone: zuò is 'sit' (坐) only in its listed compounds, so check-sounds refuses a bare zuò written 坐. zhe (着) is not a word, so tǎng-zhe and zuò-zhe are not possible. This covers only the 'get up' sense, not qǐ-lái after a verb (kàn-qǐ-lái).
+- **中午** (noon; now shí-èr-diǎn) → **rì zuì gāo-de shí-jiān** · 日最高的时间 · "the time when the sun is highest"
+  - shí-èr-diǎn already describes noon by the clock; this adds a picture of it. tài-yáng is not a word; the sun is rì.
+- **中间** (middle, between; mid; now zhōng-jiān) → **dào liǎng-biān yī-yàng yuǎn-de dì-fang** · 到两边一样远的地方 · "the place that is just as far to both sides"
+  - lí (离 'away from') is not a word, so dào stands in for it. This says 'middle'; the 'between X and Y' sense still needs zhōng-jiān.
+- **儿子** (son; now nán-hái-zi) → **X shēng-de nán-hái-zi** · X生的男孩子 · "the boy child X gave birth to"
+  - Matches 父母 (shēng-nǐ-de liǎng-ge rén). Everyday Mandarin uses 生 for fathers too (他生了个儿子). The X shēng-de part is what turns 'boy' into 'son'. A more vivid but longer version: jiào X bàba hái-shì māma-de nán-hái-zi.
+- **出来** (come out; now chū-lái) → **cóng lǐ-miàn dào wài-miàn lái** · 从里面到外面来 · "come from the inside to the outside"
+- **前面** (front; now qián-miàn) → **yǎnjing kàn-de nà-biān** · 眼睛看的那边 · "the side the eyes look toward"
+  - Pairs with 后面 (yǎnjing kàn-bù-dào-de nà-biān).
+- **可爱** (cute, lovely; now kě-ài / tián) → **ràng-rén-yī-kàn-jiù-ài-de** · 让人一看就爱的 · "that makes people love it as soon as they see it"
+  - xǐhuan is not a word; ài is the dictionary's 'like'. kě-ài already means 'lovable', so this mostly adds 'at first sight'. A 'small' word (xiǎo) could go in front for 'cute'.
+- **右** (right (side); now yòu-biān) → **hěn-duō rén xiě-zì yòng-de shǒu nà-biān** · 很多人写字用的手那边 · "the side of the hand many people write with"
+  - Pairs with 左 (xīn zài-de nà-biān). Another option that mirrors it: xīn bù zài-de nà-biān.
+- **后来** (later; now hòu-lái) → **yī-xiē shí-jiān hòu** · 一些时间后 · "after some time"
+  - This is the book's 'X hòu' pattern. guò le yī-xiē shí-jiān does not work: guò is only the 'have done before' marker, not 'pass'.
+- **后面** (behind; now hòu-miàn) → **yǎnjing kàn-bù-dào-de nà-biān** · 眼睛看不到的那边 · "the side the eyes cannot see"
+  - Pairs with 前面. It reads 'behind me' best; 'behind the house' is a stretch.
+- **回来** (come back; now huí-lái) → **lái-dào yǐ-qián zài-de dì-fang** · 来到以前在的地方 · "come to the place where you were before"
+- **外面** (outside; now wài-miàn) → **bù-zài-lǐ-miàn-de dì-fang** · 不在里面的地方 · "the place that is not inside"
+- **女儿** (daughter; now nǚ-hái-zi) → **X shēng-de nǚ-hái-zi** · X生的女孩子 · "the girl child X gave birth to"
+  - Matches 儿子 and 父母.
+- **好看** (good-looking; now hǎo-kàn) → **ràng-rén ài kàn-de** · 让人爱看的 · "that people love to look at"
+  - hǎo-kàn ('good to look at') is itself almost a description, so marking this row 'covered' would also be fair.
+- **左** (left (side); now zuǒ / zuǒ-biān) → **xīn zài-de nà-biān** · 心在的那边 · "the side where the heart is"
+  - Pairs with 右.
+- **带** (bring, take along; now ná-lái / ná-qù) → **ná X yī-qǐ qù** · 拿X一起去 · "take X and go together with it"
+  - ná-lái and ná-qù already half-describe it; this adds 'along with you'. A 'bring' version: ná X yī-qǐ lái.
+
+## Covered: a form already describes it (5)
+
+- **食物** (food; shí-wù / chī-de): chī-de (food) is already a form and is the brief's own X-de description; a second one adds nothing
+- **饭** (meal, rice; fàn / chī-de): chī-de (what is eaten) already is the description; the atoms audit gives fàn = chī-de dōng-xi
+- **星期** (week; qī-tiān): qī-tiān ('seven days') already describes a week
+- **奇怪** (strange; yǐ-qián-méi-kàn-guò-de / nán-míng-bái-de / nán-kàn-de / nán-tīng-de): yǐ-qián-méi-kàn-guò-de ('never seen before'), nán-míng-bái-de, nán-kàn-de and nán-tīng-de are already descriptions
+- **好像** (seem; kàn-qǐ-lái / kě-néng): kàn-qǐ-lái ('looks like') is Mandarin's own everyday phrasing and already a description, and kě-néng says the MAYBE prime
+
+## Atom-like: too basic to paraphrase (34)
+
+- **东西** (thing; dōng-xi / wù): the NSM prime SOMETHING/THING: every description of a thing ends in dōng-xi itself
+- **可以** (can, may; kě-yǐ / néng): the NSM prime CAN: any paraphrase (néng, bù-shì bù néng) needs can itself. The 'may' (allowed) reading is also CAN at root.
+- **部分** (part; bù-fen / yī-xiē): the NSM prime PART: a paraphrase needs part (or yī-xiē, already a form) itself
+- **可是** (but; kě-shì / dàn-shì): a basic contrast connector: dàn-shì is already the core word, and any paraphrase needs 'but' itself
+- **要是** (if; yào-shì / rúguǒ): the NSM prime IF: rúguǒ is already the core word, and any paraphrase needs if itself
+- **不过** (but; bù-guò / dàn-shì): a basic contrast connector, the same idea as 可是: dàn-shì is already the core word
+- **地点** (location; dì-fang / dì-diǎn): the NSM prime WHERE/PLACE: dì-fāng is already a form, and any paraphrase (zài nǎ-lǐ) needs where itself
+- **为什么** (why; wèi-shénme): asks for a reason (the NSM prime BECAUSE): every paraphrase needs why itself
+- **地方** (a place; dì-fang): place is the NSM prime WHERE/PLACE: any description (where a person can be, where a thing is) needs place or where itself
+- **想** (think; want; xiǎng / jué-de / yào): both senses are NSM primes (THINK, WANT); the other forms jué-dé and yào already split the two senses
+- **我们** (we; wǒ-men): a pronoun (NSM: I + other people); wǒ-men is already transparent, I + the plural men. Wǒ hé bié-de rén would be possible but reads forced
+- **没有** (not have; méi-yǒu): the negation of yǒu (NSM NOT + THERE IS / HAVE); nothing is simpler than méi + yǒu
+- **但是** (but; dàn-shì): a connective of contrast: any paraphrase needs but itself; dàn alone is the core word
+- **可能** (maybe; likely; probable; kě-néng): the NSM prime MAYBE; any paraphrase is circular
+- **一样** (same; yī-yàng): the NSM prime THE SAME; tóng is the other root for it
+- **他们** (they; tā-men): a pronoun (NSM: these other people); tā-men is already transparent, he/she + the plural men
+- **其他** (other; bié-de): the NSM prime OTHER/ELSE; bié-de is already a short X-de form
+- **几** (how many; several; a few; duō-shǎo): a question word (HOW MANY); duō-shǎo already says it as many-few. The several / a few sense is not covered by duō-shǎo: yī-xiē or bù duō-de check ok
+- **哪个** (which one; nǎ-ge / shénme): a question word (WHICH): every paraphrase needs nǎ itself (nǎ yī-ge is a near copy)
+- **哪里** (where; nǎ-lǐ): the NSM prime WHERE; the brief lists where as atom-like. Mandarin's own shénme dì-fang (what place) checks ok if the author wants an everyday alternative
+- **多少** (how many, how much; duō-shǎo): a question word (HOW MUCH / HOW MANY); duō-shǎo is already transparent, many-few
+- **看见** (see; kàn-jiàn / kàn-dào): SEE is an NSM prime; kàn-dào already says it as 'look and reach it', and any paraphrase would need see itself
+- **见** (see; jiàn / kàn-dào): SEE is an NSM prime; every paraphrase needs see itself. Jiàn also carries 'meet (someone)' (见面, 再见); that sense may want a row or a paraphrase of its own.
+- **说话** (talk; shuō-huà / shuō): SAY and WORDS are both NSM primes and shuō-huà is literally 'say words'; a paraphrase could only reuse shuō. The 'talk with someone' sense is hé X shuō, which is word to word rather than a description.
+- **这么** (so, like this; zhè-yàng / zhēn): LIKE THIS (the NSM primes LIKE + THIS); zhè-yàng already says 'this way', and the degree sense (这么大 'this big') rests on the same prime
+- **那么** (then; so; nà / nà-yàng): both jobs are basic: 'like that' (NSM LIKE + THAT, already said by nà-yàng) and 'then, in that case' (a joining word, said by nà)
+- **你们** (you (more than one); nǐ-men): a pronoun (YOU + more than one); nǐ-men is already its plain parts
+- **但** (but; dàn / dàn-shì): the basic 'but' joining word (contrast, carried by dàn as a grammar word); any paraphrase is just dàn-shì or kě-shì again
+- **感觉** (feel; feeling; jué-de): FEEL is an NSM prime; jué-dé is already the plain word for it, and the noun 'feeling' rests on the same prime
+- **一些** (some; yī-xiē / yǒu-de / yī-diǎn): SOME is an NSM prime, and yǒu-de and yī-diǎn already say it as plainly as possible; any paraphrase would need 'some' itself
+- **上面** (up; shàng-miàn): ABOVE is an NSM prime; a paraphrase would have to say 'up' or 'above' again
+- **下面** (down; xià-miàn): BELOW is an NSM prime; a paraphrase would have to say 'down' or 'below' again
+- **些** (some; yī-xiē / xiē / yǒu-de / yī-diǎn): a measure word for SOME, an NSM prime; yǒu-de and yī-diǎn already say it plainly, and a paraphrase would need 'some' itself
+- **听见** (hear; tīng-jiàn / tīng-dào): HEAR is an NSM prime; tīng-dào already says it with the most basic words

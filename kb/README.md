@@ -72,7 +72,7 @@ node scripts/kb.js english <word> [--json]                              # which 
 node scripts/kb.js hints <word> [--limit N]                             # WordNet hints for drafting a description of a word with no entry (English or Mandarin)
 node scripts/kb.js export [--all] [--base IRI] [--out FILE] [--stdout]  # the dictionary as OntoLex Turtle (to kb/cache/export/hao-shuo-de.ttl); --all adds the proposed relations
 node scripts/kb.js cross-check [kindOf|opposites|parts|missing|headless] [--limit N]  # the dictionary's kind-of, opposite and part-of relations against WordNet's
-node scripts/kb.js frontier [words|mandarin|sentences] [--limit N]      # what the dictionary cannot say yet and the word that would fix each
+node scripts/kb.js frontier [words|mandarin|sentences|translations] [--limit N]  # what the dictionary cannot say yet and the word that would fix each
 node scripts/kb.js yardsticks [--limit N]                               # how much of the Mandarin and English word lists and Basic English the dictionary can say
 node scripts/kb.js meaning [says|atoms|grounding|<word>] [--limit N]    # what the words say of the NSM primes, Aristotle's categories and grammar
 node scripts/kb.js candidates [remove|add] [--limit N]                  # the cheapest words to drop and the best roots to add

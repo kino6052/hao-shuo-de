@@ -1,0 +1,962 @@
+{
+  "version": 1,
+  "text": "The emperor (literally: \"the biggest person\") loved clothes. He had lots of them, but he always wanted new ones (literally: \"ones seen for the first time\"). Two swindlers came and said: \"We can make the most beautiful clothes.\" \"Foolish people (literally: 'people whose heads aren't good') can't see these clothes.\" The emperor gave them lots of money. They took it, but didn't make anything at all. The emperor came to look. He couldn't see anything! But he was afraid: \"If I say I can't see them, people will say I'm a fool.\" So he said: \"How beautiful!\" The emperor \"put on\" the clothes and went out. People on the street all said: \"How beautiful!\" They were afraid too. Then a little boy said: \"He has no clothes on!\" Everyone laughed: \"It's true, he has no clothes!\" The emperor knew they were right, but he kept on walking.",
+  "lesson": null,
+  "model": "claude-opus-5-5 (by hand, subagents)",
+  "sentences": [
+    {
+      "pinyin": "Zuì dà-de rén hěn ài yīfu.",
+      "english": "The emperor loved clothes.",
+      "literally": "The biggest person very much loves clothes.",
+      "reading": "1",
+      "source": "built from the grammar (zui-most, de-modifier, svo); the emperor as the text's own literal note says, zuì dà-de rén (the dictionary's form of 皇帝 adds yǐ-qián \"Zhōngguó\", which ties him to old China); ài from kb_lookup love",
+      "ideas": [
+        "i1"
+      ],
+      "refs": "{{Word:zui4}} {{word:da4}}-{{word:de}} {{word:ren2}} {{word:hen3}} {{word:ai4}} {{word:yi1fu}}.",
+      "hanzi": "最 大-的 人 很 爱 衣服.",
+      "gloss": "most big-possessive marker human being very to love clothing.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 4,
+        "means": "yes-with-others",
+        "words": 7,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The biggest person loves clothes very much."
+    },
+    {
+      "pinyin": "Tā yǒu hěn duō yīfu.",
+      "english": "He had lots of them.",
+      "literally": "He has very many clothes.",
+      "reading": "1",
+      "source": "the book's \"Tā yǒu hěn duō néng-lì.\" (kb_memory 38%), the noun swapped",
+      "ideas": [
+        "i2"
+      ],
+      "refs": "{{Word:ta1}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:yi1fu}}.",
+      "hanzi": "他 有 很 多 衣服.",
+      "gloss": "he to have very many clothing.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 1,
+        "means": "yes",
+        "words": 5,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "He has a great many clothes."
+    },
+    {
+      "pinyin": "Dàn-shì tā hái yào dì-yī cì kàn-dào-de yīfu.",
+      "english": "But he always wanted new ones.",
+      "literally": "But he still wants clothes seen for the first time.",
+      "reading": "[VP hái [VP [VerbP yào [NP [ModNP [Mod",
+      "source": "built: dàn-shì (dan-shi-but), hái (hai-still), and new as the text's literal note says (kb_lookup first time: dì-yī cì) with -de",
+      "ideas": [
+        "i3"
+      ],
+      "refs": "{{Word:dan4}}-{{word:shi4}} {{word:ta1}} {{word:hai2}} {{word:yao4}} {{word:di4}}-{{word:yi1}} {{word:ci4}} {{word:kan4}}-{{word:dao4}}-{{word:de}} {{word:yi1fu}}.",
+      "hanzi": "但-是 他 还 要 地-一 次 看-到-的 衣服.",
+      "gloss": "but-to be he still to want floor-one time to look at-to arrive-possessive marker clothing.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 360,
+        "means": "yes-with-others",
+        "words": 12,
+        "depth": 1,
+        "late": [],
+        "warnings": [
+          "too long: 12 words (limit 10)"
+        ]
+      },
+      "blind": "But he still wants clothes he is seeing for the first time, that is, clothes nobody has seen before."
+    },
+    {
+      "pinyin": "Liǎng-ge rén lái le.",
+      "english": "Two men came.",
+      "literally": "Two people came.",
+      "reading": "1",
+      "source": "built (measure-word, le-new-situation), like the book's \"Nǚ-rén hé nán-rén dōu lái le.\" (kb_memory 33%)",
+      "ideas": [
+        "i4"
+      ],
+      "refs": "{{Word:liang3}}-{{light:ge4}} {{word:ren2}} {{word:lai2}} {{word:le}}.",
+      "hanzi": "两-个 人 来 了.",
+      "gloss": "two-universal classifier human being to come perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 6,
+        "means": "yes-with-others",
+        "words": 5,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "Two people came."
+    },
+    {
+      "pinyin": "Tā-men duì rén shuō bù shì zhēn-de huà.",
+      "english": "They were swindlers.",
+      "literally": "They say to people words that are not true.",
+      "reading": "[VP duì [NP rén] [VP [VerbP shuō] [VP bù shì",
+      "source": "the dictionary's form of 骗子 (swindler, kb_lookup gloss: duì rén shuō bù shì zhēn-de huà-de rén), its verb part as a sentence of its own (the cast list: over 6 words)",
+      "ideas": [
+        "i4"
+      ],
+      "refs": "{{Word:ta1}}-{{word:men}} {{word:dui4}} {{word:ren2}} {{word:shuo1}} {{word:bu4}} {{word:shi4}} {{word:zhen1}}-{{word:de}} {{word:hua4}}.",
+      "hanzi": "他-们 对 人 说 不 是 真-的 话.",
+      "gloss": "he-more than one person facing human being to communicate not to be true-possessive marker words.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 501,
+        "means": "yes-with-others",
+        "words": 10,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "They told people things that were not true."
+    },
+    {
+      "pinyin": "Tā-men shuō: Wǒ-men néng zuò zuì hǎo-kàn-de yīfu.",
+      "english": "They said: \"We can make the most beautiful clothes.\"",
+      "literally": "They say: we can make the most good-looking clothes.",
+      "reading": "[VerbP zuò [NP [ModNP [Mod [VP zuì hǎo-kàn] de] yīfu]]",
+      "source": "the book's own sentence of this story (kb_memory 58%: \"Liǎng-ge huài rén lái le, shuō: Wǒ-men néng zuò zuì hǎo-kàn-de yīfu.\"), the quote as it is, the frame shortened to tā-men shuō",
+      "ideas": [
+        "i5"
+      ],
+      "refs": "{{Word:ta1}}-{{word:men}} {{word:shuo1}}: {{Word:wo3}}-{{word:men}} {{word:neng2}} {{word:zuo4}} {{word:zui4}} {{word:hao3}}-{{word:kan4}}-{{word:de}} {{word:yi1fu}}.",
+      "hanzi": "他-们 说: 我-们 能 做 最 好-看-的 衣服.",
+      "gloss": "he-more than one person to communicate: I-more than one person to be able to to do most good-to look at-possessive marker clothing.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 501,
+        "means": "yes-with-others",
+        "words": 12,
+        "depth": 2,
+        "late": [],
+        "warnings": [
+          "too long: 12 words (limit 10)",
+          "too deep: 2 levels of describing phrases, clauses or quotes inside each other (limit 1)"
+        ]
+      },
+      "blind": "They said: We can make the most beautiful clothes."
+    },
+    {
+      "pinyin": "Tā-men hái shuō: Tóu bù hǎo-de rén kàn-bù-dào.",
+      "english": "\"Foolish people can't see them.\"",
+      "literally": "They also say: people whose heads are not good can't see (them).",
+      "reading": "[VerbP kàn bù [Res dào]]",
+      "source": "the book's own sentence (kb_memory 50%: \"Tóu bù hǎo-de rén kàn-bù-dào zhè-zhǒng yīfu.\") with tā-men hái shuō, so it stays the swindlers' claim; zhè-zhǒng yīfu dropped, because kàn-bù-dào with an object parses only as an either-or question (verb-bu-verb), never as can't see (result-can-cant has no can't-with-object rule)",
+      "ideas": [
+        "i6"
+      ],
+      "refs": "{{Word:ta1}}-{{word:men}} {{word:hai2}} {{word:shuo1}}: {{Word:tou2}} {{word:bu4}} {{word:hao3}}-{{word:de}} {{word:ren2}} {{word:kan4}}-{{word:bu4}}-{{word:dao4}}.",
+      "hanzi": "他-们 还 说: 头 不 好-的 人 看-不-到.",
+      "gloss": "he-more than one person still to communicate: head not good-possessive marker human being to look at-not-to arrive.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 270,
+        "means": "yes-with-others",
+        "words": 12,
+        "depth": 2,
+        "late": [],
+        "warnings": [
+          "too long: 12 words (limit 10)",
+          "too deep: 2 levels of describing phrases, clauses or quotes inside each other (limit 1)"
+        ]
+      },
+      "blind": "They also said: People whose heads are not good, meaning people who are not clever, cannot see them."
+    },
+    {
+      "pinyin": "Zuì dà-de rén gěi tā-men hěn duō jīn.",
+      "english": "The emperor gave them lots of money.",
+      "literally": "The biggest person gives them very much money.",
+      "reading": "1",
+      "source": "the book's own sentence (kb_memory 38%: \"Zuì dà-de rén gěi le tā-men hěn duō jīn.\") without le, to keep it at 10 words",
+      "ideas": [
+        "i7"
+      ],
+      "refs": "{{Word:zui4}} {{word:da4}}-{{word:de}} {{word:ren2}} {{word:gei3}} {{word:ta1}}-{{word:men}} {{word:hen3}} {{word:duo1}} {{word:jin1}}.",
+      "hanzi": "最 大-的 人 给 他-们 很 多 金.",
+      "gloss": "most big-possessive marker human being to give he-more than one person very many money.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 12,
+        "means": "yes-with-others",
+        "words": 10,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The biggest person gave them a lot of money."
+    },
+    {
+      "pinyin": "Tā-men ná le jīn, dàn shénme dōu méi zuò.",
+      "english": "They took it, but didn't make anything at all.",
+      "literally": "They took the money, but did not make anything.",
+      "reading": "1",
+      "source": "the book's own sentence (kb_memory 38%: \"Tā-men ná le jīn, dàn-shì shénme dōu méi zuò.\") with dàn for dàn-shì (the book's \"Tā hěn xiǎo, dàn hěn yǒu lì.\"), to keep it at 10 words",
+      "ideas": [
+        "i8",
+        "i9"
+      ],
+      "refs": "{{Word:ta1}}-{{word:men}} {{word:na2}} {{word:le}} {{word:jin1}}, {{word:dan4}} {{word:shen2me}} {{word:dou1}} {{word:mei2}} {{word:zuo4}}.",
+      "hanzi": "他-们 拿 了 金, 但 什么 都 没 做.",
+      "gloss": "he-more than one person to take perfective aspect marker money, but what? which? all negative particle used exclusively to negate the verb you (to form meiyou) to do.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 12,
+        "means": "yes-with-others",
+        "words": 10,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "They took the money but made nothing at all."
+    },
+    {
+      "pinyin": "Zuì dà-de rén lái kàn.",
+      "english": "The emperor came to look.",
+      "literally": "The biggest person comes to look.",
+      "reading": "[VP [VerbP lái] [VP [VerbP kàn]]]",
+      "source": "the book's own sentence (kb_memory 44%), as it is",
+      "ideas": [
+        "i10"
+      ],
+      "refs": "{{Word:zui4}} {{word:da4}}-{{word:de}} {{word:ren2}} {{word:lai2}} {{word:kan4}}.",
+      "hanzi": "最 大-的 人 来 看.",
+      "gloss": "most big-possessive marker human being to come to look at.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 16,
+        "means": "yes-with-others",
+        "words": 6,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The biggest person came to look."
+    },
+    {
+      "pinyin": "Tā shénme dōu kàn-bù-dào!",
+      "english": "He couldn't see anything!",
+      "literally": "He can't see anything at all!",
+      "reading": "[VerbP kàn bù [Res dào]]",
+      "source": "the book's own sentence (kb_memory 44%), as it is",
+      "ideas": [
+        "i11"
+      ],
+      "refs": "{{Word:ta1}} {{word:shen2me}} {{word:dou1}} {{word:kan4}}-{{word:bu4}}-{{word:dao4}}!",
+      "hanzi": "他 什么 都 看-不-到!",
+      "gloss": "he what? which? all to look at-not-to arrive!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 10,
+        "means": "yes-with-others",
+        "words": 6,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "He could not see anything at all!"
+    },
+    {
+      "pinyin": "Dàn-shì tā pà.",
+      "english": "But he was afraid.",
+      "literally": "But he is afraid.",
+      "reading": "1",
+      "source": "built: dàn-shì and the book's \"Wǒ pà.\" (kb_memory 20%)",
+      "ideas": [
+        "i12"
+      ],
+      "refs": "{{Word:dan4}}-{{word:shi4}} {{word:ta1}} {{word:pa4}}.",
+      "hanzi": "但-是 他 怕.",
+      "gloss": "but-to be he to fear.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 2,
+        "means": "yes-with-others",
+        "words": 4,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "But he was afraid."
+    },
+    {
+      "pinyin": "Rúguǒ tā shuō kàn-bù-dào, rén-men jiù huì jué-dé tā tóu bù hǎo.",
+      "english": "If he said he couldn't see them, people would say he was a fool.",
+      "literally": "If he says (he) can't see, people then will think his head is not good.",
+      "reading": "[Utt [S [Cond rúguǒ [Clause [S [NP tā] [VP [VerbP shuō] [VP [VerbP kàn bù [Res dào]]]]]]] , [Clause [S [NP rén men] [VP jiù [VP huì [VP [VerbP jué dé [Clause [S [NP [ModNP [Person tā] tóu]] [VP bù hǎo]]]]]]]]]]]",
+      "source": "adapted from the book's own sentence (kb_memory 73%: \"Rúguǒ wǒ shuō wǒ kàn-bù-dào, rén-men jiù huì shuō wǒ tóu bù hǎo.\"): told by the narrator, and jué-dé (feel-state: jué-dé and a thought) for the second shuō, which takes no whole sentence",
+      "ideas": [
+        "i13"
+      ],
+      "refs": "{{Word:ru2guo3}} {{word:ta1}} {{word:shuo1}} {{word:kan4}}-{{word:bu4}}-{{word:dao4}}, {{word:ren2}}-{{word:men}} {{word:jiu4}} {{word:hui4}} {{word:jue2}}-{{word:de2}} {{word:ta1}} {{word:tou2}} {{word:bu4}} {{word:hao3}}.",
+      "hanzi": "如果 他 说 看-不-到, 人-们 就 会 觉-得 他 头 不 好.",
+      "gloss": "if he to communicate to look at-not-to arrive, human being-more than one person then will to feel-to get he head not good.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 501,
+        "means": "yes-with-others",
+        "words": 16,
+        "depth": 1,
+        "late": [],
+        "warnings": [
+          "too long: 16 words (limit 10)"
+        ]
+      },
+      "blind": "If he said he could not see anything, people would then think his head was not good, meaning that he is not clever."
+    },
+    {
+      "pinyin": "Tā jiù shuō: Zhēn hǎo-kàn!",
+      "english": "So he said: \"How beautiful!\"",
+      "literally": "He then says: really good-looking!",
+      "reading": "1",
+      "source": "the book's own sentence (kb_memory 100%: \"Tā shuō: Zhēn hǎo-kàn!\") with jiù for so (所以: X, jiù Y; speech-quote: jiù before the saying)",
+      "ideas": [
+        "i14"
+      ],
+      "refs": "{{Word:ta1}} {{word:jiu4}} {{word:shuo1}}: {{Word:zhen1}} {{word:hao3}}-{{word:kan4}}!",
+      "hanzi": "他 就 说: 真 好-看!",
+      "gloss": "he then to communicate: true good-to look at!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 52,
+        "means": "yes-with-others",
+        "words": 6,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "So he said: Really beautiful!"
+    },
+    {
+      "pinyin": "Tā bǎ méi-yǒu-de yīfu fàng zài shēntǐ-shàng.",
+      "english": "The emperor \"put on\" the clothes.",
+      "literally": "He puts the clothes that are not there on his body.",
+      "reading": "1",
+      "source": "adapted from the book's own sentence (kb_memory 78%: \"Zuì dà-de rén bǎ zhè-ge yīfu fàng zài shēntǐ-shàng, chū-qù le.\") and the form of 穿 (wear: bǎ yīfu fàng zài shēntǐ-shàng); méi-yǒu-de yīfu says what the quotes around \"put on\" say",
+      "ideas": [
+        "i15"
+      ],
+      "refs": "{{Word:ta1}} {{word:ba3}} {{word:mei2}}-{{word:you3}}-{{word:de}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:shen1ti3}}-{{word:shang4}}.",
+      "hanzi": "他 把 没-有-的 衣服 放 在 身体-上.",
+      "gloss": "he grammatical object-introducing particle negative particle used exclusively to negate the verb you (to form meiyou)-to have-possessive marker clothing to put to exist at body-up.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 36,
+        "means": "yes-with-others",
+        "words": 10,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "He put the clothes that do not exist on his body."
+    },
+    {
+      "pinyin": "Tā chū-qù le.",
+      "english": "He went out.",
+      "literally": "He went out.",
+      "reading": "1",
+      "source": "the book's \"Tā chū-qù le.\" (kb_memory 38%), as it is",
+      "ideas": [
+        "i16"
+      ],
+      "refs": "{{Word:ta1}} {{word:chu1}}-{{word:qu4}} {{word:le}}.",
+      "hanzi": "他 出-去 了.",
+      "gloss": "he to go out-to go perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 15,
+        "means": "yes-with-others",
+        "words": 4,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "He went out."
+    },
+    {
+      "pinyin": "Lù-shàng-de rén dōu shuō: Zhēn hǎo-kàn!",
+      "english": "People on the street all said: \"How beautiful!\"",
+      "literally": "The people on the road all say: really good-looking!",
+      "reading": "1",
+      "source": "the book's own sentence (kb_memory 67%), as it is",
+      "ideas": [
+        "i17"
+      ],
+      "refs": "{{Word:lu4}}-{{word:shang4}}-{{word:de}} {{word:ren2}} {{word:dou1}} {{word:shuo1}}: {{Word:zhen1}} {{word:hao3}}-{{word:kan4}}!",
+      "hanzi": "路-上-的 人 都 说: 真 好-看!",
+      "gloss": "road-up-possessive marker human being all to communicate: true good-to look at!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 215,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The people on the road all said: Really beautiful!"
+    },
+    {
+      "pinyin": "Tā-men yě pà.",
+      "english": "They were afraid too.",
+      "literally": "They also are afraid.",
+      "reading": "1",
+      "source": "the book's own sentence (kb_memory 33%), as it is",
+      "ideas": [
+        "i18"
+      ],
+      "refs": "{{Word:ta1}}-{{word:men}} {{word:ye3}} {{word:pa4}}.",
+      "hanzi": "他-们 也 怕.",
+      "gloss": "he-more than one person also to fear.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 3,
+        "means": "yes-with-others",
+        "words": 4,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "They were afraid too."
+    },
+    {
+      "pinyin": "Yī-ge xiǎo nán-hái-zi shuō: Tā shēntǐ-shàng méi-yǒu yīfu!",
+      "english": "Then a little boy said: \"He has no clothes on!\"",
+      "literally": "A little boy says: on his body there are no clothes!",
+      "reading": "1",
+      "source": "adapted from the book's own sentence (kb_memory 100%: \"Yī-ge xiǎo nán-rén shuō: Tā méi-yǒu yīfu!\"): nán-hái-zi (boy, kb_lookup gloss) for nán-rén (man), and shēntǐ-shàng for \"on\"",
+      "ideas": [
+        "i19"
+      ],
+      "refs": "{{Word:yi1}}-{{light:ge4}} {{word:xiao3}} {{word:nan2}}-{{word:hai2}}-{{word:zi}} {{word:shuo1}}: {{Word:ta1}} {{word:shen1ti3}}-{{word:shang4}} {{word:mei2}}-{{word:you3}} {{word:yi1fu}}!",
+      "hanzi": "一-个 小 难-还-子 说: 他 身体-上 没-有 衣服!",
+      "gloss": "one-universal classifier little difficult-still-a light ending that makes a thing word to communicate: he body-up negative particle used exclusively to negate the verb you (to form meiyou)-to have clothing!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 501,
+        "means": "yes-with-others",
+        "words": 13,
+        "depth": 1,
+        "late": [],
+        "warnings": [
+          "too long: 13 words (limit 10)"
+        ]
+      },
+      "blind": "A little boy said: There are no clothes on his body!"
+    },
+    {
+      "pinyin": "Rén-rén dōu xiào le.",
+      "english": "Everyone laughed.",
+      "literally": "Every person laughed.",
+      "reading": "1",
+      "source": "the book's own sentence (lesson doubling-words, kb_memory 100%), as it is",
+      "ideas": [
+        "i20"
+      ],
+      "refs": "{{Word:ren2}}-{{word:ren2}} {{word:dou1}} {{word:xiao4}} {{word:le}}.",
+      "hanzi": "人-人 都 笑 了.",
+      "gloss": "human being-human being all to laugh perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 15,
+        "means": "yes-with-others",
+        "words": 5,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "Everyone laughed."
+    },
+    {
+      "pinyin": "Tā-men shuō: Zhēn-de, tā méi-yǒu yīfu!",
+      "english": "\"It's true, he has no clothes!\"",
+      "literally": "They say: truly, he has no clothes!",
+      "reading": "1",
+      "source": "adapted from the book's own sentence (kb_memory 75%: \"Rén-men dōu xiào le: Zhēn-de, tā méi-yǒu yīfu!\"): the laugh has its own sentence, then tā-men shuō (speech-quote: a call, and what was said)",
+      "ideas": [
+        "i21"
+      ],
+      "refs": "{{Word:ta1}}-{{word:men}} {{word:shuo1}}: {{Word:zhen1}}-{{word:de}}, {{word:ta1}} {{word:mei2}}-{{word:you3}} {{word:yi1fu}}!",
+      "hanzi": "他-们 说: 真-的, 他 没-有 衣服!",
+      "gloss": "he-more than one person to communicate: true-possessive marker, he negative particle used exclusively to negate the verb you (to form meiyou)-to have clothing!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 99,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "They said: It's true, he has no clothes on!"
+    },
+    {
+      "pinyin": "Zuì dà-de rén zhīdào tā-men shuō-de duì.",
+      "english": "The emperor knew they were right.",
+      "literally": "The biggest person knows what they say is correct.",
+      "reading": "[VerbP zhīdào [S [NP [S [NP tā-men] [VP [VerbP shuō]]] de] [VP duì]]]",
+      "source": "the first half of the book's own sentence (kb_memory 46%: \"Zuì dà-de rén zhīdào tā-men shuō-de duì, dàn-shì tā qù-xià-qù le.\")",
+      "ideas": [
+        "i22"
+      ],
+      "refs": "{{Word:zui4}} {{word:da4}}-{{word:de}} {{word:ren2}} {{word:zhi1dao4}} {{word:ta1}}-{{word:men}} {{word:shuo1}}-{{word:de}} {{word:dui4}}.",
+      "hanzi": "最 大-的 人 知道 他-们 说-的 对.",
+      "gloss": "most big-possessive marker human being to know he-more than one person to communicate-possessive marker facing.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 482,
+        "means": "yes-with-others",
+        "words": 10,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The biggest person knew that what they said was right."
+    },
+    {
+      "pinyin": "Dàn-shì tā hái zài zǒu.",
+      "english": "But he kept on walking.",
+      "literally": "But he is still walking.",
+      "reading": "[VP hái [VP zài [VP [VerbP zǒu]]]]",
+      "source": "built: dàn-shì, hái (hai-still: Tā hái zài jiā.) and zài before the verb (now-ing), with zǒu (walk); the book's second half, tā qù-xià-qù le, not used",
+      "ideas": [
+        "i23"
+      ],
+      "refs": "{{Word:dan4}}-{{word:shi4}} {{word:ta1}} {{word:hai2}} {{word:zai4}} {{word:zou3}}.",
+      "hanzi": "但-是 他 还 在 走.",
+      "gloss": "but-to be he still to exist at to walk.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 8,
+        "means": "yes-with-others",
+        "words": 6,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "But he kept on walking."
+    }
+  ],
+  "sketch": [
+    {
+      "id": "i1",
+      "idea": "The emperor (the biggest person) loved clothes",
+      "needed": true,
+      "links": "",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i2",
+      "idea": "He had lots of clothes",
+      "needed": true,
+      "links": "",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i3",
+      "idea": "He always wanted new clothes (ones seen for the first time)",
+      "needed": true,
+      "links": "but, after i2",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i4",
+      "idea": "Two swindlers (people who tell others what is not true) came",
+      "needed": true,
+      "links": "then",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i5",
+      "idea": "They said: we can make the most beautiful clothes",
+      "needed": true,
+      "links": "then, after i4",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i6",
+      "idea": "They said: foolish people (people whose heads aren't good) can't see these clothes",
+      "needed": true,
+      "links": "also, with i5",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i7",
+      "idea": "The emperor gave them lots of money",
+      "needed": true,
+      "links": "then, because of i5 and i6",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i8",
+      "idea": "They took the money",
+      "needed": true,
+      "links": "then",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i9",
+      "idea": "They made nothing at all",
+      "needed": true,
+      "links": "but, after i8",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i10",
+      "idea": "The emperor came to look",
+      "needed": true,
+      "links": "then",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i11",
+      "idea": "He could not see anything",
+      "needed": true,
+      "links": "when i10",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i12",
+      "idea": "He was afraid",
+      "needed": true,
+      "links": "but, after i11",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i13",
+      "idea": "If he says he can't see the clothes, people will say he is a fool",
+      "needed": true,
+      "links": "why i12",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i14",
+      "idea": "So he said: How beautiful!",
+      "needed": true,
+      "links": "so, because of i12 and i13",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i15",
+      "idea": "The emperor 'put on' the clothes (did as if he put them on: there was nothing)",
+      "needed": true,
+      "links": "then",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i16",
+      "idea": "He went out",
+      "needed": true,
+      "links": "then, after i15",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i17",
+      "idea": "People on the street all said: How beautiful!",
+      "needed": true,
+      "links": "when i16",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i18",
+      "idea": "They were afraid too",
+      "needed": true,
+      "links": "why i17, like i12",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i19",
+      "idea": "A little boy said: He has no clothes on!",
+      "needed": true,
+      "links": "then",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i20",
+      "idea": "Everyone laughed",
+      "needed": true,
+      "links": "then, because of i19",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i21",
+      "idea": "They said: It's true, he has no clothes!",
+      "needed": true,
+      "links": "with i20",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i22",
+      "idea": "The emperor knew they were right",
+      "needed": true,
+      "links": "",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i23",
+      "idea": "He kept on walking",
+      "needed": true,
+      "links": "but, after i22",
+      "verdict": "kept",
+      "why": ""
+    }
+  ],
+  "cast": [
+    {
+      "thing": "the emperor",
+      "description": "zuì dà-de rén",
+      "short": ""
+    },
+    {
+      "thing": "the swindlers",
+      "description": "duì rén shuō bù shì zhēn-de huà",
+      "short": ""
+    },
+    {
+      "thing": "foolish people",
+      "description": "tóu bù hǎo-de rén",
+      "short": ""
+    },
+    {
+      "thing": "new (clothes)",
+      "description": "dì-yī cì kàn-dào-de",
+      "short": ""
+    },
+    {
+      "thing": "the clothes that are not there",
+      "description": "méi-yǒu-de yīfu",
+      "short": ""
+    }
+  ],
+  "castProblems": [],
+  "structures": [
+    {
+      "idea": "i1",
+      "pattern": "zui-most, de-modifier, adverb-before-verb, svo",
+      "lesson": "comparing, modifying-nouns, how-much, who-does-what"
+    },
+    {
+      "idea": "i2",
+      "pattern": "svo, hen-duo-noun",
+      "lesson": "who-does-what, moving"
+    },
+    {
+      "idea": "i3",
+      "pattern": "dan-shi-but, hai-still, ci-times, de-modifier",
+      "lesson": "linking-sentences, also-and-all, around-an-action, modifying-nouns"
+    },
+    {
+      "idea": "i4",
+      "pattern": "measure-word, le-new-situation; dui-toward, bu-shi-not",
+      "lesson": "pointing, moving; inside-a-sentence, words-and-sentences"
+    },
+    {
+      "idea": "i5",
+      "pattern": "speech-quote, can-verb, zui-most, de-modifier",
+      "lesson": "questions, pre-verbs, comparing, modifying-nouns"
+    },
+    {
+      "idea": "i6",
+      "pattern": "speech-quote, de-modifier, bu-adjective, result-can-cant",
+      "lesson": "questions, modifying-nouns, how-much, direction-and-result"
+    },
+    {
+      "idea": "i7",
+      "pattern": "gei-give, hen-duo-noun",
+      "lesson": "inside-a-sentence, moving"
+    },
+    {
+      "idea": "i9",
+      "pattern": "le-done, dan-shi-but, shenme-dou",
+      "lesson": "when-it-happens, linking-sentences, also-and-all"
+    },
+    {
+      "idea": "i10",
+      "pattern": "serial-verbs",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i11",
+      "pattern": "shenme-dou, result-can-cant",
+      "lesson": "also-and-all, direction-and-result"
+    },
+    {
+      "idea": "i12",
+      "pattern": "dan-shi-but, svo",
+      "lesson": "linking-sentences, who-does-what"
+    },
+    {
+      "idea": "i13",
+      "pattern": "ruguo-if, jiu-then, hui-will, feel-state, result-can-cant",
+      "lesson": "linking-sentences, linking-sentences, when-it-happens, feelings, direction-and-result"
+    },
+    {
+      "idea": "i14",
+      "pattern": "speech-quote, jiu-then, zhen-really",
+      "lesson": "questions, linking-sentences, how-much"
+    },
+    {
+      "idea": "i15",
+      "pattern": "ba-handle, de-modifier, zai-place, place-li-shang",
+      "lesson": "becoming-and-making, modifying-nouns, where-it-is, where-it-is"
+    },
+    {
+      "idea": "i16",
+      "pattern": "le-new-situation",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i17",
+      "pattern": "speech-quote, dou-all, de-modifier, zhen-really",
+      "lesson": "questions, also-and-all, modifying-nouns, how-much"
+    },
+    {
+      "idea": "i18",
+      "pattern": "ye-also",
+      "lesson": "also-and-all"
+    },
+    {
+      "idea": "i19",
+      "pattern": "speech-quote, measure-word, place-li-shang, mei-you-not-have",
+      "lesson": "questions, pointing, where-it-is, who-does-what"
+    },
+    {
+      "idea": "i20",
+      "pattern": "doubled-every, dou-all, le-new-situation",
+      "lesson": "doubling-words, also-and-all, moving"
+    },
+    {
+      "idea": "i21",
+      "pattern": "speech-quote, calling-hail, mei-you-not-have",
+      "lesson": "questions, greetings, who-does-what"
+    },
+    {
+      "idea": "i22",
+      "pattern": "know-that, verb-de-thing, dui-correct",
+      "lesson": "pre-verbs, roles-of-a-word, inside-a-sentence"
+    },
+    {
+      "idea": "i23",
+      "pattern": "dan-shi-but, hai-still, zai-now",
+      "lesson": "linking-sentences, also-and-all, when-it-happens"
+    }
+  ],
+  "gaps": [
+    {
+      "idea": "swindler",
+      "description": "duì rén shuō bù shì zhēn-de huà-de rén",
+      "note": "the dictionary's form is 10 words, so its verb part has a sentence of its own (Tā-men duì rén shuō bù shì zhēn-de huà.) and tā-men names them after"
+    },
+    {
+      "idea": "fool (a fool, foolish)",
+      "description": "tóu bù hǎo (-de rén)",
+      "note": "no word; the form of 傻 and 笨, as the text's literal note says"
+    },
+    {
+      "idea": "say that someone is a fool",
+      "description": "jué-dé tā tóu bù hǎo",
+      "note": "shuō takes no whole sentence (feel-state's shuō + state needs a bare describing word; know-that is zhīdào only), so people will think, not say"
+    },
+    {
+      "idea": "always",
+      "description": "hái",
+      "note": "lǎo-shì splits into lǎo + shì after a subject and the sentence stops parsing; shénme shí-jiān dōu made the sentence 15 words with over 500 readings; hái (still) keeps that he wanted more"
+    },
+    {
+      "idea": "new",
+      "description": "dì-yī cì kàn-dào-de",
+      "note": "xīn says new, but its gloss and hanzi read heart (心); the text's literal note gives seen for the first time"
+    },
+    {
+      "idea": "pretend (\"put on\" in quotes)",
+      "description": "bǎ méi-yǒu-de yīfu fàng zài shēntǐ-shàng",
+      "note": "no word for pretend (kb_lookup gives only xiǎng shì, guess); the clothes that are not there carry the quotes"
+    },
+    {
+      "idea": "keep on (walking)",
+      "description": "hái zài zǒu",
+      "note": "keep on has only liú (keep a thing); still + now-ing says it"
+    },
+    {
+      "idea": "at all",
+      "description": "shénme dōu méi",
+      "note": "nothing says at all; shenme-dou carries not anything"
+    },
+    {
+      "idea": "then",
+      "description": "",
+      "note": "然后 is X-wán hòu, too heavy here; the order of the sentences says it"
+    }
+  ],
+  "added": [],
+  "blind": {
+    "whole": "A man, called 'the biggest person', loves clothes and wants clothes nobody has seen before. Two people come and lie to him. They say they can make the most beautiful clothes, and that people who are not clever cannot see them. He pays them a lot of money. They take it and make nothing. When he comes to look he sees nothing, but he is afraid that if he says so, people will think he is not clever. So he calls the clothes beautiful and puts on the clothes that do not exist. He goes out. The people on the road also say the clothes are beautiful, because they are afraid too. Then a little boy says the man has no clothes on. Everyone laughs and agrees. The man knows they are right, but he keeps on walking.",
+    "unsure": "'Zui da-de ren', literally 'the biggest person', appears all through the text. I read it as the most important person, the one at the top, like a ruler. It could also mean the physically largest person or the oldest. Sentence 3, 'di-yi ci kan-dao-de yifu': the gloss gives 'floor' for di, but di-yi is the ordinal 'first'. I read the phrase as clothes never seen before, so new clothes. It could also mean clothes he himself sees for the first time. Sentences 7 and 13, 'tou bu hao', literally 'head not good': I read it as not clever or stupid. Taken literally it could mean a sick or hurt head. Sentence 7 does not say what such people cannot see. From sentence 6 I take it to be the clothes. In sentence 15 I read 'mei-you-de yifu' as clothes that do not exist. In sentence 19 the gloss splits nan-hai-zi into 'difficult-still-...', but as one word it means boy. In sentence 22 the gloss gives 'facing' for dui. Here it can only mean 'correct'. In sentence 23, 'hai zai zou' says he is still walking, carrying on. The text gives no reason why he keeps going."
+  },
+  "notes": "Translated by hand (2026-10-22) following the translate skill, whole dictionary. kb_memory returns this story's own book sentences (lesson none) at up to 100% shared, so step 2 hands over the reference text; 14 sentences adapt or keep one, each named in its source. Changed from them on purpose: tā-men hái shuō keeps the fools line the swindlers' claim; nán-hái-zi (boy) for nán-rén (man); méi-yǒu-de yīfu for the quoted \"put on\"; hái zài zǒu for qù-xià-qù (go-down-go). Grammar that will not parse as meant: (1) kàn-bù-dào reads first through verb-bu-verb's Either rule, which accepts two different verbs (see or not arrive); result-can-cant has no can't-with-object rule (only @verb de Res NP), so the book's \"Tóu bù hǎo-de rén kàn-bù-dào zhè-zhǒng yīfu.\" can mean can't see only through Either: the object is dropped here. (2) shuō + a whole sentence has no rule, so the book's \"rén-men jiù huì shuō wǒ tóu bù hǎo\" cannot mean say I'm a fool; jué-dé used. (3) In \"Rúguǒ tā shuō kàn-bù-dào, …\" the first readings take tā shuō as his speech; the meant one is number 369, given as its full bracket. Length warnings left: sentences 3, 6, 7, 13 and 19 are 11 to 15 words. Glossary proposal: emperor -> zuì dà-de rén: the text's own literal note, and the dictionary's form of 皇帝 (yǐ-qián \"Zhōngguó\" zuì dà-de rén) ties every emperor to old China. Glossary proposal: swindler -> a sentence of its own, Tā-men duì rén shuō bù shì zhēn-de huà., then tā-men: the 10-word form never fits in a sentence. Glossary proposal: has no clothes on -> shēntǐ-shàng méi-yǒu yīfu: the form of wear is bǎ yīfu fàng zài shēntǐ-shàng. Glossary proposal: kept on doing -> hái zài + verb: keep on has no form. Glossary proposal: new (thing) -> dì-yī cì kàn-dào-de: xīn glosses as heart. Translated before kb_memory hid the stories' own lines (HAOSHUODE_MEMORY_SKIP), so some sentences reuse the book's lines and the book overlap is higher than a fresh run would give.",
+  "problems": [],
+  "timing": {},
+  "item": {
+    "id": "story-8",
+    "kind": "story",
+    "title": "The Emperor's New Clothes"
+  },
+  "book": {
+    "overlap": 0.791
+  }
+}

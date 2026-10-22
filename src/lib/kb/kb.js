@@ -281,7 +281,7 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
     yardstickLists: listsOf,
 
     // What the yardsticks cannot say yet and the Mandarin word that would fix each (frontier.js).
-    frontier: () => (frontierReport ??= frontier({ yardsticks: yardsticksOf(), english: englishOf(), composites: countedOf().entries, words, mandarin: listsOf().mandarin ?? [] })),
+    frontier: () => (frontierReport ??= frontier({ yardsticks: yardsticksOf(), english: englishOf(), composites: countedOf().entries, words, mandarin: listsOf().mandarin ?? [], translations: listsOf().translationGaps ?? [] })),
 
     // Meaning links (K19): what the words say of the primes and categories, and which primes a description reaches.
     // No name: the report. A name: that word's line, { id, term, line }.

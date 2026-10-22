@@ -13,7 +13,8 @@
 //
 // translate --save writes review/translations/<date>-<first words>.md (to review) and .json (the result).
 // test runs the test set (Q8: the ten stories and the first 100 everyday sentences; both when neither is named) into
-// review/translations/test/<id>.json, skipping the ones already there unless --fresh, and stores the set's numbers in
+// review/translations/test/<id>.json, skipping the ones already there unless --fresh (the stories' own lines hidden from
+// kb_memory while it runs), and stores the set's numbers in
 // kb/translation-score.json (the scoreboard's translator columns). --round-trip translates the blind reader's English back
 // and says how many words the two Hao-shuo-de texts share (F3); a story also says how many it shares with the book's own.
 // score prints those numbers again from the saved results; gaps gathers their gaps into kb/translation-gaps.json (E2).
@@ -27,7 +28,8 @@ import { parseArgs } from 'node:util';
 import { findClaude, sessionRunner } from '../src/lib/translator/claude.js';
 import { translate } from '../src/lib/translator/pipeline.js';
 import { renderMarkdown, scoreOf, slugOf } from '../src/lib/translator/output.js';
-import { overlap, sentenceItems, setScore, storyItems, wordIdsOf } from '../src/lib/translator/test-set.js';
+import { STORY_LINES, overlap, sentenceItems, setScore, storyItems, wordIdsOf } from '../src/lib/translator/test-set.js';
+import { MEMORY_SKIP_ENV } from '../src/lib/kb/memory.js';
 import { collectGaps, renderGaps } from '../src/lib/translator/gaps.js';
 import { CLAUDE_TOKEN_ENV, homeFile, readClaudeToken } from '../src/lib/translator/home.js';
 
@@ -79,13 +81,14 @@ const readJsonFiles = (dir) => {
   return out;
 };
 
-// One runner for every session of a command: the kb, claude and the login are looked up once.
-async function pipeline() {
+// One runner for every session of a command: the kb, claude and the login are looked up once. extraEnv reaches the
+// sessions and the kb server they start.
+async function pipeline(extraEnv = {}) {
   const { openKb } = await import('./kb.js');
   const kb = await openKb();
   const claude = findClaude({ given: values.claude });
   const token = readClaudeToken();
-  const env = { ...process.env, ...(token && { [CLAUDE_TOKEN_ENV]: token }) };
+  const env = { ...process.env, ...extraEnv, ...(token && { [CLAUDE_TOKEN_ENV]: token }) };
   const run = sessionRunner({ claude, cwd: ROOT, model: values.model, effort: values.effort, env });
   const repairs = Number.parseInt(values.repairs, 10) || 0;
   return (request, over = {}) =>
@@ -156,7 +159,7 @@ switch (command) {
     const items = [];
     if (values.stories || both) items.push(...storyItems((await import(pathToFileURL(join(ROOT, 'src/content/appendix-stories.ts')).href)).default));
     if (values.sentences || both) items.push(...sentenceItems(JSON.parse(readFileSync(join(ROOT, 'kb/yardsticks/sentences.json'), 'utf8')), { limit }));
-    const run = await pipeline();
+    const run = await pipeline(values.stories || both ? { [MEMORY_SKIP_ENV]: STORY_LINES } : {});
     const { openKb } = await import('./kb.js');
     const { source } = await openKb();
     const idsOf = (text) => wordIdsOf(text, source.words, source.composites);

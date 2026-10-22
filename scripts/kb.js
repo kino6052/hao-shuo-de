@@ -28,7 +28,7 @@
 //   node scripts/kb.js hints <word> [--limit N]  # WordNet hints for drafting a description of a word with no entry (English or Mandarin)
 //   node scripts/kb.js export [--all] [--base IRI] [--out FILE] [--stdout]   # the dictionary as OntoLex Turtle (to kb/cache/export/hao-shuo-de.ttl); --all adds the proposed relations
 //   node scripts/kb.js cross-check [kindOf|opposites|parts|missing|headless] [--limit N]  # the dictionary's kind-of, opposite and part-of relations against WordNet's
-//   node scripts/kb.js frontier [words|mandarin|sentences] [--limit N]  # what the dictionary cannot say yet and the word that would fix each
+//   node scripts/kb.js frontier [words|mandarin|sentences|translations] [--limit N]  # what the dictionary cannot say yet and the word that would fix each
 //   node scripts/kb.js yardsticks [--limit N]  # how much of the Mandarin and English word lists and Basic English the dictionary can say
 //   node scripts/kb.js meaning [says|atoms|grounding|<word>] [--limit N]  # what the words say of the NSM primes, Aristotle's categories and grammar
 //   node scripts/kb.js candidates [remove|add] [--limit N]  # the cheapest words to drop and the best roots to add
@@ -139,7 +139,7 @@ export function fingerprint() {
   };
   for (const d of WATCHED) walk(resolve(ROOT, d));
   // the relation rules and the decisions made on the relations review page change what kb.relations() says
-  for (const f of ['kb/relation-rules.json', 'kb/same-form-sort.json', 'kb/wordnet/links.json', 'kb/cross-check-notes.json', 'kb/yardsticks/mandarin-frequency.json', 'kb/yardsticks/basic-english.json', 'kb/yardsticks/english-top3000.json', 'kb/yardsticks/sentences.json', 'kb/yardsticks/english-explained.json', 'review/decisions/relations-1.json']) {
+  for (const f of ['kb/relation-rules.json', 'kb/same-form-sort.json', 'kb/wordnet/links.json', 'kb/cross-check-notes.json', 'kb/yardsticks/mandarin-frequency.json', 'kb/yardsticks/basic-english.json', 'kb/yardsticks/english-top3000.json', 'kb/yardsticks/sentences.json', 'kb/yardsticks/english-explained.json', 'kb/translation-gaps.json', 'review/decisions/relations-1.json']) {
     try {
       const s = statSync(resolve(ROOT, f));
       sum += s.mtimeMs + s.size;
@@ -201,16 +201,17 @@ function loadEnglishData() {
   return { links: read('kb/wordnet/links.json') ?? {}, index: read('kb/cache/english-index.json'), notes: read('kb/cross-check-notes.json') ?? {} };
 }
 
-// the word lists the language is measured against (kb/yardsticks/, committed); a list that is missing is left out
+// the word lists the language is measured against (kb/yardsticks/, committed), and the ideas the translator met with no
+// short way to say them (kb/translation-gaps.json, `npm run translator -- gaps`); a list that is missing is left out
 function loadYardsticks() {
   const read = (file) => {
     try {
-      return JSON.parse(readFileSync(resolve(ROOT, 'kb/yardsticks', file), 'utf8'));
+      return JSON.parse(readFileSync(resolve(ROOT, file.includes('/') ? file : `kb/yardsticks/${file}`), 'utf8'));
     } catch {
       return undefined;
     }
   };
-  return { mandarin: read('mandarin-frequency.json'), basic: read('basic-english.json'), top: read('english-top3000.json'), sentences: read('sentences.json'), explained: read('english-explained.json') };
+  return { mandarin: read('mandarin-frequency.json'), basic: read('basic-english.json'), top: read('english-top3000.json'), sentences: read('sentences.json'), explained: read('english-explained.json'), translationGaps: read('kb/translation-gaps.json') };
 }
 
 let cached = null;

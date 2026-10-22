@@ -1,0 +1,1251 @@
+{
+  "version": 1,
+  "text": "An old man and his old wife lived by the sea (literally: \"a very big water\"). They were poor (literally: \"had no money\"). The old man fished (literally: \"hunted water animals\"). One day he caught a golden fish (literally: \"a yellow water animal\"). The golden fish spoke: \"Put me back in the water! Whatever you want, I'll give you.\" The old man was kind. He asked for nothing and put it back in the water. He went home and told his wife. She was furious: \"You fool! Our trough is broken! Go and ask for a good one!\" The golden fish gave them a good trough. But the old woman said: \"I want a big house!\" They got a big house. Then the old woman said: \"I want lots of money!\" They got lots of money. Again she said: \"I want to be queen!\" (Literally: \"the biggest person.\") At last she said: \"I want the whole sea to be mine, and the golden fish must obey me!\" The golden fish said nothing. It just swam off into the water and never came back. The old man went home: the big house was gone, the money was gone. The old woman sat beside the broken trough.",
+  "lesson": null,
+  "model": "claude-opus-5-5 (by hand, subagents)",
+  "sentences": [
+    {
+      "pinyin": "Yǒu yī-ge lǎo nán-rén.",
+      "english": "There was an old man.",
+      "literally": "There is one old man.",
+      "reading": "1",
+      "source": "adapted from the book's story line (kb_memory: Yī-ge lǎo nán-rén hé tā-de lǎo nǚ-rén zài hěn dà-de shuǐ pángbiān huó), split into three short sentences; svo, measure-word, adjective-noun",
+      "ideas": [
+        "i1"
+      ],
+      "refs": "{{Word:you3}} {{word:yi1}}-{{light:ge4}} {{word:lao3}} {{word:nan2}}-{{word:ren2}}.",
+      "hanzi": "有 一-个 老 难-人.",
+      "gloss": "to have one-universal classifier old (people difficult-human being.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 14,
+        "means": "yes-with-others",
+        "words": 6,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "There was an old man."
+    },
+    {
+      "pinyin": "Tā jiā lǐ-de nǚ-rén yě hěn lǎo.",
+      "english": "His wife was old too.",
+      "literally": "The woman in his home is also very old.",
+      "reading": "1",
+      "source": "built from the grammar (de-modifier, place-li-shang, owner-part, ye-also, hen-adjective); the wife's cast entry (jiā lǐ-de nǚ-rén)",
+      "ideas": [
+        "i1"
+      ],
+      "refs": "{{Word:ta1}} {{word:jia1}} {{word:li3}}-{{word:de}} {{word:nv3}}-{{word:ren2}} {{word:ye3}} {{word:hen3}} {{word:lao3}}.",
+      "hanzi": "他 家 里-的 女-人 也 很 老.",
+      "gloss": "he home inside-possessive marker female-human being also very old (people.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 134,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The woman in his home (his wife) was also very old."
+    },
+    {
+      "pinyin": "Tā-men zài hěn dà-de shuǐ pángbiān huó.",
+      "english": "They lived by the sea.",
+      "literally": "They live beside the very big water.",
+      "reading": "20",
+      "source": "the book's story line (kb_memory), with tā-men as the subject after the split; hěn dà-de shuǐ is the story's own literal note for the sea",
+      "ideas": [
+        "i2"
+      ],
+      "refs": "{{Word:ta1}}-{{word:men}} {{word:zai4}} {{word:hen3}} {{word:da4}}-{{word:de}} {{word:shui3}} {{word:pang2bian1}} {{word:huo2}}.",
+      "hanzi": "他-们 在 很 大-的 水 旁边 活.",
+      "gloss": "he-more than one person to exist at very big-possessive marker water side to live.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 263,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "They lived beside a very big water (a sea or a big lake)."
+    },
+    {
+      "pinyin": "Tā-men méi-yǒu jīn.",
+      "english": "They were poor.",
+      "literally": "They have no money.",
+      "reading": "1",
+      "source": "the book's story line (kb_memory); mei-you-not-have",
+      "ideas": [
+        "i3"
+      ],
+      "refs": "{{Word:ta1}}-{{word:men}} {{word:mei2}}-{{word:you3}} {{word:jin1}}.",
+      "hanzi": "他-们 没-有 金.",
+      "gloss": "he-more than one person negative particle used exclusively to negate the verb you (to form meiyou)-to have money.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 9,
+        "means": "yes-with-others",
+        "words": 5,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "They had no money."
+    },
+    {
+      "pinyin": "Lǎo nán-rén zhǎo shuǐ-lǐ-de dòng-wù.",
+      "english": "The old man fished.",
+      "literally": "The old man looks for animals in the water.",
+      "reading": "119",
+      "source": "the book's story line (kb_memory); shuǐ-lǐ-de dòng-wù is the head of the dictionary's fish form (zài-shuǐ-lǐ-de dòng-wù) and the fish's cast entry",
+      "ideas": [
+        "i4"
+      ],
+      "refs": "{{Word:lao3}} {{word:nan2}}-{{word:ren2}} {{word:zhao3}} {{word:shui3}}-{{word:li3}}-{{word:de}} {{word:dong4}}-{{word:wu4}}.",
+      "hanzi": "老 难-人 找 水-里-的 动-物.",
+      "gloss": "old (people difficult-human being to hunt water-inside-possessive marker to move-thing.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 387,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The old man looked for (hunted) animals that live in the water, that is, he fished."
+    },
+    {
+      "pinyin": "Yǒu yī-cì, tā ná-dào le yī-ge.",
+      "english": "One day he caught one.",
+      "literally": "Once, he caught one.",
+      "reading": "1",
+      "source": "adapted from the book's story line (kb_memory), the long golden-animal noun moved to the next sentence; ci-times, le-done, measure-word",
+      "ideas": [
+        "i5"
+      ],
+      "refs": "{{Word:you3}} {{word:yi1}}-{{word:ci4}}, {{word:ta1}} {{word:na2}}-{{word:dao4}} {{word:le}} {{word:yi1}}-{{light:ge4}}.",
+      "hanzi": "有 一-次, 他 拿-到 了 一-个.",
+      "gloss": "to have one-time, he to take-to arrive perfective aspect marker one-universal classifier.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 40,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "One time, he caught one."
+    },
+    {
+      "pinyin": "Zhè-ge dòng-wù shì jīn-de yánsè.",
+      "english": "This fish was golden.",
+      "literally": "This animal is the colour of gold.",
+      "reading": "13",
+      "source": "built from the grammar (measure-word, shi-copula, de-modifier); jīn-de yánsè is the book's yellow, the story's literal note",
+      "ideas": [
+        "i5"
+      ],
+      "refs": "{{Word:zhe4}}-{{light:ge4}} {{word:dong4}}-{{word:wu4}} {{word:shi4}} {{word:jin1}}-{{word:de}} {{word:yan2se4}}.",
+      "hanzi": "这-个 动-物 是 金-的 颜色.",
+      "gloss": "this-universal classifier to move-thing to be money-possessive marker color.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 20,
+        "means": "yes-with-others",
+        "words": 8,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "This animal was the color of jin, which I read as gold-colored."
+    },
+    {
+      "pinyin": "Dòng-wù shuō: Bǎ wǒ fàng-huí shuǐ-lǐ!",
+      "english": "The fish spoke: \"Put me back in the water!\"",
+      "literally": "The animal says: put me back into the water!",
+      "reading": "13",
+      "source": "the book's story line (kb_memory), with dòng-wù alone as the speaker; speech-quote, ba-handle, serial-verbs, place-li-shang",
+      "ideas": [
+        "i6"
+      ],
+      "refs": "{{Word:dong4}}-{{word:wu4}} {{word:shuo1}}: {{Word:ba3}} {{word:wo3}} {{word:fang4}}-{{word:hui2}} {{word:shui3}}-{{word:li3}}!",
+      "hanzi": "动-物 说: 把 我 放-回 水-里!",
+      "gloss": "to move-thing to communicate: grammatical object-introducing particle I to put-to return water-inside!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 128,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The animal said: \"Put me back in the water!\""
+    },
+    {
+      "pinyin": "Nǐ yào shénme, wǒ jiù gěi nǐ shénme.",
+      "english": "\"Whatever you want, I'll give you.\"",
+      "literally": "You want what, I then give you what.",
+      "reading": "1",
+      "source": "the book's story line (kb_memory), unchanged",
+      "ideas": [
+        "i7"
+      ],
+      "refs": "{{Word:ni3}} {{word:yao4}} {{word:shen2me}}, {{word:wo3}} {{word:jiu4}} {{word:gei3}} {{word:ni3}} {{word:shen2me}}.",
+      "hanzi": "你 要 什么, 我 就 给 你 什么.",
+      "gloss": "you to want what? which?, I then to give you what? which?.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 2,
+        "means": "yes-with-others",
+        "words": 8,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "\"Whatever you want, I will give you.\""
+    },
+    {
+      "pinyin": "Lǎo nán-rén shì hǎo rén.",
+      "english": "The old man was kind.",
+      "literally": "The old man is a good person.",
+      "reading": "1",
+      "source": "the book's story line (kb_memory), unchanged",
+      "ideas": [
+        "i8"
+      ],
+      "refs": "{{Word:lao3}} {{word:nan2}}-{{word:ren2}} {{word:shi4}} {{word:hao3}} {{word:ren2}}.",
+      "hanzi": "老 难-人 是 好 人.",
+      "gloss": "old (people difficult-human being to be good human being.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 15,
+        "means": "yes-with-others",
+        "words": 6,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The old man was a good person."
+    },
+    {
+      "pinyin": "Tā shénme dōu méi yào.",
+      "english": "He asked for nothing.",
+      "literally": "He wanted nothing at all.",
+      "reading": "1",
+      "source": "adapted from the book's story line (kb_memory: Tā shénme dōu bù yào), méi for the past; shenme-dou",
+      "ideas": [
+        "i9"
+      ],
+      "refs": "{{Word:ta1}} {{word:shen2me}} {{word:dou1}} {{word:mei2}} {{word:yao4}}.",
+      "hanzi": "他 什么 都 没 要.",
+      "gloss": "he what? which? all negative particle used exclusively to negate the verb you (to form meiyou) to want.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 2,
+        "means": "yes-with-others",
+        "words": 5,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "He did not ask for anything."
+    },
+    {
+      "pinyin": "Tā bǎ dòng-wù fàng-huí le shuǐ-lǐ.",
+      "english": "He put it back in the water.",
+      "literally": "He put the animal back into the water.",
+      "reading": "13",
+      "source": "adapted from the book's story line (kb_memory), dòng-wù for the second tā so the two are not confused; ba-handle, serial-verbs, le-done, place-li-shang",
+      "ideas": [
+        "i9"
+      ],
+      "refs": "{{Word:ta1}} {{word:ba3}} {{word:dong4}}-{{word:wu4}} {{word:fang4}}-{{word:hui2}} {{word:le}} {{word:shui3}}-{{word:li3}}.",
+      "hanzi": "他 把 动-物 放-回 了 水-里.",
+      "gloss": "he grammatical object-introducing particle to move-thing to put-to return perfective aspect marker water-inside.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 16,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "He put the animal back into the water."
+    },
+    {
+      "pinyin": "Tā huí jiā, duì lǎo nǚ-rén shuō le.",
+      "english": "He went home and told his wife.",
+      "literally": "He returned home, said it to the old woman.",
+      "reading": "1",
+      "source": "the book's story line (kb_memory), unchanged; dui-toward, le-new-situation",
+      "ideas": [
+        "i10"
+      ],
+      "refs": "{{Word:ta1}} {{word:hui2}} {{word:jia1}}, {{word:dui4}} {{word:lao3}} {{word:nv3}}-{{word:ren2}} {{word:shuo1}} {{word:le}}.",
+      "hanzi": "他 回 家, 对 老 女-人 说 了.",
+      "gloss": "he to return home, facing old (people female-human being to communicate perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 142,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "He went home and told the old woman about it."
+    },
+    {
+      "pinyin": "Lǎo nǚ-rén xīn-lǐ-de huǒ hěn dà.",
+      "english": "She was furious.",
+      "literally": "The fire in the old woman's heart is very big.",
+      "reading": "1",
+      "source": "built from the grammar (de-modifier, place-li-shang, hen-adjective), from the book's xīn-lǐ yǒu huǒ (kb_memory) made big for furious",
+      "ideas": [
+        "i11"
+      ],
+      "refs": "{{Word:lao3}} {{word:nv3}}-{{word:ren2}} {{word:xin1}}-{{word:li3}}-{{word:de}} {{word:huo3}} {{word:hen3}} {{word:da4}}.",
+      "hanzi": "老 女-人 心-里-的 火 很 大.",
+      "gloss": "old (people female-human being heart-inside-possessive marker fire very big.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 501,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The fire in the old woman's heart was very big, so she was very angry."
+    },
+    {
+      "pinyin": "Tā shuō: Nǐ tóu bù hǎo!",
+      "english": "She said: \"You fool!\"",
+      "literally": "She says: your head is not good!",
+      "reading": "1",
+      "source": "the book's story line (kb_memory: Nǐ tóu bù hǎo!) with tā shuō before it; speech-quote",
+      "ideas": [
+        "i12"
+      ],
+      "refs": "{{Word:ta1}} {{word:shuo1}}: {{Word:ni3}} {{word:tou2}} {{word:bu4}} {{word:hao3}}!",
+      "hanzi": "他 说: 你 头 不 好!",
+      "gloss": "he to communicate: you head not good!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 6,
+        "means": "yes-with-others",
+        "words": 6,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "She said: \"Your head is no good!\" (\"You are stupid!\")"
+    },
+    {
+      "pinyin": "Wǒ-men fàng-shuǐ-de dōng-xi huài le!",
+      "english": "\"Our trough is broken!\"",
+      "literally": "Our thing for putting water in has broken!",
+      "reading": "1",
+      "source": "built from the grammar (verb-de-person, de-modifier, le-changed); fàng-shuǐ-de dōng-xi is the trough's cast entry, the head of the dictionary's 盆 (tub) form; the book's line had bāo (bag)",
+      "ideas": [
+        "i13"
+      ],
+      "refs": "{{Word:wo3}}-{{word:men}} {{word:fang4}}-{{word:shui3}}-{{word:de}} {{word:dong1}}-{{light:xi1}} {{word:huai4}} {{word:le}}!",
+      "hanzi": "我-们 放-水-的 东-西 坏 了!",
+      "gloss": "I-more than one person to put-water-possessive marker east-west bad perfective aspect marker!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 501,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "\"Our thing for holding water (a water container, such as a tub or basin) is broken!\""
+    },
+    {
+      "pinyin": "Qù yào yī-ge hǎo-de!",
+      "english": "\"Go and ask for a good one!\"",
+      "literally": "Go and ask for a good one!",
+      "reading": "13",
+      "source": "the book's story line (kb_memory), unchanged; serial-verbs, measure-word, verb-de-thing",
+      "ideas": [
+        "i14"
+      ],
+      "refs": "{{Word:qu4}} {{word:yao4}} {{word:yi1}}-{{light:ge4}} {{word:hao3}}-{{word:de}}!",
+      "hanzi": "去 要 一-个 好-的!",
+      "gloss": "to go to want one-universal classifier good-possessive marker!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 14,
+        "means": "yes-with-others",
+        "words": 6,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "\"Go and ask for a good one!\""
+    },
+    {
+      "pinyin": "Dòng-wù gěi le tā-men yī-ge hǎo-de.",
+      "english": "The golden fish gave them a good trough.",
+      "literally": "The animal gave them a good one.",
+      "reading": "1",
+      "source": "adapted from the book's story line (kb_memory: … gěi le tā-men yī-ge hǎo bāo), hǎo-de for the trough; gei-give, le-done",
+      "ideas": [
+        "i15"
+      ],
+      "refs": "{{Word:dong4}}-{{word:wu4}} {{word:gei3}} {{word:le}} {{word:ta1}}-{{word:men}} {{word:yi1}}-{{light:ge4}} {{word:hao3}}-{{word:de}}.",
+      "hanzi": "动-物 给 了 他-们 一-个 好-的.",
+      "gloss": "to move-thing to give perfective aspect marker he-more than one person one-universal classifier good-possessive marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 15,
+        "means": "yes-with-others",
+        "words": 10,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The animal gave them a good one."
+    },
+    {
+      "pinyin": "Dàn lǎo nǚ-rén shuō: Wǒ yào dà fáng-zi!",
+      "english": "But the old woman said: \"I want a big house!\"",
+      "literally": "But the old woman says: I want a big house!",
+      "reading": "5",
+      "source": "built from the grammar (dan-shi-but, svo, adjective-noun); fáng-zi for house (the book's line had dà jiā)",
+      "ideas": [
+        "i16"
+      ],
+      "refs": "{{Word:dan4}} {{word:lao3}} {{word:nv3}}-{{word:ren2}} {{word:shuo1}}: {{Word:wo3}} {{word:yao4}} {{word:da4}} {{word:fang2}}-{{word:zi}}!",
+      "hanzi": "但 老 女-人 说: 我 要 大 房-子!",
+      "gloss": "but old (people female-human being to communicate: I to want big house-a light ending that makes a thing word!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 232,
+        "means": "yes-with-others",
+        "words": 10,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "But the old woman said: \"I want a big house!\""
+    },
+    {
+      "pinyin": "Tā-men yǒu le dà fáng-zi.",
+      "english": "They got a big house.",
+      "literally": "They came to have a big house.",
+      "reading": "1",
+      "source": "adapted from the book's story line (kb_memory: Tā-men yǒu le dà jiā), fáng-zi for house; le-done",
+      "ideas": [
+        "i17"
+      ],
+      "refs": "{{Word:ta1}}-{{word:men}} {{word:you3}} {{word:le}} {{word:da4}} {{word:fang2}}-{{word:zi}}.",
+      "hanzi": "他-们 有 了 大 房-子.",
+      "gloss": "he-more than one person to have perfective aspect marker big house-a light ending that makes a thing word.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 12,
+        "means": "yes-with-others",
+        "words": 7,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "They got a big house."
+    },
+    {
+      "pinyin": "Lǎo nǚ-rén jiù shuō: Wǒ yào hěn duō jīn!",
+      "english": "Then the old woman said: \"I want lots of money!\"",
+      "literally": "The old woman then says: I want very much money!",
+      "reading": "1",
+      "source": "adapted from the book's story line (kb_memory: Lǎo nǚ-rén yòu shuō: Wǒ yào yǒu hěn duō jīn!), jiù for then; speech-quote, hen-duo-noun",
+      "ideas": [
+        "i18"
+      ],
+      "refs": "{{Word:lao3}} {{word:nv3}}-{{word:ren2}} {{word:jiu4}} {{word:shuo1}}: {{Word:wo3}} {{word:yao4}} {{word:hen3}} {{word:duo1}} {{word:jin1}}!",
+      "hanzi": "老 女-人 就 说: 我 要 很 多 金!",
+      "gloss": "old (people female-human being then to communicate: I to want very many money!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 94,
+        "means": "yes-with-others",
+        "words": 10,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "Then the old woman said: \"I want a lot of money!\""
+    },
+    {
+      "pinyin": "Tā-men yǒu le hěn duō jīn.",
+      "english": "They got lots of money.",
+      "literally": "They came to have very much money.",
+      "reading": "1",
+      "source": "the book's story line (kb_memory), unchanged",
+      "ideas": [
+        "i19"
+      ],
+      "refs": "{{Word:ta1}}-{{word:men}} {{word:you3}} {{word:le}} {{word:hen3}} {{word:duo1}} {{word:jin1}}.",
+      "hanzi": "他-们 有 了 很 多 金.",
+      "gloss": "he-more than one person to have perfective aspect marker very many money.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 3,
+        "means": "yes-with-others",
+        "words": 7,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "They got a lot of money."
+    },
+    {
+      "pinyin": "Tā yòu shuō: Wǒ yào biàn zuì dà-de rén!",
+      "english": "Again she said: \"I want to be queen!\"",
+      "literally": "She says again: I want to become the biggest person!",
+      "reading": "39",
+      "source": "the book's story line (kb_memory: … Wǒ yào biàn zuì dà-de rén!) with tā yòu shuō before it; speech-quote, you-again, bian-became, zui-most",
+      "ideas": [
+        "i20"
+      ],
+      "refs": "{{Word:ta1}} {{word:you4}} {{word:shuo1}}: {{Word:wo3}} {{word:yao4}} {{word:bian4}} {{word:zui4}} {{word:da4}}-{{word:de}} {{word:ren2}}!",
+      "hanzi": "他 又 说: 我 要 变 最 大-的 人!",
+      "gloss": "he again to communicate: I to want to become most big-possessive marker human being!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 105,
+        "means": "yes-with-others",
+        "words": 10,
+        "depth": 2,
+        "late": [],
+        "warnings": [
+          "too deep: 2 levels of describing phrases, clauses or quotes inside each other (limit 1)"
+        ]
+      },
+      "blind": "She spoke again: \"I want to become the biggest (greatest, most important) person!\""
+    },
+    {
+      "pinyin": "Zuì-hòu, tā shuō: Hěn dà-de shuǐ wǒ dōu yào!",
+      "english": "At last she said: \"I want the whole sea!\"",
+      "literally": "At last, she says: the very big water, I want all of it!",
+      "reading": "19",
+      "source": "built from the grammar (comma-clauses, topic-comment, dou-all); the book's line (kb_memory: Wǒ yào hěn dà-de shuǐ dōu shì wǒ-de) has no meant reading in the first 500",
+      "ideas": [
+        "i21"
+      ],
+      "refs": "{{Word:zui4}}-{{word:hou4}}, {{word:ta1}} {{word:shuo1}}: {{Word:hen3}} {{word:da4}}-{{word:de}} {{word:shui3}} {{word:wo3}} {{word:dou1}} {{word:yao4}}!",
+      "hanzi": "最-后, 他 说: 很 大-的 水 我 都 要!",
+      "gloss": "most-behind, he to communicate: very big-possessive marker water I all to want!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 30,
+        "means": "yes-with-others",
+        "words": 11,
+        "depth": 1,
+        "late": [],
+        "warnings": [
+          "too long: 11 words (limit 10)"
+        ]
+      },
+      "blind": "In the end, she said: \"I want the whole big water (the sea), all of it!\""
+    },
+    {
+      "pinyin": "Zhè-ge dòng-wù yě yào tīng wǒ-de huà!",
+      "english": "\"And the golden fish must obey me!\"",
+      "literally": "This animal also must listen to my words!",
+      "reading": "61",
+      "source": "adapted from the book's story line (kb_memory: … yě yào tīng wǒ-de!), huà added so tīng has its thing; ye-also, serial-verbs, de-modifier",
+      "ideas": [
+        "i22"
+      ],
+      "refs": "{{Word:zhe4}}-{{light:ge4}} {{word:dong4}}-{{word:wu4}} {{word:ye3}} {{word:yao4}} {{word:ting1}} {{word:wo3}}-{{word:de}} {{word:hua4}}!",
+      "hanzi": "这-个 动-物 也 要 听 我-的 话!",
+      "gloss": "this-universal classifier to move-thing also to want to hear I-possessive marker words!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 87,
+        "means": "yes-with-others",
+        "words": 10,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "\"And this animal must also listen to my words (obey me)!\""
+    },
+    {
+      "pinyin": "Zhè-ge dòng-wù shénme dōu méi shuō.",
+      "english": "The golden fish said nothing.",
+      "literally": "This animal said nothing at all.",
+      "reading": "1",
+      "source": "the book's story line (kb_memory), the short name for the subject; shenme-dou",
+      "ideas": [
+        "i23"
+      ],
+      "refs": "{{Word:zhe4}}-{{light:ge4}} {{word:dong4}}-{{word:wu4}} {{word:shen2me}} {{word:dou1}} {{word:mei2}} {{word:shuo1}}.",
+      "hanzi": "这-个 动-物 什么 都 没 说.",
+      "gloss": "this-universal classifier to move-thing what? which? all negative particle used exclusively to negate the verb you (to form meiyou) to communicate.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 9,
+        "means": "yes-with-others",
+        "words": 8,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The animal said nothing."
+    },
+    {
+      "pinyin": "Tā jiù qù le shuǐ-lǐ.",
+      "english": "It just swam off into the water.",
+      "literally": "It just went into the water.",
+      "reading": "4",
+      "source": "the book's story line (kb_memory: … jiù qù le shuǐ-lǐ) as a sentence of its own; jiu-only, le-done, place-li-shang",
+      "ideas": [
+        "i24"
+      ],
+      "refs": "{{Word:ta1}} {{word:jiu4}} {{word:qu4}} {{word:le}} {{word:shui3}}-{{word:li3}}.",
+      "hanzi": "他 就 去 了 水-里.",
+      "gloss": "he then to go perfective aspect marker water-inside.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 5,
+        "means": "yes-with-others",
+        "words": 6,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "It went into the water."
+    },
+    {
+      "pinyin": "Tā bù huí-lái le.",
+      "english": "It never came back.",
+      "literally": "It does not come back any more.",
+      "reading": "1",
+      "source": "built from the grammar (bu-negation, le-new-situation); the book's méi-yǒu huí-lái says only \"did not come back\"",
+      "ideas": [
+        "i25"
+      ],
+      "refs": "{{Word:ta1}} {{word:bu4}} {{word:hui2}}-{{word:lai2}} {{word:le}}.",
+      "hanzi": "他 不 回-来 了.",
+      "gloss": "he not to return-to come perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 15,
+        "means": "yes-with-others",
+        "words": 5,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "It did not come back."
+    },
+    {
+      "pinyin": "Lǎo nán-rén huí jiā le.",
+      "english": "The old man went home.",
+      "literally": "The old man returned home.",
+      "reading": "1",
+      "source": "adapted from the book's story line (kb_memory: Lǎo nán-rén huí jiā:), le-new-situation",
+      "ideas": [
+        "i26"
+      ],
+      "refs": "{{Word:lao3}} {{word:nan2}}-{{word:ren2}} {{word:hui2}} {{word:jia1}} {{word:le}}.",
+      "hanzi": "老 难-人 回 家 了.",
+      "gloss": "old (people difficult-human being to return home perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 15,
+        "means": "yes-with-others",
+        "words": 6,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The old man went home."
+    },
+    {
+      "pinyin": "Dà fáng-zi méi le, jīn yě méi le.",
+      "english": "The big house was gone, the money was gone.",
+      "literally": "The big house is gone, the money is also gone.",
+      "reading": "1",
+      "source": "adapted from the book's story line (kb_memory: dà jiā méi-yǒu le, jīn méi-yǒu le), fáng-zi for house; mei-gone, ye-also, comma-clauses",
+      "ideas": [
+        "i27"
+      ],
+      "refs": "{{Word:da4}} {{word:fang2}}-{{word:zi}} {{word:mei2}} {{word:le}}, {{word:jin1}} {{word:ye3}} {{word:mei2}} {{word:le}}.",
+      "hanzi": "大 房-子 没 了, 金 也 没 了.",
+      "gloss": "big house-a light ending that makes a thing word negative particle used exclusively to negate the verb you (to form meiyou) perfective aspect marker, money also negative particle used exclusively to negate the verb you (to form meiyou) perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 12,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The big house was gone, and the money was gone too."
+    },
+    {
+      "pinyin": "Lǎo nǚ-rén zuò-zài zhè-ge dōng-xi pángbiān.",
+      "english": "The old woman sat beside the trough.",
+      "literally": "The old woman sits at this thing's side.",
+      "reading": "1",
+      "source": "adapted from the book's story line (kb_memory: Lǎo nǚ-rén zuò-zài huài-de bāo pángbiān), the trough's short name; svo, measure-word, owner-part",
+      "ideas": [
+        "i28"
+      ],
+      "refs": "{{Word:lao3}} {{word:nv3}}-{{word:ren2}} {{word:zuo4}}-{{word:zai4}} {{word:zhe4}}-{{light:ge4}} {{word:dong1}}-{{light:xi1}} {{word:pang2bian1}}.",
+      "hanzi": "老 女-人 做-在 这-个 东-西 旁边.",
+      "gloss": "old (people female-human being to do-to exist at this-universal classifier east-west side.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 501,
+        "means": "yes-with-others",
+        "words": 10,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The old woman sat beside this thing."
+    },
+    {
+      "pinyin": "Zhè-ge dōng-xi hái shì huài-de.",
+      "english": "The trough was broken again.",
+      "literally": "This thing is still a broken one.",
+      "reading": "68",
+      "source": "built from the grammar (hai-still, shi-copula, verb-de-thing); \"broken\" moved out of the sitting sentence, where huài-de fàng-shuǐ-de dōng-xi had no meant reading",
+      "ideas": [
+        "i28"
+      ],
+      "refs": "{{Word:zhe4}}-{{light:ge4}} {{word:dong1}}-{{light:xi1}} {{word:hai2}} {{word:shi4}} {{word:huai4}}-{{word:de}}.",
+      "hanzi": "这-个 东-西 还 是 坏-的.",
+      "gloss": "this-universal classifier east-west still to be bad-possessive marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 121,
+        "means": "yes-with-others",
+        "words": 8,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "This thing was still broken."
+    }
+  ],
+  "sketch": [
+    {
+      "id": "i1",
+      "idea": "an old man and his old wife",
+      "needed": true,
+      "links": "",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i2",
+      "idea": "they lived by the sea (a very big water)",
+      "needed": true,
+      "links": "after i1",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i3",
+      "idea": "they were poor (had no money)",
+      "needed": true,
+      "links": "after i2",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i4",
+      "idea": "the old man fished (hunted water animals)",
+      "needed": true,
+      "links": "after i3",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i5",
+      "idea": "one day he caught a golden fish (a yellow water animal)",
+      "needed": true,
+      "links": "after i4",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i6",
+      "idea": "the fish spoke: put me back in the water",
+      "needed": true,
+      "links": "after i5",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i7",
+      "idea": "whatever you want, I will give you",
+      "needed": true,
+      "links": "part of i6's speech",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i8",
+      "idea": "the old man was kind",
+      "needed": true,
+      "links": "reason for i9",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i9",
+      "idea": "he asked for nothing and put it back in the water",
+      "needed": true,
+      "links": "after i8",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i10",
+      "idea": "he went home and told his wife",
+      "needed": true,
+      "links": "after i9",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i11",
+      "idea": "she was furious",
+      "needed": true,
+      "links": "after i10",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i12",
+      "idea": "\"You fool!\"",
+      "needed": false,
+      "links": "colour, part of i11's speech",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i13",
+      "idea": "our trough is broken",
+      "needed": true,
+      "links": "part of i11's speech",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i14",
+      "idea": "go and ask for a good one",
+      "needed": true,
+      "links": "part of i11's speech, because of i13",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i15",
+      "idea": "the golden fish gave them a good trough",
+      "needed": true,
+      "links": "after i14",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i16",
+      "idea": "but the old woman said: I want a big house",
+      "needed": true,
+      "links": "but, after i15",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i17",
+      "idea": "they got a big house",
+      "needed": true,
+      "links": "after i16",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i18",
+      "idea": "then the old woman said: I want lots of money",
+      "needed": true,
+      "links": "then, after i17",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i19",
+      "idea": "they got lots of money",
+      "needed": true,
+      "links": "after i18",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i20",
+      "idea": "again she said: I want to be queen (the biggest person)",
+      "needed": true,
+      "links": "again, after i19",
+      "verdict": "weaker",
+      "why": "The reader got 'the greatest, most important person', and only 'perhaps a ruler'. That she wants to be queen or a ruler is a guess, not something the reader is sure of."
+    },
+    {
+      "id": "i21",
+      "idea": "at last she said: I want the whole sea to be mine",
+      "needed": true,
+      "links": "at last, after i20",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i22",
+      "idea": "and the golden fish must obey me",
+      "needed": true,
+      "links": "and, part of i21's speech",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i23",
+      "idea": "the golden fish said nothing",
+      "needed": true,
+      "links": "after i22",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i24",
+      "idea": "it just swam off into the water",
+      "needed": true,
+      "links": "after i23",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i25",
+      "idea": "and never came back",
+      "needed": true,
+      "links": "and, after i24",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i26",
+      "idea": "the old man went home",
+      "needed": true,
+      "links": "after i25",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i27",
+      "idea": "the big house was gone, the money was gone",
+      "needed": true,
+      "links": "what he found at i26",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i28",
+      "idea": "the old woman sat beside the broken trough",
+      "needed": true,
+      "links": "what he found at i26; back to i13",
+      "verdict": "kept",
+      "why": ""
+    }
+  ],
+  "cast": [
+    {
+      "thing": "sea",
+      "description": "hěn dà-de shuǐ",
+      "short": "hěn dà-de shuǐ"
+    },
+    {
+      "thing": "the old man's wife",
+      "description": "jiā lǐ-de nǚ-rén",
+      "short": "lǎo nǚ-rén"
+    },
+    {
+      "thing": "the golden fish",
+      "description": "shuǐ-lǐ-de dòng-wù",
+      "short": "zhè-ge dòng-wù"
+    },
+    {
+      "thing": "trough",
+      "description": "fàng-shuǐ-de dōng-xi",
+      "short": "zhè-ge dōng-xi"
+    }
+  ],
+  "castProblems": [],
+  "structures": [
+    {
+      "idea": "i1",
+      "pattern": "svo, measure-word, adjective-noun; de-modifier, place-li-shang, owner-part, ye-also, hen-adjective",
+      "lesson": "who-does-what, pointing, modifying-nouns; modifying-nouns, where-it-is, roles-of-a-word, also-and-all, modifying-nouns"
+    },
+    {
+      "idea": "i2",
+      "pattern": "zai-place, de-modifier, hen-adjective, owner-part",
+      "lesson": "where-it-is, modifying-nouns, modifying-nouns, roles-of-a-word"
+    },
+    {
+      "idea": "i3",
+      "pattern": "mei-you-not-have",
+      "lesson": "who-does-what"
+    },
+    {
+      "idea": "i4",
+      "pattern": "svo, de-modifier, place-li-shang",
+      "lesson": "who-does-what, modifying-nouns, where-it-is"
+    },
+    {
+      "idea": "i5",
+      "pattern": "ci-times, le-done, measure-word; shi-copula, de-modifier",
+      "lesson": "around-an-action, when-it-happens, pointing; words-and-sentences, modifying-nouns"
+    },
+    {
+      "idea": "i6",
+      "pattern": "speech-quote, ba-handle, serial-verbs, place-li-shang",
+      "lesson": "questions, becoming-and-making, moving, where-it-is"
+    },
+    {
+      "idea": "i7",
+      "pattern": "comma-clauses, jiu-then, gei-give",
+      "lesson": "also-and-all, linking-sentences, inside-a-sentence"
+    },
+    {
+      "idea": "i8",
+      "pattern": "shi-copula, adjective-noun",
+      "lesson": "words-and-sentences, modifying-nouns"
+    },
+    {
+      "idea": "i9",
+      "pattern": "shenme-dou; ba-handle, serial-verbs, le-done, place-li-shang",
+      "lesson": "also-and-all; becoming-and-making, moving, when-it-happens, where-it-is"
+    },
+    {
+      "idea": "i10",
+      "pattern": "comma-clauses, dui-toward, le-new-situation",
+      "lesson": "also-and-all, inside-a-sentence, moving"
+    },
+    {
+      "idea": "i11",
+      "pattern": "de-modifier, place-li-shang, hen-adjective",
+      "lesson": "modifying-nouns, where-it-is, modifying-nouns"
+    },
+    {
+      "idea": "i12",
+      "pattern": "speech-quote, bu-adjective",
+      "lesson": "questions, how-much"
+    },
+    {
+      "idea": "i13",
+      "pattern": "verb-de-person, de-modifier, le-changed",
+      "lesson": "roles-of-a-word, modifying-nouns, becoming-and-making"
+    },
+    {
+      "idea": "i14",
+      "pattern": "serial-verbs, measure-word, verb-de-thing",
+      "lesson": "moving, pointing, roles-of-a-word"
+    },
+    {
+      "idea": "i15",
+      "pattern": "gei-give, le-done, measure-word, verb-de-thing",
+      "lesson": "inside-a-sentence, when-it-happens, pointing, roles-of-a-word"
+    },
+    {
+      "idea": "i16",
+      "pattern": "dan-shi-but, svo, adjective-noun",
+      "lesson": "linking-sentences, who-does-what, modifying-nouns"
+    },
+    {
+      "idea": "i17",
+      "pattern": "svo, le-done, adjective-noun",
+      "lesson": "who-does-what, when-it-happens, modifying-nouns"
+    },
+    {
+      "idea": "i18",
+      "pattern": "speech-quote, hen-duo-noun",
+      "lesson": "questions, moving"
+    },
+    {
+      "idea": "i19",
+      "pattern": "svo, le-done, hen-duo-noun",
+      "lesson": "who-does-what, when-it-happens, moving"
+    },
+    {
+      "idea": "i20",
+      "pattern": "speech-quote, you-again, bian-became, zui-most, de-modifier",
+      "lesson": "questions, around-an-action, becoming-and-making, comparing, modifying-nouns"
+    },
+    {
+      "idea": "i21",
+      "pattern": "comma-clauses, topic-comment, dou-all, de-modifier, hen-adjective",
+      "lesson": "also-and-all, questions, also-and-all, modifying-nouns, modifying-nouns"
+    },
+    {
+      "idea": "i22",
+      "pattern": "measure-word, ye-also, serial-verbs, de-modifier",
+      "lesson": "pointing, also-and-all, moving, modifying-nouns"
+    },
+    {
+      "idea": "i23",
+      "pattern": "measure-word, shenme-dou",
+      "lesson": "pointing, also-and-all"
+    },
+    {
+      "idea": "i24",
+      "pattern": "jiu-only, le-done, place-li-shang",
+      "lesson": "linking-sentences, when-it-happens, where-it-is"
+    },
+    {
+      "idea": "i25",
+      "pattern": "bu-negation, le-new-situation",
+      "lesson": "who-does-what, moving"
+    },
+    {
+      "idea": "i26",
+      "pattern": "svo, le-new-situation",
+      "lesson": "who-does-what, moving"
+    },
+    {
+      "idea": "i27",
+      "pattern": "mei-gone, ye-also, comma-clauses, adjective-noun",
+      "lesson": "when-it-happens, also-and-all, also-and-all, modifying-nouns"
+    },
+    {
+      "idea": "i28",
+      "pattern": "svo, measure-word, owner-part; hai-still, shi-copula, verb-de-thing",
+      "lesson": "who-does-what, pointing, roles-of-a-word; also-and-all, words-and-sentences, roles-of-a-word"
+    }
+  ],
+  "gaps": [
+    {
+      "idea": "trough",
+      "description": "fàng-shuǐ-de dōng-xi",
+      "note": "no word; the head of the dictionary's 盆 (tub) form, which is 11 words. Glossary proposal below"
+    },
+    {
+      "idea": "queen",
+      "description": "zuì dà-de rén",
+      "note": "the story's own literal note; the king form is 10 words and no woman ruler form exists, so the queen is only \"the biggest person\""
+    },
+    {
+      "idea": "fool (as a name you call someone)",
+      "description": "Nǐ tóu bù hǎo!",
+      "note": "\"your head is not good\" says stupid, not the insult; marked colour"
+    },
+    {
+      "idea": "golden",
+      "description": "jīn-de yánsè",
+      "note": "the book's yellow (the story's literal note); \"golden\" as gold-made is not said"
+    },
+    {
+      "idea": "fish",
+      "description": "shuǐ-lǐ-de dòng-wù",
+      "note": "the dictionary's form is zài-shuǐ-lǐ-de dòng-wù; zài dropped so the noun reads inside other sentences"
+    },
+    {
+      "idea": "sea",
+      "description": "hěn dà-de shuǐ",
+      "note": "the story's literal note; the dictionary's form (hěn-dà-de yǒu-shuǐ-de dì-fang) is 8 words"
+    },
+    {
+      "idea": "furious",
+      "description": "xīn-lǐ-de huǒ hěn dà",
+      "note": "the fire in her heart is very big; shēng-qì glosses as \"give birth-air\", so not used"
+    },
+    {
+      "idea": "never came back",
+      "description": "bù huí-lái le",
+      "note": "\"does not come back any more\"; cóng-lái (ever) splits into cóng + lái in the parse, so never is weaker"
+    },
+    {
+      "idea": "swam off",
+      "description": "qù le shuǐ-lǐ",
+      "note": "swim is zài shuǐ-lǐ wánr (play in the water); \"went into the water\" keeps the movement only"
+    },
+    {
+      "idea": "the whole sea to be mine",
+      "description": "Hěn dà-de shuǐ wǒ dōu yào!",
+      "note": "\"I want all of the big water\"; \"to be mine\" (owning) is weaker, the book's dōu shì wǒ-de had no meant reading"
+    },
+    {
+      "idea": "obey",
+      "description": "tīng wǒ-de huà",
+      "note": "listen to my words; Mandarin's own phrasing"
+    },
+    {
+      "idea": "kind",
+      "description": "hǎo rén",
+      "note": "a good person; kindness itself is not named"
+    }
+  ],
+  "added": [
+    "The reader guessed that the old man is the one who goes back to the animal each time to ask. The text does not say who goes."
+  ],
+  "blind": {
+    "whole": "A poor old man and his old wife live beside a very big water (a sea or a big lake). The man fishes, and one day he catches a gold-colored water animal (most likely a fish) that can talk. It asks him to put it back and promises to give him whatever he wants. He is a good man, asks for nothing, and lets it go. His wife is angry, calls him stupid, and sends him to ask for a new water container because theirs is broken. The animal gives them one. She then asks for a big house, then a lot of money, then to become the greatest person, and finally for the whole sea and for the animal itself to obey her. The animal says nothing, goes into the water and does not come back. When the old man gets home, the house and the money are gone, and the old woman is sitting by the same broken water container as before.",
+    "unsure": "S4, S7, S21, S22: jin is glossed 'money', but it also means gold. I read S7 as 'gold-colored' and the other sentences as money. Read with the gloss alone, S7 would be 'money-colored'. S5: zhao is glossed 'to hunt', and its everyday sense is 'to look for'. Either way he is after water animals, which I take to mean fishing. The text only says 'animal in the water', so it is probably a fish but could be some other water creature. S3, S24: 'very big water' could be the sea, a big lake or a big river. S16: 'the thing for putting water' is some water container (tub, basin, bucket, trough). Huai is glossed 'bad', and I read it as 'broken' (it could also mean 'gone bad'). S17, S18, S20, S22: the text never says who goes to the animal to ask. Since he went to the water in S5 and comes home in S29, I assume it is the old man. S23: 'the most big person' I read as the greatest or most important person, perhaps a ruler, not someone big in size. Ta is glossed 'he', but the speaker is the old woman. S24: this could also be read as 'even the big water, I want it'. S25: yao could mean 'must' (my reading) or 'wants to', as in 'the animal also wants to listen to my words'; the first fits her demand better. S27: ta here is the animal. S31: zuo is glossed 'to do', but zuo-zai must mean 'sat at'. S31 also never says what 'this thing' is. I take it to be the broken water container from S16, because S32 says it is still broken."
+  },
+  "notes": "Translated by hand following the translate skill (2026-10-22). Every reading was picked by filtering the full reading list (askReading, up to 500) for the meant tree, then checked. FOR THE AUTHOR: (1) kb_memory returns the book's own story-line translation of this very story (Yī-ge lǎo nán-rén hé tā-de lǎo nǚ-rén …, Jīn-de yánsè-de dòng-wù …), so this test is not blind: many sentences reuse or adapt those lines and say so in source. (2) The book's lines have three weak spots I changed: bāo (bag) for the trough, dà jiā (big home) for the big house, and Wǒ yào hěn dà-de shuǐ dōu shì wǒ-de, which has no meant reading in the first 500 (every reading I found nests wrongly). (3) Two-de sentences blow past 500 readings: Lǎo nǚ-rén xīn-lǐ yǒu hěn dà-de huǒ and Lǎo nǚ-rén zuò-zài (huài-de) fàng-shuǐ-de dōng-xi pángbiān have no meant reading among the first 500, so the second became zuò-zài zhè-ge dōng-xi pángbiān plus a sentence for broken. (4) Hòu-lái, … and Zuì-hòu, … wǒ-de pick the calling-hail reading first; Tā hòu-lái … reads as \"his later\"; Zuì-hòu, tā shuō: … parses as Time , S : S, not through the Say rule. (5) cóng-lái splits into cóng + lái; zuò-zài glosses as \"do-at\"; kb_gloss of shēng-qì is \"give birth-air\". (6) kb_lookup for trough, mine and queen returns unrelated kind-of rows (partner, animal). (7) Dàn lǎo nǚ-rén shuō: … parses through dan-shi-but and comma-clauses, not speech-quote. Warnings kept: sentence 23 is 2 levels deep (the shì version is too), sentence 24 is 11 words (dropping the comma risks the hail reading). Tried and dropped: Hòu-lái, lǎo nǚ-rén shuō (hail); Wǒ yào hěn dà-de shuǐ dōu shì wǒ-de (no meant reading); Huài-de fàng-shuǐ-de dōng-xi (no meant reading inside the sitting sentence). Not said, by choice: \"spoke\" is plain shuō; \"whatever\" is the book's shénme … shénme. Glossary proposal: trough -> fàng-shuǐ-de dōng-xi: no word exists; it is the head of the 盆 (tub) form and short enough to recur in a story. Glossary proposal: queen -> zuì dà-de rén: the story's own note; the king form is 10 words and has no woman form. Glossary proposal: never came back -> bù huí-lái le: cóng-lái méi-yǒu splits wrongly, and bù … le says \"no more\". Glossary proposal: furious -> xīn-lǐ-de huǒ hěn dà: parses with reading 1, while xīn-lǐ yǒu hěn dà-de huǒ has no meant reading in the first 500. Glossary proposal: fool (insult) -> nǐ tóu bù hǎo: the book's own line. Translated before kb_memory hid the stories' own lines (HAOSHUODE_MEMORY_SKIP), so some sentences reuse the book's lines and the book overlap is higher than a fresh run would give.",
+  "problems": [],
+  "timing": {},
+  "item": {
+    "id": "story-10",
+    "kind": "story",
+    "title": "The Fisherman and the Golden Fish"
+  },
+  "book": {
+    "overlap": 0.851
+  }
+}

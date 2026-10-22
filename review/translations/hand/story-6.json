@@ -1,0 +1,1138 @@
+{
+  "version": 1,
+  "text": "By the water, a mother duck had six ducklings. (Literally: \"six little flying animals.\") Five were yellow and pretty. One was big, dark, and ugly (literally: \"not good-looking\"). The other birds said: \"You're so ugly! You're not like us!\" They wouldn't play with him, and they pecked him too (literally: \"hit him\"). He was very unhappy, and went far away. Winter came. The water froze (literally: \"became hard\"). He was cold and had nothing to eat. Spring came (literally: \"the time that turns warm\"), and he had grown. He saw three big white birds on the water, so beautiful! (Swans.) He was scared, but he swam up to them. He thought: \"They will peck me.\" He looked down at the water. In the water was a big white bird: it was him! He wasn't an ugly duckling. He was a swan! The other swans played with him, and he was very happy.",
+  "lesson": null,
+  "model": "claude-opus-5-5 (by hand, subagents)",
+  "sentences": [
+    {
+      "pinyin": "Shuǐ pángbiān yǒu yī-ge fēi-de dòng-wù māma.",
+      "english": "By the water there was a mother duck.",
+      "literally": "Beside the water there is a flying-animal mother.",
+      "reading": "20",
+      "source": "adapted from the book's sentence for this idea (kb_memory 69%, lesson none: 'Zài shuǐ pángbiān, yī-ge fēi-de dòng-wù-de jiā-lǐ yǒu le liù-ge xiǎo fēi-de dòng-wù.', 16 words), split in two; the mother named fēi-de dòng-wù māma (fēi-de dòng-wù is the form of 鸟 bird, lesson direction-and-result)",
+      "ideas": [
+        "i1"
+      ],
+      "refs": "{{Word:shui3}} {{word:pang2bian1}} {{word:you3}} {{word:yi1}}-{{light:ge4}} {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:ma1ma}}.",
+      "hanzi": "水 旁边 有 一-个 飞-的 动-物 妈妈.",
+      "gloss": "water side to have one-universal classifier to fly-possessive marker to move-thing mom.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 74,
+        "means": "yes-with-others",
+        "words": 10,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "Beside the water there is a mother bird (a 'flying animal mother')."
+    },
+    {
+      "pinyin": "Tā yǒu liù-ge xiǎo fēi-de dòng-wù.",
+      "english": "She had six ducklings.",
+      "literally": "She has six little flying animals.",
+      "reading": "1",
+      "source": "the second half of the same book sentence, with the text's own literal 'six little flying animals'",
+      "ideas": [
+        "i2"
+      ],
+      "refs": "{{Word:ta1}} {{word:you3}} {{word:liu4}}-{{light:ge4}} {{word:xiao3}} {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}}.",
+      "hanzi": "他 有 六-个 小 飞-的 动-物.",
+      "gloss": "he to have six-universal classifier little to fly-possessive marker to move-thing.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 6,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "She has six little birds (chicks)."
+    },
+    {
+      "pinyin": "Wǔ-ge shì jīn-de yánsè-de, hěn hǎo-kàn.",
+      "english": "Five were yellow and pretty.",
+      "literally": "Five are of the gold colour, very good-looking.",
+      "reading": "49",
+      "source": "the book's sentence, as it is (kb_memory 36%, the first half of its item); jīn-de yánsè is the form of 黄色 yellow",
+      "ideas": [
+        "i3"
+      ],
+      "refs": "{{Word:wu3}}-{{light:ge4}} {{word:shi4}} {{word:jin1}}-{{word:de}} {{word:yan2se4}}-{{word:de}}, {{word:hen3}} {{word:hao3}}-{{word:kan4}}.",
+      "hanzi": "五-个 是 金-的 颜色-的, 很 好-看.",
+      "gloss": "five-universal classifier to be money-possessive marker color-possessive marker, very good-to look at.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 117,
+        "means": "yes-with-others",
+        "words": 10,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "Five of them are gold-colored and very good-looking."
+    },
+    {
+      "pinyin": "Yī-ge hěn dà, hěn hēi, yě hěn nán-kàn.",
+      "english": "One was big, dark and ugly.",
+      "literally": "One is very big, very black, and also very ugly-looking.",
+      "reading": "1",
+      "source": "adapted from the second half of the same book item ('Yī-ge hěn dà, shì hēi-sè-de, bù hǎo-kàn.'): hěn hēi for dark (kb_lookup: 'Wài-miàn hěn hēi.', It's dark outside) and nán-kàn, the gloss of 丑 and 难看 (ugly), which the book's next sentence uses too",
+      "ideas": [
+        "i4"
+      ],
+      "refs": "{{Word:yi1}}-{{light:ge4}} {{word:hen3}} {{word:da4}}, {{word:hen3}} {{word:hei1}}, {{word:ye3}} {{word:hen3}} {{word:nan2}}-{{word:kan4}}.",
+      "hanzi": "一-个 很 大, 很 黑, 也 很 难-看.",
+      "gloss": "one-universal classifier very big, very black, also very difficult-to look at.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 4,
+        "means": "yes-with-others",
+        "words": 10,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "One is very big, very black, and also very ugly."
+    },
+    {
+      "pinyin": "Bié-de fēi-de dòng-wù shuō: Nǐ nán-kàn!",
+      "english": "The other birds said: 'You're ugly!'",
+      "literally": "The other flying animals say: you are ugly!",
+      "reading": "6",
+      "source": "the book's sentence (kb_memory 50%, 'Bié-de fēi-de dòng-wù shuō: Nǐ zhēn nán-kàn!') without zhēn: with it the sentence has over 500 readings, without it 349",
+      "ideas": [
+        "i5"
+      ],
+      "refs": "{{Word:bie2}}-{{word:de}} {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:shuo1}}: {{Word:ni3}} {{word:nan2}}-{{word:kan4}}!",
+      "hanzi": "别-的 飞-的 动-物 说: 你 难-看!",
+      "gloss": "other-possessive marker to fly-possessive marker to move-thing to communicate: you difficult-to look at!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 349,
+        "means": "yes-with-others",
+        "words": 10,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The other birds say: You are ugly!"
+    },
+    {
+      "pinyin": "Nǐ hé wǒ-men bù yī-yàng!",
+      "english": "You're not like us!",
+      "literally": "You and we are not the same!",
+      "reading": "1",
+      "source": "the second half of the same book item, as it is",
+      "ideas": [
+        "i6"
+      ],
+      "refs": "{{Word:ni3}} {{word:he2}} {{word:wo3}}-{{word:men}} {{word:bu4}} {{word:yi1}}-{{word:yang4}}!",
+      "hanzi": "你 和 我-们 不 一-样!",
+      "gloss": "you and I-more than one person not one-look!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 32,
+        "means": "yes-with-others",
+        "words": 7,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "You are not the same as us!"
+    },
+    {
+      "pinyin": "Tā-men bù hé tā wánr, yě dǎ tā.",
+      "english": "They wouldn't play with him, and they pecked him too.",
+      "literally": "They don't play with him, and also hit him.",
+      "reading": "1",
+      "source": "the book's sentence, as it is (kb_memory 33%); dǎ is the text's own literal 'hit him'",
+      "ideas": [
+        "i7",
+        "i8"
+      ],
+      "refs": "{{Word:ta1}}-{{word:men}} {{word:bu4}} {{word:he2}} {{word:ta1}} {{word:wan2r}}, {{word:ye3}} {{word:da3}} {{word:ta1}}.",
+      "hanzi": "他-们 不 和 他 玩儿, 也 打 他.",
+      "gloss": "he-more than one person not and he to play, also to hit he.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 6,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "They don't play with him, and they also hit him."
+    },
+    {
+      "pinyin": "Tā hěn bù kāi-xīn.",
+      "english": "He was very unhappy.",
+      "literally": "He is very not happy.",
+      "reading": "1",
+      "source": "the first half of the book's 'Tā hěn bù kāi-xīn, jiù qù le hěn yuǎn-de dì-fang.' (kb_memory 100%), split: whole, it is 13 words and its meant reading is not among its first 500",
+      "ideas": [
+        "i9"
+      ],
+      "refs": "{{Word:ta1}} {{word:hen3}} {{word:bu4}} {{word:kai1}}-{{word:xin1}}.",
+      "hanzi": "他 很 不 开-心.",
+      "gloss": "he very not to open-heart.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 6,
+        "means": "yes-with-others",
+        "words": 5,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "He is very unhappy."
+    },
+    {
+      "pinyin": "Tā jiù qù le hěn yuǎn-de dì-fang.",
+      "english": "So he went far away.",
+      "literally": "He then went to a very far place.",
+      "reading": "265",
+      "source": "the second half of the same book sentence, with tā before it",
+      "ideas": [
+        "i10"
+      ],
+      "refs": "{{Word:ta1}} {{word:jiu4}} {{word:qu4}} {{word:le}} {{word:hen3}} {{word:yuan3}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",
+      "hanzi": "他 就 去 了 很 远-的 地-方.",
+      "gloss": "he then to go perfective aspect marker very far-possessive marker floor-side.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 288,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "So he went to a very far-away place."
+    },
+    {
+      "pinyin": "Lěng-de shí-jiān lái le.",
+      "english": "Winter came.",
+      "literally": "The cold time came.",
+      "reading": "4",
+      "source": "the book's sentence, as it is (kb_memory 50%); lěng-de shí-jiān is the form of 冬天 winter (lesson how-much)",
+      "ideas": [
+        "i11"
+      ],
+      "refs": "{{Word:leng3}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:lai2}} {{word:le}}.",
+      "hanzi": "冷-的 十-间 来 了.",
+      "gloss": "cold-possessive marker ten-between to come perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 26,
+        "means": "yes-with-others",
+        "words": 6,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The cold time (winter) came."
+    },
+    {
+      "pinyin": "Shuǐ biàn yìng le.",
+      "english": "The water froze.",
+      "literally": "The water became hard.",
+      "reading": "1",
+      "source": "the book's sentence, as it is (kb_memory 50%); the form of 冻 freeze is lěng dào biàn yìng",
+      "ideas": [
+        "i12"
+      ],
+      "refs": "{{Word:shui3}} {{word:bian4}} {{word:ying4}} {{word:le}}.",
+      "hanzi": "水 变 硬 了.",
+      "gloss": "water to become hard perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 6,
+        "means": "yes-with-others",
+        "words": 4,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The water became hard (it froze)."
+    },
+    {
+      "pinyin": "Tā hěn lěng, méi-yǒu chī-de.",
+      "english": "He was cold and had nothing to eat.",
+      "literally": "He is very cold, has no things to eat.",
+      "reading": "36",
+      "source": "the book's sentence, as it is (kb_memory 50%)",
+      "ideas": [
+        "i13",
+        "i14"
+      ],
+      "refs": "{{Word:ta1}} {{word:hen3}} {{word:leng3}}, {{word:mei2}}-{{word:you3}} {{word:chi1}}-{{word:de}}.",
+      "hanzi": "他 很 冷, 没-有 吃-的.",
+      "gloss": "he very cold, negative particle used exclusively to negate the verb you (to form meiyou)-to have to eat-possessive marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 50,
+        "means": "yes-with-others",
+        "words": 7,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "He was very cold and had nothing to eat."
+    },
+    {
+      "pinyin": "Biàn rè-de shí-jiān lái le.",
+      "english": "Spring came.",
+      "literally": "The time that turns hot came.",
+      "reading": "33",
+      "source": "the first half of the book's 'Biàn rè-de shí-jiān lái le, tā yě biàn dà le.' (kb_memory 50%), split: whole, it is 12 words with over 500 readings",
+      "ideas": [
+        "i15"
+      ],
+      "refs": "{{Word:bian4}} {{word:re4}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:lai2}} {{word:le}}.",
+      "hanzi": "变 热-的 十-间 来 了.",
+      "gloss": "to become hot-possessive marker ten-between to come perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 185,
+        "means": "yes-with-others",
+        "words": 7,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The time when it becomes hot (spring or summer) came."
+    },
+    {
+      "pinyin": "Tā biàn dà le.",
+      "english": "He had grown.",
+      "literally": "He became big.",
+      "reading": "1",
+      "source": "the second half of the same book sentence; biàn dà is the form of 长 grow ('Zhè-ge dòng-wù biàn dà le.', lesson becoming-and-making)",
+      "ideas": [
+        "i16"
+      ],
+      "refs": "{{Word:ta1}} {{word:bian4}} {{word:da4}} {{word:le}}.",
+      "hanzi": "他 变 大 了.",
+      "gloss": "he to become big perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 5,
+        "means": "yes-with-others",
+        "words": 4,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "He grew big."
+    },
+    {
+      "pinyin": "Tā kàn-dào sān-ge fēi-de dòng-wù.",
+      "english": "He saw three birds.",
+      "literally": "He sees three flying animals.",
+      "reading": "88",
+      "source": "adapted from the book's 'Tā kàn-dào shuǐ-shàng yǒu sān-ge dà-de bái-sè fēi-de dòng-wù, zhēn hǎo-kàn!' (kb_memory 75%, 18 words), split in three",
+      "ideas": [
+        "i17"
+      ],
+      "refs": "{{Word:ta1}} {{word:kan4}}-{{word:dao4}} {{word:san1}}-{{light:ge4}} {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}}.",
+      "hanzi": "他 看-到 三-个 飞-的 动-物.",
+      "gloss": "he to look at-to arrive three-universal classifier to fly-possessive marker to move-thing.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 328,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "He saw three birds."
+    },
+    {
+      "pinyin": "Tā-men zài shuǐ shàng, hěn dà, hěn bái.",
+      "english": "They were on the water, big and white.",
+      "literally": "They are on the water, very big, very white.",
+      "reading": "1",
+      "source": "the second part of that split, built like sentence 4: who, then describing words joined by commas",
+      "ideas": [
+        "i17"
+      ],
+      "refs": "{{Word:ta1}}-{{word:men}} {{word:zai4}} {{word:shui3}} {{word:shang4}}, {{word:hen3}} {{word:da4}}, {{word:hen3}} {{word:bai2}}.",
+      "hanzi": "他-们 在 水 上, 很 大, 很 白.",
+      "gloss": "he-more than one person to exist at water up, very big, very white.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 6,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "They were on the water, very big and very white."
+    },
+    {
+      "pinyin": "Tā-men zhēn hǎo-kàn!",
+      "english": "They were so beautiful!",
+      "literally": "They are really good-looking!",
+      "reading": "1",
+      "source": "the end of the same book sentence (zhēn hǎo-kàn), with tā-men",
+      "ideas": [
+        "i18"
+      ],
+      "refs": "{{Word:ta1}}-{{word:men}} {{word:zhen1}} {{word:hao3}}-{{word:kan4}}!",
+      "hanzi": "他-们 真 好-看!",
+      "gloss": "he-more than one person true good-to look at!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 21,
+        "means": "yes-with-others",
+        "words": 5,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "They were really beautiful!"
+    },
+    {
+      "pinyin": "Tā hěn pà.",
+      "english": "He was scared.",
+      "literally": "He is very afraid.",
+      "reading": "1",
+      "source": "adapted from the book's 'Tā pà, dàn-shì tā qù le tā-men pángbiān.' (kb_memory 62%), split",
+      "ideas": [
+        "i20"
+      ],
+      "refs": "{{Word:ta1}} {{word:hen3}} {{word:pa4}}.",
+      "hanzi": "他 很 怕.",
+      "gloss": "he very to fear.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 2,
+        "means": "yes-with-others",
+        "words": 3,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "He was very afraid."
+    },
+    {
+      "pinyin": "Dàn-shì tā qù le tā-men pángbiān.",
+      "english": "But he swam up to them.",
+      "literally": "But he went to their side.",
+      "reading": "1",
+      "source": "the second half of the same book sentence, as it is",
+      "ideas": [
+        "i21"
+      ],
+      "refs": "{{Word:dan4}}-{{word:shi4}} {{word:ta1}} {{word:qu4}} {{word:le}} {{word:ta1}}-{{word:men}} {{word:pang2bian1}}.",
+      "hanzi": "但-是 他 去 了 他-们 旁边.",
+      "gloss": "but-to be he to go perfective aspect marker he-more than one person side.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 2,
+        "means": "yes-with-others",
+        "words": 8,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "But he went over beside them."
+    },
+    {
+      "pinyin": "Tā xiǎng: Tā-men huì dǎ wǒ.",
+      "english": "He thought: 'They will peck me.'",
+      "literally": "He thinks: they will hit me.",
+      "reading": "1",
+      "source": "the book's 'Tā jué-de: Tā-men huì dǎ wǒ.' (kb_memory 62%) with xiǎng, kb_lookup's gloss of think (想, 认为)",
+      "ideas": [
+        "i22"
+      ],
+      "refs": "{{Word:ta1}} {{word:xiang3}}: {{Word:ta1}}-{{word:men}} {{word:hui4}} {{word:da3}} {{word:wo3}}.",
+      "hanzi": "他 想: 他-们 会 打 我.",
+      "gloss": "he to think: he-more than one person will to hit I.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 6,
+        "means": "yes-with-others",
+        "words": 7,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "He thought: They will hit me."
+    },
+    {
+      "pinyin": "Tā kàn xià-miàn-de shuǐ.",
+      "english": "He looked down at the water.",
+      "literally": "He looks at the water below.",
+      "reading": "18",
+      "source": "the book's sentence, as it is (kb_memory 43%)",
+      "ideas": [
+        "i23"
+      ],
+      "refs": "{{Word:ta1}} {{word:kan4}} {{word:xia4}}-{{word:mian4}}-{{word:de}} {{word:shui3}}.",
+      "hanzi": "他 看 下-面-的 水.",
+      "gloss": "he to look at down-side-possessive marker water.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 26,
+        "means": "yes-with-others",
+        "words": 6,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "He looked at the water below."
+    },
+    {
+      "pinyin": "Shuǐ-lǐ yǒu yī-ge fēi-de dòng-wù.",
+      "english": "In the water there was a bird.",
+      "literally": "In the water there is a flying animal.",
+      "reading": "26",
+      "source": "adapted from the book's 'Shuǐ-lǐ yǒu yī-ge dà-de bái-sè fēi-de dòng-wù: shì tā!' (kb_memory 57%), split in three",
+      "ideas": [
+        "i24"
+      ],
+      "refs": "{{Word:shui3}}-{{word:li3}} {{word:you3}} {{word:yi1}}-{{light:ge4}} {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}}.",
+      "hanzi": "水-里 有 一-个 飞-的 动-物.",
+      "gloss": "water-inside to have one-universal classifier to fly-possessive marker to move-thing.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 106,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "In the water there was a bird."
+    },
+    {
+      "pinyin": "Tā yě hěn dà, hěn bái.",
+      "english": "It was big and white too.",
+      "literally": "It also is very big, very white.",
+      "reading": "1",
+      "source": "built like sentence 16, with yě: like the three birds",
+      "ideas": [
+        "i24"
+      ],
+      "refs": "{{Word:ta1}} {{word:ye3}} {{word:hen3}} {{word:da4}}, {{word:hen3}} {{word:bai2}}.",
+      "hanzi": "他 也 很 大, 很 白.",
+      "gloss": "he also very big, very white.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 2,
+        "means": "yes-with-others",
+        "words": 6,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "It was also very big and very white."
+    },
+    {
+      "pinyin": "Jiù-shì tā!",
+      "english": "It was him!",
+      "literally": "It is just him!",
+      "reading": "1",
+      "source": "the book's sentence 'Jiù-shì tā!' (It's him!, kb_memory 67%), as it is",
+      "ideas": [
+        "i25"
+      ],
+      "refs": "{{Word:jiu4}}-{{word:shi4}} {{word:ta1}}!",
+      "hanzi": "就-是 他!",
+      "gloss": "then-to be he!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 4,
+        "means": "yes-with-others",
+        "words": 3,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "It was him! (The bird in the water was himself, his reflection.)"
+    },
+    {
+      "pinyin": "Tā bù shì nán-kàn-de xiǎo fēi-de dòng-wù.",
+      "english": "He wasn't an ugly duckling.",
+      "literally": "He is not an ugly little flying animal.",
+      "reading": "19",
+      "source": "built from the grammar (bu-shi-not) with the ducklings' name from sentence 2 and nán-kàn from sentence 4",
+      "ideas": [
+        "i26"
+      ],
+      "refs": "{{Word:ta1}} {{word:bu4}} {{word:shi4}} {{word:nan2}}-{{word:kan4}}-{{word:de}} {{word:xiao3}} {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}}.",
+      "hanzi": "他 不 是 难-看-的 小 飞-的 动-物.",
+      "gloss": "he not to be difficult-to look at-possessive marker little to fly-possessive marker to move-thing.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 90,
+        "means": "yes-with-others",
+        "words": 11,
+        "depth": 1,
+        "late": [],
+        "warnings": [
+          "too long: 11 words (limit 10)",
+          "too long: the description \"tā bù shì nán-kàn-de xiǎo fēi-de dòng-wù\" is 11 words (limit 10)"
+        ]
+      },
+      "blind": "He is not an ugly little bird."
+    },
+    {
+      "pinyin": "Tā shì dà-de bái fēi-de dòng-wù!",
+      "english": "He was a swan!",
+      "literally": "He is a big white flying animal!",
+      "reading": "1",
+      "source": "built from the grammar (shi-copula); the swan described the way the text describes swans (big white birds; the book's own words are dà-de bái-sè fēi-de dòng-wù)",
+      "ideas": [
+        "i27",
+        "i19"
+      ],
+      "refs": "{{Word:ta1}} {{word:shi4}} {{word:da4}}-{{word:de}} {{word:bai2}} {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}}!",
+      "hanzi": "他 是 大-的 白 飞-的 动-物!",
+      "gloss": "he to be big-possessive marker white to fly-possessive marker to move-thing!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 4,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "He is a big white bird!"
+    },
+    {
+      "pinyin": "Nà sān-ge fēi-de dòng-wù hé tā wánr.",
+      "english": "The other swans played with him.",
+      "literally": "Those three flying animals play with him.",
+      "reading": "6",
+      "source": "adapted from the book's 'Bié-de bái-sè fēi-de dòng-wù hé tā yī-qǐ wánr, tā hěn kāi-xīn.' (kb_memory 83%), split; nà sān-ge points back at the three swans of sentence 15",
+      "ideas": [
+        "i28"
+      ],
+      "refs": "{{Word:na4}} {{word:san1}}-{{light:ge4}} {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:he2}} {{word:ta1}} {{word:wan2r}}.",
+      "hanzi": "那 三-个 飞-的 动-物 和 他 玩儿.",
+      "gloss": "that three-universal classifier to fly-possessive marker to move-thing and he to play.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 235,
+        "means": "yes-with-others",
+        "words": 10,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "Those three birds played with him."
+    },
+    {
+      "pinyin": "Tā hěn kāi-xīn.",
+      "english": "He was very happy.",
+      "literally": "He is very happy.",
+      "reading": "1",
+      "source": "the end of the same book sentence",
+      "ideas": [
+        "i29"
+      ],
+      "refs": "{{Word:ta1}} {{word:hen3}} {{word:kai1}}-{{word:xin1}}.",
+      "hanzi": "他 很 开-心.",
+      "gloss": "he very to open-heart.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 6,
+        "means": "yes-with-others",
+        "words": 4,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "He was very happy."
+    }
+  ],
+  "sketch": [
+    {
+      "id": "i1",
+      "idea": "A mother duck was by the water",
+      "needed": true,
+      "links": "",
+      "verdict": "weaker",
+      "why": "Reader got a mother bird (a 'flying animal mother') by the water but not a duck; says the kind of bird is never stated"
+    },
+    {
+      "id": "i2",
+      "idea": "She had six ducklings (six little birds)",
+      "needed": true,
+      "links": "after i1, she is i1's mother",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i3",
+      "idea": "Five of them were yellow and pretty",
+      "needed": true,
+      "links": "of i2",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i4",
+      "idea": "One was big, dark and ugly (not good-looking)",
+      "needed": true,
+      "links": "but, of i2, against i3",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i5",
+      "idea": "The other birds said to him: you are so ugly",
+      "needed": true,
+      "links": "because of i4",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i6",
+      "idea": "They said: you are not like us",
+      "needed": true,
+      "links": "and, after i5",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i7",
+      "idea": "They would not play with him",
+      "needed": true,
+      "links": "after i6",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i8",
+      "idea": "They pecked (hit) him too",
+      "needed": true,
+      "links": "and also, with i7",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i9",
+      "idea": "He was very unhappy",
+      "needed": true,
+      "links": "because of i5 to i8",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i10",
+      "idea": "He went far away",
+      "needed": true,
+      "links": "so, because of i9",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i11",
+      "idea": "Winter came",
+      "needed": true,
+      "links": "then, after i10",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i12",
+      "idea": "The water froze (became hard)",
+      "needed": false,
+      "links": "in i11",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i13",
+      "idea": "He was cold",
+      "needed": true,
+      "links": "in i11",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i14",
+      "idea": "He had nothing to eat",
+      "needed": true,
+      "links": "and, with i13",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i15",
+      "idea": "Spring came (the time that turns warm)",
+      "needed": true,
+      "links": "then, after i11",
+      "verdict": "weaker",
+      "why": "Reader read 'the time when it becomes hot' and was unsure whether it meant spring or summer"
+    },
+    {
+      "id": "i16",
+      "idea": "He had grown (bigger)",
+      "needed": true,
+      "links": "by i15",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i17",
+      "idea": "He saw three big white birds on the water",
+      "needed": true,
+      "links": "then",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i18",
+      "idea": "They were very beautiful",
+      "needed": true,
+      "links": "of i17",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i19",
+      "idea": "Those birds were swans",
+      "needed": false,
+      "links": "names i17",
+      "verdict": "weaker",
+      "why": "Birds are never named; reader only guessed they could be swans or geese"
+    },
+    {
+      "id": "i20",
+      "idea": "He was scared",
+      "needed": true,
+      "links": "because of i22",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i21",
+      "idea": "But he swam up to them",
+      "needed": true,
+      "links": "but, in spite of i20",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i22",
+      "idea": "He thought: they will peck me",
+      "needed": true,
+      "links": "why i20",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i23",
+      "idea": "He looked down at the water",
+      "needed": true,
+      "links": "then",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i24",
+      "idea": "In the water there was a big white bird",
+      "needed": true,
+      "links": "what he saw in i23",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i25",
+      "idea": "That bird was him (his own picture in the water)",
+      "needed": true,
+      "links": "i24 is",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i26",
+      "idea": "He was not an ugly duckling",
+      "needed": true,
+      "links": "because of i25",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i27",
+      "idea": "He was a swan",
+      "needed": true,
+      "links": "but, instead of i26",
+      "verdict": "weaker",
+      "why": "Reader understood he is a big white bird like the others, but not that he is a swan; the kind of bird instead of the bird"
+    },
+    {
+      "id": "i28",
+      "idea": "The other swans played with him",
+      "needed": true,
+      "links": "after i27, against i7",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i29",
+      "idea": "He was very happy",
+      "needed": true,
+      "links": "because of i28, against i9",
+      "verdict": "kept",
+      "why": ""
+    }
+  ],
+  "cast": [
+    {
+      "thing": "bird",
+      "description": "fēi-de dòng-wù",
+      "short": ""
+    },
+    {
+      "thing": "mother duck",
+      "description": "fēi-de dòng-wù māma",
+      "short": ""
+    },
+    {
+      "thing": "duckling",
+      "description": "xiǎo fēi-de dòng-wù",
+      "short": ""
+    },
+    {
+      "thing": "winter",
+      "description": "lěng-de shí-jiān",
+      "short": ""
+    },
+    {
+      "thing": "spring",
+      "description": "biàn rè-de shí-jiān",
+      "short": ""
+    },
+    {
+      "thing": "swan",
+      "description": "dà-de bái fēi-de dòng-wù",
+      "short": ""
+    }
+  ],
+  "castProblems": [],
+  "structures": [
+    {
+      "idea": "i1",
+      "pattern": "svo, measure-word, de-modifier, owner-part",
+      "lesson": "who-does-what, pointing, modifying-nouns, roles-of-a-word"
+    },
+    {
+      "idea": "i2",
+      "pattern": "svo, measure-word, adjective-noun, de-modifier",
+      "lesson": "who-does-what, pointing, modifying-nouns, modifying-nouns"
+    },
+    {
+      "idea": "i3",
+      "pattern": "shi-copula, measure-word, de-modifier, hen-adjective, add-take",
+      "lesson": "words-and-sentences, pointing, modifying-nouns, modifying-nouns, time-and-sums"
+    },
+    {
+      "idea": "i4",
+      "pattern": "measure-word, hen-adjective, ye-also, add-take",
+      "lesson": "pointing, modifying-nouns, also-and-all, time-and-sums"
+    },
+    {
+      "idea": "i5",
+      "pattern": "speech-quote, de-modifier",
+      "lesson": "questions, modifying-nouns"
+    },
+    {
+      "idea": "i6",
+      "pattern": "he-and, bu-adjective",
+      "lesson": "inside-a-sentence, how-much"
+    },
+    {
+      "idea": "i7",
+      "pattern": "bu-negation, he-with",
+      "lesson": "who-does-what, inside-a-sentence"
+    },
+    {
+      "idea": "i8",
+      "pattern": "ye-also, svo, add-take",
+      "lesson": "also-and-all, who-does-what, time-and-sums"
+    },
+    {
+      "idea": "i9",
+      "pattern": "hen-adjective, bu-adjective",
+      "lesson": "modifying-nouns, how-much"
+    },
+    {
+      "idea": "i10",
+      "pattern": "jiu-then, le-done, de-modifier",
+      "lesson": "linking-sentences, when-it-happens, modifying-nouns"
+    },
+    {
+      "idea": "i11",
+      "pattern": "de-modifier, le-new-situation",
+      "lesson": "modifying-nouns, moving"
+    },
+    {
+      "idea": "i12",
+      "pattern": "bian-became, le-new-situation",
+      "lesson": "becoming-and-making, moving"
+    },
+    {
+      "idea": "i13",
+      "pattern": "hen-adjective",
+      "lesson": "modifying-nouns"
+    },
+    {
+      "idea": "i14",
+      "pattern": "mei-you-not-have, verb-de-thing, add-take",
+      "lesson": "who-does-what, roles-of-a-word, time-and-sums"
+    },
+    {
+      "idea": "i15",
+      "pattern": "bian-became, de-modifier, le-new-situation",
+      "lesson": "becoming-and-making, modifying-nouns, moving"
+    },
+    {
+      "idea": "i16",
+      "pattern": "bian-became, le-new-situation",
+      "lesson": "becoming-and-making, moving"
+    },
+    {
+      "idea": "i17",
+      "pattern": "svo, measure-word, de-modifier, place-li-shang, hen-adjective, add-take",
+      "lesson": "who-does-what, pointing, modifying-nouns, where-it-is, modifying-nouns, time-and-sums"
+    },
+    {
+      "idea": "i18",
+      "pattern": "zhen-really",
+      "lesson": "how-much"
+    },
+    {
+      "idea": "i19",
+      "pattern": "shi-copula, de-modifier, adjective-noun",
+      "lesson": "words-and-sentences, modifying-nouns, modifying-nouns"
+    },
+    {
+      "idea": "i20",
+      "pattern": "hen-adjective",
+      "lesson": "modifying-nouns"
+    },
+    {
+      "idea": "i21",
+      "pattern": "dan-shi-but, le-done, owner-part, men-plural",
+      "lesson": "linking-sentences, when-it-happens, roles-of-a-word, pointing"
+    },
+    {
+      "idea": "i22",
+      "pattern": "speech-quote, hui-will",
+      "lesson": "questions, when-it-happens"
+    },
+    {
+      "idea": "i23",
+      "pattern": "svo, de-modifier",
+      "lesson": "who-does-what, modifying-nouns"
+    },
+    {
+      "idea": "i24",
+      "pattern": "place-li-shang, svo, measure-word, de-modifier, ye-also, hen-adjective, add-take",
+      "lesson": "where-it-is, who-does-what, pointing, modifying-nouns, also-and-all, modifying-nouns, time-and-sums"
+    },
+    {
+      "idea": "i25",
+      "pattern": "jiu-then, shi-copula",
+      "lesson": "linking-sentences, words-and-sentences"
+    },
+    {
+      "idea": "i26",
+      "pattern": "bu-shi-not, de-modifier, adjective-noun",
+      "lesson": "words-and-sentences, modifying-nouns, modifying-nouns"
+    },
+    {
+      "idea": "i27",
+      "pattern": "shi-copula, de-modifier, adjective-noun",
+      "lesson": "words-and-sentences, modifying-nouns, modifying-nouns"
+    },
+    {
+      "idea": "i28",
+      "pattern": "measure-word, de-modifier, he-with",
+      "lesson": "pointing, modifying-nouns, inside-a-sentence"
+    },
+    {
+      "idea": "i29",
+      "pattern": "hen-adjective",
+      "lesson": "modifying-nouns"
+    }
+  ],
+  "gaps": [
+    {
+      "idea": "swan",
+      "description": "dà-de bái fēi-de dòng-wù",
+      "note": "No entry; kb_lookup offers only a wrong same-sense row (yī-dìng, definitely). Described as the text itself describes swans (big white birds); about 7 words, so said once and pointed back to with nà sān-ge fēi-de dòng-wù."
+    },
+    {
+      "idea": "duck (mother duck)",
+      "description": "fēi-de dòng-wù māma",
+      "note": "The form of 鸭子 is 9 words (zài shuǐ-lǐ zǒu-de fēi-de dòng-wù); for one mention the mother is a bird mother by the water, as the text's own literal note names the ducklings. The duck itself is weaker: a bird near water."
+    },
+    {
+      "idea": "duckling",
+      "description": "xiǎo fēi-de dòng-wù",
+      "note": "No entry (kb_lookup's only row is a kind-of guess: meat). The text's own literal: six little flying animals."
+    },
+    {
+      "idea": "peck",
+      "description": "dǎ",
+      "note": "No entry; kb_lookup's same-sense row (hěn duō dōng-xi zài yī-qǐ, a pile) is a false friend. The text's own literal: hit him."
+    }
+  ],
+  "added": [],
+  "blind": {
+    "whole": "A mother bird by the water has six chicks: five are golden and pretty, one is big, black and ugly. The others call him ugly and different, won't play with him and hit him, so he leaves unhappy and goes far away. He gets through a cold winter when the water freezes and he has nothing to eat. When the warm time comes he has grown big. He sees three big, beautiful white birds on the water and goes to them, though he is afraid they will hit him. Looking down into the water he sees his reflection: he is now a big white bird like them, not an ugly little one. The three birds play with him and he is happy.",
+    "unsure": "Bird is my naming of 'fei-de dong-wu' (flying animal). The text never says what kind of bird. The big white birds on the water could be swans or geese, and the mother and chicks could be ducks or another water bird, but none of this is stated. 'Ta' could be he, she or it. I read the mother in s2 as 'she' and the odd chick as 'he'. S3: the gloss gives 'jin' as money, but 'jin-de yanse' reads as gold color (golden or yellow). S13: 'bian re-de shi-jian' (the time that becomes hot) could be spring or summer. S22-24: the text says only that there is a big white bird in the water and 'it is him'. I read that as his reflection. S9: 'jiu' read as 'so/then', meaning he left because he was unhappy."
+  },
+  "notes": "Reuse: kb_memory returns this story's own book sentences (lesson none, 33-100% shared), so most sentences adapt them and say so in source; long ones are split. Three of the book's sentences do not pass as they stand: 'Tā hěn bù kāi-xīn, jiù qù le hěn yuǎn-de dì-fang.' (its meant reading is not among its first 500: every early reading makes 'jiù qù le hěn yuǎn' a describing clause of dì-fang), 'Bié-de fēi-de dòng-wù shuō: Nǐ zhēn nán-kàn!' (over 500 readings; without zhēn 349, so 'so ugly' became 'ugly') and 'Biàn rè-de shí-jiān lái le, tā yě biàn dà le.' (over 500). Speech is written without quote marks, as the book does: with curly quotes kb_check_text joined the quote and the next sentence into one. Choices: nán-kàn (the gloss of ugly) rather than the literal bù hǎo-kàn, so the narrator and the other birds use the same word; xiǎng (the gloss of think) for the book's jué-de; 'swam up to them' is said as 'went to their side' on the water (guò-shuǐ, the form of 游, made the sentence 11-12 words), so the swimming is only implied. Sentence 25 is 11 words (one over the limit); I kept it to keep 'ugly duckling' whole. Tools: the brief's kb_lookup example uses 'query', but the argument is 'word'; kb_check_text suggests 'wǒ' for zìjǐ (self), which misleads; hái-zi shows its hanzi as 还-子. Glossary proposal: swan -> dà-de bái fēi-de dòng-wù: no entry, and the story itself calls swans big white birds; once per text, then point back (nà sān-ge fēi-de dòng-wù). Glossary proposal: duckling -> xiǎo fēi-de dòng-wù: no entry; the duck's form is 9 words. Glossary proposal: peck -> dǎ: no entry, and kb_lookup's same-sense row (a pile) is wrong. Glossary proposal: spring -> biàn rè-de shí-jiān: pairs with winter's form lěng-de shí-jiān; the dictionary's form nián-de dì-yī-bù-fen is 6 words and says nothing of warmth. Glossary proposal: unhappy -> bù kāi-xīn: kb_lookup has nothing for unhappy; bù and the gloss of happy, as the book says it (Tā hěn bù kāi-xīn). Translated before kb_memory hid the stories' own lines (HAOSHUODE_MEMORY_SKIP), so some sentences reuse the book's lines and the book overlap is higher than a fresh run would give.",
+  "problems": [],
+  "timing": {},
+  "item": {
+    "id": "story-6",
+    "kind": "story",
+    "title": "The Ugly Duckling"
+  },
+  "book": {
+    "overlap": 0.871
+  }
+}

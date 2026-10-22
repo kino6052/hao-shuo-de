@@ -114,3 +114,23 @@ describe('render', () => {
     expect(renderFrontier(run(), { part: 'words', limit: 1 })).toContain('… 2 more'); // three grammar words, one shown
   });
 });
+
+describe('the translator\'s gaps (TRANSLATOR_PLAN.md E2)', () => {
+  const umbrella = { idea: 'umbrella', times: 2, descriptions: ['ràng tiān shàng xià-lái-de shuǐ bù dào shēntǐ shàng-de dōng-xi'], notes: ['14 words'], texts: ['a.json', 'b.json'] };
+  const kite = { idea: 'kite', times: 1, descriptions: [], notes: [], texts: ['a.json'] };
+
+  test('the ideas translations met are a part of their own, as gathered', () => {
+    expect(run({ translations: [umbrella, kite] }).translations.items).toEqual([umbrella, kite]);
+    const text = renderFrontier(run({ translations: [umbrella, kite] }), { part: 'translations' });
+    expect(text).toContain('with no short way to say them (kb/translation-gaps.json), most often met first: 2');
+    expect(text).toContain('umbrella (2x): ràng tiān shàng xià-lái-de shuǐ bù dào shēntǐ shàng-de dōng-xi; 14 words');
+    expect(text).toContain('kite (1x): no description');
+    expect(text).not.toContain('English words');
+    expect(renderFrontier(run({ translations: [umbrella, kite] }), { part: 'translations', limit: 1 })).toContain('… 1 more');
+  });
+
+  test('none gathered yet says so, and the whole report shows the part last', () => {
+    expect(renderFrontier(run(), { part: 'translations' })).toBe('No translation has met an idea it could not say shortly yet (npm run translator -- gaps gathers them).');
+    expect(renderFrontier(run({ translations: [umbrella] })).trimEnd().split('\n').at(-1)).toContain('umbrella (2x)');
+  });
+});

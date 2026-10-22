@@ -13,6 +13,7 @@ import { askTags } from './tags.js';
 import { askBuilt } from './build-tags.js';
 import { askAkinator } from './akinator-ask.js';
 import { askLesson, askPatterns, askSimilar, askUses } from './lesson-lookup.js';
+import { memorySkip } from './memory.js';
 import { scoreboardRow, readScoreboard, readTranslationScore, renderScoreboard, renderHistory } from './scoreboard.js';
 
 // the stored rows (refactor --write adds one after every change)
@@ -336,11 +337,11 @@ export const TOOLS = [
     name: 'kb_frontier',
     description:
       'What the dictionary cannot say yet, with the fix for each: the common English words with no entry (is there an entry WordNet gives for it that is not linked, a common Mandarin word that would carry it, or does grammar say it), ' +
-      'the common Mandarin words with no entry and what they mean in English, and the everyday sentences one character away and the character that would unlock the most. Without the English index (npm run wordnet) nothing can be named.',
+      'the common Mandarin words with no entry and what they mean in English, the everyday sentences one character away and the character that would unlock the most, and the ideas translations met with no short way to say them (kb/translation-gaps.json). Without the English index (npm run wordnet) nothing can be named.',
     inputSchema: {
       type: 'object',
       properties: {
-        part: { type: 'string', enum: PARTS, description: 'One part only; leave out for all three.' },
+        part: { type: 'string', enum: PARTS, description: 'One part only; leave out for all four.' },
         limit: { type: 'integer', description: 'How many to list per kind of fix (default 12).' },
       },
     },
@@ -481,7 +482,7 @@ export async function callTool(kb, name, args = {}, { scoreboardFile = SCOREBOAR
     case 'kb_lookup':
       return kb.lookup({ word: String(need(args, 'word')) }).text;
     case 'kb_memory':
-      return kb.memory({ text: String(need(args, 'text')), limit: args.limit }).text;
+      return kb.memory({ text: String(need(args, 'text')), limit: args.limit, skip: memorySkip() }).text;
     case 'kb_constructions':
       return kb.constructions({ text: args.text ? String(args.text) : undefined, id: args.id ? String(args.id) : undefined }).text;
     case 'kb_atoms': {

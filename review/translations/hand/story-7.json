@@ -1,0 +1,1296 @@
+{
+  "version": 1,
+  "text": "Jack and his mother had no money, only one cow. (Literally: \"an animal that says 'moo'.\") His mother said: \"Take the cow, sell it, and bring the money back.\" On the road, an old man he'd never seen said: \"Give me your cow, and I'll give you five magic beans.\" (Literally: \"five little round things never seen before.\") Jack went home. His mother was furious and threw the beans out of the window. That night, a plant came up out of the beans. It grew and grew, far up into the sky. Jack climbed up. At the top there was a huge house. In the house lived a giant (literally: \"a really big person\"). He had lots of gold. While the giant slept, Jack took his gold and hurried down. The giant woke up, saw Jack, and came down the plant after him! Jack broke the plant with a tool (an axe). The plant and the giant came crashing down, and the giant died. Jack and his mother had plenty of money and lived happily (literally: \"lived very well\").",
+  "lesson": null,
+  "model": "claude-opus-5-5 (by hand, subagents)",
+  "sentences": [
+    {
+      "pinyin": "\"Jiékè\" hé tā-de māma méi-yǒu jīn.",
+      "english": "Jack and his mother had no money.",
+      "literally": "\"Jack\" and his mother do not have money.",
+      "reading": "[NP [NP \"Jiékè\"] hé [NP [ModNP",
+      "source": "the book's own first sentence of this story (kb_memory, 44% shared), its first clause, with māma (mother) for bàba-māma (parents)",
+      "ideas": [
+        "i1"
+      ],
+      "refs": "\"Jiékè\" {{word:he2}} {{word:ta1}}-{{word:de}} {{word:ma1ma}} {{word:mei2}}-{{word:you3}} {{word:jin1}}.",
+      "hanzi": "\"Jiékè\" 和 他-的 妈妈 没-有 金.",
+      "gloss": "\"Jiékè\" and he-possessive marker mom negative particle used exclusively to negate the verb you (to form meiyou)-to have money.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 36,
+        "means": "yes-with-others",
+        "words": 8,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "Jiékè and his mother have no money."
+    },
+    {
+      "pinyin": "Tā-men zhǐ yǒu yī-ge jiào \"mōu\"-de dòng-wù.",
+      "english": "They had only one cow.",
+      "literally": "They only have one animal that says \"moo\".",
+      "reading": "[Utt [S [NP tā-men] [VP zhǐ [VP [VerbP yǒu [NP [Count [Num yī]] gè [ModNP",
+      "source": "the book's cow (kb_lookup cow: Zhè shì jiào \"mōu\"-de dòng-wù.) in the zhi-only frame (Tā zhǐ yǒu yī-ge.); the second clause of the book's first sentence with zhǐ for jiù",
+      "ideas": [
+        "i2"
+      ],
+      "refs": "{{Word:ta1}}-{{word:men}} {{word:zhi3}} {{word:you3}} {{word:yi1}}-{{light:ge4}} {{word:jiao4}} \"mōu\"-{{word:de}} {{word:dong4}}-{{word:wu4}}.",
+      "hanzi": "他-们 只 有 一-个 叫 \"mōu\"-的 动-物.",
+      "gloss": "he-more than one person only to have one-universal classifier to call \"mōu\"-possessive marker to move-thing.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 454,
+        "means": "yes-with-others",
+        "words": 11,
+        "depth": 1,
+        "late": [],
+        "warnings": [
+          "too long: 11 words (limit 10)",
+          "too long: the description \"tā-men zhǐ yǒu yī-ge jiào \"mōu\"-de dòng-wù\" is 11 words (limit 10)"
+        ]
+      },
+      "blind": "All they have is one animal called \"mōu\" (or one that cries \"mōu\"). From the sound, this is a cow."
+    },
+    {
+      "pinyin": "Māma shuō: nǐ ná zhè-ge dòng-wù qù, gěi rén, dé jīn huí-lái.",
+      "english": "His mother said: \"Take the cow, sell it, and bring the money back.\"",
+      "literally": "Mother says: you take this animal away, give it to someone, get money and come back.",
+      "reading": "1",
+      "source": "the book's sentence (kb_memory, 100% shared) with Māma for Tā-de bàba-māma and the cast's short name zhè-ge dòng-wù",
+      "ideas": [
+        "i3"
+      ],
+      "refs": "{{Word:ma1ma}} {{word:shuo1}}: {{word:ni3}} {{word:na2}} {{word:zhe4}}-{{light:ge4}} {{word:dong4}}-{{word:wu4}} {{word:qu4}}, {{word:gei3}} {{word:ren2}}, {{word:de2}} {{word:jin1}} {{word:hui2}}-{{word:lai2}}.",
+      "hanzi": "妈妈 说: 你 拿 这-个 动-物 去, 给 人, 得 金 回-来.",
+      "gloss": "mom to communicate: you to take this-universal classifier to move-thing to go, to give human being, to get money to return-to come.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 420,
+        "means": "yes-with-others",
+        "words": 15,
+        "depth": 1,
+        "late": [],
+        "warnings": [
+          "too long: 15 words (limit 10)"
+        ]
+      },
+      "blind": "His mother says: take this animal, go and give it to someone, and come back with money. In other words, go and sell it."
+    },
+    {
+      "pinyin": "\"Jiékè\" zài lù-shàng kàn-dào yī-ge lǎo nán-rén.",
+      "english": "On the road, Jack met an old man.",
+      "literally": "\"Jack\" on the road saw an old man.",
+      "reading": "1",
+      "source": "built: zai-place (Tā zài lù-shàng.) and kàn-dào; the place goes after the doer, since a place first with a comma can read as a call (the umbrella text)",
+      "ideas": [
+        "i4"
+      ],
+      "refs": "\"Jiékè\" {{word:zai4}} {{word:lu4}}-{{word:shang4}} {{word:kan4}}-{{word:dao4}} {{word:yi1}}-{{light:ge4}} {{word:lao3}} {{word:nan2}}-{{word:ren2}}.",
+      "hanzi": "\"Jiékè\" 在 路-上 看-到 一-个 老 难-人.",
+      "gloss": "\"Jiékè\" to exist at road-up to look at-to arrive one-universal classifier old (people difficult-human being.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 501,
+        "means": "yes-with-others",
+        "words": 11,
+        "depth": 0,
+        "late": [],
+        "warnings": [
+          "too long: 11 words (limit 10)"
+        ]
+      },
+      "blind": "On the road Jiékè sees an old man."
+    },
+    {
+      "pinyin": "\"Jiékè\" yǐ-qián méi kàn-guò tā.",
+      "english": "Jack had never seen him before.",
+      "literally": "\"Jack\" before had not seen him.",
+      "reading": "[VP [Time yǐ qián]",
+      "source": "built: guo-before (Wǒ kàn guò zhè-ge dòng-wù.) with méi, and yǐ-qián after the doer (time-first)",
+      "ideas": [
+        "i5"
+      ],
+      "refs": "\"Jiékè\" {{word:yi3}}-{{word:qian2}} {{word:mei2}} {{word:kan4}}-{{word:guo4}} {{word:ta1}}.",
+      "hanzi": "\"Jiékè\" 以-前 没 看-过 他.",
+      "gloss": "\"Jiékè\" by-front negative particle used exclusively to negate the verb you (to form meiyou) to look at-placed right after a verb to say you have done it at least once before (e.g. chī-guò he.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 13,
+        "means": "yes-with-others",
+        "words": 7,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "Jiékè had never seen him before."
+    },
+    {
+      "pinyin": "Lǎo nán-rén shuō: nǐ gěi wǒ dòng-wù, wǒ gěi nǐ wǔ-ge xiǎo yuán dōng-xi.",
+      "english": "The old man said: \"Give me your cow, and I'll give you five beans.\"",
+      "literally": "The old man says: you give me the animal, I give you five little round things.",
+      "reading": "1",
+      "source": "the book's sentence (kb_memory, 48% shared) without its two long modifiers, nǐ gěi wǒ dòng-wù for gěi wǒ nǐ-de dòng-wù",
+      "ideas": [
+        "i6"
+      ],
+      "refs": "{{Word:lao3}} {{word:nan2}}-{{word:ren2}} {{word:shuo1}}: {{word:ni3}} {{word:gei3}} {{word:wo3}} {{word:dong4}}-{{word:wu4}}, {{word:wo3}} {{word:gei3}} {{word:ni3}} {{word:wu3}}-{{light:ge4}} {{word:xiao3}} {{word:yuan2}} {{word:dong1}}-{{light:xi1}}.",
+      "hanzi": "老 难-人 说: 你 给 我 动-物, 我 给 你 五-个 小 圆 东-西.",
+      "gloss": "old (people difficult-human being to communicate: you to give I to move-thing, I to give you five-universal classifier little round east-west.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 501,
+        "means": "yes-with-others",
+        "words": 18,
+        "depth": 1,
+        "late": [],
+        "warnings": [
+          "too long: 18 words (limit 10)"
+        ]
+      },
+      "blind": "The old man says: you give me the animal, and I will give you five small round things."
+    },
+    {
+      "pinyin": "Shéi dōu méi kàn-guò zhè-zhǒng dōng-xi.",
+      "english": "They were magic: nobody had ever seen anything like them.",
+      "literally": "Nobody had ever seen this kind of thing.",
+      "reading": "1",
+      "source": "built: shéi dōu méi (shenme-dou), guo-before, zhè-zhǒng (such, kb_lookup gloss); says the test set's \"never seen before\"",
+      "ideas": [
+        "i7"
+      ],
+      "refs": "{{Word:shei2}} {{word:dou1}} {{word:mei2}} {{word:kan4}}-{{word:guo4}} {{word:zhe4}}-{{word:zhong3}} {{word:dong1}}-{{light:xi1}}.",
+      "hanzi": "谁 都 没 看-过 这-种 东-西.",
+      "gloss": "who all negative particle used exclusively to negate the verb you (to form meiyou) to look at-placed right after a verb to say you have done it at least once before (e.g. chī-guò this-kind east-west.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 16,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "Nobody has ever seen things of this kind."
+    },
+    {
+      "pinyin": "\"Jiékè\" ná zhè-xiē dōng-xi huí jiā le.",
+      "english": "Jack went home with the beans.",
+      "literally": "\"Jack\" took these things and went back home.",
+      "reading": "1",
+      "source": "the book's \"Jiékè\" huí jiā le. (kb_memory) with ná zhè-xiē dōng-xi before it (serial-verbs)",
+      "ideas": [
+        "i8"
+      ],
+      "refs": "\"Jiékè\" {{word:na2}} {{word:zhe4}}-{{word:xie1}} {{word:dong1}}-{{light:xi1}} {{word:hui2}} {{word:jia1}} {{word:le}}.",
+      "hanzi": "\"Jiékè\" 拿 这-些 东-西 回 家 了.",
+      "gloss": "\"Jiékè\" to take this-some east-west to return home perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 140,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "Jiékè took these things and went back home."
+    },
+    {
+      "pinyin": "Māma xīn-lǐ yǒu hěn dà-de huǒ.",
+      "english": "His mother was furious.",
+      "literally": "In mother's heart there is a very big fire.",
+      "reading": "[VerbP yǒu [NP [ModNP [Mod [VP hěn dà] de] huǒ]]",
+      "source": "the dictionary's form of 愤怒 (furious, kb_lookup gloss tier: xīn-lǐ yǒu hěn dà-de huǒ)",
+      "ideas": [
+        "i9"
+      ],
+      "refs": "{{Word:ma1ma}} {{word:xin1}}-{{word:li3}} {{word:you3}} {{word:hen3}} {{word:da4}}-{{word:de}} {{word:huo3}}.",
+      "hanzi": "妈妈 心-里 有 很 大-的 火.",
+      "gloss": "mom heart-inside to have very big-possessive marker fire.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 153,
+        "means": "yes-with-others",
+        "words": 8,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "His mother had a very big fire in her heart. That is, she was very angry."
+    },
+    {
+      "pinyin": "Tā bù yào zhè-xiē dōng-xi le.",
+      "english": "She didn't want the beans.",
+      "literally": "She did not want these things any more.",
+      "reading": "1",
+      "source": "the first half of the dictionary's form of 扔 (throw away: bù yào X le, ná-chū-qù)",
+      "ideas": [
+        "i10"
+      ],
+      "refs": "{{Word:ta1}} {{word:bu4}} {{word:yao4}} {{word:zhe4}}-{{word:xie1}} {{word:dong1}}-{{light:xi1}} {{word:le}}.",
+      "hanzi": "他 不 要 这-些 东-西 了.",
+      "gloss": "he not to want this-some east-west perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 16,
+        "means": "yes-with-others",
+        "words": 8,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "She did not want these things any more."
+    },
+    {
+      "pinyin": "Tā bǎ tā-men cóng kàn wài-miàn-de kǒu ná-chū-qù le.",
+      "english": "She threw them out of the window.",
+      "literally": "She took them out through the opening for looking outside.",
+      "reading": "[VP cóng [NP [ModNP [Mod",
+      "source": "the second half of 扔's form (ná-chū-qù) with bǎ, and the form of 窗户 (window: kàn wài-miàn-de kǒu) after cóng",
+      "ideas": [
+        "i10"
+      ],
+      "refs": "{{Word:ta1}} {{word:ba3}} {{word:ta1}}-{{word:men}} {{word:cong2}} {{word:kan4}} {{word:wai4}}-{{word:mian4}}-{{word:de}} {{word:kou3}} {{word:na2}}-{{word:chu1}}-{{word:qu4}} {{word:le}}.",
+      "hanzi": "他 把 他-们 从 看 外-面-的 口 拿-出-去 了.",
+      "gloss": "he grammatical object-introducing particle he-more than one person from to look at away-side-possessive marker hole to take-to go out-to go perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 501,
+        "means": "yes-with-others",
+        "words": 14,
+        "depth": 1,
+        "late": [],
+        "warnings": [
+          "too long: 14 words (limit 10)"
+        ]
+      },
+      "blind": "She took them and put them out through the opening you look outside through, which is a window. So she threw them out of the window."
+    },
+    {
+      "pinyin": "Yuè-de shí-jiān yī-ge zhíwù cóng zhè-xiē dōng-xi lǐ chū-lái le.",
+      "english": "That night, a plant came up out of the beans.",
+      "literally": "At night a plant came out from inside these things.",
+      "reading": "[Utt [S [Time",
+      "source": "the book's sentence (kb_memory, 100% shared) with the plant before the verb and no comma: with the comma all 500 readings take yuè-de shí-jiān as a call",
+      "ideas": [
+        "i11"
+      ],
+      "refs": "{{Word:yue4}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:yi1}}-{{light:ge4}} {{word:zhi2wu4}} {{word:cong2}} {{word:zhe4}}-{{word:xie1}} {{word:dong1}}-{{light:xi1}} {{word:li3}} {{word:chu1}}-{{word:lai2}} {{word:le}}.",
+      "hanzi": "月-的 十-间 一-个 植物 从 这-些 东-西 里 出-来 了.",
+      "gloss": "moon-possessive marker ten-between one-universal classifier plant from this-some east-west inside to go out-to come perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 501,
+        "means": "yes-with-others",
+        "words": 16,
+        "depth": 1,
+        "late": [],
+        "warnings": [
+          "too long: 16 words (limit 10)"
+        ]
+      },
+      "blind": "At night (\"in the moon's time\"), a plant came out of these things. So the small round things were seeds."
+    },
+    {
+      "pinyin": "Zhíwù biàn dà, biàn dà, dào le tiān-shàng.",
+      "english": "It grew and grew, far up into the sky.",
+      "literally": "The plant grew big, grew big, reached the sky.",
+      "reading": "1",
+      "source": "the book's sentence (kb_memory, 100% shared) with tiān-shàng (sky) for hěn yuǎn-de shàng-miàn",
+      "ideas": [
+        "i12"
+      ],
+      "refs": "{{Word:zhi2wu4}} {{word:bian4}} {{word:da4}}, {{word:bian4}} {{word:da4}}, {{word:dao4}} {{word:le}} {{word:tian1}}-{{word:shang4}}.",
+      "hanzi": "植物 变 大, 变 大, 到 了 天-上.",
+      "gloss": "plant to become big, to become big, to arrive perfective aspect marker day-up.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 20,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The plant grew bigger and bigger until it reached the sky."
+    },
+    {
+      "pinyin": "\"Jiékè\" yòng shǒu hé jiǎo shàng-qù le.",
+      "english": "Jack climbed up.",
+      "literally": "\"Jack\" went up with hands and feet.",
+      "reading": "1",
+      "source": "the book's \"Jiékè\" shàng-qù le. (kb_memory) with the form of 爬 (climb, kb_lookup gloss: yòng shǒu hé jiǎo shàng-qù)",
+      "ideas": [
+        "i13"
+      ],
+      "refs": "\"Jiékè\" {{word:yong4}} {{word:shou3}} {{word:he2}} {{word:jiao3}} {{word:shang4}}-{{word:qu4}} {{word:le}}.",
+      "hanzi": "\"Jiékè\" 用 手 和 脚 上-去 了.",
+      "gloss": "\"Jiékè\" to use hand and foot up-to go perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 352,
+        "means": "yes-with-others",
+        "words": 8,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "Jiékè used his hands and feet to go up it. That is, he climbed the plant."
+    },
+    {
+      "pinyin": "Zuì shàng-miàn yǒu yī-ge hěn hěn dà-de jiā.",
+      "english": "At the top there was a huge house.",
+      "literally": "At the very top there is a very, very big house.",
+      "reading": "[VerbP yǒu [NP [Count [Num yī]] gè [ModNP",
+      "source": "the book's Zài shàng-miàn, yǒu yī-ge hěn dà-de jiā. (kb_memory, 58% shared) with zuì shàng-miàn (zui-most: the very top) and the form of 巨大 (huge: hěn hěn dà)",
+      "ideas": [
+        "i14"
+      ],
+      "refs": "{{Word:zui4}} {{word:shang4}}-{{word:mian4}} {{word:you3}} {{word:yi1}}-{{light:ge4}} {{word:hen3}} {{word:hen3}} {{word:da4}}-{{word:de}} {{word:jia1}}.",
+      "hanzi": "最 上-面 有 一-个 很 很 大-的 家.",
+      "gloss": "most up-side to have one-universal classifier very very big-possessive marker home.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 12,
+        "means": "yes-with-others",
+        "words": 11,
+        "depth": 1,
+        "late": [],
+        "warnings": [
+          "too long: 11 words (limit 10)",
+          "too long: the description \"zuì shàng-miàn yǒu yī-ge hěn hěn dà-de jiā\" is 11 words (limit 10)"
+        ]
+      },
+      "blind": "At the very top there was a very, very big house."
+    },
+    {
+      "pinyin": "Yī-ge zhēn dà-de rén zài zhè-ge jiā-lǐ huó.",
+      "english": "In the house lived a giant.",
+      "literally": "A really big person lived in this house.",
+      "reading": "1",
+      "source": "the book's Jiā-lǐ yǒu yī-ge zhēn dà-de rén. (kb_memory, 53% shared) in the shape of the book's \"… zài hěn dà-de shuǐ pángbiān huó.\" (kb_memory) for lived",
+      "ideas": [
+        "i15"
+      ],
+      "refs": "{{Word:yi1}}-{{light:ge4}} {{word:zhen1}} {{word:da4}}-{{word:de}} {{word:ren2}} {{word:zai4}} {{word:zhe4}}-{{light:ge4}} {{word:jia1}}-{{word:li3}} {{word:huo2}}.",
+      "hanzi": "一-个 真 大-的 人 在 这-个 家-里 活.",
+      "gloss": "one-universal classifier true big-possessive marker human being to exist at this-universal classifier home-inside to live.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 294,
+        "means": "yes-with-others",
+        "words": 12,
+        "depth": 1,
+        "late": [],
+        "warnings": [
+          "too long: 12 words (limit 10)"
+        ]
+      },
+      "blind": "A truly big person, a giant, lived in this house."
+    },
+    {
+      "pinyin": "Tā yǒu hěn duō jīn.",
+      "english": "He had lots of gold.",
+      "literally": "He has very much gold.",
+      "reading": "1",
+      "source": "the book's sentence as it is (kb_memory, the second half of the 53% match)",
+      "ideas": [
+        "i16"
+      ],
+      "refs": "{{Word:ta1}} {{word:you3}} {{word:hen3}} {{word:duo1}} {{word:jin1}}.",
+      "hanzi": "他 有 很 多 金.",
+      "gloss": "he to have very many money.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 1,
+        "means": "yes",
+        "words": 5,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "He had a lot of money."
+    },
+    {
+      "pinyin": "Zhè-ge rén shuìjiào-de shí-jiān, \"Jiékè\" ná le tā-de jīn.",
+      "english": "While the giant slept, Jack took his gold.",
+      "literally": "When this person slept, \"Jack\" took his gold.",
+      "reading": "[Utt [S [Time",
+      "source": "the book's sentence (kb_memory, 100% shared), its first half, with the cast's short name zhè-ge rén for zhēn dà-de rén",
+      "ideas": [
+        "i17"
+      ],
+      "refs": "{{Word:zhe4}}-{{light:ge4}} {{word:ren2}} {{word:shui4jiao4}}-{{word:de}} {{word:shi2}}-{{word:jian1}}, \"Jiékè\" {{word:na2}} {{word:le}} {{word:ta1}}-{{word:de}} {{word:jin1}}.",
+      "hanzi": "这-个 人 睡觉-的 十-间, \"Jiékè\" 拿 了 他-的 金.",
+      "gloss": "this-universal classifier human being to sleep-possessive marker ten-between, \"Jiékè\" to take perfective aspect marker he-possessive marker money.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 238,
+        "means": "yes-with-others",
+        "words": 13,
+        "depth": 1,
+        "late": [],
+        "warnings": [
+          "too long: 13 words (limit 10)"
+        ]
+      },
+      "blind": "While this person was sleeping, Jiékè took his money."
+    },
+    {
+      "pinyin": "\"Jiékè\" kuài-de xià-qù le.",
+      "english": "Jack hurried down.",
+      "literally": "\"Jack\" quickly went down.",
+      "reading": "[VP kuài de",
+      "source": "the second half of the same book sentence (kuài xià-qù le) with kuài-de (kuai-quick), so it cannot read as about to go down",
+      "ideas": [
+        "i18"
+      ],
+      "refs": "\"Jiékè\" {{word:kuai4}}-{{word:de}} {{word:xia4}}-{{word:qu4}} {{word:le}}.",
+      "hanzi": "\"Jiékè\" 快-的 下-去 了.",
+      "gloss": "\"Jiékè\" fast-possessive marker down-to go perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 36,
+        "means": "yes-with-others",
+        "words": 6,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "Jiékè quickly went back down."
+    },
+    {
+      "pinyin": "Zhè-ge rén bù shuìjiào le, kàn-dào le \"Jiékè\".",
+      "english": "The giant woke up and saw Jack.",
+      "literally": "This person was no longer asleep, saw \"Jack\".",
+      "reading": "1",
+      "source": "the book's Zhēn dà-de rén bù shuìjiào le. Tā kàn-dào \"Jiékè\" (kb_memory, 58% shared), joined with a comma, with the cast's short name",
+      "ideas": [
+        "i19"
+      ],
+      "refs": "{{Word:zhe4}}-{{light:ge4}} {{word:ren2}} {{word:bu4}} {{word:shui4jiao4}} {{word:le}}, {{word:kan4}}-{{word:dao4}} {{word:le}} \"Jiékè\".",
+      "hanzi": "这-个 人 不 睡觉 了, 看-到 了 \"Jiékè\".",
+      "gloss": "this-universal classifier human being not to sleep perfective aspect marker, to look at-to arrive perfective aspect marker \"Jiékè\".",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 270,
+        "means": "yes-with-others",
+        "words": 10,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The person stopped sleeping (woke up) and saw Jiékè."
+    },
+    {
+      "pinyin": "Tā zài \"Jiékè\" hòu-miàn, yě cóng zhíwù-shàng xià-lái le.",
+      "english": "He came down the plant after Jack.",
+      "literally": "He was behind \"Jack\", also came down from the plant.",
+      "reading": "1",
+      "source": "the book's yě cóng zhíwù-shàng xià-lái (same 58% match) with zài X hòu-miàn from the form of 追 (chase: zài X hòu-miàn kuài qù)",
+      "ideas": [
+        "i20"
+      ],
+      "refs": "{{Word:ta1}} {{word:zai4}} \"Jiékè\" {{word:hou4}}-{{word:mian4}}, {{word:ye3}} {{word:cong2}} {{word:zhi2wu4}}-{{word:shang4}} {{word:xia4}}-{{word:lai2}} {{word:le}}.",
+      "hanzi": "他 在 \"Jiékè\" 后-面, 也 从 植物-上 下-来 了.",
+      "gloss": "he to exist at \"Jiékè\" behind-side, also from plant-up down-to come perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 228,
+        "means": "yes-with-others",
+        "words": 12,
+        "depth": 0,
+        "late": [],
+        "warnings": [
+          "too long: 12 words (limit 10)"
+        ]
+      },
+      "blind": "He came down from the plant too, behind Jiékè."
+    },
+    {
+      "pinyin": "\"Jiékè\" yòng gōng-jù bǎ zhíwù zuò-huài le.",
+      "english": "Jack broke the plant with a tool (an axe).",
+      "literally": "\"Jack\" with a tool made the plant broken.",
+      "reading": "1",
+      "source": "the book's sentence as it is (kb_memory, 78% shared)",
+      "ideas": [
+        "i21"
+      ],
+      "refs": "\"Jiékè\" {{word:yong4}} {{word:gong1}}-{{word:ju4}} {{word:ba3}} {{word:zhi2wu4}} {{word:zuo4}}-{{word:huai4}} {{word:le}}.",
+      "hanzi": "\"Jiékè\" 用 工-具 把 植物 做-坏 了.",
+      "gloss": "\"Jiékè\" to use work-tool grammatical object-introducing particle plant to do-bad perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 501,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "Jiékè used a tool to break the plant, perhaps by cutting it down."
+    },
+    {
+      "pinyin": "Zhíwù hé zhè-ge rén dōu dào dì-shàng le.",
+      "english": "The plant and the giant came crashing down.",
+      "literally": "The plant and this person both reached the ground.",
+      "reading": "1",
+      "source": "the book's Zhíwù hé zhēn dà-de rén dōu xià-lái le (kb_memory, 56% shared) with the form of 掉 (fall: dào dì-shàng) for xià-lái",
+      "ideas": [
+        "i22"
+      ],
+      "refs": "{{Word:zhi2wu4}} {{word:he2}} {{word:zhe4}}-{{light:ge4}} {{word:ren2}} {{word:dou1}} {{word:dao4}} {{word:di4}}-{{word:shang4}} {{word:le}}.",
+      "hanzi": "植物 和 这-个 人 都 到 地-上 了.",
+      "gloss": "plant and this-universal classifier human being all to arrive floor-up perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 14,
+        "means": "yes-with-others",
+        "words": 10,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The plant and this person both came down to the ground. They fell."
+    },
+    {
+      "pinyin": "Zhè-ge rén sǐ le.",
+      "english": "The giant died.",
+      "literally": "This person died.",
+      "reading": "1",
+      "source": "the second half of the same book sentence (zhēn dà-de rén sǐ le) with the cast's short name",
+      "ideas": [
+        "i23"
+      ],
+      "refs": "{{Word:zhe4}}-{{light:ge4}} {{word:ren2}} {{word:si3}} {{word:le}}.",
+      "hanzi": "这-个 人 死 了.",
+      "gloss": "this-universal classifier human being to die perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 6,
+        "means": "yes-with-others",
+        "words": 5,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "This person died."
+    },
+    {
+      "pinyin": "\"Jiékè\" hé tā-de māma yǒu le hěn duō jīn.",
+      "english": "Jack and his mother had plenty of money.",
+      "literally": "\"Jack\" and his mother came to have very much money.",
+      "reading": "[NP [NP \"Jiékè\"] hé [NP [ModNP",
+      "source": "the book's last sentence (kb_memory, 44% shared), its first half, with māma for bàba-māma",
+      "ideas": [
+        "i24"
+      ],
+      "refs": "\"Jiékè\" {{word:he2}} {{word:ta1}}-{{word:de}} {{word:ma1ma}} {{word:you3}} {{word:le}} {{word:hen3}} {{word:duo1}} {{word:jin1}}.",
+      "hanzi": "\"Jiékè\" 和 他-的 妈妈 有 了 很 多 金.",
+      "gloss": "\"Jiékè\" and he-possessive marker mom to have perfective aspect marker very many money.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 12,
+        "means": "yes-with-others",
+        "words": 10,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "Jiékè and his mother now had a lot of money."
+    },
+    {
+      "pinyin": "Tā-men huó de hěn hǎo.",
+      "english": "They lived happily.",
+      "literally": "They lived very well.",
+      "reading": "[VerbP huó de",
+      "source": "the second half of the same book sentence (huó-de hěn hǎo), the test set's own literal, as verb-de-how",
+      "ideas": [
+        "i25"
+      ],
+      "refs": "{{Word:ta1}}-{{word:men}} {{word:huo2}} {{word:de}} {{word:hen3}} {{word:hao3}}.",
+      "hanzi": "他-们 活 的 很 好.",
+      "gloss": "he-more than one person to live possessive marker very good.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 15,
+        "means": "yes-with-others",
+        "words": 6,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "They lived very well."
+    }
+  ],
+  "sketch": [
+    {
+      "id": "i1",
+      "idea": "Jack and his mother had no money",
+      "needed": true,
+      "links": "",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i2",
+      "idea": "they had only one cow (an animal that says moo)",
+      "needed": true,
+      "links": "but, after i1",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i3",
+      "idea": "his mother told Jack to take the cow, sell it and bring the money back",
+      "needed": true,
+      "links": "because of i1",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i4",
+      "idea": "on the road Jack met an old man",
+      "needed": true,
+      "links": "then, on the way of i3",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i5",
+      "idea": "Jack had never seen the old man before",
+      "needed": false,
+      "links": "describes the old man of i4",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i6",
+      "idea": "the old man said: give me your cow and I will give you five beans",
+      "needed": true,
+      "links": "then",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i7",
+      "idea": "the beans were magic: little round things nobody had seen before",
+      "needed": true,
+      "links": "what the beans of i6 are",
+      "verdict": "weaker",
+      "why": "The reader got small round things nobody had seen before, but not that they were magic. They took them to be ordinary seeds."
+    },
+    {
+      "id": "i8",
+      "idea": "Jack went home with the beans",
+      "needed": true,
+      "links": "then; he made the trade of i6",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i9",
+      "idea": "his mother was furious",
+      "needed": true,
+      "links": "because of i8",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i10",
+      "idea": "she threw the beans out of the window",
+      "needed": true,
+      "links": "then, because of i9",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i11",
+      "idea": "that night a plant came up out of the beans",
+      "needed": true,
+      "links": "then",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i12",
+      "idea": "the plant grew and grew, far up into the sky",
+      "needed": true,
+      "links": "then",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i13",
+      "idea": "Jack climbed up the plant",
+      "needed": true,
+      "links": "then",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i14",
+      "idea": "at the top there was a huge house",
+      "needed": true,
+      "links": "where i13 ended",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i15",
+      "idea": "a giant (a really big person) lived in the house",
+      "needed": true,
+      "links": "",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i16",
+      "idea": "the giant had lots of gold",
+      "needed": true,
+      "links": "",
+      "verdict": "weaker",
+      "why": "The reader understood money, not gold, and was unsure. jin can mean either."
+    },
+    {
+      "id": "i17",
+      "idea": "while the giant slept, Jack took his gold",
+      "needed": true,
+      "links": "while",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i18",
+      "idea": "Jack hurried down",
+      "needed": true,
+      "links": "then",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i19",
+      "idea": "the giant woke up and saw Jack",
+      "needed": true,
+      "links": "then",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i20",
+      "idea": "the giant came down the plant after Jack",
+      "needed": true,
+      "links": "then, because of i19",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i21",
+      "idea": "Jack broke the plant with a tool (an axe)",
+      "needed": true,
+      "links": "then",
+      "verdict": "weaker",
+      "why": "The reader got only 'a tool', not an axe. That he cut the plant down was a guess."
+    },
+    {
+      "id": "i22",
+      "idea": "the plant and the giant came crashing down",
+      "needed": true,
+      "links": "so, because of i21",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i23",
+      "idea": "the giant died",
+      "needed": true,
+      "links": "because of i22",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i24",
+      "idea": "Jack and his mother had plenty of money",
+      "needed": true,
+      "links": "in the end, because of i17",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i25",
+      "idea": "they lived happily (very well)",
+      "needed": true,
+      "links": "and",
+      "verdict": "kept",
+      "why": ""
+    }
+  ],
+  "cast": [
+    {
+      "thing": "cow",
+      "description": "jiào \"mōu\"-de dòng-wù",
+      "short": "zhè-ge dòng-wù"
+    },
+    {
+      "thing": "old man",
+      "description": "lǎo nán-rén",
+      "short": ""
+    },
+    {
+      "thing": "magic beans",
+      "description": "xiǎo yuán dōng-xi",
+      "short": "zhè-xiē dōng-xi"
+    },
+    {
+      "thing": "window",
+      "description": "kàn wài-miàn-de kǒu",
+      "short": ""
+    },
+    {
+      "thing": "giant",
+      "description": "zhēn dà-de rén",
+      "short": "zhè-ge rén"
+    }
+  ],
+  "castProblems": [],
+  "structures": [
+    {
+      "idea": "i1",
+      "pattern": "he-and",
+      "lesson": "inside-a-sentence"
+    },
+    {
+      "idea": "i1",
+      "pattern": "de-modifier",
+      "lesson": "modifying-nouns"
+    },
+    {
+      "idea": "i1",
+      "pattern": "mei-you-not-have",
+      "lesson": "who-does-what"
+    },
+    {
+      "idea": "i2",
+      "pattern": "zhi-only",
+      "lesson": "how-much"
+    },
+    {
+      "idea": "i2",
+      "pattern": "measure-word",
+      "lesson": "pointing"
+    },
+    {
+      "idea": "i2",
+      "pattern": "jiao-name",
+      "lesson": "greetings"
+    },
+    {
+      "idea": "i2",
+      "pattern": "de-modifier",
+      "lesson": "modifying-nouns"
+    },
+    {
+      "idea": "i3",
+      "pattern": "speech-quote",
+      "lesson": "questions"
+    },
+    {
+      "idea": "i3",
+      "pattern": "serial-verbs",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i3",
+      "pattern": "add-take",
+      "lesson": "time-and-sums"
+    },
+    {
+      "idea": "i4",
+      "pattern": "zai-place",
+      "lesson": "where-it-is"
+    },
+    {
+      "idea": "i4",
+      "pattern": "verb-result",
+      "lesson": "direction-and-result"
+    },
+    {
+      "idea": "i4",
+      "pattern": "adjective-noun",
+      "lesson": "modifying-nouns"
+    },
+    {
+      "idea": "i5",
+      "pattern": "yi-qian-before",
+      "lesson": "around-an-action"
+    },
+    {
+      "idea": "i5",
+      "pattern": "time-first",
+      "lesson": "when-it-happens"
+    },
+    {
+      "idea": "i5",
+      "pattern": "guo-before",
+      "lesson": "when-it-happens"
+    },
+    {
+      "idea": "i6",
+      "pattern": "speech-quote",
+      "lesson": "questions"
+    },
+    {
+      "idea": "i6",
+      "pattern": "comma-clauses",
+      "lesson": "also-and-all"
+    },
+    {
+      "idea": "i6",
+      "pattern": "gei-give",
+      "lesson": "inside-a-sentence"
+    },
+    {
+      "idea": "i6",
+      "pattern": "adjective-noun",
+      "lesson": "modifying-nouns"
+    },
+    {
+      "idea": "i7",
+      "pattern": "dou-all",
+      "lesson": "also-and-all"
+    },
+    {
+      "idea": "i7",
+      "pattern": "shenme-dou",
+      "lesson": "also-and-all"
+    },
+    {
+      "idea": "i7",
+      "pattern": "guo-before",
+      "lesson": "when-it-happens"
+    },
+    {
+      "idea": "i8",
+      "pattern": "serial-verbs",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i8",
+      "pattern": "le-new-situation",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i9",
+      "pattern": "place-li-shang",
+      "lesson": "where-it-is"
+    },
+    {
+      "idea": "i9",
+      "pattern": "svo",
+      "lesson": "who-does-what"
+    },
+    {
+      "idea": "i9",
+      "pattern": "hen-adjective",
+      "lesson": "modifying-nouns"
+    },
+    {
+      "idea": "i10",
+      "pattern": "bu-negation",
+      "lesson": "who-does-what"
+    },
+    {
+      "idea": "i10",
+      "pattern": "le-new-situation",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i10",
+      "pattern": "ba-handle",
+      "lesson": "becoming-and-making"
+    },
+    {
+      "idea": "i10",
+      "pattern": "cong-from",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i11",
+      "pattern": "time-first",
+      "lesson": "when-it-happens"
+    },
+    {
+      "idea": "i11",
+      "pattern": "cong-from",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i11",
+      "pattern": "place-li-shang",
+      "lesson": "where-it-is"
+    },
+    {
+      "idea": "i12",
+      "pattern": "bian-became",
+      "lesson": "becoming-and-making"
+    },
+    {
+      "idea": "i12",
+      "pattern": "add-take",
+      "lesson": "time-and-sums"
+    },
+    {
+      "idea": "i12",
+      "pattern": "le-done",
+      "lesson": "when-it-happens"
+    },
+    {
+      "idea": "i13",
+      "pattern": "yong-with",
+      "lesson": "inside-a-sentence"
+    },
+    {
+      "idea": "i13",
+      "pattern": "he-and",
+      "lesson": "inside-a-sentence"
+    },
+    {
+      "idea": "i13",
+      "pattern": "le-new-situation",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i14",
+      "pattern": "zui-most",
+      "lesson": "comparing"
+    },
+    {
+      "idea": "i14",
+      "pattern": "svo",
+      "lesson": "who-does-what"
+    },
+    {
+      "idea": "i14",
+      "pattern": "hen-adjective",
+      "lesson": "modifying-nouns"
+    },
+    {
+      "idea": "i15",
+      "pattern": "zhen-really",
+      "lesson": "how-much"
+    },
+    {
+      "idea": "i15",
+      "pattern": "zai-place",
+      "lesson": "where-it-is"
+    },
+    {
+      "idea": "i15",
+      "pattern": "place-li-shang",
+      "lesson": "where-it-is"
+    },
+    {
+      "idea": "i16",
+      "pattern": "hen-duo-noun",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i17",
+      "pattern": "when-clause",
+      "lesson": "around-an-action"
+    },
+    {
+      "idea": "i17",
+      "pattern": "le-done",
+      "lesson": "when-it-happens"
+    },
+    {
+      "idea": "i18",
+      "pattern": "kuai-quick",
+      "lesson": "when-it-happens"
+    },
+    {
+      "idea": "i18",
+      "pattern": "le-new-situation",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i19",
+      "pattern": "bu-adjective",
+      "lesson": "how-much"
+    },
+    {
+      "idea": "i19",
+      "pattern": "verb-result",
+      "lesson": "direction-and-result"
+    },
+    {
+      "idea": "i19",
+      "pattern": "le-done",
+      "lesson": "when-it-happens"
+    },
+    {
+      "idea": "i20",
+      "pattern": "zai-place",
+      "lesson": "where-it-is"
+    },
+    {
+      "idea": "i20",
+      "pattern": "owner-part",
+      "lesson": "roles-of-a-word"
+    },
+    {
+      "idea": "i20",
+      "pattern": "ye-also",
+      "lesson": "also-and-all"
+    },
+    {
+      "idea": "i20",
+      "pattern": "cong-from",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i21",
+      "pattern": "yong-with",
+      "lesson": "inside-a-sentence"
+    },
+    {
+      "idea": "i21",
+      "pattern": "ba-handle",
+      "lesson": "becoming-and-making"
+    },
+    {
+      "idea": "i21",
+      "pattern": "zuo-make",
+      "lesson": "becoming-and-making"
+    },
+    {
+      "idea": "i22",
+      "pattern": "he-and",
+      "lesson": "inside-a-sentence"
+    },
+    {
+      "idea": "i22",
+      "pattern": "dou-all",
+      "lesson": "also-and-all"
+    },
+    {
+      "idea": "i22",
+      "pattern": "place-li-shang",
+      "lesson": "where-it-is"
+    },
+    {
+      "idea": "i23",
+      "pattern": "le-changed",
+      "lesson": "becoming-and-making"
+    },
+    {
+      "idea": "i24",
+      "pattern": "he-and",
+      "lesson": "inside-a-sentence"
+    },
+    {
+      "idea": "i24",
+      "pattern": "le-done",
+      "lesson": "when-it-happens"
+    },
+    {
+      "idea": "i24",
+      "pattern": "hen-duo-noun",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i25",
+      "pattern": "men-plural",
+      "lesson": "pointing"
+    },
+    {
+      "idea": "i25",
+      "pattern": "verb-de-how",
+      "lesson": "roles-of-a-word"
+    }
+  ],
+  "gaps": [
+    {
+      "idea": "magic",
+      "description": "Shéi dōu méi kàn-guò zhè-zhǒng dōng-xi.",
+      "note": "no word for magic; said as the test set's literal (never seen before), a sentence of its own"
+    },
+    {
+      "idea": "bean",
+      "description": "xiǎo yuán dōng-xi",
+      "note": "no word for bean (kb_lookup gives only chī-de zhíwù, vegetable, and shuǐ-guǒ, fruit, as kinds); the test set's literal, little round things"
+    },
+    {
+      "idea": "giant",
+      "description": "zhēn dà-de rén",
+      "note": "no word for giant (kb_lookup gives only dòng-wù as a kind); the test set's literal, a really big person"
+    },
+    {
+      "idea": "axe",
+      "description": "gōng-jù",
+      "note": "no word for axe; the English itself says a tool, and kb_hints starts it from gōng-jù; nothing for cutting (切 qiē has no short form) sets it apart"
+    },
+    {
+      "idea": "throw",
+      "description": "Tā bù yào zhè-xiē dōng-xi le. … ná-chū-qù",
+      "note": "the dictionary's form of 扔 (bù yào X le, ná-chū-qù) says not wanting and taking out, not the throwing movement; split over two sentences to keep the window"
+    },
+    {
+      "idea": "came crashing down",
+      "description": "dōu dào dì-shàng le",
+      "note": "fall is the form of 掉 (dào dì-shàng); nothing short for the crash"
+    },
+    {
+      "idea": "lived (in a house)",
+      "description": "zài zhè-ge jiā-lǐ huó",
+      "note": "住 has only the frame X-de jiā zài …; huó (live) with zài and a place, as in the book's fisherman sentence"
+    }
+  ],
+  "added": [
+    "the mother did not want the round things any more (a reason given before she threw them out)"
+  ],
+  "blind": {
+    "whole": "Jiékè and his mother are poor and own only one animal, which the text calls \"mōu\" (a cow). The mother sends him to sell it, but on the road he gives it to an unknown old man for five small round things that nobody has seen before. His mother is very angry and throws them out of the window. During the night a plant grows from them and reaches the sky. Jiékè climbs it and finds a huge house at the top where a giant lives who has a lot of money. While the giant sleeps, Jiékè takes his money and hurries down. The giant wakes up and climbs down after him, but Jiékè breaks the plant with a tool. The plant and the giant fall to the ground and the giant dies. Jiékè and his mother are rich and live well.",
+    "unsure": "S1, S17, S18, S25 (jīn): the gloss says money, but the word can also mean gold. Either way it is wealth, so the reading hardly changes. S2: 'jiào \"mōu\"-de dòng-wù' can be 'an animal called mōu' or 'an animal that cries mōu'. I take both to mean a cow because of the sound. S3: 'gěi rén, dé jīn huí-lái' literally says give it to people, get money and come back. I read that as 'sell it'. S6/S12: 'xiǎo yuán dōng-xi' only says small round things. I call them seeds only because a plant grows out of them in S12. S9, S10, S11 (tā): I read tā as 'she', the mother, because S9 is about her. S11: I read 'kàn wài-miàn-de kǒu' (the opening for looking outside) as a window, and 'ná-chū-qù' as putting or throwing them out. S12: 'yuè-de shí-jiān' could be 'the moon's time', meaning night (my reading), or 'in a month's time', since yuè means both moon and month. S13: the gloss gives tiān-shàng as 'day-up'. I read tiān as sky, so the plant 'reached the sky'. S21: 'zài Jiékè hòu-miàn' may mean the giant was physically behind Jiékè, or that he came down after him. S22: 'zuò-huài' only says 'made it broken'. The text does not say how, so 'cut down' is my guess. S23: 'dào dì-shàng' literally means arrived on the ground (the gloss says floor). I read it as falling."
+  },
+  "notes": "Translated by hand following the translate skill (whole dictionary, no lesson), 2026-10-22. kb_memory returns the book's own Hao-shuo-de of this story (lesson none); its sentences were reused where they say the English and named in each source, and changed where they lose something: bàba-māma (parents) became māma (mother); the book's kǒu wài-miàn lost the window, so the form of 窗户 is used; the book's kuài xià-qù le became kuài-de xià-qù le, since kuài + verb + le is how about to is said (kb_lookup hurry points to about-to); Zài lù-shàng at the front became a place after the doer. Not said, by choice: \"crashing\" (only fell to the ground); throwing is weaker (not wanting, then taking out, the dictionary's form of 扔). Pitfalls met: \"Yuè-de shí-jiān, yī-ge zhíwù …\" with the comma reads only as calling out to the night in all 500 readings (and \"Zài yuè-de shí-jiān, …\" reads zài as a verb, also a call); without the comma the time reading is the first (time-first's rule Time S). The when-clause \"Zhè-ge rén shuìjiào-de shí-jiān, …\" also reads first as a call; the meant reading is number 213 of 238. \"Tā-men huó-de hěn hǎo\" reads first as \"what they live is very good\" (verb-de-thing); verb-de-how is reading 4. kb_lookup \"cow\" gives zhēn hǎo (from 牛's slang sense awesome) as a gloss-tier row: misleading. Glossary proposal: giant -> zhēn dà-de rén: no word, the test set's own literal, 3 words, then zhè-ge rén. Glossary proposal: bean -> xiǎo yuán dōng-xi: no word; little round things, then zhè-xiē dōng-xi. Glossary proposal: magic (never seen before) -> Shéi dōu méi kàn-guò zhè-zhǒng dōng-xi: a sentence of its own after the thing. Glossary proposal: at night (at the front) -> Yuè-de shí-jiān with no comma: with a comma and a long sentence after it, it reads only as a call. Glossary proposal: hurried -> kuài-de and the verb: kuài, the verb and le can read as about to. Glossary proposal: lived happily -> huó de hěn hǎo: the test set's literal, verb-de-how (check the reading). Translated before kb_memory hid the stories' own lines (HAOSHUODE_MEMORY_SKIP), so some sentences reuse the book's lines and the book overlap is higher than a fresh run would give.",
+  "problems": [],
+  "timing": {},
+  "item": {
+    "id": "story-7",
+    "kind": "story",
+    "title": "Jack and the Beanstalk"
+  },
+  "book": {
+    "overlap": 0.795
+  }
+}

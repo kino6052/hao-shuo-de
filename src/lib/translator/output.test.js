@@ -106,6 +106,13 @@ describe('renderMarkdown and slugOf', () => {
     expect(md).toContain('- i1 (needed) I eat -- **kept**');
     expect(md).toContain('- i2 (colour) it is morning [when i1] -- **unknown**');
     expect(md).not.toMatch(/\|.*\|/); // no tables
+    expect(md.split('\n')[0]).toBe('# i eat');
+  });
+
+  test('a test-set text is headed by its title', () => {
+    const verified = { lesson: null, sentences: [{ hanzi: '我 吃 饭.', gloss: 'I eat rice.', check: check() }], castProblems: [], problems: [] };
+    const result = { ...assemble({ request: { text: 'I eat.' }, answer: answer(), verified }), item: { id: 'story-1', kind: 'story', title: 'Little Red Riding Hood' } };
+    expect(renderMarkdown(result).split('\n')[0]).toBe('# Little Red Riding Hood');
   });
 
   test('a slug: the date and the first six words', () => {

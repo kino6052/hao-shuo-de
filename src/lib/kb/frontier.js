@@ -2,13 +2,15 @@
 // the gaps; this names a fix for them, using the Mandarin words WordNet gives each English sense (KB_PLAN.md phase 6, K28).
 // Nothing here changes data.
 //
-//   frontier({ yardsticks, english, composites, words, mandarin }) -> { ready, words, mandarin, sentences }
+//   frontier({ yardsticks, english, composites, words, mandarin, translations }) -> { ready, words, mandarin, sentences, translations }
 //   renderFrontier(report, { part, limit }) -> the report as text
 //
 // yardsticks  the report of yardsticks.js
 // english     the English model (english.js): lookup(word), senseIds(word), data.index
 // words       the dictionary's words { id: { term, hanzi } }; composites [{ zh, py }]
 // mandarin    the common Mandarin words [{ zh, py, rank }]
+// translations the ideas the translator met with no short way to say them (kb/translation-gaps.json, TRANSLATOR_PLAN.md E2):
+//             [{ idea, times, descriptions, notes, texts }], most often met first
 //
 // An English word the dictionary cannot say is one of:
 //   link      the dictionary has a Mandarin word WordNet gives for the sense, but that entry is not linked to it
@@ -31,9 +33,9 @@ const FUNCTION_WORDS = new Set(
   'a an the to of in on at by for from with about into than as and or but if so because while that this these those i me my mine you your yours he him his she her hers it its we us our ours they them their theirs who whom whose which what when where why how am is are was were be been being do does did done have has had having will would shall should can could may might must not no there here then very too also just'.split(' '),
 );
 
-export const PARTS = ['words', 'mandarin', 'sentences'];
+export const PARTS = ['words', 'mandarin', 'sentences', 'translations'];
 
-export function frontier({ yardsticks, english, composites = [], words = {}, mandarin = [] }) {
+export function frontier({ yardsticks, english, composites = [], words = {}, mandarin = [], translations = [] }) {
   const index = english?.data?.index;
   if (!yardsticks || !index) return { ready: false };
   const notLinked = english?.data?.notes?.notLinked ?? {}; // kb/cross-check-notes.json: English word -> why the entry is not that sense
@@ -123,7 +125,7 @@ export function frontier({ yardsticks, english, composites = [], words = {}, man
     examples: yardsticks.sentences?.examples ?? [],
   };
 
-  return { ready: true, words: { items: wordItems, counts: tally(wordItems) }, mandarin: { items: mandarinItems }, sentences };
+  return { ready: true, words: { items: wordItems, counts: tally(wordItems) }, mandarin: { items: mandarinItems }, sentences, translations: { items: translations } };
 }
 
 const FIX_NOTES = {
@@ -166,6 +168,18 @@ export function renderFrontier(r, { part, limit = 12 } = {}) {
     out.push(`Everyday sentences: ${s.said} of ${s.total} are covered character by character, ${s.oneAway} are one character away (grammar not checked; kb_parse checks one sentence). The characters that would unlock the most:`);
     for (const c of s.chars.slice(0, limit)) {
       out.push(`    ${c.char}: ${c.unlocks} sentences alone, ${c.sentences} in all${c.isWord.length ? `; a word exists (${c.isWord.join(', ')}) but no entry` : ''}${c.carriedBy.length ? `; common words that carry it: ${c.carriedBy.join(', ')}` : ''}${c.inEntries.length ? `; already inside the entries ${c.inEntries.join(', ')}` : ''}`);
+    }
+    out.push('');
+  }
+  if (want('translations')) {
+    const t = r.translations?.items ?? [];
+    if (!t.length) out.push('No translation has met an idea it could not say shortly yet (npm run translator -- gaps gathers them).');
+    else {
+      out.push(`Ideas translations met with no short way to say them (kb/translation-gaps.json), most often met first: ${t.length}`);
+      for (const g of t.slice(0, limit)) {
+        out.push(`    ${g.idea} (${g.times}x): ${(g.descriptions ?? []).join(' / ') || 'no description'}${(g.notes ?? []).length ? `; ${g.notes.join('; ')}` : ''}`);
+      }
+      if (t.length > limit) out.push(`    … ${t.length - limit} more`);
     }
   }
   return out.join('\n').trimEnd();

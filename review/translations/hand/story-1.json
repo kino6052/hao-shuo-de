@@ -1,0 +1,1077 @@
+{
+  "version": 1,
+  "text": "There was a little girl who loved red clothes. Her grandmother (literally: \"her parents' parent\") was an old woman who lived far away. The old woman was ill, so the girl took her some food. On the road, a wolf (literally: \"a big bad animal\") came up. The wolf asked: \"Where are you going?\" The girl wasn't scared and said: \"To my grandmother's house.\" The wolf ran to the grandmother's house and ate her. He put on her clothes and lay down in her bed (literally: \"the sleeping place\"). The girl came and said: \"What big eyes you have!\" (Literally: \"your looking parts.\") \"All the better to see you with!\" (Literally: \"because I want to look at you well.\") \"What a big mouth you have!\" \"All the better to eat you with!\" And the wolf ate the girl too. A man heard the noise, came in, and struck the wolf. The grandmother and the girl came out of the wolf, and neither of them was dead.",
+  "lesson": null,
+  "model": "claude-opus-5-5 (by hand, subagents)",
+  "sentences": [
+    {
+      "pinyin": "Yǒu yī-ge xiǎo nǚ-rén.",
+      "english": "There was a little girl.",
+      "literally": "There is one small woman.",
+      "reading": "1",
+      "source": "the first half of the book's own line \"Yǒu yī-ge xiǎo nǚ-rén, tā hěn ài hóng-sè-de yīfu.\" (kb_memory, 100% shared), split because the whole line reads first as calling out (calling-hail)",
+      "ideas": [
+        "i1"
+      ],
+      "refs": "{{Word:you3}} {{word:yi1}}-{{light:ge4}} {{word:xiao3}} {{word:nv3}}-{{word:ren2}}.",
+      "hanzi": "有 一-个 小 女-人.",
+      "gloss": "to have one-universal classifier little female-human being.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 14,
+        "means": "yes-with-others",
+        "words": 6,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "There is a little girl."
+    },
+    {
+      "pinyin": "Tā hěn ài hóng-sè-de yīfu.",
+      "english": "She loved red clothes.",
+      "literally": "She very much loves red-colour clothes.",
+      "reading": "[S [NP tā] [VP hěn [VerbP ài [NP [ModNP [Mod",
+      "source": "the second half of the same book line (kb_memory, 100% shared), as it is",
+      "ideas": [
+        "i2"
+      ],
+      "refs": "{{Word:ta1}} {{word:hen3}} {{word:ai4}} {{word:hong2}}-{{word:se4}}-{{word:de}} {{word:yi1fu}}.",
+      "hanzi": "他 很 爱 红-色-的 衣服.",
+      "gloss": "he very to love red-colour-possessive marker clothing.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 17,
+        "means": "yes-with-others",
+        "words": 7,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "She loves red clothes very much."
+    },
+    {
+      "pinyin": "Tā bàba-māma-de māma shì lǎo nǚ-rén.",
+      "english": "Her grandmother was an old woman.",
+      "literally": "Her parents' mother is an old woman.",
+      "reading": "1",
+      "source": "adapted from the book's line \"Tā-de bàba-māma-de bàba-māma shì yī-ge lǎo nǚ-rén.\" (kb_memory, 77% shared): māma for the second parent, since she is a woman, and the owner-part tā bàba-māma; yī-ge dropped to keep it short",
+      "ideas": [
+        "i3",
+        "i4"
+      ],
+      "refs": "{{Word:ta1}} {{word:ba4ba}}-{{word:ma1ma}}-{{word:de}} {{word:ma1ma}} {{word:shi4}} {{word:lao3}} {{word:nv3}}-{{word:ren2}}.",
+      "hanzi": "他 爸爸-妈妈-的 妈妈 是 老 女-人.",
+      "gloss": "he dad-mom-possessive marker mom to be old (people female-human being.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 147,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "Her parents' mother (her grandmother) is an old woman."
+    },
+    {
+      "pinyin": "Lǎo nǚ-rén-de jiā hěn yuǎn.",
+      "english": "She lived far away.",
+      "literally": "The old woman's home is very far.",
+      "reading": "1",
+      "source": "the book's own line, as it is (kb_memory, 77% shared with the whole English sentence); live = X-de jiā zài (kb_lookup gloss tier)",
+      "ideas": [
+        "i5"
+      ],
+      "refs": "{{Word:lao3}} {{word:nv3}}-{{word:ren2}}-{{word:de}} {{word:jia1}} {{word:hen3}} {{word:yuan3}}.",
+      "hanzi": "老 女-人-的 家 很 远.",
+      "gloss": "old (people female-human being-possessive marker home very far.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 48,
+        "means": "yes-with-others",
+        "words": 7,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The old woman's home is very far away."
+    },
+    {
+      "pinyin": "Tā shēntǐ bù hǎo, xiǎo nǚ-rén jiù ná fàn qù tā jiā.",
+      "english": "She was ill, so the girl took her some food.",
+      "literally": "Her body is not good, the small woman then takes a meal and goes to her home.",
+      "reading": "[S [NP [ModNP xiǎo nǚ-rén]] [VP jiù [VP [VerbP ná [NP fàn]] [VP [VerbP qù",
+      "source": "adapted from the book's line \"Lǎo nǚ-rén shēntǐ bù hǎo, xiǎo nǚ-rén ná chī-de dōng-xi qù tā-de jiā.\" (kb_memory, 100% shared): jiù for so (kb_constructions so-result), fàn for chī-de dōng-xi, tā for lǎo nǚ-rén and tā jiā for tā-de jiā; with the book's words and jiù the meant reading is not in the first 500",
+      "ideas": [
+        "i6",
+        "i7"
+      ],
+      "refs": "{{Word:ta1}} {{word:shen1ti3}} {{word:bu4}} {{word:hao3}}, {{word:xiao3}} {{word:nv3}}-{{word:ren2}} {{word:jiu4}} {{word:na2}} {{word:fan4}} {{word:qu4}} {{word:ta1}} {{word:jia1}}.",
+      "hanzi": "他 身体 不 好, 小 女-人 就 拿 饭 去 他 家.",
+      "gloss": "he body not good, little female-human being then to take meal to go he home.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 318,
+        "means": "yes-with-others",
+        "words": 13,
+        "depth": 0,
+        "late": [],
+        "warnings": [
+          "too long: 13 words (limit 10)"
+        ]
+      },
+      "blind": "The old woman is not well, so the little girl takes food and goes to her home."
+    },
+    {
+      "pinyin": "Xiǎo nǚ-rén zài lù-shàng zǒu.",
+      "english": "The girl was walking on the road.",
+      "literally": "The small woman walks on the road.",
+      "reading": "1",
+      "source": "the book's \"Wǒ zài lù-shàng zǒu.\" (kb_memory, 33% shared) with the girl; the book's own \"Zài lù-shàng, ...\" (64% shared) reads first as calling out to the road (calling-hail)",
+      "ideas": [
+        "i8"
+      ],
+      "refs": "{{Word:xiao3}} {{word:nv3}}-{{word:ren2}} {{word:zai4}} {{word:lu4}}-{{word:shang4}} {{word:zou3}}.",
+      "hanzi": "小 女-人 在 路-上 走.",
+      "gloss": "little female-human being to exist at road-up to walk.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 352,
+        "means": "yes-with-others",
+        "words": 7,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The little girl is walking along the road."
+    },
+    {
+      "pinyin": "Yī-ge dà huài dòng-wù lái le.",
+      "english": "A wolf came up.",
+      "literally": "One big bad animal came.",
+      "reading": "1",
+      "source": "the second half of the book's line \"Zài lù-shàng, yī-ge dà huài dòng-wù lái le.\" (kb_memory, 64% shared), as it is",
+      "ideas": [
+        "i8"
+      ],
+      "refs": "{{Word:yi1}}-{{light:ge4}} {{word:da4}} {{word:huai4}} {{word:dong4}}-{{word:wu4}} {{word:lai2}} {{word:le}}.",
+      "hanzi": "一-个 大 坏 动-物 来 了.",
+      "gloss": "one-universal classifier big bad to move-thing to come perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 43,
+        "means": "yes-with-others",
+        "words": 8,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "A big bad animal came."
+    },
+    {
+      "pinyin": "Zhè-ge dòng-wù wèn: Nǐ qù nǎ-lǐ?",
+      "english": "The wolf asked: \"Where are you going?\"",
+      "literally": "This animal asks: You go where?",
+      "reading": "1",
+      "source": "the book's \"Nǐ qù nǎ-lǐ?\" (kb_memory, 100% shared) inside speech-quote, with the cast's short name",
+      "ideas": [
+        "i9"
+      ],
+      "refs": "{{Word:zhe4}}-{{light:ge4}} {{word:dong4}}-{{word:wu4}} {{word:wen4}}: {{Word:ni3}} {{word:qu4}} {{word:na3}}-{{word:li3}}?",
+      "hanzi": "这-个 动-物 问: 你 去 哪-里?",
+      "gloss": "this-universal classifier to move-thing to ask: you to go which-inside?",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 40,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The animal asked: Where are you going?"
+    },
+    {
+      "pinyin": "Xiǎo nǚ-rén bù pà.",
+      "english": "The girl wasn't scared.",
+      "literally": "The small woman does not fear.",
+      "reading": "1",
+      "source": "the first half of the book's line \"Xiǎo nǚ-rén bù pà, shuō: Wǒ qù lǎo nǚ-rén-de jiā.\" (kb_memory, 40% shared), split to keep it short",
+      "ideas": [
+        "i10"
+      ],
+      "refs": "{{Word:xiao3}} {{word:nv3}}-{{word:ren2}} {{word:bu4}} {{word:pa4}}.",
+      "hanzi": "小 女-人 不 怕.",
+      "gloss": "little female-human being not to fear.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 34,
+        "means": "yes-with-others",
+        "words": 5,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The little girl is not afraid."
+    },
+    {
+      "pinyin": "Tā shuō: Wǒ qù lǎo nǚ-rén-de jiā.",
+      "english": "She said: \"To my grandmother's house.\"",
+      "literally": "She says: I go to the old woman's home.",
+      "reading": "[VerbP qù [NP [ModNP [Mod [NP [ModNP lǎo nǚ-rén]] de] jiā]]]",
+      "source": "the second half of the same book line, with tā",
+      "ideas": [
+        "i11"
+      ],
+      "refs": "{{Word:ta1}} {{word:shuo1}}: {{Word:wo3}} {{word:qu4}} {{word:lao3}} {{word:nv3}}-{{word:ren2}}-{{word:de}} {{word:jia1}}.",
+      "hanzi": "他 说: 我 去 老 女-人-的 家.",
+      "gloss": "he to communicate: I to go old (people female-human being-possessive marker home.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 221,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 2,
+        "late": [],
+        "warnings": [
+          "too deep: 2 levels of describing phrases, clauses or quotes inside each other (limit 1)"
+        ]
+      },
+      "blind": "She said: I am going to the old woman's home."
+    },
+    {
+      "pinyin": "Zhè-ge dòng-wù kuài qù lǎo nǚ-rén-de jiā.",
+      "english": "The wolf ran to the grandmother's house.",
+      "literally": "This animal quickly goes to the old woman's home.",
+      "reading": "[VP kuài [VP [VerbP qù [NP [ModNP [Mod [NP [ModNP lǎo nǚ-rén]] de] jiā]]]",
+      "source": "adapted from the book's line \"Dà huài dòng-wù yòng jiǎo kuài qù lǎo nǚ-rén-de jiā, bǎ tā chī le.\" (kb_memory, 100% shared), split; kuài qù (kuai-quick) for run, because \"kuài zǒu, qù le X-de jiā\" can't mean it",
+      "ideas": [
+        "i12"
+      ],
+      "refs": "{{Word:zhe4}}-{{light:ge4}} {{word:dong4}}-{{word:wu4}} {{word:kuai4}} {{word:qu4}} {{word:lao3}} {{word:nv3}}-{{word:ren2}}-{{word:de}} {{word:jia1}}.",
+      "hanzi": "这-个 动-物 快 去 老 女-人-的 家.",
+      "gloss": "this-universal classifier to move-thing fast to go old (people female-human being-possessive marker home.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 401,
+        "means": "yes-with-others",
+        "words": 11,
+        "depth": 1,
+        "late": [],
+        "warnings": [
+          "too long: 11 words (limit 10)",
+          "too long: the description \"zhè-ge dòng-wù kuài qù lǎo nǚ-rén-de jiā\" is 11 words (limit 10)"
+        ]
+      },
+      "blind": "The animal went quickly to the old woman's home."
+    },
+    {
+      "pinyin": "Tā bǎ lǎo nǚ-rén chī le.",
+      "english": "He ate her.",
+      "literally": "He took the old woman and ate her.",
+      "reading": "1",
+      "source": "the second half of the same book line, with the old woman named instead of tā",
+      "ideas": [
+        "i13"
+      ],
+      "refs": "{{Word:ta1}} {{word:ba3}} {{word:lao3}} {{word:nv3}}-{{word:ren2}} {{word:chi1}} {{word:le}}.",
+      "hanzi": "他 把 老 女-人 吃 了.",
+      "gloss": "he grammatical object-introducing particle old (people female-human being to eat perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 21,
+        "means": "yes-with-others",
+        "words": 7,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "It ate the old woman."
+    },
+    {
+      "pinyin": "Tā bǎ lǎo nǚ-rén-de yīfu fàng zài shēntǐ-shàng.",
+      "english": "He put on her clothes.",
+      "literally": "He put the old woman's clothes on his body.",
+      "reading": "1",
+      "source": "the first half of the book's line \"Tā bǎ lǎo nǚ-rén-de yīfu fàng zài shēntǐ-shàng, tǎng zài shuìjiào-de dì-fang.\" (kb_memory, 71% shared); wear = bǎ yīfu fàng zài shēntǐ-shàng (kb_lookup gloss tier)",
+      "ideas": [
+        "i14"
+      ],
+      "refs": "{{Word:ta1}} {{word:ba3}} {{word:lao3}} {{word:nv3}}-{{word:ren2}}-{{word:de}} {{word:yi1fu}} {{word:fang4}} {{word:zai4}} {{word:shen1ti3}}-{{word:shang4}}.",
+      "hanzi": "他 把 老 女-人-的 衣服 放 在 身体-上.",
+      "gloss": "he grammatical object-introducing particle old (people female-human being-possessive marker clothing to put to exist at body-up.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 153,
+        "means": "yes-with-others",
+        "words": 11,
+        "depth": 1,
+        "late": [],
+        "warnings": [
+          "too long: 11 words (limit 10)"
+        ]
+      },
+      "blind": "It put the old woman's clothes on its own body."
+    },
+    {
+      "pinyin": "Tā tǎng zài shuìjiào-de dì-fang.",
+      "english": "He lay down in her bed.",
+      "literally": "He lies down on the sleeping place.",
+      "reading": "[S [NP tā] [VP [VerbP tǎng zài [NP [ModNP [Mod",
+      "source": "the second half of the same book line, with tā; bed = shuìjiào-de dì-fang (kb_lookup gloss tier)",
+      "ideas": [
+        "i15"
+      ],
+      "refs": "{{Word:ta1}} {{word:tang3}} {{word:zai4}} {{word:shui4jiao4}}-{{word:de}} {{word:di4}}-{{light:fang1}}.",
+      "hanzi": "他 躺 在 睡觉-的 地-方.",
+      "gloss": "he to lie (down) to exist at to sleep-possessive marker floor-side.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 501,
+        "means": "yes-with-others",
+        "words": 7,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "It lay down in the place for sleeping, which is the bed."
+    },
+    {
+      "pinyin": "Xiǎo nǚ-rén lái le.",
+      "english": "The girl came.",
+      "literally": "The small woman came.",
+      "reading": "1",
+      "source": "the first half of the book's line \"Xiǎo nǚ-rén lái le, shuō: Nǐ-de kàn-de bù-fen zhēn dà!\" (kb_memory, 36% shared), split",
+      "ideas": [
+        "i16"
+      ],
+      "refs": "{{Word:xiao3}} {{word:nv3}}-{{word:ren2}} {{word:lai2}} {{word:le}}.",
+      "hanzi": "小 女-人 来 了.",
+      "gloss": "little female-human being to come perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 34,
+        "means": "yes-with-others",
+        "words": 5,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The little girl came."
+    },
+    {
+      "pinyin": "Tā shuō: Nǐ-de yǎnjing zhēn dà!",
+      "english": "She said: \"What big eyes you have!\"",
+      "literally": "She says: Your eyes are really big!",
+      "reading": "1",
+      "source": "the second half of the same book line, with yǎnjing (eye, kb_lookup gloss tier, one word) for kàn-de bù-fen (looking parts)",
+      "ideas": [
+        "i17"
+      ],
+      "refs": "{{Word:ta1}} {{word:shuo1}}: {{Word:ni3}}-{{word:de}} {{word:yan3jing}} {{word:zhen1}} {{word:da4}}!",
+      "hanzi": "他 说: 你-的 眼睛 真 大!",
+      "gloss": "he to communicate: you-possessive marker eye true big!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 6,
+        "means": "yes-with-others",
+        "words": 7,
+        "depth": 2,
+        "late": [],
+        "warnings": [
+          "too deep: 2 levels of describing phrases, clauses or quotes inside each other (limit 1)"
+        ]
+      },
+      "blind": "She said: Your eyes are really big!"
+    },
+    {
+      "pinyin": "Zhè-ge dòng-wù shuō: Yīnwèi wǒ yào hǎo-hǎo kàn nǐ!",
+      "english": "\"All the better to see you with!\"",
+      "literally": "This animal says: Because I want to look at you well!",
+      "reading": "[Wish yào] [VP [Manner hǎo hǎo]",
+      "source": "the book's own line \"Yīnwèi wǒ yào hǎo-hǎo kàn nǐ!\" (kb_memory, 50% shared), with the speaker named",
+      "ideas": [
+        "i18"
+      ],
+      "refs": "{{Word:zhe4}}-{{light:ge4}} {{word:dong4}}-{{word:wu4}} {{word:shuo1}}: {{Word:yin1wei4}} {{word:wo3}} {{word:yao4}} {{word:hao3}}-{{word:hao3}} {{word:kan4}} {{word:ni3}}!",
+      "hanzi": "这-个 动-物 说: 因为 我 要 好-好 看 你!",
+      "gloss": "this-universal classifier to move-thing to communicate: because I to want good-good to look at you!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 110,
+        "means": "yes-with-others",
+        "words": 12,
+        "depth": 2,
+        "late": [],
+        "warnings": [
+          "too long: 12 words (limit 10)",
+          "too deep: 2 levels of describing phrases, clauses or quotes inside each other (limit 1)"
+        ]
+      },
+      "blind": "The animal said: That is because I want to look at you well!"
+    },
+    {
+      "pinyin": "Xiǎo nǚ-rén shuō: Nǐ-de kǒu zhēn dà!",
+      "english": "\"What a big mouth you have!\"",
+      "literally": "The small woman says: Your mouth is really big!",
+      "reading": "1",
+      "source": "the book's own line \"Nǐ-de kǒu zhēn dà!\" (kb_memory, 100% shared), with the speaker named",
+      "ideas": [
+        "i19"
+      ],
+      "refs": "{{Word:xiao3}} {{word:nv3}}-{{word:ren2}} {{word:shuo1}}: {{Word:ni3}}-{{word:de}} {{word:kou3}} {{word:zhen1}} {{word:da4}}!",
+      "hanzi": "小 女-人 说: 你-的 口 真 大!",
+      "gloss": "little female-human being to communicate: you-possessive marker hole true big!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 88,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 2,
+        "late": [],
+        "warnings": [
+          "too deep: 2 levels of describing phrases, clauses or quotes inside each other (limit 1)"
+        ]
+      },
+      "blind": "The little girl said: Your mouth is really big!"
+    },
+    {
+      "pinyin": "Zhè-ge dòng-wù shuō: Yīnwèi wǒ yào chī nǐ!",
+      "english": "\"All the better to eat you with!\"",
+      "literally": "This animal says: Because I want to eat you!",
+      "reading": "[Wish yào]",
+      "source": "the book's own line \"Yīnwèi wǒ yào chī nǐ!\" (kb_memory, 31% shared), with the speaker named",
+      "ideas": [
+        "i20"
+      ],
+      "refs": "{{Word:zhe4}}-{{light:ge4}} {{word:dong4}}-{{word:wu4}} {{word:shuo1}}: {{Word:yin1wei4}} {{word:wo3}} {{word:yao4}} {{word:chi1}} {{word:ni3}}!",
+      "hanzi": "这-个 动-物 说: 因为 我 要 吃 你!",
+      "gloss": "this-universal classifier to move-thing to communicate: because I to want to eat you!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 44,
+        "means": "yes-with-others",
+        "words": 10,
+        "depth": 2,
+        "late": [],
+        "warnings": [
+          "too deep: 2 levels of describing phrases, clauses or quotes inside each other (limit 1)"
+        ]
+      },
+      "blind": "The animal said: That is because I want to eat you!"
+    },
+    {
+      "pinyin": "Zhè-ge dòng-wù bǎ xiǎo nǚ-rén yě chī le.",
+      "english": "And the wolf ate the girl too.",
+      "literally": "This animal took the small woman and ate her too.",
+      "reading": "1",
+      "source": "the book's own line \"Dà huài dòng-wù bǎ xiǎo nǚ-rén yě chī le.\" (kb_memory, 50% shared), with the cast's short name",
+      "ideas": [
+        "i21"
+      ],
+      "refs": "{{Word:zhe4}}-{{light:ge4}} {{word:dong4}}-{{word:wu4}} {{word:ba3}} {{word:xiao3}} {{word:nv3}}-{{word:ren2}} {{word:ye3}} {{word:chi1}} {{word:le}}.",
+      "hanzi": "这-个 动-物 把 小 女-人 也 吃 了.",
+      "gloss": "this-universal classifier to move-thing grammatical object-introducing particle little female-human being also to eat perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 147,
+        "means": "yes-with-others",
+        "words": 11,
+        "depth": 0,
+        "late": [],
+        "warnings": [
+          "too long: 11 words (limit 10)"
+        ]
+      },
+      "blind": "The animal ate the little girl too."
+    },
+    {
+      "pinyin": "Yī-ge nán-rén tīng-dào le shēngyīn.",
+      "english": "A man heard the noise.",
+      "literally": "One man heard a sound.",
+      "reading": "1",
+      "source": "the first part of the book's line \"Yī-ge nán-rén tīng-dào shēngyīn, jìn-lái, dǎ le dà huài dòng-wù.\" (kb_memory, 100% shared), split, with le",
+      "ideas": [
+        "i22"
+      ],
+      "refs": "{{Word:yi1}}-{{light:ge4}} {{word:nan2}}-{{word:ren2}} {{word:ting1}}-{{word:dao4}} {{word:le}} {{word:sheng1yin1}}.",
+      "hanzi": "一-个 难-人 听-到 了 声音.",
+      "gloss": "one-universal classifier difficult-human being to hear-to arrive perfective aspect marker sound.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 61,
+        "means": "yes-with-others",
+        "words": 8,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "A man heard the sound."
+    },
+    {
+      "pinyin": "Tā jìn-lái, dǎ le zhè-ge dòng-wù.",
+      "english": "He came in and struck the wolf.",
+      "literally": "He comes in, hit this animal.",
+      "reading": "1",
+      "source": "the rest of the same book line, with tā and the cast's short name",
+      "ideas": [
+        "i23",
+        "i24"
+      ],
+      "refs": "{{Word:ta1}} {{word:jin4}}-{{word:lai2}}, {{word:da3}} {{word:le}} {{word:zhe4}}-{{light:ge4}} {{word:dong4}}-{{word:wu4}}.",
+      "hanzi": "他 进-来, 打 了 这-个 动-物.",
+      "gloss": "he to enter-to come, to hit perfective aspect marker this-universal classifier to move-thing.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 38,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "He came in and hit the animal."
+    },
+    {
+      "pinyin": "Lǎo nǚ-rén hé xiǎo nǚ-rén cóng dòng-wù lǐ-miàn chū-lái le.",
+      "english": "The grandmother and the girl came out of the wolf.",
+      "literally": "The old woman and the small woman came out from the animal's inside.",
+      "reading": "1",
+      "source": "the first half of the book's line \"Lǎo nǚ-rén hé xiǎo nǚ-rén cóng dòng-wù lǐ-miàn chū-lái le, tā-men dōu méi sǐ.\" (kb_memory, 39% shared), split",
+      "ideas": [
+        "i25"
+      ],
+      "refs": "{{Word:lao3}} {{word:nv3}}-{{word:ren2}} {{word:he2}} {{word:xiao3}} {{word:nv3}}-{{word:ren2}} {{word:cong2}} {{word:dong4}}-{{word:wu4}} {{word:li3}}-{{word:mian4}} {{word:chu1}}-{{word:lai2}} {{word:le}}.",
+      "hanzi": "老 女-人 和 小 女-人 从 动-物 里-面 出-来 了.",
+      "gloss": "old (people female-human being and little female-human being from to move-thing inside-side to go out-to come perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 501,
+        "means": "yes-with-others",
+        "words": 15,
+        "depth": 0,
+        "late": [],
+        "warnings": [
+          "too long: 15 words (limit 10)"
+        ]
+      },
+      "blind": "The old woman and the little girl came out from inside the animal."
+    },
+    {
+      "pinyin": "Tā-men dōu méi sǐ.",
+      "english": "Neither of them was dead.",
+      "literally": "They all did not die.",
+      "reading": "1",
+      "source": "the second half of the same book line, as it is",
+      "ideas": [
+        "i26"
+      ],
+      "refs": "{{Word:ta1}}-{{word:men}} {{word:dou1}} {{word:mei2}} {{word:si3}}.",
+      "hanzi": "他-们 都 没 死.",
+      "gloss": "he-more than one person all negative particle used exclusively to negate the verb you (to form meiyou) to die.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 3,
+        "means": "yes-with-others",
+        "words": 5,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "Neither of them died."
+    }
+  ],
+  "sketch": [
+    {
+      "id": "i1",
+      "idea": "There was a little girl",
+      "needed": true,
+      "links": "",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i2",
+      "idea": "The girl loved red clothes",
+      "needed": true,
+      "links": "about the girl (i1)",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i3",
+      "idea": "The girl had a grandmother (her parents' parent)",
+      "needed": true,
+      "links": "",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i4",
+      "idea": "The grandmother was an old woman",
+      "needed": false,
+      "links": "about i3; she is called the old woman after",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i5",
+      "idea": "The grandmother lived far away",
+      "needed": true,
+      "links": "about i3",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i6",
+      "idea": "The grandmother was ill",
+      "needed": true,
+      "links": "",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i7",
+      "idea": "The girl took some food to her",
+      "needed": true,
+      "links": "so, because of i6",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i8",
+      "idea": "On the road a wolf (a big bad animal) came up to the girl",
+      "needed": true,
+      "links": "then, while she went (i7)",
+      "verdict": "weaker",
+      "why": "The reader got 'a big bad animal' but never knew it was a wolf. The text gives a kind of thing, not the thing itself."
+    },
+    {
+      "id": "i9",
+      "idea": "The wolf asked her where she was going",
+      "needed": true,
+      "links": "then",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i10",
+      "idea": "The girl was not scared",
+      "needed": true,
+      "links": "",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i11",
+      "idea": "She said she was going to her grandmother's house",
+      "needed": true,
+      "links": "and, answer to i9",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i12",
+      "idea": "The wolf ran to the grandmother's house",
+      "needed": true,
+      "links": "then",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i13",
+      "idea": "The wolf ate the grandmother",
+      "needed": true,
+      "links": "then",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i14",
+      "idea": "The wolf put on the grandmother's clothes",
+      "needed": true,
+      "links": "then",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i15",
+      "idea": "The wolf lay down in her bed (the sleeping place)",
+      "needed": true,
+      "links": "then",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i16",
+      "idea": "The girl came",
+      "needed": true,
+      "links": "then",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i17",
+      "idea": "The girl said: your eyes are very big",
+      "needed": true,
+      "links": "",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i18",
+      "idea": "The wolf answered: (they are big) because I want to look at you well",
+      "needed": true,
+      "links": "answer to i17",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i19",
+      "idea": "The girl said: your mouth is very big",
+      "needed": true,
+      "links": "",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i20",
+      "idea": "The wolf answered: (it is big) because I want to eat you",
+      "needed": true,
+      "links": "answer to i19",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i21",
+      "idea": "The wolf ate the girl too",
+      "needed": true,
+      "links": "then; too, like i13",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i22",
+      "idea": "A man heard the noise",
+      "needed": true,
+      "links": "then",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i23",
+      "idea": "The man came in",
+      "needed": true,
+      "links": "then, because of i22",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i24",
+      "idea": "The man hit the wolf",
+      "needed": true,
+      "links": "then",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i25",
+      "idea": "The grandmother and the girl came out of the wolf",
+      "needed": true,
+      "links": "then",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i26",
+      "idea": "Neither of them was dead",
+      "needed": true,
+      "links": "and",
+      "verdict": "kept",
+      "why": ""
+    }
+  ],
+  "cast": [
+    {
+      "thing": "girl",
+      "description": "xiǎo nǚ-rén",
+      "short": "xiǎo nǚ-rén"
+    },
+    {
+      "thing": "grandmother",
+      "description": "bàba-māma-de māma",
+      "short": "lǎo nǚ-rén"
+    },
+    {
+      "thing": "wolf",
+      "description": "dà huài dòng-wù",
+      "short": "zhè-ge dòng-wù"
+    },
+    {
+      "thing": "bed",
+      "description": "shuìjiào-de dì-fang",
+      "short": ""
+    }
+  ],
+  "castProblems": [],
+  "structures": [
+    {
+      "idea": "i1",
+      "pattern": "svo",
+      "lesson": "who-does-what"
+    },
+    {
+      "idea": "i1",
+      "pattern": "measure-word",
+      "lesson": "pointing"
+    },
+    {
+      "idea": "i1",
+      "pattern": "adjective-noun",
+      "lesson": "modifying-nouns"
+    },
+    {
+      "idea": "i2",
+      "pattern": "adverb-before-verb",
+      "lesson": "how-much"
+    },
+    {
+      "idea": "i2",
+      "pattern": "de-modifier",
+      "lesson": "modifying-nouns"
+    },
+    {
+      "idea": "i3",
+      "pattern": "owner-part",
+      "lesson": "roles-of-a-word"
+    },
+    {
+      "idea": "i3",
+      "pattern": "de-modifier",
+      "lesson": "modifying-nouns"
+    },
+    {
+      "idea": "i4",
+      "pattern": "shi-copula",
+      "lesson": "words-and-sentences"
+    },
+    {
+      "idea": "i5",
+      "pattern": "hen-adjective",
+      "lesson": "modifying-nouns"
+    },
+    {
+      "idea": "i6",
+      "pattern": "owner-part",
+      "lesson": "roles-of-a-word"
+    },
+    {
+      "idea": "i6",
+      "pattern": "bu-adjective",
+      "lesson": "how-much"
+    },
+    {
+      "idea": "i7",
+      "pattern": "comma-clauses",
+      "lesson": "also-and-all"
+    },
+    {
+      "idea": "i7",
+      "pattern": "jiu-then",
+      "lesson": "linking-sentences"
+    },
+    {
+      "idea": "i7",
+      "pattern": "serial-verbs",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i8",
+      "pattern": "zai-place",
+      "lesson": "where-it-is"
+    },
+    {
+      "idea": "i8",
+      "pattern": "le-new-situation",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i9",
+      "pattern": "speech-quote",
+      "lesson": "questions"
+    },
+    {
+      "idea": "i10",
+      "pattern": "bu-adjective",
+      "lesson": "how-much"
+    },
+    {
+      "idea": "i11",
+      "pattern": "speech-quote",
+      "lesson": "questions"
+    },
+    {
+      "idea": "i12",
+      "pattern": "kuai-quick",
+      "lesson": "when-it-happens"
+    },
+    {
+      "idea": "i13",
+      "pattern": "ba-handle",
+      "lesson": "becoming-and-making"
+    },
+    {
+      "idea": "i14",
+      "pattern": "ba-handle",
+      "lesson": "becoming-and-making"
+    },
+    {
+      "idea": "i14",
+      "pattern": "place-li-shang",
+      "lesson": "where-it-is"
+    },
+    {
+      "idea": "i15",
+      "pattern": "zai-place",
+      "lesson": "where-it-is"
+    },
+    {
+      "idea": "i15",
+      "pattern": "de-modifier",
+      "lesson": "modifying-nouns"
+    },
+    {
+      "idea": "i16",
+      "pattern": "le-new-situation",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i17",
+      "pattern": "zhen-really",
+      "lesson": "how-much"
+    },
+    {
+      "idea": "i18",
+      "pattern": "yinwei-because",
+      "lesson": "linking-sentences"
+    },
+    {
+      "idea": "i18",
+      "pattern": "want-verb",
+      "lesson": "pre-verbs"
+    },
+    {
+      "idea": "i18",
+      "pattern": "doubled-adjective",
+      "lesson": "doubling-words"
+    },
+    {
+      "idea": "i19",
+      "pattern": "zhen-really",
+      "lesson": "how-much"
+    },
+    {
+      "idea": "i20",
+      "pattern": "yinwei-because",
+      "lesson": "linking-sentences"
+    },
+    {
+      "idea": "i20",
+      "pattern": "want-verb",
+      "lesson": "pre-verbs"
+    },
+    {
+      "idea": "i21",
+      "pattern": "ba-handle",
+      "lesson": "becoming-and-making"
+    },
+    {
+      "idea": "i21",
+      "pattern": "ye-also",
+      "lesson": "also-and-all"
+    },
+    {
+      "idea": "i22",
+      "pattern": "le-done",
+      "lesson": "when-it-happens"
+    },
+    {
+      "idea": "i23",
+      "pattern": "add-take",
+      "lesson": "time-and-sums"
+    },
+    {
+      "idea": "i24",
+      "pattern": "le-done",
+      "lesson": "when-it-happens"
+    },
+    {
+      "idea": "i25",
+      "pattern": "he-and",
+      "lesson": "inside-a-sentence"
+    },
+    {
+      "idea": "i25",
+      "pattern": "cong-from",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i26",
+      "pattern": "dou-all",
+      "lesson": "also-and-all"
+    }
+  ],
+  "gaps": [
+    {
+      "idea": "wolf",
+      "description": "dà huài dòng-wù",
+      "note": "the dictionary's form of 狼 is 10 words (jiào \"ào-ào\"-de, bù zài jiā-lǐ huó-de dòng-wù), and in a sentence of its own its jiào reads as \"is called Ao-ao\"; the English gives \"a big bad animal\" itself, so that is used, and a reader may not see that it is a wolf"
+    },
+    {
+      "idea": "her bed (whose bed it is)",
+      "description": "shuìjiào-de dì-fang",
+      "note": "\"tǎng zài lǎo nǚ-rén-de shuìjiào-de dì-fang\", \"... lǎo nǚ-rén shuìjiào-de dì-fang\", \"... tā-de shuìjiào-de dì-fang\" and \"zài lǎo nǚ-rén shuìjiào-de dì-fang tǎng\" can't mean \"he lay down in her bed\" in any of the first 500 readings; the owner is left to the house the wolf is in"
+    }
+  ],
+  "added": [],
+  "blind": {
+    "whole": "A little girl who loves red clothes goes to take food to her grandmother, an old woman who lives far away and is unwell. On the road a big bad animal asks her where she is going, and she tells it, without fear. The animal hurries to the grandmother's home, eats her, puts on her clothes and lies in her bed. When the girl comes she says how big its eyes are, and it says that is so it can see her well. Then she says how big its mouth is, and it says that is so it can eat her, and it eats her too. A man hears the noise, comes in and hits the animal. The grandmother and the girl come out of the animal's belly alive.",
+    "unsure": "Sentence 3: I read 'bàba-māma-de māma' as 'the mother of her father and mother', so her grandmother. Sentence 5: 'Tā shēntǐ bù hǎo' and 'tā jiā' could refer to the girl or to the old woman. Since the old woman was the subject just before, and the girl is taking food to her, I read both as the old woman. Sentence 7: the text never says what kind of animal it is, only 'a big bad animal', so I have not named it. Sentence 14: the gloss gives 'floor-side', but I read 'dì-fang' as 'place', and 'the place for sleeping' as a bed. Sentence 18: the gloss gives 'hole' for 'kǒu'. Here it means mouth. Sentence 21: the gloss gives 'difficult-human being' for 'nán-rén', which is the wrong sense. It means a man. Sentence 22: 'dǎ le' only says he hit or beat the animal. It does not say he killed it. Sentence 23: coming out 'from inside the animal' means it had swallowed them whole, but the text does not say how they got out."
+  },
+  "notes": "Translated by hand following the translate skill (2026-10-22), the whole dictionary as the level. kb_memory returned the book's own lines of this story (lesson none, mostly 100% shared); they were reused as step 2 allows and each source names its line. Changes from the book's lines: long lines split (each half kept); \"Zài lù-shàng, ...\" and \"Yǒu yī-ge X, tā ...\" read first as calling out (calling-hail), so the road is said with zài + place + zǒu and the girl gets a sentence of her own; jiù added for \"so\"; \"chī-de dōng-xi\" after ná reads as a clause (the thing someone ate), so fàn (meal); yǎnjing (eye) for the book's kàn-de bù-fen; the dialogue lines name the speaker. Not said, by choice: \"some\" (food), \"her\" (bed, see gaps), the girl calling the grandmother \"my grandmother\" (she says \"the old woman's home\"). \"Neither ... dead\" has no entry (kb_lookup: nothing for dead or neither) and is said by dōu méi sǐ, they all did not die. kb_gloss shows nán-rén as \"difficult-human being\" (nán is spelled 难) and kǒu first as \"hole\", which a blind reader might misread. Glossary proposal: wolf (in a story) -> dà huài dòng-wù: the test set's own literal, short, and the dictionary's form is 10 words whose jiào reads as \"is called\". Glossary proposal: girl -> xiǎo nǚ-rén: the book's lessons and stories say it; nǚ-hái-zi is spelled with hái (还) for its sound. Glossary proposal: grandmother -> bàba-māma-de māma: a parent's mother on either side; the dictionary's bàba-de māma (奶奶) is the father's mother only. Glossary proposal: took food to X -> ná fàn qù X jiā: with chī-de dōng-xi the meant reading is not in the first 500. Translated before kb_memory hid the stories' own lines (HAOSHUODE_MEMORY_SKIP), so some sentences reuse the book's lines and the book overlap is higher than a fresh run would give.",
+  "problems": [],
+  "timing": {},
+  "item": {
+    "id": "story-1",
+    "kind": "story",
+    "title": "Little Red Riding Hood"
+  },
+  "book": {
+    "overlap": 0.859
+  }
+}

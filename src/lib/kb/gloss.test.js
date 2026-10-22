@@ -30,6 +30,22 @@ describe('askGloss', () => {
     expect(r.sentences[0].gloss).toBe('the word wǒ to eat fàn meal.');
   });
 
+  test('a chain that spells a composite is glossed by the composite\'s own first sense, not word by word', () => {
+    const r = askGloss(kb, { text: 'Wǒ chī shí-jiān.' }).data;
+    expect(r.sentences[0].gloss).toBe('the word wǒ the word chī time.');
+  });
+
+  test('a chain spelling no composite is glossed word by word; the longest spelled part wins, from the left', () => {
+    expect(askGloss(kb, { text: 'Fēi-chī.' }).data.sentences[0].gloss).toBe('the word fēi-the word chī.');
+    expect(askGloss(kb, { text: 'Fēi-jī-de.' }).data.sentences[0].gloss).toBe('airplane-the word de.');
+  });
+
+  test('synonyms share a form: the composite written with the chain\'s own hanzi wins over a lower rank', () => {
+    const composites = [{ rank: 1, zh: '事', en: 'matter, affair', hsd: '{{word:dong1}}-{{light:xi1}}' }, ...source.composites];
+    const r = askGloss(createKb({ ...source, composites }), { text: 'Dōng-xi. Shí-jiān.' }).data;
+    expect(r.sentences.map((s) => s.gloss)).toEqual(['thing.', 'time.']); // 东西; 时间 through shi2's sense 时
+  });
+
   test('several sentences are glossed one by one', () => {
     const r = askGloss(kb, { text: 'Wǒ chī fàn. Fàn.' }).data;
     expect(r.sentences).toHaveLength(2);

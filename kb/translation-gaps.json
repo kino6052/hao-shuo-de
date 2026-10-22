@@ -1,5 +1,788 @@
 [
   {
+    "idea": "wolf",
+    "times": 3,
+    "descriptions": [
+      "dà huài dòng-wù",
+      "jiào \"ào-ào\"-de, bù zài jiā-lǐ huó-de dòng-wù"
+    ],
+    "notes": [
+      "the dictionary's form of 狼 is 10 words (jiào \"ào-ào\"-de, bù zài jiā-lǐ huó-de dòng-wù), and in a sentence of its own its jiào reads as \"is called Ao-ao\"; the English gives \"a big bad animal\" itself, so that is used, and a reader may not see that it is a wolf",
+      "the form of 狼 is 10 words; kept its jiào \"ào-ào\"-de and used the story's dà huài dòng-wù for the rest",
+      "the dictionary's form of 狼 is 10 words (jiào \"ào-ào\"-de, bù zài jiā-lǐ huó-de dòng-wù); the story's own note asks for \"the big bad animal\", which says any big bad animal, not a wolf"
+    ],
+    "texts": [
+      "review/translations/hand/story-1.json",
+      "review/translations/hand/story-2.json",
+      "review/translations/hand/story-5.json"
+    ]
+  },
+  {
+    "idea": "always",
+    "times": 1,
+    "descriptions": [
+      "hái"
+    ],
+    "notes": [
+      "lǎo-shì splits into lǎo + shì after a subject and the sentence stops parsing; shénme shí-jiān dōu made the sentence 15 words with over 500 readings; hái (still) keeps that he wanted more"
+    ],
+    "texts": [
+      "review/translations/hand/story-8.json"
+    ]
+  },
+  {
+    "idea": "angry",
+    "times": 1,
+    "descriptions": [
+      "xīn-lǐ yǒu huǒ le"
+    ],
+    "notes": [
+      "the form of 愤怒 is 7 words (xīn-lǐ yǒu hěn dà-de huǒ); shortened as the story's note does, fire in the heart, with le for got angry"
+    ],
+    "texts": [
+      "review/translations/hand/story-5.json"
+    ]
+  },
+  {
+    "idea": "ant",
+    "times": 1,
+    "descriptions": [
+      "hēi-sè-de xiǎo dòng-wù"
+    ],
+    "notes": [
+      "no short word: the dictionary's form is 11 words (hěn duō zài yī-qǐ gōng-zuò-de xiǎo dòng-wù), so the text's own note (a little black animal) is used, named zhè-ge xiǎo dòng-wù after"
+    ],
+    "texts": [
+      "review/translations/hand/story-9.json"
+    ]
+  },
+  {
+    "idea": "asleep",
+    "times": 1,
+    "descriptions": [
+      "zài nà-lǐ shuìjiào"
+    ],
+    "notes": [
+      "kb_lookup: nothing says asleep; said as sleeping there"
+    ],
+    "texts": [
+      "review/translations/hand/story-3.json"
+    ]
+  },
+  {
+    "idea": "at all",
+    "times": 1,
+    "descriptions": [
+      "shénme dōu méi"
+    ],
+    "notes": [
+      "nothing says at all; shenme-dou carries not anything"
+    ],
+    "texts": [
+      "review/translations/hand/story-8.json"
+    ]
+  },
+  {
+    "idea": "axe",
+    "times": 1,
+    "descriptions": [
+      "gōng-jù"
+    ],
+    "notes": [
+      "no word for axe; the English itself says a tool, and kb_hints starts it from gōng-jù; nothing for cutting (切 qiē has no short form) sets it apart"
+    ],
+    "texts": [
+      "review/translations/hand/story-7.json"
+    ]
+  },
+  {
+    "idea": "bean",
+    "times": 1,
+    "descriptions": [
+      "xiǎo yuán dōng-xi"
+    ],
+    "notes": [
+      "no word for bean (kb_lookup gives only chī-de zhíwù, vegetable, and shuǐ-guǒ, fruit, as kinds); the test set's literal, little round things"
+    ],
+    "texts": [
+      "review/translations/hand/story-7.json"
+    ]
+  },
+  {
+    "idea": "bear",
+    "times": 1,
+    "descriptions": [
+      "dà dòng-wù"
+    ],
+    "notes": [
+      "no word for bear; the dictionary's form (from 熊) is hěn zhòng-de dà dòng-wù, 6 words, and a bear comes in almost every sentence, so the test set's own wording (big animals) is used; the kind of animal is lost, and the big bear is said the same way as the bears"
+    ],
+    "texts": [
+      "review/translations/hand/story-3.json"
+    ]
+  },
+  {
+    "idea": "bored",
+    "times": 1,
+    "descriptions": [
+      "jué-dé shénme dōu bù hǎo-wánr"
+    ],
+    "notes": [
+      "the form of 无聊 is 8 words (méi yǒu hǎo wánr-de, méi-shì zuò); said as the story's note does, he felt nothing was fun"
+    ],
+    "texts": [
+      "review/translations/hand/story-5.json"
+    ]
+  },
+  {
+    "idea": "came crashing down",
+    "times": 1,
+    "descriptions": [
+      "dōu dào dì-shàng le"
+    ],
+    "notes": [
+      "fall is the form of 掉 (dào dì-shàng); nothing short for the crash"
+    ],
+    "texts": [
+      "review/translations/hand/story-7.json"
+    ]
+  },
+  {
+    "idea": "chair",
+    "times": 1,
+    "descriptions": [
+      "Zhè-ge dōng-xi ràng rén zuò-xià."
+    ],
+    "notes": [
+      "the dictionary's form ràng-rén-zuò-xià-de dōng-xi is 7 words, so it gets a sentence of its own (the cast list) and is zhè-ge dōng-xi after; the bear's \"my chair\" becomes \"this thing\""
+    ],
+    "texts": [
+      "review/translations/hand/story-3.json"
+    ]
+  },
+  {
+    "idea": "chimney",
+    "times": 1,
+    "descriptions": [
+      "shàng-miàn-de kǒu"
+    ],
+    "notes": [
+      "no entry; the hole at the top, the English text's own words"
+    ],
+    "texts": [
+      "review/translations/hand/story-2.json"
+    ]
+  },
+  {
+    "idea": "climbed",
+    "times": 1,
+    "descriptions": [
+      "shàng-qù"
+    ],
+    "notes": [
+      "the form of 爬 is yòng shǒu hé jiǎo shàng-qù (with hands and feet), odd for a wolf; shàng-qù (went up) is weaker"
+    ],
+    "texts": [
+      "review/translations/hand/story-2.json"
+    ]
+  },
+  {
+    "idea": "duck (mother duck)",
+    "times": 1,
+    "descriptions": [
+      "fēi-de dòng-wù māma"
+    ],
+    "notes": [
+      "The form of 鸭子 is 9 words (zài shuǐ-lǐ zǒu-de fēi-de dòng-wù); for one mention the mother is a bird mother by the water, as the text's own literal note names the ducklings. The duck itself is weaker: a bird near water."
+    ],
+    "texts": [
+      "review/translations/hand/story-6.json"
+    ]
+  },
+  {
+    "idea": "duckling",
+    "times": 1,
+    "descriptions": [
+      "xiǎo fēi-de dòng-wù"
+    ],
+    "notes": [
+      "No entry (kb_lookup's only row is a kind-of guess: meat). The text's own literal: six little flying animals."
+    ],
+    "texts": [
+      "review/translations/hand/story-6.json"
+    ]
+  },
+  {
+    "idea": "fish",
+    "times": 1,
+    "descriptions": [
+      "shuǐ-lǐ-de dòng-wù"
+    ],
+    "notes": [
+      "the dictionary's form is zài-shuǐ-lǐ-de dòng-wù; zài dropped so the noun reads inside other sentences"
+    ],
+    "texts": [
+      "review/translations/hand/story-10.json"
+    ]
+  },
+  {
+    "idea": "fool (a fool, foolish)",
+    "times": 1,
+    "descriptions": [
+      "tóu bù hǎo (-de rén)"
+    ],
+    "notes": [
+      "no word; the form of 傻 and 笨, as the text's literal note says"
+    ],
+    "texts": [
+      "review/translations/hand/story-8.json"
+    ]
+  },
+  {
+    "idea": "fool (as a name you call someone)",
+    "times": 1,
+    "descriptions": [
+      "Nǐ tóu bù hǎo!"
+    ],
+    "notes": [
+      "\"your head is not good\" says stupid, not the insult; marked colour"
+    ],
+    "texts": [
+      "review/translations/hand/story-10.json"
+    ]
+  },
+  {
+    "idea": "furious",
+    "times": 1,
+    "descriptions": [
+      "xīn-lǐ-de huǒ hěn dà"
+    ],
+    "notes": [
+      "the fire in her heart is very big; shēng-qì glosses as \"give birth-air\", so not used"
+    ],
+    "texts": [
+      "review/translations/hand/story-10.json"
+    ]
+  },
+  {
+    "idea": "giant",
+    "times": 1,
+    "descriptions": [
+      "zhēn dà-de rén"
+    ],
+    "notes": [
+      "no word for giant (kb_lookup gives only dòng-wù as a kind); the test set's literal, a really big person"
+    ],
+    "texts": [
+      "review/translations/hand/story-7.json"
+    ]
+  },
+  {
+    "idea": "golden",
+    "times": 1,
+    "descriptions": [
+      "jīn-de yánsè"
+    ],
+    "notes": [
+      "the book's yellow (the story's literal note); \"golden\" as gold-made is not said"
+    ],
+    "texts": [
+      "review/translations/hand/story-10.json"
+    ]
+  },
+  {
+    "idea": "grasshopper",
+    "times": 1,
+    "descriptions": [
+      "yī-ge dà dòng-wù, then Tā shì zhíwù-de yánsè."
+    ],
+    "notes": [
+      "no entry: kb_lookup gives only the kind (dòng-wù) and, wrongly, alcohol as a second kind; the text's own note (a big green animal) is used, the colour in a sentence of its own, named zhè-ge dà dòng-wù after"
+    ],
+    "texts": [
+      "review/translations/hand/story-9.json"
+    ]
+  },
+  {
+    "idea": "hare",
+    "times": 1,
+    "descriptions": [
+      "ěrduo hěn cháng-de xiǎo dòng-wù"
+    ],
+    "notes": [
+      "no word; the dictionary's form of 兔子 is 7 words, so it gets a sentence of its own and then a quoted name (\"Kuài-kuai\")"
+    ],
+    "texts": [
+      "review/translations/hand/story-4.json"
+    ]
+  },
+  {
+    "idea": "her bed (whose bed it is)",
+    "times": 1,
+    "descriptions": [
+      "shuìjiào-de dì-fang"
+    ],
+    "notes": [
+      "\"tǎng zài lǎo nǚ-rén-de shuìjiào-de dì-fang\", \"... lǎo nǚ-rén shuìjiào-de dì-fang\", \"... tā-de shuìjiào-de dì-fang\" and \"zài lǎo nǚ-rén shuìjiào-de dì-fang tǎng\" can't mean \"he lay down in her bed\" in any of the first 500 readings; the owner is left to the house the wolf is in"
+    ],
+    "texts": [
+      "review/translations/hand/story-1.json"
+    ]
+  },
+  {
+    "idea": "keep on (walking)",
+    "times": 1,
+    "descriptions": [
+      "hái zài zǒu"
+    ],
+    "notes": [
+      "keep on has only liú (keep a thing); still + now-ing says it"
+    ],
+    "texts": [
+      "review/translations/hand/story-8.json"
+    ]
+  },
+  {
+    "idea": "kind",
+    "times": 1,
+    "descriptions": [
+      "hǎo rén"
+    ],
+    "notes": [
+      "a good person; kindness itself is not named"
+    ],
+    "texts": [
+      "review/translations/hand/story-10.json"
+    ]
+  },
+  {
+    "idea": "lie (tell lies)",
+    "times": 1,
+    "descriptions": [
+      "bù shuō zhēn-de"
+    ],
+    "notes": [
+      "no entry: kb_lookup \"lie\" gives only tǎng (lie down); said as the story's note does, not saying true things"
+    ],
+    "texts": [
+      "review/translations/hand/story-5.json"
+    ]
+  },
+  {
+    "idea": "little by little",
+    "times": 1,
+    "descriptions": [
+      "zǒu-de hěn bù kuài"
+    ],
+    "notes": [
+      "the dictionary's form of 逐渐 (gradually), yī-diǎn yī-diǎn, reads before a verb only as two clock times (yī diǎn, one o'clock) or as a subject, never as bit by bit; said as walking very slowly, so it may come back weaker (colour)"
+    ],
+    "texts": [
+      "review/translations/hand/story-4.json"
+    ]
+  },
+  {
+    "idea": "lived (in a house)",
+    "times": 1,
+    "descriptions": [
+      "zài zhè-ge jiā-lǐ huó"
+    ],
+    "notes": [
+      "住 has only the frame X-de jiā zài …; huó (live) with zài and a place, as in the book's fisherman sentence"
+    ],
+    "texts": [
+      "review/translations/hand/story-7.json"
+    ]
+  },
+  {
+    "idea": "magic",
+    "times": 1,
+    "descriptions": [
+      "Shéi dōu méi kàn-guò zhè-zhǒng dōng-xi."
+    ],
+    "notes": [
+      "no word for magic; said as the test set's literal (never seen before), a sentence of its own"
+    ],
+    "texts": [
+      "review/translations/hand/story-7.json"
+    ]
+  },
+  {
+    "idea": "nap",
+    "times": 1,
+    "descriptions": [
+      "shuìjiào yī-xià"
+    ],
+    "notes": [
+      "no word; sleep for a moment"
+    ],
+    "texts": [
+      "review/translations/hand/story-4.json"
+    ]
+  },
+  {
+    "idea": "never (came back)",
+    "times": 1,
+    "descriptions": [
+      "bù huí-lái le"
+    ],
+    "notes": [
+      "cóng-lái (the form of 从来) reads only as cóng + lái, and zài yě reads zài as at; not ever is said as not any more (bù … le)"
+    ],
+    "texts": [
+      "review/translations/hand/story-3.json"
+    ]
+  },
+  {
+    "idea": "never came back",
+    "times": 1,
+    "descriptions": [
+      "bù huí-lái le"
+    ],
+    "notes": [
+      "\"does not come back any more\"; cóng-lái (ever) splits into cóng + lái in the parse, so never is weaker"
+    ],
+    "texts": [
+      "review/translations/hand/story-10.json"
+    ]
+  },
+  {
+    "idea": "new",
+    "times": 1,
+    "descriptions": [
+      "dì-yī cì kàn-dào-de"
+    ],
+    "notes": [
+      "xīn says new, but its gloss and hanzi read heart (心); the text's literal note gives seen for the first time"
+    ],
+    "texts": [
+      "review/translations/hand/story-8.json"
+    ]
+  },
+  {
+    "idea": "nobody",
+    "times": 1,
+    "descriptions": [
+      "méi-yǒu rén lái"
+    ],
+    "notes": [
+      "no entry; said by grammar, méi-yǒu rén and the verb"
+    ],
+    "texts": [
+      "review/translations/hand/story-5.json"
+    ]
+  },
+  {
+    "idea": "obey",
+    "times": 1,
+    "descriptions": [
+      "tīng wǒ-de huà"
+    ],
+    "notes": [
+      "listen to my words; Mandarin's own phrasing"
+    ],
+    "texts": [
+      "review/translations/hand/story-10.json"
+    ]
+  },
+  {
+    "idea": "one day",
+    "times": 1,
+    "descriptions": [
+      "yǒu yī tiān"
+    ],
+    "notes": [
+      "no entry for the story opener; yǒu yī tiān (there was one day), built from tian-nian-spans"
+    ],
+    "texts": [
+      "review/translations/hand/story-5.json"
+    ]
+  },
+  {
+    "idea": "peck",
+    "times": 1,
+    "descriptions": [
+      "dǎ"
+    ],
+    "notes": [
+      "No entry; kb_lookup's same-sense row (hěn duō dōng-xi zài yī-qǐ, a pile) is a false friend. The text's own literal: hit him."
+    ],
+    "texts": [
+      "review/translations/hand/story-6.json"
+    ]
+  },
+  {
+    "idea": "pig",
+    "times": 1,
+    "descriptions": [
+      "jiā-lǐ yǒu-de, chī hěn duō-de dà dòng-wù"
+    ],
+    "notes": [
+      "the dictionary's form of 猪 is 11 words and does not say little; the English note's \"animals that say oink-oink\" became jiào \"hēng-hēng\"-de xiǎo dòng-wù, in the shape of the dog and cat forms"
+    ],
+    "texts": [
+      "review/translations/hand/story-2.json"
+    ]
+  },
+  {
+    "idea": "pretend (\"put on\" in quotes)",
+    "times": 1,
+    "descriptions": [
+      "bǎ méi-yǒu-de yīfu fàng zài shēntǐ-shàng"
+    ],
+    "notes": [
+      "no word for pretend (kb_lookup gives only xiǎng shì, guess); the clothes that are not there carry the quotes"
+    ],
+    "texts": [
+      "review/translations/hand/story-8.json"
+    ]
+  },
+  {
+    "idea": "queen",
+    "times": 1,
+    "descriptions": [
+      "zuì dà-de rén"
+    ],
+    "notes": [
+      "the story's own literal note; the king form is 10 words and no woman ruler form exists, so the queen is only \"the biggest person\""
+    ],
+    "texts": [
+      "review/translations/hand/story-10.json"
+    ]
+  },
+  {
+    "idea": "race",
+    "times": 1,
+    "descriptions": [
+      "kàn shéi zuì kuài"
+    ],
+    "notes": [
+      "no word for a race; the dictionary's form of 比赛 (competition) is kàn shéi zuì hǎo, so see who is fastest"
+    ],
+    "texts": [
+      "review/translations/hand/story-4.json"
+    ]
+  },
+  {
+    "idea": "ran",
+    "times": 1,
+    "descriptions": [
+      "kuài qù le"
+    ],
+    "notes": [
+      "kuài zǒu dào X-de jiā (ran to X's house) never has that reading in 500, so ran became went quickly"
+    ],
+    "texts": [
+      "review/translations/hand/story-2.json"
+    ]
+  },
+  {
+    "idea": "say that someone is a fool",
+    "times": 1,
+    "descriptions": [
+      "jué-dé tā tóu bù hǎo"
+    ],
+    "notes": [
+      "shuō takes no whole sentence (feel-state's shuō + state needs a bare describing word; know-that is zhīdào only), so people will think, not say"
+    ],
+    "texts": [
+      "review/translations/hand/story-8.json"
+    ]
+  },
+  {
+    "idea": "sea",
+    "times": 1,
+    "descriptions": [
+      "hěn dà-de shuǐ"
+    ],
+    "notes": [
+      "the story's literal note; the dictionary's form (hěn-dà-de yǒu-shuǐ-de dì-fang) is 8 words"
+    ],
+    "texts": [
+      "review/translations/hand/story-10.json"
+    ]
+  },
+  {
+    "idea": "sheep",
+    "times": 1,
+    "descriptions": [
+      "bái-sè máo-de dòng-wù"
+    ],
+    "notes": [
+      "the dictionary's form of 羊 is 11 words (máo hěn duō, chī dì shàng-de zhíwù-de dòng-wù); the story's note gives \"white-haired animals\", 6 words, short enough to repeat"
+    ],
+    "texts": [
+      "review/translations/hand/story-5.json"
+    ]
+  },
+  {
+    "idea": "sticks",
+    "times": 1,
+    "descriptions": [
+      "cháng dōng-xi"
+    ],
+    "notes": [
+      "the form of 棍 is cháng-de dōng-xi, vague (any long thing); de dropped to keep the nesting low"
+    ],
+    "texts": [
+      "review/translations/hand/story-2.json"
+    ]
+  },
+  {
+    "idea": "stones",
+    "times": 1,
+    "descriptions": [
+      "yìng dōng-xi"
+    ],
+    "notes": [
+      "the form of 石头 is hěn yìng hěn zhòng-de dōng-xi (7 words); used the English note's hard things"
+    ],
+    "texts": [
+      "review/translations/hand/story-2.json"
+    ]
+  },
+  {
+    "idea": "straw",
+    "times": 1,
+    "descriptions": [
+      "jīn-de yánsè-de xiǎo zhíwù"
+    ],
+    "notes": [
+      "no entry (kb_lookup gives only liào, material); the book's own phrase, close to the English note's little yellow plants"
+    ],
+    "texts": [
+      "review/translations/hand/story-2.json"
+    ]
+  },
+  {
+    "idea": "summer",
+    "times": 1,
+    "descriptions": [
+      "rè-de shí-jiān"
+    ],
+    "notes": [
+      "the dictionary's form is 7 words (nián-lǐ zuì rè-de shí-jiān); the text's own note (the hot time) is 4 and pairs with winter's lěng-de shí-jiān"
+    ],
+    "texts": [
+      "review/translations/hand/story-9.json"
+    ]
+  },
+  {
+    "idea": "swam off",
+    "times": 1,
+    "descriptions": [
+      "qù le shuǐ-lǐ"
+    ],
+    "notes": [
+      "swim is zài shuǐ-lǐ wánr (play in the water); \"went into the water\" keeps the movement only"
+    ],
+    "texts": [
+      "review/translations/hand/story-10.json"
+    ]
+  },
+  {
+    "idea": "swan",
+    "times": 1,
+    "descriptions": [
+      "dà-de bái fēi-de dòng-wù"
+    ],
+    "notes": [
+      "No entry; kb_lookup offers only a wrong same-sense row (yī-dìng, definitely). Described as the text itself describes swans (big white birds); about 7 words, so said once and pointed back to with nà sān-ge fēi-de dòng-wù."
+    ],
+    "texts": [
+      "review/translations/hand/story-6.json"
+    ]
+  },
+  {
+    "idea": "swindler",
+    "times": 1,
+    "descriptions": [
+      "duì rén shuō bù shì zhēn-de huà-de rén"
+    ],
+    "notes": [
+      "the dictionary's form is 10 words, so its verb part has a sentence of its own (Tā-men duì rén shuō bù shì zhēn-de huà.) and tā-men names them after"
+    ],
+    "texts": [
+      "review/translations/hand/story-8.json"
+    ]
+  },
+  {
+    "idea": "taste",
+    "times": 1,
+    "descriptions": [
+      "chī le yī-diǎn"
+    ],
+    "notes": [
+      "the dictionary's form of 尝 is a clause of its own (chī yī-diǎn, kàn wèi-dào, 6 words); ate a little is used, so trying the flavour is weaker"
+    ],
+    "texts": [
+      "review/translations/hand/story-3.json"
+    ]
+  },
+  {
+    "idea": "the whole sea to be mine",
+    "times": 1,
+    "descriptions": [
+      "Hěn dà-de shuǐ wǒ dōu yào!"
+    ],
+    "notes": [
+      "\"I want all of the big water\"; \"to be mine\" (owning) is weaker, the book's dōu shì wǒ-de had no meant reading"
+    ],
+    "texts": [
+      "review/translations/hand/story-10.json"
+    ]
+  },
+  {
+    "idea": "then",
+    "times": 1,
+    "descriptions": [],
+    "notes": [
+      "然后 is X-wán hòu, too heavy here; the order of the sentences says it"
+    ],
+    "texts": [
+      "review/translations/hand/story-8.json"
+    ]
+  },
+  {
+    "idea": "throw",
+    "times": 1,
+    "descriptions": [
+      "Tā bù yào zhè-xiē dōng-xi le. … ná-chū-qù"
+    ],
+    "notes": [
+      "the dictionary's form of 扔 (bù yào X le, ná-chū-qù) says not wanting and taking out, not the throwing movement; split over two sentences to keep the window"
+    ],
+    "texts": [
+      "review/translations/hand/story-7.json"
+    ]
+  },
+  {
+    "idea": "tortoise",
+    "times": 1,
+    "descriptions": [
+      "shēntǐ-de wài-miàn hěn yìng; zǒu-de hěn bù kuài"
+    ],
+    "notes": [
+      "no word; the dictionary's form of 乌龟 is 16 words (shēntǐ wài-miàn yǒu yìng-de dōng-xi, zǒu-de hěn bù kuài-de dòng-wù), so the animal is described in two sentences and then named (\"Yìng-ying\")"
+    ],
+    "texts": [
+      "review/translations/hand/story-4.json"
+    ]
+  },
+  {
+    "idea": "trough",
+    "times": 1,
+    "descriptions": [
+      "fàng-shuǐ-de dōng-xi"
+    ],
+    "notes": [
+      "no word; the head of the dictionary's 盆 (tub) form, which is 11 words. Glossary proposal below"
+    ],
+    "texts": [
+      "review/translations/hand/story-10.json"
+    ]
+  },
+  {
     "idea": "umbrella",
     "times": 1,
     "descriptions": [

@@ -6,16 +6,23 @@
 // "Closest" is Jaccard over each sentence's own English words (a 's/plural s stripped) against the query's --
 // nothing about Hao-shuo-de or grammar, only what the two say in English.
 //
-//   askMemory(kb, { text, limit }) -> { data, text }
+// skip leaves out the sentences whose pool id starts with one of its prefixes. The translator's test set sets
+// HAOSHUODE_MEMORY_SKIP for its sessions, so a story is not translated by copying the book it is compared with (F1).
+//
+//   askMemory(kb, { text, limit, skip }) -> { data, text }
+//   memorySkip(env) -> [prefix]          HAOSHUODE_MEMORY_SKIP, comma-separated
+
+export const MEMORY_SKIP_ENV = 'HAOSHUODE_MEMORY_SKIP';
+export const memorySkip = (env = process.env) => String(env[MEMORY_SKIP_ENV] ?? '').split(',').map((s) => s.trim()).filter(Boolean);
 
 const stem = (w) => w.replace(/'s$|s$/, '');
 const tokens = (s) => new Set(String(s ?? '').toLowerCase().match(/[a-z']+/g)?.map(stem) ?? []);
 
-export function askMemory(kb, { text, limit = 10 } = {}) {
+export function askMemory(kb, { text, limit = 10, skip = [] } = {}) {
   if (!text) throw new Error('text is required (an English sentence)');
   const q = tokens(text);
   if (!q.size) throw new Error('nothing to match: give an English sentence');
-  const sentences = kb.pool().items.filter((i) => i.type === 'sentence' && i.source !== 'pattern_example' && i.text.en);
+  const sentences = kb.pool().items.filter((i) => i.type === 'sentence' && i.source !== 'pattern_example' && i.text.en && !skip.some((p) => i.id.startsWith(p)));
   const scored = sentences
     .map((it) => {
       const t = tokens(it.text.en);

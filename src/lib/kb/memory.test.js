@@ -3,7 +3,7 @@
 
 import { describe, expect, test } from 'bun:test';
 import { createKb } from './kb.js';
-import { askMemory } from './memory.js';
+import { askMemory, memorySkip } from './memory.js';
 import { source } from './fixture.js';
 
 const kb = createKb(source);
@@ -35,6 +35,18 @@ describe('askMemory', () => {
 
   test('text is required', () => {
     expect(() => askMemory(kb, {})).toThrow('text is required');
+  });
+
+  test('skip leaves out the sentences whose id starts with a prefix (the test set hides its own stories)', () => {
+    const first = askMemory(kb, { text: 'I fly.' }).data.rows[0];
+    const r = askMemory(kb, { text: 'I fly.', skip: [first.id] }).data;
+    expect(r.rows.map((row) => row.id)).not.toContain(first.id);
+    expect(askMemory(kb, { text: 'I fly.', skip: [] }).data.rows[0].id).toBe(first.id);
+  });
+
+  test('HAOSHUODE_MEMORY_SKIP gives the prefixes, comma-separated', () => {
+    expect(memorySkip({ HAOSHUODE_MEMORY_SKIP: 'sentence:story:appendix-stories/, sentence:phrase_book:' })).toEqual(['sentence:story:appendix-stories/', 'sentence:phrase_book:']);
+    expect(memorySkip({})).toEqual([]);
   });
 
   test('the text form shows the pinyin, hanzi, lesson and share', () => {

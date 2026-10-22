@@ -17,6 +17,10 @@ import { scoreOf } from './output.js';
 
 export const BAR_SENTENCES_KEPT = 0.9;
 
+// The stories' own lines in the kb pool. The test hides them from kb_memory (HAOSHUODE_MEMORY_SKIP) while it runs, so a
+// session cannot copy the book's text it is then compared with.
+export const STORY_LINES = 'sentence:story:appendix-stories/';
+
 const joinEn = (e) => (Array.isArray(e.en) ? e.en.join(' ') : String(e.en ?? '')).trim();
 
 export function storyItems(entries) {

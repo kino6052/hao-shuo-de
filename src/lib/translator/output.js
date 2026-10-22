@@ -229,10 +229,11 @@ function sayCheck(c) {
   return parts.join('; ');
 }
 
-// The file the author reviews (review/translations/<slug>.md): lists only, no tables, as the plan pages are.
+// The file the author reviews (review/translations/<slug>.md): lists only, no tables, as the plan pages are. A test-set
+// text is headed by its title (result.item, which the test adds), any other by its first words.
 export function renderMarkdown(result) {
   const s = scoreOf(result);
-  const out = [`# ${plain(result.text).split(' ').slice(0, 8).join(' ')}`, ''];
+  const out = [`# ${result.item?.title ?? plain(result.text).split(' ').slice(0, 8).join(' ')}`, ''];
   out.push(`- **English:** ${result.text.replace(/\s+/g, ' ').trim()}`);
   out.push(`- **Level:** ${result.lesson ? `lesson ${result.lesson.number} (${result.lesson.id})` : 'the whole dictionary'}`);
   if (result.model) out.push(`- **Model:** ${result.model}`);

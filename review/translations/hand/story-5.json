@@ -1,0 +1,952 @@
+{
+  "version": 1,
+  "text": "A boy looked after many sheep. (Literally: \"white-haired animals.\") He was bored. (Literally: \"he felt there was nothing fun.\") He shouted: \"Wolf! Help!\" (Literally: \"the big bad animal has come!\") Many people came running, but there was no wolf. The boy laughed: \"It wasn't true!\" Later he did it again. People came again, and again there was no wolf. People got angry. (Literally: \"there was fire in their hearts.\") Then one day, a real wolf came! The boy shouted: \"Wolf! This time it's true!\" But people thought he was lying again (literally: \"not saying true things\"), and nobody came. The wolf ate many of the sheep. If you don't tell the truth, people stop listening to you.",
+  "lesson": null,
+  "model": "claude-opus-5-5 (by hand, subagents)",
+  "sentences": [
+    {
+      "pinyin": "Yǒu yī-ge xiǎo nán-rén.",
+      "english": "There was a boy.",
+      "literally": "There is one little man.",
+      "reading": "1",
+      "source": "built from the grammar (yǒu with svo, measure-word); xiǎo nán-rén is the stories' own word for boy (kb_memory: this story's first line and \"Yī-ge xiǎo nán-rén shuō: Tā méi-yǒu yīfu!\")",
+      "ideas": [
+        "i1"
+      ],
+      "refs": "{{Word:you3}} {{word:yi1}}-{{light:ge4}} {{word:xiao3}} {{word:nan2}}-{{word:ren2}}.",
+      "hanzi": "有 一-个 小 难-人.",
+      "gloss": "to have one-universal classifier little difficult-human being.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 14,
+        "means": "yes-with-others",
+        "words": 6,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "There is a little man, that is, a boy."
+    },
+    {
+      "pinyin": "Tā kàn-hǎo hěn duō bái-sè máo-de dòng-wù.",
+      "english": "He looked after many sheep.",
+      "literally": "He looks after many white-coloured-hair animals.",
+      "reading": "[VerbP kàn-hǎo [NP hěn duō [ModNP [Mod [NP [ModNP bái-sè máo]] de] dòng-wù]]]",
+      "source": "adapts the book's line \"Yī-ge xiǎo nán-rén kàn hěn duō bái-sè máo-de dòng-wù.\" (kb_memory, 60% shared), split in two to be short, with kàn-hǎo (look after, the form of 顾, kb_lookup gloss tier) for kàn",
+      "ideas": [
+        "i1"
+      ],
+      "refs": "{{Word:ta1}} {{word:kan4}}-{{word:hao3}} {{word:hen3}} {{word:duo1}} {{word:bai2}}-{{word:se4}} {{word:mao2}}-{{word:de}} {{word:dong4}}-{{word:wu4}}.",
+      "hanzi": "他 看-好 很 多 白-色 毛-的 动-物.",
+      "gloss": "he to look at-good very many white-colour hair-possessive marker to move-thing.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 315,
+        "means": "yes-with-others",
+        "words": 11,
+        "depth": 1,
+        "late": [],
+        "warnings": [
+          "too long: 11 words (limit 10)",
+          "too long: the description \"tā kàn-hǎo hěn duō bái-sè máo-de dòng-wù\" is 11 words (limit 10)"
+        ]
+      },
+      "blind": "He looks after a lot of animals with white hair (white fur), perhaps sheep."
+    },
+    {
+      "pinyin": "Tā jué-dé shénme dōu bù hǎo-wánr.",
+      "english": "He was bored.",
+      "literally": "He felt that everything was not fun.",
+      "reading": "[VerbP jué dé [Clause [VP shénme dōu [VP bù hǎo-wánr]]]]",
+      "source": "adapts the book's line \"Tā jué-de méi-yǒu shénme hǎo wánr-de.\" (kb_memory, 75% shared) with shénme dōu bù (kb_constructions \"nothing\": shenme-dou); the book's line has over 500 readings and none of the first 500 has jué-dé taking the thought",
+      "ideas": [
+        "i2"
+      ],
+      "refs": "{{Word:ta1}} {{word:jue2}}-{{word:de2}} {{word:shen2me}} {{word:dou1}} {{word:bu4}} {{word:hao3}}-{{word:wan2r}}.",
+      "hanzi": "他 觉-得 什么 都 不 好-玩儿.",
+      "gloss": "he to feel-to get what? which? all not good-to play.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 231,
+        "means": "yes-with-others",
+        "words": 8,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "He feels that nothing is fun."
+    },
+    {
+      "pinyin": "Tā yòng dà shēngyīn shuō: Dà huài dòng-wù lái le!",
+      "english": "He shouted: \"Wolf!\"",
+      "literally": "He said with a big voice: the big bad animal has come!",
+      "reading": "[Say shuō : [Utt [S [NP [ModNP dà [ModNP huài dòng-wù]]] [VP [VP [VerbP lái]] le]",
+      "source": "the book's line \"Tā yòng dà shēngyīn shuō: Dà huài dòng-wù lái le! Bāng-bang wǒ!\" (kb_memory, 55% shared), its first sentence as it is",
+      "ideas": [
+        "i3"
+      ],
+      "refs": "{{Word:ta1}} {{word:yong4}} {{word:da4}} {{word:sheng1yin1}} {{word:shuo1}}: {{Word:da4}} {{word:huai4}} {{word:dong4}}-{{word:wu4}} {{word:lai2}} {{word:le}}!",
+      "hanzi": "他 用 大 声音 说: 大 坏 动-物 来 了!",
+      "gloss": "he to use big sound to communicate: big bad to move-thing to come perfective aspect marker!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 501,
+        "means": "yes-with-others",
+        "words": 11,
+        "depth": 1,
+        "late": [],
+        "warnings": [
+          "too long: 11 words (limit 10)"
+        ]
+      },
+      "blind": "He says in a loud voice: \"A big bad animal is coming!\""
+    },
+    {
+      "pinyin": "Bāng-bang wǒ!",
+      "english": "Help!",
+      "literally": "Help me!",
+      "reading": "1",
+      "source": "the same book line, its second sentence as it is (doubled-verb)",
+      "ideas": [
+        "i3"
+      ],
+      "refs": "{{Word:bang1}}-{{light:bang1}} {{word:wo3}}!",
+      "hanzi": "帮-帮 我!",
+      "gloss": "to help-to help I!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 7,
+        "means": "yes-with-others",
+        "words": 3,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "\"Help me!\""
+    },
+    {
+      "pinyin": "Hěn duō rén kuài lái le.",
+      "english": "Many people came running.",
+      "literally": "Many people came quickly.",
+      "reading": "[Utt [S [NP hěn duō rén] [VP [VP kuài",
+      "source": "the first half of the book's line \"Hěn duō rén kuài lái le, dàn-shì méi-yǒu dà huài dòng-wù.\" (kb_memory, 100% shared); the whole line has no reading among its first 500 with both halves as meant",
+      "ideas": [
+        "i4"
+      ],
+      "refs": "{{Word:hen3}} {{word:duo1}} {{word:ren2}} {{word:kuai4}} {{word:lai2}} {{word:le}}.",
+      "hanzi": "很 多 人 快 来 了.",
+      "gloss": "very many human being fast to come perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 17,
+        "means": "yes-with-others",
+        "words": 6,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "Many people came quickly."
+    },
+    {
+      "pinyin": "Dàn-shì nà-lǐ méi-yǒu dà huài dòng-wù.",
+      "english": "But there was no wolf.",
+      "literally": "But there, there was no big bad animal.",
+      "reading": "[VP méi yǒu [NP [ModNP dà [ModNP huài dòng-wù]]]]",
+      "source": "the second half of the same book line, with nà-lǐ (there) as the one it is about: without it, every reading breaks dà huài dòng-wù apart",
+      "ideas": [
+        "i5"
+      ],
+      "refs": "{{Word:dan4}}-{{word:shi4}} {{word:na4}}-{{word:li3}} {{word:mei2}}-{{word:you3}} {{word:da4}} {{word:huai4}} {{word:dong4}}-{{word:wu4}}.",
+      "hanzi": "但-是 那-里 没-有 大 坏 动-物.",
+      "gloss": "but-to be that-inside negative particle used exclusively to negate the verb you (to form meiyou)-to have big bad to move-thing.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 501,
+        "means": "yes-with-others",
+        "words": 10,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "But there was no big bad animal there."
+    },
+    {
+      "pinyin": "Tā xiào le, shuō: Zhè bù shì zhēn-de!",
+      "english": "The boy laughed: \"It wasn't true!\"",
+      "literally": "He laughed and said: this is not real!",
+      "reading": "1",
+      "source": "adapts the book's line \"Xiǎo nán-rén xiào le: Zhè bù shì zhēn-de!\" (kb_memory, 100% shared): tā for xiǎo nán-rén, and \"xiào le, shuō:\" (the speech-quote rule \"lái le, shuō: …\") for \"xiào le:\", which reads only as two sentences side by side",
+      "ideas": [
+        "i6"
+      ],
+      "refs": "{{Word:ta1}} {{word:xiao4}} {{word:le}}, {{word:shuo1}}: {{Word:zhe4}} {{word:bu4}} {{word:shi4}} {{word:zhen1}}-{{word:de}}!",
+      "hanzi": "他 笑 了, 说: 这 不 是 真-的!",
+      "gloss": "he to laugh perfective aspect marker, to communicate: this not to be true-possessive marker!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 36,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "He laughed and said: \"This isn't true!\" (It was not real.)"
+    },
+    {
+      "pinyin": "Yǐ-hòu, tā yòu shuō le yī-cì.",
+      "english": "Later he did it again.",
+      "literally": "Afterwards, he said it again, one time.",
+      "reading": "[Utt [S [Time yǐ hòu] ,",
+      "source": "adapts the book's line \"Hòu-lái, tā yòu shuō le yī-cì.\" (kb_memory, 42% shared) with yǐ-hòu (later, the form of 以后): \"Hòu-lái, …\" reads only as calling out to someone (2 readings, both calling-hail)",
+      "ideas": [
+        "i7"
+      ],
+      "refs": "{{Word:yi3}}-{{word:hou4}}, {{word:ta1}} {{word:you4}} {{word:shuo1}} {{word:le}} {{word:yi1}}-{{word:ci4}}.",
+      "hanzi": "以-后, 他 又 说 了 一-次.",
+      "gloss": "by-behind, he again to communicate perfective aspect marker one-time.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 7,
+        "means": "yes-with-others",
+        "words": 8,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "After that, he said it once more."
+    },
+    {
+      "pinyin": "Rén-men yòu lái le.",
+      "english": "People came again.",
+      "literally": "People again came.",
+      "reading": "1",
+      "source": "the first half of the book's line \"Rén-men yòu lái le, yòu méi-yǒu dà huài dòng-wù.\" (kb_memory, 67% shared), split to be short",
+      "ideas": [
+        "i8"
+      ],
+      "refs": "{{Word:ren2}}-{{word:men}} {{word:you4}} {{word:lai2}} {{word:le}}.",
+      "hanzi": "人-们 又 来 了.",
+      "gloss": "human being-more than one person again to come perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 3,
+        "means": "yes-with-others",
+        "words": 5,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The people came again."
+    },
+    {
+      "pinyin": "Yòu méi-yǒu dà huài dòng-wù.",
+      "english": "And again there was no wolf.",
+      "literally": "Again there was no big bad animal.",
+      "reading": "[Utt [VP yòu [VP méi yǒu [NP [ModNP dà [ModNP huài dòng-wù]]]]]]",
+      "source": "the second half of the same book line, as it is",
+      "ideas": [
+        "i9"
+      ],
+      "refs": "{{Word:you4}} {{word:mei2}}-{{word:you3}} {{word:da4}} {{word:huai4}} {{word:dong4}}-{{word:wu4}}.",
+      "hanzi": "又 没-有 大 坏 动-物.",
+      "gloss": "again negative particle used exclusively to negate the verb you (to form meiyou)-to have big bad to move-thing.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 86,
+        "means": "yes-with-others",
+        "words": 7,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "Again there was no big bad animal."
+    },
+    {
+      "pinyin": "Rén-men xīn-lǐ yǒu huǒ le.",
+      "english": "People got angry.",
+      "literally": "In people's hearts there was fire now.",
+      "reading": "[Utt [S [NP [ModNP [Person rén men] xīn-lǐ]]",
+      "source": "the book's line \"Rén-men xīn-lǐ yǒu huǒ.\" (kb_memory, 30% shared), with le for the change (got angry); the form of 愤怒 is xīn-lǐ yǒu hěn dà-de huǒ",
+      "ideas": [
+        "i10"
+      ],
+      "refs": "{{Word:ren2}}-{{word:men}} {{word:xin1}}-{{word:li3}} {{word:you3}} {{word:huo3}} {{word:le}}.",
+      "hanzi": "人-们 心-里 有 火 了.",
+      "gloss": "human being-more than one person heart-inside to have fire perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 16,
+        "means": "yes-with-others",
+        "words": 7,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The people had fire in their hearts, which means they became angry."
+    },
+    {
+      "pinyin": "Yǒu yī tiān, zhēn-de dà huài dòng-wù lái le!",
+      "english": "Then one day, a real wolf came!",
+      "literally": "There was one day, a real big bad animal came!",
+      "reading": "1",
+      "source": "adapts the book's line \"Yǒu yī-cì, zhēn-de dà huài dòng-wù lái le!\" (kb_memory, 100% shared) with yǒu yī tiān (one day) for yǒu yī-cì (once)",
+      "ideas": [
+        "i11"
+      ],
+      "refs": "{{Word:you3}} {{word:yi1}} {{word:tian1}}, {{word:zhen1}}-{{word:de}} {{word:da4}} {{word:huai4}} {{word:dong4}}-{{word:wu4}} {{word:lai2}} {{word:le}}!",
+      "hanzi": "有 一 天, 真-的 大 坏 动-物 来 了!",
+      "gloss": "to have one day, true-possessive marker big bad to move-thing to come perfective aspect marker!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 501,
+        "means": "yes-with-others",
+        "words": 11,
+        "depth": 0,
+        "late": [],
+        "warnings": [
+          "too long: 11 words (limit 10)"
+        ]
+      },
+      "blind": "One day a big bad animal really came!"
+    },
+    {
+      "pinyin": "Xiǎo nán-rén yòng dà shēngyīn shuō: Dà huài dòng-wù lái le!",
+      "english": "The boy shouted: \"Wolf!\"",
+      "literally": "The little man said with a big voice: the big bad animal has come!",
+      "reading": "[Say shuō : [Utt [S [NP [ModNP dà [ModNP huài dòng-wù]]] [VP [VP [VerbP lái]] le]",
+      "source": "the book's line \"Xiǎo nán-rén yòng dà shēngyīn shuō: Dà huài dòng-wù lái le! Zhè-cì shì zhēn-de!\" (kb_memory, 50% shared), its first sentence as it is",
+      "ideas": [
+        "i12"
+      ],
+      "refs": "{{Word:xiao3}} {{word:nan2}}-{{word:ren2}} {{word:yong4}} {{word:da4}} {{word:sheng1yin1}} {{word:shuo1}}: {{Word:da4}} {{word:huai4}} {{word:dong4}}-{{word:wu4}} {{word:lai2}} {{word:le}}!",
+      "hanzi": "小 难-人 用 大 声音 说: 大 坏 动-物 来 了!",
+      "gloss": "little difficult-human being to use big sound to communicate: big bad to move-thing to come perfective aspect marker!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 501,
+        "means": "yes-with-others",
+        "words": 13,
+        "depth": 1,
+        "late": [],
+        "warnings": [
+          "too long: 13 words (limit 10)"
+        ]
+      },
+      "blind": "The boy said in a loud voice: \"A big bad animal is coming!\""
+    },
+    {
+      "pinyin": "Zhè-cì shì zhēn-de!",
+      "english": "This time it's true!",
+      "literally": "This time it is real!",
+      "reading": "[Utt [VP [Time [Times [Count [Pointer zhè]] cì]] [VP shì [NP zhēn-de]]]]",
+      "source": "the same book line, its second sentence as it is",
+      "ideas": [
+        "i12"
+      ],
+      "refs": "{{Word:zhe4}}-{{word:ci4}} {{word:shi4}} {{word:zhen1}}-{{word:de}}!",
+      "hanzi": "这-次 是 真-的!",
+      "gloss": "this-time to be true-possessive marker!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 12,
+        "means": "yes-with-others",
+        "words": 5,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "This time it was true!"
+    },
+    {
+      "pinyin": "Dàn-shì rén-men jué-dé tā yòu bù shuō zhēn-de.",
+      "english": "But people thought he was lying again.",
+      "literally": "But people felt that he again was not saying true things.",
+      "reading": "[VerbP jué dé [Clause [S [NP tā] [VP yòu [VP bù [VP [VerbP shuō [NP zhēn-de]",
+      "source": "the first half of the book's line \"Dàn-shì rén-men jué-de tā yòu bù shuō zhēn-de, méi-yǒu rén lái.\" (kb_memory, 67% shared), split to be short",
+      "ideas": [
+        "i13"
+      ],
+      "refs": "{{Word:dan4}}-{{word:shi4}} {{word:ren2}}-{{word:men}} {{word:jue2}}-{{word:de2}} {{word:ta1}} {{word:you4}} {{word:bu4}} {{word:shuo1}} {{word:zhen1}}-{{word:de}}.",
+      "hanzi": "但-是 人-们 觉-得 他 又 不 说 真-的.",
+      "gloss": "but-to be human being-more than one person to feel-to get he again not to communicate true-possessive marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 292,
+        "means": "yes-with-others",
+        "words": 12,
+        "depth": 0,
+        "late": [],
+        "warnings": [
+          "too long: 12 words (limit 10)"
+        ]
+      },
+      "blind": "But the people thought he was again not telling the truth."
+    },
+    {
+      "pinyin": "Méi-yǒu rén lái.",
+      "english": "Nobody came.",
+      "literally": "There was no person who came.",
+      "reading": "1",
+      "source": "the second half of the same book line, as it is",
+      "ideas": [
+        "i14"
+      ],
+      "refs": "{{Word:mei2}}-{{word:you3}} {{word:ren2}} {{word:lai2}}.",
+      "hanzi": "没-有 人 来.",
+      "gloss": "negative particle used exclusively to negate the verb you (to form meiyou)-to have human being to come.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 9,
+        "means": "yes-with-others",
+        "words": 4,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "Nobody came."
+    },
+    {
+      "pinyin": "Dà huài dòng-wù bǎ hěn duō bái-sè máo-de dòng-wù chī le.",
+      "english": "The wolf ate many of the sheep.",
+      "literally": "The big bad animal took many white-coloured-hair animals and ate them.",
+      "reading": "[VP bǎ [NP hěn duō [ModNP [Mod [NP [ModNP bái-sè máo]] de] dòng-wù]]",
+      "source": "adapts the book's line \"Dà huài dòng-wù chī le hěn duō bái-sè máo-de dòng-wù.\" (kb_memory, 100% shared) with bǎ (ba-handle, as in the book's \"… bǎ tā chī le\"): among the book line's first 500 readings, none has the big bad animal as the one who eats",
+      "ideas": [
+        "i15"
+      ],
+      "refs": "{{Word:da4}} {{word:huai4}} {{word:dong4}}-{{word:wu4}} {{word:ba3}} {{word:hen3}} {{word:duo1}} {{word:bai2}}-{{word:se4}} {{word:mao2}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:chi1}} {{word:le}}.",
+      "hanzi": "大 坏 动-物 把 很 多 白-色 毛-的 动-物 吃 了.",
+      "gloss": "big bad to move-thing grammatical object-introducing particle very many white-colour hair-possessive marker to move-thing to eat perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 501,
+        "means": "yes-with-others",
+        "words": 15,
+        "depth": 0,
+        "late": [],
+        "warnings": [
+          "too long: 15 words (limit 10)"
+        ]
+      },
+      "blind": "The big bad animal ate many of the white-haired animals."
+    },
+    {
+      "pinyin": "Rúguǒ nǐ bù shuō zhēn-de, rén-men jiù bù tīng nǐ le.",
+      "english": "If you don't tell the truth, people stop listening to you.",
+      "literally": "If you don't say true things, people then don't listen to you any more.",
+      "reading": "1",
+      "source": "the book's line, as it is (kb_memory, 100% shared)",
+      "ideas": [
+        "i16"
+      ],
+      "refs": "{{Word:ru2guo3}} {{word:ni3}} {{word:bu4}} {{word:shuo1}} {{word:zhen1}}-{{word:de}}, {{word:ren2}}-{{word:men}} {{word:jiu4}} {{word:bu4}} {{word:ting1}} {{word:ni3}} {{word:le}}.",
+      "hanzi": "如果 你 不 说 真-的, 人-们 就 不 听 你 了.",
+      "gloss": "if you not to communicate true-possessive marker, human being-more than one person then not to hear you perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 30,
+        "means": "yes-with-others",
+        "words": 13,
+        "depth": 1,
+        "late": [],
+        "warnings": [
+          "too long: 13 words (limit 10)"
+        ]
+      },
+      "blind": "If you don't tell the truth, then people stop listening to you."
+    }
+  ],
+  "sketch": [
+    {
+      "id": "i1",
+      "idea": "a boy looked after many sheep (white-haired animals)",
+      "needed": true,
+      "links": "",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i2",
+      "idea": "the boy was bored: he felt nothing was fun",
+      "needed": true,
+      "links": "then; the reason for i3 (implied)",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i3",
+      "idea": "he shouted: the big bad animal (wolf) has come, help!",
+      "needed": true,
+      "links": "then, because of i2",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i4",
+      "idea": "many people came quickly (running)",
+      "needed": true,
+      "links": "because of i3",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i5",
+      "idea": "there was no wolf",
+      "needed": true,
+      "links": "but, after i4",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i6",
+      "idea": "the boy laughed and said: it was not true",
+      "needed": true,
+      "links": "then",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i7",
+      "idea": "later he shouted the same thing again",
+      "needed": true,
+      "links": "later",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i8",
+      "idea": "people came again",
+      "needed": true,
+      "links": "because of i7",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i9",
+      "idea": "again there was no wolf",
+      "needed": true,
+      "links": "and",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i10",
+      "idea": "people got angry (fire in their hearts)",
+      "needed": true,
+      "links": "because of i7-i9",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i11",
+      "idea": "one day a real wolf came",
+      "needed": true,
+      "links": "then",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i12",
+      "idea": "the boy shouted: the wolf has come, this time it is true",
+      "needed": true,
+      "links": "then, because of i11",
+      "verdict": "weaker",
+      "why": "The reader got the shout, but read 'this time it is true' as the narrator's comment, not as part of what the boy shouted. The summary says he just 'shouts the same thing', so his plea that it is true now is lost."
+    },
+    {
+      "id": "i13",
+      "idea": "people thought he was lying again (not saying true things)",
+      "needed": true,
+      "links": "but",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i14",
+      "idea": "nobody came",
+      "needed": true,
+      "links": "and, because of i13",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i15",
+      "idea": "the wolf ate many of the sheep",
+      "needed": true,
+      "links": "then, because of i14",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i16",
+      "idea": "if you do not tell the truth, people stop listening to you",
+      "needed": true,
+      "links": "the lesson of the whole story; if",
+      "verdict": "kept",
+      "why": ""
+    }
+  ],
+  "cast": [
+    {
+      "thing": "boy",
+      "description": "xiǎo nán-rén",
+      "short": "tā"
+    },
+    {
+      "thing": "sheep",
+      "description": "bái-sè máo-de dòng-wù",
+      "short": "bái-sè máo-de dòng-wù"
+    },
+    {
+      "thing": "wolf",
+      "description": "dà huài dòng-wù",
+      "short": "dà huài dòng-wù"
+    }
+  ],
+  "castProblems": [],
+  "structures": [
+    {
+      "idea": "i1",
+      "pattern": "svo",
+      "lesson": "who-does-what"
+    },
+    {
+      "idea": "i1",
+      "pattern": "measure-word",
+      "lesson": "pointing"
+    },
+    {
+      "idea": "i1",
+      "pattern": "adjective-noun",
+      "lesson": "modifying-nouns"
+    },
+    {
+      "idea": "i1",
+      "pattern": "hen-duo-noun",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i1",
+      "pattern": "de-modifier",
+      "lesson": "modifying-nouns"
+    },
+    {
+      "idea": "i2",
+      "pattern": "feel-state",
+      "lesson": "feelings"
+    },
+    {
+      "idea": "i2",
+      "pattern": "shenme-dou",
+      "lesson": "also-and-all"
+    },
+    {
+      "idea": "i2",
+      "pattern": "bu-adjective",
+      "lesson": "how-much"
+    },
+    {
+      "idea": "i3",
+      "pattern": "speech-quote",
+      "lesson": "questions"
+    },
+    {
+      "idea": "i3",
+      "pattern": "yong-with",
+      "lesson": "inside-a-sentence"
+    },
+    {
+      "idea": "i3",
+      "pattern": "adjective-noun",
+      "lesson": "modifying-nouns"
+    },
+    {
+      "idea": "i3",
+      "pattern": "le-new-situation",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i3",
+      "pattern": "doubled-verb",
+      "lesson": "doubling-words"
+    },
+    {
+      "idea": "i4",
+      "pattern": "hen-duo-noun",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i4",
+      "pattern": "kuai-quick",
+      "lesson": "when-it-happens"
+    },
+    {
+      "idea": "i4",
+      "pattern": "le-new-situation",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i5",
+      "pattern": "dan-shi-but",
+      "lesson": "linking-sentences"
+    },
+    {
+      "idea": "i5",
+      "pattern": "mei-you-not-have",
+      "lesson": "who-does-what"
+    },
+    {
+      "idea": "i6",
+      "pattern": "speech-quote",
+      "lesson": "questions"
+    },
+    {
+      "idea": "i6",
+      "pattern": "le-done",
+      "lesson": "when-it-happens"
+    },
+    {
+      "idea": "i6",
+      "pattern": "bu-shi-not",
+      "lesson": "words-and-sentences"
+    },
+    {
+      "idea": "i7",
+      "pattern": "yi-qian-before",
+      "lesson": "around-an-action"
+    },
+    {
+      "idea": "i7",
+      "pattern": "time-first",
+      "lesson": "when-it-happens"
+    },
+    {
+      "idea": "i7",
+      "pattern": "you-again",
+      "lesson": "around-an-action"
+    },
+    {
+      "idea": "i7",
+      "pattern": "le-done",
+      "lesson": "when-it-happens"
+    },
+    {
+      "idea": "i8",
+      "pattern": "men-plural",
+      "lesson": "pointing"
+    },
+    {
+      "idea": "i8",
+      "pattern": "you-again",
+      "lesson": "around-an-action"
+    },
+    {
+      "idea": "i8",
+      "pattern": "le-new-situation",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i9",
+      "pattern": "you-again",
+      "lesson": "around-an-action"
+    },
+    {
+      "idea": "i9",
+      "pattern": "mei-you-not-have",
+      "lesson": "who-does-what"
+    },
+    {
+      "idea": "i10",
+      "pattern": "owner-part",
+      "lesson": "roles-of-a-word"
+    },
+    {
+      "idea": "i10",
+      "pattern": "svo",
+      "lesson": "who-does-what"
+    },
+    {
+      "idea": "i10",
+      "pattern": "le-new-situation",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i11",
+      "pattern": "tian-nian-spans",
+      "lesson": "time-and-sums"
+    },
+    {
+      "idea": "i11",
+      "pattern": "adjective-noun",
+      "lesson": "modifying-nouns"
+    },
+    {
+      "idea": "i11",
+      "pattern": "le-new-situation",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i12",
+      "pattern": "speech-quote",
+      "lesson": "questions"
+    },
+    {
+      "idea": "i12",
+      "pattern": "ci-times",
+      "lesson": "around-an-action"
+    },
+    {
+      "idea": "i12",
+      "pattern": "time-first",
+      "lesson": "when-it-happens"
+    },
+    {
+      "idea": "i12",
+      "pattern": "shi-copula",
+      "lesson": "words-and-sentences"
+    },
+    {
+      "idea": "i13",
+      "pattern": "dan-shi-but",
+      "lesson": "linking-sentences"
+    },
+    {
+      "idea": "i13",
+      "pattern": "feel-state",
+      "lesson": "feelings"
+    },
+    {
+      "idea": "i13",
+      "pattern": "you-again",
+      "lesson": "around-an-action"
+    },
+    {
+      "idea": "i13",
+      "pattern": "bu-negation",
+      "lesson": "who-does-what"
+    },
+    {
+      "idea": "i14",
+      "pattern": "mei-you-not-have",
+      "lesson": "who-does-what"
+    },
+    {
+      "idea": "i14",
+      "pattern": "serial-verbs",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i15",
+      "pattern": "ba-handle",
+      "lesson": "becoming-and-making"
+    },
+    {
+      "idea": "i15",
+      "pattern": "hen-duo-noun",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i15",
+      "pattern": "de-modifier",
+      "lesson": "modifying-nouns"
+    },
+    {
+      "idea": "i15",
+      "pattern": "le-new-situation",
+      "lesson": "moving"
+    },
+    {
+      "idea": "i16",
+      "pattern": "ruguo-if",
+      "lesson": "linking-sentences"
+    },
+    {
+      "idea": "i16",
+      "pattern": "jiu-then",
+      "lesson": "linking-sentences"
+    },
+    {
+      "idea": "i16",
+      "pattern": "bu-negation",
+      "lesson": "who-does-what"
+    },
+    {
+      "idea": "i16",
+      "pattern": "le-new-situation",
+      "lesson": "moving"
+    }
+  ],
+  "gaps": [
+    {
+      "idea": "wolf",
+      "description": "dà huài dòng-wù",
+      "note": "the dictionary's form of 狼 is 10 words (jiào \"ào-ào\"-de, bù zài jiā-lǐ huó-de dòng-wù); the story's own note asks for \"the big bad animal\", which says any big bad animal, not a wolf"
+    },
+    {
+      "idea": "sheep",
+      "description": "bái-sè máo-de dòng-wù",
+      "note": "the dictionary's form of 羊 is 11 words (máo hěn duō, chī dì shàng-de zhíwù-de dòng-wù); the story's note gives \"white-haired animals\", 6 words, short enough to repeat"
+    },
+    {
+      "idea": "lie (tell lies)",
+      "description": "bù shuō zhēn-de",
+      "note": "no entry: kb_lookup \"lie\" gives only tǎng (lie down); said as the story's note does, not saying true things"
+    },
+    {
+      "idea": "nobody",
+      "description": "méi-yǒu rén lái",
+      "note": "no entry; said by grammar, méi-yǒu rén and the verb"
+    },
+    {
+      "idea": "one day",
+      "description": "yǒu yī tiān",
+      "note": "no entry for the story opener; yǒu yī tiān (there was one day), built from tian-nian-spans"
+    },
+    {
+      "idea": "bored",
+      "description": "jué-dé shénme dōu bù hǎo-wánr",
+      "note": "the form of 无聊 is 8 words (méi yǒu hǎo wánr-de, méi-shì zuò); said as the story's note does, he felt nothing was fun"
+    },
+    {
+      "idea": "angry",
+      "description": "xīn-lǐ yǒu huǒ le",
+      "note": "the form of 愤怒 is 7 words (xīn-lǐ yǒu hěn dà-de huǒ); shortened as the story's note does, fire in the heart, with le for got angry"
+    }
+  ],
+  "added": [],
+  "blind": {
+    "whole": "A boy looks after many white-haired animals (probably sheep) and is bored. For fun he shouts that a big bad animal is coming and calls for help. People hurry over, find nothing, and he laughs and says it wasn't true. He does it again, the people come again, and they get angry. Then one day a big bad animal really comes. He shouts the same thing, but the people think he is lying again, so nobody comes, and the animal eats many of his white-haired animals. The lesson: if you don't tell the truth, people stop listening to you.",
+    "unsure": "Sentence 2: I read kàn-hǎo as 'look after, watch over'. The gloss says 'look at - good', and it could also be read as 'thinks well of' the animals, but in this story 'looks after' fits better. 'White-haired animals' is most likely sheep, but the text only says animals with white hair or fur, so they could be some other animal. 'Big bad animal' (dà huài dòng-wù) is never named: it is some large dangerous beast that eats the white-haired animals, perhaps a wolf, but the text doesn't say which. Sentence 1: xiǎo nán-rén is literally 'little man'. I took it as a boy, though it could mean a small grown man. Sentence 8: zhè bù shì zhēn-de could mean 'this isn't real' (there was no animal) or 'I wasn't being truthful'. Both readings say the same thing here. Sentence 12: 'fire in the heart' I read as anger, not as a literal fire."
+  },
+  "notes": "Translated by hand following the translate skill, whole dictionary, no lesson. Heads-up for the test: kb_memory returns this story's own book lines (lesson none, the stories appendix) at up to 100% shared, so step 2 handed over most of the text; each reused line is named in its source and was still checked; five were changed because they did not read as meant ((1) to (5) below), and a few more for meaning or length. Changed from the book's lines: (1) \"Tā jué-de méi-yǒu shénme hǎo wánr-de.\" has over 500 readings and none of the first 500 has jué-dé taking the thought (they end as a noun: the thing that ...), so shénme dōu bù hǎo-wánr; (2) \"Hěn duō rén kuài lái le, dàn-shì méi-yǒu dà huài dòng-wù.\" has no reading in its first 500 with both halves as meant, so it is split, and \"Dàn-shì méi-yǒu dà huài dòng-wù.\" alone breaks dà huài dòng-wù apart in every reading, so nà-lǐ (there) is added; (3) \"Hòu-lái, …\" reads only as calling out to someone (calling-hail, 2 of 2 readings), so yǐ-hòu, which has a time reading; (4) \"Dà huài dòng-wù chī le hěn duō bái-sè máo-de dòng-wù.\": in its first 500 readings the big bad animal is never the one who eats (all read as one long noun), so bǎ … chī le; (5) \"Xiǎo nán-rén xiào le: …\" reads only as two sentences side by side, so \"xiào le, shuō: …\"; (6) kàn became kàn-hǎo (look after); (7) the two-sentence shouts are split so each item is one sentence; also yǒu yī tiān (one day) for yǒu yī-cì (once), le added to xīn-lǐ yǒu huǒ for got angry, and tā for the boy where nothing else could be meant. Six sentences stay over 10 words (warnings only): 2, 4, 13, 14, 16, 18. A pitfall to know: jué-dé taking a thought shows in the brackets as \"jué dé\" (two words, the feel-state rule); \"jué-dé\" with a hyphen is the word used as a plain verb. Not said, by choice: \"running\" is weaker (kuài lái le, came quickly; pǎo is not a word, run is kuài zǒu). Worth the author's attention: kb_gloss gives nán-rén as \"difficult-human being\" (nán is 难 in the dictionary, so the hanzi line shows 难-人 where the book prints 男人); a blind reader may stumble on the boy. Cast: the sheep and the wolf both have dòng-wù as their head, so a short name (zhè-ge dòng-wù) would mix them up; both descriptions are 6 words or fewer and are repeated in full. Glossary proposal: wolf -> dà huài dòng-wù: the stories' own short name (this story and Little Red Riding Hood), against the 10-word form. Glossary proposal: sheep -> bái-sè máo-de dòng-wù: 6 words against the 11-word form of 羊. Glossary proposal: tell lies -> bù shuō zhēn-de: there is no entry for lie (to say false things). Glossary proposal: nobody -> méi-yǒu rén and the verb: no entry, the grammar says it and parses cleanly. Glossary proposal: one day -> Yǒu yī tiān, …: the opener for a story event. Glossary proposal: later -> Yǐ-hòu, …: Hòu-lái with a comma reads only as calling out. Glossary proposal: boy -> xiǎo nán-rén: the stories' own word; nán-hái-zi, the gloss-tier form, glosses as \"difficult-still-(noun ending)\" in kb_gloss. Translated before kb_memory hid the stories' own lines (HAOSHUODE_MEMORY_SKIP), so some sentences reuse the book's lines and the book overlap is higher than a fresh run would give.",
+  "problems": [],
+  "timing": {},
+  "item": {
+    "id": "story-5",
+    "kind": "story",
+    "title": "The Boy Who Cried Wolf"
+  },
+  "book": {
+    "overlap": 0.891
+  }
+}

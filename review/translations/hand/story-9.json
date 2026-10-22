@@ -1,0 +1,887 @@
+{
+  "version": 1,
+  "text": "In summer (literally: \"the hot time\"), an ant (literally: \"a little black animal\") was always working. It looked for food and carried it home. A grasshopper (literally: \"a big green animal\") didn't work. It played, chatted, and laughed. The grasshopper said: \"Why are you working? Come and play!\" The ant said: \"Winter will come. I need to have food.\" The grasshopper laughed: \"Winter is far away!\" Then winter came. The ground was all white. The grasshopper was cold, had nothing to eat, and was very unhappy. It went to the ant's house and asked: \"Can you give me a little food?\" The ant said: \"What were you doing in the summer?\" The grasshopper said: \"I was playing.\" The ant gave it a little food and said: \"Next summer, you work too!\"",
+  "lesson": null,
+  "model": "claude-opus-5-5 (by hand, subagents)",
+  "sentences": [
+    {
+      "pinyin": "Yǒu yī-ge hēi-sè-de xiǎo dòng-wù.",
+      "english": "There was an ant.",
+      "literally": "There is a black little animal.",
+      "reading": "[Utt [VP [VerbP yǒu [NP [Count [Num yī]] gè [ModNP [Mod [AdjP hēi-sè] de] [ModNP xiǎo dòng-wù]]]]]]",
+      "source": "built from the grammar (yǒu, measure-word); the ant as the text's own note describes it, in the words of the book's line of this story (hēi-sè-de xiǎo dòng-wù, kb_memory 47% shared)",
+      "ideas": [
+        "i2"
+      ],
+      "refs": "{{Word:you3}} {{word:yi1}}-{{light:ge4}} {{word:hei1}}-{{word:se4}}-{{word:de}} {{word:xiao3}} {{word:dong4}}-{{word:wu4}}.",
+      "hanzi": "有 一-个 黑-色-的 小 动-物.",
+      "gloss": "to have one-universal classifier black-colour-possessive marker little to move-thing.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 16,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "There is a small black animal."
+    },
+    {
+      "pinyin": "Rè-de shí-jiān, tā shénme shí-jiān dōu gōng-zuò.",
+      "english": "In summer, it was always working.",
+      "literally": "In the hot time, it works at whatever time.",
+      "reading": "[Utt [S [Time [Mod [AdjP rè] de] shí jiān] , [S [NP tā] [VP [Time shénme shí jiān] [VP dōu [VP [VerbP gōng-zuò]]]]]]]",
+      "source": "adapts the book's line of this story (Rè-de shí-jiān, yī-ge hēi-sè-de xiǎo dòng-wù shénme shí-jiān dōu zài zuò., kb_memory 47%): the ant moved to sentence 1, gōng-zuò for zuò, zài dropped; always as kb_lookup gives it (shénme shí-jiān dōu, lesson also-and-all)",
+      "ideas": [
+        "i1",
+        "i2"
+      ],
+      "refs": "{{Word:re4}}-{{word:de}} {{word:shi2}}-{{word:jian1}}, {{word:ta1}} {{word:shen2me}} {{word:shi2}}-{{word:jian1}} {{word:dou1}} {{word:gong1}}-{{word:zuo4}}.",
+      "hanzi": "热-的 十-间, 他 什么 十-间 都 工-做.",
+      "gloss": "hot-possessive marker ten-between, he what? which? ten-between all work-to do.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 110,
+        "means": "yes-with-others",
+        "words": 11,
+        "depth": 1,
+        "late": [],
+        "warnings": [
+          "too long: 11 words (limit 10)"
+        ]
+      },
+      "blind": "In the hot time of year (summer), it works all the time."
+    },
+    {
+      "pinyin": "Tā zhǎo chī-de, ná huí jiā.",
+      "english": "It looked for food and carried it home.",
+      "literally": "It looks for things to eat, takes them back home.",
+      "reading": "[Utt [S [NP tā] [VP [VerbP zhǎo [NP chī-de]]]] , [VP [VerbP ná] [VP [VerbP huí [NP jiā]]]]]",
+      "source": "the book's line of this story (kb_memory 100% shared), with chī-de for chī-de dōng-xi (both are forms of food, kb_lookup): the longer one gives the sentence over 500 readings, this one 45",
+      "ideas": [
+        "i3"
+      ],
+      "refs": "{{Word:ta1}} {{word:zhao3}} {{word:chi1}}-{{word:de}}, {{word:na2}} {{word:hui2}} {{word:jia1}}.",
+      "hanzi": "他 找 吃-的, 拿 回 家.",
+      "gloss": "he to hunt to eat-possessive marker, to take to return home.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 45,
+        "means": "yes-with-others",
+        "words": 7,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "It looks for food and carries it back home."
+    },
+    {
+      "pinyin": "Hái yǒu yī-ge dà dòng-wù.",
+      "english": "There was also a grasshopper.",
+      "literally": "There is also a big animal.",
+      "reading": "[Utt [VP hái [VP [VerbP yǒu [NP [Count [Num yī]] gè [ModNP dà dòng-wù]]]]]]",
+      "source": "built from the grammar (hai-still, yǒu, measure-word); the grasshopper as the text's own note describes it, the colour in the next sentence",
+      "ideas": [
+        "i4"
+      ],
+      "refs": "{{Word:hai2}} {{word:you3}} {{word:yi1}}-{{light:ge4}} {{word:da4}} {{word:dong4}}-{{word:wu4}}.",
+      "hanzi": "还 有 一-个 大 动-物.",
+      "gloss": "still to have one-universal classifier big to move-thing.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 2,
+        "means": "yes-with-others",
+        "words": 7,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "There is also a big animal."
+    },
+    {
+      "pinyin": "Tā shì zhíwù-de yánsè.",
+      "english": "It was green.",
+      "literally": "It is the colour of plants.",
+      "reading": "[Utt [S [NP tā] [VP shì [NP [ModNP [Mod [NP zhíwù] de] yánsè]]]]]",
+      "source": "the book's sentence for green (Wǒ-de bāo shì zhíwù-de yánsè., kb_lookup green, lesson colors) with tā",
+      "ideas": [
+        "i4"
+      ],
+      "refs": "{{Word:ta1}} {{word:shi4}} {{word:zhi2wu4}}-{{word:de}} {{word:yan2se4}}.",
+      "hanzi": "他 是 植物-的 颜色.",
+      "gloss": "he to be plant-possessive marker color.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 4,
+        "means": "yes-with-others",
+        "words": 5,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "It is the colour of plants (green)."
+    },
+    {
+      "pinyin": "Zhè-ge dà dòng-wù bù gōng-zuò.",
+      "english": "The grasshopper didn't work.",
+      "literally": "This big animal does not work.",
+      "reading": "[Utt [S [NP [Count [Pointer zhè]] gè [ModNP dà dòng-wù]] [VP bù [VP [VerbP gōng-zuò]]]]]",
+      "source": "the book's line of this story (kb_memory 69%: ... dà dòng-wù bù zuò.), with the cast's short name and gōng-zuò",
+      "ideas": [
+        "i4"
+      ],
+      "refs": "{{Word:zhe4}}-{{light:ge4}} {{word:da4}} {{word:dong4}}-{{word:wu4}} {{word:bu4}} {{word:gong1}}-{{word:zuo4}}.",
+      "hanzi": "这-个 大 动-物 不 工-做.",
+      "gloss": "this-universal classifier big to move-thing not work-to do.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 12,
+        "means": "yes-with-others",
+        "words": 8,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "This big animal does not work."
+    },
+    {
+      "pinyin": "Tā wánr, shuō-shuo, xiào-xiao.",
+      "english": "It played, chatted, and laughed.",
+      "literally": "It plays, chats a little, laughs a little.",
+      "reading": "[Utt [S [NP tā] [VP [VerbP wánr]]] , [VP [VerbP shuō shuō]] , [VP [VerbP xiào xiào]]]",
+      "source": "the book's line of this story, as it is (kb_memory 69%)",
+      "ideas": [
+        "i5"
+      ],
+      "refs": "{{Word:ta1}} {{word:wan2r}}, {{word:shuo1}}-{{light:shuo1}}, {{word:xiao4}}-{{light:xiao4}}.",
+      "hanzi": "他 玩儿, 说-说, 笑-笑.",
+      "gloss": "he to play, to communicate-to communicate, to laugh-to laugh.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 34,
+        "means": "yes-with-others",
+        "words": 6,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "It plays, chats and laughs."
+    },
+    {
+      "pinyin": "Zhè-ge dà dòng-wù shuō: nǐ wèi-shénme gōng-zuò?",
+      "english": "The grasshopper said: \"Why are you working?\"",
+      "literally": "This big animal says: you why work?",
+      "reading": "[Utt [NP [Count [Pointer zhè]] gè [ModNP dà dòng-wù]] [Say shuō : [Utt [S [NP nǐ] [VP [AskP wèi shénme] [VP [VerbP gōng-zuò]]]]]]]",
+      "source": "the book's line of this story (kb_memory 70%), with the cast's short name and gōng-zuò; zài (-ing) left out, since with it the sentence has over 500 readings",
+      "ideas": [
+        "i6"
+      ],
+      "refs": "{{Word:zhe4}}-{{light:ge4}} {{word:da4}} {{word:dong4}}-{{word:wu4}} {{word:shuo1}}: {{word:ni3}} {{word:wei4}}-{{word:shen2me}} {{word:gong1}}-{{word:zuo4}}?",
+      "hanzi": "这-个 大 动-物 说: 你 为-什么 工-做?",
+      "gloss": "this-universal classifier big to move-thing to communicate: you for-what? which? work-to do?",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 405,
+        "means": "yes-with-others",
+        "words": 11,
+        "depth": 1,
+        "late": [],
+        "warnings": [
+          "too long: 11 words (limit 10)"
+        ]
+      },
+      "blind": "This big animal says: Why do you work?"
+    },
+    {
+      "pinyin": "Lái wánr!",
+      "english": "\"Come and play!\"",
+      "literally": "Come play!",
+      "reading": "[Utt [VP lái [VP [VerbP wánr]]]]",
+      "source": "the book's line of this story (kb_memory 70%), the second sentence of the quote, as it is",
+      "ideas": [
+        "i7"
+      ],
+      "refs": "{{Word:lai2}} {{word:wan2r}}!",
+      "hanzi": "来 玩儿!",
+      "gloss": "to come to play!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 9,
+        "means": "yes-with-others",
+        "words": 2,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "Come and play!"
+    },
+    {
+      "pinyin": "Zhè-ge xiǎo dòng-wù shuō: lěng-de shí-jiān huì lái.",
+      "english": "The ant said: \"Winter will come.\"",
+      "literally": "This little animal says: the cold time will come.",
+      "reading": "[Utt [NP [Count [Pointer zhè]] gè [ModNP xiǎo dòng-wù]] [Say shuō : [Utt [S [NP [ModNP [Mod [AdjP lěng] de] shí-jiān]] [VP huì [VP [VerbP lái]]]]]]]",
+      "source": "the book's line of this story (kb_memory 73%), with the cast's short name; winter is the dictionary's own form (lěng-de shí-jiān, kb_lookup gloss)",
+      "ideas": [
+        "i8"
+      ],
+      "refs": "{{Word:zhe4}}-{{light:ge4}} {{word:xiao3}} {{word:dong4}}-{{word:wu4}} {{word:shuo1}}: {{word:leng3}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:hui4}} {{word:lai2}}.",
+      "hanzi": "这-个 小 动-物 说: 冷-的 十-间 会 来.",
+      "gloss": "this-universal classifier little to move-thing to communicate: cold-possessive marker ten-between will to come.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 164,
+        "means": "yes-with-others",
+        "words": 12,
+        "depth": 2,
+        "late": [],
+        "warnings": [
+          "too long: 12 words (limit 10)",
+          "too deep: 2 levels of describing phrases, clauses or quotes inside each other (limit 1)"
+        ]
+      },
+      "blind": "This small animal says: The cold time of year (winter) will come."
+    },
+    {
+      "pinyin": "Wǒ yào yǒu chī-de.",
+      "english": "\"I need to have food.\"",
+      "literally": "I want to have things to eat.",
+      "reading": "[Utt [S [NP wǒ] [VP [Wish yào] [VP [VerbP yǒu [NP chī-de]]]]]]",
+      "source": "the book's line of this story, the second sentence of the quote, as it is (kb_memory 73%)",
+      "ideas": [
+        "i9"
+      ],
+      "refs": "{{Word:wo3}} {{word:yao4}} {{word:you3}} {{word:chi1}}-{{word:de}}.",
+      "hanzi": "我 要 有 吃-的.",
+      "gloss": "I to want to have to eat-possessive marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 44,
+        "means": "yes-with-others",
+        "words": 5,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "I want to have food (I need to have food)."
+    },
+    {
+      "pinyin": "Zhè-ge dà dòng-wù xiào: lěng-de shí-jiān hěn yuǎn!",
+      "english": "The grasshopper laughed: \"Winter is far away!\"",
+      "literally": "This big animal laughs: the cold time is very far!",
+      "reading": "[Utt [NP [Count [Pointer zhè]] gè [ModNP dà dòng-wù]] [Say xiào : [Utt [S [NP [ModNP [Mod [AdjP lěng] de] shí-jiān]] [VP hěn yuǎn]]]]]",
+      "source": "the book's line of this story (kb_memory 57%), with the cast's short name",
+      "ideas": [
+        "i10"
+      ],
+      "refs": "{{Word:zhe4}}-{{light:ge4}} {{word:da4}} {{word:dong4}}-{{word:wu4}} {{word:xiao4}}: {{word:leng3}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:hen3}} {{word:yuan3}}!",
+      "hanzi": "这-个 大 动-物 笑: 冷-的 十-间 很 远!",
+      "gloss": "this-universal classifier big to move-thing to laugh: cold-possessive marker ten-between very far!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 174,
+        "means": "yes-with-others",
+        "words": 12,
+        "depth": 2,
+        "late": [],
+        "warnings": [
+          "too long: 12 words (limit 10)",
+          "too deep: 2 levels of describing phrases, clauses or quotes inside each other (limit 1)"
+        ]
+      },
+      "blind": "This big animal laughs: The cold time is very far away!"
+    },
+    {
+      "pinyin": "Lěng-de shí-jiān jiù lái le.",
+      "english": "Then winter came.",
+      "literally": "The cold time then came.",
+      "reading": "[Utt [S [NP [ModNP [Mod [AdjP lěng] de] shí-jiān]] [VP jiù [VP [VP [VerbP lái]] le]]]]",
+      "source": "adapts the book's line (Hòu-lái, lěng-de shí-jiān lái le., kb_memory 100%): hòu-lái reads only as a call or as hòu + lái, so jiù says then (jiu-then, lesson linking-sentences)",
+      "ideas": [
+        "i11"
+      ],
+      "refs": "{{Word:leng3}}-{{word:de}} {{word:shi2}}-{{word:jian1}} {{word:jiu4}} {{word:lai2}} {{word:le}}.",
+      "hanzi": "冷-的 十-间 就 来 了.",
+      "gloss": "cold-possessive marker ten-between then to come perfective aspect marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 76,
+        "means": "yes-with-others",
+        "words": 7,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "Then the cold time came."
+    },
+    {
+      "pinyin": "Dì-shàng dōu shì bái-sè-de.",
+      "english": "The ground was all white.",
+      "literally": "On the ground it is all white.",
+      "reading": "[Utt [S [NP [NP dì] shàng] [VP dōu [VP shì [NP [AdjP bái-sè] de]]]]]",
+      "source": "the book's line of this story, as it is (kb_memory 100%)",
+      "ideas": [
+        "i12"
+      ],
+      "refs": "{{Word:di4}}-{{word:shang4}} {{word:dou1}} {{word:shi4}} {{word:bai2}}-{{word:se4}}-{{word:de}}.",
+      "hanzi": "地-上 都 是 白-色-的.",
+      "gloss": "floor-up all to be white-colour-possessive marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 15,
+        "means": "yes-with-others",
+        "words": 7,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "The ground is all white (snow, presumably)."
+    },
+    {
+      "pinyin": "Zhè-ge dà dòng-wù hěn lěng, méi-yǒu chī-de.",
+      "english": "The grasshopper was cold and had nothing to eat.",
+      "literally": "This big animal is very cold, has no things to eat.",
+      "reading": "[Utt [S [NP [Count [Pointer zhè]] gè [ModNP dà dòng-wù]] [VP hěn lěng]] , [VP méi yǒu [NP chī-de]]]",
+      "source": "the book's line of this story (kb_memory 100%), its first part, with the cast's short name",
+      "ideas": [
+        "i13"
+      ],
+      "refs": "{{Word:zhe4}}-{{light:ge4}} {{word:da4}} {{word:dong4}}-{{word:wu4}} {{word:hen3}} {{word:leng3}}, {{word:mei2}}-{{word:you3}} {{word:chi1}}-{{word:de}}.",
+      "hanzi": "这-个 大 动-物 很 冷, 没-有 吃-的.",
+      "gloss": "this-universal classifier big to move-thing very cold, negative particle used exclusively to negate the verb you (to form meiyou)-to have to eat-possessive marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 336,
+        "means": "yes-with-others",
+        "words": 11,
+        "depth": 0,
+        "late": [],
+        "warnings": [
+          "too long: 11 words (limit 10)"
+        ]
+      },
+      "blind": "This big animal is very cold and has no food."
+    },
+    {
+      "pinyin": "Tā hěn bù kāi-xīn.",
+      "english": "It was very unhappy.",
+      "literally": "It is very not happy.",
+      "reading": "[Utt [S [NP tā] [VP hěn bù kāi-xīn]]]",
+      "source": "the book's line of this story (kb_memory 100%), its last part, as a sentence of its own (also the book's Tā hěn bù kāi-xīn, jiù qù le hěn yuǎn-de dì-fang.)",
+      "ideas": [
+        "i14"
+      ],
+      "refs": "{{Word:ta1}} {{word:hen3}} {{word:bu4}} {{word:kai1}}-{{word:xin1}}.",
+      "hanzi": "他 很 不 开-心.",
+      "gloss": "he very not to open-heart.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 6,
+        "means": "yes-with-others",
+        "words": 5,
+        "depth": 0,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "It is very unhappy."
+    },
+    {
+      "pinyin": "Tā qù zhè-ge xiǎo dòng-wù-de jiā.",
+      "english": "It went to the ant's house.",
+      "literally": "It goes to this little animal's home.",
+      "reading": "[Utt [S [NP tā] [VP [VerbP qù [NP [ModNP [Mod [NP [Count [Pointer zhè]] gè [ModNP xiǎo dòng-wù]] de] jiā]]]]]]",
+      "source": "the book's line of this story (kb_memory 100%), its first part, with the cast's short name",
+      "ideas": [
+        "i15"
+      ],
+      "refs": "{{Word:ta1}} {{word:qu4}} {{word:zhe4}}-{{light:ge4}} {{word:xiao3}} {{word:dong4}}-{{word:wu4}}-{{word:de}} {{word:jia1}}.",
+      "hanzi": "他 去 这-个 小 动-物-的 家.",
+      "gloss": "he to go this-universal classifier little to move-thing-possessive marker home.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 8,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "It goes to this small animal's home."
+    },
+    {
+      "pinyin": "Tā wèn: nǐ néng gěi wǒ yī-diǎn chī-de ma?",
+      "english": "It asked: \"Can you give me a little food?\"",
+      "literally": "It asks: can you give me a bit of things to eat?",
+      "reading": "[Utt [NP tā] [Say wèn : [Utt [Q [S [NP nǐ] [VP [Can néng] [VP [VerbP gěi [NP wǒ] [NP [Count [Num yī]] diǎn chī-de]]]]] ma]]]]",
+      "source": "the book's line of this story (kb_memory 100%), its second part, as a sentence of its own",
+      "ideas": [
+        "i16"
+      ],
+      "refs": "{{Word:ta1}} {{word:wen4}}: {{word:ni3}} {{word:neng2}} {{word:gei3}} {{word:wo3}} {{word:yi1}}-{{word:dian3}} {{word:chi1}}-{{word:de}} {{word:ma}}?",
+      "hanzi": "他 问: 你 能 给 我 一-点 吃-的 吗?",
+      "gloss": "he to ask: you to be able to to give I one-o'clock to eat-possessive marker final interrogative yes-or-no question marker?",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 160,
+        "means": "yes-with-others",
+        "words": 11,
+        "depth": 1,
+        "late": [],
+        "warnings": [
+          "too long: 11 words (limit 10)"
+        ]
+      },
+      "blind": "It asks: Can you give me a little food?"
+    },
+    {
+      "pinyin": "Zhè-ge xiǎo dòng-wù shuō: rè-de shí-jiān, nǐ zài zuò shénme?",
+      "english": "The ant said: \"What were you doing in the summer?\"",
+      "literally": "This little animal says: in the hot time, what are you doing?",
+      "reading": "[Utt [NP [Count [Pointer zhè]] gè [ModNP xiǎo dòng-wù]] [Say shuō : [Utt [S [Time [Mod [AdjP rè] de] shí jiān] , [S [NP nǐ] [VP zài [VP [VerbP zuò [NP shénme]]]]]]]]]",
+      "source": "the book's line of this story (kb_memory 58%), with the cast's short name",
+      "ideas": [
+        "i17"
+      ],
+      "refs": "{{Word:zhe4}}-{{light:ge4}} {{word:xiao3}} {{word:dong4}}-{{word:wu4}} {{word:shuo1}}: {{word:re4}}-{{word:de}} {{word:shi2}}-{{word:jian1}}, {{word:ni3}} {{word:zai4}} {{word:zuo4}} {{word:shen2me}}?",
+      "hanzi": "这-个 小 动-物 说: 热-的 十-间, 你 在 做 什么?",
+      "gloss": "this-universal classifier little to move-thing to communicate: hot-possessive marker ten-between, you to exist at to do what? which??",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 172,
+        "means": "yes-with-others",
+        "words": 14,
+        "depth": 2,
+        "late": [],
+        "warnings": [
+          "too long: 14 words (limit 10)",
+          "too deep: 2 levels of describing phrases, clauses or quotes inside each other (limit 1)"
+        ]
+      },
+      "blind": "This small animal says: In the hot time, what were you doing?"
+    },
+    {
+      "pinyin": "Zhè-ge dà dòng-wù shuō: wǒ zài wánr.",
+      "english": "The grasshopper said: \"I was playing.\"",
+      "literally": "This big animal says: I am playing.",
+      "reading": "[Utt [NP [Count [Pointer zhè]] gè [ModNP dà dòng-wù]] [Say shuō : [Utt [S [NP wǒ] [VP zài [VP [VerbP wánr]]]]]]]",
+      "source": "the book's line of this story (kb_memory 33%), with the cast's short name",
+      "ideas": [
+        "i18"
+      ],
+      "refs": "{{Word:zhe4}}-{{light:ge4}} {{word:da4}} {{word:dong4}}-{{word:wu4}} {{word:shuo1}}: {{word:wo3}} {{word:zai4}} {{word:wan2r}}.",
+      "hanzi": "这-个 大 动-物 说: 我 在 玩儿.",
+      "gloss": "this-universal classifier big to move-thing to communicate: I to exist at to play.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 85,
+        "means": "yes-with-others",
+        "words": 9,
+        "depth": 1,
+        "late": [],
+        "warnings": []
+      },
+      "blind": "This big animal says: I was playing."
+    },
+    {
+      "pinyin": "Zhè-ge xiǎo dòng-wù gěi tā yī-diǎn chī-de.",
+      "english": "The ant gave it a little food.",
+      "literally": "This little animal gives it a bit of things to eat.",
+      "reading": "[Utt [S [NP [Count [Pointer zhè]] gè [ModNP xiǎo dòng-wù]] [VP [VerbP gěi [NP tā] [NP [Count [Num yī]] diǎn chī-de]]]]]",
+      "source": "the book's line of this story (kb_memory 100%), its first part, with the cast's short name and without le",
+      "ideas": [
+        "i19"
+      ],
+      "refs": "{{Word:zhe4}}-{{light:ge4}} {{word:xiao3}} {{word:dong4}}-{{word:wu4}} {{word:gei3}} {{word:ta1}} {{word:yi1}}-{{word:dian3}} {{word:chi1}}-{{word:de}}.",
+      "hanzi": "这-个 小 动-物 给 他 一-点 吃-的.",
+      "gloss": "this-universal classifier little to move-thing to give he one-o'clock to eat-possessive marker.",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 498,
+        "means": "yes-with-others",
+        "words": 11,
+        "depth": 0,
+        "late": [],
+        "warnings": [
+          "too long: 11 words (limit 10)"
+        ]
+      },
+      "blind": "This small animal gives it a little food."
+    },
+    {
+      "pinyin": "Tā shuō: xià-yī-ge rè-de shí-jiān, nǐ yě gōng-zuò!",
+      "english": "It said: \"Next summer, you work too!\"",
+      "literally": "It says: the next hot time, you also work!",
+      "reading": "[Utt [NP tā] [Say shuō : [Utt [S [Time [Next xià yī gè] [Time [Mod [AdjP rè] de] shí jiān]] , [S [NP nǐ] [VP yě [VP [VerbP gōng-zuò]]]]]]]]",
+      "source": "the example of next-last-time (Xià yī gè rè de shí-jiān, nǐ yě yào zuò., lesson around-an-action) and the book's line of this story (kb_memory 100%), with gōng-zuò and without yào",
+      "ideas": [
+        "i20"
+      ],
+      "refs": "{{Word:ta1}} {{word:shuo1}}: {{word:xia4}}-{{word:yi1}}-{{light:ge4}} {{word:re4}}-{{word:de}} {{word:shi2}}-{{word:jian1}}, {{word:ni3}} {{word:ye3}} {{word:gong1}}-{{word:zuo4}}!",
+      "hanzi": "他 说: 下-一-个 热-的 十-间, 你 也 工-做!",
+      "gloss": "he to communicate: down-one-universal classifier hot-possessive marker ten-between, you also work-to do!",
+      "check": {
+        "unknown": [],
+        "parses": true,
+        "readings": 50,
+        "means": "yes-with-others",
+        "words": 13,
+        "depth": 2,
+        "late": [],
+        "warnings": [
+          "too long: 13 words (limit 10)",
+          "too deep: 2 levels of describing phrases, clauses or quotes inside each other (limit 1)"
+        ]
+      },
+      "blind": "It says: Next hot time, you work too!"
+    }
+  ],
+  "sketch": [
+    {
+      "id": "i1",
+      "idea": "it is summer (the hot time)",
+      "needed": true,
+      "links": "when i2 and i3 happen",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i2",
+      "idea": "an ant (a little black animal) is always working",
+      "needed": true,
+      "links": "",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i3",
+      "idea": "the ant looks for food and carries it home",
+      "needed": true,
+      "links": "how i2 works",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i4",
+      "idea": "a grasshopper (a big green animal) does not work",
+      "needed": true,
+      "links": "but, against i2",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i5",
+      "idea": "the grasshopper plays, chats and laughs",
+      "needed": true,
+      "links": "instead of working (i4)",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i6",
+      "idea": "the grasshopper asks the ant why it is working",
+      "needed": true,
+      "links": "",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i7",
+      "idea": "the grasshopper tells the ant to come and play",
+      "needed": true,
+      "links": "with i6",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i8",
+      "idea": "the ant says winter will come",
+      "needed": true,
+      "links": "answers i6",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i9",
+      "idea": "the ant says it needs to have food",
+      "needed": true,
+      "links": "because of i8",
+      "verdict": "weaker",
+      "why": "The reader read 'yào' first as 'want' and flagged that it could be 'want' or 'need', so the necessity is less sure than in the English."
+    },
+    {
+      "id": "i10",
+      "idea": "the grasshopper laughs and says winter is far away",
+      "needed": true,
+      "links": "answers i8",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i11",
+      "idea": "winter comes",
+      "needed": true,
+      "links": "then, after i10",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i12",
+      "idea": "the ground is all white",
+      "needed": false,
+      "links": "because of i11",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i13",
+      "idea": "the grasshopper is cold and has nothing to eat",
+      "needed": true,
+      "links": "because of i11 and i4",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i14",
+      "idea": "the grasshopper is very unhappy",
+      "needed": true,
+      "links": "because of i13",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i15",
+      "idea": "the grasshopper goes to the ant's house",
+      "needed": true,
+      "links": "so, because of i13",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i16",
+      "idea": "it asks the ant: can you give me a little food?",
+      "needed": true,
+      "links": "at i15",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i17",
+      "idea": "the ant asks what the grasshopper was doing in the summer",
+      "needed": true,
+      "links": "answers i16",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i18",
+      "idea": "the grasshopper says it was playing",
+      "needed": true,
+      "links": "answers i17",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i19",
+      "idea": "the ant gives it a little food",
+      "needed": true,
+      "links": "then",
+      "verdict": "kept",
+      "why": ""
+    },
+    {
+      "id": "i20",
+      "idea": "the ant says: next summer, you work too",
+      "needed": true,
+      "links": "with i19; the point of the story",
+      "verdict": "kept",
+      "why": ""
+    }
+  ],
+  "cast": [
+    {
+      "thing": "summer (the text's note: the hot time)",
+      "description": "rè-de shí-jiān",
+      "short": ""
+    },
+    {
+      "thing": "winter",
+      "description": "lěng-de shí-jiān",
+      "short": ""
+    },
+    {
+      "thing": "ant (the text's note: a little black animal)",
+      "description": "hēi-sè-de xiǎo dòng-wù",
+      "short": "zhè-ge xiǎo dòng-wù"
+    },
+    {
+      "thing": "grasshopper (the text's note: a big green animal; the colour is the next sentence, Tā shì zhíwù-de yánsè.)",
+      "description": "dà dòng-wù",
+      "short": "zhè-ge dà dòng-wù"
+    },
+    {
+      "thing": "green",
+      "description": "zhíwù-de yánsè",
+      "short": ""
+    }
+  ],
+  "castProblems": [],
+  "structures": [
+    {
+      "idea": "i1",
+      "pattern": "time-first, de-modifier",
+      "lesson": "when-it-happens, modifying-nouns"
+    },
+    {
+      "idea": "i2",
+      "pattern": "svo, measure-word, de-modifier, adjective-noun; time-first, dou-all",
+      "lesson": "who-does-what, pointing, modifying-nouns, modifying-nouns; when-it-happens, also-and-all"
+    },
+    {
+      "idea": "i3",
+      "pattern": "svo, verb-de-thing, add-take, serial-verbs",
+      "lesson": "who-does-what, roles-of-a-word, time-and-sums, moving"
+    },
+    {
+      "idea": "i4",
+      "pattern": "hai-still, svo, measure-word, adjective-noun; shi-copula, de-modifier; bu-negation",
+      "lesson": "also-and-all, who-does-what, pointing, modifying-nouns; words-and-sentences, modifying-nouns; who-does-what"
+    },
+    {
+      "idea": "i5",
+      "pattern": "doubled-verb, add-take",
+      "lesson": "doubling-words, time-and-sums"
+    },
+    {
+      "idea": "i6",
+      "pattern": "speech-quote, why-how-question",
+      "lesson": "questions, questions"
+    },
+    {
+      "idea": "i7",
+      "pattern": "lai-let-me",
+      "lesson": "everyday-patterns"
+    },
+    {
+      "idea": "i8",
+      "pattern": "speech-quote, hui-will",
+      "lesson": "questions, when-it-happens"
+    },
+    {
+      "idea": "i9",
+      "pattern": "want-verb, svo, verb-de-thing",
+      "lesson": "pre-verbs, who-does-what, roles-of-a-word"
+    },
+    {
+      "idea": "i10",
+      "pattern": "speech-quote, hen-adjective",
+      "lesson": "questions, modifying-nouns"
+    },
+    {
+      "idea": "i11",
+      "pattern": "jiu-then, le-new-situation",
+      "lesson": "linking-sentences, moving"
+    },
+    {
+      "idea": "i12",
+      "pattern": "place-li-shang, dou-all, shi-copula, verb-de-thing",
+      "lesson": "where-it-is, also-and-all, words-and-sentences, roles-of-a-word"
+    },
+    {
+      "idea": "i13",
+      "pattern": "hen-adjective, add-take, mei-you-not-have, verb-de-thing",
+      "lesson": "modifying-nouns, time-and-sums, who-does-what, roles-of-a-word"
+    },
+    {
+      "idea": "i14",
+      "pattern": "hen-adjective, bu-adjective",
+      "lesson": "modifying-nouns, how-much"
+    },
+    {
+      "idea": "i15",
+      "pattern": "svo, de-modifier, measure-word",
+      "lesson": "who-does-what, modifying-nouns, pointing"
+    },
+    {
+      "idea": "i16",
+      "pattern": "speech-quote, can-verb, gei-give, measure-word, ma-question",
+      "lesson": "questions, pre-verbs, inside-a-sentence, pointing, questions"
+    },
+    {
+      "idea": "i17",
+      "pattern": "speech-quote, time-first, zai-now, what-question",
+      "lesson": "questions, when-it-happens, when-it-happens, questions"
+    },
+    {
+      "idea": "i18",
+      "pattern": "speech-quote, zai-now",
+      "lesson": "questions, when-it-happens"
+    },
+    {
+      "idea": "i19",
+      "pattern": "gei-give, measure-word",
+      "lesson": "inside-a-sentence, pointing"
+    },
+    {
+      "idea": "i20",
+      "pattern": "speech-quote, next-last-time, time-first, ye-also",
+      "lesson": "questions, around-an-action, when-it-happens, also-and-all"
+    }
+  ],
+  "gaps": [
+    {
+      "idea": "ant",
+      "description": "hēi-sè-de xiǎo dòng-wù",
+      "note": "no short word: the dictionary's form is 11 words (hěn duō zài yī-qǐ gōng-zuò-de xiǎo dòng-wù), so the text's own note (a little black animal) is used, named zhè-ge xiǎo dòng-wù after"
+    },
+    {
+      "idea": "grasshopper",
+      "description": "yī-ge dà dòng-wù, then Tā shì zhíwù-de yánsè.",
+      "note": "no entry: kb_lookup gives only the kind (dòng-wù) and, wrongly, alcohol as a second kind; the text's own note (a big green animal) is used, the colour in a sentence of its own, named zhè-ge dà dòng-wù after"
+    },
+    {
+      "idea": "summer",
+      "description": "rè-de shí-jiān",
+      "note": "the dictionary's form is 7 words (nián-lǐ zuì rè-de shí-jiān); the text's own note (the hot time) is 4 and pairs with winter's lěng-de shí-jiān"
+    }
+  ],
+  "added": [
+    "The white ground is snow (the reader's guess)",
+    "A stated moral: work and get ready for hard times ahead"
+  ],
+  "blind": {
+    "whole": "A small black animal works all through the hot season, gathering food and taking it home. A big green animal does not work. It plays, chats and laughs, and asks the small one why it bothers working. The small animal says the cold season will come and it needs food. The big one laughs that the cold season is far away. Then the cold season comes, the ground turns white, and the big animal is cold, has no food and is unhappy. It goes to the small animal's home and asks for a little food. The small animal asks what it was doing in the hot season, and it says it was playing. The small animal gives it a little food and says that next hot season it must work too. The point is to work and get ready for hard times ahead.",
+    "unsure": "Sentence 22: 'Tā shuō' does not say who speaks. I read it as the small animal, since it just gave the food and the words are a lesson to the big one. It could also be the big animal promising 'next hot time, you (meaning I) will work too', but that fits the 'nǐ' less well. Sentence 11: 'yào' could be 'want' or 'need'. Both fit. The two animals are never named, only described as 'small and black' and 'big and plant-coloured'. The story suggests particular creatures, but nothing in the text says which. Sentence 2: I read 'shénme shí-jiān dōu' as 'at any time, all the time'. Some glosses gave the wrong sense, though the right one was clear from context: 'shí-jiān' came out as 'ten-between' (it means time), 'yī-diǎn' as 'one o'clock' (it means a little), 'zhǎo' as 'to hunt' (here it means look for), 'tā' as 'he' (here it means it), 'dì-shàng' as 'floor-up' (here it means on the ground), and 'méi-yǒu' as a long particle note (it means does not have)."
+  },
+  "notes": "Translated by hand following the translate skill, at the level of the whole dictionary (2026-10-22). kb_memory gave the book's own lines of this story (most at 57-100% shared), so most sentences adapt them; the changes: green is the dictionary's zhíwù-de yánsè (the book's lines say tiān-de yánsè, the colour of the sky, which reads as blue); work is gōng-zuò (work-do) where the book has zuò, which alone reads as do; each quote that held two sentences, and each long line, is split; chī-de dōng-xi became chī-de and nǐ wèi-shénme zài gōng-zuò lost its zài, since both gave over 500 readings; the animals are named zhè-ge xiǎo dòng-wù and zhè-ge dà dòng-wù after their first description (the book: hēi-sè-de dòng-wù, tiān-de yánsè-de dòng-wù). Tried and dropped: \"Rè-de shí-jiān, yǒu yī-ge hēi-sè-de xiǎo dòng-wù.\" reads only as a call (Time , S needs a sentence with a doer, and one that starts with yǒu has none), so the ant comes first in a sentence of its own; \"Rè-de shí-jiān, tā shénme shí-jiān dōu zài gōng-zuò.\" and \"Rè-de shí-jiān, yī-ge hēi-sè-de xiǎo dòng-wù zài gōng-zuò.\" have no time reading among the first 500 (without zài the first has one, reading 109); \"Hòu-lái, lěng-de shí-jiān lái le.\" reads hòu-lái only as a call or as hòu + lái (no Time rule has it), so jiù says then; \"Hái yǒu yī-ge zhíwù-de yánsè-de dà dòng-wù.\" is 11 words at depth 2, so the colour got its own sentence; \"Nǐ néng gěi wǒ yī-diǎn ma?\" never reads yī-diǎn as a bit (the Bit rule needs a verb or describing word before it), while yī-diǎn chī-de reads as a number, counting word and thing (gěi wǒ [yī diǎn chī-de]). For the author: kb_gloss glosses diǎn as o'clock, so yī-diǎn chī-de shows as \"one o'clock to eat\" to the blind reader; kb_lookup has nothing for unhappy (bù kāi-xīn, from the book, says it); kb_lookup grasshopper lists alcohol (ràng-tóu-biàn-luàn-de shuǐ) as a kind-of. Not said, by choice: le in gave (the narration stays in plain verbs, as the book's own story lines do for most verbs). Glossary proposal: summer -> rè-de shí-jiān: the pair of winter's own form lěng-de shí-jiān, 4 words against the 7 of nián-lǐ zuì rè-de shí-jiān. Glossary proposal: next summer -> xià-yī-ge rè-de shí-jiān: next-last-time reads xià-yī-ge before a time as one time phrase (its own example), then a comma. Glossary proposal: then (the next thing in a story) -> jiù before the verb: Hòu-lái at the front reads only as a call. Glossary proposal: unhappy -> bù kāi-xīn: kb_lookup finds nothing for unhappy; the book says not happy. Translated before kb_memory hid the stories' own lines (HAOSHUODE_MEMORY_SKIP), so some sentences reuse the book's lines and the book overlap is higher than a fresh run would give.",
+  "problems": [],
+  "timing": {},
+  "item": {
+    "id": "story-9",
+    "kind": "story",
+    "title": "The Ant and the Grasshopper"
+  },
+  "book": {
+    "overlap": 0.839
+  }
+}
