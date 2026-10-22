@@ -14,9 +14,10 @@
 // Output: src/data/word-usage.json, structured as:
 //   { chapters: { <chapterId>: { label, order } }, words: { <wordId>: [chapterId, ...] } }
 // Regenerate after editing any lesson/appendix content or the
-// dictionary itself: `node scripts/generate-word-usage.js`.
+// dictionary itself: `node scripts/generate-word-usage.js`. generate() does it for scripts/generate-all.js (one process
+// for the build's generators); the file is written only when it changed.
 
-import { readFileSync, writeFileSync, readdirSync } from 'fs';
+import { readFileSync, readdirSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import matter from 'gray-matter';
@@ -24,6 +25,7 @@ import { parse as parseYaml } from 'yaml';
 import { listContentFiles } from './list-content-files.js';
 import dictionaryData from '../src/data/dictionary.ts';
 import { wordRefIds } from '../src/lib/word-refs.js';
+import { writeChanged } from './write-changed.js';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -101,7 +103,7 @@ function collectWordRefs(text) {
   return ids;
 }
 
-async function main() {
+export async function generate() {
   const dictionary = dictionaryData;
   const files = listContentFiles(CONTENT_DIR).filter(isTrackedFile);
   const chaptersRaw = await Promise.all(files.map(loadChapter));
@@ -132,7 +134,7 @@ async function main() {
     throw new Error(`{{word:..}} refs with no matching dictionary id: ${[...unknownRefs].join(', ')}`);
   }
 
-  writeFileSync(OUT_PATH, JSON.stringify({ chapters, words }, null, 2) + '\n', 'utf-8');
+  writeChanged(OUT_PATH, JSON.stringify({ chapters, words }, null, 2) + '\n');
 
   const total = Object.keys(dictionary.words).length;
   const usedCount = Object.values(words).filter((chs) => chs.length > 0).length;
@@ -140,4 +142,4 @@ async function main() {
   console.log(`${usedCount} words used somewhere; ${total - usedCount} words not used anywhere.`);
 }
 
-await main();
+if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1])) await generate();

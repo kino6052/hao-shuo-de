@@ -9,10 +9,10 @@
 //     words:      { <id>:  { ... the same keys ... } } }
 // where an end is a composite's hanzi or "word:<id>". Regenerate with `npm run relations`; the build does it.
 
-import { writeFileSync } from 'fs';
 import { resolve } from 'path';
 import { fileURLToPath } from 'url';
 import { openKb } from './kb.js';
+import { writeChanged } from './write-changed.js';
 
 const OUT_PATH = resolve(fileURLToPath(new URL('.', import.meta.url)), '../src/data/relations.json');
 
@@ -52,14 +52,15 @@ export function relationsIndex(report, { words, composites }) {
   return { composites: sorted(out.composites), words: sorted(out.words) };
 }
 
-async function main() {
-  const kb = await openKb();
+// kb: an opened KB to reuse (scripts/generate-all.js shares one between the steps); the file is written only when it changed
+export async function generate({ kb } = {}) {
+  kb ??= await openKb({ memo: true });
   const index = relationsIndex(kb.relations(), { words: kb.source.words, composites: kb.source.composites });
   // one line per entry: small to ship, and a change shows as the entries it touches
   const block = (m) => `{\n${Object.entries(m).map(([k, v]) => `${JSON.stringify(k)}:${JSON.stringify(v)}`).join(',\n')}\n}`;
   const text = `{\n"composites":${block(index.composites)},\n"words":${block(index.words)}\n}\n`;
-  writeFileSync(OUT_PATH, text);
+  writeChanged(OUT_PATH, text);
   console.log(`generate-relations: ${Object.keys(index.composites).length} composites and ${Object.keys(index.words).length} words with relations`);
 }
 
-if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1])) await main();
+if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1])) await generate();

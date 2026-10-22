@@ -10,10 +10,11 @@
 //   node scripts/generate-grammar-overview.js           # write the chapter
 //   node scripts/generate-grammar-overview.js --check   # exit 1 if it's stale
 
-import { readdirSync, readFileSync, writeFileSync, existsSync } from 'fs';
+import { readdirSync, readFileSync, existsSync } from 'fs';
 import { resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { LESSON_IDS, lessonNumber, importLessonFile } from './lessons.js';
+import { writeChanged } from './write-changed.js';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const CONTENT_DIR = resolve(__dirname, '../src/content');
@@ -91,19 +92,21 @@ export function renderOverview(entries) {
   ].join('\n');
 }
 
-const isMain = process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1]);
-if (isMain) {
+// writes the chapter, only when it changed (scripts/generate-all.js runs this for the build)
+export async function generate() {
   const fresh = renderOverview(await buildOverview());
-  if (process.argv.includes('--check')) {
-    const current = existsSync(OUT) ? readFileSync(OUT, 'utf-8').replace(/\r\n/g, '\n') : '';
-    if (current !== fresh) {
-      console.error('generate-grammar-overview: src/content/appendix-grammar.ts is out of date -- run npm run grammar-overview');
-      process.exit(1);
-    }
-    console.log('generate-grammar-overview: appendix-grammar.ts is up to date.');
-  } else {
-    writeFileSync(OUT, fresh);
-    const boxes = (fresh.match(/"subtype": "grammar"/g) ?? []).length;
-    console.log(`Generated appendix-grammar.ts: ${boxes} grammar boxes.`);
-  }
+  writeChanged(OUT, fresh);
+  const boxes = (fresh.match(/"subtype": "grammar"/g) ?? []).length;
+  console.log(`Generated appendix-grammar.ts: ${boxes} grammar boxes.`);
 }
+
+const isMain = process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1]);
+if (isMain && process.argv.includes('--check')) {
+  const fresh = renderOverview(await buildOverview());
+  const current = existsSync(OUT) ? readFileSync(OUT, 'utf-8').replace(/\r\n/g, '\n') : '';
+  if (current !== fresh) {
+    console.error('generate-grammar-overview: src/content/appendix-grammar.ts is out of date -- run npm run grammar-overview');
+    process.exit(1);
+  }
+  console.log('generate-grammar-overview: appendix-grammar.ts is up to date.');
+} else if (isMain) await generate();

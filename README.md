@@ -215,7 +215,8 @@ The shapes of the data are defined in TypeScript, so a mistake is a type error:
 | Command | What it does |
 | --- | --- |
 | `npm run dev` | Starts the dev server with hot reload; it also serves the review pages (/__review/) and the KB explorer (/__kb/). |
-| `npm run build` | Checks every gate, regenerates the grammar overview, word usage and dictionary pages, then builds the static site into docs/ with one page per route. |
+| `npm run build` | Regenerates what changed (generate), checks every gate, then builds the static site into docs/ with one page per route. |
+| `npm run generate` | Runs the build's generators in one process, each only when what it reads changed: the dictionary pages, the grammar overview, word usage, relations and the Akinator pool. --fresh runs them all. |
 | `npm run preview` | Serves the built site locally, to check it before it goes out. |
 | `npm run test` | Runs the fast test files with bun, several at a time (under half a minute); the slow ones, which use the real data or copy the repo, wait for test:all. |
 | `npm run test:push` | Runs the test files in three tiers: the quick ones on every commit, the rest before a push or when asked. |
@@ -230,7 +231,7 @@ The shapes of the data are defined in TypeScript, so a mistake is a type error:
 | `npm run plan-4b` | Rewrites the §4b table of BOOK_PLAN.md (which words each lesson introduces) from the lessons themselves, so a word refactor never needs the table edited by hand. |
 | `npm run word-usage` | Cross-references every dictionary word against every lesson/appendix content file, so the dictionary UI can show "used in: Lesson 3, Lesson 5" next to each word -- and, just as importantly… |
 | `npm run relations` | Writes the accepted relations the dictionaries show to the learner (KB_PLAN.md K18, phase 5): opposites, words said the same way, close words, wholes and their parts, and what hangs under what… |
-| `npm run akinator-data` | Writes the pool the book page of the Akinator searches (AKINATOR_PLAN.md D1): the 7,000-odd words, composites, patterns and sentences with the features a question can ask about, as one compact file… |
+| `npm run akinator-data` | Writes the pool the book page of the Akinator searches (AKINATOR_PLAN.md D1): the 11,000-odd words, composites, patterns and sentences with the features a question can ask about, as one compact file… |
 | `npm run wordnet` | Links the composites and words to WordNet (KB_PLAN.md phase 6): exports the entries, then runs the Python linker in the gitignored venv (.venv-kb). |
 | `npm run composite-examples` | Writes example sentences into the composite dictionary. The sentences are written by hand in plain pinyin, one file per review batch. |
 | `npm run grammar-overview` | Builds the grammar overview chapter (src/content/appendix-grammar.ts) from the lessons' patterns: every module's info block (src/lib/lesson.ts) that isn't a note (BOOK_PLAN.md §6… |

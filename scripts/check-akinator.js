@@ -43,7 +43,7 @@ for (const start of STARTS) {
 
 // the same ideas through the browser's engine, built from the exported file (D2): glosses only, no WordNet, so it may find less
 const lessons = (kb.source.lessons ?? []).map(({ id, number }) => ({ id, number }));
-const exported = exportPool(kb.pool(), { ak: kb.akinator(), lessons });
+const exported = exportPool(kb.pool(), { ak: kb.akinator(), lessons, nets: kb.tags().nets });
 const browser = createBrowserAkinator(JSON.parse(JSON.stringify(exported)));
 // the questions the learner reads: no grammar jargon (BOOK_PLAN.md rule 4)
 for (const q of [...exported.ask.filter(Boolean).flat(), ...exported.first.map((c) => c.label)]) {

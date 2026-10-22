@@ -1,4 +1,4 @@
-# Optimizations: why `npm run check` is quick
+# Optimizations: why `npm run check` and the build are quick
 
 `npm run check` runs 17 gates (`scripts/gates.js`) over the whole dictionary and the book. It used to take minutes. This file says
 why it was slow, what was done about it, how each part stays correct, and what is still open. The numbers were measured on one
@@ -127,6 +127,36 @@ A gate run by hand (`node scripts/check-forms.js`) works exactly as before: no b
   `.cache/gates.json`, run `--fresh`, and compare the `ok` and `out` of every key (the `ms` differ).
 - **Gates that share a process share their data.** A gate that changed a loaded module would change it for the next one. None does
   today; the comparison above is what would show it.
+
+## The build's generators (`npm run generate`)
+
+The build writes five files from the data before the gates and vite run: the dictionary pages, the grammar overview, word
+usage, relations and the Akinator pool. Once the yardstick rounds brought the composites to 5,490 they took about two
+minutes, every build, whatever had changed. Measured 2026-10-22, same machine:
+
+| Run | Before | After |
+| --- | --- | --- |
+| nothing changed | about 118 s, and then the gates 18 to 35 s | 3.5 to 4.5 s, and the gates 1.2 s |
+| one composite touched | about 118 s | 15 s (the steps that read it: about 9 s) |
+| one lesson file touched | about 118 s | 11 s |
+| every step (`--fresh`), parse memory warm | about 118 s | 9 s |
+
+What was done (`scripts/generate-all.js`):
+
+1. **A generated file is written only when its text changed** (`scripts/write-changed.js`). Each generator wrote its file every
+   time, so its time changed, so every stamp that covers `src` changed: the gates ran again, the KB source and the data bundle
+   were rebuilt. Line endings do not count (a checkout may have made them CRLF).
+2. **A stamp per step.** Each step names what it reads; the stamps of all steps are taken in one walk of the repo (0.5 s) and
+   again only after a step changed one of its files. A step whose stamp is the one remembered in `.cache/generate.json` is skipped.
+3. **The Akinator pool reads sentences through the parse memory** (`openKb({ memo: true })`): 50 s of parsing every sentence again
+   became 3 s; a new sentence costs one parse.
+4. **One process.** The steps run in one Node process with the data bundle (`fast-data.js`), and the two that need the KB share
+   one. Apart, each loaded the data or the KB from nothing (10 to 16 s each).
+5. **Generators first, then the gates**, so the gates remember the files as the build ships them.
+
+Still open: `vite build` takes 25 to 90 s (6,143 modules, one per composite file) and the site is one 4.8 MB script. The next steps are
+one data file for the composites instead of 5,490 modules, and loading the dictionaries, the word map, the word builder and the
+Akinator only when their page opens.
 
 ## Tried and dropped
 

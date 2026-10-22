@@ -2,11 +2,13 @@
 // and Chinese) from the word data. Runs in `npm run build`; edit a word's file in src/data/words, never the pages.
 //
 //   node scripts/generate-dictionary.js
+//
+// generate() does it for scripts/generate-all.js (one process for the build's generators); a page is written only when it changed.
 
-import { readFileSync, writeFileSync } from 'fs';
 import { resolve } from 'path';
 import { fileURLToPath } from 'url';
 import dictionaryData from '../src/data/dictionary.ts';
+import { writeChanged } from './write-changed.js';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -40,19 +42,21 @@ function frontmatter({ id, title, order, lang }) {
   return `---\nid: ${id}\ntitle: "${title}"\ntype: dictionary\norder: ${order}\nlanguage: ${lang}\n---\n`;
 }
 
-const data = dictionaryData;
+export function generate() {
+  const data = dictionaryData;
+  for (const lang of LANGS) {
+    const allWords = Object.values(data.words)
+      .slice()
+      .sort((a, b) => stripTones(a.term).localeCompare(stripTones(b.term)));
 
-for (const lang of LANGS) {
-  const allWords = Object.values(data.words)
-    .slice()
-    .sort((a, b) => stripTones(a.term).localeCompare(stripTones(b.term)));
-
-  let body = frontmatter({ id: 'dictionary', title: TITLES[lang], order: 1, lang });
-  body += `\n${INTRO[lang]}\n\n`;
-  body += '```dict\n';
-  for (const w of allWords) body += dictLine(w, lang) + '\n';
-  body += '```\n';
-  writeFileSync(resolve(CONTENT_DIR, `dictionary${LANG_SUFFIX[lang]}.md`), body, 'utf-8');
+    let body = frontmatter({ id: 'dictionary', title: TITLES[lang], order: 1, lang });
+    body += `\n${INTRO[lang]}\n\n`;
+    body += '```dict\n';
+    for (const w of allWords) body += dictLine(w, lang) + '\n';
+    body += '```\n';
+    writeChanged(resolve(CONTENT_DIR, `dictionary${LANG_SUFFIX[lang]}.md`), body);
+  }
+  console.log(`Generated alphabetical dictionary files for: ${LANGS.join(', ')}`);
 }
 
-console.log(`Generated alphabetical dictionary files for: ${LANGS.join(', ')}`);
+if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1])) generate();

@@ -89,6 +89,38 @@ describe('the exported pool', () => {
   });
 });
 
+describe('the exported pool with the tag nets', () => {
+  const small = exportPool(pool, { nets: { topic: topicNet, kind: kindNet } });
+  const again = importPool(JSON.parse(JSON.stringify(small)));
+  const ownOf = (id) => {
+    const i = pool.items.findIndex((x) => x.id === id);
+    let at = 0;
+    return small.own[i].map((x, j) => small.features[(at = j ? at + x : x)]);
+  };
+
+  test('an item writes only its lowest tags, and the import adds the ones above back', () => {
+    expect(ownOf('word:dao1')).toContain('topic:kitchen');
+    expect(ownOf('word:dao1')).not.toContain('topic:home');
+    expect(ownOf('word:dao1')).not.toContain('kind:thing');
+    expect([...again.item('word:dao1').features]).toEqual(expect.arrayContaining(['topic:home', 'kind:thing']));
+    expect(small.flat).toEqual([]);
+  });
+
+  test('a pattern brings its themes', () => {
+    expect(ownOf('pattern:svo')).not.toContain('theme:basic');
+    expect([...again.item('pattern:svo').features]).toContain('theme:basic');
+  });
+
+  test('a composite is stored without its id, and every item keeps the same features', () => {
+    expect(small.id[pool.items.findIndex((x) => x.id === 'composite:菜刀')]).toBe(0);
+    expect(again.items.map((i) => i.id)).toEqual(pool.items.map((i) => i.id));
+    for (const it of pool.items) {
+      const want = [...it.features].filter((f) => ASKED.test(f)).sort();
+      expect([...again.item(it.id).features].sort()).toEqual(want);
+    }
+  });
+});
+
 describe('the Akinator in the browser', () => {
   const engine = createAkinator(pool, { describe: (f) => ({ text: `Is it ${f}?`, hint: f === 'kind:tool' ? 'a thing you use' : '' }), first: [{ feature: 'kind:thing', label: 'A thing' }] });
   const ak = createBrowserAkinator(JSON.parse(JSON.stringify(exportPool(pool, { ak: engine, lessons }))));

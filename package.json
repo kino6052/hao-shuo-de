@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/generate-grammar-overview.js && node scripts/check-all.js && node scripts/generate-word-usage.js && node scripts/generate-relations.js && node scripts/generate-akinator-data.js && node scripts/generate-dictionary.js && vite build && node scripts/generate-pages.js",
+    "build": "npm run generate && node scripts/check-all.js && vite build && node scripts/generate-pages.js",
+    "generate": "node --import ./scripts/fast-data.js scripts/generate-all.js",
     "preview": "vite preview",
     "test": "node scripts/test.js --fast",
     "test:push": "node scripts/test.js",
@@ -53,7 +54,8 @@
   },
   "scriptNotes": {
     "dev": "Starts the dev server with hot reload; it also serves the review pages (/__review/) and the KB explorer (/__kb/).",
-    "build": "Checks every gate, regenerates the grammar overview, word usage and dictionary pages, then builds the static site into docs/ with one page per route.",
+    "build": "Regenerates what changed (generate), checks every gate, then builds the static site into docs/ with one page per route.",
+    "generate": "Runs the build's generators in one process, each only when what it reads changed: the dictionary pages, the grammar overview, word usage, relations and the Akinator pool. --fresh runs them all.",
     "preview": "Serves the built site locally, to check it before it goes out.",
     "test": "Runs the fast test files with bun, several at a time (under half a minute); the slow ones, which use the real data or copy the repo, wait for test:all.",
     "test:all": "Runs every test file with bun, several at a time, the slow ones first.",

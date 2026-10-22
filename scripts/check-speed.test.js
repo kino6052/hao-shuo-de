@@ -1,7 +1,7 @@
-// Tests of the pieces that make `npm run check` quick (see OPTIMIZATIONS.md): stamp, cache, gate-cache, parse-memo, fs-memory, check-batch.
+// Tests of the pieces that make `npm run check` and `npm run generate` quick (see OPTIMIZATIONS.md): stamp, cache, write-changed, gate-cache, parse-memo, fs-memory, check-batch.
 import { afterAll, describe, expect, test } from 'bun:test';
 import { spawnSync } from 'node:child_process';
-import { mkdirSync, mkdtempSync, readdirSync, rmSync, utimesSync, writeFileSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, statSync, utimesSync, writeFileSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
@@ -9,6 +9,7 @@ import { readCache, writeCache } from './cache.js';
 import { lookupGate, lastGateMs, recordGate } from './gate-cache.js';
 import { parseMemo } from './parse-memo.js';
 import { ROOT, handDown, handedDown, stampOf } from './stamp.js';
+import { writeChanged } from './write-changed.js';
 
 const made = [];
 const tmp = (inRepo = false) => {
@@ -78,6 +79,23 @@ describe('cache', () => {
     } finally {
       delete process.env.HSD_NO_CACHE;
     }
+  });
+});
+
+describe('write-changed', () => {
+  test('writes a new or changed file, and leaves one with the same text alone, line endings aside', () => {
+    const dir = tmp();
+    const file = join(dir, 'sub/out.json');
+    expect(writeChanged(file, '{"a":1}\n')).toBe(true);
+    const old = new Date(2000, 0, 1);
+    utimesSync(file, old, old);
+    expect(writeChanged(file, '{"a":1}\n')).toBe(false);
+    writeFileSync(file, '{"a":1}\r\n');
+    utimesSync(file, old, old);
+    expect(writeChanged(file, '{"a":1}\n')).toBe(false);
+    expect(statSync(file).mtimeMs).toBe(old.getTime());
+    expect(writeChanged(file, '{"a":2}\n')).toBe(true);
+    expect(readFileSync(file, 'utf8')).toBe('{"a":2}\n');
   });
 });
 
