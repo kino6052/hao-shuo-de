@@ -154,9 +154,59 @@ What was done (`scripts/generate-all.js`):
    one. Apart, each loaded the data or the KB from nothing (10 to 16 s each).
 5. **Generators first, then the gates**, so the gates remember the files as the build ships them.
 
-Still open: `vite build` takes 25 to 90 s (6,143 modules, one per composite file) and the site is one 4.8 MB script. The next steps are
-one data file for the composites instead of 5,490 modules, and loading the dictionaries, the word map, the word builder and the
-Akinator only when their page opens.
+## The site: loading and searching the big pages
+
+With 5,490 composites the composite dictionary hung the browser twice: on opening (every entry drawn at once) and on every
+keystroke of its search. Measured 2026-10-22 in the dev server, same machine:
+
+| | Before | After |
+| --- | --- | --- |
+| a page opens in dev (first paint) | 12.8 s (17.7 to 22 s until the page was ready) | 1.6 s |
+| the composite dictionary, opened from another page | the whole app: 17.7 to 22 s | 0.9 s |
+| its elements on the page | 120,667 | 1,511 |
+| one keystroke in its search | 1,446 ms | 10 to 20 ms; the results 0.12 s after the last key |
+| one keystroke in the categorical dictionary's search | up to 1,601 ms, 27,634 elements for "a" | 1 to 6 ms, 684 elements |
+| the app's first script (`vite build`, on disk) | 4,652 KB | 1,504 KB; the composites are a 2,720 KB chunk of their own, the relations 278 KB |
+
+What was done:
+
+1. **Long lists draw in batches** (`src/components/LoadMore.jsx`): 60 entries first, then 120 more each time the end of the list comes
+   within 800 px of the screen, with a "showing X of Y" line and a button. A search, a filter or a language starts again from 60. The
+   categorical dictionary does the same with a search's result (`firstOfTree` in `src/lib/dictionary-search.js`: 80, then 160 more;
+   a heading still counts all its matches).
+2. **A search runs once typing pauses** (150 ms), over text worked out once: the composite page keeps one lowercase string per entry,
+   and the dictionary search folds each field (tones, case, punctuation) once and remembers it.
+3. **The work waits for its page.** What the composite page works out from the data (closeness, counts, the search text) is done the
+   first time it draws, not when the app starts; whether the Word Builder can show an entry is worked out for the entries on screen
+   only (`buildOf` in `src/lib/builder-entries.js`), and the Word Builder's own word list reads only its first eight matches.
+4. **The bundle is split by page** (`lazyPage` in `src/components/LazyPage.jsx`): the three dictionaries, the two builders, the word
+   map and the Akinator are chunks of their own, fetched when their page first opens. The composites moved out of the first chunk
+   once the core dictionary stopped importing all of them for its five ready-made units: `src/data/composite-units.ts` lists only the
+   composites with a `role` (written by `scripts/build-data.js`; check-data checks it from the data it already has, so no extra
+   reads; the dev server leaves it to `npm run data`).
+5. **One module for the composites in dev** (`vite-plugin-data.js`): `composites/index.ts` is served with every entry file bundled
+   in by esbuild (about a second, kept until a file in the folder changes). The browser fetched the 5,490 files one by one.
+
+Still open: the lessons (687 KB) and the other book content (340 KB) are in the first chunk, because the table of contents is built
+from them; splitting them needs the titles apart from the texts.
+
+## The tests: what a commit and a push wait for
+
+| | Before | After |
+| --- | --- | --- |
+| the quick tier (`npm test`, the commit hook) | 50 s | 5.5 s, 730 tests |
+| `check-data` (the commit hook) | 14.6 s | 3.5 s (the data comes from one esbuild bundle, `scripts/fast-data.js`) |
+| `scripts/tag-ops.test.js` | 216 to 279 s | 7 to 18 s |
+| the push tier (`npm run test:push`) | over 280 s | 110 to 138 s, 1,368 tests |
+
+1. **A data file is evaluated once per process** (`splitData` in `scripts/refactor-lib.js`): every Workspace read all 5,490
+   composite texts through `Function()`; now each text is evaluated once and a clone handed out.
+2. **The tag-ops test counts entries per page in one walk** instead of one walk per page.
+3. **The tests that read all the composites wait for a push** (tag-ops, refactor-ops, the word-builder parse, heads, grammar,
+   pinyin refs, rests-on): they took 45 s of every commit, and check-data already checks the data there.
+
+Still open: `src/lib/kb/real.test.js` takes 97 s alone (every answer is a solver over the whole dictionary), so a push cannot get
+much under a hundred seconds without a faster what-if.
 
 ## Tried and dropped
 

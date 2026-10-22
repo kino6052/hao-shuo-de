@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'bun:test';
-import { fold, matcher, filterTree } from './dictionary-search.js';
+import { fold, matcher, filterTree, firstOfTree } from './dictionary-search.js';
 
 describe('matching a query', () => {
   test('tones, case and hyphens do not matter', () => {
@@ -68,5 +68,33 @@ describe('cutting the category tree down', () => {
 
   test('no match leaves nothing', () => {
     expect(filterTree(tree, how('zzz'))).toEqual([]);
+  });
+});
+
+describe('drawing a long result in batches', () => {
+  const tree = [
+    { key: 'home', children: [
+      { key: 'kitchen', wordIds: ['dao1', 'wan3'] },
+      { key: 'bedroom', wordIds: ['chuang2'], entries: [{ zh: '枕头' }] },
+    ] },
+    { key: 'food', wordIds: ['fan4'] },
+  ];
+  const comps = { kitchen: [{ zh: '筷子' }], food: [{ zh: '米饭' }] };
+  const count = (n) => (n.children ? n.children.reduce((s, c) => s + count(c), 0) : n.wordIds.length + (n.entries ?? comps[n.key] ?? []).length);
+  const how = { pageEntries: (n) => comps[n.key] ?? [], count };
+
+  test('keeps the first words and entries in reading order, with the full counts', () => {
+    const { nodes, shown } = firstOfTree(tree, 4, how);
+    expect(shown).toBe(4);
+    expect(nodes).toHaveLength(1);
+    expect(nodes[0].count).toBe(5);
+    expect(nodes[0].children[0]).toMatchObject({ key: 'kitchen', wordIds: ['dao1', 'wan3'], entries: [{ zh: '筷子' }], count: 3 });
+    expect(nodes[0].children[1]).toMatchObject({ key: 'bedroom', wordIds: ['chuang2'], entries: [], count: 2 });
+  });
+
+  test('a budget bigger than the tree keeps it all', () => {
+    const { nodes, shown } = firstOfTree(tree, 100, how);
+    expect(shown).toBe(7);
+    expect(nodes[1]).toMatchObject({ key: 'food', wordIds: ['fan4'], entries: [{ zh: '米饭' }], count: 2 });
   });
 });

@@ -13,7 +13,7 @@
     "test:all": "node scripts/test.js --all",
     "typecheck": "tsc --noEmit",
     "data": "node scripts/build-data.js",
-    "check-data": "node scripts/check-data.js",
+    "check-data": "node --import ./scripts/fast-data.js scripts/check-data.js",
     "check-sounds": "node scripts/check-sounds.js",
     "word": "node scripts/word.js",
     "refactor": "node scripts/refactor.js",

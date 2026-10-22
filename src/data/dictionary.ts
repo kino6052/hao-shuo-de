@@ -3,6 +3,7 @@
 //   maps/              categories, antonyms, synonyms (src/lib/data-maps.ts)
 //   coverage/          the knowledge base; a word "covers" the items naming it
 //   composites/        those with a `role` become units: ready-made words
+//                      (listed by composite-units.ts, so the rest stay out)
 // Everything that reads the dictionary imports this, in the shape
 // { words: { [id]: entry }, categories } the old dictionary.json had.
 
@@ -12,7 +13,7 @@ import ANTONYMS from "./maps/antonyms.ts";
 import SYNONYMS from "./maps/synonyms.ts";
 import { GROUPS } from "./coverage/index.ts";
 import { relationLists, type Category } from "../lib/data-maps.ts";
-import { ENTRIES } from "./composites/index.ts";
+import { UNITS } from "./composite-units.ts";
 import type { Composite } from "../lib/composite.ts";
 import { replaceWordRefs, refTerm } from "../lib/word-refs.js";
 import type { Necessity, Sense, Text3 } from "../lib/word.ts";
@@ -83,7 +84,7 @@ function assemble(): Dictionary {
     words[id] = entry;
   }
   const units: Record<string, Unit> = {};
-  for (const e of ENTRIES as Composite[]) {
+  for (const e of UNITS as Composite[]) {
     if (!e.role || !e.hsd?.length) continue;
     const form = e.hsd[0];
     const term = replaceWordRefs(form, (id: string, kind: string) => refTerm((WORDS as Record<string, { term: string }>)[id]?.term ?? id, kind));

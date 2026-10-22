@@ -1,22 +1,37 @@
-// The composite dictionary words a reader can open in the Word Builder, read
-// once and shared by the Word Builder and the composite dictionary page.
+// The composite dictionary words a reader can open in the Word Builder,
+// shared by the Word Builder and the composite dictionary page. Reading a form
+// takes about half a millisecond, so an entry is read only when it is asked
+// for (on screen, or among a search's first results) and remembered.
 import composites from "../data/composites.ts";
 import dictionary from "../data/dictionary.ts";
 import { builderEntries } from "./word-builder-parse.js";
 import { buildUrl, parseUrl } from "./router.js";
 
-let cache = null;
+const read = new Map();
 
-// -> [{ entry, tree }] (see src/lib/word-builder-parse.js). Reading every
-// form takes a moment, so callers ask for it after their first render.
-export function dictionaryBuilds() {
-  if (!cache) cache = builderEntries(dictionary, composites.entries);
-  return cache;
+// -> the { entry, tree } of one composite dictionary entry (see
+// src/lib/word-builder-parse.js), or null when the Word Builder cannot show it.
+export function buildOf(entry) {
+  if (!read.has(entry)) read.set(entry, builderEntries(dictionary, [entry])[0] ?? null);
+  return read.get(entry);
+}
+
+// -> the first `limit` builds, in dictionary order, of the entries `keep` lets through.
+export function findBuilds(keep, limit) {
+  const found = [];
+  for (const entry of composites.entries) {
+    if (found.length >= limit) break;
+    if (!keep(entry)) continue;
+    const build = buildOf(entry);
+    if (build) found.push(build);
+  }
+  return found;
 }
 
 // -> the { entry, tree } for a composite dictionary entry's rank, or null.
 export function buildOfRank(rank) {
-  return dictionaryBuilds().find((b) => b.entry.rank === rank) ?? null;
+  const entry = composites.entries.find((e) => e.rank === rank);
+  return entry ? buildOf(entry) : null;
 }
 
 // -> the Word Builder's URL with a dictionary word loaded.

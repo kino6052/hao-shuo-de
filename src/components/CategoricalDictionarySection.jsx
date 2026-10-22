@@ -1,11 +1,12 @@
-import { useState } from "preact/hooks";
+import { useState, useEffect, useMemo } from "preact/hooks";
 import dictionary from "../data/dictionary.ts";
 import composites from "../data/composites.ts";
 import { AudioButton } from "./AudioButton.jsx";
 import { getUsageLabels } from "../lib/word-usage.js";
 import { categoricalPages } from "../lib/categorical-entries.js";
-import { matcher, filterTree } from "../lib/dictionary-search.js";
+import { matcher, filterTree, firstOfTree } from "../lib/dictionary-search.js";
 import { SearchBox } from "./SearchBox.jsx";
+import { LoadMore } from "./LoadMore.jsx";
 import { t } from "../lib/i18n.js";
 import styles from "./CategoricalDictionarySection.module.css";
 
@@ -103,7 +104,7 @@ function CategoryNode({ node, lang, depth, path, collapsed, onToggle, searching 
             ▸
           </span>
           <span class={styles.nodeTitle}>{title}</span>
-          <span class={styles.nodeCount}>{memberCount(node)}</span>
+          <span class={styles.nodeCount}>{node.count ?? memberCount(node)}</span>
         </button>
       )}
       {(isOpen || !title) && (
@@ -131,21 +132,38 @@ function CategoryNode({ node, lang, depth, path, collapsed, onToggle, searching 
   );
 }
 
+// A search draws its first FIRST matches, then a batch more as the reader nears the end; it runs once typing pauses (PAUSE ms).
+const FIRST = 80;
+const BATCH = 160;
+const PAUSE = 150;
+
 export function CategoricalDictionarySection({ lang }) {
   const [collapsed, setCollapsed] = useState(
-    new Set(allPaths(dictionary.categories)),
+    () => new Set(allPaths(dictionary.categories)),
   );
 
   const [query, setQuery] = useState("");
-  const match = matcher(query);
-  const tree = match
-    ? filterTree(dictionary.categories, {
+  const [search, setSearch] = useState("");
+  useEffect(() => {
+    const id = setTimeout(() => setSearch(query), PAUSE);
+    return () => clearTimeout(id);
+  }, [query]);
+  const match = useMemo(() => matcher(search), [search]);
+  const found = useMemo(
+    () =>
+      match &&
+      filterTree(dictionary.categories, {
         titleMatches: titleMatches(match),
         wordMatches: wordMatches(match),
         pageEntries: pageComposites,
         entryMatches: entryMatches(match),
-      })
-    : dictionary.categories;
+      }),
+    [match],
+  );
+  const total = useMemo(() => found && found.reduce((sum, node) => sum + memberCount(node), 0), [found]);
+  const [drawn, setDrawn] = useState({ search, n: FIRST });
+  const n = drawn.search === search ? drawn.n : FIRST;
+  const tree = found ? firstOfTree(found, n, { pageEntries: pageComposites, count: memberCount }).nodes : dictionary.categories;
 
   function onToggle(path) {
     setCollapsed((prev) => {
@@ -162,7 +180,7 @@ export function CategoricalDictionarySection({ lang }) {
         lang={lang}
         query={query}
         onQuery={setQuery}
-        found={match ? tree.reduce((sum, node) => sum + memberCount(node), 0) : null}
+        found={match ? total : null}
       />
       {tree.map((category) => (
         <CategoryNode
@@ -176,6 +194,7 @@ export function CategoricalDictionarySection({ lang }) {
           searching={Boolean(match)}
         />
       ))}
+      {match && <LoadMore shown={Math.min(n, total)} total={total} label={t(lang, "showMore")} onMore={() => setDrawn({ search, n: n + BATCH })} />}
     </div>
   );
 }

@@ -8,14 +8,8 @@ import { ExampleList } from './components/ExampleList.jsx';
 import { PracticeExercise } from './components/PracticeExercise.jsx';
 import { LessonFlow } from './components/LessonFlow.jsx';
 import { StoryBlock } from './components/StoryBlock.jsx';
-import { DictionarySection } from './components/DictionarySection.jsx';
-import { CategoricalDictionarySection } from './components/CategoricalDictionarySection.jsx';
-import { CompositeDictionarySection } from './components/CompositeDictionarySection.jsx';
-import { SentenceBuilder } from './components/SentenceBuilder.jsx';
-import { WordBuilder } from './components/WordBuilder.jsx';
-import { WordMap } from './components/WordMap.jsx';
-import { Akinator } from './components/Akinator.jsx';
 import { PageNav } from './components/PageNav.jsx';
+import { lazyPage } from './components/LazyPage.jsx';
 import { TldrSummary } from './components/TldrSummary.jsx';
 import { MissingTranslationBanner } from './components/MissingTranslationBanner.jsx';
 import { AdSlot } from './components/AdSlot.jsx';
@@ -24,6 +18,15 @@ import { useAppRouter } from './lib/use-router.js';
 import { AD_SLOT_LESSON_END } from './lib/tracking-config.js';
 import { trackPageView } from './lib/tracking.js';
 import { useTheme } from './lib/use-theme.js';
+
+// The dictionaries, builders, word map and Akinator come in chunks of their own, fetched when first shown.
+const DictionarySection = lazyPage(() => import('./components/DictionarySection.jsx'), 'DictionarySection');
+const CategoricalDictionarySection = lazyPage(() => import('./components/CategoricalDictionarySection.jsx'), 'CategoricalDictionarySection');
+const CompositeDictionarySection = lazyPage(() => import('./components/CompositeDictionarySection.jsx'), 'CompositeDictionarySection');
+const SentenceBuilder = lazyPage(() => import('./components/SentenceBuilder.jsx'), 'SentenceBuilder');
+const WordBuilder = lazyPage(() => import('./components/WordBuilder.jsx'), 'WordBuilder');
+const WordMap = lazyPage(() => import('./components/WordMap.jsx'), 'WordMap');
+const Akinator = lazyPage(() => import('./components/Akinator.jsx'), 'Akinator');
 
 function renderContent(s, lang) {
   const type = s.meta.type;

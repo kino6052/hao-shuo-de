@@ -48,7 +48,8 @@ const errors = [];
 const ids = new Set(Object.keys(WORDS));
 
 // 1. indexes
-for (const path of buildData({ check: true })) errors.push(`${path.split('/src/')[1]}: out of date -- run npm run data`);
+const unitFiles = ENTRIES.filter((e) => e.role).map(compositeFileName);
+for (const path of buildData({ check: true, unitFiles })) errors.push(`${path.split('/src/')[1]}: out of date -- run npm run data`);
 
 // 2. word files
 const TODO = /\bTODO\b/;

@@ -60,11 +60,20 @@ const COMPOSITES_DIR = 'src/data/composites/';
 const LESSONS_DIR = 'src/content/lessons/';
 
 // A data file: "<prefix><literal>);\n" -- the prefix holds the comments, the
-// import and "export default helper(" (plus "id", for a word).
+// import and "export default helper(" (plus "id", for a word). A text is
+// evaluated once per process and its value cloned for each caller (a third
+// of the time; a walk over the 5,490 composites took 0.35 s), so a caller
+// may still change what it gets.
+const evaluated = new Map();
 function splitData(text, path) {
-  const m = text.match(/^([\s\S]*?export default \w+\((?:"[^"]+", )?)([\s\S]*)\);\n$/);
-  if (!m) throw new Error(`${path}: not a data file`);
-  return { prefix: m[1], value: Function(`return (${m[2]});`)() };
+  let hit = evaluated.get(text);
+  if (!hit) {
+    const m = text.match(/^([\s\S]*?export default \w+\((?:"[^"]+", )?)([\s\S]*)\);\n$/);
+    if (!m) throw new Error(`${path}: not a data file`);
+    hit = { prefix: m[1], value: Function(`return (${m[2]});`)() };
+    evaluated.set(text, hit);
+  }
+  return { prefix: hit.prefix, value: structuredClone(hit.value) };
 }
 
 const LF = String.fromCharCode(10);

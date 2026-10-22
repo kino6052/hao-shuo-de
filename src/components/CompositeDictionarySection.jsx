@@ -1,4 +1,4 @@
-import { useState, useEffect } from "preact/hooks";
+import { useState, useEffect, useMemo } from "preact/hooks";
 import composites from "../data/composites.ts";
 import dictionary from "../data/dictionary.ts";
 import {
@@ -8,10 +8,11 @@ import {
 import { resolveLessonRefs, resolveWordRefs } from "../lib/word-refs.js";
 import { AudioButton } from "./AudioButton.jsx";
 import { t } from "../lib/i18n.js";
-import { dictionaryBuilds, wordBuilderUrl, openInApp } from "../lib/builder-entries.js";
+import { buildOf, wordBuilderUrl, openInApp } from "../lib/builder-entries.js";
 import { compositeHeads, headHanzi } from "../lib/heads.js";
 import { naturalness, naturalnessSummary } from "../lib/naturalness.js";
 import relations from "../data/relations.json";
+import { LoadMore } from "./LoadMore.jsx";
 import styles from "./CompositeDictionarySection.module.css";
 
 // The composite dictionary (src/data/composites/): for a common word in
@@ -22,8 +23,11 @@ import styles from "./CompositeDictionarySection.module.css";
 // worth a new word; `proposed` marks a description still waiting for review.
 // Each entry shows how close it is to Mandarin (src/lib/naturalness.js):
 // five dots for Mandarin's own word, one for a description.
-const wordIndex = buildWordIndex(dictionary);
-const wordCount = countDictionaryWords(dictionary);
+//
+// With thousands of entries the page stays quick: it draws the first 60, then
+// more as the reader scrolls near the end (LoadMore); the search runs once
+// typing pauses, over text lowercased once; and what the page works out from
+// the data (pageData) waits until the page first draws, not the app's start.
 const FITS = ["word", "natural", "plain", "gap", "skip", "name", "proposed"];
 // The reader's word for an entry: the English or Russian gloss, or the Chinese word itself.
 const SOURCE = { eng: (e) => e.en, rus: (e) => e.ru, zh: (e) => e.zh };
@@ -60,12 +64,34 @@ function alphabetical(lang) {
   }
   return byLetter[lang];
 }
-// zh -> 1..5 (null without a form): how close each entry is to Mandarin.
-const { heads } = compositeHeads(dictionary, composites.entries);
-const NATURAL = new Map(composites.entries.map((e) => [e.zh, naturalness(e, headHanzi(heads.get(e.zh), dictionary.words))]));
-const naturalCounts = { any: 0, 5: 0, 4: 0, 3: 0, 2: 0, 1: 0 };
-for (const s of NATURAL.values()) if (s != null) (naturalCounts[s]++, naturalCounts.any++);
-const SUMMARY = naturalnessSummary(composites.entries.map((entry) => ({ entry, score: NATURAL.get(entry.zh) })));
+// What the page works out from the data, once, the first time it draws.
+let data = null;
+function pageData() {
+  if (data) return data;
+  // zh -> 1..5 (null without a form): how close each entry is to Mandarin.
+  const { heads } = compositeHeads(dictionary, composites.entries);
+  const natural = new Map(composites.entries.map((e) => [e.zh, naturalness(e, headHanzi(heads.get(e.zh), dictionary.words))]));
+  const naturalCounts = { any: 0, 5: 0, 4: 0, 3: 0, 2: 0, 1: 0 };
+  for (const s of natural.values()) if (s != null) (naturalCounts[s]++, naturalCounts.any++);
+  // "proposed" is a flag on top of a fit, so it gets its own count.
+  const counts = { all: composites.entries.length, proposed: 0 };
+  for (const e of composites.entries) {
+    counts[e.fit] = (counts[e.fit] ?? 0) + 1;
+    if (e.proposed) counts.proposed++;
+  }
+  data = {
+    wordIndex: buildWordIndex(dictionary),
+    wordCount: countDictionaryWords(dictionary),
+    natural,
+    naturalCounts,
+    summary: naturalnessSummary(composites.entries.map((entry) => ({ entry, score: natural.get(entry.zh) }))),
+    counts,
+    byZh: new Map(composites.entries.map((e) => [e.zh, e])),
+    // what the search looks in: both glosses, the hanzi and the pinyin
+    text: new Map(composites.entries.map((e) => [e, [e.en, e.ru, e.zh, e.py].filter(Boolean).join("\n").toLowerCase()])),
+  };
+  return data;
+}
 
 function Closeness({ score, lang }) {
   if (score == null) return null;
@@ -77,24 +103,14 @@ function Closeness({ score, lang }) {
   );
 }
 
-// "proposed" is a flag on top of a fit, so it gets its own count.
-const counts = composites.entries.reduce(
-  (acc, e) => ({ ...acc, [e.fit]: (acc[e.fit] ?? 0) + 1 }),
-  {
-    all: composites.entries.length,
-    proposed: composites.entries.filter((e) => e.proposed).length,
-  },
-);
-
 // The accepted relations of an entry (src/data/relations.json, made by scripts/generate-relations.js): an end is a
 // composite's hanzi or "word:<id>", shown with its sound.
-const ENTRY_BY_ZH = new Map(composites.entries.map((e) => [e.zh, e]));
 const REL_KEYS = [["opposite", "relOpposite"], ["same", "relSame"], ["close", "relClose"], ["partOf", "relPartOf"], ["parts", "relParts"], ["kindOf", "relKindOf"], ["kinds", "relKinds"]];
 // a long list shows its first few and the count
 const MAX_ENDS = 12;
 const endLabel = (end) => {
   if (end.startsWith("word:")) return dictionary.words[end.slice(5)]?.term ?? end;
-  const e = ENTRY_BY_ZH.get(end);
+  const e = pageData().byZh.get(end);
   return e ? `${end} ${e.py}` : end;
 };
 function Relations({ zh, lang }) {
@@ -112,12 +128,14 @@ function Relations({ zh, lang }) {
   );
 }
 
-// `built`: the Word Builder can show how this entry's word is built.
-function Entry({ entry, lang, built }) {
+function Entry({ entry, lang }) {
+  const { wordIndex, wordCount, natural } = pageData();
   const source = (SOURCE[lang] ?? SOURCE.eng)(entry);
   const hsd = entry.hsd
     ? resolveWordRefs(entry.hsd, wordIndex, wordCount)
     : null;
+  // the Word Builder can show how this entry's word is built
+  const built = buildOf(entry) != null;
   return (
     <li class={styles.entry}>
       <span class={styles.source}>{source}</span>
@@ -132,7 +150,7 @@ function Entry({ entry, lang, built }) {
         <span class={styles.none}>{t(lang, "compositeNone")}</span>
       )}
       {entry.literal && <span class={styles.literal}> “{entry.literal}”</span>}
-      <Closeness score={NATURAL.get(entry.zh)} lang={lang} />
+      <Closeness score={natural.get(entry.zh)} lang={lang} />
       {built && (
         <a
           class={styles.howBuilt}
@@ -174,24 +192,45 @@ function Entry({ entry, lang, built }) {
   );
 }
 
+// entries drawn at first, entries each later batch adds, and the pause in
+// typing (ms) after which the search runs
+const FIRST = 60;
+const BATCH = 120;
+const PAUSE = 150;
+
 export function CompositeDictionarySection({ lang }) {
   const [query, setQuery] = useState("");
+  const [search, setSearch] = useState("");
+  useEffect(() => {
+    const id = setTimeout(() => setSearch(query.trim().toLowerCase()), PAUSE);
+    return () => clearTimeout(id);
+  }, [query]);
   const [fit, setFit] = useState("all");
   const [close, setClose] = useState("any");
-  // Which entries the Word Builder can show, read just after the first draw.
-  const [built, setBuilt] = useState(() => new Set());
-  useEffect(() => {
-    const id = setTimeout(() => setBuilt(new Set(dictionaryBuilds().map((b) => b.entry.rank))), 0);
-    return () => clearTimeout(id);
-  }, []);
-  const q = query.trim().toLowerCase();
-  const shown = (e) =>
-    (fit === "all" || e.fit === fit || (fit === "proposed" && e.proposed)) &&
-    (close === "any" || NATURAL.get(e.zh) === Number(close)) &&
-    (!q || [e.en, e.ru, e.zh, e.py].some((s) => s?.toLowerCase().includes(q)));
-  const groups = alphabetical(lang)
-    .map((g) => ({ letter: g.letter, entries: g.entries.filter(shown) }))
-    .filter((g) => g.entries.length > 0);
+  const { natural, naturalCounts, summary, counts, text } = pageData();
+  const groups = useMemo(() => {
+    const shown = (e) =>
+      (fit === "all" || e.fit === fit || (fit === "proposed" && e.proposed)) &&
+      (close === "any" || natural.get(e.zh) === Number(close)) &&
+      (!search || text.get(e).includes(search));
+    return alphabetical(lang)
+      .map((g) => ({ letter: g.letter, entries: g.entries.filter(shown) }))
+      .filter((g) => g.entries.length > 0);
+  }, [lang, search, fit, close]);
+  const total = useMemo(() => groups.reduce((n, g) => n + g.entries.length, 0), [groups]);
+  // How many entries are drawn: FIRST whenever the list changes, then a batch
+  // more each time the reader nears the end.
+  const list = `${lang}|${search}|${fit}|${close}`;
+  const [drawn, setDrawn] = useState({ list, n: FIRST });
+  const n = drawn.list === list ? drawn.n : FIRST;
+  const more = () => setDrawn({ list, n: n + BATCH });
+  const visible = [];
+  let left = n;
+  for (const g of groups) {
+    if (left <= 0) break;
+    visible.push(left >= g.entries.length ? g : { letter: g.letter, entries: g.entries.slice(0, left) });
+    left -= g.entries.length;
+  }
 
   return (
     <div class={styles.wrap}>
@@ -226,17 +265,19 @@ export function CompositeDictionarySection({ lang }) {
           </button>
         ))}
       </div>
-      <p class={styles.summary}>{t(lang, "naturalSummary")(naturalCounts[5], naturalCounts.any, SUMMARY.weighted.toFixed(1))}</p>
-      {groups.map((g) => (
+      <p class={styles.summary}>{t(lang, "naturalSummary")(naturalCounts[5], naturalCounts.any, summary.weighted.toFixed(1))}</p>
+      {total === 0 && <p class={styles.summary}>{t(lang, "dictionaryNoMatch")}</p>}
+      {visible.map((g) => (
         <div key={g.letter}>
           <h3 class={styles.letter}>{g.letter}</h3>
           <ul class={styles.list}>
             {g.entries.map((e) => (
-              <Entry key={e.zh} entry={e} lang={lang} built={built.has(e.rank)} />
+              <Entry key={e.zh} entry={e} lang={lang} />
             ))}
           </ul>
         </div>
       ))}
+      <LoadMore shown={Math.min(n, total)} total={total} label={t(lang, "showMore")} onMore={more} />
     </div>
   );
 }

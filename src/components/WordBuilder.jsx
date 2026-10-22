@@ -1,11 +1,11 @@
-import { useState, useEffect } from "preact/hooks";
+import { useState, useEffect, useMemo } from "preact/hooks";
 import dictionary from "../data/dictionary.ts";
 import { t } from "../lib/i18n.js";
 import { AudioButton } from "./AudioButton.jsx";
 import { WordPicker } from "./WordPicker.jsx";
 import { getAtPath, setAtPath } from "../lib/sentence-builder.js";
 import { WORD_HANZI } from "../lib/word-hanzi.js";
-import { dictionaryBuilds, buildOfRank } from "../lib/builder-entries.js";
+import { findBuilds, buildOfRank } from "../lib/builder-entries.js";
 import {
   ASK_ORDER,
   CHOICES,
@@ -192,18 +192,15 @@ function StartChip({ id, lang, onPick }) {
 }
 
 // "See how a dictionary word is built": the composite dictionary's words the
-// Word Builder can show, found by meaning. Reading them all takes a moment,
-// so it happens just after the page first draws.
+// Word Builder can show, found by meaning. Only the first eight that match are
+// read (src/lib/builder-entries.js), so a keystroke stays quick.
+const SHOWN_BUILDS = 8;
 function DictionaryWords({ lang, onOpen }) {
-  const [builds, setBuilds] = useState(null);
   const [query, setQuery] = useState("");
-  useEffect(() => {
-    const id = setTimeout(() => setBuilds(dictionaryBuilds()), 0);
-    return () => clearTimeout(id);
-  }, []);
   const q = query.trim().toLowerCase();
-  const found = (builds ?? []).filter(
-    ({ entry: e }) => !q || [e.en, e.ru, e.zh, e.py].some((s) => s?.toLowerCase().includes(q)),
+  const found = useMemo(
+    () => findBuilds((e) => !q || [e.en, e.ru, e.zh, e.py].some((s) => s?.toLowerCase().includes(q)), SHOWN_BUILDS),
+    [q],
   );
   return (
     <div class={styles.dict}>
@@ -216,14 +213,14 @@ function DictionaryWords({ lang, onOpen }) {
         onInput={(e) => setQuery(e.currentTarget.value)}
       />
       <div class={styles.chips}>
-        {found.slice(0, 8).map(({ entry, tree }) => (
+        {found.map(({ entry, tree }) => (
           <button type="button" key={entry.rank} class={styles.startChip} onClick={() => onOpen(entry, tree)}>
             <span class={styles.meaning}>{meaningOf(entry, lang)}</span>
             <span class={styles.sense}>{render(tree, PINYIN)}</span>
           </button>
         ))}
       </div>
-      {builds && q && found.length === 0 && <div class={styles.placeholder}>{t(lang, "sbNoResults")}</div>}
+      {q && found.length === 0 && <div class={styles.placeholder}>{t(lang, "sbNoResults")}</div>}
     </div>
   );
 }

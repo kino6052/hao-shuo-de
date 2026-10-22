@@ -354,3 +354,10 @@ a {
     --content-max: 100%;
   }
 }
+
+/* A page section still on its way (src/components/LazyPage.jsx). */
+.page-loading {
+  margin: 24px 0;
+  color: var(--text-muted);
+  font-size: 15px;
+}

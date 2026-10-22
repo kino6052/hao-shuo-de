@@ -1,7 +1,7 @@
 // Runs the test files in three tiers: the quick ones on every commit, the rest before a push or when asked.
 //
 //   node scripts/test.js --fast           every commit (the hook in .githooks/): the tests that only read
-//                                         fixtures and call no solver -- 640 of them, in one bun process
+//                                         fixtures and call no solver -- 730 of them, in one bun process
 //   node scripts/test.js                  before a push: those and the ones that ask the solver or use the
 //                                         real data, in a process each, 4 at a time
 //   node scripts/test.js --all            when asked: those and the ones that copy the repo, export a git
@@ -11,11 +11,13 @@
 //   node scripts/test.js <path or filter> only the files whose path contains it (e.g. kb, move-effects);
 //                                         a filter runs the file whatever tier it is in
 //
-// Why tiers: the cost is not spread evenly. 640 of the tests are plain functions over the fixture language
-// (src/lib/kb/fixture.js) and together take about five seconds; the other hundred-odd spawn clingo, parse the
-// whole book, copy the repo or start a server, and take two minutes. The slow ones do not catch the mistakes
-// an edit to the book or to a rule makes -- the quick ones do -- they catch a mistake in the KB's own
-// machinery, which changes far less often. So they wait for a push, or for `--all`.
+// Why tiers: the cost is not spread evenly. 730 of the tests are plain functions over the fixture language
+// (src/lib/kb/fixture.js) and together take about five seconds; the other six hundred-odd spawn clingo, read
+// all the composites, parse the whole book, copy the repo or start a server, and take minutes. Most of the slow
+// ones do not catch the mistakes an edit to the book or to a rule makes -- the quick ones do -- they catch a
+// mistake in the KB's own machinery, which changes far less often. So they wait for a push, or for `--all`.
+// The ones that read all 5,490 composites do check the data, but they took 45 s of every commit; check-data
+// (also in the hook) catches the data mistakes that matter there.
 //
 // The quick tier shares one bun process (nothing in it writes files or spawns anything, so there is nothing to
 // keep apart, and 28 bun starts cost more than the tests). Everything else gets a process per file, so a test
@@ -33,7 +35,9 @@ import { progress } from './progress.js';
 const SKIP = new Set(['node_modules', 'dist', 'tools', '.git', '.claude']);
 // Files that ask clingo (even about the fixture: every answer is a spawned solver, about half a second) or
 // read the real data. `--fast` leaves them out.
-const SLOW = ['kb/real', 'kb/atoms', 'kb/candidates', 'kb/clingo', 'move-effects', 'kb/whatif', 'kb/kb.test', 'kb/mcp.test', 'kb/relations', 'kb/facts', 'kb/set-cover', 'kb/export-real', 'kb/tags-rules'];
+const SLOW = ['kb/real', 'kb/atoms', 'kb/candidates', 'kb/clingo', 'move-effects', 'kb/whatif', 'kb/kb.test', 'kb/mcp.test', 'kb/relations', 'kb/facts', 'kb/set-cover', 'kb/export-real', 'kb/tags-rules', 'kb/rests-on',
+  // these read all 5,490 composites (or the Workspace over the repo), which grew too slow for a commit
+  'scripts/tag-ops', 'scripts/refactor-ops', 'word-builder-parse', 'lib/heads', 'grammar/grammar', 'lib/pinyin-refs'];
 // A copy of the repo, a git ref, a server over stdio: only with `--all`.
 const ON_REQUEST = ['refactor-check', 'scripts/parse-diff', 'kb/mcp-server'];
 const SLOW_FIRST = [...ON_REQUEST, ...SLOW, 'refactor-ops', 'grammar/grammar'];
@@ -71,7 +75,7 @@ if (!files.length) {
   process.exit(1);
 }
 
-// the quick tier in one process: one `bun test` over every file. Only the count is printed (641 lines of
+// the quick tier in one process: one `bun test` over every file. Only the count is printed (730 lines of
 // "(pass) ..." is what a commit hook must not say); a failure prints the whole log.
 if (flag('--fast') && !filters.length && !flag('--serial') && jobsAt < 0) {
   const t = Date.now();

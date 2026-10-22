@@ -1,0 +1,25 @@
+.more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.count {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.button {
+  background: none;
+  border: 1.5px solid var(--border-card);
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  cursor: pointer;
+}
+.button:hover { border-color: var(--accent); color: var(--accent); }

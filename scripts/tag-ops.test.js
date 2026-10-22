@@ -11,13 +11,15 @@ const run = (ops) => {
   applyOps(ws, ops);
   return ws;
 };
-const usingTopic = (ws, id) => [...ws.wordIds().map((w) => ws.word(w)), ...ws.composites().map((c) => c.entry)].filter((e) => e.topics?.includes(id));
+const allEntries = (ws) => [...ws.wordIds().map((w) => ws.word(w)), ...ws.composites().map((c) => c.entry)];
+const usingTopic = (ws, id) => allEntries(ws).filter((e) => e.topics?.includes(id));
 
-// a page with a few entries, found in the data
+// two pages with a few entries each, found in the data (counted in one walk: a walk reads every entry)
 const base = new Workspace();
 const pages = tagNet(base.data(TOPICS));
-const leaf = pages.leaves.find((id) => usingTopic(base, id).length >= 3);
-const [leafB] = pages.leaves.filter((id) => id !== leaf && usingTopic(base, id).length >= 3);
+const perPage = new Map();
+for (const e of allEntries(base)) for (const t of e.topics ?? []) perPage.set(t, (perPage.get(t) ?? 0) + 1);
+const [leaf, leafB] = pages.leaves.filter((id) => (perPage.get(id) ?? 0) >= 3);
 const topCount = (ws, id) => usingTopic(ws, id).length;
 
 describe('the tag ops', () => {
