@@ -270,6 +270,25 @@ describe('buildTsChapterView: flow', () => {
     const [group] = buildTsChapterView(meta, entries, 'eng').flow;
     expect(group.answers).toEqual([]);
   });
+
+  // COMMENTS_PLAN.md CM1: the id a comment names, one per item
+  test('each item has its part: a lesson entry\'s key, else its kind and number', () => {
+    const lessonEntries = [
+      { ...vocab('a'), key: 'also-do.word1' },
+      { ...prose('Point.'), key: 'also-do.prose' },
+      { ...example('ex 1'), key: 'also-do.example1' },
+      { ...example('ex 2'), key: 'also-do.example2' },
+      { ...exercise('Q1'), key: 'also-do.exercise1' },
+    ];
+    expect(buildTsChapterView(meta, lessonEntries, 'eng').flow.map((g) => g.parts)).toEqual([['also-do.word1'], ['also-do.prose'], ['also-do.example1', 'also-do.example2'], ['also-do.exercise1']]);
+    const flat = [prose('One.'), example('ex 1'), prose('Two.'), prose('Three.'), example('ex 2')];
+    expect(buildTsChapterView(meta, flat, 'eng').flow.map((g) => g.parts)).toEqual([['prose1'], ['example1'], ['prose2', 'prose3'], ['example2']]);
+  });
+
+  test('an entry missing in this language still counts, so the ids match in every language', () => {
+    const flat = [{ type: 'example', pinyin: 'a', en: ['x'], zh: [], ru: [] }, { type: 'example', pinyin: 'b', en: ['y'], zh: ['y'], ru: [] }];
+    expect(buildTsChapterView(meta, flat, 'zh').flow.map((g) => g.parts)).toEqual([['example2']]);
+  });
 });
 
 describe('buildTsChapterView: image', () => {
@@ -280,7 +299,7 @@ describe('buildTsChapterView: image', () => {
 
   test('goes into the flow with its file, description and caption', () => {
     const view = buildTsChapterView(meta, [image], 'eng');
-    expect(view.flow).toEqual([{ kind: 'image', items: [{ file: 'pointing', alt: 'A cat points.', pinyin: 'zhè', refs: 'zhè', translation: 'This.', audioFile: undefined, ttsText: undefined }] }]);
+    expect(view.flow).toEqual([{ kind: 'image', items: [{ file: 'pointing', alt: 'A cat points.', pinyin: 'zhè', refs: 'zhè', translation: 'This.', audioFile: undefined, ttsText: undefined }], parts: ['image1'] }]);
     expect(view.missingBlocks).toEqual([]);
   });
 

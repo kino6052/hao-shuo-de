@@ -6,8 +6,8 @@ import styles from './SettingsDialog.module.css';
 
 const SCRIPT_LABELS = { pinyin: 'writingPinyin', hanzi: 'writingHanzi', both: 'writingBoth' };
 
-// The ⚙ pop-up from the sidebar: the writing (pinyin, hanzi, or both) and hover meanings (src/lib/settings.js),
-// then the book's language, font, theme and a progress reset. Every change applies at once; Esc, ✕ or a click
+// The ⚙ pop-up from the sidebar: the writing (pinyin, hanzi, or both), hover meanings and the comment button
+// (src/lib/settings.js), then the book's language, font, theme and a progress reset. Every change applies at once; Esc, ✕ or a click
 // outside closes it.
 export function SettingsDialog({ lang, availableLangs, onSwitchLang, theme, onToggleTheme, onResetProgress, onClose }) {
   const settings = useSettings();
@@ -48,6 +48,10 @@ export function SettingsDialog({ lang, availableLangs, onSwitchLang, theme, onTo
             {t(lang, 'settingsHover')}
           </label>
           <div class={styles.hint}>{t(lang, 'settingsHoverHint')}</div>
+          <label class={styles.choice}>
+            <input type="checkbox" checked={settings.comments} onChange={(e) => setSetting('comments', e.currentTarget.checked)} />
+            {t(lang, 'settingsComments')}
+          </label>
         </div>
 
         <div class={styles.group}>

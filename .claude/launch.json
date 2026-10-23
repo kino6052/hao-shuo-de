@@ -37,6 +37,21 @@
         "--strictPort"
       ],
       "port": 5175
+    },
+    {
+      "name": "dev-emulator-5176",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev",
+        "--",
+        "--mode",
+        "emulator",
+        "--port",
+        "5176",
+        "--strictPort"
+      ],
+      "port": 5176
     }
   ]
 }

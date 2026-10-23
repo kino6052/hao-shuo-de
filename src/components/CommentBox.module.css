@@ -1,0 +1,150 @@
+/* Near the top rather than at the bottom, so a phone's keyboard never covers the box */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 260;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: max(16px, 8vh) 16px 16px;
+  overflow-y: auto;
+}
+
+.box {
+  width: 100%;
+  max-width: 480px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 2px solid var(--border-card);
+  background: var(--bg-page);
+  color: var(--text-primary);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 20px;
+}
+
+.close {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1.5px solid var(--border-card);
+  background: transparent;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+.close:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.on {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.onLabel {
+  font-weight: 700;
+  color: var(--text-label);
+}
+
+.text {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 110px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border-card);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font: inherit;
+  font-size: 16px; /* 16px or more: a phone does not zoom in on focus */
+  line-height: 1.5;
+  resize: vertical;
+}
+.text:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.small {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 12px;
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--text-tertiary);
+}
+
+.left {
+  white-space: nowrap;
+}
+
+.problem {
+  margin: 10px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-text);
+}
+
+.thanks {
+  margin: 8px 0 4px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--green);
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.primary,
+.secondary {
+  padding: 8px 18px;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.primary {
+  border: 2px solid var(--accent-shadow);
+  background: var(--accent);
+  color: #fff;
+}
+.primary:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.secondary {
+  border: 1.5px solid var(--border-card);
+  background: transparent;
+  color: var(--text-primary);
+}
+.secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}

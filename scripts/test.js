@@ -41,7 +41,7 @@ const SLOW = ['kb/real', 'kb/atoms', 'kb/candidates', 'kb/clingo', 'move-effects
   // opens a local pipe, which the shared quick-tier process should not
   'translator/quick-server'];
 // A copy of the repo, a git ref, a server over stdio, the Firestore emulator (skipped without one): only with `--all`.
-const ON_REQUEST = ['refactor-check', 'scripts/parse-diff', 'kb/mcp-server', 'translator/rules'];
+const ON_REQUEST = ['refactor-check', 'scripts/parse-diff', 'kb/mcp-server', 'translator/rules', 'comments/rules'];
 const SLOW_FIRST = [...ON_REQUEST, ...SLOW, 'refactor-ops', 'grammar/grammar'];
 const TIME_LIMIT_MS = 180_000;
 

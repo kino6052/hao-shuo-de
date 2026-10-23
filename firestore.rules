@@ -1,6 +1,6 @@
 rules_version = '2';
 
-// The translator's rules (TRANSLATOR_PLAN.md §3a, S2). "On the list" means: signed in, the email verified, and
+// The translator's rules (TRANSLATOR_PLAN.md §3a, S2), and the readers' comments below (COMMENTS_PLAN.md). "On the list" means: signed in, the email verified, and
 // allowed/<that email, lowercase> exists. Only the daemon writes the list, the daemon's fields and the presence, through
 // the Admin SDK, which these rules do not hold back. Tested against the emulator in src/lib/translator/rules.test.js.
 service cloud.firestore {
@@ -57,6 +57,80 @@ service cloud.firestore {
     match /presence/{doc} {
       allow read: if onList();
       allow write: if false;
+    }
+
+    // The readers' comments (COMMENTS_PLAN.md §1, CM5 to CM9). Anyone signed in, the quiet anonymous account included,
+    // adds one as themselves, in one batch with their own counter (commentLimits/<uid>): at least 15 seconds apart, at
+    // most 30 in a day. The comment's id is <uid>-<the counter's total>, so a batch cannot add two on one count. Only
+    // the admin (the translator's owner, CM8) reads, lists, deletes or marks one done. Tested against the emulator in
+    // src/lib/comments/rules.test.js; the numbers are also in src/lib/comments/comment.js.
+    function anonymous() {
+      return request.auth.token.firebase.sign_in_provider == 'anonymous';
+    }
+
+    function counter() {
+      return /databases/$(database)/documents/commentLimits/$(request.auth.uid);
+    }
+
+    function commentOf(uid, total) {
+      return /databases/$(database)/documents/comments/$(uid + '-' + string(total));
+    }
+
+    function sized(field, least, most) {
+      return request.resource.data[field] is string
+        && request.resource.data[field].size() >= least
+        && request.resource.data[field].size() <= most;
+    }
+
+    match /comments/{id} {
+      allow create: if signedIn()
+        && getAfter(counter()).data.last == request.time
+        && id == request.auth.uid + '-' + string(getAfter(counter()).data.total)
+        && request.resource.data.keys().hasOnly(['text', 'page', 'part', 'quote', 'lang', 'version', 'uid', 'signedIn', 'createdAt'])
+        && request.resource.data.keys().hasAll(['text', 'page', 'part', 'quote', 'lang', 'version', 'uid', 'signedIn', 'createdAt'])
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.signedIn == !anonymous()
+        && sized('text', 1, 1000)
+        && sized('page', 1, 80)
+        && sized('part', 1, 80)
+        && sized('quote', 0, 300)
+        && request.resource.data.lang in ['eng', 'rus', 'zh']
+        && sized('version', 1, 40)
+        && request.resource.data.createdAt == request.time;
+      allow read, delete: if owner();
+      allow update: if owner()
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['done'])
+        && request.resource.data.done is bool;
+    }
+
+    // a reader's own counter: read to know the next values, written only with the comment it counts
+    match /commentLimits/{uid} {
+      allow read: if signedIn() && request.auth.uid == uid;
+      allow create: if signedIn() && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly(['last', 'since', 'count', 'total'])
+        && request.resource.data.keys().hasAll(['last', 'since', 'count', 'total'])
+        && request.resource.data.last == request.time
+        && request.resource.data.since == request.time
+        && request.resource.data.count == 1
+        && request.resource.data.total == 1
+        && existsAfter(commentOf(uid, 1));
+      allow update: if signedIn() && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly(['last', 'since', 'count', 'total'])
+        && request.resource.data.keys().hasAll(['last', 'since', 'count', 'total'])
+        && request.resource.data.last == request.time
+        && request.time >= resource.data.last + duration.value(15, 's')
+        && request.resource.data.total == resource.data.total + 1
+        && (
+          (request.time < resource.data.since + duration.value(1, 'd')
+            && request.resource.data.since == resource.data.since
+            && request.resource.data.count == resource.data.count + 1
+            && request.resource.data.count <= 30)
+          || (request.time >= resource.data.since + duration.value(1, 'd')
+            && request.resource.data.since == request.time
+            && request.resource.data.count == 1)
+        )
+        && existsAfter(commentOf(uid, request.resource.data.total));
+      allow delete: if false;
     }
 
     // everything else (the setup script's throwaway check included) is the Admin SDK's only

@@ -410,6 +410,24 @@ rt {
   }
 }
 
+/* Comment mode (src/components/CommentButton.jsx): every part a reader can comment on is outlined, and the page
+   gets room at its end so the bar never hides the last part. */
+:root[data-commenting] .main-content [data-part] {
+  outline: 1.5px dashed var(--accent);
+  outline-offset: 3px;
+  cursor: pointer;
+}
+:root[data-commenting] .main-content [data-part]:hover {
+  outline: 2.5px solid var(--accent);
+}
+:root[data-commenting] .page-inner {
+  padding-bottom: 160px;
+}
+[data-quoting] button,
+[data-quoting] [aria-hidden="true"] {
+  display: none !important;
+}
+
 /* A page section still on its way (src/components/LazyPage.jsx). */
 .page-loading {
   margin: 24px 0;

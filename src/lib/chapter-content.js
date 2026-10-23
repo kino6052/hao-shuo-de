@@ -145,6 +145,11 @@ export function chapterTitle(meta, entries, lang, refs = {}) {
 // Answers pair with exercises by position across the whole chapter, so an
 // exercise group gets the answers with the same numbers; `start` is the
 // index of its first question.
+// Every group also has `parts`, one per item (per question in an exercise
+// group): the id a reader's comment names (COMMENTS_PLAN.md CM1). A lesson's
+// entry keeps its `key` ("also-do.example2"); a flat chapter's is its kind
+// and its number among the entries of that kind ("prose3"), counted in every
+// language alike.
 export function buildTsChapterView(meta, entries, lang, refs = {}) {
   const proseHtmlParts = [];
   const tldrSummary = [];
@@ -156,15 +161,21 @@ export function buildTsChapterView(meta, entries, lang, refs = {}) {
   const answers = [];
   const grammarRules = [];
   const flow = [];
+  let part = '';
   const addToFlow = (kind, item) => {
     const last = flow[flow.length - 1];
-    if (last && last.kind === kind) last.items.push(item);
-    else flow.push({ kind, items: [item] });
+    if (last && last.kind === kind) {
+      last.items.push(item);
+      last.parts.push(part);
+    } else flow.push({ kind, items: [item], parts: [part] });
   };
+  const counted = {};
 
   const title = chapterTitle(meta, entries, lang, refs);
 
   entries.forEach((entry, index) => {
+    counted[entry.type] = (counted[entry.type] ?? 0) + 1;
+    part = entry.key ?? `${entry.type}${counted[entry.type]}`;
     switch (entry.type) {
       case 'title':
         break;

@@ -14,6 +14,7 @@ import { TldrSummary } from './components/TldrSummary.jsx';
 import { MissingTranslationBanner } from './components/MissingTranslationBanner.jsx';
 import { AdSlot } from './components/AdSlot.jsx';
 import { ConsentBanner } from './components/ConsentBanner.jsx';
+import { CommentButton } from './components/CommentButton.jsx';
 import { useAppRouter } from './lib/use-router.js';
 import { useChapter } from './lib/use-chapter.js';
 import { t } from './lib/i18n.js';
@@ -113,7 +114,11 @@ function renderContent(s, lang) {
         {s.missingBlocks && <MissingTranslationBanner blocks={s.missingBlocks} lang={lang} />}
         {s.tldrSummary && <TldrSummary key={s.meta.id} items={s.tldrSummary} lang={lang} />}
         <LessonFlow flow={s.flow} lang={lang} />
-        {type === 'lesson' && <LessonTest key={s.meta.id} lessonId={s.meta.id} lang={lang} />}
+        {type === 'lesson' && (
+          <div data-part="test">
+            <LessonTest key={s.meta.id} lessonId={s.meta.id} lang={lang} />
+          </div>
+        )}
       </>
     );
   }
@@ -190,6 +195,7 @@ export function App() {
       </main>
 
       <ConsentBanner lang={router.lang} />
+      <CommentButton page={current.meta.id} title={(view ?? current).meta.title} lang={router.lang} />
     </div>
   );
 }

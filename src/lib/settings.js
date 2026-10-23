@@ -4,11 +4,12 @@ import { useEffect, useState } from 'preact/hooks';
 //   script  'pinyin' (the default: no hanzi anywhere, scripts/check-hanzi.js), 'hanzi' (hanzi in place of the
 //           pinyin) or 'both' (hanzi with small pinyin above)
 //   hover   true shows a word's meaning when the pointer rests on it (never inside a test)
+//   comments  true shows the 💬 button for a reader's comment (COMMENTS_PLAN.md CM10)
 // Both are also set on <html data-script data-hover> for the stylesheet; src/lib/script.js does the writing.
 
 const KEY = 'hsd-settings';
 export const SCRIPTS = ['pinyin', 'hanzi', 'both'];
-const DEFAULTS = { script: 'pinyin', hover: false };
+const DEFAULTS = { script: 'pinyin', hover: false, comments: true };
 
 function load() {
   try {
@@ -16,6 +17,7 @@ function load() {
     return {
       script: SCRIPTS.includes(saved.script) ? saved.script : DEFAULTS.script,
       hover: typeof saved.hover === 'boolean' ? saved.hover : DEFAULTS.hover,
+      comments: typeof saved.comments === 'boolean' ? saved.comments : DEFAULTS.comments,
     };
   } catch {
     return { ...DEFAULTS };

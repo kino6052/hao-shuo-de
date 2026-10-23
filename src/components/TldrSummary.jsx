@@ -19,7 +19,7 @@ export function TldrSummary({ items, lang }) {
   }
 
   return (
-    <div class={styles.wrap}>
+    <div class={styles.wrap} data-part="summary">
       {/* Interactive, on-screen only: steps through every tldr/necessity entry. */}
       <div class={styles.screenOnly}>
         <div class={styles.header}>

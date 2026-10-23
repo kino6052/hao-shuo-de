@@ -194,3 +194,6 @@ src/data/akinator-pool.json
 firebase-debug.log
 firestore-debug.log
 ui-debug.log
+
+# readers' comments exported from Firestore (npm run comments -- export, COMMENTS_PLAN.md C2): their words stay on this PC
+review/comments/

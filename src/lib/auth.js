@@ -55,7 +55,8 @@ export function startAuth({ page = false } = {}) {
   load()
     .then(({ auth, handle }) => {
       auth.onAuthStateChanged(handle, async (u) => {
-        if (!u) {
+        // the quiet account a comment is sent with (commentAccount) is no one the page shows as signed in
+        if (!u || u.isAnonymous) {
           set({ status: 'out', user: null, member: false });
           setTrackedUser(null);
           return;
@@ -95,6 +96,22 @@ export async function signIn(name) {
     if (e?.code !== 'auth/popup-closed-by-user' && e?.code !== 'auth/cancelled-popup-request') {
       set({ error: e?.code || 'error' });
     }
+  }
+}
+
+// The account a reader's comment is sent as (COMMENTS_PLAN.md CM7, CM11): the signed-in one, else a quiet anonymous
+// account, made now and never on page load. It works whatever SIGN_IN_EVERYWHERE says, and the page keeps showing the
+// reader as signed out. -> { uid, signedIn }, or { error: 'off' } when Firebase or the console's Anonymous sign-in is
+// not switched on, or { error: 'failed' }
+export async function commentAccount() {
+  if (!firebaseConfigured) return { error: 'off' };
+  try {
+    const { auth, handle } = await load();
+    await handle.authStateReady();
+    const u = handle.currentUser ?? (await auth.signInAnonymously(handle)).user;
+    return { uid: u.uid, signedIn: !u.isAnonymous };
+  } catch (e) {
+    return { error: e?.code === 'auth/operation-not-allowed' || e?.code === 'auth/admin-restricted-operation' ? 'off' : 'failed' };
   }
 }
 

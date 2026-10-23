@@ -13,6 +13,8 @@
 }
 .prose p { margin: 0 0 1em; }
 .prose p:last-child { margin-bottom: 0; }
+/* a flow's blocks each sit in their own data-part box (LessonFlow.jsx): keep the space between them */
+.prose > [data-part]:not(:last-child) > p:last-child { margin-bottom: 1em; }
 
 .prose ul {
   padding-left: 22px;

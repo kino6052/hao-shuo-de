@@ -6,22 +6,11 @@
 //   watchRequests(user, { owner }, onRequests) -> stop   their own requests, newest first (the owner: everyone's)
 //   sendRequest(user, { text, lesson }) -> id
 
-import { firebaseApp, firebaseEmulator } from '../lib/auth.js';
+import { firestore, millis } from '../lib/firestore.js';
 
 export const MAX_TEXT = 2000;
 export const MAX_LESSON = 40;
 export const SHOWN = 30;
-
-let sdk = null;
-function firestore() {
-  sdk ??= (async () => {
-    const fs = await import('firebase/firestore');
-    const db = fs.getFirestore(await firebaseApp());
-    if (firebaseEmulator) fs.connectFirestoreEmulator(db, firebaseEmulator, 8085);
-    return { fs, db };
-  })();
-  return sdk;
-}
 
 // listen to one document until stop() (a person added to the list gets in without reloading)
 function watchDoc(path, onDoc, onError) {
@@ -40,9 +29,6 @@ function watchDoc(path, onDoc, onError) {
 export const watchAllowed = (user, onEntry, onError) => watchDoc(['allowed', user.email.trim().toLowerCase()], (d) => onEntry(d ? { owner: d.owner === true } : null), onError);
 
 export const watchPresence = (onPresence) => watchDoc(['presence', 'daemon'], onPresence, () => onPresence(null));
-
-// createdAt is the server's time: null for a moment while a new request is on its way
-const millis = (t) => (t?.toMillis ? t.toMillis() : typeof t === 'number' ? t : null);
 
 export function watchRequests(user, { owner = false } = {}, onRequests, onError = () => {}) {
   let stop = () => {};

@@ -6,8 +6,8 @@ import { Hsd, Rich } from './Hsd.jsx';
 import styles from './PracticeExercise.module.css';
 
 // `start` is the index of the first question, so numbering carries on when a
-// chapter splits its exercises into several groups.
-export function PracticeExercise({ questions, answers, lang, start = 0 }) {
+// chapter splits its exercises into several groups. `parts`: each question's part id, for a comment.
+export function PracticeExercise({ questions, answers, lang, parts, start = 0 }) {
   if (!questions || questions.length === 0) return null;
   const [showAnswers, setShowAnswers] = useState(false);
 
@@ -22,7 +22,7 @@ export function PracticeExercise({ questions, answers, lang, start = 0 }) {
         )}
       </div>
       {questions.map((q, i) => (
-        <ShadowBox key={i} class={styles.item} pinyin={showAnswers && answers?.[i]?.text} audioFile={answers?.[i]?.audioFile}>
+        <ShadowBox key={i} class={styles.item} pinyin={showAnswers && answers?.[i]?.text} audioFile={answers?.[i]?.audioFile} data-part={parts?.[i]}>
           <div class={styles.question}><b>{start + i + 1}.</b> <Rich text={q} /></div>
           {showAnswers && answers && answers[i] && (
             <div class={styles.answer}>
