@@ -4,6 +4,8 @@ import { FontSelector } from "./FontSelector.jsx";
 import { AccountBox } from "./AccountBox.jsx";
 import { AdSlot } from "./AdSlot.jsx";
 import { AD_SLOT_SIDEBAR } from "../lib/tracking-config.js";
+import { useAuth } from "../lib/auth.js";
+import { parseUrl } from "../lib/router.js";
 import { LANG_CONFIG, t } from "../lib/i18n.js";
 import { SECTIONS, BACK_MATTER, sectionKeyForLesson, groupKeyForChapter } from "../content/book.js";
 import styles from "./Sidebar.module.css";
@@ -21,6 +23,7 @@ export function Sidebar({
   onResetProgress,
 }) {
   const [open, setOpen] = useState(false);
+  const { status } = useAuth();
   const total = sections.length;
   const done = sections.filter((s) => completed.has(s.id)).length;
 
@@ -137,6 +140,15 @@ export function Sidebar({
             currentId={currentId}
             onGo={go}
           />
+        )}
+        {/* the translator page (/translator/, its own entry) for anyone signed in; it says there who is on the list */}
+        {status === "in" && (
+          <div class={styles.tocGroup}>
+            <a class={`${styles.tocItem} ${styles.tocLink}`} href={`${parseUrl(window.location.pathname).root}/translator/`}>
+              <span class={styles.dot} />
+              {t(lang, "translator")}
+            </a>
+          </div>
         )}
 
         <div class={styles.controls}>

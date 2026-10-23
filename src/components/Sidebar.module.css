@@ -78,6 +78,7 @@
   font-family: inherit;
 }
 .tocItem:hover { background: var(--bg-callout); }
+.tocLink { text-decoration: none; box-sizing: border-box; }
 .tocDone {
   color: var(--text-primary);
   font-weight: 700;

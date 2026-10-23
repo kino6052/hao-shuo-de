@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'preact/hooks';
 import { firebaseConfigured, signIn, signOut, useAuth } from '../lib/auth.js';
+import { track } from '../lib/tracking.js';
 import { MAX_LESSON, MAX_TEXT, sendRequest, watchAllowed, watchPresence, watchRequests } from './client.js';
 import { TEXT, say } from './text.js';
 import styles from './TranslatorPage.module.css';
@@ -114,6 +115,7 @@ function SendForm({ user }) {
     setError('');
     try {
       await sendRequest(user, { text: text.trim(), lesson: lesson.trim().slice(0, MAX_LESSON) });
+      track('translation_sent', { characters: [...text.trim()].length });
       setText('');
     } catch {
       setError(TEXT.sendError);

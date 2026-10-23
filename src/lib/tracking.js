@@ -20,6 +20,8 @@ function start() {
   if (GA_ID) {
     window.dataLayer = window.dataLayer || [];
     window.gtag = function gtag() { window.dataLayer.push(arguments); };
+    // The scripts load only after a yes, so they say so (Google's consent mode wants it said for visitors in the EU).
+    window.gtag('consent', 'default', { analytics_storage: 'granted', ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted' });
     window.gtag('js', new Date());
     // Page views are sent by hand (trackPageView) because the book changes pages without reloading.
     window.gtag('config', GA_ID, userId ? { send_page_view: false, user_id: userId } : { send_page_view: false });
