@@ -305,6 +305,7 @@ People on a list sign in with Google, type a text, and get the translation back.
 
 - [ ] **G1. The trained translator** (W26): the approved pairs and the test set as training data, these checks as the judge of its output.
 - [ ] **G2. The learner page** (parked by K28): ask again once the test set passes.
+- [~] **G3. The browser translator:** [BROWSER_TRANSLATOR_PLAN.md](BROWSER_TRANSLATOR_PLAN.md). An LLM corrects the English and turns it into a meaning tree, fixed code builds the Hao-shuo-de from the patterns' templates, and a test-and-verify loop checks that the tree parses back, all in the browser.
 
 ## H. Wrap-up
 

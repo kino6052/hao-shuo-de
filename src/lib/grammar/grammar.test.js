@@ -8,6 +8,8 @@ import dictionary from '../../data/dictionary.ts';
 import compositesData from '../../data/composites.ts';
 import coverage from '../../data/coverage.ts';
 import { createParser, patternsOf } from './parser.js';
+import { makeTrees } from './tree.js';
+import { roundTrip } from './round-trip.js';
 import { pinyinToRefs } from '../pinyin-refs.js';
 
 const words = dictionary.words;
@@ -56,6 +58,18 @@ describe('every example parses, and by its own pattern', () => {
       });
     }
   }
+});
+
+// the meaning tree of each example's first reading builds a sentence that reads as the same tree (scripts/round-trip.js
+// does this for every sentence of the book, with the book's spelling habits)
+describe('every example survives the round trip', () => {
+  const trees = makeTrees({ rules: parser.rules, glue: parser.grammar.glue, words, composites });
+  test('each first reading checks, builds the same words and comes back', () => {
+    const failed = PATTERNS.flatMap((p) => p.examples.map(([pinyin]) => roundTrip(pinyinToRefs(pinyin, words), { parser, trees })))
+      .filter((r) => r.parsed && !r.ok)
+      .map((r) => `${r.text} -> ${r.built}: ${[...r.problems, r.sameWords ? '' : 'other words', r.at < 0 ? 'the tree does not come back' : ''].filter(Boolean).join('; ')}`);
+    expect(failed).toEqual([]);
+  });
 });
 
 describe('what the patterns do not allow', () => {

@@ -100,7 +100,7 @@ export function lex(text, lexicon, { extra = {}, forms = false } = {}) {
       items.push({ kind: 'comma', text: tok, word: false });
     } else if (tok.startsWith('{{')) {
       const ref = new RegExp(`^${REF_SOURCE}$`).exec(tok);
-      items.push({ kind: 'word', word: true, id: ref[2], glued });
+      items.push({ kind: 'word', word: true, id: ref[2], glued, light: /^light$/i.test(ref[1]), sense: ref[3] });
     } else if (tok.startsWith('"')) {
       items.push({ kind: 'quoted', word: true, text: tok.slice(1, -1), glued });
     } else if (forms ? /^[A-CX-Z]$/.test(tok) : /^[XYZ]$/.test(tok)) {
@@ -147,7 +147,8 @@ export function lex(text, lexicon, { extra = {}, forms = false } = {}) {
       if (!w) problems.push(`"${it.id}" is not a word`);
       const classes = new Set([...classesOf(w), ...(extra[it.id] ?? [])]);
       if (tokens.at(-1)?.id === it.id) classes.add('again');
-      tokens.push({ kind: 'word', id: it.id, text: termOf(words, it.id) });
+      // light and sense only say how the ref was written (the meaning tree keeps them, tree.js); the parser reads neither
+      tokens.push({ kind: 'word', id: it.id, text: termOf(words, it.id), ...(it.light ? { light: true } : {}), ...(it.sense ? { sense: it.sense } : {}) });
       edges.push({ from: i, to: i + 1, id: it.id, term: termOf(words, it.id), classes });
       if (it.id === 'zi' && it.glued && tokens.at(-2)?.kind === 'quoted') {
         edges.push({ from: i - 1, to: i + 1, term: `${tokens.at(-2).text}-zi`, classes: new Set(['noun']) });
