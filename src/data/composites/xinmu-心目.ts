@@ -5,7 +5,7 @@ export default composite({
   phase: 4,
   zh: "心目",
   py: "xīnmù",
-  en: "mind; in one's mind; in one's eyes (as in 心目中)",
+  en: "mind; in one's mind; in one's eyes",
   ru: "в сознании; в представлении",
   pos: "noun",
   hsd: [

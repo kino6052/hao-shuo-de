@@ -10,7 +10,7 @@ export default composite({
   pos: "verb",
   hsd: ["{{word:guan1}}-{{word:xin1}}"],
   tts: ["关心"],
-  literal: "close-heart (as in 关心)",
+  literal: "close-heart (the Mandarin word for to care)",
   fit: "plain",
   topics: ["believing-hoping-and-caring"],
   isA: ["feeling-and-wanting"],

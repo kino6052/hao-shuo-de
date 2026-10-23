@@ -22,8 +22,8 @@ export default word("hai2", {
       eng: "child",
       rus: "ребёнок",
       why: {
-        eng: "Written 孩, {{word:hai2}} means child in {{word:hai2}}-{{light:zi}}; on its own it is still.",
-        rus: "Записанное как 孩, {{word:hai2}} значит «ребёнок» в {{word:hai2}}-{{light:zi}}; само по себе — «ещё».",
+        eng: "{{hanzi:Written 孩, }}{{word:hai2#child}} means child in {{word:hai2}}-{{light:zi}}; on its own it is still.",
+        rus: "{{hanzi:Записанное как 孩, }}{{word:hai2#child}} значит «ребёнок» в {{word:hai2}}-{{light:zi}}; само по себе — «ещё».",
       },
       compounds: ["hai2 zi"],
     },

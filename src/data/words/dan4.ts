@@ -23,8 +23,8 @@ export default word("dan4", {
       rus: "яйцо",
       compounds: ["ji1 dan4"],
       why: {
-        eng: "Written 蛋, {{word:dan4}} means egg in {{word:ji1}}-{{word:dan4}}; on its own it is but.",
-        rus: "Записанное как 蛋, {{word:dan4}} значит «яйцо» в {{word:ji1}}-{{word:dan4}}; само по себе — «но».",
+        eng: "{{hanzi:Written 蛋, }}{{word:dan4#egg}} means egg in {{word:ji1}}-{{word:dan4}}; on its own it is but.",
+        rus: "{{hanzi:Записанное как 蛋, }}{{word:dan4#egg}} значит «яйцо» в {{word:ji1}}-{{word:dan4}}; само по себе — «но».",
       },
     },
   },

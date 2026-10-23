@@ -7,6 +7,8 @@ import {
 } from "../lib/dictionary-stats.js";
 import { resolveLessonRefs, resolveWordRefs } from "../lib/word-refs.js";
 import { AudioButton } from "./AudioButton.jsx";
+import { Hsd, Zh, zhLabel } from "./Hsd.jsx";
+import { useSettings } from "../lib/settings.js";
 import { t } from "../lib/i18n.js";
 import { buildOf, wordBuilderUrl, openInApp } from "../lib/builder-entries.js";
 import { compositeHeads, headHanzi } from "../lib/heads.js";
@@ -108,12 +110,15 @@ function Closeness({ score, lang }) {
 const REL_KEYS = [["opposite", "relOpposite"], ["same", "relSame"], ["close", "relClose"], ["partOf", "relPartOf"], ["parts", "relParts"], ["kindOf", "relKindOf"], ["kinds", "relKinds"]];
 // a long list shows its first few and the count
 const MAX_ENDS = 12;
-const endLabel = (end) => {
+// a related entry: a core word by its pinyin, a composite by its pinyin (its Mandarin word in front while the reader
+// writes in hanzi)
+const endLabel = (settings) => (end) => {
   if (end.startsWith("word:")) return dictionary.words[end.slice(5)]?.term ?? end;
   const e = pageData().byZh.get(end);
-  return e ? `${end} ${e.py}` : end;
+  return e ? zhLabel(settings, end, e.py) : end;
 };
 function Relations({ zh, lang }) {
+  const settings = useSettings();
   const mine = relations.composites[zh];
   if (!mine) return null;
   return (
@@ -121,7 +126,7 @@ function Relations({ zh, lang }) {
       {REL_KEYS.filter(([key]) => mine[key]).map(([key, label], i) => (
         <span key={key}>
           {i > 0 && " · "}
-          {t(lang, label)} {mine[key].slice(0, MAX_ENDS).map(endLabel).join(", ")}{mine[key].length > MAX_ENDS && ` … (${mine[key].length})`}
+          {t(lang, label)} {mine[key].slice(0, MAX_ENDS).map(endLabel(settings)).join(", ")}{mine[key].length > MAX_ENDS && ` … (${mine[key].length})`}
         </span>
       ))}
     </div>
@@ -139,11 +144,11 @@ function Entry({ entry, lang }) {
   return (
     <li class={styles.entry}>
       <span class={styles.source}>{source}</span>
-      {lang !== "zh" && <span class={styles.zh}>{entry.zh}</span>}
+      {lang !== "zh" && <Zh class={styles.zh} text={entry.zh} />}
       <span class={styles.arrow}>→</span>
       {hsd ? (
         <span class={styles.hsd}>
-          {hsd}
+          <Hsd pinyin={hsd} refs={entry.hsd} hanzi={entry.tts} />
           {entry.tts && <AudioButton pinyin={hsd} ttsText={entry.tts} />}
         </span>
       ) : (
@@ -179,9 +184,8 @@ function Entry({ entry, lang }) {
             const pinyin = resolveWordRefs(x.pinyin, wordIndex, wordCount);
             return (
               <li key={i}>
-                <span class={styles.exPinyin}>{pinyin}</span>
+                <Hsd class={styles.exPinyin} pinyin={pinyin} refs={x.pinyin} hanzi={x.hanzi} />
                 <AudioButton pinyin={pinyin} ttsText={x.hanzi} />
-                <span class={styles.exHanzi}>{x.hanzi}</span>
                 <span class={styles.exGloss}>{lang === "rus" ? x.ru : x.en}</span>
               </li>
             );

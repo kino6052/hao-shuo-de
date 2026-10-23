@@ -25,6 +25,17 @@
 //   {{title:ID}}      -- any chapter's title, for intro-3's table of
 //                        contents. Only works where the caller passes
 //                        `chapterTitles` (src/lib/content-registry.js).
+//   {{hanzi:TEXT}}    -- characters that show only when the reader turns
+//                        hanzi on (src/lib/settings.js): "this zài
+//                        {{hanzi:(再)}} means once more". Gone in plain text.
+//
+// With `markup` (the chapter pages, src/lib/chapter-content.js), each chain
+// of word refs joined by "-" becomes <hsd-w w=CODES>pinyin</hsd-w>, which
+// src/lib/script.js writes as pinyin, hanzi or both, and {{hanzi:..}}
+// becomes <hsd-h>..</hsd-h>, hidden unless hanzi are on. CODES are the
+// chain's ids joined by "." -- "~" before a light one, "#sense" after a
+// named sense, and a last "r" for an erhua r (miànr) -- with no quotes, so
+// the markup survives inside quoted YAML and HTML attributes.
 //
 // Every script and component that reads word references uses the parser
 // below (wordRefRe, wordRefIds, replaceWordRefs, soleWordRef), so the syntax
@@ -92,15 +103,32 @@ export function refTerm(term, kind) {
   return kind === 'Word' || kind === 'Light' ? capitalize(t) : t;
 }
 
-export function resolveWordRefs(text, index, wordCount, chapterTitles) {
-  return replaceWordRefs(resolveLessonRefs(text, chapterTitles), (id, kind, full) => {
-      if (!index.has(id)) {
-        throw new Error(
-          `Unknown word id "${id}" referenced as ${full}. Check src/data/words/ -- there must be a ${id}.ts.`,
-        );
-      }
-      return refTerm(index.get(id), kind);
-    })
+const REF_NC = String.raw`\{\{(?:word|Word|light|Light):[a-z0-9_-]+(?:#[a-z]+)?\}\}`;
+const chainRe = () => new RegExp(String.raw`${REF_NC}(?:-${REF_NC})*(?:r(?!\p{L}))?`, 'gu');
+const HANZI_RE = /\{\{hanzi:([^}]*)\}\}/g;
+
+// -> the CODES of a chain of refs (see the header): "dong1.~xi1", "zai4#again.jian4", "mian4.r"
+export function chainCodes(chain) {
+  const codes = [...chain.matchAll(wordRefRe())].map((m) => `${/light/i.test(m[1]) ? '~' : ''}${m[2]}${m[3] ? `#${m[3]}` : ''}`);
+  return chain.endsWith('}}') ? codes : [...codes, 'r'];
+}
+
+export function resolveWordRefs(text, index, wordCount, chapterTitles, { markup = false } = {}) {
+  const term = (id, kind, full) => {
+    if (!index.has(id)) {
+      throw new Error(
+        `Unknown word id "${id}" referenced as ${full}. Check src/data/words/ -- there must be a ${id}.ts.`,
+      );
+    }
+    return refTerm(index.get(id), kind);
+  };
+  let out = resolveLessonRefs(text, chapterTitles);
+  out = markup
+    ? out
+        .replace(chainRe(), (chain) => `<hsd-w w=${chainCodes(chain).join('.')}>${replaceWordRefs(chain, term)}</hsd-w>`)
+        .replace(HANZI_RE, (full, zh) => `<hsd-h>${zh}</hsd-h>`)
+    : replaceWordRefs(out, term).replace(/ ?\{\{hanzi:[^}]*\}\}/g, '');
+  return out
     .replace(COUNT_REF_RE, () => {
       if (wordCount === undefined) {
         throw new Error('{{dictionaryCount}} used but no wordCount was passed to resolveWordRefs.');

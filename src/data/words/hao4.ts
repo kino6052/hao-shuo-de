@@ -24,8 +24,8 @@ export default word("hao4", {
       rus: "любить",
       compounds: ["ai4 hao4"],
       why: {
-        eng: "Written 好, {{word:hao4}} means be fond of in {{word:ai4}}-{{word:hao4}}; on its own it is number.",
-        rus: "Записанное как 好, {{word:hao4}} значит «любить» в {{word:ai4}}-{{word:hao4}}; само по себе — «номер».",
+        eng: "{{hanzi:Written 好, }}{{word:hao4#fond}} means be fond of in {{word:ai4}}-{{word:hao4}}; on its own it is number.",
+        rus: "{{hanzi:Записанное как 好, }}{{word:hao4#fond}} значит «любить» в {{word:ai4}}-{{word:hao4}}; само по себе — «номер».",
       },
     },
   },

@@ -1,4 +1,5 @@
 import { AudioButton } from './AudioButton.jsx';
+import { Hsd, Rich } from './Hsd.jsx';
 import styles from './VocabGrid.module.css';
 
 // `label` defaults to "Vocabulary"; pass null to leave it out.
@@ -11,10 +12,10 @@ export function VocabGrid({ items, label = 'Vocabulary' }) {
         {items.map((v, i) => (
           <div key={i} class={styles.card}>
             <div class={styles.pinyin}>
-              {v.pinyin}
+              <Hsd pinyin={v.pinyin} refs={v.refs} hanzi={v.ttsText} />
               <AudioButton pinyin={v.pinyin} audioFile={v.audioFile} ttsText={v.ttsText} />
             </div>
-            <div class={styles.def}>{v.definition}</div>
+            <div class={styles.def}><Rich text={v.definition} /></div>
           </div>
         ))}
       </div>

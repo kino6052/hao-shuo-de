@@ -47,7 +47,7 @@ export function pageForms(c, termOf) {
 }
 
 // -> what each topic page lists besides its core words, and what was left out and why.
-//    pages: Map(topic id -> [{ zh, forms, en, ru }]); hidden: [{ zh, fit, reasons }]
+//    pages: Map(topic id -> [{ zh, forms, refs, en, ru }]) (refs: each form with its word refs); hidden: [{ zh, fit, reasons }]
 //    A composite that is a core word's own hanzi is the core word (shown once, as the core word) and is in neither list.
 export function categoricalPages(composites, coreHanzi, termOf) {
   const pages = new Map();
@@ -59,7 +59,7 @@ export function categoricalPages(composites, coreHanzi, termOf) {
       hidden.push({ zh: c.zh, fit: c.fit, reasons });
       continue;
     }
-    const entry = { zh: c.zh, forms: pageForms(c, termOf), en: c.en, ru: c.ru };
+    const entry = { zh: c.zh, forms: pageForms(c, termOf), refs: formsOf(c), en: c.en, ru: c.ru };
     for (const t of c.topics ?? []) pages.set(t, [...(pages.get(t) ?? []), entry]);
   }
   return { pages, hidden };

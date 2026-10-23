@@ -23,8 +23,8 @@ export default word("dong1", {
       rus: "зима",
       compounds: ["dong1 tian1"],
       why: {
-        eng: "Written 冬, {{word:dong1}} means winter in {{word:dong1}}-{{word:tian1}}; on its own it is east.",
-        rus: "Записанное как 冬, {{word:dong1}} значит «зима» в {{word:dong1}}-{{word:tian1}}; само по себе — «восток».",
+        eng: "{{hanzi:Written 冬, }}{{word:dong1#winter}} means winter in {{word:dong1}}-{{word:tian1}}; on its own it is east.",
+        rus: "{{hanzi:Записанное как 冬, }}{{word:dong1#winter}} значит «зима» в {{word:dong1}}-{{word:tian1}}; само по себе — «восток».",
       },
     },
   },

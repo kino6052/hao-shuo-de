@@ -23,8 +23,8 @@ export default word("qi4", {
       rus: "прибор",
       compounds: ["ji1 qi4"],
       why: {
-        eng: "Written 器, {{word:qi4}} means device in {{word:ji1}}-{{word:qi4}}; on its own it is air.",
-        rus: "Записанное как 器, {{word:qi4}} значит «прибор» в {{word:ji1}}-{{word:qi4}}; само по себе — «воздух».",
+        eng: "{{hanzi:Written 器, }}{{word:qi4#device}} means device in {{word:ji1}}-{{word:qi4}}; on its own it is air.",
+        rus: "{{hanzi:Записанное как 器, }}{{word:qi4#device}} значит «прибор» в {{word:ji1}}-{{word:qi4}}; само по себе — «воздух».",
       },
     },
     steam: {
@@ -33,8 +33,8 @@ export default word("qi4", {
       rus: "пар",
       compounds: ["qi4 che1"],
       why: {
-        eng: "Written 汽, {{word:qi4}} means steam in {{word:qi4}}-{{word:che1}}; on its own it is air.",
-        rus: "Записанное как 汽, {{word:qi4}} значит «пар» в {{word:qi4}}-{{word:che1}}; само по себе — «воздух».",
+        eng: "{{hanzi:Written 汽, }}{{word:qi4#steam}} means steam in {{word:qi4}}-{{word:che1}}; on its own it is air.",
+        rus: "{{hanzi:Записанное как 汽, }}{{word:qi4#steam}} значит «пар» в {{word:qi4}}-{{word:che1}}; само по себе — «воздух».",
       },
     },
   },

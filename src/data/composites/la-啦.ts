@@ -6,7 +6,7 @@ export default composite({
   zh: "啦",
   py: "la",
   en: "(particle: le and a together)",
-  ru: "(частица: 了 и 啊 вместе)",
+  ru: "(частица: le и a вместе)",
   pos: "auxiliary",
   hsd: ["\"la\""],
   tts: ["啦"],

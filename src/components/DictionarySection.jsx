@@ -1,8 +1,12 @@
+import { Fragment } from 'preact';
 import dictionary from '../data/dictionary.ts';
+import composites from '../data/composites.ts';
 import coverage from '../data/coverage.ts';
 import { buildWordIndex } from '../lib/dictionary-stats.js';
 import { resolveWordRefs } from '../lib/word-refs.js';
 import { AudioButton } from './AudioButton.jsx';
+import { Hsd, Rich, zhLabel } from './Hsd.jsx';
+import { useSettings } from '../lib/settings.js';
 import { getUsageLabels } from '../lib/word-usage.js';
 import { t } from '../lib/i18n.js';
 import { matcher } from '../lib/dictionary-search.js';
@@ -13,7 +17,8 @@ import styles from './DictionarySection.module.css';
 
 const idByTerm = new Map(Object.entries(dictionary.words).map(([id, w]) => [w.term, id]));
 const wordIndex = buildWordIndex(dictionary);
-const refs = (text) => resolveWordRefs(text, wordIndex);
+// a note with word refs, its words as <hsd-w> markup for Rich (src/components/Hsd.jsx)
+const refs = (text) => resolveWordRefs(text, wordIndex, undefined, undefined, { markup: true });
 // "atoms:GOOD" -> what the reader sees: the atom itself, the category's name
 // ("Quality: what it is like" -> "Quality"), or the grammar point.
 const COVER_GROUP = { atoms: 'coverAtoms', categories: 'coverCategories', grammar: 'coverGrammar' };
@@ -25,40 +30,55 @@ function coverLabel(key, lang) {
     : (item[lang] || item.eng).split(':')[0];
   return `${t(lang, COVER_GROUP[group])} ${name}`;
 }
-// An end of a stored relation (src/data/relations.json): a word as its term, a composite as hanzi.
-const relationEnd = (end) => (end.startsWith('word:') ? dictionary.words[end.slice(5)]?.term ?? end : end);
+const pyByZh = new Map(composites.entries.map((e) => [e.zh, e.py]));
+// An end of a stored relation (src/data/relations.json, a word as "word:ID", a composite as its hanzi): a word in the
+// reader's script, a composite by its pinyin (with its hanzi in front while the reader writes in hanzi).
+function RelationEnd({ end, settings }) {
+  if (end.startsWith('word:')) {
+    const id = end.slice(5);
+    return <Hsd pinyin={dictionary.words[id]?.term ?? id} refs={`{{word:${id}}}`} />;
+  }
+  return zhLabel(settings, end, pyByZh.get(end) ?? '?');
+}
 // a long list (the composites under rén) shows its first few and the count
 const MAX_ENDS = 12;
-// A sense's compound as the reader sees it: "shi2 jian1" -> shí-jiān.
-const compoundTerm = (c) => c.split(' ').map((id) => dictionary.words[id]?.term ?? id).join('-');
+// A sense's compound in the reader's script: "shi2 jian1" -> shí-jiān (时间).
+function Compound({ ids }) {
+  const parts = ids.split(' ');
+  return <Hsd pinyin={parts.map((id) => dictionary.words[id]?.term ?? id).join('-')} refs={parts.map((id) => `{{word:${id}}}`).join('-')} />;
+}
+// -> items with ", " between them
+const commas = (items) => items.map((item, i) => <Fragment key={i}>{i > 0 && ', '}{item}</Fragment>);
 // The reason a word is in the dictionary (necessity, 5 = no sentence without
 // it ... 1 = convenience), its opposites and near-equivalents, and, for a
 // catch-all word, its other spellings and the compounds each one is used in. The
 // Chinese page shows the English reason until it's translated.
 function WordNotes({ word, lang }) {
+  const settings = useSettings();
   const need = word.necessity;
   return (
     <>
       {need && (
         <div class={styles.need}>
-          <span class={styles.needIndex} title={t(lang, 'necessity')}>{need.index}/5</span> {t(lang, 'necessity')}: {refs(need[lang] || need.eng)}
+          <span class={styles.needIndex} title={t(lang, 'necessity')}>{need.index}/5</span> {t(lang, 'necessity')}: <Rich text={refs(need[lang] || need.eng)} />
         </div>
       )}
       {word.covers && <div class={styles.related}>{t(lang, 'covers')} {word.covers.map((key) => coverLabel(key, lang)).join(' · ')}</div>}
-      {word.antonyms && <div class={styles.related}>{t(lang, 'opposite')} {word.antonyms.map(refs).join(', ')}</div>}
-      {word.synonyms && <div class={styles.related}>{t(lang, 'similar')} {word.synonyms.map(refs).join(', ')}</div>}
+      {word.antonyms && <div class={styles.related}>{t(lang, 'opposite')} <Rich text={word.antonyms.map(refs).join(', ')} /></div>}
+      {word.synonyms && <div class={styles.related}>{t(lang, 'similar')} <Rich text={word.synonyms.map(refs).join(', ')} /></div>}
       {[['partOf', 'relPartOf'], ['parts', 'relParts'], ['kinds', 'relKinds']].filter(([key]) => relations.words[word.id]?.[key]).map(([key, label]) => {
         const ends = relations.words[word.id][key];
         return (
           <div key={key} class={styles.related}>
-            {t(lang, label)} {ends.slice(0, MAX_ENDS).map(relationEnd).join(', ')}{ends.length > MAX_ENDS && ` … (${ends.length})`}
+            {t(lang, label)} {commas(ends.slice(0, MAX_ENDS).map((end) => <RelationEnd end={end} settings={settings} />))}{ends.length > MAX_ENDS && ` … (${ends.length})`}
           </div>
         );
       })}
       {Object.entries(word.senses ?? {}).map(([key, s]) => (
         <div key={key} class={styles.related}>
-          {t(lang, 'alsoWritten')} {s.hanzi} ({s[lang === 'zh' ? 'eng' : lang] || s.eng}): {refs(s.why[lang] || s.why.eng)}{' '}
-          {t(lang, 'inCompounds')} {s.compounds.map(compoundTerm).join(', ')} ({s.compounds.length}){s.alone && `, ${t(lang, 'senseAlone')}`}
+          {t(lang, 'alsoMeans')} ({s[lang === 'zh' ? 'eng' : lang] || s.eng}):{' '}
+          <Rich text={refs(s.why[lang] || s.why.eng)} />{' '}
+          {t(lang, 'inCompounds')} {commas(s.compounds.map((c) => <Compound ids={c} />))} ({s.compounds.length}){s.alone && `, ${t(lang, 'senseAlone')}`}
         </div>
       ))}
     </>
@@ -99,7 +119,7 @@ export function DictionarySection({ items, lang }) {
             return (
               <div key={i} class={styles.entry}>
                 <span class={styles.term}>
-                  {e.term}
+                  {id ? <Hsd pinyin={e.term} refs={`{{word:${id}}}`} /> : e.term}
                   <AudioButton pinyin={e.term} audioFile={e.audioFile} ttsText={e.ttsText} />
                 </span>
                 {e.pos && <span class={styles.pos}>[{e.pos}]</span>}

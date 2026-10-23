@@ -22,8 +22,8 @@ export default word("nan2", {
       eng: "male",
       rus: "мужской",
       why: {
-        eng: "Written 男, {{word:nan2}} means male in {{word:nan2}}-{{word:ren2}} (man) and {{word:nan2}}-{{word:sheng1}} (boy); on its own it is difficult.",
-        rus: "Записанное как 男, {{word:nan2}} значит «мужской» в {{word:nan2}}-{{word:ren2}} (мужчина) и {{word:nan2}}-{{word:sheng1}} (мальчик); само по себе — «трудный».",
+        eng: "{{hanzi:Written 男, }}{{word:nan2#male}} means male in {{word:nan2}}-{{word:ren2}} (man) and {{word:nan2}}-{{word:sheng1}} (boy); on its own it is difficult.",
+        rus: "{{hanzi:Записанное как 男, }}{{word:nan2#male}} значит «мужской» в {{word:nan2}}-{{word:ren2}} (мужчина) и {{word:nan2}}-{{word:sheng1}} (мальчик); само по себе — «трудный».",
       },
       compounds: ["nan2 ren2", "nan2 sheng1", "nan2 hai2 zi"],
     },

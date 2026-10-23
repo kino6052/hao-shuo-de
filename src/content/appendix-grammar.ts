@@ -327,10 +327,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:zhe4}}, {{word:na4}}, or a number + ge + noun. The same `{{word:ge4}}` works with every noun."
+            "{{word:zhe4}}, {{word:na4}}, or a number + ge + noun. The same <code>{{word:ge4}}</code> works with every noun."
           ],
           "ru": [
-            "{{word:zhe4}}, {{word:na4}} или число + ge + существительное. Одно и то же `{{word:ge4}}` подходит к любому существительному."
+            "{{word:zhe4}}, {{word:na4}} или число + ge + существительное. Одно и то же <code>{{word:ge4}}</code> подходит к любому существительному."
           ],
           "zh": []
         }

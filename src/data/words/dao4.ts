@@ -23,8 +23,8 @@ export default word("dao4", {
       rus: "путь",
       compounds: ["wei4 dao4", "dao4 li3"],
       why: {
-        eng: "Written 道, {{word:dao4}} means way in {{word:wei4}}-{{word:dao4}}, {{word:dao4}}-{{word:li3}}; on its own it is arrive.",
-        rus: "Записанное как 道, {{word:dao4}} значит «путь» в {{word:wei4}}-{{word:dao4}}, {{word:dao4}}-{{word:li3}}; само по себе — «прийти».",
+        eng: "{{hanzi:Written 道, }}{{word:dao4#way}} means way in {{word:wei4}}-{{word:dao4}}, {{word:dao4}}-{{word:li3}}; on its own it is arrive.",
+        rus: "{{hanzi:Записанное как 道, }}{{word:dao4#way}} значит «путь» в {{word:wei4}}-{{word:dao4}}, {{word:dao4}}-{{word:li3}}; само по себе — «прийти».",
       },
     },
   },

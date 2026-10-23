@@ -23,8 +23,8 @@ export default word("zai4", {
       eng: "again, once more",
       rus: "снова, ещё раз",
       why: {
-        eng: "Written 再, {{word:zai4}} means once more in {{word:zai4}}-{{word:jian4}} (goodbye: see you again); on its own it is be at.",
-        rus: "Записанное как 再, {{word:zai4}} значит «ещё раз» в {{word:zai4}}-{{word:jian4}} (до свидания: увидимся снова); само по себе — «находиться».",
+        eng: "{{hanzi:Written 再, }}{{word:zai4#again}} means once more in {{word:zai4}}-{{word:jian4}} (goodbye: see you again); on its own it is be at.",
+        rus: "{{hanzi:Записанное как 再, }}{{word:zai4#again}} значит «ещё раз» в {{word:zai4}}-{{word:jian4}} (до свидания: увидимся снова); само по себе — «находиться».",
       },
       compounds: ["zai4 jian4"],
     },

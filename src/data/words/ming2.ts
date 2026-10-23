@@ -19,8 +19,8 @@ export default word("ming2", {
       rus: "имя",
       compounds: ["you3 ming2", "ming2 zi4"],
       why: {
-        eng: "Written 名, {{word:ming2}} means name in {{word:you3}}-{{word:ming2}}; on its own it is bright.",
-        rus: "Записанное как 名, {{word:ming2}} значит «имя» в {{word:you3}}-{{word:ming2}}; само по себе — «яркий».",
+        eng: "{{hanzi:Written 名, }}{{word:ming2#name}} means name in {{word:you3}}-{{word:ming2}}; on its own it is bright.",
+        rus: "{{hanzi:Записанное как 名, }}{{word:ming2#name}} значит «имя» в {{word:you3}}-{{word:ming2}}; само по себе — «яркий».",
       },
     },
   },

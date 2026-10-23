@@ -14,7 +14,9 @@
 //      doesn't use that sense (时 in the hanzi, but no listed compound).
 //   6. A lesson that introduces two senses of one word (main sense included).
 //   7. A ref that names a sense ({{word:xin1#new}}) the word doesn't have, or
-//      one not marked `alone` (that one is only used in its compounds).
+//      one not marked `alone` (that one is only used in its compounds) -- except
+//      in the word's own file and in the lesson whose card introduces the sense,
+//      which talk about the sense itself ("here xiào means school").
 // (A sense used before its card is check-early-words; a sense without its
 // meaning, why or compounds is check-data.)
 //
@@ -111,6 +113,7 @@ for (const e of compositesData.entries) {
 
 // 6. one sense of a word per lesson
 const lessons = await loadLessons();
+const introduced = new Set(); // "moving/xiao4#school": the lesson whose card introduces the sense
 for (const lesson of lessons) {
   const senses = new Map();
   for (const entry of lesson.entries) {
@@ -118,6 +121,7 @@ for (const lesson of lessons) {
     const id = soleWordRef(entry.term);
     if (!id) continue;
     senses.set(id, [...(senses.get(id) ?? []), entry.sense ?? 'main']);
+    if (entry.sense) introduced.add(`${lesson.id}/${id}#${entry.sense}`);
   }
   for (const [id, list] of senses) if (list.length > 1) errors.push(`${lesson.id}: introduces ${list.length} senses of ${id} (${list.join(', ')}) -- one per lesson`);
 }
@@ -134,7 +138,7 @@ for (const file of [...walk(resolve(SRC, 'content')), ...walk(resolve(SRC, 'data
     const s = words[id].senses?.[key];
     const where = file.slice(SRC.length + 1).replace(/\\/g, '/');
     if (!s) errors.push(`${where}: ${full} -- ${id} has no sense "${key}"`);
-    else if (!s.alone) errors.push(`${where}: ${full} -- sense "${key}" isn't marked alone, so it is only used in its compounds`);
+    else if (!s.alone && where !== `data/words/${id}.ts` && !introduced.has(`${where.match(/^content\/lessons\/([^/]+)\//)?.[1]}/${id}#${key}`)) errors.push(`${where}: ${full} -- sense "${key}" isn't marked alone, so it is only used in its compounds`);
   }
 }
 

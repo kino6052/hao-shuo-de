@@ -100,6 +100,61 @@ a {
   color: inherit;
 }
 
+/* The writing settings (src/lib/settings.js, src/lib/script.js): characters a note shows only with hanzi on,
+   hanzi with small pinyin above, and the hover box. */
+hsd-h {
+  display: none;
+}
+:root[data-script="hanzi"] hsd-h,
+:root[data-script="both"] hsd-h {
+  display: inline;
+}
+:root[data-script="both"] ruby {
+  ruby-position: over;
+}
+rt {
+  font-size: 0.55em;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+.hsd-tip {
+  display: none;
+  position: fixed;
+  z-index: 300;
+  max-width: 240px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 1.5px solid var(--border-card);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  font-size: 13px;
+  line-height: 1.35;
+  pointer-events: none;
+}
+.hsd-tip-zh {
+  font-size: 20px;
+  font-weight: 700;
+}
+.hsd-tip-py {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.hsd-tip-main {
+  font-weight: 700;
+}
+.hsd-tip-parts {
+  margin-top: 1px;
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+:root[data-hover="on"] [data-hw] {
+  cursor: help;
+}
+:root[data-hover="on"] [data-no-hover] [data-hw] {
+  cursor: inherit;
+}
+
 @media print {
   :root,
   :root[data-theme="dark"] {

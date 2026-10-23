@@ -24,8 +24,8 @@ export default word("hou4", {
       rus: "время, сезон",
       compounds: ["shi2 hou4"],
       why: {
-        eng: "Written 候, {{word:hou4}} means time, season in {{word:shi2}}-{{light:hou4}}; on its own it is after, behind.",
-        rus: "Записанное как 候, {{word:hou4}} значит «время, сезон» в {{word:shi2}}-{{light:hou4}}; само по себе — «после, позади».",
+        eng: "{{hanzi:Written 候, }}{{word:hou4#season}} means time, season in {{word:shi2}}-{{light:hou4}}; on its own it is after, behind.",
+        rus: "{{hanzi:Записанное как 候, }}{{word:hou4#season}} значит «время, сезон» в {{word:shi2}}-{{light:hou4}}; само по себе — «после, позади».",
       },
     },
   },

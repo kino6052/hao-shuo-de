@@ -22,8 +22,8 @@ export default word("zuo4", {
       eng: "sit",
       rus: "сидеть",
       why: {
-        eng: "Written 坐, {{word:zuo4}} means sit in {{word:zuo4}}-{{word:xia4}} (sit down), {{word:zuo4}}-{{word:zai4}} (sit at) and {{word:zuo4}}-{{word:che1}} (ride); on its own it is do.",
-        rus: "Записанное как 坐, {{word:zuo4}} значит «сидеть» в {{word:zuo4}}-{{word:xia4}} (сесть), {{word:zuo4}}-{{word:zai4}} (сидеть на) и {{word:zuo4}}-{{word:che1}} (ехать); само по себе — «делать».",
+        eng: "{{hanzi:Written 坐, }}{{word:zuo4#sit}} means sit in {{word:zuo4}}-{{word:xia4}} (sit down), {{word:zuo4}}-{{word:zai4}} (sit at) and {{word:zuo4}}-{{word:che1}} (ride); on its own it is do.",
+        rus: "{{hanzi:Записанное как 坐, }}{{word:zuo4#sit}} значит «сидеть» в {{word:zuo4}}-{{word:xia4}} (сесть), {{word:zuo4}}-{{word:zai4}} (сидеть на) и {{word:zuo4}}-{{word:che1}} (ехать); само по себе — «делать».",
       },
       compounds: ["zuo4 xia4", "zuo4 zai4", "zuo4 che1"],
     },
@@ -32,8 +32,8 @@ export default word("zuo4", {
       eng: "work",
       rus: "работа",
       why: {
-        eng: "Written 作, {{word:zuo4}} means work in {{word:gong1}}-{{word:zuo4}} (work, job), {{word:zuo4}}-{{word:zhe3}} (author), {{word:zuo4}}-{{word:yong4}} (use, effect), {{word:dong4}}-{{word:zuo4}} (movement) and {{word:xie3}}-{{word:zuo4}} (writing).",
-        rus: "Записанное как 作, {{word:zuo4}} значит «работа» в {{word:gong1}}-{{word:zuo4}} (работа), {{word:zuo4}}-{{word:zhe3}} (автор), {{word:zuo4}}-{{word:yong4}} (действие, польза), {{word:dong4}}-{{word:zuo4}} (движение) и {{word:xie3}}-{{word:zuo4}} (письмо, сочинение).",
+        eng: "{{hanzi:Written 作, }}{{word:zuo4#work}} means work in {{word:gong1}}-{{word:zuo4}} (work, job), {{word:zuo4}}-{{word:zhe3}} (author), {{word:zuo4}}-{{word:yong4}} (use, effect), {{word:dong4}}-{{word:zuo4}} (movement) and {{word:xie3}}-{{word:zuo4}} (writing).",
+        rus: "{{hanzi:Записанное как 作, }}{{word:zuo4#work}} значит «работа» в {{word:gong1}}-{{word:zuo4}} (работа), {{word:zuo4}}-{{word:zhe3}} (автор), {{word:zuo4}}-{{word:yong4}} (действие, польза), {{word:dong4}}-{{word:zuo4}} (движение) и {{word:xie3}}-{{word:zuo4}} (письмо, сочинение).",
       },
       compounds: ["gong1 zuo4", "zuo4 zhe3", "zuo4 yong4", "dong4 zuo4", "xie3 zuo4"],
     },

@@ -24,8 +24,8 @@ export default word("yuan2", {
       rus: "сад, парк",
       compounds: ["gong1 yuan2"],
       why: {
-        eng: "Written 园, {{word:yuan2}} means garden, park in {{word:gong1}}-{{word:yuan2}}; on its own it is round.",
-        rus: "Записанное как 园, {{word:yuan2}} значит «сад, парк» в {{word:gong1}}-{{word:yuan2}}; само по себе — «круглый».",
+        eng: "{{hanzi:Written 园, }}{{word:yuan2#garden}} means garden, park in {{word:gong1}}-{{word:yuan2}}; on its own it is round.",
+        rus: "{{hanzi:Записанное как 园, }}{{word:yuan2#garden}} значит «сад, парк» в {{word:gong1}}-{{word:yuan2}}; само по себе — «круглый».",
       },
     },
     origin: {
@@ -34,8 +34,8 @@ export default word("yuan2", {
       rus: "исток",
       compounds: ["yuan2 lai2"],
       why: {
-        eng: "Written 原, {{word:yuan2}} means origin in {{word:yuan2}}-{{word:lai2}}; on its own it is round.",
-        rus: "Записанное как 原, {{word:yuan2}} значит «исток» в {{word:yuan2}}-{{word:lai2}}; само по себе — «круглый».",
+        eng: "{{hanzi:Written 原, }}{{word:yuan2#origin}} means origin in {{word:yuan2}}-{{word:lai2}}; on its own it is round.",
+        rus: "{{hanzi:Записанное как 原, }}{{word:yuan2#origin}} значит «исток» в {{word:yuan2}}-{{word:lai2}}; само по себе — «круглый».",
       },
     },
   },

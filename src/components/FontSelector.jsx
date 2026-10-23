@@ -6,8 +6,11 @@ const FONTS = [
   { key: 'font-classic', label: 'Classic' },
 ];
 
+// the font the page has now (the settings pop-up mounts this anew each time it opens)
+const current = () => FONTS.find((f) => document.documentElement.classList.contains(f.key))?.key ?? 'font-rounded';
+
 export function FontSelector() {
-  const [active, setActive] = useState('font-rounded');
+  const [active, setActive] = useState(current);
 
   function pick(key) {
     setActive(key);
@@ -16,7 +19,7 @@ export function FontSelector() {
   }
 
   return (
-    <div style={{ display: 'flex', gap: '6px', marginTop: '8px' }}>
+    <div style={{ display: 'flex', gap: '6px' }}>
       {FONTS.map(f => (
         <button
           key={f.key}

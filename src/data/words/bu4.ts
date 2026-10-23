@@ -23,8 +23,8 @@ export default word("bu4", {
       eng: "part",
       rus: "часть",
       why: {
-        eng: "Written 部, {{word:bu4}} means part in {{word:bu4}}-{{light:fen1}}; on its own it is not.",
-        rus: "Записанное как 部, {{word:bu4}} значит «часть» в {{word:bu4}}-{{light:fen1}}; само по себе — «не».",
+        eng: "{{hanzi:Written 部, }}{{word:bu4#part}} means part in {{word:bu4}}-{{light:fen1}}; on its own it is not.",
+        rus: "{{hanzi:Записанное как 部, }}{{word:bu4#part}} значит «часть» в {{word:bu4}}-{{light:fen1}}; само по себе — «не».",
       },
       compounds: ["bu4 fen1", "bu4 men2"],
     },

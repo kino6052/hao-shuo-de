@@ -22,8 +22,8 @@ export default word("hua4", {
       eng: "draw, picture",
       rus: "рисовать, картина",
       why: {
-        eng: "Written 画, {{word:hua4}} means draw, picture in {{word:hua4}}-{{word:mian4}} (picture, scene); on its own it is words.",
-        rus: "Записанное как 画, {{word:hua4}} значит «рисовать, картина» в {{word:hua4}}-{{word:mian4}} (картинка, кадр); само по себе — «слова».",
+        eng: "{{hanzi:Written 画, }}{{word:hua4#draw}} means draw, picture in {{word:hua4}}-{{word:mian4}} (picture, scene); on its own it is words.",
+        rus: "{{hanzi:Записанное как 画, }}{{word:hua4#draw}} значит «рисовать, картина» в {{word:hua4}}-{{word:mian4}} (картинка, кадр); само по себе — «слова».",
       },
       compounds: ["hua4 mian4"],
     },

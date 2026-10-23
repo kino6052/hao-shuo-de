@@ -33,7 +33,9 @@ const KIND_NAMES = {
 };
 
 // -> the pinyin of a form or sentence: {{word:id}} -> its term.
-export const pinyinOf = (words) => (text) => replaceWordRefs(text, (id, kind) => refTerm(words[id]?.term ?? id, kind));
+// a {{hanzi:..}} note (shown on the page only while the reader writes in hanzi) keeps its characters here
+export const pinyinOf = (words) => (text) =>
+  replaceWordRefs(text, (id, kind) => refTerm(words[id]?.term ?? id, kind)).replace(/\{\{hanzi:([^}]*)\}\}/g, '$1');
 
 export async function removal(ctx, ids) {
   const { source, facts } = ctx;

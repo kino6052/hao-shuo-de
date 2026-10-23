@@ -79,7 +79,8 @@ describe('buildTsChapterView: prose', () => {
     }];
     const wordIndex = new Map([['hao3', 'hǎo']]);
     const out = buildTsChapterView(meta, entries, 'eng', { wordIndex, wordCount: 138 });
-    expect(out.bodyHtml).toBe('<p>Say Hǎo, 138 words.</p>\n');
+    // a word ref becomes <hsd-w> markup, which src/lib/script.js writes in the reader's script
+    expect(out.bodyHtml).toBe('<p>Say <hsd-w w=hao3>Hǎo</hsd-w>, 138 words.</p>\n');
   });
 });
 
@@ -87,7 +88,7 @@ describe('buildTsChapterView: vocab', () => {
   test('collects {pinyin, definition, audioFile, ttsText}, keyed off `term`', () => {
     const entries = [{ type: 'vocab', term: 'mā', en: ['mother'], zh: [], ru: [], ttsText: 'ma1' }];
     const out = buildTsChapterView(meta, entries, 'eng');
-    expect(out.vocab).toEqual([{ pinyin: 'mā', definition: 'mother', audioFile: undefined, ttsText: 'ma1' }]);
+    expect(out.vocab).toEqual([{ pinyin: 'mā', refs: 'mā', definition: 'mother', audioFile: undefined, ttsText: 'ma1' }]);
     expect(out.missingBlocks).toEqual([]);
   });
 
@@ -102,7 +103,7 @@ describe('buildTsChapterView: vocab', () => {
     const entries = [{ type: 'vocab', term: '{{word:zhe4}}-ge', en: ['this one'], zh: [], ru: [] }];
     const wordIndex = new Map([['zhe4', 'zhè']]);
     const out = buildTsChapterView(meta, entries, 'eng', { wordIndex, wordCount: 1 });
-    expect(out.vocab).toEqual([{ pinyin: 'zhè-ge', definition: 'this one', audioFile: undefined, ttsText: undefined }]);
+    expect(out.vocab).toEqual([{ pinyin: 'zhè-ge', refs: '{{word:zhe4}}-ge', definition: 'this one', audioFile: undefined, ttsText: undefined }]);
   });
 });
 
@@ -113,8 +114,8 @@ describe('buildTsChapterView: example/story', () => {
       { type: 'story', pinyin: 'Wǒ hǎo.', en: ['I am good.'], zh: [], ru: [] },
     ];
     const out = buildTsChapterView(meta, entries, 'eng');
-    expect(out.examples).toEqual([{ pinyin: 'Nǐ hǎo.', translation: 'Hello.', audioFile: 'a.mp3', ttsText: undefined }]);
-    expect(out.story).toEqual([{ pinyin: 'Wǒ hǎo.', translation: 'I am good.', audioFile: undefined, ttsText: undefined }]);
+    expect(out.examples).toEqual([{ pinyin: 'Nǐ hǎo.', refs: 'Nǐ hǎo.', translation: 'Hello.', audioFile: 'a.mp3', ttsText: undefined }]);
+    expect(out.story).toEqual([{ pinyin: 'Wǒ hǎo.', refs: 'Wǒ hǎo.', translation: 'I am good.', audioFile: undefined, ttsText: undefined }]);
     expect(out.missingBlocks).toEqual([]);
   });
 
@@ -129,7 +130,7 @@ describe('buildTsChapterView: example/story', () => {
     const entries = [{ type: 'example', pinyin: '{{Word:zhe4}}-ge {{word:shi4}} {{word:ren2}}.', en: ['This is a person.'], zh: [], ru: [] }];
     const wordIndex = new Map([['zhe4', 'zhè'], ['shi4', 'shì'], ['ren2', 'rén']]);
     const out = buildTsChapterView(meta, entries, 'eng', { wordIndex, wordCount: 3 });
-    expect(out.examples).toEqual([{ pinyin: 'Zhè-ge shì rén.', translation: 'This is a person.', audioFile: undefined, ttsText: undefined }]);
+    expect(out.examples).toEqual([{ pinyin: 'Zhè-ge shì rén.', refs: '{{Word:zhe4}}-ge {{word:shi4}} {{word:ren2}}.', translation: 'This is a person.', audioFile: undefined, ttsText: undefined }]);
   });
 });
 
@@ -141,7 +142,7 @@ describe('buildTsChapterView: exercise/answer', () => {
     ];
     const out = buildTsChapterView(meta, entries, 'eng');
     expect(out.exercise).toEqual(['What tone is this?']);
-    expect(out.answers).toEqual([{ text: 'Fourth tone.', audioFile: 'a.mp3', ttsText: undefined }]);
+    expect(out.answers).toEqual([{ text: 'Fourth tone.', refs: 'Fourth tone.', audioFile: 'a.mp3', ttsText: undefined }]);
   });
 
   test('missing language flags the entry and drops it from the collected list', () => {
@@ -279,7 +280,7 @@ describe('buildTsChapterView: image', () => {
 
   test('goes into the flow with its file, description and caption', () => {
     const view = buildTsChapterView(meta, [image], 'eng');
-    expect(view.flow).toEqual([{ kind: 'image', items: [{ file: 'pointing', alt: 'A cat points.', pinyin: 'zhè', translation: 'This.', audioFile: undefined, ttsText: undefined }] }]);
+    expect(view.flow).toEqual([{ kind: 'image', items: [{ file: 'pointing', alt: 'A cat points.', pinyin: 'zhè', refs: 'zhè', translation: 'This.', audioFile: undefined, ttsText: undefined }] }]);
     expect(view.missingBlocks).toEqual([]);
   });
 

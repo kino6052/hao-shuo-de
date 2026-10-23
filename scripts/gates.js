@@ -25,4 +25,5 @@ export const GATES = [
   ['check-passive', []],
   ['check-yardsticks', ['--summary']],
   ['check-tests', ['--summary']],
+  ['check-hanzi', ['--summary']],
 ];

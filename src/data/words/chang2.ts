@@ -22,8 +22,8 @@ export default word("chang2", {
       eng: "often",
       rus: "часто",
       why: {
-        eng: "Written 常, {{word:chang2}} means often, in {{word:chang2}}-{{word:chang2}}: what goes on long and long again, and in {{word:ping2}}-{{word:chang2}}: the ordinary day-to-day. On its own it is long.",
-        rus: "Записанное как 常, {{word:chang2}} значит «часто» в {{word:chang2}}-{{word:chang2}}: то, что длится и повторяется, и в {{word:ping2}}-{{word:chang2}}: обычное, повседневное. Само по себе — «длинный».",
+        eng: "{{hanzi:Written 常, }}{{word:chang2#often}} means often, in {{word:chang2}}-{{word:chang2}}: what goes on long and long again, and in {{word:ping2}}-{{word:chang2}}: the ordinary day-to-day. On its own it is long.",
+        rus: "{{hanzi:Записанное как 常, }}{{word:chang2#often}} значит «часто» в {{word:chang2}}-{{word:chang2}}: то, что длится и повторяется, и в {{word:ping2}}-{{word:chang2}}: обычное, повседневное. Само по себе — «длинный».",
       },
       compounds: ["chang2 chang2", "ping2 chang2"],
     },

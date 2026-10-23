@@ -31,7 +31,7 @@ export default lessonModule({
       "",
       "{{word:ming2}}-{{word:tian1}} (the bright day) is tomorrow, {{word:hou4}}-{{word:tian1}} the day after, and {{word:qian2}}-{{word:tian1}} the day before yesterday. {{word:qu4}}-{{word:nian2}} (the gone year) is last year, and {{word:ming2}}-{{word:nian2}} is next year.",
       "{{word:tian1}} is also the sky: {{word:tian1}}-{{word:qi4}} (sky air) is the weather.",
-      "{{word:qian2}}-{{word:yi1}}-{{word:tian1}} is yesterday, and {{word:xin1}}-{{word:nian2}} (新年: here 新 means new) is the New Year.",
+      "{{word:qian2}}-{{word:yi1}}-{{word:tian1}} is yesterday, and {{word:xin1}}-{{word:nian2}} (here {{word:xin1#new}} means new) is the New Year.",
     ],
     ru: [
       "**Чтобы считать дни и годы**, ставьте число прямо перед {{word:tian1}} (день) или {{word:nian2}} (год), без -ge.",
@@ -40,7 +40,7 @@ export default lessonModule({
       "",
       "{{word:ming2}}-{{word:tian1}} («светлый день») — завтра, {{word:hou4}}-{{word:tian1}} — послезавтра, {{word:qian2}}-{{word:tian1}} — позавчера. {{word:qu4}}-{{word:nian2}} («ушедший год») — прошлый год, {{word:ming2}}-{{word:nian2}} — следующий.",
       "{{word:tian1}} — это ещё и небо: {{word:tian1}}-{{word:qi4}} («небесный воздух») — погода.",
-      "{{word:qian2}}-{{word:yi1}}-{{word:tian1}} — вчера, а {{word:xin1}}-{{word:nian2}} (新年: здесь 新 значит «новый») — Новый год.",
+      "{{word:qian2}}-{{word:yi1}}-{{word:tian1}} — вчера, а {{word:xin1}}-{{word:nian2}} (здесь {{word:xin1#new}} значит «новый») — Новый год.",
     ],
     tldr: {
       en: "number + {{word:tian1}} / {{word:nian2}}: {{word:san1}} {{word:tian1}}, three days. {{word:ming2}}-{{word:tian1}} is tomorrow.",

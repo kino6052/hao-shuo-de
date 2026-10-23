@@ -1,7 +1,9 @@
+import { Fragment } from "preact";
 import { useState, useEffect, useMemo } from "preact/hooks";
 import dictionary from "../data/dictionary.ts";
 import composites from "../data/composites.ts";
 import { AudioButton } from "./AudioButton.jsx";
+import { Hsd, Zh } from "./Hsd.jsx";
 import { getUsageLabels } from "../lib/word-usage.js";
 import { categoricalPages } from "../lib/categorical-entries.js";
 import { matcher, filterTree, firstOfTree } from "../lib/dictionary-search.js";
@@ -17,7 +19,7 @@ function WordEntry({ id, lang }) {
   return (
     <div class={styles.entry}>
       <span class={styles.term}>
-        {word.term}
+        <Hsd pinyin={word.term} refs={`{{word:${id}}}`} />
         <AudioButton
           pinyin={word.term}
           audioFile={word.audioFile}
@@ -74,8 +76,15 @@ function CompositeEntry({ entry, lang }) {
   const gloss = lang === "rus" ? entry.ru : entry.en;
   return (
     <div class={`${styles.entry} ${styles.compound}`}>
-      <span class={styles.term}>{entry.forms.join(" / ")}</span>
-      <span class={styles.hanzi}> {entry.zh}</span>
+      <span class={styles.term}>
+        {entry.forms.map((form, i) => (
+          <Fragment key={i}>
+            {i > 0 && " / "}
+            <Hsd pinyin={form} refs={entry.refs[i]} />
+          </Fragment>
+        ))}
+      </span>
+      <Zh class={styles.hanzi} text={entry.zh} before=" " />
       <span class={styles.def}> — {gloss}</span>
     </div>
   );

@@ -24,8 +24,8 @@ export default word("jin1", {
       rus: "этот, нынешний",
       compounds: ["jin1 tian1", "jin1 nian2"],
       why: {
-        eng: "Written 今, {{word:jin1}} means this, now in {{word:jin1}}-{{word:tian1}}, {{word:jin1}}-{{word:nian2}}; on its own it is gold, money.",
-        rus: "Записанное как 今, {{word:jin1}} значит «этот, нынешний» в {{word:jin1}}-{{word:tian1}}, {{word:jin1}}-{{word:nian2}}; само по себе — «золото, деньги».",
+        eng: "{{hanzi:Written 今, }}{{word:jin1#today}} means this, now in {{word:jin1}}-{{word:tian1}}, {{word:jin1}}-{{word:nian2}}; on its own it is gold, money.",
+        rus: "{{hanzi:Записанное как 今, }}{{word:jin1#today}} значит «этот, нынешний» в {{word:jin1}}-{{word:tian1}}, {{word:jin1}}-{{word:nian2}}; само по себе — «золото, деньги».",
       },
     },
   },

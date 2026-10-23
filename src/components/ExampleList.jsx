@@ -1,5 +1,6 @@
 import { AudioButton } from './AudioButton.jsx';
 import { ShadowBox } from './ShadowBox.jsx';
+import { Hsd, Rich } from './Hsd.jsx';
 import styles from './ExampleList.module.css';
 
 // `label` defaults to "Examples"; pass null to leave it out.
@@ -12,10 +13,10 @@ export function ExampleList({ items, label = 'Examples' }) {
         {items.map((ex, i) => (
           <ShadowBox key={i} class={styles.card} pinyin={ex.pinyin} audioFile={ex.audioFile}>
             <span class={styles.pinyin}>
-              {ex.pinyin}
+              <Hsd pinyin={ex.pinyin} refs={ex.refs} hanzi={ex.ttsText} />
               <AudioButton shadow pinyin={ex.pinyin} audioFile={ex.audioFile} ttsText={ex.ttsText} />
             </span>
-            <span class={styles.translation}> — {ex.translation}</span>
+            <span class={styles.translation}> — <Rich text={ex.translation} /></span>
           </ShadowBox>
         ))}
       </div>

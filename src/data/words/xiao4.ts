@@ -18,8 +18,8 @@ export default word("xiao4", {
       eng: "school",
       rus: "школа",
       why: {
-        eng: "Written 校, {{word:xiao4}} means school in {{word:xue2}}-{{word:xiao4}}; on its own it is laugh.",
-        rus: "Записанное как 校, {{word:xiao4}} значит «школа» в {{word:xue2}}-{{word:xiao4}}; само по себе — «смеяться».",
+        eng: "{{hanzi:Written 校, }}{{word:xiao4#school}} means school in {{word:xue2}}-{{word:xiao4}}; on its own it is laugh.",
+        rus: "{{hanzi:Записанное как 校, }}{{word:xiao4#school}} значит «школа» в {{word:xue2}}-{{word:xiao4}}; само по себе — «смеяться».",
       },
       compounds: ["xue2 xiao4"],
     },

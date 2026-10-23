@@ -5,7 +5,7 @@ export default composite({
   phase: 4,
   zh: "券",
   py: "quàn",
-  en: "coupon; voucher; ticket (as in 优惠券)",
+  en: "coupon; voucher; ticket",
   ru: "купон; ваучер; талон",
   pos: "noun",
   hsd: [

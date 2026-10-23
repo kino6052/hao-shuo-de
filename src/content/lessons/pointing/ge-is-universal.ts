@@ -13,16 +13,16 @@ export default lessonModule({
   ],
   prose: {
     en: [
-      "Hao-shuo-de keeps only one of them: `{{word:ge4}}`.",
+      "Hao-shuo-de keeps only one of them: <code>{{word:ge4}}</code>.",
       "It works for everything: a person, an animal, a tool, a plant, or an idea.",
-      "Put it after a pronoun: `{{word:zhe4}}-ge` means \"this one\", and `{{word:na4}}-ge` means \"that one\".",
-      "Add a noun to say which thing: `{{word:zhe4}}-ge {{word:zhi2wu4}}` means \"this plant\".",
+      "Put it after a pronoun: <code>{{word:zhe4}}-ge</code> means \"this one\", and <code>{{word:na4}}-ge</code> means \"that one\".",
+      "Add a noun to say which thing: <code>{{word:zhe4}}-ge {{word:zhi2wu4}}</code> means \"this plant\".",
     ],
     ru: [
-      "В Hǎo-shuō-de осталось только одно из них: `{{word:ge4}}`.",
+      "В Hǎo-shuō-de осталось только одно из них: <code>{{word:ge4}}</code>.",
       "Оно подходит для всего: человека, животного, инструмента, растения или мысли.",
-      "Поставьте его после местоимения: `{{word:zhe4}}-ge` значит «вот этот», а `{{word:na4}}-ge` — «вон тот».",
-      "Добавьте существительное, чтобы сказать, какая именно вещь: `{{word:zhe4}}-ge {{word:zhi2wu4}}` значит «это растение».",
+      "Поставьте его после местоимения: <code>{{word:zhe4}}-ge</code> значит «вот этот», а <code>{{word:na4}}-ge</code> — «вон тот».",
+      "Добавьте существительное, чтобы сказать, какая именно вещь: <code>{{word:zhe4}}-ge {{word:zhi2wu4}}</code> значит «это растение».",
     ],
     tldr: {
       en: "Hao-shuo-de uses {{word:ge4}} for everything.",
@@ -38,8 +38,8 @@ export default lessonModule({
     title: { en: "One Counting Word for Everything", ru: "Одно счётное слово для всего" },
     items: [
       {
-        en: "{{word:zhe4}}, {{word:na4}}, or a number + ge + noun. The same `{{word:ge4}}` works with every noun.",
-        ru: "{{word:zhe4}}, {{word:na4}} или число + ge + существительное. Одно и то же `{{word:ge4}}` подходит к любому существительному.",
+        en: "{{word:zhe4}}, {{word:na4}}, or a number + ge + noun. The same <code>{{word:ge4}}</code> works with every noun.",
+        ru: "{{word:zhe4}}, {{word:na4}} или число + ge + существительное. Одно и то же <code>{{word:ge4}}</code> подходит к любому существительному.",
       },
     ],
   },

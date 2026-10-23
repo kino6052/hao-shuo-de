@@ -1,12 +1,12 @@
 import { useEffect, useState } from "preact/hooks";
 import { ProgressBar } from "./ProgressBar.jsx";
-import { FontSelector } from "./FontSelector.jsx";
+import { SettingsDialog } from "./SettingsDialog.jsx";
 import { AccountBox } from "./AccountBox.jsx";
 import { AdSlot } from "./AdSlot.jsx";
 import { AD_SLOT_SIDEBAR } from "../lib/tracking-config.js";
 import { useAuth } from "../lib/auth.js";
 import { parseUrl } from "../lib/router.js";
-import { LANG_CONFIG, t } from "../lib/i18n.js";
+import { t } from "../lib/i18n.js";
 import { SECTIONS, BACK_MATTER, FINAL_EXAM_ID, sectionKeyForLesson, groupKeyForChapter } from "../content/book.js";
 import { loadRecord, subscribeRecord } from "../lib/quiz/progress.js";
 import styles from "./Sidebar.module.css";
@@ -24,6 +24,7 @@ export function Sidebar({
   onResetProgress,
 }) {
   const [open, setOpen] = useState(false);
+  const [settingsOpen, setSettingsOpen] = useState(false);
   const { status } = useAuth();
   const total = sections.length;
   const done = sections.filter((s) => completed.has(s.id)).length;
@@ -84,21 +85,17 @@ export function Sidebar({
             <div class={styles.logoTitle}>Hǎo-shuō-de</div>
             <div class={styles.logoSub}>{t(lang, "logoSub")}</div>
           </div>
+          <button
+            class={styles.settingsBtn}
+            onClick={() => setSettingsOpen(true)}
+            aria-label={t(lang, "settings")}
+            title={t(lang, "settings")}
+          >
+            ⚙
+          </button>
         </div>
 
-        <div class={styles.langRow}>
-          {availableLangs.map((l) => (
-            <button
-              key={l}
-              class={`${styles.langBtn} ${l === lang ? styles.langActive : ""}`}
-              onClick={() => onSwitchLang(l)}
-            >
-              {LANG_CONFIG[l]?.nativeLabel || l}
-            </button>
-          ))}
-        </div>
-
-        <ProgressBar done={done} total={total} onReset={onResetProgress} />
+        <ProgressBar done={done} total={total} />
 
         {intros.length > 0 && (
           <TocGroup
@@ -168,22 +165,23 @@ export function Sidebar({
           </div>
         )}
 
-        <div class={styles.controls}>
-          <FontSelector />
-          <button
-            class={styles.themeBtn}
-            onClick={onToggleTheme}
-            aria-label="Toggle theme"
-          >
-            {theme === "dark" ? "☀️" : "🌙"}
-          </button>
-        </div>
-
         <AccountBox lang={lang} />
         <AdSlot slot={AD_SLOT_SIDEBAR} />
 
         <div class={styles.tagline}>{t(lang, "tagline")}</div>
       </nav>
+
+      {settingsOpen && (
+        <SettingsDialog
+          lang={lang}
+          availableLangs={availableLangs}
+          onSwitchLang={onSwitchLang}
+          theme={theme}
+          onToggleTheme={onToggleTheme}
+          onResetProgress={onResetProgress}
+          onClose={() => setSettingsOpen(false)}
+        />
+      )}
     </>
   );
 }

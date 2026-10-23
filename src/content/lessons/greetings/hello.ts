@@ -19,7 +19,7 @@ export default lessonModule({
       "**{{Word:ni3}} {{word:hao3}}! / {{Word:ni3}} {{word:hao3}} {{word:ma}}?**",
       "",
       "To many people, say {{word:ni3}}-{{word:men}} {{word:hao3}}.",
-      "To say goodbye: {{Word:zai4}}-{{word:jian4}}! (see you again; here {{word:zai4}} is written 再, once more).",
+      "To say goodbye: {{Word:zai4}}-{{word:jian4}}! (see you again; here {{word:zai4#again}} means once more).",
     ],
     ru: [
       "**Чтобы поздороваться**, скажите {{word:ni3}} {{word:hao3}}.",
@@ -27,7 +27,7 @@ export default lessonModule({
       "**{{Word:ni3}} {{word:hao3}}! / {{Word:ni3}} {{word:hao3}} {{word:ma}}?**",
       "",
       "Если людей много, скажите {{word:ni3}}-{{word:men}} {{word:hao3}}.",
-      "Чтобы попрощаться: {{Word:zai4}}-{{word:jian4}}! («увидимся снова»; здесь {{word:zai4}} пишется 再 — «ещё раз»).",
+      "Чтобы попрощаться: {{Word:zai4}}-{{word:jian4}}! («увидимся снова»; здесь {{word:zai4#again}} значит «ещё раз»).",
     ],
     tldr: {
       en: "{{Word:ni3}} {{word:hao3}}! means hello. {{Word:ni3}} {{word:hao3}} {{word:ma}}? means how are you?",

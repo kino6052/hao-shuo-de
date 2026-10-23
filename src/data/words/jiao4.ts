@@ -24,8 +24,8 @@ export default word("jiao4", {
       rus: "сравнивать",
       compounds: ["bi3 jiao4"],
       why: {
-        eng: "Written 较, {{word:jiao4}} means compare in {{word:bi3}}-{{word:jiao4}}; on its own it is call.",
-        rus: "Записанное как 较, {{word:jiao4}} значит «сравнивать» в {{word:bi3}}-{{word:jiao4}}; само по себе — «звать».",
+        eng: "{{hanzi:Written 较, }}{{word:jiao4#compare}} means compare in {{word:bi3}}-{{word:jiao4}}; on its own it is call.",
+        rus: "{{hanzi:Записанное как 较, }}{{word:jiao4#compare}} значит «сравнивать» в {{word:bi3}}-{{word:jiao4}}; само по себе — «звать».",
       },
     },
   },

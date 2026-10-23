@@ -5,6 +5,7 @@ import { say } from '../lib/quiz/question.js';
 import { itemCorrect } from '../lib/quiz/result.js';
 import { buildUrl, parseUrl } from '../lib/router.js';
 import { lessonNumber } from '../content/book.js';
+import { Hsd, Zh } from './Hsd.jsx';
 import styles from './Quiz.module.css';
 
 const LANG_KEYS = { eng: 'en', rus: 'ru', zh: 'zh' };
@@ -69,12 +70,14 @@ export function Quiz({ items, lang, onFinish, here = null }) {
 
   const right = answered && itemCorrect(item, responses[at]);
   const audio = q.prompt.audio;
-  const rightText = q.kind === 'order' ? q.answer.join(' ') : say(item.choices[item.answer].text, key);
+  // a Hao-shuo-de choice in the reader's script; a tone question's stay pinyin (the characters would give the tone away)
+  const shown = (text) => (text?.any != null && q.kind !== 'tone' ? <Hsd pinyin={text.any} /> : say(text, key));
+  const rightText = q.kind === 'order' ? <Hsd pinyin={q.answer.join(' ')} /> : shown(item.choices[item.answer].text);
   const help = say(q.help, key);
   const link = !right && q.lesson !== here ? <LessonLink lang={lang} lesson={q.lesson} /> : null;
 
   return (
-    <div class={styles.quiz}>
+    <div class={styles.quiz} data-no-hover>
       <div class={styles.progress}>
         {t(lang, 'quizQuestion').replace('{n}', at + 1).replace('{total}', items.length)}
       </div>
@@ -85,8 +88,12 @@ export function Quiz({ items, lang, onFinish, here = null }) {
             ▶ {t(lang, 'quizPlay')}
           </button>
         )}
-        {q.prompt.pinyin && <div class={styles.pinyin}>{q.prompt.pinyin}</div>}
-        {q.prompt.hanzi && <div class={styles.hanzi}>{q.prompt.hanzi}</div>}
+        {q.prompt.pinyin && (
+          <div class={styles.pinyin}>
+            <Hsd pinyin={q.prompt.pinyin} hanzi={q.prompt.hanzi} />
+          </div>
+        )}
+        {!q.prompt.pinyin && <Zh class={styles.hanzi} text={q.prompt.hanzi} />}
         {q.prompt.text && <div class={styles.text}>{say(q.prompt.text, key)}</div>}
       </div>
 
@@ -95,14 +102,14 @@ export function Quiz({ items, lang, onFinish, here = null }) {
           <div class={styles.built} aria-live="polite">
             {built.map((i, j) => (
               <button key={j} class={styles.token} disabled={answered} onClick={() => setBuilt(built.filter((_, k) => k !== j))}>
-                {item.tokens[i]}
+                <Hsd pinyin={item.tokens[i]} />
               </button>
             ))}
           </div>
           <div class={styles.tokens}>
             {item.tokens.map((tok, i) => (
               <button key={i} class={styles.token} disabled={answered || built.includes(i)} onClick={() => setBuilt([...built, i])}>
-                {tok}
+                <Hsd pinyin={tok} />
               </button>
             ))}
           </div>
@@ -119,7 +126,7 @@ export function Quiz({ items, lang, onFinish, here = null }) {
             return (
               <button key={i} class={`${styles.choice} ${state}`} disabled={answered} onClick={() => answer(i)}>
                 <span class={styles.num}>{i + 1}</span>
-                {say(c.text, key)}
+                {shown(c.text)}
               </button>
             );
           })}

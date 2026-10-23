@@ -47,6 +47,7 @@
     "check-word-builder": "node scripts/check-word-builder.js",
     "check-passive": "node scripts/check-passive.js",
     "check-tests": "node scripts/check-tests.js",
+    "check-hanzi": "node scripts/check-hanzi.js",
     "report-heads": "node scripts/report-heads.js",
     "kb": "node scripts/kb.js",
     "translator": "node scripts/translator.js",

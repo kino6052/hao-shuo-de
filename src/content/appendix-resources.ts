@@ -74,9 +74,9 @@ const content: Entry[] = [
       zh: [],
       ru: ["Песня про пиньинь для детей, мультфильм на Bilibili"],
     },
-    en: ["The pinyin song (拼音歌), by 儿歌多多, on Bilibili. About two minutes."],
+    en: ["The pinyin song{{hanzi: (拼音歌)}}, by the children's channel Erge Duoduo{{hanzi: (儿歌多多)}}, on Bilibili. About two minutes."],
     zh: [],
-    ru: ["Песня про пиньинь (拼音歌) от 儿歌多多 на Bilibili. Около двух минут."],
+    ru: ["Песня про пиньинь{{hanzi: (拼音歌)}} от детского канала Erge Duoduo{{hanzi: (儿歌多多)}} на Bilibili. Около двух минут."],
   },
 ];
 

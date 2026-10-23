@@ -1,5 +1,6 @@
 import { useState } from 'preact/hooks';
 import { t } from '../lib/i18n.js';
+import { Rich } from './Hsd.jsx';
 import styles from './TldrSummary.module.css';
 
 export function TldrSummary({ items, lang }) {
@@ -37,10 +38,10 @@ export function TldrSummary({ items, lang }) {
           </button>
           <div class={styles.content}>
             {item.isOverview && <div class={styles.overviewLabel}>{t(lang, 'tldrOverview')}</div>}
-            {item.tldr && <div class={styles.tldr}>{item.tldr}</div>}
+            {item.tldr && <div class={styles.tldr}><Rich text={item.tldr} /></div>}
             {item.necessity && (
               <div class={styles.necessity}>
-                <span class={styles.necessityLabel}>{t(lang, 'tldrWhy')}</span> {item.necessity}
+                <span class={styles.necessityLabel}>{t(lang, 'tldrWhy')}</span> <Rich text={item.necessity} />
               </div>
             )}
           </div>
@@ -60,7 +61,7 @@ export function TldrSummary({ items, lang }) {
       {overview && (
         <div class={styles.printOnly}>
           <div class={styles.title}>{t(lang, 'tldrTitle')}</div>
-          <div class={styles.tldr}>{overview.tldr}</div>
+          <div class={styles.tldr}><Rich text={overview.tldr} /></div>
         </div>
       )}
     </div>

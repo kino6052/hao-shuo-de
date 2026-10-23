@@ -19,8 +19,8 @@ export default word("shi2", {
       rus: "время",
       compounds: ["shi2 jian1", "shi2 hou4", "xiao3 shi2", "you3 shi2", "ping2 shi2"],
       why: {
-        eng: "Written 时, {{word:shi2}} means time in {{word:shi2}}-{{word:jian1}}, {{word:shi2}}-{{light:hou4}}, {{word:xiao3}}-{{word:shi2}}, {{word:you3}}-{{word:shi2}}, {{word:ping2}}-{{word:shi2}}; on its own it is ten.",
-        rus: "Записанное как 时, {{word:shi2}} значит «время» в {{word:shi2}}-{{word:jian1}}, {{word:shi2}}-{{light:hou4}}, {{word:xiao3}}-{{word:shi2}}, {{word:you3}}-{{word:shi2}}, {{word:ping2}}-{{word:shi2}}; само по себе — «десять».",
+        eng: "{{hanzi:Written 时, }}{{word:shi2#time}} means time in {{word:shi2}}-{{word:jian1}}, {{word:shi2}}-{{light:hou4}}, {{word:xiao3}}-{{word:shi2}}, {{word:you3}}-{{word:shi2}}, {{word:ping2}}-{{word:shi2}}; on its own it is ten.",
+        rus: "{{hanzi:Записанное как 时, }}{{word:shi2#time}} значит «время» в {{word:shi2}}-{{word:jian1}}, {{word:shi2}}-{{light:hou4}}, {{word:xiao3}}-{{word:shi2}}, {{word:you3}}-{{word:shi2}}, {{word:ping2}}-{{word:shi2}}; само по себе — «десять».",
       },
     },
     food: {
@@ -29,8 +29,8 @@ export default word("shi2", {
       rus: "еда",
       compounds: ["shi2 wu4"],
       why: {
-        eng: "Written 食, {{word:shi2}} means food in {{word:shi2}}-{{word:wu4}}; on its own it is ten.",
-        rus: "Записанное как 食, {{word:shi2}} значит «еда» в {{word:shi2}}-{{word:wu4}}; само по себе — «десять».",
+        eng: "{{hanzi:Written 食, }}{{word:shi2#food}} means food in {{word:shi2}}-{{word:wu4}}; on its own it is ten.",
+        rus: "{{hanzi:Записанное как 食, }}{{word:shi2#food}} значит «еда» в {{word:shi2}}-{{word:wu4}}; само по себе — «десять».",
       },
     },
     real: {
@@ -38,8 +38,8 @@ export default word("shi2", {
       eng: "real, solid",
       rus: "настоящий, реальный",
       why: {
-        eng: "Written 实, {{word:shi2}} means real in {{word:shi4}}-{{word:shi2}} (fact), {{word:zhen1}}-{{word:shi2}} (true) and {{word:xian4}}-{{word:shi2}} (reality); on its own it is ten.",
-        rus: "Записанное как 实, {{word:shi2}} значит «настоящий» в {{word:shi4}}-{{word:shi2}} (факт), {{word:zhen1}}-{{word:shi2}} (правдивый) и {{word:xian4}}-{{word:shi2}} (реальность); само по себе — «десять».",
+        eng: "{{hanzi:Written 实, }}{{word:shi2#real}} means real in {{word:shi4}}-{{word:shi2}} (fact), {{word:zhen1}}-{{word:shi2}} (true) and {{word:xian4}}-{{word:shi2}} (reality); on its own it is ten.",
+        rus: "{{hanzi:Записанное как 实, }}{{word:shi2#real}} значит «настоящий» в {{word:shi4}}-{{word:shi2}} (факт), {{word:zhen1}}-{{word:shi2}} (правдивый) и {{word:xian4}}-{{word:shi2}} (реальность); само по себе — «десять».",
       },
       compounds: ["shi4 shi2", "zhen1 shi2", "xian4 shi2"],
     },

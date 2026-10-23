@@ -23,8 +23,8 @@ export default word("jue2", {
       rus: "решать",
       compounds: ["jue2 ding4"],
       why: {
-        eng: "Written 决, {{word:jue2}} means decide in {{word:jue2}}-{{word:ding4}}; on its own it is feel.",
-        rus: "Записанное как 决, {{word:jue2}} значит «решать» в {{word:jue2}}-{{word:ding4}}; само по себе — «чувствовать».",
+        eng: "{{hanzi:Written 决, }}{{word:jue2#decide}} means decide in {{word:jue2}}-{{word:ding4}}; on its own it is feel.",
+        rus: "{{hanzi:Записанное как 决, }}{{word:jue2#decide}} значит «решать» в {{word:jue2}}-{{word:ding4}}; само по себе — «чувствовать».",
       },
     },
   },

@@ -23,8 +23,8 @@ export default word("di4", {
       eng: "order (first, second …)",
       rus: "порядок (первый, второй …)",
       why: {
-        eng: "Written 第, {{word:di4}} puts a number in order in {{word:di4}}-{{word:yi1}} (first) and {{word:di4}}-{{word:er4}} (second); on its own it is the floor.",
-        rus: "Записанное как 第, {{word:di4}} ставит число по порядку в {{word:di4}}-{{word:yi1}} («первый») и {{word:di4}}-{{word:er4}} («второй»); само по себе — «пол».",
+        eng: "{{hanzi:Written 第, }}{{word:di4#order}} puts a number in order in {{word:di4}}-{{word:yi1}} (first) and {{word:di4}}-{{word:er4}} (second); on its own it is the floor.",
+        rus: "{{hanzi:Записанное как 第, }}{{word:di4#order}} ставит число по порядку в {{word:di4}}-{{word:yi1}} («первый») и {{word:di4}}-{{word:er4}} («второй»); само по себе — «пол».",
       },
       compounds: [
         "di4 yi1",

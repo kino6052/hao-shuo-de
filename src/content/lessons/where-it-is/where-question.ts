@@ -30,7 +30,7 @@ export default lessonModule({
       "**Who + {{word:zai4}} {{word:na3}}-{{word:li3}}?**",
       "",
       "Answer with {{word:zhe4}}-{{word:li3}} (\"here\") or {{word:na4}}-{{word:li3}} (\"there\").",
-      "Rooms: {{word:fang2}}-{{word:jian1}} is a room, and {{word:wei4}}-{{word:sheng1}}-{{word:jian1}} (卫生间) is the bathroom.",
+      "Rooms: {{word:fang2}}-{{word:jian1}} is a room, and {{word:wei4}}-{{word:sheng1}}-{{word:jian1}} is the bathroom.",
     ],
     ru: [
       "**Чтобы спросить «где?»**, поставьте {{word:na3}}-{{word:li3}} туда, где стояло бы место.",
@@ -38,7 +38,7 @@ export default lessonModule({
       "**Кто + {{word:zai4}} {{word:na3}}-{{word:li3}}?**",
       "",
       "Отвечайте {{word:zhe4}}-{{word:li3}} («здесь») или {{word:na4}}-{{word:li3}} («там»).",
-      "Комнаты: {{word:fang2}}-{{word:jian1}} — комната, а {{word:wei4}}-{{word:sheng1}}-{{word:jian1}} (卫生间) — туалет.",
+      "Комнаты: {{word:fang2}}-{{word:jian1}} — комната, а {{word:wei4}}-{{word:sheng1}}-{{word:jian1}} — туалет.",
     ],
     tldr: {
       en: "{{word:na3}}-{{word:li3}} means \"where\". Answer with {{word:zhe4}}-{{word:li3}} (here) or {{word:na4}}-{{word:li3}} (there).",

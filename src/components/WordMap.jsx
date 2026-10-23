@@ -5,6 +5,8 @@ import coverage from "../data/coverage.ts";
 import { analyzeFamilies, categoryFit, compositeWords, wordCategories, FAMILY_DEFAULTS } from "../lib/graph.js";
 import { resolveWordRefs } from "../lib/word-refs.js";
 import { buildWordIndex } from "../lib/dictionary-stats.js";
+import { Hsd, zhLabel } from "./Hsd.jsx";
+import { useSettings } from "../lib/settings.js";
 import styles from "./WordMap.module.css";
 
 // The Word Map: the words as a network. Every composite hangs under its head
@@ -102,6 +104,9 @@ export function WordMap({ lang }) {
     return { ...a, cats, uses, covers, purity };
   }, [weight]);
   const headed = (id) => data.under.get(id) ?? [];
+  // a composite in a list: its pinyin (its Mandarin word in front while the reader writes in hanzi) and meaning
+  const settings = useSettings();
+  const composite = (e) => `${zhLabel(settings, e.zh, e.py)} ${lang === "rus" ? e.ru : e.en}`;
 
   const colors = dark ? PALETTE.dark : PALETTE.light;
   const familyColor = (f) => (f >= 0 && f < colors.length ? colors[f] : dark ? OTHER.dark : OTHER.light);
@@ -282,7 +287,9 @@ export function WordMap({ lang }) {
         <div class={styles.panel}>
           <div class={styles.panelHead}>
             <span class={styles.swatch} style={{ background: familyColor(data.parts.get(selected) ?? -1) }} />
-            <strong class={styles.term}>{info.term}</strong> <span class={styles.hanzi}>{info.hanzi}</span>
+            <strong class={styles.term}>
+              <Hsd pinyin={info.term} refs={`{{word:${selected}}}`} />
+            </strong>
             <span class={styles.gloss}>{gloss(selected, lang)}</span>
           </div>
           <dl class={styles.facts}>
@@ -306,7 +313,7 @@ export function WordMap({ lang }) {
               {tx.heads} ({headed(selected).length})
             </dt>
             <dd>
-              {headed(selected).slice(0, 24).map((e) => `${e.zh} ${lang === "rus" ? e.ru : e.en}`).join(" · ") || tx.none}
+              {headed(selected).slice(0, 24).map(composite).join(" · ") || tx.none}
             </dd>
             <dt>
               {tx.alsoIn} ({(data.uses.get(selected) ?? []).filter((e) => !headed(selected).includes(e)).length})
@@ -315,7 +322,7 @@ export function WordMap({ lang }) {
               {(data.uses.get(selected) ?? [])
                 .filter((e) => !headed(selected).includes(e))
                 .slice(0, 16)
-                .map((e) => `${e.zh} ${lang === "rus" ? e.ru : e.en}`)
+                .map(composite)
                 .join(" · ") || tx.none}
             </dd>
             <dt>{tx.covers}</dt>

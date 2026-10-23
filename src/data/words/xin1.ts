@@ -22,8 +22,8 @@ export default word("xin1", {
       eng: "new",
       rus: "новый",
       why: {
-        eng: "Written 新, {{word:xin1}} means new. As a thing it is the heart ({{word:wo3}}-{{word:de}} {{word:xin1}}); describing a thing it is new: {{word:xin1#new}}-{{word:de}} {{word:shu1}}, a new book, and {{word:xin1}}-{{word:nian2}}, the New Year.",
-        rus: "Записанное как 新, {{word:xin1}} значит «новый». Как вещь это сердце ({{word:wo3}}-{{word:de}} {{word:xin1}}); как описание вещи — «новый»: {{word:xin1#new}}-{{word:de}} {{word:shu1}} — новая книга, {{word:xin1}}-{{word:nian2}} — Новый год.",
+        eng: "{{hanzi:Written 新, }}{{word:xin1#new}} means new. As a thing it is the heart ({{word:wo3}}-{{word:de}} {{word:xin1}}); describing a thing it is new: {{word:xin1#new}}-{{word:de}} {{word:shu1}}, a new book, and {{word:xin1}}-{{word:nian2}}, the New Year.",
+        rus: "{{hanzi:Записанное как 新, }}{{word:xin1#new}} значит «новый». Как вещь это сердце ({{word:wo3}}-{{word:de}} {{word:xin1}}); как описание вещи — «новый»: {{word:xin1#new}}-{{word:de}} {{word:shu1}} — новая книга, {{word:xin1}}-{{word:nian2}} — Новый год.",
       },
       compounds: ["xin1 nian2"],
       alone: true,

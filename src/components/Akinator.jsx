@@ -4,6 +4,8 @@ import { ANSWERS } from "../lib/kb/akinator.js";
 import { STRINGS } from "../lib/kb/akinator-questions.js";
 import { buildUrl, parseUrl } from "../lib/router.js";
 import { openInApp } from "../lib/builder-entries.js";
+import { Zh } from "./Hsd.jsx";
+import { useSettings } from "../lib/settings.js";
 import styles from "./Akinator.module.css";
 
 // Find how to say an idea: the Akinator (AKINATOR_PLAN.md, part D). The learner picks what they want to say, then answers
@@ -43,6 +45,7 @@ function loadFinder() {
 export function Akinator({ lang }) {
   const t = STRINGS.en; // English only for now (D5b)
   const ui = t.ui;
+  const settings = useSettings();
   const [finder, setFinder] = useState(null);
   const [problem, setProblem] = useState(null);
   const [hint, setHint] = useState("");
@@ -119,12 +122,12 @@ export function Akinator({ lang }) {
 
   const Item = ({ item }) => {
     const l = label(item);
-    const main = item.text.zh || item.text.py;
-    const sub = item.text.zh ? item.text.py : "";
+    // its pinyin; while the reader writes in hanzi, its characters (with the pinyin beside them in "hanzi with pinyin")
+    const written = settings.script !== "pinyin" && Boolean(item.text.zh);
     return (
       <li class={styles.item}>
-        <span class={styles.zh}>{main}</span>
-        {sub && <span class={styles.py}>{sub}</span>}
+        {written ? <Zh class={styles.zh} text={item.text.zh} /> : <span class={styles.zh}>{item.text.py}</span>}
+        {written && settings.script === "both" && <span class={styles.py}>{item.text.py}</span>}
         {item.text.en && <span class={styles.en}>{item.text.en}</span>}
         {l.href ? (
           <a class={styles.lesson} href={l.href} onClick={(e) => openInApp(e, l.href)}>

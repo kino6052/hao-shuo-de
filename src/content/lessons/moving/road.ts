@@ -30,7 +30,7 @@ export default lessonModule({
       "**{{word:lu4}} {{word:hen3}} {{word:yuan3}} / {{word:zhi1dao4}} {{word:lu4}} / {{word:lu4}}-{{word:shang4}}**",
       "",
       "{{word:che1}} is a car, or anything on wheels that carries you: {{Word:che1}} {{word:zai4}} {{word:lu4}}-{{word:shang4}}, the car is on the road.",
-      "A school is {{word:xue2}}-{{word:xiao4}} (学校): here 校 means school.",
+      "A school is {{word:xue2}}-{{word:xiao4}}: here {{word:xiao4#school}} means school.",
     ],
     ru: [
       "**Чтобы говорить о дороге куда-то**, используйте {{word:lu4}} (дорога, путь).",
@@ -38,7 +38,7 @@ export default lessonModule({
       "**{{word:lu4}} {{word:hen3}} {{word:yuan3}} / {{word:zhi1dao4}} {{word:lu4}} / {{word:lu4}}-{{word:shang4}}**",
       "",
       "{{word:che1}} — машина или всё, что возит вас на колёсах: {{Word:che1}} {{word:zai4}} {{word:lu4}}-{{word:shang4}} — машина на дороге.",
-      "Школа — {{word:xue2}}-{{word:xiao4}} (学校): здесь 校 значит «школа».",
+      "Школа — {{word:xue2}}-{{word:xiao4}}: здесь {{word:xiao4#school}} значит «школа».",
     ],
     tldr: {
       en: "{{word:lu4}} is the road or the way: {{Word:lu4}} {{word:hen3}} {{word:yuan3}}, it's a long way.",

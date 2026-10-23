@@ -48,9 +48,9 @@ const content: Entry[] = [
   },
   {
     type: "prose",
-    en: ["## Big numbers", "{{word:shi2}} builds every number up to 99, and {{word:shi2}}-ge {{word:shi2}} is a hundred. Past that, numbers get long: ten thousand is four tens in a row. There is no word for ten thousand (万) yet, the one real gap in the composite dictionary."],
+    en: ["## Big numbers", "{{word:shi2}} builds every number up to 99, and {{word:shi2}}-ge {{word:shi2}} is a hundred. Past that, numbers get long: ten thousand is four tens in a row. There is no word for ten thousand{{hanzi: (万)}} yet, the one real gap in the composite dictionary."],
     zh: [],
-    ru: ["## Большие числа", "Из {{word:shi2}} строятся все числа до 99, а {{word:shi2}}-ge {{word:shi2}} — это сто. Дальше числа становятся длинными: десять тысяч — четыре десятки подряд. Слова для десяти тысяч (万) пока нет — это единственный настоящий пробел в словаре составных слов."],
+    ru: ["## Большие числа", "Из {{word:shi2}} строятся все числа до 99, а {{word:shi2}}-ge {{word:shi2}} — это сто. Дальше числа становятся длинными: десять тысяч — четыре десятки подряд. Слова для десяти тысяч{{hanzi: (万)}} пока нет — это единственный настоящий пробел в словаре составных слов."],
     tldr: {
       en: ["Numbers past a hundred are built from tens, so they get long."],
       zh: [],
@@ -138,9 +138,9 @@ const content: Entry[] = [
     type: "example",
     pinyin: "{{Word:wo3}} {{word:sheng1}}-{{word:qi4}} {{word:le}}.",
     ttsText: "我生气了。",
-    en: ["I'm angry (literally: I gave birth to air). Real Mandarin: 我生气了."],
+    en: ["I'm angry (literally: I gave birth to air). Real Mandarin says just this{{hanzi:: 我生气了}}."],
     zh: [],
-    ru: ["Я злюсь (дословно: я родил воздух). Так и говорят по-китайски: 我生气了."],
+    ru: ["Я злюсь (дословно: я родил воздух). Так и говорят по-китайски{{hanzi:: 我生气了}}."],
   },
   {
     type: "example",
@@ -152,9 +152,9 @@ const content: Entry[] = [
   },
   {
     type: "prose",
-    en: ["## Days and calendars", "Days and years have words, {{word:tian1}} and {{word:nian2}}: tomorrow is {{word:ming2}}-{{word:tian1}}, last year {{word:qu4}}-{{word:nian2}}. What's still missing is today and this year (今天, 今年), since 今 isn't a word, and the week, which is seven days."],
+    en: ["## Days and calendars", "Days and years have words, {{word:tian1}} and {{word:nian2}}: tomorrow is {{word:ming2}}-{{word:tian1}}, last year {{word:qu4}}-{{word:nian2}}. What's still missing is today and this year{{hanzi: (今天, 今年)}}, since Mandarin's \"this\" in them{{hanzi: (今)}} isn't a word, and the week, which is seven days."],
     zh: [],
-    ru: ["## Дни и календарь", "У дней и лет есть слова — {{word:tian1}} и {{word:nian2}}: завтра — {{word:ming2}}-{{word:tian1}}, прошлый год — {{word:qu4}}-{{word:nian2}}. Пока нет «сегодня» и «в этом году» (今天, 今年), потому что 今 — не слово, и недели: это семь дней."],
+    ru: ["## Дни и календарь", "У дней и лет есть слова — {{word:tian1}} и {{word:nian2}}: завтра — {{word:ming2}}-{{word:tian1}}, прошлый год — {{word:qu4}}-{{word:nian2}}. Пока нет «сегодня» и «в этом году»{{hanzi: (今天, 今年)}}, потому что китайское «этот» в них{{hanzi: (今)}} — не слово, и недели: это семь дней."],
     tldr: {
       en: ["Days and years have words; today and the week still take a phrase."],
       zh: [],
@@ -170,9 +170,9 @@ const content: Entry[] = [
     type: "example",
     pinyin: "{{Word:zhe4}}-ge {{word:tian1}}.",
     ttsText: "这个天。",
-    en: ["Today (literally: this day; Mandarin says 今天)."],
+    en: ["Today (literally: this day; Mandarin has its own word{{hanzi:, 今天}})."],
     zh: [],
-    ru: ["Сегодня (дословно: этот день; по-китайски 今天)."],
+    ru: ["Сегодня (дословно: этот день; в китайском для этого своё слово{{hanzi:, 今天}})."],
   },
   {
     type: "example",
@@ -248,9 +248,9 @@ const content: Entry[] = [
   },
   {
     type: "prose",
-    en: ["## Tone of voice", "Mandarin softens and colors sentences with small endings like 吧, 呢, and 啊. Hao-shuo-de leaves them out: a suggestion ends with …, {{word:hao3}} {{word:ma}}?, and the rest is said plainly. It's always clear, but it can sound blunt."],
+    en: ["## Tone of voice", "Mandarin softens and colors sentences with small endings{{hanzi: like 吧, 呢 and 啊}}. Hao-shuo-de leaves them out: a suggestion ends with …, {{word:hao3}} {{word:ma}}?, and the rest is said plainly. It's always clear, but it can sound blunt."],
     zh: [],
-    ru: ["## Тон", "Китайский смягчает и окрашивает предложения маленькими окончаниями вроде 吧, 呢 и 啊. В Hǎo-shuō-de их нет: предложение заканчивается на …, {{word:hao3}} {{word:ma}}?, а остальное говорится прямо. Это всегда понятно, но может звучать резко."],
+    ru: ["## Тон", "Китайский смягчает и окрашивает предложения маленькими окончаниями{{hanzi: вроде 吧, 呢 и 啊}}. В Hǎo-shuō-de их нет: предложение заканчивается на …, {{word:hao3}} {{word:ma}}?, а остальное говорится прямо. Это всегда понятно, но может звучать резко."],
     tldr: {
       en: ["Without Mandarin's soft endings, sentences can sound blunt."],
       zh: [],
@@ -266,15 +266,15 @@ const content: Entry[] = [
     type: "example",
     pinyin: "{{Word:wo3}}-{{word:men}} {{word:qu4}}, {{word:hao3}} {{word:ma}}?",
     ttsText: "我们去，好吗？",
-    en: ["Let's go, okay? (Mandarin would say 我们走吧.)"],
+    en: ["Let's go, okay? (Mandarin would add a softening ending{{hanzi:: 我们走吧}}.)"],
     zh: [],
-    ru: ["Пойдём, хорошо? (По-китайски сказали бы 我们走吧.)"],
+    ru: ["Пойдём, хорошо? (По-китайски добавили бы смягчающее окончание{{hanzi:: 我们走吧}}.)"],
   },
   {
     type: "prose",
-    en: ["## Grammar Mandarin has, and Hao-shuo-de skips", "There's no passive word (被): say who did it, or use {{word:rang4}} the way speakers do ({{word:wo3}}-{{word:de}} {{word:bao1}} {{word:rang4}} {{word:ta1}} {{word:na2}}-{{word:zou3}} {{word:le}}, \"my bag got taken by him\"). There's no \"already\": {{word:le}} does the job. \"In order to\", \"only then\", and \"so\" are said with {{word:yin1wei4}} or X-{{word:wan2}} {{word:hou4}}. Nothing is lost, but some sentences have to be turned around."],
+    en: ["## Grammar Mandarin has, and Hao-shuo-de skips", "There's no passive word{{hanzi: (被)}}: say who did it, or use {{word:rang4}} the way speakers do ({{word:wo3}}-{{word:de}} {{word:bao1}} {{word:rang4}} {{word:ta1}} {{word:na2}}-{{word:zou3}} {{word:le}}, \"my bag got taken by him\"). There's no \"already\": {{word:le}} does the job. \"In order to\", \"only then\", and \"so\" are said with {{word:yin1wei4}} or X-{{word:wan2}} {{word:hou4}}. Nothing is lost, but some sentences have to be turned around."],
     zh: [],
-    ru: ["## Грамматика, которая есть в китайском, но не в Hǎo-shuō-de", "Слова для страдательного залога (被) нет: говорят, кто это сделал, или используют {{word:rang4}}, как в речи ({{word:wo3}}-{{word:de}} {{word:bao1}} {{word:rang4}} {{word:ta1}} {{word:na2}}-{{word:zou3}} {{word:le}} — «мою сумку забрал он»). Нет «уже»: его работу делает {{word:le}}. «Чтобы», «только тогда» и «поэтому» говорят через {{word:yin1wei4}} или X-{{word:wan2}} {{word:hou4}}. Ничего не теряется, но некоторые фразы приходится переворачивать."],
+    ru: ["## Грамматика, которая есть в китайском, но не в Hǎo-shuō-de", "Слова для страдательного залога{{hanzi: (被)}} нет: говорят, кто это сделал, или используют {{word:rang4}}, как в речи ({{word:wo3}}-{{word:de}} {{word:bao1}} {{word:rang4}} {{word:ta1}} {{word:na2}}-{{word:zou3}} {{word:le}} — «мою сумку забрал он»). Нет «уже»: его работу делает {{word:le}}. «Чтобы», «только тогда» и «поэтому» говорят через {{word:yin1wei4}} или X-{{word:wan2}} {{word:hou4}}. Ничего не теряется, но некоторые фразы приходится переворачивать."],
     tldr: {
       en: ["No passive and no \"already\": say who did it, and use le."],
       zh: [],

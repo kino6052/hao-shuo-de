@@ -33,7 +33,7 @@
 // rather than silently dropping content.
 
 import { marked } from 'marked';
-import { resolveWordRefs } from './word-refs.js';
+import { resolveLessonRefs, resolveWordRefs } from './word-refs.js';
 
 // Chapter view objects use the long-form codes ('eng'/'rus'/'zh') everywhere
 // else in the app (see content-registry.js's LANGS); *.ts entries use the
@@ -48,12 +48,15 @@ const INFO_BLOCK_ICONS = { info: 'ℹ️', warning: '⚠️' };
 // "nothing here for this language" -- same as the old i18n-object pick().
 // `chapterTitles` ({ [lang]: Map(chapter id -> title) }) resolves {{title:..}}
 // refs: only intro-3's table of contents uses them (src/lib/content-registry.js).
-function pick(obj, lang, { wordIndex, wordCount, chapterTitles } = {}) {
+// `markup` writes the word refs as <hsd-w> elements (src/lib/word-refs.js), for text shown on the page: HTML, or a
+// string the component shows through Rich (src/components/Hsd.jsx). Titles and alt text stay plain pinyin.
+function pick(obj, lang, { wordIndex, wordCount, chapterTitles } = {}, markup = false) {
   const sentences = obj && obj[LANG_KEYS[lang]];
   if (!sentences || sentences.length === 0) return undefined;
   const text = sentences.join('\n');
-  return wordIndex ? resolveWordRefs(text, wordIndex, wordCount, chapterTitles?.[lang]) : text;
+  return wordIndex ? resolveWordRefs(text, wordIndex, wordCount, chapterTitles?.[lang], { markup }) : text;
 }
+const show = (obj, lang, refs) => pick(obj, lang, refs, true);
 
 // Non-i18n fields (a vocab entry's `term`, an example/story's `pinyin`) can
 // still contain {{word:..}} refs -- e.g. a hyphenated example built from
@@ -71,7 +74,7 @@ const escapeAttr = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;
 function renderInfoItems(items, lang, ordered, refs, onMissing, start) {
   const rendered = [];
   for (const item of items) {
-    const text = pick(item.text, lang, refs);
+    const text = show(item.text, lang, refs);
     if (text === undefined) { onMissing(); continue; }
     const childHtml = item.items && item.items.length
       ? renderInfoItems(item.items, lang, Boolean(item.ordered), refs, onMissing)
@@ -85,7 +88,7 @@ function renderInfoItems(items, lang, ordered, refs, onMissing, start) {
 
 function renderInfoBlock(entry, lang, refs, onMissing) {
   const hasTitle = entry.title !== undefined;
-  const title = hasTitle ? pick(entry.title, lang, refs) : undefined;
+  const title = hasTitle ? show(entry.title, lang, refs) : undefined;
   if (hasTitle && title === undefined) onMissing();
 
   // A lesson module's info block is often a single line: show it as a line,
@@ -94,7 +97,7 @@ function renderInfoBlock(entry, lang, refs, onMissing) {
   const single = !hasTitle && !entry.ordered && items.length === 1 && !items[0].items?.length;
   let listHtml;
   if (single) {
-    const text = pick(items[0].text, lang, refs);
+    const text = show(items[0].text, lang, refs);
     if (text === undefined) onMissing();
     listHtml = text === undefined ? '' : `<p class="${entry.type}-block-line">${marked.parseInline(text)}</p>`;
   } else {
@@ -166,7 +169,7 @@ export function buildTsChapterView(meta, entries, lang, refs = {}) {
       case 'title':
         break;
       case 'summary': {
-        const text = pick(entry, lang, refs);
+        const text = show(entry, lang, refs);
         if (text !== undefined) tldrSummary.push({ tldr: text, necessity: undefined, isOverview: true });
         break;
       }
@@ -175,9 +178,9 @@ export function buildTsChapterView(meta, entries, lang, refs = {}) {
         // tldr + necessity (they feed the TL;DR summary); an entry that
         // never got them at all (fields simply absent) is flagged missing
         // just like one whose tldr/necessity is untranslated for `lang`.
-        const text = pick(entry, lang, refs);
-        const tldr = pick(entry.tldr, lang, refs);
-        const necessity = pick(entry.necessity, lang, refs);
+        const text = show(entry, lang, refs);
+        const tldr = show(entry.tldr, lang, refs);
+        const necessity = show(entry.necessity, lang, refs);
         if (text === undefined || tldr === undefined || necessity === undefined) missingBlocks.push(index);
         if (text !== undefined) {
           const html = marked.parse(text);
@@ -188,31 +191,32 @@ export function buildTsChapterView(meta, entries, lang, refs = {}) {
         break;
       }
       case 'vocab': {
-        const definition = pick(entry, lang, refs);
+        const definition = show(entry, lang, refs);
         if (definition === undefined) { missingBlocks.push(index); break; }
-        const card = { pinyin: resolveField(entry.term, refs), definition, audioFile: entry.audioFile, ttsText: entry.ttsText };
+        const card = { pinyin: resolveField(entry.term, refs), refs: entry.term, definition, audioFile: entry.audioFile, ttsText: entry.ttsText };
         vocab.push(card);
         addToFlow('vocab', card);
         break;
       }
       case 'example':
       case 'story': {
-        const translation = pick(entry, lang, refs);
+        const translation = show(entry, lang, refs);
         if (translation === undefined) { missingBlocks.push(index); break; }
-        const line = { pinyin: resolveField(entry.pinyin, refs), translation, audioFile: entry.audioFile, ttsText: entry.ttsText };
+        const line = { pinyin: resolveField(entry.pinyin, refs), refs: entry.pinyin, translation, audioFile: entry.audioFile, ttsText: entry.ttsText };
         if (entry.type === 'story') story.push(line);
         else examples.push(line);
         addToFlow(entry.type === 'story' ? 'story' : 'examples', line);
         break;
       }
       case 'image': {
-        const translation = pick(entry, lang, refs);
+        const translation = show(entry, lang, refs);
         const alt = pick(entry.alt, lang, refs);
         if (translation === undefined || alt === undefined) { missingBlocks.push(index); break; }
         addToFlow('image', {
           file: entry.file,
           alt,
           pinyin: resolveField(entry.pinyin, refs),
+          refs: entry.pinyin,
           translation,
           audioFile: entry.audioFile,
           ttsText: entry.ttsText,
@@ -220,7 +224,7 @@ export function buildTsChapterView(meta, entries, lang, refs = {}) {
         break;
       }
       case 'exercise': {
-        const text = pick(entry, lang, refs);
+        const text = show(entry, lang, refs);
         if (text === undefined) { missingBlocks.push(index); break; }
         exercise.push(text);
         addToFlow('exercise', exercise.length - 1);
@@ -229,7 +233,7 @@ export function buildTsChapterView(meta, entries, lang, refs = {}) {
       case 'answer': {
         const text = pick(entry, lang, refs);
         if (text === undefined) { missingBlocks.push(index); break; }
-        answers.push({ text, audioFile: entry.audioFile, ttsText: entry.ttsText });
+        answers.push({ text, refs: resolveLessonRefs(entry[LANG_KEYS[lang]].join('\n')), audioFile: entry.audioFile, ttsText: entry.ttsText });
         break;
       }
       case 'info':
@@ -247,7 +251,7 @@ export function buildTsChapterView(meta, entries, lang, refs = {}) {
         break;
       }
       case 'video': {
-        const caption = pick(entry, lang, refs);
+        const caption = show(entry, lang, refs);
         const alt = pick(entry.alt, lang, refs);
         if (caption === undefined || alt === undefined) { missingBlocks.push(index); break; }
         const html = (
@@ -265,8 +269,8 @@ export function buildTsChapterView(meta, entries, lang, refs = {}) {
         break;
       }
       case 'faq': {
-        const question = pick(entry.question, lang, refs);
-        const answer = pick(entry, lang, refs);
+        const question = show(entry.question, lang, refs);
+        const answer = show(entry, lang, refs);
         if (question === undefined || answer === undefined) { missingBlocks.push(index); break; }
         addToFlow('faq', { question: marked.parseInline(question), answerHtml: marked.parse(answer) });
         break;

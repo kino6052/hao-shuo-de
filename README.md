@@ -51,8 +51,8 @@ Plans and decisions: [BOOK_PLAN.md](BOOK_PLAN.md) (book, decision log D1…), [K
 | Things the language must say | 113: 65 atoms of meaning, 10 categories, 38 grammar points |
 | Lesson sentences that parse | 99.4 % |
 | Smallest set the others can be said from | 202 words; the other 28 have a fine paraphrase |
-| Gates (`npm run check`) | 24 |
-| Test files (`npm test`) | 102 |
+| Gates (`npm run check`) | 25 |
+| Test files (`npm test`) | 103 |
 
 The language numbers are the last row of `kb/scoreboard.csv` (2026-10-21, refactors/YT2.ts: 4 op(s)); a refactor adds a new row.
 <!-- /generated:facts -->
@@ -279,6 +279,7 @@ The summaries come from the comment at the top of each script, which also shows 
 | `npm run check-passive` | Passive gate: Hao-shuo-de says the passive the spoken way, with ràng (X ràng Y + verb: wǒ-de bāo ràng tā ná-zǒu le), never with 被 / bèi (the author's rule, review batch 10). |
 | `node scripts/check-yardsticks.js` | Yardstick gate: every word of the word lists is covered, the finish line of KB_PLAN.md Phase 9 (K30). |
 | `npm run check-tests` | Tests gate (BOOK_PLAN.md Phase 5, §6): the question pools of the lesson tests and the final exam (src/lib/quiz/). |
+| `npm run check-hanzi` | Hanzi gate: with the default setting (pinyin, src/lib/settings.js) no page of the book shows a Chinese character. |
 <!-- /generated:gates -->
 
 ## Changing the language

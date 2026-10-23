@@ -2,6 +2,7 @@ import { useState } from 'preact/hooks';
 import { t } from '../lib/i18n.js';
 import { AudioButton } from './AudioButton.jsx';
 import { ShadowBox } from './ShadowBox.jsx';
+import { Hsd, Rich } from './Hsd.jsx';
 import styles from './PracticeExercise.module.css';
 
 // `start` is the index of the first question, so numbering carries on when a
@@ -22,10 +23,10 @@ export function PracticeExercise({ questions, answers, lang, start = 0 }) {
       </div>
       {questions.map((q, i) => (
         <ShadowBox key={i} class={styles.item} pinyin={showAnswers && answers?.[i]?.text} audioFile={answers?.[i]?.audioFile}>
-          <div class={styles.question}><b>{start + i + 1}.</b> {q}</div>
+          <div class={styles.question}><b>{start + i + 1}.</b> <Rich text={q} /></div>
           {showAnswers && answers && answers[i] && (
             <div class={styles.answer}>
-              → {answers[i].text}
+              → <Hsd pinyin={answers[i].text} refs={answers[i].refs} hanzi={answers[i].ttsText} />
               <AudioButton shadow pinyin={answers[i].text} audioFile={answers[i].audioFile} ttsText={answers[i].ttsText} />
             </div>
           )}

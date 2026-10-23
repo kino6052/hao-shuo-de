@@ -24,8 +24,8 @@ export default word("li3", {
       rus: "смысл, порядок",
       compounds: ["dao4 li3"],
       why: {
-        eng: "Written 理, {{word:li3}} means reason in {{word:dao4}}-{{word:li3}}; on its own it is inside.",
-        rus: "Записанное как 理, {{word:li3}} значит «смысл, порядок» в {{word:dao4}}-{{word:li3}}; само по себе — «внутри».",
+        eng: "{{hanzi:Written 理, }}{{word:li3#reason}} means reason in {{word:dao4}}-{{word:li3}}; on its own it is inside.",
+        rus: "{{hanzi:Записанное как 理, }}{{word:li3#reason}} значит «смысл, порядок» в {{word:dao4}}-{{word:li3}}; само по себе — «внутри».",
       },
     },
   },

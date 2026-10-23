@@ -23,8 +23,8 @@ export default word("gong1", {
       rus: "общий",
       compounds: ["gong1 yuan2"],
       why: {
-        eng: "Written 公, {{word:gong1}} means public in {{word:gong1}}-{{word:yuan2}}; on its own it is work.",
-        rus: "Записанное как 公, {{word:gong1}} значит «общий» в {{word:gong1}}-{{word:yuan2}}; само по себе — «работа».",
+        eng: "{{hanzi:Written 公, }}{{word:gong1#public}} means public in {{word:gong1}}-{{word:yuan2}}; on its own it is work.",
+        rus: "{{hanzi:Записанное как 公, }}{{word:gong1#public}} значит «общий» в {{word:gong1}}-{{word:yuan2}}; само по себе — «работа».",
       },
     },
   },

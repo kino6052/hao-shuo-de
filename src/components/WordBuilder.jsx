@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from "preact/hooks";
 import dictionary from "../data/dictionary.ts";
 import { t } from "../lib/i18n.js";
 import { AudioButton } from "./AudioButton.jsx";
+import { Hsd, Zh } from "./Hsd.jsx";
 import { WordPicker } from "./WordPicker.jsx";
 import { getAtPath, setAtPath } from "../lib/sentence-builder.js";
 import { WORD_HANZI } from "../lib/word-hanzi.js";
@@ -225,7 +226,7 @@ function DictionaryWords({ lang, onOpen }) {
   );
 }
 
-// The built word: pinyin, hanzi with audio, and what it means, question by question.
+// The built word in the reader's script with audio, and what it means, question by question.
 function Result({ root, source, lang, label, onReset }) {
   if (!root) {
     return (
@@ -241,15 +242,13 @@ function Result({ root, source, lang, label, onReset }) {
     <div class={styles.output}>
       {source && (
         <div class={styles.source}>
-          {t(lang, "wbDictWord")} <b>{meaningOf(source, lang)}</b> · <span lang="zh">{source.zh}</span>
+          {t(lang, "wbDictWord")} <b>{meaningOf(source, lang)}</b>
+          {lang !== "zh" && <Zh text={source.zh} before=" · " />}
         </div>
       )}
       <div class={styles.wordRow}>
-        <span class={styles.wordText}>{pinyin}</span>
+        <Hsd class={styles.wordText} pinyin={pinyin} hanzi={hanzi} />
         <AudioButton pinyin={pinyin} ttsText={hanzi} />
-      </div>
-      <div class={styles.hanzi} lang="zh">
-        {hanzi}
       </div>
       <div class={styles.gloss}>
         <div class={styles.glossBase}>{gloss.text}</div>

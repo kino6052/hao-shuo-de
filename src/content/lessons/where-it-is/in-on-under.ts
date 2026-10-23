@@ -37,7 +37,7 @@ export default lessonModule({
       "",
       "For under, say {{word:xia4}}-{{word:mian4}} (the bottom side): {{word:bao1}}-{{word:de}} {{word:xia4}}-{{word:mian4}}.",
       "{{word:wang3}} is a net, and the internet too: {{word:zai4}} {{word:wang3}}-{{word:shang4}} is online.",
-      "{{word:hua4}}-{{word:mian4}} is the side you look at, a picture or scene: here {{word:hua4}} is written 画, draw.",
+      "{{word:hua4}}-{{word:mian4}} is the side you look at, a picture or scene: here {{word:hua4#draw}} means draw.",
     ],
     ru: [
       "**Чтобы сказать «в» или «на» чём-то**, присоедините {{word:li3}} (в) или {{word:shang4}} (на) к месту.",
@@ -47,7 +47,7 @@ export default lessonModule({
       "В русском «в» и «на» стоят перед словом, а в китайском — после него: {{word:bao1}}-{{word:li3}}, «сумка-в».",
       "Чтобы сказать «под», говорите {{word:xia4}}-{{word:mian4}} (нижняя сторона): {{word:bao1}}-{{word:de}} {{word:xia4}}-{{word:mian4}}.",
       "{{word:wang3}} — сеть, и интернет тоже: {{word:zai4}} {{word:wang3}}-{{word:shang4}} — в интернете.",
-      "{{word:hua4}}-{{word:mian4}} — сторона, на которую смотрят: картинка, кадр. Здесь {{word:hua4}} пишется 画, «рисовать».",
+      "{{word:hua4}}-{{word:mian4}} — сторона, на которую смотрят: картинка, кадр. Здесь {{word:hua4#draw}} значит «рисовать».",
     ],
     tldr: {
       en: "Join {{word:li3}} (in) or {{word:shang4}} (on) to the place: {{word:bao1}}-{{word:li3}}, in the bag.",

@@ -23,8 +23,8 @@ export default word("ji1", {
       rus: "курица",
       compounds: ["ji1 dan4"],
       why: {
-        eng: "Written 鸡, {{word:ji1}} means chicken in {{word:ji1}}-{{word:dan4}}; on its own it is machine.",
-        rus: "Записанное как 鸡, {{word:ji1}} значит «курица» в {{word:ji1}}-{{word:dan4}}; само по себе — «машина».",
+        eng: "{{hanzi:Written 鸡, }}{{word:ji1#chicken}} means chicken in {{word:ji1}}-{{word:dan4}}; on its own it is machine.",
+        rus: "{{hanzi:Записанное как 鸡, }}{{word:ji1#chicken}} значит «курица» в {{word:ji1}}-{{word:dan4}}; само по себе — «машина».",
       },
     },
   },

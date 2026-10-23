@@ -22,8 +22,8 @@ export default word("you4", {
       eng: "right (side)",
       rus: "правый",
       why: {
-        eng: "Written 右, {{word:you4}} means right in {{word:you4}}-{{word:bian1}}; on its own it is again.",
-        rus: "Записанное как 右, {{word:you4}} значит «правый» в {{word:you4}}-{{word:bian1}}; само по себе — «снова».",
+        eng: "{{hanzi:Written 右, }}{{word:you4#right}} means right in {{word:you4}}-{{word:bian1}}; on its own it is again.",
+        rus: "{{hanzi:Записанное как 右, }}{{word:you4#right}} значит «правый» в {{word:you4}}-{{word:bian1}}; само по себе — «снова».",
       },
       compounds: ["you4 bian1"],
     },

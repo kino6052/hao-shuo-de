@@ -5,7 +5,7 @@ export default composite({
   phase: 4,
   zh: "一带",
   py: "yídài",
-  en: "the area around; region; neighbourhood (as in 北京一带)",
+  en: "the area around; region; neighbourhood (as in the area around Beijing)",
   ru: "район; окрестности",
   pos: "noun",
   hsd: [

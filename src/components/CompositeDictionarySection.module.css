@@ -141,11 +141,6 @@
 
 .exPinyin { font-weight: 600; }
 
-.exHanzi {
-  margin: 0 8px 0 4px;
-  color: var(--text-body);
-}
-
 .exGloss {
   color: var(--text-muted);
   font-style: italic;
