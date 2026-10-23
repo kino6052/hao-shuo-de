@@ -1,0 +1,27 @@
+id: final-exam
+type: final-exam
+order: 0
+title:
+  eng: "Final Exam"
+  rus: ""
+  zh: ""
+
+summary:
+  eng: "Sixty questions from every lesson, to see what you know and what to read again."
+  rus: ""
+  zh: ""
+
+blocks:
+  - type: prose
+    text:
+      eng: "The exam asks 60 questions from all the lessons. A lesson with more words and examples gets more questions. You pass with 80 out of every 100 right. At the end you see your score, how you did in each lesson, which lessons to read again, and the words you missed. You can take it as often as you like, and every try is new."
+      rus: ""
+      zh: ""
+    tldr:
+      eng: "Sixty questions from the whole book; 80% is a pass."
+      rus: ""
+      zh: ""
+    necessity:
+      eng: "It shows what you know and what to read again."
+      rus: ""
+      zh: ""

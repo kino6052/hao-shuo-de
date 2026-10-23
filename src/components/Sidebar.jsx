@@ -1,4 +1,4 @@
-import { useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 import { ProgressBar } from "./ProgressBar.jsx";
 import { FontSelector } from "./FontSelector.jsx";
 import { AccountBox } from "./AccountBox.jsx";
@@ -7,7 +7,8 @@ import { AD_SLOT_SIDEBAR } from "../lib/tracking-config.js";
 import { useAuth } from "../lib/auth.js";
 import { parseUrl } from "../lib/router.js";
 import { LANG_CONFIG, t } from "../lib/i18n.js";
-import { SECTIONS, BACK_MATTER, sectionKeyForLesson, groupKeyForChapter } from "../content/book.js";
+import { SECTIONS, BACK_MATTER, FINAL_EXAM_ID, sectionKeyForLesson, groupKeyForChapter } from "../content/book.js";
+import { loadRecord, subscribeRecord } from "../lib/quiz/progress.js";
 import styles from "./Sidebar.module.css";
 
 export function Sidebar({
@@ -27,9 +28,14 @@ export function Sidebar({
   const total = sections.length;
   const done = sections.filter((s) => completed.has(s.id)).length;
 
+  // the best test scores (src/lib/quiz/progress.js), a small mark on each lesson; updated after every try
+  const [tests, setTests] = useState(() => (typeof localStorage === "undefined" ? {} : loadRecord(localStorage).tests));
+  useEffect(() => subscribeRecord((r) => setTests(r.tests)), []);
+
   const intros = sections.filter((s) => s.type === "intro");
   const lessons = sections.filter((s) => s.type === "lesson");
-  const others = sections.filter((s) => !["intro", "lesson"].includes(s.type));
+  const finalExam = sections.filter((s) => s.id === FINAL_EXAM_ID);
+  const others = sections.filter((s) => !["intro", "lesson"].includes(s.type) && s.id !== FINAL_EXAM_ID);
 
   // Group lessons by the sections in src/content/book.js, like intro-3's
   // table of contents. A lesson that isn't in the book yet falls through
@@ -111,6 +117,7 @@ export function Sidebar({
             completed={completed}
             currentId={currentId}
             onGo={go}
+            tests={tests}
           />
         ))}
         {unsectionedLessons.length > 0 && (
@@ -120,6 +127,16 @@ export function Sidebar({
             completed={completed}
             currentId={currentId}
             onGo={go}
+          />
+        )}
+        {finalExam.length > 0 && (
+          <TocGroup
+            label={t(lang, "finalExam")}
+            items={finalExam}
+            completed={completed}
+            currentId={currentId}
+            onGo={go}
+            tests={tests}
           />
         )}
         {otherGroups.map((g) => (
@@ -171,7 +188,8 @@ export function Sidebar({
   );
 }
 
-function TocGroup({ label, items, completed, currentId, onGo }) {
+// tests: { id: { best, total } } -- a lesson with a test score shows it, small, after its name
+function TocGroup({ label, items, completed, currentId, onGo, tests = {} }) {
   return (
     <div class={styles.tocGroup}>
       <div class={styles.tocLabel}>{label}</div>
@@ -188,6 +206,11 @@ function TocGroup({ label, items, completed, currentId, onGo }) {
               {done ? "✓" : ""}
             </span>
             {item.tocLabel}
+            {tests[item.id] && (
+              <span class={styles.testMark} title={`${tests[item.id].best} / ${tests[item.id].total}`}>
+                {" "}{tests[item.id].best}/{tests[item.id].total}
+              </span>
+            )}
           </button>
         );
       })}

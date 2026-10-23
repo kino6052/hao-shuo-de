@@ -24,4 +24,5 @@ export const GATES = [
   ['check-word-builder', []],
   ['check-passive', []],
   ['check-yardsticks', ['--summary']],
+  ['check-tests', ['--summary']],
 ];

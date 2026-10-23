@@ -36,6 +36,10 @@
       "label": "Hao-shuo-de is not toki pona",
       "order": 2
     },
+    "final-exam": {
+      "label": "Final Exam",
+      "order": 0
+    },
     "also-and-all": {
       "label": "Modifiers 3 — Also and all",
       "order": 999

@@ -29,6 +29,9 @@ const SentenceBuilder = lazyPage(() => import('./components/SentenceBuilder.jsx'
 const WordBuilder = lazyPage(() => import('./components/WordBuilder.jsx'), 'WordBuilder');
 const WordMap = lazyPage(() => import('./components/WordMap.jsx'), 'WordMap');
 const Akinator = lazyPage(() => import('./components/Akinator.jsx'), 'Akinator');
+// The lesson test and the final exam (BOOK_PLAN.md Phase 5): their own chunk, which fetches the lessons on start.
+const LessonTest = lazyPage(() => import('./components/LessonTest.jsx'), 'LessonTest');
+const FinalExam = lazyPage(() => import('./components/FinalExam.jsx'), 'FinalExam');
 
 function renderContent(s, lang) {
   const type = s.meta.type;
@@ -86,6 +89,14 @@ function renderContent(s, lang) {
       </>
     );
   }
+  if (type === 'final-exam') {
+    return (
+      <>
+        {s.bodyHtml && <div class="prose-body" dangerouslySetInnerHTML={{ __html: s.bodyHtml }} />}
+        <FinalExam lang={lang} />
+      </>
+    );
+  }
   if (type === 'word-builder') {
     return (
       <>
@@ -102,6 +113,7 @@ function renderContent(s, lang) {
         {s.missingBlocks && <MissingTranslationBanner blocks={s.missingBlocks} lang={lang} />}
         {s.tldrSummary && <TldrSummary key={s.meta.id} items={s.tldrSummary} lang={lang} />}
         <LessonFlow flow={s.flow} lang={lang} />
+        {type === 'lesson' && <LessonTest key={s.meta.id} lessonId={s.meta.id} lang={lang} />}
       </>
     );
   }

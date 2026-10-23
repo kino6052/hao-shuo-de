@@ -108,6 +108,14 @@
   border-color: var(--accent);
   background: var(--accent);
 }
+/* a lesson's best test score (src/lib/quiz/progress.js) */
+.testMark {
+  margin-left: auto;
+  padding-left: 6px;
+  font-size: 11px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
 
 .tagline {
   margin-top: auto;

@@ -47,7 +47,7 @@ import { resolve } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { LESSON_IDS, lessonNumber, lessonFolders, lessonFile } from './lessons.js';
 import { INTRO_IDS, importIntroFile } from './intros.js';
-import { BACK_MATTER_IDS } from '../src/content/book.js';
+import { BACK_MATTER_IDS, FINAL_EXAM_ID } from '../src/content/book.js';
 import { findJargon } from './jargon.js';
 import { SUMMARY_MAX_WORDS, TLDR_MAX_WORDS, MAX_SECTIONS_PER_LESSON, READING_MODULE, countWords } from './limits.js';
 import { buildOverview, renderOverview } from './generate-grammar-overview.js';
@@ -101,7 +101,8 @@ for (const id of LESSON_IDS.filter((id) => folders.includes(id))) {
   for (const id of Object.keys(LESSON_BLURBS)) if (!LESSON_IDS.includes(id)) errors.push(`intro-3: LESSON_BLURBS has "${id}", which isn't in src/content/book.js`);
 
   // Every chapter that isn't an intro or a lesson is in one BACK_MATTER group
-  // of book.js, and intro-3 has a line for it.
+  // of book.js, and intro-3 has a line for it -- except the final exam, which
+  // sits right after the lessons (FINAL_EXAM_ID, BOOK_PLAN.md Q8).
   const chapters = [];
   for (const file of readdirSync(CONTENT_DIR)) {
     const path = resolve(CONTENT_DIR, file);
@@ -113,7 +114,7 @@ for (const id of LESSON_IDS.filter((id) => folders.includes(id))) {
       chapters.push((await import(pathToFileURL(path))).meta.id);
     }
   }
-  for (const id of chapters) if (!BACK_MATTER_IDS.includes(id)) errors.push(`chapter "${id}" isn't in a BACK_MATTER group of src/content/book.js`);
+  for (const id of chapters) if (!BACK_MATTER_IDS.includes(id) && id !== FINAL_EXAM_ID) errors.push(`chapter "${id}" isn't in a BACK_MATTER group of src/content/book.js`);
   for (const id of BACK_MATTER_IDS) if (!chapters.includes(id)) errors.push(`src/content/book.js BACK_MATTER lists "${id}", but no chapter has that id`);
   const twice = BACK_MATTER_IDS.filter((id, i) => BACK_MATTER_IDS.indexOf(id) !== i);
   if (twice.length) errors.push(`src/content/book.js BACK_MATTER lists ${twice.join(', ')} more than once`);

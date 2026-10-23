@@ -57,6 +57,10 @@ export const SECTIONS = [
   },
 ];
 
+// The final exam (BOOK_PLAN.md §3, Q8): a chapter right after the last lesson, outside the lesson numbers and
+// the back-matter groups, so the book keeps its lessons as intro-3 lists them.
+export const FINAL_EXAM_ID = "final-exam";
+
 // After the lessons: everything that isn't a lesson, in four groups, by
 // chapter id. Content is to read and use (the phrase book, the stories),
 // reference explains how the language works, tools are dictionaries and

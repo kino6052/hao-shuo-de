@@ -16,7 +16,7 @@ import { readFileSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { chapterTitle } from '../src/lib/chapter-content.js';
-import { lessonNumber, BACK_MATTER_IDS } from '../src/content/book.js';
+import { lessonNumber, BACK_MATTER_IDS, FINAL_EXAM_ID } from '../src/content/book.js';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT_DIR = resolve(ROOT, 'src/content');
@@ -30,6 +30,7 @@ const TYPE_ORDER = { intro: 0, lesson: 1, dictionary: 3, 'sentence-builder': 3.5
 function rank(meta) {
   if (meta.type === 'intro') return [0, meta.order || 0];
   if (meta.type === 'lesson') return [1, meta.order || 0];
+  if (meta.id === FINAL_EXAM_ID) return [1, Infinity]; // right after the last lesson (Q8)
   const i = BACK_MATTER_IDS.indexOf(meta.id);
   if (i >= 0) return [2, i];
   return [3 + (TYPE_ORDER[meta.type] ?? 99), meta.order || 0];
