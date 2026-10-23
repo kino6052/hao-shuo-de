@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./index.esm-AXXHJUNl.js","./index.esm-B82kxUNv.js"])))=>i.map(i=>d[i]);
+import{_ as s,w as t,x as i}from"./app-DGRmcCBM.js";let o=null;function l(){return o??(o=(async()=>{const r=await s(()=>import("./index.esm-AXXHJUNl.js"),__vite__mapDeps([0,1]),import.meta.url),e=r.getFirestore(await t());return i&&r.connectFirestoreEmulator(e,i,8085),{fs:r,db:e}})()),o}const n=r=>r!=null&&r.toMillis?r.toMillis():typeof r=="number"?r:null;export{l as f,n as m};
