@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'preact/hooks';
-import { cycleSpeed, getSpeed, playAudio, subscribeSpeed } from '../lib/audio.js';
+import { cycleSpeed, cycleVoice, getSpeed, getVoice, playAudio, subscribeSpeed, subscribeVoice } from '../lib/audio.js';
 import { getState, hasRecording, playMineThenOriginal, sentenceKey, subscribe, toggleRecording } from '../lib/shadow.js';
 import styles from './AudioButton.module.css';
 
@@ -10,7 +10,8 @@ function useRerender(subscribeTo) {
   useEffect(() => subscribeTo(() => setTick((t) => t + 1)), []);
 }
 
-// `shadow` adds the shadowing-practice buttons: record yourself, hear yourself then the original, slow the original down.
+// `shadow` adds the shadowing-practice buttons: record yourself, hear yourself then the original, slow the original
+// down, and switch the original between the female and the male voice.
 export function AudioButton({ pinyin, audioFile, ttsText, shadow = false }) {
   const play = (e) => { e.stopPropagation(); playAudio(pinyin, audioFile, ttsText); };
   const speaker = (
@@ -28,6 +29,7 @@ export function AudioButton({ pinyin, audioFile, ttsText, shadow = false }) {
 function Shadowing({ pinyin, audioFile, ttsText, speaker }) {
   useRerender(subscribe);
   useRerender(subscribeSpeed);
+  useRerender(subscribeVoice);
   const key = sentenceKey(pinyin, audioFile);
   const { key: activeKey, phase, error } = getState();
   const mine = activeKey === key;
@@ -70,6 +72,14 @@ function Shadowing({ pinyin, audioFile, ttsText, speaker }) {
         title="Speed of the original"
       >
         {getSpeed()}×
+      </button>
+      <button
+        class={`${styles.btn} ${styles.speed}`}
+        onClick={(e) => { stop(e); cycleVoice(); }}
+        aria-label={`Original voice ${getVoice()}; press to change`}
+        title="Voice of the original: female or male"
+      >
+        {getVoice() === 'female' ? '♀' : '♂'}
       </button>
       {error && mine && <span class={styles.error}>{error}</span>}
     </span>

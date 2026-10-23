@@ -42,6 +42,37 @@ export function subscribeSpeed(fn) {
   return () => speedListeners.delete(fn);
 }
 
+// ---- The voice of the original clip: female (public/audio/) or male (public/audio/male/) ----
+
+export const VOICES = ['female', 'male'];
+const VOICE_KEY = 'hsd-audio-voice';
+const voiceListeners = new Set();
+
+let voice = (() => {
+  try {
+    const saved = localStorage.getItem(VOICE_KEY);
+    return VOICES.includes(saved) ? saved : 'female';
+  } catch {
+    return 'female';
+  }
+})();
+
+export function getVoice() {
+  return voice;
+}
+
+export function cycleVoice() {
+  voice = VOICES[(VOICES.indexOf(voice) + 1) % VOICES.length];
+  try { localStorage.setItem(VOICE_KEY, voice); } catch { /* private window */ }
+  voiceListeners.forEach((fn) => fn());
+  return voice;
+}
+
+export function subscribeVoice(fn) {
+  voiceListeners.add(fn);
+  return () => voiceListeners.delete(fn);
+}
+
 // ---- One thing plays at a time ----
 
 let stopCurrent = null;
@@ -69,11 +100,11 @@ function run(start) {
   });
 }
 
-// The original clip, at the chosen speed; falls back to the browser's voice.
+// The original clip, in the chosen voice and at the chosen speed; falls back to the browser's voice.
 export function playAudio(pinyin, audioFile, ttsText) {
   const fallback = ttsText || pinyin;
   const slug = audioFile || slugify(pinyin);
-  const src = assetUrl(`audio/${slug}.mp3`);
+  const src = assetUrl(voice === 'female' ? `audio/${slug}.mp3` : `audio/${voice}/${slug}.mp3`);
 
   return run((finish) => {
     const audio = new Audio(src);

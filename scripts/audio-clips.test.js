@@ -1,8 +1,8 @@
 import { describe, expect, test } from 'bun:test';
-import { mkdtempSync, writeFileSync } from 'fs';
+import { mkdirSync, mkdtempSync, writeFileSync } from 'fs';
 import { tmpdir } from 'os';
 import { join } from 'path';
-import { audioStatus, clipHash } from './audio-clips.js';
+import { VOICES, audioStatus, clipHash } from './audio-clips.js';
 
 // A folder with these clips, as files.
 const folder = (...slugs) => {
@@ -44,5 +44,24 @@ describe('audioStatus', () => {
   test('another voice or speed would change the hash too', () => {
     expect(clipHash('你好。')).toBe(clipHash('你好。'));
     expect(clipHash('你好。')).not.toBe(clipHash('你好'));
+  });
+
+  test('the male voice keeps its own clips: a female hash is stale for it, and the other way round', () => {
+    const male = VOICES.male.voice;
+    expect(clipHash('你好。', male)).not.toBe(clipHash('你好。'));
+    const clips = book({ ni_hao: '你好。' });
+    expect(audioStatus(clips, { ni_hao: clipHash('你好。', male) }, folder('ni_hao'), male).stale).toEqual([]);
+    expect(audioStatus(clips, { ni_hao: clipHash('你好。') }, folder('ni_hao'), male).stale).toEqual(['ni_hao']);
+  });
+
+  test('the male folder sits inside the female one, but its files are not orphans of the female voice', () => {
+    const dir = folder('ni_hao');
+    const male = join(dir, 'male');
+    mkdirSync(male);
+    writeFileSync(join(male, 'ni_hao.mp3'), 'x');
+    const clips = book({ ni_hao: '你好。' });
+    expect(audioStatus(clips, { ni_hao: clipHash('你好。') }, dir).orphans).toEqual([]);
+    expect(audioStatus(clips, { ni_hao: clipHash('你好。', VOICES.male.voice) }, male, VOICES.male.voice))
+      .toEqual({ missing: [], stale: [], unrecorded: [], orphans: [] });
   });
 });

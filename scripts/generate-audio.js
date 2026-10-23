@@ -8,26 +8,36 @@
 //   node scripts/generate-audio.js --list     # only list what would be made
 //   node scripts/generate-audio.js --prune    # also delete the clips the book no longer asks for
 //   node scripts/generate-audio.js --adopt    # once: trust the clips that have no manifest line, and write it
+//   node scripts/generate-audio.js --voice male   # the same for the male voice (public/audio/male/); female is the default
 
 import { mkdirSync, rmSync } from "fs";
 import { join } from "path";
 import { spawn } from "child_process";
-import { OUT, RATE, VOICE, audioStatus, clipHash, collectClips, readManifest, writeManifest } from "./audio-clips.js";
+import { RATE, VOICES, audioStatus, clipHash, collectClips, readManifest, writeManifest } from "./audio-clips.js";
+
+const voiceAt = process.argv.indexOf("--voice");
+const voiceName = voiceAt < 0 ? "female" : process.argv[voiceAt + 1];
+if (!VOICES[voiceName]) {
+  console.error(`--voice takes one of: ${Object.keys(VOICES).join(", ")}`);
+  process.exit(1);
+}
+const { voice: VOICE, dir: OUT, manifest: MANIFEST } = VOICES[voiceName];
+const where = OUT.slice(OUT.lastIndexOf("public")).split("\\").join("/");
 
 const { clips, conflicts } = await collectClips();
-const manifest = readManifest();
+const manifest = readManifest(MANIFEST);
 
 if (process.argv.includes("--adopt")) {
-  const { unrecorded } = audioStatus(clips, manifest);
-  for (const slug of unrecorded) manifest[slug] = clipHash(clips.get(slug).text);
-  writeManifest(manifest);
-  console.log(`adopted ${unrecorded.length} clips into public/audio/manifest.json (they are taken to say what the book says now)`);
+  const { unrecorded } = audioStatus(clips, manifest, OUT, VOICE);
+  for (const slug of unrecorded) manifest[slug] = clipHash(clips.get(slug).text, VOICE);
+  writeManifest(manifest, MANIFEST);
+  console.log(`adopted ${unrecorded.length} clips into ${where}/manifest.json (they are taken to say what the book says now)`);
   process.exit(0);
 }
 
-const { missing, stale, unrecorded, orphans } = audioStatus(clips, manifest);
+const { missing, stale, unrecorded, orphans } = audioStatus(clips, manifest, OUT, VOICE);
 const todo = [...missing, ...stale].map((slug) => [slug, clips.get(slug)]);
-console.log(`${clips.size} clips in the book, ${missing.length} missing, ${stale.length} stale${conflicts.length ? `, ${conflicts.length} clashing names` : ""}`);
+console.log(`${voiceName} voice (${VOICE}): ${clips.size} clips in the book, ${missing.length} missing, ${stale.length} stale${conflicts.length ? `, ${conflicts.length} clashing names` : ""}`);
 if (unrecorded.length) console.log(`${unrecorded.length} clips have no manifest line (--adopt records them as they are)`);
 for (const c of conflicts) console.log(`  clash: ${c}`);
 if (process.argv.includes("--list")) {
@@ -48,7 +58,7 @@ const run = (slug, text) => new Promise((done) => {
       delete manifest[slug];
       console.error(`failed: ${slug} (${text}): ${err.trim().split(/\r?\n/).pop()}`);
     } else {
-      manifest[slug] = clipHash(text);
+      manifest[slug] = clipHash(text, VOICE);
       if (++n % 100 === 0) console.log(`  ${n}/${todo.length}`);
     }
     done();
@@ -61,5 +71,5 @@ if (process.argv.includes("--prune")) {
   for (const slug of orphans) { rmSync(join(OUT, `${slug}.mp3`), { force: true }); delete manifest[slug]; }
   console.log(`deleted ${orphans.length} clips the book no longer asks for`);
 }
-writeManifest(manifest);
-console.log(`made ${n} clips in public/audio/`);
+writeManifest(manifest, MANIFEST);
+console.log(`made ${n} clips in ${where}/`);

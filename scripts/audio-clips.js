@@ -25,8 +25,16 @@ export const MANIFEST = join(OUT, 'manifest.json');
 export const VOICE = 'zh-CN-XiaoxiaoNeural';
 export const RATE = '-15%';
 
+// The voices the book can be read in. The female one came first and keeps public/audio/<slug>.mp3 and its manifest;
+// each other voice has a folder of its own (public/audio/male/<slug>.mp3, with its own manifest.json), so making
+// or changing the clips of one voice never makes the other's stale or orphaned. src/lib/audio.js asks for the same paths.
+export const VOICES = {
+  female: { voice: VOICE, dir: OUT, manifest: MANIFEST },
+  male: { voice: 'zh-CN-YunxiNeural', dir: join(OUT, 'male'), manifest: join(OUT, 'male', 'manifest.json') },
+};
+
 // -> a short hash of what a clip is made from; a change of voice, speed or text changes it
-export const clipHash = (text) => createHash('sha1').update(`${VOICE}|${RATE}|${text}`).digest('hex').slice(0, 10);
+export const clipHash = (text, voice = VOICE) => createHash('sha1').update(`${voice}|${RATE}|${text}`).digest('hex').slice(0, 10);
 
 // -> the sound of a pinyin sentence: its letters, tone marks kept, no spaces, hyphens or punctuation
 const soundOf = (pinyin) => pinyin.normalize('NFC').toLowerCase().replace(/[^\p{L}\p{N}]/gu, '');
@@ -74,17 +82,17 @@ export async function collectClips() {
 }
 
 // -> { slug: hash } of the clips as they were made; {} before the first one
-export function readManifest() {
+export function readManifest(file = MANIFEST) {
   try {
-    return JSON.parse(readFileSync(MANIFEST, 'utf-8'));
+    return JSON.parse(readFileSync(file, 'utf-8'));
   } catch {
     return {};
   }
 }
 
-export function writeManifest(manifest) {
+export function writeManifest(manifest, file = MANIFEST) {
   const sorted = Object.fromEntries(Object.entries(manifest).sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0)));
-  writeFileSync(MANIFEST, `${JSON.stringify(sorted, null, 1)}\n`);
+  writeFileSync(file, `${JSON.stringify(sorted, null, 1)}\n`);
 }
 
 // What is wrong with the clips, given what the book needs.
@@ -93,7 +101,8 @@ export function writeManifest(manifest) {
 //    stale: the file was made from other text (or voice or speed) than the book has now
 //    unrecorded: the file exists but the manifest has no line for it, so nobody knows what it says
 //    orphans: files the book no longer asks for
-export function audioStatus(clips, manifest = readManifest(), dir = OUT) {
+//    voice: the edge-tts voice the clips should be in (VOICES.male.voice for the male folder)
+export function audioStatus(clips, manifest = readManifest(), dir = OUT, voice = VOICE) {
   const files = new Set(existsSync(dir) ? readdirSync(dir).filter((f) => f.endsWith('.mp3')).map((f) => f.slice(0, -4)) : []);
   const missing = [];
   const stale = [];
@@ -101,7 +110,7 @@ export function audioStatus(clips, manifest = readManifest(), dir = OUT) {
   for (const [slug, { text }] of clips) {
     if (!files.has(slug)) missing.push(slug);
     else if (!(slug in manifest)) unrecorded.push(slug);
-    else if (manifest[slug] !== clipHash(text)) stale.push(slug);
+    else if (manifest[slug] !== clipHash(text, voice)) stale.push(slug);
   }
   const orphans = [...files].filter((slug) => !clips.has(slug));
   return { missing, stale, unrecorded, orphans };
