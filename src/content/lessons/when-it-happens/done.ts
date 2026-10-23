@@ -16,14 +16,14 @@ export default lessonModule({
       ru: "спать",
     },
     {
-      word: "fa1",
-      en: "send out; fā-shēng: happen",
-      ru: "выпускать; fā-shēng: случаться",
-    },
-    {
       word: "sheng1",
       en: "be born, give birth",
       ru: "рождаться, рожать",
+    },
+    {
+      word: "fa1",
+      en: "send out; fā-shēng: happen",
+      ru: "выпускать; fā-shēng: случаться",
     },
   ],
   prose: {

@@ -6,6 +6,11 @@
   margin: 0 0 28px;
 }
 
+/* the copy at the end of a lesson, right before the test (Quiz.module.css .wrap keeps the gap below) */
+.end {
+  margin: 32px 0 0;
+}
+
 .header {
   display: flex;
   align-items: baseline;
@@ -95,7 +100,8 @@
     break-inside: avoid;
     break-after: avoid;
   }
-  .screenOnly {
+  .screenOnly,
+  .end {
     display: none;
   }
   .printOnly {

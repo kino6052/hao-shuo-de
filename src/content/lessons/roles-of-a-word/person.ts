@@ -8,8 +8,8 @@ export default lessonModule({
   words: [
     {
       word: "zi",
-      en: "a noun ending: {{word:nan2}}-{{word:hai2}}-{{light:zi}}, son",
-      ru: "окончание существительного: {{word:nan2}}-{{word:hai2}}-{{light:zi}} — сын",
+      en: "a noun ending",
+      ru: "окончание существительного",
     },
     {
       word: "hai2",

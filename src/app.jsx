@@ -114,6 +114,7 @@ function renderContent(s, lang) {
         {s.missingBlocks && <MissingTranslationBanner blocks={s.missingBlocks} lang={lang} />}
         {s.tldrSummary && <TldrSummary key={s.meta.id} items={s.tldrSummary} lang={lang} />}
         <LessonFlow flow={s.flow} lang={lang} />
+        {type === 'lesson' && s.tldrSummary && <TldrSummary key={`${s.meta.id}-end`} items={s.tldrSummary} lang={lang} at="end" />}
         {type === 'lesson' && (
           <div data-part="test">
             <LessonTest key={s.meta.id} lessonId={s.meta.id} lang={lang} />

@@ -79,14 +79,5 @@ export default lessonModule({
       en: "No, they're two different words. {{word:wan2}} is \"finish\": {{word:chi1}}-{{word:wan2}} {{word:le}}. {{word:wan2r}} is \"play\", and the -r at the end is part of the word.",
       ru: "Нет, это два разных слова. {{word:wan2}} — «закончить»: {{word:chi1}}-{{word:wan2}} {{word:le}}. {{word:wan2r}} — «играть», и -r на конце — часть слова.",
     },
-    // do I need both wán and le?
-    {
-      question: {
-        en: "Do I need both -{{word:wan2}} and {{word:le}}?",
-        ru: "Нужны ли сразу и -{{word:wan2}}, и {{word:le}}?",
-      },
-      en: "To say you finished, yes: {{Word:wo3}} {{word:chi1}}-{{word:wan2}} {{word:le}}. Without {{word:le}}, {{word:chi1}}-{{word:wan2}} is only part of a sentence, like in {{word:chi1}}-{{word:wan2}} {{word:hou4}}, … (after eating, …).",
-      ru: "Чтобы сказать, что вы закончили, — да: {{Word:wo3}} {{word:chi1}}-{{word:wan2}} {{word:le}}. Без {{word:le}} {{word:chi1}}-{{word:wan2}} — только часть предложения, как в {{word:chi1}}-{{word:wan2}} {{word:hou4}}, … (после еды …).",
-    },
   ],
 });

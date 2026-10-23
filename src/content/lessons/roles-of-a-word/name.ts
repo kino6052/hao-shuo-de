@@ -34,7 +34,7 @@ export default lessonModule({
       "",
       "**description-{{word:de}} + noun**",
       "",
-      "You already know this -{{word:de}}: {{word:hao3}}-{{word:de}} {{word:ren2}} (Lesson {{lesson:modifying-nouns}}), {{word:wo3}}-{{word:de}} {{word:bi2zi}} (Lesson {{lesson:pointing}}). The description can be as long as you need.",
+      "You already know this -{{word:de}}: {{word:hao3}}-{{word:de}} {{word:ren2}} (Lesson {{lesson:modifying-nouns}}), {{word:wo3}}-{{word:de}} {{word:zhi2wu4}} (Lesson {{lesson:pointing}}). The description can be as long as you need.",
       "Everyday things are named this way too. {{word:sheng1}} means give birth: {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (what a flying animal gives birth to) is an egg. Some names are just two words: {{word:shou3}}-{{word:ji1}} (hand machine) is a phone, {{word:fei1}}-{{word:ji1}} (flying machine) is a plane, and {{word:shui3}}-{{word:guo3}} (water fruit) is fruit. {{word:jie2}} is tie, and {{word:jie2}}-{{word:guo3}} (tie fruit) is the result: where a thing ends up.",
     ],
     ru: [
@@ -42,7 +42,7 @@ export default lessonModule({
       "",
       "**описание-{{word:de}} + существительное**",
       "",
-      "Это -{{word:de}} вы уже знаете: {{word:hao3}}-{{word:de}} {{word:ren2}} (урок {{lesson:modifying-nouns}}), {{word:wo3}}-{{word:de}} {{word:bi2zi}} (урок {{lesson:pointing}}). Описание может быть сколь угодно длинным.",
+      "Это -{{word:de}} вы уже знаете: {{word:hao3}}-{{word:de}} {{word:ren2}} (урок {{lesson:modifying-nouns}}), {{word:wo3}}-{{word:de}} {{word:zhi2wu4}} (урок {{lesson:pointing}}). Описание может быть сколь угодно длинным.",
       "Так называют и обычные вещи. {{word:sheng1}} значит «рожать»: {{word:fei1}}-{{word:de}} {{word:dong4}}-{{word:wu4}} {{word:sheng1}}-{{word:de}} {{word:dong1}}-{{light:xi1}} (то, что рождает летающее животное) — яйцо. Некоторые названия — просто два слова: {{word:shou3}}-{{word:ji1}} («ручная машина») — телефон, {{word:fei1}}-{{word:ji1}} («летающая машина») — самолёт, а {{word:shui3}}-{{word:guo3}} («водяной плод») — фрукты. {{word:jie2}} — «завязать», а {{word:jie2}}-{{word:guo3}} («завязанный плод») — результат: то, чем всё кончилось.",
     ],
     tldr: {

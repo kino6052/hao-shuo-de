@@ -5,13 +5,6 @@ import { lessonModule } from "../../../lib/lesson.ts";
 export default lessonModule({
   id: "maybe",
   scene: "Acts out 'tā kě-néng zhīdào': Miao-miao sits on a high shelf with half-closed eyes and a mysterious look, the student looking up at it wondering; a small cloud of maybe above the cat. Orange: the cloud.",
-  words: [
-    {
-      word: "ke3",
-      en: "can, may; {{word:ke3}}-{{word:neng2}}: maybe",
-      ru: "можно; {{word:ke3}}-{{word:neng2}} — может быть",
-    },
-  ],
   prose: {
     en: [
       "**To say maybe**, put {{word:ke3}}-{{word:neng2}} (maybe) before the verb.",

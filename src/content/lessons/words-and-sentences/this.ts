@@ -82,4 +82,15 @@ export default lessonModule({
       hanzi: "这是男人。",
     },
   ],
+  faq: [
+    // why is there no word for "a" or "the"?
+    {
+      question: {
+        en: "Why is there no word for \"a\" or \"the\"?",
+        ru: "Как понять, о каком человеке речь — о любом или о конкретном?",
+      },
+      en: "Chinese doesn't have them. {{Word:zhe4}} {{word:shi4}} {{word:ren2}} can be \"This is a person\" or \"This is the person\". The situation tells you which.",
+      ru: "Так же, как в русском: по ситуации. {{Word:zhe4}} {{word:shi4}} {{word:ren2}} может значить «Это человек» или «Это тот самый человек». Как и в русском, в китайском нет слов вроде английских «a» и «the».",
+    },
+  ],
 });

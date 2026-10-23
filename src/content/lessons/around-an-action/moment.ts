@@ -7,14 +7,14 @@ export default lessonModule({
   scene: "Acts out 'děng yī-xià!': the student holds up one finger in front of a half-open door while the girl, mid-step in the snow, stops; Miao-miao is already outside. Blue: the finger.",
   words: [
     {
-      word: "yi1",
-      en: "one; yī-xià: a moment",
-      ru: "один; yī-xià: мгновение",
-    },
-    {
       word: "xia4",
       en: "down, under",
       ru: "вниз, под",
+    },
+    {
+      word: "yi1",
+      en: "one; yī-xià: a moment",
+      ru: "один; yī-xià: мгновение",
     },
   ],
   prose: {

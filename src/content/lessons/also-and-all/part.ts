@@ -6,15 +6,15 @@ export default lessonModule({
   scene: "Acts out 'zhè bù-fēn hěn hǎo': the student holds up a sliced round cake and points at one slice with a smile, the rest on a plate; Miao-miao eyes a crumb. Green: the slice.",
   words: [
     {
+      word: "fen1",
+      en: "part, divide",
+      ru: "часть, делить",
+    },
+    {
       word: "bu4",
       sense: "part",
       en: "part (in {{word:bu4}}-{{light:fen1}})",
       ru: "часть (в {{word:bu4}}-{{light:fen1}})",
-    },
-    {
-      word: "fen1",
-      en: "part, divide; {{word:bu4}}-{{light:fen1}}: part",
-      ru: "часть, делить; {{word:bu4}}-{{light:fen1}} — часть",
     },
   ],
   prose: {

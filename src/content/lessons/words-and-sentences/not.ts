@@ -62,6 +62,12 @@ export default lessonModule({
       en: "A plant is not a person.",
       ru: "Растение — не человек.",
     },
+    {
+      pinyin: "{{Word:dong4}}-{{word:wu4}} {{word:bu4}} {{word:shi4}} {{word:dong1}}-{{light:xi1}}.",
+      hanzi: "动物不是东西。",
+      en: "Animals are not things.",
+      ru: "Животные — не вещи.",
+    },
   ],
   exercises: [
     {

@@ -5,16 +5,27 @@ import { lessonModule } from "../../../lib/lesson.ts";
 export default lessonModule({
   id: "not",
   scene: "Acts out 'shuǐ bù lěng': the student dips a toe into a basin of water with a content smile, a little steam; Miao-miao watches from a stool. Blue: the water.",
+  words: [
+    {
+      word: "lao3",
+      en: "old",
+      ru: "старый",
+    },
+  ],
   prose: {
     en: [
       "**To say not, or not very**, put {{word:bu4}} or {{word:bu4}} {{word:hen3}} before the adjective.",
       "",
       "**Thing + {{word:bu4}} (+ {{word:hen3}}) + adjective**",
+      "",
+      "{{word:lao3}} means old, for people, animals, and plants. For young, say {{word:bu4}} {{word:lao3}}.",
     ],
     ru: [
       "**Чтобы сказать «не» или «не очень»**, поставьте {{word:bu4}} или {{word:bu4}} {{word:hen3}} перед прилагательным.",
       "",
       "**Вещь + {{word:bu4}} (+ {{word:hen3}}) + прилагательное**",
+      "",
+      "{{word:lao3}} значит «старый» — о людях, животных и растениях. Чтобы сказать «молодой», говорите {{word:bu4}} {{word:lao3}}.",
     ],
     tldr: {
       en: "{{word:bu4}} before an adjective means not. {{word:bu4}} {{word:hen3}} means not very.",

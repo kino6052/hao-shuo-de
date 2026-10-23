@@ -42,14 +42,14 @@ export default lessonModule({
       ru: "сторона; {{word:di4}}-{{light:fang1}} — место",
     },
     {
-      word: "ba4ba",
-      en: "dad; {{word:ba4ba}}-{{word:ma1ma}}: parents",
-      ru: "папа; {{word:ba4ba}}-{{word:ma1ma}} — родители",
-    },
-    {
       word: "ma1ma",
       en: "mom",
       ru: "мама",
+    },
+    {
+      word: "ba4ba",
+      en: "dad; {{word:ba4ba}}-{{word:ma1ma}}: parents",
+      ru: "папа; {{word:ba4ba}}-{{word:ma1ma}} — родители",
     },
   ],
   prose: {

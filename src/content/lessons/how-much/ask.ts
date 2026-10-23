@@ -5,27 +5,16 @@ import { lessonModule } from "../../../lib/lesson.ts";
 export default lessonModule({
   id: "ask",
   scene: "Acts out 'nǐ lěng ma?': the girl asks the shivering student, who hugs themselves; Miao-miao on the heater looks far too hot. Blue: the student's shiver lines.",
-  words: [
-    {
-      word: "lao3",
-      en: "old",
-      ru: "старый",
-    },
-  ],
   prose: {
     en: [
       "**To ask how something is**, put {{word:ma}} after the adjective.",
       "",
       "**Thing + adjective + {{word:ma}}?**",
-      "",
-      "{{word:lao3}} means old, for people, animals, and plants. For young, say {{word:bu4}} {{word:lao3}}.",
     ],
     ru: [
       "**Чтобы спросить, какое что-то**, поставьте {{word:ma}} после прилагательного.",
       "",
       "**Вещь + прилагательное + {{word:ma}}?**",
-      "",
-      "{{word:lao3}} значит «старый» — о людях, животных и растениях. Чтобы сказать «молодой», говорите {{word:bu4}} {{word:lao3}}.",
     ],
     tldr: {
       en: "Put {{word:ma}} after an adjective to ask about it: {{Word:ni3}} {{word:leng3}} {{word:ma}}?",

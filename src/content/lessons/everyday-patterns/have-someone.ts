@@ -5,13 +5,6 @@ import { lessonModule } from "../../../lib/lesson.ts";
 export default lessonModule({
   id: "have-someone",
   scene: "Acts out 'ràng tā jìn-lái': the student holds a door open and Miao-miao strolls in first, tail up, a small bird behind it waiting. Yellow: the doorway.",
-  words: [
-    {
-      word: "rang4",
-      en: "let, make",
-      ru: "позволять, заставлять",
-    },
-  ],
   prose: {
     en: [
       "**To have someone do something**, put {{word:jiao4}} and the person before the verb. **To let them**, put {{word:rang4}} there.",

@@ -14,8 +14,8 @@ export default lessonModule({
     },
     {
       word: "mian4",
-      en: "side; joins a place word: lǐ-miàn, qián-miàn",
-      ru: "сторона; присоединяется к слову места: lǐ-miàn, qián-miàn",
+      en: "side; joins a place word: lǐ-miàn, shàng-miàn",
+      ru: "сторона; присоединяется к слову места: lǐ-miàn, shàng-miàn",
     },
     {
       word: "wang3",

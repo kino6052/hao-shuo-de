@@ -11,6 +11,11 @@ export default lessonModule({
       ru: "мочь",
     },
     {
+      word: "ke3",
+      en: "can, may; {{word:ke3}}-{{word:neng2}}: maybe",
+      ru: "можно; {{word:ke3}}-{{word:neng2}} — может быть",
+    },
+    {
       word: "yi3",
       en: "{{word:ke3}}-{{word:yi3}}: can, may",
       ru: "{{word:ke3}}-{{word:yi3}} — можно",

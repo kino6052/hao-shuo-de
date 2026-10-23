@@ -12,11 +12,6 @@ export default lessonModule({
       ru: "что, какой",
     },
     {
-      word: "wen4",
-      en: "ask",
-      ru: "спрашивать",
-    },
-    {
       word: "zhao3",
       en: "look for",
       ru: "искать",

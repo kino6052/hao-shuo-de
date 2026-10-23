@@ -83,7 +83,7 @@ Lessons are named, not numbered: [src/content/book.js](src/content/book.js) is t
 | 8 | Time 1 — When it happens | Done (le), right now (zài), will (huì), done before (guò), and saying the time first. |
 | 9 | Time 2 — Around an action | When (X-de shí-jiān), finished (verb-wán), after (verb-wán hòu), start (kāishǐ), for a moment (yī-xià), again (yòu), and how many times (cì). |
 | 10 | Space 1 — Where it is | Zài + place, asking where (nǎ-lǐ), in / on / under, and the side words (qián-miàn, hòu-miàn, pángbiān). |
-| 11 | Space 2 — Moving | Coming and going (lái / qù), from (cóng), arriving (dào), direction (qǐ-lái, shàng-lái, xià-lái, wài-miàn), moving (dòng), and far / nearby (yuǎn, fùjìn). |
+| 11 | Space 2 — Moving | Coming and going (lái / qù), from (cóng), arriving (dào), direction (qǐ-lái, shàng-lái, xià-lái, wài-miàn), far / nearby (yuǎn, fùjìn), the road (lù), and moving (dòng, zǒu-lù). |
 | 12 | Modifiers 1 — How much | Very (hěn), really (zhēn), not and not very (bù, bù hěn), hard and how something looks (nán, hǎo-kàn / nán-kàn), asking how something is, and value (jiàzhí). |
 | 13 | Modifiers 2 — Comparing | A bǐ B + adjective (bigger than), yī-yàng (the same), bù yī-yàng (different), bié-de (other), and zhǒng (kind). |
 | 14 | Modifiers 3 — Also and all | Also (yě) with verbs and with adjectives, all (dōu), everything (shénme-dōu), and part (bù-fen). |

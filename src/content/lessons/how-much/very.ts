@@ -28,8 +28,8 @@ export default lessonModule({
     {
       word: "wei4",
       sense: "taste",
-      en: "taste (in {{word:wei4}}-{{word:dao4}})",
-      ru: "вкус (в {{word:wei4}}-{{word:dao4}})",
+      en: "taste",
+      ru: "вкус",
     },
     {
       word: "dao4",

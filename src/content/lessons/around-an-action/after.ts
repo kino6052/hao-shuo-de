@@ -94,4 +94,15 @@ export default lessonModule({
       hanzi: "吃完后，我会留。",
     },
   ],
+  faq: [
+    // do I need both wán and le?
+    {
+      question: {
+        en: "Do I need both -{{word:wan2}} and {{word:le}}?",
+        ru: "Нужны ли сразу и -{{word:wan2}}, и {{word:le}}?",
+      },
+      en: "To say you finished, yes: {{Word:wo3}} {{word:chi1}}-{{word:wan2}} {{word:le}}. Without {{word:le}}, {{word:chi1}}-{{word:wan2}} is only part of a sentence, like in {{word:chi1}}-{{word:wan2}} {{word:hou4}}, … (after eating, …).",
+      ru: "Чтобы сказать, что вы закончили, — да: {{Word:wo3}} {{word:chi1}}-{{word:wan2}} {{word:le}}. Без {{word:le}} {{word:chi1}}-{{word:wan2}} — только часть предложения, как в {{word:chi1}}-{{word:wan2}} {{word:hou4}}, … (после еды …).",
+    },
+  ],
 });

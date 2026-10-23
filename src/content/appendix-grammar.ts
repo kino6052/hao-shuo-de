@@ -397,10 +397,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "Who + {{word:ting1}} / {{word:kan4}} + who + verb: {{Word:wo3}} {{word:ting1}} {{word:ni3}} {{word:shuo1}}. (I hear you speak.)"
+            "{{word:bu4}} + verb, for \"not\": {{Word:ta1}} {{word:bu4}} {{word:xie3}}. (She doesn't write.)"
           ],
           "ru": [
-            "Кто + {{word:ting1}} / {{word:kan4}} + кто + глагол: {{Word:wo3}} {{word:ting1}} {{word:ni3}} {{word:shuo1}}. (Я слышу, как ты говоришь.)"
+            "{{word:bu4}} + глагол — «не»: {{Word:ta1}} {{word:bu4}} {{word:xie3}}. (Она не пишет.)"
           ],
           "zh": []
         }
@@ -408,10 +408,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:bu4}} + verb, for \"not\": {{Word:ta1}} {{word:bu4}} {{word:xie3}}. (She doesn't write.)"
+            "Who + {{word:ting1}} / {{word:kan4}} + who + verb: {{Word:wo3}} {{word:ting1}} {{word:ni3}} {{word:shuo1}}. (I hear you speak.)"
           ],
           "ru": [
-            "{{word:bu4}} + глагол — «не»: {{Word:ta1}} {{word:bu4}} {{word:xie3}}. (Она не пишет.)"
+            "Кто + {{word:ting1}} / {{word:kan4}} + кто + глагол: {{Word:wo3}} {{word:ting1}} {{word:ni3}} {{word:shuo1}}. (Я слышу, как ты говоришь.)"
           ],
           "zh": []
         }
@@ -603,6 +603,17 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
+            "{{word:ai4}} + verb, love to: {{Word:wo3}} {{word:ai4}} {{word:chi1}}. (I love to eat.)"
+          ],
+          "ru": [
+            "{{word:ai4}} + глагол — любить: {{Word:wo3}} {{word:ai4}} {{word:chi1}}. (Я люблю поесть.)"
+          ],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
             "{{word:zhi1dao4}} {{word:zen3me}} + verb, know how to: {{Word:wo3}} {{word:zhi1dao4}} {{word:zen3me}} {{word:xie3}}. (I know how to write.)"
           ],
           "ru": [
@@ -618,17 +629,6 @@ const content: Entry[] = [
           ],
           "ru": [
             "Кто + {{word:zhi1dao4}} + предложение: {{Word:wo3}} {{word:zhi1dao4}} {{word:ni3}} {{word:ai4}} {{word:wo3}}. (Я знаю, что ты любишь меня.)"
-          ],
-          "zh": []
-        }
-      },
-      {
-        "text": {
-          "en": [
-            "{{word:ai4}} + verb, love to: {{Word:wo3}} {{word:ai4}} {{word:chi1}}. (I love to eat.)"
-          ],
-          "ru": [
-            "{{word:ai4}} + глагол — любить: {{Word:wo3}} {{word:ai4}} {{word:chi1}}. (Я люблю поесть.)"
           ],
           "zh": []
         }
@@ -960,17 +960,6 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:dong4}}, move: {{Word:bu4}} {{word:yao4}} {{word:dong4}}! (Don't move!)"
-          ],
-          "ru": [
-            "{{word:dong4}} — двигаться: {{Word:bu4}} {{word:yao4}} {{word:dong4}}! (Не двигайся!)"
-          ],
-          "zh": []
-        }
-      },
-      {
-        "text": {
-          "en": [
             "{{word:yuan3}} / {{word:fu4jin4}}, far / nearby: {{Word:wo3}}-{{word:de}} {{word:guo2}} {{word:hen3}} {{word:yuan3}}. (My country is far.) {{Word:wo3}}-{{word:de}} {{word:jia1}} {{word:zai4}} {{word:fu4jin4}}. (My home is nearby.)"
           ],
           "ru": [
@@ -986,6 +975,17 @@ const content: Entry[] = [
           ],
           "ru": [
             "{{word:lu4}} — дорога, путь: {{Word:ni3}} {{word:zhi1dao4}} {{word:lu4}} {{word:ma}}? (Ты знаешь дорогу?) {{word:che1}} — машина: {{Word:che1}} {{word:zai4}} {{word:lu4}}-{{word:shang4}}. (Машина на дороге.)"
+          ],
+          "zh": []
+        }
+      },
+      {
+        "text": {
+          "en": [
+            "{{word:dong4}}, move: {{Word:bu4}} {{word:yao4}} {{word:dong4}}! (Don't move!)"
+          ],
+          "ru": [
+            "{{word:dong4}} — двигаться: {{Word:bu4}} {{word:yao4}} {{word:dong4}}! (Не двигайся!)"
           ],
           "zh": []
         }

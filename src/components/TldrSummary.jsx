@@ -3,13 +3,16 @@ import { t } from '../lib/i18n.js';
 import { Rich } from './Hsd.jsx';
 import styles from './TldrSummary.module.css';
 
-export function TldrSummary({ items, lang }) {
+// `at="end"` is the same summary again at the end of a lesson, right before its test, to look back on what the
+// lesson taught: its own heading and comment id, and on screen only (the printed page has the one at the top).
+export function TldrSummary({ items, lang, at = 'start' }) {
   const [index, setIndex] = useState(0);
   if (!items || items.length === 0) return null;
 
   const current = Math.min(index, items.length - 1);
   const item = items[current];
-  const overview = items.find((i) => i.isOverview);
+  const end = at === 'end';
+  const overview = !end && items.find((i) => i.isOverview);
 
   function prev() {
     setIndex((i) => (Math.min(i, items.length - 1) - 1 + items.length) % items.length);
@@ -19,11 +22,11 @@ export function TldrSummary({ items, lang }) {
   }
 
   return (
-    <div class={styles.wrap} data-part="summary">
+    <div class={`${styles.wrap}${end ? ` ${styles.end}` : ''}`} data-part={end ? 'review' : 'summary'}>
       {/* Interactive, on-screen only: steps through every tldr/necessity entry. */}
       <div class={styles.screenOnly}>
         <div class={styles.header}>
-          <span class={styles.title}>{t(lang, 'tldrTitle')}</span>
+          <span class={styles.title}>{t(lang, end ? 'tldrReview' : 'tldrTitle')}</span>
           <span class={styles.counter}>{current + 1} / {items.length}</span>
         </div>
         <div class={styles.card}>

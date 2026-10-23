@@ -54,20 +54,20 @@ export function wordsIn(text, terms, { pinyinField = false } = {}) {
   return found;
 }
 
-// Every piece of text in one assembled lesson entry, with whether it's a
-// pinyin-only field.
-function textsOf(entry) {
+// Every piece of text in one assembled lesson entry in one language ('en', 'ru' or 'zh'), with whether it's a
+// pinyin-only field. The pinyin of an example is the same in every language, so it comes with the English.
+function textsOf(entry, lang = 'en') {
   const out = [];
   const add = (text, pinyinField = false) => { if (typeof text === 'string' && text) out.push({ text, pinyinField }); };
   const addAll = (arr, pinyinField = false) => (arr ?? []).forEach((t) => add(t, pinyinField));
-  if (entry.type === 'vocab') { addAll(entry.en); return out; } // the term itself is the introduction
-  if (entry.type === 'example' || entry.type === 'story' || entry.type === 'image') add(entry.pinyin, true);
-  addAll(entry.en, entry.type === 'answer');
-  addAll(entry.tldr?.en);
-  addAll(entry.necessity?.en);
-  addAll(entry.title?.en);
-  addAll(entry.question?.en);
-  const walkItems = (items) => (items ?? []).forEach((it) => { addAll(it.text?.en ?? it.en); walkItems(it.items); });
+  if (entry.type === 'vocab') { addAll(entry[lang]); return out; } // the term itself is the introduction
+  if (lang === 'en' && (entry.type === 'example' || entry.type === 'story' || entry.type === 'image')) add(entry.pinyin, true);
+  addAll(entry[lang], entry.type === 'answer');
+  addAll(entry.tldr?.[lang]);
+  addAll(entry.necessity?.[lang]);
+  addAll(entry.title?.[lang]);
+  addAll(entry.question?.[lang]);
+  const walkItems = (items) => (items ?? []).forEach((it) => { addAll(it.text?.[lang] ?? it[lang]); walkItems(it.items); });
   walkItems(entry.items);
   return out;
 }
@@ -97,13 +97,23 @@ export function introductions(lessons) {
 }
 
 // The words used in one entry, in order: [{ id, token, sense, text }] (id is null for a pinyin word the
-// dictionary doesn't have). Shared by the two gates below.
+// dictionary doesn't have). Shared by the two gates below. The English comes first; the Russian and Chinese add
+// only the words their English doesn't use, so a translation that says more is caught without listing every use twice.
 function usesIn(entry, terms, dictionary) {
   const out = [];
-  for (const { text, pinyinField } of textsOf(entry)) {
-    // wordsIn lists the refs first, in order, so the i-th ref's sense is senses[i].
-    const senses = refSenses(text, dictionary);
-    wordsIn(text, terms, { pinyinField }).forEach(({ id, token }, i) => out.push({ id, token, sense: senses[i]?.sense, text }));
+  const inEnglish = new Set();
+  for (const lang of ['en', 'ru', 'zh']) {
+    for (const { text, pinyinField } of textsOf(entry, lang)) {
+      // wordsIn lists the refs first, in order, so the i-th ref's sense is senses[i].
+      const senses = refSenses(text, dictionary);
+      wordsIn(text, terms, { pinyinField }).forEach(({ id, token }, i) => {
+        const sense = senses[i]?.sense;
+        const key = `${id ?? token}#${sense ?? ''}`;
+        if (lang === 'en') inEnglish.add(key);
+        else if (inEnglish.has(key)) return;
+        out.push({ id, token, sense, text });
+      });
+    }
   }
   return out;
 }

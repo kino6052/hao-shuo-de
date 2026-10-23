@@ -1,7 +1,7 @@
 // moving ("Space 2 — Moving"): its modules, in reading order.
 // See src/lib/lesson.ts.
 //
-// Rewritten in Phase 2 (BOOK_PLAN.md): coming and going (lái / qù), from (cóng), arriving (dào), direction (qǐ-lái, shàng-lái, xià-lái, wài-miàn), moving (dòng), and far / nearby (yuǎn, fùjìn, D44).
+// Rewritten in Phase 2 (BOOK_PLAN.md): coming and going (lái / qù), from (cóng), arriving (dào), direction (qǐ-lái, shàng-lái, xià-lái, wài-miàn), far / nearby (yuǎn, fùjìn, D44), the road (lù), and moving (dòng, zǒu-lù).
 // Only words from this lesson and earlier ones; passes every gate
 // (npm run check -- moving).
 import { lesson } from "../../../lib/lesson.ts";
@@ -50,9 +50,9 @@ export default lesson(meta.id, {
     from,
     arrive,
     direction,
-    move,
     far,
     road,
+    move,
     reading,
   ],
 });

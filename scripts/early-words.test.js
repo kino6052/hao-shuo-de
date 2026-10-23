@@ -145,4 +145,16 @@ describe('findWordsBeforeCard', () => {
   test('a word with no card in the lesson is left to check-early-words', () => {
     expect(kindsOf([use('a.example1', 'a', 'hao3')])).toEqual([]);
   });
+
+  test('a card gloss that uses the next card of its own module is flagged', () => {
+    const gloss = { key: 'b.card1', module: 'b', type: 'vocab', term: '{{word:shi4}}', en: ['{{word:shi4}} {{word:hao3}}'] };
+    expect(kindsOf([gloss, card('b.card2', 'b', 'hao3')])).toEqual(['before-card:b:hǎo->b']);
+  });
+
+  test('a word only the Russian or Chinese text uses is flagged too, and a use in both counts once', () => {
+    const prose = (ru) => ({ key: 'a.prose', module: 'a', type: 'prose', en: ['plain English'], ru: [ru], zh: [] });
+    expect(kindsOf([prose('{{word:hao3}}'), card('b.card', 'b', 'hao3')])).toEqual(['before-card:a:hǎo->b']);
+    const both = { ...prose('{{word:hao3}}'), en: ['{{word:hao3}}'] };
+    expect(kindsOf([both, card('b.card', 'b', 'hao3')])).toEqual(['before-card:a:hǎo->b']);
+  });
 });

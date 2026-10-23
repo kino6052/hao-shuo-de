@@ -7,15 +7,15 @@ export default lessonModule({
   scene: "Acts out 'yuè-de shí-jiān, wǒ shuìjiào': a night scene, the student in bed under a blanket, the moon in the window, Miao-miao curled at their feet. Blue: the moon.",
   words: [
     {
+      word: "jian1",
+      en: "between",
+      ru: "между",
+    },
+    {
       word: "shi2",
       sense: "time",
       en: "time (in {{word:shi2}}-{{word:jian1}})",
       ru: "время (в {{word:shi2}}-{{word:jian1}})",
-    },
-    {
-      word: "jian1",
-      en: "between",
-      ru: "между",
     },
     {
       word: "ri4",

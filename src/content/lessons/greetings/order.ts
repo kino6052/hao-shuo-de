@@ -7,11 +7,6 @@ export default lessonModule({
   scene: "Acts out 'bù yào shuō!': the student holds a finger to the lips in front of a sleeping Miao-miao in a sunny room, the girl tiptoeing in. Yellow: the finger.",
   words: [
     {
-      word: "pa4",
-      en: "be scared (of)",
-      ru: "бояться",
-    },
-    {
       word: "xiao4",
       en: "laugh, smile",
       ru: "смеяться, улыбаться",

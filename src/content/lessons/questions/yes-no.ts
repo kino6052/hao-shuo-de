@@ -11,14 +11,19 @@ export default lessonModule({
       ru: "превращает предложение в вопрос «да или нет»",
     },
     {
+      word: "ju4",
+      en: "implement, thing to use",
+      ru: "орудие, предмет",
+    },
+    {
       word: "gong1",
       en: "work; {{word:gong1}}-{{word:ju4}}: tool",
       ru: "работа; {{word:gong1}}-{{word:ju4}} — инструмент",
     },
     {
-      word: "ju4",
-      en: "implement, thing to use",
-      ru: "орудие, предмет",
+      word: "wen4",
+      en: "ask",
+      ru: "спрашивать",
     },
     {
       word: "ti2",

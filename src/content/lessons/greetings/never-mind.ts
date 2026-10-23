@@ -4,6 +4,13 @@ import { lessonModule } from "../../../lib/lesson.ts";
 export default lessonModule({
   id: "never-mind",
   scene: "Acts out 'méi guānxi': the student drops a cup that breaks and looks aghast, the girl waving a hand calmly and smiling; Miao-miao licks the spill. Yellow: the broken cup.",
+  words: [
+    {
+      word: "pa4",
+      en: "be scared (of)",
+      ru: "бояться",
+    },
+  ],
   prose: {
     en: [
       "**To say never mind**, say {{word:mei2}} {{word:guan1xi}}: it has no link to anything, so it doesn't matter.",

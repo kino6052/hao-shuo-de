@@ -12,14 +12,14 @@ export default lessonModule({
       ru: "быть, являться",
     },
     {
-      word: "dong1",
-      en: "east; {{word:dong1}}-{{light:xi1}}: thing",
-      ru: "восток; {{word:dong1}}-{{light:xi1}} — вещь",
-    },
-    {
       word: "xi1",
       en: "west",
       ru: "запад",
+    },
+    {
+      word: "dong1",
+      en: "east; {{word:dong1}}-{{light:xi1}}: thing",
+      ru: "восток; {{word:dong1}}-{{light:xi1}} — вещь",
     },
     {
       word: "ren2",
@@ -102,12 +102,6 @@ export default lessonModule({
       en: "A plant is a thing.",
       ru: "Растение — это вещь.",
     },
-    {
-      pinyin: "{{Word:dong4}}-{{word:wu4}} {{word:bu4}} {{word:shi4}} {{word:dong1}}-{{light:xi1}}.",
-      hanzi: "动物不是东西。",
-      en: "Animals are not things.",
-      ru: "Животные — не вещи.",
-    },
   ],
   exercises: [
     {
@@ -130,15 +124,6 @@ export default lessonModule({
     },
   ],
   faq: [
-    // why is there no word for "a" or "the"?
-    {
-      question: {
-        en: "Why is there no word for \"a\" or \"the\"?",
-        ru: "Как понять, о каком человеке речь — о любом или о конкретном?",
-      },
-      en: "Chinese doesn't have them. {{Word:zhe4}} {{word:shi4}} {{word:ren2}} can be \"This is a person\" or \"This is the person\". The situation tells you which.",
-      ru: "Так же, как в русском: по ситуации. {{Word:zhe4}} {{word:shi4}} {{word:ren2}} может значить «Это человек» или «Это тот самый человек». Как и в русском, в китайском нет слов вроде английских «a» и «the».",
-    },
     // does shì change like am / is / are? (no)
     {
       question: {

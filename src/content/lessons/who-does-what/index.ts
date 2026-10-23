@@ -44,8 +44,8 @@ export default lesson(meta.id, {
   ],
   modules: [
     doPoint,
-    hearSee,
     not,
+    hearSee,
     have,
     reading,
   ],

@@ -81,15 +81,4 @@ export default lessonModule({
       hanzi: "把长的东西拿来！",
     },
   ],
-  faq: [
-    // lái or qù? (toward the speaker or away from the speaker)
-    {
-      question: {
-        en: "How do I know whether to say {{word:lai2}} or {{word:qu4}}?",
-        ru: "Как понять, говорить {{word:lai2}} или {{word:qu4}}?",
-      },
-      en: "Think about where the speaker is. Toward the speaker is {{word:lai2}}, away is {{word:qu4}}. Someone outside calls {{Word:chu1}}-{{word:lai2}}! (Come out!). Someone inside says {{Word:chu1}}-{{word:qu4}}! (Go out!).",
-      ru: "Подумайте, где говорящий. К говорящему — {{word:lai2}}, от него — {{word:qu4}}. Тот, кто снаружи, зовёт: {{Word:chu1}}-{{word:lai2}}! (Выходи сюда!). Тот, кто внутри, говорит: {{Word:chu1}}-{{word:qu4}}! (Выйди отсюда!).",
-    },
-  ],
 });
