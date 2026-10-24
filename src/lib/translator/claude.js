@@ -142,6 +142,7 @@ function sessionError(code, result, errText) {
   const said = `${result?.result ?? ''} ${errText}`;
   const e = new Error(`claude ended with ${code}${result?.terminal_reason ? ` (${result.terminal_reason})` : ''}: ${said.replace(/\s+/g, ' ').trim().slice(0, 400)}`);
   if (looksLikeLoginFailure(said)) Object.assign(e, { login: true, userMessage: LOGIN_MESSAGE });
+  if (result?.terminal_reason === 'structured_output_retry_exhausted') e.format = true; // no answer fitted the schema
   return e;
 }
 

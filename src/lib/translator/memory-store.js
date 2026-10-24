@@ -12,7 +12,7 @@
 //   store.presenceWrites          every setPresence so far: { name, doc }
 //   store.failIf = (method, args) => true   make a call fail (it throws), for as long as this says so
 
-export const PAGE_FIELDS = ['uid', 'email', 'text', 'lesson', 'createdAt'];
+export const PAGE_FIELDS = ['uid', 'email', 'text', 'lesson', 'mode', 'createdAt'];
 export const DAEMON_FIELDS = ['status', 'step', 'startedAt', 'endedAt', 'result', 'error'];
 
 const finished = (doc) => doc.status === 'done' || doc.status === 'failed';

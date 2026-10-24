@@ -132,6 +132,37 @@ describe('the chart parser', () => {
     expect(JSON.stringify(r.trees[0])).toContain('女人');
   });
 
+  test('when both readings parse, the one that reads the joined words as a composite comes first', () => {
+    const l = lex('{{word:wo3}} {{word:shi4}} {{word:nv3}}-{{word:ren2}}', lexicon);
+    // "wǒ shì nǚ" and then rén: the search finds that reading first, and the composite still leads
+    const g = makeGrammar(
+      [rule('Utt', 'S'), rule('Utt', 'Q @noun'), rule('Q', 'NP shi4 @adjective'), rule('S', 'NP VP'), rule('NP', '@pronoun'), rule('NP', '@noun'), rule('VP', 'shi4 NP')],
+      { glue: new Set(['shi4']) },
+    );
+    const r = parse(l, g, { maxTrees: 5 });
+    expect(r.treeCount).toBe(2);
+    expect(JSON.stringify(r.trees[0])).toContain('女人');
+    expect(JSON.stringify(r.trees[1])).not.toContain('女人');
+  });
+
+  test('a word and de that spell a composite read as the composite only when no noun follows (Q6)', () => {
+    const more = { ...words, chi1: w('chī', 'verb'), yao4: w('yào', 'verb'), de: w('de', 'particle'), mian4: w('miàn', 'noun') };
+    const fan = { zh: '饭', py: 'fàn', pos: 'noun', hsd: '{{word:chi1}}-{{word:de}}' };
+    const l = (text) => lex(text, buildLexicon({ words: more, composites: [fan] }));
+    // 饭 面 as two nouns, or "what is eaten" (a de-modifier) and then miàn
+    const g = makeGrammar(
+      [rule('Utt', 'S'), rule('S', 'NP VP'), rule('NP', '@pronoun'), rule('NP', '@noun'), rule('NP', '@noun @noun'), rule('NP', 'Mod @noun'), rule('NP', 'Mod'), rule('Mod', '@verb de'), rule('VP', '@verb NP')],
+      { glue: new Set(['de']) },
+    );
+    const before = parse(l('{{word:wo3}} {{word:yao4}} {{word:chi1}}-{{word:de}} {{word:mian4}}'), g, { maxTrees: 5 });
+    expect(before.treeCount).toBe(2);
+    expect(JSON.stringify(before.trees[0])).not.toContain('饭');
+    expect(JSON.stringify(before.trees[1])).toContain('饭');
+    const alone = parse(l('{{word:wo3}} {{word:yao4}} {{word:chi1}}-{{word:de}}'), g, { maxTrees: 5 });
+    expect(alone.treeCount).toBe(2);
+    expect(JSON.stringify(alone.trees[0])).toContain('饭');
+  });
+
   test('a failure says where it stopped and what could have come', () => {
     const g = makeGrammar([rule('Utt', 'S'), rule('S', 'NP VP'), rule('NP', '@pronoun'), rule('NP', '@noun'), rule('VP', 'shi4 NP')], { glue: new Set(['shi4']) });
     const r = parse(lat('wo3', 'shi4', 'shi4'), g);

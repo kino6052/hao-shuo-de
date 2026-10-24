@@ -4,7 +4,7 @@ Readers leave a comment on a part of a page: a word card, a paragraph or box, an
 
 It reuses the book's Firebase project, its sign-in (`src/lib/auth.js`) and the translator's rules and emulator workflow ([TRANSLATOR_PLAN.md](TRANSLATOR_PLAN.md) §3a, S1, S2).
 
-**Now:** Parts A to C built and committed (2026-10-23); the 💬 button is on the site. Sending works once the author switches on Anonymous sign-in (E2) and the rules are deployed (E4): until then a reader who is not signed in sees "Comments are not switched on yet." and a signed-in one "The comment could not be sent". Open: the browser check of a signed-in comment and of the admin page (D3), and the wording (E1). The decisions in §2 are Claude's picks, open to change.
+**Now:** Parts A to C built and committed (2026-10-23); the 💬 button is on the site. The rules are deployed (E4, 2026-10-24), so a reader signed in with Google can send (by the rules; not tried live yet). A reader who is not signed in waits for Anonymous sign-in (E2), and until then sees "Comments are not switched on yet." Open: the browser check of a signed-in comment and of the admin page (D3), and the wording (E1). The decisions in §2 are Claude's picks, open to change.
 
 **Live view:** `npm run dev`, then http://127.0.0.1:5173/__plan/?file=COMMENTS_PLAN.md
 
@@ -120,6 +120,7 @@ It reuses the book's Firebase project, its sign-in (`src/lib/auth.js`) and the t
 - [?] **E3.** Be on the list as the owner in the real project (`npm run translator -- allow <email> --owner`), if not yet
 - [?] **E4.** Commit when asked; deploying the rules (`firebase deploy --only firestore:rules`) and pushing the site publish them, so each is asked in chat first
   - 2026-10-23: the author asked to commit and push the site. The rules are not deployed yet
+  - 2026-10-24: the rules are deployed to hao-shuo-de at the author's request, with the translator's (TRANSLATOR_PLAN.md S10). The 12 comments rules tests passed on the emulator first
 - [?] **E5.** The emulator's redirect sign-in (D3)
 
 ## G. Later

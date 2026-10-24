@@ -34,7 +34,7 @@ export function buildGrammar(patterns, { words = {}, composites = [] } = {}) {
   for (const p of patterns) {
     p.rules.forEach((r, i) => {
       const rhs = String(r.hsd).trim().split(/\s+/).filter(Boolean);
-      rules.push({ lhs: r.lhs, rhs, id: `${p.id}#${i + 1}`, pattern: p.id, eng: r.eng, ...(p.preferred ? { preferred: true } : {}) });
+      rules.push({ lhs: r.lhs, rhs, id: `${p.id}#${i + 1}`, pattern: p.id, eng: r.eng, ...(r.say ? { say: r.say } : {}), ...(p.preferred ? { preferred: true } : {}) });
     });
   }
 

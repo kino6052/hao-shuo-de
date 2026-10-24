@@ -34,6 +34,7 @@ export const STEPS = [
   { name: 'word-usage', script: 'generate-word-usage.js', reads: ['src/content', 'src/data', 'scripts/list-content-files.js', 'scripts/word-refs.js', ...LIB], writes: ['src/data/word-usage.json'] },
   { name: 'relations', script: 'generate-relations.js', reads: KB, writes: ['src/data/relations.json'], kb: true },
   { name: 'akinator-data', script: 'generate-akinator-data.js', reads: [...KB, 'src/lib/kb/akinator-export.js'], writes: ['src/data/akinator-pool.json'], kb: true },
+  { name: 'tree-data', script: 'generate-tree-data.js', reads: [...KB, 'scripts/book-sentences.js', 'scripts/rule-english.js'], writes: ['src/data/tree-data.json'], kb: true },
 ];
 
 const MEMORY = 'generate.json';

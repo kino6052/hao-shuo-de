@@ -170,6 +170,19 @@ describe('a request', () => {
     expect(Object.keys(sessions.calls[0].request).sort()).toEqual(['createdAt', 'email', 'id', 'lesson', 'text', 'uid']);
   });
 
+  test("passes on the mode the page asked for, 'tree' or 'full', and leaves any other out", async () => {
+    store.seed('r1', page({ mode: 'tree' }));
+    store.seed('r2', page({ mode: 'full', createdAt: clock.now() + 1 }));
+    store.seed('r3', page({ mode: 'everything', createdAt: clock.now() + 2 }));
+    start();
+    for (let i = 0; i < 3; i++) {
+      await flush();
+      sessions.calls[i].resolve('ok');
+    }
+    await flush();
+    expect(sessions.calls.map((c) => c.request.mode)).toEqual(['tree', 'full', undefined]);
+  });
+
   test('without a status in the page\'s document is queued, with a step, before it starts', async () => {
     start();
     store.addRequest('r1', page());
@@ -271,6 +284,15 @@ describe('the timeout', () => {
     store.addRequest('r1', page());
     await clock.advance(45_000);
     expect(store.get('r1').error).toContain('longer than 45 seconds');
+  });
+
+  test('can depend on the request, as a function of it', async () => {
+    start({ timeoutMs: (request) => (request.mode === 'tree' ? 6 : 3) * MINUTE });
+    store.addRequest('r1', page({ mode: 'tree' }));
+    await clock.advance(3 * MINUTE);
+    expect(store.get('r1').status).toBe('working');
+    await clock.advance(3 * MINUTE);
+    expect(store.get('r1').error).toContain('longer than 6 minutes');
   });
 
   test('is not held against a session that ended in time: no stray stop afterwards', async () => {

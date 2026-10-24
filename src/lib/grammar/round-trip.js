@@ -13,10 +13,12 @@
 //     at,                  which reading of the built sentence is the tree: 0 the first, -1 none of the first maxTrees
 //     readings,            how many readings the built sentence has
 //     split,               composites the book writes as one chain (dòng-wù) that the first reading takes word by word:
-//                          [{ zh, words }]. Not a failure of the round trip, a question about the reading order
+//                          [{ zh, words, byDesign? }]. Not a failure of the round trip, a question about the reading
+//                          order; byDesign: a word and de before a noun, read as the words on purpose (Q6)
 //     ok,                  parsed, no problems, the same words, and the tree comes back
 //   }
-//   summarize(results) -> { sentences, parsed, ok, problems, sameWords, sameSpelling, first, later, lost, split }
+//   summarize(results) -> { sentences, parsed, ok, problems, sameWords, sameSpelling, first, later, lost, split,
+//                           splitByDesign }
 
 import { sameTree, spelledTokens } from './tree.js';
 
@@ -28,7 +30,12 @@ const wordsOf = (tokens) => tokens.map((t) => (t.kind === 'word' ? t.id : t.kind
 // the chains of joined words that spell a composite, where no composite of the first reading covers them
 function splitComposites(text, first, trees) {
   const spans = [];
-  const walk = (t) => (t.children ? t.children.forEach(walk) : t.edge?.composite && spans.push([t.from, t.to]));
+  const leafAt = new Map(); // position -> the edge of the first reading's word there
+  const walk = (t) => {
+    if (t.children) return t.children.forEach(walk);
+    if (t.edge) leafAt.set(t.from, t.edge);
+    if (t.edge?.composite) spans.push([t.from, t.to]);
+  };
   walk(first.trees[0]);
   const spelled = spelledTokens(text);
   const out = [];
@@ -37,7 +44,9 @@ function splitComposites(text, first, trees) {
     for (let b = a + 1; b < spelled.length && spelled[b].id && spelled[b].joined; b++) {
       const ids = spelled.slice(a, b + 1).map((t) => t.id);
       const zh = trees.compositesOf(ids);
-      if (zh.length && !spans.some(([from, to]) => from <= a && to >= b + 1)) out.push({ zh: zh[0], words: ids });
+      // a word and de before a noun is read as the words on purpose (BROWSER_TRANSLATOR_PLAN.md Q6)
+      const byDesign = ids.at(-1) === 'de' && Boolean(leafAt.get(b + 1)?.classes.has('noun'));
+      if (zh.length && !spans.some(([from, to]) => from <= a && to >= b + 1)) out.push({ zh: zh[0], words: ids, ...(byDesign ? { byDesign } : {}) });
     }
   }
   return out;
@@ -82,6 +91,7 @@ export function summarize(results) {
     first: parsed.filter((r) => r.at === 0).length,
     later: parsed.filter((r) => r.at > 0).length,
     lost: parsed.filter((r) => r.at < 0).length,
-    split: parsed.filter((r) => r.split.length).length,
+    split: parsed.filter((r) => r.split.some((s) => !s.byDesign)).length,
+    splitByDesign: parsed.filter((r) => r.split.some((s) => s.byDesign)).length,
   };
 }

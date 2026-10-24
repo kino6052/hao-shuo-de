@@ -15,7 +15,7 @@
 // that spells a composite entry (nǚ-rén -> 女人, a noun) also gets one edge
 // over its words, so the parser can read it as one noun or as its parts:
 //
-//   edge { from, to, id?, composite?, term, classes: Set }
+//   edge { from, to, id?, composite?, endsInDe?, term, classes: Set }   endsInDe: a composite chain whose last word is de
 //
 // A word said twice in a row (rén-rén, hǎo-hǎo) gets the class "again" on its
 // second edge, and a bare light syllable that repeats the word before it
@@ -122,7 +122,7 @@ export function lex(text, lexicon, { extra = {}, forms = false } = {}) {
       for (let b = a + 2; b <= tokens.length; b++) {
         if (tokens.slice(a, b).some((t) => !t.id)) continue;
         for (const c of chains.get(tokens.slice(a, b).map((t) => t.id).join(' ')) ?? []) {
-          edges.push({ from: a, to: b, composite: c.zh, term: c.py, classes: new Set(c.classes) });
+          edges.push({ from: a, to: b, composite: c.zh, term: c.py, classes: new Set(c.classes), ...(tokens[b - 1].id === 'de' ? { endsInDe: true } : {}) });
         }
       }
     }

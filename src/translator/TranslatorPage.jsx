@@ -7,7 +7,9 @@ import styles from './TranslatorPage.module.css';
 
 // The translator page (TRANSLATOR_PLAN.md S8): sign in with Google; someone not on the list is told so; someone on it
 // sends a text with an optional lesson and sees their own texts come back (the owner sees everyone's). The daemon on the
-// author's PC does the work (scripts/translator-daemon.js); presence/daemon says whether it is on.
+// author's PC does the work (scripts/translator-daemon.js); presence/daemon says whether it is on. A text sent "with
+// meaning trees" (BROWSER_TRANSLATOR_PLAN.md B5) comes back with each sentence's tree, and the page builds every one
+// again with its own copy of the grammar (tree-check.js, loaded the first time such a result is shown).
 
 const PER_DAY = 20; // the daemon's maxPerDay (src/lib/translator/daemon.js)
 const ONLINE_MS = 2 * 60_000; // the daemon writes its presence every 30 s
@@ -100,9 +102,17 @@ function Presence() {
   );
 }
 
+// the three ways to translate (the request's mode; quick has none): [value, label, hint]
+const MODES = [
+  ['quick', TEXT.modeQuick, TEXT.modeQuickHint],
+  ['tree', TEXT.modeTree, TEXT.modeTreeHint],
+  ['full', TEXT.modeFull, TEXT.modeFullHint],
+];
+
 function SendForm({ user }) {
   const [text, setText] = useState('');
   const [lesson, setLesson] = useState('');
+  const [mode, setMode] = useState('tree');
   const [sending, setSending] = useState(false);
   const [error, setError] = useState('');
   const length = [...text].length;
@@ -114,8 +124,8 @@ function SendForm({ user }) {
     setSending(true);
     setError('');
     try {
-      await sendRequest(user, { text: text.trim(), lesson: lesson.trim().slice(0, MAX_LESSON) });
-      track('translation_sent', { characters: [...text.trim()].length });
+      await sendRequest(user, { text: text.trim(), lesson: lesson.trim().slice(0, MAX_LESSON), mode });
+      track('translation_sent', { characters: [...text.trim()].length, mode });
       setText('');
     } catch {
       setError(TEXT.sendError);
@@ -132,6 +142,15 @@ function SendForm({ user }) {
       <label class={styles.label} for="translator-lesson">{TEXT.lessonLabel}</label>
       <input id="translator-lesson" class={styles.input} inputMode="numeric" maxLength={MAX_LESSON} value={lesson} onInput={(e) => setLesson(e.currentTarget.value)} />
       <p class={styles.muted}>{TEXT.lessonHint}</p>
+      <fieldset class={styles.modes}>
+        <legend class={styles.label}>{TEXT.modeLabel}</legend>
+        {MODES.map(([value, label]) => (
+          <label key={value} class={styles.mode}>
+            <input type="radio" name="translator-mode" value={value} checked={mode === value} onChange={() => setMode(value)} /> {label}
+          </label>
+        ))}
+        <p class={styles.muted}>{MODES.find(([value]) => value === mode)[2]}</p>
+      </fieldset>
       <div class={styles.row}>
         <button class={styles.primary} type="submit" disabled={!text.trim() || tooLong || sending}>{sending ? TEXT.sending : TEXT.send}</button>
         <span class={styles.muted}>{say('limits', { perDay: PER_DAY, max: MAX_TEXT.toLocaleString('en-US') })}</span>
@@ -163,6 +182,7 @@ function Request({ request: r, showWho }) {
         <span class={styles.muted}>
           {r.createdAt ? say('sentAt', { when: new Date(r.createdAt).toLocaleString() }) : ''}
           {showWho ? ` ${say('by', { email: r.email })}` : ''}
+          {r.mode === 'tree' ? `, ${TEXT.treeMode}` : r.mode === 'full' ? `, ${TEXT.fullMode}` : ''}
         </span>
       </div>
       <p class={styles.english}>{r.text}</p>
@@ -183,8 +203,67 @@ function checkLine(c) {
   return TEXT.checkOk;
 }
 
+// The page's checks of a tree result, one sentence at a time through one queue for every result on the page, each in a
+// task of its own so the page stays responsive: null while loading, 'failed' if the grammar did not load, else one
+// entry per sentence (null for a quick one, else tree-check.js's { ok, first } or { ok: false, why }).
+let checkQueue = Promise.resolve();
+const later = (fn) => (checkQueue = checkQueue.then(() => new Promise((done) => setTimeout(() => done(fn()), 0))));
+
+function useTreeChecks(result) {
+  const [checks, setChecks] = useState(null);
+  useEffect(() => {
+    if (result.mode !== 'tree') return;
+    let live = true;
+    import('./tree-check.js')
+      .then(({ loadTreeCheck }) => loadTreeCheck())
+      .then((check) => Promise.all((result.sentences ?? []).map((s) => (s.how === 'tree' ? later(() => (live ? check({ tree: s.tree, built: s.built, english: s.english }) : null)) : null))))
+      .then((done) => live && setChecks(done), () => live && setChecks('failed'));
+    return () => {
+      live = false;
+    };
+  }, [result]);
+  return checks;
+}
+
+function treeLine(sentences, checks) {
+  const made = say('treeMade', { made: sentences.filter((s) => s.how === 'tree').length, n: sentences.length });
+  if (checks === null) return `${made}; ${TEXT.treeChecking}`;
+  if (checks === 'failed') return `${made}; ${TEXT.treeCheckFailed}`;
+  const bad = checks.filter((c) => c && !c.ok).length;
+  return `${made}; ${bad ? say('treeBad', { bad }) : TEXT.treeChecked}`;
+}
+
+function howLine(s, check) {
+  if (s.how !== 'tree') return TEXT.howQuick;
+  if (check === 'failed') return TEXT.howTreeUnchecked;
+  if (!check) return TEXT.howTreeChecking;
+  return check.ok ? TEXT.howTree : say('howTreeBad', { why: check.why });
+}
+
+// a tree request that stopped at step 0: its questions, or why it was not translated
+function Asked({ correction }) {
+  if (correction.status === 'refused') return <p class={styles.notice}>{say('refused', { reason: correction.reason })}</p>;
+  return (
+    <div class={styles.result}>
+      <p class={styles.notice}>{TEXT.asked}</p>
+      <ul class={styles.list}>
+        {(correction.questions ?? []).map((q, i) => (
+          <li key={i}>
+            {q.about}
+            {q.options?.length ? ` (${q.options.join(' / ')})` : ''}
+          </li>
+        ))}
+      </ul>
+      <p class={styles.muted}>{TEXT.askedHint}</p>
+    </div>
+  );
+}
+
 function Result({ result }) {
   const [copied, setCopied] = useState(false);
+  const checks = useTreeChecks(result);
+  const tree = result.mode === 'tree';
+  const changes = tree ? (result.correction?.changes ?? []) : [];
   const sentences = result.sentences ?? [];
   const pinyin = sentences.map((s) => s.pinyin).join(' ');
   const needed = (result.sketch ?? []).filter((s) => s.needed);
@@ -200,6 +279,7 @@ function Result({ result }) {
     }
   };
   const lesson = result.lesson;
+  if (tree && result.correction && result.correction.status !== 'ok') return <Asked correction={result.correction} />;
 
   // the translation and a copy button; the rest (hanzi, each sentence, the checks) only when asked for
   return (
@@ -208,6 +288,7 @@ function Result({ result }) {
       <div class={styles.row}>
         <button class={styles.secondary} onClick={copy}>{copied ? TEXT.copied : TEXT.copy}</button>
       </div>
+      {tree && <p class={styles.muted}>{treeLine(sentences, checks)}</p>}
       <details class={styles.details}>
         <summary>{TEXT.details}</summary>
         <p class={styles.hanzi} lang="zh-Hans">{sentences.map((s) => s.hanzi ?? '').join('')}</p>
@@ -231,12 +312,20 @@ function Result({ result }) {
               <p class={styles.pinyin} lang="zh-Latn-pinyin">{s.pinyin}</p>
               <p class={styles.hanzi} lang="zh-Hans">{s.hanzi}</p>
               <p>{s.english}</p>
-              {s.literally && <p class={styles.muted}>{TEXT.literally}: {s.literally}</p>}
+              {s.literally && <p class={styles.muted}>{s.how === 'tree' ? TEXT.treeSays : TEXT.literally}: {s.literally}</p>}
               {s.blind && <p class={styles.muted}>{TEXT.readBack}: {s.blind}</p>}
               <p class={styles.muted}>{TEXT.check}: {checkLine(s.check)}</p>
+              {tree && <p class={styles.muted}>{TEXT.how}: {howLine(s, Array.isArray(checks) ? checks[i] : checks)}</p>}
+              {s.how === 'tree' && s.tree && (
+                <details class={styles.treeDetails}>
+                  <summary>{TEXT.treeLine}</summary>
+                  <code class={styles.treeLine}>{s.tree}</code>
+                </details>
+              )}
             </li>
           ))}
         </ol>
+        {changes.length > 0 && <List title={TEXT.changed} items={changes.map((c) => `"${c.from}" → "${c.to}"${c.why ? ` (${c.why})` : ''}`)} />}
         {lost.length > 0 && <List title={TEXT.lost} items={lost.map((s) => `${s.idea}${s.why ? ` (${s.why})` : ''}`)} />}
         {(result.added ?? []).length > 0 && <List title={TEXT.added} items={result.added} />}
         {(result.gaps ?? []).length > 0 && <List title={TEXT.gaps} items={result.gaps.map((g) => `${g.idea}${g.description ? `: ${g.description}` : ''}`)} />}

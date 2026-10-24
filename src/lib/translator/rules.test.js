@@ -107,7 +107,7 @@ run('the translator rules (emulator)', () => {
     expect((await addRequest(ANN, 'ann-2', { uid: 'ann', email: ANN.email, text: 'No lesson.' })).status).toBe(200);
   });
 
-  test('a request must be its own, with only the page\'s fields, a text of 1 to 2,000 characters and the server\'s time', async () => {
+  test('a request must be its own, with only the page\'s fields, a text of 1 to 2,000 characters, the server\'s time and no mode but tree or full', async () => {
     expect((await addRequest(ANN, 'a', mine(ANN, { uid: 'ben' }))).status).toBe(403);
     expect((await addRequest(ANN, 'b', mine(ANN, { email: 'ben@example.com' }))).status).toBe(403);
     expect((await addRequest(ANN, 'c', mine(ANN, { status: 'done' }))).status).toBe(403);
@@ -116,6 +116,9 @@ run('the translator rules (emulator)', () => {
     expect((await addRequest(ANN, 'f', mine(ANN, { text: 'x'.repeat(2000) }))).status).toBe(200);
     expect((await addRequest(ANN, 'g', mine(ANN, { lesson: 'x'.repeat(41) }))).status).toBe(403);
     expect((await addRequest(ANN, 'h', mine(ANN), { clientTime: true })).status).toBe(403);
+    expect((await addRequest(ANN, 'i', mine(ANN, { mode: 'tree' }))).status).toBe(200);
+    expect((await addRequest(ANN, 'j', mine(ANN, { mode: 'full' }))).status).toBe(200);
+    expect((await addRequest(ANN, 'k', mine(ANN, { mode: 'everything' }))).status).toBe(403);
   });
 
   test("a person reads only their own requests; the owner reads everyone's", async () => {

@@ -12,7 +12,9 @@
 //   const daemon = createDaemon({ store, runSession });   daemon.start();   await daemon.stop();
 //
 // runSession(request, { onStep, signal }) -> Promise<result>
-//   request = { id, uid, email, text, lesson, createdAt }. onStep('one line') says what the session is doing. When the
+//   request = { id, uid, email, text, lesson, createdAt, mode? }, mode 'tree' when the page asked for the tree translator
+//   (BROWSER_TRANSLATOR_PLAN.md B5) and 'full' for the slow, careful one (pipeline.js); any other value is left out, which
+//   is the quick translation. onStep('one line') says what the session is doing. When the
 //   signal aborts (a timeout, or the daemon stopping) the session must stop. A thrown error becomes a plain failure; an
 //   error with a plain-language `userMessage` has that shown to the person, the rest is only logged.
 //
@@ -25,7 +27,8 @@
 //
 // Options (all but store and runSession are optional):
 //   maxPerDay 20, maxChars 2000      the limits per person (Q14); a text over either fails at once
-//   timeoutMs 10 min                 a session that takes longer is stopped and the request fails
+//   timeoutMs 10 min                 a session that takes longer is stopped and the request fails; a number, or
+//                                    (request) -> ms for one by its mode
 //   abortGraceMs 10 s                how long a stopped session gets to end before the next request starts anyway
 //   heartbeatMs 30 s                 how often presence is written (it is also written on every change)
 //   dayOffsetMinutes 0               the daily count restarts at midnight UTC plus this (480 = midnight in UTC+8)
@@ -36,6 +39,8 @@
 const DAY_MS = 86_400_000;
 const PRESENCE = 'daemon';
 const MAX_STEP_CHARS = 200;
+// the ways to translate a request may ask for (firestore.rules allows the same); none is the quick translation
+export const MODES = new Set(['tree', 'full']);
 
 // Everything the daemon says to a person, in one place. The page shows these as they are.
 export const TEXT = {
@@ -188,9 +193,9 @@ export function createDaemon({
   // The request as the session gets it (only the page's own fields), or why it cannot be run.
   function entryOf(id, doc) {
     const createdAt = asMs(doc.createdAt);
-    const { uid, email, text, lesson } = doc;
+    const { uid, email, text, lesson, mode } = doc;
     if (typeof uid !== 'string' || !uid || typeof text !== 'string' || !Number.isFinite(createdAt)) return { problem: TEXT.malformed };
-    return { id, createdAt, request: { id, uid, email, text, lesson, createdAt } };
+    return { id, createdAt, request: { id, uid, email, text, lesson, createdAt, ...(MODES.has(mode) ? { mode } : {}) } };
   }
 
   // The UTC day (or the day at dayOffsetMinutes from it) that a moment falls in: [from, to).
@@ -296,7 +301,8 @@ export function createDaemon({
       steps = steps.then(() => store.updateRequest(id, { step })).catch((e) => log(`translator: could not write the step of ${id}: ${why(e)}`));
     };
 
-    const deadline = after(timeoutMs);
+    const limit = typeof timeoutMs === 'function' ? timeoutMs(request) : timeoutMs;
+    const deadline = after(limit);
     const interrupted = new Promise((done) => (run.interrupt = () => done({ interrupted: true })));
     const session = Promise.resolve()
       .then(() => runSession(request, { onStep, signal: run.controller.signal }))
@@ -315,8 +321,8 @@ export function createDaemon({
         await fail(id, TEXT.notSaved);
       }
     } else if (outcome.late) {
-      log(`translator: request ${id} took longer than ${howLong(timeoutMs)}, stopping it`);
-      await fail(id, TEXT.timeout(timeoutMs));
+      log(`translator: request ${id} took longer than ${howLong(limit)}, stopping it`);
+      await fail(id, TEXT.timeout(limit));
     } else if (outcome.interrupted) {
       await put(id, { status: 'queued', step: TEXT.stopping });
     } else {

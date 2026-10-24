@@ -1,0 +1,123 @@
+#!/usr/bin/env node
+// The English side of each grammar rule (BROWSER_TRANSLATOR_PLAN.md Q5). A rule's `say` is what it builds, in English,
+// with its slots in braces ("{NP} is {NP2}"), so the readback of a meaning tree (src/lib/grammar/tree.js) is an
+// English sentence, not a gloss. Claude drafts them in batches, the rules most book sentences use first; the author
+// reviews each batch before it goes into the pattern files.
+//
+//   node scripts/rule-english.js              writes review/rule-english/rules.md: the drafted rules by how many book
+//                                             sentences read with them, each with a book sentence and its readback,
+//                                             then how much of the book reads back in English
+//   node scripts/rule-english.js --next 100   starts the next batch: the 100 most used rules without an English side,
+//                                             in review/rule-english/batch-N.json, each with say: "" to draft
+//
+// A batch file is a list of { id, lhs, hsd, eng, slots, uses, example, say }. A draft whose rule has changed since
+// (another lhs or hsd under the same id) is not used, and the report lists it.
+
+import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'fs';
+import { resolve } from 'path';
+import { fileURLToPath } from 'url';
+import { openKb } from './kb.js';
+import { bookSentences } from './book-sentences.js';
+import { makeTrees } from '../src/lib/grammar/tree.js';
+
+const ROOT = resolve(fileURLToPath(new URL('.', import.meta.url)), '..');
+export const DRAFTS = resolve(ROOT, 'review/rule-english');
+
+// -> { english: Map(rule id -> say), stale: [draft] }: the drafts that still fit their rules
+export function ruleDrafts(rules, dir = DRAFTS) {
+  const byId = new Map(rules.map((r) => [r.id, r]));
+  const english = new Map();
+  const stale = [];
+  const files = existsSync(dir) ? readdirSync(dir).filter((f) => /^batch-\d+\.json$/.test(f)) : [];
+  for (const f of files.sort((a, b) => parseInt(a.slice(6), 10) - parseInt(b.slice(6), 10))) {
+    for (const d of JSON.parse(readFileSync(resolve(dir, f), 'utf8'))) {
+      if (!d.say) continue;
+      const r = byId.get(d.id);
+      if (r && r.lhs === d.lhs && r.rhs.join(' ') === d.hsd) english.set(d.id, d.say);
+      else stale.push({ ...d, file: f });
+    }
+  }
+  return { english, stale };
+}
+
+if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1])) {
+  const args = process.argv.slice(2);
+  const next = args.includes('--next') ? Number(args[args.indexOf('--next') + 1] ?? 100) : 0;
+
+  const kb = await openKb();
+  const parser = kb.parse.parser;
+  const words = kb.parse.words;
+  const { english, stale } = ruleDrafts(parser.rules);
+  const trees = makeTrees({ rules: parser.rules, glue: parser.grammar.glue, words, composites: kb.source.composites, english });
+
+  // how many sentences each rule reads, and the shortest of them as its example
+  const uses = new Map();
+  const example = new Map();
+  const read = [];
+  for (const text of bookSentences(kb).keys()) {
+    const tree = trees.fromParse(parser.parse(text, { maxTrees: 1 }), 0);
+    if (!tree) continue;
+    read.push({ text, tree });
+    const seen = new Set();
+    const walk = (t) => {
+      if (!t?.rule) return;
+      seen.add(t.rule);
+      Object.values(t.slots).forEach(walk);
+    };
+    walk(tree);
+    for (const id of seen) {
+      uses.set(id, (uses.get(id) ?? 0) + 1);
+      if (!example.has(id) || text.length < example.get(id).text.length) example.set(id, { text, tree });
+    }
+  }
+  const ranked = parser.rules.filter((r) => r.rhs.length).sort((a, b) => (uses.get(b.id) ?? 0) - (uses.get(a.id) ?? 0));
+  mkdirSync(DRAFTS, { recursive: true });
+
+  if (next) {
+    const batches = readdirSync(DRAFTS).filter((f) => /^batch-\d+\.json$/.test(f));
+    const taken = new Set(batches.flatMap((f) => JSON.parse(readFileSync(resolve(DRAFTS, f), 'utf8')).map((d) => d.id)));
+    const todo = ranked.filter((r) => !r.say && !taken.has(r.id)).slice(0, next);
+    const n = batches.length + 1;
+    const file = resolve(DRAFTS, `batch-${n}.json`);
+    const list = todo.map((r) => ({
+      id: r.id,
+      lhs: r.lhs,
+      hsd: r.rhs.join(' '),
+      eng: r.eng ?? '',
+      slots: trees.slotsOf(r.id).map((s) => s.name),
+      uses: uses.get(r.id) ?? 0,
+      example: example.get(r.id)?.text ?? '',
+      say: '',
+    }));
+    writeFileSync(file, `${JSON.stringify(list, null, 2)}\n`);
+    console.log(`batch ${n}: ${list.length} rules to draft -> review/rule-english/batch-${n}.json`);
+    process.exit(0);
+  }
+
+  const covered = (t) => Boolean(t?.rule ? (english.has(t.rule) || trees.ruleSays(t.rule)) && Object.values(t.slots).every((v) => !v.rule || covered(v)) : true);
+  const whole = read.filter((r) => covered(r.tree)).length;
+  const drafted = ranked.filter((r) => english.has(r.id));
+  const lines = [
+    '# The English side of the grammar rules',
+    '',
+    `Generated by \`node scripts/rule-english.js\` (BROWSER_TRANSLATOR_PLAN.md Q5). Each rule's English, with its slots in braces, makes the readback of a meaning tree an English sentence. Drafts live in review/rule-english/batch-N.json until the author has reviewed them.`,
+    '',
+    `- Rules: ${ranked.length}; with an English side: ${drafted.length} drafted, ${ranked.filter((r) => r.say).length} in the patterns`,
+    `- Book sentences that read back fully in English: ${whole} of ${read.length} (${read.length ? Math.round((100 * whole) / read.length) : 0}%)`,
+    ...(stale.length ? [`- Drafts whose rule has changed since (not used): ${stale.map((d) => `${d.id} in ${d.file}`).join(', ')}`] : []),
+    '',
+    '## The drafts, the most used first',
+    '',
+    ...drafted.flatMap((r) => {
+      const ex = example.get(r.id);
+      return [
+        `- **${r.id}** ${r.lhs} → ${r.rhs.join(' ')} (${uses.get(r.id) ?? 0} sentences): "${english.get(r.id)}"`,
+        ...(r.eng ? [`  - what it says: ${r.eng}`] : []),
+        ...(ex ? [`  - ${ex.text}`, `  - reads back: ${trees.readback(ex.tree)}`] : []),
+      ];
+    }),
+    '',
+  ];
+  writeFileSync(resolve(DRAFTS, 'rules.md'), lines.join('\n'));
+  console.log(`rule English: ${drafted.length} of ${ranked.length} rules drafted; ${whole} of ${read.length} book sentences read back fully -> review/rule-english/rules.md`);
+}

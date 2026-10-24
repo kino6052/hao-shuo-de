@@ -59,7 +59,8 @@ import { wordRefIds } from '../word-refs.js';
 import { tagModel, renderTree, renderTag, renderOf, renderCommon, renderFind, renderCheck, renderProposed } from './tags.js';
 
 // freq: the Mandarin frequency list [{ zh, py, rank }]; drafts: how words would be said without a stored paraphrase { id: { forms, verdict } }
-export function createKb(source, { rules = readRules('base', 'whatif'), freq = null, drafts = {}, parseMemo = null, relationRules = {}, englishData = null, yardstickData = null } = {}) {
+// parseMemo: the parse memory for every parse (slim results, no trees); buildMemo: one for the composites' build only
+export function createKb(source, { rules = readRules('base', 'whatif'), freq = null, drafts = {}, parseMemo = null, buildMemo = parseMemo, relationRules = {}, englishData = null, yardstickData = null } = {}) {
   let meaning = null; // the meaning links, asked once: a KB is one version of the data
   const facts = buildFacts(source);
   const index = buildIndex(source, facts);
@@ -112,8 +113,8 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
   const builtOptions = {
     patterns: source.patterns ?? [],
     lessons: (source.lessons ?? []).map(({ id, number }) => ({ id, number })),
-    parse: (form) => parseText.parser.parse(form, { maxTrees: 1, forms: true }),
-    parseAt: (n) => (form) => parseUpTo(n).parser.parse(form, { maxTrees: 1, forms: true }),
+    parse: (form) => forBuild().text.parser.parse(form, { maxTrees: 1, forms: true }),
+    parseAt: (n) => (form) => forBuild().upTo(n).parser.parse(form, { maxTrees: 1, forms: true }),
     wordLesson,
     patternLesson: (id) => taughtIn(patternById.get(id) ?? {}),
   };
@@ -153,21 +154,32 @@ export function createKb(source, { rules = readRules('base', 'whatif'), freq = n
   const builtRowOf = () => (builtRow ??= makeRowBuilder(builtOptions));
   const builtOf = () => (builtModelCache ??= buildModel({ composites: source.composites, words, lessons: builtOptions.lessons, rowOf: builtRowOf() }));
 
-  const parseText = makeParseText({ patterns: source.patterns ?? [], words, composites: source.composites, memo: parseMemo?.space({ patterns: source.patterns ?? [], words, composites: source.composites }) });
-
   // The early-patterns rule: a sentence in lesson N may only use patterns taught in lessons 1..N.
   // A pattern with no `taught` is used only by texts outside the lessons.
   const lessonNumber = Object.fromEntries((source.lessons ?? []).map((l) => [l.id, l.number]));
   const taughtIn = (p) => (p.taught ? lessonNumber[p.taught.split('/')[0]] : undefined);
   const patternById = new Map((source.patterns ?? []).map((p) => [p.id, p]));
-  const upTo = new Map();
-  const parseUpTo = (n) => {
-    if (!upTo.has(n)) {
-      const patterns = (source.patterns ?? []).filter((p) => (taughtIn(p) ?? Infinity) <= n);
-      upTo.set(n, makeParseText({ patterns, words, composites: source.composites, memo: parseMemo?.space({ patterns, words, composites: source.composites }) }));
-    }
-    return upTo.get(n);
+  // -> { text, upTo(n) }: the parser of all the patterns and the one of the patterns taught up to lesson n, with this memo
+  const parsersWith = (memo) => {
+    const upTo = new Map();
+    return {
+      text: makeParseText({ patterns: source.patterns ?? [], words, composites: source.composites, memo: memo?.space({ patterns: source.patterns ?? [], words, composites: source.composites }) }),
+      upTo: (n) => {
+        if (!upTo.has(n)) {
+          const patterns = (source.patterns ?? []).filter((p) => (taughtIn(p) ?? Infinity) <= n);
+          upTo.set(n, makeParseText({ patterns, words, composites: source.composites, memo: memo?.space({ patterns, words, composites: source.composites }) }));
+        }
+        return upTo.get(n);
+      },
+    };
   };
+  const own = parsersWith(parseMemo);
+  const parseText = own.text;
+  const parseUpTo = own.upTo;
+  // the composites' build reads only the patterns of each reading, so it may use the parse memory even when this kb's
+  // own parsers draw trees: a fresh kb (the kb server of every translator session) then builds in a second, not a minute
+  let buildParsers = null;
+  const forBuild = () => (buildParsers ??= buildMemo && buildMemo !== parseMemo ? parsersWith(buildMemo) : own);
 
   const ids = (names) => (Array.isArray(names) ? names : String(names).split(/[,\s]+/)).filter(Boolean).map((n) => resolveWord(words, n));
 

@@ -167,7 +167,7 @@ export function parse(lattice, grammar, { start = 'Utt', maxTrees = 20, budget =
 
   const done = chart[n].list.filter((s) => rules[s.r].lhs === start && s.dot === rules[s.r].rhs.length && s.origin === 0);
   if (done.length) {
-    const { trees, count } = enumerate(done, rules, maxTrees, budget);
+    const { trees, count } = enumerate(done, rules, maxTrees, budget, from);
     return { ok: true, trees, treeCount: count, failure: null };
   }
   return { ok: false, trees: [], treeCount: 0, failure: failure(chart, rules, firsts, n) };
@@ -177,7 +177,8 @@ export function parse(lattice, grammar, { start = 'Utt', maxTrees = 20, budget =
 
 // The first `maxTrees` trees are built; the readings are counted without building them (up to maxTrees * 10 + 1:
 // past that "many" is all anyone reads). A reading that loops back to itself (a rule cycle) is not counted.
-function enumerate(done, rules, maxTrees, budget) {
+// from[i] is the edges that start at position i (what follows a composite, for the reading order).
+function enumerate(done, rules, maxTrees, budget, from) {
   const cap = maxTrees * 10 + 1;
   const counts = new Map(); // state -> its readings, capped; -1 while it is being counted
   const countOf = (state) => {
@@ -198,25 +199,37 @@ function enumerate(done, rules, maxTrees, budget) {
   let count = 0;
   for (const s of done) if ((count = Math.min(cap, count + countOf(s))) === cap) break;
 
-  // Reading order: a reading that uses a preferred rule (from a pattern marked `preferred`) comes first. Each state's
-  // ways in (`backs`) are sorted so the ones that can reach a preferred rule are tried first; the first tree built is
-  // then one with a preferred rule whenever there is one. Otherwise the order is the search order.
-  const prefers = new Map(); // state -> 1 if some reading of it uses a preferred rule; -1 while it is being worked out
-  const prefersOf = (state) => {
-    if (state.dot === 0) return 0;
-    const known = prefers.get(state);
-    if (known !== undefined) return Math.max(known, 0);
-    prefers.set(state, -1);
-    const marks = new Map(state.backs.map((b) => [b, prefersOf(b.prev) || (b.child ? prefersOf(b.child) : 0)]));
-    state.backs.sort((a, b) => marks.get(b) - marks.get(a));
-    let p = Math.max(0, ...marks.values());
-    if (state.dot === rules[state.r].rhs.length && rules[state.r].preferred) p = 1;
-    prefers.set(state, p);
-    return p;
+  // Reading order: a reading that uses a preferred rule (from a pattern marked `preferred`) comes first; then one that
+  // reads more joined words as composites (dòng-wù as 动物 before dòng and wù, BROWSER_TRANSLATOR_PLAN.md Q4). Each
+  // state's ways in (`backs`) are sorted by the best reading each can reach, so the first tree built has a preferred
+  // rule whenever there is one, and as many composites as such a reading can have. Otherwise the order is the search order.
+  // A composite spelled by a word and de right before a noun counts against its reading (Q6): shuō-de rén reads first as
+  // "the one who speaks", not 内容 and rén; with no noun after it (wǒ yào chī-de) the composite still comes first.
+  const NONE = [0, 0];
+  const compositeMark = (edge) => (!edge.composite ? 0 : edge.endsInDe && from[edge.to].some((e) => e.classes.has('noun')) ? -1 : 1);
+  const better = (a, b) => b[0] - a[0] || b[1] - a[1];
+  const marks = new Map(); // state -> [1 if some reading uses a preferred rule, the most composites a reading has]; null while it is being worked out
+  const markOf = (state) => {
+    if (state.dot === 0) return NONE;
+    const known = marks.get(state);
+    if (known !== undefined) return known ?? NONE;
+    marks.set(state, null);
+    const ways = new Map(
+      state.backs.map((b) => {
+        const left = markOf(b.prev);
+        const right = b.edge ? [0, compositeMark(b.edge)] : markOf(b.child);
+        return [b, [Math.max(left[0], right[0]), left[1] + right[1]]];
+      }),
+    );
+    state.backs.sort((a, b) => better(ways.get(a), ways.get(b)));
+    const best = state.backs.length ? ways.get(state.backs[0]) : NONE;
+    const m = state.dot === rules[state.r].rhs.length && rules[state.r].preferred ? [1, best[1]] : best;
+    marks.set(state, m);
+    return m;
   };
   // (worked out for every state before sorting: sort never compares a list of one)
-  const marked = new Map(done.map((s) => [s, prefersOf(s)]));
-  done.sort((a, b) => marked.get(b) - marked.get(a));
+  const marked = new Map(done.map((s) => [s, markOf(s)]));
+  done.sort((a, b) => better(marked.get(a), marked.get(b)));
 
   let steps = 0;
   const trees = [];

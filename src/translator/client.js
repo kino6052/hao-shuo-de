@@ -4,7 +4,8 @@
 //   watchAllowed(user, onEntry, onError) -> stop     is this email on the list (allowed/<email, lowercase>): { owner } or null
 //   watchPresence(onPresence) -> stop                presence/daemon: { lastSeen, state, queue }
 //   watchRequests(user, { owner }, onRequests) -> stop   their own requests, newest first (the owner: everyone's)
-//   sendRequest(user, { text, lesson }) -> id
+//   sendRequest(user, { text, lesson, mode }) -> id     mode 'tree': with meaning trees (BROWSER_TRANSLATOR_PLAN.md B5);
+//                                                       'full': slow and careful (the full pipeline); else quick
 
 import { firestore, millis } from '../lib/firestore.js';
 
@@ -47,9 +48,10 @@ export function watchRequests(user, { owner = false } = {}, onRequests, onError 
   };
 }
 
-export async function sendRequest(user, { text, lesson }) {
+export async function sendRequest(user, { text, lesson, mode }) {
   const { fs, db } = await firestore();
   const doc = { uid: user.uid, email: user.email, text, createdAt: fs.serverTimestamp() };
   if (lesson) doc.lesson = lesson;
+  if (mode === 'tree' || mode === 'full') doc.mode = mode;
   return (await fs.addDoc(fs.collection(db, 'requests'), doc)).id;
 }

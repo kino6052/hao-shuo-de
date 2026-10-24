@@ -3,7 +3,7 @@
 
 import { describe, expect, test } from 'bun:test';
 import { createParser } from './parser.js';
-import { makeTrees, sameTree, spellingHabits, spelledTokens } from './tree.js';
+import { makeTrees, readTreeText, sameTree, spellingHabits, spelledTokens, treeText } from './tree.js';
 import { roundTrip, summarize } from './round-trip.js';
 
 const w = (term, pos, eng = `the word ${term}`, extra = {}) => ({ term, pos: { eng: pos }, definition: { eng }, ...extra });
@@ -24,6 +24,7 @@ const words = {
 const composites = [
   { zh: '女人', py: 'nǚrén', en: 'woman', pos: 'noun', hsd: '{{word:nv3}}-{{word:ren2}} / {{word:nv3}} {{word:ren2}}' },
   { zh: '其', py: 'qí', en: 'his, her', pos: 'adverb', hsd: '{{word:ta1}}-{{word:de}}' },
+  { zh: '朋友', py: 'péngyou', en: 'friend', pos: 'noun', hsd: '{{word:hao3}}-{{word:de}} {{word:ren2}}' },
 ];
 const rule = (lhs, hsd) => ({ lhs, hsd, eng: '' });
 const patterns = [
@@ -71,6 +72,26 @@ describe('the tree format', () => {
   });
 });
 
+describe('the tree as one line', () => {
+  test('a node is [rule slot=...], a leaf its word, composite, name, X or again', () => {
+    expect(treeText(woShiRen)).toBe(`[${idOf('Utt', 'S')} S=[${idOf('S', 'NP VP')} NP=[${idOf('NP', '@pronoun')} pronoun=wo3] VP=[${idOf('VP', 'shi4 NP')} NP=[${idOf('NP', '@noun')} noun=ren2]]]]`);
+    for (const text of ['{{Word:wo3}} {{word:shi4}} {{word:nv3}}-{{word:ren2}}.', '{{Word:wo3}} {{word:kan4}} {{light:ren2}}.', '{{Word:wo3}} {{word:hao3#well}}.', '"Jack" {{word:shi4}} X.', '{{Word:wo3}} {{word:kan4}}-kan.']) {
+      const t = treeOf(text);
+      expect(readTreeText(treeText(t))).toEqual({ tree: t });
+    }
+    expect(treeText({ composite: '女人', words: ['nv3', 'ren2'], light: [1] })).toBe('女人[nv3 ren2~]');
+    expect(treeText({ quoted: 'diàn', zi: true })).toBe('"diàn"-zi');
+  });
+
+  test('a line that does not read says where it stops', () => {
+    expect(readTreeText('[a#1 S=[b#2 NP=wo3]').problem).toContain('the "]" of [a#1 is missing');
+    expect(readTreeText('[a#1 S=[b#2 NP=wo3]] x').problem).toMatch(/text after the tree/);
+    expect(readTreeText('[a#1 S=wo3 S=ni3]').problem).toMatch(/slot S is given twice/);
+    expect(readTreeText('wo3').problem).toContain('starts with "["');
+    expect(readTreeText('[a#1 NP=[b#2 noun=女人]]').problem).toMatch(/a tree or a leaf is expected/);
+  });
+});
+
 describe('the checks', () => {
   test('a well-formed tree has no problems', () => {
     expect(trees.check(woShiRen)).toEqual([]);
@@ -100,7 +121,9 @@ describe('the checks', () => {
 
   test('a composite must be spelled by its words, and a leaf is not a rule', () => {
     const vp = (noun) => sentence(np({ word: 'wo3' }), { rule: idOf('VP', 'shi4 NP'), slots: { NP: { rule: idOf('NP', '@noun'), slots: { noun } } } });
-    expect(trees.check(vp({ composite: '女人', words: ['ren2', 'nv3'] }))[0]).toMatch(/"女人" is not a composite spelled ren2 nv3/);
+    expect(trees.check(vp({ composite: '女人', words: ['ren2', 'nv3'] }))[0]).toMatch(/"女人" is not spelled ren2 nv3; it is nv3-ren2 or nv3 ren2$/);
+    expect(trees.check(vp({ composite: '朋友', words: ['hao3', 'de', 'ren2'] }))[0]).toMatch(/"朋友" is the phrase hao3-de ren2, not one composite; build it with the rules$/);
+    expect(trees.check(vp({ composite: '猫', words: ['ren2'] }))[0]).toMatch(/"猫" is not a composite$/);
     expect(trees.check(sentence({ word: 'wo3' }, { rule: idOf('VP', 'shi4 NP'), slots: { NP: np({ word: 'ren2' }) } }))[0]).toMatch(/wants a NP, got the word wǒ/);
   });
 });
@@ -124,9 +147,29 @@ describe('build and readback', () => {
   });
 
   test('the readback glosses each word by its first sense, in brackets named by the pattern', () => {
-    expect(trees.readback(woShiRen)).toBe('[frame: I [vp: to be person]]');
-    expect(trees.readback(treeOf('{{Word:wo3}} {{word:shi4}} {{word:nv3}}-{{word:ren2}}.'))).toBe('[frame: I [vp: to be woman]]');
+    expect(trees.readback(woShiRen)).toBe('[frame: I [vp: be person]]');
+    expect(trees.readback(treeOf('{{Word:wo3}} {{word:shi4}} {{word:nv3}}-{{word:ren2}}.'))).toBe('[frame: I [vp: be woman]]');
     expect(trees.readback(treeOf(`${ref('wo3', 'hao3')}, {{word:ta1}} {{word:hao3}}.`))).toBe('[frame: I good, he good]');
+  });
+
+  test("a rule's English side is filled in, and an owner reads as my or of mine", () => {
+    const base = [[idOf('Utt', 'S'), '{S}'], [idOf('S', 'NP VP'), '{NP} {VP}'], [idOf('VP', 'shi4 NP'), 'is {NP}'], [idOf('NP', '@pronoun'), '{pronoun}'], [idOf('NP', '@noun'), '{noun}']];
+    const of = makeTrees({ rules: parser.rules, glue: parser.grammar.glue, words, composites, english: new Map([...base, [idOf('NP', 'NP de NP'), '{NP2} of {NP}']]) });
+    expect(of.readback(woShiRen)).toBe('I is person');
+    expect(of.readback(treeOf(`${ref('wo3', 'de', 'fan4', 'shi4', 'fan4')}.`))).toBe('meal of mine is meal');
+    const s = makeTrees({ rules: parser.rules, glue: parser.grammar.glue, words, composites, english: new Map([...base, [idOf('NP', 'NP de NP'), "{NP}'s {NP2}"]]) });
+    expect(s.readback(treeOf(`${ref('wo3', 'de', 'fan4', 'shi4', 'fan4')}.`))).toBe('my meal is meal');
+    // a rule without one is glossed: VP -> @adjective has a single slot, so no brackets
+    expect(of.readback(treeOf(`${ref('wo3', 'hao3')}.`))).toBe('I good');
+    expect(of.ruleSays(idOf('VP', '@adjective'))).toBe(null);
+  });
+
+  test("a pattern rule's own say is its English side, and a draft goes before it", () => {
+    const own = patterns.map((p) => (p.id === 'vp' ? { ...p, rules: p.rules.map((r) => (r.hsd === 'shi4 NP' ? { ...r, say: 'is {NP}' } : r)) } : p));
+    const p2 = createParser({ patterns: own, words, composites });
+    const id = p2.rules.find((r) => r.hsd === undefined && r.lhs === 'VP' && r.rhs.join(' ') === 'shi4 NP').id;
+    expect(makeTrees({ rules: p2.rules, glue: p2.grammar.glue, words, composites }).ruleSays(id)).toBe('is {NP}');
+    expect(makeTrees({ rules: p2.rules, glue: p2.grammar.glue, words, composites, english: new Map([[id, 'equals {NP}']]) }).ruleSays(id)).toBe('equals {NP}');
   });
 
   test('two trees are the same whatever the order of their keys; a reading leaves out light syllables', () => {
@@ -161,11 +204,15 @@ describe("the book's spelling habits", () => {
     expect(t.build(treeOf(`${ref('wo3', 'de', 'fan4', 'hao3')}.`)).refs).toBe('{{Word:wo3}} {{light:de}} {{word:fan4}} {{word:hao3}}.');
   });
 
-  test('a habit never joins words into a composite the tree reads word by word', () => {
+  test('a habit never joins words into a composite the tree reads word by word, except a word and de before a noun', () => {
     const habits = spellingHabits(['{{Word:ta1}}-{{word:de}} {{word:ren2}}.', '{{Word:ta1}}-{{word:de}} {{word:fan4}}.']);
     const t = makeTrees({ rules: parser.rules, glue: parser.grammar.glue, words, composites, habits });
-    // tā de rén as NP de NP: joining tā-de would spell 其
-    expect(t.build(treeOf(`${ref('ta1', 'de', 'ren2', 'hao3')}.`)).refs).toBe('{{Word:ta1}} {{word:de}} {{word:ren2}} {{word:hao3}}.');
+    // tā de wǒ as NP de NP: joining tā-de would spell 其, and 其 would be the first reading
+    expect(t.build(treeOf(`${ref('ta1', 'de', 'wo3', 'hao3')}.`)).refs).toBe('{{Word:ta1}} {{word:de}} {{word:wo3}} {{word:hao3}}.');
+    // before a noun the parser reads tā-de as two words first (Q6), so the habit may join them
+    const built = t.build(treeOf(`${ref('ta1', 'de', 'ren2', 'hao3')}.`)).refs;
+    expect(built).toBe('{{Word:ta1}}-{{word:de}} {{word:ren2}} {{word:hao3}}.');
+    expect(sameTree(treeOf(built), treeOf(`${ref('ta1', 'de', 'ren2', 'hao3')}.`), { reading: true })).toBe(true);
   });
 });
 
@@ -187,14 +234,15 @@ describe('the round trip', () => {
     expect(run(ref('wo3', 'ren2'))).toEqual({ text: ref('wo3', 'ren2'), parsed: false, ok: false });
   });
 
-  test('a composite the book joins and the first reading takes word by word is listed', () => {
+  test('a composite the book joins and the first reading takes word by word is listed; a word and de before a noun is by design', () => {
     const r = run('{{Word:ta1}}-{{word:de}} {{word:ren2}} {{word:hao3}}.');
     expect(r.ok).toBe(true);
-    expect(r.split).toEqual([{ zh: '其', words: ['ta1', 'de'] }]);
+    expect(r.split).toEqual([{ zh: '其', words: ['ta1', 'de'], byDesign: true }]);
+    expect(summarize([r])).toMatchObject({ split: 0, splitByDesign: 1 });
   });
 
   test('summarize counts what held and why', () => {
     const results = [`${ref('wo3', 'shi4', 'ren2')}.`, '{{word:wo3}} {{word:hao3}}.', ref('wo3', 'ren2')].map(run);
-    expect(summarize(results)).toEqual({ sentences: 3, parsed: 2, ok: 2, problems: 0, sameWords: 2, sameSpelling: 1, first: 2, later: 0, lost: 0, split: 0 });
+    expect(summarize(results)).toEqual({ sentences: 3, parsed: 2, ok: 2, problems: 0, sameWords: 2, sameSpelling: 1, first: 2, later: 0, lost: 0, split: 0, splitByDesign: 0 });
   });
 });

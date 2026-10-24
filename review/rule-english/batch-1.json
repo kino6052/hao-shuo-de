@@ -1,0 +1,1225 @@
+[
+  {
+    "id": "subject-predicate#3",
+    "lhs": "S",
+    "hsd": "NP VP",
+    "eng": "a noun phrase, then what is said about it",
+    "slots": [
+      "NP",
+      "VP"
+    ],
+    "uses": 4098,
+    "example": "{{Word:wo3}} {{word:qu4}}.",
+    "say": "{NP} {VP}"
+  },
+  {
+    "id": "subject-predicate#1",
+    "lhs": "Utt",
+    "hsd": "S",
+    "eng": "a sentence",
+    "slots": [
+      "S"
+    ],
+    "uses": 3179,
+    "example": "{{Word:wo3}} {{word:qu4}}.",
+    "say": "{S}"
+  },
+  {
+    "id": "svo#3",
+    "lhs": "VP",
+    "hsd": "VerbP",
+    "eng": "a verb phrase is what is said",
+    "slots": [
+      "VerbP"
+    ],
+    "uses": 3158,
+    "example": "{{Word:qu4}}!",
+    "say": "{VerbP}"
+  },
+  {
+    "id": "subject-predicate#5",
+    "lhs": "NP",
+    "hsd": "@pronoun",
+    "eng": "a pronoun",
+    "slots": [
+      "pronoun"
+    ],
+    "uses": 3042,
+    "example": "{{Word:na4}}.",
+    "say": "{pronoun}"
+  },
+  {
+    "id": "subject-predicate#4",
+    "lhs": "NP",
+    "hsd": "@noun",
+    "eng": "a noun",
+    "slots": [
+      "noun"
+    ],
+    "uses": 2106,
+    "example": "\"ng\".",
+    "say": "{noun}"
+  },
+  {
+    "id": "svo#1",
+    "lhs": "VerbP",
+    "hsd": "@verb NP",
+    "eng": "a verb and what it is done to",
+    "slots": [
+      "verb",
+      "NP"
+    ],
+    "uses": 1664,
+    "example": "{{Word:gei3}} {{word:wo3}}.",
+    "say": "{verb} {NP}"
+  },
+  {
+    "id": "de-modifier#6",
+    "lhs": "NP",
+    "hsd": "ModNP",
+    "eng": "a modified noun is a noun phrase",
+    "slots": [
+      "ModNP"
+    ],
+    "uses": 1624,
+    "example": "{{word:wo3}} {{word:jia1}}.",
+    "say": "{ModNP}"
+  },
+  {
+    "id": "svo#2",
+    "lhs": "VerbP",
+    "hsd": "@verb",
+    "eng": "a verb on its own",
+    "slots": [
+      "verb"
+    ],
+    "uses": 1450,
+    "example": "{{Word:qu4}}!",
+    "say": "{verb}"
+  },
+  {
+    "id": "de-modifier#5",
+    "lhs": "ModNP",
+    "hsd": "Mod @noun",
+    "eng": "a modifier and its noun",
+    "slots": [
+      "Mod",
+      "noun"
+    ],
+    "uses": 1036,
+    "example": "{{Word:ni3}}-{{word:de}} {{word:jia1}}.",
+    "say": "{noun} {Mod}"
+  },
+  {
+    "id": "hen-adjective#1",
+    "lhs": "VP",
+    "hsd": "hen3 @adjective",
+    "eng": "hěn and a describing word",
+    "slots": [
+      "adjective"
+    ],
+    "uses": 660,
+    "example": "{{word:hen3}} {{word:da4}}.",
+    "say": "is {adjective}"
+  },
+  {
+    "id": "subject-predicate#2",
+    "lhs": "Utt",
+    "hsd": "NP",
+    "eng": "a lone noun phrase, like an answer",
+    "slots": [
+      "NP"
+    ],
+    "uses": 654,
+    "example": "\"ng\".",
+    "say": "{NP}"
+  },
+  {
+    "id": "verb-de-person#2",
+    "lhs": "Mod",
+    "hsd": "S de",
+    "eng": "who does what, and de: describes the noun after it",
+    "slots": [
+      "S"
+    ],
+    "uses": 558,
+    "example": "{{Word:wo3}} {{word:ai4}} \"Zhōngguó\"-{{word:de}} {{word:zi4}}.",
+    "say": "that {S}"
+  },
+  {
+    "id": "doing-as-subject#1",
+    "lhs": "NP",
+    "hsd": "VP",
+    "eng": "an action as the thing talked about",
+    "slots": [
+      "VP"
+    ],
+    "uses": 473,
+    "example": "{{word:zai4}} {{word:na3}}-{{word:li3}}?",
+    "say": "to {VP}"
+  },
+  {
+    "id": "serial-verbs#1",
+    "lhs": "VP",
+    "hsd": "VerbP VP",
+    "eng": "an action, then another",
+    "slots": [
+      "VerbP",
+      "VP"
+    ],
+    "uses": 467,
+    "example": "{{Word:wo3}} {{word:yao4}} {{word:deng3}}.",
+    "say": "{VerbP} and {VP}"
+  },
+  {
+    "id": "topic-comment#1",
+    "lhs": "S",
+    "hsd": "NP S",
+    "eng": "a topic, then a sentence about it",
+    "slots": [
+      "NP",
+      "S"
+    ],
+    "uses": 466,
+    "example": "{{Word:zhe4}}-ge {{word:zen3me}} {{word:xie3}}?",
+    "say": "as for {NP}, {S}"
+  },
+  {
+    "id": "measure-word#3",
+    "lhs": "Count",
+    "hsd": "Pointer",
+    "eng": "a pointer says which",
+    "slots": [
+      "Pointer"
+    ],
+    "uses": 436,
+    "example": "{{Word:zhe4}}-ge {{word:ren2}}.",
+    "say": "{Pointer}"
+  },
+  {
+    "id": "de-modifier#4",
+    "lhs": "Mod",
+    "hsd": "NP de",
+    "eng": "an owner with -de",
+    "slots": [
+      "NP"
+    ],
+    "uses": 430,
+    "example": "{{Word:ni3}}-{{word:de}} {{word:jia1}}.",
+    "say": "of {NP}"
+  },
+  {
+    "id": "shi-copula#1",
+    "lhs": "VP",
+    "hsd": "shi4 NP",
+    "eng": "shì and what it is",
+    "slots": [
+      "NP"
+    ],
+    "uses": 424,
+    "example": "{{word:shi4}} {{word:qi1}}.",
+    "say": "is {NP}"
+  },
+  {
+    "id": "le-new-situation#1",
+    "lhs": "VP",
+    "hsd": "VP le",
+    "eng": "what is said, and le: it has now happened",
+    "slots": [
+      "VP"
+    ],
+    "uses": 412,
+    "example": "{{Word:wo3}} {{word:qu4}} {{word:le}}.",
+    "say": "{VP} now"
+  },
+  {
+    "id": "measure-word#1",
+    "lhs": "Pointer",
+    "hsd": "=zhe4",
+    "eng": "zhè, this",
+    "slots": [],
+    "uses": 355,
+    "example": "{{Word:zhe4}}-ge {{word:ren2}}.",
+    "say": "this"
+  },
+  {
+    "id": "measure-word#4",
+    "lhs": "Num",
+    "hsd": "@number",
+    "eng": "a number",
+    "slots": [
+      "number"
+    ],
+    "uses": 337,
+    "example": "{{word:shi4}} {{word:qi1}}.",
+    "say": "{number}"
+  },
+  {
+    "id": "measure-word#8",
+    "lhs": "NP",
+    "hsd": "Count @measure_word @noun",
+    "eng": "a pointer or number, a counting word, and its noun",
+    "slots": [
+      "Count",
+      "measure_word",
+      "noun"
+    ],
+    "uses": 314,
+    "example": "{{Word:yi1}}-ge {{word:ren2}}.",
+    "say": "{Count} {noun}"
+  },
+  {
+    "id": "owner-part#1",
+    "lhs": "ModNP",
+    "hsd": "@noun @noun",
+    "eng": "two nouns, the owner first: the animal's body",
+    "slots": [
+      "noun",
+      "noun2"
+    ],
+    "uses": 285,
+    "example": "{{Word:wo3}} {{word:chi1}} \"miàn\".",
+    "say": "{noun}'s {noun2}"
+  },
+  {
+    "id": "ma-question#3",
+    "lhs": "Utt",
+    "hsd": "Q",
+    "eng": "a question",
+    "slots": [
+      "Q"
+    ],
+    "uses": 284,
+    "example": "{{word:hao3}} {{word:ma}}?",
+    "say": "{Q}"
+  },
+  {
+    "id": "owner-part#2",
+    "lhs": "ModNP",
+    "hsd": "Person @noun",
+    "eng": "wǒ, nǐ, tā (or with men) and a noun: my part, your part, their part",
+    "slots": [
+      "Person",
+      "noun"
+    ],
+    "uses": 270,
+    "example": "{{word:wo3}} {{word:jia1}}.",
+    "say": "{Person}'s {noun}"
+  },
+  {
+    "id": "adjective-noun#1",
+    "lhs": "ModNP",
+    "hsd": "@adjective-zhe4-na4 @noun",
+    "eng": "a describing word (not zhè or nà) and a noun: an old woman",
+    "slots": [
+      "adjective",
+      "noun"
+    ],
+    "uses": 245,
+    "example": "{{Word:xie3}}-{{word:de}} {{word:ren2}}.",
+    "say": "{adjective} {noun}"
+  },
+  {
+    "id": "measure-word#7",
+    "lhs": "NP",
+    "hsd": "Count @measure_word",
+    "eng": "a pointer or number and a counting word: this one, two of them",
+    "slots": [
+      "Count",
+      "measure_word"
+    ],
+    "uses": 242,
+    "example": "{{Word:na2}} {{word:yi1}}-ge!",
+    "say": "{Count} one"
+  },
+  {
+    "id": "ma-question#1",
+    "lhs": "Q",
+    "hsd": "S ma",
+    "eng": "a sentence with ma",
+    "slots": [
+      "S"
+    ],
+    "uses": 225,
+    "example": "{{Word:ni3}} {{word:ting1}} {{word:ma}}?",
+    "say": "{S}?"
+  },
+  {
+    "id": "measure-word#5",
+    "lhs": "Count",
+    "hsd": "Num",
+    "eng": "a number says how many",
+    "slots": [
+      "Num"
+    ],
+    "uses": 204,
+    "example": "{{Word:na2}} {{word:yi1}}-ge!",
+    "say": "{Num}"
+  },
+  {
+    "id": "verb-result#1",
+    "lhs": "Res",
+    "hsd": "@adjective",
+    "eng": "a describing word as the result: hǎo, huài",
+    "slots": [
+      "adjective"
+    ],
+    "uses": 202,
+    "example": "{{Word:lai2}} {{word:wan2r}}!",
+    "say": "{adjective}"
+  },
+  {
+    "id": "bu-negation#1",
+    "lhs": "VP",
+    "hsd": "bu4 VP",
+    "eng": "bù before what is said",
+    "slots": [
+      "VP"
+    ],
+    "uses": 200,
+    "example": "{{Word:bu4}} {{word:dui4}}.",
+    "say": "not {VP}"
+  },
+  {
+    "id": "short-answer#1",
+    "lhs": "Utt",
+    "hsd": "VP",
+    "eng": "what is said, with no one named",
+    "slots": [
+      "VP"
+    ],
+    "uses": 199,
+    "example": "{{Word:qu4}}!",
+    "say": "{VP}"
+  },
+  {
+    "id": "verb-result#9",
+    "lhs": "VerbP",
+    "hsd": "@verb Res",
+    "eng": "a verb and its result",
+    "slots": [
+      "verb",
+      "Res"
+    ],
+    "uses": 193,
+    "example": "{{Word:lai2}} {{word:wan2r}}!",
+    "say": "{verb} {Res}"
+  },
+  {
+    "id": "men-plural#2",
+    "lhs": "Person",
+    "hsd": "=wo3",
+    "eng": "wǒ, I",
+    "slots": [],
+    "uses": 182,
+    "example": "{{word:wo3}} {{word:jia1}}.",
+    "say": "I"
+  },
+  {
+    "id": "bu-adjective#1",
+    "lhs": "VP",
+    "hsd": "bu4 @adjective",
+    "eng": "bù and a describing word",
+    "slots": [
+      "adjective"
+    ],
+    "uses": 138,
+    "example": "{{word:bu4}} {{word:lao3}}.",
+    "say": "is not {adjective}"
+  },
+  {
+    "id": "ba-handle#1",
+    "lhs": "VP",
+    "hsd": "ba3 NP VP",
+    "eng": "bǎ, the thing, then what is done to it",
+    "slots": [
+      "NP",
+      "VP"
+    ],
+    "uses": 134,
+    "example": "{{Word:ba3}} {{word:men2}} {{word:guan1}} {{word:le}}.",
+    "say": "takes {NP} and {VP}"
+  },
+  {
+    "id": "verb-result#10",
+    "lhs": "VerbP",
+    "hsd": "@verb Res NP",
+    "eng": "a verb, its result, and what it was done to",
+    "slots": [
+      "verb",
+      "Res",
+      "NP"
+    ],
+    "uses": 121,
+    "example": "{{Word:wo3}} {{word:yao4}} {{word:qu4}} \"Běijīng\".",
+    "say": "{verb} {NP} {Res}"
+  },
+  {
+    "id": "verb-de-person#1",
+    "lhs": "Mod",
+    "hsd": "VP de",
+    "eng": "an action and de: describes the noun after it",
+    "slots": [
+      "VP"
+    ],
+    "uses": 106,
+    "example": "{{Word:bi3}}-{{word:de}} {{word:ren2}} {{word:hen3}} {{word:duo1}}.",
+    "say": "that {VP}"
+  },
+  {
+    "id": "dou-all#1",
+    "lhs": "VP",
+    "hsd": "=dou1 VP",
+    "eng": "dōu, then what is said",
+    "slots": [
+      "VP"
+    ],
+    "uses": 104,
+    "example": "{{Word:wo3}} {{word:dou1}} {{word:you3}}.",
+    "say": "all {VP}"
+  },
+  {
+    "id": "verb-de-thing#2",
+    "lhs": "NP",
+    "hsd": "S de",
+    "eng": "who does what, and de: the thing they did",
+    "slots": [
+      "S"
+    ],
+    "uses": 103,
+    "example": "{{Word:wo3}} {{word:you3}} {{word:he1}}-{{word:de}}.",
+    "say": "what {S}"
+  },
+  {
+    "id": "men-plural#4",
+    "lhs": "Person",
+    "hsd": "=ta1",
+    "eng": "tā, he or she",
+    "slots": [],
+    "uses": 100,
+    "example": "{{Word:ta1}} {{word:shuo1}}.",
+    "say": "he"
+  },
+  {
+    "id": "speech-quote#1",
+    "lhs": "Utt",
+    "hsd": "NP Say",
+    "eng": "someone, a verb of saying, and what was said, to the end",
+    "slots": [
+      "NP",
+      "Say"
+    ],
+    "uses": 99,
+    "example": "{{Word:wo3}} {{word:shuo1}}: {{Word:guo3}}.",
+    "say": "{NP} {Say}"
+  },
+  {
+    "id": "speech-quote#3",
+    "lhs": "Say",
+    "hsd": "@verb @colon Utt",
+    "eng": "a verb, a colon, and what was said or asked, to the end",
+    "slots": [
+      "verb",
+      "Utt"
+    ],
+    "uses": 96,
+    "example": "{{Word:wo3}} {{word:shuo1}}: {{Word:guo3}}.",
+    "say": "{verb}: {Utt}"
+  },
+  {
+    "id": "le-done#1",
+    "lhs": "VerbP",
+    "hsd": "@verb le NP",
+    "eng": "a verb, le, and what it was done to",
+    "slots": [
+      "verb",
+      "NP"
+    ],
+    "uses": 94,
+    "example": "{{Word:ni3}} {{word:lai2}} {{word:le}} \"a\"!",
+    "say": "did {verb} {NP}"
+  },
+  {
+    "id": "de-modifier#1",
+    "lhs": "AdjP",
+    "hsd": "@adjective",
+    "eng": "a describing word",
+    "slots": [
+      "adjective"
+    ],
+    "uses": 93,
+    "example": "{{word:hao3}}-{{word:de}} {{word:ren2}}.",
+    "say": "{adjective}"
+  },
+  {
+    "id": "measure-word#2",
+    "lhs": "Pointer",
+    "hsd": "=na4",
+    "eng": "nà, that",
+    "slots": [],
+    "uses": 92,
+    "example": "{{Word:na4}}-{{light:ge4}} {{word:dui4}}.",
+    "say": "that"
+  },
+  {
+    "id": "place-li-shang#1",
+    "lhs": "NP",
+    "hsd": "NP =li3",
+    "eng": "a place and lǐ: inside it",
+    "slots": [
+      "NP"
+    ],
+    "uses": 90,
+    "example": "{{word:zai4}} {{word:bao1}}-{{word:li3}}?",
+    "say": "inside {NP}"
+  },
+  {
+    "id": "he-and#1",
+    "lhs": "NP",
+    "hsd": "NP =he2 NP",
+    "eng": "two nouns joined by hé: you and me",
+    "slots": [
+      "NP",
+      "NP2"
+    ],
+    "uses": 84,
+    "example": "{{Word:ni3}} {{word:he2}} {{word:wo3}}.",
+    "say": "{NP} and {NP2}"
+  },
+  {
+    "id": "calling-hail#1",
+    "lhs": "Hail",
+    "hsd": "NP",
+    "eng": "a name or a word for someone",
+    "slots": [
+      "NP"
+    ],
+    "uses": 82,
+    "example": "{{Word:yi1}}, {{word:er4}}, {{word:san1}}!",
+    "say": "{NP}"
+  },
+  {
+    "id": "de-modifier#3",
+    "lhs": "Mod",
+    "hsd": "AdjP de",
+    "eng": "a describing word with -de",
+    "slots": [
+      "AdjP"
+    ],
+    "uses": 79,
+    "example": "{{word:hao3}}-{{word:de}} {{word:ren2}}.",
+    "say": "that is {AdjP}"
+  },
+  {
+    "id": "stacked-modifiers#1",
+    "lhs": "ModNP",
+    "hsd": "Mod ModNP",
+    "eng": "another modifier before a modified noun",
+    "slots": [
+      "Mod",
+      "ModNP"
+    ],
+    "uses": 79,
+    "example": "{{Word:wo3}}-{{word:de}} {{word:hao3}}-{{word:de}} {{word:ren2}}.",
+    "say": "{ModNP} {Mod}"
+  },
+  {
+    "id": "count-aloud#4",
+    "lhs": "NP",
+    "hsd": "Num",
+    "eng": "a number as a thing: three, ten",
+    "slots": [
+      "Num"
+    ],
+    "uses": 78,
+    "example": "{{word:shi4}} {{word:qi1}}.",
+    "say": "{Num}"
+  },
+  {
+    "id": "measure-word#9",
+    "lhs": "NP",
+    "hsd": "Count @measure_word ModNP",
+    "eng": "a pointer or number, a counting word, and a modified noun",
+    "slots": [
+      "Count",
+      "measure_word",
+      "ModNP"
+    ],
+    "uses": 74,
+    "example": "{{Word:wu3}}-ge {{word:ren2}} {{word:chi1}}.",
+    "say": "{Count} {ModNP}"
+  },
+  {
+    "id": "can-verb#1",
+    "lhs": "Can",
+    "hsd": "=neng2",
+    "eng": "néng, can",
+    "slots": [],
+    "uses": 73,
+    "example": "{{word:bu4}} {{word:neng2}} {{word:kan4}}?",
+    "say": "can"
+  },
+  {
+    "id": "men-plural#3",
+    "lhs": "Person",
+    "hsd": "=ni3",
+    "eng": "nǐ, you",
+    "slots": [],
+    "uses": 69,
+    "example": "{{Word:ni3}} {{word:shi2}}-{{word:wu3}}.",
+    "say": "you"
+  },
+  {
+    "id": "owner-part#4",
+    "lhs": "ModNP",
+    "hsd": "Person ModNP",
+    "eng": "an owner and a modified part: my mother's body",
+    "slots": [
+      "Person",
+      "ModNP"
+    ],
+    "uses": 69,
+    "example": "{{Word:wo3}} {{word:chi1}} \"miàn\".",
+    "say": "{Person}'s {ModNP}"
+  },
+  {
+    "id": "yinwei-because#1",
+    "lhs": "Clause",
+    "hsd": "S",
+    "eng": "a sentence as one part of a longer one",
+    "slots": [
+      "S"
+    ],
+    "uses": 65,
+    "example": "{{word:yin1wei4}} {{word:wo3}} {{word:chi1}}-{{word:wan2}} {{word:le}}.",
+    "say": "{S}"
+  },
+  {
+    "id": "zai-place#2",
+    "lhs": "VP",
+    "hsd": "=zai4 NP VP",
+    "eng": "zài, a place, then the verb: does it there",
+    "slots": [
+      "NP",
+      "VP"
+    ],
+    "uses": 65,
+    "example": "{{Word:wo3}} {{word:zai4}} {{word:xue2}} {{word:xie3}}.",
+    "say": "{VP} at {NP}"
+  },
+  {
+    "id": "add-take#4",
+    "lhs": "Utt",
+    "hsd": "S @comma VP",
+    "eng": "a sentence, then what it comes to",
+    "slots": [
+      "S",
+      "VP"
+    ],
+    "uses": 60,
+    "example": "{{Word:wo3}} {{word:hen3}} {{word:hao3}}, {{word:xie4}}-xie.",
+    "say": "{S}, that {VP}"
+  },
+  {
+    "id": "zuo-make#1",
+    "lhs": "VerbP",
+    "hsd": "=zuo4 @adjective",
+    "eng": "zuò and the result",
+    "slots": [
+      "adjective"
+    ],
+    "uses": 60,
+    "example": "{{Word:wo3}} {{word:zuo4}} {{word:hao3}} {{word:le}}.",
+    "say": "make it {adjective}"
+  },
+  {
+    "id": "comma-clauses#1",
+    "lhs": "S",
+    "hsd": "S @comma S",
+    "eng": "two sentences with a comma between",
+    "slots": [
+      "S",
+      "S2"
+    ],
+    "uses": 57,
+    "example": "{{Word:ni3}} {{word:bang1}} {{word:wo3}}, {{word:wo3}} {{word:xue2}}.",
+    "say": "{S}, {S2}"
+  },
+  {
+    "id": "place-li-shang#2",
+    "lhs": "NP",
+    "hsd": "NP =shang4",
+    "eng": "a place and shàng: on it",
+    "slots": [
+      "NP"
+    ],
+    "uses": 51,
+    "example": "{{Word:bao1}} {{word:zai4}} {{word:di4}}-{{word:shang4}}.",
+    "say": "on {NP}"
+  },
+  {
+    "id": "zai-place#1",
+    "lhs": "VerbP",
+    "hsd": "@verb =zai4 NP",
+    "eng": "a verb and where: stays at home",
+    "slots": [
+      "verb",
+      "NP"
+    ],
+    "uses": 51,
+    "example": "{{word:fang4}} {{word:zai4}} {{word:yi1}}-{{word:qi3}}.",
+    "say": "{verb} at {NP}"
+  },
+  {
+    "id": "ye-also#1",
+    "lhs": "VP",
+    "hsd": "=ye3 VP",
+    "eng": "yě, then what is said",
+    "slots": [
+      "VP"
+    ],
+    "uses": 48,
+    "example": "\"Jī-jī\" {{word:ye3}} {{word:chi1}}.",
+    "say": "also {VP}"
+  },
+  {
+    "id": "doubled-verb#4",
+    "lhs": "Utt",
+    "hsd": "VP @comma S",
+    "eng": "a short word like thanks, then what you say next",
+    "slots": [
+      "VP",
+      "S"
+    ],
+    "uses": 47,
+    "example": "{{Word:xie4}}-xie, {{word:wo3}} {{word:kan4}}-kan.",
+    "say": "{VP}, {S}"
+  },
+  {
+    "id": "can-verb#3",
+    "lhs": "VP",
+    "hsd": "Can VP",
+    "eng": "a can, then what can be done",
+    "slots": [
+      "Can",
+      "VP"
+    ],
+    "uses": 46,
+    "example": "{{Word:wo3}} {{word:neng2}} {{word:zuo4}}.",
+    "say": "{Can} {VP}"
+  },
+  {
+    "id": "bi-than#1",
+    "lhs": "VP",
+    "hsd": "=bi3 NP @adjective",
+    "eng": "bǐ, what it is set against, and a describing word",
+    "slots": [
+      "NP",
+      "adjective"
+    ],
+    "uses": 45,
+    "example": "\"Miāo-miao\" {{word:bi3}} \"Jī-jī\" {{word:da4}}.",
+    "say": "is more {adjective} than {NP}"
+  },
+  {
+    "id": "bian-became#1",
+    "lhs": "VP",
+    "hsd": "=bian4 @adjective",
+    "eng": "biàn and a describing word",
+    "slots": [
+      "adjective"
+    ],
+    "uses": 45,
+    "example": "{{word:bian4}} {{word:leng3}} {{word:le}}?",
+    "say": "becomes {adjective}"
+  },
+  {
+    "id": "calling-hail#4",
+    "lhs": "Utt",
+    "hsd": "Hail @comma S",
+    "eng": "a call, then a sentence",
+    "slots": [
+      "Hail",
+      "S"
+    ],
+    "uses": 45,
+    "example": "{{Word:na4}}, {{word:wo3}}-{{word:men}} {{word:zou3}}.",
+    "say": "{Hail}, {S}"
+  },
+  {
+    "id": "yong-with#1",
+    "lhs": "VP",
+    "hsd": "=yong4 NP VP",
+    "eng": "yòng, the thing, then the verb: does it with that",
+    "slots": [
+      "NP",
+      "VP"
+    ],
+    "uses": 45,
+    "example": "{{Word:wo3}} {{word:yong4}} X {{word:zuo4}}.",
+    "say": "{VP} with {NP}"
+  },
+  {
+    "id": "de-modifier#7",
+    "lhs": "NP",
+    "hsd": "NP de",
+    "eng": "an owner with -de, the noun left out: mine",
+    "slots": [
+      "NP"
+    ],
+    "uses": 44,
+    "example": "{{Word:yue4}} {{word:yuan2}}-{{word:yuan2}}-{{word:de}}.",
+    "say": "the one of {NP}"
+  },
+  {
+    "id": "le-changed#1",
+    "lhs": "VP",
+    "hsd": "@adjective le",
+    "eng": "a describing word and le: it changed",
+    "slots": [
+      "adjective"
+    ],
+    "uses": 43,
+    "example": "{{Word:hao3}} {{word:le}}.",
+    "say": "has become {adjective}"
+  },
+  {
+    "id": "cong-from#1",
+    "lhs": "VP",
+    "hsd": "=cong2 NP VP",
+    "eng": "cóng, a place, then the verb",
+    "slots": [
+      "NP",
+      "VP"
+    ],
+    "uses": 42,
+    "example": "{{Word:wo3}} {{word:cong2}} \"Měiguó\" {{word:lai2}}.",
+    "say": "{VP} from {NP}"
+  },
+  {
+    "id": "jiu-then#1",
+    "lhs": "VP",
+    "hsd": "=jiu4 VP",
+    "eng": "jiù, then what is done: right away, then",
+    "slots": [
+      "VP"
+    ],
+    "uses": 42,
+    "example": "{{Word:jiu4}}-{{word:shi4}} {{word:ta1}}!",
+    "say": "then {VP}"
+  },
+  {
+    "id": "verb-result#5",
+    "lhs": "Res",
+    "hsd": "=wan2",
+    "eng": "wán: finished it",
+    "slots": [],
+    "uses": 42,
+    "example": "{{word:chi1}}-{{word:wan2}} {{word:le}}.",
+    "say": "completely"
+  },
+  {
+    "id": "zhen-really#1",
+    "lhs": "VP",
+    "hsd": "=zhen1 @adjective",
+    "eng": "zhēn and a describing word",
+    "slots": [
+      "adjective"
+    ],
+    "uses": 41,
+    "example": "{{Word:zhen1}} {{word:re4}}!",
+    "say": "is really {adjective}"
+  },
+  {
+    "id": "owner-part#3",
+    "lhs": "ModNP",
+    "hsd": "@noun ModNP",
+    "eng": "an owner and a modified part: the animal's outside parts",
+    "slots": [
+      "noun",
+      "ModNP"
+    ],
+    "uses": 40,
+    "example": "\"Miāo-miao\" {{word:chi1}} {{word:fan4}}.",
+    "say": "{noun}'s {ModNP}"
+  },
+  {
+    "id": "gei-give#1",
+    "lhs": "VerbP",
+    "hsd": "=gei3 NP NP",
+    "eng": "gěi, the person, and the thing",
+    "slots": [
+      "NP",
+      "NP2"
+    ],
+    "uses": 39,
+    "example": "{{Word:gei3}} {{word:wo3}} {{word:bao1}}.",
+    "say": "give {NP} {NP2}"
+  },
+  {
+    "id": "zai-now#1",
+    "lhs": "VP",
+    "hsd": "=zai4 VP",
+    "eng": "zài, then the verb",
+    "slots": [
+      "VP"
+    ],
+    "uses": 37,
+    "example": "{{Word:wo3}} {{word:zai4}} {{word:zuo4}}.",
+    "say": "{VP} right now"
+  },
+  {
+    "id": "hen-duo-noun#1",
+    "lhs": "NP",
+    "hsd": "hen3 =duo1 @noun",
+    "eng": "hěn duō and its noun: many of them",
+    "slots": [
+      "noun"
+    ],
+    "uses": 36,
+    "example": "{{Word:hen3}} {{word:duo1}} {{word:che1}} {{word:qu4}}.",
+    "say": "many {noun}"
+  },
+  {
+    "id": "what-question#1",
+    "lhs": "NP",
+    "hsd": "=shen2me @noun",
+    "eng": "shénme before a noun: what kind of",
+    "slots": [
+      "noun"
+    ],
+    "uses": 35,
+    "example": "{{word:shen2me}} {{word:shi2}}-{{word:jian1}}.",
+    "say": "what {noun}"
+  },
+  {
+    "id": "dan-shi-but#5",
+    "lhs": "S",
+    "hsd": "S @comma But Clause",
+    "eng": "a sentence, then but and the other part",
+    "slots": [
+      "S",
+      "But",
+      "Clause"
+    ],
+    "uses": 34,
+    "example": "{{Word:zhe4}} {{word:hen3}} {{word:nan2}}, {{word:dan4}}-{{word:shi4}} {{word:wo3}} {{word:xue2}}.",
+    "say": "{S}, {But} {Clause}"
+  },
+  {
+    "id": "hui-will#1",
+    "lhs": "VP",
+    "hsd": "=hui4 VP",
+    "eng": "huì, then the verb",
+    "slots": [
+      "VP"
+    ],
+    "uses": 33,
+    "example": "{{Word:wo3}} {{word:hui4}} {{word:chi1}}.",
+    "say": "will {VP}"
+  },
+  {
+    "id": "ma-question#2",
+    "lhs": "Q",
+    "hsd": "NP @adjective ma",
+    "eng": "a describing word with no hěn before ma",
+    "slots": [
+      "NP",
+      "adjective"
+    ],
+    "uses": 33,
+    "example": "{{Word:ni3}} {{word:hao3}} {{word:ma}}?",
+    "say": "is {NP} {adjective}?"
+  },
+  {
+    "id": "dan-shi-but#1",
+    "lhs": "But",
+    "hsd": "=dan4 =shi4",
+    "eng": "dàn-shì, but",
+    "slots": [],
+    "uses": 32,
+    "example": "{{word:dan4}}-{{word:shi4}} {{word:wei4}}-{{word:dao4}} {{word:bu4}} {{word:hao3}}.",
+    "say": "but"
+  },
+  {
+    "id": "verb-result#8",
+    "lhs": "Res",
+    "hsd": "=qu4",
+    "eng": "qù: away from you",
+    "slots": [],
+    "uses": 32,
+    "example": "{{Word:wo3}} {{word:xiang3}} {{word:qu4}}.",
+    "say": "away"
+  },
+  {
+    "id": "love-verb#1",
+    "lhs": "VP",
+    "hsd": "=ai4 VP",
+    "eng": "ài, then the verb",
+    "slots": [
+      "VP"
+    ],
+    "uses": 30,
+    "example": "{{Word:ta1}} {{word:ai4}} {{word:kan4}}.",
+    "say": "loves to {VP}"
+  },
+  {
+    "id": "rang-make#2",
+    "lhs": "VP",
+    "hsd": "=rang4 NP VP",
+    "eng": "ràng, someone, and a verb: let them do it",
+    "slots": [
+      "NP",
+      "VP"
+    ],
+    "uses": 30,
+    "example": "{{Word:rang4}} {{word:wo3}} {{word:kan4}}-kan.",
+    "say": "lets {NP} {VP}"
+  },
+  {
+    "id": "doubled-verb#1",
+    "lhs": "VerbP",
+    "hsd": "@verb @again",
+    "eng": "a verb said twice: a little of it",
+    "slots": [
+      "verb",
+      "again"
+    ],
+    "uses": 29,
+    "example": "{{Word:xie4}}-xie!",
+    "say": "{verb} a little"
+  },
+  {
+    "id": "ruguo-if#7",
+    "lhs": "S",
+    "hsd": "Cond @comma Clause",
+    "eng": "the if-part, a comma, and the rest",
+    "slots": [
+      "Cond",
+      "Clause"
+    ],
+    "uses": 28,
+    "example": "{{Word:ru2guo3}} {{word:ni3}} {{word:yao4}}, {{word:wo3}} {{word:gei3}} {{word:ni3}}.",
+    "say": "{Cond}, {Clause}"
+  },
+  {
+    "id": "can-alone#1",
+    "lhs": "VP",
+    "hsd": "Can",
+    "eng": "can on its own",
+    "slots": [
+      "Can"
+    ],
+    "uses": 27,
+    "example": "{{word:bu4}} {{word:neng2}} {{word:kan4}}?",
+    "say": "{Can}"
+  },
+  {
+    "id": "ruguo-if#3",
+    "lhs": "Cond",
+    "hsd": "=ru2guo3 Clause",
+    "eng": "rúguǒ and the if-part",
+    "slots": [
+      "Clause"
+    ],
+    "uses": 27,
+    "example": "{{Word:ru2guo3}} {{word:ni3}} {{word:yao4}}, {{word:wo3}} {{word:gei3}} {{word:ni3}}.",
+    "say": "if {Clause}"
+  },
+  {
+    "id": "verb-bu-verb#1",
+    "lhs": "Either",
+    "hsd": "@verb bu4 @verb",
+    "eng": "a verb, bù, the verb again",
+    "slots": [
+      "verb",
+      "verb2"
+    ],
+    "uses": 27,
+    "example": "{{Word:wo3}} {{word:kan4}}-{{word:bu4}}-{{word:dao4}}.",
+    "say": "{verb} or not"
+  },
+  {
+    "id": "adverb-before-verb#3",
+    "lhs": "VP",
+    "hsd": "hen3 VerbP",
+    "eng": "hěn before a verb: very much",
+    "slots": [
+      "VerbP"
+    ],
+    "uses": 26,
+    "example": "{{Word:ta1}} {{word:hen3}} {{word:ai4}} {{word:wo3}}.",
+    "say": "very much {VerbP}"
+  },
+  {
+    "id": "dui-correct#1",
+    "lhs": "VP",
+    "hsd": "=dui4",
+    "eng": "duì, right",
+    "slots": [],
+    "uses": 26,
+    "example": "{{Word:dui4}}.",
+    "say": "is right"
+  },
+  {
+    "id": "kuai-quick#1",
+    "lhs": "VP",
+    "hsd": "=kuai4 VP",
+    "eng": "kuài and a verb: quickly",
+    "slots": [
+      "VP"
+    ],
+    "uses": 26,
+    "example": "{{Word:kuai4}} {{word:lai2}}!",
+    "say": "quickly {VP}"
+  },
+  {
+    "id": "time-first#6",
+    "lhs": "VP",
+    "hsd": "Time VP",
+    "eng": "a time right after the doer",
+    "slots": [
+      "Time",
+      "VP"
+    ],
+    "uses": 25,
+    "example": "{{Word:ta1}} {{word:shi2}}-{{word:dian3}} {{word:shui4jiao4}}.",
+    "say": "{Time} {VP}"
+  },
+  {
+    "id": "verb-bu-verb#6",
+    "lhs": "VerbP",
+    "hsd": "Either",
+    "eng": "the either-or verb on its own",
+    "slots": [
+      "Either"
+    ],
+    "uses": 25,
+    "example": "{{Word:hao3}} {{word:bu4}} {{word:hao3}}?",
+    "say": "{Either}"
+  },
+  {
+    "id": "zui-most#1",
+    "lhs": "VP",
+    "hsd": "=zui4 @adjective",
+    "eng": "zuì and a describing word",
+    "slots": [
+      "adjective"
+    ],
+    "uses": 25,
+    "example": "{{word:zui4}} {{word:da4}}.",
+    "say": "is most {adjective}"
+  },
+  {
+    "id": "you-again#1",
+    "lhs": "VP",
+    "hsd": "=you4 VP",
+    "eng": "yòu, then the verb",
+    "slots": [
+      "VP"
+    ],
+    "uses": 24,
+    "example": "{{Word:wo3}} {{word:you4}} {{word:shuo1}}.",
+    "say": "again {VP}"
+  }
+]

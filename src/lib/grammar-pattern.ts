@@ -23,6 +23,8 @@ export interface PatternRule {
   hsd: string;
   /** What the rule says, in a few plain words (shown beside a tree). */
   eng?: string;
+  /** What it builds, in English, with its slots in braces: "{NP} is {NP2}" (the readback of a meaning tree, src/lib/grammar/tree.js). */
+  say?: string;
 }
 
 export interface Pattern {

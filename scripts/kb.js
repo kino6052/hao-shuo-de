@@ -219,14 +219,16 @@ let memoStore = null; // the parse memory on disk (scripts/parse-memo.js), made 
 let frequencies; // the Mandarin frequency list, read once (null when there is none)
 
 // -> the KB for the data as it is now. `force` rebuilds. `memo` keeps parse results on disk and gives slim ones
-// (no trees; see src/lib/grammar/parser.js): for the gates, which only ask whether a sentence parses.
+// (no trees; see src/lib/grammar/parser.js): for the gates, which only ask whether a sentence parses. The composites'
+// build always uses the memory, which it opens the first time it is asked (kb.built(), kb_lookup).
 export async function openKb({ force = false, memo = false } = {}) {
   const stamp = fingerprint();
   const kept = cached.get(Boolean(memo));
   if (!force && kept?.stamp === stamp) return kept.kb;
   const source = await reloadSource();
   frequencies ??= loadFrequencyList();
-  const kb = createKb(source, { freq: frequencies, drafts: await loadDrafts(source), relationRules: loadRelationRules(), englishData: loadEnglishData, yardstickData: loadYardsticks, parseMemo: memo ? (memoStore ??= parseMemo()) : null });
+  const store = () => (memoStore ??= parseMemo());
+  const kb = createKb(source, { freq: frequencies, drafts: await loadDrafts(source), relationRules: loadRelationRules(), englishData: loadEnglishData, yardstickData: loadYardsticks, parseMemo: memo ? store() : null, buildMemo: memo ? store() : { space: (facts) => store().space(facts) } });
   cached.set(Boolean(memo), { stamp, kb });
   return kb;
 }

@@ -71,15 +71,17 @@ export function repairPrompt(prompts, request, lesson, answer, problems) {
   ].join('\n');
 }
 
+// what the blind reader and the judge are shown of one text (scripts/t-eng.js shows many in one prompt the same way)
+export const readerText = (sentences) => sentences.map((s, i) => `${i + 1}. ${s.pinyin}\n   gloss: ${s.gloss}`).join('\n');
+export const sketchText = (sketch) => sketch.map((s) => `${s.id} (${s.needed ? 'needed' : 'colour'}): ${s.idea}${s.links ? ` [${s.links}]` : ''}`).join('\n');
+export const readingText = (blind) => [...blind.sentences.map((s, i) => `${i + 1}. ${s.english}`), '', `The whole: ${blind.whole}`, blind.unsure ? `Unsure: ${blind.unsure}` : ''].join('\n');
+
 export function blindPrompt(prompts, sentences, lesson) {
-  const body = sentences.map((s, i) => `${i + 1}. ${s.pinyin}\n   gloss: ${s.gloss}`).join('\n');
-  return [prompts.blind, '', lesson ? `The text is written for a learner at lesson ${lesson.number} (${lesson.id}).` : 'The text may use any word of the dictionary.', '', fenced('HAO-SHUO-DE', body)].join('\n');
+  return [prompts.blind, '', lesson ? `The text is written for a learner at lesson ${lesson.number} (${lesson.id}).` : 'The text may use any word of the dictionary.', '', fenced('HAO-SHUO-DE', readerText(sentences))].join('\n');
 }
 
 export function judgePrompt(prompts, sketch, blind) {
-  const ideas = sketch.map((s) => `${s.id} (${s.needed ? 'needed' : 'colour'}): ${s.idea}${s.links ? ` [${s.links}]` : ''}`).join('\n');
-  const reading = [...blind.sentences.map((s, i) => `${i + 1}. ${s.english}`), '', `The whole: ${blind.whole}`, blind.unsure ? `Unsure: ${blind.unsure}` : ''].join('\n');
-  return [prompts.judge, '', 'The sketch:', '', fenced('SKETCH', ideas), '', "The blind reader's reading:", '', fenced('READING', reading)].join('\n');
+  return [prompts.judge, '', 'The sketch:', '', fenced('SKETCH', sketchText(sketch)), '', "The blind reader's reading:", '', fenced('READING', readingText(blind))].join('\n');
 }
 
 const failure = (message, userMessage) => Object.assign(new Error(message), { userMessage });

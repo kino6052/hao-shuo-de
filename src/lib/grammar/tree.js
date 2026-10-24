@@ -8,9 +8,14 @@
 //   trees.fromParse(result, k) -> the k-th reading of a parse result (parser.parse) as a tree, null if there is none
 //   trees.check(tree)          -> problems, one sentence each; [] when the tree is well formed
 //   trees.build(tree)          -> { refs, tokens }: the sentence with word refs, and its words in order
-//   trees.readback(tree)       -> the tree word by word in English, in brackets named by their pattern
+//   trees.readback(tree)       -> the tree in English: each rule's English side filled ("{NP} is {NP2}", the rule's
+//                                 `say`, or a draft from makeTrees({ ..., english: Map(id -> say) })), and a rule
+//                                 without one word by word, in brackets named by its pattern
+//   trees.ruleSays(id)         -> a rule's English side, null when it has none yet
 //   trees.compositesOf(ids)    -> the composites a chain of words spells: ['shi2', 'jian1'] -> ['时间']
 //   sameTree(a, b, { reading }) -> true when two trees are the same; reading: true leaves out the light syllables
+//   treeText(tree)             -> the tree as one line: [rule slot=... slot=...] (below, above readTreeText)
+//   readTreeText(line)         -> { tree } or { problem }
 //   spellingHabits(texts)      -> how the book writes each word (below); makeTrees({ ..., habits }) builds with them
 //   spelledTokens(text)        -> a sentence's words as written: { kind, id?, text?, light?, bare?, joined? }
 //
@@ -51,6 +56,9 @@ const MARKS = { comma: ',', colon: ':' };
 
 // without the book's habits: the words joined to the word before them (wǒ-de, dà-de)
 const JOINED = new Set(['de']);
+
+// the readback's owners: I -> my, of mine
+const OWNER = { I: ['my', 'mine'], you: ['your', 'yours'], he: ['his', 'his'], she: ['her', 'hers'], it: ['its', 'its'], we: ['our', 'ours'], they: ['their', 'theirs'] };
 
 // the same pieces lexicon.js reads; a hyphen joins a word to the one before
 const SPELLED = new RegExp(`${wordRefRe().source}|"[^"]*"|\\p{L}+|[-,;:]|[.!?…]+`, 'gu');
@@ -106,9 +114,21 @@ export function spellingHabits(texts) {
   return { pairs, words: single };
 }
 
-export function makeTrees({ rules, glue = new Set(), words, composites = [], habits = null }) {
+export function makeTrees({ rules, glue = new Set(), words, composites = [], habits = null, english = null }) {
   const byId = new Map(rules.map((r) => [r.id, r]));
+  // a rule's English side: a draft (scripts/rule-english.js) before the rule's own `say`
+  const ruleSays = (id) => english?.get(id) ?? byId.get(id)?.say ?? null;
   const { chains } = buildLexicon({ words, composites });
+  const idsOf = (form) => form.replace(/\{\{\w+:([^}#]+)[^}]*\}\}/g, '$1'); // {{word:nv3}}-{{word:ren2}} -> nv3-ren2
+  const formsByZh = new Map(composites.map((c) => [c.zh, (Array.isArray(c.hsd) ? c.hsd : String(c.hsd ?? '').split(' / ')).map(idsOf)]));
+  // why a composite leaf matches no chain: a phrase the grammar builds, another spelling, or no such composite
+  const compositeMiss = (v) => {
+    const forms = formsByZh.get(v.composite)?.filter(Boolean) ?? [];
+    if (!forms.length) return `"${v.composite}" is not a composite`;
+    const phrases = forms.filter((f) => /\s/.test(f));
+    if (phrases.length === forms.length) return `"${v.composite}" is the phrase ${phrases.join(' or ')}, not one composite; build it with the rules`;
+    return `"${v.composite}" is not spelled ${(v.words ?? []).join(' ')}; it is ${forms.join(' or ')}`;
+  };
 
   // a rule's right side, each symbol with the slot it fills (none for a named word or a comma)
   const shapes = new Map();
@@ -195,7 +215,7 @@ export function makeTrees({ rules, glue = new Set(), words, composites = [], hab
     if (v.word !== undefined && except.includes(v.word)) return `${at}: ${sayExpected(sym, words)} here leaves out ${say(v)}`;
     if (name === 'again' && v.word !== undefined) return null;
     const has = classesOfLeaf(v);
-    if (!has) return `${at}: ${v.composite !== undefined ? `"${v.composite}" is not a composite spelled ${(v.words ?? []).join(' ')}` : 'not a word, a composite, a name or X'}`;
+    if (!has) return `${at}: ${v.composite !== undefined ? compositeMiss(v) : 'not a word, a composite, a name or X'}`;
     if (!has.has(name)) return `${at} wants ${sayExpected(sym, words)}, got ${say(v)} (${[...has].join(', ') || 'no class'})`;
     return null;
   };
@@ -256,11 +276,21 @@ export function makeTrees({ rules, glue = new Set(), words, composites = [], hab
     const most = (h, key, of = 'n') => Boolean(h && h[key] * 2 > h[of]);
     // joining words that spell a composite makes that composite a reading, so only the tree joins them (a composite leaf)
     const spellsNone = (run) => run.every((_, i) => i > run.length - 2 || !compositesOf(run.slice(i)).length);
+    // ... except a word and de right before a noun, which the parser reads as the words first (Q6, earley.js)
+    const nounAt = (k) => {
+      const t = tokens[k];
+      if (!t || t.mark || t.joined) return false;
+      if (t.text !== undefined) return true; // a name, or X, Y or Z
+      if (classesOf(words[t.id]).includes('noun')) return true;
+      const ids = [t.id];
+      for (let j = k + 1; tokens[j]?.joined && tokens[j].id; j++) ids.push(tokens[j].id);
+      return ids.length > 1 && (chains.get(ids.join(' ')) ?? []).some((c) => c.classes.includes('noun'));
+    };
     let refs = '';
     let prev = null; // the word before: its id, '"' after a name, null at the start and after a comma
     let run = []; // the ids of the words joined so far, ending with the word before
     let capital = true;
-    for (const t of tokens) {
+    for (const [k, t] of tokens.entries()) {
       if (t.mark) {
         refs += t.mark;
         prev = null;
@@ -270,7 +300,7 @@ export function makeTrees({ rules, glue = new Set(), words, composites = [], hab
       }
       const h = habits && t.id && !t.joined ? habitOf(prev, t.id) : null;
       const habitJoins = habits ? most(h, 'joined', 'after') : JOINED.has(t.id);
-      const joined = prev !== null && (t.joined || (habitJoins && spellsNone([...run, t.id])));
+      const joined = prev !== null && (t.joined || (habitJoins && (spellsNone([...run, t.id]) || (t.id === 'de' && nounAt(k + 1)))));
       run = joined ? [...run, t.id ?? ''] : [t.id ?? ''];
       // a bare "ge" when the book writes it so more often than light and more often than as a ref
       const bare = t.id === 'ge4' && !t.light && Boolean(h) && h.bare > h.light && h.bare * 2 >= h.n - h.light;
@@ -286,21 +316,32 @@ export function makeTrees({ rules, glue = new Set(), words, composites = [], hab
 
   // -- readback ----------------------------------------------------------------------------------------------------
 
-  const firstSense = (text) => String(text ?? '').replace(/\{\{[^}]*\}\}/g, '').split(/[,;:(]/)[0].trim();
-  let english = null; // composite -> its English, made on the first readback
+  // the first sense, without "to" before a verb: chī is "eat"
+  const firstSense = (text) => String(text ?? '').replace(/\{\{[^}]*\}\}/g, '').split(/[,;:(]/)[0].trim().replace(/^to /, '');
+  let compositeEnglish = null; // composite -> its English, made on the first readback
   const glossOf = (v) => {
     if (v.word !== undefined) return firstSense(words[v.word]?.definition?.eng) || say(v);
     if (v.composite !== undefined) {
-      english ??= new Map(composites.map((c) => [c.zh, c.en]));
-      return firstSense(english.get(v.composite)) || say(v);
+      compositeEnglish ??= new Map(composites.map((c) => [c.zh, c.en]));
+      return firstSense(compositeEnglish.get(v.composite)) || say(v);
     }
     return say(v);
   };
 
-  // a node with a single slot and nothing of its own is its child (Utt -> S); a pattern's brackets are shown once
+  // A rule with an English side fills it: "{NP} is {NP2}". One without is glossed word by word: a node with a single
+  // slot and nothing of its own is its child (Utt -> S), and a pattern's brackets are shown once.
   const readback = (tree) => {
     const visit = (t, outer) => {
       const { rule, parts } = shapeOf(t.rule);
+      const say = ruleSays(t.rule);
+      if (say) {
+        const filled = say.replace(/\{(\w+)\}/g, (m, name) => {
+          const part = parts.find((p) => p.slot === name);
+          if (!part || t.slots[name] === undefined) return m;
+          return isNonterminal(part.sym) ? visit(t.slots[name], null) : glossOf(t.slots[name]);
+        });
+        return filled.replace(/\s+/g, ' ').replace(/ ([,:])/g, '$1').trim();
+      }
       const shown = parts.length > 1 && rule?.pattern !== outer;
       const items = parts.map(({ sym, slot }) => {
         if (!slot) return sym[0] === '@' ? MARKS[classRef(sym).name] : glossOf({ word: sym[0] === '=' ? sym.slice(1) : sym });
@@ -310,10 +351,13 @@ export function makeTrees({ rules, glue = new Set(), words, composites = [], hab
       const text = items.join(' ').replace(/ ([,:])/g, '$1');
       return shown ? `[${rule?.pattern ?? t.rule}: ${text}]` : text;
     };
-    return visit(tree, null);
+    // an owner said with 's or "of": "I's body" is "my body", "the one of I" is "the one of mine"
+    return visit(tree, null)
+      .replace(/\b(I|you|he|she|it|we|they)'s\b/g, (m, p) => OWNER[p][0])
+      .replace(/\bof (I|you|he|she|it|we|they)\b/g, (m, p) => `of ${OWNER[p][1]}`);
   };
 
-  return { slotsOf, fromParse, check, build, readback, compositesOf };
+  return { slotsOf, fromParse, check, build, readback, compositesOf, ruleSays };
 }
 
 // the same tree written with its keys in any order; without the light syllables when only the reading counts
@@ -329,3 +373,78 @@ const SPELLING = new Set(['light']);
 
 // { reading: true } compares what the parser reads: a light syllable is how a word is said, not which word it is
 export const sameTree = (a, b, { reading = false } = {}) => canonical(a, reading ? SPELLING : NOTHING) === canonical(b, reading ? SPELLING : NOTHING);
+
+// The tree as one line of text, for an LLM that writes many trees in one answer (the batched tree step): JSON nested
+// that deep came back broken, and a line is a quarter of its length. A node is [rule slot=... slot=...]; a leaf is a
+// word id (zhe4), with its sense (hao3#well) or light (ge4~), a composite and its words (女人[nv3 ren2], a light one
+// with ~), a name ("Jack", "diàn"-zi), X for a thing left open, or again:kan.
+export function treeText(v) {
+  if (v.rule !== undefined) return `[${v.rule}${Object.entries(v.slots ?? {}).map(([k, x]) => ` ${k}=${treeText(x)}`).join('')}]`;
+  if (v.composite !== undefined) return `${v.composite}[${(v.words ?? []).map((id, i) => `${id}${Array.isArray(v.light) && v.light.includes(i) ? '~' : ''}`).join(' ')}]`;
+  if (v.quoted !== undefined) return `"${v.quoted}"${v.zi ? '-zi' : ''}`;
+  if (v.open !== undefined) return v.open;
+  if (v.again !== undefined) return `again:${v.again}`;
+  return `${v.word}${v.sense ? `#${v.sense}` : ''}${v.light ? '~' : ''}`;
+}
+
+// -> { tree } for a line treeText writes, or { problem }: where it stops reading, in one sentence
+export function readTreeText(text) {
+  const src = String(text).trim();
+  let i = 0;
+  const fail = (what) => {
+    throw new Error(`${what} at character ${i + 1}: …${src.slice(Math.max(0, i - 25), i)}⟨here⟩${src.slice(i, i + 15)}…`);
+  };
+  const space = () => {
+    while (/\s/.test(src[i] ?? '')) i++;
+  };
+  const take = (re) => {
+    re.lastIndex = i;
+    const m = re.exec(src);
+    if (m) i += m[0].length;
+    return m;
+  };
+  const value = () => {
+    if (src[i] === '[') return node();
+    let m;
+    if ((m = take(/"([^"]*)"(-zi)?/y))) return m[2] ? { quoted: m[1], zi: true } : { quoted: m[1] };
+    if ((m = take(/again:(\p{L}+)/uy))) return { again: m[1] };
+    if ((m = take(/([^\s[\]"=]+)\[([^\]]*)\]/y))) {
+      const parts = m[2].trim().split(/\s+/).filter(Boolean);
+      const light = parts.flatMap((p, k) => (p.endsWith('~') ? [k] : []));
+      return { composite: m[1], words: parts.map((p) => p.replace(/~$/, '')), ...(light.length ? { light } : {}) };
+    }
+    if ((m = take(/[A-Z](?![\w#~])/y))) return { open: m[0] };
+    if ((m = take(/([a-z0-9_-]+)(?:#([a-z]+))?(~)?(?![^\s\]])/y))) return { word: m[1], ...(m[2] ? { sense: m[2] } : {}), ...(m[3] ? { light: true } : {}) };
+    return fail('a tree or a leaf is expected');
+  };
+  const node = () => {
+    i++;
+    space();
+    const rule = take(/[^\s[\]=]+/y)?.[0];
+    if (!rule) fail('a rule id is missing');
+    const slots = {};
+    for (;;) {
+      space();
+      if (src[i] === ']') {
+        i++;
+        return { rule, slots };
+      }
+      if (i >= src.length) fail(`the "]" of [${rule} is missing`);
+      const name = take(/[A-Za-z_]\w*(?==)/y)?.[0];
+      if (!name) fail('a slot (name=...) or "]" is expected');
+      if (name in slots) fail(`the slot ${name} is given twice`);
+      i++;
+      slots[name] = value();
+    }
+  };
+  try {
+    space();
+    if (src[i] !== '[') fail('a tree starts with "["');
+    const tree = node();
+    space();
+    if (i < src.length) fail('there is text after the tree');
+    return { tree };
+  } catch (e) {
+    return { problem: `the tree does not read: ${e.message}` };
+  }
+}

@@ -214,6 +214,8 @@ node scripts/kb.js tool <kb_name> ['{"text": "..."}']                   # any of
 | `kb/reports/lessons-1-4-parse.md` | Parse report: lessons 1-4 |
 | `kb/reports/round-trip.md` | The round trip on the book |
 | `kb/reports/same-form-sort.md` | Same-form groups, sorted (rel-sameform) |
+| `kb/reports/t-bad.md` | T-bad: bad English through step 0 |
+| `kb/reports/t-eng.md` | T-eng: English through the tree translator |
 | `kb/scoreboard.csv` | The language's numbers after each change; the Scoreboard tab charts it. |
 <!-- /generated:kb-reports -->
 

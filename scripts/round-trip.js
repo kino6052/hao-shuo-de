@@ -18,8 +18,7 @@ import { openKb } from './kb.js';
 import { makeTrees, spellingHabits } from '../src/lib/grammar/tree.js';
 import { roundTrip, summarize } from '../src/lib/grammar/round-trip.js';
 import { patternsOf } from '../src/lib/grammar/parser.js';
-import { pinyinProblems } from '../src/lib/pinyin-refs.js';
-import { splitSentences } from '../src/lib/kb/parse.js';
+import { bookSentences } from './book-sentences.js';
 
 const ROOT = resolve(fileURLToPath(new URL('.', import.meta.url)), '..');
 const OUT = resolve(ROOT, 'kb/reports/round-trip.md');
@@ -33,18 +32,7 @@ const started = Date.now();
 const kb = await openKb();
 const parser = kb.parse.parser;
 const words = kb.parse.words;
-// every sentence once, as word refs, with the kind of text it comes from
-const seen = new Map();
-for (const s of kb.facts.sentences) {
-  if (kind && s.kind !== kind) continue;
-  let refs = String(s.pinyin ?? '');
-  if (!refs.includes('{{')) {
-    const converted = pinyinProblems(refs, words, { composites: kb.source.composites });
-    if (converted.problems.length) continue;
-    refs = converted.refs;
-  }
-  for (const text of splitSentences(refs)) if (!seen.has(text)) seen.set(text, s.kind);
-}
+const seen = bookSentences(kb, { kind });
 const todo = [...seen].slice(0, limit);
 // the build spells the way the book does, learned from all of its sentences (not only the ones tried)
 const habits = spellingHabits(seen.keys());
@@ -121,13 +109,38 @@ const lines = [
   '',
   'The book joins the words (dòng-wù), they spell a composite, and the first reading still reads them one by one. The round trip holds (the tree is that reading), but the reading is probably not the one meant: a question about the reading order, for the author.',
   '',
-  ...splitList(),
+  ...splitList(false),
+  '',
+  `### A word and de before a noun, read as the words on purpose: ${sum.splitByDesign} sentences`,
+  '',
+  'Shuō-de rén is "the one who speaks", not 内容 and rén (BROWSER_TRANSLATOR_PLAN.md Q6).',
+  '',
+  ...splitList(true),
+  '',
+  `### Composites the first reading takes from a word and de: ${deList().length} composites`,
+  '',
+  'A chain like chī-de spells a composite (饭). With no noun after it, the composite comes first (BROWSER_TRANSLATOR_PLAN.md Q4 and Q6): wǒ yào chī-de reads as 饭. The count is the sentences whose first reading does so.',
+  '',
+  ...deList(),
   '',
 ];
 
-function splitList() {
+function deList() {
   const byZh = new Map();
-  for (const r of parsed) for (const s of r.split ?? []) byZh.set(s.zh, [...(byZh.get(s.zh) ?? []), r]);
+  const walk = (t, r) => {
+    if (!t || typeof t !== 'object') return;
+    if (t.composite && t.words?.length > 1 && t.words.at(-1) === 'de') byZh.set(t.composite, [...(byZh.get(t.composite) ?? []).filter((x) => x !== r), r]);
+    Object.values(t.slots ?? {}).forEach((v) => walk(v, r));
+  };
+  for (const r of parsed) walk(r.tree, r);
+  return [...byZh]
+    .sort((a, b) => b[1].length - a[1].length)
+    .map(([zh, list]) => `- ${zh}: ${list.length}, e.g. ${[...list].sort((a, b) => a.text.length - b.text.length)[0].text}`);
+}
+
+function splitList(byDesign) {
+  const byZh = new Map();
+  for (const r of parsed) for (const s of r.split ?? []) if (Boolean(s.byDesign) === byDesign) byZh.set(s.zh, [...(byZh.get(s.zh) ?? []), r]);
   return [...byZh]
     .sort((a, b) => b[1].length - a[1].length)
     .map(([zh, list]) => `- ${zh} (${list[0].split.find((s) => s.zh === zh).words.join(' ')}): ${list.length}, e.g. ${list[0].text}`);
