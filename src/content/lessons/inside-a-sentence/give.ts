@@ -12,9 +12,9 @@ export default lessonModule({
       ru: "давать; кому, для",
     },
     {
-      word: "ti4",
-      en: "instead of, in someone's place",
-      ru: "вместо, за (кого-то)",
+      word: "huan4",
+      en: "swap, change (one for another)",
+      ru: "менять (одно на другое)",
     },
   ],
   prose: {
@@ -25,7 +25,7 @@ export default lessonModule({
       "",
       "{{word:gei3}} before a verb means for or to: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:xie3}}, I write to you.",
       "",
-      "{{word:ti4}} before a verb means in someone's place: {{Word:ta1}} {{word:ti4}} {{word:wo3}} {{word:qu4}}, he goes instead of me.",
+      "{{word:huan4}} is to swap, to give one thing and take another: {{Word:wo3}} {{word:huan4}} {{word:che1}}, I change buses. {{word:huan4}} + person + verb says that now this person does it, in someone else's place: {{Word:wo3}} {{word:bu4}} {{word:qu4}}, {{word:huan4}} {{word:ta1}} {{word:qu4}}, I won't go, he goes instead.",
       "",
       "You know {{word:mai3}} (buy) from Lesson {{lesson:questions}}. A market is {{word:mai3}} {{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}}, the place where you buy things.",
     ],
@@ -36,7 +36,7 @@ export default lessonModule({
       "",
       "{{word:gei3}} перед глаголом значит «для» или «кому»: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:xie3}} — я пишу тебе.",
       "",
-      "{{word:ti4}} перед глаголом значит «вместо»: {{Word:ta1}} {{word:ti4}} {{word:wo3}} {{word:qu4}} — он идёт вместо меня.",
+      "{{word:huan4}} — «менять»: отдать одно и взять другое: {{Word:wo3}} {{word:huan4}} {{word:che1}} — я делаю пересадку. {{word:huan4}} + человек + глагол говорит, что теперь это делает этот человек, вместо другого: {{Word:wo3}} {{word:bu4}} {{word:qu4}}, {{word:huan4}} {{word:ta1}} {{word:qu4}} — я не пойду, пойдёт он.",
       "",
       "{{word:mai3}} (покупать) вы знаете из урока {{lesson:questions}}. Рынок — это {{word:mai3}} {{word:dong1}}-{{light:xi1}}-{{word:de}} {{word:di4}}-{{light:fang1}}, место, где покупают вещи.",
     ],
@@ -48,8 +48,8 @@ export default lessonModule({
   },
   info: {
     pattern: "gei-give",
-    en: "{{word:gei3}} + person + thing, give: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:shui3}}. (I give you water.) {{word:ti4}} + person + verb, instead of: {{Word:ta1}} {{word:ti4}} {{word:wo3}} {{word:qu4}}. (He goes instead of me.)",
-    ru: "{{word:gei3}} + человек + вещь — давать: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:shui3}}. (Я даю тебе воду.) {{word:ti4}} + человек + глагол — вместо: {{Word:ta1}} {{word:ti4}} {{word:wo3}} {{word:qu4}}. (Он идёт вместо меня.)",
+    en: "{{word:gei3}} + person + thing, give: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:shui3}}. (I give you water.) {{word:huan4}} + person + verb, now they do it: {{Word:wo3}} {{word:bu4}} {{word:qu4}}, {{word:huan4}} {{word:ta1}} {{word:qu4}}. (I won't go; he goes instead.)",
+    ru: "{{word:gei3}} + человек + вещь — давать: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:shui3}}. (Я даю тебе воду.) {{word:huan4}} + человек + глагол — теперь это делает он: {{Word:wo3}} {{word:bu4}} {{word:qu4}}, {{word:huan4}} {{word:ta1}} {{word:qu4}}. (Я не пойду, пойдёт он.)",
   },
   examples: [
     {
@@ -65,10 +65,10 @@ export default lessonModule({
       ru: "Я даю тебе воду.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:ti4}} {{word:ni3}} {{word:shuo1}}.",
-      hanzi: "我替你说。",
-      en: "I'll say it for you.",
-      ru: "Я скажу за тебя.",
+      pinyin: "{{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:shu1}}, {{word:ni3}} {{word:gei3}} {{word:wo3}} {{word:shui3}}, {{word:wo3}}-{{word:men}} {{word:huan4}}.",
+      hanzi: "我给你书，你给我水，我们换。",
+      en: "I give you a book, you give me water: we swap.",
+      ru: "Я даю тебе книгу, ты мне воду: мы меняемся.",
     },
     {
       pinyin: "{{Word:ta1}} {{word:gei3}} {{word:wo3}} {{word:san1}}-ge, {{word:wo3}} {{word:gei3}} {{word:ta1}} {{word:si4}}-ge.",
@@ -95,10 +95,10 @@ export default lessonModule({
       ru: "Рынок поблизости.",
     },
     {
-      pinyin: "{{Word:ta1}} {{word:ti4}} {{word:wo3}} {{word:qu4}}.",
-      hanzi: "他替我去。",
-      en: "He goes instead of me.",
-      ru: "Он идёт вместо меня.",
+      pinyin: "{{Word:wo3}} {{word:bu4}} {{word:qu4}}, {{word:huan4}} {{word:ta1}} {{word:qu4}}.",
+      hanzi: "我不去，换他去。",
+      en: "I won't go; he goes instead.",
+      ru: "Я не пойду, пойдёт он.",
     },
   ],
   exercises: [
@@ -109,10 +109,16 @@ export default lessonModule({
       hanzi: "给我包。",
     },
     {
-      en: "He says it for me.",
-      ru: "Он говорит за меня.",
-      answer: "{{Word:ta1}} {{word:ti4}} {{word:wo3}} {{word:shuo1}}.",
-      hanzi: "他替我说。",
+      en: "I won't say it; you say it.",
+      ru: "Я не скажу, скажи ты.",
+      answer: "{{Word:wo3}} {{word:bu4}} {{word:shuo1}}, {{word:huan4}} {{word:ni3}} {{word:shuo1}}.",
+      hanzi: "我不说，换你说。",
+    },
+    {
+      en: "I change buses.",
+      ru: "Я делаю пересадку.",
+      answer: "{{Word:wo3}} {{word:huan4}} {{word:che1}}.",
+      hanzi: "我换车。",
     },
   ],
   faq: [
@@ -124,6 +130,15 @@ export default lessonModule({
       },
       en: "It can mean either. The situation tells you which.",
       ru: "И то и другое. Что именно — понятно из ситуации.",
+    },
+    // how do I say "he goes instead of me"? (huàn goes before the one who does it now)
+    {
+      question: {
+        en: "How do I say 'he goes instead of me'?",
+        ru: "Как сказать «он идёт вместо меня»?",
+      },
+      en: "Say who doesn't do it, then {{word:huan4}} and who does: {{Word:wo3}} {{word:bu4}} {{word:qu4}}, {{word:huan4}} {{word:ta1}} {{word:qu4}}. {{word:huan4}} goes before the one who does it now, never before the one who stops.",
+      ru: "Скажите, кто не делает, затем {{word:huan4}} и кто делает: {{Word:wo3}} {{word:bu4}} {{word:qu4}}, {{word:huan4}} {{word:ta1}} {{word:qu4}}. {{word:huan4}} стоит перед тем, кто делает теперь, а не перед тем, кого заменяют.",
     },
   ],
 });

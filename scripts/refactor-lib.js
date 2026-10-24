@@ -505,8 +505,14 @@ function categoryOf(ws, id) {
 // Rewrites every topic's `order` list with fn(ids) -> ids.
 function editCategories(ws, fn) {
   const tags = ws.data(`${MAPS}topics.ts`);
-  for (const t of tags) if (t.order) t.order = fn(t.order, t);
-  ws.setData(`${MAPS}topics.ts`, tags);
+  let changed = false;
+  for (const t of tags) {
+    if (!t.order) continue;
+    const order = fn(t.order, t);
+    if (order.join() !== t.order.join()) (t.order = order), (changed = true);
+  }
+  // the writer lays the file out its own way, so it is written only when an order changed
+  if (changed) ws.setData(`${MAPS}topics.ts`, tags);
 }
 
 // Rewrites the antonym and synonym maps: pairs by pairFn([a, b]) -> pair | null,

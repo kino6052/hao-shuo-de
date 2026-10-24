@@ -1792,10 +1792,10 @@ const content: Entry[] = [
       {
         "text": {
           "en": [
-            "{{word:gei3}} + person + thing, give: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:shui3}}. (I give you water.) {{word:ti4}} + person + verb, instead of: {{Word:ta1}} {{word:ti4}} {{word:wo3}} {{word:qu4}}. (He goes instead of me.)"
+            "{{word:gei3}} + person + thing, give: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:shui3}}. (I give you water.) {{word:huan4}} + person + verb, now they do it: {{Word:wo3}} {{word:bu4}} {{word:qu4}}, {{word:huan4}} {{word:ta1}} {{word:qu4}}. (I won't go; he goes instead.)"
           ],
           "ru": [
-            "{{word:gei3}} + человек + вещь — давать: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:shui3}}. (Я даю тебе воду.) {{word:ti4}} + человек + глагол — вместо: {{Word:ta1}} {{word:ti4}} {{word:wo3}} {{word:qu4}}. (Он идёт вместо меня.)"
+            "{{word:gei3}} + человек + вещь — давать: {{Word:wo3}} {{word:gei3}} {{word:ni3}} {{word:shui3}}. (Я даю тебе воду.) {{word:huan4}} + человек + глагол — теперь это делает он: {{Word:wo3}} {{word:bu4}} {{word:qu4}}, {{word:huan4}} {{word:ta1}} {{word:qu4}}. (Я не пойду, пойдёт он.)"
           ],
           "zh": []
         }

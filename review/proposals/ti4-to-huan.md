@@ -2,7 +2,13 @@
 
 Asked by the author on 2026-10-24 from the phone ("instead of using ti4 we should use huan as core vocab; explore what it
 allows us to say and maybe restructure composites"). Written by Claude from `kb word ti4`, `kb remove ti4` and
-`kb add 换`. Nothing in `src/` is changed yet: the swap needs the decisions at the end.
+`kb add 换`.
+
+**Applied the same day** as BOOK_PLAN.md D67 (`refactors/D67.ts`). The author left the decisions below to Claude:
+1a (huàn takes tì's card in lesson 21; bāng already covers "for you" in lesson 26, so nothing moved there), a swap
+(core stays 230), and the new pattern `huan-person` in place of `ti-instead`. "huàn + thing" needs no pattern of its own
+(it is svo). Lesson 21's story now says "Xiǎo nǚ-rén bù ná bāo, huàn wǒ ná." 汇率 got a shorter first form
+("… néng huàn duō-shǎo …").
 
 ## What each word is
 

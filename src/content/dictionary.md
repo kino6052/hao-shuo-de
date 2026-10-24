@@ -78,6 +78,7 @@ hóng | adjective | red; with {{word:se4}}, the colour: {{word:hong2}}-{{word:se
 hòu | noun/directional | behind, after, back; composes with other roots via a hyphen (e.g. {{word:hou4}}-{{word:mian4}}) |
 huà | noun | words, speech, what is said: {{word:shuo1}} {{word:hua4}}, talk; {{word:dui4}}-{{word:hua4}}, a conversation |
 huài | adjective/verb | bad, negative, broken, damaged, non-essential | ike, pakala
+huàn | verb | to swap, change one thing for another: {{word:huan4}} {{word:che1}}, change buses; {{word:huan4}} + person + verb, now that person does it: {{word:wo3}} {{word:bu4}} {{word:qu4}}, {{word:huan4}} {{word:ta1}} {{word:qu4}}, I won't go, he goes instead |
 huí | verb | to return, go back, come back; after a verb, says it goes back (e.g. {{word:hui2}} {{word:jia1}}, "go home"; {{word:hui2}}-{{word:lai2}}, "come back") |
 huì | auxiliary | will, going to (marks a predicted or future action); placed before a verb the same way {{word:neng2}} is; after {{word:xue2}}, {{word:xue2}}-{{word:hui4}} is "learn until you can" |
 huó | verb/adjective | to live, be alive; alive, living; life. The opposite of {{word:si3}} |
@@ -172,7 +173,6 @@ suàn | verb | to calculate, count, work out; {{word:suan4}}-{{word:de}} {{word:
 tā | pronoun | he, she, it, they, them; syntactically genderless and number-fluid | ona
 tǎng | verb | to lie (down); {{word:tang3}}-{{word:xia4}}, "lie down" |
 tí | noun | question, problem, topic: {{word:wen4}}-{{word:ti2}}, a question, a problem |
-tì | preposition | instead of, for (in someone's place): {{word:ti4}} {{word:wo3}} {{word:qu4}}, goes in my place; {{word:ti4}} {{word:ni3}} {{word:shuo1}}, says it for you |
 tián | adjective | sweet, fragrant, cute, innocent, adorable | suwi
 tiān | noun | day; the sky (e.g. {{word:san1}} {{word:tian1}}, "three days"; {{word:ming2}}-{{word:tian1}}, "tomorrow"; {{word:tian1}}-{{word:qi4}}, "weather") |
 tīng | verb | to hear, listen, pay attention to, obey | kute

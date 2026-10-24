@@ -9,7 +9,7 @@ export default lessonModule({
     en: [
       "**The story**",
       "",
-      "The girl gives me fruit. I take the fruit with my hand. The girl and I both eat fruit. The fruit is sweet. I give Miao-miao food. I pat Miao-miao. I am good to Miao-miao, and Miao-miao is good to me too. I carry the bag for the girl. I make food for the girl. \"Do you eat fruit or food?\" \"Fruit.\" \"Right!\" The girl and I get along very well. The note asks, \"Are you and Miao-miao close?\" I say, \"Very.\"",
+      "The girl gives me fruit. I take the fruit with my hand. The girl and I both eat fruit. The fruit is sweet. I give Miao-miao food. I pat Miao-miao. I am good to Miao-miao, and Miao-miao is good to me too. The girl doesn't carry the bag; I carry it instead. I make food for the girl. \"Do you eat fruit or food?\" \"Fruit.\" \"Right!\" The girl and I get along very well. The note asks, \"Are you and Miao-miao close?\" I say, \"Very.\"",
     ],
     tldr: {
       en: "A short story that uses only what you have learned so far.",
@@ -64,9 +64,9 @@ export default lessonModule({
       en: "Miao-miao is good to me too.",
     },
     {
-      pinyin: "{{Word:wo3}} {{word:ti4}} {{word:xiao3}} {{word:nv3}}-{{word:ren2}} {{word:na2}} {{word:bao1}}.",
-      hanzi: "我替小女人拿包。",
-      en: "I carry the bag for the girl.",
+      pinyin: "{{Word:xiao3}} {{word:nv3}}-{{word:ren2}} {{word:bu4}} {{word:na2}} {{word:bao1}}, {{word:huan4}} {{word:wo3}} {{word:na2}}.",
+      hanzi: "小女人不拿包，换我拿。",
+      en: "The girl doesn't carry the bag; I carry it instead.",
     },
     {
       pinyin: "{{Word:wo3}} {{word:wei4}} {{word:xiao3}} {{word:nv3}}-{{word:ren2}} {{word:zuo4}} {{word:fan4}}.",

@@ -95,7 +95,7 @@ export default constructions([
   { id: "for", en: "for (someone; the sake of)", match: ["for", "for me", "for you"], patterns: ["wei-for", "gei-give", "tian-nian-spans"], entries: ["为", "为了"], note: "For three days is a length of time, not this.", proposed: true },
   { id: "with", en: "with (someone; a tool)", match: ["with", "using"], patterns: ["he-with", "yong-with", "yi-qi-together"], entries: ["跟", "和"], proposed: true },
   { id: "together", en: "together", match: ["together", "each other"], patterns: ["yi-qi-together"], entries: ["一起", "一块儿"], proposed: true },
-  { id: "instead", en: "instead of, in someone's place", match: ["instead", "instead of", "in place of", "on behalf of"], patterns: ["ti-instead"], entries: ["替"], proposed: true },
+  { id: "instead", en: "instead of, in someone's place", match: ["instead", "instead of", "in place of", "on behalf of"], patterns: ["huan-person", "bang-help"], entries: ["替", "代替"], note: "Huàn, the person, then the verb: now that person does it (wǒ bù qù, huàn tā qù). On someone's behalf is bāng: wǒ bāng nǐ shuō.", proposed: true },
   { id: "toward", en: "to, toward, as for (how someone is toward someone)", match: ["toward", "towards", "as for", "about", "regarding"], patterns: ["dui-toward", "topic-comment"], entries: ["对", "对于", "关于", "往", "向"], proposed: true },
 
   // places and going

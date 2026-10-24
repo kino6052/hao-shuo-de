@@ -912,7 +912,7 @@ Always present and left out of the table: subject-predicate (L2), svo (L5). Bold
 
 **1. English text (original)**
 
-> The girl gives me fruit. I take the fruit with my hand. The girl and I both eat fruit. The fruit is sweet. I give Miao-miao food. I pat Miao-miao. I am good to Miao-miao, and Miao-miao is good to me too. I carry the bag for the girl. I make food for the girl. "Do you eat fruit or food?" "Fruit." "Right!" The girl and I get along very well. The note asks, "Are you and Miao-miao close?" I say, "Very."
+> The girl gives me fruit. I take the fruit with my hand. The girl and I both eat fruit. The fruit is sweet. I give Miao-miao food. I pat Miao-miao. I am good to Miao-miao, and Miao-miao is good to me too. The girl doesn't carry the bag; I carry it instead. I make food for the girl. "Do you eat fruit or food?" "Fruit." "Right!" The girl and I get along very well. The note asks, "Are you and Miao-miao close?" I say, "Very."
 
 **2. Re-expressed in simplest ideas** (each line parsed with only the words and patterns taught up to this lesson)
 
@@ -926,7 +926,7 @@ Always present and left out of the table: subject-predicate (L2), svo (L5). Bold
 | Wǒ mō "Miāo-miao". | I pat Miao-miao. | subject-predicate, svo (L2, L5) |
 | Wǒ duì "Miāo-miao" hěn hǎo. | I am good to Miao-miao. | **dui-toward** (L21), hen-adjective (L3) |
 | "Miāo-miao" duì wǒ yě hěn hǎo. | Miao-miao is good to me too. | **dui-toward** (L21), ye-also (L14), hen-adjective (L3) |
-| Wǒ tì xiǎo nǚ-rén ná bāo. | I carry the bag for the girl. | **ti-instead** (L21), de-modifier (L3), adjective-noun (L3) |
+| Xiǎo nǚ-rén bù ná bāo, huàn wǒ ná. | The girl doesn't carry the bag; I carry it instead. | **huan-person** (L21), de-modifier (L3), adjective-noun (L3), bu-negation |
 | Wǒ wèi xiǎo nǚ-rén zuò fàn. | I make food for the girl. | **wei-for** (L21), de-modifier (L3), adjective-noun (L3) |
 | Nǐ chī guǒ hái-shi chī fàn? | Do you eat fruit or food? | **hai-shi-or** (L21), de-modifier (L3), owner-part (L20), men-plural (L4) |
 | Wǒ shuō: Guǒ. | I say: "Fruit." | speech-quote (L6) |
@@ -939,13 +939,13 @@ Always present and left out of the table: subject-predicate (L2), svo (L5). Bold
 
 **3. Structures**
 
-- Taught here and used: **dui-correct**, **dui-toward**, **gei-give**, **hai-shi-or**, **he-and**, **ti-instead**, **wei-for**, **yong-with**; present only in a later reading: he-with
+- Taught here and used: **dui-correct**, **dui-toward**, **gei-give**, **hai-shi-or**, **he-and**, **huan-person**, **wei-for**, **yong-with**; present only in a later reading: he-with
 - Taught here, not in the text: none
 - Borrowed from earlier lessons: L3: de-modifier, adjective-noun, hen-adjective; L4: men-plural; L6: speech-quote, short-answer, ma-question; L14: dou-all, ye-also; L20: owner-part
 
 **4. Words**
 
-- New here and used: 7 of 8 (gěi tì yòng mō hé duì guānxi)
+- New here and used: 7 of 8 (gěi huàn yòng mō hé duì guānxi)
 - New here, not used: dǎ
 - Words in the text: 31 different, 24 from earlier lessons
 

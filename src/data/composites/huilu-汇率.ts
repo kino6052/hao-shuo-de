@@ -9,10 +9,11 @@ export default composite({
   ru: "курс обмена валют",
   pos: "noun",
   hsd: [
+    "{{word:yi1}}-{{light:ge4}} {{word:guo2}}-{{word:de}} {{word:jin1}} {{word:neng2}} {{word:huan4}} {{word:duo1}}-{{word:shao3}} {{word:bie2}}-{{word:de}} {{word:guo2}}-{{word:de}} {{word:jin1}}",
     "{{word:gei3}} {{word:yi1}}-{{light:ge4}} {{word:guo2}}-{{word:de}} {{word:jin1}}, {{word:neng2}} {{word:de2}}-{{word:dao4}} {{word:duo1}}-{{word:shao3}} {{word:bie2}}-{{word:de}} {{word:guo2}}-{{word:de}} {{word:jin1}}",
   ],
-  tts: ["给一个国的金，能得到多少别的国的金"],
-  literal: "give one country's money, how much of another country's money you can get",
+  tts: ["一个国的金能换多少别的国的金", "给一个国的金，能得到多少别的国的金"],
+  literal: "how much of another country's money one country's money swaps for / give one country's money, how much of another country's money you can get",
   fit: "plain",
   topics: ["money-and-cards"],
   isA: ["idea"],

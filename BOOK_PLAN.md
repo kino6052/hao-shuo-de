@@ -126,6 +126,7 @@ For each teaching point -- one module, one file (2–10 per lesson):
 | D63 | **Descriptions first: an audit of the core (2026-10-05).** A word earns its place only when a description would be clumsy, not merely because Mandarin has one. zuó leaves (yesterday is qián-yī-tiān, the day before); bǎi leaves and líng 零 (zero) joins, so big numbers are read digit by digit, as Mandarin reads years (èr-líng-líng, èr-líng-èr-liù nián); ér leaves (son, daughter: nán-hái-zi, nǚ-hái-zi); jiāo leaves (to teach is to help learn: bāng + person + xué + verb); qún leaves (a group is hěn-duō rén; the group module now teaches hěn-duō / zhè-xiē / nà-xiē, and company, team and boss got new descriptions). shū, shēngyīn, máo and dēng stay. 219 words (refactors/D63, D63b). |
 | D65 | **Book changes from the decisions preview (2026-10-14); the work queue is KB_PLAN §4a.** Claude writes the lessons and modules this needs, and the author reviews the result. (1) Sentences that do not parse are reworded: miànr is said with miàn, three sentences are reworded and sent for approval, and the wolf line gets a new sentence. (2) A quoted sound followed by zi counts as a word. (3) A small bǎ pattern (bǎ + a thing + a describing word, "make it clean") is taught in a later lesson, probably Becoming and making. (4) Patterns taught after a sentence that uses them move earlier, one at a time (serial verbs, the new-situation le, the greeting, doubled verbs), each with a preview of what else changes. (5) Every pattern gets a lesson: the lesson that first uses it, with a new module where none teaches it. (6) A spelled form needs a paraphrase (K23). No word is added or removed by this decision. |
 | D66 | **Tests: one after every lesson, and a final exam at the end of the course (2026-10-21).** (1) Each lesson ends with a test the learner can take at any time and retake. Every try draws a different set of questions from a pool made for that lesson, so it never feels like the same quiz. (2) After the last lesson there is a page, the final exam, that tests everything: questions from all the lessons, balanced across them, with a result that says which lessons to read again. (3) The pools are generated from what the book already has (word cards, examples with their audio, exercises and answers, patterns), and a gate checks them: a test uses only words and patterns from its lesson or earlier ones, every question has exactly one right answer, and everything a lesson introduces is asked about. (4) Results stay in the learner's browser. The design is in §3, the work in §7 Phase 5, and the open choices in Q8–Q10. The same day the author set a requirement: the composite dictionary covers every yardstick word, English and Chinese, at 100%; that is KB_PLAN.md Phase 9 (K30), and the final exam can use its finished dictionary (Phase 5, last item). |
+| D67 | **huàn 换 in, tì 替 out (2026-10-24).** The author asked for huàn (swap, change) as a core word instead of tì (in someone's place), and left the open choices to Claude (review/proposals/ti4-to-huan.md). The core stays at 230. (1) huàn takes tì's card in Lesson 21 (inside-a-sentence/give), next to gěi: give one thing, take another (wǒ-men huàn), wǒ huàn chē, and huàn + person + verb for someone else's turn (wǒ bù qù, huàn tā qù); the grammar pattern huan-person replaces ti-instead. (2) "On someone's behalf" is bāng, already core: the composites that said tì X say bāng X (代表, 代理, 大使, 转告, 转交, 委托); replacing is huàn (代替, 替代, 取代, 代). huàn never takes the "for" job, since "tā huàn wǒ qù" is not Mandarin. (3) The huàn family uses the word: 换, 交换, 更换, 换乘 (huàn chē), 转机 (huàn fēi-jī), 转换, 汇率. (4) huàn has a fine paraphrase (gěi X, ná Y) where tì's was clumsy, so the smallest-set count may move. The list is refactors/D67.ts; every changed composite is marked proposed for review. |
 
 ---
 
@@ -255,17 +256,17 @@ Approved (D23). It can still be adjusted as each lesson is written, but the rule
 | Id  | Lesson                            | Core words                                                 | Theme words                                 | Added words                        | Senses |     New | Total so far |    % |
 | --- | --------------------------------- | ---------------------------------------------------------- | ------------------------------------------- | ---------------------------------- | ------ | ------: | -----------: | ---: |
 | sounds-and-symbols | Sounds and Symbols | — | — | — | — | **0** | 0 / 230 | 0% |
-| words-and-sentences | Words and Sentences | shì, zhè, bù | rén, zhíwù | dōng, xī, nǚ, dòng, wù | nán (male) | **10** | 10 / 230 | 4% |
-| modifying-nouns | Modifying Nouns | hěn, hǎo, dà, xiǎo, de, duō | shuǐ, dì | fāng, bàba, māma, shǎo | — | **12** | 22 / 230 | 10% |
+| words-and-sentences | Words and Sentences | shì, zhè, bù | rén, zhíwù | xī, dōng, nǚ, dòng, wù | nán (male) | **10** | 10 / 230 | 4% |
+| modifying-nouns | Modifying Nouns | hěn, hǎo, dà, xiǎo, de, duō | shuǐ, dì | fāng, māma, bàba, shǎo | — | **12** | 22 / 230 | 10% |
 | pointing | Pointing at People and Things | nà, gè, wǒ, nǐ, tā | jiā, tóu, shǒu, jiǎo | men, xiē | — | **11** | 33 / 230 | 14% |
 | who-does-what | Verbs 1 | chī, kàn, tīng, shuō, xiě, yǒu, méi | jīn | hē, fàn, zì, huà, shū, yóu | — | **14** | 47 / 230 | 20% |
-| questions | Questions and Answers | ma, shénme, wèn, zěnme | zhǎo | gōng, jù, tí, bāo, mǎi, shéi, wèi | — | **12** | 59 / 230 | 26% |
-| pre-verbs | Pre-Verbs | yào, néng, zhīdào, ài | děng, yīfu | xiǎng, yǐ, xué, kě | — | **10** | 69 / 230 | 30% |
-| when-it-happens | Time 1 | le, zài, huì | shuìjiào, yuè, rì | fā, shēng, guò, jiān | xiàn (now), shí (time) | **10** | 79 / 230 | 34% |
-| around-an-action | Time 2 | wán, hòu, kāishǐ, yī, xià | wánr, liú | yòu, cì | — | **9** | 88 / 230 | 38% |
+| questions | Questions and Answers | ma, wèn, shénme, zěnme | zhǎo | jù, gōng, tí, bāo, mǎi, shéi, wèi | — | **12** | 59 / 230 | 26% |
+| pre-verbs | Pre-Verbs | yào, néng, ài, zhīdào | děng, yīfu | xiǎng, kě, yǐ, xué | — | **10** | 69 / 230 | 30% |
+| when-it-happens | Time 1 | le, zài, huì | shuìjiào, yuè, rì | shēng, fā, guò, jiān | xiàn (now), shí (time) | **10** | 79 / 230 | 34% |
+| around-an-action | Time 2 | wán, hòu, kāishǐ, xià, yī | wánr, liú | yòu, cì | — | **9** | 88 / 230 | 38% |
 | where-it-is | Space 1 | lǐ, shàng, miàn, qián, biān, pángbiān | — | nǎ, fáng, wǎng, zhōng, zuǒ | wèi (guard), huà (draw), yòu (right) | **11** | 99 / 230 | 43% |
-| moving | Space 2 | lái, qù, cóng, qǐ, wài | kǒu | dào, zǒu, yuǎn, fùjìn, guó, lù, chē | xiào (school) | **13** | 112 / 230 | 49% |
-| how-much | Modifiers 1 — How much | zhēn | rè, lěng, tián, shēntǐ | jiàzhí, kuài, tòng, zhǐ, nán, gānjìng, lǎo | wèi (taste), dào (way) | **12** | 124 / 230 | 54% |
+| moving | Space 2 | lái, qù, cóng, qǐ, wài | kǒu | dào, yuǎn, fùjìn, guó, lù, chē, zǒu | xiào (school) | **13** | 112 / 230 | 49% |
+| how-much | Modifiers 1 — How much | zhēn | rè, lěng, tián, shēntǐ | jiàzhí, kuài, tòng, zhǐ, lǎo, nán, gānjìng | wèi (taste), dào (way) | **12** | 124 / 230 | 54% |
 | comparing | Modifiers 2 — Comparing | bǐ | yìng, yuán, xiàn | cháng, qiú, zuì, yàng, bié, tóng, zhǒng, gāo, zhòng, píng | — | **14** | 138 / 230 | 60% |
 | also-and-all | Modifiers 3 — Also and all | yě | huǒ | kōng, qì, kāi, guān, dēng, míng, mén, hái, dōu, fēn | bù (part) | **12** | 150 / 230 | 65% |
 | becoming-and-making | Modifiers 4 — Becoming and making | biàn, dé, bǎ | huài | luàn, zuò, liào, fàng, lì | — | **9** | 159 / 230 | 69% |
@@ -274,12 +275,12 @@ Approved (D23). It can still be adjusted as each lesson is written, but the rule
 | time-and-sums | Numbers 2 — Time and sums | — | — | diǎn, wǎn, zǎo, tiān, nián, suàn | xīn (new) | **6** | 190 / 230 | 83% |
 | colors | Colors | yánsè | — | bái, sè, hēi, hóng | — | **5** | 195 / 230 | 85% |
 | roles-of-a-word | Changing the Role of a Word | cí | bízi | zi, zhě, fǎ, jī, guǒ, máo, yá, dùzi | hái (child), jié (result) | **10** | 205 / 230 | 89% |
-| inside-a-sentence | Relationships 1 | gěi, yòng, hé, duì | mō, dǎ | tì, guānxi | — | **8** | 213 / 230 | 93% |
+| inside-a-sentence | Relationships 1 | gěi, yòng, hé, duì | mō, dǎ | huàn, guānxi | — | **8** | 213 / 230 | 93% |
 | linking-sentences | Relationships 2 | yīnwèi | sǐ | huó, dàn, rúguǒ, jiù | — | **6** | 219 / 230 | 95% |
-| greetings | Greetings | jiào, pà | — | xiè, xiào | zài (again) | **4** | 223 / 230 | 97% |
+| greetings | Greetings | pà, jiào | — | xiè, xiào | zài (again) | **4** | 223 / 230 | 97% |
 | feelings | Feelings | — | shēngyīn | jué, dìng, jì, xīn | — | **5** | 228 / 230 | 99% |
 | doubling-words | Doubling Words | — | — | — | — | **0** | 228 / 230 | 99% |
-| everyday-patterns | Everyday Patterns | — | — | bāng, ràng | — | **2** | 230 / 230 | 100% |
+| everyday-patterns | Everyday Patterns | — | — | ràng, bāng | — | **2** | 230 / 230 | 100% |
 | | **Total** | **65** | **32** | **133** | | **230** | | |
 
 **By section:**

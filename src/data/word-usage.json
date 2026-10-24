@@ -662,6 +662,10 @@
       "feelings",
       "time-and-sums"
     ],
+    "huan4": [
+      "appendix-grammar",
+      "inside-a-sentence"
+    ],
     "guan1": [
       "appendix-grammar",
       "also-and-all",
@@ -1047,6 +1051,7 @@
       "appendix-grammar",
       "colors",
       "how-much",
+      "inside-a-sentence",
       "linking-sentences",
       "moving"
     ],
@@ -1203,6 +1208,7 @@
       "numbers",
       "pointing",
       "pre-verbs",
+      "roles-of-a-word",
       "where-it-is",
       "words-and-sentences"
     ],
@@ -1547,6 +1553,7 @@
     ],
     "shu1": [
       "how-much",
+      "inside-a-sentence",
       "linking-sentences",
       "questions",
       "roles-of-a-word",
@@ -2148,10 +2155,6 @@
     "dui4": [
       "phrase-book",
       "appendix-stories",
-      "appendix-grammar",
-      "inside-a-sentence"
-    ],
-    "ti4": [
       "appendix-grammar",
       "inside-a-sentence"
     ],

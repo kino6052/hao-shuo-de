@@ -229,6 +229,12 @@ describe('rename (K20)', () => {
     expect(w.get(w.wordPath('zzz9'))).toContain('{{word:zzz9}}');
     expect(w.get(w.wordPath('zzz9'))).not.toContain(`{{word:${own}}}`);
   });
+
+  test('the topic net is not rewritten when no topic lists the word (D67: it was rewritten in full)', () => {
+    const w = fresh();
+    applyOps(w, [{ op: 'rename', id: 'hen3', to: 'hen9' }]);
+    expect(w.changes().map((c) => c.path)).not.toContain('src/data/maps/topics.ts');
+  });
 });
 
 describe('the connect op and the phrases of the relation op', () => {

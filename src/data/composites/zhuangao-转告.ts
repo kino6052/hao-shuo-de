@@ -10,10 +10,10 @@ export default composite({
   pos: "verb",
   hsd: [
     "{{word:ba3}} X {{word:shuo1}}-{{word:de}} {{word:hua4}} {{word:shuo1}} {{word:gei3}} Y {{word:ting1}}",
-    "{{word:ti4}} X {{word:dui4}} Y {{word:shuo1}}",
+    "{{word:bang1}} X {{word:dui4}} Y {{word:shuo1}}",
   ],
-  tts: ["把X说的话说给Y听", "替X对Y说"],
-  literal: "tell Y the words X said / say to Y in X's place",
+  tts: ["把X说的话说给Y听", "帮X对Y说"],
+  literal: "tell Y the words X said / say it to Y for X",
   fit: "plain",
   topics: ["introducing-and-passing-on"],
   isA: ["speaking-action"],

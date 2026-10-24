@@ -46,15 +46,15 @@ Plans and decisions: [BOOK_PLAN.md](BOOK_PLAN.md) (book, decision log D1…), [K
 | --- | --- |
 | Lessons | 26, in 3 sections (6 / 10 / 10), then 16 chapters to read, look things up in or build with |
 | Core words | 230: 53 atoms (no honest description) and 177 with a paraphrase, so potentially removable |
-| Composite words | 5490, with 8571 ways to say them (8227 built from their parts, 90 spelled whole, 254 waiting for the author to say which) |
+| Composite words | 5490, with 8575 ways to say them (8231 built from their parts, 90 spelled whole, 254 waiting for the author to say which) |
 | Grammar patterns | 145, one file each in `src/data/grammar/` |
 | Things the language must say | 113: 65 atoms of meaning, 10 categories, 38 grammar points |
 | Lesson sentences that parse | 99.4 % |
-| Smallest set the others can be said from | 202 words; the other 28 have a fine paraphrase |
+| Smallest set the others can be said from | 201 words; the other 29 have a fine paraphrase |
 | Gates (`npm run check`) | 25 |
 | Test files (`npm test`) | 113 |
 
-The language numbers are the last row of `kb/scoreboard.csv` (2026-10-21, refactors/YT2.ts: 4 op(s)); a refactor adds a new row.
+The language numbers are the last row of `kb/scoreboard.csv` (2026-10-24, refactors/D67.ts: 36 op(s)); a refactor adds a new row.
 <!-- /generated:facts -->
 
 ## The book
