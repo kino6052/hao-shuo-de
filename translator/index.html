@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <script>
+      (function () {
+        var t = localStorage.getItem("haoshuode-theme");
+        if (!t)
+          t = matchMedia("(prefers-color-scheme:dark)").matches
+            ? "dark"
+            : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
+    <title>Translator — Hǎo-shuō-de</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="../assets/translator-DRGEMSZd.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/app-DEVbMv21.js">
+    <link rel="modulepreload" crossorigin href="../assets/ConsentBanner-BWmTX2uw.js">
+    <link rel="stylesheet" crossorigin href="../assets/app-CJZTvBCN.css">
+    <link rel="stylesheet" crossorigin href="../assets/ConsentBanner-BnNP9X00.css">
+    <link rel="stylesheet" crossorigin href="../assets/translator-kHJh4xdo.css">
+    <link rel="stylesheet" crossorigin href="../assets/translator-B1M68PVm.css">
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
