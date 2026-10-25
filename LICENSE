@@ -1,0 +1,57 @@
+Copyright (c) 2026 Kirill Novik. All rights reserved.
+
+This repository and everything in it (the text of the books and lessons, the
+exercises, the stories, the dictionaries and their descriptions, the word
+lists, grammar patterns and data as selected and arranged here, the audio,
+the images and the characters shown in them, the website, the source code and
+the tools) is the property of Kirill Novik and is protected by copyright law
+and, where it applies, by database rights (for example the EU Database
+Directive 96/9/EC and Article 1334 of the Civil Code of the Russian
+Federation).
+
+No licence is granted. You may view this repository on GitHub and fork it
+there only to the extent GitHub's Terms of Service require. You may not copy,
+reproduce, modify, publish, distribute, sell, sublicense, host, translate or
+make derivative works of any part of it, in whole or in part, without the
+prior written permission of the owner.
+
+THE LANGUAGES
+
+Hao-shuo-de and Jiandanhua are languages. A language as such (its grammar and
+vocabulary as a system) is free: anyone may learn it, speak it, write in it,
+translate into it and teach it, and may create their own original texts in
+it. This freedom covers the languages only, not the materials in this
+repository and not the names. A formal open licence for a specification of
+the languages may be published separately; until then, nothing here grants
+one.
+
+TRADEMARKS
+
+HAO-SHUO-DE, JIANDANHUA and MIAO-LONG, in every spelling, script and letter
+case, and the names and designs of the characters, are trademarks of Kirill
+Novik. See TRADEMARKS.md. This licence grants no right to use them.
+
+TEXT AND DATA MINING AND AI TRAINING
+
+The owner expressly reserves all rights to text and data mining, including
+the use of any part of this repository to train, fine-tune, evaluate or
+ground machine-learning or artificial-intelligence models, within the meaning
+of Article 4(3) of the EU Directive 2019/790 and any similar law elsewhere.
+Such use requires a separate written licence.
+
+THIRD-PARTY MATERIAL
+
+Some files contain or are derived from material owned by others and remain
+under their own licences, which this notice does not change: data from Open
+English WordNet, the Collaborative Interlingual Index and the Chinese Open
+Wordnet (see kb/wordnet/CREDITS.md), fonts loaded from Google Fonts, and the
+software packages listed in package.json, each under its own licence.
+
+DISCLAIMER
+
+Everything here is provided "as is", without warranty of any kind. In no
+event shall the owner be liable for any claim, damages or other liability
+arising from the use of this repository.
+
+For permissions and licences (including licences for schools), contact the
+owner through https://github.com/kino6052.
