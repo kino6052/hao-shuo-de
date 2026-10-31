@@ -1,0 +1,1 @@
+import{h as o}from"./ConsentBanner-CoUceiDP.js";import{c as e}from"./_gated_composites-BdfHQrGD.js";import{f as r,d as s,T as t,P as a}from"./tree-check-DHrP-Nyp.js";import"./app-B9rPrYz5.js";import"./lexicon-CsTJvCJR.js";let m=null;const n=async()=>m??=r({patterns:a,words:o.words,composites:e.entries,...s(t)});export{n as loadTreeCheck};
