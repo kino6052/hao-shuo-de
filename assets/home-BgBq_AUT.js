@@ -1,0 +1,1 @@
+import{l as t}from"./lesson-D2TKbLLm.js";import{H as e}from"./word-refs-BLoL_4XZ.js";const a={id:e,type:"home"},r=[{type:"title",...t({en:["Home"],ru:["Главная"],zh:["首页"]})}];export{r as default,a as meta};
