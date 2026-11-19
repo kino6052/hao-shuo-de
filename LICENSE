@@ -1,10 +1,10 @@
-Copyright (c) 2026 Kirill Novik. All rights reserved.
+Copyright (c) 2026 永学. All rights reserved.
 
 This repository and everything in it (the text of the books and lessons, the
 exercises, the stories, the dictionaries and their descriptions, the word
 lists, grammar patterns and data as selected and arranged here, the audio,
 the images and the characters shown in them, the website, the source code and
-the tools) is the property of Kirill Novik and is protected by copyright law
+the tools) is the property of 永学 and is protected by copyright law
 and, where it applies, by database rights (for example the EU Database
 Directive 96/9/EC and Article 1334 of the Civil Code of the Russian
 Federation).
@@ -21,15 +21,8 @@ Hao-shuo-de and Jiandanhua are languages. A language as such (its grammar and
 vocabulary as a system) is free: anyone may learn it, speak it, write in it,
 translate into it and teach it, and may create their own original texts in
 it. This freedom covers the languages only, not the materials in this
-repository and not the names. A formal open licence for a specification of
-the languages may be published separately; until then, nothing here grants
-one.
-
-TRADEMARKS
-
-HAO-SHUO-DE, JIANDANHUA and MIAO-LONG, in every spelling, script and letter
-case, and the names and designs of the characters, are trademarks of Kirill
-Novik. See TRADEMARKS.md. This licence grants no right to use them.
+repository. A formal open licence for a specification of the languages may be
+published separately; until then, nothing here grants one.
 
 TEXT AND DATA MINING AND AI TRAINING
 
@@ -53,5 +46,5 @@ Everything here is provided "as is", without warranty of any kind. In no
 event shall the owner be liable for any claim, damages or other liability
 arising from the use of this repository.
 
-For permissions and licences (including licences for schools), contact the
+For permissions and licences, contact the
 owner through https://github.com/kino6052.

@@ -1,1 +1,0 @@
-import{l as t}from"./lesson-hvw4dqTK.js";import{H as o}from"./ConsentBanner-DpK6XKUZ.js";import"./app-A9urSe0n.js";const a={id:o,type:"home"},p=[{type:"title",...t({en:["Home"],ru:["Главная"],zh:["首页"]})}];export{p as default,a as meta};
