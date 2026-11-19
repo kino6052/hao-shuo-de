@@ -1,1 +1,0 @@
-import{l as t}from"./lesson-BTh69uqm.js";import{M as e}from"./main-D5HSWd9T.js";const a={id:e,type:"home"},r=[{type:"title",...t({en:["Home"],ru:["Главная"],zh:["首页"]})}];export{r as default,a as meta};

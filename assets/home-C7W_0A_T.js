@@ -1,0 +1,1 @@
+import{l as t}from"./lesson-CCmxxo-T.js";import{a6 as e}from"./app-BiNtvbkC.js";const a={id:e,type:"home"},r=[{type:"title",...t({en:["Home"],ru:["Главная"],zh:["首页"]})}];export{r as default,a as meta};
