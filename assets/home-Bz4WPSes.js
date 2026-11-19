@@ -1,1 +1,0 @@
-import{l as t}from"./lesson-D6EovYEX.js";import{a4 as e}from"./app-C6O_wvd_.js";const a={id:e,type:"home"},r=[{type:"title",...t({en:["Home"],ru:["Главная"],zh:["首页"]})}];export{r as default,a as meta};
